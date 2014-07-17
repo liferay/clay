@@ -1,0 +1,1 @@
+YUI.add("aui-text-unicode",function(e,t){var n=e.Text,r=e.Text.Data.Unicode,i={compile:function(e,t){var n=null;return r.hasOwnProperty(e)&&(n=new RegExp(r[e],t)),n},match:e.cached(function(e,t,n){return i.compile(t,n).exec(e)}),test:e.cached(function(e,t,n){return i.compile(t,n).test(e)})};n.Unicode=i},"2.5.0",{requires:["aui-text-data-unicode"]});

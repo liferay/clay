@@ -1,0 +1,12 @@
+<ul>
+<%
+Y.Object.each(
+	nav,
+	function(item, index) {
+%>
+	<li><a href="<%= item %>"><%= index %></a></li>
+<%
+	}
+);
+%>
+</ul>

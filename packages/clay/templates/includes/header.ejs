@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title><%= title %></title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<script src="<%= auisrc %>"></script>
+
+	<%
+	if (typeof YUI_config !== 'undefined') {
+	%>
+		<script>
+			window.YUI_config = <%- JSON.stringify(YUI_config) %>;
+		</script>
+	<%
+	}
+	%>
+</head>
+<body>
+
+<% include navigation %>
