@@ -1,7 +1,9 @@
 var Metalsmith = require('metalsmith');
 var gracefulFs = require('graceful-fs');
 var fs = require('fs-extra');
+var collections = require('metalsmith-collections');
 var define = require('metalsmith-define');
+var permalinks = require('metalsmith-permalinks');
 var handleNav = require('./lib/handle_nav');
 var path = require('path');
 var sass = require('metalsmith-sass');
@@ -43,23 +45,47 @@ if (argv.dev) {
 		combine: false
 	};
 }
+// var walker = require('walker');
 
-if (argv.offline) {
-	auisrc = './js/aui/aui/aui-min.js';
-}
+// var collOpts = {
+
+// };
+
+// var rootDir = 'src';
+
+// var Walker = walker('src').filterDir(function(dir, stat) {
+// 	return dir == 'src' || dir.indexOf('src/content') === 0;
+// }).on(
+// 	'dir',
+// 	function(dir, stat) {
+// 		var collName = path.basename(dir);
+
+// 		if (collName != 'src' && collName != 'content') {
+// 			collOpts[collName] = '*.html';
+// 		}
+// 	}
+// );
+
+// Walker.on(
+// 	'end',
+// 	function(event) {
+
+// 	}
+// );
 
 var metadata = Y.merge(
 	argv,
 	{
-		auisrc: auisrc,
 		YUI_config: YUI_config,
 		Y: Y,
-		extendYUIConfig: function() {
-			return Object.keys(YUI_config).map(
-				function(item, index) {
-					return 'YUI_config[' + JSON.stringify(item) + '] = ' + JSON.stringify(YUI_config[item]) + ';';
-				}
-			).join('\n');
+		getAUIPath: function(rootPath) {
+			var auiPath = auisrc;
+
+			if (argv.offline) {
+				auiPath = path.join(rootPath, '/js/aui/aui/aui-min.js');
+			}
+
+			return auiPath;
 		}
 	}
 );
@@ -67,7 +93,17 @@ var metadata = Y.merge(
 var ms = Metalsmith(__dirname);
 
 ms.use(define(metadata))
+	.use(
+		permalinks(
+
+		)
+	)
 	.use(handleNav())
+	// .use(
+	// 	collections(
+	// 		collOpts
+	// 	)
+	// )
 	.use(
 		sass(
 			{
