@@ -4,3 +4,26 @@ $icon-font-path: "../fonts/";
 
 @import "custom";
 @import "style";
+
+
+// Temporarily adding custom styles here
+
+li.child-active > a {
+	background: #777;
+}
+
+.side-navigation {
+	li > a {
+		&:hover, &:focus {
+			background-color: #CCC;
+		}
+	}
+
+	.side-navigation-dropdown-container:hover > a {
+		background-color: #CCC;
+	}
+
+	li.active > a {
+		background: #333;
+	}
+}

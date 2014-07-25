@@ -5,6 +5,7 @@ var collections = require('metalsmith-collections');
 var define = require('metalsmith-define');
 var permalinks = require('metalsmith-permalinks');
 var handleNav = require('./lib/handle_nav');
+var handlePath = require('./lib/handle_path');
 var path = require('path');
 var sass = require('metalsmith-sass');
 
@@ -99,6 +100,7 @@ ms.use(define(metadata))
 		)
 	)
 	.use(handleNav())
+	.use(handlePath())
 	// .use(
 	// 	collections(
 	// 		collOpts
