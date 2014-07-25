@@ -3,9 +3,10 @@
 <head>
 	<meta charset="UTF-8" />
 	<title><%= title %></title>
-	<link rel="stylesheet" href="./css/main.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="<%= rootPath %>/css/main.css" />
 
-	<script src="<%= auisrc %>"></script>
+	<script src="<%= getAUIPath(rootPath) %>"></script>
 
 	<%
 	if (typeof YUI_config !== 'undefined') {
@@ -18,5 +19,12 @@
 	%>
 </head>
 <body>
+	<div class="main-nav-open secondary-nav-open" id="wrapper">
+		<header class="row" id="headerTopBar">
+			<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
 
-<% include navigation %>
+			<h4 class="title"><a href="/">UI Kit</a></h4>
+		</header>
+
+		<section class="manage-control-panel">
+			<% include navigation %>
