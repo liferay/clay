@@ -110,7 +110,15 @@ header.row {
 }
 
 .side-navigation a:focus, .side-navigation a:hover {
-	color: #0085C3 !important;
+	color: #0085C3;
+}
+
+.side-navigation .nav > li > a:focus {
+	background-color: transparent;
+}
+
+.side-navigation .nav > li:hover > a:focus {
+	background-color: #EEE;
 }
 
 .side-navigation .nav-stacked li > h4 {
@@ -155,6 +163,12 @@ header.row {
 
 .side-navigation-dropdown-container .collapse {
 	clear: both;
+}
+
+/* -------- Accordions -------- */
+
+#myToggler .badge, #myToggler .label {
+	float: right;
 }
 
 /* -------- Blogs 1 Column -------- */
@@ -262,10 +276,28 @@ header.row {
 	font-size: 21px;
 }
 
+/* -------- Dropdowns ------- */
+
+#dropdownDisplay .dropdown-menu {
+	display: block;
+	float: none;
+	position: relative;
+	max-width: 160px;
+}
+
+#dropdownDisplay .mega-menu .dropdown-menu {
+	float: left;
+	max-width: 100%;
+}
+
 /* -------- Glyphicons -------- */
 
 .glyphicon {
-	font-size: 24px
+	font-size: 24px;
+}
+
+.glyphicon.form-control-feedback {
+	font-size: small;
 }
 
 .glyphicon-class {
@@ -300,6 +332,55 @@ header.row {
 	width: 64px;
 }
 
+/* -------- Panel Page ------- */
+
+#myChart {
+	height: 300px;
+	margin: 10px auto;
+	max-width: 300px;
+	width: 300px;
+}
+
+#panelPage a {
+	color: #333;
+	text-decoration: none;
+}
+
+#panelPage a:hover {
+	color: #777;
+}
+
+/* -------- Panel Variations -------- */
+
+#panelVariations img {
+	max-width: 141px;
+}
+
+/* -------- Thumbnail Variations ---------*/
+
+#thumbnailVariations .img-responsive {
+	width: 100%;
+}
+
+#thumbnailVariations .user-info img {
+	float: left;
+	margin-right: 15px;
+	margin-top: 4px;
+	width: 32px;
+}
+
+/* -------- Timeline -------- */
+
+.timestamp-icon {
+	color: #999;
+	font-size: 12px !important;
+	line-height: inherit;
+}
+
+.timeline-avatar {
+	width: 36px;
+}
+
 @media (min-width: 480px) {
 	.glyphicons li {
 		width: 25%;
@@ -329,7 +410,7 @@ header.row {
 	}
 
 	#mainContent {
-		width: auto;
+		width: 100%;
 	}
 
 	.menu-toggle {
