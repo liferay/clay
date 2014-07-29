@@ -141,9 +141,8 @@ module.exports = function() {
 		// console.log(Object.keys(files));
 		// console.log();
 		var nav = metalsmith.metadata().nav;
-		var newNav = {
-			children: {}
-		};
+		var navs = [];
+		metalsmith.metadata().navs = navs;
 
 		var recurse = function(item, index, parentItem, parentIndex) {
 			if (index.indexOf('_') === 0) {
@@ -161,21 +160,34 @@ module.exports = function() {
 			// console.log('---', index, hasFile);
 
 			if (hasFile) {
+				// console.log('has file', item._path, parentItem._path, index);
 				// Link with subnav
 				parentItem._file.subNav = parentItem._file.subNav || {};
 				parentItem._file.subNav[index] = item;
+				item._file.subNav = parentItem._file.subNav;
+				item._parent = parentItem;
 				delete parentItem[index];
 			}
 			else if (parentItem) {
 				parentItem._sections = parentItem._sections || {};
 				parentItem._sections[index] = item;
+				item._parent = parentItem;
 				delete parentItem[index];
 				// console.log('has parent, but no file object', parentIndex + '/' + index);
 			}
 			else {
+				// console.log('has neither file nor parent', item._path);
 				// section heading
 			}
 
+			if (item._file) {
+				// if (item._parent) {
+				// 	console.log(item._parent._path, item._path, index);
+				// }
+				// if (item._parent._sections) {
+				// 	console.log('has subNav', item._path, parentItem._path);
+				// }
+			}
 		};
 		Y.Object.each(
 			nav,
