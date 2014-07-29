@@ -30,7 +30,6 @@
 								if (rootPath != '.') {
 									url = rootPath + '/' + url;
 								}
-
 							}
 
 							if (hasSections) {
@@ -40,8 +39,22 @@
 										if (sectionIndex.indexOf('_') === 0) {
 											return;
 										}
+
 										if (path && section._path.indexOf(path) === 0) {
 											item._sections._active = path;
+										}
+										else if (section._file.subNav) {
+											Y.Object.each(
+												section._file.subNav,
+												function(subSectionItem, subSectionIndex) {
+													if (path && subSectionItem._path.indexOf(path) === 0) {
+														item._sections._active = path;
+														item._active = path;
+													}
+												}
+											);
+
+											// console.log(section, path);
 										}
 									}
 								);
@@ -49,6 +62,18 @@
 								if (item._sections._active === path) {
 									cssClass += ' child-active'
 								}
+							}
+							else {
+								Y.Object.each(
+									item,
+									function(item, index) {
+										if (index.indexOf('_') === 0) {
+											return;
+										}
+
+										console.log('-----',index, item);
+									}
+								);
 							}
 
 							var tplObj = {
@@ -82,7 +107,7 @@
 
 					buffer.push('</ul>');
 
-					return buffer.join('');
+					return buffer.join('\n');
 				};
 				%>
 			<%- createMainNavList(nav, path) %>
