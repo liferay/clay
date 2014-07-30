@@ -1,5 +1,6 @@
 ---
 title: Alerts and Progress Bars
+section: Components
 ---
 
 <div class="row">
@@ -15,7 +16,10 @@ title: Alerts and Progress Bars
 
 			<div class="alert alert-danger" role="alert">Be careful! Something is not right.</div>
 
-			<pre><code>&lt;div class="alert alert-success" role="alert"&gt;<br>  ...<br>&lt;/div&gt;</code></pre>
+<pre><code>```<div class="alert alert-success" role="alert">
+...
+</div>```</code></pre>
+
 		</div>
 	</div>
 
@@ -39,7 +43,11 @@ title: Alerts and Progress Bars
 				<strong>Be Careful! </strong><a href="#" class="alert-link">Something</a> is not right.
 			</div>
 
-			<pre><code>&lt;div class="alert alert-success" role="alert"&gt;<br>  ...<br>    &lt;a href="#" class="alert-link"&gt;...&lt;/a&gt;<br>  ...<br>&lt;/div&gt;</code></pre>
+			<pre><code>```<div class="alert alert-success" role="alert">
+...
+  <a href="#" class="alert-link">...</a>
+...
+</div>```</code></pre>
 		</div>
 	</div>
 
@@ -79,7 +87,12 @@ title: Alerts and Progress Bars
 				<strong>Be Careful!</strong> Something is not right.
 			</div>
 
-			<pre><code>&lt;div class="alert alert-dismissible alert-success" role="alert"&gt;<br>  &lt;button class="close" type="button"&gt;<br>    &lt;span aria-hidden="true"&gt;&#38;times;&lt;/span&gt;&lt;span class="sr-only"&gt;Close&lt;/span&gt;<br>  &lt;/button&gt;<br>    ...<br>&lt;/div&gt;</code></pre>
+			<pre><code>```<div class="alert alert-dismissible alert-success" role="alert">
+  <button class="close" type="button">
+    <span aria-hidden="true">&#38;times;</span><span class="sr-only">Close</span>
+  </button>
+  ...
+</div>```</code></pre>
 		</div>
 	</div>
 </div>
@@ -107,7 +120,11 @@ title: Alerts and Progress Bars
 				</div>
 			</div>
 
-			<pre><code>&lt;div class="progress"&gt;<br>  &lt;div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" <br>    class="progress-bar" role="progressbar" style="width: #%;"&gt;<br>    &lt;span class="sr-only"&gt;#%&lt;/span&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+			<pre><code>```<div class="progress">
+  <div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: #%;">
+    <span class="sr-only">#%</span>
+  </div>
+</div>```</code></pre>
 		</div>
 	</div>
 
@@ -131,7 +148,9 @@ title: Alerts and Progress Bars
 				<div aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 2%;">2%</div>
 			</div>
 
-			<pre><code>&lt;div class="progress"&gt;<br>  &lt;div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" <br>    class="progress-bar" role="progressbar" style="width: #%;"&gt;#%<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+			<pre><code>```<div class="progress">
+  <div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: #%;">#%</div>
+</div>```</code></pre>
 		</div>
 	</div>
 
@@ -154,7 +173,10 @@ title: Alerts and Progress Bars
 				<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-danger" role="progressbar" style="width: 80%;">80% (Danger)</div>
 			</div>
 
-			<pre><code>&lt;div class="progress"&gt;<br>  &lt;div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" <br>    class="progress-bar progress-bar-success" <br>    role="progressbar" style="width: #%;"&gt;#%<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+			<pre><code>```<div class="progress">
+  <div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-success" role="progressbar" style="width: #%;">#%
+  </div>
+</div>```</code></pre>
 		</div>
 	</div>
 </div>
@@ -180,7 +202,9 @@ title: Alerts and Progress Bars
 				<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width: 80%;">80% (Danger)</div>
 			</div>
 
-			<pre><code>&lt;div class="progress"&gt;<br>  &lt;div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" <br>    class="progress-bar progress-bar-striped progress-bar-success" <br>    role="progressbar" style="width: #%;"&gt;#%<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+			<pre><code>```<div class="progress">
+  <div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-striped progress-bar-success" role="progressbar" style="width: #%;">#%</div>
+</div>```</code></pre>
 		</div>
 	</div>
 
@@ -208,7 +232,9 @@ title: Alerts and Progress Bars
 				<div aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" class="active progress-bar progress-bar-striped" role="progressbar" style="width: 20%;">20% (Default)</div>
 			</div>
 
-			<pre><code>&lt;div class="progress"&gt;<br>  &lt;div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" <br>    class="active progress-bar progress-bar-striped progress-bar-success" <br>    role="progressbar" style="width: #%;"&gt;#%<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+			<pre><code>```<div class="progress">
+  <div aria-valuenow="#" aria-valuemin="0" aria-valuemax="100" class="active progress-bar progress-bar-striped progress-bar-success" role="progressbar" style="width: #%;">#%</div>
+</div>```</code></pre>
 		</div>
 	</div>
 
@@ -258,7 +284,10 @@ title: Alerts and Progress Bars
 				<div class="active progress-bar progress-bar-striped" style="width: 10%">10%</div>
 			</div>
 
-			<pre><code>&lt;div class="progress"&gt;<br>  &lt;div class="progress-bar" style="width: #%"&gt; #% &lt;/div&gt;<br>  &lt;div class="progress-bar" style="width: #%"&gt; #% &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+			<pre><code>```<div class="progress">
+  <div class="progress-bar" style="width: #%">#%</div>
+  <div class="progress-bar" style="width: #%">#%</div>
+</div>```</code></pre>
 		</div>
 	</div>
 </div>
