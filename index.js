@@ -1,16 +1,22 @@
-var Metalsmith = require('metalsmith');
-var gracefulFs = require('graceful-fs');
 var fs = require('fs-extra');
+var gracefulFs = require('graceful-fs');
+var path = require('path');
+var Y = require('yui').YUI();
+
+var Metalsmith = require('metalsmith');
+
 var collections = require('metalsmith-collections');
 var define = require('metalsmith-define');
+var encodeHTML = require('metalsmith-encode-html');
+var markdown = require('metalsmith-markdown');
 var permalinks = require('metalsmith-permalinks');
+var sass = require('metalsmith-sass');
+var templates = require('metalsmith-templates');
+
 var handleNav = require('./lib/handle_nav');
 var handlePath = require('./lib/handle_path');
-var path = require('path');
-var sass = require('metalsmith-sass');
-
-var templates = require('metalsmith-templates');
-var Y = require('yui').YUI();
+var handlePermalink = require('./lib/handle_permalink');
+var handleTemplate = require('./lib/handle_template');
 
 var argv = require('optimist').usage('Usage: $0 -qo')
 			.options(
@@ -79,6 +85,8 @@ var metadata = Y.merge(
 	{
 		YUI_config: YUI_config,
 		Y: Y,
+		// title: '',
+		subHeading: '',
 		getAUIPath: function(rootPath) {
 			var auiPath = auisrc;
 
@@ -94,9 +102,23 @@ var metadata = Y.merge(
 var ms = Metalsmith(__dirname);
 
 ms.use(define(metadata))
+	.use(handleTemplate())
+	.use(encodeHTML())
+	.use(
+		markdown(
+			{
+				smartypants: true,
+				gfm: true,
+				tables: true
+			}
+		)
+	)
+	.use(handlePermalink())
 	.use(
 		permalinks(
-
+			{
+				relative: false
+			}
 		)
 	)
 	.use(handleNav())
@@ -119,7 +141,13 @@ ms.use(define(metadata))
 if (argv.watch) {
 	var watch = require('metalsmith-watch');
 
-	ms.use(watch());
+	ms.use(
+		watch(
+			{
+				pattern : '**/*',
+			}
+		)
+	);
 }
 
 ms.destination('./build');
