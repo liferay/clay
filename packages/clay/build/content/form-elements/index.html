@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Form Elements</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="http://cdn.alloyui.com/2.5.0/aui/aui-min.js"></script>
+
+	
+</head>
+<body>
+	<div class="main-nav-open secondary-nav-open" id="wrapper">
+		<header class="row" id="headerTopBar">
+			<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
+
+			<h4 class="title"><a href="../..">UX Guidelines</a></h4>
+		</header>
+
+		<section class="manage-control-panel">
+			<nav class="side-navigation" id="mainNav">
+		
+	<ul class="nav nav-stacked">
+<li class=""><a href="../../">Home</a>
+</li>
+<li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/dropdowns">Dropdowns and Tooltips</a>
+</li>
+<li class=""><a href="../../content/nav">Navs</a>
+</li>
+<li class=""><a href="../../content/modals">Modals</a>
+</li>
+<li class=""><a href="../../content/panels">Panels</a>
+</li>
+<li class=""><a href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
+</li>
+<li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
+</li>
+<li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse in
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/buttons">Button</a>
+</li>
+<li class=""><a href="../../content/grid">Grids</a>
+</li>
+<li class=""><a href="../../content/icons">Icons</a>
+</li>
+<li class=""><a href="../../content/tables">Tables</a>
+</li>
+<li class=""><a href="../../content/typography">Typography</a>
+</li>
+<li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a href="../../content/form-examples">Form Example</a>
+</li>
+<li class=""><a href="../../content/form-elements">Form Elements</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a href="../../content/timelines">Timeline</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Widgets</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/accordions">Accordions</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/todo">TODO</a>
+</li>
+</ul>
+</nav>
+
+	<div id="mainContent">
+		<h1 class="page-title">
+			Form Elements
+
+			
+		</h1>
+
+		
+<div class="col-md-6">
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Basic form Elements</h4>
+
+		<div class="form-group">
+			<label>Default text input</label>
+
+			<input class="form-control" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Password input</label>
+
+			<input class="form-control" placeholder="Enter password" type="password">
+		</div>
+
+		<div class="form-group">
+			<label>Small text input</label>
+
+			<input class="form-control input-sm" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Large text input</label>
+
+			<input class="form-control input-lg" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Disabled text input</label>
+
+			<input disabled class="form-control" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Read only text input</label>
+
+			<input class="form-control" placeholder="Placeholder" readonly type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Textarea</label>
+
+			<textarea class="form-control"></textarea>
+		</div>
+	</div>
+
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Input Group with Addons</h4>
+
+		<div class="form-group">
+			<label>Addon Left</label>
+
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+
+				<input class="form-control" placeholder="Username" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>Addon Right</label>
+
+			<div class="input-group">
+				<input class="form-control" type="text">
+
+				<span class="input-group-addon">.00</span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>Left and Right Addon</label>
+
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+
+				<input class="form-control" type="text">
+
+				<span class="input-group-addon">.com</span>
+			</div>
+		</div>
+
+		<label>Button Addons</label>
+
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<div class="input-group">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Click</button>
+					</span>
+
+					<input class="form-control" type="text">
+				</div>
+			</div>
+
+			<div class="col-md-6 form-group">
+				<div class="input-group">
+					<input type="text" class="form-control">
+
+					<div class="input-group-btn">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+						<ul class="dropdown-menu dropdown-menu-right" role="menu">
+							<li><a href="#">Action 1</a></li>
+							<li><a href="#">Action 2</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<label>Checkbox and Radio Addons</label>
+
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<input type="checkbox">
+					</span>
+
+					<input class="form-control" type="text">
+				</div>
+			</div>
+
+			<div class="col-md-6 form-group">
+				<div class="input-group">
+					<input class="form-control" type="text">
+
+					<span class="input-group-addon">
+						<input type="radio">
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-6">
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Validation States</h4>
+
+		<div class="form-group has-success">
+			<label class="control-label" for="inputSuccess1">Input with success</label>
+
+			<input class="form-control" type="text">
+		</div>
+
+		<div class="form-group has-warning">
+			<label class="control-label" for="inputWarning1">Input with warning</label>
+
+			<input class="form-control" type="text">
+		</div>
+
+		<div class="form-group has-error">
+			<label class="control-label" for="inputError1">Input with error</label>
+
+			<input class="form-control" type="text">
+		</div>
+
+		<div class="form-group has-success has-feedback">
+			<label class="control-label" for="inputSuccess2">Input with success icon</label>
+
+			<input class="form-control" type="text">
+
+			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+		</div>
+
+		<div class="form-group has-warning has-feedback">
+			<label class="control-label" for="inputWarning2">Input with warning icon</label>
+
+			<input class="form-control" type="text">
+
+			<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+		</div>
+
+		<div class="form-group has-error has-feedback">
+			<label class="control-label" for="inputError2">Input with error</label>
+
+			<input class="form-control" type="text">
+
+			<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+		</div>
+	</div>
+
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Checkboxes and Radios</h4>
+
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="">
+				Regular Check Box
+			</label>
+		</div>
+
+		<div class="checkbox disabled">
+			<label>
+				<input disabled type="checkbox" value="">
+				Disabled Check Box
+			</label>
+		</div>
+
+		<div class="radio">
+			<label>
+				<input name="optionsRadios" type="radio">
+				Regular Radio Button
+			</label>
+		</div>
+
+		<div class="radio disabled">
+			<label>
+				<input disabled name="optionsRadios" type="radio">
+				Disabled Radio Button
+			</label>
+		</div>
+	</div>
+
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Select Box</h4>
+
+		<div class="form-group">
+			<h4><small>Regular Select Box</small></h4>
+
+			<select class="form-control">
+				<option>Sample 1</option>
+				<option>Sample 2</option>
+				<option>Sample 3</option>
+				<option>Sample 4</option>
+			</select>
+
+			<h4><small>Select Box with Multiple Select Options</small></h4>
+
+			<select class="form-control" multiple>
+				<option>Sample 1</option>
+				<option>Sample 2</option>
+				<option>Sample 3</option>
+				<option>Sample 4</option>
+				<option>Sample 5</option>
+				<option>Sample 6</option>
+				<option>Sample 7</option>
+				<option>Sample 8</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">File Upload</h4>
+
+		<div class="form-group">
+			<label class="sr-only">FILE UPLOAD</label>
+
+			<input id="inputFile" type="file">
+		</div>
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+<script>
+	YUI().use('node', function(A) {
+		var secondaryNavToggle = A.one('#secondaryNav .menu-toggle');
+
+		if (secondaryNavToggle) {
+			secondaryNavToggle.on('click', function(event) {
+				var currentTarget = event.currentTarget;
+
+				event.preventDefault();
+
+				currentTarget.ancestor('#wrapper').toggleClass('secondary-nav-open').toggleClass('secondary-nav-closed');
+				currentTarget.one('.glyphicon').toggleClass('glyphicon-arrow-left').toggleClass('glyphicon-arrow-right');
+			});
+		}
+
+		A.one('#headerTopBar .menu-toggle').on('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			event.preventDefault();
+
+			currentTarget.ancestor('#wrapper').toggleClass('main-nav-open').toggleClass('main-nav-closed');
+		});
+
+		A.all('.side-navigation').each(
+			function(item, index) {
+				item.delegate('click', function(event) {
+					event.preventDefault();
+					event.currentTarget.next('.collapse').toggleClass('in');
+				}, 'li.side-navigation-dropdown-container > a');
+			}
+		);
+	});
+</script>
+  </body>
+</html>
