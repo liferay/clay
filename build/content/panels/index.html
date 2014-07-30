@@ -1,0 +1,467 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Panels</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="http://cdn.alloyui.com/2.5.0/aui/aui-min.js"></script>
+
+	
+</head>
+<body>
+	<div class="main-nav-open secondary-nav-open" id="wrapper">
+		<header class="row" id="headerTopBar">
+			<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
+
+			<h4 class="title"><a href="../..">UX Guidelines</a></h4>
+		</header>
+
+		<section class="manage-control-panel">
+			<nav class="side-navigation" id="mainNav">
+		
+	<ul class="nav nav-stacked">
+<li class=""><a href="../../">Home</a>
+</li>
+<li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse in
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/dropdowns">Dropdowns and Tooltips</a>
+</li>
+<li class=""><a href="../../content/nav">Navs</a>
+</li>
+<li class=""><a href="../../content/modals">Modals</a>
+</li>
+<li class=""><a href="../../content/panels">Panels</a>
+</li>
+<li class=""><a href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
+</li>
+<li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
+</li>
+<li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/buttons">Button</a>
+</li>
+<li class=""><a href="../../content/grid">Grids</a>
+</li>
+<li class=""><a href="../../content/icons">Icons</a>
+</li>
+<li class=""><a href="../../content/tables">Tables</a>
+</li>
+<li class=""><a href="../../content/typography">Typography</a>
+</li>
+<li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a href="../../content/form-examples">Form Example</a>
+</li>
+<li class=""><a href="../../content/form-elements">Form Elements</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a href="../../content/timelines">Timeline</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Widgets</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/accordions">Accordions</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/todo">TODO</a>
+</li>
+</ul>
+</nav>
+
+	<div id="mainContent">
+		<h1 class="page-title">
+			Panels
+
+			
+		</h1>
+
+		
+<div id="panelPage">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Panels without heading</h4>
+
+				<div class="panel panel-default">
+					<div class="panel-body">Panel-default.</div>
+				</div>
+			</div>
+
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Panels with footer</h4>
+
+				<div class="panel panel-default">
+					<div class="panel-body">Panel-default.</div>
+
+					<div class="panel-footer">Panel-default</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Panels with heading</h4>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel-default</h3>
+					</div>
+
+					<div class="panel-body">
+						Panel-default.
+					</div>
+				</div>
+			</div>
+
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Panel borders</h4>
+
+				<div class="panel panel-default">
+					<div class="panel-body">
+						Panels by default have border: 1px solid;
+					</div>
+				</div>
+
+				<div class="panel panel-default no-borders">
+					<div class="panel-body">
+						add class no-borders on the panel element to remove the borders.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Equally Distributed Content in Panel-heading</h4>
+
+			<p>Add class panel-heading-align to panel element to align panel-heading.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="no-borders panel panel-default panel-heading-align">
+				<div class="panel-heading">
+					<div>
+						<span>June 2014</span>
+					</div>
+
+					<div>
+						<span>Panel with Graph</span>
+					</div>
+
+					<div>
+						<span class="glyphicon glyphicon-remove"></span>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<div id="myChart"></div>
+				</div>
+
+				<div class="panel-footer">
+					<div>
+						<a href="#1">
+							<div><span class="glyphicon glyphicon-signal"></span></div>
+
+							<span>Sales</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<div><span class="glyphicon glyphicon-tags"></span></div>
+
+							<span>Promo</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<div><span class="glyphicon glyphicon-camera"></span></div>
+
+							<span>Photo</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<div><span class="glyphicon glyphicon-record"></span></div>
+
+							<span>Other</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="no-borders panel panel-default panel-heading-align">
+				<div class="panel-heading">
+					<div style="text-align: center;">
+						<div>
+							<span class="glyphicon glyphicon-cloud" style="font-size: 150px;"></span>
+						</div>
+
+						<h1 style="margin: -20px 0 0 0;font-size: 90px;">75&deg;</h1>
+
+						<h5>Los Angeles</h5>
+					</div>
+				</div>
+
+				<div class="panel-footer" style="background-color: #FFF;">
+					<div>
+						<a href="#1">
+							<h6>Sat</h6>
+
+							<div><span class="glyphicon glyphicon-certificate"></span></div>
+
+							<span>95&deg;</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<h6>Sun</h6>
+
+							<div><span class="glyphicon glyphicon-certificate"></span></div>
+
+							<span>89&deg;</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<h6>Mon</h6>
+
+							<div><span class="glyphicon glyphicon-certificate"></span></div>
+
+							<span>95&deg;</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Featured Panel</h4>
+
+			<p>Add the featured-panel class to a panel element to display content.</p>
+		</div>
+	</div>
+
+	<div class="row" id="panelVariations">
+		<div class="col-md-6">
+			<div class="featured-panel no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<img class="img-responsive" src="../../images/ps_logo.jpg" />
+					</div>
+
+					<div class="right">
+						<h3>Featured Panel Default</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="featured-panel featured-panel-6040 no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<h3>Featured Panel 60/40</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+
+					<div class="right">
+						<img class="img-responsive" src="../../images/ps_logo.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="featured-panel featured-panel-4060 no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<img class="img-responsive" src="../../images/ps_logo.jpg" />
+					</div>
+
+					<div class="right">
+						<h3>Featured Panel 40/60</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="featured-panel featured-panel-6040 no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<h3>Featured Panel 60/40</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+					<div class="right" style="background-color: #F5F5F5;">
+						<img class="img-responsive" src="../../images/ps_logo.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="featured-panel no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<h3>Featured Panel Default</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+
+					<div class="right" style="background-color: #F5F5F5;">
+						<img class="img-responsive" src="../../images/ps_logo.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	YUI().use('charts', function (Y) {
+		var myDataValues = [
+			{ month:"Jan", internetSales: 110, percentOfRevenue: 25 },
+			{ month:"Feb", internetSales: 333, percentOfRevenue: 28 },
+			{ month:"Mar", internetSales: 90, percentOfRevenue: 15 },
+			{ month:"Apr", internetSales: 255, percentOfRevenue: 21 },
+			{ month:"May", internetSales: 445, percentOfRevenue: 33 },
+			{ month:"Jun", internetSales: 580, percentOfRevenue: 38 }
+		];
+
+		var myAxes = {
+			percentage: {
+				type:"numeric",
+				position:"right",
+				keys:["percentOfRevenue"],
+				labelFormat: {suffix:"%"}
+			},
+			sales: {
+				type:"numeric",
+				position:"left",
+				keys:["internetSales"],
+				labelFormat: {
+					prefix:"$",
+					suffix: "k",
+					thousandsSeparator:","
+				}
+			}
+		};
+
+		var mySeries = [
+			{
+				type:"combo",
+				yKey:"internetSales",
+				yDisplayName:"Internet Sales",
+				xDisplayName:"Month"
+			},
+
+			{
+				type:"combo",
+				yKey:"percentOfRevenue",
+				yDisplayName:"Percent of Total Revenue",
+				xDisplayName:"Month"
+			}
+		];
+
+		var mychart = new Y.Chart({
+			dataProvider:myDataValues,
+			categoryKey:"month",
+			axes:myAxes,
+			seriesCollection:mySeries,
+			render:"#myChart"
+		});
+	});
+</script>
+	</div>
+
+		</section>
+	</div>
+<script>
+	YUI().use('node', function(A) {
+		var secondaryNavToggle = A.one('#secondaryNav .menu-toggle');
+
+		if (secondaryNavToggle) {
+			secondaryNavToggle.on('click', function(event) {
+				var currentTarget = event.currentTarget;
+
+				event.preventDefault();
+
+				currentTarget.ancestor('#wrapper').toggleClass('secondary-nav-open').toggleClass('secondary-nav-closed');
+				currentTarget.one('.glyphicon').toggleClass('glyphicon-arrow-left').toggleClass('glyphicon-arrow-right');
+			});
+		}
+
+		A.one('#headerTopBar .menu-toggle').on('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			event.preventDefault();
+
+			currentTarget.ancestor('#wrapper').toggleClass('main-nav-open').toggleClass('main-nav-closed');
+		});
+
+		A.all('.side-navigation').each(
+			function(item, index) {
+				item.delegate('click', function(event) {
+					event.preventDefault();
+					event.currentTarget.next('.collapse').toggleClass('in');
+				}, 'li.side-navigation-dropdown-container > a');
+			}
+		);
+	});
+</script>
+  </body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>List Groups</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="http://cdn.alloyui.com/2.5.0/aui/aui-min.js"></script>
+
+	
+</head>
+<body>
+	<div class="main-nav-open secondary-nav-open" id="wrapper">
+		<header class="row" id="headerTopBar">
+			<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
+
+			<h4 class="title"><a href="../..">UX Guidelines</a></h4>
+		</header>
+
+		<section class="manage-control-panel">
+			<nav class="side-navigation" id="mainNav">
+		
+	<ul class="nav nav-stacked">
+<li class=""><a href="../../">Home</a>
+</li>
+<li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/dropdowns">Dropdowns and Tooltips</a>
+</li>
+<li class=""><a href="../../content/nav">Navs</a>
+</li>
+<li class=""><a href="../../content/modals">Modals</a>
+</li>
+<li class=""><a href="../../content/panels">Panels</a>
+</li>
+<li class=""><a href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
+</li>
+<li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
+</li>
+<li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/buttons">Button</a>
+</li>
+<li class=""><a href="../../content/grid">Grids</a>
+</li>
+<li class=""><a href="../../content/icons">Icons</a>
+</li>
+<li class=""><a href="../../content/tables">Tables</a>
+</li>
+<li class=""><a href="../../content/typography">Typography</a>
+</li>
+<li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a href="../../content/form-examples">Form Example</a>
+</li>
+<li class=""><a href="../../content/form-elements">Form Elements</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a href="../../content/timelines">Timeline</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Widgets</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/accordions">Accordions</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/todo">TODO</a>
+</li>
+</ul>
+</nav>
+
+	<div id="mainContent">
+		<h1 class="page-title">
+			List Groups
+
+			
+		</h1>
+
+		
+<div class="row">
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Unordered List Group</h4>
+
+			<ul class="list-group">
+				<li class="list-group-item">List Item 1</li>
+
+				<li class="list-group-item">List Item 2</li>
+
+				<li class="list-group-item">List Item 3</li>
+
+				<li class="list-group-item">List Item 4</li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;
+    ...
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">List Group with Badges</h4>
+
+			<ul class="list-group">
+				<li class="list-group-item">
+					<span class="badge">25</span>
+					List Item 1
+				</li>
+
+				<li class="list-group-item">
+					<span class="badge">3</span>
+					List Item 2
+				</li>
+
+				<li class="list-group-item">
+					<span class="badge">17</span>
+					List Item 3
+				</li>
+
+				<li class="list-group-item">
+					<span class="badge">9</span>
+					List Item 4
+				</li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;
+    &lt;span class=&quot;badge&quot;&gt;#&lt;/span&gt;
+      ...
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Linked List Groups</h4>
+
+			<div class="list-group">
+				<a href="#" class="list-group-item">List Item 1</a>
+
+				<a href="#" class="active list-group-item">List Item 2 - Active</a>
+
+				<a href="#" class="list-group-item">List Item 3</a>
+
+				<a href="#" class="disabled list-group-item">List Item 4 - Disabled</a>
+			</div>
+
+			<br>
+			<pre><code>&lt;div class=&quot;list-group&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;
+    ...
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Contextual List Group</h4>
+
+			<ul class="list-group">
+				<li class="list-group-item list-group-item-success">List Item 1 - Success</li>
+
+				<li class="list-group-item list-group-item-info">List Item 2 - Info</li>
+
+				<li class="list-group-item list-group-item-warning">List Item 3 - Warning</li>
+
+				<li class="list-group-item list-group-item-danger">List Item 4 - Danger</li>
+			</ul>
+
+			<br>
+			<pre><code>&lt;ul class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item list-group-item-success&quot;&gt;
+    ...
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Linked Contextual List Groups</h4>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="list-group">
+						<a href="#" class="list-group-item list-group-item-success">List Item 1 - Success</a>
+
+						<a href="#" class="list-group-item list-group-item-info">List Item 2 - Info</a>
+
+						<a href="#" class="list-group-item list-group-item-warning">List Item 3 - Warning</a>
+
+						<a href="#" class="list-group-item list-group-item-danger">List Item 4 - Danger</a>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="list-group">
+						<a href="#" class="active list-group-item list-group-item-success">List Item 1 - Active Success</a>
+
+						<a href="#" class="active list-group-item list-group-item-info">List Item 2 - Active Info</a>
+
+						<a href="#" class="active list-group-item list-group-item-warning">List Item 3 - Active Warning</a>
+
+						<a href="#" class="active list-group-item list-group-item-danger">List Item 4 - Active Danger</a>
+					</div>
+				</div>
+			</div>
+
+			<pre><code>&lt;div class=&quot;list-group&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;active list-group-item list-group-item-success&quot;&gt;
+    ...
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Custom List Groups</h4>
+
+			<div class="list-group">
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">List Group Item Heading</h4>
+
+					<p class="list-group-item-text">Linked List Group Text</p>
+				</a>
+
+				<a href="#" class="active list-group-item">
+					<h4 class="list-group-item-heading">Active List Group Item Heading</h4>
+
+					<p class="list-group-item-text">Active Linked List Group Text</p>
+				</a>
+
+				<a href="#" class="disabled list-group-item">
+					<h4 class="list-group-item-heading">Disabled List Group Item Heading</h4>
+
+					<p class="list-group-item-text">Disabled Linked List Group Text</p>
+				</a>
+
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">
+						List Group Item Heading with Badge
+						<span class="badge">1</span>
+					</h4>
+
+					<p class="list-group-item-text">List Group Text</p>
+				</a>
+
+				<a href="#" class="list-group-item list-group-item-success">
+					<h4 class="list-group-item-heading">Contextual List Group Item Heading</h4>
+
+					<p class="list-group-item-text">Contextual List Group Text</p>
+				</a>
+			</div>
+
+			<br>
+			<pre><code>&lt;div class=&quot;list-group&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;
+    &lt;h4 class=&quot;list-group-item-heading&quot;&gt;..&lt;/h4&gt;
+      &lt;p class=&quot;list-group-item-text&quot;&gt;
+        ...
+      &lt;/p&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+<script>
+	YUI().use('node', function(A) {
+		var secondaryNavToggle = A.one('#secondaryNav .menu-toggle');
+
+		if (secondaryNavToggle) {
+			secondaryNavToggle.on('click', function(event) {
+				var currentTarget = event.currentTarget;
+
+				event.preventDefault();
+
+				currentTarget.ancestor('#wrapper').toggleClass('secondary-nav-open').toggleClass('secondary-nav-closed');
+				currentTarget.one('.glyphicon').toggleClass('glyphicon-arrow-left').toggleClass('glyphicon-arrow-right');
+			});
+		}
+
+		A.one('#headerTopBar .menu-toggle').on('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			event.preventDefault();
+
+			currentTarget.ancestor('#wrapper').toggleClass('main-nav-open').toggleClass('main-nav-closed');
+		});
+
+		A.all('.side-navigation').each(
+			function(item, index) {
+				item.delegate('click', function(event) {
+					event.preventDefault();
+					event.currentTarget.next('.collapse').toggleClass('in');
+				}, 'li.side-navigation-dropdown-container > a');
+			}
+		);
+	});
+</script>
+  </body>
+</html>

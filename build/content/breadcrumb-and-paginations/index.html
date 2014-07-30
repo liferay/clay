@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Breadcrumb and Paginations</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="http://cdn.alloyui.com/2.5.0/aui/aui-min.js"></script>
+
+	
+</head>
+<body>
+	<div class="main-nav-open secondary-nav-open" id="wrapper">
+		<header class="row" id="headerTopBar">
+			<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
+
+			<h4 class="title"><a href="../..">UX Guidelines</a></h4>
+		</header>
+
+		<section class="manage-control-panel">
+			<nav class="side-navigation" id="mainNav">
+		
+	<ul class="nav nav-stacked">
+<li class=""><a href="../../">Home</a>
+</li>
+<li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse in
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/dropdowns">Dropdowns and Tooltips</a>
+</li>
+<li class=""><a href="../../content/nav">Navs</a>
+</li>
+<li class=""><a href="../../content/modals">Modals</a>
+</li>
+<li class=""><a href="../../content/panels">Panels</a>
+</li>
+<li class=""><a href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
+</li>
+<li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
+</li>
+<li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/buttons">Button</a>
+</li>
+<li class=""><a href="../../content/grid">Grids</a>
+</li>
+<li class=""><a href="../../content/icons">Icons</a>
+</li>
+<li class=""><a href="../../content/tables">Tables</a>
+</li>
+<li class=""><a href="../../content/typography">Typography</a>
+</li>
+<li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a href="../../content/form-examples">Form Example</a>
+</li>
+<li class=""><a href="../../content/form-elements">Form Elements</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a href="../../content/timelines">Timeline</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Widgets</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/accordions">Accordions</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/todo">TODO</a>
+</li>
+</ul>
+</nav>
+
+	<div id="mainContent">
+		<h1 class="page-title">
+			Breadcrumb and Paginations
+
+			
+		</h1>
+
+		
+<div class="row" id="breadcrumb">
+	<div class="col-md-12">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Breadcrumbs</h4>
+
+			<ol class="breadcrumb">
+				<li><a href="#">Home</a></li>
+
+				<li><a href="#">About</a></li>
+
+				<li class="active">Active</li>
+			</ol>
+
+			<pre><code>&lt;ol class=&quot;breadcrumb&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;...&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+		</div>
+	</div>
+</div>
+
+<div class="row" id="pagination">
+	<div class="col-md-3">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Small Pagination</h4>
+
+			<ul class="pagination pagination-sm">
+				<li><a href="#">&laquo;</a></li>
+
+				<li><a href="#">1</a></li>
+
+				<li><a href="#">2</a></li>
+
+				<li><a href="#">3</a></li>
+
+				<li><a href="#">4</a></li>
+
+				<li><a href="#">5</a></li>
+
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pagination pagination-sm&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Default Pagination</h4>
+
+			<ul class="pagination">
+				<li><a href="#">&laquo;</a></li>
+
+				<li><a href="#">1</a></li>
+
+				<li><a href="#">2</a></li>
+
+				<li><a href="#">3</a></li>
+
+				<li><a href="#">4</a></li>
+
+				<li><a href="#">5</a></li>
+
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pagination&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Large Pagination</h4>
+
+			<ul class="pagination pagination-lg">
+				<li><a href="#">&laquo;</a></li>
+
+				<li><a href="#">1</a></li>
+
+				<li><a href="#">2</a></li>
+
+				<li><a href="#">3</a></li>
+
+				<li><a href="#">4</a></li>
+
+				<li><a href="#">5</a></li>
+
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pagination pagination-lg&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Pagination with Disabled and Active States</h4>
+
+			<ul class="pagination">
+				<li class="disabled"><a href="#">&laquo;</a></li>
+
+				<li class="active"><a href="#">1</a></li>
+
+				<li><a href="#">2</a></li>
+
+				<li><a href="#">3</a></li>
+
+				<li><a href="#">4</a></li>
+
+				<li><a href="#">5</a></li>
+
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pagination&quot;&gt;
+  &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+</div>
+
+<div class="row" id="pager">
+	<div class="col-md-4">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Default Pagers</h4>
+
+			<ul class="pager">
+				<li><a href="#">Previous</a></li>
+
+				<li><a href="#">Next</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pager&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Aligned Pager</h4>
+
+			<ul class="pager">
+				<li class="previous"><a href="#">&larr; Older</a></li>
+
+				<li class="next"><a href="#">&rarr; Newer</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pager&quot;&gt;
+  &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Disabled Pager</h4>
+
+			<ul class="pager">
+				<li class="disabled previous"><a href="#">&larr; Older</a></li>
+				<li class="active next"><a href="#">&rarr; Newer</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pager&quot;&gt;
+  &lt;li class=&quot;disabled previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+</div>
+
+<script>
+	YUI().use('node', function(A) {
+		A.one('#breadcrumb').delegate('click', function(event) {
+			event.preventDefault();
+		}, '.breadcrumb a');
+
+		A.one('#pager').delegate('click', function(event) {
+			event.preventDefault();
+		}, '.pager a');
+
+		A.one('#pagination').delegate('click', function(event) {
+			event.preventDefault();
+		}, '.pagination a');
+	});
+</script>
+	</div>
+
+		</section>
+	</div>
+<script>
+	YUI().use('node', function(A) {
+		var secondaryNavToggle = A.one('#secondaryNav .menu-toggle');
+
+		if (secondaryNavToggle) {
+			secondaryNavToggle.on('click', function(event) {
+				var currentTarget = event.currentTarget;
+
+				event.preventDefault();
+
+				currentTarget.ancestor('#wrapper').toggleClass('secondary-nav-open').toggleClass('secondary-nav-closed');
+				currentTarget.one('.glyphicon').toggleClass('glyphicon-arrow-left').toggleClass('glyphicon-arrow-right');
+			});
+		}
+
+		A.one('#headerTopBar .menu-toggle').on('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			event.preventDefault();
+
+			currentTarget.ancestor('#wrapper').toggleClass('main-nav-open').toggleClass('main-nav-closed');
+		});
+
+		A.all('.side-navigation').each(
+			function(item, index) {
+				item.delegate('click', function(event) {
+					event.preventDefault();
+					event.currentTarget.next('.collapse').toggleClass('in');
+				}, 'li.side-navigation-dropdown-container > a');
+			}
+		);
+	});
+</script>
+  </body>
+</html>

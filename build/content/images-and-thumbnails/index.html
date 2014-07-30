@@ -1,0 +1,468 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Images and Thumbnails</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="http://cdn.alloyui.com/2.5.0/aui/aui-min.js"></script>
+
+	
+</head>
+<body>
+	<div class="main-nav-open secondary-nav-open" id="wrapper">
+		<header class="row" id="headerTopBar">
+			<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
+
+			<h4 class="title"><a href="../..">UX Guidelines</a></h4>
+		</header>
+
+		<section class="manage-control-panel">
+			<nav class="side-navigation" id="mainNav">
+		
+	<ul class="nav nav-stacked">
+<li class=""><a href="../../">Home</a>
+</li>
+<li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/dropdowns">Dropdowns and Tooltips</a>
+</li>
+<li class=""><a href="../../content/nav">Navs</a>
+</li>
+<li class=""><a href="../../content/modals">Modals</a>
+</li>
+<li class=""><a href="../../content/panels">Panels</a>
+</li>
+<li class=""><a href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
+</li>
+<li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
+</li>
+<li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse in
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/buttons">Button</a>
+</li>
+<li class=""><a href="../../content/grid">Grids</a>
+</li>
+<li class=""><a href="../../content/icons">Icons</a>
+</li>
+<li class=""><a href="../../content/tables">Tables</a>
+</li>
+<li class=""><a href="../../content/typography">Typography</a>
+</li>
+<li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a href="../../content/form-examples">Form Example</a>
+</li>
+<li class=""><a href="../../content/form-elements">Form Elements</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a href="../../content/timelines">Timeline</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Widgets</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/accordions">Accordions</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/todo">TODO</a>
+</li>
+</ul>
+</nav>
+
+	<div id="mainContent">
+		<h1 class="page-title">
+			Images and Thumbnails
+
+			
+		</h1>
+
+		
+<div class="row">
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Responsive Image</h4>
+
+			<img alt="responsive image" class="img-responsive" src="../../images/unsplash_52c470899a2e1_1.jpg">
+
+			
+<pre><code>&lt;img alt=&quot;...&quot; class=&quot;img-responsive&quot; src=&quot;...&quot;&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-6" id="imageShapes">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Image Shapes</h4>
+
+			<div class="row">
+				<div class="col-xs-4">
+					<img alt="responsive image with rouded edges" class="img-responsive img-rounded" src="../../images/thumbnail_placeholder.gif">
+				</div>
+
+				<div class="col-xs-4">
+					<img alt="responsive circle image" class="img-circle img-responsive" src="../../images/thumbnail_placeholder.gif">
+				</div>
+
+				<div class="col-xs-4">
+					<img alt="responsive thumbnail image" class="img-thumbnail img-responsive" src="../../images/thumbnail_placeholder.gif">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					
+<pre><code>&lt;img alt=&quot;...&quot; class=&quot;img-rounded&quot; src=&quot;...&quot;&gt;&lt;/code&gt;
+&lt;code&gt;&lt;img alt=&quot;...&quot; class=&quot;img-circle&quot; src=&quot;...&quot;&gt;&lt;/code&gt;
+&lt;code&gt;&lt;img alt=&quot;...&quot; class=&quot;img-thumbnail&quot; src=&quot;...&quot;&gt;</code></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Default Thumbnails</h4>
+
+			<div class="row">
+				<div class="col-sm-3 col-xs-6">
+					<a class="thumbnail" href="#">
+						<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+					</a>
+				</div>
+
+				<div class="col-sm-3 col-xs-6">
+					<a class="thumbnail" href="#">
+						<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif">
+					</a>
+				</div>
+
+				<div class="col-sm-3 col-xs-6">
+					<a class="thumbnail" href="#">
+						<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif">
+					</a>
+				</div>
+
+				<div class="col-sm-3 col-xs-6 ">
+					<a class="thumbnail" href="#">
+						<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif">
+					</a>
+				</div>
+			</div>
+
+			<pre><code>&lt;a class=&quot;thumbnail&quot; href=&quot;#&quot;&gt;
+  &lt;img alt=&quot;...&quot; src=&quot;...&quot;&gt;
+&lt;/a&gt;</code></pre>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Thumbnails with Custom Content</h4>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="thumbnail">
+						<img alt="thumbnail" src="../../images/unsplash_52c470899a2e1_1.jpg">
+
+						<div class="caption">
+							<h4>Thumbnail with Text and Buttons</h4>
+
+							<p>Espresso caffeine, cup macchiato, doppio aroma variety to go, wings acerbic, seasonal single shot organic trifecta mocha.</p>
+
+							<div>
+								<a href="#" class="btn btn-primary" role="button">Button</a>
+
+								<a href="#" class="btn btn-default" role="button">Button</a>
+							</div>
+						</div>
+					</div>
+
+					<pre><code>&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;img alt=&quot;...&quot; src=&quot;...&quot;&gt;
+  &lt;div class=&quot;caption&quot;&gt;
+    &lt;p&gt;...&lt;p&gt;
+    &lt;p&gt;&lt;a class=&quot;btn btn-primary&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="thumbnail">
+						<img alt="thumbnail" src="../../images/unsplash_52c470899a2e1_1.jpg">
+
+						<div class="caption">
+							<h4>Thumbnail with Select Box</h4>
+
+							<select class="form-control">
+								<option>Espresso caffeine</option>
+
+								<option>Cup macchiato</option>
+
+								<option>Organic trifecta mocha</option>
+							</select>
+						</div>
+					</div>
+
+					<pre><code>&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;img alt=&quot;...&quot; src=&quot;...&quot;&gt;
+  &lt;div class=&quot;caption&quot;&gt;
+    &lt;select class=&quot;form-control&gt;
+      &lt;option&gt;...&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="thumbnail">
+						<img alt="thumbnail" src="../../images/unsplash_52c470899a2e1_1.jpg">
+
+						<div class="caption">
+							<h4>Thumbnail with List Group</h4>
+
+							<ul class="list-group">
+								<li class="list-group-item">Espresso caffeine</li>
+
+								<li class="list-group-item">Cup macchiato</li>
+
+								<li class="list-group-item">Organic trifecta mocha</li>
+							</ul>
+						</div>
+					</div>
+
+					<pre><code>&lt;div class=&quot;thumbnail&quot;&gt;
+  &lt;img alt=&quot;...&quot; src=&quot;...&quot;&gt;
+  &lt;div class=&quot;caption&quot;&gt;
+    &lt;ul class=&quot;list-group&gt;
+      &lt;li class=&quot;list-group-item&gt;...&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h4>Thumbnails with no borders</h4>
+
+		<p>Add class no-borders to thumbnail to remove borders.</p>
+	</div>
+</div>
+
+<div id="thumbnailVariations">
+	<div class="row">
+		<div class="col-md-4 col-sm-6">
+			<div class="thumbnail no-borders">
+				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+
+				<div class="caption">
+					<h4>Some Title</h4>
+
+					<p>Latte plunger pot seasona</p>
+
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="../../images/thumbnail_placeholder.gif">
+
+						<div>Test Test</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6">
+			<div class="thumbnail no-borders">
+				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+
+				<div class="caption">
+					<h4>Latte plunger</h4>
+
+					<p>Ristretto, cinnamon foam, fair trade seasonal</p>
+
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="../../images/thumbnail_placeholder.gif">
+
+						<div>Joe Bloggs</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6">
+			<div class="thumbnail no-borders">
+				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+
+				<div class="caption">
+					<h4>Brewed doppio</h4>
+
+					<p>Cortado roast, decaffeinated saucer, foam qui shop</p>
+
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="../../images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Some thumbnail variations</h4>
+
+			<p>Different ways you can use thumbnails to display content.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="../../images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+
+				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+
+				<a href="#" class="btn btn-block btn-default" role="button" style="margin-top: 5px;">Subscribe</a>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="../../images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+
+				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+
+				<a href="#" class="btn btn-block btn-default" role="button" style="margin-top: 5px;">Subscribe</a>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="../../images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+
+				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+
+				<a href="#" class="btn btn-block btn-default" role="button" style="margin-top: 5px;">Subscribe</a>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="../../images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+
+				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+
+				<a href="#" class="btn btn-block btn-default" role="button" style="margin-top: 5px;">Subscribe</a>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+<script>
+	YUI().use('node', function(A) {
+		var secondaryNavToggle = A.one('#secondaryNav .menu-toggle');
+
+		if (secondaryNavToggle) {
+			secondaryNavToggle.on('click', function(event) {
+				var currentTarget = event.currentTarget;
+
+				event.preventDefault();
+
+				currentTarget.ancestor('#wrapper').toggleClass('secondary-nav-open').toggleClass('secondary-nav-closed');
+				currentTarget.one('.glyphicon').toggleClass('glyphicon-arrow-left').toggleClass('glyphicon-arrow-right');
+			});
+		}
+
+		A.one('#headerTopBar .menu-toggle').on('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			event.preventDefault();
+
+			currentTarget.ancestor('#wrapper').toggleClass('main-nav-open').toggleClass('main-nav-closed');
+		});
+
+		A.all('.side-navigation').each(
+			function(item, index) {
+				item.delegate('click', function(event) {
+					event.preventDefault();
+					event.currentTarget.next('.collapse').toggleClass('in');
+				}, 'li.side-navigation-dropdown-container > a');
+			}
+		);
+	});
+</script>
+  </body>
+</html>

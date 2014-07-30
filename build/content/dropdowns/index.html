@@ -1,0 +1,582 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Dropdowns and Tooltips</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="http://cdn.alloyui.com/2.5.0/aui/aui-min.js"></script>
+
+	
+</head>
+<body>
+	<div class="main-nav-open secondary-nav-open" id="wrapper">
+		<header class="row" id="headerTopBar">
+			<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
+
+			<h4 class="title"><a href="../..">UX Guidelines</a></h4>
+		</header>
+
+		<section class="manage-control-panel">
+			<nav class="side-navigation" id="mainNav">
+		
+	<ul class="nav nav-stacked">
+<li class=""><a href="../../">Home</a>
+</li>
+<li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse in
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/dropdowns">Dropdowns and Tooltips</a>
+</li>
+<li class=""><a href="../../content/nav">Navs</a>
+</li>
+<li class=""><a href="../../content/modals">Modals</a>
+</li>
+<li class=""><a href="../../content/panels">Panels</a>
+</li>
+<li class=""><a href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
+</li>
+<li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
+</li>
+<li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/buttons">Button</a>
+</li>
+<li class=""><a href="../../content/grid">Grids</a>
+</li>
+<li class=""><a href="../../content/icons">Icons</a>
+</li>
+<li class=""><a href="../../content/tables">Tables</a>
+</li>
+<li class=""><a href="../../content/typography">Typography</a>
+</li>
+<li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a href="../../content/form-examples">Form Example</a>
+</li>
+<li class=""><a href="../../content/form-elements">Form Elements</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a href="../../content/timelines">Timeline</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Widgets</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/accordions">Accordions</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/todo">TODO</a>
+</li>
+</ul>
+</nav>
+
+	<div id="mainContent">
+		<h1 class="page-title">
+			Dropdowns and Tooltips
+
+			
+		</h1>
+
+		
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box panel panel-default" id="dropdownDisplay">
+				<h4 class="panel-heading">Dropdown Menus</h4>
+
+				<div class="row">
+					<div class="col-md-4">
+						<h4>Default</h4>
+
+						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
+							<li class="dropdown-header" role="presentation">Dropdown Header</li>
+							<li role="presentation"><a href="#" role="menuitem">Action</a></li>
+							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
+							<li class="divider" role="presentation"></li>
+							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h4>Square Borders</h4>
+
+						<p>Add class square-borders on an element to remove rounded borders. You can also add it to the parent to remove rounded borders on all children elements.</p>
+
+						<ul aria-labelledby="dropdownMenu" class="dropdown-menu square-borders">
+							<li class="dropdown-header" role="presentation">Dropdown Header</li>
+							<li role="presentation"><a href="#" role="menuitem">Action</a></li>
+							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
+							<li class="divider" role="presentation"></li>
+							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h4>Scrolling Content</h4>
+
+						<p>Add class inline-scroller to any element and set the height or width to make it scroll inline! The default height is 125px, but can be overridden to any height/width.</p>
+
+						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
+							<li class="dropdown-header" role="presentation">Dropdown Header</li>
+							<li role="presentation">
+								<ul class="inline-scroller">
+									<li><a href="#">Actions</a></li>
+									<li><a href="#">Edit</a></li>
+									<li><a href="#">View</a></li>
+									<li><a href="#">Permissions</a></li>
+									<li><a href="#">Actions</a></li>
+									<li><a href="#">Edit</a></li>
+									<li><a href="#">View</a></li>
+									<li><a href="#">Permissions</a></li>
+									<li><a href="#">Actions</a></li>
+									<li><a href="#">Edit</a></li>
+									<li><a href="#">View</a></li>
+									<li><a href="#">Permissions</a></li>
+									<li><a href="#">Actions</a></li>
+									<li><a href="#">Edit</a></li>
+									<li><a href="#">View</a></li>
+									<li><a href="#">Permissions</a></li>
+								</ul>
+							</li>
+							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
+							<li class="divider" role="presentation"></li>
+							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12 mega-menu">
+						<h4>Mega Menu</h4>
+
+						<p>Add class mega-menu to any dropdown to make the dropdown-menu BIG. The default width is 500px, but can be overridden to any width. The mega-menu-full class can be used to make the dropdown as wide as the navigation, see dropdown examples.</p>
+
+						<ul class="dropdown-menu">
+							<li class="col-sm-4">
+								<ul class="link-list">
+									<li class="link-list-heading">By Resource</li>
+									<li><a href="#1">Support Home</a></li>
+									<li><a href="#1">Ask the Experts</a></li>
+									<li><a href="#1">Chat or Call</a></li>
+								</ul>
+
+								<ul class="link-list">
+									<li class="link-list-heading">By Product</li>
+									<li><a href="#1">Developing for the Platform</a></li>
+									<li><a href="#1">Mastering Fundamentals</a></li>
+									<li><a href="#1">Styling with Themes</a></li>
+									<li><a href="#1">Managing Content</a></li>
+								</ul>
+							</li>
+
+							<li class="col-sm-4">
+								<ul class="link-list">
+									<li class="link-list-heading">Popular Picks</li>
+									<li><a href="#1">Error Messages</a></li>
+									<li><a href="#1">Updates: Service Packs & Fixes</a></li>
+									<li><a href="#1">Install, Upgrade, & Activate</a></li>
+									<li><a href="#1">Regular Drivers</a></li>
+									<li><a href="#1">Hardware Drivers</a></li>
+								</ul>
+
+								<ul class="link-list">
+									<li class="link-list-heading">Security</li>
+									<li><a href="#1">Security Home</a></li>
+									<li><a href="#1">Security Essentials</a></li>
+									<li><a href="#1">Protecting Your Data</a></li>
+									<li><a href="#1">Securing Your Browser</a></li>
+								</ul>
+							</li>
+
+							<li class="col-sm-4">
+								<ul class="link-list">
+									<li class="link-list-heading">By Audience</li>
+									<li><a href="#1">For Home Users</a></li>
+									<li><a href="#1">For Small Business</a></li>
+									<li><a href="#1">For IT Professionals</a></li>
+									<li><a href="#1">For Developers</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Dropdown Examples</h4>
+
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<ul class="nav navbar-nav">
+							<li><a href="#">Link</a></li>
+							<li class="dropdown mega-menu">
+								<a class="dropdown-toggle" href="#">Mega Menu Default <span class="caret"></span></a>
+
+								<ul class="dropdown-menu">
+									<li class="col-sm-4">
+										<ul class="link-list">
+											<li class="link-list-heading">By Resource</li>
+											<li><a href="#1">Support Home</a></li>
+											<li><a href="#1">Ask the Experts</a></li>
+											<li><a href="#1">Chat or Call</a></li>
+										</ul>
+
+										<ul class="link-list">
+											<li class="link-list-heading">By Product</li>
+											<li><a href="#1">Mango</a></li>
+											<li><a href="#1">Apples</a></li>
+											<li><a href="#1">Cherries</a></li>
+											<li><a href="#1">Grapes</a></li>
+											<li><a href="#1">Oranges</a></li>
+											<li><a href="#1">Cantaloupes</a></li>
+										</ul>
+									</li>
+
+									<li class="col-sm-4">
+										<ul class="link-list">
+											<li class="link-list-heading">Popular Picks</li>
+											<li><a href="#1">Error Messages</a></li>
+											<li><a href="#1">Updates: Service Packs & Fixes</a></li>
+											<li><a href="#1">Install, Upgrade, & Activate</a></li>
+											<li><a href="#1">Regular Drivers</a></li>
+											<li><a href="#1">Hardware Drivers</a></li>
+										</ul>
+
+										<ul class="link-list">
+											<li class="link-list-heading">Security</li>
+											<li><a href="#1">Security Home</a></li>
+											<li><a href="#1">Security Essentials</a></li>
+											<li><a href="#1">Protecting Your Data</a></li>
+											<li><a href="#1">Securing Your Browser</a></li>
+										</ul>
+									</li>
+
+									<li class="col-sm-4">
+										<ul class="link-list">
+											<li class="link-list-heading">By Audience</li>
+											<li><a href="#1">For Home Users</a></li>
+											<li><a href="#1">For Small Business</a></li>
+											<li><a href="#1">For IT Professionals</a></li>
+											<li><a href="#1">For Developers</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li class="dropdown mega-menu-full">
+								<a class="dropdown-toggle" href="#">Mega Menu Full <span class="caret"></span></a>
+
+								<ul class="dropdown-menu">
+									<li class="col-sm-4">
+										<ul class="link-list">
+											<li class="link-list-heading">By Resource</li>
+											<li><a href="#1">Support Home</a></li>
+											<li><a href="#1">Ask the Experts</a></li>
+											<li><a href="#1">Chat or Call</a></li>
+										</ul>
+
+										<ul class="link-list">
+											<li class="link-list-heading">By Product</li>
+											<li><a href="#1">Mango</a></li>
+											<li><a href="#1">Apples</a></li>
+											<li><a href="#1">Cherries</a></li>
+											<li><a href="#1">Grapes</a></li>
+											<li><a href="#1">Oranges</a></li>
+											<li><a href="#1">Cantaloupes</a></li>
+										</ul>
+									</li>
+
+									<li class="col-sm-4">
+										<ul class="link-list">
+											<li class="link-list-heading">Popular Picks</li>
+											<li><a href="#1">Error Messages</a></li>
+											<li><a href="#1">Updates: Service Packs & Fixes</a></li>
+											<li><a href="#1">Install, Upgrade, & Activate</a></li>
+											<li><a href="#1">Regular Drivers</a></li>
+											<li><a href="#1">Hardware Drivers</a></li>
+										</ul>
+
+										<ul class="link-list">
+											<li class="link-list-heading">Security</li>
+											<li><a href="#1">Security Home</a></li>
+											<li><a href="#1">Security Essentials</a></li>
+											<li><a href="#1">Protecting Your Data</a></li>
+											<li><a href="#1">Securing Your Browser</a></li>
+										</ul>
+									</li>
+
+									<li class="col-sm-4">
+										<ul class="link-list">
+											<li class="link-list-heading">By Audience</li>
+											<li><a href="#1">For Home Users</a></li>
+											<li><a href="#1">For Small Business</a></li>
+											<li><a href="#1">For IT Professionals</a></li>
+											<li><a href="#1">For Developers</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input class="form-control" type="text" />
+							</div>
+
+							<button class="btn btn-default" type="submit">Submit</button>
+						</form>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">Link</a></li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+								<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
+									<li class="dropdown-header" role="presentation">Dropdown Header</li>
+									<li role="presentation">
+										<ul class="inline-scroller">
+											<li><a href="#">Actions</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View</a></li>
+											<li><a href="#">Permissions</a></li>
+											<li><a href="#">Actions</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View</a></li>
+											<li><a href="#">Permissions</a></li>
+											<li><a href="#">Actions</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View</a></li>
+											<li><a href="#">Permissions</a></li>
+											<li><a href="#">Actions</a></li>
+											<li><a href="#">Edit</a></li>
+											<li><a href="#">View</a></li>
+											<li><a href="#">Permissions</a></li>
+										</ul>
+									</li>
+									<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
+									<li class="divider" role="presentation"></li>
+									<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+									</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Dropdown Alignment</h4>
+
+				<p>.dropdown-menu, .dropdown-menu-top, .dropdown-menu-top-right, .dropdown-menu-right, add one of these classes to the dropdown-menu to align it relative to its trigger.</p>
+
+				<div class="btn-group btn-group-justified">
+					<div class="btn-group dropdown">
+						<button class="btn btn-default dropdown-toggle" id="dropdownMenu" type="button">Default
+							<span class="caret"></span>
+						</button>
+
+						<ul aria-labelledby="dropdownMenu" class="dropdown-menu" role="menu" >
+							<li class="dropdown-header" role="presentation">Dropdown Header</li>
+							<li role="presentation"><a href="#" role="menuitem">Action</a></li>
+							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
+							<li class="divider" role="presentation"></li>
+							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+						</ul>
+					</div>
+
+					<div class="btn-group dropdown">
+						<button class="btn btn-primary dropdown-toggle" id="dropdownMenu" type="button">Top
+							<span class="dropup"><span class="caret"></span></span>
+						</button>
+
+						<ul aria-labelledby="dropdownMenu" class="dropdown-menu dropdown-menu-top" role="menu" >
+							<li class="dropdown-header" role="presentation">Dropdown Header</li>
+							<li role="presentation"><a href="#" role="menuitem">Action</a></li>
+							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
+							<li class="divider" role="presentation"></li>
+							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+						</ul>
+					</div>
+
+					<div class="btn-group dropdown">
+						<button class="btn btn-success dropdown-toggle" id="dropdownMenu" type="button">Top Right
+							<span class="dropup"><span class="caret"></span></span>
+						</button>
+
+						<ul aria-labelledby="dropdownMenu" class="dropdown-menu dropdown-menu-top dropdown-menu-right" role="menu" >
+							<li class="dropdown-header" role="presentation">Dropdown Header</li>
+							<li role="presentation"><a href="#" role="menuitem">Action</a></li>
+							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
+							<li class="divider" role="presentation"></li>
+							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+						</ul>
+					</div>
+
+					<div class="btn-group dropdown">
+						<button class="btn btn-info dropdown-toggle" id="dropdownMenu" type="button">Right
+							<span class="caret"></span>
+						</button>
+
+						<ul aria-labelledby="dropdownMenu" class="dropdown-menu dropdown-menu-right" role="menu" >
+							<li class="dropdown-header" role="presentation">Dropdown Header</li>
+							<li role="presentation"><a href="#" role="menuitem">Action</a></li>
+							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
+							<li class="divider" role="presentation"></li>
+							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+						</ul>
+					</div>
+				</div>
+
+				
+<pre><code>&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;button class=&quot;btn btn-default dropdown-toggle&quot; id=&quot;dropdownMenu&quot;&gt;Dropdown
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+
+ &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+    &lt;li class=&quot;dropdown-header&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Tooltips</h4>
+
+				<button class="btn btn-default" id="tooltipLeft" title="Left">Tooltip</button>
+				<button class="btn btn-primary" id="tooltipTop" title="Top">Tooltip</button>
+				<button class="btn btn-success" id="tooltipBottom" title="Bottom">Tooltip</button>
+				<button class="btn btn-info" id="tooltipRight" title="Right">Tooltip</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	YUI().use('aui-tooltip', 'event', 'node', function(A) {
+		var mainContent = A.one('#mainContent');
+
+		mainContent.delegate('click', function(event) {
+			event.preventDefault();
+		}, 'a');
+
+		mainContent.delegate('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			var dropdown = currentTarget.ancestor('.dropdown');
+
+			dropdown.toggleClass('open');
+
+			if (dropdown.hasClass('open')) {
+				currentTarget.on('clickoutside', function(event) {
+					var _this = this;
+
+					_this.ancestor('.dropdown').removeClass('open');
+
+					_this.detach('clickoutside');
+				});
+			}
+			else {
+				currentTarget.detach('clickoutside');
+			}
+		}, '.dropdown-toggle');
+
+		new A.Tooltip({
+			trigger: '#tooltipRight',
+			position: 'right'
+		}).render();
+
+		new A.Tooltip({
+			trigger: '#tooltipBottom',
+			position: 'bottom'
+		}).render();
+
+		new A.Tooltip({
+			trigger: '#tooltipLeft',
+			position: 'left'
+		}).render();
+
+		new A.Tooltip({
+			trigger: '#tooltipTop',
+			position: 'top'
+		}).render();
+	});
+</script>
+	</div>
+
+		</section>
+	</div>
+<script>
+	YUI().use('node', function(A) {
+		var secondaryNavToggle = A.one('#secondaryNav .menu-toggle');
+
+		if (secondaryNavToggle) {
+			secondaryNavToggle.on('click', function(event) {
+				var currentTarget = event.currentTarget;
+
+				event.preventDefault();
+
+				currentTarget.ancestor('#wrapper').toggleClass('secondary-nav-open').toggleClass('secondary-nav-closed');
+				currentTarget.one('.glyphicon').toggleClass('glyphicon-arrow-left').toggleClass('glyphicon-arrow-right');
+			});
+		}
+
+		A.one('#headerTopBar .menu-toggle').on('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			event.preventDefault();
+
+			currentTarget.ancestor('#wrapper').toggleClass('main-nav-open').toggleClass('main-nav-closed');
+		});
+
+		A.all('.side-navigation').each(
+			function(item, index) {
+				item.delegate('click', function(event) {
+					event.preventDefault();
+					event.currentTarget.next('.collapse').toggleClass('in');
+				}, 'li.side-navigation-dropdown-container > a');
+			}
+		);
+	});
+</script>
+  </body>
+</html>
