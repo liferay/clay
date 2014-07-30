@@ -8,22 +8,45 @@ $icon-font-path: "../fonts/";
 
 // Temporarily adding custom styles here
 
-li.child-active > a {
-	background: #777;
+.page-title {
+	font-weight: bold;
+	margin-bottom: 25px;
 }
 
 .side-navigation {
-	li > a {
-		&:hover, &:focus {
-			background-color: #CCC;
+	padding-top: 35px;
+
+	li {
+		> a {
+			&:hover, &:focus {
+				background-color: transparent;
+				color: #009AE5;
+				text-decoration: underline;
+			}
+		}
+
+		&.child-active, &.active {
+			> a {
+				font-weight: bold;
+			}
+		}
+
+		&.active > a {
+			color: #555;
 		}
 	}
 
-	.side-navigation-dropdown-container:hover > a {
-		background-color: #CCC;
-	}
+	// li > a {
+	// 	&:hover, &:focus {
+	// 		background-color: #CCC;
+	// 	}
+	// }
 
-	li.active > a {
-		background: #333;
-	}
+	// .side-navigation-dropdown-container:hover > a {
+	// 	background-color: #CCC;
+	// }
+
+	// li.active > a {
+	// 	background: #333;
+	// }
 }

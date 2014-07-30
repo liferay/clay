@@ -1,5 +1,177 @@
 ---
 title: Modals
-template: index.ejs
 ---
-<p>Modals</p>
+
+<div class="col-md-6">
+	<div class="box panel panel-default">
+<h4 class="panel-heading">Default Modal</h4>
+
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button class="close" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+			<h4 class="modal-title">Modal Title</h4>
+		</div>
+
+		<div class="modal-body">
+			<h4>Popover in a modal</h4>
+
+			<p>This <a href="#" role="button" class="btn btn-default popover-test" title="">button</a> should trigger a popover on click.</p>
+
+			<h4>Tooltips in a modal</h4>
+
+			<p><a href="#" class="tooltip-test" title="">This link</a> and <a href="#" class="tooltip-test" title="">that link</a> should have tooltips on hover.</p>
+		</div>
+
+		<div class="modal-footer">
+			<button class="btn btn-default" type="button">Close</button>
+
+			<button class="btn btn-primary" type="button">Save Changes</button>
+		</div>
+	</div>
+</div>
+
+<span>Demo:</span>
+
+<button class="btn btn-primary">Default Modal</button>
+
+<div class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+				<h4 class="modal-title">Modal Title</h4>
+			</div>
+
+			<div class="modal-body">
+				<h4>Popover in a modal</h4>
+
+				<p>This <a href="#" role="button" class="btn btn-default popover-test" title="">button</a> should trigger a popover on click.</p>
+
+				<h4>Tooltips in a modal</h4>
+
+				<p><a href="#" class="tooltip-test" title="">This link</a> and <a href="#" class="tooltip-test" title="">that link</a> should have tooltips on hover.</p>
+			</div>
+
+			<div class="modal-footer">
+				<button class="btn btn-default" type="button">Close</button>
+
+				<button class="btn btn-primary" type="button">Save Changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br><br><pre><code>&lt;div class="modal fade"&gt;<br>  &lt;div class="modal-dialog"&gt;<br>    &lt;div class="modal-content"&gt;<br><br>      &lt;div class="modal-header"&gt;<br>        &lt;button class="close type="button"&gt;&lt;span aria-hidden="true"&gt;&#38;times;&lt;/span&gt;&lt;/button&gt;<br>        &lt;h4 class="modal-title"&gt;Modal Title&lt;/h4&gt;<br>      &lt;/div&gt;<br><br>      &lt;div class="modal-body"&gt;<br>        ...<br>      &lt;/div&gt;<br><br>      &lt;div class="modal-footer"&gt;<br>        ...<br>      &lt;/div&gt;<br><br>    &lt;/div&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+	</div>
+</div>
+
+<div class="col-md-6">
+	<div class="box panel panel-default">
+<h4 class="panel-heading">Small Modal</h4>
+
+<div class="modal-dialog modal-sm">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button class="close" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+			<h4 class="modal-title">Modal Title</h4>
+		</div>
+
+		<div class="modal-body">
+			<p>Modal Body...</p>
+		</div>
+
+		<div class="modal-footer">
+			<button class="btn btn-default" type="button">Close</button>
+
+			<button class="btn btn-primary" type="button">Save Changes</button>
+		</div>
+	</div>
+</div>
+
+<span>Demo:</span>
+
+<button class="btn btn-primary">Small Modal</button>
+
+<div class="modal fade">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+				<h4 class="modal-title">Modal Title</h4>
+			</div>
+
+			<div class="modal-body">
+				<p>Modal Body...</p>
+			</div>
+
+			<div class="modal-footer">
+				<button class="btn btn-default" type="button">Close</button>
+
+				<button class="btn btn-primary" type="button">Save Changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br><br><pre><code>&lt;div class="modal fade"&gt;<br>  &lt;div class="modal-dialog modal-sm"&gt;<br>    &lt;div class="modal-content"&gt;<br><br>      &lt;div class="modal-header"&gt;<br>        &lt;button class="close type="button"&gt;&lt;span aria-hidden="true"&gt;&#38;times;&lt;/span&gt;&lt;/button&gt;<br>        &lt;h4 class="modal-title"&gt;Modal Title&lt;/h4&gt;<br>      &lt;/div&gt;<br><br>      &lt;div class="modal-body"&gt;<br>        ...<br>      &lt;/div&gt;<br><br>      &lt;div class="modal-footer"&gt;<br>        ...<br>      &lt;/div&gt;<br><br>    &lt;/div&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+	</div>
+</div>
+
+<div class="col-md-12">
+	<div class="box panel panel-default">
+<h4 class="panel-heading">Large Modal</h4>
+
+<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button class="close" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+			<h4 class="modal-title">Modal Title</h4>
+		</div>
+
+		<div class="modal-body">
+			<p>Modal Body...</p>
+		</div>
+
+		<div class="modal-footer">
+			<button class="btn btn-default" type="button">Close</button>
+
+			<button class="btn btn-primary" type="button">Save Changes</button>
+		</div>
+	</div>
+</div>
+
+<span>Demo:</span>
+
+<button class="btn btn-primary"> Large Modal</button>
+
+<div class="modal fade">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+				<h4 class="modal-title">Modal Title</h4>
+			</div>
+
+			<div class="modal-body">
+				<p>Modal Body...</p>
+			</div>
+
+			<div class="modal-footer">
+				<button class="btn btn-default" type="button">Close</button>
+
+				<button class="btn btn-primary" type="button">Save Changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br><br><pre><code>&lt;div class="modal fade"&gt;<br>  &lt;div class="modal-dialog modal-lg"&gt;<br>    &lt;div class="modal-content"&gt;<br><br>      &lt;div class="modal-header"&gt;<br>        &lt;button class="close type="button"&gt;&lt;span aria-hidden="true"&gt;&#38;times;&lt;/span&gt;&lt;/button&gt;<br>        &lt;h4 class="modal-title"&gt;Modal Title&lt;/h4&gt;<br>      &lt;/div&gt;<br><br>      &lt;div class="modal-body"&gt;<br>        ...<br>      &lt;/div&gt;<br><br>      &lt;div class="modal-footer"&gt;<br>        ...<br>      &lt;/div&gt;<br><br>    &lt;/div&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+	</div>
+</div>

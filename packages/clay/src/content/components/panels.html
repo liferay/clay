@@ -1,5 +1,326 @@
 ---
 title: Panels
-template: index.ejs
 ---
-<p>Panels</p>
+
+<div id="panelPage">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Panels without heading</h4>
+
+				<div class="panel panel-default">
+					<div class="panel-body">Panel-default.</div>
+				</div>
+			</div>
+
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Panels with footer</h4>
+
+				<div class="panel panel-default">
+					<div class="panel-body">Panel-default.</div>
+
+					<div class="panel-footer">Panel-default</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Panels with heading</h4>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel-default</h3>
+					</div>
+
+					<div class="panel-body">
+						Panel-default.
+					</div>
+				</div>
+			</div>
+
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Panel borders</h4>
+
+				<div class="panel panel-default">
+					<div class="panel-body">
+						Panels by default have border: 1px solid;
+					</div>
+				</div>
+
+				<div class="panel panel-default no-borders">
+					<div class="panel-body">
+						add class no-borders on the panel element to remove the borders.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Equally Distributed Content in Panel-heading</h4>
+
+			<p>Add class panel-heading-align to panel element to align panel-heading.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="no-borders panel panel-default panel-heading-align">
+				<div class="panel-heading">
+					<div>
+						<span>June 2014</span>
+					</div>
+
+					<div>
+						<span>Panel with Graph</span>
+					</div>
+
+					<div>
+						<span class="glyphicon glyphicon-remove"></span>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<div id="myChart"></div>
+				</div>
+
+				<div class="panel-footer">
+					<div>
+						<a href="#1">
+							<div><span class="glyphicon glyphicon-signal"></span></div>
+
+							<span>Sales</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<div><span class="glyphicon glyphicon-tags"></span></div>
+
+							<span>Promo</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<div><span class="glyphicon glyphicon-camera"></span></div>
+
+							<span>Photo</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<div><span class="glyphicon glyphicon-record"></span></div>
+
+							<span>Other</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="no-borders panel panel-default panel-heading-align">
+				<div class="panel-heading">
+					<div style="text-align: center;">
+						<div>
+							<span class="glyphicon glyphicon-cloud" style="font-size: 150px;"></span>
+						</div>
+
+						<h1 style="margin: -20px 0 0 0;font-size: 90px;">75&deg;</h1>
+
+						<h5>Los Angeles</h5>
+					</div>
+				</div>
+
+				<div class="panel-footer" style="background-color: #FFF;">
+					<div>
+						<a href="#1">
+							<h6>Sat</h6>
+
+							<div><span class="glyphicon glyphicon-certificate"></span></div>
+
+							<span>95&deg;</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<h6>Sun</h6>
+
+							<div><span class="glyphicon glyphicon-certificate"></span></div>
+
+							<span>89&deg;</span>
+						</a>
+					</div>
+
+					<div>
+						<a href="#1">
+							<h6>Mon</h6>
+
+							<div><span class="glyphicon glyphicon-certificate"></span></div>
+
+							<span>95&deg;</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Featured Panel</h4>
+
+			<p>Add the featured-panel class to a panel element to display content.</p>
+		</div>
+	</div>
+
+	<div class="row" id="panelVariations">
+		<div class="col-md-6">
+			<div class="featured-panel no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<img class="img-responsive" src="{{rootPath}}/images/ps_logo.jpg" />
+					</div>
+
+					<div class="right">
+						<h3>Featured Panel Default</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="featured-panel featured-panel-6040 no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<h3>Featured Panel 60/40</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+
+					<div class="right">
+						<img class="img-responsive" src="{{rootPath}}/images/ps_logo.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="featured-panel featured-panel-4060 no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<img class="img-responsive" src="{{rootPath}}/images/ps_logo.jpg" />
+					</div>
+
+					<div class="right">
+						<h3>Featured Panel 40/60</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="featured-panel featured-panel-6040 no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<h3>Featured Panel 60/40</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+					<div class="right" style="background-color: #F5F5F5;">
+						<img class="img-responsive" src="{{rootPath}}/images/ps_logo.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="featured-panel no-borders panel">
+				<div class="panel-body">
+					<div class="left">
+						<h3>Featured Panel Default</h3>
+
+						<h5>Grounds iced grounds</h5>
+
+						<p>As, turkish iced trifecta whipped con panna grinder blue mountain cultivar. Latte plunger pot seasonal sit flavour eu decaffeinated robust.</p>
+					</div>
+
+					<div class="right" style="background-color: #F5F5F5;">
+						<img class="img-responsive" src="{{rootPath}}/images/ps_logo.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	YUI().use('charts', function (Y) {
+		var myDataValues = [
+			{ month:"Jan", internetSales: 110, percentOfRevenue: 25 },
+			{ month:"Feb", internetSales: 333, percentOfRevenue: 28 },
+			{ month:"Mar", internetSales: 90, percentOfRevenue: 15 },
+			{ month:"Apr", internetSales: 255, percentOfRevenue: 21 },
+			{ month:"May", internetSales: 445, percentOfRevenue: 33 },
+			{ month:"Jun", internetSales: 580, percentOfRevenue: 38 }
+		];
+
+		var myAxes = {
+			percentage: {
+				type:"numeric",
+				position:"right",
+				keys:["percentOfRevenue"],
+				labelFormat: {suffix:"%"}
+			},
+			sales: {
+				type:"numeric",
+				position:"left",
+				keys:["internetSales"],
+				labelFormat: {
+					prefix:"$",
+					suffix: "k",
+					thousandsSeparator:","
+				}
+			}
+		};
+
+		var mySeries = [
+			{
+				type:"combo",
+				yKey:"internetSales",
+				yDisplayName:"Internet Sales",
+				xDisplayName:"Month"
+			},
+
+			{
+				type:"combo",
+				yKey:"percentOfRevenue",
+				yDisplayName:"Percent of Total Revenue",
+				xDisplayName:"Month"
+			}
+		];
+
+		var mychart = new Y.Chart({
+			dataProvider:myDataValues,
+			categoryKey:"month",
+			axes:myAxes,
+			seriesCollection:mySeries,
+			render:"#myChart"
+		});
+	});
+</script>

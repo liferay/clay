@@ -1,5 +1,257 @@
 ---
 title: Form Elements
-template: index.ejs
 ---
-<p>Form Elements</p>
+
+<div class="col-md-6">
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Basic form Elements</h4>
+
+		<div class="form-group">
+			<label>Default text input</label>
+
+			<input class="form-control" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Password input</label>
+
+			<input class="form-control" placeholder="Enter password" type="password">
+		</div>
+
+		<div class="form-group">
+			<label>Small text input</label>
+
+			<input class="form-control input-sm" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Large text input</label>
+
+			<input class="form-control input-lg" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Disabled text input</label>
+
+			<input disabled class="form-control" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Read only text input</label>
+
+			<input class="form-control" placeholder="Placeholder" readonly type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Textarea</label>
+
+			<textarea class="form-control"></textarea>
+		</div>
+	</div>
+
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Input Group with Addons</h4>
+
+		<div class="form-group">
+			<label>Addon Left</label>
+
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+
+				<input class="form-control" placeholder="Username" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>Addon Right</label>
+
+			<div class="input-group">
+				<input class="form-control" type="text">
+
+				<span class="input-group-addon">.00</span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>Left and Right Addon</label>
+
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+
+				<input class="form-control" type="text">
+
+				<span class="input-group-addon">.com</span>
+			</div>
+		</div>
+
+		<label>Button Addons</label>
+
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<div class="input-group">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Click</button>
+					</span>
+
+					<input class="form-control" type="text">
+				</div>
+			</div>
+
+			<div class="col-md-6 form-group">
+				<div class="input-group">
+					<input type="text" class="form-control">
+
+					<div class="input-group-btn">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+						<ul class="dropdown-menu dropdown-menu-right" role="menu">
+							<li><a href="#">Action 1</a></li>
+							<li><a href="#">Action 2</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<label>Checkbox and Radio Addons</label>
+
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<input type="checkbox">
+					</span>
+
+					<input class="form-control" type="text">
+				</div>
+			</div>
+
+			<div class="col-md-6 form-group">
+				<div class="input-group">
+					<input class="form-control" type="text">
+
+					<span class="input-group-addon">
+						<input type="radio">
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-6">
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Validation States</h4>
+
+		<div class="form-group has-success">
+			<label class="control-label" for="inputSuccess1">Input with success</label>
+
+			<input class="form-control" type="text">
+		</div>
+
+		<div class="form-group has-warning">
+			<label class="control-label" for="inputWarning1">Input with warning</label>
+
+			<input class="form-control" type="text">
+		</div>
+
+		<div class="form-group has-error">
+			<label class="control-label" for="inputError1">Input with error</label>
+
+			<input class="form-control" type="text">
+		</div>
+
+		<div class="form-group has-success has-feedback">
+			<label class="control-label" for="inputSuccess2">Input with success icon</label>
+
+			<input class="form-control" type="text">
+
+			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+		</div>
+
+		<div class="form-group has-warning has-feedback">
+			<label class="control-label" for="inputWarning2">Input with warning icon</label>
+
+			<input class="form-control" type="text">
+
+			<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+		</div>
+
+		<div class="form-group has-error has-feedback">
+			<label class="control-label" for="inputError2">Input with error</label>
+
+			<input class="form-control" type="text">
+
+			<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+		</div>
+	</div>
+
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Checkboxes and Radios</h4>
+
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="">
+				Regular Check Box
+			</label>
+		</div>
+
+		<div class="checkbox disabled">
+			<label>
+				<input disabled type="checkbox" value="">
+				Disabled Check Box
+			</label>
+		</div>
+
+		<div class="radio">
+			<label>
+				<input name="optionsRadios" type="radio">
+				Regular Radio Button
+			</label>
+		</div>
+
+		<div class="radio disabled">
+			<label>
+				<input disabled name="optionsRadios" type="radio">
+				Disabled Radio Button
+			</label>
+		</div>
+	</div>
+
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">Select Box</h4>
+
+		<div class="form-group">
+			<h4><small>Regular Select Box</small></h4>
+
+			<select class="form-control">
+				<option>Sample 1</option>
+				<option>Sample 2</option>
+				<option>Sample 3</option>
+				<option>Sample 4</option>
+			</select>
+
+			<h4><small>Select Box with Multiple Select Options</small></h4>
+
+			<select class="form-control" multiple>
+				<option>Sample 1</option>
+				<option>Sample 2</option>
+				<option>Sample 3</option>
+				<option>Sample 4</option>
+				<option>Sample 5</option>
+				<option>Sample 6</option>
+				<option>Sample 7</option>
+				<option>Sample 8</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="box panel panel-default">
+		<h4 class="panel-heading">File Upload</h4>
+
+		<div class="form-group">
+			<label class="sr-only">FILE UPLOAD</label>
+
+			<input id="inputFile" type="file">
+		</div>
+	</div>
+</div>

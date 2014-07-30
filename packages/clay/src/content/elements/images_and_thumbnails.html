@@ -1,5 +1,301 @@
 ---
 title: Images and Thumbnails
-template: index.ejs
 ---
-<p>Images and Thumbnails</p>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Responsive Image</h4>
+
+			<img alt="responsive image" class="img-responsive" src="{{rootPath}}/images/unsplash_52c470899a2e1_1.jpg">
+
+			<br><pre><code>&lt;img alt="..." class="img-responsive" src="..."&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-6" id="imageShapes">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Image Shapes</h4>
+
+			<div class="row">
+				<div class="col-xs-4">
+					<img alt="responsive image with rouded edges" class="img-responsive img-rounded" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+				</div>
+
+				<div class="col-xs-4">
+					<img alt="responsive circle image" class="img-circle img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+				</div>
+
+				<div class="col-xs-4">
+					<img alt="responsive thumbnail image" class="img-thumbnail img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<br><pre><code>&lt;img alt="..." class="img-rounded" src="..."&gt;</code><br><code>&lt;img alt="..." class="img-circle" src="..."&gt;</code><br><code>&lt;img alt="..." class="img-thumbnail" src="..."&gt;</code></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Default Thumbnails</h4>
+
+			<div class="row">
+				<div class="col-sm-3 col-xs-6">
+					<a class="thumbnail" href="#">
+						<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+					</a>
+				</div>
+
+				<div class="col-sm-3 col-xs-6">
+					<a class="thumbnail" href="#">
+						<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+					</a>
+				</div>
+
+				<div class="col-sm-3 col-xs-6">
+					<a class="thumbnail" href="#">
+						<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+					</a>
+				</div>
+
+				<div class="col-sm-3 col-xs-6 ">
+					<a class="thumbnail" href="#">
+						<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+					</a>
+				</div>
+			</div>
+
+			<pre><code>&lt;a class="thumbnail" href="#"&gt;<br>  &lt;img alt="..." src="..."&gt;<br>&lt;/a&gt;</code></pre>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Thumbnails with Custom Content</h4>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="thumbnail">
+						<img alt="thumbnail" src="{{rootPath}}/images/unsplash_52c470899a2e1_1.jpg">
+
+						<div class="caption">
+							<h4>Thumbnail with Text and Buttons</h4>
+
+							<p>Espresso caffeine, cup macchiato, doppio aroma variety to go, wings acerbic, seasonal single shot organic trifecta mocha.</p>
+
+							<div>
+								<a href="#" class="btn btn-primary" role="button">Button</a>
+
+								<a href="#" class="btn btn-default" role="button">Button</a>
+							</div>
+						</div>
+					</div>
+
+					<pre><code>&lt;div class="thumbnail"&gt;<br>  &lt;img alt="..." src="..."&gt;<br>  &lt;div class="caption"&gt;<br>    &lt;p&gt;...&lt;p&gt;<br>    &lt;p&gt;&lt;a class="btn btn-primary" href="#" role="button"&gt;Button&lt;/a&gt;&lt;p&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="thumbnail">
+						<img alt="thumbnail" src="{{rootPath}}/images/unsplash_52c470899a2e1_1.jpg">
+
+						<div class="caption">
+							<h4>Thumbnail with Select Box</h4>
+
+							<select class="form-control">
+								<option>Espresso caffeine</option>
+
+								<option>Cup macchiato</option>
+
+								<option>Organic trifecta mocha</option>
+							</select>
+						</div>
+					</div>
+
+					<pre><code>&lt;div class="thumbnail"&gt;<br>  &lt;img alt="..." src="..."&gt;<br>  &lt;div class="caption"&gt;<br>    &lt;select class="form-control&gt;<br>      &lt;option&gt;...&lt;/option&gt;<br>    &lt;/select&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="thumbnail">
+						<img alt="thumbnail" src="{{rootPath}}/images/unsplash_52c470899a2e1_1.jpg">
+
+						<div class="caption">
+							<h4>Thumbnail with List Group</h4>
+
+							<ul class="list-group">
+								<li class="list-group-item">Espresso caffeine</li>
+
+								<li class="list-group-item">Cup macchiato</li>
+
+								<li class="list-group-item">Organic trifecta mocha</li>
+							</ul>
+						</div>
+					</div>
+
+					<pre><code>&lt;div class="thumbnail"&gt;<br>  &lt;img alt="..." src="..."&gt;<br>  &lt;div class="caption"&gt;<br>    &lt;ul class="list-group&gt;<br>      &lt;li class="list-group-item&gt;...&lt;/li&gt;<br>    &lt;/ul&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h4>Thumbnails with no borders</h4>
+
+		<p>Add class no-borders to thumbnail to remove borders.</p>
+	</div>
+</div>
+
+<div id="thumbnailVariations">
+	<div class="row">
+		<div class="col-md-4 col-sm-6">
+			<div class="thumbnail no-borders">
+				<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+				<div class="caption">
+					<h4>Some Title</h4>
+
+					<p>Latte plunger pot seasona</p>
+
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+						<div>Test Test</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6">
+			<div class="thumbnail no-borders">
+				<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+				<div class="caption">
+					<h4>Latte plunger</h4>
+
+					<p>Ristretto, cinnamon foam, fair trade seasonal</p>
+
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+						<div>Joe Bloggs</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 col-sm-6">
+			<div class="thumbnail no-borders">
+				<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+				<div class="caption">
+					<h4>Brewed doppio</h4>
+
+					<p>Cortado roast, decaffeinated saucer, foam qui shop</p>
+
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Some thumbnail variations</h4>
+
+			<p>Different ways you can use thumbnails to display content.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+
+				<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+				<a href="#" class="btn btn-block btn-default" role="button" style="margin-top: 5px;">Subscribe</a>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+
+				<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+				<a href="#" class="btn btn-block btn-default" role="button" style="margin-top: 5px;">Subscribe</a>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+
+				<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+				<a href="#" class="btn btn-block btn-default" role="button" style="margin-top: 5px;">Subscribe</a>
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<div class="caption">
+					<div class="user-info">
+						<img alt="thumbnail" class="img-responsive img-circle" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+						<div>Space Program</div>
+
+						<div>Category</div>
+					</div>
+				</div>
+
+				<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+
+				<a href="#" class="btn btn-block btn-default" role="button" style="margin-top: 5px;">Subscribe</a>
+			</div>
+		</div>
+	</div>
+</div>
