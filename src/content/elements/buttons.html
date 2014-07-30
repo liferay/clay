@@ -1,5 +1,442 @@
 ---
-title: Buttons
-template: index.ejs
+title: Button
 ---
-<p>Buttons</p>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Button Styles</h4>
+
+			<h4>Default Style</h4>
+
+			<button class="btn btn-default" type="button">Default</button>
+
+			<button class="btn btn-primary" type="button">Primary</button>
+
+			<button class="btn btn-info" type="button">Info</button>
+
+			<button class="btn btn-success" type="button">Success</button>
+
+			<button class="btn btn-warning" type="button">Warning</button>
+
+			<button class="btn btn-danger" type="button">Danger</button>
+
+			<button class="btn btn-link" type="button">Link</button>
+
+			<br><br><pre>Default Button:	<code>&lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;</code><br>Primary Button:	<code>&lt;button class="btn btn-primary" type="button"&gt;...&lt;/button&gt;</code><br>Info Button:	<code>&lt;button class="btn btn-info" type="button"&gt;...&lt;/button&gt;</code><br>Success Button:	<code>&lt;button class="btn btn-success" type="button"&gt;...&lt;/button&gt;</code><br>Warning Button:	<code>&lt;/button class="btn btn-warning" type="button"&gt;...&lt;/button&gt;</code><br>Danger Button:	<code>&lt;/button class="btn btn-danger" type="button"&gt;...&lt;/button&gt;</code><br>Button as Link:	<code>&lt;/button class="btn btn-link" type="button"&gt;...&lt;/button&gt;</code></pre>
+
+			<h4>Button Dropdowns</h4>
+
+			<div class="btn-group">
+				<button class="btn btn-default dropdown-toggle" type="button">Default <span class="caret"></span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-primary dropdown-toggle" type="button">Primary <span class="caret"></span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-info dropdown-toggle" type="button">Info <span class="caret"></span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-success dropdown-toggle" type="button">Success <span class="caret"></span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-warning dropdown-toggle" type="button">Warning <span class="caret"></span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-danger dropdown-toggle" type="button">Danger <span class="caret"></span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<br><br><pre><code>&lt;div class="btn-group"&gt;<br>  &lt;button class="btn btn-default dropdown-toggle" type="button"&gt;<br>    ...&lt;span class="caret"&gt;&lt;/span&gt;<br>  &lt;/button&gt;<br>  &lt;ul class="dropdown-menu" role="menu"&gt;<br>    &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;<br>  &lt;/ul&gt;<br>&lt;/div&gt;</code></pre>
+
+			<h4>Split Button Dropdowns</h4>
+
+			<div class="btn-group">
+				<button class="btn btn-default" type="button">Default</button>
+
+				<button class="btn btn-default dropdown-toggle" type="button">
+					<span class="caret"></span>
+
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-primary" type="button">Primary</button>
+
+				<button class="btn btn-primary dropdown-toggle" type="button">
+					<span class="caret"></span>
+
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-info" type="button">Info</button>
+
+				<button class="btn btn-info dropdown-toggle" type="button">
+					<span class="caret"></span>
+
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-success" type="button">Success</button>
+
+				<button class="btn btn-success dropdown-toggle" type="button">
+					<span class="caret"></span>
+
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-warning" type="button">Warning</button>
+
+				<button class="btn btn-warning dropdown-toggle" type="button">
+					<span class="caret"></span>
+
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button class="btn btn-danger" type="button">Danger</button>
+
+				<button class="btn btn-danger dropdown-toggle" type="button">
+					<span class="caret"></span>
+
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+
+					<li class="divider"></li>
+
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</div>
+
+			<br><br><pre><code>&lt;div class="btn-group"&gt;<br>  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>  &lt;button class="btn btn-default dropdown-toggle" type="button"&gt;<br>    &lt;span class="caret"&gt;&lt;/span&gt;<br>    &lt;span class="sr-only"&gt;...&lt;/span&gt;<br>  &lt;/button&gt;<br>  &lt;ul class="dropdown-menu" role="menu"&gt;<br>    &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;<br>  &lt;/ul&gt;<br>&lt;/div&gt;</code></pre>
+
+			<h4>Disabled Buttons</h4>
+
+			<button class="btn btn-default" disabled="disabled" type="button">Default</button>
+
+			<button class="active btn btn-primary" disabled="disabled" type="button">Primary</button>
+
+			<button class="active btn btn-info" disabled="disabled" type="button">Info</button>
+
+			<button class="active btn btn-success" disabled="disabled" type="button">Success</button>
+
+			<button class="active btn btn-warning" disabled="disabled" type="button">Warning</button>
+
+			<button class="active btn btn-danger" disabled="disabled" type="button">Danger</button>
+
+			<button class="active btn btn-link" disabled="disabled" type="button">Link</button>
+
+			<br><br><pre><code>&lt;button class="btn btn-default" disabled="disabled" type="button"&gt;...&lt;/button&gt;</code></pre>
+
+			<h4>Active Buttons</h4>
+
+			<button class="active btn btn-default" type="button">Default</button>
+
+			<button class="active btn btn-primary" type="button">Primary</button>
+
+			<button class="active btn btn-info" type="button">Info</button>
+
+			<button class="active btn btn-success" type="button">Success</button>
+
+			<button class="active btn btn-warning" type="button">Warning</button>
+
+			<button class="active btn btn-danger" type="button">Danger</button>
+
+			<br><br><pre><code>&lt;button class="active btn btn-default" type="button"&gt;...&lt;/button&gt;</code></pre>
+
+			<h4>Anchor Element</h4>
+
+			<a class="active btn btn-default" href="#" role="button">Default Link</a>
+
+			<a class="active btn btn-primary" href="#" role="button">Primary Link</a>
+
+			<a class="active btn btn-info" href="#" role="button">Info Link</a>
+
+			<a class="active btn btn-success" href="#" role="button">Success Link</a>
+
+			<a class="active btn btn-warning" href="#" role="button">Warning Link</a>
+
+			<a class="active btn btn-danger" href="#" role="button">Danger Link</a>
+
+			<br><br><pre><code>&lt;a class="active btn btn-default" href="#" role="button"&gt;...&lt;/a&gt;</code></pre>
+		</div>
+
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Justfied Button Groups</h4>
+
+			<div class="btn-group btn-group-justified">
+				<div class="btn-group">
+					<button class="btn btn-default" type="button">Left</button>
+				</div>
+
+				<div class="btn-group">
+					<button class="btn btn-default" type="button">Middle</button>
+				</div>
+
+				<div class="btn-group">
+					<button class="btn btn-default" type="button">Right</button>
+				</div>
+			</div>
+
+			<br><pre><code>&lt;div class="btn-group btn-group-justified"&gt;<br>  &lt;div class="btn-group"&gt;<br>    &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>    &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Sizes</h4>
+
+			<button class="btn btn-default btn-xs" type="button">Extra Small</button>
+
+			<button class="btn btn-default btn-sm" type="button">Small</button>
+
+			<button class="btn btn-default" type="button">Default</button>
+
+			<button class="btn btn-default btn-lg" type="button">Large</button>
+
+			<br><br><pre>XS Button:	<code>&lt;button class="btn btn-default btn-xs" type="button"&gt;...&lt;/button&gt;</code><br>Small Button:	<code>&lt;button class="btn btn-default btn-sm" type="button"&gt;...&lt;/button&gt;</code><br>Default Button:	<code>&lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;</code><br>Large Button:	<code>&lt;button class="btn btn-default btn-lg" type="button"&gt;...&lt;/button&gt;</code></pre>
+		</div>
+
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Button Toolbars</h4>
+
+			<h4>Horizontal Toolbars</h4>
+
+			<div class="btn-toolbar" role="toolbar">
+				<div class="btn-group btn-group-xs">
+					<button class="btn btn-default" type="button">1</button>
+
+					<button class="btn btn-default" type="button">2</button>
+
+					<button class="btn btn-default" type="button">3</button>
+
+					<button class="btn btn-default" type="button">4</button>
+				</div>
+
+				<div class="btn-group btn-group-sm">
+					<button class="btn btn-default" type="button">1</button>
+
+					<button class="btn btn-default" type="button">2</button>
+
+					<button class="btn btn-default" type="button">3</button>
+
+					<button class="btn btn-default" type="button">4</button>
+				</div>
+
+				<div class="btn-group">
+					<button class="btn btn-default" type="button">1</button>
+
+					<button class="btn btn-default" type="button">2</button>
+
+					<button class="btn btn-default" type="button">3</button>
+
+					<button class="btn btn-default" type="button">4</button>
+				</div>
+
+				<div class="btn-group btn-group-lg">
+					<button class="btn btn-default" type="button">1</button>
+
+					<button class="btn btn-default" type="button">2</button>
+
+					<button class="btn btn-default" type="button">3</button>
+
+					<button class="btn btn-default" type="button">4</button>
+				</div>
+			</div>
+
+			<br><pre>XS Toolbar:	<code>&lt;div class="btn-group btn-group-xs"&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		&lt;/div&gt;</code><br>Small Toolbar:	<code>&lt;div class="btn-group btn-group-sm"&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		&lt;/div&gt;</code><br>Default Toolbar:<code>&lt;div class="btn-group"&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		&lt;/div&gt;</code><br>Large Toolbar:	<code>&lt;div class="btn-group btn-group-lg"&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		&lt;/div&gt;</code></pre>
+
+			<h4>Vertical Toolbars</h4>
+
+			<div class="btn-group-vertical btn-group-lg">
+				<button class="btn btn-default" type="button">1</button>
+
+				<button class="btn btn-default" type="button">2</button>
+
+				<button class="btn btn-default" type="button">3</button>
+
+				<button class="btn btn-default" type="button">4</button>
+			</div>
+
+			<div class="btn-group-vertical">
+				<button class="btn btn-default" type="button">1</button>
+
+				<button class="btn btn-default" type="button">2</button>
+
+				<button class="btn btn-default" type="button">3</button>
+
+				<button class="btn btn-default" type="button">4</button>
+			</div>
+
+			<div class="btn-group-vertical btn-group-sm">
+				<button class="btn btn-default" type="button">1</button>
+
+				<button class="btn btn-default" type="button">2</button>
+
+				<button class="btn btn-default" type="button">3</button>
+
+				<button class="btn btn-default" type="button">4</button>
+			</div>
+
+			<div class="btn-group-vertical btn-group-xs">
+				<button class="btn btn-default" type="button">1</button>
+
+				<button class="btn btn-default" type="button">2</button>
+
+				<button class="btn btn-default" type="button">3</button>
+
+				<button class="btn btn-default" type="button">4</button>
+			</div>
+
+			<br><br><pre>XS Toolbar:	<code>&lt;div class="btn-group-vertical btn-group-xs"&gt;...&lt;/div&gt;</code><br>Small Toolbar:	<code>&lt;div class="btn-group-vertical btn-group-sm"&gt;...&lt;/div&gt;</code><br>Default Toolbar:<code>&lt;div class="btn-group-vertical"&gt;...&lt;/div&gt;</code><br>Large Toolbar:	<code>&lt;div class="btn-group-vertical btn-group-lg"&gt;...&lt;/div&gt;</code></pre>
+		</div>
+
+		<div class="box panel panel-default">
+			<h4 class="panel-heading">Block Level Buttons</h4>
+
+			<button class="btn btn-block btn-primary btn-xs" type="button">Extra Small Block Level Button</button>
+
+			<button class="btn btn-block btn-primary btn-sm" type="button">Small Block Level Button</button>
+
+			<button class="btn btn-block btn-primary" type="button">Default Block Level Button</button>
+
+			<button class="btn btn-block btn-lg btn-primary" type="button">Large Block Level Button</button>
+
+			<br><pre>XS Block Button:	<code>&lt;button class="btn btn-block btn-primary btn-xs" type="button"&gt;...&lt;/button&gt;</code><br>Small Block Button:	<code>&lt;button class="btn btn-block btn-primary btn-sm" type="button"&gt;...&lt;/button&gt;</code><br>Default Block Button:	<code>&lt;button class="btn btn-block btn-primary" type="button"&gt;...&lt;/button&gt;</code><br>Large Block Button:	<code>&lt;button class="btn btn-block btn-primary btn-lg" type="button"&gt;...&lt;/button&gt;</code></pre>
+		</div>
+	</div>
+</div>
+
+<script>
+	YUI().use('node', 'event', function(A) {
+		A.one('#mainContent').delegate('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			var dropdown = currentTarget.ancestor('.btn-group');
+
+			dropdown.toggleClass('open');
+
+			if (dropdown.hasClass('open')) {
+				currentTarget.on('clickoutside', function(event) {
+					var _this = this;
+
+					_this.ancestor('.btn-group').removeClass('open');
+
+					_this.detach('clickoutside');
+				});
+			}
+			else {
+				currentTarget.detach('clickoutside');
+			}
+		}, '.dropdown-toggle');
+	});
+</script>
