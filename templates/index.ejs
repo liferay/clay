@@ -1,10 +1,19 @@
 <% include includes/header %>
+
 	<div id="mainContent">
-		<h1 class="col-md-12 page-title">
+		<h1 class="page-title">
 			<%= title %>
-			<small>sub heading</small>
+
+			<%
+			if (subHeading) {
+			%>
+				<small><%= subHeading %></small>
+			<%
+			}
+			%>
 		</h1>
 
 		<%- contents %>
 	</div>
+
 <% include includes/footer %>
