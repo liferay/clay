@@ -1,127 +1,111 @@
+<nav class="side-navigation" id="mainNav">
+		<%
+		var createMainNavList = function(navObj, path, parent) {
+			var buffer = ['<ul class="nav nav-stacked">'];
+			Y.Object.each(
+				navObj,
+				function(item, index) {
+					if (index.indexOf('_') === 0) {
+						return;
+					}
 
+					var hasSections = !!item._sections;
 
-		<nav class="side-navigation" id="mainNav">
-				<%
-				var createMainNavList = function(navObj, path, parent) {
-					var buffer = ['<ul class="nav nav-stacked">'];
-					Y.Object.each(
-						navObj,
-						function(item, index) {
-							if (index.indexOf('_') === 0) {
-								return;
-							}
+					var cssClass = ((path + '/index.html') == item._path ? 'active' : '');
+					var url = item._path;
 
-							var hasSections = !!item._sections;
-
-							var cssClass = ((path + '/index.html') == item._path ? 'active' : '');
-							var url = item._path;
-
-							if (hasSections) {
-								url = 'javascript:;'
-								cssClass = 'side-navigation-dropdown-container';
-							}
-							else {
-								if (path && item._path.indexOf(path) === 0 && parent) {
-									parent._active = path;
-								}
-
-								// console.log(item, navObj._active);
-								// console.log(path == item, );
-								if (rootPath != '.') {
-									url = rootPath + '/' + url;
-								}
-							}
-
-							if (hasSections) {
-								Y.Object.each(
-									item._sections,
-									function(section, sectionIndex) {
-										if (sectionIndex.indexOf('_') === 0) {
-											return;
-										}
-
-										if (path && section._path.indexOf(path) === 0) {
-											item._sections._active = path;
-										}
-										else if (section._file.subNav) {
-											Y.Object.each(
-												section._file.subNav,
-												function(subSectionItem, subSectionIndex) {
-													if (path && subSectionItem._path.indexOf(path) === 0) {
-														item._sections._active = path;
-														item._active = path;
-													}
-												}
-											);
-
-											// console.log(section, path);
-										}
-									}
-								);
-
-								if (item._sections._active === path) {
-									cssClass += ' child-active'
-								}
-							}
-							else {
-								Y.Object.each(
-									item,
-									function(item, index) {
-										if (index.indexOf('_') === 0) {
-											return;
-										}
-
-										console.log('-----',index, item);
-									}
-								);
-							}
-
-							var tplObj = {
-								cssClass: cssClass,
-								title: item._file ? item._file.title : toTitleCase(index),
-								url: url
-							};
-
-							buffer.push(Y.Lang.sub('<li class="{cssClass}"><a href="{url}">{title}</a>', tplObj));
-
-							if (hasSections) {
-								var sectionNav = createMainNavList(item._sections, path, item);
-
-								buffer.push('<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>');
-
-								var collapseCssClass = 'collapse';
-
-								if (item._active == path) {
-									collapseCssClass += ' in';
-								}
-
-								buffer.push('<div class="', collapseCssClass,'">');
-								buffer.push(sectionNav);
-								// console.log(item);
-								buffer.push('</div>');
-							}
-
-							buffer.push('</li>');
+					if (hasSections) {
+						url = 'javascript:;'
+						cssClass = 'side-navigation-dropdown-container';
+					}
+					else {
+						if (path && item._path.indexOf(path) === 0 && parent) {
+							parent._active = path;
 						}
-					);
 
-					buffer.push('</ul>');
+						// console.log(item, navObj._active);
+						// console.log(path == item, );
+						if (rootPath != '.') {
+							url = rootPath + '/' + url;
+						}
+					}
 
-					return buffer.join('\n');
-				};
-				%>
-			<%- createMainNavList(nav, path) %>
-		</nav>
+					if (hasSections) {
+						Y.Object.each(
+							item._sections,
+							function(section, sectionIndex) {
+								if (sectionIndex.indexOf('_') === 0) {
+									return;
+								}
 
-		<%
-		if (subNav) {
+								if (path && section._path.indexOf(path) === 0) {
+									item._sections._active = path;
+								}
+								else if (section._file.subNav) {
+									Y.Object.each(
+										section._file.subNav,
+										function(subSectionItem, subSectionIndex) {
+											if (path && subSectionItem._path.indexOf(path) === 0) {
+												item._sections._active = path;
+												item._active = path;
+											}
+										}
+									);
+
+									// console.log(section, path);
+								}
+							}
+						);
+
+						if (item._sections._active === path) {
+							cssClass += ' child-active'
+						}
+					}
+
+					var tplObj = {
+						cssClass: cssClass,
+						title: item._file ? item._file.title : toTitleCase(index),
+						url: url
+					};
+
+					buffer.push(Y.Lang.sub('<li class="{cssClass}"><a href="{url}">{title}</a>', tplObj));
+
+					if (hasSections) {
+						var sectionNav = createMainNavList(item._sections, path, item);
+
+						buffer.push('<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>');
+
+						var collapseCssClass = 'collapse';
+
+						if (item._active == path) {
+							collapseCssClass += ' in';
+						}
+
+						buffer.push('<div class="', collapseCssClass,'">');
+						buffer.push(sectionNav);
+						// console.log(item);
+						buffer.push('</div>');
+					}
+
+					buffer.push('</li>');
+				}
+			);
+
+			buffer.push('</ul>');
+
+			return buffer.join('\n');
+		};
 		%>
-		<nav class="side-navigation" id="secondaryNav">
-			<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-arrow-left"></span></a>
-			<%- createMainNavList(subNav, path) %>
-		</nav>
-		<%
-		}
-		%>
+	<%- createMainNavList(nav, path) %>
+</nav>
 
-		<div id="mainContent">
+<%
+if (subNav) {
+%>
+<nav class="side-navigation" id="secondaryNav">
+	<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-arrow-left"></span></a>
+	<%- createMainNavList(subNav, path) %>
+</nav>
+<%
+}
+%>

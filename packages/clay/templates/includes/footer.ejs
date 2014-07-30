@@ -28,7 +28,7 @@
 				item.delegate('click', function(event) {
 					event.preventDefault();
 					event.currentTarget.next('.collapse').toggleClass('in');
-				}, 'li .side-navigation-dropdown');
+				}, 'li.side-navigation-dropdown-container > a');
 			}
 		);
 	});
