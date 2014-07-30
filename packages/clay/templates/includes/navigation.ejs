@@ -1,6 +1,60 @@
 <nav class="side-navigation" id="mainNav">
 		<%
-		var createMainNavList = function(navObj, path, parent) {
+		var createMainNavList = function(nav, path, parent) {
+			var buffer = ['<ul class="nav nav-stacked">'];
+
+			nav.forEach(
+				function(item, index) {
+					var cssClass = ((path + '/index.html') == item.path ? 'active' : '');
+					var url = rootPath + '/' + item.path;
+
+					if (item.children) {
+						url = 'javascript:;'
+						cssClass = 'side-navigation-dropdown-container';
+					}
+
+					var tplObj = {
+						cssClass: cssClass,
+						title: item.title,
+						url: url
+					};
+
+					buffer.push(Y.Lang.sub('<li class="{cssClass}"><a href="{url}">{title}</a>', tplObj));
+
+					if (item.children) {
+						var sectionNav = createMainNavList(item.children, path, item);
+
+						buffer.push('<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>');
+
+						var collapseCssClass = 'collapse';
+
+						var hasActiveChild = Y.Array.some(
+							item.children,
+							function(item, index) {
+								return item.path === path;
+							}
+						);
+
+						if (hasActiveChild) {
+							collapseCssClass += ' in';
+						}
+
+						buffer.push('<div class="', collapseCssClass,'">');
+
+						buffer.push(sectionNav);
+
+						buffer.push('</div>');
+					}
+
+					buffer.push('</li>');
+				}
+			);
+
+			buffer.push('</ul>');
+
+			return buffer.join('\n');
+		};
+		var createMainNavList2 = function(navObj, path, parent) {
 			var buffer = ['<ul class="nav nav-stacked">'];
 			Y.Object.each(
 				navObj,
@@ -98,14 +152,3 @@
 		%>
 	<%- createMainNavList(nav, path) %>
 </nav>
-
-<%
-if (subNav) {
-%>
-<nav class="side-navigation" id="secondaryNav">
-	<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-arrow-left"></span></a>
-	<%- createMainNavList(subNav, path) %>
-</nav>
-<%
-}
-%>

@@ -139,12 +139,12 @@ ms.use(define(metadata))
 	.use(templates('ejs'));
 
 if (argv.watch) {
-	var watch = require('metalsmith-watch');
+	var watch = require('metalsmith-simplewatch');
 
 	ms.use(
 		watch(
 			{
-				pattern : '**/*',
+				pattern: '**/*',
 			}
 		)
 	);
