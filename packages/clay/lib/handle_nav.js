@@ -39,6 +39,7 @@ var iterateFiles = function(files, metalsmith, done) {
 
 	for (var i in files) {
 		var file = files[i];
+
 		if (file.template) {
 			file.subNav = null;
 			var basename = path.basename(i, '.html');
