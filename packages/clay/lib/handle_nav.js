@@ -82,9 +82,6 @@ var iterateFiles = function(files, metalsmith, done) {
 
 		sectionArray.sort(sortByTitle);
 
-		// console.log(sectionArray);
-		// array.concat(sectionArray)
-
 		array = sectionArray.concat(array);
 
 		return array;
