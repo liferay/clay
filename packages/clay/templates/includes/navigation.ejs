@@ -5,7 +5,7 @@
 
 			nav.forEach(
 				function(item, index) {
-					var cssClass = ((path + '/index.html') == item.path ? 'active' : '');
+					var cssClass = ((path == item.path) ? 'active' : '');
 					var url = rootPath + '/' + item.path;
 
 					if (item.children) {
