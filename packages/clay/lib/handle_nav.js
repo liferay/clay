@@ -52,14 +52,18 @@ var iterateFiles = function(files, metalsmith, done) {
 		[]
 	);
 
-	var sortByTitle = function(a, b) {
+	var titleSort = function(a, b) {
 		var indexA = a.title;
 		var indexB = b.title;
 
 		return indexA > indexB ? 1 : indexA < indexB ? -1 : 0;
 	};
 
-	filePaths.sort(sortByTitle);
+	var sortByTitle = function(array) {
+		array = array.sort(titleSort);
+
+		return array;
+	};
 
 	var move = function (array, fromIndex, toIndex) {
 		array.splice(toIndex, 0, array.splice(fromIndex, 1)[0]);
@@ -80,7 +84,7 @@ var iterateFiles = function(files, metalsmith, done) {
 			}
 		};
 
-		sectionArray.sort(sortByTitle);
+		sectionArray.sort(titleSort);
 
 		array = sectionArray.concat(array);
 
@@ -108,14 +112,16 @@ var iterateFiles = function(files, metalsmith, done) {
 	};
 
 	var recursiveSort = function(array) {
+		array = sortByTitle(array);
 		array = sortBySection(array);
 		array = sortByIndex(array);
 
 		array.forEach(
 			function(item, index, collection) {
-				if (item.children) {
-					item.children = sortBySection(item.children);
-					item.children = sortByIndex(item.children);
+				var children = item.children;
+
+				if (children) {
+					item.children = recursiveSort(children);
 				}
 			}
 		);
