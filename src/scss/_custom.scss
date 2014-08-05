@@ -135,6 +135,74 @@
 	}
 }
 
+/* -------- Modals -------- */
+
+.modal-body {
+	&.inline-scroller {
+		height: 230px;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		padding: 15px;
+	}
+
+	&.iframe-full {
+		overflow: auto;
+		padding: 0;
+	}
+
+	&.iframe-scroller {
+		float: left;
+		height: 230px;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		padding: 0;
+		width: 100%;
+
+		iframe {
+			float: left;
+			height: 100%;
+			overflow: auto;
+		}
+	}
+
+	iframe {
+		border-width: 0;
+		float: left;
+		height: auto;
+		width: 100%;
+	}
+}
+
+.modal-fluid {
+	&.modal-dialog {
+		margin: 2% auto;
+		max-width: 600px;
+		width: 96%;
+	}
+
+	&.modal-lg {
+		margin: 2% auto;
+		max-width: 900px;
+		width: 96%;
+	}
+
+	&.modal-sm {
+		margin: 2% auto;
+		max-width: 300px;
+		width: 96%;
+	}
+}
+
+.modal-footer {
+	clear: both;
+}
+
+.modal-open {
+	left: 0;
+	position: fixed;
+	right: 0;
+}
+
 /* -------- Navs -------- */
 
 .nav-justified, .nav-stacked {
