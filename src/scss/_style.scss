@@ -1,3 +1,5 @@
+$sideNavWidth: 200px;
+
 body {
 	background-color: #FFF;
 	color: #555;
@@ -18,14 +20,11 @@ header.row {
 		color: #FFF;
 	}
 
-	.menu-toggle {
-		float: left;
-	}
-
 	.title {
 		float: left;
 		margin-bottom: 14px;
 		margin-top: 14px;
+		padding-left: 15px;
 	}
 }
 
@@ -44,74 +43,44 @@ header.row {
 /* ------- Side Navigation ------- */
 
 #mainContent {
-	display: table-cell;
+	display: block;
+	left: $sideNavWidth;
 	padding: 15px;
-	width: auto;
+	position: relative;
+	width: 100%;
 }
 
-#mainNav > ul.nav-stacked {
-	width: 120px;
-}
-
-#secondaryNav {
-	background-color: #AAA;
-
-	> ul.nav-stacked {
-		width: 120px;
-	}
-}
-
-/* both navs are open */
-.main-nav-open.secondary-nav-open {
-	#secondaryNav {
-		h4 {
-			display: block;
-		}
-
-		ul.nav {
-			display: block;
-		}
-	}
-}
-
-/* main nav is closed */
 .main-nav-closed {
-	#mainNav, #secondaryNav {
-		display: none;
+	#mainContent {
+		left: 0;
 	}
 
-	#mainContent {
-		display: block;
+	.side-navigation-container {
+		width: 0;
 	}
 }
-/**/
 
 .menu-toggle {
 	color: #FFF;
 	display: block;
-	padding: 10px 15px;
+	float: left;
+	padding: 10px 0 10px 15px;
 	text-align: left;
 }
 
-/* secondary nav is closed */
-.secondary-nav-closed {
-	#secondaryNav {
-		width: 50px;
+.side-navigation-container {
+	overflow: hidden;
+	width: $sideNavWidth;
 
-		ul.nav {
-			display: none;
-		}
-
-		.title {
-			display: none;
-		}
+	> ul {
+		width: $sideNavWidth;
 	}
 }
-/**/
 
 .side-navigation {
-	display: table-cell;
-	vertical-align: top;
+	display: inline-block;
+	position: absolute;
+	z-index: 1;
 
 	.nav-stacked li {
 		> h4 {
@@ -150,6 +119,14 @@ header.row {
 	.collapse {
 		clear: both;
 	}
+}
+
+.transition {
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 /* -------- Accordions -------- */
@@ -401,16 +378,6 @@ header.row {
 	.glyphicons li {
 		width: 25%;
 	}
-
-	/* ------- Side Navigation ------- */
-
-	#mainNav > ul.nav-stacked {
-		width: 200px;
-	}
-
-	#secondaryNav > ul.nav-stacked {
-		width: 200px;
-	}
 }
 
 @media (min-width: 768px) {
@@ -420,64 +387,23 @@ header.row {
 
 	/* ------- Side Navigation ------- */
 
-	#mainContent, #mainNav, #secondaryNav {
+	#mainContent {
+		width: 100%;
+	}
+
+	#mainContent, #mainNav {
 		display: table-cell;
 		position: static;
 		vertical-align: top;
 	}
 
-	#mainContent {
-		width: 100%;
+	.main-nav-closed .side-navigation-container {
+		width: $sideNavWidth;
 	}
 
 	.menu-toggle {
-		color: #FFF;
-		display: block;
-		padding: 10px 15px;
-		text-align: left;
+		display: none;
 	}
-
-	/* main nav is closed */
-	.main-nav-closed {
-		&.secondary-nav-open #secondaryNav {
-			display: table-cell;
-		}
-
-		#mainContent {
-			display: table-cell;
-		}
-
-		#mainNav {
-			display: none;
-		}
-
-		#secondaryNav {
-			display: table-cell;
-		}
-
-		.manage-control-panel {
-			position: relative;
-		}
-	}
-	/**/
-
-	/* both navs are open */
-	.main-nav-open.secondary-nav-open #secondaryNav {
-		ul.nav {
-			display: block;
-		}
-
-		h4 {
-			display: block;
-		}
-	}
-	/**/
-
-	/* secondary nav is closed */
-	.secondary-nav-closed #secondaryNav {
-		width: 50px;
-	}
-	/**/
 
 	/* -------- Blogs -------- */
 
@@ -485,6 +411,7 @@ header.row {
 		width: 70px;
 	}
 }
+
 @media (min-width: 1024px) {
 	#wrapper {
 		overflow-x: visible;
