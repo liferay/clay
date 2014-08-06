@@ -1,60 +1,62 @@
 <nav class="side-navigation" id="mainNav">
-		<%
-		var createMainNavList = function(nav, path, parent) {
-			var buffer = ['<ul class="nav nav-stacked">'];
+	<div class="side-navigation-container">
+			<%
+			var createMainNavList = function(nav, path, parent) {
+				var buffer = ['<ul class="nav nav-stacked">'];
 
-			nav.forEach(
-				function(item, index) {
-					var cssClass = ((path == item.path) ? 'active' : '');
-					var url = rootPath + '/' + item.path;
+				nav.forEach(
+					function(item, index) {
+						var cssClass = ((path == item.path) ? 'active' : '');
+						var url = rootPath + '/' + item.path;
 
-					if (item.children) {
-						url = 'javascript:;'
-						cssClass = 'side-navigation-dropdown-container';
-					}
-
-					var tplObj = {
-						cssClass: cssClass,
-						title: item.title,
-						url: url
-					};
-
-					buffer.push(Y.Lang.sub('<li class="{cssClass}"><a href="{url}">{title}</a>', tplObj));
-
-					if (item.children) {
-						var sectionNav = createMainNavList(item.children, path, item);
-
-						buffer.push('<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>');
-
-						var collapseCssClass = 'collapse';
-
-						var hasActiveChild = Y.Array.some(
-							item.children,
-							function(item, index) {
-								return item.path === path;
-							}
-						);
-
-						if (hasActiveChild) {
-							collapseCssClass += ' in';
+						if (item.children) {
+							url = 'javascript:;'
+							cssClass = 'side-navigation-dropdown-container';
 						}
 
-						buffer.push('<div class="', collapseCssClass,'">');
+						var tplObj = {
+							cssClass: cssClass,
+							title: item.title,
+							url: url
+						};
 
-						buffer.push(sectionNav);
+						buffer.push(Y.Lang.sub('<li class="{cssClass}"><a href="{url}">{title}</a>', tplObj));
 
-						buffer.push('</div>');
+						if (item.children) {
+							var sectionNav = createMainNavList(item.children, path, item);
+
+							buffer.push('<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>');
+
+							var collapseCssClass = 'collapse';
+
+							var hasActiveChild = Y.Array.some(
+								item.children,
+								function(item, index) {
+									return item.path === path;
+								}
+							);
+
+							if (hasActiveChild) {
+								collapseCssClass += ' in';
+							}
+
+							buffer.push('<div class="', collapseCssClass,'">');
+
+							buffer.push(sectionNav);
+
+							buffer.push('</div>');
+						}
+
+						buffer.push('</li>');
 					}
+				);
 
-					buffer.push('</li>');
-				}
-			);
+				buffer.push('</ul>');
 
-			buffer.push('</ul>');
+				return buffer.join('\n');
+			};
+			%>
 
-			return buffer.join('\n');
-		};
-		%>
-
-	<%- createMainNavList(nav, path) %>
+		<%- createMainNavList(nav, path) %>
+	</div>
 </nav>
