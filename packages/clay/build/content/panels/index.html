@@ -11,7 +11,7 @@
 	
 </head>
 <body>
-	<div class="main-nav-open secondary-nav-open" id="wrapper">
+	<div class="main-nav-closed" id="wrapper">
 		<header class="row" id="headerTopBar">
 			<div class="container">
 				<a href="#1" class="menu-toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
@@ -22,9 +22,10 @@
 
 		<section class="container manage-control-panel">
 			<nav class="side-navigation" id="mainNav">
-		
+	<div class="side-navigation-container">
+			
 
-	<ul class="nav nav-stacked">
+		<ul class="nav nav-stacked">
 <li class=""><a href="../../">Home</a>
 </li>
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
@@ -97,6 +98,7 @@ collapse
 <li class=""><a href="../../content/todo">TODO</a>
 </li>
 </ul>
+	</div>
 </nav>
 
 	<div id="mainContent">
@@ -434,26 +436,29 @@ collapse
 		</section>
 	</div>
 <script>
-	YUI().use('node', function(A) {
-		var secondaryNavToggle = A.one('#secondaryNav .menu-toggle');
-
-		if (secondaryNavToggle) {
-			secondaryNavToggle.on('click', function(event) {
-				var currentTarget = event.currentTarget;
-
-				event.preventDefault();
-
-				currentTarget.ancestor('#wrapper').toggleClass('secondary-nav-open').toggleClass('secondary-nav-closed');
-				currentTarget.one('.glyphicon').toggleClass('glyphicon-arrow-left').toggleClass('glyphicon-arrow-right');
-			});
-		}
-
+	YUI().use('node', 'transition', function(A) {
 		A.one('#headerTopBar .menu-toggle').on('click', function(event) {
 			var currentTarget = event.currentTarget;
+			var mainContent = A.one('#mainContent');
+			var sideNavigationContainer = A.one('.side-navigation-container');
 
 			event.preventDefault();
 
-			currentTarget.ancestor('#wrapper').toggleClass('main-nav-open').toggleClass('main-nav-closed');
+			sideNavigationContainer.addClass('transition');
+
+			mainContent.addClass('transition');
+
+			sideNavigationContainer.on('transitionend', function() {
+				sideNavigationContainer.removeClass('transition');
+
+				mainContent.removeClass('transition');
+
+				this.detach('transitionend');
+			});
+
+			setTimeout(function() {
+				currentTarget.ancestor('#wrapper').toggleClass('main-nav-open').toggleClass('main-nav-closed');
+			}, 50);
 		});
 
 		A.all('.side-navigation').each(
