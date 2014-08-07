@@ -73,6 +73,18 @@
 	padding: 0;
 }
 
+/* -------- Image Gallery -------- */
+
+.image-gallery {
+	.row {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
 /* -------- Mega Menu -------- */
 
 .link-list {
@@ -415,12 +427,36 @@
 
 /* -------- Featured Panels -------- */
 
+.admin-interface {
+	position: absolute;
+}
+
+.bottom-left {
+	bottom: 0;
+	left: 5px;
+}
+
+.bottom-right {
+	bottom: 0;
+	right: 5px;
+}
+
+.top-left {
+	left: 5px;
+	top: 2px;
+}
+
+.top-right {
+	right: 5px;
+	top: 2px;
+}
+
 .featured-panel.panel {
 	background-color: transparent;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	overflow: auto;
+	overflow: hidden;
 
 	&.featured-panel-4060, &.featured-panel-6040 {
 		.panel-body {
@@ -436,13 +472,24 @@
 	}
 
 	.panel-body {
+		display: table;
 		padding: 0;
+		width: 100.5%;
 
 		.left, .right {
 			background-color: #FFF;
+			background-position: top left;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
 			display: block;
+			min-height: 150px;
 			padding: 15px;
+			position: relative;
 			width: 100%;
+		}
+
+		.left {
+			left: -1px;
 		}
 	}
 }
@@ -475,6 +522,8 @@
 
 		.panel-body {
 			.left, .right {
+				background-position: center;
+				background-size: 150%;
 				display: table-cell;
 				padding: 15px;
 				vertical-align: middle;
@@ -517,9 +566,17 @@
 
 /* -------- Panels -------- */
 
+.no-borders .panel {
+	border-width: 0;
+}
+
 .panel {
 	&.no-borders {
 		border-width: 0;
+	}
+
+	.panel-heading, .panel-body, .panel-footer {
+		position: relative;
 	}
 
 	.panel-heading:first-child {
@@ -529,6 +586,13 @@
 		-moz-border-top-right-radius: 3px;
 		-webkit-border-top-right-radius: 3px;
 		border-top-right-radius: 3px;
+	}
+}
+
+.panel-thumbnail {
+	.panel-heading {
+		overflow: hidden;
+		padding: 0;
 	}
 }
 
@@ -564,10 +628,22 @@
 
 /* -------- Thumbnails ------- */
 
-.thumbnail.no-borders {
+.drop-shadow .thumbnail, .drop-shadow.thumbnail {
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.no-borders .thumbnail, .thumbnail.no-borders {
 	border-width: 0;
 	overflow: hidden;
 	padding: 0;
+}
+
+.thumbnail-image-link {
+	display: block;
+	height: 135px;
+	overflow: hidden;
 }
 
 /* -------- Accordions -------- */
