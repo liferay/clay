@@ -4633,6 +4633,12 @@ button.close {
   overflow: auto;
   padding: 0; }
 
+/* -------- Image Gallery -------- */
+.image-gallery .row {
+  margin-bottom: 30px; }
+  .image-gallery .row:last-child {
+    margin-bottom: 0; }
+
 /* -------- Mega Menu -------- */
 .link-list {
   list-style: none;
@@ -4825,24 +4831,52 @@ button.close {
     border-radius: 4px 4px 0 0; }
 
 /* -------- Featured Panels -------- */
+.admin-interface {
+  position: absolute; }
+
+.bottom-left {
+  bottom: 0;
+  left: 5px; }
+
+.bottom-right {
+  bottom: 0;
+  right: 5px; }
+
+.top-left {
+  left: 5px;
+  top: 2px; }
+
+.top-right {
+  right: 5px;
+  top: 2px; }
+
 .featured-panel.panel {
   background-color: transparent;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  overflow: auto; }
+  overflow: hidden; }
   .featured-panel.panel.featured-panel-4060 .panel-body .left, .featured-panel.panel.featured-panel-4060 .panel-body .right, .featured-panel.panel.featured-panel-6040 .panel-body .left, .featured-panel.panel.featured-panel-6040 .panel-body .right {
     width: 100%; }
   .featured-panel.panel img {
     margin-left: auto;
     margin-right: auto; }
   .featured-panel.panel .panel-body {
-    padding: 0; }
+    display: table;
+    padding: 0;
+    width: 100.5%; }
     .featured-panel.panel .panel-body .left, .featured-panel.panel .panel-body .right {
       background-color: #FFF;
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
       display: block;
+      min-height: 150px;
       padding: 15px;
+      position: relative;
       width: 100%; }
+    .featured-panel.panel .panel-body .left {
+      left: -1px; }
 
 @media (min-width: 480px) {
   .featured-panel.panel.featured-panel-4060 .panel-body .left {
@@ -4854,6 +4888,8 @@ button.close {
   .featured-panel.panel.featured-panel-6040 .panel-body .right {
     width: 40%; }
   .featured-panel.panel .panel-body .left, .featured-panel.panel .panel-body .right {
+    background-position: center;
+    background-size: 150%;
     display: table-cell;
     padding: 15px;
     vertical-align: middle;
@@ -4879,8 +4915,13 @@ button.close {
         text-align: right; }
 
 /* -------- Panels -------- */
+.no-borders .panel {
+  border-width: 0; }
+
 .panel.no-borders {
   border-width: 0; }
+.panel .panel-heading, .panel .panel-body, .panel .panel-footer {
+  position: relative; }
 .panel .panel-heading:first-child {
   -moz-border-top-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -4888,6 +4929,10 @@ button.close {
   -moz-border-top-right-radius: 3px;
   -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px; }
+
+.panel-thumbnail .panel-heading {
+  overflow: hidden;
+  padding: 0; }
 
 .navbar-danger, .panel-danger > .panel-footer {
   background-color: #F2DEDE;
@@ -4915,10 +4960,20 @@ button.close {
   color: #8A6D3B; }
 
 /* -------- Thumbnails ------- */
-.thumbnail.no-borders {
+.drop-shadow .thumbnail, .drop-shadow.thumbnail {
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
+
+.no-borders .thumbnail, .thumbnail.no-borders {
   border-width: 0;
   overflow: hidden;
   padding: 0; }
+
+.thumbnail-image-link {
+  display: block;
+  height: 135px;
+  overflow: hidden; }
 
 /* -------- Accordions -------- */
 .header:hover {
@@ -5227,11 +5282,6 @@ header.row {
   max-width: 100%; }
 
 /* -------- Glyphicons -------- */
-.glyphicon {
-  font-size: 24px; }
-  .glyphicon.form-control-feedback {
-    font-size: small; }
-
 .glyphicon-class {
   display: block; }
 
@@ -5252,6 +5302,21 @@ header.row {
   margin-bottom: 15px;
   padding: 5px 0;
   text-align: center; }
+
+/* -------- Image Gallery -------- */
+#imageGalleryFeaturedPanels #tab2 .featured-panel .panel-body {
+  height: 130px; }
+#imageGalleryFeaturedPanels #tab3 .featured-panel .panel-body {
+  height: 200px; }
+#imageGalleryFeaturedPanels .admin-interface a {
+  color: #A4BBFF; }
+#imageGalleryFeaturedPanels .featured-panel {
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
+
+.image-gallery {
+  padding-top: 15px; }
 
 /* -------- Media Page -------- */
 #mediaPage img {
