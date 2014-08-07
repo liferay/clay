@@ -5422,6 +5422,37 @@ header.row {
 #panelVariations img {
   max-width: 141px; }
 
+/* ------------ Profile Page ------------ */
+.profile-page .glyphicon {
+  font-size: inherit; }
+.profile-page .profile-assets a {
+  color: #555;
+  text-decoration: none; }
+.profile-page .profile-background {
+  border-bottom: 1px solid #000;
+  height: 300px;
+  width: 100%; }
+.profile-page .profile-navbar {
+  border-radius: 0; }
+.profile-page .profile-picture {
+  border: 1px solid #000;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  top: 220px;
+  width: 120px;
+  z-index: 5; }
+.profile-page .status-update-box .panel-body {
+  background-color: #E5F5FF; }
+.profile-page .status-update-box .status-toolbar {
+  background-color: #C2F3EF; }
+.profile-page .status-update-box a {
+  color: #555;
+  margin-right: 10px;
+  text-decoration: none; }
+
 /* -------- Thumbnail Variations ---------*/
 #thumbnailVariations .img-responsive {
   width: 100%; }
