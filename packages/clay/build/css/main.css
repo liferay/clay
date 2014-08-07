@@ -5126,8 +5126,7 @@ header.row {
   #headerTopBar .title {
     float: left;
     margin-bottom: 14px;
-    margin-top: 14px;
-    padding-left: 15px; }
+    margin-top: 14px; }
 
 #imageShapes img {
   display: block;
@@ -5156,8 +5155,10 @@ header.row {
   color: #FFF;
   display: block;
   float: left;
-  padding: 10px 0 10px 15px;
+  padding: 10px 15px;
   text-align: left; }
+  .menu-toggle .glyphicon {
+    font-size: 22px; }
 
 .side-navigation-container {
   overflow: hidden;
@@ -5378,12 +5379,13 @@ header.row {
   /* -------- Blogs -------- */
   .glyphicons li {
     width: 10%; }
+  #headerTopBar .title {
+    padding-left: 15px; }
   #mainContent {
+    left: 0;
+    margin-left: 15px;
+    padding-left: 200px;
     width: 100%; }
-  #mainContent, #mainNav {
-    display: table-cell;
-    position: static;
-    vertical-align: top; }
   .main-nav-closed .side-navigation-container {
     width: 200px; }
   .menu-toggle {
