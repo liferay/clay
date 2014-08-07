@@ -24,7 +24,6 @@ header.row {
 		float: left;
 		margin-bottom: 14px;
 		margin-top: 14px;
-		padding-left: 15px;
 	}
 }
 
@@ -64,8 +63,12 @@ header.row {
 	color: #FFF;
 	display: block;
 	float: left;
-	padding: 10px 0 10px 15px;
+	padding: 10px 15px;
 	text-align: left;
+
+	.glyphicon {
+		font-size: 22px;
+	}
 }
 
 .side-navigation-container {
@@ -405,14 +408,15 @@ header.row {
 
 	/* ------- Side Navigation ------- */
 
-	#mainContent {
-		width: 100%;
+	#headerTopBar .title {
+		padding-left: 15px;
 	}
 
-	#mainContent, #mainNav {
-		display: table-cell;
-		position: static;
-		vertical-align: top;
+	#mainContent {
+		left: 0;
+		margin-left: 15px;
+		padding-left: $sideNavWidth;
+		width: 100%;
 	}
 
 	.main-nav-closed .side-navigation-container {
