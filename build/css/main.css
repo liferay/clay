@@ -5419,6 +5419,72 @@ header.row {
   #wrapper {
     overflow-x: visible; } }
 
+input.switch:empty {
+  margin-left: -999px; }
+
+input.switch:empty ~ label {
+  position: relative;
+  float: left;
+  line-height: 1.6em;
+  text-indent: 4em;
+  margin: 0.2em 0;
+  cursor: pointer;
+  user-select: none; }
+
+input.switch:empty:focus ~ label:before {
+  box-shadow: 0 0 3px blue; }
+
+input.switch:empty ~ label:before, input.switch:empty ~ label:after {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+  width: 3.6em;
+  background-color: #c33;
+  border-radius: 0.2em;
+  transition: all 100ms ease-in; }
+
+input.switch:empty ~ label:after {
+  width: 1.2em;
+  top: 0.2em;
+  bottom: 0.2em;
+  margin-left: 0.2em;
+  background-color: #FFF;
+  border-radius: 0.15em; }
+
+input.edit.switch:empty ~ label:after {
+  content: "\270f";
+  color: #c33;
+  font-family: 'Glyphicons Halflings';
+  text-indent: 2px;
+  line-height: 1.5;
+  font-size: 12px;
+  width: 1.4em;
+  border-radius: 0.25em; }
+
+input.edit.switch:checked ~ label:after {
+  margin-left: 2.5em; }
+
+input.edit.switch:checked ~ label:after {
+  color: #393; }
+
+input.switch:checked ~ label:before {
+  background-color: #393; }
+
+input.switch:disabled ~ label:before {
+  background-color: #CCC; }
+
+input.switch:checked ~ label:after {
+  margin-left: 2.1em; }
+
+input.switch:checked ~ label .off, input.switch:empty ~ label .on {
+  display: none; }
+
+input.switch:checked ~ label .on {
+  display: inline; }
+
 .page-title {
   font-weight: bold;
   margin-bottom: 25px; }
