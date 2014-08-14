@@ -25,6 +25,42 @@ header.row {
 		margin-bottom: 14px;
 		margin-top: 14px;
 	}
+
+	.navbar-toggle {
+		float: left;
+
+		.icon-bar {
+			background-color: #FFF;
+		}
+	}
+}
+
+.animated-toggle.navbar-toggle .icon-bar {
+	position: relative;
+	top: 0;
+	transition-property: background, opacity, top, transform;
+  	transition-duration: 0.2s;
+  	transition-delay: 0s, 0s, 0.2s, 0s;
+}
+
+.main-nav-open {
+	.animated-toggle.navbar-toggle {
+		.icon-bar:nth-of-type(even) {
+			transform: rotateZ(45deg);
+			transition-delay: 0s, 0s, 0s, 0.2s;
+			top: 6px;
+		}
+
+		.icon-bar:nth-of-type(4) {
+			transform: rotateZ(-45deg);
+			top: -6px;
+		}
+
+		.icon-bar:nth-of-type(odd) {
+			margin-left: -50px;
+			opacity: 0;
+		}
+	}
 }
 
 #imageShapes img {
