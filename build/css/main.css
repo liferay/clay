@@ -4981,7 +4981,7 @@ button.close {
 
 .panel .toggler-content-wrapper .list-group {
   margin-bottom: 0; }
-  .panel .toggler-content-wrapper .list-group.list-group.list-group-no-borders .list-group-item {
+  .panel .toggler-content-wrapper .list-group.list-group.no-borders .list-group-item {
     border-top-width: 0; }
   .panel .toggler-content-wrapper .list-group .list-group-item {
     border-left-width: 0;
@@ -5245,15 +5245,25 @@ header.row {
   float: right; }
 
 /* -------- Blogs 1 Column -------- */
-.blog-1-column {
-  margin: 0 auto;
-  max-width: 980px; }
-  .blog-1-column .read-more {
-    margin-bottom: 6px;
-    text-align: left; }
+#blogSideColumn .panel-heading {
+  background-color: transparent; }
+#blogSideColumn ul.panel-body {
+  margin-bottom: 0; }
+  #blogSideColumn ul.panel-body li {
+    margin-bottom: 10px; }
+    #blogSideColumn ul.panel-body li:last-child {
+      margin-bottom: 0; }
 
-.box.entry {
-  padding: 15px; }
+.blog-1-column h2 {
+  font-size: 22.652px; }
+.blog-1-column .blog-entry {
+  margin-bottom: 50px;
+  padding: 15px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+.blog-1-column .read-more {
+  margin-bottom: 6px;
+  text-align: left; }
 
 .comment-box {
   margin-bottom: 10px; }
@@ -5275,13 +5285,13 @@ header.row {
 .entry-actions {
   margin: 0 0 10px; }
 
-.entry-body {
-  margin-bottom: 15px; }
-  .entry-body img {
-    width: 100%; }
-  .entry-body .divider {
-    margin-left: -3px;
-    margin-right: -3px; }
+.entry-body .divider {
+  margin-left: -3px;
+  margin-right: -3px; }
+
+.entry-media .image-container {
+  max-height: 300px;
+  overflow: hidden; }
 
 .entry-meta-data {
   margin: 0 0 6px; }
@@ -5303,6 +5313,28 @@ header.row {
       color: transparent;
       font-size: 0;
       position: absolute; }
+
+.sidebar {
+  margin-top: 40px; }
+  .sidebar:first-child {
+    margin: 0; }
+  .sidebar li {
+    margin-bottom: 5px;
+    overflow: hidden; }
+
+.sidebar-content {
+  padding-left: 85px; }
+
+.sidebar-heading {
+  border-bottom: 1px solid #DDD;
+  margin-top: 0;
+  padding-bottom: 5px; }
+  .sidebar-heading .glyphicon {
+    vertical-align: top; }
+
+.sidebar-image {
+  float: left;
+  width: 75px; }
 
 .user-comment .comment-age {
   color: #7E7E7E; }
