@@ -5135,19 +5135,38 @@ header.row {
 .animated-toggle.navbar-toggle .icon-bar {
   position: relative;
   top: 0;
+  -webkit-transition-property: background, opacity, top, -webkit-transform;
+  -moz-transition-property: background, opacity, top, -moz-transform;
   transition-property: background, opacity, top, transform;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-delay: 0s, 0s, 0.2s, 0s;
+  -moz-transition-delay: 0s, 0s, 0.2s, 0s;
   transition-delay: 0s, 0s, 0.2s, 0s; }
 
 .main-nav-open .animated-toggle.navbar-toggle .icon-bar:nth-of-type(even) {
-  transform: rotateZ(45deg);
-  transition-delay: 0s, 0s, 0s, 0.2s;
-  top: 6px; }
+  top: 6px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition-delay: 0s, 0s, 0s, 0.2s;
+  -moz-transition-delay: 0s, 0s, 0s, 0.2s;
+  transition-delay: 0s, 0s, 0s, 0.2s; }
 .main-nav-open .animated-toggle.navbar-toggle .icon-bar:nth-of-type(4) {
-  transform: rotateZ(-45deg);
-  top: -6px; }
+  top: -6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
 .main-nav-open .animated-toggle.navbar-toggle .icon-bar:nth-of-type(odd) {
-  margin-left: -50px;
+  background-color: transparent;
   opacity: 0; }
 
 #imageShapes img {
@@ -5217,10 +5236,8 @@ header.row {
   clear: both; }
 
 .transition {
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
 /* -------- Accordions -------- */
@@ -5334,7 +5351,6 @@ header.row {
 #imageGalleryFeaturedPanels .admin-interface a {
   color: #A4BBFF; }
 #imageGalleryFeaturedPanels .featured-panel {
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
 
