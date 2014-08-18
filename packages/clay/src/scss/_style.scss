@@ -1,3 +1,5 @@
+@import "bourbon";
+
 $sideNavWidth: 200px;
 
 body {
@@ -38,26 +40,30 @@ header.row {
 .animated-toggle.navbar-toggle .icon-bar {
 	position: relative;
 	top: 0;
-	transition-property: background, opacity, top, transform;
-  	transition-duration: 0.2s;
-  	transition-delay: 0s, 0s, 0.2s, 0s;
+
+	@include transition-property (background, opacity, top, transform);
+	@include transition-duration(0.2s);
+	@include transition-timing-function(ease);
+	@include transition-delay(0s, 0s, 0.2s, 0s);
 }
 
 .main-nav-open {
 	.animated-toggle.navbar-toggle {
 		.icon-bar:nth-of-type(even) {
-			transform: rotateZ(45deg);
-			transition-delay: 0s, 0s, 0s, 0.2s;
 			top: 6px;
+
+			@include transform(rotate(45deg));
+			@include transition-delay(0s, 0s, 0s, 0.2s);
 		}
 
 		.icon-bar:nth-of-type(4) {
-			transform: rotateZ(-45deg);
 			top: -6px;
+
+			@include transform(rotate(-45deg));
 		}
 
 		.icon-bar:nth-of-type(odd) {
-			margin-left: -50px;
+			background-color: transparent;
 			opacity: 0;
 		}
 	}
@@ -161,11 +167,7 @@ header.row {
 }
 
 .transition {
-	-moz-transition: all 0.5s ease;
-	-ms-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease;
+	@include transition(all 0.5s ease);
 }
 
 /* -------- Accordions -------- */
@@ -343,9 +345,7 @@ header.row {
 	}
 
 	.featured-panel {
-		-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.4);
-		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4);
-		box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+		@include prefixer(box-shadow, 0 1px 2px rgba(0,0,0,0.4), webkit spec);
 	}
 }
 

@@ -5,6 +5,8 @@ var Y = require('yui').YUI();
 
 var Metalsmith = require('metalsmith');
 
+var bourbon = require('node-bourbon');
+
 var collections = require('metalsmith-collections');
 var define = require('metalsmith-define');
 var encodeHTML = require('metalsmith-encode-html');
@@ -131,6 +133,7 @@ ms.use(define(metadata))
 	.use(
 		sass(
 			{
+				includePaths: bourbon.includePaths,
 				outputDir: 'css/',
 				outputStyle: 'expanded'
 			}
