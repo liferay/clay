@@ -5141,9 +5141,9 @@ header.row {
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  transition-timing-function: ease;
+  -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transition-delay: 0s, 0s, 0.2s, 0s;
   -moz-transition-delay: 0s, 0s, 0.2s, 0s;
   transition-delay: 0s, 0s, 0.2s, 0s; }
