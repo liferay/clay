@@ -41,9 +41,9 @@ header.row {
 	position: relative;
 	top: 0;
 
-	@include transition-property (background, opacity, top, transform);
+	@include transition-property(background, opacity, top, transform);
 	@include transition-duration(0.2s);
-	@include transition-timing-function(ease);
+	@include transition-timing-function($ease-in-out-circ);
 	@include transition-delay(0s, 0s, 0.2s, 0s);
 }
 
