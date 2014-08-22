@@ -1,0 +1,124 @@
+.profile-heading {
+	border-bottom: 1px dotted #EEE;
+	font-weight: 300;
+	margin-bottom: 40px;
+	padding-bottom: 12px;
+
+	.glyphicon {
+		color: #BBB;
+		font-size: 22px;
+		margin-right: 5px;
+	}
+}
+
+.profile-image {
+	float: none;
+	max-width: 200px;
+	width: auto;
+}
+
+.profile-masthead {
+	margin-bottom: 20px;
+}
+
+.profile-tab {
+	border: 1px solid #DDD;
+	border-top-width: 0;
+	font-weight: 300;
+	padding: 15px 40px;
+}
+
+// Overview Tab
+
+.profile-resume p {
+	padding-top: 15px;
+}
+
+.profile-resume-section {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+// Activity Tab
+
+.profile-activity {
+	margin-left: 15px;
+	overflow: hidden;
+	padding: 40px 0 10px;
+
+	&:first-child {
+		padding: 0 0 10px;
+	}
+
+	.comment {
+		padding-top: 25px;
+
+		.user-activity {
+			vertical-align: middle;
+		}
+	}
+
+	.profile-meta {
+		color: #999;
+		font-size: 12px;
+		margin-top: 15px;
+
+		.comment-count {
+			.glyphicon {
+				margin-left: 5px;
+				top: 2px;
+			}
+		}
+
+		.like-count {
+			margin-right: 10px;
+		}
+	}
+
+	.status-action {
+		color:#999;
+		font-weight:300;
+	}
+
+	.user-activity {
+		display:table-cell;
+		padding-left:40px;
+		vertical-align:top;
+	}
+
+	.user-avatar {
+		display:table-cell;
+		vertical-align:top;
+		width: 75px;
+	}
+
+	.user-image {
+		margin-top: 5px;
+		width: 75px;
+	}
+}
+
+.profile-comments {
+	.user-activity {
+		padding-left: 0;
+	}
+
+	.user-avatar {
+		width: 51px;
+
+		img {
+			width: 36px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.profile-image {
+		float: left;
+		width: 200px;
+	}
+
+	.profile-info {
+		padding-left: 215px;
+	}
+}
