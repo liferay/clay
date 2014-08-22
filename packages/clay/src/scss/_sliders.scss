@@ -1,0 +1,65 @@
+input.slider {
+	height: 0;
+	margin: 20px 10px 20px 0;
+	padding: 10px 0;
+
+	-webkit-appearance: none;
+}
+
+input.slider::-moz-range-track {
+	visibility: hidden;
+}
+
+input.slider::-webkit-slider-thumb {
+	background: $brand-primary;
+	border: none;
+	border-radius: 3px;
+
+	@include size(20);
+
+	-webkit-appearance: none;
+}
+
+input.slider::-moz-range-thumb {
+	background: $brand-primary;
+	border: none;
+	border-radius: 3px;
+
+	@include size(20);
+}
+
+.square-borders {
+	input.slider::-webkit-slider-thumb {
+		border-radius: 0;
+	}
+
+	input.slider::-moz-range-thumb {
+		border-radius: 0;
+	}
+}
+
+// Vertical Sliders
+
+.form-group.vertical {
+	margin: 20px 0;
+
+	@include rotate(270deg);
+
+	@include size(170px);
+
+	text-align: center;
+
+	input.slider {
+		margin: 0;
+	}
+
+	label {
+		display: block;
+		margin: 0 auto;
+		padding-left: 5px;
+
+		@include rotate(90deg);
+
+		width: 15px;
+	}
+}
