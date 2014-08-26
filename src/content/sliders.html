@@ -3,93 +3,52 @@ title: Sliders
 section: Experimental
 ---
 
-<div class="row">
+<div class="row" id="sliderPage">
 	<div class="col-md-12">
-		<form action="#" class="form-inline" method="get">
-			<h3>Range (Slider) Input</h3>
+		<h3>Range (Slider) Input</h3>
 
-			<div class="form-group">
-				<input class="slider form-control" id="slider1" name="slider1" type="range" min="0" max="100" step="1" value="50" />
-				<label for="slider1">50</label>
-			</div>
+		<div class="slider-container">
+			<label for="slider1">Slider 1 Label</label>
 
-<pre><code>```<div class="form-group">
-  <div class="form-group">
-    <input class="slider form-control" id="slider1" name="slider1" type="range" min="0" max="100" step="1" value="50" />
-    <label for="slider1">50</label>
-  </div>
+			<input id="slider1" name="slider1" type="range" min="0" max="100" step="1" value="50" />
+
+			<output for="slider1">50</output>
+		</div>
+
+<pre><code>```<div class="slider-container">
+  <label for="slider1">Label Text</label>
+  <input id="slider1" name="slider1" type="range" min="0" max="100" step="1" value="50" />
+  <output>50</output>
 </div>```</code></pre>
 
-			<h3>Range (Slider) Input with Square Borders</h3>
+		<h3>Vertical Range (Slider) Input</h3>
 
-			<div class="form-group square-borders">
-				<input class="slider form-control" id="slider2" name="slider2" type="range" min="0" max="100" step="1" value="50" />
-				<label for="slider2">50</label>
-			</div>
+		<div class="slider-container-vertical">
+			<label for="slider2">Slider 2 Label</label>
 
-<pre><code>```<div class="form-group">
-  <div class="form-group square-borders">
-    <input class="slider form-control" id="slider2" name="slider2" type="range" min="0" max="100" step="1" value="50" />
-    <label for="slider2">50</label>
-  </div>
+			<input class="vertical" id="slider2" name="slider2" orient="vertical" type="range" min="0" max="100" step="1" value="50" />
+
+			<output for="slider2">50</output>
+		</div>
+
+<pre><code>```<div class="slider-container-vertical">
+  <label for="slider2">Label Text</label>
+  <input class="vertical" id="slider2" name="slider2" orient="vertical" type="range" min="0" max="100" step="1" value="50" />
+  <output>50</output>
 </div>```</code></pre>
 
-			<h3>Vertical Range (Slider) Input</h3>
-
-			<div class="form-group vertical">
-				<input class="slider form-control" id="slider3" name="slider3" type="range" min="0" max="100" step="1" value="50" />
-				<label for="slider3">50</label>
-			</div>
-
-<pre><code>```<div class="form-group">
-  <div class="form-group vertical">
-    <input class="slider form-control" id="slider3" name="slider3" type="range" min="0" max="100" step="1" value="50" />
-    <label for="slider3">50</label>
-  </div>
-</div>```</code></pre>
-
-			<h3>Vertical Range (Slider) Input with Square Borders</h3>
-
-			<div class="form-group vertical square-borders">
-				<input class="slider form-control" id="slider4" name="slider4" type="range" min="0" max="100" step="1" value="50" />
-				<label for="slider4">50</label>
-			</div>
-
-<pre><code>```<div class="form-group">
-  <div class="form-group vertical square-borders">
-    <input class="slider form-control" id="slider4" name="slider4" type="range" min="0" max="100" step="1" value="50" />
-    <label for="slider4">50</label>
-  </div>
-</div>```</code></pre>
-		</form>
 	</div>
 </div>
 
 <script>
 	YUI().use(
-		'aui-node',
+		'node',
 		function(Y) {
-			var handleMouseDown = function(event) {
-				Y.one(event._currentTarget).on('mousemove', updateSlider);
-			}
+			Y.one('#sliderPage').delegate('mousemove', function(event) {
+				var currentTarget = event.currentTarget;
 
-			var handleMouseUp = function(event) {
-				updateSlider(event);
-
-				Y.one(event._currentTarget).purge(true, 'mousemove');
-			}
-
-			var updateSlider = function(event) {
-				var target = event._currentTarget,
-					targetName = target.name,
-					value = target.value,
-					label = Y.one('label[for=' + targetName + ']');
-
-				label.text(value);
-			}
-
-			Y.all('input.slider').on('mousedown', handleMouseDown);
-			Y.all('input.slider').on('mouseup', handleMouseUp);
+				currentTarget.next('output').set('innerHTML', currentTarget.get('value'));
+			}, 'input[type="range"]');
 		}
 	)
 </script>
