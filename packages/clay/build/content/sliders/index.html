@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Switches</title>
+	<title>Sliders</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -89,9 +89,9 @@ collapse
 collapse in
 ">
 <ul class="nav nav-stacked">
-<li class=""><a href="../../content/sliders">Sliders</a>
+<li class="active"><a href="../../content/sliders">Sliders</a>
 </li>
-<li class="active"><a href="../../content/switches">Switches</a>
+<li class=""><a href="../../content/switches">Switches</a>
 </li>
 </ul>
 </div>
@@ -136,62 +136,62 @@ collapse
 
 	<div id="mainContent">
 		<h1 class="page-title">
-			Switches
+			Sliders
 
 			
 		</h1>
 
 		
-<div class="row">
+<div class="row" id="sliderPage">
 	<div class="col-md-12">
-		<form action="#" method="get">
-			<h3>Toggling labels</h3>
-			<div class="form-group">
-				<input class="switch" id="switch1" name="switch1" type="checkbox" />
-				<label for="switch1"><span class="on">On</span><span class="off">Off</span></label>
-			</div>
+		<h3>Range (Slider) Input</h3>
 
-			<div class="form-group">
-				<input checked="checked" class="switch" id="switch2" name="switch2" type="checkbox" />
-				<label for="switch2"><span class="on">On</span><span class="off">Off</span></label>
-			</div>
+		<div class="slider-container">
+			<label for="slider1">Slider 1 Label</label>
 
-<pre><code>&lt;div class=&quot;form-group&quot;&gt;
-  &lt;input class=&quot;switch&quot; id=&quot;switch&quot; type=&quot;checkbox&quot; /&gt;
-  &lt;label for=&quot;switch&quot;&gt;&lt;span class=&quot;on&quot;&gt;On&lt;/span&gt;&lt;span class=&quot;off&quot;&gt;Off&lt;/span&gt;&lt;/label&gt;
+			<input id="slider1" name="slider1" type="range" min="0" max="100" step="1" value="50" />
+
+			<output for="slider1">50</output>
+		</div>
+
+<pre><code>&lt;div class=&quot;slider-container&quot;&gt;
+  &lt;label for=&quot;slider1&quot;&gt;Label Text&lt;/label&gt;
+  &lt;input id=&quot;slider1&quot; name=&quot;slider1&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;50&quot; /&gt;
+  &lt;output&gt;50&lt;/output&gt;
 &lt;/div&gt;</code></pre>
 
-			<h3>Edit mode</h3>
+		<h3>Vertical Range (Slider) Input</h3>
 
-			<div class="form-group">
-				<input class="edit switch" id="switch2Edit" name="switch2Edit" type="checkbox" />
-				<label for="switch2Edit">Edit</label>
-			</div>
+		<div class="slider-container-vertical">
+			<label for="slider2">Slider 2 Label</label>
 
-<pre><code>&lt;div class=&quot;form-group&quot;&gt;
-  &lt;input checked=&quot;checked&quot; class=&quot;edit switch&quot; id=&quot;switch&quot; type=&quot;checkbox&quot; /&gt;
-  &lt;label for=&quot;switch&quot;&gt;Edit&lt;/label&gt;
+			<input class="vertical" id="slider2" name="slider2" orient="vertical" type="range" min="0" max="100" step="1" value="50" />
+
+			<output for="slider2">50</output>
+		</div>
+
+<pre><code>&lt;div class=&quot;slider-container-vertical&quot;&gt;
+  &lt;label for=&quot;slider2&quot;&gt;Label Text&lt;/label&gt;
+  &lt;input class=&quot;vertical&quot; id=&quot;slider2&quot; name=&quot;slider2&quot; orient=&quot;vertical&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;50&quot; /&gt;
+  &lt;output&gt;50&lt;/output&gt;
 &lt;/div&gt;</code></pre>
 
-			<h3>Disabled inputs</h3>
-
-			<div class="form-group">
-				<input checked="checked" class="switch" disabled="disabled" id="switch3" name="switch3" type="checkbox" />
-				<label for="switch3"><span class="on">On</span><span class="off">Off</span></label>
-			</div>
-
-			<div class="form-group">
-				<input class="switch" disabled="disabled" id="switch3" name="switch3" type="checkbox" />
-				<label for="switch3"><span class="on">On</span><span class="off">Off</span></label>
-			</div>
-
-<pre><code>&lt;div class=&quot;form-group&quot;&gt;
-  &lt;input class=&quot;switch&quot; disabled=&quot;disabled&quot; id=&quot;switch&quot; type=&quot;checkbox&quot; /&gt;
-  &lt;label for=&quot;switch&quot;&gt;&lt;span class=&quot;on&quot;&gt;On&lt;/span&gt;&lt;span class=&quot;off&quot;&gt;Off&lt;/span&gt;&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-		</form>
 	</div>
 </div>
+
+<script>
+	YUI().use(
+		'node',
+		function(Y) {
+			Y.one('#sliderPage').delegate('mousemove', function(event) {
+				var currentTarget = event.currentTarget;
+
+				currentTarget.next('output').set('innerHTML', currentTarget.get('value'));
+			}, 'input[type="range"]');
+		}
+	)
+</script>
+
 	</div>
 
 		</section>
