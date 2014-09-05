@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Dropdowns and Tooltips</title>
+	<title>Dropdowns</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -43,7 +43,7 @@ collapse in
 </li>
 <li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
 </li>
-<li class="active"><a href="../../content/dropdowns">Dropdowns and Tooltips</a>
+<li class="active"><a href="../../content/dropdowns">Dropdowns</a>
 </li>
 <li class=""><a href="../../content/modals">Modals</a>
 </li>
@@ -136,7 +136,7 @@ collapse
 
 	<div id="mainContent">
 		<h1 class="page-title">
-			Dropdowns and Tooltips
+			Dropdowns
 
 			
 		</h1>
@@ -152,12 +152,12 @@ collapse
 					<div class="col-md-4">
 						<h4>Default</h4>
 
-						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
-							<li class="dropdown-header" role="presentation">Dropdown Header</li>
-							<li role="presentation"><a href="#" role="menuitem">Action</a></li>
-							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-							<li class="divider" role="presentation"></li>
-							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">Dropdown Header</li>
+							<li><a href="#" role="menuitem">Action</a></li>
+							<li class="disabled"><a href="#">Disabled</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Scope</a></li>
 						</ul>
 					</div>
 
@@ -213,7 +213,7 @@ collapse
 					<div class="col-md-12 mega-menu">
 						<h4>Mega Menu</h4>
 
-						<p>Add class mega-menu to any dropdown to make the dropdown-menu BIG. The default width is 500px, but can be overridden to any width. The mega-menu-full class can be used to make the dropdown as wide as the navigation, see dropdown examples.</p>
+						<p>Add class mega-menu to the parent of a dropdown-menu to make the dropdown-menu BIG. The default width is 500px, but can be overridden to any width. The mega-menu-full class can be used to make the dropdown as wide as the navigation, see dropdown examples.</p>
 
 						<ul class="dropdown-menu">
 							<li class="col-sm-4">
@@ -292,12 +292,10 @@ collapse
 
 										<ul class="link-list">
 											<li class="link-list-heading">By Product</li>
-											<li><a href="#1">Mango</a></li>
-											<li><a href="#1">Apples</a></li>
-											<li><a href="#1">Cherries</a></li>
-											<li><a href="#1">Grapes</a></li>
-											<li><a href="#1">Oranges</a></li>
-											<li><a href="#1">Cantaloupes</a></li>
+											<li><a href="#1">Developing for the Platform</a></li>
+											<li><a href="#1">Mastering Fundamentals</a></li>
+											<li><a href="#1">Styling with Themes</a></li>
+											<li><a href="#1">Managing Content</a></li>
 										</ul>
 									</li>
 
@@ -346,12 +344,10 @@ collapse
 
 										<ul class="link-list">
 											<li class="link-list-heading">By Product</li>
-											<li><a href="#1">Mango</a></li>
-											<li><a href="#1">Apples</a></li>
-											<li><a href="#1">Cherries</a></li>
-											<li><a href="#1">Grapes</a></li>
-											<li><a href="#1">Oranges</a></li>
-											<li><a href="#1">Cantaloupes</a></li>
+											<li><a href="#1">Developing for the Platform</a></li>
+											<li><a href="#1">Mastering Fundamentals</a></li>
+											<li><a href="#1">Styling with Themes</a></li>
+											<li><a href="#1">Managing Content</a></li>
 										</ul>
 									</li>
 
@@ -387,7 +383,7 @@ collapse
 							</li>
 						</ul>
 
-						<form class="navbar-form navbar-left">
+						<form class="form-inline navbar-form navbar-left">
 							<div class="form-group">
 								<input class="form-control" type="text" />
 							</div>
@@ -433,7 +429,7 @@ collapse
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row" id="dropdownAlignment">
 		<div class="col-md-12">
 			<div class="box panel panel-default">
 				<h4 class="panel-heading">Dropdown Alignment</h4>
@@ -514,19 +510,6 @@ collapse
 			</div>
 		</div>
 	</div>
-
-	<div class="row">
-		<div class="col-md-12">
-			<div class="box panel panel-default">
-				<h4 class="panel-heading">Tooltips</h4>
-
-				<button class="btn btn-default" id="tooltipLeft" title="Left">Tooltip</button>
-				<button class="btn btn-primary" id="tooltipTop" title="Top">Tooltip</button>
-				<button class="btn btn-success" id="tooltipBottom" title="Bottom">Tooltip</button>
-				<button class="btn btn-info" id="tooltipRight" title="Right">Tooltip</button>
-			</div>
-		</div>
-	</div>
 </div>
 
 <script>
@@ -557,26 +540,6 @@ collapse
 				currentTarget.detach('clickoutside');
 			}
 		}, '.dropdown-toggle');
-
-		new A.Tooltip({
-			trigger: '#tooltipRight',
-			position: 'right'
-		}).render();
-
-		new A.Tooltip({
-			trigger: '#tooltipBottom',
-			position: 'bottom'
-		}).render();
-
-		new A.Tooltip({
-			trigger: '#tooltipLeft',
-			position: 'left'
-		}).render();
-
-		new A.Tooltip({
-			trigger: '#tooltipTop',
-			position: 'top'
-		}).render();
 	});
 </script>
 	</div>
