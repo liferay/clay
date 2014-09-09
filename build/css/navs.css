@@ -1,0 +1,51 @@
+.nav-justified .dropdown-menu, .nav-stacked .dropdown-menu {
+  width: 100%; }
+
+.tab-wrapper-bottom, .tab-wrapper-left, .tab-wrapper-right {
+  margin-bottom: 10px; }
+  .tab-wrapper-bottom > .nav-tabs, .tab-wrapper-left > .nav-tabs, .tab-wrapper-right > .nav-tabs {
+    border-bottom: 0; }
+  .tab-wrapper-bottom > .tab-content, .tab-wrapper-left > .tab-content, .tab-wrapper-right > .tab-content {
+    border: 1px solid #DDD;
+    padding: 10px; }
+
+.tab-wrapper-left .nav-tabs, .tab-wrapper-right .nav-tabs {
+  display: table-cell;
+  vertical-align: top; }
+  .tab-wrapper-left .nav-tabs > li, .tab-wrapper-right .nav-tabs > li {
+    float: none;
+    margin-bottom: 0; }
+    .tab-wrapper-left .nav-tabs > li > a, .tab-wrapper-right .nav-tabs > li > a {
+      display: block;
+      max-width: 10em;
+      word-wrap: break-word; }
+.tab-wrapper-left .tab-content, .tab-wrapper-right .tab-content {
+  display: table-cell;
+  width: 100%; }
+
+.tab-wrapper-bottom .nav-tabs .active > a, .tab-wrapper-bottom .nav-tabs .active > a:focus, .tab-wrapper-bottom .nav-tabs .active > a:hover {
+  border-color: transparent #DDD #DDD #DDD; }
+.tab-wrapper-bottom .nav-tabs > li {
+  margin-top: -1px; }
+  .tab-wrapper-bottom .nav-tabs > li > a {
+    border-radius: 0 0 4px 4px; }
+    .tab-wrapper-bottom .nav-tabs > li > a:focus, .tab-wrapper-bottom .nav-tabs > li > a:hover {
+      border-color: #DDD #EEE #EEE; }
+
+.tab-wrapper-left .nav-tabs .active > a, .tab-wrapper-left .nav-tabs .active > a:focus, .tab-wrapper-left .nav-tabs .active > a:hover {
+  border-color: #DDD transparent #DDD #DDD; }
+.tab-wrapper-left .nav-tabs > li {
+  margin-right: -1px; }
+  .tab-wrapper-left .nav-tabs > li > a {
+    border-radius: 4px 0 0 4px; }
+    .tab-wrapper-left .nav-tabs > li > a:focus, .tab-wrapper-left .nav-tabs > li > a:hover {
+      border-color: #EEE #DDD #EEE #EEE; }
+
+.tab-wrapper-right .nav-tabs .active > a, .tab-wrapper-right .nav-tabs .active > a:focus, .tab-wrapper-right .nav-tabs .active > a:hover {
+  border-color: #DDD #DDD #DDD transparent; }
+.tab-wrapper-right .nav-tabs > li {
+  margin-left: -1px; }
+  .tab-wrapper-right .nav-tabs > li > a {
+    border-radius: 0 4px 4px 0; }
+    .tab-wrapper-right .nav-tabs > li > a:focus, .tab-wrapper-right .nav-tabs > li > a:hover {
+      border-color: #EEE #EEE #EEE #DDD; }
