@@ -4980,7 +4980,7 @@ button.close {
       position: absolute;
       top: 7px; }
 
-.timeline-x-axis {
+.timeline-y-axis {
   background-color: #999;
   bottom: 0;
   content: " ";
@@ -5621,6 +5621,9 @@ header.row {
   margin-top: 15px; }
 #rental h5 {
   font-weight: bold; }
+#rental img {
+  float: none;
+  padding: 0; }
 
 /* -------- Media Page -------- */
 #mediaPage img {
@@ -5665,6 +5668,10 @@ header.row {
   width: 32px; }
 
 /* -------- Timeline -------- */
+.item-center.timeline-item img {
+  float: none;
+  padding: 0; }
+
 .timestamp-icon {
   color: #999;
   font-size: 12px !important;
