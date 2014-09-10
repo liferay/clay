@@ -426,6 +426,11 @@ header.row {
 	h5 {
 		font-weight: bold;
 	}
+
+	img {
+		float: none;
+		padding: 0;
+	}
 }
 
 
@@ -496,6 +501,13 @@ header.row {
 }
 
 /* -------- Timeline -------- */
+
+.item-center.timeline-item {
+	img {
+		float: none;
+		padding: 0;
+	}
+}
 
 .timestamp-icon {
 	color: #999;
