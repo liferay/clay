@@ -1,53 +1,28 @@
+@import "bootstrap/variables";
+
 .nav-justified, .nav-stacked {
 	.dropdown-menu {
 		width: 100%;
 	}
 }
 
-.tab-wrapper-bottom,
-.tab-wrapper-left,
-.tab-wrapper-right {
-	margin-bottom: 10px;
-
-	> .nav-tabs {
-		border-bottom: 0;
-	}
-
-	> .tab-content {
-		border: 1px solid #DDD;
-		padding: 10px;
-	}
-}
-
-.tab-wrapper-left, 
-.tab-wrapper-right {
-	.nav-tabs {
-		display: table-cell;
-		vertical-align: top;
-
-		> li {
-			float: none;
-			margin-bottom: 0;
-
-			> a {
-				display: block;
-				max-width: 10em;
-				word-wrap: break-word;
-			}
-		}
-	}
-
+.tab-group {
 	.tab-content {
-		display: table-cell;
-		width: 100%;
+		border: 1px solid $nav-tabs-border-color;
+		margin-top: -1px;
+		padding: 15px;
 	}
 }
 
-.tab-wrapper-bottom {
+.tab-group-bottom {
 	.nav-tabs {
+		border-bottom-width: 0;
+		border-top: 1px solid $nav-tabs-border-color;
+		margin-top: -1px;
+
 		.active > a {
 			&, &:focus, &:hover {
-				border-color: transparent #DDD #DDD #DDD;
+				border-color: transparent $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color;
 			}
 		}
 
@@ -58,53 +33,139 @@
 				border-radius: 0 0 4px 4px;
 
 				&:focus, &:hover {
-					border-color: #DDD #EEE #EEE;
+					border-color: $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+				}
+			}
+		}
+	}
+
+	.tab-content {
+		border: 1px solid $nav-tabs-border-color;
+		margin-top: 0;
+		padding: 15px;
+	}
+}
+
+.tab-group-left, .tab-group-right {
+	.nav-tabs {
+		display: block;
+	}
+
+	.tab-content {
+		display: block;
+	}
+}
+
+.tab-group-right {
+	.nav-tabs {
+		border-bottom-width: 0;
+		border-top: 1px solid transparent;
+		margin-top: -1px;
+
+		.active > a {
+			&, &:focus, &:hover {
+				border-color: transparent $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color;
+			}
+		}
+
+		> li {
+			margin-top: -1px;
+
+			> a {
+				border-radius: 0 0 4px 4px;
+
+				&:focus, &:hover {
+					border-color: $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
 				}
 			}
 		}
 	}
 }
 
-.tab-wrapper-left {
-	.nav-tabs {
-		.active > a {
-			&, &:focus, &:hover {
-				border-color: #DDD transparent #DDD #DDD;
+@media (min-width: $screen-sm) {
+	.tab-group-left,
+	.tab-group-right {
+		.nav-tabs {
+			border-bottom-width: 0;
+			display: table-cell;
+			vertical-align: top;
+
+			> li {
+				float: none;
+				margin-bottom: 0;
+
+				> a {
+					display: block;
+					margin-bottom: 2px;
+					margin-right: 0;
+					max-width: 10em;
+					word-wrap: break-word;
+				}
 			}
 		}
 
-		> li {
-			margin-right: -1px;
-
-			> a {
-				border-radius: 4px 0 0 4px;
-
-				&:focus, &:hover {
-					border-color: #EEE #DDD #EEE #EEE;
-				}
-			}
+		.tab-content {
+			display: table-cell;
+			margin-top: 0;
+			width: 100%;
 		}
 	}
-}
 
-.tab-wrapper-right {
-	.nav-tabs {
-		.active > a {
-			&, &:focus, &:hover {
-				border-color: #DDD #DDD #DDD transparent;
+	.tab-group-left {
+		.nav-tabs {
+			border-right: 1px solid $nav-tabs-border-color;
+
+			.active > a {
+				&, &:focus, &:hover {
+					border-color: $nav-tabs-border-color transparent $nav-tabs-border-color $nav-tabs-border-color;
+				}
+			}
+
+			> li {
+				margin-right: -1px;
+
+				> a {
+					border-radius: 4px 0 0 4px;
+
+					&:focus, &:hover {
+						border-color: $nav-tabs-link-hover-border-color $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+					}
+				}
 			}
 		}
 
-		> li {
-			margin-left: -1px;
+		.tab-content {
+			border: 1px solid $nav-tabs-border-color;
+			border-left-width: 0;
+		}
+	}
 
-			> a {
-				border-radius: 0 4px 4px 0;
+	.tab-group-right {
+		.nav-tabs {
+			border-left: 1px solid $nav-tabs-border-color;
 
-				&:focus, &:hover {
-					border-color: #EEE #EEE #EEE #DDD;
+			.active > a {
+				&, &:focus, &:hover {
+					border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color transparent;
 				}
 			}
+
+			> li {
+				margin-left: -1px;
+
+				> a {
+					border-radius: 0 4px 4px 0;
+
+					&:focus, &:hover {
+						border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+					}
+				}
+			}
+		}
+
+		.tab-content {
+			border: 1px solid $nav-tabs-border-color;
+			border-right-width: 0;
 		}
 	}
 }
