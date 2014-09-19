@@ -42,13 +42,18 @@ section: Experimental
 
 <script>
 	YUI().use(
-		'node',
+		'aui-base',
+		'aui-event-input',
 		function(Y) {
-			Y.one('#sliderPage').delegate('mousemove', function(event) {
-				var currentTarget = event.currentTarget;
+			Y.one('#sliderPage').delegate(
+				'input',
+				function(event) {
+					var currentTarget = event.currentTarget;
 
-				currentTarget.next('output').set('innerHTML', currentTarget.get('value'));
-			}, 'input[type="range"]');
+					currentTarget.next('output').text(currentTarget.val());
+				},
+				'input[type="range"]'
+			);
 		}
 	)
 </script>
