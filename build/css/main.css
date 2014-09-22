@@ -4579,6 +4579,16 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+/* Removes Box Shadows */
+.no-shadow {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* Removes Borders */
+.no-borders, .no-borders .list-group-item {
+  border-width: 0; }
+
 /* -------- Removes Rounded Borders -------- */
 .square-borders, .square-borders code, .square-borders pre, .square-borders .alert, .square-borders .btn, .square-borders .btn-lg, .square-borders .btn-group-lg > .btn, .btn-group-lg > .square-borders .btn, .square-borders .btn-sm, .square-borders .btn-group-sm > .btn, .btn-group-sm > .square-borders .btn, .square-borders .btn-xs, .square-borders .btn-group-xs > .btn, .btn-group-xs > .square-borders .btn, .square-borders .container .jumbotron, .square-borders .dropdown-menu, .square-borders .form-control, .square-borders .input-group-addon, .square-borders .input-lg, .square-borders .form-horizontal .form-group-lg .form-control, .form-horizontal .form-group-lg .square-borders .form-control, .square-borders .input-group-lg > .form-control, .input-group-lg > .square-borders .form-control, .square-borders .input-group-lg > .input-group-addon, .input-group-lg > .square-borders .input-group-addon, .square-borders .input-group-lg > .input-group-btn > .btn, .input-group-lg > .input-group-btn > .square-borders .btn, .square-borders .input-sm, .square-borders .form-horizontal .form-group-sm .form-control, .form-horizontal .form-group-sm .square-borders .form-control, .square-borders .input-group-sm > .form-control, .input-group-sm > .square-borders .form-control, .square-borders .input-group-sm > .input-group-addon, .input-group-sm > .square-borders .input-group-addon, .square-borders .input-group-sm > .input-group-btn > .btn, .input-group-sm > .input-group-btn > .square-borders .btn, .square-borders .nav-pills > li > a, .square-borders .nav-tabs > li > a, .square-borders .navbar-toggle, .square-borders .panel, .square-borders .progress, .square-borders .thumbnail, .square-borders .well-lg, .square-borders .well-sm {
   -moz-border-radius: 0;
@@ -5043,6 +5053,115 @@ button.close {
       border-right-width: 0;
       left: auto;
       right: -10px; } }
+
+.chat-group-item {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  z-index: 10; }
+
+.chat.panel {
+  margin-bottom: 0;
+  width: 250px; }
+  .chat.panel .chat-group-item-name {
+    display: block; }
+  .chat.panel .outgoing .user-avatar {
+    float: right; }
+  .chat.panel .outgoing .chat-group-item-text {
+    margin-right: 35px; }
+  .chat.panel .incoming .user-avatar {
+    float: left; }
+  .chat.panel .incoming .chat-group-item-text {
+    margin-left: 35px; }
+  .chat.panel > .panel-heading {
+    margin: 0; }
+  .chat.panel .panel-body {
+    font-size: 12px;
+    height: 230px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; }
+  .chat.panel .panel-footer textarea {
+    height: 33px;
+    padding: 6px;
+    resize: none; }
+  .chat.panel .user-avatar {
+    float: left;
+    width: 25px; }
+
+.disc {
+  background-color: #eeeeee;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  height: 10px;
+  margin-right: 10px;
+  width: 10px; }
+
+.disc-danger {
+  background-color: #d9534f; }
+
+.disc-info {
+  background-color: #5bc0de; }
+
+.disc-primary {
+  background-color: #428bca; }
+
+.disc-success {
+  background-color: #5cb85c; }
+
+.disc-warning {
+  background-color: #f0ad4e; }
+
+.group-chat-message {
+  display: table-cell;
+  padding-left: 15px; }
+  .group-chat-message h4 small {
+    font-size: 68%;
+    margin-left: 5px;
+    text-transform: uppercase; }
+  .group-chat-message p {
+    color: #555;
+    font-weight: 300; }
+
+.group-chat-message-block {
+  margin-bottom: 30px; }
+
+.overflow-ellipsis li, .overflow-ellipsis .list-group-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.user-avatar {
+  display: table-cell;
+  vertical-align: top;
+  width: 50px; }
+  .user-avatar img {
+    margin-top: 8px; }
+
+@media (max-width: 992px) {
+  .full-screen-layout-md, .full-screen-layout-lg {
+    height: auto !important; } }
+
+@media (min-width: 992px) {
+  .full-screen-layout-md {
+    margin-bottom: 5px; }
+    .full-screen-layout-md [class*="col-xs"], .full-screen-layout-md [class*="col-sm"], .full-screen-layout-md [class*="col-md"], .full-screen-layout-md [class*="col-lg"] {
+      height: 100%;
+      overflow: hidden; }
+      .full-screen-layout-md [class*="col-xs"]:hover, .full-screen-layout-md [class*="col-sm"]:hover, .full-screen-layout-md [class*="col-md"]:hover, .full-screen-layout-md [class*="col-lg"]:hover {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; } }
+
+@media (min-width: 1200px) {
+  .full-screen-layout-lg {
+    margin-bottom: 5px; }
+    .full-screen-layout-lg [class*="col-xs"], .full-screen-layout-lg [class*="col-sm"], .full-screen-layout-lg [class*="col-md"], .full-screen-layout-lg [class*="col-lg"] {
+      height: 100%;
+      overflow: hidden; }
+      .full-screen-layout-lg [class*="col-xs"]:hover, .full-screen-layout-lg [class*="col-sm"]:hover, .full-screen-layout-lg [class*="col-md"]:hover, .full-screen-layout-lg [class*="col-lg"]:hover {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; } }
 
 .dropdown-menu-top {
   bottom: 100%;
