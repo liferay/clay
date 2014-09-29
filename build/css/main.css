@@ -5416,71 +5416,66 @@ input[type="range"].vertical {
 
 input.switch:empty {
   margin-left: -999px; }
-
-input.switch:empty ~ label {
-  position: relative;
-  float: left;
-  line-height: 1.6em;
-  text-indent: 4em;
-  margin: 0.2em 0;
-  cursor: pointer;
-  user-select: none; }
-
-input.switch:empty:focus ~ label:before {
-  -webkit-box-shadow: 0 0 3px blue;
-  -moz-box-shadow: 0 0 3px blue;
-  box-shadow: 0 0 3px blue; }
-
-input.switch:empty ~ label:before, input.switch:empty ~ label:after {
-  position: absolute;
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  content: ' ';
-  width: 3.6em;
-  background-color: #c33;
-  -webkit-border-radius: 0.2em;
-  -moz-border-radius: 0.2em;
-  border-radius: 0.2em;
-  transition: all 100ms ease-in; }
-
-input.switch:empty ~ label:after {
-  width: 1.2em;
-  top: 0.2em;
-  bottom: 0.2em;
-  margin-left: 0.2em;
-  background-color: #FFF;
-  -webkit-border-radius: 0.15em;
-  -moz-border-radius: 0.15em;
-  border-radius: 0.15em; }
-
-input.edit.switch:empty ~ label:after {
-  content: "\270f";
-  color: #c33;
-  font-family: 'Glyphicons Halflings';
-  text-indent: 2px;
-  line-height: 1.5;
-  font-size: 12px;
-  width: 1.4em;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  border-radius: 0.25em; }
-
-input.edit.switch:checked ~ label:after {
-  margin-left: 2.5em; }
-
-input.edit.switch:checked ~ label:after {
-  color: #393; }
-
+  input.switch:empty:focus ~ label:before {
+    -webkit-box-shadow: 0 0 3px #00F;
+    -moz-box-shadow: 0 0 3px #00F;
+    box-shadow: 0 0 3px #00F; }
+  input.switch:empty ~ label {
+    cursor: pointer;
+    float: left;
+    line-height: 1.6em;
+    margin: 0.2em 0;
+    position: relative;
+    text-indent: 4em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    input.switch:empty ~ label:after, input.switch:empty ~ label:before {
+      -webkit-border-radius: 0.2em;
+      -moz-border-radius: 0.2em;
+      border-radius: 0.2em;
+      background-color: #C33;
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-transition: all 100ms ease-in;
+      -moz-transition: all 100ms ease-in;
+      transition: all 100ms ease-in;
+      width: 3.6em; }
+    input.switch:empty ~ label:after {
+      -webkit-border-radius: 0.15em;
+      -moz-border-radius: 0.15em;
+      border-radius: 0.15em;
+      background-color: #FFF;
+      bottom: 0.2em;
+      margin-left: 0.2em;
+      top: 0.2em;
+      width: 1.2em; }
+input.switch:checked ~ label:after {
+  margin-left: 2.1em; }
 input.switch:checked ~ label:before {
   background-color: #393; }
-
 input.switch:disabled ~ label:before {
   background-color: #CCC; }
 
-input.switch:checked ~ label:after {
-  margin-left: 2.1em; }
+input.edit.switch:empty ~ label:after {
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  color: #C33;
+  content: "\270f";
+  font-family: 'Glyphicons Halflings';
+  font-size: 12px;
+  line-height: 1.5;
+  text-indent: 2px;
+  width: 1.4em; }
+input.edit.switch:checked ~ label:after {
+  color: #393;
+  margin-left: 2.5em; }
 
 input.switch:checked ~ label .off, input.switch:empty ~ label .on {
   display: none; }
