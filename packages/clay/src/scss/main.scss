@@ -2,58 +2,14 @@ $icon-font-path: "../fonts/";
 
 @import "bootstrap";
 
-@import "custom";
+@import "components";
 @import "chat";
 @import "dropdowns";
 @import "mail_template";
 @import "profile";
-@import "style";
 @import "sliders";
 @import "switches";
 @import "tables";
 @import "navs";
 
-// Temporarily adding custom styles here
-
-.page-title {
-	font-weight: bold;
-	margin-bottom: 25px;
-}
-
-.side-navigation {
-	padding-top: 35px;
-
-	li {
-		> a {
-			&:hover, &:focus {
-				background-color: transparent;
-				color: #009AE5;
-				text-decoration: underline;
-			}
-		}
-
-		&.child-active, &.active {
-			> a {
-				font-weight: bold;
-			}
-		}
-
-		&.active > a {
-			color: #555;
-		}
-	}
-
-	// li > a {
-	// 	&:hover, &:focus {
-	// 		background-color: #CCC;
-	// 	}
-	// }
-
-	// .side-navigation-dropdown-container:hover > a {
-	// 	background-color: #CCC;
-	// }
-
-	// li.active > a {
-	// 	background: #333;
-	// }
-}
+@import "site";
