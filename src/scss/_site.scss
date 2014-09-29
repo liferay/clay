@@ -15,6 +15,11 @@ header.row {
 	margin: 0;
 }
 
+.page-title {
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
 #headerTopBar {
 	background: #0058BA url(../images/back_decoration_nav.png) no-repeat 100% 0;
 
@@ -128,8 +133,29 @@ header.row {
 
 .side-navigation {
 	display: inline-block;
+	padding-top: 35px;
 	position: absolute;
 	z-index: 1;
+
+	li {
+		> a {
+			&:hover, &:focus {
+				background-color: transparent;
+				color: #009AE5;
+				text-decoration: underline;
+			}
+		}
+
+		&.child-active, &.active {
+			> a {
+				font-weight: bold;
+			}
+		}
+
+		&.active > a {
+			color: #555;
+		}
+	}
 
 	.nav-stacked li {
 		> h4 {
