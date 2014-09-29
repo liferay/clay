@@ -3,14 +3,20 @@ $icon-font-path: "../fonts/";
 @import "bootstrap";
 
 @import "bourbon_mixins";
-@import "components";
+@import "helpers";
+
+@import "accordions";
 @import "chat";
 @import "dropdowns";
 @import "mail_template";
+@import "modals";
+@import "navbars";
+@import "navs";
+@import "panels";
 @import "profile";
 @import "sliders";
 @import "switches";
 @import "tables";
-@import "navs";
+@import "timelines";
 
 @import "site";

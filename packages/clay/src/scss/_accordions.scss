@@ -1,0 +1,28 @@
+.header:hover {
+	cursor: pointer;
+}
+
+.panel .toggler-content-wrapper .list-group {
+	margin-bottom: 0;
+
+	&.list-group.no-borders .list-group-item {
+		border-top-width: 0;
+	}
+
+	.list-group-item {
+		border-left-width: 0;
+		border-right-width: 0;
+
+		&:first-child {
+			border-top-width: 0;
+		}
+	}
+}
+
+.separated-panels {
+	margin-bottom: 20px;
+
+	.panel {
+		margin-bottom: 5px;
+	}
+}

@@ -1,0 +1,43 @@
+/* Removes Box Shadows */
+
+.no-shadow {
+	@include box-shadow(none);
+}
+
+/* Removes Borders */
+
+.no-borders {
+	&, .list-group-item {
+		border-width: 0;
+	}
+}
+
+/* Removes Rounded Borders */
+
+.square-borders {
+	&, code, pre, .alert, .btn, .btn-lg, .btn-sm, .btn-xs, .container .jumbotron, .dropdown-menu, .form-control, .input-group-addon, .input-lg, .input-sm, .nav-pills > li > a, .nav-tabs > li > a, .navbar-toggle, .panel, .progress, .thumbnail, .well-lg, .well-sm {
+		@include border-radius(0);
+	}
+
+	.btn-group-vertical > .btn:first-child:not(:last-child) {
+		@include border-top-right-radius(0);
+	}
+
+	.list-group-item:first-child, .panel .panel-heading:first-child {
+		@include border-top-left-radius(0);
+		@include border-top-right-radius(0);
+	}
+
+	.list-group-item:last-child, .panel .panel-footer {
+		@include border-bottom-left-radius(0);
+		@include border-bottom-right-radius(0);
+	}
+}
+
+.inline-scroller {
+	height: 125px;
+	list-style: none;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+}
