@@ -3,6 +3,7 @@ $sideNavWidth: 200px;
 body {
 	background-color: #FFF;
 	color: #555;
+	font-family: $font-family-sans-serif;
 }
 
 a {
@@ -47,7 +48,7 @@ header.row {
 	@include transition-property(background, opacity, top, transform);
 	@include transition-duration(0.2s);
 	@include transition-timing-function($ease-in-out-circ);
-	@include transition-delay(0s, 0s, 0.2s, 0s);
+	@include transition-delay(0s 0s 0.2s 0s);
 }
 
 .main-nav-open {
@@ -56,7 +57,7 @@ header.row {
 			top: 6px;
 
 			@include transform(rotate(45deg));
-			@include transition-delay(0s, 0s, 0s, 0.2s);
+			@include transition-delay(0s 0s 0s 0.2s);
 		}
 
 		.icon-bar:nth-of-type(4) {
