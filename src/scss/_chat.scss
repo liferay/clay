@@ -60,9 +60,9 @@
 
 .disc {
 	background-color: $gray-lighter;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	border-radius: 20px;
+
+	@include border-radius(20px);
+
 	display: inline-block;
 	height: 10px;
 	margin-right: 10px;
