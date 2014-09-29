@@ -1,8 +1,39 @@
 $icon-font-path: "../fonts/";
 
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../fonts/Lato/Lato-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/Lato/Lato-Black.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 700;
+	src: url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
+}
+
+@import "custom/bootstrap_overrides.scss";
+@import "custom/bourbon_mixins";
+
 @import "bootstrap";
 
-@import "bourbon_mixins";
+// convert helpers to mixins?
 @import "helpers";
 
 @import "accordions";
