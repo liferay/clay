@@ -1,0 +1,25 @@
+@import "bourbon";
+
+@mixin border-radius($radius) {
+	@include prefixer(border-radius, $radius, webkit moz spec);
+}
+
+@mixin border-bottom-left-radius($radius) {
+	@include prefixer(border-bottom-left-radius, $radius, webkit moz spec);
+}
+
+@mixin border-bottom-right-radius($radius) {
+	@include prefixer(border-bottom-right-radius, $radius, webkit moz spec);
+}
+
+@mixin border-top-left-radius($radius) {
+	@include prefixer(border-top-left-radius, $radius, webkit moz spec);
+}
+
+@mixin border-top-right-radius($radius) {
+	@include prefixer(border-top-right-radius, $radius, webkit moz spec);
+}
+
+@mixin box-shadow($shadow) {
+	@include prefixer(box-shadow, $shadow, webkit moz spec);
+}

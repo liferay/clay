@@ -13,12 +13,8 @@
 }
 
 .flip-horizontal {
-	-moz-transform: scaleX(-1);
-	-o-transform: scaleX(-1);
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);
-	filter: FlipH;
-	-ms-filter: "FlipH";
+	@include transform(scaleX(-1));
+	@include filter(FlipH);
 }
 
 .mailbox {
@@ -43,9 +39,7 @@
 	}
 
 	.panel {
-		-moz-box-shadow: none;
-		-webkit-box-shadow: none;
-		box-shadow: none;
+		@include box-shadow(none);
 
 		.list-group {
 			margin-bottom: 0;

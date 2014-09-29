@@ -13,7 +13,7 @@ input.switch:empty ~ label {
 }
 
 input.switch:empty:focus ~ label:before {
-	box-shadow: 0 0 3px blue;
+	@include box-shadow(0 0 3px blue);
 }
 
 input.switch:empty ~ label:before,
@@ -26,7 +26,9 @@ input.switch:empty ~ label:after {
 	content: ' ';
 	width: 3.6em;
 	background-color: #c33;
-	border-radius: 0.2em;
+
+	@include border-radius(0.2em);
+
 	transition: all 100ms ease-in;
 }
 
@@ -36,7 +38,8 @@ input.switch:empty ~ label:after {
 	bottom: 0.2em;
 	margin-left: 0.2em;
 	background-color: #FFF;
-	border-radius: 0.15em;
+
+	@include border-radius(0.15em);
 }
 
 input.edit.switch:empty ~ label:after {
@@ -47,7 +50,7 @@ input.edit.switch:empty ~ label:after {
   line-height: 1.5;
   font-size: 12px;
   width: 1.4em;
-  border-radius: 0.25em;
+  @include border-radius(0.25em);
 }
 
 input.edit.switch:checked ~ label:after {
