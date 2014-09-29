@@ -4581,8 +4581,8 @@ button.close {
 
 /* Removes Box Shadows */
 .no-shadow {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none; }
 
 /* Removes Borders */
@@ -4591,26 +4591,26 @@ button.close {
 
 /* -------- Removes Rounded Borders -------- */
 .square-borders, .square-borders code, .square-borders pre, .square-borders .alert, .square-borders .btn, .square-borders .btn-lg, .square-borders .btn-group-lg > .btn, .btn-group-lg > .square-borders .btn, .square-borders .btn-sm, .square-borders .btn-group-sm > .btn, .btn-group-sm > .square-borders .btn, .square-borders .btn-xs, .square-borders .btn-group-xs > .btn, .btn-group-xs > .square-borders .btn, .square-borders .container .jumbotron, .square-borders .dropdown-menu, .square-borders .form-control, .square-borders .input-group-addon, .square-borders .input-lg, .square-borders .form-horizontal .form-group-lg .form-control, .form-horizontal .form-group-lg .square-borders .form-control, .square-borders .input-group-lg > .form-control, .input-group-lg > .square-borders .form-control, .square-borders .input-group-lg > .input-group-addon, .input-group-lg > .square-borders .input-group-addon, .square-borders .input-group-lg > .input-group-btn > .btn, .input-group-lg > .input-group-btn > .square-borders .btn, .square-borders .input-sm, .square-borders .form-horizontal .form-group-sm .form-control, .form-horizontal .form-group-sm .square-borders .form-control, .square-borders .input-group-sm > .form-control, .input-group-sm > .square-borders .form-control, .square-borders .input-group-sm > .input-group-addon, .input-group-sm > .square-borders .input-group-addon, .square-borders .input-group-sm > .input-group-btn > .btn, .input-group-sm > .input-group-btn > .square-borders .btn, .square-borders .nav-pills > li > a, .square-borders .nav-tabs > li > a, .square-borders .navbar-toggle, .square-borders .panel, .square-borders .progress, .square-borders .thumbnail, .square-borders .well-lg, .square-borders .well-sm {
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0; }
 .square-borders .btn-group-vertical > .btn:first-child:not(:last-child) {
-  -moz-border-top-right-radius: 0;
   -webkit-border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
   border-top-right-radius: 0; }
 .square-borders .list-group-item:first-child, .square-borders .panel .panel-heading:first-child {
-  -moz-border-top-left-radius: 0;
   -webkit-border-top-left-radius: 0;
+  -moz-border-top-left-radius: 0;
   border-top-left-radius: 0;
-  -moz-border-top-right-radius: 0;
   -webkit-border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
   border-top-right-radius: 0; }
 .square-borders .list-group-item:last-child, .square-borders .panel .panel-footer {
-  -moz-border-bottom-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
+  -moz-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
-  -moz-border-bottom-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0; }
 
 .inline-scroller {
@@ -4761,8 +4761,8 @@ button.close {
     .box.panel > .list-group .list-group-item {
       border-width: 1px; }
     .box.panel > .list-group .list-group-item:last-child {
-      -moz-border-radius: 0 0 4px 4px;
       -webkit-border-radius: 0 0 4px 4px;
+      -moz-border-radius: 0 0 4px 4px;
       border-radius: 0 0 4px 4px; }
   .box.panel > .panel-heading {
     margin: 0 -15px 15px; }
@@ -4771,8 +4771,8 @@ button.close {
     margin-bottom: 15px; }
   .box.panel .panel-heading + .list-group .list-group-item:first-child {
     border-top-width: 1px;
-    -moz-border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0; }
 
 /* -------- Featured Panels -------- */
@@ -4797,8 +4797,8 @@ button.close {
 
 .featured-panel.panel {
   background-color: transparent;
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
   overflow: hidden; }
   .featured-panel.panel.featured-panel-4060 .panel-body .left, .featured-panel.panel.featured-panel-4060 .panel-body .right, .featured-panel.panel.featured-panel-6040 .panel-body .left, .featured-panel.panel.featured-panel-6040 .panel-body .right {
@@ -4868,11 +4868,11 @@ button.close {
 .panel .panel-heading, .panel .panel-body, .panel .panel-footer {
   position: relative; }
 .panel .panel-heading:first-child {
-  -moz-border-top-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
+  -moz-border-top-left-radius: 3px;
   border-top-left-radius: 3px;
-  -moz-border-top-right-radius: 3px;
   -webkit-border-top-right-radius: 3px;
+  -moz-border-top-right-radius: 3px;
   border-top-right-radius: 3px; }
 
 .panel-thumbnail .panel-heading {
@@ -4906,8 +4906,8 @@ button.close {
 
 /* -------- Thumbnails ------- */
 .drop-shadow .thumbnail, .drop-shadow.thumbnail {
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
 
 .no-borders .thumbnail, .thumbnail.no-borders {
@@ -5090,8 +5090,8 @@ button.close {
 
 .disc {
   background-color: #eeeeee;
-  -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
   border-radius: 20px;
   display: inline-block;
   height: 10px;
@@ -5235,12 +5235,13 @@ button.close {
     display: inline-block; }
 
 .flip-horizontal {
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
   transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH"; }
+  -webkit-filter: FlipH;
+  filter: FlipH; }
 
 .mailbox .compose-button {
   margin-bottom: 10px; }
@@ -5251,8 +5252,8 @@ button.close {
   .mailbox .form-reply.form-horizontal .control-label {
     text-align: left; }
 .mailbox .panel {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none; }
   .mailbox .panel .list-group {
     margin-bottom: 0; }
@@ -5478,6 +5479,8 @@ input.switch:empty ~ label {
   user-select: none; }
 
 input.switch:empty:focus ~ label:before {
+  -webkit-box-shadow: 0 0 3px blue;
+  -moz-box-shadow: 0 0 3px blue;
   box-shadow: 0 0 3px blue; }
 
 input.switch:empty ~ label:before, input.switch:empty ~ label:after {
@@ -5489,6 +5492,8 @@ input.switch:empty ~ label:before, input.switch:empty ~ label:after {
   content: ' ';
   width: 3.6em;
   background-color: #c33;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   transition: all 100ms ease-in; }
 
@@ -5498,6 +5503,8 @@ input.switch:empty ~ label:after {
   bottom: 0.2em;
   margin-left: 0.2em;
   background-color: #FFF;
+  -webkit-border-radius: 0.15em;
+  -moz-border-radius: 0.15em;
   border-radius: 0.15em; }
 
 input.edit.switch:empty ~ label:after {
@@ -5508,6 +5515,8 @@ input.edit.switch:empty ~ label:after {
   line-height: 1.5;
   font-size: 12px;
   width: 1.4em;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
   border-radius: 0.25em; }
 
 input.edit.switch:checked ~ label:after {
