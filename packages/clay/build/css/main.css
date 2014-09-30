@@ -6042,6 +6042,27 @@ header.row {
 .timeline-avatar {
   width: 36px; }
 
+/* Typography */
+#typography > div {
+  margin-bottom: 40px; }
+
+.color-palette .color-swatches:before, .color-palette .color-swatches:after {
+  content: " ";
+  display: table; }
+.color-palette .color-swatches:after {
+  clear: both; }
+.color-palette .color-swatch {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #FFF;
+  float: left;
+  margin-right: 5px;
+  padding: 22px 2px;
+  text-align: center;
+  vertical-align: middle; }
+
+/* Media Queries */
 @media (min-width: 480px) {
   .glyphicons li {
     width: 25%; } }
@@ -6066,5 +6087,8 @@ header.row {
     width: 70px; } }
 
 @media (min-width: 1024px) {
+  /* Typography */
   #wrapper {
-    overflow-x: visible; } }
+    overflow-x: visible; }
+  .color-palette .color-swatch {
+    padding: 40px 20px; } }
