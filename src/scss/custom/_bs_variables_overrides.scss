@@ -70,12 +70,14 @@ $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-link-disabled-color:        #FFF !default;
 
+$line-height-base:        1.4286 !default;
+
 //== Forms
 $input-bg:                       #FFF !default;
 $input-bg-disabled:              #EAEEF1 !default;
 $input-color:                    #E0E5EB !default;
 $input-border:                   #D7DCE2 !default;
-$input-border-radius:            $border-radius-base !default;
+$input-border-radius:            0 !default;
 $input-border-focus:             $brand-default !default;
 $input-color-placeholder:        #B1B4BB !default;
 $legend-color:                   $gray-dark !default;
