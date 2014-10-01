@@ -34,9 +34,10 @@ $font-family-base: $font-family-sans-serif !default;
 $link-hover-color:      $brand-primary-hover !default;
 
 //== Border Radius
-$border-radius-base:        0 !default;
-$border-radius-large:       0 !default;
-$border-radius-small:       0 !default;
+$border-radius-default: 0 !default;
+$border-radius-base: $border-radius-default !default;
+$border-radius-large: $border-radius-default * 1.5 !default;
+$border-radius-small: $border-radius-default * 0.75 !default;
 
 //== Box Shadows
 $dropdown-box-shadow: -10px 10px 0px 0px #E0E5EB !default;
@@ -77,7 +78,6 @@ $input-bg:                       #FFF !default;
 $input-bg-disabled:              #EAEEF1 !default;
 $input-color:                    #E0E5EB !default;
 $input-border:                   #D7DCE2 !default;
-$input-border-radius:            0 !default;
 $input-border-focus:             $brand-default !default;
 $input-color-placeholder:        #B1B4BB !default;
 $legend-color:                   $gray-dark !default;
