@@ -28,10 +28,12 @@ $icon-font-path: "../fonts/";
 	src: url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
 }
 
-@import "custom/bootstrap_overrides.scss";
+@import "custom/bs_variables_overrides";
 @import "custom/bourbon_mixins";
 
 @import "bootstrap";
+
+@import "custom/bs_css_overrides";
 
 // convert helpers to mixins?
 @import "helpers";

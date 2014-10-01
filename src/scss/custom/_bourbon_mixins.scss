@@ -1,4 +1,5 @@
 @import "bourbon";
+@import "../bootstrap/mixins/vendor-prefixes";
 
 @mixin border-radius($radius) {
 	@include prefixer(border-radius, $radius, webkit moz spec);
@@ -18,8 +19,4 @@
 
 @mixin border-top-right-radius($radius) {
 	@include prefixer(border-top-right-radius, $radius, webkit moz spec);
-}
-
-@mixin box-shadow($shadow) {
-	@include prefixer(box-shadow, $shadow, webkit moz spec);
 }

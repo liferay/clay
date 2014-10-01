@@ -16,13 +16,13 @@
 .dropdown-menu {
 	.inline-scroller {
 		li a {
-			color: #333;
+			color: $dropdown-link-color;
 			display: block;
 			padding: 3px 20px;
 
 			&:focus, &:hover {
-				background-color: #F5F5F5;
-				color: #262626;
+				background-color: $brand-primary;
+				color: $dropdown-link-hover-color;
 				text-decoration: none;
 			}
 		}
@@ -49,11 +49,13 @@
 		padding-top: 3px;
 
 		a {
-			color: #333;
+			color: $dropdown-link-color;
+			display: block;
 			padding: 3px;
 
 			&:focus, &:hover {
-				background-color: #F5F5F5;
+				background-color: $brand-primary;
+				color: $dropdown-link-hover-color;
 				text-decoration: none;
 			}
 		}
