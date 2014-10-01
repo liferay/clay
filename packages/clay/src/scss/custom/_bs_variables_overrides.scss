@@ -1,32 +1,38 @@
+$body-bg:               #FFF !default;
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
 $gray-dark:              lighten(#000, 33.5%) !default; // #555
 $gray:                   #E0E5EB !default;
 $gray-light:             #EDF0F5 !default;
 $gray-lighter:           #F8F9FB !default;
 
-$brand-default:         #2C4259 !default;
-$brand-default-hover:   #426384 !default;
 $brand-default-active:  #18293D !default;
-$brand-primary:         #32A8E6 !default;
-$brand-primary-hover:   #68C3F2 !default;
-$brand-primary-active:  #037FBF !default;
-$brand-success:         #42BFAD !default;
-$brand-success-hover:   #399E8E !default;
-$brand-success-active:  #33766C !default;
-$brand-info:            #1E5EC8 !default;
-$brand-info-hover:      #1A53AD !default;
-$brand-info-active:     #17438C !default;
-$brand-warning:         #EE664C !default;
-$brand-warning-hover:   #DB5135 !default;
-$brand-warning-active:  #C04229 !default;
-$brand-danger:          #E9295A !default;
-$brand-danger-hover:    #CE1747 !default;
-$brand-danger-active:   #B3173F !default;
+$brand-default-hover:   #426384 !default;
+$brand-default:         #2C4259 !default;
 
-//** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:    #FFF !default;
+$brand-primary-active:  #037FBF !default;
+$brand-primary-hover:   #68C3F2 !default;
+$brand-primary:         #32A8E6 !default;
+
+$brand-success-active:  #33766C !default;
+$brand-success-hover:   #399E8E !default;
+$brand-success:         #42BFAD !default;
+
+$brand-info-active:     #17438C !default;
+$brand-info-hover:      #1A53AD !default;
+$brand-info:            #1E5EC8 !default;
+
+$brand-warning-active:  #C04229 !default;
+$brand-warning-hover:   #DB5135 !default;
+$brand-warning:         #EE664C !default;
+
+$brand-danger-active:   #B3173F !default;
+$brand-danger-hover:    #CE1747 !default;
+$brand-danger:          #E9295A !default;
+
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #FFF !default;
 
 $font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-base: $font-family-sans-serif !default;
@@ -39,95 +45,167 @@ $border-radius-base: $border-radius-default !default;
 $border-radius-large: $border-radius-default * 1.5 !default;
 $border-radius-small: $border-radius-default * 0.75 !default;
 
+$pagination-border-radius: 20px;
+
 //== Box Shadows
 $dropdown-box-shadow: -10px 10px 0px 0px #E0E5EB !default;
 $form-control-box-shadow: none !default;
 $form-control-focus-box-shadow: none !default;
 
 //== Buttons
-$btn-default-color:              #FFF !default;
 $btn-default-bg:                 $brand-default !default;
 $btn-default-border:             darken($btn-default-bg, 5%) !default;
+$btn-default-color:              #FFF !default;
 
-$btn-primary-color:              #FFF !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-color:              #FFF !default;
 
-$btn-success-color:              #FFF !default;
 $btn-success-bg:                 $brand-success !default;
 $btn-success-border:             darken($btn-success-bg, 5%) !default;
+$btn-success-color:              #FFF !default;
 
-$btn-info-color:                 #FFF !default;
 $btn-info-bg:                    $brand-info !default;
 $btn-info-border:                darken($btn-info-bg, 5%) !default;
+$btn-info-color:                 #FFF !default;
 
-$btn-warning-color:              #FFF !default;
 $btn-warning-bg:                 $brand-warning !default;
 $btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+$btn-warning-color:              #FFF !default;
 
-$btn-danger-color:               #FFF !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+$btn-danger-color:               #FFF !default;
 
 $btn-link-disabled-color:        #FFF !default;
 
 $line-height-base:        1.4286 !default;
 
 //== Forms
-$input-bg:                       #FFF !default;
 $input-bg-disabled:              #EAEEF1 !default;
-$input-color:                    #E0E5EB !default;
-$input-border:                   #D7DCE2 !default;
+$input-bg:                       #FFF !default;
 $input-border-focus:             $brand-default !default;
+$input-border:                   #D7DCE2 !default;
 $input-color-placeholder:        #B1B4BB !default;
+$input-color:                    #E0E5EB !default;
+
 $legend-color:                   $gray-dark !default;
 $legend-border-color:            #D7DCE2 !default;
+
 $input-group-addon-bg:           $brand-default !default;
 $input-group-addon-border-color: $input-group-addon-bg !default;
 
 //== Dropdowns
 $dropdown-bg:                    #EDF0F5 !default;
 $dropdown-border:                #EDF0F5 !default;
+
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border:       #EDF0F5 !default;
+
 $dropdown-divider-bg:            #F8F9FB !default;
+
 $dropdown-link-color:            $brand-default !default;
-$dropdown-link-hover-color:      #FFF !default;
 $dropdown-link-hover-bg:         $brand-primary !default;
-$dropdown-link-active-color:     $component-active-color !default;
+$dropdown-link-hover-color:      #FFF !default;
+
 $dropdown-link-active-bg:        $component-active-bg !default;
+$dropdown-link-active-color:     $component-active-color !default;
+
 $dropdown-link-disabled-color:   #CACDD2 !default;
+
 $dropdown-header-color:          #828F98 !default;
 
 //== Navbar Default
-$navbar-default-color:             $brand-default !default;
 $navbar-default-bg:                #EDF0F5 !default;
 $navbar-default-border:            #EDF0F5 !default;
+$navbar-default-color:             $brand-default !default;
+
 $navbar-default-link-color:                $brand-default !default;
-$navbar-default-link-hover-color:          $brand-primary !default;
 $navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #FFF !default;
+$navbar-default-link-hover-color:          $brand-primary !default;
+
 $navbar-default-link-active-bg:            #32A8E6 !default;
-$navbar-default-link-disabled-color:       #CACDD2 !default;
+$navbar-default-link-active-color:         #FFF !default;
+
 $navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-disabled-color:       #CACDD2 !default;
+
 $navbar-default-brand-color:               $navbar-default-link-color !default;
-$navbar-default-brand-hover-color:         $navbar-default-link-hover-color !default;
 $navbar-default-brand-hover-bg:            transparent !default;
+$navbar-default-brand-hover-color:         $navbar-default-link-hover-color !default;
 
 //== Navbar Inverse
-$navbar-inverse-color:                      #FFF !default;
 $navbar-inverse-bg:                         $brand-default !default;
 $navbar-inverse-border:                     $brand-default !default;
+$navbar-inverse-color:                      #FFF !default;
+
 $navbar-inverse-link-color:                 #FFF !default;
-$navbar-inverse-link-hover-color:           $brand-primary !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
-$navbar-inverse-link-active-color:          #FFF !default;
+$navbar-inverse-link-hover-color:           $brand-primary !default;
+
 $navbar-inverse-link-active-bg:             $brand-primary !default;
-$navbar-inverse-link-disabled-color:        #122F51 !default;
+$navbar-inverse-link-active-color:          #FFF !default;
+
 $navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-link-disabled-color:        #122F51 !default;
+
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-color:          $brand-primary !default;
 $navbar-inverse-brand-hover-bg:             transparent !default;
+$navbar-inverse-brand-hover-color:          $brand-primary !default;
+
+$navbar-inverse-toggle-border-color:        #18293D !default;
 $navbar-inverse-toggle-hover-bg:            #426384 !default;
 $navbar-inverse-toggle-icon-bar-bg:         #FFF !default;
-$navbar-inverse-toggle-border-color:        #18293D !default;
+
+//== Pagination
+$pagination-controls-bg-color: #D2D2D2 !default;
+$pagination-controls-color: #FFF !default;
+
+$pagination-padding-base-vertical: 4px!default;
+$pagination-padding-base-horizontal: 20px !default;
+$pagination-padding-large-vertical: $pagination-padding-base-vertical * 1.25 !default;
+$pagination-padding-large-horizontal: $pagination-padding-base-horizontal * 1.25 !default;
+$pagination-padding-small-vertical: $pagination-padding-base-vertical * 0.75 !default;
+$pagination-padding-small-horizontal: $pagination-padding-base-horizontal * 0.75 !default;
+
+$pagination-border:                    $brand-default !default;
+$pagination-color:                     $brand-default !default;
+
+$pagination-hover-bg:                  $brand-primary !default;
+$pagination-hover-border:              $brand-default !default;
+$pagination-hover-color:               #FFF !default;
+
+$pagination-active-bg:                 #FFF !default;
+$pagination-active-border:             $brand-default !default;
+$pagination-active-color:              $brand-primary !default;
+
+$pagination-disabled-border:           $brand-default !default;
+$pagination-disabled-color:            #D2D2D2 !default;
+
+//Pagination Inverse
+$pagination-inverse-bg: $brand-default !default;
+$pagination-inverse-border: $brand-default !default;
+$pagination-inverse-color: #FFF !default;
+
+$pagination-inverse-active-bg: $brand-default !default;
+$pagination-inverse-active-border: $brand-default !default;
+$pagination-inverse-active-color: $brand-primary !default;
+
+$pagination-inverse-disabled-bg: $brand-default !default;
+$pagination-inverse-disabled-border: $brand-default !default;
+$pagination-inverse-disabled-color: #D2D2D2 !default;
+
+//Pager
+$pager-bg:                             #FFF !default;
+$pager-border:                         #D2D6DF !default;
+$pager-border-radius:                  20px !default;
+$pager-color: $brand-default !default;
+
+$pager-hover-bg:                       $pagination-hover-bg !default;
+$pager-hover-border: $brand-primary !default;
+$pager-hover-color: #FFF !default;
+
+$pager-active-bg:                      $pagination-active-bg !default;
+$pager-active-color:                   $pagination-active-color !default;
+
+$pager-disabled-color:                 $pagination-disabled-color !default;
