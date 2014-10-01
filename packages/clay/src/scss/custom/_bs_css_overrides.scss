@@ -1,0 +1,13 @@
+.dropdown-menu {
+	@include box-shadow($dropdown-box-shadow);
+}
+
+.form-control {
+	@include box-shadow($form-control-box-shadow);
+
+	&:focus {
+		border-width: 2px;
+
+		@include box-shadow($form-control-focus-box-shadow);
+	}
+}

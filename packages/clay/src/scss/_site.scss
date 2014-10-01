@@ -6,10 +6,6 @@ body {
 	font-family: $font-family-sans-serif;
 }
 
-a {
-	color: #0058BA;
-}
-
 header.row {
 	margin: 0;
 }
@@ -140,7 +136,6 @@ header.row {
 		> a {
 			&:hover, &:focus {
 				background-color: transparent;
-				color: #009AE5;
 				text-decoration: underline;
 			}
 		}
@@ -152,7 +147,7 @@ header.row {
 		}
 
 		&.active > a {
-			color: #555;
+			color: $brand-primary-active;
 		}
 	}
 
@@ -542,10 +537,9 @@ header.row {
 
 		color: #FFF;
 		float: left;
+		font-size: 11px;
 		margin-right: 5px;
 		padding: 22px 2px;
-		text-align: center;
-		vertical-align: middle;
 	}
 }
 

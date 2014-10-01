@@ -1,0 +1,131 @@
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              lighten(#000, 33.5%) !default; // #555
+$gray:                   #E0E5EB !default;
+$gray-light:             #EDF0F5 !default;
+$gray-lighter:           #F8F9FB !default;
+
+$brand-default:         #2C4259 !default;
+$brand-default-hover:   #426384 !default;
+$brand-default-active:  #18293D !default;
+$brand-primary:         #32A8E6 !default;
+$brand-primary-hover:   #68C3F2 !default;
+$brand-primary-active:  #037FBF !default;
+$brand-success:         #42BFAD !default;
+$brand-success-hover:   #399E8E !default;
+$brand-success-active:  #33766C !default;
+$brand-info:            #1E5EC8 !default;
+$brand-info-hover:      #1A53AD !default;
+$brand-info-active:     #17438C !default;
+$brand-warning:         #EE664C !default;
+$brand-warning-hover:   #DB5135 !default;
+$brand-warning-active:  #C04229 !default;
+$brand-danger:          #E9295A !default;
+$brand-danger-hover:    #CE1747 !default;
+$brand-danger-active:   #B3173F !default;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #FFF !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-primary !default;
+
+$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$link-hover-color:      $brand-primary-hover !default;
+
+//== Border Radius
+$border-radius-base:        0 !default;
+$border-radius-large:       0 !default;
+$border-radius-small:       0 !default;
+
+//== Box Shadows
+$dropdown-box-shadow: -10px 10px 0px 0px #E0E5EB !default;
+$form-control-box-shadow: none !default;
+$form-control-focus-box-shadow: none !default;
+
+//== Buttons
+$btn-default-color:              #FFF !default;
+$btn-default-bg:                 $brand-default !default;
+$btn-default-border:             darken($btn-default-bg, 5%) !default;
+
+$btn-primary-color:              #FFF !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+
+$btn-success-color:              #FFF !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 5%) !default;
+
+$btn-info-color:                 #FFF !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 5%) !default;
+
+$btn-warning-color:              #FFF !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+
+$btn-danger-color:               #FFF !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+
+$btn-link-disabled-color:        #FFF !default;
+
+//== Forms
+$input-bg:                       #FFF !default;
+$input-bg-disabled:              #EAEEF1 !default;
+$input-color:                    #E0E5EB !default;
+$input-border:                   #D7DCE2 !default;
+$input-border-radius:            $border-radius-base !default;
+$input-border-focus:             $brand-default !default;
+$input-color-placeholder:        #B1B4BB !default;
+$legend-color:                   $gray-dark !default;
+$legend-border-color:            #D7DCE2 !default;
+$input-group-addon-bg:           $brand-default !default;
+$input-group-addon-border-color: $input-group-addon-bg !default;
+
+//== Dropdowns
+$dropdown-bg:                    #EDF0F5 !default;
+$dropdown-border:                #EDF0F5 !default;
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border:       #EDF0F5 !default;
+$dropdown-divider-bg:            #F8F9FB !default;
+$dropdown-link-color:            $brand-default !default;
+$dropdown-link-hover-color:      #FFF !default;
+$dropdown-link-hover-bg:         $brand-primary !default;
+$dropdown-link-active-color:     $component-active-color !default;
+$dropdown-link-active-bg:        $component-active-bg !default;
+$dropdown-link-disabled-color:   #CACDD2 !default;
+$dropdown-header-color:          #828F98 !default;
+
+//== Navbar Default
+$navbar-default-color:             $brand-default !default;
+$navbar-default-bg:                #EDF0F5 !default;
+$navbar-default-border:            #EDF0F5 !default;
+$navbar-default-link-color:                $brand-default !default;
+$navbar-default-link-hover-color:          $brand-primary !default;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         #FFF !default;
+$navbar-default-link-active-bg:            #32A8E6 !default;
+$navbar-default-link-disabled-color:       #CACDD2 !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         $navbar-default-link-hover-color !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+
+//== Navbar Inverse
+$navbar-inverse-color:                      #FFF !default;
+$navbar-inverse-bg:                         $brand-default !default;
+$navbar-inverse-border:                     $brand-default !default;
+$navbar-inverse-link-color:                 #FFF !default;
+$navbar-inverse-link-hover-color:           $brand-primary !default;
+$navbar-inverse-link-hover-bg:              transparent !default;
+$navbar-inverse-link-active-color:          #FFF !default;
+$navbar-inverse-link-active-bg:             $brand-primary !default;
+$navbar-inverse-link-disabled-color:        #122F51 !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
+$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:          $brand-primary !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
+$navbar-inverse-toggle-hover-bg:            #426384 !default;
+$navbar-inverse-toggle-icon-bar-bg:         #FFF !default;
+$navbar-inverse-toggle-border-color:        #18293D !default;
