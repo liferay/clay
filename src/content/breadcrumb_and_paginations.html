@@ -209,10 +209,25 @@ section: Components
 		<div class="box panel panel-default">
 			<h4 class="panel-heading">Default Pagers</h4>
 
+			<div>.pager</div>
 			<ul class="pager">
-				<li class="previous"><a href="#">Previous</a></li>
+				<li><a href="#">Previous</a></li>
 
-				<li class="next"><a href="#">Next</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>
+
+			<div>.pager .pager-inverse</div>
+			<ul class="pager pager-inverse">
+				<li><a href="#">Previous</a></li>
+
+				<li><a href="#">Next</a></li>
+			</ul>
+
+			<div>.pager .pager-borderless</div>
+			<ul class="pager pager-borderless1">
+				<li><a href="#">&larr; Previous</a></li>
+
+				<li><a href="#">Next &rarr;</a></li>
 			</ul>
 
 			<pre><code>```<ul class="pager">
@@ -226,7 +241,22 @@ section: Components
 		<div class="box panel panel-default">
 			<h4 class="panel-heading">Aligned Pager</h4>
 
+			<div>.pager</div>
 			<ul class="pager">
+				<li class="previous"><a href="#">&larr; Older</a></li>
+
+				<li class="next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-inverse</div>
+			<ul class="pager pager-inverse">
+				<li class="previous"><a href="#">&larr; Older</a></li>
+
+				<li class="next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-borderless1</div>
+			<ul class="pager pager-borderless1">
 				<li class="previous"><a href="#">&larr; Older</a></li>
 
 				<li class="next"><a href="#">Newer &rarr;</a></li>
@@ -243,7 +273,20 @@ section: Components
 		<div class="box panel panel-default">
 			<h4 class="panel-heading">Disabled Pager</h4>
 
+			<div>.pager</div>
 			<ul class="pager">
+				<li class="disabled previous"><a href="#">&larr; Older</a></li>
+				<li class="active next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-inverse</div>
+			<ul class="pager pager-inverse">
+				<li class="disabled previous"><a href="#">&larr; Older</a></li>
+				<li class="active next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-borderless1</div>
+			<ul class="pager pager-borderless1">
 				<li class="disabled previous"><a href="#">&larr; Older</a></li>
 				<li class="active next"><a href="#">Newer &rarr;</a></li>
 			</ul>
