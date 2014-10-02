@@ -45,11 +45,6 @@ $border-radius-base:                       $border-radius-default !default;
 $border-radius-large:                      $border-radius-default * 1.5 !default;
 $border-radius-small:                      $border-radius-default * 0.75 !default;
 
-//== Box Shadows
-$dropdown-box-shadow: -10px 10px 0px 0px #E0E5EB !default;
-$form-control-box-shadow: none !default;
-$form-control-focus-box-shadow: none !default;
-
 //== Buttons
 $btn-default-color:                        #FFF !default;
 $btn-default-bg:                           $brand-default !default;
@@ -76,6 +71,8 @@ $btn-link-disabled-color:                  #FFF !default;
 $line-height-base:                         1.4286 !default;
 
 //== Forms
+$form-control-box-shadow: none !default;
+$form-control-focus-box-shadow: none !default;
 $input-bg:                                 #FFF !default;
 $input-bg-disabled:                        #EAEEF1 !default;
 $input-color:                              #E0E5EB !default;
@@ -95,6 +92,7 @@ $input-success: $brand-success !default;
 $input-warning: $brand-warning !default;
 
 //== Dropdowns
+$dropdown-box-shadow: -10px 10px 0px 0px #E0E5EB !default;
 $dropdown-bg:                              #EDF0F5 !default;
 $dropdown-border:                          #EDF0F5 !default;
 //** Dropdown menu `border-color` **for IE8**.
@@ -276,3 +274,6 @@ $pager-borderless1-hover-border: $pager-borderless1-border !default;
 $pager-borderless1-disabled-bg: $pager-borderless1-bg !default;
 $pager-borderless1-disabled-color: $pagination-disabled-color !default;
 $pager-borderless1-disabled-border: $pager-borderless1-border !default;
+
+//Modals
+$modal-box-shadow: -10px 10px 0 #E0E5EB !default;
