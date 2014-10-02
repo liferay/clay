@@ -1,4 +1,4 @@
-// Pager pagination
+//Pager pagination
 .pager {
 	li {
 		> a,
@@ -7,7 +7,8 @@
 
 			@include border-radius($pager-border-radius);
 
-			border: 2px solid $pager-border;
+			border: 1px solid $pager-border;
+			border-width: $pager-border-width;
 			color: $pager-color;
 			padding: $pagination-padding-base-vertical $pagination-padding-base-horizontal;
 		}
@@ -25,9 +26,90 @@
 		> a:hover,
 		> a:focus,
 		> span {
+			background-color: $pager-disabled-bg;
+			border-color: $pager-disabled-border;
 			color: $pager-disabled-color;
-			background-color: $pager-bg;
-			border-color: $pager-border;
+		}
+	}
+}
+
+.pager-inverse {
+	li {
+		> a,
+		> span {
+			background-color: $pager-inverse-bg;
+
+			@include border-radius($pager-inverse-border-radius);
+
+			border: 1px solid $pager-inverse-border;
+			border-width: $pager-inverse-border-width;
+			color: $pager-inverse-color;
+			padding: $pagination-padding-base-vertical $pagination-padding-base-horizontal;
+		}
+
+		> a:hover,
+		> a:focus {
+			background-color: $pager-inverse-hover-bg;
+			border-color: $pager-inverse-hover-border;
+			color: $pager-inverse-hover-color;
+		}
+	}
+
+	.disabled {
+		> a,
+		> a:hover,
+		> a:focus,
+		> span {
+			background-color: $pager-inverse-disabled-bg;
+			border-color: $pager-inverse-disabled-border;
+			color: $pager-inverse-disabled-color;
+		}
+	}
+}
+
+.pager-borderless1 {
+	li {
+		> a,
+		> span {
+			background-color: $pager-borderless1-bg;
+
+			@include border-radius($pager-borderless1-border-radius);
+
+			border: 1px solid $pager-borderless1-border;
+			border-width: $pager-borderless1-border-width;
+			color: $pager-borderless1-color;
+			padding: $pagination-padding-base-vertical $pagination-padding-base-horizontal;
+		}
+
+		> a:hover,
+		> a:focus {
+			background-color: $pager-borderless1-hover-bg;
+			border-color: $pager-borderless1-hover-border;
+			color: $pager-borderless1-hover-color;
+		}
+
+		&.previous:first-child {
+			> a,
+			> span {
+				padding-left: 0;
+			}
+		}
+		&.next:last-child {
+			> a,
+			> span {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.disabled {
+		> a,
+		> a:hover,
+		> a:focus,
+		> span {
+			background-color: $pager-borderless1-disabled-bg;
+			border-color: $pager-borderless1-disabled-border;
+			color: $pager-borderless1-disabled-color;
 		}
 	}
 }

@@ -232,15 +232,45 @@ $pagination-borderless2-disabled-border: $pagination-borderless2-border !default
 
 //Pager
 $pager-bg:                                 #FFF !default;
+$pager-color: $brand-default !default;
 $pager-border:                             #D2D6DF !default;
 $pager-border-radius:                      20px !default;
-$pager-color: $brand-default !default;
+$pager-border-width: 2px !default;
 
 $pager-hover-bg:                           $pagination-hover-bg !default;
 $pager-hover-color: #FFF !default;
 $pager-hover-border: $brand-primary !default;
 
-$pager-active-bg:                          $pagination-active-bg !default;
-$pager-active-color:                       $pagination-active-color !default;
-
+$pager-disabled-bg: #FFF !default;
 $pager-disabled-color:                     $pagination-disabled-color !default;
+$pager-disabled-border: $pager-border !default;
+
+//Pager Inverse
+$pager-inverse-bg: #D2D6DF !default;
+$pager-inverse-color: #FFF !default;
+$pager-inverse-border: #D2D6DF !default;
+$pager-inverse-border-radius: 20px !default;
+$pager-inverse-border-width: 2px !default;
+
+$pager-inverse-hover-bg: $brand-primary !default;
+$pager-inverse-hover-color: #FFF !default;
+$pager-inverse-hover-border: $pager-inverse-hover-bg !default;
+
+$pager-inverse-disabled-bg: #EEE !default;
+$pager-inverse-disabled-color: $pagination-disabled-color !default;
+$pager-inverse-disabled-border: $pager-disabled-bg !default;
+
+//Pager Borderless1
+$pager-borderless1-bg: transparent !default;
+$pager-borderless1-color: $brand-primary !default;
+$pager-borderless1-border: transparent !default;
+$pager-borderless1-border-radius: 0 !default;
+$pager-borderless1-border-width: 0 !default;
+
+$pager-borderless1-hover-bg: $pager-borderless1-bg !default;
+$pager-borderless1-hover-color: #D2D6DF !default;
+$pager-borderless1-hover-border: $pager-borderless1-border !default;
+
+$pager-borderless1-disabled-bg: $pager-borderless1-bg !default;
+$pager-borderless1-disabled-color: $pagination-disabled-color !default;
+$pager-borderless1-disabled-border: $pager-borderless1-border !default;
