@@ -4636,6 +4636,57 @@ textarea.input-sm:focus, .form-horizontal .form-group-sm textarea.form-control:f
 .input-sm:focus, .form-horizontal .form-group-sm .form-control:focus, .input-group-sm > .form-control:focus, .input-group-sm > .input-group-addon:focus, .input-group-sm > .input-group-btn > .btn:focus {
   padding: 5px 9px; }
 
+.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, .has-success .radio, .has-success .radio-inline {
+  color: #42BFAD; }
+.has-success .form-control {
+  border-color: #42BFAD;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .has-success .form-control:focus {
+    border-color: #349a8b;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+.has-success .form-control-feedback {
+  color: #42BFAD; }
+.has-success .input-group-addon {
+  background-color: #42BFAD;
+  border-color: #42BFAD;
+  color: #42BFAD; }
+
+.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline {
+  color: #EE664C; }
+.has-warning .form-control {
+  border-color: #EE664C;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .has-warning .form-control:focus {
+    border-color: #ea3c1d;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+.has-warning .form-control-feedback {
+  color: #EE664C; }
+.has-warning .input-group-addon {
+  background-color: #EE664C;
+  border-color: #EE664C;
+  color: #EE664C; }
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline {
+  color: #E9295A; }
+.has-error .form-control {
+  border-color: #E9295A;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .has-error .form-control:focus {
+    border-color: #ca1545;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+.has-error .form-control-feedback {
+  color: #E9295A; }
+.has-error .input-group-addon {
+  background-color: #E9295A;
+  border-color: #E9295A;
+  color: #E9295A; }
+
 .pager li > a, .pager li > span {
   background-color: #FFF;
   -webkit-border-radius: 20px;
