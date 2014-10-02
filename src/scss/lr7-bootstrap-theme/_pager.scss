@@ -1,0 +1,33 @@
+// Pager pagination
+.pager {
+	li {
+		> a,
+		> span {
+			background-color: $pager-bg;
+
+			@include border-radius($pager-border-radius);
+
+			border: 2px solid $pager-border;
+			color: $pager-color;
+			padding: $pagination-padding-base-vertical $pagination-padding-base-horizontal;
+		}
+
+		> a:hover,
+		> a:focus {
+			background-color: $pager-hover-bg;
+			border-color: $pager-hover-border;
+			color: $pager-hover-color;
+		}
+	}
+
+	.disabled {
+		> a,
+		> a:hover,
+		> a:focus,
+		> span {
+			color: $pager-disabled-color;
+			background-color: $pager-bg;
+			border-color: $pager-border;
+		}
+	}
+}

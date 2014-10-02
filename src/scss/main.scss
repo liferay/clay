@@ -28,12 +28,7 @@ $icon-font-path: "../fonts/";
 	src: url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
 }
 
-@import "custom/bs_variables_overrides";
-@import "custom/bourbon_mixins";
-
-@import "bootstrap";
-
-@import "custom/bs_css_overrides";
+@import "lr7-theme";
 
 // convert helpers to mixins?
 @import "helpers";
