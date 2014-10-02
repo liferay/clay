@@ -4641,7 +4641,8 @@ textarea.input-sm:focus, .form-horizontal .form-group-sm textarea.form-control:f
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  border: 2px solid #D2D6DF;
+  border: 1px solid #D2D6DF;
+  border-width: 2px;
   color: #2C4259;
   padding: 4px 20px; }
 .pager li > a:hover, .pager li > a:focus {
@@ -4649,9 +4650,49 @@ textarea.input-sm:focus, .form-horizontal .form-group-sm textarea.form-control:f
   border-color: #32A8E6;
   color: #FFF; }
 .pager .disabled > a, .pager .disabled > a:hover, .pager .disabled > a:focus, .pager .disabled > span {
-  color: #D2D2D2;
   background-color: #FFF;
-  border-color: #D2D6DF; }
+  border-color: #D2D6DF;
+  color: #D2D2D2; }
+
+.pager-inverse li > a, .pager-inverse li > span {
+  background-color: #D2D6DF;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #D2D6DF;
+  border-width: 2px;
+  color: #FFF;
+  padding: 4px 20px; }
+.pager-inverse li > a:hover, .pager-inverse li > a:focus {
+  background-color: #32A8E6;
+  border-color: #32A8E6;
+  color: #FFF; }
+.pager-inverse .disabled > a, .pager-inverse .disabled > a:hover, .pager-inverse .disabled > a:focus, .pager-inverse .disabled > span {
+  background-color: #EEE;
+  border-color: #FFF;
+  color: #D2D2D2; }
+
+.pager-borderless1 li > a, .pager-borderless1 li > span {
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid transparent;
+  border-width: 0;
+  color: #32A8E6;
+  padding: 4px 20px; }
+.pager-borderless1 li > a:hover, .pager-borderless1 li > a:focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #D2D6DF; }
+.pager-borderless1 li.previous:first-child > a, .pager-borderless1 li.previous:first-child > span {
+  padding-left: 0; }
+.pager-borderless1 li.next:last-child > a, .pager-borderless1 li.next:last-child > span {
+  padding-right: 0; }
+.pager-borderless1 .disabled > a, .pager-borderless1 .disabled > a:hover, .pager-borderless1 .disabled > a:focus, .pager-borderless1 .disabled > span {
+  background-color: transparent;
+  border-color: transparent;
+  color: #D2D2D2; }
 
 .pagination > li > a, .pagination > li > span {
   border: solid #2C4259;
