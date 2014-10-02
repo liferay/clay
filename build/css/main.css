@@ -4687,6 +4687,10 @@ textarea.input-sm:focus, .form-horizontal .form-group-sm textarea.form-control:f
   border-color: #E9295A;
   color: #E9295A; }
 
+.modal-content {
+  -webkit-box-shadow: -10px 10px 0 #E0E5EB;
+  box-shadow: -10px 10px 0 #E0E5EB; }
+
 .pager li > a, .pager li > span {
   background-color: #FFF;
   -webkit-border-radius: 20px;
