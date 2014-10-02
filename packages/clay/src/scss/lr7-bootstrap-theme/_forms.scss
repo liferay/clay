@@ -1,0 +1,48 @@
+//Forms
+select {
+	&.form-control:focus {
+		padding: $padding-base-vertical - 1 $padding-base-horizontal - 1;
+	}
+
+	&.input-lg:focus {
+		padding: $padding-large-vertical - 1 $padding-large-horizontal - 1;
+	}
+
+	&.input-sm:focus {
+		padding: $padding-small-vertical - 1 $padding-small-horizontal - 1;
+	}
+}
+
+textarea {
+	&.form-control:focus {
+		padding: $padding-base-vertical - 1 $padding-base-horizontal - 1;
+	}
+
+	&.input-lg:focus {
+		padding: $padding-large-vertical - 1 $padding-large-horizontal - 1;
+	}
+
+	&.input-sm:focus {
+		padding: $padding-small-vertical - 1 $padding-small-horizontal - 1;
+	}
+}
+
+.form-control {
+	@include box-shadow($form-control-box-shadow);
+
+	&:focus {
+		border-width: 2px;
+
+		@include box-shadow($form-control-focus-box-shadow);
+
+		padding: $padding-base-vertical $padding-base-horizontal - 1;
+	}
+}
+
+.input-lg:focus {
+	padding: $padding-large-vertical $padding-large-horizontal - 1;
+}
+
+.input-sm:focus {
+	padding: $padding-small-vertical $padding-small-horizontal - 1;
+}
