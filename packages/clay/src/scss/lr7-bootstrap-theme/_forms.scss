@@ -1,3 +1,36 @@
+@mixin form-control-validation($text-color: #555, $border-color: #ccc, $background-color: #f5f5f5) {
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline {
+		color: $text-color;
+	}
+
+	.form-control {
+		border-color: $border-color;
+
+		@include box-shadow($input-box-shadow);
+
+		&:focus {
+			border-color: darken($border-color, 10%);
+
+			@include box-shadow(none);
+		}
+	}
+
+	.form-control-feedback {
+		color: $text-color;
+	}
+
+	.input-group-addon {
+		background-color: $background-color;
+		border-color: $border-color;
+		color: $text-color;
+	}
+}
+
 //Forms
 select {
 	&.form-control:focus {
@@ -45,4 +78,16 @@ textarea {
 
 .input-sm:focus {
 	padding: $padding-small-vertical $padding-small-horizontal - 1;
+}
+
+.has-success {
+	@include form-control-validation($input-success, $input-success, $input-success);
+}
+
+.has-warning {
+	@include form-control-validation($input-warning, $input-warning, $input-warning);
+}
+
+.has-error {
+	@include form-control-validation($input-danger, $input-danger, $input-danger);
 }

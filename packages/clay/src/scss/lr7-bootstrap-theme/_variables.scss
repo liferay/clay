@@ -51,29 +51,25 @@ $form-control-box-shadow: none !default;
 $form-control-focus-box-shadow: none !default;
 
 //== Buttons
+$btn-default-color:                        #FFF !default;
 $btn-default-bg:                           $brand-default !default;
 $btn-default-border:                       darken($btn-default-bg, 5%) !default;
-$btn-default-color:                        #FFF !default;
+$btn-default-border-width: 0 !default;
 
-$btn-primary-bg:                           $brand-primary !default;
-$btn-primary-border:                       darken($btn-primary-bg, 5%) !default;
 $btn-primary-color:                        #FFF !default;
+$btn-primary-bg:                           $brand-primary !default;
 
-$btn-success-bg:                           $brand-success !default;
-$btn-success-border:                       darken($btn-success-bg, 5%) !default;
 $btn-success-color:                        #FFF !default;
+$btn-success-bg:                           $brand-success !default;
 
-$btn-info-bg:                              $brand-info !default;
-$btn-info-border:                          darken($btn-info-bg, 5%) !default;
 $btn-info-color:                           #FFF !default;
+$btn-info-bg:                              $brand-info !default;
 
-$btn-warning-bg:                           $brand-warning !default;
-$btn-warning-border:                       darken($btn-warning-bg, 5%) !default;
 $btn-warning-color:                        #FFF !default;
+$btn-warning-bg:                           $brand-warning !default;
 
-$btn-danger-bg:                            $brand-danger !default;
-$btn-danger-border:                        darken($btn-danger-bg, 5%) !default;
 $btn-danger-color:                         #FFF !default;
+$btn-danger-bg:                            $brand-danger !default;
 
 $btn-link-disabled-color:                  #FFF !default;
 
@@ -91,6 +87,12 @@ $legend-border-color:                      #D7DCE2 !default;
 
 $input-group-addon-bg:                     $brand-default !default;
 $input-group-addon-border-color:           $input-group-addon-bg !default;
+
+$input-box-shadow: none !default;
+
+$input-danger: $brand-danger !default;
+$input-success: $brand-success !default;
+$input-warning: $brand-warning !default;
 
 //== Dropdowns
 $dropdown-bg:                              #EDF0F5 !default;
