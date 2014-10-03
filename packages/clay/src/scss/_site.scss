@@ -487,6 +487,20 @@ header.row {
 	max-width: 141px;
 }
 
+/* Popovers */
+
+#popovers {
+	.popover {
+		display: block;
+		position: relative;
+		margin-bottom: 50px;
+
+		&.left {
+			margin-left: 0;
+		}
+	}
+}
+
 /* -------- Thumbnail Variations ---------*/
 
 #thumbnailVariations {

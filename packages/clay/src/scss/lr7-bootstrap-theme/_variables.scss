@@ -45,6 +45,22 @@ $border-radius-base:                       $border-radius-default !default;
 $border-radius-large:                      $border-radius-default * 1.5 !default;
 $border-radius-small:                      $border-radius-default * 0.75 !default;
 
+//== Box Shadow
+$popover-arrow-width: 10px;
+$box-shadow-default-x: -10px !default;
+$box-shadow-default-y: 10px !default;
+$box-shadow-default-blur: 0 !default;
+$box-shadow-default-spread: 0 !default;
+$box-shadow-default-bg: $gray !default;
+$box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default;
+$box-shadow-arrow-default-blur: $box-shadow-default-blur !default;
+
+@if $box-shadow-default-blur >= 3 {
+	$box-shadow-arrow-default-blur: 3px;
+}
+
+$box-shadow-arrow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-arrow-default-blur $box-shadow-default-bg !default;
+
 //== Buttons
 $btn-default-color:                        #FFF !default;
 $btn-default-bg:                           $brand-default !default;
@@ -73,6 +89,8 @@ $line-height-base:                         1.4286 !default;
 //== Forms
 $form-control-box-shadow: none !default;
 $form-control-focus-box-shadow: none !default;
+$input-box-shadow: none !default;
+
 $input-bg:                                 #FFF !default;
 $input-bg-disabled:                        #EAEEF1 !default;
 $input-color:                              #E0E5EB !default;
@@ -85,14 +103,12 @@ $legend-border-color:                      #D7DCE2 !default;
 $input-group-addon-bg:                     $brand-default !default;
 $input-group-addon-border-color:           $input-group-addon-bg !default;
 
-$input-box-shadow: none !default;
-
 $input-danger: $brand-danger !default;
 $input-success: $brand-success !default;
 $input-warning: $brand-warning !default;
 
 //== Dropdowns
-$dropdown-box-shadow: -10px 10px 0px 0px #E0E5EB !default;
+$dropdown-box-shadow: $box-shadow-default !default;
 $dropdown-bg:                              #EDF0F5 !default;
 $dropdown-border:                          #EDF0F5 !default;
 //** Dropdown menu `border-color` **for IE8**.
@@ -275,5 +291,19 @@ $pager-borderless1-disabled-bg: $pager-borderless1-bg !default;
 $pager-borderless1-disabled-color: $pagination-disabled-color !default;
 $pager-borderless1-disabled-border: $pager-borderless1-border !default;
 
+//Popovers
+$popover-border-radius: $border-radius-default !default;
+$popover-box-shadow: $box-shadow-default !default;
+$popover-arrow-box-shadow: $box-shadow-arrow-default !default;
+
+$popover-bg:                               #FFF !default;
+$popover-max-width:                        276px !default;
+$popover-border-color:                     $brand-default !default;
+$popover-fallback-border-color:            $brand-default !default;
+$popover-title-color: #FFF !default;
+$popover-title-bg:                         $brand-default !default;
+$popover-arrow-width:                      10px !default;
+$popover-arrow-color:                      #FFF !default;
+
 //Modals
-$modal-box-shadow: -10px 10px 0 #E0E5EB !default;
+$modal-box-shadow: $box-shadow-default !default;
