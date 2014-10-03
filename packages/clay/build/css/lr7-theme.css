@@ -4142,10 +4142,10 @@ button.close {
   max-width: 276px;
   padding: 1px;
   text-align: left;
-  background-color: #fff;
+  background-color: #FFF;
   background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #2C4259;
+  border: 1px solid #2C4259;
   border-radius: 0;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -4165,8 +4165,8 @@ button.close {
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
+  background-color: #2C4259;
+  border-bottom: 1px solid #243648;
   border-radius: -1 -1 0 0; }
 
 .popover-content {
@@ -4191,53 +4191,53 @@ button.close {
   left: 50%;
   margin-left: -11px;
   border-bottom-width: 0;
-  border-top-color: #999999;
-  border-top-color: rgba(0, 0, 0, 0.25);
+  border-top-color: #0a0f15;
+  border-top-color: #2c4259;
   bottom: -11px; }
   .popover.top > .arrow:after {
     content: " ";
     bottom: 1px;
     margin-left: -10px;
     border-bottom-width: 0;
-    border-top-color: #fff; }
+    border-top-color: #FFF; }
 .popover.right > .arrow {
   top: 50%;
   left: -11px;
   margin-top: -11px;
   border-left-width: 0;
-  border-right-color: #999999;
-  border-right-color: rgba(0, 0, 0, 0.25); }
+  border-right-color: #0a0f15;
+  border-right-color: #2c4259; }
   .popover.right > .arrow:after {
     content: " ";
     left: 1px;
     bottom: -10px;
     border-left-width: 0;
-    border-right-color: #fff; }
+    border-right-color: #FFF; }
 .popover.bottom > .arrow {
   left: 50%;
   margin-left: -11px;
   border-top-width: 0;
-  border-bottom-color: #999999;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-bottom-color: #0a0f15;
+  border-bottom-color: #2c4259;
   top: -11px; }
   .popover.bottom > .arrow:after {
     content: " ";
     top: 1px;
     margin-left: -10px;
     border-top-width: 0;
-    border-bottom-color: #fff; }
+    border-bottom-color: #FFF; }
 .popover.left > .arrow {
   top: 50%;
   right: -11px;
   margin-top: -11px;
   border-right-width: 0;
-  border-left-color: #999999;
-  border-left-color: rgba(0, 0, 0, 0.25); }
+  border-left-color: #0a0f15;
+  border-left-color: #2c4259; }
   .popover.left > .arrow:after {
     content: " ";
     right: 1px;
     border-right-width: 0;
-    border-left-color: #fff;
+    border-left-color: #FFF;
     bottom: -10px; }
 
 .carousel {
@@ -4580,8 +4580,8 @@ button.close {
     display: none !important; } }
 
 .dropdown-menu {
-  -webkit-box-shadow: -10px 10px 0px 0px #E0E5EB;
-  box-shadow: -10px 10px 0px 0px #E0E5EB; }
+  -webkit-box-shadow: -10px 10px 0 0 #E0E5EB;
+  box-shadow: -10px 10px 0 0 #E0E5EB; }
 
 select.form-control:focus {
   padding: 5px 11px; }
@@ -4664,8 +4664,8 @@ textarea.input-sm:focus, .form-horizontal .form-group-sm textarea.form-control:f
   color: #E9295A; }
 
 .modal-content {
-  -webkit-box-shadow: -10px 10px 0 #E0E5EB;
-  box-shadow: -10px 10px 0 #E0E5EB; }
+  -webkit-box-shadow: -10px 10px 0 0 #E0E5EB;
+  box-shadow: -10px 10px 0 0 #E0E5EB; }
 
 .pager li > a, .pager li > span {
   background-color: #FFF;
@@ -4877,3 +4877,51 @@ textarea.input-sm:focus, .form-horizontal .form-group-sm textarea.form-control:f
 .pagination-sm > li:last-child > a, .pagination-sm > li:last-child > span {
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px; }
+
+.popover {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: -10px 10px 0 0 #E0E5EB;
+  box-shadow: -10px 10px 0 0 #E0E5EB;
+  padding: 0; }
+  .popover.bottom > .arrow:after {
+    border-bottom-color: #2C4259; }
+  .popover.bottom > .arrow:before {
+    top: 8px;
+    margin-left: 0px;
+    border-top-width: 0;
+    border-bottom-color: #E0E5EB; }
+  .popover.left > .arrow:before {
+    right: 8px;
+    border-right-width: 0;
+    border-left-color: #E0E5EB;
+    bottom: -20px; }
+  .popover.right > .arrow:before {
+    content: "";
+    left: -12px;
+    bottom: -20px;
+    border-left-width: 0;
+    border-right-color: #E0E5EB; }
+  .popover.top > .arrow:before {
+    content: "";
+    bottom: -12px;
+    margin-left: -20px;
+    border-bottom-width: 0;
+    border-top-color: #E0E5EB; }
+  .popover > .arrow:before {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 12px;
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    z-index: -1; }
+
+.popover-title {
+  background-color: #2C4259;
+  -webkit-border-radius: -1 -1 0 0;
+  -moz-border-radius: -1 -1 0 0;
+  border-radius: -1 -1 0 0;
+  color: #FFF; }
