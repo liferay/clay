@@ -1,7 +1,19 @@
 /* Removes Box Shadows */
 
-.no-shadow {
+.no-shadow, .no-shadows {
 	@include box-shadow(none);
+
+	.dropdown-menu, .modal-content, .popover {
+		@include box-shadow(none);
+	}
+
+	.popover {
+		&.bottom, &.left, &.right, &.top {
+			> .arrow:before {
+				display: none;
+			}
+		}
+	}
 }
 
 /* Removes Borders */
