@@ -296,14 +296,14 @@ $popover-border-radius: $border-radius-default !default;
 $popover-box-shadow: $box-shadow-default !default;
 $popover-arrow-box-shadow: $box-shadow-arrow-default !default;
 
-$popover-bg:                               #FFF !default;
-$popover-max-width:                        276px !default;
-$popover-border-color:                     $brand-default !default;
-$popover-fallback-border-color:            $brand-default !default;
+$popover-bg:                                      #FFF !default;
+$popover-max-width:                               276px !default;
+$popover-border-color:                            $brand-default !default;
+$popover-fallback-border-color:                   $brand-default !default;
 $popover-title-color: #FFF !default;
-$popover-title-bg:                         $brand-default !default;
-$popover-arrow-width:                      10px !default;
-$popover-arrow-color:                      #FFF !default;
+$popover-title-bg:                                $brand-default !default;
+$popover-arrow-width:                             10px !default;
+$popover-arrow-color:                             #FFF !default;
 
 //Modals
 $modal-box-shadow: $box-shadow-default !default;
@@ -316,5 +316,36 @@ $tooltip-box-shadow-blur: 0 !default;
 $tooltip-box-shadow-spread: 0 !default;
 $tooltip-box-shadow-bg: $gray !default;
 $tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg !default;
-$tooltip-bg:                               $brand-default !default;
-$tooltip-opacity:                          1 !default;
+$tooltip-bg:                                      $brand-default !default;
+$tooltip-opacity:                                 1 !default;
+
+//Navs
+$nav-link-color: $brand-default !default;
+$nav-link-hover-bg:                               transparent !default;
+$nav-link-hover-color: $brand-primary !default;
+
+$nav-disabled-link-color:                         #C5CDD0 !default;
+$nav-disabled-link-hover-color:                   #C5CDD0 !default;
+
+//Tabs
+$nav-tabs-border-radius: $border-radius-base $border-radius-base 0 0 !default;
+
+$nav-tabs-border-color:                           #EDF0F5 !default;
+$nav-tabs-link-hover-border-color:                transparent !default;
+$nav-tabs-border-width: 2px !default;
+
+$nav-tabs-active-link-hover-color:                $brand-default !default;
+$nav-tabs-active-link-hover-border-color:         #EDF0F5 !default;
+
+$nav-tabs-justified-link-border-color:            $nav-tabs-border-color !default;
+
+//Pills
+$nav-pills-border-radius:                         $border-radius-base !default;
+$nav-pills-active-link-hover-bg:                  transparent !default;
+$nav-pills-active-link-hover-color:               $brand-default !default;
+
+//Tab Group
+$tab-group-top-border-radius: $border-radius-base $border-radius-base 0 0 !default;
+$tab-group-bottom-border-radius: 0 0 $border-radius-base $border-radius-base !default;
+$tab-group-left-border-radius: $border-radius-base 0 0 $border-radius-base !default;
+$tab-group-right-border-radius: 0 $border-radius-base $border-radius-base 0 !default;
