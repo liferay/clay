@@ -4081,8 +4081,8 @@ button.close {
   opacity: 0;
   filter: alpha(opacity=0); }
   .tooltip.in {
-    opacity: 0.9;
-    filter: alpha(opacity=90); }
+    opacity: 1;
+    filter: alpha(opacity=100); }
   .tooltip.top {
     margin-top: -3px;
     padding: 5px 0; }
@@ -4102,7 +4102,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-decoration: none;
-  background-color: #000;
+  background-color: #2C4259;
   border-radius: 0; }
 
 .tooltip-arrow {
@@ -4117,45 +4117,45 @@ button.close {
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #000; }
+  border-top-color: #2C4259; }
 .tooltip.top-left .tooltip-arrow {
   bottom: 0;
   left: 5px;
   border-width: 5px 5px 0;
-  border-top-color: #000; }
+  border-top-color: #2C4259; }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
   right: 5px;
   border-width: 5px 5px 0;
-  border-top-color: #000; }
+  border-top-color: #2C4259; }
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: #000; }
+  border-right-color: #2C4259; }
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: #000; }
+  border-left-color: #2C4259; }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000; }
+  border-bottom-color: #2C4259; }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
   left: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000; }
+  border-bottom-color: #2C4259; }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
   right: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000; }
+  border-bottom-color: #2C4259; }
 
 .popover {
   position: absolute;
@@ -4950,14 +4950,55 @@ textarea.input-sm:focus, .form-horizontal .form-group-sm textarea.form-control:f
   border-radius: -1 -1 0 0;
   color: #FFF; }
 
+.tooltip-inner {
+  -webkit-box-shadow: -7px 7px 0 0 #E0E5EB;
+  box-shadow: -7px 7px 0 0 #E0E5EB; }
+
+.tooltip-arrow:before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  z-index: -1; }
+
+.tooltip.top .tooltip-arrow:before {
+  border-top-color: #E0E5EB;
+  border-width: 5px 5px 0;
+  bottom: -7px;
+  content: "";
+  left: 50%;
+  margin-left: -5px; }
+.tooltip.right .tooltip-arrow:before {
+  border-right-color: #E0E5EB;
+  border-width: 5px 5px 5px 0;
+  content: "";
+  left: -7px;
+  margin-top: 2px;
+  top: 50%; }
+.tooltip.left .tooltip-arrow:before {
+  border-left-color: #E0E5EB;
+  border-width: 5px 0 5px 5px;
+  margin-top: 2px;
+  right: 7px;
+  top: 50%; }
+.tooltip.bottom .tooltip-arrow:before {
+  border-bottom-color: #E0E5EB;
+  border-width: 0 5px 5px;
+  left: 50%;
+  margin-left: -12px;
+  top: 7px; }
+
 /* Removes Box Shadows */
 .no-shadow, .no-shadows {
   -webkit-box-shadow: none;
   box-shadow: none; }
-  .no-shadow .dropdown-menu, .no-shadow .modal-content, .no-shadow .popover, .no-shadows .dropdown-menu, .no-shadows .modal-content, .no-shadows .popover {
+  .no-shadow .dropdown-menu, .no-shadow .modal-content, .no-shadow .popover, .no-shadow .tooltip-inner, .no-shadows .dropdown-menu, .no-shadows .modal-content, .no-shadows .popover, .no-shadows .tooltip-inner {
     -webkit-box-shadow: none;
     box-shadow: none; }
   .no-shadow .popover.bottom > .arrow:before, .no-shadow .popover.left > .arrow:before, .no-shadow .popover.right > .arrow:before, .no-shadow .popover.top > .arrow:before, .no-shadows .popover.bottom > .arrow:before, .no-shadows .popover.left > .arrow:before, .no-shadows .popover.right > .arrow:before, .no-shadows .popover.top > .arrow:before {
+    display: none; }
+  .no-shadow .tooltip.bottom .tooltip-arrow:before, .no-shadow .tooltip.left .tooltip-arrow:before, .no-shadow .tooltip.right .tooltip-arrow:before, .no-shadow .tooltip.top .tooltip-arrow:before, .no-shadows .tooltip.bottom .tooltip-arrow:before, .no-shadows .tooltip.left .tooltip-arrow:before, .no-shadows .tooltip.right .tooltip-arrow:before, .no-shadows .tooltip.top .tooltip-arrow:before {
     display: none; }
 
 /* Removes Borders */
