@@ -307,3 +307,14 @@ $popover-arrow-color:                      #FFF !default;
 
 //Modals
 $modal-box-shadow: $box-shadow-default !default;
+
+//== Tooltips
+$tooltip-border-radius: $border-radius-default !default;
+$tooltip-box-shadow-x: -7px !default;
+$tooltip-box-shadow-y: 7px !default;
+$tooltip-box-shadow-blur: 0 !default;
+$tooltip-box-shadow-spread: 0 !default;
+$tooltip-box-shadow-bg: $gray !default;
+$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg !default;
+$tooltip-bg:                               $brand-default !default;
+$tooltip-opacity:                          1 !default;

@@ -3,13 +3,21 @@
 .no-shadow, .no-shadows {
 	@include box-shadow(none);
 
-	.dropdown-menu, .modal-content, .popover {
+	.dropdown-menu, .modal-content, .popover, .tooltip-inner {
 		@include box-shadow(none);
 	}
 
 	.popover {
 		&.bottom, &.left, &.right, &.top {
 			> .arrow:before {
+				display: none;
+			}
+		}
+	}
+
+	.tooltip {
+		&.bottom, &.left, &.right, &.top {
+			.tooltip-arrow:before {
 				display: none;
 			}
 		}
