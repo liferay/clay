@@ -20,3 +20,52 @@
 @mixin border-top-right-radius($radius) {
 	@include prefixer(border-top-right-radius, $radius, webkit moz spec);
 }
+
+@mixin clearfix() {
+	&:after {
+		clear: both;
+		content: "";
+		display: block;
+		font-size: 0;
+		height: 0;
+		visibility: hidden;
+	}
+}
+
+@mixin angle-bracket-right($bracket-height, $bracket-color, $bg-color) {
+	@if $bracket-height < 17 {
+		$bracket-height: 17px;
+	}
+
+	&:after {
+		border-bottom: $bracket-height - 10 solid transparent;
+		border-left: $bracket-height - 10 solid $bg-color;
+		border-top: $bracket-height - 10 solid transparent;
+		content: "";
+		display: block;
+		height: 0;
+		left: -2px;
+		margin-top: -$bracket-height + 10;
+		position: absolute;
+		top: 50%;
+		-moz-transform: scale(0.9999);
+		width: 0;
+		z-index: 0;
+	}
+
+	&:before {
+		border-bottom: $bracket-height - 10 solid transparent;
+		border-left: $bracket-height - 10 solid $bracket-color;
+		border-top: $bracket-height - 10 solid transparent;
+		content: "";
+		display: block;
+		height: 0;
+		left: 1px;
+		margin-top: -$bracket-height + 10;
+		position: absolute;
+		top: 50%;
+		-moz-transform: scale(0.9999);
+		width: 0;
+		z-index: 0;
+	}
+}

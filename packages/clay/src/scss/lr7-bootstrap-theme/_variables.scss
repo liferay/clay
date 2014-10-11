@@ -308,6 +308,21 @@ $popover-arrow-color:                             #FFF !default;
 //Modals
 $modal-box-shadow: $box-shadow-default !default;
 
+//Breadcrumbs
+$breadcrumb-padding-vertical:   4px !default;
+$breadcrumb-padding-horizontal: 15px !default;
+
+$breadcrumb-bg:                 transparent !default;
+
+$breadcrumb-color:              #ccc !default;
+
+$breadcrumb-active-color:       $gray-light !default;
+
+//Breadcrumb Inverse
+$breadcrumb-inverse-active-border: $brand-primary !default;
+$breadcrumb-inverse-active-color: $brand-default !default;
+
+
 //== Tooltips
 $tooltip-border-radius: $border-radius-default !default;
 $tooltip-box-shadow-x: -7px !default;

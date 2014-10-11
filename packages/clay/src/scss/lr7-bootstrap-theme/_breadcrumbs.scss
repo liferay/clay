@@ -1,0 +1,526 @@
+.breadcrumb.breadcrumb-default {
+	background-color: $breadcrumb-bg;
+	border-radius: $border-radius-base;
+
+	@include clearfix();
+
+	padding: 0;
+
+	> li {
+		display: block;
+		float: left;
+		margin-bottom: 3px;
+		margin-right: 5px;
+		position: relative;
+
+		&:after {
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			top: 50%;
+			width: 0;
+
+			border-bottom: 14px solid transparent;
+			border-left: 14px solid #FFF;
+			border-top: 14px solid transparent;
+			left: 100%;
+			margin-left: -2px;
+			margin-top: -14px;
+			z-index: 3;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			top: 50%;
+			width: 0;
+
+			border-bottom: 15px solid transparent;
+			border-left: 15px solid $brand-default;
+			border-top: 15px solid transparent;
+			left: 100%;
+			margin-left: -1px;
+			margin-top: -15px; 
+			z-index: 3;
+		}
+
+		&:first-child {
+			a {
+				border-left: 1px solid $brand-default;
+
+				&:after {
+					border-left: transparent;
+				}
+
+				&:before {
+					border-left: transparent;
+				}
+			}
+		}
+
+		+ li:before {
+			content: "";
+			padding: 0;
+		}
+
+		a {
+			background-color: #FFF;
+			border: 1px solid $brand-default;
+			border-color: $brand-default transparent;
+			color: $brand-default;
+			display: block;
+			float: left;
+			padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal $breadcrumb-padding-vertical $breadcrumb-padding-horizontal + 11;
+			position: relative; 
+			text-decoration: none; 
+			white-space: nowrap;
+
+			&:after {
+				content: "";
+				display: block;
+				height: 0;
+				position: absolute;
+				top: 50%;
+				width: 0;
+
+				border-bottom: 14px solid transparent;
+				border-left: 14px solid #FFF;
+				border-top: 14px solid transparent;
+				left: -1px;
+				margin-top: -14px;
+				z-index: 1;
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				height: 0;
+				position: absolute;
+				top: 50%;
+				width: 0;
+
+				border-bottom: 15px solid transparent;
+				border-left: 15px solid $brand-default;
+				border-top: 15px solid transparent;
+				left: 0;
+				margin-top: -15px;
+				z-index: 1;
+			}
+		}
+	}
+
+	> li.active {
+		z-index: 0;
+
+		&:after {
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			top: 50%;
+			width: 0;
+
+			border-bottom: 14px solid transparent;
+			border-left: 14px solid $brand-primary;
+			border-top: 14px solid transparent;
+			left: 100%;
+			margin-left: -1px;
+			margin-top: -14px;
+			z-index: 1;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			top: 50%;
+			width: 0;
+
+			border-bottom: 15px solid transparent;
+			border-left: 15px solid $breadcrumb-inverse-active-border;
+			border-top: 15px solid transparent;
+			left: 100%;
+			margin-left: -1px;
+			margin-top: -15px; 
+			z-index: 1;
+		}
+
+		a {
+			background-color: $brand-primary;
+			border-color: $breadcrumb-inverse-active-border transparent;
+			color: #FFF;
+
+			&:after {
+				content: "";
+				display: block;
+				height: 0;
+				position: absolute;
+				top: 50%;
+				width: 0;
+
+				border-bottom: 14px solid transparent;
+				border-left: 14px solid #FFF;
+				border-top: 14px solid transparent;
+				left: -1px;
+				margin-top: -14px;
+				z-index: 1;
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				height: 0;
+				position: absolute;
+				top: 50%;
+				width: 0;
+
+				border-bottom: 15px solid transparent;
+				border-left: 15px solid $breadcrumb-inverse-active-border;
+				border-top: 15px solid transparent;
+				left: -1px;
+				margin-top: -15px;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+.breadcrumb.breadcrumb-inverse {
+	background-color: $breadcrumb-bg;
+	border-radius: $border-radius-base;
+
+	@include clearfix();
+
+	padding: 0;
+
+	> li {
+		display: block;
+		float: left;
+		margin-bottom: 3px;
+		margin-right: 5px;
+		position: relative;
+
+		&:after {
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			top: 50%;
+			width: 0;
+
+			border-bottom: 14px solid transparent;
+			border-left: 14px solid $brand-default;
+			border-top: 14px solid transparent;
+			left: 100%;
+			margin-left: -2px;
+			margin-top: -14px;
+			z-index: 3;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			top: 50%;
+			width: 0;
+
+			border-bottom: 15px solid transparent;
+			border-left: 15px solid $brand-default;
+			border-top: 15px solid transparent;
+			left: 100%;
+			margin-left: -1px;
+			margin-top: -15px; 
+			z-index: 3;
+		}
+
+		&:first-child {
+			a {
+				border-left: 1px solid $brand-default;
+
+				&:after {
+					border-left: transparent;
+				}
+
+				&:before {
+					border-left: transparent;
+				}
+			}
+		}
+
+		+ li:before {
+			content: "";
+			padding: 0;
+		}
+
+		a {
+			background-color: $brand-default;
+			border: 1px solid $brand-default;
+			border-color: $brand-default transparent;
+			color: #FFF;
+			display: block;
+			float: left;
+			padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal $breadcrumb-padding-vertical $breadcrumb-padding-horizontal + 11;
+			position: relative; 
+			text-decoration: none; 
+			white-space: nowrap;
+
+			&:after {
+				content: "";
+				display: block;
+				height: 0;
+				position: absolute;
+				top: 50%;
+				width: 0;
+
+				border-bottom: 14px solid transparent;
+				border-left: 14px solid #FFF;
+				border-top: 14px solid transparent;
+				left: -1px;
+				margin-top: -14px;
+				z-index: 1;
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				height: 0;
+				position: absolute;
+				top: 50%;
+				width: 0;
+
+				border-bottom: 15px solid transparent;
+				border-left: 15px solid $brand-default;
+				border-top: 15px solid transparent;
+				left: 0;
+				margin-top: -15px;
+				z-index: 1;
+			}
+		}
+	}
+
+	> li.active {
+		z-index: 0;
+
+		&:after {
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			top: 50%;
+			width: 0;
+
+			border-bottom: 14px solid transparent;
+			border-left: 14px solid #FFF;
+			border-top: 14px solid transparent;
+			left: 100%;
+			margin-left: -1px;
+			margin-top: -14px;
+			z-index: 1;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			top: 50%;
+			width: 0;
+
+			border-bottom: 15px solid transparent;
+			border-left: 15px solid $breadcrumb-inverse-active-border;
+			border-top: 15px solid transparent;
+			left: 100%;
+			margin-left: -1px;
+			margin-top: -15px; 
+			z-index: 1;
+		}
+
+		a {
+			background-color: #FFF;
+			border-color: $breadcrumb-inverse-active-border transparent;
+			color: $brand-default;
+
+			&:after {
+				content: "";
+				display: block;
+				height: 0;
+				position: absolute;
+				top: 50%;
+				width: 0;
+
+				border-bottom: 14px solid transparent;
+				border-left: 14px solid #FFF;
+				border-top: 14px solid transparent;
+				left: -1px;
+				margin-top: -14px;
+				z-index: 1;
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				height: 0;
+				position: absolute;
+				top: 50%;
+				width: 0;
+
+				border-bottom: 15px solid transparent;
+				border-left: 15px solid $breadcrumb-inverse-active-border;
+				border-top: 15px solid transparent;
+				left: -1px;
+				margin-top: -15px;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+// .breadcrumb.breadcrumb-inverse {
+// 	background-color: $breadcrumb-bg;
+// 	border-radius: $border-radius-base;
+
+// 	@include clearfix();
+
+// 	padding: 0;
+
+// 	> li {
+// 		&:after, &:before, a:after, a:before, &.active:after, &.active:before, &.active a:after, &.active a:before {
+// 			content: "";
+// 			display: block;
+// 			height: 0;
+// 			position: absolute;
+// 			top: 50%;
+// 			-moz-transform: scale(0.9999);
+// 			width: 0;
+// 		}
+// 	}
+
+// 	> li {
+// 		display: block;
+// 		float: left;
+// 		margin-bottom: 3px;
+// 		margin-right: 5px;
+// 		position: relative;
+
+// 		&:before {
+// 			border-bottom: 14px solid transparent;
+// 			border-left: 10px solid #FFF;
+// 			border-top: 14px solid transparent;
+// 			left: 0;
+// 			margin-top: -14px;
+// 			z-index: 1;
+// 		}
+
+// 		&:first-child {
+// 			&:before {
+// 				border-left-width: 0;
+// 			}
+
+// 			a {
+// 				padding-left: $breadcrumb-padding-horizontal;
+// 			}
+// 		}
+
+// 		+ li:before {
+// 			content: "";
+// 			padding: 0;
+// 		}
+
+// 		a {
+// 			background-color: $brand-default;
+// 			border: 1px solid $brand-default;
+// 			color: white;
+// 			display: block;
+// 			float: left;
+// 			padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal $breadcrumb-padding-vertical $breadcrumb-padding-horizontal + 11;
+// 			position: relative; 
+// 			text-decoration: none; 
+// 			white-space: nowrap;
+
+// 			&:after {
+// 				border-bottom: 15px solid transparent;
+// 				border-left: 11px solid $brand-default;
+// 				border-top: 15px solid transparent;
+// 				left: 100%;
+// 				margin-left: 1px;
+// 				margin-top: -15px;
+// 				z-index: 2;
+// 			}
+// 		}
+// 	}
+
+// 	> li.active {
+// 		&:after {
+// 			border-bottom: 14px solid transparent;
+// 			border-left: 10px solid $breadcrumb-inverse-active-border;
+// 			border-top: 14px solid transparent;
+// 			left: 1px;
+// 			margin-top: -14px;
+// 			z-index: 0;
+// 		}
+
+// 		&:before {
+// 			border-bottom: 14px solid transparent;
+// 			border-left: 10px solid #FFF;
+// 			border-top: 14px solid transparent;
+// 			left: 0;
+// 			margin-top: -14px;
+// 			z-index: 1;
+// 		}
+
+// 		a {
+// 			background-color: #FFF;
+// 			border-color: $breadcrumb-inverse-active-border;
+// 			color: $breadcrumb-inverse-active-color;
+
+// 			&:after {
+// 				border-bottom: 14px solid transparent;
+// 				border-left: 10px solid #FFF;
+// 				border-top: 14px solid transparent;
+// 				margin-left: 0;
+// 				margin-top: -14px;
+// 			}
+
+// 			&:before {
+// 				border-bottom: 15px solid transparent;
+// 				border-left: 10px solid $breadcrumb-inverse-active-border;
+// 				border-top: 15px solid transparent;
+// 				left: 100%;
+// 				margin-left: 1px;
+// 				margin-top: -15px; 
+// 				z-index: 1;
+// 			}
+// 		}
+// 	}
+// }
+
+.breadcrumb.breadcrumb-borderless {
+	@include clearfix();
+
+	> li {
+		display: block;
+		float: left;
+		margin-bottom: 3px;
+		margin-right: 5px;
+		position: relative;
+
+		&.active a {
+			color: $brand-primary;
+		}
+
+		+ li {
+			@include angle-bracket-right($font-size-base, #D2D6DF, #FFF);
+		}
+
+		a {
+			color: $brand-default;
+			padding-left: 15px;
+			vertical-align: text-bottom;
+		}
+	}
+}
