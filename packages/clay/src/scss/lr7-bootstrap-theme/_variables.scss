@@ -309,19 +309,41 @@ $popover-arrow-color:                             #FFF !default;
 $modal-box-shadow: $box-shadow-default !default;
 
 //Breadcrumbs
-$breadcrumb-padding-vertical:   4px !default;
-$breadcrumb-padding-horizontal: 15px !default;
+$breadcrumb-padding-vertical:                     4px !default;
+$breadcrumb-padding-horizontal:                   15px !default;
 
-$breadcrumb-bg:                 transparent !default;
+$breadcrumb-bg:                                   $body-bg !default;
 
-$breadcrumb-color:              #ccc !default;
+$breadcrumb-color:                                #ccc !default;
 
-$breadcrumb-active-color:       $gray-light !default;
+$breadcrumb-active-color:                         $gray-light !default;
+
+//Breadcrumb Default
+$breadcrumb-default-bg: $body-bg !default;
+$breadcrumb-default-border: $brand-default !default;
+$breadcrumb-default-link-color: $brand-default !default;
+$breadcrumb-default-link-bg: #FFF !default;
+$breadcrumb-default-active-border: $brand-primary !default;
+$breadcrumb-default-active-color: #FFF !default;
+$breadcrumb-default-active-link-bg: $brand-primary !default;
 
 //Breadcrumb Inverse
+$breadcrumb-inverse-bg: $body-bg !default;
+$breadcrumb-inverse-border: $brand-default !default;
+$breadcrumb-inverse-link-color: $brand-default !default;
+$breadcrumb-inverse-link-bg: $brand-default !default;
 $breadcrumb-inverse-active-border: $brand-primary !default;
 $breadcrumb-inverse-active-color: $brand-default !default;
+$breadcrumb-inverse-active-link-bg: #FFF !default;
 
+//Breadcrumb Borderless
+$breadcrumb-borderless-border-radius: 0 !default;
+$breadcrumb-borderless-bg: #FFF !default;
+$breadcrumb-borderless-link-color: $brand-default !default;
+$breadcrumb-borderless-link-bg: transparent !default;
+$breadcrumb-borderless-active-color: $brand-primary !default;
+$breadcrumb-borderless-separator-bg: $breadcrumb-borderless-bg !default;
+$breadcrumb-borderless-separator-color: #D2D6DF !default;
 
 //== Tooltips
 $tooltip-border-radius: $border-radius-default !default;
