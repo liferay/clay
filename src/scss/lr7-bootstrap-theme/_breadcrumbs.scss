@@ -1,5 +1,71 @@
+@mixin breadcrumb-right-border($breadcrumb-border, $breadcrumb-bg) {
+	&:after {
+		border-bottom: 14px solid transparent;
+		border-left: 14px solid $breadcrumb-bg;
+		border-top: 14px solid transparent;
+		content: "";
+		display: block;
+		height: 0;
+		left: 100%;
+		margin-left: -1px;
+		margin-top: -14px;
+		position: absolute;
+		top: 50%;
+		width: 0;
+		z-index: 3;
+	}
+
+	&:before {
+		border-bottom: 15px solid transparent;
+		border-left: 15px solid $breadcrumb-border;
+		border-top: 15px solid transparent;
+		content: "";
+		display: block;
+		height: 0;
+		left: 100%;
+		margin-left: 0;
+		margin-top: -15px; 
+		position: absolute;
+		top: 50%;
+		width: 0;
+		z-index: 3;
+	}
+}
+
+@mixin breadcrumb-left-border($breadcrumb-border, $breadcrumb-bg) {
+	&:after {
+		border-bottom: 14px solid transparent;
+		border-left: 14px solid $breadcrumb-bg;
+		border-top: 14px solid transparent;
+		content: "";
+		display: block;
+		height: 0;
+		left: -1px;
+		margin-top: -14px;
+		position: absolute;
+		top: 50%;
+		width: 0;
+		z-index: 1;
+	}
+
+	&:before {
+		border-bottom: 15px solid transparent;
+		border-left: 15px solid $breadcrumb-border;
+		border-top: 15px solid transparent;
+		content: "";
+		display: block;
+		height: 0;
+		left: 0;
+		margin-top: -15px;
+		position: absolute;
+		top: 50%;
+		width: 0;
+		z-index: 1;
+	}
+}
+
 .breadcrumb.breadcrumb-default {
-	background-color: $breadcrumb-bg;
+	background-color: $breadcrumb-default-bg;
 	border-radius: $border-radius-base;
 
 	@include clearfix();
@@ -13,43 +79,11 @@
 		margin-right: 5px;
 		position: relative;
 
-		&:after {
-			content: "";
-			display: block;
-			height: 0;
-			position: absolute;
-			top: 50%;
-			width: 0;
-
-			border-bottom: 14px solid transparent;
-			border-left: 14px solid #FFF;
-			border-top: 14px solid transparent;
-			left: 100%;
-			margin-left: -2px;
-			margin-top: -14px;
-			z-index: 3;
-		}
-
-		&:before {
-			content: "";
-			display: block;
-			height: 0;
-			position: absolute;
-			top: 50%;
-			width: 0;
-
-			border-bottom: 15px solid transparent;
-			border-left: 15px solid $brand-default;
-			border-top: 15px solid transparent;
-			left: 100%;
-			margin-left: -1px;
-			margin-top: -15px; 
-			z-index: 3;
-		}
+		@include breadcrumb-right-border($breadcrumb-default-border, $breadcrumb-default-link-bg);
 
 		&:first-child {
 			a {
-				border-left: 1px solid $brand-default;
+				border-left: 1px solid $breadcrumb-default-border;
 
 				&:after {
 					border-left: transparent;
@@ -66,123 +100,43 @@
 			padding: 0;
 		}
 
-		a {
-			background-color: #FFF;
-			border: 1px solid $brand-default;
-			border-color: $brand-default transparent;
-			color: $brand-default;
+		a, span {
+			background-color: $breadcrumb-default-link-bg;
+			border: 1px solid $breadcrumb-default-border;
+			color: $breadcrumb-default-link-color;
 			display: block;
 			float: left;
 			padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal $breadcrumb-padding-vertical $breadcrumb-padding-horizontal + 11;
-			position: relative; 
-			text-decoration: none; 
+			position: relative;
+			text-decoration: none;
 			white-space: nowrap;
 
-			&:after {
-				content: "";
-				display: block;
-				height: 0;
-				position: absolute;
-				top: 50%;
-				width: 0;
-
-				border-bottom: 14px solid transparent;
-				border-left: 14px solid #FFF;
-				border-top: 14px solid transparent;
-				left: -1px;
-				margin-top: -14px;
-				z-index: 1;
-			}
-
-			&:before {
-				content: "";
-				display: block;
-				height: 0;
-				position: absolute;
-				top: 50%;
-				width: 0;
-
-				border-bottom: 15px solid transparent;
-				border-left: 15px solid $brand-default;
-				border-top: 15px solid transparent;
-				left: 0;
-				margin-top: -15px;
-				z-index: 1;
-			}
+			@include breadcrumb-left-border($breadcrumb-default-border, $breadcrumb-default-bg);
 		}
 	}
 
 	> li.active {
 		z-index: 0;
 
-		&:after {
-			content: "";
-			display: block;
-			height: 0;
-			position: absolute;
-			top: 50%;
-			width: 0;
+		@include breadcrumb-right-border($breadcrumb-default-active-border, $breadcrumb-default-active-link-bg);
 
-			border-bottom: 14px solid transparent;
-			border-left: 14px solid $brand-primary;
-			border-top: 14px solid transparent;
-			left: 100%;
-			margin-left: -1px;
-			margin-top: -14px;
-			z-index: 1;
-		}
-
-		&:before {
-			content: "";
-			display: block;
-			height: 0;
-			position: absolute;
-			top: 50%;
-			width: 0;
-
-			border-bottom: 15px solid transparent;
-			border-left: 15px solid $breadcrumb-inverse-active-border;
-			border-top: 15px solid transparent;
-			left: 100%;
-			margin-left: -1px;
-			margin-top: -15px; 
-			z-index: 1;
-		}
-
-		a {
-			background-color: $brand-primary;
-			border-color: $breadcrumb-inverse-active-border transparent;
-			color: #FFF;
-
-			&:after {
-				content: "";
-				display: block;
-				height: 0;
-				position: absolute;
-				top: 50%;
-				width: 0;
-
-				border-bottom: 14px solid transparent;
-				border-left: 14px solid #FFF;
-				border-top: 14px solid transparent;
-				left: -1px;
-				margin-top: -14px;
-				z-index: 1;
-			}
+		a, span {
+			background-color: $breadcrumb-default-active-link-bg;
+			border-color: $breadcrumb-default-active-border;
+			color: $breadcrumb-default-active-color;
 
 			&:before {
+				border-bottom: 15px solid transparent;
+				border-left: 15px solid $breadcrumb-default-active-border;
+				border-top: 15px solid transparent;
 				content: "";
 				display: block;
 				height: 0;
+				left: 0;
+				margin-top: -15px;
 				position: absolute;
 				top: 50%;
 				width: 0;
-
-				border-bottom: 15px solid transparent;
-				border-left: 15px solid $breadcrumb-inverse-active-border;
-				border-top: 15px solid transparent;
-				left: -1px;
-				margin-top: -15px;
 				z-index: 1;
 			}
 		}
@@ -190,7 +144,7 @@
 }
 
 .breadcrumb.breadcrumb-inverse {
-	background-color: $breadcrumb-bg;
+	background-color: $breadcrumb-inverse-bg;
 	border-radius: $border-radius-base;
 
 	@include clearfix();
@@ -204,43 +158,11 @@
 		margin-right: 5px;
 		position: relative;
 
-		&:after {
-			content: "";
-			display: block;
-			height: 0;
-			position: absolute;
-			top: 50%;
-			width: 0;
-
-			border-bottom: 14px solid transparent;
-			border-left: 14px solid $brand-default;
-			border-top: 14px solid transparent;
-			left: 100%;
-			margin-left: -2px;
-			margin-top: -14px;
-			z-index: 3;
-		}
-
-		&:before {
-			content: "";
-			display: block;
-			height: 0;
-			position: absolute;
-			top: 50%;
-			width: 0;
-
-			border-bottom: 15px solid transparent;
-			border-left: 15px solid $brand-default;
-			border-top: 15px solid transparent;
-			left: 100%;
-			margin-left: -1px;
-			margin-top: -15px; 
-			z-index: 3;
-		}
+		@include breadcrumb-right-border($breadcrumb-inverse-border, $breadcrumb-inverse-link-bg);
 
 		&:first-child {
 			a {
-				border-left: 1px solid $brand-default;
+				border-left: 1px solid $breadcrumb-inverse-border;
 
 				&:after {
 					border-left: transparent;
@@ -257,10 +179,9 @@
 			padding: 0;
 		}
 
-		a {
-			background-color: $brand-default;
-			border: 1px solid $brand-default;
-			border-color: $brand-default transparent;
+		a, span {
+			background-color: $breadcrumb-inverse-link-bg;
+			border: 1px solid $breadcrumb-inverse-border;
 			color: #FFF;
 			display: block;
 			float: left;
@@ -269,257 +190,70 @@
 			text-decoration: none; 
 			white-space: nowrap;
 
-			&:after {
-				content: "";
-				display: block;
-				height: 0;
-				position: absolute;
-				top: 50%;
-				width: 0;
-
-				border-bottom: 14px solid transparent;
-				border-left: 14px solid #FFF;
-				border-top: 14px solid transparent;
-				left: -1px;
-				margin-top: -14px;
-				z-index: 1;
-			}
-
-			&:before {
-				content: "";
-				display: block;
-				height: 0;
-				position: absolute;
-				top: 50%;
-				width: 0;
-
-				border-bottom: 15px solid transparent;
-				border-left: 15px solid $brand-default;
-				border-top: 15px solid transparent;
-				left: 0;
-				margin-top: -15px;
-				z-index: 1;
-			}
+			@include breadcrumb-left-border($breadcrumb-inverse-border, $breadcrumb-inverse-bg);
 		}
 	}
 
 	> li.active {
 		z-index: 0;
 
-		&:after {
-			content: "";
-			display: block;
-			height: 0;
-			position: absolute;
-			top: 50%;
-			width: 0;
+		@include breadcrumb-right-border($breadcrumb-inverse-active-border, $breadcrumb-inverse-active-link-bg);
 
-			border-bottom: 14px solid transparent;
-			border-left: 14px solid #FFF;
-			border-top: 14px solid transparent;
-			left: 100%;
-			margin-left: -1px;
-			margin-top: -14px;
-			z-index: 1;
-		}
-
-		&:before {
-			content: "";
-			display: block;
-			height: 0;
-			position: absolute;
-			top: 50%;
-			width: 0;
-
-			border-bottom: 15px solid transparent;
-			border-left: 15px solid $breadcrumb-inverse-active-border;
-			border-top: 15px solid transparent;
-			left: 100%;
-			margin-left: -1px;
-			margin-top: -15px; 
-			z-index: 1;
-		}
-
-		a {
-			background-color: #FFF;
-			border-color: $breadcrumb-inverse-active-border transparent;
-			color: $brand-default;
-
-			&:after {
-				content: "";
-				display: block;
-				height: 0;
-				position: absolute;
-				top: 50%;
-				width: 0;
-
-				border-bottom: 14px solid transparent;
-				border-left: 14px solid #FFF;
-				border-top: 14px solid transparent;
-				left: -1px;
-				margin-top: -14px;
-				z-index: 1;
-			}
+		a, span {
+			background-color: $breadcrumb-inverse-active-link-bg;
+			border-color: $breadcrumb-inverse-active-border;
+			color: $breadcrumb-inverse-active-color;
 
 			&:before {
-				content: "";
-				display: block;
-				height: 0;
-				position: absolute;
-				top: 50%;
-				width: 0;
-
 				border-bottom: 15px solid transparent;
 				border-left: 15px solid $breadcrumb-inverse-active-border;
 				border-top: 15px solid transparent;
-				left: -1px;
+				content: "";
+				display: block;
+				height: 0;
+				left: 0;
 				margin-top: -15px;
+				position: absolute;
+				top: 50%;
+				width: 0;
 				z-index: 1;
 			}
 		}
 	}
 }
 
-// .breadcrumb.breadcrumb-inverse {
-// 	background-color: $breadcrumb-bg;
-// 	border-radius: $border-radius-base;
-
-// 	@include clearfix();
-
-// 	padding: 0;
-
-// 	> li {
-// 		&:after, &:before, a:after, a:before, &.active:after, &.active:before, &.active a:after, &.active a:before {
-// 			content: "";
-// 			display: block;
-// 			height: 0;
-// 			position: absolute;
-// 			top: 50%;
-// 			-moz-transform: scale(0.9999);
-// 			width: 0;
-// 		}
-// 	}
-
-// 	> li {
-// 		display: block;
-// 		float: left;
-// 		margin-bottom: 3px;
-// 		margin-right: 5px;
-// 		position: relative;
-
-// 		&:before {
-// 			border-bottom: 14px solid transparent;
-// 			border-left: 10px solid #FFF;
-// 			border-top: 14px solid transparent;
-// 			left: 0;
-// 			margin-top: -14px;
-// 			z-index: 1;
-// 		}
-
-// 		&:first-child {
-// 			&:before {
-// 				border-left-width: 0;
-// 			}
-
-// 			a {
-// 				padding-left: $breadcrumb-padding-horizontal;
-// 			}
-// 		}
-
-// 		+ li:before {
-// 			content: "";
-// 			padding: 0;
-// 		}
-
-// 		a {
-// 			background-color: $brand-default;
-// 			border: 1px solid $brand-default;
-// 			color: white;
-// 			display: block;
-// 			float: left;
-// 			padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal $breadcrumb-padding-vertical $breadcrumb-padding-horizontal + 11;
-// 			position: relative; 
-// 			text-decoration: none; 
-// 			white-space: nowrap;
-
-// 			&:after {
-// 				border-bottom: 15px solid transparent;
-// 				border-left: 11px solid $brand-default;
-// 				border-top: 15px solid transparent;
-// 				left: 100%;
-// 				margin-left: 1px;
-// 				margin-top: -15px;
-// 				z-index: 2;
-// 			}
-// 		}
-// 	}
-
-// 	> li.active {
-// 		&:after {
-// 			border-bottom: 14px solid transparent;
-// 			border-left: 10px solid $breadcrumb-inverse-active-border;
-// 			border-top: 14px solid transparent;
-// 			left: 1px;
-// 			margin-top: -14px;
-// 			z-index: 0;
-// 		}
-
-// 		&:before {
-// 			border-bottom: 14px solid transparent;
-// 			border-left: 10px solid #FFF;
-// 			border-top: 14px solid transparent;
-// 			left: 0;
-// 			margin-top: -14px;
-// 			z-index: 1;
-// 		}
-
-// 		a {
-// 			background-color: #FFF;
-// 			border-color: $breadcrumb-inverse-active-border;
-// 			color: $breadcrumb-inverse-active-color;
-
-// 			&:after {
-// 				border-bottom: 14px solid transparent;
-// 				border-left: 10px solid #FFF;
-// 				border-top: 14px solid transparent;
-// 				margin-left: 0;
-// 				margin-top: -14px;
-// 			}
-
-// 			&:before {
-// 				border-bottom: 15px solid transparent;
-// 				border-left: 10px solid $breadcrumb-inverse-active-border;
-// 				border-top: 15px solid transparent;
-// 				left: 100%;
-// 				margin-left: 1px;
-// 				margin-top: -15px; 
-// 				z-index: 1;
-// 			}
-// 		}
-// 	}
-// }
-
 .breadcrumb.breadcrumb-borderless {
+	background-color: $breadcrumb-borderless-bg;
+
+	@include border-radius($breadcrumb-borderless-border-radius);
 	@include clearfix();
 
 	> li {
 		display: block;
 		float: left;
-		margin-bottom: 3px;
 		margin-right: 5px;
+		padding-left: 15px;
 		position: relative;
 
-		&.active a {
-			color: $brand-primary;
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&.active {
+			a, span {
+				color: $breadcrumb-borderless-active-color;
+			}
 		}
 
 		+ li {
-			@include angle-bracket-right($font-size-base, #D2D6DF, #FFF);
+			// custom/_bourbon_mixins.scss
+			@include angle-bracket-right($font-size-base, $breadcrumb-borderless-separator-color, $breadcrumb-borderless-separator-bg);
 		}
 
-		a {
-			color: $brand-default;
-			padding-left: 15px;
+		a, span {
+			background-color: $breadcrumb-borderless-link-bg;
+			color: $breadcrumb-borderless-link-color;
+			display: block;
 			vertical-align: text-bottom;
 		}
 	}
