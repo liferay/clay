@@ -568,6 +568,10 @@ section.row {
 }
 
 @media (min-width: 768px) {
+	#wrapper {
+		overflow-x: visible;
+	}
+
 	.glyphicons li {
 		width: 10%;
 	}
@@ -601,10 +605,6 @@ section.row {
 }
 
 @media (min-width: 1024px) {
-	#wrapper {
-		overflow-x: visible;
-	}
-
 	/* Typography */
 
 	.color-palette {
