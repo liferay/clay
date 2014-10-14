@@ -1,0 +1,30 @@
+.navbar-nav > li > .dropdown-menu {
+	margin-top: $box-shadow-default-y;
+}
+
+// .mega-menu-full.open .dropdown-toggle {
+// 	@include arrow-top-left($brand-default, 8px, 9px);
+// 	@include arrow-top-left-border($brand-default, 9px, 9px);
+
+// 	&:before, &:after {
+// 		bottom: -12px;
+// 	}
+// }
+
+@media (max-width: $grid-float-breakpoint-max) {
+	.navbar-nav .open .dropdown-menu {
+		@include box-shadow(none);
+
+		&:after {
+			display: none;
+		}
+
+		&:before {
+			display: none;
+		}
+
+		&.dropdown-menu-inverse {
+			background-color: $dropdown-inverse-bg;
+		}
+	}
+}

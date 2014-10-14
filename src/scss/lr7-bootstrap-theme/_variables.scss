@@ -126,6 +126,17 @@ $dropdown-link-disabled-color:             #CACDD2 !default;
 
 $dropdown-header-color:                    #828F98 !default;
 
+$dropdown-wide-width: 500px !default;
+
+// Dropdown Inverse
+$dropdown-inverse-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 #EFF2F7 !default;
+$dropdown-inverse-bg: $brand-default !default;
+$dropdown-inverse-border: $brand-default !default;
+$dropdown-inverse-link-color: #FFF !default;
+$dropdown-inverse-disabled-color: $brand-default-active !default;
+$dropdown-inverse-divider-bg: $brand-default-active !default;
+$dropdown-inverse-header-color: $brand-default-hover !default;
+
 //== Navbar Default
 $navbar-default-color:                     $brand-default !default;
 $navbar-default-bg:                        #EDF0F5 !default;
