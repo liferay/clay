@@ -1,6 +1,120 @@
 @import "bourbon";
 @import "../bootstrap/mixins/vendor-prefixes";
 
+@mixin arrow-bottom-left($color, $size, $offset) {
+	&:after {
+		border-bottom-width: 0;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+		bottom: -$size;
+		content: '';
+		display: inline-block;
+		left: $offset + 1;
+		position: absolute;
+		top: auto;
+	}
+}
+
+@mixin arrow-bottom-left-border($color, $size, $offset) {
+	&:before {
+		border-bottom-width: 0;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+		bottom: -$size;
+		content: '';
+		display: inline-block;
+		left: $offset;
+		position: absolute;
+		top: auto;
+	}
+}
+
+@mixin arrow-bottom-right($color, $size, $offset) {
+	&:after {
+		border-bottom-width: 0;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+		bottom: -$size;
+		content: '';
+		display: inline-block;
+		left: auto;
+		right: $offset + 1;
+		position: absolute;
+		top: auto;
+	}
+}
+
+@mixin arrow-bottom-right-border($color, $size, $offset) {
+	&:before {
+		border-bottom-width: 0;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+		bottom: -$size;
+		content: '';
+		display: inline-block;
+		left: auto;
+		right: $offset;
+		position: absolute;
+		top: auto;
+	}
+}
+
+@mixin arrow-top-left($color, $size, $offset) {
+	&:after {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: $offset + 1;
+		top: -$size;
+	}
+}
+
+@mixin arrow-top-left-border($color, $size, $offset) {
+	&:before {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: $offset;
+		top: -$size;
+	}
+}
+
+@mixin arrow-top-right($color, $size, $offset) {
+	&:after {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: auto;
+		right: $offset + 1;
+	}
+}
+
+@mixin arrow-top-right-border($color, $size, $offset) {
+	&:before {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: auto;
+		right: $offset;
+	}
+}
+
 @mixin angle-bracket-right($bracket-height, $bracket-color, $bg-color) {
 	@if $bracket-height < 17 {
 		$bracket-height: 17px;
