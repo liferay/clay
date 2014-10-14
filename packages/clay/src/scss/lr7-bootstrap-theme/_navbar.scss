@@ -1,15 +1,35 @@
-.navbar-nav > li > .dropdown-menu {
-	margin-top: $box-shadow-default-y;
+.navbar-default {
+	.navbar-nav {
+		> .open > a {
+			&, &:hover, &:focus {
+				background-color: $navbar-default-link-open-bg;
+				color: $navbar-default-link-open-color;
+			}
+		}
+	}
 }
 
-// .mega-menu-full.open .dropdown-toggle {
-// 	@include arrow-top-left($brand-default, 8px, 9px);
-// 	@include arrow-top-left-border($brand-default, 9px, 9px);
+.navbar-inverse {
+	.navbar-nav {
+		> .open > a {
+			&, &:hover, &:focus {
+				background-color: $navbar-inverse-link-open-bg;
+				color: $navbar-inverse-link-open-color;
+			}
+		}
+	}
+}
 
-// 	&:before, &:after {
-// 		bottom: -12px;
-// 	}
-// }
+.navbar-nav {
+	> li > .dropdown-menu {
+		margin-top: $box-shadow-default-y;
+	}
+
+	.navbar-form {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
 
 @media (max-width: $grid-float-breakpoint-max) {
 	.navbar-nav .open .dropdown-menu {
