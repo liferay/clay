@@ -107,6 +107,24 @@ $input-danger: $brand-danger !default;
 $input-success: $brand-success !default;
 $input-warning: $brand-warning !default;
 
+$checkbox-color: $brand-default !default;
+$checkbox-bg: #FFF !default;
+$checkbox-border: $brand-default !default;
+$checkbox-check: '\e013' !default;
+
+$checkbox-disabled-color: #C7CCD2 !default;
+$checkbox-disabled-bg: #FFF !default;
+$checkbox-disabled-border: #C7CCD2 !default;
+
+$radio-color: $checkbox-color !default;
+$radio-bg: $checkbox-bg !default;
+$radio-border: $checkbox-border !default;
+$radio-check-color: $checkbox-color !default;
+
+$radio-disabled-color: $checkbox-disabled-color !default;
+$radio-disabled-bg: $checkbox-disabled-bg !default;
+$radio-disabled-border: $checkbox-disabled-border !default;
+
 //== Dropdowns
 $dropdown-box-shadow: $box-shadow-default !default;
 $dropdown-bg:                              #EDF0F5 !default;

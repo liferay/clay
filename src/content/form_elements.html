@@ -21,7 +21,7 @@ section: Elements
 	</div>
 </div>
 
-<div class="col-md-6">
+<div class="col-md-12">
 	<div class="box panel panel-default">
 		<h4 class="panel-heading">Basic form Elements</h4>
 
@@ -137,7 +137,10 @@ section: Elements
 			<div class="col-md-6 form-group">
 				<div class="input-group">
 					<span class="input-group-addon">
-						<input type="checkbox">
+						<label class="checkbox-default">
+							<input type="checkbox" value="">
+							<span class="skin"></span>
+						</label>
 					</span>
 
 					<input class="form-control" type="text">
@@ -149,7 +152,10 @@ section: Elements
 					<input class="form-control" type="text">
 
 					<span class="input-group-addon">
-						<input type="radio">
+						<label class="radio-default">
+							<input name="radio3" type="radio" value="">
+							<span class="skin"></span>
+						</label>
 					</span>
 				</div>
 			</div>
@@ -157,7 +163,7 @@ section: Elements
 	</div>
 </div>
 
-<div class="col-md-6">
+<div class="col-md-12">
 	<div class="box panel panel-default">
 		<h4 class="panel-heading">Validation States</h4>
 
@@ -207,32 +213,180 @@ section: Elements
 	<div class="box panel panel-default">
 		<h4 class="panel-heading">Checkboxes and Radios</h4>
 
-		<div class="checkbox">
-			<label>
-				<input type="checkbox" value="">
-				Regular Check Box
-			</label>
+		<div class="row">
+			<div class="col-md-3">
+				<h5>Browser Default</h5>
+
+				<div>
+					<input type="checkbox" value="">
+				</div>
+
+				<div>
+					<label>
+						<input type="checkbox" value=""> 
+						Label
+					</label>
+				</div>
+
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+						Label with class checkbox
+					</label>
+				</div>
+
+				<div class="checkbox disabled">
+					<label>
+						<input checked disabled type="checkbox" value="">
+						Disabled Check Box
+					</label>
+				</div>
+
+				<div>
+					<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+					</label>
+					<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+					</label>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<h5>Checkbox Default**</h5>
+
+				<div>
+					<label class="checkbox-default">
+						<input class="input-sm" type="checkbox" value="">
+						<span class="skin"></span>
+					</label>
+				</div>
+				<label class="checkbox-default">
+					<input type="checkbox" value="">
+					<span class="skin"></span>
+					Label
+				</label>
+				<div class="checkbox checkbox-default">
+					<label>
+						<input class="input-sm" type="checkbox" value="">
+						<span class="skin"></span>
+						Label with class checkbox
+					</label>
+				</div>
+				<div class="checkbox checkbox-default disabled">
+					<label>
+						<input checked disabled type="checkbox" value="">
+						<span class="skin"></span>
+						Disabled Check Box
+					</label>
+				</div>
+
+				<div>
+					<label class="checkbox-inline checkbox-default">
+						<input type="checkbox" id="inlineCheckbox1" value="option1">
+						<span class="skin"></span> 1
+					</label>
+					<label class="checkbox-inline checkbox-default">
+						<input type="checkbox" id="inlineCheckbox2" value="option2">
+						<span class="skin"></span> 2
+					</label>
+					<label class="checkbox-inline checkbox-default">
+						<input type="checkbox" id="inlineCheckbox3" value="option3">
+						<span class="skin"></span> 3
+					</label>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<h5>Browser Default</h5>
+
+				<div>
+					<label>
+						<input name="radio1" type="radio" value="">
+					</label>
+				</div>
+
+				<label>
+					<input name="radio2" type="radio" value="">
+					Label
+				</label>
+
+				<div class="radio">
+					<label>
+						<input name="optionsRadios" type="radio">
+						Regular Radio Button
+					</label>
+				</div>
+
+				<div class="radio disabled">
+					<label>
+						<input disabled name="optionsRadios" type="radio">
+						Disabled Radio Button
+					</label>
+				</div>
+
+				<label class="radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+				</label>
+			</div>
+
+			<div class="col-md-3">
+				<h5>Radio Default**</h5>
+
+				<div>
+					<label class="radio-default">
+						<input name="radio3" type="radio" value="">
+						<span class="skin"></span>
+					</label>
+				</div>
+
+				<label class="radio-default">
+					<input name="radio4" type="radio" value="">
+					<span class="skin"></span>
+					Label
+				</label>
+
+				<div class="radio radio-default">
+					<label>
+						<input name="optionsRadios" type="radio">
+						<span class="skin"></span>
+						Regular Radio Button
+					</label>
+				</div>
+
+				<div class="radio radio-default disabled">
+					<label>
+						<input checked disabled name="optionsRadios" type="radio">
+						<span class="skin"></span>
+						Disabled Radio Button
+					</label>
+				</div>
+
+				<label class="radio-default radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"><span class="skin"></span> 1
+				</label>
+				<label class="radio-default radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"><span class="skin"></span> 2
+				</label>
+				<label class="radio-default radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"><span class="skin"></span> 3
+				</label>
+			</div>
 		</div>
 
-		<div class="checkbox disabled">
-			<label>
-				<input disabled type="checkbox" value="">
-				Disabled Check Box
-			</label>
-		</div>
-
-		<div class="radio">
-			<label>
-				<input name="optionsRadios" type="radio">
-				Regular Radio Button
-			</label>
-		</div>
-
-		<div class="radio disabled">
-			<label>
-				<input disabled name="optionsRadios" type="radio">
-				Disabled Radio Button
-			</label>
+		<div class="row">
+			<div class="col-md-12">
+				<h6>** Not compatible with IE8 and below, falls back to browser default.</h6>
+			</div>
 		</div>
 	</div>
 
