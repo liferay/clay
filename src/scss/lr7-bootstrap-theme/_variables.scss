@@ -62,25 +62,34 @@ $box-shadow-arrow-default-blur: $box-shadow-default-blur !default;
 $box-shadow-arrow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-arrow-default-blur $box-shadow-default-bg !default;
 
 //== Buttons
+$btn-group-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 $box-shadow-default-bg !default;
+$btn-group-toolbar-box-shadow: -4px 4px 0 0 $box-shadow-default-bg !default;
+$btn-group-vertical-box-shadow: $btn-group-toolbar-box-shadow !default;
+
 $btn-default-color:                        #FFF !default;
 $btn-default-bg:                           $brand-default !default;
-$btn-default-border:                       darken($btn-default-bg, 5%) !default;
+$btn-default-border:                       $brand-default !default;
 $btn-default-border-width: 0 !default;
 
 $btn-primary-color:                        #FFF !default;
 $btn-primary-bg:                           $brand-primary !default;
+$btn-primary-border:                       $btn-primary-bg !default;
 
 $btn-success-color:                        #FFF !default;
 $btn-success-bg:                           $brand-success !default;
+$btn-success-border:                       $btn-success-bg !default;
 
 $btn-info-color:                           #FFF !default;
 $btn-info-bg:                              $brand-info !default;
+$btn-info-border:                          $btn-info-bg !default;
 
 $btn-warning-color:                        #FFF !default;
 $btn-warning-bg:                           $brand-warning !default;
+$btn-warning-border:                       $btn-warning-bg !default;
 
 $btn-danger-color:                         #FFF !default;
 $btn-danger-bg:                            $brand-danger !default;
+$btn-danger-border:                        $btn-danger-bg !default;
 
 $btn-link-disabled-color:                  #FFF !default;
 
@@ -96,7 +105,7 @@ $input-bg-disabled:                        #EAEEF1 !default;
 $input-color:                              #E0E5EB !default;
 $input-border:                             #D7DCE2 !default;
 $input-border-focus:                       $brand-default !default;
-$input-color-placeholder:                  #B1B4BB !default;
+$input-color-placeholder:                  #FFF !default;
 
 $legend-border-color:                      #D7DCE2 !default;
 
@@ -109,7 +118,8 @@ $input-warning: $brand-warning !default;
 
 $checkbox-color: $brand-default !default;
 $checkbox-bg: #FFF !default;
-$checkbox-border: $brand-default !default;
+$checkbox-border: $input-border !default;
+$checkbox-border-focus: $brand-default !default;
 $checkbox-check: '\e013' !default;
 
 $checkbox-disabled-color: #C7CCD2 !default;

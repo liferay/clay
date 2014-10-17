@@ -5,7 +5,7 @@ section: Elements
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-6">
 			<div class="box panel panel-default">
 				<h4 class="panel-heading">Sample Sign In</h4>
 				<form role="form">
@@ -21,8 +21,12 @@ section: Elements
 						<input class="form-control" id="examplePassword" placeholder="Password" type="password">
 					</div>
 
-					<div class="checkbox">
-						<label><input type="checkbox">Remember Me</label>
+					<div class="checkbox checkbox-default">
+						<label>
+							<input type="checkbox">
+							<span class="skin"></span>
+							Remember Me
+						</label>
 					</div>
 
 					<button class="btn btn-primary" tyle="submit">Sign In</button>
@@ -30,7 +34,41 @@ section: Elements
 			</div>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-6">
+			<div class="box panel panel-default">
+				<h4 class="panel-heading">Sample In-line Sign In</h4>
+				<form role="form">
+					<div class="row">
+						<div class="col-md-6">
+							<div clas="form-group">
+								<label class="sr-only" for="exampleEmail">Email Address</label>
+
+								<input class="form-control" id="exampleEmail" type="email" value="@liferay.com">
+							</div>
+
+							<div class="checkbox checkbox-default">
+								<label>
+									<input type="checkbox">
+									<span class="skin"></span>
+									Remember Me
+								</label>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div clas="form-group">
+								<label class="sr-only" for="examplePassword">Password</label>
+
+								<input class="form-control" id="examplePassword" placeholder="Password" type="password">
+							</div>
+						</div>
+					</div>
+						<button class="btn btn-block btn-primary" type="submit">Sign In</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="col-md-12">
 			<div class="box panel panel-default">
 				<h4 class="panel-heading">Sample Horizontal Sign In</h4>
 
@@ -53,8 +91,12 @@ section: Elements
 
 					<div class="form-group">
 						<div class="col-md-offset-4 col-md-8">
-							<div class="checkbox">
-								<label><input type="checkbox">Remember Me</label>
+							<div class="checkbox checkbox-default">
+								<label>
+									<input type="checkbox">
+									<span class="skin"></span>
+									Remember Me
+								</label>
 							</div>
 						</div>
 					</div>
@@ -64,36 +106,6 @@ section: Elements
 							<button class="btn btn-primary" type="submit">Sign In</button>
 						</div>
 					</div>
-				</form>
-			</div>
-		</div>
-
-		<div class="col-md-4">
-			<div class="box panel panel-default">
-				<h4 class="panel-heading">Sample In-line Sign In</h4>
-				<form role="form">
-					<div class="row">
-						<div class="col-md-6">
-							<div clas="form-group">
-								<label class="sr-only" for="exampleEmail">Email Address</label>
-
-								<input class="form-control" id="exampleEmail" type="email" value="@liferay.com">
-							</div>
-
-							<div class="checkbox">
-								<label><input type="checkbox">Remember Me</label>
-							</div>
-						</div>
-
-						<div class="col-md-6">
-							<div clas="form-group">
-								<label class="sr-only" for="examplePassword">Password</label>
-
-								<input class="form-control" id="examplePassword" placeholder="Password" type="password">
-							</div>
-						</div>
-					</div>
-						<button class="btn btn-block btn-primary" type="submit">Sign In</button>
 				</form>
 			</div>
 		</div>
