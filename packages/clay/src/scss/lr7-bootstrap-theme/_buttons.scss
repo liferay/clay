@@ -1,0 +1,9 @@
+.btn {
+	&, &:focus, &:hover {
+		border: 1px solid transparent;
+	}
+
+	&:active, &.active {
+		@include box-shadow(none);
+	}
+}

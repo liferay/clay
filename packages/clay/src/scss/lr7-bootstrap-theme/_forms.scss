@@ -133,6 +133,7 @@ label.radio-default,
 		}
 
 		&:focus + .skin:after {
+			border-color: $checkbox-border-focus;
 			border-width: 2px;
 		}
 

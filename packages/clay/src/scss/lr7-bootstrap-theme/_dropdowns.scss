@@ -104,19 +104,27 @@
 	}
 }
 
-.dropdown-menu-top {
+.dropdown-menu-top, .dropup .dropdown-menu {
 	bottom: 100%;
 	margin-bottom: $box-shadow-default-y;
 	margin-top: 0;
 	top: auto;
 }
 
-.dropdown-menu-top-right {
+.dropdown-menu-top-right, .dropup .dropdown-menu-right {
 	bottom: 100%;
 	margin-bottom: $box-shadow-default-y;
 	margin-top: 0;
 	right: 0;
 	top: auto;
+}
+
+.dropup .dropdown-menu {
+	@extend .dropdown-menu.dropdown-menu-top;
+}
+
+.dropup .dropdown-menu-right {
+	@extend .dropdown-menu.dropdown-menu-top-right;
 }
 
 // Dropdown wide / full
