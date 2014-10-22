@@ -1,433 +1,433 @@
-$body-bg:                                  #FFF !default;
-$gray-darker:                              lighten(#000, 13.5%) !default; // #222
-$gray-dark:                                lighten(#000, 33.5%) !default; // #555
-$gray:                                     #E0E5EB !default;
-$gray-light:                               #EDF0F5 !default;
-$gray-lighter:                             #F8F9FB !default;
+$body-bg:                                  #FFF;
+$gray-darker:                              lighten(#000, 13.5%); // #222
+$gray-dark:                                lighten(#000, 33.5%); // #555
+$gray:                                     #E0E5EB;
+$gray-light:                               #EDF0F5;
+$gray-lighter:                             #F8F9FB;
 
-$brand-default-active: #18293D !default;
-$brand-default-hover: #426384 !default;
-$brand-default:                            #2C4259 !default;
+$brand-default-active: #18293D;
+$brand-default-hover: #426384;
+$brand-default:                            #2C4259;
 
-$brand-primary-active: #037FBF !default;
-$brand-primary-hover: #68C3F2 !default;
-$brand-primary:                            #32A8E6 !default;
+$brand-primary-active: #037FBF;
+$brand-primary-hover: #68C3F2;
+$brand-primary:                            #32A8E6;
 
-$brand-success-active: #33766C !default;
-$brand-success-hover: #399E8E !default;
-$brand-success:                            #42BFAD !default;
+$brand-success-active: #33766C;
+$brand-success-hover: #399E8E;
+$brand-success:                            #42BFAD;
 
-$brand-info-active: #17438C !default;
-$brand-info-hover: #1A53AD !default;
-$brand-info:                               #1E5EC8 !default;
+$brand-info-active: #17438C;
+$brand-info-hover: #1A53AD;
+$brand-info:                               #1E5EC8;
 
-$brand-warning-active: #C04229 !default;
-$brand-warning-hover: #DB5135 !default;
-$brand-warning:                            #EE664C !default;
+$brand-warning-active: #C04229;
+$brand-warning-hover: #DB5135;
+$brand-warning:                            #EE664C;
 
-$brand-danger-active: #B3173F !default;
-$brand-danger-hover: #CE1747 !default;
-$brand-danger:                             #E9295A !default;
+$brand-danger-active: #B3173F;
+$brand-danger-hover: #CE1747;
+$brand-danger:                             #E9295A;
 
 //** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:                      $brand-primary !default;
+$component-active-bg:                      $brand-primary;
 //** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:                   #FFF !default;
+$component-active-color:                   #FFF;
 
-$font-family-sans-serif:                   "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:                   "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$link-hover-color:                         $brand-primary-hover !default;
+$link-hover-color:                         $brand-primary-hover;
 
 //== Border Radius
 //** Defines global border-radius
-$border-radius-default: 0 !default;
-$border-radius-base:                       $border-radius-default !default;
-$border-radius-large:                      $border-radius-default * 1.5 !default;
-$border-radius-small:                      $border-radius-default * 0.75 !default;
+$border-radius-default: 0;
+$border-radius-base:                       $border-radius-default;
+$border-radius-large:                      $border-radius-default * 1.5;
+$border-radius-small:                      $border-radius-default * 0.75;
 
 //== Box Shadow
 $popover-arrow-width: 10px;
-$box-shadow-default-x: -10px !default;
-$box-shadow-default-y: 10px !default;
-$box-shadow-default-blur: 0 !default;
-$box-shadow-default-spread: 0 !default;
-$box-shadow-default-bg: $gray !default;
-$box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default;
-$box-shadow-arrow-default-blur: $box-shadow-default-blur !default;
+$box-shadow-default-x: -10px;
+$box-shadow-default-y: 10px;
+$box-shadow-default-blur: 0;
+$box-shadow-default-spread: 0;
+$box-shadow-default-bg: $gray;
+$box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
+$box-shadow-arrow-default-blur: $box-shadow-default-blur;
 
 @if $box-shadow-default-blur >= 3 {
 	$box-shadow-arrow-default-blur: 3px;
 }
 
-$box-shadow-arrow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-arrow-default-blur $box-shadow-default-bg !default;
+$box-shadow-arrow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-arrow-default-blur $box-shadow-default-bg;
 
 //== Buttons
-$btn-group-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 $box-shadow-default-bg !default;
-$btn-group-toolbar-box-shadow: -4px 4px 0 0 $box-shadow-default-bg !default;
-$btn-group-vertical-box-shadow: $btn-group-toolbar-box-shadow !default;
+$btn-group-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 $box-shadow-default-bg;
+$btn-group-toolbar-box-shadow: -4px 4px 0 0 $box-shadow-default-bg;
+$btn-group-vertical-box-shadow: $btn-group-toolbar-box-shadow;
 
-$btn-default-color:                        #FFF !default;
-$btn-default-bg:                           $brand-default !default;
-$btn-default-border:                       $brand-default !default;
-$btn-default-border-width: 0 !default;
+$btn-default-color:                        #FFF;
+$btn-default-bg:                           $brand-default;
+$btn-default-border:                       $brand-default;
+$btn-default-border-width: 0;
 
-$btn-primary-color:                        #FFF !default;
-$btn-primary-bg:                           $brand-primary !default;
-$btn-primary-border:                       $btn-primary-bg !default;
+$btn-primary-color:                        #FFF;
+$btn-primary-bg:                           $brand-primary;
+$btn-primary-border:                       $btn-primary-bg;
 
-$btn-success-color:                        #FFF !default;
-$btn-success-bg:                           $brand-success !default;
-$btn-success-border:                       $btn-success-bg !default;
+$btn-success-color:                        #FFF;
+$btn-success-bg:                           $brand-success;
+$btn-success-border:                       $btn-success-bg;
 
-$btn-info-color:                           #FFF !default;
-$btn-info-bg:                              $brand-info !default;
-$btn-info-border:                          $btn-info-bg !default;
+$btn-info-color:                           #FFF;
+$btn-info-bg:                              $brand-info;
+$btn-info-border:                          $btn-info-bg;
 
-$btn-warning-color:                        #FFF !default;
-$btn-warning-bg:                           $brand-warning !default;
-$btn-warning-border:                       $btn-warning-bg !default;
+$btn-warning-color:                        #FFF;
+$btn-warning-bg:                           $brand-warning;
+$btn-warning-border:                       $btn-warning-bg;
 
-$btn-danger-color:                         #FFF !default;
-$btn-danger-bg:                            $brand-danger !default;
-$btn-danger-border:                        $btn-danger-bg !default;
+$btn-danger-color:                         #FFF;
+$btn-danger-bg:                            $brand-danger;
+$btn-danger-border:                        $btn-danger-bg;
 
-$btn-link-disabled-color:                  #FFF !default;
+$btn-link-disabled-color:                  #FFF;
 
-$line-height-base:                         1.4286 !default;
+$line-height-base:                         1.4286;
 
 //== Forms
-$form-control-box-shadow: none !default;
-$form-control-focus-box-shadow: none !default;
-$input-box-shadow: none !default;
+$form-control-box-shadow: none;
+$form-control-focus-box-shadow: none;
+$input-box-shadow: none;
 
-$input-bg:                                 #FFF !default;
-$input-bg-disabled:                        #EAEEF1 !default;
-$input-color:                              #E0E5EB !default;
-$input-border:                             #D7DCE2 !default;
-$input-border-focus:                       $brand-default !default;
-$input-color-placeholder:                  #FFF !default;
+$input-bg:                                 #FFF;
+$input-bg-disabled:                        #EAEEF1;
+$input-color:                              #E0E5EB;
+$input-border:                             #D7DCE2;
+$input-border-focus:                       $brand-default;
+$input-color-placeholder:                  #FFF;
 
-$legend-border-color:                      #D7DCE2 !default;
+$legend-border-color:                      #D7DCE2;
 
-$input-group-addon-bg:                     $brand-default !default;
-$input-group-addon-border-color:           $input-group-addon-bg !default;
+$input-group-addon-bg:                     $brand-default;
+$input-group-addon-border-color:           $input-group-addon-bg;
 
-$input-danger: $brand-danger !default;
-$input-success: $brand-success !default;
-$input-warning: $brand-warning !default;
+$input-danger: $brand-danger;
+$input-success: $brand-success;
+$input-warning: $brand-warning;
 
-$checkbox-color: $brand-default !default;
-$checkbox-bg: #FFF !default;
-$checkbox-border: $input-border !default;
-$checkbox-border-focus: $brand-default !default;
-$checkbox-check: '\e013' !default;
+$checkbox-color: $brand-default;
+$checkbox-bg: #FFF;
+$checkbox-border: $input-border;
+$checkbox-border-focus: $brand-default;
+$checkbox-check: '\e013';
 
-$checkbox-disabled-color: #C7CCD2 !default;
-$checkbox-disabled-bg: #FFF !default;
-$checkbox-disabled-border: #C7CCD2 !default;
+$checkbox-disabled-color: #C7CCD2;
+$checkbox-disabled-bg: #FFF;
+$checkbox-disabled-border: #C7CCD2;
 
-$radio-color: $checkbox-color !default;
-$radio-bg: $checkbox-bg !default;
-$radio-border: $checkbox-border !default;
-$radio-check-color: $checkbox-color !default;
+$radio-color: $checkbox-color;
+$radio-bg: $checkbox-bg;
+$radio-border: $checkbox-border;
+$radio-check-color: $checkbox-color;
 
-$radio-disabled-color: $checkbox-disabled-color !default;
-$radio-disabled-bg: $checkbox-disabled-bg !default;
-$radio-disabled-border: $checkbox-disabled-border !default;
+$radio-disabled-color: $checkbox-disabled-color;
+$radio-disabled-bg: $checkbox-disabled-bg;
+$radio-disabled-border: $checkbox-disabled-border;
 
 //== Dropdowns
-$dropdown-box-shadow: $box-shadow-default !default;
-$dropdown-bg:                              #EDF0F5 !default;
-$dropdown-border:                          #EDF0F5 !default;
+$dropdown-box-shadow: $box-shadow-default;
+$dropdown-bg:                              #EDF0F5;
+$dropdown-border:                          #EDF0F5;
 //** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:                 #EDF0F5 !default;
-$dropdown-divider-bg:                      #F8F9FB !default;
+$dropdown-fallback-border:                 #EDF0F5;
+$dropdown-divider-bg:                      #F8F9FB;
 
-$dropdown-link-color:                      $brand-default !default;
-$dropdown-link-hover-color:                #FFF !default;
-$dropdown-link-hover-bg:                   $brand-primary !default;
+$dropdown-link-color:                      $brand-default;
+$dropdown-link-hover-color:                #FFF;
+$dropdown-link-hover-bg:                   $brand-primary;
 
-$dropdown-link-active-color:               $component-active-color !default;
-$dropdown-link-active-bg:                  $component-active-bg !default;
+$dropdown-link-active-color:               $component-active-color;
+$dropdown-link-active-bg:                  $component-active-bg;
 
-$dropdown-link-disabled-color:             #CACDD2 !default;
+$dropdown-link-disabled-color:             #CACDD2;
 
-$dropdown-header-color:                    #828F98 !default;
+$dropdown-header-color:                    #828F98;
 
-$dropdown-wide-width: 500px !default;
+$dropdown-wide-width: 500px;
 
 // Dropdown Inverse
-$dropdown-inverse-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 #EFF2F7 !default;
-$dropdown-inverse-bg: $brand-default !default;
-$dropdown-inverse-border: $brand-default !default;
-$dropdown-inverse-link-color: #FFF !default;
-$dropdown-inverse-disabled-color: $brand-default-active !default;
-$dropdown-inverse-divider-bg: $brand-default-active !default;
-$dropdown-inverse-header-color: $brand-default-hover !default;
+$dropdown-inverse-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 #EFF2F7;
+$dropdown-inverse-bg: $brand-default;
+$dropdown-inverse-border: $brand-default;
+$dropdown-inverse-link-color: #FFF;
+$dropdown-inverse-disabled-color: $brand-default-active;
+$dropdown-inverse-divider-bg: $brand-default-active;
+$dropdown-inverse-header-color: $brand-default-hover;
 
 //== Navbar Default
-$navbar-default-color:                     $brand-default !default;
-$navbar-default-bg:                        #EDF0F5 !default;
-$navbar-default-border:                    #EDF0F5 !default;
+$navbar-default-color:                     $brand-default;
+$navbar-default-bg:                        #EDF0F5;
+$navbar-default-border:                    #EDF0F5;
 
-$navbar-default-link-color:                $brand-default !default;
-$navbar-default-link-hover-color:          $brand-primary !default;
-$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-color:                $brand-default;
+$navbar-default-link-hover-color:          $brand-primary;
+$navbar-default-link-hover-bg:             transparent;
 
-$navbar-default-link-active-color:         $brand-primary !default;
-$navbar-default-link-active-bg:            transparent !default;
+$navbar-default-link-active-color:         $brand-primary;
+$navbar-default-link-active-bg:            transparent;
 
-$navbar-default-link-disabled-color:       #CACDD2 !default;
-$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-disabled-color:       #CACDD2;
+$navbar-default-link-disabled-bg:          transparent;
 
-$navbar-default-brand-color:               $navbar-default-link-color !default;
-$navbar-default-brand-hover-color:         $navbar-default-link-hover-color !default;
-$navbar-default-brand-hover-bg:            transparent !default;
+$navbar-default-brand-color:               $navbar-default-link-color;
+$navbar-default-brand-hover-color:         $navbar-default-link-hover-color;
+$navbar-default-brand-hover-bg:            transparent;
 
-$navbar-default-link-open-bg: $brand-primary !default;
-$navbar-default-link-open-color: #FFF !default;
+$navbar-default-link-open-bg: $brand-primary;
+$navbar-default-link-open-color: #FFF;
 
 //== Navbar Inverse
-$navbar-inverse-color:                     #FFF !default;
-$navbar-inverse-bg:                        $brand-default !default;
-$navbar-inverse-border:                    $brand-default !default;
+$navbar-inverse-color:                     #FFF;
+$navbar-inverse-bg:                        $brand-default;
+$navbar-inverse-border:                    $brand-default;
 
-$navbar-inverse-link-color:                #FFF !default;
-$navbar-inverse-link-hover-color:          $brand-primary !default;
-$navbar-inverse-link-active-color:         $brand-primary !default;
-$navbar-inverse-link-active-bg:            transparent !default;
-$navbar-inverse-link-disabled-color:       #122F51 !default;
-$navbar-inverse-brand-color:               $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-color:         $brand-primary !default;
-$navbar-inverse-toggle-border-color:       #18293D !default;
-$navbar-inverse-toggle-hover-bg:           #426384 !default;
+$navbar-inverse-link-color:                #FFF;
+$navbar-inverse-link-hover-color:          $brand-primary;
+$navbar-inverse-link-active-color:         $brand-primary;
+$navbar-inverse-link-active-bg:            transparent;
+$navbar-inverse-link-disabled-color:       #122F51;
+$navbar-inverse-brand-color:               $navbar-inverse-link-color;
+$navbar-inverse-brand-hover-color:         $brand-primary;
+$navbar-inverse-toggle-border-color:       #18293D;
+$navbar-inverse-toggle-hover-bg:           #426384;
 
-$navbar-inverse-link-open-bg: $brand-primary !default;
-$navbar-inverse-link-open-color: #FFF !default;
+$navbar-inverse-link-open-bg: $brand-primary;
+$navbar-inverse-link-open-color: #FFF;
 
 //== Pagination
 $pagination-border-radius: 20px;
 $pagination-padding-base-vertical: 4px!default;
-$pagination-padding-base-horizontal: 20px !default;
-$pagination-padding-large-vertical: $pagination-padding-base-vertical * 1.25 !default;
-$pagination-padding-large-horizontal: $pagination-padding-base-horizontal * 1.25 !default;
-$pagination-padding-small-vertical: $pagination-padding-base-vertical * 0.75 !default;
-$pagination-padding-small-horizontal: $pagination-padding-base-horizontal * 0.75 !default;
+$pagination-padding-base-horizontal: 20px;
+$pagination-padding-large-vertical: $pagination-padding-base-vertical * 1.25;
+$pagination-padding-large-horizontal: $pagination-padding-base-horizontal * 1.25;
+$pagination-padding-small-vertical: $pagination-padding-base-vertical * 0.75;
+$pagination-padding-small-horizontal: $pagination-padding-base-horizontal * 0.75;
 
-$pagination-color:                         $brand-default !default;
-$pagination-bg:                            #FFF !default;
-$pagination-border:                        $brand-default !default;
+$pagination-color:                         $brand-default;
+$pagination-bg:                            #FFF;
+$pagination-border:                        $brand-default;
 
-$pagination-hover-color:                   #FFF !default;
-$pagination-hover-bg:                      $brand-primary !default;
-$pagination-hover-border:                  $brand-default !default;
+$pagination-hover-color:                   #FFF;
+$pagination-hover-bg:                      $brand-primary;
+$pagination-hover-border:                  $brand-default;
 
-$pagination-active-color:                  $brand-primary !default;
-$pagination-active-bg:                     #FFF !default;
-$pagination-active-border:                 $brand-default !default;
+$pagination-active-color:                  $brand-primary;
+$pagination-active-bg:                     #FFF;
+$pagination-active-border:                 $brand-default;
 
-$pagination-disabled-color:                #D2D2D2 !default;
-$pagination-disabled-bg:                   #FFF !default;
-$pagination-disabled-border:               $brand-default !default;
+$pagination-disabled-color:                #D2D2D2;
+$pagination-disabled-bg:                   #FFF;
+$pagination-disabled-border:               $brand-default;
 
 //Pagination Inverse
-$pagination-inverse-color: #FFF !default;
-$pagination-inverse-bg: $brand-default !default;
-$pagination-inverse-border: $brand-default !default;
+$pagination-inverse-color: #FFF;
+$pagination-inverse-bg: $brand-default;
+$pagination-inverse-border: $brand-default;
 
-$pagination-inverse-hover-color: #FFF !default;
-$pagination-inverse-hover-bg: $brand-primary !default;
-$pagination-inverse-hover-border: $brand-default !default;
+$pagination-inverse-hover-color: #FFF;
+$pagination-inverse-hover-bg: $brand-primary;
+$pagination-inverse-hover-border: $brand-default;
 
-$pagination-inverse-active-color: $brand-primary !default;
-$pagination-inverse-active-bg: $brand-default !default;
-$pagination-inverse-active-border: $brand-default !default;
+$pagination-inverse-active-color: $brand-primary;
+$pagination-inverse-active-bg: $brand-default;
+$pagination-inverse-active-border: $brand-default;
 
-$pagination-inverse-disabled-color: $brand-default-hover !default;
-$pagination-inverse-disabled-bg: $brand-default !default;
-$pagination-inverse-disabled-border: $brand-default !default;
+$pagination-inverse-disabled-color: $brand-default-hover;
+$pagination-inverse-disabled-bg: $brand-default;
+$pagination-inverse-disabled-border: $brand-default;
 
 //Pagination Borderless1
-$pagination-borderless1-border-radius: 0 !default;
-$pagination-borderless1-color: #C4C3C8 !default;
-$pagination-borderless1-bg: transparent !default;
-$pagination-borderless1-border: transparent !default;
+$pagination-borderless1-border-radius: 0;
+$pagination-borderless1-color: #C4C3C8;
+$pagination-borderless1-bg: transparent;
+$pagination-borderless1-border: transparent;
 
-$pagination-borderless1-controls-color: $pagination-borderless1-color !default;
-$pagination-borderless1-controls-bg: $pagination-borderless1-bg !default;
-$pagination-borderless1-controls-border: $pagination-borderless1-border !default;
+$pagination-borderless1-controls-color: $pagination-borderless1-color;
+$pagination-borderless1-controls-bg: $pagination-borderless1-bg;
+$pagination-borderless1-controls-border: $pagination-borderless1-border;
 
-$pagination-borderless1-hover-color: $brand-default !default;
-$pagination-borderless1-hover-bg: transparent !default;
-$pagination-borderless1-hover-border: transparent !default;
+$pagination-borderless1-hover-color: $brand-default;
+$pagination-borderless1-hover-bg: transparent;
+$pagination-borderless1-hover-border: transparent;
 
-$pagination-borderless1-active-color: $brand-primary !default;
-$pagination-borderless1-active-bg: $pagination-borderless1-bg !default;
-$pagination-borderless1-active-border: $pagination-borderless1-border !default;
+$pagination-borderless1-active-color: $brand-primary;
+$pagination-borderless1-active-bg: $pagination-borderless1-bg;
+$pagination-borderless1-active-border: $pagination-borderless1-border;
 
-$pagination-borderless1-disabled-color: #EEE !default;
-$pagination-borderless1-disabled-bg: $pagination-borderless1-bg !default;
-$pagination-borderless1-disabled-border: $pagination-borderless1-border !default;
+$pagination-borderless1-disabled-color: #EEE;
+$pagination-borderless1-disabled-bg: $pagination-borderless1-bg;
+$pagination-borderless1-disabled-border: $pagination-borderless1-border;
 
 //Pagination Borderless2
-$pagination-borderless2-border-radius: 20px !default;
-$pagination-borderless2-color: #C4C3C8 !default;
-$pagination-borderless2-bg: transparent !default;
-$pagination-borderless2-border: transparent !default;
+$pagination-borderless2-border-radius: 20px;
+$pagination-borderless2-color: #C4C3C8;
+$pagination-borderless2-bg: transparent;
+$pagination-borderless2-border: transparent;
 
-$pagination-borderless2-controls-color: #FFF !default;
-$pagination-borderless2-controls-bg: $brand-primary !default;
-$pagination-borderless2-controls-border: $brand-primary !default;
+$pagination-borderless2-controls-color: #FFF;
+$pagination-borderless2-controls-bg: $brand-primary;
+$pagination-borderless2-controls-border: $brand-primary;
 
-$pagination-borderless2-hover-color: $brand-default !default;
-$pagination-borderless2-hover-bg: $pagination-borderless2-bg !default;
-$pagination-borderless2-hover-border: $pagination-borderless2-border !default;
+$pagination-borderless2-hover-color: $brand-default;
+$pagination-borderless2-hover-bg: $pagination-borderless2-bg;
+$pagination-borderless2-hover-border: $pagination-borderless2-border;
 
-$pagination-borderless2-active-color: $brand-default !default;
-$pagination-borderless2-active-bg: $pagination-borderless2-bg !default;
-$pagination-borderless2-active-border: $pagination-borderless2-border !default;
+$pagination-borderless2-active-color: $brand-default;
+$pagination-borderless2-active-bg: $pagination-borderless2-bg;
+$pagination-borderless2-active-border: $pagination-borderless2-border;
 
-$pagination-borderless2-disabled-color: #EEE !default;
-$pagination-borderless2-disabled-bg: $pagination-borderless2-bg !default;
-$pagination-borderless2-disabled-border: $pagination-borderless2-border !default;
+$pagination-borderless2-disabled-color: #EEE;
+$pagination-borderless2-disabled-bg: $pagination-borderless2-bg;
+$pagination-borderless2-disabled-border: $pagination-borderless2-border;
 
 //Pager
-$pager-bg:                                 #FFF !default;
-$pager-color: $brand-default !default;
-$pager-border:                             #D2D6DF !default;
-$pager-border-radius:                      20px !default;
-$pager-border-width: 2px !default;
+$pager-bg:                                 #FFF;
+$pager-color: $brand-default;
+$pager-border:                             #D2D6DF;
+$pager-border-radius:                      20px;
+$pager-border-width: 2px;
 
-$pager-hover-bg:                           $pagination-hover-bg !default;
-$pager-hover-color: #FFF !default;
-$pager-hover-border: $brand-primary !default;
+$pager-hover-bg:                           $pagination-hover-bg;
+$pager-hover-color: #FFF;
+$pager-hover-border: $brand-primary;
 
-$pager-disabled-bg: #FFF !default;
-$pager-disabled-color:                     $pagination-disabled-color !default;
-$pager-disabled-border: $pager-border !default;
+$pager-disabled-bg: #FFF;
+$pager-disabled-color:                     $pagination-disabled-color;
+$pager-disabled-border: $pager-border;
 
 //Pager Inverse
-$pager-inverse-bg: #D2D6DF !default;
-$pager-inverse-color: #FFF !default;
-$pager-inverse-border: #D2D6DF !default;
-$pager-inverse-border-radius: 20px !default;
-$pager-inverse-border-width: 2px !default;
+$pager-inverse-bg: #D2D6DF;
+$pager-inverse-color: #FFF;
+$pager-inverse-border: #D2D6DF;
+$pager-inverse-border-radius: 20px;
+$pager-inverse-border-width: 2px;
 
-$pager-inverse-hover-bg: $brand-primary !default;
-$pager-inverse-hover-color: #FFF !default;
-$pager-inverse-hover-border: $pager-inverse-hover-bg !default;
+$pager-inverse-hover-bg: $brand-primary;
+$pager-inverse-hover-color: #FFF;
+$pager-inverse-hover-border: $pager-inverse-hover-bg;
 
-$pager-inverse-disabled-bg: #EEE !default;
-$pager-inverse-disabled-color: $pagination-disabled-color !default;
-$pager-inverse-disabled-border: $pager-disabled-bg !default;
+$pager-inverse-disabled-bg: #EEE;
+$pager-inverse-disabled-color: $pagination-disabled-color;
+$pager-inverse-disabled-border: $pager-disabled-bg;
 
 //Pager Borderless1
-$pager-borderless1-bg: transparent !default;
-$pager-borderless1-color: $brand-primary !default;
-$pager-borderless1-border: transparent !default;
-$pager-borderless1-border-radius: 0 !default;
-$pager-borderless1-border-width: 0 !default;
+$pager-borderless1-bg: transparent;
+$pager-borderless1-color: $brand-primary;
+$pager-borderless1-border: transparent;
+$pager-borderless1-border-radius: 0;
+$pager-borderless1-border-width: 0;
 
-$pager-borderless1-hover-bg: $pager-borderless1-bg !default;
-$pager-borderless1-hover-color: #D2D6DF !default;
-$pager-borderless1-hover-border: $pager-borderless1-border !default;
+$pager-borderless1-hover-bg: $pager-borderless1-bg;
+$pager-borderless1-hover-color: #D2D6DF;
+$pager-borderless1-hover-border: $pager-borderless1-border;
 
-$pager-borderless1-disabled-bg: $pager-borderless1-bg !default;
-$pager-borderless1-disabled-color: $pagination-disabled-color !default;
-$pager-borderless1-disabled-border: $pager-borderless1-border !default;
+$pager-borderless1-disabled-bg: $pager-borderless1-bg;
+$pager-borderless1-disabled-color: $pagination-disabled-color;
+$pager-borderless1-disabled-border: $pager-borderless1-border;
 
 //Popovers
-$popover-border-radius: $border-radius-default !default;
-$popover-box-shadow: $box-shadow-default !default;
-$popover-arrow-box-shadow: $box-shadow-arrow-default !default;
+$popover-border-radius: $border-radius-default;
+$popover-box-shadow: $box-shadow-default;
+$popover-arrow-box-shadow: $box-shadow-arrow-default;
 
-$popover-bg:                                      #FFF !default;
-$popover-max-width:                               276px !default;
-$popover-border-color:                            $brand-default !default;
-$popover-fallback-border-color:                   $brand-default !default;
-$popover-title-color: #FFF !default;
-$popover-title-bg:                                $brand-default !default;
-$popover-arrow-width:                             10px !default;
-$popover-arrow-color:                             #FFF !default;
+$popover-bg:                                      #FFF;
+$popover-max-width:                               276px;
+$popover-border-color:                            $brand-default;
+$popover-fallback-border-color:                   $brand-default;
+$popover-title-color: #FFF;
+$popover-title-bg:                                $brand-default;
+$popover-arrow-width:                             10px;
+$popover-arrow-color:                             #FFF;
 
 //Modals
-$modal-box-shadow: $box-shadow-default !default;
+$modal-box-shadow: $box-shadow-default;
 
 //Breadcrumbs
-$breadcrumb-padding-vertical:                     4px !default;
-$breadcrumb-padding-horizontal:                   15px !default;
+$breadcrumb-padding-vertical:                     4px;
+$breadcrumb-padding-horizontal:                   15px;
 
-$breadcrumb-bg:                                   $body-bg !default;
+$breadcrumb-bg:                                   $body-bg;
 
-$breadcrumb-color:                                #ccc !default;
+$breadcrumb-color:                                #ccc;
 
-$breadcrumb-active-color:                         $gray-light !default;
+$breadcrumb-active-color:                         $gray-light;
 
 //Breadcrumb Default
-$breadcrumb-default-bg: $body-bg !default;
-$breadcrumb-default-border: $brand-default !default;
-$breadcrumb-default-link-color: $brand-default !default;
-$breadcrumb-default-link-bg: #FFF !default;
-$breadcrumb-default-active-border: $brand-primary !default;
-$breadcrumb-default-active-color: #FFF !default;
-$breadcrumb-default-active-link-bg: $brand-primary !default;
+$breadcrumb-default-bg: $body-bg;
+$breadcrumb-default-border: $brand-default;
+$breadcrumb-default-link-color: $brand-default;
+$breadcrumb-default-link-bg: #FFF;
+$breadcrumb-default-active-border: $brand-primary;
+$breadcrumb-default-active-color: #FFF;
+$breadcrumb-default-active-link-bg: $brand-primary;
 
 //Breadcrumb Inverse
-$breadcrumb-inverse-bg: $body-bg !default;
-$breadcrumb-inverse-border: $brand-default !default;
-$breadcrumb-inverse-link-color: $brand-default !default;
-$breadcrumb-inverse-link-bg: $brand-default !default;
-$breadcrumb-inverse-active-border: $brand-primary !default;
-$breadcrumb-inverse-active-color: $brand-default !default;
-$breadcrumb-inverse-active-link-bg: #FFF !default;
+$breadcrumb-inverse-bg: $body-bg;
+$breadcrumb-inverse-border: $brand-default;
+$breadcrumb-inverse-link-color: $brand-default;
+$breadcrumb-inverse-link-bg: $brand-default;
+$breadcrumb-inverse-active-border: $brand-primary;
+$breadcrumb-inverse-active-color: $brand-default;
+$breadcrumb-inverse-active-link-bg: #FFF;
 
 //Breadcrumb Borderless
-$breadcrumb-borderless-border-radius: 0 !default;
-$breadcrumb-borderless-bg: #FFF !default;
-$breadcrumb-borderless-link-color: $brand-default !default;
-$breadcrumb-borderless-link-bg: transparent !default;
-$breadcrumb-borderless-active-color: $brand-primary !default;
-$breadcrumb-borderless-separator-bg: $breadcrumb-borderless-bg !default;
-$breadcrumb-borderless-separator-color: #D2D6DF !default;
+$breadcrumb-borderless-border-radius: 0;
+$breadcrumb-borderless-bg: #FFF;
+$breadcrumb-borderless-link-color: $brand-default;
+$breadcrumb-borderless-link-bg: transparent;
+$breadcrumb-borderless-active-color: $brand-primary;
+$breadcrumb-borderless-separator-bg: $breadcrumb-borderless-bg;
+$breadcrumb-borderless-separator-color: #D2D6DF;
 
 //== Tooltips
-$tooltip-border-radius: $border-radius-default !default;
-$tooltip-box-shadow-x: -7px !default;
-$tooltip-box-shadow-y: 7px !default;
-$tooltip-box-shadow-blur: 0 !default;
-$tooltip-box-shadow-spread: 0 !default;
-$tooltip-box-shadow-bg: $gray !default;
-$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg !default;
-$tooltip-bg:                                      $brand-default !default;
-$tooltip-opacity:                                 1 !default;
+$tooltip-border-radius: $border-radius-default;
+$tooltip-box-shadow-x: -7px;
+$tooltip-box-shadow-y: 7px;
+$tooltip-box-shadow-blur: 0;
+$tooltip-box-shadow-spread: 0;
+$tooltip-box-shadow-bg: $gray;
+$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg;
+$tooltip-bg:                                      $brand-default;
+$tooltip-opacity:                                 1;
 
 //Navs
-$nav-link-color: $brand-default !default;
-$nav-link-hover-bg:                               transparent !default;
-$nav-link-hover-color: $brand-primary !default;
+$nav-link-color: $brand-default;
+$nav-link-hover-bg:                               transparent;
+$nav-link-hover-color: $brand-primary;
 
-$nav-disabled-link-color:                         #C5CDD0 !default;
-$nav-disabled-link-hover-color:                   #C5CDD0 !default;
+$nav-disabled-link-color:                         #C5CDD0;
+$nav-disabled-link-hover-color:                   #C5CDD0;
 
 //Tabs
-$nav-tabs-border-radius: $border-radius-base $border-radius-base 0 0 !default;
+$nav-tabs-border-radius: $border-radius-base $border-radius-base 0 0;
 
-$nav-tabs-border-color:                           #EDF0F5 !default;
-$nav-tabs-link-hover-border-color:                transparent !default;
-$nav-tabs-border-width: 2px !default;
+$nav-tabs-border-color:                           #EDF0F5;
+$nav-tabs-link-hover-border-color:                transparent;
+$nav-tabs-border-width: 2px;
 
-$nav-tabs-active-link-hover-color:                $brand-default !default;
-$nav-tabs-active-link-hover-border-color:         #EDF0F5 !default;
+$nav-tabs-active-link-hover-color:                $brand-default;
+$nav-tabs-active-link-hover-border-color:         #EDF0F5;
 
-$nav-tabs-justified-link-border-color:            $nav-tabs-border-color !default;
+$nav-tabs-justified-link-border-color:            $nav-tabs-border-color;
 
 //Pills
-$nav-pills-border-radius:                         $border-radius-base !default;
-$nav-pills-active-link-hover-bg:                  transparent !default;
-$nav-pills-active-link-hover-color:               $brand-default !default;
+$nav-pills-border-radius:                         $border-radius-base;
+$nav-pills-active-link-hover-bg:                  transparent;
+$nav-pills-active-link-hover-color:               $brand-default;
 
 //Tab Group
-$tab-group-top-border-radius: $border-radius-base $border-radius-base 0 0 !default;
-$tab-group-bottom-border-radius: 0 0 $border-radius-base $border-radius-base !default;
-$tab-group-left-border-radius: $border-radius-base 0 0 $border-radius-base !default;
-$tab-group-right-border-radius: 0 $border-radius-base $border-radius-base 0 !default;
+$tab-group-top-border-radius: $border-radius-base $border-radius-base 0 0;
+$tab-group-bottom-border-radius: 0 0 $border-radius-base $border-radius-base;
+$tab-group-left-border-radius: $border-radius-base 0 0 $border-radius-base;
+$tab-group-right-border-radius: 0 $border-radius-base $border-radius-base 0;
