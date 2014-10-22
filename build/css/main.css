@@ -1,27 +1,3 @@
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype'); }
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: url('../fonts/Lato/Lato-Italic.ttf') format('truetype'); }
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/Lato/Lato-Black.ttf') format('truetype'); }
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype'); }
-
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
