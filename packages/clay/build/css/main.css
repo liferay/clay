@@ -22,11 +22,6 @@
   font-weight: 700;
   src: url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype'); }
 
-/* 
-	Define variables here to overwrite lr7-bootstrap theme's variables and
-	bootstrap 3's variables, Remember to include !default at end of each
-	statement.
-*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5862,24 +5857,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   margin: 0;
   overflow: auto;
   padding: 0; }
-
-.header:hover {
-  cursor: pointer; }
-
-.panel .toggler-content-wrapper .list-group {
-  margin-bottom: 0; }
-  .panel .toggler-content-wrapper .list-group.list-group.no-borders .list-group-item {
-    border-top-width: 0; }
-  .panel .toggler-content-wrapper .list-group .list-group-item {
-    border-left-width: 0;
-    border-right-width: 0; }
-    .panel .toggler-content-wrapper .list-group .list-group-item:first-child {
-      border-top-width: 0; }
-
-.separated-panels {
-  margin-bottom: 20px; }
-  .separated-panels .panel {
-    margin-bottom: 5px; }
 
 .chat-group-item {
   bottom: 0;
