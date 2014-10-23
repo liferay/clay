@@ -5748,6 +5748,31 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   border-radius: -1 -1 0 0;
   color: #FFF; }
 
+.sidenav-container {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table; }
+  .sidenav-container.closed .sidenav-secondary-content {
+    width: 0; }
+
+.sidenav-cell {
+  display: table-cell;
+  vertical-align: top; }
+
+.sidenav-main-content {
+  padding: 0 20px;
+  width: 100%; }
+
+.sidenav-secondary-content {
+  overflow: hidden; }
+  .sidenav-secondary-content, .sidenav-secondary-content > ul {
+    width: 220px; }
+
+.sidenav-transition {
+  -webkit-transition: width 0.5s ease;
+  -moz-transition: width 0.5s ease;
+  transition: width 0.5s ease; }
+
 .tooltip-inner {
   -webkit-box-shadow: -7px 7px 0 0 #E0E5EB;
   box-shadow: -7px 7px 0 0 #E0E5EB; }
