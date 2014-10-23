@@ -511,6 +511,9 @@ section.row {
 /* -------- Thumbnail Variations ---------*/
 
 #thumbnailVariations {
+	background-color: $gray-light;
+	padding: 20px;
+
 	.img-responsive {
 		width: 100%;
 	}
