@@ -1,0 +1,34 @@
+.sidenav-container {
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: table;
+
+	&.closed {
+		.sidenav-secondary-content {
+			width: 0;
+		}
+	}
+}
+
+.sidenav-cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+
+.sidenav-main-content {
+	padding: 0 20px;
+	width: 100%;
+}
+
+.sidenav-secondary-content {
+	overflow: hidden;
+
+	&, > ul {
+		width: $sidenav-width;
+	}
+}
+
+.sidenav-transition {
+	@include prefixer(transition, width 0.5s ease, webkit moz spec);
+}

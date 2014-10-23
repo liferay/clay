@@ -1,0 +1,107 @@
+---
+title: Sidenav
+section: Components
+---
+
+<div class="row">
+	<div class="col-md-12">
+		<button class="btn btn-default" id="sidenavToggle">Toggle</button>
+	</div>
+</div>
+
+<div class="sidenav-container" id="sidenavDemo">
+	<div class="sidenav-cell" id="mySidebar">
+		<div class="sidenav-secondary-content">
+			<h3><em>Menu</em></h3>
+			<ul class="nav nav-stacked">
+				<li><a href="#1">Setting Up Maven</a></li>
+				<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
+				<li><a href="#1">Using Maven From Liferay IDE</a></li>
+				<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
+				<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
+				<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
+				<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
+				<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
+				<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="sidenav-cell sidenav-main-content">
+		<h3><em>Content</em></h3>
+
+		<div id="myDocumentation">
+			<h4>Introduction</h4>
+
+			<p>Welcome to Liferay Tutorials! These tutorials show you how to build powerful, robust apps using Liferay’s tools, frameworks, and APIs. The tutorials compliment the fundamentals that you can master in Liferay’s Learning Paths, giving you keen insight into the Liferay platform for building top-notch apps, designing stylish themes, and customizing Liferay Portal to meet your needs. The tutorials cover the following three main areas: </p>
+
+			<ul>
+				<li>Using Liferay Development Tools</li>
+				<li>Developing Liferay Applications</li>
+				<li>Styling and Customizing Liferay</li>
+			</ul>
+
+			<h4>Using Liferay Development Tools</h4>
+
+			<p>Since many developers coming to Liferay already have a set of tools they use, these tutorials assume you’re using one of three common environments: 1) An Ant-based command-line environment that integrates with a wide variety of tools, 2) The easy-to-use Liferay IDE that minimizes your learning curve while giving you powerful development features, and 3) Maven, a widely adopted project management system. The Liferay Developer Network provides learning paths and tutorials that teach you how to use these three environments.
+
+			If you don’t like Eclipse (which Liferay IDE is based on) and prefer to use NetBeans, IntelliJ IDEA, or something else, you certainly can. Liferay code can be written in any way Java code is written. </p>
+
+			<h4>Developing Liferay Applications</h4>
+
+			<p>As a developer wanting to run your own applications on top of Liferay Portal, you probably want to know what’s the best and quickest way to do it? Liferay supports two main, standards-based technologies for incorporating your applications into Liferay: Portlets and OpenSocial gadgets. Portlets can be written using any of the Java web frameworks that support portlet development, including Liferay’s MVC Portlet framework and JavaServer™ Faces (JSF).
+
+			As you write apps, you’ll want to leverage powerful frameworks that work seamlessly with Liferay and help you complete your app faster. Liferay contains several frameworks that give you all the tools you need to perform various common tasks that you don’t want to have to write yourself, such as handling permissions and letting users enter comments, categories, and tags.
+
+			In addition to Liferay’s frameworks, you’ll want to check out the powerful tag libraries and snazzy UI components that AlloyUI and Liferay UI Taglibs provide.</p>
+		</div>
+	</div>
+</div>
+
+<pre>```<div class="sidenav-container">
+  <div class="sidenav-cell">
+    <div class="sidenav-secondary-content">
+      <!-- nav goes here -->
+    </div>
+  </div>
+
+  <div class="sidenav-cell sidenav-main-content">
+    <!-- content goes here -->
+  </div>
+</div>```</pre>
+
+<script>
+	YUI().use('event', 'node', 'transition', function(A) {
+		A.one('#sidenavToggle').on('click', function(event) {
+			var sidenavContainer = A.one('#sidenavDemo');
+			var sidenavSecondaryContent = A.one('#sidenavDemo .sidenav-secondary-content');
+
+			event.preventDefault();
+
+			if (sidenavContainer) {
+				A.one('#sidenavDemo').one('.sidenav-secondary-content').on('transitionend', function(event) {
+					this.removeClass('sidenav-transition');
+
+					if (sidenavContainer.hasClass('closed')) {
+						sidenavSecondaryContent.ancestor().addClass('hide');
+					}
+
+					this.detach('transitionend');
+				});
+
+				if (sidenavContainer.hasClass('closed')) {
+					sidenavSecondaryContent.ancestor().removeClass('hide');
+
+					setTimeout(function() {
+						sidenavSecondaryContent.addClass('sidenav-transition');
+						sidenavContainer.removeClass('closed');
+					}, 40);
+				}
+				else {
+					sidenavSecondaryContent.addClass('sidenav-transition');
+					sidenavContainer.addClass('closed');
+				}
+			}
+		});
+	});
+</script>
