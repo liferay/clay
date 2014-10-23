@@ -1,36 +1,3 @@
-/* Box Panels (Used for displaying content like portlets) */
-
-.box.panel {
-	padding: 0 15px 15px;
-
-	> .list-group {
-		margin-bottom: 20px;
-
-		.list-group-item {
-			border-width: 1px;
-		}
-
-		.list-group-item:last-child {
-			@include border-radius(0 0 4px 4px);
-		}
-	}
-
-	> .panel-heading {
-		margin: 0 -15px 15px;
-	}
-
-	> .table-bordered {
-		border: 1px solid #DDD;
-		margin-bottom: 15px;
-	}
-
-	.panel-heading + .list-group .list-group-item:first-child {
-		border-top-width: 1px;
-
-		@include border-radius(4px 4px 0 0);
-	}
-}
-
 /* Featured Panels */
 
 .admin-interface {
