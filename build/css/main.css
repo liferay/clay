@@ -5072,13 +5072,15 @@ button.close {
     color: #FFF; }
     .dropdown-menu.dropdown-menu-inverse > li > a:focus, .dropdown-menu.dropdown-menu-inverse > li > a:hover, .navbar-inverse .dropdown-menu > li > a:focus, .navbar-inverse .dropdown-menu > li > a:hover {
       color: #2C4259; }
+  .dropdown-menu.dropdown-menu-inverse > li.active > a, .dropdown-menu.dropdown-menu-inverse > li.active > a:focus, .dropdown-menu.dropdown-menu-inverse > li.active > a:hover, .navbar-inverse .dropdown-menu > li.active > a, .navbar-inverse .dropdown-menu > li.active > a:focus, .navbar-inverse .dropdown-menu > li.active > a:hover {
+    color: #FFF; }
   .dropdown-menu.dropdown-menu-inverse .divider, .navbar-inverse .dropdown-menu .divider {
     height: 1px;
     margin: 9px 0;
     overflow: hidden;
     background-color: #18293D; }
   .dropdown-menu.dropdown-menu-inverse .dropdown-header, .dropdown-menu.dropdown-menu-inverse .link-list-heading, .navbar-inverse .dropdown-menu .dropdown-header, .navbar-inverse .dropdown-menu .link-list-heading {
-    color: #426384; }
+    color: #FFF; }
   .dropdown-menu.dropdown-menu-inverse .inline-scroller li a, .dropdown-menu.dropdown-menu-inverse .link-list li a, .navbar-inverse .dropdown-menu .inline-scroller li a, .navbar-inverse .dropdown-menu .link-list li a {
     color: #FFF; }
 
