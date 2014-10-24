@@ -213,7 +213,7 @@ $navbar-inverse-link-open-color: #FFF;
 
 //== Pagination
 $pagination-border-radius: 20px;
-$pagination-padding-base-vertical: 4px!default;
+$pagination-padding-base-vertical: 4px;
 $pagination-padding-base-horizontal: 20px;
 $pagination-padding-large-vertical: $pagination-padding-base-vertical * 1.25;
 $pagination-padding-large-horizontal: $pagination-padding-base-horizontal * 1.25;
@@ -296,6 +296,35 @@ $pagination-borderless2-active-border: $pagination-borderless2-border;
 $pagination-borderless2-disabled-color: #EEE;
 $pagination-borderless2-disabled-bg: $pagination-borderless2-bg;
 $pagination-borderless2-disabled-border: $pagination-borderless2-border;
+
+//Pagination Borderless3
+$pagination-borderless3-border-radius: 0;
+$pagination-borderless3-padding-base-vertical: 4px;
+$pagination-borderless3-padding-base-horizontal: 10px;
+$pagination-borderless3-padding-large-vertical: $pagination-borderless3-padding-base-vertical * 1.25;
+$pagination-borderless3-padding-large-horizontal: $pagination-borderless3-padding-base-horizontal * 1.25;
+$pagination-borderless3-padding-small-vertical: $pagination-borderless3-padding-base-vertical * 0.75;
+$pagination-borderless3-padding-small-horizontal: $pagination-borderless3-padding-base-horizontal * 0.75;
+
+$pagination-borderless3-color: $brand-default;
+$pagination-borderless3-bg: transparent;
+$pagination-borderless3-border: transparent;
+
+$pagination-borderless3-controls-color: #FFF;
+$pagination-borderless3-controls-bg: #B0B4BB;
+$pagination-borderless3-controls-border: #B0B4BB;
+
+$pagination-borderless3-hover-color: $brand-default;
+$pagination-borderless3-hover-bg: $pagination-borderless3-bg;
+$pagination-borderless3-hover-border: $pagination-borderless3-border;
+
+$pagination-borderless3-active-color: $brand-default;
+$pagination-borderless3-active-bg: #E7E8EA;
+$pagination-borderless3-active-border: #E7E8EA;
+
+$pagination-borderless3-disabled-color: #EEE;
+$pagination-borderless3-disabled-bg: $pagination-borderless3-bg;
+$pagination-borderless3-disabled-border: $pagination-borderless3-border;
 
 //Pager
 $pager-bg:                                 #FFF;
