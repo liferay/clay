@@ -47,11 +47,11 @@ $border-radius-small:                      $border-radius-default * 0.75;
 
 //== Box Shadow
 $popover-arrow-width: 10px;
-$box-shadow-default-x: -10px;
-$box-shadow-default-y: 10px;
-$box-shadow-default-blur: 0;
+$box-shadow-default-x: 0;
+$box-shadow-default-y: 0;
+$box-shadow-default-blur: 3px;
 $box-shadow-default-spread: 0;
-$box-shadow-default-bg: $gray;
+$box-shadow-default-bg: rgba(0, 0, 0, 0.2);
 $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
 $box-shadow-arrow-default-blur: $box-shadow-default-blur;
 
@@ -137,33 +137,38 @@ $radio-disabled-border: $checkbox-disabled-border;
 
 //== Dropdowns
 $dropdown-box-shadow: $box-shadow-default;
-$dropdown-bg:                              #EDF0F5;
-$dropdown-border:                          #EDF0F5;
+$dropdown-bg:                              #FFF;
+$dropdown-border:                          #E7E8EA;
+$dropdown-border-width: 0;
 //** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:                 #EDF0F5;
-$dropdown-divider-bg:                      #F8F9FB;
+$dropdown-fallback-border:                 #FFF;
+$dropdown-divider-bg:                      $dropdown-border;
 
 $dropdown-link-color:                      $brand-default;
-$dropdown-link-hover-color:                #FFF;
-$dropdown-link-hover-bg:                   $brand-primary;
+$dropdown-link-hover-color:                $brand-default;
+$dropdown-link-hover-bg:                   #E7E8EA;
 
 $dropdown-link-active-color:               $component-active-color;
-$dropdown-link-active-bg:                  $component-active-bg;
+$dropdown-link-active-bg:                  #63A5E6;
 
 $dropdown-link-disabled-color:             #CACDD2;
 
-$dropdown-header-color:                    #828F98;
+$dropdown-header-color:                    #B0B4BB;
+
+$dropdown-arrow-color: $dropdown-bg;
 
 $dropdown-wide-width: 500px;
 
 // Dropdown Inverse
-$dropdown-inverse-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 #EFF2F7;
+$dropdown-inverse-box-shadow: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
 $dropdown-inverse-bg: $brand-default;
 $dropdown-inverse-border: $brand-default;
 $dropdown-inverse-link-color: #FFF;
+$dropdown-inverse-link-hover-color: $brand-default;
 $dropdown-inverse-disabled-color: $brand-default-active;
 $dropdown-inverse-divider-bg: $brand-default-active;
 $dropdown-inverse-header-color: $brand-default-hover;
+$dropdown-inverse-arrow-color: $dropdown-inverse-bg;
 
 //== Navbar Default
 $navbar-default-color:                     $brand-default;

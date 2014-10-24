@@ -13,25 +13,29 @@
 
 //Dropdowns
 .dropdown-menu {
-	@include arrow-top-left(#EDF0F5, 8px, 9px);
-	@include arrow-top-left-border(#EDF0F5, 9px, 9px);
+	@include arrow-top-left($dropdown-arrow-color, 8px, 9px);
+	@include arrow-top-left-border($dropdown-border, 9px, 9px);
+
+	border: $dropdown-border-width solid $dropdown-fallback-border; // IE8 fallback
+	border: $dropdown-border-width solid $dropdown-border;
+
 	@include box-shadow($dropdown-box-shadow);
 
-	margin-top: 11px;
+	margin-top: 0;
 
 	&.dropdown-menu-right, .navbar-right & {
-		@include arrow-top-right(#EDF0F5, 8px, 9px);
-		@include arrow-top-right-border(#EDF0F5, 9px, 9px);
+		@include arrow-top-right($dropdown-arrow-color, 8px, 9px);
+		@include arrow-top-right-border($dropdown-border, 9px, 9px);
 	}
 
 	&.dropdown-menu-top {
-		@include arrow-bottom-left(#EDF0F5, 8px, 9px);
-		@include arrow-bottom-left-border(#EDF0F5, 9px, 9px);
+		@include arrow-bottom-left($dropdown-arrow-color, 8px, 9px);
+		@include arrow-bottom-left-border($dropdown-border, 9px, 9px);
 	}
 
 	&.dropdown-menu-top-right {
-		@include arrow-bottom-right(#EDF0F5, 8px, 9px);
-		@include arrow-bottom-right-border(#EDF0F5, 9px, 9px);
+		@include arrow-bottom-right($dropdown-arrow-color, 8px, 9px);
+		@include arrow-bottom-right-border($dropdown-border, 9px, 9px);
 	}
 
 	.inline-scroller, .link-list {
@@ -41,7 +45,7 @@
 			padding: 3px 20px;
 
 			&:focus, &:hover {
-				background-color: $brand-primary;
+				background-color: $dropdown-link-hover-bg;
 				color: $dropdown-link-hover-color;
 				text-decoration: none;
 			}
@@ -63,7 +67,7 @@
 
 	&, &.dropdown-menu-right {
 		&:after {
-			border-bottom-color: $dropdown-inverse-bg;
+			border-bottom-color: $dropdown-inverse-arrow-color;
 		}
 
 		&:before {
@@ -73,7 +77,7 @@
 
 	&.dropdown-menu-top, &.dropdown-menu-top-right {
 		&:after {
-			border-top-color: $dropdown-inverse-bg;
+			border-top-color: $dropdown-inverse-arrow-color;
 		}
 
 		&:before {
@@ -83,6 +87,10 @@
 
 	> li > a {
 		color: $dropdown-inverse-link-color;
+
+		&:focus, &:hover {
+			color: $dropdown-inverse-link-hover-color;
+		}
 	}
 
 	@extend %disabled-selector;
