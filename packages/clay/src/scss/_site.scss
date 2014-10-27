@@ -550,6 +550,14 @@ section.row {
 	width: 36px;
 }
 
+/* Tooltips */
+
+.tooltip-display {
+	> div {
+		height: 75px;
+	}
+}
+
 /* Typography */
 
 #typography > div {
