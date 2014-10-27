@@ -5832,8 +5832,7 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   transition: width 0.5s ease; }
 
 .tooltip-inner {
-  -webkit-box-shadow: -7px 7px 0 0 #E0E5EB;
-  box-shadow: -7px 7px 0 0 #E0E5EB; }
+  padding: 5px 16px; }
 
 .tooltip-arrow:before {
   position: absolute;
@@ -5843,32 +5842,38 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   border-style: solid;
   z-index: -1; }
 
-.tooltip.top .tooltip-arrow:before {
+.tooltip {
+  font-size: 16px; }
+
+.shadows.tooltip.top .tooltip-arrow:before, .shadows .tooltip.top .tooltip-arrow:before {
   border-top-color: #E0E5EB;
   border-width: 5px 5px 0;
   bottom: -7px;
   content: "";
   left: 50%;
-  margin-left: -5px; }
-.tooltip.right .tooltip-arrow:before {
+  margin-left: -12px; }
+.shadows.tooltip.right .tooltip-arrow:before, .shadows .tooltip.right .tooltip-arrow:before {
   border-right-color: #E0E5EB;
   border-width: 5px 5px 5px 0;
   content: "";
   left: -7px;
   margin-top: 2px;
   top: 50%; }
-.tooltip.left .tooltip-arrow:before {
+.shadows.tooltip.left .tooltip-arrow:before, .shadows .tooltip.left .tooltip-arrow:before {
   border-left-color: #E0E5EB;
   border-width: 5px 0 5px 5px;
   margin-top: 2px;
   right: 7px;
   top: 50%; }
-.tooltip.bottom .tooltip-arrow:before {
+.shadows.tooltip.bottom .tooltip-arrow:before, .shadows .tooltip.bottom .tooltip-arrow:before {
   border-bottom-color: #E0E5EB;
   border-width: 0 5px 5px;
   left: 50%;
   margin-left: -12px;
   top: 7px; }
+.shadows .tooltip-inner {
+  -webkit-box-shadow: -7px 7px 0 0 #E0E5EB;
+  box-shadow: -7px 7px 0 0 #E0E5EB; }
 
 /* Removes Box Shadows */
 .no-shadow, .no-shadows {
@@ -7061,6 +7066,10 @@ section.row {
 
 .timeline-avatar {
   width: 36px; }
+
+/* Tooltips */
+.tooltip-display > div {
+  height: 75px; }
 
 /* Typography */
 #typography > div {
