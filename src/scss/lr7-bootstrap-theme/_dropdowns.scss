@@ -12,6 +12,11 @@
 }
 
 //Dropdowns
+.dropdown-header {
+	line-height: 1;
+	padding: 3px 12px;
+}
+
 .dropdown-menu {
 	@include arrow-top-left($dropdown-arrow-color, 8px, 9px);
 	@include arrow-top-left-border($dropdown-border, 9px, 9px);
@@ -22,6 +27,7 @@
 	@include box-shadow($dropdown-box-shadow);
 
 	margin-top: 0;
+	padding: 6px 0 12px;
 
 	&.dropdown-menu-right, .navbar-right & {
 		@include arrow-top-right($dropdown-arrow-color, 8px, 9px);
@@ -38,11 +44,15 @@
 		@include arrow-bottom-right-border($dropdown-border, 9px, 9px);
 	}
 
+	> li > a {
+		padding: 3px 12px;
+	}
+
 	.inline-scroller, .link-list {
 		li a {
 			color: $dropdown-link-color;
 			display: block;
-			padding: 3px 20px;
+			padding: 3px 12px;
 
 			&:focus, &:hover {
 				background-color: $dropdown-link-hover-bg;
@@ -56,6 +66,8 @@
 
 	.link-list .link-list-heading {
 		color: $dropdown-header-color;
+		line-height: 1;
+		padding: 3px 12px;
 	}
 }
 
