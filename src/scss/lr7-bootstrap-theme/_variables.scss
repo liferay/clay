@@ -47,11 +47,11 @@ $border-radius-small:                      $border-radius-default * 0.75;
 
 //== Box Shadow
 $popover-arrow-width: 10px;
-$box-shadow-default-x: 0;
-$box-shadow-default-y: 0;
-$box-shadow-default-blur: 3px;
+$box-shadow-default-x: -10px;
+$box-shadow-default-y: 10px;
+$box-shadow-default-blur: 0;
 $box-shadow-default-spread: 0;
-$box-shadow-default-bg: rgba(0, 0, 0, 0.2);
+$box-shadow-default-bg: #E0E5EB;
 $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
 $box-shadow-arrow-default-blur: $box-shadow-default-blur;
 
