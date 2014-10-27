@@ -14,16 +14,14 @@
 	}
 }
 
+.btn-group.open .dropdown-toggle {
+	@include box-shadow(none);
+}
+
 .btn-toolbar {
 	.btn-group {
 		border: solid transparent;
 		z-index: 1;
-
-		> .btn:before {
-			@include box-shadow($btn-group-toolbar-box-shadow);
-
-			@extend %button-box;
-		}
 	}
 
 	> .btn-group-vertical {
@@ -33,20 +31,6 @@
 
 .btn-group-justified {
 	border-spacing: 1px;
-
-	> .btn, > .btn-group {
-		> .btn:before {
-			@include box-shadow($btn-group-box-shadow);
-
-			@extend %button-box;
-		}
-	}
-
-	> a.btn:before {
-		@include box-shadow($btn-group-box-shadow);
-
-		@extend %button-box;
-	}
 }
 
 .btn-group,
@@ -62,8 +46,38 @@
 	> .btn + .btn, > .btn + .btn-group, > .btn-group + .btn, > .btn-group + .btn-group {
 		margin-top: 1px;
 	}
+}
 
-	> .btn, > .btn-group {
-		@include box-shadow($btn-group-vertical-box-shadow);
+.shadows {
+	&.btn-toolbar, .btn-toolbar {
+		.btn-group {
+			> .btn:before {
+				@include box-shadow($btn-group-toolbar-box-shadow);
+
+				@extend %button-box;
+			}
+		}
+	}
+
+	&.btn-group-justified, .btn-group-justified {
+		> .btn, > .btn-group {
+			> .btn:before {
+				@include box-shadow($btn-group-box-shadow);
+
+				@extend %button-box;
+			}
+		}
+
+		> a.btn:before {
+			@include box-shadow($btn-group-box-shadow);
+
+			@extend %button-box;
+		}
+	}
+
+	&.btn-group-vertical, .btn-group-vertical {
+		> .btn, > .btn-group {
+			@include box-shadow($btn-group-vertical-box-shadow);
+		}
 	}
 }

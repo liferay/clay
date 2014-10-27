@@ -1,4 +1,6 @@
 .btn {
+	@include button-size(11px, 16px, 16px, 1, $border-radius-base);
+
 	&, &:focus, &:hover {
 		border: 1px solid transparent;
 	}
@@ -6,4 +8,88 @@
 	&:active, &.active {
 		@include box-shadow(none);
 	}
+}
+
+.btn-default {
+	&:focus, &:hover {
+		background-color: lighten($brand-default, 8%);
+	}
+
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-color: darken($brand-default, 12%);
+	}
+}
+
+.btn-primary {
+	&:focus, &:hover {
+		background-color: lighten($brand-primary, 8%);
+	}
+
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-color: darken($brand-primary, 12%);
+	}
+}
+
+.btn-success {
+	&:focus, &:hover {
+		background-color: lighten($brand-success, 8%);
+	}
+
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-color: darken($brand-success, 12%);
+	}
+}
+
+.btn-info {
+	&:focus, &:hover {
+		background-color: lighten($brand-info, 8%);
+	}
+
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-color: darken($brand-info, 12%);
+	}
+}
+
+.btn-warning {
+	&:focus, &:hover {
+		background-color: lighten($brand-warning, 8%);
+	}
+
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-color: darken($brand-warning, 12%);
+	}
+}
+
+.btn-danger {
+	&:focus, &:hover {
+		background-color: lighten($brand-danger, 8%);
+	}
+
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-color: darken($brand-danger, 12%);
+	}
+}
+
+.btn-lg {
+	@include button-size(14px, 16px, 18px, 1, $border-radius-base);
+}
+
+.btn-sm {
+	@include button-size(8px, 16px, 14px, 1, $border-radius-base);
+}
+
+.btn-xs {
+	@include button-size(5px, 16px, 12px, 1, $border-radius-base);
 }

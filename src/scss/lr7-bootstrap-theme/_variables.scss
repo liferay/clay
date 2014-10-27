@@ -5,29 +5,29 @@ $gray:                                     #E0E5EB;
 $gray-light:                               #EDF0F5;
 $gray-lighter:                             #F8F9FB;
 
-$brand-default-active: #18293D;
-$brand-default-hover: #426384;
-$brand-default:                            #2C4259;
+$brand-default:                            #868896;
+$brand-default-active: darken($brand-default, 12%);
+$brand-default-hover: lighten($brand-default, 8%);
 
-$brand-primary-active: #037FBF;
-$brand-primary-hover: #68C3F2;
 $brand-primary:                            #32A8E6;
+$brand-primary-active: darken($brand-primary, 12%);
+$brand-primary-hover: lighten($brand-primary, 8%);
 
-$brand-success-active: #33766C;
-$brand-success-hover: #399E8E;
 $brand-success:                            #42BFAD;
+$brand-success-active: darken($brand-success, 12%);
+$brand-success-hover: lighten($brand-success, 8%);
 
-$brand-info-active: #17438C;
-$brand-info-hover: #1A53AD;
 $brand-info:                               #1E5EC8;
+$brand-info-active: darken($brand-info, 12%);
+$brand-info-hover: lighten($brand-info, 8%);
 
-$brand-warning-active: #C04229;
-$brand-warning-hover: #DB5135;
 $brand-warning:                            #EE664C;
+$brand-warning-active: darken($brand-warning, 12%);
+$brand-warning-hover: lighten($brand-warning, 8%);
 
-$brand-danger-active: #B3173F;
-$brand-danger-hover: #CE1747;
 $brand-danger:                             #E9295A;
+$brand-danger-active: darken($brand-danger, 12%);
+$brand-danger-hover: lighten($brand-danger, 8%);
 
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:                      $brand-primary;
