@@ -47,9 +47,9 @@ $border-radius-small:                      $border-radius-default * 0.75;
 
 //== Box Shadow
 $popover-arrow-width: 10px;
-$box-shadow-default-x: -10px;
-$box-shadow-default-y: 10px;
-$box-shadow-default-blur: 0;
+$box-shadow-default-x: 0;
+$box-shadow-default-y: 0;
+$box-shadow-default-blur: 3px;
 $box-shadow-default-spread: 0;
 $box-shadow-default-bg: #E0E5EB;
 $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
@@ -136,7 +136,7 @@ $radio-disabled-bg: $checkbox-disabled-bg;
 $radio-disabled-border: $checkbox-disabled-border;
 
 //== Dropdowns
-$dropdown-box-shadow: $box-shadow-default;
+$dropdown-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
 $dropdown-bg:                              #FFF;
 $dropdown-border:                          #E7E8EA;
 $dropdown-border-width: 0;
@@ -160,7 +160,7 @@ $dropdown-arrow-color: $dropdown-bg;
 $dropdown-wide-width: 500px;
 
 // Dropdown Inverse
-$dropdown-inverse-box-shadow: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
+$dropdown-inverse-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 $dropdown-inverse-bg: $brand-default;
 $dropdown-inverse-border: $brand-default;
 $dropdown-inverse-link-color: #FFF;
