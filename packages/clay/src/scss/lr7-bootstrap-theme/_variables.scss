@@ -50,8 +50,8 @@ $popover-arrow-width: 10px;
 $box-shadow-default-x: 0;
 $box-shadow-default-y: 0;
 $box-shadow-default-blur: 3px;
-$box-shadow-default-spread: 0;
-$box-shadow-default-bg: #E0E5EB;
+$box-shadow-default-spread: 1px;
+$box-shadow-default-bg: rgba(0, 0, 0, 0.2);
 $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
 $box-shadow-arrow-default-blur: $box-shadow-default-blur;
 
@@ -103,11 +103,14 @@ $input-box-shadow: none;
 $input-bg:                                 #FFF;
 $input-bg-disabled:                        #EAEEF1;
 $input-color:                              #E0E5EB;
-$input-border:                             #D7DCE2;
+$input-border:                             #B0B4BB;
 $input-border-focus:                       $brand-default;
-$input-color-placeholder:                  #FFF;
+$input-color-placeholder:                  #B0B4BB;
+$input-height-base:              36px;
+$input-height-large:             48px;
+$input-height-small:             24px;
 
-$legend-border-color:                      #D7DCE2;
+$legend-border-color:                      #B0B4BB;
 
 $input-group-addon-bg:                     $brand-default;
 $input-group-addon-border-color:           $input-group-addon-bg;
@@ -378,10 +381,10 @@ $popover-arrow-box-shadow: $box-shadow-arrow-default;
 
 $popover-bg:                                      #FFF;
 $popover-max-width:                               276px;
-$popover-border-color:                            $brand-default;
-$popover-fallback-border-color:                   $brand-default;
+$popover-border-color:                            #2B4259;
+$popover-fallback-border-color:                   #2B4259;
 $popover-title-color: #FFF;
-$popover-title-bg:                                $brand-default;
+$popover-title-bg:                                #2B4259;
 $popover-arrow-width:                             10px;
 $popover-arrow-color:                             #FFF;
 
@@ -427,13 +430,13 @@ $breadcrumb-borderless-separator-color: #D2D6DF;
 
 //== Tooltips
 $tooltip-border-radius: $border-radius-default;
-$tooltip-box-shadow-x: -7px;
-$tooltip-box-shadow-y: 7px;
-$tooltip-box-shadow-blur: 0;
-$tooltip-box-shadow-spread: 0;
-$tooltip-box-shadow-bg: $gray;
+$tooltip-box-shadow-x: -1px;
+$tooltip-box-shadow-y: 1px;
+$tooltip-box-shadow-blur: 2px;
+$tooltip-box-shadow-spread: 1px;
+$tooltip-box-shadow-bg: rgba(0, 0, 0, 0.2);
 $tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg;
-$tooltip-bg:                                      $brand-default;
+$tooltip-bg:                                      #2B4259;
 $tooltip-opacity:                                 1;
 
 //Navs
