@@ -18,7 +18,10 @@
 .shadows {
 	&.tooltip, .tooltip {
 		&.top .tooltip-arrow:before {
-			border-top-color: $tooltip-box-shadow-bg;
+			@if $tooltip-box-shadow-blur == 0 {
+				border-top-color: $tooltip-box-shadow-bg;
+			}
+
 			border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
 			bottom: -$tooltip-box-shadow-y;
 
@@ -31,7 +34,9 @@
 		}
 
 		&.right .tooltip-arrow:before {
-			border-right-color: $tooltip-box-shadow-bg;
+			@if $tooltip-box-shadow-blur == 0 {
+				border-right-color: $tooltip-box-shadow-bg;
+			}
 
 			border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
 
@@ -45,7 +50,10 @@
 		}
 
 		&.left .tooltip-arrow:before {
-			border-left-color: $tooltip-box-shadow-bg;
+			@if $tooltip-box-shadow-blur == 0 {
+				border-left-color: $tooltip-box-shadow-bg;
+			}
+
 			border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
 
 			@if $tooltip-box-shadow-x > 0 {
@@ -58,7 +66,10 @@
 		}
 
 		&.bottom .tooltip-arrow:before {
-			border-bottom-color: $tooltip-box-shadow-bg;
+			@if $tooltip-box-shadow-blur == 0 {
+				border-bottom-color: $tooltip-box-shadow-bg;
+			}
+
 			border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
 
 			@if $tooltip-box-shadow-y < 0 {
