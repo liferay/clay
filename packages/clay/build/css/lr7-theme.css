@@ -4607,6 +4607,9 @@ button.close {
 .alert-default .alert-link, .alert-success .alert-link, .alert-info .alert-link, .alert-warning .alert-link, .alert-danger .alert-link {
   color: #2B4259; }
 
+.alert-dismissible .close {
+  top: -1px; }
+
 .breadcrumb.breadcrumb-default {
   background-color: #FFF;
   border-radius: 0;
