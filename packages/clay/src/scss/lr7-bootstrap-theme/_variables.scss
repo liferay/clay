@@ -176,15 +176,16 @@ $dropdown-inverse-arrow-color: $dropdown-inverse-bg;
 
 //== Navbar Default
 $navbar-default-color:                     $brand-default;
-$navbar-default-bg:                        #EDF0F5;
-$navbar-default-border:                    #EDF0F5;
+$navbar-default-bg:                        #FFF;
+$navbar-default-border:                    #D8D8D8;
 
-$navbar-default-link-color:                $brand-default;
+$navbar-default-link-color:                #2B4259;
 $navbar-default-link-hover-color:          $brand-primary;
 $navbar-default-link-hover-bg:             transparent;
 
-$navbar-default-link-active-color:         $brand-primary;
-$navbar-default-link-active-bg:            transparent;
+$navbar-default-link-active-color:         #2B4259;
+$navbar-default-link-active-bg:            #FFF;
+$navbar-default-link-active-highlight: $brand-primary;
 
 $navbar-default-link-disabled-color:       #CACDD2;
 $navbar-default-link-disabled-bg:          transparent;
@@ -443,6 +444,8 @@ $tooltip-opacity:                                 1;
 $nav-link-color: $brand-default;
 $nav-link-hover-bg:                               transparent;
 $nav-link-hover-color: $brand-primary;
+
+$nav-link-padding:                          10px 30px !default;
 
 $nav-disabled-link-color:                         #C5CDD0;
 $nav-disabled-link-hover-color:                   #C5CDD0;
