@@ -2708,7 +2708,7 @@ tbody.collapse.in {
     .nav > li > a {
       position: relative;
       display: block;
-      padding: 10px 15px; }
+      padding: 10px 30px; }
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
         background-color: transparent; }
@@ -3032,23 +3032,23 @@ tbody.collapse.in {
         margin-right: 0; } }
 
 .navbar-default {
-  background-color: #EDF0F5;
-  border-color: #EDF0F5; }
+  background-color: #FFF;
+  border-color: #D8D8D8; }
   .navbar-default .navbar-brand {
-    color: #868896; }
+    color: #2B4259; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
       color: #32A8E6;
       background-color: transparent; }
   .navbar-default .navbar-text {
     color: #868896; }
   .navbar-default .navbar-nav > li > a {
-    color: #868896; }
+    color: #2B4259; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #32A8E6;
       background-color: transparent; }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #32A8E6;
-    background-color: transparent; }
+    color: #2B4259;
+    background-color: #FFF; }
   .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
     color: #CACDD2;
     background-color: transparent; }
@@ -3059,28 +3059,28 @@ tbody.collapse.in {
     .navbar-default .navbar-toggle .icon-bar {
       background-color: #888; }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: #EDF0F5; }
+    border-color: #D8D8D8; }
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: transparent;
-    color: #32A8E6; }
+    background-color: #FFF;
+    color: #2B4259; }
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-      color: #868896; }
+      color: #2B4259; }
       .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #32A8E6;
         background-color: transparent; }
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-      color: #32A8E6;
-      background-color: transparent; }
+      color: #2B4259;
+      background-color: #FFF; }
     .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #CACDD2;
       background-color: transparent; } }
   .navbar-default .navbar-link {
-    color: #868896; }
+    color: #2B4259; }
     .navbar-default .navbar-link:hover {
       color: #32A8E6; }
   .navbar-default .btn-link {
-    color: #868896; }
+    color: #2B4259; }
     .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
       color: #32A8E6; }
     .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
@@ -5537,9 +5537,25 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     border: 2px solid #EDF0F5;
     border-right-width: 0; } }
 
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #32A8E6;
-  color: #FFF; }
+.navbar-default {
+  border-width: 0 0 1px 0;
+  -webkit-box-shadow: 0 1px 3px -3px #000;
+  box-shadow: 0 1px 3px -3px #000; }
+  .navbar-default .basic-search button {
+    background-color: transparent;
+    color: #32A8E6;
+    padding: 10px 12px; }
+  .navbar-default .basic-search input[type="text"] {
+    border-color: transparent;
+    height: 40px; }
+  .navbar-default .navbar-nav > li > a {
+    color: #2B4259; }
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+      color: #32A8E6;
+      background-color: transparent; }
+  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #32A8E6;
+    color: #FFF; }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: #32A8E6;
@@ -5551,7 +5567,54 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   margin-left: 0;
   margin-right: 0; }
 
+.navbar-header-right {
+  float: right; }
+  .navbar-header-right .navbar-brand {
+    float: right;
+    padding: 5px 15px 5px 0; }
+  .navbar-header-right .navbar-toggle {
+    float: left;
+    margin-left: 15px;
+    margin-right: 0; }
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0; }
+  .navbar-default .navbar-nav > li > a {
+    background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%);
+    border: solid #D8D8D8;
+    border-width: 0 1px;
+    margin-left: -1px; }
+    .navbar-default .navbar-nav > li > a:after {
+      background-color: transparent;
+      content: "";
+      display: block;
+      height: 4px;
+      position: relative;
+      top: 15px;
+      width: 100%; }
+  .navbar-default .navbar-nav > .active > a {
+    background-color: #FFF;
+    background-image: none;
+    background-image: none;
+    border-color: transparent; }
+    .navbar-default .navbar-nav > .active > a:after {
+      background-color: #32A8E6;
+      content: "";
+      display: block;
+      height: 4px;
+      width: 100%; } }
+
 @media (max-width: 767px) {
+  .navbar-header-right {
+    float: none; }
+    .navbar-header-right .navbar-brand {
+      float: right;
+      padding: 5px 0 5px 75px; }
+    .navbar-header-right .navbar-toggle {
+      position: absolute; }
   .navbar-nav .open .dropdown-menu {
     -webkit-box-shadow: none;
     box-shadow: none; }
