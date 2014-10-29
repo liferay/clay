@@ -2708,7 +2708,7 @@ tbody.collapse.in {
     .nav > li > a {
       position: relative;
       display: block;
-      padding: 10px 30px; }
+      padding: 10px 15px; }
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
         background-color: transparent; }
@@ -5586,7 +5586,9 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     background-image: linear-gradient( rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%);
     border: solid #D8D8D8;
     border-width: 0 1px;
-    margin-left: -1px; }
+    margin-left: -1px;
+    padding-left: 30px;
+    padding-right: 30px; }
     .navbar-default .navbar-nav > li > a:after {
       background-color: transparent;
       content: "";
@@ -5605,6 +5607,8 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
       content: "";
       display: block;
       height: 4px;
+      position: relative;
+      top: 15px;
       width: 100%; } }
 
 @media (max-width: 767px) {
