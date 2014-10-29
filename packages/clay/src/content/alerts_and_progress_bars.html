@@ -5,41 +5,26 @@ section: Components
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Basic Alerts</em></h3>
-
-		<div class="alert alert-success" role="alert">Well done! You just read the alert message successfully.</div>
-
-		<div class="alert alert-info" role="alert">Heads up! This alert needs your attention.</div>
-
-		<div class="alert alert-warning" role="alert">Warning! This alert is a warning message.</div>
-
-		<div class="alert alert-danger" role="alert">Be careful! Something is not right.</div>
-
-<pre><code>```<div class="alert alert-success" role="alert">
-...
-</div>```</code></pre>
-
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
 		<h3><em>Alerts with Embedded Links</em></h3>
 
+		<div class="alert alert-default" role="alert">
+			<strong>Default</strong> You just read the <a href="#" class="alert-link">alert message</a> successfully.
+		</div>
+
 		<div class="alert alert-success" role="alert">
-			<strong>Well done!</strong> You just read the <a href="#" class="alert-link">alert message</a> successfully.
+			<strong>Success</strong> You just read the <a href="#" class="alert-link">alert message</a> successfully.
 		</div>
 
 		<div class="alert alert-info" role="alert">
-			<strong>Heads up!</strong> This <a href="#" class="alert-link">alert</a> needs your attention.
+			<strong>Info</strong> This <a href="#" class="alert-link">alert</a> needs your attention.
 		</div>
 
 		<div class="alert alert-warning" role="alert">
-			<strong>Warning!</strong> This alert is a <a href="#" class="alert-link">warning message</a>.
+			<strong>Warning</strong> This alert is a <a href="#" class="alert-link">warning message</a>.
 		</div>
 
 		<div class="alert alert-danger" role="alert">
-			<strong>Be Careful! </strong><a href="#" class="alert-link">Something</a> is not right.
+			<strong>Danger</strong> <a href="#" class="alert-link">Something</a> is not right.
 		</div>
 
 		<pre><code>```<div class="alert alert-success" role="alert">
@@ -54,12 +39,20 @@ section: Components
 	<div class="col-md-12" id="dismissibleAlerts">
 		<h3><em>Dismissible Alerts</em></h4>
 
+		<div class="alert alert-dismissible alert-default" role="alert">
+			<button class="close" type="button">
+				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+			</button>
+
+			<strong>Default</strong> You just read the alert message successfully.
+		</div>
+
 		<div class="alert alert-dismissible alert-success" role="alert">
 			<button class="close" type="button">
 				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 			</button>
 
-			<strong>Well done!</strong> You just read the alert message successfully.
+			<strong>Success</strong> You just read the alert message successfully.
 		</div>
 
 		<div class="alert alert-dismissible alert-info" role="alert">
@@ -67,7 +60,7 @@ section: Components
 				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 			</button>
 
-			<strong>Heads up!</strong> This alert needs your attention.
+			<strong>Info</strong> This alert needs your attention.
 		</div>
 
 		<div class="alert alert-dismissible alert-warning" role="alert">
@@ -75,7 +68,7 @@ section: Components
 				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 			</button>
 
-			<strong>Warning!</strong> This alert is a warning message.
+			<strong>Warning</strong> This alert is a warning message.
 		</div>
 
 		<div class="alert alert-dismissible alert-danger" role="alert">
@@ -83,7 +76,7 @@ section: Components
 				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 			</button>
 
-			<strong>Be Careful!</strong> Something is not right.
+			<strong>Danger</strong> Something is not right.
 		</div>
 
 		<pre><code>```<div class="alert alert-dismissible alert-success" role="alert">
