@@ -87,6 +87,8 @@
 				border: solid $navbar-default-border;
 				border-width: 0 1px;
 				margin-left: -1px;
+				padding-left: 30px;
+				padding-right: 30px;
 
 				&:after {
 					background-color: transparent;
@@ -111,6 +113,8 @@
 					content: "";
 					display: block;
 					height: 4px;
+					position: relative;
+					top: 15px;
 					width: 100%;
 				}
 			}
