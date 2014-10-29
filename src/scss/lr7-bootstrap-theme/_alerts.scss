@@ -1,5 +1,5 @@
 .alert {
-	border-width: 3px 0 0 0;
+	border-width: 2px 0 0 0;
 	font-size: 16px;
 
 	.alert-link {
@@ -13,6 +13,13 @@
 	.close {
 		color: $alert-default-text-color;
 		opacity: 1;
+	}
+
+	.lead {
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 0;
+		margin-right: 16px;
 	}
 }
 
