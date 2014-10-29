@@ -38,6 +38,23 @@ $font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, s
 
 $link-hover-color:                         $brand-primary-hover;
 
+//States for Form and alert
+$state-success-text:             #2B4259;
+$state-success-bg:               #EAF7F6;
+$state-success-border:           #34ADAB;
+
+$state-info-text:                $state-success-text;
+$state-info-bg:                  #E8EFF9;
+$state-info-border:              #1D5EC7;
+
+$state-warning-text:             $state-success-text;
+$state-warning-bg:               #FFF7E5;
+$state-warning-border:           #FFB103;
+
+$state-danger-text:              $state-success-text;
+$state-danger-bg:                #FDE9EE;
+$state-danger-border:            #E8295A;
+
 //== Border Radius
 //** Defines global border-radius
 $border-radius-default: 0;
@@ -391,6 +408,13 @@ $popover-arrow-color:                             #FFF;
 
 //Modals
 $modal-box-shadow: $box-shadow-default;
+
+//== Alerts
+$alert-padding:               16px !default;
+
+$alert-default-bg:            #F3F3F4 !default;
+$alert-default-text-color:          $state-success-text !default;
+$alert-default-border:        $brand-default;
 
 //Breadcrumbs
 $breadcrumb-padding-vertical:                     4px;

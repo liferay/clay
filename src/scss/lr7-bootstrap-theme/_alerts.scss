@@ -1,0 +1,27 @@
+.alert {
+	border-width: 3px 0 0 0;
+	font-size: 16px;
+
+	.alert-link {
+		text-decoration: underline;
+
+		&:focus, &:hover {
+			text-decoration: none;
+		}
+	}
+
+	.close {
+		color: $alert-default-text-color;
+		opacity: 1;
+	}
+}
+
+.alert-default {
+	@include alert-variant($alert-default-bg, $alert-default-border, $alert-default-text-color);
+}
+
+.alert-default, .alert-success, .alert-info, .alert-warning, .alert-danger {
+	.alert-link {
+		color: $alert-default-text-color;
+	}
+}
