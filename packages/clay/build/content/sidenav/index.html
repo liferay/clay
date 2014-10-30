@@ -178,8 +178,8 @@ collapse
 </div>
 
 <div class="sidenav-container" id="sidenavDemo">
-	<div class="sidenav-cell" id="mySidebar">
-		<div class="sidenav-secondary-content">
+	<div class="sidenav-menu-container sidenav-transition">
+		<div class="sidenav-menu">
 			<h3><em>Menu</em></h3>
 			<ul class="nav nav-stacked">
 				<li><a href="#1">Setting Up Maven</a></li>
@@ -195,7 +195,7 @@ collapse
 		</div>
 	</div>
 
-	<div class="sidenav-cell sidenav-main-content">
+	<div class="sidenav-content sidenav-transition">
 		<h3><em>Content</em></h3>
 
 		<div id="myDocumentation">
@@ -247,28 +247,30 @@ collapse
 			event.preventDefault();
 
 			if (sidenavContainer) {
-				A.one('#sidenavDemo').one('.sidenav-secondary-content').on('transitionend', function(event) {
-					this.removeClass('sidenav-transition');
+				sidenavContainer.toggleClass('closed');
+				// A.one('#sidenavDemo').one('.sidenav-secondary-content').on('transitionend', function(event) {
+				// 	this.removeClass('sidenav-transition');
 
-					if (sidenavContainer.hasClass('closed')) {
-						sidenavSecondaryContent.ancestor().addClass('hide');
-					}
+				// 	if (sidenavContainer.hasClass('closed')) {
+				// 		sidenavSecondaryContent.ancestor().addClass('hide');
+				// 	}
 
-					this.detach('transitionend');
-				});
+				// 	this.detach('transitionend');
+				// });
 
-				if (sidenavContainer.hasClass('closed')) {
-					sidenavSecondaryContent.ancestor().removeClass('hide');
+				// if (sidenavContainer.hasClass('closed')) {
+				// 	sidenavSecondaryContent.ancestor().removeClass('hide');
 
-					setTimeout(function() {
-						sidenavSecondaryContent.addClass('sidenav-transition');
-						sidenavContainer.removeClass('closed');
-					}, 40);
-				}
-				else {
-					sidenavSecondaryContent.addClass('sidenav-transition');
-					sidenavContainer.addClass('closed');
-				}
+				// 	setTimeout(function() {
+				// 		sidenavSecondaryContent.addClass('sidenav-transition');
+				// 		sidenavContainer.removeClass('closed');
+				// 	}, 40);
+				// }
+				// else {
+				// 	sidenavSecondaryContent.addClass('sidenav-transition');
+				// 	sidenavContainer.addClass('closed');
+				// }
+
 			}
 		});
 	});
