@@ -146,15 +146,17 @@
 		}
 	}
 
-	.collapse {
-		display: block;
-	}
+	@media (max-width: $grid-float-breakpoint-max) {
+		.collapse {
+			display: block;
+		}
 
-	.navbar-collapse {
-		border-width: 0;
-		margin: 0;
-		position: absolute;
-		top: 0;
+		.navbar-collapse {
+			border-width: 0;
+			margin: 0;
+			position: absolute;
+			top: 0;
+		}
 	}
 }
 
