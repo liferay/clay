@@ -5651,13 +5651,14 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   @media (max-width: 767px) {
     .navbar-single-link-preserved .basic-search {
       margin: 7px 0; } }
-.navbar-single-link-preserved .collapse {
-  display: block; }
-.navbar-single-link-preserved .navbar-collapse {
-  border-width: 0;
-  margin: 0;
-  position: absolute;
-  top: 0; }
+@media (max-width: 767px) {
+  .navbar-single-link-preserved .collapse {
+    display: block; }
+  .navbar-single-link-preserved .navbar-collapse {
+    border-width: 0;
+    margin: 0;
+    position: absolute;
+    top: 0; } }
 
 /* navbar single link */
 .navbar-single-link .navbar-nav {
