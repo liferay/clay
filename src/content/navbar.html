@@ -14,14 +14,12 @@ section: Components
 				<span class="icon-bar"></span>
 			</button>
 
-			<div class="navbar-brand">
-				<form class="basic-search input-group">
-					<input class="form-control" placeholder=" Search..." type="text" />
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-					</span>
-				</form>
-			</div>
+			<form class="basic-search input-group navbar-form">
+				<input class="form-control" placeholder=" Search..." type="text" />
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+				</span>
+			</form>
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
@@ -62,23 +60,46 @@ section: Components
 		</div>
 	</nav>
 
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Brand</a>
-			</div>
-			<div class="collapse navbar-collapse">
-				<button type="button" class="btn btn-default navbar-btn">Sign in</button>
-			</div>
+	<h3><em>Navbar Single Link</em></h3>
+	<nav class="navbar navbar-default navbar-single-link">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Active</a></li>
+		</ul>
+
+		<form class="basic-search input-group navbar-form">
+			<input class="form-control" placeholder=" Search..." type="text" />
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+			</span>
+		</form>
+	</nav>
+
+	<h3><em>Navbar Single Link (preserves most of the mark up spit out by aui:nav-bar taglib)</em></h3>
+	<nav class="navbar navbar-default navbar-single-link-preserved">
+		<div class="navbar-header navbar-header-right">
+			<form class="basic-search input-group">
+				<input class="form-control" placeholder=" Search..." type="text" />
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+				</span>
+			</form>
+		</div>
+
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Active</a></li>
+			</ul>
 		</div>
 	</nav>
 
-	<nav class="navbar navbar-default">
+
+
+
+
+
+
+
+	<nav class="navbar navbar-default navbar-single-link">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed">
@@ -341,5 +362,38 @@ section: Components
 
 			ct.ancestor('.navbar-header').next().toggleClass('in');
 		}, '.navbar-toggle');
+
+		/* navbar search mobile functionality */
+
+		var toggleBasicSearch = function(event) {
+			var ct = event.currentTarget;
+			var navbar = ct.ancestor('.navbar');
+
+			if (A.one('document').get('winWidth') <= 767) {
+				if (navbar.hasClass('search-open')) {
+					// add X to close here.
+					navbar.removeClass('search-open');
+				}
+				else {
+					event.preventDefault();
+					// add minimize search here.
+					if (!ct.ancestor('.basic-search').one('.minimize-search')) {
+						ct.ancestor('.basic-search').prepend(A.Node.create('<span class="input-group-btn minimize-search"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-left"></span></button></span>'));
+					}
+
+					navbar.addClass('search-open');
+				}
+			}
+		};
+
+		A.one('#mainContent').delegate('click', function(event) {
+
+			toggleBasicSearch(event);
+		}, '.basic-search button[type="submit"]');
+
+		/* navbar search close functionality */
+		A.one('#mainContent').delegate('click', function(event) {
+			toggleBasicSearch(event);
+		}, '.minimize-search');
 	});
 </script>
