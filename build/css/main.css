@@ -5587,15 +5587,40 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
       background-color: #32a8e6;
       color: #FFF; }
 
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #32a8e6;
-  color: #FFF; }
-
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0; }
 .navbar-nav .navbar-form {
   margin-left: 0;
   margin-right: 0; }
+
+/* use different state colors for navbar in mobile (not that important for ie8?) */
+@media (max-width: 767px) {
+  .navbar-default .navbar-collapse .navbar-nav > li > a:focus, .navbar-default .navbar-collapse .navbar-nav > li > a:hover {
+    background-color: #E7E8EA;
+    color: #2B4259; }
+  .navbar-default .navbar-collapse .navbar-nav > .active > a, .navbar-default .navbar-collapse .navbar-nav > .active > a:focus, .navbar-default .navbar-collapse .navbar-nav > .active > a:hover {
+    background-color: #63A5E6;
+    color: #FFF; }
+  .navbar-default .navbar-collapse .navbar-nav > .disabled > a, .navbar-default .navbar-collapse .navbar-nav > .disabled > a:focus, .navbar-default .navbar-collapse .navbar-nav > .disabled > a:hover {
+    background-color: transparent;
+    color: #CACDD2; }
+  .navbar-default .navbar-collapse .navbar-nav > .open > a, .navbar-default .navbar-collapse .navbar-nav > .open > a:focus, .navbar-default .navbar-collapse .navbar-nav > .open > a:hover {
+    background-color: #E7E8EA;
+    color: #2B4259; }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-color: #E7E8EA;
+    color: #2B4259; }
+  .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 15px; }
+  .navbar-nav .open .dropdown-menu .inline-scroller li a, .navbar-nav .open .dropdown-menu .linked-list li a {
+    padding: 3px 15px; }
+    .navbar-nav .open .dropdown-menu .inline-scroller li a:focus, .navbar-nav .open .dropdown-menu .inline-scroller li a:hover, .navbar-nav .open .dropdown-menu .linked-list li a:focus, .navbar-nav .open .dropdown-menu .linked-list li a:hover {
+      color: #2B4259; } }
+
+/* navbar inverse styles */
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #32a8e6;
+  color: #FFF; }
 
 /* navbar-header with content on right (aligns basic search on right) */
 .navbar-header-right {
