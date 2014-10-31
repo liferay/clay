@@ -32,17 +32,6 @@
 	}
 }
 
-.navbar-inverse {
-	.navbar-nav {
-		> .open > a {
-			&, &:hover, &:focus {
-				background-color: $navbar-inverse-link-open-bg;
-				color: $navbar-inverse-link-open-color;
-			}
-		}
-	}
-}
-
 .navbar-nav {
 	> li > .dropdown-menu {
 		margin-top: $box-shadow-default-y;
@@ -51,6 +40,82 @@
 	.navbar-form {
 		margin-left: 0;
 		margin-right: 0;
+	}
+}
+
+/* use different state colors for navbar in mobile (not that important for ie8?) */
+@media (max-width: $grid-float-breakpoint-max) {
+	.navbar-default {
+		.navbar-collapse .navbar-nav {
+			> li > a {
+				&:focus, &:hover {
+					background-color: $dropdown-link-hover-bg;
+					color: $navbar-default-link-active-color;
+				}
+			}
+
+			> .active > a {
+				&, &:focus, &:hover {
+					background-color: $dropdown-link-active-bg;
+					color: $dropdown-link-active-color;
+				}
+			}
+
+			> .disabled > a {
+				&, &:focus, &:hover {
+					background-color: $navbar-default-link-disabled-bg;
+					color: $dropdown-link-disabled-color;
+				}
+			}
+
+			> .open > a {
+				&, &:focus, &:hover {
+					background-color: $dropdown-link-hover-bg;
+					color: $navbar-default-link-active-color;
+				}
+			}
+		}
+	}
+
+	.navbar-default .navbar-nav {
+		.open .dropdown-menu {
+			> li > a {
+				&:hover, &:focus {
+					background-color: $dropdown-link-hover-bg;
+					color: $navbar-default-link-active-color;
+				}
+			}
+		}
+	}
+
+	.navbar-nav {
+		.open .dropdown-menu {
+			> li > a, .dropdown-header {
+				padding: 5px 15px 5px 15px;
+			}
+
+			.inline-scroller, .linked-list {
+				li a {
+					padding: 3px 15px;
+
+					&:focus, &:hover {
+						color: $navbar-default-link-active-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* navbar inverse styles */
+.navbar-inverse {
+	.navbar-nav {
+		> .open > a {
+			&, &:hover, &:focus {
+				background-color: $navbar-inverse-link-open-bg;
+				color: $navbar-inverse-link-open-color;
+			}
+		}
 	}
 }
 
