@@ -29,6 +29,30 @@
 	}
 }
 
+/**/
+.sidenav-menu-container {
+	overflow: hidden;
+	position: absolute;
+	width: $sidenav-width;
+}
+.sidenav-menu {
+	width: $sidenav-width;
+}
+.sidenav-content {
+	margin-left: $sidenav-width + 20;
+}
+.sidenav-container.closed {
+	.sidenav-menu-container {
+		overflow: hidden;
+		width: 0;
+	}
+
+	.sidenav-content {
+		margin-left: 0;
+	}
+}
+/**/
+
 .sidenav-transition {
-	@include prefixer(transition, width 0.5s ease, webkit moz spec);
+	@include prefixer(transition, all 0.5s ease, webkit moz spec);
 }
