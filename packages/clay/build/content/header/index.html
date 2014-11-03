@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Switches</title>
+	<title>Header</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -36,7 +36,7 @@
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse
+collapse in
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
@@ -45,7 +45,7 @@ collapse
 </li>
 <li class=""><a href="../../content/dropdowns">Dropdowns</a>
 </li>
-<li class=""><a href="../../content/header">Header</a>
+<li class="active"><a href="../../content/header">Header</a>
 </li>
 <li class=""><a href="../../content/modals">Modals</a>
 </li>
@@ -113,12 +113,12 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Experimental</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse in
+collapse
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/sliders">Sliders</a>
 </li>
-<li class="active"><a href="../../content/switches">Switches</a>
+<li class=""><a href="../../content/switches">Switches</a>
 </li>
 </ul>
 </div>
@@ -167,7 +167,7 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Switches
+			Header
 
 			
 		</h1>
@@ -175,52 +175,55 @@ collapse
 		
 <div class="row">
 	<div class="col-md-12">
-		<form action="#" method="get">
-			<h3>Toggling labels</h3>
-			<div class="form-group">
-				<input class="switch" id="switch1" name="switch1" type="checkbox" />
-				<label for="switch1"><span class="on">On</span><span class="off">Off</span></label>
+		<h3><em>Header First Level</em></h3>
+
+		<header class="portlet-topper header-first-level">
+			<menu class="portlet-toolbar">
+				<a href="#">
+					<span class="glyphicon glyphicon-align-justify"></span>
+				</a>
+			</menu>
+
+			<div class="portlet-title">
+				<span>Section</span>
 			</div>
 
-			<div class="form-group">
-				<input checked="checked" class="switch" id="switch2" name="switch2" type="checkbox" />
-				<label for="switch2"><span class="on">On</span><span class="off">Off</span></label>
+			<menu class="portlet-toolbar-right">
+				<a href="#">
+					<span class="glyphicon glyphicon-envelope"></span>
+				</a>
+				<a href="#">
+					<span class="glyphicon glyphicon-inbox"></span>
+				</a>
+				<a href="#">
+					<span class="glyphicon glyphicon-cog"></span>
+				</a>
+			</menu>
+		</header>
+
+		<h3><em>Header Second Level</em></h3>
+
+		<header class="portlet-topper header-second-level">
+			<menu class="portlet-toolbar">
+				<a href="#">
+					<span class="glyphicon glyphicon-align-justify"></span>
+				</a>
+
+				<a href="#">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+			</menu>
+
+			<div class="portlet-title">
+				<span>Section</span>
 			</div>
 
-<pre><code>&lt;div class=&quot;form-group&quot;&gt;
-  &lt;input class=&quot;switch&quot; id=&quot;switch&quot; type=&quot;checkbox&quot; /&gt;
-  &lt;label for=&quot;switch&quot;&gt;&lt;span class=&quot;on&quot;&gt;On&lt;/span&gt;&lt;span class=&quot;off&quot;&gt;Off&lt;/span&gt;&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-
-			<h3>Edit mode</h3>
-
-			<div class="form-group">
-				<input class="edit switch" id="switch2Edit" name="switch2Edit" type="checkbox" />
-				<label for="switch2Edit">Edit</label>
-			</div>
-
-<pre><code>&lt;div class=&quot;form-group&quot;&gt;
-  &lt;input checked=&quot;checked&quot; class=&quot;edit switch&quot; id=&quot;switch&quot; type=&quot;checkbox&quot; /&gt;
-  &lt;label for=&quot;switch&quot;&gt;Edit&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-
-			<h3>Disabled inputs</h3>
-
-			<div class="form-group">
-				<input checked="checked" class="switch" disabled="disabled" id="switch3" name="switch3" type="checkbox" />
-				<label for="switch3"><span class="on">On</span><span class="off">Off</span></label>
-			</div>
-
-			<div class="form-group">
-				<input class="switch" disabled="disabled" id="switch3" name="switch3" type="checkbox" />
-				<label for="switch3"><span class="on">On</span><span class="off">Off</span></label>
-			</div>
-
-<pre><code>&lt;div class=&quot;form-group&quot;&gt;
-  &lt;input class=&quot;switch&quot; disabled=&quot;disabled&quot; id=&quot;switch&quot; type=&quot;checkbox&quot; /&gt;
-  &lt;label for=&quot;switch&quot;&gt;&lt;span class=&quot;on&quot;&gt;On&lt;/span&gt;&lt;span class=&quot;off&quot;&gt;Off&lt;/span&gt;&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-		</form>
+			<menu class="portlet-toolbar-right">
+				<a href="#">
+					<span class="glyphicon glyphicon-th-list"></span>
+				</a>
+			</menu>
+		</header>
 	</div>
 </div>
 	</div>
