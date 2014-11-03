@@ -6107,49 +6107,36 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     border-bottom-width: 0;
     border-top-color: rgba(0, 0, 0, 0.2); }
 
-.sidenav-container {
-  border-collapse: collapse;
-  border-spacing: 0;
-  display: table; }
-  .sidenav-container.closed .sidenav-secondary-content {
-    width: 0; }
-
-.sidenav-cell {
-  display: table-cell;
-  vertical-align: top; }
-
-.sidenav-main-content {
-  padding: 0 20px;
-  width: 100%; }
-
-.sidenav-secondary-content {
-  overflow: hidden; }
-  .sidenav-secondary-content, .sidenav-secondary-content > ul {
-    width: 220px; }
-
-/**/
-.sidenav-menu-container {
+.sidenav-container.closed > .sidenav-menu-slider {
   overflow: hidden;
-  position: absolute;
-  width: 220px; }
+  width: 0; }
+.sidenav-container.closed > .sidenav-content {
+  left: 0; }
+
+.sidenav-content {
+  position: relative;
+  left: 240px; }
 
 .sidenav-menu {
   width: 220px; }
 
-.sidenav-content {
-  margin-left: 240px; }
-
-.sidenav-container.closed .sidenav-menu-container {
+.sidenav-menu-slider {
   overflow: hidden;
-  width: 0; }
-.sidenav-container.closed .sidenav-content {
-  margin-left: 0; }
+  position: absolute;
+  width: 220px; }
 
-/**/
-.sidenav-transition {
+.sidenav-transition .sidenav-content, .sidenav-transition .sidenav-menu-slider {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
+
+@media (min-width: 768px) {
+  .sidenav-content {
+    left: auto;
+    padding-left: 240px; }
+  .sidenav-container.closed > .sidenav-content {
+    left: auto;
+    padding-left: 0; } }
 
 .tooltip-inner {
   padding: 5px 16px; }
@@ -7102,17 +7089,18 @@ section.row {
   overflow-x: hidden; }
 
 /* ------- Side Navigation ------- */
+@media (min-width: 768px) {
+  #wrapper > .sidenav-container.closed > .sidenav-menu-slider {
+    width: 220px; }
+  #wrapper > .sidenav-container.closed > .sidenav-content {
+    padding-left: 220px; } }
+
 #mainContent {
   display: block;
   position: relative;
   width: 100%; }
   #mainContent pre {
     margin-top: 15px; }
-
-.main-nav-closed #mainContent {
-  left: 0; }
-.main-nav-closed .side-navigation-container {
-  width: 0; }
 
 .menu-toggle {
   color: #FFF;
@@ -7122,12 +7110,6 @@ section.row {
   text-align: left; }
   .menu-toggle .glyphicon {
     font-size: 22px; }
-
-.side-navigation-container {
-  overflow: hidden;
-  width: 220px; }
-  .side-navigation-container > ul {
-    width: 220px; }
 
 .side-navigation {
   padding-top: 35px;
@@ -7162,11 +7144,6 @@ section.row {
     width: 75%; }
 .side-navigation-dropdown-container .collapse {
   clear: both; }
-
-.transition {
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
 
 /* -------- Accordions -------- */
 #myToggler .badge, #myToggler .label {

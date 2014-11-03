@@ -100,24 +100,27 @@ section.row {
 
 /* ------- Side Navigation ------- */
 
+@media (min-width: $grid-float-breakpoint) {
+	#wrapper {
+		> .sidenav-container.closed {
+			> .sidenav-menu-slider {
+				width: $sideNavWidth;
+			}
+
+			> .sidenav-content {
+				padding-left: $sideNavWidth;
+			}
+		}
+	}
+}
+
 #mainContent {
 	display: block;
-	// padding: 15px 0;
 	position: relative;
 	width: 100%;
 
 	pre {
 		margin-top: 15px;
-	}
-}
-
-.main-nav-closed {
-	#mainContent {
-		left: 0;
-	}
-
-	.side-navigation-container {
-		width: 0;
 	}
 }
 
@@ -130,15 +133,6 @@ section.row {
 
 	.glyphicon {
 		font-size: 22px;
-	}
-}
-
-.side-navigation-container {
-	overflow: hidden;
-	width: $sideNavWidth;
-
-	> ul {
-		width: $sideNavWidth;
 	}
 }
 
@@ -202,10 +196,6 @@ section.row {
 	.collapse {
 		clear: both;
 	}
-}
-
-.transition {
-	@include transition(all 0.5s ease);
 }
 
 /* -------- Accordions -------- */

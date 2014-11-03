@@ -11,7 +11,7 @@
 	
 </head>
 <body>
-	<div class="main-nav-closed" id="wrapper">
+	<div id="wrapper">
 		<header class="row" id="headerTopBar">
 			<div class="container">
 				<button type="button" class="animated-toggle navbar-toggle">
@@ -25,9 +25,9 @@
 			</div>
 		</header>
 
-		<section class="container sidenav-container">
-			<nav class="side-navigation sidenav-cell" id="mainNav">
-	<div class="side-navigation-container sidenav-secondary-content">
+		<section class="closed container sidenav-container">
+			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
+	<div class="side-navigation-container sidenav-menu">
 			
 
 		<ul class="nav nav-stacked">
@@ -163,7 +163,7 @@ collapse in
 	</div>
 </nav>
 
-	<div class="sidenav-cell sidenav-main-content" id="mainContent">
+	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
 			Drafts
 
@@ -456,41 +456,46 @@ collapse in
 
 		</section>
 	</div>
-<script>
-	YUI().use('node', 'transition', function(A) {
-		A.one('#headerTopBar .navbar-toggle').on('click', function(event) {
-			var currentTarget = event.currentTarget;
-			var mainContent = A.one('#mainContent');
-			var sideNavigationContainer = A.one('.side-navigation-container');
+	<script>
+		YUI().use(
+			'node', 'transition',
+			function(A) {
+				A.one('#headerTopBar .navbar-toggle').on(
+					'click',
+					function(event) {
+						var ct = event.currentTarget;
+						var sidenavContainer = ct.ancestor('#headerTopBar').next('.sidenav-container');
 
-			event.preventDefault();
+						event.preventDefault();
 
-			sideNavigationContainer.addClass('transition');
+						sidenavContainer.on(
+							'transitionend',
+							function(event) {
+								sidenavContainer.removeClass('sidenav-transition');
 
-			mainContent.addClass('transition');
+								this.detach('transitionend');
+							}
+						);
 
-			sideNavigationContainer.on('transitionend', function() {
-				sideNavigationContainer.removeClass('transition');
+						sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
+						ct.ancestor('#wrapper').toggleClass('main-nav-open');
+					}
+				);
 
-				mainContent.removeClass('transition');
-
-				this.detach('transitionend');
-			});
-
-			setTimeout(function() {
-				currentTarget.ancestor('#wrapper').toggleClass('main-nav-open').toggleClass('main-nav-closed');
-			}, 50);
-		});
-
-		A.all('.side-navigation').each(
-			function(item, index) {
-				item.delegate('click', function(event) {
-					event.preventDefault();
-					event.currentTarget.next('.collapse').toggleClass('in');
-				}, 'li.side-navigation-dropdown-container > a');
+				A.all('.side-navigation').each(
+					function(item, index) {
+						item.delegate(
+							'click',
+							function(event) {
+								event.preventDefault();
+								event.currentTarget.next('.collapse').toggleClass('in');
+							},
+							'li.side-navigation-dropdown-container > a'
+						);
+					}
+				);
 			}
 		);
-	});
-</script>
-  </body>
+	</script>
+	</body>
 </html>
