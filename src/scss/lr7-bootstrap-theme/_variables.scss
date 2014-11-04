@@ -36,6 +36,18 @@ $component-active-color:                   #FFF;
 
 $font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   16px;
+
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  16px;
+
+$padding-small-vertical:    5px;
+$padding-small-horizontal:  10px;
+
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
+
 $link-hover-color:                         $brand-primary-hover;
 
 //States for Form and alert
@@ -117,12 +129,18 @@ $form-control-box-shadow: none;
 $form-control-focus-box-shadow: none;
 $input-box-shadow: none;
 
+$label-color: #2B4259;
+$label-font-size: 15px;
+
 $input-bg:                                 #FFF;
 $input-bg-disabled:                        #EAEEF1;
-$input-color:                              #E0E5EB;
+$input-color:                              #B0B4BB;
 $input-border:                             #B0B4BB;
-$input-border-focus:                       $brand-default;
+$input-border-focus:                       #2B4259;
 $input-color-placeholder:                  #B0B4BB;
+$input-font-size-base: 16px;
+$input-font-size-large: 18px;
+$input-font-size-small: 13px;
 $input-height-base:              36px;
 $input-height-large:             48px;
 $input-height-small:             24px;
