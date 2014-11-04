@@ -469,7 +469,8 @@ $tooltip-bg:                                      #2B4259;
 $tooltip-opacity:                                 1;
 
 //Navs
-$nav-link-color: $brand-default;
+$nav-link-color: #2B4259;
+$nav-link-padding:                          9px 16px !default;
 $nav-link-hover-bg:                               transparent;
 $nav-link-hover-color: $brand-primary;
 
@@ -479,12 +480,12 @@ $nav-disabled-link-hover-color:                   #C5CDD0;
 //Tabs
 $nav-tabs-border-radius: $border-radius-base $border-radius-base 0 0;
 
-$nav-tabs-border-color:                           #EDF0F5;
+$nav-tabs-border-color:                           #D8D8D8;
 $nav-tabs-link-hover-border-color:                transparent;
-$nav-tabs-border-width: 2px;
+$nav-tabs-border-width: 1px;
 
-$nav-tabs-active-link-hover-color:                $brand-default;
-$nav-tabs-active-link-hover-border-color:         #EDF0F5;
+$nav-tabs-active-link-hover-color:                $brand-primary;
+$nav-tabs-active-link-hover-border-color:         #D8D8D8;
 
 $nav-tabs-justified-link-border-color:            $nav-tabs-border-color;
 
