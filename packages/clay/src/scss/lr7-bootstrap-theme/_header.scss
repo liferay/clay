@@ -10,6 +10,10 @@
 	.header-toolbar, .header-toolbar-right {
 		a {
 			color: $header-first-level-color;
+
+			&:focus, &:hover {
+				background-color: $header-first-level-link-bg;
+			}
 		}
 	}
 }
@@ -21,42 +25,50 @@
 	.header-toolbar, .header-toolbar-right {
 		a {
 			color: $header-second-level-color;
+
+			&:focus, &:hover {
+				background-color: $header-second-level-link-bg;
+			}
 		}
 	}
 
-	.portlet-toolbar a {
-		margin-left: -3px;
-		padding-left: 2px;
-		padding-right: 2px;
+	.header-toolbar {
+		a {
+			margin-left: -3px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
 
-		&:first-child {
-			margin-left: -14px;
+		li:first-child a {
+			margin-left: -18px;
 		}
 	}
 }
 
 .header-title {
 	font-weight: 300;
-	margin-top: 9px;
 	overflow: hidden;
-	padding: 0 5px;
+	padding: 10px 5px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
 .header-toolbar, .header-toolbar-right {
+	list-style: none;
 	margin: 0;
 	padding: 0;
 
+	li {
+		display: inline-block;
+	}
+
 	a {
-		// color: #FFF;
 		display: inline-block;
 		font-size: 17px;
 		margin: 5px 0;
 		padding: 3px 5px;
 
 		&:focus, &:hover {
-			background-color: red;
 			text-decoration: none;
 		}
 	}
@@ -78,20 +90,19 @@
 	.header-second-level {
 		.header-toolbar {
 			a {
-				padding-left: 4px;
-				padding-right: 4px;
+				padding-left: 8px;
+				padding-right: 8px;
+			}
 
-				&:first-child {
-					margin-left: -20px;
-				}
+			li:first-child a {
+				margin-left: -25px;
 			}
 		}
 	}
 
 	.header-title {
-		font-size: 22px;
-		margin-top: 18px;
-		padding: 0 11px;
+		font-size: 18px;
+		padding: 20px 11px;
 	}
 
 	.header-toolbar, .header-toolbar-right {
