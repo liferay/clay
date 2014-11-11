@@ -1,106 +1,104 @@
+.header-first-level, .header-second-level {
+	overflow: hidden;
+	padding: 0 5px;
+}
+
 .header-first-level {
-	&, .portlet-toolbar, .portlet-toolbar-right {
-		background-color: $header-first-level-bg;
+	background-color: $header-first-level-bg;
+	color: $header-first-level-color;
+
+	.header-toolbar, .header-toolbar-right {
+		a {
+			color: $header-first-level-color;
+		}
 	}
 }
 
 .header-second-level {
-	&, .portlet-toolbar, .portlet-toolbar-right {
-		background-color: $header-second-level-bg;
+	background-color: $header-second-level-bg;
+	color: $header-second-level-color;
+
+	.header-toolbar, .header-toolbar-right {
+		a {
+			color: $header-second-level-color;
+		}
 	}
 
-	.portlet-toolbar {
-		a {
-			&:first-child {
-				margin-left: -8px;
-				margin-right: 0;
-			}
+	.portlet-toolbar a {
+		margin-left: -3px;
+		padding-left: 2px;
+		padding-right: 2px;
 
-			margin-left: 4px;
-			margin-right: 6px;
+		&:first-child {
+			margin-left: -14px;
 		}
 	}
 }
 
-.portlet-title {
-	float: left;
-	margin: 10px 0;
+.header-title {
+	font-weight: 300;
+	margin-top: 9px;
+	overflow: hidden;
+	padding: 0 5px;
+	text-overflow: ellipsis;
 	white-space: nowrap;
-	width: 1%;
 }
 
-.portlet-toolbar, .portlet-toolbar-right {
+.header-toolbar, .header-toolbar-right {
 	margin: 0;
+	padding: 0;
 
 	a {
-		color: #FFF;
+		// color: #FFF;
 		display: inline-block;
 		font-size: 17px;
+		margin: 5px 0;
+		padding: 3px 5px;
+
+		&:focus, &:hover {
+			background-color: red;
+			text-decoration: none;
+		}
 	}
 }
 
-.portlet-toolbar {
+.header-toolbar {
 	float: left;
-	padding-left: 0;
-
-	a {
-		margin: 8px 10px 7px;
-	}
 }
 
-.portlet-toolbar-right {
+.header-toolbar-right {
 	float: right;
-	min-height: 40px;
-	padding-left: 10px;
-
-	a {
-		margin: 8px 10px 7px 0;
-	}
-}
-
-.portlet-topper {
-	color: #FFF;
-	overflow: hidden;
-	white-space: nowrap;
 }
 
 @media (min-width: $grid-float-breakpoint) {
-	.header-second-level {
-		.portlet-toolbar {
-			a {
-				&:first-child {
-					margin-left: -8px;
-					margin-right: 0;
-				}
+	.header-first-level, .header-second-level {
+		padding: 0 11px;
+	}
 
-				margin-left: 20px;
-				margin-right: 10px;
+	.header-second-level {
+		.header-toolbar {
+			a {
+				padding-left: 4px;
+				padding-right: 4px;
+
+				&:first-child {
+					margin-left: -20px;
+				}
 			}
 		}
 	}
 
-	.portlet-title {
-		margin: 22px 0;
+	.header-title {
+		font-size: 22px;
+		margin-top: 18px;
+		padding: 0 11px;
 	}
 
-	.portlet-toolbar, .portlet-toolbar-right {
+	.header-toolbar, .header-toolbar-right {
 		a {
 			font-size: 22px;
-		}
-	}
-
-	.portlet-toolbar {
-		a {
-			margin: 17px 22px 17px;
-		}
-	}
-
-	.portlet-toolbar-right {
-		min-height: 66px;
-		padding-left: 22px;
-
-		a {
-			margin: 18px 22px 16px 0;
+			margin: 10px 0 9px;
+			padding: 10px 11px 6px 11px;
 		}
 	}
 }
