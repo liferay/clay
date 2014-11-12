@@ -6987,30 +6987,31 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   cursor: not-allowed; }
 
 .header-first-level, .header-second-level {
-  overflow: hidden;
   padding: 0 5px; }
 
 .header-first-level {
   background-color: #1e5ec8;
   color: #FFF; }
-  .header-first-level .header-toolbar a, .header-first-level .header-toolbar-right a {
+  .header-first-level .header-toolbar > li > a, .header-first-level .header-toolbar-right > li > a {
     color: #FFF; }
-    .header-first-level .header-toolbar a:focus, .header-first-level .header-toolbar a:hover, .header-first-level .header-toolbar-right a:focus, .header-first-level .header-toolbar-right a:hover {
+    .header-first-level .header-toolbar > li > a:focus, .header-first-level .header-toolbar > li > a:hover, .header-first-level .header-toolbar-right > li > a:focus, .header-first-level .header-toolbar-right > li > a:hover {
       background-color: #F00; }
 
 .header-second-level {
   background-color: #32a8e6;
   color: #FFF; }
-  .header-second-level .header-toolbar a, .header-second-level .header-toolbar-right a {
+  .header-second-level .header-toolbar > li > a, .header-second-level .header-toolbar-right > li > a {
     color: #FFF; }
-    .header-second-level .header-toolbar a:focus, .header-second-level .header-toolbar a:hover, .header-second-level .header-toolbar-right a:focus, .header-second-level .header-toolbar-right a:hover {
+    .header-second-level .header-toolbar > li > a:focus, .header-second-level .header-toolbar > li > a:hover, .header-second-level .header-toolbar-right > li > a:focus, .header-second-level .header-toolbar-right > li > a:hover {
       background-color: #F00; }
-  .header-second-level .header-toolbar a {
-    margin-left: -3px;
-    padding-left: 5px;
-    padding-right: 5px; }
-  .header-second-level .header-toolbar li:first-child a {
-    margin-left: -18px; }
+  .header-second-level .header-toolbar {
+    margin-left: -5px;
+    overflow: hidden; }
+    .header-second-level .header-toolbar > li:first-child > a {
+      margin-left: -12px; }
+    .header-second-level .header-toolbar > li > a {
+      padding-left: 3px;
+      padding-right: 3px; }
 
 .header-title {
   font-weight: 300;
@@ -7023,15 +7024,15 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   list-style: none;
   margin: 0;
   padding: 0; }
-  .header-toolbar li, .header-toolbar-right li {
+  .header-toolbar > li, .header-toolbar-right > li {
     display: inline-block; }
-  .header-toolbar a, .header-toolbar-right a {
-    display: inline-block;
-    font-size: 17px;
-    margin: 5px 0;
-    padding: 3px 5px; }
-    .header-toolbar a:focus, .header-toolbar a:hover, .header-toolbar-right a:focus, .header-toolbar-right a:hover {
-      text-decoration: none; }
+    .header-toolbar > li > a, .header-toolbar-right > li > a {
+      display: inline-block;
+      font-size: 17px;
+      margin: 5px 0;
+      padding: 3px 5px; }
+      .header-toolbar > li > a:focus, .header-toolbar > li > a:hover, .header-toolbar-right > li > a:focus, .header-toolbar-right > li > a:hover {
+        text-decoration: none; }
 
 .header-toolbar {
   float: left; }
@@ -7042,15 +7043,18 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 @media (min-width: 768px) {
   .header-first-level, .header-second-level {
     padding: 0 11px; }
-  .header-second-level .header-toolbar a {
-    padding-left: 8px;
-    padding-right: 8px; }
-  .header-second-level .header-toolbar li:first-child a {
-    margin-left: -25px; }
+  .header-second-level .header-toolbar {
+    margin-left: -11px;
+    overflow: hidden; }
+    .header-second-level .header-toolbar > li:first-child a {
+      margin-left: -16px; }
+    .header-second-level .header-toolbar > li > a {
+      padding-left: 8px;
+      padding-right: 8px; }
   .header-title {
     font-size: 18px;
     padding: 20px 11px; }
-  .header-toolbar a, .header-toolbar-right a {
+  .header-toolbar > li > a, .header-toolbar-right > li > a {
     font-size: 22px;
     margin: 10px 0 9px;
     padding: 10px 11px 6px 11px; } }
