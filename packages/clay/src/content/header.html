@@ -7,34 +7,53 @@ section: Components
 	<div class="col-md-12">
 		<h3><em>Header First Level</em></h3>
 
-		<header class="header-first-level">
-			<menu class="header-toolbar">
-				<li>
-					<a href="#"><span class="icon-align-justify"></span></a>
-				</li>
-			</menu>
-
-			<menu class="header-toolbar-right">
-				<li>
-					<a href="#"><span class="icon-upload-alt"></span></a>
-				</li>
-				<li>
-					<a href="#"><span class="icon-download-alt"></span></a>
-				</li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" href="#"><span class="icon-cog"></span></a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#">Export</a></li>
-						<li><a href="#">Import</a></li>
-						<li><a href="#">Configuration</a></li>
+		<div class="sidenav-container closed">
+			<div class="sidenav-menu-slider">
+				<div class="sidenav-menu">
+					<ul class="nav nav-stacked">
+						<li><a href="#1">Setting Up Maven</a></li>
+						<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
+						<li><a href="#1">Using Maven From Liferay IDE</a></li>
+						<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
+						<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
+						<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
+						<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
 					</ul>
-				</li>
-			</menu>
-
-			<div class="header-title">
-				<span>Section name that is really long and is longer than the width of the element Section name that is really long and is longer than the width of the element</span>
+				</div>
 			</div>
-		</header>
+			<div class="sidenav-content">
+				<header class="header-first-level">
+					<menu class="header-toolbar">
+						<li>
+							<a class="sidenav-toggler" href="#"><span class="icon-align-justify"></span></a>
+						</li>
+					</menu>
+
+					<menu class="header-toolbar-right">
+						<li>
+							<a href="#"><span class="icon-upload-alt"></span></a>
+						</li>
+						<li>
+							<a href="#"><span class="icon-download-alt"></span></a>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" href="#"><span class="icon-cog"></span></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Export</a></li>
+								<li><a href="#">Import</a></li>
+								<li><a href="#">Configuration</a></li>
+							</ul>
+						</li>
+					</menu>
+
+					<div class="header-title">
+						<span>Section name that is really long and is longer than the width of the element Section name that is really long and is longer than the width of the element</span>
+					</div>
+				</header>
+			</div>
+		</div>
 
 		<h3><em>Header Second Level</em></h3>
 
@@ -68,13 +87,15 @@ section: Components
 </div>
 
 <script>
-	YUI().use('event', 'node', function(A) {
+	YUI().use('event', 'node', 'transition', function(A) {
 		var mainContent = A.one('#mainContent');
 
 		mainContent.delegate('click', function(event) {
 			var currentTarget = event.currentTarget;
 
 			var dropdown = currentTarget.ancestor('.dropdown');
+
+			event.preventDefault();
 
 			dropdown.toggleClass('open');
 
@@ -91,5 +112,42 @@ section: Components
 				currentTarget.detach('clickoutside');
 			}
 		}, '.dropdown-toggle');
+
+		A.one('#mainContent').delegate('click', function(event) {
+			var ct = event.currentTarget;
+			var container = ct.ancestor('.sidenav-container');
+
+			var setEqualHeight = function() {
+				var sideMenuSlider = container.one('.sidenav-menu-slider');
+				var sideNavContent = container.one('.sidenav-content');
+
+				var equalHeight = Math.max(sideMenuSlider.get('offsetHeight'), sideNavContent.get('offsetHeight'));
+
+				container.setStyle('height', equalHeight);
+			}
+
+			event.preventDefault();
+
+			container.on(
+				'transitionend',
+				function(event) {
+					container.removeClass('sidenav-transition');
+
+					if (container.hasClass('closed')) {
+						container.setStyle('height', '');
+					}
+
+					this.detach('transitionend');
+				}
+			);
+
+			if (container) {
+				if (container.hasClass('closed')) {
+					setEqualHeight();
+				}
+
+				container.toggleClass('closed').addClass('sidenav-transition');
+			}
+		}, '.sidenav-toggler');
 	});
 </script>
