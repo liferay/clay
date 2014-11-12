@@ -1,5 +1,4 @@
 .header-first-level, .header-second-level {
-	overflow: hidden;
 	padding: 0 5px;
 }
 
@@ -8,7 +7,7 @@
 	color: $header-first-level-color;
 
 	.header-toolbar, .header-toolbar-right {
-		a {
+		>li > a {
 			color: $header-first-level-color;
 
 			&:focus, &:hover {
@@ -23,7 +22,7 @@
 	color: $header-second-level-color;
 
 	.header-toolbar, .header-toolbar-right {
-		a {
+		> li > a {
 			color: $header-second-level-color;
 
 			&:focus, &:hover {
@@ -33,14 +32,18 @@
 	}
 
 	.header-toolbar {
-		a {
-			margin-left: -3px;
-			padding-left: 5px;
-			padding-right: 5px;
-		}
+		margin-left: -5px;
+		overflow: hidden;
 
-		li:first-child a {
-			margin-left: -18px;
+		> li {
+			&:first-child > a {
+				margin-left: -12px;
+			}
+
+			> a {
+				padding-left: 3px;
+				padding-right: 3px;
+			}
 		}
 	}
 }
@@ -58,18 +61,18 @@
 	margin: 0;
 	padding: 0;
 
-	li {
+	> li {
 		display: inline-block;
-	}
 
-	a {
-		display: inline-block;
-		font-size: 17px;
-		margin: 5px 0;
-		padding: 3px 5px;
+		> a {
+			display: inline-block;
+			font-size: 17px;
+			margin: 5px 0;
+			padding: 3px 5px;
 
-		&:focus, &:hover {
-			text-decoration: none;
+			&:focus, &:hover {
+				text-decoration: none;
+			}
 		}
 	}
 }
@@ -89,13 +92,18 @@
 
 	.header-second-level {
 		.header-toolbar {
-			a {
-				padding-left: 8px;
-				padding-right: 8px;
-			}
+			margin-left: -11px;
+			overflow: hidden;
 
-			li:first-child a {
-				margin-left: -25px;
+			> li {
+				&:first-child a {
+					margin-left: -16px;
+				}
+
+				> a {
+					padding-left: 8px;
+					padding-right: 8px;
+				}
 			}
 		}
 	}
@@ -106,7 +114,7 @@
 	}
 
 	.header-toolbar, .header-toolbar-right {
-		a {
+		> li > a {
 			font-size: 22px;
 			margin: 10px 0 9px;
 			padding: 10px 11px 6px 11px;
