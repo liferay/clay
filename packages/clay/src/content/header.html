@@ -21,8 +21,13 @@ section: Components
 				<li>
 					<a href="#"><span class="icon-download-alt"></span></a>
 				</li>
-				<li>
-					<a href="#"><span class="icon-cog"></span></a>
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="#"><span class="icon-cog"></span></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">Export</a></li>
+						<li><a href="#">Import</a></li>
+						<li><a href="#">Configuration</a></li>
+					</ul>
 				</li>
 			</menu>
 
@@ -45,8 +50,13 @@ section: Components
 			</menu>
 
 			<menu class="header-toolbar-right">
-				<li>
-					<a href="#"><span class="icon-ellipsis-vertical"></span></a>
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="#"><span class="icon-ellipsis-vertical"></span></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">Export</a></li>
+						<li><a href="#">Import</a></li>
+						<li><a href="#">Configuration</a></li>
+					</ul>
 				</li>
 			</menu>
 
@@ -56,3 +66,30 @@ section: Components
 		</header>
 	</div>
 </div>
+
+<script>
+	YUI().use('event', 'node', function(A) {
+		var mainContent = A.one('#mainContent');
+
+		mainContent.delegate('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			var dropdown = currentTarget.ancestor('.dropdown');
+
+			dropdown.toggleClass('open');
+
+			if (dropdown.hasClass('open')) {
+				currentTarget.on('clickoutside', function(event) {
+					var _this = this;
+
+					_this.ancestor('.dropdown').removeClass('open');
+
+					_this.detach('clickoutside');
+				});
+			}
+			else {
+				currentTarget.detach('clickoutside');
+			}
+		}, '.dropdown-toggle');
+	});
+</script>
