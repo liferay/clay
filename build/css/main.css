@@ -1863,7 +1863,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.4286;
-  color: #B0B4BB; }
+  color: #2B4259; }
 
 .form-control {
   display: block;
@@ -1872,7 +1872,7 @@ output {
   padding: 6px 16px;
   font-size: 14px;
   line-height: 1.4286;
-  color: #B0B4BB;
+  color: #2B4259;
   background-color: #FFF;
   background-image: none;
   border: 1px solid #B0B4BB;
@@ -1888,12 +1888,12 @@ output {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(43, 66, 89, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(43, 66, 89, 0.6); }
   .form-control::-moz-placeholder {
-    color: #B0B4BB;
+    color: #D7D9DD;
     opacity: 1; }
   .form-control:-ms-input-placeholder {
-    color: #B0B4BB; }
+    color: #D7D9DD; }
   .form-control::-webkit-input-placeholder {
-    color: #B0B4BB; }
+    color: #D7D9DD; }
   .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     cursor: not-allowed;
     background-color: #EAEEF1;
@@ -2648,7 +2648,7 @@ tbody.collapse.in {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #B0B4BB;
+  color: #2B4259;
   text-align: center;
   background-color: #868896;
   border: 1px solid #868896;
