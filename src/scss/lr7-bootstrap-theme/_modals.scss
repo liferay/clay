@@ -1,3 +1,22 @@
+.modal-backdrop.in {
+	@include opacity($modal-backdrop-opacity);
+}
+
 .modal-content {
 	@include box-shadow($modal-box-shadow);
+}
+
+.modal-footer {
+	text-align: left;
+}
+
+.modal-header {
+	background-color: $modal-header-bg;
+	color: $modal-header-color;
+
+	.close {
+		color: $modal-header-close-color;
+
+		@include opacity(1);
+	}
 }

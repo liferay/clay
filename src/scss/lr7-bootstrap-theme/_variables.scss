@@ -454,6 +454,12 @@ $popover-arrow-color:                             #FFF;
 //Modals
 $modal-box-shadow: $box-shadow-default;
 
+$modal-backdrop-opacity:                          .75 !default;
+
+$modal-header-bg: lighten($brand-default, 40%);
+$modal-header-color: $label-color;
+$modal-header-close-color: $label-color;
+
 //== Alerts
 $alert-padding:               16px !default;
 
