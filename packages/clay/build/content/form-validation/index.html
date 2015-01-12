@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Sliders</title>
+	<title>Form Elements (Validation)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -67,7 +67,7 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse
+collapse in
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/color-scheme">Color Scheme</a>
@@ -78,7 +78,7 @@ collapse
 </li>
 <li class=""><a href="../../content/form-elements">Form Elements</a>
 </li>
-<li class=""><a href="../../content/form-validation">Form Elements (Validation)</a>
+<li class="active"><a href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
 <li class=""><a href="../../content/form-examples">Form Example</a>
 </li>
@@ -115,10 +115,10 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Experimental</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse in
+collapse
 ">
 <ul class="nav nav-stacked">
-<li class="active"><a href="../../content/sliders">Sliders</a>
+<li class=""><a href="../../content/sliders">Sliders</a>
 </li>
 <li class=""><a href="../../content/switches">Switches</a>
 </li>
@@ -169,67 +169,111 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Sliders
+			Form Elements (Validation)
 
 			
 		</h1>
 
 		
-<div class="row" id="sliderPage">
+<div class="row">
 	<div class="col-md-12">
-		<h3>Range (Slider) Input</h3>
+		<h3><em>Validation States</em></h3>
 
-		<div class="slider-container">
-			<label for="slider1">Slider 1 Label</label>
+		<div class="form-group has-success">
+			<label class="control-label">Input with success</label>
 
-			<input id="slider1" name="slider1" type="range" min="0" max="100" step="1" value="50" />
+			<input class="form-control" type="text">
 
-			<output for="slider1">50</output>
+			<div class="validation-message">This input is a success!</div>
 		</div>
 
-<pre><code>&lt;div class=&quot;slider-container&quot;&gt;
-  &lt;label for=&quot;slider1&quot;&gt;Label Text&lt;/label&gt;
-  &lt;input id=&quot;slider1&quot; name=&quot;slider1&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;50&quot; /&gt;
-  &lt;output&gt;50&lt;/output&gt;
-&lt;/div&gt;</code></pre>
+		<div class="form-group has-warning">
+			<label class="control-label">Input with warning</label>
 
-		<h3>Vertical Range (Slider) Input</h3>
+			<input class="form-control" type="text">
 
-		<div class="slider-container-vertical">
-			<label for="slider2">Slider 2 Label</label>
-
-			<input class="vertical" id="slider2" name="slider2" orient="vertical" type="range" min="0" max="100" step="1" value="50" />
-
-			<output for="slider2">50</output>
+			<div class="validation-message">Warning this input is a warning!</div>
 		</div>
 
-<pre><code>&lt;div class=&quot;slider-container-vertical&quot;&gt;
-  &lt;label for=&quot;slider2&quot;&gt;Label Text&lt;/label&gt;
-  &lt;input class=&quot;vertical&quot; id=&quot;slider2&quot; name=&quot;slider2&quot; orient=&quot;vertical&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;50&quot; /&gt;
-  &lt;output&gt;50&lt;/output&gt;
-&lt;/div&gt;</code></pre>
+		<div class="form-group has-error">
+			<label class="control-label">Input with error</label>
 
+			<input class="form-control" type="text">
+
+			<div class="validation-message">This input is invalid!</div>
+		</div>
+
+		<pre><code>&lt;div class=&quot;form-group has-error&quot;&gt;
+&#x9;&lt;label class=&quot;control-label&quot;&gt;Input with error&lt;/label&gt;
+
+&#x9;&lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
+
+&#x9;&lt;div class=&quot;validation-message&quot;&gt;This input is invalid!&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 	</div>
 </div>
 
-<script>
-	YUI().use(
-		'aui-base',
-		'aui-event-input',
-		function(Y) {
-			Y.one('#sliderPage').delegate(
-				'input',
-				function(event) {
-					var currentTarget = event.currentTarget;
+<div class="row">
+	<div class="col-md-12">
+		<h3><em>Validation States with Icons</em></h3>
 
-					currentTarget.next('output').text(currentTarget.val());
-				},
-				'input[type="range"]'
-			);
-		}
-	)
-</script>
+		<div class="form-group has-success">
+			<label class="control-label">Input with success icon</label>
 
+			<div class="input-group">
+				<input class="form-control" type="text">
+
+				<div class="input-group-addon">
+					<span class="glyphicon glyphicon-ok"></span>
+				</div>
+			</div>
+
+			<div class="validation-message">This input is a success!</div>
+		</div>
+
+		<div class="form-group has-warning">
+			<label class="control-label">Input with warning icon</label>
+
+			<div class="input-group">
+				<input class="form-control" type="text">
+
+				<div class="input-group-addon">
+					<span class="glyphicon glyphicon-exclamation-sign"></span>
+				</div>
+			</div>
+
+			<div class="validation-message">Warning this input is a warning!</div>
+		</div>
+
+		<div class="form-group has-error">
+			<label class="control-label">Input with error icon</label>
+
+			<div class="input-group">
+				<input class="form-control" type="text">
+
+				<div class="input-group-addon">
+					<span class="glyphicon glyphicon-remove"></span>
+				</div>
+			</div>
+
+			<div class="validation-message">This input is invalid!</div>
+		</div>
+
+		<pre><code>&lt;div class=&quot;form-group has-error&quot;&gt;
+&#x9;&lt;label class=&quot;control-label&quot;&gt;Input with error icon&lt;/label&gt;
+
+&#x9;&lt;div class=&quot;input-group&quot;&gt;
+&#x9;&#x9;&lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
+
+&#x9;&#x9;&lt;div class=&quot;input-group-addon&quot;&gt;
+&#x9;&#x9;&#x9;&lt;span class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/span&gt;
+&#x9;&#x9;&lt;/div&gt;
+&#x9;&lt;/div&gt;
+
+&#x9;&lt;div class=&quot;validation-message&quot;&gt;This input is invalid!&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div>
 	</div>
 
 		</section>

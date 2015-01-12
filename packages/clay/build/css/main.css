@@ -6823,57 +6823,6 @@ textarea.input-sm:focus, .form-horizontal .form-group-sm textarea.form-control:f
 .input-sm:focus, .form-horizontal .form-group-sm .form-control:focus, .input-group-sm > .form-control:focus, .input-group-sm > .input-group-addon:focus, .input-group-sm > .input-group-btn > .btn:focus {
   padding: 5px 9px; }
 
-.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, .has-success .radio, .has-success .radio-inline {
-  color: #42bfad; }
-.has-success .form-control {
-  border-color: #42bfad;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-  .has-success .form-control:focus {
-    border-color: #349a8b;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-.has-success .form-control-feedback {
-  color: #42bfad; }
-.has-success .input-group-addon {
-  background-color: #42bfad;
-  border-color: #42bfad;
-  color: #42bfad; }
-
-.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline {
-  color: #ffb103; }
-.has-warning .form-control {
-  border-color: #ffb103;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-  .has-warning .form-control:focus {
-    border-color: #cf8d00;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-.has-warning .form-control-feedback {
-  color: #ffb103; }
-.has-warning .input-group-addon {
-  background-color: #ffb103;
-  border-color: #ffb103;
-  color: #ffb103; }
-
-.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline {
-  color: #e9295a; }
-.has-error .form-control {
-  border-color: #e9295a;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-  .has-error .form-control:focus {
-    border-color: #ca1545;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-.has-error .form-control-feedback {
-  color: #e9295a; }
-.has-error .input-group-addon {
-  background-color: #e9295a;
-  border-color: #e9295a;
-  color: #e9295a; }
-
 label.checkbox-default, .checkbox-default label, label.radio-default, .radio-default label {
   cursor: pointer;
   position: relative; }
@@ -6985,6 +6934,90 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   border-color: #e7e8ea;
   color: #FFF;
   cursor: not-allowed; }
+
+.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, .has-success .radio, .has-success .radio-inline {
+  color: #42bfad; }
+.has-success .form-control {
+  border-color: #42bfad;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .has-success .form-control:focus {
+    border-color: #349a8b;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+.has-success .form-control-feedback {
+  color: #42bfad; }
+.has-success .input-group-addon {
+  background-color: transparent;
+  border-width: 0;
+  padding: 0 22px 0 24px; }
+  .has-success .input-group-addon span {
+    background-color: #42bfad;
+    border-color: #42bfad;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #FFF;
+    padding: 5px; }
+.has-success .validation-message {
+  color: #42bfad;
+  font-size: 12px; }
+
+.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline {
+  color: #ffb103; }
+.has-warning .form-control {
+  border-color: #ffb103;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .has-warning .form-control:focus {
+    border-color: #cf8d00;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+.has-warning .form-control-feedback {
+  color: #ffb103; }
+.has-warning .input-group-addon {
+  background-color: transparent;
+  border-width: 0;
+  padding: 0 22px 0 24px; }
+  .has-warning .input-group-addon span {
+    background-color: #ffb103;
+    border-color: #ffb103;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #FFF;
+    padding: 5px; }
+.has-warning .validation-message {
+  color: #ffb103;
+  font-size: 12px; }
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline {
+  color: #e9295a; }
+.has-error .form-control {
+  border-color: #e9295a;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .has-error .form-control:focus {
+    border-color: #ca1545;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+.has-error .form-control-feedback {
+  color: #e9295a; }
+.has-error .input-group-addon {
+  background-color: transparent;
+  border-width: 0;
+  padding: 0 22px 0 24px; }
+  .has-error .input-group-addon span {
+    background-color: #e9295a;
+    border-color: #e9295a;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #FFF;
+    padding: 5px; }
+.has-error .validation-message {
+  color: #e9295a;
+  font-size: 12px; }
 
 .header-first-level, .header-second-level {
   padding: 0 5px; }
