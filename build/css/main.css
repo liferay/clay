@@ -3990,8 +3990,8 @@ button.close {
     opacity: 0;
     filter: alpha(opacity=0); }
   .modal-backdrop.in {
-    opacity: 0.5;
-    filter: alpha(opacity=50); }
+    opacity: 0.75;
+    filter: alpha(opacity=75); }
 
 .modal-header {
   padding: 15px;
@@ -7059,9 +7059,24 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     margin: 10px 0 9px;
     padding: 10px 11px 6px 11px; } }
 
+.modal-backdrop.in {
+  opacity: 0.75;
+  filter: alpha(opacity=75); }
+
 .modal-content {
   -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2); }
+
+.modal-footer {
+  text-align: left; }
+
+.modal-header {
+  background-color: #f3f3f5;
+  color: #2B4259; }
+  .modal-header .close {
+    color: #2B4259;
+    opacity: 1;
+    filter: alpha(opacity=100); }
 
 .nav > li > a {
   color: #2B4259; }
