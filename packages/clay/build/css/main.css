@@ -9145,8 +9145,9 @@ section.row {
   font-size: 11px;
   margin-bottom: 5px;
   margin-right: 5px;
+  max-width: 125px;
   padding: 22px 10px;
-  width: 125px; }
+  width: 30%; }
 
 /* Side Nav Demo */
 #mySidebar {
