@@ -135,8 +135,8 @@ label.radio-default,
 	}
 }
 
-.disabled {
-	input[type='checkbox'] {
+&[disabled], .disabled {
+	.checkbox-default input[type='checkbox'], input[type='checkbox'] {
 		&, &:checked {
 			+ .skin:after {
 				background-color: $checkbox-disabled-bg;
@@ -222,8 +222,8 @@ label.radio-default,
 	}
 }
 
-.disabled {
-	input[type='radio'] {
+&[disabled], .disabled {
+	.radio-default input[type='radio'], input[type='radio'] {
 		&:checked {
 			+ .skin:after {
 				background-color: $radio-disabled-bg;;
