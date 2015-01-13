@@ -177,7 +177,7 @@ collapse
 		
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Basic form Elements</em></h3>
+		<h3><em>Basic Form Elements</em></h3>
 
 		<div class="form-group">
 			<label>Default text input</label>
@@ -189,30 +189,6 @@ collapse
 			<label>Password input</label>
 
 			<input class="form-control" placeholder="Enter password" type="password">
-		</div>
-
-		<div class="form-group">
-			<label>Small text input</label>
-
-			<input class="form-control input-sm" placeholder="Placeholder" type="text">
-		</div>
-
-		<div class="form-group">
-			<label>Large text input</label>
-
-			<input class="form-control input-lg" placeholder="Placeholder" type="text">
-		</div>
-
-		<div class="form-group">
-			<label>Disabled text input</label>
-
-			<input disabled class="form-control" placeholder="Placeholder" type="text">
-		</div>
-
-		<div class="form-group">
-			<label>Read only text input</label>
-
-			<input class="form-control" placeholder="Placeholder" readonly type="text">
 		</div>
 
 		<div class="form-group">
@@ -443,6 +419,121 @@ collapse
 			<label class="sr-only">FILE UPLOAD</label>
 
 			<input id="inputFile" type="file">
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3><em>Form Element States</em></h3>
+
+		<div class="form-group">
+			<label>Disabled</label>
+
+			<input disabled class="form-control" placeholder="Placeholder" type="text">
+		</div>
+
+		<pre><code>&lt;input disabled class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;</code></pre>
+
+		<div class="form-group">
+			<label>Read only</label>
+
+			<input class="form-control" placeholder="Placeholder" readonly type="text">
+		</div>
+
+		<pre><code>&lt;input readonly class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;</code></pre>
+
+		<h3><em>Disabled Fieldset</em></h3>
+
+		<form>
+			<fieldset disabled="">
+				<div class="form-group">
+					<label for="disabledTextInput">Disabled input</label>
+					<input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+				</div>
+
+				<div class="form-group">
+					<label for="disabledSelect">Disabled select menu</label>
+					<select id="disabledSelect" class="form-control">
+						<option>Disabled select</option>
+					</select>
+				</div>
+
+				<div class="checkbox checkbox-default">
+					<label>
+						<input checked type="checkbox" value="">
+						<span class="skin"></span>
+						Disabled Checkbox
+					</label>
+				</div>
+
+				<div class="radio radio-default">
+					<label>
+						<input type="radio" value="">
+						<span class="skin"></span>
+						Disabled Radio
+					</label>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</fieldset>
+		</form>
+		<pre><code>&lt;form&gt;
+&#x9;&lt;fieldset disabled=&quot;&quot;&gt;
+&#x9;&#x9;&lt;div class=&quot;form-group&quot;&gt;
+&#x9;&#x9;&#x9;&lt;label for=&quot;disabledTextInput&quot;&gt;Disabled input&lt;/label&gt;
+&#x9;&#x9;&#x9;&lt;input type=&quot;text&quot; id=&quot;disabledTextInput&quot; class=&quot;form-control&quot; placeholder=&quot;Disabled input&quot;&gt;
+&#x9;&#x9;&lt;/div&gt;
+
+&#x9;&#x9;&lt;div class=&quot;form-group&quot;&gt;
+&#x9;&#x9;&#x9;&lt;label for=&quot;disabledSelect&quot;&gt;Disabled select menu&lt;/label&gt;
+&#x9;&#x9;&#x9;&lt;select id=&quot;disabledSelect&quot; class=&quot;form-control&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;option&gt;Disabled select&lt;/option&gt;
+&#x9;&#x9;&#x9;&lt;/select&gt;
+&#x9;&#x9;&lt;/div&gt;
+
+&#x9;&#x9;&lt;div class=&quot;checkbox checkbox-default&quot;&gt;
+&#x9;&#x9;&#x9;&lt;label&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;span class=&quot;skin&quot;&gt;&lt;/span&gt;
+&#x9;&#x9;&#x9;&#x9;Disabled Checkbox
+&#x9;&#x9;&#x9;&lt;/label&gt;
+&#x9;&#x9;&lt;/div&gt;
+
+&#x9;&#x9;&lt;div class=&quot;radio radio-default&quot;&gt;
+&#x9;&#x9;&#x9;&lt;label&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;input type=&quot;radio&quot; value=&quot;&quot;&gt;
+&#x9;&#x9;&#x9;&#x9;&lt;span class=&quot;skin&quot;&gt;&lt;/span&gt;
+&#x9;&#x9;&#x9;&#x9;Disabled Radio
+&#x9;&#x9;&#x9;&lt;/label&gt;
+&#x9;&#x9;&lt;/div&gt;
+
+&#x9;&#x9;&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+&#x9;&lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3><em>Form Element Sizes</em></h3>
+
+		<div class="form-group">
+			<label>Small text input</label>
+
+			<input class="form-control input-sm" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Default text input</label>
+
+			<input class="form-control" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Large text input</label>
+
+			<input class="form-control input-lg" placeholder="Placeholder" type="text">
 		</div>
 	</div>
 </div>

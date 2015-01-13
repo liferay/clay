@@ -6871,7 +6871,7 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     position: relative;
     width: 17px; }
 
-.disabled input[type='checkbox'] + .skin:after, .disabled input[type='checkbox']:checked + .skin:after {
+[disabled] .checkbox-default input[type='checkbox'] + .skin:after, [disabled] .checkbox-default input[type='checkbox']:checked + .skin:after, [disabled] input[type='checkbox'] + .skin:after, [disabled] input[type='checkbox']:checked + .skin:after, .disabled .checkbox-default input[type='checkbox'] + .skin:after, .disabled .checkbox-default input[type='checkbox']:checked + .skin:after, .disabled input[type='checkbox'] + .skin:after, .disabled input[type='checkbox']:checked + .skin:after {
   background-color: #e7e8ea;
   border-color: #e7e8ea;
   color: #FFF;
@@ -6924,12 +6924,12 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     position: relative;
     width: 17px; }
 
-.disabled input[type='radio']:checked + .skin:after {
+[disabled] .radio-default input[type='radio']:checked + .skin:after, [disabled] input[type='radio']:checked + .skin:after, .disabled .radio-default input[type='radio']:checked + .skin:after, .disabled input[type='radio']:checked + .skin:after {
   background-color: #e7e8ea;
   cursor: not-allowed; }
-.disabled input[type='radio']:checked + .skin:before {
+[disabled] .radio-default input[type='radio']:checked + .skin:before, [disabled] input[type='radio']:checked + .skin:before, .disabled .radio-default input[type='radio']:checked + .skin:before, .disabled input[type='radio']:checked + .skin:before {
   border-color: #e7e8ea; }
-.disabled input[type='radio'] + .skin:before, .disabled input[type='radio']:hover + .skin:before {
+[disabled] .radio-default input[type='radio'] + .skin:before, [disabled] .radio-default input[type='radio']:hover + .skin:before, [disabled] input[type='radio'] + .skin:before, [disabled] input[type='radio']:hover + .skin:before, .disabled .radio-default input[type='radio'] + .skin:before, .disabled .radio-default input[type='radio']:hover + .skin:before, .disabled input[type='radio'] + .skin:before, .disabled input[type='radio']:hover + .skin:before {
   background-color: #e7e8ea;
   border-color: #e7e8ea;
   color: #FFF;
