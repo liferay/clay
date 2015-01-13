@@ -249,6 +249,7 @@
 			.active > a {
 				&, &:focus, &:hover {
 					border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color transparent;
+					border-left-width: 0;
 				}
 			}
 
