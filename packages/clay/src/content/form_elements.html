@@ -5,7 +5,7 @@ section: Elements
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Basic form Elements</em></h3>
+		<h3><em>Basic Form Elements</em></h3>
 
 		<div class="form-group">
 			<label>Default text input</label>
@@ -17,30 +17,6 @@ section: Elements
 			<label>Password input</label>
 
 			<input class="form-control" placeholder="Enter password" type="password">
-		</div>
-
-		<div class="form-group">
-			<label>Small text input</label>
-
-			<input class="form-control input-sm" placeholder="Placeholder" type="text">
-		</div>
-
-		<div class="form-group">
-			<label>Large text input</label>
-
-			<input class="form-control input-lg" placeholder="Placeholder" type="text">
-		</div>
-
-		<div class="form-group">
-			<label>Disabled text input</label>
-
-			<input disabled class="form-control" placeholder="Placeholder" type="text">
-		</div>
-
-		<div class="form-group">
-			<label>Read only text input</label>
-
-			<input class="form-control" placeholder="Placeholder" readonly type="text">
 		</div>
 
 		<div class="form-group">
@@ -271,6 +247,121 @@ section: Elements
 			<label class="sr-only">FILE UPLOAD</label>
 
 			<input id="inputFile" type="file">
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3><em>Form Element States</em></h3>
+
+		<div class="form-group">
+			<label>Disabled</label>
+
+			<input disabled class="form-control" placeholder="Placeholder" type="text">
+		</div>
+
+		<pre><code>```<input disabled class="form-control" placeholder="Placeholder" type="text">```</code></pre>
+
+		<div class="form-group">
+			<label>Read only</label>
+
+			<input class="form-control" placeholder="Placeholder" readonly type="text">
+		</div>
+
+		<pre><code>```<input readonly class="form-control" placeholder="Placeholder" type="text">```</code></pre>
+
+		<h3><em>Disabled Fieldset</em></h3>
+
+		<form>
+			<fieldset disabled="">
+				<div class="form-group">
+					<label for="disabledTextInput">Disabled input</label>
+					<input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+				</div>
+
+				<div class="form-group">
+					<label for="disabledSelect">Disabled select menu</label>
+					<select id="disabledSelect" class="form-control">
+						<option>Disabled select</option>
+					</select>
+				</div>
+
+				<div class="checkbox checkbox-default">
+					<label>
+						<input checked type="checkbox" value="">
+						<span class="skin"></span>
+						Disabled Checkbox
+					</label>
+				</div>
+
+				<div class="radio radio-default">
+					<label>
+						<input type="radio" value="">
+						<span class="skin"></span>
+						Disabled Radio
+					</label>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</fieldset>
+		</form>
+		<pre><code>```<form>
+	<fieldset disabled="">
+		<div class="form-group">
+			<label for="disabledTextInput">Disabled input</label>
+			<input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+		</div>
+
+		<div class="form-group">
+			<label for="disabledSelect">Disabled select menu</label>
+			<select id="disabledSelect" class="form-control">
+				<option>Disabled select</option>
+			</select>
+		</div>
+
+		<div class="checkbox checkbox-default">
+			<label>
+				<input checked type="checkbox" value="">
+				<span class="skin"></span>
+				Disabled Checkbox
+			</label>
+		</div>
+
+		<div class="radio radio-default">
+			<label>
+				<input type="radio" value="">
+				<span class="skin"></span>
+				Disabled Radio
+			</label>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</fieldset>
+</form>```</code></pre>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3><em>Form Element Sizes</em></h3>
+
+		<div class="form-group">
+			<label>Small text input</label>
+
+			<input class="form-control input-sm" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Default text input</label>
+
+			<input class="form-control" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Large text input</label>
+
+			<input class="form-control input-lg" placeholder="Placeholder" type="text">
 		</div>
 	</div>
 </div>
