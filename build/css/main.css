@@ -7245,7 +7245,8 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .tab-group-right .nav-tabs {
     border-left: 1px solid #D8D8D8; }
     .tab-group-right .nav-tabs .active > a, .tab-group-right .nav-tabs .active > a:focus, .tab-group-right .nav-tabs .active > a:hover {
-      border-color: #D8D8D8 #D8D8D8 #D8D8D8 transparent; }
+      border-color: #D8D8D8 #D8D8D8 #D8D8D8 transparent;
+      border-left-width: 0; }
     .tab-group-right .nav-tabs > li {
       margin-left: -1px; }
       .tab-group-right .nav-tabs > li > a {
