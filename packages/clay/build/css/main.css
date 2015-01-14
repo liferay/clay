@@ -1,3 +1,11 @@
+.nameplate-checkbox, .nameplate-content, .nameplate-icon {
+  display: table-cell;
+  vertical-align: top; }
+
+.nameplate {
+  display: table;
+  width: 100%; }
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -7477,6 +7485,119 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     .navbar-nav .open .dropdown-menu.dropdown-menu-inverse {
       background-color: #868896; } }
 
+.nameplate {
+  margin: 10px 0; }
+
+.nameplate-checkbox {
+  width: 20px; }
+
+.nameplate-content {
+  padding-right: 15px;
+  word-break: break-word; }
+  .nameplate-content h1, .nameplate-content h2, .nameplate-content h3 {
+    margin-top: 0; }
+  .nameplate-content h4, .nameplate-content h5, .nameplate-content h6 {
+    margin-top: 2px; }
+  .nameplate-content small {
+    color: #868896;
+    display: block; }
+
+.nameplate-icon {
+  width: 70px; }
+
+.nameplate-list {
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 0; }
+  .nameplate-list > li {
+    border-left: 5px solid transparent;
+    margin: 0; }
+    .nameplate-list > li .label {
+      padding: 0; }
+    .nameplate-list > li.nameplate-list-danger {
+      border-left-color: #FF387A; }
+      .nameplate-list > li.nameplate-list-danger .label {
+        color: #FF387A; }
+      .nameplate-list > li.nameplate-list-danger .user-icon {
+        background-color: #FF387A; }
+    .nameplate-list > li.nameplate-list-default {
+      border-left-color: #9CA4AC; }
+      .nameplate-list > li.nameplate-list-default .label {
+        color: #9CA4AC; }
+      .nameplate-list > li.nameplate-list-default .user-icon {
+        background-color: #9CA4AC; }
+    .nameplate-list > li.nameplate-list-info {
+      border-left-color: #D437EF; }
+      .nameplate-list > li.nameplate-list-info .label {
+        color: #D437EF; }
+      .nameplate-list > li.nameplate-list-info .user-icon {
+        background-color: #D437EF; }
+    .nameplate-list > li.nameplate-list-primary {
+      border-left-color: #577ED2; }
+      .nameplate-list > li.nameplate-list-primary .label {
+        color: #577ED2; }
+      .nameplate-list > li.nameplate-list-primary .user-icon {
+        background-color: #577ED2; }
+    .nameplate-list > li.nameplate-list-success {
+      border-left-color: #26C0BE; }
+      .nameplate-list > li.nameplate-list-success .label {
+        color: #26C0BE; }
+      .nameplate-list > li.nameplate-list-success .user-icon {
+        background-color: #26C0BE; }
+    .nameplate-list > li.nameplate-list-warning {
+      border-left-color: #FF6C58; }
+      .nameplate-list > li.nameplate-list-warning .label {
+        color: #FF6C58; }
+      .nameplate-list > li.nameplate-list-warning .user-icon {
+        background-color: #FF6C58; }
+    .nameplate-list > li:last-child .nameplate, .nameplate-list > li.last .nameplate {
+      border-bottom: 1px solid #868896; }
+    .nameplate-list > li .nameplate {
+      border-top: 1px solid #868896;
+      margin: 0;
+      padding: 15px; }
+
+.user-icon {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #FFF;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  overflow: hidden;
+  width: 60px; }
+  .user-icon.user-icon-circle, .user-icon-circle .user-icon {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+  .user-icon.user-icon-rounded, .user-icon-rounded .user-icon {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+  .user-icon.user-icon-square, .user-icon-square .user-icon {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+
+.user-icon-danger {
+  background-color: #FF387A; }
+
+.user-icon-default {
+  background-color: #9CA4AC; }
+
+.user-icon-info {
+  background-color: #D437EF; }
+
+.user-icon-primary {
+  background-color: #577ED2; }
+
+.user-icon-success {
+  background-color: #26C0BE; }
+
+.user-icon-warning {
+  background-color: #FF6C58; }
+
 .pager li > a, .pager li > span {
   background-color: #FFF;
   -webkit-border-radius: 20px;
@@ -8217,6 +8338,14 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   position: fixed;
   right: 0; }
 
+.uxgl-nameplates-page .col-md-2 {
+  text-align: center; }
+  .uxgl-nameplates-page .col-md-2 p {
+    font-size: 12px; }
+.uxgl-nameplates-page .user-icon {
+  margin-left: auto;
+  margin-right: auto; }
+
 /* Featured Panels */
 .admin-interface {
   position: absolute; }
@@ -8723,6 +8852,9 @@ section.row {
 .page-title {
   font-weight: bold;
   margin-bottom: 25px; }
+
+.row-spacing {
+  margin-bottom: 20px; }
 
 #headerTopBar {
   background: #0058BA url(../images/back_decoration_nav.png) no-repeat 100% 0; }
