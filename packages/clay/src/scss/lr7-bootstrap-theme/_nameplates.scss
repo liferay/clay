@@ -1,0 +1,147 @@
+@mixin color-nameplate-list-item($color) {
+	border-left-color: $color;
+
+	.label {
+		color: $color;
+	}
+
+	.user-icon {
+		background-color: $color;
+	}
+}
+
+.nameplate {
+	@extend %equal-height-columns;
+
+	margin: 10px 0;
+}
+
+.nameplate-checkbox {
+	@extend %equal-height-column-cell;
+
+	width: 20px;
+}
+
+.nameplate-content {
+	@extend %equal-height-column-cell;
+
+	padding-right: 15px;
+	word-break: break-word;
+
+	h1, h2, h3 {
+		margin-top: 0;
+	}
+
+	h4, h5, h6 {
+		margin-top: 2px;
+	}
+
+	small {
+		color: $brand-default;
+		display: block;
+	}
+}
+
+.nameplate-icon {
+	@extend %equal-height-column-cell;
+
+	width: 70px;
+}
+
+.nameplate-list {
+	list-style: none;
+	margin: 0 0 10px 0;
+	padding: 0;
+
+	> li {
+		border-left: 5px solid transparent;
+		margin: 0;
+
+		.label {
+			padding: 0;
+		}
+
+		&.nameplate-list-danger {
+			@include color-nameplate-list-item($user-icon-danger-bg);
+		}
+
+		&.nameplate-list-default {
+			@include color-nameplate-list-item($user-icon-default-bg);
+		}
+
+		&.nameplate-list-info {
+			@include color-nameplate-list-item($user-icon-info-bg);
+		}
+
+		&.nameplate-list-primary {
+			@include color-nameplate-list-item($user-icon-primary-bg);
+		}
+
+		&.nameplate-list-success {
+			@include color-nameplate-list-item($user-icon-success-bg);
+		}
+
+		&.nameplate-list-warning {
+			@include color-nameplate-list-item($user-icon-warning-bg);
+		}
+
+		&:last-child, &.last {
+			.nameplate {
+				border-bottom: 1px solid $nameplate-list-border-color;
+			}
+		}
+
+		.nameplate {
+			border-top: 1px solid $nameplate-list-border-color;
+			margin: 0;
+			padding: 15px;
+		}
+	}
+}
+
+.user-icon {
+	@include border-radius($user-icon-border-radius);
+
+	color: #FFF;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	overflow: hidden;
+	width: 60px;
+
+	&.user-icon-circle, .user-icon-circle & {
+		@include border-radius(50%);
+	}
+
+	&.user-icon-rounded, .user-icon-rounded & {
+		@include border-radius(5px);
+	}
+
+	&.user-icon-square, .user-icon-square & {
+		@include border-radius(0);
+	}
+}
+
+.user-icon-danger {
+	background-color: $user-icon-danger-bg;
+}
+
+.user-icon-default {
+	background-color: $user-icon-default-bg;
+}
+
+.user-icon-info {
+	background-color: $user-icon-info-bg;
+}
+
+.user-icon-primary {
+	background-color: $user-icon-primary-bg;
+}
+
+.user-icon-success {
+	background-color: $user-icon-success-bg;
+}
+
+.user-icon-warning {
+	background-color: $user-icon-warning-bg;
+}
