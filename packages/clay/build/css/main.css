@@ -7494,6 +7494,8 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 .nameplate-content {
   padding-right: 15px;
   word-break: break-word; }
+  .nameplate-content:last-child, .nameplate-content.last {
+    padding-right: 0; }
   .nameplate-content h1, .nameplate-content h2, .nameplate-content h3 {
     margin-top: 0; }
   .nameplate-content h4, .nameplate-content h5, .nameplate-content h6 {
