@@ -28,6 +28,10 @@
 	padding-right: 15px;
 	word-break: break-word;
 
+	&:last-child, &.last {
+		padding-right: 0;
+	}
+
 	h1, h2, h3 {
 		margin-top: 0;
 	}
