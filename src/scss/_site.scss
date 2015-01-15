@@ -507,24 +507,6 @@ section.row {
 	}
 }
 
-/* -------- Thumbnail Variations ---------*/
-
-#thumbnailVariations {
-	background-color: $gray-light;
-	padding: 20px;
-
-	.img-responsive {
-		width: 100%;
-	}
-
-	.user-info img {
-		float: left;
-		margin-right: 15px;
-		margin-top: 4px;
-		width: 32px;
-	}
-}
-
 /* -------- Timeline -------- */
 
 .item-center.timeline-item {
