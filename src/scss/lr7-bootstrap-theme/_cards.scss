@@ -1,0 +1,135 @@
+.card, .card-horizontal {
+	@include box-shadow($card-box-shadow);
+
+	margin-bottom: 20px;
+	overflow: hidden;
+
+	&.card-rounded {
+		@include border-radius($card-border-radius);
+	}
+
+	.divider {
+		border-top: 1px solid #DDD;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+
+	.nameplate-icon {
+		width: 50px;
+
+		.user-icon {
+			height: 40px;
+			line-height: 40px;
+			width: 40px;
+		}
+	}
+}
+
+.card-btn-group {
+	@extend .btn-group;
+
+	padding-bottom: 10px;
+	width: 100%;
+
+	.divider {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+
+.card-header, .card-footer, .card-section {
+	.divider {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+
+.card-header {
+	padding: 1px 10px 0;
+}
+
+.card-footer {
+	padding: 0 10px 1px;
+}
+
+.card-section {
+	padding: 1px 10px;
+}
+
+.card-horizontal {
+	position: relative;
+}
+
+.card-horizontal-padded {
+	@extend .card-horizontal;
+
+	padding: 10px;
+
+	.card-row .card-col-gutters {
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
+@for $i from 1 through $grid-columns {
+	.card-col-#{$i} {
+		width: percentage(($i / $grid-columns));
+	}
+}
+
+.card-row {
+	@extend %equal-height-columns;
+
+	height: 100%;
+
+	[class*="card-col"] {
+		@extend %equal-height-column-cell;
+
+		overflow: hidden;
+		position: relative;
+		vertical-align: middle;
+
+		.img-absolute {
+			position: absolute;
+			top: 0;
+		}
+
+		.img-responsive {
+			max-width: none;
+			width: 101%;
+		}
+	}
+
+	.card-col-gutters {
+		padding: 0 2%;
+	}
+
+	.card-col-gutter-left {
+		padding-left: 2%;
+	}
+
+	.card-col-gutter-right {
+		padding-left: 2%;
+	}
+}
+
+@media (max-width: $screen-sm-min) {
+	.card-row {
+		.card-col-gutters {
+			padding: 0 10px;
+		}
+
+		.card-col-gutter-left {
+			padding-left: 10px;
+		}
+
+		.card-col-gutter-right {
+			padding-left: 10px;
+		}
+	}
+}
