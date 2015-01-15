@@ -9278,18 +9278,6 @@ section.row {
   #popovers .popover.left {
     margin-left: 0; }
 
-/* -------- Thumbnail Variations ---------*/
-#thumbnailVariations {
-  background-color: #EDF0F5;
-  padding: 20px; }
-  #thumbnailVariations .img-responsive {
-    width: 100%; }
-  #thumbnailVariations .user-info img {
-    float: left;
-    margin-right: 15px;
-    margin-top: 4px;
-    width: 32px; }
-
 /* -------- Timeline -------- */
 .item-center.timeline-item img {
   float: none;
