@@ -1,12 +1,17 @@
 .header-first-level, .header-second-level {
 	padding: 0 5px;
+
+	.heading-toolbar-center {
+		line-height: 40px;
+		font-weight: 300;
+	}
 }
 
 .header-first-level {
 	background-color: $header-first-level-bg;
 	color: $header-first-level-color;
 
-	.header-toolbar, .header-toolbar-right {
+	.heading-toolbar-left, .heading-toolbar-right {
 		>li > a {
 			color: $header-first-level-color;
 
@@ -21,7 +26,7 @@
 	background-color: $header-second-level-bg;
 	color: $header-second-level-color;
 
-	.header-toolbar, .header-toolbar-right {
+	.heading-toolbar-left, .heading-toolbar-right {
 		> li > a {
 			color: $header-second-level-color;
 
@@ -31,7 +36,7 @@
 		}
 	}
 
-	.header-toolbar {
+	.heading-toolbar-left {
 		margin-left: -5px;
 		overflow: hidden;
 
@@ -48,50 +53,26 @@
 	}
 }
 
-.header-title {
-	font-weight: 300;
-	overflow: hidden;
-	padding: 10px 5px;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-.header-toolbar, .header-toolbar-right {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-
-	> li {
-		display: inline-block;
-
-		> a {
-			display: inline-block;
-			font-size: 17px;
-			margin: 5px 0;
-			padding: 3px 5px;
-
-			&:focus, &:hover {
-				text-decoration: none;
-			}
-		}
-	}
-}
-
-.header-toolbar {
-	float: left;
-}
-
-.header-toolbar-right {
-	float: right;
-}
-
 @media (min-width: $grid-float-breakpoint) {
 	.header-first-level, .header-second-level {
 		padding: 0 11px;
+
+		.heading-toolbar-center {
+			font-size: 18px;
+			line-height: 66px;
+		}
+
+		.heading-toolbar-left, .heading-toolbar-right {
+			> li > a {
+				font-size: 22px;
+				margin: 10px 0 9px;
+				padding: 10px 11px 6px 11px;
+			}
+		}
 	}
 
 	.header-second-level {
-		.header-toolbar {
+		.heading-toolbar-left {
 			margin-left: -11px;
 			overflow: hidden;
 
@@ -105,19 +86,6 @@
 					padding-right: 8px;
 				}
 			}
-		}
-	}
-
-	.header-title {
-		font-size: 18px;
-		padding: 20px 11px;
-	}
-
-	.header-toolbar, .header-toolbar-right {
-		> li > a {
-			font-size: 22px;
-			margin: 10px 0 9px;
-			padding: 10px 11px 6px 11px;
 		}
 	}
 }
