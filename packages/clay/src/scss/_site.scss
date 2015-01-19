@@ -410,38 +410,6 @@ section.row {
 	text-align: center;
 }
 
-/* -------- Image Gallery -------- */
-
-#imageGalleryFeaturedPanels {
-	#tab2 .featured-panel .panel-body {
-		height: 130px;
-	}
-
-	#tab3 .featured-panel .panel-body {
-		height: 200px;
-	}
-
-	.admin-interface a {
-		color: #A4BBFF;
-	}
-
-	.featured-panel {
-		@include box-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
-	}
-}
-
-.image-gallery {
-	padding-top: 15px;
-
-	.row {
-		margin-bottom: 30px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
-
 /* -------- Media Page -------- */
 
 #mediaPage img {
@@ -467,30 +435,6 @@ section.row {
 	.btn {
 		margin-bottom: 5px;
 	}
-}
-
-/* -------- Panel Page ------- */
-
-#myChart {
-	height: 300px;
-	margin: 10px auto;
-	max-width: 300px;
-	width: 300px;
-}
-
-#panelPage a {
-	color: #333;
-	text-decoration: none;
-
-	&:hover {
-		color: #777;
-	}
-}
-
-/* -------- Panel Variations -------- */
-
-#panelVariations img {
-	max-width: 141px;
 }
 
 /* Popovers */

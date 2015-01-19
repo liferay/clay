@@ -1,141 +1,33 @@
-/* Featured Panels */
-
-.admin-interface {
-	position: absolute;
-}
-
-.bottom-left {
-	bottom: 0;
-	left: 5px;
-}
-
-.bottom-right {
-	bottom: 0;
-	right: 5px;
-}
-
-.top-left {
-	left: 5px;
-	top: 2px;
-}
-
-.top-right {
-	right: 5px;
-	top: 2px;
-}
-
-.featured-panel.panel {
-	background-color: transparent;
-
-	@include box-shadow(none);
-
-	overflow: hidden;
-
-	&.featured-panel-4060, &.featured-panel-6040 {
-		.panel-body {
-			.left, .right {
-				width: 100%;
-			}
-		}
-	}
-
-	img {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.panel-body {
-		display: table;
-		padding: 0;
-		width: 100.5%;
-
-		.left, .right {
-			background-color: #FFF;
-			background-position: top left;
-			background-repeat: no-repeat;
-			background-size: 100% auto;
-			display: block;
-			min-height: 150px;
-			padding: 15px;
-			position: relative;
-			width: 100%;
-		}
-
-		.left {
-			left: -1px;
-		}
-	}
-}
-
-@media (min-width: 480px) {
-	.featured-panel.panel {
-		&.featured-panel-4060 {
-			.panel-body {
-				.left {
-					width: 40%;
-				}
-
-				.right {
-					width: 60%;
-				}
-			}
-		}
-
-		&.featured-panel-6040 {
-			.panel-body {
-				.left {
-					width: 60%;
-				}
-
-				.right {
-					width: 40%;
-				}
-			}
-		}
-
-		.panel-body {
-			.left, .right {
-				background-position: center;
-				background-size: 150%;
-				display: table-cell;
-				padding: 15px;
-				vertical-align: middle;
-				width: 50%;
-			}
-		}
-	}
-}
-
 /* Panel Heading Align */
 
-.panel.panel-heading-align {
-	background-color: transparent;
-	overflow: hidden;
+// .panel.panel-heading-align {
+// 	background-color: transparent;
+// 	overflow: hidden;
 
-	.panel-body {
-		background-color: #FFF;
-	}
+// 	.panel-body {
+// 		background-color: #FFF;
+// 	}
 
-	.panel-footer, .panel-heading {
-		display: table;
-		width: 100%;
+// 	.panel-footer, .panel-heading {
+// 		display: table;
+// 		width: 100%;
 
-		> div {
-			display: table-cell;
-			text-align: center;
-			vertical-align: middle;
-			width: 1%;
+// 		> div {
+// 			display: table-cell;
+// 			text-align: center;
+// 			vertical-align: middle;
+// 			width: 1%;
 
-			&:first-child {
-				text-align: left;
-			}
+// 			&:first-child {
+// 				text-align: left;
+// 			}
 
-			&:last-child {
-				text-align: right;
-			}
-		}
-	}
-}
+// 			&:last-child {
+// 				text-align: right;
+// 			}
+// 		}
+// 	}
+// }
 
 /* Panels */
 
@@ -155,13 +47,6 @@
 	.panel-heading:first-child {
 		@include border-top-left-radius(3px);
 		@include border-top-right-radius(3px);
-	}
-}
-
-.panel-thumbnail {
-	.panel-heading {
-		overflow: hidden;
-		padding: 0;
 	}
 }
 
