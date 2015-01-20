@@ -180,140 +180,233 @@ collapse
 
 		
 <div class="row">
-	<div class="panel panel-default">
-		<div class="panel-heading">Heading</div>
-		<div class="panel-body">Body</div>
-		<div class="panel-footer">Footer</div>
+	<h3 class="col-md-12"><em>Contextual Panels</em></h3>
+
+	<div class="col-md-4">
+		<h6>panel</h6>
+
+		<div class="panel">
+			<div class="panel-heading">Heading</div>
+			<div class="panel-body">Body</div>
+			<div class="panel-footer">Footer</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>panel-default</h6>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">Heading</div>
+			<div class="panel-body">Body</div>
+			<div class="panel-footer">Footer</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>panel-primary</h6>
+
+		<div class="panel panel-primary">
+			<div class="panel-heading">Heading</div>
+			<div class="panel-body">Body</div>
+			<div class="panel-footer">Footer</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>panel-success</h6>
+
+		<div class="panel panel-success">
+			<div class="panel-heading">Heading</div>
+			<div class="panel-body">Body</div>
+			<div class="panel-footer">Footer</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>panel-warning</h6>
+
+		<div class="panel panel-warning">
+			<div class="panel-heading">Heading</div>
+			<div class="panel-body">Body</div>
+			<div class="panel-footer">Footer</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>panel-danger</h6>
+
+		<div class="panel panel-danger">
+			<div class="panel-heading">Heading</div>
+			<div class="panel-body">Body</div>
+			<div class="panel-footer">Footer</div>
+		</div>
 	</div>
 </div>
 
-<div id="panelPage">
-	<div class="row">
+<div class="row">
+	<div class="col-md-12">
+		<h3><em>Turn a panel into an accordion</em></h3>
+		<p>Add class panel-collapse to the panel or panel-group, specify the toggling element by adding class panel-toggle, and wrap the accordion contents in &lt;div class=&quot;collapse&quot;&gt;Content&lt;/div&gt;</p>
 	</div>
 
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Equally Distributed Content in Panel-heading</em></h3>
-
-			<p>Add class panel-heading-align to panel element to align panel-heading.</p>
+	<div class="col-md-4">
+		<div class="panel panel-collapse panel-default">
+			<div class="panel-heading"><a class="panel-toggle" href="">Show Body & Footer</a></div>
+			<div class="collapse">
+				<div class="panel-body">Body</div>
+				<div class="panel-footer">Footer</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-md-6">
-			<div class="panel panel-default panel-heading-align">
-				<div class="panel-heading">
-					<menu class="header-toolbar" id="yui_patched_v3_16_0_1_1421369906137_481">
-						<li id="yui_patched_v3_16_0_1_1421369906137_480">
-							<a class="sidenav-toggler" href="#" id="yui_patched_v3_16_0_1_1421369906137_479"><span class="icon-align-justify"></span></a>
-						</li>
-					</menu>
+	<div class="col-md-4">
+		<div class="panel panel-collapse panel-primary">
+			<div class="panel-heading"><a class="panel-toggle" href="">Show Body</a></div>
+			<div class="collapse">
+				<div class="panel-body">Body</div>
+			</div>
 
-					<menu class="header-toolbar-right">
-						<li>
-							<a href="#"><span class="icon-upload-alt"></span></a>
-						</li>
-						<li>
-							<a href="#"><span class="icon-download-alt"></span></a>
-						</li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" href="#"><span class="icon-cog"></span></a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Export</a></li>
-								<li><a href="#">Import</a></li>
-								<li><a href="#">Configuration</a></li>
-							</ul>
-						</li>
-					</menu>
+			<div class="panel-footer">Footer</div>
+		</div>
+	</div>
 
-					<div class="header-title">
-						<span>Section name that is really long and is longer than the width of the element Section name that is really long and is longer than the width of the element</span>
-					</div>
+	<div class="col-md-4">
+		<div class="panel panel-collapse panel-success">
+			<div class="panel-heading"><a class="panel-toggle" href="">Show Footer</a></div>
+			<div class="panel-body">Body</div>
+			<div class="collapse">
+				<div class="panel-footer">Footer</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3><em>Panels as an accordion</em></h3>
+
+		<div class="panel-collapse panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading"><a class="panel-toggle" href="">Collapsible Accordion 1</a></div>
+				<div class="collapse">
+					<div class="panel-body">Cup aftertaste grounds chicory, breve latte qui caffeine crema. Rich, skinny caramelization spoon carajillo lungo carajillo cup cultivar viennese mazagran.</div>
 				</div>
+			</div>
 
-				<div class="panel-body">
-					<div id="myChart"></div>
+			<div class="panel panel-primary">
+				<div class="panel-heading"><a class="panel-toggle" href="">Collapsible Accordion 2</a></div>
+				<div class="collapse">
+					<div class="panel-body">Brewed, sweet medium id, so grounds, cinnamon bar acerbic americano grounds robusta. Viennese con panna, barista, white, turkish et java spoon caffeine. French press cream id café au lait redeye cultivar and robusta grinder. Cappuccino siphon saucer cappuccino macchiato grounds milk, and flavour whipped mocha half and half.</div>
 				</div>
+			</div>
 
-				<div class="panel-footer">
-					<div>
-						<a href="#1">
-							<div><span class="glyphicon glyphicon-signal"></span></div>
+			<div class="panel panel-success">
+				<div class="panel-heading"><a class="panel-toggle" href="">Collapsible Accordion 3</a></div>
+				<div class="collapse">
+					<div class="panel-body">Redeye, dripper, id cream variety dark acerbic kopi-luwak single origin irish affogato. Organic turkish mug blue mountain carajillo in flavour. Con panna est plunger pot eu filter caramelization cup to go aroma mocha. Breve, medium coffee, variety so saucer americano roast wings redeye mug café au lait.</div>
+				</div>
+			</div>
 
-							<span>Sales</span>
-						</a>
-					</div>
+			<div class="panel panel-warning">
+				<div class="panel-heading"><a class="panel-toggle" href="">Collapsible Accordion 4</a></div>
+				<div class="collapse">
+					<div class="panel-body">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</div>
+				</div>
+			</div>
 
-					<div>
-						<a href="#1">
-							<div><span class="glyphicon glyphicon-tags"></span></div>
-
-							<span>Promo</span>
-						</a>
-					</div>
-
-					<div>
-						<a href="#1">
-							<div><span class="glyphicon glyphicon-camera"></span></div>
-
-							<span>Photo</span>
-						</a>
-					</div>
-
-					<div>
-						<a href="#1">
-							<div><span class="glyphicon glyphicon-record"></span></div>
-
-							<span>Other</span>
-						</a>
-					</div>
+			<div class="panel panel-danger">
+				<div class="panel-heading"><a class="panel-toggle" href="">Collapsible Accordion 5</a></div>
+				<div class="collapse">
+					<div class="panel-body">Qui viennese, aged, affogato grinder skinny aromatic spoon robust iced. Affogato, doppio cappuccino, aromatic seasonal carajillo dark macchiato. Arabica, spoon, at, cream, as cup fair trade and aged saucer. Est so, rich mocha acerbic sweet carajillo.</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
 
-		<div class="col-md-6">
-			<div class="panel panel-default panel-heading-align">
-				<div class="panel-heading">
-					<div style="text-align: center;">
-						<div>
-							<span class="glyphicon glyphicon-cloud" style="font-size: 150px;"></span>
-						</div>
+<div class="row">
+	<div class="col-md-12">
+		<h3><em>Side navigation using panels and list group</em></h3>
 
-						<h1 style="margin: -20px 0 0 0;font-size: 90px;">75&deg;</h1>
+		<p>Panels should not go deeper than one level, anything deeper should use nav.</p>
+	</div>
 
-						<h5>Los Angeles</h5>
+	<div class="col-md-4">
+		<h6>Not collapsible</h6>
+		<div class="panel-group">
+			<div class="panel">
+				<div class="panel-heading">Basic Information</div>
+
+				<div class="list-group">
+					<a href="#1">Details</a>
+					<a href="#1">Categorization</a>
+					<a href="#1">Documents and Media</a>
+					<a href="#1">Site Template</a>
+				</div>
+			</div>
+
+			<div class="panel">
+				<div class="panel-heading">SEO</div>
+
+				<div class="list-group">
+					<a href="#1">Sitemap</a>
+					<a href="#1">Robots</a>
+				</div>
+			</div>
+
+			<div class="panel">
+				<div class="panel-heading">Advanced</div>
+
+				<div class="list-group">
+					<a href="#1">Default User Associations</a>
+					<a href="#1">Staging</a>
+					<a href="#1">Analytics</a>
+					<a href="#1">Maps</a>
+					<a href="#1">Content Sharing</a>
+					<a href="#1">Recycle Bin</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>Collapsible</h6>
+		<div class="panel-collapse panel-group">
+			<div class="panel">
+				<div class="panel-heading"><a class="panel-toggle" href="">Basic Information <span class="icon-caret-right"></span></a></div>
+
+				<div class="collapse">
+					<div class="list-group">
+						<a href="#1">Details</a>
+						<a href="#1">Categorization</a>
+						<a href="#1">Documents and Media</a>
+						<a href="#1">Site Template</a>
 					</div>
 				</div>
+			</div>
 
-				<div class="panel-footer" style="background-color: #FFF;">
-					<div>
-						<a href="#1">
-							<h6>Sat</h6>
+			<div class="panel">
+				<div class="panel-heading"><a class="panel-toggle" href="">SEO <span class="icon-caret-down"></span></a></div>
 
-							<div><span class="glyphicon glyphicon-certificate"></span></div>
-
-							<span>95&deg;</span>
-						</a>
+				<div class="collapse in">
+					<div class="list-group">
+						<a href="#1">Sitemap</a>
+						<a href="#1">Robots</a>
 					</div>
+				</div>
+			</div>
 
-					<div>
-						<a href="#1">
-							<h6>Sun</h6>
+			<div class="panel">
+				<div class="panel-heading"><a class="panel-toggle" href="">Advanced <span class="icon-caret-right"></span></a></div>
 
-							<div><span class="glyphicon glyphicon-certificate"></span></div>
-
-							<span>89&deg;</span>
-						</a>
-					</div>
-
-					<div>
-						<a href="#1">
-							<h6>Mon</h6>
-
-							<div><span class="glyphicon glyphicon-certificate"></span></div>
-
-							<span>95&deg;</span>
-						</a>
+				<div class="collapse">
+					<div class="list-group">
+						<a href="#1">Default User Associations</a>
+						<a href="#1">Staging</a>
+						<a href="#1">Analytics</a>
+						<a href="#1">Maps</a>
+						<a href="#1">Content Sharing</a>
+						<a href="#1">Recycle Bin</a>
 					</div>
 				</div>
 			</div>
@@ -322,59 +415,32 @@ collapse
 </div>
 
 <script>
-	YUI().use('charts', function (Y) {
-		var myDataValues = [
-			{ month:"Jan", internetSales: 110, percentOfRevenue: 25 },
-			{ month:"Feb", internetSales: 333, percentOfRevenue: 28 },
-			{ month:"Mar", internetSales: 90, percentOfRevenue: 15 },
-			{ month:"Apr", internetSales: 255, percentOfRevenue: 21 },
-			{ month:"May", internetSales: 445, percentOfRevenue: 33 },
-			{ month:"Jun", internetSales: 580, percentOfRevenue: 38 }
-		];
+YUI().use('aui-node', function(Y) {
+	Y.one('#mainContent').delegate('click', function(event) {
+		var collapse;
 
-		var myAxes = {
-			percentage: {
-				type:"numeric",
-				position:"right",
-				keys:["percentOfRevenue"],
-				labelFormat: {suffix:"%"}
-			},
-			sales: {
-				type:"numeric",
-				position:"left",
-				keys:["internetSales"],
-				labelFormat: {
-					prefix:"$",
-					suffix: "k",
-					thousandsSeparator:","
-				}
+		var ct = event.currentTarget;
+		var panel = ct.ancestor('.panel');
+		var span = ct.one('span');
+
+		if (panel) {
+			collapse = panel.one('.collapse');
+		}
+
+		event.preventDefault();
+
+		if (collapse) {
+			if (collapse.hasClass('in') && span) {
+				span.removeClass('icon-caret-down').addClass('icon-caret-right');
 			}
-		};
-
-		var mySeries = [
-			{
-				type:"combo",
-				yKey:"internetSales",
-				yDisplayName:"Internet Sales",
-				xDisplayName:"Month"
-			},
-
-			{
-				type:"combo",
-				yKey:"percentOfRevenue",
-				yDisplayName:"Percent of Total Revenue",
-				xDisplayName:"Month"
+			else if (span) {
+				span.removeClass('icon-caret-right').addClass('icon-caret-down');
 			}
-		];
 
-		var mychart = new Y.Chart({
-			dataProvider:myDataValues,
-			categoryKey:"month",
-			axes:myAxes,
-			seriesCollection:mySeries,
-			render:"#myChart"
-		});
-	});
+			collapse.toggleClass('in');
+		}
+	}, '.panel-collapse .panel-toggle');
+});
 </script>
 	</div>
 
