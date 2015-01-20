@@ -148,96 +148,6 @@ section: Components
 	</div>
 </div>
 
-<div class="row">
-	<div class="col-md-12">
-		<h3><em>Side navigation using panels and list group</em></h3>
-
-		<p>Panels should not go deeper than one level, anything deeper should use nav.</p>
-	</div>
-
-	<div class="col-md-4">
-		<h6>Not collapsible</h6>
-		<div class="panel-group">
-			<div class="panel">
-				<div class="panel-heading">Basic Information</div>
-
-				<div class="list-group">
-					<a href="#1">Details</a>
-					<a href="#1">Categorization</a>
-					<a href="#1">Documents and Media</a>
-					<a href="#1">Site Template</a>
-				</div>
-			</div>
-
-			<div class="panel">
-				<div class="panel-heading">SEO</div>
-
-				<div class="list-group">
-					<a href="#1">Sitemap</a>
-					<a href="#1">Robots</a>
-				</div>
-			</div>
-
-			<div class="panel">
-				<div class="panel-heading">Advanced</div>
-
-				<div class="list-group">
-					<a href="#1">Default User Associations</a>
-					<a href="#1">Staging</a>
-					<a href="#1">Analytics</a>
-					<a href="#1">Maps</a>
-					<a href="#1">Content Sharing</a>
-					<a href="#1">Recycle Bin</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<h6>Collapsible</h6>
-		<div class="panel-collapse panel-group">
-			<div class="panel">
-				<div class="panel-heading"><a class="panel-toggle" href="">Basic Information <span class="icon-caret-right"></span></a></div>
-
-				<div class="collapse">
-					<div class="list-group">
-						<a href="#1">Details</a>
-						<a href="#1">Categorization</a>
-						<a href="#1">Documents and Media</a>
-						<a href="#1">Site Template</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="panel">
-				<div class="panel-heading"><a class="panel-toggle" href="">SEO <span class="icon-caret-down"></span></a></div>
-
-				<div class="collapse in">
-					<div class="list-group">
-						<a href="#1">Sitemap</a>
-						<a href="#1">Robots</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="panel">
-				<div class="panel-heading"><a class="panel-toggle" href="">Advanced <span class="icon-caret-right"></span></a></div>
-
-				<div class="collapse">
-					<div class="list-group">
-						<a href="#1">Default User Associations</a>
-						<a href="#1">Staging</a>
-						<a href="#1">Analytics</a>
-						<a href="#1">Maps</a>
-						<a href="#1">Content Sharing</a>
-						<a href="#1">Recycle Bin</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
 <script>
 YUI().use('aui-node', function(Y) {
 	Y.one('#mainContent').delegate('click', function(event) {
@@ -245,7 +155,6 @@ YUI().use('aui-node', function(Y) {
 
 		var ct = event.currentTarget;
 		var panel = ct.ancestor('.panel');
-		var span = ct.one('span');
 
 		if (panel) {
 			collapse = panel.one('.collapse');
@@ -254,13 +163,6 @@ YUI().use('aui-node', function(Y) {
 		event.preventDefault();
 
 		if (collapse) {
-			if (collapse.hasClass('in') && span) {
-				span.removeClass('icon-caret-down').addClass('icon-caret-right');
-			}
-			else if (span) {
-				span.removeClass('icon-caret-right').addClass('icon-caret-down');
-			}
-
 			collapse.toggleClass('in');
 		}
 	}, '.panel-collapse .panel-toggle');
