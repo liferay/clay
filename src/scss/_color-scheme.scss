@@ -1,0 +1,170 @@
+.color-palette {
+	.brand-primary {
+		background-color: $brand-primary;
+
+		.hex-value:after {
+			content: '#{$brand-primary}';
+		}
+	}
+
+	.brand-primary-active {
+		background-color: $brand-primary-active;
+
+		.hex-value:after {
+			content: '#{$brand-primary-active}';
+		}
+	}
+
+	.brand-primary-hover {
+		background-color: $brand-primary-hover;
+
+		.hex-value:after {
+			content: '#{$brand-primary-hover}';
+		}
+	}
+
+	.brand-default {
+		background-color: $brand-default;
+
+		.hex-value:after {
+			content: '#{$brand-default}';
+		}
+	}
+
+	.brand-default-active {
+		background-color: $brand-default-active;
+
+		.hex-value:after {
+			content: '#{$brand-default-active}';
+		}
+	}
+
+	.brand-default-hover {
+		background-color: $brand-default-hover;
+
+		.hex-value:after {
+			content: '#{$brand-default-hover}';
+		}
+	}
+
+	.brand-success {
+		background-color: $brand-success;
+
+		.hex-value:after {
+			content: '#{$brand-success}';
+		}
+	}
+
+	.brand-success-active {
+		background-color: $brand-success-active;
+
+		.hex-value:after {
+			content: '#{$brand-success-active}';
+		}
+	}
+
+	.brand-success-hover {
+		background-color: $brand-success-hover;
+
+		.hex-value:after {
+			content: '#{$brand-success-hover}';
+		}
+	}
+
+	.brand-info {
+		background-color: $brand-info;
+
+		.hex-value:after {
+			content: '#{$brand-info}';
+		}
+	}
+
+	.brand-info-active {
+		background-color: $brand-info-active;
+
+		.hex-value:after {
+			content: '#{$brand-info-active}';
+		}
+	}
+
+	.brand-info-hover {
+		background-color: $brand-info-hover;
+
+		.hex-value:after {
+			content: '#{$brand-info-hover}';
+		}
+	}
+
+	.brand-warning {
+		background-color: $brand-warning;
+
+		.hex-value:after {
+			content: '#{$brand-warning}';
+		}
+	}
+
+	.brand-warning-active {
+		background-color: $brand-warning-active;
+
+		.hex-value:after {
+			content: '#{$brand-warning-active}';
+		}
+	}
+
+	.brand-warning-hover {
+		background-color: $brand-warning-hover;
+
+		.hex-value:after {
+			content: '#{$brand-warning-hover}';
+		}
+	}
+
+	.brand-danger {
+		background-color: $brand-danger;
+
+		.hex-value:after {
+			content: '#{$brand-danger}';
+		}
+	}
+
+	.brand-danger-active {
+		background-color: $brand-danger-active;
+
+		.hex-value:after {
+			content: '#{$brand-danger-active}';
+		}
+	}
+
+	.brand-danger-hover {
+		background-color: $brand-danger-hover;
+
+		.hex-value:after {
+			content: '#{$brand-danger-hover}';
+		}
+	}
+
+	.color-swatches {
+		@include clearfix;
+	}
+
+	.color-swatch {
+		@include border-radius(5px);
+
+		color: #FFF;
+		float: left;
+		font-size: 11px;
+		margin-bottom: 5px;
+		margin-right: 5px;
+		max-width: 125px;
+		padding: 22px 10px;
+		width: 30%;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.color-palette {
+		.color-swatch {
+			padding: 40px 20px;
+		}
+	}
+}
