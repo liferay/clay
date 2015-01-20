@@ -7193,11 +7193,50 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   opacity: 0.75;
   filter: alpha(opacity=75); }
 
+.modal-body.inline-scroller {
+  height: 230px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px; }
+.modal-body.iframe-full {
+  overflow: auto;
+  padding: 0; }
+.modal-body.iframe-scroller {
+  float: left;
+  height: 230px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  width: 100%; }
+  .modal-body.iframe-scroller iframe {
+    float: left;
+    height: 100%;
+    overflow: auto; }
+.modal-body iframe {
+  border-width: 0;
+  float: left;
+  height: auto;
+  width: 100%; }
+
 .modal-content {
   -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2); }
 
+.modal-fluid.modal-dialog {
+  margin: 2% auto;
+  max-width: 600px;
+  width: 96%; }
+.modal-fluid.modal-lg {
+  margin: 2% auto;
+  max-width: 900px;
+  width: 96%; }
+.modal-fluid.modal-sm {
+  margin: 2% auto;
+  max-width: 300px;
+  width: 96%; }
+
 .modal-footer {
+  clear: both;
   text-align: left; }
 
 .modal-header {
@@ -7207,6 +7246,11 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     color: #2B4259;
     opacity: 1;
     filter: alpha(opacity=100); }
+
+.modal-open {
+  left: 0;
+  position: fixed;
+  right: 0; }
 
 .nav > li > a {
   color: #2B4259; }
