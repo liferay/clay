@@ -100,24 +100,6 @@ section.row {
 	overflow-x: hidden;
 }
 
-/* -------- Glyphicons -------- */
-
-.glyphicon-class {
-	display: block;
-}
-
-.glyphicons li {
-	float: left;
-	height: 110px;
-	text-align: center;
-	width: 50%;
-}
-
-.glyphicons-list {
-	list-style: none;
-	padding-left: 0;
-}
-
 /* -------- Media Page -------- */
 
 #mediaPage img {
@@ -126,18 +108,8 @@ section.row {
 
 /* Media Queries */
 
-@media (min-width: $screen-xs-min) {
-	.glyphicons li {
-		width: 25%;
-	}
-}
-
 @media (min-width: $screen-sm-min) {
 	#wrapper {
 		overflow-x: visible;
-	}
-
-	.glyphicons li {
-		width: 10%;
 	}
 }
