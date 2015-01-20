@@ -1,0 +1,13 @@
+/* -------- Dropdowns ------- */
+
+#dropdownDisplay {
+	.dropdown-menu {
+		display: block;
+		position: relative;
+	}
+
+	.mega-menu .dropdown-menu {
+		float: left;
+		max-width: 100%;
+	}
+}
