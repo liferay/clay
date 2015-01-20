@@ -1,0 +1,21 @@
+/* Popovers */
+
+#popovers {
+	.popover {
+		display: block;
+		position: relative;
+		margin-bottom: 50px;
+
+		&.left {
+			margin-left: 0;
+		}
+	}
+}
+
+/* Tooltips */
+
+.tooltip-display {
+	> div {
+		height: 75px;
+	}
+}
