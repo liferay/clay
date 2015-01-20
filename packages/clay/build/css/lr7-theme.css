@@ -7512,11 +7512,13 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .navbar .basic-search .minimize-search {
     opacity: 0;
     position: absolute; }
+    .navbar .basic-search .minimize-search button {
+      margin-right: 3px; }
 
 /* navbar basic search bar open in mobile */
 .navbar.search-open .basic-search button {
   padding: 10px 5px; }
-.navbar.search-open .basic-search button[type="submit"] {
+.navbar.search-open .basic-search button[type="submit"] span {
   opacity: 0.4; }
 .navbar.search-open .basic-search input[type="text"], .navbar.search-open .basic-search input[type="text"]:focus {
   display: block;
@@ -7529,21 +7531,27 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 /* navbar basic search bar in desktop */
 @media (min-width: 768px) {
-  .navbar.search-open .basic-search button[type="submit"] {
+  .navbar.search-open .basic-search button {
+    padding: 10px 12px; }
+  .navbar.search-open .basic-search button[type="submit"] span {
     opacity: 1; }
   .navbar.search-open .basic-search input[type="text"], .navbar.search-open .basic-search input[type="text"]:focus {
-    padding-left: 0; }
+    padding-left: 12px; }
   .navbar.search-open .basic-search input[type="text"] + .input-group-btn {
     position: static; }
   .navbar.search-open .basic-search .minimize-search {
     opacity: 0;
     position: absolute; }
-  .navbar .basic-search input[type="text"] {
-    display: block;
-    height: 66px;
-    max-width: 150px; }
-    .navbar .basic-search input[type="text"], .navbar .basic-search input[type="text"]:focus {
-      border-left: 1px solid #D8D8D8; } }
+  .navbar .basic-search {
+    max-width: 200px; }
+    .navbar .basic-search input[type="text"] {
+      display: block;
+      height: 66px;
+      max-width: 150px; }
+      .navbar .basic-search input[type="text"], .navbar .basic-search input[type="text"]:focus {
+        border-left: 1px solid #D8D8D8; }
+  .navbar-single-link .basic-search {
+    max-width: none; } }
 
 /* navbar-single-link common styles between mobile and destkop */
 .navbar-single-link .navbar-nav {
