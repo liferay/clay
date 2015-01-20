@@ -2,22 +2,83 @@
 	> li {
 		> a {
 			color: $nav-link-color;
+			word-break: break-word;
 
-			&:hover,
-			&:focus {
+			&:focus, &:hover {
 				color: $nav-link-hover-color;
+			}
+		}
+
+		> span {
+			display: block;
+			padding: $nav-link-padding;
+		}
+	}
+
+	.active > a {
+		&, &:focus, &:hover {
+			background-color: $nav-link-active-bg;
+			border-color: $nav-link-active-bg;
+			color: $nav-link-active-color;
+		}
+	}
+
+	.nav-heading {
+		&.open > a {
+			&, &:focus, &:hover {
+				color: $brand-default-hover;
+			}
+		}
+
+		> a, > span {
+			color: $brand-default;
+			font-size: 18px;
+			font-weight: 300;
+
+			&:focus, &:hover {
+				color: $brand-default-hover;
 			}
 		}
 	}
 
 	.open > a {
-		&,
-		&:hover,
-		&:focus {
+		&, &:focus, &:hover {
 			background-color: $nav-link-hover-bg;
 			border-color: $nav-link-hover-bg;
 			color: $nav-link-hover-color;
 		}
+	}
+}
+
+.nav-heading {
+	color: $brand-default;
+	display: block;
+	margin-top: 10px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.nav-indent {
+	.nav > li > a {
+		padding-left: $nav-link-padding-horizontal * 2;
+	}
+
+	.nav .nav > li > a {
+		padding-left: $nav-link-padding-horizontal * 3;
+	}
+
+	.nav .nav .nav > li > a {
+		padding-left: $nav-link-padding-horizontal * 4;
+	}
+
+	.nav .nav .nav .nav > li > a {
+		padding-left: $nav-link-padding-horizontal * 5;
+	}
+
+	.nav .nav .nav .nav .nav > li > a {
+		padding-left: $nav-link-padding-horizontal * 6;
 	}
 }
 
@@ -47,6 +108,8 @@
 			border: $nav-tabs-border-width solid transparent;
 
 			@include border-radius($nav-tabs-border-radius);
+
+			word-break: normal;
 
 			&:hover {
 				border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;

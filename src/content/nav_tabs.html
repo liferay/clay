@@ -1,0 +1,849 @@
+---
+title: Nav Tabs
+section: Components
+---
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h4>Nav Tabs</h4>
+
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#1">Fields</a></li>
+
+			<li><a href="#1">Settings</a></li>
+
+			<li class="disabled"><a href="#">Documents</a></li>
+
+			<li class="dropdown">
+				<a class="dropdown-toggle" href="#1">Configuration <span class="caret"></span></a>
+
+				<ul class="dropdown-menu">
+					<li><a href="#1">Setup</a></li>
+					<li><a href="#1">Supported Clients</a></li>
+					<li><a href="#1">Permissions</a></li>
+					<li><a href="#1">Sharing</a></li>
+					<li class="divider"></li>
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h4>Nav Tabs Justified</h4>
+
+		<ul class="nav nav-justified nav-tabs">
+			<li class="active"><a href="#1">Fields</a></li>
+
+			<li><a href="#1">Settings</a></li>
+
+			<li class="disabled"><a href="#">Documents</a></li>
+
+			<li class="dropdown">
+				<a class="dropdown-toggle" href="#1">Configuration <span class="caret"></span></a>
+
+				<ul class="dropdown-menu">
+					<li><a href="#1">Setup</a></li>
+					<li><a href="#1">Supported Clients</a></li>
+					<li><a href="#1">Permissions</a></li>
+					<li><a href="#1">Sharing</a></li>
+					<li class="divider"></li>
+					<li><a href="#1">Scope</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12" id="defaultNavTabs">
+		<h4>Tab Group Default</h4>
+
+		<div class="tab-group">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">Round Trip</a></li>
+
+				<li><a href="#">Multi Destination</a></li>
+
+				<li class="disabled"><a href="#">One Way</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="active fade in tab-pane" id="roundTrip">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport" />
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Returning</label>
+									<input class="form-control" type="text" placeholder="Returning Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="fade in tab-pane" id="multiDestination">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport" />
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 form-group">
+								<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	<pre><code>```<div class="tab-group">
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">...</a></li>
+	<li><a href="#">...</a></li>
+</ul>
+
+<div class="tab-content">
+	<div class="active fade in tab-pane">...</div>
+	<div class="fade in tab-pane">...</div>
+</div>
+</div>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row  row-spacing">
+	<div class="col-md-12">
+		<h4>Tab Group Bottom</h4>
+
+		<div class="tab-group tab-group-bottom">
+			<div class="tab-content">
+				<div class="active fade in tab-pane" id="roundTrip">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport" />
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Returning</label>
+									<input class="form-control" type="text" placeholder="Returning Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="fade in tab-pane" id="multiDestination">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport" />
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 form-group">
+								<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">Round Trip</a></li>
+
+				<li><a href="#">Multi Destination</a></li>
+
+				<li class="disabled"><a href="#">One Way</a></li>
+			</ul>
+		</div>
+
+	<pre><code>```<div class="tab-group tab-group-bottom">
+<div class="tab-content">
+	<div class="active fade in tab-pane">...</div>
+	<div class="fade in tab-pane">...</div>
+</div>
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">...</a></li>
+	<li><a href="#">...</a></li>
+</ul>
+</div>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h4>Tab Group Left</h4>
+
+		<div class="tab-group tab-group-left">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">Round Trip</a></li>
+
+				<li><a href="#">Multi Destination</a></li>
+
+				<li class="disabled"><a href="#">One Way</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="active fade in tab-pane" id="roundTrip">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport" />
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Returning</label>
+									<input class="form-control" type="text" placeholder="Returning Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="fade in tab-pane" id="multiDestination">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport" />
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 form-group">
+								<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	<pre><code>```<div class="tab-group tab-group-left">
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">...</a></li>
+	<li><a href="#">...</a></li>
+</ul>
+
+<div class="tab-content">
+	<div class="active fade in tab-pane">...</div>
+	<div class="fade in tab-pane">...</div>
+</div>
+</div>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h4>Tab Group Right</h4>
+
+		<div class="tab-group tab-group-right">
+			<div class="tab-content">
+				<div class="active fade in tab-pane" id="roundTrip">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport" />
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Returning</label>
+									<input class="form-control" type="text" placeholder="Returning Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="fade in tab-pane" id="multiDestination">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport" />
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 form-group">
+								<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">Round Trip</a></li>
+
+				<li><a href="#">Multi Destination</a></li>
+
+				<li class="disabled"><a href="#">One Way</a></li>
+			</ul>
+		</div>
+
+	<pre><code>```<div class="tab-group tab-group-right">
+<div class="tab-content">
+	<div class="active fade in tab-pane">...</div>
+	<div class="fade in tab-pane">...</div>
+</div>
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">...</a></li>
+	<li><a href="#">...</a></li>
+</ul>
+</div>```</code></pre>
+
+	</div>
+</div>
+
+<script>
+	YUI().use('node', 'event', function(A) {
+		A.one('#mainContent').delegate('click', function(event) {
+			var currentTarget = event.currentTarget;
+
+			var dropdown = currentTarget.ancestor('.dropdown');
+
+			dropdown.toggleClass('open');
+
+			if (dropdown.hasClass('open')) {
+				currentTarget.on('clickoutside', function(event) {
+					var _this = this;
+
+					_this.ancestor('.dropdown').removeClass('open');
+
+					_this.detach('clickoutside');
+				});
+			}
+			else {
+				currentTarget.detach('clickoutside');
+			}
+		}, '.dropdown-toggle');
+
+		A.one('#mainContent').delegate('click', function(event) {
+			var ct = event.currentTarget;
+			var navTabs = ct.ancestor('.nav-tabs');
+			var tabContentArray;
+			var tabGroup = ct.ancestor('.tab-group');
+
+			var navTabsArray = navTabs.all('> li > a');
+
+			if (tabGroup) {
+				tabContentArray = tabGroup.one('.tab-content').all('.tab-pane');
+
+				event.preventDefault();
+
+				if (ct.ancestor('li').hasClass('disabled')) {
+				}
+				else if (!ct.ancestor('li').hasClass('active')) {
+					navTabs.all('> li').each(function(node) {
+						node.removeClass('active');
+					});
+
+					tabContentArray.each(function(node) {
+						node.removeClass('active');
+					});
+
+					ct.ancestor('li').addClass('active');
+					tabContentArray.item(navTabsArray.indexOf(ct)).addClass('active');
+				}
+			}
+		}, '.nav-tabs > li > a');
+	});
+</script>
