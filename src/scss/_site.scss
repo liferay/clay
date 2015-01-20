@@ -154,68 +154,6 @@ section.row {
 	width: 64px;
 }
 
-/* -------- Modal Page -------- */
-
-#modalDisplays {
-	.modal-dialog {
-		margin: 0 0 30px 0;
-	}
-
-	.modal-lg {
-		max-width: 900px;
-		width: 100%;
-	}
-}
-
-#openModals {
-	margin: 0 0 30px 0;
-
-	.btn {
-		margin-bottom: 5px;
-	}
-}
-
-/* Popovers */
-
-#popovers {
-	.popover {
-		display: block;
-		position: relative;
-		margin-bottom: 50px;
-
-		&.left {
-			margin-left: 0;
-		}
-	}
-}
-
-/* -------- Timeline -------- */
-
-.item-center.timeline-item {
-	img {
-		float: none;
-		padding: 0;
-	}
-}
-
-.timestamp-icon {
-	color: #999;
-	font-size: 12px !important;
-	line-height: inherit;
-}
-
-.timeline-avatar {
-	width: 36px;
-}
-
-/* Tooltips */
-
-.tooltip-display {
-	> div {
-		height: 75px;
-	}
-}
-
 /* Typography */
 
 #typography > div {
