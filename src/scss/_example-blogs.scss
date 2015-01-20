@@ -1,0 +1,167 @@
+/* -------- Blogs 1 Column -------- */
+
+#blogSideColumn {
+	.panel-heading {
+		background-color: transparent;
+	}
+
+	ul.panel-body {
+		margin-bottom: 0;
+
+		li {
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.blog-1-column {
+	h2 {
+		font-size: golden-ratio(14px, 1);
+	}
+
+	.blog-entry {
+		@include box-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+
+		margin-bottom: 50px;
+		padding: 15px;
+	}
+
+	.read-more {
+		margin-bottom: 6px;
+		text-align: left;
+	}
+}
+
+.comment-box {
+	margin-bottom: 10px;
+
+	textarea {
+		margin-bottom: 10px;
+		min-height: 120px;
+	}
+}
+
+.comments {
+	display: table;
+	margin-bottom: 10px;
+
+	.user-comment, .user-image {
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	.user-image {
+		padding-right: 15px;
+
+		img {
+			width: 21px;
+		}
+	}
+}
+
+.entry-actions {
+	margin: 0 0 10px;
+}
+
+.entry-body {
+	.divider {
+		margin-left: -3px;
+		margin-right: -3px;
+	}
+}
+
+.entry-media {
+	.image-container {
+		max-height: 300px;
+		overflow: hidden;
+	}
+}
+
+.entry-meta-data {
+	margin: 0 0 6px;
+
+	> span {
+		&:before {
+			content: "|";
+			margin: 0 5px;
+		}
+
+		&:first-child:before {
+			content: "";
+			margin: 0;
+		}
+	}
+}
+
+.entry-title {
+	margin: 15px 0 10px;
+
+	h2 {
+		float: left;
+		margin: 0;
+	}
+
+	.taglib-flags {
+		float: right;
+
+		.taglib-text {
+			color: transparent;
+			font-size: 0;
+			position: absolute;
+		}
+	}
+}
+
+.sidebar {
+	margin-top: 40px;
+
+	&:first-child {
+		margin: 0;
+	}
+
+	li {
+		margin-bottom: 5px;
+		overflow: hidden;
+	}
+}
+
+.sidebar-content {
+	padding-left: 85px;
+}
+
+.sidebar-heading {
+	border-bottom: 1px solid #DDD;
+	margin-top: 0;
+	padding-bottom: 5px;
+}
+
+.sidebar-image {
+	float: left;
+	width: 75px;
+}
+
+.user-comment {
+	.comment-age {
+			color: #7E7E7E;
+	}
+
+	.heading {
+		margin: 0 0 6px;
+	}
+
+	.user-name {
+		font-size: 21px;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	/* -------- Blogs -------- */
+
+	.comments .user-image img {
+		width: 70px;
+	}
+}
