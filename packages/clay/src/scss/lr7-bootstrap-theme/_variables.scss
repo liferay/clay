@@ -532,7 +532,11 @@ $tooltip-opacity:                                 1;
 
 //Navs
 $nav-link-color: #2B4259;
-$nav-link-padding:                          9px 16px !default;
+$nav-link-padding-horizontal: 16px;
+$nav-link-padding-vertical: 9px;
+$nav-link-padding:                                $nav-link-padding-vertical $nav-link-padding-horizontal;
+$nav-link-active-bg: transparent;
+$nav-link-active-color: $brand-primary;
 $nav-link-hover-bg:                               transparent;
 $nav-link-hover-color: $brand-primary;
 
