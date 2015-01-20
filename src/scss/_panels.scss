@@ -1,81 +1,70 @@
-/* Panel Heading Align */
+@mixin color-panel($bg-color, $border-color, $color) {
+	border-color: lighten($border-color, 29%);
 
-// .panel.panel-heading-align {
-// 	background-color: transparent;
-// 	overflow: hidden;
-
-// 	.panel-body {
-// 		background-color: #FFF;
-// 	}
-
-// 	.panel-footer, .panel-heading {
-// 		display: table;
-// 		width: 100%;
-
-// 		> div {
-// 			display: table-cell;
-// 			text-align: center;
-// 			vertical-align: middle;
-// 			width: 1%;
-
-// 			&:first-child {
-// 				text-align: left;
-// 			}
-
-// 			&:last-child {
-// 				text-align: right;
-// 			}
-// 		}
-// 	}
-// }
-
-/* Panels */
-
-.no-borders .panel {
-	border-width: 0;
+	.panel-footer, .panel-heading {
+		background-color: lighten($bg-color, 29%);
+		border-color: lighten($border-color, 29%);
+		color: $color;
+	}
 }
 
 .panel {
-	&.no-borders {
-		border-width: 0;
+	@include box-shadow(none);
+
+	> .collapse > .list-group {
+		margin-bottom: 0;
 	}
 
-	.panel-heading, .panel-body, .panel-footer {
-		position: relative;
+	.list-group > a {
+		display: block;
+		padding: 7px 15px;
 	}
 
-	.panel-heading:first-child {
-		@include border-top-left-radius(3px);
-		@include border-top-right-radius(3px);
+	.panel-footer {
+		background-color: transparent;
+		border-top: 1px solid transparent;
 	}
 }
 
-.navbar-danger, .panel-danger > .panel-footer {
-	background-color: #F2DEDE;
-	border-color: #EBCCD1;
-	color: #A94442;
+.panel-collapse {
+	.panel-heading {
+		padding: 0;
+
+		> a {
+			color: #555;
+			display: block;
+			padding: 10px 15px;
+			text-decoration: none;
+
+			&:focus, &:hover {
+				color: lighten(#555, 12%);
+			}
+
+			.icon-caret-down,
+			.icon-caret-left,
+			.icon-caret-right {
+				float: right;
+			}
+		}
+	}
 }
 
-.navbar-info, .panel-info > .panel-footer {
-	background-color: #D9EDF7;
-	border-color: #BCE8F1;
-	color: #31708F;
+.panel-danger {
+	@include color-panel(#E8295A, #E8295A, #555);
 }
 
-.navbar-primary, .panel-primary > .panel-footer {
-	background-color: #428BCA;
-	border-color: #428BCA;
-	color: #FFF;
+.panel-default {
+	@include color-panel(#868896, #868896, #555);
 }
 
-.navbar-success, .panel-success > .panel-footer {
-	background-color: #DFF0D8;
-	border-color: #D6E9C6;
-	color: #3C763D;
+.panel-primary {
+	@include color-panel(#1D5EC7, #1D5EC7, #555);
 }
 
-.navbar-warning, .panel-warning > .panel-footer {
-	background-color: #FCF8E3;
-	border-color: #FAEBCC;
-	color: #8A6D3B;
+.panel-success {
+	@include color-panel(#34ADAB, #34ADAB, #555);
+}
+
+.panel-warning {
+	@include color-panel(#FF6C58, #FF6C58, #555);
 }
