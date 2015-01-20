@@ -11,7 +11,7 @@
 	font-weight: bold;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-xs-max) {
 	.table-responsive-collapse {
 		.table, thead, tbody, th {
 			display: block;
@@ -130,7 +130,7 @@
 	}
 }
 
-@media (max-width: 479px) {
+@media (max-width: ($screen-xs-min - 1)) {
 	.table-responsive-flip {
 		.table {
 			> thead {
