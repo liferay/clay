@@ -4,53 +4,63 @@ section: Components
 ---
 
 <div class="row row-spacing">
-	<div class="col-md-6">
-		<p>Use the base nav class to create a minimally styled navigation.</p>
+	<div class="col-md-12">
+		<p>Use the base nav class to create a minimally styled navigation. </p>
+	</div>
 
+	<div class="col-md-4">
 		<ul class="nav">
 			<li class="nav-heading"><span>Basic Information</span></li>
 			<li><a href="#1">Details</a></li>
 			<li><a href="#1">Catagorization</a></li>
-			<li><a href="#">Documents and Media</a></li>
-			<li><a href="#">Site Template</a></li>
-			<li class="nav-heading"><span>SEO</span></li>
-			<li><a href="#1">Sitemap</a></li>
-			<li><a href="#1">Robots</a></li>
-			<li class="nav-heading"><span>Advanced</span></li>
-			<li><a href="#1">Default User Associations</a></li>
-			<li><a href="#1">Staging</a></li>
-			<li><a href="#1">Analytics</a></li>
-			<li><a href="#1">Maps</a></li>
+			<li><a href="#1">Documents and Media</a></li>
+			<li><a href="#1">Site Template</a></li>
 		</ul>
 	</div>
 
-	<div class="col-md-6">
-		<p>Nested navigation, also collapsible (requires javascript). Add class nav-indent to the outermost nav to indent each nested nav.</p>
+	<div class="col-md-12">
 
+		<pre><code>```<ul class="nav">
+    <li class="nav-heading"><span>Basic Information</span></li>
+    <li><a href="#">Details</a></li>
+    <li><a href="#">Catagorization</a></li>
+    <li><a href="#">Documents and Media</a></li>
+    <li><a href="#">Site Template</a></li>
+</ul>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<p>Nested navigation, also collapsible (requires javascript). Add class nav-indent to the outermost nav to indent each nested nav.</p>
+	</div>
+
+	<div class="col-md-6">
 		<ul class="nav nav-indent">
 			<li>
-				<a href="">Basic Information <span class="nav-collapse-icon"></span></a>
+				<a href="#1">Basic Information <span class="nav-collapse-icon"></span></a>
 				<div class="collapse">
 					<ul class="nav">
 						<li><a href="#1">Details</a></li>
 						<li><a href="#1">Catagorization</a></li>
 						<li>
-							<a href="">Documents and Media <span class="nav-collapse-icon"></span></a>
+							<a href="#1">Documents and Media <span class="nav-collapse-icon"></span></a>
 							<div class="collapse">
 								<ul class="nav">
 									<li><a href="#1">Details</a></li>
 									<li><a href="#1">Catagorization</a></li>
-									<li><a href="#">Documents and Media</a></li>
-									<li><a href="#">Site Template</a></li>
+									<li><a href="#1">Documents and Media</a></li>
+									<li><a href="#1">Site Template</a></li>
 								</ul>
 							</div>
 						</li>
-						<li><a href="#">Site Template</a></li>
+						<li><a href="#1">Site Template</a></li>
 					</ul>
 				</div>
 			</li>
 			<li>
-				<a href="">SEO <span class="nav-collapse-icon"></span></a>
+				<a href="#1">SEO <span class="nav-collapse-icon"></span></a>
 				<div class="collapse">
 					<ul class="nav">
 						<li><a href="#1">Sitemap</a></li>
@@ -59,7 +69,7 @@ section: Components
 				</div>
 			</li>
 			<li>
-				<a href="">Advanced <span class="nav-collapse-icon"></span></a>
+				<a href="#1">Advanced <span class="nav-collapse-icon"></span></a>
 				<div class="collapse">
 					<ul class="nav">
 						<li><a href="#1">Default User Associations</a></li>
@@ -70,6 +80,54 @@ section: Components
 				</div>
 			</li>
 		</ul>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code>```<ul class="nav nav-indent">
+    <li>
+        <a href="#">Basic Information <span class="nav-collapse-icon"></span></a>
+        <div class="collapse">
+            <ul class="nav">
+                <li><a href="#">Details</a></li>
+                <li><a href="#">Catagorization</a></li>
+                <li>
+                    <a href="#">Documents and Media <span class="nav-collapse-icon"></span></a>
+                    <div class="collapse">
+                        <ul class="nav">
+                            <li><a href="#">Details</a></li>
+                            <li><a href="#">Catagorization</a></li>
+                            <li><a href="#">Documents and Media</a></li>
+                            <li><a href="#">Site Template</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Site Template</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="#">SEO <span class="nav-collapse-icon"></span></a>
+        <div class="collapse">
+            <ul class="nav">
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Robots</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="#">Advanced <span class="nav-collapse-icon"></span></a>
+        <div class="collapse">
+            <ul class="nav">
+                <li><a href="#">Default User Associations</a></li>
+                <li><a href="#">Staging</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Maps</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>```</code></pre>
+
 	</div>
 </div>
 
