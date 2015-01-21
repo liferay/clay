@@ -6,6 +6,18 @@
 	}
 }
 
+@include text-emphasis-variant('.text-default', $state-default-text);
+
+@include text-emphasis-variant('.text-primary', $state-primary-text);
+
+.bg-primary {
+	color: $text-color;
+}
+
+@include bg-variant('.bg-default', $state-default-bg);
+
+@include bg-variant('.bg-primary', $state-primary-bg);
+
 .blockquote-xs {
 	border-left: 1px solid $blockquote-border-color;
 	font-size: $blockquote-font-size * 0.7;
