@@ -350,6 +350,11 @@ YUI().use('aui-node', function(Y) {
 
 		</section>
 	</div>
+
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+
 	<script>
 		YUI().use(
 			'node', 'transition',
@@ -390,6 +395,8 @@ YUI().use('aui-node', function(Y) {
 				);
 			}
 		);
+
+		hljs.initHighlightingOnLoad();
 	</script>
 	</body>
 </html>

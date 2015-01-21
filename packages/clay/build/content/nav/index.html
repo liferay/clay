@@ -182,53 +182,63 @@ collapse
 
 		
 <div class="row row-spacing">
-	<div class="col-md-6">
-		<p>Use the base nav class to create a minimally styled navigation.</p>
+	<div class="col-md-12">
+		<p>Use the base nav class to create a minimally styled navigation. </p>
+	</div>
 
+	<div class="col-md-4">
 		<ul class="nav">
 			<li class="nav-heading"><span>Basic Information</span></li>
 			<li><a href="#1">Details</a></li>
 			<li><a href="#1">Catagorization</a></li>
-			<li><a href="#">Documents and Media</a></li>
-			<li><a href="#">Site Template</a></li>
-			<li class="nav-heading"><span>SEO</span></li>
-			<li><a href="#1">Sitemap</a></li>
-			<li><a href="#1">Robots</a></li>
-			<li class="nav-heading"><span>Advanced</span></li>
-			<li><a href="#1">Default User Associations</a></li>
-			<li><a href="#1">Staging</a></li>
-			<li><a href="#1">Analytics</a></li>
-			<li><a href="#1">Maps</a></li>
+			<li><a href="#1">Documents and Media</a></li>
+			<li><a href="#1">Site Template</a></li>
 		</ul>
 	</div>
 
-	<div class="col-md-6">
-		<p>Nested navigation, also collapsible (requires javascript). Add class nav-indent to the outermost nav to indent each nested nav.</p>
+	<div class="col-md-12">
 
+		<pre><code>&lt;ul class=&quot;nav&quot;&gt;
+    &lt;li class=&quot;nav-heading&quot;&gt;&lt;span&gt;Basic Information&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Catagorization&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Documents and Media&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Site Template&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<p>Nested navigation, also collapsible (requires javascript). Add class nav-indent to the outermost nav to indent each nested nav.</p>
+	</div>
+
+	<div class="col-md-6">
 		<ul class="nav nav-indent">
-			<li class="nav-heading">
-				<a href="">Basic Information <span class="nav-collapse-icon"></span></a>
+			<li>
+				<a href="#1">Basic Information <span class="nav-collapse-icon"></span></a>
 				<div class="collapse">
 					<ul class="nav">
 						<li><a href="#1">Details</a></li>
 						<li><a href="#1">Catagorization</a></li>
 						<li>
-							<a href="">Documents and Media <span class="nav-collapse-icon"></span></a>
+							<a href="#1">Documents and Media <span class="nav-collapse-icon"></span></a>
 							<div class="collapse">
 								<ul class="nav">
 									<li><a href="#1">Details</a></li>
 									<li><a href="#1">Catagorization</a></li>
-									<li><a href="#">Documents and Media</a></li>
-									<li><a href="#">Site Template</a></li>
+									<li><a href="#1">Documents and Media</a></li>
+									<li><a href="#1">Site Template</a></li>
 								</ul>
 							</div>
 						</li>
-						<li><a href="#">Site Template</a></li>
+						<li><a href="#1">Site Template</a></li>
 					</ul>
 				</div>
 			</li>
-			<li class="nav-heading">
-				<a href="">SEO <span class="nav-collapse-icon"></span></a>
+			<li>
+				<a href="#1">SEO <span class="nav-collapse-icon"></span></a>
 				<div class="collapse">
 					<ul class="nav">
 						<li><a href="#1">Sitemap</a></li>
@@ -236,8 +246,8 @@ collapse
 					</ul>
 				</div>
 			</li>
-			<li class="nav-heading">
-				<a href="">Advanced <span class="nav-collapse-icon"></span></a>
+			<li>
+				<a href="#1">Advanced <span class="nav-collapse-icon"></span></a>
 				<div class="collapse">
 					<ul class="nav">
 						<li><a href="#1">Default User Associations</a></li>
@@ -248,6 +258,54 @@ collapse
 				</div>
 			</li>
 		</ul>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code>&lt;ul class=&quot;nav nav-indent&quot;&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Basic Information &lt;span class=&quot;nav-collapse-icon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;div class=&quot;collapse&quot;&gt;
+            &lt;ul class=&quot;nav&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Catagorization&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Documents and Media &lt;span class=&quot;nav-collapse-icon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;div class=&quot;collapse&quot;&gt;
+                        &lt;ul class=&quot;nav&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Catagorization&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Documents and Media&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Site Template&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Site Template&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;SEO &lt;span class=&quot;nav-collapse-icon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;div class=&quot;collapse&quot;&gt;
+            &lt;ul class=&quot;nav&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sitemap&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Robots&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Advanced &lt;span class=&quot;nav-collapse-icon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;div class=&quot;collapse&quot;&gt;
+            &lt;ul class=&quot;nav&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Default User Associations&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Staging&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Analytics&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Maps&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
 	</div>
 </div>
 
@@ -379,6 +437,11 @@ collapse
 
 		</section>
 	</div>
+
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+
 	<script>
 		YUI().use(
 			'node', 'transition',
@@ -419,6 +482,8 @@ collapse
 				);
 			}
 		);
+
+		hljs.initHighlightingOnLoad();
 	</script>
 	</body>
 </html>
