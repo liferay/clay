@@ -80,9 +80,9 @@ collapse in
 collapse
 ">
 <ul class="nav nav-stacked">
-<li class=""><a href="../../content/buttons">Buttons</a>
-</li>
 <li class=""><a href="../../content/typography">Typography</a>
+</li>
+<li class=""><a href="../../content/buttons">Buttons</a>
 </li>
 <li class=""><a href="../../content/form-elements">Form Elements</a>
 </li>
@@ -185,7 +185,11 @@ collapse
 		
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<p>Use the base nav class to create a minimally styled navigation. </p>
+		<h4>Basic Nav</h4>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use the base nav class to create a minimally styled navigation. </p>
+		</blockquote>
 	</div>
 
 	<div class="col-md-4">
@@ -213,7 +217,14 @@ collapse
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<p>Nested navigation, also collapsible (requires javascript). Add class nav-indent to the outermost nav to indent each nested nav.</p>
+		<h4>Nested Basic Nav</h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Nested navigation, also collapsible (requires javascript). Add class nav-indent to the outermost nav to indent each nested nav.</p>
+
+			<p>Set the icon for the closed state by setting the variable <code>$nav-collapse-icon-closed</code> in <code>_variables.scss</code> or overwrite in your css by setting <code>.nav-collapse-icon:before { content: "" }</code></p>
+
+			<p>Set the icon for the open state by setting the variable <code>$nav-collapse-icon-closed</code> in <code>_variables.scss</code> or overwrite in your css by setting the content property of <code>.open a > .nav-collapse-icon:before { content: "" }</code></p>
+		</blockquote>
 	</div>
 
 	<div class="col-md-6">
@@ -283,26 +294,6 @@ collapse
                     &lt;/div&gt;
                 &lt;/li&gt;
                 &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Site Template&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;a href=&quot;#&quot;&gt;SEO &lt;span class=&quot;nav-collapse-icon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-        &lt;div class=&quot;collapse&quot;&gt;
-            &lt;ul class=&quot;nav&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sitemap&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Robots&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;a href=&quot;#&quot;&gt;Advanced &lt;span class=&quot;nav-collapse-icon&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-        &lt;div class=&quot;collapse&quot;&gt;
-            &lt;ul class=&quot;nav&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Default User Associations&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Staging&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Analytics&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Maps&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/div&gt;
     &lt;/li&gt;
