@@ -1,0 +1,31 @@
+@mixin color-blockquote ($color) {
+	border-color: $color;
+
+	footer, small, .small {
+		color: $color;
+	}
+}
+
+.blockquote-danger {
+	@include color-blockquote ($brand-danger);
+}
+
+.blockquote-default {
+	@include color-blockquote ($brand-default);
+}
+
+.blockquote-info {
+	@include color-blockquote ($brand-info);
+}
+
+.blockquote-primary {
+	@include color-blockquote ($brand-primary);
+}
+
+.blockquote-success {
+	@include color-blockquote ($brand-success);
+}
+
+.blockquote-warning {
+	@include color-blockquote ($brand-warning);
+}
