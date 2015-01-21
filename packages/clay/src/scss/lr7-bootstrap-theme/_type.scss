@@ -6,6 +6,24 @@
 	}
 }
 
+.blockquote-xs {
+	border-left: 1px solid $blockquote-border-color;
+	font-size: $blockquote-font-size * 0.7;
+	padding: ($line-height-computed / 2) ($line-height-computed * 0.7);
+}
+
+.blockquote-sm {
+	border-left: 3px solid $blockquote-border-color;
+	font-size: $blockquote-font-size * 0.8;
+	padding: ($line-height-computed / 2) ($line-height-computed * 0.8);
+}
+
+.blockquote-lg {
+	border-left: 8px solid $blockquote-border-color;
+	font-size: $blockquote-font-size * 1.5;
+	padding: ($line-height-computed / 2) ($line-height-computed * 1.5);
+}
+
 .blockquote-danger {
 	@include color-blockquote ($brand-danger);
 }
