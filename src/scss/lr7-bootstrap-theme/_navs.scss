@@ -50,6 +50,30 @@
 	}
 }
 
+.nav-collapse-icon {
+	display: inline;
+	font-family: 'fontawesome-alloy';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	float: right;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+
+	&:before {
+		content: $nav-collapse-icon-closed;
+		display: inline-block;
+		speak: none;
+		text-decoration: inherit;
+	}
+}
+
+.open > a .nav-collapse-icon:before {
+	content: $nav-collapse-icon-open;
+}
+
 .nav-heading {
 	color: $brand-default;
 	display: block;
