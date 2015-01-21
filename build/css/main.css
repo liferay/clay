@@ -8481,6 +8481,36 @@ input.switch:checked ~ label .on {
       left: auto;
       right: -10px; } }
 
+.blockquote-danger {
+  border-color: #e9295a; }
+  .blockquote-danger footer, .blockquote-danger small, .blockquote-danger .small {
+    color: #e9295a; }
+
+.blockquote-default {
+  border-color: #868896; }
+  .blockquote-default footer, .blockquote-default small, .blockquote-default .small {
+    color: #868896; }
+
+.blockquote-info {
+  border-color: #1e5ec8; }
+  .blockquote-info footer, .blockquote-info small, .blockquote-info .small {
+    color: #1e5ec8; }
+
+.blockquote-primary {
+  border-color: #32a8e6; }
+  .blockquote-primary footer, .blockquote-primary small, .blockquote-primary .small {
+    color: #32a8e6; }
+
+.blockquote-success {
+  border-color: #42bfad; }
+  .blockquote-success footer, .blockquote-success small, .blockquote-success .small {
+    color: #42bfad; }
+
+.blockquote-warning {
+  border-color: #ffb103; }
+  .blockquote-warning footer, .blockquote-warning small, .blockquote-warning .small {
+    color: #ffb103; }
+
 .heading-toolbar {
   float: left;
   width: 100%; }
