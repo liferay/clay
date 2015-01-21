@@ -1,9 +1,9 @@
 $body-bg:                                  #FFF;
-$gray-darker:                              lighten(#000, 13.5%); // #222
-$gray-dark:                                lighten(#000, 33.5%); // #555
-$gray:                                     #E0E5EB;
-$gray-light:                               #EDF0F5;
-$gray-lighter:                             #F8F9FB;
+$gray-darker:                              lighten(#000, 13.5%) !default; // #222
+$gray-dark:                                lighten(#000, 20%) !default;   // #333
+$gray:                                     lighten(#000, 33.5%) !default; // #555
+$gray-light:                               lighten(#000, 46.7%) !default; // #777
+$gray-lighter:                             lighten(#000, 93.5%) !default; // #eee
 
 $brand-default:                            #868896;
 $brand-default-active: darken($brand-default, 12%);
@@ -21,13 +21,16 @@ $brand-info:                               #1e5ec8;
 $brand-info-active: darken($brand-info, 12%);
 $brand-info-hover: lighten($brand-info, 8%);
 
-$brand-warning:                            #ffb103;
+$brand-warning:                            #FFB103;
 $brand-warning-active: darken($brand-warning, 12%);
 $brand-warning-hover: lighten($brand-warning, 8%);
 
-$brand-danger:                             #e9295a;
+$brand-danger:                             #E9295A;
 $brand-danger-active: darken($brand-danger, 12%);
 $brand-danger-hover: lighten($brand-danger, 8%);
+
+$text-color:                               #2B4259;
+$text-muted:                               lighten($text-color, 55%);
 
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:                      $brand-primary;
@@ -51,21 +54,29 @@ $padding-xs-horizontal:     5px;
 $link-hover-color:                         $brand-primary-hover;
 
 //States for Form and alert
-$state-success-text:             #2B4259;
-$state-success-bg:               #EAF7F6;
-$state-success-border:           #34ADAB;
+$state-default-text: #868896;
+$state-default-bg: lighten($state-default-text, 40%);
+$state-default-border: $state-default-text;
 
-$state-info-text:                $state-success-text;
-$state-info-bg:                  #E8EFF9;
-$state-info-border:              #1D5EC7;
+$state-primary-text: $brand-primary;
+$state-primary-bg: lighten($state-primary-text, 40%);
+$state-primary-border: $state-primary-text;
 
-$state-warning-text:             $state-success-text;
-$state-warning-bg:               #FFF7E5;
-$state-warning-border:           #FFB103;
+$state-success-text:             #34ADAB;
+$state-success-bg:               lighten($state-success-text, 50%);
+$state-success-border:           $state-success-text;
 
-$state-danger-text:              $state-success-text;
-$state-danger-bg:                #FDE9EE;
-$state-danger-border:            #E8295A;
+$state-info-text:                #1D5EC7;
+$state-info-bg:                  lighten($state-info-text, 50%);
+$state-info-border:              $state-info-text;
+
+$state-warning-text:             #FFB103;
+$state-warning-bg:               lighten($state-warning-text, 40%);
+$state-warning-border:           $state-warning-text;
+
+$state-danger-text:              #E8295A;
+$state-danger-bg:                lighten($state-danger-text, 40%);
+$state-danger-border:            $state-danger-text;
 
 //== Border Radius
 //** Defines global border-radius
@@ -476,11 +487,29 @@ $modal-header-color: $label-color;
 $modal-header-close-color: $label-color;
 
 //== Alerts
-$alert-padding:               16px !default;
+$alert-padding:                                   16px;
+$alert-border-radius:                             $border-radius-base;
+$alert-link-font-weight:                          bold;
 
-$alert-default-bg:            #F3F3F4 !default;
-$alert-default-text-color:          $state-success-text !default;
-$alert-default-border:        $brand-default;
+$alert-default-bg: $state-default-bg;
+$alert-default-text: $text-color;
+$alert-default-border: $state-default-border;
+
+$alert-success-bg:                                $state-success-bg;
+$alert-success-text:                              $alert-default-text;
+$alert-success-border:                            $state-success-border;
+
+$alert-info-bg:                                   $state-info-bg;
+$alert-info-text:                                 $alert-default-text;
+$alert-info-border:                               $state-info-border;
+
+$alert-warning-bg:                                $state-warning-bg;
+$alert-warning-text:                              $alert-default-text;
+$alert-warning-border:                            $state-warning-border;
+
+$alert-danger-bg:                                 $state-danger-bg;
+$alert-danger-text:                               $alert-default-text;
+$alert-danger-border:                             $state-danger-border;
 
 //Breadcrumbs
 $breadcrumb-padding-vertical:                     4px;

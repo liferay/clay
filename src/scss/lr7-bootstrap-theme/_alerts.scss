@@ -11,7 +11,7 @@
 	}
 
 	.close {
-		color: $alert-default-text-color;
+		color: $text-color;
 		opacity: 1;
 	}
 
@@ -24,13 +24,7 @@
 }
 
 .alert-default {
-	@include alert-variant($alert-default-bg, $alert-default-border, $alert-default-text-color);
-}
-
-.alert-default, .alert-success, .alert-info, .alert-warning, .alert-danger {
-	.alert-link {
-		color: $alert-default-text-color;
-	}
+	@include alert-variant($alert-default-bg, $alert-default-border, $alert-default-text);
 }
 
 .alert-dismissible .close {
