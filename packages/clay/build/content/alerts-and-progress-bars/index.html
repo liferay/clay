@@ -185,7 +185,13 @@ collapse
 		
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Alerts with Embedded Links</em></h3>
+		<h3>Alerts with Embedded Links</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.lead</code> inside of an alert to make the beginning of your message stand out.</p>
+
+			<p>Use <code>.alert-link</code> to style a link inside your alert.</p>
+		</blockquote>
 
 		<div class="alert alert-default" role="alert">
 			<strong class="lead">Default</strong> You just read the <a href="#" class="alert-link">alert message</a> successfully.
@@ -207,17 +213,18 @@ collapse
 			<strong class="lead">Danger</strong> <a href="#" class="alert-link">Something</a> is not right.
 		</div>
 
-		<pre><code>&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
-...
-&lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;...&lt;/a&gt;
-...
-&lt;/div&gt;</code></pre>
+		<pre><code class="html">&lt;div class=&quot;alert alert-default&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-success&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger&quot;&gt;...&lt;/div&gt;</code></pre>
+
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12" id="dismissibleAlerts">
-		<h3><em>Dismissible Alerts</em></h4>
+		<h3>Dismissible Alerts</h3>
 
 		<div class="alert alert-dismissible alert-default" role="alert">
 			<button class="close" type="button">
@@ -260,17 +267,17 @@ collapse
 		</div>
 
 		<pre><code>&lt;div class=&quot;alert alert-dismissible alert-success&quot; role=&quot;alert&quot;&gt;
-&lt;button class=&quot;close&quot; type=&quot;button&quot;&gt;
-  &lt;span aria-hidden=&quot;true&quot;&gt;&amp;#38;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;
-&lt;/button&gt;
-...
+    &lt;button class=&quot;close&quot; type=&quot;button&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;
+    &lt;/button&gt;
+    ...
 &lt;/div&gt;</code></pre>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Plain Progress Bars</em></h3>
+		<h3>Plain Progress Bars</h3>
 
 		<div class="progress">
 			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;">
@@ -290,17 +297,17 @@ collapse
 			</div>
 		</div>
 
-		<pre><code>&lt;div class=&quot;progress&quot;&gt;
-&lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;
-  &lt;span class=&quot;sr-only&quot;&gt;#%&lt;/span&gt;
-&lt;/div&gt;
+		<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
+    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;#%&lt;/span&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Progress Bars with Label</em></h3>
+		<h3>Progress Bars with Label</h3>
 
 		<div class="progress">
 			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
@@ -318,15 +325,15 @@ collapse
 			<div aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 2%;">2%</div>
 		</div>
 
-		<pre><code>&lt;div class=&quot;progress&quot;&gt;
-&lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
+		<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
+    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Contextual Progress Bars</em></h3>
+		<h3>Contextual Progress Bars</h3>
 
 		<div class="progress">
 			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-success" role="progressbar" style="width: 60%;">60% (Success)</div>
@@ -344,9 +351,8 @@ collapse
 			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-danger" role="progressbar" style="width: 80%;">80% (Danger)</div>
 		</div>
 
-		<pre><code>&lt;div class=&quot;progress&quot;&gt;
-&lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%
-&lt;/div&gt;
+		<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
+    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 	</div>
 </div>
@@ -354,7 +360,7 @@ collapse
 <div class="row">
 	<div class="col-md-12">
 
-		<h3><em>Striped Contextual Progress Bars</em></h3>
+		<h3>Striped Contextual Progress Bars</h3>
 
 		<div class="progress">
 			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-striped progress-bar-success" role="progressbar" style="width: 60%;">60% (Success)</div>
@@ -372,8 +378,8 @@ collapse
 			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" style="width: 80%;">80% (Danger)</div>
 		</div>
 
-		<pre><code>&lt;div class=&quot;progress&quot;&gt;
-&lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar progress-bar-striped progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
+		<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
+    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;progress-bar progress-bar-striped progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 	</div>
 </div>
@@ -381,7 +387,7 @@ collapse
 <div class="row">
 	<div class="col-md-12">
 
-		<h3><em>Active Progress Bars</em></h3>
+		<h3>Active Progress Bars</h3>
 
 		<div class="progress">
 			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="active progress-bar progress-bar-striped progress-bar-success" role="progressbar" style="width: 60%;">60% (Success)</div>
@@ -403,15 +409,15 @@ collapse
 			<div aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" class="active progress-bar progress-bar-striped" role="progressbar" style="width: 20%;">20% (Default)</div>
 		</div>
 
-		<pre><code>&lt;div class=&quot;progress&quot;&gt;
-&lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;active progress-bar progress-bar-striped progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
+		<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
+    &lt;div aria-valuenow=&quot;#&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; class=&quot;active progress-bar progress-bar-striped progress-bar-success&quot; role=&quot;progressbar&quot; style=&quot;width: #%;&quot;&gt;#%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Stacked Progress Bars</em></h3>
+		<h3>Stacked Progress Bars</h3>
 
 		<div class="progress">
 			<div class="progress-bar progress-bar-striped progress-bar-success" style="width: 25%">25%</div>
@@ -455,9 +461,9 @@ collapse
 			<div class="active progress-bar progress-bar-striped" style="width: 10%">10%</div>
 		</div>
 
-		<pre><code>&lt;div class=&quot;progress&quot;&gt;
-&lt;div class=&quot;progress-bar&quot; style=&quot;width: #%&quot;&gt;#%&lt;/div&gt;
-&lt;div class=&quot;progress-bar&quot; style=&quot;width: #%&quot;&gt;#%&lt;/div&gt;
+		<pre><code class="html">&lt;div class=&quot;progress&quot;&gt;
+    &lt;div class=&quot;progress-bar&quot; style=&quot;width: #%&quot;&gt;#%&lt;/div&gt;
+    &lt;div class=&quot;progress-bar&quot; style=&quot;width: #%&quot;&gt;#%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 	</div>
 </div>
