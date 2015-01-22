@@ -2760,12 +2760,12 @@ tbody.collapse.in {
 .nav-pills > li {
   float: left; }
   .nav-pills > li > a {
-    border-radius: 0; }
+    border-radius: 5px; }
   .nav-pills > li + li {
     margin-left: 2px; }
   .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-    color: #868896;
-    background-color: transparent; }
+    color: #FFF;
+    background-color: #32a8e6; }
 
 .nav-stacked > li {
   float: none; }
@@ -7289,10 +7289,10 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     content: "\f0da";
     display: inline-block;
     speak: none;
-    text-decoration: inherit; }
-
-.open > a .nav-collapse-icon:before {
-  content: "\f0d7"; }
+    text-decoration: inherit;
+    vertical-align: sub; }
+  .open > a .nav-collapse-icon:before {
+    content: "\f0d7"; }
 
 .nav-heading {
   color: #868896;
@@ -7301,28 +7301,84 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .nav-heading:first-child {
     margin-top: 0; }
 
-.nav-indent .nav > li > a {
-  padding-left: 32px; }
-.nav-indent .nav .nav > li > a {
-  padding-left: 48px; }
-.nav-indent .nav .nav .nav > li > a {
-  padding-left: 64px; }
-.nav-indent .nav .nav .nav .nav > li > a {
-  padding-left: 80px; }
-.nav-indent .nav .nav .nav .nav .nav > li > a {
-  padding-left: 96px; }
+.nav-pills > li > a, .nav-pills .nav > li > a {
+  background-color: transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #2B4259; }
+  .nav-pills > li > a:focus, .nav-pills > li > a:hover, .nav-pills .nav > li > a:focus, .nav-pills .nav > li > a:hover {
+    background-color: #eeeeee;
+    color: #2B4259; }
+.nav-pills > li.open > a, .nav-pills > li.open > a:focus, .nav-pills > li.open > a:hover, .nav-pills .nav > li.open > a, .nav-pills .nav > li.open > a:focus, .nav-pills .nav > li.open > a:hover {
+  background-color: #eeeeee;
+  color: #2B4259; }
+.nav-pills > li.active > a, .nav-pills .nav > li.active > a {
+  background-color: #32a8e6;
+  color: #FFF;
+  font-weight: bold; }
+  .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover, .nav-pills .nav > li.active > a:focus, .nav-pills .nav > li.active > a:hover {
+    background-color: #32a8e6;
+    color: #FFF; }
+.nav-pills > li.nav-heading > a, .nav-pills > li.nav-heading > a:focus, .nav-pills > li.nav-heading > a:hover, .nav-pills .nav > li.nav-heading > a, .nav-pills .nav > li.nav-heading > a:focus, .nav-pills .nav > li.nav-heading > a:hover {
+  background-color: transparent; }
+
+.nav-pills.nav-stacked .nav > li {
+  margin-top: 2px; }
+
+.nav.nav-circle > li > a, .nav.nav-circle .nav > li > a {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+
+.nav.nav-rounded > li > a, .nav.nav-rounded .nav > li > a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.nav.nav-square > li > a, .nav.nav-square .nav > li > a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+.nav.nav-justified > li, .nav.nav-justified > .nav.nav-tabs.nav-justified {
+  border-left: 2px solid transparent; }
+  .nav.nav-justified > li:first-child, .nav.nav-justified > .nav.nav-tabs.nav-justified {
+    border-left-width: 0; }
 
 .nav-justified .dropdown-menu, .nav-justified .nav-tabs.nav-justified, .nav-stacked .dropdown-menu {
   width: 100%; }
 
-.nav-pills > li > a {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0; }
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  background-color: transparent;
-  color: #868896;
-  font-weight: bold; }
+.nav-nested .nav > li > a {
+  padding-left: 32px; }
+.nav-nested .nav .nav > li > a {
+  padding-left: 48px; }
+.nav-nested .nav .nav .nav > li > a {
+  padding-left: 64px; }
+.nav-nested .nav .nav .nav .nav > li > a {
+  padding-left: 80px; }
+.nav-nested .nav .nav .nav .nav .nav > li > a {
+  padding-left: 96px; }
+.nav-nested .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 112px; }
+.nav-nested .nav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 128px; }
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 144px; }
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 160px; }
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 176px; }
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 192px; }
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 208px; }
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 224px; }
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 240px; }
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
+  padding-left: 256px; }
 
 .nav-tabs {
   border-bottom: 1px solid #D8D8D8; }
