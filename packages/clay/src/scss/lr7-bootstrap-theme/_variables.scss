@@ -588,9 +588,17 @@ $nav-tabs-active-link-hover-border-color:         #D8D8D8;
 $nav-tabs-justified-link-border-color:            $nav-tabs-border-color;
 
 //Pills
-$nav-pills-border-radius:                         $border-radius-base;
-$nav-pills-active-link-hover-bg:                  transparent;
-$nav-pills-active-link-hover-color:               $brand-default;
+$nav-pills-border-radius:                         5px;
+
+$nav-pills-link-bg: transparent;
+$nav-pills-link-color: $text-color;
+
+$nav-pills-link-hover-bg: $gray-lighter;
+$nav-pills-link-hover-color: $text-color;
+
+$nav-pills-active-link-bg: $state-primary-border;
+$nav-pills-active-link-hover-bg:                  $nav-pills-active-link-bg;
+$nav-pills-active-link-hover-color:               #FFF;
 
 //Tab Group
 $tab-group-top-border-radius: $border-radius-base $border-radius-base 0 0;
