@@ -1,3 +1,6 @@
+// Nav
+// -------------------------
+
 .nav {
 	> li {
 		> a {
@@ -67,11 +70,14 @@
 		display: inline-block;
 		speak: none;
 		text-decoration: inherit;
+		vertical-align: sub;
 	}
-}
 
-.open > a .nav-collapse-icon:before {
-	content: $nav-collapse-icon-open;
+	&:before {
+		.open > a & {
+			content: $nav-collapse-icon-open;
+		}
+	}
 }
 
 .nav-heading {
@@ -84,25 +90,87 @@
 	}
 }
 
-.nav-indent {
+// Nav pills
+// -------------------------
+
+.nav-pills {
+	> li, .nav > li {
+		> a {
+			background-color: $nav-pills-link-bg;
+
+			@include border-radius($nav-pills-border-radius);
+
+			color: $nav-pills-link-color;
+
+			&:focus, &:hover {
+				background-color: $nav-pills-link-hover-bg;
+				color: $nav-pills-link-hover-color;
+			}
+		}
+
+		&.open > a {
+			&, &:focus, &:hover {
+				background-color: $nav-pills-link-hover-bg;
+				color: $nav-pills-link-hover-color;
+			}
+		}
+
+		&.active > a {
+			background-color: $nav-pills-active-link-bg;
+			color: #FFF;
+			font-weight: bold;
+
+			&:focus, &:hover {
+				background-color: $nav-pills-active-link-hover-bg;
+				color: $nav-pills-active-link-hover-color;
+			}
+		}
+
+		&.nav-heading > a {
+			&, &:focus, &:hover {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.nav-pills.nav-stacked {
+	.nav > li {
+		margin-top: 2px;
+	}
+}
+
+// Nav helper classes
+// -------------------------
+
+.nav.nav-circle {
+	> li > a,
 	.nav > li > a {
-		padding-left: $nav-link-padding-horizontal * 2;
+		@include border-radius(20px);
 	}
+}
 
-	.nav .nav > li > a {
-		padding-left: $nav-link-padding-horizontal * 3;
+.nav.nav-rounded {
+	> li > a,
+	.nav > li > a {
+		@include border-radius(5px);
 	}
+}
 
-	.nav .nav .nav > li > a {
-		padding-left: $nav-link-padding-horizontal * 4;
+.nav.nav-square {
+	> li > a,
+	.nav > li > a {
+		@include border-radius(0);
 	}
+}
 
-	.nav .nav .nav .nav > li > a {
-		padding-left: $nav-link-padding-horizontal * 5;
-	}
+.nav.nav-justified {
+	> li {
+		border-left: 2px solid transparent;
 
-	.nav .nav .nav .nav .nav > li > a {
-		padding-left: $nav-link-padding-horizontal * 6;
+		&:first-child {
+			border-left-width: 0;
+		}
 	}
 }
 
@@ -112,20 +180,17 @@
 	}
 }
 
-.nav-pills {
-	> li {
-		> a {
-			@include border-radius($nav-pills-border-radius);
-		}
-
-		&.active > a {
-			&,
-			&:hover,
-			&:focus {
-				background-color: $nav-pills-active-link-hover-bg;
-				color: $nav-pills-active-link-hover-color;
-				font-weight: bold;
+// indents each nested navigation by 16px (default)
+@mixin make-nav-nested($i: 1, $nav-class: ".nav", $nest-level: 15) {
+	.nav-nested {
+		@for $i from (1) through $nest-level {
+			#{$nav-class} > li > a {
+				padding-left: $nav-link-padding-horizontal * ($i + 1);
 			}
+
+			$nav-class: "#{$nav-class} .nav";
 		}
 	}
 }
+
+@include make-nav-nested();

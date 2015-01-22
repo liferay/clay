@@ -5,10 +5,11 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h4>Basic Nav</h4>
+		<h3>Basic Nav</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use the base nav class to create a minimally styled navigation. </p>
+			<p>Minimally styled navigation with <code>.nav</code>.</p>
+			<p>Use <code>.nav-heading</code> on a list element with a nested <code>```<span></span>```</code> or <code>```<a></a>```</code> to style the heading.</p>
 		</blockquote>
 	</div>
 
@@ -37,9 +38,9 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h4>Nested Basic Nav</h4>
+		<h3>Nested Basic Nav</h3>
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Nested navigation, also collapsible (requires javascript). Add class nav-indent to the outermost nav to indent each nested nav.</p>
+			<p>Nested navigation, also collapsible (requires javascript). Add class nav-nested to the outermost nav to indent each nested nav.</p>
 
 			<p>Set the icon for the closed state by setting the variable <code>$nav-collapse-icon-closed</code> in <code>_variables.scss</code> or overwrite in your css by setting <code>.nav-collapse-icon:before { content: "" }</code></p>
 
@@ -48,7 +49,7 @@ section: Components
 	</div>
 
 	<div class="col-md-6">
-		<ul class="nav nav-indent">
+		<ul class="nav nav-nested">
 			<li>
 				<a href="#1">Basic Information <span class="nav-collapse-icon"></span></a>
 				<div class="collapse">
@@ -95,7 +96,7 @@ section: Components
 
 	<div class="col-md-12">
 
-		<pre><code>```<ul class="nav nav-indent">
+		<pre><code>```<ul class="nav nav-nested">
     <li>
         <a href="#">Basic Information <span class="nav-collapse-icon"></span></a>
         <div class="collapse">
@@ -124,7 +125,11 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h4>Nav Pills</h4>
+		<h3>Nav Pills</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add <code>.nav-pills</code> to <code>.nav</code> to add background colors and border styles.</p>
+		</blockquote>
 
 		<ul class="nav nav-pills">
 			<li class="active"><a href="#1">Fields</a></li>
@@ -146,12 +151,26 @@ section: Components
 				</ul>
 			</li>
 		</ul>
+
+		<pre><code>```<ul class="nav nav-pills">
+    <li class="active"><a href="#1">Fields</a></li>
+    <li><a href="#1">Settings</a></li>
+    <li class="disabled"><a href="#">Documents</a></li>
+    <li class="dropdown">
+        ...
+    </li>
+</ul>```</code></pre>
+
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h4>Nav Pills Justified</h4>
+		<h3>Nav Pills Justified</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add <code>.nav-justified</code> to make nav-pills equal width relative to its parent container.</p>
+		</blockquote>
 
 		<ul class="nav nav-justified nav-pills">
 			<li class="active"><a href="#1">Fields</a></li>
@@ -173,13 +192,22 @@ section: Components
 				</ul>
 			</li>
 		</ul>
+
+		<pre><code class="html">```<ul class="nav nav-justified nav-pills">
+    ...
+</ul>```</code></pre>
 	</div>
 </div>
 
 <div class="row row-spacing">
-	<div class="col-md-3">
-		<h4>Nav Stacked Pills</h4>
+	<div class="col-md-12">
+		<h3>Nav Stacked Pills</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add <code>.nav-stacked</code> to stack nav-pills vertically.</p>
+		</blockquote>
+	</div>
 
+	<div class="col-md-4">
 		<ul class="nav nav-pills nav-stacked">
 			<li class="active"><a href="#1">Fields</a></li>
 
@@ -202,6 +230,140 @@ section: Components
 				</ul>
 			</li>
 		</ul>
+	</div>
+
+	<div class="col-md-12">
+		<pre><code class="html">```<ul class="nav nav-pills nav-stacked">
+    ...
+</ul>```</code></pre>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Nested Nav Stacked Pills</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add <code>.nav-nested .nav-stacked</code> to style background colors and borders for stacked nav-pills.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4">
+		<ul class="nav nav-nested nav-pills nav-stacked">
+			<li class="active open">
+				<a href="#">Basic Information <span class="nav-collapse-icon"></span></a>
+				<div class="collapse in">
+					<ul class="nav">
+						<li><a href="#">Details</a></li>
+						<li><a href="#">Catagorization</a></li>
+						<li>
+							<a href="#">Documents and Media <span class="nav-collapse-icon"></span></a>
+							<div class="collapse">
+								<ul class="nav">
+									<li><a href="#">Details</a></li>
+									<li><a href="#">Catagorization</a></li>
+									<li><a href="#">Documents and Media</a></li>
+									<li><a href="#">Site Template</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">Site Template</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-12">
+
+	<pre><code>```<ul class="nav nav-nested nav-pills nav-stacked">
+    <li class="active">
+        <a href="#">Basic Information <span class="nav-collapse-icon"></span></a>
+        <div class="collapse">
+            <ul class="nav">
+                <li><a href="#">Details</a></li>
+                <li><a href="#">Catagorization</a></li>
+                <li>
+                    <a href="#">Documents and Media <span class="nav-collapse-icon"></span></a>
+                    <div class="collapse">
+                        <ul class="nav">
+                            <li><a href="#">Details</a></li>
+                            <li><a href="#">Catagorization</a></li>
+                            <li><a href="#">Documents and Media</a></li>
+                            <li><a href="#">Site Template</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Site Template</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Nav Helper Classes</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.nav-rounded</code>, <code>.nav-circle</code>, or <code>.nav-square</code> on the nav to quickly shape the borders.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4">
+		<ul class="nav nav-rounded nav-pills nav-stacked">
+			<li class="active"><a href="#1">Fields</a></li>
+
+			<li><a href="#1">
+				<span class="badge pull-right">2</span>Fields with Badge
+			</a></li>
+
+			<li><a href="#1">Settings</a></li>
+
+			<li>
+				<a href="#1">Configuration</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-4">
+		<ul class="nav nav-circle nav-pills nav-stacked">
+			<li class="active"><a href="#1">Fields</a></li>
+
+			<li><a href="#1">
+				<span class="badge pull-right">2</span>Fields with Badge
+			</a></li>
+
+			<li><a href="#1">Settings</a></li>
+
+			<li>
+				<a href="#1">Configuration</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-4">
+		<ul class="nav nav-square nav-pills nav-stacked">
+			<li class="active"><a href="#1">Fields</a></li>
+
+			<li><a href="#1">
+				<span class="badge pull-right">2</span>Fields with Badge
+			</a></li>
+
+			<li><a href="#1">Settings</a></li>
+
+			<li>
+				<a href="#1">Configuration</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-12">
+
+	<pre><code class="html">```<ul class="nav nav-rounded nav-pills nav-stacked">...</ul>
+<ul class="nav nav-circle nav-pills nav-stacked">...</ul>
+<ul class="nav nav-rounded nav-pills nav-stacked">...</ul>```</code></pre>
+
 	</div>
 </div>
 
