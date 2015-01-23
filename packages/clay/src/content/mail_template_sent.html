@@ -98,7 +98,7 @@ navIndex: 1
 
 				<div class="email-edit-buttons">
 					<div class="dropdown">
-						<button class="btn btn-default btn-sm" title="Archive">
+						<button class="btn btn-default btn-sm" data-toggle="dropdown" title="Archive">
 							<span class="glyphicon glyphicon-folder-open"></span> &nbsp;<span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
@@ -113,7 +113,7 @@ navIndex: 1
 					</button>
 
 					<div class="dropdown">
-						<button class="btn btn-default btn-sm">
+						<button class="btn btn-default btn-sm" data-toggle="dropdown">
 							More <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
@@ -304,10 +304,5 @@ navIndex: 1
 				}
 			}
 		}, 'tr > td > input[type="checkbox"]');
-
-		Y.one('body').delegate('click', function(event) {
-			event.preventDefault();
-			event.currentTarget.ancestor('.dropdown').toggleClass('open');
-		}, '.dropdown button');
 	});
 </script>

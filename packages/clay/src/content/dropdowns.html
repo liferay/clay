@@ -136,7 +136,7 @@ section: Components
 			<div class="container-fluid">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-						<a class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
 						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
 							<li class="dropdown-header" role="presentation">Dropdown Header</li>
 							<li role="presentation">
@@ -166,7 +166,7 @@ section: Components
 					</li>
 
 					<li class="dropdown dropdown-wide">
-						<a class="dropdown-toggle" href="#">Dropdown Wide <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown Wide <span class="caret"></span></a>
 
 						<ul class="dropdown-menu">
 							<li class="col-sm-4">
@@ -218,7 +218,7 @@ section: Components
 					</li>
 
 					<li class="dropdown dropdown-full">
-						<a class="dropdown-toggle" href="#">Dropdown Full <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown Full <span class="caret"></span></a>
 
 						<ul class="dropdown-menu dropdown-menu-inverse">
 							<li class="col-sm-4">
@@ -281,7 +281,7 @@ section: Components
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Link</a></li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
 						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
 							<li class="dropdown-header" role="presentation">Dropdown Header</li>
 							<li role="presentation">
@@ -323,7 +323,7 @@ section: Components
 
 		<div class="btn-group btn-group-justified">
 			<div class="btn-group dropdown">
-				<button class="btn btn-default dropdown-toggle" id="dropdownMenu" type="button">Default
+				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Default
 					<span class="caret"></span>
 				</button>
 
@@ -337,7 +337,7 @@ section: Components
 			</div>
 
 			<div class="btn-group dropdown">
-				<button class="btn btn-primary dropdown-toggle" id="dropdownMenu" type="button">Top
+				<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Top
 					<span class="dropup"><span class="caret"></span></span>
 				</button>
 
@@ -351,7 +351,7 @@ section: Components
 			</div>
 
 			<div class="btn-group dropdown">
-				<button class="btn btn-success dropdown-toggle" id="dropdownMenu" type="button">Top Right
+				<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Top Right
 					<span class="dropup"><span class="caret"></span></span>
 				</button>
 
@@ -365,7 +365,7 @@ section: Components
 			</div>
 
 			<div class="btn-group dropdown">
-				<button class="btn btn-info dropdown-toggle" id="dropdownMenu" type="button">Right
+				<button class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Right
 					<span class="caret"></span>
 				</button>
 
@@ -381,7 +381,7 @@ section: Components
 
 		
 <pre><code>```<div class="dropdown">
-<button class="btn btn-default dropdown-toggle" id="dropdownMenu">Dropdown
+<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu">Dropdown
 <span class="caret"></span>
 </button>
 
@@ -412,26 +412,5 @@ section: Components
 		mainContent.delegate('click', function(event) {
 			event.preventDefault();
 		}, 'a');
-
-		mainContent.delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
-
-			var dropdown = currentTarget.ancestor('.dropdown');
-
-			dropdown.toggleClass('open');
-
-			if (dropdown.hasClass('open')) {
-				currentTarget.on('clickoutside', function(event) {
-					var _this = this;
-
-					_this.ancestor('.dropdown').removeClass('open');
-
-					_this.detach('clickoutside');
-				});
-			}
-			else {
-				currentTarget.detach('clickoutside');
-			}
-		}, '.dropdown-toggle');
 	});
 </script>

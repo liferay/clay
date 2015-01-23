@@ -139,7 +139,7 @@ section: Components
 			<li class="disabled"><a href="#">Documents</a></li>
 
 			<li class="dropdown">
-				<a class="dropdown-toggle" href="#1">Configuration <span class="caret"></span></a>
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Configuration <span class="caret"></span></a>
 
 				<ul class="dropdown-menu">
 					<li><a href="#1">Setup</a></li>
@@ -180,7 +180,7 @@ section: Components
 			<li class="disabled"><a href="#">Documents</a></li>
 
 			<li class="dropdown">
-				<a class="dropdown-toggle" href="#1">Configuration <span class="caret"></span></a>
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Configuration <span class="caret"></span></a>
 
 				<ul class="dropdown-menu">
 					<li><a href="#1">Setup</a></li>
@@ -218,7 +218,7 @@ section: Components
 			<li><a href="#1">Settings</a></li>
 
 			<li class="dropdown">
-				<a class="dropdown-toggle" href="#1">Configuration <span class="caret"></span></a>
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Configuration <span class="caret"></span></a>
 
 				<ul class="dropdown-menu">
 					<li><a href="#1">Setup</a></li>
@@ -385,26 +385,5 @@ section: Components
 				li.toggleClass('open');
 			}
 		}, '.nav > li > a');
-
-		A.one('#mainContent').delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
-
-			var dropdown = currentTarget.ancestor('.dropdown');
-
-			dropdown.toggleClass('open');
-
-			if (dropdown.hasClass('open')) {
-				currentTarget.on('clickoutside', function(event) {
-					var _this = this;
-
-					_this.ancestor('.dropdown').removeClass('open');
-
-					_this.detach('clickoutside');
-				});
-			}
-			else {
-				currentTarget.detach('clickoutside');
-			}
-		}, '.dropdown-toggle');
 	});
 </script>
