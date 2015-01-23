@@ -25,7 +25,7 @@ section: Components
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Active</a></li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
 						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
 							<li class="dropdown-header" role="presentation">Dropdown Header</li>
 							<li role="presentation">
@@ -118,7 +118,7 @@ section: Components
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Link</a></li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
 						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
 							<li class="dropdown-header" role="presentation">Dropdown Header</li>
 							<li role="presentation">
@@ -148,7 +148,7 @@ section: Components
 					</li>
 
 					<li class="dropdown dropdown-wide">
-						<a class="dropdown-toggle" href="#">Dropdown Wide <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown Wide <span class="caret"></span></a>
 
 						<ul class="dropdown-menu">
 							<li class="col-sm-4">
@@ -200,7 +200,7 @@ section: Components
 					</li>
 
 					<li class="dropdown dropdown-full">
-						<a class="dropdown-toggle" href="#">Dropdown Full <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown Full <span class="caret"></span></a>
 
 						<ul class="dropdown-menu">
 							<li class="col-sm-4">
@@ -264,7 +264,7 @@ section: Components
 					</li>
 
 					<li class="dropdown">
-						<a class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-th-large"></span> <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th-large"></span> <span class="caret"></span></a>
 
 						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
 							<li class="dropdown-header" role="presentation">Dropdown Header</li>
@@ -322,27 +322,6 @@ section: Components
 		mainContent.delegate('click', function(event) {
 			event.preventDefault();
 		}, 'a');
-
-		mainContent.delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
-
-			var dropdown = currentTarget.ancestor('.dropdown');
-
-			dropdown.toggleClass('open');
-
-			if (dropdown.hasClass('open')) {
-				currentTarget.on('clickoutside', function(event) {
-					var _this = this;
-
-					_this.ancestor('.dropdown').removeClass('open');
-
-					_this.detach('clickoutside');
-				});
-			}
-			else {
-				currentTarget.detach('clickoutside');
-			}
-		}, '.dropdown-toggle');
 
 		mainContent.delegate('click', function(event) {
 			var ct = event.currentTarget;

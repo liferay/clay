@@ -24,7 +24,7 @@ section: Components
 					<a href="#"><span class="icon-download-alt"></span></a>
 				</li>
 				<li class="dropdown">
-					<a class="dropdown-toggle" href="#"><span class="icon-cog"></span></a>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-cog"></span></a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li><a href="#">Export</a></li>
 						<li><a href="#">Import</a></li>
@@ -89,7 +89,7 @@ section: Components
 							<a href="#"><span class="icon-download-alt"></span></a>
 						</li>
 						<li class="dropdown">
-							<a class="dropdown-toggle" href="#"><span class="icon-cog"></span></a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-cog"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#">Export</a></li>
 								<li><a href="#">Import</a></li>
@@ -120,7 +120,7 @@ section: Components
 
 			<ul class="heading-toolbar-right">
 				<li class="dropdown">
-					<a class="dropdown-toggle" href="#"><span class="icon-ellipsis-vertical"></span></a>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-ellipsis-vertical"></span></a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li><a href="#">Export</a></li>
 						<li><a href="#">Import</a></li>
@@ -139,29 +139,6 @@ section: Components
 <script>
 	YUI().use('event', 'node', 'transition', function(A) {
 		var mainContent = A.one('#mainContent');
-
-		mainContent.delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
-
-			var dropdown = currentTarget.ancestor('.dropdown');
-
-			event.preventDefault();
-
-			dropdown.toggleClass('open');
-
-			if (dropdown.hasClass('open')) {
-				currentTarget.on('clickoutside', function(event) {
-					var _this = this;
-
-					_this.ancestor('.dropdown').removeClass('open');
-
-					_this.detach('clickoutside');
-				});
-			}
-			else {
-				currentTarget.detach('clickoutside');
-			}
-		}, '.dropdown-toggle');
 
 		A.one('#mainContent').delegate('click', function(event) {
 			var ct = event.currentTarget;
