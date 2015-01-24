@@ -3,6 +3,173 @@ title: Cards
 section: Components
 ---
 
+<div class="row row-spacing" id="uxglVerticalCard">
+	<div class="col-md-12">
+		<h3>Default Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Display card content vertically.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card">
+			<div class="card-header"><h4>Header</h4></div>
+
+			<div class="card-section"><h4>Section</h4></div>
+
+			<div class="card-footer"><h4>Footer</h4></div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code>```<div class="card">
+    <div class="card-header"><h1>Header</h1></div>
+    <div class="card-section"><h1>Section</h1></div>
+    <div class="card-footer"><h1>Footer</h1></div>
+</div>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing" id="uxglHorizontalCard">
+	<div class="col-md-12">
+		<h3>Horizontal Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Display card content horizontally. <code>.card-horizontal</code> uses a simplified version of Bootstrap's grid system to help align content. It is based on the 12 column grid (default), but columns can be customized to any size.</p>
+
+			<p>Card columns do not break at smaller screen widths. They were designed to help align small chunks of content and are not meant to be used for page layouts.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card-horizontal">
+			<div class="card-row">
+				<div class="card-col-6">card-col-6</div>
+				<div class="card-col-6">card-col-6</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card-horizontal">
+			<div class="card-row">
+				<div class="card-col-7">card-col-7</div>
+				<div class="card-col-4">card-col-4</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card-horizontal">
+			<div class="card-row">
+				<div class="card-col-4">card-col-4</div>
+				<div class="card-col-7">card-col-7</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code class="html">```<div class="card-horizontal">
+    <div class="card-row">
+        <div class="card-col-6">card-col-6</div>
+        <div class="card-col-6">card-col-6</div>
+    </div>
+</div>```</code></pre>
+	</div>
+</div>
+
+<div class="row row-spacing" id="uxglHorizontalCard">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code>.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card-horizontal">
+			<div class="card-row">
+				<div class="card-col-4" style="vertical-align: top;">top</div>
+				<div class="card-col-4">middle</div>
+				<div class="card-col-4" style="vertical-align: bottom;">bottom</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card-horizontal">
+			<div class="card-row">
+				<div class="card-col-4" style="text-align:left;">left</div>
+				<div class="card-col-4">center</div>
+				<div class="card-col-4" style="text-align:right;">right</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code class="html">```<div class="card-horizontal">
+    <div class="card-row">
+        <div class="card-col-4" style="vertical-align: top;">top</div>
+        <div class="card-col-4">middle</div>
+        <div class="card-col-4" style="vertical-align: bottom;">bottom</div>
+    </div>
+</div>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row" id="uxglVerticalCard">
+	<div class="col-md-12">
+		<h3>Card Helper Classes</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.card-rounded</code>, <code>.card-circle</code>, or <code>.card-square</code> on the card to quickly shape the borders.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card card-rounded">
+			<div class="card-header"><h4>Header</h4></div>
+
+			<div class="card-section"><h4>Section</h4></div>
+
+			<div class="card-footer"><h4>Footer</h4></div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card card-circle">
+			<div class="card-header"><h4>Header</h4></div>
+
+			<div class="card-section"><h4>Section</h4></div>
+
+			<div class="card-footer"><h4>Footer</h4></div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card card-square">
+			<div class="card-header"><h4>Header</h4></div>
+
+			<div class="card-section"><h4>Section</h4></div>
+
+			<div class="card-footer"><h4>Footer</h4></div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code class="html">```<div class="card card-rounded">...</div>
+<div class="card card-circle">...</div>
+<div class="card card-square">...</div>```</code></pre>
+
+	</div>
+</div>
+
 <div class="row" id="uxglCardSection">
 	<div class="col-md-4">
 		<div class="card card-rounded">

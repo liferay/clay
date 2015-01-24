@@ -4,8 +4,16 @@
 	margin-bottom: 20px;
 	overflow: hidden;
 
+	&.card-circle {
+		@include border-radius(20px);
+	}
+
 	&.card-rounded {
 		@include border-radius($card-border-radius);
+	}
+
+	&.card-square {
+		@include border-radius(0);
 	}
 
 	.divider {
