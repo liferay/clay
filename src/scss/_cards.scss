@@ -1,3 +1,30 @@
+#uxglVerticalCard {
+	.card-header, .card-footer {
+		background: #EEE;
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+
+	.card-section {
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+}
+
+#uxglHorizontalCard {
+	.card-row {
+		height: 100px;
+
+		[class*="card-col"] {
+			text-align: center;
+
+			&:nth-child(odd) {
+				background-color: #EEE;
+			}
+		}
+	}
+}
+
 #uxglCardSection .card {
 	margin-left: auto;
 	margin-right: auto;
