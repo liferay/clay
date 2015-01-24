@@ -6578,10 +6578,18 @@ you can use the generic selector below, but it's slower:
   box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
   overflow: hidden; }
+  .card.card-circle, .card-horizontal.card-circle, .card-circle.card-horizontal-padded {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px; }
   .card.card-rounded, .card-horizontal.card-rounded, .card-rounded.card-horizontal-padded {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px; }
+  .card.card-square, .card-horizontal.card-square, .card-square.card-horizontal-padded {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
   .card .divider, .card-horizontal .divider, .card-horizontal .card-horizontal-padded {
     border-top: 1px solid #DDD;
     margin-bottom: 10px;
@@ -8722,6 +8730,21 @@ a.bg-primary:hover {
   margin: 0;
   overflow: auto;
   padding: 0; }
+
+#uxglVerticalCard .card-header, #uxglVerticalCard .card-footer {
+  background: #EEE;
+  padding-bottom: 5px;
+  padding-top: 5px; }
+#uxglVerticalCard .card-section {
+  padding-bottom: 20px;
+  padding-top: 20px; }
+
+#uxglHorizontalCard .card-row {
+  height: 100px; }
+  #uxglHorizontalCard .card-row [class*="card-col"] {
+    text-align: center; }
+    #uxglHorizontalCard .card-row [class*="card-col"]:nth-child(odd) {
+      background-color: #EEE; }
 
 #uxglCardSection .card {
   margin-left: auto;

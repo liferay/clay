@@ -11,6 +11,7 @@
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -319,7 +320,7 @@ collapse
 			<li class="disabled"><a href="#">Documents</a></li>
 
 			<li class="dropdown">
-				<a class="dropdown-toggle" href="#1">Configuration <span class="caret"></span></a>
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Configuration <span class="caret"></span></a>
 
 				<ul class="dropdown-menu">
 					<li><a href="#1">Setup</a></li>
@@ -360,7 +361,7 @@ collapse
 			<li class="disabled"><a href="#">Documents</a></li>
 
 			<li class="dropdown">
-				<a class="dropdown-toggle" href="#1">Configuration <span class="caret"></span></a>
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Configuration <span class="caret"></span></a>
 
 				<ul class="dropdown-menu">
 					<li><a href="#1">Setup</a></li>
@@ -398,7 +399,7 @@ collapse
 			<li><a href="#1">Settings</a></li>
 
 			<li class="dropdown">
-				<a class="dropdown-toggle" href="#1">Configuration <span class="caret"></span></a>
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Configuration <span class="caret"></span></a>
 
 				<ul class="dropdown-menu">
 					<li><a href="#1">Setup</a></li>
@@ -565,27 +566,6 @@ collapse
 				li.toggleClass('open');
 			}
 		}, '.nav > li > a');
-
-		A.one('#mainContent').delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
-
-			var dropdown = currentTarget.ancestor('.dropdown');
-
-			dropdown.toggleClass('open');
-
-			if (dropdown.hasClass('open')) {
-				currentTarget.on('clickoutside', function(event) {
-					var _this = this;
-
-					_this.ancestor('.dropdown').removeClass('open');
-
-					_this.detach('clickoutside');
-				});
-			}
-			else {
-				currentTarget.detach('clickoutside');
-			}
-		}, '.dropdown-toggle');
 	});
 </script>
 	</div>

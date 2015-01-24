@@ -11,6 +11,7 @@
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -277,7 +278,7 @@ collapse in
 
 				<div class="email-edit-buttons">
 					<div class="dropdown">
-						<button class="btn btn-default btn-sm" title="Archive">
+						<button class="btn btn-default btn-sm" data-toggle="dropdown" title="Archive">
 							<span class="glyphicon glyphicon-folder-open"></span> &nbsp;<span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
@@ -292,7 +293,7 @@ collapse in
 					</button>
 
 					<div class="dropdown">
-						<button class="btn btn-default btn-sm">
+						<button class="btn btn-default btn-sm" data-toggle="dropdown">
 							More <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
@@ -603,11 +604,6 @@ collapse in
 				}
 			}
 		}, 'tr > td > input[type="checkbox"]');
-
-		Y.one('body').delegate('click', function(event) {
-			event.preventDefault();
-			event.currentTarget.ancestor('.dropdown').toggleClass('open');
-		}, '.dropdown button');
 	});
 </script>
 	</div>
