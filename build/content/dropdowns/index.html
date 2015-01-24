@@ -11,6 +11,7 @@
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -316,7 +317,7 @@ collapse
 			<div class="container-fluid">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-						<a class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
 						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
 							<li class="dropdown-header" role="presentation">Dropdown Header</li>
 							<li role="presentation">
@@ -346,7 +347,7 @@ collapse
 					</li>
 
 					<li class="dropdown dropdown-wide">
-						<a class="dropdown-toggle" href="#">Dropdown Wide <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown Wide <span class="caret"></span></a>
 
 						<ul class="dropdown-menu">
 							<li class="col-sm-4">
@@ -398,7 +399,7 @@ collapse
 					</li>
 
 					<li class="dropdown dropdown-full">
-						<a class="dropdown-toggle" href="#">Dropdown Full <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown Full <span class="caret"></span></a>
 
 						<ul class="dropdown-menu dropdown-menu-inverse">
 							<li class="col-sm-4">
@@ -461,7 +462,7 @@ collapse
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Link</a></li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
 						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
 							<li class="dropdown-header" role="presentation">Dropdown Header</li>
 							<li role="presentation">
@@ -503,7 +504,7 @@ collapse
 
 		<div class="btn-group btn-group-justified">
 			<div class="btn-group dropdown">
-				<button class="btn btn-default dropdown-toggle" id="dropdownMenu" type="button">Default
+				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Default
 					<span class="caret"></span>
 				</button>
 
@@ -517,7 +518,7 @@ collapse
 			</div>
 
 			<div class="btn-group dropdown">
-				<button class="btn btn-primary dropdown-toggle" id="dropdownMenu" type="button">Top
+				<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Top
 					<span class="dropup"><span class="caret"></span></span>
 				</button>
 
@@ -531,7 +532,7 @@ collapse
 			</div>
 
 			<div class="btn-group dropdown">
-				<button class="btn btn-success dropdown-toggle" id="dropdownMenu" type="button">Top Right
+				<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Top Right
 					<span class="dropup"><span class="caret"></span></span>
 				</button>
 
@@ -545,7 +546,7 @@ collapse
 			</div>
 
 			<div class="btn-group dropdown">
-				<button class="btn btn-info dropdown-toggle" id="dropdownMenu" type="button">Right
+				<button class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Right
 					<span class="caret"></span>
 				</button>
 
@@ -561,7 +562,7 @@ collapse
 
 		
 <pre><code>&lt;div class=&quot;dropdown&quot;&gt;
-&lt;button class=&quot;btn btn-default dropdown-toggle&quot; id=&quot;dropdownMenu&quot;&gt;Dropdown
+&lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; id=&quot;dropdownMenu&quot;&gt;Dropdown
 &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;
 
@@ -592,27 +593,6 @@ collapse
 		mainContent.delegate('click', function(event) {
 			event.preventDefault();
 		}, 'a');
-
-		mainContent.delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
-
-			var dropdown = currentTarget.ancestor('.dropdown');
-
-			dropdown.toggleClass('open');
-
-			if (dropdown.hasClass('open')) {
-				currentTarget.on('clickoutside', function(event) {
-					var _this = this;
-
-					_this.ancestor('.dropdown').removeClass('open');
-
-					_this.detach('clickoutside');
-				});
-			}
-			else {
-				currentTarget.detach('clickoutside');
-			}
-		}, '.dropdown-toggle');
 	});
 </script>
 	</div>
