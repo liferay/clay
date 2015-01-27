@@ -59,3 +59,9 @@
 .blockquote-warning {
 	@include color-blockquote ($brand-warning);
 }
+
+// Marked Text
+
+mark, .mark {
+	@include highlight-text();
+}
