@@ -134,6 +134,17 @@ collapse
 </ul>
 </div>
 </li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Extending Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/extending-cards">Extending Cards</a>
+</li>
+</ul>
+</div>
+</li>
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Image Gallery</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
@@ -184,7 +195,7 @@ collapse
 		</h1>
 
 		
-<div class="row row-spacing" id="uxglVerticalCard">
+<div class="row row-spacing uxgl-vertical-card">
 	<div class="col-md-12">
 		<h3>Default Card</h3>
 
@@ -214,7 +225,7 @@ collapse
 	</div>
 </div>
 
-<div class="row row-spacing" id="uxglHorizontalCard">
+<div class="row row-spacing uxgl-horizontal-card">
 	<div class="col-md-12">
 		<h3>Horizontal Card</h3>
 
@@ -263,7 +274,7 @@ collapse
 	</div>
 </div>
 
-<div class="row row-spacing" id="uxglHorizontalCard">
+<div class="row row-spacing uxgl-horizontal-card">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code>.</p>
@@ -303,7 +314,77 @@ collapse
 	</div>
 </div>
 
-<div class="row" id="uxglVerticalCard">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add gutters to a specific card card column by using <code>.card-col-gutters</code>.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card-horizontal">
+			<div class="card-row">
+				<div class="card-col-5">
+					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+				</div>
+
+				<div class="card-col-7 card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code class="html">&lt;div class=&quot;card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row&quot;&gt;
+        &lt;div class=&quot;card-col-5&quot;&gt;
+            &lt;img alt=&quot;thumbnail&quot; class=&quot;img-responsive&quot; src=&quot;/images/thumbnail_coffee.jpg&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;card-col-7 card-col-gutters&quot;&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+	</div>
+
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.card-row-padded</code> with <code>.card-row</code> to add some spacing around a horizontal card.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-5">
+					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+				</div>
+
+				<div class="card-col-7 card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<pre><code class="html">&lt;div class=&quot;card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row card-row-padded&quot;&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div>
+
+<div class="row row-spacing uxgl-vertical-card">
 	<div class="col-md-12">
 		<h3>Card Helper Classes</h3>
 
@@ -349,197 +430,58 @@ collapse
 &lt;div class=&quot;card card-square&quot;&gt;...&lt;/div&gt;</code></pre>
 
 	</div>
-</div>
 
-<div class="row" id="uxglCardSection">
-	<div class="col-md-4">
-		<div class="card card-rounded">
-			<div class="card-section">
-				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_desk.jpg" style="margin-top: 10px;">
-
-				<h4>Medium roast</h4>
-
-				<p>Latte plunger pot seasonal</p>
-			</div>
-
-			<div class="card-footer">
-				<div class="nameplate">
-					<div class="nameplate-icon">
-						<div class="user-icon">
-							<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_underwater.jpg">
-						</div>
-					</div>
-
-					<div class="nameplate-content">
-						<h4>Joe Bloggs <small>Subheading</small></h4>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.divider</code> on an <code>&lt;hr&gt;</code> or <code>&lt;div&gt;</code> element to create a division between content inside a card.</p>
+		</blockquote>
 	</div>
 
-	<div class="col-md-4">
-		<div class="card">
-			<div class="card-header">
-				<div class="nameplate">
-					<div class="nameplate-icon">
-						<div class="user-icon">
-							<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
-						</div>
-					</div>
-
-					<div class="nameplate-content">
-						<h4>Space Program <small>Category</small></h4>
-					</div>
-				</div>
-			</div>
-
-			<div class="card-section">
-				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
-
-				<div class="divider"></div>
-				<a href="#" class="btn btn-block btn-default" role="button" style="margin: 10px 0;">Subscribe</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card">
-
-			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_typewriter.jpg">
-
-			<div class="card-section">
-				<h4>Mug medium sit</h4>
-
-				<p>Latte plunger pot seasonal</p>
-
-				<div class="nameplate">
-					<div class="nameplate-icon">
-						<div class="user-icon">
-							<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
-						</div>
-					</div>
-
-					<div class="nameplate-content">
-						<h4>Joe Bloggs <small>Subheading</small></h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row">
 	<div class="col-md-6">
-		<div class="card-horizontal card-rounded">
+		<div class="card">
+			<div class="card-header"><h4>Header</h4></div>
+
+			<div class="card-section">
+				<h4>Section</h4>
+				<hr class="divider" />
+				<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+			</div>
+
+			<div class="card-footer"><h4>Footer</h4></div>
+		</div>
+	</div>
+
+	<div class="col-md-6 uxgl-horizontal-card">
+		<div class="card-horizontal">
 			<div class="card-row">
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
-				</div>
-
-				<div class="card-col-7 card-col-gutters">
-					<h4>So ristretto cappuccino</h4>
-
+				<div class="card-col-6 card-col-gutters">
+					<h4>Section</h4>
+					<hr class="divider" />
 					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
 				</div>
+				<div class="card-col-6">card-col-6</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-7 card-col-gutters">
-					<h4>Decaffeinated galão cup aroma</h4>
+	<div class="col-md-12">
 
-					<p>Variety, latte, steamed aromatic lungo half and half chicory arabica beans redeye seasonal americano. </p>
-				</div>
+		<pre><code class="html">&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-section&quot;&gt;
+      &lt;hr class=&quot;divider&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_desk.jpg">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+&lt;div class=&quot;card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row&quot;&gt;
+        &lt;div class=&quot;card-col-6 card-col-gutters&quot;&gt;
+          &lt;hr class=&quot;divider&quot; /&gt;
+        &lt;/div&gt;
 
-<div class="row">
-	<div class="col-md-6">
-		<div class="card-horizontal-padded">
-			<div class="card-row">
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_typewriter.jpg">
-				</div>
+        &lt;div class=&quot;card-col-6&quot;&gt;card-col-6&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
-				<div class="card-col-7 card-col-gutters">
-					<h4>Extraction grounds</h4>
-
-					<p>Bar grinder, iced, lungo crema cultivar, extraction, id spoon whipped half and half mocha.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card-horizontal-padded">
-			<div class="card-row">
-				<div class="card-col-7 card-col-gutters">
-					<h4>White at redeye</h4>
-
-					<p>Chicory, single origin mug, fair trade froth redeye kopi-luwak a medium grinder cup robust.</p>
-				</div>
-
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_underwater.jpg">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-absolute" src="../../images/thumbnail_hot_air_ballon.jpg">
-				</div>
-
-				<div class="card-col-7 card-col-gutters">
-					<h4>Cream body as, robusta</h4>
-
-					<p>Lungo white, latte viennese, doppio that wings viennese robusta froth. Bar cup a filter dripper at sweet irish medium.</p>
-
-					<div class="card-btn-group">
-						<hr class="divider" />
-						<button type="button" class="btn btn-primary btn-xs">Send</button>
-						<button type="button" class="btn btn-link btn-xs">Cancel</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-7 card-col-gutters">
-					<h4>Aged white, americano</h4>
-
-					<p>Bar cup a filter dripper at sweet irish medium. Spoon latte siphon at white flavour medium coffee frappuccino milk.</p>
-
-					<div class="card-btn-group">
-						<hr class="divider" />
-						<button type="button" class="btn btn-primary btn-xs">Send</button>
-						<button type="button" class="btn btn-link btn-xs">Cancel</button>
-					</div>
-				</div>
-
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-absolute" src="../../images/thumbnail_coyote.jpg">
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 	</div>

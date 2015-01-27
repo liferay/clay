@@ -2486,19 +2486,19 @@ tbody.collapse.in {
     left: 0;
     right: auto; } }
 
-.btn-group, .card-btn-group, .btn-group-vertical {
+.btn-group, .btn-group-vertical {
   position: relative;
   display: inline-block;
   vertical-align: middle; }
-  .btn-group > .btn, .btn-group > .card-btn-group, .btn-group-vertical > .btn {
+  .btn-group > .btn, .btn-group-vertical > .btn {
     position: relative;
     float: left; }
-    .btn-group > .btn:hover, .btn-group > .card-btn-group, .btn-group > .btn:focus, .btn-group > .card-btn-group, .btn-group > .btn:active, .btn-group > .card-btn-group, .btn-group > .btn.active, .btn-group > .card-btn-group, .btn-group-vertical > .btn:hover, .btn-group-vertical > .btn:focus, .btn-group-vertical > .btn:active, .btn-group-vertical > .btn.active {
+    .btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active, .btn-group-vertical > .btn:hover, .btn-group-vertical > .btn:focus, .btn-group-vertical > .btn:active, .btn-group-vertical > .btn.active {
       z-index: 2; }
-    .btn-group > .btn:focus, .btn-group > .card-btn-group, .btn-group-vertical > .btn:focus {
+    .btn-group > .btn:focus, .btn-group-vertical > .btn:focus {
       outline: 0; }
 
-.btn-group .btn + .btn, .btn-group .btn + .card-btn-group, .btn-group .btn + .btn-group, .btn-group .btn + .card-btn-group, .btn-group .btn + .card-btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .card-btn-group, .btn-group .btn-group + .card-btn-group, .btn-group .btn-group + .btn-group, .btn-group .btn-group + .card-btn-group, .btn-group .btn-group + .card-btn-group, .btn-group .btn-group + .card-btn-group {
+.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
 
 .btn-toolbar {
@@ -2508,53 +2508,53 @@ tbody.collapse.in {
     display: table; }
   .btn-toolbar:after {
     clear: both; }
-  .btn-toolbar .btn-group, .btn-toolbar .card-btn-group, .btn-toolbar .input-group {
+  .btn-toolbar .btn-group, .btn-toolbar .input-group {
     float: left; }
-  .btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .card-btn-group, .btn-toolbar > .input-group {
+  .btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
     margin-left: 5px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .card-btn-group {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .btn-group > .card-btn-group {
+.btn-group > .btn:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .card-btn-group {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > .card-btn-group, .btn-group > .dropdown-toggle:not(:first-child), .btn-group > .card-btn-group {
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group > .btn-group, .btn-group > .card-btn-group, .btn-group > .card-btn-group {
+.btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .card-btn-group, .btn-group > .btn-group:not(:first-child):not(:last-child) > .card-btn-group:not(:first-child):not(:last-child) {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child > .btn:last-child, .btn-group > .btn-group:first-child > .card-btn-group, .btn-group > .btn-group:first-child > .card-btn-group:first-child, .btn-group > .btn-group:first-child > .dropdown-toggle, .btn-group > .btn-group:first-child > .card-btn-group, .btn-group > .btn-group:first-child > .card-btn-group:first-child {
+.btn-group > .btn-group:first-child > .btn:last-child, .btn-group > .btn-group:first-child > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child > .btn:first-child, .btn-group > .btn-group:last-child > .card-btn-group, .btn-group > .btn-group:last-child > .card-btn-group:last-child {
+.btn-group > .btn-group:last-child > .btn:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group .dropdown-toggle:active, .btn-group .card-btn-group, .btn-group.open .dropdown-toggle, .btn-group.open .open.card-btn-group {
+.btn-group .dropdown-toggle:active, .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle, .btn-group > .btn + .card-btn-group {
+.btn-group > .btn + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px; }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group > .btn-lg + .card-btn-group, .btn-group > .btn-lg + .btn-group-lg > .btn, .btn-group-lg > .btn-group > .btn-lg + .btn {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group > .btn-lg + .btn-group-lg > .btn, .btn-group-lg > .btn-group > .btn-lg + .btn {
   padding-left: 12px;
   padding-right: 12px; }
 
-.btn-group.open .dropdown-toggle, .btn-group.open .open.card-btn-group {
+.btn-group.open .dropdown-toggle {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn-group.open .dropdown-toggle.btn-link, .btn-group.open .open.card-btn-group {
+  .btn-group.open .dropdown-toggle.btn-link {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
@@ -2568,19 +2568,19 @@ tbody.collapse.in {
 .dropup .btn-lg .caret, .dropup .btn-lg .btn-group-lg > .btn, .btn-group-lg > .dropup .btn-lg .btn {
   border-width: 0 5px 5px; }
 
-.btn-group-vertical > .btn, .btn-group-vertical > .btn-group, .btn-group-vertical > .card-btn-group, .btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .card-btn-group {
+.btn-group-vertical > .btn, .btn-group-vertical > .btn-group, .btn-group-vertical > .btn-group > .btn {
   display: block;
   float: none;
   width: 100%;
   max-width: 100%; }
-.btn-group-vertical > .btn-group:before, .btn-group-vertical > .card-btn-group:before, .btn-group-vertical > .btn-group:after, .btn-group-vertical > .card-btn-group:after {
+.btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after {
   content: " ";
   display: table; }
-.btn-group-vertical > .btn-group:after, .btn-group-vertical > .card-btn-group:after {
+.btn-group-vertical > .btn-group:after {
   clear: both; }
-.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .card-btn-group {
+.btn-group-vertical > .btn-group > .btn {
   float: none; }
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn + .btn-group, .btn-group-vertical > .btn + .card-btn-group, .btn-group-vertical > .btn-group + .btn, .btn-group-vertical > .btn-group + .card-btn-group, .btn-group-vertical > .btn-group + .btn-group, .btn-group-vertical > .btn-group + .card-btn-group, .btn-group-vertical > .btn-group + .card-btn-group {
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn + .btn-group, .btn-group-vertical > .btn-group + .btn, .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
@@ -2595,14 +2595,14 @@ tbody.collapse.in {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .card-btn-group:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .card-btn-group:first-child:not(:last-child), .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .card-btn-group:first-child:not(:last-child) {
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .card-btn-group:last-child:not(:first-child) {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
@@ -2611,13 +2611,13 @@ tbody.collapse.in {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate; }
-  .btn-group-justified > .btn, .btn-group-justified > .btn-group, .btn-group-justified > .card-btn-group {
+  .btn-group-justified > .btn, .btn-group-justified > .btn-group {
     float: none;
     display: table-cell;
     width: 1%; }
-  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .card-btn-group {
+  .btn-group-justified > .btn-group .btn {
     width: 100%; }
-  .btn-group-justified > .btn-group .dropdown-menu, .btn-group-justified > .btn-group .card-btn-group {
+  .btn-group-justified > .btn-group .dropdown-menu {
     left: auto; }
 
 [data-toggle="buttons"] > .btn > input[type="radio"], [data-toggle="buttons"] > .btn > input[type="checkbox"] {
@@ -2672,14 +2672,14 @@ tbody.collapse.in {
   .input-group-addon input[type="radio"], .input-group-addon input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .btn-group > .card-btn-group, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, .input-group-btn:last-child > .btn-group:not(:last-child) > .card-btn-group:not(:last-child) {
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
 .input-group-addon:first-child {
   border-right: 0; }
 
-.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .btn-group > .card-btn-group, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, .input-group-btn:first-child > .btn-group:not(:first-child) > .card-btn-group:not(:first-child) {
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -2696,9 +2696,9 @@ tbody.collapse.in {
       margin-left: -1px; }
     .input-group-btn > .btn:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn:active {
       z-index: 2; }
-  .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group, .input-group-btn:first-child > .card-btn-group {
+  .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group, .input-group-btn:last-child > .card-btn-group {
+  .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
     margin-left: -1px; }
 
 .nav {
@@ -4029,7 +4029,7 @@ button.close {
   .modal-footer .btn + .btn {
     margin-left: 5px;
     margin-bottom: 0; }
-  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .btn + .card-btn-group {
+  .modal-footer .btn-group .btn + .btn {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -6529,7 +6529,7 @@ you can use the generic selector below, but it's slower:
   line-height: 1;
   border-radius: 0; }
 
-.shadows.btn-toolbar .btn-group > .btn:before, .shadows.btn-toolbar .btn-group > .card-btn-group, .shadows .btn-toolbar .btn-group > .btn:before, .shadows .btn-toolbar .btn-group > .card-btn-group, .shadows.btn-group-justified > .btn > .btn:before, .shadows.btn-group-justified > .btn-group > .btn:before, .shadows.btn-group-justified > .btn-group > .card-btn-group, .shadows .btn-group-justified > .btn > .btn:before, .shadows .btn-group-justified > .btn-group > .btn:before, .shadows .btn-group-justified > .btn-group > .card-btn-group, .shadows.btn-group-justified > a.btn:before, .shadows .btn-group-justified > a.btn:before {
+.shadows.btn-toolbar .btn-group > .btn:before, .shadows .btn-toolbar .btn-group > .btn:before, .shadows.btn-group-justified > .btn > .btn:before, .shadows.btn-group-justified > .btn-group > .btn:before, .shadows .btn-group-justified > .btn > .btn:before, .shadows .btn-group-justified > .btn-group > .btn:before, .shadows.btn-group-justified > a.btn:before, .shadows .btn-group-justified > a.btn:before {
   content: '';
   height: 100%;
   left: 0;
@@ -6538,14 +6538,14 @@ you can use the generic selector below, but it's slower:
   width: 100%;
   z-index: -1; }
 
-.btn-group .btn + .btn, .btn-group .btn + .card-btn-group, .btn-group .btn + .btn-group, .btn-group .btn + .card-btn-group, .btn-group .btn + .card-btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .card-btn-group, .btn-group .btn-group + .card-btn-group, .btn-group .btn-group + .btn-group, .btn-group .btn-group + .card-btn-group, .btn-group .btn-group + .card-btn-group, .btn-group .btn-group + .card-btn-group {
+.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
   margin-left: 1px; }
 
-.btn-group.open .dropdown-toggle, .btn-group.open .open.card-btn-group {
+.btn-group.open .dropdown-toggle {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.btn-toolbar .btn-group, .btn-toolbar .card-btn-group {
+.btn-toolbar .btn-group {
   border: solid transparent;
   z-index: 1; }
 .btn-toolbar > .btn-group-vertical {
@@ -6554,56 +6554,62 @@ you can use the generic selector below, but it's slower:
 .btn-group-justified {
   border-spacing: 1px; }
 
-.btn-group > .btn:hover, .btn-group > .card-btn-group, .btn-group > .btn:focus, .btn-group > .card-btn-group, .btn-group > .btn:active, .btn-group > .card-btn-group, .btn-group > .btn.active, .btn-group > .card-btn-group, .btn-group-vertical > .btn:hover, .btn-group-vertical > .btn:focus, .btn-group-vertical > .btn:active, .btn-group-vertical > .btn.active {
+.btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active, .btn-group-vertical > .btn:hover, .btn-group-vertical > .btn:focus, .btn-group-vertical > .btn:active, .btn-group-vertical > .btn.active {
   z-index: auto; }
 
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn + .btn-group, .btn-group-vertical > .btn + .card-btn-group, .btn-group-vertical > .btn-group + .btn, .btn-group-vertical > .btn-group + .card-btn-group, .btn-group-vertical > .btn-group + .btn-group, .btn-group-vertical > .btn-group + .card-btn-group, .btn-group-vertical > .btn-group + .card-btn-group {
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn + .btn-group, .btn-group-vertical > .btn-group + .btn, .btn-group-vertical > .btn-group + .btn-group {
   margin-top: 1px; }
 
-.shadows.btn-toolbar .btn-group > .btn:before, .shadows.btn-toolbar .btn-group > .card-btn-group, .shadows .btn-toolbar .btn-group > .btn:before, .shadows .btn-toolbar .btn-group > .card-btn-group {
+.shadows.btn-toolbar .btn-group > .btn:before, .shadows .btn-toolbar .btn-group > .btn:before {
   -webkit-box-shadow: -4px 4px 0 0 rgba(0, 0, 0, 0.2);
   box-shadow: -4px 4px 0 0 rgba(0, 0, 0, 0.2); }
-.shadows.btn-group-justified > .btn > .btn:before, .shadows.btn-group-justified > .btn-group > .btn:before, .shadows.btn-group-justified > .btn-group > .card-btn-group, .shadows .btn-group-justified > .btn > .btn:before, .shadows .btn-group-justified > .btn-group > .btn:before, .shadows .btn-group-justified > .btn-group > .card-btn-group {
+.shadows.btn-group-justified > .btn > .btn:before, .shadows.btn-group-justified > .btn-group > .btn:before, .shadows .btn-group-justified > .btn > .btn:before, .shadows .btn-group-justified > .btn-group > .btn:before {
   -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); }
 .shadows.btn-group-justified > a.btn:before, .shadows .btn-group-justified > a.btn:before {
   -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); }
-.shadows.btn-group-vertical > .btn, .shadows.btn-group-vertical > .btn-group, .shadows.btn-group-vertical > .card-btn-group, .shadows .btn-group-vertical > .btn, .shadows .btn-group-vertical > .btn-group, .shadows .btn-group-vertical > .card-btn-group {
+.shadows.btn-group-vertical > .btn, .shadows.btn-group-vertical > .btn-group, .shadows .btn-group-vertical > .btn, .shadows .btn-group-vertical > .btn-group {
   -webkit-box-shadow: -4px 4px 0 0 rgba(0, 0, 0, 0.2);
   box-shadow: -4px 4px 0 0 rgba(0, 0, 0, 0.2); }
 
-.card, .card-horizontal, .card-horizontal-padded {
-  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.5);
+.card, .card-horizontal {
   margin-bottom: 20px;
-  overflow: hidden; }
-  .card.card-circle, .card-horizontal.card-circle, .card-circle.card-horizontal-padded {
+  position: relative; }
+  .card.card-circle, .card-horizontal.card-circle {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px; }
-  .card.card-rounded, .card-horizontal.card-rounded, .card-rounded.card-horizontal-padded {
+  .card.card-rounded, .card-horizontal.card-rounded {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px; }
-  .card.card-square, .card-horizontal.card-square, .card-square.card-horizontal-padded {
+  .card.card-square, .card-horizontal.card-square {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0; }
-  .card .divider, .card-horizontal .divider, .card-horizontal .card-horizontal-padded {
+  .card .divider, .card-horizontal .divider {
     border-top: 1px solid #DDD;
     margin-bottom: 10px;
     margin-top: 10px; }
-  .card .nameplate-icon, .card-horizontal .nameplate-icon, .card-horizontal .card-horizontal-padded {
+  .card .nameplate-icon, .card-horizontal .nameplate-icon {
     width: 50px; }
-    .card .nameplate-icon .user-icon, .card-horizontal .nameplate-icon .user-icon, .card-horizontal .nameplate-icon .card-horizontal-padded {
+    .card .nameplate-icon .user-icon, .card-horizontal .nameplate-icon .user-icon {
       height: 40px;
       line-height: 40px;
       width: 40px; }
 
+.card {
+  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
+  overflow: hidden; }
+  .card .card-row {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100.1%; }
+
 .card-btn-group {
-  padding-bottom: 10px;
-  width: 100%; }
+  margin: 10px 0; }
   .card-btn-group .divider {
     margin-left: -10px;
     margin-right: -10px; }
@@ -6621,15 +6627,20 @@ you can use the generic selector below, but it's slower:
 .card-section {
   padding: 1px 10px; }
 
-.card-horizontal, .card-horizontal-padded {
+.card-horizontal {
   position: relative; }
 
-.card-horizontal-padded {
-  padding: 10px; }
-  .card-horizontal-padded .card-row .card-col-gutters:first-child {
+.card-row {
+  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
+  overflow: hidden; }
+  .card-row.card-row-padded .card-col-gutters:first-child {
     padding-left: 0; }
-  .card-horizontal-padded .card-row .card-col-gutters:last-child {
+  .card-row.card-row-padded .card-col-gutters:last-child {
     padding-right: 0; }
+
+.card-row-padded {
+  padding: 10px; }
 
 .card-col-1 {
   width: 8.33333%; }
@@ -6681,6 +6692,9 @@ you can use the generic selector below, but it's slower:
       width: 101%; }
   .card-row .card-col-gutters {
     padding: 0 2%; }
+    .card-row .card-col-gutters .divider {
+      margin-left: -10px;
+      margin-right: -10px; }
   .card-row .card-col-gutter-left {
     padding-left: 2%; }
   .card-row .card-col-gutter-right {
@@ -6852,7 +6866,7 @@ you can use the generic selector below, but it's slower:
   right: 0;
   top: auto; }
 
-.btn-group-justified > .btn-group.dropdown-full .dropdown-menu, .btn-group-justified > .btn-group.dropdown-full .dropdown-full.card-btn-group {
+.btn-group-justified > .btn-group.dropdown-full .dropdown-menu {
   left: 0; }
 
 .link-list {
