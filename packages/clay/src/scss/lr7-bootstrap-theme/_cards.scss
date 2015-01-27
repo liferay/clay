@@ -1,5 +1,6 @@
 .card, .card-horizontal {
 	margin-bottom: 20px;
+	position: relative;
 
 	&.card-circle {
 		@include border-radius(20px);
@@ -34,13 +35,16 @@
 	@include box-shadow($card-box-shadow);
 
 	overflow: hidden;
+
+	.card-row {
+		@include box-shadow(none);
+
+		width: 100.1%;
+	}
 }
 
 .card-btn-group {
-	@extend .btn-group;
-
-	padding-bottom: 10px;
-	width: 100%;
+	margin: 10px 0;
 
 	.divider {
 		margin-left: -10px;
@@ -122,6 +126,11 @@
 
 	.card-col-gutters {
 		padding: 0 2%;
+
+		.divider {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
 	}
 
 	.card-col-gutter-left {
