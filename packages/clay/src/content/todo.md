@@ -10,12 +10,16 @@ navIndex: last
 
 ##### Cards Component
 - documentation
+- extending cards documentation
 
 ##### Color Scheme
 - redo layout
 
 ##### Nav
 - create tutorial how to extend .nav component
+
+##### Image and Thumbnails
+- create component for multiple caption styles
 
 ##### definition of BUTTONS
 
