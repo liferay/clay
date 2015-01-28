@@ -6924,6 +6924,61 @@ you can use the generic selector below, but it's slower:
   .dropdown-full .dropdown-menu [class*="col-sm"], .dropdown-full .dropdown-menu [class*="col-md"], .dropdown-full .dropdown-menu [class*="col-lg"], .dropdown-wide .dropdown-menu [class*="col-sm"], .dropdown-wide .dropdown-menu [class*="col-md"], .dropdown-wide .dropdown-menu [class*="col-lg"] {
     padding: 0; } }
 
+figure, .figure {
+  margin-bottom: 15px;
+  overflow: hidden;
+  position: relative; }
+
+figcaption, .figcaption {
+  padding: 5px 2px; }
+
+.figcaption-bottom {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-weight: 300;
+  padding: 10px 15px;
+  position: absolute;
+  width: 100%;
+  bottom: 0; }
+
+.figcaption-full {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-weight: 300;
+  padding: 10px 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  width: 100%; }
+
+.figcaption-top {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-weight: 300;
+  padding: 10px 15px;
+  position: absolute;
+  width: 100%;
+  top: 0; }
+
+.figure-circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+.figure-rounded {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+.figure-square {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
 label {
   color: #2B4259;
   font-size: 15px;
@@ -8627,6 +8682,28 @@ a.bg-primary:hover {
   border-color: #FFB103; }
   .blockquote-warning footer, .blockquote-warning small, .blockquote-warning .small {
     color: #FFB103; }
+
+mark, .mark {
+  background-color: #fff0cf;
+  box-decoration-break: clone;
+  -webkit-box-shadow: -0.25em 0 0 #fff0cf;
+  box-shadow: -0.25em 0 0 #fff0cf;
+  color: #2B4259;
+  display: inline;
+  line-height: normal;
+  padding: 2px 0.25em 3px 0;
+  position: relative;
+  white-space: pre-wrap; }
+  mark:before, .mark:before {
+    background-color: #fff0cf;
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 0.25em;
+    z-index: -1; }
 
 .heading-toolbar {
   float: left;
