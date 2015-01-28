@@ -1,7 +1,12 @@
-@mixin style-figcaption($bgColor: #000, $alpha: 0.5, $color: #FFF) {
+@mixin color-figcaption ($bgColor: #000, $alpha: 0.5, $color: #FFF) {
 	background-color: $bgColor;
 	background-color: rgba($bgColor, $alpha);
 	color: $color;
+}
+
+@mixin style-figcaption($bgColor: #000, $alpha: 0.5, $color: #FFF) {
+	@include color-figcaption($bgColor, $alpha, $color);
+
 	font-weight: 300;
 	padding: 10px 15px;
 	position: absolute;
@@ -38,7 +43,6 @@ figcaption, .figcaption {
 	top: 0;
 }
 
-
 // Figure helper classes
 // -------------------------
 
@@ -52,4 +56,47 @@ figcaption, .figcaption {
 
 .figure-square {
 	@include border-radius(0);
+}
+
+// Figcaption helper classes
+// -------------------------
+
+.figcaption-xl {
+	font-size: 1.5em;
+}
+
+.figcaption-lg {
+	font-size: 1.25em;
+}
+
+.figcaption-sm {
+	font-size: 0.85em;
+}
+
+.figcaption-xs {
+	font-size: 0.7em;
+}
+
+.figcaption-danger {
+	@include color-figcaption($brand-danger, 0.7, #FFF);
+}
+
+.figcaption-default {
+	@include color-figcaption($brand-default, 0.7, #FFF);
+}
+
+.figcaption-info {
+	@include color-figcaption($brand-info, 0.7, #FFF);
+}
+
+.figcaption-primary {
+	@include color-figcaption($brand-primary, 0.7, #FFF);
+}
+
+.figcaption-success {
+	@include color-figcaption($brand-success, 0.7, #FFF);
+}
+
+.figcaption-warning {
+	@include color-figcaption($brand-warning, 0.7, #FFF);
 }
