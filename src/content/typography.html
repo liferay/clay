@@ -40,39 +40,68 @@ navIndex: 0
 
 	<div class="row">
 		<div class="col-md-12">
-			<h3>Inline Text Elements</h3>
+			<h3>Lead body copy</h3>
 			<p class="lead"> Lead Body Text: Milk filter lungo as galão roast that crema blue mountain shop turkish. </p>
-			<p>Regular Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</p>
+
+			<pre><code class="html">```<p class="lead">...</p>```</code></pre>
+
+			<h3>Inline Text Elements</h3>
+
+			<p><a href="#1">Anchor Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a></p>
+			<p><span>Regular Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span></p>
 			<p><mark>Marked Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</mark></p>
 			<p><del>Deleted Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</del></p>
 			<p><s>Strikethrough Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</s></p>
 			<p><ins>Inserted Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</ins></p>
 			<p><u>Underlined Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</u></p>
-			<pre><code class="html">```<p class="lead">...</p>
-<p>...</p>
-<mark>...</mark>
+
+			<pre><code class="html">```<a>...</a>
+<span>...</span>
+<mark>...</mark> or <span class="mark">...</span>
 <del>...</del>
 <s>...</s>
 <ins>...</ins>
 <u>...</u>```</code></pre>
 
-			<br>
 			<p><small>Small Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</small>
 			<p><strong>Bold Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</strong></p>
 			<p><em>Italics: Milk filter lungo as galão roast that crema blue mountain shop turkish.</em></p>
+
 			<pre><code class="html">```<small>...</small>
 <strong>...</strong>
 <em>...</em>```</code></pre>
 
-			<br>
 			<p>Abbreviation: <abbr title="attribute">attr</abbr></p>
 			<p>LOWERCASED TEXT: <span class="text-lowercase">LOWERCASED TEXT</span></p>
 			<p>uppercased text: <span class="text-uppercase">uppercased text</span></p>
 			<p>capitalized text: <span class="text-capitalize">capitalized text</span></p>
+
 			<pre><code class="html">```<abbr>...</abbr>
 <span class="text-lowercase">...</span>
 <span class="text-uppercase">...</span>
 <span class="text-capitalize">...</span>```</code></pre>
+
+			<h3>Link Group</h3>
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Wrap <code>.link-group</code> around a group of anchor tags to increase the click area and spacing.</p>
+			</blockquote>
+			<div class="link-group">
+				<a href="#1">Link #1</a>
+				<a href="#1">Link #2</a>
+				<a href="#1">Link #3</a>
+				<a href="#1">Link #4</a>
+				<a href="#1">Link #5</a>
+				<a href="#1">Link #6</a>
+			</div>
+
+			<pre><code class="html">```<div class="link-group">
+  <a href="#">Link #1</a>
+  <a href="#">Link #2</a>
+  <a href="#">Link #3</a>
+  <a href="#">Link #4</a>
+  <a href="#">Link #5</a>
+  <a href="#">Link #6</a>
+</div>```</code></pre>
 
 		</div>
 	</div>
@@ -95,7 +124,7 @@ navIndex: 0
 
 			<p class="text-danger">Danger Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</p>
 
-			<pre><code class="html">```<p>...</p>
+			<pre><code class="html">```<p>...</p> or <p class="text-regular">...</p>
 <p class="text-muted">...</p>
 <p class="text-primary">...</p>
 <p class="text-success">...</p>

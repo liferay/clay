@@ -6,9 +6,19 @@
 	}
 }
 
+@mixin color-link($color, $color-hover) {
+	color: $color;
+
+	&:focus, &:hover {
+		color: $color-hover;
+	}
+}
+
 @include text-emphasis-variant('.text-default', $state-default-text);
 
 @include text-emphasis-variant('.text-primary', $state-primary-text);
+
+@include text-emphasis-variant('.text-regular', $text-color);
 
 .bg-primary {
 	color: $text-color;
@@ -17,6 +27,23 @@
 @include bg-variant('.bg-default', $state-default-bg);
 
 @include bg-variant('.bg-primary', $state-primary-bg);
+
+// Anchor Tags
+
+.link-group {
+	margin: 10px 0;
+
+	a {
+		line-height: 2em;
+		padding: 0.25em;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+// Blockquote Variations
 
 .blockquote-xs {
 	border-left: 1px solid $blockquote-border-color;
