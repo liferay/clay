@@ -1,3 +1,15 @@
+.usage-section {
+	p {
+		line-height: 1.6667em;
+		margin-bottom: 1.6667em;
+	}
+}
+
+.usage-heading {
+	margin-bottom: 1em;
+	margin-top: 0.25em;
+}
+
 .uxgl-pin1 {
 	a {
 		color: #AAA;
@@ -22,26 +34,27 @@
 }
 
 .uxgl-pin2 {
-	
+	.figcaption-bottom {
+		font-family: "Courier New" monospace;
+		font-size: 21px;
+	}
 }
 
-.card-image-container {
-	position: relative;
-
-	.image-caption {
-		background-color: rgba(0, 0, 0, 0.5);
-		bottom: 0;
-		color: #FFF;
-		font-family: "Courier New";
+.uxgl-pin3 {
+	.figcaption-top {
+		background-color: transparent;
+		font-family: "Courier New" monospace;
 		font-size: 21px;
-		margin: 0;
-		padding: 5px 10px;
-		position: absolute;
-		width: 100%;
+		font-weight: 300;
+		letter-spacing: 0.5px;
 	}
 }
 
 .extend-cards-page {
+	.card {
+		max-width: 300px;
+	}
+
 	.card-label {
 		background: rgb(120, 171, 240);
 		color: #FFF;
