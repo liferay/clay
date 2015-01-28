@@ -66,26 +66,6 @@
 	position: relative;
 }
 
-.card-row {
-	@include box-shadow($card-box-shadow);
-
-	overflow: hidden;
-
-	&.card-row-padded .card-col-gutters {
-			&:first-child {
-				padding-left: 0;
-			}
-
-			&:last-child {
-				padding-right: 0;
-			}
-		}
-}
-
-.card-row-padded {
-	padding: 10px;
-}
-
 @for $i from 1 through $grid-columns {
 	.card-col-#{$i} {
 		width: percentage(($i / $grid-columns));
@@ -93,9 +73,30 @@
 }
 
 .card-row {
+	@include box-shadow($card-box-shadow);
 	@extend %equal-height-columns;
 
 	height: 100%;
+	overflow: hidden;
+
+	&.card-row-padded .card-col-gutters {
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.card-col-gutters {
+		padding: 0 2%;
+
+		.divider {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
 
 	[class*="card-col"] {
 		@extend %equal-height-column-cell;
@@ -114,37 +115,29 @@
 			width: 101%;
 		}
 	}
-
-	.card-col-gutters {
-		padding: 0 2%;
-
-		.divider {
-			margin-left: -10px;
-			margin-right: -10px;
-		}
-	}
-
-	.card-col-gutter-left {
-		padding-left: 2%;
-	}
-
-	.card-col-gutter-right {
-		padding-left: 2%;
-	}
 }
 
-@media (max-width: $screen-sm-min) {
-	.card-row {
-		.card-col-gutters {
-			padding: 0 10px;
-		}
+.card-row-padded {
+	padding: 10px;
+}
 
-		.card-col-gutter-left {
-			padding-left: 10px;
-		}
+.card-btn-row {
+	[class*="card-col"] {
+		a, button {
+			display: block;
+			line-height: normal;
+			padding-bottom: 20px;
+			padding-top: 20px;
+			text-align: center;
+			width: 100%;
 
-		.card-col-gutter-right {
-			padding-left: 10px;
+			&:focus, &:hover {
+				text-decoration: none;
+			}
+
+			[class^="icon-"] {
+				display: block;
+			}
 		}
 	}
 }
