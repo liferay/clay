@@ -6608,12 +6608,11 @@ you can use the generic selector below, but it's slower:
     box-shadow: none;
     width: 100.1%; }
 
-.card-btn-group {
-  margin: 10px 0; }
-  .card-btn-group .divider {
-    margin-left: -10px;
-    margin-right: -10px; }
-
+.card-header:before, .card-header:after, .card-footer:before, .card-footer:after, .card-section:before, .card-section:after {
+  content: " ";
+  display: table; }
+.card-header:after, .card-footer:after, .card-section:after {
+  clear: both; }
 .card-header .divider, .card-footer .divider, .card-section .divider {
   margin-left: -10px;
   margin-right: -10px; }
@@ -6629,18 +6628,6 @@ you can use the generic selector below, but it's slower:
 
 .card-horizontal {
   position: relative; }
-
-.card-row {
-  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
-  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
-  overflow: hidden; }
-  .card-row.card-row-padded .card-col-gutters:first-child {
-    padding-left: 0; }
-  .card-row.card-row-padded .card-col-gutters:last-child {
-    padding-right: 0; }
-
-.card-row-padded {
-  padding: 10px; }
 
 .card-col-1 {
   width: 8.33333%; }
@@ -6679,7 +6666,19 @@ you can use the generic selector below, but it's slower:
   width: 100%; }
 
 .card-row {
-  height: 100%; }
+  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
+  height: 100%;
+  overflow: hidden; }
+  .card-row.card-row-padded .card-col-gutters:first-child {
+    padding-left: 0; }
+  .card-row.card-row-padded .card-col-gutters:last-child {
+    padding-right: 0; }
+  .card-row .card-col-gutters {
+    padding: 0 2%; }
+    .card-row .card-col-gutters .divider {
+      margin-left: -10px;
+      margin-right: -10px; }
   .card-row [class*="card-col"] {
     overflow: hidden;
     position: relative;
@@ -6690,23 +6689,21 @@ you can use the generic selector below, but it's slower:
     .card-row [class*="card-col"] .img-responsive {
       max-width: none;
       width: 101%; }
-  .card-row .card-col-gutters {
-    padding: 0 2%; }
-    .card-row .card-col-gutters .divider {
-      margin-left: -10px;
-      margin-right: -10px; }
-  .card-row .card-col-gutter-left {
-    padding-left: 2%; }
-  .card-row .card-col-gutter-right {
-    padding-left: 2%; }
 
-@media (max-width: 768px) {
-  .card-row .card-col-gutters {
-    padding: 0 10px; }
-  .card-row .card-col-gutter-left {
-    padding-left: 10px; }
-  .card-row .card-col-gutter-right {
-    padding-left: 10px; } }
+.card-row-padded {
+  padding: 10px; }
+
+.card-btn-row [class*="card-col"] a, .card-btn-row [class*="card-col"] button {
+  display: block;
+  line-height: normal;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  width: 100%; }
+  .card-btn-row [class*="card-col"] a:focus, .card-btn-row [class*="card-col"] a:hover, .card-btn-row [class*="card-col"] button:focus, .card-btn-row [class*="card-col"] button:hover {
+    text-decoration: none; }
+  .card-btn-row [class*="card-col"] a [class^="icon-"], .card-btn-row [class*="card-col"] button [class^="icon-"] {
+    display: block; }
 
 .dropdown-menu .inline-scroller > .disabled > a, .dropdown-menu .link-list > .disabled > a, .dropdown-menu.dropdown-menu-inverse > .disabled > a, .navbar-inverse .dropdown-menu > .disabled > a, .dropdown-menu.dropdown-menu-inverse .inline-scroller > .disabled > a, .dropdown-menu.dropdown-menu-inverse .link-list > .disabled > a, .navbar-inverse .dropdown-menu .inline-scroller > .disabled > a, .navbar-inverse .dropdown-menu .link-list > .disabled > a, .dropdown-menu .inline-scroller > .disabled > a:hover, .dropdown-menu .link-list > .disabled > a:hover, .dropdown-menu.dropdown-menu-inverse > .disabled > a:hover, .navbar-inverse .dropdown-menu > .disabled > a:hover, .dropdown-menu.dropdown-menu-inverse .inline-scroller > .disabled > a:hover, .dropdown-menu.dropdown-menu-inverse .link-list > .disabled > a:hover, .navbar-inverse .dropdown-menu .inline-scroller > .disabled > a:hover, .navbar-inverse .dropdown-menu .link-list > .disabled > a:hover, .dropdown-menu .inline-scroller > .disabled > a:focus, .dropdown-menu .link-list > .disabled > a:focus, .dropdown-menu.dropdown-menu-inverse > .disabled > a:focus, .navbar-inverse .dropdown-menu > .disabled > a:focus, .dropdown-menu.dropdown-menu-inverse .inline-scroller > .disabled > a:focus, .dropdown-menu.dropdown-menu-inverse .link-list > .disabled > a:focus, .navbar-inverse .dropdown-menu .inline-scroller > .disabled > a:focus, .navbar-inverse .dropdown-menu .link-list > .disabled > a:focus {
   background-color: transparent;
@@ -6978,6 +6975,48 @@ figcaption, .figcaption {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
+
+.figcaption-xl {
+  font-size: 1.5em; }
+
+.figcaption-lg {
+  font-size: 1.25em; }
+
+.figcaption-sm {
+  font-size: 0.85em; }
+
+.figcaption-xs {
+  font-size: 0.7em; }
+
+.figcaption-danger {
+  background-color: #E9295A;
+  background-color: rgba(233, 41, 90, 0.7);
+  color: #FFF; }
+
+.figcaption-default {
+  background-color: #868896;
+  background-color: rgba(134, 136, 150, 0.7);
+  color: #FFF; }
+
+.figcaption-info {
+  background-color: #1e5ec8;
+  background-color: rgba(30, 94, 200, 0.7);
+  color: #FFF; }
+
+.figcaption-primary {
+  background-color: #32a8e6;
+  background-color: rgba(50, 168, 230, 0.7);
+  color: #FFF; }
+
+.figcaption-success {
+  background-color: #42bfad;
+  background-color: rgba(66, 191, 173, 0.7);
+  color: #FFF; }
+
+.figcaption-warning {
+  background-color: #FFB103;
+  background-color: rgba(255, 177, 3, 0.7);
+  color: #FFF; }
 
 label {
   color: #2B4259;
@@ -8611,6 +8650,15 @@ input.switch:checked ~ label .on {
       left: auto;
       right: -10px; } }
 
+.monospace {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+.sans-serif {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.serif {
+  font-family: Georgia, "Times New Roman", Times, serif; }
+
 .text-default {
   color: #868896; }
 
@@ -8622,6 +8670,12 @@ a.text-default:hover {
 
 a.text-primary:hover {
   color: #1990cc; }
+
+.text-regular {
+  color: #2B4259; }
+
+a.text-regular:hover {
+  color: #1a2837; }
 
 .bg-primary {
   color: #2B4259; }
@@ -8637,6 +8691,16 @@ a.bg-default:hover {
 
 a.bg-primary:hover {
   background-color: #bae3f7; }
+
+.link-group {
+  margin: 10px 0; }
+  .link-group a {
+    line-height: 2em;
+    padding: 0.25em; }
+    .link-group a:first-child {
+      margin-left: 0; }
+    .link-group a.btn {
+      line-height: normal; }
 
 .blockquote-xs {
   border-left: 1px solid #eeeeee;

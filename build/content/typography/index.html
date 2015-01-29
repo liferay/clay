@@ -196,15 +196,31 @@ collapse
 
 		
 <div id="typography">
-	<div class="row">
+	<div class="row row-spacing">
 		<div class="col-md-12">
-			<h3>Font</h3>
+			<h3>Sans-serif</h3>
 
 			<p style="font-size:32px;font-weight:900;">Helvetica Neue bold / HELVETICA NEUE BOLD</p>
 
 			<p style="font-size:20px;font-style:italic;font-weight:normal;">Helvetica Neue normal italic / HELVETICA NEUE NORMAL ITALIC</p>
 
 			<p style="font-size:20px;font-weight:normal;">Helvetica Neue Normal / HELVETICA NEUE NORMAL</p>
+
+			<h3>Serif</h3>
+
+			<p class="serif" style="font-size:32px;font-weight:900;">Georgia bold / GEORGIA BOLD</p>
+
+			<p class="serif" style="font-size:20px;font-style:italic;font-weight:normal;">Georgia normal italic / GEORGIA NORMAL ITALIC</p>
+
+			<p class="serif" style="font-size:20px;font-weight:normal;">Georgia Normal / GEORGIA NORMAL</p>
+
+			<h3>Monospace</h3>
+
+			<p class="monospace" style="font-size:32px;font-weight:900;">Menlo bold / MENLO BOLD</p>
+
+			<p class="monospace" style="font-size:20px;font-style:italic;font-weight:normal;">Menlo normal italic / MENLO NORMAL ITALIC</p>
+
+			<p class="monospace" style="font-size:20px;font-weight:normal;">Menlo Normal / MENLO NORMAL</p>
 		</div>
 	</div>
 
@@ -231,39 +247,68 @@ collapse
 
 	<div class="row">
 		<div class="col-md-12">
-			<h3>Inline Text Elements</h3>
+			<h3>Lead body copy</h3>
 			<p class="lead"> Lead Body Text: Milk filter lungo as galão roast that crema blue mountain shop turkish. </p>
-			<p>Regular Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</p>
+
+			<pre><code class="html">&lt;p class=&quot;lead&quot;&gt;...&lt;/p&gt;</code></pre>
+
+			<h3>Inline Text Elements</h3>
+
+			<p><a href="#1">Anchor Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</a></p>
+			<p><span>Regular Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</span></p>
 			<p><mark>Marked Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</mark></p>
 			<p><del>Deleted Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</del></p>
 			<p><s>Strikethrough Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</s></p>
 			<p><ins>Inserted Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</ins></p>
 			<p><u>Underlined Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</u></p>
-			<pre><code class="html">&lt;p class=&quot;lead&quot;&gt;...&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
-&lt;mark&gt;...&lt;/mark&gt;
+
+			<pre><code class="html">&lt;a&gt;...&lt;/a&gt;
+&lt;span&gt;...&lt;/span&gt;
+&lt;mark&gt;...&lt;/mark&gt; or &lt;span class=&quot;mark&quot;&gt;...&lt;/span&gt;
 &lt;del&gt;...&lt;/del&gt;
 &lt;s&gt;...&lt;/s&gt;
 &lt;ins&gt;...&lt;/ins&gt;
 &lt;u&gt;...&lt;/u&gt;</code></pre>
 
-			<br>
 			<p><small>Small Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</small>
 			<p><strong>Bold Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</strong></p>
 			<p><em>Italics: Milk filter lungo as galão roast that crema blue mountain shop turkish.</em></p>
+
 			<pre><code class="html">&lt;small&gt;...&lt;/small&gt;
 &lt;strong&gt;...&lt;/strong&gt;
 &lt;em&gt;...&lt;/em&gt;</code></pre>
 
-			<br>
 			<p>Abbreviation: <abbr title="attribute">attr</abbr></p>
 			<p>LOWERCASED TEXT: <span class="text-lowercase">LOWERCASED TEXT</span></p>
 			<p>uppercased text: <span class="text-uppercase">uppercased text</span></p>
 			<p>capitalized text: <span class="text-capitalize">capitalized text</span></p>
+
 			<pre><code class="html">&lt;abbr&gt;...&lt;/abbr&gt;
 &lt;span class=&quot;text-lowercase&quot;&gt;...&lt;/span&gt;
 &lt;span class=&quot;text-uppercase&quot;&gt;...&lt;/span&gt;
 &lt;span class=&quot;text-capitalize&quot;&gt;...&lt;/span&gt;</code></pre>
+
+			<h3>Link Group</h3>
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Wrap <code>.link-group</code> around a group of anchor tags to increase the click area and spacing.</p>
+			</blockquote>
+			<div class="link-group">
+				<a href="#1">Link #1</a>
+				<a href="#1">Link #2</a>
+				<a href="#1">Link #3</a>
+				<a href="#1">Link #4</a>
+				<a href="#1">Link #5</a>
+				<a href="#1">Link #6</a>
+			</div>
+
+			<pre><code class="html">&lt;div class=&quot;link-group&quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;Link #1&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Link #2&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Link #3&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Link #4&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Link #5&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;Link #6&lt;/a&gt;
+&lt;/div&gt;</code></pre>
 
 		</div>
 	</div>
@@ -286,7 +331,7 @@ collapse
 
 			<p class="text-danger">Danger Text: Milk filter lungo as galão roast that crema blue mountain shop turkish.</p>
 
-			<pre><code class="html">&lt;p&gt;...&lt;/p&gt;
+			<pre><code class="html">&lt;p&gt;...&lt;/p&gt; or &lt;p class=&quot;text-regular&quot;&gt;...&lt;/p&gt;
 &lt;p class=&quot;text-muted&quot;&gt;...&lt;/p&gt;
 &lt;p class=&quot;text-primary&quot;&gt;...&lt;/p&gt;
 &lt;p class=&quot;text-success&quot;&gt;...&lt;/p&gt;
