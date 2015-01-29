@@ -44,6 +44,8 @@
 }
 
 .card-header, .card-footer, .card-section {
+	@include clearfix();
+
 	.divider {
 		margin-left: -10px;
 		margin-right: -10px;
