@@ -216,5 +216,5 @@
 
 %equal-height-columns {
 	display: table;
-	width: 100%;
+	width: 100.4%; // Webkit rounding issues
 }
