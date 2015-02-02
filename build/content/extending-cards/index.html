@@ -52,6 +52,8 @@ collapse
 </li>
 <li class=""><a href="../../content/dropdowns">Dropdowns</a>
 </li>
+<li class=""><a href="../../content/figures">Figures</a>
+</li>
 <li class=""><a href="../../content/header">Header</a>
 </li>
 <li class=""><a href="../../content/modals">Modals</a>
@@ -410,40 +412,70 @@ collapse
 	</div>
 </div>
 
-<div class="extend-cards-page row row-spacing">
-	<div class="col-md-4">
-		<div class="card card-rounded">
-			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_typewriter.jpg">
-
-			<div class="card-section">
-				<div>
-					Typewriter website <a class="text-default" href="#1"><small>more</small></a>
+<div class="row row-spacing">
+	<div class="col-md-5">
+		<div class="card-horizontal">
+			<div class="card-row">
+				<div class="card-col-5">
+					<img alt="thumbnail" class="img-absolute" src="../../images/thumbnail_hot_air_ballon.jpg">
 				</div>
-				<div>
-					<a class="text-default" href="#"><span class="icon-pushpin"></span> 41</a>
-					<a class="text-default" href="#"><span class="icon-heart"></span> 3</a>
-				</div>
-			</div>
 
-			<div class="card-footer">
-				Typewriter fanatics on the internet
-				<a class="text-default" href="#1">typewriterfans333.com</a>
+				<div class="card-col-7 card-col-gutters">
+					<h4>Travel to Space by Balloon</h4>
+
+					<p>Space Program LLC is offering balloon rides to space!</p>
+
+					<div class="link-group">
+						<hr class="divider" />
+						<button type="button" class="btn btn-primary btn-xs">Sign Up</button>
+						<button type="button" class="btn btn-link btn-xs">No Thanks</button>
+					</div>
+				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="col-md-7">
+		<h3 class="usage-heading">Use img-absolute to make an image fill card-col</h3>
+
+		<p>Make an image fill the width and height of a card column (image width and height must be larger than the column) by using <code>.img-absolute</code> and manually setting its top, right, bottom, or left position.</p>
+	</div>
+
+	<div class="col-md-12">
+
+<pre><code class="html">&lt;div class=&quot;card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row&quot;&gt;
+        &lt;div class=&quot;card-col-5&quot;&gt;
+            &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-col-7 card-col-gutters&quot;&gt;
+            &lt;h4&gt;Travel to Space by Balloon&lt;/h4&gt;
+            &lt;p&gt;Space Program LLC is offering balloon rides to space!&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;link-group&quot;&gt;
+            &lt;hr class=&quot;divider&quot; /&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-xs&quot;&gt;Sign Up&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-xs&quot;&gt;No Thanks&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
 	</div>
 </div>
 
 <div class="extend-cards-page row row-spacing">
+	<div class="col-md-12">
+		<h3>Some alternate styles</h3>
+	</div>
+
 	<div class="col-md-4">
-		<div class="card">
+		<div class="card" style="height:150px;">
 			<div class="card-section text-center">
 				<p style="margin-top: 20px;font-size: 21px;font-weight: 200;margin-bottom: 0;">New Users</p>
 				<p>14,543</p>
 			</div>
 
-			<div style="height: 50px;overflow:hidden;">
-				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_graph1.png">
-			</div>
+			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_graph1.png">
 		</div>
 
 		<div class="card">
@@ -477,7 +509,7 @@ collapse
 	</div>
 
 	<div class="col-md-8 control-panel">
-		<div class="card">
+		<div class="card" style="max-width:none;">
 			<div class="card-row">
 				<div class="card-column card-col-11">Browser</div>
 				<div class="card-column card-col-1">Stats</div>
@@ -509,205 +541,13 @@ collapse
 			</div>
 		</div>
 
-		<div class="card">
+		<div class="card" style="max-width:none;">
 			<div class="card-header">
 				<div class="card-column">Browser Stats</div>
 			</div>
 
 			<div>
 				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_graph2.png">
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row uxgl-card-section">
-	<div class="col-md-4">
-		<div class="card card-rounded">
-			<div class="card-section">
-				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_desk.jpg" style="margin-top: 10px;">
-
-				<h4>Medium roast</h4>
-
-				<p>Latte plunger pot seasonal</p>
-			</div>
-
-			<div class="card-footer">
-				<div class="nameplate">
-					<div class="nameplate-icon">
-						<div class="user-icon">
-							<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_underwater.jpg">
-						</div>
-					</div>
-
-					<div class="nameplate-content">
-						<h4>Joe Bloggs <small>Subheading</small></h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card">
-			<div class="card-header">
-				<div class="nameplate">
-					<div class="nameplate-icon">
-						<div class="user-icon">
-							<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
-						</div>
-					</div>
-
-					<div class="nameplate-content">
-						<h4>Space Program <small>Category</small></h4>
-					</div>
-				</div>
-			</div>
-
-			<div class="card-section">
-				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
-
-				<div class="divider"></div>
-				<a href="#" class="btn btn-block btn-default" role="button" style="margin: 10px 0;">Subscribe</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card">
-
-			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_typewriter.jpg">
-
-			<div class="card-section">
-				<h4>Mug medium sit</h4>
-
-				<p>Latte plunger pot seasonal</p>
-
-				<div class="nameplate">
-					<div class="nameplate-icon">
-						<div class="user-icon">
-							<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
-						</div>
-					</div>
-
-					<div class="nameplate-content">
-						<h4>Joe Bloggs <small>Subheading</small></h4>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-6">
-		<div class="card-horizontal card-rounded">
-			<div class="card-row">
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
-				</div>
-
-				<div class="card-col-7 card-col-gutters">
-					<h4>So ristretto cappuccino</h4>
-
-					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-7 card-col-gutters">
-					<h4>Decaffeinated galão cup aroma</h4>
-
-					<p>Variety, latte, steamed aromatic lungo half and half chicory arabica beans redeye seasonal americano. </p>
-				</div>
-
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_desk.jpg">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_typewriter.jpg">
-				</div>
-
-				<div class="card-col-7 card-col-gutters">
-					<h4>Extraction grounds</h4>
-
-					<p>Bar grinder, iced, lungo crema cultivar, extraction, id spoon whipped half and half mocha.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-7 card-col-gutters">
-					<h4>White at redeye</h4>
-
-					<p>Chicory, single origin mug, fair trade froth redeye kopi-luwak a medium grinder cup robust.</p>
-				</div>
-
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_underwater.jpg">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-absolute" src="../../images/thumbnail_hot_air_ballon.jpg">
-				</div>
-
-				<div class="card-col-7 card-col-gutters">
-					<h4>Cream body as, robusta</h4>
-
-					<p>Lungo white, latte viennese, doppio that wings viennese robusta froth. Bar cup a filter dripper at sweet irish medium.</p>
-
-					<div class="card-btn-group">
-						<hr class="divider" />
-						<button type="button" class="btn btn-primary btn-xs">Send</button>
-						<button type="button" class="btn btn-link btn-xs">Cancel</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-7 card-col-gutters">
-					<h4>Aged white, americano</h4>
-
-					<p>Bar cup a filter dripper at sweet irish medium. Spoon latte siphon at white flavour medium coffee frappuccino milk.</p>
-
-					<div class="card-btn-group">
-						<hr class="divider" />
-						<button type="button" class="btn btn-primary btn-xs">Send</button>
-						<button type="button" class="btn btn-link btn-xs">Cancel</button>
-					</div>
-				</div>
-
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-absolute" src="../../images/thumbnail_coyote.jpg">
-				</div>
 			</div>
 		</div>
 	</div>
