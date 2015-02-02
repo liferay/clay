@@ -4,7 +4,7 @@
 
 .card-row, .nameplate {
   display: table;
-  width: 100%; }
+  width: 100.4%; }
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6604,9 +6604,9 @@ you can use the generic selector below, but it's slower:
   box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
   overflow: hidden; }
   .card .card-row {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: 100.1%; }
+    width: 100.4%; }
+  .card .figure {
+    overflow: visible; }
 
 .card-header:before, .card-header:after, .card-footer:before, .card-footer:after, .card-section:before, .card-section:after {
   content: " ";
@@ -6627,7 +6627,26 @@ you can use the generic selector below, but it's slower:
   padding: 1px 10px; }
 
 .card-horizontal {
+  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
   position: relative; }
+  .card-horizontal.card-circle [class*="card-col"]:first-child {
+    -webkit-border-radius: 20px 0 0 20px;
+    -moz-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px; }
+  .card-horizontal.card-circle [class*="card-col"]:last-child {
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0; }
+  .card-horizontal.card-rounded [class*="card-col"]:first-child {
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px; }
+  .card-horizontal.card-rounded [class*="card-col"]:last-child {
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 10px 0; }
 
 .card-col-1 {
   width: 8.33333%; }
@@ -6666,8 +6685,6 @@ you can use the generic selector below, but it's slower:
   width: 100%; }
 
 .card-row {
-  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
-  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
   height: 100%;
   overflow: hidden; }
   .card-row.card-row-padded .card-col-gutters:first-child {
@@ -6675,10 +6692,10 @@ you can use the generic selector below, but it's slower:
   .card-row.card-row-padded .card-col-gutters:last-child {
     padding-right: 0; }
   .card-row .card-col-gutters {
-    padding: 0 2%; }
+    padding: 0 3%; }
     .card-row .card-col-gutters .divider {
-      margin-left: -10px;
-      margin-right: -10px; }
+      margin-left: -15px;
+      margin-right: -15px; }
   .card-row [class*="card-col"] {
     overflow: hidden;
     position: relative;
@@ -6693,17 +6710,19 @@ you can use the generic selector below, but it's slower:
 .card-row-padded {
   padding: 10px; }
 
-.card-btn-row [class*="card-col"] a, .card-btn-row [class*="card-col"] button {
-  display: block;
-  line-height: normal;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  text-align: center;
-  width: 100%; }
-  .card-btn-row [class*="card-col"] a:focus, .card-btn-row [class*="card-col"] a:hover, .card-btn-row [class*="card-col"] button:focus, .card-btn-row [class*="card-col"] button:hover {
-    text-decoration: none; }
-  .card-btn-row [class*="card-col"] a [class^="icon-"], .card-btn-row [class*="card-col"] button [class^="icon-"] {
-    display: block; }
+.card-btn-row [class*="card-col"] {
+  overflow: visible; }
+  .card-btn-row [class*="card-col"] a, .card-btn-row [class*="card-col"] button {
+    display: block;
+    line-height: normal;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%; }
+    .card-btn-row [class*="card-col"] a:focus, .card-btn-row [class*="card-col"] a:hover, .card-btn-row [class*="card-col"] button:focus, .card-btn-row [class*="card-col"] button:hover {
+      text-decoration: none; }
+    .card-btn-row [class*="card-col"] a [class^="icon-"], .card-btn-row [class*="card-col"] button [class^="icon-"] {
+      display: block; }
 
 .dropdown-menu .inline-scroller > .disabled > a, .dropdown-menu .link-list > .disabled > a, .dropdown-menu.dropdown-menu-inverse > .disabled > a, .navbar-inverse .dropdown-menu > .disabled > a, .dropdown-menu.dropdown-menu-inverse .inline-scroller > .disabled > a, .dropdown-menu.dropdown-menu-inverse .link-list > .disabled > a, .navbar-inverse .dropdown-menu .inline-scroller > .disabled > a, .navbar-inverse .dropdown-menu .link-list > .disabled > a, .dropdown-menu .inline-scroller > .disabled > a:hover, .dropdown-menu .link-list > .disabled > a:hover, .dropdown-menu.dropdown-menu-inverse > .disabled > a:hover, .navbar-inverse .dropdown-menu > .disabled > a:hover, .dropdown-menu.dropdown-menu-inverse .inline-scroller > .disabled > a:hover, .dropdown-menu.dropdown-menu-inverse .link-list > .disabled > a:hover, .navbar-inverse .dropdown-menu .inline-scroller > .disabled > a:hover, .navbar-inverse .dropdown-menu .link-list > .disabled > a:hover, .dropdown-menu .inline-scroller > .disabled > a:focus, .dropdown-menu .link-list > .disabled > a:focus, .dropdown-menu.dropdown-menu-inverse > .disabled > a:focus, .navbar-inverse .dropdown-menu > .disabled > a:focus, .dropdown-menu.dropdown-menu-inverse .inline-scroller > .disabled > a:focus, .dropdown-menu.dropdown-menu-inverse .link-list > .disabled > a:focus, .navbar-inverse .dropdown-menu .inline-scroller > .disabled > a:focus, .navbar-inverse .dropdown-menu .link-list > .disabled > a:focus {
   background-color: transparent;

@@ -1,0 +1,582 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Figures</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="http://cdn.alloyui.com/2.5.0/aui/aui-min.js"></script>
+
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">UX Guidelines</a></h4>
+			</div>
+		</header>
+
+		<section class="closed container sidenav-container">
+			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
+	<div class="side-navigation-container sidenav-menu">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a href="../../">Home</a>
+</li>
+<li class=""><a href="../../content/color-scheme">Color Scheme</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse in
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
+</li>
+<li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
+</li>
+<li class=""><a href="../../content/cards">Cards</a>
+</li>
+<li class=""><a href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class="active"><a href="../../content/figures">Figures</a>
+</li>
+<li class=""><a href="../../content/header">Header</a>
+</li>
+<li class=""><a href="../../content/modals">Modals</a>
+</li>
+<li class=""><a href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a href="../../content/nav">Nav</a>
+</li>
+<li class=""><a href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
+</li>
+<li class=""><a href="../../content/panels">Panels</a>
+</li>
+<li class=""><a href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/typography">Typography</a>
+</li>
+<li class=""><a href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a href="../../content/form-examples">Form Example</a>
+</li>
+<li class=""><a href="../../content/grid">Grids</a>
+</li>
+<li class=""><a href="../../content/icons">Icons</a>
+</li>
+<li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a href="../../content/tables">Tables</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Example Pages</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
+</li>
+<li class=""><a href="../../content/chat">Chat</a>
+</li>
+<li class=""><a href="../../content/profile-page">Profile Page</a>
+</li>
+<li class=""><a href="../../content/timelines">Timeline</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Experimental</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/sliders">Sliders</a>
+</li>
+<li class=""><a href="../../content/switches">Switches</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Extending Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/extending-cards">Extending Cards</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Image Gallery</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/image-gallery-pictures">Gallery</a>
+</li>
+<li class=""><a href="../../content/image-gallery-albums">Image Gallery Albums</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Mail Template</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/mail-template-inbox">Inbox</a>
+</li>
+<li class=""><a href="../../content/mail-template-sent">Sent</a>
+</li>
+<li class=""><a href="../../content/mail-template-compose">Compose</a>
+</li>
+<li class=""><a href="../../content/mail-template-drafts">Drafts</a>
+</li>
+<li class=""><a href="../../content/mail-template-spam">Spam</a>
+</li>
+<li class=""><a href="../../content/mail-template-trash">Trash</a>
+</li>
+<li class=""><a href="../../content/mail-template-view-message">View Message</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/todo">TODO</a>
+</li>
+</ul>
+	</div>
+</nav>
+
+	<div class="sidenav-content" id="mainContent">
+		<h1 class="page-title">
+			Figures
+
+			
+		</h1>
+
+		
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Figure (Image Captions)</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add captions to your images with <code>.figure</code> and <code>.figcaption</code> or use HTML5 elements <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4">
+		<h6>figcaption</h6>
+		<div class="figure">
+			<img alt="responsive image with rouded edges" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>figcaption-bottom</h6>
+		<div class="figure">
+			<img alt="responsive image with rouded edges" class="img-responsive" src="../../images/thumbnail_dock.jpg">
+
+			<div class="figcaption-bottom">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>figcaption-top</h6>
+		<div class="figure">
+			<img alt="responsive image with rouded edges" class="img-responsive" src="../../images/thumbnail_desk.jpg">
+
+			<div class="figcaption-top">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4" style="clear: left;">
+		<h6>figcaption-full</h6>
+		<div class="figure">
+			<img alt="responsive image with rouded edges" class="img-responsive" src="../../images/thumbnail_typewriter.jpg">
+
+			<div class="figcaption-full">
+				<div style="display:table;height:100%;">
+					<div style="display:table-cell;vertical-align:middle;">
+						Carajillo strong, grounds redeye half and half so percolator.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12 col-xs-12">
+
+		<pre><code class="html">&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-top&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-full&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Figcaption Helpers</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Change the background color of <code>.figcaption</code>.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-default</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-default">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-primary</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-primary">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-info</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-info">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-success</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-success">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-warning</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-warning">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-danger</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-danger">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<pre><code class="html">&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-default&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-primary&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-info&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-success&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-warning&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-danger&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+	</div>
+
+	<div class="col-md-12">
+		<h3>Figcaption Sizes</h3>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-xs</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-primary figcaption-xs">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-sm</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-primary figcaption-sm">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-lg</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-primary figcaption-lg">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<h6>figcaption-xl</h6>
+		<div class="figure">
+			<img alt="coffee mug" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption-bottom figcaption-primary figcaption-xl">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<pre><code class="html">&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-primary figcaption-xs&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-primary figcaption-xm&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-primary figcaption-lg&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;figure&quot;&gt;
+    &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
+    &lt;div class=&quot;figcaption-bottom figcaption-primary figcaption-xl&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Figure Helper Classes</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.figure-circle</code>, <code>.figure-rounded</code>, or <code>.figure-square</code> on <code>.figure</code> to quickly style the borders.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4">
+		<h6>figure-square</h6>
+		<div class="figure figure-square">
+			<img alt="Coffee Cup" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+
+			<div class="figcaption">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>figure-circle</h6>
+		<div class="figure figure-circle">
+			<img alt="Dock" class="img-responsive" src="../../images/thumbnail_dock.jpg">
+
+			<div class="figcaption-top">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<h6>figure-rounded</h6>
+		<div class="figure figure-rounded">
+			<img alt="Desk" class="img-responsive" src="../../images/thumbnail_desk.jpg">
+
+			<div class="figcaption-bottom">
+				Carajillo strong, grounds redeye half and half so percolator.
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code class="html">&lt;div class=&quot;figure figure-square&quot;&gt;...&lt;/div&gt;
+
+&lt;div class=&quot;figure figure-circle&quot;&gt;...&lt;/div&gt;
+
+&lt;div class=&quot;figure-rounded&quot;&gt;...&lt;/div&gt;</code></pre>
+
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+
+	<script>
+		YUI().use(
+			'node', 'transition',
+			function(A) {
+				A.one('#headerTopBar .navbar-toggle').on(
+					'click',
+					function(event) {
+						var ct = event.currentTarget;
+						var sidenavContainer = ct.ancestor('#headerTopBar').next('.sidenav-container');
+
+						event.preventDefault();
+
+						sidenavContainer.on(
+							'transitionend',
+							function(event) {
+								sidenavContainer.removeClass('sidenav-transition');
+
+								this.detach('transitionend');
+							}
+						);
+
+						sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
+						ct.ancestor('#wrapper').toggleClass('main-nav-open');
+					}
+				);
+
+				A.all('.side-navigation').each(
+					function(item, index) {
+						item.delegate(
+							'click',
+							function(event) {
+								event.preventDefault();
+								event.currentTarget.next('.collapse').toggleClass('in');
+							},
+							'li.side-navigation-dropdown-container > a'
+						);
+					}
+				);
+			}
+		);
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>
