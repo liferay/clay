@@ -1,13 +1,7 @@
-@mixin color-nameplate-list-item($color) {
-	border-left-color: $color;
-
-	.label {
-		color: $color;
-	}
-
-	.user-icon {
-		background-color: $color;
-	}
+@mixin size-user-icon($size) {
+	height: $size;
+	line-height: $size;
+	width: $size;
 }
 
 .nameplate {
@@ -16,21 +10,18 @@
 	margin: 10px 0;
 }
 
-.nameplate-checkbox {
+.nameplate-checkbox, .nameplate-icon, .nameplate-field {
 	@extend %equal-height-column-cell;
 
-	width: 20px;
+	padding: 0 0.3em;
+	width: 1%;
 }
 
 .nameplate-content {
 	@extend %equal-height-column-cell;
 
-	padding-right: 15px;
+	padding: 0 0.3em;
 	word-break: break-word;
-
-	&:last-child, &.last {
-		padding-right: 0;
-	}
 
 	h1, h2, h3 {
 		margin-top: 0;
@@ -46,62 +37,74 @@
 	}
 }
 
-.nameplate-icon {
-	@extend %equal-height-column-cell;
+// Nameplate Label
 
-	width: 70px;
+.nameplate-label {
+	@extend .nameplate;
+	@include border-radius(20px);
+
+	background-color: #EEE;
+	font-size: 11px;
+	margin: 0 5px 2px 0;
+	padding: 3px;
+	width: auto;
+
+	a[class*="icon-"] {
+		color: #999;
+		margin-left: 5px;
+		text-decoration: none;
+
+		&:focus, &:hover {
+			color: #555;
+		}
+	}
+
+	.nameplate-content, .nameplate-field, .nameplate-icon {
+		vertical-align: middle;
+		width: auto;
+	}
+
+	.nameplate-content {
+		padding: 3px 5px 2px;
+	}
 }
+
+// Nameplate List
 
 .nameplate-list {
 	list-style: none;
 	margin: 0 0 10px 0;
 	padding: 0;
 
-	> li {
-		border-left: 5px solid transparent;
+	> li, > .nameplate {
+		@extend .nameplate;
+
+		border-left-width: 0;
 		margin: 0;
+		padding: 0.8em;
 
-		.label {
-			padding: 0;
-		}
-
-		&.nameplate-list-danger {
-			@include color-nameplate-list-item($user-icon-danger-bg);
-		}
-
-		&.nameplate-list-default {
-			@include color-nameplate-list-item($user-icon-default-bg);
-		}
-
-		&.nameplate-list-info {
-			@include color-nameplate-list-item($user-icon-info-bg);
-		}
-
-		&.nameplate-list-primary {
-			@include color-nameplate-list-item($user-icon-primary-bg);
-		}
-
-		&.nameplate-list-success {
-			@include color-nameplate-list-item($user-icon-success-bg);
-		}
-
-		&.nameplate-list-warning {
-			@include color-nameplate-list-item($user-icon-warning-bg);
-		}
-
-		&:last-child, &.last {
-			.nameplate {
-				border-bottom: 1px solid $nameplate-list-border-color;
-			}
-		}
-
-		.nameplate {
-			border-top: 1px solid $nameplate-list-border-color;
-			margin: 0;
-			padding: 15px;
+		&:hover {
+			background-color: #DDD;
 		}
 	}
+
+	.nameplate-content, .nameplate-icon, .nameplate-field {
+		padding: 0 0.3em;
+		vertical-align: middle;
+	}
+
+	.nameplate-field .icon-remove {
+		background-color: #DDD;
+		text-align: center;
+		border-radius: 50%;
+		display: block;
+		line-height: 19px;
+		padding: 0 3px 0 4px;
+		text-decoration: none;
+	}
 }
+
+// User Icons
 
 .user-icon {
 	@include border-radius($user-icon-border-radius);
@@ -124,6 +127,28 @@
 	&.user-icon-square, .user-icon-square & {
 		@include border-radius(0);
 	}
+}
+
+.user-icon-xl {
+	@include size-user-icon(120px);
+
+	font-size: 50px;
+}
+
+.user-icon-lg {
+	@include size-user-icon(80px);
+
+	font-size: 31px
+}
+
+.user-icon-sm {
+	@include size-user-icon(40px);
+}
+
+.user-icon-xs {
+	@include size-user-icon(20px);
+
+	font-size: 10px;
 }
 
 .user-icon-danger {
