@@ -1,0 +1,177 @@
+---
+title: Extending Nameplates
+section: Extending Components
+---
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 class="usage-heading">Nameplate-label</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Use <code>.nameplate-label</code> to reassure your users that they are sending to or selecting the right content/user.</p>
+		</blockquote>
+
+		<div class="nameplate-label pull-left">
+			<div class="nameplate-icon">
+				<div class="user-icon user-icon-primary user-icon-xs">JB</div>
+			</div>
+
+			<div class="nameplate-content">Joe Bloggs <a class="icon-remove" href="#1"></a></div>
+		</div>
+
+		<div class="nameplate-label pull-left">
+			<div class="nameplate-icon">
+				<div class="user-icon user-icon-warning user-icon-xs">SP</div>
+			</div>
+
+			<div class="nameplate-content">Space Program <a class="icon-remove" href="#1"></a></div>
+		</div>
+
+		<form>
+			<input type="text" />
+		</form>
+
+		<pre><code class="html">```<div class="nameplate-label pull-left">
+    <div class="nameplate-icon">
+        <div class="user-icon user-icon-primary user-icon-xs">JB</div>
+    </div>
+
+    <div class="nameplate-content">Joe Bloggs <a class="icon-remove" href="#1"></a></div>
+</div>
+
+<form><input type="text" /></form>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 class="usage-heading">Nameplate-list with dropdown-menu</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Place <code>.nameplate-list</code> inside a <code>.dropdown-menu</code> to quickly style the results for your autocomplete module.</p>
+		</blockquote>
+
+		<div class="dropdown">
+			<input class="dropdown-toggle" data-toggle="dropdown" style="width:251px;" />
+			<ul class="dropdown-menu nameplate-list" style="width: 250px;">
+				<li class="nameplate">
+					<div class="nameplate-icon">
+						<div class="user-icon user-icon-default user-icon-sm">JB</div>
+					</div>
+
+					<div class="nameplate-content">
+						<div>Joe Bloggs</div>
+						<div>joe.bloggs@liferay.com</div>
+					</div>
+				</li>
+
+				<li class="nameplate">
+					<div class="nameplate-icon">
+						<div class="user-icon user-icon-default user-icon-sm">SP</div>
+					</div>
+
+					<div class="nameplate-content">
+						<div>Space Program</div>
+						<div>space.program@liferay.com</div>
+					</div>
+				</li>
+
+				<li class="nameplate">
+					<div class="nameplate-icon">
+						<div class="user-icon user-icon-default user-icon-sm">TT</div>
+					</div>
+
+					<div class="nameplate-content">
+						<div>Test Test</div>
+						<div>test.test@liferay.com</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<pre><code class="html">```<div class="dropdown">
+    <input class="dropdown-toggle" data-toggle="dropdown" style="width:251px;" />
+    <ul class="dropdown-menu nameplate-list" style="width: 250px;">
+        <li class="nameplate">
+            <div class="nameplate-icon">
+                <div class="user-icon user-icon-default user-icon-sm">JB</div>
+            </div>
+
+            <div class="nameplate-content">
+                <div>Joe Bloggs</div>
+                <div>joe.bloggs@liferay.com</div>
+            </div>
+        </li>
+
+        <li class="nameplate">
+            <div class="nameplate-icon">
+                <div class="user-icon user-icon-default user-icon-sm">SP</div>
+            </div>
+
+            <div class="nameplate-content">
+                <div>Space Program</div>
+                <div>space.program@liferay.com</div>
+            </div>
+        </li>
+
+        <li class="nameplate">
+            <div class="nameplate-icon">
+                <div class="user-icon user-icon-default user-icon-sm">TT</div>
+            </div>
+
+            <div class="nameplate-content">
+                <div>Test Test</div>
+                <div>test.test@liferay.com</div>
+            </div>
+        </li>
+    </ul>
+</div>```</code></pre>
+
+		<h3 class="usage-heading">Nameplate-list with card</h3>
+
+		<ul class="card nameplate-list" style="width: 250px;">
+			<li class="nameplate">
+				<div class="nameplate-icon">
+					<div class="user-icon user-icon-default user-icon-sm">JB</div>
+				</div>
+
+				<div class="nameplate-content">
+					<div>Joe Bloggs</div>
+					<div>joe.bloggs@liferay.com</div>
+				</div>
+			</li>
+
+			<li class="nameplate">
+				<div class="nameplate-icon">
+					<div class="user-icon user-icon-default user-icon-sm">SP</div>
+				</div>
+
+				<div class="nameplate-content">
+					<div>Space Program</div>
+					<div>space.program@liferay.com</div>
+				</div>
+			</li>
+
+			<li class="nameplate">
+				<div class="nameplate-icon">
+					<div class="user-icon user-icon-default user-icon-sm">TT</div>
+				</div>
+
+				<div class="nameplate-content">
+					<div>Test Test</div>
+					<div>test.test@liferay.com</div>
+				</div>
+			</li>
+		</ul>
+
+		<pre><code class="html">```<ul class="card nameplate-list" style="width: 250px;">
+    <li class="nameplate">...</li>
+
+    <li class="nameplate">...</li>
+
+    <li class="nameplate">...</li>
+</ul>```</code></pre>
+
+	</div>
+</div>
