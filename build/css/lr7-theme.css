@@ -1,8 +1,8 @@
-.card-row [class*="card-col"], .nameplate-checkbox, .nameplate-content, .nameplate-icon {
+.card-row [class*="card-col"], .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content {
   display: table-cell;
   vertical-align: top; }
 
-.card-row, .nameplate {
+.card-row, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate {
   display: table;
   width: 100.4%; }
 
@@ -6592,12 +6592,6 @@ you can use the generic selector below, but it's slower:
     border-top: 1px solid #DDD;
     margin-bottom: 10px;
     margin-top: 10px; }
-  .card .nameplate-icon, .card-horizontal .nameplate-icon {
-    width: 50px; }
-    .card .nameplate-icon .user-icon, .card-horizontal .nameplate-icon .user-icon {
-      height: 40px;
-      line-height: 40px;
-      width: 40px; }
 
 .card {
   -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
@@ -7321,6 +7315,49 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
       padding-left: 8px;
       padding-right: 8px; } }
 
+.tabular-list-group {
+  border-collapse: collapse;
+  display: table;
+  margin: 0 0 20px 0;
+  padding: 0; }
+  .tabular-list-group > li, .tabular-list-group .list-group-item {
+    border: 1px solid #DDD;
+    display: table-row;
+    padding: 0; }
+  .tabular-list-group .list-group-item-content, .tabular-list-group .list-group-item-field {
+    padding: 1em 0.3em; }
+    .tabular-list-group .list-group-item-content:first-child, .tabular-list-group .list-group-item-field:first-child {
+      padding-left: 1em; }
+    .tabular-list-group .list-group-item-content:last-child, .tabular-list-group .list-group-item-field:last-child {
+      padding-right: 1em; }
+    .tabular-list-group .list-group-item-content > a[class*="icon-"], .tabular-list-group .list-group-item-field > a[class*="icon-"] {
+      display: block;
+      padding: 0 10px; }
+      .tabular-list-group .list-group-item-content > a[class*="icon-"]:focus, .tabular-list-group .list-group-item-content > a[class*="icon-"]:hover, .tabular-list-group .list-group-item-field > a[class*="icon-"]:focus, .tabular-list-group .list-group-item-field > a[class*="icon-"]:hover {
+        text-decoration: none; }
+  .tabular-list-group .list-group-item-content h1, .tabular-list-group .list-group-item-content h2, .tabular-list-group .list-group-item-content h3, .tabular-list-group .list-group-item-content h4, .tabular-list-group .list-group-item-content h5, .tabular-list-group .list-group-item-content h6 {
+    margin: 0.5em 0; }
+    .tabular-list-group .list-group-item-content h1:first-child, .tabular-list-group .list-group-item-content h2:first-child, .tabular-list-group .list-group-item-content h3:first-child, .tabular-list-group .list-group-item-content h4:first-child, .tabular-list-group .list-group-item-content h5:first-child, .tabular-list-group .list-group-item-content h6:first-child {
+      margin-top: 0; }
+    .tabular-list-group .list-group-item-content h1:last-child, .tabular-list-group .list-group-item-content h2:last-child, .tabular-list-group .list-group-item-content h3:last-child, .tabular-list-group .list-group-item-content h4:last-child, .tabular-list-group .list-group-item-content h5:last-child, .tabular-list-group .list-group-item-content h6:last-child {
+      margin-bottom: 0; }
+  .tabular-list-group .list-group-item-field {
+    text-align: center; }
+
+.list-group-item-content, .list-group-item-field {
+  display: table-cell;
+  padding: 0 0.3em;
+  vertical-align: middle; }
+  .list-group-item-content input[type="checkbox"], .list-group-item-content input[type="radio"], .list-group-item-field input[type="checkbox"], .list-group-item-field input[type="radio"] {
+    margin: 0; }
+
+.list-group-item-field {
+  width: 1%; }
+
+@media (min-width: 992px) {
+  .tabular-list-group .list-group-item-content, .tabular-list-group .list-group-item-field {
+    padding: 1em 0.8em; } }
+
 .modal-backdrop.in {
   opacity: 0.75;
   filter: alpha(opacity=75); }
@@ -7869,17 +7906,16 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     .navbar-nav .open .dropdown-menu.dropdown-menu-inverse {
       background-color: #868896; } }
 
-.nameplate {
+.nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate {
   margin: 10px 0; }
 
-.nameplate-checkbox {
-  width: 20px; }
+.nameplate-checkbox, .nameplate-icon, .nameplate-field {
+  padding: 0 0.3em;
+  width: 1%; }
 
 .nameplate-content {
-  padding-right: 15px;
+  padding: 0 0.3em;
   word-break: break-word; }
-  .nameplate-content:last-child, .nameplate-content.last {
-    padding-right: 0; }
   .nameplate-content h1, .nameplate-content h2, .nameplate-content h3 {
     margin-top: 0; }
   .nameplate-content h4, .nameplate-content h5, .nameplate-content h6 {
@@ -7888,60 +7924,48 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     color: #868896;
     display: block; }
 
-.nameplate-icon {
-  width: 70px; }
+.nameplate-label {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #EEE;
+  font-size: 11px;
+  margin: 0 5px 2px 0;
+  padding: 3px;
+  width: auto; }
+  .nameplate-label a[class*="icon-"] {
+    color: #999;
+    margin-left: 5px;
+    text-decoration: none; }
+    .nameplate-label a[class*="icon-"]:focus, .nameplate-label a[class*="icon-"]:hover {
+      color: #555; }
+  .nameplate-label .nameplate-content, .nameplate-label .nameplate-field, .nameplate-label .nameplate-icon {
+    vertical-align: middle;
+    width: auto; }
+  .nameplate-label .nameplate-content {
+    padding: 3px 5px 2px; }
 
 .nameplate-list {
   list-style: none;
   margin: 0 0 10px 0;
   padding: 0; }
-  .nameplate-list > li {
-    border-left: 5px solid transparent;
-    margin: 0; }
-    .nameplate-list > li .label {
-      padding: 0; }
-    .nameplate-list > li.nameplate-list-danger {
-      border-left-color: #FF387A; }
-      .nameplate-list > li.nameplate-list-danger .label {
-        color: #FF387A; }
-      .nameplate-list > li.nameplate-list-danger .user-icon {
-        background-color: #FF387A; }
-    .nameplate-list > li.nameplate-list-default {
-      border-left-color: #9CA4AC; }
-      .nameplate-list > li.nameplate-list-default .label {
-        color: #9CA4AC; }
-      .nameplate-list > li.nameplate-list-default .user-icon {
-        background-color: #9CA4AC; }
-    .nameplate-list > li.nameplate-list-info {
-      border-left-color: #D437EF; }
-      .nameplate-list > li.nameplate-list-info .label {
-        color: #D437EF; }
-      .nameplate-list > li.nameplate-list-info .user-icon {
-        background-color: #D437EF; }
-    .nameplate-list > li.nameplate-list-primary {
-      border-left-color: #577ED2; }
-      .nameplate-list > li.nameplate-list-primary .label {
-        color: #577ED2; }
-      .nameplate-list > li.nameplate-list-primary .user-icon {
-        background-color: #577ED2; }
-    .nameplate-list > li.nameplate-list-success {
-      border-left-color: #26C0BE; }
-      .nameplate-list > li.nameplate-list-success .label {
-        color: #26C0BE; }
-      .nameplate-list > li.nameplate-list-success .user-icon {
-        background-color: #26C0BE; }
-    .nameplate-list > li.nameplate-list-warning {
-      border-left-color: #FF6C58; }
-      .nameplate-list > li.nameplate-list-warning .label {
-        color: #FF6C58; }
-      .nameplate-list > li.nameplate-list-warning .user-icon {
-        background-color: #FF6C58; }
-    .nameplate-list > li:last-child .nameplate, .nameplate-list > li.last .nameplate {
-      border-bottom: 1px solid #868896; }
-    .nameplate-list > li .nameplate {
-      border-top: 1px solid #868896;
-      margin: 0;
-      padding: 15px; }
+  .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-list > .nameplate-label, .nameplate-list > .nameplate-list > li, .nameplate-list > .nameplate-list > li {
+    border-left-width: 0;
+    margin: 0;
+    padding: 0.8em; }
+    .nameplate-list > li:hover, .nameplate-list > .nameplate:hover, .nameplate-list > .nameplate-label:hover, .nameplate-list > .nameplate-list > li:hover, .nameplate-list > .nameplate-list > li:hover {
+      background-color: #DDD; }
+  .nameplate-list .nameplate-content, .nameplate-list .nameplate-icon, .nameplate-list .nameplate-field {
+    padding: 0 0.3em;
+    vertical-align: middle; }
+  .nameplate-list .nameplate-field .icon-remove {
+    background-color: #DDD;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+    line-height: 19px;
+    padding: 0 3px 0 4px;
+    text-decoration: none; }
 
 .user-icon {
   -webkit-border-radius: 50%;
@@ -7965,6 +7989,29 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0; }
+
+.user-icon-xl {
+  height: 120px;
+  line-height: 120px;
+  width: 120px;
+  font-size: 50px; }
+
+.user-icon-lg {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  font-size: 31px; }
+
+.user-icon-sm {
+  height: 40px;
+  line-height: 40px;
+  width: 40px; }
+
+.user-icon-xs {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+  font-size: 10px; }
 
 .user-icon-danger {
   background-color: #FF387A; }
@@ -8787,6 +8834,21 @@ mark, .mark {
     top: 0;
     width: 0.25em;
     z-index: -1; }
+
+.icon-xs {
+  font-size: 0.6em; }
+
+.icon-sm {
+  font-size: 0.8em; }
+
+.icon-lg {
+  font-size: 1.667em; }
+
+.icon-xl {
+  font-size: 3.334em; }
+
+.icon-xxl {
+  font-size: 5em; }
 
 .heading-toolbar {
   float: left;
