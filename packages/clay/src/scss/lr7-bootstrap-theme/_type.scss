@@ -108,3 +108,25 @@
 mark, .mark {
 	@include highlight-text();
 }
+
+// Icon Sizes
+
+.icon-xs {
+	font-size: 0.6em;
+}
+
+.icon-sm {
+	font-size: 0.8em;
+}
+
+.icon-lg {
+	font-size: 1.667em;
+}
+
+.icon-xl {
+	font-size: 3.334em;
+}
+
+.icon-xxl {
+	font-size: 5em;
+}

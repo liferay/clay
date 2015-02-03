@@ -1,0 +1,75 @@
+// Tabular List Group
+
+.tabular-list-group {
+	border-collapse: collapse;
+	display: table;
+	margin: 0 0 20px 0;
+	padding: 0;
+
+	> li, .list-group-item {
+		border: 1px solid #DDD;
+		display: table-row;
+		padding: 0;
+	}
+
+	.list-group-item-content, .list-group-item-field {
+		padding: 1em 0.3em;
+
+		&:first-child {
+			padding-left: 1em;
+		}
+
+		&:last-child {
+			padding-right: 1em;
+		}
+
+		> a[class*="icon-"] {
+			display: block;
+			padding: 0 10px;
+
+			&:focus, &:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.list-group-item-content {
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0.5em 0;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.list-group-item-field {
+		text-align: center;
+	}
+}
+
+.list-group-item-content, .list-group-item-field {
+	display: table-cell;
+	padding: 0 0.3em;
+	vertical-align: middle;
+
+	input[type="checkbox"], input[type="radio"] {
+		margin: 0;
+	}
+}
+
+.list-group-item-field {
+	width: 1%;
+}
+
+@media (min-width: $screen-md-min) {
+	.tabular-list-group {
+		.list-group-item-content, .list-group-item-field {
+			padding: 1em 0.8em;
+		}
+	}
+}
