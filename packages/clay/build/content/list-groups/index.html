@@ -144,6 +144,8 @@ collapse
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/extending-cards">Extending Cards</a>
 </li>
+<li class=""><a href="../../content/extending-nameplates">Extending Nameplates</a>
+</li>
 </ul>
 </div>
 </li>
@@ -199,7 +201,7 @@ collapse
 		
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Unordered List Group</em></h3>
+		<h3>Unordered List Group</h3>
 
 		<ul class="list-group">
 			<li class="list-group-item">List Item 1</li>
@@ -211,46 +213,125 @@ collapse
 			<li class="list-group-item">List Item 4</li>
 		</ul>
 
-		<pre><code>&lt;ul class=&quot;list-group&quot;&gt;
-&lt;li class=&quot;list-group-item&quot;&gt;
-  ...
-&lt;/li&gt;
+		<pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>List Group with Badges</em></h3>
+		<h3>Tabular List Group</h3>
 
-		<ul class="list-group">
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Align content inside a list-group like a table with <code>.tabular-list-group</code>.</p>
+
+			<p><code>.list-group-item</code> behaves as a table row.</p>
+
+			<p>Use a combination of <code>.list-group-item-field</code> and <code>.list-group-item-content</code> to control the size of each cell. <code>.list-group-item-field</code> has width: 1% and will expand only as wide as its content as long as <code>.list-group-item-content</code> is present as a sibling.</p>
+
+			<p><code>.list-group-item-content</code> will expand to fill the remaining space.</p>
+		</blockquote>
+
+		<ul class="tabular-list-group">
 			<li class="list-group-item">
-				<span class="badge">25</span>
-				List Item 1
+				<div class="list-group-item-field">
+					<input type="checkbox" />
+				</div>
+
+				<div class="list-group-item-field">
+					<span class="icon-folder-close icon-xl text-default"></span>
+				</div>
+
+				<div class="list-group-item-content">
+					<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
+					<h6 class="text-default">Monica Bellucci</h6>
+					<h6 class="text-default">
+						<span>5 Folders</span>
+						<span>4 Entries</span>
+					</h6>
+				</div>
+
+				<div class="list-group-item-field">
+					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+				</div>
 			</li>
 
 			<li class="list-group-item">
-				<span class="badge">3</span>
-				List Item 2
-			</li>
+				<div class="list-group-item-field">
+					<input type="checkbox" />
+				</div>
 
-			<li class="list-group-item">
-				<span class="badge">17</span>
-				List Item 3
-			</li>
+				<div class="list-group-item-field">
+					<span class="icon-folder-close icon-xl text-default"></span>
+				</div>
 
-			<li class="list-group-item">
-				<span class="badge">9</span>
-				List Item 4
+				<div class="list-group-item-content">
+					<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
+					<h6 class="text-default">Monica Bellucci</h6>
+					<h6 class="text-default">
+						<span>5 Folders</span>
+						<span>4 Entries</span>
+					</h6>
+				</div>
+
+				<div class="list-group-item-field">
+					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+				</div>
 			</li>
 		</ul>
 
-		<pre><code>&lt;ul class=&quot;list-group&quot;&gt;
-&lt;li class=&quot;list-group-item&quot;&gt;
-  &lt;span class=&quot;badge&quot;&gt;#&lt;/span&gt;
-    ...
-&lt;/li&gt;
+		<pre><code>&lt;ul class=&quot;tabular-list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-field&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; /&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;list-group-item-field&quot;&gt;
+            &lt;span class=&quot;icon-folder-close icon-xl text-default&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;list-group-item-content&quot;&gt;
+            &lt;h5 class=&quot;text-primary&quot;&gt;Larry Bird the best power forward in Celtic&apos;s history.&lt;/h5&gt;
+            &lt;h6 class=&quot;text-default&quot;&gt;Monica Bellucci&lt;/h6&gt;
+            &lt;h6 class=&quot;text-default&quot;&gt;
+                &lt;span&gt;5 Folders&lt;/span&gt;
+                &lt;span&gt;4 Entries&lt;/span&gt;
+            &lt;/h6&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;list-group-item-field&quot;&gt;
+            &lt;a class=&quot;icon-ellipsis-vertical icon-lg&quot; href=&quot;#1&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;list-group-item&quot;&gt;
+        &lt;div class=&quot;list-group-item-field&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; /&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;list-group-item-field&quot;&gt;
+            &lt;span class=&quot;icon-folder-close icon-xl text-default&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;list-group-item-content&quot;&gt;
+            &lt;h5 class=&quot;text-primary&quot;&gt;Karl Malone the best power forward in Jazz history.&lt;/h5&gt;
+            &lt;h6 class=&quot;text-default&quot;&gt;Monica Bellucci&lt;/h6&gt;
+            &lt;h6 class=&quot;text-default&quot;&gt;
+                &lt;span&gt;5 Folders&lt;/span&gt;
+                &lt;span&gt;4 Entries&lt;/span&gt;
+            &lt;/h6&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;list-group-item-field&quot;&gt;
+            &lt;a class=&quot;icon-ellipsis-vertical icon-lg&quot; href=&quot;#1&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+
 	</div>
 </div>
 
