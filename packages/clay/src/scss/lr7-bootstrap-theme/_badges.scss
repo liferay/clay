@@ -46,6 +46,10 @@
 
 // Label Helpers
 
+.label {
+	color: #FFF;
+}
+
 .label-circle {
 	&, .label {
 		@include border-radius(20px);
