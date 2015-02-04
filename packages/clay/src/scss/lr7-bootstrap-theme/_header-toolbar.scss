@@ -1,7 +1,50 @@
+// Header Toolbar Base
+
+.header-toolbar {
+	float: left;
+	width: 100%;
+}
+
+.header-toolbar-left, .header-toolbar-right, .header-toolbar-center {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	> li {
+		display: block;
+		float: left;
+
+		a {
+			color: $text-color;
+			display: block;
+			padding: 10px;
+			text-decoration: none;
+		}
+	}
+}
+
+.header-toolbar-left {
+	float: left;
+}
+
+.header-toolbar-right {
+	float: right;
+}
+
+.header-toolbar-center {
+	line-height: 40px;
+	overflow: hidden;
+	padding: 0 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Header First and Second Level
+
 .header-first-level, .header-second-level {
 	padding: 0 5px;
 
-	.heading-toolbar-center {
+	.header-toolbar-center {
 		line-height: 40px;
 		font-weight: 300;
 	}
@@ -11,7 +54,7 @@
 	background-color: $header-first-level-bg;
 	color: $header-first-level-color;
 
-	.heading-toolbar-left, .heading-toolbar-right {
+	.header-toolbar-left, .header-toolbar-right {
 		>li > a {
 			color: $header-first-level-color;
 
@@ -26,7 +69,7 @@
 	background-color: $header-second-level-bg;
 	color: $header-second-level-color;
 
-	.heading-toolbar-left, .heading-toolbar-right {
+	.header-toolbar-left, .header-toolbar-right {
 		> li > a {
 			color: $header-second-level-color;
 
@@ -36,7 +79,7 @@
 		}
 	}
 
-	.heading-toolbar-left {
+	.header-toolbar-left {
 		margin-left: -5px;
 		overflow: hidden;
 
@@ -57,12 +100,12 @@
 	.header-first-level, .header-second-level {
 		padding: 0 11px;
 
-		.heading-toolbar-center {
+		.header-toolbar-center {
 			font-size: 18px;
 			line-height: 66px;
 		}
 
-		.heading-toolbar-left, .heading-toolbar-right {
+		.header-toolbar-left, .header-toolbar-right {
 			> li > a {
 				font-size: 22px;
 				margin: 10px 0 9px;
@@ -72,7 +115,7 @@
 	}
 
 	.header-second-level {
-		.heading-toolbar-left {
+		.header-toolbar-left {
 			margin-left: -11px;
 			overflow: hidden;
 
