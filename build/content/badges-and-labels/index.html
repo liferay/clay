@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Timeline</title>
+	<title>Badges and Labels</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -41,12 +41,12 @@
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse
+collapse in
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
 </li>
-<li class=""><a href="../../content/badges-and-labels">Badges and Labels</a>
+<li class="active"><a href="../../content/badges-and-labels">Badges and Labels</a>
 </li>
 <li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
 </li>
@@ -111,7 +111,7 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Example Pages</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse in
+collapse
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
@@ -120,7 +120,7 @@ collapse in
 </li>
 <li class=""><a href="../../content/profile-page">Profile Page</a>
 </li>
-<li class="active"><a href="../../content/timelines">Timeline</a>
+<li class=""><a href="../../content/timelines">Timeline</a>
 </li>
 </ul>
 </div>
@@ -195,212 +195,126 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Timeline
+			Badges and Labels
 
 			
 		</h1>
 
 		
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h4>Timeline Default</h4>
-		<p>The default view for timeline.</p>
+		<h3>Badges</h3>
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Use to highlight notifications or new and unread messages.</p>
+		</blockquote>
+
+		<span class="badge badge-default">Default</span>
+		<span class="badge badge-primary">Primary</span>
+		<span class="badge badge-success">Success</span>
+		<span class="badge badge-info">Info</span>
+		<span class="badge badge-warning">Warning</span>
+		<span class="badge badge-danger">Danger</span>
+
+		<pre><code class="html">&lt;span class=&quot;badge badge-default&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;badge badge-primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;badge badge-success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;badge badge-info&quot;&gt;Info&lt;/span&gt;
+&lt;span class=&quot;badge badge-warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;badge badge-danger&quot;&gt;Danger&lt;/span&gt;</code></pre>
+
+		<h3>Badge Helper Classes</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.badge-rounded</code>, <code>.badge-circle</code>, or <code>.badge-square</code> on the badge or the parent container to quickly shape the borders.</p>
+		</blockquote>
+
+		<span class="badge badge-default badge-rounded">Rounded</span>
+		<span class="badge badge-default badge-circle">Circle</span>
+		<span class="badge badge-default badge-square">Square</span>
+
+		<pre><code class="html">&lt;span class=&quot;badge badge-default badge-rounded&quot;&gt;Rounded&lt;/span&gt;
+&lt;span class=&quot;badge badge-default badge-circle&quot;&gt;Circle&lt;/span&gt;
+&lt;span class=&quot;badge badge-default badge-square&quot;&gt;Square&lt;/span&gt;</code></pre>
+
+		<h3>Badges with Nav Pills</h3>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-12">
-		<ul class="timeline">
-
-			<li class="timeline-y-axis"></li>
-
-			<li class="timeline-item">
-				<div class="panel panel-default timeline-panel">
-					<div class="panel-heading">
-						<a href="#">Test Test</a>
-
-						<span class="label label-primary">Admin</span>
-
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 2 minutes ago
-						</div>
-					</div>
-
-					<div class="timeline-avatar">
-						<img alt="avatar" class="img-circle img-responsive" src="../../images/thumbnail_placeholder.gif">
-					</div>
-
-					<div class="panel-body">
-						Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half. Decaffeinated cortado cup kopi-luwak half and half, cream macchiato mug froth flavour french press. Id extra espresso and cup con panna mug mazagran. Est so galão aftertaste, flavour variety aromatic est cultivar est cream con panna.
-					</div>
-				</div>
+	<div class="col-md-3">
+		<ul class="nav nav-circle nav-pills nav-stacked">
+			<li>
+				<a href="#1">
+					Inbox <span class="badge badge-default pull-right">32</span>
+				</a>
 			</li>
 
-			<li class="timeline-item">
-				<div class="panel panel-default timeline-panel">
-					<div class="panel-heading">
-						<a href="#">Joe Bloggs</a>
-
-						<span class="label label-info">Guest</span>
-
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 21 minutes ago
-						</div>
-					</div>
-
-					<div class="timeline-avatar">
-						<img alt="avatar" class="img-circle img-responsive" src="../../images/thumbnail_placeholder.gif">
-					</div>
-
-					<div class="panel-body">
-						<p>Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half. Decaffeinated cortado cup kopi-luwak half and half, cream macchiato mug froth flavour french press. Id extra espresso and cup con panna mug mazagran. Est so galão aftertaste, flavour variety aromatic est cultivar est cream con panna.</p>
-
-						<button class="btn btn-info btn-xs" type="button">Edit</button>
-
-						<button class="btn btn-info btn-xs" type="button">Delete</button>
-					</div>
-				</div>
+			<li>
+				<a href="#1">
+					Sent <span class="badge badge-primary pull-right">2</span>
+				</a>
 			</li>
 
-			<li class="timeline-item">
-				<div class="panel panel-default timeline-panel">
-					<div class="timeline-avatar">
-						<img alt="avatar" class="img-circle img-responsive" src="../../images/thumbnail_placeholder.gif">
-					</div>
+			<li>
+				<a href="#1">
+					Drafts <span class="badge badge-success pull-right">53</span>
+				</a>
+			</li>
 
-					<div class="panel-body">
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#1">Tab 1</a></li>
+			<li class="active">
+				<a href="#1">
+					Spam <span class="badge badge-info pull-right">12</span>
+				</a>
+			</li>
 
-							<li><a href="#1">Tab 2</a></li>
-						</ul><br>
+			<li>
+				<a href="#1">
+					Starred <span class="badge badge-warning pull-right">1</span>
+				</a>
+			</li>
 
-						<textarea class="form-control" style="height: 75px;" placeholder="Write something on your timeline"></textarea><br>
-
-						<button type="submit" class="btn btn-info btn-xs">Submit</button>
-					</div>
-				</div>
+			<li>
+				<a href="#1">
+					Important <span class="badge badge-danger pull-right">12</span>
+				</a>
 			</li>
 		</ul>
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h4>Timeline Centered</h4>
-		<p>Timeline is centered on the page.</p>
-	</div>
-</div>
+		<h3>Labels</h3>
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Labels details go here.</p>
+		</blockquote>
 
-<div class="row">
-	<div class="col-md-12">
-		<ul class="timeline timeline-center">
+		<span class="label label-default">Default</span>
+		<span class="label label-primary">Primary</span>
+		<span class="label label-success">Success</span>
+		<span class="label label-info">Info</span>
+		<span class="label label-warning">Warning</span>
+		<span class="label label-danger">Danger</span>
 
-			<li class="timeline-y-axis line-center"></li>
+		<pre><code class="html">&lt;span class=&quot;label label-default&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;label label-primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;label label-info&quot;&gt;Info&lt;/span&gt;
+&lt;span class=&quot;label label-warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;label label-danger&quot;&gt;Danger&lt;/span&gt;</code></pre>
 
-			<li class="item-center timeline-item">
-				<div class="panel panel-warning timeline-center-panel">
-					<div class="panel-heading">
-						<a href="#">Jane Doe</a>
+		<h3>Label Helper Classes</h3>
 
-						<span class="label label-warning">Super User</span>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.label-rounded</code>, <code>.label-circle</code>, or <code>.label-square</code> on the label or the parent container to quickly shape the borders.</p>
+		</blockquote>
 
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 1 day ago
-						</div>
-					</div>
+		<span class="label label-default label-rounded">Rounded</span>
+		<span class="label label-default label-circle">Circle</span>
+		<span class="label label-default label-square">Square</span>
 
-					<div class="timeline-avatar">
-						<i class="glyphicon glyphicon-map-marker"></i>
-					</div>
+		<pre><code class="html">&lt;span class=&quot;label label-default label-rounded&quot;&gt;Rounded&lt;/span&gt;
+&lt;span class=&quot;label label-default label-circle&quot;&gt;Circle&lt;/span&gt;
+&lt;span class=&quot;label label-default label-square&quot;&gt;Square&lt;/span&gt;</code></pre>
 
-					<div class="panel-body">
-						<p>Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half.</p>
-					</div>
-
-					<div class="panel-footer">
-						<div class="form-group">
-							<label class="sr-only">comment box</label>
-
-							<input class="form-control input-sm" placeholder="Leave a comment..." type="text">
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="item-center right-align timeline-item">
-				<div class="panel timeline-center-panel">
-					<div class="panel-heading">
-						<a href="#">Test Test</a>
-
-						<span class="label label-primary">Admin</span>
-
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 2 days ago
-						</div>
-					</div>
-
-					<div class="timeline-avatar">
-						<i class="glyphicon glyphicon-map-marker"></i>
-					</div>
-
-					<div class="body-right panel-body">
-						Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half. Decaffeinated cortado cup kopi-luwak half and half, cream macchiato mug froth flavour french press. Id extra espresso and cup con panna mug mazagran. Est so galão aftertaste, flavour variety aromatic est cultivar est cream con panna.
-					</div>
-
-					<div class="panel-footer">
-						<div class="form-group">
-							<label class="sr-only">comment box</label>
-
-							<input class="form-control input-sm" placeholder="Leave a comment..." type="text">
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="item-center timeline-item">
-				<div class="panel panel-success timeline-center-panel">
-					<div class="panel-heading">
-						<a href="#">Joe Bloggs</a>
-
-						<span class="label label-info">Guest</span>
-
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 3 weeks ago
-						</div>
-					</div>
-
-					<div class="timeline-avatar">
-						<i class="glyphicon glyphicon-map-marker"></i>
-					</div>
-
-					<div class="panel-body">
-						<h4>Responsive Image</h4>
-
-						<img alt="responsive image" class="col-xs-12 img-responsive" src="../../images/unsplash_52c470899a2e1_1.jpg">
-					</div>
-				</div>
-			</li>
-
-			<li class="item-center right-align timeline-item">
-				<div class="panel panel-danger timeline-center-panel">
-					<div class="panel-heading">
-						<span>Quote of the Day</span>
-					</div>
-
-					<div class="timeline-avatar">
-						<i class="glyphicon glyphicon-map-marker"></i>
-					</div>
-
-					<div class="body-right panel-body">
-						<blockquote>
-							<p>Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half.</p>
-							<small>Someone famous</small>
-						</blockquote>
-					</div>
-				</div>
-			</li>
-		</ul>
 	</div>
 </div>
 	</div>

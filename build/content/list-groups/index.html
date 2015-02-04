@@ -41,10 +41,12 @@
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse
+collapse in
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
+</li>
+<li class=""><a href="../../content/badges-and-labels">Badges and Labels</a>
 </li>
 <li class=""><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
 </li>
@@ -55,6 +57,8 @@ collapse
 <li class=""><a href="../../content/figures">Figures</a>
 </li>
 <li class=""><a href="../../content/header">Header</a>
+</li>
+<li class="active"><a href="../../content/list-groups">List Groups</a>
 </li>
 <li class=""><a href="../../content/modals">Modals</a>
 </li>
@@ -80,7 +84,7 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse in
+collapse
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/typography">Typography</a>
@@ -98,8 +102,6 @@ collapse in
 <li class=""><a href="../../content/icons">Icons</a>
 </li>
 <li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
-</li>
-<li class="active"><a href="../../content/list-groups">List Groups</a>
 </li>
 <li class=""><a href="../../content/tables">Tables</a>
 </li>
@@ -199,30 +201,7 @@ collapse
 		</h1>
 
 		
-<div class="row">
-	<div class="col-md-12">
-		<h3>Unordered List Group</h3>
-
-		<ul class="list-group">
-			<li class="list-group-item">List Item 1</li>
-
-			<li class="list-group-item">List Item 2</li>
-
-			<li class="list-group-item">List Item 3</li>
-
-			<li class="list-group-item">List Item 4</li>
-		</ul>
-
-		<pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-	</div>
-</div>
-
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Tabular List Group</h3>
 
@@ -335,9 +314,33 @@ collapse
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
+  <div class="col-md-12">
+    <h3>List Group</h3>
+
+    <ul class="list-group">
+      <li class="list-group-item">List Item 1</li>
+
+      <li class="list-group-item">List Item 2</li>
+
+      <li class="list-group-item">List Item 3</li>
+
+      <li class="list-group-item">List Item 4</li>
+    </ul>
+
+    <pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+  </div>
+</div>
+
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3><em>Linked List Groups</em></h3>
+		<h3>Linked List Groups</h3>
 
 		<div class="list-group">
 			<a href="#" class="list-group-item">List Item 1</a>
@@ -349,17 +352,16 @@ collapse
 			<a href="#" class="disabled list-group-item">List Item 4 - Disabled</a>
 		</div>
 
-		<pre><code>&lt;div class=&quot;list-group&quot;&gt;
-&lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;
-  ...
-&lt;/a&gt;
+		<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
 &lt;/div&gt;</code></pre>
+
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3><em>Contextual List Group</em></h4>
+		<h3>Contextual List Group</h3>
 
 		<ul class="list-group">
 			<li class="list-group-item list-group-item-success">List Item 1 - Success</li>
@@ -371,17 +373,16 @@ collapse
 			<li class="list-group-item list-group-item-danger">List Item 4 - Danger</li>
 		</ul>
 
-		<pre><code>&lt;ul class=&quot;list-group&quot;&gt;
-&lt;li class=&quot;list-group-item list-group-item-success&quot;&gt;
-  ...
-&lt;/li&gt;
+		<pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item list-group-item-success&quot;&gt;...&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Linked Contextual List Groups</em></h3>
+		<h3>Linked Contextual List Groups</h3>
 
 		<div class="row">
 			<div class="col-sm-6">
@@ -409,61 +410,10 @@ collapse
 			</div>
 		</div>
 
-		<pre><code>&lt;div class=&quot;list-group&quot;&gt;
-&lt;a href=&quot;#&quot; class=&quot;active list-group-item list-group-item-success&quot;&gt;
-  ...
-&lt;/a&gt;
+		<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;active list-group-item list-group-item-success&quot;&gt;...&lt;/a&gt;
 &lt;/div&gt;</code></pre>
-	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-12">
-		<h3><em>Custom List Groups</em></h3>
-
-		<div class="list-group">
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">List Group Item Heading</h4>
-
-				<p class="list-group-item-text">Linked List Group Text</p>
-			</a>
-
-			<a href="#" class="active list-group-item">
-				<h4 class="list-group-item-heading">Active List Group Item Heading</h4>
-
-				<p class="list-group-item-text">Active Linked List Group Text</p>
-			</a>
-
-			<a href="#" class="disabled list-group-item">
-				<h4 class="list-group-item-heading">Disabled List Group Item Heading</h4>
-
-				<p class="list-group-item-text">Disabled Linked List Group Text</p>
-			</a>
-
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">
-					List Group Item Heading with Badge
-					<span class="badge">1</span>
-				</h4>
-
-				<p class="list-group-item-text">List Group Text</p>
-			</a>
-
-			<a href="#" class="list-group-item list-group-item-success">
-				<h4 class="list-group-item-heading">Contextual List Group Item Heading</h4>
-
-				<p class="list-group-item-text">Contextual List Group Text</p>
-			</a>
-		</div>
-
-		<pre><code>&lt;div class=&quot;list-group&quot;&gt;
-&lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;
-  &lt;h4 class=&quot;list-group-item-heading&quot;&gt;..&lt;/h4&gt;
-    &lt;p class=&quot;list-group-item-text&quot;&gt;
-      ...
-    &lt;/p&gt;
-&lt;/a&gt;
-&lt;/div&gt;</code></pre>
 	</div>
 </div>
 	</div>
