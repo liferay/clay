@@ -1,0 +1,65 @@
+@mixin color-badge($color) {
+	background-color: $color;
+}
+
+.badge-circle {
+	&, .badge {
+		@include border-radius(20px);
+	}
+}
+
+.badge-rounded {
+	&, .badge {
+		@include border-radius(3px);
+	}
+}
+
+.badge-square {
+	&, .badge {
+		@include border-radius(0);
+	}
+}
+
+.badge-default {
+	@include color-badge($brand-default);
+}
+
+.badge-danger {
+	@include color-badge($brand-danger);
+}
+
+.badge-info {
+	@include color-badge($brand-info);
+}
+
+.badge-primary {
+	@include color-badge($brand-primary);
+}
+
+.badge-success {
+	@include color-badge($brand-success);
+}
+
+.badge-warning {
+	@include color-badge($brand-warning);
+}
+
+// Label Helpers
+
+.label-circle {
+	&, .label {
+		@include border-radius(20px);
+	}
+}
+
+.label-rounded {
+	&, .label {
+		@include border-radius(3px);
+	}
+}
+
+.label-square {
+	&, .label {
+		@include border-radius(0);
+	}
+}
