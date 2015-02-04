@@ -3264,7 +3264,7 @@ tbody.collapse.in {
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: #2B4259;
+  color: #FFF;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -6146,6 +6146,54 @@ you can use the generic selector below, but it's slower:
 .alert-dismissible .close {
   top: -1px; }
 
+.badge-circle, .badge-circle .badge {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+
+.badge-rounded, .badge-rounded .badge {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+.badge-square, .badge-square .badge {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+.badge-default {
+  background-color: #868896; }
+
+.badge-danger {
+  background-color: #E9295A; }
+
+.badge-info {
+  background-color: #1e5ec8; }
+
+.badge-primary {
+  background-color: #32a8e6; }
+
+.badge-success {
+  background-color: #42bfad; }
+
+.badge-warning {
+  background-color: #FFB103; }
+
+.label-circle, .label-circle .label {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+
+.label-rounded, .label-rounded .label {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+.label-square, .label-square .label {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
 .breadcrumb.breadcrumb-default {
   background-color: #FFF;
   border-radius: 0;
@@ -7032,7 +7080,7 @@ figcaption, .figcaption {
   color: #FFF; }
 
 label {
-  color: #2B4259;
+  color: #FFF;
   font-size: 15px;
   font-weight: 400; }
 
@@ -7410,9 +7458,9 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 .modal-header {
   background-color: #f3f3f5;
-  color: #2B4259; }
+  color: #FFF; }
   .modal-header .close {
-    color: #2B4259;
+    color: #FFF;
     opacity: 1;
     filter: alpha(opacity=100); }
 
