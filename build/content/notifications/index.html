@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>View Message</title>
+	<title>Notifications</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -41,7 +41,7 @@
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse
+collapse in
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/alerts">Alerts</a>
@@ -70,7 +70,7 @@ collapse
 </li>
 <li class=""><a href="../../content/navbar">Navbars</a>
 </li>
-<li class=""><a href="../../content/notifications">Notifications</a>
+<li class="active"><a href="../../content/notifications">Notifications</a>
 </li>
 <li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
 </li>
@@ -171,7 +171,7 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Mail Template</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse in
+collapse
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/mail-template-inbox">Inbox</a>
@@ -186,7 +186,7 @@ collapse in
 </li>
 <li class=""><a href="../../content/mail-template-trash">Trash</a>
 </li>
-<li class="active"><a href="../../content/mail-template-view-message">View Message</a>
+<li class=""><a href="../../content/mail-template-view-message">View Message</a>
 </li>
 </ul>
 </div>
@@ -199,216 +199,122 @@ collapse in
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			View Message
+			Notifications
 
 			
 		</h1>
 
 		
-<ul class="breadcrumb">
-	<li><a href="../../index.html"><span class="glyphicon glyphicon-home"></span></a></li>
-	<li>Mail Template</li>
-	<li class="active">View Message</li>
-</ul>
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<button class="btn btn-primary" id="addNotification">Add Notification</button>
 
-<div class="mailbox row">
-	<div class="col-md-3">
-		<a class="btn btn-success btn-md btn-block compose-button" href="../mail-template-compose/index.html">
-			<span class="glyphicon glyphicon-pencil"></span>
-			<span>Compose</span>
-		</a>
+		<h3>Notification</h3>
 
-		<div class="panel-group square-borders">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">Mailboxes</h4>
-				</div>
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Create growl like notifications using the notification component.</p>
+		</blockquote>
 
-				<div class="panel-collapse collapse in">
-					<div class="list-group">
-						<a href="../mail-template-inbox/index.html" class="list-group-item">
-							<span>Inbox</span>
-							<span class="badge">3</span>
-						</a>
+		<div class="notification">
+			<button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			Marked as read
+		</div>
 
-						<a href="../mail-template-sent/index.html" class="list-group-item">
-							<span>Sent Mail</span>
-						</a>
+		<div class="notification notification-inverse">
+			<button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			Marked as read
+		</div>
 
-						<a href="../mail-template-drafts/index.html" class="list-group-item">
-							<span>Drafts</span>
-							<span class="badge">2</span>
-						</a>
+		<pre><code>&lt;div class=&quot;notification&quot;&gt;
+    Marked as read
+    &lt;button class=&quot;close close-danger&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
 
-						<a href="../mail-template-spam/index.html" class="list-group-item">
-							<span>Spam</span>
-							<span class="badge">7</span>
-						</a>
+&lt;div class=&quot;notification notification-inverse&quot;&gt;
+    Marked as read
+    &lt;button class=&quot;close close-danger&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
 
-						<a href="../mail-template-trash/index.html" class="list-group-item">
-							<span>Trash</span>
-						</a>
-					</div>
+		<h3>Tabular Notification</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Align content inside a notification like a table with <code>.tabular-notification</code>.</p>
+
+			<p>Use a combination of <code>.notification-field</code> and <code>.notification-content</code> to control the size of each cell. <code>.notification-field</code> has width: 1% and will expand only as wide as its content as long as <code>.notification-content</code> is present as a sibling.</p>
+
+			<p><code>.notification-content</code> will expand to fill the remaining space.</p>
+		</blockquote>
+
+		<div class="tabular-notification">
+			<div class="notification-field">
+				<div class="user-icon user-icon-default">
+					SP
 				</div>
 			</div>
 
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">Folders</h4>
-				</div>
+			<div class="notification-content">
+				<button class="close close-danger close-top-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 
-				<div class="panel-collapse collapse in">
-					<div class="list-group">
-						<a href="#" class="list-group-item">
-							<span>Work</span>
-						</a>
-
-						<a href="#" class="list-group-item">
-							<span>Family</span>
-						</a>
-
-						<a href="#" class="list-group-item">
-							<span>Client</span>
-						</a>
-					</div>
+				<div class="nameplate-content">
+					<h4>Space Program</h4>
+					<h6>NASA is not about the ‘Adventure of Human Space Exploration’</h6>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="col-md-9">
-		<div class="view-message">
-			<div class="clearfix message-title">
-				<h4>In to go, acerbic qui frappuccino crema affogato.</h4>
+		<pre><code>&lt;div class=&quot;tabular-notification&quot;&gt;
+    &lt;div class=&quot;notification-field&quot;&gt;
+        &lt;div class=&quot;user-icon user-icon-default&quot;&gt;SP&lt;/div&gt;
+    &lt;/div&gt;
 
-				<div class="controls">
-					<button class="btn btn-default btn-sm flip-horizontal" title="Reply"><span class="glyphicon glyphicon-share-alt"></span></button>
+    &lt;div class=&quot;notification-content&quot;&gt;
+        &lt;div class=&quot;nameplate-content&quot;&gt;
+            &lt;a class=&quot;notification-close pull-right text-danger&quot; href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-remove&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;h4&gt;Space Program&lt;/h4&gt;
+            &lt;h6&gt;NASA is not about the &lsquo;Adventure of Human Space Exploration&rsquo;&lt;/h6&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
-					<button class="btn btn-default btn-sm">More<span class="caret" style="margin-left: 5px;"></span></button>
-				</div>
-			</div>
+		<h3>Notification Skins</h3>
 
-			<div class="message-info">
-				<span class="glyphicon glyphicon-user"></span>
-				<small>from</small> <strong>Brand Wells</strong>
-				<span class="label label-default">Inbox</span>
-				<span class="label label-warning">Starred</span>
-				<span class="msg-time pull-right"><small>11:00am</small></span>
-			</div>
-
-			<div class="message-body">
-				<p>Cup coffee, java galão coffee french press, mocha ut skinny latte id robust. Instant, single origin ut breve white filter roast black java lungo to go. Arabica siphon body white viennese frappuccino grounds extra.</p>
-
-				<p>Roast espresso et sugar barista est, and caramelization grounds macchiato cup trifecta. Frappuccino white mug latte white macchiato milk crema. Americano cup robust carajillo est crema rich spoon dripper filter.</p>
-
-				<p>Rich, sugar, french press flavour iced siphon as and that spoon. Shop, ristretto and, roast bar mug to go sugar aged. Filter so cinnamon roast half and half aromatic turkish americano.</p>
-
-				<p>Percolator coffee café au lait qui, turkish mazagran, iced, caffeine decaffeinated milk single origin brewed. Dripper macchiato cinnamon mocha qui rich shop galão beans crema. Con panna, frappuccino brewed carajillo cultivar et mocha.</p>
-			</div>
-
-			<div class="message-attachments">
-				<h5>(3) Attachments</h5>
-
-				<div class="row">
-					<div class="col-sm-3 col-xs-6" href="#">
-						<a class="attachment" href="#">
-							<img class="img-responsive" src="../../images/image_gallery/beach_getaway_256.jpg" />
-							<span class="file-name">beach_getaway_256.jpg</span>
-						</a>
-					</div>
-
-					<div class="col-sm-3 col-xs-6" href="#">
-						<a class="attachment" href="#">
-							<img class="img-responsive" src="../../images/image_gallery/lake_adventure_9569.jpg" />
-							<span class="file-name">lake_adventure_9569.jpg</span>
-						</a>
-					</div>
-
-					<div class="col-sm-3 col-xs-6" href="#">
-						<a class="attachment" href="#">
-							<img class="img-responsive" src="../../images/image_gallery/beach_getaway_436.jpg" />
-							<span class="file-name">beach_getaway_436.jpg</span>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<form class="form-horizontal form-reply" role="form">
-				<div class="form-group">
-					<label for="toField" class="col-sm-2 control-label">To:</label>
-					<div class="col-sm-8">
-						<input type="email" class="form-control" id="toField" placeholder="Email Address..." value="brand.wells@example.com">
-					</div>
-				</div>
-
-				<div class="form-group hide">
-					<label for="ccField" class="col-sm-2 control-label">Cc:</label>
-					<div class="col-sm-8">
-						<input type="email" class="form-control" id="ccField" placeholder="Cc...">
-					</div>
-				</div>
-
-				<div class="form-group hide">
-					<label for="bccField" class="col-sm-2 control-label">Bcc:</label>
-					<div class="col-sm-8">
-						<input type="email" class="form-control" id="bccField" placeholder="Bcc...">
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label for="fromField" class="col-sm-2 col-xs-12 control-label">From:</label>
-					<div class="col-sm-8 col-xs-6">
-						<select class="form-control">
-							<option>user@example.com</option>
-							<option>alias1@example.com</option>
-							<option>alias2@example.com</option>
-						</select>
-					</div>
-					<div class="col-sm-2 col-xs-4">
-						<div class="row">
-							<a class="btn btn-link btn-sm" href="#" id="ccLink" title="Carbon Copy">Cc</a> <a class="btn btn-link btn-sm" href="#" id="bccLink" title="Blind Carbon Copy">Bcc</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label for="messageField" class="col-sm-2 control-label">Reply:</label>
-					<div class="col-sm-8">
-						<textarea class="form-control" id="messageField" placeholder="Placeholder for your favorite text editor..." rows="5"></textarea>
-					</div>
-				</div>
-
-				<div class="mailbox-controls">
-					<div class="row">
-						<div class="col-sm-10 col-sm-offset-2">
-							<button class="btn btn-default btn-md">Send</button>
-							<button class="btn btn-default btn-md">Discard</button>
-							<button class="btn btn-default btn-md">Draft</button>
-							<button class="btn btn-default btn-md custom-file-upload" title="Attach Files">
-								<span class="glyphicon glyphicon-paperclip"></span>
-							</button>
-							<button class="btn btn-default btn-md" title="Insert Link"><span class="glyphicon glyphicon-link"></span></button>
-						</div>
-					</div>
-				</div>
-			</form>
+		<div class="notification growling">
+			Marked as read <button class="close close-danger"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 		</div>
+
 	</div>
 </div>
 
 <script>
-	YUI().use('node', function(Y) {
-		Y.one('#ccLink').on('click', function(event) {
-			event.preventDefault();
-			event.currentTarget.addClass('hide');
-			Y.one('#ccField').ancestor('.form-group').removeClass('hide');
-		});
+	$('#addNotification').click(function(event) {
+		var notificationNode = $('<div class="notification"><button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Your action has been completed.</div>');
 
-		Y.one('#bccLink').on('click', function(event) {
-			event.preventDefault();
-			event.currentTarget.addClass('hide');
-			Y.one('#bccField').ancestor('.form-group').removeClass('hide');
-		});
+		var body = $(this).parents('body');
+		var boundingBox = $('<div class="notification-container"></div>');
+
+		if (body.find('> .notification-container').length) {
+			body.find('> .notification-container').append(notificationNode);
+		}
+		else {
+			boundingBox.append(notificationNode);
+			body.prepend(boundingBox);
+		}
+	});
+
+	$('body').on('click', '.close', function(event) {
+		var $this = $(this);
+		var notification = $this.parents('.notification');
+		var tabularNotification = $this.parents('.tabular-notification');
+
+		event.preventDefault();
+
+		if (notification.length) {
+			notification.remove();
+		}
+
+		if (tabularNotification.length) {
+			tabularNotification.remove();
+		}
 	});
 </script>
 	</div>
