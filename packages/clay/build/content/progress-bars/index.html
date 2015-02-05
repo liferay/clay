@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Alerts and Progress Bars</title>
+	<title>Progress Bars</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -44,7 +44,7 @@
 collapse in
 ">
 <ul class="nav nav-stacked">
-<li class="active"><a href="../../content/alerts-and-progress-bars">Alerts and Progress Bars</a>
+<li class=""><a href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a href="../../content/badges-and-labels">Badges and Labels</a>
 </li>
@@ -56,7 +56,7 @@ collapse in
 </li>
 <li class=""><a href="../../content/figures">Figures</a>
 </li>
-<li class=""><a href="../../content/header">Header</a>
+<li class=""><a href="../../content/header">Header Toolbar</a>
 </li>
 <li class=""><a href="../../content/list-groups">List Groups</a>
 </li>
@@ -70,11 +70,15 @@ collapse in
 </li>
 <li class=""><a href="../../content/navbar">Navbars</a>
 </li>
+<li class=""><a href="../../content/notifications">Notifications</a>
+</li>
 <li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
 </li>
 <li class=""><a href="../../content/panels">Panels</a>
 </li>
 <li class=""><a href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class="active"><a href="../../content/progress-bars">Progress Bars</a>
 </li>
 <li class=""><a href="../../content/sidenav">Sidenav</a>
 </li>
@@ -195,104 +199,12 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Alerts and Progress Bars
+			Progress Bars
 
 			
 		</h1>
 
 		
-<div class="row">
-	<div class="col-md-12">
-		<h3>Alerts with Embedded Links</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.lead</code> inside of an alert to make the beginning of your message stand out.</p>
-
-			<p>Use <code>.alert-link</code> to style a link inside your alert.</p>
-		</blockquote>
-
-		<div class="alert alert-default" role="alert">
-			<strong class="lead">Default</strong> You just read the <a href="#" class="alert-link">alert message</a> successfully.
-		</div>
-
-		<div class="alert alert-success" role="alert">
-			<strong class="lead">Success</strong> You just read the <a href="#" class="alert-link">alert message</a> successfully.
-		</div>
-
-		<div class="alert alert-info" role="alert">
-			<strong class="lead">Info</strong> This <a href="#" class="alert-link">alert</a> needs your attention.
-		</div>
-
-		<div class="alert alert-warning" role="alert">
-			<strong class="lead">Warning</strong> This alert is a <a href="#" class="alert-link">warning message</a>.
-		</div>
-
-		<div class="alert alert-danger" role="alert">
-			<strong class="lead">Danger</strong> <a href="#" class="alert-link">Something</a> is not right.
-		</div>
-
-		<pre><code class="html">&lt;div class=&quot;alert alert-default&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;alert alert-success&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;alert alert-info&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;alert alert-warning&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;alert alert-danger&quot;&gt;...&lt;/div&gt;</code></pre>
-
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12" id="dismissibleAlerts">
-		<h3>Dismissible Alerts</h3>
-
-		<div class="alert alert-dismissible alert-default" role="alert">
-			<button class="close" type="button">
-				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-			</button>
-
-			<strong class="lead">Default</strong> You just read the alert message successfully.
-		</div>
-
-		<div class="alert alert-dismissible alert-success" role="alert">
-			<button class="close" type="button">
-				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-			</button>
-
-			<strong class="lead">Success</strong> You just read the alert message successfully.
-		</div>
-
-		<div class="alert alert-dismissible alert-info" role="alert">
-			<button class="close" type="button">
-				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-			</button>
-
-			<strong class="lead">Info</strong> This alert needs your attention.
-		</div>
-
-		<div class="alert alert-dismissible alert-warning" role="alert">
-			<button class="close" type="button">
-				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-			</button>
-
-			<strong class="lead">Warning</strong> This alert is a warning message.
-		</div>
-
-		<div class="alert alert-dismissible alert-danger" role="alert">
-			<button class="close" type="button">
-				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-			</button>
-
-			<strong class="lead">Danger</strong> Something is not right.
-		</div>
-
-		<pre><code>&lt;div class=&quot;alert alert-dismissible alert-success&quot; role=&quot;alert&quot;&gt;
-    &lt;button class=&quot;close&quot; type=&quot;button&quot;&gt;
-        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;
-    &lt;/button&gt;
-    ...
-&lt;/div&gt;</code></pre>
-	</div>
-</div>
-
 <div class="row">
 	<div class="col-md-12">
 		<h3>Plain Progress Bars</h3>
@@ -485,18 +397,6 @@ collapse
 &lt;/div&gt;</code></pre>
 	</div>
 </div>
-
-<script>
-	YUI().use('node', function(A) {
-		A.one('#dismissibleAlerts').delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
-
-			var alertDismissible = currentTarget.ancestor('.alert-dismissible');
-
-			alertDismissible.hide();
-		}, '.close');
-	});
-</script>
 	</div>
 
 		</section>
