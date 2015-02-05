@@ -1,0 +1,117 @@
+---
+title: Notifications
+section: Components
+---
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<button class="btn btn-primary" id="addNotification">Add Notification</button>
+
+		<h3>Notification</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Create growl like notifications using the notification component.</p>
+		</blockquote>
+
+		<div class="notification">
+			<button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			Marked as read
+		</div>
+
+		<div class="notification notification-inverse">
+			<button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			Marked as read
+		</div>
+
+		<pre><code>```<div class="notification">
+    Marked as read
+    <button class="close close-danger"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+</div>
+
+<div class="notification notification-inverse">
+    Marked as read
+    <button class="close close-danger"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+</div>```</code></pre>
+
+		<h3>Tabular Notification</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Align content inside a notification like a table with <code>.tabular-notification</code>.</p>
+
+			<p>Use a combination of <code>.notification-field</code> and <code>.notification-content</code> to control the size of each cell. <code>.notification-field</code> has width: 1% and will expand only as wide as its content as long as <code>.notification-content</code> is present as a sibling.</p>
+
+			<p><code>.notification-content</code> will expand to fill the remaining space.</p>
+		</blockquote>
+
+		<div class="tabular-notification">
+			<div class="notification-field">
+				<div class="user-icon user-icon-default">
+					SP
+				</div>
+			</div>
+
+			<div class="notification-content">
+				<button class="close close-danger close-top-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+				<div class="nameplate-content">
+					<h4>Space Program</h4>
+					<h6>NASA is not about the ‘Adventure of Human Space Exploration’</h6>
+				</div>
+			</div>
+		</div>
+
+		<pre><code>```<div class="tabular-notification">
+    <div class="notification-field">
+        <div class="user-icon user-icon-default">SP</div>
+    </div>
+
+    <div class="notification-content">
+        <div class="nameplate-content">
+            <a class="notification-close pull-right text-danger" href="#1"><span class="icon-remove"></span></a>
+            <h4>Space Program</h4>
+            <h6>NASA is not about the ‘Adventure of Human Space Exploration’</h6>
+        </div>
+    </div>
+</div>```</code></pre>
+
+		<h3>Notification Skins</h3>
+
+		<div class="notification growling">
+			Marked as read <button class="close close-danger"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	$('#addNotification').click(function(event) {
+		var notificationNode = $('<div class="notification"><button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Your action has been completed.</div>');
+
+		var body = $(this).parents('body');
+		var boundingBox = $('<div class="notification-container"></div>');
+
+		if (body.find('> .notification-container').length) {
+			body.find('> .notification-container').append(notificationNode);
+		}
+		else {
+			boundingBox.append(notificationNode);
+			body.prepend(boundingBox);
+		}
+	});
+
+	$('body').on('click', '.close', function(event) {
+		var $this = $(this);
+		var notification = $this.parents('.notification');
+		var tabularNotification = $this.parents('.tabular-notification');
+
+		event.preventDefault();
+
+		if (notification.length) {
+			notification.remove();
+		}
+
+		if (tabularNotification.length) {
+			tabularNotification.remove();
+		}
+	});
+</script>

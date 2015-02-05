@@ -1,0 +1,106 @@
+@mixin color-close-button($color, $text-shadow) {
+	color: $color;
+	opacity: 1;
+	text-shadow: $text-shadow;
+
+	&:focus, &:hover {
+		color: darken($color, 12%);
+	}
+}
+
+.notification-container {
+	max-width: 280px;
+	position: fixed;
+	right: 20px;
+	top: 15px;
+	width: 100%;
+	z-index: 1000;
+}
+
+.notification {
+	background-color: #333;
+
+	@include border-radius(5px);
+	@include box-shadow(0 1px 3px -1px rgba(0, 0, 0, 0.5));
+
+	color: #FFF;
+	font-size: 1.2em;
+	margin-bottom: 5px;
+	overflow: hidden;
+	padding: 15px;
+	position: relative;
+}
+
+.notification-inverse {
+	background-color: #F8F8F8;
+	color: #333;
+}
+
+// Notification Close Button
+
+.close {
+	&.close-danger {
+		@include color-close-button($brand-danger, 0 1px rgba(0, 0, 0, 0.3));
+	}
+
+	&.close-default {
+		@include color-close-button($brand-default, 0 1px rgba(0, 0, 0, 0.3));
+	}
+
+	&.close-info {
+		@include color-close-button($brand-info, 0 1px rgba(0, 0, 0, 0.3));
+	}
+
+	&.close-primary {
+		@include color-close-button($brand-primary, 0 1px rgba(0, 0, 0, 0.3));
+	}
+
+	&.close-success {
+		@include color-close-button($brand-success, 0 1px rgba(0, 0, 0, 0.3));
+	}
+
+	&.close-warning {
+		@include color-close-button($brand-warning, 0 1px rgba(0, 0, 0, 0.3));
+	}
+}
+
+.close-top-right {
+	position: absolute;
+	right: 8px;
+	top: 3px;
+}
+
+// Tabular Notification
+
+.tabular-notification {
+	@extend %equal-height-columns;
+	@extend .notification;
+
+	padding: 0;
+}
+
+.notification-content, .notification-field {
+	@extend %equal-height-column-cell;
+
+	padding: 10px;
+	vertical-align: middle;
+}
+
+.notification-field {
+	width: 1%;
+}
+
+// Notification Skins
+
+.growling {
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.83) 0%, rgba(0,0,0,0.89) 62%, rgba(0,0,0,0.89) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.83)), color-stop(62%,rgba(0,0,0,0.89)), color-stop(100%,rgba(0,0,0,0.89))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.83) 0%,rgba(0,0,0,0.89) 62%,rgba(0,0,0,0.89) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,0.83) 0%,rgba(0,0,0,0.89) 62%,rgba(0,0,0,0.89) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,0.83) 0%,rgba(0,0,0,0.89) 62%,rgba(0,0,0,0.89) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.83) 0%,rgba(0,0,0,0.89) 62%,rgba(0,0,0,0.89) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4000000', endColorstr='#e3000000',GradientType=0 ); /* IE6-9 */
+border: 1px solid #222;
+
+@include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.5));
+}
