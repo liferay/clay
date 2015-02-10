@@ -17,6 +17,15 @@
 	z-index: 1000;
 }
 
+@media screen and (max-width: 320px) {
+	.notification-container {
+		left: 10px;
+		right: 10px;
+		top: 10px;
+		width: auto;
+	}
+}
+
 .notification {
 	background-color: #333;
 
@@ -39,6 +48,8 @@
 // Notification Close Button
 
 .close {
+	margin-left: 5px;
+
 	&.close-danger {
 		@include color-close-button($brand-danger, 0 1px rgba(0, 0, 0, 0.3));
 	}
@@ -103,4 +114,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4000000', e
 border: 1px solid #222;
 
 @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.5));
+}
+
+// Notification Animations
+.ns-effect-scale.ns-show,
+.ns-effect-scale.ns-hide {
+	animation-name: animScale;
+	animation-duration: 0.25s;
+}
+
+@keyframes animScale {
+	0% { opacity: 0; transform: translate3d(0,40px,0) scale3d(0.1,0.6,1); }
+	100% { opacity: 1; transform: translate3d(0,0,0) scale3d(1,1,1); }
 }
