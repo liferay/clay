@@ -6147,18 +6147,12 @@ you can use the generic selector below, but it's slower:
   top: -1px; }
 
 .badge-circle, .badge-circle .badge {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px; }
 
 .badge-rounded, .badge-rounded .badge {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px; }
 
 .badge-square, .badge-square .badge {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0; }
 
 .badge-default {
@@ -6183,29 +6177,25 @@ you can use the generic selector below, but it's slower:
   color: #FFF; }
 
 .label-circle, .label-circle .label {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px; }
 
 .label-rounded, .label-rounded .label {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px; }
 
 .label-square, .label-square .label {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0; }
 
 .breadcrumb.breadcrumb-default {
   background-color: #FFF;
   border-radius: 0;
   padding: 0; }
-  .breadcrumb.breadcrumb-default:before, .breadcrumb.breadcrumb-default:after {
-    content: " ";
-    display: table; }
   .breadcrumb.breadcrumb-default:after {
-    clear: both; }
+    clear: both;
+    content: "";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden; }
   .breadcrumb.breadcrumb-default > li {
     display: block;
     float: left;
@@ -6337,11 +6327,13 @@ you can use the generic selector below, but it's slower:
   background-color: #FFF;
   border-radius: 0;
   padding: 0; }
-  .breadcrumb.breadcrumb-inverse:before, .breadcrumb.breadcrumb-inverse:after {
-    content: " ";
-    display: table; }
   .breadcrumb.breadcrumb-inverse:after {
-    clear: both; }
+    clear: both;
+    content: "";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden; }
   .breadcrumb.breadcrumb-inverse > li {
     display: block;
     float: left;
@@ -6471,14 +6463,14 @@ you can use the generic selector below, but it's slower:
 
 .breadcrumb.breadcrumb-borderless {
   background-color: #FFF;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0; }
-  .breadcrumb.breadcrumb-borderless:before, .breadcrumb.breadcrumb-borderless:after {
-    content: " ";
-    display: table; }
   .breadcrumb.breadcrumb-borderless:after {
-    clear: both; }
+    clear: both;
+    content: "";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden; }
   .breadcrumb.breadcrumb-borderless > li {
     display: block;
     float: left;
@@ -6628,16 +6620,10 @@ you can use the generic selector below, but it's slower:
   margin-bottom: 20px;
   position: relative; }
   .card.card-circle, .card-horizontal.card-circle {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px; }
   .card.card-rounded, .card-horizontal.card-rounded {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px; }
   .card.card-square, .card-horizontal.card-square {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0; }
   .card .divider, .card-horizontal .divider {
     border-top: 1px solid #DDD;
@@ -6653,11 +6639,13 @@ you can use the generic selector below, but it's slower:
   .card .figure {
     overflow: visible; }
 
-.card-header:before, .card-header:after, .card-footer:before, .card-footer:after, .card-section:before, .card-section:after {
-  content: " ";
-  display: table; }
 .card-header:after, .card-footer:after, .card-section:after {
-  clear: both; }
+  clear: both;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden; }
 .card-header .divider, .card-footer .divider, .card-section .divider {
   margin-left: -10px;
   margin-right: -10px; }
@@ -6677,20 +6665,12 @@ you can use the generic selector below, but it's slower:
   overflow: hidden;
   position: relative; }
   .card-horizontal.card-circle [class*="card-col"]:first-child {
-    -webkit-border-radius: 20px 0 0 20px;
-    -moz-border-radius: 20px 0 0 20px;
     border-radius: 20px 0 0 20px; }
   .card-horizontal.card-circle [class*="card-col"]:last-child {
-    -webkit-border-radius: 0 20px 20px 0;
-    -moz-border-radius: 0 20px 20px 0;
     border-radius: 0 20px 20px 0; }
   .card-horizontal.card-rounded [class*="card-col"]:first-child {
-    -webkit-border-radius: 10px 0 0 10px;
-    -moz-border-radius: 10px 0 0 10px;
     border-radius: 10px 0 0 10px; }
   .card-horizontal.card-rounded [class*="card-col"]:last-child {
-    -webkit-border-radius: 0 10px 10px 0;
-    -moz-border-radius: 0 10px 10px 0;
     border-radius: 0 10px 10px 0; }
 
 .card-col-1 {
@@ -6977,11 +6957,13 @@ you can use the generic selector below, but it's slower:
     border-bottom-width: 0; } }
 
 @media (max-width: 767px) {
-  .dropdown-full.open:before, .dropdown-full.open:after, .dropdown-wide.open:before, .dropdown-wide.open:after {
-    content: " ";
-    display: table; }
   .dropdown-full.open:after, .dropdown-wide.open:after {
-    clear: both; }
+    clear: both;
+    content: "";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden; }
   .dropdown-full .dropdown-menu [class*="col-sm"], .dropdown-full .dropdown-menu [class*="col-md"], .dropdown-full .dropdown-menu [class*="col-lg"], .dropdown-wide .dropdown-menu [class*="col-sm"], .dropdown-wide .dropdown-menu [class*="col-md"], .dropdown-wide .dropdown-menu [class*="col-lg"] {
     padding: 0; } }
 
@@ -7026,18 +7008,12 @@ figcaption, .figcaption {
   top: 0; }
 
 .figure-circle {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%; }
 
 .figure-rounded {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
   border-radius: 10px; }
 
 .figure-square {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0; }
 
 .figcaption-xl {
@@ -7180,8 +7156,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .radio-default input[type='radio']:checked + .skin:after {
     background-color: #32a8e6;
     border-width: 0px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
     content: ' ';
     display: block;
@@ -7211,8 +7185,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .radio-default input[type='radio'] + .skin:before {
     background-color: #FFF;
     border: 1px solid #B0B4BB;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
     content: ' ';
     display: block;
@@ -7252,8 +7224,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .has-success .input-group-addon span {
     background-color: #42bfad;
     border-color: #42bfad;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
     color: #FFF;
     padding: 5px; }
@@ -7280,8 +7250,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .has-warning .input-group-addon span {
     background-color: #FFB103;
     border-color: #FFB103;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
     color: #FFF;
     padding: 5px; }
@@ -7308,8 +7276,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .has-error .input-group-addon span {
     background-color: #E9295A;
     border-color: #E9295A;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
     color: #FFF;
     padding: 5px; }
@@ -7556,8 +7522,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 .nav-pills > li > a, .nav-pills .nav > li > a {
   background-color: transparent;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   color: #2B4259; }
   .nav-pills > li > a:focus, .nav-pills > li > a:hover, .nav-pills .nav > li > a:focus, .nav-pills .nav > li > a:hover {
@@ -7580,18 +7544,12 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   margin-top: 2px; }
 
 .nav.nav-circle > li > a, .nav.nav-circle .nav > li > a {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px; }
 
 .nav.nav-rounded > li > a, .nav.nav-rounded .nav > li > a {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px; }
 
 .nav.nav-square > li > a, .nav.nav-square .nav > li > a {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0; }
 
 .nav.nav-justified > li, .nav.nav-justified > .nav.nav-tabs.nav-justified {
@@ -7643,8 +7601,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     margin-bottom: -1px; }
     .nav-tabs > li > a {
       border: 1px solid transparent;
-      -webkit-border-radius: 0 0 0 0;
-      -moz-border-radius: 0 0 0 0;
       border-radius: 0 0 0 0;
       word-break: normal; }
       .nav-tabs > li > a:hover {
@@ -7654,8 +7610,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
       border-bottom-color: transparent; }
 
 .tab-group .nav-tabs > li > a {
-  -webkit-border-radius: 0 0 0 0;
-  -moz-border-radius: 0 0 0 0;
   border-radius: 0 0 0 0; }
 .tab-group .tab-content {
   border: 1px solid #D8D8D8;
@@ -7671,8 +7625,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .tab-group-bottom .nav-tabs > li {
     margin-top: -1px; }
     .tab-group-bottom .nav-tabs > li > a {
-      -webkit-border-radius: 0 0 0 0;
-      -moz-border-radius: 0 0 0 0;
       border-radius: 0 0 0 0; }
       .tab-group-bottom .nav-tabs > li > a:focus, .tab-group-bottom .nav-tabs > li > a:hover {
         border-color: #D8D8D8 transparent transparent; }
@@ -7695,8 +7647,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .tab-group-right .nav-tabs > li {
     margin-top: -1px; }
     .tab-group-right .nav-tabs > li > a {
-      -webkit-border-radius: 0 0 0 0;
-      -moz-border-radius: 0 0 0 0;
       border-radius: 0 0 0 0; }
       .tab-group-right .nav-tabs > li > a:focus, .tab-group-right .nav-tabs > li > a:hover {
         border-color: #D8D8D8 transparent transparent; }
@@ -7736,8 +7686,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     .tab-group-left .nav-tabs > li {
       margin-right: -1px; }
       .tab-group-left .nav-tabs > li > a {
-        -webkit-border-radius: 0 0 0 0;
-        -moz-border-radius: 0 0 0 0;
         border-radius: 0 0 0 0; }
         .tab-group-left .nav-tabs > li > a:focus, .tab-group-left .nav-tabs > li > a:hover {
           border-color: transparent #D8D8D8 transparent transparent; }
@@ -7752,8 +7700,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     .tab-group-right .nav-tabs > li {
       margin-left: -1px; }
       .tab-group-right .nav-tabs > li > a {
-        -webkit-border-radius: 0 0 0 0;
-        -moz-border-radius: 0 0 0 0;
         border-radius: 0 0 0 0; }
         .tab-group-right .nav-tabs > li > a:focus, .tab-group-right .nav-tabs > li > a:hover {
           border-color: transparent transparent transparent #D8D8D8; }
@@ -8004,8 +7950,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 .notification, .tabular-notification {
   background-color: #333;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.5);
@@ -8110,8 +8054,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     display: block; }
 
 .nameplate-label {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px;
   background-color: #EEE;
   font-size: 11px;
@@ -8153,8 +8095,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     text-decoration: none; }
 
 .user-icon {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   color: #FFF;
   height: 60px;
@@ -8163,16 +8103,10 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   overflow: hidden;
   width: 60px; }
   .user-icon.user-icon-circle, .user-icon-circle .user-icon {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%; }
   .user-icon.user-icon-rounded, .user-icon-rounded .user-icon {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px; }
   .user-icon.user-icon-square, .user-icon-square .user-icon {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
     border-radius: 0; }
 
 .user-icon-xl {
@@ -8218,8 +8152,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 .pager li > a, .pager li > span {
   background-color: #FFF;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px;
   border: 1px solid #D2D6DF;
   border-width: 2px;
@@ -8236,8 +8168,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 .pager-inverse li > a, .pager-inverse li > span {
   background-color: #D2D6DF;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px;
   border: 1px solid #D2D6DF;
   border-width: 2px;
@@ -8254,8 +8184,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 .pager-borderless1 li > a, .pager-borderless1 li > span {
   background-color: transparent;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border: 1px solid transparent;
   border-width: 0;
@@ -8328,16 +8256,12 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 .pagination-borderless1 > li:first-child > a, .pagination-borderless1 > li:first-child > span {
   background-color: transparent;
   border: solid transparent;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border-width: 0;
   color: #C4C3C8; }
 .pagination-borderless1 > li:last-child > a, .pagination-borderless1 > li:last-child > span {
   background-color: transparent;
   border: solid transparent;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border-width: 0;
   color: #C4C3C8; }
@@ -8381,16 +8305,12 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 .pagination-borderless2 > li:first-child > a, .pagination-borderless2 > li:first-child > span {
   background-color: #32a8e6;
   border: solid #32a8e6;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px;
   border-width: 0;
   color: #FFF; }
 .pagination-borderless2 > li:last-child > a, .pagination-borderless2 > li:last-child > span {
   background-color: #32a8e6;
   border: solid #32a8e6;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px;
   border-width: 0;
   color: #FFF; }
@@ -8435,16 +8355,12 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 .pagination-borderless3 > li:first-child > a, .pagination-borderless3 > li:first-child > span {
   background-color: #B0B4BB;
   border: solid #B0B4BB;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border-width: 0;
   color: #FFF; }
 .pagination-borderless3 > li:last-child > a, .pagination-borderless3 > li:last-child > span {
   background-color: #B0B4BB;
   border: solid #B0B4BB;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border-width: 0;
   color: #FFF; }
@@ -8541,8 +8457,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     color: #555; }
 
 .popover {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -8565,8 +8479,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 .popover-title {
   background-color: #2B4259;
-  -webkit-border-radius: -1 -1 0 0;
-  -moz-border-radius: -1 -1 0 0;
   border-radius: -1 -1 0 0;
   color: #FFF;
   font-size: 16px;
@@ -8659,10 +8571,8 @@ input.switch:empty {
     -ms-user-select: none;
     user-select: none; }
     input.switch:empty ~ label:after, input.switch:empty ~ label:before {
-      -webkit-border-radius: 0.2em;
-      -moz-border-radius: 0.2em;
-      border-radius: 0.2em;
       background-color: #C33;
+      border-radius: 0.2em;
       content: ' ';
       display: block;
       position: absolute;
@@ -8674,10 +8584,8 @@ input.switch:empty {
       transition: all 100ms ease-in;
       width: 3.6em; }
     input.switch:empty ~ label:after {
-      -webkit-border-radius: 0.15em;
-      -moz-border-radius: 0.15em;
-      border-radius: 0.15em;
       background-color: #FFF;
+      border-radius: 0.15em;
       bottom: 0.2em;
       margin-left: 0.2em;
       top: 0.2em;
@@ -8690,8 +8598,6 @@ input.switch:disabled ~ label:before {
   background-color: #CCC; }
 
 input.edit.switch:empty ~ label:after {
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
   border-radius: 0.25em;
   color: #C33;
   content: "\270f";
