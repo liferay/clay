@@ -84,13 +84,28 @@ section: Components
 			<div class="notification growling">
 				Marked as read <button class="close close-danger"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 			</div>
+
+			<div class="tabular-notification apple">
+				<div class="notification-field">
+					<span class="icon-calendar" style="font-size:60px;margin:0 0 0 13px;"></span>
+				</div>
+
+				<div class="notification-content">
+					<button class="close close-danger close-top-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+					<div class="nameplate-content">
+						<h4>Space Program</h4>
+						<h6>NASA is not about the ‘Adventure of Human Space Exploration’</h6>
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</div>
 </div>
 
 <script>
-	+function ($) {
+	+function($) {
 		$.extend({
 			showNotification: function(options) {
 				var defaults = {
