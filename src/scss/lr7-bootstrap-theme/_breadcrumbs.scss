@@ -68,7 +68,7 @@
 	background-color: $breadcrumb-default-bg;
 	border-radius: $border-radius-base;
 
-	@include clearfix();
+	@include clearfix-hack();
 
 	padding: 0;
 
@@ -147,7 +147,7 @@
 	background-color: $breadcrumb-inverse-bg;
 	border-radius: $border-radius-base;
 
-	@include clearfix();
+	@include clearfix-hack();
 
 	padding: 0;
 
@@ -224,9 +224,9 @@
 
 .breadcrumb.breadcrumb-borderless {
 	background-color: $breadcrumb-borderless-bg;
+	border-radius: $breadcrumb-borderless-border-radius;
 
-	@include border-radius($breadcrumb-borderless-border-radius);
-	@include clearfix();
+	@include clearfix-hack();
 
 	> li {
 		display: block;

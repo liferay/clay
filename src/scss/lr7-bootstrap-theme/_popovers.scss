@@ -1,5 +1,6 @@
 .popover {
-	@include border-radius($popover-border-radius);
+	border-radius: $popover-border-radius;
+
 	@include box-shadow(none);
 
 	max-width: 240px;
@@ -27,9 +28,7 @@
 
 .popover-title {
 	background-color: $popover-title-bg;
-
-	@include border-radius(($popover-border-radius - 1) ($popover-border-radius - 1) 0 0);
-
+	border-radius: ($popover-border-radius - 1) ($popover-border-radius - 1) 0 0;
 	color: $popover-title-color;
 	font-size: 16px;
 	padding: 10px 14px;

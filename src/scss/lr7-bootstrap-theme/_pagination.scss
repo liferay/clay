@@ -86,9 +86,7 @@
 			> span {
 				background-color: $pagination-borderless1-controls-bg;
 				border: solid $pagination-borderless1-controls-border;
-
-				@include border-radius($pagination-borderless1-border-radius);
-
+				border-radius: $pagination-borderless1-border-radius;
 				border-width: 0;
 				color: $pagination-borderless1-controls-color;
 			}
@@ -99,9 +97,7 @@
 			> span {
 				background-color: $pagination-borderless1-controls-bg;
 				border: solid $pagination-borderless1-controls-border;
-
-				@include border-radius($pagination-borderless1-border-radius);
-
+				border-radius: $pagination-borderless1-border-radius;
 				border-width: 0;
 				color: $pagination-borderless1-controls-color;
 			}
@@ -166,9 +162,7 @@
 			> span {
 				background-color: $pagination-borderless2-controls-bg;
 				border: solid $pagination-borderless2-controls-border;
-
-				@include border-radius($pagination-borderless2-border-radius);
-
+				border-radius: $pagination-borderless2-border-radius;
 				border-width: 0;
 				color: $pagination-borderless2-controls-color;
 			}
@@ -178,9 +172,7 @@
 			> span {
 				background-color: $pagination-borderless2-controls-bg;
 				border: solid $pagination-borderless2-controls-border;
-
-				@include border-radius($pagination-borderless2-border-radius);
-
+				border-radius: $pagination-borderless2-border-radius;
 				border-width: 0;
 				color: $pagination-borderless2-controls-color;
 			}
@@ -246,9 +238,7 @@
 			> span {
 				background-color: $pagination-borderless3-controls-bg;
 				border: solid $pagination-borderless3-controls-border;
-
-				@include border-radius($pagination-borderless3-border-radius);
-
+				border-radius: $pagination-borderless3-border-radius;
 				border-width: 0;
 				color: $pagination-borderless3-controls-color;
 			}
@@ -258,9 +248,7 @@
 			> span {
 				background-color: $pagination-borderless3-controls-bg;
 				border: solid $pagination-borderless3-controls-border;
-
-				@include border-radius($pagination-borderless3-border-radius);
-
+				border-radius: $pagination-borderless3-border-radius;
 				border-width: 0;
 				color: $pagination-borderless3-controls-color;
 			}

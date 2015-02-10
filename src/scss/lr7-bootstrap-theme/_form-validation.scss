@@ -32,9 +32,7 @@
 		span {
 			background-color: $background-color;
 			border-color: $border-color;
-
-			@include border-radius(20px);
-
+			border-radius: 20px;
 			color: #FFF;
 			padding: 5px;
 		}

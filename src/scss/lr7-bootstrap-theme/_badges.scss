@@ -4,19 +4,19 @@
 
 .badge-circle {
 	&, .badge {
-		@include border-radius(20px);
+		border-radius: 20px;
 	}
 }
 
 .badge-rounded {
 	&, .badge {
-		@include border-radius(3px);
+		border-radius: 3px;
 	}
 }
 
 .badge-square {
 	&, .badge {
-		@include border-radius(0);
+		border-radius: 0;
 	}
 }
 
@@ -52,18 +52,18 @@
 
 .label-circle {
 	&, .label {
-		@include border-radius(20px);
+		border-radius: 20px;
 	}
 }
 
 .label-rounded {
 	&, .label {
-		@include border-radius(3px);
+		border-radius: 3px;
 	}
 }
 
 .label-square {
 	&, .label {
-		@include border-radius(0);
+		border-radius: 0;
 	}
 }
