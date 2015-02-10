@@ -152,6 +152,8 @@ collapse
 </li>
 <li class=""><a href="../../content/extending-nameplates">Extending Nameplates</a>
 </li>
+<li class=""><a href="../../content/extending-notifications">Extending Notifications</a>
+</li>
 </ul>
 </div>
 </li>
@@ -207,7 +209,7 @@ collapse
 		
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<button class="btn btn-primary" id="addNotification">Add Notification</button>
+		<button class="btn btn-primary add-notification">Show Space Quote</button>
 
 		<h3>Notification</h3>
 
@@ -215,14 +217,16 @@ collapse
 			<p>Create growl like notifications using the notification component.</p>
 		</blockquote>
 
-		<div class="notification">
-			<button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			Marked as read
-		</div>
+		<div class="notifications-demo-container">
+			<div class="notification">
+				<button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				Marked as read
+			</div>
 
-		<div class="notification notification-inverse">
-			<button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			Marked as read
+			<div class="notification notification-inverse">
+				<button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				Marked as read
+			</div>
 		</div>
 
 		<pre><code>&lt;div class=&quot;notification&quot;&gt;
@@ -245,19 +249,21 @@ collapse
 			<p><code>.notification-content</code> will expand to fill the remaining space.</p>
 		</blockquote>
 
-		<div class="tabular-notification">
-			<div class="notification-field">
-				<div class="user-icon user-icon-default">
-					SP
+		<div class="notifications-demo-container">
+			<div class="tabular-notification">
+				<div class="notification-field">
+					<div class="user-icon user-icon-default">
+						SP
+					</div>
 				</div>
-			</div>
 
-			<div class="notification-content">
-				<button class="close close-danger close-top-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<div class="notification-content">
+					<button class="close close-danger close-top-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 
-				<div class="nameplate-content">
-					<h4>Space Program</h4>
-					<h6>NASA is not about the ‘Adventure of Human Space Exploration’</h6>
+					<div class="nameplate-content">
+						<h4>Space Program</h4>
+						<h6>NASA is not about the ‘Adventure of Human Space Exploration’</h6>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -278,43 +284,133 @@ collapse
 
 		<h3>Notification Skins</h3>
 
-		<div class="notification growling">
-			Marked as read <button class="close close-danger"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<div class="notifications-demo-container">
+			<div class="notification growling">
+				Marked as read <button class="close close-danger"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			</div>
+
+			<div class="tabular-notification apple">
+				<div class="notification-field">
+					<span class="icon-calendar" style="font-size:60px;margin:0 0 0 13px;"></span>
+				</div>
+
+				<div class="notification-content">
+					<button class="close close-danger close-top-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+					<div class="nameplate-content">
+						<h4>Space Program</h4>
+						<h6>NASA is not about the ‘Adventure of Human Space Exploration’</h6>
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</div>
 </div>
 
 <script>
-	$('#addNotification').click(function(event) {
-		var notificationNode = $('<div class="notification"><button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Your action has been completed.</div>');
+	+function($) {
+		$.extend({
+			showNotification: function(options) {
+				var defaults = {
+					animation: 'fade',
+					autoClose: 0,
+					container: 'notification-container',
+					template: '<div class="notification"><button class="close close-danger pull-right"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>' + options.text + '</div>'
+				};
 
-		var body = $(this).parents('body');
-		var boundingBox = $('<div class="notification-container"></div>');
+				options = $.extend(defaults, options);
 
-		if (body.find('> .notification-container').length) {
-			body.find('> .notification-container').append(notificationNode);
-		}
-		else {
-			boundingBox.append(notificationNode);
-			body.prepend(boundingBox);
-		}
-	});
+				var body = $('body');
+				var boundingBox = $('<div class="' + options.container + '"></div>');
 
-	$('body').on('click', '.close', function(event) {
-		var $this = $(this);
-		var notification = $this.parents('.notification');
-		var tabularNotification = $this.parents('.tabular-notification');
+				animate = function(node, anim) {
+					if (anim === 'fade') {
+						node.addClass('fade');
 
-		event.preventDefault();
+						setTimeout(function(){
+							node.addClass('in');
 
-		if (notification.length) {
-			notification.remove();
-		}
+							if (options.autoClose) {
+								setTimeout(function() {
+									hide(node);
+								}, options.autoClose * 1000);
+							}
+						}, 100);
+					}
+				};
 
-		if (tabularNotification.length) {
-			tabularNotification.remove();
-		}
+				delegateCloseButton = +function(node) {
+					body.on(
+						'click', '.' + options.container + ' .close',
+						function(event) {
+							var notificationNode = $(this).parents('.notification');
+
+							event.preventDefault();
+
+							hide(notificationNode);
+						}
+					);
+				}();
+
+				hide = function(node) {
+					if (node.length && options.animation === 'fade') {
+						var transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+						node.one(transitions, function(event) {
+							setTimeout(function() {
+								node.remove();
+
+								if ($('body .' + options.container).is(':empty')) {
+									$('body .' + options.container).remove();
+								}
+							}, 200);
+						});
+
+						node.removeClass('in');
+					}
+					else {
+						node.remove();
+					}
+				};
+
+				show = +function() {
+					var notificationNode = $(options.template);
+
+					if (body.find('> .' + options.container).length) {
+						body.find('> .' + options.container).append(notificationNode);
+
+						animate(notificationNode, options.animation);
+					}
+					else {
+						boundingBox.append(notificationNode);
+						body.prepend(boundingBox);
+
+						animate(notificationNode, options.animation);
+					}
+				}();
+			}
+		});
+	}(jQuery);
+
+	$('.add-notification').on('click', function(event) {
+		var textArray = [
+			'The sky is the limit only for those who aren\'t afraid to fly!',
+			'I believe every human has a finite number of heartbeats.',
+			'Where ignorance lurks, so too do the frontiers of discovery and imagination.',
+			'The early warnings about technological dangers also come from science.',
+			'You know, being a test pilot isn\'t always the healthiest business in the world.',
+			'Buy why, some say, the moon?'
+		];
+
+		var rand = Math.floor(Math.random() * textArray.length);
+
+		$.showNotification({
+			animation: 'fade',
+			autoClose: 0,
+			container: 'notification-container',
+			text: textArray[rand]
+		});
 	});
 </script>
 	</div>
