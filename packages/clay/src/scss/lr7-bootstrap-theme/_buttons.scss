@@ -87,9 +87,9 @@
 }
 
 .btn-sm {
-	@include button-size(3px, 6px, 10px, $line-height-base, $border-radius-base);
+	@include button-size(3px, 6px, 12px, $line-height-base, $border-radius-base);
 }
 
 .btn-xs {
-	@include button-size(2px, 3px, 8px, $line-height-base, $border-radius-base);
+	@include button-size(2px, 3px, 10px, $line-height-base, $border-radius-base);
 }

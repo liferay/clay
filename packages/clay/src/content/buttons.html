@@ -5,135 +5,64 @@ section: Elements
 
 <div class="row">
 	<div class="box-copy col-md-12">
-		<h4>Button Styles</h4>
-
+		<h3>Buttons</h3>
 		<button class="btn btn-default" type="button">Default</button>
-
 		<button class="btn btn-primary" type="button">Primary</button>
-
 		<button class="btn btn-info" type="button">Info</button>
-
 		<button class="btn btn-success" type="button">Success</button>
-
 		<button class="btn btn-warning" type="button">Warning</button>
-
 		<button class="btn btn-danger" type="button">Danger</button>
-
 		<button class="btn btn-link" type="button">Link</button>
 
-<pre><code>```<button class="btn btn-default" type="button">...</button>```</code></pre>
+		<pre><code class="html">```<button class="btn btn-default" type="button">...</button>```</code></pre>
 
-		<h4>Anchor Elements and Inputs as Buttons</h4>
+		<h3>Active Buttons</h3>
+		<button class="active btn btn-default" type="button">Default</button>
+		<button class="active btn btn-primary" type="button">Primary</button>
+		<button class="active btn btn-info" type="button">Info</button>
+		<button class="active btn btn-success" type="button">Success</button>
+		<button class="active btn btn-warning" type="button">Warning</button>
+		<button class="active btn btn-danger" type="button">Danger</button>
 
+		<pre><code class="html">```<button class="active btn btn-default" type="button">...</button>```</code></pre>
+
+		<h3>Disabled Buttons</h3>
+		<button class="btn btn-default" disabled="disabled" type="button">Default</button>
+		<button class="active btn btn-primary" disabled="disabled" type="button">Primary</button>
+		<button class="active btn btn-info" disabled="disabled" type="button">Info</button>
+		<button class="active btn btn-success" disabled="disabled" type="button">Success</button>
+		<button class="active btn btn-warning" disabled="disabled" type="button">Warning</button>
+		<button class="active btn btn-danger" disabled="disabled" type="button">Danger</button>
+		<button class="active btn btn-link" disabled="disabled" type="button">Link</button>
+
+		<pre><code class="html">```<button class="btn btn-default" disabled="disabled" type="button">...</button>```</code></pre>
+
+		<h3>Anchor Elements and Inputs as Buttons</h3>
 		<a href="#1" class="btn btn-default">Default</a>
-
 		<input class="btn btn-primary" type="button" value="Input" />
-
 		<input class="btn btn-info" type="submit" value="Submit" />
-
 		<a href="#1" class="btn btn-success">Success</a>
-
 		<a href="#1" class="btn btn-warning">Warning</a>
-
 		<a href="#1" class="btn btn-danger">Danger</a>
-
 		<a href="#1" class="btn btn-link">Link</a>
 
-<pre><code>```<a class="btn btn-default" href="/path">...</a>
+		<pre><code class="html">```<a class="btn btn-default" href="/path">...</a>
 <input class="btn btn-primary" type="button" value="Input" />
 <input class="btn btn-info" type="submit" value="Submit" />```</code></pre>
 
-		<h4>Active Buttons</h4>
-
-		<button class="active btn btn-default" type="button">Default</button>
-
-		<button class="active btn btn-primary" type="button">Primary</button>
-
-		<button class="active btn btn-info" type="button">Info</button>
-
-		<button class="active btn btn-success" type="button">Success</button>
-
-		<button class="active btn btn-warning" type="button">Warning</button>
-
-		<button class="active btn btn-danger" type="button">Danger</button>
-
-<pre><code>```<button class="active btn btn-default" type="button">...</button>```</code></pre>
-
-		<h4>Active Anchor Elements and Inputs as Buttons</h4>
-
-		<a class="active btn btn-default" href="#" role="button">Default Link</a>
-
-		<input class="active btn btn-primary" type="button" value="Input" />
-
-		<input class="active btn btn-info" type="submit" value="Submit" />
-
-		<a class="active btn btn-success" href="#" role="button">Success Link</a>
-
-		<a class="active btn btn-warning" href="#" role="button">Warning Link</a>
-
-		<a class="active btn btn-danger" href="#" role="button">Danger Link</a>
-
-<pre><code>```<a class="active btn btn-default" href="#" role="button">...</a>
-<input class="active btn btn-primary" type="button" value="Input" />
-<input class="active btn btn-info" type="submit" value="Submit" />```</code></pre>
-
-		<h4>Disabled Buttons</h4>
-
-		<button class="btn btn-default" disabled="disabled" type="button">Default</button>
-
-		<button class="active btn btn-primary" disabled="disabled" type="button">Primary</button>
-
-		<button class="active btn btn-info" disabled="disabled" type="button">Info</button>
-
-		<button class="active btn btn-success" disabled="disabled" type="button">Success</button>
-
-		<button class="active btn btn-warning" disabled="disabled" type="button">Warning</button>
-
-		<button class="active btn btn-danger" disabled="disabled" type="button">Danger</button>
-
-		<button class="active btn btn-link" disabled="disabled" type="button">Link</button>
-
-<pre><code>```<button class="btn btn-default" disabled="disabled" type="button">...</button>```</code></pre>
-
-		<h4>Disabled Anchor Elements</h4>
-
-		<a class="active btn btn-default disabled" href="#" role="button">Default Link</a>
-
-		<a class="active btn btn-primary disabled" href="#" role="button">Primary Link</a>
-
-		<a class="active btn btn-info disabled" href="#" role="button">Info Link</a>
-
-		<a class="active btn btn-success disabled" href="#" role="button">Success Link</a>
-
-		<a class="active btn btn-warning disabled" href="#" role="button">Warning Link</a>
-
-		<a class="active btn btn-danger disabled" href="#" role="button">Danger Link</a>
-
-		<a class="active btn disabled" href="#" role="button">Link</a>
-
-<pre><code>```<a class="active btn btn-default disabled" href="#" role="button">...</a>```</code></pre>
-
-		<h4>Sizes</h4>
-
+		<h3>Sizes</h3>
 		<button class="btn btn-default btn-xs" type="button">Extra Small</button>
-
 		<button class="btn btn-default btn-sm" type="button">Small</button>
-
 		<button class="btn btn-default" type="button">Default</button>
-
 		<button class="btn btn-default btn-lg" type="button">Large</button>
 
-		<h4>Block Level Buttons</h4>
-
+		<h3>Block Level Buttons</h3>
 		<button class="btn btn-block btn-primary btn-xs" type="button">Extra Small Block Level Button</button>
-
 		<button class="btn btn-block btn-primary btn-sm" type="button">Small Block Level Button</button>
-
 		<button class="btn btn-block btn-primary" type="button">Default Block Level Button</button>
-
 		<button class="btn btn-block btn-lg btn-primary" type="button">Large Block Level Button</button>
 
-		<h4>Button Dropdowns</h4>
+		<h3>Button Dropdowns</h3>
 
 		<div class="btn-group">
 			<button class="btn btn-default dropdown-toggle" type="button">Default <span class="caret"></span>
@@ -213,7 +142,7 @@ section: Elements
 			</ul>
 		</div>
 
-		<h4>Button Dropups</h4>
+		<h3>Button Dropups</h3>
 
 		<div class="btn-toolbar" role="toolbar">
 			<div class="btn-group dropup">
@@ -246,7 +175,7 @@ section: Elements
 			</div>
 		</div>
 
-		<h4>Split Button Dropdowns</h4>
+		<h3>Split Button Dropdowns</h3>
 
 		<div class="btn-group">
 			<button class="btn btn-default" type="button">Default</button>
@@ -360,7 +289,7 @@ section: Elements
 
 <div class="row">
 	<div class="box-copy col-md-6">
-		<h4>Button Group</h4>
+		<h3>Button Group</h3>
 
 		<div class="btn-group">
 			<button type="button" class="btn btn-default">Left</button>
@@ -370,7 +299,7 @@ section: Elements
 	</div>
 
 	<div class="box-copy col-md-6">
-		<h4>Vertical Button Group</h4>
+		<h3>Vertical Button Group</h3>
 
 		<div class="btn-group-vertical">
 			<button type="button" class="btn btn-default">Button</button>
@@ -411,7 +340,7 @@ section: Elements
 
 <div class="row">
 	<div class="box-copy col-md-12">
-		<h4>Justified Button Groups</h4>
+		<h3>Justified Button Groups</h3>
 
 		<div class="btn-group btn-group-justified">
 			<a class="btn btn-default" role="button">Left</a>
@@ -433,109 +362,13 @@ section: Elements
 			</div>
 		</div>
 
-<pre><code>```<div class="btn-group btn-group-justified">
+		<pre><code class="html">```<div class="btn-group btn-group-justified">
 	<div class="btn-group">
 		<button class="btn btn-default" type="button">...</button>
 		<button class="btn btn-default" type="button">...</button>
 	</div>
 </div>```</code></pre>
 
-		<h4>Horizontal Toolbars</h4>
-
-		<div class="btn-toolbar" role="toolbar">
-			<div class="btn-group btn-group-xs">
-				<button class="btn btn-default" type="button">1</button>
-
-				<button class="btn btn-default" type="button">2</button>
-
-				<button class="btn btn-default" type="button">3</button>
-
-				<button class="btn btn-default" type="button">4</button>
-			</div>
-
-			<div class="btn-group btn-group-sm">
-				<button class="btn btn-default" type="button">1</button>
-
-				<button class="btn btn-default" type="button">2</button>
-
-				<button class="btn btn-default" type="button">3</button>
-
-				<button class="btn btn-default" type="button">4</button>
-			</div>
-
-			<div class="btn-group">
-				<button class="btn btn-default" type="button">1</button>
-
-				<button class="btn btn-default" type="button">2</button>
-
-				<button class="btn btn-default" type="button">3</button>
-
-				<button class="btn btn-default" type="button">4</button>
-			</div>
-
-			<div class="btn-group btn-group-lg">
-				<button class="btn btn-default" type="button">1</button>
-
-				<button class="btn btn-default" type="button">2</button>
-
-				<button class="btn btn-default" type="button">3</button>
-
-				<button class="btn btn-default" type="button">4</button>
-			</div>
-		</div>
-
-		<br><pre>XS Toolbar:	<code>&lt;div class="btn-group btn-group-xs"&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		&lt;/div&gt;</code><br>Small Toolbar:	<code>&lt;div class="btn-group btn-group-sm"&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		&lt;/div&gt;</code><br>Default Toolbar:<code>&lt;div class="btn-group"&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		&lt;/div&gt;</code><br>Large Toolbar:	<code>&lt;div class="btn-group btn-group-lg"&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		  &lt;button class="btn btn-default" type="button"&gt;...&lt;/button&gt;<br>		&lt;/div&gt;</code></pre>
-	</div>
-</div>
-
-<div class="row">
-	<div class="box-copy col-md-12">
-		<h4>Vertical Button Group Toolbar</h4>
-
-		<div class="btn-toolbar">
-			<div class="btn-group-vertical btn-group-lg">
-				<button class="btn btn-default" type="button">1</button>
-
-				<button class="btn btn-default" type="button">2</button>
-
-				<button class="btn btn-default" type="button">3</button>
-
-				<button class="btn btn-default" type="button">4</button>
-			</div>
-
-			<div class="btn-group-vertical">
-				<button class="btn btn-default" type="button">1</button>
-
-				<button class="btn btn-default" type="button">2</button>
-
-				<button class="btn btn-default" type="button">3</button>
-
-				<button class="btn btn-default" type="button">4</button>
-			</div>
-
-			<div class="btn-group-vertical btn-group-sm">
-				<button class="btn btn-default" type="button">1</button>
-
-				<button class="btn btn-default" type="button">2</button>
-
-				<button class="btn btn-default" type="button">3</button>
-
-				<button class="btn btn-default" type="button">4</button>
-			</div>
-
-			<div class="btn-group-vertical btn-group-xs">
-				<button class="btn btn-default" type="button">1</button>
-
-				<button class="btn btn-default" type="button">2</button>
-
-				<button class="btn btn-default" type="button">3</button>
-
-				<button class="btn btn-default" type="button">4</button>
-			</div>
-		</div>
-
-		<br><br><pre>XS Toolbar:	<code>&lt;div class="btn-group-vertical btn-group-xs"&gt;...&lt;/div&gt;</code><br>Small Toolbar:	<code>&lt;div class="btn-group-vertical btn-group-sm"&gt;...&lt;/div&gt;</code><br>Default Toolbar:<code>&lt;div class="btn-group-vertical"&gt;...&lt;/div&gt;</code><br>Large Toolbar:	<code>&lt;div class="btn-group-vertical btn-group-lg"&gt;...&lt;/div&gt;</code></pre>
-	</div>
 </div>
 
 <script>
