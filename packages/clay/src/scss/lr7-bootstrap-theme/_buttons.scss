@@ -1,5 +1,5 @@
 .btn {
-	@include button-size(11px, 16px, 16px, 1, $border-radius-base);
+	@include button-size(7px, 16px, 14px, $line-height-base, $border-radius-base);
 
 	&, &:focus, &:hover {
 		border: 1px solid transparent;
@@ -83,13 +83,13 @@
 }
 
 .btn-lg {
-	@include button-size(14px, 16px, 18px, 1, $border-radius-base);
+	@include button-size(14px, 16px, 18px, $line-height-base, $border-radius-base);
 }
 
 .btn-sm {
-	@include button-size(8px, 16px, 14px, 1, $border-radius-base);
+	@include button-size(3px, 6px, 10px, $line-height-base, $border-radius-base);
 }
 
 .btn-xs {
-	@include button-size(5px, 16px, 12px, 1, $border-radius-base);
+	@include button-size(2px, 3px, 8px, $line-height-base, $border-radius-base);
 }
