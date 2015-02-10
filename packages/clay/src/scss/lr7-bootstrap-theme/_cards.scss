@@ -3,15 +3,15 @@
 	position: relative;
 
 	&.card-circle {
-		@include border-radius(20px);
+		border-radius: 20px;
 	}
 
 	&.card-rounded {
-		@include border-radius($card-border-radius);
+		border-radius: $card-border-radius;
 	}
 
 	&.card-square {
-		@include border-radius(0);
+		border-radius: 0;
 	}
 
 	.divider {
@@ -36,7 +36,7 @@
 }
 
 .card-header, .card-footer, .card-section {
-	@include clearfix();
+	@include clearfix-hack();
 
 	.divider {
 		margin-left: -10px;
@@ -65,11 +65,11 @@
 	&.card-circle {
 		[class*="card-col"] {
 			&:first-child {
-				@include border-radius(20px 0 0 20px);
+				border-radius: 20px 0 0 20px;
 			}
 
 			&:last-child {
-				@include border-radius(0 20px 20px 0);
+				border-radius: 0 20px 20px 0;
 			}
 		}
 	}
@@ -77,11 +77,11 @@
 	&.card-rounded {
 		[class*="card-col"] {
 			&:first-child {
-				@include border-radius($card-border-radius 0 0 $card-border-radius);
+				border-radius: $card-border-radius 0 0 $card-border-radius;
 			}
 
 			&:last-child {
-				@include border-radius(0 $card-border-radius $card-border-radius 0);
+				border-radius: 0 $card-border-radius $card-border-radius 0;
 			}
 		}
 	}

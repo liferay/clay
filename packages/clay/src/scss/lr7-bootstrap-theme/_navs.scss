@@ -97,9 +97,7 @@
 	> li, .nav > li {
 		> a {
 			background-color: $nav-pills-link-bg;
-
-			@include border-radius($nav-pills-border-radius);
-
+			border-radius: $nav-pills-border-radius;
 			color: $nav-pills-link-color;
 
 			&:focus, &:hover {
@@ -146,21 +144,21 @@
 .nav.nav-circle {
 	> li > a,
 	.nav > li > a {
-		@include border-radius(20px);
+		border-radius: 20px;
 	}
 }
 
 .nav.nav-rounded {
 	> li > a,
 	.nav > li > a {
-		@include border-radius(5px);
+		border-radius: 5px;
 	}
 }
 
 .nav.nav-square {
 	> li > a,
 	.nav > li > a {
-		@include border-radius(0);
+		border-radius: 0;
 	}
 }
 

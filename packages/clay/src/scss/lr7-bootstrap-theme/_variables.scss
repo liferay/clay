@@ -5,7 +5,7 @@ $gray:                                     lighten(#000, 33.5%) !default; // #55
 $gray-light:                               lighten(#000, 46.7%) !default; // #777
 $gray-lighter:                             lighten(#000, 93.5%) !default; // #eee
 
-$brand-default:                            #868896;
+$brand-default: #868896;
 $brand-default-active: darken($brand-default, 12%);
 $brand-default-hover: lighten($brand-default, 8%);
 

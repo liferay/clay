@@ -41,8 +41,8 @@
 
 .nameplate-label {
 	@extend .nameplate;
-	@include border-radius(20px);
 
+	border-radius: 20px;
 	background-color: #EEE;
 	font-size: 11px;
 	margin: 0 5px 2px 0;
@@ -107,8 +107,7 @@
 // User Icons
 
 .user-icon {
-	@include border-radius($user-icon-border-radius);
-
+	border-radius: $user-icon-border-radius;
 	color: #FFF;
 	height: 60px;
 	line-height: 60px;
@@ -117,15 +116,15 @@
 	width: 60px;
 
 	&.user-icon-circle, .user-icon-circle & {
-		@include border-radius(50%);
+		border-radius: 50%;
 	}
 
 	&.user-icon-rounded, .user-icon-rounded & {
-		@include border-radius(5px);
+		border-radius: 5px;
 	}
 
 	&.user-icon-square, .user-icon-square & {
-		@include border-radius(0);
+		border-radius: 0;
 	}
 }
 

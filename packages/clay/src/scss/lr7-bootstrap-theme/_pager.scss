@@ -4,9 +4,7 @@
 		> a,
 		> span {
 			background-color: $pager-bg;
-
-			@include border-radius($pager-border-radius);
-
+			border-radius: $pager-border-radius;
 			border: 1px solid $pager-border;
 			border-width: $pager-border-width;
 			color: $pager-color;
@@ -38,9 +36,7 @@
 		> a,
 		> span {
 			background-color: $pager-inverse-bg;
-
-			@include border-radius($pager-inverse-border-radius);
-
+			border-radius: $pager-inverse-border-radius;
 			border: 1px solid $pager-inverse-border;
 			border-width: $pager-inverse-border-width;
 			color: $pager-inverse-color;
@@ -72,9 +68,7 @@
 		> a,
 		> span {
 			background-color: $pager-borderless1-bg;
-
-			@include border-radius($pager-borderless1-border-radius);
-
+			border-radius: $pager-borderless1-border-radius;
 			border: 1px solid $pager-borderless1-border;
 			border-width: $pager-borderless1-border-width;
 			color: $pager-borderless1-color;

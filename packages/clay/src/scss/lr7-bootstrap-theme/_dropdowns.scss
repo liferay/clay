@@ -238,7 +238,7 @@
 @media (max-width: $grid-float-breakpoint-max) {
 	.dropdown-full, .dropdown-wide {
 		&.open {
-			@include clearfix();
+			@include clearfix-hack();
 		}
 
 		.dropdown-menu {

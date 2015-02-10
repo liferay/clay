@@ -156,9 +156,7 @@ label.radio-default,
 			+ .skin:after {
 				background-color: $radio-check-color;
 				border-width: 0px;
-
-				@include border-radius(20px);
-
+				border-radius: 20px;
 				content: ' ';
 				display: block;
 				font-family: 'Glyphicons Halflings';
@@ -208,9 +206,7 @@ label.radio-default,
 		+ .skin:before {
 			background-color: $radio-bg;
 			border: 1px solid $radio-border;
-
-			@include border-radius(20px);
-
+			border-radius: 20px;
 			content: ' ';
 			display: block;
 			font-family: 'Glyphicons Halflings';

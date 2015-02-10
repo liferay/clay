@@ -47,15 +47,15 @@ figcaption, .figcaption {
 // -------------------------
 
 .figure-circle {
-	@include border-radius(50%);
+	border-radius: 50%;
 }
 
 .figure-rounded {
-	@include border-radius(10px);
+	border-radius: 10px;
 }
 
 .figure-square {
-	@include border-radius(0);
+	border-radius: 0;
 }
 
 // Figcaption helper classes
