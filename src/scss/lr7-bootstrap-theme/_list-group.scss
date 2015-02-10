@@ -66,6 +66,36 @@
 	width: 1%;
 }
 
+// List Group Item States
+
+.tabular-list-group {
+	.list-group-item-default {
+		@include color-tabular-list-group-item(#9CA4AC);
+	}
+
+	.list-group-item-primary {
+		@include color-tabular-list-group-item(#D437EF);
+	}
+
+	.list-group-item-info {
+		@include color-tabular-list-group-item(#577ED2);
+	}
+
+	.list-group-item-success {
+		@include color-tabular-list-group-item(#26C0BE);
+	}
+
+	.list-group-item-warning {
+		@include color-tabular-list-group-item(#FF6C58);
+	}
+
+	.list-group-item-danger {
+		@include color-tabular-list-group-item(#FF387A);
+	}
+}
+
+// min width 992px
+
 @media (min-width: $screen-md-min) {
 	.tabular-list-group {
 		.list-group-item-content, .list-group-item-field {
