@@ -8,15 +8,24 @@ section: Components
 		<h3>Header Toolbar</h3>
 
 		<blockquote class="blockquote-success blockquote-sm">
-			<p>Use <code>.header-toolbar</code> when you need a heading with some actions on either side. <code>.header-toolbar-left</code> and <code>.header-toolbar-right</code> will only be as wide as its content. <code>.header-toolbar-center</code> will fill the remaining width.</p>
+			<p>Use <code>.header-toolbar</code> when you need some actions with a one line heading that fills the remaining space.</p>
+
+			<p><code>.header-toolbar-left</code> and <code>.header-toolbar-right</code> will only be as wide as its content.</p>
+
+			<p><code>.header-toolbar-center</code> will fill the remaining width.</p>
 
 			<p>Adjust the size of the actions by adding padding to the anchor tag and matching the line-height in <code>.header-toolbar-center</code> to the height of the anchor.</p>
 		</blockquote>
 
 		<div class="header-toolbar">
 			<ul class="header-toolbar-left">
-				<li>
-					<a href="#1">All Descriptions <span class="icon-caret-down"></span></a>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">All Descriptions <span class="icon-caret-down"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#1">Export</a></li>
+						<li><a href="#1">Import</a></li>
+						<li><a href="#1">Configuration</a></li>
+					</ul>
 				</li>
 			</ul>
 
@@ -337,6 +346,68 @@ section: Components
 				</div>
 			</li>
 		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Header Toolbar Success</h3>
+
+		<header class="header-first-level header-toolbar header-toolbar-success" style="margin-bottom:10px;">
+			<ul class="header-toolbar-left">
+				<li>
+					<a href="#1"><span class="icon-align-justify"></span></a>
+				</li>
+			</ul>
+
+			<ul class="header-toolbar-right">
+				<li>
+					<a href="#1"><span class="icon-upload-alt"></span></a>
+				</li>
+				<li>
+					<a href="#1"><span class="icon-download-alt"></span></a>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#1">Export</a></li>
+						<li><a href="#1">Import</a></li>
+						<li><a href="#1">Configuration</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<div class="header-toolbar-center">
+				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+			</div>
+		</header>
+
+		<header class="header-second-level header-toolbar header-toolbar-success">
+			<ul class="header-toolbar-left">
+				<li>
+					<a href="#"><span class="icon-align-justify"></span></a>
+				</li>
+
+				<li>
+					<a href="#"><span class="icon-chevron-left"></span></a>
+				</li>
+			</ul>
+
+			<ul class="header-toolbar-right">
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-ellipsis-vertical"></span></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">Export</a></li>
+						<li><a href="#">Import</a></li>
+						<li><a href="#">Configuration</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<div class="header-toolbar-center">
+				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+			</div>
+		</header>
 	</div>
 </div>
 

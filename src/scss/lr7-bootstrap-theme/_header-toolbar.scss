@@ -96,20 +96,50 @@
 	}
 }
 
+// Header Skins
+
+.header-toolbar-danger {
+	@include color-header-toolbar(#FFF, $brand-danger);
+}
+
+.header-toolbar-default {
+	@include color-header-toolbar(#FFF, $brand-default);
+}
+
+.header-toolbar-primary {
+	@include color-header-toolbar(#FFF, $brand-primary);
+}
+
+.header-toolbar-success {
+	@include color-header-toolbar(#FFF, #359361);
+}
+
+.header-toolbar-warning {
+	@include color-header-toolbar(#FFF, $brand-warning);
+}
+
+// min width 768px
+
 @media (min-width: $grid-float-breakpoint) {
 	.header-first-level, .header-second-level {
 		padding: 0 11px;
 
 		.header-toolbar-center {
-			font-size: 18px;
-			line-height: 66px;
+			font-size: 16px;
+			line-height: 52px;
 		}
 
 		.header-toolbar-left, .header-toolbar-right {
-			> li > a {
-				font-size: 22px;
-				margin: 10px 0 9px;
-				padding: 10px 11px 6px 11px;
+			> li {
+				display: inline-block;
+				float: none;
+
+				> a {
+					border-radius: 2px;
+					font-size: 22px;
+					margin: 5px 0;
+					padding: 6px 11px 5px 11px;
+				}
 			}
 		}
 	}

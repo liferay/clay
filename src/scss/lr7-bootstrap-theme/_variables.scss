@@ -245,11 +245,11 @@ $dropdown-inverse-arrow-color: $dropdown-inverse-bg;
 // Portlet Headers
 $header-first-level-bg: $brand-info;
 $header-first-level-color: #FFF;
-$header-first-level-link-bg: #F00;
+$header-first-level-link-bg: $brand-info-hover;
 
 $header-second-level-bg: $brand-primary;
 $header-second-level-color: #FFF;
-$header-second-level-link-bg: #F00;
+$header-second-level-link-bg: $brand-primary-hover;
 
 // Nameplates
 $nameplate-list-border-color: $brand-default;
