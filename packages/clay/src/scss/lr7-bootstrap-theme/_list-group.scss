@@ -1,3 +1,10 @@
+.list-group-heading {
+	@extend .list-group-item;
+
+	background-color: #F8F8F8;
+	font-weight: bold;
+}
+
 // Tabular List Group
 
 .tabular-list-group {
