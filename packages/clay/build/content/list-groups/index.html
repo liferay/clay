@@ -152,8 +152,6 @@ collapse
 </li>
 <li class=""><a href="../../content/extending-nameplates">Extending Nameplates</a>
 </li>
-<li class=""><a href="../../content/extending-notifications">Extending Notifications</a>
-</li>
 </ul>
 </div>
 </li>
@@ -453,18 +451,20 @@ collapse
 </div>
 
 <div class="row row-spacing">
-  <div class="col-md-12">
-    <h3>List Group</h3>
+	<div class="col-md-12">
+		<h3>List Group</h3>
 
-    <ul class="list-group">
-      <li class="list-group-item">List Item 1</li>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.list-group</code> or <code>.linked-list-group</code> to quickly assemble a list of elements such as a checklist, vertical navigation, or a news feed.</p>
+		</blockquote>
 
-      <li class="list-group-item">List Item 2</li>
-
-      <li class="list-group-item">List Item 3</li>
-
-      <li class="list-group-item">List Item 4</li>
-    </ul>
+		<ul class="list-group">
+			<li class="list-group-heading">List Heading</li>
+			<li class="list-group-item">List Item 1</li>
+			<li class="list-group-item">List Item 2</li>
+			<li class="list-group-item">List Item 3</li>
+			<li class="list-group-item">List Item 4</li>
+		</ul>
 
     <pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
     &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
@@ -473,7 +473,7 @@ collapse
     &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 
-  </div>
+	</div>
 </div>
 
 <div class="row row-spacing">
@@ -481,13 +481,15 @@ collapse
 		<h3>Linked List Groups</h3>
 
 		<div class="list-group">
+			<h5 class="list-group-heading">List Group Heading</h5>
+
 			<a href="#" class="list-group-item">List Item 1</a>
 
-			<a href="#" class="active list-group-item">List Item 2 - Active</a>
+			<a href="#" class="list-group-item">List Item 2</a>
 
 			<a href="#" class="list-group-item">List Item 3</a>
 
-			<a href="#" class="disabled list-group-item">List Item 4 - Disabled</a>
+			<a href="#" class="list-group-item">List Item 4</a>
 		</div>
 
 		<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
