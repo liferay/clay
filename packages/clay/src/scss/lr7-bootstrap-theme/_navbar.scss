@@ -1,380 +1,224 @@
-.navbar-default {
-	border-width: 0 0 1px 0;
+// These styles should be in _styled theme
 
-	@include box-shadow(0 1px 3px -3px #000);
+.collapse-basic-search {
+	.basic-search {
+		position: absolute;
+		top: 0;
 
-	min-height: 0;
+		&.open {
+			.basic-search-close {
+				display: inline-block;
+			}
 
-	.navbar-nav {
-		margin-bottom: 0;
-		margin-top: 0;
-
-		> li:last-child > a {
-			border-right-width: 0;
-		}
-
-		> li > a {
-			color: $navbar-default-link-color;
-
-			&:hover,
-			&:focus {
-				color: $navbar-default-link-hover-color;
-				background-color: $navbar-default-link-hover-bg;
+			.input-group-input .form-control {
+				left: 0;
 			}
 		}
 
-		> .open > a {
-			&, &:hover, &:focus {
-				background-color: $navbar-default-link-open-bg;
-				color: $navbar-default-link-open-color;
+		.input-group-input {
+			overflow: hidden;
+
+			.form-control {
+				left: 100%;
 			}
 		}
 	}
+
+	.basic-search-close {
+		display: none;
+	}
+
+	.navbar-nav:first-child {
+		float: none;
+	}
+
+	.navbar-nav > li > a, .navbar-toggle {
+		z-index: 1;
+	}
+}
+
+/* make navbar dropdown position absolute
+	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+.navbar .navbar-collapse {
+	&, &:first-child {
+		background-color: #FFF;
+		border: 1px solid #DDD;
+		left: -1px;
+		position: absolute;
+		right: -1px;
+		top: 100%;
+		z-index: $zindex-navbar;
+	}
+}
+
+// navbar-form
+.navbar-form {
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.navbar-header .navbar-form, .navbar-no-collapse .navbar-form {
+	border-width: 0;
+	margin: 7px 15px;
+	padding: 0;
 }
 
 .navbar-nav {
-	> li > .dropdown-menu {
-		margin-top: $box-shadow-default-y;
+	> li > a {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+//navbar-no-collapse
+.navbar-no-collapse .navbar-nav {
+	float: left;
+	margin: 0 15px;
+
+	> li {
+		float: left;
+
+		> a {
+			padding-bottom: 15px;
+			padding-top: 15px;
+		}
+	}
+}
+
+//navbar toggle
+.navbar-toggle, .navbar-toggle-left {
+	margin: 7px 15px;
+	padding: 7px 10px;
+}
+
+.navbar-toggle .icon-bar {
+	width: 18px;
+}
+
+.navbar-toggle-left {
+	float: left;
+}
+
+//lr7 mobile basic search
+
+@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+	.basic-search {
+		.input-group-input {
+			text-align: right;
+
+			.form-control {
+				max-width: 250px;
+				min-width: 100px;
+			}
+		}
+	}
+
+	//lr7 undo collapse-basic-search for desktop
+	.collapse-basic-search {
+		.basic-search {
+			position: static;
+
+			.input-group-input {
+				overflow: visible;
+
+				.form-control {
+					left: auto;
+				}
+			}
+		}
+
+		.navbar-nav:first-child {
+			float: left;
+		}
+	}
+
+	//lr7 navbar mobile (when navbar-header comes after navbar-collapse)
+	.navbar .navbar-collapse {
+		background-color: transparent;
+		border-width: 0;
+		float: none;
+		left: auto;
+		position: static;
+		right: auto;
+		top: auto;
+		z-index: 0;
+	}
+
+	.navbar .navbar-collapse {
+		&:first-child {
+			background-color: transparent;
+			border-width: 0;
+			float: left;
+			left: auto;
+			position: static;
+			right: auto;
+			top: auto;
+			z-index: 0;
+		}
+
+		+ .navbar-header {
+			float: none;
+
+			.basic-search {
+				width: auto;
+			}
+		}
 	}
 
 	.navbar-form {
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
-/* use different state colors for navbar in mobile (not that important for ie8?) */
-@media (max-width: $grid-float-breakpoint-max) {
-	.navbar-default {
-		.navbar-collapse .navbar-nav {
-			> li > a {
-				&:focus, &:hover {
-					background-color: $dropdown-link-hover-bg;
-					color: $navbar-default-link-active-color;
-				}
-			}
-
-			> .active > a {
-				&, &:focus, &:hover {
-					background-color: $dropdown-link-active-bg;
-					color: $dropdown-link-active-color;
-				}
-			}
-
-			> .disabled > a {
-				&, &:focus, &:hover {
-					background-color: $navbar-default-link-disabled-bg;
-					color: $dropdown-link-disabled-color;
-				}
-			}
-
-			> .open > a {
-				&, &:focus, &:hover {
-					background-color: $dropdown-link-hover-bg;
-					color: $navbar-default-link-active-color;
-				}
-			}
-		}
-	}
-
-	.navbar-default .navbar-nav {
-		.open .dropdown-menu {
-			> li > a {
-				&:hover, &:focus {
-					background-color: $dropdown-link-hover-bg;
-					color: $navbar-default-link-active-color;
-				}
-			}
-		}
-	}
-
-	.navbar-nav {
-		.open .dropdown-menu {
-			> li > a, .dropdown-header {
-				padding: 5px 15px 5px 15px;
-			}
-
-			.inline-scroller, .linked-list {
-				li a {
-					padding: 3px 15px;
-
-					&:focus, &:hover {
-						color: $navbar-default-link-active-color;
-					}
-				}
-			}
-		}
-	}
-}
-
-/* navbar inverse styles */
-.navbar-inverse {
-	.navbar-nav {
-		> .open > a {
-			&, &:hover, &:focus {
-				background-color: $navbar-inverse-link-open-bg;
-				color: $navbar-inverse-link-open-color;
-			}
-		}
-	}
-}
-
-/* navbar-header with content on right (aligns basic search on right) */
-.navbar-header-right {
-	float: right;
-	text-align: right;
-
-	.navbar-brand {
-		float: right;
-		padding: 0 15px 0 0;
-	}
-
-	.navbar-toggle {
-		border-width: 0;
-		left: 0;
-		margin-left: 0;
-		margin-right: 0;
-		padding: 9px 16px;
-
-		&:focus, &:hover {
-			background-color: transparent;
-		}
-
-		.page-name {
-			display: inline-block;
-
-			&:after {
-				background-color: $navbar-default-link-active-highlight;
-				content: "";
-				display: block;
-				height: 4px;
-				position: relative;
-				top: 8px;
-				width: 100%;
-			}
-		}
-	}
-}
-
-@media (max-width: $grid-float-breakpoint-max) {
-	.navbar-header-right {
-		float: none;
-		padding: 0 0 0 75px;
-
-		.navbar-toggle {
-			margin: 0;
-			position: absolute;
-			z-index: 1;
-		}
-	}
-}
-
-/* navbar basic search bar common styles between mobile and desktop */
-.navbar .basic-search {
-	border-width: 0;
-	padding: 0;
-	text-align: right;
-
-	&.navbar-form {
 		margin: 0;
-	}
+		padding: 7px 0;
 
-	button {
-		background-color: #FFF;
-		color: #32A8E6;
-		padding: 10px 12px;
-		z-index: 2;
-	}
+		.btn {
+			vertical-align: top;
+		}
 
-	input[type="text"] {
-		display: none;
-		height: 40px;
-		float: right;
-		max-width: 100%;
-
-		&, &:focus {
-			border-width: 0;
-			padding: 6px 12px;
+		.form-group {
+			display: inline-block;
+			margin-bottom: 0;
 		}
 	}
 
-	.minimize-search {
-		opacity: 0;
-		position: absolute;
-
-		button {
-			margin-right: 3px;
-		}
-	}
-}
-
-/* navbar basic search bar open in mobile */
-.navbar.search-open .basic-search {
-	button {
-		padding: 10px 5px;
-	}
-
-	button[type="submit"] span {
-		opacity: 0.4;
-	}
-
-	input[type="text"] {
-		&, &:focus {
-			display: block;
-			padding-left: 28px;
-		}
-
-		+ .input-group-btn {
-			position: absolute;
-		}
-	}
-
-	.minimize-search {
-		opacity: 1;
-		position: relative;
-	}
-}
-
-/* navbar basic search bar in desktop */
-@media (min-width: $grid-float-breakpoint) {
-	.navbar.search-open .basic-search {
-		button {
-			padding: 10px 12px;
-		}
-
-		button[type="submit"] span {
-			opacity: 1;
-		}
-
-		input[type="text"] {
-			&, &:focus {
-				padding-left: 12px;
-			}
-
-			+ .input-group-btn {
-				position: static;
-			}
-		}
-
-		.minimize-search {
-			opacity: 0;
-			position: absolute;
-		}
-	}
-
-	.navbar .basic-search {
-		max-width: 200px;
-
-		input[type="text"] {
-			display: block;
-			height: 66px;
-			max-width: 150px;
-
-			&, &:focus {
-				border-left: 1px solid #D8D8D8;
-			}
-		}
-	}
-
-	.navbar-single-link .basic-search {
+	.navbar-header .input-group-input .form-control {
 		max-width: none;
+		min-width: 0;
 	}
-}
 
-/* navbar-single-link common styles between mobile and destkop */
-.navbar-single-link {
+	.navbar-header-right {
+		float: right;
+	}
+
 	.navbar-nav {
-		float: left;
-		margin-left: 0;
-		margin-right: 0;
+		margin-right: 15px;
 
-		&.navbar-right:last-child {
-			margin-right: 15px;
-		}
-
-		> li > a:after {
-			background-color: $navbar-default-link-active-highlight;
-			content: "";
-			display: block;
-			height: 4px;
-			position: relative;
-			top: 11px;
-			width: 100%;
+		&.navbar-right {
+			margin-right: 0;
+			margin-left: 15px;
 		}
 	}
 }
 
-/* navbar media queries */
-@media (min-width: $grid-float-breakpoint) {
-	.navbar-default {
-		.navbar-collapse {
-			padding-left: 0;
-			padding-right: 0;
-		}
+@media screen and (min-width: $screen-md-min) { //min-width: 992px
+	.basic-search {
+		.input-group-input {
+			text-align: right;
 
-		.navbar-nav {
-			> li > a {
-				border: solid $navbar-default-border;
-				border-width: 0 1px;
-				margin-left: -1px;
-				padding: 23px 30px 19px;
-
-				&:after {
-					background-color: transparent;
-					content: "";
-					display: block;
-					height: 4px;
-					position: relative;
-					top: 19px;
-					width: 100%;
-				}
-
-				&:focus, &:hover {
-					@include background-image(linear-gradient(rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%));
-
-					color: $navbar-default-link-color;
-				}
-			}
-
-			> .active > a {
-				background-color: $navbar-default-link-active-bg;
-				border-color: transparent;
-
-				&:after {
-					background-color: $navbar-default-link-active-highlight;
-					content: "";
-					display: block;
-					height: 4px;
-					position: relative;
-					top: 19px;
-					width: 100%;
-				}
-
-				&:focus, &:hover {
-					@include background-image(none);
-				}
-			}
-
-			> .disabled > a {
-				&:focus, &:hover {
-					@include background-image(none);
-				}
-			}
-
-			> .open > a {
-				&, &:focus, &:hover {
-					background-color: transparent;
-					border: solid $navbar-default-border;
-					border-width: 0 1px;
-					color: $navbar-default-link-color;
-				}
+			.form-control {
+				display: inline-block;
+				float: none;
+				max-width: 250px;
+				min-width: 100px;
 			}
 		}
 	}
+
+	.navbar-no-collapse .basic-search {
+		float: right;
+		max-width: 300px;
+	}
 }
 
-/* convert this to mobile first */
-@media (max-width: $grid-float-breakpoint-max) {
+@media screen and (max-width: $grid-float-breakpoint-max) { //max-width: 768px
 	.navbar-nav .open .dropdown-menu {
 		@include box-shadow(none);
 
@@ -389,5 +233,25 @@
 		&.dropdown-menu-inverse {
 			background-color: $dropdown-inverse-bg;
 		}
+
+		> li > a, .dropdown-header {
+			padding: 5px 15px;
+		}
+
+		.inline-scroller, .linked-list {
+			li a {
+				padding: 3px 15px;
+
+				&:focus, &:hover {
+					color: $navbar-default-link-active-color;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $screen-xs-min) { //max-width: 480px
+	.basic-search {
+		float: left;
 	}
 }
