@@ -398,7 +398,7 @@ collapse
 			<p>Use this pattern when you want the search bar to always be shown (in mobile and desktop). </p>
 			<p><code>.navbar-collapse</code> needs to be declared before <code>.navbar-header</code>. It allows the search box to fill the remaining space in smaller spaces.</p>
 		</blockquote>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default collapse-basic-search">
 			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Message Boards</a></li>
@@ -492,7 +492,7 @@ collapse
 			<p>Use the navbar-no-collapse component to preserve desktop navbar styles in mobile. It's useful when there are only one or two links in the navbar; where collapsing doesn't make sense.</p>
 		</blockquote>
 
-		<nav class="navbar navbar-default navbar-no-collapse">
+		<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Message Boards</a></li>
 				<li><a href="#">Blogs</a></li>
@@ -528,36 +528,39 @@ collapse
 </div>
 
 <script>
-	YUI().use('aui-tooltip', 'event', 'node', function(A) {
-		var mainContent = A.one('#mainContent');
+	+function($) {
+		$.fn.collapsibleSearch = function() {
+			this.find('.basic-search button[type="submit"]').on('click', function(event) {
+				if ($(window).width() < 768) {
+					var basicSearch = $(this).parents('.basic-search');
+					var closeButton = '<button class="basic-search-close btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-right"></span></button>';
 
-		mainContent.delegate('click', function(event) {
-			event.preventDefault();
-		}, 'a');
+					if(!basicSearch.find('.basic-search-close').length) {
+						$(this).before(closeButton);
+					}
 
-		// mainContent.delegate('click', function(event) {
-		// 	var ct = event.currentTarget;
-		// 	event.preventDefault();
+					basicSearch.on('click', '.basic-search-close', function(event) {
+						basicSearch.removeClass('open');
+						basicSearch.off('click');
+					});
 
-		// 	ct.ancestor('.navbar-header').next().toggleClass('in');
-		// }, '.navbar-toggle');
-	});
+					if (!basicSearch.hasClass('open')) {
+						event.preventDefault();
 
-	$('.basic-search button[type="submit"]').on('click', function(event) {
-		var basicSearch = $(this).parents('.basic-search');
+						basicSearch.addClass('open');
 
-		basicSearch.on('click', '.basic-search-close', function(event) {
-			basicSearch.removeClass('open');
-			console.log('asdfadsf');
-			basicSearch.off('click');
-		});
+						setTimeout(function() {
+							basicSearch.find('input[type="text"]').focus();
+						}, 500);
+					}
+				}
+			});
 
-		if (!basicSearch.hasClass('open')) {
-			event.preventDefault();
-
-			basicSearch.addClass('open');
+			return this;
 		}
-	});
+	}(jQuery);
+
+	$('.collapse-basic-search').collapsibleSearch();
 </script>
 	</div>
 
