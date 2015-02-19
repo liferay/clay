@@ -207,25 +207,201 @@ collapse
 		
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Navbar Default</em></h3>
-		<nav class="navbar navbar-default">
-			<div class="navbar-header navbar-header-right">
-				<button type="button" class="navbar-toggle">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="page-name">Active</span><!-- current page name goes here e.g. Message Boards Home -->
-					<span class="caret"></span>
-				</button>
+		<h3>Navbar Default</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>.navbar-toggle</code> defaults to the right, but use <code class="html">class="navbar-toggle navbar-toggle-left"</code> to align it on the left.</p>
+		</blockquote>
 
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-0" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<div class="navbar-collapse collapse" id="navbar-collapse-0" aria-expanded="false">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<pre><code>&lt;nav class=&quot;navbar navbar-default&quot;&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;div class=&quot;navbar-header&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar-collapse-0&quot; aria-expanded=&quot;false&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Brand&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;navbar-collapse collapse&quot; id=&quot;navbar-collapse-0&quot; aria-expanded=&quot;false&quot;&gt;
+      &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;form class=&quot;navbar-form navbar-left&quot; role=&quot;search&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+      &lt;/form&gt;
+      &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+		<h3>Navbar with Basic Search</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The basic search component was created specifically for search bars inside a navbar. We wanted a search bar that fills the remaining space. The minimum width of the input is 100px and maximum width is 300px.</p>
+
+			<p>When using <code>.basic-search</code>, elements should be floated around it. <code>.basic-search</code> should be <code>float: none;</code> and always be the last element declared in a group of floated elements.</p>
+		</blockquote>
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<div class="navbar-collapse collapse" id="navbar-collapse-2" aria-expanded="false">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
 				<form class="basic-search input-group navbar-form">
-					<input class="form-control" placeholder=" Search..." type="text" />
+					<div class="input-group-input">
+						<input class="form-control" placeholder=" Search..." type="text" />
+					</div>
+
 					<div class="input-group-btn">
 						<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
 					</div>
 				</form>
 			</div>
-			<div class="collapse navbar-collapse">
+		</nav>
+
+		<pre><code class="html">&lt;nav class=&quot;navbar navbar-default&quot;&gt;
+    &lt;div class=&quot;navbar-header&quot;&gt;...&lt;/div&gt;
+
+    &lt;div class=&quot;navbar-collapse collapse&quot; id=&quot;navbar-collapse-2&quot; aria-expanded=&quot;false&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav&quot;&gt;...&lt;/ul&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;...&lt;/ul&gt;
+        &lt;form class=&quot;basic-search input-group navbar-form&quot;&gt;
+            &lt;div class=&quot;input-group-input&quot;&gt;
+                &lt;input class=&quot;form-control&quot; placeholder=&quot; Search...&quot; type=&quot;text&quot; /&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;input-group-btn&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&gt;
+                    &lt;span class=&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+		<h3>Navbar with Custom Toggle and Basic Search in Navbar Header</h3>
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Use this pattern when you want the search bar to always be shown (in mobile and desktop). </p>
+			<p><code>.navbar-collapse</code> needs to be declared before <code>.navbar-header</code>. It allows the search box to fill the remaining space in smaller spaces.</p>
+		</blockquote>
+		<nav class="navbar navbar-default">
+			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Active</a></li>
+					<li class="active"><a href="#">Message Boards</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
 						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
@@ -260,261 +436,95 @@ collapse
 					<li class="disabled"><a href="#">Disabled</a></li>
 				</ul>
 			</div>
+
+			<div class="navbar-header navbar-header-right">
+				<button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
+					<span class="caret"></span>
+				</button>
+
+				<form class="basic-search input-group navbar-form">
+					<div class="input-group-input">
+						<input class="form-control" placeholder=" Search..." type="text" />
+					</div>
+
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+					</div>
+				</form>
+			</div>
 		</nav>
+
+		<pre><code>&lt;nav class=&quot;navbar navbar-default&quot;&gt;
+    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbar-collapse-1&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+            &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Message Boards&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;navbar-header navbar-header-right&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle navbar-toggle-left collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar-collapse-1&quot;&gt;
+            &lt;span class=&quot;page-name&quot;&gt;Message Boards&lt;/span&gt;
+            &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+
+        &lt;form class=&quot;basic-search input-group navbar-form&quot;&gt;
+            &lt;div class=&quot;input-group-input&quot;&gt;
+                &lt;input class=&quot;form-control&quot; placeholder=&quot; Search...&quot; type=&quot;text&quot; /&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;input-group-btn&quot;&gt;
+                &lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Navbar Single Link (use this only when there is one link in the navbar?)</em></h3>
-		<nav class="navbar navbar-default navbar-single-link">
+		<h3>Navbar No Collapse</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use the navbar-no-collapse component to preserve desktop navbar styles in mobile. It's useful when there are only one or two links in the navbar; where collapsing doesn't make sense.</p>
+		</blockquote>
+
+		<nav class="navbar navbar-default navbar-no-collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Active</a></li>
+				<li class="active"><a href="#">Message Boards</a></li>
+				<li><a href="#">Blogs</a></li>
 			</ul>
 
 			<form class="basic-search input-group navbar-form">
-				<input class="form-control" placeholder=" Search..." type="text" />
-				<span class="input-group-btn">
+				<div class="input-group-input">
+					<input class="form-control" placeholder=" Search..." type="text" />
+				</div>
+				<div class="input-group-btn">
 					<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-				</span>
+				</div>
 			</form>
 		</nav>
+
+		<pre><code>&lt;nav class=&quot;navbar navbar-default navbar-no-collapse&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Message Boards&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blogs&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;form class=&quot;basic-search input-group navbar-form&quot;&gt;
+        &lt;div class=&quot;input-group-input&quot;&gt;
+            &lt;input class=&quot;form-control&quot; placeholder=&quot; Search...&quot; type=&quot;text&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;input-group-btn&quot;&gt;
+            &lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/nav&gt;</code></pre>
+
 	</div>
-</div>
-
-
-
-
-
-
-
-<div class="col-md-12">
-	<nav class="navbar navbar-default navbar-single-link">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Brand</a>
-			</div>
-			<div class="collapse navbar-collapse">
-				<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Joe Bloggs</a></p>
-			</div>
-		</div>
-	</nav>
-
-	<h3><em>Navbar Inverse</em></h3>
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
-						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
-							<li class="dropdown-header" role="presentation">Dropdown Header</li>
-							<li role="presentation">
-								<ul class="inline-scroller">
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-								</ul>
-							</li>
-							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-							<li class="divider" role="presentation"></li>
-							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-						</ul>
-					</li>
-
-					<li class="dropdown dropdown-wide">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown Wide <span class="caret"></span></a>
-
-						<ul class="dropdown-menu">
-							<li class="col-sm-4">
-								<ul class="link-list">
-									<li class="link-list-heading">By Resource</li>
-									<li class="disabled"><a href="#1">Support Home</a></li>
-									<li><a href="#1">Ask the Experts</a></li>
-									<li><a href="#1">Chat or Call</a></li>
-								</ul>
-
-								<ul class="link-list">
-									<li class="link-list-heading">By Product</li>
-									<li><a href="#1">Developing for the Platform</a></li>
-									<li><a href="#1">Mastering Fundamentals</a></li>
-									<li><a href="#1">Styling with Themes</a></li>
-									<li><a href="#1">Managing Content</a></li>
-								</ul>
-							</li>
-
-							<li class="col-sm-4">
-								<ul class="link-list">
-									<li class="link-list-heading">Popular Picks</li>
-									<li><a href="#1">Error Messages</a></li>
-									<li><a href="#1">Updates: Service Packs & Fixes</a></li>
-									<li><a href="#1">Install, Upgrade, & Activate</a></li>
-									<li><a href="#1">Regular Drivers</a></li>
-									<li><a href="#1">Hardware Drivers</a></li>
-								</ul>
-
-								<ul class="link-list">
-									<li class="link-list-heading">Security</li>
-									<li><a href="#1">Security Home</a></li>
-									<li><a href="#1">Security Essentials</a></li>
-									<li><a href="#1">Protecting Your Data</a></li>
-									<li><a href="#1">Securing Your Browser</a></li>
-								</ul>
-							</li>
-
-							<li class="col-sm-4">
-								<ul class="link-list">
-									<li class="link-list-heading">By Audience</li>
-									<li><a href="#1">For Home Users</a></li>
-									<li><a href="#1">For Small Business</a></li>
-									<li><a href="#1">For IT Professionals</a></li>
-									<li><a href="#1">For Developers</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-
-					<li class="dropdown dropdown-full">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown Full <span class="caret"></span></a>
-
-						<ul class="dropdown-menu">
-							<li class="col-sm-4">
-								<ul class="link-list">
-									<li class="link-list-heading">By Resource</li>
-									<li class="disabled"><a href="#1">Support Home</a></li>
-									<li><a href="#1">Ask the Experts</a></li>
-									<li><a href="#1">Chat or Call</a></li>
-								</ul>
-
-								<ul class="link-list">
-									<li class="link-list-heading">By Product</li>
-									<li><a href="#1">Developing for the Platform</a></li>
-									<li><a href="#1">Mastering Fundamentals</a></li>
-									<li><a href="#1">Styling with Themes</a></li>
-									<li><a href="#1">Managing Content</a></li>
-								</ul>
-							</li>
-
-							<li class="col-sm-4">
-								<ul class="link-list">
-									<li class="link-list-heading">Popular Picks</li>
-									<li><a href="#1">Error Messages</a></li>
-									<li><a href="#1">Updates: Service Packs & Fixes</a></li>
-									<li><a href="#1">Install, Upgrade, & Activate</a></li>
-									<li><a href="#1">Regular Drivers</a></li>
-									<li><a href="#1">Hardware Drivers</a></li>
-								</ul>
-
-								<ul class="link-list">
-									<li class="link-list-heading">Security</li>
-									<li><a href="#1">Security Home</a></li>
-									<li><a href="#1">Security Essentials</a></li>
-									<li><a href="#1">Protecting Your Data</a></li>
-									<li><a href="#1">Securing Your Browser</a></li>
-								</ul>
-							</li>
-
-							<li class="col-sm-4">
-								<ul class="link-list">
-									<li class="link-list-heading">By Audience</li>
-									<li><a href="#1">For Home Users</a></li>
-									<li><a href="#1">For Small Business</a></li>
-									<li><a href="#1">For IT Professionals</a></li>
-									<li><a href="#1">For Developers</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<form class="form-inline navbar-form">
-							<div class="form-group">
-								<input class="form-control" type="text" />
-							</div>
-
-							<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-						</form>
-					</li>
-
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th-large"></span> <span class="caret"></span></a>
-
-						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
-							<li class="dropdown-header" role="presentation">Dropdown Header</li>
-							<li role="presentation">
-								<ul class="inline-scroller">
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-								</ul>
-							</li>
-							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-							<li class="divider" role="presentation"></li>
-							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Brand</a>
-			</div>
-			<div class="collapse navbar-collapse">
-				<p class="navbar-text">Signed in as Joe Bloggs</p>
-			</div>
-		</div>
-	</nav>
 </div>
 
 <script>
@@ -525,45 +535,28 @@ collapse
 			event.preventDefault();
 		}, 'a');
 
-		mainContent.delegate('click', function(event) {
-			var ct = event.currentTarget;
+		// mainContent.delegate('click', function(event) {
+		// 	var ct = event.currentTarget;
+		// 	event.preventDefault();
+
+		// 	ct.ancestor('.navbar-header').next().toggleClass('in');
+		// }, '.navbar-toggle');
+	});
+
+	$('.basic-search button[type="submit"]').on('click', function(event) {
+		var basicSearch = $(this).parents('.basic-search');
+
+		basicSearch.on('click', '.basic-search-close', function(event) {
+			basicSearch.removeClass('open');
+			console.log('asdfadsf');
+			basicSearch.off('click');
+		});
+
+		if (!basicSearch.hasClass('open')) {
 			event.preventDefault();
 
-			ct.ancestor('.navbar-header').next().toggleClass('in');
-		}, '.navbar-toggle');
-
-		/* navbar search mobile functionality */
-
-		var toggleBasicSearch = function(event) {
-			var ct = event.currentTarget;
-			var navbar = ct.ancestor('.navbar');
-
-			if (A.one('document').get('winWidth') <= 767) {
-				if (navbar.hasClass('search-open')) {
-					// add X to close here.
-					navbar.removeClass('search-open');
-				}
-				else {
-					event.preventDefault();
-					// add minimize search here.
-					if (!ct.ancestor('.basic-search').one('.minimize-search')) {
-						ct.ancestor('.basic-search').prepend(A.Node.create('<div class="input-group-btn minimize-search"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-left"></span></button></div>'));
-					}
-
-					navbar.addClass('search-open');
-				}
-			}
-		};
-
-		A.one('#mainContent').delegate('click', function(event) {
-
-			toggleBasicSearch(event);
-		}, '.basic-search button[type="submit"]');
-
-		/* navbar search close functionality */
-		A.one('#mainContent').delegate('click', function(event) {
-			toggleBasicSearch(event);
-		}, '.minimize-search');
+			basicSearch.addClass('open');
+		}
 	});
 </script>
 	</div>
