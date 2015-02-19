@@ -7833,10 +7833,15 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     display: inline-block; }
   .collapse-basic-search .basic-search.open .input-group-input .form-control {
     left: 0; }
+  .collapse-basic-search .basic-search .input-group-btn:last-child > .btn, .collapse-basic-search .basic-search .input-group-btn:last-child > .btn-group {
+    margin-left: 0; }
   .collapse-basic-search .basic-search .input-group-input {
     overflow: hidden; }
     .collapse-basic-search .basic-search .input-group-input .form-control {
-      left: 100%; }
+      left: 100%;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
 .collapse-basic-search .basic-search-close {
   display: none; }
 .collapse-basic-search .navbar-nav:first-child {
@@ -7861,8 +7866,8 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 .navbar-header .navbar-form, .navbar-no-collapse .navbar-form {
   border-width: 0;
-  margin: 7px 15px;
-  padding: 0; }
+  margin: 0;
+  padding: 7px 15px; }
 
 .navbar-nav > li > a {
   padding-left: 15px;
@@ -7901,6 +7906,8 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
         left: auto; }
   .collapse-basic-search .navbar-nav:first-child {
     float: left; }
+  .collapse-basic-search .basic-search.open .basic-search-close {
+    display: none; }
   .navbar .navbar-collapse {
     background-color: transparent;
     border-width: 0;
@@ -7940,7 +7947,9 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     margin-right: 15px; }
     .navbar-nav.navbar-right {
       margin-right: 0;
-      margin-left: 15px; } }
+      margin-left: 15px; }
+      .navbar-nav.navbar-right:last-child {
+        margin-right: 0; } }
 
 @media screen and (min-width: 992px) {
   .basic-search .input-group-input {
@@ -7974,6 +7983,77 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 @media screen and (max-width: 480px) {
   .basic-search {
     float: left; } }
+
+.navbar-default {
+  border-width: 0;
+  box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.3); }
+  .navbar-default .navbar-collapse {
+    border-width: 0; }
+  .navbar-default .navbar-nav > li > a {
+    max-height: 50px; }
+  .navbar-default .navbar-toggle {
+    border-width: 0;
+    height: 50px;
+    margin: 0;
+    padding: 15px 15px 16px; }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+      background-color: transparent; }
+    .navbar-default .navbar-toggle .page-name {
+      display: inline-block; }
+      .navbar-default .navbar-toggle .page-name:after {
+        background-color: #32a8e6;
+        content: "";
+        display: block;
+        height: 4px;
+        position: relative;
+        top: 11px;
+        width: 100%; }
+
+.navbar-default.collapse-basic-search .basic-search {
+  padding: 0; }
+  .navbar-default.collapse-basic-search .basic-search input[type="text"] {
+    border-width: 0;
+    height: 50px; }
+    .navbar-default.collapse-basic-search .basic-search input[type="text"]:focus {
+      border-width: 0;
+      padding: 6px 16px; }
+  .navbar-default.collapse-basic-search .basic-search .btn {
+    background-color: transparent;
+    color: #2B4259;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px; }
+
+@media screen and (min-width: 768px) {
+  .navbar-default .navbar-collapse {
+    padding: 0; }
+  .navbar-default .navbar-nav > li {
+    border: solid #DDD;
+    border-width: 0 1px;
+    margin-left: -1px; }
+    .navbar-default .navbar-nav > li:first-child {
+      border-left-width: 0;
+      margin-left: 0; }
+    .navbar-default .navbar-nav > li:last-child {
+      border-right-width: 0; }
+    .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+      background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%);
+      background-image: linear-gradient( rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%);
+      color: #2B4259; }
+  .navbar-default .navbar-nav > .active > a {
+    background-color: #FFF;
+    border-color: transparent; }
+    .navbar-default .navbar-nav > .active > a:after {
+      background-color: #32a8e6;
+      content: "";
+      display: block;
+      height: 4px;
+      position: relative;
+      top: 11px;
+      width: 100%; }
+    .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+      background-image: none;
+      background-image: none; } }
 
 .notification-container {
   max-width: 280px;
