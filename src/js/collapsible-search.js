@@ -1,7 +1,7 @@
 +function($) {
 	$.fn.collapsibleSearch = function() {
 		this.find('.basic-search button[type="submit"]').on('click', function(event) {
-			if ($(window).width() < 768) {
+			if (window.innerWidth < 768) {
 				var basicSearch = $(this).parents('.basic-search');
 				var closeButton = '<button class="basic-search-close btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-right"></span></button>';
 
