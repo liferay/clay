@@ -7851,7 +7851,7 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 /* make navbar dropdown position absolute
 	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
-.navbar .navbar-collapse, .navbar .navbar-collapse:first-child {
+.navbar .navbar-collapse:first-child, .navbar .navbar-collapse-absolute {
   background-color: #FFF;
   border: 1px solid #DDD;
   left: -1px;
@@ -8218,7 +8218,8 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 
 .user-icon {
   border-radius: 50%;
-  color: #FFF;
+  background-color: #999;
+  color: #2B4259;
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -8255,22 +8256,28 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   font-size: 10px; }
 
 .user-icon-danger {
-  background-color: #A10028; }
+  background-color: #A10028;
+  color: #FFF; }
 
 .user-icon-default {
-  background-color: #757D91; }
+  background-color: #757D91;
+  color: #FFF; }
 
 .user-icon-info {
-  background-color: #083781; }
+  background-color: #083781;
+  color: #FFF; }
 
 .user-icon-primary {
-  background-color: #BCB750; }
+  background-color: #BCB750;
+  color: #FFF; }
 
 .user-icon-success {
-  background-color: #048080; }
+  background-color: #048080;
+  color: #FFF; }
 
 .user-icon-warning {
-  background-color: #894B0F; }
+  background-color: #894B0F;
+  color: #FFF; }
 
 .pager li > a, .pager li > span {
   background-color: #FFF;
