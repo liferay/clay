@@ -1,3 +1,8 @@
+@mixin color-user-icon($bg-color: #999, $color: #FFF) {
+	background-color: $bg-color;
+	color: $color;
+}
+
 @mixin size-user-icon($size) {
 	height: $size;
 	line-height: $size;
@@ -108,7 +113,9 @@
 
 .user-icon {
 	border-radius: $user-icon-border-radius;
-	color: #FFF;
+
+	@include color-user-icon(#999, $text-color);
+
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
@@ -151,25 +158,25 @@
 }
 
 .user-icon-danger {
-	background-color: $user-icon-danger-bg;
+	@include color-user-icon($user-icon-danger-bg);
 }
 
 .user-icon-default {
-	background-color: $user-icon-default-bg;
+	@include color-user-icon($user-icon-default-bg);
 }
 
 .user-icon-info {
-	background-color: $user-icon-info-bg;
+	@include color-user-icon($user-icon-info-bg);
 }
 
 .user-icon-primary {
-	background-color: $user-icon-primary-bg;
+	@include color-user-icon($user-icon-primary-bg);
 }
 
 .user-icon-success {
-	background-color: $user-icon-success-bg;
+	@include color-user-icon($user-icon-success-bg);
 }
 
 .user-icon-warning {
-	background-color: $user-icon-warning-bg;
+	@include color-user-icon($user-icon-warning-bg);
 }
