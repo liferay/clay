@@ -12,6 +12,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/notifications.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -210,6 +212,8 @@ collapse
 		<h3>Navbar Default</h3>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p><code>.navbar-toggle</code> defaults to the right, but use <code class="html">class="navbar-toggle navbar-toggle-left"</code> to align it on the left.</p>
+
+			<p>Use <code>class="navbar-collapse navbar-collapse-absolute"</code> to make the navbar-collapse absolutely positioned in mobile.</p>
 		</blockquote>
 
 		<nav class="navbar navbar-default">
@@ -223,7 +227,7 @@ collapse
 				<a class="navbar-brand" href="#">Brand</a>
 			</div>
 
-			<div class="navbar-collapse collapse" id="navbar-collapse-0" aria-expanded="false">
+			<div class="navbar-collapse navbar-collapse-absolute collapse" id="navbar-collapse-0" aria-expanded="false">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
 					<li><a href="#">Link</a></li>
@@ -528,38 +532,6 @@ collapse
 </div>
 
 <script>
-	+function($) {
-		$.fn.collapsibleSearch = function() {
-			this.find('.basic-search button[type="submit"]').on('click', function(event) {
-				if ($(window).width() < 768) {
-					var basicSearch = $(this).parents('.basic-search');
-					var closeButton = '<button class="basic-search-close btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-right"></span></button>';
-
-					if(!basicSearch.find('.basic-search-close').length) {
-						$(this).before(closeButton);
-					}
-
-					basicSearch.on('click', '.basic-search-close', function(event) {
-						basicSearch.removeClass('open');
-						basicSearch.off('click');
-					});
-
-					if (!basicSearch.hasClass('open')) {
-						event.preventDefault();
-
-						basicSearch.addClass('open');
-
-						setTimeout(function() {
-							basicSearch.find('input[type="text"]').focus();
-						}, 500);
-					}
-				}
-			});
-
-			return this;
-		}
-	}(jQuery);
-
 	$('.collapse-basic-search').collapsibleSearch();
 </script>
 	</div>
