@@ -8,7 +8,7 @@ section: Components
 	</div>
 </div>
 
-<div class="sidenav-container sidenav-transition" id="sidenavDemo">
+<div class="sidenav-container" id="sidenavDemo">
 	<div>
 		<button class="btn btn-default sidenav-toggler"><span class="glyphicon glyphicon-align-justify"></span> Toggle</button>
 	</div>
@@ -61,7 +61,7 @@ section: Components
 	</div>
 </div>
 
-<pre>```<div class="sidenav-container">
+<pre><code>```<div class="sidenav-container">
   <div class="sidenav-menu-slider">
     <div class="sidenav-menu">
       <!-- nav goes here -->
@@ -71,31 +71,8 @@ section: Components
   <div class="sidenav-content">
     <!-- content goes here -->
   </div>
-</div>```</pre>
+</div>```</code></pre>
 
 <script>
-	YUI().use(
-		'node', 'transition',
-		function(A) {
-			A.one('#mainContent').delegate('click', function(event) {
-				var ct = event.currentTarget;
-				var container = ct.ancestor('.sidenav-container');
-
-				event.preventDefault();
-
-				container.on(
-					'transitionend',
-					function(event) {
-						container.removeClass('sidenav-transition');
-
-						this.detach('transitionend');
-					}
-				);
-
-				if (container) {
-					container.toggleClass('closed').addClass('sidenav-transition');
-				}
-			}, '.sidenav-toggler');
-		}
-	);
+	$('#sidenavDemo').sideNavigation();
 </script>
