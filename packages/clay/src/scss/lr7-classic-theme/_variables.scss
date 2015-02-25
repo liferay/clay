@@ -140,7 +140,6 @@ $form-control-box-shadow: none;
 $form-control-focus-box-shadow: none;
 $input-box-shadow: none;
 
-$label-color: $text-color;
 $label-font-size: 15px;
 
 $input-bg:                                 #FFF;
@@ -483,8 +482,8 @@ $modal-box-shadow: $box-shadow-default;
 $modal-backdrop-opacity:                          .75 !default;
 
 $modal-header-bg: lighten($brand-default, 40%);
-$modal-header-color: $label-color;
-$modal-header-close-color: $label-color;
+$modal-header-color: $text-color;
+$modal-header-close-color: $text-color;
 
 //== Alerts
 $alert-padding:                                   16px;
@@ -605,4 +604,3 @@ $tab-group-top-border-radius: $border-radius-base $border-radius-base 0 0;
 $tab-group-bottom-border-radius: 0 0 $border-radius-base $border-radius-base;
 $tab-group-left-border-radius: $border-radius-base 0 0 $border-radius-base;
 $tab-group-right-border-radius: 0 $border-radius-base $border-radius-base 0;
-
