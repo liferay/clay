@@ -6303,6 +6303,113 @@ button.close {
     left: auto;
     padding-left: 0; } }
 
+.monospace {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+.sans-serif {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.serif {
+  font-family: Georgia, "Times New Roman", Times, serif; }
+
+.icon-xs {
+  font-size: 0.6em; }
+
+.icon-sm {
+  font-size: 0.8em; }
+
+.icon-lg {
+  font-size: 1.667em; }
+
+.icon-xl {
+  font-size: 3.334em; }
+
+.icon-xxl {
+  font-size: 5em; }
+
+.bg-default {
+  background-color: #eeeeee; }
+
+a.bg-default:hover {
+  background-color: #d5d5d5; }
+
+.link-group {
+  margin: 10px 0; }
+  .link-group a {
+    line-height: 2em;
+    padding: 0.25em; }
+    .link-group a:first-child {
+      margin-left: 0; }
+    .link-group a.btn {
+      line-height: normal; }
+
+mark, .mark {
+  background-color: #fff0cf;
+  box-decoration-break: clone;
+  -webkit-box-shadow: -0.25em 0 0 #fff0cf;
+  box-shadow: -0.25em 0 0 #fff0cf;
+  color: #2B4259;
+  display: inline;
+  line-height: normal;
+  padding: 2px 0.25em 3px 0;
+  position: relative;
+  white-space: pre-wrap; }
+  mark:before, .mark:before {
+    background-color: #fff0cf;
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 0.25em;
+    z-index: -1; }
+
+.blockquote-xs {
+  border-left: 1px solid #eeeeee;
+  font-size: 12.25px;
+  padding: 10px 14px; }
+
+.blockquote-sm {
+  border-left: 3px solid #eeeeee;
+  font-size: 14px;
+  padding: 10px 16px; }
+
+.blockquote-lg {
+  border-left: 8px solid #eeeeee;
+  font-size: 26.25px;
+  padding: 10px 30px; }
+
+.blockquote-danger {
+  border-color: #E9295A; }
+  .blockquote-danger footer, .blockquote-danger small, .blockquote-danger .small {
+    color: #E9295A; }
+
+.blockquote-default {
+  border-color: #eeeeee; }
+  .blockquote-default footer, .blockquote-default small, .blockquote-default .small {
+    color: #eeeeee; }
+
+.blockquote-info {
+  border-color: #1e5ec8; }
+  .blockquote-info footer, .blockquote-info small, .blockquote-info .small {
+    color: #1e5ec8; }
+
+.blockquote-primary {
+  border-color: #32a8e6; }
+  .blockquote-primary footer, .blockquote-primary small, .blockquote-primary .small {
+    color: #32a8e6; }
+
+.blockquote-success {
+  border-color: #42bfad; }
+  .blockquote-success footer, .blockquote-success small, .blockquote-success .small {
+    color: #42bfad; }
+
+.blockquote-warning {
+  border-color: #FFB103; }
+  .blockquote-warning footer, .blockquote-warning small, .blockquote-warning .small {
+    color: #FFB103; }
+
 .alert {
   border-width: 2px 0 0 0;
   font-size: 16px; }
@@ -8964,15 +9071,6 @@ input.switch:checked ~ label .on {
       left: auto;
       right: -10px; } }
 
-.monospace {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
-
-.sans-serif {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-.serif {
-  font-family: Georgia, "Times New Roman", Times, serif; }
-
 .text-default {
   color: #868896; }
 
@@ -9005,98 +9103,6 @@ a.bg-default:hover {
 
 a.bg-primary:hover {
   background-color: #bae3f7; }
-
-.link-group {
-  margin: 10px 0; }
-  .link-group a {
-    line-height: 2em;
-    padding: 0.25em; }
-    .link-group a:first-child {
-      margin-left: 0; }
-    .link-group a.btn {
-      line-height: normal; }
-
-.blockquote-xs {
-  border-left: 1px solid #eeeeee;
-  font-size: 12.25px;
-  padding: 10px 14px; }
-
-.blockquote-sm {
-  border-left: 3px solid #eeeeee;
-  font-size: 14px;
-  padding: 10px 16px; }
-
-.blockquote-lg {
-  border-left: 8px solid #eeeeee;
-  font-size: 26.25px;
-  padding: 10px 30px; }
-
-.blockquote-danger {
-  border-color: #E9295A; }
-  .blockquote-danger footer, .blockquote-danger small, .blockquote-danger .small {
-    color: #E9295A; }
-
-.blockquote-default {
-  border-color: #868896; }
-  .blockquote-default footer, .blockquote-default small, .blockquote-default .small {
-    color: #868896; }
-
-.blockquote-info {
-  border-color: #1e5ec8; }
-  .blockquote-info footer, .blockquote-info small, .blockquote-info .small {
-    color: #1e5ec8; }
-
-.blockquote-primary {
-  border-color: #32a8e6; }
-  .blockquote-primary footer, .blockquote-primary small, .blockquote-primary .small {
-    color: #32a8e6; }
-
-.blockquote-success {
-  border-color: #42bfad; }
-  .blockquote-success footer, .blockquote-success small, .blockquote-success .small {
-    color: #42bfad; }
-
-.blockquote-warning {
-  border-color: #FFB103; }
-  .blockquote-warning footer, .blockquote-warning small, .blockquote-warning .small {
-    color: #FFB103; }
-
-mark, .mark {
-  background-color: #fff0cf;
-  box-decoration-break: clone;
-  -webkit-box-shadow: -0.25em 0 0 #fff0cf;
-  box-shadow: -0.25em 0 0 #fff0cf;
-  color: #2B4259;
-  display: inline;
-  line-height: normal;
-  padding: 2px 0.25em 3px 0;
-  position: relative;
-  white-space: pre-wrap; }
-  mark:before, .mark:before {
-    background-color: #fff0cf;
-    bottom: 0;
-    content: '';
-    display: block;
-    position: absolute;
-    right: 100%;
-    top: 0;
-    width: 0.25em;
-    z-index: -1; }
-
-.icon-xs {
-  font-size: 0.6em; }
-
-.icon-sm {
-  font-size: 0.8em; }
-
-.icon-lg {
-  font-size: 1.667em; }
-
-.icon-xl {
-  font-size: 3.334em; }
-
-.icon-xxl {
-  font-size: 5em; }
 
 .tooltip-inner {
   padding: 5px 16px; }
@@ -9549,27 +9555,18 @@ mark, .mark {
 .extend-cards-page .control-panel .card-column {
   padding: 10px 15px; }
 
-/* -------- Glyphicons -------- */
-.glyphicon-class {
-  display: block; }
+@media screen and (min-width: 321px) {
+  .font-awesome-icons-list li {
+    float: left;
+    width: 50%; } }
 
-.glyphicons li {
-  float: left;
-  height: 110px;
-  text-align: center;
-  width: 50%; }
-
-.glyphicons-list {
-  list-style: none;
-  padding-left: 0; }
-
-@media (min-width: 480px) {
-  .glyphicons li {
-    width: 25%; } }
-
-@media (min-width: 768px) {
-  .glyphicons li {
-    width: 10%; } }
+@media screen and (min-width: 768px) {
+  .font-awesome-icons-list li {
+    float: left;
+    width: 33%; }
+  .glyphicons-list li {
+    float: left;
+    width: 50%; } }
 
 .email-edit-buttons {
   display: none;
