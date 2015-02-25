@@ -1,3 +1,11 @@
+@mixin color-blockquote ($color) {
+	border-color: $color;
+
+	footer, small, .small {
+		color: $color;
+	}
+}
+
 // Highlight inline text
 @mixin highlight-text($bg-color: $state-warning-bg, $color: $text-color) {
 	background-color: $bg-color;
