@@ -1,29 +1,18 @@
-/* -------- Glyphicons -------- */
-
-.glyphicon-class {
-	display: block;
-}
-
-.glyphicons li {
-	float: left;
-	height: 110px;
-	text-align: center;
-	width: 50%;
-}
-
-.glyphicons-list {
-	list-style: none;
-	padding-left: 0;
-}
-
-@media (min-width: $screen-xs-min) {
-	.glyphicons li {
-		width: 25%;
+@media screen and (min-width: 321px) {
+	.font-awesome-icons-list li {
+		float: left;
+		width: 50%;
 	}
 }
 
-@media (min-width: $screen-sm-min) {
-	.glyphicons li {
-		width: 10%;
+@media screen and (min-width: 768px) {
+	.font-awesome-icons-list li {
+		float: left;
+		width: 33%;
+	}
+
+	.glyphicons-list li {
+		float: left;
+		width: 50%;
 	}
 }
