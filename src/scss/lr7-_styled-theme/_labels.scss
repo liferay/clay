@@ -1,0 +1,17 @@
+.label-circle {
+	&, .label {
+		border-radius: 20px;
+	}
+}
+
+.label-rounded {
+	&, .label {
+		border-radius: 3px;
+	}
+}
+
+.label-square {
+	&, .label {
+		border-radius: 0;
+	}
+}

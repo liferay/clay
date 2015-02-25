@@ -2,28 +2,6 @@
 	background-color: $color;
 }
 
-.badge-circle {
-	&, .badge {
-		border-radius: 20px;
-	}
-}
-
-.badge-rounded {
-	&, .badge {
-		border-radius: 3px;
-	}
-}
-
-.badge-square {
-	&, .badge {
-		border-radius: 0;
-	}
-}
-
-.badge-default {
-	@include color-badge($brand-default);
-}
-
 .badge-danger {
 	@include color-badge($brand-danger);
 }
@@ -44,26 +22,20 @@
 	@include color-badge($brand-warning);
 }
 
-// Label Helpers
-
-.label {
-	color: #FFF;
-}
-
-.label-circle {
-	&, .label {
+.badge-circle {
+	&, .badge {
 		border-radius: 20px;
 	}
 }
 
-.label-rounded {
-	&, .label {
+.badge-rounded {
+	&, .badge {
 		border-radius: 3px;
 	}
 }
 
-.label-square {
-	&, .label {
+.badge-square {
+	&, .badge {
 		border-radius: 0;
 	}
 }
