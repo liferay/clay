@@ -14,6 +14,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script src="../../js/collapsible-search.js"></script>
 	<script src="../../js/notifications.js"></script>
+	<script src="../../js/side-navigation.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -278,7 +279,7 @@ collapse
 			<p>Use for first level heading</p>
 		</blockquote>
 
-		<div class="sidenav-container closed">
+		<div class="sidenav-container closed" id="slideOutNav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<ul class="nav nav-stacked">
@@ -616,46 +617,7 @@ collapse
 </div>
 
 <script>
-	YUI().use('event', 'node', 'transition', function(A) {
-		var mainContent = A.one('#mainContent');
-
-		A.one('#mainContent').delegate('click', function(event) {
-			var ct = event.currentTarget;
-			var container = ct.ancestor('.sidenav-container');
-
-			var setEqualHeight = function() {
-				var sideMenuSlider = container.one('.sidenav-menu-slider');
-				var sideNavContent = container.one('.sidenav-content');
-
-				var equalHeight = Math.max(sideMenuSlider.get('offsetHeight'), sideNavContent.get('offsetHeight'));
-
-				container.setStyle('height', equalHeight);
-			}
-
-			event.preventDefault();
-
-			container.on(
-				'transitionend',
-				function(event) {
-					container.removeClass('sidenav-transition');
-
-					if (container.hasClass('closed')) {
-						container.setStyle('height', '');
-					}
-
-					this.detach('transitionend');
-				}
-			);
-
-			if (container) {
-				if (container.hasClass('closed')) {
-					setEqualHeight();
-				}
-
-				container.toggleClass('closed').addClass('sidenav-transition');
-			}
-		}, '.sidenav-toggler');
-	});
+	$('#slideOutNav').sideNavigation();
 </script>
 	</div>
 

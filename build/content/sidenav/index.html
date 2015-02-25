@@ -14,6 +14,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script src="../../js/collapsible-search.js"></script>
 	<script src="../../js/notifications.js"></script>
+	<script src="../../js/side-navigation.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -212,7 +213,7 @@ collapse
 	</div>
 </div>
 
-<div class="sidenav-container sidenav-transition" id="sidenavDemo">
+<div class="sidenav-container" id="sidenavDemo">
 	<div>
 		<button class="btn btn-default sidenav-toggler"><span class="glyphicon glyphicon-align-justify"></span> Toggle</button>
 	</div>
@@ -265,7 +266,7 @@ collapse
 	</div>
 </div>
 
-<pre>&lt;div class=&quot;sidenav-container&quot;&gt;
+<pre><code>&lt;div class=&quot;sidenav-container&quot;&gt;
   &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
     &lt;div class=&quot;sidenav-menu&quot;&gt;
       &lt;!-- nav goes here --&gt;
@@ -275,33 +276,10 @@ collapse
   &lt;div class=&quot;sidenav-content&quot;&gt;
     &lt;!-- content goes here --&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
 
 <script>
-	YUI().use(
-		'node', 'transition',
-		function(A) {
-			A.one('#mainContent').delegate('click', function(event) {
-				var ct = event.currentTarget;
-				var container = ct.ancestor('.sidenav-container');
-
-				event.preventDefault();
-
-				container.on(
-					'transitionend',
-					function(event) {
-						container.removeClass('sidenav-transition');
-
-						this.detach('transitionend');
-					}
-				);
-
-				if (container) {
-					container.toggleClass('closed').addClass('sidenav-transition');
-				}
-			}, '.sidenav-toggler');
-		}
-	);
+	$('#sidenavDemo').sideNavigation();
 </script>
 	</div>
 
