@@ -6243,6 +6243,13 @@ button.close {
   .dropdown-full .dropdown-menu [class*="col-sm"], .dropdown-full .dropdown-menu [class*="col-md"], .dropdown-full .dropdown-menu [class*="col-lg"], .dropdown-wide .dropdown-menu [class*="col-sm"], .dropdown-wide .dropdown-menu [class*="col-md"], .dropdown-wide .dropdown-menu [class*="col-lg"] {
     padding: 0; } }
 
+.has-error .validation-message {
+  color: #E8295A; }
+.has-success .validation-message {
+  color: #34ADAB; }
+.has-warning .validation-message {
+  color: #FFB103; }
+
 .input-group label {
   margin-bottom: 2px; }
   .input-group label input[type="radio"] {
@@ -7116,7 +7123,7 @@ figcaption, .figcaption {
   color: #FFF; }
 
 label {
-  color: #fff;
+  color: #2B4259;
   font-size: 15px;
   font-weight: 400; }
 
@@ -9541,19 +9548,6 @@ mark, .mark {
   width: 100%; }
 .extend-cards-page .control-panel .card-column {
   padding: 10px 15px; }
-
-/* -------- Grids -------- */
-.grid {
-  background-color: #EEE;
-  border: 1px solid #717171;
-  border-left-width: 0;
-  margin-bottom: 15px;
-  padding: 5px 0;
-  text-align: center; }
-  .grid:first-child {
-    border-left-width: 1px; }
-  .grid[class*="-offset-"] {
-    border-left-width: 1px; }
 
 /* -------- Glyphicons -------- */
 .glyphicon-class {
