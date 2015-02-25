@@ -1,7 +1,3 @@
-@mixin color-badge($color) {
-	background-color: $color;
-}
-
 .badge-danger {
 	@include color-badge($brand-danger);
 }
