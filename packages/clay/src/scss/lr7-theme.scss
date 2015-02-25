@@ -1,5 +1,7 @@
 @import "../fonts/alloy-font-awesome/scss/font-awesome";
 
+@import "bourbon";
+
 @import "lr7-_styled-theme/variables";
 @import "lr7-_styled-theme/mixins";
 
@@ -11,6 +13,7 @@
 @import "bootstrap/bootstrap";
 
 // Import _styled Theme Files
+@import "lr7-_styled-theme/side-navigation";
 
 // Import Classic Theme Files
 @import "lr7-classic-theme/alerts";
@@ -36,7 +39,6 @@
 @import "lr7-classic-theme/pagination";
 @import "lr7-classic-theme/panels";
 @import "lr7-classic-theme/popovers";
-@import "lr7-classic-theme/side-navigation";
 @import "lr7-classic-theme/sliders";
 @import "lr7-classic-theme/switches";
 @import "lr7-classic-theme/tables";
