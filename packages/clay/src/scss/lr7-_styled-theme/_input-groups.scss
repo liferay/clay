@@ -1,0 +1,26 @@
+.input-group {
+	label {
+		margin-bottom: 2px;
+
+		input[type="radio"] {
+			margin-top: 2px;
+		}
+	}
+}
+
+// Button input groups
+.input-group-btn {
+	&:first-child {
+		> .btn, > .btn-group {
+			margin-right: -2px;
+		}
+	}
+}
+
+.input-group-input {
+	display: table-cell;
+
+	.form-control {
+		display: block;
+	}
+}
