@@ -1,10 +1,18 @@
+@import "../fonts/alloy-font-awesome/scss/font-awesome";
+
+@import "lr7-_styled-theme/variables";
+@import "lr7-_styled-theme/mixins";
+
 @import "lr7-classic-theme/variables";
 @import "lr7-classic-theme/mixins";
 
+// @import "YOUR CUSTOM VARIABLES"; // file containing custom variables
+
 @import "bootstrap/bootstrap";
 
-@import "../fonts/alloy-font-awesome/scss/font-awesome";
+// Import _styled Theme Files
 
+// Import Classic Theme Files
 @import "lr7-classic-theme/alerts";
 @import "lr7-classic-theme/badges";
 @import "lr7-classic-theme/breadcrumbs";
