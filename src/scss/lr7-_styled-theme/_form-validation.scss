@@ -1,0 +1,13 @@
+.validation-message {
+	.has-error & {
+		color: $state-danger-text;
+	}
+
+	.has-success & {
+		color: $state-success-text;
+	}
+
+	.has-warning & {
+		color: $state-warning-text;
+	}
+}
