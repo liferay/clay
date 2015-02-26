@@ -1,0 +1,191 @@
+---
+title: Pagination and Pagers
+section: Components
+---
+
+<div class="row">
+	<div class="col-md-12">
+		<h3>Pagination</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Preset pagination styles to help divide up large blocks of content on your site or app.</p>
+		</blockquote>
+
+		<ul class="pagination">
+			<li><a href="#"><span class="icon-angle-left"></span></a></li>
+			<li class="disabled"><a href="#">...</a></li>
+			<li><a href="#">1</a></li>
+			<li class="active"><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">...</a></li>
+			<li><a href="#"><span class="icon-angle-right"></span></a></li>
+		</ul>
+
+		<pre><code>```<ul class="pagination">
+    <li><a href=""><span class="icon-angle-left"></span></a></li>
+    <li class="disabled"><a href="#">...</a></li>
+    <li><a href="">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">4</a></li>
+    <li><a href="">5</a></li>
+    <li><a href="">...</a></li>
+    <li><a href=""><span class="icon-angle-right"></span></a></li>
+</ul>```</code></pre>
+
+	</div>
+</div>
+
+<div id="pagination">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Sizing</h3>
+
+			<div>
+				<p>Small</p>
+				<ul class="pagination pagination-sm">
+					<li><a href="#"><span class="icon-angle-left"></span></a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">1</a></li>
+					<li class="active"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#"><span class="icon-angle-right"></span></a></li>
+				</ul>
+			</div>
+
+			<div>
+				<p>Default</p>
+				<ul class="pagination">
+					<li><a href="#"><span class="icon-angle-left"></span></a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">1</a></li>
+					<li class="active"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#"><span class="icon-angle-right"></span></a></li>
+				</ul>
+			</div>
+
+			<div>
+				<p>Large</p>
+				<ul class="pagination pagination-lg">
+					<li><a href="#"><span class="icon-angle-left"></span></a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">1</a></li>
+					<li class="active"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#"><span class="icon-angle-right"></span></a></li>
+				</ul>
+			</div>
+
+			<pre><code class="html">```<ul class="pagination pagination-sm">...</ul>
+<ul class="pagination">...</ul>
+<ul class="pagination pagination-lg">...</ul>```</code></pre>
+
+		</div>
+	</div>
+</div>
+
+<div id="pager">
+	<div class="row">
+		<div class="col-md-12">
+			<h3><em>Default Pagers</em></h3>
+
+			<div>.pager</div>
+			<ul class="pager">
+				<li><a href="#">Previous</a></li>
+
+				<li><a href="#">Next</a></li>
+			</ul>
+
+			<div>.pager .pager-inverse</div>
+			<ul class="pager pager-inverse">
+				<li><a href="#">Previous</a></li>
+
+				<li><a href="#">Next</a></li>
+			</ul>
+
+			<div>.pager .pager-borderless</div>
+			<ul class="pager pager-borderless1">
+				<li><a href="#">&larr; Previous</a></li>
+
+				<li><a href="#">Next &rarr;</a></li>
+			</ul>
+
+			<pre><code>```<ul class="pager">
+	<li><a href="#">...</a></li>
+	<li><a href="#">...</a></li> 
+	</ul>```</code></pre>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h3><em>Aligned Pager</em></h3>
+
+			<div>.pager</div>
+			<ul class="pager">
+				<li class="previous"><a href="#">&larr; Older</a></li>
+
+				<li class="next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-inverse</div>
+			<ul class="pager pager-inverse">
+				<li class="previous"><a href="#">&larr; Older</a></li>
+
+				<li class="next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-borderless1</div>
+			<ul class="pager pager-borderless1">
+				<li class="previous"><a href="#">&larr; Older</a></li>
+
+				<li class="next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<pre><code>```<ul class="pager">
+	<li class="previous"><a href="#">...</a></li>
+	<li class="next"><a href="#">...</a></li> 
+	</ul>```</code></pre>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h3><em>Disabled Pager</em></h3>
+
+			<div>.pager</div>
+			<ul class="pager">
+				<li class="disabled previous"><a href="#">&larr; Older</a></li>
+				<li class="active next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-inverse</div>
+			<ul class="pager pager-inverse">
+				<li class="disabled previous"><a href="#">&larr; Older</a></li>
+				<li class="active next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-borderless1</div>
+			<ul class="pager pager-borderless1">
+				<li class="disabled previous"><a href="#">&larr; Older</a></li>
+				<li class="active next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<pre><code>```<ul class="pager">
+	<li class="disabled previous"><a href="#">...</a></li>
+	<li class="next"><a href="#">...</a></li> 
+	</ul>```</code></pre>
+		</div>
+	</div>
+</div>
