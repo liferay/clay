@@ -1,0 +1,78 @@
+---
+title: Breadcrumbs
+section: Components
+---
+
+<div class="row" id="breadcrumb">
+	<div class="col-md-12">
+		<h3><em>Breadcrumbs</em></h3>
+
+		<div>.breadcrumb</div>
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+
+			<li><a href="#">Components</a></li>
+
+			<li><a href="#">Breadcrumbs and Paginations</a></li>
+
+			<li><a href="#">Page</a></li>
+
+			<li class="active">
+				<span>Active</span>
+			</li>
+		</ul>
+
+		<div>.breadcrumb .breadcrumb-borderless</div>
+		<ol class="breadcrumb breadcrumb-borderless">
+			<li><a href="#">Home</a></li>
+
+			<li><a href="#">Components</a></li>
+
+			<li><a href="#">Breadcrumbs and Paginations</a></li>
+
+			<li><a href="#">Page</a></li>
+
+			<li class="active">
+				<span>Active</span>
+			</li>
+		</ol>
+
+		<div>.breadcrumb .breadcrumb-default</div>
+		<ul class="breadcrumb breadcrumb-default">
+			<li><a href="#">Home</a></li>
+
+			<li><a href="#">Components</a></li>
+
+			<li><a href="#">Breadcrumbs and Paginations</a></li>
+
+			<li><a href="#">Page</a></li>
+
+			<li class="active">
+				<span>Active</span>
+			</li>
+		</ul>
+
+		<div>.breadcrumb .breadcrumb-inverse</div>
+		<ol class="breadcrumb breadcrumb-inverse">
+			<li><a href="#">Home</a></li>
+
+			<li><a href="#">Components</a></li>
+
+			<li><a href="#">Breadcrumbs and Paginations</a></li>
+
+			<li><a href="#">Page</a></li>
+
+			<li class="active">
+				<span>Active</span>
+			</li>
+		</ol>
+	</div>
+</div>
+
+<script>
+	YUI().use('node', function(A) {
+		A.one('#breadcrumb').delegate('click', function(event) {
+			event.preventDefault();
+		}, '.breadcrumb a');
+	});
+</script>
