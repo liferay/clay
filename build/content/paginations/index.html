@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Breadcrumb and Paginations</title>
+	<title>Pagination and Pagers</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -51,7 +51,7 @@ collapse in
 </li>
 <li class=""><a href="../../content/badges-and-labels">Badges and Labels</a>
 </li>
-<li class="active"><a href="../../content/breadcrumb-and-paginations">Breadcrumb and Paginations</a>
+<li class=""><a href="../../content/breadcrumbs">Breadcrumbs</a>
 </li>
 <li class=""><a href="../../content/cards">Cards</a>
 </li>
@@ -63,6 +63,8 @@ collapse in
 </li>
 <li class=""><a href="../../content/list-groups">List Groups</a>
 </li>
+<li class=""><a href="../../content/media-objects">Media Objects</a>
+</li>
 <li class=""><a href="../../content/modals">Modals</a>
 </li>
 <li class=""><a href="../../content/nav">Nav</a>
@@ -73,7 +75,9 @@ collapse in
 </li>
 <li class=""><a href="../../content/notifications">Notifications</a>
 </li>
-<li class=""><a href="../../content/page-header-jumbotron-and-media-objects">Page Header, Jumbotron, and Media Objects</a>
+<li class=""><a href="../../content/page-header-and-jumbotron">Page Header and Jumbotron</a>
+</li>
+<li class="active"><a href="../../content/paginations">Pagination and Pagers</a>
 </li>
 <li class=""><a href="../../content/panels">Panels</a>
 </li>
@@ -202,294 +206,101 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Breadcrumb and Paginations
+			Pagination and Pagers
 
 			
 		</h1>
 
 		
-<div class="row" id="breadcrumb">
+<div class="row">
 	<div class="col-md-12">
-		<h3><em>Breadcrumbs</em></h3>
+		<h3>Pagination</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Preset pagination styles to help divide up large blocks of content on your site or app.</p>
+		</blockquote>
 
-		<div>.breadcrumb</div>
-		<ul class="breadcrumb">
-			<li><a href="#">Home</a></li>
-
-			<li><a href="#">Components</a></li>
-
-			<li><a href="#">Breadcrumbs and Paginations</a></li>
-
-			<li><a href="#">Page</a></li>
-
-			<li class="active">
-				<span>Active</span>
-			</li>
+		<ul class="pagination">
+			<li><a href="#"><span class="icon-angle-left"></span></a></li>
+			<li class="disabled"><a href="#">...</a></li>
+			<li><a href="#">1</a></li>
+			<li class="active"><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">...</a></li>
+			<li><a href="#"><span class="icon-angle-right"></span></a></li>
 		</ul>
 
-		<div>.breadcrumb .breadcrumb-borderless</div>
-		<ol class="breadcrumb breadcrumb-borderless">
-			<li><a href="#">Home</a></li>
+		<pre><code>&lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;span class=&quot;icon-angle-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;span class=&quot;icon-angle-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
-			<li><a href="#">Components</a></li>
-
-			<li><a href="#">Breadcrumbs and Paginations</a></li>
-
-			<li><a href="#">Page</a></li>
-
-			<li class="active">
-				<span>Active</span>
-			</li>
-		</ol>
-
-		<div>.breadcrumb .breadcrumb-default</div>
-		<ul class="breadcrumb breadcrumb-default">
-			<li><a href="#">Home</a></li>
-
-			<li><a href="#">Components</a></li>
-
-			<li><a href="#">Breadcrumbs and Paginations</a></li>
-
-			<li><a href="#">Page</a></li>
-
-			<li class="active">
-				<span>Active</span>
-			</li>
-		</ul>
-
-		<div>.breadcrumb .breadcrumb-inverse</div>
-		<ol class="breadcrumb breadcrumb-inverse">
-			<li><a href="#">Home</a></li>
-
-			<li><a href="#">Components</a></li>
-
-			<li><a href="#">Breadcrumbs and Paginations</a></li>
-
-			<li><a href="#">Page</a></li>
-
-			<li class="active">
-				<span>Active</span>
-			</li>
-		</ol>
 	</div>
 </div>
 
 <div id="pagination">
 	<div class="row">
 		<div class="col-md-12">
-			<h3><em>Small Pagination</em></h3>
+			<h3>Sizing</h3>
 
-			<div>.pagination</div>
-			<ul class="pagination pagination-sm">
-				<li><a href="#">&laquo; Prev</a></li>
-				<li class="disabled"><a href="#">...</a></li>
-				<li><a href="#">1</a></li>
-				<li class="active"><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">...</a></li>
-				<li><a href="#">Next &raquo;</a></li>
-			</ul>
+			<div>
+				<p>Small</p>
+				<ul class="pagination pagination-sm">
+					<li><a href="#"><span class="icon-angle-left"></span></a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">1</a></li>
+					<li class="active"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#"><span class="icon-angle-right"></span></a></li>
+				</ul>
+			</div>
 
-			<div>.pagination .pagination-inverse</div>
-			<ul class="pagination pagination-inverse pagination-sm">
-				<li><a href="#">&laquo; Prev</a></li>
-				<li class="disabled"><a href="#">...</a></li>
-				<li><a href="#">1</a></li>
-				<li class="active"><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">...</a></li>
-				<li><a href="#">Next &raquo;</a></li>
-			</ul>
+			<div>
+				<p>Default</p>
+				<ul class="pagination">
+					<li><a href="#"><span class="icon-angle-left"></span></a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">1</a></li>
+					<li class="active"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#"><span class="icon-angle-right"></span></a></li>
+				</ul>
+			</div>
 
-			<div>.pagination .pagination-borderless1</div>
-			<ul class="pagination pagination-borderless1 pagination-sm">
-				<li><a href="#">&larr; Prev</a></li>
-				<li class="disabled"><a href="#">...</a></li>
-				<li><a href="#">1</a></li>
-				<li class="active"><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">...</a></li>
-				<li><a href="#">Next &rarr;</a></li>
-			</ul>
+			<div>
+				<p>Large</p>
+				<ul class="pagination pagination-lg">
+					<li><a href="#"><span class="icon-angle-left"></span></a></li>
+					<li class="disabled"><a href="#">...</a></li>
+					<li><a href="#">1</a></li>
+					<li class="active"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#"><span class="icon-angle-right"></span></a></li>
+				</ul>
+			</div>
 
-			<div>.pagination .pagination-borderless2</div>
-			<ul class="pagination pagination-borderless2 pagination-sm">
-				<li><a href="#">&laquo; Prev</a></li>
-				<li class="disabled"><a href="#">...</a></li>
-				<li><a href="#">1</a></li>
-				<li class="active"><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">...</a></li>
-				<li><a href="#">Next &raquo;</a></li>
-			</ul>
+			<pre><code class="html">&lt;ul class=&quot;pagination pagination-sm&quot;&gt;...&lt;/ul&gt;
+&lt;ul class=&quot;pagination&quot;&gt;...&lt;/ul&gt;
+&lt;ul class=&quot;pagination pagination-lg&quot;&gt;...&lt;/ul&gt;</code></pre>
 
-			<div>.pagination .pagination-borderless3</div>
-			<ul class="pagination pagination-borderless3 pagination-sm">
-				<li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-				<li class="disabled"><a href="#">...</a></li>
-				<li><a href="#">1</a></li>
-				<li class="active"><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">...</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-			</ul>
-
-			<pre><code>&lt;ul class=&quot;pagination pagination-sm&quot;&gt;
-&#x9;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&#x9;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
-&#x9;&lt;/ul&gt;</code></pre>
 		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-		<h3><em>Default Pagination</em></h3>
-
-		<div>.pagination</div>
-		<ul class="pagination">
-			<li><a href="#">&laquo; Prev</a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#">Next &raquo;</a></li>
-		</ul>
-
-		<div>.pagination .pagination-inverse</div>
-		<ul class="pagination pagination-inverse">
-			<li><a href="#">&laquo; Prev</a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#">Next &raquo;</a></li>
-		</ul>
-
-		<div>.pagination .pagination-borderless1</div>
-		<ul class="pagination pagination-borderless1">
-			<li><a href="#">&larr; Prev</a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#">Next &rarr;</a></li>
-		</ul>
-
-		<div>.pagination .pagination-borderless2</div>
-		<ul class="pagination pagination-borderless2">
-			<li><a href="#">&laquo; Prev</a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#">Next &raquo;</a></li>
-		</ul>
-
-		<div>.pagination .pagination-borderless3</div>
-		<ul class="pagination pagination-borderless3">
-			<li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-		</ul>
-
-		<pre><code>&lt;ul class=&quot;pagination&quot;&gt;
-&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
-&lt;/ul&gt;</code></pre>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-		<h3><em>Large Pagination</em></h3>
-
-		<ul class="pagination pagination-lg">
-			<li><a href="#">&laquo; Prev</a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#">Next &raquo;</a></li>
-		</ul>
-
-		<ul class="pagination pagination-inverse pagination-lg">
-			<li><a href="#">&laquo; Prev</a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#">Next &raquo;</a></li>
-		</ul>
-
-		<div>.pagination .pagination-borderless1</div>
-		<ul class="pagination pagination-borderless1 pagination-lg">
-			<li><a href="#">&larr; Prev</a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">Next &rarr;</a></li>
-		</ul>
-
-		<div>.pagination .pagination-borderless2</div>
-		<ul class="pagination pagination-borderless2 pagination-lg">
-			<li><a href="#">&laquo; Prev</a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">Next &raquo;</a></li>
-		</ul>
-
-		<div>.pagination .pagination-borderless3</div>
-		<ul class="pagination pagination-borderless3 pagination-lg">
-			<li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-		</ul>
-
-		<pre><code>&lt;ul class=&quot;pagination pagination-lg&quot;&gt;
-&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
-&lt;/ul&gt;</code></pre>
-
 	</div>
 </div>
 
@@ -587,22 +398,6 @@ collapse
 		</div>
 	</div>
 </div>
-
-<script>
-	YUI().use('node', function(A) {
-		A.one('#breadcrumb').delegate('click', function(event) {
-			event.preventDefault();
-		}, '.breadcrumb a');
-
-		A.one('#pager').delegate('click', function(event) {
-			event.preventDefault();
-		}, '.pager a');
-
-		A.one('#pagination').delegate('click', function(event) {
-			event.preventDefault();
-		}, '.pagination a');
-	});
-</script>
 	</div>
 
 		</section>

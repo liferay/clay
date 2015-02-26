@@ -8701,177 +8701,52 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   border-color: transparent;
   color: #D2D2D2; }
 
-.pagination > li > a, .pagination > li > span {
-  border: solid #868896;
-  border-width: 1px 0;
-  padding: 4px 20px; }
-.pagination > li:first-child > a, .pagination > li:first-child > span {
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-  border-width: 1px 0 1px 1px; }
-.pagination > li:last-child > a, .pagination > li:last-child > span {
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  border-width: 1px 1px 1px 0; }
-
-.pagination-inverse > li > a, .pagination-inverse > li > span {
-  background-color: #868896;
-  border: solid #868896;
-  border-width: 1px 0;
-  color: #FFF; }
-.pagination-inverse > .active > a, .pagination-inverse > .active > a:hover, .pagination-inverse > .active > a:focus, .pagination-inverse > .active > span, .pagination-inverse > .active > span:hover, .pagination-inverse > .active > span:focus {
-  background-color: #868896;
-  border-color: #868896;
-  color: #32a8e6; }
-.pagination-inverse > .disabled > span, .pagination-inverse > .disabled > span:hover, .pagination-inverse > .disabled > span:focus, .pagination-inverse > .disabled > a, .pagination-inverse > .disabled > a:hover, .pagination-inverse > .disabled > a:focus {
-  background-color: #868896;
-  border-color: #868896;
-  color: #9c9ea9; }
-
-.pagination-borderless1.pagination-lg > li > a, .pagination-borderless1.pagination-lg > li > span {
-  padding: 5px 25px;
-  font-size: 18px; }
-.pagination-borderless1.pagination-lg > li:first-child > a, .pagination-borderless1.pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
-.pagination-borderless1.pagination-lg > li:last-child > a, .pagination-borderless1.pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
-.pagination-borderless1.pagination-sm > li > a, .pagination-borderless1.pagination-sm > li > span {
-  padding: 3px 15px;
-  font-size: 12px; }
-.pagination-borderless1.pagination-sm > li:first-child > a, .pagination-borderless1.pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
-.pagination-borderless1.pagination-sm > li:last-child > a, .pagination-borderless1.pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
-.pagination-borderless1 > li > a, .pagination-borderless1 > li > span {
-  background-color: transparent;
-  border: solid transparent;
-  border-width: 0;
-  color: #C4C3C8;
-  margin-left: 0; }
-.pagination-borderless1 > li:first-child > a, .pagination-borderless1 > li:first-child > span {
-  background-color: transparent;
-  border: solid transparent;
-  border-radius: 0;
-  border-width: 0;
-  color: #C4C3C8; }
-.pagination-borderless1 > li:last-child > a, .pagination-borderless1 > li:last-child > span {
-  background-color: transparent;
-  border: solid transparent;
-  border-radius: 0;
-  border-width: 0;
-  color: #C4C3C8; }
-.pagination-borderless1 > li > a:hover, .pagination-borderless1 > li > a:focus, .pagination-borderless1 > li > span:hover, .pagination-borderless1 > li > span:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #868896; }
-.pagination-borderless1 > .active > a, .pagination-borderless1 > .active > a:hover, .pagination-borderless1 > .active > a:focus, .pagination-borderless1 > .active > span, .pagination-borderless1 > .active > span:hover, .pagination-borderless1 > .active > span:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #32a8e6; }
-.pagination-borderless1 > .disabled > span, .pagination-borderless1 > .disabled > span:hover, .pagination-borderless1 > .disabled > span:focus, .pagination-borderless1 > .disabled > a, .pagination-borderless1 > .disabled > a:hover, .pagination-borderless1 > .disabled > a:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #EEE; }
-
-.pagination-borderless2.pagination-lg > li > a, .pagination-borderless2.pagination-lg > li > span {
-  padding: 5px 25px;
-  font-size: 18px; }
-.pagination-borderless2.pagination-lg > li:first-child > a, .pagination-borderless2.pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px; }
-.pagination-borderless2.pagination-lg > li:last-child > a, .pagination-borderless2.pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px; }
-.pagination-borderless2.pagination-sm > li > a, .pagination-borderless2.pagination-sm > li > span {
-  padding: 3px 15px;
-  font-size: 12px; }
-.pagination-borderless2.pagination-sm > li:first-child > a, .pagination-borderless2.pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px; }
-.pagination-borderless2.pagination-sm > li:last-child > a, .pagination-borderless2.pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px; }
-.pagination-borderless2 > li > a, .pagination-borderless2 > li > span {
-  background-color: transparent;
-  border: solid transparent;
-  border-width: 0;
-  color: #C4C3C8;
-  margin-left: 0; }
-.pagination-borderless2 > li:first-child > a, .pagination-borderless2 > li:first-child > span {
-  background-color: #32a8e6;
-  border: solid #32a8e6;
-  border-radius: 20px;
-  border-width: 0;
-  color: #FFF; }
-.pagination-borderless2 > li:last-child > a, .pagination-borderless2 > li:last-child > span {
-  background-color: #32a8e6;
-  border: solid #32a8e6;
-  border-radius: 20px;
-  border-width: 0;
-  color: #FFF; }
-.pagination-borderless2 > li > a:hover, .pagination-borderless2 > li > a:focus, .pagination-borderless2 > li > span:hover, .pagination-borderless2 > li > span:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #868896; }
-.pagination-borderless2 > .active > a, .pagination-borderless2 > .active > a:hover, .pagination-borderless2 > .active > a:focus, .pagination-borderless2 > .active > span, .pagination-borderless2 > .active > span:hover, .pagination-borderless2 > .active > span:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #868896; }
-.pagination-borderless2 > .disabled > span, .pagination-borderless2 > .disabled > span:hover, .pagination-borderless2 > .disabled > span:focus, .pagination-borderless2 > .disabled > a, .pagination-borderless2 > .disabled > a:hover, .pagination-borderless2 > .disabled > a:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #EEE; }
-
-.pagination-borderless3.pagination-lg > li > a, .pagination-borderless3.pagination-lg > li > span {
+.pagination.pagination-lg > li > a, .pagination.pagination-lg > li > span {
   padding: 5px 12.5px;
   font-size: 18px; }
-.pagination-borderless3.pagination-lg > li:first-child > a, .pagination-borderless3.pagination-lg > li:first-child > span {
+.pagination.pagination-lg > li:first-child > a, .pagination.pagination-lg > li:first-child > span {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
-.pagination-borderless3.pagination-lg > li:last-child > a, .pagination-borderless3.pagination-lg > li:last-child > span {
+.pagination.pagination-lg > li:last-child > a, .pagination.pagination-lg > li:last-child > span {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
-.pagination-borderless3.pagination-sm > li > a, .pagination-borderless3.pagination-sm > li > span {
+.pagination.pagination-sm > li > a, .pagination.pagination-sm > li > span {
   padding: 3px 7.5px;
   font-size: 12px; }
-.pagination-borderless3.pagination-sm > li:first-child > a, .pagination-borderless3.pagination-sm > li:first-child > span {
+.pagination.pagination-sm > li:first-child > a, .pagination.pagination-sm > li:first-child > span {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
-.pagination-borderless3.pagination-sm > li:last-child > a, .pagination-borderless3.pagination-sm > li:last-child > span {
+.pagination.pagination-sm > li:last-child > a, .pagination.pagination-sm > li:last-child > span {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
-.pagination-borderless3 > li > a, .pagination-borderless3 > li > span {
+.pagination > li > a, .pagination > li > span {
   background-color: transparent;
   border: solid transparent;
   border-width: 0;
   color: #868896;
   margin-left: 0;
   padding: 4px 10px; }
-.pagination-borderless3 > li:first-child > a, .pagination-borderless3 > li:first-child > span {
+.pagination > li:first-child > a, .pagination > li:first-child > span {
   background-color: #B0B4BB;
   border: solid #B0B4BB;
   border-radius: 0;
   border-width: 0;
   color: #FFF; }
-.pagination-borderless3 > li:last-child > a, .pagination-borderless3 > li:last-child > span {
+.pagination > li:last-child > a, .pagination > li:last-child > span {
   background-color: #B0B4BB;
   border: solid #B0B4BB;
   border-radius: 0;
   border-width: 0;
   color: #FFF; }
-.pagination-borderless3 > li > a:hover, .pagination-borderless3 > li > a:focus, .pagination-borderless3 > li > span:hover, .pagination-borderless3 > li > span:focus {
+.pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:focus {
   background-color: transparent;
   border-color: transparent;
   color: #868896; }
-.pagination-borderless3 > .active > a, .pagination-borderless3 > .active > a:hover, .pagination-borderless3 > .active > a:focus, .pagination-borderless3 > .active > span, .pagination-borderless3 > .active > span:hover, .pagination-borderless3 > .active > span:focus {
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
   background-color: #E7E8EA;
   border-color: #E7E8EA;
   color: #868896; }
-.pagination-borderless3 > .disabled > span, .pagination-borderless3 > .disabled > span:hover, .pagination-borderless3 > .disabled > span:focus, .pagination-borderless3 > .disabled > a, .pagination-borderless3 > .disabled > a:hover, .pagination-borderless3 > .disabled > a:focus {
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
   background-color: transparent;
   border-color: transparent;
   color: #EEE; }
