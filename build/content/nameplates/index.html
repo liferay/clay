@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Nameplates</title>
+	<title>User Icons &amp; Nameplates</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -65,8 +65,6 @@ collapse in
 </li>
 <li class=""><a href="../../content/modals">Modals</a>
 </li>
-<li class="active"><a href="../../content/nameplates">Nameplates</a>
-</li>
 <li class=""><a href="../../content/nav">Nav</a>
 </li>
 <li class=""><a href="../../content/nav-tabs">Nav Tabs</a>
@@ -84,6 +82,8 @@ collapse in
 <li class=""><a href="../../content/progress-bars">Progress Bars</a>
 </li>
 <li class=""><a href="../../content/sidenav">Sidenav</a>
+</li>
+<li class="active"><a href="../../content/nameplates">User Icons & Nameplates</a>
 </li>
 </ul>
 </div>
@@ -202,14 +202,20 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Nameplates
+			User Icons &amp; Nameplates
 
 			
 		</h1>
 
 		
 <div class="uxgl-nameplates-page row row-spacing">
-	<h3 class="col-md-12"><em>User Icon with Image</em></h3>
+	<div class="col-md-12">
+		<h3>User Icon with Image</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Quickly style user avatars and icons with the user icon component. Wrap an image with <code>&lt;div class=&quot;user-icon&quot;&gt;</code> to give it round borders.</p>
+		</blockquote>
+	</div>
 
 	<div class="col-md-2">
 		<div class="user-icon">
@@ -228,7 +234,13 @@ collapse
 </div>
 
 <div class="uxgl-nameplates-page row row-spacing">
-	<h3 class="col-md-12"><em>User Icon with Text</em></h3>
+	<div class="col-md-12">
+		<h3>User Icon with Text</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>If no image is supplied, insert some placeholder text instead.</p>
+		</blockquote>
+	</div>
 
 	<div class="col-md-2 col-xs-4">
 		<div class="user-icon user-icon-default">JB</div>
@@ -262,93 +274,19 @@ collapse
 
 	<div class="col-md-12 col-xs-12">
 
-		<pre><code class="html">&lt;div class=&quot;user-icon user-icon-default&quot;&gt;
-&#x9;JB
-&lt;/div&gt;</code></pre>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<h3 class="col-md-12">
-		<em>Nameplates</em>
-	</h3>
-
-	<div class="col-md-3 col-sm-6">
-		<div class="nameplate">
-			<div class="nameplate-icon">
-				<div class="user-icon">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
-				</div>
-			</div>
-
-			<div class="nameplate-content">
-				<h4>Joe Bloggs <small>Subheading</small></h4>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-3 col-sm-6">
-		<div class="nameplate">
-			<div class="nameplate-icon">
-				<div class="user-icon user-icon-warning">
-					JB
-				</div>
-			</div>
-
-			<div class="nameplate-content">
-				<h4>Joe Bloggs <small>Subheading</small></h4>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-3 col-sm-6">
-		<div class="nameplate">
-			<div class="nameplate-icon">
-				<div class="user-icon user-icon-default">
-					SP
-				</div>
-			</div>
-
-			<div class="nameplate-content">
-				<h4>Space Program <small>Subheading</small></h4>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-3 col-sm-6">
-		<div class="nameplate">
-			<div class="nameplate-icon">
-				<div class="user-icon user-icon-primary">
-					TT
-				</div>
-			</div>
-
-			<div class="nameplate-content">
-				<h4>Test Test <small>Subheading</small></h4>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-12 col-sm-12">
-
-		<pre><code>&lt;div class=&quot;nameplate&quot;&gt;
-&#x9;&lt;div class=&quot;nameplate-icon&quot;&gt;
-&#x9;&#x9;&lt;div class=&quot;user-icon user-icon-primary&quot;&gt;
-&#x9;&#x9;&#x9;TT
-&#x9;&#x9;&lt;/div&gt;
-&#x9;&lt;/div&gt;
-
-&#x9;&lt;div class=&quot;nameplate-content&quot;&gt;
-&#x9;&#x9;&lt;h4&gt;Test Test &lt;small&gt;Subheading&lt;/small&gt;&lt;/h4&gt;
-&#x9;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+		<pre><code class="html">&lt;div class=&quot;user-icon user-icon-default&quot;&gt;JB&lt;/div&gt;</code></pre>
 
 	</div>
 </div>
 
 <div class="uxgl-nameplates-page row row-spacing">
-	<h3 class="col-md-12"><em>Add class user-icon-circle, user-icon-rounded, or user-icon-square to style the borders</em></h3>
+	<div class="col-md-12">
+		<h3>User Icon Helper Classes</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class <code>.user-icon-circle</code>, <code>.user-icon-rounded</code>, or <code>.user-icon-square</code> to style the borders.</p>
+		</blockquote>
+	</div>
 
 	<div class="col-md-2 col-xs-4">
 		<div class="user-icon user-icon-circle">
@@ -381,7 +319,11 @@ collapse
 </div>
 
 <div class="uxgl-nameplates-page row row-spacing user-icon-square">
-	<h3 class="col-md-12"><em>Add it on the parent container to style everything inside</em></h3>
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add it on the parent container to style everything inside.</p>
+		</blockquote>
+	</div>
 
 	<div class="col-md-2 col-xs-4">
 		<div class="user-icon user-icon-default">JB</div>
@@ -417,6 +359,92 @@ collapse
 
 		<pre><code class="html">&lt;div class=&quot;user-icon-square&quot;&gt;
 &#x9;&lt;div class=&quot;user-icon user-icon-default&quot;&gt;JB&lt;/div&gt;
+&#x9;&lt;div class=&quot;user-icon user-icon-primary&quot;&gt;SP&lt;/div&gt;
+&#x9;&lt;div class=&quot;user-icon user-icon-success&quot;&gt;TT&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Nameplates</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Quickly layout user details with the nameplate component. It uses a table based layout so you can vertically align any content inside with the css property <code>vertical-align</code>.</p>
+
+			<p>Use a combination of <code>.nameplate-field</code> and <code>.nameplate-content</code> to control the size of each cell. <code>.nameplate-field</code> has width: 1% and will expand only as wide as its content as long as <code>.nameplate-content</code> is present as a sibling.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-3 col-sm-6">
+		<div class="nameplate">
+			<div class="nameplate-field">
+				<div class="user-icon">
+					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<h4>Joe Bloggs <small>Subheading</small></h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3 col-sm-6">
+		<div class="nameplate">
+			<div class="nameplate-field">
+				<div class="user-icon user-icon-warning">
+					JB
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<h4>Joe Bloggs <small>Subheading</small></h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3 col-sm-6">
+		<div class="nameplate">
+			<div class="nameplate-field">
+				<div class="user-icon user-icon-default">
+					SP
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<h4>Space Program <small>Subheading</small></h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3 col-sm-6">
+		<div class="nameplate">
+			<div class="nameplate-field">
+				<div class="user-icon user-icon-primary">
+					TT
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<h4>Test Test <small>Subheading</small></h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12 col-sm-12">
+
+		<pre><code>&lt;div class=&quot;nameplate&quot;&gt;
+&#x9;&lt;div class=&quot;nameplate-field&quot;&gt;
+&#x9;&#x9;&lt;div class=&quot;user-icon user-icon-primary&quot;&gt;
+&#x9;&#x9;&#x9;TT
+&#x9;&#x9;&lt;/div&gt;
+&#x9;&lt;/div&gt;
+
+&#x9;&lt;div class=&quot;nameplate-content&quot;&gt;
+&#x9;&#x9;&lt;h4&gt;Test Test &lt;small&gt;Subheading&lt;/small&gt;&lt;/h4&gt;
+&#x9;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
 	</div>
