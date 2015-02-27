@@ -10,6 +10,8 @@
 }
 
 .sidenav-content {
+	padding-bottom: 1px;
+	padding-top: 1px;
 	position: relative;
 	left: $sidenav-width + 20;
 }
@@ -25,8 +27,12 @@
 }
 
 .sidenav-transition {
-	.sidenav-content, .sidenav-menu-slider {
+	.sidenav-content {
 		@include prefixer(transition, all 0.5s ease, webkit moz spec);
+	}
+
+	.sidenav-menu-slider {
+		@include prefixer(transition, width 0.5s ease, webkit moz spec);
 	}
 }
 
@@ -34,6 +40,7 @@
 	.sidenav-content {
 		left: auto;
 		padding-left: $sidenav-width + 20;
+		position: static;
 	}
 
 	.sidenav-container.closed {
