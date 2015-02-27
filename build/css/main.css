@@ -1535,7 +1535,7 @@ you can use the generic selector below, but it's slower:
 
 .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .card-row, .tabular-notification, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate {
   display: table;
-  width: 100.4%; }
+  width: 100%; }
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -8576,9 +8576,19 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   border-radius: 20px;
   background-color: #EEE;
   font-size: 11px;
+  height: 26px;
   margin: 0 5px 2px 0;
   padding: 3px;
   width: auto; }
+  .nameplate-label.form-control {
+    display: table;
+    height: 36px; }
+  .nameplate-label.nameplate-label-circle {
+    border-radius: 20px; }
+  .nameplate-label.nameplate-label-rounded {
+    border-radius: 3px; }
+  .nameplate-label.nameplate-label-square {
+    border-radius: 0; }
   .nameplate-label a[class*="icon-"] {
     color: #999;
     margin-left: 5px;
@@ -8601,10 +8611,6 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     padding: 0.8em; }
     .nameplate-list > li:hover, .nameplate-list > .nameplate:hover, .nameplate-list > .nameplate-label:hover, .nameplate-list > .nameplate-list > li:hover, .nameplate-list > .nameplate-list > li:hover, .nameplate-list > .nameplate-label:hover, .nameplate-list > .nameplate-list > li:hover, .nameplate-list > .nameplate-list > li:hover {
       background-color: #DDD; }
-  .nameplate-list > .nameplate-list-heading {
-    background-color: #F6F6F6; }
-    .nameplate-list > .nameplate-list-heading:hover {
-      background-color: #F6F6F6; }
   .nameplate-list .nameplate-content, .nameplate-list .nameplate-icon, .nameplate-list .nameplate-field {
     padding: 0 0.3em;
     vertical-align: middle; }
@@ -8616,6 +8622,23 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     line-height: 19px;
     padding: 0 3px 0 4px;
     text-decoration: none; }
+
+.nameplate-list-heading {
+  background-color: #F8F8F8; }
+  .nameplate-list-heading > a, .nameplate-list-heading > span {
+    color: #2B4259;
+    display: inline-block;
+    padding: 1.1em; }
+    .nameplate-list-heading > a:focus, .nameplate-list-heading > a:hover, .nameplate-list-heading > span:focus, .nameplate-list-heading > span:hover {
+      text-decoration: none; }
+  .nameplate-list-heading > a {
+    display: block; }
+  .nameplate-list-heading + .collapse .nameplate-list, .nameplate-list-heading + .collapsing .nameplate-list, .nameplate-list-heading + .nameplate-list {
+    margin-bottom: 0; }
+
+.nameplate-list-bordered.nameplate-list-heading, .nameplate-list-bordered .nameplate-list-heading, .nameplate-list-bordered .nameplate-list > li, .nameplate-list-bordered > li {
+  border: 1px solid #DDD;
+  margin-top: -1px; }
 
 .user-icon {
   border-radius: 50%;
@@ -10080,3 +10103,7 @@ section.row {
 @media (min-width: 768px) {
   #wrapper {
     overflow-x: visible; } }
+
+.uxgl-extending-nameplates .profile-header {
+  float: left;
+  margin-bottom: 15px; }
