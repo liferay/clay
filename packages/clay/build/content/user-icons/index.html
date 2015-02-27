@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Timeline</title>
+	<title>User Icons</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -44,7 +44,7 @@
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse
+collapse in
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/alerts">Alerts</a>
@@ -89,7 +89,7 @@ collapse
 </li>
 <li class=""><a href="../../content/sidenav">Sidenav</a>
 </li>
-<li class=""><a href="../../content/user-icons">User Icons</a>
+<li class="active"><a href="../../content/user-icons">User Icons</a>
 </li>
 </ul>
 </div>
@@ -124,7 +124,7 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Example Pages</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse in
+collapse
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
@@ -133,7 +133,7 @@ collapse in
 </li>
 <li class=""><a href="../../content/profile-page">Profile Page</a>
 </li>
-<li class="active"><a href="../../content/timelines">Timeline</a>
+<li class=""><a href="../../content/timelines">Timeline</a>
 </li>
 </ul>
 </div>
@@ -208,212 +208,167 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Timeline
+			User Icons
 
 			
 		</h1>
 
 		
-<div class="row">
+<div class="uxgl-nameplates-page row row-spacing">
 	<div class="col-md-12">
-		<h4>Timeline Default</h4>
-		<p>The default view for timeline.</p>
+		<h3>User Icon with Image</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Quickly style user avatars and icons with the user icon component. Wrap an image with <code>&lt;div class=&quot;user-icon&quot;&gt;</code> to give it round borders.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-2">
+		<div class="user-icon">
+			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+		</div>
+		<p>user-icon</p>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code class="html">&lt;div class=&quot;user-icon&quot;&gt;
+&#x9;&lt;img class=&quot;img-responsive&quot; src=&quot;image-path/image.gif&quot;&gt;
+&lt;/div&gt;</code></pre>
+
 	</div>
 </div>
 
-<div class="row">
+<div class="uxgl-nameplates-page row row-spacing">
 	<div class="col-md-12">
-		<ul class="timeline">
+		<h3>User Icon with Text</h3>
 
-			<li class="timeline-y-axis"></li>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>If no image is supplied, insert some placeholder text instead.</p>
+		</blockquote>
+	</div>
 
-			<li class="timeline-item">
-				<div class="panel panel-default timeline-panel">
-					<div class="panel-heading">
-						<a href="#">Test Test</a>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-default">JB</div>
+		<p>user-icon<br>user-icon-default</p>
+	</div>
 
-						<span class="label label-primary">Admin</span>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-primary">SP</div>
+		<p>user-icon<br>user-icon-primary</p>
+	</div>
 
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 2 minutes ago
-						</div>
-					</div>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-success">TT</div>
+		<p>user-icon<br>user-icon-success</p>
+	</div>
 
-					<div class="timeline-avatar">
-						<img alt="avatar" class="img-circle img-responsive" src="../../images/thumbnail_placeholder.gif">
-					</div>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-info">WW</div>
+		<p>user-icon<br>user-icon-info</p>
+	</div>
 
-					<div class="panel-body">
-						Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half. Decaffeinated cortado cup kopi-luwak half and half, cream macchiato mug froth flavour french press. Id extra espresso and cup con panna mug mazagran. Est so galão aftertaste, flavour variety aromatic est cultivar est cream con panna.
-					</div>
-				</div>
-			</li>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-warning">JB</div>
+		<p>user-icon<br>user-icon-warning</p>
+	</div>
 
-			<li class="timeline-item">
-				<div class="panel panel-default timeline-panel">
-					<div class="panel-heading">
-						<a href="#">Joe Bloggs</a>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-danger">JB</div>
+		<p>user-icon<br>user-icon-danger</p>
+	</div>
 
-						<span class="label label-info">Guest</span>
+	<div class="col-md-12 col-xs-12">
 
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 21 minutes ago
-						</div>
-					</div>
+		<pre><code class="html">&lt;div class=&quot;user-icon user-icon-default&quot;&gt;JB&lt;/div&gt;</code></pre>
 
-					<div class="timeline-avatar">
-						<img alt="avatar" class="img-circle img-responsive" src="../../images/thumbnail_placeholder.gif">
-					</div>
-
-					<div class="panel-body">
-						<p>Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half. Decaffeinated cortado cup kopi-luwak half and half, cream macchiato mug froth flavour french press. Id extra espresso and cup con panna mug mazagran. Est so galão aftertaste, flavour variety aromatic est cultivar est cream con panna.</p>
-
-						<button class="btn btn-info btn-xs" type="button">Edit</button>
-
-						<button class="btn btn-info btn-xs" type="button">Delete</button>
-					</div>
-				</div>
-			</li>
-
-			<li class="timeline-item">
-				<div class="panel panel-default timeline-panel">
-					<div class="timeline-avatar">
-						<img alt="avatar" class="img-circle img-responsive" src="../../images/thumbnail_placeholder.gif">
-					</div>
-
-					<div class="panel-body">
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#1">Tab 1</a></li>
-
-							<li><a href="#1">Tab 2</a></li>
-						</ul><br>
-
-						<textarea class="form-control" style="height: 75px;" placeholder="Write something on your timeline"></textarea><br>
-
-						<button type="submit" class="btn btn-info btn-xs">Submit</button>
-					</div>
-				</div>
-			</li>
-		</ul>
 	</div>
 </div>
 
-<div class="row">
+<div class="uxgl-nameplates-page row row-spacing">
 	<div class="col-md-12">
-		<h4>Timeline Centered</h4>
-		<p>Timeline is centered on the page.</p>
+		<h3>User Icon Helper Classes</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class <code>.user-icon-circle</code>, <code>.user-icon-rounded</code>, or <code>.user-icon-square</code> to style the borders.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-circle">
+			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+		</div>
+		<p>user-icon-circle</p>
+	</div>
+
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-rounded">
+			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+		</div>
+		<p>user-icon-rounded</p>
+	</div>
+
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-square">
+			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+		</div>
+		<p>user-icon-square</p>
+	</div>
+
+	<div class="col-md-12">
+
+		<pre><code class="html">&lt;div class=&quot;user-icon user-icon-square&quot;&gt;
+&#x9;&lt;img class=&quot;img-responsive&quot; src=&quot;image-path/image.gif&quot;&gt;
+&lt;/div&gt;</code></pre>
+
 	</div>
 </div>
 
-<div class="row">
+<div class="uxgl-nameplates-page row row-spacing user-icon-square">
 	<div class="col-md-12">
-		<ul class="timeline timeline-center">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add it on the parent container to style everything inside.</p>
+		</blockquote>
+	</div>
 
-			<li class="timeline-y-axis line-center"></li>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-default">JB</div>
+		<p>user-icon<br>user-icon-default</p>
+	</div>
 
-			<li class="item-center timeline-item">
-				<div class="panel panel-warning timeline-center-panel">
-					<div class="panel-heading">
-						<a href="#">Jane Doe</a>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-primary">SP</div>
+		<p>user-icon<br>user-icon-primary</p>
+	</div>
 
-						<span class="label label-warning">Super User</span>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-success">TT</div>
+		<p>user-icon<br>user-icon-success</p>
+	</div>
 
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 1 day ago
-						</div>
-					</div>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-info">WW</div>
+		<p>user-icon<br>user-icon-info</p>
+	</div>
 
-					<div class="timeline-avatar">
-						<i class="glyphicon glyphicon-map-marker"></i>
-					</div>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-warning">JB</div>
+		<p>user-icon<br>user-icon-warning</p>
+	</div>
 
-					<div class="panel-body">
-						<p>Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half.</p>
-					</div>
+	<div class="col-md-2 col-xs-4">
+		<div class="user-icon user-icon-danger">JB</div>
+		<p>user-icon<br>user-icon-danger</p>
+	</div>
 
-					<div class="panel-footer">
-						<div class="form-group">
-							<label class="sr-only">comment box</label>
+	<div class="col-md-12 col-xs-12">
 
-							<input class="form-control input-sm" placeholder="Leave a comment..." type="text">
-						</div>
-					</div>
-				</div>
-			</li>
+		<pre><code class="html">&lt;div class=&quot;user-icon-square&quot;&gt;
+&#x9;&lt;div class=&quot;user-icon user-icon-default&quot;&gt;JB&lt;/div&gt;
+&#x9;&lt;div class=&quot;user-icon user-icon-primary&quot;&gt;SP&lt;/div&gt;
+&#x9;&lt;div class=&quot;user-icon user-icon-success&quot;&gt;TT&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
-			<li class="item-center right-align timeline-item">
-				<div class="panel timeline-center-panel">
-					<div class="panel-heading">
-						<a href="#">Test Test</a>
-
-						<span class="label label-primary">Admin</span>
-
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 2 days ago
-						</div>
-					</div>
-
-					<div class="timeline-avatar">
-						<i class="glyphicon glyphicon-map-marker"></i>
-					</div>
-
-					<div class="body-right panel-body">
-						Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half. Decaffeinated cortado cup kopi-luwak half and half, cream macchiato mug froth flavour french press. Id extra espresso and cup con panna mug mazagran. Est so galão aftertaste, flavour variety aromatic est cultivar est cream con panna.
-					</div>
-
-					<div class="panel-footer">
-						<div class="form-group">
-							<label class="sr-only">comment box</label>
-
-							<input class="form-control input-sm" placeholder="Leave a comment..." type="text">
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="item-center timeline-item">
-				<div class="panel panel-success timeline-center-panel">
-					<div class="panel-heading">
-						<a href="#">Joe Bloggs</a>
-
-						<span class="label label-info">Guest</span>
-
-						<div class="timeline-timestamp">
-							<span class="glyphicon glyphicon-time timestamp-icon"></span> 3 weeks ago
-						</div>
-					</div>
-
-					<div class="timeline-avatar">
-						<i class="glyphicon glyphicon-map-marker"></i>
-					</div>
-
-					<div class="panel-body">
-						<h4>Responsive Image</h4>
-
-						<img alt="responsive image" class="col-xs-12 img-responsive" src="../../images/unsplash_52c470899a2e1_1.jpg">
-					</div>
-				</div>
-			</li>
-
-			<li class="item-center right-align timeline-item">
-				<div class="panel panel-danger timeline-center-panel">
-					<div class="panel-heading">
-						<span>Quote of the Day</span>
-					</div>
-
-					<div class="timeline-avatar">
-						<i class="glyphicon glyphicon-map-marker"></i>
-					</div>
-
-					<div class="body-right panel-body">
-						<blockquote>
-							<p>Froth variety, brewed macchiato ut foam viennese, lungo french press cup redeye half and half.</p>
-							<small>Someone famous</small>
-						</blockquote>
-					</div>
-				</div>
-			</li>
-		</ul>
 	</div>
 </div>
 	</div>
