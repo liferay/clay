@@ -6726,6 +6726,33 @@ figcaption, .figcaption {
 .serif {
   font-family: Georgia, "Times New Roman", Times, serif; }
 
+.heading1, .heading2, .heading3, .heading4, .heading5, .heading6 {
+  font-weight: 500;
+  margin: 0; }
+
+.heading1 {
+  font-size: 36px; }
+
+.heading2 {
+  font-size: 30px; }
+
+.heading3 {
+  font-size: 24px; }
+
+.heading4 {
+  font-size: 18px; }
+
+.heading5 {
+  font-size: 14px; }
+
+.heading6 {
+  font-size: 12px; }
+
+.sub-heading {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0; }
+
 .icon-xs {
   font-size: 0.6em; }
 
@@ -8574,6 +8601,10 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
     padding: 0.8em; }
     .nameplate-list > li:hover, .nameplate-list > .nameplate:hover, .nameplate-list > .nameplate-label:hover, .nameplate-list > .nameplate-list > li:hover, .nameplate-list > .nameplate-list > li:hover, .nameplate-list > .nameplate-label:hover, .nameplate-list > .nameplate-list > li:hover, .nameplate-list > .nameplate-list > li:hover {
       background-color: #DDD; }
+  .nameplate-list > .nameplate-list-heading {
+    background-color: #F6F6F6; }
+    .nameplate-list > .nameplate-list-heading:hover {
+      background-color: #F6F6F6; }
   .nameplate-list .nameplate-content, .nameplate-list .nameplate-icon, .nameplate-list .nameplate-field {
     padding: 0 0.3em;
     vertical-align: middle; }
@@ -8648,6 +8679,15 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
 .user-icon-warning {
   background-color: #894B0F;
   color: #FFF; }
+
+.profile-header {
+  max-width: 300px; }
+  .profile-header .nameplate, .profile-header .nameplate-label, .profile-header .nameplate-list > li, .nameplate-list > .profile-header li, .profile-header .nameplate-list > .nameplate, .nameplate-list > .profile-header .nameplate, .profile-header .nameplate-label, .profile-header .nameplate-list > li, .nameplate-list > .profile-header li, .profile-header .nameplate-list > .nameplate, .nameplate-list > .profile-header .nameplate, .profile-header.nameplate, .profile-header.nameplate-label, .nameplate-list > li.profile-header, .nameplate-list > .profile-header.nameplate, .profile-header.nameplate-label, .nameplate-list > li.profile-header, .nameplate-list > .profile-header.nameplate {
+    margin: 0; }
+  .profile-header .nameplate-content {
+    padding: 10px; }
+  .profile-header .nameplate-field {
+    padding: 10px; }
 
 .pager li > a, .pager li > span {
   background-color: #FFF;
