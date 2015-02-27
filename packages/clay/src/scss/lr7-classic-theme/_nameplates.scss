@@ -93,6 +93,14 @@
 		}
 	}
 
+	> .nameplate-list-heading {
+		background-color: #F6F6F6;
+
+		&:hover {
+			background-color: #F6F6F6;
+		}
+	}
+
 	.nameplate-content, .nameplate-icon, .nameplate-field {
 		padding: 0 0.3em;
 		vertical-align: middle;
@@ -179,4 +187,22 @@
 
 .user-icon-warning {
 	@include color-user-icon($user-icon-warning-bg);
+}
+
+// Profile Header
+
+.profile-header {
+	max-width: 300px;
+
+	.nameplate, &.nameplate {
+		margin: 0;
+	}
+
+	.nameplate-content {
+		padding: 10px;
+	}
+
+	.nameplate-field {
+		padding: 10px;
+	}
 }

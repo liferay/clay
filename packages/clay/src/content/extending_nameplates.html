@@ -5,10 +5,129 @@ section: Extending Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<h3 class="usage-heading">Profile Headers with Nameplate</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Profile headers using the nameplate component.</p>
+		</blockquote>
+
+		<div class="profile-header">
+			<div class="nameplate">
+				<div class="nameplate-field">
+					<div class="user-icon user-icon-success user-icon-rounded">
+						<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
+					</div>
+				</div>
+				<div class="nameplate-content">
+					<div class="heading4">Test Test</div>
+					<div class="heading5 text-warning">Senior Coffee Grinder</div>
+					<div class="sub-heading text-default">3,245 Followers</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-header">
+			<div class="nameplate">
+				<div class="nameplate-content">
+					<div class="heading4">Space Program</div>
+					<div class="heading5 text-warning">Coffee Grinder R&D</div>
+					<div class="sub-heading text-default">32 Followers</div>
+				</div>
+				<div class="nameplate-field">
+					<div class="user-icon user-icon-success user-icon-rounded">
+						<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-header">
+			<div class="nameplate">
+				<div class="nameplate-field">
+					<div class="user-icon user-icon-success user-icon-rounded">
+						<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
+					</div>
+				</div>
+				<div class="nameplate-content">
+					<div class="heading4">Space Program</div>
+					<div class="heading5 text-default"><span class="icon-map-marker"></span> Diamond Bar, CA</div>
+					<button class="btn btn-primary btn-sm" style="margin-top: 10px;">Follow</button>
+					<button class="btn btn-default btn-sm" style="margin-top: 10px;"><span class="icon-twitter"></span></button>
+					<button class="btn btn-default btn-sm" style="margin-top: 10px;"><span class="icon-dribbble"></span></button>
+					<button class="btn btn-default btn-sm" style="margin-top: 10px;"><span class="icon-weibo"></span></button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 class="usage-heading">Nameplate Lists</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Display groups of users with nameplate list.</p>
+		</blockquote>
+
+		<ul class="nameplate-list">
+			<li class="nameplate-list-heading"><span>S</span></li>
+			<li class="nameplate">
+				<div class="nameplate-field">
+					<div class="user-icon user-icon-success user-icon-rounded">
+						<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
+					</div>
+				</div>
+				<div class="nameplate-content">
+					<div class="heading4">Space Program</div>
+					<div class="heading5 text-warning">Coffee Grinder R&D</div>
+					<div class="sub-heading text-default">35 Followers</div>
+				</div>
+				<div class="nameplate-field">
+					<button class="btn btn-success btn-sm">Add</button>
+				</div>
+			</li>
+			<li class="nameplate-list-heading"><span>T</span></li>
+			<li class="nameplate">
+				<div class="nameplate-field">
+					<div class="user-icon user-icon-success user-icon-rounded">
+						<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
+					</div>
+				</div>
+				<div class="nameplate-content">
+					<div class="heading4">Test Test</div>
+					<div class="heading5 text-warning">Senior Coffee Grinder</div>
+					<div class="sub-heading text-default">3,245 Followers</div>
+				</div>
+				<div class="nameplate-field">
+					<button class="btn btn-success btn-sm">Add</button>
+				</div>
+			</li>
+			<li class="nameplate">
+				<div class="nameplate-field">
+					<div class="user-icon user-icon-success user-icon-rounded">
+						<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
+					</div>
+				</div>
+				<div class="nameplate-content">
+					<div class="heading4">Test Test</div>
+					<div class="heading5 text-warning">Senior Coffee Grinder</div>
+					<div class="sub-heading text-default">3,245 Followers</div>
+				</div>
+				<div class="nameplate-field">
+					<button class="btn btn-success btn-sm">Add</button>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
 		<h3 class="usage-heading">Nameplate-label</h3>
 
 		<blockquote class="blockquote-success blockquote-sm">
-			<p>Use <code>.nameplate-label</code> to reassure your users that they are sending to or selecting the right content/user.</p>
+			<p>Use <code>.nameplate-label</code> to create labels containing user icon and user name, useful for mail applications.</p>
 		</blockquote>
 
 		<div class="nameplate-label pull-left">
