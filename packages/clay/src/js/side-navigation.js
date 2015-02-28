@@ -4,18 +4,28 @@
 	};
 
 	SideNavigation.prototype = {
+		ATTRS: {
+			content: '.sidenav-content',
+			navigation: '.sidenav-menu-slider',
+			toggler: '.sidenav-toggler'
+		},
+
 		init: function(element, options) {
-			this.options = $.extend($.fn.sideNavigation.defaults, options);
+			var instance = this;
 
-			this.options.selector = element.selector;
+			instance.options = $.extend(this.ATTRS, options);
 
-			this._handleClick(element);
+			instance.options.selector = element.selector;
+
+			instance._handleClick(element);
+
+			instance._handleResize(element);
 		},
 
 		_handleClick: function(element) {
 			var instance = this;
 
-			element.find('.sidenav-toggler').on('click', function(event) {
+			element.find(instance.options.toggler).on('click', function(event) {
 				var container = $(this).closest(instance.options.selector);
 				var content = container.find(instance.options.content);
 				var navigation = container.find(instance.options.navigation);
@@ -31,6 +41,24 @@
 
 				instance.toggleNavigation(container);
 
+				instance.setEqualHeight(navigation, content, container);
+			});
+		},
+
+		_handleResize: function(element) {
+			var instance = this;
+			var container,
+					content,
+					navigation;
+
+			$(window).resize(function(event) {
+				element.each(function() {
+					container = $(this);
+					content = container.find(instance.options.content);
+					navigation = container.find(instance.options.navigation);
+				});
+
+				instance.removeEqualHeight(navigation, content, container);
 				instance.setEqualHeight(navigation, content, container);
 			});
 		},
@@ -77,12 +105,6 @@
 		new SideNavigation(this, options);
 
 		return this;
-	}
-
-	$.fn.sideNavigation.defaults = {
-		content: '.sidenav-content',
-		navigation: '.sidenav-menu-slider',
-		toggle: '.sidenav-toggler'
 	}
 
 	$.fn.sideNavigation.Constructor = SideNavigation;
