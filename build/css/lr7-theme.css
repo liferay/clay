@@ -6616,6 +6616,8 @@ figcaption, .figcaption {
   left: 0; }
 
 .sidenav-content {
+  padding-bottom: 1px;
+  padding-top: 1px;
   position: relative;
   left: 240px; }
 
@@ -6627,15 +6629,20 @@ figcaption, .figcaption {
   position: absolute;
   width: 220px; }
 
-.sidenav-transition .sidenav-content, .sidenav-transition .sidenav-menu-slider {
+.sidenav-transition .sidenav-content {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
+.sidenav-transition .sidenav-menu-slider {
+  -webkit-transition: width 0.5s ease;
+  -moz-transition: width 0.5s ease;
+  transition: width 0.5s ease; }
 
 @media (min-width: 768px) {
   .sidenav-content {
     left: auto;
-    padding-left: 240px; }
+    padding-left: 240px;
+    position: static; }
   .sidenav-container.closed > .sidenav-content {
     left: auto;
     padding-left: 0; } }
