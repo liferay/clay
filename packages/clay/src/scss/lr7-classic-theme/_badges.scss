@@ -1,0 +1,37 @@
+.badge-danger {
+	@include color-badge($brand-danger);
+}
+
+.badge-info {
+	@include color-badge($brand-info);
+}
+
+.badge-primary {
+	@include color-badge($brand-primary);
+}
+
+.badge-success {
+	@include color-badge($brand-success);
+}
+
+.badge-warning {
+	@include color-badge($brand-warning);
+}
+
+.badge-circle {
+	&, .badge {
+		border-radius: 20px;
+	}
+}
+
+.badge-rounded {
+	&, .badge {
+		border-radius: 3px;
+	}
+}
+
+.badge-square {
+	&, .badge {
+		border-radius: 0;
+	}
+}

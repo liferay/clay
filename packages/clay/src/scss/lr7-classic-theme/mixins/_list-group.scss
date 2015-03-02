@@ -1,0 +1,8 @@
+@mixin color-tabular-list-group-item($color) {
+	background-color: transparent;
+	border-left: 5px solid $color;
+
+	.status {
+		color: $color;
+	}
+}

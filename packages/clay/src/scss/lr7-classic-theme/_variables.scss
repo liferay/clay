@@ -39,6 +39,8 @@ $component-active-color:                   #FFF;
 
 $font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+$line-height-base:                         1.4286;
+
 $padding-base-vertical:     6px;
 $padding-base-horizontal:   16px;
 
@@ -211,6 +213,8 @@ $dropdown-border-width: 0;
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border:                 #FFF;
 $dropdown-divider-bg:                      $dropdown-border;
+
+$dropdown-wide-width: 500px;
 
 $dropdown-link-color:                      $brand-default;
 $dropdown-link-hover-color:                $brand-default;
@@ -600,3 +604,6 @@ $tab-group-top-border-radius: $border-radius-base $border-radius-base 0 0;
 $tab-group-bottom-border-radius: 0 0 $border-radius-base $border-radius-base;
 $tab-group-left-border-radius: $border-radius-base 0 0 $border-radius-base;
 $tab-group-right-border-radius: 0 $border-radius-base $border-radius-base 0;
+
+//Side Nav
+$sidenav-width: 220px;
