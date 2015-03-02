@@ -1,0 +1,141 @@
+/* ---------- Tables --------- */
+
+.table-responsive {
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 100%;
+}
+
+.table-responsive-collapse .label-collapse {
+	display: none;
+	font-weight: bold;
+}
+
+@media screen and (max-width: $screen-xs-max) {
+	.table-responsive-collapse {
+		.table, thead, tbody, th {
+			display: block;
+		}
+
+		> .table > tbody > tr > td {
+			white-space: normal;
+			word-break: break-word;
+		}
+
+		tbody {
+			border-width: 0;
+
+			tr td {
+				border-width: 0;
+			}
+		}
+
+		thead {
+			display: none;
+		}
+
+		tr {
+			border-top: 1px solid #DDD;
+			display: table;
+			width: 100%;
+
+			&:first-child {
+				border-top-width: 0;
+			}
+
+			&:nth-of-type(even) {
+				background: #EEE;
+			}
+
+			td {
+				display: table-row;
+				white-space: normal;
+			}
+		}
+
+		.label-collapse {
+			display: table-cell;
+			padding: 10px 20px 0 10px;
+			position: relative;
+			width: 55%;
+		}
+	}
+
+	.table-responsive-flip {
+		&.table-responsive {
+			border-width: 0;
+		}
+
+		.table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		.table {
+			tbody {
+				overflow-x: auto;
+				white-space: nowrap;
+			}
+
+			thead {
+				float: left;
+			}
+
+			> thead {
+				border-left: 1px solid #DDD;
+				border-right: 3px solid #DDD;
+				overflow: auto;
+				max-width: 200px;
+
+				> tr > th {
+					border-top-width: 0;
+					border-bottom-width: 0;
+				}
+			}
+
+			tr {
+				border-top: 1px solid #DDD;
+				display: inline-block;
+				margin: 0 -2px;
+			}
+
+			> tbody > tr > td, > thead > tr > th {
+				border-bottom: 1px solid #DDD;
+				border-left: 1px solid #DDD;
+				border-top-width: 0;
+			}
+		}
+
+		.table-bordered {
+			> thead > tr > th {
+				border-right-width: 0;
+			}
+		}
+
+		> .table-bordered {
+			> tbody {
+				> tr {
+					border-right: 1px solid #DDD;
+
+					&:last-child > td {
+						border-bottom: 1px solid #DDD;
+					}
+
+					> td {
+						border-left-width: 0;
+						border-right-width: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: ($screen-xs-min - 1)) {
+	.table-responsive-flip {
+		.table {
+			> thead {
+				max-width: 100px;
+			}
+		}
+	}
+}

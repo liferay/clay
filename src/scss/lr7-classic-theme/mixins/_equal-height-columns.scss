@@ -1,0 +1,9 @@
+%equal-height-column-cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+%equal-height-columns {
+	display: table;
+	width: 100%; // Webkit rounding issues
+}

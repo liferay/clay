@@ -54,6 +54,23 @@
 	padding: 3px;
 	width: auto;
 
+	&.form-control {
+		display: table;
+		height: $input-height-base;
+	}
+
+	&.nameplate-label-circle {
+		border-radius: 20px;
+	}
+
+	&.nameplate-label-rounded {
+		border-radius: 3px;
+	}
+
+	&.nameplate-label-square {
+		border-radius: 0;
+	}
+
 	a[class*="icon-"] {
 		color: #999;
 		margin-left: 5px;
@@ -106,6 +123,40 @@
 		line-height: 19px;
 		padding: 0 3px 0 4px;
 		text-decoration: none;
+	}
+}
+
+.nameplate-list-heading {
+	background-color: #F8F8F8;
+
+	> a, > span {
+		color: $text-color;
+		display: inline-block;
+		padding: 1.1em;
+
+		&:focus, &:hover {
+			text-decoration: none;
+		}
+	}
+
+	> a {
+		display: block;
+	}
+
+	+ .collapse .nameplate-list,
+	+ .collapsing .nameplate-list,
+	+ .nameplate-list {
+		margin-bottom: 0;
+	}
+}
+
+.nameplate-list-bordered {
+	&.nameplate-list-heading,
+	.nameplate-list-heading,
+	.nameplate-list > li,
+	> li {
+		border: 1px solid #DDD;
+		margin-top: -1px;
 	}
 }
 
@@ -179,4 +230,22 @@
 
 .user-icon-warning {
 	@include color-user-icon($brand-warning);
+}
+
+// Profile Header
+
+.profile-header {
+	max-width: 300px;
+
+	.nameplate, &.nameplate {
+		margin: 0;
+	}
+
+	.nameplate-content {
+		padding: 10px;
+	}
+
+	.nameplate-field {
+		padding: 10px;
+	}
 }
