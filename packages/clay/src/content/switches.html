@@ -6,50 +6,191 @@ section: Experimental
 <div class="row">
 	<div class="col-md-12">
 		<form action="#" method="get">
-			<h3>Toggling labels</h3>
-			<div class="form-group">
-				<input class="switch" id="switch1" name="switch1" type="checkbox" />
-				<label for="switch1"><span class="on">On</span><span class="off">Off</span></label>
+			<h3>Default Switches</h3>
+
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Create css switches by adding class <code>switch</code> on <code>```<input type="checkbox">```</code>. <code>```<input type="checkbox">```</code> must be declared before <code>```<label>```</code> and the label's <code>for</code> attribute must match the input's <code>id</code> attribute.</p>
+
+				<p>Use <code>checked="checked"</code> to turn a switch on by default.</p>
+			</blockquote>
+
+			<div class="uxgl-switches">
+				<div class="form-group">
+					<input checked="checked" class="switch" id="switch2" name="switch2" type="checkbox" />
+					<label for="switch2"><span class="on">On</span><span class="off">Off</span></label>
+				</div>
+
+				<div class="form-group">
+					<input class="switch" id="switch1" name="switch1" type="checkbox" />
+					<label for="switch1"><span class="on">On</span><span class="off">Off</span></label>
+				</div>
 			</div>
 
-			<div class="form-group">
-				<input checked="checked" class="switch" id="switch2" name="switch2" type="checkbox" />
-				<label for="switch2"><span class="on">On</span><span class="off">Off</span></label>
-			</div>
-
-<pre><code>```<div class="form-group">
-  <input class="switch" id="switch" type="checkbox" />
-  <label for="switch"><span class="on">On</span><span class="off">Off</span></label>
+<pre><code class="html">```<div class="form-group">
+    <input checked="checked" class="switch" id="switch" type="checkbox" />
+    <label for="switch">
+        <span class="on">On</span><span class="off">Off</span>
+    </label>
 </div>```</code></pre>
 
-			<h3>Edit mode</h3>
+			<h3>Contextual Switches</h3>
 
-			<div class="form-group">
-				<input class="edit switch" id="switch2Edit" name="switch2Edit" type="checkbox" />
-				<label for="switch2Edit">Edit</label>
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Use contextual classes to style switches.</p>
+			</blockquote>
+
+			<div class="uxgl-switches">
+				<div class="form-group">
+					<input checked="checked" class="switch switch-primary" id="contextual-switch0" name="contextual-switch0" type="checkbox" />
+					<label for="contextual-switch0"><span class="on">On</span><span class="off">Off</span></label>
+				</div>
+
+				<div class="form-group">
+					<input class="switch switch-success" id="contextual-switch1" name="contextual-switch1" type="checkbox" />
+					<label for="contextual-switch1"><span class="on">On</span><span class="off">Off</span></label>
+				</div>
+
+				<div class="form-group">
+					<input class="switch switch-info" id="contextual-switch2" name="contextual-switch2" type="checkbox" />
+					<label for="contextual-switch2"><span class="on">On</span><span class="off">Off</span></label>
+				</div>
+
+				<div class="form-group">
+					<input class="switch switch-warning" id="contextual-switch3" name="contextual-switch3" type="checkbox" />
+					<label for="contextual-switch3"><span class="on">On</span><span class="off">Off</span></label>
+				</div>
+
+				<div class="form-group">
+					<input class="switch switch-danger" id="contextual-switch4" name="contextual-switch4" type="checkbox" />
+					<label for="contextual-switch4"><span class="on">On</span><span class="off">Off</span></label>
+				</div>
 			</div>
 
-<pre><code>```<div class="form-group">
-  <input checked="checked" class="edit switch" id="switch" type="checkbox" />
-  <label for="switch">Edit</label>
+<pre><code class="html">```<div class="form-group">
+    <input checked="checked" class="edit switch switch-primary" id="contextual-switch0" type="checkbox" />
+    <label for="contextual-switch0">...</label>
+
+    <input checked="checked" class="edit switch switch-success" id="contextual-switch1" type="checkbox" />
+    <label for="contextual-switch1">...</label>
+
+    <input checked="checked" class="edit switch switch-info" id="contextual-switch2" type="checkbox" />
+    <label for="contextual-switch2">...</label>
+
+    <input checked="checked" class="edit switch switch-warning" id="contextual-switch3" type="checkbox" />
+    <label for="contextual-switch3">...</label>
+
+    <input checked="checked" class="edit switch switch-danger" id="contextual-switch4" type="checkbox" />
+    <label for="contextual-switch4">...</label>
 </div>```</code></pre>
 
-			<h3>Disabled inputs</h3>
+			<h3>Disabled Switches</h3>
 
-			<div class="form-group">
-				<input checked="checked" class="switch" disabled="disabled" id="switch3" name="switch3" type="checkbox" />
-				<label for="switch3"><span class="on">On</span><span class="off">Off</span></label>
+			<div class="uxgl-switches">
+				<div class="form-group">
+					<input checked="checked" class="switch" disabled="disabled" id="switch3" name="switch3" type="checkbox" />
+					<label for="switch3"><span class="on">On</span><span class="off">Off</span></label>
+				</div>
+
+				<div class="form-group">
+					<input class="switch" disabled="disabled" id="switch3" name="switch3" type="checkbox" />
+					<label for="switch3"><span class="on">On</span><span class="off">Off</span></label>
+				</div>
 			</div>
 
-			<div class="form-group">
-				<input class="switch" disabled="disabled" id="switch3" name="switch3" type="checkbox" />
-				<label for="switch3"><span class="on">On</span><span class="off">Off</span></label>
-			</div>
-
-<pre><code>```<div class="form-group">
-  <input class="switch" disabled="disabled" id="switch" type="checkbox" />
-  <label for="switch"><span class="on">On</span><span class="off">Off</span></label>
+<pre><code class="html">```<div class="form-group">
+    <input class="switch" disabled="disabled" id="switch" type="checkbox" />
+    <label for="switch">
+        <span class="on">On</span><span class="off">Off</span>
+    </label>
 </div>```</code></pre>
+
+			<h3>Adding Icons</h3>
+
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Add icons to the switch by adding the font-awesome class name to <code>```<input class="icon-pencil switch" type="checkbox">```</code>.</p>
+			</blockquote>
+
+			<div class="form-group">
+				<input checked="checked" class="icon-pencil switch" id="switch2Edit0" name="switch2Edit0" type="checkbox" />
+				<label for="switch2Edit0"><span class="on">Editing</span><span class="off">Locked</span></label>
+			</div>
+
+			<div class="form-group">
+				<input class="icon-home switch" id="switch2Edit1" name="switch2Edit1" type="checkbox" />
+				<label for="switch2Edit1"><span class="off">Home Page Setting Off</span><span class="on">Home Page Setting On</span></label>
+			</div>
+
+			<div class="form-group">
+				<input class="icon-volume-off switch" id="switch2Edit2" name="switch2Edit2" type="checkbox" />
+				<label for="switch2Edit2"></label>
+			</div>
+
+<pre><code class="html">```<div class="form-group">
+    <input checked="checked" class="icon-pencil switch" id="switch" type="checkbox" />
+    <label for="switch">Edit</label>
+</div>```</code></pre>
+
+			<h3>Alternative Mark Up for Switches</h3>
+
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Having to supply a unique id for each switch can become tedious if you have a lot of switches. This alternative layout doesn't require a unique id, but requires you to use an extra element of mark up.</p>
+			</blockquote>
+
+			<div class="uxgl-switches">
+				<div class="form-group">
+					<label class="switch">
+						<input class="icon-user" type="checkbox" />
+						<span class="skin"></span>
+					</label>
+				</div>
+
+				<div class="form-group">
+					<label class="switch switch-primary">
+						<input type="checkbox" />
+						<span class="skin"></span>
+						<span class="off">Off</span>
+						<span class="on">On</span>
+					</label>
+				</div>
+			</div>
+
+<pre><code class="html">```<div class="form-group">
+    <label class="switch switch-primary">
+        <input type="checkbox" />
+        <span class="skin"></span>
+        <span class="off">Off</span>
+        <span class="on">On</span>
+    </label>
+</div>```</code></pre>
+
 		</form>
 	</div>
 </div>
+
+<script>
+	$('#switch2Edit0').on('click', function(event) {
+		var $this = $(this);
+
+		setTimeout(function() {
+			if ($this.hasClass('icon-lock')) {
+				$this.removeClass('icon-lock').addClass('icon-pencil');
+			}
+			else {
+				$this.removeClass('icon-pencil').addClass('icon-lock');
+			}
+		}, 100);
+	});
+
+	$('#switch2Edit2').on('click', function(event) {
+		var $this = $(this);
+
+		setTimeout(function() {
+			if ($this.hasClass('icon-volume-off')) {
+				$this.removeClass('icon-volume-off').addClass('icon-volume-up');
+			}
+			else {
+				$this.removeClass('icon-volume-up').addClass('icon-volume-off');
+			}
+		}, 100);
+	});
+</script>
