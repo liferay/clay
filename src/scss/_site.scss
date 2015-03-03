@@ -120,3 +120,19 @@ section.row {
 		margin-bottom: 15px;
 	}
 }
+
+// Switches Page
+.uxgl-switches {
+	@include clearfix;
+
+	.form-group {
+		float: left;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: $grid-float-breakpoint) {
+	.uxgl-switches .form-group {
+		width: 115px;
+	}
+}
