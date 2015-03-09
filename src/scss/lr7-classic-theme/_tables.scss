@@ -11,6 +11,28 @@
 	font-weight: bold;
 }
 
+@media screen and (max-width: $screen-sm-min) {
+	.table-responsive-flip {
+		.table {
+			> thead, > tbody, > tfoot {
+				> tr {
+					> th, > td {
+						line-height: 40px;
+					}
+				}
+			}
+
+			> tbody {
+				padding-right: 3px;
+			}
+
+			> thead {
+				padding-right: 2px;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: $screen-xs-max) {
 	.table-responsive-collapse {
 		.table, thead, tbody, th {
