@@ -7768,6 +7768,14 @@ input.switch:empty.icon-renren ~ label:after, input.switch:empty.icon-renren + .
   display: none;
   font-weight: bold; }
 
+@media screen and (max-width: 768px) {
+  .table-responsive-flip .table > thead > tr > th, .table-responsive-flip .table > thead > tr > td, .table-responsive-flip .table > tbody > tr > th, .table-responsive-flip .table > tbody > tr > td, .table-responsive-flip .table > tfoot > tr > th, .table-responsive-flip .table > tfoot > tr > td {
+    line-height: 40px; }
+  .table-responsive-flip .table > tbody {
+    padding-right: 3px; }
+  .table-responsive-flip .table > thead {
+    padding-right: 2px; } }
+
 @media screen and (max-width: 767px) {
   .table-responsive-collapse .table, .table-responsive-collapse thead, .table-responsive-collapse tbody, .table-responsive-collapse th {
     display: block; }
@@ -7832,8 +7840,6 @@ input.switch:empty.icon-renren ~ label:after, input.switch:empty.icon-renren + .
       border-right-width: 0; } }
 
 @media screen and (max-width: 479px) {
-  .table-responsive-flip .table > thead > tr > th, .table-responsive-flip .table > thead > tr > td, .table-responsive-flip .table > tbody > tr > th, .table-responsive-flip .table > tbody > tr > td, .table-responsive-flip .table > tfoot > tr > th, .table-responsive-flip .table > tfoot > tr > td {
-    line-height: 40px; }
   .table-responsive-flip .table > thead {
     max-width: 100px; } }
 
