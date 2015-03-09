@@ -1,84 +1,162 @@
-input.switch {
-	&:empty {
-		margin-left: -999px;
+/* ---------- Switches ---------- */
 
-		&:focus ~ label:before {
-			@include box-shadow(0 0 3px #00F);
-		}
-
-		~ label {
-			cursor: pointer;
-			float: left;
-			line-height: 1.6em;
-			margin: 0.2em 0;
-			position: relative;
-			text-indent: 4em;
-
-			@include user-select(none);
-
-			&:after, &:before {
-				background-color: #C33;
-				border-radius: 0.2em;
-				content: ' ';
-				display: block;
-
-				@include position(absolute, 0 null 0 0);
-				@include transition(all 100ms ease-in);
-
-				width: 3.6em;
-			}
-
-			&:after {
-				background-color: #FFF;
-				border-radius: 0.15em;
-				bottom: 0.2em;
-				margin-left: 0.2em;
-				top: 0.2em;
-				width: 1.2em;
-			}
-		}
-	}
-
-	&:checked ~ label {
+@mixin switch-variant($on-color, $off-color, $on-bg, $off-bg, $button-bg) {
+	&:empty ~ .switch-bar {
 		&:after {
-			margin-left: 2.1em;
+			background-color: $button-bg;
 		}
 
 		&:before {
-			background-color: #393;
+			background-color: $off-bg;
+		}
+
+		.button-icon {
+			color: $off-bg;
+		}
+
+		.switch-icon {
+			color: $off-color;
 		}
 	}
 
-	&:disabled ~ label:before {
-		background-color: #CCC;
-	}
-}
+	&:checked ~ .switch-bar {
+		&:after {
+			background-color: $button-bg;
+		}
 
-input.edit.switch {
-	&:empty ~ label:after {
-		border-radius: 0.25em;
-		color: #C33;
-		content: "\270f";
-		font-family: 'Glyphicons Halflings';
-		font-size: 12px;
-		line-height: 1.5;
-		text-indent: 2px;
-		width: 1.4em;
-	}
+		&:before {
+			background-color: $on-bg;
+		}
 
-	&:checked {
-		~ label:after {
-			color: #393;
-			margin-left: 2.5em;
+		.button-icon {
+			color: $on-bg;
+		}
+
+		.switch-icon {
+			color: $on-color;
 		}
 	}
 }
 
-input.switch:checked ~ label .off,
-input.switch:empty ~ label .on {
-	display: none;
+.switch-toggle {
+	display: block;
+	float: left;
 }
 
-input.switch:checked ~ label .on {
-	display: inline;
+input.switch {
+	float: left;
+	font-size: 62.5%;
+	margin-left: -999em;
+
+	@include switch-variant(#FFF, #FFF, #34ADAB, #868B96, #FFF);
+
+	&:empty ~ .switch-bar {
+		cursor: pointer;
+		display: block;
+		font-size: 1.2rem;
+		line-height: 2.6rem;
+		min-height: 2.6rem;
+		position: relative;
+
+		@include user-select(none);
+
+		text-indent: 5rem;
+
+		&:after, &:before {
+			border-width: 0;
+			bottom: 0;
+			content: ' ';
+			display: block;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 4.4rem;
+		}
+
+		&:after {
+			border-radius: 0;
+			bottom: 0.4rem;
+			left: 0.4rem;
+			top: 0.4rem;
+			width: 1.8rem;
+		}
+
+		&:before {
+			border-radius: 0;
+		}
+
+		.switch-toggle:after {
+			content: attr(data-label-off);
+		}
+
+		.switch-icon {
+			font-size: 1.4rem;
+			left: 0.4rem;
+			line-height: 1.8rem;
+			position: absolute;
+			text-align: center;
+			text-indent: 0;
+			top: 0.4rem;
+			width: 1.8rem;
+			z-index: 1;
+		}
+
+		.button-icon-on, .switch-icon-on {
+			opacity: 0;
+		}
+
+		.switch-icon-on {
+			left: 0.2rem;
+		}
+
+		.switch-icon-off {
+			left: 2.4rem;
+		}
+	}
+
+	&:checked ~ .switch-bar {
+		&:after {
+			border-radius: 0;
+			left: 2.2rem;
+		}
+
+		&:before {
+			border-radius: 0;
+		}
+
+		.switch-toggle:after {
+			content: attr(data-label-on);
+		}
+
+		.button-icon {
+			left: 2.2rem;
+		}
+
+		.button-icon-on, .switch-icon-on {
+			opacity: 1;
+		}
+
+		.button-icon-off, .switch-icon-off {
+			opacity: 0;
+		}
+	}
+
+	&:disabled, &.disabled {
+		~ .switch-bar {
+			cursor: not-allowed;
+			opacity: 0.4;
+		}
+	}
+}
+
+input.switch {
+	&:focus ~ .switch-bar:before {
+		box-shadow: 0 0 3px 2px #66AFE6;
+	}
+
+	&:empty ~ .switch-bar {
+		&:after, &:before, .switch-icon, .switch-toggle:after, .switch-toggle:before {
+			@include transition(all 100ms ease-in);
+		}
+	}
 }
