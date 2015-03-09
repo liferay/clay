@@ -7832,6 +7832,8 @@ input.switch:empty.icon-renren ~ label:after, input.switch:empty.icon-renren + .
       border-right-width: 0; } }
 
 @media screen and (max-width: 479px) {
+  .table-responsive-flip .table > thead > tr > th, .table-responsive-flip .table > thead > tr > td, .table-responsive-flip .table > tbody > tr > th, .table-responsive-flip .table > tbody > tr > td, .table-responsive-flip .table > tfoot > tr > th, .table-responsive-flip .table > tfoot > tr > td {
+    line-height: 40px; }
   .table-responsive-flip .table > thead {
     max-width: 100px; } }
 
