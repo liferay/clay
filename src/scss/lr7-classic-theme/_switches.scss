@@ -87,6 +87,7 @@ input.switch {
 
 		.switch-toggle:after {
 			content: attr(data-label-off);
+			text-transform: uppercase;
 		}
 
 		.switch-icon {
