@@ -166,19 +166,6 @@ collapse
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><a href="javascript:;">Image Gallery</a>
-<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
-<div class="
-collapse
-">
-<ul class="nav nav-stacked">
-<li class=""><a href="../../content/image-gallery-pictures">Gallery</a>
-</li>
-<li class=""><a href="../../content/image-gallery-albums">Image Gallery Albums</a>
-</li>
-</ul>
-</div>
-</li>
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Mail Template</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
@@ -287,7 +274,7 @@ collapse
 			<p>Use for first level heading</p>
 		</blockquote>
 
-		<div class="sidenav-container closed" id="slideOutNav">
+		<div class="sidenav-container closed uxgl-slideout-nav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<ul class="nav nav-stacked">
@@ -466,6 +453,22 @@ collapse
 			</div>
 		</header>
 
+		<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="clear:both;margin-bottom:0;">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Message Boards</a></li>
+				<li><a href="#">Blogs</a></li>
+			</ul>
+
+			<form class="basic-search input-group navbar-form">
+				<div class="input-group-input">
+					<input class="form-control" placeholder=" Search..." type="text">
+				</div>
+				<div class="input-group-btn">
+					<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+				</div>
+			</form>
+		</nav>
+
 		<ul class="tabular-list-group">
 			<li class="list-group-item">
 				<div class="list-group-item-field">
@@ -566,34 +569,53 @@ collapse
 	<div class="col-md-12">
 		<h3>Header Toolbar Success</h3>
 
-		<header class="header-first-level header-toolbar header-toolbar-success" style="margin-bottom:10px;">
-			<ul class="header-toolbar-left">
-				<li>
-					<a href="#1"><span class="icon-align-justify"></span></a>
-				</li>
-			</ul>
-
-			<ul class="header-toolbar-right">
-				<li>
-					<a href="#1"><span class="icon-upload-alt"></span></a>
-				</li>
-				<li>
-					<a href="#1"><span class="icon-download-alt"></span></a>
-				</li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#1">Export</a></li>
-						<li><a href="#1">Import</a></li>
-						<li><a href="#1">Configuration</a></li>
+		<div class="sidenav-container closed uxgl-slideout-nav">
+			<div class="sidenav-menu-slider">
+				<div class="sidenav-menu">
+					<ul class="nav nav-stacked">
+						<li><a href="#1">Setting Up Maven</a></li>
+						<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
+						<li><a href="#1">Using Maven From Liferay IDE</a></li>
+						<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
+						<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
+						<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
+						<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
 					</ul>
-				</li>
-			</ul>
-
-			<div class="header-toolbar-center">
-				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+				</div>
 			</div>
-		</header>
+			<div class="sidenav-content">
+				<header class="header-first-level header-toolbar header-toolbar-success" style="margin-bottom:10px;">
+					<ul class="header-toolbar-left">
+						<li>
+							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+						</li>
+					</ul>
+
+					<ul class="header-toolbar-right">
+						<li>
+							<a href="#1"><span class="icon-upload-alt"></span></a>
+						</li>
+						<li>
+							<a href="#1"><span class="icon-download-alt"></span></a>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Export</a></li>
+								<li><a href="#1">Import</a></li>
+								<li><a href="#1">Configuration</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<div class="header-toolbar-center">
+						<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+					</div>
+				</header>
+			</div>
+		</div>
 
 		<header class="header-second-level header-toolbar header-toolbar-success">
 			<ul class="header-toolbar-left">
@@ -625,7 +647,8 @@ collapse
 </div>
 
 <script>
-	$('#slideOutNav').sideNavigation();
+	$('.uxgl-slideout-nav').sideNavigation();
+	$('.collapse-basic-search').collapsibleSearch();
 </script>
 	</div>
 

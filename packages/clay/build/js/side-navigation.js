@@ -4,7 +4,7 @@
 	};
 
 	SideNavigation.prototype = {
-		ATTRS: {
+		defaults: {
 			content: '.sidenav-content',
 			navigation: '.sidenav-menu-slider',
 			toggler: '.sidenav-toggler'
@@ -13,13 +13,17 @@
 		init: function(element, options) {
 			var instance = this;
 
-			instance.options = $.extend(this.ATTRS, options);
+			instance.options = $.extend(this.defaults, options);
 
 			instance.options.selector = element.selector;
 
 			instance._handleClick(element);
 
 			instance._handleResize(element);
+
+			if (!element.hasClass('closed')) {
+				instance.setEqualHeight(element);
+			}
 		},
 
 		_handleClick: function(element) {
@@ -39,9 +43,11 @@
 					}
 				});
 
-				instance.toggleNavigation(container);
+				instance.setEqualHeight(container);
 
-				instance.setEqualHeight(navigation, content, container);
+				setTimeout(function() {
+					instance.toggleNavigation(container);
+				}, 0);
 			});
 		},
 
@@ -58,8 +64,10 @@
 					navigation = container.find(instance.options.navigation);
 				});
 
-				instance.removeEqualHeight(navigation, content, container);
-				instance.setEqualHeight(navigation, content, container);
+				if (!container.hasClass('closed')) {
+					instance.removeEqualHeight(navigation, content);
+					instance.setEqualHeight(container);
+				}
 			});
 		},
 
@@ -68,7 +76,7 @@
 			element2.css('min-height', '');
 		},
 
-		setEqualHeight: function(element1, element2, container) {
+		setEqualHeight: function(container) {
 			var containerClone = container.clone();
 			var element1;
 			var element2;
@@ -76,19 +84,20 @@
 
 			containerClone.removeClass('closed').css({
 				opacity: 0,
-				position: 'absolute'
+				position: 'absolute',
+				width: container.outerWidth()
 			});
 
 			containerClone.insertBefore(container);
 
 			element1 = containerClone.find(this.options.navigation);
 			element2 = containerClone.find(this.options.content);
-			tallest = Math.max(element1.height(), element2.height());
+			tallest = Math.max(element1.outerHeight(), element2.outerHeight());
 
 			containerClone.remove();
 
-			container.find(this.options.navigation).css('min-height', tallest);
 			container.find(this.options.content).css('min-height', tallest);
+			container.find(this.options.navigation).css('min-height', tallest);
 		},
 
 		toggleNavigation: function(container) {
