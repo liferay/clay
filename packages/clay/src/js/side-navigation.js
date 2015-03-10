@@ -64,8 +64,10 @@
 					navigation = container.find(instance.options.navigation);
 				});
 
-				instance.removeEqualHeight(navigation, content);
-				instance.setEqualHeight(container);
+				if (!container.hasClass('closed')) {
+					instance.removeEqualHeight(navigation, content);
+					instance.setEqualHeight(container);
+				}
 			});
 		},
 
@@ -82,7 +84,8 @@
 
 			containerClone.removeClass('closed').css({
 				opacity: 0,
-				position: 'absolute'
+				position: 'absolute',
+				width: container.outerWidth()
 			});
 
 			containerClone.insertBefore(container);
