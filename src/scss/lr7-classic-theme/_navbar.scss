@@ -5,6 +5,8 @@
 		top: 0;
 
 		&.open {
+			background-color: transparent;
+
 			.basic-search-close {
 				display: inline-block;
 			}
