@@ -10,12 +10,12 @@
 			background-color: $off-bg;
 		}
 
-		.button-icon {
-			color: $off-bg;
-		}
-
 		.switch-icon {
 			color: $off-color;
+
+			&.button-icon {
+				color: $off-bg;
+			}
 		}
 	}
 
@@ -28,12 +28,12 @@
 			background-color: $on-bg;
 		}
 
-		.button-icon {
-			color: $on-bg;
-		}
-
 		.switch-icon {
 			color: $on-color;
+
+			&.button-icon {
+				color: $on-bg;
+			}
 		}
 	}
 }
