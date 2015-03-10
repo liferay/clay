@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Switches</title>
+	<title>Extending Switches</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -97,7 +97,7 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse in
+collapse
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/typography">Typography</a>
@@ -116,7 +116,7 @@ collapse in
 </li>
 <li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
-<li class="active"><a href="../../content/switches">Switches</a>
+<li class=""><a href="../../content/switches">Switches</a>
 </li>
 <li class=""><a href="../../content/tables">Tables</a>
 </li>
@@ -154,14 +154,14 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Extending Components</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse
+collapse in
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/extending-cards">Extending Cards</a>
 </li>
 <li class=""><a href="../../content/extending-nameplates">Extending Nameplates</a>
 </li>
-<li class=""><a href="../../content/extending-switches">Extending Switches</a>
+<li class="active"><a href="../../content/extending-switches">Extending Switches</a>
 </li>
 </ul>
 </div>
@@ -210,215 +210,102 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Switches
+			Extending Switches
 
 			
 		</h1>
 
 		
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<form action="#" method="get">
-			<h3>Default Switch</h3>
+		<h3 class="usage-heading">Custom Switch using Images</h3>
 
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>CSS Switch</p>
-			</blockquote>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Customize the button style in the off position with <code>input.switch:empty ~ .switch-bar:after {}</code>.</p>
 
-			<div class="form-group">
-				<label>
-					<input class="field switch" type="checkbox">
+			<p>Customize the switch background style in the off position with <code>input.switch:empty ~ .switch-bar:before {}</code>.</p>
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle"></span>
+			<p>Customize the icon in the off position with <code>input.switch:empty ~ .switch-bar .switch-icon-off {}</code>.</p>
+
+			<p>Customize the button style in the on position with <code>input.switch:checked ~ .switch-bar:after {}</code>.</p>
+
+			<p>Customize the switch background style in the on position with <code>input.switch:checked ~ .switch-bar:before {}</code>.</p>
+
+			<p>Customize the icon in the on position with <code>input.switch:checked ~ .switch-bar .switch-icon-on {}</code>.</p>
+		</blockquote>
+
+		<div class="form-group" id="demoSwitch">
+			<label>
+				<input class="field switch" type="checkbox">
+
+				<span aria-hidden="true" class="switch-bar">
+					<span class="switch-toggle">
+							<span class="switch-icon-on switch-icon"></span>
+							<span class="switch-icon-off switch-icon"></span>
 					</span>
-				</label>
-			</div>
+				</span>
+			</label>
+		</div>
 
-<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
+<pre><code>&lt;style&gt;
+    input.switch:empty ~ .switch-bar:after {
+        background-color: transparent;
+        background-image: url(../../images/switch_button.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        bottom: 0;
+        left: 3px;
+        top: 1px;
+        width: 24px;
+    }
+
+    input.switch:empty ~ .switch-bar:before {
+        background-color: transparent;
+        background-image: url(../../images/switch_base.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 20px;
+        width: 55px;
+    }
+
+    input.switch:empty ~ .switch-bar .switch-icon-off {
+        background-image: url(../../images/switch_off_icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 15px;
+        left: 30px;
+        top: 5px;
+        width: 15px;
+    }
+
+    input.switch:checked ~ .switch-bar:after {
+        left: 28px;
+    }
+
+    input.switch:checked ~ .switch-bar .switch-icon-on {
+        background-image: url(../../images/switch_on_icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 17px;
+        left: 8px;
+        top: 5px;
+        width: 17px;
+    }
+&lt;/style&gt;
+
+&lt;div class=&quot;form-group&quot;&gt;
     &lt;label&gt;
-        &lt;input class=&quot;field switch&quot; type=&quot;checkbox&quot;&gt;
+      &lt;input class=&quot;field switch&quot; type=&quot;checkbox&quot;&gt;
 
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot;&gt;&lt;/span&gt;
-        &lt;/span&gt;
+      &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
+          &lt;span class=&quot;switch-toggle&quot;&gt;
+              &lt;span class=&quot;switch-icon-on switch-icon&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;switch-icon-off switch-icon&quot;&gt;&lt;/span&gt;
+          &lt;/span&gt;
+      &lt;/span&gt;
     &lt;/label&gt;
 &lt;/div&gt;</code></pre>
 
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</code> on <code>&lt;span class=&quot;switch-toggle&quot;&gt;&lt;/span&gt;</code> to display specific text when the switch is on and off.</p>
-			</blockquote>
-
-			<div class="form-group">
-				<label>
-					<input class="field switch" type="checkbox">
-					Switch with data-label-on
-
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="" data-label-on="ON">
-						</span>
-					</span>
-				</label>
-			</div>
-
-			<div class="form-group">
-				<label>
-					<input class="field switch" type="checkbox">
-					Switch with data-label on and data-label-off
-
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="Switch is off." data-label-on="Switch is on.">
-						</span>
-					</span>
-				</label>
-			</div>
-
-<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;
-        &lt;input checked=&quot;&quot; class=&quot;field switch&quot; type=&quot;checkbox&quot;&gt;
-        Default Switch 1
-
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot; data-label-off=&quot;Switch is off.&quot; data-label-on=&quot;Switch is on.&quot;&gt;
-            &lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-
-			<h3>Switches with Icons</h3>
-
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;button-icon button-icon-on switch-icon icon-volume-up&quot;&gt;&lt;/span&gt;</code>.</p>
-
-				<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;button-icon button-icon-off switch-icon icon-volume-off&quot;&gt;&lt;/span&gt;</code>.</p>
-
-				<p>Substitute <code>icon-volume-up</code> / <code>icon-volume-down</code> with any font awesome icon.</p>
-			</blockquote>
-
-			<div class="form-group">
-				<label>
-					<input class="field switch" type="checkbox">
-
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="" data-label-on="">
-							<span class="button-icon button-icon-on switch-icon icon-volume-up"></span>
-							<span class="button-icon button-icon-off switch-icon icon-volume-off"></span>
-						</span>
-					</span>
-				</label>
-			</div>
-
-			<div class="form-group">
-				<label>
-					<input class="field switch" type="checkbox">
-					Switch with data-label-on
-
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="" data-label-on="ON">
-							<span class="button-icon button-icon-on switch-icon icon-volume-up"></span>
-							<span class="button-icon button-icon-off switch-icon icon-volume-off"></span>
-						</span>
-					</span>
-				</label>
-			</div>
-
-			<div class="form-group">
-				<label>
-					<input class="field switch" type="checkbox">
-					Switch with data-label on and data-label-off
-
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="Locked" data-label-on="Edit">
-							<span class="button-icon button-icon-on switch-icon icon-pencil"></span>
-							<span class="button-icon button-icon-off switch-icon icon-lock"></span>
-						</span>
-					</span>
-				</label>
-			</div>
-
-<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;
-        &lt;input class=&quot;field switch&quot; type=&quot;checkbox&quot;&gt;
-        Switch with data-label on and data-label-off
-
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot; data-label-off=&quot;Locked&quot; data-label-on=&quot;Edit&quot;&gt;
-                &lt;span class=&quot;button-icon button-icon-on switch-icon icon-pencil&quot;&gt;&lt;/span&gt;
-                &lt;span class=&quot;button-icon button-icon-off switch-icon icon-lock&quot;&gt;&lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-
-			<h3>Switches with Icons (Alternate)</h3>
-
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;switch-icon-on switch-icon icon-ok&quot;&gt;&lt;/span&gt;</code>.</p>
-
-				<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;switch-icon-off switch-icon icon-remove&quot;&gt;&lt;/span&gt;</code>.</p>
-
-				<p>Substitute <code>icon-ok</code> / <code>icon-remove</code> with any font awesome icon.</p>
-			</blockquote>
-
-			<div class="form-group">
-				<label>
-					<input class="field switch" type="checkbox">
-
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle">
-							<span class="switch-icon-on switch-icon icon-ok"></span>
-							<span class="switch-icon-off switch-icon icon-remove"></span>
-						</span>
-					</span>
-				</label>
-			</div>
-
-<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;
-        &lt;input class=&quot;field switch&quot; type=&quot;checkbox&quot;&gt;
-
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot;&gt;
-                &lt;span class=&quot;switch-icon-on switch-icon icon-ok&quot;&gt;&lt;/span&gt;
-                &lt;span class=&quot;switch-icon-off switch-icon icon-remove&quot;&gt;&lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-
-			<h3>Disabled Switches</h3>
-
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Disable a switch by adding the attribute <code>disabled="disabled"</code> to <code>&lt;input type=&quot;checkbox&quot;&gt;</code>.</p>
-			</blockquote>
-
-			<div class="form-group">
-				<label>
-					<input class="field switch" disabled type="checkbox">
-
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle">
-							<span class="switch-icon-on switch-icon icon-ok"></span>
-							<span class="switch-icon-off switch-icon icon-remove"></span>
-						</span>
-					</span>
-				</label>
-			</div>
-
-<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;
-        &lt;input class=&quot;field switch&quot; disabled=&quot;disabled&quot; type=&quot;checkbox&quot;&gt;
-
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot;&gt;
-                &lt;span class=&quot;switch-icon-on switch-icon icon-ok&quot;&gt;&lt;/span&gt;
-                &lt;span class=&quot;switch-icon-off switch-icon icon-remove&quot;&gt;&lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-
-		</form>
 	</div>
 </div>
 	</div>

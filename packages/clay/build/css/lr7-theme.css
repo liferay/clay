@@ -6834,18 +6834,18 @@ input.switch {
     background-color: #EEE; }
   input.switch:empty ~ .switch-bar:before {
     background-color: #FFF; }
-  input.switch:empty ~ .switch-bar .button-icon {
-    color: #FFF; }
   input.switch:empty ~ .switch-bar .switch-icon {
     color: #2B4259; }
+    input.switch:empty ~ .switch-bar .switch-icon.button-icon {
+      color: #FFF; }
   input.switch:checked ~ .switch-bar:after {
     background-color: #EEE; }
   input.switch:checked ~ .switch-bar:before {
     background-color: #FFF; }
-  input.switch:checked ~ .switch-bar .button-icon {
-    color: #FFF; }
   input.switch:checked ~ .switch-bar .switch-icon {
     color: #2B4259; }
+    input.switch:checked ~ .switch-bar .switch-icon.button-icon {
+      color: #FFF; }
   input.switch:empty ~ .switch-bar {
     cursor: pointer;
     display: block;
@@ -6876,7 +6876,8 @@ input.switch {
     input.switch:empty ~ .switch-bar:before {
       border-radius: 3px; }
     input.switch:empty ~ .switch-bar .switch-toggle:after {
-      content: attr(data-label-off); }
+      content: attr(data-label-off);
+      text-transform: uppercase; }
     input.switch:empty ~ .switch-bar .switch-icon {
       font-size: 1.4rem;
       left: 0.4rem;
@@ -9651,18 +9652,18 @@ input.switch {
     background-color: #FFF; }
   input.switch:empty ~ .switch-bar:before {
     background-color: #868B96; }
-  input.switch:empty ~ .switch-bar .button-icon {
-    color: #868B96; }
   input.switch:empty ~ .switch-bar .switch-icon {
     color: #FFF; }
+    input.switch:empty ~ .switch-bar .switch-icon.button-icon {
+      color: #868B96; }
   input.switch:checked ~ .switch-bar:after {
     background-color: #FFF; }
   input.switch:checked ~ .switch-bar:before {
     background-color: #34ADAB; }
-  input.switch:checked ~ .switch-bar .button-icon {
-    color: #34ADAB; }
   input.switch:checked ~ .switch-bar .switch-icon {
     color: #FFF; }
+    input.switch:checked ~ .switch-bar .switch-icon.button-icon {
+      color: #34ADAB; }
   input.switch:empty ~ .switch-bar {
     cursor: pointer;
     display: block;
@@ -9693,7 +9694,8 @@ input.switch {
     input.switch:empty ~ .switch-bar:before {
       border-radius: 0; }
     input.switch:empty ~ .switch-bar .switch-toggle:after {
-      content: attr(data-label-off); }
+      content: attr(data-label-off);
+      text-transform: uppercase; }
     input.switch:empty ~ .switch-bar .switch-icon {
       font-size: 1.4rem;
       left: 0.4rem;
