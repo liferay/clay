@@ -84,11 +84,48 @@
 	margin: 0 15px;
 
 	> li {
+		border: solid #DDD;
+		border-width: 0 1px;
 		float: left;
+		margin-left: -1px;
+
+		&:first-child {
+			border-left-width: 0;
+			margin-left: 0;
+		}
+
+		&:last-child {
+			border-right-width: 0;
+		}
 
 		> a {
 			padding-bottom: 15px;
 			padding-top: 15px;
+
+			&:focus, &:hover {
+				@include background-image(linear-gradient(rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%));
+
+				color: $navbar-default-link-color;
+			}
+		}
+	}
+
+	> .active > a {
+		background-color: $navbar-default-link-active-bg;
+		border-color: transparent;
+
+		&:after {
+			background-color: $navbar-default-link-active-highlight;
+			content: "";
+			display: block;
+			height: 4px;
+			position: relative;
+			top: 11px;
+			width: 100%;
+		}
+
+		&:focus, &:hover {
+			@include background-image(none);
 		}
 	}
 }
