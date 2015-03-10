@@ -5,8 +5,8 @@
 @import "lr7-_styled-theme/variables";
 @import "lr7-_styled-theme/mixins";
 
-@import "lr7-classic-theme/variables";
-@import "lr7-classic-theme/mixins";
+// @import "lr7-classic-theme/variables";
+// @import "lr7-classic-theme/mixins";
 
 // @import "YOUR CUSTOM VARIABLES"; // file containing custom variables
 
@@ -17,6 +17,7 @@
 @import "lr7-_styled-theme/cards";
 @import "lr7-_styled-theme/dropdowns";
 @import "lr7-_styled-theme/figures";
+@import "lr7-_styled-theme/forms";
 @import "lr7-_styled-theme/form-validation";
 @import "lr7-_styled-theme/header-toolbar";
 @import "lr7-_styled-theme/input-groups";
@@ -24,40 +25,41 @@
 @import "lr7-_styled-theme/list-group";
 @import "lr7-_styled-theme/modals";
 @import "lr7-_styled-theme/nameplates";
+@import "lr7-_styled-theme/navbar";
 @import "lr7-_styled-theme/side-navigation";
 @import "lr7-_styled-theme/switches";
 @import "lr7-_styled-theme/tables";
 @import "lr7-_styled-theme/type";
 
 // Import Classic Theme Files
-@import "lr7-classic-theme/alerts";
-@import "lr7-classic-theme/badges";
-@import "lr7-classic-theme/breadcrumbs";
-@import "lr7-classic-theme/buttons";
-@import "lr7-classic-theme/button-groups";
-@import "lr7-classic-theme/cards";
-@import "lr7-classic-theme/dropdowns";
-@import "lr7-classic-theme/figures";
-@import "lr7-classic-theme/forms";
-@import "lr7-classic-theme/form-validation";
-@import "lr7-classic-theme/header-toolbar";
-@import "lr7-classic-theme/input-groups";
-@import "lr7-classic-theme/labels";
-@import "lr7-classic-theme/list-group";
-@import "lr7-classic-theme/modals";
-@import "lr7-classic-theme/navs";
-@import "lr7-classic-theme/nav-tabs";
-@import "lr7-classic-theme/navbar";
-@import "lr7-classic-theme/notifications";
-@import "lr7-classic-theme/nameplates";
-@import "lr7-classic-theme/pager";
-@import "lr7-classic-theme/pagination";
-@import "lr7-classic-theme/panels";
-@import "lr7-classic-theme/popovers";
-@import "lr7-classic-theme/side-navigation";
-@import "lr7-classic-theme/sliders";
-@import "lr7-classic-theme/switches";
-@import "lr7-classic-theme/tables";
-@import "lr7-classic-theme/timelines";
-@import "lr7-classic-theme/type";
-@import "lr7-classic-theme/tooltips";
+// @import "lr7-classic-theme/alerts";
+// @import "lr7-classic-theme/badges";
+// @import "lr7-classic-theme/breadcrumbs";
+// @import "lr7-classic-theme/buttons";
+// @import "lr7-classic-theme/button-groups";
+// @import "lr7-classic-theme/cards";
+// @import "lr7-classic-theme/dropdowns";
+// @import "lr7-classic-theme/figures";
+// @import "lr7-classic-theme/forms";
+// @import "lr7-classic-theme/form-validation";
+// @import "lr7-classic-theme/header-toolbar";
+// @import "lr7-classic-theme/input-groups";
+// @import "lr7-classic-theme/labels";
+// @import "lr7-classic-theme/list-group";
+// @import "lr7-classic-theme/modals";
+// @import "lr7-classic-theme/navs";
+// @import "lr7-classic-theme/nav-tabs";
+// @import "lr7-classic-theme/navbar";
+// @import "lr7-classic-theme/notifications";
+// @import "lr7-classic-theme/nameplates";
+// @import "lr7-classic-theme/pager";
+// @import "lr7-classic-theme/pagination";
+// @import "lr7-classic-theme/panels";
+// @import "lr7-classic-theme/popovers";
+// @import "lr7-classic-theme/side-navigation";
+// @import "lr7-classic-theme/sliders";
+// @import "lr7-classic-theme/switches";
+// @import "lr7-classic-theme/tables";
+// @import "lr7-classic-theme/timelines";
+// @import "lr7-classic-theme/type";
+// @import "lr7-classic-theme/tooltips";
