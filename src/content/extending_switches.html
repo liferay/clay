@@ -1,0 +1,97 @@
+---
+title: Extending Switches
+section: Extending Components
+---
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 class="usage-heading">Custom Switch using Images</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Customize the button style in the off position with <code>input.switch:empty ~ .switch-bar:after {}</code>.</p>
+
+			<p>Customize the switch background style in the off position with <code>input.switch:empty ~ .switch-bar:before {}</code>.</p>
+
+			<p>Customize the icon in the off position with <code>input.switch:empty ~ .switch-bar .switch-icon-off {}</code>.</p>
+
+			<p>Customize the button style in the on position with <code>input.switch:checked ~ .switch-bar:after {}</code>.</p>
+
+			<p>Customize the switch background style in the on position with <code>input.switch:checked ~ .switch-bar:before {}</code>.</p>
+
+			<p>Customize the icon in the on position with <code>input.switch:checked ~ .switch-bar .switch-icon-on {}</code>.</p>
+		</blockquote>
+
+		<div class="form-group" id="demoSwitch">
+			<label>
+				<input class="field switch" type="checkbox">
+
+				<span aria-hidden="true" class="switch-bar">
+					<span class="switch-toggle">
+							<span class="switch-icon-on switch-icon"></span>
+							<span class="switch-icon-off switch-icon"></span>
+					</span>
+				</span>
+			</label>
+		</div>
+
+<pre><code>```<style>
+    input.switch:empty ~ .switch-bar:after {
+        background-color: transparent;
+        background-image: url(../../images/switch_button.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        bottom: 0;
+        left: 3px;
+        top: 1px;
+        width: 24px;
+    }
+
+    input.switch:empty ~ .switch-bar:before {
+        background-color: transparent;
+        background-image: url(../../images/switch_base.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 20px;
+        width: 55px;
+    }
+
+    input.switch:empty ~ .switch-bar .switch-icon-off {
+        background-image: url(../../images/switch_off_icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 15px;
+        left: 30px;
+        top: 5px;
+        width: 15px;
+    }
+
+    input.switch:checked ~ .switch-bar:after {
+        left: 28px;
+    }
+
+    input.switch:checked ~ .switch-bar .switch-icon-on {
+        background-image: url(../../images/switch_on_icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 17px;
+        left: 8px;
+        top: 5px;
+        width: 17px;
+    }
+</style>
+
+<div class="form-group">
+    <label>
+      <input class="field switch" type="checkbox">
+
+      <span aria-hidden="true" class="switch-bar">
+          <span class="switch-toggle">
+              <span class="switch-icon-on switch-icon"></span>
+              <span class="switch-icon-off switch-icon"></span>
+          </span>
+      </span>
+    </label>
+</div>```</code></pre>
+
+	</div>
+</div>
