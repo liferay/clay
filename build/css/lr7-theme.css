@@ -8240,6 +8240,17 @@ label {
   font-size: 15px;
   font-weight: 400; }
 
+select.form-control {
+  background-image: url(../images/select_box_arrows.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 18px auto;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+  select.form-control::-ms-expand {
+    display: none; }
+select[multiple].form-control {
+  background-image: none; }
 select.form-control:focus {
   padding: 5px 15px; }
 select.input-lg:focus, .form-horizontal .form-group-lg select.form-control:focus, .input-group-lg > select.form-control:focus, .input-group-lg > select.input-group-addon:focus, .input-group-lg > .input-group-btn > select.btn:focus {
