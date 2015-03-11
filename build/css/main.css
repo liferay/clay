@@ -8627,6 +8627,9 @@ label.checkbox-default, .checkbox-default label, label.radio-default, .radio-def
   .input-group label input[type="radio"] {
     margin-top: 2px; }
 
+.input-group-addon {
+  color: #FFF; }
+
 .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
   margin-right: -2px; }
 
