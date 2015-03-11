@@ -6,6 +6,23 @@ label {
 }
 
 select {
+	&.form-control {
+		background-image: url(../images/select_box_arrows.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 18px auto;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
+	&[multiple].form-control {
+		background-image: none;
+	}
+
 	&.form-control:focus {
 		padding: $padding-base-vertical - 1 $padding-base-horizontal - 1;
 	}
