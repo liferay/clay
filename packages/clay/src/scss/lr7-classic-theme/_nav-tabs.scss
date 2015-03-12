@@ -1,3 +1,15 @@
+.nav.nav-tabs {
+	> li.disabled > a {
+		border-color: transparent transparent $nav-tabs-border-color transparent;
+	}
+
+	.tab-group & {
+		> li.disabled > a {
+			border-color: transparent;
+		}
+	}
+}
+
 .nav-tabs {
 	border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
@@ -207,10 +219,9 @@
 			}
 
 			> li {
-				margin-left: -$nav-tabs-border-width;
-
 				> a {
 					border-radius: $tab-group-right-border-radius;
+					margin-left: -$nav-tabs-border-width;
 
 					&:focus, &:hover {
 						border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
