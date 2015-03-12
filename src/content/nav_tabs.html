@@ -63,15 +63,15 @@ section: Components
 
 		<div class="tab-group">
 			<ul class="nav nav-tabs">
-				<li class="active"><a href="#">Round Trip</a></li>
+				<li class="active"><a data-toggle="tab" href="#roundTrip1">Round Trip</a></li>
 
-				<li><a href="#">Multi Destination</a></li>
+				<li><a data-toggle="tab" href="#multiDestination1">Multi Destination</a></li>
 
-				<li class="disabled"><a href="#">One Way</a></li>
+				<li class="disabled"><a href="#1">One Way</a></li>
 			</ul>
 
 			<div class="tab-content">
-				<div class="active fade in tab-pane" id="roundTrip">
+				<div class="active fade in tab-pane" id="roundTrip1">
 					<form role="form">
 						<div class="row">
 							<div class="col-md-6">
@@ -147,7 +147,7 @@ section: Components
 					</form>
 				</div>
 
-				<div class="fade in tab-pane" id="multiDestination">
+				<div class="fade in tab-pane" id="multiDestination1">
 					<form role="form">
 						<div class="row">
 							<div class="col-md-4">
@@ -247,7 +247,7 @@ section: Components
 
 		<div class="tab-group tab-group-bottom">
 			<div class="tab-content">
-				<div class="active fade in tab-pane" id="roundTrip">
+				<div class="active fade in tab-pane" id="roundTrip2">
 					<form role="form">
 						<div class="row">
 							<div class="col-md-6">
@@ -323,7 +323,7 @@ section: Components
 					</form>
 				</div>
 
-				<div class="fade in tab-pane" id="multiDestination">
+				<div class="fade in tab-pane" id="multiDestination2">
 					<form role="form">
 						<div class="row">
 							<div class="col-md-4">
@@ -402,11 +402,11 @@ section: Components
 			</div>
 
 			<ul class="nav nav-tabs">
-				<li class="active"><a href="#">Round Trip</a></li>
+				<li class="active"><a data-toggle="tab" href="#roundTrip2">Round Trip</a></li>
 
-				<li><a href="#">Multi Destination</a></li>
+				<li><a data-toggle="tab" href="#multiDestination2">Multi Destination</a></li>
 
-				<li class="disabled"><a href="#">One Way</a></li>
+				<li class="disabled"><a href="#1">One Way</a></li>
 			</ul>
 		</div>
 
@@ -431,15 +431,15 @@ section: Components
 
 		<div class="tab-group tab-group-left">
 			<ul class="nav nav-tabs">
-				<li class="active"><a href="#">Round Trip</a></li>
+				<li class="active"><a data-toggle="tab" href="#roundTrip3">Round Trip</a></li>
 
-				<li><a href="#">Multi Destination</a></li>
+				<li><a data-toggle="tab" href="#multiDestination3">Multi Destination</a></li>
 
-				<li class="disabled"><a href="#">One Way</a></li>
+				<li class="disabled"><a href="#1">One Way</a></li>
 			</ul>
 
 			<div class="tab-content">
-				<div class="active fade in tab-pane" id="roundTrip">
+				<div class="active fade in tab-pane" id="roundTrip3">
 					<form role="form">
 						<div class="row">
 							<div class="col-md-6">
@@ -515,7 +515,7 @@ section: Components
 					</form>
 				</div>
 
-				<div class="fade in tab-pane" id="multiDestination">
+				<div class="fade in tab-pane" id="multiDestination3">
 					<form role="form">
 						<div class="row">
 							<div class="col-md-4">
@@ -615,7 +615,7 @@ section: Components
 
 		<div class="tab-group tab-group-right">
 			<div class="tab-content">
-				<div class="active fade in tab-pane" id="roundTrip">
+				<div class="active fade in tab-pane" id="roundTrip4">
 					<form role="form">
 						<div class="row">
 							<div class="col-md-6">
@@ -691,7 +691,7 @@ section: Components
 					</form>
 				</div>
 
-				<div class="fade in tab-pane" id="multiDestination">
+				<div class="fade in tab-pane" id="multiDestination4">
 					<form role="form">
 						<div class="row">
 							<div class="col-md-4">
@@ -770,11 +770,11 @@ section: Components
 			</div>
 
 			<ul class="nav nav-tabs">
-				<li class="active"><a href="#">Round Trip</a></li>
+				<li class="active"><a data-toggle="tab" href="#roundTrip4">Round Trip</a></li>
 
-				<li><a href="#">Multi Destination</a></li>
+				<li><a data-toggle="tab" href="#multiDestination4">Multi Destination</a></li>
 
-				<li class="disabled"><a href="#">One Way</a></li>
+				<li class="disabled"><a href="#1">One Way</a></li>
 			</ul>
 		</div>
 
@@ -792,37 +792,3 @@ section: Components
 
 	</div>
 </div>
-
-<script>
-	YUI().use('node', 'event', function(A) {
-		A.one('#mainContent').delegate('click', function(event) {
-			var ct = event.currentTarget;
-			var navTabs = ct.ancestor('.nav-tabs');
-			var tabContentArray;
-			var tabGroup = ct.ancestor('.tab-group');
-
-			var navTabsArray = navTabs.all('> li > a');
-
-			if (tabGroup) {
-				tabContentArray = tabGroup.one('.tab-content').all('.tab-pane');
-
-				event.preventDefault();
-
-				if (ct.ancestor('li').hasClass('disabled')) {
-				}
-				else if (!ct.ancestor('li').hasClass('active')) {
-					navTabs.all('> li').each(function(node) {
-						node.removeClass('active');
-					});
-
-					tabContentArray.each(function(node) {
-						node.removeClass('active');
-					});
-
-					ct.ancestor('li').addClass('active');
-					tabContentArray.item(navTabsArray.indexOf(ct)).addClass('active');
-				}
-			}
-		}, '.nav-tabs > li > a');
-	});
-</script>
