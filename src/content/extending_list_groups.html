@@ -1,0 +1,330 @@
+---
+title: Extending List Groups
+section: Extending Components
+---
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Collapsible Linked List Groups</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Create collapsible lists of links with <a href="/liferay-ux-guidelines/content/list-groups/#linkedListGroups">Linked List Group</a> and the Collapse module.</p>
+		</blockquote>
+
+		<div class="list-group">
+			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse1">List Group Heading</a>
+			<div class="collapse" id="listGroupCollapse1">
+				<a href="#" class="list-group-item">List Item 1</a>
+				<a href="#" class="list-group-item">List Item 2</a>
+				<a href="#" class="list-group-item">List Item 3</a>
+				<a href="#" class="list-group-item">List Item 4</a>
+			</div>
+
+			<a aria-expanded="true" class="list-group-heading" data-toggle="collapse" href="#listGroupCollapse2">List Group Heading</a>
+			<div class="collapse in" id="listGroupCollapse2">
+				<a href="#" class="list-group-item">List Item 1</a>
+				<a href="#" class="list-group-item">List Item 2</a>
+				<a href="#" class="list-group-item">List Item 3</a>
+				<a href="#" class="list-group-item">List Item 4</a>
+			</div>
+
+			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse3">List Group Heading</a>
+			<div class="collapse" id="listGroupCollapse3">
+				<a href="#" class="list-group-item">List Item 1</a>
+				<a href="#" class="list-group-item">List Item 2</a>
+				<a href="#" class="list-group-item">List Item 3</a>
+				<a href="#" class="list-group-item">List Item 4</a>
+			</div>
+		</div>
+
+<pre><code class="html">```<div class="list-group">
+    <a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse1">List Group Heading</a>
+    <div class="collapse" id="listGroupCollapse1">
+        <a href="#" class="list-group-item">List Item 1</a>
+        <a href="#" class="list-group-item">List Item 2</a>
+        <a href="#" class="list-group-item">List Item 3</a>
+        <a href="#" class="list-group-item">List Item 4</a>
+    </div>
+
+    <a aria-expanded="true" class="list-group-heading" data-toggle="collapse" href="#listGroupCollapse2">List Group Heading</a>
+    <div class="collapse in" id="listGroupCollapse2">
+        <a href="#" class="list-group-item">List Item 1</a>
+        <a href="#" class="list-group-item">List Item 2</a>
+        <a href="#" class="list-group-item">List Item 3</a>
+        <a href="#" class="list-group-item">List Item 4</a>
+    </div>
+
+    <a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse3">List Group Heading</a>
+    <div class="collapse" id="listGroupCollapse3">
+        <a href="#" class="list-group-item">List Item 1</a>
+        <a href="#" class="list-group-item">List Item 2</a>
+        <a href="#" class="list-group-item">List Item 3</a>
+        <a href="#" class="list-group-item">List Item 4</a>
+    </div>
+</div>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Collapsible Tabular List Groups</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Insert <a href="/liferay-ux-guidelines/content/list-groups/#tabularListGroups">Tabular List Groups</a> inside <code>.collapse</code> to create collapsible Tabular List Groups.</p>
+		</blockquote>
+
+		<div class="list-group">
+			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#tabularListGroupCollapse1">List Group Heading</a>
+			<div class="collapse" id="tabularListGroupCollapse1">
+				<ul class="tabular-list-group">
+					<li class="list-group-item">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<h6 class="text-default">
+								<span>5 Folders</span>
+								<span>4 Entries</span>
+							</h6>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+
+					<li class="list-group-item">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<h6 class="text-default">
+								<span>5 Folders</span>
+								<span>4 Entries</span>
+							</h6>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<a aria-expanded="true" class="list-group-heading" data-toggle="collapse" href="#tabularListGroupCollapse2">List Group Heading</a>
+			<div class="collapse in" id="tabularListGroupCollapse2">
+				<ul class="tabular-list-group">
+					<li class="list-group-item">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<h6 class="text-default">
+								<span>5 Folders</span>
+								<span>4 Entries</span>
+							</h6>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+
+					<li class="list-group-item">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<h6 class="text-default">
+								<span>5 Folders</span>
+								<span>4 Entries</span>
+							</h6>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#tabularListGroupCollapse3">List Group Heading</a>
+			<div class="collapse" id="tabularListGroupCollapse3">
+				<ul class="tabular-list-group">
+					<li class="list-group-item list-group-item-success">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Approved</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-warning">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Pending</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-info">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Dennis Rodman the best power forward in Bulls history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Draft</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-default">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">LeBron James the best power forward in Heat history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Expired</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-primary">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Tim Duncan the best power forward in Spurs' history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Scheduled</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-danger">
+						<div class="list-group-item-field">
+							<input type="checkbox">
+						</div>
+
+						<div class="list-group-item-field">
+							<span class="icon-folder-close icon-xl text-default"></span>
+						</div>
+
+						<div class="list-group-item-content">
+							<h5 class="text-primary">Kevin Garnett the best power forward in Pistons' history.</h5>
+							<h6 class="text-default">Monica Bellucci</h6>
+							<div class="status">Rejected</div>
+						</div>
+
+						<div class="list-group-item-field">
+							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+<pre><code class="html">```<div class="list-group">
+    <a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#tabularListGroupCollapse1">List Group Heading</a>
+    <div class="collapse" id="tabularListGroupCollapse1">
+        <ul class="tabular-list-group">
+          ...
+        </ul>
+    </div>
+
+    <a aria-expanded="true" class="list-group-heading" data-toggle="collapse" href="#tabularListGroupCollapse2">List Group Heading</a>
+    <div class="collapse in" id="tabularListGroupCollapse2">
+        <ul class="tabular-list-group">
+          ...
+        </ul>
+    </div>
+
+    <a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#tabularListGroupCollapse3">List Group Heading</a>
+    <div class="collapse" id="tabularListGroupCollapse3">
+        <ul class="tabular-list-group">
+          ...
+        </ul>
+    </div>
+</div>```</code></pre>
+
+	</div>
+</div>

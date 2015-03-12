@@ -5,6 +5,48 @@
 	font-weight: bold;
 }
 
+// Collapsible List Group
+
+.list-group {
+	.collapse, .collapsing {
+		&:last-child {
+			border-bottom-left-radius: $border-radius-default;
+			border-bottom-right-radius: $border-radius-default;
+			overflow: hidden;
+
+			.list-group-item:last-child {
+				border-bottom-left-radius: $border-radius-default;
+				border-bottom-right-radius: $border-radius-default;
+			}
+		}
+
+		.list-group-item {
+			&:first-child {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			&:last-child {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		.tabular-list-group {
+			margin-bottom: 0;
+		}
+	}
+
+	.list-group-heading {
+		margin-top: -1px;
+
+		&.collapsed:nth-last-child(2) {
+			border-bottom-left-radius: $border-radius-default;
+			border-bottom-right-radius: $border-radius-default;
+		}
+	}
+}
+
 // Tabular List Group
 
 .tabular-list-group {
