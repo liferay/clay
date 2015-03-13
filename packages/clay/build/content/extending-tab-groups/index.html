@@ -1,0 +1,577 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Extending Tab Groups</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/main.css" />
+
+	<script src="http://cdn.alloyui.com/2.5.0/aui/aui-min.js"></script>
+
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/notifications.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<button type="button" class="animated-toggle navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<h4 class="title"><a href="../..">UX Guidelines</a></h4>
+			</div>
+		</header>
+
+		<section class="closed container sidenav-container">
+			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
+	<div class="side-navigation-container sidenav-menu">
+			
+
+		<ul class="nav nav-stacked">
+<li class=""><a href="../../">Home</a>
+</li>
+<li class=""><a href="../../content/color-scheme">Color Scheme</a>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a href="../../content/badges-and-labels">Badges and Labels</a>
+</li>
+<li class=""><a href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a href="../../content/cards">Cards</a>
+</li>
+<li class=""><a href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a href="../../content/figures">Figures</a>
+</li>
+<li class=""><a href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a href="../../content/media-objects">Media Objects</a>
+</li>
+<li class=""><a href="../../content/modals">Modals</a>
+</li>
+<li class=""><a href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a href="../../content/nav">Nav</a>
+</li>
+<li class=""><a href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class=""><a href="../../content/navbar">Navbars</a>
+</li>
+<li class=""><a href="../../content/notifications">Notifications</a>
+</li>
+<li class=""><a href="../../content/page-header-and-jumbotron">Page Header and Jumbotron</a>
+</li>
+<li class=""><a href="../../content/paginations">Pagination and Pagers</a>
+</li>
+<li class=""><a href="../../content/panels">Panels</a>
+</li>
+<li class=""><a href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a href="../../content/sidenav">Sidenav</a>
+</li>
+<li class=""><a href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Elements</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/typography">Typography</a>
+</li>
+<li class=""><a href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
+</li>
+<li class=""><a href="../../content/icons">Icons (Glyphicons)</a>
+</li>
+<li class=""><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a href="../../content/switches">Switches</a>
+</li>
+<li class=""><a href="../../content/tables">Tables</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Example Pages</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/blog-1-column">Blog - One Column</a>
+</li>
+<li class=""><a href="../../content/chat">Chat</a>
+</li>
+<li class=""><a href="../../content/form-examples">Form Examples</a>
+</li>
+<li class=""><a href="../../content/profile-page">Profile Page</a>
+</li>
+<li class=""><a href="../../content/timelines">Timeline</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Experimental</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/sliders">Sliders</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Extending Components</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse in
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/extending-cards">Extending Cards</a>
+</li>
+<li class=""><a href="../../content/extending-list-groups">Extending List Groups</a>
+</li>
+<li class=""><a href="../../content/extending-nameplates">Extending Nameplates</a>
+</li>
+<li class=""><a href="../../content/extending-switches">Extending Switches</a>
+</li>
+<li class="active"><a href="../../content/extending-tab-groups">Extending Tab Groups</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Mail Template</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
+<li class=""><a href="../../content/mail-template-inbox">Inbox</a>
+</li>
+<li class=""><a href="../../content/mail-template-sent">Sent</a>
+</li>
+<li class=""><a href="../../content/mail-template-compose">Compose</a>
+</li>
+<li class=""><a href="../../content/mail-template-drafts">Drafts</a>
+</li>
+<li class=""><a href="../../content/mail-template-spam">Spam</a>
+</li>
+<li class=""><a href="../../content/mail-template-trash">Trash</a>
+</li>
+<li class=""><a href="../../content/mail-template-view-message">View Message</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a href="../../content/todo">TODO</a>
+</li>
+</ul>
+	</div>
+</nav>
+
+	<div class="sidenav-content" id="mainContent">
+		<h1 class="page-title">
+			Extending Tab Groups
+
+			
+		</h1>
+
+		
+<style>
+/*#tabletTabs {
+	padding: 25px 0 50px;
+}
+
+#tabletTabs .tab-group, #tabletTabs .nav-tabs {
+	position: relative;
+}
+
+#tabletTabs .tab-content {
+	background-color: #e6e9ed;
+	box-shadow: -2px 2px 5px -2px #000;
+	z-index: 5;
+}
+
+#tabletTabs .nav-tabs > li > a {
+	color: #79797b;
+	padding: 25px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#tabletTabs .nav-tabs > li > a [class*="icon-"] {
+	font-size: 35px;
+}
+
+#tabletTabs .nav-tabs > li.active {
+	box-shadow: -3px 3px 6px -3px rgba(0,0,0,0.4),0px 3px 1px -2px rgba(0,0,0,0.3),-2px 3px 1px -2px rgba(0,0,0,0.3);
+}
+
+#tabletTabs .nav-tabs > li.active > a {
+	background-color: #e6e9ed;
+	color: #1c0e1c;
+}
+
+#tabletTabs .nav-tabs > li.disabled > a {
+	color: #999;
+}*/
+</style>
+
+<div class="row row-spacing" id="tabletTabs">
+	<div class="col-md-12">
+		<h3>Complex Navigations with Tab Groups</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fit a lot of information into a small space with nested tab groups.</p>
+		</blockquote>
+
+		<div class="tab-group tab-group-left">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a data-toggle="tab" href="#roundTrip3">
+						<span class="icon-map-marker"></span>
+						<div>Round Trip</div>
+					</a>
+				</li>
+
+				<li>
+					<a data-toggle="tab" href="#multiDestination3">
+						<span class="icon-road"></span>
+						<div>Multi Destination</div>
+					</a>
+				</li>
+
+				<li class="disabled"><a href="#1">One Way</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="active fade in tab-pane" id="roundTrip3">
+					<div class="tab-group">
+								<ul class="nav nav-tabs">
+									<li class="active"><a data-toggle="tab" href="#roundTrip1">Round Trip</a></li>
+
+									<li><a data-toggle="tab" href="#multiDestination1">Multi Destination</a></li>
+								</ul>
+
+								<div class="tab-content">
+									<div class="active fade in tab-pane" id="roundTrip1">
+										<form role="form">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>From</label>
+														<input class="form-control" type="text" placeholder="City or Airport">
+													</div>
+												</div>
+
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>To</label>
+														<input class="form-control" type="text" placeholder="City or Airport">
+													</div>
+												</div>
+
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Departing</label>
+														<input class="form-control" type="text" placeholder="Departing Date">
+													</div>
+												</div>
+
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Returning</label>
+														<input class="form-control" type="text" placeholder="Returning Date">
+													</div>
+												</div>
+
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Adults</label>
+														<select class="form-control">
+															<option>0 Adults</option>
+															<option>1 Adult</option>
+															<option>2 Adults</option>
+															<option>3 Adults</option>
+															<option>4 Adults</option>
+															<option>5 Adults</option>
+															<option>6 Adults</option>
+															<option>7 Adults</option>
+															<option>8 Adults</option>
+															<option>9 Adults</option>
+															<option>10 Adults</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Children</label>
+														<select class="form-control">
+															<option>0 Children</option>
+															<option>1 Child</option>
+															<option>2 Children</option>
+															<option>3 Children</option>
+															<option>4 Children</option>
+															<option>5 Children</option>
+															<option>6 Children</option>
+															<option>7 Children</option>
+															<option>8 Children</option>
+															<option>9 Children</option>
+															<option>10 Children</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="col-md-12">
+													<button class="btn btn-success btn-md">Search Flights</button>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									<div class="fade in tab-pane" id="multiDestination1">
+										<form role="form">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="form-group">
+														<label>From</label>
+														<input class="form-control" type="text" placeholder="City or Airport">
+													</div>
+												</div>
+
+												<div class="col-md-4">
+													<div class="form-group">
+														<label>To</label>
+														<input class="form-control" type="text" placeholder="City or Airport">
+													</div>
+												</div>
+
+												<div class="col-md-4">
+													<div class="form-group">
+														<label>Departing</label>
+														<input class="form-control" type="text" placeholder="Departing Date">
+													</div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 form-group">
+													<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Adults</label>
+														<select class="form-control">
+															<option>0 Adults</option>
+															<option>1 Adult</option>
+															<option>2 Adults</option>
+															<option>3 Adults</option>
+															<option>4 Adults</option>
+															<option>5 Adults</option>
+															<option>6 Adults</option>
+															<option>7 Adults</option>
+															<option>8 Adults</option>
+															<option>9 Adults</option>
+															<option>10 Adults</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Children</label>
+														<select class="form-control">
+															<option>0 Children</option>
+															<option>1 Child</option>
+															<option>2 Children</option>
+															<option>3 Children</option>
+															<option>4 Children</option>
+															<option>5 Children</option>
+															<option>6 Children</option>
+															<option>7 Children</option>
+															<option>8 Children</option>
+															<option>9 Children</option>
+															<option>10 Children</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="col-md-12">
+													<button class="btn btn-success btn-md">Search Flights</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+				</div>
+
+				<div class="fade in tab-pane" id="multiDestination3">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport" />
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 form-group">
+								<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+
+	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+
+	<script>
+		YUI().use(
+			'node', 'transition',
+			function(A) {
+				A.one('#headerTopBar .navbar-toggle').on(
+					'click',
+					function(event) {
+						var ct = event.currentTarget;
+						var sidenavContainer = ct.ancestor('#headerTopBar').next('.sidenav-container');
+
+						event.preventDefault();
+
+						sidenavContainer.on(
+							'transitionend',
+							function(event) {
+								sidenavContainer.removeClass('sidenav-transition');
+
+								this.detach('transitionend');
+							}
+						);
+
+						sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
+						ct.ancestor('#wrapper').toggleClass('main-nav-open');
+					}
+				);
+
+				A.all('.side-navigation').each(
+					function(item, index) {
+						item.delegate(
+							'click',
+							function(event) {
+								event.preventDefault();
+								event.currentTarget.next('.collapse').toggleClass('in');
+							},
+							'li.side-navigation-dropdown-container > a'
+						);
+					}
+				);
+			}
+		);
+
+		hljs.initHighlightingOnLoad();
+	</script>
+	</body>
+</html>
