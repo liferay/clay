@@ -15,6 +15,7 @@
 	<script src="../../js/collapsible-search.js"></script>
 	<script src="../../js/notifications.js"></script>
 	<script src="../../js/side-navigation.js"></script>
+	<script src="../../js/slideout-drawer.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -87,9 +88,20 @@ collapse in
 </li>
 <li class=""><a href="../../content/progress-bars">Progress Bars</a>
 </li>
+<li class=""><a href="../../content/user-icons">User Icons</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="side-navigation-dropdown-container"><a href="javascript:;">Components (JS)</a>
+<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
+<div class="
+collapse
+">
+<ul class="nav nav-stacked">
 <li class=""><a href="../../content/sidenav">Sidenav</a>
 </li>
-<li class=""><a href="../../content/user-icons">User Icons</a>
+<li class=""><a href="../../content/slideout-drawer">Slideout Drawer</a>
 </li>
 </ul>
 </div>
@@ -263,8 +275,57 @@ collapse
 					</h6>
 				</div>
 
+<style>
+.slideout-drawer {
+	bottom: 0;
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 250px;
+}
+
+.slideout-drawer.open {
+	/*display: block;*/
+}
+
+.slideout-drawer-content {
+	background-color: #EEE;
+	float: left;
+	height: 100%;
+	transform: translateX(100%);
+	transition: all 0.5s ease;
+	width: 100%;
+}
+
+.slideout-drawer.open .slideout-drawer-content {
+	transform: translateX(0);
+}
+
+.slideout-drawer ul li {
+	float: left;
+	padding: 10px;
+	width: 33%;
+}
+
+.icon-remove {
+	left: -17px;
+	position: absolute;
+	top: 5px;
+}
+</style>
+
 				<div class="list-group-item-field">
-					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+					<a class="icon-ellipsis-vertical icon-lg slideout-drawer-toggle" href="#1"></a>
+					<div class="slideout-drawer">
+						<a class="icon-remove" href="#"></a>
+						<ul class="list-unstyled slideout-drawer-content">
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 1</div></a></li>
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 2</div></a></li>
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 3</div></a></li>
+						</ul>
+					</div>
 				</div>
 			</li>
 		</ul>
@@ -560,6 +621,38 @@ collapse
 
 	</div>
 </div>
+
+<script>
+	$('.slideout-drawer-toggle').on('click', function(event) {
+		var slideoutDrawer = $(this).find('~ .slideout-drawer');
+
+		slideoutDrawer.css('display', 'block');
+
+		$(this).parent().find('.icon-remove').on('click', function(event) {
+			var dis = $(this);
+
+			event.preventDefault();
+
+			dis.closest('.slideout-drawer').removeClass('open');
+
+			dis.parent().css('overflow', '');
+
+			setTimeout(function() {
+				dis.parent().css('display', '');
+			}, 500);
+
+			$(this).off('click');
+		});
+
+		setTimeout(function() {
+			slideoutDrawer.addClass('open');
+		}, 0);
+
+		setTimeout(function() {
+			slideoutDrawer.css('overflow', 'visible');
+		}, 500);
+	});
+</script>
 	</div>
 
 		</section>
