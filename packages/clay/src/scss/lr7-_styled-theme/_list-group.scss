@@ -63,6 +63,7 @@
 
 	.list-group-item-content, .list-group-item-field {
 		padding: 1em 0.3em;
+		position: relative;
 
 		&:first-child {
 			padding-left: 1em;

@@ -59,8 +59,57 @@ section: Components
 					</h6>
 				</div>
 
+<style>
+.slideout-drawer {
+	bottom: 0;
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 250px;
+}
+
+.slideout-drawer.open {
+	/*display: block;*/
+}
+
+.slideout-drawer-content {
+	background-color: #EEE;
+	float: left;
+	height: 100%;
+	transform: translateX(100%);
+	transition: all 0.5s ease;
+	width: 100%;
+}
+
+.slideout-drawer.open .slideout-drawer-content {
+	transform: translateX(0);
+}
+
+.slideout-drawer ul li {
+	float: left;
+	padding: 10px;
+	width: 33%;
+}
+
+.icon-remove {
+	left: -17px;
+	position: absolute;
+	top: 5px;
+}
+</style>
+
 				<div class="list-group-item-field">
-					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+					<a class="icon-ellipsis-vertical icon-lg slideout-drawer-toggle" href="#1"></a>
+					<div class="slideout-drawer">
+						<a class="icon-remove" href="#"></a>
+						<ul class="list-unstyled slideout-drawer-content">
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 1</div></a></li>
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 2</div></a></li>
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 3</div></a></li>
+						</ul>
+					</div>
 				</div>
 			</li>
 		</ul>
@@ -356,3 +405,35 @@ section: Components
 
 	</div>
 </div>
+
+<script>
+	$('.slideout-drawer-toggle').on('click', function(event) {
+		var slideoutDrawer = $(this).find('~ .slideout-drawer');
+
+		slideoutDrawer.css('display', 'block');
+
+		$(this).parent().find('.icon-remove').on('click', function(event) {
+			var dis = $(this);
+
+			event.preventDefault();
+
+			dis.closest('.slideout-drawer').removeClass('open');
+
+			dis.parent().css('overflow', '');
+
+			setTimeout(function() {
+				dis.parent().css('display', '');
+			}, 500);
+
+			$(this).off('click');
+		});
+
+		setTimeout(function() {
+			slideoutDrawer.addClass('open');
+		}, 0);
+
+		setTimeout(function() {
+			slideoutDrawer.css('overflow', 'visible');
+		}, 500);
+	});
+</script>
