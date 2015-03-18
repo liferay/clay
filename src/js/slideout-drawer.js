@@ -81,9 +81,13 @@
 			}
 			else {
 				element.on('click', function(event) {
+					var drawer = $(this).next(instance.options.drawer);
+
 					event.preventDefault();
 
-					instance._openRelativeDrawer($(this));
+					if (!drawer.hasClass('open')) {
+						instance._openRelativeDrawer($(this));
+					}
 				});
 			}
 		},
