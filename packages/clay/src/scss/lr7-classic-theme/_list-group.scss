@@ -40,6 +40,10 @@
 	.list-group-heading {
 		margin-top: -1px;
 
+		&:first-child {
+			margin-top: 0;
+		}
+
 		&.collapsed:nth-last-child(2) {
 			border-bottom-left-radius: $border-radius-default;
 			border-bottom-right-radius: $border-radius-default;
