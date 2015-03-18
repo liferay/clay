@@ -56,19 +56,31 @@
 	padding: 0;
 
 	> li, .list-group-item {
-		border: 1px solid #DDD;
+		border-width: 0;
 		display: table-row;
 		padding: 0;
+
+		&:first-child {
+			.list-group-item-content, .list-group-item-field {
+				border-top: 1px solid #DDD;
+			}
+		}
 	}
 
 	.list-group-item-content, .list-group-item-field {
+		border: 1px solid #DDD;
+		border-top-width: 0;
+		border-left-width: 0;
+		border-right-width: 0;
 		padding: 1em 0.3em;
 
 		&:first-child {
+			border-left-width: 1px;
 			padding-left: 1em;
 		}
 
 		&:last-child {
+			border-right-width: 1px;
 			padding-right: 1em;
 		}
 
@@ -98,6 +110,28 @@
 
 	.list-group-item-field {
 		text-align: center;
+	}
+}
+
+.tabular-list-group {
+	&.no-borders {
+		> li, .list-group-item {
+			&:first-child {
+				.list-group-item-content, .list-group-item-field {
+					border-top-width: 0;
+				}
+			}
+		}
+
+		.list-group-item-content, .list-group-item-field {
+			border-width: 0;
+		}
+	}
+
+	&.full-borders {
+		.list-group-item-content, .list-group-item-field {
+			border-right-width: 1px;
+		}
 	}
 }
 
