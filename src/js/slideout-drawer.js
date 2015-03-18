@@ -99,6 +99,15 @@
 
 					event.preventDefault();
 
+					instance._transitionEnd(drawer, function() {
+						drawer.css({
+							display: '',
+							left: '',
+							right: '',
+							top: ''
+						}).removeClass('slideout-drawer-transition');
+					});
+
 					drawer.addClass('slideout-drawer-transition');
 
 					if (instance.options.align === 'right') {
@@ -112,15 +121,6 @@
 
 					$this.parent().removeClass('open').css('overflow', '');
 
-					setTimeout(function() {
-						drawer.css({
-							display: '',
-							left: '',
-							right: '',
-							top: ''
-						}).removeClass('slideout-drawer-transition');
-					}, 500);
-
 					$(this).off('click');
 				});
 			}
@@ -129,16 +129,18 @@
 		_closeFixedDrawer: function(drawer) {
 			drawer.addClass('slideout-drawer-transition').removeClass('open');
 
-			setTimeout(function() {
+			this._transitionEnd(drawer, function() {
 				drawer.css({
 					display: '',
 					width: ''
 				});
-			}, 500);
+			});
 		},
 
 		_openFixedDrawer: function(drawer) {
 			var instance = this;
+
+			var transitionEndFunc;
 
 			switch(instance.options.align) {
 				case 'bottom':
@@ -158,6 +160,10 @@
 					break;
 			}
 
+			instance._transitionEnd(drawer, function(event) {
+				drawer.removeClass('slideout-drawer-transition');
+			});
+
 			drawer.css({
 				display: 'block',
 				width: instance.options.width
@@ -168,16 +174,16 @@
 			setTimeout(function() {
 				drawer.addClass('open');
 			}, 50);
-
-			setTimeout(function() {
-				drawer.removeClass('slideout-drawer-transition');
-			}, 500);
 		},
 
 		_openRelativeDrawer: function(element) {
 			var instance = this;
 
 			var slideoutDrawer = element.next(instance.options.drawer);
+
+			instance._transitionEnd(slideoutDrawer, function() {
+				slideoutDrawer.css('overflow', 'visible').removeClass('slideout-drawer-transition');
+			});
 
 			instance._resizeDrawer(element);
 			instance._sizeDrawer(element);
@@ -201,10 +207,6 @@
 				slideoutDrawer.addClass('open');
 				slideoutDrawer.find('.slideout-drawer-close').css('transform', 'translateX(' + 0 + ')');
 			}, 50);
-
-			setTimeout(function() {
-				slideoutDrawer.css('overflow', 'visible').removeClass('slideout-drawer-transition');
-			}, 500);
 		},
 
 		_resizeDrawer: function(element) {
@@ -258,6 +260,16 @@
 
 				slideoutDrawer.find(instance.options.content).css('width', drawerWidth - drawerCloseWidth + 'px');
 			}, 0);
+		},
+
+		_transitionEnd: function(drawer, func) {
+			var transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+			drawer.on(transitions, function(event) {
+				(func)();
+
+				drawer.off(transitions);
+			});
 		},
 
 		getDrawerWidth: function(element) {
