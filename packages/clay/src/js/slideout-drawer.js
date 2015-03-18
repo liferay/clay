@@ -6,8 +6,6 @@
 	SlideoutDrawer.prototype = {
 		init: function(element, options) {
 			this.options = $.extend({}, $.fn.slideoutDrawer.defaults, options);
-			this.options.selector = element.selector;
-			this.options.element = element;
 
 			this._handleClick(element);
 		},
@@ -31,24 +29,25 @@
 				var rpRightPos = Math.round(rpPos.left + rpWidth);
 				var sldRightPos = Math.round(sldPos.left + sldWidth);
 
-				var rpHeight = relativeParent.innerHeight();
-				var sldHeight = slideoutDrawer.outerHeight();
-
 				var leftPos = Math.abs(rpPos.left - sldPos.left);
 				var rightPos = Math.abs(rpRightPos - sldRightPos);
 				var topPos = Math.abs(rpPos.top - sldPos.top);
 
+				var rpBorderLeftWidth = parseInt(relativeParent.css('border-left-width'));
+				var rpBorderRightWidth = parseInt(relativeParent.css('border-right-width'));
+				var rpBorderTopWidth = parseInt(relativeParent.css('border-top-width'));
+
 				if (instance.options.align === 'right') {
 					slideoutDrawer.css({
-						right: -rightPos,
-						top: -topPos
+						right: -rightPos + rpBorderRightWidth,
+						top: -topPos + rpBorderTopWidth
 					});
 				}
 
 				if (instance.options.align === 'left') {
 					slideoutDrawer.css({
-						left: -leftPos,
-						top: -topPos
+						left: -leftPos + rpBorderLeftWidth,
+						top: -topPos + rpBorderTopWidth
 					});
 				}
 			}
@@ -68,8 +67,7 @@
 
 			if (instance.options.position === 'fixed') {
 				element.on('click', function(event) {
-					var $this = $(this);
-					var slideoutDrawerFixed = $this.next('.slideout-drawer-fixed');
+					var slideoutDrawerFixed = $(this).next('.slideout-drawer-fixed');
 
 					event.preventDefault();
 
@@ -103,16 +101,13 @@
 
 					drawer.addClass('slideout-drawer-transition');
 
-					switch(instance.options.align) {
-						case 'right':
-							drawer.addClass('slideout-drawer-right');
-							$this.css('transform', 'translateX(' + instance.getDrawerWidth() + 'px)');
-							break;
-
-						default:
-							drawer.addClass('slideout-drawer-left');
-							$this.css('transform', 'translateX(' + -instance.getDrawerWidth() + 'px)');
-							break;
+					if (instance.options.align === 'right') {
+						drawer.addClass('slideout-drawer-right');
+						$this.css('transform', 'translateX(' + instance.getDrawerWidth(drawer) + 'px)');
+					}
+					else {
+						drawer.addClass('slideout-drawer-left');
+						$this.css('transform', 'translateX(' + -instance.getDrawerWidth(drawer) + 'px)');
 					}
 
 					$this.parent().removeClass('open').css('overflow', '');
@@ -231,10 +226,18 @@
 		},
 
 		_sizeDrawer: function(element) {
-			var height = this.getContainerHeight();
+			var drawerCloseWidth;
+			var instance = this;
+
+			var height = this.getContainerHeight(element);
 			var slideoutDrawer = element.next(this.options.drawer);
 
-			var drawerWidth = this.getDrawerWidth();
+			var containerWidth = this.getContainerWidth(element);
+			var drawerWidth = this.getDrawerWidth(element);
+
+			if (containerWidth < drawerWidth) {
+				drawerWidth = containerWidth;
+			}
 
 			slideoutDrawer.css({
 				height: height,
@@ -250,15 +253,19 @@
 				}
 			}
 
-			slideoutDrawer.find(this.options.content).css('width', drawerWidth - 20 + 'px');
+			setTimeout(function() {
+				drawerCloseWidth = parseInt(slideoutDrawer.find('.slideout-drawer-close').outerWidth());
+
+				slideoutDrawer.find(instance.options.content).css('width', drawerWidth - drawerCloseWidth + 'px');
+			}, 0);
 		},
 
-		getDrawerWidth: function() {
+		getDrawerWidth: function(element) {
 			var divisor;
 			var drawerWidth;
-			var width = this.getContainerWidth();
+			var width = this.getContainerWidth(element);
 
-			var slideoutDrawer = this.options.element.next('.slideout-drawer');
+			var slideoutDrawer = element.closest(this.options.relativeParent).find(this.options.drawer);
 
 			if (this.getUnits() === 'px') {
 				divisor = 1;
@@ -299,8 +306,7 @@
 			})();
 		},
 
-		getContainerHeight: function() {
-			var element = this.options.element;
+		getContainerHeight: function(element) {
 			var relativeParent = this.options.relativeParent;
 			var height;
 
@@ -311,13 +317,12 @@
 			})();
 		},
 
-		getContainerWidth: function() {
-			var element = this.options.element;
-			var relativeParent = this.options.relativeParent;
+		getContainerWidth: function(element) {
+			var relativeParent = element.closest(this.options.relativeParent);
 			var width;
 
 			return (function() {
-				width = element.closest(relativeParent).innerWidth();
+				width = relativeParent.innerWidth();
 
 				return width;
 			})();
