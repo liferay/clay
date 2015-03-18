@@ -275,47 +275,6 @@ collapse
 					</h6>
 				</div>
 
-<style>
-.slideout-drawer {
-	bottom: 0;
-	display: none;
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 250px;
-}
-
-.slideout-drawer.open {
-	/*display: block;*/
-}
-
-.slideout-drawer-content {
-	background-color: #EEE;
-	float: left;
-	height: 100%;
-	transform: translateX(100%);
-	transition: all 0.5s ease;
-	width: 100%;
-}
-
-.slideout-drawer.open .slideout-drawer-content {
-	transform: translateX(0);
-}
-
-.slideout-drawer ul li {
-	float: left;
-	padding: 10px;
-	width: 33%;
-}
-
-.icon-remove {
-	left: -17px;
-	position: absolute;
-	top: 5px;
-}
-</style>
-
 				<div class="list-group-item-field">
 					<a class="icon-ellipsis-vertical icon-lg slideout-drawer-toggle" href="#1"></a>
 					<div class="slideout-drawer">
@@ -377,6 +336,132 @@ collapse
         &lt;/div&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+
+		<h3 id="tabularListGroups">Tabular List Group Borders</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Tabular List Group rows are bordered by default. You can remove borders by adding <code>.no-borders</code> to <code>.tabular-list-group</code>.</p>
+		</blockquote>
+
+		<ul class="tabular-list-group no-borders">
+			<li class="list-group-item">
+				<div class="list-group-item-field">
+					<input type="checkbox" />
+				</div>
+
+				<div class="list-group-item-field">
+					<span class="icon-folder-close icon-xl text-default"></span>
+				</div>
+
+				<div class="list-group-item-content">
+					<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
+					<h6 class="text-default">Monica Bellucci</h6>
+					<h6 class="text-default">
+						<span>5 Folders</span>
+						<span>4 Entries</span>
+					</h6>
+				</div>
+
+				<div class="list-group-item-field">
+					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+				</div>
+			</li>
+
+			<li class="list-group-item">
+				<div class="list-group-item-field">
+					<input type="checkbox" />
+				</div>
+
+				<div class="list-group-item-field">
+					<span class="icon-folder-close icon-xl text-default"></span>
+				</div>
+
+				<div class="list-group-item-content">
+					<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
+					<h6 class="text-default">Monica Bellucci</h6>
+					<h6 class="text-default">
+						<span>5 Folders</span>
+						<span>4 Entries</span>
+					</h6>
+				</div>
+
+				<div class="list-group-item-field">
+					<a class="icon-ellipsis-vertical icon-lg slideout-drawer-toggle" href="#1"></a>
+					<div class="slideout-drawer">
+						<a class="icon-remove" href="#"></a>
+						<ul class="list-unstyled slideout-drawer-content">
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 1</div></a></li>
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 2</div></a></li>
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 3</div></a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+<pre><code class="html">&lt;ul class=&quot;tabular-list-group no-borders&quot;&gt;...&lt;/ul&gt;</code></pre>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Similarly, you can add borders around each cell with <code>.full-borders</code>.</p>
+		</blockquote>
+
+		<ul class="tabular-list-group full-borders">
+			<li class="list-group-item">
+				<div class="list-group-item-field">
+					<input type="checkbox" />
+				</div>
+
+				<div class="list-group-item-field">
+					<span class="icon-folder-close icon-xl text-default"></span>
+				</div>
+
+				<div class="list-group-item-content">
+					<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
+					<h6 class="text-default">Monica Bellucci</h6>
+					<h6 class="text-default">
+						<span>5 Folders</span>
+						<span>4 Entries</span>
+					</h6>
+				</div>
+
+				<div class="list-group-item-field">
+					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+				</div>
+			</li>
+
+			<li class="list-group-item">
+				<div class="list-group-item-field">
+					<input type="checkbox" />
+				</div>
+
+				<div class="list-group-item-field">
+					<span class="icon-folder-close icon-xl text-default"></span>
+				</div>
+
+				<div class="list-group-item-content">
+					<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
+					<h6 class="text-default">Monica Bellucci</h6>
+					<h6 class="text-default">
+						<span>5 Folders</span>
+						<span>4 Entries</span>
+					</h6>
+				</div>
+
+				<div class="list-group-item-field">
+					<a class="icon-ellipsis-vertical icon-lg slideout-drawer-toggle" href="#1"></a>
+					<div class="slideout-drawer">
+						<a class="icon-remove" href="#"></a>
+						<ul class="list-unstyled slideout-drawer-content">
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 1</div></a></li>
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 2</div></a></li>
+							<li><a href="#1"><span class="icon-cog"></span><div>Action 3</div></a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+<pre><code class="html">&lt;ul class=&quot;tabular-list-group full-borders&quot;&gt;...&lt;/ul&gt;</code></pre>
 
 		<h3>Tabular List Group Item States</h3>
 		<ul class="tabular-list-group">
@@ -621,38 +706,6 @@ collapse
 
 	</div>
 </div>
-
-<script>
-	$('.slideout-drawer-toggle').on('click', function(event) {
-		var slideoutDrawer = $(this).find('~ .slideout-drawer');
-
-		slideoutDrawer.css('display', 'block');
-
-		$(this).parent().find('.icon-remove').on('click', function(event) {
-			var dis = $(this);
-
-			event.preventDefault();
-
-			dis.closest('.slideout-drawer').removeClass('open');
-
-			dis.parent().css('overflow', '');
-
-			setTimeout(function() {
-				dis.parent().css('display', '');
-			}, 500);
-
-			$(this).off('click');
-		});
-
-		setTimeout(function() {
-			slideoutDrawer.addClass('open');
-		}, 0);
-
-		setTimeout(function() {
-			slideoutDrawer.css('overflow', 'visible');
-		}, 500);
-	});
-</script>
 	</div>
 
 		</section>
