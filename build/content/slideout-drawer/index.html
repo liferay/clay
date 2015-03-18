@@ -221,6 +221,38 @@ collapse
 		
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>A jQuery plugin that creates sliding drawers for your site. Create them relative to any ancestor element or fixed to the window.</p>
+		</blockquote>
+
+		<h5>Syntax with Options:</h5>
+
+<pre><code class="html">&lt;div class=&quot;your-container&quot;&gt;
+    &lt;a class=&quot;icon-ellipsis-vertical icon-lg your-toggle-button&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;slideout-drawer&quot;&gt;
+        &lt;a class=&quot;slideout-drawer-close icon-remove&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
+        &lt;div class=&quot;slideout-drawer-content&quot;&gt;
+            ... Your Content ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+<code class="js">$(&apos;.your-toggle-button&apos;).slideoutDrawer({
+    align: &apos;left&apos;, // left, right; position fixed also has top and bottom
+    close: &apos;.slideout-drawer-close&apos;, // class or id for close button
+    content: &apos;.slideout-drawer-content&apos;, // class or id for content element
+    drawer: &apos;.slideout-drawer&apos;, // class or id for drawer element
+    relativeParent: &apos;.your-container&apos;, // parent container the drawer should position and size to
+    position: &apos;relative&apos;, // relative, fixed
+    width: &apos;75%&apos; // px, %, em, rem
+});</code></pre>
+
+		<h3>Slideout Drawer Right</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>This is an example of a slideout drawer inside a tabular list group.</p>
+		</blockquote>
+
 		<ul class="tabular-list-group">
 			<li class="list-group-item list-group-item-success">
 				<div class="list-group-item-field">
@@ -239,7 +271,7 @@ collapse
 
 				<div class="list-group-item-field">
 					<a class="icon-ellipsis-vertical icon-lg sld" href="#1" id="slideoutDrawer"></a>
-					<div class="slideout-drawer slideout-drawer-right">
+					<div class="slideout-drawer">
 						<a class="slideout-drawer-close icon-remove" href="#"></a>
 						<div class="slideout-drawer-content">
 							<ul class="list-unstyled">
@@ -272,7 +304,7 @@ collapse
 
 				<div class="list-group-item-field">
 					<a class="icon-ellipsis-vertical icon-lg sld" href="#1"></a>
-					<div class="slideout-drawer slideout-drawer-right">
+					<div class="slideout-drawer">
 						<a class="slideout-drawer-close icon-remove" href="#"></a>
 						<div class="slideout-drawer-content">
 							<div style="width:150px;height:1000px;background-color:blue;">relative</div>
@@ -298,7 +330,7 @@ collapse
 
 				<div class="list-group-item-field">
 					<a class="icon-ellipsis-vertical icon-lg sld" href="#1"></a>
-					<div class="slideout-drawer slideout-drawer-right">
+					<div class="slideout-drawer">
 						<a class="slideout-drawer-close icon-remove" href="#"></a>
 						<div class="slideout-drawer-content">
 							<div style="width:150px;height:1000px;background-color:blue;">relative</div>
@@ -324,7 +356,143 @@ collapse
 
 				<div class="list-group-item-field">
 					<a class="icon-ellipsis-vertical icon-lg sld" href="#1"></a>
-					<div class="slideout-drawer slideout-drawer-right">
+					<div class="slideout-drawer">
+						<a class="slideout-drawer-close icon-remove" href="#"></a>
+						<div class="slideout-drawer-content">
+							<div style="width:150px;height:1000px;background-color:blue;">relative</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+<pre><code>&lt;ul class=&quot;tabular-list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item list-group-item-success&quot;&gt;
+        &lt;div class=&quot;list-group-item-field&quot;&gt;
+            &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;list-group-item-field&quot;&gt;
+            &lt;span class=&quot;icon-folder-close icon-xl text-default&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;list-group-item-content&quot;&gt;
+            &lt;h5 class=&quot;text-primary&quot;&gt;Larry Bird the best power forward in Celtic&apos;s history.&lt;/h5&gt;
+            &lt;h6 class=&quot;text-default&quot;&gt;Monica Bellucci&lt;/h6&gt;
+            &lt;div class=&quot;status&quot;&gt;Approved&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;list-group-item-field&quot;&gt;
+            &lt;a class=&quot;icon-ellipsis-vertical icon-lg sld&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
+            &lt;div class=&quot;slideout-drawer&quot;&gt;
+                &lt;a class=&quot;slideout-drawer-close icon-remove&quot; href=&quot;#&quot;&gt;&lt;/a&gt;
+                &lt;div class=&quot;slideout-drawer-content&quot;&gt;
+                    ... Your Content ...
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+    $(&apos;.sld&apos;).slideoutDrawer({
+        align: &apos;right&apos;,
+        position: &apos;relative&apos;,
+        relativeParent: &apos;.list-group-item&apos;,
+        width: &apos;400px&apos;
+    });
+&lt;/script&gt;</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Slideout Drawer Left</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The toggle on the left side is <code>relativeParent: '.list-group'</code> and the toggle on the right side is <code>relativeParent: '.list-group-item'</code>.</p>
+		</blockquote>
+
+		<ul class="list-group">
+			<li class="list-group-heading">List Heading</li>
+			<li class="list-group-item">
+				<a class="ooo" href="#"><span class="icon-align-justify"></span></a>
+				<div class="slideout-drawer">
+					<a class="slideout-drawer-close icon-remove" href="#"></a>
+					<div class="slideout-drawer-content">
+						<div style="width:150px;height:1000px;background-color:#EEE;">List Item 1 Drawer</div>
+					</div>
+				</div>
+
+				List Item 1
+
+				<div class="pull-right">
+					<a class="ooo1" href="#"><span class="icon-align-justify"></span></a>
+					<div class="slideout-drawer">
+						<a class="slideout-drawer-close icon-remove" href="#"></a>
+						<div class="slideout-drawer-content">
+							<div style="width:150px;height:1000px;background-color:blue;">relative</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<a class="ooo" href="#"><span class="icon-align-justify"></span></a>
+				<div class="slideout-drawer">
+					<a class="slideout-drawer-close icon-remove" href="#"></a>
+					<div class="slideout-drawer-content">
+						<div style="width:150px;height:1000px;background-color:#EEE;">List Item 2 Drawer</div>
+					</div>
+				</div>
+
+				List Item 2
+
+				<div class="pull-right">
+					<a class="ooo1" href="#"><span class="icon-align-justify"></span></a>
+					<div class="slideout-drawer">
+						<a class="slideout-drawer-close icon-remove" href="#"></a>
+						<div class="slideout-drawer-content">
+							<div style="width:150px;height:1000px;background-color:blue;">relative</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<a class="ooo" href="#"><span class="icon-align-justify"></span></a>
+				<div class="slideout-drawer">
+					<a class="slideout-drawer-close icon-remove" href="#"></a>
+					<div class="slideout-drawer-content">
+						<div style="width:150px;height:1000px;background-color:#EEE;">List Item 3 Drawer</div>
+					</div>
+				</div>
+
+				List Item 3
+
+				<div class="pull-right">
+					<a class="ooo1" href="#"><span class="icon-align-justify"></span></a>
+					<div class="slideout-drawer">
+						<a class="slideout-drawer-close icon-remove" href="#"></a>
+						<div class="slideout-drawer-content">
+							<div style="width:150px;height:1000px;background-color:blue;">relative</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<a class="ooo" href="#"><span class="icon-align-justify"></span></a>
+				<div class="slideout-drawer">
+					<a class="slideout-drawer-close icon-remove" href="#"></a>
+					<div class="slideout-drawer-content">
+						<div style="width:150px;height:1000px;background-color:#EEE;">List Item 4 Drawer</div>
+					</div>
+				</div>
+
+				List Item 4
+
+				<div class="pull-right">
+					<a class="ooo1" href="#"><span class="icon-align-justify"></span></a>
+					<div class="slideout-drawer">
 						<a class="slideout-drawer-close icon-remove" href="#"></a>
 						<div class="slideout-drawer-content">
 							<div style="width:150px;height:1000px;background-color:blue;">relative</div>
@@ -338,63 +506,34 @@ collapse
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Slideout Drawer Left</h3>
-		<ul class="list-group">
-			<li class="list-group-heading">List Heading</li>
-			<li class="list-group-item">
-				<a class="ooo" href="#"><span class="icon-align-justify"></span></a>
-				<div class="slideout-drawer">
-					<a class="slideout-drawer-close icon-remove" href="#"></a>
-					<div class="slideout-drawer-content">
-						<div style="width:150px;height:1000px;background-color:blue;">relative</div>
-					</div>
-				</div>
-
-				<a class="ooo1" href="#"><span class="icon-align-justify"></span></a>
-				<div class="slideout-drawer">
-					<a class="slideout-drawer-close icon-remove" href="#"></a>
-					<div class="slideout-drawer-content">
-						<div style="width:150px;height:1000px;background-color:blue;">relative</div>
-					</div>
-				</div>
-			</li>
-			<li class="list-group-item">List Item 2</li>
-			<li class="list-group-item">List Item 3</li>
-			<li class="list-group-item">List Item 4</li>
-		</ul>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
 		<h3>Slideout Drawer Fixed</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Use <code>.slideout-drawer-fixed</code> to create a fixed positioned slideout-drawer.</p>
 		</blockquote>
 
-		<button class="btn btn-primary" id="slideoutDrawerLeftFixed">Slideout Drawer Left Fixed</button>
+		<button class="btn btn-primary" id="slideoutDrawerLeftFixed">Left Fixed</button>
 		<div class="slideout-drawer-fixed">
 			<div class="slideout-drawer-content">
 				<div style="width:150px;height:1000px;background-color:blue;">relative</div>
 			</div>
 		</div>
 
-		<button class="btn btn-primary" id="slideoutDrawerRightFixed">Slideout Drawer Right Fixed</button>
+		<button class="btn btn-primary" id="slideoutDrawerRightFixed">Right Fixed</button>
 		<div class="slideout-drawer-fixed">
 			<div class="slideout-drawer-content">
 				<div style="width:150px;height:1000px;background-color:blue;">relative</div>
 			</div>
 		</div>
 
-		<button class="btn btn-primary" id="slideoutDrawerTopFixed">Slideout Drawer Top Fixed</button>
+		<button class="btn btn-primary" id="slideoutDrawerTopFixed">Top Fixed</button>
 		<div class="slideout-drawer-fixed">
 			<div class="slideout-drawer-content">
 				<div style="width:150px;height:1000px;background-color:blue;">relative</div>
 			</div>
 		</div>
 
-		<button class="btn btn-primary" id="slideoutDrawerBottomFixed">Slideout Drawer Bottom Fixed</button>
+		<button class="btn btn-primary" id="slideoutDrawerBottomFixed">Drawer Bottom Fixed</button>
 		<div class="slideout-drawer-fixed">
 			<div class="slideout-drawer-content">
 				<div style="width:150px;height:1000px;background-color:blue;">relative</div>
@@ -474,7 +613,7 @@ $('.ooo').slideoutDrawer({
 });
 
 $('.ooo1').slideoutDrawer({
-	align: 'right',
+	align: 'left',
 	position: 'relative',
 	width: '400px'
 });
@@ -494,7 +633,7 @@ $('#slideoutDrawerRightFixed').slideoutDrawer({
 $('#slideoutDrawerTopFixed').slideoutDrawer({
 	align: 'top',
 	position: 'fixed',
-	width: '100%'
+	width: '75%'
 });
 
 $('#slideoutDrawerBottomFixed').slideoutDrawer({
