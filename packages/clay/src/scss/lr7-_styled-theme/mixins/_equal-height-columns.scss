@@ -3,6 +3,10 @@
 	vertical-align: top;
 }
 
+%equal-height-column-row {
+	display: table-row;
+}
+
 %equal-height-columns {
 	display: table;
 	width: 100%;

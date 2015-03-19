@@ -1,0 +1,15 @@
+.equal-height-column-cell {
+	@extend %equal-height-column-cell;
+
+	vertical-align: middle;
+}
+
+.equal-height-column-row {
+	@extend %equal-height-column-row;
+}
+
+.equal-height-columns {
+	@extend %equal-height-columns;
+
+	height: 100%;
+}
