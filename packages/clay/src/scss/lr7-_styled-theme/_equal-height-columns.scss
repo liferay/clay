@@ -2,6 +2,8 @@
 	@extend %equal-height-column-cell;
 
 	vertical-align: middle;
+
+	@include make-eqh-grid-columns();
 }
 
 .equal-height-column-row {
