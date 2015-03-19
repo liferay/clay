@@ -55,7 +55,7 @@ $slideout-drawer-width: 250px;
 }
 
 .slideout-drawer-content {
-	background-color: $gray-lighter;
+	background-color: #FFF;
 	height: 100%;
 	overflow: auto;
 	position: absolute;
@@ -142,5 +142,19 @@ $slideout-drawer-width: 250px;
 
 	.slideout-drawer-bottom, .slideout-drawer-top {
 		width: 100%;
+	}
+}
+
+.tabular-list-group {
+	.slideout-drawer-content {
+		background-color: $brand-primary;
+
+		a {
+			color: #FFF;
+
+			&:focus, &:hover {
+				text-decoration: none;
+			}
+		}
 	}
 }
