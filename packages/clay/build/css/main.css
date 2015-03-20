@@ -1529,25 +1529,25 @@ you can use the generic selector below, but it's slower:
 .icon-usd:before {
   content: "\f155"; }
 
-.card-row [class*="card-col"], .equal-height-column-cell, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content, .card-row [class*="card-col"], .equal-height-column-cell, .notification-content, .notification-field, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content {
+.card-row [class*="card-col"], .equal-height-column-cell, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content, .toolbar-group-field, .toolbar-group-content, .card-row [class*="card-col"], .equal-height-column-cell, .notification-content, .notification-field, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content, .toolbar-group-field, .toolbar-group-content {
   display: table-cell;
   vertical-align: top; }
 
-.equal-height-column-row, .equal-height-column-row {
+.equal-height-column-row, .toolbar-group-row, .equal-height-column-row, .toolbar-group-row {
   display: table-row; }
 
-.card-row, .equal-height-columns, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .card-row, .equal-height-columns, .tabular-notification, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate {
+.card-row, .equal-height-columns, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .toolbar-group, .toolbar-group-none, .toolbar-group-right, .card-row, .equal-height-columns, .tabular-notification, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .toolbar-group, .toolbar-group-none, .toolbar-group-right {
   display: table;
   width: 100%; }
 
-.card-row [class*="card-col"], .equal-height-column-cell, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content, .card-row [class*="card-col"], .equal-height-column-cell, .notification-content, .notification-field, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content {
+.card-row [class*="card-col"], .equal-height-column-cell, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content, .toolbar-group-field, .toolbar-group-content, .card-row [class*="card-col"], .equal-height-column-cell, .notification-content, .notification-field, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content, .toolbar-group-field, .toolbar-group-content {
   display: table-cell;
   vertical-align: top; }
 
-.equal-height-column-row, .equal-height-column-row {
+.equal-height-column-row, .toolbar-group-row, .equal-height-column-row, .toolbar-group-row {
   display: table-row; }
 
-.card-row, .equal-height-columns, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .card-row, .equal-height-columns, .tabular-notification, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate {
+.card-row, .equal-height-columns, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .toolbar-group, .toolbar-group-none, .toolbar-group-right, .card-row, .equal-height-columns, .tabular-notification, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate, .toolbar-group, .toolbar-group-none, .toolbar-group-right {
   display: table;
   width: 100%; }
 
@@ -7416,6 +7416,62 @@ input.switch:empty ~ .switch-bar:after, input.switch:empty ~ .switch-bar:before,
   .table-responsive-flip .table > thead {
     max-width: 100px; } }
 
+.toolbar:after {
+  clear: both;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden; }
+.toolbar .toolbar-group, .toolbar .toolbar-group-right {
+  float: none; }
+
+.toolbar-no-break:after {
+  clear: both;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden; }
+.toolbar-no-break .toolbar-group {
+  float: left; }
+.toolbar-no-break .toolbar-group-right {
+  float: right; }
+
+.toolbar-group, .toolbar-group-none, .toolbar-group-right {
+  margin-bottom: 10px;
+  width: auto; }
+
+.toolbar-group-field, .toolbar-group-content {
+  padding: 0 5px;
+  vertical-align: middle; }
+  .toolbar-group-field.active a, .toolbar-group-content.active a {
+    color: #777777;
+    cursor: default; }
+    .toolbar-group-field.active a:focus, .toolbar-group-field.active a:hover, .toolbar-group-content.active a:focus, .toolbar-group-content.active a:hover {
+      text-decoration: none; }
+  .toolbar-group-field.disabled a, .toolbar-group-content.disabled a {
+    color: #eeeeee;
+    cursor: not-allowed; }
+
+.toolbar-group-field {
+  width: 1%; }
+
+.toolbar-group a, .toolbar-group-none a, .toolbar-group-right a {
+  color: #2B4259;
+  line-height: 36px; }
+  .toolbar-group a:focus, .toolbar-group a:hover, .toolbar-group-none a:focus, .toolbar-group-none a:hover, .toolbar-group-right a:focus, .toolbar-group-right a:hover {
+    color: #2B4259;
+    text-decoration: none; }
+.toolbar-group .active a, .toolbar-group-none .active a, .toolbar-group-right .active a {
+  color: #32a8e6; }
+
+@media screen and (min-width: 480px) {
+  .toolbar .toolbar-group {
+    float: left; }
+  .toolbar .toolbar-group-right {
+    float: right; } }
+
 .monospace {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
 
@@ -10709,6 +10765,62 @@ a.bg-default:hover {
 
 a.bg-primary:hover {
   background-color: #bae3f7; }
+
+.toolbar:after {
+  clear: both;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden; }
+.toolbar .toolbar-group, .toolbar .toolbar-group-right {
+  float: none; }
+
+.toolbar-no-break:after {
+  clear: both;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden; }
+.toolbar-no-break .toolbar-group {
+  float: left; }
+.toolbar-no-break .toolbar-group-right {
+  float: right; }
+
+.toolbar-group, .toolbar-group-none, .toolbar-group-right {
+  margin-bottom: 10px;
+  width: auto; }
+
+.toolbar-group-field, .toolbar-group-content {
+  padding: 0 5px;
+  vertical-align: middle; }
+  .toolbar-group-field.active a, .toolbar-group-content.active a {
+    color: #777777;
+    cursor: default; }
+    .toolbar-group-field.active a:focus, .toolbar-group-field.active a:hover, .toolbar-group-content.active a:focus, .toolbar-group-content.active a:hover {
+      text-decoration: none; }
+  .toolbar-group-field.disabled a, .toolbar-group-content.disabled a {
+    color: #eeeeee;
+    cursor: not-allowed; }
+
+.toolbar-group-field {
+  width: 1%; }
+
+.toolbar-group a, .toolbar-group-none a, .toolbar-group-right a {
+  color: #2B4259;
+  line-height: 36px; }
+  .toolbar-group a:focus, .toolbar-group a:hover, .toolbar-group-none a:focus, .toolbar-group-none a:hover, .toolbar-group-right a:focus, .toolbar-group-right a:hover {
+    color: #2B4259;
+    text-decoration: none; }
+.toolbar-group .active a, .toolbar-group-none .active a, .toolbar-group-right .active a {
+  color: #32a8e6; }
+
+@media screen and (min-width: 480px) {
+  .toolbar .toolbar-group {
+    float: left; }
+  .toolbar .toolbar-group-right {
+    float: right; } }
 
 .tooltip-inner {
   padding: 5px 16px; }
