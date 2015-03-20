@@ -1,0 +1,189 @@
+---
+title: Toolbars
+section: Components
+---
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Toolbar</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Quickly prototype a toolbar for your portlet, control panel, or site with this component. Toolbar shouldn't be used to create a toolbar for your text editing application; use <a href="http://getbootstrap.com/components/#btn-groups-toolbar">btn-toolbar</a> for that.</p> 
+
+			<p>Each <code>.toolbar-group</code> should be able to stand on its own in mobile. If a <code>.toolbar-group</code> is too wide and looks squished on mobile, divide it into two toolbar-groups. Use <code>.toolbar-group-right</code> to align a toolbar-group to the right.</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<div class="toolbar">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a href="#1" style="">Company</a>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<a href="#1">+Username</a>
+				</div>
+				<div class="dropdown toolbar-group-content">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+						<span class="icon-th"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#1">Alphabetical</a></li>
+						<li><a href="#1">Reverse</a></li>
+						<li><a href="#1">Split</a></li>
+					</ul>
+				</div>
+				<div class="dropdown toolbar-group-content">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+						<div class="user-icon user-icon-default user-icon-xs">
+							<span class="icon-bell-alt"></span>
+						</div>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#1">Alphabetical</a></li>
+						<li><a href="#1">Reverse</a></li>
+						<li><a href="#1">Split</a></li>
+					</ul>
+				</div>
+				<div class="dropdown toolbar-group-content">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+						<div>
+							<span class="icon-plus"></span>
+						</div>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#1">Alphabetical</a></li>
+						<li><a href="#1">Reverse</a></li>
+						<li><a href="#1">Split</a></li>
+					</ul>
+				</div>
+				<div class="toolbar-group-content dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+						<div class="user-icon user-icon-info user-icon-sm">
+							<span class="icon-user"></span>
+						</div>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#1">Alphabetical</a></li>
+						<li><a href="#1">Reverse</a></li>
+						<li><a href="#1">Split</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="toolbar-group-none">
+				<div class="toolbar-group-content">
+					<form>
+						<div class="basic-search" style="max-width: 350px;width: 100%;">
+							<div class="input-group" style="width:100%;">
+								<input class="form-control" type="text">
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="toolbar">
+			<div class="toolbar-group">
+				<div class="dropdown toolbar-group-content">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+						Application <span class="icon-caret-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#1">Alphabetical</a></li>
+						<li><a href="#1">Reverse</a></li>
+						<li><a href="#1">Split</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<button class="btn btn-default">
+						<input type="checkbox" /> <span class="icon-caret-down"></span>
+					</button>
+				</div>
+				<div class="toolbar-group-content">
+					<button class="btn btn-default">
+						<span class="icon-refresh"></span>
+					</button>
+				</div>
+				<div class="toolbar-group-content">
+					<button class="btn btn-default">
+						More <span class="icon-caret-down"></span>
+					</button>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<button class="btn btn-default">
+						<span class="icon-cog"></span> <span class="icon-caret-down"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Preserve Floats</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.toolbar-no-break</code> to preserve floats in all screen sizes.</p>
+		</blockquote>
+
+		<div class="toolbar-no-break">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<input type="checkbox" />
+				</div>
+				<div class="dropdown toolbar-group-content">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#1">Date</a></li>
+						<li><a href="#1">Time</a></li>
+						<li><a href="#1">Status</a></li>
+					</ul>
+				</div>
+				<div class="dropdown toolbar-group-content">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#1">Alphabetical</a></li>
+						<li><a href="#1">Reverse</a></li>
+						<li><a href="#1">Split</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<a href="#1"><span class="icon-th-large"></span></a>
+				</div>
+				<div class="toolbar-group-content">
+					<a href="#1"><span class="icon-th-list"></span></a>
+				</div>
+				<div class="toolbar-group-content active">
+					<a href="#1"><span class="icon-reorder"></span></a>
+				</div>
+			</div>
+		</div>
+
+<pre><code class="html">```<div class="toolbar-no-break">
+    <div class="toolbar-group">...</div>
+
+    <div class="toolbar-group-right">...</div>
+</div>```</code></pre>
+
+	</div>
+</div>

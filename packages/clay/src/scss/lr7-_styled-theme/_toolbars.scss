@@ -1,0 +1,84 @@
+.toolbar {
+	@include clearfix-hack();
+
+	.toolbar-group, .toolbar-group-right {
+		float: none;
+	}
+}
+
+.toolbar-no-break {
+	@include clearfix-hack();
+
+	.toolbar-group {
+		float: left;
+	}
+
+	.toolbar-group-right {
+		float: right;
+	}
+}
+
+.toolbar-group, .toolbar-group-none, .toolbar-group-right {
+	@extend %equal-height-columns;
+
+	margin-bottom: 10px;
+	width: auto;
+}
+
+.toolbar-group-row {
+	@extend %equal-height-column-row;
+}
+
+.toolbar-group-field, .toolbar-group-content {
+	@extend %equal-height-column-cell;
+
+	padding: 0 5px;
+	vertical-align: middle;
+
+	&.active a {
+		color: $gray-light;
+		cursor: default;
+
+		&:focus, &:hover {
+			text-decoration: none;
+		}
+	}
+
+	&.disabled a {
+		color: $gray-lighter;
+		cursor: not-allowed;
+	}
+}
+
+.toolbar-group-field {
+	width: 1%;
+}
+
+// toolbar base styles
+.toolbar-group, .toolbar-group-none, .toolbar-group-right {
+	a {
+		color: $navbar-default-link-color;
+		line-height: $input-height-base;
+
+		&:focus, &:hover {
+			color: $navbar-default-link-active-color;
+			text-decoration: none;
+		}
+	}
+
+	.active a {
+		color: $navbar-default-link-hover-color;
+	}
+}
+
+@media screen and (min-width: $screen-xs-min) {
+	.toolbar {
+		.toolbar-group {
+			float: left;
+		}
+
+		.toolbar-group-right {
+			float: right;
+		}
+	}
+}

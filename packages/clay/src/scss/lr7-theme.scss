@@ -7,7 +7,7 @@
 
 @import "lr7-classic-theme/variables";
 @import "lr7-classic-theme/mixins";
-// 
+
 // @import "YOUR CUSTOM VARIABLES"; // file containing custom variables
 
 @import "bootstrap/bootstrap";
@@ -32,6 +32,7 @@
 @import "lr7-_styled-theme/slideout-drawer";
 @import "lr7-_styled-theme/switches";
 @import "lr7-_styled-theme/tables";
+@import "lr7-_styled-theme/toolbars";
 @import "lr7-_styled-theme/type";
 
 // Import Classic Theme Files
@@ -67,4 +68,5 @@
 @import "lr7-classic-theme/tables";
 @import "lr7-classic-theme/timelines";
 @import "lr7-classic-theme/type";
+@import "lr7-classic-theme/toolbars";
 @import "lr7-classic-theme/tooltips";
