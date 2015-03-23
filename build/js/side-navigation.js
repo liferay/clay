@@ -4,16 +4,10 @@
 	};
 
 	SideNavigation.prototype = {
-		defaults: {
-			content: '.sidenav-content',
-			navigation: '.sidenav-menu-slider',
-			toggler: '.sidenav-toggler'
-		},
-
 		init: function(element, options) {
 			var instance = this;
 
-			instance.options = $.extend(this.defaults, options);
+			instance.options = $.extend({}, $.fn.sideNavigation.defaults, options);
 
 			instance.options.selector = element.selector;
 
@@ -115,6 +109,12 @@
 
 		return this;
 	}
+
+	$.fn.sideNavigation.defaults = {
+		content: '.sidenav-content',
+		navigation: '.sidenav-menu-slider',
+		toggler: '.sidenav-toggler'
+	};
 
 	$.fn.sideNavigation.Constructor = SideNavigation;
 }(jQuery);
