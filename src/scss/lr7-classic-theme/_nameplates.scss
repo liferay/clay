@@ -163,15 +163,15 @@
 // User Icons
 
 .user-icon {
-	border-radius: $user-icon-border-radius;
+	border-radius: 50%;
 
 	@include color-user-icon(#999, $text-color);
 
-	height: 60px;
-	line-height: 60px;
+	font-size: $font-size-base;
 	text-align: center;
 	overflow: hidden;
-	width: 60px;
+
+	@include size-user-icon(floor($line-height-base * $font-size-base + ($padding-base-vertical * 2) + 2));
 
 	&.user-icon-circle, .user-icon-circle & {
 		border-radius: 50%;
@@ -186,26 +186,34 @@
 	}
 }
 
-.user-icon-xl {
+.user-icon-xxl {
 	@include size-user-icon(120px);
 
 	font-size: 50px;
 }
 
-.user-icon-lg {
-	@include size-user-icon(80px);
+.user-icon-xl {
+	@include size-user-icon(60px);
 
-	font-size: 31px
+	font-size: 30px;
+}
+
+.user-icon-lg {
+	@include size-user-icon(floor($line-height-large * $font-size-large + ($padding-large-vertical * 2) + 2));
+
+	font-size: $font-size-large;
 }
 
 .user-icon-sm {
-	@include size-user-icon(40px);
+	@include size-user-icon(floor($line-height-small * $font-size-small + ($padding-small-vertical * 2) + 2));
+
+	font-size: $font-size-small;
 }
 
 .user-icon-xs {
-	@include size-user-icon(20px);
+	@include size-user-icon(floor($line-height-small * $font-size-small + ($padding-xs-vertical * 2) + 2));
 
-	font-size: 10px;
+	font-size: 8px;
 }
 
 .user-icon-danger {
