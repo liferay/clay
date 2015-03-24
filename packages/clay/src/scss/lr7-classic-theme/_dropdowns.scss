@@ -65,7 +65,7 @@
 	@include box-shadow($dropdown-box-shadow);
 
 	margin-top: 0;
-	padding: 6px 0 12px;
+	padding: 6px 0;
 
 	&.dropdown-menu-right, .navbar-right & {
 		@include arrow-top-right($dropdown-arrow-color, 8px, 9px);
