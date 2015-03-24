@@ -133,4 +133,14 @@ form.toolbar-group-expand {
 			vertical-align: middle;
 		}
 	}
+
+	.toolbar-group, .toolbar-group-right {
+		a {
+			line-height: $input-height-base;
+		}
+
+		// input[type="checkbox"], input[type="radio"] {
+		// 	height: $input-height-base - 4;
+		// }
+	}
 }

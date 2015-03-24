@@ -114,13 +114,15 @@ form.toolbar-group-expand {
 		display: block;
 	}
 
-	.toolbar-group, .toolbar-group-right {
-		display: inline;
+	.toolbar {
+		.toolbar-group, .toolbar-group-right {
+			display: inline;
 
-		.toolbar-group-content {
-			display: block;
-			float: left;
-			margin-bottom: 5px;
+			.toolbar-group-content {
+				display: block;
+				float: left;
+				margin-bottom: 5px;
+			}
 		}
 	}
 
@@ -129,6 +131,16 @@ form.toolbar-group-expand {
 			display: table-cell;
 			height: $input-height-base;
 			vertical-align: middle;
+		}
+	}
+
+	.toolbar-group, .toolbar-group-right {
+		a {
+			line-height: $input-height-base;
+		}
+
+		input[type="checkbox"], input[type="radio"] {
+			height: $input-height-base - 4;
 		}
 	}
 }
