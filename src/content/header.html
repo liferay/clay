@@ -5,74 +5,7 @@ section: Components
 
 <div class="row">
 	<div class="col-md-12">
-		<h3>Header Toolbar</h3>
-
-		<blockquote class="blockquote-success blockquote-sm">
-			<p>Use <code>.header-toolbar</code> when you need some actions with a one line heading that fills the remaining space.</p>
-
-			<p><code>.header-toolbar-left</code> and <code>.header-toolbar-right</code> will only be as wide as its content.</p>
-
-			<p><code>.header-toolbar-center</code> will fill the remaining width.</p>
-
-			<p>Adjust the size of the actions by adding padding to the anchor tag and matching the line-height in <code>.header-toolbar-center</code> to the height of the anchor.</p>
-		</blockquote>
-
-		<div class="header-toolbar">
-			<ul class="header-toolbar-left">
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">All Descriptions <span class="icon-caret-down"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Export</a></li>
-						<li><a href="#1">Import</a></li>
-						<li><a href="#1">Configuration</a></li>
-					</ul>
-				</li>
-			</ul>
-
-			<ul class="header-toolbar-right">
-				<li>
-					<a href="#1"><span class="icon-upload-alt"></span></a>
-				</li>
-				<li>
-					<a href="#1"><span class="icon-download-alt"></span></a>
-				</li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#1">Export</a></li>
-						<li><a href="#1">Import</a></li>
-						<li><a href="#1">Configuration</a></li>
-					</ul>
-				</li>
-			</ul>
-
-			<div class="header-toolbar-center">
-				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
-			</div>
-		</div>
-
-		<pre><code>```<div class="header-toolbar">
-	<ul class="header-toolbar-left">
-		...
-	</ul>
-	<ul class="header-toolbar-right">
-		...
-	</ul>
-	<div class="header-toolbar-center">
-		<span title="My Title">My Title</span>
-	</div>
-</div>```</code></pre>
-
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-		<h3>Header First Level</h3>
-
-		<blockquote class="blockquote-success blockquote-sm">
-			<p>Use for first level heading</p>
-		</blockquote>
+		<h3>Header Toolbar Primary</h3>
 
 		<div class="sidenav-container closed uxgl-slideout-nav">
 			<div class="sidenav-menu-slider">
@@ -91,31 +24,27 @@ section: Components
 				</div>
 			</div>
 			<div class="sidenav-content">
-				<header class="header-first-level header-toolbar">
-					<ul class="header-toolbar-left">
-						<li>
+				<header class="header-toolbar header-toolbar-primary toolbar-no-break">
+					<div class="toolbar-group">
+						<div class="toolbar-group-content">
 							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
-						</li>
-					</ul>
+						</div>
+					</div>
 
-					<ul class="header-toolbar-right">
-						<li>
-							<a href="#1"><span class="icon-upload-alt"></span></a>
-						</li>
-						<li>
-							<a href="#1"><span class="icon-download-alt"></span></a>
-						</li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#1">Export</a></li>
-								<li><a href="#1">Import</a></li>
-								<li><a href="#1">Configuration</a></li>
-							</ul>
-						</li>
-					</ul>
+					<div class="toolbar-group-right">
+						<div class="toolbar-group-content">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Export</a></li>
+									<li><a href="#1">Import</a></li>
+									<li><a href="#1">Configuration</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 
-					<div class="header-toolbar-center">
+					<div class="toolbar-group-expand">
 						<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
 					</div>
 				</header>
@@ -220,35 +149,31 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Header Second Level</h3>
+		<header class="header-toolbar header-toolbar-primary header-toolbar-secondary toolbar-no-break">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+				</div>
 
-		<blockquote class="blockquote-success blockquote-sm">
-			<p>Use for second level heading</p>
-		</blockquote>
-
-		<header class="header-second-level header-toolbar">
-			<ul class="header-toolbar-left">
-				<li>
-					<a href="#"><span class="icon-align-justify"></span></a>
-				</li>
-
-				<li>
+				<div class="toolbar-group-content">
 					<a href="#"><span class="icon-chevron-left"></span></a>
-				</li>
-			</ul>
+				</div>
+			</div>
 
-			<ul class="header-toolbar-right">
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-ellipsis-vertical"></span></a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#">Export</a></li>
-						<li><a href="#">Import</a></li>
-						<li><a href="#">Configuration</a></li>
-					</ul>
-				</li>
-			</ul>
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-pencil"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Export</a></li>
+							<li><a href="#1">Import</a></li>
+							<li><a href="#1">Configuration</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
-			<div class="header-toolbar-center">
+			<div class="toolbar-group-expand">
 				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
 			</div>
 		</header>
@@ -386,60 +311,295 @@ section: Components
 				</div>
 			</div>
 			<div class="sidenav-content">
-				<header class="header-first-level header-toolbar header-toolbar-success" style="margin-bottom:10px;">
-					<ul class="header-toolbar-left">
-						<li>
+				<header class="header-toolbar header-toolbar-success toolbar-no-break">
+					<div class="toolbar-group">
+						<div class="toolbar-group-content">
 							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
-						</li>
-					</ul>
+						</div>
+					</div>
 
-					<ul class="header-toolbar-right">
-						<li>
-							<a href="#1"><span class="icon-upload-alt"></span></a>
-						</li>
-						<li>
-							<a href="#1"><span class="icon-download-alt"></span></a>
-						</li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#1">Export</a></li>
-								<li><a href="#1">Import</a></li>
-								<li><a href="#1">Configuration</a></li>
-							</ul>
-						</li>
-					</ul>
+					<div class="toolbar-group-right">
+						<div class="toolbar-group-content">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Export</a></li>
+									<li><a href="#1">Import</a></li>
+									<li><a href="#1">Configuration</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 
-					<div class="header-toolbar-center">
+					<div class="toolbar-group-expand">
 						<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
 					</div>
 				</header>
 			</div>
 		</div>
 
-		<header class="header-second-level header-toolbar header-toolbar-success">
-			<ul class="header-toolbar-left">
-				<li>
-					<a href="#"><span class="icon-align-justify"></span></a>
-				</li>
+		<header class="header-toolbar header-toolbar-success header-toolbar-secondary toolbar-no-break">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+				</div>
 
-				<li>
+				<div class="toolbar-group-content">
 					<a href="#"><span class="icon-chevron-left"></span></a>
-				</li>
-			</ul>
+				</div>
+			</div>
 
-			<ul class="header-toolbar-right">
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="icon-ellipsis-vertical"></span></a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#">Export</a></li>
-						<li><a href="#">Import</a></li>
-						<li><a href="#">Configuration</a></li>
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-pencil"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Export</a></li>
+							<li><a href="#1">Import</a></li>
+							<li><a href="#1">Configuration</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="toolbar-group-expand">
+				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+			</div>
+		</header>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Header Toolbar Info</h3>
+
+		<div class="sidenav-container closed uxgl-slideout-nav">
+			<div class="sidenav-menu-slider">
+				<div class="sidenav-menu">
+					<ul class="nav nav-stacked">
+						<li><a href="#1">Setting Up Maven</a></li>
+						<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
+						<li><a href="#1">Using Maven From Liferay IDE</a></li>
+						<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
+						<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
+						<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
+						<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
 					</ul>
-				</li>
-			</ul>
+				</div>
+			</div>
+			<div class="sidenav-content">
+				<header class="header-toolbar header-toolbar-info toolbar-no-break">
+					<div class="toolbar-group">
+						<div class="toolbar-group-content">
+							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+						</div>
+					</div>
 
-			<div class="header-toolbar-center">
+					<div class="toolbar-group-right">
+						<div class="toolbar-group-content">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Export</a></li>
+									<li><a href="#1">Import</a></li>
+									<li><a href="#1">Configuration</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="toolbar-group-expand">
+						<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+					</div>
+				</header>
+			</div>
+		</div>
+
+		<header class="header-toolbar header-toolbar-info header-toolbar-secondary toolbar-no-break">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+				</div>
+
+				<div class="toolbar-group-content">
+					<a href="#"><span class="icon-chevron-left"></span></a>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-pencil"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Export</a></li>
+							<li><a href="#1">Import</a></li>
+							<li><a href="#1">Configuration</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="toolbar-group-expand">
+				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+			</div>
+		</header>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Header Toolbar Warning</h3>
+
+		<div class="sidenav-container closed uxgl-slideout-nav">
+			<div class="sidenav-menu-slider">
+				<div class="sidenav-menu">
+					<ul class="nav nav-stacked">
+						<li><a href="#1">Setting Up Maven</a></li>
+						<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
+						<li><a href="#1">Using Maven From Liferay IDE</a></li>
+						<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
+						<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
+						<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
+						<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidenav-content">
+				<header class="header-toolbar header-toolbar-warning toolbar-no-break">
+					<div class="toolbar-group">
+						<div class="toolbar-group-content">
+							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+						</div>
+					</div>
+
+					<div class="toolbar-group-right">
+						<div class="toolbar-group-content">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Export</a></li>
+									<li><a href="#1">Import</a></li>
+									<li><a href="#1">Configuration</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="toolbar-group-expand">
+						<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+					</div>
+				</header>
+			</div>
+		</div>
+
+		<header class="header-toolbar header-toolbar-warning header-toolbar-secondary toolbar-no-break">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+				</div>
+
+				<div class="toolbar-group-content">
+					<a href="#"><span class="icon-chevron-left"></span></a>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-pencil"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Export</a></li>
+							<li><a href="#1">Import</a></li>
+							<li><a href="#1">Configuration</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="toolbar-group-expand">
+				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+			</div>
+		</header>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Header Toolbar Danger</h3>
+
+		<div class="sidenav-container closed uxgl-slideout-nav">
+			<div class="sidenav-menu-slider">
+				<div class="sidenav-menu">
+					<ul class="nav nav-stacked">
+						<li><a href="#1">Setting Up Maven</a></li>
+						<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
+						<li><a href="#1">Using Maven From Liferay IDE</a></li>
+						<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
+						<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
+						<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
+						<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
+						<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidenav-content">
+				<header class="header-toolbar header-toolbar-danger toolbar-no-break">
+					<div class="toolbar-group">
+						<div class="toolbar-group-content">
+							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+						</div>
+					</div>
+
+					<div class="toolbar-group-right">
+						<div class="toolbar-group-content">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Export</a></li>
+									<li><a href="#1">Import</a></li>
+									<li><a href="#1">Configuration</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="toolbar-group-expand">
+						<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+					</div>
+				</header>
+			</div>
+		</div>
+
+		<header class="header-toolbar header-toolbar-danger header-toolbar-secondary toolbar-no-break">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+				</div>
+
+				<div class="toolbar-group-content">
+					<a href="#"><span class="icon-chevron-left"></span></a>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-pencil"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Export</a></li>
+							<li><a href="#1">Import</a></li>
+							<li><a href="#1">Configuration</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="toolbar-group-expand">
 				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
 			</div>
 		</header>
@@ -449,4 +609,7 @@ section: Components
 <script>
 	$('.uxgl-slideout-nav').sideNavigation();
 	$('.collapse-basic-search').collapsibleSearch();
+	$('#mainContent').on('click', 'a', function(event) {
+		event.preventDefault();
+	});
 </script>
