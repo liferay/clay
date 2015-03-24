@@ -88,7 +88,7 @@ form.toolbar-group-expand {
 	vertical-align: middle;
 }
 
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: $screen-xs-min) {
 	.toolbar {
 		margin-bottom: 10px;
 
@@ -112,11 +112,10 @@ form.toolbar-group-expand {
 
 	form.toolbar-group-expand {
 		display: block;
-		float: left;
 	}
 
 	.toolbar-group, .toolbar-group-right {
-		display: block;
+		display: inline;
 
 		.toolbar-group-content {
 			display: block;
