@@ -9,6 +9,10 @@
 .toolbar-no-break {
 	@include clearfix-hack();
 
+	.toolbar-group, .toolbar-group-expand, .toolbar-group-right {
+		margin-bottom: 0;
+	}
+
 	.toolbar-group {
 		float: left;
 	}
@@ -62,6 +66,8 @@
 .toolbar-group, .toolbar-group-right {
 	a {
 		color: $navbar-default-link-color;
+		display: block;
+		padding: 6px;
 
 		&:focus, &:hover {
 			color: $navbar-default-link-active-color;
@@ -138,9 +144,73 @@ form.toolbar-group-expand {
 		a {
 			line-height: $input-height-base;
 		}
-
-		// input[type="checkbox"], input[type="radio"] {
-		// 	height: $input-height-base - 4;
-		// }
 	}
+}
+
+// Header Toolbar Component
+
+.header-toolbar {
+	padding: 5px;
+
+	.dropdown-menu {
+		margin-top: 5px + 2;
+	}
+
+	.toolbar-group-content, .toolbar-group-expand, .toolbar-group-field {
+		padding: 0 2px;
+	}
+
+	.toolbar-group-content {
+		> a, > .dropdown > a {
+			border-radius: 4px;
+			font-size: 21px;
+			padding: 4px 8px;
+		}
+	}
+
+	.toolbar-group-expand {
+		font-size: 16px;
+		line-height: 38px;
+	}
+
+	form.toolbar-group-expand {
+		line-height: $input-height-base;
+		height: 38px;
+	}
+}
+
+.header-toolbar-secondary {
+	padding-left: 0;
+
+	.toolbar-group:first-child {
+		overflow: hidden;
+
+		.toolbar-group-content:first-child {
+			> a {
+				margin-left: -18px;
+			}
+		}
+	}
+}
+
+// Header Toolbar Skins
+
+.header-toolbar-danger {
+	@include color-header-toolbar(#FFF, $brand-danger);
+}
+
+.header-toolbar-info {
+	@include color-header-toolbar(#FFF, $brand-info);
+}
+
+.header-toolbar-primary {
+	@include color-header-toolbar(#FFF, $brand-primary);
+}
+
+.header-toolbar-success {
+	@include color-header-toolbar(#FFF, $brand-success);
+}
+
+.header-toolbar-warning {
+	@include color-header-toolbar(#FFF, $brand-warning);
 }

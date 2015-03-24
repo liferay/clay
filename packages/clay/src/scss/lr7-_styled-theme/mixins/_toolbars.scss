@@ -1,0 +1,35 @@
+@mixin color-header-toolbar($color, $bg-color) {
+	background-color: $bg-color;
+
+	.toolbar-group-content {
+		> a, > .dropdown > a {
+			color: $color;
+
+			&:focus, &:hover {
+				background-color: lighten($bg-color, 8%);
+			}
+		}
+	}
+
+	.toolbar-group-expand {
+		color: $color;
+	}
+
+	&.header-toolbar-secondary {
+		background-color: lighten($bg-color, 12%);
+
+		.toolbar-group-content {
+			> a, > .dropdown > a {
+				color: $color;
+
+				&:focus, &:hover {
+					background-color: lighten($bg-color, 20%);
+				}
+			}
+		}
+
+		.toolbar-group-expand {
+			color: $color;
+		}
+	}
+}
