@@ -223,80 +223,105 @@ collapse
 		</h1>
 
 		
-<div id="dropdownDisplay">
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Default</em></h3>
+<div class="row row-spacing uxgl-dropdown-display">
+	<div class="col-md-12">
+		<h3>Default</h3>
 
-			<ul class="dropdown-menu">
-				<li class="dropdown-header">Order by:</li>
-				<li class="active"><a href="#">Author</a></li>
-				<li class="disabled"><a href="#">Title Entry</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Date</a></li>
-				<li><a href="#">Description</a></li>
-				<li><a href="#">Status</a></li>
-			</ul>
-		</div>
+		<ul class="dropdown-menu">
+			<li class="dropdown-header">Order by:</li>
+			<li class="active"><a href="#">Author</a></li>
+			<li class="disabled"><a href="#">Title Entry</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Date</a></li>
+			<li><a href="#">Description</a></li>
+			<li><a href="#">Status</a></li>
+		</ul>
 	</div>
+</div>
 
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Dropdown Inverse</em></h3>
+<pre><code>&lt;ul class=&quot;dropdown-menu&quot;&gt;
+    &lt;li class=&quot;dropdown-header&quot;&gt;Order by:&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Author&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Title Entry&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Date&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Description&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Status&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
-			<ul class="dropdown-menu dropdown-menu-inverse">
-				<li class="dropdown-header">Order by:</li>
-				<li class="active"><a href="#">Author</a></li>
-				<li class="disabled"><a href="#">Title Entry</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Date</a></li>
-				<li><a href="#">Description</a></li>
-				<li><a href="#">Status</a></li>
-			</ul>
-		</div>
+<div class="row row-spacing uxgl-dropdown-display">
+	<div class="col-md-12">
+		<h3>Scrolling Content</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Nest <code>&lt;ul class=&quot;inline-scroller&quot;&gt;&lt;/ul&gt;</code> inside a <code>.dropdown-menu</code> list item to create a scrollable list. The default height is 125px.</p>
+		</blockquote>
+
+		<ul class="dropdown-menu">
+			<li class="dropdown-header">Dropdown Header</li>
+			<li>
+				<ul class="inline-scroller">
+					<li><a href="#">Actions</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">View</a></li>
+					<li><a href="#">Permissions</a></li>
+					<li><a href="#">Actions</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">View</a></li>
+					<li><a href="#">Permissions</a></li>
+					<li><a href="#">Actions</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">View</a></li>
+					<li><a href="#">Permissions</a></li>
+					<li><a href="#">Actions</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">View</a></li>
+					<li><a href="#">Permissions</a></li>
+				</ul>
+			</li>
+			<li class="disabled"><a href="#">Disabled</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Scope</a></li>
+		</ul>
 	</div>
+</div>
 
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Scrolling Content</em></h3>
+<pre><code>&lt;ul class=&quot;dropdown-menu&quot;&gt;
+    &lt;li class=&quot;dropdown-header&quot;&gt;Dropdown Header&lt;/li&gt;
+    &lt;li&gt;
+        &lt;ul class=&quot;inline-scroller&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Actions&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
-			<p>Add class inline-scroller to any element and set the height or width to make it scroll inline! The default height is 125px, but can be overridden to any height/width.</p>
+<div class="row row-spacing uxgl-dropdown-display">
+	<div class="col-md-12">
+		<h3>Dropdown wide / full</h3>
 
-			<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
-				<li class="dropdown-header" role="presentation">Dropdown Header</li>
-				<li role="presentation">
-					<ul class="inline-scroller">
-						<li><a href="#">Actions</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">View</a></li>
-						<li><a href="#">Permissions</a></li>
-						<li><a href="#">Actions</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">View</a></li>
-						<li><a href="#">Permissions</a></li>
-						<li><a href="#">Actions</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">View</a></li>
-						<li><a href="#">Permissions</a></li>
-						<li><a href="#">Actions</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">View</a></li>
-						<li><a href="#">Permissions</a></li>
-					</ul>
-				</li>
-				<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-				<li class="divider" role="presentation"></li>
-				<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-			</ul>
-		</div>
-	</div>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.dropdown-wide</code> instead of <code>.dropdown</code> to make the dropdown menu big. The default width is 500px. Use <code>.dropdown-full</code> to create a dropdown menu as wide as its relative parent. See dropdown examples.</p>
+		</blockquote>
 
-	<div class="row">
-		<div class="col-md-12 dropdown-wide">
-			<h3><em>Dropdown wide / full</em></h3>
-
-			<p>Add class dropdown-wide to the parent of a dropdown-menu to make the dropdown-menu BIG. The default width is 500px, but can be overridden to any width. The dropdown-full class can be used to make the dropdown as wide as the navigation, see dropdown examples.</p>
-
+		<div class="dropdown-wide dropdown-wide-container">
 			<ul class="dropdown-menu">
 				<li class="col-sm-4">
 					<ul class="link-list">
@@ -348,9 +373,63 @@ collapse
 	</div>
 </div>
 
+<pre><code>&lt;div class=&quot;dropdown dropdown-wide&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li class=&quot;col-sm-4&quot;&gt;
+            &lt;ul class=&quot;link-list&quot;&gt;
+                &lt;li class=&quot;link-list-heading&quot;&gt;By Resource&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Support Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#1&quot;&gt;Ask the Experts&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Chat or Call&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;ul class=&quot;link-list&quot;&gt;
+                &lt;li class=&quot;link-list-heading&quot;&gt;By Product&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Developing for the Platform&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Mastering Fundamentals&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Styling with Themes&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Managing Content&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;col-sm-4&quot;&gt;
+            &lt;ul class=&quot;link-list&quot;&gt;
+                &lt;li class=&quot;link-list-heading&quot;&gt;Popular Picks&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Error Messages&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Updates: Service Packs &amp; Fixes&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Install, Upgrade, &amp; Activate&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Regular Drivers&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Hardware Drivers&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;ul class=&quot;link-list&quot;&gt;
+                &lt;li class=&quot;link-list-heading&quot;&gt;Security&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Security Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Security Essentials&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Protecting Your Data&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Securing Your Browser&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;col-sm-4&quot;&gt;
+            &lt;ul class=&quot;link-list&quot;&gt;
+                &lt;li class=&quot;link-list-heading&quot;&gt;By Audience&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;For Home Users&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;For Small Business&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;For IT Professionals&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;For Developers&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Dropdown Examples</em></h3>
+		<h3>Dropdown Examples</h3>
 
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
@@ -535,11 +614,13 @@ collapse
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3><em>Dropdown Alignment</em></h3>
+		<h3>Dropdown Alignment</h3>
 
-		<p>.dropdown-menu, .dropdown-menu-top, .dropdown-menu-top-right, .dropdown-menu-right, add one of these classes to the dropdown-menu to align it relative to its trigger.</p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>.dropdown-menu, .dropdown-menu-top, .dropdown-menu-top-right, .dropdown-menu-right, add one of these classes to the dropdown-menu to align it relative to its trigger.</p>
+		</blockquote>
 
 		<div class="btn-group btn-group-justified">
 			<div class="btn-group dropdown">
@@ -598,40 +679,45 @@ collapse
 				</ul>
 			</div>
 		</div>
-
-		
-<pre><code>&lt;div class=&quot;dropdown&quot;&gt;
-&lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; id=&quot;dropdownMenu&quot;&gt;Dropdown
-&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-&lt;/button&gt;
-
-&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
-&lt;li class=&quot;dropdown-header&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;li class=&quot;divider&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
 	</div>
 </div>
 
-<div class="container-fluid">
-	<div class="row">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Right Side <span class="icon-caret-right"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right-side">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
 
-	</div>
-
-	<div class="row" >
-
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side</button>
+			<div class="dropdown-menu dropdown-menu-left-side">
+				<ul class="inline-scroller">
+					<li class="dropdown-header">Dropdown Header</li>
+					<li><a href="#">Action</a></li>
+					<li class="disabled"><a href="#">Disabled</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
 
 <script>
-	YUI().use('aui-tooltip', 'event', 'node', function(A) {
-		var mainContent = A.one('#mainContent');
-
-		mainContent.delegate('click', function(event) {
-			event.preventDefault();
-		}, 'a');
+	$('#mainContent').on('click', 'a', function(event) {
+		event.preventDefault();
 	});
 </script>
 	</div>
