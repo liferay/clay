@@ -3,80 +3,105 @@ title: Dropdowns
 section: Components
 ---
 
-<div id="dropdownDisplay">
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Default</em></h3>
+<div class="row row-spacing uxgl-dropdown-display">
+	<div class="col-md-12">
+		<h3>Default</h3>
 
-			<ul class="dropdown-menu">
-				<li class="dropdown-header">Order by:</li>
-				<li class="active"><a href="#">Author</a></li>
-				<li class="disabled"><a href="#">Title Entry</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Date</a></li>
-				<li><a href="#">Description</a></li>
-				<li><a href="#">Status</a></li>
-			</ul>
-		</div>
+		<ul class="dropdown-menu">
+			<li class="dropdown-header">Order by:</li>
+			<li class="active"><a href="#">Author</a></li>
+			<li class="disabled"><a href="#">Title Entry</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Date</a></li>
+			<li><a href="#">Description</a></li>
+			<li><a href="#">Status</a></li>
+		</ul>
 	</div>
+</div>
 
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Dropdown Inverse</em></h3>
+<pre><code>```<ul class="dropdown-menu">
+    <li class="dropdown-header">Order by:</li>
+    <li class="active"><a href="#">Author</a></li>
+    <li class="disabled"><a href="#">Title Entry</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Date</a></li>
+    <li><a href="#">Description</a></li>
+    <li><a href="#">Status</a></li>
+</ul>```</code></pre>
 
-			<ul class="dropdown-menu dropdown-menu-inverse">
-				<li class="dropdown-header">Order by:</li>
-				<li class="active"><a href="#">Author</a></li>
-				<li class="disabled"><a href="#">Title Entry</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Date</a></li>
-				<li><a href="#">Description</a></li>
-				<li><a href="#">Status</a></li>
-			</ul>
-		</div>
+<div class="row row-spacing uxgl-dropdown-display">
+	<div class="col-md-12">
+		<h3>Scrolling Content</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Nest <code>```<ul class="inline-scroller"></ul>```</code> inside a <code>.dropdown-menu</code> list item to create a scrollable list. The default height is 125px.</p>
+		</blockquote>
+
+		<ul class="dropdown-menu">
+			<li class="dropdown-header">Dropdown Header</li>
+			<li>
+				<ul class="inline-scroller">
+					<li><a href="#">Actions</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">View</a></li>
+					<li><a href="#">Permissions</a></li>
+					<li><a href="#">Actions</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">View</a></li>
+					<li><a href="#">Permissions</a></li>
+					<li><a href="#">Actions</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">View</a></li>
+					<li><a href="#">Permissions</a></li>
+					<li><a href="#">Actions</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">View</a></li>
+					<li><a href="#">Permissions</a></li>
+				</ul>
+			</li>
+			<li class="disabled"><a href="#">Disabled</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Scope</a></li>
+		</ul>
 	</div>
+</div>
 
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Scrolling Content</em></h3>
+<pre><code>```<ul class="dropdown-menu">
+    <li class="dropdown-header">Dropdown Header</li>
+    <li>
+        <ul class="inline-scroller">
+            <li><a href="#">Actions</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">View</a></li>
+            <li><a href="#">Permissions</a></li>
+            <li><a href="#">Actions</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">View</a></li>
+            <li><a href="#">Permissions</a></li>
+            <li><a href="#">Actions</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">View</a></li>
+            <li><a href="#">Permissions</a></li>
+            <li><a href="#">Actions</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">View</a></li>
+            <li><a href="#">Permissions</a></li>
+        </ul>
+    </li>
+    <li class="disabled"><a href="#">Disabled</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Scope</a></li>
+</ul>```</code></pre>
 
-			<p>Add class inline-scroller to any element and set the height or width to make it scroll inline! The default height is 125px, but can be overridden to any height/width.</p>
+<div class="row row-spacing uxgl-dropdown-display">
+	<div class="col-md-12">
+		<h3>Dropdown wide / full</h3>
 
-			<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
-				<li class="dropdown-header" role="presentation">Dropdown Header</li>
-				<li role="presentation">
-					<ul class="inline-scroller">
-						<li><a href="#">Actions</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">View</a></li>
-						<li><a href="#">Permissions</a></li>
-						<li><a href="#">Actions</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">View</a></li>
-						<li><a href="#">Permissions</a></li>
-						<li><a href="#">Actions</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">View</a></li>
-						<li><a href="#">Permissions</a></li>
-						<li><a href="#">Actions</a></li>
-						<li><a href="#">Edit</a></li>
-						<li><a href="#">View</a></li>
-						<li><a href="#">Permissions</a></li>
-					</ul>
-				</li>
-				<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-				<li class="divider" role="presentation"></li>
-				<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-			</ul>
-		</div>
-	</div>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.dropdown-wide</code> instead of <code>.dropdown</code> to make the dropdown menu big. The default width is 500px. Use <code>.dropdown-full</code> to create a dropdown menu as wide as its relative parent. See dropdown examples.</p>
+		</blockquote>
 
-	<div class="row">
-		<div class="col-md-12 dropdown-wide">
-			<h3><em>Dropdown wide / full</em></h3>
-
-			<p>Add class dropdown-wide to the parent of a dropdown-menu to make the dropdown-menu BIG. The default width is 500px, but can be overridden to any width. The dropdown-full class can be used to make the dropdown as wide as the navigation, see dropdown examples.</p>
-
+		<div class="dropdown-wide dropdown-wide-container">
 			<ul class="dropdown-menu">
 				<li class="col-sm-4">
 					<ul class="link-list">
@@ -128,9 +153,63 @@ section: Components
 	</div>
 </div>
 
+<pre><code>```<div class="dropdown dropdown-wide">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        Dropdown <span class="caret"></span>
+    </a>
+
+    <ul class="dropdown-menu">
+        <li class="col-sm-4">
+            <ul class="link-list">
+                <li class="link-list-heading">By Resource</li>
+                <li><a href="#1">Support Home</a></li>
+                <li class="disabled"><a href="#1">Ask the Experts</a></li>
+                <li><a href="#1">Chat or Call</a></li>
+            </ul>
+
+            <ul class="link-list">
+                <li class="link-list-heading">By Product</li>
+                <li><a href="#1">Developing for the Platform</a></li>
+                <li><a href="#1">Mastering Fundamentals</a></li>
+                <li><a href="#1">Styling with Themes</a></li>
+                <li><a href="#1">Managing Content</a></li>
+            </ul>
+        </li>
+
+        <li class="col-sm-4">
+            <ul class="link-list">
+                <li class="link-list-heading">Popular Picks</li>
+                <li><a href="#1">Error Messages</a></li>
+                <li><a href="#1">Updates: Service Packs & Fixes</a></li>
+                <li><a href="#1">Install, Upgrade, & Activate</a></li>
+                <li><a href="#1">Regular Drivers</a></li>
+                <li><a href="#1">Hardware Drivers</a></li>
+            </ul>
+
+            <ul class="link-list">
+                <li class="link-list-heading">Security</li>
+                <li><a href="#1">Security Home</a></li>
+                <li><a href="#1">Security Essentials</a></li>
+                <li><a href="#1">Protecting Your Data</a></li>
+                <li><a href="#1">Securing Your Browser</a></li>
+            </ul>
+        </li>
+
+        <li class="col-sm-4">
+            <ul class="link-list">
+                <li class="link-list-heading">By Audience</li>
+                <li><a href="#1">For Home Users</a></li>
+                <li><a href="#1">For Small Business</a></li>
+                <li><a href="#1">For IT Professionals</a></li>
+                <li><a href="#1">For Developers</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>```</code></pre>
+
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Dropdown Examples</em></h3>
+		<h3>Dropdown Examples</h3>
 
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
@@ -315,11 +394,13 @@ section: Components
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3><em>Dropdown Alignment</em></h3>
+		<h3>Dropdown Alignment</h3>
 
-		<p>.dropdown-menu, .dropdown-menu-top, .dropdown-menu-top-right, .dropdown-menu-right, add one of these classes to the dropdown-menu to align it relative to its trigger.</p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>.dropdown-menu, .dropdown-menu-top, .dropdown-menu-top-right, .dropdown-menu-right, add one of these classes to the dropdown-menu to align it relative to its trigger.</p>
+		</blockquote>
 
 		<div class="btn-group btn-group-justified">
 			<div class="btn-group dropdown">
@@ -378,39 +459,44 @@ section: Components
 				</ul>
 			</div>
 		</div>
-
-		
-<pre><code>```<div class="dropdown">
-<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu">Dropdown
-<span class="caret"></span>
-</button>
-
-<ul class="dropdown-menu" role="menu">
-<li class="dropdown-header"><a href="#">...</a></li>
-<li><a href="#">...</a></li>
-<li class="disabled"><a href="#">...</a></li>
-<li class="divider"><a href="#">...</a></li>
-</ul>
-</div>```</code></pre>
 	</div>
 </div>
 
-<div class="container-fluid">
-	<div class="row">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<div class="dropdown">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Right Side <span class="icon-caret-right"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right-side">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
 
-	</div>
-
-	<div class="row" >
-
+		<div class="dropdown">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side</button>
+			<div class="dropdown-menu dropdown-menu-left-side">
+				<ul class="inline-scroller">
+					<li class="dropdown-header">Dropdown Header</li>
+					<li><a href="#">Action</a></li>
+					<li class="disabled"><a href="#">Disabled</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
 
 <script>
-	YUI().use('aui-tooltip', 'event', 'node', function(A) {
-		var mainContent = A.one('#mainContent');
-
-		mainContent.delegate('click', function(event) {
-			event.preventDefault();
-		}, 'a');
+	$('#mainContent').on('click', 'a', function(event) {
+		event.preventDefault();
 	});
 </script>
