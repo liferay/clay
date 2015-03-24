@@ -1,9 +1,11 @@
-/* -------- Dropdowns ------- */
-
-#dropdownDisplay {
+.uxgl-dropdown-display {
 	.dropdown-menu {
 		display: block;
 		position: relative;
+	}
+
+	.dropdown-wide-container {
+		float: left;
 	}
 
 	.mega-menu .dropdown-menu {

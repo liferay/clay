@@ -20,6 +20,10 @@
 	padding: 0;
 }
 
+.dropdown {
+	display: inline-block;
+}
+
 .dropdown-menu {
 	.inline-scroller, .link-list {
 		li a {
@@ -45,6 +49,19 @@
 }
 
 // Dropdown menu positions
+.dropdown-menu-left-side {
+	left: auto;
+	margin: -1px 2px 0 0;
+	right: 100%;
+	top: 0;
+}
+
+.dropdown-menu-right-side {
+	left: 100%;
+	margin: -1px 0 0 2px;
+	top: 0;
+}
+
 .dropdown-menu-top, .dropup .dropdown-menu {
 	bottom: 100%;
 	margin-bottom: 2px;
