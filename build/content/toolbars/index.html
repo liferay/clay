@@ -228,11 +228,13 @@ collapse
 		<h3>Toolbar</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Quickly prototype a toolbar for your portlet, control panel, or site with this component. Toolbar shouldn't be used to create a toolbar for your text editing application; use <a href="http://getbootstrap.com/components/#btn-groups-toolbar">btn-toolbar</a> for that.</p> 
+			<p>Quickly prototype a toolbar for your portlet, control panel, or site with this component. Toolbar shouldn't be used to create a toolbar for your inline/text editing application; use <a href="http://getbootstrap.com/components/#btn-groups-toolbar">btn-toolbar</a> for that.</p> 
 
 			<p>Each <code>.toolbar-group</code> should be able to stand on its own in mobile. If a <code>.toolbar-group</code> is too wide and looks squished on mobile, divide it into two toolbar-groups. Use <code>.toolbar-group-right</code> to align a toolbar-group to the right.</p>
 
-			<p>Content can be vertically aligned by adjusting the height of <code>.toolbar-group</code>, <code>.toolbar-group-right</code>, and <code>.toolbar-group-expand</code>.</p>
+			<p>Content can be vertically aligned by adjusting the height of <code>.toolbar-group</code>, <code>.toolbar-group-right</code>, and <code>form.toolbar-group-expand</code>.</p>
+
+			<p>Vertically align text inside <code>.toolbar-group-expand</code> by matching the css property <code>line-height</code> to its sibling <code>.toolbar-group</code>.</p>
 		</blockquote>
 	</div>
 </div>
@@ -250,51 +252,59 @@ collapse
 				<div class="toolbar-group-content">
 					<a href="#1">+Username</a>
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-						<span class="icon-th"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Alphabetical</a></li>
-						<li><a href="#1">Reverse</a></li>
-						<li><a href="#1">Split</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="icon-th"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-						<div class="user-icon user-icon-default user-icon-xs">
-							<span class="icon-bell-alt"></span>
-						</div>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#1">Alphabetical</a></li>
-						<li><a href="#1">Reverse</a></li>
-						<li><a href="#1">Split</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<div class="user-icon user-icon-default user-icon-xs">
+								<span class="icon-bell-alt"></span>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-						<div>
-							<span class="icon-plus"></span>
-						</div>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#1">Alphabetical</a></li>
-						<li><a href="#1">Reverse</a></li>
-						<li><a href="#1">Split</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<div>
+								<span class="icon-plus"></span>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="toolbar-group-content dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-						<div class="user-icon user-icon-info user-icon-sm">
-							<span class="icon-user"></span>
-						</div>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#1">Alphabetical</a></li>
-						<li><a href="#1">Reverse</a></li>
-						<li><a href="#1">Split</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<div class="user-icon user-icon-info user-icon-sm">
+								<span class="icon-user"></span>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
@@ -312,15 +322,17 @@ collapse
 
 		<div class="toolbar">
 			<div class="toolbar-group">
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-						Application <span class="icon-caret-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Alphabetical</a></li>
-						<li><a href="#1">Reverse</a></li>
-						<li><a href="#1">Split</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							Application <span class="icon-caret-down"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
@@ -358,7 +370,7 @@ collapse
 		<h3>Preserve Floats</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.toolbar-no-break</code> to preserve floats in all screen sizes.</p>
+			<p>Use <code>.toolbar-no-break</code> instead of <code>.toolbar</code> to preserve floats in all screen sizes.</p>
 		</blockquote>
 
 		<div class="toolbar-no-break">
@@ -366,21 +378,25 @@ collapse
 				<div class="toolbar-group-content">
 					<input type="checkbox" />
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Date</a></li>
-						<li><a href="#1">Time</a></li>
-						<li><a href="#1">Status</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Date</a></li>
+							<li><a href="#1">Time</a></li>
+							<li><a href="#1">Status</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Alphabetical</a></li>
-						<li><a href="#1">Reverse</a></li>
-						<li><a href="#1">Split</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
@@ -398,9 +414,29 @@ collapse
 		</div>
 
 <pre><code class="html">&lt;div class=&quot;toolbar-no-break&quot;&gt;
-    &lt;div class=&quot;toolbar-group&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;toolbar-group&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            ...
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-    &lt;div class=&quot;toolbar-group-right&quot;&gt;...&lt;/div&gt;
+    &lt;div class=&quot;toolbar-group-right&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+          ...
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+          ...
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content active&quot;&gt;
+          ...
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
 	</div>
@@ -411,9 +447,7 @@ collapse
 		<h3>Fill Remaining Space</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.toolbar-group-expand</code> with <code>.toolbar-group</code> and <code>.toolbar-group-right</code> to fill the remaining space with some content in your toolbar. The only caveat is that it must be the last toolbar-group declared.</p>
-
-			<p>If <code>.toolbar-group-expand</code> contains only text, the height must be adjusted through the css property <code>line-height</code>.</p>
+			<p>Use <code>.toolbar-group-expand</code> with <code>.toolbar-group</code> and <code>.toolbar-group-right</code> to fill the remaining space with some content in your toolbar. <code>.toolbar-group-expand</code> must be the last toolbar-group declared.</p>
 		</blockquote>
 
 		<h5>Fill Center</h5>
@@ -423,21 +457,25 @@ collapse
 				<div class="toolbar-group-content">
 					<input type="checkbox">
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Date</a></li>
-						<li><a href="#1">Time</a></li>
-						<li><a href="#1">Status</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Date</a></li>
+							<li><a href="#1">Time</a></li>
+							<li><a href="#1">Status</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Alphabetical</a></li>
-						<li><a href="#1">Reverse</a></li>
-						<li><a href="#1">Split</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
@@ -513,6 +551,10 @@ collapse
 				</div>
 			</form>
 		</div>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>If <code>.toolbar-group-expand</code> contains only text, the height must be adjusted through the css property <code>line-height</code>. Vertically align text inside <code>.toolbar-group-expand</code> by matching the css property <code>line-height</code> to its sibling <code>.toolbar-group.</code></p>
+		</blockquote>
 
 		<h5>Fill Left</h5>
 
