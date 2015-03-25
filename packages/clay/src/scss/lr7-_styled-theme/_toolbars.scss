@@ -77,6 +77,7 @@ form.toolbar-group-expand {
 	form.toolbar-group-expand {
 		clear: none;
 		display: table-cell;
+		vertical-align: middle;
 	}
 
 	.toolbar-group-field {
@@ -87,7 +88,7 @@ form.toolbar-group-expand {
 // Toolbar Base Styles
 
 .toolbar-group-field, .toolbar-group-content {
-	&.active a {
+	&.active > a {
 		color: $gray-light;
 		cursor: default;
 
@@ -96,7 +97,7 @@ form.toolbar-group-expand {
 		}
 	}
 
-	&.disabled a {
+	&.disabled > a {
 		color: $gray-lighter;
 		cursor: not-allowed;
 	}
@@ -113,7 +114,7 @@ form.toolbar-group-expand {
 		}
 	}
 
-	.active a {
+	.active > a {
 		color: $navbar-default-link-hover-color;
 	}
 }
