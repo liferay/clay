@@ -17,18 +17,30 @@
 
 .toolbar-group-expand {
 	clear: both;
-	line-height: normal;
-	margin-bottom: 5px;
-	overflow: hidden;
-	padding: 0;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	width: 100%;
+	display: table;
+
+	.input-group {
+		width: 100%;
+	}
+
+	.toolbar-group-content, .toolbar-group-field {
+		display: table-cell;
+		float: none;
+		vertical-align: middle;
+	}
+
+	.toolbar-group-field {
+		width: 1%;
+	}
 }
 
-form.toolbar-group-expand {
+.toolbar-group-expand-text {
 	clear: both;
 	display: block;
+	line-height: $input-height-base;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .toolbar-group-field {
@@ -40,16 +52,13 @@ form.toolbar-group-expand {
 .toolbar-no-break {
 	@include clearfix-hack();
 
-	.toolbar-group, form.toolbar-group-expand, .toolbar-group-right {
-		height: $input-height-base;
-	}
-
 	.toolbar-group, .toolbar-group-expand, .toolbar-group-right {
-		margin-bottom: 0;
+		display: table;
 	}
 
 	.toolbar-group, .toolbar-group-right {
-		display: table;
+		height: $input-height-base;
+		margin-bottom: 0;
 	}
 
 	.toolbar-group {
@@ -65,18 +74,7 @@ form.toolbar-group-expand {
 		float: none;
 		margin-bottom: 0;
 		min-height: 0;
-		vertical-align: middle;
-	}
-
-	.toolbar-group-expand {
-		clear: none;
-		line-height: $input-height-base;
-		width: auto;
-	}
-
-	form.toolbar-group-expand {
-		clear: none;
-		display: table-cell;
+		padding: 0 5px;
 		vertical-align: middle;
 	}
 
@@ -124,12 +122,9 @@ form.toolbar-group-expand {
 		margin-bottom: 10px;
 	}
 
-	.toolbar-group, form.toolbar-group-expand, .toolbar-group-right {
-		height: $input-height-base;
-	}
-
 	.toolbar-group, .toolbar-group-right {
 		display: table;
+		height: $input-height-base;
 		width: auto;
 	}
 
@@ -155,17 +150,13 @@ form.toolbar-group-expand {
 		vertical-align: middle;
 	}
 
-	form.toolbar-group-expand {
-		display: table-cell;
-		line-height: normal;
-		vertical-align: middle;
-	}
-
 	.toolbar-group-expand {
 		clear: none;
-		line-height: $input-height-base;
-		margin-bottom: 0;
-		width: auto;
+		display: table;
+	}
+
+	.toolbar-group-expand-text {
+		clear: none;
 	}
 
 	.toolbar-group-field {
@@ -183,7 +174,7 @@ form.toolbar-group-expand {
 		margin-top: 5px + 2;
 	}
 
-	.toolbar-group-content, .toolbar-group-expand, .toolbar-group-field {
+	.toolbar-group-content, .toolbar-group-field {
 		padding: 0 2px;
 	}
 
@@ -193,16 +184,6 @@ form.toolbar-group-expand {
 			font-size: 21px;
 			padding: 4px 8px;
 		}
-	}
-
-	.toolbar-group-expand {
-		font-size: 16px;
-		line-height: 38px;
-	}
-
-	form.toolbar-group-expand {
-		line-height: $input-height-base;
-		height: 38px;
 	}
 }
 
