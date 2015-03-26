@@ -183,6 +183,8 @@ collapse
 </li>
 <li class=""><a href="../../content/extending-tab-groups">Extending Tab Groups</a>
 </li>
+<li class=""><a href="../../content/extending-toolbars">Extending Toolbars</a>
+</li>
 </ul>
 </div>
 </li>
@@ -228,13 +230,10 @@ collapse
 		<h3>Toolbar</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Quickly prototype a toolbar for your portlet, control panel, or site with this component. Toolbar shouldn't be used to create a toolbar for your inline/text editing application; use <a href="http://getbootstrap.com/components/#btn-groups-toolbar">btn-toolbar</a> for that.</p> 
+			<p>Quickly prototype a toolbar for your portlet, control panel, or site with this component. Vertically align content by adjusting the height of <code>.toolbar-group</code>, <code>.toolbar-group-right</code>, and <code>.toolbar-group-expand</code>.</p>
 
-			<p>Each <code>.toolbar-group</code> should be able to stand on its own in mobile. If a <code>.toolbar-group</code> is too wide and looks squished on mobile, divide it into two toolbar-groups. Use <code>.toolbar-group-right</code> to align a toolbar-group to the right.</p>
+			<p>Toolbar shouldn't be used to create a toolbar for your inline/text editing application; use <a href="http://getbootstrap.com/components/#btn-groups-toolbar">btn-toolbar</a> for that.</p> 
 
-			<p>Content can be vertically aligned by adjusting the height of <code>.toolbar-group</code>, <code>.toolbar-group-right</code>, and <code>form.toolbar-group-expand</code>.</p>
-
-			<p>Vertically align text inside <code>.toolbar-group-expand</code> by matching the css property <code>line-height</code> to its sibling <code>.toolbar-group</code>.</p>
 		</blockquote>
 	</div>
 </div>
@@ -308,17 +307,101 @@ collapse
 				</div>
 			</div>
 
-			<form class="toolbar-group-expand">
-				<div class="basic-search" style="max-width: 350px;width: 100%;">
-					<div class="input-group" style="width:100%;">
+			<div class="toolbar-group-expand">
+				<div class="toolbar-group-field">
+					<div class="input-group">
 						<input class="form-control" type="text">
 						<span class="input-group-btn">
 							<button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
 						</span>
 					</div>
 				</div>
-			</form>
+			</div>
 		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+<pre><code class="html">&lt;div class=&quot;toolbar&quot;&gt;
+    &lt;div class=&quot;toolbar-group&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;a href=&quot;#1&quot; style=&quot;&quot;&gt;Company&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;toolbar-group-right&quot;&gt;
+      &lt;div class=&quot;toolbar-group-content&quot;&gt;
+          &lt;a href=&quot;#1&quot;&gt;+Username&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;toolbar-group-content&quot;&gt;
+          &lt;div class=&quot;dropdown&quot;&gt;
+              &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                  &lt;span class=&quot;icon-th&quot;&gt;&lt;/span&gt;
+              &lt;/a&gt;
+              &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;toolbar-group-content&quot;&gt;
+          &lt;div class=&quot;dropdown&quot;&gt;
+              &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                  &lt;div class=&quot;user-icon user-icon-default user-icon-xs&quot;&gt;
+                      &lt;span class=&quot;icon-bell-alt&quot;&gt;&lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/a&gt;
+              &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;
+                  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;toolbar-group-content&quot;&gt;
+          &lt;div class=&quot;dropdown&quot;&gt;
+              &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                  &lt;div&gt;
+                      &lt;span class=&quot;icon-plus&quot;&gt;&lt;/span&gt;
+                  &lt;/div&gt;
+              &lt;/a&gt;
+              &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;
+                  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                    &lt;div class=&quot;user-icon user-icon-info user-icon-sm&quot;&gt;
+                        &lt;span class=&quot;icon-user&quot;&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;toolbar-group-expand&quot;&gt;
+        &lt;div class=&quot;toolbar-group-field&quot;&gt;
+            &lt;div class=&quot;input-group&quot;&gt;
+                &lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
+                &lt;span class=&quot;input-group-btn&quot;&gt;
+                    &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
 
 		<div class="toolbar">
 			<div class="toolbar-group">
@@ -362,6 +445,55 @@ collapse
 				</div>
 			</div>
 		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+<pre><code class="html">&lt;div class=&quot;toolbar&quot;&gt;
+    &lt;div class=&quot;toolbar-group&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                    Application &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;toolbar-group&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;button class=&quot;btn btn-default&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; /&gt; &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;button class=&quot;btn btn-default&quot;&gt;
+                &lt;span class=&quot;icon-refresh&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;button class=&quot;btn btn-default&quot;&gt;
+                More &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;toolbar-group-right&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;button class=&quot;btn btn-default&quot;&gt;
+                &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt; &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 	</div>
 </div>
 
@@ -370,7 +502,7 @@ collapse
 		<h3>Preserve Floats</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.toolbar-no-break</code> instead of <code>.toolbar</code> to preserve floats in all screen sizes.</p>
+			<p>Use <code>.toolbar-no-break</code> instead of <code>.toolbar</code> to preserve floats across all screen sizes.</p>
 		</blockquote>
 
 		<div class="toolbar-no-break">
@@ -413,44 +545,66 @@ collapse
 			</div>
 		</div>
 
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
 <pre><code class="html">&lt;div class=&quot;toolbar-no-break&quot;&gt;
     &lt;div class=&quot;toolbar-group&quot;&gt;
         &lt;div class=&quot;toolbar-group-content&quot;&gt;
-            ...
+            &lt;input type=&quot;checkbox&quot; /&gt;
         &lt;/div&gt;
         &lt;div class=&quot;toolbar-group-content&quot;&gt;
-            ...
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                    Order by: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Date&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Time&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Status&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;toolbar-group-content&quot;&gt;
-            ...
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                    Name: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
+      &lt;/div&gt;
 
-    &lt;div class=&quot;toolbar-group-right&quot;&gt;
-        &lt;div class=&quot;toolbar-group-content&quot;&gt;
-          ...
-        &lt;/div&gt;
-        &lt;div class=&quot;toolbar-group-content&quot;&gt;
-          ...
-        &lt;/div&gt;
-        &lt;div class=&quot;toolbar-group-content active&quot;&gt;
-          ...
-        &lt;/div&gt;
+      &lt;div class=&quot;toolbar-group-right&quot;&gt;
+          &lt;div class=&quot;toolbar-group-content&quot;&gt;
+              &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-th-large&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;toolbar-group-content&quot;&gt;
+              &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-th-list&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;toolbar-group-content active&quot;&gt;
+              &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-reorder&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+</div>
 
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Fill Remaining Space</h3>
+		<h3>Fill Remaining Space with Form Element</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.toolbar-group-expand</code> with <code>.toolbar-group</code> and <code>.toolbar-group-right</code> to fill the remaining space with some content in your toolbar. <code>.toolbar-group-expand</code> must be the last toolbar-group declared.</p>
+			<p>To fill the remaining space with one form element such as a search box, declare <code>.toolbar-group-expand</code> last and use <code>.toolbar-group-field</code>. </p>
 		</blockquote>
-
-		<h5>Fill Center</h5>
 
 		<div class="toolbar">
 			<div class="toolbar-group">
@@ -491,44 +645,115 @@ collapse
 				</div>
 			</div>
 
-			<form class="toolbar-group-expand">
-				<div class="basic-search" style="width: 100%;">
-					<div class="input-group" style="width:100%;">
-						<input class="form-control" type="text">
-						<span class="input-group-btn">
-							<button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
-						</span>
-					</div>
+			<div class="toolbar-group-expand">
+				<div class="toolbar-group-field">
+					<form>
+						<div class="input-group">
+							<input class="form-control" type="text">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
+							</span>
+						</div>
+					</form>
 				</div>
-			</form>
+			</div>
 		</div>
 
-		<h5>Fill Right</h5>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+<pre><code class="html">&lt;div class=&quot;toolbar&quot;&gt;
+    &lt;div class=&quot;toolbar-group&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Order by: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Date&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Time&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Status&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Name: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;toolbar-group-right&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-th-large&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-th-list&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content active&quot;&gt;
+            &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-reorder&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;toolbar-group-expand&quot;&gt;
+        &lt;div class=&quot;toolbar-group-field&quot;&gt;
+            &lt;form&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                    &lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
+                    &lt;span class=&quot;input-group-btn&quot;&gt;
+                        &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>To fill the remaining space with multiple elements such as a search box, buttons and dropdowns, use a combination of <code>.toolbar-group-field</code> and <code>.toolbar-group-content</code>. The content that should fill the remaining space should be wrapped in <code>.toolbar-group-content</code> and all other content should be wrapped in <code>.toolbar-group-field</code>.</p>
+		</blockquote>
 
 		<div class="toolbar">
 			<div class="toolbar-group">
 				<div class="toolbar-group-content">
 					<input type="checkbox">
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Date</a></li>
-						<li><a href="#1">Time</a></li>
-						<li><a href="#1">Status</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Date</a></li>
+							<li><a href="#1">Time</a></li>
+							<li><a href="#1">Status</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Alphabetical</a></li>
-						<li><a href="#1">Reverse</a></li>
-						<li><a href="#1">Split</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
-			<div class="toolbar-group">
+			<div class="toolbar-group-right">
 				<div class="toolbar-group-content">
 					<a href="#1"><span class="icon-th-large"></span></a>
 				</div>
@@ -540,23 +765,128 @@ collapse
 				</div>
 			</div>
 
-			<form class="toolbar-group-expand">
-				<div class="basic-search" style="width: 100%;">
-					<div class="input-group" style="width:100%;">
-						<input class="form-control" type="text">
-						<span class="input-group-btn">
-							<button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
-						</span>
+			<div class="toolbar-group-expand">
+				<div class="toolbar-group-field">
+					<a class="btn btn-default btn-xs" href="#1"><span class="icon-refresh"></span></a>
+				</div>
+				<div class="toolbar-group-field">
+					<a class="btn btn-default btn-xs" href="#1"><span class="icon-share-alt"></span></a>
+				</div>
+
+				<div class="toolbar-group-content">
+					<form>
+						<div class="input-group">
+							<input class="form-control" type="text">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
+							</span>
+						</div>
+					</form>
+				</div>
+
+				<div class="toolbar-group-field">
+					<div class="dropdown">
+						<button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+							<span class="icon-cog"></span> <span class="icon-caret-down"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
 					</div>
 				</div>
-			</form>
+			</div>
 		</div>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>If <code>.toolbar-group-expand</code> contains only text, the height must be adjusted through the css property <code>line-height</code>. Vertically align text inside <code>.toolbar-group-expand</code> by matching the css property <code>line-height</code> to its sibling <code>.toolbar-group.</code></p>
-		</blockquote>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+<pre><code class="html">&lt;div class=&quot;toolbar&quot;&gt;
+    &lt;div class=&quot;toolbar-group&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Order by: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Date&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Time&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Status&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Name: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-		<h5>Fill Left</h5>
+    &lt;div class=&quot;toolbar-group-right&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-th-large&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-th-list&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content active&quot;&gt;
+            &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-reorder&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;toolbar-group-expand&quot;&gt;
+        &lt;div class=&quot;toolbar-group-field&quot;&gt;
+            &lt;a class=&quot;btn btn-default btn-xs&quot; href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-refresh&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-field&quot;&gt;
+            &lt;a class=&quot;btn btn-default btn-xs&quot; href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-share-alt&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;form&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                    &lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
+                    &lt;span class=&quot;input-group-btn&quot;&gt;
+                        &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;icon-search&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;toolbar-group-field&quot;&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;button class=&quot;btn btn-default btn-xs dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+                    &lt;span class=&quot;icon-cog&quot;&gt;&lt;/span&gt; &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Fill Remaining Space with Text</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>This pattern is specifically for use with long text that should be displayed in a single line and the remainder truncated. Truncated text should have a title attribute or a tooltip so a user still can access the full content.</p>
+			<p>Use <code>.toolbar-group-expand-text</code> with <code>.toolbar-group</code> and <code>.toolbar-group-right</code> to fill the remaining space with text in your toolbar. <code>.toolbar-group-expand-text</code> must be the last toolbar-group declared. It can be vertically aligned by matching the css property <code>line-height</code> to the height of its sibling toolbar-groups.</p>
+		</blockquote>
 
 		<div class="toolbar">
 			<div class="toolbar-group-right">
@@ -593,10 +923,56 @@ collapse
 				</div>
 			</div>
 
-			<div class="toolbar-group-expand">
+			<div class="toolbar-group-expand-text">
 				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
 			</div>
 		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse5">
+	<pre><code>&lt;div class=&quot;toolbar&quot;&gt;
+    &lt;div class=&quot;toolbar-group-right&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dropdown toolbar-group-content&quot;&gt;
+            &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Order by: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Date&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Time&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Status&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dropdown toolbar-group-content&quot;&gt;
+            &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Name: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;toolbar-group-right&quot;&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-th-large&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+            &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-th-list&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toolbar-group-content active&quot;&gt;
+            &lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-reorder&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;toolbar-group-expand-text&quot;&gt;
+        &lt;span title=&quot;Con panna plunger pot, caf&eacute; au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.&quot;&gt;Con panna plunger pot, caf&eacute; au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 	</div>
 </div>
 	</div>
