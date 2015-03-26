@@ -1,0 +1,196 @@
+---
+title: Extending Toolbars
+section: Extending Components
+---
+
+<style>
+#toolbarExample1 {
+	background-color: #240048;
+	padding: 0 9px;
+}
+
+#toolbarExample1 .toolbar-group,
+#toolbarExample1 .toolbar-group-right,
+#toolbarExample1 .toolbar-group-expand {
+	height: 46px;
+}
+
+.liferay-logo {
+	width: 90px;
+}
+</style>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Toolbar Variations / Examples</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Heading for mail.</p>
+		</blockquote>
+
+		<div class="toolbar-no-break" id="toolbarExample1">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<img alt="thumbnail" class="liferay-logo" src="../../images/liferay_logo_tagline.png" />
+				</div>
+			</div>
+
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<div class="nameplate">
+								<div class="nameplate-field">
+									<div class="user-icon user-icon-info">
+										<span class="icon-user"></span>
+									</div>
+								</div>
+								<div class="nameplate-content" style="color:#FFF;vertical-align:middle;">
+									<div class="">Juan Hidalgo <span class="icon-caret-down"></span></div>
+								</div>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="toolbar-group-expand">
+				<form class="toolbar-group-field">
+					<div class="input-group">
+						<input class="form-control" type="text">
+						<span class="input-group-btn">
+							<button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="toolbar">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="mc1" href="#">
+						<span class="icon-chevron-down"></span>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="mc1" href="#">
+						<span class="icon-refresh"></span>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="mc1" href="#">
+						<span class="icon-share-alt"></span>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="mc1" href="#">
+						<span class="icon-remove"></span>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="mc1" href="#">
+						<span class="icon-exclamation"></span>
+					</a>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					1-100 of 631
+				</div>
+				<div class="toolbar-group-content">
+					<a class="mc1" href="#">
+						<span class="icon-chevron-left"></span>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="mc1" href="#">
+						<span class="icon-chevron-right"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Footer</p>
+		</blockquote>
+
+<style>
+/*#toolbarExample2 .toolbar-group,
+#toolbarExample2 .toolbar-group-right,
+#toolbarExample2 .toolbar-group-expand {
+	height: 40px;
+}*/
+
+@media screen and (min-width: 768px) {
+	.toolbar-group-sm-new-line {
+		clear: both;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 767px) {
+/*	#toolbarExample2 .toolbar-group-content {
+		min-height: 40px;
+	}*/
+
+	.toolbar-group-xs-new-line {
+		clear: both;
+		display: block;
+	}
+}
+</style>
+
+		<div class="toolbar" id="toolbarExample2">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<div class="nameplate">
+						<div class="nameplate-content">
+							<div class="user-icon user-icon-info">
+								<span class="icon-user"></span>
+							</div>
+						</div>
+						<div class="nameplate-content">
+							<div>Juan Hidalgo</div>
+							<div>15 Days Ago</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a href="#1"><span class="icon-thumbs-up"></span> <span class="count">0</span></a>
+				</div>
+				<div class="toolbar-group-content">
+					<a href="#1"><span class="icon-thumbs-down"></span> <span class="count">0</span></a>
+				</div>
+				<div class="toolbar-group-content">
+					<a href="#1"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right toolbar-group-sm-new-line">
+				<div class="toolbar-group-content">
+					<a href="#1"><span class="icon-twitter-sign"></span> Twitter</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a href="#1"><span class="icon-facebook-sign"></span> Facebook</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a href="#1"><span class="icon-google-plus-sign"></span> Google +</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
