@@ -262,7 +262,7 @@ collapse
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<div class="nameplate">
-								<div class="nameplate-field">
+								<div class="nameplate-content">
 									<div class="user-icon user-icon-info">
 										<span class="icon-user"></span>
 									</div>
@@ -293,7 +293,7 @@ collapse
 			</div>
 		</div>
 
-		<div class="toolbar">
+		<div class="toolbar-no-break">
 			<div class="toolbar-group">
 				<div class="toolbar-group-content">
 					<a class="mc1" href="#">
@@ -344,34 +344,8 @@ collapse
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Footer</p>
+			<p>Vertically center content inside a toolbar by matching the <code>height</code> of each toolbar-group to the largest toolbar-group. Combine <code>.tbg-xs-newline</code>, <code>.tbg-sm-newline</code>, <code>.tbg-md-newline</code>, and <code>.tbg-lg-newline</code> to create custom break points for each toolbar-group.</p>
 		</blockquote>
-
-<style>
-/*#toolbarExample2 .toolbar-group,
-#toolbarExample2 .toolbar-group-right,
-#toolbarExample2 .toolbar-group-expand {
-	height: 40px;
-}*/
-
-@media screen and (min-width: 768px) {
-	.toolbar-group-sm-new-line {
-		clear: both;
-		float: none;
-	}
-}
-
-@media screen and (max-width: 767px) {
-/*	#toolbarExample2 .toolbar-group-content {
-		min-height: 40px;
-	}*/
-
-	.toolbar-group-xs-new-line {
-		clear: both;
-		display: block;
-	}
-}
-</style>
 
 		<div class="toolbar" id="toolbarExample2">
 			<div class="toolbar-group">
@@ -390,27 +364,39 @@ collapse
 				</div>
 			</div>
 
-			<div class="toolbar-group">
+			<div class="toolbar-group" style="height: 40px;">
 				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-thumbs-up"></span> <span class="count">0</span></a>
-				</div>
-				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-thumbs-down"></span> <span class="count">0</span></a>
-				</div>
-				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a>
+					<ul class="list-unstyled list-inline" style="margin-bottom: 0;">
+						<li><a href="#1"><span class="icon-thumbs-up"></span> <span class="count">0</span></a></li>
+						<li><a href="#1"><span class="icon-thumbs-down"></span> <span class="count">0</span></a></li>
+						<li><a href="#1"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a></li>
+					</ul>
 				</div>
 			</div>
 
-			<div class="toolbar-group-right toolbar-group-sm-new-line">
+			<div class="toolbar-group tbg-xs-newline tbg-sm-newline">
 				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-twitter-sign"></span> Twitter</a>
+					<a href="#1" style="font-size:18px;"><span class="icon-thumbs-up"></span> <span class="count">0</span></a>
 				</div>
 				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-facebook-sign"></span> Facebook</a>
+					<a href="#1" style="font-size:10px;"><span class="icon-thumbs-down"></span> <span class="count">0</span></a>
 				</div>
 				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-google-plus-sign"></span> Google +</a>
+					<a href="#1" style="font-size:28px;"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right tbg-md-newline">
+				<div class="toolbar-group-content">
+					<div>Share this with your friends</div>
+
+					<ul class="list-unstyled list-inline" style="margin-bottom: 0;">
+						<li><a href="#1"><span class="icon-twitter-sign"></span> Twitter</a></li>
+
+						<li><a href="#1"><span class="icon-facebook-sign"></span> Facebook</a></li>
+
+						<li><a href="#1"><span class="icon-google-plus-sign"></span> Google +</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
