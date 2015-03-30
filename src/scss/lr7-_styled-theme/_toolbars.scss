@@ -37,6 +37,13 @@
 	}
 }
 
+.toolbar-group-expand-text {
+	line-height: $input-height-base;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .toolbar-group-content, .toolbar-group-field {
 	display: table-cell;
 	float: none;
