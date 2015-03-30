@@ -1,5 +1,11 @@
-.toolbar {
+.toolbar, .toolbar-no-break {
 	@include clearfix-hack();
+
+	.nameplate {
+		.nameplate-content, .nameplate-field {
+			vertical-align: middle;
+		}
+	}
 }
 
 .toolbar-group, .toolbar-group-expand, .toolbar-group-right {

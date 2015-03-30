@@ -4,20 +4,24 @@ section: Extending Components
 ---
 
 <style>
-#toolbarExample1 {
-	background-color: #240048;
-	padding: 0 9px;
-}
+	#toolbarExample1 {
+		background-color: #240048;
+		padding: 0 9px;
+	}
 
-#toolbarExample1 .toolbar-group,
-#toolbarExample1 .toolbar-group-right,
-#toolbarExample1 .toolbar-group-expand {
-	height: 46px;
-}
+	#toolbarExample1 .toolbar-group,
+	#toolbarExample1 .toolbar-group-right,
+	#toolbarExample1 .toolbar-group-expand {
+		height: 46px;
+	}
 
-.liferay-logo {
-	width: 90px;
-}
+	#toolbarExample1 .nameplate-content {
+		color: #FFF;
+	}
+
+	.liferay-logo {
+		width: 90px;
+	}
 </style>
 
 <div class="row row-spacing">
@@ -25,7 +29,7 @@ section: Extending Components
 		<h3>Toolbar Variations / Examples</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Heading for mail.</p>
+			<p>Heading for mail using toolbars.</p>
 		</blockquote>
 
 		<div class="toolbar-no-break" id="toolbarExample1">
@@ -45,7 +49,7 @@ section: Extending Components
 										<span class="icon-user"></span>
 									</div>
 								</div>
-								<div class="nameplate-content" style="color:#FFF;vertical-align:middle;">
+								<div class="nameplate-content">
 									<div class="">Juan Hidalgo <span class="icon-caret-down"></span></div>
 								</div>
 							</div>
@@ -71,30 +75,128 @@ section: Extending Components
 			</div>
 		</div>
 
-		<div class="toolbar-no-break">
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code>```<style>
+    #toolbarExample1 {
+        background-color: #240048;
+        padding: 0 9px;
+    }
+
+    #toolbarExample1 .toolbar-group,
+    #toolbarExample1 .toolbar-group-right,
+    #toolbarExample1 .toolbar-group-expand {
+        height: 46px;
+    }
+
+    #toolbarExample1 .nameplate-content {
+        color: #FFF;
+    }
+
+    .liferay-logo {
+        width: 90px;
+    }
+</style>
+
+<div class="toolbar-no-break" id="toolbarExample1">
+    <div class="toolbar-group">
+        <div class="toolbar-group-content">
+            <img alt="thumbnail" class="liferay-logo" src="../../images/liferay_logo_tagline.png" />
+        </div>
+    </div>
+
+    <div class="toolbar-group-right">
+        <div class="toolbar-group-content">
+            <div class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+                    <div class="nameplate">
+                        <div class="nameplate-content">
+                            <div class="user-icon user-icon-info">
+                                <span class="icon-user"></span>
+                            </div>
+                        </div>
+                        <div class="nameplate-content">
+                            <div class="">Juan Hidalgo <span class="icon-caret-down"></span></div>
+                        </div>
+                    </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#1">Alphabetical</a></li>
+                    <li><a href="#1">Reverse</a></li>
+                    <li><a href="#1">Split</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbar-group-expand">
+        <form class="toolbar-group-field">
+            <div class="input-group">
+                <input class="form-control" type="text">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>```</code></pre>
+</div>
+
+<style>
+	a.icon-bordered {
+		border: 2px solid #2B4259;
+		border-radius: 20px;
+		color: #2B4259;
+		height: 25px;
+		line-height: 20px;
+		padding: 0;
+		text-align: center;
+		width: 25px;
+	}
+
+	.icon-bordered .icon-exclamation {
+		line-height: 23px;
+	}
+
+	.icon-bordered .icon-chevron-left {
+		line-height: 22px;
+	}
+
+	.icon-bordered .icon-chevron-right {
+		line-height: 22px;
+	}
+
+	#toolbarExample2 {
+		margin: 10px;
+	}
+</style>
+
+		<div class="toolbar-no-break" id="toolbarExample2">
 			<div class="toolbar-group">
 				<div class="toolbar-group-content">
-					<a class="mc1" href="#">
+					<a class="icon-bordered" href="#">
 						<span class="icon-chevron-down"></span>
 					</a>
 				</div>
 				<div class="toolbar-group-content">
-					<a class="mc1" href="#">
+					<a class="icon-bordered" href="#">
 						<span class="icon-refresh"></span>
 					</a>
 				</div>
 				<div class="toolbar-group-content">
-					<a class="mc1" href="#">
+					<a class="icon-bordered" href="#">
 						<span class="icon-share-alt"></span>
 					</a>
 				</div>
 				<div class="toolbar-group-content">
-					<a class="mc1" href="#">
+					<a class="icon-bordered" href="#">
 						<span class="icon-remove"></span>
 					</a>
 				</div>
 				<div class="toolbar-group-content">
-					<a class="mc1" href="#">
+					<a class="icon-bordered" href="#">
 						<span class="icon-exclamation"></span>
 					</a>
 				</div>
@@ -105,16 +207,220 @@ section: Extending Components
 					1-100 of 631
 				</div>
 				<div class="toolbar-group-content">
-					<a class="mc1" href="#">
+					<a class="icon-bordered" href="#">
 						<span class="icon-chevron-left"></span>
 					</a>
 				</div>
 				<div class="toolbar-group-content">
-					<a class="mc1" href="#">
+					<a class="icon-bordered" href="#">
 						<span class="icon-chevron-right"></span>
 					</a>
 				</div>
 			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1" style="margin-top:-7px;"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">```<style>
+    a.icon-bordered {
+        border: 2px solid #2B4259;
+        border-radius: 20px;
+        color: #2B4259;
+        height: 25px;
+        line-height: 20px;
+        padding: 0;
+        text-align: center;
+        width: 25px;
+    }
+
+    .icon-bordered .icon-exclamation {
+        line-height: 23px;
+    }
+
+    .icon-bordered .icon-chevron-left {
+        line-height: 22px;
+    }
+
+    .icon-bordered .icon-chevron-right {
+        line-height: 22px;
+    }
+
+    #toolbarExample2 {
+        margin: 10px;
+    }
+</style>
+
+<div class="toolbar-no-break" id="toolbarExample2">
+    <div class="toolbar-group">
+        <div class="toolbar-group-content">
+            <a class="icon-bordered" href="#">
+                <span class="icon-chevron-down"></span>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-bordered" href="#">
+                <span class="icon-refresh"></span>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-bordered" href="#">
+                <span class="icon-share-alt"></span>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-bordered" href="#">
+                <span class="icon-remove"></span>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-bordered" href="#">
+                <span class="icon-exclamation"></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="toolbar-group-right">
+        <div class="toolbar-group-content">
+            1-100 of 631
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-bordered" href="#">
+                <span class="icon-chevron-left"></span>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-bordered" href="#">
+                <span class="icon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+</div>```</code></pre>
+</div>
+
+<style>
+	#toolbarExample3 {
+		border-bottom: 1px solid #DDD;
+		border-top: 1px solid #DDD;
+		padding: 15px 10px;
+	}
+
+	#toolbarExample3 .btn-success {
+		color: #FFF;
+	}
+
+	#toolbarExample3 .toolbar-group,
+	#toolbarExample3 .toolbar-group-right {
+		height: 40px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 991px) {
+		#toolbarExample3 .tbg-sm-newline {
+			margin-left: 31px;
+			margin-top: 10px;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		#toolbarExample3 .tbg-xs-newline {
+			margin-left: 42px;
+			margin-top: 10px;
+		}
+	}
+</style>
+
+		<div class="toolbar-no-break" id="toolbarExample3">
+			<div class="toolbar-group">
+				<div class="toolbar-content">
+					<div class="nameplate">
+						<div class="nameplate-content">
+							<div class="user-icon user-icon-info">
+								<span class="icon-user"></span>
+							</div>
+						</div>
+						<div class="nameplate-content">
+							<div class="">Juan Hidalgo juan.hidalgo@liferay.com</div>
+							<div>to space.program@liferay.com</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right tbg-sm-newline tbg-xs-newline">
+				<div class="toolbar-group-content">
+					September 15, 2012
+				</div>
+				<div class="toolbar-group-content">
+					<a class="btn btn-success" href="#1"><span class="icon-reply"></span></a>
+				</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2" style="margin-top:-49px;"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+	<pre><code class="html">```<style>
+    #toolbarExample3 {
+        border-bottom: 1px solid #DDD;
+        border-top: 1px solid #DDD;
+        padding: 15px 10px;
+    }
+
+    #toolbarExample3 .btn-success {
+        color: #FFF;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        #toolbarExample3 .tbg-sm-newline {
+            margin-left: 31px;
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        #toolbarExample3 .tbg-xs-newline {
+            margin-left: 42px;
+            margin-top: 10px;
+        }
+    }
+</style>
+
+<div class="toolbar-no-break" id="toolbarExample3">
+    <div class="toolbar-group">
+        <div class="toolbar-content">
+            <div class="nameplate">
+                <div class="nameplate-content">
+                    <div class="user-icon user-icon-info">
+                        <span class="icon-user"></span>
+                    </div>
+                </div>
+                <div class="nameplate-content" style="vertical-align:middle;">
+                    <div class="">Juan Hidalgo juan.hidalgo@liferay.com</div>
+                    <div>to space.program@liferay.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbar-group-right tbg-sm-newline tbg-xs-newline">
+        <div class="toolbar-group-content">
+            September 15, 2012
+        </div>
+        <div class="toolbar-group-content">
+            <a class="btn btn-success" href="#1" style="color:#FFF;"><span class="icon-reply"></span></a>
+        </div>
+    </div>
+</div>```</code></pre>
+</div>
+
+		<div style="padding: 40px 0px 0 48px;">
+			<p>Hello Space,</p>
+
+			<p>Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds café au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.</p>
+
+			<p>Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.</p>
 		</div>
 	</div>
 </div>
@@ -125,7 +431,30 @@ section: Extending Components
 			<p>Vertically center content inside a toolbar by matching the <code>height</code> of each toolbar-group to the largest toolbar-group. Combine <code>.tbg-xs-newline</code>, <code>.tbg-sm-newline</code>, <code>.tbg-md-newline</code>, and <code>.tbg-lg-newline</code> to create custom break points for each toolbar-group.</p>
 		</blockquote>
 
-		<div class="toolbar" id="toolbarExample2">
+<style>
+	#toolbarExample4 .toolbar-group,
+	#toolbarExample4 .toolbar-group-right {
+		height: 52px;
+	}
+
+	#toolbarExample4 .list-inline {
+		margin-bottom: 0;
+	}
+
+	#toolbarExample4 .variable-size1 {
+		font-size: 18px;
+	}
+
+	#toolbarExample4 .variable-size2 {
+		font-size: 10px;
+	}
+
+	#toolbarExample4 .variable-size3 {
+		font-size: 28px;
+	}
+</style>
+
+		<div class="toolbar" id="toolbarExample4">
 			<div class="toolbar-group">
 				<div class="toolbar-group-content">
 					<div class="nameplate">
@@ -142,9 +471,9 @@ section: Extending Components
 				</div>
 			</div>
 
-			<div class="toolbar-group" style="height: 40px;">
+			<div class="toolbar-group">
 				<div class="toolbar-group-content">
-					<ul class="list-unstyled list-inline" style="margin-bottom: 0;">
+					<ul class="list-unstyled list-inline">
 						<li><a href="#1"><span class="icon-thumbs-up"></span> <span class="count">0</span></a></li>
 						<li><a href="#1"><span class="icon-thumbs-down"></span> <span class="count">0</span></a></li>
 						<li><a href="#1"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a></li>
@@ -154,13 +483,13 @@ section: Extending Components
 
 			<div class="toolbar-group tbg-xs-newline tbg-sm-newline">
 				<div class="toolbar-group-content">
-					<a href="#1" style="font-size:18px;"><span class="icon-thumbs-up"></span> <span class="count">0</span></a>
+					<a class="variable-size1" href="#1"><span class="icon-thumbs-up"></span> <span class="count">0</span></a>
 				</div>
 				<div class="toolbar-group-content">
-					<a href="#1" style="font-size:10px;"><span class="icon-thumbs-down"></span> <span class="count">0</span></a>
+					<a class="variable-size2" href="#1"><span class="icon-thumbs-down"></span> <span class="count">0</span></a>
 				</div>
 				<div class="toolbar-group-content">
-					<a href="#1" style="font-size:28px;"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a>
+					<a class="variable-size3" href="#1"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a>
 				</div>
 			</div>
 
@@ -168,7 +497,7 @@ section: Extending Components
 				<div class="toolbar-group-content">
 					<div>Share this with your friends</div>
 
-					<ul class="list-unstyled list-inline" style="margin-bottom: 0;">
+					<ul class="list-unstyled list-inline">
 						<li><a href="#1"><span class="icon-twitter-sign"></span> Twitter</a></li>
 
 						<li><a href="#1"><span class="icon-facebook-sign"></span> Facebook</a></li>
@@ -178,5 +507,88 @@ section: Extending Components
 				</div>
 			</div>
 		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+	<pre><code class="html">```<style>
+    #toolbarExample4 .toolbar-group,
+    #toolbarExample4 .toolbar-group-right {
+        height: 52px;
+    }
+
+    #toolbarExample4 .list-inline {
+        margin-bottom: 0;
+    }
+
+    #toolbarExample4 .variable-size1 {
+        font-size: 18px;
+    }
+
+    #toolbarExample4 .variable-size2 {
+        font-size: 10px;
+    }
+
+    #toolbarExample4 .variable-size3 {
+        font-size: 28px;
+    }
+</style>
+
+<div class="toolbar" id="toolbarExample4">
+    <div class="toolbar-group">
+        <div class="toolbar-group-content">
+            <div class="nameplate">
+                <div class="nameplate-content">
+                    <div class="user-icon user-icon-info">
+                        <span class="icon-user"></span>
+                    </div>
+                </div>
+                <div class="nameplate-content">
+                    <div>Juan Hidalgo</div>
+                    <div>15 Days Ago</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbar-group">
+        <div class="toolbar-group-content">
+            <ul class="list-unstyled list-inline">
+                <li><a href="#1"><span class="icon-thumbs-up"></span> <span class="count">0</span></a></li>
+                <li><a href="#1"><span class="icon-thumbs-down"></span> <span class="count">0</span></a></li>
+                <li><a href="#1"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toolbar-group tbg-xs-newline tbg-sm-newline">
+        <div class="toolbar-group-content">
+            <a class="variable-size1" href="#1"><span class="icon-thumbs-up"></span> <span class="count">0</span></a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="variable-size1" href="#1"><span class="icon-thumbs-down"></span> <span class="count">0</span></a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="variable-size1" href="#1"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a>
+        </div>
+    </div>
+
+    <div class="toolbar-group-right tbg-md-newline">
+        <div class="toolbar-group-content">
+            <div>Share this with your friends</div>
+
+            <ul class="list-unstyled list-inline">
+                <li><a href="#1"><span class="icon-twitter-sign"></span> Twitter</a></li>
+
+                <li><a href="#1"><span class="icon-facebook-sign"></span> Facebook</a></li>
+
+                <li><a href="#1"><span class="icon-google-plus-sign"></span> Google +</a></li>
+            </ul>
+        </div>
+    </div>
+</div>```</code></pre>
+</div>
+
 	</div>
 </div>
