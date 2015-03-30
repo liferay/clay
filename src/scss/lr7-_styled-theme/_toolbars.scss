@@ -2,21 +2,24 @@
 	@include clearfix-hack();
 }
 
-.toolbar-group, .toolbar-group-right {
-	display: inline;
-	float: none;
+.toolbar-group, .toolbar-group-expand, .toolbar-group-right {
+	display: table;
 }
 
-.toolbar-group-content, .toolbar-group-field {
-	display: block;
+.toolbar-group, .toolbar-group-right {
+	height: $input-height-base;
+	margin-bottom: 0;
+}
+
+.toolbar-group {
 	float: left;
-	margin-bottom: 5px;
-	min-height: $input-height-base;
-	padding: 0 5px;
+}
+
+.toolbar-group-right {
+	float: right;
 }
 
 .toolbar-group-expand {
-	clear: both;
 	display: table;
 
 	.input-group {
@@ -34,52 +37,61 @@
 	}
 }
 
-.toolbar-group-expand-text {
-	clear: both;
-	display: block;
-	line-height: $input-height-base;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+.toolbar-group-content, .toolbar-group-field {
+	display: table-cell;
+	float: none;
+	margin-bottom: 0;
+	min-height: 0;
+	padding: 0 5px;
+	vertical-align: middle;
 }
 
 .toolbar-group-field {
-	width: auto;
+	width: 1%;
 }
 
-// Retain Toolbar Desktop Layout in Mobile
-
-.toolbar-no-break {
-	@include clearfix-hack();
-
-	.toolbar-group, .toolbar-group-expand, .toolbar-group-right {
-		display: table;
-	}
-
+@media screen and (max-width: $grid-float-breakpoint-max) {
 	.toolbar-group, .toolbar-group-right {
-		height: $input-height-base;
-		margin-bottom: 0;
-	}
-
-	.toolbar-group {
-		float: left;
-	}
-
-	.toolbar-group-right {
-		float: right;
+		display: inline;
+		float: none;
 	}
 
 	.toolbar-group-content, .toolbar-group-field {
-		display: table-cell;
-		float: none;
-		margin-bottom: 0;
-		min-height: 0;
+		display: block;
+		float: left;
+		margin-bottom: 5px;
 		padding: 0 5px;
-		vertical-align: middle;
 	}
 
 	.toolbar-group-field {
-		width: 1%;
+		width: auto;
+	}
+
+	.toolbar-no-break {
+		.toolbar-group {
+			display: table;
+			float: left;
+		}
+
+		.toolbar-group-right {
+			display: table;
+			float: right;
+		}
+
+		.toolbar-group-content, .toolbar-group-field {
+			display: table-cell;
+			float: none;
+		}
+
+		.toolbar-group-field {
+			width: 1%;
+		}
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.toolbar-group-expand {
+		clear: both;
 	}
 }
 
@@ -139,6 +151,7 @@
 	}
 
 	.toolbar-group-row {
+		clear: none;
 		display: table-row;
 	}
 
@@ -146,7 +159,6 @@
 		display: table-cell;
 		float: none;
 		margin-bottom: 0;
-		min-height: 0;
 		vertical-align: middle;
 	}
 
@@ -161,6 +173,76 @@
 
 	.toolbar-group-field {
 		width: 1%;
+	}
+}
+
+// Toolbar Group Newlines
+
+@media screen and (max-width: 767px) {
+	.tbg-xs-newline {
+		clear: both;
+		display: block;
+		float: left;
+	}
+
+	.toolbar-no-break {
+		.tbg-xs-newline {
+			clear: both;
+
+			&.toolbar-group-right {
+				float: left;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.tbg-sm-newline, .tbg-md-newline, .tbg-lg-newline {
+		margin-top: 10px;
+	}
+
+	.tbg-sm-newline {
+		clear: both;
+
+		&.toolbar-group-right {
+			float: left;
+		}
+	}
+
+	.tbg-md-newline, .tbg-lg-newline {
+		&.toolbar-group-right {
+			float: left;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.tbg-md-newline, .tbg-lg-newline {
+		margin-top: 10px;
+	}
+
+	.tbg-md-newline {
+		clear: both;
+		margin-top: 10px;
+
+		&.toolbar-group-right {
+			float: left;
+		}
+	}
+
+	.tbg-lg-newline.toolbar-group-right {
+		float: left;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.tbg-lg-newline {
+		clear: both;
+		margin-top: 10px;
+
+		&.toolbar-group-right {
+			float: left;
+		}
 	}
 }
 

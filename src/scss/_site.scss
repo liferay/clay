@@ -188,3 +188,41 @@ section.row {
 		}
 	}
 }
+
+// Toolbars
+
+.uxgl-toggle-code {
+	clear: both;
+}
+
+.uxgl-newline-demo blockquote {
+	margin-top: 40px;
+}
+
+.uxgl-newline-demo h3:first-child + blockquote {
+	margin-top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+	.uxgl-lg-newline-demo {
+		background-color: #FFFEDC;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.uxgl-md-newline-demo {
+		background-color: #FFFEDC;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.uxgl-sm-newline-demo {
+		background-color: #FFFEDC;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.uxgl-xs-newline-demo {
+		background-color: #FFFEDC;
+	}
+}
