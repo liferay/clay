@@ -1,5 +1,9 @@
-.toolbar {
+.toolbar, .toolbar-no-break {
 	@include clearfix-hack();
+
+	.nameplate-content, .nameplate-field {
+		vertical-align: middle;
+	}
 }
 
 .toolbar-group, .toolbar-group-expand, .toolbar-group-right {
@@ -75,6 +79,9 @@
 	}
 
 	.toolbar-no-break {
+		@include clearfix-hack();
+		@include clearfix();
+
 		.toolbar-group {
 			display: table;
 			float: left;
