@@ -1,0 +1,110 @@
+// .icon-stacked {
+// 	display: inline-block;
+// 	position: relative;
+// }
+
+// .icon-bg {
+// 	font-size: 3em;
+// 	position: relative;
+// 	height: 100%;
+// 	width: 100%;
+// }
+
+// .icon-fg {
+// 	color: #FFF;
+// 	font-size: 14px;
+// 	position: absolute;
+// 	text-align: center;
+// 	top: 50%;
+
+// 	@include transform(translateY(-50%));
+
+// 	width: 100%;
+// 	z-index: 1;
+// }
+
+// .icon-fg-text {
+// 	font-family: 'Helvetica Neue', Arial, sans-serif;
+// 	font-weight: bold;
+// }
+
+
+
+$icon-stacked-size: 4em;
+
+@mixin size-icon-stacked($size) {
+	height: $size;
+	line-height: $size;
+	width: $size;
+
+	.icon-stacked-bg {
+		font-size: $size;
+
+		&.icon-calendar-empty {
+			font-size: $size * 0.93;
+		}
+	}
+
+	.icon-stacked-outline {
+		font-size: $size * 0.85;
+	}
+
+	.icon-stacked-fg {
+		font-size: $size / 2;
+	}
+
+	.icon-fg-text {
+		font-size: $size / 4;
+		font-weight: bold;
+	}
+
+	.icon-fg-text-line1 {
+		margin-top: -0.857em;
+	}
+
+	.icon-fg-text-line2 {
+		margin-top: -1px;
+	}
+
+	.icon-fg-text-line3 {
+		margin-top: 0.857em;
+	}
+}
+
+.icon-stacked {
+	display: inline-block;
+	position: relative;
+
+	@include size-icon-stacked(4em);
+}
+
+.icon-stacked-bg, .icon-stacked-fg, .icon-stacked-outline {
+	left: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.icon-stacked-fg, .icon-stacked-outline {
+	line-height: inherit;
+}
+
+.icon-stacked-xl {
+	@include size-icon-stacked(16.667em);
+}
+
+.icon-stacked-lg {
+	@include size-icon-stacked(10em);
+}
+
+.icon-stacked-md {
+	@include size-icon-stacked(6.667em);
+}
+
+.icon-stacked-sm {
+	@include size-icon-stacked(3em);
+}
+
+.icon-stacked-xs {
+	@include size-icon-stacked(2em);
+}
