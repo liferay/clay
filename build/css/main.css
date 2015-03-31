@@ -6512,6 +6512,149 @@ figcaption, .figcaption {
 .has-warning .validation-message {
   color: #FFB103; }
 
+.icon-stacked {
+  display: inline-block;
+  position: relative;
+  height: 4em;
+  line-height: 4em;
+  width: 4em; }
+  .icon-stacked .icon-stacked-bg {
+    font-size: 4em; }
+    .icon-stacked .icon-stacked-bg.icon-calendar-empty {
+      font-size: 3.72em; }
+  .icon-stacked .icon-stacked-outline {
+    font-size: 3.4em; }
+  .icon-stacked .icon-stacked-fg {
+    font-size: 2em; }
+  .icon-stacked .icon-fg-text {
+    font-size: 1em;
+    font-weight: bold; }
+  .icon-stacked .icon-fg-text-line1 {
+    margin-top: -0.857em; }
+  .icon-stacked .icon-fg-text-line2 {
+    margin-top: -1px; }
+  .icon-stacked .icon-fg-text-line3 {
+    margin-top: 0.857em; }
+
+.icon-stacked-bg, .icon-stacked-fg, .icon-stacked-outline {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%; }
+
+.icon-stacked-fg, .icon-stacked-outline {
+  line-height: inherit; }
+
+.icon-stacked-xl {
+  height: 16.667em;
+  line-height: 16.667em;
+  width: 16.667em; }
+  .icon-stacked-xl .icon-stacked-bg {
+    font-size: 16.667em; }
+    .icon-stacked-xl .icon-stacked-bg.icon-calendar-empty {
+      font-size: 15.50031em; }
+  .icon-stacked-xl .icon-stacked-outline {
+    font-size: 14.16695em; }
+  .icon-stacked-xl .icon-stacked-fg {
+    font-size: 8.3335em; }
+  .icon-stacked-xl .icon-fg-text {
+    font-size: 4.16675em;
+    font-weight: bold; }
+  .icon-stacked-xl .icon-fg-text-line1 {
+    margin-top: -0.857em; }
+  .icon-stacked-xl .icon-fg-text-line2 {
+    margin-top: -1px; }
+  .icon-stacked-xl .icon-fg-text-line3 {
+    margin-top: 0.857em; }
+
+.icon-stacked-lg {
+  height: 10em;
+  line-height: 10em;
+  width: 10em; }
+  .icon-stacked-lg .icon-stacked-bg {
+    font-size: 10em; }
+    .icon-stacked-lg .icon-stacked-bg.icon-calendar-empty {
+      font-size: 9.3em; }
+  .icon-stacked-lg .icon-stacked-outline {
+    font-size: 8.5em; }
+  .icon-stacked-lg .icon-stacked-fg {
+    font-size: 5em; }
+  .icon-stacked-lg .icon-fg-text {
+    font-size: 2.5em;
+    font-weight: bold; }
+  .icon-stacked-lg .icon-fg-text-line1 {
+    margin-top: -0.857em; }
+  .icon-stacked-lg .icon-fg-text-line2 {
+    margin-top: -1px; }
+  .icon-stacked-lg .icon-fg-text-line3 {
+    margin-top: 0.857em; }
+
+.icon-stacked-md {
+  height: 6.667em;
+  line-height: 6.667em;
+  width: 6.667em; }
+  .icon-stacked-md .icon-stacked-bg {
+    font-size: 6.667em; }
+    .icon-stacked-md .icon-stacked-bg.icon-calendar-empty {
+      font-size: 6.20031em; }
+  .icon-stacked-md .icon-stacked-outline {
+    font-size: 5.66695em; }
+  .icon-stacked-md .icon-stacked-fg {
+    font-size: 3.3335em; }
+  .icon-stacked-md .icon-fg-text {
+    font-size: 1.66675em;
+    font-weight: bold; }
+  .icon-stacked-md .icon-fg-text-line1 {
+    margin-top: -0.857em; }
+  .icon-stacked-md .icon-fg-text-line2 {
+    margin-top: -1px; }
+  .icon-stacked-md .icon-fg-text-line3 {
+    margin-top: 0.857em; }
+
+.icon-stacked-sm {
+  height: 3em;
+  line-height: 3em;
+  width: 3em; }
+  .icon-stacked-sm .icon-stacked-bg {
+    font-size: 3em; }
+    .icon-stacked-sm .icon-stacked-bg.icon-calendar-empty {
+      font-size: 2.79em; }
+  .icon-stacked-sm .icon-stacked-outline {
+    font-size: 2.55em; }
+  .icon-stacked-sm .icon-stacked-fg {
+    font-size: 1.5em; }
+  .icon-stacked-sm .icon-fg-text {
+    font-size: 0.75em;
+    font-weight: bold; }
+  .icon-stacked-sm .icon-fg-text-line1 {
+    margin-top: -0.857em; }
+  .icon-stacked-sm .icon-fg-text-line2 {
+    margin-top: -1px; }
+  .icon-stacked-sm .icon-fg-text-line3 {
+    margin-top: 0.857em; }
+
+.icon-stacked-xs {
+  height: 2em;
+  line-height: 2em;
+  width: 2em; }
+  .icon-stacked-xs .icon-stacked-bg {
+    font-size: 2em; }
+    .icon-stacked-xs .icon-stacked-bg.icon-calendar-empty {
+      font-size: 1.86em; }
+  .icon-stacked-xs .icon-stacked-outline {
+    font-size: 1.7em; }
+  .icon-stacked-xs .icon-stacked-fg {
+    font-size: 1em; }
+  .icon-stacked-xs .icon-fg-text {
+    font-size: 0.5em;
+    font-weight: bold; }
+  .icon-stacked-xs .icon-fg-text-line1 {
+    margin-top: -0.857em; }
+  .icon-stacked-xs .icon-fg-text-line2 {
+    margin-top: -1px; }
+  .icon-stacked-xs .icon-fg-text-line3 {
+    margin-top: 0.857em; }
+
 .input-group label {
   margin-bottom: 2px; }
   .input-group label input[type="radio"] {
