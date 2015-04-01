@@ -1,35 +1,3 @@
-// .icon-stacked {
-// 	display: inline-block;
-// 	position: relative;
-// }
-
-// .icon-bg {
-// 	font-size: 3em;
-// 	position: relative;
-// 	height: 100%;
-// 	width: 100%;
-// }
-
-// .icon-fg {
-// 	color: #FFF;
-// 	font-size: 14px;
-// 	position: absolute;
-// 	text-align: center;
-// 	top: 50%;
-
-// 	@include transform(translateY(-50%));
-
-// 	width: 100%;
-// 	z-index: 1;
-// }
-
-// .icon-fg-text {
-// 	font-family: 'Helvetica Neue', Arial, sans-serif;
-// 	font-weight: bold;
-// }
-
-
-
 $icon-stacked-size: 4em;
 
 @mixin size-icon-stacked($size) {
@@ -63,7 +31,7 @@ $icon-stacked-size: 4em;
 	}
 
 	.icon-fg-text-line2 {
-		margin-top: -1px;
+		margin-top: 0;
 	}
 
 	.icon-fg-text-line3 {
