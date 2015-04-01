@@ -5,31 +5,31 @@ $gray:                                     lighten(#000, 33.5%) !default; // #55
 $gray-light:                               lighten(#000, 46.7%) !default; // #777
 $gray-lighter:                             lighten(#000, 93.5%) !default; // #eee
 
-$brand-default: #868896;
+$brand-default: #869CAD;
 $brand-default-active: darken($brand-default, 12%);
-$brand-default-hover: lighten($brand-default, 8%);
+$brand-default-hover: darken($brand-default, 8%);
 
-$brand-primary:                            #32a8e6;
+$brand-primary: #65B6F0;
 $brand-primary-active: darken($brand-primary, 12%);
-$brand-primary-hover: lighten($brand-primary, 8%);
+$brand-primary-hover: darken($brand-primary, 8%);
 
-$brand-success:                            #42bfad;
+$brand-success: #76BD4A;
 $brand-success-active: darken($brand-success, 12%);
-$brand-success-hover: lighten($brand-success, 8%);
+$brand-success-hover: darken($brand-success, 8%);
 
 $brand-info:                               #1e5ec8;
 $brand-info-active: darken($brand-info, 12%);
-$brand-info-hover: lighten($brand-info, 8%);
+$brand-info-hover: darken($brand-info, 8%);
 
-$brand-warning:                            #FFB103;
+$brand-warning: #F5984C;
 $brand-warning-active: darken($brand-warning, 12%);
-$brand-warning-hover: lighten($brand-warning, 8%);
+$brand-warning-hover: darken($brand-warning, 8%);
 
-$brand-danger:                             #E9295A;
+$brand-danger: #CC6677;
 $brand-danger-active: darken($brand-danger, 12%);
-$brand-danger-hover: lighten($brand-danger, 8%);
+$brand-danger-hover: darken($brand-danger, 8%);
 
-$text-color:                               #2B4259;
+$text-color:                               #29353D;
 $text-muted:                               lighten($text-color, 55%);
 
 //** Global background color for active items (e.g., navs or dropdowns).
@@ -143,17 +143,22 @@ $input-box-shadow: none;
 $label-font-size: 15px;
 
 $input-bg:                                 #FFF;
-$input-bg-disabled:                        #EAEEF1;
-$input-color:                              #2B4259;
-$input-border:                             #B0B4BB;
-$input-border-focus:                       #2B4259;
+
+$input-border-disabled: #CFD7DE;
+$input-bg-disabled:                        #FFF;
+$input-color-placeholder-disabled: #EBEEF0;
+
+$input-color:                              $text-color;
+$input-border:                             $brand-default;
+$input-border-focus:                       $brand-primary;
 $input-color-placeholder:                  #D7D9DD;
+
 $input-font-size-base: 16px;
 $input-font-size-large: 18px;
 $input-font-size-small: 13px;
-$input-height-base:              36px;
-$input-height-large:             48px;
-$input-height-small:             24px;
+$input-height-base:                        36px;
+$input-height-large:                       48px;
+$input-height-small:                       24px;
 
 $legend-border-color:                      #B0B4BB;
 

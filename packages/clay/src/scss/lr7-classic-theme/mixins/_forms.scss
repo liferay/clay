@@ -1,0 +1,17 @@
+@mixin color-placeholder($element, $color: $input-color-placeholder-disabled) {
+	#{$element}::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	#{$element}:-moz-placeholder {
+		color: $color;
+	}
+
+	#{$element}::-moz-placeholder {
+		color: $color;
+	}
+
+	#{$element}:-ms-input-placeholder {
+		color: $color;
+	}
+}
