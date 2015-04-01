@@ -1,8 +1,8 @@
 //Forms
 label {
-	color: $text-color;
+	color: $brand-default;
 	font-size: $label-font-size;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 select {
@@ -17,50 +17,47 @@ select {
 		&::-ms-expand {
 			display: none;
 		}
-	}
 
-	&[multiple].form-control {
-		background-image: none;
-	}
+		&[multiple] {
+			background-image: none;
+			border: 2px solid $input-border;
+			padding: $padding-base-vertical;
 
-	&.form-control:focus {
-		padding: $padding-base-vertical - 1 $padding-base-horizontal - 1;
-	}
-
-	&.input-lg:focus {
-		padding: $padding-large-vertical - 1 $padding-large-horizontal - 1;
-	}
-
-	&.input-sm:focus {
-		padding: $padding-small-vertical - 1 $padding-small-horizontal - 1;
+			&:focus {
+				border-color: $input-border-focus;
+			}
+		}
 	}
 }
 
-textarea {
-	&.form-control:focus {
-		padding: $padding-base-vertical - 1 $padding-base-horizontal - 1;
-	}
+textarea.form-control {
+	border: 2px solid $input-border;
+	padding: $padding-base-vertical;
 
-	&.input-lg:focus {
-		padding: $padding-large-vertical - 1 $padding-large-horizontal - 1;
-	}
-
-	&.input-sm:focus {
-		padding: $padding-small-vertical - 1 $padding-small-horizontal - 1;
+	&:focus {
+		border: 2px solid $input-border;
+		border-color: $input-border-focus;
 	}
 }
 
 .form-control {
 	@include box-shadow($form-control-box-shadow);
 
+	border-width: 0 0 2px 0;
 	font-size: $input-font-size-base;
+	padding: $padding-base-vertical;
 
 	&:focus {
-		border-width: 2px;
+		border-width: 0 0 2px 0;
 
 		@include box-shadow($form-control-focus-box-shadow);
+	}
 
-		padding: $padding-base-vertical $padding-base-horizontal - 1;
+	&[disabled],
+	&[readonly],
+	fieldset[disabled] & {
+		border-color: $input-border-disabled;
+		color: $input-color-placeholder-disabled;
 	}
 
 	&.input-lg {
@@ -72,12 +69,20 @@ textarea {
 	}
 }
 
-.input-lg:focus {
-	padding: $padding-large-vertical $padding-large-horizontal - 1;
-}
+// Color Placeholder
+// CSS Selector, Color
 
-.input-sm:focus {
-	padding: $padding-small-vertical $padding-small-horizontal - 1;
+@include color-placeholder("input[disabled]");
+@include color-placeholder("select[disabled]");
+@include color-placeholder("input[readonly]", $brand-default);
+@include color-placeholder("fieldset[disabled] .form-control");
+
+// Checkbox and Radio Styles
+
+.checkbox, .radio {
+	label {
+		font-weight: 500;
+	}
 }
 
 label.checkbox-default,
@@ -94,7 +99,6 @@ label.radio-default,
 	}
 
 	.skin {
-		cursor: pointer;
 		display: inline-block;
 		left: 0;
 		margin-top: 1px;
