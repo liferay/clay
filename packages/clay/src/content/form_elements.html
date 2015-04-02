@@ -7,29 +7,173 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Basic Form Elements</h3>
 
-		<div class="form-group">
+		<div class="form-group" style="margin-bottom:0;">
 			<label>Default text input</label>
-
 			<input class="form-control" placeholder="Placeholder" type="text">
 		</div>
 
-		<div class="form-group">
-			<label>Password input</label>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">```<div class="form-group">
+    <label>Default text input</label>
+    <input class="form-control" placeholder="Placeholder" type="text">
+</div>```</code></pre>
+</div>
 
+		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
+			<label>Password input</label>
 			<input class="form-control" placeholder="Enter password" type="password">
 		</div>
 
-		<div class="form-group">
-			<label>Textarea</label>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">```<div class="form-group">
+    <label>Password input</label>
 
+    <input class="form-control" placeholder="Enter password" type="password">
+</div>```</code></pre>
+</div>
+
+		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
+			<label>Textarea</label>
 			<textarea class="form-control" placeholder="Placeholder"></textarea>
 		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+	<pre><code class="html">```<div class="form-group" style="margin-top:10px;">
+    <label>Textarea</label>
+
+    <textarea class="form-control" placeholder="Placeholder"></textarea>
+</div>```</code></pre>
+</div>
+
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Checkboxes and Radios</h3>
+		<h3>Checkboxes and Radios (no extra mark up)</h3>
+	</div>
+
+	<div class="col-md-6">
+		<h5>Checkboxes</h5>
+
+<!-- Checkboxes unable to be styled in Firefox with this method. See https://bugzilla.mozilla.org/show_bug.cgi?id=605985
+
+Checkboxes unable to be styled in IE with this method. -->
+
+		<div>
+			<label class="checkbox-default1">
+				<input class="input-sm" type="checkbox" value="">
+			</label>
+		</div>
+		<label class="checkbox-default1">
+			<input type="checkbox" value="">
+			Label
+		</label>
+		<div class="checkbox checkbox-default1">
+			<label>
+				<input class="input-sm" type="checkbox" value="">
+				Label with class checkbox
+			</label>
+		</div>
+		<div class="checkbox checkbox-default1 disabled">
+			<label>
+				<input checked disabled type="checkbox" value="">
+				Disabled Check Box
+			</label>
+		</div>
+
+		<div>
+			<label class="checkbox-inline checkbox-default1">
+				<input type="checkbox" id="inlineCheckbox1" value="option1">
+				1
+			</label>
+			<label class="checkbox-inline checkbox-default1">
+				<input type="checkbox" id="inlineCheckbox2" value="option2">
+				2
+			</label>
+			<label class="checkbox-inline checkbox-default1">
+				<input type="checkbox" id="inlineCheckbox3" value="option3">
+				3
+			</label>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<h5>Radio Buttons</h5>
+
+		<div>
+			<label class="radio-default1">
+				<input type="radio" value="">
+				<span class="skin"></span>
+			</label>
+		</div>
+
+		<label class="radio-default1">
+			<input type="radio" value="">
+			<span class="skin"></span>
+			Label
+		</label>
+
+		<div class="radio radio-default1">
+			<label>
+				<input type="radio">
+				<span class="skin"></span>
+				Regular Radio Button
+			</label>
+		</div>
+
+		<div class="radio radio-default1 disabled">
+			<label>
+				<input disabled type="radio">
+				<span class="skin"></span>
+				Disabled Radio Button
+			</label>
+		</div>
+
+		<label class="radio-default1 radio-inline">
+			<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"><span class="skin"></span> 1
+		</label>
+		<label class="radio-default1 radio-inline">
+			<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"><span class="skin"></span> 2
+		</label>
+		<label class="radio-default1 radio-inline">
+			<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"><span class="skin"></span> 3
+		</label>
+	</div>
+</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+  <pre><code class="html">```<div class="checkbox checkbox-default1">
+    <label>
+        <input type="checkbox" value="">
+        Label with class checkbox
+    </label>
+</div>
+
+<div class="radio radio-default1">
+    <label>
+        <input type="radio">
+        <span class="skin"></span>
+        Regular Radio Button
+    </label>
+</div>```</code></pre>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Checkboxes and Radios (requires extra mark up)</h3>
 
 		<div class="row">
 			<div class="col-md-3">
@@ -74,7 +218,7 @@ section: Elements
 			</div>
 
 			<div class="col-md-3">
-				<h5>Checkbox Default**</h5>
+				<h5>Custom Checkbox**</h5>
 
 				<div>
 					<label class="checkbox-default">
@@ -158,7 +302,7 @@ section: Elements
 			</div>
 
 			<div class="col-md-3">
-				<h5>Radio Default**</h5>
+				<h5>Custom Radio**</h5>
 
 				<div>
 					<label class="radio-default">
@@ -203,7 +347,7 @@ section: Elements
 
 		<div class="row">
 			<div class="col-md-12">
-				<h6>** Not compatible with IE8 and below, falls back to browser default.</h6>
+				<h6>** Not compatible with IE8 and below, falls back to system default.</h6>
 			</div>
 		</div>
 	</div>
@@ -239,7 +383,7 @@ section: Elements
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>File Upload</h3>
 
@@ -251,29 +395,48 @@ section: Elements
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Form Element States</h3>
+		<h3>Disabled States</h3>
 
 		<div class="form-group">
-			<label>Disabled</label>
-
+			<label>Text Input</label>
 			<input disabled class="form-control" placeholder="Placeholder" type="text">
 		</div>
 
-		<pre><code class="html">```<input disabled class="form-control" placeholder="Placeholder" type="text">```</code></pre>
-
 		<div class="form-group">
-			<label>Read only</label>
-
-			<input class="form-control" placeholder="Placeholder" readonly type="text">
+			<label>Password Input</label>
+			<input class="form-control" disabled placeholder="Enter password" type="password">
 		</div>
 
-		<pre><code class="html">```<input readonly class="form-control" placeholder="Placeholder" type="text">```</code></pre>
+		<div class="form-group">
+			<label>Textarea</label>
+			<textarea class="form-control" disabled placeholder="Placeholder"></textarea>
+		</div>
 
-		<h3>Disabled Fieldset</h3>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+	<pre><code class="html">```<div class="form-group">
+      <label>Disabled Text Input</label>
+      <input disabled class="form-control" placeholder="Placeholder" type="text">
+</div>
 
-		<form>
+<div class="form-group">
+    <label>Password Input</label>
+    <input class="form-control" disabled placeholder="Enter password" type="password">
+</div>
+
+<div class="form-group">
+    <label>Textarea</label>
+    <textarea class="form-control" disabled placeholder="Placeholder"></textarea>
+</div>```</code></pre>
+</div>
+
+		<h4 class="text-primary">Fieldset Disabled</h4>
+
+		<form style="padding: 10px;">
 			<fieldset disabled="">
 				<div class="form-group">
 					<label for="disabledTextInput">Disabled input</label>
@@ -306,39 +469,88 @@ section: Elements
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</fieldset>
 		</form>
-		<pre><code>```<form>
-	<fieldset disabled="">
-		<div class="form-group">
-			<label for="disabledTextInput">Disabled input</label>
-			<input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-		</div>
 
-		<div class="form-group">
-			<label for="disabledSelect">Disabled select menu</label>
-			<select id="disabledSelect" class="form-control">
-				<option>Disabled select</option>
-			</select>
-		</div>
+<div class="uxgl-toggle-code">
+  <a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse5">
+  <pre><code class="html">```<form>
+    <fieldset disabled="">
+        <div class="form-group">
+            <label for="disabledTextInput">Disabled input</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+        </div>
 
-		<div class="checkbox checkbox-default">
-			<label>
-				<input checked type="checkbox" value="">
-				<span class="skin"></span>
-				Disabled Checkbox
-			</label>
-		</div>
+        <div class="form-group">
+            <label for="disabledSelect">Disabled select menu</label>
+            <select id="disabledSelect" class="form-control">
+                <option>Disabled select</option>
+            </select>
+        </div>
 
-		<div class="radio radio-default">
-			<label>
-				<input type="radio" value="">
-				<span class="skin"></span>
-				Disabled Radio
-			</label>
-		</div>
+        <div class="checkbox checkbox-default">
+            <label>
+                <input checked type="checkbox" value="">
+                <span class="skin"></span>
+                Disabled Checkbox
+            </label>
+        </div>
 
-		<button type="submit" class="btn btn-primary">Submit</button>
-	</fieldset>
+        <div class="radio radio-default">
+            <label>
+                <input type="radio" value="">
+                <span class="skin"></span>
+                Disabled Radio
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
 </form>```</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Read Only States<h3>
+
+		<div class="form-group">
+			<label>Readonly Text Input</label>
+			<input class="form-control" placeholder="Placeholder" readonly type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Password Input</label>
+			<input class="form-control" placeholder="Enter password" readonly type="password">
+		</div>
+
+		<div class="form-group">
+			<label>Textarea</label>
+			<textarea class="form-control" placeholder="Placeholder" readonly></textarea>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse6">
+	<pre><code class="html">```<div class="form-group">
+    <label>Readonly Text Input</label>
+    <input class="form-control" placeholder="Placeholder" readonly type="text">
+</div>
+
+<div class="form-group">
+    <label>Password Input</label>
+    <input class="form-control" placeholder="Enter password" readonly type="password">
+</div>
+
+<div class="form-group">
+    <label>Textarea</label>
+    <textarea class="form-control" placeholder="Placeholder" readonly></textarea>
+</div>```</code></pre>
+</div>
+
 	</div>
 </div>
 
@@ -346,23 +558,41 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Form Element Sizes</h3>
 
-		<div class="form-group">
+		<div class="form-group" style="margin-bottom: 0;">
 			<label>Small text input</label>
-
 			<input class="form-control input-sm" placeholder="Placeholder" type="text">
 		</div>
 
-		<div class="form-group">
-			<label>Default text input</label>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse7">
+	<pre><code class="html">```<div class="form-group">
+    <label>Small text input</label>
+    <input class="form-control input-sm" placeholder="Placeholder" type="text">
+</div>```</code></pre>
+</div>
 
+		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
+			<label>Default text input</label>
 			<input class="form-control" placeholder="Placeholder" type="text">
 		</div>
 
-		<div class="form-group">
+		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
 			<label>Large text input</label>
-
 			<input class="form-control input-lg" placeholder="Placeholder" type="text">
 		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse9">
+	<pre><code class="html">```<div class="form-group">
+    <label>Large text input</label>
+    <input class="form-control input-lg" placeholder="Placeholder" type="text">
+</div>```</code></pre>
+</div>
+
 	</div>
 </div>
 
@@ -370,17 +600,28 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Input Group with Addons</h3>
 
-		<div class="form-group">
+		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
 			<label>Addon Left</label>
-
 			<div class="input-group">
 				<span class="input-group-addon">@</span>
-
 				<input class="form-control" placeholder="Username" type="text">
 			</div>
 		</div>
 
-		<div class="form-group">
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse10"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse10">
+	<pre><code class="html">```<div class="form-group">
+    <label>Addon Left</label>
+    <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input class="form-control" placeholder="Username" type="text">
+    </div>
+</div>```</code></pre>
+</div>
+
+		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
 			<label>Addon Right</label>
 
 			<div class="input-group">
@@ -390,7 +631,21 @@ section: Elements
 			</div>
 		</div>
 
-		<div class="form-group">
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse11"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse11">
+	<pre><code class="html">```<div class="form-group">
+    <label>Addon Right</label>
+
+    <div class="input-group">
+        <input class="form-control" type="text">
+        <span class="input-group-addon">.00</span>
+    </div>
+</div>```</code></pre>
+</div>
+
+		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
 			<label>Left and Right Addon</label>
 
 			<div class="input-group">
@@ -402,10 +657,23 @@ section: Elements
 			</div>
 		</div>
 
-		<label>Button Addons</label>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse12"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse12">
+	<pre><code class="html">```<div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input class="form-control" type="text">
+        <span class="input-group-addon">.com</span>
+    </div>
+</div>```</code></pre>
+</div>
+
+		<label style="margin-top:20px;">Button Addons</label>
 
 		<div class="row">
-			<div class="col-md-6 form-group">
+			<div class="col-md-6 form-group" style="margin-bottom:0;">
 				<div class="input-group">
 					<span class="input-group-btn">
 						<button class="btn btn-default" type="button">Click</button>
@@ -415,7 +683,7 @@ section: Elements
 				</div>
 			</div>
 
-			<div class="col-md-6 form-group">
+			<div class="col-md-6 form-group" style="margin-bottom:0;">
 				<div class="input-group">
 					<input type="text" class="form-control">
 
@@ -430,13 +698,42 @@ section: Elements
 			</div>
 		</div>
 
-		<label>Checkbox and Radio Addons</label>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse13"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse13">
+	<pre><code class="html">```<div class="form-group">
+    <div class="input-group">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Click</button>
+        </span>
+
+        <input class="form-control" type="text">
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="input-group">
+        <input type="text" class="form-control">
+
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="#">Action 1</a></li>
+                <li><a href="#">Action 2</a></li>
+            </ul>
+        </div>
+    </div>
+</div>```</code></pre>
+</div>
+
+		<label style="margin-top:20px;">Checkbox and Radio Addons</label>
 
 		<div class="row">
-			<div class="col-md-6 form-group">
+			<div class="col-md-6 form-group" style="margin-bottom:0;">
 				<div class="input-group">
 					<span class="input-group-addon">
-						<label class="checkbox-default">
+						<label class="checkbox-default1">
 							<input type="checkbox" value="">
 							<span class="skin"></span>
 						</label>
@@ -446,12 +743,12 @@ section: Elements
 				</div>
 			</div>
 
-			<div class="col-md-6 form-group">
+			<div class="col-md-6 form-group" style="margin-bottom:0;">
 				<div class="input-group">
 					<input class="form-control" type="text">
 
 					<span class="input-group-addon">
-						<label class="radio-default">
+						<label class="radio-default1">
 							<input name="radio3" type="radio" value="">
 							<span class="skin"></span>
 						</label>
@@ -459,5 +756,37 @@ section: Elements
 				</div>
 			</div>
 		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse14"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse14">
+	<pre><code class="html">```<div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon">
+            <label class="checkbox-default">
+                <input type="checkbox" value="">
+                <span class="skin"></span>
+            </label>
+        </span>
+
+        <input class="form-control" type="text">
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="input-group">
+        <input class="form-control" type="text">
+
+        <span class="input-group-addon">
+            <label class="radio-default">
+                <input name="radio3" type="radio" value="">
+                <span class="skin"></span>
+            </label>
+        </span>
+    </div>
+</div>```</code></pre>
+</div>
+
 	</div>
 </div>

@@ -98,7 +98,6 @@ label {
 	.checkbox-default &,
 	.radio-default & {
 		cursor: pointer;
-		line-height: 1;
 		position: relative;
 	}
 }
@@ -119,14 +118,14 @@ label {
 
 .checkbox-default {
 	input[type='checkbox'] {
-		height: 17px;
+		height: 18px;
 		margin-top: 0;
-		width: 17px;
+		vertical-align: bottom;
+		width: 18px;
 
 		&:checked + .skin:after {
 			color: $checkbox-checked-color;
 			content: $checkbox-check;
-			text-align: center;
 		}
 
 		&:hover + .skin {
@@ -143,7 +142,6 @@ label {
 			border-width: 2px;
 
 			&:after {
-				margin-left: -1px;
 				margin-top: -1px;
 			}
 		}
@@ -158,12 +156,11 @@ label {
 			&:after {
 				content: '';
 				display: block;
-				font-family: 'Glyphicons Halflings';
+				font-family: 'fontawesome-alloy';
 				font-size: 11px;
-				height: 17px;
-				padding-right: 2px;
+				line-height: 15px;
 				position: relative;
-				width: 17px;
+				text-align: center;
 			}
 		}
 	}
@@ -277,8 +274,136 @@ label {
 	}
 }
 
+.input-group {
+	label {
+		&.checkbox-default,
+		&.radio-default {
+			margin-bottom: 0;
+		}
+
+		&.checkbox-default input[type="checkbox"] + .skin {
+			border-color: transparent;
+		}
+
+		&.radio-default input[type="radio"] + .skin {
+			&:before {
+				border-color: transparent;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: $grid-float-breakpoint) {
 	.form-control {
 		font-size: 16px;
+	}
+}
+
+// Webkit only checkboxes
+
+label {
+	&.checkbox-default1,
+	&.radio-default1,
+	.checkbox-default1 &,
+	.radio-default1 & {
+		line-height: 1;
+	}
+}
+
+$checkbox-size: 17px;
+
+.checkbox-default1 {
+	input[type="checkbox"] {
+		-webkit-appearance: none;
+		background-color: $body-bg;
+		border: 1px solid $checkbox-border;
+		border-width: 0 \9;
+		border-radius: 2px;
+		height: $checkbox-size;
+		position: relative;
+		text-align: center;
+		vertical-align: bottom;
+		width: $checkbox-size;
+
+		&:checked {
+			background-color: $brand-primary;
+			border-color: transparent;
+
+			&:after {
+				color: #FFF;
+				content: '\f00c';
+				display: block;
+				font-family: 'fontawesome-alloy';
+				font-size: 10px;
+				height: 100%;
+				line-height: $checkbox-size - 2;
+				width: 100%;
+			}
+		}
+
+		&[disabled] {
+			opacity: 0.5;
+		}
+	}
+}
+
+&[disabled], .disabled {
+	.checkbox-default1 input[type='checkbox'],
+	.radio-default1 input[type='radio'],
+	input[type='checkbox'],
+	input[type='radio'] {
+		opacity: 0.5;
+	}
+}
+
+.radio-default1 {
+	input[type='radio'] {
+		-webkit-appearance: none;
+		background-color: $body-bg;
+		border: 1px solid $checkbox-border;
+		border-width: 0 \9;
+		border-radius: 50%;
+		height: $checkbox-size;
+		position: relative;
+		text-align: center;
+		vertical-align: bottom;
+		width: $checkbox-size;
+
+		&:checked {
+			background-color: $brand-primary;
+			border-color: transparent;
+
+			&:after {
+				color: #FFF;
+				content: '\e009';
+				display: block;
+				font-family: 'fontawesome-alloy';
+				font-size: 7px;
+				height: 100%;
+				line-height: $checkbox-size - 2;
+				width: 100%;
+			}
+		}
+
+		&[disabled] {
+			opacity: 0.5;
+		}
+	}
+}
+
+.input-group {
+	label {
+		&.checkbox-default1,
+		&.radio-default1 {
+			margin-bottom: 0;
+		}
+
+		&.checkbox-default1 input[type="checkbox"] {
+			border-color: transparent;
+		}
+
+		&.radio-default1 input[type="radio"] {
+			border-color: transparent;
+		}
 	}
 }
