@@ -146,7 +146,9 @@ section.row {
 			background-image: url(../images/switch_button.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
+			border-width: 0;
 			bottom: 0;
+			height: 24px;
 			left: 3px;
 			top: 1px;
 			width: 24px;
@@ -158,6 +160,7 @@ section.row {
 			background-repeat: no-repeat;
 			background-size: 100%;
 			border-radius: 20px;
+			border-width: 0;
 			width: 55px;
 		}
 
