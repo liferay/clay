@@ -86,18 +86,6 @@ $switch-button-icon-color: $input-color;
 	}
 }
 
-@mixin offset-off-button() {
-	@if $switch-bar-padding == 0 or $switch-bar-padding == 0px or $switch-bar-padding == 0em or $switch-bar-padding == 0rem {
-		margin-left: -1px;
-	}
-}
-
-@mixin offset-on-button() {
-	@if $switch-bar-padding == 0 or $switch-bar-padding == 0px or $switch-bar-padding == 0em or $switch-bar-padding == 0rem {
-		margin-left: 1px;
-	}
-}
-
 .switch-bar {
 	.switch-toggle {
 		display: block;
@@ -117,7 +105,9 @@ $switch-button-icon-color: $input-color;
 input.switch {
 	float: left;
 	font-size: 62.5%;
-	margin-left: -999em;
+	margin-left: 0;
+	opacity: 0;
+	width: $switch-bar-width;
 
 	@include color-switch-bar($switch-bar-bg, $switch-bar-border-color);
 	@include color-switch-button($switch-button-bg, $switch-button-border-color);
@@ -150,9 +140,6 @@ input.switch {
 			bottom: $switch-bar-padding;
 			height: $switch-button-width;
 			left: $switch-bar-padding;
-
-			@include offset-off-button();
-
 			top: $switch-bar-padding;
 			width: $switch-button-width;
 		}
@@ -194,8 +181,6 @@ input.switch {
 		&:after {
 			border-radius: $switch-button-on-border-radius;
 			left: $switch-bar-width - $switch-bar-padding - $switch-button-width;
-
-			@include offset-on-button();
 		}
 
 		&:before {

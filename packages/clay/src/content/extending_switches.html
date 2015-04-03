@@ -5,25 +5,33 @@ section: Extending Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+
+		<img src="../../images/switch_components.png" style="width: 700px;"/>
+
 		<h3 class="usage-heading">Custom Switch using Images</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Customize the button style in the off position with <code>input.switch:empty ~ .switch-bar:after {}</code>.</p>
+			<p>Customize:</p>
+			<p>the <strong>switch button in the off</strong> position with <code>input.switch:empty ~ .switch-bar:after {}</code>.</p>
 
-			<p>Customize the switch background style in the off position with <code>input.switch:empty ~ .switch-bar:before {}</code>.</p>
+			<p>the <strong>switch button icon in the off</strong> position with <code>input.switch:empty ~ .switch-bar .switch-icon.button-icon {}</code>.</p>
 
-			<p>Customize the icon in the off position with <code>input.switch:empty ~ .switch-bar .switch-icon-off {}</code>.</p>
+			<p>the <strong>switch bar in the off</strong> position with <code>input.switch:empty ~ .switch-bar:before {}</code>.</p>
 
-			<p>Customize the button style in the on position with <code>input.switch:checked ~ .switch-bar:after {}</code>.</p>
+			<p>the <strong>switch bar icon in the off</strong> position with <code>input.switch:empty ~ .switch-bar .switch-icon-off {}</code>.</p>
 
-			<p>Customize the switch background style in the on position with <code>input.switch:checked ~ .switch-bar:before {}</code>.</p>
+			<p>the <strong>switch button in the on</strong> position with <code>input.switch:checked ~ .switch-bar:after {}</code>.</p>
 
-			<p>Customize the icon in the on position with <code>input.switch:checked ~ .switch-bar .switch-icon-on {}</code>.</p>
+			<p>the <strong>switch button icon in the on</strong> position with <code>input.switch:checked ~ .switch-bar .switch-icon.button-icon</code>.</p>
+
+			<p>the <strong>switch bar in the on</strong> position with <code>input.switch:checked ~ .switch-bar:before {}</code>.</p>
+
+			<p>the <strong>switch bar icon in the on</strong> position with <code>input.switch:checked ~ .switch-bar .switch-icon-on {}</code>.</p>
 		</blockquote>
 
 		<div class="form-group" id="demoSwitch" style="margin-bottom:0;">
 			<label>
-				<input class="field switch" type="checkbox">
+				<input class="switch" type="checkbox">
 
 				<span aria-hidden="true" class="switch-bar">
 					<span class="switch-toggle">
@@ -35,9 +43,9 @@ section: Extending Components
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse5">
+<div class="collapse" id="codeCollapse0">
 	<pre><code>```<style>
     input.switch:empty ~ .switch-bar:after {
         background-color: transparent;
@@ -89,7 +97,7 @@ section: Extending Components
 
 <div class="form-group">
     <label>
-      <input class="field switch" type="checkbox">
+      <input class="switch" type="checkbox">
 
       <span aria-hidden="true" class="switch-bar">
           <span class="switch-toggle">
@@ -97,6 +105,135 @@ section: Extending Components
               <span class="switch-icon-off switch-icon"></span>
           </span>
       </span>
+    </label>
+</div>```</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>iOS Style Switches</h3>
+
+		<style>
+			/* Switch Button Off */
+			.ios-switch input.switch:empty ~ .switch-bar:after {
+				background-color: #FFF;
+				border-radius: 20px;
+				border-width: 0;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+				height: 21px;
+				left: 2px;
+				top: 2px;
+				width: 21px;
+			}
+
+			/* Switch Button On */
+			.ios-switch input.switch:checked ~ .switch-bar:after {
+				border-width: 0;
+				left: 27px;
+			}
+
+			/* Switch Bar Off */
+			.ios-switch input.switch:empty ~ .switch-bar:before {
+				background-color: #FEFEFE;
+				border: 1px solid #E6E6E6;
+				border-radius: 20px;
+			}
+
+			/* Switch Bar On */
+			.ios-switch input.switch:checked ~ .switch-bar:before {
+				background-color: #4BD863;
+				border-color: #4BD863;
+			}
+
+			/* Switch Bar Icon Off */
+			.ios-switch input.switch:empty ~ .switch-bar .switch-icon-off {
+				color: #B5B5B5;
+				font-size: 15px;
+			}
+
+			/* Switch Bar Icon On */
+			.ios-switch input.switch:checked ~ .switch-bar .switch-icon-on {
+				color: #FFF;
+			}
+		</style>
+
+		<div class="form-group ios-switch" style="margin-bottom:0;">
+			<label>
+				<input class="switch" type="checkbox">
+
+				<span aria-hidden="true" class="switch-bar">
+					<span class="switch-toggle">
+					</span>
+				</span>
+			</label>
+
+			<label>
+				<input class="switch" type="checkbox">
+
+				<span aria-hidden="true" class="switch-bar">
+					<span class="switch-toggle">
+						<span class="switch-icon-on switch-icon">|</span>
+						<span class="icon-circle-blank switch-icon-off switch-icon"></span>
+					</span>
+				</span>
+			</label>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code>```<style>
+    /* Switch Button Off */
+    .ios-switch input.switch:empty ~ .switch-bar:after {
+        background-color: #FFF;
+        border-width: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        height: 22px;
+        left: 2px;
+        top: 2px;
+        width: 22px;
+    }
+
+    /* Switch Button On */
+    .ios-switch input.switch:checked ~ .switch-bar:after {
+        border-width: 0;
+        left: 27px;
+    }
+
+    /* Switch Bar Off */
+    .ios-switch input.switch:empty ~ .switch-bar:before {
+        background-color: #FEFEFE;
+        border: 1px solid #E6E6E6;
+    }
+
+    /* Switch Bar On */
+    .ios-switch input.switch:checked ~ .switch-bar:before {
+        background-color: #4BD863;
+        border-color: #4BD863;
+    }
+
+    /* Switch Bar Icon Off */
+    .ios-switch input.switch:empty ~ .switch-bar .switch-icon-off {
+        color: #B5B5B5;
+        font-size: 15px;
+        line-height: 19px;
+    }
+</style>
+
+<div class="form-group ios-switch">
+    <label>
+        <input class="switch" type="checkbox">
+
+        <span aria-hidden="true" class="switch-bar">
+            <span class="switch-toggle">
+                <span class="switch-icon-on switch-icon">|</span>
+                <span class="icon-circle-blank switch-icon-off switch-icon"></span>
+            </span>
+        </span>
     </label>
 </div>```</code></pre>
 </div>
