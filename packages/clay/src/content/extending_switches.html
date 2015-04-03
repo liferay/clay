@@ -21,7 +21,7 @@ section: Extending Components
 			<p>Customize the icon in the on position with <code>input.switch:checked ~ .switch-bar .switch-icon-on {}</code>.</p>
 		</blockquote>
 
-		<div class="form-group" id="demoSwitch">
+		<div class="form-group" id="demoSwitch" style="margin-bottom:0;">
 			<label>
 				<input class="field switch" type="checkbox">
 
@@ -34,13 +34,19 @@ section: Extending Components
 			</label>
 		</div>
 
-<pre><code>```<style>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse5">
+	<pre><code>```<style>
     input.switch:empty ~ .switch-bar:after {
         background-color: transparent;
-        background-image: url(../../images/switch_button.png);
+        background-image: url(../images/switch_button.png);
         background-repeat: no-repeat;
         background-size: 100%;
+        border-width: 0;
         bottom: 0;
+        height: 24px;
         left: 3px;
         top: 1px;
         width: 24px;
@@ -48,10 +54,11 @@ section: Extending Components
 
     input.switch:empty ~ .switch-bar:before {
         background-color: transparent;
-        background-image: url(../../images/switch_base.png);
+        background-image: url(../images/switch_base.png);
         background-repeat: no-repeat;
         background-size: 100%;
         border-radius: 20px;
+        border-width: 0;
         width: 55px;
     }
 
@@ -92,6 +99,7 @@ section: Extending Components
       </span>
     </label>
 </div>```</code></pre>
+</div>
 
 	</div>
 </div>
