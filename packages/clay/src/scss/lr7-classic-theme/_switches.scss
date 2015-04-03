@@ -1,46 +1,98 @@
 /* ---------- Switches ---------- */
 
-@mixin switch-variant($on-color, $off-color, $on-bg, $off-bg, $button-bg) {
-	&:empty ~ .switch-bar {
-		&:after {
-			background-color: $button-bg;
-		}
+// switch button is always a circle or square
+$switch-button-width: 18px;
+$switch-bar-padding: 5px; // space between button and bar, can be negative value
 
+$switch-bar-width: 50px; // width of switch bar
+$switch-bar-height: ($switch-bar-padding * 2) + $switch-button-width;
+
+$switch-bar-border-radius: 20px;
+$switch-button-border-radius: 50%;
+
+$switch-bar-border-width: 2px;
+$switch-bar-font-size: 12px;
+
+$switch-button-border-width: 1px;
+$switch-button-bg: #FFF;
+$switch-button-border: #FFF;
+$switch-button-font-size: $switch-bar-font-size;
+
+@function set-data-label-text-position($switch-width, $switch-padding) {
+	@if $switch-padding < 0 {
+		@return $switch-width + abs($switch-padding) + 5;
+	}
+	@else {
+		@return $switch-width + 5;
+	}
+}
+
+@mixin color-switch-bar($off-bg, $off-border: $off-bg, $on-bg: $off-bg, $on-border: $off-border) {
+	&:empty ~ .switch-bar {
 		&:before {
 			background-color: $off-bg;
+			border: $switch-bar-border-width solid $off-border;
 		}
+	}
 
-		.switch-icon {
-			color: $off-color;
+	&:checked ~ .switch-bar {
+		&:before {
+			background-color: $on-bg;
+			border: $switch-bar-border-width solid $on-border;
+		}
+	}
+}
 
-			&.button-icon {
-				color: $off-bg;
-			}
+@mixin color-switch-button($button-bg-off, $button-border-off: $button-bg-off, $button-bg-on: $button-bg-off, $button-border-on: $button-border-off) {
+	&:empty ~ .switch-bar {
+		&:after {
+			background-color: $button-bg-off;
+			border: $switch-button-border-width solid $button-border-off;
 		}
 	}
 
 	&:checked ~ .switch-bar {
 		&:after {
-			background-color: $button-bg;
-		}
-
-		&:before {
-			background-color: $on-bg;
-		}
-
-		.switch-icon {
-			color: $on-color;
-
-			&.button-icon {
-				color: $on-bg;
-			}
+			background-color: $button-bg-on;
+			border: $switch-button-border-width solid $button-border-on;
 		}
 	}
 }
 
-.switch-toggle {
-	display: block;
-	float: left;
+@mixin color-switch-bar-icon($off-color, $on-color: $off-color) {
+	&:empty ~ .switch-bar .switch-icon {
+		color: $off-color;
+	}
+
+	&:checked ~ .switch-bar .switch-icon {
+		color: $on-color;
+	}
+}
+
+@mixin color-switch-button-icon($off-color, $on-color: $off-color) {
+	&:empty ~ .switch-bar .switch-icon.button-icon {
+		color: $off-color;
+	}
+
+	&:checked ~ .switch-bar .switch-icon.button-icon {
+		color: $on-color;
+	}
+}
+
+.switch-bar {
+	.switch-toggle {
+		display: block;
+		float: left;
+		text-transform: uppercase;
+	}
+
+	.switch-icon {
+		font-size: $switch-bar-font-size;
+	}
+
+	.button-icon {
+		font-size: $switch-button-font-size;
+	}
 }
 
 input.switch {
@@ -48,57 +100,57 @@ input.switch {
 	font-size: 62.5%;
 	margin-left: -999em;
 
-	@include switch-variant(#FFF, #FFF, #34ADAB, #868B96, #FFF);
+	@include color-switch-bar(#65B6F0);
+	@include color-switch-button(#FFF);
+	@include color-switch-bar-icon(#FFF);
+	@include color-switch-button-icon(#34ADAB);
 
 	&:empty ~ .switch-bar {
 		cursor: pointer;
 		display: block;
 		font-size: 1.2rem;
-		line-height: 2.6rem;
-		min-height: 2.6rem;
+		line-height: $switch-bar-height;
+		min-height: $switch-bar-height;
 		position: relative;
+		text-indent: set-data-label-text-position($switch-bar-width, $switch-bar-padding);
 
 		@include user-select(none);
 
-		text-indent: 5rem;
-
 		&:after, &:before {
-			border-width: 0;
 			bottom: 0;
 			content: ' ';
 			display: block;
 			left: 0;
 			position: absolute;
 			top: 0;
-			width: 4.4rem;
+			width: $switch-bar-width;
 		}
 
 		&:after {
-			border-radius: 0;
-			bottom: 0.4rem;
-			left: 0.4rem;
-			top: 0.4rem;
-			width: 1.8rem;
+			border-radius: $switch-button-border-radius;
+			bottom: $switch-bar-padding;
+			height: $switch-button-width;
+			left: $switch-bar-padding;
+			top: $switch-bar-padding;
+			width: $switch-button-width;
 		}
 
 		&:before {
-			border-radius: 0;
+			border-radius: $switch-bar-border-radius;
 		}
 
 		.switch-toggle:after {
 			content: attr(data-label-off);
-			text-transform: uppercase;
 		}
 
 		.switch-icon {
-			font-size: 1.4rem;
-			left: 0.4rem;
-			line-height: 1.8rem;
+			left: $switch-bar-padding;
+			line-height: $switch-button-width;
 			position: absolute;
 			text-align: center;
 			text-indent: 0;
-			top: 0.4rem;
-			width: 1.8rem;
+			top: $switch-bar-padding;
+			width: $switch-button-width;
 			z-index: 1;
 		}
 
@@ -107,22 +159,22 @@ input.switch {
 		}
 
 		.switch-icon-on {
-			left: 0.2rem;
+			left: $switch-bar-padding;
 		}
 
 		.switch-icon-off {
-			left: 2.4rem;
+			left: $switch-bar-width - $switch-bar-padding - $switch-button-width;
 		}
 	}
 
 	&:checked ~ .switch-bar {
 		&:after {
-			border-radius: 0;
-			left: 2.2rem;
+			border-radius: $switch-button-border-radius;
+			left: $switch-bar-width - $switch-bar-padding - $switch-button-width;
 		}
 
 		&:before {
-			border-radius: 0;
+			border-radius: $switch-bar-border-radius;
 		}
 
 		.switch-toggle:after {
@@ -130,7 +182,7 @@ input.switch {
 		}
 
 		.button-icon {
-			left: 2.2rem;
+			left: $switch-bar-width - $switch-bar-padding - $switch-button-width;
 		}
 
 		.button-icon-on, .switch-icon-on {
@@ -148,13 +200,13 @@ input.switch {
 			opacity: 0.4;
 		}
 	}
-}
 
-input.switch {
 	&:focus ~ .switch-bar:before {
 		box-shadow: 0 0 3px 2px #66AFE6;
 	}
+}
 
+input.switch {
 	&:empty ~ .switch-bar {
 		&:after, &:before, .switch-icon, .switch-toggle:after, .switch-toggle:before {
 			@include transition(all 100ms ease-in);
