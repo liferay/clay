@@ -105,7 +105,9 @@ $switch-button-icon-color: #34ADAB;
 input.switch {
 	float: left;
 	font-size: 62.5%;
-	margin-left: -999em;
+	margin-left: 0;
+	opacity: 0;
+	width: $switch-bar-width;
 
 	@include color-switch-bar(#FFF, #D1D6D9, $switch-bar-bg, $switch-bar-border-color);
 	@include color-switch-button(#869CAD, #869CAD, $switch-button-bg, $switch-button-border-color);
