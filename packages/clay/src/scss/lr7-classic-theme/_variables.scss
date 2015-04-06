@@ -473,12 +473,26 @@ $popover-box-shadow: $popover-box-shadow-x $popover-box-shadow-y $popover-box-sh
 
 $popover-bg:                                      #FFF;
 $popover-max-width:                               276px;
-$popover-border-color:                            #2B4259;
-$popover-fallback-border-color:                   #2B4259;
-$popover-title-color: #FFF;
-$popover-title-bg:                                #2B4259;
+$popover-border-color:                            #AEB7BD;
+$popover-fallback-border-color:                   #AEB7BD;
+$popover-title-color: $text-color;
+$popover-title-bg:                                #FFF;
 $popover-arrow-width:                             8px;
 $popover-arrow-color:                             #FFF;
+
+//== Tooltips
+$tooltip-border-radius: $border-radius-default;
+
+//** Tooltip box shadow settings (Default is global box shadow settings)
+$tooltip-box-shadow-x: $box-shadow-default-x;
+$tooltip-box-shadow-y: $box-shadow-default-y;
+$tooltip-box-shadow-blur: $box-shadow-default-blur;
+$tooltip-box-shadow-spread: $box-shadow-default-spread;
+$tooltip-box-shadow-bg: $box-shadow-default-bg;
+$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg;
+
+$tooltip-bg:                                      #29353D;
+$tooltip-opacity:                                 1;
 
 //Modals
 $modal-box-shadow: $box-shadow-default;
@@ -550,20 +564,6 @@ $breadcrumb-borderless-link-bg: transparent;
 $breadcrumb-borderless-active-color: $brand-primary;
 $breadcrumb-borderless-separator-bg: $breadcrumb-borderless-bg;
 $breadcrumb-borderless-separator-color: #D2D6DF;
-
-//== Tooltips
-$tooltip-border-radius: $border-radius-default;
-
-//** Tooltip box shadow settings (Default is global box shadow settings)
-$tooltip-box-shadow-x: $box-shadow-default-x;
-$tooltip-box-shadow-y: $box-shadow-default-y;
-$tooltip-box-shadow-blur: $box-shadow-default-blur;
-$tooltip-box-shadow-spread: $box-shadow-default-spread;
-$tooltip-box-shadow-bg: $box-shadow-default-bg;
-$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg;
-
-$tooltip-bg:                                      #2B4259;
-$tooltip-opacity:                                 1;
 
 //Navs
 $nav-link-color: #2B4259;

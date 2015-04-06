@@ -26,10 +26,12 @@
 
 .popover-title {
 	background-color: $popover-title-bg;
-	border-radius: 0;
+	border-color: $popover-border-color;
+	border-radius: $popover-border-radius $popover-border-radius 0 0;
 	color: $popover-title-color;
 	font-size: 16px;
-	padding: 10px 14px;
+	margin: 0 16px;
+	padding: 16px 0;
 }
 
 // Popover box shadows
