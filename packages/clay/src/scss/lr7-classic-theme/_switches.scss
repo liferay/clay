@@ -90,8 +90,8 @@ $switch-button-icon-color: #34ADAB;
 	.switch-toggle {
 		display: block;
 		float: left;
+		min-width: $switch-bar-width;
 		text-transform: uppercase;
-		width: $switch-bar-width;
 	}
 
 	.switch-icon {
