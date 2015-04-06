@@ -4,7 +4,7 @@
 	.popover {
 		display: block;
 		position: relative;
-		margin-bottom: 50px;
+		margin-top: 25px;
 
 		&.left {
 			margin-left: 0;
@@ -16,6 +16,6 @@
 
 .tooltip-display {
 	> div {
-		height: 75px;
+		height: 40px;
 	}
 }
