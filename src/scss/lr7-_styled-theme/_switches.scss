@@ -91,6 +91,7 @@ $switch-button-icon-color: $input-color;
 		display: block;
 		float: left;
 		text-transform: uppercase;
+		width: $switch-bar-width;
 	}
 
 	.switch-icon {
@@ -103,11 +104,9 @@ $switch-button-icon-color: $input-color;
 }
 
 input.switch {
-	float: left;
 	font-size: 62.5%;
-	margin-left: 0;
 	opacity: 0;
-	width: $switch-bar-width;
+	position: absolute;
 
 	@include color-switch-bar($switch-bar-bg, $switch-bar-border-color);
 	@include color-switch-button($switch-button-bg, $switch-button-border-color);
