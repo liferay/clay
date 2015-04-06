@@ -3,104 +3,159 @@ title: Popovers and Tooltips
 section: Components
 ---
 
-<h3><em>Tooltips Default</em></h3>
-
-<div class="row tooltip-display">
-	<div class="col-md-3">
-		<div class="tooltip right in">
-			<div class="tooltip-arrow"></div>
-
-			<div class="tooltip-inner">
-				<div>Tooltip</div>
-			</div>
-		</div>
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Tooltips Default</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Tooltips</p>
+		</blockquote>
 	</div>
 
-	<div class="col-md-3">
-		<div class="tooltip left in">
-			<div class="tooltip-arrow"></div>
-
-			<div class="tooltip-inner">
-				<div>Tooltip</div>
+	<div class="tooltip-display">
+		<div class="col-md-3">
+			<div class="tooltip right in">
+				<div class="tooltip-arrow"></div>
+				<div class="tooltip-inner">
+					<div>Tooltip</div>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="col-md-3">
-		<div class="tooltip bottom in">
-			<div class="tooltip-arrow"></div>
-
-			<div class="tooltip-inner">
-				<div>Tooltip</div>
+		<div class="col-md-3">
+			<div class="tooltip left in">
+				<div class="tooltip-arrow"></div>
+				<div class="tooltip-inner">
+					<div>Tooltip</div>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="col-md-3">
-		<div class="tooltip top in">
-			<div class="tooltip-arrow"></div>
+		<div class="col-md-3">
+			<div class="tooltip bottom in">
+				<div class="tooltip-arrow"></div>
+				<div class="tooltip-inner">
+					<div>Tooltip</div>
+				</div>
+			</div>
+		</div>
 
-			<div class="tooltip-inner">
-				<div>Tooltip</div>
+		<div class="col-md-3">
+			<div class="tooltip top in">
+				<div class="tooltip-arrow"></div>
+				<div class="tooltip-inner">
+					<div>Tooltip</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<h3><em>Tooltips with box shadows</em></h3>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">```<div class="tooltip right in">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        <div>Tooltip</div>
+    </div>
+</div>
 
-<div class="row shadows tooltip-display">
-	<div class="col-md-3">
-		<div class="tooltip right in">
-			<div class="tooltip-arrow"></div>
+<div class="tooltip left in">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        <div>Tooltip</div>
+    </div>
+</div>
 
-			<div class="tooltip-inner">
-				<div>Tooltip</div>
+<div class="tooltip bottom in">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        <div>Tooltip</div>
+    </div>
+</div>
+
+<div class="tooltip top in">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        <div>Tooltip</div>
+    </div>
+</div>```</code></pre>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Tooltips No Box Shadows</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class no-shadows to <code>.tooltip</code> or to the containing parent to remove box shadows.</p>
+		</blockquote>
+	</div>
+
+	<div class="no-shadows tooltip-display">
+		<div class="col-md-3">
+			<div class="tooltip right in">
+				<div class="tooltip-arrow"></div>
+				<div class="tooltip-inner">
+					<div>Tooltip</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="tooltip left in">
+				<div class="tooltip-arrow"></div>
+				<div class="tooltip-inner">
+					<div>Tooltip</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="tooltip bottom in">
+				<div class="tooltip-arrow"></div>
+				<div class="tooltip-inner">
+					<div>Tooltip</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="tooltip top in">
+				<div class="tooltip-arrow"></div>
+				<div class="tooltip-inner">
+					<div>Tooltip</div>
+				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
-	<div class="col-md-3">
-		<div class="tooltip left in">
-			<div class="tooltip-arrow"></div>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">```<div class="no-shadows tooltip right in">...</div>
 
-			<div class="tooltip-inner">
-				<div>Tooltip</div>
-			</div>
-		</div>
-	</div>
+<div class="no-shadows tooltip left in">...</div>
 
-	<div class="col-md-3">
-		<div class="tooltip bottom in">
-			<div class="tooltip-arrow"></div>
+<div class="no-shadows tooltip bottom in">...</div>
 
-			<div class="tooltip-inner">
-				<div>Tooltip</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-3">
-		<div class="tooltip top in">
-			<div class="tooltip-arrow"></div>
-
-			<div class="tooltip-inner">
-				<div>Tooltip</div>
-			</div>
-		</div>
-	</div>
+<div class="no-shadows tooltip top in">...</div>```</code></pre>
 </div>
 
 <div id="popovers">
-	<h3><em>Popover no-shadows</em></h3>
+	<div class="row row-spacing">
+		<div class="col-md-12">
+			<h3>Popovers Default</h3>
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Popovers</p>
+			</blockquote>
+		</div>
 
-	<div class="row">
 		<div class="col-md-6">
 			<div class="popover top">
 				<div class="arrow"></div>
-
 				<h3 class="popover-title">Popover top</h3>
-
 				<div class="popover-content">
 					<div>Cup lungo, spoon coffee affogato, brewed extraction skinny percolator blue mountain.</div>
 				</div>
@@ -110,23 +165,17 @@ section: Components
 		<div class="col-md-6">
 			<div class="popover right">
 				<div class="arrow"></div>
-
 				<h3 class="popover-title">Popover right</h3>
-
 				<div class="popover-content">
 					<div> Viennese flavour cup eu, percolator froth ristretto mazagran caffeine. White roast seasonal, mocha trifecta, dripper caffeine spoon acerbic to go macchiato strong.</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="row">
 		<div class="col-md-6">
 			<div class="popover bottom">
 				<div class="arrow"></div>
-
 				<h3 class="popover-title">Popover bottom</h3>
-
 				<div class="popover-content">
 					<div>Single shot, café au lait aromatic body robusta body cream mocha viennese steamed aged. Irish roast, aromatic seasonal, caramelization grinder french press coffee cortado lungo skinny.</div>
 				</div>
@@ -136,9 +185,7 @@ section: Components
 		<div class="col-md-6">
 			<div class="popover left">
 				<div class="arrow"></div>
-
 				<h3 class="popover-title">Popover left</h3>
-
 				<div class="popover-content">
 					<div>Dark to go foam froth fair trade irish latte dark carajillo. Turkish aromatic a, rich single origin kopi-luwak chicory carajillo.</div>
 				</div>
@@ -146,16 +193,70 @@ section: Components
 		</div>
 	</div>
 
-	<h3><em>Popover with box shadows</em></h3>
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+	<pre><code>```<div class="popover top">
+    <div class="arrow"></div>
+    <h3 class="popover-title">Popover top</h3>
+    <div class="popover-content">
+        <div>Cup lungo, spoon coffee affogato, brewed extraction skinny percolator blue mountain.</div>
+    </div>
+</div>
 
-	<div class="shadows">
-		<div class="row">
+<div class="popover right">
+    <div class="arrow"></div>
+    <h3 class="popover-title">Popover right</h3>
+    <div class="popover-content">
+        <div> Viennese flavour cup eu, percolator froth ristretto mazagran caffeine. White roast seasonal, mocha trifecta, dripper caffeine spoon acerbic to go macchiato strong.</div>
+    </div>
+</div>
+
+<div class="popover bottom">
+    <div class="arrow"></div>
+    <h3 class="popover-title">Popover bottom</h3>
+    <div class="popover-content">
+        <div>Single shot, café au lait aromatic body robusta body cream mocha viennese steamed aged. Irish roast, aromatic seasonal, caramelization grinder french press coffee cortado lungo skinny.</div>
+    </div>
+</div>
+
+<div class="popover left">
+    <div class="arrow"></div>
+    <h3 class="popover-title">Popover left</h3>
+    <div class="popover-content">
+        <div>Dark to go foam froth fair trade irish latte dark carajillo. Turkish aromatic a, rich single origin kopi-luwak chicory carajillo.</div>
+    </div>
+</div>```</code></pre>
+</div>
+
+	<div class="row row-spacing">
+		<div class="col-md-12">
+			<h3>Popover No Box Shadows</h3>
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Add class no-shadows to <code>.popover</code> or to the containing parent to remove box shadows.</p>
+			</blockquote>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+	<pre><code class="html">```<div class="no-shadows popover top">...</div>
+
+<div class="no-shadows popover right">...</div>
+
+<div class="no-shadows popover bottom">...</div>
+
+<div class="no-shadows popover left">...</div>```</code></pre>
+</div>
+
+		</div>
+
+		<div class="no-shadows">
 			<div class="col-md-6">
 				<div class="popover top">
 					<div class="arrow"></div>
-
 					<h3 class="popover-title">Popover top</h3>
-
 					<div class="popover-content">
 						<div>Cup lungo, spoon coffee affogato, brewed extraction skinny percolator blue mountain.</div>
 					</div>
@@ -165,23 +266,17 @@ section: Components
 			<div class="col-md-6">
 				<div class="popover right">
 					<div class="arrow"></div>
-
 					<h3 class="popover-title">Popover right</h3>
-
 					<div class="popover-content">
 						<div> Viennese flavour cup eu, percolator froth ristretto mazagran caffeine. White roast seasonal, mocha trifecta, dripper caffeine spoon acerbic to go macchiato strong.</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="row">
 			<div class="col-md-6">
 				<div class="popover bottom">
 					<div class="arrow"></div>
-
 					<h3 class="popover-title">Popover bottom</h3>
-
 					<div class="popover-content">
 						<div>Single shot, café au lait aromatic body robusta body cream mocha viennese steamed aged. Irish roast, aromatic seasonal, caramelization grinder french press coffee cortado lungo skinny.</div>
 					</div>
@@ -191,9 +286,7 @@ section: Components
 			<div class="col-md-6">
 				<div class="popover left">
 					<div class="arrow"></div>
-
 					<h3 class="popover-title">Popover left</h3>
-
 					<div class="popover-content">
 						<div>Dark to go foam froth fair trade irish latte dark carajillo. Turkish aromatic a, rich single origin kopi-luwak chicory carajillo.</div>
 					</div>
