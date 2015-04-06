@@ -81,27 +81,20 @@ $state-danger-bg:                lighten($state-danger-text, 40%);
 $state-danger-border:            $state-danger-text;
 
 //== Border Radius
-//** Defines global border-radius
-$border-radius-default: 0;
+//## Defines global border-radius
+$border-radius-default: 2px;
 $border-radius-base:                       $border-radius-default;
 $border-radius-large:                      $border-radius-default * 1.5;
 $border-radius-small:                      $border-radius-default * 0.75;
 
 //== Box Shadow
-$popover-arrow-width: 10px;
+//## Defines global box-shadows
 $box-shadow-default-x: 0;
 $box-shadow-default-y: 0;
 $box-shadow-default-blur: 3px;
 $box-shadow-default-spread: 1px;
 $box-shadow-default-bg: rgba(0, 0, 0, 0.2);
 $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
-$box-shadow-arrow-default-blur: $box-shadow-default-blur;
-
-@if $box-shadow-default-blur >= 3 {
-	$box-shadow-arrow-default-blur: 3px;
-}
-
-$box-shadow-arrow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-arrow-default-blur $box-shadow-default-bg;
 
 //== Buttons
 $btn-group-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 $box-shadow-default-bg;
@@ -469,8 +462,14 @@ $pager-borderless1-disabled-border: $pager-borderless1-border;
 
 //Popovers
 $popover-border-radius: $border-radius-default;
-$popover-box-shadow: $box-shadow-default;
-$popover-arrow-box-shadow: $box-shadow-arrow-default;
+
+//** Popover box shadow settings (Default is global box shadow settings)
+$popover-box-shadow-x: $box-shadow-default-x;
+$popover-box-shadow-y: $box-shadow-default-y;
+$popover-box-shadow-blur: $box-shadow-default-blur;
+$popover-box-shadow-spread: $box-shadow-default-spread;
+$popover-box-shadow-bg: $box-shadow-default-bg;
+$popover-box-shadow: $popover-box-shadow-x $popover-box-shadow-y $popover-box-shadow-blur $popover-box-shadow-spread $popover-box-shadow-bg;
 
 $popover-bg:                                      #FFF;
 $popover-max-width:                               276px;
@@ -478,7 +477,7 @@ $popover-border-color:                            #2B4259;
 $popover-fallback-border-color:                   #2B4259;
 $popover-title-color: #FFF;
 $popover-title-bg:                                #2B4259;
-$popover-arrow-width:                             10px;
+$popover-arrow-width:                             8px;
 $popover-arrow-color:                             #FFF;
 
 //Modals
@@ -554,12 +553,15 @@ $breadcrumb-borderless-separator-color: #D2D6DF;
 
 //== Tooltips
 $tooltip-border-radius: $border-radius-default;
-$tooltip-box-shadow-x: -1px;
-$tooltip-box-shadow-y: 1px;
-$tooltip-box-shadow-blur: 2px;
-$tooltip-box-shadow-spread: 1px;
-$tooltip-box-shadow-bg: rgba(0, 0, 0, 0.2);
+
+//** Tooltip box shadow settings (Default is global box shadow settings)
+$tooltip-box-shadow-x: $box-shadow-default-x;
+$tooltip-box-shadow-y: $box-shadow-default-y;
+$tooltip-box-shadow-blur: $box-shadow-default-blur;
+$tooltip-box-shadow-spread: $box-shadow-default-spread;
+$tooltip-box-shadow-bg: $box-shadow-default-bg;
 $tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg;
+
 $tooltip-bg:                                      #2B4259;
 $tooltip-opacity:                                 1;
 
