@@ -239,6 +239,17 @@ $dropdown-inverse-divider-bg: $brand-default-active;
 $dropdown-inverse-header-color: #FFF;
 $dropdown-inverse-arrow-color: $dropdown-inverse-bg;
 
+// Toolbars
+$header-toolbar-default-bg: #29343D;
+$header-toolbar-default-color: #FFF;
+$header-toolbar-default-link-color: #FFF;
+$header-toolbar-default-link-hover-bg: #869CAD;
+
+$header-toolbar-secondary-bg: $header-toolbar-default-bg;
+$header-toolbar-secondary-color: $header-toolbar-default-color;
+$header-toolbar-secondary-link-color: $header-toolbar-default-link-color;
+$header-toolbar-secondary-link-hover-bg: $header-toolbar-default-link-hover-bg;
+
 // Nameplates
 $nameplate-list-border-color: $brand-default;
 $user-icon-default-bg: #757D91;
