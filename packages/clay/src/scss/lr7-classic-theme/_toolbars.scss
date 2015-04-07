@@ -1,4 +1,4 @@
-.toolbar, .toolbar-no-break {
+.toolbar, .toolbar-no-break, .header-toolbar {
 	@include clearfix-hack();
 
 	.nameplate-content, .nameplate-field {
@@ -78,7 +78,7 @@
 		width: auto;
 	}
 
-	.toolbar-no-break {
+	.toolbar-no-break, .header-toolbar {
 		@include clearfix-hack();
 		@include clearfix();
 
@@ -153,7 +153,7 @@
 		float: left;
 	}
 
-	.toolbar-no-break {
+	.toolbar-no-break, .header-toolbar {
 		.tbg-xs-newline {
 			clear: both;
 
@@ -235,6 +235,11 @@
 			padding: 4px 8px;
 		}
 	}
+
+	.toolbar-group-expand-text {
+		line-height: 38px;
+		padding: 0 2px;
+	}
 }
 
 .header-toolbar-secondary {
@@ -249,50 +254,46 @@
 			}
 		}
 	}
+
+	.toolbar-group-expand-text {
+		line-height: 38px;
+	}
 }
 
 // Header Toolbar Skins
 
-.header-toolbar-primary {
-	background-color: #1E5EC8;
+.header-toolbar-default {
+	background-color: $header-toolbar-default-bg;
 
 	.toolbar-group-content {
 		> a, > .dropdown > a {
-			color: #FFF;
+			color: $header-toolbar-default-link-color;
 
 			&:focus, &:hover {
-				background-color: #2F73E0;
+				background-color: $header-toolbar-default-link-hover-bg;
 			}
 		}
 	}
 
 	.toolbar-group-expand, .toolbar-group-expand-text {
-		color: #FFF;
-	}
-
-	.toolbar-group-expand-text {
-		line-height: 38px;
+		color: $header-toolbar-default-color;
 	}
 
 	&.header-toolbar-secondary {
-		background-color: #32A8E6;
+		background-color: $header-toolbar-secondary-bg;
 
 		.toolbar-group-content {
 			> a, > .dropdown > a {
-				color: #FFF;
+				color: $header-toolbar-secondary-link-color;
 
 				&:focus, &:hover {
-					background-color: #56B9EA;
+					background-color: $header-toolbar-secondary-link-hover-bg;
 				}
 			}
 		}
 
 		.toolbar-group-expand, .toolbar-group-expand-text {
-			color: #FFF;
-		}
-
-		.toolbar-group-expand-text {
-			line-height: 38px;
+			color: $header-toolbar-secondary-color;
 		}
 	}
 }
@@ -301,12 +302,12 @@
 	@include color-header-toolbar(#FFF, $brand-danger);
 }
 
-.header-toolbar-default {
-	@include color-header-toolbar(#FFF, $brand-default);
-}
-
 .header-toolbar-info {
 	@include color-header-toolbar(#FFF, $brand-info);
+}
+
+.header-toolbar-primary {
+	@include color-header-toolbar(#FFF, $brand-primary);
 }
 
 .header-toolbar-success {

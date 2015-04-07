@@ -1,5 +1,6 @@
 @mixin color-header-toolbar($color, $bg-color) {
 	background-color: $bg-color;
+	border-color: darken($bg-color, 3%);
 
 	.toolbar-group-content {
 		> a, > .dropdown > a {
@@ -15,12 +16,9 @@
 		color: $color;
 	}
 
-	.toolbar-group-expand-text {
-		line-height: 38px;
-	}
-
 	&.header-toolbar-secondary {
 		background-color: lighten($bg-color, 12%);
+		border-color: lighten($bg-color, 10%);
 
 		.toolbar-group-content {
 			> a, > .dropdown > a {
@@ -34,10 +32,6 @@
 
 		.toolbar-group-expand, .toolbar-group-expand-text {
 			color: $color;
-		}
-
-		.toolbar-group-expand-text {
-			line-height: 38px;
 		}
 	}
 }
