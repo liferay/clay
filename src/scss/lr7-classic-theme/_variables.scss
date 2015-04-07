@@ -1,3 +1,5 @@
+$golden-ratio: 1.6180339;
+
 $body-bg:                                  #FFF;
 $gray-darker:                              lighten(#000, 13.5%) !default; // #222
 $gray-dark:                                lighten(#000, 20%) !default;   // #333
@@ -97,34 +99,93 @@ $box-shadow-default-bg: rgba(0, 0, 0, 0.2);
 $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
 
 //== Buttons
+//## Buttons: border radius
+$btn-border-radius: 30px;
+$btn-border-radius-lg: round($btn-border-radius * 1.5);
+$btn-border-radius-sm: round($btn-border-radius * 0.75);
+$btn-border-radius-xs: round($btn-border-radius * 0.5);
+
+//## Button: box shadows
 $btn-group-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 $box-shadow-default-bg;
 $btn-group-toolbar-box-shadow: -4px 4px 0 0 $box-shadow-default-bg;
 $btn-group-vertical-box-shadow: $btn-group-toolbar-box-shadow;
 
-$btn-default-color:                        #FFF;
-$btn-default-bg:                           $brand-default;
+//## Buttons: padding, borders, font-size
+$btn-border-width: 2px;
+$btn-font-size: 14px;
+$btn-padding-horizontal: 8px;
+$btn-padding-vertical: round($btn-padding-horizontal * 2.4);
+$btn-lg-font-size: 18px;
+$btn-lg-padding-horizontal: 12px;
+$btn-lg-padding-vertical: round($btn-lg-padding-horizontal * 2.4);
+$btn-sm-font-size: 12px;
+$btn-sm-padding-horizontal: 4px;
+$btn-sm-padding-vertical: round($btn-sm-padding-horizontal * 2.4);
+$btn-xs-font-size: 10px;
+$btn-xs-padding-horizontal: 2px;
+$btn-xs-padding-vertical: round($btn-xs-padding-horizontal * 2.4);
+
+//## Buttons: colors
+$btn-default-color:                        $brand-default;
+$btn-default-bg:                           #FFF;
 $btn-default-border:                       $brand-default;
-$btn-default-border-width: 0;
+$btn-default-hover-color: $btn-default-color;
+$btn-default-hover-bg: $btn-default-bg;
+$btn-default-hover-border: $brand-primary;
+$btn-default-active-color: $btn-default-color;
+$btn-default-active-bg: $btn-default-bg;
+$btn-default-active-border: darken($btn-default-hover-border, 8%);
 
 $btn-primary-color:                        #FFF;
 $btn-primary-bg:                           $brand-primary;
 $btn-primary-border:                       $btn-primary-bg;
+$btn-primary-hover-color: $btn-primary-color;
+$btn-primary-hover-bg: darken($btn-primary-bg, 8%);
+$btn-primary-hover-border: $btn-primary-hover-bg;
+$btn-primary-active-color: $btn-primary-color;
+$btn-primary-active-bg: darken($btn-primary-hover-bg, 12%);
+$btn-primary-active-border: $btn-primary-active-bg;
+
 
 $btn-success-color:                        #FFF;
 $btn-success-bg:                           $brand-success;
 $btn-success-border:                       $btn-success-bg;
+$btn-success-hover-color: $btn-success-color;
+$btn-success-hover-bg: darken($btn-success-bg, 8%);
+$btn-success-hover-border: $btn-success-hover-bg;
+$btn-success-active-color: $btn-success-color;
+$btn-success-active-bg: darken($btn-success-hover-bg, 12%);
+$btn-success-active-border: $btn-success-active-bg;
 
 $btn-info-color:                           #FFF;
 $btn-info-bg:                              $brand-info;
 $btn-info-border:                          $btn-info-bg;
+$btn-info-hover-color: $btn-info-color;
+$btn-info-hover-bg: darken($btn-info-bg, 8%);
+$btn-info-hover-border: $btn-info-hover-bg;
+$btn-info-active-color: $btn-info-color;
+$btn-info-active-bg: darken($btn-info-hover-bg, 12%);
+$btn-info-active-border: $btn-info-active-bg;
 
 $btn-warning-color:                        #FFF;
 $btn-warning-bg:                           $brand-warning;
 $btn-warning-border:                       $btn-warning-bg;
+$btn-warning-hover-color: $btn-warning-color;
+$btn-warning-hover-bg: darken($btn-warning-bg, 8%);
+$btn-warning-hover-border: $btn-warning-hover-bg;
+$btn-warning-active-color: $btn-warning-color;
+$btn-warning-active-bg: darken($btn-warning-hover-bg, 12%);
+$btn-warning-active-border: $btn-warning-active-bg;
 
 $btn-danger-color:                         #FFF;
 $btn-danger-bg:                            $brand-danger;
 $btn-danger-border:                        $btn-danger-bg;
+$btn-danger-hover-color: $btn-danger-color;
+$btn-danger-hover-bg: darken($btn-danger-bg, 8%);
+$btn-danger-hover-border: $btn-danger-hover-bg;
+$btn-danger-active-color: $btn-danger-color;
+$btn-danger-active-bg: darken($btn-danger-hover-bg, 12%);
+$btn-danger-active-border: $btn-danger-active-bg;
 
 $btn-link-disabled-color:                  #FFF;
 
