@@ -1,4 +1,4 @@
-.toolbar, .toolbar-no-break {
+.toolbar, .toolbar-no-break, .header-toolbar {
 	@include clearfix-hack();
 
 	.nameplate {
@@ -80,7 +80,9 @@
 		width: auto;
 	}
 
-	.toolbar-no-break {
+	.toolbar-no-break, .header-toolbar {
+		@include clearfix();
+
 		.toolbar-group {
 			display: table;
 			float: left;
@@ -198,7 +200,7 @@
 		float: left;
 	}
 
-	.toolbar-no-break {
+	.toolbar-no-break, .header-toolbar {
 		.tbg-xs-newline {
 			clear: both;
 
