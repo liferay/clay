@@ -3,40 +3,30 @@ title: TODO
 navIndex: last
 ---
 
-### Update bootstrap variables with custom styles from lr7 style guide
-##### definition of NAV BAR
-- separate the lr7 navbar from navbar-default
-- jquery plugin for search open and close in mobile
+##### Organize UX Guidelines
+- split up _variables.scss into smaller files like mixins, pattern should follow something like:
+	- theme variables
+		- global variables
+		- module1 variables
+		- module2 variables
+		- etc
+	- theme mixins
+	- user defined custom variables
+	- user defined custom mixins
+	- bootstrap variables, mixins, css
+	- theme css
 
-##### Cards Component
-- documentation
-- extending cards documentation
+##### Example Pages
+- create blogs example page PDF page 16, 17
+
+##### Toolbar
+- toolbar buttons should have smaller border radius.
+
+##### Breadcrumbs
+- create module to truncate depending on screen size.
+
+##### Slideout Drawer
+- finish slideout drawer fixed module
 
 ##### Color Scheme
 - redo layout
-
-##### Nav
-- create tutorial how to extend .nav component
-
-##### Image and Thumbnails
-- create component for multiple caption styles
-
-##### definition of BUTTONS
-
-##### ~~definition of HEADERS~~
-- ~~definition of TOOLTIPS~~
-- ~~definition of POPOVERS~~
-- ~~definition of TYPOGRAPHY~~
-- definition of FORMS (Inline form - Horizontal Form)
-- definition of FORMS (Supported form controls)
-- definition of FORMS (Form control states)
-- ~~definition of FORMS (Checkboxes and Radios)~~
-- definition of FORMS (Validation States)
-- definition of FORMS (Control Sizing)
-- definition of Dropmenus (needs update from Spain)
-- definition of pagination (truncated)
-- definition of TABLES
-- ~~definition of NAV TABS~~
-- definition of BADGES
-- definition of LABELS
-- definition of PANELS
