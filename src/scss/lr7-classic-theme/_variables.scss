@@ -100,15 +100,10 @@ $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-def
 
 //== Buttons
 //## Buttons: border radius
-$btn-border-radius: 30px;
+$btn-border-radius: 20px;
 $btn-border-radius-lg: round($btn-border-radius * 1.5);
 $btn-border-radius-sm: round($btn-border-radius * 0.75);
 $btn-border-radius-xs: round($btn-border-radius * 0.5);
-
-//## Button: box shadows
-$btn-group-box-shadow: $box-shadow-default-x $box-shadow-default-y 0 0 $box-shadow-default-bg;
-$btn-group-toolbar-box-shadow: -4px 4px 0 0 $box-shadow-default-bg;
-$btn-group-vertical-box-shadow: $btn-group-toolbar-box-shadow;
 
 //## Buttons: padding, borders, font-size
 $btn-border-width: 2px;
