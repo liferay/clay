@@ -45,16 +45,15 @@ textarea.form-control {
 }
 
 .form-control {
-	@include box-shadow($form-control-box-shadow);
-
+	border-radius: $form-control-border-radius;
 	border-width: 0 0 2px 0;
+	box-shadow: $form-control-box-shadow;
 	font-size: $input-font-size-base;
 	padding: $padding-base-vertical;
 
 	&:focus {
 		border-width: 0 0 2px 0;
-
-		@include box-shadow($form-control-focus-box-shadow);
+		box-shadow: $form-control-focus-box-shadow;
 	}
 
 	&[disabled],

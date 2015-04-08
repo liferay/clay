@@ -106,6 +106,8 @@ $btn-border-radius-sm: round($btn-border-radius * 0.75);
 $btn-border-radius-xs: round($btn-border-radius * 0.5);
 
 //## Buttons: padding, borders, font-size
+/*** When changing any settings below, make sure to match the corresponding 
+		input-height to the button height. ***/
 $btn-border-width: 2px;
 $btn-font-size: 14px;
 $btn-padding-horizontal: 8px;
@@ -185,6 +187,8 @@ $btn-danger-active-border: $btn-danger-active-bg;
 $btn-link-disabled-color:                  #FFF;
 
 //== Forms
+$form-control-border-radius: 0;
+
 $form-control-box-shadow: none;
 $form-control-focus-box-shadow: none;
 $input-box-shadow: none;
@@ -205,6 +209,9 @@ $input-color-placeholder:                  #D7D9DD;
 $input-font-size-base: 16px;
 $input-font-size-large: 18px;
 $input-font-size-small: 13px;
+
+/*** When changing input, make sure to match the corresponding
+		 btn settings to the input height. ***/
 $input-height-base:                        36px;
 $input-height-large:                       48px;
 $input-height-small:                       24px;
