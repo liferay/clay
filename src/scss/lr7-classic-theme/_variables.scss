@@ -569,29 +569,38 @@ $modal-header-color: $text-color;
 $modal-header-close-color: $text-color;
 
 //== Alerts
-$alert-padding:                                   16px;
-$alert-border-radius:                             $border-radius-base;
+$alert-padding:                                   18px;
+$alert-border-radius:                             4px;
+
+//** For top only border use: 2px 0 0 0
+$alert-border-width: 0;
+
 $alert-link-font-weight:                          bold;
 
 $alert-default-bg: $state-default-bg;
-$alert-default-text: $text-color;
-$alert-default-border: $state-default-border;
+$alert-default-text: #9698A4;
+$alert-default-text-bold: darken($alert-default-text, 6%);
+$alert-default-border: lighten($alert-default-text, 12%);
 
-$alert-success-bg:                                $state-success-bg;
-$alert-success-text:                              $alert-default-text;
-$alert-success-border:                            $state-success-border;
+$alert-success-bg:                                #DDF3D5;
+$alert-success-text:                              #97C783;
+$alert-success-text-bold: darken($alert-success-text, 6%);
+$alert-success-border: lighten($alert-success-text, 12%);
 
-$alert-info-bg:                                   $state-info-bg;
-$alert-info-text:                                 $alert-default-text;
-$alert-info-border:                               $state-info-border;
+$alert-info-bg:                                   #E7F1F9;
+$alert-info-text:                                 #86BADA;
+$alert-info-text-bold: darken($alert-info-text, 6%);
+$alert-info-border: lighten($alert-info-text, 12%);
 
-$alert-warning-bg:                                $state-warning-bg;
-$alert-warning-text:                              $alert-default-text;
-$alert-warning-border:                            $state-warning-border;
+$alert-warning-bg:                                #F8F4D5;
+$alert-warning-text:                              #D6B679;
+$alert-warning-text-bold: darken($alert-warning-text, 6%);
+$alert-warning-border: lighten($alert-warning-text, 12%);
 
-$alert-danger-bg:                                 $state-danger-bg;
-$alert-danger-text:                               $alert-default-text;
-$alert-danger-border:                             $state-danger-border;
+$alert-danger-bg:                                 #F1D1D8;
+$alert-danger-text:                               #D77C8A;
+$alert-danger-text-bold: darken($alert-danger-text, 6%);
+$alert-danger-border: lighten($alert-danger-text, 12%);
 
 //Breadcrumbs
 $breadcrumb-padding-vertical:                     4px;
