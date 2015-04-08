@@ -603,14 +603,17 @@ $alert-danger-text-bold: darken($alert-danger-text, 6%);
 $alert-danger-border: lighten($alert-danger-text, 12%);
 
 //Breadcrumbs
+$breadcrumb-separator: '\f105';
 $breadcrumb-padding-vertical:                     4px;
 $breadcrumb-padding-horizontal:                   15px;
 
 $breadcrumb-bg:                                   $body-bg;
+//** breadcrumb-separator color
+$breadcrumb-color:                                #D4DADF;
 
-$breadcrumb-color:                                #ccc;
+$breadcrumb-active-color:                         #C1CBD1;
 
-$breadcrumb-active-color:                         $gray-light;
+$breadcrumb-link-color: #4A5E6A;
 
 //Breadcrumb Default
 $breadcrumb-default-bg: $body-bg;

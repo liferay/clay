@@ -111,6 +111,18 @@ section.row {
 	}
 }
 
+// Breadcrumbs Page
+
+.uxgl-breadcrumbs {
+	.breadcrumb {
+		margin-bottom: 5px;
+	}
+
+	.uxgl-toggle-code ~ .breadcrumb {
+		margin-top: 10px;
+	}
+}
+
 /* -------- Media Page -------- */
 
 #mediaPage img {
