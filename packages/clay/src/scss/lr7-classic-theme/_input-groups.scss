@@ -16,7 +16,14 @@
 .input-group-btn {
 	&:first-child {
 		> .btn, > .btn-group {
-			margin-right: -2px;
+			margin-right: -1px;
+		}
+	}
+
+	&:last-child {
+		> .btn,
+		> .btn-group {
+			margin-left: 0px;
 		}
 	}
 }
