@@ -5,7 +5,8 @@
 		top: 0;
 
 		&.open {
-			background-color: transparent;
+			background-color: $navbar-default-bg;
+			z-index: 1;
 
 			.basic-search-close {
 				display: inline-block;
@@ -28,7 +29,7 @@
 			.form-control {
 				left: 100%;
 
-				@include transition(all 0.5s ease);
+				@include transition(left 0.5s ease);
 			}
 		}
 	}
@@ -117,7 +118,7 @@
 
 		&:after {
 			background-color: $navbar-default-link-active-highlight;
-			content: "";
+			content: '';
 			display: block;
 			height: 4px;
 			position: relative;
@@ -347,7 +348,7 @@
 
 			&:after {
 				background-color: $navbar-default-link-active-highlight;
-				content: "";
+				content: '';
 				display: block;
 				height: 4px;
 				position: relative;
@@ -367,13 +368,15 @@
 			height: $navbar-height;
 
 			&:focus {
-				border-width: 0;
-				padding: 6px 16px;
+				border-width: 0 0 4px 0;
+				padding-bottom: $padding-base-vertical - 4;
 			}
 		}
 
 		.btn {
 			background-color: transparent;
+			border-width: 0;
+			border-radius: 0;
 			color: $text-color;
 			height: $navbar-height;
 			padding-left: 10px;
@@ -418,7 +421,7 @@
 
 				&:after {
 					background-color: $navbar-default-link-active-highlight;
-					content: "";
+					content: '';
 					display: block;
 					height: 4px;
 					position: relative;
