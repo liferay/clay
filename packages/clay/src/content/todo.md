@@ -25,6 +25,9 @@ navIndex: last
 ##### Breadcrumbs
 - create module to truncate depending on screen size.
 
+##### Sidenav
+- sidenav module open and close button should work if placed outside .sidenav-container
+
 ##### Slideout Drawer
 - finish slideout drawer fixed module
 
