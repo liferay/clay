@@ -110,17 +110,17 @@ $btn-border-radius-xs: round($btn-border-radius * 0.5);
 		input-height to the button height. ***/
 $btn-border-width: 2px;
 $btn-font-size: 14px;
-$btn-padding-horizontal: 8px;
-$btn-padding-vertical: round($btn-padding-horizontal * 2.4);
+$btn-padding-vertical: 6px;
+$btn-padding-horizontal: round($btn-padding-vertical * 2.4);
 $btn-lg-font-size: 18px;
-$btn-lg-padding-horizontal: 12px;
-$btn-lg-padding-vertical: round($btn-lg-padding-horizontal * 2.4);
+$btn-lg-padding-vertical: 10px;
+$btn-lg-padding-horizontal: round($btn-lg-padding-vertical * 2.4);
 $btn-sm-font-size: 12px;
-$btn-sm-padding-horizontal: 4px;
-$btn-sm-padding-vertical: round($btn-sm-padding-horizontal * 2.4);
+$btn-sm-padding-vertical: 4px;
+$btn-sm-padding-horizontal: round($btn-sm-padding-vertical * 2.4);
 $btn-xs-font-size: 10px;
-$btn-xs-padding-horizontal: 2px;
-$btn-xs-padding-vertical: round($btn-xs-padding-horizontal * 2.4);
+$btn-xs-padding-vertical: 2px;
+$btn-xs-padding-horizontal: round($btn-xs-padding-vertical * 2.4);
 
 //## Buttons: colors
 $btn-default-color:                        $brand-default;
