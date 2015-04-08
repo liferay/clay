@@ -1,5 +1,15 @@
+@mixin color-alert-text($color) {
+	color: $color;
+}
+
+@mixin color-alert-text-bold($color) {
+	.alert-link, .close, .lead {
+		color: $color;
+	}
+}
+
 .alert {
-	border-width: 2px 0 0 0;
+	border-width: $alert-border-width;
 	font-size: 16px;
 
 	.alert-link {
@@ -23,10 +33,34 @@
 	}
 }
 
-.alert-default {
-	@include alert-variant($alert-default-bg, $alert-default-border, $alert-default-text);
-}
-
 .alert-dismissible .close {
 	top: -1px;
+}
+
+// Alert Skins
+
+.alert-default {
+	@include alert-variant($alert-default-bg, $alert-default-border, $alert-default-text);
+	@include color-alert-text($alert-default-text);
+	@include color-alert-text-bold($alert-default-text-bold);
+}
+
+.alert-danger {
+	@include color-alert-text($alert-danger-text);
+	@include color-alert-text-bold($alert-danger-text-bold);
+}
+
+.alert-info {
+	@include color-alert-text($alert-info-text);
+	@include color-alert-text-bold($alert-info-text-bold);
+}
+
+.alert-success {
+	@include color-alert-text($alert-success-text);
+	@include color-alert-text-bold($alert-success-text-bold);
+}
+
+.alert-warning {
+	@include color-alert-text($alert-warning-text);
+	@include color-alert-text-bold($alert-warning-text-bold);
 }
