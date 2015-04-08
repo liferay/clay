@@ -99,6 +99,18 @@ section.row {
 	overflow-x: hidden;
 }
 
+// Alerts Page
+
+.uxgl-alerts {
+	.alert {
+		margin-bottom: 5px;
+	}
+
+	.uxgl-toggle-code ~ .alert {
+		margin-top: 10px;
+	}
+}
+
 /* -------- Media Page -------- */
 
 #mediaPage img {
