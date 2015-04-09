@@ -1,15 +1,16 @@
 +function($) {
 	var CollapsibleSearch = function(element, options) {
-		this.defaults.selector = element.selector;
-
 		this.init(element, options);
 	};
 
 	CollapsibleSearch.prototype = {
-		defaults: {
-		},
-
 		init: function(element, options) {
+			var instance = this;
+
+			instance.options = $.extend({}, $.fn.collapsibleSearch.defaults, options);
+
+			instance.options.selector = element.selector;
+
 			this._handleClick(element);
 		},
 
@@ -18,24 +19,34 @@
 				if (window.innerWidth < 768) {
 					var basicSearch = $(this).parents('.basic-search');
 					var closeButton = '<button class="basic-search-close btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-right"></span></button>';
+					var transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					basicSearch.find('.form-control').one(transitions, function(event) {
+						basicSearch.removeClass('basic-search-transition');
+					});
 
 					if (!basicSearch.find('.basic-search-close').length) {
 						$(this).before(closeButton);
 					}
 
 					basicSearch.on('click', '.basic-search-close', function(event) {
-						basicSearch.removeClass('open');
+						basicSearch.find('.form-control').one(transitions, function(event) {
+							basicSearch.removeClass('basic-search-transition');
+						});
+
+						basicSearch.addClass('basic-search-transition').removeClass('open');
 						basicSearch.off('click');
 					});
 
 					if (!basicSearch.hasClass('open')) {
 						event.preventDefault();
 
-						basicSearch.addClass('open');
+						basicSearch.addClass('basic-search-transition')
+						basicSearch.find('input[type="text"]').focus();
 
 						setTimeout(function() {
-							basicSearch.find('input[type="text"]').focus();
-						}, 500);
+							basicSearch.addClass('open');
+						}, 0);
 					}
 				}
 			});
@@ -46,6 +57,10 @@
 		new CollapsibleSearch(this, options);
 
 		return this;
+	};
+
+	$.fn.collapsibleSearch.defaults = {
+
 	};
 
 	$.fn.collapsibleSearch.Constructor = CollapsibleSearch;
