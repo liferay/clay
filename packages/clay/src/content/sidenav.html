@@ -3,10 +3,212 @@ title: Sidenav
 section: Components (JS)
 ---
 
-<div class="sidenav-container" id="sidenavDemo">
-	<div>
-		<button class="btn btn-default sidenav-toggler"><span class="glyphicon glyphicon-align-justify"></span> Toggle</button>
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>A jQuery plugin that creates a slideout navigation on the right or left. Different from <a href="../slideout-drawer/">slideout-drawer</a>, it pushes content over instead of sliding the drawer over the top.</p>
+		</blockquote>
+
+		<h5>Syntax with Options:</h5>
+
+<pre><code class="html">```<div class="sidenav-container">
+    <button class="btn btn-default sidenav-toggler">
+        <span class="glyphicon glyphicon-align-justify"></span> Toggle
+    </button>
+
+    <div class="sidenav-menu-slider">
+        <div class="sidenav-menu">
+            ... Your Side Nav Content ...
+        </div>
+    </div>
+
+    <div class="sidenav-content">
+        ... Your Main Content ...
+    </div>
+</div>
+
+<script>
+    $('.sidenav-container').sideNavigation({
+        content: '.sidenav-content', // class or id of content
+        navigation: '.sidenav-menu-slider', // class or id of navigation
+        position: 'left', // Positions sidenav-menu-slider. Values are left or right.
+        toggler: '.sidenav-toggler' // class or id of toggle button
+    });
+</script>```</code></pre>
+
 	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The toggle button should be placed inside <code>.sidenav-container</code>, but can be placed outside if needed. Just add a unique id to the toggle button and container, instantiate the sideNavigation plugin on the container id, and pass the toggle button id through plugin options.</p>
+		</blockquote>
+
+<button class="btn btn-default" id="mySidenavToggleId" style="margin-bottom:5px;">
+	<span class="glyphicon glyphicon-align-justify"></span> Toggle
+</button>
+
+<div class="sidenav-container" id="mySidenavContainerId">
+	<div class="sidenav-menu-slider" style="background:#FFF;">
+		<div class="sidenav-menu">
+			... Your Side Nav Content ...
+		</div>
+	</div>
+
+	<div class="sidenav-content" style="background:#EEE;">
+		... Your Main Content ...
+	</div>
+</div>
+
+<script>
+	$('#mySidenavContainerId').sideNavigation({
+		toggler: '#mySidenavToggleId'
+	});
+</script>
+
+<div class="uxgl-toggle-code">
+  <a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+<pre><code class="html">```<button class="btn btn-default" id="mySidenavToggleId">
+    <span class="glyphicon glyphicon-align-justify"></span> Toggle
+</button>
+
+<div class="sidenav-container" id="mySidenavContainerId">
+    <div class="sidenav-menu-slider">
+        <div class="sidenav-menu">
+            ... Your Side Nav Content ...
+        </div>
+    </div>
+
+    <div class="sidenav-content">
+        ... Your Main Content ...
+    </div>
+</div>
+
+<script>
+    $('#mySidenavContainerId').sideNavigation({
+        toggler: '#mySidenavToggleId'
+    });
+</script>```</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The toggle button should be placed inside <code>.sidenav-container</code>, but can be placed outside if needed. Just add a unique id to the toggle button and container, instantiate the sideNavigation plugin on the container id, and pass the toggle button id through plugin options.</p>
+		</blockquote>
+
+<button class="btn btn-default" id="mySidenavToggleId1" style="margin-bottom:5px;">
+	<span class="glyphicon glyphicon-align-justify"></span> Toggle
+</button>
+
+<div class="sidenav-container" id="mySidenavContainerId1">
+	<div class="sidenav-menu-slider" style="background:#FFF;">
+		<div class="sidenav-menu">
+			... Your Side Nav Content ...
+		</div>
+	</div>
+
+	<div class="sidenav-content" style="background:#EEE;">
+		... Your Main Content ...
+	</div>
+</div>
+
+<script>
+	$('#mySidenavContainerId1').sideNavigation({
+		position: 'right',
+		toggler: '#mySidenavToggleId1'
+	});
+</script>
+
+<div class="uxgl-toggle-code">
+  <a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+<pre><code class="html">```<button class="btn btn-default" id="mySidenavToggleId">
+    <span class="glyphicon glyphicon-align-justify"></span> Toggle
+</button>
+
+<div class="sidenav-container" id="mySidenavContainerId">
+    <div class="sidenav-menu-slider">
+        <div class="sidenav-menu">
+            ... Your Side Nav Content ...
+        </div>
+    </div>
+
+    <div class="sidenav-content">
+        ... Your Main Content ...
+    </div>
+</div>
+
+<script>
+    $('#mySidenavContainerId').sideNavigation({
+        toggler: '#mySidenavToggleId'
+    });
+</script>```</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="sidenav-container uxgl-sidenav-demo" id="sidenavDemo">
+	<button class="btn btn-default sidenav-toggler"><span class="glyphicon glyphicon-align-justify"></span> Toggle</button>
+
+	<div class="sidenav-menu-slider">
+		<div class="sidenav-menu">
+			<h3><em>Menu</em></h3>
+			<ul class="nav nav-stacked">
+				<li><a href="#1">Setting Up Maven</a></li>
+				<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
+				<li><a href="#1">Using Maven From Liferay IDE</a></li>
+				<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
+				<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
+				<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
+				<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
+				<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
+				<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="sidenav-content">
+		<h3><em>Content</em></h3>
+
+		<div id="myDocumentation">
+			<h4>Introduction</h4>
+
+			<p>Welcome to Liferay Tutorials! These tutorials show you how to build powerful, robust apps using Liferay’s tools, frameworks, and APIs. The tutorials compliment the fundamentals that you can master in Liferay’s Learning Paths, giving you keen insight into the Liferay platform for building top-notch apps, designing stylish themes, and customizing Liferay Portal to meet your needs. The tutorials cover the following three main areas: </p>
+
+			<ul>
+				<li>Using Liferay Development Tools</li>
+				<li>Developing Liferay Applications</li>
+				<li>Styling and Customizing Liferay</li>
+			</ul>
+
+			<h4>Using Liferay Development Tools</h4>
+
+			<p>Since many developers coming to Liferay already have a set of tools they use, these tutorials assume you’re using one of three common environments: 1) An Ant-based command-line environment that integrates with a wide variety of tools, 2) The easy-to-use Liferay IDE that minimizes your learning curve while giving you powerful development features, and 3) Maven, a widely adopted project management system. The Liferay Developer Network provides learning paths and tutorials that teach you how to use these three environments.
+
+			If you don’t like Eclipse (which Liferay IDE is based on) and prefer to use NetBeans, IntelliJ IDEA, or something else, you certainly can. Liferay code can be written in any way Java code is written. </p>
+
+			<h4>Developing Liferay Applications</h4>
+
+			<p>As a developer wanting to run your own applications on top of Liferay Portal, you probably want to know what’s the best and quickest way to do it? Liferay supports two main, standards-based technologies for incorporating your applications into Liferay: Portlets and OpenSocial gadgets. Portlets can be written using any of the Java web frameworks that support portlet development, including Liferay’s MVC Portlet framework and JavaServer™ Faces (JSF).
+
+			As you write apps, you’ll want to leverage powerful frameworks that work seamlessly with Liferay and help you complete your app faster. Liferay contains several frameworks that give you all the tools you need to perform various common tasks that you don’t want to have to write yourself, such as handling permissions and letting users enter comments, categories, and tags.
+
+			In addition to Liferay’s frameworks, you’ll want to check out the powerful tag libraries and snazzy UI components that AlloyUI and Liferay UI Taglibs provide.</p>
+		</div>
+	</div>
+</div>
+
+<div class="sidenav-container uxgl-sidenav-demo sidenav-right">
+	<button class="btn btn-default sidenav-toggler"><span class="glyphicon glyphicon-align-justify"></span> Toggle</button>
 
 	<div class="sidenav-menu-slider">
 		<div class="sidenav-menu">
@@ -72,5 +274,7 @@ section: Components (JS)
 </script>```</code></pre>
 
 <script>
-	$('#sidenavDemo').sideNavigation();
+	$('.uxgl-sidenav-demo').sideNavigation({
+		position: 'left'
+	});
 </script>
