@@ -2,14 +2,33 @@
 title: Blog - Actions
 section: Example Pages
 ---
+<style>
+.custom-container {
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+	.custom-container {
+		width: 90%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.custom-container {
+		width: 80%;
+	}
+}
+</style>
 
 <div class="row">
 	<div class="col-md-12">
 				<header class="header-toolbar header-toolbar-default">
-					<div style="width: 80%;margin:0 auto;">
+					<div class="custom-container">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+								<a class="sidenav-toggler" href="#1" id="blogActionsToggler"><span class="icon-align-justify"></span></a>
 							</div>
 						</div>
 
@@ -33,7 +52,7 @@ section: Example Pages
 				</header>
 
 				<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="clear:both;margin-bottom:0;">
-					<div style="width: 80%;margin: 0 auto;">
+					<div class="custom-container">
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="#">Message Boards</a></li>
 							<li><a href="#">Blogs</a></li>
@@ -50,7 +69,7 @@ section: Example Pages
 					</div>
 				</nav>
 
-				<div style="width: 80%;margin: 0 auto;">
+				<div class="custom-container">
 					<div style="padding:15px 20px 10px;clear:both;"><button class="btn btn-primary">Add Post</button></div>
 
 					<div class="toolbar-no-break">
@@ -99,7 +118,7 @@ section: Example Pages
 					</div>
 				</div>
 
-		<div class="sidenav-container closed uxgl-slideout-nav">
+		<div class="custom-container sidenav-container closed uxgl-slideout-nav" id="blogActionsSidenav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<ul class="nav nav-stacked">
@@ -277,6 +296,8 @@ section: Example Pages
 </div>
 
 <script>
-	$('.uxgl-slideout-nav').sideNavigation();
+	$('#blogActionsSidenav').sideNavigation({
+		toggler: '#blogActionsToggler'
+	});
 	$('.collapse-basic-search').collapsibleSearch();
 </script>
