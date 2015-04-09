@@ -1,3 +1,5 @@
+$sidenav-width: 220px;
+
 .sidenav-container.closed {
 	> .sidenav-menu-slider {
 		overflow: hidden;
@@ -29,11 +31,11 @@
 
 .sidenav-transition {
 	.sidenav-content {
-		@include prefixer(transition, all 0.5s ease, webkit moz spec);
+		@include transition(all 0.5s ease);
 	}
 
 	.sidenav-menu-slider {
-		@include prefixer(transition, width 0.5s ease, webkit moz spec);
+		@include transition(all 0.5s ease);
 	}
 }
 
