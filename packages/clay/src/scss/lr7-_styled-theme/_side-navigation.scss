@@ -1,5 +1,9 @@
 $sidenav-width: 220px;
 
+.sidenav-container {
+	position: relative;
+}
+
 .sidenav-container.closed {
 	> .sidenav-menu-slider {
 		overflow: hidden;
@@ -12,8 +16,8 @@ $sidenav-width: 220px;
 }
 
 .sidenav-content {
-	padding-bottom: 1px;
-	padding-top: 1px;
+	padding-bottom: 2px;
+	padding-top: 2px;
 	position: relative;
 	left: $sidenav-width + 20;
 }
@@ -27,6 +31,22 @@ $sidenav-width: 220px;
 	overflow: hidden;
 	position: absolute;
 	width: $sidenav-width;
+}
+
+.sidenav-container.sidenav-right {
+	.sidenav-content {
+		left: -$sidenav-width - 20;
+	}
+
+	.sidenav-menu-slider {
+		right: 0;
+	}
+
+	&.closed {
+		.sidenav-content {
+			left: 0;
+		}
+	}
 }
 
 .sidenav-transition {
@@ -50,6 +70,21 @@ $sidenav-width: 220px;
 		> .sidenav-content {
 			left: auto;
 			padding-left: 0;
+		}
+	}
+
+	.sidenav-container.sidenav-right {
+		> .sidenav-content {
+			padding-left: 0;
+			padding-right: $sidenav-width + 20;
+		}
+
+		.sidenav-menu {
+			padding-left: 15px;
+		}
+
+		&.closed > .sidenav-content {
+			padding-right: 0;
 		}
 	}
 }
