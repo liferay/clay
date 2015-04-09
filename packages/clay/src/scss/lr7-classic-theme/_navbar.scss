@@ -1,7 +1,10 @@
 // Styles for collapsing search bar
 .collapse-basic-search {
 	.basic-search {
+		display: block;
+		left: 0;
 		position: absolute;
+		right: 0;
 		top: 0;
 
 		&.open {
@@ -10,6 +13,10 @@
 
 			.basic-search-close {
 				display: inline-block;
+			}
+
+			.form-control {
+				@include transition(border 0.25s ease, padding 0.25s ease);
 			}
 
 			.input-group-input .form-control {
@@ -28,14 +35,20 @@
 
 			.form-control {
 				left: 100%;
-
-				@include transition(left 0.5s ease);
 			}
 		}
 	}
 
 	.basic-search-close {
 		display: none;
+	}
+
+	.basic-search-transition {
+		&, &.open {
+			.form-control {
+				@include transition(left 0.5s ease);
+			}
+		}
 	}
 
 	.navbar-nav:first-child {

@@ -1,7 +1,10 @@
 // Styles for collapsing search bar
 .collapse-basic-search {
 	.basic-search {
+		display: block;
+		left: 0;
 		position: absolute;
+		right: 0;
 		top: 0;
 
 		&.open {
@@ -25,9 +28,13 @@
 			height: 36px;
 		}
 
-		.input-group-btn:last-child {
-			> .btn, > .btn-group {
-				border-radius: 0;
+		.input-group-btn {
+			z-index: 10;
+
+			&:last-child {
+				> .btn, > .btn-group {
+					border-radius: 0;
+				}
 			}
 		}
 
@@ -36,14 +43,20 @@
 
 			.form-control {
 				left: 100%;
-
-				@include transition(all 0.5s ease);
 			}
 		}
 	}
 
 	.basic-search-close {
 		display: none;
+	}
+
+	.basic-search-transition {
+		&, &.open {
+			.form-control {
+				@include transition(left 0.5s ease);
+			}
+		}
 	}
 
 	.navbar-nav:first-child {
