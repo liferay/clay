@@ -1,3 +1,7 @@
+.sidenav-container {
+	position: relative;
+}
+
 .sidenav-container.closed {
 	> .sidenav-menu-slider {
 		overflow: hidden;
@@ -27,13 +31,29 @@
 	width: $sidenav-width;
 }
 
-.sidenav-transition {
+.sidenav-container.sidenav-right {
 	.sidenav-content {
-		@include prefixer(transition, all 0.5s ease, webkit moz spec);
+		left: -$sidenav-width - 20;
 	}
 
 	.sidenav-menu-slider {
-		@include prefixer(transition, width 0.5s ease, webkit moz spec);
+		right: 0;
+	}
+
+	&.closed {
+		.sidenav-content {
+			left: 0;
+		}
+	}
+}
+
+.sidenav-transition {
+	.sidenav-content {
+		@include transition(all 0.5s ease);
+	}
+
+	.sidenav-menu-slider {
+		@include transition(width 0.5s ease);
 	}
 }
 
@@ -48,6 +68,21 @@
 		> .sidenav-content {
 			left: auto;
 			padding-left: 0;
+		}
+	}
+
+	.sidenav-container.sidenav-right {
+		> .sidenav-content {
+			padding-left: 0;
+			padding-right: $sidenav-width + 20;
+		}
+
+		.sidenav-menu {
+			padding-left: 15px;
+		}
+
+		&.closed > .sidenav-content {
+			padding-right: 0;
 		}
 	}
 }

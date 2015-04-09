@@ -15,6 +15,10 @@
 
 			instance._handleResize(element);
 
+			if (instance.options.position === 'right') {
+				element.addClass('sidenav-right');
+			}
+
 			if (!element.hasClass('closed')) {
 				instance.setEqualHeight(element);
 			}
@@ -34,7 +38,6 @@
 			}
 
 			element.on('click', function(event) {
-				var $this = $(this);
 				var content;
 				var navigation;
 				var transitions;
@@ -67,21 +70,21 @@
 
 		_handleResize: function(element) {
 			var instance = this;
-			var container,
-					content,
-					navigation;
+			var container;
+			var content;
+			var navigation;
 
 			$(window).resize(function(event) {
-				element.each(function() {
-					container = $(this);
+				element.each(function(index, node) {
+					container = $(node);
 					content = container.find(instance.options.content);
 					navigation = container.find(instance.options.navigation);
-				});
 
-				if (!container.hasClass('closed')) {
-					instance.removeEqualHeight(navigation, content);
-					instance.setEqualHeight(container);
-				}
+					if (!container.hasClass('closed')) {
+						instance.removeEqualHeight(navigation, content);
+						instance.setEqualHeight(container);
+					}
+				});
 			});
 		},
 
@@ -91,27 +94,34 @@
 		},
 
 		setEqualHeight: function(container) {
-			var containerClone = container.clone();
+			var instance = this;
+			var containerClone;
 			var element1;
 			var element2;
 			var tallest;
 
-			containerClone.removeClass('closed').css({
-				opacity: 0,
-				position: 'absolute',
-				width: container.outerWidth()
+			container.each(function(index, node) {
+				container = $(node);
+
+				containerClone = container.clone();
+
+				containerClone.removeClass('closed').css({
+					opacity: 0,
+					position: 'absolute',
+					width: container.outerWidth()
+				});
+
+				containerClone.insertBefore(container);
+
+				element1 = containerClone.find(instance.options.navigation);
+				element2 = containerClone.find(instance.options.content);
+				tallest = Math.max(element1.outerHeight(), element2.outerHeight());
+
+				containerClone.remove();
+
+				container.find(instance.options.content).css('min-height', tallest);
+				container.find(instance.options.navigation).css('min-height', tallest);
 			});
-
-			containerClone.insertBefore(container);
-
-			element1 = containerClone.find(this.options.navigation);
-			element2 = containerClone.find(this.options.content);
-			tallest = Math.max(element1.outerHeight(), element2.outerHeight());
-
-			containerClone.remove();
-
-			container.find(this.options.content).css('min-height', tallest);
-			container.find(this.options.navigation).css('min-height', tallest);
 		},
 
 		toggleNavigation: function(container) {
@@ -133,6 +143,7 @@
 	$.fn.sideNavigation.defaults = {
 		content: '.sidenav-content',
 		navigation: '.sidenav-menu-slider',
+		position: 'left',
 		toggler: '.sidenav-toggler'
 	};
 
