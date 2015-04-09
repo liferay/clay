@@ -22,12 +22,32 @@
 
 		_handleClick: function(element) {
 			var instance = this;
+			var body = $('body');
+			var container;
 
-			element.find(instance.options.toggler).on('click', function(event) {
-				var container = $(this).closest(instance.options.selector);
-				var content = container.find(instance.options.content);
-				var navigation = container.find(instance.options.navigation);
-				var transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+			if (!element.find(instance.options.toggler).length) {
+				element = body.find(instance.options.toggler);
+				container = body.find(instance.options.selector);
+			}
+			else {
+				element = element.find(instance.options.toggler);
+			}
+
+			element.on('click', function(event) {
+				var $this = $(this);
+				var content;
+				var navigation;
+				var transitions;
+
+				if ($(this).closest(instance.options.selector).length) {
+					container = $(this).closest(instance.options.selector);
+				}
+
+				content = container.find(instance.options.content);
+				navigation = container.find(instance.options.navigation);
+				transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+				event.preventDefault();
 
 				container.one(transitions, function(event) {
 					container.removeClass('sidenav-transition');
