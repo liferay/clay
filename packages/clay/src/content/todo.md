@@ -4,7 +4,7 @@ navIndex: last
 ---
 
 ##### Organize UX Guidelines
-- split up _variables.scss into smaller files like mixins, pattern should follow something like:
+- split up _variables.scss into smaller files like mixins (is it possible to import a whole directory?), pattern should follow something like:
 	- theme variables
 		- global variables
 		- module1 variables
@@ -20,13 +20,15 @@ navIndex: last
 - create blogs example page PDF page 16, 17
 
 ##### Toolbar
-- toolbar buttons should have smaller border radius.
+- toolbar buttons shouldn't be circular.
 
 ##### Breadcrumbs
 - create module to truncate depending on screen size.
 
 ##### Sidenav
-- sidenav module open and close button should work if placed outside .sidenav-container
+- ~~sidenav module open and close button should work if placed outside .sidenav-container~~
+- ~~module should have option to slide in menu from the right side~~
+- allow plugin to be instantiated through data-toggle="sidenav"
 
 ##### Slideout Drawer
 - finish slideout drawer fixed module
