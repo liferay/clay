@@ -1,6 +1,12 @@
 .toolbar, .toolbar-no-break, .header-toolbar {
 	@include clearfix-hack();
 
+	.btn {
+		border-radius: 2px;
+		border-width: 1px;
+		line-height: 1px;
+	}
+
 	.nameplate-content, .nameplate-field {
 		vertical-align: middle;
 	}
