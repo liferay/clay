@@ -221,6 +221,10 @@ section.row {
 .uxgl-toggle-code {
 	clear: both;
 	padding-bottom: 5px;
+
+	.btn {
+		border-radius: 2px;
+	}
 }
 
 .uxgl-newline-demo blockquote {
