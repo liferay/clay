@@ -19,9 +19,14 @@
 				element.addClass('sidenav-right');
 			}
 
-			if (!element.hasClass('closed')) {
-				instance.setEqualHeight(element);
-			}
+			element.each(function(index, node) {
+				var node = $(node);
+
+				if (!node.hasClass('closed')) {
+					instance.setEqualHeight(node);
+					instance.setWidth(node);
+				}
+			});
 		},
 
 		_handleClick: function(element) {
@@ -93,6 +98,20 @@
 			element2.css('min-height', '');
 		},
 
+		removeWidth: function(element) {
+			var instance = this;
+			var content = element.find(instance.options.content);
+
+			if (element.hasClass('sidenav-right')) {
+				content.css('padding-right', '');
+			}
+			else {
+				content.css('padding-left', '');
+			}
+
+			element.find(instance.options.navigation).css('width', '');
+		},
+
 		setEqualHeight: function(container) {
 			var instance = this;
 			var containerClone;
@@ -111,6 +130,15 @@
 					width: container.outerWidth()
 				});
 
+				containerClone.find(instance.options.navigation).css('width', instance.options.width);
+
+				if (containerClone.hasClass('sidenav-right')) {
+					containerClone.find(instance.options.content).css('padding-right', instance.options.width);
+				}
+				else {
+					containerClone.find(instance.options.content).css('padding-left', instance.options.width);
+				}
+
 				containerClone.insertBefore(container);
 
 				element1 = containerClone.find(instance.options.navigation);
@@ -124,12 +152,36 @@
 			});
 		},
 
+		setWidth: function(element) {
+			var instance = this;
+
+			element.each(function(index, node) {
+				var node = $(node);
+
+				if (node.hasClass('sidenav-right')) {
+					node.find(instance.options.content).css('padding-right', instance.options.width);
+				}
+				else {
+					node.find(instance.options.content).css('padding-left', instance.options.width);
+				}
+
+				node.find(instance.options.navigation).css('width', instance.options.width);
+				node.find('.sidenav-menu').css('width', instance.options.width);
+			});
+		},
+
 		toggleNavigation: function(container) {
+			var instance = this;
+
 			if (container.hasClass('closed')) {
 				container.removeClass('closed').addClass('sidenav-transition');
+
+				instance.setWidth(container);
 			}
 			else {
 				container.addClass('closed').addClass('sidenav-transition');
+
+				instance.removeWidth(container);
 			}
 		}
 	};
