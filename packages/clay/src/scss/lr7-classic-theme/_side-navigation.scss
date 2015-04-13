@@ -14,14 +14,13 @@
 }
 
 .sidenav-content {
-	padding-bottom: 2px;
-	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-top: 1px;
 	position: relative;
-	left: $sidenav-width + 20;
+	left: $sidenav-width;
 }
 
 .sidenav-menu {
-	padding: 2px;
 	width: $sidenav-width;
 }
 
@@ -33,7 +32,7 @@
 
 .sidenav-container.sidenav-right {
 	.sidenav-content {
-		left: -$sidenav-width - 20;
+		left: -$sidenav-width;
 	}
 
 	.sidenav-menu-slider {
@@ -60,8 +59,10 @@
 @media (min-width: $grid-float-breakpoint) {
 	.sidenav-content {
 		left: auto;
-		padding-left: $sidenav-width + 20;
+		padding-left: $sidenav-width;
 		position: static;
+
+		@include clearfix-hack();
 	}
 
 	.sidenav-container.closed {
@@ -74,11 +75,11 @@
 	.sidenav-container.sidenav-right {
 		> .sidenav-content {
 			padding-left: 0;
-			padding-right: $sidenav-width + 20;
+			padding-right: $sidenav-width;
 		}
 
 		.sidenav-menu {
-			padding-left: 15px;
+			padding-left: 0;
 		}
 
 		&.closed > .sidenav-content {
