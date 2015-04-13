@@ -71,6 +71,14 @@
 		}
 	}
 
+	a {
+		color: $brand-default;
+
+		&:focus, &:hover {
+			text-decoration: none;
+		}
+	}
+
 	.list-group-item-content, .list-group-item-field {
 		border: 1px solid #DDD;
 		border-top-width: 0;
