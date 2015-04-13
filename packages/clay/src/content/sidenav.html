@@ -32,7 +32,8 @@ section: Components (JS)
         content: '.sidenav-content', // class or id of content
         navigation: '.sidenav-menu-slider', // class or id of navigation
         position: 'left', // Positions sidenav-menu-slider. Values are left or right.
-        toggler: '.sidenav-toggler' // class or id of toggle button
+        toggler: '.sidenav-toggler', // class or id of toggle button
+        width: '300px' // width of side navigation
     });
 </script>```</code></pre>
 
@@ -156,7 +157,7 @@ section: Components (JS)
 	</div>
 </div>
 
-<div class="sidenav-container uxgl-sidenav-demo" id="sidenavDemo">
+<div class="sidenav-container uxgl-sidenav-demo closed" id="sidenavDemo">
 	<button class="btn btn-default sidenav-toggler"><span class="glyphicon glyphicon-align-justify"></span> Toggle</button>
 
 	<div class="sidenav-menu-slider">
@@ -177,32 +178,34 @@ section: Components (JS)
 	</div>
 
 	<div class="sidenav-content">
-		<h3><em>Content</em></h3>
+		<div class="col-md-12">
+			<h3><em>Content</em></h3>
 
-		<div id="myDocumentation">
-			<h4>Introduction</h4>
+			<div id="myDocumentation">
+				<h4>Introduction</h4>
 
-			<p>Welcome to Liferay Tutorials! These tutorials show you how to build powerful, robust apps using Liferay’s tools, frameworks, and APIs. The tutorials compliment the fundamentals that you can master in Liferay’s Learning Paths, giving you keen insight into the Liferay platform for building top-notch apps, designing stylish themes, and customizing Liferay Portal to meet your needs. The tutorials cover the following three main areas: </p>
+				<p>Welcome to Liferay Tutorials! These tutorials show you how to build powerful, robust apps using Liferay’s tools, frameworks, and APIs. The tutorials compliment the fundamentals that you can master in Liferay’s Learning Paths, giving you keen insight into the Liferay platform for building top-notch apps, designing stylish themes, and customizing Liferay Portal to meet your needs. The tutorials cover the following three main areas: </p>
 
-			<ul>
-				<li>Using Liferay Development Tools</li>
-				<li>Developing Liferay Applications</li>
-				<li>Styling and Customizing Liferay</li>
-			</ul>
+				<ul>
+					<li>Using Liferay Development Tools</li>
+					<li>Developing Liferay Applications</li>
+					<li>Styling and Customizing Liferay</li>
+				</ul>
 
-			<h4>Using Liferay Development Tools</h4>
+				<h4>Using Liferay Development Tools</h4>
 
-			<p>Since many developers coming to Liferay already have a set of tools they use, these tutorials assume you’re using one of three common environments: 1) An Ant-based command-line environment that integrates with a wide variety of tools, 2) The easy-to-use Liferay IDE that minimizes your learning curve while giving you powerful development features, and 3) Maven, a widely adopted project management system. The Liferay Developer Network provides learning paths and tutorials that teach you how to use these three environments.
+				<p>Since many developers coming to Liferay already have a set of tools they use, these tutorials assume you’re using one of three common environments: 1) An Ant-based command-line environment that integrates with a wide variety of tools, 2) The easy-to-use Liferay IDE that minimizes your learning curve while giving you powerful development features, and 3) Maven, a widely adopted project management system. The Liferay Developer Network provides learning paths and tutorials that teach you how to use these three environments.
 
-			If you don’t like Eclipse (which Liferay IDE is based on) and prefer to use NetBeans, IntelliJ IDEA, or something else, you certainly can. Liferay code can be written in any way Java code is written. </p>
+				If you don’t like Eclipse (which Liferay IDE is based on) and prefer to use NetBeans, IntelliJ IDEA, or something else, you certainly can. Liferay code can be written in any way Java code is written. </p>
 
-			<h4>Developing Liferay Applications</h4>
+				<h4>Developing Liferay Applications</h4>
 
-			<p>As a developer wanting to run your own applications on top of Liferay Portal, you probably want to know what’s the best and quickest way to do it? Liferay supports two main, standards-based technologies for incorporating your applications into Liferay: Portlets and OpenSocial gadgets. Portlets can be written using any of the Java web frameworks that support portlet development, including Liferay’s MVC Portlet framework and JavaServer™ Faces (JSF).
+				<p>As a developer wanting to run your own applications on top of Liferay Portal, you probably want to know what’s the best and quickest way to do it? Liferay supports two main, standards-based technologies for incorporating your applications into Liferay: Portlets and OpenSocial gadgets. Portlets can be written using any of the Java web frameworks that support portlet development, including Liferay’s MVC Portlet framework and JavaServer™ Faces (JSF).
 
-			As you write apps, you’ll want to leverage powerful frameworks that work seamlessly with Liferay and help you complete your app faster. Liferay contains several frameworks that give you all the tools you need to perform various common tasks that you don’t want to have to write yourself, such as handling permissions and letting users enter comments, categories, and tags.
+				As you write apps, you’ll want to leverage powerful frameworks that work seamlessly with Liferay and help you complete your app faster. Liferay contains several frameworks that give you all the tools you need to perform various common tasks that you don’t want to have to write yourself, such as handling permissions and letting users enter comments, categories, and tags.
 
-			In addition to Liferay’s frameworks, you’ll want to check out the powerful tag libraries and snazzy UI components that AlloyUI and Liferay UI Taglibs provide.</p>
+				In addition to Liferay’s frameworks, you’ll want to check out the powerful tag libraries and snazzy UI components that AlloyUI and Liferay UI Taglibs provide.</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -275,6 +278,7 @@ section: Components (JS)
 
 <script>
 	$('.uxgl-sidenav-demo').sideNavigation({
-		position: 'left'
+		position: 'left',
+		width: '300px'
 	});
 </script>
