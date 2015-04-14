@@ -15,18 +15,7 @@
 
 			instance._handleResize(element);
 
-			if (instance.options.position === 'right') {
-				element.addClass('sidenav-right');
-			}
-
-			element.each(function(index, node) {
-				var node = $(node);
-
-				if (!node.hasClass('closed')) {
-					instance.setEqualHeight(node);
-					instance.setWidth(node);
-				}
-			});
+			instance._renderUI(element);
 		},
 
 		_handleClick: function(element) {
@@ -87,10 +76,52 @@
 
 					if (!container.hasClass('closed')) {
 						instance.removeEqualHeight(navigation, content);
+						instance.removeWidth(container);
 						instance.setEqualHeight(container);
+						instance.setWidth(container);
 					}
 				});
 			});
+		},
+
+		_renderClosedRightNav: function(element) {
+			var instance = this;
+
+			element.each(function(index, node) {
+				var node = $(node);
+
+				if (node.hasClass('closed') && node.hasClass('sidenav-right')) {
+					node.find('.sidenav-menu').css({
+						right: instance.options.width,
+						width: instance.options.width
+					});
+				}
+			});
+		},
+
+		_renderOpenNav: function(element) {
+			var instance = this;
+
+			element.each(function(index, node) {
+				var node = $(node);
+
+				if (!node.hasClass('closed')) {
+					instance.setEqualHeight(node);
+					instance.setWidth(node);
+				}
+			});
+		},
+
+		_renderUI: function(element) {
+			var instance = this;
+
+			if (instance.options.position === 'right') {
+				element.addClass('sidenav-right');
+			}
+
+			instance._renderOpenNav(element);
+
+			instance._renderClosedRightNav(element);
 		},
 
 		removeEqualHeight: function(element1, element2) {
@@ -103,10 +134,21 @@
 			var content = element.find(instance.options.content);
 
 			if (element.hasClass('sidenav-right')) {
-				content.css('padding-right', '');
+				if (window.innerWidth < 768) {
+					content.css('left', '');
+					element.find('.sidenav-menu').css('right', instance.options.width);
+				}
+				else {
+					content.css('padding-right', '');
+				}
 			}
 			else {
-				content.css('padding-left', '');
+				if (window.innerWidth < 768) {
+					content.css('left', '');
+				}
+				else {
+					content.css('padding-left', '');
+				}
 			}
 
 			element.find(instance.options.navigation).css('width', '');
@@ -132,11 +174,13 @@
 
 				containerClone.find(instance.options.navigation).css('width', instance.options.width);
 
-				if (containerClone.hasClass('sidenav-right')) {
-					containerClone.find(instance.options.content).css('padding-right', instance.options.width);
-				}
-				else {
-					containerClone.find(instance.options.content).css('padding-left', instance.options.width);
+				if (!(window.innerWidth < 768)) {
+					if (containerClone.hasClass('sidenav-right')) {
+						containerClone.find(instance.options.content).css('padding-right', instance.options.width);
+					}
+					else {
+						containerClone.find(instance.options.content).css('padding-left', instance.options.width);
+					}
 				}
 
 				containerClone.insertBefore(container);
@@ -157,16 +201,51 @@
 
 			element.each(function(index, node) {
 				var node = $(node);
+				var width;
 
 				if (node.hasClass('sidenav-right')) {
-					node.find(instance.options.content).css('padding-right', instance.options.width);
+					if (window.innerWidth < 768) {
+						if (typeof(instance.options.width) === 'string') {
+							width = '-' + instance.options.width;
+						}
+
+						if (typeof(instance.options.width) === 'number') {
+							width = -instance.options.width;
+						}
+
+						node.find(instance.options.content).css({
+							left: width,
+							paddingRight: ''
+						});
+
+						element.find('.sidenav-menu').css('right', '');
+
+						if (instance.options.width) {
+							element.find('.sidenav-menu').css('width', instance.options.width);
+
+							if (node.hasClass('closed')) {
+								element.find('.sidenav-menu').css('right', instance.options.width);
+							}
+						}
+					}
+					else {
+						node.find(instance.options.content).css('padding-right', instance.options.width);
+						node.find('.sidenav-menu').css('width', instance.options.width);
+					}
 				}
 				else {
-					node.find(instance.options.content).css('padding-left', instance.options.width);
+					if (window.innerWidth < 768) {
+						node.find(instance.options.content).css({
+							left: instance.options.width,
+							paddingLeft: ''
+						});
+					}
+					else {
+						node.find(instance.options.content).css('padding-left', instance.options.width);
+					}
 				}
 
 				node.find(instance.options.navigation).css('width', instance.options.width);
-				node.find('.sidenav-menu').css('width', instance.options.width);
 			});
 		},
 
@@ -174,11 +253,23 @@
 			var instance = this;
 
 			if (container.hasClass('closed')) {
-				container.removeClass('closed').addClass('sidenav-transition');
+				container.find('.sidenav-menu').css('width', instance.options.width);
 
-				instance.setWidth(container);
+				setTimeout(function() {
+					container.removeClass('closed').addClass('sidenav-transition');
+
+					if (window.innerWidth > 767) {
+						container.find('.sidenav-menu').css('right', '');
+					}
+
+					instance.setWidth(container);
+				}, 0);
 			}
 			else {
+				if (window.innerWidth > 767) {
+					container.find('.sidenav-menu').css('right', instance.options.width);
+				}
+
 				container.addClass('closed').addClass('sidenav-transition');
 
 				instance.removeWidth(container);
