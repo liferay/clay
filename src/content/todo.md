@@ -16,11 +16,14 @@ navIndex: last
 	- bootstrap variables, mixins, css
 	- theme css
 
+##### Non responsive
+- create a solution for non responsive sites.
+
 ##### Example Pages
 - create blogs example page PDF page 16, 17
 
 ##### Toolbar
-- toolbar buttons shouldn't be circular.
+- ~~toolbar buttons shouldn't be circular.~~
 
 ##### Breadcrumbs
 - create module to truncate depending on screen size.
