@@ -7258,6 +7258,10 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
     padding: 0; }
     .tabular-list-group > li:first-child .list-group-item-content, .tabular-list-group > li:first-child .list-group-item-field, .tabular-list-group .list-group-item:first-child .list-group-item-content, .tabular-list-group .list-group-item:first-child .list-group-heading:first-child, .tabular-list-group .list-group-item:first-child .list-group-item-field, .tabular-list-group .list-group-item:first-child .list-group-heading:first-child {
       border-top: 1px solid #DDD; }
+  .tabular-list-group a {
+    color: #869CAD; }
+    .tabular-list-group a:focus, .tabular-list-group a:hover {
+      text-decoration: none; }
   .tabular-list-group .list-group-item-content, .tabular-list-group .list-group-item-field {
     border: 1px solid #DDD;
     border-top-width: 0;
@@ -8400,7 +8404,7 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   width: 220px; }
 
 .sidenav-menu-slider {
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   width: 220px; }
 
@@ -8416,6 +8420,7 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 .sidenav-transition .sidenav-menu-slider {
+  overflow: hidden;
   -webkit-transition: width 0.5s ease;
   -o-transition: width 0.5s ease;
   transition: width 0.5s ease; }
@@ -9066,6 +9071,10 @@ a.bg-primary:hover {
   font-size: 0;
   height: 0;
   visibility: hidden; }
+.toolbar .btn, .toolbar-no-break .btn, .header-toolbar .btn {
+  border-radius: 2px;
+  border-width: 1px;
+  line-height: 1px; }
 .toolbar .nameplate-content, .toolbar .nameplate-field, .toolbar-no-break .nameplate-content, .toolbar-no-break .nameplate-field, .header-toolbar .nameplate-content, .header-toolbar .nameplate-field {
   vertical-align: middle; }
 
@@ -10255,6 +10264,8 @@ section.row {
 .uxgl-toggle-code {
   clear: both;
   padding-bottom: 5px; }
+  .uxgl-toggle-code .btn {
+    border-radius: 2px; }
 
 .uxgl-newline-demo blockquote {
   margin-top: 40px; }

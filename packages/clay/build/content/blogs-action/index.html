@@ -227,20 +227,25 @@ collapse
 		</h1>
 
 		<style>
-.custom-container {
+.custom-container, .uxgl-80percent-container {
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
 }
 
+.uxgl-arrow-group .btn {
+	font-size: 14px;
+	padding: 4px 7px;
+}
+
 @media screen and (min-width: 992px) {
-	.custom-container {
+	.custom-container, .uxgl-80percent-container {
 		width: 90%;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-	.custom-container {
+	.custom-container, .uxgl-80percent-container {
 		width: 80%;
 	}
 }
@@ -248,99 +253,98 @@ collapse
 
 <div class="row">
 	<div class="col-md-12">
-				<header class="header-toolbar header-toolbar-default">
-					<div class="custom-container">
-						<div class="toolbar-group">
-							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1" id="blogActionsToggler"><span class="icon-align-justify"></span></a>
-							</div>
-						</div>
-
-						<div class="toolbar-group-right">
-							<div class="toolbar-group-content">
-								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
-									<ul class="dropdown-menu dropdown-menu-right">
-										<li><a href="#1">Export</a></li>
-										<li><a href="#1">Import</a></li>
-										<li><a href="#1">Configuration</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<div class="toolbar-group-expand-text text-center">
-							<span>Blogs</span>
-						</div>
+		<header class="header-toolbar header-toolbar-default">
+			<div class="custom-container">
+				<div class="toolbar-group">
+					<div class="toolbar-group-content">
+						<a class="sidenav-toggler" href="#1" id="blogActionsToggler"><span class="icon-align-justify"></span></a>
 					</div>
-				</header>
+				</div>
 
-				<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="clear:both;margin-bottom:0;">
-					<div class="custom-container">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Message Boards</a></li>
-							<li><a href="#">Blogs</a></li>
-						</ul>
-
-						<form class="basic-search input-group navbar-form">
-							<div class="input-group-input">
-								<input class="form-control" placeholder=" Search..." type="text">
-							</div>
-							<div class="input-group-btn">
-								<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-							</div>
-						</form>
-					</div>
-				</nav>
-
-				<div class="custom-container">
-					<div style="padding:15px 20px 10px;clear:both;"><button class="btn btn-primary">Add Post</button></div>
-
-					<div class="toolbar-no-break">
-						<div class="toolbar-group">
-							<div class="toolbar-group-content">
-								<input type="checkbox" style="margin-left: 9px;margin-right: 10px;" />
-							</div>
-							<div class="dropdown toolbar-group-content">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#1">Date</a></li>
-									<li><a href="#1">Time</a></li>
-									<li><a href="#1">Status</a></li>
-								</ul>
-							</div>
-							<div class="dropdown toolbar-group-content">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#1">Alphabetical</a></li>
-									<li><a href="#1">Reverse</a></li>
-									<li><a href="#1">Split</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="toolbar-group">
-							<div class="toolbar-group-content">
-								<a class="icon-sort-by-attributes" href="#1"></a>
-							</div>
-							<div class="toolbar-group-content">
-								<a class="icon-sort-by-attributes-alt" href="#1"></a>
-							</div>
-						</div>
-
-						<div class="toolbar-group-right">
-							<div class="toolbar-group-content">
-								<a href="#1"><span class="icon-th-large"></span></a>
-							</div>
-							<div class="toolbar-group-content">
-								<a href="#1"><span class="icon-th-list"></span></a>
-							</div>
-							<div class="toolbar-group-content active">
-								<a href="#1"><span class="icon-reorder"></span></a>
-							</div>
+				<div class="toolbar-group-right">
+					<div class="toolbar-group-content">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Export</a></li>
+								<li><a href="#1">Import</a></li>
+								<li><a href="#1">Configuration</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
+
+				<div class="toolbar-group-expand-text text-center">
+					<span>Blogs</span>
+				</div>
+			</div>
+		</header>
+
+		<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="clear:both;margin-bottom:0;">
+			<div class="custom-container">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">All Posts</a></li>
+				</ul>
+
+				<form class="basic-search input-group navbar-form">
+					<div class="input-group-input">
+						<input class="form-control" placeholder=" Search..." type="text">
+					</div>
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+					</div>
+				</form>
+			</div>
+		</nav>
+
+		<div class="custom-container">
+			<div class="toolbar-no-break">
+				<div class="toolbar-group">
+					<div class="toolbar-group-content">
+						<label class="checkbox-default1" style="margin-left: 13px;">
+							<input class="input-sm" type="checkbox" value="">
+						</label>
+					</div>
+					<div class="dropdown toolbar-group-content">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Recent: <span class="icon-sort"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Date</a></li>
+							<li><a href="#1">Time</a></li>
+							<li><a href="#1">Status</a></li>
+						</ul>
+					</div>
+					<div class="dropdown toolbar-group-content">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by Post: <span class="icon-sort"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="toolbar-group uxgl-arrow-group">
+					<div class="toolbar-group-content">
+						<a class="btn btn-default btn-xs" href="#1"><span class="icon-caret-down"></span></a>
+					</div>
+					<div class="toolbar-group-content">
+						<a class="btn btn-default btn-xs" href="#1"><span class="icon-caret-up"></span></a>
+					</div>
+				</div>
+
+				<div class="toolbar-group-right">
+					<div class="toolbar-group-content">
+						<a class="btn btn-default btn-xs" href="#1"><span class="icon-th-large"></span></a>
+					</div>
+					<div class="toolbar-group-content">
+						<a class="btn btn-default btn-xs" href="#1"><span class="icon-th-list"></span></a>
+					</div>
+					<div class="toolbar-group-content active">
+						<a class="btn btn-default btn-xs" href="#1"><span class="icon-reorder"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="custom-container sidenav-container closed uxgl-slideout-nav" id="blogActionsSidenav">
 			<div class="sidenav-menu-slider">
@@ -359,25 +363,26 @@ collapse
 				</div>
 			</div>
 			<div class="sidenav-content">
-
-
-				<ul class="tabular-list-group" style="clear:both;">
+				<ul class="tabular-list-group" style="clear:both;margin-bottom:0;padding:0 3px;">
 					<li class="list-group-item">
 						<div class="list-group-item-field">
-							<input type="checkbox">
+							<label class="checkbox-default1">
+								<input class="input-sm" type="checkbox" value="">
+							</label>
 						</div>
 
 						<div class="list-group-item-field">
-							<span class="icon-folder-close icon-xl text-default"></span>
+							<div class="user-icon user-icon-lg">
+								<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
+							</div>
 						</div>
 
 						<div class="list-group-item-content">
-							<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
-							<h6 class="text-default">Monica Bellucci</h6>
-							<h6 class="text-default">
-								<span>5 Folders</span>
-								<span>4 Entries</span>
-							</h6>
+							<h5 class="text-default">Alberto Calvo, modified 2 hours ago</h5>
+							<h4>7 UX Trends of 2015: Get Ready for Big Changes</h4>
+							<h5 class="text-default">
+								<span>Approved</span>
+							</h5>
 						</div>
 
 						<div class="list-group-item-field">
@@ -402,20 +407,23 @@ collapse
 
 					<li class="list-group-item">
 						<div class="list-group-item-field">
-							<input type="checkbox">
+							<label class="checkbox-default1">
+								<input class="input-sm" type="checkbox" value="">
+							</label>
 						</div>
 
 						<div class="list-group-item-field">
-							<span class="icon-folder-close icon-xl text-default"></span>
+							<div class="user-icon user-icon-lg">
+								<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+							</div>
 						</div>
 
 						<div class="list-group-item-content">
-							<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
-							<h6 class="text-default">Monica Bellucci</h6>
-							<h6 class="text-default">
-								<span>5 Folders</span>
-								<span>4 Entries</span>
-							</h6>
+							<h5 class="text-default">Cristina Pineiro, modified 2 hours ago</h5>
+							<h4>30 Brilliant Mobile Navigation Menu Design Concepts</h4>
+							<h5 class="text-default">
+								<span>Approved</span>
+							</h5>
 						</div>
 
 						<div class="list-group-item-field">
@@ -440,20 +448,23 @@ collapse
 
 					<li class="list-group-item">
 						<div class="list-group-item-field">
-							<input type="checkbox">
+							<label class="checkbox-default1">
+								<input class="input-sm" type="checkbox" value="">
+							</label>
 						</div>
 
 						<div class="list-group-item-field">
-							<span class="icon-folder-close icon-xl text-default"></span>
+							<div class="user-icon user-icon-lg">
+								<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_underwater.jpg">
+							</div>
 						</div>
 
 						<div class="list-group-item-content">
-							<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
-							<h6 class="text-default">Monica Bellucci</h6>
-							<h6 class="text-default">
-								<span>5 Folders</span>
-								<span>4 Entries</span>
-							</h6>
+							<h5 class="text-default">Susan Brown, modified 3 hours ago</h5>
+							<h4>Getting Up to Speed</h4>
+							<h5 class="text-default">
+								<span>Approved</span>
+							</h5>
 						</div>
 
 						<div class="list-group-item-field">
@@ -478,20 +489,23 @@ collapse
 
 					<li class="list-group-item">
 						<div class="list-group-item-field">
-							<input type="checkbox">
+							<label class="checkbox-default1">
+								<input class="input-sm" type="checkbox" value="">
+							</label>
 						</div>
 
 						<div class="list-group-item-field">
-							<span class="icon-folder-close icon-xl text-default"></span>
+							<div class="user-icon user-icon-lg">
+								<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
+							</div>
 						</div>
 
 						<div class="list-group-item-content">
-							<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
-							<h6 class="text-default">Monica Bellucci</h6>
-							<h6 class="text-default">
-								<span>5 Folders</span>
-								<span>4 Entries</span>
-							</h6>
+							<h5 class="text-default">Sergio Ruiz, modified 9 hours ago</h5>
+							<h4>Introducing FS3</h4>
+							<h5 class="text-default">
+								<span>Approved</span>
+							</h5>
 						</div>
 
 						<div class="list-group-item-field">
@@ -514,6 +528,34 @@ collapse
 						</div>
 					</li>
 				</ul>
+
+				<div class="toolbar-no-break">
+					<div class="toolbar-group">
+						<div class="toolbar-group-content">
+							<a href="#">10 Entries <span class="icon-sort"></span></a>
+						</div>
+						<div class="toolbar-group-content">
+							<span>Showing 1 to 10 of 4 entries</span>
+						</div>
+					</div>
+
+					<div class="toolbar-group-right tbg-xs-newline tbg-sm-newline">
+						<div class="toolbar-group-content">
+							<ul class="pagination" style="margin:0;display:block;">
+								<li><a href=""><span class="icon-angle-left"></span></a></li>
+								<li class="disabled"><a href="#">...</a></li>
+								<li><a href="">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="">3</a></li>
+								<li><a href="">4</a></li>
+								<li><a href="">5</a></li>
+								<li><a href="">...</a></li>
+								<li><a href=""><span class="icon-angle-right"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
