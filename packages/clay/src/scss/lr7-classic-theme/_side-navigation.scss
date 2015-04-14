@@ -53,17 +53,18 @@
 
 	.sidenav-menu-slider {
 		overflow: hidden;
+
 		@include transition(width 0.5s ease);
 	}
 }
 
 @media (min-width: $grid-float-breakpoint) {
 	.sidenav-content {
+		@include clearfix-hack();
+
 		left: auto;
 		padding-left: $sidenav-width;
 		position: static;
-
-		@include clearfix-hack();
 	}
 
 	.sidenav-container.closed {
