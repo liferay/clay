@@ -35,6 +35,11 @@
 		left: -$sidenav-width;
 	}
 
+	.sidenav-menu {
+		position: relative;
+		right: 0;
+	}
+
 	.sidenav-menu-slider {
 		right: 0;
 	}
@@ -42,6 +47,10 @@
 	&.closed {
 		.sidenav-content {
 			left: 0;
+		}
+
+		.sidenav-menu {
+			right: $sidenav-width;
 		}
 	}
 }
@@ -54,7 +63,9 @@
 	.sidenav-menu-slider {
 		overflow: hidden;
 
-		@include transition(width 0.5s ease);
+		&,.sidenav-menu {
+			@include transition(all 0.5s ease);
+		}
 	}
 }
 

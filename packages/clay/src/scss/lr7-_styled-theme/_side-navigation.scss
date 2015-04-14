@@ -37,6 +37,11 @@ $sidenav-width: 220px;
 		left: -$sidenav-width;
 	}
 
+	.sidenav-menu {
+		position: relative;
+		right: 0;
+	}
+
 	.sidenav-menu-slider {
 		right: 0;
 	}
@@ -44,6 +49,10 @@ $sidenav-width: 220px;
 	&.closed {
 		.sidenav-content {
 			left: 0;
+		}
+
+		.sidenav-menu {
+			right: $sidenav-width;
 		}
 	}
 }
@@ -56,7 +65,9 @@ $sidenav-width: 220px;
 	.sidenav-menu-slider {
 		overflow: hidden;
 
-		@include transition(all 0.5s ease);
+		&,.sidenav-menu {
+			@include transition(all 0.5s ease);
+		}
 	}
 }
 
@@ -82,12 +93,10 @@ $sidenav-width: 220px;
 			padding-right: $sidenav-width;
 		}
 
-		.sidenav-menu {
-			padding-left: 0;
-		}
-
-		&.closed > .sidenav-content {
-			padding-right: 0;
+		&.closed {
+			> .sidenav-content {
+				padding-right: 0;
+			}
 		}
 	}
 }
