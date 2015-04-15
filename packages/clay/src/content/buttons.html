@@ -554,3 +554,62 @@ section: Elements
 
 	</div>
 </div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Action Buttons</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Action buttons are used for providing easy access to primary actions, such as adding new entities (users, organizations, new blog entries). There are two kinds of action buttons: <code>.btn-action</code> and <code>.btn-action-secondary</code>.</p>
+
+			<p><code>.btn-action</code> should be used where only one primary action can be taken. A good use of <code>.btn-action</code> is adding a new entry in the blog portlet, where the user will be led to the new blog entry page.</p>
+		</blockquote>
+
+		<a class="btn btn-primary btn-action" href="../blogs-action"><span class="icon-plus"></span></a>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse12"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse12">
+	<pre><code class="html">```<a class="btn btn-primary btn-action" href="../blogs-action"><span class="icon-plus"></span></a>```</code></pre>
+</div>
+
+		<blockquote class="blockquote-sm blockquote-success" style="margin-top:20px;">
+			<p><code>.btn-action-secondary</code> should be used where multiple primary actions can be taken. This button will display an overflow menu with a list of available actions. For example, on the users and organizations page in the control panel, a user, organization, or location can be added. Clicking the button inside btn-action-secondary will open an overflow menu with add user, add organization, or add location options (button on bottom right).</p>
+		</blockquote>
+
+		<div class="btn-action-secondary dropdown" style="display: block;">
+			<button class="btn btn-primary" data-toggle="dropdown" type="button"><span class="icon-plus"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right-side dropdown-menu-bottom">
+				<li><a href="../blogs-action">User</a></li>
+				<li><a href="../blogs-action">Regular Organization</a></li>
+				<li><a href="../blogs-action">Location</a></li>
+			</ul>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse13"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse13">
+	<pre><code class="html">```<div class="btn-action-secondary dropdown">
+    <button class="btn btn-primary" data-toggle="dropdown" type="button"><span class="icon-plus"></span></button>
+    <ul class="dropdown-menu dropdown-menu-right-side dropdown-menu-bottom">
+        <li><a href="../blogs-action">User</a></li>
+        <li><a href="../blogs-action">Regular Organization</a></li>
+        <li><a href="../blogs-action">Location</a></li>
+    </ul>
+</div>```</code></pre>
+</div>
+
+		<a class="btn btn-primary btn-action btn-top-left" href="../blogs-action" type="submit"><span class="icon-plus"></span></a>
+
+		<div class="btn-action-secondary btn-bottom-right dropdown">
+			<button class="btn btn-primary" data-toggle="dropdown" type="button"><span class="icon-plus"></span></button>
+			<ul class="dropdown-menu dropdown-menu-left-side dropdown-menu-bottom">
+				<li><a href="../blogs-action">User</a></li>
+				<li><a href="../blogs-action">Regular Organization</a></li>
+				<li><a href="../blogs-action">Location</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
