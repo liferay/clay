@@ -6330,22 +6330,22 @@ a.btn-action, .btn-action-secondary > a.btn {
     margin-right: 20px; }
   .btn-action-secondary .dropdown-menu-right-side {
     margin-left: 20px; }
-  .btn-action-secondary .dropdown-menu.dropdown-menu-top:after {
+  .btn-action-secondary .dropdown-menu-left:after, .btn-action-secondary .dropdown-menu-top:after {
     left: 24px; }
-  .btn-action-secondary .dropdown-menu.dropdown-menu-top:before {
+  .btn-action-secondary .dropdown-menu-left:before, .btn-action-secondary .dropdown-menu-top:before {
     left: 23px; }
   .btn-action-secondary .dropdown-menu.dropdown-menu-right:after, .btn-action-secondary .dropdown-menu.dropdown-menu-top-right:after {
     right: 24px; }
   .btn-action-secondary .dropdown-menu.dropdown-menu-right:before, .btn-action-secondary .dropdown-menu.dropdown-menu-top-right:before {
     right: 23px; }
   .btn-action-secondary .dropdown-menu-left-side:after, .btn-action-secondary .dropdown-menu-right-side:after {
-    top: 24px; }
+    top: 18px; }
   .btn-action-secondary .dropdown-menu-left-side:before, .btn-action-secondary .dropdown-menu-right-side:before {
-    top: 23px; }
-  .btn-action-secondary .dropdown-menu-bottom:after {
+    top: 17px; }
+  .btn-action-secondary .dropdown-menu-left-side-bottom:after, .btn-action-secondary .dropdown-menu-right-side-bottom:after {
     bottom: 18px;
     top: auto; }
-  .btn-action-secondary .dropdown-menu-bottom:before {
+  .btn-action-secondary .dropdown-menu-left-side-bottom:before, .btn-action-secondary .dropdown-menu-right-side-bottom:before {
     bottom: 17px;
     top: auto; }
 
@@ -6382,10 +6382,16 @@ a.btn-action, .btn-action-secondary > a.btn {
   .btn-action-secondary {
     height: 64px;
     width: 64px; }
-    .btn-action-secondary .dropdown-menu-left-side.dropdown-menu-bottom:after {
-      bottom: 24px; }
-    .btn-action-secondary .dropdown-menu-left-side.dropdown-menu-bottom:before {
-      bottom: 23px; } }
+    .btn-action-secondary .dropdown-menu-left-side:after, .btn-action-secondary .dropdown-menu-right-side:after {
+      top: 24px; }
+    .btn-action-secondary .dropdown-menu-left-side:before, .btn-action-secondary .dropdown-menu-right-side:before {
+      top: 23px; }
+    .btn-action-secondary .dropdown-menu-left-side-bottom:after, .btn-action-secondary .dropdown-menu-right-side-bottom:after {
+      bottom: 24px;
+      top: auto; }
+    .btn-action-secondary .dropdown-menu-left-side-bottom:before, .btn-action-secondary .dropdown-menu-right-side-bottom:before {
+      bottom: 23px;
+      top: auto; } }
 
 .btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
   margin-left: -2px; }
@@ -6538,7 +6544,7 @@ a.btn-action, .btn-action-secondary > a.btn {
     .card-btn-row [class*="card-col"] a [class^="icon-"], .card-btn-row [class*="card-col"] button [class^="icon-"] {
       display: block; }
 
-.dropdown-menu .inline-scroller > .disabled > a, .dropdown-menu .link-list > .disabled > a, .dropdown-menu.dropdown-menu-inverse > .disabled > a, .navbar-inverse .dropdown-menu > .disabled > a, .dropdown-menu.dropdown-menu-inverse .inline-scroller > .disabled > a, .dropdown-menu.dropdown-menu-inverse .link-list > .disabled > a, .navbar-inverse .dropdown-menu .inline-scroller > .disabled > a, .navbar-inverse .dropdown-menu .link-list > .disabled > a, .dropdown-menu .inline-scroller > .disabled > a:hover, .dropdown-menu .link-list > .disabled > a:hover, .dropdown-menu.dropdown-menu-inverse > .disabled > a:hover, .navbar-inverse .dropdown-menu > .disabled > a:hover, .dropdown-menu.dropdown-menu-inverse .inline-scroller > .disabled > a:hover, .dropdown-menu.dropdown-menu-inverse .link-list > .disabled > a:hover, .navbar-inverse .dropdown-menu .inline-scroller > .disabled > a:hover, .navbar-inverse .dropdown-menu .link-list > .disabled > a:hover, .dropdown-menu .inline-scroller > .disabled > a:focus, .dropdown-menu .link-list > .disabled > a:focus, .dropdown-menu.dropdown-menu-inverse > .disabled > a:focus, .navbar-inverse .dropdown-menu > .disabled > a:focus, .dropdown-menu.dropdown-menu-inverse .inline-scroller > .disabled > a:focus, .dropdown-menu.dropdown-menu-inverse .link-list > .disabled > a:focus, .navbar-inverse .dropdown-menu .inline-scroller > .disabled > a:focus, .navbar-inverse .dropdown-menu .link-list > .disabled > a:focus {
+.dropdown-menu .inline-scroller > .disabled > a, .dropdown-menu .link-list > .disabled > a, .dropdown-menu .inline-scroller > .disabled > a:hover, .dropdown-menu .link-list > .disabled > a:hover, .dropdown-menu .inline-scroller > .disabled > a:focus, .dropdown-menu .link-list > .disabled > a:focus {
   background-color: transparent;
   background-image: none;
   color: #CACDD2;
@@ -6767,41 +6773,6 @@ a.btn-action, .btn-action-secondary > a.btn {
 
 .dropup .dropdown-menu-right:after, .dropup .dropdown-menu-right:before {
   left: auto; }
-
-.dropdown-menu.dropdown-menu-inverse, .navbar-inverse .dropdown-menu {
-  background-color: #869CAD;
-  border-color: #869CAD;
-  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2); }
-  .dropdown-menu.dropdown-menu-inverse:after, .dropdown-menu.dropdown-menu-inverse.dropdown-menu-right:after, .navbar-inverse .dropdown-menu:after, .navbar-inverse .dropdown-menu.dropdown-menu-right:after {
-    border-bottom-color: #869CAD; }
-  .dropdown-menu.dropdown-menu-inverse:before, .dropdown-menu.dropdown-menu-inverse.dropdown-menu-right:before, .navbar-inverse .dropdown-menu:before, .navbar-inverse .dropdown-menu.dropdown-menu-right:before {
-    border-bottom-color: #869CAD; }
-  .dropdown-menu.dropdown-menu-inverse.dropdown-menu-top:after, .dropdown-menu.dropdown-menu-inverse.dropdown-menu-top-right:after, .navbar-inverse .dropdown-menu.dropdown-menu-top:after, .navbar-inverse .dropdown-menu.dropdown-menu-top-right:after {
-    border-top-color: #869CAD; }
-  .dropdown-menu.dropdown-menu-inverse.dropdown-menu-top:before, .dropdown-menu.dropdown-menu-inverse.dropdown-menu-top-right:before, .navbar-inverse .dropdown-menu.dropdown-menu-top:before, .navbar-inverse .dropdown-menu.dropdown-menu-top-right:before {
-    border-top-color: #869CAD; }
-  .dropdown-menu.dropdown-menu-inverse > li > a, .navbar-inverse .dropdown-menu > li > a {
-    color: #FFF; }
-    .dropdown-menu.dropdown-menu-inverse > li > a:focus, .dropdown-menu.dropdown-menu-inverse > li > a:hover, .navbar-inverse .dropdown-menu > li > a:focus, .navbar-inverse .dropdown-menu > li > a:hover {
-      color: #869CAD; }
-  .dropdown-menu.dropdown-menu-inverse > li.active > a, .dropdown-menu.dropdown-menu-inverse > li.active > a:focus, .dropdown-menu.dropdown-menu-inverse > li.active > a:hover, .navbar-inverse .dropdown-menu > li.active > a, .navbar-inverse .dropdown-menu > li.active > a:focus, .navbar-inverse .dropdown-menu > li.active > a:hover {
-    color: #FFF; }
-  .dropdown-menu.dropdown-menu-inverse .divider, .navbar-inverse .dropdown-menu .divider {
-    height: 1px;
-    margin: 9px 0;
-    overflow: hidden;
-    background-color: #637e93; }
-  .dropdown-menu.dropdown-menu-inverse .dropdown-header, .dropdown-menu.dropdown-menu-inverse .link-list-heading, .navbar-inverse .dropdown-menu .dropdown-header, .navbar-inverse .dropdown-menu .link-list-heading {
-    color: #FFF; }
-  .dropdown-menu.dropdown-menu-inverse .inline-scroller li a, .dropdown-menu.dropdown-menu-inverse .link-list li a, .navbar-inverse .dropdown-menu .inline-scroller li a, .navbar-inverse .dropdown-menu .link-list li a {
-    color: #FFF; }
-
-.dropdown-menu-top, .dropup .dropdown-menu {
-  margin-bottom: 0; }
-
-.dropdown-menu-top-right, .dropup .dropdown-menu-right {
-  margin-bottom: 0; }
 
 .dropdown-menu .inline-scroller li a, .dropdown-menu .link-list li a {
   padding: 3px 12px; }
@@ -7948,8 +7919,6 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
       display: none; }
     .navbar-nav .open .dropdown-menu:before {
       display: none; }
-    .navbar-nav .open .dropdown-menu.dropdown-menu-inverse {
-      background-color: #869CAD; }
     .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
       padding: 5px 15px; }
     .navbar-nav .open .dropdown-menu .inline-scroller li a, .navbar-nav .open .dropdown-menu .linked-list li a {
