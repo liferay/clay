@@ -124,6 +124,17 @@ a.btn-action,
 		}
 	}
 
+	.dropdown-menu.dropdown-menu-right,
+	.dropdown-menu.dropdown-menu-top-right {
+		&:after {
+			right: 24px;
+		}
+
+		&:before {
+			right: 23px;
+		}
+	}
+
 	.dropdown-menu-left-side,
 	.dropdown-menu-right-side {
 		&:after {
@@ -135,14 +146,15 @@ a.btn-action,
 		}
 	}
 
-	.dropdown-menu-left-side.dropdown-menu-bottom,
-	.dropdown-menu-right-side.dropdown-menu-bottom {
+	.dropdown-menu-bottom {
 		&:after {
 			bottom: 18px;
+			top: auto;
 		}
 
 		&:before {
 			bottom: 17px;
+			top: auto;
 		}
 	}
 }

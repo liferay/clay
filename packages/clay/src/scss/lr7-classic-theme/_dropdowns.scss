@@ -52,35 +52,95 @@
 	}
 }
 
+// Arrow mixin params
+// ($arrow-size, $border-width, $offset, $arrow-color, $border-color)
 .dropdown-menu {
-	@include arrow-top-left($dropdown-arrow-color, 8px, 9px);
-	@include arrow-top-left-border($dropdown-border, 9px, 9px);
+	@include arrow-top-left(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	border: $dropdown-border-width solid $dropdown-fallback-border; // IE8 fallback
 	border: $dropdown-border-width solid $dropdown-border;
-
-	@include box-shadow($dropdown-box-shadow);
-
+	box-shadow: $dropdown-box-shadow;
 	margin-top: 0;
 	padding: 6px 0;
 
-	&.dropdown-menu-right, .navbar-right & {
-		@include arrow-top-right($dropdown-arrow-color, 8px, 9px);
-		@include arrow-top-right-border($dropdown-border, 9px, 9px);
-	}
-
-	&.dropdown-menu-top {
-		@include arrow-bottom-left($dropdown-arrow-color, 8px, 9px);
-		@include arrow-bottom-left-border($dropdown-border, 9px, 9px);
-	}
-
-	&.dropdown-menu-top-right {
-		@include arrow-bottom-right($dropdown-arrow-color, 8px, 9px);
-		@include arrow-bottom-right-border($dropdown-border, 9px, 9px);
-	}
-
 	> li > a {
 		padding: 3px 12px;
+	}
+}
+
+.dropdown-menu-right,
+.navbar-right .dropdown-menu {
+	@include arrow-top-right(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+}
+
+.dropdown-menu-top,
+.dropup .dropdown-menu {
+	@include arrow-bottom-left(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+
+	bottom: 100%;
+	margin-top: 0;
+	top: auto;
+}
+
+.dropdown-menu-top-right {
+	@include arrow-bottom-right(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+
+	bottom: 100%;
+	left: auto;
+	margin-top: 0;
+	right: 0;
+	top: auto;
+}
+
+.dropdown-menu-left-side {
+	@include arrow-right-top(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+
+	left: auto;
+	margin: 0;
+	right: 100%;
+	top: 0;
+
+	> .inline-scroller {
+		margin-right: 3px;
+	}
+}
+
+.dropdown-menu-left-side-bottom {
+	@include arrow-right-bottom(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+
+	bottom: 0;
+	left: auto;
+	margin: 0;
+	right: 100%;
+	top: auto;
+
+	> .inline-scroller {
+		margin-right: 3px;
+	}
+}
+
+.dropdown-menu-right-side {
+	@include arrow-left-top(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+
+	left: 100%;
+	margin: 0;
+	top: 0;
+}
+
+.dropdown-menu-right-side-bottom {
+	@include arrow-left-bottom(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+
+	bottom: 0;
+	left: 100%;
+	margin: 0;
+	top: auto;
+}
+
+// Dropup Menus
+
+.dropup .dropdown-menu-right {
+	&:after, &:before {
+		left: auto;
 	}
 }
 
@@ -163,102 +223,6 @@
 	.link-list .link-list-heading {
 		padding: 3px 12px;
 	}
-}
-
-// Dropdown menu positions
-.dropdown-menu-left-side {
-	left: auto;
-	margin: 0;
-	right: 100%;
-	top: 0;
-
-	&:after {
-		border-bottom: 8px solid transparent;
-		border-left: 8px solid #FFF;
-		border-right: 8px solid transparent;
-		content: '';
-		left: 100%;
-		top: 11px;
-		border-top: 8px solid transparent;
-	}
-
-	&:before {
-		border-bottom: 9px solid transparent;
-		border-left: 9px solid #E7E8EA;
-		border-right: 9px solid transparent;
-		content: '';
-		left: 100%;
-		top: 10px;
-		border-top: 9px solid transparent;
-	}
-
-	> .inline-scroller {
-		margin-right: 3px;
-	}
-}
-
-.dropdown-menu-right-side {
-	left: 100%;
-	margin: 0;
-	top: 0;
-
-	&:after {
-		border-bottom: 8px solid transparent;
-		border-left: 8px solid transparent;
-		border-right: 8px solid #FFF;
-		content: '';
-		left: -16px;
-		top: 11px;
-		border-top: 8px solid transparent;
-	}
-
-	&:before {
-		border-bottom: 9px solid transparent;
-		border-left: 9px solid transparent;
-		border-right: 9px solid #E7E8EA;
-		content: '';
-		left: -18px;
-		top: 10px;
-		border-top: 9px solid transparent;
-	}
-}
-
-.dropdown-menu-left-side, .dropdown-menu-right-side {
-	&.dropdown-menu-bottom {
-		bottom: 0;
-		top: auto;
-
-		&:after {
-			bottom: 11px;
-			top: auto;
-		}
-
-		&:before {
-			bottom: 10px;
-			top: auto;
-		}
-	}
-}
-
-.dropdown-menu-top, .dropup .dropdown-menu {
-	bottom: 100%;
-	margin-top: 0;
-	top: auto;
-}
-
-.dropdown-menu-top-right, .dropup .dropdown-menu-right {
-	bottom: 100%;
-	margin-top: 0;
-	right: 0;
-	top: auto;
-}
-
-.dropup .dropdown-menu {
-	@extend .dropdown-menu.dropdown-menu-top;
-}
-
-.dropup .dropdown-menu-right {
-	@extend .dropdown-menu.dropdown-menu-top-right;
 }
 
 // Dropdown wide / full

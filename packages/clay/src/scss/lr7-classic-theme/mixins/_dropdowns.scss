@@ -1,56 +1,61 @@
-@mixin arrow-bottom-left($color, $size, $offset) {
-	&:after {
+/*
+	Dropdown arrows
+	$arrow-color: color of arrow
+	$arrow-size: size of arrow
+	$border-color: arrow border color
+	$border-width: arrow border width
+	$offset: distance from respective edge of dropdown menu
+*/
+
+@mixin arrow-bottom-left($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	&:after, &:before {
 		border-bottom-width: 0;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-top: $size solid $color;
-		bottom: -$size;
 		content: '';
 		display: inline-block;
-		left: $offset + 1;
 		position: absolute;
 		top: auto;
 	}
-}
 
-@mixin arrow-bottom-left-border($color, $size, $offset) {
+	// arrow
+	&:after {
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid transparent;
+		border-top: $arrow-size solid $arrow-color;
+		bottom: -$arrow-size;
+		left: $offset + $border-width;
+	}
+
+	// border
 	&:before {
-		border-bottom-width: 0;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-top: $size solid $color;
-		bottom: -$size;
-		content: '';
-		display: inline-block;
+		border-left: $arrow-size + $border-width solid transparent;
+		border-right: $arrow-size + $border-width solid transparent;
+		border-top: $arrow-size + $border-width solid $border-color;
+		bottom: -($arrow-size + $border-width);
 		left: $offset;
-		position: absolute;
-		top: auto;
 	}
 }
 
-@mixin arrow-bottom-right($color, $size, $offset) {
+@mixin arrow-bottom-right($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	&:after {
 		border-bottom-width: 0;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-top: $size solid $color;
-		bottom: -$size;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid transparent;
+		border-top: $arrow-size solid $arrow-color;
+		bottom: -$arrow-size;
 		content: '';
 		display: inline-block;
 		left: auto;
-		right: $offset + 1;
+		right: $offset + $border-width;
 		position: absolute;
 		top: auto;
 	}
-}
 
-@mixin arrow-bottom-right-border($color, $size, $offset) {
 	&:before {
 		border-bottom-width: 0;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-top: $size solid $color;
-		bottom: -$size;
+		border-left: $arrow-size + $border-width solid transparent;
+		border-right: $arrow-size + $border-width solid transparent;
+		border-top: $arrow-size + $border-width solid $border-color;
+		bottom: -($arrow-size + $border-width);
 		content: '';
 		display: inline-block;
 		left: auto;
@@ -60,54 +65,142 @@
 	}
 }
 
-@mixin arrow-top-left($color, $size, $offset) {
-	&:after {
-		border-bottom: $size solid $color;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
+@mixin arrow-top-left($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	&:after, &:before {
 		content: '';
 		display: inline-block;
 		position: absolute;
-		left: $offset + 1;
-		top: -$size;
 	}
-}
 
-@mixin arrow-top-left-border($color, $size, $offset) {
-	&:before {
-		border-bottom: $size solid $color;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		content: '';
-		display: inline-block;
-		position: absolute;
+	&:after { // arrow
+		border-bottom: $arrow-size solid $arrow-color;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid transparent;
+		left: $offset + $border-width;
+		top: -$arrow-size;
+	}
+
+	&:before { // border
+		border-bottom: $arrow-size + $border-width solid $border-color;
+		border-left: $arrow-size + $border-width solid transparent;
+		border-right: $arrow-size + $border-width solid transparent;
 		left: $offset;
-		top: -$size;
+		top: -($arrow-size + $border-width);
 	}
 }
 
-@mixin arrow-top-right($color, $size, $offset) {
+@mixin arrow-top-right($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	&:after {
-		border-bottom: $size solid $color;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
+		border-bottom: $arrow-size solid $arrow-color;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid transparent;
 		content: '';
 		display: inline-block;
 		position: absolute;
 		left: auto;
-		right: $offset + 1;
+		right: $offset + $border-width;
 	}
-}
 
-@mixin arrow-top-right-border($color, $size, $offset) {
 	&:before {
-		border-bottom: $size solid $color;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
+		border-bottom: $arrow-size + $border-width solid $border-color;
+		border-left: $arrow-size + $border-width solid transparent;
+		border-right: $arrow-size + $border-width solid transparent;
 		content: '';
 		display: inline-block;
 		position: absolute;
 		left: auto;
 		right: $offset;
+	}
+}
+
+@mixin arrow-left-bottom($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	&:after {
+		border-bottom: $arrow-size solid transparent;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid $arrow-color;
+		border-top: $arrow-size solid transparent;
+		bottom: $offset + $border-width;
+		content: '';
+		left: -($arrow-size * 2);
+		top: auto;
+	}
+
+	&:before {
+		border-bottom: $arrow-size + $border-width solid transparent;
+		border-left: $arrow-size + $border-width solid transparent;
+		border-right: $arrow-size + $border-width solid $border-color;
+		border-top: $arrow-size + $border-width solid transparent;
+		bottom: $offset;
+		content: '';
+		left: -($arrow-size * 2) - ($border-width * 2);
+		top: auto;
+	}
+}
+
+@mixin arrow-left-top($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	&:after {
+		border-bottom: $arrow-size solid transparent;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid $arrow-color;
+		border-top: $arrow-size solid transparent;
+		content: '';
+		left: -($arrow-size * 2);
+		top: $offset + $border-width;
+	}
+
+	&:before {
+		border-bottom: $arrow-size + $border-width solid transparent;
+		border-left: $arrow-size + $border-width solid transparent;
+		border-right: $arrow-size + $border-width solid $border-color;
+		border-top: $arrow-size + $border-width solid transparent;
+		content: '';
+		left: -($arrow-size * 2) - ($border-width * 2);
+		top: $offset;
+	}
+}
+
+@mixin arrow-right-bottom($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	&:after {
+		border-bottom: $arrow-size solid transparent;
+		border-left: $arrow-size solid $arrow-color;
+		border-right: $arrow-size solid transparent;
+		border-top: $arrow-size solid transparent;
+		bottom: $offset + $border-width;
+		content: '';
+		left: 100%;
+		top: auto;
+	}
+
+	&:before {
+		border-bottom: $arrow-size + $border-width solid transparent;
+		border-left: $arrow-size + $border-width solid $border-color;
+		border-right: $arrow-size + $border-width solid transparent;
+		border-top: $arrow-size + $border-width solid transparent;
+		bottom: $offset;
+		content: '';
+		left: 100%;
+		top: auto;
+	}
+}
+
+@mixin arrow-right-top($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	&:after {
+		border-bottom: $arrow-size solid transparent;
+		border-left: $arrow-size solid $arrow-color;
+		border-right: $arrow-size solid transparent;
+		border-top: $arrow-size solid transparent;
+		content: '';
+		left: 100%;
+		top: $offset + $border-width;
+	}
+
+	&:before {
+		border-bottom: $arrow-size + $border-width solid transparent;
+		border-left: $arrow-size + $border-width solid $border-color;
+		border-right: $arrow-size + $border-width solid transparent;
+		border-top: $arrow-size + $border-width solid transparent;
+		content: '';
+		left: 100%;
+		top: $offset;
 	}
 }
