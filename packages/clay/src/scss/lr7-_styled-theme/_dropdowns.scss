@@ -53,10 +53,25 @@
 	top: 0;
 }
 
+.dropdown-menu-left-side-bottom {
+	bottom: 0;
+	left: auto;
+	margin: -1px 2px 0 0;
+	right: 100%;
+	top: auto;
+}
+
 .dropdown-menu-right-side {
 	left: 100%;
 	margin: -1px 0 0 2px;
 	top: 0;
+}
+
+.dropdown-menu-right-side-bottom {
+	bottom: 0;
+	left: 100%;
+	margin: -1px 0 0 2px;
+	top: auto;
 }
 
 .dropdown-menu-top, .dropup .dropdown-menu {
