@@ -32,7 +32,7 @@
 			</div>
 		</header>
 
-		<section class="closed container sidenav-container non-responsive">
+		<section class="closed container sidenav-container">
 			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
 	<div class="side-navigation-container sidenav-menu">
 			
@@ -626,62 +626,48 @@ collapse
 			<p>.dropdown-menu, .dropdown-menu-top, .dropdown-menu-top-right, .dropdown-menu-right, add one of these classes to the dropdown-menu to align it relative to its trigger.</p>
 		</blockquote>
 
-		<div class="btn-group btn-group-justified">
-			<div class="btn-group dropdown">
-				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Default
-					<span class="caret"></span>
-				</button>
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Default <span class="icon-caret-down"></span></button>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
 
-				<ul aria-labelledby="dropdownMenu" class="dropdown-menu dropdown-menu-inverse" role="menu" >
-					<li class="dropdown-header" role="presentation">Dropdown Header</li>
-					<li role="presentation"><a href="#" role="menuitem">Action</a></li>
-					<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-					<li class="divider" role="presentation"></li>
-					<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-				</ul>
-			</div>
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Right <span class="icon-caret-down"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
 
-			<div class="btn-group dropdown">
-				<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Top
-					<span class="dropup"><span class="caret"></span></span>
-				</button>
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Top <span class="icon-caret-up"></span></button>
+			<ul class="dropdown-menu dropdown-menu-top">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
 
-				<ul aria-labelledby="dropdownMenu" class="dropdown-menu dropdown-menu-inverse dropdown-menu-top" role="menu" >
-					<li class="dropdown-header" role="presentation">Dropdown Header</li>
-					<li role="presentation"><a href="#" role="menuitem">Action</a></li>
-					<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-					<li class="divider" role="presentation"></li>
-					<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-				</ul>
-			</div>
-
-			<div class="btn-group dropdown">
-				<button class="btn btn-success dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Top Right
-					<span class="dropup"><span class="caret"></span></span>
-				</button>
-
-				<ul aria-labelledby="dropdownMenu" class="dropdown-menu dropdown-menu-inverse dropdown-menu-top-right" role="menu" >
-					<li class="dropdown-header" role="presentation">Dropdown Header</li>
-					<li role="presentation"><a href="#" role="menuitem">Action</a></li>
-					<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-					<li class="divider" role="presentation"></li>
-					<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-				</ul>
-			</div>
-
-			<div class="btn-group dropdown">
-				<button class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu" type="button">Right
-					<span class="caret"></span>
-				</button>
-
-				<ul aria-labelledby="dropdownMenu" class="dropdown-menu dropdown-menu-inverse dropdown-menu-right" role="menu" >
-					<li class="dropdown-header" role="presentation">Dropdown Header</li>
-					<li role="presentation"><a href="#" role="menuitem">Action</a></li>
-					<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-					<li class="divider" role="presentation"></li>
-					<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-				</ul>
-			</div>
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Top Right <span class="icon-caret-up"></span></button>
+			<ul class="dropdown-menu dropdown-menu-top-right">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
 		</div>
 	</div>
 </div>
@@ -702,6 +688,42 @@ collapse
 		<div class="dropdown" style="display: inline-block;">
 			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side</button>
 			<div class="dropdown-menu dropdown-menu-left-side">
+				<ul class="inline-scroller">
+					<li class="dropdown-header">Dropdown Header</li>
+					<li><a href="#">Action</a></li>
+					<li class="disabled"><a href="#">Disabled</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Right Side Bottom <span class="icon-caret-right"></span></button>
+			<div class="dropdown-menu dropdown-menu-right-side-bottom">
+				<ul class="inline-scroller">
+					<li class="dropdown-header">Dropdown Header</li>
+					<li><a href="#">Action</a></li>
+					<li class="disabled"><a href="#">Disabled</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+					<li><a href="#">Scope</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side Bottom</button>
+			<div class="dropdown-menu dropdown-menu-left-side-bottom">
 				<ul class="inline-scroller">
 					<li class="dropdown-header">Dropdown Header</li>
 					<li><a href="#">Action</a></li>
