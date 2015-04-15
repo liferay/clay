@@ -79,3 +79,127 @@
 .btn-xs {
 	@include button-size($btn-xs-padding-vertical, $btn-xs-padding-horizontal, $btn-xs-font-size, $line-height-base, $btn-border-radius-xs);
 }
+
+// Action Buttons
+
+a.btn-action,
+.btn-action-secondary > a.btn {
+	padding: 0;
+
+	[class*="icon-"] {
+		line-height: 52px - ($btn-border-width * 2);
+	}
+}
+
+.btn-action, .btn-action-secondary .btn {
+	border-radius: 60px;
+	font-size: 12px;
+	height: 52px;
+	line-height: 16px;
+	width: 52px;
+	z-index: $zindex-dropdown;
+}
+
+.btn-action-secondary {
+	display: inline-block;
+	height: 52px;
+	text-align: right;
+	width: 52px;
+
+	.dropdown-menu-left-side {
+		margin-right: 20px;
+	}
+
+	.dropdown-menu-right-side {
+		margin-left: 20px;
+	}
+
+	.dropdown-menu.dropdown-menu-top {
+		&:after {
+			left: 24px;
+		}
+
+		&:before {
+			left: 23px;
+		}
+	}
+
+	.dropdown-menu-left-side,
+	.dropdown-menu-right-side {
+		&:after {
+			top: 24px;
+		}
+
+		&:before {
+			top: 23px;
+		}
+	}
+
+	.dropdown-menu-left-side.dropdown-menu-bottom,
+	.dropdown-menu-right-side.dropdown-menu-bottom {
+		&:after {
+			bottom: 18px;
+		}
+
+		&:before {
+			bottom: 17px;
+		}
+	}
+}
+
+.btn-bottom-left {
+	bottom: 20px;
+	left: 20px;
+	position: fixed;
+}
+
+.btn-bottom-right {
+	bottom: 20px;
+	position: fixed;
+	right: 20px;
+}
+
+.btn-top-left {
+	left: 20px;
+	position: fixed;
+	top: 20px;
+}
+
+.btn-top-right {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+}
+
+@media screen and (min-width: $screen-sm) {
+	a.btn-action,
+	.btn-action-secondary > a.btn {
+		padding: 0;
+
+		[class*="icon-"] {
+			line-height: 64px - ($btn-border-width * 2);
+		}
+	}
+
+	.btn-action, .btn-action-secondary .btn {
+		font-size: 16px;
+		height: 64px;
+		line-height: 24px;
+		width: 64px;
+	}
+
+	.btn-action-secondary {
+		height: 64px;
+		width: 64px;
+
+		.dropdown-menu-left-side.dropdown-menu-bottom {
+			&:after {
+				bottom: 24px;
+			}
+
+			&:before {
+				bottom: 23px;
+			}
+		}
+	}
+}

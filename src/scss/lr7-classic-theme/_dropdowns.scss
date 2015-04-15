@@ -223,6 +223,23 @@
 	}
 }
 
+.dropdown-menu-left-side, .dropdown-menu-right-side {
+	&.dropdown-menu-bottom {
+		bottom: 0;
+		top: auto;
+
+		&:after {
+			bottom: 11px;
+			top: auto;
+		}
+
+		&:before {
+			bottom: 10px;
+			top: auto;
+		}
+	}
+}
+
 .dropdown-menu-top, .dropup .dropdown-menu {
 	bottom: 100%;
 	margin-top: 0;
