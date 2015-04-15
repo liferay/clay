@@ -114,7 +114,8 @@ a.btn-action,
 		margin-left: 20px;
 	}
 
-	.dropdown-menu.dropdown-menu-top {
+	.dropdown-menu-left,
+	.dropdown-menu-top {
 		&:after {
 			left: 24px;
 		}
@@ -136,17 +137,18 @@ a.btn-action,
 	}
 
 	.dropdown-menu-left-side,
-	.dropdown-menu-right-side {
+	.dropdown-menu-right-side, {
 		&:after {
-			top: 24px;
+			top: 18px;
 		}
 
 		&:before {
-			top: 23px;
+			top: 17px;
 		}
 	}
 
-	.dropdown-menu-bottom {
+	.dropdown-menu-left-side-bottom,
+	.dropdown-menu-right-side-bottom {
 		&:after {
 			bottom: 18px;
 			top: auto;
@@ -157,6 +159,29 @@ a.btn-action,
 			top: auto;
 		}
 	}
+
+	// .dropdown-menu-left-side,
+	// .dropdown-menu-right-side {
+	// 	&:after {
+	// 		top: 24px;
+	// 	}
+
+	// 	&:before {
+	// 		top: 23px;
+	// 	}
+	// }
+
+	// .dropdown-menu-bottom {
+	// 	&:after {
+	// 		bottom: 18px;
+	// 		top: auto;
+	// 	}
+
+	// 	&:before {
+	// 		bottom: 17px;
+	// 		top: auto;
+	// 	}
+	// }
 }
 
 .btn-bottom-left {
@@ -204,13 +229,27 @@ a.btn-action,
 		height: 64px;
 		width: 64px;
 
-		.dropdown-menu-left-side.dropdown-menu-bottom {
+		.dropdown-menu-left-side,
+		.dropdown-menu-right-side, {
+			&:after {
+				top: 24px;
+			}
+
+			&:before {
+				top: 23px;
+			}
+		}
+
+		.dropdown-menu-left-side-bottom,
+		.dropdown-menu-right-side-bottom {
 			&:after {
 				bottom: 24px;
+				top: auto;
 			}
 
 			&:before {
 				bottom: 23px;
+				top: auto;
 			}
 		}
 	}
