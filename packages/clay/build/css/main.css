@@ -6657,6 +6657,35 @@ a.btn-action, .btn-action-secondary > a.btn {
     position: absolute;
     top: auto; }
 
+.dropdown-menu-top-center {
+  bottom: 100%;
+  margin-top: 0;
+  top: auto; }
+  .dropdown-menu-top-center:after {
+    border-bottom-width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #FFF;
+    bottom: -8px;
+    content: '';
+    display: inline-block;
+    left: 50%;
+    margin-left: -4px;
+    position: absolute;
+    top: auto; }
+  .dropdown-menu-top-center:before {
+    border-bottom-width: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #E7E8EA;
+    bottom: -9px;
+    content: '';
+    display: inline-block;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    top: auto; }
+
 .dropdown-menu-top-right {
   bottom: 100%;
   left: auto;
@@ -6685,6 +6714,37 @@ a.btn-action, .btn-action-secondary > a.btn {
     display: inline-block;
     left: auto;
     right: 9px;
+    position: absolute;
+    top: auto; }
+
+.dropdown-menu-top-right-center {
+  bottom: 100%;
+  left: auto;
+  margin-top: 0;
+  right: 0;
+  top: auto; }
+  .dropdown-menu-top-right-center:after {
+    border-bottom-width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #FFF;
+    bottom: -8px;
+    content: '';
+    display: inline-block;
+    left: 50%;
+    margin-left: -4px;
+    position: absolute;
+    top: auto; }
+  .dropdown-menu-top-right-center:before {
+    border-bottom-width: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #E7E8EA;
+    bottom: -9px;
+    content: '';
+    display: inline-block;
+    left: 50%;
+    margin-left: -5px;
     position: absolute;
     top: auto; }
 
@@ -6784,6 +6844,54 @@ a.btn-action, .btn-action-secondary > a.btn {
     left: -18px;
     top: auto; }
 
+.dropdown-menu-center:after {
+  border-bottom: 8px solid #FFF;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  content: '';
+  display: inline-block;
+  left: 50%;
+  margin-left: -4px;
+  position: absolute;
+  top: -8px; }
+.dropdown-menu-center:before {
+  border-bottom: 9px solid #E7E8EA;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  content: '';
+  display: inline-block;
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  top: -9px; }
+
+.dropdown-menu-right-center {
+  left: auto;
+  right: 0; }
+  .dropdown-menu-right-center:after {
+    border-bottom: 8px solid #FFF;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    content: '';
+    display: inline-block;
+    left: 50%;
+    margin-left: -4px;
+    position: absolute;
+    top: -8px; }
+  .dropdown-menu-right-center:before {
+    border-bottom: 9px solid #E7E8EA;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    content: '';
+    display: inline-block;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    top: -9px; }
+
+.dropdown-menu-clear-arrow:after, .dropdown-menu-clear-arrow:before, .dropdown-menu-clear-arrow .dropdown-menu:after, .dropdown-menu-clear-arrow .dropdown-menu:before, .navbar-right .dropdown-menu-clear-arrow:after, .navbar-right .dropdown-menu-clear-arrow:before {
+  content: none; }
+
 .dropup .dropdown-menu-right:after, .dropup .dropdown-menu-right:before {
   left: auto; }
 
@@ -6819,9 +6927,6 @@ a.btn-action, .btn-action-secondary > a.btn {
 .dropdown-wide .dropdown-menu, .dropdown-full .dropdown-menu {
   padding: 5px 0;
   width: 100%; }
-
-.dropdown-full .dropdown-menu:after, .dropdown-full .dropdown-menu:before {
-  border-bottom-width: 0; }
 
 .dropdown-wide, .dropdown-full, .nav > li.dropdown-wide, .nav > li.dropdown-full {
   position: static; }
@@ -8249,11 +8354,11 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   font-size: 8px; }
 
 .user-icon-danger {
-  background-color: #A10028;
+  background-color: #CC6677;
   color: #FFF; }
 
 .user-icon-default {
-  background-color: #757D91;
+  background-color: #869CAD;
   color: #FFF; }
 
 .user-icon-info {
@@ -8261,15 +8366,15 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   color: #FFF; }
 
 .user-icon-primary {
-  background-color: #BCB750;
+  background-color: #65B3F0;
   color: #FFF; }
 
 .user-icon-success {
-  background-color: #048080;
+  background-color: #75BD4A;
   color: #FFF; }
 
 .user-icon-warning {
-  background-color: #894B0F;
+  background-color: #F5984C;
   color: #FFF; }
 
 .profile-header {
@@ -9532,6 +9637,110 @@ a.bg-primary:hover {
 
 .no-shadow .tooltip-inner, .no-shadows .tooltip-inner {
   box-shadow: none; }
+
+.user-icon {
+  border-radius: 50%;
+  background-color: #999;
+  color: #29353D;
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  overflow: hidden;
+  height: 24px;
+  line-height: 24px;
+  width: 24px; }
+  .user-icon.user-icon-circle, .user-icon-circle .user-icon {
+    border-radius: 50%; }
+  .user-icon.user-icon-rounded, .user-icon-rounded .user-icon {
+    border-radius: 5px; }
+  .user-icon.user-icon-square, .user-icon-square .user-icon {
+    border-radius: 0; }
+
+.user-icon-xxl {
+  height: 96px;
+  line-height: 96px;
+  width: 96px;
+  font-size: 37px; }
+
+.user-icon-xl {
+  height: 48px;
+  line-height: 48px;
+  width: 48px;
+  font-size: 22px; }
+
+.user-icon-lg {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  font-size: 13px; }
+
+.user-icon-sm {
+  height: 18px;
+  line-height: 18px;
+  width: 18px;
+  font-size: 9px; }
+
+.user-icon-xs {
+  height: 12px;
+  line-height: 12px;
+  width: 12px;
+  font-size: 8px; }
+
+.user-icon-danger {
+  background-color: #CC6677;
+  color: #FFF; }
+
+.user-icon-default {
+  background-color: #869CAD;
+  color: #FFF; }
+
+.user-icon-info {
+  background-color: #083781;
+  color: #FFF; }
+
+.user-icon-primary {
+  background-color: #65B3F0;
+  color: #FFF; }
+
+.user-icon-success {
+  background-color: #75BD4A;
+  color: #FFF; }
+
+.user-icon-warning {
+  background-color: #F5984C;
+  color: #FFF; }
+
+@media screen and (min-width: 768px) {
+  .user-icon {
+    height: 32px;
+    line-height: 32px;
+    width: 32px;
+    font-size: 14px; }
+  .user-icon-xxl {
+    height: 128px;
+    line-height: 128px;
+    width: 128px;
+    font-size: 50px; }
+  .user-icon-xl {
+    height: 64px;
+    line-height: 64px;
+    width: 64px;
+    font-size: 30px; }
+  .user-icon-lg {
+    height: 48px;
+    line-height: 48px;
+    width: 48px;
+    font-size: 18px; }
+  .user-icon-sm {
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+    font-size: 12px; }
+  .user-icon-xs {
+    height: 16px;
+    line-height: 16px;
+    width: 16px;
+    font-size: 8px; } }
 
 /* Removes Box Shadows */
 .no-shadow, .no-shadows {
