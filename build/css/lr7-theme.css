@@ -1533,14 +1533,14 @@ you can use the generic selector below, but it's slower:
 		input-height to the button height. ***/
 /*** When changing input, make sure to match the corresponding
 		 btn settings to the input height. ***/
-/*
-	Dropdown arrows
-	$arrow-color: color of arrow
-	$arrow-size: size of arrow
-	$border-color: arrow border color
-	$border-width: arrow border width
-	$offset: distance from respective edge of dropdown menu
-*/
+/**
+ * Creates arrows for dropdown-menus
+ * $arrow-color: color of arrow
+ * $arrow-size: size of arrow
+ * $border-color: arrow border color
+ * $border-width: arrow border width
+ * $offset: distance from respective edge of dropdown menu
+**/
 .card-row [class*="card-col"], .equal-height-column-cell, .notification-content, .notification-field, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content {
   display: table-cell;
   vertical-align: top; }
@@ -6331,13 +6331,13 @@ a.btn-action, .btn-action-secondary > a.btn {
   .btn-action-secondary .dropdown-menu-right-side {
     margin-left: 20px; }
   .btn-action-secondary .dropdown-menu-left:after, .btn-action-secondary .dropdown-menu-top:after {
-    left: 24px; }
+    left: 18px; }
   .btn-action-secondary .dropdown-menu-left:before, .btn-action-secondary .dropdown-menu-top:before {
-    left: 23px; }
-  .btn-action-secondary .dropdown-menu.dropdown-menu-right:after, .btn-action-secondary .dropdown-menu.dropdown-menu-top-right:after {
-    right: 24px; }
-  .btn-action-secondary .dropdown-menu.dropdown-menu-right:before, .btn-action-secondary .dropdown-menu.dropdown-menu-top-right:before {
-    right: 23px; }
+    left: 17px; }
+  .btn-action-secondary .dropdown-menu-right:after, .btn-action-secondary .dropdown-menu-top-right:after {
+    right: 18px; }
+  .btn-action-secondary .dropdown-menu-right:before, .btn-action-secondary .dropdown-menu-top-right:before {
+    right: 17px; }
   .btn-action-secondary .dropdown-menu-left-side:after, .btn-action-secondary .dropdown-menu-right-side:after {
     top: 18px; }
   .btn-action-secondary .dropdown-menu-left-side:before, .btn-action-secondary .dropdown-menu-right-side:before {
@@ -6382,6 +6382,14 @@ a.btn-action, .btn-action-secondary > a.btn {
   .btn-action-secondary {
     height: 64px;
     width: 64px; }
+    .btn-action-secondary .dropdown-menu-left:after, .btn-action-secondary .dropdown-menu-top:after {
+      left: 24px; }
+    .btn-action-secondary .dropdown-menu-left:before, .btn-action-secondary .dropdown-menu-top:before {
+      left: 23px; }
+    .btn-action-secondary .dropdown-menu-right:after, .btn-action-secondary .dropdown-menu-top-right:after {
+      right: 24px; }
+    .btn-action-secondary .dropdown-menu-right:before, .btn-action-secondary .dropdown-menu-top-right:before {
+      right: 23px; }
     .btn-action-secondary .dropdown-menu-left-side:after, .btn-action-secondary .dropdown-menu-right-side:after {
       top: 24px; }
     .btn-action-secondary .dropdown-menu-left-side:before, .btn-action-secondary .dropdown-menu-right-side:before {
@@ -6544,14 +6552,6 @@ a.btn-action, .btn-action-secondary > a.btn {
     .card-btn-row [class*="card-col"] a [class^="icon-"], .card-btn-row [class*="card-col"] button [class^="icon-"] {
       display: block; }
 
-.dropdown-menu .inline-scroller > .disabled > a, .dropdown-menu .link-list > .disabled > a, .dropdown-menu .inline-scroller > .disabled > a:hover, .dropdown-menu .link-list > .disabled > a:hover, .dropdown-menu .inline-scroller > .disabled > a:focus, .dropdown-menu .link-list > .disabled > a:focus {
-  background-color: transparent;
-  background-image: none;
-  color: #CACDD2;
-  cursor: not-allowed;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  text-decoration: none; }
-
 .inline-scroller {
   height: 125px;
   list-style: none;
@@ -6572,6 +6572,13 @@ a.btn-action, .btn-action-secondary > a.btn {
     background-color: #E7E8EA;
     color: #869CAD;
     text-decoration: none; }
+.dropdown-menu .inline-scroller > .disabled > a, .dropdown-menu .inline-scroller > .disabled > a:hover, .dropdown-menu .inline-scroller > .disabled > a:focus, .dropdown-menu .link-list > .disabled > a, .dropdown-menu .link-list > .disabled > a:hover, .dropdown-menu .link-list > .disabled > a:focus {
+  background-color: transparent;
+  background-image: none;
+  color: #CACDD2;
+  cursor: not-allowed;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  text-decoration: none; }
 .dropdown-menu .link-list .link-list-heading {
   color: #B0B4BB;
   line-height: 1;
@@ -6583,21 +6590,23 @@ a.btn-action, .btn-action-secondary > a.btn {
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
   margin-top: 0;
   padding: 6px 0; }
-  .dropdown-menu:after, .dropdown-menu:before {
-    content: '';
-    display: inline-block;
-    position: absolute; }
   .dropdown-menu:after {
     border-bottom: 8px solid #FFF;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
+    content: '';
+    display: inline-block;
     left: 10px;
+    position: absolute;
     top: -8px; }
   .dropdown-menu:before {
     border-bottom: 9px solid #E7E8EA;
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
+    content: '';
+    display: inline-block;
     left: 9px;
+    position: absolute;
     top: -9px; }
   .dropdown-menu > li > a {
     padding: 3px 12px; }
@@ -6625,24 +6634,28 @@ a.btn-action, .btn-action-secondary > a.btn {
   bottom: 100%;
   margin-top: 0;
   top: auto; }
-  .dropdown-menu-top:after, .dropdown-menu-top:before, .dropup .dropdown-menu:after, .dropup .dropdown-menu:before {
-    border-bottom-width: 0;
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: auto; }
   .dropdown-menu-top:after, .dropup .dropdown-menu:after {
+    border-bottom-width: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-top: 8px solid #FFF;
     bottom: -8px;
-    left: 10px; }
+    content: '';
+    display: inline-block;
+    left: 10px;
+    position: absolute;
+    top: auto; }
   .dropdown-menu-top:before, .dropup .dropdown-menu:before {
+    border-bottom-width: 0;
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
     border-top: 9px solid #E7E8EA;
     bottom: -9px;
-    left: 9px; }
+    content: '';
+    display: inline-block;
+    left: 9px;
+    position: absolute;
+    top: auto; }
 
 .dropdown-menu-top-right {
   bottom: 100%;
