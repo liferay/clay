@@ -117,22 +117,22 @@ a.btn-action,
 	.dropdown-menu-left,
 	.dropdown-menu-top {
 		&:after {
-			left: 24px;
+			left: 18px;
 		}
 
 		&:before {
-			left: 23px;
+			left: 17px;
 		}
 	}
 
-	.dropdown-menu.dropdown-menu-right,
-	.dropdown-menu.dropdown-menu-top-right {
+	.dropdown-menu-right,
+	.dropdown-menu-top-right {
 		&:after {
-			right: 24px;
+			right: 18px;
 		}
 
 		&:before {
-			right: 23px;
+			right: 17px;
 		}
 	}
 
@@ -159,29 +159,6 @@ a.btn-action,
 			top: auto;
 		}
 	}
-
-	// .dropdown-menu-left-side,
-	// .dropdown-menu-right-side {
-	// 	&:after {
-	// 		top: 24px;
-	// 	}
-
-	// 	&:before {
-	// 		top: 23px;
-	// 	}
-	// }
-
-	// .dropdown-menu-bottom {
-	// 	&:after {
-	// 		bottom: 18px;
-	// 		top: auto;
-	// 	}
-
-	// 	&:before {
-	// 		bottom: 17px;
-	// 		top: auto;
-	// 	}
-	// }
 }
 
 .btn-bottom-left {
@@ -228,6 +205,28 @@ a.btn-action,
 	.btn-action-secondary {
 		height: 64px;
 		width: 64px;
+
+		.dropdown-menu-left,
+		.dropdown-menu-top {
+			&:after {
+				left: 24px;
+			}
+
+			&:before {
+				left: 23px;
+			}
+		}
+
+		.dropdown-menu-right,
+		.dropdown-menu-top-right {
+			&:after {
+				right: 24px;
+			}
+
+			&:before {
+				right: 23px;
+			}
+		}
 
 		.dropdown-menu-left-side,
 		.dropdown-menu-right-side, {
