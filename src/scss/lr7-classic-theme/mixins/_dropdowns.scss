@@ -1,41 +1,46 @@
-/*
-	Dropdown arrows
-	$arrow-color: color of arrow
-	$arrow-size: size of arrow
-	$border-color: arrow border color
-	$border-width: arrow border width
-	$offset: distance from respective edge of dropdown menu
-*/
+/**
+ * Creates arrows for dropdown-menus
+ * $arrow-color: color of arrow
+ * $arrow-size: size of arrow
+ * $border-color: arrow border color
+ * $border-width: arrow border width
+ * $offset: distance from respective edge of dropdown menu
+**/
 
+// Arrow is on the bottom side of dropdown and aligned left (points down)
 @mixin arrow-bottom-left($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
-	&:after, &:before {
-		border-bottom-width: 0;
-		content: '';
-		display: inline-block;
-		position: absolute;
-		top: auto;
-	}
-
 	// arrow
 	&:after {
+		border-bottom-width: 0;
 		border-left: $arrow-size solid transparent;
 		border-right: $arrow-size solid transparent;
 		border-top: $arrow-size solid $arrow-color;
 		bottom: -$arrow-size;
+		content: '';
+		display: inline-block;
 		left: $offset + $border-width;
+		position: absolute;
+		top: auto;
 	}
 
 	// border
 	&:before {
+		border-bottom-width: 0;
 		border-left: $arrow-size + $border-width solid transparent;
 		border-right: $arrow-size + $border-width solid transparent;
 		border-top: $arrow-size + $border-width solid $border-color;
 		bottom: -($arrow-size + $border-width);
+		content: '';
+		display: inline-block;
 		left: $offset;
+		position: absolute;
+		top: auto;
 	}
 }
 
+// Arrow is on bottom side of dropdown and aligned right (points down)
 @mixin arrow-bottom-right($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
 	&:after {
 		border-bottom-width: 0;
 		border-left: $arrow-size solid transparent;
@@ -50,6 +55,7 @@
 		top: auto;
 	}
 
+	// border
 	&:before {
 		border-bottom-width: 0;
 		border-left: $arrow-size + $border-width solid transparent;
@@ -65,31 +71,36 @@
 	}
 }
 
+// Arrow is on the top side of dropdown and aligned left (points up)
 @mixin arrow-top-left($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
-	&:after, &:before {
-		content: '';
-		display: inline-block;
-		position: absolute;
-	}
-
-	&:after { // arrow
+	// arrow
+	&:after {
 		border-bottom: $arrow-size solid $arrow-color;
 		border-left: $arrow-size solid transparent;
 		border-right: $arrow-size solid transparent;
+		content: '';
+		display: inline-block;
 		left: $offset + $border-width;
+		position: absolute;
 		top: -$arrow-size;
 	}
 
-	&:before { // border
+	// border
+	&:before {
 		border-bottom: $arrow-size + $border-width solid $border-color;
 		border-left: $arrow-size + $border-width solid transparent;
 		border-right: $arrow-size + $border-width solid transparent;
+		content: '';
+		display: inline-block;
 		left: $offset;
+		position: absolute;
 		top: -($arrow-size + $border-width);
 	}
 }
 
+// Arrow is on the top side of dropdown and aligned right (points up)
 @mixin arrow-top-right($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
 	&:after {
 		border-bottom: $arrow-size solid $arrow-color;
 		border-left: $arrow-size solid transparent;
@@ -101,6 +112,7 @@
 		right: $offset + $border-width;
 	}
 
+	// border
 	&:before {
 		border-bottom: $arrow-size + $border-width solid $border-color;
 		border-left: $arrow-size + $border-width solid transparent;
@@ -113,7 +125,9 @@
 	}
 }
 
+// Arrow is on the left side of dropdown and aligned bottom (points left)
 @mixin arrow-left-bottom($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
 	&:after {
 		border-bottom: $arrow-size solid transparent;
 		border-left: $arrow-size solid transparent;
@@ -125,6 +139,7 @@
 		top: auto;
 	}
 
+	// border
 	&:before {
 		border-bottom: $arrow-size + $border-width solid transparent;
 		border-left: $arrow-size + $border-width solid transparent;
@@ -137,7 +152,9 @@
 	}
 }
 
+// Arrow is on the left side of dropdown and aligned top (points left)
 @mixin arrow-left-top($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
 	&:after {
 		border-bottom: $arrow-size solid transparent;
 		border-left: $arrow-size solid transparent;
@@ -148,6 +165,7 @@
 		top: $offset + $border-width;
 	}
 
+	// border
 	&:before {
 		border-bottom: $arrow-size + $border-width solid transparent;
 		border-left: $arrow-size + $border-width solid transparent;
@@ -159,7 +177,9 @@
 	}
 }
 
+// Arrow is on the right side of dropdown and aligned bottom (points right)
 @mixin arrow-right-bottom($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
 	&:after {
 		border-bottom: $arrow-size solid transparent;
 		border-left: $arrow-size solid $arrow-color;
@@ -171,6 +191,7 @@
 		top: auto;
 	}
 
+	// border
 	&:before {
 		border-bottom: $arrow-size + $border-width solid transparent;
 		border-left: $arrow-size + $border-width solid $border-color;
@@ -183,7 +204,9 @@
 	}
 }
 
+// Arrow is on the right side of dropdown and aligned top (points right)
 @mixin arrow-right-top($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
 	&:after {
 		border-bottom: $arrow-size solid transparent;
 		border-left: $arrow-size solid $arrow-color;
@@ -194,6 +217,7 @@
 		top: $offset + $border-width;
 	}
 
+	// border
 	&:before {
 		border-bottom: $arrow-size + $border-width solid transparent;
 		border-left: $arrow-size + $border-width solid $border-color;
