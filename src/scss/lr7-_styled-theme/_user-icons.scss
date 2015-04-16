@@ -26,31 +26,31 @@
 }
 
 .user-icon-xxl {
-	@include size-user-icon(128px);
+	@include size-user-icon(floor(128px / 1.3333));
 
-	font-size: 50px;
+	font-size: floor(50px / 1.3333);
 }
 
 .user-icon-xl {
-	@include size-user-icon(64px);
+	@include size-user-icon(floor(64px / 1.3333));
 
-	font-size: 30px;
+	font-size: floor(30px / 1.3333);
 }
 
 .user-icon-lg {
-	@include size-user-icon(floor($line-height-large * $font-size-large + ($padding-large-vertical * 2) + 2));
+	@include size-user-icon(floor(($line-height-large * $font-size-large + ($padding-large-vertical * 2) + 2) / 1.3333));
 
-	font-size: $font-size-large;
+	font-size: floor($font-size-large / 1.3333);
 }
 
 .user-icon-sm {
-	@include size-user-icon(floor($line-height-small * $font-size-small + ($padding-small-vertical * 2) + 2));
+	@include size-user-icon((floor($line-height-small * $font-size-small + ($padding-small-vertical * 2) + 2) / 1.3333));
 
-	font-size: $font-size-small;
+	font-size: floor($font-size-small / 1.3333);
 }
 
 .user-icon-xs {
-	@include size-user-icon(floor($line-height-small * $font-size-small + ($padding-xs-vertical * 2) + 2));
+	@include size-user-icon((floor($line-height-small * $font-size-small + ($padding-xs-vertical * 2) + 2) / 1.3333));
 
 	font-size: 8px;
 }
@@ -77,4 +77,36 @@
 
 .user-icon-warning {
 	@include color-user-icon($brand-warning);
+}
+
+@media screen and (min-width: $screen-sm-min) {
+	.user-icon-xxl {
+		@include size-user-icon(128px);
+
+		font-size: 50px;
+	}
+
+	.user-icon-xl {
+		@include size-user-icon(64px);
+
+		font-size: 30px;
+	}
+
+	.user-icon-lg {
+		@include size-user-icon(floor($line-height-large * $font-size-large + ($padding-large-vertical * 2) + 2));
+
+		font-size: $font-size-large;
+	}
+
+	.user-icon-sm {
+		@include size-user-icon(floor($line-height-small * $font-size-small + ($padding-small-vertical * 2) + 2));
+
+		font-size: $font-size-small;
+	}
+
+	.user-icon-xs {
+		@include size-user-icon(floor($line-height-small * $font-size-small + ($padding-xs-vertical * 2) + 2));
+
+		font-size: 8px;
+	}
 }
