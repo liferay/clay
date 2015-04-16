@@ -137,6 +137,14 @@
 	top: auto;
 }
 
+.dropdown-menu-clear-arrow,
+.navbar-right .dropdown-menu-clear-arrow {
+	&:after,
+	&:before {
+		content: none;
+	}
+}
+
 // Dropup Menus
 
 .dropup .dropdown-menu-right {
