@@ -7,6 +7,38 @@
  * $offset: distance from respective edge of dropdown menu
 **/
 
+@mixin arrow-bottom-center($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
+	&:after {
+		border-bottom-width: 0;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid transparent;
+		border-top: $arrow-size solid $arrow-color;
+		bottom: -$arrow-size;
+		content: '';
+		display: inline-block;
+		left: 50%;
+		margin-left: -($arrow-size / 2);
+		position: absolute;
+		top: auto;
+	}
+
+	// border
+	&:before {
+		border-bottom-width: 0;
+		border-left: $arrow-size + $border-width solid transparent;
+		border-right: $arrow-size + $border-width solid transparent;
+		border-top: $arrow-size + $border-width solid $border-color;
+		bottom: -($arrow-size + $border-width);
+		content: '';
+		display: inline-block;
+		left: 50%;
+		margin-left: -($arrow-size / 2) - $border-width;
+		position: absolute;
+		top: auto;
+	}
+}
+
 // Arrow is on the bottom side of dropdown and aligned left (points down)
 @mixin arrow-bottom-left($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
@@ -68,6 +100,35 @@
 		right: $offset;
 		position: absolute;
 		top: auto;
+	}
+}
+
+// Arrow is on the top side of dropdown and aligned center (points up)
+@mixin arrow-top-center($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
+	&:after {
+		border-bottom: $arrow-size solid $arrow-color;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid transparent;
+		content: '';
+		display: inline-block;
+		left: 50%;
+		margin-left: -($arrow-size / 2);
+		position: absolute;
+		top: -$arrow-size;
+	}
+
+	// border
+	&:before {
+		border-bottom: $arrow-size + $border-width solid $border-color;
+		border-left: $arrow-size + $border-width solid transparent;
+		border-right: $arrow-size + $border-width solid transparent;
+		content: '';
+		display: inline-block;
+		left: 50%;
+		margin-left: -($arrow-size / 2) - $border-width;
+		position: absolute;
+		top: -($arrow-size + $border-width);
 	}
 }
 
