@@ -10,7 +10,7 @@
 
 //Dropdowns
 .dropdown-header {
-	font-size: $dropdown-font-size-mobile;
+	font-size: $dropdown-header-font-size;
 	overflow: hidden;
 	padding: $dropdown-link-padding;
 	text-overflow: ellipsis;
@@ -21,7 +21,7 @@
 	border: $dropdown-border-width solid $dropdown-border;
 	border: $dropdown-border-width solid $dropdown-fallback-border; // IE8 fallback
 	box-shadow: $dropdown-box-shadow;
-	font-size: $font-size-base;
+	font-size: $dropdown-font-size;
 	margin-top: 0;
 	max-width: 230px;
 	min-height: 40px;
@@ -258,7 +258,7 @@
 
 	.link-list-heading {
 		display: block;
-		font-size: $dropdown-font-size-mobile;
+		font-size: $dropdown-header-font-size;
 		line-height: $line-height-base;
 		padding: 3px 20px;
 		white-space: nowrap;
@@ -281,9 +281,9 @@
 	position: static;
 }
 
-@media (min-width: $screen-sm-min) { // min-width: 768px
+@media (min-width: $grid-float-breakpoint) { // min-width: 768px
 	.dropdown-header {
-		font-size: $dropdown-font-size-desktop;
+		font-size: $dropdown-header-font-size-desktop;
 	}
 
 	.dropdown-menu {
@@ -301,7 +301,7 @@
 	}
 
 	.link-list .link-list-heading {
-		font-size: $dropdown-font-size-desktop;
+		font-size: $dropdown-header-font-size-desktop;
 	}
 }
 
