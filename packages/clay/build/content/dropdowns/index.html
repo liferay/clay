@@ -332,7 +332,7 @@ collapse
 		<h3>Dropdown wide / full</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.dropdown-wide</code> instead of <code>.dropdown</code> to make the dropdown menu big. The default width is 500px. Use <code>.dropdown-full</code> to create a dropdown menu as wide as its relative parent. See dropdown examples.</p>
+			<p>Use <code>.dropdown-wide</code> with <code>.dropdown</code> to make the dropdown menu big. The default width is 500px. Use <code>.dropdown-full</code> to create a dropdown menu as wide as its relative parent. See dropdown examples.</p>
 		</blockquote>
 
 		<div class="dropdown-wide dropdown-wide-container">
@@ -451,7 +451,7 @@ collapse
 		<h3>Dropdown Alignment</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>.dropdown-menu, .dropdown-menu-top, .dropdown-menu-top-right, .dropdown-menu-right, add one of these classes to the dropdown-menu to align it relative to its trigger.</p>
+			<p>Align a dropdown menu on the top or bottom side with classes <code>dropdown-menu</code>, <code>dropdown-menu-right</code>, <code>dropdown-menu-top</code>, or <code>dropdown-menu-top-right</code></p>
 		</blockquote>
 
 		<div class="dropdown" style="display: inline-block;">
@@ -544,6 +544,10 @@ collapse
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Align a dropdown menu on the left or right side with classes <code>dropdown-menu-right-side</code>, <code>dropdown-menu-left-side</code>, <code>dropdown-menu-right-side-bottom</code>, or <code>dropdown-menu-left-side-bottom</code>.</p>
+		</blockquote>
+
 		<div class="dropdown" style="display: inline-block;">
 			<button class="btn btn-default" data-toggle="dropdown" type="button">Right Side <span class="icon-caret-right"></span></button>
 			<ul class="dropdown-menu dropdown-menu-right-side">
@@ -655,15 +659,145 @@ collapse
 	</div>
 </div>
 
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>We've also added the option to center the dropdown to its trigger in the 4 different dropdown-menu positions with classes <code>dropdown-menu-center</code>, <code>dropdown-menu-top-center</code>, <code>dropdown-menu-left-side-middle</code>, or <code>dropdown-menu-right-side-middle</code>.</p>
+
+			<p>You can center the dropdown menu in browsers that don't support css transforms by setting a negative <code>margin-left</code> equal to the width of the dropdown-menu divided by 2. For left-side and right-side dropdown-menus vertically align them by setting a negative <code>margin-top</code> equal to the height of the dropdown-menu divided by 2.</p>
+		</blockquote>
+
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Center <span class="icon-caret-down"></span></button>
+			<ul class="dropdown-menu dropdown-menu-center">
+				<li class="dropdown-header">dropdown-menu-center</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Top Center <span class="icon-caret-up"></span></button>
+			<ul class="dropdown-menu dropdown-menu-top-center">
+				<li class="dropdown-header">dropdown-menu-top-center</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
+
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side Middle</button>
+			<ul class="dropdown-menu dropdown-menu-left-side-middle">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li>
+					<ul class="inline-scroller">
+						<li><a href="#">Action</a></li>
+						<li class="disabled"><a href="#">Disabled</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+						<li><a href="#">Scope</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-default" data-toggle="dropdown" type="button">Right Side Middle <span class="icon-caret-right"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right-side-middle">
+				<li class="dropdown-header">Dropdown Header</li>
+				<li><a href="#">Action</a></li>
+				<li class="disabled"><a href="#">Disabled</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Scope</a></li>
+			</ul>
+		</div>
+
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse5">
+	<pre><code class="html">&lt;div class=&quot;dropdown&quot; style=&quot;display: inline-block;&quot;&gt;
+    &lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
+        Center &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-center&quot;&gt;
+        &lt;li class=&quot;dropdown-header&quot;&gt;dropdown-menu-center&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dropdown&quot; style=&quot;display: inline-block;&quot;&gt;
+    &lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
+        Top Center &lt;span class=&quot;icon-caret-up&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-top-center&quot;&gt;
+        &lt;li class=&quot;dropdown-header&quot;&gt;dropdown-menu-top-center&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dropdown&quot; style=&quot;display: inline-block;&quot;&gt;
+    &lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
+        &lt;span class=&quot;icon-caret-left&quot;&gt;&lt;/span&gt; Left Side Middle
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-left-side-middle&quot;&gt;
+        &lt;li class=&quot;dropdown-header&quot;&gt;Dropdown Header&lt;/li&gt;
+        &lt;li&gt;
+            &lt;ul class=&quot;inline-scroller&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dropdown&quot; style=&quot;display: inline-block;&quot;&gt;
+    &lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
+        Right Side Middle &lt;span class=&quot;icon-caret-right&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-right-side-middle&quot;&gt;
+        &lt;li class=&quot;dropdown-header&quot;&gt;Dropdown Header&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
 <div class="row row-spacing uxgl-dropdown-display">
 	<div class="col-md-12">
 		<h3>Removing the Dropdown Arrow</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add <code>.dropdown-menu-clear-arrow</code> to .dropdown-menu or to a parent container to remove arrow styles from a dropdown-menu.</p>
+			<p>Add <code>.dropdown-menu-no-arrow</code> to .dropdown-menu or to a parent container to remove arrow styles from a dropdown-menu.</p>
 		</blockquote>
 
-		<ul class="dropdown-menu dropdown-menu-clear-arrow">
+		<ul class="dropdown-menu dropdown-menu-no-arrow">
 			<li class="dropdown-header">Order by:</li>
 			<li class="active"><a href="#">Author</a></li>
 			<li class="disabled"><a href="#">Title Entry</a></li>
@@ -674,14 +808,14 @@ collapse
 		</ul>
 
 <div class="uxgl-toggle-code" style="margin-top:15px;">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse5">
+<div class="collapse" id="codeCollapse6">
 	<pre><code class="html">&lt;div class=&quot;dropdown&quot;&gt;
     &lt;button class=&quot;btn btn-default&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
         Toggle &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;
     &lt;/button&gt;
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-clear-arrow&quot;&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-no-arrow&quot;&gt;
         ...
     &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
@@ -782,7 +916,7 @@ collapse
 					<li class="dropdown dropdown-full">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown Full <span class="caret"></span></a>
 
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu dropdown-menu-no-arrow">
 							<li class="col-sm-4">
 								<ul class="link-list">
 									<li class="link-list-heading">By Resource</li>
