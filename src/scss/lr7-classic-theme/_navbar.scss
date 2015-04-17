@@ -294,6 +294,10 @@
 }
 
 @media screen and (max-width: $grid-float-breakpoint-max) { //max-width: 768px
+	.navbar-nav .dropdown-menu {
+		max-width: none;
+	}
+
 	.navbar-nav .open .dropdown-menu {
 		@include box-shadow(none);
 
