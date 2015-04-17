@@ -17,6 +17,11 @@
 .dropdown-menu {
 	max-width: $dropdown-max-width;
 
+	> li > a {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
 	.inline-scroller,
 	.link-list {
 		li a {
@@ -210,6 +215,14 @@
 	.link-list {
 		li a {
 			padding: 3px 12px;
+		}
+	}
+
+	.inline-scroller {
+		li a {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 	}
 
