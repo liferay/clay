@@ -15,6 +15,8 @@
 }
 
 .dropdown-menu {
+	max-width: $dropdown-max-width;
+
 	.inline-scroller,
 	.link-list {
 		li a {
@@ -69,6 +71,14 @@
 	}
 }
 
+.dropdown-menu-center {
+	@include arrow-top-center(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+
+	left: 50%;
+
+	@include transform(translateX(-50%));
+}
+
 .dropdown-menu-right,
 .navbar-right .dropdown-menu {
 	@include arrow-top-right(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
@@ -87,22 +97,16 @@
 	@include arrow-bottom-center(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	bottom: 100%;
+	left: 50%;
 	margin-top: 0;
+
+	@include transform(translateX(-50%));
+
 	top: auto;
 }
 
 .dropdown-menu-top-right {
 	@include arrow-bottom-right(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	bottom: 100%;
-	left: auto;
-	margin-top: 0;
-	right: 0;
-	top: auto;
-}
-
-.dropdown-menu-top-right-center {
-	@include arrow-bottom-center(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	bottom: 100%;
 	left: auto;
@@ -119,7 +123,7 @@
 	right: 100%;
 	top: 0;
 
-	> .inline-scroller {
+	.inline-scroller {
 		margin-right: 3px;
 	}
 }
@@ -133,7 +137,23 @@
 	right: 100%;
 	top: auto;
 
-	> .inline-scroller {
+	.inline-scroller {
+		margin-right: 3px;
+	}
+}
+
+.dropdown-menu-left-side-middle {
+	@include arrow-right-middle(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+
+	left: auto;
+	margin: 0;
+	right: 100%;
+
+	@include transform(translateY(-50%));
+
+	top: 50%;
+
+	.inline-scroller {
 		margin-right: 3px;
 	}
 }
@@ -155,19 +175,19 @@
 	top: auto;
 }
 
-.dropdown-menu-center {
-	@include arrow-top-center(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+.dropdown-menu-right-side-middle {
+	@include arrow-left-middle(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+
+	left: 100%;
+	margin: 0;
+
+	@include transform(translateY(-50%));
+
+	top: 50%;
 }
 
-.dropdown-menu-right-center {
-	@include arrow-top-center(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	left: auto;
-	right: 0;
-}
-
-.dropdown-menu-clear-arrow,
-.dropdown-menu-clear-arrow .dropdown-menu,
+.dropdown-menu-no-arrow,
+.dropdown-menu-no-arrow .dropdown-menu,
 .navbar-right .dropdown-menu-clear-arrow {
 	&:after,
 	&:before {
@@ -239,6 +259,7 @@
 .dropdown-wide,
 .dropdown-full {
 	.dropdown-menu {
+		max-width: none;
 		padding: 5px 0;
 		width: 100%;
 	}
