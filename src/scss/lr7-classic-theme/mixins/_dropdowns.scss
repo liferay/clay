@@ -7,6 +7,7 @@
  * $offset: distance from respective edge of dropdown menu
 **/
 
+// Arrow is on the bottom side of dropdown and aligned center (points down)
 @mixin arrow-bottom-center($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -213,6 +214,33 @@
 	}
 }
 
+// Arrow is on the left side of dropdown and aligned middle (points left)
+@mixin arrow-left-middle($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
+	&:after {
+		border-bottom: $arrow-size solid transparent;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid $arrow-color;
+		border-top: $arrow-size solid transparent;
+		content: '';
+		left: -($arrow-size * 2);
+		margin-top: -($arrow-size / 2);
+		top: 50%;
+	}
+
+	// border
+	&:before {
+		border-bottom: $arrow-size + $border-width solid transparent;
+		border-left: $arrow-size + $border-width solid transparent;
+		border-right: $arrow-size + $border-width solid $border-color;
+		border-top: $arrow-size + $border-width solid transparent;
+		content: '';
+		left: -($arrow-size * 2) - ($border-width * 2);
+		margin-top: -($arrow-size / 2) - $border-width;
+		top: 50%;
+	}
+}
+
 // Arrow is on the left side of dropdown and aligned top (points left)
 @mixin arrow-left-top($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
@@ -262,6 +290,33 @@
 		content: '';
 		left: 100%;
 		top: auto;
+	}
+}
+
+// Arrow is on the right side of dropdown and aligned middle (points right)
+@mixin arrow-right-middle($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	// arrow
+	&:after {
+		border-bottom: $arrow-size solid transparent;
+		border-left: $arrow-size solid $arrow-color;
+		border-right: $arrow-size solid transparent;
+		border-top: $arrow-size solid transparent;
+		content: '';
+		left: 100%;
+		margin-top: -($arrow-size / 2);
+		top: 50%;
+	}
+
+	// border
+	&:before {
+		border-bottom: $arrow-size + $border-width solid transparent;
+		border-left: $arrow-size + $border-width solid $border-color;
+		border-right: $arrow-size + $border-width solid transparent;
+		border-top: $arrow-size + $border-width solid transparent;
+		content: '';
+		left: 100%;
+		margin-top: -($arrow-size / 2) - $border-width;
+		top: 50%;
 	}
 }
 
