@@ -45,6 +45,10 @@ $font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
+$font-size-base-desktop: 16px;
+$font-size-large-desktop: ceil(($font-size-base-desktop * 1.25)) !default; // ~20px
+$font-size-small-desktop: ceil(($font-size-base-desktop * 0.85)) !default; // ~14px
+
 $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
 $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
 $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
@@ -288,8 +292,8 @@ $dropdown-divider-bg:                      $dropdown-border;
 
 $dropdown-wide-width: 500px;
 
-$dropdown-font-size-desktop: floor($font-size-base * 1.2);
-$dropdown-font-size-mobile: $font-size-base;
+$dropdown-font-size: $font-size-base;
+$dropdown-font-size-desktop: $font-size-base-desktop;
 
 $dropdown-link-padding: 8px 12px;
 
@@ -302,6 +306,8 @@ $dropdown-link-active-bg:                  $dropdown-link-hover-bg;
 
 $dropdown-link-disabled-color:             #CACDD2;
 
+$dropdown-header-font-size: $font-size-small;
+$dropdown-header-font-size-desktop: $font-size-small-desktop;
 $dropdown-header-color:                    #B0B4BB;
 
 $dropdown-arrow-color: $dropdown-bg;
