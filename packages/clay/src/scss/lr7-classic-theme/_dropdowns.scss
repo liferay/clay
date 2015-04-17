@@ -15,7 +15,7 @@
 }
 
 .dropdown-menu {
-	max-width: $dropdown-max-width;
+	max-width: 230px;
 
 	> li > a {
 		overflow: hidden;
@@ -285,7 +285,11 @@
 	position: static;
 }
 
-@media (min-width: $screen-sm-min) {
+@media (min-width: $screen-sm-min) { // min-width: 768px
+	.dropdown-menu {
+		max-width: 300px;
+	}
+
 	.dropdown-wide,
 	.dropdown-full {
 		.dropdown-menu {
@@ -295,7 +299,7 @@
 	}
 }
 
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-md-min) { // min-width: 992px
 	.dropdown-wide,
 	.nav > li.dropdown-wide {
 		position: relative;
@@ -306,7 +310,7 @@
 	}
 }
 
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { // min-width: 768px, max-width: 991px
 	.dropdown-wide .dropdown-menu {
 		&:after,
 		&:before {
