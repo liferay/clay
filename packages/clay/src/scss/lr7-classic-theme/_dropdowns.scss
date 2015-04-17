@@ -10,16 +10,26 @@
 
 //Dropdowns
 .dropdown-header {
-	line-height: 1;
-	padding: 3px 12px;
+	font-size: $dropdown-font-size-mobile;
+	overflow: hidden;
+	padding: $dropdown-link-padding;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .dropdown-menu {
+	border: $dropdown-border-width solid $dropdown-border;
+	border: $dropdown-border-width solid $dropdown-fallback-border; // IE8 fallback
+	box-shadow: $dropdown-box-shadow;
+	font-size: $font-size-base;
+	margin-top: 0;
 	max-width: 230px;
 	min-height: 40px;
+	padding: 6px 0;
 
 	> li > a {
 		overflow: hidden;
+		padding: $dropdown-link-padding;
 		text-overflow: ellipsis;
 	}
 
@@ -28,13 +38,22 @@
 		li a {
 			color: $dropdown-link-color;
 			display: block;
-			padding: 3px 20px;
+			padding: $dropdown-link-padding;
 
 			&:focus,
 			&:hover {
 				background-color: $dropdown-link-hover-bg;
 				color: $dropdown-link-hover-color;
 				text-decoration: none;
+			}
+		}
+
+		> .active > a {
+			&,
+			&:focus,
+			&:hover {
+				background-color: $dropdown-link-active-bg;
+				color :$dropdown-link-active-color;
 			}
 		}
 
@@ -54,27 +73,25 @@
 		}
 	}
 
+	.inline-scroller {
+		li a {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+
 	.link-list .link-list-heading {
 		color: $dropdown-header-color;
-		line-height: 1;
-		padding: 3px 20px;
+		line-height: $line-height-base;
+		padding: $dropdown-link-padding;
 	}
 }
 
-// Arrow mixin params
+// Arrows and dropdown-menu positions
 // ($arrow-size, $border-width, $offset, $arrow-color, $border-color)
 .dropdown-menu {
 	@include arrow-top-left(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	border: $dropdown-border-width solid $dropdown-fallback-border; // IE8 fallback
-	border: $dropdown-border-width solid $dropdown-border;
-	box-shadow: $dropdown-box-shadow;
-	margin-top: 0;
-	padding: 6px 0;
-
-	> li > a {
-		padding: 3px 12px;
-	}
 }
 
 .dropdown-menu-center {
@@ -210,28 +227,6 @@
 	}
 }
 
-// Dropdown inline-scroller
-.dropdown-menu {
-	.inline-scroller,
-	.link-list {
-		li a {
-			padding: 3px 12px;
-		}
-	}
-
-	.inline-scroller {
-		li a {
-			overflow: hidden;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-		}
-	}
-
-	.link-list .link-list-heading {
-		padding: 3px 12px;
-	}
-}
-
 // Dropdown wide / full
 .btn-group-justified > .btn-group.dropdown-full .dropdown-menu {
 	left: 0;
@@ -263,7 +258,7 @@
 
 	.link-list-heading {
 		display: block;
-		font-size: $font-size-small;
+		font-size: $dropdown-font-size-mobile;
 		line-height: $line-height-base;
 		padding: 3px 20px;
 		white-space: nowrap;
@@ -287,7 +282,12 @@
 }
 
 @media (min-width: $screen-sm-min) { // min-width: 768px
+	.dropdown-header {
+		font-size: $dropdown-font-size-desktop;
+	}
+
 	.dropdown-menu {
+		font-size: $dropdown-font-size-desktop;
 		max-width: 300px;
 		min-height: 40px;
 	}
@@ -298,6 +298,10 @@
 			padding: 20px 0;
 			width: 100%;
 		}
+	}
+
+	.link-list .link-list-heading {
+		font-size: $dropdown-font-size-desktop;
 	}
 }
 

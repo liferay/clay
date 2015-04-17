@@ -41,6 +41,17 @@ $component-active-color:                   #FFF;
 
 $font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
 $line-height-base:                         1.4286;
 
 $padding-base-vertical:     6px;
@@ -272,17 +283,22 @@ $dropdown-bg:                              #FFF;
 $dropdown-border:                          #DCE0E3;
 $dropdown-border-width: 1px;
 //** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:                 #FFF;
+$dropdown-fallback-border:                 #DCE0E3;
 $dropdown-divider-bg:                      $dropdown-border;
 
 $dropdown-wide-width: 500px;
 
+$dropdown-font-size-desktop: floor($font-size-base * 1.2);
+$dropdown-font-size-mobile: $font-size-base;
+
+$dropdown-link-padding: 8px 12px;
+
 $dropdown-link-color:                      $brand-default;
 $dropdown-link-hover-color:                $brand-default;
-$dropdown-link-hover-bg:                   #E7E8EA;
+$dropdown-link-hover-bg:                   #F7FAFA;
 
-$dropdown-link-active-color:               $component-active-color;
-$dropdown-link-active-bg:                  #63A5E6;
+$dropdown-link-active-color:               $brand-primary;
+$dropdown-link-active-bg:                  $dropdown-link-hover-bg;
 
 $dropdown-link-disabled-color:             #CACDD2;
 
