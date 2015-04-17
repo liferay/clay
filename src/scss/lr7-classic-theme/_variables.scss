@@ -267,10 +267,10 @@ $card-border-radius: 10px;
 $card-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
 
 //== Dropdowns
-$dropdown-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+$dropdown-box-shadow: 0 2px 4px 0 rgba(228, 235, 240, 0.3);
 $dropdown-bg:                              #FFF;
-$dropdown-border:                          #E7E8EA;
-$dropdown-border-width: 0;
+$dropdown-border:                          #DCE0E3;
+$dropdown-border-width: 1px;
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border:                 #FFF;
 $dropdown-divider-bg:                      $dropdown-border;
