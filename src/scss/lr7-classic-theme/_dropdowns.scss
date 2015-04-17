@@ -16,6 +16,7 @@
 
 .dropdown-menu {
 	max-width: 230px;
+	min-height: 40px;
 
 	> li > a {
 		overflow: hidden;
@@ -288,6 +289,7 @@
 @media (min-width: $screen-sm-min) { // min-width: 768px
 	.dropdown-menu {
 		max-width: 300px;
+		min-height: 40px;
 	}
 
 	.dropdown-wide,
