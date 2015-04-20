@@ -25,6 +25,7 @@ $switch-button-bg: #FFF;
 $switch-button-border-color: #FFF;
 $switch-button-icon-color: #34ADAB;
 
+// Calculate width of switch-bar
 @function set-data-label-text-position($switch-width, $switch-padding) {
 	@if $switch-padding < 0 {
 		@return $switch-width + abs($switch-padding);
@@ -34,6 +35,7 @@ $switch-button-icon-color: #34ADAB;
 	}
 }
 
+// Colors both on and off styles for switch-bar
 @mixin color-switch-bar($off-bg, $off-border: $off-bg, $on-bg: $off-bg, $on-border: $off-border) {
 	&:empty ~ .switch-bar {
 		&:before {
@@ -50,6 +52,7 @@ $switch-button-icon-color: #34ADAB;
 	}
 }
 
+// Colors both on and off styles for switch-button
 @mixin color-switch-button($button-bg-off, $button-border-off: $button-bg-off, $button-bg-on: $button-bg-off, $button-border-on: $button-border-off) {
 	&:empty ~ .switch-bar {
 		&:after {
@@ -66,6 +69,7 @@ $switch-button-icon-color: #34ADAB;
 	}
 }
 
+// Colors both on and off styles for the icon in switch bar
 @mixin color-switch-bar-icon($off-color, $on-color: $off-color) {
 	&:empty ~ .switch-bar .switch-icon {
 		color: $off-color;
@@ -76,6 +80,7 @@ $switch-button-icon-color: #34ADAB;
 	}
 }
 
+// Colors both on and off styles for the icon in switch-button
 @mixin color-switch-button-icon($off-color, $on-color: $off-color) {
 	&:empty ~ .switch-bar .switch-icon.button-icon {
 		color: $off-color;
@@ -220,6 +225,120 @@ input.switch {
 	&:empty ~ .switch-bar {
 		&:after, &:before, .switch-icon, .switch-toggle:after, .switch-toggle:before {
 			@include transition(all 100ms ease-in);
+		}
+	}
+}
+
+// Switch Card Variables
+$switch-card-height: 104px;
+$switch-card-width: 92px;
+
+$switch-card-border-radius: 2px;
+
+$switch-card-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+$switch-card-checkbox-height: 40px;
+$switch-card-checkbox-width: 40px;
+$switch-card-checkbox-border-radius: 30px;
+
+// Switch Card Checkbox Unchecked
+// Unchecked switch-card-container
+$switch-card-border: #DCE0E3;
+$switch-card-border-width: 1px;
+
+// Unchecked switch-card-checkbox
+$switch-card-checkbox-bg: $brand-default;
+$switch-card-checkbox-border: $brand-default;
+$switch-card-checkbox-border-width: 1px;
+
+// Switch Card Checkbox Checked
+// Checked switch-card-container
+$switch-card-border-checkbox-checked: $brand-primary;
+$switch-card-border-width-checkbox-checked: 2px;
+
+// Checked switch-card-checkbox
+$switch-card-checkbox-checked-bg: $body-bg;
+$switch-card-checkbox-checked-border: $brand-primary;
+$switch-card-checkbox-checked-border-width: 2px;
+
+.switch-card {
+	-webkit-user-select: none;
+	line-height: normal;
+	overflow: hidden;
+	padding: 6px;
+	position: relative;
+
+	input.switch.card {
+		height: auto;
+		width: auto;
+	}
+}
+
+input.switch.card {
+	height: $switch-card-height;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	width: $switch-card-width;
+
+	&:empty {
+		+ .switch-card-container {
+			.switch-card-checkbox {
+				background-color: $switch-card-checkbox-bg;
+				border: $switch-card-checkbox-border-width solid $switch-card-checkbox-border;
+				border-radius: $switch-card-checkbox-border-radius;
+				display: block;
+				height: $switch-card-checkbox-height;
+				margin: 8px auto;
+				width: $switch-card-checkbox-width;
+			}
+		}
+	}
+
+	&:checked {
+		+ .switch-card-container {
+			border: $switch-card-border-width-checkbox-checked solid $switch-card-border-checkbox-checked;
+			padding: 0;
+
+			.switch-card-checkbox {
+				background-color: $switch-card-checkbox-checked-bg;
+				border: $switch-card-checkbox-checked-border-width solid $switch-card-checkbox-checked-border;
+				display: block;
+				height: $switch-card-checkbox-height;
+				width: $switch-card-checkbox-width;
+
+				&:after {
+					color: $brand-primary;
+					content: $checkbox-check;
+					font-family: 'fontawesome-alloy';
+					line-height: 36px;
+					font-size: 23px;
+				}
+			}
+		}
+	}
+
+	&:focus {
+		+.switch-card-container {
+			border-color: $brand-primary;
+			box-shadow: 0 0 5px 3px $brand-primary;
+		}
+	}
+
+	+ .switch-card-container {
+		border: $switch-card-border-width solid $switch-card-border;
+		border-radius: $switch-card-border-radius;
+		box-shadow: $switch-card-box-shadow;
+		height: $switch-card-height;
+		padding: 1px;
+		text-align: center;
+		width: $switch-card-width;
+	}
+
+	&[disabled] {
+		+ .switch-card-container {
+			cursor: not-allowed;
+			opacity: 0.4;
 		}
 	}
 }
