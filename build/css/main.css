@@ -8981,57 +8981,57 @@ input.switch:empty ~ .switch-bar:after, input.switch:empty ~ .switch-bar:before,
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in; }
 
-.switch-card {
+.toggle-button-label {
   -webkit-user-select: none;
+  float: left;
   line-height: normal;
-  overflow: hidden;
-  padding: 6px;
+  padding: 4px 4px 4px 0;
   position: relative; }
-  .switch-card input.switch.card {
+  .toggle-button-label input.toggle-button {
     height: auto;
     width: auto; }
 
-input.switch.card {
+input.toggle-button {
   height: 104px;
   margin: 0;
   opacity: 0;
   position: absolute;
   width: 92px; }
-  input.switch.card:empty + .switch-card-container .switch-card-checkbox {
-    background-color: #869CAD;
-    border: 1px solid #869CAD;
-    border-radius: 30px;
-    display: block;
-    height: 40px;
-    margin: 8px auto;
-    width: 40px; }
-  input.switch.card:checked + .switch-card-container {
-    border: 2px solid #65B6F0;
-    padding: 0; }
-    input.switch.card:checked + .switch-card-container .switch-card-checkbox {
-      background-color: #FFF;
-      border: 2px solid #65B6F0;
-      display: block;
-      height: 40px;
-      width: 40px; }
-      input.switch.card:checked + .switch-card-container .switch-card-checkbox:after {
-        color: #65B6F0;
-        content: "\f00c";
-        font-family: 'fontawesome-alloy';
-        line-height: 36px;
-        font-size: 23px; }
-  input.switch.card:focus + .switch-card-container {
-    border-color: #65B6F0;
-    box-shadow: 0 0 5px 3px #65B6F0; }
-  input.switch.card + .switch-card-container {
+  input.toggle-button:empty + .toggle-button-container .checkbox-empty-icon [class*="icon-"], input.toggle-button:checked + .toggle-button-container .checkbox-checked-icon [class*="icon-"] {
+    font-size: 24px;
+    line-height: 30px; }
+  input.toggle-button:empty + .toggle-button-container {
     border: 1px solid #DCE0E3;
     border-radius: 2px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
     height: 104px;
-    padding: 1px;
+    padding: 12px;
     text-align: center;
     width: 92px; }
-  input.switch.card[disabled] + .switch-card-container {
+    input.toggle-button:empty + .toggle-button-container .checkbox-checked-icon, input.toggle-button:empty + .toggle-button-container .checkbox-checked-label {
+      display: none; }
+    input.toggle-button:empty + .toggle-button-container .checkbox-empty-icon {
+      display: block;
+      height: 32px;
+      margin: 0 auto 8px;
+      width: 32px; }
+  input.toggle-button:checked + .toggle-button-container {
+    border: 2px solid #65B6F0;
+    color: #65B6F0;
+    padding: 11px; }
+    input.toggle-button:checked + .toggle-button-container .checkbox-checked-icon {
+      display: block;
+      height: 32px;
+      margin: 0 auto 8px;
+      width: 32px; }
+    input.toggle-button:checked + .toggle-button-container .checkbox-checked-label {
+      display: block; }
+    input.toggle-button:checked + .toggle-button-container .checkbox-empty-icon, input.toggle-button:checked + .toggle-button-container .checkbox-empty-label {
+      display: none; }
+  input.toggle-button:focus + .toggle-button-container {
+    border-color: #65B6F0;
+    box-shadow: 0 0 5px 3px #65B6F0; }
+  input.toggle-button[disabled] + .toggle-button-container {
     cursor: not-allowed;
     opacity: 0.4; }
 
