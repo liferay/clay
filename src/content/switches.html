@@ -249,40 +249,56 @@ section: Elements
 </div>```</code></pre>
 </div>
 
-			<h3>Switch Card</h3>
+			<h3>Toggle Button</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
 				<p>A checkbox inside a card.</p>
 			</blockquote>
 
-			<label class="switch-card" style="float:left;">
-				<input class="switch card" type="checkbox" value="">
-				<div class="switch-card-container">
-					<span class="switch-card-checkbox"></span>
+			<div>
+				<label class="toggle-button-label">
+					<input class="toggle-button" type="checkbox" value="">
+					<div class="toggle-button-container">
+						<div class="checkbox-empty-icon"><span class="icon-lock"></span></div>
+						<div class="checkbox-checked-icon"><span class="icon-ok"></span></div>
+						<div class="checkbox-empty-label">labelOff</div>
+						<div class="checkbox-checked-label">labelOn</div>
+					</div>
+				</label>
+
+<pre style="clear:both;">```<aui:input type="toggle-button" iconOff="icon-lock" iconOn="icon-ok" labelOff="labelOff" labelOn="labelOn" />```</pre>
+			</div>
+
+			<div>
+				<label class="toggle-button-label">
+					<input class="toggle-button" type="checkbox" value="">
+					<div class="toggle-button-container">
+						<div class="checkbox-empty-icon"><span class="icon-lock"></span></div>
+						<div class="checkbox-checked-icon"><span class="icon-ok"></span></div>
+						Regular Label
+					</div>
+				</label>
+
+<pre style="clear:both;">```<aui:input type="toggle-button" iconOff="icon-lock" iconOn="icon-ok" label="Regular Label" />```</pre>
+			</div>
+
+			<label class="toggle-button-label">
+				<input class="toggle-button" type="checkbox" value="">
+				<div class="toggle-button-container">
+					<div class="checkbox-empty-icon"><span class="icon-lock"></span></div>
+					<div class="checkbox-checked-icon"><span class="icon-ok"></span></div>
+					<div class="checkbox-empty-label">Option Line</div>
+					<div class="checkbox-checked-label">Selected</div>
 				</div>
 			</label>
 
-			<label class="switch-card" style="float:left;">
-				<input class="switch card" checked type="checkbox" value="">
-				<div class="switch-card-container">
-					<span class="switch-card-checkbox"></span>
-					Allow Comments
-				</div>
-			</label>
-
-			<label class="switch-card" style="float:left;">
-				<input class="switch card" type="checkbox" value="">
-				<div class="switch-card-container">
-					<span class="switch-card-checkbox"></span>
-					Label
-				</div>
-			</label>
-
-			<label class="switch-card" style="float:left;">
-				<input class="switch card" disabled type="checkbox" value="">
-				<div class="switch-card-container">
-					<span class="switch-card-checkbox"></span>
-					Option
+			<label class="toggle-button-label">
+				<input disabled class="toggle-button" type="checkbox" value="">
+				<div class="toggle-button-container">
+					<div class="checkbox-empty-icon"><span class="icon-lock"></span></div>
+					<div class="checkbox-checked-icon"><span class="icon-ok"></span></div>
+					<div class="checkbox-empty-label">Option Line</div>
+					<div class="checkbox-checked-label">Selected</div>
 				</div>
 			</label>
 		</form>

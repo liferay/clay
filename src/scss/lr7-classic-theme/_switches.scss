@@ -237,8 +237,8 @@ $switch-card-border-radius: 2px;
 
 $switch-card-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 
-$switch-card-checkbox-height: 40px;
-$switch-card-checkbox-width: 40px;
+$switch-card-checkbox-height: 32px;
+$switch-card-checkbox-width: 32px;
 $switch-card-checkbox-border-radius: 30px;
 
 // Switch Card Checkbox Unchecked
@@ -261,82 +261,91 @@ $switch-card-checkbox-checked-bg: $body-bg;
 $switch-card-checkbox-checked-border: $brand-primary;
 $switch-card-checkbox-checked-border-width: 2px;
 
-.switch-card {
+.toggle-button-label {
 	-webkit-user-select: none;
+	float: left;
 	line-height: normal;
-	overflow: hidden;
-	padding: 6px;
+	padding: 4px 4px 4px 0;
 	position: relative;
 
-	input.switch.card {
+	input.toggle-button {
 		height: auto;
 		width: auto;
 	}
 }
 
-input.switch.card {
+input.toggle-button {
 	height: $switch-card-height;
 	margin: 0;
 	opacity: 0;
 	position: absolute;
 	width: $switch-card-width;
 
+	&:empty + .toggle-button-container .checkbox-empty-icon,
+	&:checked + .toggle-button-container .checkbox-checked-icon {
+		[class*="icon-"] {
+			font-size: 24px;
+			line-height: $switch-card-checkbox-height - ($switch-card-checkbox-border-width * 2);
+		}
+	}
+
 	&:empty {
-		+ .switch-card-container {
-			.switch-card-checkbox {
-				background-color: $switch-card-checkbox-bg;
-				border: $switch-card-checkbox-border-width solid $switch-card-checkbox-border;
-				border-radius: $switch-card-checkbox-border-radius;
+		+ .toggle-button-container {
+			border: $switch-card-border-width solid $switch-card-border;
+			border-radius: $switch-card-border-radius;
+			box-shadow: $switch-card-box-shadow;
+			height: $switch-card-height;
+			padding: 12px;
+			text-align: center;
+			width: $switch-card-width;
+
+			.checkbox-checked-icon,
+			.checkbox-checked-label {
+				display: none;
+			}
+
+			.checkbox-empty-icon {
 				display: block;
 				height: $switch-card-checkbox-height;
-				margin: 8px auto;
+				margin: 0 auto 8px;
 				width: $switch-card-checkbox-width;
 			}
 		}
 	}
 
 	&:checked {
-		+ .switch-card-container {
+		+ .toggle-button-container {
 			border: $switch-card-border-width-checkbox-checked solid $switch-card-border-checkbox-checked;
-			padding: 0;
+			color: $brand-primary;
+			padding: 11px;
 
-			.switch-card-checkbox {
-				background-color: $switch-card-checkbox-checked-bg;
-				border: $switch-card-checkbox-checked-border-width solid $switch-card-checkbox-checked-border;
+			.checkbox-checked-icon {
 				display: block;
 				height: $switch-card-checkbox-height;
+				margin: 0 auto 8px;
 				width: $switch-card-checkbox-width;
+			}
 
-				&:after {
-					color: $brand-primary;
-					content: $checkbox-check;
-					font-family: 'fontawesome-alloy';
-					line-height: 36px;
-					font-size: 23px;
-				}
+			.checkbox-checked-label {
+				display: block;
+			}
+
+			.checkbox-empty-icon,
+			.checkbox-empty-label {
+				display: none;
 			}
 		}
 	}
 
 	&:focus {
-		+.switch-card-container {
+		+.toggle-button-container {
 			border-color: $brand-primary;
 			box-shadow: 0 0 5px 3px $brand-primary;
 		}
 	}
 
-	+ .switch-card-container {
-		border: $switch-card-border-width solid $switch-card-border;
-		border-radius: $switch-card-border-radius;
-		box-shadow: $switch-card-box-shadow;
-		height: $switch-card-height;
-		padding: 1px;
-		text-align: center;
-		width: $switch-card-width;
-	}
-
 	&[disabled] {
-		+ .switch-card-container {
+		+ .toggle-button-container {
 			cursor: not-allowed;
 			opacity: 0.4;
 		}
