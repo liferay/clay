@@ -229,125 +229,138 @@ input.switch {
 	}
 }
 
-// Switch Card Variables
-$switch-card-height: 104px;
-$switch-card-width: 92px;
+// Toggle Card Settings
+$toggle-card-height: 104px;
+$toggle-card-width: 92px;
 
-$switch-card-border-radius: 2px;
+$toggle-card-padding-horizontal: 12px;
+$toggle-card-padding-vertical: 12px;
 
-$switch-card-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+$toggle-card-border-radius: 2px;
 
-$switch-card-checkbox-height: 32px;
-$switch-card-checkbox-width: 32px;
-$switch-card-checkbox-border-radius: 30px;
+$toggle-card-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 
-// Switch Card Checkbox Unchecked
-// Unchecked switch-card-container
-$switch-card-border: #DCE0E3;
-$switch-card-border-width: 1px;
+$toggle-card-icon-height: 32px;
+$toggle-card-icon-width: 32px;
+$toggle-card-icon-border-radius: 30px;
 
-// Unchecked switch-card-checkbox
-$switch-card-checkbox-bg: $brand-default;
-$switch-card-checkbox-border: $brand-default;
-$switch-card-checkbox-border-width: 1px;
+// toggle-card-off Card Styles
+$toggle-card-border: #DCE0E3;
+$toggle-card-border-width: 1px;
+$toggle-card-icon-bg: #FFF;
+$toggle-card-icon-border: $brand-default;
+$toggle-card-icon-border-width: 0;
 
-// Switch Card Checkbox Checked
-// Checked switch-card-container
-$switch-card-border-checkbox-checked: $brand-primary;
-$switch-card-border-width-checkbox-checked: 2px;
+// toggle-card-on Card Styles
+$toggle-card-on-border: $brand-primary;
+$toggle-card-on-border-width: 2px;
+$toggle-card-on-icon-bg: #FFF;
+$toggle-card-on-icon-border: $brand-primary;
+$toggle-card-on-icon-border-width: 1px;
 
-// Checked switch-card-checkbox
-$switch-card-checkbox-checked-bg: $body-bg;
-$switch-card-checkbox-checked-border: $brand-primary;
-$switch-card-checkbox-checked-border-width: 2px;
-
-.toggle-button-label {
+.toggle-card {
 	-webkit-user-select: none;
 	float: left;
 	line-height: normal;
-	padding: 4px 4px 4px 0;
 	position: relative;
+}
 
-	input.toggle-button {
-		height: auto;
-		width: auto;
+.toggle-card-container {
+	display: table;
+	border: $toggle-card-border-width solid $toggle-card-border;
+	border-radius: $toggle-card-border-radius;
+	box-shadow: $toggle-card-box-shadow;
+	padding: $toggle-card-padding-vertical $toggle-card-padding-horizontal;
+	text-align: center;
+	height: $toggle-card-height;
+	width: $toggle-card-width;
+}
+
+.toggle-card-cell {
+	display: table-cell;
+	text-align: center;
+	word-break: break-word;
+}
+
+.toggle-card-icon {
+	border-radius: $toggle-card-icon-border-radius;
+	height: $toggle-card-icon-height;
+	font-size: 24px;
+	margin: 0 auto;
+	width: $toggle-card-icon-width;
+
+	[class*="icon-"] {
+		display: block;
 	}
 }
 
-input.toggle-button {
-	height: $switch-card-height;
+.toggle-card-label {
+	height: $toggle-card-height - $toggle-card-icon-height - ($toggle-card-border-width * 2) - 24;
+	line-height: 16px;
+	overflow: hidden;
+	padding-top: 12px;
+}
+
+input.toggle-card-input {
+	height: $toggle-card-height; // toggle should be clickable if not nested inside label
 	margin: 0;
 	opacity: 0;
 	position: absolute;
-	width: $switch-card-width;
+	width: $toggle-card-width; // toggle should be clickable if not nested inside label
 
-	&:empty + .toggle-button-container .checkbox-empty-icon,
-	&:checked + .toggle-button-container .checkbox-checked-icon {
-		[class*="icon-"] {
-			font-size: 24px;
-			line-height: $switch-card-checkbox-height - ($switch-card-checkbox-border-width * 2);
-		}
+	.toggle-card & {
+		height: auto;
+		width: auto;
 	}
 
-	&:empty {
-		+ .toggle-button-container {
-			border: $switch-card-border-width solid $switch-card-border;
-			border-radius: $switch-card-border-radius;
-			box-shadow: $switch-card-box-shadow;
-			height: $switch-card-height;
-			padding: 12px;
-			text-align: center;
-			width: $switch-card-width;
+	&:empty + .toggle-card-container {
+		.toggle-card-on {
+			display: none;
+		}
 
-			.checkbox-checked-icon,
-			.checkbox-checked-label {
-				display: none;
-			}
+		.toggle-card-icon {
+			background-color: $toggle-card-icon-bg;
+			border: $toggle-card-icon-border solid $toggle-card-icon-border-width;
 
-			.checkbox-empty-icon {
-				display: block;
-				height: $switch-card-checkbox-height;
-				margin: 0 auto 8px;
-				width: $switch-card-checkbox-width;
+			[class*="icon-"] {
+				line-height: $toggle-card-icon-height - ($toggle-card-icon-border-width * 2);
 			}
 		}
 	}
 
-	&:checked {
-		+ .toggle-button-container {
-			border: $switch-card-border-width-checkbox-checked solid $switch-card-border-checkbox-checked;
-			color: $brand-primary;
-			padding: 11px;
+	&:checked + .toggle-card-container {
+		border: $toggle-card-on-border-width solid $toggle-card-on-border;
+		color: $brand-primary;
+		padding-bottom: $toggle-card-padding-vertical - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-left: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-right: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-top: $toggle-card-padding-vertical - abs($toggle-card-border-width - $toggle-card-on-border-width);
 
-			.checkbox-checked-icon {
-				display: block;
-				height: $switch-card-checkbox-height;
-				margin: 0 auto 8px;
-				width: $switch-card-checkbox-width;
-			}
+		.toggle-card-off {
+			display: none;
+		}
 
-			.checkbox-checked-label {
-				display: block;
-			}
+		.toggle-card-on {
+			display: block;
+		}
 
-			.checkbox-empty-icon,
-			.checkbox-empty-label {
-				display: none;
+		.toggle-card-icon {
+			background-color: $toggle-card-on-icon-bg;
+			border: $toggle-card-on-icon-border-width solid $toggle-card-on-icon-border;
+
+			[class*="icon-"] {
+				line-height: $toggle-card-icon-height - ($toggle-card-on-icon-border-width * 2);
 			}
 		}
 	}
 
-	&:focus {
-		+.toggle-button-container {
-			border-color: $brand-primary;
-			box-shadow: 0 0 5px 3px $brand-primary;
-		}
+	&:focus +.toggle-card-container {
+		border-color: $brand-primary;
+		box-shadow: 0 0 5px 3px $brand-primary;
 	}
 
-	&[disabled] {
-		+ .toggle-button-container {
-			cursor: not-allowed;
-			opacity: 0.4;
-		}
+	&[disabled] + .toggle-card-container {
+		cursor: not-allowed;
+		opacity: 0.4;
 	}
 }
