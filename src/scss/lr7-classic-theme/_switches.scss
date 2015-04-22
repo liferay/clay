@@ -248,15 +248,15 @@ $toggle-card-icon-border-radius: 30px;
 $toggle-card-border: #DCE0E3;
 $toggle-card-border-width: 1px;
 $toggle-card-icon-bg: #FFF;
-$toggle-card-icon-border: $brand-default;
+$toggle-card-icon-border: #869CAD;
 $toggle-card-icon-border-width: 0;
 
 // toggle-card-on Card Styles
-$toggle-card-on-border: $brand-primary;
+$toggle-card-on-border: #65B6F0;
 $toggle-card-on-border-width: 2px;
 $toggle-card-on-icon-bg: #FFF;
-$toggle-card-on-icon-border: $brand-primary;
-$toggle-card-on-icon-border-width: 1px;
+$toggle-card-on-icon-border: #65B6F0;
+$toggle-card-on-icon-border-width: 0;
 
 .toggle-card {
 	-webkit-user-select: none;
@@ -330,7 +330,7 @@ input.toggle-card-input {
 
 	&:checked + .toggle-card-container {
 		border: $toggle-card-on-border-width solid $toggle-card-on-border;
-		color: $brand-primary;
+		color: #65B6F0;
 		padding-bottom: $toggle-card-padding-vertical - abs($toggle-card-border-width - $toggle-card-on-border-width);
 		padding-left: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
 		padding-right: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
@@ -355,8 +355,8 @@ input.toggle-card-input {
 	}
 
 	&:focus +.toggle-card-container {
-		border-color: $brand-primary;
-		box-shadow: 0 0 5px 3px $brand-primary;
+		border-color: #65B6F0;
+		box-shadow: 0 0 5px 3px #65B6F0;
 	}
 
 	&[disabled] + .toggle-card-container {
