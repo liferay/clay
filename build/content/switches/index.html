@@ -473,58 +473,68 @@ collapse
 &lt;/div&gt;</code></pre>
 </div>
 
-			<h3>Toggle Button</h3>
+			<h3>Toggle Card</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
 				<p>A checkbox inside a card.</p>
 			</blockquote>
 
 			<div>
-				<label class="toggle-button-label">
-					<input class="toggle-button" type="checkbox" value="">
-					<div class="toggle-button-container">
-						<div class="checkbox-empty-icon"><span class="icon-lock"></span></div>
-						<div class="checkbox-checked-icon"><span class="icon-ok"></span></div>
-						<div class="checkbox-empty-label">labelOff</div>
-						<div class="checkbox-checked-label">labelOn</div>
+				<label class="toggle-card">
+					<input class="toggle-card-input" type="checkbox" value="">
+					<div class="toggle-card-container">
+						<div class="toggle-card-cell">
+							<div class="toggle-card-icon">
+								<span class="icon-ok"></span>
+							</div>
+							<div class="toggle-card-label">
+								<span>Regular Label</span>
+							</div>
+						</div>
 					</div>
 				</label>
 
-<pre style="clear:both;">&lt;aui:input type=&quot;toggle-button&quot; iconOff=&quot;icon-lock&quot; iconOn=&quot;icon-ok&quot; labelOff=&quot;labelOff&quot; labelOn=&quot;labelOn&quot; /&gt;</pre>
+<pre style="clear:both;">&lt;aui:input type=&quot;toggle-card&quot; icon=&quot;icon-ok&quot; label=&quot;Regular Label&quot; /&gt;</pre>
 			</div>
 
 			<div>
-				<label class="toggle-button-label">
-					<input class="toggle-button" type="checkbox" value="">
-					<div class="toggle-button-container">
-						<div class="checkbox-empty-icon"><span class="icon-lock"></span></div>
-						<div class="checkbox-checked-icon"><span class="icon-ok"></span></div>
-						Regular Label
+				<label class="toggle-card">
+					<input class="toggle-card-input" type="checkbox" value="">
+					<div class="toggle-card-container">
+						<div class="toggle-card-cell">
+							<div class="toggle-card-icon">
+								<span class="toggle-card-off icon-lock"></span>
+								<span class="toggle-card-on icon-ok"></span>
+							</div>
+							<div class="toggle-card-label">
+								<span>Regular Label</span>
+							</div>
+						</div>
 					</div>
 				</label>
 
-<pre style="clear:both;">&lt;aui:input type=&quot;toggle-button&quot; iconOff=&quot;icon-lock&quot; iconOn=&quot;icon-ok&quot; label=&quot;Regular Label&quot; /&gt;</pre>
+<pre style="clear:both;">&lt;aui:input type=&quot;toggle-card&quot; icon=&quot;icon-lock&quot; iconOff=&quot;icon-ok&quot; label=&quot;Regular Label&quot; /&gt;</pre>
 			</div>
 
-			<label class="toggle-button-label">
-				<input class="toggle-button" type="checkbox" value="">
-				<div class="toggle-button-container">
-					<div class="checkbox-empty-icon"><span class="icon-lock"></span></div>
-					<div class="checkbox-checked-icon"><span class="icon-ok"></span></div>
-					<div class="checkbox-empty-label">Option Line</div>
-					<div class="checkbox-checked-label">Selected</div>
-				</div>
-			</label>
+			<div>
+				<label class="toggle-card">
+					<input class="toggle-card-input" type="checkbox" value="">
+					<div class="toggle-card-container">
+						<div class="toggle-card-cell">
+							<div class="toggle-card-icon">
+								<span class="toggle-card-off icon-lock"></span>
+								<span class="toggle-card-on icon-ok"></span>
+							</div>
+							<div class="toggle-card-label">
+								<span class="toggle-card-off">labelOff</span>
+								<span class="toggle-card-on">labelOn</span>
+							</div>
+						</div>
+					</div>
+				</label>
 
-			<label class="toggle-button-label">
-				<input disabled class="toggle-button" type="checkbox" value="">
-				<div class="toggle-button-container">
-					<div class="checkbox-empty-icon"><span class="icon-lock"></span></div>
-					<div class="checkbox-checked-icon"><span class="icon-ok"></span></div>
-					<div class="checkbox-empty-label">Option Line</div>
-					<div class="checkbox-checked-label">Selected</div>
-				</div>
-			</label>
+<pre style="clear:both;">&lt;aui:input type=&quot;toggle-card&quot; icon=&quot;icon-lock&quot; iconOff=&quot;icon-ok&quot; label=&quot;labelOff&quot; labelOn=&quot;labelOn&quot; /&gt;</pre>
+			</div>
 		</form>
 	</div>
 </div>

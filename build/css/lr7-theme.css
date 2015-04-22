@@ -8981,57 +8981,78 @@ input.switch:empty ~ .switch-bar:after, input.switch:empty ~ .switch-bar:before,
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in; }
 
-.toggle-button-label {
+.toggle-card {
   -webkit-user-select: none;
   float: left;
   line-height: normal;
-  padding: 4px 4px 4px 0;
   position: relative; }
-  .toggle-button-label input.toggle-button {
-    height: auto;
-    width: auto; }
 
-input.toggle-button {
+.toggle-card-container {
+  display: table;
+  border: 1px solid #DCE0E3;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  padding: 12px 12px;
+  text-align: center;
+  height: 104px;
+  width: 92px; }
+
+.toggle-card-cell {
+  display: table-cell;
+  text-align: center;
+  word-break: break-word; }
+
+.toggle-card-icon {
+  border-radius: 30px;
+  height: 32px;
+  font-size: 24px;
+  margin: 0 auto;
+  width: 32px; }
+  .toggle-card-icon [class*="icon-"] {
+    display: block; }
+
+.toggle-card-label {
+  height: 46px;
+  line-height: 16px;
+  overflow: hidden;
+  padding-top: 12px; }
+
+input.toggle-card-input {
   height: 104px;
   margin: 0;
   opacity: 0;
   position: absolute;
   width: 92px; }
-  input.toggle-button:empty + .toggle-button-container .checkbox-empty-icon [class*="icon-"], input.toggle-button:checked + .toggle-button-container .checkbox-checked-icon [class*="icon-"] {
-    font-size: 24px;
-    line-height: 30px; }
-  input.toggle-button:empty + .toggle-button-container {
-    border: 1px solid #DCE0E3;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-    height: 104px;
-    padding: 12px;
-    text-align: center;
-    width: 92px; }
-    input.toggle-button:empty + .toggle-button-container .checkbox-checked-icon, input.toggle-button:empty + .toggle-button-container .checkbox-checked-label {
-      display: none; }
-    input.toggle-button:empty + .toggle-button-container .checkbox-empty-icon {
-      display: block;
-      height: 32px;
-      margin: 0 auto 8px;
-      width: 32px; }
-  input.toggle-button:checked + .toggle-button-container {
+  .toggle-card input.toggle-card-input {
+    height: auto;
+    width: auto; }
+  input.toggle-card-input:empty + .toggle-card-container .toggle-card-on {
+    display: none; }
+  input.toggle-card-input:empty + .toggle-card-container .toggle-card-icon {
+    background-color: #FFF;
+    border: #869CAD solid 0; }
+    input.toggle-card-input:empty + .toggle-card-container .toggle-card-icon [class*="icon-"] {
+      line-height: 32px; }
+  input.toggle-card-input:checked + .toggle-card-container {
     border: 2px solid #65B6F0;
     color: #65B6F0;
-    padding: 11px; }
-    input.toggle-button:checked + .toggle-button-container .checkbox-checked-icon {
-      display: block;
-      height: 32px;
-      margin: 0 auto 8px;
-      width: 32px; }
-    input.toggle-button:checked + .toggle-button-container .checkbox-checked-label {
-      display: block; }
-    input.toggle-button:checked + .toggle-button-container .checkbox-empty-icon, input.toggle-button:checked + .toggle-button-container .checkbox-empty-label {
+    padding-bottom: 11px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 11px; }
+    input.toggle-card-input:checked + .toggle-card-container .toggle-card-off {
       display: none; }
-  input.toggle-button:focus + .toggle-button-container {
+    input.toggle-card-input:checked + .toggle-card-container .toggle-card-on {
+      display: block; }
+    input.toggle-card-input:checked + .toggle-card-container .toggle-card-icon {
+      background-color: #FFF;
+      border: 1px solid #65B6F0; }
+      input.toggle-card-input:checked + .toggle-card-container .toggle-card-icon [class*="icon-"] {
+        line-height: 30px; }
+  input.toggle-card-input:focus + .toggle-card-container {
     border-color: #65B6F0;
     box-shadow: 0 0 5px 3px #65B6F0; }
-  input.toggle-button[disabled] + .toggle-button-container {
+  input.toggle-card-input[disabled] + .toggle-card-container {
     cursor: not-allowed;
     opacity: 0.4; }
 
