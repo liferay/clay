@@ -9046,9 +9046,9 @@ input.toggle-card-input {
       display: block; }
     input.toggle-card-input:checked + .toggle-card-container .toggle-card-icon {
       background-color: #FFF;
-      border: 1px solid #65B6F0; }
+      border: 0 solid #65B6F0; }
       input.toggle-card-input:checked + .toggle-card-container .toggle-card-icon [class*="icon-"] {
-        line-height: 30px; }
+        line-height: 32px; }
   input.toggle-card-input:focus + .toggle-card-container {
     border-color: #65B6F0;
     box-shadow: 0 0 5px 3px #65B6F0; }
