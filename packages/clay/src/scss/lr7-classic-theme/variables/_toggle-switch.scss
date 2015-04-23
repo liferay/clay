@@ -1,0 +1,34 @@
+// must all be same units--start
+$toggle-switch-bar-padding: 4px; // space between button and bar, can be negative value
+$toggle-switch-button-width: 24px;
+
+$toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) + $toggle-switch-button-width;
+$toggle-switch-bar-width: 60px; // width of switch bar
+// must all be same units--end
+
+$toggle-switch-bar-border-radius: 20px;
+$toggle-switch-bar-border-width: 2px;
+$toggle-switch-bar-font-size: 15px;
+
+$toggle-switch-button-border-width: 1px;
+$toggle-switch-button-font-size: $toggle-switch-bar-font-size;
+
+// Toggle Switch Off
+$toggle-switch-bar-bg: #FFF;
+$toggle-switch-bar-border-color: #D1D6D9;
+$toggle-switch-bar-icon-color: #869CAD;
+
+$toggle-switch-button-bg: #869CAD;
+$toggle-switch-button-border-color: #869CAD;
+$toggle-switch-button-border-radius: 50%;
+$toggle-switch-button-icon-color: #FFF;
+
+// Toggle Switch On
+$toggle-switch-bar-on-bg: #65B6F0;
+$toggle-switch-bar-on-border-color: #60A7D8;
+$toggle-switch-bar-on-icon-color: #FFF;
+
+$toggle-switch-button-on-bg: #FFF;
+$toggle-switch-button-on-border-color: #FFF;
+$toggle-switch-button-on-border-radius: $toggle-switch-button-border-radius;
+$toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg;
