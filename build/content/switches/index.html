@@ -235,15 +235,15 @@ collapse
 			<p>For customizing switches, see <a href="../extending-switches/">extending-switches</a>.</p>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.switch</code> to <code>position: static</code> and hide the <code>.switch-bar</code> element to display a regular checkbox.</p>
+				<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.switch</code> to <code>position: static</code> and hide the <code>.toggle-switch-bar</code> element to display a regular checkbox.</p>
 			</blockquote>
 
 			<div class="form-group" style="margin-bottom:0;">
 				<label>
 					<input class="toggle-switch" type="checkbox">
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle"></span>
 					</span>
 				</label>
 			</div>
@@ -256,15 +256,15 @@ collapse
     &lt;label&gt;
         &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
 
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot;&gt;&lt;/span&gt;
+        &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
+            &lt;span class=&quot;toggle-switch-handle&quot;&gt;&lt;/span&gt;
         &lt;/span&gt;
     &lt;/label&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
 			<blockquote class="blockquote-sm blockquote-success" style="margin-top:15px;">
-				<p>Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</code> on <code>&lt;span class=&quot;switch-toggle&quot;&gt;&lt;/span&gt;</code> to display specific text when the switch is on and off.</p>
+				<p>Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</code> on <code>&lt;span class=&quot;toggle-switch-handle&quot;&gt;&lt;/span&gt;</code> to display specific text when the switch is on and off.</p>
 			</blockquote>
 
 			<div class="form-group" style="margin-bottom:0;">
@@ -272,8 +272,8 @@ collapse
 					<input class="toggle-switch" type="checkbox">
 					Switch with data-label-on
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="" data-label-on="ON">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
 						</span>
 					</span>
 				</label>
@@ -288,8 +288,8 @@ collapse
         &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
         Switch with data-label-on
 
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot; data-label-off=&quot;&quot; data-label-on=&quot;ON&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
+            &lt;span class=&quot;toggle-switch-handle&quot; data-label-off=&quot;&quot; data-label-on=&quot;ON&quot;&gt;
             &lt;/span&gt;
         &lt;/span&gt;
     &lt;/label&gt;
@@ -301,8 +301,8 @@ collapse
 					<input class="toggle-switch" type="checkbox">
 					Switch with data-label on and data-label-off
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="Switch is off." data-label-on="Switch is on.">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
 						</span>
 					</span>
 				</label>
@@ -317,8 +317,8 @@ collapse
         &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
         Switch with data-label on and data-label-off
 
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot; data-label-off=&quot;Switch is off.&quot; data-label-on=&quot;Switch is on.&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
+            &lt;span class=&quot;toggle-switch-handle&quot; data-label-off=&quot;Switch is off.&quot; data-label-on=&quot;Switch is on.&quot;&gt;
             &lt;/span&gt;
         &lt;/span&gt;
     &lt;/label&gt;
@@ -328,9 +328,9 @@ collapse
 			<h3>Switches with Icons</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;button-icon button-icon-on switch-icon icon-volume-up&quot;&gt;&lt;/span&gt;</code>.</p>
+				<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;button-icon button-icon-on toggle-switch-icon icon-volume-up&quot;&gt;&lt;/span&gt;</code>.</p>
 
-				<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;button-icon button-icon-off switch-icon icon-volume-off&quot;&gt;&lt;/span&gt;</code>.</p>
+				<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;button-icon button-icon-off toggle-switch-icon icon-volume-off&quot;&gt;&lt;/span&gt;</code>.</p>
 
 				<p>Substitute <code>icon-volume-up</code> / <code>icon-volume-down</code> with any font awesome icon.</p>
 			</blockquote>
@@ -339,10 +339,10 @@ collapse
 				<label>
 					<input class="toggle-switch" type="checkbox">
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="" data-label-on="">
-							<span class="button-icon button-icon-on switch-icon icon-volume-up"></span>
-							<span class="button-icon button-icon-off switch-icon icon-volume-off"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="">
+							<span class="button-icon button-icon-on toggle-switch-icon icon-volume-up"></span>
+							<span class="button-icon button-icon-off toggle-switch-icon icon-volume-off"></span>
 						</span>
 					</span>
 				</label>
@@ -353,10 +353,10 @@ collapse
 					<input class="toggle-switch" type="checkbox">
 					Switch with data-label-on
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="" data-label-on="ON">
-							<span class="button-icon button-icon-on switch-icon icon-volume-up"></span>
-							<span class="button-icon button-icon-off switch-icon icon-volume-off"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
+							<span class="button-icon button-icon-on toggle-switch-icon icon-volume-up"></span>
+							<span class="button-icon button-icon-off toggle-switch-icon icon-volume-off"></span>
 						</span>
 					</span>
 				</label>
@@ -367,10 +367,10 @@ collapse
 					<input class="toggle-switch" type="checkbox">
 					Switch with data-label on and data-label-off
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="Locked" data-label-on="Edit">
-							<span class="button-icon button-icon-on switch-icon icon-pencil"></span>
-							<span class="button-icon button-icon-off switch-icon icon-lock"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
+							<span class="button-icon button-icon-on toggle-switch-icon icon-pencil"></span>
+							<span class="button-icon button-icon-off toggle-switch-icon icon-lock"></span>
 						</span>
 					</span>
 				</label>
@@ -385,10 +385,10 @@ collapse
         &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
         Switch with data-label on and data-label-off
 
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot; data-label-off=&quot;Locked&quot; data-label-on=&quot;Edit&quot;&gt;
-                &lt;span class=&quot;button-icon button-icon-on switch-icon icon-pencil&quot;&gt;&lt;/span&gt;
-                &lt;span class=&quot;button-icon button-icon-off switch-icon icon-lock&quot;&gt;&lt;/span&gt;
+        &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
+            &lt;span class=&quot;toggle-switch-handle&quot; data-label-off=&quot;Locked&quot; data-label-on=&quot;Edit&quot;&gt;
+                &lt;span class=&quot;button-icon button-icon-on toggle-switch-icon icon-pencil&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;button-icon button-icon-off toggle-switch-icon icon-lock&quot;&gt;&lt;/span&gt;
             &lt;/span&gt;
         &lt;/span&gt;
     &lt;/label&gt;
@@ -398,9 +398,9 @@ collapse
 			<h3>Switches with Icons (Alternate)</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;switch-icon-on switch-icon icon-ok&quot;&gt;&lt;/span&gt;</code>.</p>
+				<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;toggle-switch-icon-on toggle-switch-icon icon-ok&quot;&gt;&lt;/span&gt;</code>.</p>
 
-				<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;switch-icon-off switch-icon icon-remove&quot;&gt;&lt;/span&gt;</code>.</p>
+				<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;toggle-switch-icon-off toggle-switch-icon icon-remove&quot;&gt;&lt;/span&gt;</code>.</p>
 
 				<p>Substitute <code>icon-ok</code> / <code>icon-remove</code> with any font awesome icon.</p>
 			</blockquote>
@@ -409,10 +409,10 @@ collapse
 				<label>
 					<input class="toggle-switch" type="checkbox">
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle">
-							<span class="switch-icon-on switch-icon icon-ok"></span>
-							<span class="switch-icon-off switch-icon icon-remove"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle">
+							<span class="toggle-switch-icon-on toggle-switch-icon icon-ok"></span>
+							<span class="toggle-switch-icon-off toggle-switch-icon icon-remove"></span>
 						</span>
 					</span>
 				</label>
@@ -426,10 +426,10 @@ collapse
     &lt;label&gt;
         &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
 
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot;&gt;
-                &lt;span class=&quot;switch-icon-on switch-icon icon-ok&quot;&gt;&lt;/span&gt;
-                &lt;span class=&quot;switch-icon-off switch-icon icon-remove&quot;&gt;&lt;/span&gt;
+        &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
+            &lt;span class=&quot;toggle-switch-handle&quot;&gt;
+                &lt;span class=&quot;toggle-switch-icon-on toggle-switch-icon icon-ok&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;toggle-switch-icon-off toggle-switch-icon icon-remove&quot;&gt;&lt;/span&gt;
             &lt;/span&gt;
         &lt;/span&gt;
     &lt;/label&gt;
@@ -446,10 +446,10 @@ collapse
 				<label>
 					<input class="toggle-switch" disabled type="checkbox">
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle">
-							<span class="switch-icon-on switch-icon icon-ok"></span>
-							<span class="switch-icon-off switch-icon icon-remove"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle">
+							<span class="toggle-switch-icon-on toggle-switch-icon icon-ok"></span>
+							<span class="toggle-switch-icon-off toggle-switch-icon icon-remove"></span>
 						</span>
 					</span>
 				</label>
@@ -463,10 +463,10 @@ collapse
     &lt;label&gt;
         &lt;input class=&quot;toggle-switch&quot; disabled type=&quot;checkbox&quot;&gt;
 
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot;&gt;
-                &lt;span class=&quot;switch-icon-on switch-icon icon-ok&quot;&gt;&lt;/span&gt;
-                &lt;span class=&quot;switch-icon-off switch-icon icon-remove&quot;&gt;&lt;/span&gt;
+        &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
+            &lt;span class=&quot;toggle-switch-handle&quot;&gt;
+                &lt;span class=&quot;toggle-switch-icon-on toggle-switch-icon icon-ok&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;toggle-switch-icon-off toggle-switch-icon icon-remove&quot;&gt;&lt;/span&gt;
             &lt;/span&gt;
         &lt;/span&gt;
     &lt;/label&gt;

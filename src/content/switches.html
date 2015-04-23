@@ -11,15 +11,15 @@ section: Elements
 			<p>For customizing switches, see <a href="../extending-switches/">extending-switches</a>.</p>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.switch</code> to <code>position: static</code> and hide the <code>.switch-bar</code> element to display a regular checkbox.</p>
+				<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.switch</code> to <code>position: static</code> and hide the <code>.toggle-switch-bar</code> element to display a regular checkbox.</p>
 			</blockquote>
 
 			<div class="form-group" style="margin-bottom:0;">
 				<label>
 					<input class="toggle-switch" type="checkbox">
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle"></span>
 					</span>
 				</label>
 			</div>
@@ -32,15 +32,15 @@ section: Elements
     <label>
         <input class="toggle-switch" type="checkbox">
 
-        <span aria-hidden="true" class="switch-bar">
-            <span class="switch-toggle"></span>
+        <span aria-hidden="true" class="toggle-switch-bar">
+            <span class="toggle-switch-handle"></span>
         </span>
     </label>
 </div>```</code></pre>
 </div>
 
 			<blockquote class="blockquote-sm blockquote-success" style="margin-top:15px;">
-				<p>Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</code> on <code>```<span class="switch-toggle"></span>```</code> to display specific text when the switch is on and off.</p>
+				<p>Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</code> on <code>```<span class="toggle-switch-handle"></span>```</code> to display specific text when the switch is on and off.</p>
 			</blockquote>
 
 			<div class="form-group" style="margin-bottom:0;">
@@ -48,8 +48,8 @@ section: Elements
 					<input class="toggle-switch" type="checkbox">
 					Switch with data-label-on
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="" data-label-on="ON">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
 						</span>
 					</span>
 				</label>
@@ -64,8 +64,8 @@ section: Elements
         <input class="toggle-switch" type="checkbox">
         Switch with data-label-on
 
-        <span aria-hidden="true" class="switch-bar">
-            <span class="switch-toggle" data-label-off="" data-label-on="ON">
+        <span aria-hidden="true" class="toggle-switch-bar">
+            <span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
             </span>
         </span>
     </label>
@@ -77,8 +77,8 @@ section: Elements
 					<input class="toggle-switch" type="checkbox">
 					Switch with data-label on and data-label-off
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="Switch is off." data-label-on="Switch is on.">
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
 						</span>
 					</span>
 				</label>
@@ -93,8 +93,8 @@ section: Elements
         <input class="toggle-switch" type="checkbox">
         Switch with data-label on and data-label-off
 
-        <span aria-hidden="true" class="switch-bar">
-            <span class="switch-toggle" data-label-off="Switch is off." data-label-on="Switch is on.">
+        <span aria-hidden="true" class="toggle-switch-bar">
+            <span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
             </span>
         </span>
     </label>
@@ -104,9 +104,9 @@ section: Elements
 			<h3>Switches with Icons</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>Add an icon to the switch for the on position with <code>```<span class="button-icon button-icon-on switch-icon icon-volume-up"></span>```</code>.</p>
+				<p>Add an icon to the switch for the on position with <code>```<span class="button-icon button-icon-on toggle-switch-icon icon-volume-up"></span>```</code>.</p>
 
-				<p>Add an icon to the switch for the off position with <code>```<span class="button-icon button-icon-off switch-icon icon-volume-off"></span>```</code>.</p>
+				<p>Add an icon to the switch for the off position with <code>```<span class="button-icon button-icon-off toggle-switch-icon icon-volume-off"></span>```</code>.</p>
 
 				<p>Substitute <code>icon-volume-up</code> / <code>icon-volume-down</code> with any font awesome icon.</p>
 			</blockquote>
@@ -115,10 +115,10 @@ section: Elements
 				<label>
 					<input class="toggle-switch" type="checkbox">
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="" data-label-on="">
-							<span class="button-icon button-icon-on switch-icon icon-volume-up"></span>
-							<span class="button-icon button-icon-off switch-icon icon-volume-off"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="">
+							<span class="button-icon button-icon-on toggle-switch-icon icon-volume-up"></span>
+							<span class="button-icon button-icon-off toggle-switch-icon icon-volume-off"></span>
 						</span>
 					</span>
 				</label>
@@ -129,10 +129,10 @@ section: Elements
 					<input class="toggle-switch" type="checkbox">
 					Switch with data-label-on
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="" data-label-on="ON">
-							<span class="button-icon button-icon-on switch-icon icon-volume-up"></span>
-							<span class="button-icon button-icon-off switch-icon icon-volume-off"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
+							<span class="button-icon button-icon-on toggle-switch-icon icon-volume-up"></span>
+							<span class="button-icon button-icon-off toggle-switch-icon icon-volume-off"></span>
 						</span>
 					</span>
 				</label>
@@ -143,10 +143,10 @@ section: Elements
 					<input class="toggle-switch" type="checkbox">
 					Switch with data-label on and data-label-off
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle" data-label-off="Locked" data-label-on="Edit">
-							<span class="button-icon button-icon-on switch-icon icon-pencil"></span>
-							<span class="button-icon button-icon-off switch-icon icon-lock"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
+							<span class="button-icon button-icon-on toggle-switch-icon icon-pencil"></span>
+							<span class="button-icon button-icon-off toggle-switch-icon icon-lock"></span>
 						</span>
 					</span>
 				</label>
@@ -161,10 +161,10 @@ section: Elements
         <input class="toggle-switch" type="checkbox">
         Switch with data-label on and data-label-off
 
-        <span aria-hidden="true" class="switch-bar">
-            <span class="switch-toggle" data-label-off="Locked" data-label-on="Edit">
-                <span class="button-icon button-icon-on switch-icon icon-pencil"></span>
-                <span class="button-icon button-icon-off switch-icon icon-lock"></span>
+        <span aria-hidden="true" class="toggle-switch-bar">
+            <span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
+                <span class="button-icon button-icon-on toggle-switch-icon icon-pencil"></span>
+                <span class="button-icon button-icon-off toggle-switch-icon icon-lock"></span>
             </span>
         </span>
     </label>
@@ -174,9 +174,9 @@ section: Elements
 			<h3>Switches with Icons (Alternate)</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>Add an icon to the switch for the on position with <code>```<span class="switch-icon-on switch-icon icon-ok"></span>```</code>.</p>
+				<p>Add an icon to the switch for the on position with <code>```<span class="toggle-switch-icon-on toggle-switch-icon icon-ok"></span>```</code>.</p>
 
-				<p>Add an icon to the switch for the off position with <code>```<span class="switch-icon-off switch-icon icon-remove"></span>```</code>.</p>
+				<p>Add an icon to the switch for the off position with <code>```<span class="toggle-switch-icon-off toggle-switch-icon icon-remove"></span>```</code>.</p>
 
 				<p>Substitute <code>icon-ok</code> / <code>icon-remove</code> with any font awesome icon.</p>
 			</blockquote>
@@ -185,10 +185,10 @@ section: Elements
 				<label>
 					<input class="toggle-switch" type="checkbox">
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle">
-							<span class="switch-icon-on switch-icon icon-ok"></span>
-							<span class="switch-icon-off switch-icon icon-remove"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle">
+							<span class="toggle-switch-icon-on toggle-switch-icon icon-ok"></span>
+							<span class="toggle-switch-icon-off toggle-switch-icon icon-remove"></span>
 						</span>
 					</span>
 				</label>
@@ -202,10 +202,10 @@ section: Elements
     <label>
         <input class="toggle-switch" type="checkbox">
 
-        <span aria-hidden="true" class="switch-bar">
-            <span class="switch-toggle">
-                <span class="switch-icon-on switch-icon icon-ok"></span>
-                <span class="switch-icon-off switch-icon icon-remove"></span>
+        <span aria-hidden="true" class="toggle-switch-bar">
+            <span class="toggle-switch-handle">
+                <span class="toggle-switch-icon-on toggle-switch-icon icon-ok"></span>
+                <span class="toggle-switch-icon-off toggle-switch-icon icon-remove"></span>
             </span>
         </span>
     </label>
@@ -222,10 +222,10 @@ section: Elements
 				<label>
 					<input class="toggle-switch" disabled type="checkbox">
 
-					<span aria-hidden="true" class="switch-bar">
-						<span class="switch-toggle">
-							<span class="switch-icon-on switch-icon icon-ok"></span>
-							<span class="switch-icon-off switch-icon icon-remove"></span>
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle">
+							<span class="toggle-switch-icon-on toggle-switch-icon icon-ok"></span>
+							<span class="toggle-switch-icon-off toggle-switch-icon icon-remove"></span>
 						</span>
 					</span>
 				</label>
@@ -239,10 +239,10 @@ section: Elements
     <label>
         <input class="toggle-switch" disabled type="checkbox">
 
-        <span aria-hidden="true" class="switch-bar">
-            <span class="switch-toggle">
-                <span class="switch-icon-on switch-icon icon-ok"></span>
-                <span class="switch-icon-off switch-icon icon-remove"></span>
+        <span aria-hidden="true" class="toggle-switch-bar">
+            <span class="toggle-switch-handle">
+                <span class="toggle-switch-icon-on toggle-switch-icon icon-ok"></span>
+                <span class="toggle-switch-icon-off toggle-switch-icon icon-remove"></span>
             </span>
         </span>
     </label>
