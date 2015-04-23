@@ -9287,72 +9287,72 @@ input.toggle-card {
   .toggle-card input.toggle-card {
     height: auto;
     width: auto; }
-  input.toggle-card:empty + .toggle-card-container .toggle-card-on {
+  input.toggle-card:empty ~ .toggle-card-container .toggle-card-on {
     display: none; }
-  input.toggle-card:empty + .toggle-card-container .toggle-card-icon {
+  input.toggle-card:empty ~ .toggle-card-container .toggle-card-icon {
     background-color: #FFF;
     border: #869CAD solid 0; }
-    input.toggle-card:empty + .toggle-card-container .toggle-card-icon [class*="icon-"] {
+    input.toggle-card:empty ~ .toggle-card-container .toggle-card-icon [class*="icon-"] {
       line-height: 32px; }
-  input.toggle-card:checked + .toggle-card-container {
+  input.toggle-card:checked ~ .toggle-card-container {
     border: 2px solid #65B6F0;
     color: #65B6F0;
     padding-bottom: 11px;
     padding-left: 11px;
     padding-right: 11px;
     padding-top: 11px; }
-    input.toggle-card:checked + .toggle-card-container .toggle-card-off {
+    input.toggle-card:checked ~ .toggle-card-container .toggle-card-off {
       display: none; }
-    input.toggle-card:checked + .toggle-card-container .toggle-card-on {
+    input.toggle-card:checked ~ .toggle-card-container .toggle-card-on {
       display: block; }
-    input.toggle-card:checked + .toggle-card-container .toggle-card-icon {
+    input.toggle-card:checked ~ .toggle-card-container .toggle-card-icon {
       background-color: #FFF;
       border: 0 solid #65B6F0; }
-      input.toggle-card:checked + .toggle-card-container .toggle-card-icon [class*="icon-"] {
+      input.toggle-card:checked ~ .toggle-card-container .toggle-card-icon [class*="icon-"] {
         line-height: 32px; }
-  input.toggle-card:focus + .toggle-card-container {
+  input.toggle-card:focus ~ .toggle-card-container {
     border-color: #65B6F0;
     box-shadow: 0 0 5px 3px #65B6F0; }
-  input.toggle-card[disabled] + .toggle-card-container {
+  input.toggle-card[disabled] ~ .toggle-card-container {
     cursor: not-allowed;
     opacity: 0.4; }
 
 /* ---------- Switches ---------- */
-.switch-bar .switch-toggle {
+.toggle-switch-bar .toggle-switch-handle {
   display: block;
   float: left;
   min-width: 50px;
   text-transform: uppercase; }
-.switch-bar .switch-icon {
+.toggle-switch-bar .toggle-switch-icon {
   font-size: 12px; }
-.switch-bar .button-icon {
+.toggle-switch-bar .button-icon {
   font-size: 12px; }
 
 input.toggle-switch {
   font-size: 62.5%;
   opacity: 0;
   position: absolute; }
-  input.toggle-switch:empty ~ .switch-bar:before {
+  input.toggle-switch:empty ~ .toggle-switch-bar:before {
     background-color: #FFF;
     border: 2px solid #D1D6D9; }
-  input.toggle-switch:checked ~ .switch-bar:before {
+  input.toggle-switch:checked ~ .toggle-switch-bar:before {
     background-color: #65B6F0;
     border: 2px solid #60A7D8; }
-  input.toggle-switch:empty ~ .switch-bar:after {
+  input.toggle-switch:empty ~ .toggle-switch-bar:after {
     background-color: #869CAD;
     border: 1px solid #869CAD; }
-  input.toggle-switch:checked ~ .switch-bar:after {
+  input.toggle-switch:checked ~ .toggle-switch-bar:after {
     background-color: #FFF;
     border: 1px solid #FFF; }
-  input.toggle-switch:empty ~ .switch-bar .switch-icon {
+  input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon {
     color: #869CAD; }
-  input.toggle-switch:checked ~ .switch-bar .switch-icon {
+  input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon {
     color: #FFF; }
-  input.toggle-switch:empty ~ .switch-bar .switch-icon.button-icon {
+  input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon.button-icon {
     color: #FFF; }
-  input.toggle-switch:checked ~ .switch-bar .switch-icon.button-icon {
+  input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon.button-icon {
     color: #65B6F0; }
-  input.toggle-switch:empty ~ .switch-bar {
+  input.toggle-switch:empty ~ .toggle-switch-bar {
     cursor: pointer;
     display: block;
     font-size: 1.2rem;
@@ -9364,7 +9364,7 @@ input.toggle-switch {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-    input.toggle-switch:empty ~ .switch-bar:after, input.toggle-switch:empty ~ .switch-bar:before {
+    input.toggle-switch:empty ~ .toggle-switch-bar:after, input.toggle-switch:empty ~ .toggle-switch-bar:before {
       bottom: 0;
       content: ' ';
       display: block;
@@ -9372,19 +9372,19 @@ input.toggle-switch {
       position: absolute;
       top: 0;
       width: 50px; }
-    input.toggle-switch:empty ~ .switch-bar:after {
+    input.toggle-switch:empty ~ .toggle-switch-bar:after {
       border-radius: 50%;
       bottom: 4px;
       height: 18px;
       left: 4px;
       top: 4px;
       width: 18px; }
-    input.toggle-switch:empty ~ .switch-bar:before {
+    input.toggle-switch:empty ~ .toggle-switch-bar:before {
       border-radius: 20px; }
-    input.toggle-switch:empty ~ .switch-bar .switch-toggle:after {
+    input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:after {
       content: attr(data-label-off);
       margin-left: 6px; }
-    input.toggle-switch:empty ~ .switch-bar .switch-icon {
+    input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon {
       left: 4px;
       line-height: 18px;
       position: absolute;
@@ -9393,33 +9393,33 @@ input.toggle-switch {
       top: 4px;
       width: 18px;
       z-index: 1; }
-    input.toggle-switch:empty ~ .switch-bar .button-icon-on, input.toggle-switch:empty ~ .switch-bar .switch-icon-on {
+    input.toggle-switch:empty ~ .toggle-switch-bar .button-icon-on, input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-on {
       opacity: 0; }
-    input.toggle-switch:empty ~ .switch-bar .switch-icon-on {
+    input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-on {
       left: 4px; }
-    input.toggle-switch:empty ~ .switch-bar .switch-icon-off {
+    input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
       left: 28px; }
-  input.toggle-switch:checked ~ .switch-bar:after {
+  input.toggle-switch:checked ~ .toggle-switch-bar:after {
     border-radius: 50%;
     left: 28px; }
-  input.toggle-switch:checked ~ .switch-bar:before {
+  input.toggle-switch:checked ~ .toggle-switch-bar:before {
     border-radius: 20px; }
-  input.toggle-switch:checked ~ .switch-bar .switch-toggle:after {
+  input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-handle:after {
     content: attr(data-label-on);
     margin-left: 6px; }
-  input.toggle-switch:checked ~ .switch-bar .button-icon {
+  input.toggle-switch:checked ~ .toggle-switch-bar .button-icon {
     left: 28px; }
-  input.toggle-switch:checked ~ .switch-bar .button-icon-on, input.toggle-switch:checked ~ .switch-bar .switch-icon-on {
+  input.toggle-switch:checked ~ .toggle-switch-bar .button-icon-on, input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
     opacity: 1; }
-  input.toggle-switch:checked ~ .switch-bar .button-icon-off, input.toggle-switch:checked ~ .switch-bar .switch-icon-off {
+  input.toggle-switch:checked ~ .toggle-switch-bar .button-icon-off, input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-off {
     opacity: 0; }
-  input.toggle-switch:disabled ~ .switch-bar, input.toggle-switch.disabled ~ .switch-bar {
+  input.toggle-switch:disabled ~ .toggle-switch-bar, input.toggle-switch.disabled ~ .toggle-switch-bar {
     cursor: not-allowed;
     opacity: 0.4; }
-  input.toggle-switch:focus ~ .switch-bar:before {
+  input.toggle-switch:focus ~ .toggle-switch-bar:before {
     box-shadow: 0 0 3px 2px #66AFE6; }
 
-input.toggle-switch:empty ~ .switch-bar:after, input.toggle-switch:empty ~ .switch-bar:before, input.toggle-switch:empty ~ .switch-bar .switch-icon, input.toggle-switch:empty ~ .switch-bar .switch-toggle:after, input.toggle-switch:empty ~ .switch-bar .switch-toggle:before {
+input.toggle-switch:empty ~ .toggle-switch-bar:after, input.toggle-switch:empty ~ .toggle-switch-bar:before, input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon, input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:after, input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
   -webkit-transition: all 100ms ease-in;
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in; }
