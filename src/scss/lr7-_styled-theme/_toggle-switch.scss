@@ -1,41 +1,39 @@
 /* ---------- Switches ---------- */
 
 // must all be same units--start
-$switch-button-width: 18px;
-$switch-bar-padding: 4px; // space between button and bar, can be negative value
+$switch-button-width: 25px;
+$switch-bar-padding: 0px; // space between button and bar, can be negative value
 
 $switch-bar-width: 50px; // width of switch bar
 $switch-bar-height: ($switch-bar-padding * 2) + $switch-button-width;
 // must all be same units--end
 
-$switch-bar-border-radius: 20px;
-$switch-button-border-radius: 50%;
-$switch-button-off-border-radius: $switch-button-border-radius;
-$switch-button-on-border-radius: $switch-button-border-radius;
 
-$switch-bar-border-width: 2px;
+$switch-bar-border-radius: 3px;
+$switch-button-border-radius: 3px;
+$switch-button-off-border-radius: 3px 0 0 3px;
+$switch-button-on-border-radius: 0 3px 3px 0;
+
+$switch-bar-border-width: 1px;
 $switch-bar-font-size: 12px;
 $switch-button-border-width: 1px;
 $switch-button-font-size: $switch-bar-font-size;
 
-$switch-bar-bg: #65B6F0;
-$switch-bar-border-color: #60A7D8;
-$switch-bar-icon-color: #FFF;
-$switch-button-bg: #FFF;
-$switch-button-border-color: #FFF;
-$switch-button-icon-color: #34ADAB;
+$switch-bar-bg: $input-group-addon-bg;
+$switch-bar-border-color: $input-group-addon-border-color;
+$switch-bar-icon-color: $input-color;
+$switch-button-bg: $input-bg;
+$switch-button-border-color: $input-group-addon-border-color;
+$switch-button-icon-color: $input-color;
 
-// Calculate width of switch-bar
 @function set-data-label-text-position($switch-width, $switch-padding) {
 	@if $switch-padding < 0 {
 		@return $switch-width + abs($switch-padding);
 	}
-	@else {
-		@return $switch-width;
-	}
+
+	@return $switch-width;
 }
 
-// Colors both on and off styles for switch-bar
 @mixin color-switch-bar($off-bg, $off-border: $off-bg, $on-bg: $off-bg, $on-border: $off-border) {
 	&:empty ~ .switch-bar {
 		&:before {
@@ -52,7 +50,6 @@ $switch-button-icon-color: #34ADAB;
 	}
 }
 
-// Colors both on and off styles for switch-button
 @mixin color-switch-button($button-bg-off, $button-border-off: $button-bg-off, $button-bg-on: $button-bg-off, $button-border-on: $button-border-off) {
 	&:empty ~ .switch-bar {
 		&:after {
@@ -69,7 +66,6 @@ $switch-button-icon-color: #34ADAB;
 	}
 }
 
-// Colors both on and off styles for the icon in switch bar
 @mixin color-switch-bar-icon($off-color, $on-color: $off-color) {
 	&:empty ~ .switch-bar .switch-icon {
 		color: $off-color;
@@ -80,7 +76,6 @@ $switch-button-icon-color: #34ADAB;
 	}
 }
 
-// Colors both on and off styles for the icon in switch-button
 @mixin color-switch-button-icon($off-color, $on-color: $off-color) {
 	&:empty ~ .switch-bar .switch-icon.button-icon {
 		color: $off-color;
@@ -108,15 +103,15 @@ $switch-button-icon-color: #34ADAB;
 	}
 }
 
-input.switch {
+input.toggle-switch {
 	font-size: 62.5%;
 	opacity: 0;
 	position: absolute;
 
-	@include color-switch-bar(#FFF, #D1D6D9, $switch-bar-bg, $switch-bar-border-color);
-	@include color-switch-button(#869CAD, #869CAD, $switch-button-bg, $switch-button-border-color);
-	@include color-switch-bar-icon(#869CAD, $switch-bar-icon-color);
-	@include color-switch-button-icon(#FFF, $switch-bar-bg);
+	@include color-switch-bar($switch-bar-bg, $switch-bar-border-color);
+	@include color-switch-button($switch-button-bg, $switch-button-border-color);
+	@include color-switch-bar-icon($switch-bar-icon-color);
+	@include color-switch-button-icon($switch-button-icon-color);
 
 	&:empty ~ .switch-bar {
 		cursor: pointer;
@@ -221,7 +216,7 @@ input.switch {
 	}
 }
 
-input.switch {
+input.toggle-switch {
 	&:empty ~ .switch-bar {
 		&:after, &:before, .switch-icon, .switch-toggle:after, .switch-toggle:before {
 			@include transition(all 100ms ease-in);
