@@ -1,91 +1,3 @@
-/* ---------- Switches ---------- */
-
-// must all be same units--start
-$toggle-switch-button-width: 25px;
-$toggle-switch-bar-padding: 0px; // space between button and bar, can be negative value
-
-$toggle-switch-bar-width: 50px; // width of switch bar
-$toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) + $toggle-switch-button-width;
-// must all be same units--end
-
-
-$toggle-switch-bar-border-radius: 3px;
-$toggle-switch-button-border-radius: 3px;
-$toggle-switch-button-off-border-radius: 3px 0 0 3px;
-$toggle-switch-button-on-border-radius: 0 3px 3px 0;
-
-$toggle-switch-bar-border-width: 1px;
-$toggle-switch-bar-font-size: 12px;
-$toggle-switch-button-border-width: 1px;
-$toggle-switch-button-font-size: $toggle-switch-bar-font-size;
-
-$toggle-switch-bar-bg: $input-group-addon-bg;
-$toggle-switch-bar-border-color: $input-group-addon-border-color;
-$toggle-switch-bar-icon-color: $input-color;
-$toggle-switch-button-bg: $input-bg;
-$toggle-switch-button-border-color: $input-group-addon-border-color;
-$toggle-switch-button-icon-color: $input-color;
-
-@function set-data-label-text-position($toggle-switch-width, $toggle-switch-padding) {
-	@if $toggle-switch-padding < 0 {
-		@return $toggle-switch-width + abs($toggle-switch-padding);
-	}
-
-	@return $toggle-switch-width;
-}
-
-@mixin color-toggle-switch-bar($off-bg, $off-border: $off-bg, $on-bg: $off-bg, $on-border: $off-border) {
-	&:empty ~ .toggle-switch-bar {
-		&:before {
-			background-color: $off-bg;
-			border: $toggle-switch-bar-border-width solid $off-border;
-		}
-	}
-
-	&:checked ~ .toggle-switch-bar {
-		&:before {
-			background-color: $on-bg;
-			border: $toggle-switch-bar-border-width solid $on-border;
-		}
-	}
-}
-
-@mixin color-toggle-switch-button($button-bg-off, $button-border-off: $button-bg-off, $button-bg-on: $button-bg-off, $button-border-on: $button-border-off) {
-	&:empty ~ .toggle-switch-bar {
-		&:after {
-			background-color: $button-bg-off;
-			border: $toggle-switch-button-border-width solid $button-border-off;
-		}
-	}
-
-	&:checked ~ .toggle-switch-bar {
-		&:after {
-			background-color: $button-bg-on;
-			border: $toggle-switch-button-border-width solid $button-border-on;
-		}
-	}
-}
-
-@mixin color-toggle-switch-bar-icon($off-color, $on-color: $off-color) {
-	&:empty ~ .toggle-switch-bar .toggle-switch-icon {
-		color: $off-color;
-	}
-
-	&:checked ~ .toggle-switch-bar .toggle-switch-icon {
-		color: $on-color;
-	}
-}
-
-@mixin color-toggle-switch-button-icon($off-color, $on-color: $off-color) {
-	&:empty ~ .toggle-switch-bar .toggle-switch-icon.button-icon {
-		color: $off-color;
-	}
-
-	&:checked ~ .toggle-switch-bar .toggle-switch-icon.button-icon {
-		color: $on-color;
-	}
-}
-
 .toggle-switch-bar {
 	.toggle-switch-handle {
 		display: block;
@@ -108,10 +20,14 @@ input.toggle-switch {
 	opacity: 0;
 	position: absolute;
 
-	@include color-toggle-switch-bar($toggle-switch-bar-bg, $toggle-switch-bar-border-color);
-	@include color-toggle-switch-button($toggle-switch-button-bg, $toggle-switch-button-border-color);
-	@include color-toggle-switch-bar-icon($toggle-switch-bar-icon-color);
-	@include color-toggle-switch-button-icon($toggle-switch-button-icon-color);
+	// ($off-bg, $off-border: $off-bg, $on-bg: $off-bg, $on-border: $off-border)
+	@include color-toggle-switch-bar($toggle-switch-bar-bg, $toggle-switch-bar-border-color, $toggle-switch-bar-on-bg, $toggle-switch-bar-on-border-color);
+	// ($button-off-bg, $button-off-border: $button-off-bg, $button-on-bg: $button-off-bg, $button-on-border: $button-off-border)
+	@include color-toggle-switch-button($toggle-switch-button-bg, $toggle-switch-button-border-color, $toggle-switch-button-on-bg, $toggle-switch-button-on-border-color);
+	// ($off-color, $on-color: $off-color)
+	@include color-toggle-switch-bar-icon($toggle-switch-bar-icon-color, $toggle-switch-bar-on-icon-color);
+	// ($off-color, $on-color: $off-color)
+	@include color-toggle-switch-button-icon($toggle-switch-button-icon-color, $toggle-switch-button-on-icon-color);
 
 	&:empty ~ .toggle-switch-bar {
 		cursor: pointer;
@@ -135,7 +51,7 @@ input.toggle-switch {
 		}
 
 		&:after {
-			border-radius: $toggle-switch-button-off-border-radius;
+			border-radius: $toggle-switch-button-border-radius;
 			bottom: $toggle-switch-bar-padding;
 			height: $toggle-switch-button-width;
 			left: $toggle-switch-bar-padding;
