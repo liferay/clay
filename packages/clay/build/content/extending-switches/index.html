@@ -238,31 +238,31 @@ collapse
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Customize:</p>
-			<p>the <strong>switch button in the off</strong> position with <code>input.switch:empty ~ .switch-bar:after {}</code>.</p>
+			<p>the <strong>toggle-switch button in the off</strong> position with <code>input.toggle-switch:empty ~ .toggle-switch-bar:after {}</code>.</p>
 
-			<p>the <strong>switch button icon in the off</strong> position with <code>input.switch:empty ~ .switch-bar .switch-icon.button-icon {}</code>.</p>
+			<p>the <strong>toggle-switch button icon in the off</strong> position with <code>input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon.button-icon {}</code>.</p>
 
-			<p>the <strong>switch bar in the off</strong> position with <code>input.switch:empty ~ .switch-bar:before {}</code>.</p>
+			<p>the <strong>toggle-switch bar in the off</strong> position with <code>input.toggle-switch:empty ~ .toggle-switch-bar:before {}</code>.</p>
 
-			<p>the <strong>switch bar icon in the off</strong> position with <code>input.switch:empty ~ .switch-bar .switch-icon-off {}</code>.</p>
+			<p>the <strong>toggle-switch bar icon in the off</strong> position with <code>input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {}</code>.</p>
 
-			<p>the <strong>switch button in the on</strong> position with <code>input.switch:checked ~ .switch-bar:after {}</code>.</p>
+			<p>the <strong>toggle-switch button in the on</strong> position with <code>input.toggle-switch:checked ~ .toggle-switch-bar:after {}</code>.</p>
 
-			<p>the <strong>switch button icon in the on</strong> position with <code>input.switch:checked ~ .switch-bar .switch-icon.button-icon</code>.</p>
+			<p>the <strong>toggle-switch button icon in the on</strong> position with <code>input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon.button-icon</code>.</p>
 
-			<p>the <strong>switch bar in the on</strong> position with <code>input.switch:checked ~ .switch-bar:before {}</code>.</p>
+			<p>the <strong>toggle-switch bar in the on</strong> position with <code>input.toggle-switch:checked ~ .toggle-switch-bar:before {}</code>.</p>
 
-			<p>the <strong>switch bar icon in the on</strong> position with <code>input.switch:checked ~ .switch-bar .switch-icon-on {}</code>.</p>
+			<p>the <strong>toggle-switch bar icon in the on</strong> position with <code>input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {}</code>.</p>
 		</blockquote>
 
-		<div class="form-group" id="demoSwitch" style="margin-bottom:0;">
+		<div class="form-group" id="demotoggle-Switch" style="margin-bottom:0;">
 			<label>
-				<input class="switch" type="checkbox">
+				<input class="toggle-switch" type="checkbox">
 
-				<span aria-hidden="true" class="switch-bar">
-					<span class="switch-toggle">
-							<span class="switch-icon-on switch-icon"></span>
-							<span class="switch-icon-off switch-icon"></span>
+				<span aria-hidden="true" class="toggle-switch-bar">
+					<span class="toggle-switch-handle">
+							<span class="toggle-switch-icon-on toggle-switch-icon"></span>
+							<span class="toggle-switch-icon-off toggle-switch-icon"></span>
 					</span>
 				</span>
 			</label>
@@ -273,9 +273,9 @@ collapse
 </div>
 <div class="collapse" id="codeCollapse0">
 	<pre><code>&lt;style&gt;
-    input.switch:empty ~ .switch-bar:after {
+    input.toggle-switch:empty ~ .toggle-switch-bar:after {
         background-color: transparent;
-        background-image: url(../images/switch_button.png);
+        background-image: url(../images/toggle-switch_button.png);
         background-repeat: no-repeat;
         background-size: 100%;
         border-width: 0;
@@ -286,9 +286,9 @@ collapse
         width: 24px;
     }
 
-    input.switch:empty ~ .switch-bar:before {
+    input.toggle-switch:empty ~ .toggle-switch-bar:before {
         background-color: transparent;
-        background-image: url(../images/switch_base.png);
+        background-image: url(../images/toggle-switch_base.png);
         background-repeat: no-repeat;
         background-size: 100%;
         border-radius: 20px;
@@ -296,8 +296,8 @@ collapse
         width: 55px;
     }
 
-    input.switch:empty ~ .switch-bar .switch-icon-off {
-        background-image: url(../../images/switch_off_icon.png);
+    input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
+        background-image: url(../../images/toggle-switch_off_icon.png);
         background-repeat: no-repeat;
         background-size: 100%;
         height: 15px;
@@ -306,12 +306,12 @@ collapse
         width: 15px;
     }
 
-    input.switch:checked ~ .switch-bar:after {
+    input.toggle-switch:checked ~ .toggle-switch-bar:after {
         left: 28px;
     }
 
-    input.switch:checked ~ .switch-bar .switch-icon-on {
-        background-image: url(../../images/switch_on_icon.png);
+    input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
+        background-image: url(../../images/toggle-switch_on_icon.png);
         background-repeat: no-repeat;
         background-size: 100%;
         height: 17px;
@@ -323,12 +323,12 @@ collapse
 
 &lt;div class=&quot;form-group&quot;&gt;
     &lt;label&gt;
-      &lt;input class=&quot;switch&quot; type=&quot;checkbox&quot;&gt;
+      &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
 
-      &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-          &lt;span class=&quot;switch-toggle&quot;&gt;
-              &lt;span class=&quot;switch-icon-on switch-icon&quot;&gt;&lt;/span&gt;
-              &lt;span class=&quot;switch-icon-off switch-icon&quot;&gt;&lt;/span&gt;
+      &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
+          &lt;span class=&quot;toggle-switch-handle&quot;&gt;
+              &lt;span class=&quot;toggle-switch-icon-on toggle-switch-icon&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;toggle-switch-icon-off toggle-switch-icon&quot;&gt;&lt;/span&gt;
           &lt;/span&gt;
       &lt;/span&gt;
     &lt;/label&gt;
@@ -340,11 +340,11 @@ collapse
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>iOS Style Switches</h3>
+		<h3>iOS Style toggle-Switches</h3>
 
 		<style>
-			/* Switch Button Off */
-			.ios-switch input.switch:empty ~ .switch-bar:after {
+			/* toggle-Switch Button Off */
+			.ios-toggle-switch input.toggle-switch:empty ~ .toggle-switch-bar:after {
 				background-color: #FFF;
 				border-radius: 20px;
 				border-width: 0;
@@ -355,54 +355,54 @@ collapse
 				width: 21px;
 			}
 
-			/* Switch Button On */
-			.ios-switch input.switch:checked ~ .switch-bar:after {
+			/* toggle-Switch Button On */
+			.ios-toggle-switch input.toggle-switch:checked ~ .toggle-switch-bar:after {
 				border-width: 0;
 				left: 27px;
 			}
 
-			/* Switch Bar Off */
-			.ios-switch input.switch:empty ~ .switch-bar:before {
+			/* toggle-Switch Bar Off */
+			.ios-toggle-switch input.toggle-switch:empty ~ .toggle-switch-bar:before {
 				background-color: #FEFEFE;
 				border: 1px solid #E6E6E6;
 				border-radius: 20px;
 			}
 
-			/* Switch Bar On */
-			.ios-switch input.switch:checked ~ .switch-bar:before {
+			/* toggle-Switch Bar On */
+			.ios-toggle-switch input.toggle-switch:checked ~ .toggle-switch-bar:before {
 				background-color: #4BD863;
 				border-color: #4BD863;
 			}
 
-			/* Switch Bar Icon Off */
-			.ios-switch input.switch:empty ~ .switch-bar .switch-icon-off {
+			/* toggle-Switch Bar Icon Off */
+			.ios-toggle-switch input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
 				color: #B5B5B5;
 				font-size: 15px;
 			}
 
-			/* Switch Bar Icon On */
-			.ios-switch input.switch:checked ~ .switch-bar .switch-icon-on {
+			/* toggle-Switch Bar Icon On */
+			.ios-toggle-switch input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
 				color: #FFF;
 			}
 		</style>
 
-		<div class="form-group ios-switch" style="margin-bottom:0;">
+		<div class="form-group ios-toggle-switch" style="margin-bottom:0;">
 			<label>
-				<input class="switch" type="checkbox">
+				<input class="toggle-switch" type="checkbox">
 
-				<span aria-hidden="true" class="switch-bar">
-					<span class="switch-toggle">
+				<span aria-hidden="true" class="toggle-switch-bar">
+					<span class="toggle-switch-handle">
 					</span>
 				</span>
 			</label>
 
 			<label>
-				<input class="switch" type="checkbox">
+				<input class="toggle-switch" type="checkbox">
 
-				<span aria-hidden="true" class="switch-bar">
-					<span class="switch-toggle">
-						<span class="switch-icon-on switch-icon">|</span>
-						<span class="icon-circle-blank switch-icon-off switch-icon"></span>
+				<span aria-hidden="true" class="toggle-switch-bar">
+					<span class="toggle-switch-handle">
+						<span class="toggle-switch-icon-on toggle-switch-icon">|</span>
+						<span class="icon-circle-blank toggle-switch-icon-off toggle-switch-icon"></span>
 					</span>
 				</span>
 			</label>
@@ -413,8 +413,8 @@ collapse
 </div>
 <div class="collapse" id="codeCollapse1">
 	<pre><code>&lt;style&gt;
-    /* Switch Button Off */
-    .ios-switch input.switch:empty ~ .switch-bar:after {
+    /* toggle-Switch Button Off */
+    .ios-toggle-switch input.toggle-switch:empty ~ .toggle-switch-bar:after {
         background-color: #FFF;
         border-width: 0;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -424,40 +424,40 @@ collapse
         width: 22px;
     }
 
-    /* Switch Button On */
-    .ios-switch input.switch:checked ~ .switch-bar:after {
+    /* toggle-Switch Button On */
+    .ios-toggle-switch input.toggle-switch:checked ~ .toggle-switch-bar:after {
         border-width: 0;
         left: 27px;
     }
 
-    /* Switch Bar Off */
-    .ios-switch input.switch:empty ~ .switch-bar:before {
+    /* toggle-Switch Bar Off */
+    .ios-toggle-switch input.toggle-switch:empty ~ .toggle-switch-bar:before {
         background-color: #FEFEFE;
         border: 1px solid #E6E6E6;
     }
 
-    /* Switch Bar On */
-    .ios-switch input.switch:checked ~ .switch-bar:before {
+    /* toggle-Switch Bar On */
+    .ios-toggle-switch input.toggle-switch:checked ~ .toggle-switch-bar:before {
         background-color: #4BD863;
         border-color: #4BD863;
     }
 
-    /* Switch Bar Icon Off */
-    .ios-switch input.switch:empty ~ .switch-bar .switch-icon-off {
+    /* toggle-Switch Bar Icon Off */
+    .ios-toggle-switch input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
         color: #B5B5B5;
         font-size: 15px;
         line-height: 19px;
     }
 &lt;/style&gt;
 
-&lt;div class=&quot;form-group ios-switch&quot;&gt;
+&lt;div class=&quot;form-group ios-toggle-switch&quot;&gt;
     &lt;label&gt;
-        &lt;input class=&quot;switch&quot; type=&quot;checkbox&quot;&gt;
+        &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
 
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;switch-bar&quot;&gt;
-            &lt;span class=&quot;switch-toggle&quot;&gt;
-                &lt;span class=&quot;switch-icon-on switch-icon&quot;&gt;|&lt;/span&gt;
-                &lt;span class=&quot;icon-circle-blank switch-icon-off switch-icon&quot;&gt;&lt;/span&gt;
+        &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
+            &lt;span class=&quot;toggle-switch-handle&quot;&gt;
+                &lt;span class=&quot;toggle-switch-icon-on toggle-switch-icon&quot;&gt;|&lt;/span&gt;
+                &lt;span class=&quot;icon-circle-blank toggle-switch-icon-off toggle-switch-icon&quot;&gt;&lt;/span&gt;
             &lt;/span&gt;
         &lt;/span&gt;
     &lt;/label&gt;
