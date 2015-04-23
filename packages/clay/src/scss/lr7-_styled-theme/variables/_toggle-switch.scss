@@ -24,11 +24,11 @@ $toggle-switch-button-border-radius: 3px 0 0 3px;
 $toggle-switch-button-icon-color: $input-color;
 
 // Toggle Switch On
-$toggle-switch-bar-on-bg: $brand-success;
-$toggle-switch-bar-on-border-color: $brand-success;
+$toggle-switch-bar-on-bg: $input-border-focus;
+$toggle-switch-bar-on-border-color: $toggle-switch-bar-on-bg;
 $toggle-switch-bar-on-icon-color: #FFF;
 
 $toggle-switch-button-on-bg: #FFF;
-$toggle-switch-button-on-border-color: $brand-success;
+$toggle-switch-button-on-border-color: $toggle-switch-bar-on-bg;
 $toggle-switch-button-on-border-radius: 0 3px 3px 0;
-$toggle-switch-button-on-icon-color: $brand-success;
+$toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg;
