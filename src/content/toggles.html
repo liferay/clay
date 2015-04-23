@@ -1,17 +1,17 @@
 ---
-title: Switches
+title: Toggles
 section: Elements
 ---
 
 <div class="row">
 	<div class="col-md-12">
 		<form action="#" method="get">
-			<h3>Default Switch</h3>
+			<h3>Toggle Switch</h3>
 
 			<p>For customizing switches, see <a href="../extending-switches/">extending-switches</a>.</p>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.switch</code> to <code>position: static</code> and hide the <code>.toggle-switch-bar</code> element to display a regular checkbox.</p>
+				<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.toggle-switch</code> to <code>position: static</code> and hide the <code>.toggle-switch-bar</code> element to display a regular checkbox.</p>
 			</blockquote>
 
 			<div class="form-group" style="margin-bottom:0;">
@@ -46,7 +46,7 @@ section: Elements
 			<div class="form-group" style="margin-bottom:0;">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-					Switch with data-label-on
+					Toggle Switch with data-label-on
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -62,7 +62,7 @@ section: Elements
 	<pre><code>```<div class="form-group">
     <label>
         <input class="toggle-switch" type="checkbox">
-        Switch with data-label-on
+        Toggle Switch with data-label-on
 
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -75,7 +75,7 @@ section: Elements
 			<div class="form-group" style="margin-bottom:0;margin-top:15px;">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-					Switch with data-label on and data-label-off
+					Toggle Switch with data-label on and data-label-off
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
@@ -91,7 +91,7 @@ section: Elements
 	<pre><code>```<div class="form-group">
     <label>
         <input class="toggle-switch" type="checkbox">
-        Switch with data-label on and data-label-off
+        Toggle Switch with data-label on and data-label-off
 
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
@@ -101,7 +101,7 @@ section: Elements
 </div>```</code></pre>
 </div>
 
-			<h3>Switches with Icons</h3>
+			<h3>Toggle Switches with Icons</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
 				<p>Add an icon to the switch for the on position with <code>```<span class="button-icon button-icon-on toggle-switch-icon icon-volume-up"></span>```</code>.</p>
@@ -127,7 +127,7 @@ section: Elements
 			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-					Switch with data-label-on
+					Toggle Switch with data-label-on
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -141,7 +141,7 @@ section: Elements
 			<div class="form-group" style="margin-bottom:0;">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-					Switch with data-label on and data-label-off
+					Toggle Switch with data-label on and data-label-off
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
@@ -159,7 +159,7 @@ section: Elements
 	<pre><code>```<div class="form-group">
     <label>
         <input class="toggle-switch" type="checkbox">
-        Switch with data-label on and data-label-off
+        Toggle Switch with data-label on and data-label-off
 
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
@@ -171,7 +171,7 @@ section: Elements
 </div>```</code></pre>
 </div>
 
-			<h3>Switches with Icons (Alternate)</h3>
+			<h3>Toggle Switches with Icons (Alternate)</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
 				<p>Add an icon to the switch for the on position with <code>```<span class="toggle-switch-icon-on toggle-switch-icon icon-ok"></span>```</code>.</p>
@@ -212,10 +212,10 @@ section: Elements
 </div>```</code></pre>
 </div>
 
-			<h3>Disabled Switches</h3>
+			<h3>Disabled Toggle Switches</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>Disable a switch by adding the attribute <code>disabled="disabled"</code> to <code>```<input type="checkbox">```</code>.</p>
+				<p>Disable a toggle-switch by adding the attribute <code>disabled="disabled"</code> to <code>```<input type="checkbox">```</code>.</p>
 			</blockquote>
 
 			<div class="form-group" style="margin-bottom:0;">
@@ -252,10 +252,10 @@ section: Elements
 			<h3 id="toggleCard">Toggle Card</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>A checkbox inside a card.</p>
+				<p>A checkbox styled like a card.</p>
 			</blockquote>
 
-			<div>
+			<div class="form-group">
 				<label>
 					<input class="toggle-card" type="checkbox" value="">
 					<div class="toggle-card-container">
@@ -270,10 +270,32 @@ section: Elements
 					</div>
 				</label>
 
-<pre style="clear:both;">```<aui:input type="toggle-card" icon="icon-ok" label="Regular Label" />```</pre>
+<pre>```<aui:input type="toggle-card" icon="icon-ok" label="Regular Label" />```</pre>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse6">
+	<pre><code>```<div class="form-group">
+    <label>
+        <input class="toggle-card" type="checkbox" value="">
+        <div class="toggle-card-container">
+            <div class="toggle-card-cell">
+                <div class="toggle-card-icon">
+                    <span class="icon-ok"></span>
+                </div>
+                <div class="toggle-card-label">
+                    <span>Regular Label</span>
+                </div>
+            </div>
+        </div>
+    </label>
+</div>```</code></pre>
+</div>
+
 			</div>
 
-			<div>
+			<div class="form-group">
 				<label>
 					<input class="toggle-card" type="checkbox" value="">
 					<div class="toggle-card-container">
@@ -290,9 +312,32 @@ section: Elements
 				</label>
 
 <pre style="clear:both;">```<aui:input type="toggle-card" icon="icon-lock" iconOff="icon-ok" label="Regular Label" />```</pre>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse7">
+	<pre><code>```<div class="form-group">
+    <label>
+        <input class="toggle-card" type="checkbox" value="">
+        <div class="toggle-card-container">
+            <div class="toggle-card-cell">
+                <div class="toggle-card-icon">
+                    <span class="toggle-card-off icon-lock"></span>
+                    <span class="toggle-card-on icon-ok"></span>
+                </div>
+                <div class="toggle-card-label">
+                    <span>Regular Label</span>
+                </div>
+            </div>
+        </div>
+    </label>
+</div>```</code></pre>
+</div>
+
 			</div>
 
-			<div>
+			<div class="form-group">
 				<label>
 					<input class="toggle-card" type="checkbox" value="">
 					<div class="toggle-card-container">
@@ -309,7 +354,81 @@ section: Elements
 					</div>
 				</label>
 
-<pre style="clear:both;">```<aui:input type="toggle-card" icon="icon-lock" iconOff="icon-ok" label="labelOff" labelOn="labelOn" />```</pre>
+<pre>```<aui:input type="toggle-card" icon="icon-lock" iconOff="icon-ok" label="labelOff" labelOn="labelOn" />```</pre>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse8"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse8">
+	<pre><code class="html">```<div class="form-group">
+    <label>
+        <input class="toggle-card" type="checkbox" value="">
+        <div class="toggle-card-container">
+            <div class="toggle-card-cell">
+                <div class="toggle-card-icon">
+                    <span class="toggle-card-off icon-lock"></span>
+                    <span class="toggle-card-on icon-ok"></span>
+                </div>
+                <div class="toggle-card-label">
+                    <span class="toggle-card-off">labelOff</span>
+                    <span class="toggle-card-on">labelOn</span>
+                </div>
+            </div>
+        </div>
+    </label>
+</div>```</code></pre>
+</div>
+
+			</div>
+
+			<h3>Disabled Toggle Cards</h3>
+
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Disable a toggle-card by adding the attribute <code>disabled="disabled"</code> to <code>```<input class="toggle-card" type="checkbox">```</code>.</p>
+			</blockquote>
+
+			<div class="form-group">
+				<label>
+					<input class="toggle-card" disabled type="checkbox" value="">
+					<div class="toggle-card-container">
+						<div class="toggle-card-cell">
+							<div class="toggle-card-icon">
+								<span class="toggle-card-off icon-lock"></span>
+								<span class="toggle-card-on icon-ok"></span>
+							</div>
+							<div class="toggle-card-label">
+								<span class="toggle-card-off">labelOff</span>
+								<span class="toggle-card-on">labelOn</span>
+							</div>
+						</div>
+					</div>
+				</label>
+
+<pre>```<aui:input disabled="true" type="toggle-card" icon="icon-lock" iconOff="icon-ok" label="labelOff" labelOn="labelOn" />```</pre>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse9">
+	<pre><code class="html">```<div class="form-group">
+    <label>
+        <input class="toggle-card" disabled type="checkbox" value="">
+        <div class="toggle-card-container">
+            <div class="toggle-card-cell">
+                <div class="toggle-card-icon">
+                    <span class="toggle-card-off icon-lock"></span>
+                    <span class="toggle-card-on icon-ok"></span>
+                </div>
+                <div class="toggle-card-label">
+                    <span class="toggle-card-off">labelOff</span>
+                    <span class="toggle-card-on">labelOn</span>
+                </div>
+            </div>
+        </div>
+    </label>
+</div>```</code></pre>
+</div>
+
 			</div>
 		</form>
 	</div>
