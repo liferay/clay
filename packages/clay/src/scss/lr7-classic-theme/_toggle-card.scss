@@ -82,7 +82,7 @@ input.toggle-card {
 		width: auto;
 	}
 
-	&:empty + .toggle-card-container {
+	&:empty ~ .toggle-card-container {
 		.toggle-card-on {
 			display: none;
 		}
@@ -97,7 +97,7 @@ input.toggle-card {
 		}
 	}
 
-	&:checked + .toggle-card-container {
+	&:checked ~ .toggle-card-container {
 		border: $toggle-card-on-border-width solid $toggle-card-on-border;
 		color: #65B6F0;
 		padding-bottom: $toggle-card-padding-vertical - abs($toggle-card-border-width - $toggle-card-on-border-width);
@@ -123,12 +123,12 @@ input.toggle-card {
 		}
 	}
 
-	&:focus +.toggle-card-container {
+	&:focus ~.toggle-card-container {
 		border-color: #65B6F0;
 		box-shadow: 0 0 5px 3px #65B6F0;
 	}
 
-	&[disabled] + .toggle-card-container {
+	&[disabled] ~ .toggle-card-container {
 		cursor: not-allowed;
 		opacity: 0.4;
 	}
