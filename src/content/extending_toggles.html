@@ -31,7 +31,56 @@ section: Extending Components
 			<p>the <strong>toggle-switch bar icon in the on</strong> position with <code>input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {}</code>.</p>
 		</blockquote>
 
-		<div class="form-group" id="demotoggle-Switch" style="margin-bottom:0;">
+		<style>
+			#demoToggleSwitch input.toggle-switch:empty ~ .toggle-switch-bar:after {
+				background-color: transparent;
+				background-image: url(../../images/switch_button.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				border-width: 0;
+				bottom: 0;
+				height: auto;
+				left: 3px;
+				top: 1px;
+				width: 30px;
+			}
+
+			#demoToggleSwitch input.toggle-switch:empty ~ .toggle-switch-bar:before {
+				background-color: transparent;
+				background-image: url(../../images/switch_base.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				border-radius: 20px;
+				border-width: 0;
+				width: 68px;
+			}
+
+			#demoToggleSwitch input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
+				background-image: url(../../images/switch_off_icon.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				height: 15px;
+				left: 40px;
+				top: 8px;
+				width: 15px;
+			}
+
+			#demoToggleSwitch input.toggle-switch:checked ~ .toggle-switch-bar:after {
+				left: 35px;
+			}
+
+			#demoToggleSwitch input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
+				background-image: url(../../images/switch_on_icon.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				height: 17px;
+				left: 12px;
+				top: 8px;
+				width: 17px;
+			}
+		</style>
+
+		<div class="form-group" id="demoToggleSwitch" style="margin-bottom:0;">
 			<label>
 				<input class="toggle-switch" type="checkbox">
 
@@ -49,50 +98,50 @@ section: Extending Components
 </div>
 <div class="collapse" id="codeCollapse0">
 	<pre><code>```<style>
-    input.toggle-switch:empty ~ .toggle-switch-bar:after {
+    #demoToggleSwitch input.toggle-switch:empty ~ .toggle-switch-bar:after {
         background-color: transparent;
-        background-image: url(../images/toggle-switch_button.png);
+        background-image: url(../../images/switch_button.png);
         background-repeat: no-repeat;
         background-size: 100%;
         border-width: 0;
         bottom: 0;
-        height: 24px;
+        height: auto;
         left: 3px;
         top: 1px;
-        width: 24px;
+        width: 30px;
     }
 
-    input.toggle-switch:empty ~ .toggle-switch-bar:before {
+    #demoToggleSwitch input.toggle-switch:empty ~ .toggle-switch-bar:before {
         background-color: transparent;
-        background-image: url(../images/toggle-switch_base.png);
+        background-image: url(../../images/switch_base.png);
         background-repeat: no-repeat;
         background-size: 100%;
         border-radius: 20px;
         border-width: 0;
-        width: 55px;
+        width: 68px;
     }
 
-    input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-        background-image: url(../../images/toggle-switch_off_icon.png);
+    #demoToggleSwitch input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
+        background-image: url(../../images/switch_off_icon.png);
         background-repeat: no-repeat;
         background-size: 100%;
         height: 15px;
-        left: 30px;
-        top: 5px;
+        left: 40px;
+        top: 8px;
         width: 15px;
     }
 
-    input.toggle-switch:checked ~ .toggle-switch-bar:after {
-        left: 28px;
+    #demoToggleSwitch input.toggle-switch:checked ~ .toggle-switch-bar:after {
+        left: 35px;
     }
 
-    input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-        background-image: url(../../images/toggle-switch_on_icon.png);
+    #demoToggleSwitch input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
+        background-image: url(../../images/switch_on_icon.png);
         background-repeat: no-repeat;
         background-size: 100%;
         height: 17px;
-        left: 8px;
-        top: 5px;
+        left: 12px;
+        top: 8px;
         width: 17px;
     }
 </style>
