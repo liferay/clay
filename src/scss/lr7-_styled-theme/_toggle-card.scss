@@ -1,32 +1,3 @@
-// Toggle Card Settings
-$toggle-card-height: 104px;
-$toggle-card-width: 92px;
-
-$toggle-card-padding-horizontal: 12px;
-$toggle-card-padding-vertical: 12px;
-
-$toggle-card-border-radius: 2px;
-
-$toggle-card-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-
-$toggle-card-icon-height: 32px;
-$toggle-card-icon-width: 32px;
-$toggle-card-icon-border-radius: 30px;
-
-// toggle-card-off Card Styles
-$toggle-card-border: #DCE0E3;
-$toggle-card-border-width: 1px;
-$toggle-card-icon-bg: #FFF;
-$toggle-card-icon-border: #869CAD;
-$toggle-card-icon-border-width: 0;
-
-// toggle-card-on Card Styles
-$toggle-card-on-border: #65B6F0;
-$toggle-card-on-border-width: 2px;
-$toggle-card-on-icon-bg: #FFF;
-$toggle-card-on-icon-border: #65B6F0;
-$toggle-card-on-icon-border-width: 0;
-
 .toggle-card {
 	-webkit-user-select: none;
 	float: left;
@@ -35,10 +6,12 @@ $toggle-card-on-icon-border-width: 0;
 }
 
 .toggle-card-container {
-	display: table;
+	background-color: $toggle-card-bg;
 	border: $toggle-card-border-width solid $toggle-card-border;
 	border-radius: $toggle-card-border-radius;
 	box-shadow: $toggle-card-box-shadow;
+	color: $toggle-card-text-color;
+	display: table;
 	padding: $toggle-card-padding-vertical $toggle-card-padding-horizontal;
 	text-align: center;
 	height: $toggle-card-height;
@@ -54,7 +27,7 @@ $toggle-card-on-icon-border-width: 0;
 .toggle-card-icon {
 	border-radius: $toggle-card-icon-border-radius;
 	height: $toggle-card-icon-height;
-	font-size: 24px;
+	font-size: $toggle-card-icon-font-size;
 	margin: 0 auto;
 	width: $toggle-card-icon-width;
 
@@ -64,10 +37,10 @@ $toggle-card-on-icon-border-width: 0;
 }
 
 .toggle-card-label {
-	height: $toggle-card-height - $toggle-card-icon-height - ($toggle-card-border-width * 2) - 24;
+	height: $toggle-card-height - $toggle-card-icon-height - ($toggle-card-border-width * 2) - $toggle-card-padding-vertical;
 	line-height: 16px;
 	overflow: hidden;
-	padding-top: 12px;
+	padding-top: $toggle-card-padding-vertical;
 }
 
 input.toggle-card {
@@ -98,8 +71,9 @@ input.toggle-card {
 	}
 
 	&:checked ~ .toggle-card-container {
+		background-color: $toggle-card-on-bg;
 		border: $toggle-card-on-border-width solid $toggle-card-on-border;
-		color: #65B6F0;
+		color: $toggle-card-on-text-color;
 		padding-bottom: $toggle-card-padding-vertical - abs($toggle-card-border-width - $toggle-card-on-border-width);
 		padding-left: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
 		padding-right: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
@@ -123,9 +97,8 @@ input.toggle-card {
 		}
 	}
 
-	&:focus ~.toggle-card-container {
-		border-color: #65B6F0;
-		box-shadow: 0 0 5px 3px #65B6F0;
+	&:focus ~ .toggle-card-container {
+		box-shadow: 0 0 3px 2px rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), .6);
 	}
 
 	&[disabled] ~ .toggle-card-container {

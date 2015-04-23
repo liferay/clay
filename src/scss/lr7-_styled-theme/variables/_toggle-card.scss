@@ -1,0 +1,34 @@
+// Toggle Card Settings
+$toggle-card-height: 78px;
+$toggle-card-width: 69px;
+
+$toggle-card-padding-horizontal: 4px;
+$toggle-card-padding-vertical: 4px;
+
+$toggle-card-border-radius: 4px;
+
+// $toggle-card-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.175);
+$toggle-card-box-shadow: none;
+
+$toggle-card-icon-border-radius: 30px;
+$toggle-card-icon-font-size: 16px;
+$toggle-card-icon-height: 32px;
+$toggle-card-icon-width: 32px;
+
+// Toggle Card On Styles
+$toggle-card-bg: $input-bg;
+$toggle-card-border: $input-border;
+$toggle-card-border-width: 1px;
+$toggle-card-icon-bg: transparent;
+$toggle-card-icon-border: #869CAD;
+$toggle-card-icon-border-width: 0;
+$toggle-card-text-color: $text-color;
+
+// Toggle Card Off Styles
+$toggle-card-on-bg: $body-bg;
+$toggle-card-on-border: $input-border-focus;
+$toggle-card-on-border-width: 1px;
+$toggle-card-on-icon-bg: transparent;
+$toggle-card-on-icon-border: $toggle-card-on-border;
+$toggle-card-on-icon-border-width: 0;
+$toggle-card-on-text-color: $toggle-card-on-border;
