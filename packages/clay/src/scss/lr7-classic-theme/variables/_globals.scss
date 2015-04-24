@@ -1,0 +1,114 @@
+$golden-ratio: 1.6180339;
+
+$body-bg:                                  #FFF;
+$gray-darker:                              lighten(#000, 13.5%) !default; // #222
+$gray-dark:                                lighten(#000, 20%) !default;   // #333
+$gray:                                     lighten(#000, 33.5%) !default; // #555
+$gray-light:                               lighten(#000, 46.7%) !default; // #777
+$gray-lighter:                             lighten(#000, 93.5%) !default; // #eee
+
+$brand-default: #869CAD;
+$brand-default-active: darken($brand-default, 12%);
+$brand-default-hover: darken($brand-default, 8%);
+
+$brand-primary: #65B6F0;
+$brand-primary-active: darken($brand-primary, 12%);
+$brand-primary-hover: darken($brand-primary, 8%);
+
+$brand-success: #76BD4A;
+$brand-success-active: darken($brand-success, 12%);
+$brand-success-hover: darken($brand-success, 8%);
+
+$brand-info:                               #1e5ec8;
+$brand-info-active: darken($brand-info, 12%);
+$brand-info-hover: darken($brand-info, 8%);
+
+$brand-warning: #F5984C;
+$brand-warning-active: darken($brand-warning, 12%);
+$brand-warning-hover: darken($brand-warning, 8%);
+
+$brand-danger: #CC6677;
+$brand-danger-active: darken($brand-danger, 12%);
+$brand-danger-hover: darken($brand-danger, 8%);
+
+$text-color:                               #29353D;
+$text-muted:                               lighten($text-color, 55%);
+
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:                      $brand-primary;
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:                   #FFF;
+
+$font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-base-desktop: 16px;
+$font-size-large-desktop: ceil(($font-size-base-desktop * 1.25)) !default; // ~20px
+$font-size-small-desktop: ceil(($font-size-base-desktop * 0.85)) !default; // ~14px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$line-height-base:                         1.4286;
+
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   16px;
+
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  16px;
+
+$padding-small-vertical:    5px;
+$padding-small-horizontal:  10px;
+
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
+
+$link-hover-color:                         $brand-primary-hover;
+
+//States for Form and alert
+$state-default-text: #868896;
+$state-default-bg: lighten($state-default-text, 40%);
+$state-default-border: $state-default-text;
+
+$state-primary-text: $brand-primary;
+$state-primary-bg: lighten($state-primary-text, 40%);
+$state-primary-border: $state-primary-text;
+
+$state-success-text:             #34ADAB;
+$state-success-bg:               lighten($state-success-text, 50%);
+$state-success-border:           $state-success-text;
+
+$state-info-text:                #1D5EC7;
+$state-info-bg:                  lighten($state-info-text, 50%);
+$state-info-border:              $state-info-text;
+
+$state-warning-text:             #FFB103;
+$state-warning-bg:               lighten($state-warning-text, 40%);
+$state-warning-border:           $state-warning-text;
+
+$state-danger-text:              #E8295A;
+$state-danger-bg:                lighten($state-danger-text, 40%);
+$state-danger-border:            $state-danger-text;
+
+//== Border Radius
+//## Defines global border-radius
+$border-radius-default: 4px;
+$border-radius-base:                       $border-radius-default;
+$border-radius-large:                      $border-radius-default * 1.5;
+$border-radius-small:                      $border-radius-default * 0.75;
+
+//== Box Shadow
+//## Defines global box-shadows
+$box-shadow-default-x: 0;
+$box-shadow-default-y: 0;
+$box-shadow-default-blur: 3px;
+$box-shadow-default-spread: 1px;
+$box-shadow-default-bg: rgba(0, 0, 0, 0.2);
+$box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg;
