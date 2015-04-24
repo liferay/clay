@@ -4,6 +4,16 @@
 	}
 }
 
+.btn-group > .btn + .dropdown-toggle {
+	padding-left: $btn-mobile-padding-horizontal / 3;
+	padding-right: $btn-mobile-padding-horizontal / 3;
+}
+
+.btn-group > .btn-lg + .dropdown-toggle {
+	padding-left: $btn-mobile-lg-padding-horizontal / 3;
+	padding-right: $btn-mobile-lg-padding-horizontal / 3;
+}
+
 .btn-group.open .dropdown-toggle {
 	box-shadow: none;
 }
@@ -28,5 +38,17 @@
 .btn-group-vertical > .btn {
 	&:first-child:not(:last-child) {
 		border-top-right-radius: $btn-border-radius;
+	}
+}
+
+@media screen and (min-width: $grid-float-breakpoint) {
+	.btn-group > .btn + .dropdown-toggle {
+		padding-left: $btn-padding-horizontal / 3;
+		padding-right: $btn-padding-horizontal / 3;
+	}
+
+	.btn-group > .btn-lg + .dropdown-toggle {
+		padding-left: $btn-lg-padding-horizontal / 3;
+		padding-right: $btn-lg-padding-horizontal / 3;
 	}
 }
