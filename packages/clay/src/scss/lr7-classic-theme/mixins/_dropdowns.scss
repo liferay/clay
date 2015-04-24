@@ -1,13 +1,13 @@
 /**
- * Creates arrows for dropdown-menus
- * $arrow-color: color of arrow
- * $arrow-size: size of arrow
- * $border-color: arrow border color
- * $border-width: arrow border width
- * $offset: distance from respective edge of dropdown menu
-**/
+ * Arrow is on the bottom side of dropdown and aligned center (points down)
+ * ---v---
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
 
-// Arrow is on the bottom side of dropdown and aligned center (points down)
 @mixin arrow-bottom-center($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -40,7 +40,16 @@
 	}
 }
 
-// Arrow is on the bottom side of dropdown and aligned left (points down)
+/**
+ * Arrow is on the bottom side of dropdown and aligned left (points down)
+ * v------
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-bottom-left($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -71,7 +80,16 @@
 	}
 }
 
-// Arrow is on bottom side of dropdown and aligned right (points down)
+/**
+ * Arrow is on bottom side of dropdown and aligned right (points down)
+ * ------v
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-bottom-right($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -104,7 +122,16 @@
 	}
 }
 
-// Arrow is on the top side of dropdown and aligned center (points up)
+/**
+ * Arrow is on the top side of dropdown and aligned center (points up)
+ * ---^---
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-top-center($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -133,7 +160,16 @@
 	}
 }
 
-// Arrow is on the top side of dropdown and aligned left (points up)
+/**
+ * Arrow is on the top side of dropdown and aligned left (points up)
+ * ^------
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-top-left($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -160,7 +196,16 @@
 	}
 }
 
-// Arrow is on the top side of dropdown and aligned right (points up)
+/**
+ * Arrow is on the top side of dropdown and aligned right (points up)
+ * ------^
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-top-right($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -187,7 +232,19 @@
 	}
 }
 
-// Arrow is on the left side of dropdown and aligned bottom (points left)
+/**
+ * Arrow is on the left side of dropdown and aligned bottom (points left)
+ *  ______
+ * |
+ * |
+ * <------
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-left-bottom($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -214,7 +271,19 @@
 	}
 }
 
-// Arrow is on the left side of dropdown and aligned middle (points left)
+/**
+ * Arrow is on the left side of dropdown and aligned middle (points left)
+ *  ______
+ * |
+ * <
+ * |______
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-left-middle($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -241,7 +310,18 @@
 	}
 }
 
-// Arrow is on the left side of dropdown and aligned top (points left)
+/**
+ * Arrow is on the left side of dropdown and aligned top (points left)
+ * <-------
+ * |
+ * |_______
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-left-top($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -266,7 +346,19 @@
 	}
 }
 
-// Arrow is on the right side of dropdown and aligned bottom (points right)
+/**
+ * Arrow is on the right side of dropdown and aligned bottom (points right)
+ * _______
+ *        |
+ *        |
+ * _______>
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-right-bottom($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -293,7 +385,19 @@
 	}
 }
 
-// Arrow is on the right side of dropdown and aligned middle (points right)
+/**
+ * Arrow is on the right side of dropdown and aligned middle (points right)
+ * _______
+ *        |
+ *        >
+ * _______|
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-right-middle($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
@@ -320,7 +424,19 @@
 	}
 }
 
-// Arrow is on the right side of dropdown and aligned top (points right)
+/**
+ * Arrow is on the right side of dropdown and aligned top (points right)
+ * ------->
+ *        |
+ *        |
+ * _______|
+ * @param $arrow-size - Size of arrow
+ * @param $border-width - Arrow border width
+ * @param $offset - Distance from respective edge of dropdown menu
+ * @param $arrow-color - Color of arrow
+ * @param $border-color - Arrow border color
+ */
+
 @mixin arrow-right-top($arrow-size, $border-width, $offset, $arrow-color, $border-color) {
 	// arrow
 	&:after {
