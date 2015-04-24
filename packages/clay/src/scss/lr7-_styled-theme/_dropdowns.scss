@@ -48,6 +48,12 @@
 }
 
 // Dropdown menu positions
+.dropdown-menu-center {
+	left: 50%;
+
+	@include transform(translateX(-50%));
+}
+
 .dropdown-menu-left-side {
 	left: auto;
 	margin: -1px 2px 0 0;
@@ -63,6 +69,16 @@
 	top: auto;
 }
 
+.dropdown-menu-left-side-middle {
+	left: auto;
+	margin: 0;
+	right: 100%;
+
+	@include transform(translateY(-50%));
+
+	top: 50%;
+}
+
 .dropdown-menu-right-side {
 	left: 100%;
 	margin: -1px 0 0 2px;
@@ -76,11 +92,30 @@
 	top: auto;
 }
 
+.dropdown-menu-right-side-middle {
+	left: 100%;
+	margin: 0;
+
+	@include transform(translateY(-50%));
+
+	top: 50%;
+}
+
 .dropdown-menu-top,
 .dropup .dropdown-menu {
 	bottom: 100%;
 	margin-bottom: 2px;
 	margin-top: 0;
+	top: auto;
+}
+
+.dropdown-menu-top-center {
+	bottom: 100%;
+	left: 50%;
+	margin-top: 0;
+
+	@include transform(translateX(-50%));
+
 	top: auto;
 }
 
