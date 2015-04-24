@@ -1,83 +1,9 @@
 @import "variables/globals";
+
 @import "variables/buttons";
+@import "variables/forms";
 @import "variables/toggle-card";
 @import "variables/toggle-switch";
-
-//== Forms
-$form-control-border-radius: 0;
-
-$form-control-box-shadow: none;
-$form-control-focus-box-shadow: none;
-$input-box-shadow: none;
-
-$label-font-size: 15px;
-
-$input-bg:                                 #FFF;
-
-$input-border-disabled: #CFD7DE;
-$input-bg-disabled:                        #FFF;
-$input-color-placeholder-disabled: #EBEEF0;
-
-$input-color:                              $text-color;
-$input-border:                             $brand-default;
-$input-border-focus:                       $brand-primary;
-$input-color-placeholder:                  #D7D9DD;
-
-$input-font-size-base: 16px;
-$input-font-size-large: 18px;
-$input-font-size-small: 13px;
-
-/*** When changing input, make sure to match the corresponding
-		 btn settings to the input height. ***/
-$input-height-base:                        36px;
-$input-height-large:                       48px;
-$input-height-small:                       29px;
-
-$legend-border-color:                      #B0B4BB;
-
-$input-group-addon-bg:                     $brand-default;
-$input-group-addon-border-color:           $input-group-addon-bg;
-
-$input-danger: $brand-danger;
-$input-success: $brand-success;
-$input-warning: $brand-warning;
-
-$checkbox-color: $brand-primary;
-$checkbox-bg: #FFF;
-$checkbox-border: #B0B4BB;
-$checkbox-border-focus: $brand-default;
-$checkbox-check: "\f00c";
-
-$checkbox-active-color: #2B4259;
-$checkbox-active-bg: #FFF;
-$checkbox-active-border: $checkbox-active-color;
-$checkbox-checked-border: $checkbox-active-border;
-$checkbox-checked-color: $checkbox-color;
-$checkbox-disabled-color: #FFF;
-$checkbox-disabled-bg: lighten(#B0B4BB, 20%);
-$checkbox-disabled-border: $checkbox-disabled-bg;
-$checkbox-hover-color: lighten($brand-primary, 20%);
-$checkbox-hover-bg: #FFF;
-$checkbox-hover-border: $checkbox-hover-color;
-
-$radio-color: $checkbox-color;
-$radio-bg: $checkbox-bg;
-$radio-border: $checkbox-border;
-$radio-check-color: $checkbox-color;
-$radio-active-color: #2B4259;
-$radio-active-bg: $radio-bg;
-$radio-active-border: $checkbox-active-color;
-$radio-checked-border: $checkbox-active-border;
-$radio-checked-color: $checkbox-color;
-$radio-disabled-color: $checkbox-disabled-color;
-$radio-disabled-bg: $checkbox-disabled-bg;
-$radio-disabled-border: $checkbox-disabled-border;
-$radio-focus-color: #2B4259;
-$radio-focus-border: #2B4259;
-$radio-focus-bg: #FFF;
-$radio-hover-color: lighten($brand-primary, 20%);
-$radio-hover-bg: #FFF;
-$radio-hover-border: $radio-hover-color;
 
 // Cards
 $card-border-radius: 10px;
