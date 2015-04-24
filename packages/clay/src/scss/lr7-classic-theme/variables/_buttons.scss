@@ -1,27 +1,47 @@
-// Buttons: border radius
-$btn-border-radius: 20px;
-$btn-border-radius-lg: round($btn-border-radius * 1.5);
-$btn-border-radius-sm: round($btn-border-radius * 0.75);
-$btn-border-radius-xs: round($btn-border-radius * 0.5);
+// Button Border Radius
+$btn-border-radius: 30px;
+$btn-lg-border-radius: round($btn-border-radius * 1.5);
+$btn-sm-border-radius: round($btn-border-radius * 0.75);
+$btn-xs-border-radius: round($btn-border-radius * 0.5);
 
-// Buttons: padding, borders, font-size
+// Button Sizes
 /* When changing any settings below, make sure to match the corresponding 
 		input-height to the button height. */
 $btn-border-width: 2px;
-$btn-font-size: 14px;
-$btn-padding-vertical: 6px;
-$btn-padding-horizontal: round($btn-padding-vertical * 2.4);
-$btn-lg-font-size: 18px;
-$btn-lg-padding-vertical: 10px;
-$btn-lg-padding-horizontal: round($btn-lg-padding-vertical * 2.4);
-$btn-sm-font-size: 12px;
-$btn-sm-padding-vertical: 4px;
-$btn-sm-padding-horizontal: round($btn-sm-padding-vertical * 2.4);
-$btn-xs-font-size: 10px;
-$btn-xs-padding-vertical: 2px;
-$btn-xs-padding-horizontal: round($btn-xs-padding-vertical * 2.4);
 
-// Buttons: colors
+$btn-font-size: 16px;
+$btn-padding-vertical: 12px;
+$btn-padding-horizontal: round($btn-padding-vertical * 4);
+
+$btn-mobile-font-size: 14px;
+$btn-mobile-padding-vertical: 8px;
+$btn-mobile-padding-horizontal: round($btn-mobile-padding-vertical * 3);
+
+$btn-lg-font-size: 18px;
+$btn-lg-padding-vertical: 16px;
+$btn-lg-padding-horizontal: round($btn-lg-padding-vertical * 4);
+
+$btn-mobile-lg-font-size: 16px;
+$btn-mobile-lg-padding-vertical: 12px;
+$btn-mobile-lg-padding-horizontal: round($btn-mobile-lg-padding-vertical * 3);
+
+$btn-sm-font-size: 12px;
+$btn-sm-padding-vertical: 8px;
+$btn-sm-padding-horizontal: round($btn-sm-padding-vertical * 4);
+
+$btn-mobile-sm-font-size: 12px;
+$btn-mobile-sm-padding-vertical: 6px;
+$btn-mobile-sm-padding-horizontal: round($btn-mobile-sm-padding-vertical * 3);
+
+$btn-xs-font-size: 10px;
+$btn-xs-padding-vertical: 4px;
+$btn-xs-padding-horizontal: round($btn-xs-padding-vertical * 4);
+
+$btn-mobile-xs-font-size: 10px;
+$btn-mobile-xs-padding-vertical: 4px;
+$btn-mobile-xs-padding-horizontal: round($btn-mobile-xs-padding-vertical * 3);
+
+// Button Colors
 $btn-default-color:                        $brand-default;
 $btn-default-bg:                           #FFF;
 $btn-default-border:                       $brand-default;

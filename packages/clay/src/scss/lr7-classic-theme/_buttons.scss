@@ -19,7 +19,7 @@
 }
 
 .btn {
-	@include button-size($btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $line-height-base, $btn-border-radius);
+	@include button-size($btn-mobile-padding-vertical, $btn-mobile-padding-horizontal, $btn-mobile-font-size, $line-height-base, $btn-border-radius);
 
 	font-weight: 500;
 
@@ -69,15 +69,15 @@
 }
 
 .btn-lg {
-	@include button-size($btn-lg-padding-vertical, $btn-lg-padding-horizontal, $btn-lg-font-size, $line-height-base, $btn-border-radius-lg);
+	@include button-size($btn-mobile-lg-padding-vertical, $btn-mobile-lg-padding-horizontal, $btn-mobile-lg-font-size, $line-height-base, $btn-lg-border-radius);
 }
 
 .btn-sm {
-	@include button-size($btn-sm-padding-vertical, $btn-sm-padding-horizontal, $btn-sm-font-size, $line-height-base, $btn-border-radius-sm);
+	@include button-size($btn-mobile-sm-padding-vertical, $btn-mobile-sm-padding-horizontal, $btn-mobile-sm-font-size, $line-height-base, $btn-sm-border-radius);
 }
 
 .btn-xs {
-	@include button-size($btn-xs-padding-vertical, $btn-xs-padding-horizontal, $btn-xs-font-size, $line-height-base, $btn-border-radius-xs);
+	@include button-size($btn-mobile-xs-padding-vertical, $btn-mobile-xs-padding-horizontal, $btn-mobile-xs-font-size, $line-height-base, $btn-xs-border-radius);
 }
 
 // Action Buttons
@@ -96,6 +96,7 @@ a.btn-action,
 	font-size: 12px;
 	height: 52px;
 	line-height: 16px;
+	padding: 0;
 	width: 52px;
 	z-index: $zindex-dropdown;
 }
@@ -185,7 +186,7 @@ a.btn-action,
 	top: 20px;
 }
 
-@media screen and (min-width: $screen-sm) {
+@media screen and (min-width: $grid-float-breakpoint) {
 	a.btn-action,
 	.btn-action-secondary > a.btn {
 		padding: 0;
@@ -251,5 +252,21 @@ a.btn-action,
 				top: auto;
 			}
 		}
+	}
+
+	.btn {
+		@include button-size($btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $line-height-base, $btn-border-radius);
+	}
+
+	.btn-lg{
+		@include button-size($btn-lg-padding-vertical, $btn-lg-padding-horizontal, $btn-lg-font-size, $line-height-base, $btn-lg-border-radius);
+	}
+
+	.btn-sm {
+		@include button-size($btn-sm-padding-vertical, $btn-sm-padding-horizontal, $btn-sm-font-size, $line-height-base, $btn-sm-border-radius);
+	}
+
+	.btn-xs {
+		@include button-size($btn-xs-padding-vertical, $btn-xs-padding-horizontal, $btn-xs-font-size, $line-height-base, $btn-xs-border-radius);
 	}
 }
