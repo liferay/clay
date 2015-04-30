@@ -27,6 +27,10 @@ $input-height-base:                        48px;
 $input-height-large:                       61px;
 $input-height-small:                       37px;
 
+$input-mobile-height-base: 40px;
+$input-mobile-height-large: 61px;
+$input-mobile-height-small: 37px;
+
 $legend-border-color:                      #B0B4BB;
 
 $input-group-addon-bg:                     $brand-default;
@@ -35,6 +39,8 @@ $input-group-addon-border-color:           $input-group-addon-bg;
 $input-danger: $brand-danger;
 $input-success: $brand-success;
 $input-warning: $brand-warning;
+
+$checkbox-size: 17px;
 
 $checkbox-color: $brand-primary;
 $checkbox-bg: #FFF;

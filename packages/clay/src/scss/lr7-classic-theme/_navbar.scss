@@ -7,11 +7,11 @@
 		margin: 0;
 
 		// todo after adding input-mobile-height-base;
-		@if $input-height-base >= $navbar-height {
+		@if $input-mobile-height-base >= $navbar-mobile-height {
 			padding: 0;
 		}
 		@else {
-			padding: (($navbar-mobile-height - $input-height-base) / 2);
+			padding: floor(($navbar-mobile-height - $input-mobile-height-base - 1) / 2);
 		}
 
 		position: absolute;
