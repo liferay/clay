@@ -7893,6 +7893,10 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
     position: absolute;
     right: 0;
     top: 48px; }
+  .modal-full-screen .modal-body-iframe {
+    padding: 0; }
+    .modal-full-screen .modal-body-iframe iframe {
+      height: 100%; }
   .modal-full-screen .modal-content {
     border-radius: 0;
     border-width: 0;
