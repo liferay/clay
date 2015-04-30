@@ -105,6 +105,14 @@
 		top: 48px;
 	}
 
+	.modal-body-iframe {
+		padding: 0;
+
+		iframe {
+			height: 100%;
+		}
+	}
+
 	.modal-content {
 		border-radius: 0;
 		border-width: 0;
