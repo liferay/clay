@@ -49,7 +49,12 @@ textarea.form-control {
 	border-width: 0 0 2px 0;
 	box-shadow: $form-control-box-shadow;
 	font-size: $input-font-size-base;
+	height: $input-mobile-height-base;
 	padding: $padding-base-vertical;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		height: $input-height-base;
+	}
 
 	&:focus {
 		border-width: 0 0 2px 0;
@@ -101,8 +106,10 @@ label {
 	}
 }
 
-.checkbox-default, .radio-default {
-	input[type='checkbox'], input[type='radio'] {
+.checkbox-default,
+.radio-default {
+	input[type='checkbox'],
+	input[type='radio'] {
 		opacity: 0;
 	}
 
@@ -165,9 +172,12 @@ label {
 	}
 }
 
-&[disabled], .disabled {
-	.checkbox-default input[type='checkbox'], input[type='checkbox'] {
-		&, &:checked {
+&[disabled],
+.disabled {
+	.checkbox-default input[type='checkbox'],
+	input[type='checkbox'] {
+		&,
+		&:checked {
 			+ .skin {
 				background-color: $checkbox-disabled-bg;
 				border-color: $checkbox-disabled-border;
@@ -251,8 +261,10 @@ label {
 	}
 }
 
-&[disabled], .disabled {
-	.radio-default input[type='radio'], input[type='radio'] {
+&[disabled],
+.disabled {
+	.radio-default input[type='radio'],
+	input[type='radio'] {
 		&:checked {
 			+ .skin:after {
 				background-color: $radio-disabled-bg;;
@@ -264,7 +276,8 @@ label {
 			}
 		}
 
-		+ .skin:before, &:hover + .skin:before {
+		+ .skin:before,
+		&:hover + .skin:before {
 			background-color: $radio-disabled-bg;
 			border-color: $radio-disabled-border;
 			color: $radio-disabled-color;
@@ -309,8 +322,6 @@ label {
 	}
 }
 
-$checkbox-size: 17px;
-
 .checkbox-default1 {
 	input[type="checkbox"] {
 		-webkit-appearance: none;
@@ -346,7 +357,8 @@ $checkbox-size: 17px;
 	}
 }
 
-&[disabled], .disabled {
+&[disabled],
+.disabled {
 	.checkbox-default1 input[type='checkbox'],
 	.radio-default1 input[type='radio'],
 	input[type='checkbox'],
