@@ -2,6 +2,7 @@
 
 @import "variables/buttons";
 @import "variables/forms";
+@import "variables/navbar";
 @import "variables/toggle-card";
 @import "variables/toggle-switch";
 
@@ -61,50 +62,6 @@ $user-icon-warning-bg: #F5984C;
 $user-icon-danger-bg: #CC6677;
 
 $user-icon-border-radius: 50%;
-
-// Basics of a navbar
-$navbar-height:                            48px;
-
-//== Navbar Default
-$navbar-default-color:                     $brand-default;
-$navbar-default-bg:                        #FFF;
-$navbar-default-border:                    #D8D8D8;
-
-$navbar-default-link-color:                #2B4259;
-$navbar-default-link-hover-color:          $brand-primary;
-$navbar-default-link-hover-bg:             transparent;
-
-$navbar-default-link-active-color:         #2B4259;
-$navbar-default-link-active-bg:            #FFF;
-$navbar-default-link-active-highlight: $brand-primary;
-
-$navbar-default-link-disabled-color:       #CACDD2;
-$navbar-default-link-disabled-bg:          transparent;
-
-$navbar-default-brand-color:               $navbar-default-link-color;
-$navbar-default-brand-hover-color:         $navbar-default-link-hover-color;
-$navbar-default-brand-hover-bg:            transparent;
-
-$navbar-default-link-open-bg: $brand-primary;
-$navbar-default-link-open-color: #FFF;
-
-//== Navbar Inverse
-$navbar-inverse-color:                     #FFF;
-$navbar-inverse-bg:                        $brand-default;
-$navbar-inverse-border:                    $brand-default;
-
-$navbar-inverse-link-color:                #FFF;
-$navbar-inverse-link-hover-color:          $brand-primary;
-$navbar-inverse-link-active-color:         $brand-primary;
-$navbar-inverse-link-active-bg:            transparent;
-$navbar-inverse-link-disabled-color:       #122F51;
-$navbar-inverse-brand-color:               $navbar-inverse-link-color;
-$navbar-inverse-brand-hover-color:         $brand-primary;
-$navbar-inverse-toggle-border-color:       #18293D;
-$navbar-inverse-toggle-hover-bg:           #426384;
-
-$navbar-inverse-link-open-bg: $brand-primary;
-$navbar-inverse-link-open-color: #FFF;
 
 //== Pagination
 $pagination-border-radius: 20px;
