@@ -1,0 +1,9 @@
+//Modals
+$modal-border-radius: $border-radius-default;
+$modal-box-shadow: $box-shadow-default;
+
+$modal-backdrop-opacity:                          .75 !default;
+
+$modal-header-bg: lighten($brand-default, 40%);
+$modal-header-color: $text-color;
+$modal-header-close-color: $text-color;
