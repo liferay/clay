@@ -2,6 +2,7 @@
 
 @import "variables/buttons";
 @import "variables/forms";
+@import "variables/modals";
 @import "variables/navbar";
 @import "variables/toggle-card";
 @import "variables/toggle-switch";
@@ -256,15 +257,6 @@ $tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-sh
 
 $tooltip-bg:                                      #29353D;
 $tooltip-opacity:                                 1;
-
-//Modals
-$modal-box-shadow: $box-shadow-default;
-
-$modal-backdrop-opacity:                          .75 !default;
-
-$modal-header-bg: lighten($brand-default, 40%);
-$modal-header-color: $text-color;
-$modal-header-close-color: $text-color;
 
 //== Alerts
 $alert-padding:                                   18px;
