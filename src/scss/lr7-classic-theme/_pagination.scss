@@ -1,83 +1,178 @@
-.pagination {
-	&.pagination-lg {
-		@include pagination-size($pagination-borderless3-padding-large-vertical, $pagination-borderless3-padding-large-horizontal, $font-size-large, $pagination-borderless3-border-radius);
-	}
+.pagination-bar {
+	@include clearfix();
 
-	&.pagination-sm {
-		@include pagination-size($pagination-borderless3-padding-small-vertical, $pagination-borderless3-padding-small-horizontal, $font-size-small, $pagination-borderless3-border-radius);
-	}
+	.pagination {
+		float: right;
+		width: 100%;
 
-	> li {
-		> a,
-		> span {
-			background-color: $pagination-borderless3-bg;
-			border: solid $pagination-borderless3-border;
-			border-width: 0;
-			color: $pagination-borderless3-color;
-			margin-left: 0;
-			padding: $pagination-borderless3-padding-base-vertical $pagination-borderless3-padding-base-horizontal;
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin: 0;
+			width: auto;
 		}
-		&:first-child {
-			> a,
-			> span {
-				background-color: $pagination-borderless3-controls-bg;
-				border: solid $pagination-borderless3-controls-border;
-				border-radius: $pagination-borderless3-border-radius;
-				border-width: 0;
-				color: $pagination-borderless3-controls-color;
+
+		> li {
+			display: block;
+			float: left;
+			width: 16.66667%;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				display: inline-block;
+				float: none;
+				width: auto;
+			}
+
+			&:first-child,
+			&:last-child {
+				> a,
+				> span {
+					border-radius: $pagination-border-radius;
+					margin: 0 auto;
+				}
+			}
+
+			&:first-child {
+				> a,
+				> span {
+					margin: 0;
+				}
+			}
+
+			&:last-child {
+				> a,
+				> span {
+					margin: 0 0 0 auto;
+				}
 			}
 		}
+	}
+}
+
+.pagination {
+	> li {
+		&:first-child,
 		&:last-child {
 			> a,
 			> span {
-				background-color: $pagination-borderless3-controls-bg;
-				border: solid $pagination-borderless3-controls-border;
-				border-radius: $pagination-borderless3-border-radius;
-				border-width: 0;
-				color: $pagination-borderless3-controls-color;
+				border-radius: $pagination-border-radius;
 			}
 		}
-	}
 
-	> li > a,
-	> li > span {
-		&:hover,
-		&:focus {
-			background-color: $pagination-borderless3-hover-bg;
-			border-color: $pagination-borderless3-hover-border;
-			color: $pagination-borderless3-hover-color;
-		}
-	}
+		> a,
+		> span {
+			display: inline-block;
+			float: none;
+			margin: 0 auto;
+			border-radius: $pagination-border-radius;
+			border: $pagination-border-width solid $pagination-border;
+			height: $pagination-item-height;
+			line-height: $pagination-item-height - ($pagination-border-width * 2);
+			padding: 0;
+			text-align: center;
+			width: $pagination-item-width;
 
-	> .active > a,
-	> .active > span {
-		&,
-		&:hover,
-		&:focus {
-			background-color: $pagination-borderless3-active-bg;
-			border-color: $pagination-borderless3-active-border;
-			color: $pagination-borderless3-active-color;
+			@media screen and (min-width: $grid-float-breakpoint) {
+				margin: 0 2px;
+			}
 		}
 	}
 
 	> .disabled {
-		> span,
-		> span:hover,
-		> span:focus,
 		> a,
-		> a:hover,
-		> a:focus {
-			background-color: $pagination-borderless3-disabled-bg;
-			border-color: $pagination-borderless3-disabled-border;
-			color: $pagination-borderless3-disabled-color;
+		> span {
+			&,
+			&:focus,
+			&:hover {
+				@include opacity(0.5);
+			}
+		}
+	}
+
+	> .dropdown,
+	> .ellipsis {
+		> a,
+		> span {
+			border-width: 0;
+
+			&:focus,
+			&:hover {
+				background-color: $pagination-ellipsis-hover-bg;
+				color: $pagination-ellipsis-hover-color;
+			}
+		}
+	}
+
+	.dropdown-menu-top-center {
+		margin-bottom: 10px;
+	}
+}
+
+.pagination-items-per-page {
+	float: left;
+	line-height: $pagination-item-height;
+
+	[class*="icon-"] {
+		margin-left: 10px;
+	}
+
+	a {
+		color: $pagination-items-per-page-color;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
 		}
 	}
 }
 
+.pagination-results {
+	color: $pagination-results-color;
+	float: right;
+	line-height: $pagination-item-height;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		float: left;
+		margin-left: 25px;
+	}
+}
+
 .pagination-lg {
-	@include pagination-size($pagination-padding-large-vertical, $pagination-padding-large-horizontal, $font-size-large, $pagination-border-radius);
+	&.pagination-items-per-page,
+	&.pagination-results,
+	.pagination-items-per-page,
+	.pagination-results {
+		font-size: $pagination-lg-font-size;
+		line-height: $pagination-lg-item-height;
+	}
+
+	&.pagination > li,
+	.pagination > li {
+		> a,
+		> span {
+			font-size: $pagination-lg-font-size;
+			height: $pagination-lg-item-height;
+			line-height: $pagination-lg-item-height - ($pagination-border-width * 2);
+			width: $pagination-lg-item-width;
+		}
+	}
 }
 
 .pagination-sm {
-	@include pagination-size($pagination-padding-small-vertical, $pagination-padding-small-horizontal, $font-size-small, $pagination-border-radius);
+	&.pagination-items-per-page,
+	&.pagination-results,
+	.pagination-items-per-page,
+	.pagination-results {
+		font-size: $pagination-sm-font-size;
+		line-height: $pagination-sm-item-height;
+	}
+
+	&.pagination > li,
+	.pagination > li {
+		> a,
+		> span {
+			font-size: $pagination-sm-font-size;
+			height: $pagination-sm-item-height;
+			line-height: $pagination-sm-item-height - ($pagination-border-width * 2);
+			width: $pagination-sm-item-height;
+		}
+	}
 }
