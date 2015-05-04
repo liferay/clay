@@ -1,0 +1,51 @@
+//Pager
+$pagination-padding-base-vertical: 4px;
+$pagination-padding-base-horizontal: 20px;
+$pagination-padding-large-vertical: $pagination-padding-base-vertical * 1.25;
+$pagination-padding-large-horizontal: $pagination-padding-base-horizontal * 1.25;
+$pagination-padding-small-vertical: $pagination-padding-base-vertical * 0.75;
+$pagination-padding-small-horizontal: $pagination-padding-base-horizontal * 0.75;
+
+$pager-bg:                                 #FFF;
+$pager-color: $brand-default;
+$pager-border:                             #D2D6DF;
+$pager-border-radius:                      20px;
+$pager-border-width: 2px;
+
+$pager-hover-bg:                           $pagination-hover-bg;
+$pager-hover-color: #FFF;
+$pager-hover-border: $brand-primary;
+
+$pager-disabled-bg: #FFF;
+$pager-disabled-color:                     $pagination-disabled-color;
+$pager-disabled-border: $pager-border;
+
+//Pager Inverse
+$pager-inverse-bg: #D2D6DF;
+$pager-inverse-color: #FFF;
+$pager-inverse-border: #D2D6DF;
+$pager-inverse-border-radius: 20px;
+$pager-inverse-border-width: 2px;
+
+$pager-inverse-hover-bg: $brand-primary;
+$pager-inverse-hover-color: #FFF;
+$pager-inverse-hover-border: $pager-inverse-hover-bg;
+
+$pager-inverse-disabled-bg: #EEE;
+$pager-inverse-disabled-color: $pagination-disabled-color;
+$pager-inverse-disabled-border: $pager-disabled-bg;
+
+//Pager Borderless1
+$pager-borderless1-bg: transparent;
+$pager-borderless1-color: $brand-primary;
+$pager-borderless1-border: transparent;
+$pager-borderless1-border-radius: 0;
+$pager-borderless1-border-width: 0;
+
+$pager-borderless1-hover-bg: $pager-borderless1-bg;
+$pager-borderless1-hover-color: #D2D6DF;
+$pager-borderless1-hover-border: $pager-borderless1-border;
+
+$pager-borderless1-disabled-bg: $pager-borderless1-bg;
+$pager-borderless1-disabled-color: $pagination-disabled-color;
+$pager-borderless1-disabled-border: $pager-borderless1-border;

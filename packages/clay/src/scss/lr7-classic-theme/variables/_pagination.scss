@@ -1,0 +1,37 @@
+$pagination-border-radius: 30px;
+
+$pagination-item-height: 32px;
+$pagination-item-width: $pagination-item-height;
+
+$pagination-border-width: 2px;
+
+$pagination-color:                         $brand-default;
+$pagination-bg:                            #FFF;
+$pagination-border:                        #D1D6D9;
+
+$pagination-hover-color:                   #FFF;
+$pagination-hover-bg:                      $brand-default;
+$pagination-hover-border:                  $brand-default;
+
+$pagination-active-color:                  #FFF;
+$pagination-active-bg:                     $brand-default;
+$pagination-active-border:                 $brand-default;
+
+$pagination-disabled-color:                $brand-default;
+$pagination-disabled-bg:                   #FFF;
+$pagination-disabled-border:               #D1D6D9;
+
+$pagination-ellipsis-hover-color: $link-hover-color;
+$pagination-ellipsis-hover-bg: transparent;
+
+$pagination-items-per-page-color: $pagination-color;
+
+$pagination-results-color: $pagination-color;
+
+$pagination-lg-font-size: 18px;
+$pagination-lg-item-height: 44px;
+$pagination-lg-item-width: $pagination-lg-item-height;
+
+$pagination-sm-font-size: 12px;
+$pagination-sm-item-height: 24px;
+$pagination-sm-item-width: $pagination-sm-item-height;
