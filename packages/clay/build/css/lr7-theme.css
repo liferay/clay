@@ -4886,7 +4886,7 @@ tbody.collapse.in {
       text-decoration: none;
       color: #869CAD;
       background-color: #FFF;
-      border: 1px solid #869CAD;
+      border: 1px solid #D1D6D9;
       margin-left: -1px; }
     .pagination > li:first-child > a, .pagination > li:first-child > span {
       margin-left: 0;
@@ -4897,18 +4897,18 @@ tbody.collapse.in {
       border-top-right-radius: 4px; }
   .pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:focus {
     color: #FFF;
-    background-color: #65B6F0;
+    background-color: #869CAD;
     border-color: #869CAD; }
   .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
     z-index: 2;
-    color: #65B6F0;
-    background-color: #FFF;
+    color: #FFF;
+    background-color: #869CAD;
     border-color: #869CAD;
     cursor: default; }
   .pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
-    color: #D2D2D2;
+    color: #869CAD;
     background-color: #FFF;
-    border-color: #869CAD;
+    border-color: #D1D6D9;
     cursor: not-allowed; }
 
 .pagination-lg > li > a, .pagination-lg > li > span {
@@ -4951,13 +4951,13 @@ tbody.collapse.in {
       border-radius: 20px; }
     .pager li > a:hover, .pager li > a:focus {
       text-decoration: none;
-      background-color: #65B6F0; }
+      background-color: #869CAD; }
   .pager .next > a, .pager .next > span {
     float: right; }
   .pager .previous > a, .pager .previous > span {
     float: left; }
   .pager .disabled > a, .pager .disabled > a:hover, .pager .disabled > a:focus, .pager .disabled > span {
-    color: #D2D2D2;
+    color: #869CAD;
     background-color: #FFF;
     cursor: not-allowed; }
 
@@ -8766,13 +8766,13 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   color: #869CAD;
   padding: 4px 20px; }
 .pager li > a:hover, .pager li > a:focus {
-  background-color: #65B6F0;
+  background-color: #869CAD;
   border-color: #65B6F0;
   color: #FFF; }
 .pager .disabled > a, .pager .disabled > a:hover, .pager .disabled > a:focus, .pager .disabled > span {
   background-color: #FFF;
   border-color: #D2D6DF;
-  color: #D2D2D2; }
+  color: #869CAD; }
 
 .pager-inverse li > a, .pager-inverse li > span {
   background-color: #D2D6DF;
@@ -8788,7 +8788,7 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
 .pager-inverse .disabled > a, .pager-inverse .disabled > a:hover, .pager-inverse .disabled > a:focus, .pager-inverse .disabled > span {
   background-color: #EEE;
   border-color: #FFF;
-  color: #D2D2D2; }
+  color: #869CAD; }
 
 .pager-borderless1 li > a, .pager-borderless1 li > span {
   background-color: transparent;
@@ -8808,77 +8808,100 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
 .pager-borderless1 .disabled > a, .pager-borderless1 .disabled > a:hover, .pager-borderless1 .disabled > a:focus, .pager-borderless1 .disabled > span {
   background-color: transparent;
   border-color: transparent;
-  color: #D2D2D2; }
+  color: #869CAD; }
 
-.pagination.pagination-lg > li > a, .pagination.pagination-lg > li > span {
-  padding: 5px 12.5px;
-  font-size: 18px; }
-.pagination.pagination-lg > li:first-child > a, .pagination.pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
-.pagination.pagination-lg > li:last-child > a, .pagination.pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
-.pagination.pagination-sm > li > a, .pagination.pagination-sm > li > span {
-  padding: 3px 7.5px;
-  font-size: 12px; }
-.pagination.pagination-sm > li:first-child > a, .pagination.pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0; }
-.pagination.pagination-sm > li:last-child > a, .pagination.pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
+.pagination-bar:before, .pagination-bar:after {
+  content: " ";
+  display: table; }
+.pagination-bar:after {
+  clear: both; }
+.pagination-bar .pagination {
+  float: right;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .pagination-bar .pagination {
+      margin: 0;
+      width: auto; } }
+  .pagination-bar .pagination > li {
+    display: block;
+    float: left;
+    width: 16.66667%; }
+    @media screen and (min-width: 768px) {
+      .pagination-bar .pagination > li {
+        display: inline-block;
+        float: none;
+        width: auto; } }
+    .pagination-bar .pagination > li:first-child > a, .pagination-bar .pagination > li:first-child > span, .pagination-bar .pagination > li:last-child > a, .pagination-bar .pagination > li:last-child > span {
+      border-radius: 30px;
+      margin: 0 auto; }
+    .pagination-bar .pagination > li:first-child > a, .pagination-bar .pagination > li:first-child > span {
+      margin: 0; }
+    .pagination-bar .pagination > li:last-child > a, .pagination-bar .pagination > li:last-child > span {
+      margin: 0 0 0 auto; }
+
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span {
+  border-radius: 30px; }
 .pagination > li > a, .pagination > li > span {
-  background-color: transparent;
-  border: solid transparent;
-  border-width: 0;
+  display: inline-block;
+  float: none;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 2px solid #D1D6D9;
+  height: 32px;
+  line-height: 28px;
+  padding: 0;
+  text-align: center;
+  width: 32px; }
+  @media screen and (min-width: 768px) {
+    .pagination > li > a, .pagination > li > span {
+      margin: 0 2px; } }
+.pagination > .disabled > a, .pagination > .disabled > a:focus, .pagination > .disabled > a:hover, .pagination > .disabled > span, .pagination > .disabled > span:focus, .pagination > .disabled > span:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
+.pagination > .dropdown > a, .pagination > .dropdown > span, .pagination > .ellipsis > a, .pagination > .ellipsis > span {
+  border-width: 0; }
+  .pagination > .dropdown > a:focus, .pagination > .dropdown > a:hover, .pagination > .dropdown > span:focus, .pagination > .dropdown > span:hover, .pagination > .ellipsis > a:focus, .pagination > .ellipsis > a:hover, .pagination > .ellipsis > span:focus, .pagination > .ellipsis > span:hover {
+    background-color: transparent;
+    color: #40a4ec; }
+.pagination .dropdown-menu-top-center {
+  margin-bottom: 10px; }
+
+.pagination-items-per-page {
+  float: left;
+  line-height: 32px; }
+  .pagination-items-per-page [class*="icon-"] {
+    margin-left: 10px; }
+  .pagination-items-per-page a {
+    color: #869CAD; }
+    .pagination-items-per-page a:focus, .pagination-items-per-page a:hover {
+      text-decoration: none; }
+
+.pagination-results {
   color: #869CAD;
-  margin-left: 0;
-  padding: 4px 10px; }
-.pagination > li:first-child > a, .pagination > li:first-child > span {
-  background-color: #B0B4BB;
-  border: solid #B0B4BB;
-  border-radius: 0;
-  border-width: 0;
-  color: #FFF; }
-.pagination > li:last-child > a, .pagination > li:last-child > span {
-  background-color: #B0B4BB;
-  border: solid #B0B4BB;
-  border-radius: 0;
-  border-width: 0;
-  color: #FFF; }
-.pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #869CAD; }
-.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
-  background-color: #E7E8EA;
-  border-color: #E7E8EA;
-  color: #869CAD; }
-.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
-  background-color: transparent;
-  border-color: transparent;
-  color: #EEE; }
+  float: right;
+  line-height: 32px; }
+  @media screen and (min-width: 768px) {
+    .pagination-results {
+      float: left;
+      margin-left: 25px; } }
 
-.pagination-lg > li > a, .pagination-lg > li > span {
-  padding: 5px 25px;
-  font-size: 18px; }
-.pagination-lg > li:first-child > a, .pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px; }
-.pagination-lg > li:last-child > a, .pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px; }
+.pagination-lg.pagination-items-per-page, .pagination-lg.pagination-results, .pagination-lg .pagination-items-per-page, .pagination-lg .pagination-results {
+  font-size: 18px;
+  line-height: 44px; }
+.pagination-lg.pagination > li > a, .pagination-lg.pagination > li > span, .pagination-lg .pagination > li > a, .pagination-lg .pagination > li > span {
+  font-size: 18px;
+  height: 44px;
+  line-height: 40px;
+  width: 44px; }
 
-.pagination-sm > li > a, .pagination-sm > li > span {
-  padding: 3px 15px;
-  font-size: 12px; }
-.pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px; }
-.pagination-sm > li:last-child > a, .pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px; }
+.pagination-sm.pagination-items-per-page, .pagination-sm.pagination-results, .pagination-sm .pagination-items-per-page, .pagination-sm .pagination-results {
+  font-size: 12px;
+  line-height: 24px; }
+.pagination-sm.pagination > li > a, .pagination-sm.pagination > li > span, .pagination-sm .pagination > li > a, .pagination-sm .pagination > li > span {
+  font-size: 12px;
+  height: 24px;
+  line-height: 20px;
+  width: 24px; }
 
 .panel {
   -webkit-box-shadow: none;

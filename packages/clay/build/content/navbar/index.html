@@ -80,7 +80,9 @@ collapse in
 </li>
 <li class=""><a href="../../content/page-header-and-jumbotron">Page Header and Jumbotron</a>
 </li>
-<li class=""><a href="../../content/paginations">Pagination and Pagers</a>
+<li class=""><a href="../../content/pagers">Pagers</a>
+</li>
+<li class=""><a href="../../content/paginations">Pagination</a>
 </li>
 <li class=""><a href="../../content/panels">Panels</a>
 </li>
@@ -225,55 +227,6 @@ collapse
 			<p>Use <code>class="navbar-collapse navbar-collapse-absolute"</code> to make the navbar-collapse absolutely positioned in mobile.</p>
 		</blockquote>
 
-		<nav class="navbar">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-00" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Brand</a>
-			</div>
-
-			<div class="navbar-collapse navbar-collapse-absolute collapse" id="navbar-collapse-00" aria-expanded="false">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-					</li>
-				</ul>
-				<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
-					</div>
-					<button type="submit" class="btn btn-default">Submit</button>
-				</form>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-0" aria-expanded="false">
@@ -381,11 +334,13 @@ collapse
 </div>
 
 		<h3>Navbar with Basic Search</h3>
+
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>The basic search component was created specifically for search bars inside a navbar. We wanted a search bar that fills the remaining space. The minimum width of the input is 100px and maximum width is 300px.</p>
 
 			<p>When using <code>.basic-search</code>, elements should be floated around it. <code>.basic-search</code> should be <code>float: none;</code> and always be the last element declared in a group of floated elements.</p>
 		</blockquote>
+
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2" aria-expanded="false">
@@ -533,64 +488,6 @@ collapse
 			<p><code>.navbar-collapse</code> needs to be declared before <code>.navbar-header</code>. It allows the search box to fill the remaining space in smaller spaces.</p>
 		</blockquote>
 
-		<nav class="navbar collapse-basic-search">
-			<div class="collapse navbar-collapse" id="navbar-collapse-01">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Message Boards</a></li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
-						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
-							<li class="dropdown-header" role="presentation">Dropdown Header</li>
-							<li role="presentation">
-								<ul class="inline-scroller">
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-								</ul>
-							</li>
-							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-							<li class="divider" role="presentation"></li>
-							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
-						</ul>
-					</li>
-
-					<li><a href="#">Link</a></li>
-					<li class="disabled"><a href="#">Disabled</a></li>
-				</ul>
-			</div>
-
-			<div class="navbar-header navbar-header-right">
-				<button type="button" class="navbar-toggle navbar-toggle-left navbar-toggle-page-name collapsed" data-toggle="collapse" data-target="#navbar-collapse-01">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
-					<span class="caret"></span>
-				</button>
-
-				<form class="basic-search input-group navbar-form">
-					<div class="input-group-input">
-						<input class="form-control" placeholder=" Search..." type="text" />
-					</div>
-
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-					</div>
-				</form>
-			</div>
-		</nav>
-
 		<nav class="navbar navbar-default collapse-basic-search">
 			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
@@ -689,22 +586,6 @@ collapse
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Use the navbar-no-collapse component to preserve desktop navbar styles in mobile. It's useful when there are only one or two links in the navbar; where collapsing doesn't make sense.</p>
 		</blockquote>
-
-		<nav class="navbar navbar-no-collapse collapse-basic-search">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Message Boards</a></li>
-				<li><a href="#">Blogs</a></li>
-			</ul>
-
-			<form class="basic-search input-group navbar-form">
-				<div class="input-group-input">
-					<input class="form-control" placeholder=" Search..." type="text" />
-				</div>
-				<div class="input-group-btn">
-					<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-				</div>
-			</form>
-		</nav>
 
 		<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search">
 			<ul class="nav navbar-nav">

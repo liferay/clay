@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Pagination and Pagers</title>
+	<title>Pagination</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -80,7 +80,9 @@ collapse in
 </li>
 <li class=""><a href="../../content/page-header-and-jumbotron">Page Header and Jumbotron</a>
 </li>
-<li class="active"><a href="../../content/paginations">Pagination and Pagers</a>
+<li class=""><a href="../../content/pagers">Pagers</a>
+</li>
+<li class="active"><a href="../../content/paginations">Pagination</a>
 </li>
 <li class=""><a href="../../content/panels">Panels</a>
 </li>
@@ -210,42 +212,158 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Pagination and Pagers
+			Pagination
 
 			
 		</h1>
 
 		
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Pagination</h3>
+
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Preset pagination styles to help divide up large blocks of content on your site or app.</p>
+			<p>Preset pagination styles helps divide up large blocks of content on your site or app.</p>
 		</blockquote>
 
 		<ul class="pagination">
-			<li><a href="#"><span class="icon-angle-left"></span></a></li>
-			<li class="disabled"><a href="#">...</a></li>
-			<li><a href="#">1</a></li>
-			<li class="active"><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#"><span class="icon-angle-right"></span></a></li>
+			<li class="disabled"><a href="#1"><span class="icon-caret-left"></span></a></li>
+			<li class="disabled"><a href="#1"><span class="icon-double-angle-left"></span></a></li>
+			<li class="active"><a href="#1">1</a></li>
+			<li><a href="#1">2</a></li>
+			<li><a href="#1">3</a></li>
+			<li><a href="#1">4</a></li>
+			<li><a href="#1">5</a></li>
+			<li><a href="#1">6</a></li>
+			<li><a href="#1">7</a></li>
+			<li><a href="#1">8</a></li>
+			<li><a href="#1">9</a></li>
+			<li><a href="#1">10</a></li>
+			<li class="ellipsis"><a href="#1">...</a></li>
+			<li><a href="#1">16</a></li>
+			<li><a href="#1"><span class="icon-double-angle-right"></span></a></li>
+			<li><a href="#1"><span class="icon-caret-right"></span></a></li>
 		</ul>
 
-		<pre><code>&lt;ul class=&quot;pagination&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;span class=&quot;icon-angle-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;span class=&quot;icon-angle-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">&lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-caret-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-double-angle-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;6&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;7&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;8&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;9&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;10&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;ellipsis&quot;&gt;&lt;a href=&quot;#1&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;16&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-double-angle-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-caret-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3>Pagination Bar</h3>
+
+		<div class="pagination-bar">
+			<div class="dropdown pagination-items-per-page">
+				<a data-toggle="dropdown" href="#1" type="button">10 entries <span class="icon-sort"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#1">5</a></li>
+					<li><a href="#1">10</a></li>
+					<li><a href="#1">20</a></li>
+					<li><a href="#1">30</a></li>
+					<li><a href="#1">50</a></li>
+				</ul>
+			</div>
+
+			<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
+
+			<ul class="pagination">
+				<li class="disabled"><a href="#1"><span class="icon-caret-left"></span></a></li>
+				<li class="active"><a href="#1">1</a></li>
+				<li><a href="#1">2</a></li>
+				<li class="dropdown">
+					<a data-toggle="dropdown" href="#1">...</a>
+					<div class="dropdown-menu dropdown-menu-top-center">
+						<ul class="inline-scroller link-list">
+							<li><a href="#1">3</a></li>
+							<li><a href="#1">4</a></li>
+							<li><a href="#1">5</a></li>
+							<li><a href="#1">6</a></li>
+							<li><a href="#1">7</a></li>
+							<li><a href="#1">8</a></li>
+							<li><a href="#1">9</a></li>
+							<li><a href="#1">10</a></li>
+							<li><a href="#1">11</a></li>
+							<li><a href="#1">12</a></li>
+							<li><a href="#1">13</a></li>
+							<li><a href="#1">14</a></li>
+							<li><a href="#1">15</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#1">16</a></li>
+				<li><a href="#1"><span class="icon-caret-right"></span></a></li>
+			</ul>
+		</div>
+
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">&lt;div class=&quot;dropdown pagination-items-per-page&quot;&gt;
+    &lt;a data-toggle=&quot;dropdown&quot; href=&quot;#1&quot; type=&quot;button&quot;&gt;10 entries &lt;span class=&quot;icon-sort&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;10&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;20&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;30&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;50&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;pagination-results&quot;&gt;Showing 1 to 20 of 203 entries.&lt;/div&gt;
+
+&lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-caret-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;...&lt;/a&gt;
+        &lt;div class=&quot;dropdown-menu dropdown-menu-top-center&quot;&gt;
+            &lt;ul class=&quot;inline-scroller link-list&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;6&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;7&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;8&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;9&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;10&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;11&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;12&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;13&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;14&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;15&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;16&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-caret-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
 
 	</div>
 </div>
@@ -253,152 +371,195 @@ collapse
 <div id="pagination">
 	<div class="row">
 		<div class="col-md-12">
-			<h3>Sizing</h3>
 
-			<div>
-				<p>Small</p>
-				<ul class="pagination pagination-sm">
-					<li><a href="#"><span class="icon-angle-left"></span></a></li>
-					<li class="disabled"><a href="#">...</a></li>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">...</a></li>
-					<li><a href="#"><span class="icon-angle-right"></span></a></li>
-				</ul>
-			</div>
+			<h3>Pagination Sizes</h3>
 
-			<div>
-				<p>Default</p>
+			<p>Small</p>
+
+			<div class="pagination-bar pagination-sm">
+				<div class="dropdown pagination-items-per-page">
+					<a data-toggle="dropdown" href="#1" type="button">10 entries <span class="icon-sort"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#1">5</a></li>
+						<li><a href="#1">10</a></li>
+						<li><a href="#1">20</a></li>
+						<li><a href="#1">30</a></li>
+						<li><a href="#1">50</a></li>
+					</ul>
+				</div>
+
+				<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
+
 				<ul class="pagination">
-					<li><a href="#"><span class="icon-angle-left"></span></a></li>
-					<li class="disabled"><a href="#">...</a></li>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">...</a></li>
-					<li><a href="#"><span class="icon-angle-right"></span></a></li>
+					<li class="disabled"><a href="#1"><span class="icon-caret-left"></span></a></li>
+					<li class="active"><a href="#1">1</a></li>
+					<li><a href="#1">2</a></li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" href="#1">...</a>
+						<div class="dropdown-menu dropdown-menu-top-center">
+							<ul class="inline-scroller link-list">
+								<li><a href="#1">3</a></li>
+								<li><a href="#1">4</a></li>
+								<li><a href="#1">5</a></li>
+								<li><a href="#1">6</a></li>
+								<li><a href="#1">7</a></li>
+								<li><a href="#1">8</a></li>
+								<li><a href="#1">9</a></li>
+								<li><a href="#1">10</a></li>
+								<li><a href="#1">11</a></li>
+								<li><a href="#1">12</a></li>
+								<li><a href="#1">13</a></li>
+								<li><a href="#1">14</a></li>
+								<li><a href="#1">15</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#1">16</a></li>
+					<li><a href="#1"><span class="icon-caret-right"></span></a></li>
 				</ul>
 			</div>
 
-			<div>
-				<p>Large</p>
-				<ul class="pagination pagination-lg">
-					<li><a href="#"><span class="icon-angle-left"></span></a></li>
-					<li class="disabled"><a href="#">...</a></li>
-					<li><a href="#">1</a></li>
-					<li class="active"><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">...</a></li>
-					<li><a href="#"><span class="icon-angle-right"></span></a></li>
-				</ul>
-			</div>
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+	<pre><code class="html">&lt;div class=&quot;pagination-bar pagination-sm&quot;&gt;
+    &lt;div class=&quot;dropdown pagination-items-per-page&quot;&gt;
+        ...
+    &lt;/div&gt;
 
-			<pre><code class="html">&lt;ul class=&quot;pagination pagination-sm&quot;&gt;...&lt;/ul&gt;
-&lt;ul class=&quot;pagination&quot;&gt;...&lt;/ul&gt;
-&lt;ul class=&quot;pagination pagination-lg&quot;&gt;...&lt;/ul&gt;</code></pre>
+    &lt;div class=&quot;pagination-results&quot;&gt;Showing 1 to 20 of 203 entries.&lt;/div&gt;
 
-		</div>
-	</div>
+    &lt;ul class=&quot;pagination&quot;&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
-<div id="pager">
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Default Pagers</em></h3>
+			<p>Default</p>
 
-			<div>.pager</div>
-			<ul class="pager">
-				<li><a href="#">Previous</a></li>
+			<div class="pagination-bar">
+				<div class="dropdown pagination-items-per-page">
+					<a data-toggle="dropdown" href="#1" type="button">10 entries <span class="icon-sort"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#1">5</a></li>
+						<li><a href="#1">10</a></li>
+						<li><a href="#1">20</a></li>
+						<li><a href="#1">30</a></li>
+						<li><a href="#1">50</a></li>
+					</ul>
+				</div>
 
-				<li><a href="#">Next</a></li>
-			</ul>
+				<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 
-			<div>.pager .pager-inverse</div>
-			<ul class="pager pager-inverse">
-				<li><a href="#">Previous</a></li>
+				<ul class="pagination">
+					<li class="disabled"><a href="#1"><span class="icon-caret-left"></span></a></li>
+					<li class="active"><a href="#1">1</a></li>
+					<li><a href="#1">2</a></li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" href="#1">...</a>
+						<div class="dropdown-menu dropdown-menu-top-center">
+							<ul class="inline-scroller link-list">
+								<li><a href="#1">3</a></li>
+								<li><a href="#1">4</a></li>
+								<li><a href="#1">5</a></li>
+								<li><a href="#1">6</a></li>
+								<li><a href="#1">7</a></li>
+								<li><a href="#1">8</a></li>
+								<li><a href="#1">9</a></li>
+								<li><a href="#1">10</a></li>
+								<li><a href="#1">11</a></li>
+								<li><a href="#1">12</a></li>
+								<li><a href="#1">13</a></li>
+								<li><a href="#1">14</a></li>
+								<li><a href="#1">15</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#1">16</a></li>
+					<li><a href="#1"><span class="icon-caret-right"></span></a></li>
+				</ul>
+			</div>
 
-				<li><a href="#">Next</a></li>
-			</ul>
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+	<pre><code class="html">&lt;div class=&quot;pagination-bar&quot;&gt;
+    &lt;div class=&quot;dropdown pagination-items-per-page&quot;&gt;
+        ...
+    &lt;/div&gt;
 
-			<div>.pager .pager-borderless</div>
-			<ul class="pager pager-borderless1">
-				<li><a href="#">&larr; Previous</a></li>
+    &lt;div class=&quot;pagination-results&quot;&gt;Showing 1 to 20 of 203 entries.&lt;/div&gt;
 
-				<li><a href="#">Next &rarr;</a></li>
-			</ul>
+    &lt;ul class=&quot;pagination&quot;&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
 
-			<pre><code>&lt;ul class=&quot;pager&quot;&gt;
-&#x9;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&#x9;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
-&#x9;&lt;/ul&gt;</code></pre>
-		</div>
-	</div>
+			<p>Large</p>
 
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Aligned Pager</em></h3>
+			<div class="pagination-bar pagination-lg">
+				<div class="dropdown pagination-items-per-page">
+					<a data-toggle="dropdown" href="#1" type="button">10 entries <span class="icon-sort"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#1">5</a></li>
+						<li><a href="#1">10</a></li>
+						<li><a href="#1">20</a></li>
+						<li><a href="#1">30</a></li>
+						<li><a href="#1">50</a></li>
+					</ul>
+				</div>
 
-			<div>.pager</div>
-			<ul class="pager">
-				<li class="previous"><a href="#">&larr; Older</a></li>
+				<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 
-				<li class="next"><a href="#">Newer &rarr;</a></li>
-			</ul>
+				<ul class="pagination">
+					<li class="disabled"><a href="#1"><span class="icon-caret-left"></span></a></li>
+					<li class="active"><a href="#1">1</a></li>
+					<li><a href="#1">2</a></li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" href="#1">...</a>
+						<div class="dropdown-menu dropdown-menu-top-center">
+							<ul class="inline-scroller link-list">
+								<li><a href="#1">3</a></li>
+								<li><a href="#1">4</a></li>
+								<li><a href="#1">5</a></li>
+								<li><a href="#1">6</a></li>
+								<li><a href="#1">7</a></li>
+								<li><a href="#1">8</a></li>
+								<li><a href="#1">9</a></li>
+								<li><a href="#1">10</a></li>
+								<li><a href="#1">11</a></li>
+								<li><a href="#1">12</a></li>
+								<li><a href="#1">13</a></li>
+								<li><a href="#1">14</a></li>
+								<li><a href="#1">15</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#1">16</a></li>
+					<li><a href="#1"><span class="icon-caret-right"></span></a></li>
+				</ul>
+			</div>
 
-			<div>.pager .pager-inverse</div>
-			<ul class="pager pager-inverse">
-				<li class="previous"><a href="#">&larr; Older</a></li>
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+	<pre><code class="html">&lt;div class=&quot;pagination-bar pagination-lg&quot;&gt;
+    &lt;div class=&quot;dropdown pagination-items-per-page&quot;&gt;
+        ...
+    &lt;/div&gt;
 
-				<li class="next"><a href="#">Newer &rarr;</a></li>
-			</ul>
+    &lt;div class=&quot;pagination-results&quot;&gt;Showing 1 to 20 of 203 entries.&lt;/div&gt;
 
-			<div>.pager .pager-borderless1</div>
-			<ul class="pager pager-borderless1">
-				<li class="previous"><a href="#">&larr; Older</a></li>
+    &lt;ul class=&quot;pagination&quot;&gt;
+        ...
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
 
-				<li class="next"><a href="#">Newer &rarr;</a></li>
-			</ul>
-
-			<pre><code>&lt;ul class=&quot;pager&quot;&gt;
-&#x9;&lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&#x9;&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
-&#x9;&lt;/ul&gt;</code></pre>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-12">
-			<h3><em>Disabled Pager</em></h3>
-
-			<div>.pager</div>
-			<ul class="pager">
-				<li class="disabled previous"><a href="#">&larr; Older</a></li>
-				<li class="active next"><a href="#">Newer &rarr;</a></li>
-			</ul>
-
-			<div>.pager .pager-inverse</div>
-			<ul class="pager pager-inverse">
-				<li class="disabled previous"><a href="#">&larr; Older</a></li>
-				<li class="active next"><a href="#">Newer &rarr;</a></li>
-			</ul>
-
-			<div>.pager .pager-borderless1</div>
-			<ul class="pager pager-borderless1">
-				<li class="disabled previous"><a href="#">&larr; Older</a></li>
-				<li class="active next"><a href="#">Newer &rarr;</a></li>
-			</ul>
-
-			<pre><code>&lt;ul class=&quot;pager&quot;&gt;
-&#x9;&lt;li class=&quot;disabled previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-&#x9;&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
-&#x9;&lt;/ul&gt;</code></pre>
 		</div>
 	</div>
 </div>
