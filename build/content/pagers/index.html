@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>TODO</title>
+	<title>Pagers</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
@@ -45,7 +45,7 @@
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse
+collapse in
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/alerts">Alerts</a>
@@ -80,7 +80,7 @@ collapse
 </li>
 <li class=""><a href="../../content/page-header-and-jumbotron">Page Header and Jumbotron</a>
 </li>
-<li class=""><a href="../../content/pagers">Pagers</a>
+<li class="active"><a href="../../content/pagers">Pagers</a>
 </li>
 <li class=""><a href="../../content/paginations">Pagination</a>
 </li>
@@ -204,7 +204,7 @@ collapse
 </ul>
 </div>
 </li>
-<li class="active"><a href="../../content/todo">TODO</a>
+<li class=""><a href="../../content/todo">TODO</a>
 </li>
 </ul>
 	</div>
@@ -212,60 +212,106 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			TODO
+			Pagers
 
 			
 		</h1>
 
-		<h5 id="organize-ux-guidelines">Organize UX Guidelines</h5>
-<ul>
-<li>split up _variables.scss into smaller files like mixins (is it possible to import a whole directory?), pattern should follow something like:<ul>
-<li>theme variables<ul>
-<li>global variables</li>
-<li>module1 variables</li>
-<li>module2 variables</li>
-<li>etc</li>
-</ul>
-</li>
-<li>theme mixins</li>
-<li>user defined custom variables</li>
-<li>user defined custom mixins</li>
-<li>bootstrap variables, mixins, css</li>
-<li>theme css</li>
-</ul>
-</li>
-</ul>
-<h5 id="non-responsive">Non responsive</h5>
-<ul>
-<li>create a solution for non responsive sites.</li>
-</ul>
-<h5 id="example-pages">Example Pages</h5>
-<ul>
-<li>create blogs example page PDF page 16, 17</li>
-</ul>
-<h5 id="toolbar">Toolbar</h5>
-<ul>
-<li><del>toolbar buttons shouldn’t be circular.</del></li>
-</ul>
-<h5 id="breadcrumbs">Breadcrumbs</h5>
-<ul>
-<li>create module to truncate depending on screen size.</li>
-</ul>
-<h5 id="sidenav">Sidenav</h5>
-<ul>
-<li><del>sidenav module open and close button should work if placed outside .sidenav-container</del></li>
-<li><del>module should have option to slide in menu from the right side</del></li>
-<li>allow plugin to be instantiated through data-toggle=”sidenav”</li>
-</ul>
-<h5 id="slideout-drawer">Slideout Drawer</h5>
-<ul>
-<li>finish slideout drawer fixed module</li>
-</ul>
-<h5 id="color-scheme">Color Scheme</h5>
-<ul>
-<li>redo layout</li>
-</ul>
+		
+<div id="pager">
+	<div class="row">
+		<div class="col-md-12">
+			<h3><em>Default Pagers</em></h3>
 
+			<div>.pager</div>
+			<ul class="pager">
+				<li><a href="#">Previous</a></li>
+
+				<li><a href="#">Next</a></li>
+			</ul>
+
+			<div>.pager .pager-inverse</div>
+			<ul class="pager pager-inverse">
+				<li><a href="#">Previous</a></li>
+
+				<li><a href="#">Next</a></li>
+			</ul>
+
+			<div>.pager .pager-borderless</div>
+			<ul class="pager pager-borderless1">
+				<li><a href="#">&larr; Previous</a></li>
+
+				<li><a href="#">Next &rarr;</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pager&quot;&gt;
+&#x9;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+&#x9;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&#x9;&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h3><em>Aligned Pager</em></h3>
+
+			<div>.pager</div>
+			<ul class="pager">
+				<li class="previous"><a href="#">&larr; Older</a></li>
+
+				<li class="next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-inverse</div>
+			<ul class="pager pager-inverse">
+				<li class="previous"><a href="#">&larr; Older</a></li>
+
+				<li class="next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-borderless1</div>
+			<ul class="pager pager-borderless1">
+				<li class="previous"><a href="#">&larr; Older</a></li>
+
+				<li class="next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pager&quot;&gt;
+&#x9;&lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+&#x9;&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&#x9;&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h3><em>Disabled Pager</em></h3>
+
+			<div>.pager</div>
+			<ul class="pager">
+				<li class="disabled previous"><a href="#">&larr; Older</a></li>
+				<li class="active next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-inverse</div>
+			<ul class="pager pager-inverse">
+				<li class="disabled previous"><a href="#">&larr; Older</a></li>
+				<li class="active next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<div>.pager .pager-borderless1</div>
+			<ul class="pager pager-borderless1">
+				<li class="disabled previous"><a href="#">&larr; Older</a></li>
+				<li class="active next"><a href="#">Newer &rarr;</a></li>
+			</ul>
+
+			<pre><code>&lt;ul class=&quot;pager&quot;&gt;
+&#x9;&lt;li class=&quot;disabled previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
+&#x9;&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt; 
+&#x9;&lt;/ul&gt;</code></pre>
+		</div>
+	</div>
+</div>
 	</div>
 
 		</section>
