@@ -1,3 +1,60 @@
+.badge {
+	border-radius: $badge-border-radius;
+	font-size: $badge-mobile-font-size;
+	padding: $badge-padding-vertical $badge-padding-horizontal;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-base;
+	}
+}
+
+.badge-monospaced {
+	border-radius: 50%;
+	height: $badge-height;
+	line-height: $badge-height;
+	width: $badge-width;
+
+	&.badge {
+		padding: 0;
+	}
+}
+
+// Badge Sizing
+
+.badge-lg {
+	&.badge {
+		font-size: ceil(16px / 1.166667);
+		padding: $badge-padding-large-vertical $badge-padding-large-horizontal;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			font-size: 16px;
+		}
+	}
+
+	&.badge-monospaced {
+		height: $badge-large-height;
+		line-height: $badge-large-height;
+		padding: 0;
+		width: $badge-large-width;
+	}
+}
+
+.badge-sm {
+	&.badge {
+		font-size: 12px;
+		padding: $badge-padding-small-vertical $badge-padding-small-horizontal;
+	}
+
+	&.badge-monospaced {
+		height: $badge-small-height;
+		line-height: $badge-small-height;
+		padding: 0;
+		width: $badge-small-width;
+	}
+}
+
+// Badge Skin
+
 .badge-danger {
 	background-color: $brand-danger;
 }
