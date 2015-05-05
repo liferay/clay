@@ -1,37 +1,19 @@
 .badge-danger {
-	@include color-badge($brand-danger);
+	background-color: $brand-danger;
 }
 
 .badge-info {
-	@include color-badge($brand-info);
+	background-color: $brand-info;
 }
 
 .badge-primary {
-	@include color-badge($brand-primary);
+	background-color: $brand-primary;
 }
 
 .badge-success {
-	@include color-badge($brand-success);
+	background-color: $brand-success;
 }
 
 .badge-warning {
-	@include color-badge($brand-warning);
-}
-
-.badge-circle {
-	&, .badge {
-		border-radius: 20px;
-	}
-}
-
-.badge-rounded {
-	&, .badge {
-		border-radius: 3px;
-	}
-}
-
-.badge-square {
-	&, .badge {
-		border-radius: 0;
-	}
+	background-color: $brand-warning;
 }
