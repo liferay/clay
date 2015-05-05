@@ -5,22 +5,11 @@
 		float: right;
 		width: 100%;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
-			margin: 0;
-			width: auto;
-		}
-
 		> li {
 			display: block;
 			float: left;
 			text-align: center;
 			width: 16.66667%;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				display: inline-block;
-				float: none;
-				width: auto;
-			}
 
 			&:first-child,
 			&:last-child {
@@ -63,10 +52,6 @@
 			padding: 0;
 			text-align: center;
 			width: $pagination-item-width;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				margin: 0 2px;
-			}
 		}
 	}
 
@@ -110,6 +95,7 @@
 
 	a {
 		color: $pagination-items-per-page-color;
+		display: block;
 
 		&:focus,
 		&:hover {
@@ -122,11 +108,6 @@
 	color: $pagination-results-color;
 	float: right;
 	line-height: $pagination-item-height;
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		float: left;
-		margin-left: 25px;
-	}
 }
 
 .pagination-lg {
@@ -168,5 +149,30 @@
 			line-height: $pagination-sm-item-height - ($pagination-border-width * 2);
 			width: $pagination-sm-item-height;
 		}
+	}
+}
+
+@media screen and (min-width: $grid-float-breakpoint) {
+	.pagination-bar .pagination {
+		margin: 0;
+		width: auto;
+
+		> li {
+			display: inline-block;
+			float: none;
+			width: auto;
+		}
+	}
+
+	.pagination > li {
+		> a,
+		> span {
+			margin: 0 2px;
+		}
+	}
+
+	.pagination-results {
+		float: left;
+		margin-left: 25px;
 	}
 }
