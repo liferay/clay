@@ -13,6 +13,7 @@
 		> li {
 			display: block;
 			float: left;
+			text-align: center;
 			width: 16.66667%;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
@@ -26,22 +27,15 @@
 				> a,
 				> span {
 					border-radius: $pagination-border-radius;
-					margin: 0 auto;
 				}
 			}
 
 			&:first-child {
-				> a,
-				> span {
-					margin: 0;
-				}
+				text-align: left;
 			}
 
 			&:last-child {
-				> a,
-				> span {
-					margin: 0 0 0 auto;
-				}
+				text-align: right;
 			}
 		}
 	}
