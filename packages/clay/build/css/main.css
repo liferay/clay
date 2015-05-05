@@ -5025,7 +5025,7 @@ a.label:hover, a.label:focus {
   white-space: nowrap;
   text-align: center;
   background-color: #777777;
-  border-radius: 10px; }
+  border-radius: 50px; }
   .badge:empty {
     display: none; }
   .btn .badge {
@@ -6341,6 +6341,43 @@ button.close {
   .alert-warning .alert-link, .alert-warning .close, .alert-warning .lead {
     color: #cfa962; }
 
+.badge {
+  border-radius: 50px;
+  font-size: 12px;
+  padding: 10px 12px; }
+  @media screen and (min-width: 768px) {
+    .badge {
+      font-size: 14px; } }
+
+.badge-monospaced {
+  border-radius: 50%;
+  height: 32px;
+  line-height: 32px;
+  width: 32px; }
+  .badge-monospaced.badge {
+    padding: 0; }
+
+.badge-lg.badge {
+  font-size: 14px;
+  padding: 16px 20px; }
+  @media screen and (min-width: 768px) {
+    .badge-lg.badge {
+      font-size: 16px; } }
+.badge-lg.badge-monospaced {
+  height: 44px;
+  line-height: 44px;
+  padding: 0;
+  width: 44px; }
+
+.badge-sm.badge {
+  font-size: 12px;
+  padding: 5px 10px; }
+.badge-sm.badge-monospaced {
+  height: 22px;
+  line-height: 22px;
+  padding: 0;
+  width: 22px; }
+
 .badge-danger {
   background-color: #CC6677; }
 
@@ -6355,15 +6392,6 @@ button.close {
 
 .badge-warning {
   background-color: #F5984C; }
-
-.badge-circle, .badge-circle .badge {
-  border-radius: 20px; }
-
-.badge-rounded, .badge-rounded .badge {
-  border-radius: 3px; }
-
-.badge-square, .badge-square .badge {
-  border-radius: 0; }
 
 .breadcrumb {
   padding-left: 0; }
@@ -7684,14 +7712,24 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   .input-group-input .form-control {
     display: block; }
 
-.label-circle, .label-circle .label {
-  border-radius: 20px; }
+.label {
+  display: inline-block;
+  font-size: 12px;
+  padding: 10px 12px; }
+  @media screen and (min-width: 768px) {
+    .label {
+      font-size: 14px; } }
 
-.label-rounded, .label-rounded .label {
-  border-radius: 3px; }
+.label-lg.label {
+  font-size: 14px;
+  padding: 16px 20px; }
+  @media screen and (min-width: 768px) {
+    .label-lg.label {
+      font-size: 16px; } }
 
-.label-square, .label-square .label {
-  border-radius: 0; }
+.label-sm.label {
+  font-size: 12px;
+  padding: 5px 10px; }
 
 .list-group-heading {
   background-color: #F8F8F8;

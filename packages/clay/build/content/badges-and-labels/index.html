@@ -218,90 +218,131 @@ collapse
 		</h1>
 
 		
-<div class="row row-spacing">
+<div class="row row-spacing" id="badges">
 	<div class="col-md-12">
 		<h3>Badges</h3>
+
 		<blockquote class="blockquote-success blockquote-sm">
-			<p>Use to highlight notifications or new and unread messages.</p>
+			<p>Badges help highlight important information such as notifications or new and unread messages. Badges have circular borders by default, for rounded borders, See <a href="#labels">labels</a>.</p>
 		</blockquote>
 
-		<span class="badge badge-default">Default</span>
+		<span class="badge badge-default badge-sm">Default</span>
 		<span class="badge badge-primary">Primary</span>
 		<span class="badge badge-success">Success</span>
 		<span class="badge badge-info">Info</span>
 		<span class="badge badge-warning">Warning</span>
 		<span class="badge badge-danger">Danger</span>
 
-		<pre><code class="html">&lt;span class=&quot;badge badge-default&quot;&gt;Default&lt;/span&gt;
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">&lt;span class=&quot;badge badge-default&quot;&gt;Default&lt;/span&gt;
 &lt;span class=&quot;badge badge-primary&quot;&gt;Primary&lt;/span&gt;
 &lt;span class=&quot;badge badge-success&quot;&gt;Success&lt;/span&gt;
 &lt;span class=&quot;badge badge-info&quot;&gt;Info&lt;/span&gt;
 &lt;span class=&quot;badge badge-warning&quot;&gt;Warning&lt;/span&gt;
 &lt;span class=&quot;badge badge-danger&quot;&gt;Danger&lt;/span&gt;</code></pre>
+</div>
 
-		<h3>Badge Helper Classes</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.badge-rounded</code>, <code>.badge-circle</code>, or <code>.badge-square</code> on the badge or the parent container to quickly shape the borders.</p>
-		</blockquote>
-
-		<span class="badge badge-default badge-rounded">Rounded</span>
-		<span class="badge badge-default badge-circle">Circle</span>
-		<span class="badge badge-default badge-square">Square</span>
-
-		<pre><code class="html">&lt;span class=&quot;badge badge-default badge-rounded&quot;&gt;Rounded&lt;/span&gt;
-&lt;span class=&quot;badge badge-default badge-circle&quot;&gt;Circle&lt;/span&gt;
-&lt;span class=&quot;badge badge-default badge-square&quot;&gt;Square&lt;/span&gt;</code></pre>
-
-		<h3>Badges with Nav Pills</h3>
-	</div>
-
-	<div class="col-md-3">
-		<ul class="nav nav-circle nav-pills nav-stacked">
-			<li>
-				<a href="#1">
-					Inbox <span class="badge badge-default pull-right">32</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="#1">
-					Sent <span class="badge badge-primary pull-right">2</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="#1">
-					Drafts <span class="badge badge-success pull-right">53</span>
-				</a>
-			</li>
-
-			<li class="active">
-				<a href="#1">
-					Spam <span class="badge badge-info pull-right">12</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="#1">
-					Starred <span class="badge badge-warning pull-right">1</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="#1">
-					Important <span class="badge badge-danger pull-right">12</span>
-				</a>
-			</li>
-		</ul>
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Labels</h3>
+		<h3>Fixed Width and Height Badges</h3>
+
 		<blockquote class="blockquote-success blockquote-sm">
-			<p>Labels details go here.</p>
+			<p>Use <code>badge-monospaced</code> to create a badge that has a fixed width and height. It is useful for showing the number of new messages or pending requests in your application.</p>
+		</blockquote>
+
+		<span class="badge badge-monospaced badge-default">10</span>
+		<span class="badge badge-monospaced badge-primary">10</span>
+		<span class="badge badge-monospaced badge-success">10</span>
+		<span class="badge badge-monospaced badge-info">10</span>
+		<span class="badge badge-monospaced badge-warning">10</span>
+		<span class="badge badge-monospaced badge-danger">10</span>
+
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">&lt;span class=&quot;badge badge-monospaced badge-default&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;badge badge-monospaced badge-primary&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;badge badge-monospaced badge-success&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;badge badge-monospaced badge-info&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;badge badge-monospaced badge-warning&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;badge badge-monospaced badge-danger&quot;&gt;10&lt;/span&gt;</code></pre>
+</div>
+
+	</div>
+
+	<div class="col-md-12">
+		<h3>Badge Sizes</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Use <code>badge-sm</code> and <code>badge-lg</code> to change the badge size.</p>
+		</blockquote>
+
+		<span class="badge badge-default badge-sm">Small Badge</span>
+		<span class="badge badge-monospaced badge-info badge-sm">SM</span>
+		<span class="badge badge-primary">Default Badge</span>
+		<span class="badge badge-monospaced badge-warning">DEF</span>
+		<span class="badge badge-success badge-lg">Large Badge</span>
+		<span class="badge badge-monospaced badge-danger badge-lg">LG</span>
+
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+	<pre><code class="html">&lt;span class=&quot;badge badge-default badge-sm&quot;&gt;Small Badge&lt;/span&gt;
+&lt;span class=&quot;badge badge-monospaced badge-info badge-sm&quot;&gt;SM&lt;/span&gt;
+&lt;span class=&quot;badge badge-primary&quot;&gt;Default Badge&lt;/span&gt;
+&lt;span class=&quot;badge badge-monospaced badge-warning&quot;&gt;DEF&lt;/span&gt;
+&lt;span class=&quot;badge badge-success badge-lg&quot;&gt;Large Badge&lt;/span&gt;
+&lt;span class=&quot;badge badge-monospaced badge-danger badge-lg&quot;&gt;LG&lt;/span&gt;</code></pre>
+</div>
+
+	</div>
+
+	<div class="col-md-12">
+		<h3>Badges with Nav Pills</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Some examples of badges.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-3">
+		<ul class="nav nav-circle nav-pills nav-stacked">
+			<li><a href="#1">Inbox <span class="badge badge-default badge-sm pull-right">32</span></a></li>
+			<li><a href="#1">Sent <span class="badge badge-primary badge-sm pull-right">2</span></a></li>
+			<li><a href="#1">Drafts <span class="badge badge-success badge-sm pull-right">53</span></a></li>
+			<li class="active"><a href="#1">Spam <span class="badge badge-info badge-sm pull-right">12</span></a></li>
+			<li><a href="#1">Starred <span class="badge badge-warning badge-sm pull-right">1</span></a></li>
+			<li><a href="#1">Important <span class="badge badge-danger badge-sm pull-right">12</span></a></li>
+		</ul>
+	</div>
+
+	<div class="col-md-3 col-md-offset-1">
+		<div style="margin: 15px 0;">
+			<button class="btn btn-primary"><span class="icon-envelope"></span></button>
+			<span class="badge badge-danger badge-monospaced pull-right" style="position: absolute;margin-left: -22px;margin-top: -7px;">32</span>
+		</div>
+
+		<div>
+			<button class="btn btn-primary"><span class="icon-cloud"></span></button>
+			<span class="badge badge-warning pull-right" style="position: absolute;margin-left: -22px;margin-top: -7px;">77</span>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing" id="labels">
+	<div class="col-md-12">
+		<h3>Labels</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Use labels to organize groups of items in your application. Labels have rounded borders by default, for circular borders, See <a href="#badges">badges</a>.</p>
 		</blockquote>
 
 		<span class="label label-default">Default</span>
@@ -311,26 +352,36 @@ collapse
 		<span class="label label-warning">Warning</span>
 		<span class="label label-danger">Danger</span>
 
-		<pre><code class="html">&lt;span class=&quot;label label-default&quot;&gt;Default&lt;/span&gt;
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+	<pre><code class="html">&lt;span class=&quot;label label-default&quot;&gt;Default&lt;/span&gt;
 &lt;span class=&quot;label label-primary&quot;&gt;Primary&lt;/span&gt;
 &lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;
 &lt;span class=&quot;label label-info&quot;&gt;Info&lt;/span&gt;
 &lt;span class=&quot;label label-warning&quot;&gt;Warning&lt;/span&gt;
 &lt;span class=&quot;label label-danger&quot;&gt;Danger&lt;/span&gt;</code></pre>
+</div>
 
-		<h3>Label Helper Classes</h3>
+		<h3>Label Sizes</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.label-rounded</code>, <code>.label-circle</code>, or <code>.label-square</code> on the label or the parent container to quickly shape the borders.</p>
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Use <code>label-sm</code> and <code>label-lg</code> to change the label size.</p>
 		</blockquote>
 
-		<span class="label label-default label-rounded">Rounded</span>
-		<span class="label label-default label-circle">Circle</span>
-		<span class="label label-default label-square">Square</span>
+		<span class="label label-default label-sm">Small Label</span>
+		<span class="label label-primary">Default Label</span>
+		<span class="label label-success label-lg">Large Label</span>
 
-		<pre><code class="html">&lt;span class=&quot;label label-default label-rounded&quot;&gt;Rounded&lt;/span&gt;
-&lt;span class=&quot;label label-default label-circle&quot;&gt;Circle&lt;/span&gt;
-&lt;span class=&quot;label label-default label-square&quot;&gt;Square&lt;/span&gt;</code></pre>
+<div class="uxgl-toggle-code" style="margin-top:15px;">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+	<pre><code class="html">&lt;span class=&quot;label label-default label-sm&quot;&gt;Small Label&lt;/span&gt;
+&lt;span class=&quot;label label-primary&quot;&gt;Default Label&lt;/span&gt;
+&lt;span class=&quot;label label-success label-lg&quot;&gt;Large Label&lt;/span&gt;</code></pre>
+</div>
 
 	</div>
 </div>
