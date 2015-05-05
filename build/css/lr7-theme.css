@@ -8818,26 +8818,17 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
 .pagination-bar .pagination {
   float: right;
   width: 100%; }
-  @media screen and (min-width: 768px) {
-    .pagination-bar .pagination {
-      margin: 0;
-      width: auto; } }
   .pagination-bar .pagination > li {
     display: block;
     float: left;
+    text-align: center;
     width: 16.66667%; }
-    @media screen and (min-width: 768px) {
-      .pagination-bar .pagination > li {
-        display: inline-block;
-        float: none;
-        width: auto; } }
     .pagination-bar .pagination > li:first-child > a, .pagination-bar .pagination > li:first-child > span, .pagination-bar .pagination > li:last-child > a, .pagination-bar .pagination > li:last-child > span {
-      border-radius: 30px;
-      margin: 0 auto; }
-    .pagination-bar .pagination > li:first-child > a, .pagination-bar .pagination > li:first-child > span {
-      margin: 0; }
-    .pagination-bar .pagination > li:last-child > a, .pagination-bar .pagination > li:last-child > span {
-      margin: 0 0 0 auto; }
+      border-radius: 30px; }
+    .pagination-bar .pagination > li:first-child {
+      text-align: left; }
+    .pagination-bar .pagination > li:last-child {
+      text-align: right; }
 
 .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span {
   border-radius: 30px; }
@@ -8852,9 +8843,6 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   padding: 0;
   text-align: center;
   width: 32px; }
-  @media screen and (min-width: 768px) {
-    .pagination > li > a, .pagination > li > span {
-      margin: 0 2px; } }
 .pagination > .disabled > a, .pagination > .disabled > a:focus, .pagination > .disabled > a:hover, .pagination > .disabled > span, .pagination > .disabled > span:focus, .pagination > .disabled > span:hover {
   opacity: 0.5;
   filter: alpha(opacity=50); }
@@ -8872,7 +8860,8 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   .pagination-items-per-page [class*="icon-"] {
     margin-left: 10px; }
   .pagination-items-per-page a {
-    color: #869CAD; }
+    color: #869CAD;
+    display: block; }
     .pagination-items-per-page a:focus, .pagination-items-per-page a:hover {
       text-decoration: none; }
 
@@ -8880,10 +8869,6 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   color: #869CAD;
   float: right;
   line-height: 32px; }
-  @media screen and (min-width: 768px) {
-    .pagination-results {
-      float: left;
-      margin-left: 25px; } }
 
 .pagination-lg.pagination-items-per-page, .pagination-lg.pagination-results, .pagination-lg .pagination-items-per-page, .pagination-lg .pagination-results {
   font-size: 18px;
@@ -8902,6 +8887,20 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   height: 24px;
   line-height: 20px;
   width: 24px; }
+
+@media screen and (min-width: 768px) {
+  .pagination-bar .pagination {
+    margin: 0;
+    width: auto; }
+    .pagination-bar .pagination > li {
+      display: inline-block;
+      float: none;
+      width: auto; }
+  .pagination > li > a, .pagination > li > span {
+    margin: 0 2px; }
+  .pagination-results {
+    float: left;
+    margin-left: 25px; } }
 
 .panel {
   -webkit-box-shadow: none;
