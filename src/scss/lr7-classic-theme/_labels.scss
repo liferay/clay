@@ -1,17 +1,27 @@
-.label-circle {
-	&, .label {
-		border-radius: 20px;
+.label {
+	display: inline-block;
+	font-size: $badge-mobile-font-size;
+	padding: $badge-padding-vertical $badge-padding-horizontal;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-base;
 	}
 }
 
-.label-rounded {
-	&, .label {
-		border-radius: 3px;
+.label-lg {
+	&.label {
+		font-size: ceil(16px / 1.166667);
+		padding: $badge-padding-large-vertical $badge-padding-large-horizontal;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			font-size: 16px;
+		}
 	}
 }
 
-.label-square {
-	&, .label {
-		border-radius: 0;
+.label-sm {
+	&.label {
+		font-size: 12px;
+		padding: $badge-padding-small-vertical $badge-padding-small-horizontal;
 	}
 }
