@@ -225,7 +225,7 @@ collapse
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Quickly prototype a toolbar for your portlet, control panel, or site with this component. Vertically align content by adjusting the height of <code>.toolbar-group</code>, <code>.toolbar-group-right</code>, and <code>.toolbar-group-expand</code>.</p>
 
-			<p>Toolbar shouldn't be used to create a toolbar for your inline/text editing application; use <a href="http://getbootstrap.com/components/#btn-groups-toolbar">btn-toolbar</a> for that.</p> 
+			<p>Toolbar shouldn't be used to create a toolbar for your inline/text editing application; use <a href="http://getbootstrap.com/components/#btn-groups-toolbar">btn-toolbar</a> for that.</p>
 
 		</blockquote>
 	</div>
@@ -886,21 +886,25 @@ collapse
 				<div class="toolbar-group-content">
 					<input type="checkbox">
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#1">Date</a></li>
-						<li><a href="#1">Time</a></li>
-						<li><a href="#1">Status</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Date</a></li>
+							<li><a href="#1">Time</a></li>
+							<li><a href="#1">Status</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="dropdown toolbar-group-content">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#1">Alphabetical</a></li>
-						<li><a href="#1">Reverse</a></li>
-						<li><a href="#1">Split</a></li>
-					</ul>
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Alphabetical</a></li>
+							<li><a href="#1">Reverse</a></li>
+							<li><a href="#1">Split</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
@@ -930,21 +934,25 @@ collapse
         &lt;div class=&quot;toolbar-group-content&quot;&gt;
             &lt;input type=&quot;checkbox&quot;&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;dropdown toolbar-group-content&quot;&gt;
-            &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Order by: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-            &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Date&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Time&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Status&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+        &#x9;&lt;div class=&quot;dropdown&quot;&gt;
+&#x9;            &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Order by: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&#x9;            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+&#x9;                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Date&lt;/a&gt;&lt;/li&gt;
+&#x9;                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Time&lt;/a&gt;&lt;/li&gt;
+&#x9;                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Status&lt;/a&gt;&lt;/li&gt;
+&#x9;            &lt;/ul&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;dropdown toolbar-group-content&quot;&gt;
-            &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Name: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-            &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
+        &lt;div class=&quot;toolbar-group-content&quot;&gt;
+        &#x9;&lt;div class=&quot;dropdown&quot;&gt;
+&#x9;            &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;Name: &lt;span class=&quot;icon-caret-down&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&#x9;            &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;
+&#x9;                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Alphabetical&lt;/a&gt;&lt;/li&gt;
+&#x9;                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Reverse&lt;/a&gt;&lt;/li&gt;
+&#x9;                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Split&lt;/a&gt;&lt;/li&gt;
+&#x9;            &lt;/ul&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 
