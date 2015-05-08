@@ -1,16 +1,16 @@
 // Button Border Radius
-$btn-border-radius: 30px;
+$btn-border-radius: 4px;
 $btn-lg-border-radius: round($btn-border-radius * 1.5);
 $btn-sm-border-radius: round($btn-border-radius * 0.75);
 $btn-xs-border-radius: round($btn-border-radius * 0.5);
 
 // Button Sizes
-/* When changing any settings below, make sure to match the corresponding 
+/* When changing any settings below, make sure to match the corresponding
 		input-height to the button height. */
 $btn-border-width: 2px;
 
-$btn-font-size: 14px;
-$btn-padding-vertical: 12px;
+$btn-font-size: 16px;
+$btn-padding-vertical: 10px;
 $btn-padding-horizontal: round($btn-padding-vertical * 4);
 
 $btn-mobile-font-size: 14px;
