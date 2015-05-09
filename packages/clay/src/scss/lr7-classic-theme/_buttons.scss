@@ -83,11 +83,9 @@ a.btn-action,
 	line-height: 16px;
 	padding: 0;
 	width: 52px;
-	z-index: $zindex-dropdown;
 }
 
 .btn-action-secondary {
-	display: inline-block;
 	height: 52px;
 	text-align: right;
 	width: 52px;
@@ -145,30 +143,6 @@ a.btn-action,
 			top: auto;
 		}
 	}
-}
-
-.btn-bottom-left {
-	bottom: 20px;
-	left: 20px;
-	position: fixed;
-}
-
-.btn-bottom-right {
-	bottom: 20px;
-	position: fixed;
-	right: 20px;
-}
-
-.btn-top-left {
-	left: 20px;
-	position: fixed;
-	top: 20px;
-}
-
-.btn-top-right {
-	position: fixed;
-	right: 20px;
-	top: 20px;
 }
 
 @media screen and (min-width: $grid-float-breakpoint) {
