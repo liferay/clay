@@ -1,78 +1,15 @@
 .card, .card-horizontal {
-	margin-bottom: 20px;
-	position: relative;
-
-	&.card-circle {
-		border-radius: 20px;
-	}
-
 	&.card-rounded {
 		border-radius: $card-border-radius;
-	}
-
-	&.card-square {
-		border-radius: 0;
-	}
-
-	.divider {
-		border-top: 1px solid #DDD;
-		margin-bottom: 10px;
-		margin-top: 10px;
 	}
 }
 
 .card {
 	@include box-shadow($card-box-shadow);
-
-	overflow: hidden;
-
-	.card-row {
-		width: 100.4%; // Webkit rounding
-	}
-
-	.figure {
-		overflow: visible;
-	}
-}
-
-.card-header, .card-footer, .card-section {
-	@include clearfix-hack();
-
-	.divider {
-		margin-left: -10px;
-		margin-right: -10px;
-	}
-}
-
-.card-header {
-	padding: 1px 10px 0;
-}
-
-.card-footer {
-	padding: 0 10px 1px;
-}
-
-.card-section {
-	padding: 1px 10px;
 }
 
 .card-horizontal {
 	@include box-shadow($card-box-shadow);
-
-	overflow: hidden;
-	position: relative;
-
-	&.card-circle {
-		[class*="card-col"] {
-			&:first-child {
-				border-radius: 20px 0 0 20px;
-			}
-
-			&:last-child {
-				border-radius: 0 20px 20px 0;
-			}
-		}
-	}
 
 	&.card-rounded {
 		[class*="card-col"] {
@@ -87,79 +24,8 @@
 	}
 }
 
-@for $i from 1 through $grid-columns {
-	.card-col-#{$i} {
-		width: percentage(($i / $grid-columns));
-	}
-}
-
-.card-row {
-	@extend %equal-height-columns;
-
-	height: 100%;
-	overflow: hidden;
-
-	&.card-row-padded .card-col-gutters {
-		&:first-child {
-			padding-left: 0;
-		}
-
-		&:last-child {
-			padding-right: 0;
-		}
-	}
-
-	.card-col-gutters {
-		padding: 0 3%;
-
-		.divider {
-			margin-left: -15px;
-			margin-right: -15px;
-		}
-	}
-
-	[class*="card-col"] {
-		@extend %equal-height-column-cell;
-
-		overflow: hidden;
-		position: relative;
-		vertical-align: middle;
-
-		.img-absolute {
-			position: absolute;
-			top: 0;
-		}
-
-		.img-responsive {
-			max-width: none;
-			width: 101%;
-		}
-	}
-}
-
-.card-row-padded {
-	padding: 10px;
-}
-
 .card-btn-row {
-	[class*="card-col"] {
-		overflow: visible;
-
-		a, button {
-			display: block;
-			line-height: normal;
-			padding-bottom: 20px;
-			padding-top: 20px;
-			text-align: center;
-			width: 100%;
-
-			&:focus, &:hover {
-				text-decoration: none;
-			}
-
-			[class^="icon-"] {
-				display: block;
-			}
-		}
+	a, button {
+		border-radius: inherit;
 	}
 }
