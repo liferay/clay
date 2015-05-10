@@ -9,121 +9,19 @@
 	width: $size;
 }
 
-.nameplate {
-	@extend %equal-height-columns;
-}
-
-.nameplate-checkbox, .nameplate-icon, .nameplate-field {
-	@extend %equal-height-column-cell;
-
-	padding: 0 0.3em;
-	width: 1%;
-}
-
 .nameplate-content {
-	@extend %equal-height-column-cell;
-
-	padding: 0 0.3em;
-	word-break: break-word;
-
-	h1, h2, h3 {
-		margin-top: 0;
-	}
-
-	h4, h5, h6 {
-		margin-top: 2px;
-	}
-
 	small {
 		color: $brand-default;
-		display: block;
 	}
 }
 
 // Nameplate Label
 
 .nameplate-label {
-	@extend .nameplate;
-
-	border-radius: 20px;
-	background-color: #EEE;
-	font-size: 11px;
 	height: 26px;
-	margin: 0 5px 2px 0;
-	padding: 3px;
-	width: auto;
-
-	&.form-control {
-		display: table;
-		height: $input-height-base;
-	}
-
-	&.nameplate-label-circle {
-		border-radius: 20px;
-	}
-
-	&.nameplate-label-rounded {
-		border-radius: 3px;
-	}
-
-	&.nameplate-label-square {
-		border-radius: 0;
-	}
-
-	a[class*="icon-"] {
-		color: #999;
-		margin-left: 5px;
-		text-decoration: none;
-
-		&:focus, &:hover {
-			color: #555;
-		}
-	}
-
-	.nameplate-content, .nameplate-field, .nameplate-icon {
-		vertical-align: middle;
-		width: auto;
-	}
-
-	.nameplate-content {
-		padding: 3px 5px 2px;
-	}
 }
 
 // Nameplate List
-
-.nameplate-list {
-	list-style: none;
-	margin: 0 0 10px 0;
-	padding: 0;
-
-	> li, > .nameplate {
-		@extend .nameplate;
-
-		border-left-width: 0;
-		margin: 0;
-		padding: 0.8em;
-
-		&:hover {
-			background-color: #DDD;
-		}
-	}
-
-	.nameplate-content, .nameplate-icon, .nameplate-field {
-		padding: 0 0.3em;
-		vertical-align: middle;
-	}
-
-	.nameplate-field .icon-remove {
-		background-color: #DDD;
-		text-align: center;
-		border-radius: 50%;
-		display: block;
-		line-height: 19px;
-		padding: 0 3px 0 4px;
-		text-decoration: none;
-	}
-}
 
 .nameplate-list-heading {
 	background-color: #F8F8F8;
