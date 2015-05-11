@@ -1,6 +1,3 @@
-// $pager-bg:                                 #FFF;
-// $pager-color: $brand-default;
-
 $pager-border:                             $pagination-border;
 $pager-border-radius:                      $pagination-border-radius;
 $pager-border-width: $pagination-border-width;
@@ -9,6 +6,16 @@ $pager-item-height: $pagination-item-height - ($pager-border-width * 2);
 
 $pager-padding-base-horizontal: 20px;
 $pager-padding-base-vertical: 0;
+
+$pager-lg-font-size: $pagination-lg-font-size;
+$pager-lg-item-height: $pagination-lg-item-height - ($pager-border-width * 2);
+$pager-lg-padding-horizontal: 48px;
+$pager-lg-padding-vertical: $pager-padding-base-vertical;
+
+$pager-sm-font-size: $pagination-sm-font-size;
+$pager-sm-item-height: $pagination-sm-item-height - ($pager-border-width * 2);
+$pager-sm-padding-horizontal: 12px;
+$pager-sm-padding-vertical: $pager-padding-base-vertical;
 
 $pager-color: $pagination-color;
 
