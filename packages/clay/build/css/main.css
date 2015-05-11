@@ -1569,8 +1569,8 @@ you can use the generic selector below, but it's slower:
  * @param $off-color - Switch button off icon font color
  * @param $on-color - Switch button on icon font color
  */
-/* When changing any settings below, make sure to match the corresponding 
-		input-height to the button height. */
+/* When changing any settings below, make sure to match the corresponding
+	 input-height to the button height. */
 /*** When changing input, make sure to match the corresponding
 		 btn settings to the input height. ***/
 /**
@@ -6414,7 +6414,7 @@ button.close {
   padding: 8px 24px;
   font-size: 14px;
   line-height: 1.4286;
-  border-radius: 30px;
+  border-radius: 4px;
   font-weight: 500; }
   .btn, .btn:focus, .btn:hover {
     border: 2px solid transparent; }
@@ -6478,28 +6478,29 @@ button.close {
 .btn-lg, .btn-group-lg > .btn {
   padding: 12px 36px;
   font-size: 16px;
-  line-height: 1.4286;
-  border-radius: 45px; }
+  line-height: 20px;
+  border-radius: 6px; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 6px 18px;
   font-size: 12px;
-  line-height: 1.4286;
-  border-radius: 23px; }
+  line-height: 20px;
+  border-radius: 3px; }
 
 .btn-xs, .btn-group-xs > .btn {
   padding: 4px 12px;
   font-size: 10px;
-  line-height: 1.4286;
-  border-radius: 15px; }
+  line-height: 20px;
+  border-radius: 2px; }
 
 a.btn-action, .btn-action-secondary > a.btn {
+  border-radius: 4px;
   padding: 0; }
   a.btn-action [class*="icon-"], .btn-action-secondary > a.btn [class*="icon-"] {
     line-height: 48px; }
 
 .btn-action, .btn-action-secondary .btn {
-  border-radius: 60px;
+  border-radius: 4px;
   font-size: 12px;
   height: 52px;
   line-height: 16px;
@@ -6556,7 +6557,28 @@ a.btn-action, .btn-action-secondary > a.btn {
   top: 20px; }
 
 @media screen and (min-width: 768px) {
+  .btn {
+    padding: 12px 48px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 4px; }
+  .btn-lg, .btn-group-lg > .btn {
+    padding: 16px 48px;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 6px; }
+  .btn-sm, .btn-group-sm > .btn {
+    padding: 8px 24px;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 3px; }
+  .btn-xs, .btn-group-xs > .btn {
+    padding: 4px 16px;
+    font-size: 10px;
+    line-height: 20px;
+    border-radius: 2px; }
   a.btn-action, .btn-action-secondary > a.btn {
+    border-radius: 4px;
     padding: 0; }
     a.btn-action [class*="icon-"], .btn-action-secondary > a.btn [class*="icon-"] {
       line-height: 60px; }
@@ -6585,27 +6607,7 @@ a.btn-action, .btn-action-secondary > a.btn {
       top: auto; }
     .btn-action-secondary .dropdown-menu-left-side-bottom:before, .btn-action-secondary .dropdown-menu-right-side-bottom:before {
       bottom: 23px;
-      top: auto; }
-  .btn {
-    padding: 12px 48px;
-    font-size: 14px;
-    line-height: 1.4286;
-    border-radius: 30px; }
-  .btn-lg, .btn-group-lg > .btn {
-    padding: 16px 64px;
-    font-size: 18px;
-    line-height: 1.4286;
-    border-radius: 45px; }
-  .btn-sm, .btn-group-sm > .btn {
-    padding: 8px 32px;
-    font-size: 12px;
-    line-height: 1.4286;
-    border-radius: 23px; }
-  .btn-xs, .btn-group-xs > .btn {
-    padding: 4px 16px;
-    font-size: 10px;
-    line-height: 1.4286;
-    border-radius: 15px; } }
+      top: auto; } }
 
 .btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
   margin-left: -2px; }
@@ -6631,15 +6633,15 @@ a.btn-action, .btn-action-secondary > a.btn {
   margin-top: -2px; }
 
 .btn-group-vertical > .btn:first-child:not(:last-child) {
-  border-top-right-radius: 30px; }
+  border-top-right-radius: 4px; }
 
 @media screen and (min-width: 768px) {
   .btn-group > .btn + .dropdown-toggle {
     padding-left: 16px;
     padding-right: 16px; }
   .btn-group > .btn-lg + .dropdown-toggle, .btn-group > .btn-lg + .btn-group-lg > .btn, .btn-group-lg > .btn-group > .btn-lg + .btn {
-    padding-left: 21.33333px;
-    padding-right: 21.33333px; } }
+    padding-left: 16px;
+    padding-right: 16px; } }
 
 .card, .card-horizontal {
   margin-bottom: 20px;
