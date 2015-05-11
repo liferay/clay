@@ -1,0 +1,20 @@
+@mixin color-btn($border) {
+	border-color: $border;
+}
+
+@mixin color-btn-hover($bg, $border) {
+	&:focus,
+	&:hover {
+		background-color: $bg;
+		border-color: $border;
+	}
+}
+
+@mixin color-btn-active($bg, $border) {
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-color: $bg;
+		border-color: $border;
+	}
+}
