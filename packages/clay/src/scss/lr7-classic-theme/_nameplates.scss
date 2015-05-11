@@ -21,41 +21,6 @@
 	height: 26px;
 }
 
-// Nameplate List
-
-.nameplate-list-heading {
-	background-color: #F8F8F8;
-
-	> a, > span {
-		color: $text-color;
-		display: inline-block;
-		padding: 1.1em;
-
-		&:focus, &:hover {
-			text-decoration: none;
-		}
-	}
-
-	> a {
-		display: block;
-	}
-
-	+ .collapse .nameplate-list,
-	+ .collapsing .nameplate-list,
-	+ .nameplate-list {
-		margin-bottom: 0;
-	}
-}
-
-.nameplate-list-bordered {
-	&.nameplate-list-heading,
-	.nameplate-list-heading,
-	.nameplate-list > li,
-	> li {
-		border: 1px solid #DDD;
-		margin-top: -1px;
-	}
-}
 // User Icons
 
 .user-icon {
@@ -134,22 +99,4 @@
 
 .user-icon-warning {
 	@include color-user-icon($user-icon-warning-bg);
-}
-
-// Profile Header
-
-.profile-header {
-	max-width: 300px;
-
-	.nameplate, &.nameplate {
-		margin: 0;
-	}
-
-	.nameplate-content {
-		padding: 10px;
-	}
-
-	.nameplate-field {
-		padding: 10px;
-	}
 }
