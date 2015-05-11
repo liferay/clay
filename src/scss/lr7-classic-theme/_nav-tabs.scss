@@ -42,7 +42,6 @@
 
 .tab-group-bottom {
 	> .nav-tabs {
-		border-bottom-width: 0;
 		border-top: $nav-tabs-border-width solid $nav-tabs-border-color;
 		margin-top: -$nav-tabs-border-width;
 
@@ -58,7 +57,7 @@
 			> a {
 				border-radius: $tab-group-bottom-border-radius;
 
-				&:focus, &:hover {
+				&:focus {
 					border-color: $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
 				}
 			}
@@ -67,35 +66,6 @@
 
 	> .tab-content {
 		border-top: 1px solid $nav-tabs-border-color;
-	}
-}
-
-.tab-group-left,
-.tab-group-right {
-	> .nav-tabs {
-		border-bottom-width: 0;
-		display: table-cell;
-		vertical-align: top;
-		width: 25%;
-
-		> li {
-			float: none;
-			margin-bottom: 0;
-
-			> a {
-				display: block;
-				margin-bottom: 2px;
-				margin-right: 0;
-				max-width: 10em;
-				word-break: break-word;
-				word-wrap: break-word;
-			}
-		}
-	}
-
-	> .tab-content {
-		display: table-cell;
-		margin-top: 0;
 	}
 }
 
@@ -115,7 +85,7 @@
 			> a {
 				border-radius: $tab-group-left-border-radius;
 
-				&:focus, &:hover {
+				&:focus {
 					border-color: $nav-tabs-link-hover-border-color $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
 				}
 			}
@@ -144,7 +114,7 @@
 				border-radius: $tab-group-right-border-radius;
 				margin-left: -$nav-tabs-border-width;
 
-				&:focus, &:hover {
+				&:focus {
 					border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
 				}
 			}
@@ -154,20 +124,5 @@
 	> .tab-content {
 		border: $nav-tabs-border-width solid $nav-tabs-border-color;
 		border-right-width: 0;
-	}
-}
-
-@media screen and (min-width: $screen-xs-min) {
-	.tab-group-left,
-	.tab-group-right {
-		> .nav-tabs {
-			width: 1%;
-
-			> li {
-				> a {
-					word-break: normal;
-				}
-			}
-		}
 	}
 }
