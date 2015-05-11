@@ -7694,6 +7694,13 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
 .non-responsive.container-fluid {
   width: 970px; }
 
+.icon-monospaced {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  width: 32px; }
+
 .input-group label {
   margin-bottom: 2px; }
   .input-group label input[type="radio"] {
