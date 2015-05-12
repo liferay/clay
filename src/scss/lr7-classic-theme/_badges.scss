@@ -7,6 +7,22 @@
 	@media screen and (min-width: $grid-float-breakpoint) {
 		font-size: $badge-desktop-font-size;
 	}
+
+	a {
+		color: $badge-color;
+		margin-left: ($badge-padding-horizontal / 2) + 2;
+
+		&:focus,
+		&:hover {
+			color: $badge-link-hover-color;
+			text-decoration: none;
+		}
+
+		&.icon-monospaced {
+			margin-left: 0;
+			margin-right: 3 - $badge-padding-horizontal;
+		}
+	}
 }
 
 .badge-monospaced {
@@ -37,6 +53,15 @@
 		padding: 0;
 		width: $badge-lg-width;
 	}
+
+	a {
+		margin-left: ($badge-lg-padding-horizontal / 2) + 2;
+
+		&.icon-monospaced {
+			margin-left: 0;
+			margin-right: 3 - $badge-lg-padding-horizontal;
+		}
+	}
 }
 
 .badge-sm {
@@ -50,6 +75,18 @@
 		height: $badge-sm-height;
 		padding: 0;
 		width: $badge-sm-width;
+	}
+
+	a {
+		margin-left: ($badge-sm-padding-horizontal / 2) + 2;
+
+		&.icon-monospaced {
+			height: $badge-sm-height;
+			line-height: $badge-sm-height;
+			margin-left: 0;
+			margin-right: 3 - $badge-sm-padding-horizontal;
+			width: $badge-sm-height;
+		}
 	}
 }
 
