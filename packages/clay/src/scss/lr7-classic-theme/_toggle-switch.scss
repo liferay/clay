@@ -40,7 +40,8 @@ input.toggle-switch {
 
 		@include user-select(none);
 
-		&:after, &:before {
+		&:after,
+		&:before {
 			bottom: 0;
 			content: ' ';
 			display: block;
@@ -79,7 +80,8 @@ input.toggle-switch {
 			z-index: 1;
 		}
 
-		.button-icon-on, .toggle-switch-icon-on {
+		.button-icon-on,
+		.toggle-switch-icon-on {
 			opacity: 0;
 		}
 
@@ -111,16 +113,19 @@ input.toggle-switch {
 			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
 		}
 
-		.button-icon-on, .toggle-switch-icon-on {
+		.button-icon-on,
+		.toggle-switch-icon-on {
 			opacity: 1;
 		}
 
-		.button-icon-off, .toggle-switch-icon-off {
+		.button-icon-off,
+		.toggle-switch-icon-off {
 			opacity: 0;
 		}
 	}
 
-	&:disabled, &.disabled {
+	&:disabled,
+	&.disabled {
 		~ .toggle-switch-bar {
 			cursor: not-allowed;
 			opacity: 0.4;
@@ -134,7 +139,11 @@ input.toggle-switch {
 
 input.toggle-switch {
 	&:empty ~ .toggle-switch-bar {
-		&:after, &:before, .toggle-switch-icon, .toggle-switch-handle:after, .toggle-switch-handle:before {
+		&:after,
+		&:before,
+		.toggle-switch-icon,
+		.toggle-switch-handle:after,
+		.toggle-switch-handle:before {
 			@include transition(all 100ms ease-in);
 		}
 	}
