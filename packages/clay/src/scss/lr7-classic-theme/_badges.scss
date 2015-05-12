@@ -1,17 +1,17 @@
 .badge {
 	border-radius: $badge-border-radius;
-	font-size: $badge-mobile-font-size;
+	font-size: $badge-font-size;
+	line-height: $badge-height;
 	padding: $badge-padding-vertical $badge-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		font-size: $font-size-base;
+		font-size: $badge-desktop-font-size;
 	}
 }
 
 .badge-monospaced {
 	border-radius: 50%;
 	height: $badge-height;
-	line-height: $badge-height;
 	width: $badge-width;
 
 	&.badge {
@@ -23,33 +23,33 @@
 
 .badge-lg {
 	&.badge {
-		font-size: ceil(16px / 1.166667);
-		padding: $badge-padding-large-vertical $badge-padding-large-horizontal;
+		font-size: 85%;
+		line-height: $badge-lg-height;
+		padding: $badge-lg-padding-vertical $badge-lg-padding-horizontal;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			font-size: 16px;
+			font-size: 100%;
 		}
 	}
 
 	&.badge-monospaced {
-		height: $badge-large-height;
-		line-height: $badge-large-height;
+		height: $badge-lg-height;
 		padding: 0;
-		width: $badge-large-width;
+		width: $badge-lg-width;
 	}
 }
 
 .badge-sm {
 	&.badge {
-		font-size: 12px;
-		padding: $badge-padding-small-vertical $badge-padding-small-horizontal;
+		font-size: 75%;
+		line-height: $badge-sm-height;
+		padding: $badge-sm-padding-vertical $badge-sm-padding-horizontal;
 	}
 
 	&.badge-monospaced {
-		height: $badge-small-height;
-		line-height: $badge-small-height;
+		height: $badge-sm-height;
 		padding: 0;
-		width: $badge-small-width;
+		width: $badge-sm-width;
 	}
 }
 
