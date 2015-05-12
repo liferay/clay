@@ -6344,39 +6344,61 @@ button.close {
 .badge {
   border-radius: 50px;
   font-size: 12px;
-  padding: 10px 12px; }
+  line-height: 32px;
+  padding: 0 12px; }
   @media screen and (min-width: 768px) {
     .badge {
       font-size: 14px; } }
+  .badge a {
+    color: #fff;
+    margin-left: 8px; }
+    .badge a:focus, .badge a:hover {
+      color: #fff;
+      text-decoration: none; }
+    .badge a.icon-monospaced {
+      margin-left: 0;
+      margin-right: -9px; }
 
 .badge-monospaced {
   border-radius: 50%;
   height: 32px;
-  line-height: 32px;
   width: 32px; }
   .badge-monospaced.badge {
     padding: 0; }
 
 .badge-lg.badge {
-  font-size: 14px;
-  padding: 16px 20px; }
+  font-size: 85%;
+  line-height: 44px;
+  padding: 0 20px; }
   @media screen and (min-width: 768px) {
     .badge-lg.badge {
-      font-size: 16px; } }
+      font-size: 100%; } }
 .badge-lg.badge-monospaced {
   height: 44px;
-  line-height: 44px;
   padding: 0;
   width: 44px; }
+.badge-lg a {
+  margin-left: 12px; }
+  .badge-lg a.icon-monospaced {
+    margin-left: 0;
+    margin-right: -17px; }
 
 .badge-sm.badge {
-  font-size: 12px;
-  padding: 5px 10px; }
+  font-size: 75%;
+  line-height: 22px;
+  padding: 0 10px; }
 .badge-sm.badge-monospaced {
   height: 22px;
-  line-height: 22px;
   padding: 0;
   width: 22px; }
+.badge-sm a {
+  margin-left: 7px; }
+  .badge-sm a.icon-monospaced {
+    height: 22px;
+    line-height: 22px;
+    margin-left: 0;
+    margin-right: -7px;
+    width: 22px; }
 
 .badge-danger {
   background-color: #CC6677; }
@@ -7724,21 +7746,46 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
 .label {
   display: inline-block;
   font-size: 12px;
-  padding: 10px 12px; }
+  line-height: 32px;
+  padding: 0 12px; }
   @media screen and (min-width: 768px) {
     .label {
       font-size: 14px; } }
+  .label a {
+    color: #fff;
+    margin-left: 8px; }
+    .label a:focus, .label a:hover {
+      color: #fff;
+      text-decoration: none; }
+    .label a.icon-monospaced {
+      margin-left: 0;
+      margin-right: -9px; }
 
 .label-lg.label {
-  font-size: 14px;
-  padding: 16px 20px; }
+  font-size: 85%;
+  line-height: 44px;
+  padding: 0 20px; }
   @media screen and (min-width: 768px) {
     .label-lg.label {
-      font-size: 16px; } }
+      font-size: 100%; } }
+.label-lg a {
+  margin-left: 12px; }
+  .label-lg a.icon-monospaced {
+    margin-left: 0;
+    margin-right: -17px; }
 
 .label-sm.label {
-  font-size: 12px;
-  padding: 5px 10px; }
+  font-size: 75%;
+  line-height: 22px;
+  padding: 0 10px; }
+.label-sm a {
+  margin-left: 7px; }
+  .label-sm a.icon-monospaced {
+    height: 22px;
+    line-height: 22px;
+    margin-left: 0;
+    margin-right: -7px;
+    width: 22px; }
 
 .list-group-heading {
   background-color: #F8F8F8;
@@ -8825,6 +8872,16 @@ label.checkbox-default1, label.radio-default1, .checkbox-default1 label, .radio-
   float: right; }
 .pager .previous > .btn {
   float: left; }
+
+.pager-lg li > a, .pager-lg li > span {
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 48px; }
+
+.pager-sm li > a, .pager-sm li > span {
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 12px; }
 
 .pagination-bar:before, .pagination-bar:after {
   content: " ";
