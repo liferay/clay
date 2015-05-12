@@ -1,22 +1,22 @@
 $badge-border-radius: 50px;
 
+$badge-font-size: ceil($font-size-base / 1.166667);
 $badge-desktop-font-size: $font-size-base;
-$badge-mobile-font-size: ceil($badge-desktop-font-size / 1.166667);
 
 $badge-height: 32px;
 $badge-width: $badge-height;
 
-$badge-small-height: 22px;
-$badge-small-width: $badge-small-height;
+$badge-sm-height: 22px;
+$badge-sm-width: $badge-sm-height;
 
-$badge-large-height: 44px;
-$badge-large-width: $badge-large-height;
+$badge-lg-height: 44px;
+$badge-lg-width: $badge-lg-height;
 
-$badge-padding-vertical: 10px;
+$badge-padding-vertical: 0;
 $badge-padding-horizontal: 12px;
 
-$badge-padding-small-vertical: 5px;
-$badge-padding-small-horizontal: 10px;
+$badge-sm-padding-vertical: $badge-padding-vertical;
+$badge-sm-padding-horizontal: 10px;
 
-$badge-padding-large-vertical: 16px;
-$badge-padding-large-horizontal: 20px;
+$badge-lg-padding-vertical: $badge-padding-vertical;
+$badge-lg-padding-horizontal: 20px;
