@@ -6,7 +6,7 @@
 		text-transform: uppercase;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			min-width: $toggle-switch-desktop-bar-width;
+			min-width: $toggle-switch-bar-desktop-width;
 		}
 	}
 
@@ -14,7 +14,7 @@
 		font-size: $toggle-switch-bar-font-size;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			font-size: $toggle-switch-desktop-bar-font-size;
+			font-size: $toggle-switch-bar-desktop-font-size;
 		}
 	}
 
@@ -22,7 +22,7 @@
 		font-size: $toggle-switch-button-font-size;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			font-size: $toggle-switch-desktop-button-font-size;
+			font-size: $toggle-switch-button-desktop-font-size;
 		}
 	}
 }
@@ -53,9 +53,9 @@ input.toggle-switch {
 		@include user-select(none);
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			line-height: $toggle-switch-desktop-bar-height;
-			min-height: $toggle-switch-desktop-bar-height;
-			text-indent: set-data-label-text-position($toggle-switch-desktop-bar-width, $toggle-switch-desktop-bar-padding);
+			line-height: $toggle-switch-bar-desktop-height;
+			min-height: $toggle-switch-bar-desktop-height;
+			text-indent: set-data-label-text-position($toggle-switch-bar-desktop-width, $toggle-switch-bar-desktop-padding);
 		}
 
 		&:after,
@@ -69,7 +69,7 @@ input.toggle-switch {
 			width: $toggle-switch-bar-width;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				width: $toggle-switch-desktop-bar-width;
+				width: $toggle-switch-bar-desktop-width;
 			}
 		}
 
@@ -82,11 +82,11 @@ input.toggle-switch {
 			width: $toggle-switch-button-width;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				bottom: $toggle-switch-desktop-bar-padding;
-				height: $toggle-switch-desktop-button-width;
-				left: $toggle-switch-desktop-bar-padding;
-				top: $toggle-switch-desktop-bar-padding;
-				width: $toggle-switch-desktop-button-width;
+				bottom: $toggle-switch-bar-desktop-padding;
+				height: $toggle-switch-button-desktop-width;
+				left: $toggle-switch-bar-desktop-padding;
+				top: $toggle-switch-bar-desktop-padding;
+				width: $toggle-switch-button-desktop-width;
 			}
 		}
 
@@ -110,10 +110,10 @@ input.toggle-switch {
 			z-index: 1;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				left: $toggle-switch-desktop-bar-padding;
-				line-height: $toggle-switch-desktop-button-width;
-				top: $toggle-switch-desktop-bar-padding;
-				width: $toggle-switch-desktop-button-width;
+				left: $toggle-switch-bar-desktop-padding;
+				line-height: $toggle-switch-button-desktop-width;
+				top: $toggle-switch-bar-desktop-padding;
+				width: $toggle-switch-button-desktop-width;
 			}
 		}
 
@@ -126,7 +126,7 @@ input.toggle-switch {
 			left: $toggle-switch-bar-padding;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				left: $toggle-switch-desktop-bar-padding;
+				left: $toggle-switch-bar-desktop-padding;
 			}
 		}
 
@@ -134,7 +134,7 @@ input.toggle-switch {
 			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				left: $toggle-switch-desktop-bar-width - $toggle-switch-desktop-bar-padding - $toggle-switch-desktop-button-width;
+				left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
 			}
 		}
 	}
@@ -145,7 +145,7 @@ input.toggle-switch {
 			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				left: $toggle-switch-desktop-bar-width - $toggle-switch-desktop-bar-padding - $toggle-switch-desktop-button-width;
+				left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
 			}
 		}
 
@@ -162,7 +162,7 @@ input.toggle-switch {
 			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				left: $toggle-switch-desktop-bar-width - $toggle-switch-desktop-bar-padding - $toggle-switch-desktop-button-width;
+				left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
 			}
 		}
 
