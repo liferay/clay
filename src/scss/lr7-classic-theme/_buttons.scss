@@ -15,6 +15,26 @@
 	}
 }
 
+.btn-link {
+	color: $brand-default;
+
+	&:hover, &.active {
+		color: $brand-primary;
+		text-decoration: none;
+
+		&:after {
+			border-bottom: 2px solid #65B6F0;
+			content: "";
+			display: block;
+			height: 2px;
+			margin: -2px auto 0 auto;
+			position: relative;
+			top: 5px;
+			width: 100%;
+		}
+	}
+}
+
 .btn-default {
 	@include color-btn($btn-default-border);
 	@include color-btn-hover($btn-default-hover-bg, $btn-default-hover-border);
