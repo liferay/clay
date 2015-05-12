@@ -9584,12 +9584,21 @@ input.toggle-card {
 .toggle-switch-bar .toggle-switch-handle {
   display: block;
   float: left;
-  min-width: 60px;
+  min-width: 44px;
   text-transform: uppercase; }
+  @media screen and (min-width: 768px) {
+    .toggle-switch-bar .toggle-switch-handle {
+      min-width: 60px; } }
 .toggle-switch-bar .toggle-switch-icon {
-  font-size: 15px; }
+  font-size: 12px; }
+  @media screen and (min-width: 768px) {
+    .toggle-switch-bar .toggle-switch-icon {
+      font-size: 16px; } }
 .toggle-switch-bar .button-icon {
-  font-size: 15px; }
+  font-size: 12px; }
+  @media screen and (min-width: 768px) {
+    .toggle-switch-bar .button-icon {
+      font-size: 16px; } }
 
 input.toggle-switch {
   font-size: 62.5%;
@@ -9619,14 +9628,19 @@ input.toggle-switch {
     cursor: pointer;
     display: block;
     font-size: 1.2rem;
-    line-height: 32px;
-    min-height: 32px;
+    line-height: 24px;
+    min-height: 24px;
     position: relative;
-    text-indent: 60px;
+    text-indent: 44px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+    @media screen and (min-width: 768px) {
+      input.toggle-switch:empty ~ .toggle-switch-bar {
+        line-height: 32px;
+        min-height: 32px;
+        text-indent: 60px; } }
     input.toggle-switch:empty ~ .toggle-switch-bar:after, input.toggle-switch:empty ~ .toggle-switch-bar:before {
       bottom: 0;
       content: ' ';
@@ -9634,14 +9648,24 @@ input.toggle-switch {
       left: 0;
       position: absolute;
       top: 0;
-      width: 60px; }
+      width: 44px; }
+      @media screen and (min-width: 768px) {
+        input.toggle-switch:empty ~ .toggle-switch-bar:after, input.toggle-switch:empty ~ .toggle-switch-bar:before {
+          width: 60px; } }
     input.toggle-switch:empty ~ .toggle-switch-bar:after {
       border-radius: 50%;
       bottom: 4px;
-      height: 24px;
+      height: 16px;
       left: 4px;
       top: 4px;
-      width: 24px; }
+      width: 16px; }
+      @media screen and (min-width: 768px) {
+        input.toggle-switch:empty ~ .toggle-switch-bar:after {
+          bottom: 4px;
+          height: 24px;
+          left: 4px;
+          top: 4px;
+          width: 24px; } }
     input.toggle-switch:empty ~ .toggle-switch-bar:before {
       border-radius: 20px; }
     input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:after {
@@ -9649,29 +9673,47 @@ input.toggle-switch {
       margin-left: 6px; }
     input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon {
       left: 4px;
-      line-height: 24px;
+      line-height: 16px;
       position: absolute;
       text-align: center;
       text-indent: 0;
       top: 4px;
-      width: 24px;
+      width: 16px;
       z-index: 1; }
+      @media screen and (min-width: 768px) {
+        input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon {
+          left: 4px;
+          line-height: 24px;
+          top: 4px;
+          width: 24px; } }
     input.toggle-switch:empty ~ .toggle-switch-bar .button-icon-on, input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-on {
       opacity: 0; }
     input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-on {
       left: 4px; }
+      @media screen and (min-width: 768px) {
+        input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-on {
+          left: 4px; } }
     input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-      left: 32px; }
+      left: 24px; }
+      @media screen and (min-width: 768px) {
+        input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
+          left: 32px; } }
   input.toggle-switch:checked ~ .toggle-switch-bar:after {
     border-radius: 50%;
-    left: 32px; }
+    left: 24px; }
+    @media screen and (min-width: 768px) {
+      input.toggle-switch:checked ~ .toggle-switch-bar:after {
+        left: 32px; } }
   input.toggle-switch:checked ~ .toggle-switch-bar:before {
     border-radius: 20px; }
   input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-handle:after {
     content: attr(data-label-on);
     margin-left: 6px; }
   input.toggle-switch:checked ~ .toggle-switch-bar .button-icon {
-    left: 32px; }
+    left: 24px; }
+    @media screen and (min-width: 768px) {
+      input.toggle-switch:checked ~ .toggle-switch-bar .button-icon {
+        left: 32px; } }
   input.toggle-switch:checked ~ .toggle-switch-bar .button-icon-on, input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
     opacity: 1; }
   input.toggle-switch:checked ~ .toggle-switch-bar .button-icon-off, input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-off {
