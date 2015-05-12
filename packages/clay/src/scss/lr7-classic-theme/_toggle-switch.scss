@@ -4,14 +4,26 @@
 		float: left;
 		min-width: $toggle-switch-bar-width;
 		text-transform: uppercase;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			min-width: $toggle-switch-desktop-bar-width;
+		}
 	}
 
 	.toggle-switch-icon {
 		font-size: $toggle-switch-bar-font-size;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			font-size: $toggle-switch-desktop-bar-font-size;
+		}
 	}
 
 	.button-icon {
 		font-size: $toggle-switch-button-font-size;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			font-size: $toggle-switch-desktop-button-font-size;
+		}
 	}
 }
 
@@ -40,6 +52,12 @@ input.toggle-switch {
 
 		@include user-select(none);
 
+		@media screen and (min-width: $grid-float-breakpoint) {
+			line-height: $toggle-switch-desktop-bar-height;
+			min-height: $toggle-switch-desktop-bar-height;
+			text-indent: set-data-label-text-position($toggle-switch-desktop-bar-width, $toggle-switch-desktop-bar-padding);
+		}
+
 		&:after,
 		&:before {
 			bottom: 0;
@@ -49,6 +67,10 @@ input.toggle-switch {
 			position: absolute;
 			top: 0;
 			width: $toggle-switch-bar-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				width: $toggle-switch-desktop-bar-width;
+			}
 		}
 
 		&:after {
@@ -58,6 +80,14 @@ input.toggle-switch {
 			left: $toggle-switch-bar-padding;
 			top: $toggle-switch-bar-padding;
 			width: $toggle-switch-button-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				bottom: $toggle-switch-desktop-bar-padding;
+				height: $toggle-switch-desktop-button-width;
+				left: $toggle-switch-desktop-bar-padding;
+				top: $toggle-switch-desktop-bar-padding;
+				width: $toggle-switch-desktop-button-width;
+			}
 		}
 
 		&:before {
@@ -78,6 +108,13 @@ input.toggle-switch {
 			top: $toggle-switch-bar-padding;
 			width: $toggle-switch-button-width;
 			z-index: 1;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				left: $toggle-switch-desktop-bar-padding;
+				line-height: $toggle-switch-desktop-button-width;
+				top: $toggle-switch-desktop-bar-padding;
+				width: $toggle-switch-desktop-button-width;
+			}
 		}
 
 		.button-icon-on,
@@ -87,10 +124,18 @@ input.toggle-switch {
 
 		.toggle-switch-icon-on {
 			left: $toggle-switch-bar-padding;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				left: $toggle-switch-desktop-bar-padding;
+			}
 		}
 
 		.toggle-switch-icon-off {
 			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				left: $toggle-switch-desktop-bar-width - $toggle-switch-desktop-bar-padding - $toggle-switch-desktop-button-width;
+			}
 		}
 	}
 
@@ -98,6 +143,10 @@ input.toggle-switch {
 		&:after {
 			border-radius: $toggle-switch-button-on-border-radius;
 			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				left: $toggle-switch-desktop-bar-width - $toggle-switch-desktop-bar-padding - $toggle-switch-desktop-button-width;
+			}
 		}
 
 		&:before {
@@ -111,6 +160,10 @@ input.toggle-switch {
 
 		.button-icon {
 			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				left: $toggle-switch-desktop-bar-width - $toggle-switch-desktop-bar-padding - $toggle-switch-desktop-button-width;
+			}
 		}
 
 		.button-icon-on,
