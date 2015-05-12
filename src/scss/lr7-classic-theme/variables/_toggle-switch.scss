@@ -1,17 +1,26 @@
 // must all be same units--start
 $toggle-switch-bar-padding: 4px; // space between button and bar, can be negative value
-$toggle-switch-button-width: 24px;
+$toggle-switch-button-width: 16px;
 
 $toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) + $toggle-switch-button-width;
-$toggle-switch-bar-width: 60px; // width of switch bar
+$toggle-switch-bar-width: 44px; // width of switch bar
+
+$toggle-switch-desktop-bar-padding: 4px; // space between button and bar, can be negative value
+$toggle-switch-desktop-button-width: 24px;
+
+$toggle-switch-desktop-bar-height: ($toggle-switch-desktop-bar-padding * 2) + $toggle-switch-desktop-button-width;
+$toggle-switch-desktop-bar-width: 60px; // width of switch bar
 // must all be same units--end
 
 $toggle-switch-bar-border-radius: 20px;
 $toggle-switch-bar-border-width: 2px;
-$toggle-switch-bar-font-size: 15px;
+$toggle-switch-bar-font-size: 12px;
 
 $toggle-switch-button-border-width: 1px;
 $toggle-switch-button-font-size: $toggle-switch-bar-font-size;
+
+$toggle-switch-desktop-bar-font-size: 16px;
+$toggle-switch-desktop-button-font-size: $toggle-switch-desktop-bar-font-size;
 
 // Toggle Switch Off
 $toggle-switch-bar-bg: #FFF;
