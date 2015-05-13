@@ -1,15 +1,5 @@
-$form-control-border-radius: 0;
-
-$form-control-border-width: 0 0 2px 0;
-
-$form-control-box-shadow: none;
-$form-control-focus-box-shadow: none;
-
-$form-control-font-size: 14px;
-$form-control-desktop-font-size: 16px;
-
-$form-control-padding-horizontal: 0;
-$form-control-padding-vertical: 0;
+$input-font-size: 14px;
+$input-desktop-font-size: 16px;
 
 $input-label-font-size: 12px;
 $input-label-desktop-font-size: 14px;
@@ -34,12 +24,21 @@ $input-border-bottom-width: 2px;
 $input-border-left-width: 0;
 $input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width;
 
-$input-color-placeholder:                  lighten($text-color, 12%);
+$input-box-shadow: none;
+$input-box-shadow-focus: none;
+
+$input-color-placeholder:                  darken(#E4E9EC, 12%);
 $input-color-placeholder-focus: $input-border-focus;
+
+$input-label-color: $brand-default;
+$input-label-focus-color: $input-color-focus;
+
+$input-padding-horizontal: 0;
+$input-padding-vertical: 8px;
 
 $input-readonly-bg: #FAFAFA;
 $input-readonly-border: $input-border;
-$input-readonly-color: $text-color;
+$input-readonly-color: darken($input-color-placeholder, 12%);
 
 $input-font-size-base: 16px;
 $input-font-size-large: 18px;

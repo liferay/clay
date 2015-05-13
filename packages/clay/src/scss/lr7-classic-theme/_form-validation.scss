@@ -10,11 +10,11 @@
 
 	.form-control {
 		border-color: $border-color;
-		box-shadow: $form-control-box-shadow;
+		box-shadow: $input-box-shadow;
 
 		&:focus {
 			border-color: darken($border-color, 10%);
-			box-shadow: $form-control-box-shadow;
+			box-shadow: $input-box-shadow;
 		}
 	}
 
