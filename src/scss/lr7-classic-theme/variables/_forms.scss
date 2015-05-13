@@ -15,15 +15,31 @@ $input-label-font-size: 12px;
 $input-label-desktop-font-size: 14px;
 
 $input-bg:                                 #FFF;
-
-$input-border-disabled: #CFD7DE;
-$input-bg-disabled:                        #FFF;
-$input-color-placeholder-disabled: #EBEEF0;
+$input-bg-disabled:                        $input-bg;
 
 $input-color:                              $text-color;
+$input-color-focus: $brand-primary;
+
 $input-border:                             $brand-default;
-$input-border-focus:                       $brand-primary;
-$input-color-placeholder:                  #D7D9DD;
+$input-border-focus:                       $input-color-focus;
+$input-border-disabled: #CFD7DE;
+
+$input-border-radius: 0;
+$input-border-radius-large: $input-border-radius;
+$input-border-radius-small: $input-border-radius;
+
+$input-border-top-width: 0;
+$input-border-right-width: 0;
+$input-border-bottom-width: 2px;
+$input-border-left-width: 0;
+$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width;
+
+$input-color-placeholder:                  lighten($text-color, 12%);
+$input-color-placeholder-focus: $input-border-focus;
+
+$input-readonly-bg: #FAFAFA;
+$input-readonly-border: $input-border;
+$input-readonly-color: $text-color;
 
 $input-font-size-base: 16px;
 $input-font-size-large: 18px;
