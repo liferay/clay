@@ -224,9 +224,23 @@ collapse
 	<div class="col-md-12">
 		<h3>Basic Form Elements</h3>
 
-		<div class="form-group" style="margin-bottom:0;">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use javascript on input focus to add class <code>focus</code> on label to change the color of the label.</p>
+		</blockquote>
+
+		<div class="form-group">
 			<label>Default text input</label>
 			<input class="form-control" placeholder="Placeholder" type="text">
+		</div>
+
+		<div class="form-group">
+			<label>Password input</label>
+			<input class="form-control" placeholder="Enter password" type="password">
+		</div>
+
+		<div class="form-group">
+			<label>Textarea</label>
+			<textarea class="form-control" placeholder="Placeholder"></textarea>
 		</div>
 
 <div class="uxgl-toggle-code">
@@ -236,37 +250,15 @@ collapse
 	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
     &lt;label&gt;Default text input&lt;/label&gt;
     &lt;input class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
-&lt;/div&gt;</code></pre>
-</div>
+&lt;/div&gt;
 
-		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
-			<label>Password input</label>
-			<input class="form-control" placeholder="Enter password" type="password">
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
+&lt;div class=&quot;form-group&quot;&gt;
     &lt;label&gt;Password input&lt;/label&gt;
-
     &lt;input class=&quot;form-control&quot; placeholder=&quot;Enter password&quot; type=&quot;password&quot;&gt;
-&lt;/div&gt;</code></pre>
-</div>
+&lt;/div&gt;
 
-		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
-			<label>Textarea</label>
-			<textarea class="form-control" placeholder="Placeholder"></textarea>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code class="html">&lt;div class=&quot;form-group&quot; style=&quot;margin-top:10px;&quot;&gt;
+&lt;div class=&quot;form-group&quot;&gt;
     &lt;label&gt;Textarea&lt;/label&gt;
-
     &lt;textarea class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot;&gt;&lt;/textarea&gt;
 &lt;/div&gt;</code></pre>
 </div>
@@ -283,25 +275,24 @@ collapse
 		<h5>Checkboxes</h5>
 
 <!-- Checkboxes unable to be styled in Firefox with this method. See https://bugzilla.mozilla.org/show_bug.cgi?id=605985
-
 Checkboxes unable to be styled in IE with this method. -->
 
 		<div>
-			<label class="checkbox-default1">
+			<label class="checkbox-default">
 				<input class="input-sm" type="checkbox" value="">
 			</label>
 		</div>
-		<label class="checkbox-default1">
+		<label class="checkbox-default">
 			<input type="checkbox" value="">
 			Label
 		</label>
-		<div class="checkbox checkbox-default1">
+		<div class="checkbox checkbox-default">
 			<label>
 				<input class="input-sm" type="checkbox" value="">
 				Label with class checkbox
 			</label>
 		</div>
-		<div class="checkbox checkbox-default1 disabled">
+		<div class="checkbox checkbox-default disabled">
 			<label>
 				<input checked disabled type="checkbox" value="">
 				Disabled Check Box
@@ -309,15 +300,15 @@ Checkboxes unable to be styled in IE with this method. -->
 		</div>
 
 		<div>
-			<label class="checkbox-inline checkbox-default1">
+			<label class="checkbox-inline checkbox-default">
 				<input type="checkbox" id="inlineCheckbox1" value="option1">
 				1
 			</label>
-			<label class="checkbox-inline checkbox-default1">
+			<label class="checkbox-inline checkbox-default">
 				<input type="checkbox" id="inlineCheckbox2" value="option2">
 				2
 			</label>
-			<label class="checkbox-inline checkbox-default1">
+			<label class="checkbox-inline checkbox-default">
 				<input type="checkbox" id="inlineCheckbox3" value="option3">
 				3
 			</label>
@@ -328,42 +319,38 @@ Checkboxes unable to be styled in IE with this method. -->
 		<h5>Radio Buttons</h5>
 
 		<div>
-			<label class="radio-default1">
+			<label class="radio-default">
 				<input type="radio" value="">
-				<span class="skin"></span>
 			</label>
 		</div>
 
-		<label class="radio-default1">
+		<label class="radio-default">
 			<input type="radio" value="">
-			<span class="skin"></span>
 			Label
 		</label>
 
-		<div class="radio radio-default1">
+		<div class="radio radio-default">
 			<label>
 				<input type="radio">
-				<span class="skin"></span>
 				Regular Radio Button
 			</label>
 		</div>
 
-		<div class="radio radio-default1 disabled">
+		<div class="radio radio-default disabled">
 			<label>
 				<input disabled type="radio">
-				<span class="skin"></span>
 				Disabled Radio Button
 			</label>
 		</div>
 
-		<label class="radio-default1 radio-inline">
-			<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"><span class="skin"></span> 1
+		<label class="radio-default radio-inline">
+			<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"> 1
 		</label>
-		<label class="radio-default1 radio-inline">
-			<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"><span class="skin"></span> 2
+		<label class="radio-default radio-inline">
+			<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"> 2
 		</label>
-		<label class="radio-default1 radio-inline">
-			<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"><span class="skin"></span> 3
+		<label class="radio-default radio-inline">
+			<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"> 3
 		</label>
 	</div>
 </div>
@@ -372,17 +359,16 @@ Checkboxes unable to be styled in IE with this method. -->
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-  <pre><code class="html">&lt;div class=&quot;checkbox checkbox-default1&quot;&gt;
+  <pre><code class="html">&lt;div class=&quot;checkbox checkbox-default&quot;&gt;
     &lt;label&gt;
         &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
         Label with class checkbox
     &lt;/label&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;radio radio-default1&quot;&gt;
+&lt;div class=&quot;radio radio-default&quot;&gt;
     &lt;label&gt;
         &lt;input type=&quot;radio&quot;&gt;
-        &lt;span class=&quot;skin&quot;&gt;&lt;/span&gt;
         Regular Radio Button
     &lt;/label&gt;
 &lt;/div&gt;</code></pre>
@@ -438,24 +424,24 @@ Checkboxes unable to be styled in IE with this method. -->
 				<h5>Custom Checkbox**</h5>
 
 				<div>
-					<label class="checkbox-default">
+					<label class="checkbox-default1">
 						<input class="input-sm" type="checkbox" value="">
 						<span class="skin"></span>
 					</label>
 				</div>
-				<label class="checkbox-default">
+				<label class="checkbox-default1">
 					<input type="checkbox" value="">
 					<span class="skin"></span>
 					Label
 				</label>
-				<div class="checkbox checkbox-default">
+				<div class="checkbox checkbox-default1">
 					<label>
 						<input class="input-sm" type="checkbox" value="">
 						<span class="skin"></span>
 						Label with class checkbox
 					</label>
 				</div>
-				<div class="checkbox checkbox-default disabled">
+				<div class="checkbox checkbox-default1 disabled">
 					<label>
 						<input checked disabled type="checkbox" value="">
 						<span class="skin"></span>
@@ -464,15 +450,15 @@ Checkboxes unable to be styled in IE with this method. -->
 				</div>
 
 				<div>
-					<label class="checkbox-inline checkbox-default">
+					<label class="checkbox-inline checkbox-default1">
 						<input type="checkbox" id="inlineCheckbox1" value="option1">
 						<span class="skin"></span> 1
 					</label>
-					<label class="checkbox-inline checkbox-default">
+					<label class="checkbox-inline checkbox-default1">
 						<input type="checkbox" id="inlineCheckbox2" value="option2">
 						<span class="skin"></span> 2
 					</label>
-					<label class="checkbox-inline checkbox-default">
+					<label class="checkbox-inline checkbox-default1">
 						<input type="checkbox" id="inlineCheckbox3" value="option3">
 						<span class="skin"></span> 3
 					</label>
@@ -522,19 +508,19 @@ Checkboxes unable to be styled in IE with this method. -->
 				<h5>Custom Radio**</h5>
 
 				<div>
-					<label class="radio-default">
+					<label class="radio-default1">
 						<input type="radio" value="">
 						<span class="skin"></span>
 					</label>
 				</div>
 
-				<label class="radio-default">
+				<label class="radio-default1">
 					<input type="radio" value="">
 					<span class="skin"></span>
 					Label
 				</label>
 
-				<div class="radio radio-default">
+				<div class="radio radio-default1">
 					<label>
 						<input type="radio">
 						<span class="skin"></span>
@@ -542,7 +528,7 @@ Checkboxes unable to be styled in IE with this method. -->
 					</label>
 				</div>
 
-				<div class="radio radio-default disabled">
+				<div class="radio radio-default1 disabled">
 					<label>
 						<input disabled type="radio">
 						<span class="skin"></span>
@@ -550,13 +536,13 @@ Checkboxes unable to be styled in IE with this method. -->
 					</label>
 				</div>
 
-				<label class="radio-default radio-inline">
+				<label class="radio-default1 radio-inline">
 					<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"><span class="skin"></span> 1
 				</label>
-				<label class="radio-default radio-inline">
+				<label class="radio-default1 radio-inline">
 					<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"><span class="skin"></span> 2
 				</label>
-				<label class="radio-default radio-inline">
+				<label class="radio-default1 radio-inline">
 					<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"><span class="skin"></span> 3
 				</label>
 			</div>
@@ -570,22 +556,22 @@ Checkboxes unable to be styled in IE with this method. -->
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Select Box</h4>
 
 		<div class="form-group">
 			<label>Regular Select Box</label>
-
 			<select class="form-control">
 				<option>Sample 1</option>
 				<option>Sample 2</option>
 				<option>Sample 3</option>
 				<option>Sample 4</option>
 			</select>
+		</div>
 
+		<div class="form-group">
 			<label>Select Box with Multiple Select Options</label>
-
 			<select class="form-control" multiple>
 				<option>Sample 1</option>
 				<option>Sample 2</option>
@@ -597,6 +583,36 @@ Checkboxes unable to be styled in IE with this method. -->
 				<option>Sample 8</option>
 			</select>
 		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label&gt;Regular Select Box&lt;/label&gt;
+    &lt;select class=&quot;form-control&quot;&gt;
+        &lt;option&gt;Sample 1&lt;/option&gt;
+        &lt;option&gt;Sample 2&lt;/option&gt;
+        &lt;option&gt;Sample 3&lt;/option&gt;
+        &lt;option&gt;Sample 4&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label&gt;Select Box with Multiple Select Options&lt;/label&gt;
+    &lt;select class=&quot;form-control&quot; multiple&gt;
+        &lt;option&gt;Sample 1&lt;/option&gt;
+        &lt;option&gt;Sample 2&lt;/option&gt;
+        &lt;option&gt;Sample 3&lt;/option&gt;
+        &lt;option&gt;Sample 4&lt;/option&gt;
+        &lt;option&gt;Sample 5&lt;/option&gt;
+        &lt;option&gt;Sample 6&lt;/option&gt;
+        &lt;option&gt;Sample 7&lt;/option&gt;
+        &lt;option&gt;Sample 8&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 	</div>
 </div>
 
@@ -609,32 +625,68 @@ Checkboxes unable to be styled in IE with this method. -->
 
 			<input id="inputFile" type="file">
 		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse5">
+	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;sr-only&quot;&gt;FILE UPLOAD&lt;/label&gt;
+
+    &lt;input id=&quot;inputFile&quot; type=&quot;file&quot;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Disabled States</h3>
+		<h3>Disabled Inputs</h3>
 
 		<div class="form-group">
 			<label>Text Input</label>
-			<input disabled class="form-control" placeholder="Placeholder" type="text">
+			<input disabled class="form-control" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
 		</div>
 
 		<div class="form-group">
 			<label>Password Input</label>
-			<input class="form-control" disabled placeholder="Enter password" type="password">
+			<input class="form-control" disabled placeholder="Enter password" type="password" value="password">
 		</div>
 
 		<div class="form-group">
 			<label>Textarea</label>
-			<textarea class="form-control" disabled placeholder="Placeholder"></textarea>
+			<textarea class="form-control" disabled placeholder="Placeholder">Plunger pot, extra siphon latte</textarea>
+		</div>
+
+		<div class="form-group">
+			<label>Regular Select Box</label>
+			<select class="form-control" disabled>
+				<option>Sample 1</option>
+				<option>Sample 2</option>
+				<option>Sample 3</option>
+				<option>Sample 4</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label>Select Box with Multiple Select Options</label>
+			<select class="form-control" disabled multiple>
+				<option>Sample 1</option>
+				<option>Sample 2</option>
+				<option>Sample 3</option>
+				<option>Sample 4</option>
+				<option>Sample 5</option>
+				<option>Sample 6</option>
+				<option>Sample 7</option>
+				<option>Sample 8</option>
+			</select>
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse4">
+<div class="collapse" id="codeCollapse6">
 	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
       &lt;label&gt;Disabled Text Input&lt;/label&gt;
       &lt;input disabled class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
@@ -651,19 +703,27 @@ Checkboxes unable to be styled in IE with this method. -->
 &lt;/div&gt;</code></pre>
 </div>
 
-		<h4 class="text-primary">Fieldset Disabled</h4>
+	</div>
+</div>
 
-		<form style="padding: 10px;">
-			<fieldset disabled="">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Disabled Fieldset</h3>
+
+		<form style="margin-bottom: 15px;">
+			<fieldset disabled>
 				<div class="form-group">
 					<label for="disabledTextInput">Disabled input</label>
-					<input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+					<input type="text" id="disabledTextInput" class="form-control" value="Plunger pot, extra siphon latte">
 				</div>
 
 				<div class="form-group">
 					<label for="disabledSelect">Disabled select menu</label>
 					<select id="disabledSelect" class="form-control">
-						<option>Disabled select</option>
+						<option>Sample 1</option>
+						<option>Sample 2</option>
+						<option>Sample 3</option>
+						<option>Sample 4</option>
 					</select>
 				</div>
 
@@ -688,10 +748,10 @@ Checkboxes unable to be styled in IE with this method. -->
 		</form>
 
 <div class="uxgl-toggle-code">
-  <a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse5">
-  <pre><code class="html">&lt;form&gt;
+<div class="collapse" id="codeCollapse7">
+	<pre><code class="html">&lt;form&gt;
     &lt;fieldset disabled=&quot;&quot;&gt;
         &lt;div class=&quot;form-group&quot;&gt;
             &lt;label for=&quot;disabledTextInput&quot;&gt;Disabled input&lt;/label&gt;
@@ -734,36 +794,26 @@ Checkboxes unable to be styled in IE with this method. -->
 		<h3>Read Only States<h3>
 
 		<div class="form-group">
-			<label>Readonly Text Input</label>
-			<input class="form-control" placeholder="Placeholder" readonly type="text">
+			<label>Text Input (Read Only)</label>
+			<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 		</div>
 
 		<div class="form-group">
-			<label>Password Input</label>
-			<input class="form-control" placeholder="Enter password" readonly type="password">
-		</div>
-
-		<div class="form-group">
-			<label>Textarea</label>
-			<textarea class="form-control" placeholder="Placeholder" readonly></textarea>
+			<label>Textarea (Read Only)</label>
+			<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse8"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse6">
+<div class="collapse" id="codeCollapse8">
 	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Readonly Text Input&lt;/label&gt;
+    &lt;label&gt;Text Input (Read Only)&lt;/label&gt;
     &lt;input class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; readonly type=&quot;text&quot;&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Password Input&lt;/label&gt;
-    &lt;input class=&quot;form-control&quot; placeholder=&quot;Enter password&quot; readonly type=&quot;password&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Textarea&lt;/label&gt;
+    &lt;label&gt;Textarea (Read Only)&lt;/label&gt;
     &lt;textarea class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; readonly&gt;&lt;/textarea&gt;
 &lt;/div&gt;</code></pre>
 </div>
@@ -771,31 +821,21 @@ Checkboxes unable to be styled in IE with this method. -->
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Form Element Sizes</h3>
 
-		<div class="form-group" style="margin-bottom: 0;">
+		<div class="form-group">
 			<label>Small text input</label>
 			<input class="form-control input-sm" placeholder="Placeholder" type="text">
 		</div>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse7">
-	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Small text input&lt;/label&gt;
-    &lt;input class=&quot;form-control input-sm&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
+		<div class="form-group">
 			<label>Default text input</label>
 			<input class="form-control" placeholder="Placeholder" type="text">
 		</div>
 
-		<div class="form-group" style="margin-bottom:0;margin-top:20px;">
+		<div class="form-group">
 			<label>Large text input</label>
 			<input class="form-control input-lg" placeholder="Placeholder" type="text">
 		</div>
@@ -805,6 +845,16 @@ Checkboxes unable to be styled in IE with this method. -->
 </div>
 <div class="collapse" id="codeCollapse9">
 	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label&gt;Small text input&lt;/label&gt;
+    &lt;input class=&quot;form-control input-sm&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label&gt;Default text input&lt;/label&gt;
+    &lt;input class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-group&quot;&gt;
     &lt;label&gt;Large text input&lt;/label&gt;
     &lt;input class=&quot;form-control input-lg&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
 &lt;/div&gt;</code></pre>
@@ -813,7 +863,7 @@ Checkboxes unable to be styled in IE with this method. -->
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Input Group with Addons</h3>
 
