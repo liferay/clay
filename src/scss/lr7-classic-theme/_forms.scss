@@ -41,7 +41,7 @@ select {
 textarea.form-control {
 	border: 2px solid $input-border;
 	border-width: $form-control-border-width;
-	padding: $padding-base-vertical;
+	padding: 0;
 
 	&:focus {
 		border: 2px solid $input-border;
@@ -126,19 +126,15 @@ label {
 		margin-top: 0;
 		position: absolute;
 		top: 0;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			margin-top: 1px;
-		}
 	}
 }
 
 .checkbox-default {
 	input[type='checkbox'] {
-		height: 18px;
+		height: $checkbox-size;
 		margin-top: 0;
 		vertical-align: bottom;
-		width: 18px;
+		width: $checkbox-size;
 
 		&:checked + .skin:after {
 			color: $checkbox-checked-color;
@@ -167,15 +163,15 @@ label {
 			background-color: $checkbox-bg;
 			border: 1px solid $checkbox-border;
 			display: block;
-			height: 17px;
-			width: 17px;
+			height: $checkbox-size;
+			width: $checkbox-size;
 
 			&:after {
 				content: '';
 				display: block;
 				font-family: 'fontawesome-alloy';
 				font-size: 11px;
-				line-height: 15px;
+				line-height: $checkbox-size;
 				position: relative;
 				text-align: center;
 			}
@@ -204,21 +200,21 @@ label {
 
 .radio-default {
 	input[type='radio'] {
-		width: 17px;
+		width: 19px;
 
 		&:checked {
 			+ .skin:after {
 				background-color: $radio-check-color;
-				border-width: 0px;
+				border-width: 0;
 				border-radius: 20px;
 				content: ' ';
 				display: block;
-				font-family: 'Glyphicons Halflings';
-				font-size: 8px;
 				height: 7px;
-				margin-left: 5px;
-				margin-top: -12px;
+				left: 50%;
+				margin-left: -3.5px;
+				margin-top: -3.5px;
 				position: absolute;
+				top: 50%;
 				width: 7px;
 			}
 
@@ -265,9 +261,9 @@ label {
 			display: block;
 			font-family: 'Glyphicons Halflings';
 			font-size: 8px;
-			height: 17px;
+			height: 19px;
 			position: relative;
-			width: 17px;
+			width: 19px;
 		}
 	}
 }
@@ -396,7 +392,7 @@ label {
 				font-family: 'fontawesome-alloy';
 				font-size: 7px;
 				height: 100%;
-				line-height: $checkbox-size - 2;
+				line-height: $checkbox-size;
 				width: 100%;
 			}
 		}
