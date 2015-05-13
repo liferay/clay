@@ -1,18 +1,22 @@
 //Forms
 label {
 	color: $brand-default;
-	font-size: $label-font-size;
+	font-size: $input-label-font-size;
 	font-weight: 500;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $input-label-desktop-font-size;
+	}
 }
 
 select {
 	&.form-control {
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAbCAYAAAD77kbeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMTAyQkIzN0QwRUMxMUU0QjE5RUU1MDAxMkJEQkU0MSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMTAyQkIzOEQwRUMxMUU0QjE5RUU1MDAxMkJEQkU0MSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwQTdDNDZBRDBFQTExRTRCMTlFRTUwMDEyQkRCRTQxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjMxMDJCQjM2RDBFQzExRTRCMTlFRTUwMDEyQkRCRTQxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+keLcWgAAATVJREFUeNpi/P//PwOloH3uOlYgNQuI0yqTg35Tah4TA3VAJRAnQGmKASOlIQUMJW0gdRaI2YH4FxCbAEPr8oCFFNBBzEBqHtRBIMAGxHOh4gMWfcVAbIYmZgoVp3/0AUNDA0idB2IOLNI/gNgQGI036BZSSNHGgUMJSHweudFIbvTlA7ElATWWUHW0jz6g71WB1EUg5iRC+Xcg1gdG421S7GAhwyPVQPycBPU1QBxP13KKFoCJYRCCUUeNOmpEOIrkcgpYeC4EUjYkaDkCLDzjaeooIGghsURvoXn0QauMGmJLc1KrGErS1EQgPk5AzXGouhHcnoJGI8jCehzS9eQ6iBpFQi8Qn0YTA3Ui+ga6N6MLpM5AOw0D35uBRiPIAa1QbiulDiK3nMIaYECsCKUpBgABBgA6l2XG4EUdvAAAAABJRU5ErkJggg==);
-		background-repeat: no-repeat;
-		background-position: right center;
-		background-size: 18px auto;
-		-webkit-appearance: none;
 		-moz-appearance: none;
+		-webkit-appearance: none;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAbCAYAAAD77kbeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMTAyQkIzN0QwRUMxMUU0QjE5RUU1MDAxMkJEQkU0MSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMTAyQkIzOEQwRUMxMUU0QjE5RUU1MDAxMkJEQkU0MSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAwQTdDNDZBRDBFQTExRTRCMTlFRTUwMDEyQkRCRTQxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjMxMDJCQjM2RDBFQzExRTRCMTlFRTUwMDEyQkRCRTQxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+keLcWgAAATVJREFUeNpi/P//PwOloH3uOlYgNQuI0yqTg35Tah4TA3VAJRAnQGmKASOlIQUMJW0gdRaI2YH4FxCbAEPr8oCFFNBBzEBqHtRBIMAGxHOh4gMWfcVAbIYmZgoVp3/0AUNDA0idB2IOLNI/gNgQGI036BZSSNHGgUMJSHweudFIbvTlA7ElATWWUHW0jz6g71WB1EUg5iRC+Xcg1gdG421S7GAhwyPVQPycBPU1QBxP13KKFoCJYRCCUUeNOmpEOIrkcgpYeC4EUjYkaDkCLDzjaeooIGghsURvoXn0QauMGmJLc1KrGErS1EQgPk5AzXGouhHcnoJGI8jCehzS9eQ6iBpFQi8Qn0YTA3Ui+ga6N6MLpM5AOw0D35uBRiPIAa1QbiulDiK3nMIaYECsCKUpBgABBgA6l2XG4EUdvAAAAABJRU5ErkJggg==);
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-size: 18px auto;
 
 		&::-ms-expand {
 			display: none;
@@ -36,10 +40,12 @@ select {
 
 textarea.form-control {
 	border: 2px solid $input-border;
+	border-width: $form-control-border-width;
 	padding: $padding-base-vertical;
 
 	&:focus {
 		border: 2px solid $input-border;
+		border-width: $form-control-border-width;
 		border-color: $input-border-focus;
 	}
 }
@@ -48,12 +54,13 @@ textarea.form-control {
 	border-radius: $form-control-border-radius;
 	border-width: 0 0 2px 0;
 	box-shadow: $form-control-box-shadow;
-	font-size: $input-font-size-base;
+	font-size: $form-control-font-size;
 	height: $input-mobile-height-base;
-	padding: $padding-base-vertical;
+	padding: $form-control-padding-vertical $form-control-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		height: $input-height-base;
+		font-size: $form-control-desktop-font-size;
 	}
 
 	&:focus {
@@ -116,9 +123,13 @@ label {
 	.skin {
 		display: inline-block;
 		left: 0;
-		margin-top: 1px;
+		margin-top: 0;
 		position: absolute;
 		top: 0;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin-top: 1px;
+		}
 	}
 }
 
@@ -302,12 +313,6 @@ label {
 				border-color: transparent;
 			}
 		}
-	}
-}
-
-@media screen and (max-width: $grid-float-breakpoint) {
-	.form-control {
-		font-size: 16px;
 	}
 }
 
