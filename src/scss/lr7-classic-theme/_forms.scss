@@ -1,10 +1,14 @@
 label {
-	color: $brand-default;
+	color: $input-label-color;
 	font-size: $input-label-font-size;
 	font-weight: 500;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		font-size: $input-label-desktop-font-size;
+	}
+
+	&.focus {
+		color: $input-label-focus-color;
 	}
 }
 
@@ -25,30 +29,25 @@ select.form-control {
 	}
 
 	&[multiple] {
-		background-image: none;
-		border-bottom-width: 2px;
-		padding: $padding-base-vertical 0;
-
-		&:focus {
-			border-color: $input-border-focus;
-		}
+		background: none;
+		padding: $input-padding-vertical $input-padding-horizontal;
 	}
 }
 
 .form-control {
 	border-width: $input-border-width;
-	box-shadow: $form-control-box-shadow;
-	font-size: $form-control-font-size;
+	box-shadow: $input-box-shadow;
+	font-size: $input-font-size;
 	height: $input-mobile-height-base;
-	padding: $form-control-padding-vertical $form-control-padding-horizontal;
+	padding: $input-padding-vertical $input-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		height: $input-height-base;
-		font-size: $form-control-desktop-font-size;
+		font-size: $input-desktop-font-size;
 	}
 
 	&:focus {
-		box-shadow: $form-control-focus-box-shadow;
+		box-shadow: $input-box-shadow-focus;
 		color: $input-color-focus;
 	}
 }
@@ -81,7 +80,7 @@ select[disabled].form-control > option {
 	padding: 15px;
 }
 
-// Color Placeholders
+// Input Placeholders
 // ($element, $color)
 
 @include color-placeholder("input:focus", $input-color-placeholder-focus);
