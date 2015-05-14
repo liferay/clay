@@ -55,15 +55,10 @@
 @import "bootstrap/responsive-utilities";
 
 // Import _styled Theme Files
-// @import "lr7-_styled-theme/badges";
-// @import "lr7-_styled-theme/buttons";
 // @import "lr7-_styled-theme/cards";
 // @import "lr7-_styled-theme/dropdowns";
-// @import "lr7-_styled-theme/equal-height-columns";
-// @import "lr7-_styled-theme/figures";
 // @import "lr7-_styled-theme/forms";
 // @import "lr7-_styled-theme/form-validation";
-// @import "lr7-_styled-theme/grid";
 // @import "lr7-_styled-theme/icons";
 // @import "lr7-_styled-theme/input-groups";
 // @import "lr7-_styled-theme/labels";
@@ -76,11 +71,17 @@
 // @import "lr7-_styled-theme/side-navigation";
 // @import "lr7-_styled-theme/slideout-drawer";
 // @import "lr7-_styled-theme/tables";
-// @import "lr7-_styled-theme/toggle-card";
 // @import "lr7-_styled-theme/toggle-switch";
 // @import "lr7-_styled-theme/toolbars";
 // @import "lr7-_styled-theme/type";
 // @import "lr7-_styled-theme/user-icons";
+
+// Files that Classic needs to inherit from _styled
+@import "lr7-_styled-theme/badges";
+@import "lr7-_styled-theme/buttons";
+@import "lr7-_styled-theme/equal-height-columns";
+@import "lr7-_styled-theme/figures";
+@import "lr7-_styled-theme/toggle-card";
 
 // Import Classic Theme Files
 @import "lr7-classic-theme/alerts";
@@ -90,11 +91,9 @@
 @import "lr7-classic-theme/button-groups";
 @import "lr7-classic-theme/cards";
 @import "lr7-classic-theme/dropdowns";
-@import "lr7-classic-theme/equal-height-columns";
 @import "lr7-classic-theme/figures";
 @import "lr7-classic-theme/forms";
 @import "lr7-classic-theme/form-validation";
-@import "lr7-classic-theme/grid";
 @import "lr7-classic-theme/icons";
 @import "lr7-classic-theme/input-groups";
 @import "lr7-classic-theme/labels";
@@ -115,7 +114,6 @@
 @import "lr7-classic-theme/sliders";
 @import "lr7-classic-theme/tables";
 @import "lr7-classic-theme/timelines";
-@import "lr7-classic-theme/toggle-card";
 @import "lr7-classic-theme/toggle-switch";
 @import "lr7-classic-theme/toolbars";
 @import "lr7-classic-theme/tooltips";
