@@ -1,0 +1,10 @@
+$list-group-border: darken($list-group-bg, 5);
+$list-group-border-radius: 0;
+
+$list-group-header-bg: #F5F8FA;
+$list-group-header-font-weight: bold; // acts as the font-weight when open
+$list-group-header-collapsed-font-weight: normal;
+
+$collapsible-list-group-icon-collapsed: '\f105';
+$collapsible-list-group-icon-open: '\f107';
+$collapsible-list-group-icon-size: 20px;
