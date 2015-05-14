@@ -7,6 +7,10 @@ label {
 		font-size: $input-label-desktop-font-size;
 	}
 
+	&.disabled {
+		opacity: 0.5;
+	}
+
 	&.focus {
 		color: $input-label-focus-color;
 	}
@@ -62,6 +66,10 @@ select.form-control {
 		color: $input-border;
 		opacity: 0.5;
 	}
+}
+
+fieldset[disabled] label {
+	opacity: 0.5;
 }
 
 select[disabled].form-control > option {
