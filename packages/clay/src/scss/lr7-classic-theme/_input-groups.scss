@@ -16,7 +16,7 @@
 	&:first-child {
 		> .btn,
 		> .btn-group {
-			margin-right: -$input-border-left-width - 1;
+			margin-right: -$input-border-left-width;
 
 			&:focus,
 			&:hover {
