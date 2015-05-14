@@ -12,21 +12,28 @@
 	color: #FFF;
 }
 
-// Button input groups
 .input-group-btn {
 	&:first-child {
-		> .btn, > .btn-group {
-			margin-right: -1px;
+		> .btn,
+		> .btn-group {
+			margin-right: -$input-border-left-width - 1;
+
+			&:focus,
+			&:hover {
+				z-index: 3;
+			}
 		}
 	}
 
 	&:last-child {
 		> .btn,
 		> .btn-group {
-			margin-left: 0px;
+			margin-left: -$input-border-right-width;
 		}
 	}
 }
+
+
 
 .input-group-input {
 	display: table-cell;
@@ -34,4 +41,10 @@
 	.form-control {
 		display: block;
 	}
+}
+
+
+.input-group .form-control {
+	padding-left: 5px;
+	padding-right: 5px;
 }
