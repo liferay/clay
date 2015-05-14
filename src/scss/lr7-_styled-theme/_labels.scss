@@ -1,17 +1,11 @@
-.label-circle {
-	&, .label {
-		border-radius: 20px;
-	}
-}
+.label {
+	a {
+		color: $label-color;
 
-.label-rounded {
-	&, .label {
-		border-radius: 3px;
-	}
-}
-
-.label-square {
-	&, .label {
-		border-radius: 0;
+		&:focus,
+		&:hover {
+			color: $label-link-hover-color;
+			text-decoration: none;
+		}
 	}
 }

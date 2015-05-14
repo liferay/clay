@@ -9,14 +9,7 @@
 	}
 
 	a {
-		color: $label-color;
 		margin-left: ($badge-padding-horizontal / 2) + 2;
-
-		&:focus,
-		&:hover {
-			color: $label-link-hover-color;
-			text-decoration: none;
-		}
 
 		&.icon-monospaced {
 			margin-left: 0;
