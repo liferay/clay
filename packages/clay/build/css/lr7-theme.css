@@ -7350,6 +7350,8 @@ label {
   @media screen and (min-width: 768px) {
     label {
       font-size: 14px; } }
+  label.disabled {
+    opacity: 0.5; }
   label.focus {
     color: #65B6F0; }
 
@@ -7385,6 +7387,9 @@ select.form-control {
 fieldset[disabled] .form-control, .form-control[disabled], .form-controlselect[disabled] {
   border-color: #CFD7DE;
   color: #869CAD;
+  opacity: 0.5; }
+
+fieldset[disabled] label {
   opacity: 0.5; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
