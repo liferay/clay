@@ -6434,6 +6434,12 @@ figcaption, .figcaption {
   background-color: rgba(245, 152, 76, 0.7);
   color: #FFF; }
 
+.label a {
+  color: #fff; }
+  .label a:focus, .label a:hover {
+    color: #555555;
+    text-decoration: none; }
+
 .toggle-card {
   -webkit-user-select: none;
   float: left;
