@@ -5,6 +5,72 @@ section: Extending Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+
+		<h3>Collapsible List Group</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Create collapsible list groups with <a href="/liferay-ux-guidelines/content/list-groups/#listGroups">List Group</a> and the Collapse module.</p>
+			<p>Use <code>.list-group-collapse-icon</code> to make an element display an icon and toggle between collapsed and open states. The icons can be changed by editing the <code>$collapsible-list-group-icon-collapsed</code> and <code>$collapsible-list-group-icon-open</code> variables.</p>
+		</blockquote>
+
+		<div class="list-group">
+			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse4">
+				List Group Heading
+				<span class="list-group-collapse-icon icon-monospaced"></span>
+			</a>
+			<div class="collapse" id="listGroupCollapse4">
+				<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+			</div>
+
+			<a aria-expanded="true" class="list-group-heading" data-toggle="collapse" href="#listGroupCollapse5">
+				List Group Heading
+				<span class="list-group-collapse-icon icon-monospaced"></span>
+			</a>
+			<div class="collapse in" id="listGroupCollapse5">
+				<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+			</div>
+
+			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse6">
+				List Group Heading
+				<span class="list-group-collapse-icon icon-monospaced"></span>
+			</a>
+			<div class="collapse" id="listGroupCollapse6">
+				<div class="list-group-item" style="padding: 24px 24px 30px" >Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+			</div>
+		</div>
+
+<pre><code class="html">```<div class="list-group">
+    <a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse4">
+        List Group Heading
+        <span class="list-group-collapse-icon icon-monospaced"></span>
+    </a>
+    <div class="collapse" id="listGroupCollapse4">
+        <div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+    </div>
+
+    <a aria-expanded="true" class="list-group-heading" data-toggle="collapse" href="#listGroupCollapse5">
+        List Group Heading
+        <span class="list-group-collapse-icon icon-monospaced"></span>
+    </a>
+    <div class="collapse in" id="listGroupCollapse5">
+        <div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+    </div>
+
+    <a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse6">
+        List Group Heading
+        <span class="list-group-collapse-icon icon-monospaced"></span>
+    </a>
+    <div class="collapse" id="listGroupCollapse6">
+        <div class="list-group-item"style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+    </div>
+</div>```</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+
 		<h3>Collapsible Linked List Groups</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
