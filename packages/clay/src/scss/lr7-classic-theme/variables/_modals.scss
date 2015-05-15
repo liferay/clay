@@ -1,9 +1,31 @@
 //Modals
+$modal-inner-padding: 16px 24px;
+$modal-title-padding: $modal-inner-padding;
+
 $modal-border-radius: $border-radius-default;
 $modal-box-shadow: $box-shadow-default;
 
-$modal-backdrop-opacity:                          .75 !default;
+$modal-backdrop-opacity:                          0.75;
 
-$modal-header-bg: lighten($brand-default, 40%);
+$modal-header-bg: #FCFEFF;
 $modal-header-color: $text-color;
 $modal-header-close-color: $text-color;
+
+$modal-body-bg: #F5F8F8;
+$modal-body-color: $text-color;
+
+$modal-footer-bg: $modal-header-bg;
+$modal-footer-color: $modal-header-color;
+
+$modal-full-screen-body-bg: #FFF;
+$modal-full-screen-desktop-body-bg: $modal-body-bg;
+
+$modal-full-screen-footer-bg: #29353D;
+$modal-full-screen-footer-desktop-bg: $modal-footer-bg;
+$modal-full-screen-footer-color: #FFF;
+$modal-full-screen-footer-desktop-color: $text-color;
+
+$modal-inverse-body-bg: #111314;
+$modal-inverse-body-color: #A7A7A7;
+
+$modal-btn-icon-color: #FFF;
