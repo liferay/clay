@@ -135,7 +135,8 @@ ms.use(define(metadata))
 			{
 				includePaths: bourbon.includePaths,
 				outputDir: 'css/',
-				outputStyle: 'expanded'
+				outputStyle: 'expanded',
+				sourceMap: true
 			}
 		)
 	)
