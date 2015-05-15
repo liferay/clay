@@ -403,11 +403,11 @@ collapse
 
 				<div class="modal-footer">
 					<div class="modal-footer-right">
-						<button class="btn btn-primary" type="button">Add</button>
+						<button class="btn btn-primary modal-btn-icon icon-ok" type="button">Add</button>
 					</div>
 
 					<div class="modal-footer-left">
-						<button class="btn btn-link close-modal" type="button">Cancel</button>
+						<button class="btn btn-link close-modal modal-btn-icon icon-remove" type="button">Cancel</button>
 					</div>
 
 					<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
@@ -531,11 +531,11 @@ collapse
 
 				<div class="modal-footer">
 					<div class="modal-footer-right">
-						<button class="btn btn-primary" type="button">Add</button>
+						<button class="btn btn-primary modal-btn-icon icon-ok" type="button">Add</button>
 					</div>
 
 					<div class="modal-footer-left">
-						<button class="btn btn-link close-modal" type="button">Cancel</button>
+						<button class="btn btn-link close-modal modal-btn-icon icon-remove" type="button">Cancel</button>
 					</div>
 
 					<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
@@ -559,25 +559,17 @@ collapse
 
 				<div class="modal-footer">
 					<div class="modal-footer-right">
-						<button class="btn btn-primary" type="button">Add</button>
+						<button class="btn btn-primary modal-btn-icon icon-ok" type="button">Add</button>
 					</div>
 
 					<div class="modal-footer-left">
-						<button class="btn btn-link close-modal" type="button">Cancel</button>
+						<a href="#1" class="btn btn-link close-modal modal-btn-icon icon-remove" type="button">Cancel</a>
 					</div>
 
 					<div class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<blockquote class="blockquote-warning blockquote-sm">
-			<p>Currently in mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</p>
-		</blockquote>
 	</div>
 </div>
 
@@ -595,6 +587,86 @@ collapse
 </div>
 
 <div id="modalDisplays">
+
+	<div class="row row-spacing">
+		<div class="col-md-12">
+			<h3>Full Screen Modal</h3>
+
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>A specialized fixed position modal that expands to fit the browser window.</p>
+				<p>In mobile:</p>
+				<p>It becomes an overlay with width and height equal to the viewport width and height. Modal-header content is hidden and modal-footer content becomes the heading. </p>
+				<p>Change modal button text into icons by combining class <code>modal-btn-icon</code> with an icon class name. For example, add <code>modal-btn-icon</code> and <code>icon-ok</code> on the primary button to change the text into a checkmark in mobile.</p>
+			</blockquote>
+
+			<div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
+
+			<div style="height:300px;position:relative;">
+				<div class="modal-dialog modal-full-screen" style="top:0;right:0;bottom:0;left:0;">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close close-modal" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+							<h4 class="modal-title">Modal Title</h4>
+						</div>
+
+						<div class="modal-body">
+							<h4>Modal Body</h4>
+						</div>
+
+						<div class="modal-footer">
+							<div class="modal-footer-right">
+								<button class="btn btn-primary modal-btn-icon icon-ok" type="button">Primary</button>
+							</div>
+
+							<div class="modal-footer-left">
+								<button class="btn btn-link close-modal modal-btn-icon icon-remove" type="button">Close</button>
+							</div>
+
+							<div class="modal-title">Modal Title</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">&lt;button class=&quot;btn btn-info&quot; data-target=&quot;#modalFullScreen&quot; data-toggle=&quot;modal&quot;&gt;Full Screen Modal&lt;/button&gt;
+
+&lt;div class=&quot;fade modal&quot; id=&quot;modalFullScreen&quot;&gt;
+    &lt;div class=&quot;modal-dialog modal-full-screen&quot;&gt;
+        &lt;div class=&quot;modal-content&quot;&gt;
+            &lt;div class=&quot;modal-header&quot;&gt;
+                &lt;button class=&quot;close close-modal&quot; data-dismiss=&quot;modal&quot; type=&quot;button&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+
+                &lt;h4 class=&quot;modal-title&quot;&gt;Modal Title&lt;/h4&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;modal-body&quot;&gt;
+                &lt;h4&gt;Modal Body&lt;/h4&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;modal-footer&quot;&gt;
+                &lt;div class=&quot;modal-footer-right&quot;&gt;
+                    &lt;button class=&quot;btn btn-primary modal-btn-icon icon-ok&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;modal-footer-left&quot;&gt;
+                    &lt;button class=&quot;btn btn-link close-modal modal-btn-icon icon-remove&quot; type=&quot;button&quot;&gt;Close&lt;/button&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;modal-title&quot;&gt;Add Picture to Documents and Media Library in Liferay Seven&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+	</div>
+
 	<div class="row">
 		<div class="col-md-6">
 			<h3>Small Modal</h3>
@@ -617,6 +689,38 @@ collapse
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse1">
+	<pre><code class="html">&lt;button class=&quot;btn btn-info&quot; data-target=&quot;#smallModal&quot; data-toggle=&quot;modal&quot;&gt;Small Modal&lt;/button&gt;
+
+&lt;div class=&quot;modal fade&quot; id=&quot;smallModal&quot;&gt;
+    &lt;div class=&quot;modal-dialog modal-sm&quot;&gt;
+        &lt;div class=&quot;modal-content&quot;&gt;
+            &lt;div class=&quot;modal-header&quot;&gt;
+                &lt;button class=&quot;close close-modal&quot; data-dismiss=&quot;modal&quot; type=&quot;button&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+
+                &lt;h4 class=&quot;modal-title&quot;&gt;Modal Title&lt;/h4&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;modal-body&quot;&gt;
+                &lt;h4&gt;Modal Body&lt;/h4&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;modal-footer&quot;&gt;
+                &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
+                &lt;button class=&quot;btn btn-link btn-sm close-modal&quot; type=&quot;button&quot;&gt;Close&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 		</div>
 
 		<div class="col-md-12">
@@ -643,6 +747,35 @@ collapse
 					</div>
 				</div>
 			</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+	<pre><code class="html">&lt;button class=&quot;btn btn-info&quot; data-target=&quot;#defaultModal&quot; data-toggle=&quot;modal&quot;&gt;Default Modal&lt;/button&gt;
+
+&lt;div class=&quot;modal fade&quot; id=&quot;defaultModal&quot;&gt;
+    &lt;div class=&quot;modal-dialog&quot;&gt;
+        &lt;div class=&quot;modal-content&quot;&gt;
+            &lt;div class=&quot;modal-header&quot;&gt;
+                &lt;button class=&quot;close close-modal&quot; data-dismiss=&quot;modal&quot; type=&quot;button&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+
+                &lt;h4 class=&quot;modal-title&quot;&gt;Modal Title&lt;/h4&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;modal-body&quot;&gt;
+                &lt;h4&gt;Modal Body&lt;/h4&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;modal-footer&quot;&gt;
+                &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
+                &lt;button class=&quot;btn btn-link btn-sm close-modal&quot; type=&quot;button&quot;&gt;Close&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 		</div>
 
 		<div class="col-md-12">
@@ -669,6 +802,35 @@ collapse
 					</div>
 				</div>
 			</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+	<pre><code class="html">&lt;button class=&quot;btn btn-info&quot; data-target=&quot;#largeModal&quot; data-toggle=&quot;modal&quot;&gt;Large Modal&lt;/button&gt;
+
+&lt;div class=&quot;modal fade&quot; id=&quot;largeModal&quot;&gt;
+    &lt;div class=&quot;modal-dialog modal-lg&quot;&gt;
+        &lt;div class=&quot;modal-content&quot;&gt;
+            &lt;div class=&quot;modal-header&quot;&gt;
+                &lt;button class=&quot;close close-modal&quot; data-dismiss=&quot;modal&quot; type=&quot;button&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+
+                &lt;h4 class=&quot;modal-title&quot;&gt;Modal Title&lt;/h4&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;modal-body&quot;&gt;
+                &lt;h4&gt;Modal Body&lt;/h4&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;modal-footer&quot;&gt;
+                &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
+                &lt;button class=&quot;btn btn-link btn-sm close-modal&quot; type=&quot;button&quot;&gt;Close&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 		</div>
 	</div>
 
