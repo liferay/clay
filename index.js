@@ -141,12 +141,49 @@ ms.use(define(metadata))
 	)
 	.use(templates('ejs'));
 
+function build(err, files) {
+	if (err) {
+		console.log(err);
+		return err;
+	}
+
+	if (argv.offline) {
+		var buildJS = path.resolve(ms.destination(), 'js', 'aui');
+		var srcAUI = path.resolve(__dirname, 'third_party', 'aui');
+
+		fs.ensureDir(
+			buildJS,
+			function(err) {
+				if (err) {
+					console.log(err);
+					return;
+				}
+
+				return fs.copy(
+					srcAUI,
+					buildJS,
+					function(err) {
+						if (err) {
+							console.log(err);
+						}
+					}
+				);
+			}
+		);
+	}
+}
+
 if (argv.watch) {
 	var watch = require('metalsmith-simplewatch');
 
 	ms.use(
 		watch(
 			{
+				buildFn: function(){
+					ms.build(build);
+				},
+				buildPath: path.resolve(__dirname, './build/'),
+				srcPath: path.resolve(__dirname, './src/'),
 				pattern: '**/*',
 			}
 		)
@@ -154,36 +191,4 @@ if (argv.watch) {
 }
 
 ms.destination('./build');
-ms.build(
-	function(err, files) {
-		if (err) {
-			console.log(err);
-			return err;
-		}
-
-		if (argv.offline) {
-			var buildJS = path.resolve(ms.destination(), 'js', 'aui');
-			var srcAUI = path.resolve(__dirname, 'third_party', 'aui');
-
-			fs.ensureDir(
-				buildJS,
-				function(err) {
-					if (err) {
-						console.log(err);
-						return;
-					}
-
-					return fs.copy(
-						srcAUI,
-						buildJS,
-						function(err) {
-							if (err) {
-								console.log(err);
-							}
-						}
-					);
-				}
-			);
-		}
-	}
-);
+ms.build(build);
