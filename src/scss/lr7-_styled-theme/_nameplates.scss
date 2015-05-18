@@ -2,7 +2,9 @@
 	@extend %equal-height-columns;
 }
 
-.nameplate-checkbox, .nameplate-icon, .nameplate-field {
+.nameplate-checkbox,
+.nameplate-icon,
+.nameplate-field {
 	@extend %equal-height-column-cell;
 
 	padding: 0 0.3em;
@@ -15,11 +17,15 @@
 	padding: 0 0.3em;
 	word-break: break-word;
 
-	h1, h2, h3 {
+	h1,
+	h2,
+	h3 {
 		margin-top: 0;
 	}
 
-	h4, h5, h6 {
+	h4,
+	h5,
+	h6 {
 		margin-top: 2px;
 	}
 
@@ -34,8 +40,8 @@
 .nameplate-label {
 	@extend .nameplate;
 
-	border-radius: 20px;
 	background-color: #EEE;
+	border-radius: 20px;
 	font-size: 11px;
 	margin: 0 5px 2px 0;
 	padding: 3px;
@@ -63,12 +69,15 @@
 		margin-left: 5px;
 		text-decoration: none;
 
-		&:focus, &:hover {
+		&:focus,
+		&:hover {
 			color: #555;
 		}
 	}
 
-	.nameplate-content, .nameplate-field, .nameplate-icon {
+	.nameplate-content,
+	.nameplate-field,
+	.nameplate-icon {
 		vertical-align: middle;
 		width: auto;
 	}
@@ -85,7 +94,8 @@
 	margin: 0 0 10px 0;
 	padding: 0;
 
-	> li, > .nameplate {
+	> li,
+	> .nameplate {
 		@extend .nameplate;
 
 		border-left-width: 0;
@@ -97,7 +107,9 @@
 		}
 	}
 
-	.nameplate-content, .nameplate-icon, .nameplate-field {
+	.nameplate-content,
+	.nameplate-icon,
+	.nameplate-field {
 		padding: 0 0.3em;
 		vertical-align: middle;
 	}
@@ -116,12 +128,14 @@
 .nameplate-list-heading {
 	background-color: #F8F8F8;
 
-	> a, > span {
+	> a,
+	> span {
 		color: $text-color;
 		display: inline-block;
 		padding: 1.1em;
 
-		&:focus, &:hover {
+		&:focus,
+		&:hover {
 			text-decoration: none;
 		}
 	}
@@ -152,7 +166,8 @@
 .profile-header {
 	max-width: 300px;
 
-	.nameplate, &.nameplate {
+	.nameplate,
+	&.nameplate {
 		margin: 0;
 	}
 

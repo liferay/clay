@@ -1,14 +1,3 @@
-@mixin color-user-icon($bg-color: #999, $color: #FFF) {
-	background-color: $bg-color;
-	color: $color;
-}
-
-@mixin size-user-icon($size) {
-	height: $size;
-	line-height: $size;
-	width: $size;
-}
-
 .nameplate-content {
 	small {
 		color: $brand-default;
@@ -34,15 +23,18 @@
 
 	@include size-user-icon(floor($line-height-base * $font-size-base + ($padding-base-vertical * 2) + 2));
 
-	&.user-icon-circle, .user-icon-circle & {
+	&.user-icon-circle,
+	.user-icon-circle & {
 		border-radius: 50%;
 	}
 
-	&.user-icon-rounded, .user-icon-rounded & {
+	&.user-icon-rounded,
+	.user-icon-rounded & {
 		border-radius: 5px;
 	}
 
-	&.user-icon-square, .user-icon-square & {
+	&.user-icon-square,
+	.user-icon-square & {
 		border-radius: 0;
 	}
 }
