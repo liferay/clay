@@ -2050,7 +2050,9 @@ you can use the generic selector below, but it's slower:
   content: "\f155";
 }
 
-.equal-height-column-cell, .card-row [class*="card-col"], .notification-content, .notification-field, .nameplate-checkbox, .nameplate-icon, .nameplate-field, .nameplate-content {
+.card-row [class*="card-col"], .equal-height-column-cell, .nameplate-checkbox,
+.nameplate-icon,
+.nameplate-field, .nameplate-content, .notification-content, .notification-field {
   display: table-cell;
   vertical-align: top;
 }
@@ -2059,7 +2061,8 @@ you can use the generic selector below, but it's slower:
   display: table-row;
 }
 
-.equal-height-columns, .card-row, .tabular-notification, .nameplate, .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate {
+.card-row, .equal-height-columns, .nameplate, .nameplate-label, .nameplate-list > li,
+.nameplate-list > .nameplate, .tabular-notification {
   display: table;
   width: 100%;
 }
@@ -2225,6 +2228,13 @@ you can use the generic selector below, but it's slower:
 /**
  * @param $element - CSS Selector
  * @param $color - Placeholder Color
+ */
+/**
+ * @param $bg-color - User icon background color
+ * @param $color - User icon color
+ */
+/**
+ * @param $size - User icon size
  */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -10053,6 +10063,202 @@ button.close {
   top: 20px;
 }
 
+.card, .card-horizontal {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.card.card-circle, .card-horizontal.card-circle {
+  border-radius: 20px;
+}
+
+.card.card-rounded, .card-horizontal.card-rounded {
+  border-radius: 5px;
+}
+
+.card.card-square, .card-horizontal.card-square {
+  border-radius: 0;
+}
+
+.card .divider, .card-horizontal .divider {
+  border-top: 1px solid #DDD;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card {
+  box-shadow: 0 0 1px #AAA;
+  overflow: hidden;
+}
+
+.card .card-row {
+  width: 100.4%;
+}
+
+.card .figure {
+  overflow: visible;
+}
+
+.card-header:after, .card-footer:after, .card-section:after {
+  clear: both;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.card-header .divider, .card-footer .divider, .card-section .divider {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.card-header {
+  padding: 1px 10px 0;
+}
+
+.card-footer {
+  padding: 0 10px 1px;
+}
+
+.card-section {
+  padding: 1px 10px;
+}
+
+.card-horizontal {
+  box-shadow: 0 0 1px #AAA;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-horizontal.card-circle [class*="card-col"]:first-child {
+  border-radius: 20px 0 0 20px;
+}
+
+.card-horizontal.card-circle [class*="card-col"]:last-child {
+  border-radius: 0 20px 20px 0;
+}
+
+.card-horizontal.card-rounded [class*="card-col"]:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.card-horizontal.card-rounded [class*="card-col"]:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.card-col-1 {
+  width: 8.33333%;
+}
+
+.card-col-2 {
+  width: 16.66667%;
+}
+
+.card-col-3 {
+  width: 25%;
+}
+
+.card-col-4 {
+  width: 33.33333%;
+}
+
+.card-col-5 {
+  width: 41.66667%;
+}
+
+.card-col-6 {
+  width: 50%;
+}
+
+.card-col-7 {
+  width: 58.33333%;
+}
+
+.card-col-8 {
+  width: 66.66667%;
+}
+
+.card-col-9 {
+  width: 75%;
+}
+
+.card-col-10 {
+  width: 83.33333%;
+}
+
+.card-col-11 {
+  width: 91.66667%;
+}
+
+.card-col-12 {
+  width: 100%;
+}
+
+.card-row {
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-row.card-row-padded .card-col-gutters:first-child {
+  padding-left: 0;
+}
+
+.card-row.card-row-padded .card-col-gutters:last-child {
+  padding-right: 0;
+}
+
+.card-row .card-col-gutters {
+  padding: 0 3%;
+}
+
+.card-row .card-col-gutters .divider {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.card-row [class*="card-col"] {
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+}
+
+.card-row [class*="card-col"] .img-absolute {
+  position: absolute;
+  top: 0;
+}
+
+.card-row [class*="card-col"] .img-responsive {
+  max-width: none;
+  width: 101%;
+}
+
+.card-row-padded {
+  padding: 10px;
+}
+
+.card-btn-row [class*="card-col"] {
+  overflow: visible;
+}
+
+.card-btn-row [class*="card-col"] a, .card-btn-row [class*="card-col"] button {
+  border-radius: 0;
+  display: block;
+  line-height: normal;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.card-btn-row [class*="card-col"] a:focus, .card-btn-row [class*="card-col"] a:hover, .card-btn-row [class*="card-col"] button:focus, .card-btn-row [class*="card-col"] button:hover {
+  text-decoration: none;
+}
+
+.card-btn-row [class*="card-col"] a [class^="icon-"], .card-btn-row [class*="card-col"] button [class^="icon-"] {
+  display: block;
+}
+
 .equal-height-column-cell {
   vertical-align: middle;
 }
@@ -10064,6 +10270,12 @@ button.close {
 
 .equal-height-columns {
   height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .form-control {
+    font-size: 16px;
+  }
 }
 
 figure, .figure {
@@ -10453,6 +10665,173 @@ figcaption, .figcaption {
   .modal-btn-icon[class*='icon-']:before {
     display: inline;
   }
+}
+
+.nameplate-checkbox,
+.nameplate-icon,
+.nameplate-field {
+  padding: 0 0.3em;
+  width: 1%;
+}
+
+.nameplate-content {
+  padding: 0 0.3em;
+  word-break: break-word;
+}
+
+.nameplate-content h1,
+.nameplate-content h2,
+.nameplate-content h3 {
+  margin-top: 0;
+}
+
+.nameplate-content h4,
+.nameplate-content h5,
+.nameplate-content h6 {
+  margin-top: 2px;
+}
+
+.nameplate-content small {
+  color: #777777;
+  display: block;
+}
+
+.nameplate-label {
+  background-color: #EEE;
+  border-radius: 20px;
+  font-size: 11px;
+  margin: 0 5px 2px 0;
+  padding: 3px;
+  width: auto;
+}
+
+.nameplate-label.form-control {
+  display: table;
+  height: 48px;
+}
+
+.nameplate-label.nameplate-label-circle {
+  border-radius: 20px;
+}
+
+.nameplate-label.nameplate-label-rounded {
+  border-radius: 3px;
+}
+
+.nameplate-label.nameplate-label-square {
+  border-radius: 0;
+}
+
+.nameplate-label a[class*="icon-"] {
+  color: #999;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.nameplate-label a[class*="icon-"]:focus,
+.nameplate-label a[class*="icon-"]:hover {
+  color: #555;
+}
+
+.nameplate-label .nameplate-content,
+.nameplate-label .nameplate-field,
+.nameplate-label .nameplate-icon {
+  vertical-align: middle;
+  width: auto;
+}
+
+.nameplate-label .nameplate-content {
+  padding: 3px 5px 2px;
+}
+
+.nameplate-list {
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.nameplate-list > li,
+.nameplate-list > .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate {
+  border-left-width: 0;
+  margin: 0;
+  padding: 0.8em;
+}
+
+.nameplate-list > li:hover,
+.nameplate-list > .nameplate-label:hover, .nameplate-list > li:hover, .nameplate-list > .nameplate:hover {
+  background-color: #DDD;
+}
+
+.nameplate-list .nameplate-content,
+.nameplate-list .nameplate-icon,
+.nameplate-list .nameplate-field {
+  padding: 0 0.3em;
+  vertical-align: middle;
+}
+
+.nameplate-list .nameplate-field .icon-remove {
+  background-color: #DDD;
+  text-align: center;
+  border-radius: 50%;
+  display: block;
+  line-height: 19px;
+  padding: 0 3px 0 4px;
+  text-decoration: none;
+}
+
+.nameplate-list-heading {
+  background-color: #F8F8F8;
+}
+
+.nameplate-list-heading > a,
+.nameplate-list-heading > span {
+  color: #29353D;
+  display: inline-block;
+  padding: 1.1em;
+}
+
+.nameplate-list-heading > a:focus,
+.nameplate-list-heading > a:hover,
+.nameplate-list-heading > span:focus,
+.nameplate-list-heading > span:hover {
+  text-decoration: none;
+}
+
+.nameplate-list-heading > a {
+  display: block;
+}
+
+.nameplate-list-heading + .collapse .nameplate-list,
+.nameplate-list-heading + .collapsing .nameplate-list,
+.nameplate-list-heading + .nameplate-list {
+  margin-bottom: 0;
+}
+
+.nameplate-list-bordered.nameplate-list-heading,
+.nameplate-list-bordered .nameplate-list-heading,
+.nameplate-list-bordered .nameplate-list > li,
+.nameplate-list-bordered > li {
+  border: 1px solid #DDD;
+  margin-top: -1px;
+}
+
+.profile-header {
+  max-width: 300px;
+}
+
+.profile-header .nameplate,
+.profile-header .nameplate-label,
+.profile-header .nameplate-list > li,
+.profile-header.nameplate, .profile-header.nameplate-label, .nameplate-list > li.profile-header {
+  margin: 0;
+}
+
+.profile-header .nameplate-content {
+  padding: 10px;
+}
+
+.profile-header .nameplate-field {
+  padding: 10px;
 }
 
 .toggle-card {
@@ -11097,82 +11476,17 @@ a.btn-action [class*="icon-"],
   }
 }
 
-.card, .card-horizontal {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.card.card-circle, .card-horizontal.card-circle {
-  border-radius: 20px;
-}
-
-.card.card-rounded, .card-horizontal.card-rounded {
+.card.card-rounded,
+.card-horizontal.card-rounded {
   border-radius: 10px;
 }
 
-.card.card-square, .card-horizontal.card-square {
-  border-radius: 0;
-}
-
-.card .divider, .card-horizontal .divider {
-  border-top: 1px solid #DDD;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
 .card {
-  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
   box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
-  overflow: hidden;
-}
-
-.card .card-row {
-  width: 100.4%;
-}
-
-.card .figure {
-  overflow: visible;
-}
-
-.card-header:after, .card-footer:after, .card-section:after {
-  clear: both;
-  content: "";
-  display: block;
-  font-size: 0;
-  height: 0;
-  visibility: hidden;
-}
-
-.card-header .divider, .card-footer .divider, .card-section .divider {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-.card-header {
-  padding: 1px 10px 0;
-}
-
-.card-footer {
-  padding: 0 10px 1px;
-}
-
-.card-section {
-  padding: 1px 10px;
 }
 
 .card-horizontal {
-  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
   box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
-  overflow: hidden;
-  position: relative;
-}
-
-.card-horizontal.card-circle [class*="card-col"]:first-child {
-  border-radius: 20px 0 0 20px;
-}
-
-.card-horizontal.card-circle [class*="card-col"]:last-child {
-  border-radius: 0 20px 20px 0;
 }
 
 .card-horizontal.card-rounded [class*="card-col"]:first-child {
@@ -11181,117 +11495,6 @@ a.btn-action [class*="icon-"],
 
 .card-horizontal.card-rounded [class*="card-col"]:last-child {
   border-radius: 0 10px 10px 0;
-}
-
-.card-col-1 {
-  width: 8.33333%;
-}
-
-.card-col-2 {
-  width: 16.66667%;
-}
-
-.card-col-3 {
-  width: 25%;
-}
-
-.card-col-4 {
-  width: 33.33333%;
-}
-
-.card-col-5 {
-  width: 41.66667%;
-}
-
-.card-col-6 {
-  width: 50%;
-}
-
-.card-col-7 {
-  width: 58.33333%;
-}
-
-.card-col-8 {
-  width: 66.66667%;
-}
-
-.card-col-9 {
-  width: 75%;
-}
-
-.card-col-10 {
-  width: 83.33333%;
-}
-
-.card-col-11 {
-  width: 91.66667%;
-}
-
-.card-col-12 {
-  width: 100%;
-}
-
-.card-row {
-  height: 100%;
-  overflow: hidden;
-}
-
-.card-row.card-row-padded .card-col-gutters:first-child {
-  padding-left: 0;
-}
-
-.card-row.card-row-padded .card-col-gutters:last-child {
-  padding-right: 0;
-}
-
-.card-row .card-col-gutters {
-  padding: 0 3%;
-}
-
-.card-row .card-col-gutters .divider {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.card-row [class*="card-col"] {
-  overflow: hidden;
-  position: relative;
-  vertical-align: middle;
-}
-
-.card-row [class*="card-col"] .img-absolute {
-  position: absolute;
-  top: 0;
-}
-
-.card-row [class*="card-col"] .img-responsive {
-  max-width: none;
-  width: 101%;
-}
-
-.card-row-padded {
-  padding: 10px;
-}
-
-.card-btn-row [class*="card-col"] {
-  overflow: visible;
-}
-
-.card-btn-row [class*="card-col"] a, .card-btn-row [class*="card-col"] button {
-  display: block;
-  line-height: normal;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  text-align: center;
-  width: 100%;
-}
-
-.card-btn-row [class*="card-col"] a:focus, .card-btn-row [class*="card-col"] a:hover, .card-btn-row [class*="card-col"] button:focus, .card-btn-row [class*="card-col"] button:hover {
-  text-decoration: none;
-}
-
-.card-btn-row [class*="card-col"] a [class^="icon-"], .card-btn-row [class*="card-col"] button [class^="icon-"] {
-  display: block;
 }
 
 .inline-scroller {
@@ -13898,136 +14101,12 @@ label.radio-default,
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-.nameplate-checkbox, .nameplate-icon, .nameplate-field {
-  padding: 0 0.3em;
-  width: 1%;
-}
-
-.nameplate-content {
-  padding: 0 0.3em;
-  word-break: break-word;
-}
-
-.nameplate-content h1, .nameplate-content h2, .nameplate-content h3 {
-  margin-top: 0;
-}
-
-.nameplate-content h4, .nameplate-content h5, .nameplate-content h6 {
-  margin-top: 2px;
-}
-
 .nameplate-content small {
   color: #869CAD;
-  display: block;
 }
 
 .nameplate-label {
-  border-radius: 20px;
-  background-color: #EEE;
-  font-size: 11px;
   height: 26px;
-  margin: 0 5px 2px 0;
-  padding: 3px;
-  width: auto;
-}
-
-.nameplate-label.form-control {
-  display: table;
-  height: 48px;
-}
-
-.nameplate-label.nameplate-label-circle {
-  border-radius: 20px;
-}
-
-.nameplate-label.nameplate-label-rounded {
-  border-radius: 3px;
-}
-
-.nameplate-label.nameplate-label-square {
-  border-radius: 0;
-}
-
-.nameplate-label a[class*="icon-"] {
-  color: #999;
-  margin-left: 5px;
-  text-decoration: none;
-}
-
-.nameplate-label a[class*="icon-"]:focus, .nameplate-label a[class*="icon-"]:hover {
-  color: #555;
-}
-
-.nameplate-label .nameplate-content, .nameplate-label .nameplate-field, .nameplate-label .nameplate-icon {
-  vertical-align: middle;
-  width: auto;
-}
-
-.nameplate-label .nameplate-content {
-  padding: 3px 5px 2px;
-}
-
-.nameplate-list {
-  list-style: none;
-  margin: 0 0 10px 0;
-  padding: 0;
-}
-
-.nameplate-list > li, .nameplate-list > .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate {
-  border-left-width: 0;
-  margin: 0;
-  padding: 0.8em;
-}
-
-.nameplate-list > li:hover, .nameplate-list > .nameplate-label:hover, .nameplate-list > li:hover, .nameplate-list > .nameplate:hover {
-  background-color: #DDD;
-}
-
-.nameplate-list .nameplate-content, .nameplate-list .nameplate-icon, .nameplate-list .nameplate-field {
-  padding: 0 0.3em;
-  vertical-align: middle;
-}
-
-.nameplate-list .nameplate-field .icon-remove {
-  background-color: #DDD;
-  text-align: center;
-  border-radius: 50%;
-  display: block;
-  line-height: 19px;
-  padding: 0 3px 0 4px;
-  text-decoration: none;
-}
-
-.nameplate-list-heading {
-  background-color: #F8F8F8;
-}
-
-.nameplate-list-heading > a, .nameplate-list-heading > span {
-  color: #29353D;
-  display: inline-block;
-  padding: 1.1em;
-}
-
-.nameplate-list-heading > a:focus, .nameplate-list-heading > a:hover, .nameplate-list-heading > span:focus, .nameplate-list-heading > span:hover {
-  text-decoration: none;
-}
-
-.nameplate-list-heading > a {
-  display: block;
-}
-
-.nameplate-list-heading + .collapse .nameplate-list,
-.nameplate-list-heading + .collapsing .nameplate-list,
-.nameplate-list-heading + .nameplate-list {
-  margin-bottom: 0;
-}
-
-.nameplate-list-bordered.nameplate-list-heading,
-.nameplate-list-bordered .nameplate-list-heading,
-.nameplate-list-bordered .nameplate-list > li,
-.nameplate-list-bordered > li {
-  border: 1px solid #DDD;
-  margin-top: -1px;
 }
 
 .user-icon {
@@ -14042,15 +14121,18 @@ label.radio-default,
   width: 34px;
 }
 
-.user-icon.user-icon-circle, .user-icon-circle .user-icon {
+.user-icon.user-icon-circle,
+.user-icon-circle .user-icon {
   border-radius: 50%;
 }
 
-.user-icon.user-icon-rounded, .user-icon-rounded .user-icon {
+.user-icon.user-icon-rounded,
+.user-icon-rounded .user-icon {
   border-radius: 5px;
 }
 
-.user-icon.user-icon-square, .user-icon-square .user-icon {
+.user-icon.user-icon-square,
+.user-icon-square .user-icon {
   border-radius: 0;
 }
 
@@ -14117,22 +14199,6 @@ label.radio-default,
 .user-icon-warning {
   background-color: #F5984C;
   color: #FFF;
-}
-
-.profile-header {
-  max-width: 300px;
-}
-
-.profile-header .nameplate, .profile-header .nameplate-label, .profile-header .nameplate-list > li, .profile-header.nameplate, .profile-header.nameplate-label, .nameplate-list > li.profile-header {
-  margin: 0;
-}
-
-.profile-header .nameplate-content {
-  padding: 10px;
-}
-
-.profile-header .nameplate-field {
-  padding: 10px;
 }
 
 .pager li > a,
