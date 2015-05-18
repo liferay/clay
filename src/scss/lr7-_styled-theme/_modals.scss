@@ -120,7 +120,7 @@
 		@media screen and (min-width: $grid-float-breakpoint) {
 			border-bottom-width: 0;
 			bottom: 0;
-			padding: 15px;
+			padding: $modal-inner-padding;
 			top: auto;
 
 			.modal-title {
