@@ -2,6 +2,7 @@
 
 @import "variables/badges";
 @import "variables/buttons";
+@import "variables/cards";
 @import "variables/forms";
 @import "variables/labels";
 @import "variables/modals";
@@ -10,10 +11,6 @@
 @import "variables/pager";
 @import "variables/toggle-card";
 @import "variables/toggle-switch";
-
-// Cards
-$card-border-radius: 10px;
-$card-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
 
 //== Dropdowns
 $dropdown-box-shadow: 0 2px 4px 0 rgba(228, 235, 240, 0.3);

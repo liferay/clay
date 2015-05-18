@@ -1,15 +1,16 @@
-.card, .card-horizontal {
+.card,
+.card-horizontal {
 	&.card-rounded {
 		border-radius: $card-border-radius;
 	}
 }
 
 .card {
-	@include box-shadow($card-box-shadow);
+	box-shadow: $card-box-shadow;
 }
 
 .card-horizontal {
-	@include box-shadow($card-box-shadow);
+	box-shadow: $card-box-shadow;
 
 	&.card-rounded {
 		[class*="card-col"] {
@@ -21,11 +22,5 @@
 				border-radius: 0 $card-border-radius $card-border-radius 0;
 			}
 		}
-	}
-}
-
-.card-btn-row {
-	a, button {
-		border-radius: inherit;
 	}
 }
