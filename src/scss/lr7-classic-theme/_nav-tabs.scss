@@ -56,10 +56,6 @@
 
 			> a {
 				border-radius: $tab-group-bottom-border-radius;
-
-				&:focus {
-					border-color: $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
-				}
 			}
 		}
 	}
@@ -84,10 +80,7 @@
 
 			> a {
 				border-radius: $tab-group-left-border-radius;
-
-				&:focus {
-					border-color: $nav-tabs-link-hover-border-color $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
-				}
+				margin-right: 0;
 			}
 		}
 	}
@@ -113,10 +106,6 @@
 			> a {
 				border-radius: $tab-group-right-border-radius;
 				margin-left: -$nav-tabs-border-width;
-
-				&:focus {
-					border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
-				}
 			}
 		}
 	}
