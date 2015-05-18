@@ -11,7 +11,8 @@
 // Button input groups
 .input-group-btn {
 	&:first-child {
-		> .btn, > .btn-group {
+		> .btn,
+		> .btn-group {
 			margin-right: -2px;
 		}
 	}
