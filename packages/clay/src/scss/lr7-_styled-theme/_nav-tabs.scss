@@ -31,6 +31,7 @@
 				border-width-top: 0;
 				border-width-bottom: 1px;
 
+				&:focus,
 				&:hover {
 					border-color: $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
 				}
@@ -94,6 +95,7 @@
 				border-radius: $border-radius-base 0 0 $border-radius-base;
 				margin-right: -1px;
 
+				&:focus,
 				&:hover {
 					border-color: $nav-tabs-link-hover-border-color $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
 				}
@@ -121,6 +123,7 @@
 				border-radius: 0 $border-radius-base $border-radius-base 0;
 				margin-left: -1px;
 
+				&:focus,
 				&:hover {
 					border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
 				}
