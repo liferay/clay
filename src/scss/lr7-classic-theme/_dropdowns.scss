@@ -73,7 +73,7 @@
 	@include arrow-bottom-left(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	bottom: 100%;
-	margin-top: 0;
+	margin-bottom: 0;
 	top: auto;
 }
 
@@ -82,7 +82,7 @@
 
 	bottom: 100%;
 	left: 50%;
-	margin-top: 0;
+	margin-bottom: 0;
 
 	@include transform(translateX(-50%));
 
@@ -94,7 +94,7 @@
 
 	bottom: 100%;
 	left: auto;
-	margin-top: 0;
+	margin-bottom: 0;
 	right: 0;
 	top: auto;
 }
