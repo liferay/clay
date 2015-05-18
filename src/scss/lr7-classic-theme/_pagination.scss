@@ -1,13 +1,8 @@
 .pagination-bar {
-	@include clearfix();
-
 	.pagination {
 		float: right;
-		width: 100%;
 
 		> li {
-			display: block;
-			float: left;
 			text-align: center;
 			width: 16.66667%;
 
@@ -17,14 +12,6 @@
 				> span {
 					border-radius: $pagination-border-radius;
 				}
-			}
-
-			&:first-child {
-				text-align: left;
-			}
-
-			&:last-child {
-				text-align: right;
 			}
 		}
 	}
@@ -86,27 +73,15 @@
 }
 
 .pagination-items-per-page {
-	float: left;
 	line-height: $pagination-item-height;
-
-	[class*="icon-"] {
-		margin-left: 10px;
-	}
 
 	a {
 		color: $pagination-items-per-page-color;
-		display: block;
-
-		&:focus,
-		&:hover {
-			text-decoration: none;
-		}
 	}
 }
 
 .pagination-results {
 	color: $pagination-results-color;
-	float: right;
 	line-height: $pagination-item-height;
 }
 
@@ -126,6 +101,7 @@
 			font-size: $pagination-lg-font-size;
 			height: $pagination-lg-item-height;
 			line-height: $pagination-lg-item-height - ($pagination-border-width * 2);
+			padding: 0;
 			width: $pagination-lg-item-width;
 		}
 	}
@@ -147,6 +123,7 @@
 			font-size: $pagination-sm-font-size;
 			height: $pagination-sm-item-height;
 			line-height: $pagination-sm-item-height - ($pagination-border-width * 2);
+			padding: 0;
 			width: $pagination-sm-item-height;
 		}
 	}
@@ -154,9 +131,6 @@
 
 @media screen and (min-width: $grid-float-breakpoint) {
 	.pagination-bar .pagination {
-		margin: 0;
-		width: auto;
-
 		> li {
 			display: inline-block;
 			float: none;
@@ -169,10 +143,5 @@
 		> span {
 			margin: 0 2px;
 		}
-	}
-
-	.pagination-results {
-		float: left;
-		margin-left: 25px;
 	}
 }
