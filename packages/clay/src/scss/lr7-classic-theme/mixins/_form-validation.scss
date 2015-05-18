@@ -1,0 +1,43 @@
+@mixin form-control-validation($text-color: #555, $border-color: #ccc, $background-color: #f5f5f5) {
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline {
+		color: $text-color;
+	}
+
+	.form-control {
+		border-color: $border-color;
+		box-shadow: $input-box-shadow;
+
+		&:focus {
+			border-color: darken($border-color, 10%);
+			box-shadow: $input-box-shadow;
+		}
+	}
+
+	.form-control-feedback {
+		color: $text-color;
+	}
+
+	.input-group-addon {
+		background-color: transparent;
+		border-width: 0;
+		padding: 0 22px 0 24px;
+
+		span {
+			background-color: $background-color;
+			border-color: $border-color;
+			border-radius: 20px;
+			color: #FFF;
+			padding: 5px;
+		}
+	}
+
+	.validation-message {
+		color: $text-color;
+		font-size: 12px;
+	}
+}
