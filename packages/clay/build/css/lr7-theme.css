@@ -14385,6 +14385,102 @@ label.radio-default,
   border-right-width: 0;
 }
 
+.basic-search {
+  float: right;
+  max-width: none;
+}
+
+@media screen and (min-width: 768px) {
+  .basic-search {
+    max-width: 220px;
+  }
+}
+
+.basic-search:after {
+  background-color: #869CAD;
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.basic-search.focus:after {
+  background-color: #65B6F0;
+}
+
+.basic-search.open {
+  background-color: #FFF;
+  z-index: 10;
+}
+
+@media screen and (min-width: 768px) {
+  .basic-search.open {
+    background-color: transparent;
+  }
+}
+
+.basic-search.open:after {
+  height: 4px;
+  margin-top: -4px;
+}
+
+.basic-search .form-control {
+  float: right;
+  width: 100%;
+}
+
+.basic-search-slider {
+  left: 101%;
+  position: relative;
+}
+
+.basic-search-slider .basic-search-close {
+  left: 0;
+  line-height: 48px;
+  padding: 0;
+  position: absolute;
+  z-index: 3;
+}
+
+@media screen and (min-width: 768px) {
+  .basic-search-slider .basic-search-close {
+    line-height: normal;
+  }
+}
+
+.basic-search.open .basic-search-slider {
+  left: 0;
+}
+
+.basic-search-autofit {
+  float: none;
+  max-width: none;
+}
+
+.basic-search-transition:after {
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.basic-search-transition .basic-search-slider {
+  -webkit-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .collapse-basic-search.navbar-no-collapse .navbar-nav:first-child {
+    float: left;
+  }
+  .collapse-basic-search .basic-search-autofit {
+    float: none;
+    max-width: none;
+  }
+}
+
 .collapse-basic-search .basic-search {
   display: block;
   left: 0;
@@ -14395,26 +14491,14 @@ label.radio-default,
   top: 0;
 }
 
-.collapse-basic-search .basic-search.open {
-  background-color: #FFF;
-  z-index: 1;
+@media screen and (min-width: 768px) {
+  .collapse-basic-search .basic-search {
+    position: static;
+  }
 }
 
-.collapse-basic-search .basic-search.open .basic-search-close {
-  display: inline-block;
-}
-
-.collapse-basic-search .basic-search.open .form-control {
-  -webkit-transition: border 0.25s ease, padding 0.25s ease;
-  -o-transition: border 0.25s ease, padding 0.25s ease;
-  transition: border 0.25s ease, padding 0.25s ease;
-}
-
-.collapse-basic-search .basic-search.open .input-group-input .form-control {
-  left: 0;
-}
-
-.collapse-basic-search .basic-search .input-group-btn:last-child > .btn, .collapse-basic-search .basic-search .input-group-btn:last-child > .btn-group {
+.collapse-basic-search .basic-search .input-group-btn:last-child > .btn,
+.collapse-basic-search .basic-search .input-group-btn:last-child > .btn-group {
   margin-left: 0;
 }
 
@@ -14422,73 +14506,56 @@ label.radio-default,
   overflow: hidden;
 }
 
-.collapse-basic-search .basic-search .input-group-input .form-control {
-  left: 100%;
-}
-
-.collapse-basic-search .basic-search-close {
-  display: none;
-}
-
-.collapse-basic-search .basic-search-transition .form-control, .collapse-basic-search .basic-search-transition.open .form-control {
-  -webkit-transition: left 0.5s ease;
-  -o-transition: left 0.5s ease;
-  transition: left 0.5s ease;
+.collapse-basic-search .basic-search .form-control {
+  padding-left: 40px;
 }
 
 .collapse-basic-search .navbar-nav:first-child {
   float: none;
 }
 
-.collapse-basic-search .navbar-nav > li > a, .collapse-basic-search .navbar-toggle {
+.collapse-basic-search .navbar-nav > li > a,
+.collapse-basic-search .navbar-toggle {
   z-index: 1;
 }
 
+.navbar-default.collapse-basic-search .basic-search {
+  padding: 0;
+}
+
+.navbar-default.collapse-basic-search .basic-search input[type="text"] {
+  border-width: 0;
+  height: 48px;
+}
+
 @media screen and (min-width: 768px) {
-  .basic-search .input-group-input {
-    text-align: right;
-  }
-  .basic-search .input-group-input .form-control {
-    float: right;
-    max-width: 250px;
-    min-width: 100px;
-  }
-  .collapse-basic-search .basic-search {
-    position: static;
-  }
-  .collapse-basic-search .basic-search .input-group-input {
-    overflow: visible;
-  }
-  .collapse-basic-search .basic-search .input-group-input .form-control {
-    left: auto;
-  }
-  .collapse-basic-search .navbar-nav:first-child {
-    float: left;
-  }
-  .collapse-basic-search .basic-search.open .basic-search-close {
-    display: none;
+  .navbar-default.collapse-basic-search .basic-search input[type="text"] {
+    height: 60px;
   }
 }
 
-@media screen and (min-width: 992px) {
-  .basic-search .input-group-input {
-    text-align: right;
-  }
-  .basic-search .input-group-input .form-control {
-    display: inline-block;
-    max-width: 250px;
-    min-width: 100px;
-  }
-  .navbar-no-collapse .basic-search {
-    float: right;
-    max-width: 300px;
+.navbar-default.collapse-basic-search .basic-search.open button[type='submit'] {
+  color: #65B6F0;
+}
+
+.navbar-default.collapse-basic-search .basic-search .btn {
+  background-color: transparent;
+  border-radius: 0;
+  border-width: 0;
+  color: #869CAD;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-default.collapse-basic-search .basic-search .btn {
+    height: 60px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .basic-search {
-    float: left;
-  }
+.navbar-default.collapse-basic-search .basic-search .btn:focus {
+  color: #65B6F0;
+  outline: none;
 }
 
 .navbar {
@@ -14591,46 +14658,6 @@ label.radio-default,
   .navbar-nav .open .dropdown-menu .linked-list li a:focus,
   .navbar-nav .open .dropdown-menu .linked-list li a:hover {
     color: #2B4259;
-  }
-}
-
-.navbar-default.collapse-basic-search .basic-search {
-  padding: 0;
-}
-
-.navbar-default.collapse-basic-search .basic-search input[type="text"] {
-  border-width: 0;
-  height: 48px;
-}
-
-@media screen and (min-width: 768px) {
-  .navbar-default.collapse-basic-search .basic-search input[type="text"] {
-    height: 60px;
-  }
-}
-
-.navbar-default.collapse-basic-search .basic-search input[type="text"]:focus {
-  border-width: 0 0 4px 0;
-}
-
-@media screen and (min-width: 768px) {
-  .navbar-default.collapse-basic-search .basic-search input[type="text"]:focus {
-    padding-bottom: 2px;
-  }
-}
-
-.navbar-default.collapse-basic-search .basic-search .btn {
-  background-color: transparent;
-  border-radius: 0;
-  border-width: 0;
-  color: #29353D;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-@media screen and (min-width: 768px) {
-  .navbar-default.collapse-basic-search .basic-search .btn {
-    height: 60px;
   }
 }
 
