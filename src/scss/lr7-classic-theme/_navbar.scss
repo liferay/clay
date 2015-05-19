@@ -1,6 +1,97 @@
+.basic-search {
+	float: right;
+	max-width: none;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		max-width: 220px;
+	}
+
+	&:after {
+		background-color: $brand-default;
+		content: '';
+		display: block;
+		height: 0;
+		overflow: hidden;
+		position: relative;
+		z-index: 2;
+	}
+
+	&.focus:after {
+		background-color: $brand-primary;
+	}
+
+	&.open {
+		background-color: $navbar-default-bg;
+		z-index: 10;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: transparent;
+		}
+
+		&:after {
+			height: 4px;
+			margin-top: -4px;
+		}
+	}
+
+	.form-control {
+		float: right;
+		width: 100%;
+	}
+}
+
+.basic-search-slider {
+	left: 101%;
+	position: relative;
+
+	.basic-search-close {
+		left: 0;
+		line-height: $navbar-mobile-height;
+		padding: 0;
+		position: absolute;
+		z-index: 3;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			line-height: normal;
+		}
+	}
+
+	.basic-search.open & {
+		left: 0;
+	}
+}
+
+.basic-search-autofit {
+	float: none;
+	max-width: none;
+}
+
+.basic-search-transition {
+	&:after {
+		@include transition(all 0.1s ease);
+	}
+
+	.basic-search-slider {
+		@include transition(left 0.5s ease);
+	}
+}
+
 // Navbar Basic Search Styles
 
 .collapse-basic-search {
+	@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+		&.navbar-no-collapse {
+			.navbar-nav:first-child {
+				float: left;
+			}
+		}
+
+		.basic-search-autofit {
+			float: none;
+			max-width: none;
+		}
+	}
+
 	.basic-search {
 		display: block;
 		left: 0;
@@ -18,47 +109,23 @@
 		right: 0;
 		top: 0;
 
-		&.open {
-			background-color: $navbar-default-bg;
-			z-index: 1;
-
-			.basic-search-close {
-				display: inline-block;
-			}
-
-			.form-control {
-				@include transition(border 0.25s ease, padding 0.25s ease);
-			}
-
-			.input-group-input .form-control {
-				left: 0;
-			}
+		@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+			position: static;
 		}
 
 		.input-group-btn:last-child {
-			> .btn, > .btn-group {
+			> .btn,
+			> .btn-group {
 				margin-left: 0;
 			}
 		}
 
 		.input-group-input {
 			overflow: hidden;
-
-			.form-control {
-				left: 100%;
-			}
 		}
-	}
 
-	.basic-search-close {
-		display: none;
-	}
-
-	.basic-search-transition {
-		&, &.open {
-			.form-control {
-				@include transition(left 0.5s ease);
-			}
+		.form-control {
+			padding-left: 40px;
 		}
 	}
 
@@ -66,77 +133,48 @@
 		float: none;
 	}
 
-	.navbar-nav > li > a, .navbar-toggle {
+	.navbar-nav > li > a,
+	.navbar-toggle {
 		z-index: 1;
 	}
 }
 
-@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+// Navbar Default Basic Search Styles
+
+.navbar-default.collapse-basic-search {
 	.basic-search {
-		.input-group-input {
-			text-align: right;
+		padding: 0;
 
-			.form-control {
-				float: right;
-				max-width: 250px;
-				min-width: 100px;
-			}
-		}
-	}
+		input[type="text"] {
+			border-width: 0;
+			height: $navbar-mobile-height;
 
-	//lr7 undo collapse-basic-search for desktop
-	.collapse-basic-search {
-		.basic-search {
-			position: static;
-
-			.input-group-input {
-				overflow: visible;
-
-				.form-control {
-					left: auto;
-				}
+			@media screen and (min-width: $grid-float-breakpoint) {
+				height: $navbar-height;
 			}
 		}
 
-		.navbar-nav:first-child {
-			float: left;
+		&.open button[type='submit'] {
+			color: $brand-primary;
 		}
-	}
 
-	// collapse-basic-search plugin undo open state on desktop
-	.collapse-basic-search {
-		.basic-search {
-			&.open {
-				.basic-search-close {
-					display: none;
-				}
+		.btn {
+			background-color: transparent;
+			border-radius: 0;
+			border-width: 0;
+			color: $brand-default;
+			padding-left: 12px;
+			padding-right: 12px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				height: $navbar-height;
+			}
+
+			&:focus {
+				color: $brand-primary;
+				outline: none;
 			}
 		}
-	}
-}
-
-@media screen and (min-width: $screen-md-min) { //min-width: 992px
-	.basic-search {
-		.input-group-input {
-			text-align: right;
-
-			.form-control {
-				display: inline-block;
-				max-width: 250px;
-				min-width: 100px;
-			}
-		}
-	}
-
-	.navbar-no-collapse .basic-search {
-		float: right;
-		max-width: 300px;
-	}
-}
-
-@media screen and (max-width: $screen-xs-min) { //max-width: 480px
-	.basic-search {
-		float: left;
 	}
 }
 
@@ -245,44 +283,6 @@
 				&:hover {
 					color: $navbar-default-link-active-color;
 				}
-			}
-		}
-	}
-}
-
-// Navbar Default Basic Search Styles
-
-.navbar-default.collapse-basic-search {
-	.basic-search {
-		padding: 0;
-
-		input[type="text"] {
-			border-width: 0;
-			height: $navbar-mobile-height;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				height: $navbar-height;
-			}
-
-			&:focus {
-				border-width: 0 0 4px 0;
-
-				@media screen and (min-width: $grid-float-breakpoint) {
-					padding-bottom: $padding-base-vertical - 4;
-				}
-			}
-		}
-
-		.btn {
-			background-color: transparent;
-			border-radius: 0;
-			border-width: 0;
-			color: $text-color;
-			padding-left: 12px;
-			padding-right: 12px;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				height: $navbar-height;
 			}
 		}
 	}

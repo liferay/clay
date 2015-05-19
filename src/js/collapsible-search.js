@@ -11,44 +11,65 @@
 
 			instance.options.selector = element.selector;
 
-			this._handleClick(element);
+			instance._handleBlur(element);
+			instance._handleClick(element);
+			instance._handleFocus(element);
+		},
+
+		_handleBlur: function(element) {
+			element.find('.basic-search .form-control').on('blur', function(event) {
+				$(this).closest('.basic-search').removeClass('focus');
+			});
+		},
+
+		_handleFocus: function(element) {
+			element.find('.basic-search .form-control').on('focus', function(event) {
+				$(this).closest('.basic-search').addClass('focus');
+			});
 		},
 
 		_handleClick: function(element) {
+			var instance = this;
+
 			element.find('.basic-search button[type="submit"]').on('click', function(event) {
-				if (window.innerWidth < 768) {
+				// if (window.innerWidth < 768) {
 					var basicSearch = $(this).parents('.basic-search');
-					var closeButton = '<button class="basic-search-close btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-right"></span></button>';
 					var transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
-					basicSearch.find('.form-control').one(transitions, function(event) {
+					basicSearch.find('.basic-search-slider').on(transitions, function(event) {
 						basicSearch.removeClass('basic-search-transition');
+						basicSearch.find('.basic-search-slider').off(transitions);
 					});
 
-					if (!basicSearch.find('.basic-search-close').length) {
-						$(this).before(closeButton);
-					}
-
+					// close search
 					basicSearch.on('click', '.basic-search-close', function(event) {
-						basicSearch.find('.form-control').one(transitions, function(event) {
-							basicSearch.removeClass('basic-search-transition');
+						var basicSearchSlider = $(this).closest('.basic-search-slider');
+
+						$(this).closest('.basic-search-slider').on(transitions, function(event) {
+							setTimeout(function() {
+								basicSearch.removeClass('basic-search-transition');
+							}, 500);
+
+							basicSearchSlider.off(transitions);
 						});
 
-						basicSearch.addClass('basic-search-transition').removeClass('open');
+						basicSearch.addClass('basic-search-transition');
+						basicSearch.removeClass('open');
 						basicSearch.off('click');
 					});
 
 					if (!basicSearch.hasClass('open')) {
 						event.preventDefault();
 
-						basicSearch.addClass('basic-search-transition')
-						basicSearch.find('input[type="text"]').focus();
+						basicSearch.addClass('basic-search-transition');
+
+						basicSearch.addClass('open');
 
 						setTimeout(function() {
-							basicSearch.addClass('open');
-						}, 0);
+							basicSearch.find('input[type="text"]').focus();
+						}, 500);
 					}
-				}
+				// }
 			});
 		}
 	};
