@@ -139,7 +139,7 @@ section: Example Pages
 				</div>
 			</div>
 			<div class="sidenav-content">
-				<ul class="tabular-list-group" style="clear:both;margin-bottom:0;padding:0 3px;">
+				<ul class="tabular-list-group" style="clear:both;padding:0 3px;">
 					<li class="list-group-item">
 						<div class="list-group-item-field">
 							<label class="checkbox-default1">
@@ -305,31 +305,47 @@ section: Example Pages
 					</li>
 				</ul>
 
-				<div class="toolbar-no-break">
-					<div class="toolbar-group">
-						<div class="toolbar-group-content">
-							<a href="#">10 Entries <span class="icon-sort"></span></a>
-						</div>
-						<div class="toolbar-group-content">
-							<span>Showing 1 to 10 of 4 entries</span>
-						</div>
+				<div class="pagination-bar">
+					<div class="dropdown pagination-items-per-page">
+						<a data-toggle="dropdown" href="#1" type="button">10 entries <span class="icon-sort"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">5</a></li>
+							<li><a href="#1">10</a></li>
+							<li><a href="#1">20</a></li>
+							<li><a href="#1">30</a></li>
+							<li><a href="#1">50</a></li>
+						</ul>
 					</div>
 
-					<div class="toolbar-group-right tbg-xs-newline tbg-sm-newline">
-						<div class="toolbar-group-content">
-							<ul class="pagination" style="margin:0;display:block;">
-								<li><a href=""><span class="icon-angle-left"></span></a></li>
-								<li class="disabled"><a href="#">...</a></li>
-								<li><a href="">1</a></li>
-								<li class="active"><a href="#">2</a></li>
-								<li><a href="">3</a></li>
-								<li><a href="">4</a></li>
-								<li><a href="">5</a></li>
-								<li><a href="">...</a></li>
-								<li><a href=""><span class="icon-angle-right"></span></a></li>
-							</ul>
-						</div>
-					</div>
+					<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
+
+					<ul class="pagination">
+						<li class="disabled"><a href="#1"><span class="icon-caret-left"></span></a></li>
+						<li class="active"><a href="#1">1</a></li>
+						<li><a href="#1">2</a></li>
+						<li class="dropdown">
+							<a data-toggle="dropdown" href="#1">...</a>
+							<div class="dropdown-menu dropdown-menu-top-center">
+								<ul class="inline-scroller link-list">
+									<li><a href="#1">3</a></li>
+									<li><a href="#1">4</a></li>
+									<li><a href="#1">5</a></li>
+									<li><a href="#1">6</a></li>
+									<li><a href="#1">7</a></li>
+									<li><a href="#1">8</a></li>
+									<li><a href="#1">9</a></li>
+									<li><a href="#1">10</a></li>
+									<li><a href="#1">11</a></li>
+									<li><a href="#1">12</a></li>
+									<li><a href="#1">13</a></li>
+									<li><a href="#1">14</a></li>
+									<li><a href="#1">15</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#1">16</a></li>
+						<li><a href="#1"><span class="icon-caret-right"></span></a></li>
+					</ul>
 				</div>
 
 			</div>
