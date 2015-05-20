@@ -1,25 +1,25 @@
-$pagination-border-radius: 30px;
+$pagination-border-radius: 4px;
 
 $pagination-item-height: 32px;
 $pagination-item-width: $pagination-item-height;
 
-$pagination-border-width: 2px;
+$pagination-border-width: 0;
 
 $pagination-color:                         $brand-default;
-$pagination-bg:                            #FFF;
-$pagination-border:                        #D1D6D9;
+$pagination-bg:                            transparent;
+$pagination-border:                        $pagination-bg;
 
-$pagination-hover-color:                   #FFF;
-$pagination-hover-bg:                      $brand-default;
-$pagination-hover-border:                  $brand-default;
+$pagination-hover-color:                   $brand-default;
+$pagination-hover-bg:                      transparent;
+$pagination-hover-border:                  $pagination-hover-bg;
 
-$pagination-active-color:                  #FFF;
-$pagination-active-bg:                     $brand-default;
+$pagination-active-color:                  $brand-default;
+$pagination-active-bg:                     lighten($brand-default, 30%);
 $pagination-active-border:                 $brand-default;
 
 $pagination-disabled-color:                $brand-default;
-$pagination-disabled-bg:                   #FFF;
-$pagination-disabled-border:               #D1D6D9;
+$pagination-disabled-bg:                   transparent;
+$pagination-disabled-border:               $pagination-disabled-bg;
 
 $pagination-ellipsis-hover-color: $link-hover-color;
 $pagination-ellipsis-hover-bg: transparent;
