@@ -7705,8 +7705,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   line-height: 1.4286;
   text-decoration: none;
   color: #869CAD;
-  background-color: #FFF;
-  border: 1px solid #D1D6D9;
+  background-color: transparent;
+  border: 1px solid transparent;
   margin-left: -1px;
 }
 
@@ -7727,9 +7727,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:hover,
 .pagination > li > span:focus {
-  color: #FFF;
-  background-color: #869CAD;
-  border-color: #869CAD;
+  color: #869CAD;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .pagination > .active > a,
@@ -7739,8 +7739,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:hover,
 .pagination > .active > span:focus {
   z-index: 2;
-  color: #FFF;
-  background-color: #869CAD;
+  color: #869CAD;
+  background-color: #e1e7eb;
   border-color: #869CAD;
   cursor: default;
 }
@@ -7752,8 +7752,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
   color: #869CAD;
-  background-color: #FFF;
-  border-color: #D1D6D9;
+  background-color: transparent;
+  border-color: transparent;
   cursor: not-allowed;
 }
 
@@ -7819,14 +7819,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
-  border: 1px solid #D1D6D9;
-  border-radius: 30px;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #869CAD;
+  background-color: transparent;
 }
 
 .pager .next > a,
@@ -15267,9 +15267,9 @@ a.list-group-heading:hover {
 
 .pager li > a,
 .pager li > span {
-  border: 2px solid #D1D6D9;
-  border-radius: 30px;
-  line-height: 28px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  line-height: 32px;
   padding: 0 20px;
 }
 
@@ -15279,17 +15279,17 @@ a.list-group-heading:hover {
 
 .pager a:focus,
 .pager a:hover {
-  background-color: #869CAD;
-  border-color: #869CAD;
-  color: #FFF;
+  background-color: transparent;
+  border-color: transparent;
+  color: #869CAD;
 }
 
 .pager .disabled > a,
 .pager .disabled > a:focus,
 .pager .disabled > a:hover,
 .pager .disabled > span {
-  background-color: #FFF;
-  border-color: #D1D6D9;
+  background-color: transparent;
+  border-color: transparent;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -15305,14 +15305,14 @@ a.list-group-heading:hover {
 .pager-lg li > a,
 .pager-lg li > span {
   font-size: 18px;
-  line-height: 40px;
+  line-height: 44px;
   padding: 0 48px;
 }
 
 .pager-sm li > a,
 .pager-sm li > span {
   font-size: 12px;
-  line-height: 20px;
+  line-height: 24px;
   padding: 0 12px;
 }
 
@@ -15329,14 +15329,14 @@ a.list-group-heading:hover {
 .pagination-bar .pagination > li:first-child > span,
 .pagination-bar .pagination > li:last-child > a,
 .pagination-bar .pagination > li:last-child > span {
-  border-radius: 30px;
+  border-radius: 4px;
 }
 
 .pagination > li:first-child > a,
 .pagination > li:first-child > span,
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
-  border-radius: 30px;
+  border-radius: 4px;
 }
 
 .pagination > li > a,
@@ -15344,10 +15344,10 @@ a.list-group-heading:hover {
   display: inline-block;
   float: none;
   margin: 0 auto;
-  border-radius: 30px;
-  border: 2px solid #D1D6D9;
+  border-radius: 4px;
+  border: 0 solid transparent;
   height: 32px;
-  line-height: 28px;
+  line-height: 32px;
   padding: 0;
   text-align: center;
   width: 32px;
@@ -15413,7 +15413,7 @@ a.list-group-heading:hover {
 .pagination-lg .pagination > li > span {
   font-size: 18px;
   height: 44px;
-  line-height: 40px;
+  line-height: 44px;
   padding: 0;
   width: 44px;
 }
@@ -15432,7 +15432,7 @@ a.list-group-heading:hover {
 .pagination-sm .pagination > li > span {
   font-size: 12px;
   height: 24px;
-  line-height: 20px;
+  line-height: 24px;
   padding: 0;
   width: 24px;
 }
