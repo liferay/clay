@@ -3,6 +3,27 @@
 
 	background-color: $list-group-header-bg;
 	font-weight: $list-group-header-font-weight;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+.list-group-heading.show-collapse-icon {
+	padding-right: 30px;
+
+	&:before {
+		content: $list-group-header-icon-open;
+		font-size: $list-group-header-icon-font-size;
+		font-family: 'fontawesome-alloy';
+		position: absolute;
+		right: 15px;
+		top: 50%;
+
+		@include transform(translateY(-50%));
+	}
+
+	&.collapsed:before {
+		content: $list-group-header-icon-closed;
+	}
 }
 
 // Collapsible List Group
@@ -44,20 +65,7 @@
 			margin-top: 0;
 		}
 
-		.list-group-collapse-icon {
-			float: right;
-
-			&:before {
-				content: $collapsible-list-group-icon-open;
-				font-size: $collapsible-list-group-icon-size;
-			}
-		}
-
 		&.collapsed {
-			.list-group-collapse-icon:before {
-				content: $collapsible-list-group-icon-collapsed;
-			}
-
 			&:nth-last-child(2) {
 				border-bottom-left-radius: $list-group-border-radius;
 				border-bottom-right-radius: $list-group-border-radius;
@@ -89,8 +97,8 @@
 	.list-group-item-content, .list-group-item-field {
 		border: 1px solid $list-group-border;
 		border-left-width: 0;
-		border-top-width: 0;
 		border-right-width: 0;
+		border-top-width: 0;
 		padding: 1em 0.3em;
 		position: relative;
 

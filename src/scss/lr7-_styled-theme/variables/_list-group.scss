@@ -1,6 +1,7 @@
-$list-group-header-bg: $list-group-bg;
+$list-group-header-bg: $navbar-default-bg;
 $list-group-header-font-weight: $headings-font-weight;
 
-$collapsible-list-group-icon-collapsed: '\f105';
-$collapsible-list-group-icon-open: '\f107';
-$collapsible-list-group-icon-size: $font-size-large;
+$list-group-header-icon-closed: '\f105';
+$list-group-header-icon-open: '\f107';
+
+$list-group-header-icon-font-size: $font-size-large;
