@@ -86,7 +86,7 @@
 	}
 }
 
-// Navbar Basic Search Styles
+// Navbar Collapse Basic Search Styles
 
 .collapse-basic-search {
 	@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
@@ -153,7 +153,7 @@
 	}
 }
 
-// Navbar Default Basic Search Styles
+// Navbar Default Collapse Basic Search Styles
 
 .navbar-default.collapse-basic-search {
 	.basic-search {
@@ -245,7 +245,7 @@
 
 .navbar-toggle,
 .navbar-toggle-left {
-	margin: (($navbar-height - 36) / 2) 15px;
+	margin: (($navbar-height - 36) / 2) $navbar-padding-horizontal;
 	padding: 10px;
 }
 
@@ -395,7 +395,8 @@
 				}
 
 				> a {
-					&:focus, &:hover {
+					&:focus,
+					&:hover {
 						@include background-image(linear-gradient(rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%));
 
 						color: $navbar-default-link-color;
@@ -416,7 +417,8 @@
 					width: 100%;
 				}
 
-				&:focus, &:hover {
+				&:focus,
+				&:hover {
 					@include background-image(none);
 				}
 			}
