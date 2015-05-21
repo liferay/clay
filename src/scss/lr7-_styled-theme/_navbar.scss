@@ -1,60 +1,146 @@
-// Styles for collapsing search bar
+.basic-search {
+	float: right;
+	max-width: none;
+	padding: 8px $navbar-padding-horizontal;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		max-width: 220px;
+	}
+
+	&.open {
+		background-color: $navbar-default-bg;
+		z-index: 10;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: transparent;
+		}
+	}
+
+	&.basic-search-transition,
+	&.open {
+		button[type='submit'].btn {
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		}
+	}
+
+	button[type='submit'].btn {
+		border-bottom-left-radius: $input-border-radius;
+		border-top-left-radius: $input-border-radius;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		}
+	}
+
+	.form-control {
+		float: right;
+		width: 100%;
+	}
+
+	.input-group-input {
+		.basic-search-slider .form-control {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		.form-control {
+			border-bottom-left-radius: $input-border-radius;
+			border-top-left-radius: $input-border-radius;
+		}
+	}
+}
+
+.basic-search-slider {
+	left: 101%;
+	position: relative;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		left: 0;
+	}
+
+	.basic-search-close {
+		background-color: transparent;
+		border-color: transparent;
+		left: 0;
+		position: absolute;
+		z-index: 3;
+
+		&:active{
+			box-shadow: none;
+		}
+
+		&:focus {
+			background-color: transparent;
+			border-color: transparent;
+			color: $brand-primary;
+			outline: none;
+		}
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			display: none;
+			line-height: normal;
+		}
+	}
+
+	.basic-search.open & {
+		left: 0;
+	}
+}
+
+.basic-search-autofit {
+	float: none;
+	max-width: none;
+}
+
+.basic-search-transition {
+	&:after {
+		@include transition(all 0.1s ease);
+	}
+
+	.basic-search-slider {
+		@include transition(left 0.5s ease);
+	}
+}
+
+// Navbar Collapse Basic Search Styles
+
 .collapse-basic-search {
+	@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+		&.navbar-no-collapse {
+			.navbar-nav:first-child {
+				float: left;
+			}
+		}
+
+		.basic-search-autofit {
+			float: none;
+			max-width: none;
+		}
+	}
+
 	.basic-search {
 		display: block;
 		left: 0;
+		margin: 0;
 		position: absolute;
 		right: 0;
 		top: 0;
 
-		&.open {
-			background-color: #F8F8F8;
-			z-index: 3;
-
-			.basic-search-close {
-				display: inline-block;
-			}
-
-			.input-group-input .form-control {
-				left: 0;
-			}
-		}
-
-		.btn {
-			height: 36px;
-		}
-
-		.form-control {
-			height: 36px;
-		}
-
-		.input-group-btn {
-			z-index: 10;
-
-			&:last-child {
-				> .btn, > .btn-group {
-					border-radius: 0;
-				}
-			}
+		@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+			position: static;
 		}
 
 		.input-group-input {
 			overflow: hidden;
-
-			.form-control {
-				left: 100%;
-			}
 		}
-	}
 
-	.basic-search-close {
-		display: none;
-	}
+		.form-control {
+			padding-left: 40px;
 
-	.basic-search-transition {
-		&, &.open {
-			.form-control {
-				@include transition(left 0.5s ease);
+			@media screen and (min-width: $grid-float-breakpoint) {
+				padding-left: 5px;
 			}
 		}
 	}
@@ -63,7 +149,8 @@
 		float: none;
 	}
 
-	.navbar-nav > li > a, .navbar-toggle {
+	.navbar-nav > li > a,
+	.navbar-toggle {
 		z-index: 1;
 	}
 }
@@ -218,7 +305,7 @@
 
 	.navbar-form {
 		margin: 0;
-		padding: 7px 0;
+		padding: 8px 0;
 
 		.btn {
 			vertical-align: top;
@@ -250,25 +337,5 @@
 				margin-right: 0;
 			}
 		}
-	}
-}
-
-@media screen and (min-width: $screen-md-min) { //min-width: 992px
-	.basic-search {
-		.input-group-input {
-			text-align: right;
-
-			.form-control {
-				display: inline-block;
-				float: none;
-				max-width: 250px;
-				min-width: 100px;
-			}
-		}
-	}
-
-	.navbar-no-collapse .basic-search {
-		float: right;
-		max-width: 300px;
 	}
 }
