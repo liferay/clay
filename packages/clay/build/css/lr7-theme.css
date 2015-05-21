@@ -15843,6 +15843,47 @@ a.list-group-heading:hover {
   }
 }
 
+.sidebar .navbar {
+  margin-bottom: 0;
+}
+
+.sidebar .navbar-no-collapse .navbar-nav {
+  margin: 0 15px;
+}
+
+.sidebar-header {
+  padding: 52px 12px 20px 24px;
+}
+
+.sidebar-header-actions {
+  float: right;
+}
+
+.sidebar-header-actions li {
+  padding: 0;
+}
+
+.sidebar-header-actions a:focus,
+.sidebar-header-actions a:hover {
+  text-decoration: none;
+}
+
+.sidebar-body {
+  font-size: 14px;
+  overflow: auto;
+  padding: 24px;
+}
+
+.sidebar-panel-default {
+  background-color: #e1e7eb;
+  height: 155px;
+}
+
+.sidebar-default {
+  background-color: #F5F8FA;
+  border-left: 1px solid #DFE0E3;
+}
+
 @media (min-width: 768px) {
   .sidenav-container.sidenav-right .sidenav-menu {
     padding-left: 0;
