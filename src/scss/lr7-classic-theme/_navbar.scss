@@ -18,6 +18,11 @@
 
 	&.focus:after {
 		background-color: $brand-primary;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: $navbar-link-active-bottom-border-width;
+			margin-top: -$navbar-link-active-bottom-border-width;
+		}
 	}
 
 	&.open {
@@ -29,8 +34,8 @@
 		}
 
 		&:after {
-			height: 4px;
-			margin-top: -4px;
+			height: $navbar-link-active-bottom-border-width;
+			margin-top: -$navbar-link-active-bottom-border-width;
 		}
 	}
 
@@ -44,14 +49,19 @@
 	left: 101%;
 	position: relative;
 
+	@media screen and (min-width: $grid-float-breakpoint) {
+		left: 0;
+	}
+
 	.basic-search-close {
 		left: 0;
-		line-height: $navbar-mobile-height;
+		line-height: $navbar-height;
 		padding: 0;
 		position: absolute;
 		z-index: 3;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
+			display: none;
 			line-height: normal;
 		}
 	}
@@ -98,11 +108,11 @@
 		margin: 0;
 
 		// todo after adding input-mobile-height-base;
-		@if $input-mobile-height-base >= $navbar-mobile-height {
+		@if $input-mobile-height-base >= $navbar-height {
 			padding: 0;
 		}
 		@else {
-			padding: floor(($navbar-mobile-height - $input-mobile-height-base - 1) / 2);
+			padding: floor(($navbar-height - $input-mobile-height-base - 1) / 2);
 		}
 
 		position: absolute;
@@ -126,6 +136,10 @@
 
 		.form-control {
 			padding-left: 40px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				padding-left: 5px;
+			}
 		}
 	}
 
@@ -147,14 +161,14 @@
 
 		input[type="text"] {
 			border-width: 0;
-			height: $navbar-mobile-height;
+			height: $navbar-height;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				height: $navbar-height;
+				height: $navbar-desktop-height;
 			}
 		}
 
-		&.open button[type='submit'] {
+		&.focus button[type='submit'] {
 			color: $brand-primary;
 		}
 
@@ -167,7 +181,7 @@
 			padding-right: 12px;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				height: $navbar-height;
+				height: $navbar-desktop-height;
 			}
 
 			&:focus {
@@ -181,37 +195,37 @@
 // Navbar Styles
 
 .navbar {
-	min-height: $navbar-mobile-height;
+	min-height: $navbar-height;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		min-height: $navbar-height;
+		min-height: $navbar-desktop-height;
 	}
 }
 
 .navbar-nav {
 	> li > a {
-		line-height: $navbar-mobile-link-line-height;
+		line-height: $navbar-link-line-height;
 
 		// .navbar border-width increases size of navbar by border-width*2
-		padding: ($navbar-mobile-padding-vertical - 1) $navbar-mobile-padding-horizontal;
+		padding: ($navbar-padding-vertical - 1) $navbar-padding-horizontal;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			line-height: $navbar-link-line-height;
-			padding: $navbar-padding-vertical $navbar-padding-horizontal;
+			line-height: $navbar-desktop-link-line-height;
+			padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
 		}
 	}
 }
 
 .navbar-brand {
 	color: $nav-link-color;
-	height: $navbar-mobile-height;
-	line-height: $navbar-mobile-link-line-height;
-	padding: $navbar-mobile-padding-vertical $navbar-mobile-padding-horizontal;
+	height: $navbar-height;
+	line-height: $navbar-link-line-height;
+	padding: $navbar-padding-vertical $navbar-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		height: $navbar-height;
-		line-height: $navbar-link-line-height;
-		padding: $navbar-padding-vertical $navbar-padding-horizontal;
+		height: $navbar-desktop-height;
+		line-height: $navbar-desktop-link-line-height;
+		padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
 	}
 }
 
@@ -220,18 +234,18 @@
 	border-width: 0;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		@if $input-height-base >= $navbar-height {
-			padding: 0 $navbar-padding-horizontal;
+		@if $input-height-base >= $navbar-desktop-height {
+			padding: 0 $navbar-desktop-padding-horizontal;
 		}
 		@else {
-			padding: (($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
+			padding: (($navbar-desktop-height - $input-height-base) / 2) $navbar-desktop-padding-horizontal;
 		}
 	}
 }
 
 .navbar-toggle,
 .navbar-toggle-left {
-	margin: (($navbar-mobile-height - 36) / 2) 15px;
+	margin: (($navbar-height - 36) / 2) 15px;
 	padding: 10px;
 }
 
@@ -247,11 +261,22 @@
 .navbar-toggle-page-name {
 	border-radius: 0;
 	margin: 0;
-	padding: (($navbar-mobile-height - $navbar-mobile-link-line-height) / 2) $navbar-mobile-padding-horizontal;
+	padding: (($navbar-height - $navbar-link-line-height) / 2) $navbar-padding-horizontal;
+
+	&:after {
+		background-color: $navbar-default-link-active-highlight;
+		content: '';
+		display: block;
+		height: $navbar-link-active-bottom-border-width;
+		margin-top: -$navbar-link-active-bottom-border-width;
+		position: relative;
+		top: $navbar-padding-vertical;
+		width: 100%;
+	}
 
 	.navbar-default & {
 		border-color: transparent;
-		padding: (($navbar-mobile-height - $navbar-mobile-link-line-height - 2) / 2) $navbar-mobile-padding-horizontal;
+		padding: (($navbar-height - $navbar-link-line-height - 2) / 2) $navbar-padding-horizontal;
 	}
 }
 
@@ -271,13 +296,13 @@
 
 		> li > a,
 		.dropdown-header {
-			padding: $navbar-mobile-padding-vertical $navbar-mobile-padding-horizontal;
+			padding: $navbar-padding-vertical $navbar-padding-horizontal;
 		}
 
 		.inline-scroller,
 		.linked-list {
 			li a {
-				padding: $navbar-mobile-padding-vertical $navbar-mobile-padding-horizontal;
+				padding: $navbar-padding-vertical $navbar-padding-horizontal;
 
 				&:focus,
 				&:hover {
@@ -307,38 +332,29 @@
 
 		.page-name {
 			display: inline-block;
-
-			&:after {
-				background-color: $navbar-default-link-active-highlight;
-				content: '';
-				display: block;
-				height: 4px;
-				position: relative;
-				top: $navbar-mobile-padding-vertical;
-				width: 100%;
-			}
+			line-height: $navbar-link-line-height;
 		}
 	}
 
 	.navbar-nav {
 		> li > a {
-			padding: $navbar-mobile-padding-vertical $navbar-mobile-padding-horizontal;
+			padding: $navbar-padding-vertical $navbar-padding-horizontal;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				padding: $navbar-padding-vertical $navbar-padding-horizontal;
+				padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
 			}
 		}
 
 		> .active > a {
-			padding-bottom: $navbar-mobile-padding-vertical - 4;
-			padding-top: $navbar-mobile-padding-vertical;
+			padding-bottom: $navbar-padding-vertical - $navbar-link-active-bottom-border-width;
+			padding-top: $navbar-padding-vertical;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				padding-bottom: $navbar-padding-vertical - 4;
-				padding-top: $navbar-padding-vertical;
+				padding-bottom: $navbar-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
+				padding-top: $navbar-desktop-padding-vertical;
 
 				&:after {
-					top: $navbar-padding-vertical - 4;
+					top: $navbar-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
 				}
 			}
 		}
@@ -348,10 +364,10 @@
 .navbar-default.navbar-no-collapse .navbar-nav {
 	> .active > a {
 		&:after {
-			top: $navbar-mobile-padding-vertical - 4;
+			top: $navbar-padding-vertical - $navbar-link-active-bottom-border-width;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
-				top: $navbar-padding-vertical - 4;
+				top: $navbar-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
 			}
 		}
 	}
@@ -395,7 +411,7 @@
 					background-color: $navbar-default-link-active-highlight;
 					content: '';
 					display: block;
-					height: 4px;
+					height: $navbar-link-active-bottom-border-width;
 					position: relative;
 					width: 100%;
 				}
@@ -468,7 +484,7 @@
 	}
 
 	.navbar-form {
-		margin: (($navbar-height - $input-height-base) / 2) 0;
+		margin: (($navbar-desktop-height - $input-height-base) / 2) 0;
 
 		.btn {
 			vertical-align: top;
@@ -546,7 +562,7 @@
 			background-color: $navbar-default-link-active-highlight;
 			content: '';
 			display: block;
-			height: 4px;
+			height: $navbar-link-active-bottom-border-width;
 			position: relative;
 			width: 100%;
 		}

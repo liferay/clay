@@ -32,7 +32,7 @@
 			var instance = this;
 
 			element.find('.basic-search button[type="submit"]').on('click', function(event) {
-				// if (window.innerWidth < 768) {
+				if (window.innerWidth < 768) {
 					var basicSearch = $(this).parents('.basic-search');
 					var transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
@@ -69,7 +69,7 @@
 							basicSearch.find('input[type="text"]').focus();
 						}, 500);
 					}
-				// }
+				}
 			});
 		}
 	};
