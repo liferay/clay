@@ -1,0 +1,44 @@
+.sidebar {
+	.navbar {
+		margin-bottom: 0;
+	}
+
+	.navbar-no-collapse .navbar-nav {
+		margin: 0 15px;
+	}
+}
+
+.sidebar-header {
+	padding: 52px 12px 20px 24px;
+}
+
+.sidebar-header-actions {
+	float: right;
+
+	li {
+		padding: 0;
+	}
+
+	a {
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.sidebar-body {
+	font-size: 14px;
+	overflow: auto;
+	padding: 24px;
+}
+
+.sidebar-panel-default {
+	background-color: lighten($brand-default, 30%);
+	height: 155px;
+}
+
+.sidebar-default {
+	background-color: #F5F8FA;
+	border-left: 1px solid #DFE0E3;
+}
