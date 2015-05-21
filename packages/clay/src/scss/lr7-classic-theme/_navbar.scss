@@ -36,6 +36,16 @@
 		&:after {
 			height: $navbar-link-active-bottom-border-width;
 			margin-top: -$navbar-link-active-bottom-border-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: transparent;
+			}
+		}
+
+		&.focus:after {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: $brand-primary;
+			}
 		}
 	}
 
@@ -486,7 +496,7 @@
 	}
 
 	.navbar-form {
-		margin: (($navbar-desktop-height - $input-height-base) / 2) 0;
+		padding: (($navbar-desktop-height - $input-height-base) / 2) 0;
 
 		.btn {
 			vertical-align: top;
