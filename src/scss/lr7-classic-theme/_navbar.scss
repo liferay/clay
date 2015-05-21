@@ -1,11 +1,4 @@
 .basic-search {
-	float: right;
-	max-width: none;
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		max-width: 220px;
-	}
-
 	&:after {
 		background-color: $brand-default;
 		content: '';
@@ -26,13 +19,6 @@
 	}
 
 	&.open {
-		background-color: $navbar-default-bg;
-		z-index: 10;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			background-color: transparent;
-		}
-
 		&:after {
 			height: $navbar-link-active-bottom-border-width;
 			margin-top: -$navbar-link-active-bottom-border-width;
@@ -48,75 +34,19 @@
 			}
 		}
 	}
-
-	.form-control {
-		float: right;
-		width: 100%;
-	}
 }
 
 .basic-search-slider {
-	left: 101%;
-	position: relative;
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		left: 0;
-	}
-
 	.basic-search-close {
-		left: 0;
 		line-height: $navbar-height;
 		padding: 0;
-		position: absolute;
-		z-index: 3;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			display: none;
-			line-height: normal;
-		}
-	}
-
-	.basic-search.open & {
-		left: 0;
-	}
-}
-
-.basic-search-autofit {
-	float: none;
-	max-width: none;
-}
-
-.basic-search-transition {
-	&:after {
-		@include transition(all 0.1s ease);
-	}
-
-	.basic-search-slider {
-		@include transition(left 0.5s ease);
 	}
 }
 
 // Navbar Collapse Basic Search Styles
 
 .collapse-basic-search {
-	@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
-		&.navbar-no-collapse {
-			.navbar-nav:first-child {
-				float: left;
-			}
-		}
-
-		.basic-search-autofit {
-			float: none;
-			max-width: none;
-		}
-	}
-
 	.basic-search {
-		display: block;
-		left: 0;
-		margin: 0;
-
 		// todo after adding input-mobile-height-base;
 		@if $input-mobile-height-base >= $navbar-height {
 			padding: 0;
@@ -125,41 +55,12 @@
 			padding: floor(($navbar-height - $input-mobile-height-base - 1) / 2);
 		}
 
-		position: absolute;
-		right: 0;
-		top: 0;
-
-		@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
-			position: static;
-		}
-
 		.input-group-btn:last-child {
 			> .btn,
 			> .btn-group {
 				margin-left: 0;
 			}
 		}
-
-		.input-group-input {
-			overflow: hidden;
-		}
-
-		.form-control {
-			padding-left: 40px;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				padding-left: 5px;
-			}
-		}
-	}
-
-	.navbar-nav:first-child {
-		float: none;
-	}
-
-	.navbar-nav > li > a,
-	.navbar-toggle {
-		z-index: 1;
 	}
 }
 
@@ -261,11 +162,6 @@
 
 .navbar-toggle .icon-bar {
 	background-color: $nav-link-color;
-	width: 18px;
-}
-
-.navbar-toggle-left {
-	float: left;
 }
 
 .navbar-toggle-page-name {
