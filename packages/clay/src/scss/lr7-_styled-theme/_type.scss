@@ -47,20 +47,40 @@
 
 // Icon Sizes
 
+.icon-angle-left {
+	font-size: 1.5em;
+}
+
 .icon-xs {
 	font-size: 0.6em;
+
+	&.icon-angle-left {
+		font-size: 0.9em;
+	}
 }
 
 .icon-sm {
 	font-size: 0.8em;
+
+	&.icon-angle-left {
+		font-size: 1.2em;
+	}
 }
 
 .icon-lg {
 	font-size: 1.667em;
+
+	&.icon-angle-left {
+		font-size: 2.667em;
+	}
 }
 
 .icon-xl {
 	font-size: 3.334em;
+
+	&.icon-angle-left {
+		font-size: 4.667em;
+	}
 }
 
 .icon-xxl {
