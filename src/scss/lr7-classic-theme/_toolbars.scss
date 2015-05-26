@@ -54,56 +54,6 @@
 	width: 1%;
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) {
-	.toolbar-group,
-	.toolbar-group-right {
-		display: inline;
-		float: none;
-	}
-
-	.toolbar-group-content,
-	.toolbar-group-field {
-		display: block;
-		float: left;
-		margin-bottom: 5px;
-	}
-
-	.toolbar-group-field {
-		width: auto;
-	}
-
-	.toolbar-no-break,
-	.header-toolbar {
-		@include clearfix();
-
-		.toolbar-group {
-			display: table;
-			float: left;
-		}
-
-		.toolbar-group-right {
-			display: table;
-			float: right;
-		}
-
-		.toolbar-group-content,
-		.toolbar-group-field {
-			display: table-cell;
-			float: none;
-		}
-
-		.toolbar-group-field {
-			width: 1%;
-		}
-	}
-}
-
-@media screen and (max-width: 479px) {
-	.toolbar-group-expand {
-		clear: both;
-	}
-}
-
 // Toolbar Base Styles
 
 .toolbar-group-field,
@@ -151,17 +101,6 @@
 		clear: both;
 		display: block;
 		float: left;
-	}
-
-	.toolbar-no-break,
-	.header-toolbar {
-		.tbg-xs-newline {
-			clear: both;
-
-			&.toolbar-group-right {
-				float: left;
-			}
-		}
 	}
 }
 
