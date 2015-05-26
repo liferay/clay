@@ -1,13 +1,11 @@
 .toolbar,
 .toolbar-no-break,
 .header-toolbar {
-	@include clearfix-hack();
+	@include clearfix();
 
-	.nameplate {
-		.nameplate-content,
-		.nameplate-field {
-			vertical-align: middle;
-		}
+	.nameplate-content,
+	.nameplate-field {
+		vertical-align: middle;
 	}
 }
 
@@ -32,8 +30,6 @@
 }
 
 .toolbar-group-expand {
-	display: table;
-
 	.input-group {
 		width: 100%;
 	}
@@ -52,9 +48,8 @@
 
 .toolbar-group-expand-text {
 	line-height: $input-height-base;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+
+	@include text-overflow();
 }
 
 .toolbar-group-content,
@@ -303,22 +298,7 @@
 		> a,
 		> .dropdown > a {
 			border-radius: 4px;
-			font-size: 21px;
 			padding: 2px 8px;
-		}
-	}
-}
-
-.header-toolbar-secondary {
-	padding-left: 0;
-
-	.toolbar-group:first-child {
-		overflow: hidden;
-
-		.toolbar-group-content:first-child {
-			> a {
-				margin-left: -18px;
-			}
 		}
 	}
 }
@@ -345,26 +325,5 @@
 	.toolbar-group-expand,
 	.toolbar-group-expand-text {
 		color: $navbar-default-color;
-	}
-
-	&.header-toolbar-secondary {
-		background-color: $navbar-default-bg;
-
-		.toolbar-group-content {
-			> a,
-			> .dropdown > a {
-				color: $navbar-default-link-color;
-
-				&:focus,
-				&:hover {
-					background-color: $navbar-default-link-hover-bg;
-				}
-			}
-		}
-
-		.toolbar-group-expand,
-		.toolbar-group-expand-text {
-			color: $navbar-default-color;
-		}
 	}
 }

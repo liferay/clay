@@ -86,7 +86,8 @@
 			float: right;
 		}
 
-		.toolbar-group-content, .toolbar-group-field {
+		.toolbar-group-content,
+		.toolbar-group-field {
 			display: table-cell;
 			float: none;
 		}
@@ -316,21 +317,5 @@
 	.toolbar-group-expand,
 	.toolbar-group-expand-text {
 		color: $header-toolbar-default-color;
-	}
-
-	&.header-toolbar-secondary {
-		background-color: $header-toolbar-secondary-bg;
-
-		.toolbar-group-content {
-			> a,
-			> .dropdown > a {
-				color: $header-toolbar-secondary-link-color;
-			}
-		}
-
-		.toolbar-group-expand,
-		.toolbar-group-expand-text {
-			color: $header-toolbar-secondary-color;
-		}
 	}
 }
