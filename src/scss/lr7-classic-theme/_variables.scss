@@ -12,6 +12,7 @@
 @import "variables/pager";
 @import "variables/toggle-card";
 @import "variables/toggle-switch";
+@import "variables/toolbars";
 
 //== Dropdowns
 $dropdown-box-shadow: 0 2px 4px 0 rgba(228, 235, 240, 0.3);
@@ -43,17 +44,6 @@ $dropdown-header-font-size-desktop: $font-size-small-desktop;
 $dropdown-header-color:                    #B0B4BB;
 
 $dropdown-arrow-color: $dropdown-bg;
-
-// Toolbars
-$header-toolbar-default-bg: #29343D;
-$header-toolbar-default-color: #FFF;
-$header-toolbar-default-link-color: #FFF;
-$header-toolbar-default-link-hover-bg: #869CAD;
-
-$header-toolbar-secondary-bg: $header-toolbar-default-bg;
-$header-toolbar-secondary-color: $header-toolbar-default-color;
-$header-toolbar-secondary-link-color: $header-toolbar-default-link-color;
-$header-toolbar-secondary-link-hover-bg: $header-toolbar-default-link-hover-bg;
 
 // Nameplates
 $nameplate-list-border-color: $brand-default;

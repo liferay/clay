@@ -1,18 +1,24 @@
-.toolbar, .toolbar-no-break, .header-toolbar {
+.toolbar,
+.toolbar-no-break,
+.header-toolbar {
 	@include clearfix-hack();
 
 	.nameplate {
-		.nameplate-content, .nameplate-field {
+		.nameplate-content,
+		.nameplate-field {
 			vertical-align: middle;
 		}
 	}
 }
 
-.toolbar-group, .toolbar-group-expand, .toolbar-group-right {
+.toolbar-group,
+.toolbar-group-expand,
+.toolbar-group-right {
 	display: table;
 }
 
-.toolbar-group, .toolbar-group-right {
+.toolbar-group,
+.toolbar-group-right {
 	height: $input-height-base;
 	margin-bottom: 0;
 }
@@ -32,7 +38,8 @@
 		width: 100%;
 	}
 
-	.toolbar-group-content, .toolbar-group-field {
+	.toolbar-group-content,
+	.toolbar-group-field {
 		display: table-cell;
 		float: none;
 		vertical-align: middle;
@@ -50,7 +57,8 @@
 	white-space: nowrap;
 }
 
-.toolbar-group-content, .toolbar-group-field {
+.toolbar-group-content,
+.toolbar-group-field {
 	display: table-cell;
 	float: none;
 	margin-bottom: 0;
@@ -64,12 +72,14 @@
 }
 
 @media screen and (max-width: $grid-float-breakpoint-max) {
-	.toolbar-group, .toolbar-group-right {
+	.toolbar-group,
+	.toolbar-group-right {
 		display: inline;
 		float: none;
 	}
 
-	.toolbar-group-content, .toolbar-group-field {
+	.toolbar-group-content,
+	.toolbar-group-field {
 		display: block;
 		float: left;
 		margin-bottom: 5px;
@@ -80,7 +90,8 @@
 		width: auto;
 	}
 
-	.toolbar-no-break, .header-toolbar {
+	.toolbar-no-break,
+	.header-toolbar {
 		@include clearfix();
 
 		.toolbar-group {
@@ -93,7 +104,8 @@
 			float: right;
 		}
 
-		.toolbar-group-content, .toolbar-group-field {
+		.toolbar-group-content,
+		.toolbar-group-field {
 			display: table-cell;
 			float: none;
 		}
@@ -112,12 +124,14 @@
 
 // Toolbar Base Styles
 
-.toolbar-group-field, .toolbar-group-content {
+.toolbar-group-field,
+.toolbar-group-content {
 	&.active > a {
 		color: $gray-light;
 		cursor: default;
 
-		&:focus, &:hover {
+		&:focus,
+		&:hover {
 			text-decoration: none;
 		}
 	}
@@ -128,12 +142,14 @@
 	}
 }
 
-.toolbar-group, .toolbar-group-right {
+.toolbar-group,
+.toolbar-group-right {
 	a {
 		color: $navbar-default-link-color;
 		display: block;
 
-		&:focus, &:hover {
+		&:focus,
+		&:hover {
 			color: $navbar-default-link-active-color;
 			text-decoration: none;
 		}
@@ -149,7 +165,8 @@
 		margin-bottom: 10px;
 	}
 
-	.toolbar-group, .toolbar-group-right {
+	.toolbar-group,
+	.toolbar-group-right {
 		display: table;
 		height: $input-height-base;
 		width: auto;
@@ -170,7 +187,8 @@
 		display: table-row;
 	}
 
-	.toolbar-group-content, .toolbar-group-field {
+	.toolbar-group-content,
+	.toolbar-group-field {
 		display: table-cell;
 		float: none;
 		margin-bottom: 0;
@@ -200,7 +218,8 @@
 		float: left;
 	}
 
-	.toolbar-no-break, .header-toolbar {
+	.toolbar-no-break,
+	.header-toolbar {
 		.tbg-xs-newline {
 			clear: both;
 
@@ -212,7 +231,9 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-	.tbg-sm-newline, .tbg-md-newline, .tbg-lg-newline {
+	.tbg-sm-newline,
+	.tbg-md-newline,
+	.tbg-lg-newline {
 		margin-top: 10px;
 	}
 
@@ -224,7 +245,8 @@
 		}
 	}
 
-	.tbg-md-newline, .tbg-lg-newline {
+	.tbg-md-newline,
+	.tbg-lg-newline {
 		&.toolbar-group-right {
 			float: left;
 		}
@@ -232,7 +254,8 @@
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-	.tbg-md-newline, .tbg-lg-newline {
+	.tbg-md-newline,
+	.tbg-lg-newline {
 		margin-top: 10px;
 	}
 
@@ -271,12 +294,14 @@
 		margin-top: 5px + 2;
 	}
 
-	.toolbar-group-content, .toolbar-group-field {
+	.toolbar-group-content,
+	.toolbar-group-field {
 		padding: 0 2px;
 	}
 
 	.toolbar-group-content {
-		> a, > .dropdown > a {
+		> a,
+		> .dropdown > a {
 			border-radius: 4px;
 			font-size: 21px;
 			padding: 2px 8px;
@@ -306,16 +331,19 @@
 	border-radius: $navbar-border-radius;
 
 	.toolbar-group-content {
-		> a, > .dropdown > a {
+		> a,
+		> .dropdown > a {
 			color: $navbar-default-link-color;
 
-			&:focus, &:hover {
+			&:focus,
+			&:hover {
 				background-color: $navbar-default-link-hover-bg;
 			}
 		}
 	}
 
-	.toolbar-group-expand, .toolbar-group-expand-text {
+	.toolbar-group-expand,
+	.toolbar-group-expand-text {
 		color: $navbar-default-color;
 	}
 
@@ -323,37 +351,20 @@
 		background-color: $navbar-default-bg;
 
 		.toolbar-group-content {
-			> a, > .dropdown > a {
+			> a,
+			> .dropdown > a {
 				color: $navbar-default-link-color;
 
-				&:focus, &:hover {
+				&:focus,
+				&:hover {
 					background-color: $navbar-default-link-hover-bg;
 				}
 			}
 		}
 
-		.toolbar-group-expand, .toolbar-group-expand-text {
+		.toolbar-group-expand,
+		.toolbar-group-expand-text {
 			color: $navbar-default-color;
 		}
 	}
-}
-
-.header-toolbar-danger {
-	@include color-header-toolbar(#FFF, $brand-danger);
-}
-
-.header-toolbar-info {
-	@include color-header-toolbar(#FFF, $brand-info);
-}
-
-.header-toolbar-primary {
-	@include color-header-toolbar(#FFF, $brand-primary);
-}
-
-.header-toolbar-success {
-	@include color-header-toolbar(#FFF, $brand-success);
-}
-
-.header-toolbar-warning {
-	@include color-header-toolbar(#FFF, $brand-warning);
 }
