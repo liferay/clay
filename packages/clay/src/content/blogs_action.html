@@ -3,126 +3,15 @@ title: Blog - Actions
 section: Example Pages
 ---
 <style>
-.custom-container, .uxgl-80percent-container {
-	margin: 0 auto;
-	position: relative;
-	width: 100%;
-}
-
 .uxgl-arrow-group .btn {
 	font-size: 14px;
 	padding: 4px 7px;
-}
-
-@media screen and (min-width: 992px) {
-	.custom-container, .uxgl-80percent-container {
-		width: 90%;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.custom-container, .uxgl-80percent-container {
-		width: 80%;
-	}
 }
 </style>
 
 <div class="row">
 	<div class="col-md-12">
-		<header class="header-toolbar header-toolbar-default">
-			<div class="custom-container">
-				<div class="toolbar-group">
-					<div class="toolbar-group-content">
-						<a class="sidenav-toggler" href="#1" id="blogActionsToggler"><span class="icon-align-justify"></span></a>
-					</div>
-				</div>
-
-				<div class="toolbar-group-right">
-					<div class="toolbar-group-content">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#1">Export</a></li>
-								<li><a href="#1">Import</a></li>
-								<li><a href="#1">Configuration</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="toolbar-group-expand-text text-center">
-					<span>Blogs</span>
-				</div>
-			</div>
-		</header>
-
-		<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="clear:both;margin-bottom:0;">
-			<div class="custom-container">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">All Posts</a></li>
-				</ul>
-
-				<form class="basic-search input-group navbar-form">
-					<div class="input-group-input">
-						<input class="form-control" placeholder=" Search..." type="text">
-					</div>
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-					</div>
-				</form>
-			</div>
-		</nav>
-
-		<div class="custom-container">
-			<div class="toolbar-no-break">
-				<div class="toolbar-group">
-					<div class="toolbar-group-content">
-						<label class="checkbox-default1" style="margin-left: 13px;">
-							<input class="input-sm" type="checkbox" value="">
-						</label>
-					</div>
-					<div class="dropdown toolbar-group-content">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Recent: <span class="icon-sort"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">Date</a></li>
-							<li><a href="#1">Time</a></li>
-							<li><a href="#1">Status</a></li>
-						</ul>
-					</div>
-					<div class="dropdown toolbar-group-content">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by Post: <span class="icon-sort"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">Alphabetical</a></li>
-							<li><a href="#1">Reverse</a></li>
-							<li><a href="#1">Split</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="toolbar-group uxgl-arrow-group">
-					<div class="toolbar-group-content">
-						<a class="btn btn-default btn-xs" href="#1"><span class="icon-caret-down"></span></a>
-					</div>
-					<div class="toolbar-group-content">
-						<a class="btn btn-default btn-xs" href="#1"><span class="icon-caret-up"></span></a>
-					</div>
-				</div>
-
-				<div class="toolbar-group-right">
-					<div class="toolbar-group-content">
-						<a class="btn btn-default btn-xs" href="#1"><span class="icon-th-large"></span></a>
-					</div>
-					<div class="toolbar-group-content">
-						<a class="btn btn-default btn-xs" href="#1"><span class="icon-th-list"></span></a>
-					</div>
-					<div class="toolbar-group-content active">
-						<a class="btn btn-default btn-xs" href="#1"><span class="icon-reorder"></span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="custom-container sidenav-container closed uxgl-slideout-nav" id="blogActionsSidenav">
+		<div class="sidenav-container closed uxgl-slideout-nav" id="blogActionsSidenav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<ul class="nav nav-stacked">
@@ -138,8 +27,56 @@ section: Example Pages
 					</ul>
 				</div>
 			</div>
+
 			<div class="sidenav-content">
-				<ul class="tabular-list-group" style="clear:both;padding:0 3px;">
+				<header class="header-toolbar header-toolbar-default">
+					<div class="container-fluid-1280">
+						<div class="toolbar-group">
+							<div class="toolbar-group-content">
+								<a class="sidenav-toggler" href="#1" id="blogActionsToggler"><span class="icon-align-justify"></span></a>
+							</div>
+						</div>
+
+						<div class="toolbar-group-right">
+							<div class="toolbar-group-content">
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="#1">Export</a></li>
+										<li><a href="#1">Import</a></li>
+										<li><a href="#1">Configuration</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="toolbar-group-expand-text text-center">
+							<span>Blogs</span>
+						</div>
+					</div>
+				</header>
+
+				<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="position:relative;z-index:1;margin-bottom:0;">
+					<div class="container-fluid-1280">
+						<ul class="nav navbar-nav">
+							<li><a href="#1">All Posts</a></li>
+						</ul>
+
+						<form class="basic-search input-group">
+							<div class="input-group-input">
+								<div class="basic-search-slider">
+									<button class="basic-search-close btn btn-default" type="button"><span class="icon-remove"></span></button>
+									<input class="form-control" placeholder=" Search..." type="text">
+								</div>
+							</div>
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit"><span class="icon-search"></span></button>
+							</div>
+						</form>
+					</div>
+				</nav>
+
+				<ul class="container-fluid-1280 tabular-list-group">
 					<li class="list-group-item">
 						<div class="list-group-item-field">
 							<label class="checkbox-default1">
@@ -305,7 +242,7 @@ section: Example Pages
 					</li>
 				</ul>
 
-				<div class="pagination-bar">
+				<div class="container-fluid-1280 pagination-bar">
 					<div class="dropdown pagination-items-per-page">
 						<a data-toggle="dropdown" href="#1" type="button">10 entries <span class="icon-sort"></span></a>
 						<ul class="dropdown-menu">
