@@ -1,4 +1,12 @@
 .sidebar {
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+	overflow: auto;
+
+	&.slideout-drawer-transition {
+		@include transition(all 0.25s ease);
+	}
+
 	.navbar {
 		margin-bottom: 0;
 	}
