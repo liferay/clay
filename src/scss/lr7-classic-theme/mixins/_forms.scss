@@ -5,7 +5,7 @@
 
 @mixin color-placeholder($element, $color: $input-color-placeholder) {
 	#{$element}::-webkit-input-placeholder {
-		color: $brand-primary;
+		color: $color;
 	}
 
 	#{$element}:-moz-placeholder {
