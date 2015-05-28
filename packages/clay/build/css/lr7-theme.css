@@ -13692,7 +13692,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 input[disabled]::-webkit-input-placeholder {
-  color: #65B6F0;
+  color: #c0ccd3;
 }
 
 input[disabled]:-moz-placeholder {
@@ -13708,7 +13708,7 @@ input[disabled]:-ms-input-placeholder {
 }
 
 select[disabled]::-webkit-input-placeholder {
-  color: #65B6F0;
+  color: #c0ccd3;
 }
 
 select[disabled]:-moz-placeholder {
@@ -13724,7 +13724,7 @@ select[disabled]:-ms-input-placeholder {
 }
 
 input[readonly]::-webkit-input-placeholder {
-  color: #65B6F0;
+  color: #c0ccd3;
 }
 
 input[readonly]:-moz-placeholder {
@@ -13740,7 +13740,7 @@ input[readonly]:-ms-input-placeholder {
 }
 
 fieldset[disabled] .form-control::-webkit-input-placeholder {
-  color: #65B6F0;
+  color: #c0ccd3;
 }
 
 fieldset[disabled] .form-control:-moz-placeholder {
