@@ -11,80 +11,149 @@
 
 			instance.options.selector = element.selector;
 
-			instance._handleClick(element);
-
-			instance._handleResize(element);
+			instance._bindUI(element);
 
 			instance._renderUI(element);
 		},
 
-		_handleClick: function(element) {
+		_bindUI: function(element) {
 			var instance = this;
-			var body = $('body');
+
+			instance._onClickTrigger(element);
+
+			instance._onWindowResize(element);
+
+			instance._onScreenMobile(element);
+
+			instance._onScreenDesktop(element);
+		},
+
+		_bindSidenavClose: function(container) {
+			var instance = this;
+
+			var sidenavClose = container.find('.sidenav-close');
+
+			if (sidenavClose.length) {
+				sidenavClose.on('click', function(event) {
+					event.preventDefault();
+
+					instance.toggleNavigation(container);
+				});
+			}
+		},
+
+		_onClickTrigger: function(element) {
+			var instance = this;
+			var toggler = element.find(instance.options.toggler); // find toggler inside element
+
+			var body;
 			var container;
 
-			if (!element.find(instance.options.toggler).length) {
-				element = body.find(instance.options.toggler);
+			if (!toggler.length) { // if toggler doesnt exist, toggler and element are separate
+				body = element.closest('body');
+				toggler = body.find(instance.options.toggler);
 				container = body.find(instance.options.selector);
 			}
-			else {
-				element = element.find(instance.options.toggler);
-			}
 
-			element.on('click', function(event) {
+			toggler.on('click', function(event) {
+				var $this = $(this);
+				var selector = $this.closest(instance.options.selector);
+
 				var content;
 				var navigation;
 				var transitions;
 
-				if ($(this).closest(instance.options.selector).length) {
-					container = $(this).closest(instance.options.selector);
+				if (selector.length) {
+					container = selector;
+				}
+
+				if (!$this.data('previouslyToggled')) {
+					instance._bindSidenavClose(container);
+
+					$this.data('previouslyToggled', true);
 				}
 
 				content = container.find(instance.options.content);
 				navigation = container.find(instance.options.navigation);
+				sidenavMenu = container.find('.sidenav-menu');
 				transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 
 				event.preventDefault();
 
-				container.one(transitions, function(event) {
+				container.on(transitions, function(event) {
 					container.removeClass('sidenav-transition');
 
 					if (container.hasClass('closed')) {
-						instance.removeEqualHeight(navigation, content);
+						instance.removeEqualHeight([navigation, content, sidenavMenu]);
 					}
+
+					container.off(transitions);
 				});
 
-				instance.setEqualHeight(container);
-
-				setTimeout(function() {
-					instance.toggleNavigation(container);
-				}, 0);
+				instance.toggleNavigation(container);
 			});
 		},
 
-		_handleResize: function(element) {
+		_onScreenDesktop: function(element) {
 			var instance = this;
-			var container;
+
+			$(document).on('screen-desktop', function(event, sidenav) {
+				if (instance.options.type === 'fixed-mobile') {
+					element.removeClass('sidenav-fixed');
+				}
+			});
+		},
+
+		_onScreenMobile: function(element) {
+			var instance = this;
+
+			$(document).on('screen-mobile', function(event, sidenav) {
+				if (instance.options.type === 'fixed-mobile') {
+					element.addClass('sidenav-fixed');
+				}
+			});
+		},
+
+		_onWindowResize: function(element) {
+			var instance = this;
+			var doc = $(document);
+
 			var content;
 			var navigation;
+			var winWidth;
+
+			instance._setScreenSize();
 
 			$(window).resize(function(event) {
-				element.each(function(index, node) {
-					container = $(node);
-					content = container.find(instance.options.content);
-					navigation = container.find(instance.options.navigation);
+				winWidth = window.innerWidth; // https://github.com/jquery/jquery/issues/1729
 
-					if (!container.hasClass('closed')) {
-						instance.removeEqualHeight(navigation, content);
-						instance.removeWidth(container);
-						instance.setEqualHeight(container);
-						instance.setWidth(container);
+				if ((winWidth < instance.options.breakpoint) && (instance._screenSize !== 'screen-mobile')) {
+					instance._screenSize = 'screen-mobile';
+					doc.trigger('screen-mobile', element);
+				}
+
+				if ((winWidth >= instance.options.breakpoint) && (instance._screenSize !== 'screen-desktop')) {
+					instance._screenSize = 'screen-desktop';
+					doc.trigger('screen-desktop', element);
+				}
+
+				element.each(function(index, node) {
+					node = $(node);
+					content = node.find(instance.options.content);
+					navigation = node.find(instance.options.navigation);
+					sidenavMenu = node.find('.sidenav-menu');
+
+					if (!node.hasClass('closed')) {
+						instance.removeEqualHeight([navigation, content, sidenavMenu]);
+						instance.removeWidth(node);
+						instance.setEqualHeight(node);
+						instance.setWidth(node);
 					}
 				});
 			});
 		},
 
-		_renderClosedRightNav: function(element) {
+		_renderNav: function(element) {
 			var instance = this;
 
 			element.each(function(index, node) {
@@ -96,14 +165,6 @@
 						width: instance.options.width
 					});
 				}
-			});
-		},
-
-		_renderOpenNav: function(element) {
-			var instance = this;
-
-			element.each(function(index, node) {
-				var node = $(node);
 
 				if (!node.hasClass('closed')) {
 					instance.setEqualHeight(node);
@@ -119,14 +180,33 @@
 				element.addClass('sidenav-right');
 			}
 
-			instance._renderOpenNav(element);
+			if ((instance.options.type === 'fixed')) {
+				element.addClass('sidenav-fixed');
+			}
 
-			instance._renderClosedRightNav(element);
+			if ((window.innerWidth < instance.options.breakpoint) && (instance.options.type === 'fixed-mobile')) {
+				element.addClass('sidenav-fixed');
+			}
+
+			instance._renderNav(element);
 		},
 
-		removeEqualHeight: function(element1, element2) {
-			element1.css('min-height', '');
-			element2.css('min-height', '');
+		_setScreenSize: function() {
+			var instance = this;
+			var winWidth = window.innerWidth;
+
+			if (winWidth < instance.options.breakpoint) {
+				instance._screenSize = 'screen-mobile';
+			}
+			else if (winWidth >= instance.options.breakpoint) {
+				instance._screenSize = 'screen-desktop';
+			}
+		},
+
+		removeEqualHeight: function(array) {
+			$.each(array, function(index, node) {
+				node.css('min-height', '');
+			});
 		},
 
 		removeWidth: function(element) {
@@ -134,7 +214,7 @@
 			var content = element.find(instance.options.content);
 
 			if (element.hasClass('sidenav-right')) {
-				if (window.innerWidth < 768) {
+				if (window.innerWidth < instance.options.breakpoint) {
 					content.css('left', '');
 					element.find('.sidenav-menu').css('right', instance.options.width);
 				}
@@ -143,7 +223,7 @@
 				}
 			}
 			else {
-				if (window.innerWidth < 768) {
+				if (window.innerWidth < instance.options.breakpoint) {
 					content.css('left', '');
 				}
 				else {
@@ -157,43 +237,106 @@
 		setEqualHeight: function(container) {
 			var instance = this;
 			var containerClone;
+			var containerCloneContent;
+			var containerCloneNavigation;
 			var element1;
 			var element2;
 			var tallest;
 
 			container.each(function(index, node) {
-				container = $(node);
-
-				containerClone = container.clone();
+				node = $(node);
+				containerClone = node.clone();
 
 				containerClone.removeClass('closed').css({
 					opacity: 0,
 					position: 'absolute',
-					width: container.outerWidth()
+					width: node.outerWidth()
 				});
 
-				containerClone.find(instance.options.navigation).css('width', instance.options.width);
+				containerCloneContent = containerClone.find(instance.options.content);
+				containerCloneNavigation = containerClone.find(instance.options.navigation);
 
-				if (!(window.innerWidth < 768)) {
+				containerCloneNavigation.css('width', instance.options.width);
+
+				if (!(window.innerWidth < instance.options.breakpoint)) {
 					if (containerClone.hasClass('sidenav-right')) {
-						containerClone.find(instance.options.content).css('padding-right', instance.options.width);
+						containerCloneContent.css('padding-right', parseInt(instance.options.width) + parseInt(instance.options.gutter));
 					}
 					else {
-						containerClone.find(instance.options.content).css('padding-left', instance.options.width);
+						containerCloneContent.css('padding-left', parseInt(instance.options.width) + parseInt(instance.options.gutter));
 					}
 				}
 
-				containerClone.insertBefore(container);
+				containerClone.insertBefore(node);
 
-				element1 = containerClone.find(instance.options.navigation);
-				element2 = containerClone.find(instance.options.content);
+				element1 = containerCloneNavigation;
+				element2 = containerCloneContent;
 				tallest = Math.max(element1.outerHeight(), element2.outerHeight());
 
 				containerClone.remove();
 
-				container.find(instance.options.content).css('min-height', tallest);
-				container.find(instance.options.navigation).css('min-height', tallest);
+				node.find(instance.options.content).css('min-height', tallest);
+				node.find(instance.options.navigation).css('min-height', tallest);
+				node.find('.sidenav-menu').css('min-height', tallest);
 			});
+		},
+
+		setSidenavLeftWidth: function(container, content, menu) {
+			var instance = this;
+
+			var contentLeftPos = instance.options.width;
+
+			if (window.innerWidth < instance.options.breakpoint) {
+				if ((instance.options.type === 'fixed') || (instance.options.type === 'fixed-mobile')) {
+					contentLeftPos = ''
+				}
+
+				content.css({
+					left: contentLeftPos,
+					paddingLeft: ''
+				});
+			}
+			else {
+				if (instance.options.type !== 'fixed') {
+					content.css('padding-left', parseInt(instance.options.width) + parseInt(instance.options.gutter));
+				}
+			}
+		},
+
+		setSidenavRightWidth: function(container, content, menu) {
+			var instance = this;
+
+			var contentLeftPos = instance.options.width;
+
+			if (window.innerWidth < instance.options.breakpoint) {
+				contentLeftPos = -parseInt(contentLeftPos);
+
+				if ((instance.options.type === 'fixed') || (instance.options.type === 'fixed-mobile')) {
+					contentLeftPos = '';
+				}
+
+				content.css({
+					left: contentLeftPos,
+					paddingRight: ''
+				});
+
+				menu.css('right', '');
+
+				if (instance.options.width) {
+					menu.css('width', instance.options.width);
+
+					if (container.hasClass('closed')) {
+						menu.css('right', instance.options.width);
+					}
+				}
+			}
+			else {
+				if (instance.options.type !== 'fixed') {
+					content.css('padding-right', parseInt(instance.options.width) + parseInt(instance.options.gutter));
+				}
+
+				menu.css('width', instance.options.width);
+			}
 		},
 
 		setWidth: function(element) {
@@ -201,73 +344,44 @@
 
 			element.each(function(index, node) {
 				var node = $(node);
-				var width;
+				var content = node.find(instance.options.content);
+				var menu = node.find('.sidenav-menu');
 
 				if (node.hasClass('sidenav-right')) {
-					if (window.innerWidth < 768) {
-						if (typeof(instance.options.width) === 'string') {
-							width = '-' + instance.options.width;
-						}
-
-						if (typeof(instance.options.width) === 'number') {
-							width = -instance.options.width;
-						}
-
-						node.find(instance.options.content).css({
-							left: width,
-							paddingRight: ''
-						});
-
-						element.find('.sidenav-menu').css('right', '');
-
-						if (instance.options.width) {
-							element.find('.sidenav-menu').css('width', instance.options.width);
-
-							if (node.hasClass('closed')) {
-								element.find('.sidenav-menu').css('right', instance.options.width);
-							}
-						}
-					}
-					else {
-						node.find(instance.options.content).css('padding-right', instance.options.width);
-						node.find('.sidenav-menu').css('width', instance.options.width);
-					}
+					instance.setSidenavRightWidth(node, content, menu);
 				}
 				else {
-					if (window.innerWidth < 768) {
-						node.find(instance.options.content).css({
-							left: instance.options.width,
-							paddingLeft: ''
-						});
-					}
-					else {
-						node.find(instance.options.content).css('padding-left', instance.options.width);
-					}
+					instance.setSidenavLeftWidth(node, content, menu);
 				}
 
 				node.find(instance.options.navigation).css('width', instance.options.width);
+				menu.css('width', instance.options.width);
 			});
 		},
 
 		toggleNavigation: function(container) {
 			var instance = this;
 
+			var sidenavMenu = container.find('.sidenav-menu');
+
 			if (container.hasClass('closed')) {
-				container.find('.sidenav-menu').css('width', instance.options.width);
+				instance.setEqualHeight(container);
+
+				sidenavMenu.css('width', instance.options.width);
 
 				setTimeout(function() {
 					container.removeClass('closed').addClass('sidenav-transition');
 
-					if (window.innerWidth > 767) {
-						container.find('.sidenav-menu').css('right', '');
+					if (window.innerWidth > instance.options.breakpoint - 1) {
+						sidenavMenu.css('right', '');
 					}
 
 					instance.setWidth(container);
 				}, 0);
 			}
 			else {
-				if (window.innerWidth > 767) {
-					container.find('.sidenav-menu').css('right', instance.options.width);
+				if (window.innerWidth > instance.options.breakpoint - 1) {
+					sidenavMenu.css('right', instance.options.width);
 				}
 
 				container.addClass('closed').addClass('sidenav-transition');
@@ -284,10 +398,14 @@
 	}
 
 	$.fn.sideNavigation.defaults = {
-		content: '.sidenav-content',
-		navigation: '.sidenav-menu-slider',
-		position: 'left',
-		toggler: '.sidenav-toggler'
+		breakpoint: 768, // desktop media query breakpoint
+		content: '.sidenav-content', // class or id of content
+		gutter: '15px', // space between sidenav-slider and sidenav-content
+		navigation: '.sidenav-menu-slider', // class or id of navigation
+		position: 'left', // position of sidenav-slider, left or right side
+		type: 'default', // type of sidenav, default or fixed
+		toggler: '.sidenav-toggler', // class or id of toggle button
+		width: '225px' // width of side navigation
 	};
 
 	$.fn.sideNavigation.Constructor = SideNavigation;
