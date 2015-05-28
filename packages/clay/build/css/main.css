@@ -11897,6 +11897,19 @@ figcaption, .figcaption {
   }
 }
 
+.sidenav-fixed.sidenav-right .sidenav-menu-slider {
+  left: auto;
+  right: 0;
+}
+
+.sidenav-fixed .sidenav-menu-slider {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1070;
+}
+
 .sidenav-container {
   position: relative;
 }
@@ -11914,21 +11927,17 @@ figcaption, .figcaption {
   padding-bottom: 1px;
   padding-top: 1px;
   position: relative;
-  left: 220px;
 }
 
 .sidenav-menu {
-  width: 220px;
+  height: 100%;
+  padding-bottom: 1px;
+  padding-top: 1px;
 }
 
 .sidenav-menu-slider {
   overflow: visible;
   position: absolute;
-  width: 220px;
-}
-
-.sidenav-container.sidenav-right .sidenav-content {
-  left: -220px;
 }
 
 .sidenav-container.sidenav-right .sidenav-menu {
@@ -11938,14 +11947,6 @@ figcaption, .figcaption {
 
 .sidenav-container.sidenav-right .sidenav-menu-slider {
   right: 0;
-}
-
-.sidenav-container.sidenav-right.closed .sidenav-content {
-  left: 0;
-}
-
-.sidenav-container.sidenav-right.closed .sidenav-menu {
-  right: 220px;
 }
 
 .sidenav-transition .sidenav-content {
@@ -11966,8 +11967,6 @@ figcaption, .figcaption {
 
 @media (min-width: 768px) {
   .sidenav-content {
-    left: auto;
-    padding-left: 220px;
     position: static;
   }
   .sidenav-content:after {
@@ -11977,17 +11976,6 @@ figcaption, .figcaption {
     font-size: 0;
     height: 0;
     visibility: hidden;
-  }
-  .sidenav-container.closed > .sidenav-content {
-    left: auto;
-    padding-left: 0;
-  }
-  .sidenav-container.sidenav-right > .sidenav-content {
-    padding-left: 0;
-    padding-right: 220px;
-  }
-  .sidenav-container.sidenav-right.closed > .sidenav-content {
-    padding-right: 0;
   }
 }
 
@@ -15885,6 +15873,18 @@ a.list-group-heading:hover {
   }
 }
 
+.sidebar {
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar.slideout-drawer-transition {
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
 .sidebar .navbar {
   margin-bottom: 0;
 }
@@ -15924,12 +15924,6 @@ a.list-group-heading:hover {
 .sidebar-default {
   background-color: #F5F8FA;
   border-left: 1px solid #DFE0E3;
-}
-
-@media (min-width: 768px) {
-  .sidenav-container.sidenav-right .sidenav-menu {
-    padding-left: 0;
-  }
 }
 
 .slideout-drawer {
