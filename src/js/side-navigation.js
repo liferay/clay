@@ -28,21 +28,36 @@
 			instance._onScreenDesktop(element);
 		},
 
+		_bindSidenavClose: function(container) {
+			var instance = this;
+
+			var sidenavClose = container.find('.sidenav-close');
+
+			if (sidenavClose.length) {
+				sidenavClose.on('click', function(event) {
+					event.preventDefault();
+
+					instance.toggleNavigation(container);
+				});
+			}
+		},
+
 		_onClickTrigger: function(element) {
 			var instance = this;
-			var toggler = element.find(instance.options.toggler);
+			var toggler = element.find(instance.options.toggler); // find toggler inside element
 
 			var body;
 			var container;
 
-			if (!toggler.length) {
+			if (!toggler.length) { // if toggler doesnt exist, toggler and element are separate
 				body = element.closest('body');
 				toggler = body.find(instance.options.toggler);
 				container = body.find(instance.options.selector);
 			}
 
 			toggler.on('click', function(event) {
-				var selector = $(this).closest(instance.options.selector);
+				var $this = $(this);
+				var selector = $this.closest(instance.options.selector);
 
 				var content;
 				var navigation;
@@ -50,6 +65,12 @@
 
 				if (selector.length) {
 					container = selector;
+				}
+
+				if (!$this.data('previouslyToggled')) {
+					instance._bindSidenavClose(container);
+
+					$this.data('previouslyToggled', true);
 				}
 
 				content = container.find(instance.options.content);
@@ -69,11 +90,7 @@
 					container.off(transitions);
 				});
 
-				instance.setEqualHeight(container);
-
-				setTimeout(function() {
-					instance.toggleNavigation(container);
-				}, 0);
+				instance.toggleNavigation(container);
 			});
 		},
 
@@ -348,6 +365,8 @@
 			var sidenavMenu = container.find('.sidenav-menu');
 
 			if (container.hasClass('closed')) {
+				instance.setEqualHeight(container);
+
 				sidenavMenu.css('width', instance.options.width);
 
 				setTimeout(function() {
