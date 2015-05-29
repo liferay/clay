@@ -322,12 +322,10 @@
 
 				menu.css('right', '');
 
-				if (instance.options.width) {
-					menu.css('width', instance.options.width);
+				menu.css('width', instance.options.width);
 
-					if (container.hasClass('closed')) {
-						menu.css('right', instance.options.width);
-					}
+				if (container.hasClass('closed')) {
+					menu.css('right', instance.options.width);
 				}
 			}
 			else {
@@ -380,7 +378,7 @@
 				}, 0);
 			}
 			else {
-				if (window.innerWidth > instance.options.breakpoint - 1) {
+				if ((window.innerWidth > instance.options.breakpoint - 1) && (container.hasClass('sidenav-right'))) {
 					sidenavMenu.css('right', instance.options.width);
 				}
 
