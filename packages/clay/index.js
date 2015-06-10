@@ -88,6 +88,7 @@ var metadata = Y.merge(
 		YUI_config: YUI_config,
 		Y: Y,
 		// title: '',
+		heading: '',
 		subHeading: '',
 		getAUIPath: function(rootPath) {
 			var auiPath = auisrc;
