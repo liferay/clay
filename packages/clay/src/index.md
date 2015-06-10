@@ -1,9 +1,10 @@
 ---
 title: Home
+heading: Lexicon
+subHeading: Liferay Experience Language
 navIndex: 0
 ---
 
-## About
-These are Liferay's UX Guidelines.
+### About
 
-They are meant to help explain our design principles, offer direction and best practices in building your web apps, and provide a documented HTML and CSS API.
+This is Lexicon, the Liferay Experience Language. This is a system for building applications in and outside of Liferay, designed to be fluid and extensible, as well as provide a consistent and documented API.
