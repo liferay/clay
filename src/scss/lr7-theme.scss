@@ -5,9 +5,6 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
-@import "lexicon/variables";
-@import "lexicon/mixins";
-
 @import "atlas-theme/variables";
 @import "atlas-theme/mixins";
 
@@ -54,35 +51,7 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
-// Import _styled Theme Files
-// @import "lexicon/slideout-drawer";
-// @import "lexicon/toolbars";
-// @import "lexicon/user-icons";
-
-// Files that Classic needs to inherit from _styled
-@import "lexicon/badges";
-@import "lexicon/buttons";
-@import "lexicon/cards";
-@import "lexicon/dropdowns";
-@import "lexicon/equal-height-columns";
-@import "lexicon/form-validation";
-@import "lexicon/grid";
-@import "lexicon/icons";
-@import "lexicon/input-groups";
-@import "lexicon/forms";
-@import "lexicon/figures";
-@import "lexicon/labels";
-@import "lexicon/list-group";
-@import "lexicon/modals";
-@import "lexicon/nameplates";
-@import "lexicon/navbar";
-@import "lexicon/nav-tabs";
-@import "lexicon/pagination";
-@import "lexicon/side-navigation";
-@import "lexicon/tables";
-@import "lexicon/toggle-card";
-@import "lexicon/toggle-switch";
-@import "lexicon/type";
+@import "lexicon/lexicon";
 
 // Import Classic Theme Files
 @import "atlas-theme/alerts";
