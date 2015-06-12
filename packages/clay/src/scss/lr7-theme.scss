@@ -5,8 +5,8 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
-@import "lr7-_styled-theme/variables";
-@import "lr7-_styled-theme/mixins";
+@import "lexicon/variables";
+@import "lexicon/mixins";
 
 @import "lr7-classic-theme/variables";
 @import "lr7-classic-theme/mixins";
@@ -55,34 +55,34 @@
 @import "bootstrap/responsive-utilities";
 
 // Import _styled Theme Files
-// @import "lr7-_styled-theme/slideout-drawer";
-// @import "lr7-_styled-theme/toolbars";
-// @import "lr7-_styled-theme/user-icons";
+// @import "lexicon/slideout-drawer";
+// @import "lexicon/toolbars";
+// @import "lexicon/user-icons";
 
 // Files that Classic needs to inherit from _styled
-@import "lr7-_styled-theme/badges";
-@import "lr7-_styled-theme/buttons";
-@import "lr7-_styled-theme/cards";
-@import "lr7-_styled-theme/dropdowns";
-@import "lr7-_styled-theme/equal-height-columns";
-@import "lr7-_styled-theme/form-validation";
-@import "lr7-_styled-theme/grid";
-@import "lr7-_styled-theme/icons";
-@import "lr7-_styled-theme/input-groups";
-@import "lr7-_styled-theme/forms";
-@import "lr7-_styled-theme/figures";
-@import "lr7-_styled-theme/labels";
-@import "lr7-_styled-theme/list-group";
-@import "lr7-_styled-theme/modals";
-@import "lr7-_styled-theme/nameplates";
-@import "lr7-_styled-theme/navbar";
-@import "lr7-_styled-theme/nav-tabs";
-@import "lr7-_styled-theme/pagination";
-@import "lr7-_styled-theme/side-navigation";
-@import "lr7-_styled-theme/tables";
-@import "lr7-_styled-theme/toggle-card";
-@import "lr7-_styled-theme/toggle-switch";
-@import "lr7-_styled-theme/type";
+@import "lexicon/badges";
+@import "lexicon/buttons";
+@import "lexicon/cards";
+@import "lexicon/dropdowns";
+@import "lexicon/equal-height-columns";
+@import "lexicon/form-validation";
+@import "lexicon/grid";
+@import "lexicon/icons";
+@import "lexicon/input-groups";
+@import "lexicon/forms";
+@import "lexicon/figures";
+@import "lexicon/labels";
+@import "lexicon/list-group";
+@import "lexicon/modals";
+@import "lexicon/nameplates";
+@import "lexicon/navbar";
+@import "lexicon/nav-tabs";
+@import "lexicon/pagination";
+@import "lexicon/side-navigation";
+@import "lexicon/tables";
+@import "lexicon/toggle-card";
+@import "lexicon/toggle-switch";
+@import "lexicon/type";
 
 // Import Classic Theme Files
 @import "lr7-classic-theme/alerts";
