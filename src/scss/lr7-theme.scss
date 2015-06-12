@@ -5,9 +5,6 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
-@import "atlas-theme/variables";
-@import "atlas-theme/mixins";
-
 // @import "YOUR CUSTOM VARIABLES"; // file containing custom variables
 
 // @import "bootstrap/bootstrap";
@@ -52,39 +49,6 @@
 @import "bootstrap/responsive-utilities";
 
 @import "lexicon/lexicon";
+@import "atlas-theme/atlas";
 
 // Import Classic Theme Files
-@import "atlas-theme/alerts";
-@import "atlas-theme/badges";
-@import "atlas-theme/breadcrumbs";
-@import "atlas-theme/buttons";
-@import "atlas-theme/button-groups";
-@import "atlas-theme/cards";
-@import "atlas-theme/dropdowns";
-@import "atlas-theme/figures";
-@import "atlas-theme/forms";
-@import "atlas-theme/form-validation";
-@import "atlas-theme/input-groups";
-@import "atlas-theme/labels";
-@import "atlas-theme/list-group";
-@import "atlas-theme/modals";
-@import "atlas-theme/navs";
-@import "atlas-theme/nav-tabs";
-@import "atlas-theme/navbar";
-@import "atlas-theme/notifications";
-@import "atlas-theme/nameplates";
-@import "atlas-theme/pager";
-@import "atlas-theme/pagination";
-@import "atlas-theme/panels";
-@import "atlas-theme/popovers";
-@import "atlas-theme/scaffolding";
-@import "atlas-theme/sidebar";
-@import "atlas-theme/slideout-drawer";
-@import "atlas-theme/sliders";
-@import "atlas-theme/tables";
-@import "atlas-theme/timelines";
-@import "atlas-theme/toggle-switch";
-@import "atlas-theme/toolbars";
-@import "atlas-theme/tooltips";
-@import "atlas-theme/type";
-@import "atlas-theme/user-icons";
