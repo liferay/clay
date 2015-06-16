@@ -1,16 +1,16 @@
-$list-group-border: lighten($brand-default, 30%);
-$list-group-border-radius: 0;
+$list-group-border: lighten($brand-default, 30%) !default;
+$list-group-border-radius: 0 !default;
 
-$list-group-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+$list-group-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2) !default;
 
-$list-group-header-bg: #F5F8FA;
-$list-group-header-color: $brand-default;
-$list-group-header-font-weight: 500;
+$list-group-header-bg: #F5F8FA !default;
+$list-group-header-color: $brand-default !default;
+$list-group-header-font-weight: 500 !default;
 
-$list-group-header-close-border-color: $list-group-border;
-$list-group-header-close-border-width: 1px;
+$list-group-header-close-border-color: $list-group-border !default;
+$list-group-header-close-border-width: 1px !default;
 
-$list-group-header-open-border-color: $brand-primary;
-$list-group-header-open-border-width: 2px;
+$list-group-header-open-border-color: $brand-primary !default;
+$list-group-header-open-border-width: 2px !default;
 
-$list-group-header-icon-font-size: 20px;
+$list-group-header-icon-font-size: 20px !default;

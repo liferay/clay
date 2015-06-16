@@ -1,33 +1,33 @@
 // Toggle Card Settings
-$toggle-card-height: 104px;
-$toggle-card-width: 92px;
+$toggle-card-height: 104px !default;
+$toggle-card-width: 92px !default;
 
-$toggle-card-padding-horizontal: 12px;
-$toggle-card-padding-vertical: 12px;
+$toggle-card-padding-horizontal: 12px !default;
+$toggle-card-padding-vertical: 12px !default;
 
-$toggle-card-border-radius: 2px;
+$toggle-card-border-radius: 2px !default;
 
-$toggle-card-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+$toggle-card-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15) !default;
 
-$toggle-card-icon-border-radius: 30px;
-$toggle-card-icon-font-size: 24px;
-$toggle-card-icon-height: 32px;
-$toggle-card-icon-width: 32px;
+$toggle-card-icon-border-radius: 30px !default;
+$toggle-card-icon-font-size: 24px !default;
+$toggle-card-icon-height: 32px !default;
+$toggle-card-icon-width: 32px !default;
 
 // toggle-card-off Card Styles
-$toggle-card-bg: $body-bg;
-$toggle-card-border: #DCE0E3;
-$toggle-card-border-width: 1px;
-$toggle-card-icon-bg: transparent;
-$toggle-card-icon-border: #869CAD;
-$toggle-card-icon-border-width: 0;
-$toggle-card-text-color: #869CAD;
+$toggle-card-bg: $body-bg !default;
+$toggle-card-border: #DCE0E3 !default;
+$toggle-card-border-width: 1px !default;
+$toggle-card-icon-bg: transparent !default;
+$toggle-card-icon-border: #869CAD !default;
+$toggle-card-icon-border-width: 0 !default;
+$toggle-card-text-color: #869CAD !default;
 
 // toggle-card-on Card Styles
-$toggle-card-on-bg: $body-bg;
-$toggle-card-on-border: #65B6F0;
-$toggle-card-on-border-width: 2px;
-$toggle-card-on-icon-bg: transparent;
-$toggle-card-on-icon-border: #65B6F0;
-$toggle-card-on-icon-border-width: 0;
-$toggle-card-on-text-color: #65B6F0;
+$toggle-card-on-bg: $body-bg !default;
+$toggle-card-on-border: #65B6F0 !default;
+$toggle-card-on-border-width: 2px !default;
+$toggle-card-on-icon-bg: transparent !default;
+$toggle-card-on-icon-border: #65B6F0 !default;
+$toggle-card-on-icon-border-width: 0 !default;
+$toggle-card-on-text-color: #65B6F0 !default;

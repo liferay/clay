@@ -1,23 +1,23 @@
-$badge-bg: $brand-default;
-$badge-border-radius: 50px;
+$badge-bg: $brand-default !default;
+$badge-border-radius: 50px !default;
 
-$badge-font-size: ceil($font-size-base / 1.166667);
-$badge-desktop-font-size: $font-size-base;
+$badge-font-size: ceil($font-size-base / 1.166667) !default;
+$badge-desktop-font-size: $font-size-base !default;
 
-$badge-height: 32px;
-$badge-width: $badge-height;
+$badge-height: 32px !default;
+$badge-width: $badge-height !default;
 
-$badge-sm-height: 22px;
-$badge-sm-width: $badge-sm-height;
+$badge-sm-height: 22px !default;
+$badge-sm-width: $badge-sm-height !default;
 
-$badge-lg-height: 44px;
-$badge-lg-width: $badge-lg-height;
+$badge-lg-height: 44px !default;
+$badge-lg-width: $badge-lg-height !default;
 
-$badge-padding-vertical: 0;
-$badge-padding-horizontal: 12px;
+$badge-padding-vertical: 0 !default;
+$badge-padding-horizontal: 12px !default;
 
-$badge-sm-padding-vertical: $badge-padding-vertical;
-$badge-sm-padding-horizontal: 10px;
+$badge-sm-padding-vertical: $badge-padding-vertical !default;
+$badge-sm-padding-horizontal: 10px !default;
 
-$badge-lg-padding-vertical: $badge-padding-vertical;
-$badge-lg-padding-horizontal: 20px;
+$badge-lg-padding-vertical: $badge-padding-vertical !default;
+$badge-lg-padding-horizontal: 20px !default;

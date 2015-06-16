@@ -1,36 +1,36 @@
 //Modals
 
-$modal-body-bg: transparent;
-$modal-body-color: $text-color;
+$modal-body-bg: transparent !default;
+$modal-body-color: $text-color !default;
 
-$modal-header-bg: transparent;
-$modal-header-color: $text-color;
-$modal-header-close-color: $text-color;
+$modal-header-bg: transparent !default;
+$modal-header-color: $text-color !default;
+$modal-header-close-color: $text-color !default;
 
-$modal-footer-bg: $modal-header-bg;
-$modal-footer-color: $modal-header-color;
+$modal-footer-bg: $modal-header-bg !default;
+$modal-footer-color: $modal-header-color !default;
 
-$modal-full-screen-body-bg: transparent;
-$modal-full-screen-desktop-body-bg: $modal-body-bg;
+$modal-full-screen-body-bg: transparent !default;
+$modal-full-screen-desktop-body-bg: $modal-body-bg !default;
 
-$modal-full-screen-footer-bg: transparent; 
-$modal-full-screen-footer-desktop-bg: $modal-footer-bg;
-$modal-full-screen-footer-color: $text-color;
-$modal-full-screen-footer-desktop-color: $text-color;
+$modal-full-screen-footer-bg: transparent !default;
+$modal-full-screen-footer-desktop-bg: $modal-footer-bg !default;
+$modal-full-screen-footer-color: $text-color !default;
+$modal-full-screen-footer-desktop-color: $text-color !default;
 
-$modal-inverse-body-bg: $modal-body-bg;
-$modal-inverse-body-color: $navbar-inverse-color;
+$modal-inverse-body-bg: $modal-body-bg !default;
+$modal-inverse-body-color: $navbar-inverse-color !default;
 
-$modal-inverse-content-bg: $navbar-inverse-bg;
-$modal-inverse-content-border-color: $navbar-inverse-border;
+$modal-inverse-content-bg: $navbar-inverse-bg !default;
+$modal-inverse-content-border-color: $navbar-inverse-border !default;
 
-$modal-inverse-header-bg: $modal-header-bg;
-$modal-inverse-header-border-color: $navbar-inverse-border;
-$modal-inverse-header-color: $navbar-inverse-color;
-$modal-inverse-header-close-color: $navbar-inverse-color;
+$modal-inverse-header-bg: $modal-header-bg !default;
+$modal-inverse-header-border-color: $navbar-inverse-border !default;
+$modal-inverse-header-color: $navbar-inverse-color !default;
+$modal-inverse-header-close-color: $navbar-inverse-color !default;
 
-$modal-inverse-footer-bg: $modal-inverse-header-bg;
-$modal-inverse-footer-border-color: $modal-inverse-header-border-color;
-$modal-inverse-footer-color: $modal-inverse-header-color;
+$modal-inverse-footer-bg: $modal-inverse-header-bg !default;
+$modal-inverse-footer-border-color: $modal-inverse-header-border-color !default;
+$modal-inverse-footer-color: $modal-inverse-header-color !default;
 
-$modal-btn-icon-color: $link-color;
+$modal-btn-icon-color: $link-color !default;

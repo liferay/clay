@@ -1,33 +1,33 @@
 // Toggle Card Settings
-$toggle-card-height: 78px;
-$toggle-card-width: 69px;
+$toggle-card-height: 78px !default;
+$toggle-card-width: 69px !default;
 
-$toggle-card-padding-horizontal: 4px;
-$toggle-card-padding-vertical: 4px;
+$toggle-card-padding-horizontal: 4px !default;
+$toggle-card-padding-vertical: 4px !default;
 
-$toggle-card-border-radius: 4px;
+$toggle-card-border-radius: 4px !default;
 
-$toggle-card-box-shadow: none;
+$toggle-card-box-shadow: none !default;
 
-$toggle-card-icon-border-radius: 30px;
-$toggle-card-icon-font-size: 16px;
-$toggle-card-icon-height: 32px;
-$toggle-card-icon-width: 32px;
+$toggle-card-icon-border-radius: 30px !default;
+$toggle-card-icon-font-size: 16px !default;
+$toggle-card-icon-height: 32px !default;
+$toggle-card-icon-width: 32px !default;
 
 // Toggle Card On Styles
-$toggle-card-bg: $input-bg;
-$toggle-card-border: $input-border;
-$toggle-card-border-width: 1px;
-$toggle-card-icon-bg: transparent;
-$toggle-card-icon-border: #869CAD;
-$toggle-card-icon-border-width: 0;
-$toggle-card-text-color: $text-color;
+$toggle-card-bg: $input-bg !default;
+$toggle-card-border: $input-border !default;
+$toggle-card-border-width: 1px !default;
+$toggle-card-icon-bg: transparent !default;
+$toggle-card-icon-border: #869CAD !default;
+$toggle-card-icon-border-width: 0 !default;
+$toggle-card-text-color: $text-color !default;
 
 // Toggle Card Off Styles
-$toggle-card-on-bg: $body-bg;
-$toggle-card-on-border: $input-border-focus;
-$toggle-card-on-border-width: 1px;
-$toggle-card-on-icon-bg: transparent;
-$toggle-card-on-icon-border: $toggle-card-on-border;
-$toggle-card-on-icon-border-width: 0;
-$toggle-card-on-text-color: $toggle-card-on-border;
+$toggle-card-on-bg: $body-bg !default;
+$toggle-card-on-border: $input-border-focus !default;
+$toggle-card-on-border-width: 1px !default;
+$toggle-card-on-icon-bg: transparent !default;
+$toggle-card-on-icon-border: $toggle-card-on-border !default;
+$toggle-card-on-icon-border-width: 0 !default;
+$toggle-card-on-text-color: $toggle-card-on-border !default;
