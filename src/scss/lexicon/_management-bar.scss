@@ -1,0 +1,199 @@
+.management-bar {
+	@extend .navbar;
+
+	border-radius: 0;
+
+	label {
+		margin-bottom: 0;
+	}
+
+	.btn {
+		margin: 9px 3px;
+		padding: 5px 9px;
+	}
+
+	.checkbox-default input[type="checkbox"] {
+		margin-bottom: 0;
+	}
+
+	.dropdown-menu {
+		.checkbox-default input[type="checkbox"] {
+			height: auto;
+			margin-right: 6px;
+		}
+
+		> li > .checkbox-default {
+			cursor: pointer;
+			display: block;
+			font-weight: normal;
+			margin-bottom: 0;
+			padding: 3px 20px;
+
+			&:focus,
+			&:hover {
+				background-color: $dropdown-link-hover-bg;
+				color: $dropdown-link-hover-color;
+			}
+		}
+
+		> .active > .checkbox-default {
+			&,
+			&:focus,
+			&:hover {
+				background-color: $dropdown-link-active-bg;
+				color: $dropdown-link-active-color;
+			}
+		}
+	}
+}
+
+.management-bar-right {
+	float: right;
+}
+
+// management bar headers
+
+.management-bar-header,
+.management-bar-header-right {
+	> .checkbox-default {
+		padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+	}
+}
+
+.management-bar-header {
+	@extend .navbar-header;
+
+	float: left;
+
+	.checkbox-default {
+		margin-bottom: 0;
+	}
+}
+
+.management-bar-header-right {
+	> a {
+		display: block;
+		float: left;
+		padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+	}
+}
+
+.management-bar-header-item {
+	@extend .navbar-brand;
+}
+
+.management-bar-header-right {
+	@extend .navbar-header-right;
+
+	float: right;
+}
+
+.management-bar-item-title {
+	display: inline-block;
+	float: left;
+	margin-right: 5px;
+	max-width: 100%;
+
+	@include text-overflow();
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		max-width: 150px;
+	}
+}
+
+.management-bar-toggle {
+	@extend .navbar-toggle;
+}
+
+.management-bar-toggle-link {
+	border-radius: 0;
+	border-width: 0;
+
+	&.management-bar-toggle {
+		margin: 0;
+		padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+	}
+
+	&:focus,
+	&:hover {
+		background-color: $nav-link-hover-bg;
+		text-decoration: none;
+	}
+}
+
+.management-bar-toggle-left {
+	@extend .navbar-toggle-left;
+}
+
+// management bar collapse
+
+.management-bar-collapse {
+	@extend .navbar-collapse;
+
+	background-color: $management-bar-collapse-bg;
+	clear: both;
+	left: -1px;
+	position: absolute;
+	right: -1px;
+	top: 100%;
+	z-index: 1001;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		clear: none;
+		margin-top: 0;
+		position: static;
+	}
+}
+
+.management-bar-no-collapse .management-bar-nav {
+	float: left;
+	margin: 0;
+
+	&.management-bar-right {
+		float: right;
+	}
+
+	> li {
+		float: left;
+		margin-left: -1px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		> a {
+			padding-bottom: $management-bar-padding-vertical;
+			padding-top: $management-bar-padding-vertical;
+		}
+
+		> .btn {
+			margin: 9px 3px;
+			padding: 5px 9px;
+		}
+	}
+}
+
+.management-bar-nav {
+	@extend .navbar-nav;
+
+	> li {
+		.checkbox-default,
+		.management-bar-text {
+			padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+		}
+
+		.management-bar-text {
+			display: inline-block;
+		}
+	}
+}
+
+// Management Bar Skins
+
+.management-bar-default {
+	background-color: $management-bar-default-bg;
+
+	.management-bar-collapse {
+		background-color: $management-bar-default-bg;
+	}
+}

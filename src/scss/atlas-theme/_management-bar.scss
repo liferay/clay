@@ -1,0 +1,196 @@
+.management-bar {
+	border: 1px solid $management-bar-border;
+	border-width: $management-bar-border-width;
+	color: $management-bar-color;
+	padding-left: $management-bar-padding-horizontal;
+	padding-right: $management-bar-padding-horizontal;
+
+	.btn {
+		border: 1px solid $management-bar-border;
+		border-radius: 3px;
+		margin: 6px 3px;
+		padding: 0;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin: 13px 3px;
+		}
+	}
+
+	.checkbox-default input[type="checkbox"] {
+		margin-top: 0;
+	}
+
+	.dropdown-menu {
+		> li > .checkbox-default {
+			padding-bottom: 9px;
+			padding-top: 9px;
+		}
+
+		> .active > .checkbox-default {
+			&,
+			&:focus,
+			&:hover {
+				background-color: transparent;
+			}
+		}
+
+		.checkbox-default input[type="checkbox"] {
+			height: $checkbox-size;
+		}
+	}
+}
+
+.management-bar-header,
+.management-bar-header-right {
+	> .checkbox-default {
+		padding: 13px 15px;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			padding: 20px 15px;
+		}
+	}
+}
+
+.management-bar-nav {
+	> li {
+		> .checkbox-default {
+			padding: 13px 15px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				padding: 20px 15px;
+			}
+		}
+
+		> .management-bar-text {
+			padding: 13px 15px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				padding: 19px 15px;
+			}
+		}
+	}
+}
+
+.management-bar-no-collapse .management-bar-nav > li > .btn {
+	margin: 6px 3px;
+	padding: 0;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		margin: 13px 3px;
+	}
+}
+
+.management-bar-toggle {
+	color: $management-bar-link-color;
+
+	&:hover,
+	&:focus {
+		color: $management-bar-link-hover-color;
+	}
+}
+
+.management-bar-toggle-link {
+	&.management-bar-toggle {
+		padding: 13px 15px;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+		}
+	}
+}
+
+// Overwrite navbar-nav styles
+
+.management-bar-nav.nav {
+	> li {
+		> a {
+			color: $management-bar-link-color;
+
+			&:focus,
+			&:hover {
+				color: $management-bar-link-hover-color;
+			}
+		}
+
+		&.active,
+		&.open {
+			> a {
+				color: $management-bar-link-active-color;
+			}
+		}
+	}
+}
+
+// Button Skins
+
+.management-bar-header,
+.management-bar-header-right {
+	> a {
+		color: $management-bar-link-color;
+
+		&:focus,
+		&:hover {
+			color: $management-bar-link-hover-color;
+		}
+	}
+
+	> .btn-default {
+		color: $btn-default-color;
+
+		&:focus,
+		&:hover,
+		&.active {
+			border-color: $btn-default-hover-border;
+		}
+	}
+
+	> .btn-danger {
+		color: $btn-danger-color;
+
+		&:focus,
+		&:hover {
+			color: $btn-danger-color;
+		}
+	}
+
+	> .btn-primary {
+		color: $btn-primary-color;
+
+		&:focus,
+		&:hover {
+			color: $btn-primary-color;
+		}
+	}
+
+	> .btn-success {
+		color: $btn-success-color;
+
+		&:focus,
+		&:hover {
+			color: $btn-success-color;
+		}
+	}
+
+	> .btn-warning {
+		color: $btn-warning-color;
+
+		&:focus,
+		&:hover {
+			color: $btn-warning-color;
+		}
+	}
+}
+
+.management-bar-header-right {
+	.btn-primary {
+		border-color: $btn-primary-bg;
+		color: $btn-primary-color;
+
+		&:focus,
+		&:hover {
+			background-color: $btn-primary-hover-bg;
+			border-color: $btn-primary-hover-bg;
+			color: $btn-primary-color;
+		}
+	}
+}
