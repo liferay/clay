@@ -99,7 +99,7 @@
 	}
 }
 
-// Overwrite navbar-nav styles
+// Skins
 
 .management-bar-nav.nav {
 	> li {
@@ -121,8 +121,6 @@
 	}
 }
 
-// Button Skins
-
 .management-bar-header,
 .management-bar-header-right {
 	> a {
@@ -131,6 +129,24 @@
 		&:focus,
 		&:hover {
 			color: $management-bar-link-hover-color;
+		}
+	}
+
+	> .management-bar-toggle {
+		color: $management-bar-toggle-open-color;
+
+		&:focus,
+		&:hover {
+			color: $management-bar-toggle-open-color;
+		}
+
+		&.collapsed {
+			color: $management-bar-toggle-close-color;
+
+			&:focus,
+			&:hover {
+				color: $management-bar-toggle-close-color;
+			}
 		}
 	}
 
