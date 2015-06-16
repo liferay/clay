@@ -1,54 +1,7 @@
 @import "../fonts/alloy-font-awesome/scss/font-awesome";
 
-@import "bourbon";
-
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
-
-// @import "YOUR CUSTOM VARIABLES"; // file containing custom variables
+// @import "bourbon";
 
 // @import "bootstrap/bootstrap";
-
-// Bootstrap
-@import "bootstrap/normalize";
-@import "bootstrap/print";
-@import "bootstrap/glyphicons";
-@import "bootstrap/scaffolding";
-@import "bootstrap/type";
-@import "bootstrap/code";
-@import "bootstrap/grid";
-@import "bootstrap/tables";
-@import "bootstrap/forms";
-@import "bootstrap/buttons";
-@import "bootstrap/component-animations";
-@import "bootstrap/dropdowns";
-@import "bootstrap/button-groups";
-@import "bootstrap/input-groups";
-@import "bootstrap/navs";
-@import "bootstrap/navbar";
-@import "bootstrap/breadcrumbs";
-@import "bootstrap/pagination";
-@import "bootstrap/pager";
-@import "bootstrap/labels";
-@import "bootstrap/badges";
-@import "bootstrap/jumbotron";
-@import "bootstrap/thumbnails";
-@import "bootstrap/alerts";
-@import "bootstrap/progress-bars";
-@import "bootstrap/media";
-@import "bootstrap/list-group";
-@import "bootstrap/panels";
-@import "bootstrap/responsive-embed";
-@import "bootstrap/wells";
-@import "bootstrap/close";
-@import "bootstrap/modals";
-@import "bootstrap/tooltip";
-@import "bootstrap/popovers";
-@import "bootstrap/carousel";
-@import "bootstrap/utilities";
-@import "bootstrap/responsive-utilities";
-
-@import "lexicon/lexicon";
-@import "atlas-theme/atlas";
-
-// Import Classic Theme Files
+// @import "lexicon/main";
+@import "atlas-theme/main";

@@ -1,103 +1,103 @@
-$input-font-size: 14px;
-$input-desktop-font-size: 16px;
+$input-font-size: 14px !default;
+$input-desktop-font-size: 16px !default;
 
-$input-label-font-size: 12px;
-$input-label-desktop-font-size: 14px;
+$input-label-font-size: 12px !default;
+$input-label-desktop-font-size: 14px !default;
 
-$input-bg:                                 #FFF;
-$input-bg-disabled:                        $input-bg;
+$input-bg:                                 #FFF !default;
+$input-bg-disabled:                        $input-bg !default;
 
-$input-color:                              $text-color;
-$input-color-focus: $brand-primary;
+$input-color:                              $text-color !default;
+$input-color-focus: $brand-primary !default;
 
-$input-border:                             $brand-default;
-$input-border-focus:                       $input-color-focus;
-$input-border-disabled: #CFD7DE;
+$input-border:                             $brand-default !default;
+$input-border-focus:                       $input-color-focus !default;
+$input-border-disabled: #CFD7DE !default;
 
-$input-border-radius: 0;
-$input-border-radius-large: $input-border-radius;
-$input-border-radius-small: $input-border-radius;
+$input-border-radius: 0 !default;
+$input-border-radius-large: $input-border-radius !default;
+$input-border-radius-small: $input-border-radius !default;
 
-$input-border-top-width: 0;
-$input-border-right-width: 0;
-$input-border-bottom-width: 2px;
-$input-border-left-width: 0;
-$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width;
+$input-border-top-width: 0 !default;
+$input-border-right-width: 0 !default;
+$input-border-bottom-width: 2px !default;
+$input-border-left-width: 0 !default;
+$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
 
-$input-box-shadow: none;
-$input-box-shadow-focus: none;
+$input-box-shadow: none !default;
+$input-box-shadow-focus: none !default;
 
-$input-color-placeholder:                  darken(#E4E9EC, 12%);
-$input-color-placeholder-focus: $input-border-focus;
+$input-color-placeholder:                  darken(#E4E9EC, 12%) !default;
+$input-color-placeholder-focus: $input-border-focus !default;
 
-$input-label-color: $brand-default;
-$input-label-focus-color: $input-color-focus;
+$input-label-color: $brand-default !default;
+$input-label-focus-color: $input-color-focus !default;
 
-$input-padding-horizontal: 0;
-$input-padding-vertical: 8px;
+$input-padding-horizontal: 0 !default;
+$input-padding-vertical: 8px !default;
 
-$input-readonly-bg: #FAFAFA;
-$input-readonly-border: $input-border;
-$input-readonly-color: darken($input-color-placeholder, 12%);
+$input-readonly-bg: #FAFAFA !default;
+$input-readonly-border: $input-border !default;
+$input-readonly-color: darken($input-color-placeholder, 12%) !default;
 
-$input-font-size-base: 16px;
-$input-font-size-large: 18px;
-$input-font-size-small: 13px;
+$input-font-size-base: 16px !default;
+$input-font-size-large: 18px !default;
+$input-font-size-small: 13px !default;
 
 /*** When changing input, make sure to match the corresponding
 		 btn settings to the input height. ***/
-$input-height-base:                        48px;
-$input-height-large:                       61px;
-$input-height-small:                       37px;
+$input-height-base:                        48px !default;
+$input-height-large:                       61px !default;
+$input-height-small:                       37px !default;
 
-$input-mobile-height-base: 40px;
-$input-mobile-height-large: 61px;
-$input-mobile-height-small: 37px;
+$input-mobile-height-base: 40px !default;
+$input-mobile-height-large: 61px !default;
+$input-mobile-height-small: 37px !default;
 
-$legend-border-color:                      #B0B4BB;
+$legend-border-color:                      #B0B4BB !default;
 
-$input-group-addon-bg:                     $brand-default;
-$input-group-addon-border-color:           $input-group-addon-bg;
+$input-group-addon-bg:                     $brand-default !default;
+$input-group-addon-border-color:           $input-group-addon-bg !default;
 
-$input-danger: $brand-danger;
-$input-success: $brand-success;
-$input-warning: $brand-warning;
+$input-danger: $brand-danger !default;
+$input-success: $brand-success !default;
+$input-warning: $brand-warning !default;
 
-$checkbox-size: 20px;
+$checkbox-size: 20px !default;
 
-$checkbox-color: $brand-primary;
-$checkbox-bg: #FFF;
-$checkbox-border: #B0B4BB;
-$checkbox-border-focus: $brand-default;
-$checkbox-check: "\f00c";
+$checkbox-color: $brand-primary !default;
+$checkbox-bg: #FFF !default;
+$checkbox-border: #B0B4BB !default;
+$checkbox-border-focus: $brand-default !default;
+$checkbox-check: "\f00c" !default;
 
-$checkbox-active-color: #2B4259;
-$checkbox-active-bg: #FFF;
-$checkbox-active-border: $checkbox-active-color;
-$checkbox-checked-border: $checkbox-active-border;
-$checkbox-checked-color: $checkbox-color;
-$checkbox-disabled-color: #FFF;
-$checkbox-disabled-bg: lighten(#B0B4BB, 20%);
-$checkbox-disabled-border: $checkbox-disabled-bg;
-$checkbox-hover-color: lighten($brand-primary, 20%);
-$checkbox-hover-bg: #FFF;
-$checkbox-hover-border: $checkbox-hover-color;
+$checkbox-active-color: #2B4259 !default;
+$checkbox-active-bg: #FFF !default;
+$checkbox-active-border: $checkbox-active-color !default;
+$checkbox-checked-border: $checkbox-active-border !default;
+$checkbox-checked-color: $checkbox-color !default;
+$checkbox-disabled-color: #FFF !default;
+$checkbox-disabled-bg: lighten(#B0B4BB, 20%) !default;
+$checkbox-disabled-border: $checkbox-disabled-bg !default;
+$checkbox-hover-color: lighten($brand-primary, 20%) !default;
+$checkbox-hover-bg: #FFF !default;
+$checkbox-hover-border: $checkbox-hover-color !default;
 
-$radio-color: $checkbox-color;
-$radio-bg: $checkbox-bg;
-$radio-border: $checkbox-border;
-$radio-check-color: $checkbox-color;
-$radio-active-color: #2B4259;
-$radio-active-bg: $radio-bg;
-$radio-active-border: $checkbox-active-color;
-$radio-checked-border: $checkbox-active-border;
-$radio-checked-color: $checkbox-color;
-$radio-disabled-color: $checkbox-disabled-color;
-$radio-disabled-bg: $checkbox-disabled-bg;
-$radio-disabled-border: $checkbox-disabled-border;
-$radio-focus-color: #2B4259;
-$radio-focus-border: #2B4259;
-$radio-focus-bg: #FFF;
-$radio-hover-color: lighten($brand-primary, 20%);
-$radio-hover-bg: #FFF;
-$radio-hover-border: $radio-hover-color;
+$radio-color: $checkbox-color !default;
+$radio-bg: $checkbox-bg !default;
+$radio-border: $checkbox-border !default;
+$radio-check-color: $checkbox-color !default;
+$radio-active-color: #2B4259 !default;
+$radio-active-bg: $radio-bg !default;
+$radio-active-border: $checkbox-active-color !default;
+$radio-checked-border: $checkbox-active-border !default;
+$radio-checked-color: $checkbox-color !default;
+$radio-disabled-color: $checkbox-disabled-color !default;
+$radio-disabled-bg: $checkbox-disabled-bg !default;
+$radio-disabled-border: $checkbox-disabled-border !default;
+$radio-focus-color: #2B4259 !default;
+$radio-focus-border: #2B4259 !default;
+$radio-focus-bg: #FFF !default;
+$radio-hover-color: lighten($brand-primary, 20%) !default;
+$radio-hover-bg: #FFF !default;
+$radio-hover-border: $radio-hover-color !default;

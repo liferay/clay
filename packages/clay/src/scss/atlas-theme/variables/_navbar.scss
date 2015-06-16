@@ -1,53 +1,53 @@
 // Basics of a navbar
-$navbar-height:                            48px;
-$navbar-link-line-height: 24px;
-$navbar-padding-horizontal:                12px;
-$navbar-padding-vertical:                  floor(($navbar-height - $navbar-link-line-height) / 2);
+$navbar-height:                            48px !default;
+$navbar-link-line-height: 24px !default;
+$navbar-padding-horizontal:                12px !default;
+$navbar-padding-vertical:                  floor(($navbar-height - $navbar-link-line-height) / 2) !default;
 
-$navbar-desktop-height:                    60px;
-$navbar-desktop-link-line-height: 28px;
-$navbar-desktop-padding-horizontal:        floor(($grid-gutter-width / 2));
-$navbar-desktop-padding-vertical:          floor(($navbar-desktop-height - $navbar-desktop-link-line-height) / 2);
+$navbar-desktop-height:                    60px !default;
+$navbar-desktop-link-line-height: 28px !default;
+$navbar-desktop-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
+$navbar-desktop-padding-vertical:          floor(($navbar-desktop-height - $navbar-desktop-link-line-height) / 2) !default;
 
-$navbar-link-active-bottom-border-width: 2px;
+$navbar-link-active-bottom-border-width: 2px !default;
 
 //== Navbar Default
-$navbar-default-color:                     $brand-default;
-$navbar-default-bg:                        #FFF;
-$navbar-default-border:                    #D8D8D8;
+$navbar-default-color:                     $brand-default !default;
+$navbar-default-bg:                        #FFF !default;
+$navbar-default-border:                    #D8D8D8 !default;
 
-$navbar-default-link-color:                #2B4259;
-$navbar-default-link-hover-color:          $brand-primary;
-$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-color:                #2B4259 !default;
+$navbar-default-link-hover-color:          $brand-primary !default;
+$navbar-default-link-hover-bg:             transparent !default;
 
-$navbar-default-link-active-color:         #2B4259;
-$navbar-default-link-active-bg:            #FFF;
-$navbar-default-link-active-highlight: $brand-primary;
+$navbar-default-link-active-color:         #2B4259 !default;
+$navbar-default-link-active-bg:            #FFF !default;
+$navbar-default-link-active-highlight: $brand-primary !default;
 
-$navbar-default-link-disabled-color:       #CACDD2;
-$navbar-default-link-disabled-bg:          transparent;
+$navbar-default-link-disabled-color:       #CACDD2 !default;
+$navbar-default-link-disabled-bg:          transparent !default;
 
-$navbar-default-brand-color:               $navbar-default-link-color;
-$navbar-default-brand-hover-color:         $navbar-default-link-hover-color;
-$navbar-default-brand-hover-bg:            transparent;
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         $navbar-default-link-hover-color !default;
+$navbar-default-brand-hover-bg:            transparent !default;
 
-$navbar-default-link-open-bg: $brand-primary;
-$navbar-default-link-open-color: #FFF;
+$navbar-default-link-open-bg: $brand-primary !default;
+$navbar-default-link-open-color: #FFF !default;
 
 //== Navbar Inverse
-$navbar-inverse-color:                     #FFF;
-$navbar-inverse-bg:                        $brand-default;
-$navbar-inverse-border:                    $brand-default;
+$navbar-inverse-color:                     #FFF !default;
+$navbar-inverse-bg:                        $brand-default !default;
+$navbar-inverse-border:                    $brand-default !default;
 
-$navbar-inverse-link-color:                #FFF;
-$navbar-inverse-link-hover-color:          $brand-primary;
-$navbar-inverse-link-active-color:         $brand-primary;
-$navbar-inverse-link-active-bg:            transparent;
-$navbar-inverse-link-disabled-color:       #122F51;
-$navbar-inverse-brand-color:               $navbar-inverse-link-color;
-$navbar-inverse-brand-hover-color:         $brand-primary;
-$navbar-inverse-toggle-border-color:       #18293D;
-$navbar-inverse-toggle-hover-bg:           #426384;
+$navbar-inverse-link-color:                #FFF !default;
+$navbar-inverse-link-hover-color:          $brand-primary !default;
+$navbar-inverse-link-active-color:         $brand-primary !default;
+$navbar-inverse-link-active-bg:            transparent !default;
+$navbar-inverse-link-disabled-color:       #122F51 !default;
+$navbar-inverse-brand-color:               $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:         $brand-primary !default;
+$navbar-inverse-toggle-border-color:       #18293D !default;
+$navbar-inverse-toggle-hover-bg:           #426384 !default;
 
-$navbar-inverse-link-open-bg: $brand-primary;
-$navbar-inverse-link-open-color: #FFF;
+$navbar-inverse-link-open-bg: $brand-primary !default;
+$navbar-inverse-link-open-color: #FFF !default;

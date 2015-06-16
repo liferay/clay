@@ -1,7 +1,7 @@
-$list-group-header-bg: $navbar-default-bg;
-$list-group-header-font-weight: $headings-font-weight;
+$list-group-header-bg: $navbar-default-bg !default;
+$list-group-header-font-weight: $headings-font-weight !default;
 
-$list-group-header-icon-closed: '\f105';
-$list-group-header-icon-open: '\f107';
+$list-group-header-icon-closed: '\f105' !default;
+$list-group-header-icon-open: '\f107' !default;
 
-$list-group-header-icon-font-size: $font-size-large;
+$list-group-header-icon-font-size: $font-size-large !default;
