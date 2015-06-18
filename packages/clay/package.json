@@ -14,11 +14,15 @@
     "ejs": "^2.3.1",
     "fs-extra": "^0.10.0",
     "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-debug": "^2.0.1",
     "gulp-filter": "^2.0.2",
     "gulp-front-matter": "^1.2.3",
     "gulp-help": "^1.6.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-metalsmith": "0.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-zip": "^3.0.2",
     "gulpsmith": "^0.5.3",
     "lodash": "^3.9.3",
     "metalsmith": "^1.7.0",
@@ -28,7 +32,8 @@
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-sass": "^1.2.1",
     "metalsmith-templates": "^0.7.0",
-    "node-bourbon": "^4.2.3"
+    "node-bourbon": "^4.2.3",
+    "run-sequence": "^1.1.1"
   },
   "dependencies": {}
 }

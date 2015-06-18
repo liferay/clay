@@ -2,6 +2,7 @@ var gulp = require('gulp-help')(require('gulp'));
 var plugins = require('gulp-load-plugins')();
 var gulpsmith = require('gulpsmith');
 var gulp_front_matter = require('gulp-front-matter');
+var runSequence = require('run-sequence');
 
 var path = require('path');
 
@@ -89,5 +90,59 @@ gulp.task(
 			SRC_GLOB,
 			['build']
 		);
+	}
+);
+
+gulp.task(
+	'release',
+	function(cb) {
+		runSequence(
+			'release:clean',
+			'release:build',
+			'release:zip',
+			cb
+		);
+	}
+);
+
+gulp.task(
+	'release:clean',
+	function() {
+		return gulp.src('./release')
+		// .pipe(plugins.debug())
+		.pipe(plugins.clean({read: false}));
+	}
+);
+
+gulp.task(
+	'release:build',
+	function() {
+		var REGEX_SCSS = /^scss\//;
+
+		return gulp.src([
+			// 'src/fonts/**/*',
+			'src/scss/**/*',
+			'!src/scss/highlightjs/{,**}',
+			'!src/scss/*'], {base: './src'})
+		// .pipe(plugins.debug())
+		.pipe(
+			plugins.rename(
+				function(path) {
+					path.dirname = path.dirname.replace(REGEX_SCSS, '');
+				}
+			)
+		)
+		.pipe(gulp.dest('./release'));
+	}
+);
+
+gulp.task(
+	'release:zip',
+	function() {
+		var pkg = require('package.json');
+
+		return gulp.src('release/**/*')
+		.pipe(plugins.zip(pkg.name + '-' + pkg.version + '.zip'))
+		.pipe(gulp.dest('.'));
 	}
 );
