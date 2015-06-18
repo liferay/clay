@@ -555,30 +555,27 @@ section: Elements
 	</div>
 </div>
 
-<script type="text/javascript">
-	YUI().use(
-		'aui-node',
-		function(Y) {
-			var tables = Y.all('.table-responsive-collapse table');
+<script>
+	$(function() {
+		var tables = $('.table-responsive-collapse table');
 
-			tables.each(function (table) {
-				var ths = table.all('thead th');
-				var labels = [];
+		tables.each(function (i, table) {
+			table = $(table);
+			var ths = table.find('thead th');
 
-				ths.each(function (thead) {
-					labels.push(thead.text());
-				});
+			var labels = ths.map(function (i, thead) {
+				return $(thead).text();
+			}).get();
 
-				var rows = table.all('tbody tr');
+			var rows = table.find('tbody tr');
 
-				rows.each(function (row) {
-					var cells = row.all('td');
+			rows.each(function (i, row) {
+				var cells = $(row).find('td');
 
-					cells.each(function (cell, i) {
-						cell.prepend(Y.Node.create('<div class="label-collapse"><span class="aaa">' + labels[i] +  '</span></div>'));
-					});
+				cells.each(function (i, cell) {
+					$(cell).prepend($('<div class="label-collapse"><span class="aaa">' + labels[i] + '</span></div>'));
 				});
 			});
-		}
-	);
+		});
+	});
 </script>

@@ -399,29 +399,29 @@ section: Example Pages
 </div>
 
 <script>
-	YUI().use('node', function(A) {
-		A.one('.nav-tabs').delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
+	$(function() {
+		$('.nav-tabs').on('click', 'a', function(event) {
+			var currentTarget = $(event.currentTarget);
 
-			var contentArr = currentTarget.ancestor('.row').all('.profile-tab');
+			var contentArr = currentTarget.closest('.row').find('.profile-tab');
 
-			var tabsArr = currentTarget.ancestor('.nav-tabs').all('li');
+			var tabsArr = currentTarget.closest('.nav-tabs').find('li');
 
 			tabsArr.removeClass('active');
 
-			currentTarget.ancestor('li').addClass('active');
+			currentTarget.closest('li').addClass('active');
 
 			contentArr.addClass('hide');
 
-			contentArr.item(tabsArr.indexOf(currentTarget.ancestor('li'))).removeClass('hide');
-		}, 'a');
+			contentArr.eq(tabsArr.index(currentTarget.closest('li'))).removeClass('hide');
+		});
 
-		A.one('.profile-page').delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
+		$('.profile-page').on('click', '.comment-count', function(event) {
+			var currentTarget = $(event.currentTarget);
 
-			var profileComments = currentTarget.ancestor('.user-activity').one('.profile-comments');
+			var profileComments = currentTarget.closest('.user-activity').find('.profile-comments');
 
-			var icon = profileComments.one('.profile-meta .comment-count .glyphicon');
+			var icon = profileComments.find('.profile-meta .comment-count .glyphicon');
 
 			event.preventDefault();
 
@@ -429,12 +429,12 @@ section: Example Pages
 				profileComments.toggleClass('hide');
 
 				if (profileComments.hasClass('hide')) {
-					profileComments.ancestor('.user-activity').one('.profile-meta .comment-count .glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
+					profileComments.closest('.user-activity').find('.profile-meta .comment-count .glyphicon').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
 				}
 				else {
-					profileComments.ancestor('.user-activity').one('.profile-meta .comment-count .glyphicon').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');
+					profileComments.closest('.user-activity').find('.profile-meta .comment-count .glyphicon').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');
 				}
 			}
-		}, '.comment-count');
+		});
 	});
 </script>
