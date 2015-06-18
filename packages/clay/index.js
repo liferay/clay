@@ -40,65 +40,12 @@ var argv = require('optimist').usage('Usage: $0 -qo')
 				}
 			).argv;
 
-var CDN_PATH = 'http://cdn.alloyui.com/2.5.0/aui';
-
-var auisrc = CDN_PATH + '/aui-min.js';
-
-var YUI_config;
-
-if (argv.dev) {
-	auisrc = CDN_PATH + '/aui.js';
-
-	YUI_config = {
-		filter: 'raw',
-		combine: false
-	};
-}
-// var walker = require('walker');
-
-// var collOpts = {
-
-// };
-
-// var rootDir = 'src';
-
-// var Walker = walker('src').filterDir(function(dir, stat) {
-// 	return dir == 'src' || dir.indexOf('src/content') === 0;
-// }).on(
-// 	'dir',
-// 	function(dir, stat) {
-// 		var collName = path.basename(dir);
-
-// 		if (collName != 'src' && collName != 'content') {
-// 			collOpts[collName] = '*.html';
-// 		}
-// 	}
-// );
-
-// Walker.on(
-// 	'end',
-// 	function(event) {
-
-// 	}
-// );
-
 var metadata = Y.merge(
 	argv,
 	{
-		YUI_config: YUI_config,
 		Y: Y,
-		// title: '',
 		heading: '',
-		subHeading: '',
-		getAUIPath: function(rootPath) {
-			var auiPath = auisrc;
-
-			if (argv.offline) {
-				auiPath = path.join(rootPath, '/js/aui/aui/aui-min.js');
-			}
-
-			return auiPath;
-		}
+		subHeading: ''
 	}
 );
 
@@ -126,11 +73,6 @@ ms.use(define(metadata))
 	)
 	.use(handleNav())
 	.use(handlePath())
-	// .use(
-	// 	collections(
-	// 		collOpts
-	// 	)
-	// )
 	.use(
 		sass(
 			{
@@ -147,31 +89,6 @@ function build(err, files) {
 	if (err) {
 		console.log(err);
 		return err;
-	}
-
-	if (argv.offline) {
-		var buildJS = path.resolve(ms.destination(), 'js', 'aui');
-		var srcAUI = path.resolve(__dirname, 'third_party', 'aui');
-
-		fs.ensureDir(
-			buildJS,
-			function(err) {
-				if (err) {
-					console.log(err);
-					return;
-				}
-
-				return fs.copy(
-					srcAUI,
-					buildJS,
-					function(err) {
-						if (err) {
-							console.log(err);
-						}
-					}
-				);
-			}
-		);
 	}
 }
 
