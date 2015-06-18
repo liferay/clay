@@ -20,7 +20,7 @@
 							url: url
 						};
 
-						buffer.push(Y.Lang.sub('<li class="{cssClass}"><a href="{url}">{title}</a>', tplObj));
+						buffer.push(_.sub('<li class="{cssClass}"><a href="{url}">{title}</a>', tplObj));
 
 						if (item.children) {
 							var sectionNav = createMainNavList(item.children, path, item);
@@ -29,8 +29,7 @@
 
 							var collapseCssClass = 'collapse';
 
-							var hasActiveChild = Y.Array.some(
-								item.children,
+							var hasActiveChild = item.children.some(
 								function(item, index) {
 									return item.path === path;
 								}
