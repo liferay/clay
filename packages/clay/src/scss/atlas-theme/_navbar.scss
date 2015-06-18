@@ -106,9 +106,11 @@
 // Navbar Styles
 
 .navbar {
+	border-radius: $navbar-border-radius;
 	min-height: $navbar-height;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
+		border-radius: $navbar-border-radius;
 		min-height: $navbar-desktop-height;
 	}
 }
