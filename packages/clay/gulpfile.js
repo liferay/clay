@@ -2,10 +2,8 @@ var gulp = require('gulp-help')(require('gulp'));
 var plugins = require('gulp-load-plugins')();
 var gulpsmith = require('gulpsmith');
 var gulp_front_matter = require('gulp-front-matter');
-var _ = require('lodash');
 
 var path = require('path');
-var Y = require('yui').YUI();
 
 var bourbon = require('node-bourbon');
 
@@ -16,13 +14,15 @@ var permalinks = require('metalsmith-permalinks');
 var sass = require('metalsmith-sass');
 var templates = require('metalsmith-templates');
 
+var _ = require('./lib/lodash_utils');
+
 var handleNav = require('./lib/handle_nav');
 var handlePath = require('./lib/handle_path');
 var handlePermalink = require('./lib/handle_permalink');
 var handleTemplate = require('./lib/handle_template');
 
 var metadata = {
-	Y: Y,
+	_: _,
 	heading: '',
 	subHeading: ''
 };

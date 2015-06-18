@@ -1,8 +1,9 @@
 var fs = require('fs-extra');
 var path = require('path');
-var Y = require('yui').YUI();
 
-var toTitleCase = Y.cached(
+var _ = require('./lodash_utils');
+
+var toTitleCase = _.cached(
 	function(str) {
 		str = String(str);
 
@@ -98,7 +99,7 @@ var iterateFiles = function(files, metalsmith, done) {
 			function(item, index) {
 				var navIndex = item.navIndex;
 
-				if (!Y.Lang.isUndefined(navIndex)) {
+				if (!_.isUndefined(navIndex)) {
 					if (navIndex == 'last') {
 						navIndex = array.length;
 					}

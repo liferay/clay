@@ -1,8 +1,9 @@
 var fs = require('fs-extra');
 var path = require('path');
-var Y = require('yui').YUI();
 
-var format = Y.cached(
+var _ = require('./lodash_utils');
+
+var format = _.cached(
 	function(str) {
 		str = String(str);
 
