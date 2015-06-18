@@ -6,10 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/main.css" />
 
-	<script src="http://cdn.alloyui.com/2.5.0/aui/aui-min.js"></script>
-
-	
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="../../js/collapsible-search.js"></script>
@@ -391,45 +387,40 @@ YUI().use('aui-node', function(Y) {
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 
 	<script>
-		YUI().use(
-			'node', 'transition',
-			function(A) {
-				A.one('#headerTopBar .navbar-toggle').on(
-					'click',
-					function(event) {
-						var ct = event.currentTarget;
-						var sidenavContainer = ct.ancestor('#headerTopBar').next('.sidenav-container');
+		$(function() {
+			var headerTopBar = $('#headerTopBar');
+			var wrapper = $('#wrapper');
 
-						event.preventDefault();
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var ct = $(event.currentTarget);
+					var sidenavContainer = headerTopBar.next('.sidenav-container');
 
-						sidenavContainer.on(
-							'transitionend',
-							function(event) {
-								sidenavContainer.removeClass('sidenav-transition');
+					event.preventDefault();
 
-								this.detach('transitionend');
-							}
-						);
+					sidenavContainer.one(
+						'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+						function(event) {
+							sidenavContainer.removeClass('sidenav-transition');
+						}
+					);
 
-						sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
-						ct.ancestor('#wrapper').toggleClass('main-nav-open');
-					}
-				);
+					sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
+					wrapper.toggleClass('main-nav-open');
+				}
+			);
 
-				A.all('.side-navigation').each(
-					function(item, index) {
-						item.delegate(
-							'click',
-							function(event) {
-								event.preventDefault();
-								event.currentTarget.next('.collapse').toggleClass('in');
-							},
-							'li.side-navigation-dropdown-container > a'
-						);
-					}
-				);
-			}
-		);
+			$('.side-navigation').on(
+				'click',
+				'li.side-navigation-dropdown-container > a',
+				function(event) {
+					event.preventDefault();
+
+					$(event.currentTarget).nextAll('.collapse').toggleClass('in');
+				}
+			);
+		});
 
 		hljs.initHighlightingOnLoad();
 	</script>
