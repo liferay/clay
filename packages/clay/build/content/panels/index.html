@@ -360,24 +360,24 @@ collapse
 </div>
 
 <script>
-YUI().use('aui-node', function(Y) {
-	Y.one('#mainContent').delegate('click', function(event) {
-		var collapse;
+	$(function() {
+		$('#mainContent').on('click', '.panel-collapse .panel-toggle', function(event) {
+			var collapse;
 
-		var ct = event.currentTarget;
-		var panel = ct.ancestor('.panel');
+			var ct = $(event.currentTarget);
+			var panel = ct.closest('.panel');
 
-		if (panel) {
-			collapse = panel.one('.collapse');
-		}
+			if (panel) {
+				collapse = panel.find('.collapse');
+			}
 
-		event.preventDefault();
+			event.preventDefault();
 
-		if (collapse) {
-			collapse.toggleClass('in');
-		}
-	}, '.panel-collapse .panel-toggle');
-});
+			if (collapse) {
+				collapse.toggleClass('in');
+			}
+		});
+	});
 </script>
 	</div>
 

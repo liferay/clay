@@ -482,66 +482,79 @@ collapse
 </div>
 
 <script>
-	YUI().use(
-		'aui-base',
-		'resize',
-		function(Y) {
-			var chatView = Y.one('.full-screen-layout-lg');
-			var winHeight = Y.one('document').get('winHeight');
+	$(function() {
+		var pre = document.createElement('pre');
 
-			chatView.setStyle('height', winHeight - chatView.getY() - 150 + 'px');
+		function escapeHTML(string) {
+			var text = document.createTextNode(string);
 
-			Y.one('#mainContent').delegate(
-				'click',
-				function(event) {
-					var ct = event.currentTarget;
+			pre.appendChild(text);
 
-					if (ct.next('.panel-collapse').hasClass('in')) {
-						ct.next('.panel-collapse').removeClass('in');
-					}
-					else {
-						ct.next('.panel-collapse').addClass('in');
-					}
-				},
-				'.panel-heading'
-			);
+			var str = pre.innerHTML;
 
-			Y.one('#mainContent').delegate(
-				'click',
-				function(event) {
-					var panelBody = event.currentTarget.ancestor('.chat.panel').one('.panel-body');
-					var textarea = event.currentTarget.ancestor('.input-group').one('textarea');
-					var textareaValue = textarea.get('value');
+			pre.innerHTML = '';
 
-					if (textareaValue !== '') {
-						panelBody.append('<div class="outgoing"><img src="../../images/thumbnail_placeholder.gif" alt="" class="img-circle img-responsive user-avatar" /><p class=""><strong style="display:block;">Us</strong>' + textareaValue + '</p></div>');
-
-						panelBody.set('scrollTop', panelBody.get('scrollHeight'));
-					}
-
-					textarea.set('value', '');
-				},
-				'.panel-footer .input-group-btn button'
-			);
-
-			Y.one('#chatFooterSend').on(
-				'click',
-				function(event) {
-					var date = new Date();
-					var groupChatMessages = Y.one('#groupChatMessages');
-					var textarea = event.currentTarget.ancestor('#chatTemplateFooter').one('textarea');
-
-					if (textarea.get('value') !== '') {
-						groupChatMessages.append('<div class="group-chat-message-block"><div class="user-avatar"><img src="../../images/thumbnail_placeholder.gif" alt="" class="img-circle img-responsive user-avatar" /></div><div class="group-chat-message"><h4>Us</h4><p>' + textarea.get('value') + '</p></div></div>');
-
-						groupChatMessages.set('scrollTop', groupChatMessages.get('scrollHeight'));
-
-						textarea.set('value', '');
-					}
-				}
-			);
+			return str;
 		}
-	);
+
+		var chatView = $('.full-screen-layout-lg');
+		var winHeight = $(window).height();
+
+		chatView.css('height', winHeight - chatView.offset().top - 150 + 'px');
+
+		$('#mainContent').on(
+			'click',
+			'.panel-heading',
+			function(event) {
+				var ct = $(event.currentTarget);
+
+				ct.next('.panel-collapse').toggleClass('in');
+			}
+		);
+
+		$('#mainContent').on(
+			'click',
+			'.panel-footer .input-group-btn button',
+			function(event) {
+				var currentTarget = $(event.currentTarget);
+				var panelBody = currentTarget.closest('.chat.panel').find('.panel-body');
+				var textarea = currentTarget.closest('.input-group').find('textarea');
+				var textareaValue = textarea.val();
+
+				textareaValue = escapeHTML(textareaValue);
+
+				if (textareaValue) {
+					panelBody.append('<div class="outgoing"><img src="../../images/thumbnail_placeholder.gif" alt="" class="img-circle img-responsive user-avatar" /><p class=""><strong style="display:block;">Us</strong>' + textareaValue + '</p></div>');
+
+					panelBody.scrollTop(panelBody.prop('scrollHeight'));
+				}
+
+				textarea.val('');
+			}
+		);
+
+		$('#chatFooterSend').on(
+			'click',
+			function(event) {
+				var date = new Date();
+				var groupChatMessages = $('#groupChatMessages');
+				var textarea = $(event.currentTarget).closest('#chatTemplateFooter').find('textarea');
+				var textareaValue = textarea.val();
+
+				textareaValue = escapeHTML(textareaValue);
+
+				console.log(textareaValue);
+
+				if (textareaValue) {
+					groupChatMessages.append('<div class="group-chat-message-block"><div class="user-avatar"><img src="../../images/thumbnail_placeholder.gif" alt="" class="img-circle img-responsive user-avatar" /></div><div class="group-chat-message"><h4>Us</h4><p>' + textareaValue + '</p></div></div>');
+
+					groupChatMessages.scrollTop(groupChatMessages.prop('scrollHeight'));
+
+					textarea.val('');
+				}
+			}
+		);
+	});
 </script>
 	</div>
 

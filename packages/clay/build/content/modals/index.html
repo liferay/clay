@@ -912,56 +912,56 @@ collapse
 </div>
 
 <script>
-	YUI().use('event', 'node', 'transition', function(A) {
-		var bodyNode = A.one('body');
-		var mainContent = A.one('#mainContent');
+	$(function() {
+		var transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+		var bodyNode = $('body');
+		var mainContent = $('#mainContent');
 
-		A.one('#modals').delegate('click', function(event) {
-			var currentTarget = event.currentTarget;
+		$('#modals').on('click', '.close-modal', function(event) {
+			var currentTarget = $(event.currentTarget);
 
-			currentTarget.ancestor('.modal.fade').on('transitionend', function(event) {
-				var _this = this;
-				var modalBackdrop = bodyNode.one('.modal-backdrop');
+			currentTarget.closest('.modal.fade').on(transitions, function(event) {
+				var el = $(this);
+				var modalBackdrop = bodyNode.find('.modal-backdrop');
 
-				modalBackdrop.on('transitionend', function(event) {
+				modalBackdrop.on(transitions, function(event) {
+					console.log('backdrop', event.type);
 					modalBackdrop.remove();
-
-					this.detach('transitionend');
+					modalBackdrop.off(transitions);
 				});
 
-				_this.setStyle('display', '');
+				el.css('display', '');
 
 				bodyNode.removeClass('modal-open');
 
 				modalBackdrop.removeClass('in');
-
-				_this.detach('transitionend');
+				el.off(transitions);
 			});
 
-			currentTarget.ancestor('.modal').removeClass('in');
-		}, '.close-modal');
+			currentTarget.closest('.modal').removeClass('in');
+		});
 
-		A.one('#openModals').delegate('click', function(event) {
-			var buttons = A.all('#openModals button');
-			var currentTarget = event.currentTarget;
-			var modalsArray = A.all('#modals .modal');
+		$('#openModals').on('click', 'button', function(event) {
+			var buttons = $('#openModals button');
+			var currentTarget = $(event.currentTarget);
+			var modalsArray = $('#modals .modal');
 
-			var modal = modalsArray.item(buttons.indexOf(currentTarget));
+			var modal = modalsArray.eq(buttons.index(event.currentTarget));
 
-			if (modal) {
+			if (modal.length) {
 				bodyNode.addClass('modal-open');
 
-				if (!bodyNode.one('.modal-backdrop')) {
+				if (!bodyNode.find('.modal-backdrop').length) {
 					bodyNode.append('<div class="fade in modal-backdrop"></div>');
 				}
 
-				modal.setStyle('display', 'block');
+				modal.css('display', 'block');
 
 				setTimeout(function() {
 					modal.addClass('in');
 				}, 50);
 			}
-		}, 'button');
+		});
 	});
 </script>
 	</div>
