@@ -7,5 +7,10 @@
 	&,
 	a & {
 		display: inline-block;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
