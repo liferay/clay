@@ -1,8 +1,8 @@
 .icon-monospaced {
-	height: 32px;
-	line-height: 32px;
+	height: $icon-monospaced-size;
+	line-height: $icon-monospaced-size;
 	text-align: center;
-	width: 32px;
+	width: $icon-monospaced-size;
 
 	&,
 	a & {
