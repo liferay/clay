@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+var gulp = require('gulp-help')(require('gulp'));
 var plugins = require('gulp-load-plugins')();
 var gulpsmith = require('gulpsmith');
 var gulp_front_matter = require('gulp-front-matter');
