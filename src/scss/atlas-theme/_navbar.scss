@@ -303,9 +303,8 @@
 				> a {
 					&:focus,
 					&:hover {
-						@include background-image(linear-gradient(rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%));
-
-						color: $navbar-default-link-color;
+						background-color: $navbar-default-link-hover-bg;
+						color: $navbar-default-link-hover-color;
 					}
 				}
 			}
@@ -325,7 +324,7 @@
 
 				&:focus,
 				&:hover {
-					@include background-image(none);
+					background-color: $navbar-default-link-active-bg;
 				}
 			}
 		}
@@ -455,9 +454,8 @@
 		> a {
 			&:focus,
 			&:hover {
-				@include background-image(linear-gradient(rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 100%));
-
-				color: $navbar-default-link-color;
+				background-color: $navbar-default-link-hover-bg;
+				color: $navbar-default-link-hover-color;
 			}
 		}
 	}
@@ -477,7 +475,7 @@
 
 		&:focus,
 		&:hover {
-			@include background-image(none);
+			background-color: $navbar-default-link-active-bg;
 		}
 	}
 }

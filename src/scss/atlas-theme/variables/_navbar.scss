@@ -16,12 +16,12 @@ $navbar-default-color:                     $brand-default !default;
 $navbar-default-bg:                        #FFF !default;
 $navbar-default-border:                    #D8D8D8 !default;
 
-$navbar-default-link-color:                #2B4259 !default;
-$navbar-default-link-hover-color:          $brand-primary !default;
+$navbar-default-link-color:                $brand-default !default;
+$navbar-default-link-hover-color:          $brand-default !default;
 $navbar-default-link-hover-bg:             transparent !default;
 
-$navbar-default-link-active-color:         #2B4259 !default;
-$navbar-default-link-active-bg:            #FFF !default;
+$navbar-default-link-active-color:         $brand-default !default;
+$navbar-default-link-active-bg:            transparent !default;
 $navbar-default-link-active-highlight: $brand-primary !default;
 
 $navbar-default-link-disabled-color:       #CACDD2 !default;
