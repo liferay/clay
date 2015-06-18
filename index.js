@@ -1,5 +1,3 @@
-var fs = require('fs-extra');
-var gracefulFs = require('graceful-fs');
 var path = require('path');
 var Y = require('yui').YUI();
 
@@ -7,7 +5,6 @@ var Metalsmith = require('metalsmith');
 
 var bourbon = require('node-bourbon');
 
-var collections = require('metalsmith-collections');
 var define = require('metalsmith-define');
 var encodeHTML = require('metalsmith-encode-html');
 var markdown = require('metalsmith-markdown');
