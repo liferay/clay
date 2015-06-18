@@ -80,6 +80,8 @@ gulp.task('build', function() {
 			.pipe(gulp.dest('./build'));
 });
 
+gulp.task('watch', ['build:watch']);
+
 gulp.task(
 	'build:watch',
 	function(done) {
