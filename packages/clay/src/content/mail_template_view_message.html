@@ -195,17 +195,15 @@ section: Mail Template
 </div>
 
 <script>
-	YUI().use('node', function(Y) {
-		Y.one('#ccLink').on('click', function(event) {
-			event.preventDefault();
-			event.currentTarget.addClass('hide');
-			Y.one('#ccField').ancestor('.form-group').removeClass('hide');
-		});
+	$('#ccLink').on('click', function(event) {
+		event.preventDefault();
+		$(event.currentTarget).addClass('hide');
+		$('#ccField').closest('.form-group').removeClass('hide');
+	});
 
-		Y.one('#bccLink').on('click', function(event) {
-			event.preventDefault();
-			event.currentTarget.addClass('hide');
-			Y.one('#bccField').ancestor('.form-group').removeClass('hide');
-		});
+	$('#bccLink').on('click', function(event) {
+		event.preventDefault();
+		$(event.currentTarget).addClass('hide');
+		$('#bccField').closest('.form-group').removeClass('hide');
 	});
 </script>

@@ -362,66 +362,73 @@ section: Mail Template
 	</div>
 </div>
 
+<script src="{{rootPath}}/js/site/jquery.ba-outside-events.min.js"></script>
+
 <script>
-	YUI().use('node', 'event-outside', function(Y) {
+	$(function() {
 		var checkCounter = 0;
 
-		Y.one('.select-all').on('clickoutside', function(event) {
-			var ct = event.currentTarget;
+		$('.select-all').on('clickoutside', function(event) {
+			var ct = $(event.currentTarget);
 			ct.removeClass('open');
 		});
 
-		Y.one('.select-all input[type="checkbox"]').on('click', function(event) {
-			var ct = event.currentTarget;
-			var messageListEntryArray = Y.one('.mailbox-messages').all('tr > td > input[type="checkbox"]');
+		$('.select-all input[type="checkbox"]').on('click', function(event) {
+			var ct = $(event.currentTarget);
+			var messageListEntryArray = $('.mailbox-messages').find('tr > td > input[type="checkbox"]');
 
-			if (ct.get('checked')) {
-				messageListEntryArray.each(function(node) {
-					node.set('checked', true);
+			if (ct.prop('checked')) {
+				messageListEntryArray.each(function(i, node) {
+					node = $(node);
+					node.prop('checked', true);
 
-					node.ancestor('tr').addClass('checked');
+					node.parents('tr').addClass('checked');
 				});
 
-				Y.one('.email-edit-buttons').addClass('open');
+				$('.email-edit-buttons').addClass('open');
 
-				checkCounter = messageListEntryArray.size();
+				checkCounter = messageListEntryArray.length;
 			}
 			else {
-				messageListEntryArray.each(function(node) {
-					node.set('checked', false);
+				messageListEntryArray.each(function(i, node) {
+					node = $(node);
+					node.prop('checked', false);
 
-					node.ancestor('tr').removeClass('checked');
+					node.parents('tr').removeClass('checked');
 				});
 
-				Y.one('.email-edit-buttons').removeClass('open');
+				$('.email-edit-buttons').removeClass('open');
 
 				checkCounter = 0;
 			}
 		});
 
-		Y.one('.mailbox-messages').delegate('click', function(event) {
-			var ct = event.currentTarget;
+		$('.mailbox-messages').on(
+			'click',
+			'tr > td > input[type="checkbox"]',
+			function(event) {
+			var ct = $(event.currentTarget);
 
-			if (ct.get('checked')) {
-				Y.one('.email-edit-buttons').addClass('open');
+			if (ct.prop('checked')) {
+				$('.email-edit-buttons').addClass('open');
 
-				ct.ancestor('tr').addClass('checked');
+				ct.parents('tr').addClass('checked');
 
 				checkCounter++;
 			}
 			else {
 				checkCounter--;
 
-				ct.ancestor('tr').removeClass('checked');
+				ct.parents('tr').removeClass('checked');
 
 				if (checkCounter === 0) {
-					Y.one('.email-edit-buttons').removeClass('open');
+					$('.email-edit-buttons').removeClass('open');
 
-					if (Y.one('.select-all input[type="checkbox"]').get('checked')) {
-						Y.one('.select-all input[type="checkbox"]').set('checked', false);
+					if ($('.select-all input[type="checkbox"]').prop('checked')) {
+						$('.select-all input[type="checkbox"]').prop('checked', false);
 					}
 				}
 			}
-		}, 'tr > td > input[type="checkbox"]');
+		});
 	});
 </script>

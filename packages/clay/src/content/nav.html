@@ -368,22 +368,23 @@ section: Components
 </div>
 
 <script>
-	YUI().use('node', 'event', function(A) {
-		A.one('#mainContent').delegate('click', function(event) {
+	$(function() {
+		$('#mainContent').on('click', '.nav > li > a', function(event) {
 			var collapse;
-			var ct = event.currentTarget;
-			var li = ct.ancestor('li');
 
-			event.preventDefault();
+			var ct = $(event.currentTarget);
+			var li = ct.closest('li');
 
 			if (li) {
-				collapse = li.one('.collapse');
+				collapse = li.find('.collapse');
 			}
+
+			event.preventDefault();
 
 			if (collapse) {
 				collapse.toggleClass('in');
 				li.toggleClass('open');
 			}
-		}, '.nav > li > a');
+		});
 	});
 </script>
