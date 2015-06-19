@@ -1,6 +1,49 @@
-.nav.nav-tabs {
-	> li.disabled > a {
-		border-color: transparent;
+.nav-tabs {
+	> li {
+		&[class*='col-'] {
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+
+			&:first-child {
+				> .dropdown-menu {
+					margin-left: 0;
+				}
+			}
+
+			&:last-child {
+				float: right;
+			}
+
+			> a {
+				margin-left: 2px;
+				margin-right: 0;
+
+				@include text-overflow();
+			}
+
+			> .dropdown-menu {
+				margin-left: 2px;
+			}
+		}
+
+		&:first-child > a {
+			margin-left: 0;
+		}
+	}
+}
+
+.nav-tabs {
+	> li.disabled > a:hover {
+		border-left-color: transparent;
+		border-right-color: transparent;
+		border-top-color: transparent;
+	}
+}
+
+.nav-tabs.nav-justified {
+	> li > a {
+		margin-left: 0;
 	}
 }
 
