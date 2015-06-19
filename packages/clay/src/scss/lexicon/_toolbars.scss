@@ -57,50 +57,19 @@
 	float: none;
 	margin-bottom: 0;
 	min-height: 0;
-	padding: 0 5px;
 	vertical-align: middle;
+
+	> a,
+	> .dropdown > a {
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 .toolbar-group-field {
 	width: 1%;
-}
-
-// Toolbar Base Styles
-
-.toolbar-group-field,
-.toolbar-group-content {
-	&.active > a {
-		color: $gray-light;
-		cursor: default;
-
-		&:focus,
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
-	&.disabled > a {
-		color: $gray-lighter;
-		cursor: not-allowed;
-	}
-}
-
-.toolbar-group,
-.toolbar-group-right {
-	a {
-		color: $navbar-default-link-color;
-		display: block;
-
-		&:focus,
-		&:hover {
-			color: $navbar-default-link-active-color;
-			text-decoration: none;
-		}
-	}
-
-	.active > a {
-		color: $navbar-default-link-hover-color;
-	}
 }
 
 @media screen and (min-width: $grid-float-breakpoint) {
@@ -117,12 +86,12 @@
 
 	.toolbar-group {
 		float: left;
-		padding-right: 10px;
+		padding-right: $navbar-padding-horizontal;
 	}
 
 	.toolbar-group-right {
 		float: right;
-		padding-left: 10px;
+		padding-left: $navbar-padding-horizontal;
 	}
 
 	.toolbar-group-row {
@@ -220,22 +189,27 @@
 
 .header-toolbar {
 	margin-bottom: $navbar-margin-bottom;
-	padding: 5px;
+	padding-left: $navbar-padding-horizontal;
+	padding-right: $navbar-padding-horizontal;
 
 	.dropdown-menu {
 		margin-top: 5px + 2;
 	}
 
-	.toolbar-group-content,
-	.toolbar-group-field {
-		padding: 0 2px;
+	.toolbar-group,
+	.toolbar-group-expand,
+	.toolbar-group-right {
+		height: $navbar-height;
+	}
+
+	.toolbar-group-expand-text {
+		line-height: $navbar-height;
 	}
 
 	.toolbar-group-content {
 		> a,
 		> .dropdown > a {
 			border-radius: 4px;
-			padding: 2px 8px;
 		}
 	}
 }
@@ -255,6 +229,7 @@
 			&:focus,
 			&:hover {
 				background-color: $navbar-default-link-hover-bg;
+				color: $navbar-default-link-hover-color;
 			}
 		}
 	}

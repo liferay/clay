@@ -8,7 +8,7 @@ section: Components
 		<h3>Header Toolbar</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Header Toolbar is based on <a href="../toolbars/">Toolbars</a>, and was created to quickly prototype headings for portlets, mobile pages, and page sections. It comes in 6 different colorways, default, primary, success, info, warning, and danger. Colors can be customized by changing the global color variables in variables.scss or extending <code>.header-toolbar</code> with custom colors.</p>
+			<p>Header Toolbar is based on <a href="../toolbars/">Toolbars</a>, and was created to quickly prototype headings for portlets, mobile pages, and page sections.</p>
 		</blockquote>
 
 		<div class="sidenav-container closed uxgl-slideout-nav">
@@ -31,14 +31,14 @@ section: Components
 				<header class="header-toolbar">
 					<div class="toolbar-group">
 						<div class="toolbar-group-content">
-							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify icon-monospaced"></span></a>
 						</div>
 					</div>
 
 					<div class="toolbar-group-right">
 						<div class="toolbar-group-content">
 							<div class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog"></span></a>
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog icon-monospaced"></span></a>
 								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a href="#1">Export</a></li>
 									<li><a href="#1">Import</a></li>
@@ -86,21 +86,21 @@ section: Components
 			</div>
 		</div>
 
-		<header class="header-toolbar header-toolbar-secondary">
+		<header class="header-toolbar">
 			<div class="toolbar-group">
 				<div class="toolbar-group-content">
-					<a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
+					<a class="sidenav-toggler" href="#1"><span class="icon-align-justify icon-monospaced"></span></a>
 				</div>
 
 				<div class="toolbar-group-content hidden-xs">
-					<a href="#"><span class="icon-angle-left"></span></a>
+					<a href="#"><span class="icon-angle-left icon-monospaced"></span></a>
 				</div>
 			</div>
 
 			<div class="toolbar-group-right">
 				<div class="toolbar-group-content">
 					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-pencil"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-pencil icon-monospaced"></span></a>
 						<ul class="dropdown-menu dropdown-menu-right">
 							<li><a href="#1">Export</a></li>
 							<li><a href="#1">Import</a></li>
@@ -119,7 +119,7 @@ section: Components
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse1">
-	<pre><code class="html">```<header class="header-toolbar header-toolbar-secondary">
+	<pre><code class="html">```<header class="header-toolbar">
     <div class="toolbar-group">
         <div class="toolbar-group-content">
             <a class="sidenav-toggler" href="#1"><span class="icon-align-justify"></span></a>
@@ -154,44 +154,306 @@ section: Components
 		<div class="sidenav-container closed uxgl-slideout-nav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
-					<ul class="nav nav-stacked">
-						<li><a href="#1">Setting Up Maven</a></li>
-						<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
-						<li><a href="#1">Using Maven From Liferay IDE</a></li>
-						<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
-						<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
-						<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
-						<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
-						<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
-						<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
-					</ul>
+					<div class="sidebar sidebar-inverse">
+						<div class="sidebar-header">
+							<h4>
+								<a href="#1">
+									<span class="icon-rocket icon-monospaced"></span>
+									<span>Squaredown</span>
+								</a>
+
+								<a class="icon-remove icon-monospaced slideout-drawer-close" href="#1"></a>
+							</h4>
+						</div>
+
+						<div class="sidebar-body">
+							<ul class="nav nav-tabs product-menu-tabs">
+								<li class="active col-xs-4">
+									<a data-toggle="tab" href="#tab1">
+										<div class="product-menu-tab-icon"><span class="icon-android icon-monospaced"></span></div>
+										<div class="product-menu-tab-text">Android</div>
+									</a>
+								</li>
+
+								<li class="col-xs-4">
+									<a data-toggle="tab" href="#tab2">
+										<div class="product-menu-tab-icon"><span class="icon-github icon-monospaced"></span></div>
+										<div class="product-menu-tab-text">Github</div>
+									</a>
+								</li>
+
+								<li class="col-xs-4">
+									<a data-toggle="tab" href="#tab3">
+										<div class="product-menu-tab-icon">
+											<span class="icon-keyboard icon-monospaced"></span>
+											<span class="label label-warning label-sm">24</span>
+										</div>
+										<div class="product-menu-tab-text">Editor</div>
+									</a>
+								</li>
+							</ul>
+
+							<div class="tab-content">
+								<div class="active fade in tab-pane" id="tab1">
+									<form role="form">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>From</label>
+													<input class="form-control" type="text" placeholder="City or Airport">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>To</label>
+													<input class="form-control" type="text" placeholder="City or Airport">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Departing</label>
+													<input class="form-control" type="text" placeholder="Departing Date">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Returning</label>
+													<input class="form-control" type="text" placeholder="Returning Date">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Adults</label>
+													<select class="form-control">
+														<option>0 Adults</option>
+														<option>1 Adult</option>
+														<option>2 Adults</option>
+														<option>3 Adults</option>
+														<option>4 Adults</option>
+														<option>5 Adults</option>
+														<option>6 Adults</option>
+														<option>7 Adults</option>
+														<option>8 Adults</option>
+														<option>9 Adults</option>
+														<option>10 Adults</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Children</label>
+													<select class="form-control">
+														<option>0 Children</option>
+														<option>1 Child</option>
+														<option>2 Children</option>
+														<option>3 Children</option>
+														<option>4 Children</option>
+														<option>5 Children</option>
+														<option>6 Children</option>
+														<option>7 Children</option>
+														<option>8 Children</option>
+														<option>9 Children</option>
+														<option>10 Children</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<button class="btn btn-success btn-md">Search Flights</button>
+											</div>
+										</div>
+									</form>
+								</div>
+
+								<div class="fade in tab-pane" id="tab2">
+									<form role="form">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>From</label>
+													<input class="form-control" type="text" placeholder="City or Airport">
+												</div>
+											</div>
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>To</label>
+													<input class="form-control" type="text" placeholder="City or Airport">
+												</div>
+											</div>
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Departing</label>
+													<input class="form-control" type="text" placeholder="Departing Date">
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-12 form-group">
+												<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Adults</label>
+													<select class="form-control">
+														<option>0 Adults</option>
+														<option>1 Adult</option>
+														<option>2 Adults</option>
+														<option>3 Adults</option>
+														<option>4 Adults</option>
+														<option>5 Adults</option>
+														<option>6 Adults</option>
+														<option>7 Adults</option>
+														<option>8 Adults</option>
+														<option>9 Adults</option>
+														<option>10 Adults</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Children</label>
+													<select class="form-control">
+														<option>0 Children</option>
+														<option>1 Child</option>
+														<option>2 Children</option>
+														<option>3 Children</option>
+														<option>4 Children</option>
+														<option>5 Children</option>
+														<option>6 Children</option>
+														<option>7 Children</option>
+														<option>8 Children</option>
+														<option>9 Children</option>
+														<option>10 Children</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<button class="btn btn-success btn-md">Search Flights</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="fade in tab-pane" id="tab3">
+									<form>
+										<div class="input-group search-bar">
+											<input class="form-control" placeholder="Search Site..." type="text">
+
+											<span class="input-group-btn">
+												<button class="btn" type="button"><span class="icon-search icon-monospaced"></span></button>
+											</span>
+										</div>
+									</form>
+
+									<div class="list-group" style="margin-bottom: 0;">
+										<a aria-expanded="false" class="collapsed list-group-heading show-collapse-icon" data-toggle="collapse" href="#listGroupCollapse004">
+											List Group Heading
+										</a>
+										<div class="collapse" id="listGroupCollapse004">
+											<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+										</div>
+
+										<a aria-expanded="true" class="list-group-heading show-collapse-icon" data-toggle="collapse" href="#listGroupCollapse005">
+											List Group Heading
+										</a>
+										<div class="collapse in" id="listGroupCollapse005" aria-expanded="true">
+											<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+										</div>
+
+										<a aria-expanded="false" class="collapsed list-group-heading show-collapse-icon" data-toggle="collapse" href="#listGroupCollapse006">
+											List Group Heading
+										</a>
+										<div class="collapse" id="listGroupCollapse006">
+											<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="sidebar-footer">
+							<div class="nameplate">
+								<div class="nameplate-field">
+									<div class="user-icon user-icon-warning user-icon-lg">
+										:D
+									</div>
+								</div>
+
+								<div class="nameplate-content">
+									<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+								</div>
+
+								<div class="nameplate-field">
+									<a class="user-signout icon-signout icon-monospaced" href="#1"></a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="sidenav-content">
 				<header class="header-toolbar header-toolbar-default">
-					<div class="toolbar-group">
-						<div class="toolbar-group-content">
-							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify icon-monospaced icon-lg"></span></a>
-						</div>
-					</div>
+					<div class="container-fluid-1280">
+						<div class="toolbar-group">
+							<div class="toolbar-group-content">
+								<a class="sidenav-toggler" href="#1"><span class="icon-align-justify icon-monospaced"></span></a>
+							</div>
 
-					<div class="toolbar-group-right">
-						<div class="toolbar-group-content">
-							<div class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-lg icon-monospaced"></span></a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#1">Export</a></li>
-									<li><a href="#1">Import</a></li>
-									<li><a href="#1">Configuration</a></li>
-								</ul>
+							<div class="toolbar-group-content hidden-xs">
+								<a href="#"><span class="icon-angle-left icon-monospaced"></span></a>
 							</div>
 						</div>
-					</div>
 
-					<div class="toolbar-group-expand-text">
-						<span class="header-toolbar-title" title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+						<div class="toolbar-group-right">
+							<div class="toolbar-group-content">
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="#1">Export</a></li>
+										<li><a href="#1">Import</a></li>
+										<li><a href="#1">Configuration</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="toolbar-group-expand-text">
+							<span class="header-toolbar-title" title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+						</div>
 					</div>
 				</header>
+
+				<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="position:relative;z-index:1;margin-bottom:0;">
+					<div class="container-fluid-1280">
+						<ul class="nav navbar-nav">
+							<li><a href="#1">All Posts</a></li>
+						</ul>
+
+						<form class="basic-search input-group">
+							<div class="input-group-input">
+								<div class="basic-search-slider">
+									<button class="basic-search-close btn btn-default" type="button"><span class="icon-remove"></span></button>
+									<input class="form-control" placeholder=" Search..." type="text">
+								</div>
+							</div>
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit"><span class="icon-search"></span></button>
+							</div>
+						</form>
+					</div>
+				</nav>
 
 				<ul class="tabular-list-group">
 					<li class="list-group-item">
@@ -213,7 +475,7 @@ section: Components
 						</div>
 
 						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+							<a class="icon-ellipsis-vertical" href="#1"></a>
 						</div>
 					</li>
 
@@ -236,7 +498,7 @@ section: Components
 						</div>
 
 						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+							<a class="icon-ellipsis-vertical" href="#1"></a>
 						</div>
 					</li>
 
@@ -259,7 +521,7 @@ section: Components
 						</div>
 
 						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+							<a class="icon-ellipsis-vertical" href="#1"></a>
 						</div>
 					</li>
 
@@ -282,7 +544,7 @@ section: Components
 						</div>
 
 						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
+							<a class="icon-ellipsis-vertical" href="#1"></a>
 						</div>
 					</li>
 				</ul>
@@ -291,157 +553,10 @@ section: Components
 	</div>
 </div>
 
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<header class="header-toolbar header-toolbar-default">
-			<div class="container-fluid-1280">
-				<div class="toolbar-group">
-					<div class="toolbar-group-content">
-						<a class="sidenav-toggler" href="#1"><span class="icon-align-justify icon-lg icon-monospaced"></span></a>
-					</div>
-
-					<div class="toolbar-group-content hidden-xs">
-						<a href="#"><span class="icon-angle-left icon-lg icon-monospaced"></span></a>
-					</div>
-				</div>
-
-				<div class="toolbar-group-right">
-					<div class="toolbar-group-content">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-lg icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#1">Export</a></li>
-								<li><a href="#1">Import</a></li>
-								<li><a href="#1">Configuration</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="toolbar-group-expand-text">
-					<span class="header-toolbar-title" title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
-				</div>
-			</div>
-		</header>
-
-		<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="position:relative;z-index:1;margin-bottom:0;">
-			<div class="container-fluid-1280">
-				<ul class="nav navbar-nav">
-					<li><a href="#1">All Posts</a></li>
-				</ul>
-
-				<form class="basic-search input-group">
-					<div class="input-group-input">
-						<div class="basic-search-slider">
-							<button class="basic-search-close btn btn-default" type="button"><span class="icon-remove"></span></button>
-							<input class="form-control" placeholder=" Search..." type="text">
-						</div>
-					</div>
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit"><span class="icon-search"></span></button>
-					</div>
-				</form>
-			</div>
-		</nav>
-
-		<ul class="tabular-list-group container-fluid-1280">
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<input type="checkbox">
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
-					<h6 class="text-default">Monica Bellucci</h6>
-					<h6 class="text-default">
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
-				</div>
-			</li>
-
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<input type="checkbox">
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
-					<h6 class="text-default">Monica Bellucci</h6>
-					<h6 class="text-default">
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
-				</div>
-			</li>
-
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<input type="checkbox">
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
-					<h6 class="text-default">Monica Bellucci</h6>
-					<h6 class="text-default">
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
-				</div>
-			</li>
-
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<input type="checkbox">
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
-					<h6 class="text-default">Monica Bellucci</h6>
-					<h6 class="text-default">
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<a class="icon-ellipsis-vertical icon-lg" href="#1"></a>
-				</div>
-			</li>
-		</ul>
-	</div>
-</div>
-
 <script>
-	$('.uxgl-slideout-nav').sideNavigation();
+	$('.uxgl-slideout-nav').sideNavigation({
+		gutter: 0,
+		width: 240
+	});
 	$('.collapse-basic-search').collapsibleSearch();
 </script>
