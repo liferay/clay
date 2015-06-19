@@ -1,9 +1,12 @@
-$sidebar-default-bg: #F5F8FA;
-$sidebar-default-border: #DFE0E3;
+$sidebar-fixed-width: 240px !default;
+$sidebar-fixed-desktop-width: 320px !default;
 
-$sidebar-fixed-width: 240px;
-$sidebar-fixed-desktop-width: 320px;
+$sidebar-default-bg: #F5F8FA !default;
+$sidebar-default-border: #DFE0E3 !default;
+$sidebar-default-color: $navbar-default-color !default;
 
-$sidebar-inverse-bg: #1F282E;
-$sidebar-inverse-color: #FFF;
-$sidebar-inverse-input-bg: #1B2228;
+$sidebar-inverse-bg: #1F282E !default;
+$sidebar-inverse-border: $navbar-inverse-border !default;
+$sidebar-inverse-color: #FFF !default;
+
+$sidebar-inverse-input-bg: #1B2228 !default;
