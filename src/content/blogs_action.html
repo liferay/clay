@@ -2,29 +2,271 @@
 title: Blog - Actions
 section: Example Pages
 ---
+
 <style>
-.uxgl-arrow-group .btn {
-	font-size: 14px;
-	padding: 4px 7px;
+#blogActions.fixed {
+	background-color: #F5F8FA;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 10;
 }
 </style>
 
-<div class="row">
+<div class="row" id="blogActions">
 	<div class="col-md-12">
 		<div class="sidenav-container closed uxgl-slideout-nav" id="blogActionsSidenav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
-					<ul class="nav nav-stacked">
-						<li><a href="#1">Setting Up Maven</a></li>
-						<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
-						<li><a href="#1">Using Maven From Liferay IDE</a></li>
-						<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
-						<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
-						<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
-						<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
-						<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
-						<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
-					</ul>
+					<div class="sidebar sidebar-inverse">
+						<div class="sidebar-header">
+							<h4>
+								<a href="#1">
+									<span class="icon-rocket icon-monospaced"></span>
+									<span>Squaredown</span>
+								</a>
+
+								<a class="icon-remove icon-monospaced slideout-drawer-close" href="#1"></a>
+							</h4>
+						</div>
+
+						<div class="sidebar-body">
+							<ul class="nav nav-tabs product-menu-tabs">
+								<li class="active col-xs-4">
+									<a data-toggle="tab" href="#tab1">
+										<div class="product-menu-tab-icon"><span class="icon-android icon-monospaced"></span></div>
+										<div class="product-menu-tab-text">Android</div>
+									</a>
+								</li>
+
+								<li class="col-xs-4">
+									<a data-toggle="tab" href="#tab2">
+										<div class="product-menu-tab-icon"><span class="icon-github icon-monospaced"></span></div>
+										<div class="product-menu-tab-text">Github</div>
+									</a>
+								</li>
+
+								<li class="col-xs-4">
+									<a data-toggle="tab" href="#tab3">
+										<div class="product-menu-tab-icon">
+											<span class="icon-keyboard icon-monospaced"></span>
+											<span class="label label-warning label-sm">24</span>
+										</div>
+										<div class="product-menu-tab-text">Editor</div>
+									</a>
+								</li>
+							</ul>
+
+							<div class="tab-content">
+								<div class="active fade in tab-pane" id="tab1">
+									<form role="form">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>From</label>
+													<input class="form-control" type="text" placeholder="City or Airport">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>To</label>
+													<input class="form-control" type="text" placeholder="City or Airport">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Departing</label>
+													<input class="form-control" type="text" placeholder="Departing Date">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Returning</label>
+													<input class="form-control" type="text" placeholder="Returning Date">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Adults</label>
+													<select class="form-control">
+														<option>0 Adults</option>
+														<option>1 Adult</option>
+														<option>2 Adults</option>
+														<option>3 Adults</option>
+														<option>4 Adults</option>
+														<option>5 Adults</option>
+														<option>6 Adults</option>
+														<option>7 Adults</option>
+														<option>8 Adults</option>
+														<option>9 Adults</option>
+														<option>10 Adults</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Children</label>
+													<select class="form-control">
+														<option>0 Children</option>
+														<option>1 Child</option>
+														<option>2 Children</option>
+														<option>3 Children</option>
+														<option>4 Children</option>
+														<option>5 Children</option>
+														<option>6 Children</option>
+														<option>7 Children</option>
+														<option>8 Children</option>
+														<option>9 Children</option>
+														<option>10 Children</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<button class="btn btn-success btn-md">Search Flights</button>
+											</div>
+										</div>
+									</form>
+								</div>
+
+								<div class="fade in tab-pane" id="tab2">
+									<form role="form">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>From</label>
+													<input class="form-control" type="text" placeholder="City or Airport">
+												</div>
+											</div>
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>To</label>
+													<input class="form-control" type="text" placeholder="City or Airport">
+												</div>
+											</div>
+
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Departing</label>
+													<input class="form-control" type="text" placeholder="Departing Date">
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-12 form-group">
+												<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Adults</label>
+													<select class="form-control">
+														<option>0 Adults</option>
+														<option>1 Adult</option>
+														<option>2 Adults</option>
+														<option>3 Adults</option>
+														<option>4 Adults</option>
+														<option>5 Adults</option>
+														<option>6 Adults</option>
+														<option>7 Adults</option>
+														<option>8 Adults</option>
+														<option>9 Adults</option>
+														<option>10 Adults</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Children</label>
+													<select class="form-control">
+														<option>0 Children</option>
+														<option>1 Child</option>
+														<option>2 Children</option>
+														<option>3 Children</option>
+														<option>4 Children</option>
+														<option>5 Children</option>
+														<option>6 Children</option>
+														<option>7 Children</option>
+														<option>8 Children</option>
+														<option>9 Children</option>
+														<option>10 Children</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-12">
+												<button class="btn btn-success btn-md">Search Flights</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="fade in tab-pane" id="tab3">
+									<form>
+										<div class="input-group search-bar">
+											<input class="form-control" placeholder="Search Site..." type="text">
+
+											<span class="input-group-btn">
+												<button class="btn" type="button"><span class="icon-search icon-monospaced"></span></button>
+											</span>
+										</div>
+									</form>
+
+									<div class="list-group" style="margin-bottom: 0;">
+										<a aria-expanded="false" class="collapsed list-group-heading show-collapse-icon" data-toggle="collapse" href="#listGroupCollapse004">
+											List Group Heading
+										</a>
+										<div class="collapse" id="listGroupCollapse004">
+											<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+										</div>
+
+										<a aria-expanded="true" class="list-group-heading show-collapse-icon" data-toggle="collapse" href="#listGroupCollapse005">
+											List Group Heading
+										</a>
+										<div class="collapse in" id="listGroupCollapse005" aria-expanded="true">
+											<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+										</div>
+
+										<a aria-expanded="false" class="collapsed list-group-heading show-collapse-icon" data-toggle="collapse" href="#listGroupCollapse006">
+											List Group Heading
+										</a>
+										<div class="collapse" id="listGroupCollapse006">
+											<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="sidebar-footer">
+							<div class="nameplate">
+								<div class="nameplate-field">
+									<div class="user-icon user-icon-warning user-icon-lg">
+										:D
+									</div>
+								</div>
+
+								<div class="nameplate-content">
+									<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+								</div>
+
+								<div class="nameplate-field">
+									<a class="user-signout icon-signout icon-monospaced" href="#1"></a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -75,6 +317,100 @@ section: Example Pages
 						</form>
 					</div>
 				</nav>
+
+				<div class="management-bar management-bar-default">
+					<div class="container-fluid-1280">
+						<div class="management-bar-header">
+							<label class="checkbox-default">
+								<input type="checkbox" value="">
+							</label>
+
+							<a class="management-bar-toggle management-bar-toggle-link collapsed" data-toggle="collapse" href="#mgmtBarCollapse0">
+								<span class="management-bar-item-title">Label</span>
+								<span class="icon-sort">
+							</span></a>
+						</div>
+
+						<div class="management-bar-header-right">
+							<a class="btn" href="#"><span class="icon-th-large icon-monospaced"></span></a>
+							<a class="btn" href="#"><span class="icon-th-list icon-monospaced"></span></a>
+							<a class="btn hidden-xs" href="#"><span class="icon-th icon-monospaced"></span></a>
+						</div>
+
+						<div class="collapse management-bar-collapse" id="mgmtBarCollapse0">
+							<ul class="nav management-bar-nav">
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+										<span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
+										<span class="icon-sort"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li class="active">
+											<label class="checkbox-default">
+												<input checked="" class="input-sm" type="checkbox" value=""> Approved
+											</label>
+										</li>
+										<li class="active">
+											<label class="checkbox-default">
+												<input checked="" class="input-sm" type="checkbox" value=""> Draft
+											</label>
+										</li>
+										<li class="active">
+											<label class="checkbox-default">
+												<input checked="" class="input-sm" type="checkbox" value=""> Pending
+											</label>
+										</li>
+										<li class="active">
+											<label class="checkbox-default">
+												<input checked="" class="input-sm" type="checkbox" value=""> Expired
+											</label>
+										</li>
+										<li>
+											<label class="checkbox-default">
+												<input class="input-sm" type="checkbox" value=""> Scheduled
+											</label>
+										</li>
+										<li>
+											<label class="checkbox-default">
+												<input class="input-sm" type="checkbox" value=""> Rejected
+											</label>
+										</li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+										<span class="management-bar-item-title">Recent</span>
+										<span class="icon-sort"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="#1">All</a></li>
+										<li class="active"><a href="#1">Recent</a></li>
+										<li><a href="#1">Mine</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+										<span class="management-bar-item-title">Order By: Modified Date</span>
+										<span class="icon-sort"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="#1">Name</a></li>
+										<li><a href="#1">Create Date</a></li>
+										<li class="active"><a href="#1">Modified Date</a></li>
+										<li><a href="#1">Downloads</a></li>
+										<li><a href="#1">Size</a></li>
+									</ul>
+								</li>
+								<li>
+									<a class="btn hidden-xs" href="#1"><span class="icon-caret-up icon-monospaced"></span></a>
+								</li>
+								<li>
+									<a class="btn hidden-xs" href="#1"><span class="icon-caret-down icon-monospaced"></span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
 				<ul class="container-fluid-1280 tabular-list-group">
 					<li class="list-group-item">
@@ -290,9 +626,22 @@ section: Example Pages
 	</div>
 </div>
 
+<a class="btn btn-primary btn-action btn-bottom-right" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
+
 <script>
 	$('#blogActionsSidenav').sideNavigation({
-		toggler: '#blogActionsToggler'
+		gutter: 0,
+		toggler: '#blogActionsToggler',
+		width: 240
 	});
+
 	$('.collapse-basic-search').collapsibleSearch();
+
+	$('#fullscreenBtn').on('click', function(event) {
+		var blogActions = $('#blogActions');
+		event.preventDefault();
+		blogActions.toggleClass('fixed');
+	});
+
+	$('[data-toggle="tooltip"]').tooltip();
 </script>
