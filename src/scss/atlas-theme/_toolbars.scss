@@ -1,171 +1,17 @@
-.toolbar,
-.header-toolbar {
-	@include clearfix();
-
-	.nameplate-content,
-	.nameplate-field {
-		vertical-align: middle;
-	}
-}
-
-.toolbar-group,
-.toolbar-group-expand,
-.toolbar-group-right {
-	display: table;
-}
-
-.toolbar-group {
-	float: left;
-}
-
-.toolbar-group-right {
-	float: right;
-}
-
-.toolbar-group-expand {
-	.input-group {
-		width: 100%;
-	}
-
-	.toolbar-group-content,
-	.toolbar-group-field {
-		display: table-cell;
-		float: none;
-		vertical-align: middle;
-	}
-
-	.toolbar-group-field {
-		width: 1%;
-	}
-}
-
-.toolbar-group-expand-text {
-	@include text-overflow();
-}
-
-.toolbar-group-content,
-.toolbar-group-field {
-	display: table-cell;
-	float: none;
-	vertical-align: middle;
-}
-
-.toolbar-group-field {
-	width: 1%;
-}
-
-// Toolbar Base Styles
-
-.toolbar-group-field,
-.toolbar-group-content {
-	&.active > a {
-		color: $gray-light;
-		cursor: default;
-
-		&:focus,
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
-	&.disabled > a {
-		color: $gray-lighter;
-		cursor: not-allowed;
-	}
-}
-
-.toolbar-group,
-.toolbar-group-right {
-	a {
-		color: $navbar-default-link-color;
-		display: block;
-		min-width: 38px;
-		text-align: center;
-
-		&:focus,
-		&:hover {
-			color: $navbar-default-link-active-color;
-			text-decoration: none;
-		}
-	}
-
-	.active > a {
-		color: $navbar-default-link-hover-color;
-	}
-}
-
-// Toolbar Group Newlines
-
-@media screen and (max-width: 767px) {
-	.tbg-xs-newline {
-		clear: both;
-		display: block;
-		float: left;
-	}
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-	.tbg-sm-newline,
-	.tbg-md-newline,
-	.tbg-lg-newline {
-		margin-top: 10px;
-	}
-
-	.tbg-sm-newline {
-		clear: both;
-
-		&.toolbar-group-right {
-			float: left;
-		}
-	}
-
-	.tbg-md-newline,
-	.tbg-lg-newline {
-		&.toolbar-group-right {
-			float: left;
-		}
-	}
-}
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-	.tbg-md-newline,
-	.tbg-lg-newline {
-		margin-top: 10px;
-	}
-
-	.tbg-md-newline {
-		clear: both;
-		margin-top: 10px;
-
-		&.toolbar-group-right {
-			float: left;
-		}
-	}
-
-	.tbg-lg-newline.toolbar-group-right {
-		float: left;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.tbg-lg-newline {
-		clear: both;
-		margin-top: 10px;
-
-		&.toolbar-group-right {
-			float: left;
-		}
-	}
-}
-
 // Header Toolbar Component
 
 .header-toolbar {
+	font-size: 16px;
 	padding: 0 12px;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: 19px;
 		padding-left: 24px;
 		padding-right: 24px;
+	}
+
+	.header-toolbar-title {
+		font-weight: 700;
 	}
 
 	.toolbar-group,
@@ -198,7 +44,6 @@
 			}
 
 			&:first-child {
-				border-right: 1px solid #DDD;
 				padding-left: 0;
 				padding-right: 12px;
 
@@ -222,26 +67,19 @@
 
 .header-toolbar-default {
 	background-color: $header-toolbar-default-bg;
-
-	.header-toolbar-title {
-		font-size: 16px;
-		font-weight: 700;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			font-size: 19px;
-		}
-	}
+	border-width: 0;
 
 	.toolbar-group:first-child {
 		.toolbar-group-content,
 		.toolbar-group-field {
 			&:first-child {
-				border-color: rgba(255, 255, 255, 0.05);
+				border-right: 1px solid rgba(255, 255, 255, 0.05);
 			}
 		}
 	}
 
-	.toolbar-group-content {
+	.toolbar-group-content,
+	.toolbar-group-field {
 		> a,
 		> .dropdown > a {
 			color: $header-toolbar-default-link-color;
@@ -249,6 +87,7 @@
 			&:focus,
 			&:hover {
 				background-color: $header-toolbar-default-link-hover-bg;
+				color: $header-toolbar-default-link-hover-color;
 			}
 		}
 	}
