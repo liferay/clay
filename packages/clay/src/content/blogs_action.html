@@ -24,6 +24,13 @@ section: Example Pages
 	padding-left: 0;
 	padding-right: 0;
 }
+
+@media screen and (max-width: 767px) {
+	.tabular-list-group .list-group-item .list-group-item-content:first-child,
+	.tabular-list-group .list-group-item .list-group-item-field:first-child {
+		display: none;
+	}
+}
 </style>
 
 <div class="row" id="blogActions">
@@ -333,7 +340,7 @@ section: Example Pages
 					<div class="container-fluid-1280">
 						<div class="management-bar-header">
 							<label class="checkbox-default">
-								<input type="checkbox" value="">
+								<input class="check-all" type="checkbox" value="">
 							</label>
 
 							<a class="management-bar-toggle management-bar-toggle-link collapsed" data-toggle="collapse" href="#mgmtBarCollapse0">
@@ -423,7 +430,7 @@ section: Example Pages
 					</div>
 				</div>
 
-				<ul class="container-fluid-1280 tabular-list-group">
+				<ul class="container-fluid-1280 tabular-list-group detailed-list-view">
 					<li class="list-group-item">
 						<div class="list-group-item-field">
 							<label class="checkbox-default">
@@ -433,7 +440,7 @@ section: Example Pages
 
 						<div class="list-group-item-field">
 							<div class="user-icon user-icon-lg">
-								<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
+								<span>AC</span>
 							</div>
 						</div>
 
@@ -447,7 +454,7 @@ section: Example Pages
 
 						<div class="list-group-item-field">
 							<div class="dropdown">
-								<a class="icon-ellipsis-vertical icon-lg" data-toggle="dropdown" href="#1" style="display:block;padding: 9px 15px;"></a>
+								<a class="icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
 								<div class="dropdown-menu dropdown-menu-left-side">
 									<ul class="inline-scroller">
 										<li class="dropdown-header">Dropdown Header</li>
@@ -488,7 +495,7 @@ section: Example Pages
 
 						<div class="list-group-item-field">
 							<div class="dropdown">
-								<a class="icon-ellipsis-vertical icon-lg" data-toggle="dropdown" href="#1" style="display:block;padding: 9px 15px;"></a>
+								<a class="icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
 								<div class="dropdown-menu dropdown-menu-left-side">
 									<ul class="inline-scroller">
 										<li class="dropdown-header">Dropdown Header</li>
@@ -529,7 +536,7 @@ section: Example Pages
 
 						<div class="list-group-item-field">
 							<div class="dropdown">
-								<a class="icon-ellipsis-vertical icon-lg" data-toggle="dropdown" href="#1" style="display:block;padding: 9px 15px;"></a>
+								<a class="icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
 								<div class="dropdown-menu dropdown-menu-left-side">
 									<ul class="inline-scroller">
 										<li class="dropdown-header">Dropdown Header</li>
@@ -570,7 +577,7 @@ section: Example Pages
 
 						<div class="list-group-item-field">
 							<div class="dropdown">
-								<a class="icon-ellipsis-vertical icon-lg" data-toggle="dropdown" href="#1" style="display:block;padding: 9px 15px;"></a>
+								<a class="icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
 								<div class="dropdown-menu dropdown-menu-left-side">
 									<ul class="inline-scroller">
 										<li class="dropdown-header">Dropdown Header</li>
@@ -655,4 +662,36 @@ section: Example Pages
 	});
 
 	$('[data-toggle="tooltip"]').tooltip();
+
+	// Check/uncheck if list group item clicked
+
+	$('.tabular-list-group .list-group-item').on('click', function(event) {
+		var target = $(event.target);
+
+		if (!target.closest('.dropdown').length) {
+			$(this).toggleClass('active');
+
+			if ($(this).hasClass('active')) {
+				$(this).find('input[type="checkbox"]').prop('checked', true);
+			}
+			else {
+				$(this).find('input[type="checkbox"]').prop('checked', false);
+			}
+		}
+	});
+
+	// Check / uncheck all
+
+	$('.management-bar .check-all').on('click', function(event) {
+		var listGroupItem = $('.tabular-list-group .list-group-item');
+
+		if ($(this).prop('checked')) {
+			listGroupItem.addClass('active');
+			listGroupItem.find('input[type="checkbox"]').prop('checked', true);
+		}
+		else {
+			listGroupItem.removeClass('active');
+			listGroupItem.find('input[type="checkbox"]').prop('checked', false);
+		}
+	});
 </script>
