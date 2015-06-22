@@ -1,3 +1,9 @@
+.list-group-item-content,
+.list-group-item-field {
+	vertical-align: top;
+}
+
+
 .list-group-heading,
 .list-group-item {
 	border-left-width: 0;
@@ -52,6 +58,30 @@ a.list-group-heading {
 			height: $list-group-header-close-border-width;
 			background-color: $list-group-header-close-border-color;
 		}
+	}
+}
+
+.list-group-item {
+	&.active {
+		&,
+		&:focus,
+		&:hover {
+			background-color: $list-group-active-bg;
+			color: $list-group-active-color;
+		}
+
+		.list-group-item-content,
+		.list-group-item-field {
+			border-bottom-color: $list-group-active-border;
+			box-shadow: inset 0 -1px 0 $list-group-active-border;
+		}
+	}
+}
+
+.no-borders .active {
+	.list-group-item-content,
+	.list-group-item-field {
+		box-shadow: none;
 	}
 }
 
@@ -148,5 +178,19 @@ a.list-group-heading {
 
 	.list-group-item-warning {
 		@include color-tabular-list-group-item($brand-warning);
+	}
+}
+
+// Tabular List Group Skins
+
+.detailed-list-view {
+	.active {
+		a {
+			&,
+			&:focus,
+			&:hover {
+				color: $brand-default;
+			}
+		}
 	}
 }
