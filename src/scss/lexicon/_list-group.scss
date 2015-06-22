@@ -101,7 +101,7 @@
 		&:first-child {
 			.list-group-item-content,
 			.list-group-item-field {
-				border-top: 1px solid $list-group-border;
+				border-top: $tabular-list-group-border-width solid $list-group-border;
 			}
 		}
 	}
@@ -118,7 +118,7 @@
 
 	.list-group-item-content,
 	.list-group-item-field {
-		border: 1px solid $list-group-border;
+		border: $tabular-list-group-border-width solid $list-group-border;
 		border-left-width: 0;
 		border-right-width: 0;
 		border-top-width: 0;
@@ -126,12 +126,12 @@
 		position: relative;
 
 		&:first-child {
-			border-left-width: 1px;
+			border-left-width: $tabular-list-group-border-width;
 			padding-left: 1em;
 		}
 
 		&:last-child {
-			border-right-width: 1px;
+			border-right-width: $tabular-list-group-border-width;
 			padding-right: 1em;
 		}
 	}
@@ -175,7 +175,14 @@
 .tabular-list-group.full-borders {
 	.list-group-item-content,
 	.list-group-item-field {
-		border-right-width: 1px;
+		&,
+		&:last-child {
+			border-right-width: $tabular-list-group-border-width;
+		}
+
+		&:first-child {
+			border-left-width: $tabular-list-group-border-width;
+		}
 	}
 }
 
@@ -257,7 +264,7 @@
 
 	.list-group-item-field {
 		&:first-child + .list-group-item-field {
-			border-left-width: 1px;
+			border-left-width: $tabular-list-group-border-width;
 			padding-left: 12px;
 			padding-right: 16px;
 
