@@ -275,9 +275,20 @@
 
 				containerClone.remove();
 
-				node.find(instance.options.content).css('min-height', tallest);
-				node.find(instance.options.navigation).css('min-height', tallest);
-				node.find('.sidenav-menu').css('min-height', tallest);
+				if (window.innerWidth < instance.options.breakpoint) {
+					if ((instance.options.type === 'fixed') || (instance.options.type === 'fixed-mobile')) {
+					}
+					else {
+						node.find(instance.options.content).css('min-height', tallest);
+						node.find(instance.options.navigation).css('min-height', tallest);
+						node.find('.sidenav-menu').css('min-height', tallest);
+					}
+				}
+				else {
+					node.find(instance.options.content).css('min-height', tallest);
+					node.find(instance.options.navigation).css('min-height', tallest);
+					node.find('.sidenav-menu').css('min-height', tallest);
+				}
 			});
 		},
 
