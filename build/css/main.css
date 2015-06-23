@@ -12284,14 +12284,22 @@ figcaption, .figcaption {
 
 @media screen and (min-width: 768px) {
   .product-menu .sidebar-body {
-    bottom: 81px;
-    top: 80px;
+    bottom: auto;
+    position: relative;
+    top: auto;
   }
 }
 
 .product-menu .sidebar-footer {
   bottom: 0;
   position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu .sidebar-footer {
+    bottom: auto;
+    position: relative;
+  }
 }
 
 .product-menu .sidebar-footer .nameplate h1, .product-menu .sidebar-footer .nameplate-label h1, .product-menu .sidebar-footer .nameplate-list > li h1, .product-menu .sidebar-footer .nameplate h2, .product-menu .sidebar-footer .nameplate-label h2, .product-menu .sidebar-footer .nameplate-list > li h2, .product-menu .sidebar-footer .nameplate h3, .product-menu .sidebar-footer .nameplate-label h3, .product-menu .sidebar-footer .nameplate-list > li h3, .product-menu .sidebar-footer .nameplate h4, .product-menu .sidebar-footer .nameplate-label h4, .product-menu .sidebar-footer .nameplate-list > li h4, .product-menu .sidebar-footer .nameplate h5, .product-menu .sidebar-footer .nameplate-label h5, .product-menu .sidebar-footer .nameplate-list > li h5, .product-menu .sidebar-footer .nameplate h6, .product-menu .sidebar-footer .nameplate-label h6, .product-menu .sidebar-footer .nameplate-list > li h6 {
@@ -12358,15 +12366,12 @@ figcaption, .figcaption {
 }
 
 .sidenav-content {
-  padding-bottom: 1px;
-  padding-top: 1px;
   position: relative;
 }
 
 .sidenav-menu {
   height: 100%;
-  padding-bottom: 1px;
-  padding-top: 1px;
+  position: relative;
 }
 
 .sidenav-menu-slider {
@@ -12375,7 +12380,6 @@ figcaption, .figcaption {
 }
 
 .sidenav-container.sidenav-right .sidenav-menu {
-  position: relative;
   right: 0;
 }
 
@@ -17110,7 +17114,7 @@ a.list-group-heading:hover {
 
 @media screen and (min-width: 768px) {
   .product-menu .sidebar-body {
-    bottom: 96px;
+    bottom: auto;
   }
 }
 
