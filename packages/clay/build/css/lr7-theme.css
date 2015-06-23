@@ -2055,131 +2055,6 @@ you can use the generic selector below, but it's slower:
 /*** When changing input, make sure to match the corresponding
 		 btn settings to the input height. ***/
 /**
- * Arrow is on the bottom side of dropdown and aligned center (points down)
- * ---v---
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the bottom side of dropdown and aligned left (points down)
- * v------
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on bottom side of dropdown and aligned right (points down)
- * ------v
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the top side of dropdown and aligned center (points up)
- * ---^---
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the top side of dropdown and aligned left (points up)
- * ^------
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the top side of dropdown and aligned right (points up)
- * ------^
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the left side of dropdown and aligned bottom (points left)
- *  ______
- * |
- * |
- * <------
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the left side of dropdown and aligned middle (points left)
- *  ______
- * |
- * <
- * |______
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the left side of dropdown and aligned top (points left)
- * <-------
- * |
- * |_______
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the right side of dropdown and aligned bottom (points right)
- * _______
- *        |
- *        |
- * _______>
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the right side of dropdown and aligned middle (points right)
- * _______
- *        |
- *        >
- * _______|
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
- * Arrow is on the right side of dropdown and aligned top (points right)
- * ------->
- *        |
- *        |
- * _______|
- * @param $arrow-size - Size of arrow
- * @param $border-width - Arrow border width
- * @param $offset - Distance from respective edge of dropdown menu
- * @param $arrow-color - Color of arrow
- * @param $border-color - Arrow border color
- */
-/**
  * @param $element - CSS Selector
  * @param $color - Placeholder Color
  */
@@ -14094,73 +13969,95 @@ a.btn-action [class*="icon-"],
 }
 
 .dropdown-menu:after {
-  border-bottom: 8px solid #FFF;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
+  border: 8px solid transparent;
+  border-bottom-color: #FFF;
+  border-top-width: 0;
   content: '';
   display: inline-block;
+  bottom: auto;
   left: 10px;
+  margin-left: auto;
+  margin-top: auto;
   position: absolute;
+  right: auto;
   top: -8px;
 }
 
 .dropdown-menu:before {
-  border-bottom: 9px solid #DCE0E3;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
+  border: 9px solid transparent;
+  border-bottom-color: #DCE0E3;
+  border-top-width: 0;
   content: '';
+  bottom: auto;
   display: inline-block;
   left: 9px;
+  margin-left: auto;
+  margin-top: auto;
   position: absolute;
+  right: auto;
   top: -9px;
 }
 
 .dropdown-menu-center:after {
-  border-bottom: 8px solid #FFF;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
+  border: 8px solid transparent;
+  border-bottom-color: #FFF;
+  border-top-width: 0;
   content: '';
   display: inline-block;
+  bottom: auto;
   left: 50%;
-  margin-left: -4px;
+  margin-left: -8px;
+  margin-top: auto;
   position: absolute;
+  right: auto;
   top: -8px;
 }
 
 .dropdown-menu-center:before {
-  border-bottom: 9px solid #DCE0E3;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
+  border: 9px solid transparent;
+  border-bottom-color: #DCE0E3;
+  border-top-width: 0;
   content: '';
+  bottom: auto;
   display: inline-block;
   left: 50%;
-  margin-left: -5px;
+  margin-left: -9px;
+  margin-top: auto;
   position: absolute;
+  right: auto;
   top: -9px;
 }
 
 .dropdown-menu-right:after,
 .navbar-right .dropdown-menu:after {
-  border-bottom: 8px solid #FFF;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
+  border: 8px solid transparent;
+  border-bottom-color: #FFF;
+  border-top-width: 0;
   content: '';
   display: inline-block;
-  position: absolute;
+  bottom: auto;
   left: auto;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
   right: 10px;
+  top: -8px;
 }
 
 .dropdown-menu-right:before,
 .navbar-right .dropdown-menu:before {
-  border-bottom: 9px solid #DCE0E3;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
+  border: 9px solid transparent;
+  border-bottom-color: #DCE0E3;
+  border-top-width: 0;
   content: '';
+  bottom: auto;
   display: inline-block;
-  position: absolute;
   left: auto;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
   right: 9px;
+  top: -9px;
 }
 
 .dropdown-menu-top,
@@ -14172,29 +14069,35 @@ a.btn-action [class*="icon-"],
 
 .dropdown-menu-top:after,
 .dropup .dropdown-menu:after {
+  border: 8px solid transparent;
   border-bottom-width: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #FFF;
-  bottom: -8px;
+  border-top-color: #FFF;
+  border-bottom-width: 0;
   content: '';
   display: inline-block;
+  bottom: -8px;
   left: 10px;
+  margin-left: auto;
+  margin-top: auto;
   position: absolute;
+  right: auto;
   top: auto;
 }
 
 .dropdown-menu-top:before,
 .dropup .dropdown-menu:before {
+  border: 9px solid transparent;
   border-bottom-width: 0;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  border-top: 9px solid #DCE0E3;
-  bottom: -9px;
+  border-top-color: #DCE0E3;
+  border-bottom-width: 0;
   content: '';
+  bottom: -9px;
   display: inline-block;
   left: 9px;
+  margin-left: auto;
+  margin-top: auto;
   position: absolute;
+  right: auto;
   top: auto;
 }
 
@@ -14211,30 +14114,34 @@ a.btn-action [class*="icon-"],
 }
 
 .dropdown-menu-top-center:after {
+  border: 8px solid transparent;
   border-bottom-width: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #FFF;
-  bottom: -8px;
+  border-top-color: #FFF;
+  border-bottom-width: 0;
   content: '';
   display: inline-block;
+  bottom: -8px;
   left: 50%;
   margin-left: -8px;
+  margin-top: auto;
   position: absolute;
+  right: auto;
   top: auto;
 }
 
 .dropdown-menu-top-center:before {
+  border: 9px solid transparent;
   border-bottom-width: 0;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  border-top: 9px solid #DCE0E3;
-  bottom: -9px;
+  border-top-color: #DCE0E3;
+  border-bottom-width: 0;
   content: '';
+  bottom: -9px;
   display: inline-block;
   left: 50%;
   margin-left: -9px;
+  margin-top: auto;
   position: absolute;
+  right: auto;
   top: auto;
 }
 
@@ -14247,30 +14154,34 @@ a.btn-action [class*="icon-"],
 }
 
 .dropdown-menu-top-right:after {
+  border: 8px solid transparent;
   border-bottom-width: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #FFF;
-  bottom: -8px;
+  border-top-color: #FFF;
+  border-bottom-width: 0;
   content: '';
   display: inline-block;
+  bottom: -8px;
   left: auto;
-  right: 10px;
+  margin-left: auto;
+  margin-top: auto;
   position: absolute;
+  right: 10px;
   top: auto;
 }
 
 .dropdown-menu-top-right:before {
+  border: 9px solid transparent;
   border-bottom-width: 0;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-  border-top: 9px solid #DCE0E3;
-  bottom: -9px;
+  border-top-color: #DCE0E3;
+  border-bottom-width: 0;
   content: '';
+  bottom: -9px;
   display: inline-block;
   left: auto;
-  right: 9px;
+  margin-left: auto;
+  margin-top: auto;
   position: absolute;
+  right: 9px;
   top: auto;
 }
 
@@ -14279,22 +14190,32 @@ a.btn-action [class*="icon-"],
 }
 
 .dropdown-menu-left-side:after {
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid #FFF;
-  border-right: 8px solid transparent;
-  border-top: 8px solid transparent;
+  border: 8px solid transparent;
+  border-left-color: #FFF;
+  border-right-width: 0;
   content: '';
+  display: inline-block;
+  bottom: auto;
   left: 100%;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
+  right: auto;
   top: 10px;
 }
 
 .dropdown-menu-left-side:before {
-  border-bottom: 9px solid transparent;
-  border-left: 9px solid #DCE0E3;
-  border-right: 9px solid transparent;
-  border-top: 9px solid transparent;
+  border: 9px solid transparent;
+  border-left-color: #DCE0E3;
+  border-right-width: 0;
   content: '';
+  bottom: auto;
+  display: inline-block;
   left: 100%;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
+  right: auto;
   top: 9px;
 }
 
@@ -14307,24 +14228,32 @@ a.btn-action [class*="icon-"],
 }
 
 .dropdown-menu-left-side-bottom:after {
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid #FFF;
-  border-right: 8px solid transparent;
-  border-top: 8px solid transparent;
-  bottom: 10px;
+  border: 8px solid transparent;
+  border-left-color: #FFF;
+  border-right-width: 0;
   content: '';
+  display: inline-block;
+  bottom: 10px;
   left: 100%;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
+  right: auto;
   top: auto;
 }
 
 .dropdown-menu-left-side-bottom:before {
-  border-bottom: 9px solid transparent;
-  border-left: 9px solid #DCE0E3;
-  border-right: 9px solid transparent;
-  border-top: 9px solid transparent;
-  bottom: 9px;
+  border: 9px solid transparent;
+  border-left-color: #DCE0E3;
+  border-right-width: 0;
   content: '';
+  bottom: 9px;
+  display: inline-block;
   left: 100%;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
+  right: auto;
   top: auto;
 }
 
@@ -14337,24 +14266,32 @@ a.btn-action [class*="icon-"],
 }
 
 .dropdown-menu-left-side-middle:after {
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid #FFF;
-  border-right: 8px solid transparent;
-  border-top: 8px solid transparent;
+  border: 8px solid transparent;
+  border-left-color: #FFF;
+  border-right-width: 0;
   content: '';
+  display: inline-block;
+  bottom: auto;
   left: 100%;
+  margin-left: auto;
   margin-top: -8px;
+  position: absolute;
+  right: auto;
   top: 50%;
 }
 
 .dropdown-menu-left-side-middle:before {
-  border-bottom: 9px solid transparent;
-  border-left: 9px solid #DCE0E3;
-  border-right: 9px solid transparent;
-  border-top: 9px solid transparent;
+  border: 9px solid transparent;
+  border-left-color: #DCE0E3;
+  border-right-width: 0;
   content: '';
+  bottom: auto;
+  display: inline-block;
   left: 100%;
+  margin-left: auto;
   margin-top: -9px;
+  position: absolute;
+  right: auto;
   top: 50%;
 }
 
@@ -14367,22 +14304,32 @@ a.btn-action [class*="icon-"],
 }
 
 .dropdown-menu-right-side:after {
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid transparent;
-  border-right: 8px solid #FFF;
-  border-top: 8px solid transparent;
+  border: 8px solid transparent;
+  border-right-color: #FFF;
+  border-left-width: 0;
   content: '';
-  left: -16px;
+  display: inline-block;
+  bottom: auto;
+  left: -8px;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
+  right: auto;
   top: 10px;
 }
 
 .dropdown-menu-right-side:before {
-  border-bottom: 9px solid transparent;
-  border-left: 9px solid transparent;
-  border-right: 9px solid #DCE0E3;
-  border-top: 9px solid transparent;
+  border: 9px solid transparent;
+  border-right-color: #DCE0E3;
+  border-left-width: 0;
   content: '';
-  left: -18px;
+  bottom: auto;
+  display: inline-block;
+  left: -9px;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
+  right: auto;
   top: 9px;
 }
 
@@ -14391,24 +14338,32 @@ a.btn-action [class*="icon-"],
 }
 
 .dropdown-menu-right-side-bottom:after {
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid transparent;
-  border-right: 8px solid #FFF;
-  border-top: 8px solid transparent;
-  bottom: 10px;
+  border: 8px solid transparent;
+  border-right-color: #FFF;
+  border-left-width: 0;
   content: '';
-  left: -16px;
+  display: inline-block;
+  bottom: 10px;
+  left: -8px;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
+  right: auto;
   top: auto;
 }
 
 .dropdown-menu-right-side-bottom:before {
-  border-bottom: 9px solid transparent;
-  border-left: 9px solid transparent;
-  border-right: 9px solid #DCE0E3;
-  border-top: 9px solid transparent;
-  bottom: 9px;
+  border: 9px solid transparent;
+  border-right-color: #DCE0E3;
+  border-left-width: 0;
   content: '';
-  left: -18px;
+  bottom: 9px;
+  display: inline-block;
+  left: -9px;
+  margin-left: auto;
+  margin-top: auto;
+  position: absolute;
+  right: auto;
   top: auto;
 }
 
@@ -14417,24 +14372,32 @@ a.btn-action [class*="icon-"],
 }
 
 .dropdown-menu-right-side-middle:after {
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid transparent;
-  border-right: 8px solid #FFF;
-  border-top: 8px solid transparent;
+  border: 8px solid transparent;
+  border-right-color: #FFF;
+  border-left-width: 0;
   content: '';
-  left: -16px;
+  display: inline-block;
+  bottom: auto;
+  left: -8px;
+  margin-left: auto;
   margin-top: -8px;
+  position: absolute;
+  right: auto;
   top: 50%;
 }
 
 .dropdown-menu-right-side-middle:before {
-  border-bottom: 9px solid transparent;
-  border-left: 9px solid transparent;
-  border-right: 9px solid #DCE0E3;
-  border-top: 9px solid transparent;
+  border: 9px solid transparent;
+  border-right-color: #DCE0E3;
+  border-left-width: 0;
   content: '';
-  left: -18px;
+  bottom: auto;
+  display: inline-block;
+  left: -9px;
+  margin-left: auto;
   margin-top: -9px;
+  position: absolute;
+  right: auto;
   top: 50%;
 }
 
