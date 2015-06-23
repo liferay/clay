@@ -98,7 +98,7 @@
 	bottom: 56px;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		bottom: 96px;
+		bottom: auto;
 	}
 }
 

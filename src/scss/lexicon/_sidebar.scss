@@ -132,14 +132,20 @@
 	top: 48px;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		bottom: 81px;
-		top: 80px;
+		bottom: auto;
+		position: relative;
+		top: auto;
 	}
 }
 
 .product-menu .sidebar-footer {
 	bottom: 0;
 	position: absolute;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		bottom: auto;
+		position: relative;
+	}
 
 	.nameplate {
 		h1, h2, h3, h4, h5, h6 {
