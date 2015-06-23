@@ -56,21 +56,21 @@
 // Arrows and dropdown-menu positions
 // ($arrow-size, $border-width, $offset, $arrow-color, $border-color)
 .dropdown-menu {
-	@include arrow-top-left(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("top-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 }
 
 .dropdown-menu-center {
-	@include arrow-top-center(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("top-center", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 }
 
 .dropdown-menu-right,
 .navbar-right .dropdown-menu {
-	@include arrow-top-right(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("top-right", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 }
 
 .dropdown-menu-top,
 .dropup .dropdown-menu {
-	@include arrow-bottom-left(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("bottom-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	bottom: 100%;
 	margin-bottom: 0;
@@ -78,7 +78,7 @@
 }
 
 .dropdown-menu-top-center {
-	@include arrow-bottom-center(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("bottom-center", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	bottom: 100%;
 	left: 50%;
@@ -90,7 +90,7 @@
 }
 
 .dropdown-menu-top-right {
-	@include arrow-bottom-right(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("bottom-right", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	bottom: 100%;
 	left: auto;
@@ -100,7 +100,7 @@
 }
 
 .dropdown-menu-left-side {
-	@include arrow-right-top(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("right-top", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 
@@ -110,7 +110,7 @@
 }
 
 .dropdown-menu-left-side-bottom {
-	@include arrow-right-bottom(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("right-bottom", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 
@@ -120,7 +120,7 @@
 }
 
 .dropdown-menu-left-side-middle {
-	@include arrow-right-middle(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("right-middle", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 
@@ -130,19 +130,19 @@
 }
 
 .dropdown-menu-right-side {
-	@include arrow-left-top(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("left-top", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 }
 
 .dropdown-menu-right-side-bottom {
-	@include arrow-left-bottom(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("left-bottom", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 }
 
 .dropdown-menu-right-side-middle {
-	@include arrow-left-middle(8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	@include arrow("left-middle", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
 	margin: 0;
 }
