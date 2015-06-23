@@ -28,6 +28,8 @@ var metadata = {
 	subHeading: ''
 };
 
+var REGEX_SCSS = /^scss\//;
+
 var SRC_GLOB = 'src/**/*';
 
 gulp.task('default', ['build']);
@@ -70,7 +72,9 @@ gulp.task('build', function() {
 						sass(
 							{
 								includePaths: bourbon.includePaths,
-								outputDir: 'css/',
+								outputDir: function(dir) {
+									return dir.replace(/^scss(\/|$)/, 'css$1');
+								},
 								outputStyle: 'expanded',
 								sourceMap: true
 							}
@@ -117,7 +121,6 @@ gulp.task(
 gulp.task(
 	'release:build',
 	function() {
-		var REGEX_SCSS = /^scss\//;
 
 		return gulp.src([
 			// 'src/fonts/**/*',
