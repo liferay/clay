@@ -19,9 +19,9 @@
 }
 
 .badge-monospaced {
-	border-radius: 50%;
-	height: $badge-height;
-	width: $badge-width;
+	border-radius: $badge-border-radius;
+	height: $badge-monospaced-size;
+	width: $badge-monospaced-size;
 
 	&.badge {
 		padding: 0;
@@ -42,9 +42,9 @@
 	}
 
 	&.badge-monospaced {
-		height: $badge-lg-height;
+		height: $badge-lg-monospaced-size;
 		padding: 0;
-		width: $badge-lg-width;
+		width: $badge-lg-monospaced-size;
 	}
 
 	a {
@@ -65,20 +65,20 @@
 	}
 
 	&.badge-monospaced {
-		height: $badge-sm-height;
+		height: $badge-sm-monospaced-size;
 		padding: 0;
-		width: $badge-sm-width;
+		width: $badge-sm-monospaced-size;
 	}
 
 	a {
 		margin-left: ($badge-sm-padding-horizontal / 2) + 2;
 
 		&.icon-monospaced {
-			height: $badge-sm-height;
-			line-height: $badge-sm-height;
+			height: $badge-sm-monospaced-size;
+			line-height: $badge-sm-monospaced-size;
 			margin-left: 0;
 			margin-right: 3 - $badge-sm-padding-horizontal;
-			width: $badge-sm-height;
+			width: $badge-sm-monospaced-size;
 		}
 	}
 }

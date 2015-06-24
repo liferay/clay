@@ -6,13 +6,13 @@ $badge-font-size: ceil($font-size-base / 1.166667) !default; // Atlas
 $badge-desktop-font-size: $font-size-base !default; // Atlas
 
 $badge-height: 32px !default; // Atlas
-$badge-width: $badge-height !default; // Atlas
+$badge-monospaced-size: $badge-height !default; // Atlas
 
 $badge-sm-height: 22px !default; // Atlas
-$badge-sm-width: $badge-sm-height !default; // Atlas
+$badge-sm-monospaced-size: $badge-sm-height !default; // Atlas
 
 $badge-lg-height: 44px !default; // Atlas
-$badge-lg-width: $badge-lg-height !default; // Atlas
+$badge-lg-monospaced-size: $badge-lg-height !default; // Atlas
 
 $badge-padding-vertical: 0 !default; // Atlas
 $badge-padding-horizontal: 12px !default; // Atlas
