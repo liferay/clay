@@ -1,20 +1,20 @@
 // Structure
 
-$dropdown-border-width: 1px !default;
+$dropdown-border-width: 1px !default; // Atlas
 
-$dropdown-wide-width: 500px !default;
+$dropdown-wide-width: 500px !default; // Atlas
 
-$dropdown-font-size: $font-size-base !default;
-$dropdown-font-size-desktop: $font-size-base-desktop !default;
+$dropdown-font-size: $font-size-base !default; // Atlas
+$dropdown-font-size-desktop: $font-size-base-desktop !default; // Atlas
 
-$dropdown-link-padding: 8px 12px !default;
+$dropdown-link-padding: 8px 12px !default; // Atlas
 
-$dropdown-header-font-size: $font-size-small !default;
-$dropdown-header-font-size-desktop: $font-size-small-desktop !default;
+$dropdown-header-font-size: $font-size-small !default; // Atlas
+$dropdown-header-font-size-desktop: $font-size-small-desktop !default; // Atlas
 
 // Skin
 
-$dropdown-box-shadow: 0 2px 4px 0 rgba(228, 235, 240, 0.3) !default;
+$dropdown-box-shadow: 0 2px 4px 0 rgba(228, 235, 240, 0.3) !default; // Atlas
 $dropdown-bg:                              #FFF !default;
 $dropdown-border:                          #DCE0E3 !default;
 
@@ -33,4 +33,4 @@ $dropdown-link-disabled-color:             #CACDD2 !default;
 
 $dropdown-header-color:                    #B0B4BB !default;
 
-$dropdown-arrow-color: $dropdown-bg;
+$dropdown-arrow-color: $dropdown-bg; // Atlas

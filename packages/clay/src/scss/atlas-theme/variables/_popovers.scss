@@ -5,15 +5,15 @@ $popover-arrow-width:                             8px !default;
 
 // Skin
 
-$popover-border-radius: $border-radius-default !default;
+$popover-border-radius: $border-radius-default !default; // Atlas
 
 //** Popover box shadow settings (Default is global box shadow settings)
-$popover-box-shadow-x: $box-shadow-default-x !default;
-$popover-box-shadow-y: $box-shadow-default-y !default;
-$popover-box-shadow-blur: $box-shadow-default-blur !default;
-$popover-box-shadow-spread: $box-shadow-default-spread !default;
-$popover-box-shadow-bg: $box-shadow-default-bg !default;
-$popover-box-shadow: $popover-box-shadow-x $popover-box-shadow-y $popover-box-shadow-blur $popover-box-shadow-spread $popover-box-shadow-bg !default;
+$popover-box-shadow-x: $box-shadow-default-x !default; // Atlas
+$popover-box-shadow-y: $box-shadow-default-y !default; // Atlas
+$popover-box-shadow-blur: $box-shadow-default-blur !default; // Atlas
+$popover-box-shadow-spread: $box-shadow-default-spread !default; // Atlas
+$popover-box-shadow-bg: $box-shadow-default-bg !default; // Atlas
+$popover-box-shadow: $popover-box-shadow-x $popover-box-shadow-y $popover-box-shadow-blur $popover-box-shadow-spread $popover-box-shadow-bg !default; // Atlas
 
 $popover-bg:                                      #FFF !default;
 

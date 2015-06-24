@@ -1,35 +1,35 @@
 // Structure
 
-$modal-inner-padding: 16px 24px !default;
-$modal-title-padding: $modal-inner-padding !default;
+$modal-inner-padding:                            16px 24px !default;
+$modal-title-padding:                            $modal-inner-padding !default;
 
 // Skin
 
-$modal-border-radius: $border-radius-default !default;
+$modal-border-radius: $border-radius-default !default; // Atlas
 
-$modal-box-shadow: $box-shadow-default !default;
+$modal-box-shadow: $box-shadow-default !default; // Atlas
 
 $modal-backdrop-opacity:                          0.75 !default;
 
-$modal-header-bg: #FCFEFF !default;
-$modal-header-color: $text-color !default;
-$modal-header-close-color: $text-color !default;
+$modal-header-bg: #FCFEFF !default; // Shared
+$modal-header-color: $text-color !default; // Shared
+$modal-header-close-color: $text-color !default; // Shared
 
-$modal-body-bg: #F5F8F8 !default;
-$modal-body-color: $text-color !default;
+$modal-body-bg: #F5F8F8 !default; // Shared
+$modal-body-color: $text-color !default; // Shared
 
-$modal-footer-bg: $modal-header-bg !default;
-$modal-footer-color: $modal-header-color !default;
+$modal-footer-bg: $modal-header-bg !default; // Shared
+$modal-footer-color: $modal-header-color !default; // Shared
 
-$modal-full-screen-body-bg: #FFF !default;
-$modal-full-screen-desktop-body-bg: $modal-body-bg !default;
+$modal-full-screen-body-bg: #FFF !default; // Shared
+$modal-full-screen-desktop-body-bg: $modal-body-bg !default; // Shared
 
-$modal-full-screen-footer-bg: #29353D !default;
-$modal-full-screen-footer-desktop-bg: $modal-footer-bg !default;
-$modal-full-screen-footer-color: #FFF !default;
-$modal-full-screen-footer-desktop-color: $text-color !default;
+$modal-full-screen-footer-bg: #29353D !default; // Shared
+$modal-full-screen-footer-desktop-bg: $modal-footer-bg !default; // Shared
+$modal-full-screen-footer-color: #FFF !default; // Shared
+$modal-full-screen-footer-desktop-color: $text-color !default; // Shared
 
-$modal-inverse-body-bg: #111314 !default;
-$modal-inverse-body-color: #A7A7A7 !default;
+$modal-inverse-body-bg: #111314 !default; // Shared
+$modal-inverse-body-color: #A7A7A7 !default; // Shared
 
-$modal-btn-icon-color: #FFF !default;
+$modal-btn-icon-color: #FFF !default; // Shared
