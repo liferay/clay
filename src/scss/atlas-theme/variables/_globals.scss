@@ -1,14 +1,14 @@
 // Structure
 
-$golden-ratio: 1.6180339 !default;
+$golden-ratio: 1.6180339 !default; // Atlas
 
-$font-size-base:          14px !default;
-$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-base:                           14px !default;
+$font-size-large:                          ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:                          ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-base-desktop: 16px !default;
-$font-size-large-desktop: ceil(($font-size-base-desktop * 1.25)) !default; // ~20px
-$font-size-small-desktop: ceil(($font-size-base-desktop * 0.85)) !default; // ~14px
+$font-size-base-desktop: 16px !default; // Atlas
+$font-size-large-desktop: ceil(($font-size-base-desktop * 1.25)) !default; // Atlas // ~20px
+$font-size-small-desktop: ceil(($font-size-base-desktop * 0.85)) !default; // Atlas // ~14px
 
 $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
 $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
@@ -19,19 +19,19 @@ $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $line-height-base:                         1.4286 !default;
 
-$padding-base-vertical:     6px !default;
-$padding-base-horizontal:   16px !default;
+$padding-base-vertical:                    6px !default;
+$padding-base-horizontal:                  16px !default;
 
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
+$padding-large-vertical:                   10px !default;
+$padding-large-horizontal:                 16px !default;
 
-$padding-small-vertical:    5px !default;
-$padding-small-horizontal:  10px !default;
+$padding-small-vertical:                   5px !default;
+$padding-small-horizontal:                 10px !default;
 
-$padding-xs-vertical:       1px !default;
-$padding-xs-horizontal:     5px !default;
+$padding-xs-vertical:                      1px !default;
+$padding-xs-horizontal:                    5px !default;
 
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:                        30px !default;
 
 // Skin
 
@@ -39,7 +39,7 @@ $font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, s
 
 //== Border Radius
 //## Defines global border-radius
-$border-radius-default: 4px !default;
+$border-radius-default: 4px !default; // Atlas
 $border-radius-base:                       $border-radius-default !default;
 $border-radius-large:                      $border-radius-default * 1.5 !default;
 $border-radius-small:                      $border-radius-default * 0.75 !default;
@@ -51,29 +51,29 @@ $gray:                                     lighten(#000, 33.5%) !default; // #55
 $gray-light:                               lighten(#000, 46.7%) !default; // #777
 $gray-lighter:                             lighten(#000, 93.5%) !default; // #eee
 
-$brand-default: #869CAD !default;
-$brand-default-active: darken($brand-default, 12%) !default;
-$brand-default-hover: darken($brand-default, 8%) !default;
+$brand-default: #869CAD !default; // Atlas
+$brand-default-active: darken($brand-default, 12%) !default; // Atlas
+$brand-default-hover: darken($brand-default, 8%) !default; // Atlas
 
-$brand-primary: #65B6F0 !default;
-$brand-primary-active: darken($brand-primary, 12%) !default;
-$brand-primary-hover: darken($brand-primary, 8%) !default;
+$brand-primary:                            #65B6F0 !default;
+$brand-primary-active: darken($brand-primary, 12%) !default; // Atlas
+$brand-primary-hover: darken($brand-primary, 8%) !default; // Atlas
 
-$brand-success: #76BD4A !default;
-$brand-success-active: darken($brand-success, 12%) !default;
-$brand-success-hover: darken($brand-success, 8%) !default;
+$brand-success:                            #76BD4A !default;
+$brand-success-active: darken($brand-success, 12%) !default; // Atlas
+$brand-success-hover: darken($brand-success, 8%) !default; // Atlas
 
 $brand-info:                               #1e5ec8 !default;
-$brand-info-active: darken($brand-info, 12%) !default;
-$brand-info-hover: darken($brand-info, 8%) !default;
+$brand-info-active: darken($brand-info, 12%) !default; // Atlas
+$brand-info-hover: darken($brand-info, 8%) !default; // Atlas
 
-$brand-warning: #F5984C !default;
-$brand-warning-active: darken($brand-warning, 12%) !default;
-$brand-warning-hover: darken($brand-warning, 8%) !default;
+$brand-warning:                            #F5984C !default;
+$brand-warning-active: darken($brand-warning, 12%) !default; // Atlas
+$brand-warning-hover: darken($brand-warning, 8%) !default; // Atlas
 
-$brand-danger: #CC6677 !default;
-$brand-danger-active: darken($brand-danger, 12%) !default;
-$brand-danger-hover: darken($brand-danger, 8%) !default;
+$brand-danger:                             #CC6677 !default;
+$brand-danger-active: darken($brand-danger, 12%) !default; // Atlas
+$brand-danger-hover: darken($brand-danger, 8%) !default; // Atlas
 
 $text-color:                               #29353D !default;
 $text-muted:                               lighten($text-color, 55%) !default;
@@ -86,35 +86,35 @@ $component-active-color:                   #FFF !default;
 $link-hover-color:                         $brand-primary-hover !default;
 
 //States for Form and alert
-$state-default-text: #868896 !default;
-$state-default-bg: lighten($state-default-text, 40%) !default;
-$state-default-border: $state-default-text !default;
+$state-default-text: #868896 !default; // Atlas
+$state-default-bg: lighten($state-default-text, 40%) !default; // Atlas
+$state-default-border: $state-default-text !default; // Atlas
 
-$state-primary-text: $brand-primary !default;
-$state-primary-bg: lighten($state-primary-text, 40%) !default;
-$state-primary-border: $state-primary-text !default;
+$state-primary-text: $brand-primary !default; // Atlas
+$state-primary-bg: lighten($state-primary-text, 40%) !default; // Atlas
+$state-primary-border: $state-primary-text !default; // Atlas
 
-$state-success-text:             #34ADAB !default;
-$state-success-bg:               lighten($state-success-text, 50%) !default;
-$state-success-border:           $state-success-text !default;
+$state-success-text:                       #34ADAB !default;
+$state-success-bg:                         lighten($state-success-text, 50%) !default;
+$state-success-border:                     $state-success-text !default;
 
-$state-info-text:                #1D5EC7 !default;
-$state-info-bg:                  lighten($state-info-text, 50%) !default;
-$state-info-border:              $state-info-text !default;
+$state-info-text:                          #1D5EC7 !default;
+$state-info-bg:                            lighten($state-info-text, 50%) !default;
+$state-info-border:                        $state-info-text !default;
 
-$state-warning-text:             #FFB103 !default;
-$state-warning-bg:               lighten($state-warning-text, 40%) !default;
-$state-warning-border:           $state-warning-text !default;
+$state-warning-text:                       #FFB103 !default;
+$state-warning-bg:                         lighten($state-warning-text, 40%) !default;
+$state-warning-border:                     $state-warning-text !default;
 
-$state-danger-text:              #E8295A !default;
-$state-danger-bg:                lighten($state-danger-text, 40%) !default;
-$state-danger-border:            $state-danger-text !default;
+$state-danger-text:                        #E8295A !default;
+$state-danger-bg:                          lighten($state-danger-text, 40%) !default;
+$state-danger-border:                      $state-danger-text !default;
 
 //== Box Shadow
 //## Defines global box-shadows
-$box-shadow-default-x: 0 !default;
-$box-shadow-default-y: 0 !default;
-$box-shadow-default-blur: 3px !default;
-$box-shadow-default-spread: 1px !default;
-$box-shadow-default-bg: rgba(0, 0, 0, 0.2) !default;
-$box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default;
+$box-shadow-default-x: 0 !default; // Atlas
+$box-shadow-default-y: 0 !default; // Atlas
+$box-shadow-default-blur: 3px !default; // Atlas
+$box-shadow-default-spread: 1px !default; // Atlas
+$box-shadow-default-bg: rgba(0, 0, 0, 0.2) !default; // Atlas
+$box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default; // Atlas

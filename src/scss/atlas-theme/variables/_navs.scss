@@ -1,20 +1,20 @@
 // Structure
 
-$nav-link-padding-horizontal: 16px !default;
-$nav-link-padding-vertical: 9px !default;
+$nav-link-padding-horizontal: 16px !default; // Atlas
+$nav-link-padding-vertical: 9px !default; // Atlas
 $nav-link-padding:                                $nav-link-padding-vertical $nav-link-padding-horizontal !default;
 
 // Skin
 
-$nav-link-color: #2B4259 !default;
+$nav-link-color: #2B4259 !default; // Atlas
 
-$nav-link-active-bg: transparent !default;
-$nav-link-active-color: $brand-primary !default;
+$nav-link-active-bg: transparent !default; // Atlas
+$nav-link-active-color: $brand-primary !default; // Atlas
 $nav-link-hover-bg:                               transparent !default;
-$nav-link-hover-color: $brand-primary !default;
+$nav-link-hover-color: $brand-primary !default; // Atlas
 
 $nav-disabled-link-color:                         #C5CDD0 !default;
 $nav-disabled-link-hover-color:                   #C5CDD0 !default;
 
-$nav-collapse-icon-closed: "\f0da" !default;
-$nav-collapse-icon-open: "\f0d7" !default;
+$nav-collapse-icon-closed: "\f0da" !default; // Atlas
+$nav-collapse-icon-open: "\f0d7" !default; // Atlas

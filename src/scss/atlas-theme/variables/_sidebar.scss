@@ -1,16 +1,16 @@
 // Structure
 
-$sidebar-fixed-width: 240px !default;
-$sidebar-fixed-desktop-width: 320px !default;
+$sidebar-fixed-width: 240px !default; // Shared
+$sidebar-fixed-desktop-width: 320px !default; // Shared
 
 // Skin
 
-$sidebar-default-bg: #F5F8FA !default;
-$sidebar-default-border: #DFE0E3 !default;
-$sidebar-default-color: $navbar-default-color !default;
+$sidebar-default-bg: #F5F8FA !default; // Shared
+$sidebar-default-border: #DFE0E3 !default; // Shared
+$sidebar-default-color: $navbar-default-color !default; // Shared
 
-$sidebar-inverse-bg: #1F282E !default;
-$sidebar-inverse-border: $navbar-inverse-border !default;
-$sidebar-inverse-color: #FFF !default;
+$sidebar-inverse-bg: #1F282E !default; // Shared
+$sidebar-inverse-border: $navbar-inverse-border !default; // Shared
+$sidebar-inverse-color: #FFF !default; // Shared
 
-$sidebar-inverse-input-bg: #1B2228 !default;
+$sidebar-inverse-input-bg: #1B2228 !default; // Atlas

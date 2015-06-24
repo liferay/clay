@@ -1,23 +1,23 @@
 // Structure
 
-$input-font-size: 14px !default;
-$input-desktop-font-size: 16px !default;
+$input-font-size: 14px !default; // Atlas
+$input-desktop-font-size: 16px !default; // Atlas
 
-$input-label-font-size: 12px !default;
-$input-label-desktop-font-size: 14px !default;
+$input-label-font-size: 12px !default; // Atlas
+$input-label-desktop-font-size: 14px !default; // Atlas
 
-$input-border-top-width: 0 !default;
-$input-border-right-width: 0 !default;
-$input-border-bottom-width: 2px !default;
-$input-border-left-width: 0 !default;
-$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
+$input-border-top-width: 0 !default; // Atlas
+$input-border-right-width: 0 !default; // Atlas
+$input-border-bottom-width: 2px !default; // Atlas
+$input-border-left-width: 0 !default; // Atlas
+$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default; // Atlas
 
-$input-padding-horizontal: 0 !default;
-$input-padding-vertical: 8px !default;
+$input-padding-horizontal: 0 !default; // Atlas
+$input-padding-vertical: 8px !default; // Atlas
 
-$input-font-size-base: 16px !default;
-$input-font-size-large: 18px !default;
-$input-font-size-small: 13px !default;
+$input-font-size-base: 16px !default; // Atlas
+$input-font-size-large: 18px !default; // Atlas
+$input-font-size-small: 13px !default; // Atlas
 
 /*** When changing input, make sure to match the corresponding
 		 btn settings to the input height. ***/
@@ -25,82 +25,82 @@ $input-height-base:                        48px !default;
 $input-height-large:                       61px !default;
 $input-height-small:                       37px !default;
 
-$input-mobile-height-base: 40px !default;
-$input-mobile-height-large: 61px !default;
-$input-mobile-height-small: 37px !default;
+$input-mobile-height-base: 40px !default; // Atlas
+$input-mobile-height-large: 61px !default; // Atlas
+$input-mobile-height-small: 37px !default; // Atlas
 
-$checkbox-size: 20px !default;
+$checkbox-size: 20px !default; // Atlas
 
 // Skin
 
-$input-border-radius: 0 !default;
-$input-border-radius-large: $input-border-radius !default;
-$input-border-radius-small: $input-border-radius !default;
+$input-border-radius:                      0 !default;
+$input-border-radius-large:                $input-border-radius !default;
+$input-border-radius-small:                $input-border-radius !default;
 
 $input-bg:                                 #FFF !default;
 $input-bg-disabled:                        $input-bg !default;
 
 $input-color:                              $text-color !default;
-$input-color-focus: $brand-primary !default;
+$input-color-focus: $brand-primary !default; // Atlas
 
 $input-border:                             $brand-default !default;
 $input-border-focus:                       $input-color-focus !default;
-$input-border-disabled: #CFD7DE !default;
+$input-border-disabled: #CFD7DE !default; // Atlas
 
-$input-box-shadow: none !default;
-$input-box-shadow-focus: none !default;
+$input-box-shadow: none !default; // Atlas
+$input-box-shadow-focus: none !default; // Atlas
 
 $input-color-placeholder:                  darken(#E4E9EC, 12%) !default;
-$input-color-placeholder-focus: $input-border-focus !default;
+$input-color-placeholder-focus: $input-border-focus !default; // Atlas
 
-$input-label-color: $brand-default !default;
-$input-label-focus-color: $input-color-focus !default;
+$input-label-color: $brand-default !default; // Atlas
+$input-label-focus-color: $input-color-focus !default; // Atlas
 
-$input-readonly-bg: #FAFAFA !default;
-$input-readonly-border: $input-border !default;
-$input-readonly-color: darken($input-color-placeholder, 12%) !default;
+$input-readonly-bg: #FAFAFA !default; // Atlas
+$input-readonly-border: $input-border !default; // Atlas
+$input-readonly-color: darken($input-color-placeholder, 12%) !default; // Atlas
 
 $legend-border-color:                      #B0B4BB !default;
 
 $input-group-addon-bg:                     $brand-default !default;
 $input-group-addon-border-color:           $input-group-addon-bg !default;
 
-$input-danger: $brand-danger !default;
-$input-success: $brand-success !default;
-$input-warning: $brand-warning !default;
+$input-danger: $brand-danger !default; // Atlas
+$input-success: $brand-success !default; // Atlas
+$input-warning: $brand-warning !default; // Atlas
 
-$checkbox-color: $brand-primary !default;
-$checkbox-bg: #FFF !default;
-$checkbox-border: #B0B4BB !default;
-$checkbox-border-focus: $brand-default !default;
-$checkbox-check: "\f00c" !default;
-$checkbox-active-color: #2B4259 !default;
-$checkbox-active-bg: #FFF !default;
-$checkbox-active-border: $checkbox-active-color !default;
-$checkbox-checked-border: $checkbox-active-border !default;
-$checkbox-checked-color: $checkbox-color !default;
-$checkbox-disabled-color: #FFF !default;
-$checkbox-disabled-bg: lighten(#B0B4BB, 20%) !default;
-$checkbox-disabled-border: $checkbox-disabled-bg !default;
-$checkbox-hover-color: lighten($brand-primary, 20%) !default;
-$checkbox-hover-bg: #FFF !default;
-$checkbox-hover-border: $checkbox-hover-color !default;
+$checkbox-color: $brand-primary !default; // Atlas
+$checkbox-bg: #FFF !default; // Atlas
+$checkbox-border: #B0B4BB !default; // Atlas
+$checkbox-border-focus: $brand-default !default; // Atlas
+$checkbox-check: "\f00c" !default; // Atlas
+$checkbox-active-color: #2B4259 !default; // Atlas
+$checkbox-active-bg: #FFF !default; // Atlas
+$checkbox-active-border: $checkbox-active-color !default; // Atlas
+$checkbox-checked-border: $checkbox-active-border !default; // Atlas
+$checkbox-checked-color: $checkbox-color !default; // Atlas
+$checkbox-disabled-color: #FFF !default; // Atlas
+$checkbox-disabled-bg: lighten(#B0B4BB, 20%) !default; // Atlas
+$checkbox-disabled-border: $checkbox-disabled-bg !default; // Atlas
+$checkbox-hover-color: lighten($brand-primary, 20%) !default; // Atlas
+$checkbox-hover-bg: #FFF !default; // Atlas
+$checkbox-hover-border: $checkbox-hover-color !default; // Atlas
 
-$radio-color: $checkbox-color !default;
-$radio-bg: $checkbox-bg !default;
-$radio-border: $checkbox-border !default;
-$radio-check-color: $checkbox-color !default;
-$radio-active-color: #2B4259 !default;
-$radio-active-bg: $radio-bg !default;
-$radio-active-border: $checkbox-active-color !default;
-$radio-checked-border: $checkbox-active-border !default;
-$radio-checked-color: $checkbox-color !default;
-$radio-disabled-color: $checkbox-disabled-color !default;
-$radio-disabled-bg: $checkbox-disabled-bg !default;
-$radio-disabled-border: $checkbox-disabled-border !default;
-$radio-focus-color: #2B4259 !default;
-$radio-focus-border: #2B4259 !default;
-$radio-focus-bg: #FFF !default;
-$radio-hover-color: lighten($brand-primary, 20%) !default;
-$radio-hover-bg: #FFF !default;
-$radio-hover-border: $radio-hover-color !default;
+$radio-color: $checkbox-color !default; // Atlas
+$radio-bg: $checkbox-bg !default; // Atlas
+$radio-border: $checkbox-border !default; // Atlas
+$radio-check-color: $checkbox-color !default; // Atlas
+$radio-active-color: #2B4259 !default; // Atlas
+$radio-active-bg: $radio-bg !default; // Atlas
+$radio-active-border: $checkbox-active-color !default; // Atlas
+$radio-checked-border: $checkbox-active-border !default; // Atlas
+$radio-checked-color: $checkbox-color !default; // Atlas
+$radio-disabled-color: $checkbox-disabled-color !default; // Atlas
+$radio-disabled-bg: $checkbox-disabled-bg !default; // Atlas
+$radio-disabled-border: $checkbox-disabled-border !default; // Atlas
+$radio-focus-color: #2B4259 !default; // Atlas
+$radio-focus-border: #2B4259 !default; // Atlas
+$radio-focus-bg: #FFF !default; // Atlas
+$radio-hover-color: lighten($brand-primary, 20%) !default; // Atlas
+$radio-hover-bg: #FFF !default; // Atlas
+$radio-hover-border: $radio-hover-color !default; // Atlas
