@@ -1,22 +1,10 @@
+// Structure
+
 $input-font-size: 14px !default;
 $input-desktop-font-size: 16px !default;
 
 $input-label-font-size: 12px !default;
 $input-label-desktop-font-size: 14px !default;
-
-$input-bg:                                 #FFF !default;
-$input-bg-disabled:                        $input-bg !default;
-
-$input-color:                              $text-color !default;
-$input-color-focus: $brand-primary !default;
-
-$input-border:                             $brand-default !default;
-$input-border-focus:                       $input-color-focus !default;
-$input-border-disabled: #CFD7DE !default;
-
-$input-border-radius: 0 !default;
-$input-border-radius-large: $input-border-radius !default;
-$input-border-radius-small: $input-border-radius !default;
 
 $input-border-top-width: 0 !default;
 $input-border-right-width: 0 !default;
@@ -24,21 +12,8 @@ $input-border-bottom-width: 2px !default;
 $input-border-left-width: 0 !default;
 $input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
 
-$input-box-shadow: none !default;
-$input-box-shadow-focus: none !default;
-
-$input-color-placeholder:                  darken(#E4E9EC, 12%) !default;
-$input-color-placeholder-focus: $input-border-focus !default;
-
-$input-label-color: $brand-default !default;
-$input-label-focus-color: $input-color-focus !default;
-
 $input-padding-horizontal: 0 !default;
 $input-padding-vertical: 8px !default;
-
-$input-readonly-bg: #FAFAFA !default;
-$input-readonly-border: $input-border !default;
-$input-readonly-color: darken($input-color-placeholder, 12%) !default;
 
 $input-font-size-base: 16px !default;
 $input-font-size-large: 18px !default;
@@ -54,6 +29,37 @@ $input-mobile-height-base: 40px !default;
 $input-mobile-height-large: 61px !default;
 $input-mobile-height-small: 37px !default;
 
+$checkbox-size: 20px !default;
+
+// Skin
+
+$input-border-radius: 0 !default;
+$input-border-radius-large: $input-border-radius !default;
+$input-border-radius-small: $input-border-radius !default;
+
+$input-bg:                                 #FFF !default;
+$input-bg-disabled:                        $input-bg !default;
+
+$input-color:                              $text-color !default;
+$input-color-focus: $brand-primary !default;
+
+$input-border:                             $brand-default !default;
+$input-border-focus:                       $input-color-focus !default;
+$input-border-disabled: #CFD7DE !default;
+
+$input-box-shadow: none !default;
+$input-box-shadow-focus: none !default;
+
+$input-color-placeholder:                  darken(#E4E9EC, 12%) !default;
+$input-color-placeholder-focus: $input-border-focus !default;
+
+$input-label-color: $brand-default !default;
+$input-label-focus-color: $input-color-focus !default;
+
+$input-readonly-bg: #FAFAFA !default;
+$input-readonly-border: $input-border !default;
+$input-readonly-color: darken($input-color-placeholder, 12%) !default;
+
 $legend-border-color:                      #B0B4BB !default;
 
 $input-group-addon-bg:                     $brand-default !default;
@@ -63,14 +69,11 @@ $input-danger: $brand-danger !default;
 $input-success: $brand-success !default;
 $input-warning: $brand-warning !default;
 
-$checkbox-size: 20px !default;
-
 $checkbox-color: $brand-primary !default;
 $checkbox-bg: #FFF !default;
 $checkbox-border: #B0B4BB !default;
 $checkbox-border-focus: $brand-default !default;
 $checkbox-check: "\f00c" !default;
-
 $checkbox-active-color: #2B4259 !default;
 $checkbox-active-bg: #FFF !default;
 $checkbox-active-border: $checkbox-active-color !default;

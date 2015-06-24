@@ -1,5 +1,5 @@
-$pager-border:                             $pagination-border !default;
-$pager-border-radius:                      $pagination-border-radius !default;
+// Structure
+
 $pager-border-width: $pagination-border-width !default;
 
 $pager-item-height: $pagination-item-height - ($pager-border-width * 2) !default;
@@ -16,6 +16,12 @@ $pager-sm-font-size: $pagination-sm-font-size !default;
 $pager-sm-item-height: $pagination-sm-item-height - ($pager-border-width * 2) !default;
 $pager-sm-padding-horizontal: 12px !default;
 $pager-sm-padding-vertical: $pager-padding-base-vertical !default;
+
+// Skin
+
+$pager-border-radius:                      $pagination-border-radius !default;
+
+$pager-border:                             $pagination-border !default;
 
 $pager-color: $pagination-color !default;
 

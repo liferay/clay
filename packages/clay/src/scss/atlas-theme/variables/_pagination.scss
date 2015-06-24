@@ -1,9 +1,21 @@
-$pagination-border-radius: 4px !default;
+// Structure
 
 $pagination-item-height: 32px !default;
 $pagination-item-width: $pagination-item-height !default;
 
 $pagination-border-width: 0 !default;
+
+$pagination-lg-font-size: 18px !default;
+$pagination-lg-item-height: 44px !default;
+$pagination-lg-item-width: $pagination-lg-item-height !default;
+
+$pagination-sm-font-size: 12px !default;
+$pagination-sm-item-height: 24px !default;
+$pagination-sm-item-width: $pagination-sm-item-height !default;
+
+// Skin
+
+$pagination-border-radius: 4px !default;
 
 $pagination-color:                         $brand-default !default;
 $pagination-bg:                            transparent !default;
@@ -27,11 +39,3 @@ $pagination-ellipsis-hover-bg: transparent !default;
 $pagination-items-per-page-color: $pagination-color !default;
 
 $pagination-results-color: $pagination-color !default;
-
-$pagination-lg-font-size: 18px !default;
-$pagination-lg-item-height: 44px !default;
-$pagination-lg-item-width: $pagination-lg-item-height !default;
-
-$pagination-sm-font-size: 12px !default;
-$pagination-sm-item-height: 24px !default;
-$pagination-sm-item-width: $pagination-sm-item-height !default;

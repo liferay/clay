@@ -1,3 +1,5 @@
+// Structure
+
 // must all be same units--start
 $toggle-switch-bar-padding: 4px !default; // space between button and bar, can be negative value
 $toggle-switch-button-width: 16px !default;
@@ -22,22 +24,24 @@ $toggle-switch-button-font-size: $toggle-switch-bar-font-size !default;
 $toggle-switch-bar-desktop-font-size: 16px !default;
 $toggle-switch-button-desktop-font-size: $toggle-switch-bar-desktop-font-size !default;
 
+// Skin
+
 // Toggle Switch Off
+$toggle-switch-button-border-radius: 50% !default;
 $toggle-switch-bar-bg: #FFF !default;
 $toggle-switch-bar-border-color: #D1D6D9 !default;
 $toggle-switch-bar-icon-color: #869CAD !default;
 
 $toggle-switch-button-bg: #869CAD !default;
 $toggle-switch-button-border-color: #869CAD !default;
-$toggle-switch-button-border-radius: 50% !default;
 $toggle-switch-button-icon-color: #FFF !default;
 
 // Toggle Switch On
+$toggle-switch-button-on-border-radius: $toggle-switch-button-border-radius !default;
 $toggle-switch-bar-on-bg: #65B6F0 !default;
 $toggle-switch-bar-on-border-color: #60A7D8 !default;
 $toggle-switch-bar-on-icon-color: #FFF !default;
 
 $toggle-switch-button-on-bg: #FFF !default;
 $toggle-switch-button-on-border-color: #FFF !default;
-$toggle-switch-button-on-border-radius: $toggle-switch-button-border-radius !default;
 $toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;

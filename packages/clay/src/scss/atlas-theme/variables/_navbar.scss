@@ -1,7 +1,8 @@
+// Structure
+
 // Basics of a navbar
 $navbar-height:                            48px !default;
 $navbar-link-line-height: 24px !default;
-$navbar-border-radius:                     0 !default;
 $navbar-padding-horizontal:                12px !default;
 $navbar-padding-vertical:                  floor(($navbar-height - $navbar-link-line-height) / 2) !default;
 
@@ -11,6 +12,10 @@ $navbar-desktop-padding-horizontal:        floor(($grid-gutter-width / 2)) !defa
 $navbar-desktop-padding-vertical:          floor(($navbar-desktop-height - $navbar-desktop-link-line-height) / 2) !default;
 
 $navbar-link-active-bottom-border-width: 2px !default;
+
+// Skin
+
+$navbar-border-radius:                     0 !default;
 
 //== Navbar Default
 $navbar-default-color:                     $brand-default !default;
