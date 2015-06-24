@@ -1,23 +1,28 @@
-$badge-bg: $brand-default !default;
-$badge-border-radius: 50px !default;
+// Structure
 
-$badge-font-size: ceil($font-size-base / 1.166667) !default;
-$badge-desktop-font-size: $font-size-base !default;
+$badge-border-radius:                              50px !default;
 
-$badge-height: 32px !default;
-$badge-width: $badge-height !default;
+$badge-font-size: ceil($font-size-base / 1.166667) !default; // Atlas
+$badge-desktop-font-size: $font-size-base !default; // Atlas
 
-$badge-sm-height: 22px !default;
-$badge-sm-width: $badge-sm-height !default;
+$badge-height: 32px !default; // Atlas
+$badge-width: $badge-height !default; // Atlas
 
-$badge-lg-height: 44px !default;
-$badge-lg-width: $badge-lg-height !default;
+$badge-sm-height: 22px !default; // Atlas
+$badge-sm-width: $badge-sm-height !default; // Atlas
 
-$badge-padding-vertical: 0 !default;
-$badge-padding-horizontal: 12px !default;
+$badge-lg-height: 44px !default; // Atlas
+$badge-lg-width: $badge-lg-height !default; // Atlas
 
-$badge-sm-padding-vertical: $badge-padding-vertical !default;
-$badge-sm-padding-horizontal: 10px !default;
+$badge-padding-vertical: 0 !default; // Atlas
+$badge-padding-horizontal: 12px !default; // Atlas
 
-$badge-lg-padding-vertical: $badge-padding-vertical !default;
-$badge-lg-padding-horizontal: 20px !default;
+$badge-sm-padding-vertical: $badge-padding-vertical !default; // Atlas
+$badge-sm-padding-horizontal: 10px !default; // Atlas
+
+$badge-lg-padding-vertical: $badge-padding-vertical !default; // Atlas
+$badge-lg-padding-horizontal: 20px !default; // Atlas
+
+// Skin
+
+$badge-bg:                           $brand-default !default;

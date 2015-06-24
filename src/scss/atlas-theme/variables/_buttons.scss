@@ -1,10 +1,4 @@
-// Button Border Radius
-$btn-action-border-radius: 4px !default;
-$btn-border-radius: 4px !default;
-
-$btn-lg-border-radius: round($btn-border-radius * 1.5) !default;
-$btn-sm-border-radius: round($btn-border-radius * 0.75) !default;
-$btn-xs-border-radius: round($btn-border-radius * 0.5) !default;
+// Structure
 
 // Button Sizes
 /* When changing any settings below, make sure to match the corresponding
@@ -45,7 +39,15 @@ $btn-desktop-xs-font-size: 10px !default;
 $btn-desktop-xs-padding-vertical: 4px !default;
 $btn-desktop-xs-padding-horizontal: round($btn-xs-padding-vertical * 4) !default;
 
-// Button Colors
+// Skin
+
+$btn-action-border-radius: 4px !default;
+$btn-border-radius: 4px !default;
+
+$btn-lg-border-radius: round($btn-border-radius * 1.5) !default;
+$btn-sm-border-radius: round($btn-border-radius * 0.75) !default;
+$btn-xs-border-radius: round($btn-border-radius * 0.5) !default;
+
 $btn-default-color:                        $brand-default !default;
 $btn-default-bg:                           #FFF !default;
 $btn-default-border:                       $brand-default !default;

@@ -1,217 +1,27 @@
 @import "variables/globals";
 
+@import "variables/alerts";
 @import "variables/badges";
+@import "variables/breadcrumbs";
 @import "variables/buttons";
 @import "variables/cards";
+@import "variables/dropdowns";
 @import "variables/forms";
 @import "variables/labels";
 @import "variables/list-group";
 @import "variables/management-bar";
 @import "variables/modals";
+@import "variables/nameplates";
+@import "variables/navs";
+@import "variables/nav-pills";
+@import "variables/nav-tabs";
 @import "variables/navbar";
 @import "variables/pagination";
-@import "variables/pager";
+@import "variables/pager"; // pager references variables in pagination
+@import "variables/popovers";
 @import "variables/sidebar";
 @import "variables/toggle-card";
 @import "variables/toggle-switch";
 @import "variables/toolbars";
-
-//== Dropdowns
-$dropdown-box-shadow: 0 2px 4px 0 rgba(228, 235, 240, 0.3);
-$dropdown-bg:                              #FFF;
-$dropdown-border:                          #DCE0E3;
-$dropdown-border-width: 1px;
-//** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:                 #DCE0E3;
-$dropdown-divider-bg:                      $dropdown-border;
-
-$dropdown-wide-width: 500px;
-
-$dropdown-font-size: $font-size-base;
-$dropdown-font-size-desktop: $font-size-base-desktop;
-
-$dropdown-link-padding: 8px 12px;
-
-$dropdown-link-color:                      $brand-default;
-$dropdown-link-hover-color:                $brand-default;
-$dropdown-link-hover-bg:                   #F7FAFA;
-
-$dropdown-link-active-color:               $brand-primary;
-$dropdown-link-active-bg:                  $dropdown-link-hover-bg;
-
-$dropdown-link-disabled-color:             #CACDD2;
-
-$dropdown-header-font-size: $font-size-small;
-$dropdown-header-font-size-desktop: $font-size-small-desktop;
-$dropdown-header-color:                    #B0B4BB;
-
-$dropdown-arrow-color: $dropdown-bg;
-
-// Nameplates
-$nameplate-list-border-color: $brand-default;
-$user-icon-default-bg: #869CAD;
-$user-icon-primary-bg: #65B3F0;
-$user-icon-success-bg: #75BD4A;
-$user-icon-info-bg: #083781;
-$user-icon-warning-bg: #F5984C;
-$user-icon-danger-bg: #CC6677;
-
-$user-icon-border-radius: 50%;
-
-//Popovers
-$popover-border-radius: $border-radius-default;
-
-//** Popover box shadow settings (Default is global box shadow settings)
-$popover-box-shadow-x: $box-shadow-default-x;
-$popover-box-shadow-y: $box-shadow-default-y;
-$popover-box-shadow-blur: $box-shadow-default-blur;
-$popover-box-shadow-spread: $box-shadow-default-spread;
-$popover-box-shadow-bg: $box-shadow-default-bg;
-$popover-box-shadow: $popover-box-shadow-x $popover-box-shadow-y $popover-box-shadow-blur $popover-box-shadow-spread $popover-box-shadow-bg;
-
-$popover-bg:                                      #FFF;
-$popover-max-width:                               276px;
-$popover-border-color:                            #AEB7BD;
-$popover-fallback-border-color:                   #AEB7BD;
-$popover-title-color: $text-color;
-$popover-title-bg:                                #FFF;
-$popover-arrow-width:                             8px;
-$popover-arrow-color:                             #FFF;
-
-//== Tooltips
-$tooltip-border-radius: $border-radius-default;
-
-//** Tooltip box shadow settings (Default is global box shadow settings)
-$tooltip-box-shadow-x: $box-shadow-default-x;
-$tooltip-box-shadow-y: $box-shadow-default-y;
-$tooltip-box-shadow-blur: $box-shadow-default-blur;
-$tooltip-box-shadow-spread: $box-shadow-default-spread;
-$tooltip-box-shadow-bg: $box-shadow-default-bg;
-$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg;
-
-$tooltip-bg:                                      #29353D;
-$tooltip-opacity:                                 1;
-
-//== Alerts
-$alert-padding:                                   18px;
-$alert-border-radius:                             4px;
-
-//** For top only border use: 2px 0 0 0
-$alert-border-width: 0;
-
-$alert-link-font-weight:                          bold;
-
-$alert-default-bg: $state-default-bg;
-$alert-default-text: #9698A4;
-$alert-default-text-bold: darken($alert-default-text, 6%);
-$alert-default-border: lighten($alert-default-text, 12%);
-
-$alert-success-bg:                                #DDF3D5;
-$alert-success-text:                              #97C783;
-$alert-success-text-bold: darken($alert-success-text, 6%);
-$alert-success-border: lighten($alert-success-text, 12%);
-
-$alert-info-bg:                                   #E7F1F9;
-$alert-info-text:                                 #86BADA;
-$alert-info-text-bold: darken($alert-info-text, 6%);
-$alert-info-border: lighten($alert-info-text, 12%);
-
-$alert-warning-bg:                                #F8F4D5;
-$alert-warning-text:                              #D6B679;
-$alert-warning-text-bold: darken($alert-warning-text, 6%);
-$alert-warning-border: lighten($alert-warning-text, 12%);
-
-$alert-danger-bg:                                 #F1D1D8;
-$alert-danger-text:                               #D77C8A;
-$alert-danger-text-bold: darken($alert-danger-text, 6%);
-$alert-danger-border: lighten($alert-danger-text, 12%);
-
-//Breadcrumbs
-$breadcrumb-separator: '\f105';
-$breadcrumb-padding-vertical:                     4px;
-$breadcrumb-padding-horizontal:                   15px;
-
-$breadcrumb-bg:                                   $body-bg;
-//** breadcrumb-separator color
-$breadcrumb-color:                                #D4DADF;
-
-$breadcrumb-active-color:                         #C1CBD1;
-
-$breadcrumb-link-color: #4A5E6A;
-
-//Breadcrumb Default
-$breadcrumb-default-bg: $body-bg;
-$breadcrumb-default-border: $brand-default;
-$breadcrumb-default-link-color: $brand-default;
-$breadcrumb-default-link-bg: #FFF;
-$breadcrumb-default-active-border: $brand-primary;
-$breadcrumb-default-active-color: #FFF;
-$breadcrumb-default-active-link-bg: $brand-primary;
-
-//Breadcrumb Inverse
-$breadcrumb-inverse-bg: $body-bg;
-$breadcrumb-inverse-border: $brand-default;
-$breadcrumb-inverse-link-color: $brand-default;
-$breadcrumb-inverse-link-bg: $brand-default;
-$breadcrumb-inverse-active-border: $brand-primary;
-$breadcrumb-inverse-active-color: $brand-default;
-$breadcrumb-inverse-active-link-bg: #FFF;
-
-//Breadcrumb Borderless
-$breadcrumb-borderless-border-radius: 0;
-$breadcrumb-borderless-bg: #FFF;
-$breadcrumb-borderless-link-color: $brand-default;
-$breadcrumb-borderless-link-bg: transparent;
-$breadcrumb-borderless-active-color: $brand-primary;
-$breadcrumb-borderless-separator-bg: $breadcrumb-borderless-bg;
-$breadcrumb-borderless-separator-color: #D2D6DF;
-
-//Navs
-$nav-link-color: #2B4259;
-$nav-link-padding-horizontal: 16px;
-$nav-link-padding-vertical: 9px;
-$nav-link-padding:                                $nav-link-padding-vertical $nav-link-padding-horizontal;
-$nav-link-active-bg: transparent;
-$nav-link-active-color: $brand-primary;
-$nav-link-hover-bg:                               transparent;
-$nav-link-hover-color: $brand-primary;
-
-$nav-disabled-link-color:                         #C5CDD0;
-$nav-disabled-link-hover-color:                   #C5CDD0;
-
-$nav-collapse-icon-closed: "\f0da";
-$nav-collapse-icon-open: "\f0d7";
-
-//Tabs
-$nav-tabs-border-radius: $border-radius-base $border-radius-base 0 0;
-
-$nav-tabs-border-color:                           #D8D8D8;
-$nav-tabs-link-hover-border-color:                transparent;
-$nav-tabs-border-width: 1px;
-
-$nav-tabs-active-link-hover-color:                $brand-primary;
-$nav-tabs-active-link-hover-border-color:         #D8D8D8;
-
-$nav-tabs-justified-link-border-color:            $nav-tabs-border-color;
-
-//Pills
-$nav-pills-border-radius:                         5px;
-
-$nav-pills-link-bg: transparent;
-$nav-pills-link-color: $text-color;
-
-$nav-pills-link-hover-bg: $gray-lighter;
-$nav-pills-link-hover-color: $text-color;
-
-$nav-pills-active-link-bg: $state-primary-border;
-$nav-pills-active-link-hover-bg:                  $nav-pills-active-link-bg;
-$nav-pills-active-link-hover-color:               #FFF;
-
-//Tab Group
-$tab-group-top-border-radius: $border-radius-base $border-radius-base 0 0;
-$tab-group-bottom-border-radius: 0 0 $border-radius-base $border-radius-base;
-$tab-group-left-border-radius: $border-radius-base 0 0 $border-radius-base;
-$tab-group-right-border-radius: 0 $border-radius-base $border-radius-base 0;
-
-//Side Nav
-$sidenav-width: 220px;
+@import "variables/tooltips";
+@import "variables/user-icons";

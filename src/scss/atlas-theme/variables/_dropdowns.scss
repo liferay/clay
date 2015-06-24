@@ -1,0 +1,36 @@
+// Structure
+
+$dropdown-border-width: 1px !default;
+
+$dropdown-wide-width: 500px !default;
+
+$dropdown-font-size: $font-size-base !default;
+$dropdown-font-size-desktop: $font-size-base-desktop !default;
+
+$dropdown-link-padding: 8px 12px !default;
+
+$dropdown-header-font-size: $font-size-small !default;
+$dropdown-header-font-size-desktop: $font-size-small-desktop !default;
+
+// Skin
+
+$dropdown-box-shadow: 0 2px 4px 0 rgba(228, 235, 240, 0.3) !default;
+$dropdown-bg:                              #FFF !default;
+$dropdown-border:                          #DCE0E3 !default;
+
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border:                 #DCE0E3 !default;
+$dropdown-divider-bg:                      $dropdown-border !default;
+
+$dropdown-link-color:                      $brand-default !default;
+$dropdown-link-hover-color:                $brand-default !default;
+$dropdown-link-hover-bg:                   #F7FAFA !default;
+
+$dropdown-link-active-color:               $brand-primary !default;
+$dropdown-link-active-bg:                  $dropdown-link-hover-bg !default;
+
+$dropdown-link-disabled-color:             #CACDD2 !default;
+
+$dropdown-header-color:                    #B0B4BB !default;
+
+$dropdown-arrow-color: $dropdown-bg;

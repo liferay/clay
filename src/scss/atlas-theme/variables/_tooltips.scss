@@ -1,0 +1,14 @@
+// Skin
+
+$tooltip-border-radius: $border-radius-default !default;
+
+//** Tooltip box shadow settings (Default is global box shadow settings)
+$tooltip-box-shadow-x: $box-shadow-default-x !default;
+$tooltip-box-shadow-y: $box-shadow-default-y !default;
+$tooltip-box-shadow-blur: $box-shadow-default-blur !default;
+$tooltip-box-shadow-spread: $box-shadow-default-spread !default;
+$tooltip-box-shadow-bg: $box-shadow-default-bg !default;
+$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg !default;
+
+$tooltip-bg:                                      #29353D !default;
+$tooltip-opacity:                                 1 !default;
