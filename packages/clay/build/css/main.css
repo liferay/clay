@@ -9917,6 +9917,60 @@ button.close {
  * @param $off-color - Switch button off icon font color
  * @param $on-color - Switch button on icon font color
  */
+.badge .icon-monospaced {
+  height: 26px;
+  line-height: 26px;
+  width: 26px;
+}
+
+.badge-lg {
+  border-radius: 100px;
+  font-size: 16px;
+  line-height: 44px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.badge-lg .icon-monospaced {
+  margin-right: -9px;
+  height: 44px;
+  line-height: 44px;
+  width: 44px;
+}
+
+.badge-sm {
+  font-size: 9px;
+  line-height: 22px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.badge-sm .icon-monospaced {
+  height: 22px;
+  line-height: 22px;
+  width: 22px;
+}
+
+.badge-monospaced {
+  border-radius: 100px;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  padding: 0;
+}
+
+.badge-monospaced.badge-lg {
+  height: 44px;
+  line-height: 44px;
+  width: 44px;
+}
+
+.badge-monospaced.badge-sm {
+  height: 22px;
+  line-height: 22px;
+  width: 22px;
+}
+
 .badge a {
   color: #fff;
 }
@@ -10617,6 +10671,41 @@ figcaption, .figcaption {
   background-color: #F5984C;
   background-color: rgba(245, 152, 76, 0.7);
   color: #FFF;
+}
+
+.label {
+  display: inline-block;
+}
+
+.label .icon-monospaced {
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+}
+
+.label-lg {
+  font-size: 16px;
+  line-height: 44px;
+  padding: 3px 18px;
+}
+
+.label-lg .icon-monospaced {
+  margin-right: -9px;
+  height: 44px;
+  line-height: 44px;
+  width: 44px;
+}
+
+.label-sm {
+  font-size: 9px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.label-sm .icon-monospaced {
+  height: 22px;
+  line-height: 22px;
+  width: 22px;
 }
 
 .label a {
@@ -13458,74 +13547,47 @@ mark:before, .mark:before {
   }
 }
 
-.badge a {
-  margin-left: 8px;
-}
-
-.badge a.icon-monospaced {
-  margin-left: 0;
-  margin-right: -9px;
-}
-
-.badge-monospaced {
-  border-radius: 50%;
+.badge .icon-monospaced {
+  margin-right: -6px;
   height: 32px;
+  line-height: 32px;
   width: 32px;
 }
 
-.badge-monospaced.badge {
-  padding: 0;
-}
-
-.badge-lg.badge {
+.badge-lg {
   font-size: 85%;
   line-height: 44px;
   padding: 0 20px;
 }
 
 @media screen and (min-width: 768px) {
-  .badge-lg.badge {
+  .badge-lg {
     font-size: 100%;
   }
 }
 
-.badge-lg.badge-monospaced {
+.badge-lg .icon-monospaced {
+  margin-right: -10px;
   height: 44px;
-  padding: 0;
+  line-height: 44px;
   width: 44px;
 }
 
-.badge-lg a {
-  margin-left: 12px;
-}
-
-.badge-lg a.icon-monospaced {
-  margin-left: 0;
-  margin-right: -17px;
-}
-
-.badge-sm.badge {
+.badge-sm {
   font-size: 75%;
   line-height: 22px;
   padding: 0 10px;
 }
 
-.badge-sm.badge-monospaced {
-  height: 22px;
-  padding: 0;
-  width: 22px;
-}
-
-.badge-sm a {
-  margin-left: 7px;
-}
-
-.badge-sm a.icon-monospaced {
+.badge-sm .icon-monospaced {
+  margin-right: -5px;
   height: 22px;
   line-height: 22px;
-  margin-left: 0;
-  margin-right: -7px;
   width: 22px;
+}
+
+.badge-monospaced {
+  padding: 0;
 }
 
 .breadcrumb {
@@ -15088,51 +15150,42 @@ label.radio-default,
   }
 }
 
-.label a {
-  margin-left: 8px;
+.label .icon-monospaced {
+  margin-right: -6px;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
 }
 
-.label a.icon-monospaced {
-  margin-left: 0;
-  margin-right: -9px;
-}
-
-.label-lg.label {
+.label-lg {
   font-size: 85%;
   line-height: 44px;
   padding: 0 20px;
 }
 
 @media screen and (min-width: 768px) {
-  .label-lg.label {
+  .label-lg {
     font-size: 100%;
   }
 }
 
-.label-lg a {
-  margin-left: 12px;
+.label-lg .icon-monospaced {
+  margin-right: -10px;
+  height: 44px;
+  line-height: 44px;
+  width: 44px;
 }
 
-.label-lg a.icon-monospaced {
-  margin-left: 0;
-  margin-right: -17px;
-}
-
-.label-sm.label {
+.label-sm {
   font-size: 75%;
   line-height: 22px;
   padding: 0 10px;
 }
 
-.label-sm a {
-  margin-left: 7px;
-}
-
-.label-sm a.icon-monospaced {
+.label-sm .icon-monospaced {
+  margin-right: -5px;
   height: 22px;
   line-height: 22px;
-  margin-left: 0;
-  margin-right: -7px;
   width: 22px;
 }
 
