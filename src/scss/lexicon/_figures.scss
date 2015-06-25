@@ -1,10 +1,12 @@
-figure, .figure {
-	margin-bottom: 15px;
+figure,
+.figure {
+	margin-bottom: $figure-margin-bottom;
 	overflow: hidden;
 	position: relative;
 }
 
-figcaption, .figcaption {
+figcaption,
+.figcaption {
 	padding: 5px 2px;
 }
 
@@ -28,60 +30,34 @@ figcaption, .figcaption {
 	top: 0;
 }
 
-// Figure helper classes
-// -------------------------
-
 .figure-circle {
-	border-radius: 50%;
+	border-radius: $figure-circle-border-radius;
 }
 
 .figure-rounded {
-	border-radius: 10px;
+	border-radius: $figure-rounded-border-radius;
 }
 
 .figure-square {
-	border-radius: 0;
-}
-
-// Figcaption helper classes
-// -------------------------
-
-.figcaption-xl {
-	font-size: 1.5em;
-}
-
-.figcaption-lg {
-	font-size: 1.25em;
-}
-
-.figcaption-sm {
-	font-size: 0.85em;
-}
-
-.figcaption-xs {
-	font-size: 0.7em;
+	border-radius: $figure-square-border-radius;
 }
 
 .figcaption-danger {
-	@include color-figcaption($brand-danger, 0.7, #FFF);
-}
-
-.figcaption-default {
-	@include color-figcaption($gray-light, 0.7, #FFF);
+	@include color-figcaption($figcaption-danger-bg, $figcaption-danger-bg-alpha, $figcaption-danger-color);
 }
 
 .figcaption-info {
-	@include color-figcaption($brand-info, 0.7, #FFF);
+	@include color-figcaption($figcaption-info-bg, $figcaption-info-bg-alpha, $figcaption-info-color);
 }
 
 .figcaption-primary {
-	@include color-figcaption($brand-primary, 0.7, #FFF);
+	@include color-figcaption($figcaption-primary-bg, $figcaption-primary-bg-alpha, $figcaption-primary-color);
 }
 
 .figcaption-success {
-	@include color-figcaption($brand-success, 0.7, #FFF);
+	@include color-figcaption($figcaption-success-bg, $figcaption-success-bg-alpha, $figcaption-success-color);
 }
 
 .figcaption-warning {
-	@include color-figcaption($brand-warning, 0.7, #FFF);
+	@include color-figcaption($figcaption-warning-bg, $figcaption-warning-bg-alpha, $figcaption-warning-color);
 }

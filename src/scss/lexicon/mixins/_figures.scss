@@ -1,10 +1,10 @@
-@mixin color-figcaption ($bgColor: #000, $alpha: 0.5, $color: #FFF) {
+@mixin color-figcaption ($bgColor: $figcaption-bg, $alpha: $figcaption-bg-alpha, $color: $figcaption-color) {
 	background-color: $bgColor;
 	background-color: rgba($bgColor, $alpha);
 	color: $color;
 }
 
-@mixin style-figcaption($bgColor: #000, $alpha: 0.5, $color: #FFF) {
+@mixin style-figcaption($bgColor: $figcaption-bg, $alpha: $figcaption-bg-alpha, $color: $figcaption-color) {
 	@include color-figcaption($bgColor, $alpha, $color);
 
 	font-weight: 300;
