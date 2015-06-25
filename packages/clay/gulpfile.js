@@ -28,7 +28,7 @@ var metadata = {
 	subHeading: ''
 };
 
-var REGEX_SCSS = /^scss\//;
+var REGEX_SCSS = /^scss(\/|$)/;
 
 var SRC_GLOB = 'src/**/*';
 
@@ -166,9 +166,9 @@ gulp.task(
 
 		return gulp.src([
 			// 'src/fonts/**/*',
-			'src/scss/**/*',
-			'!src/scss/highlightjs/{,**}',
-			'!src/scss/*'], {base: './src'})
+			'src/scss/+(atlas-theme|bootstrap|lexicon)/**/*',
+			'src/scss/+(atlas|bootstrap|lexicon).scss'
+			], {base: './src'})
 		// .pipe(plugins.debug())
 		.pipe(
 			plugins.rename(
