@@ -8,77 +8,41 @@
 		font-size: $badge-desktop-font-size;
 	}
 
-	a {
-		margin-left: ($badge-padding-horizontal / 2) + 2;
+	.icon-monospaced {
+		margin-right: -($badge-padding-horizontal / 2);
 
-		&.icon-monospaced {
-			margin-left: 0;
-			margin-right: 3 - $badge-padding-horizontal;
-		}
+		@include monospace($badge-monospaced-size);
 	}
 }
-
-.badge-monospaced {
-	border-radius: $badge-border-radius;
-	height: $badge-monospaced-size;
-	width: $badge-monospaced-size;
-
-	&.badge {
-		padding: 0;
-	}
-}
-
-// Badge Sizing
 
 .badge-lg {
-	&.badge {
-		font-size: 85%;
-		line-height: $badge-lg-height;
-		padding: $badge-lg-padding-vertical $badge-lg-padding-horizontal;
+	font-size: 85%;
+	line-height: $badge-lg-height;
+	padding: $badge-lg-padding-vertical $badge-lg-padding-horizontal;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
-			font-size: 100%;
-		}
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: 100%;
 	}
 
-	&.badge-monospaced {
-		height: $badge-lg-monospaced-size;
-		padding: 0;
-		width: $badge-lg-monospaced-size;
-	}
+	.icon-monospaced {
+		margin-right: -($badge-lg-padding-horizontal / 2);
 
-	a {
-		margin-left: ($badge-lg-padding-horizontal / 2) + 2;
-
-		&.icon-monospaced {
-			margin-left: 0;
-			margin-right: 3 - $badge-lg-padding-horizontal;
-		}
+		@include monospace($badge-lg-monospaced-size);
 	}
 }
 
 .badge-sm {
-	&.badge {
-		font-size: 75%;
-		line-height: $badge-sm-height;
-		padding: $badge-sm-padding-vertical $badge-sm-padding-horizontal;
-	}
+	font-size: 75%;
+	line-height: $badge-sm-height;
+	padding: $badge-sm-padding-vertical $badge-sm-padding-horizontal;
 
-	&.badge-monospaced {
-		height: $badge-sm-monospaced-size;
-		padding: 0;
-		width: $badge-sm-monospaced-size;
-	}
+	.icon-monospaced {
+		margin-right: -($badge-sm-padding-horizontal / 2);
 
-	a {
-		margin-left: ($badge-sm-padding-horizontal / 2) + 2;
-
-		&.icon-monospaced {
-			height: $badge-sm-monospaced-size;
-			line-height: $badge-sm-monospaced-size;
-			margin-left: 0;
-			margin-right: 3 - $badge-sm-padding-horizontal;
-			width: $badge-sm-monospaced-size;
-		}
+		@include monospace($badge-sm-monospaced-size);
 	}
+}
+
+.badge-monospaced {
+	padding: 0;
 }
