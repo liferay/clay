@@ -16,7 +16,7 @@
 
 .toolbar-group,
 .toolbar-group-right {
-	height: $input-height-base;
+	height: $toolbar-group-height;
 	margin-bottom: 0;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .toolbar-group-expand-text {
-	line-height: $input-height-base;
+	line-height: $toolbar-group-height;
 
 	@include text-overflow();
 }
@@ -80,18 +80,18 @@
 	.toolbar-group,
 	.toolbar-group-right {
 		display: table;
-		height: $input-height-base;
+		height: $toolbar-group-height;
 		width: auto;
 	}
 
 	.toolbar-group {
 		float: left;
-		padding-right: $navbar-padding-horizontal;
+		padding-right: $toolbar-group-padding-horizontal;
 	}
 
 	.toolbar-group-right {
 		float: right;
-		padding-left: $navbar-padding-horizontal;
+		padding-left: $toolbar-group-padding-horizontal;
 	}
 
 	.toolbar-group-row {
@@ -123,7 +123,7 @@
 
 // Toolbar Group Newlines
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $screen-xs-max) {
 	.tbg-xs-newline {
 		clear: both;
 		display: block;
@@ -131,7 +131,7 @@
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 	.tbg-sm-newline,
 	.tbg-md-newline,
 	.tbg-lg-newline {
@@ -154,7 +154,7 @@
 	}
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 	.tbg-md-newline,
 	.tbg-lg-newline {
 		margin-top: 10px;
@@ -174,7 +174,7 @@
 	}
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $screen-lg-min) {
 	.tbg-lg-newline {
 		clear: both;
 		margin-top: 10px;
@@ -188,9 +188,10 @@
 // Header Toolbar Component
 
 .header-toolbar {
-	margin-bottom: $navbar-margin-bottom;
-	padding-left: $navbar-padding-horizontal;
-	padding-right: $navbar-padding-horizontal;
+	border-radius: $header-toolbar-border-radius;
+	margin-bottom: $header-toolbar-margin-bottom;
+	padding-left: $header-toolbar-padding-horizontal;
+	padding-right: $header-toolbar-padding-horizontal;
 
 	.dropdown-menu {
 		margin-top: 5px + 2;
@@ -199,17 +200,17 @@
 	.toolbar-group,
 	.toolbar-group-expand,
 	.toolbar-group-right {
-		height: $navbar-height;
+		height: $header-toolbar-height;
 	}
 
 	.toolbar-group-expand-text {
-		line-height: $navbar-height;
+		line-height: $header-toolbar-height;
 	}
 
 	.toolbar-group-content {
 		> a,
 		> .dropdown > a {
-			border-radius: 4px;
+			border-radius: $header-toolbar-border-radius;
 		}
 	}
 }
@@ -217,25 +218,24 @@
 // Header Toolbar Skins
 
 .header-toolbar-default {
-	background-color: $navbar-default-bg;
-	border: 1px solid $navbar-default-border;
-	border-radius: $navbar-border-radius;
+	background-color: $header-toolbar-default-bg;
+	border: $header-toolbar-default-border-width solid $header-toolbar-default-border;
 
 	.toolbar-group-content {
 		> a,
 		> .dropdown > a {
-			color: $navbar-default-link-color;
+			color: $header-toolbar-default-link-color;
 
 			&:focus,
 			&:hover {
-				background-color: $navbar-default-link-hover-bg;
-				color: $navbar-default-link-hover-color;
+				background-color: $header-toolbar-default-link-hover-bg;
+				color: $header-toolbar-default-link-hover-color;
 			}
 		}
 	}
 
 	.toolbar-group-expand,
 	.toolbar-group-expand-text {
-		color: $navbar-default-color;
+		color: $header-toolbar-default-color;
 	}
 }
