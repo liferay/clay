@@ -1,13 +1,16 @@
-.card, .card-horizontal {
-	margin-bottom: 20px;
+.card,
+.card-horizontal {
+	border: $card-border-width solid $card-border;
+	border-radius: $card-border-radius;
+	margin-bottom: $card-margin-bottom;
 	position: relative;
 
 	&.card-circle {
-		border-radius: 20px;
+		border-radius: $card-circle-border-radius;
 	}
 
 	&.card-rounded {
-		border-radius: 5px;
+		border-radius: $card-rounded-border-radius;
 	}
 
 	&.card-square {
@@ -15,14 +18,13 @@
 	}
 
 	.divider {
-		border-top: 1px solid #DDD;
-		margin-bottom: 10px;
-		margin-top: 10px;
+		background-color: $card-divider-bg;
+		border-width: 0;
+		height: $card-divider-height;
 	}
 }
 
 .card {
-	box-shadow: 0 0 1px #AAA;
 	overflow: hidden;
 
 	.card-row {
@@ -34,40 +36,39 @@
 	}
 }
 
-.card-header, .card-footer, .card-section {
-	@include clearfix-hack();
-
+.card-header,
+.card-footer,
+.card-section {
 	.divider {
-		margin-left: -10px;
-		margin-right: -10px;
+		margin-left: -$card-gutter-width;
+		margin-right: -$card-gutter-width;
 	}
 }
 
 .card-header {
-	padding: 1px 10px 0;
+	padding: 1px $card-gutter-width 0;
 }
 
 .card-footer {
-	padding: 0 10px 1px;
+	padding: 0 $card-gutter-width 1px;
 }
 
 .card-section {
-	padding: 1px 10px;
+	padding: 1px $card-gutter-width;
 }
 
 .card-horizontal {
-	box-shadow: 0 0 1px #AAA;
 	overflow: hidden;
 	position: relative;
 
 	&.card-circle {
 		[class*="card-col"] {
 			&:first-child {
-				border-radius: 20px 0 0 20px;
+				border-radius: $card-circle-border-radius 0 0 $card-circle-border-radius;
 			}
 
 			&:last-child {
-				border-radius: 0 20px 20px 0;
+				border-radius: 0 $card-circle-border-radius $card-circle-border-radius 0;
 			}
 		}
 	}
@@ -75,11 +76,23 @@
 	&.card-rounded {
 		[class*="card-col"] {
 			&:first-child {
-				border-radius: 5px 0 0 5px;
+				border-radius: $card-rounded-border-radius 0 0 $card-rounded-border-radius;
 			}
 
 			&:last-child {
-				border-radius: 0 5px 5px 0;
+				border-radius: 0 $card-rounded-border-radius $card-rounded-border-radius 0;
+			}
+		}
+	}
+
+	&.card-square {
+		[class*="card-col"] {
+			&:first-child {
+				border-radius: 0;
+			}
+
+			&:last-child {
+				border-radius: 0;
 			}
 		}
 	}
@@ -105,14 +118,19 @@
 		&:last-child {
 			padding-right: 0;
 		}
+
+		.divider {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 
 	.card-col-gutters {
 		padding: 0 3%;
 
 		.divider {
-			margin-left: -15px;
-			margin-right: -15px;
+			margin-left: -10%;
+			margin-right: -10%;
 		}
 	}
 
@@ -136,29 +154,5 @@
 }
 
 .card-row-padded {
-	padding: 10px;
-}
-
-.card-btn-row {
-	[class*="card-col"] {
-		overflow: visible;
-
-		a, button {
-			border-radius: 0;
-			display: block;
-			line-height: normal;
-			padding-bottom: 20px;
-			padding-top: 20px;
-			text-align: center;
-			width: 100%;
-
-			&:focus, &:hover {
-				text-decoration: none;
-			}
-
-			[class^="icon-"] {
-				display: block;
-			}
-		}
-	}
+	padding: $card-gutter-width;
 }
