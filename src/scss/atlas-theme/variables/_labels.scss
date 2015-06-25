@@ -1,3 +1,26 @@
+$label-border-radius:                              4px !default;
+
+$label-font-size: $badge-font-size !default; // Atlas
+$label-desktop-font-size: $badge-desktop-font-size !default; // Atlas
+
+$label-height: $badge-height !default; // Shared
+$label-monospaced-size: $label-height !default; // Shared
+
+$label-lg-height: $badge-lg-height !default; // Shared
+$label-lg-monospaced-size: $label-lg-height !default; // Shared
+
+$label-sm-height: $badge-sm-height !default; // Shared
+$label-sm-monospaced-size: $label-sm-height !default; // Shared
+
+$label-padding-vertical: $badge-padding-vertical !default; // Atlas
+$label-padding-horizontal: $badge-padding-horizontal !default; // Atlas
+
+$label-sm-padding-vertical: $badge-sm-padding-vertical !default; // Atlas
+$label-sm-padding-horizontal: $badge-sm-padding-horizontal !default; // Atlas
+
+$label-lg-padding-vertical: $badge-lg-padding-vertical !default; // Atlas
+$label-lg-padding-horizontal: $badge-lg-padding-horizontal !default; // Atlas
+
 // Skin
 
 $label-default-bg:                      $brand-default !default;
