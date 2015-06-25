@@ -12,6 +12,8 @@
 	padding-right: 18px;
 
 	.icon-monospaced {
+		margin-right: -9px;
+
 		@include monospace($badge-lg-monospaced-size);
 	}
 }

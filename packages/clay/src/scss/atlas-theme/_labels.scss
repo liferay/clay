@@ -1,62 +1,44 @@
 .label {
 	display: inline-block;
-	font-size: $badge-font-size;
-	line-height: $badge-height;
-	padding: $badge-padding-vertical $badge-padding-horizontal;
+	font-size: $label-font-size;
+	line-height: $label-height;
+	padding: $label-padding-vertical $label-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		font-size: $badge-desktop-font-size;
+		font-size: $label-desktop-font-size;
 	}
 
-	a {
-		margin-left: ($badge-padding-horizontal / 2) + 2;
+	.icon-monospaced {
+		margin-right: -($label-padding-horizontal / 2);
 
-		&.icon-monospaced {
-			margin-left: 0;
-			margin-right: 3 - $badge-padding-horizontal;
-		}
+		@include monospace($label-monospaced-size);
 	}
 }
 
-// Label Sizes
-
 .label-lg {
-	&.label {
-		font-size: 85%;
-		line-height: $badge-lg-height;
-		padding: $badge-lg-padding-vertical $badge-lg-padding-horizontal;
+	font-size: 85%;
+	line-height: $label-lg-height;
+	padding: $label-lg-padding-vertical $label-lg-padding-horizontal;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
-			font-size: 100%;
-		}
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: 100%;
 	}
 
-	a {
-		margin-left: ($badge-lg-padding-horizontal / 2) + 2;
+	.icon-monospaced {
+		margin-right: -($label-lg-padding-horizontal / 2);
 
-		&.icon-monospaced {
-			margin-left: 0;
-			margin-right: 3 - $badge-lg-padding-horizontal;
-		}
+		@include monospace($label-lg-monospaced-size);
 	}
 }
 
 .label-sm {
-	&.label {
-		font-size: 75%;
-		line-height: $badge-sm-height;
-		padding: $badge-sm-padding-vertical $badge-sm-padding-horizontal;
-	}
+	font-size: 75%;
+	line-height: $label-sm-height;
+	padding: $label-sm-padding-vertical $label-sm-padding-horizontal;
 
-	a {
-		margin-left: ($badge-sm-padding-horizontal / 2) + 2;
+	.icon-monospaced {
+		margin-right: -($label-sm-padding-horizontal / 2);
 
-		&.icon-monospaced {
-			height: $badge-sm-height;
-			line-height: $badge-sm-height;
-			margin-left: 0;
-			margin-right: 3 - $badge-sm-padding-horizontal;
-			width: $badge-sm-height;
-		}
+		@include monospace($label-sm-monospaced-size);
 	}
 }
