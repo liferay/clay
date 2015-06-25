@@ -1,26 +1,4 @@
 .card,
 .card-horizontal {
-	&.card-rounded {
-		border-radius: $card-border-radius;
-	}
-}
-
-.card {
 	box-shadow: $card-box-shadow;
-}
-
-.card-horizontal {
-	box-shadow: $card-box-shadow;
-
-	&.card-rounded {
-		[class*="card-col"] {
-			&:first-child {
-				border-radius: $card-border-radius 0 0 $card-border-radius;
-			}
-
-			&:last-child {
-				border-radius: 0 $card-border-radius $card-border-radius 0;
-			}
-		}
-	}
 }
