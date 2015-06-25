@@ -16,18 +16,18 @@
 
 	.toolbar-group,
 	.toolbar-group-right {
-		height: $header-bar-height;
+		height: $header-toolbar-height;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			height: $header-bar-desktop-height;
+			height: $header-toolbar-desktop-height;
 		}
 	}
 
 	.toolbar-group-expand-text {
-		line-height: $header-bar-height;
+		line-height: $header-toolbar-height;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			line-height: $header-bar-desktop-height;
+			line-height: $header-toolbar-desktop-height;
 		}
 
 		h1, h2, h3, h4, h5, h6 {
@@ -67,7 +67,6 @@
 
 .header-toolbar-default {
 	background-color: $header-toolbar-default-bg;
-	border-width: 0;
 
 	.toolbar-group:first-child {
 		.toolbar-group-content,
