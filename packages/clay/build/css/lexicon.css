@@ -7935,7 +7935,8 @@ button.close {
   background-color: #f0ad4e;
 }
 
-.btn-action, .btn-action-secondary .btn {
+.btn-action,
+.btn-action-secondary .btn {
   z-index: 1000;
 }
 
@@ -7975,31 +7976,37 @@ button.close {
   top: 20px;
 }
 
-.card, .card-horizontal {
+.card,
+.card-horizontal {
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
   margin-bottom: 20px;
   position: relative;
 }
 
-.card.card-circle, .card-horizontal.card-circle {
+.card.card-circle,
+.card-horizontal.card-circle {
   border-radius: 20px;
 }
 
-.card.card-rounded, .card-horizontal.card-rounded {
-  border-radius: 5px;
+.card.card-rounded,
+.card-horizontal.card-rounded {
+  border-radius: 4px;
 }
 
-.card.card-square, .card-horizontal.card-square {
+.card.card-square,
+.card-horizontal.card-square {
   border-radius: 0;
 }
 
-.card .divider, .card-horizontal .divider {
-  border-top: 1px solid #DDD;
-  margin-bottom: 10px;
-  margin-top: 10px;
+.card .divider,
+.card-horizontal .divider {
+  background-color: #e7e7e7;
+  border-width: 0;
+  height: 1px;
 }
 
 .card {
-  box-shadow: 0 0 1px #AAA;
   overflow: hidden;
 }
 
@@ -8011,16 +8018,9 @@ button.close {
   overflow: visible;
 }
 
-.card-header:after, .card-footer:after, .card-section:after {
-  clear: both;
-  content: "";
-  display: block;
-  font-size: 0;
-  height: 0;
-  visibility: hidden;
-}
-
-.card-header .divider, .card-footer .divider, .card-section .divider {
+.card-header .divider,
+.card-footer .divider,
+.card-section .divider {
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -8038,7 +8038,6 @@ button.close {
 }
 
 .card-horizontal {
-  box-shadow: 0 0 1px #AAA;
   overflow: hidden;
   position: relative;
 }
@@ -8052,11 +8051,19 @@ button.close {
 }
 
 .card-horizontal.card-rounded [class*="card-col"]:first-child {
-  border-radius: 5px 0 0 5px;
+  border-radius: 4px 0 0 4px;
 }
 
 .card-horizontal.card-rounded [class*="card-col"]:last-child {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.card-horizontal.card-square [class*="card-col"]:first-child {
+  border-radius: 0;
+}
+
+.card-horizontal.card-square [class*="card-col"]:last-child {
+  border-radius: 0;
 }
 
 .card-col-1 {
@@ -8120,13 +8127,18 @@ button.close {
   padding-right: 0;
 }
 
+.card-row.card-row-padded .card-col-gutters .divider {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .card-row .card-col-gutters {
   padding: 0 3%;
 }
 
 .card-row .card-col-gutters .divider {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -10%;
+  margin-right: -10%;
 }
 
 .card-row [class*="card-col"] {
@@ -8147,28 +8159,6 @@ button.close {
 
 .card-row-padded {
   padding: 10px;
-}
-
-.card-btn-row [class*="card-col"] {
-  overflow: visible;
-}
-
-.card-btn-row [class*="card-col"] a, .card-btn-row [class*="card-col"] button {
-  border-radius: 0;
-  display: block;
-  line-height: normal;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  text-align: center;
-  width: 100%;
-}
-
-.card-btn-row [class*="card-col"] a:focus, .card-btn-row [class*="card-col"] a:hover, .card-btn-row [class*="card-col"] button:focus, .card-btn-row [class*="card-col"] button:hover {
-  text-decoration: none;
-}
-
-.card-btn-row [class*="card-col"] a [class^="icon-"], .card-btn-row [class*="card-col"] button [class^="icon-"] {
-  display: block;
 }
 
 .inline-scroller {
@@ -8498,19 +8488,21 @@ a .icon-monospaced:hover {
   }
 }
 
-figure, .figure {
-  margin-bottom: 15px;
+figure,
+.figure {
+  margin-bottom: 20px;
   overflow: hidden;
   position: relative;
 }
 
-figcaption, .figcaption {
+figcaption,
+.figcaption {
   padding: 5px 2px;
 }
 
 .figcaption-bottom {
   background-color: #000;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #FFF;
   font-weight: 300;
   padding: 10px 15px;
@@ -8521,7 +8513,7 @@ figcaption, .figcaption {
 
 .figcaption-full {
   background-color: #000;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #FFF;
   font-weight: 300;
   padding: 10px 15px;
@@ -8534,7 +8526,7 @@ figcaption, .figcaption {
 
 .figcaption-top {
   background-color: #000;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #FFF;
   font-weight: 300;
   padding: 10px 15px;
@@ -8548,38 +8540,16 @@ figcaption, .figcaption {
 }
 
 .figure-rounded {
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .figure-square {
   border-radius: 0;
 }
 
-.figcaption-xl {
-  font-size: 1.5em;
-}
-
-.figcaption-lg {
-  font-size: 1.25em;
-}
-
-.figcaption-sm {
-  font-size: 0.85em;
-}
-
-.figcaption-xs {
-  font-size: 0.7em;
-}
-
 .figcaption-danger {
   background-color: #d9534f;
   background-color: rgba(217, 83, 79, 0.7);
-  color: #FFF;
-}
-
-.figcaption-default {
-  background-color: #777777;
-  background-color: rgba(119, 119, 119, 0.7);
   color: #FFF;
 }
 
@@ -10737,6 +10707,7 @@ figcaption, .figcaption {
 }
 
 .header-toolbar {
+  border-radius: 4px;
   margin-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
@@ -10764,7 +10735,6 @@ figcaption, .figcaption {
 .header-toolbar-default {
   background-color: #f8f8f8;
   border: 1px solid #e7e7e7;
-  border-radius: 4px;
 }
 
 .header-toolbar-default .toolbar-group-content > a,
