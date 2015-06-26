@@ -9,3 +9,11 @@
 .has-error {
 	@include form-control-validation($input-danger, $input-danger, $input-danger);
 }
+
+.has-success, .has-warning, .has-error {
+	.form-control {
+		&, &:focus {
+			box-shadow: none;
+		}
+	}
+}
