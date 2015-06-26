@@ -9,7 +9,7 @@
 }
 
 .panel {
-	@include box-shadow(none);
+	box-shadow: none;
 
 	> .collapse > .list-group {
 		margin-bottom: 0;

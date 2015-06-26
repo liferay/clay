@@ -39,7 +39,7 @@
 	}
 
 	.panel {
-		@include box-shadow(none);
+		box-shadow: none;
 
 		.list-group {
 			margin-bottom: 0;

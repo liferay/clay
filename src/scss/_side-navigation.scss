@@ -125,9 +125,7 @@ html {
 
 #mySidebar {
 	background-color: #222328;
-
-	@include box-shadow(-3px 0px 3px -3px #000 inset);
-
+	box-shadow: -3px 0px 3px -3px #000 inset;
 	color: #F8F8F8;
 
 	ul {
@@ -141,8 +139,7 @@ html {
 
 			a {
 				background-color: #2C2D32;
-
-				@include box-shadow(-3px 0px 3px -3px #000 inset);
+				box-shadow: -3px 0px 3px -3px #000 inset;
 
 				&, &:hover, &:focus {
 					color: #B3B6BC;

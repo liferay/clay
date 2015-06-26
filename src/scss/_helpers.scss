@@ -1,10 +1,10 @@
 /* Removes Box Shadows */
 
 .no-shadow, .no-shadows {
-	@include box-shadow(none);
+	box-shadow: none;
 
 	.dropdown-menu, .modal-content, .popover, .tooltip-inner {
-		@include box-shadow(none);
+		box-shadow: none;
 	}
 
 	.popover {
