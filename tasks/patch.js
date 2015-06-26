@@ -2,7 +2,9 @@ module.exports = function(gulp, plugins, _, config) {
 	var LEXICON_IMPORT = '\n\n@import "../lexicon/variables";';
 
 	var patchBootstrap = function(content) {
-		content += LEXICON_IMPORT;
+		if (content.indexOf(LEXICON_IMPORT) === -1) {
+			content += LEXICON_IMPORT;
+		}
 
 		return content;
 	};
