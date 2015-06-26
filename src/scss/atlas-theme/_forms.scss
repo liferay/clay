@@ -330,15 +330,6 @@ label {
 
 // Webkit only checkboxes
 
-label {
-	&.checkbox-default,
-	&.radio-default,
-	.checkbox-default &,
-	.radio-default & {
-		line-height: 1;
-	}
-}
-
 .checkbox-default {
 	input[type="checkbox"] {
 		-webkit-appearance: none;

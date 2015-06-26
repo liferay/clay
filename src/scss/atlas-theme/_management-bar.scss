@@ -15,49 +15,38 @@
 			margin: 13px 3px;
 		}
 	}
-
-	.checkbox-default input[type="checkbox"] {
-		margin-top: 0;
-	}
-
-	.dropdown-menu {
-		> li > .checkbox-default {
-			padding-bottom: 9px;
-			padding-top: 9px;
-		}
-
-		> .active > .checkbox-default {
-			&,
-			&:focus,
-			&:hover {
-				background-color: transparent;
-			}
-		}
-
-		.checkbox-default input[type="checkbox"] {
-			height: $checkbox-size;
-		}
-	}
 }
 
 .management-bar-header,
 .management-bar-header-right {
-	> .checkbox-default {
+	> .checkbox-default,
+	> .radio-default {
 		padding: 13px 15px;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
 			padding: 20px 15px;
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			margin-top: 0;
 		}
 	}
 }
 
 .management-bar-nav {
 	> li {
-		> .checkbox-default {
+		> .checkbox-default,
+		> .radio-default {
 			padding: 13px 15px;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
 				padding: 20px 15px;
+			}
+
+			input[type="checkbox"],
+			input[type="radio"] {
+				margin-top: 0;
 			}
 		}
 
@@ -83,8 +72,7 @@
 .management-bar-toggle {
 	color: $management-bar-link-color;
 
-	&:hover,
-	&:focus {
+	&:hover {
 		color: $management-bar-link-hover-color;
 	}
 }
@@ -106,7 +94,6 @@
 		> a {
 			color: $management-bar-link-color;
 
-			&:focus,
 			&:hover {
 				color: $management-bar-link-hover-color;
 			}
@@ -126,7 +113,7 @@
 	> a {
 		color: $management-bar-link-color;
 
-		&:focus,
+		// &:focus,
 		&:hover {
 			color: $management-bar-link-hover-color;
 		}
@@ -135,7 +122,6 @@
 	> .management-bar-toggle {
 		color: $management-bar-toggle-open-color;
 
-		&:focus,
 		&:hover {
 			color: $management-bar-toggle-open-color;
 		}
@@ -143,7 +129,6 @@
 		&.collapsed {
 			color: $management-bar-toggle-close-color;
 
-			&:focus,
 			&:hover {
 				color: $management-bar-toggle-close-color;
 			}
@@ -153,7 +138,6 @@
 	> .btn-default {
 		color: $btn-default-color;
 
-		&:focus,
 		&:hover,
 		&.active {
 			border-color: $btn-default-hover-border;
@@ -163,7 +147,6 @@
 	> .btn-danger {
 		color: $btn-danger-color;
 
-		&:focus,
 		&:hover {
 			color: $btn-danger-color;
 		}
@@ -172,7 +155,6 @@
 	> .btn-primary {
 		color: $btn-primary-color;
 
-		&:focus,
 		&:hover {
 			color: $btn-primary-color;
 		}
@@ -181,7 +163,6 @@
 	> .btn-success {
 		color: $btn-success-color;
 
-		&:focus,
 		&:hover {
 			color: $btn-success-color;
 		}
@@ -190,7 +171,6 @@
 	> .btn-warning {
 		color: $btn-warning-color;
 
-		&:focus,
 		&:hover {
 			color: $btn-warning-color;
 		}
@@ -202,7 +182,6 @@
 		border-color: $btn-primary-bg;
 		color: $btn-primary-color;
 
-		&:focus,
 		&:hover {
 			background-color: $btn-primary-hover-bg;
 			border-color: $btn-primary-hover-bg;

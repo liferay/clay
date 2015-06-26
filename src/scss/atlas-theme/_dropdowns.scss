@@ -1,4 +1,3 @@
-//Dropdowns
 .dropdown-header {
 	font-size: $dropdown-header-font-size;
 	overflow: hidden;
@@ -6,6 +5,22 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+
+.dropdown-menu form {
+	> .checkbox-default,
+	> .radio-default {
+		label {
+			padding: $dropdown-link-padding;
+			padding-left: 32px;
+		}
+	}
+
+	.form-group {
+		padding: $dropdown-link-padding;
+	}
+}
+
+// Dropdown inline-scroller
 
 .dropdown-menu {
 	border: $dropdown-border-width solid $dropdown-border;
@@ -55,6 +70,7 @@
 
 // Arrows and dropdown-menu positions
 // ($arrow-size, $border-width, $offset, $arrow-color, $border-color)
+
 .dropdown-menu {
 	@include arrow("top-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 }

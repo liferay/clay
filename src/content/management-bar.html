@@ -43,36 +43,54 @@ section: Components
 							<span class="icon-sort"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li class="active">
-								<label class="checkbox-default">
-									<input checked class="input-sm" type="checkbox" value=""> Approved
-								</label>
-							</li>
-							<li class="active">
-								<label class="checkbox-default">
-									<input checked class="input-sm" type="checkbox" value=""> Draft
-								</label>
-							</li>
-							<li class="active">
-								<label class="checkbox-default">
-									<input checked class="input-sm" type="checkbox" value=""> Pending
-								</label>
-							</li>
-							<li class="active">
-								<label class="checkbox-default">
-									<input checked class="input-sm" type="checkbox" value=""> Expired
-								</label>
-							</li>
 							<li>
-								<label class="checkbox-default">
-									<input class="input-sm" type="checkbox" value=""> Scheduled
-								</label>
+								<form>
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail3">Email address</label>
+										<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Approved
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Draft
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Pending
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Expired
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Scheduled
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Rejected
+										</label>
+									</div>
+								</form>
 							</li>
-							<li>
-								<label class="checkbox-default">
-									<input class="input-sm" type="checkbox" value=""> Rejected
-								</label>
-							</li>
+							<li><a href="#1">Something Outside</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -121,7 +139,7 @@ section: Components
             <input type="checkbox" value="">
         </label>
 
-        <a class="management-bar-toggle management-bar-toggle-link" data-toggle="collapse" href="#mgmtBarCollapse0">
+        <a class="management-bar-toggle management-bar-toggle-link collapsed" data-toggle="collapse" href="#mgmtBarCollapse0">
             <span class="management-bar-item-title">Label</span>
             <span class="icon-sort">
         </a>
@@ -135,43 +153,49 @@ section: Components
 
     <div class="collapse management-bar-collapse" id="mgmtBarCollapse0">
         <ul class="nav management-bar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-              <span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
-              <span class="icon-sort"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li class="active">
-                    <label class="checkbox-default">
-                        <input checked class="input-sm" type="checkbox" value=""> Approved
-                    </label>
-                </li>
-                <li class="active">
-                    <label class="checkbox-default">
-                        <input checked class="input-sm" type="checkbox" value=""> Draft
-                    </label>
-                </li>
-                <li class="active">
-                    <label class="checkbox-default">
-                        <input checked class="input-sm" type="checkbox" value=""> Pending
-                    </label>
-                </li>
-                <li class="active">
-                    <label class="checkbox-default">
-                        <input checked class="input-sm" type="checkbox" value=""> Expired
-                    </label>
-                </li>
-                <li>
-                    <label class="checkbox-default">
-                        <input class="input-sm" type="checkbox" value=""> Scheduled
-                    </label>
-                </li>
-                <li>
-                    <label class="checkbox-default">
-                        <input class="input-sm" type="checkbox" value=""> Rejected
-                    </label>
-                </li>
-              </ul>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+                    <span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
+                    <span class="icon-sort"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <form>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                            </div>
+                            <div class="checkbox checkbox-default active">
+                                <label><input checked type="checkbox" value=""> Approved</label>
+                            </div>
+                            <div class="checkbox checkbox-default active">
+                                <label><input checked type="checkbox" value=""> Draft</label>
+                            </div>
+                            <div class="checkbox checkbox-default active">
+                                <label><input checked type="checkbox" value=""> Pending</label>
+                            </div>
+                            <div class="checkbox checkbox-default active">
+                                <label><input checked type="checkbox" value=""> Expired</label>
+                            </div>
+                            <div class="checkbox checkbox-default">
+                                <label><input type="checkbox" value=""> Scheduled</label>
+                            </div>
+                            <div class="checkbox checkbox-default">
+                                <label><input type="checkbox" value=""> Rejected</label>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="#1">Something Outside</a></li>
+                </ul>
             </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -266,3 +290,40 @@ section: Components
     </ul>
 </div>```</code></pre>
 </div>
+
+<script>
+	$('select').on('focus', function(event) {
+		$(this).closest('.form-group').addClass('focus');
+	});
+
+	$('input[type="email"]').on('focus', function(event) {
+		$(this).closest('.form-group').addClass('focus');
+	});
+
+	$('input[type="checkbox"]').on('focus', function(event) {
+		$(this).closest('.checkbox').addClass('focus');
+	});
+
+	$('input[type="checkbox"]').change(function(event) {
+		var $this = $(this);
+
+		if ($this.prop('checked')) {
+			$this.closest('.checkbox').addClass('active');
+		}
+		else {
+			$this.closest('.checkbox').removeClass('active');
+		}
+	});
+
+	$('select').on('blur', function(event) {
+		$(this).closest('.form-group').removeClass('focus');
+	});
+
+	$('input[type="email"]').on('blur', function(event) {
+		$(this).closest('.form-group').removeClass('focus');
+	});
+
+	$('input[type="checkbox"]').on('blur', function(event) {
+		$(this).closest('.checkbox').removeClass('focus');
+	});
+</script>
