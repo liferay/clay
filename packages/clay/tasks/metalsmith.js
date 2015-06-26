@@ -28,6 +28,12 @@ module.exports = function(gulp, plugins, _, config) {
 		var REGEX_VAR_FILEPATH = new RegExp(config.BOOTSTRAP_VAR_FILE + '$');
 
 		return gulp.src(config.SRC_GLOB)
+				.pipe(
+					plugins.plumber(function(err) {
+						console.log('Could not compile site', err);
+						this.emit('end');
+					})
+				)
 				.pipe(filter)
 				.pipe(gulpFrontMatter())
 				.on(
@@ -77,6 +83,7 @@ module.exports = function(gulp, plugins, _, config) {
 						)
 						.use(templates('ejs'))
 				)
+				.pipe(plugins.plumber.stop())
 				.pipe(gulp.dest('./build'));
 
 	});
