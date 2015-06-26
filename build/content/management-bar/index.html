@@ -254,36 +254,54 @@ collapse
 							<span class="icon-sort"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li class="active">
-								<label class="checkbox-default">
-									<input checked class="input-sm" type="checkbox" value=""> Approved
-								</label>
-							</li>
-							<li class="active">
-								<label class="checkbox-default">
-									<input checked class="input-sm" type="checkbox" value=""> Draft
-								</label>
-							</li>
-							<li class="active">
-								<label class="checkbox-default">
-									<input checked class="input-sm" type="checkbox" value=""> Pending
-								</label>
-							</li>
-							<li class="active">
-								<label class="checkbox-default">
-									<input checked class="input-sm" type="checkbox" value=""> Expired
-								</label>
-							</li>
 							<li>
-								<label class="checkbox-default">
-									<input class="input-sm" type="checkbox" value=""> Scheduled
-								</label>
+								<form>
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail3">Email address</label>
+										<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Approved
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Draft
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Pending
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Expired
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Scheduled
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Rejected
+										</label>
+									</div>
+								</form>
 							</li>
-							<li>
-								<label class="checkbox-default">
-									<input class="input-sm" type="checkbox" value=""> Rejected
-								</label>
-							</li>
+							<li><a href="#1">Something Outside</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -332,7 +350,7 @@ collapse
             &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
         &lt;/label&gt;
 
-        &lt;a class=&quot;management-bar-toggle management-bar-toggle-link&quot; data-toggle=&quot;collapse&quot; href=&quot;#mgmtBarCollapse0&quot;&gt;
+        &lt;a class=&quot;management-bar-toggle management-bar-toggle-link collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#mgmtBarCollapse0&quot;&gt;
             &lt;span class=&quot;management-bar-item-title&quot;&gt;Label&lt;/span&gt;
             &lt;span class=&quot;icon-sort&quot;&gt;
         &lt;/a&gt;
@@ -346,43 +364,49 @@ collapse
 
     &lt;div class=&quot;collapse management-bar-collapse&quot; id=&quot;mgmtBarCollapse0&quot;&gt;
         &lt;ul class=&quot;nav management-bar-nav&quot;&gt;
-          &lt;li class=&quot;dropdown&quot;&gt;
-            &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
-              &lt;span class=&quot;management-bar-item-title&quot;&gt;Status: Approved, Draft, Pending, Expired&lt;/span&gt;
-              &lt;span class=&quot;icon-sort&quot;&gt;&lt;/span&gt;
-            &lt;/a&gt;
-            &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                &lt;li class=&quot;active&quot;&gt;
-                    &lt;label class=&quot;checkbox-default&quot;&gt;
-                        &lt;input checked class=&quot;input-sm&quot; type=&quot;checkbox&quot; value=&quot;&quot;&gt; Approved
-                    &lt;/label&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;active&quot;&gt;
-                    &lt;label class=&quot;checkbox-default&quot;&gt;
-                        &lt;input checked class=&quot;input-sm&quot; type=&quot;checkbox&quot; value=&quot;&quot;&gt; Draft
-                    &lt;/label&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;active&quot;&gt;
-                    &lt;label class=&quot;checkbox-default&quot;&gt;
-                        &lt;input checked class=&quot;input-sm&quot; type=&quot;checkbox&quot; value=&quot;&quot;&gt; Pending
-                    &lt;/label&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;active&quot;&gt;
-                    &lt;label class=&quot;checkbox-default&quot;&gt;
-                        &lt;input checked class=&quot;input-sm&quot; type=&quot;checkbox&quot; value=&quot;&quot;&gt; Expired
-                    &lt;/label&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;label class=&quot;checkbox-default&quot;&gt;
-                        &lt;input class=&quot;input-sm&quot; type=&quot;checkbox&quot; value=&quot;&quot;&gt; Scheduled
-                    &lt;/label&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;label class=&quot;checkbox-default&quot;&gt;
-                        &lt;input class=&quot;input-sm&quot; type=&quot;checkbox&quot; value=&quot;&quot;&gt; Rejected
-                    &lt;/label&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
+            &lt;li class=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                    &lt;span class=&quot;management-bar-item-title&quot;&gt;Status: Approved, Draft, Pending, Expired&lt;/span&gt;
+                    &lt;span class=&quot;icon-sort&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                    &lt;li&gt;
+                        &lt;form&gt;
+                            &lt;div class=&quot;form-group&quot;&gt;
+                                &lt;select class=&quot;form-control&quot;&gt;
+                                    &lt;option&gt;1&lt;/option&gt;
+                                    &lt;option&gt;2&lt;/option&gt;
+                                    &lt;option&gt;3&lt;/option&gt;
+                                    &lt;option&gt;4&lt;/option&gt;
+                                    &lt;option&gt;5&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;form-group&quot;&gt;
+                                &lt;label for=&quot;exampleInputEmail3&quot;&gt;Email address&lt;/label&gt;
+                                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Email&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox checkbox-default active&quot;&gt;
+                                &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Approved&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox checkbox-default active&quot;&gt;
+                                &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Draft&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox checkbox-default active&quot;&gt;
+                                &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Pending&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox checkbox-default active&quot;&gt;
+                                &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Expired&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox checkbox-default&quot;&gt;
+                                &lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt; Scheduled&lt;/label&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;checkbox checkbox-default&quot;&gt;
+                                &lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt; Rejected&lt;/label&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Something Outside&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
             &lt;/li&gt;
             &lt;li class=&quot;dropdown&quot;&gt;
                 &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
@@ -477,6 +501,43 @@ collapse
     &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
 </div>
+
+<script>
+	$('select').on('focus', function(event) {
+		$(this).closest('.form-group').addClass('focus');
+	});
+
+	$('input[type="email"]').on('focus', function(event) {
+		$(this).closest('.form-group').addClass('focus');
+	});
+
+	$('input[type="checkbox"]').on('focus', function(event) {
+		$(this).closest('.checkbox').addClass('focus');
+	});
+
+	$('input[type="checkbox"]').change(function(event) {
+		var $this = $(this);
+
+		if ($this.prop('checked')) {
+			$this.closest('.checkbox').addClass('active');
+		}
+		else {
+			$this.closest('.checkbox').removeClass('active');
+		}
+	});
+
+	$('select').on('blur', function(event) {
+		$(this).closest('.form-group').removeClass('focus');
+	});
+
+	$('input[type="email"]').on('blur', function(event) {
+		$(this).closest('.form-group').removeClass('focus');
+	});
+
+	$('input[type="checkbox"]').on('blur', function(event) {
+		$(this).closest('.checkbox').removeClass('focus');
+	});
+</script>
 	</div>
 
 		</section>

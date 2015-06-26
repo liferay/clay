@@ -8161,6 +8161,62 @@ button.close {
   padding: 10px;
 }
 
+.dropdown-menu form .checkbox-default:hover,
+.dropdown-menu form .radio-default:hover,
+.dropdown-menu form .form-group:hover {
+  background-color: #f5f5f5;
+  color: #262626;
+}
+
+.dropdown-menu form .checkbox-default.focus,
+.dropdown-menu form .radio-default.focus,
+.dropdown-menu form .form-group.focus {
+  background-color: #f5f5f5;
+  color: #262626;
+}
+
+.dropdown-menu form .checkbox-default.focus label,
+.dropdown-menu form .radio-default.focus label,
+.dropdown-menu form .form-group.focus label {
+  color: #262626;
+}
+
+.dropdown-menu form .checkbox-default.active,
+.dropdown-menu form .radio-default.active,
+.dropdown-menu form .form-group.active {
+  background-color: #337ab7;
+}
+
+.dropdown-menu form .checkbox-default.active label,
+.dropdown-menu form .radio-default.active label,
+.dropdown-menu form .form-group.active label {
+  color: #fff;
+}
+
+.dropdown-menu form .checkbox-default,
+.dropdown-menu form .radio-default {
+  margin: 0;
+}
+
+.dropdown-menu form .checkbox-default input[type='checkbox'],
+.dropdown-menu form .checkbox-default input[type='radio'],
+.dropdown-menu form .radio-default input[type='checkbox'],
+.dropdown-menu form .radio-default input[type='radio'] {
+  margin-bottom: 0;
+  margin-right: 6px;
+}
+
+.dropdown-menu form .checkbox-default label,
+.dropdown-menu form .radio-default label {
+  display: block;
+  padding: 3px 20px 3px 40px;
+}
+
+.dropdown-menu form .form-group {
+  margin-bottom: 0;
+  padding: 3px 20px;
+}
+
 .inline-scroller {
   height: 125px;
   list-style: none;
@@ -8928,36 +8984,6 @@ figcaption,
   padding: 5px 9px;
 }
 
-.management-bar .checkbox-default input[type="checkbox"] {
-  margin-bottom: 0;
-}
-
-.management-bar .dropdown-menu .checkbox-default input[type="checkbox"] {
-  height: auto;
-  margin-right: 6px;
-}
-
-.management-bar .dropdown-menu > li > .checkbox-default {
-  cursor: pointer;
-  display: block;
-  font-weight: normal;
-  margin-bottom: 0;
-  padding: 3px 20px;
-}
-
-.management-bar .dropdown-menu > li > .checkbox-default:focus,
-.management-bar .dropdown-menu > li > .checkbox-default:hover {
-  background-color: #f5f5f5;
-  color: #262626;
-}
-
-.management-bar .dropdown-menu > .active > .checkbox-default,
-.management-bar .dropdown-menu > .active > .checkbox-default:focus,
-.management-bar .dropdown-menu > .active > .checkbox-default:hover {
-  background-color: #337ab7;
-  color: #fff;
-}
-
 .management-bar-right {
   float: right;
 }
@@ -9063,7 +9089,7 @@ figcaption,
   padding: 5px 9px;
 }
 
-.management-bar-nav > li .checkbox-default,
+.management-bar-nav > li > .checkbox-default,
 .management-bar-nav > li .management-bar-text {
   padding: 15px 15px;
 }
@@ -11148,7 +11174,6 @@ a.bg-default:hover {
 mark, .mark {
   background-color: #fcf8e3;
   box-decoration-break: clone;
-  -webkit-box-shadow: -0.25em 0 0 #fcf8e3;
   box-shadow: -0.25em 0 0 #fcf8e3;
   color: #333333;
   display: inline;
