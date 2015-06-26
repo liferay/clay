@@ -10,9 +10,7 @@
 @mixin highlight-text($bg-color: $state-warning-bg, $color: $text-color) {
 	background-color: $bg-color;
 	box-decoration-break: clone;
-
-	@include box-shadow(-0.25em 0 0 $bg-color);
-
+	box-shadow: -0.25em 0 0 $bg-color;
 	color: $color;
 	display: inline;
 	line-height: normal;
