@@ -195,7 +195,7 @@ label {
 	}
 }
 
-&[disabled],
+[disabled],
 .disabled {
 	.checkbox-default1 input[type='checkbox'],
 	input[type='checkbox'] {
@@ -284,7 +284,7 @@ label {
 	}
 }
 
-&[disabled],
+[disabled],
 .disabled {
 	.radio-default1 input[type='radio'],
 	input[type='radio'] {
@@ -365,7 +365,7 @@ label {
 	}
 }
 
-&[disabled],
+[disabled],
 .disabled {
 	.checkbox-default input[type='checkbox'],
 	.radio-default input[type='radio'],
@@ -400,7 +400,7 @@ label {
 				font-size: 7px;
 				height: 100%;
 				line-height: $checkbox-size;
-				width: 100%;
+				idth: 100%;
 			}
 		}
 
