@@ -1,5 +1,5 @@
 module.exports = function(gulp, plugins, _, config) {
-	var LEXICON_IMPORT = '\n\n@import "../lexicon/variables";';
+	var LEXICON_IMPORT = '\n\n@import "../lexicon-base/variables";';
 
 	var patchBootstrap = function(content) {
 		if (content.indexOf(LEXICON_IMPORT) === -1) {

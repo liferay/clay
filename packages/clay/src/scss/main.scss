@@ -7,8 +7,8 @@ $icon-font-path: "../fonts/";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
-@import "lexicon/variables";
-@import "lexicon/mixins";
+@import "lexicon-base/variables";
+@import "lexicon-base/mixins";
 
 @import "atlas-theme/variables";
 @import "atlas-theme/mixins";
