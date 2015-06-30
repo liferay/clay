@@ -3121,6 +3121,36 @@ section.row {
   margin-top: 10px;
 }
 
+body.fixed {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.uxgl-fullscreen-fixed {
+  background-color: #F5F8FA;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.uxgl-fullscreen-fixed.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.uxgl-fullscreen-fixed.row > .col-md-12 {
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .uxgl-breadcrumbs .breadcrumb {
   margin-bottom: 5px;
 }

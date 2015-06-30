@@ -12248,6 +12248,7 @@ figcaption,
 }
 
 .sidebar-body {
+  -webkit-overflow-scrolling: touch;
   font-size: 14px;
   overflow: auto;
   padding: 24px;
@@ -12424,12 +12425,12 @@ figcaption,
   padding-bottom: 20px;
 }
 
-.sidenav-fixed.sidenav-right .sidenav-menu-slider {
+.sidenav-fixed.sidenav-right > .sidenav-menu-slider {
   left: auto;
   right: 0;
 }
 
-.sidenav-fixed .sidenav-menu-slider {
+.sidenav-fixed > .sidenav-menu-slider {
   bottom: 0;
   left: 0;
   position: fixed;
@@ -12462,6 +12463,12 @@ figcaption,
 .sidenav-menu-slider {
   overflow: visible;
   position: absolute;
+  z-index: 10;
+}
+
+.sidenav-container.sidenav-right .sidenav-content {
+  left: auto;
+  right: 0;
 }
 
 .sidenav-container.sidenav-right .sidenav-menu {
@@ -12470,6 +12477,14 @@ figcaption,
 
 .sidenav-container.sidenav-right .sidenav-menu-slider {
   right: 0;
+}
+
+.sidenav-fixed.sidenav-container {
+  overflow: hidden;
+}
+
+.sidenav-fixed.sidenav-container.closed {
+  overflow: visible;
 }
 
 .sidenav-transition .sidenav-content {
