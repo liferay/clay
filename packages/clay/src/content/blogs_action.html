@@ -4,26 +4,7 @@ section: Example Pages
 ---
 
 <style>
-#blogActions.fixed {
-	background-color: #F5F8FA;
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 10;
-}
 
-#blogActions.fixed.row {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-#blogActions.fixed.row > .col-md-12 {
-	padding-left: 0;
-	padding-right: 0;
-}
 
 @media screen and (max-width: 767px) {
 	.tabular-list-group .list-group-item .list-group-item-content:first-child,
@@ -648,16 +629,18 @@ section: Example Pages
 	$('#blogActionsSidenav').sideNavigation({
 		gutter: 0,
 		toggler: '#blogActionsToggler',
-		type: 'fixed-mobile',
-		width: 240
+		typeMobile: 'fixed',
+		type: 'fixed-push',
+		width: 320
 	});
 
 	$('.collapse-basic-search').collapsibleSearch();
 
 	$('#fullscreenBtn').on('click', function(event) {
-		var blogActions = $('#blogActions');
 		event.preventDefault();
-		blogActions.toggleClass('fixed');
+
+		$('#blogActions').toggleClass('uxgl-fullscreen-fixed');
+		$('body').toggleClass('fixed');
 	});
 
 	$('[data-toggle="tooltip"]').tooltip();
