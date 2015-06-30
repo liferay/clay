@@ -1,12 +1,12 @@
 .sidenav-fixed {
 	&.sidenav-right {
-		.sidenav-menu-slider {
+		> .sidenav-menu-slider {
 			left: auto;
 			right: 0;
 		}
 	}
 
-	.sidenav-menu-slider {
+	> .sidenav-menu-slider {
 		bottom: 0;
 		left: 0;
 		position: fixed;
@@ -42,15 +42,29 @@
 .sidenav-menu-slider {
 	overflow: visible;
 	position: absolute;
+	z-index: 10;
 }
 
 .sidenav-container.sidenav-right {
+	.sidenav-content {
+		left: auto;
+		right: 0;
+	}
+
 	.sidenav-menu {
 		right: 0;
 	}
 
 	.sidenav-menu-slider {
 		right: 0;
+	}
+}
+
+.sidenav-fixed.sidenav-container {
+	overflow: hidden;
+
+	&.closed {
+		overflow: visible;
 	}
 }
 

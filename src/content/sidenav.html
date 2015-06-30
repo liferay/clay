@@ -62,12 +62,6 @@ section: Components (JS)
 	</div>
 </div>
 
-<script>
-	$('#mySidenavContainerId').sideNavigation({
-		toggler: '#mySidenavToggleId'
-	});
-</script>
-
 <div class="uxgl-toggle-code">
   <a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
 </div>
@@ -119,13 +113,6 @@ section: Components (JS)
 		<div class="col-md-12">... Your Main Content ...</div>
 	</div>
 </div>
-
-<script>
-	$('#mySidenavContainerId1').sideNavigation({
-		position: 'right',
-		toggler: '#mySidenavToggleId1'
-	});
-</script>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
@@ -277,6 +264,15 @@ section: Components (JS)
 </script>```</code></pre>
 
 <script>
+	$('#mySidenavContainerId').sideNavigation({
+		toggler: '#mySidenavToggleId'
+	});
+
+	$('#mySidenavContainerId1').sideNavigation({
+		position: 'right',
+		toggler: '#mySidenavToggleId1'
+	});
+
 	$('.uxgl-sidenav-demo').sideNavigation({
 		position: 'left',
 		width: '300px'
