@@ -5,7 +5,7 @@ module.exports = function(gulp, plugins, _, config) {
 		'build:watch',
 		function(done) {
 			gulp.watch(
-				[config.SRC_GLOB, '!src/scss/bootstrap/_variables.scss'],
+				[config.SRC_GLOB, '!src/scss/bootstrap/_variables.scss', 'templates/**/*'],
 				['build']
 			);
 		}
