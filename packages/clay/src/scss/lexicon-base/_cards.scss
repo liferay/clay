@@ -98,6 +98,10 @@
 	}
 }
 
+.card-col-field {
+	width: 1%;
+}
+
 @for $i from 1 through $grid-columns {
 	.card-col-#{$i} {
 		width: percentage(($i / $grid-columns));
