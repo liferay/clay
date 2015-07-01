@@ -1,0 +1,45 @@
+%aspect-ratio {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+	img {
+		bottom: 0;
+		position: absolute;
+
+		&.align-top {
+			bottom: auto;
+			top: 0;
+		}
+	}
+}
+
+.aspect-ratio-1-to-1 {
+	@extend %aspect-ratio;
+
+	padding-bottom: percentage(1);
+}
+
+.aspect-ratio-3-to-2 {
+	@extend %aspect-ratio;
+
+	padding-bottom: percentage(2/3);
+}
+
+.aspect-ratio-4-to-3 {
+	@extend %aspect-ratio;
+
+	padding-bottom: percentage(3/4);
+}
+
+.aspect-ratio-8-to-5 {
+	@extend %aspect-ratio;
+
+	padding-bottom: percentage(5/8);
+}
+
+.aspect-ratio-16-to-9 {
+	@extend %aspect-ratio;
+
+	padding-bottom: percentage(9/16);
+}
