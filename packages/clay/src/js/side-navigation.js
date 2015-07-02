@@ -1,4 +1,10 @@
 +function($) {
+	var doc = $(document);
+
+	var toInt = function(str) {
+		return parseInt(str, 10) || 0;
+	};
+
 	var SideNavigation = function(element, options) {
 		this.init(element, options);
 	};
@@ -7,21 +13,24 @@
 		init: function(element, options) {
 			var instance = this;
 
-			instance.options = $.extend({}, $.fn.sideNavigation.defaults, options);
-			instance.options.selector = element.selector;
-			instance.options.transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
-			instance.options.widthOriginal = instance.options.width;
+			options = $.extend({}, $.fn.sideNavigation.defaults, options);
+			options.selector = element.selector;
+			options.transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+			options.widthOriginal = options.width;
 
 			// find toggler
-			if (!element.find(instance.options.toggler).length) {
-				element.toggler = element.closest('body').find(instance.options.toggler).first();
+
+			var toggler = element.find(options.toggler);
+
+			if (!toggler.length) {
+				toggler = element.closest('body').find(options.toggler).first();
 			}
-			else {
-				element.toggler = element.find(instance.options.toggler);
-			}
+
+			element.toggler = toggler;
+
+			instance.options = options;
 
 			instance._bindUI(element);
-
 			instance._renderUI(element);
 		},
 
@@ -29,13 +38,9 @@
 			var instance = this;
 
 			instance._onClickTrigger(element);
-
 			instance._onClickSidenavClose(element);
-
 			instance._onWindowResize(element);
-
 			instance._onScreenMobile(element);
-
 			instance._onScreenDesktop(element);
 		},
 
@@ -77,7 +82,7 @@
 		_onScreenDesktop: function(element) {
 			var instance = this;
 
-			$(document).on('isDesktop', function(event) {
+			doc.on('isDesktop', function(event) {
 				if ((instance.options.type === 'fixed') || (instance.options.type === 'fixed-push')) {
 					element.addClass('sidenav-fixed');
 				}
@@ -90,11 +95,13 @@
 		_onScreenMobile: function(element) {
 			var instance = this;
 
-			$(document).on('isMobile', function(event) {
-				if ((instance.options.typeMobile === 'fixed') || (instance.options.typeMobile === 'fixed-push')) {
+			var typeMobile = typeMobile;
+
+			doc.on('isMobile', function(event) {
+				if (typeMobile === 'fixed' || typeMobile === 'fixed-push') {
 					element.addClass('sidenav-fixed');
 				}
-				else if (instance.options.typeMobile === 'relative') {
+				else if (typeMobile === 'relative') {
 					element.removeClass('sidenav-fixed');
 				}
 			});
@@ -103,7 +110,9 @@
 		_onSidenavTransitionEnd: function(element) {
 			var instance = this;
 
-			element.on(instance.options.transitions, function(event) {
+			var transitions = instance.options.transitions;
+
+			element.on(transitions, function(event) {
 				var $this = $(this);
 				var menu = $this.find('.sidenav-menu').first();
 
@@ -117,28 +126,29 @@
 					instance._focusElement(menu);
 				}
 
-				$this.off(instance.options.transitions);
+				$this.off(transitions);
 			});
 		},
 
 		_onWindowResize: function(element) {
 			var instance = this;
-			var doc = $(document);
 
 			var winWidth;
 
 			instance._setScreenSize();
 
+			var breakpoint = instance.options.breakpoint;
+
 			$(window).resize(function(event) {
 				winWidth = window.innerWidth; // https://github.com/jquery/jquery/issues/1729
 
-				if ((winWidth < instance.options.breakpoint) && instance.isDesktop) {
+				if (winWidth < breakpoint && instance.isDesktop) {
 					instance.isMobile = true;
 					instance.isDesktop = false;
 					doc.trigger('isMobile', element);
 				}
 
-				if ((winWidth >= instance.options.breakpoint) && instance.isMobile) {
+				if (winWidth >= breakpoint && instance.isMobile) {
 					instance.isMobile = false;
 					instance.isDesktop = true;
 					doc.trigger('isDesktop', element);
@@ -161,14 +171,16 @@
 
 			instance._resizeSidenav();
 
+			var width = instance.options.width;
+
 			element.each(function(index, node) {
 				var node = $(node);
 				var menu = node.find('.sidenav-menu').first();
 
 				if (node.hasClass('closed') && node.hasClass('sidenav-right')) {
 					menu.css({
-						right: instance.options.width,
-						width: instance.options.width
+						right: width,
+						width: width
 					});
 				}
 
@@ -182,21 +194,21 @@
 		_renderUI: function(element) {
 			var instance = this;
 
-			if (instance.options.position === 'right') {
+			var options = instance.options;
+			var mobile = instance.isMobile;
+
+			var type = mobile ? options.typeMobile: options.type;
+
+			if (options.position === 'right') {
 				element.addClass('sidenav-right');
 			}
 
-			if (instance.isMobile) { // mobile
-				if ((instance.options.typeMobile === 'fixed') || instance.options.typeMobile ==='fixed-push') {
-					element.addClass('sidenav-fixed');
-				}
-
-				element.addClass('closed');
+			if (type === 'fixed' || type ==='fixed-push') {
+				element.addClass('sidenav-fixed');
 			}
-			else { // desktop
-				if ((instance.options.type === 'fixed') || instance.options.type ==='fixed-push') {
-					element.addClass('sidenav-fixed');
-				}
+
+			if (mobile) {
+				element.addClass('closed');
 			}
 
 			instance._renderNav(element);
@@ -205,75 +217,79 @@
 		_resizeSidenav: function() {
 			var instance = this;
 
-			if (window.innerWidth < instance.options.widthOriginal + 40) {
-				instance.options.width = window.innerWidth - 40;
+			var options = instance.options;
+			var widthOriginal = options.widthOriginal;
+
+			var winWidth = window.innerWidth;
+			var width = widthOriginal;
+
+			if (winWidth < widthOriginal + 40) {
+				width = winWidth - 40;
 			}
-			else {
-				instance.options.width = instance.options.widthOriginal;
-			}
+
+			options.width = width;
 		},
 
 		_setScreenSize: function() {
 			var instance = this;
+
 			var winWidth = window.innerWidth;
 
-			if (winWidth < instance.options.breakpoint) {
-				instance.isMobile = true;
-				instance.isDesktop = false;
-			}
-			else if (winWidth >= instance.options.breakpoint) {
-				instance.isMobile = false;
-				instance.isDesktop = true;
-			}
+			var breakpoint = instance.options.breakpoint;
+
+			var mobile = winWidth < breakpoint;
+
+			instance.isMobile = mobile;
+			instance.isDesktop = !mobile;
 		},
 
 		removeMinHeight: function(element) {
 			var instance = this;
 
-			var content = element.find(instance.options.content).first();
-			var navigation = element.find(instance.options.navigation).first();
-			var sidenavMenu = element.find('.sidenav-menu').first();
+			var options = instance.options;
 
-			content.css('min-height', '');
-			navigation.css('min-height', '');
-			sidenavMenu.css('min-height', '');
+			var content = element.find(options.content).first();
+			var navigation = element.find(options.navigation).first();
+
+			var menu = element.find('.sidenav-menu').first();
+
+			var els = content.add(navigation).add(menu);
+
+			els.css('min-height', '');
 		},
 
 		removeWidth: function(element) { // rename to close sidenav or something
 			var instance = this;
-			var content = element.find(instance.options.content).first();
-			var menu = element.find('.sidenav-menu').first();
-			var navigation = element.find(instance.options.navigation).first();
+
+			var options = instance.options;
+
+			var content = element.find(options.content).first();
+			var navigation = element.find(options.navigation).first();
+
+			var mobile = instance.isMobile;
 
 			if (element.hasClass('sidenav-right')) {
-				content.css('left', '');
-				content.css('padding-right', '');
+				content.css({
+					left: '',
+					paddingRight: ''
+				});
 
-				if (instance.isMobile) { // mobile
-					if (instance.options.typeMobile === 'fixed-push') {
-						menu.css({
-							right: instance.options.width
-						});
-					}
-					else {
-						content.css({
-							right: ''
-						});
-					}
+				var menu = element.find('.sidenav-menu').first();
+
+				var el = menu;
+				var val = options.width;
+
+				if (mobile && options.typeMobile !== 'fixed-push') {
+					el = content;
+					val = '';
 				}
-				else { // desktop
-					menu.css({
-						right: instance.options.width
-					});
-				}
+
+				el.css('right', val);
 			}
 			else {
-				if (instance.isMobile) {
-					content.css('left', '');
-				}
-				else {
-					content.css('padding-left', '');
-				}
+				var resetCssProp = mobile ? 'left' : 'padding-left';
+
+				content.css(resetCssProp, '');
 			}
 
 			navigation.css('width', '');
@@ -281,169 +297,160 @@
 
 		setEqualHeight: function(container) {
 			var instance = this;
-			var containerClone;
-			var containerCloneContent;
-			var containerCloneNavigation;
-			var element1;
-			var element2;
-			var tallest;
 
-			container.each(function(index, node) {
-				node = $(node);
-				containerClone = node.clone();
+			var options = instance.options;
 
-				containerClone.removeClass('closed').css({
-					opacity: 0,
-					position: 'absolute',
-					width: node.outerWidth()
+			var content = options.content;
+			var navigation = options.navigation;
+
+			var gutter = toInt(options.gutter);
+			var width = toInt(options.width);
+
+			var type = instance.isMobile ? options.typeMobile : options.type;
+
+			var notFixed = type !== 'fixed' && type !== 'fixed-push';
+
+			if (notFixed) {
+				container.each(function(index, node) {
+					node = $(node);
+
+					var containerClone = node.clone();
+
+					containerClone.removeClass('closed').css({
+						opacity: 0,
+						position: 'absolute',
+						width: node.outerWidth()
+					});
+
+					var containerCloneContent = containerClone.find(content).first();
+					var containerCloneNavigation = containerClone.find(navigation).first();
+
+					containerCloneNavigation.css('width', options.width);
+
+					if (instance.isDesktop) {
+						var paddingProp = containerClone.hasClass('sidenav-right') ? 'padding-right' : 'padding-left';
+
+						containerCloneContent.css(paddingProp, width + gutter);
+					}
+
+					containerClone.insertBefore(node);
+
+					var tallest = Math.max(containerCloneNavigation.outerHeight(), containerCloneContent.outerHeight());
+
+					containerClone.remove();
+
+					node.find(content).first().css('min-height', tallest);
+					node.find(navigation).first().css('min-height', tallest);
+					node.find('.sidenav-menu').first().css('min-height', tallest);
 				});
-
-				containerCloneContent = containerClone.find(instance.options.content).first();
-				containerCloneNavigation = containerClone.find(instance.options.navigation).first();
-
-				containerCloneNavigation.css('width', instance.options.width);
-
-				if (instance.isDesktop) {
-					if (containerClone.hasClass('sidenav-right')) {
-						containerCloneContent.css('padding-right', parseInt(instance.options.width) + parseInt(instance.options.gutter));
-					}
-					else {
-						containerCloneContent.css('padding-left', parseInt(instance.options.width) + parseInt(instance.options.gutter));
-					}
-				}
-
-				containerClone.insertBefore(node);
-
-				element1 = containerCloneNavigation;
-				element2 = containerCloneContent;
-				tallest = Math.max(element1.outerHeight(), element2.outerHeight());
-
-				containerClone.remove();
-
-				if (instance.isMobile) {
-					if (!(instance.options.typeMobile === 'fixed') && !(instance.options.typeMobile === 'fixed-push')) {
-						node.find(instance.options.content).first().css('min-height', tallest);
-						node.find(instance.options.navigation).first().css('min-height', tallest);
-						node.find('.sidenav-menu').first().css('min-height', tallest);
-					}
-				}
-				else {
-					if (!(instance.options.type === 'fixed') && !(instance.options.type === 'fixed-push')) {
-						node.find(instance.options.content).first().css('min-height', tallest);
-						node.find(instance.options.navigation).first().css('min-height', tallest);
-						node.find('.sidenav-menu').first().css('min-height', tallest);
-					}
-				}
-			});
+			}
 		},
 
-		setSidenavLeftWidth: function(element) {
+		setSidenavLeftWidth: function(element, type, offset, width) {
 			var instance = this;
 
-			var content = element.find(instance.options.content).first();
-			var menu = element.find('.sidenav-menu').first();
-			var navigation = element.find(instance.options.navigation).first();
+			// var options = instance.options;
 
-			if (instance.isMobile) { // mobile
-				if (instance.options.typeMobile === 'fixed') {
-					content.css({
-						left: '',
-						paddingLeft: ''
-					});
+			// var mobile = instance.isMobile;
+
+			// var type = mobile ? options.typeMobile : options.type;
+
+			// var content = element.find(options.content).first();
+			// var navigation = element.find(options.navigation).first();
+
+			// var menu = element.find('.sidenav-menu').first();
+
+			// var width = options.width;
+
+			// var offset = toInt(width) + toInt(options.gutter);
+
+			var contentCss = {};
+
+			// if (mobile) {
+			if (instance.isMobile) {
+				var left = '';
+
+				if (type === 'fixed-push') {
+					left = width;
 				}
-				else if (instance.options.typeMobile === 'fixed-push') {
-					content.css({
-						left: instance.options.width,
-						paddingLeft: ''
-					});
+				else if (type !== 'fixed') {
+					left = offset;
 				}
-				else {
-					content.css({
-						left: parseInt(instance.options.width) + parseInt(instance.options.gutter),
-						paddingLeft: ''
-					});
+
+				contentCss.paddingLeft = '';
+				contentCss.left = left;
+			}
+			else {
+				contentCss.paddingLeft = offset;
+
+				if (type === 'fixed-push') {
+					contentCss.left = '';
 				}
 			}
-			else { // desktop
-				if (instance.options.type === 'fixed-push') {
-					content.css({
-						left: '',
-						paddingLeft: parseInt(instance.options.width) + parseInt(instance.options.gutter)
-					});
-				}
-				else {
-					content.css({
-						paddingLeft: parseInt(instance.options.width) + parseInt(instance.options.gutter)
-					});
-				}
-			}
 
-			navigation.css('width', instance.options.width);
-			menu.css('width', instance.options.width);
+			return contentCss;
+
+			// content.css(contentCss);
+
+			// navigation.css('width', width);
+			// menu.css('width', width);
 		},
 
-		setSidenavRightWidth: function(element) {
+		setSidenavRightWidth: function(element, type, offset, width) {
 			var instance = this;
 
-			var content = element.find(instance.options.content).first();
-			var menu = element.find('.sidenav-menu').first();
-			var navigation = element.find(instance.options.navigation).first();
+			// var options = instance.options;
 
-			if (instance.isMobile) { // mobile
-				if (instance.options.typeMobile === 'fixed') {
-					content.css({
-						left: '',
-						paddingRight: ''
-					});
+			// var mobile = instance.isMobile;
 
-					menu.css({
-						right: ''
-					});
-				}
-				else if (instance.options.typeMobile === 'fixed-push') {
-					menu.css({
-						right: ''
-					});
+			// var type = mobile ? options.typeMobile : options.type;
 
-					content.css({
-						left: '',
-						right: '',
-						paddingRight: instance.options.width
-					});
-				}
-				else {
-					menu.css({
-						right: ''
-					});
+			// var content = element.find(options.content).first();
+			// var navigation = element.find(options.navigation).first();
 
-					content.css({
-						right: parseInt(instance.options.width) + parseInt(instance.options.gutter)
-					});
-				}
+			// var menu = element.find('.sidenav-menu').first();
+
+			// var width = options.width;
+
+			// var offset = toInt(width) + toInt(options.gutter);
+
+			var contentCss = {};
+
+			if (type === 'fixed' || type === 'fixed-push') {
+				contentCss.left = '';
 			}
-			else { // desktop
-				if (instance.options.type === 'fixed') {
-					content.css({
-						left: '',
-						right: ''
-					});
+
+			if (type === 'fixed-push') {
+				contentCss.paddingRight = width;
+				contentCss.right = '';
+			}
+
+			if (instance.isMobile) {
+			// if (mobile) {
+				if (type === 'fixed') {
+					contentCss.paddingRight = '';
 				}
-				else if (instance.options.type === 'fixed-push') {
-					content.css({
-						left: '',
-						right: '',
-						paddingRight: instance.options.width
-					});
+				else if (type !== 'fixed-push') {
+					contentCss.right = offset;
 				}
-				else {
-					content.css({
-						paddingRight: parseInt(instance.options.width) + parseInt(instance.options.gutter)
-					});
+
+				// menu.css('right', '');
+			}
+			else {
+				if (type === 'fixed') {
+					contentCss.right = '';
+				}
+				else if (type !== 'fixed-push') {
+					contentCss.paddingRight = offset;
 				}
 			}
 
-			navigation.css('width', instance.options.width);
-			menu.css('width', instance.options.width);
+			return contentCss;
+
+			// content.css(contentCss);
+
+			// navigation.css('width', width);
+			// menu.css('width', width);
 		},
 
 		setWidth: function(element) {
@@ -451,12 +458,40 @@
 
 			instance._resizeSidenav();
 
+			var instance = this;
+
+			var options = instance.options;
+
+			var mobile = instance.isMobile;
+
+			var type = mobile ? options.typeMobile : options.type;
+
+			var content = element.find(options.content).first();
+			var navigation = element.find(options.navigation).first();
+
+			var menu = element.find('.sidenav-menu').first();
+
+			var width = options.width;
+
+			var offset = toInt(width) + toInt(options.gutter);
+
+			var contentCss;
+
 			if (element.hasClass('sidenav-right')) {
-				instance.setSidenavRightWidth(element);
+				contentCss = instance.setSidenavRightWidth(element, type, offset, width);
+
+				if (mobile) {
+					menu.css('right', '');
+				}
 			}
 			else {
-				instance.setSidenavLeftWidth(element);
+				contentCss = instance.setSidenavLeftWidth(element, type, offset, width);
 			}
+
+			content.css(contentCss);
+
+			navigation.css('width', width);
+			menu.css('width', width);
 		},
 
 		_focusElement: function(element) {
@@ -467,48 +502,64 @@
 		toggleNavigation: function(container) {
 			var instance = this;
 
-			var sidenavMenu = container.find('.sidenav-menu').first();
+			var menu = container.find('.sidenav-menu').first();
 
-			if (container.hasClass('closed')) {
+			var width = instance.options.width;
+
+			var closed = container.hasClass('closed');
+
+			var widthMethod = closed ? 'setWidth' : 'removeWidth';
+
+			if (closed) {
 				instance.setEqualHeight(container);
 
-				sidenavMenu.css('width', instance.options.width);
-
-				instance._onSidenavTransitionEnd(container);
-
-				setTimeout(function() {
-					container.removeClass('closed').addClass('sidenav-transition');
-
-					if (instance.isDesktop) {
-						sidenavMenu.css('right', '');
-					}
-
-					instance.setWidth(container);
-				}, 0);
+				menu.css('width', width);
 			}
-			else {
-				instance._onSidenavTransitionEnd(container);
 
-				setTimeout(function() {
-					if (instance.isMobile && container.hasClass('sidenav-right')) {
-						sidenavMenu.css('right', instance.options.width);
-					}
+			instance._onSidenavTransitionEnd(container);
 
-					container.addClass('closed').addClass('sidenav-transition');
+			setTimeout(function() {
+				container.toggleClass('closed', !closed).addClass('sidenav-transition');
 
-					instance.removeWidth(container);
-				}, 0);
-			}
+				if (closed && instance.isDesktop) {
+					menu.css('right', '');
+				}
+				else if (!closed && instance.isMobile && container.hasClass('sidenav-right')) {
+					menu.css('right', width);
+				}
+
+				instance[widthMethod](container);
+			}, 0);
 		}
 	};
 
-	$.fn.sideNavigation = function(options) {
-		new SideNavigation(this, options);
+	var old = $.fn.sideNavigation;
+
+	var Plugin = function(options) {
+		return this.each(
+			function () {
+				var $this = $(this);
+
+				var data = $this.data('lexicon.sidenav');
+
+				if (!data) {
+					$this.data('lexicon.sidenav', (data = new SideNavigation($this, typeof options === 'object' ? options : null)));
+				}
+
+				if (typeof option == 'string') {
+					data[option].call($this);
+				}
+			}
+		);
+	};
+
+	Plugin.noConflict = function() {
+		$.fn.sideNavigation = old;
 
 		return this;
-	}
+	};
 
-	$.fn.sideNavigation.defaults = {
+	Plugin.defaults = {
 		breakpoint: 768, // desktop media query breakpoint
 		content: '.sidenav-content', // class or id of content
 		gutter: '15px', // space between sidenav-slider and sidenav-content
@@ -520,5 +571,7 @@
 		width: '225px' // width of side navigation
 	};
 
-	$.fn.sideNavigation.Constructor = SideNavigation;
+	Plugin.Constructor = SideNavigation;
+
+	$.fn.sideNavigation = Plugin;
 }(jQuery);
