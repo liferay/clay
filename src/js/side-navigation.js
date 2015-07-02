@@ -349,24 +349,8 @@
 		setSidenavLeftWidth: function(element, type, offset, width) {
 			var instance = this;
 
-			// var options = instance.options;
-
-			// var mobile = instance.isMobile;
-
-			// var type = mobile ? options.typeMobile : options.type;
-
-			// var content = element.find(options.content).first();
-			// var navigation = element.find(options.navigation).first();
-
-			// var menu = element.find('.sidenav-menu').first();
-
-			// var width = options.width;
-
-			// var offset = toInt(width) + toInt(options.gutter);
-
 			var contentCss = {};
 
-			// if (mobile) {
 			if (instance.isMobile) {
 				var left = '';
 
@@ -389,30 +373,10 @@
 			}
 
 			return contentCss;
-
-			// content.css(contentCss);
-
-			// navigation.css('width', width);
-			// menu.css('width', width);
 		},
 
 		setSidenavRightWidth: function(element, type, offset, width) {
 			var instance = this;
-
-			// var options = instance.options;
-
-			// var mobile = instance.isMobile;
-
-			// var type = mobile ? options.typeMobile : options.type;
-
-			// var content = element.find(options.content).first();
-			// var navigation = element.find(options.navigation).first();
-
-			// var menu = element.find('.sidenav-menu').first();
-
-			// var width = options.width;
-
-			// var offset = toInt(width) + toInt(options.gutter);
 
 			var contentCss = {};
 
@@ -426,15 +390,12 @@
 			}
 
 			if (instance.isMobile) {
-			// if (mobile) {
 				if (type === 'fixed') {
 					contentCss.paddingRight = '';
 				}
 				else if (type !== 'fixed-push') {
 					contentCss.right = offset;
 				}
-
-				// menu.css('right', '');
 			}
 			else {
 				if (type === 'fixed') {
@@ -446,11 +407,6 @@
 			}
 
 			return contentCss;
-
-			// content.css(contentCss);
-
-			// navigation.css('width', width);
-			// menu.css('width', width);
 		},
 
 		setWidth: function(element) {
@@ -475,17 +431,12 @@
 
 			var offset = toInt(width) + toInt(options.gutter);
 
-			var contentCss;
+			var widthMethod = element.hasClass('sidenav-right') ? 'setSidenavRightWidth' : 'setSidenavLeftWidth';
 
-			if (element.hasClass('sidenav-right')) {
-				contentCss = instance.setSidenavRightWidth(element, type, offset, width);
+			var contentCss = instance[widthMethod](element, type, offset, width);
 
-				if (mobile) {
-					menu.css('right', '');
-				}
-			}
-			else {
-				contentCss = instance.setSidenavLeftWidth(element, type, offset, width);
+			if (mobile) {
+				menu.css('right', '');
 			}
 
 			content.css(contentCss);
