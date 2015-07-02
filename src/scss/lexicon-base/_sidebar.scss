@@ -57,6 +57,19 @@
 
 .sidebar-panel {
 	height: 155px;
+	overflow: hidden;
+	position: relative;
+
+	.badge-monospaced {
+		border-radius: 0;
+		bottom: $grid-gutter-width / 2;
+		font-size: $font-size-small;
+		left: $grid-gutter-width / 2;
+
+		@include monospace(32px);
+
+		position: absolute;
+	}
 }
 
 .sidebar-transition {
