@@ -333,7 +333,7 @@
 		_onScreenMobile: function(element) {
 			var instance = this;
 
-			var typeMobile = typeMobile;
+			var typeMobile = instance.options.typeMobile;
 
 			doc.on('mobile.lexicon.sidenav', function(event) {
 				if (typeMobile === 'fixed' || typeMobile === 'fixed-push') {
