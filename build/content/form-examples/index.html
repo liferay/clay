@@ -6,6 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
+	<style>
+		#headerTopBar .uxgl-site-config {
+			position: absolute;
+			right: 5px;
+			top: 3px;
+		}
+
+		#headerTopBar .uxgl-site-config .dropdown-menu {
+			width: 240px;
+		}
+
+		#headerTopBar .uxgl-site-config .dropdown-menu a {
+		 	color: initial;
+		}
+	</style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -27,6 +42,33 @@
 
 				<h4 class="title"><a href="../..">Lexicon</a></h4>
 			</div>
+
+			<div class="dropdown uxgl-site-config" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li class="dropdown-header">Site Settings</li>
+		<li>
+			<form>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleAtlas" type="checkbox">
+						Show Atlas Theme
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input checked="checked" id="toggleSiteCss" type="checkbox">
+						Show Site CSS
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
+				</div>
+			</form>
+		</li>
+	</ul>
+</div>
 		</header>
 
 		<section class="closed container sidenav-container">
@@ -533,6 +575,7 @@ collapse
 	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="../../js/site/toggle_css.js"></script>
 
 	<script>
 		$(function() {

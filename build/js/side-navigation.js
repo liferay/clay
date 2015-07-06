@@ -1,4 +1,10 @@
 +function($) {
+	var doc = $(document);
+
+	var toInt = function(str) {
+		return parseInt(str, 10) || 0;
+	};
+
 	var SideNavigation = function(element, options) {
 		this.init(element, options);
 	};
@@ -7,36 +13,273 @@
 		init: function(element, options) {
 			var instance = this;
 
-			instance.options = $.extend({}, $.fn.sideNavigation.defaults, options);
-			instance.options.selector = element.selector;
-			instance.options.transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
-			instance.options.widthOriginal = instance.options.width;
+			options = $.extend({}, $.fn.sideNavigation.defaults, options);
+			options.selector = element.selector;
+			options.transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+			options.widthOriginal = options.width;
 
 			// find toggler
-			if (!element.find(instance.options.toggler).length) {
-				element.toggler = element.closest('body').find(instance.options.toggler).first();
+
+			var toggler = element.find(options.toggler);
+
+			if (!toggler.length) {
+				toggler = element.closest('body').find(options.toggler).first();
 			}
-			else {
-				element.toggler = element.find(instance.options.toggler);
-			}
+
+			element.toggler = toggler;
+
+			instance.options = options;
 
 			instance._bindUI(element);
-
 			instance._renderUI(element);
+		},
+
+		getSidenavLeftWidth: function(element, type, offset, width) {
+			var instance = this;
+
+			var contentCss = {};
+
+			if (instance.mobile) {
+				var left = '';
+
+				if (type === 'fixed-push') {
+					left = width;
+				}
+				else if (type !== 'fixed') {
+					left = offset;
+				}
+
+				contentCss.paddingLeft = '';
+				contentCss.left = left;
+			}
+			else {
+				contentCss.paddingLeft = offset;
+
+				if (type === 'fixed-push') {
+					contentCss.left = '';
+				}
+			}
+
+			return contentCss;
+		},
+
+		getSidenavRightWidth: function(element, type, offset, width) {
+			var instance = this;
+
+			var contentCss = {};
+
+			if (type === 'fixed' || type === 'fixed-push') {
+				contentCss.left = '';
+			}
+
+			if (type === 'fixed-push') {
+				contentCss.paddingRight = width;
+				contentCss.right = '';
+			}
+
+			if (instance.mobile) {
+				if (type === 'fixed') {
+					contentCss.paddingRight = '';
+				}
+				else if (type !== 'fixed-push') {
+					contentCss.right = offset;
+				}
+			}
+			else {
+				if (type === 'fixed') {
+					contentCss.right = '';
+				}
+				else if (type !== 'fixed-push') {
+					contentCss.paddingRight = offset;
+				}
+			}
+
+			return contentCss;
+		},
+
+		hideSidenav: function(element) {
+			var instance = this;
+
+			var options = instance.options;
+
+			var content = element.find(options.content).first();
+			var navigation = element.find(options.navigation).first();
+
+			var mobile = instance.mobile;
+
+			if (element.hasClass('sidenav-right')) {
+				content.css({
+					left: '',
+					paddingRight: ''
+				});
+
+				var menu = element.find('.sidenav-menu').first();
+
+				var el = menu;
+				var val = options.width;
+
+				if (mobile && options.typeMobile !== 'fixed-push') {
+					el = content;
+					val = '';
+				}
+
+				el.css('right', val);
+			}
+			else {
+				var resetCssProp = mobile ? 'left' : 'padding-left';
+
+				content.css(resetCssProp, '');
+			}
+
+			navigation.css('width', '');
+		},
+
+		removeMinHeight: function(element) {
+			var instance = this;
+
+			var options = instance.options;
+
+			var content = element.find(options.content).first();
+			var navigation = element.find(options.navigation).first();
+
+			var menu = element.find('.sidenav-menu').first();
+
+			var els = content.add(navigation).add(menu);
+
+			els.css('min-height', '');
+		},
+
+		setEqualHeight: function(container) {
+			var instance = this;
+
+			var options = instance.options;
+
+			var content = options.content;
+			var navigation = options.navigation;
+
+			var gutter = toInt(options.gutter);
+			var width = toInt(options.width);
+
+			var type = instance.mobile ? options.typeMobile : options.type;
+
+			var notFixed = type !== 'fixed' && type !== 'fixed-push';
+
+			if (notFixed) {
+				container.each(function(index, node) {
+					node = $(node);
+
+					var containerClone = node.clone();
+
+					containerClone.removeClass('closed').css({
+						opacity: 0,
+						position: 'absolute',
+						width: node.outerWidth()
+					});
+
+					var containerCloneContent = containerClone.find(content).first();
+					var containerCloneNavigation = containerClone.find(navigation).first();
+
+					containerCloneNavigation.css('width', options.width);
+
+					if (instance.desktop) {
+						var paddingProp = containerClone.hasClass('sidenav-right') ? 'padding-right' : 'padding-left';
+
+						containerCloneContent.css(paddingProp, width + gutter);
+					}
+
+					containerClone.insertBefore(node);
+
+					var tallest = Math.max(containerCloneNavigation.outerHeight(), containerCloneContent.outerHeight());
+
+					containerClone.remove();
+
+					node.find(content).first().css('min-height', tallest);
+					node.find(navigation).first().css('min-height', tallest);
+					node.find('.sidenav-menu').first().css('min-height', tallest);
+				});
+			}
+		},
+
+		showSidenav: function(element) {
+			var instance = this;
+
+			instance._resizeSidenav();
+
+			var options = instance.options;
+
+			var mobile = instance.mobile;
+
+			var type = mobile ? options.typeMobile : options.type;
+
+			var content = element.find(options.content).first();
+			var navigation = element.find(options.navigation).first();
+
+			var menu = element.find('.sidenav-menu').first();
+
+			var width = options.width;
+
+			var offset = toInt(width) + toInt(options.gutter);
+
+			var widthMethod = element.hasClass('sidenav-right') ? 'getSidenavRightWidth' : 'getSidenavLeftWidth';
+
+			var contentCss = instance[widthMethod](element, type, offset, width);
+
+			if (mobile) {
+				menu.css('right', '');
+			}
+
+			content.css(contentCss);
+
+			navigation.css('width', width);
+			menu.css('width', width);
+		},
+
+		toggleNavigation: function(container) {
+			var instance = this;
+
+			var menu = container.find('.sidenav-menu').first();
+
+			var width = instance.options.width;
+
+			var closed = container.hasClass('closed');
+
+			var widthMethod = closed ? 'showSidenav' : 'hideSidenav';
+
+			if (closed) {
+				instance.setEqualHeight(container);
+
+				menu.css('width', width);
+			}
+
+			instance._onSidenavTransitionEnd(container);
+
+			setTimeout(function() {
+				container.toggleClass('closed', !closed).addClass('sidenav-transition');
+
+				if (closed && instance.desktop) {
+					menu.css('right', '');
+				}
+				else if (!closed && instance.mobile && container.hasClass('sidenav-right')) {
+					menu.css('right', width);
+				}
+
+				instance[widthMethod](container);
+			}, 0);
 		},
 
 		_bindUI: function(element) {
 			var instance = this;
 
 			instance._onClickTrigger(element);
-
 			instance._onClickSidenavClose(element);
-
 			instance._onWindowResize(element);
-
 			instance._onScreenMobile(element);
-
 			instance._onScreenDesktop(element);
+		},
+
+		_focusElement: function(element) {
+			// ios 8 fixed element disappears when trying to scroll
+			element.focus();
 		},
 
 		_onClickSidenavClose: function(element) {
@@ -44,8 +287,8 @@
 
 			var closeButton = element.find('.sidenav-close').first();
 
-			closeButton.on('click', function(event) {
-				container = $(this).closest('.sidenav-container');
+			closeButton.on('click.lexicon.sidenav', function(event) {
+				var container = $(this).closest('.sidenav-container');
 
 				event.preventDefault();
 
@@ -55,13 +298,13 @@
 
 		_onClickTrigger: function(element) {
 			var instance = this;
+
+			var container = element;
 			var toggler = element.toggler;
-			var container;
 
-			container = element;
-
-			toggler.on('click', function(event) {
+			toggler.on('click.lexicon.sidenav', function(event) {
 				var $this = $(this);
+
 				var selector = $this.closest(instance.options.selector);
 
 				if (selector.length) {
@@ -77,8 +320,8 @@
 		_onScreenDesktop: function(element) {
 			var instance = this;
 
-			$(document).on('isDesktop', function(event) {
-				if ((instance.options.type === 'fixed') || (instance.options.type === 'fixed-push')) {
+			doc.on('desktop.lexicon.sidenav', function(event) {
+				if (instance.options.type === 'fixed' || instance.options.type === 'fixed-push') {
 					element.addClass('sidenav-fixed');
 				}
 				else if (instance.options.type === 'relative') {
@@ -90,11 +333,13 @@
 		_onScreenMobile: function(element) {
 			var instance = this;
 
-			$(document).on('isMobile', function(event) {
-				if ((instance.options.typeMobile === 'fixed') || (instance.options.typeMobile === 'fixed-push')) {
+			var typeMobile = typeMobile;
+
+			doc.on('mobile.lexicon.sidenav', function(event) {
+				if (typeMobile === 'fixed' || typeMobile === 'fixed-push') {
 					element.addClass('sidenav-fixed');
 				}
-				else if (instance.options.typeMobile === 'relative') {
+				else if (typeMobile === 'relative') {
 					element.removeClass('sidenav-fixed');
 				}
 			});
@@ -103,7 +348,9 @@
 		_onSidenavTransitionEnd: function(element) {
 			var instance = this;
 
-			element.on(instance.options.transitions, function(event) {
+			var transitions = instance.options.transitions;
+
+			element.on(transitions, function(event) {
 				var $this = $(this);
 				var menu = $this.find('.sidenav-menu').first();
 
@@ -113,35 +360,37 @@
 					instance.removeMinHeight($this);
 				}
 
-				if (instance.isMobile) {
+				if (instance.mobile) {
 					instance._focusElement(menu);
 				}
 
-				$this.off(instance.options.transitions);
+				$this.off(transitions);
 			});
 		},
 
 		_onWindowResize: function(element) {
 			var instance = this;
-			var doc = $(document);
 
 			var winWidth;
 
 			instance._setScreenSize();
 
-			$(window).resize(function(event) {
-				winWidth = window.innerWidth; // https://github.com/jquery/jquery/issues/1729
+			var breakpoint = toInt(instance.options.breakpoint);
 
-				if ((winWidth < instance.options.breakpoint) && instance.isDesktop) {
-					instance.isMobile = true;
-					instance.isDesktop = false;
-					doc.trigger('isMobile', element);
+			$(window).resize(function(event) {
+				// https://github.com/jquery/jquery/issues/1729
+				winWidth = window.innerWidth;
+
+				if (winWidth < breakpoint && instance.desktop) {
+					instance.mobile = true;
+					instance.desktop = false;
+					doc.trigger('mobile', element);
 				}
 
-				if ((winWidth >= instance.options.breakpoint) && instance.isMobile) {
-					instance.isMobile = false;
-					instance.isDesktop = true;
-					doc.trigger('isDesktop', element);
+				if (winWidth >= breakpoint && instance.mobile) {
+					instance.mobile = false;
+					instance.desktop = true;
+					doc.trigger('desktop', element);
 				}
 
 				element.each(function(index, node) {
@@ -150,7 +399,7 @@
 					if (!node.hasClass('closed')) {
 						instance.removeMinHeight(node);
 						instance.setEqualHeight(node);
-						instance.setWidth(node);
+						instance.showSidenav(node);
 					}
 				});
 			});
@@ -161,20 +410,23 @@
 
 			instance._resizeSidenav();
 
+			var width = instance.options.width;
+
 			element.each(function(index, node) {
-				var node = $(node);
+				node = $(node);
+
 				var menu = node.find('.sidenav-menu').first();
 
 				if (node.hasClass('closed') && node.hasClass('sidenav-right')) {
 					menu.css({
-						right: instance.options.width,
-						width: instance.options.width
+						right: width,
+						width: width
 					});
 				}
 
 				if (!node.hasClass('closed')) {
 					instance.setEqualHeight(node);
-					instance.setWidth(node);
+					instance.showSidenav(node);
 				}
 			});
 		},
@@ -182,21 +434,21 @@
 		_renderUI: function(element) {
 			var instance = this;
 
-			if (instance.options.position === 'right') {
+			var mobile = instance.mobile;
+			var options = instance.options;
+
+			var type = mobile ? options.typeMobile : options.type;
+
+			if (options.position === 'right') {
 				element.addClass('sidenav-right');
 			}
 
-			if (instance.isMobile) { // mobile
-				if ((instance.options.typeMobile === 'fixed') || instance.options.typeMobile ==='fixed-push') {
-					element.addClass('sidenav-fixed');
-				}
-
-				element.addClass('closed');
+			if (type === 'fixed' || type === 'fixed-push') {
+				element.addClass('sidenav-fixed');
 			}
-			else { // desktop
-				if ((instance.options.type === 'fixed') || instance.options.type ==='fixed-push') {
-					element.addClass('sidenav-fixed');
-				}
+
+			if (mobile) {
+				element.addClass('closed');
 			}
 
 			instance._renderNav(element);
@@ -205,320 +457,88 @@
 		_resizeSidenav: function() {
 			var instance = this;
 
-			if (window.innerWidth < instance.options.widthOriginal + 40) {
-				instance.options.width = window.innerWidth - 40;
+			var options = instance.options;
+
+			var widthOriginal = options.widthOriginal;
+
+			var width = widthOriginal;
+			var winWidth = window.innerWidth;
+
+			if (winWidth < widthOriginal + 40) {
+				width = winWidth - 40;
 			}
-			else {
-				instance.options.width = instance.options.widthOriginal;
-			}
+
+			options.width = width;
 		},
 
 		_setScreenSize: function() {
 			var instance = this;
+
 			var winWidth = window.innerWidth;
 
-			if (winWidth < instance.options.breakpoint) {
-				instance.isMobile = true;
-				instance.isDesktop = false;
-			}
-			else if (winWidth >= instance.options.breakpoint) {
-				instance.isMobile = false;
-				instance.isDesktop = true;
-			}
-		},
+			var breakpoint = instance.options.breakpoint;
 
-		removeMinHeight: function(element) {
-			var instance = this;
+			var mobile = winWidth < breakpoint;
 
-			var content = element.find(instance.options.content).first();
-			var navigation = element.find(instance.options.navigation).first();
-			var sidenavMenu = element.find('.sidenav-menu').first();
-
-			content.css('min-height', '');
-			navigation.css('min-height', '');
-			sidenavMenu.css('min-height', '');
-		},
-
-		removeWidth: function(element) { // rename to close sidenav or something
-			var instance = this;
-			var content = element.find(instance.options.content).first();
-			var menu = element.find('.sidenav-menu').first();
-			var navigation = element.find(instance.options.navigation).first();
-
-			if (element.hasClass('sidenav-right')) {
-				content.css('left', '');
-				content.css('padding-right', '');
-
-				if (instance.isMobile) { // mobile
-					if (instance.options.typeMobile === 'fixed-push') {
-						menu.css({
-							right: instance.options.width
-						});
-					}
-					else {
-						content.css({
-							right: ''
-						});
-					}
-				}
-				else { // desktop
-					menu.css({
-						right: instance.options.width
-					});
-				}
-			}
-			else {
-				if (instance.isMobile) {
-					content.css('left', '');
-				}
-				else {
-					content.css('padding-left', '');
-				}
-			}
-
-			navigation.css('width', '');
-		},
-
-		setEqualHeight: function(container) {
-			var instance = this;
-			var containerClone;
-			var containerCloneContent;
-			var containerCloneNavigation;
-			var element1;
-			var element2;
-			var tallest;
-
-			container.each(function(index, node) {
-				node = $(node);
-				containerClone = node.clone();
-
-				containerClone.removeClass('closed').css({
-					opacity: 0,
-					position: 'absolute',
-					width: node.outerWidth()
-				});
-
-				containerCloneContent = containerClone.find(instance.options.content).first();
-				containerCloneNavigation = containerClone.find(instance.options.navigation).first();
-
-				containerCloneNavigation.css('width', instance.options.width);
-
-				if (instance.isDesktop) {
-					if (containerClone.hasClass('sidenav-right')) {
-						containerCloneContent.css('padding-right', parseInt(instance.options.width) + parseInt(instance.options.gutter));
-					}
-					else {
-						containerCloneContent.css('padding-left', parseInt(instance.options.width) + parseInt(instance.options.gutter));
-					}
-				}
-
-				containerClone.insertBefore(node);
-
-				element1 = containerCloneNavigation;
-				element2 = containerCloneContent;
-				tallest = Math.max(element1.outerHeight(), element2.outerHeight());
-
-				containerClone.remove();
-
-				if (instance.isMobile) {
-					if (!(instance.options.typeMobile === 'fixed') && !(instance.options.typeMobile === 'fixed-push')) {
-						node.find(instance.options.content).first().css('min-height', tallest);
-						node.find(instance.options.navigation).first().css('min-height', tallest);
-						node.find('.sidenav-menu').first().css('min-height', tallest);
-					}
-				}
-				else {
-					if (!(instance.options.type === 'fixed') && !(instance.options.type === 'fixed-push')) {
-						node.find(instance.options.content).first().css('min-height', tallest);
-						node.find(instance.options.navigation).first().css('min-height', tallest);
-						node.find('.sidenav-menu').first().css('min-height', tallest);
-					}
-				}
-			});
-		},
-
-		setSidenavLeftWidth: function(element) {
-			var instance = this;
-
-			var content = element.find(instance.options.content).first();
-			var menu = element.find('.sidenav-menu').first();
-			var navigation = element.find(instance.options.navigation).first();
-
-			if (instance.isMobile) { // mobile
-				if (instance.options.typeMobile === 'fixed') {
-					content.css({
-						left: '',
-						paddingLeft: ''
-					});
-				}
-				else if (instance.options.typeMobile === 'fixed-push') {
-					content.css({
-						left: instance.options.width,
-						paddingLeft: ''
-					});
-				}
-				else {
-					content.css({
-						left: parseInt(instance.options.width) + parseInt(instance.options.gutter),
-						paddingLeft: ''
-					});
-				}
-			}
-			else { // desktop
-				if (instance.options.type === 'fixed-push') {
-					content.css({
-						left: '',
-						paddingLeft: parseInt(instance.options.width) + parseInt(instance.options.gutter)
-					});
-				}
-				else {
-					content.css({
-						paddingLeft: parseInt(instance.options.width) + parseInt(instance.options.gutter)
-					});
-				}
-			}
-
-			navigation.css('width', instance.options.width);
-			menu.css('width', instance.options.width);
-		},
-
-		setSidenavRightWidth: function(element) {
-			var instance = this;
-
-			var content = element.find(instance.options.content).first();
-			var menu = element.find('.sidenav-menu').first();
-			var navigation = element.find(instance.options.navigation).first();
-
-			if (instance.isMobile) { // mobile
-				if (instance.options.typeMobile === 'fixed') {
-					content.css({
-						left: '',
-						paddingRight: ''
-					});
-
-					menu.css({
-						right: ''
-					});
-				}
-				else if (instance.options.typeMobile === 'fixed-push') {
-					menu.css({
-						right: ''
-					});
-
-					content.css({
-						left: '',
-						right: '',
-						paddingRight: instance.options.width
-					});
-				}
-				else {
-					menu.css({
-						right: ''
-					});
-
-					content.css({
-						right: parseInt(instance.options.width) + parseInt(instance.options.gutter)
-					});
-				}
-			}
-			else { // desktop
-				if (instance.options.type === 'fixed') {
-					content.css({
-						left: '',
-						right: ''
-					});
-				}
-				else if (instance.options.type === 'fixed-push') {
-					content.css({
-						left: '',
-						right: '',
-						paddingRight: instance.options.width
-					});
-				}
-				else {
-					content.css({
-						paddingRight: parseInt(instance.options.width) + parseInt(instance.options.gutter)
-					});
-				}
-			}
-
-			navigation.css('width', instance.options.width);
-			menu.css('width', instance.options.width);
-		},
-
-		setWidth: function(element) {
-			var instance = this;
-
-			instance._resizeSidenav();
-
-			if (element.hasClass('sidenav-right')) {
-				instance.setSidenavRightWidth(element);
-			}
-			else {
-				instance.setSidenavLeftWidth(element);
-			}
-		},
-
-		_focusElement: function(element) {
-			// ios 8 fixed element disappears when trying to scroll
-			element.focus();
-		},
-
-		toggleNavigation: function(container) {
-			var instance = this;
-
-			var sidenavMenu = container.find('.sidenav-menu').first();
-
-			if (container.hasClass('closed')) {
-				instance.setEqualHeight(container);
-
-				sidenavMenu.css('width', instance.options.width);
-
-				instance._onSidenavTransitionEnd(container);
-
-				setTimeout(function() {
-					container.removeClass('closed').addClass('sidenav-transition');
-
-					if (instance.isDesktop) {
-						sidenavMenu.css('right', '');
-					}
-
-					instance.setWidth(container);
-				}, 0);
-			}
-			else {
-				instance._onSidenavTransitionEnd(container);
-
-				setTimeout(function() {
-					if (instance.isMobile && container.hasClass('sidenav-right')) {
-						sidenavMenu.css('right', instance.options.width);
-					}
-
-					container.addClass('closed').addClass('sidenav-transition');
-
-					instance.removeWidth(container);
-				}, 0);
-			}
+			instance.mobile = mobile;
+			instance.desktop = !mobile;
 		}
 	};
 
-	$.fn.sideNavigation = function(options) {
-		new SideNavigation(this, options);
+	var old = $.fn.sideNavigation;
 
-		return this;
-	}
+	var Plugin = function(options) {
+		return this.each(
+			function() {
+				var $this = $(this);
 
-	$.fn.sideNavigation.defaults = {
-		breakpoint: 768, // desktop media query breakpoint
-		content: '.sidenav-content', // class or id of content
-		gutter: '15px', // space between sidenav-slider and sidenav-content
-		navigation: '.sidenav-menu-slider', // class or id of navigation
-		position: 'left', // position of sidenav-slider, left or right side
-		typeMobile: 'relative', // type of sidenav in mobile, values: relative, fixed, fixed-push
-		type: 'relative', // type of sidenav in desktop, values: relative, fixed, fixed-push
-		toggler: '.sidenav-toggler', // class or id of toggle button
-		width: '225px' // width of side navigation
+				var data = $this.data('lexicon.sidenav');
+
+				if (!data) {
+					data = new SideNavigation($this, typeof options === 'object' ? options : null);
+
+					$this.data('lexicon.sidenav', data);
+				}
+
+				if (typeof options == 'string') {
+					data[options].call($this);
+				}
+			}
+		);
 	};
 
-	$.fn.sideNavigation.Constructor = SideNavigation;
+	Plugin.noConflict = function() {
+		$.fn.sideNavigation = old;
+
+		return this;
+	};
+
+	/**
+	 * Plugin options
+	 * @property {String|Number}  breakpoint  The window width that defines the desktop size
+	 * @property {String} 		  content 	  The class or ID of the content container
+	 * @property {String|Number}  gutter 	  The space between the sidenav-slider and the sidenav-content
+	 * @property {String} 		  navigation  The class or ID of the navigation container
+	 * @property {String} 		  position 	  The position of tge sidenav-slider. Possible values: left, right
+	 * @property {String} 		  toggler 	  The class or ID of the toggle button
+	 * @property {String} 		  type 		  The type of sidenav in desktop. Possible values: relative, fixed, fixed-push
+	 * @property {String} 		  typeMobile  The type of sidenav in mobile. Possible values: relative, fixed, fixed-push
+	 * @property {String|Number}  width 	  The width of the side navigation
+	 */
+
+	Plugin.defaults = {
+		breakpoint: 768,
+		content: '.sidenav-content',
+		gutter: '15px',
+		navigation: '.sidenav-menu-slider',
+		position: 'left',
+		toggler: '.sidenav-toggler',
+		type: 'relative',
+		typeMobile: 'relative',
+		width: '225px'
+	};
+
+	Plugin.Constructor = SideNavigation;
+
+	$.fn.sideNavigation = Plugin;
 }(jQuery);
