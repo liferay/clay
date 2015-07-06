@@ -146,8 +146,6 @@ collapse in
 <ul class="nav nav-stacked">
 <li class="active"><a href="../../content/sidenav">Sidenav</a>
 </li>
-<li class=""><a href="../../content/slideout-drawer">Slideout Drawer</a>
-</li>
 </ul>
 </div>
 </li>
@@ -262,36 +260,46 @@ collapse
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>A jQuery plugin that creates a slideout navigation on the right or left. Different from <a href="../slideout-drawer/">slideout-drawer</a>, it pushes content over instead of sliding the drawer over the top.</p>
+			<p>A jQuery plugin that creates a slideout navigation on the right or left.</p>
 		</blockquote>
 
 		<h5>Syntax with Options:</h5>
 
-<pre><code class="html">&lt;div class=&quot;sidenav-container&quot;&gt;
-    &lt;button class=&quot;btn btn-default sidenav-toggler&quot;&gt;
-        &lt;span class=&quot;glyphicon glyphicon-align-justify&quot;&gt;&lt;/span&gt; Toggle
-    &lt;/button&gt;
+<pre><code class="html">&lt;head&gt;
+    &lt;script src=&quot;slideout-drawer.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
 
-    &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
-        &lt;div class=&quot;sidenav-menu&quot;&gt;
-            &lt;div class=&quot;col-md-12&quot;&gt;... Your Side Nav Content ...&lt;/div&gt;
+&lt;body&gt;
+    &lt;div class=&quot;sidenav-container&quot;&gt;
+        &lt;a class=&quot;btn btn-default sidenav-toggler&quot; href=&quot;&quot;&gt;
+            &lt;span class=&quot;glyphicon glyphicon-align-justify&quot;&gt;&lt;/span&gt; Toggle
+        &lt;/a&gt;
+
+        &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
+            &lt;div class=&quot;sidenav-menu&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;... Your Side Nav Content ...&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;sidenav-content&quot;&gt;
+            &lt;div class=&quot;col-md-12&quot;&gt;... Your Main Content ...&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;sidenav-content&quot;&gt;
-        &lt;div class=&quot;col-md-12&quot;&gt;... Your Main Content ...&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-    $(&apos;.sidenav-container&apos;).sideNavigation({
-        content: &apos;.sidenav-content&apos;, // class or id of content
-        navigation: &apos;.sidenav-menu-slider&apos;, // class or id of navigation
-        position: &apos;left&apos;, // Positions sidenav-menu-slider. Values are left or right.
-        toggler: &apos;.sidenav-toggler&apos;, // class or id of toggle button
-        width: &apos;300px&apos; // width of side navigation
-    });
-&lt;/script&gt;</code></pre>
+    &lt;script&gt;
+        $(&apos;.sidenav-container&apos;).sideNavigation({
+            breakpoint: 768, // The window width that defines the desktop size. Default: 768.
+            content: &apos;.sidenav-content&apos;, // The class or ID of the content container. Default: &apos;.sidenav-content&apos;.
+            gutter: &apos;15px&apos;, // The space between the sidenav-slider and the sidenav-content. Default: 15px.
+            navigation: &apos;.sidenav-menu-slider&apos;, // The class or ID of the navigation container. Default: &apos;.sidenav-menu-slider&apos;.
+            position: &apos;left&apos;, // The position of the sidenav-slider. Possible values: left, right. Default: &apos;left&apos;.
+            toggler: &apos;.sidenav-toggler&apos;, // The class or ID of the toggle button. Default: &apos;.sidenav-toggler&apos;.
+            type: &apos;relative&apos;, // The type of sidenav in desktop. Possible values: relative, fixed, fixed-push. Default: &apos;relative&apos;.
+            typeMobile: &apos;relative&apos;, // The type of sidenav in mobile. Possible values: relative, fixed, fixed-push. Default: &apos;relative&apos;.
+            width: &apos;225px&apos; // The width of the side navigation. Default: &apos;225px&apos;.
+        });
+    &lt;/script&gt;
+&lt;/body&gt;</code></pre>
 
 	</div>
 </div>
