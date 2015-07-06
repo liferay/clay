@@ -34,6 +34,21 @@
 			instance._renderUI(element);
 		},
 
+		clearStyle: function(element, attribute) {
+			var instance = this;
+
+			var options = instance.options;
+
+			var content = element.find(options.content).first();
+			var navigation = element.find(options.navigation).first();
+
+			var menu = element.find('.sidenav-menu').first();
+
+			var els = content.add(navigation).add(menu);
+
+			els.css(attribute, '');
+		},
+
 		getSidenavLeftWidth: function(element, type, offset, width) {
 			var instance = this;
 
@@ -132,21 +147,6 @@
 			}
 
 			navigation.css('width', '');
-		},
-
-		removeMinHeight: function(element) {
-			var instance = this;
-
-			var options = instance.options;
-
-			var content = element.find(options.content).first();
-			var navigation = element.find(options.navigation).first();
-
-			var menu = element.find('.sidenav-menu').first();
-
-			var els = content.add(navigation).add(menu);
-
-			els.css('min-height', '');
 		},
 
 		setEqualHeight: function(container) {
@@ -249,6 +249,10 @@
 				instance.setEqualHeight(container);
 
 				menu.css('width', width);
+
+				if (container.hasClass('sidenav-right') && container.hasClass('sidenav-fixed')) {
+					menu.css('right', width);
+				}
 			}
 
 			instance._onSidenavTransitionEnd(container);
@@ -338,6 +342,14 @@
 			doc.on('mobile.lexicon.sidenav', function(event) {
 				if (typeMobile === 'fixed' || typeMobile === 'fixed-push') {
 					element.addClass('sidenav-fixed');
+
+					instance.hideSidenav(element);
+
+					setTimeout(function() {
+						element.addClass('closed');
+
+						instance.clearStyle(element, 'width');
+					}, 0);
 				}
 				else if (typeMobile === 'relative') {
 					element.removeClass('sidenav-fixed');
@@ -357,7 +369,7 @@
 				$this.removeClass('sidenav-transition');
 
 				if ($this.hasClass('closed')) {
-					instance.removeMinHeight($this);
+					instance.clearStyle($this, 'min-height');
 				}
 
 				if (instance.mobile) {
@@ -397,7 +409,7 @@
 					node = $(node);
 
 					if (!node.hasClass('closed')) {
-						instance.removeMinHeight(node);
+						instance.clearStyle(node, 'min-height');
 						instance.setEqualHeight(node);
 						instance.showSidenav(node);
 					}
