@@ -139,7 +139,6 @@ body.fixed {
 }
 
 .uxgl-fullscreen-fixed.row > .col-md-12 {
-	overflow: hidden;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -153,6 +152,62 @@ body.fixed {
 
 	.uxgl-toggle-code ~ .breadcrumb {
 		margin-top: 10px;
+	}
+}
+
+// Documents and Media Example Page
+
+#documentsAndMediaExample {
+	#addNewTagButton {
+		margin-top: 20px;
+	}
+
+	.card-horizontal {
+		.card-col-field {
+			text-align: center;
+		}
+
+		.icon-folder-close-alt {
+			background-color: #F1F5FA;
+			font-size: 28px;
+			line-height: 60px;
+			height: 60px;
+			width: 60px;
+		}
+	}
+}
+
+#documentsAndMediaRightSidenav {
+	background-color: #F5F8FA;
+
+	.breadcrumb {
+		margin-bottom: 15px;
+		margin-top: 10px;
+	}
+
+	.card,
+	.card-horizontal {
+		background-color: #FFF;
+	}
+
+	> .sidenav-content {
+		padding-top: 1px;
+	}
+
+	.pagination-bar {
+		clear: both;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#documentsAndMediaSidenav .container-fluid-1280.sidenav-container {
+		padding-left: 15px;
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	#documentsAndMediaSidenav.closed .container-fluid-1280.sidenav-container {
+		padding-right: 15px;
 	}
 }
 
