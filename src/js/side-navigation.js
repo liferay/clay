@@ -39,7 +39,7 @@
 
 			var contentCss = {};
 
-			if (instance.isMobile) {
+			if (instance.mobile) {
 				var left = '';
 
 				if (type === 'fixed-push') {
@@ -77,7 +77,7 @@
 				contentCss.right = '';
 			}
 
-			if (instance.isMobile) {
+			if (instance.mobile) {
 				if (type === 'fixed') {
 					contentCss.paddingRight = '';
 				}
@@ -105,7 +105,7 @@
 			var content = element.find(options.content).first();
 			var navigation = element.find(options.navigation).first();
 
-			var mobile = instance.isMobile;
+			var mobile = instance.mobile;
 
 			if (element.hasClass('sidenav-right')) {
 				content.css({
@@ -160,7 +160,7 @@
 			var gutter = toInt(options.gutter);
 			var width = toInt(options.width);
 
-			var type = instance.isMobile ? options.typeMobile : options.type;
+			var type = instance.mobile ? options.typeMobile : options.type;
 
 			var notFixed = type !== 'fixed' && type !== 'fixed-push';
 
@@ -181,7 +181,7 @@
 
 					containerCloneNavigation.css('width', options.width);
 
-					if (instance.isDesktop) {
+					if (instance.desktop) {
 						var paddingProp = containerClone.hasClass('sidenav-right') ? 'padding-right' : 'padding-left';
 
 						containerCloneContent.css(paddingProp, width + gutter);
@@ -207,7 +207,7 @@
 
 			var options = instance.options;
 
-			var mobile = instance.isMobile;
+			var mobile = instance.mobile;
 
 			var type = mobile ? options.typeMobile : options.type;
 
@@ -256,10 +256,10 @@
 			setTimeout(function() {
 				container.toggleClass('closed', !closed).addClass('sidenav-transition');
 
-				if (closed && instance.isDesktop) {
+				if (closed && instance.desktop) {
 					menu.css('right', '');
 				}
-				else if (!closed && instance.isMobile && container.hasClass('sidenav-right')) {
+				else if (!closed && instance.mobile && container.hasClass('sidenav-right')) {
 					menu.css('right', width);
 				}
 
@@ -320,7 +320,7 @@
 		_onScreenDesktop: function(element) {
 			var instance = this;
 
-			doc.on('isDesktop.lexicon.sidenav', function(event) {
+			doc.on('desktop.lexicon.sidenav', function(event) {
 				if (instance.options.type === 'fixed' || instance.options.type === 'fixed-push') {
 					element.addClass('sidenav-fixed');
 				}
@@ -335,7 +335,7 @@
 
 			var typeMobile = typeMobile;
 
-			doc.on('isMobile.lexicon.sidenav', function(event) {
+			doc.on('mobile.lexicon.sidenav', function(event) {
 				if (typeMobile === 'fixed' || typeMobile === 'fixed-push') {
 					element.addClass('sidenav-fixed');
 				}
@@ -360,7 +360,7 @@
 					instance.removeMinHeight($this);
 				}
 
-				if (instance.isMobile) {
+				if (instance.mobile) {
 					instance._focusElement(menu);
 				}
 
@@ -381,16 +381,16 @@
 				// https://github.com/jquery/jquery/issues/1729
 				winWidth = window.innerWidth;
 
-				if (winWidth < breakpoint && instance.isDesktop) {
-					instance.isMobile = true;
-					instance.isDesktop = false;
-					doc.trigger('isMobile', element);
+				if (winWidth < breakpoint && instance.desktop) {
+					instance.mobile = true;
+					instance.desktop = false;
+					doc.trigger('mobile', element);
 				}
 
-				if (winWidth >= breakpoint && instance.isMobile) {
-					instance.isMobile = false;
-					instance.isDesktop = true;
-					doc.trigger('isDesktop', element);
+				if (winWidth >= breakpoint && instance.mobile) {
+					instance.mobile = false;
+					instance.desktop = true;
+					doc.trigger('desktop', element);
 				}
 
 				element.each(function(index, node) {
@@ -434,7 +434,7 @@
 		_renderUI: function(element) {
 			var instance = this;
 
-			var mobile = instance.isMobile;
+			var mobile = instance.mobile;
 			var options = instance.options;
 
 			var type = mobile ? options.typeMobile : options.type;
@@ -480,8 +480,8 @@
 
 			var mobile = winWidth < breakpoint;
 
-			instance.isMobile = mobile;
-			instance.isDesktop = !mobile;
+			instance.mobile = mobile;
+			instance.desktop = !mobile;
 		}
 	};
 
