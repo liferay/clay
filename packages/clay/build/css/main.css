@@ -1,4 +1,9 @@
 /**
+ * Calculates and sets aspect ratio in thumbnails.scss
+ * @param $width - width
+ * @param $height - height
+ */
+/**
  * Calculates text-indent of data-label-on and data-label-off
  * @param $toggle-switch-width - Width of switch bar
  * @param $toggle-switch-padding - Space between button and bar
@@ -1095,7 +1100,6 @@ body.fixed {
 }
 
 .uxgl-fullscreen-fixed.row > .col-md-12 {
-  overflow: hidden;
   padding-left: 0;
   padding-right: 0;
 }
@@ -1106,6 +1110,56 @@ body.fixed {
 
 .uxgl-breadcrumbs .uxgl-toggle-code ~ .breadcrumb {
   margin-top: 10px;
+}
+
+#documentsAndMediaExample #addNewTagButton {
+  margin-top: 20px;
+}
+
+#documentsAndMediaExample .card-horizontal .card-col-field {
+  text-align: center;
+}
+
+#documentsAndMediaExample .card-horizontal .icon-folder-close-alt {
+  background-color: #F1F5FA;
+  font-size: 28px;
+  line-height: 60px;
+  height: 60px;
+  width: 60px;
+}
+
+#documentsAndMediaRightSidenav {
+  background-color: #F5F8FA;
+}
+
+#documentsAndMediaRightSidenav .breadcrumb {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+#documentsAndMediaRightSidenav .card,
+#documentsAndMediaRightSidenav .card-horizontal {
+  background-color: #FFF;
+}
+
+#documentsAndMediaRightSidenav > .sidenav-content {
+  padding-top: 1px;
+}
+
+#documentsAndMediaRightSidenav .pagination-bar {
+  clear: both;
+}
+
+@media screen and (min-width: 768px) {
+  #documentsAndMediaSidenav .container-fluid-1280.sidenav-container {
+    padding-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #documentsAndMediaSidenav.closed .container-fluid-1280.sidenav-container {
+    padding-right: 15px;
+  }
 }
 
 .uxgl-figures .figure {

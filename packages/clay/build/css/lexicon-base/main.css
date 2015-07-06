@@ -7823,6 +7823,11 @@ button.close {
 }
 
 /**
+ * Calculates and sets aspect ratio in thumbnails.scss
+ * @param $width - width
+ * @param $height - height
+ */
+/**
  * Calculates text-indent of data-label-on and data-label-off
  * @param $toggle-switch-width - Width of switch bar
  * @param $toggle-switch-padding - Space between button and bar
@@ -8064,6 +8069,10 @@ button.close {
 
 .card-horizontal.card-square [class*="card-col"]:last-child {
   border-radius: 0;
+}
+
+.card-col-field {
+  width: 1%;
 }
 
 .card-col-1 {
@@ -10220,6 +10229,19 @@ figcaption,
 
 .sidebar-panel {
   height: 155px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar-panel .badge-monospaced {
+  border-radius: 0;
+  bottom: 15px;
+  font-size: 12px;
+  left: 15px;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  position: absolute;
 }
 
 .sidebar-transition {
@@ -10357,6 +10379,18 @@ figcaption,
 
 .product-menu-tab-text {
   padding-bottom: 20px;
+}
+
+.container-fluid-1280.sidenav-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 1300px) {
+  .container-fluid-1280.sidenav-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .sidenav-fixed.sidenav-right > .sidenav-menu-slider {
@@ -10565,6 +10599,45 @@ figcaption,
   .table-responsive-flip .table > thead {
     max-width: 100px;
   }
+}
+
+.aspect-ratio {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.aspect-ratio img {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.aspect-ratio.aspect-ratio-vertical img {
+  height: 100%;
+  width: auto;
+}
+
+.aspect-ratio.align-top img {
+  bottom: auto;
+  top: 0;
+}
+
+.aspect-ratio-3-to-2 {
+  padding-bottom: 66.66667%;
+}
+
+.aspect-ratio-4-to-3 {
+  padding-bottom: 75%;
+}
+
+.aspect-ratio-8-to-5 {
+  padding-bottom: 62.5%;
+}
+
+.aspect-ratio-16-to-9 {
+  padding-bottom: 56.25%;
 }
 
 .toolbar:before,
@@ -10901,6 +10974,93 @@ input.toggle-card:focus ~ .toggle-card-container {
 input.toggle-card[disabled] ~ .toggle-card-container {
   cursor: not-allowed;
   opacity: 0.4;
+}
+
+.toggle-card-dm {
+  margin-top: 0;
+}
+
+.toggle-card-dm label {
+  padding-left: 0;
+  width: 100%;
+}
+
+.toggle-card-dm .badge-monospaced {
+  border-radius: 0;
+  bottom: 15px;
+  font-size: 12px;
+  left: 15px;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  position: absolute;
+}
+
+.toggle-card-dm .toggle-card-container {
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+.toggle-card-dm .toggle-card-section {
+  padding: 10px 0;
+}
+
+.toggle-card-dm ~ .toggle-card-dm {
+  margin-top: 0;
+}
+
+.toggle-card-dm input[type="checkbox"] {
+  left: 15px;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+}
+
+.toggle-card-dm input[type="checkbox"]:checked ~ .toggle-card-container,
+.toggle-card-dm input[type="checkbox"]:focus ~ .toggle-card-container {
+  box-shadow: 0 0 3px 2px rgba(102, 175, 233, 0.6);
+}
+
+.toggle-card-dm input[type="checkbox"] ~ .toggle-card-container {
+  border-width: 0;
+  padding: 0;
+}
+
+.toggle-card-dm-details {
+  margin-left: 10px;
+  margin-top: 3px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.toggle-card-dm-text, .toggle-card-dm-text-large, .toggle-card-dm-text-small {
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toggle-card-dm-text-large {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.toggle-card-dm-text-small {
+  font-size: 12px;
+}
+
+.toggle-card-dm-more-options {
+  display: block;
+  float: right;
+}
+
+.toggle-card-dm-more-options:focus,
+.toggle-card-dm-more-options:hover {
+  text-decoration: none;
 }
 
 .toggle-switch-bar .toggle-switch-handle {
