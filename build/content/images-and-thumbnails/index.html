@@ -319,6 +319,205 @@ collapse
 
 	</div>
 </div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Image Aspect Ratios</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Sometimes you can't control the size of an image, define a specific size for your images with aspect-ratios. The base class <code>aspect-ratio</code> maintains a 1 to 1 ratio relative to its container's width, add class <code>aspect-ratio-vertical</code> to maintain a 1 to 1 ratio relative to its container's height.</p>
+
+			<p>Use <code>aspect-ratio-3-to-2</code>, <code>aspect-ratio-4-to-3</code>, <code>aspect-ratio-8-to-5</code>, or <code>aspect-ratio-16-to-9</code> to maintain the specific ratio relative to its container or create your own by setting <code>padding-bottom</code> to the ratio you want e.g. 2 to 1 <code>.aspect-ratio-2-to-1 { padding-bottom: 50% }</code>.</p>
+
+			<p>Add class <code>align-top</code> with <code>aspect-ratio</code> to align it on the top.</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h5>Horizontal Aspect Ratio</h5>
+	</div>
+
+	<div class="col-md-3 col-xs-3">
+		<p>1:1</p>
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>3:2</p>
+		<div class="aspect-ratio aspect-ratio-3-to-2">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>4:3</p>
+		<div class="aspect-ratio aspect-ratio-4-to-3">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>8:5</p>
+		<div class="aspect-ratio aspect-ratio-8-to-5">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-3 col-xs-3">
+		<p>16:9</p>
+		<div class="aspect-ratio aspect-ratio-16-to-9">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse00001"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse00001">
+<pre><code class="html">&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-3-to-2&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-4-to-3&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-8-to-5&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-16-to-9&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h5>Vertical Aspect Ratio</h5>
+	</div>
+
+	<div class="col-md-3 col-xs-3">
+		<p>1:1</p>
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>3:2</p>
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-3-to-2">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>4:3</p>
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-4-to-3">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-3 col-xs-3">
+		<p>8:5</p>
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-8-to-5">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-3 col-xs-3">
+		<p>16:9</p>
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-16-to-9">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse00002"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse00002">
+	<pre><code class="html">&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical aspect-ratio-3-to-2&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical aspect-ratio-4-to-3&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical aspect-ratio-8-to-5&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-xs-3&quot;&gt;
+    &lt;div class=&quot;aspect-ratio aspect-ratio-vertical aspect-ratio-16-to-9&quot;&gt;
+        &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_hot_air_ballon.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h5>Horizontal 1:1 Aspect Ratio with Varying Image Sizes</h5>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_graph1.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_graph2.png">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h5>Vertical 1:1 Aspect Ratio with Varying Image Sizes</h5>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/switch_components.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/thumbnail_graph2.png">
+		</div>
+	</div>
+</div>
 	</div>
 
 		</section>

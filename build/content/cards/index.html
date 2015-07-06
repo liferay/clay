@@ -350,6 +350,67 @@ collapse
 <div class="row row-spacing uxgl-horizontal-card">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
+			<p>Create a column only as wide as its content with <code>card-col-field</code> and fill the remaing space with <code>card-col-content</code>. <code>card-col-field</code> has width: 1% and will expand only as wide as its content as long as <code>card-col-content</code> is present as a sibling.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<span class="icon-monospaced icon-folder-close-alt" style="width: 90px;"></span>
+				</div>
+				<div class="card-col-content card-col-gutters">
+					<span>Fills Remaining Space</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<span class="icon-monospaced icon-folder-close-alt" style="width: 90px;"></span>
+				</div>
+				<div class="card-col-content card-col-gutters">
+					<span>Fills Remaining Space</span>
+				</div>
+				<div class="card-col-field">
+					<span class="icon-monospaced icon-folder-close-alt" style="width: 140px;"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse001"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse001">
+	<pre><code class="html">&lt;div class=&quot;card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row card-row-padded&quot;&gt;
+        &lt;div class=&quot;card-col-field&quot;&gt;
+            &lt;span class=&quot;icon-monospaced icon-folder-close-alt&quot; style=&quot;width: 90px;&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-col-content card-col-gutters&quot;&gt;
+            &lt;span&gt;Fills Remaining Space&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-col-field&quot;&gt;
+            &lt;span class=&quot;icon-monospaced icon-folder-close-alt&quot; style=&quot;width: 140px;&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing uxgl-horizontal-card">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
 			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code>.</p>
 		</blockquote>
 	</div>
