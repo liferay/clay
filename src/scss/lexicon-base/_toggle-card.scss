@@ -117,16 +117,16 @@ input.toggle-card {
 		width: 100%;
 	}
 
-	.badge-monospaced {
-		border-radius: 0;
-		bottom: $grid-gutter-width / 2;
-		font-size: $font-size-small;
-		left: $grid-gutter-width / 2;
+	// .badge-monospaced {
+	// 	border-radius: 0;
+	// 	bottom: $grid-gutter-width / 2;
+	// 	font-size: $font-size-small;
+	// 	left: $grid-gutter-width / 2;
 
-		@include monospace(32px);
+	// 	@include monospace(32px);
 
-		position: absolute;
-	}
+	// 	position: absolute;
+	// }
 
 	.toggle-card-container {
 		display: block;

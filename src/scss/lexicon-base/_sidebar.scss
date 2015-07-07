@@ -3,10 +3,6 @@
 	height: 100%;
 	overflow: auto;
 
-	&.slideout-drawer-transition {
-		@include transition(all 0.25s ease);
-	}
-
 	.navbar {
 		margin-bottom: 0;
 	}
@@ -21,10 +17,6 @@
 	font-size: 14px;
 	overflow: auto;
 	padding: 24px;
-
-	+ .sidebar-footer {
-		padding: 0 24px 24px;
-	}
 }
 
 .sidebar-footer {
@@ -40,91 +32,25 @@
 	}
 }
 
-.sidebar-header-actions {
-	float: right;
-
-	li {
-		padding: 0;
-	}
-
-	a {
-		&:focus,
-		&:hover {
-			text-decoration: none;
-		}
-	}
-}
-
 .sidebar-panel {
 	height: 155px;
 	overflow: hidden;
 	position: relative;
 
 	.badge-monospaced {
-		border-radius: 0;
-		bottom: $grid-gutter-width / 2;
-		font-size: $font-size-small;
-		left: $grid-gutter-width / 2;
+		// border-radius: 0;
+		// bottom: $grid-gutter-width / 2;
+		// font-size: $font-size-small;
+		// left: $grid-gutter-width / 2;
 
-		@include monospace(32px);
+		// @include monospace(32px);
 
-		position: absolute;
+		// position: absolute;
 	}
 }
 
 .sidebar-transition {
 	@include transition(all 0.25s ease);
-}
-
-.sidebar-fixed {
-	bottom: 0;
-	left: -$sidebar-fixed-width;
-	max-width: $sidebar-fixed-width;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1050;
-
-	@media screen and (min-width: 380px) {
-		left: -$sidebar-fixed-desktop-width;
-		max-width: none;
-		width: $sidebar-fixed-desktop-width;
-	}
-
-	&.open {
-		left: 0;
-	}
-}
-
-.sidebar-fixed-right {
-	left: auto;
-	right: -$sidebar-fixed-width;
-
-	@media screen and (min-width: 380px) {
-		right: -$sidebar-fixed-desktop-width;
-	}
-
-	&.open {
-		left: auto;
-		right: 0;
-	}
-}
-
-.sidebar-default {
-	background-color: $sidebar-default-bg;
-	border-left: 1px solid $sidebar-default-border;
-
-	.sidebar-panel {
-		background-color: lighten($sidebar-default-bg, 30%);
-	}
-}
-
-.sidebar-inverse {
-	background-color: $sidebar-inverse-bg;
-
-	.sidebar-panel {
-		background-color: lighten($sidebar-inverse-bg, 30%);
-	}
 }
 
 .search-bar {
@@ -137,66 +63,106 @@
 	}
 }
 
+// Product Menu
+
 .product-menu .sidebar-body {
-	bottom: 49px;
+	bottom: 54px;
 	left: 0;
-	padding: 16px 24px;
+	padding-bottom: 0;
+	padding-top: 0;
 	position: absolute;
 	right: 0;
-	top: 48px;
+	top: 120px;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
-		bottom: auto;
-		position: relative;
-		top: auto;
+	@media screen and (max-width: 320px) {
+		overflow: visible;
+		position: static;
 	}
 }
 
 .product-menu .sidebar-footer {
 	bottom: 0;
+	padding: 10px 24px;
 	position: absolute;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
-		bottom: auto;
-		position: relative;
+	@media screen and (max-width: 320px) {
+		position: static;
 	}
 
 	.nameplate {
 		h1, h2, h3, h4, h5, h6 {
 			margin: 0 8px;
-
-			@media screen and (min-width: 380px) {
-				margin: 0 12px;
-			}
 		}
 	}
 
 	.nameplate-content,
 	.nameplate-field {
 		vertical-align: middle;
+
+		@media screen and (max-width: 320px) {
+			display: block;
+		}
 	}
 }
 
-.product-menu-tabs > li > a {
-	padding: 0;
+.product-menu .sidebar-header {
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.product-menu-tabs {
+	margin-left: 24px;
+	margin-right: 24px;
+	margin-top: 15px;
+
+	> li > a {
+		padding-bottom: 2px;
+		padding-top: 2px;
+	}
 }
 
 .product-menu-tab-icon {
 	.label-sm {
 		left: 50%;
-		margin-top: 10px;
 		position: absolute;
 		z-index: 1;
 	}
 
 	.icon-monospaced {
-		height: 60px;
-		font-size: 28px;
-		line-height: 60px;
-		width: 60px;
+		height: 0.9em;
+		width: 0.9em;
 	}
 }
 
-.product-menu-tab-text {
-	padding-bottom: 20px;
+// Skins
+
+.sidebar-default {
+	background-color: $sidebar-default-bg;
+	border-left: 1px solid $sidebar-default-border;
+
+	.sidebar-panel {
+		background-color: $sidebar-default-panel-bg;
+	}
+}
+
+.sidebar-inverse {
+	background-color: $sidebar-inverse-bg;
+	color: $sidebar-inverse-color;
+
+	.sidebar-footer,
+	.sidebar-header {
+		a {
+			color: $sidebar-inverse-link-color;
+
+			&:focus,
+			&:hover {
+				color: $sidebar-inverse-link-hover-color;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.sidebar-panel {
+		background-color: $sidebar-inverse-panel-bg;
+	}
 }
