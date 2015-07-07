@@ -1,6 +1,45 @@
 +function($) {
 	var doc = $(document);
 
+	var listenerAdded = false;
+
+	// Make sure we only add one resize listener to the page,
+	// no matter how many components we have
+	var addResizeListener = function() {
+		if (!listenerAdded) {
+			$(window).on(
+				'resize',
+				debounce(
+					function(event) {
+						doc.trigger('screenChange.lexicon.sidenav', window.innerWidth);
+					},
+					150
+				)
+			);
+
+			listenerAdded = true;
+		}
+	};
+
+	var debounce = function(fn, delay) {
+		var id;
+
+		return function() {
+			var args = arguments;
+			var context = this;
+
+			var later = function() {
+				id = null;
+
+				fn.apply(context, args);
+			};
+
+			clearTimeout(id);
+
+			id = setTimeout(later, delay);
+		};
+	};
+
 	var toInt = function(str) {
 		return parseInt(str, 10) || 0;
 	};
@@ -274,11 +313,11 @@
 		_bindUI: function(element) {
 			var instance = this;
 
+			addResizeListener();
+
 			instance._onClickTrigger(element);
 			instance._onClickSidenavClose(element);
-			instance._onWindowResize(element);
-			instance._onScreenMobile(element);
-			instance._onScreenDesktop(element);
+			instance._onScreenChange(element);
 		},
 
 		_focusElement: function(element) {
@@ -321,28 +360,24 @@
 			});
 		},
 
-		_onScreenDesktop: function(element) {
+		_onScreenChange: function(element) {
 			var instance = this;
 
-			doc.on('desktop.lexicon.sidenav', function(event) {
-				if (instance.options.type === 'fixed' || instance.options.type === 'fixed-push') {
-					element.addClass('sidenav-fixed');
-				}
-				else if (instance.options.type === 'relative') {
-					element.removeClass('sidenav-fixed');
-				}
-			});
-		},
+			var breakpoint = toInt(instance.options.breakpoint);
 
-		_onScreenMobile: function(element) {
-			var instance = this;
+			doc.on('screenChange.lexicon.sidenav', function(event, winWidth) {
+				var desktop = winWidth >= breakpoint;
 
-			var typeMobile = instance.options.typeMobile;
+				instance.mobile = !desktop;
+				instance.desktop = desktop;
 
-			doc.on('mobile.lexicon.sidenav', function(event) {
-				if (typeMobile === 'fixed' || typeMobile === 'fixed-push') {
-					element.addClass('sidenav-fixed');
+				var type = desktop ? instance.options.type : instance.options.typeMobile;
 
+				var fixedMenu = type === 'fixed' || type === 'fixed-push';
+
+				element.toggleClass('sidenav-fixed', fixedMenu);
+
+				if (!desktop && fixedMenu) {
 					instance.hideSidenav(element);
 
 					setTimeout(function() {
@@ -351,9 +386,16 @@
 						instance.clearStyle(element, 'width');
 					}, 0);
 				}
-				else if (typeMobile === 'relative') {
-					element.removeClass('sidenav-fixed');
-				}
+
+				element.each(function(index, node) {
+					node = $(node);
+
+					if (!node.hasClass('closed')) {
+						instance.clearStyle(node, 'min-height');
+						instance.setEqualHeight(node);
+						instance.showSidenav(node);
+					}
+				});
 			});
 		},
 
@@ -377,43 +419,6 @@
 				}
 
 				$this.off(transitions);
-			});
-		},
-
-		_onWindowResize: function(element) {
-			var instance = this;
-
-			var winWidth;
-
-			instance._setScreenSize();
-
-			var breakpoint = toInt(instance.options.breakpoint);
-
-			$(window).resize(function(event) {
-				// https://github.com/jquery/jquery/issues/1729
-				winWidth = window.innerWidth;
-
-				if (winWidth < breakpoint && instance.desktop) {
-					instance.mobile = true;
-					instance.desktop = false;
-					doc.trigger('mobile', element);
-				}
-
-				if (winWidth >= breakpoint && instance.mobile) {
-					instance.mobile = false;
-					instance.desktop = true;
-					doc.trigger('desktop', element);
-				}
-
-				element.each(function(index, node) {
-					node = $(node);
-
-					if (!node.hasClass('closed')) {
-						instance.clearStyle(node, 'min-height');
-						instance.setEqualHeight(node);
-						instance.showSidenav(node);
-					}
-				});
 			});
 		},
 
@@ -481,19 +486,6 @@
 			}
 
 			options.width = width;
-		},
-
-		_setScreenSize: function() {
-			var instance = this;
-
-			var winWidth = window.innerWidth;
-
-			var breakpoint = instance.options.breakpoint;
-
-			var mobile = winWidth < breakpoint;
-
-			instance.mobile = mobile;
-			instance.desktop = !mobile;
 		}
 	};
 
@@ -512,7 +504,7 @@
 					$this.data('lexicon.sidenav', data);
 				}
 
-				if (typeof options == 'string') {
+				if (typeof options === 'string') {
 					data[options].call($this);
 				}
 			}
