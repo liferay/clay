@@ -1,16 +1,20 @@
-// Structure
-
-$sidebar-fixed-width: 240px !default; // Shared
-$sidebar-fixed-desktop-width: 320px !default; // Shared
-
 // Skin
 
 $sidebar-default-bg: #F5F8FA !default; // Shared
 $sidebar-default-border: #DFE0E3 !default; // Shared
 $sidebar-default-color: $navbar-default-color !default; // Shared
+$sidebar-default-panel-bg: #DFE6EB !default;
 
 $sidebar-inverse-bg: #1F282E !default; // Shared
 $sidebar-inverse-border: $navbar-inverse-border !default; // Shared
 $sidebar-inverse-color: #FFF !default; // Shared
+$sidebar-inverse-link-color: $brand-default !default; // Shared
+$sidebar-inverse-link-hover-color: $sidebar-inverse-link-color !default; // Shared
+$sidebar-inverse-panel-bg: $brand-default !default; // Shared
 
 $sidebar-inverse-input-bg: #1B2228 !default; // Atlas
+
+$product-menu-header-bg: #1B2228 !default; // Atlas
+$product-menu-header-color: #FFF !default; // Atlas
+$product-menu-header-link-color: #FFF !default; // Atlas
+$product-menu-header-link-hover-color: #FFF !default; // Atlas
