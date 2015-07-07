@@ -1,10 +1,11 @@
-$sidebar-fixed-width: 240px !default;
-$sidebar-fixed-desktop-width: 320px !default;
-
 $sidebar-default-bg: $navbar-default-bg !default;
 $sidebar-default-border: $navbar-default-border !default;
 $sidebar-default-color: $navbar-default-color !default;
+$sidebar-default-panel-bg: $navbar-default-link-active-bg !default;
 
 $sidebar-inverse-bg: $navbar-inverse-bg !default;
 $sidebar-inverse-border: $navbar-inverse-border !default;
 $sidebar-inverse-color: $navbar-inverse-color !default;
+$sidebar-inverse-link-color: $navbar-inverse-link-color !default;
+$sidebar-inverse-link-hover-color: $navbar-inverse-link-hover-color !default;
+$sidebar-inverse-panel-bg: $navbar-inverse-link-active-bg !default;
