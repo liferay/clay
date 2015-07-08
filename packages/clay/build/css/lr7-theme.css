@@ -10310,6 +10310,7 @@ button.close {
 }
 
 .card-row [class*="card-col"] .img-absolute {
+  left: 0;
   position: absolute;
   top: 0;
 }
@@ -10321,6 +10322,47 @@ button.close {
 
 .card-row-padded {
   padding: 10px;
+}
+
+.card-dm {
+  overflow: visible;
+}
+
+.card-dm .card-footer {
+  padding: 10px 0;
+}
+
+.card-dm-details {
+  margin-left: 10px;
+  margin-top: 3px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.card-dm-text, .card-dm-text-large, .card-dm-text-small {
+  color: #29353D;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-dm-text-large {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-dm-text-small {
+  font-size: 12px;
+}
+
+.card-dm-more-options {
+  display: block;
+  float: right;
+}
+
+.card-dm-more-options:focus,
+.card-dm-more-options:hover {
+  text-decoration: none;
 }
 
 .dropdown-menu form .checkbox-default:hover,
@@ -13111,25 +13153,6 @@ input.toggle-card[disabled] ~ .toggle-card-container {
   margin-top: 0;
 }
 
-.toggle-card-dm label {
-  padding-left: 0;
-  width: 100%;
-}
-
-.toggle-card-dm .toggle-card-container {
-  display: block;
-  height: auto;
-  width: auto;
-}
-
-.toggle-card-dm .toggle-card-section {
-  padding: 10px 0;
-}
-
-.toggle-card-dm ~ .toggle-card-dm {
-  margin-top: 0;
-}
-
 .toggle-card-dm input[type="checkbox"] {
   left: 15px;
   margin-left: 0;
@@ -13150,37 +13173,19 @@ input.toggle-card[disabled] ~ .toggle-card-container {
   padding: 0;
 }
 
-.toggle-card-dm-details {
-  margin-left: 10px;
-  margin-top: 3px;
-  overflow: hidden;
-  text-align: left;
+.toggle-card-dm label {
+  padding-left: 0;
+  width: 100%;
 }
 
-.toggle-card-dm-text, .toggle-card-dm-text-large, .toggle-card-dm-text-small {
-  color: #29353D;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.toggle-card-dm-text-large {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.toggle-card-dm-text-small {
-  font-size: 12px;
-}
-
-.toggle-card-dm-more-options {
+.toggle-card-dm .toggle-card-container {
   display: block;
-  float: right;
+  height: auto;
+  width: auto;
 }
 
-.toggle-card-dm-more-options:focus,
-.toggle-card-dm-more-options:hover {
-  text-decoration: none;
+.toggle-card-dm ~ .toggle-card-dm {
+  margin-top: 0;
 }
 
 .toggle-switch-bar .toggle-switch-handle {
