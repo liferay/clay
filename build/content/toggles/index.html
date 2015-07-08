@@ -689,44 +689,127 @@ collapse
 </div>
 
 <div class="row row-spacing">
-	<div class="col-md-12">
+	<div class="col-xs-12">
 		<h3>Toggle Card DM</h3>
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Checkbox styled like a card, used in Documents and Media portlet. <code>toggle-card-dm</code> will take the width of its parent container.</p>
-		</blockquote>
 
-		<div style="width: 200px;">
-			<div class="checkbox checkbox-default toggle-card-dm">
-				<label>
-					<input type="checkbox" value="">
-					<div class="toggle-card-container">
-						<div class="aspect-ratio">
-							<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-							<span class="badge badge-monospaced">TXT</span>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Checkbox styled like a card, used in Documents and Media portlet. Use <code>toggle-card-dm</code> and the mark up structure below to add a checkbox to any card.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-xs-6 col-sm-4">
+		<div class="checkbox checkbox-default toggle-card-dm">
+			<label>
+				<input type="checkbox" value="">
+				<div class="toggle-card-container card-dm">
+					<div class="aspect-ratio">
+						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
+						<span class="sticker sticker-default sticker-bottom">TXT</span>
+					</div>
+					<div class="card-footer">
+						<div class="dropdown card-dm-more-options">
+							<a data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
 						</div>
-						<div class="toggle-card-section">
-							<div class="dropdown toggle-card-dm-more-options">
-								<a data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#1">Download</a></li>
-									<li><a href="#1">Edit</a></li>
-									<li><a href="#1">Move</a></li>
-									<li><a href="#1">Checkout</a></li>
-									<li><a href="#1">Permissions</a></li>
-									<li><a href="#1">Move to Recycle Bin</a></li>
-								</ul>
-							</div>
-							<div class="toggle-card-dm-details">
-								<div class="toggle-card-dm-text">Aldcott Gage George Polwarth-Kitchener</div>
-								<div class="toggle-card-dm-text-large" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-								<div class="toggle-card-dm-text-small">Approved</div>
+						<div class="card-dm-details">
+							<div class="card-dm-text">Aldcott Gage George Polwarth-Kitchener</div>
+							<div class="card-dm-text-large" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
+							<div class="card-dm-text-small">Approved</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="col-xs-6 col-sm-6">
+		<div class="checkbox checkbox-default toggle-card-dm">
+			<label>
+				<input type="checkbox" value="">
+				<div class="toggle-card-container card-horizontal">
+					<div class="card-row">
+						<div class="card-col-5">
+							<img alt="thumbnail" class="img-absolute" src="../../images/thumbnail_hot_air_ballon.jpg">
+						</div>
+
+						<div class="card-col-7 card-col-gutters">
+							<h4>Travel to Space by Balloon</h4>
+
+							<p>Space Program LLC is offering balloon rides to space!</p>
+
+							<div class="link-group">
+								<hr class="divider">
+								<button type="button" class="btn btn-primary btn-xs">Sign Up</button>
+								<button type="button" class="btn btn-link btn-xs">No Thanks</button>
 							</div>
 						</div>
 					</div>
-				</label>
-			</div>
+				</div>
+			</label>
 		</div>
 	</div>
+
+	<div class="col-xs-6 col-sm-6">
+		<div class="checkbox checkbox-default toggle-card-dm">
+			<label>
+				<input type="checkbox" value="">
+				<div class="toggle-card-container card-horizontal">
+					<div class="card-row card-row-padded">
+						<div class="card-col-field">
+							<span class="icon-monospaced icon-folder-close-alt" style="background-color:#869CAD;height:60px;line-height:60px;width:60px;color:#FFF;"></span>
+						</div>
+						<div class="card-col-content card-col-gutters">
+							<h4>Folder 01</h4>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse10"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse10">
+	<pre><code class="html">&lt;div class=&quot;checkbox checkbox-default toggle-card-dm&quot;&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+        &lt;div class=&quot;toggle-card-container card-dm&quot;&gt;
+            &lt;div class=&quot;aspect-ratio&quot;&gt;
+                &lt;img alt=&quot;thumbnail&quot; src=&quot;../../images/thumbnail_coffee.jpg&quot;&gt;
+                &lt;span class=&quot;sticker sticker-default sticker-bottom&quot;&gt;TXT&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer&quot;&gt;
+                &lt;div class=&quot;dropdown card-dm-more-options&quot;&gt;
+                    &lt;a data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
+                        &lt;span class=&quot;icon-ellipsis-vertical icon-monospaced&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Move&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Checkout&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Move to Recycle Bin&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-dm-details&quot;&gt;
+                    &lt;div class=&quot;card-dm-text&quot;&gt;Aldcott Gage George Polwarth-Kitchener&lt;/div&gt;
+                    &lt;div class=&quot;card-dm-text-large&quot; title=&quot;thumbnail_dock.jpg&quot;&gt;thumbnail_dock.jpg&lt;/div&gt;
+                    &lt;div class=&quot;card-dm-text-small&quot;&gt;Approved&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
 </div>
 	</div>
 
