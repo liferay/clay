@@ -146,6 +146,7 @@
 		vertical-align: middle;
 
 		.img-absolute {
+			left: 0;
 			position: absolute;
 			top: 0;
 		}
@@ -159,4 +160,50 @@
 
 .card-row-padded {
 	padding: $card-gutter-width;
+}
+
+// Card Skins
+
+.card-dm {
+	overflow: visible;
+
+	.card-footer {
+		padding: 10px 0;
+	}
+}
+
+.card-dm-details {
+	margin-left: $card-gutter-width;
+	margin-top: 3px;
+	overflow: hidden;
+	text-align: left;
+}
+
+.card-dm-text {
+	color: $text-color;
+
+	@include text-overflow;
+}
+
+.card-dm-text-large {
+	@extend .card-dm-text;
+
+	font-size: $font-size-large;
+	font-weight: $headings-font-weight;
+}
+
+.card-dm-text-small {
+	@extend .card-dm-text;
+
+	font-size: $font-size-small;
+}
+
+.card-dm-more-options {
+	display: block;
+	float: right;
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
 }
