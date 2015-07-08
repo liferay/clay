@@ -31,6 +31,11 @@
 	@include transform(translateY(-50%));
 }
 
+.aspect-ratio-right img {
+	left: auto;
+	right: 0;
+}
+
 .aspect-ratio-top img {
 	bottom: auto;
 	top: 0;
