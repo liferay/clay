@@ -17,7 +17,21 @@
 	width: auto;
 }
 
-.aspect-ratio.align-top img {
+.aspect-ratio-center img {
+	left: 50%;
+	right: auto;
+
+	@include transform(translateX(-50%));
+}
+
+.aspect-ratio-middle img {
+	bottom: auto;
+	top: 50%;
+
+	@include transform(translateY(-50%));
+}
+
+.aspect-ratio-top img {
 	bottom: auto;
 	top: 0;
 }
