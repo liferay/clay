@@ -9923,6 +9923,7 @@ button.close {
  * @param $on-color - Switch button on icon font color
  */
 .aspect-ratio {
+  display: block;
   overflow: hidden;
   position: relative;
   padding-bottom: 100%;
