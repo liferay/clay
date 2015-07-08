@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Images and Thumbnails</title>
+	<title>Lexicon - Images, Thumbnails, and Aspect Ratios</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
@@ -87,7 +87,7 @@ collapse
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/alerts">Alerts</a>
 </li>
-<li class=""><a href="../../content/badges-and-labels">Badges and Labels</a>
+<li class=""><a href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
 </li>
 <li class=""><a href="../../content/breadcrumbs">Breadcrumbs</a>
 </li>
@@ -169,7 +169,7 @@ collapse in
 </li>
 <li class=""><a href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
-<li class="active"><a href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+<li class="active"><a href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
 <li class=""><a href="../../content/tables">Tables</a>
 </li>
@@ -251,7 +251,7 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			Images and Thumbnails
+			Images, Thumbnails, and Aspect Ratios
 
 			
 		</h1>
@@ -326,8 +326,6 @@ collapse
 			<p>Sometimes you can't control the size of an image, define a specific size for your images with aspect-ratios. The base class <code>aspect-ratio</code> maintains a 1 to 1 ratio relative to its container's width, add class <code>aspect-ratio-vertical</code> to maintain a 1 to 1 ratio relative to its container's height.</p>
 
 			<p>Use <code>aspect-ratio-3-to-2</code>, <code>aspect-ratio-4-to-3</code>, <code>aspect-ratio-8-to-5</code>, or <code>aspect-ratio-16-to-9</code> to maintain the specific ratio relative to its container or create your own by setting <code>padding-bottom</code> to the ratio you want e.g. 2 to 1 <code>.aspect-ratio-2-to-1 { padding-bottom: 50% }</code>.</p>
-
-			<p>Add class <code>align-top</code> with <code>aspect-ratio</code> to align it on the top.</p>
 		</blockquote>
 	</div>
 </div>
@@ -498,6 +496,30 @@ collapse
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Images inside <code>aspect-ratio</code> are aligned bottom by default. Use class <code>aspect-ratio-top</code> or <code>aspect-ratio-middle</code> to align top or vertically center, respectively.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio">
+			<img alt="thumbnail" src="../../images/thumbnail_graph1.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-top">
+			<img alt="thumbnail" src="../../images/thumbnail_graph1.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-middle">
+			<img alt="thumbnail" src="../../images/thumbnail_graph2.png">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
 		<h5>Vertical 1:1 Aspect Ratio with Varying Image Sizes</h5>
 	</div>
 	<div class="col-md-4 col-xs-4">
@@ -513,6 +535,30 @@ collapse
 	<div class="col-md-4 col-xs-4">
 		<div class="aspect-ratio aspect-ratio-vertical">
 			<img alt="thumbnail" src="../../images/thumbnail_graph2.png">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Images inside <code>aspect-ratio-vertical</code> are aligned left by default. Use class <code>aspect-ratio-right</code> or <code>aspect-ratio-center</code> to align right or horizontally center, respectively.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical">
+			<img alt="thumbnail" src="../../images/switch_components.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-right ">
+			<img alt="thumbnail" src="../../images/switch_components.png">
+		</div>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-center">
+			<img alt="thumbnail" src="../../images/switch_components.png">
 		</div>
 	</div>
 </div>
