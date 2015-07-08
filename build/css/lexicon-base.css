@@ -7805,6 +7805,11 @@ button.close {
   }
 }
 
+/**
+ * Calculates and sets aspect ratio
+ * @param $width - width
+ * @param $height - height
+ */
 .card-row [class*="card-col"], .equal-height-column-cell, .nameplate-checkbox,
 .nameplate-icon,
 .nameplate-field, .nameplate-content {
@@ -7822,11 +7827,6 @@ button.close {
   width: 100%;
 }
 
-/**
- * Calculates and sets aspect ratio in thumbnails.scss
- * @param $width - width
- * @param $height - height
- */
 /**
  * Calculates text-indent of data-label-on and data-label-off
  * @param $toggle-switch-width - Width of switch bar
@@ -7856,10 +7856,74 @@ button.close {
  * @param $off-color - Switch button off icon font color
  * @param $on-color - Switch button on icon font color
  */
+.aspect-ratio {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.aspect-ratio img {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.aspect-ratio.aspect-ratio-vertical img {
+  height: 100%;
+  width: auto;
+}
+
+.aspect-ratio-center img {
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.aspect-ratio-middle img {
+  bottom: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.aspect-ratio-right img {
+  left: auto;
+  right: 0;
+}
+
+.aspect-ratio-top img {
+  bottom: auto;
+  top: 0;
+}
+
+.aspect-ratio-3-to-2 {
+  padding-bottom: 66.66667%;
+}
+
+.aspect-ratio-4-to-3 {
+  padding-bottom: 75%;
+}
+
+.aspect-ratio-8-to-5 {
+  padding-bottom: 62.5%;
+}
+
+.aspect-ratio-16-to-9 {
+  padding-bottom: 56.25%;
+}
+
 .badge .icon-monospaced {
-  height: 12px;
-  line-height: 12px;
-  width: 12px;
+  height: 26px;
+  line-height: 26px;
+  width: 26px;
 }
 
 .badge-lg {
@@ -7872,9 +7936,9 @@ button.close {
 
 .badge-lg .icon-monospaced {
   margin-right: -9px;
-  height: 28px;
-  line-height: 28px;
-  width: 28px;
+  height: 44px;
+  line-height: 44px;
+  width: 44px;
 }
 
 .badge-sm {
@@ -7885,9 +7949,9 @@ button.close {
 }
 
 .badge-sm .icon-monospaced {
-  height: 12px;
-  line-height: 12px;
-  width: 12px;
+  height: 22px;
+  line-height: 22px;
+  width: 22px;
 }
 
 .badge-absolute {
@@ -7914,22 +7978,22 @@ button.close {
 
 .badge-monospaced {
   border-radius: 100px;
-  height: 18px;
-  line-height: 18px;
-  width: 18px;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
   padding: 0;
 }
 
 .badge-monospaced.badge-lg {
-  height: 28px;
-  line-height: 28px;
-  width: 28px;
+  height: 44px;
+  line-height: 44px;
+  width: 44px;
 }
 
 .badge-monospaced.badge-sm {
-  height: 12px;
-  line-height: 12px;
-  width: 12px;
+  height: 22px;
+  line-height: 22px;
+  width: 22px;
 }
 
 .badge a {
@@ -7942,23 +8006,23 @@ button.close {
   text-decoration: none;
 }
 
-.badge-danger {
+.badge-danger, .sticker-danger {
   background-color: #d9534f;
 }
 
-.badge-info {
+.badge-info, .sticker-info {
   background-color: #5bc0de;
 }
 
-.badge-primary {
+.badge-primary, .sticker-primary {
   background-color: #337ab7;
 }
 
-.badge-success {
+.badge-success, .sticker-success {
   background-color: #5cb85c;
 }
 
-.badge-warning {
+.badge-warning, .sticker-warning {
   background-color: #f0ad4e;
 }
 
@@ -10455,6 +10519,75 @@ figcaption,
   }
 }
 
+.sticker {
+  color: #fff;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  font-size: 14px;
+  left: 15px;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+}
+
+.sticker-bottom {
+  bottom: 15px;
+  top: auto;
+}
+
+.sticker-right {
+  left: auto;
+  right: 15px;
+}
+
+.sticker-outside {
+  left: -15px;
+  top: -15px;
+}
+
+.sticker-outside.sticker-bottom {
+  bottom: -15px;
+  top: auto;
+}
+
+.sticker-outside.sticker-right {
+  left: auto;
+  right: -15px;
+}
+
+.sticker-sm {
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+  width: 22px;
+}
+
+.sticker-lg {
+  font-size: 18px;
+  height: 44px;
+  line-height: 44px;
+  width: 44px;
+}
+
+.sticker-circle {
+  border-radius: 100px;
+}
+
+.sticker-rounded {
+  border-radius: 4px;
+}
+
+.sticker-square {
+  border-radius: 0;
+}
+
+.sticker-default {
+  background-color: #777777;
+}
+
 /* ---------- Tables --------- */
 .table-responsive {
   overflow-x: auto;
@@ -10569,45 +10702,6 @@ figcaption,
   .table-responsive-flip .table > thead {
     max-width: 100px;
   }
-}
-
-.aspect-ratio {
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 100%;
-}
-
-.aspect-ratio img {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-
-.aspect-ratio.aspect-ratio-vertical img {
-  height: 100%;
-  width: auto;
-}
-
-.aspect-ratio.align-top img {
-  bottom: auto;
-  top: 0;
-}
-
-.aspect-ratio-3-to-2 {
-  padding-bottom: 66.66667%;
-}
-
-.aspect-ratio-4-to-3 {
-  padding-bottom: 75%;
-}
-
-.aspect-ratio-8-to-5 {
-  padding-bottom: 62.5%;
-}
-
-.aspect-ratio-16-to-9 {
-  padding-bottom: 56.25%;
 }
 
 .toolbar:before,
