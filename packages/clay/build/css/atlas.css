@@ -10420,6 +10420,10 @@ figcaption,
   padding-top: 5px;
 }
 
+.product-menu .sidebar-header .sidenav-close {
+  float: right;
+}
+
 .product-menu-tabs {
   margin-left: 24px;
   margin-right: 24px;
@@ -10442,6 +10446,21 @@ figcaption,
   width: 0.9em;
 }
 
+.product-menu-tabs .sticker {
+  left: 5px;
+  top: 3px;
+}
+
+.product-menu-tabs .sticker-bottom {
+  bottom: 3px;
+  top: auto;
+}
+
+.product-menu-tabs .sticker-right {
+  left: auto;
+  right: 5px;
+}
+
 .sidebar-default {
   background-color: #F5F8FA;
   border-left: 1px solid #DFE0E3;
@@ -10453,24 +10472,24 @@ figcaption,
 
 .sidebar-inverse {
   background-color: #1F282E;
-  color: #FFF;
+  color: #869CAD;
 }
 
 .sidebar-inverse .sidebar-footer a,
 .sidebar-inverse .sidebar-header a {
-  color: #869CAD;
+  color: #FFF;
 }
 
 .sidebar-inverse .sidebar-footer a:focus,
 .sidebar-inverse .sidebar-footer a:hover,
 .sidebar-inverse .sidebar-header a:focus,
 .sidebar-inverse .sidebar-header a:hover {
-  color: #869CAD;
+  color: #FFF;
   text-decoration: none;
 }
 
 .sidebar-inverse .sidebar-panel {
-  background-color: #869CAD;
+  background-color: #1B2228;
 }
 
 .container-fluid-1280.sidenav-container {
@@ -15263,6 +15282,44 @@ a.list-group-heading:hover {
   color: #869CAD;
 }
 
+@media screen and (min-width: 768px) {
+  .product-menu .sidebar-body {
+    bottom: 80px;
+    top: 233px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu .sidebar-footer {
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu .sidebar-header {
+    padding: 24px;
+  }
+}
+
+.product-menu .sidebar-header-logo {
+  margin-right: 10px;
+}
+
+.product-menu .user-icon {
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu .user-icon {
+    height: 48px;
+    line-height: 48px;
+    width: 48px;
+  }
+}
+
 .product-menu .list-group-heading,
 .product-menu .list-group-item, .product-menu .list-group-heading {
   padding-left: 10px;
@@ -15291,8 +15348,31 @@ a.list-group-heading:hover {
   margin-top: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .product-menu-tab-icon {
+    height: 60px;
+    line-height: 60px;
+  }
+  .product-menu-tab-icon .icon-monospaced {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu-tab-text {
+    line-height: 60px;
+  }
+}
+
 .product-menu-tabs {
   border-bottom-width: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu-tabs {
+    margin: 0;
+    padding: 16px 24px;
+  }
 }
 
 .product-menu-tabs > li > a {
@@ -15300,11 +15380,10 @@ a.list-group-heading:hover {
   padding: 10px 0;
 }
 
-.product-menu-tabs .badge-monospaced {
-  border-radius: 4px;
-  position: absolute;
-  right: 5px;
-  top: 0;
+@media screen and (min-width: 768px) {
+  .product-menu-tabs > li > a {
+    padding: 0;
+  }
 }
 
 .product-menu .sidebar-header {
@@ -15318,6 +15397,15 @@ a.list-group-heading:hover {
 .product-menu .sidebar-header a:focus,
 .product-menu .sidebar-header a:hover {
   color: #FFF;
+}
+
+.product-menu .sidebar-header-logo {
+  background-color: #65B6F0;
+  border-radius: 4px;
+}
+
+.product-menu small {
+  color: #394956;
 }
 
 .product-menu .list-group {
@@ -15334,6 +15422,31 @@ a.list-group-heading:hover {
   background-color: transparent;
 }
 
+.product-menu .list-group-heading,
+.product-menu .list-group-heading:focus,
+.product-menu .list-group-heading:hover {
+  color: #FFF;
+}
+
+.product-menu .list-group-heading small {
+  color: #FFF;
+}
+
+.product-menu .list-group-heading.collapsed {
+  color: #869CAD;
+}
+
+.product-menu .list-group-heading.collapsed small {
+  color: #394956;
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu-tab-icon {
+    background-color: #1C252C;
+    border-radius: 4px;
+  }
+}
+
 .product-menu-tabs > li.active > a,
 .product-menu-tabs > li.active > a:focus,
 .product-menu-tabs > li.active > a:hover {
@@ -15342,17 +15455,44 @@ a.list-group-heading:hover {
   color: #FFF;
 }
 
+@media screen and (min-width: 768px) {
+  .product-menu-tabs > li.active > a,
+  .product-menu-tabs > li.active > a:focus,
+  .product-menu-tabs > li.active > a:hover {
+    background-color: transparent;
+  }
+}
+
 .product-menu-tabs > li > a {
-  background-color: #1A242A;
+  background-color: #1C252C;
   border-radius: 4px;
   color: #869CAD;
 }
 
+@media screen and (min-width: 768px) {
+  .product-menu-tabs > li > a {
+    background-color: transparent;
+  }
+}
+
 .product-menu-tabs > li > a:focus,
 .product-menu-tabs > li > a:hover {
-  background-color: #1A242A;
+  background-color: #1C252C;
   border-color: transparent;
   color: #869CAD;
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu-tabs > li > a:focus,
+  .product-menu-tabs > li > a:hover {
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu-tabs > .active .product-menu-tab-icon {
+    background-color: #869CAD;
+  }
 }
 
 .slider-container {

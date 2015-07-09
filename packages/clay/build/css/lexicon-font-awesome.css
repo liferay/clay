@@ -12456,6 +12456,10 @@ figcaption,
   padding-top: 5px;
 }
 
+.product-menu .sidebar-header .sidenav-close {
+  float: right;
+}
+
 .product-menu-tabs {
   margin-left: 24px;
   margin-right: 24px;
@@ -12476,6 +12480,21 @@ figcaption,
 .product-menu-tab-icon .icon-monospaced {
   height: 0.9em;
   width: 0.9em;
+}
+
+.product-menu-tabs .sticker {
+  left: 5px;
+  top: 3px;
+}
+
+.product-menu-tabs .sticker-bottom {
+  bottom: 3px;
+  top: auto;
+}
+
+.product-menu-tabs .sticker-right {
+  left: auto;
+  right: 5px;
 }
 
 .sidebar-default {
