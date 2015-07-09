@@ -97,6 +97,10 @@
 .product-menu .sidebar-header {
 	padding-bottom: 5px;
 	padding-top: 5px;
+
+	.sidenav-close {
+		float: right;
+	}
 }
 
 .product-menu-tabs {
@@ -120,6 +124,23 @@
 	.icon-monospaced {
 		height: 0.9em;
 		width: 0.9em;
+	}
+}
+
+.product-menu-tabs {
+	.sticker {
+		left: 5px;
+		top: 3px;
+	}
+
+	.sticker-bottom {
+		bottom: 3px;
+		top: auto;
+	}
+
+	.sticker-right {
+		left: auto;
+		right: 5px;
 	}
 }
 
