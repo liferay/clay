@@ -5,16 +5,29 @@ $sidebar-default-border: #DFE0E3 !default; // Shared
 $sidebar-default-color: $navbar-default-color !default; // Shared
 $sidebar-default-panel-bg: #DFE6EB !default;
 
-$sidebar-inverse-bg: #1F282E !default; // Shared
-$sidebar-inverse-border: $navbar-inverse-border !default; // Shared
-$sidebar-inverse-color: #FFF !default; // Shared
-$sidebar-inverse-link-color: $brand-default !default; // Shared
+$sidebar-inverse-bg: $inverse-bg !default; // Shared
+$sidebar-inverse-border: $inverse-border !default; // Shared
+$sidebar-inverse-color: $inverse-color !default; // Shared
+$sidebar-inverse-link-color: $inverse-link-color !default; // Shared
 $sidebar-inverse-link-hover-color: $sidebar-inverse-link-color !default; // Shared
-$sidebar-inverse-panel-bg: $brand-default !default; // Shared
+$sidebar-inverse-panel-bg: $inverse-header-bg !default; // Shared
 
-$sidebar-inverse-input-bg: #1B2228 !default; // Atlas
+$sidebar-inverse-input-bg: $inverse-header-bg !default; // Atlas
 
-$product-menu-header-bg: #1B2228 !default; // Atlas
-$product-menu-header-color: #FFF !default; // Atlas
-$product-menu-header-link-color: #FFF !default; // Atlas
-$product-menu-header-link-hover-color: #FFF !default; // Atlas
+$product-menu-header-bg: $inverse-header-bg !default; // Atlas
+$product-menu-header-color: $inverse-header-color !default; // Atlas
+$product-menu-header-link-color: $inverse-link-color !default; // Atlas
+$product-menu-header-link-hover-color: $inverse-link-hover-color !default; // Atlas
+
+$product-menu-header-logo-bg: $brand-primary !default; // Atlas
+
+$product-menu-tabs-bg: $inverse-hover-bg !default; // Atlas
+$product-menu-tabs-color: $inverse-hover-color!default; // Atlas
+
+$product-menu-tabs-active-bg: $inverse-active-bg !default; // Atlas
+$product-menu-tabs-active-border: transparent !default; // Atlas
+$product-menu-tabs-active-color: $inverse-active-color !default; // Atlas
+
+$product-menu-tabs-hover-bg: $inverse-hover-bg !default; // Atlas
+$product-menu-tabs-hover-border: transparent !default; // Atlas
+$product-menu-tabs-hover-color: $inverse-hover-color !default; // Atlas

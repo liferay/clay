@@ -42,6 +42,40 @@
 
 // Sidebar Product Menu
 
+.product-menu .sidebar-body {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		bottom: 80px;
+		top: 233px;
+	}
+}
+
+.product-menu .sidebar-footer {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding-bottom: 16px;
+		padding-top: 16px;
+	}
+}
+
+.product-menu .sidebar-header {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding: 24px;
+	}
+}
+
+.product-menu .sidebar-header-logo {
+	margin-right: 10px;
+}
+
+.product-menu {
+	.user-icon {
+		@include monospace(32px);
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			@include monospace(48px);
+		}
+	}
+}
+
 .product-menu {
 	.list-group-heading,
 	.list-group-item {
@@ -69,40 +103,66 @@
 	}
 }
 
+.product-menu-tab-icon {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		height: 60px;
+		line-height: 60px;
+
+		.icon-monospaced {
+			font-size: 24px;
+		}
+	}
+}
+
+.product-menu-tab-text {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		line-height: 60px;
+	}
+}
+
 .product-menu-tabs {
 	border-bottom-width: 0;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		margin: 0;
+		padding: 16px 24px;
+	}
 
 	> li > a {
 		font-size: 12px;
 		padding: 10px 0;
-	}
 
-	.badge-monospaced {
-		border-radius: 4px;
-		position: absolute;
-		right: 5px;
-		top: 0;
+		@media screen and (min-width: $grid-float-breakpoint) {
+			padding: 0;
+		}
 	}
 }
 
 // Product Menu Skins
 
-.product-menu {
-	.sidebar-header {
-		background-color: $product-menu-header-bg;
+.product-menu .sidebar-header {
+	background-color: $product-menu-header-bg;
 
-		a {
-			color: $product-menu-header-link-color;
+	a {
+		color: $product-menu-header-link-color;
 
-			&:focus,
-			&:hover {
-				color: $product-menu-header-link-hover-color;
-			}
+		&:focus,
+		&:hover {
+			color: $product-menu-header-link-hover-color;
 		}
 	}
 }
 
+.product-menu .sidebar-header-logo {
+	background-color: $product-menu-header-logo-bg;
+	border-radius: $border-radius-default;
+}
+
 .product-menu {
+	small {
+		color: $inverse-disabled-color;
+	}
+
 	.list-group {
 		box-shadow: none;
 	}
@@ -116,33 +176,74 @@
 	.list-group-item {
 		background-color: transparent;
 	}
+
+	.list-group-heading {
+		&,
+		&:focus,
+		&:hover {
+			color: $inverse-active-color;
+		}
+
+		small {
+			color: $inverse-active-color;
+		}
+
+		&.collapsed {
+			color: $inverse-color;
+
+			small {
+				color: $inverse-disabled-color;
+			}
+		}
+	}
+}
+
+.product-menu-tab-icon {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		background-color: $product-menu-tabs-bg;
+		border-radius: $border-radius-default;
+	}
 }
 
 .product-menu-tabs {
-	> li {
-		&.active {
-			> a {
-				&,
-				&:focus,
-				&:hover {
-					background-color: $brand-default;
-					border-color: transparent;
-					color: #FFF;
-				}
+	> li.active > a {
+		&,
+		&:focus,
+		&:hover {
+			background-color: $product-menu-tabs-active-bg;
+			border-color: $product-menu-tabs-active-border;
+			color: $product-menu-tabs-active-color;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: transparent;
 			}
 		}
+	}
 
-		> a {
-			background-color: #1A242A;
-			border-radius: $border-radius-base;
-			color: $brand-default;
+	> li > a {
+		background-color: $product-menu-tabs-bg;
+		border-radius: $border-radius-base;
+		color: $product-menu-tabs-color;
 
-			&:focus,
-			&:hover {
-				background-color: #1A242A;
-				border-color: transparent;
-				color: $brand-default;
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: transparent;
+		}
+
+		&:focus,
+		&:hover {
+			background-color: $product-menu-tabs-hover-bg;
+			border-color: $product-menu-tabs-hover-border;
+			color: $product-menu-tabs-hover-color;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: transparent;
 			}
+		}
+	}
+
+	> .active .product-menu-tab-icon {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: $product-menu-tabs-active-bg;
 		}
 	}
 }
