@@ -11,7 +11,7 @@
 				'resize',
 				debounce(
 					function(event) {
-						doc.trigger('screenChange.lexicon.sidenav', window.innerWidth);
+						doc.trigger('screenChange.lexicon.sidenav');
 					},
 					150
 				)
@@ -341,11 +341,10 @@
 
 			var breakpoint = toInt(instance.options.breakpoint);
 
-			doc.on('screenChange.lexicon.sidenav', function(event, winWidth) {
-				var desktop = winWidth >= breakpoint;
+			instance._setScreenSize();
 
-				instance.mobile = !desktop;
-				instance.desktop = desktop;
+			doc.on('screenChange.lexicon.sidenav', function(event, winWidth) {
+				instance._setScreenSize();
 
 				var type = desktop ? instance.options.type : instance.options.typeMobile;
 
@@ -462,7 +461,16 @@
 			}
 
 			options.width = width;
-		}
+		},
+
+		_setScreenSize: function() {
+			var instance = this;
+
+			var desktop = window.innerWidth >= instance.options.breakpoint;
+
+			instance.mobile = !desktop;
+			instance.desktop = desktop;
+		},
 	};
 
 	var old = $.fn.sideNavigation;
