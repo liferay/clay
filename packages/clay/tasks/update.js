@@ -51,14 +51,11 @@ module.exports = function(gulp, plugins, _, config) {
 						.pipe(filter.restore())
 						.pipe(plugins.debug())
 						.pipe(gulp.dest('./src/'));
-
-						// done();
 					}
+
+					done();
 				}
 			);
-			return gulp.src('./release')
-			// .pipe(plugins.debug())
-			;
 		}
 	);
 
