@@ -51,6 +51,10 @@
 	@include color-btn-active($btn-danger-active-bg, $btn-danger-active-border);
 }
 
+.btn-link {
+	@include button-variant($link-color, transparent, transparent);
+}
+
 .btn-lg {
 	@include button-size($btn-lg-padding-vertical, $btn-lg-padding-horizontal, $btn-lg-font-size, $btn-line-height, $btn-lg-border-radius);
 }
