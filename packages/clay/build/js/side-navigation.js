@@ -191,6 +191,10 @@
 		setEqualHeight: function(container) {
 			var instance = this;
 
+			if (!instance.equalHeight) {
+				return;
+			}
+
 			var options = instance.options;
 
 			var content = options.content;
@@ -503,21 +507,23 @@
 
 	/**
 	 * Plugin options
-	 * @property {String|Number}  breakpoint  The window width that defines the desktop size
-	 * @property {String} 		  content 	  The class or ID of the content container
-	 * @property {String|Number}  gutter 	  The space between the sidenav-slider and the sidenav-content
-	 * @property {String} 		  navigation  The class or ID of the navigation container
-	 * @property {String} 		  position 	  The position of tge sidenav-slider. Possible values: left, right
-	 * @property {String} 		  toggler 	  The class or ID of the toggle button
-	 * @property {String} 		  type 		  The type of sidenav in desktop. Possible values: relative, fixed, fixed-push
-	 * @property {String} 		  typeMobile  The type of sidenav in mobile. Possible values: relative, fixed, fixed-push
-	 * @property {String|Number}  width 	  The width of the side navigation
+	 * @property {String|Number}  breakpoint  The window width that defines the desktop size.
+	 * @property {String}         content     The class or ID of the content container.
+	 * @property {String|Number}  gutter      The space between the sidenav-slider and the sidenav-content.
+	 * @property {String|Boolean} equalHeight The height of content and navigation should be equal.
+	 * @property {String}         navigation  The class or ID of the navigation container.
+	 * @property {String}         position    The position of the sidenav-slider. Possible values: left, right
+	 * @property {String}         toggler     The class or ID of the toggle button.
+	 * @property {String}         type        The type of sidenav in desktop. Possible values: relative, fixed, fixed-push
+	 * @property {String}         typeMobile  The type of sidenav in mobile. Possible values: relative, fixed, fixed-push
+	 * @property {String|Number}  width       The width of the side navigation.
 	 */
 
 	Plugin.defaults = {
 		breakpoint: 768,
 		content: '.sidenav-content',
 		gutter: '15px',
+		equalHeight: true,
 		navigation: '.sidenav-menu-slider',
 		position: 'left',
 		toggler: '.sidenav-toggler',
