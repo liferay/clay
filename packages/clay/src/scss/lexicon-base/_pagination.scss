@@ -56,7 +56,7 @@
 
 	&.pagination,
 	.pagination {
-		@include pagination-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $border-radius-large);
+		@include pagination-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
 	}
 }
 
@@ -72,7 +72,7 @@
 
 	&.pagination,
 	.pagination {
-		@include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
+		@include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
 	}
 }
 
