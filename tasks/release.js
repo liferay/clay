@@ -34,7 +34,7 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task(
 		'release:zip',
 		function() {
-			var pkg = require('package.json');
+			var pkg = require('../package.json');
 
 			return gulp.src('release/**/*')
 			.pipe(plugins.zip(pkg.name + '-' + pkg.version + '.zip'))
