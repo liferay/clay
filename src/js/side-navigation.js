@@ -468,7 +468,7 @@
 		_setScreenSize: function() {
 			var instance = this;
 
-			var desktop = window.innerWidth >= instance.options.breakpoint;
+			var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
 
 			instance.mobile = !desktop;
 			instance.desktop = desktop;
