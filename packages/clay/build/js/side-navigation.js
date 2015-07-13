@@ -191,31 +191,29 @@
 		setEqualHeight: function(container) {
 			var instance = this;
 
-			if (!instance.equalHeight) {
-				return;
-			}
+			if (instance.equalHeight) {
+				var options = instance.options;
 
-			var options = instance.options;
+				var content = options.content;
+				var navigation = options.navigation;
 
-			var content = options.content;
-			var navigation = options.navigation;
+				var type = instance.mobile ? options.typeMobile : options.type;
 
-			var type = instance.mobile ? options.typeMobile : options.type;
+				if (type !== 'fixed' && type !== 'fixed-push') {
+					container.each(function(index, node) {
+						node = $(node);
 
-			if (type !== 'fixed' && type !== 'fixed-push') {
-				container.each(function(index, node) {
-					node = $(node);
+						var contentNode = node.find(content).first();
+						var navNode = node.find(navigation).first();
+						var sideNavMenuNode = node.find('.sidenav-menu').first();
 
-					var contentNode = node.find(content).first();
-					var navNode = node.find(navigation).first();
-					var sideNavMenuNode = node.find('.sidenav-menu').first();
+						var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
 
-					var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
-
-					contentNode.css('min-height', tallest);
-					navNode.css('min-height', tallest);
-					sideNavMenuNode.css('min-height', tallest);
-				});
+						contentNode.css('min-height', tallest);
+						navNode.css('min-height', tallest);
+						sideNavMenuNode.css('min-height', tallest);
+					});
+				}
 			}
 		},
 
