@@ -11934,6 +11934,56 @@ mark:before, .mark:before {
   border-color: #993344;
 }
 
+.btn-link {
+  color: #65B6F0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-link:hover,
+.btn-link:focus,
+.btn-link.focus,
+.btn-link:active,
+.btn-link.active,
+.open > .btn-link.dropdown-toggle {
+  color: #65B6F0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-link:active,
+.btn-link.active,
+.open > .btn-link.dropdown-toggle {
+  background-image: none;
+}
+
+.btn-link.disabled,
+.btn-link.disabled:hover,
+.btn-link.disabled:focus,
+.btn-link.disabled.focus,
+.btn-link.disabled:active,
+.btn-link.disabled.active,
+.btn-link[disabled],
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus,
+.btn-link[disabled].focus,
+.btn-link[disabled]:active,
+.btn-link[disabled].active,
+fieldset[disabled] .btn-link,
+fieldset[disabled] .btn-link:hover,
+fieldset[disabled] .btn-link:focus,
+fieldset[disabled] .btn-link.focus,
+fieldset[disabled] .btn-link:active,
+fieldset[disabled] .btn-link.active {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-link .badge {
+  color: transparent;
+  background-color: #65B6F0;
+}
+
 .btn-lg, .btn-group-lg > .btn {
   padding: 12px 36px;
   font-size: 16px;
