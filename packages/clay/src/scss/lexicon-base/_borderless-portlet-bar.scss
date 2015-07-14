@@ -8,15 +8,11 @@
 	@media screen and (min-width: $grid-float-breakpoint) {
 		position: relative;
 
-		@include transition(padding 0.25s ease);
-
 		&.focus,
 		&:hover {
-			padding-top: 40px;
-
 			.portlet-borderless-bar {
 				opacity: 1;
-				top: -20px;
+				top: -40px;
 				z-index: $zindex-popover;
 			}
 		}
