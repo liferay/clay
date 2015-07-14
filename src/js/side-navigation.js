@@ -191,7 +191,7 @@
 		setEqualHeight: function(container) {
 			var instance = this;
 
-			if (instance.equalHeight) {
+			if (instance.options.equalHeight) {
 				var options = instance.options;
 
 				var content = options.content;
