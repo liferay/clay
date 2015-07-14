@@ -1021,6 +1021,26 @@ section.row {
   background-color: #FFF;
 }
 
+#headerTopBar .uxgl-site-config {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  #headerTopBar .uxgl-site-config {
+    top: 3px;
+  }
+}
+
+#headerTopBar .uxgl-site-config .dropdown-menu {
+  width: 240px;
+}
+
+#headerTopBar .uxgl-site-config .dropdown-menu a {
+  color: initial;
+}
+
 .animated-toggle.navbar-toggle .icon-bar {
   position: relative;
   top: 0;
@@ -1032,6 +1052,11 @@ section.row {
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transition-delay: 0s 0s 0.2s 0s;
   transition-delay: 0s 0s 0.2s 0s;
+}
+
+#mainNav > .sidenav-menu {
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .main-nav-open .animated-toggle.navbar-toggle .icon-bar:nth-of-type(even) {
