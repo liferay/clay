@@ -10330,18 +10330,11 @@ button.close {
 @media screen and (min-width: 768px) {
   .portlet-borderless-container {
     position: relative;
-    -webkit-transition: padding 0.25s ease;
-    -o-transition: padding 0.25s ease;
-    transition: padding 0.25s ease;
-  }
-  .portlet-borderless-container.focus,
-  .portlet-borderless-container:hover {
-    padding-top: 40px;
   }
   .portlet-borderless-container.focus .portlet-borderless-bar,
   .portlet-borderless-container:hover .portlet-borderless-bar {
     opacity: 1;
-    top: -20px;
+    top: -40px;
     z-index: 1060;
   }
 }
