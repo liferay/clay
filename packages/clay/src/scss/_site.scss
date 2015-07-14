@@ -57,6 +57,24 @@ section.row {
 			background-color: #FFF;
 		}
 	}
+
+	.uxgl-site-config {
+		position: absolute;
+		right: 15px;
+		top: 5px;
+
+		@media screen and (min-width: 768px) {
+			top: 3px;
+		}
+
+		.dropdown-menu {
+			width: 240px;
+
+			a {
+				color: initial;
+			}
+		}
+	}
 }
 
 .animated-toggle.navbar-toggle .icon-bar {
@@ -67,6 +85,11 @@ section.row {
 	@include transition-duration(0.2s);
 	@include transition-timing-function($ease-in-out-circ);
 	@include transition-delay(0s 0s 0.2s 0s);
+}
+
+#mainNav > .sidenav-menu {
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
 .main-nav-open {
