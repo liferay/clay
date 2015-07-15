@@ -591,22 +591,124 @@
   }
 }
 
-/* -------- Modal Page -------- */
-#modalDisplays .modal-dialog {
-  margin: 0 0 30px 0;
+.modal-footer {
+  box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
-#modalDisplays .modal-lg {
-  max-width: 900px;
-  width: 100%;
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
-#openModals {
-  margin: 0 0 30px 0;
+.modal-content {
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 }
 
-#openModals .btn {
-  margin-bottom: 5px;
+@media screen and (min-width: 768px) {
+  .modal-content {
+    border-radius: 4px;
+  }
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-header .close {
+  color: #333333;
+  height: 1.42857;
+  line-height: 1.42857;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  overflow: hidden;
+  text-shadow: none;
+  width: 1.42857;
+}
+
+.modal-header .close span {
+  display: block;
+  font-size: 30px;
+  margin-top: -6px;
+  position: relative;
+}
+
+.modal-title {
+  font-size: 19px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+h1.modal-title {
+  font-size: 36px;
+}
+
+h2.modal-title {
+  font-size: 30px;
+}
+
+h3.modal-title {
+  font-size: 24px;
+}
+
+h4.modal-title {
+  font-size: 18px;
+}
+
+h5.modal-title {
+  font-size: 14px;
+}
+
+h6.modal-title {
+  font-size: 12px;
+}
+
+.modal-full-screen .modal-body {
+  background-color: transparent;
+  top: 52px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-full-screen .modal-body {
+    background-color: transparent;
+    bottom: 80px;
+    top: 61px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-full-screen .modal-content {
+    border-radius: 4px;
+  }
+}
+
+.modal-full-screen .modal-footer {
+  background-color: transparent;
+  border-bottom-width: 0;
+  color: #333333;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-full-screen .modal-footer {
+    background-color: transparent;
+    color: #333333;
+  }
+}
+
+.modal-full-screen .modal-header {
+  border-color: #e5e5e5;
+}
+
+.modal-full-screen .modal-title {
+  line-height: 1.42857;
+}
+
+.modal-inverse.modal-full-screen .modal-body {
+  background-color: transparent;
 }
 
 .notifications-demo-container {
@@ -1210,6 +1312,23 @@ body.fixed {
 .uxgl-extending-nameplates .profile-header {
   float: left;
   margin-bottom: 15px;
+}
+
+#modalDisplays .modal-dialog {
+  margin: 0 0 30px 0;
+}
+
+#modalDisplays .modal-lg {
+  max-width: 900px;
+  width: 100%;
+}
+
+#modalsDemo {
+  margin: 0 0 30px 0;
+}
+
+#modalsDemo > .btn {
+  margin-bottom: 5px;
 }
 
 .uxgl-switches:before,
