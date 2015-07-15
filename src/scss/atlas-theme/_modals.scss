@@ -1,5 +1,4 @@
 .modal-footer {
-	border-top-width: 0;
 	box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15);
 	position: relative;
 }
@@ -17,14 +16,59 @@
 }
 
 .modal-header {
-	padding: 12px;
 	text-align: center;
 
 	.close {
 		color: $modal-header-close-color;
+		height: $modal-title-line-height;
+		line-height: $modal-title-line-height;
+		margin-left: 0;
+		margin-top: 0;
 
-		@include opacity(0.8);
+		@include opacity(1);
+
+		overflow: hidden;
+		text-shadow: none;
+		width: $modal-title-line-height;
+
+		span {
+			display: block;
+			font-size: 30px;
+			margin-top: -6px;
+			position: relative;
+		}
 	}
+}
+
+.modal-title {
+	font-size: 19px;
+	font-weight: 500;
+
+	@include text-overflow;
+}
+
+h1.modal-title {
+	font-size: $font-size-h1;
+}
+
+h2.modal-title {
+	font-size: $font-size-h2;
+}
+
+h3.modal-title {
+	font-size: $font-size-h3;
+}
+
+h4.modal-title {
+	font-size: $font-size-h4;
+}
+
+h5.modal-title {
+	font-size: $font-size-h5;
+}
+
+h6.modal-title {
+	font-size: $font-size-h6;
 }
 
 // Modal Full Screen
@@ -32,12 +76,12 @@
 .modal-full-screen {
 	.modal-body {
 		background-color: $modal-full-screen-body-bg;
-		top: 48px;
+		top: 52px;
 
 		@media screen and (min-width: $grid-float-breakpoint) { // min-width: 768px
 			background-color: $modal-full-screen-desktop-body-bg;
 			bottom: 80px;
-			top: 60px;
+			top: 61px;
 		}
 	}
 
@@ -49,70 +93,28 @@
 
 	.modal-footer {
 		background-color: $modal-full-screen-footer-bg;
-		border-width: 0;
+		border-bottom-width: 0;
 		color: $modal-full-screen-footer-color;
 
 		@media screen and (min-width: $grid-float-breakpoint) { // min-width: 768px
-			background-color: $modal-full-screen-footer-desktop-bg;
-			color: $modal-full-screen-footer-desktop-color;
-		}
-
-		.modal-title {
-			font-size: 19px;
-			line-height: 32px;
-			overflow: hidden;
-			text-align: center;
-			text-overflow: ellipsis;
-			white-space: nowrap;
+			background-color: $modal-full-screen-desktop-footer-bg;
+			color: $modal-full-screen-desktop-footer-color;
 		}
 	}
 
 	.modal-header {
-		border-color: #E4E6E8;
+		border-color: $modal-header-border-color;
+	}
 
-		@media screen and (min-width: $grid-float-breakpoint) { // min-width: 768px
-			&,
-			.modal-title {
-				font-size: 19px;
-				line-height: 35px;
-				text-align: center;
-			}
-
-			.close-modal {
-				font-size: 19px;
-				margin-top: 5px;
-			}
-		}
+	.modal-title {
+		line-height: $modal-title-line-height;
 	}
 }
 
-.modal-btn-icon {
-	@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
-		border-width: 0;
-		height: 32px;
-		width: 32px;
+// Modal Inverse
 
-		&:before {
-			height: 32px;
-			line-height: 32px;
-			width: 32px;
-		}
-
-		&:focus,
-		&:hover {
-			background-color: transparent;
-			border-width: 0;
-			text-decoration: none;
-		}
-	}
-}
-
-@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
-	.modal-full-screen {
-		.modal-footer {
-			.btn {
-				padding: 4px 8px;
-			}
-		}
+.modal-inverse.modal-full-screen {
+	.modal-body {
+		background-color: $modal-inverse-body-bg;
 	}
 }
