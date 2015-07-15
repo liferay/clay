@@ -263,6 +263,27 @@ body.fixed {
 	}
 }
 
+// Modals Page
+
+#modalDisplays {
+	.modal-dialog {
+		margin: 0 0 30px 0;
+	}
+
+	.modal-lg {
+		max-width: 900px;
+		width: 100%;
+	}
+}
+
+#modalsDemo {
+	margin: 0 0 30px 0;
+
+	> .btn {
+		margin-bottom: 5px;
+	}
+}
+
 // Switches Page
 .uxgl-switches {
 	@include clearfix;
