@@ -17457,12 +17457,14 @@ a.list-group-heading:hover {
   line-height: 32px;
 }
 
-.pagination-lg.pagination-items-per-page,
+.pagination-lg.pagination-items-per-page a,
 .pagination-lg.pagination-results,
-.pagination-lg .pagination-items-per-page,
+.pagination-lg .pagination-items-per-page a,
 .pagination-lg .pagination-results {
   font-size: 18px;
   line-height: 44px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .pagination-lg.pagination > li > a,
@@ -17476,12 +17478,14 @@ a.list-group-heading:hover {
   width: 44px;
 }
 
-.pagination-sm.pagination-items-per-page,
+.pagination-sm.pagination-items-per-page a,
 .pagination-sm.pagination-results,
-.pagination-sm .pagination-items-per-page,
+.pagination-sm .pagination-items-per-page a,
 .pagination-sm .pagination-results {
   font-size: 12px;
   line-height: 24px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .pagination-sm.pagination > li > a,

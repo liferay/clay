@@ -769,6 +769,10 @@ html {
   overflow-x: hidden;
 }
 
+.modal-open #wrapper {
+  -webkit-overflow-scrolling: auto;
+}
+
 #mainContent {
   display: block;
   position: relative;
