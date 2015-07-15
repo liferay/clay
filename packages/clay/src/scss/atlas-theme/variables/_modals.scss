@@ -1,7 +1,8 @@
 // Structure
 
 $modal-inner-padding:                            16px 24px !default;
-$modal-title-padding:                            $modal-inner-padding !default;
+$modal-title-padding:                            12px !default;
+$modal-title-line-height:                        36px !default;
 
 // Skin
 
@@ -9,27 +10,43 @@ $modal-border-radius: $border-radius-default !default; // Atlas
 
 $modal-box-shadow: $box-shadow-default !default; // Atlas
 
-$modal-backdrop-opacity:                          0.75 !default;
+$modal-backdrop-opacity:                          0.15 !default;
+
+$modal-content-border-color:                      transparent !default;
+$modal-content-fallback-border-color:             transparent !default;
 
 $modal-header-bg: #FCFEFF !default; // Shared
+$modal-header-border-color:                       #E4E6E8 !default;
 $modal-header-color: $text-color !default; // Shared
-$modal-header-close-color: $text-color !default; // Shared
+$modal-header-close-color: $inverse-color !default; // Shared
 
 $modal-body-bg: #F5F8F8 !default; // Shared
 $modal-body-color: $text-color !default; // Shared
 
 $modal-footer-bg: $modal-header-bg !default; // Shared
+$modal-footer-border-color:                       transparent !default;
 $modal-footer-color: $modal-header-color !default; // Shared
 
 $modal-full-screen-body-bg: #FFF !default; // Shared
-$modal-full-screen-desktop-body-bg: $modal-body-bg !default; // Shared
-
 $modal-full-screen-footer-bg: #29353D !default; // Shared
-$modal-full-screen-footer-desktop-bg: $modal-footer-bg !default; // Shared
 $modal-full-screen-footer-color: #FFF !default; // Shared
-$modal-full-screen-footer-desktop-color: $text-color !default; // Shared
+
+$modal-full-screen-desktop-body-bg: $modal-body-bg !default; // Shared
+$modal-full-screen-desktop-footer-bg: $modal-footer-bg !default; // Shared
+$modal-full-screen-desktop-footer-color: $text-color !default; // Shared
 
 $modal-inverse-body-bg: #111314 !default; // Shared
 $modal-inverse-body-color: #A7A7A7 !default; // Shared
+
+$modal-inverse-content-border-color: $modal-content-border-color !default; // Shared
+
+$modal-inverse-header-bg: $modal-header-bg !default; // Shared
+$modal-inverse-header-border-color: $modal-header-border-color !default; // Shared
+$modal-inverse-header-color: $modal-header-color !default; // Shared
+$modal-inverse-header-close-color: $modal-header-close-color !default; // Shared
+
+$modal-inverse-footer-bg: $modal-inverse-header-bg !default; // Shared
+$modal-inverse-footer-border-color: $modal-inverse-header-border-color !default; // Shared
+$modal-inverse-footer-color: $modal-inverse-header-color !default; // Shared
 
 $modal-btn-icon-color: #FFF !default; // Shared
