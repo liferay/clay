@@ -9612,11 +9612,6 @@ figcaption,
     right: 45px;
     top: 45px;
   }
-  .modal-full-screen .modal-footer-left,
-  .modal-full-screen .modal-footer-right {
-    display: inline-block;
-    float: none;
-  }
 }
 
 .modal-full-screen .modal-body {
@@ -9631,7 +9626,7 @@ figcaption,
 @media screen and (min-width: 768px) {
   .modal-full-screen .modal-body {
     bottom: 65px;
-    top: 56px;
+    top: 65px;
   }
 }
 
@@ -9676,8 +9671,19 @@ figcaption,
     padding: 15px;
     top: auto;
   }
+}
+
+@media screen and (min-width: 768px) {
   .modal-full-screen .modal-footer .modal-title {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-full-screen .modal-footer-left,
+  .modal-full-screen .modal-footer-right {
+    display: inline-block;
+    float: none;
   }
 }
 
@@ -9711,6 +9717,9 @@ figcaption,
   .modal-full-screen .modal-header {
     display: block;
   }
+}
+
+@media screen and (min-width: 768px) {
   .modal-full-screen .modal-header .close {
     margin-top: 0;
   }
@@ -9723,14 +9732,44 @@ figcaption,
   white-space: nowrap;
 }
 
-@media screen and (min-width: 768px) {
-  .modal-full-screen .modal-title {
-    line-height: 1.42857;
+@media screen and (max-width: 767px) {
+  .modal-full-screen .modal-btn-icon {
+    height: 34px;
+    line-height: 34px;
+    width: 34px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
   }
 }
 
-.modal-inverse .close,
-.modal-full-screen.modal-inverse .close {
+@media screen and (max-width: 767px) {
+  .modal-full-screen .modal-btn-icon,
+  .modal-full-screen .modal-btn-icon:active,
+  .modal-full-screen .modal-btn-icon:active:focus,
+  .modal-full-screen .modal-btn-icon:focus,
+  .modal-full-screen .modal-btn-icon:hover {
+    background-color: transparent;
+    border-width: 0;
+    text-decoration: none;
+  }
+}
+
+.modal-full-screen .modal-btn-icon:before {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .modal-full-screen .modal-btn-icon:before {
+    color: #337ab7;
+    display: block;
+    font-family: 'fontawesome-alloy';
+    font-size: 20px;
+  }
+}
+
+.modal-inverse .close {
   color: #9d9d9d;
   text-shadow: 0 1px 0 #090909;
   opacity: 0.5;
@@ -9738,85 +9777,31 @@ figcaption,
 }
 
 .modal-inverse .close:focus,
-.modal-inverse .close:hover,
-.modal-full-screen.modal-inverse .close:focus,
-.modal-full-screen.modal-inverse .close:hover {
+.modal-inverse .close:hover {
   opacity: 1;
   filter: alpha(opacity=100);
 }
 
-.modal-inverse .modal-content,
-.modal-full-screen.modal-inverse .modal-content {
+.modal-inverse .modal-content {
   background-color: #222;
   border-color: #090909;
 }
 
-.modal-inverse .modal-body,
-.modal-full-screen.modal-inverse .modal-body {
+.modal-inverse .modal-body {
   background-color: transparent;
   color: #9d9d9d;
 }
 
-.modal-inverse .modal-header,
-.modal-full-screen.modal-inverse .modal-header {
+.modal-inverse .modal-header {
   background-color: transparent;
   border-color: #090909;
   color: #9d9d9d;
 }
 
-.modal-inverse .modal-footer,
-.modal-full-screen.modal-inverse .modal-footer {
+.modal-inverse .modal-footer {
   background-color: transparent;
   border-color: #090909;
   color: #9d9d9d;
-}
-
-.modal-full-screen.modal-inverse .modal-footer {
-  border-style: solid;
-  border-width: 0 0 1px 0;
-}
-
-@media screen and (min-width: 768px) {
-  .modal-full-screen.modal-inverse .modal-footer {
-    border-width: 1px 0 0 0;
-  }
-}
-
-.modal-btn-icon[class*='icon-']:before {
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .modal-btn-icon {
-    background-color: transparent;
-    border-width: 0;
-    height: 34px;
-    padding: 0;
-    position: relative;
-    text-indent: -9999px;
-    width: 34px;
-  }
-  .modal-btn-icon:before {
-    color: #337ab7;
-    font-family: 'fontawesome-alloy';
-    font-size: 20px;
-    height: 34px;
-    left: 0;
-    line-height: 34px;
-    position: absolute;
-    text-indent: 0;
-    top: 0;
-    width: 34px;
-  }
-  .modal-btn-icon:focus,
-  .modal-btn-icon:hover {
-    background-color: transparent;
-    border-width: 0;
-    text-decoration: none;
-  }
-  .modal-btn-icon[class*='icon-']:before {
-    display: inline;
-  }
 }
 
 .nameplate-checkbox,
