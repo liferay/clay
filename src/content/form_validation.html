@@ -5,7 +5,7 @@ section: Elements
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Validation States</em></h3>
+		<h3>Input Validation States</h3>
 
 		<div class="form-group has-success">
 			<label class="control-label">Input with success</label>
@@ -23,6 +23,33 @@ section: Elements
 			<label class="control-label">Input with error</label>
 			<input class="form-control" type="text">
 			<div class="validation-message">This input is invalid!</div>
+		</div>
+
+		<div class="has-success">
+			<div class="checkbox checkbox-default">
+				<label>
+					<input type="checkbox" id="checkboxSuccess" value="option1">
+					Checkbox with success
+				</label>
+			</div>
+		</div>
+
+		<div class="has-warning">
+			<div class="checkbox checkbox-default">
+				<label>
+					<input type="checkbox" id="checkboxSuccess" value="option1">
+					Checkbox with success
+				</label>
+			</div>
+		</div>
+
+		<div class="has-error">
+			<div class="checkbox checkbox-default">
+				<label>
+					<input type="checkbox" id="checkboxSuccess" value="option1">
+					Checkbox with success
+				</label>
+			</div>
 		</div>
 
 <div class="uxgl-toggle-code">
@@ -43,67 +70,41 @@ section: Elements
 
 <div class="row">
 	<div class="col-md-12">
-		<h3><em>Validation States with Icons</em></h3>
+		<h3>Inputs with Feedback Icons</h3>
 
-		<div class="form-group has-success">
-			<label class="control-label">Input with success icon</label>
-
-			<div class="input-group">
-				<input class="form-control" type="text">
-
-				<div class="input-group-addon">
-					<span class="glyphicon glyphicon-ok"></span>
-				</div>
-			</div>
-
-			<div class="validation-message">This input is a success!</div>
+		<div class="form-group has-feedback">
+			<label class="control-label" for="inputSuccess2">Label <span class="icon-asterisk"></span></label>
+			<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+			<span class="form-control-feedback" aria-hidden="true"><span class="icon-question"></span></span>
+			<span id="inputSuccess2Status" class="sr-only">(success)</span>
 		</div>
 
-		<div class="form-group has-warning">
-			<label class="control-label">Input with warning icon</label>
-
-			<div class="input-group">
-				<input class="form-control" type="text">
-
-				<div class="input-group-addon">
-					<span class="glyphicon glyphicon-exclamation-sign"></span>
-				</div>
-			</div>
-
-			<div class="validation-message">Warning this input is a warning!</div>
+		<div class="form-group has-success has-feedback">
+			<label class="control-label" for="inputSuccess2">Success Label <span class="icon-asterisk"></span></label>
+			<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+			<span class="form-control-feedback" aria-hidden="true"><span class="icon-ok"></span></span>
+			<span id="inputSuccess2Status" class="sr-only">(success)</span>
 		</div>
 
-		<div class="form-group has-error">
-			<label class="control-label">Input with error icon</label>
+		<div class="form-group has-warning has-feedback">
+			<label class="control-label" for="inputWarning2">Warning Label</label>
+			<input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+			<span class="form-control-feedback" aria-hidden="true"><span class="icon-warning-sign"></span></span>
+			<span id="inputWarning2Status" class="sr-only">(warning)</span>
+		</div>
 
-			<div class="input-group">
-				<input class="form-control" type="text">
-
-				<div class="input-group-addon">
-					<span class="glyphicon glyphicon-remove"></span>
-				</div>
-			</div>
-
-			<div class="validation-message">This input is invalid!</div>
+		<div class="form-group has-error has-feedback">
+			<label class="control-label" for="inputError2">Error Label</label>
+			<input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+			<span class="form-control-feedback" aria-hidden="true"><span class="icon-remove"></span></span>
+			<span id="inputError2Status" class="sr-only">(error)</span>
 		</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse1">
-	<pre><code class="html">```<div class="form-group has-error">
-    <label class="control-label">Input with error icon</label>
-
-    <div class="input-group">
-        <input class="form-control" type="text">
-
-        <div class="input-group-addon">
-            <span class="glyphicon glyphicon-remove"></span>
-        </div>
-    </div>
-
-    <div class="validation-message">This input is invalid!</div>
-</div>```</code></pre>
+	<pre><code class="html">``````</code></pre>
 </div>
 
 	</div>
