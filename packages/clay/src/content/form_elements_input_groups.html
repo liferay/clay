@@ -1,0 +1,285 @@
+---
+title: Form Elements (Input Groups)
+section: Elements
+---
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Write something...</p>
+		</blockquote>
+
+		<form>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon" id="inputGroupAddon01">@</span>
+					<input aria-describedby="inputGroupAddon01" class="form-control" placeholder="Username" type="text">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<input aria-describedby="inputGroupAddon02" class="form-control" placeholder="Recipient's username" type="text">
+					<span class="input-group-addon" id="inputGroupAddon02">@example.com</span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">$</span>
+					<input aria-label="Amount" class="form-control" type="text">
+					<span class="input-group-addon">.00</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Checkbox and Radio Addons</h3>
+
+		<form>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon checkbox-default">
+						<input type="checkbox" aria-label="Checkbox for following text input">
+					</span>
+					<input type="text" class="form-control" aria-label="Text input with checkbox">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<input type="text" class="form-control" aria-label="Text input with checkbox">
+					<span class="input-group-addon checkbox-default">
+						<input type="checkbox" aria-label="Checkbox for previous text input">
+					</span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon radio-default">
+						<input type="radio" aria-label="Radio button for following text input">
+					</span>
+					<input type="text" class="form-control" aria-label="Text input with radio button">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<input type="text" class="form-control" aria-label="Text input with radio button">
+					<span class="input-group-addon radio-default">
+						<input type="radio" aria-label="Radio button for previous text input">
+					</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Button Addons</h3>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Search</button>
+				</span>
+				<input type="text" class="form-control" placeholder="Search for...">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search for...">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Search</button>
+				</span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</div>
+				<input type="text" class="form-control" aria-label="Text input with dropdown button">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control" aria-label="Text input with dropdown button">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default">Action</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</div>
+				<input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default">Action</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Input Group Sizes</h3>
+
+		<form>
+			<div class="form-group">
+				<div class="input-group input-group-lg">
+					<span class="input-group-addon">$</span>
+					<input aria-label="Amount" class="form-control" type="text">
+					<span class="input-group-addon">.00</span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">$</span>
+					<input aria-label="Amount" class="form-control" type="text">
+					<span class="input-group-addon">.00</span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group input-group-sm">
+					<span class="input-group-addon">$</span>
+					<input aria-label="Amount" class="form-control" type="text">
+					<span class="input-group-addon">.00</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Input Group Default</h3>
+
+		<form>
+			<div class="form-group">
+				<label for="defaultLogoutPage">Label <span class="icon-asterisk text-warning"></span></label>
+				<div class="input-group-default">
+					<span class="input-group-addon">$</span>
+					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
+					<span class="input-group-addon">
+						<span class="input-group-addon-content">
+							<a href="#1" class="icon-question input-group-icon" data-toggle="popover"></a>
+						</span>
+					</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Input Group Default Sizes</h3>
+
+		<form>
+			<div class="form-group">
+				<label for="defaultLogoutPage">Label Input Group Lg <span class="icon-asterisk text-warning"></span></label>
+				<div class="input-group-default input-group-lg">
+					<span class="input-group-addon">$</span>
+					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
+					<span class="input-group-addon">
+						<span class="input-group-addon-content">
+							<a href="#1" class="icon-question input-group-icon" data-toggle="popover"></a>
+						</span>
+					</span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="defaultLogoutPage">Label <span class="icon-asterisk text-warning"></span></label>
+				<div class="input-group-default">
+					<span class="input-group-addon">$</span>
+					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
+					<span class="input-group-addon">
+						<span class="input-group-addon-content">
+							<a href="#1" class="icon-question input-group-icon" data-toggle="popover"></a>
+						</span>
+					</span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="defaultLogoutPage">Label Input Group Sm<span class="icon-asterisk text-warning"></span></label>
+				<div class="input-group-default input-group-sm">
+					<span class="input-group-addon">$</span>
+					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
+					<span class="input-group-addon">
+						<span class="input-group-addon-content">
+							<a href="#1" class="icon-question input-group-icon" data-toggle="popover"></a>
+						</span>
+					</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script>
+$('[data-toggle="popover"]').popover({
+	container: 'body',
+	content: 'Some help text for your input.',
+	placement: 'left',
+	trigger: 'hover'
+});
+</script>
