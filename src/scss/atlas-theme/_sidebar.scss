@@ -155,7 +155,7 @@
 
 .product-menu .sidebar-header-logo {
 	background-color: $product-menu-header-logo-bg;
-	border-radius: $border-radius-default;
+	border-radius: $border-radius-base;
 }
 
 .product-menu {
@@ -201,7 +201,7 @@
 .product-menu-tab-icon {
 	@media screen and (min-width: $grid-float-breakpoint) {
 		background-color: $product-menu-tabs-bg;
-		border-radius: $border-radius-default;
+		border-radius: $border-radius-base;
 	}
 }
 

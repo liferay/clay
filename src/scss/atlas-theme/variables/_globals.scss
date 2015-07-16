@@ -39,10 +39,9 @@ $font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, s
 
 //== Border Radius
 //## Defines global border-radius
-$border-radius-default: 4px !default; // Atlas
-$border-radius-base:                       $border-radius-default !default;
-$border-radius-large:                      $border-radius-default * 1.5 !default;
-$border-radius-small:                      $border-radius-default * 0.75 !default;
+$border-radius-base:                       4px !default;
+$border-radius-large:                      $border-radius-base * 1.5 !default;
+$border-radius-small:                      $border-radius-base * 0.75 !default;
 
 $body-bg:                                  #FFF !default;
 $gray-darker:                              lighten(#000, 13.5%) !default; // #222
