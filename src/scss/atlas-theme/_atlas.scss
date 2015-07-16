@@ -1,7 +1,6 @@
 @import "alerts";
 @import "badges";
 @import "breadcrumbs";
-@import "borderless-portlet-bar";
 @import "buttons";
 @import "button-groups";
 @import "cards";
@@ -34,3 +33,8 @@
 @import "tooltips";
 @import "type";
 @import "user-icons";
+
+// Experimental
+.lexicon-x {
+	@import "borderless-portlet-bar";
+}
