@@ -10951,12 +10951,13 @@ a .icon-monospaced:hover {
   text-decoration: none;
 }
 
-.input-group label {
-  margin-bottom: 2px;
+.input-group .form-control:focus {
+  z-index: 3;
 }
 
-.input-group label input[type="radio"] {
-  margin-top: 2px;
+.input-group-btn .btn:focus,
+.input-group-btn .btn:hover {
+  z-index: 3;
 }
 
 .input-group-btn:first-child > .btn,
@@ -10970,6 +10971,54 @@ a .icon-monospaced:hover {
 
 .input-group-input .form-control {
   display: block;
+}
+
+.input-group-default {
+  display: table;
+}
+
+.input-group-default .input-group-addon,
+.input-group-default .input-group-btn {
+  display: table-cell;
+  width: 1%;
+}
+
+.input-group-default .input-group-addon {
+  background-color: transparent;
+  border-width: 0;
+  padding: 0 10px;
+}
+
+.input-group-default .input-group-addon:first-child .input-group-addon-content {
+  margin-left: -10px;
+}
+
+.input-group-default .input-group-addon:last-child .input-group-addon-content {
+  margin-right: -10px;
+}
+
+.input-group-addon-content {
+  display: inline-block;
+}
+
+.input-group-icon {
+  background-color: #eeeeee;
+  border-radius: 100px;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+  position: relative;
+}
+
+a.input-group-icon {
+  color: #777;
+}
+
+a.input-group-icon:focus,
+a.input-group-icon:hover {
+  color: #333;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
