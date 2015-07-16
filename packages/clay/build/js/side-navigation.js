@@ -472,7 +472,7 @@
 
 			instance.mobile = !desktop;
 			instance.desktop = desktop;
-		},
+		}
 	};
 
 	var old = $.fn.sideNavigation;
