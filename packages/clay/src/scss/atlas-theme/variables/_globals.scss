@@ -10,12 +10,12 @@ $font-size-base-desktop: 16px !default; // Atlas
 $font-size-large-desktop: ceil(($font-size-base-desktop * 1.25)) !default; // Atlas // ~20px
 $font-size-small-desktop: ceil(($font-size-base-desktop * 0.85)) !default; // Atlas // ~14px
 
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-h1:                             floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:                             floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:                             ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:                             ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:                             $font-size-base !default;
+$font-size-h6:                             ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $line-height-base:                         1.4286 !default;
 
@@ -62,7 +62,7 @@ $brand-success:                            #76BD4A !default;
 $brand-success-active: darken($brand-success, 12%) !default; // Atlas
 $brand-success-hover: darken($brand-success, 8%) !default; // Atlas
 
-$brand-info:                               #1e5ec8 !default;
+$brand-info:                               #1E5EC8 !default;
 $brand-info-active: darken($brand-info, 12%) !default; // Atlas
 $brand-info-hover: darken($brand-info, 8%) !default; // Atlas
 
@@ -85,28 +85,29 @@ $component-active-color:                   #FFF !default;
 $link-hover-color:                         $brand-primary-hover !default;
 
 //States for Form and alert
-$state-default-text: #868896 !default; // Atlas
-$state-default-bg: lighten($state-default-text, 40%) !default; // Atlas
+
+$state-default-text: $brand-default !default; // Atlas
+$state-default-bg: lighten($state-default-text, 34%) !default; // Atlas
 $state-default-border: $state-default-text !default; // Atlas
 
 $state-primary-text: $brand-primary !default; // Atlas
-$state-primary-bg: lighten($state-primary-text, 40%) !default; // Atlas
+$state-primary-bg: lighten($state-primary-text, 12%) !default; // Atlas
 $state-primary-border: $state-primary-text !default; // Atlas
 
-$state-success-text:                       #34ADAB !default;
-$state-success-bg:                         lighten($state-success-text, 50%) !default;
+$state-success-text:                       $brand-success !default;
+$state-success-bg:                         lighten($state-success-text, 34%) !default;
 $state-success-border:                     $state-success-text !default;
 
-$state-info-text:                          #1D5EC7 !default;
-$state-info-bg:                            lighten($state-info-text, 50%) !default;
+$state-info-text:                          $brand-info !default;
+$state-info-bg:                            lighten($state-info-text, 34%) !default;
 $state-info-border:                        $state-info-text !default;
 
-$state-warning-text:                       #FFB103 !default;
-$state-warning-bg:                         lighten($state-warning-text, 40%) !default;
+$state-warning-text:                       $brand-warning !default;
+$state-warning-bg:                         #F8F4D5 !default;
 $state-warning-border:                     $state-warning-text !default;
 
-$state-danger-text:                        #E8295A !default;
-$state-danger-bg:                          lighten($state-danger-text, 40%) !default;
+$state-danger-text:                        $brand-danger !default;
+$state-danger-bg:                          lighten($state-danger-text, 34%) !default;
 $state-danger-border:                      $state-danger-text !default;
 
 // Inverse Colors
