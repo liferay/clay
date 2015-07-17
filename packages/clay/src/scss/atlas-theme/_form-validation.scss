@@ -1,18 +1,15 @@
-.has-success {
-	@include form-control-validation($input-success, $input-success, $input-success);
-}
-
-.has-warning {
-	@include form-control-validation($input-warning, $input-warning, $input-warning);
-}
-
+.has-success,
+.has-warning,
 .has-error {
-	@include form-control-validation($input-danger, $input-danger, $input-danger);
-}
+	.control-label {
+		color: $input-label-color;
+	}
 
-.has-success, .has-warning, .has-error {
 	.form-control {
-		&, &:focus {
+		color: $input-label-color;
+
+		&,
+		&:focus {
 			box-shadow: none;
 		}
 	}

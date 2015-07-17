@@ -426,3 +426,13 @@ label {
 		}
 	}
 }
+
+// Form Control Feedback
+
+.form-control-feedback {
+	@include monospace($input-mobile-height-base);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include monospace($input-height-base);
+	}
+}
