@@ -1094,10 +1094,20 @@ body.fixed {
   top: 0;
 }
 
+#blogActions .management-bar {
+  padding-left: 4px;
+}
+
 @media screen and (min-width: 768px) {
   #blogActions .management-bar {
     padding-left: 0;
   }
+}
+
+#blogActions .navbar {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
