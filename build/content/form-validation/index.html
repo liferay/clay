@@ -251,27 +251,38 @@ collapse
 		<h3>Input Validation States</h3>
 
 		<div class="form-group has-success">
-			<label class="control-label">Input with success</label>
-			<input class="form-control" type="text">
+			<label class="control-label" for="inputSuccess1">Input with success <span class="icon-asterisk text-warning"></span></label>
+			<input class="form-control" id="successInput1" type="text">
 			<div class="validation-message">This input is a success!</div>
 		</div>
 
 		<div class="form-group has-warning">
-			<label class="control-label">Input with warning</label>
-			<input class="form-control" type="text">
+			<label class="control-label" for="inputWarning1">Input with warning <span class="icon-asterisk text-warning"></span></label>
+			<input class="form-control" id="inputWarning1" type="text">
 			<div class="validation-message">Warning this input is a warning!</div>
 		</div>
 
 		<div class="form-group has-error">
-			<label class="control-label">Input with error</label>
-			<input class="form-control" type="text">
+			<label class="control-label" for="inputError1">Input with error <span class="icon-asterisk text-warning"></span></label>
+			<input class="form-control" id="inputError1" type="text">
 			<div class="validation-message">This input is invalid!</div>
 		</div>
+	</div>
+</div>
 
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse0">
+	<pre><code class="html">&lt;div&gt;&lt;/div&gt;</code></pre>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
 		<div class="has-success">
 			<div class="checkbox checkbox-default">
 				<label>
-					<input type="checkbox" id="checkboxSuccess" value="option1">
+					<input type="checkbox" id="checkboxSuccess1" value="option1">
 					Checkbox with success
 				</label>
 			</div>
@@ -280,8 +291,8 @@ collapse
 		<div class="has-warning">
 			<div class="checkbox checkbox-default">
 				<label>
-					<input type="checkbox" id="checkboxSuccess" value="option1">
-					Checkbox with success
+					<input type="checkbox" id="checkboxWarning1" value="option2">
+					Checkbox with warning
 				</label>
 			</div>
 		</div>
@@ -289,25 +300,11 @@ collapse
 		<div class="has-error">
 			<div class="checkbox checkbox-default">
 				<label>
-					<input type="checkbox" id="checkboxSuccess" value="option1">
-					Checkbox with success
+					<input type="checkbox" id="checkboxError1" value="option3">
+					Checkbox with error
 				</label>
 			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">&lt;div class=&quot;form-group has-error&quot;&gt;
-    &lt;label class=&quot;control-label&quot;&gt;Input with error&lt;/label&gt;
-
-    &lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;
-
-    &lt;div class=&quot;validation-message&quot;&gt;This input is invalid!&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
@@ -316,14 +313,14 @@ collapse
 		<h3>Inputs with Feedback Icons</h3>
 
 		<div class="form-group has-feedback">
-			<label class="control-label" for="inputSuccess2">Label <span class="icon-asterisk"></span></label>
+			<label class="control-label" for="inputSuccess2">Label <span class="icon-asterisk text-warning"></span></label>
 			<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
-			<span class="form-control-feedback" aria-hidden="true"><span class="icon-question"></span></span>
+			<span class="form-control-feedback" aria-hidden="true"><span class="icon-asterisk"></span></span>
 			<span id="inputSuccess2Status" class="sr-only">(success)</span>
 		</div>
 
 		<div class="form-group has-success has-feedback">
-			<label class="control-label" for="inputSuccess2">Success Label <span class="icon-asterisk"></span></label>
+			<label class="control-label" for="inputSuccess2">Success Label <span class="icon-asterisk text-warning"></span></label>
 			<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
 			<span class="form-control-feedback" aria-hidden="true"><span class="icon-ok"></span></span>
 			<span id="inputSuccess2Status" class="sr-only">(success)</span>
@@ -347,7 +344,7 @@ collapse
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse1">
-	<pre><code class="html">``````</code></pre>
+	<pre><code class="html">&lt;div&gt;&lt;/div&gt;</code></pre>
 </div>
 
 	</div>

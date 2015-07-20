@@ -1971,7 +1971,7 @@ pre code {
   }
 }
 
-.container-fluid {
+.container-fluid, .container-fluid-1280 {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -1979,12 +1979,13 @@ pre code {
 }
 
 .container-fluid:before,
-.container-fluid:after {
+.container-fluid-1280:before,
+.container-fluid:after, .container-fluid-1280:after {
   content: " ";
   display: table;
 }
 
-.container-fluid:after {
+.container-fluid:after, .container-fluid-1280:after {
   clear: both;
 }
 
@@ -5051,8 +5052,10 @@ tbody.collapse.in {
 .container > .navbar-collapse,
 .container > .management-bar-collapse,
 .container-fluid > .navbar-header,
+.container-fluid-1280 > .navbar-header,
 .container-fluid > .management-bar-header,
-.container-fluid > .navbar-collapse, .container-fluid > .management-bar-collapse {
+.container-fluid-1280 > .management-bar-header,
+.container-fluid > .navbar-collapse, .container-fluid-1280 > .navbar-collapse, .container-fluid > .management-bar-collapse, .container-fluid-1280 > .management-bar-collapse {
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -5063,8 +5066,10 @@ tbody.collapse.in {
   .container > .navbar-collapse,
   .container > .management-bar-collapse,
   .container-fluid > .navbar-header,
+  .container-fluid-1280 > .navbar-header,
   .container-fluid > .management-bar-header,
-  .container-fluid > .navbar-collapse, .container-fluid > .management-bar-collapse {
+  .container-fluid-1280 > .management-bar-header,
+  .container-fluid > .navbar-collapse, .container-fluid-1280 > .navbar-collapse, .container-fluid > .management-bar-collapse, .container-fluid-1280 > .management-bar-collapse {
     margin-right: 0;
     margin-left: 0;
   }
@@ -5130,7 +5135,7 @@ tbody.collapse.in {
   .management-bar > .container .navbar-brand,
   .navbar > .container .management-bar-header-item,
   .management-bar > .container .management-bar-header-item,
-  .navbar > .container-fluid .navbar-brand, .management-bar > .container-fluid .navbar-brand, .navbar > .container-fluid .management-bar-header-item, .management-bar > .container-fluid .management-bar-header-item {
+  .navbar > .container-fluid .navbar-brand, .management-bar > .container-fluid .navbar-brand, .navbar > .container-fluid-1280 .navbar-brand, .management-bar > .container-fluid-1280 .navbar-brand, .navbar > .container-fluid .management-bar-header-item, .management-bar > .container-fluid .management-bar-header-item, .navbar > .container-fluid-1280 .management-bar-header-item, .management-bar > .container-fluid-1280 .management-bar-header-item {
     margin-left: -15px;
   }
 }
@@ -5975,7 +5980,7 @@ a.badge:focus {
 }
 
 .container .jumbotron,
-.container-fluid .jumbotron {
+.container-fluid .jumbotron, .container-fluid-1280 .jumbotron {
   border-radius: 6px;
 }
 
@@ -5989,7 +5994,7 @@ a.badge:focus {
     padding-bottom: 48px;
   }
   .container .jumbotron,
-  .container-fluid .jumbotron {
+  .container-fluid .jumbotron, .container-fluid-1280 .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -8864,21 +8869,7 @@ button.close {
 }
 
 .container-fluid-1280 {
-  margin-left: auto;
-  margin-right: auto;
   max-width: 1280px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.container-fluid-1280:before,
-.container-fluid-1280:after {
-  content: " ";
-  display: table;
-}
-
-.container-fluid-1280:after {
-  clear: both;
 }
 
 .icon-monospaced {
@@ -10032,7 +10023,7 @@ figcaption,
   border-color: transparent;
   left: 0;
   position: absolute;
-  z-index: 3;
+  z-index: 4;
 }
 
 .basic-search-slider .basic-search-close:active {
