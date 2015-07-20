@@ -2,6 +2,8 @@
 	@include clearfix;
 
 	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: $grid-gutter-width / 2;
 	padding-right: $grid-gutter-width / 2;
 }
