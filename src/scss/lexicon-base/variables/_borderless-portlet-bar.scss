@@ -3,3 +3,35 @@ $borderless-portlet-bar-border: $navbar-default-border !default;
 $borderless-portlet-bar-color: $navbar-default-color !default;
 $borderless-portlet-bar-link-color: $navbar-default-link-color !default;
 $borderless-portlet-bar-link-hover-color: $navbar-default-link-hover-color !default;
+
+$borderless-portlet-bar-border-radius: $navbar-border-radius !default;
+
+$borderless-portlet-bar-border-top-width: 1px !default;
+$borderless-portlet-bar-border-right-width: 1px !default;
+$borderless-portlet-bar-border-bottom-width: 1px !default;
+$borderless-portlet-bar-border-left-width: 1px !default;
+$borderless-portlet-bar-border-width: $borderless-portlet-bar-border-top-width $borderless-portlet-bar-border-right-width $borderless-portlet-bar-border-bottom-width $borderless-portlet-bar-border-left-width !default;
+
+// Bordered Portlet Bar
+
+$portlet-topper-bg: $borderless-portlet-bar-bg !default;
+$portlet-topper-border: $borderless-portlet-bar-border !default;
+$portlet-topper-color: $borderless-portlet-bar-color !default;
+$portlet-topper-link-color: $borderless-portlet-bar-link-color !default;
+$portlet-topper-link-hover-color: $portlet-topper-link-color !default;
+
+$portlet-topper-border-radius: $navbar-border-radius !default;
+
+$portlet-topper-border-top-width: 1px !default;
+$portlet-topper-border-right-width: 1px !default;
+$portlet-topper-border-bottom-width: 0 !default;
+$portlet-topper-border-left-width: 1px !default;
+$portlet-topper-border-width: $portlet-topper-border-top-width $portlet-topper-border-right-width $portlet-topper-border-bottom-width $portlet-topper-border-left-width !default;
+
+$portlet-content-border-radius: 0 0 $navbar-border-radius $navbar-border-radius !default;
+
+$portlet-content-border-top-width: 0 !default;
+$portlet-content-border-right-width: 1px !default;
+$portlet-content-border-bottom-width: 1px !default;
+$portlet-content-border-left-width: 1px !default;
+$portlet-content-border-width: $portlet-content-border-top-width $portlet-content-border-right-width $portlet-content-border-bottom-width $portlet-content-border-left-width !default;
