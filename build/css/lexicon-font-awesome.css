@@ -4022,7 +4022,7 @@ pre code {
   }
 }
 
-.container-fluid, .container-fluid-1280 {
+.container-fluid {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -4030,13 +4030,12 @@ pre code {
 }
 
 .container-fluid:before,
-.container-fluid-1280:before,
-.container-fluid:after, .container-fluid-1280:after {
+.container-fluid:after {
   content: " ";
   display: table;
 }
 
-.container-fluid:after, .container-fluid-1280:after {
+.container-fluid:after {
   clear: both;
 }
 
@@ -7103,10 +7102,8 @@ tbody.collapse.in {
 .container > .navbar-collapse,
 .container > .management-bar-collapse,
 .container-fluid > .navbar-header,
-.container-fluid-1280 > .navbar-header,
 .container-fluid > .management-bar-header,
-.container-fluid-1280 > .management-bar-header,
-.container-fluid > .navbar-collapse, .container-fluid-1280 > .navbar-collapse, .container-fluid > .management-bar-collapse, .container-fluid-1280 > .management-bar-collapse {
+.container-fluid > .navbar-collapse, .container-fluid > .management-bar-collapse {
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -7117,10 +7114,8 @@ tbody.collapse.in {
   .container > .navbar-collapse,
   .container > .management-bar-collapse,
   .container-fluid > .navbar-header,
-  .container-fluid-1280 > .navbar-header,
   .container-fluid > .management-bar-header,
-  .container-fluid-1280 > .management-bar-header,
-  .container-fluid > .navbar-collapse, .container-fluid-1280 > .navbar-collapse, .container-fluid > .management-bar-collapse, .container-fluid-1280 > .management-bar-collapse {
+  .container-fluid > .navbar-collapse, .container-fluid > .management-bar-collapse {
     margin-right: 0;
     margin-left: 0;
   }
@@ -7186,7 +7181,7 @@ tbody.collapse.in {
   .management-bar > .container .navbar-brand,
   .navbar > .container .management-bar-header-item,
   .management-bar > .container .management-bar-header-item,
-  .navbar > .container-fluid .navbar-brand, .management-bar > .container-fluid .navbar-brand, .navbar > .container-fluid-1280 .navbar-brand, .management-bar > .container-fluid-1280 .navbar-brand, .navbar > .container-fluid .management-bar-header-item, .management-bar > .container-fluid .management-bar-header-item, .navbar > .container-fluid-1280 .management-bar-header-item, .management-bar > .container-fluid-1280 .management-bar-header-item {
+  .navbar > .container-fluid .navbar-brand, .management-bar > .container-fluid .navbar-brand, .navbar > .container-fluid .management-bar-header-item, .management-bar > .container-fluid .management-bar-header-item {
     margin-left: -15px;
   }
 }
@@ -8031,7 +8026,7 @@ a.badge:focus {
 }
 
 .container .jumbotron,
-.container-fluid .jumbotron, .container-fluid-1280 .jumbotron {
+.container-fluid .jumbotron {
   border-radius: 6px;
 }
 
@@ -8045,7 +8040,7 @@ a.badge:focus {
     padding-bottom: 48px;
   }
   .container .jumbotron,
-  .container-fluid .jumbotron, .container-fluid-1280 .jumbotron {
+  .container-fluid .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -10921,6 +10916,25 @@ button.close {
 
 .container-fluid-1280 {
   max-width: 1280px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-fluid-1280:before,
+.container-fluid-1280:after {
+  content: " ";
+  display: table;
+}
+
+.container-fluid-1280:after {
+  clear: both;
+}
+
+.header-toolbar > .container-fluid-1280,
+.management-bar > .container-fluid-1280,
+.navbar > .container-fluid-1280, .management-bar > .container-fluid-1280 {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .icon-monospaced {
@@ -11357,41 +11371,6 @@ figcaption,
   }
 }
 
-.detailed-list-view .active .user-icon {
-  background-color: transparent;
-}
-
-.detailed-list-view .active .user-icon:after {
-  color: #fff;
-  content: '\f00c';
-  font-family: 'fontawesome-alloy';
-  font-size: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .detailed-list-view .active .user-icon:after {
-    content: normal;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .detailed-list-view .active .user-icon {
-    background-color: #999;
-  }
-}
-
-.detailed-list-view .active .user-icon img,
-.detailed-list-view .active .user-icon span {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .detailed-list-view .active .user-icon img,
-  .detailed-list-view .active .user-icon span {
-    display: block;
-  }
-}
-
 .detailed-list-view .list-group-item, .detailed-list-view .list-group-heading {
   cursor: pointer;
 }
@@ -11425,6 +11404,61 @@ figcaption,
   }
 }
 
+.detailed-list-view > .active .detailed-list-view-icon:after {
+  color: #fff;
+  content: '\f00c';
+  font-family: 'fontawesome-alloy';
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 768px) {
+  .detailed-list-view > .active .detailed-list-view-icon:after {
+    content: normal;
+  }
+}
+
+.detailed-list-view > .active .detailed-list-view-icon > [class^="icon-"],
+.detailed-list-view > .active .detailed-list-view-icon > .user-icon {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .detailed-list-view > .active .detailed-list-view-icon > [class^="icon"] {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .detailed-list-view > .active .detailed-list-view-icon > .user-icon {
+    display: block;
+  }
+}
+
+.detailed-list-view-icon {
+  height: 34px;
+  line-height: 34px;
+  width: 34px;
+}
+
+@media screen and (min-width: 768px) {
+  .detailed-list-view-icon {
+    height: 48px;
+    line-height: 48px;
+    width: 48px;
+  }
+}
+
+.detailed-list-view-icon [class^="icon-"] {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .detailed-list-view-icon [class^="icon-"] {
+    font-size: 38px;
+  }
+}
+
 @media screen and (max-width: 279px) {
   .detailed-list-view .dropdown {
     display: inline-block;
@@ -11439,7 +11473,7 @@ figcaption,
     transform: translateX(-50%);
     top: 100%;
   }
-  .detailed-list-view .user-icon {
+  .detailed-list-view .detailed-list-view-icon {
     margin-left: auto;
     margin-right: auto;
   }
@@ -11520,9 +11554,9 @@ figcaption,
 .management-bar-collapse {
   background-color: #fff;
   clear: both;
-  left: -1px;
+  left: 0;
   position: absolute;
-  right: -1px;
+  right: 0;
   top: 100%;
   z-index: 1001;
 }
