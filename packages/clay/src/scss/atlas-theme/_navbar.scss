@@ -1,40 +1,4 @@
 .basic-search {
-	&:after {
-		background-color: $brand-default;
-		content: '';
-		display: block;
-		height: 0;
-		overflow: hidden;
-		position: relative;
-		z-index: 2;
-	}
-
-	&.focus:after {
-		background-color: $brand-primary;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			height: $navbar-link-active-bottom-border-width;
-			margin-top: -$navbar-link-active-bottom-border-width;
-		}
-	}
-
-	&.open {
-		&:after {
-			height: $navbar-link-active-bottom-border-width;
-			margin-top: -$navbar-link-active-bottom-border-width;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				background-color: transparent;
-			}
-		}
-
-		&.focus:after {
-			@media screen and (min-width: $grid-float-breakpoint) {
-				background-color: $brand-primary;
-			}
-		}
-	}
-
 	.form-control:focus {
 		z-index: 0;
 	}
@@ -42,7 +6,9 @@
 
 .basic-search-slider {
 	.basic-search-close {
-		line-height: $navbar-height;
+		background-color: transparent;
+		border-width: 0;
+		height: $input-mobile-height-base;
 		padding: 0;
 	}
 }
@@ -63,45 +29,6 @@
 			> .btn,
 			> .btn-group {
 				margin-left: 0;
-			}
-		}
-	}
-}
-
-// Navbar Default Collapse Basic Search Styles
-
-.navbar-default.collapse-basic-search {
-	.basic-search {
-		padding: 0;
-
-		input[type="text"] {
-			border-width: 0;
-			height: $navbar-height;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				height: $navbar-desktop-height;
-			}
-		}
-
-		&.focus button[type='submit'] {
-			color: $brand-primary;
-		}
-
-		.btn {
-			background-color: transparent;
-			border-radius: 0;
-			border-width: 0;
-			color: $brand-default;
-			padding-left: 12px;
-			padding-right: 12px;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				height: $navbar-desktop-height;
-			}
-
-			&:focus {
-				color: $brand-primary;
-				outline: none;
 			}
 		}
 	}
@@ -182,13 +109,8 @@
 		height: $navbar-link-active-bottom-border-width;
 		margin-top: -$navbar-link-active-bottom-border-width;
 		position: relative;
-		top: $navbar-padding-vertical;
+		top: (($navbar-height - $navbar-link-line-height) / 2) + 1;
 		width: 100%;
-	}
-
-	.navbar-default & {
-		border-color: transparent;
-		padding: (($navbar-height - $navbar-link-line-height - 2) / 2) $navbar-padding-horizontal;
 	}
 }
 
@@ -225,124 +147,9 @@
 	}
 }
 
-// Navbar Default Styles
-
-.navbar-default {
-	box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.3);
-	margin-bottom:0;
-	position: relative;
-	z-index: 1;
-
-	.navbar-collapse {
-		border-width: 0;
-		left: 0;
-		right: 0;
-	}
-
-	.navbar-toggle {
-		&:focus,
-		&:hover {
-			background-color: transparent;
-		}
-
-		.page-name {
-			display: inline-block;
-			line-height: $navbar-link-line-height;
-		}
-	}
-
-	.navbar-nav {
-		> li > a {
-			padding: $navbar-padding-vertical $navbar-padding-horizontal;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
-			}
-		}
-
-		> .active > a {
-			padding-bottom: $navbar-padding-vertical - $navbar-link-active-bottom-border-width;
-			padding-top: $navbar-padding-vertical;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				padding-bottom: $navbar-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
-				padding-top: $navbar-desktop-padding-vertical;
-
-				&:after {
-					top: $navbar-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
-				}
-			}
-		}
-	}
-}
-
-.navbar-default.navbar-no-collapse .navbar-nav {
-	> .active > a {
-		&:after {
-			top: $navbar-padding-vertical - $navbar-link-active-bottom-border-width;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				top: $navbar-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
-			}
-		}
-	}
-}
-
-@media screen and (min-width: $grid-float-breakpoint) {
-	.navbar-default {
-		.navbar-collapse {
-			padding: 0;
-		}
-
-		.navbar-nav {
-			> li {
-				border: solid #DDD;
-				border-width: 0 1px;
-				margin-left: -1px;
-
-				&:first-child {
-					border-left-width: 0;
-					margin-left: 0;
-				}
-
-				&:last-child {
-					border-right-width: 0;
-				}
-
-				> a {
-					&:focus,
-					&:hover {
-						background-color: $navbar-default-link-hover-bg;
-						color: $navbar-default-link-hover-color;
-					}
-				}
-			}
-
-			> .active > a {
-				background-color: $navbar-default-link-active-bg;
-				border-color: transparent;
-				display: inline-block;
-
-				&:after {
-					background-color: $navbar-default-link-active-highlight;
-					content: '';
-					display: block;
-					height: $navbar-link-active-bottom-border-width;
-					position: relative;
-					width: 100%;
-				}
-
-				&:focus,
-				&:hover {
-					background-color: $navbar-default-link-active-bg;
-				}
-			}
-		}
-	}
-}
-
 /* make navbar dropdown position absolute
 	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+
 .navbar {
 	.navbar-collapse:first-child,
 	.navbar-collapse-absolute {
@@ -353,16 +160,6 @@
 		right: -1px;
 		top: 100%;
 		z-index: $zindex-navbar;
-	}
-}
-
-.navbar-default {
-	border-width: 0;
-
-	.navbar-collapse:first-child,
-	.navbar-collapse-absolute {
-		left: 0;
-		right: 0;
 	}
 }
 
@@ -436,7 +233,8 @@
 	}
 }
 
-//navbar-no-collapse
+// Navbar-no-collapse
+
 .navbar-no-collapse .navbar-nav {
 	float: left;
 	margin: 0 15px 0 0;
@@ -446,20 +244,222 @@
 	}
 }
 
+// Navbar Default Collapse Basic Search Styles
+
+.navbar-default .basic-search {
+	&:after {
+		background-color: $brand-default;
+		content: '';
+		display: block;
+		height: 0;
+		overflow: hidden;
+		position: relative;
+		top: $navbar-default-border-bottom-width;
+		z-index: 2;
+	}
+
+	&.focus:after {
+		background-color: $brand-primary;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: $navbar-link-active-bottom-border-width;
+			margin-top: -$navbar-link-active-bottom-border-width;
+		}
+	}
+
+	&.open {
+		&:after {
+			height: $navbar-link-active-bottom-border-width;
+			margin-top: -$navbar-link-active-bottom-border-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: transparent;
+			}
+		}
+
+		&.focus:after {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: $brand-primary;
+			}
+		}
+	}
+}
+
+.navbar-default.collapse-basic-search {
+	.basic-search {
+		padding: 0;
+
+		input[type="text"] {
+			border-width: 0;
+			height: $navbar-default-height;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				height: $navbar-default-desktop-height;
+			}
+		}
+
+		&.focus button[type='submit'] {
+			color: $brand-primary;
+		}
+
+		.btn {
+			background-color: transparent;
+			border-radius: 0;
+			border-width: 0;
+			color: $brand-default;
+			padding-left: 12px;
+			padding-right: 12px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				height: $navbar-default-desktop-height;
+			}
+
+			&:focus {
+				color: $brand-primary;
+				outline: none;
+			}
+		}
+	}
+}
+
+.navbar-default {
+	.basic-search-close {
+		height: $navbar-default-height;
+	}
+}
+
+// Navbar Default Styles
+
+.navbar-default {
+	border-width: $navbar-default-border-width;
+	margin-bottom: 0;
+	min-height: $navbar-default-height;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		min-height: $navbar-default-desktop-height;
+	}
+
+	.navbar-brand {
+		height: $navbar-default-height;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: $navbar-default-desktop-height;
+		}
+	}
+
+	.navbar-form {
+		padding: (($navbar-default-desktop-height - $input-height-base) / 2) 0;
+	}
+
+	.navbar-toggle {
+		&:focus,
+		&:hover {
+			background-color: transparent;
+		}
+
+		.page-name {
+			display: inline-block;
+			line-height: $navbar-link-line-height;
+		}
+	}
+
+	.navbar-toggle-page-name {
+		border-width: 0;
+		padding-bottom: $navbar-default-padding-vertical;
+		padding-top: $navbar-default-padding-vertical;
+
+		&:after {
+			top: $navbar-default-padding-vertical + $navbar-default-border-bottom-width;
+		}
+	}
+
+	.navbar-collapse {
+		border-width: 0;
+		left: 0;
+		right: 0;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			padding: 0;
+		}
+	}
+
+	.navbar-nav {
+		> li > a {
+			padding: $navbar-default-padding-vertical $navbar-default-padding-horizontal;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				padding: $navbar-default-desktop-padding-vertical $navbar-default-desktop-padding-horizontal;
+			}
+		}
+
+		> .active > a {
+			padding-bottom: $navbar-default-padding-vertical - $navbar-link-active-bottom-border-width;
+			padding-top: $navbar-default-padding-vertical;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: $navbar-default-link-active-bg;
+				border-color: transparent;
+				display: inline-block;
+				padding-bottom: $navbar-default-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
+				padding-top: $navbar-default-desktop-padding-vertical;
+			}
+
+			&:after {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					background-color: $navbar-default-link-active-highlight;
+					content: '';
+					display: block;
+					height: $navbar-link-active-bottom-border-width;
+					position: relative;
+					width: 100%;
+				}
+			}
+
+			&:focus,
+			&:hover {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					background-color: $navbar-default-link-active-bg;
+				}
+			}
+		}
+	}
+}
+
+.navbar-default .navbar-nav,
+.navbar-default.navbar-no-collapse .navbar-nav {
+	> .active > a {
+		&:after {
+			top: $navbar-default-padding-vertical - $navbar-link-active-bottom-border-width + $navbar-default-border-bottom-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				top: $navbar-default-desktop-padding-vertical - $navbar-link-active-bottom-border-width + $navbar-default-border-bottom-width;
+			}
+		}
+	}
+}
+
+/* make navbar dropdown position absolute
+	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+
+.navbar-default {
+	.navbar-collapse:first-child,
+	.navbar-collapse-absolute {
+		border-top-width: 0;
+		left: 0;
+		margin-top: $navbar-default-border-bottom-width;
+		right: 0;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin-top: 0;
+		}
+	}
+}
+
+// Navbar Default navbar-no-collapse
+
 .navbar-default.navbar-no-collapse .navbar-nav {
 	> li {
-		border: solid #DDD;
-		border-width: 0 1px;
-		margin-left: -1px;
-
-		&:first-child {
-			border-left-width: 0;
-			margin-left: 0;
-		}
-
-		&:last-child {
-			border-right-width: 0;
-		}
+		border-width: 0;
 
 		> a {
 			&:focus,

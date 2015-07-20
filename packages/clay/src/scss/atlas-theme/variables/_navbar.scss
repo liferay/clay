@@ -13,6 +13,19 @@ $navbar-desktop-padding-vertical: floor(($navbar-desktop-height - $navbar-deskto
 
 $navbar-link-active-bottom-border-width: 2px !default; // Atlas
 
+$navbar-default-border-top-width: 0 !default; // Atlas
+$navbar-default-border-right-width: 0 !default; // Atlas
+$navbar-default-border-bottom-width: 1px !default; // Atlas
+$navbar-default-border-left-width: 0 !default; // Atlas
+$navbar-default-border-width: $navbar-default-border-top-width $navbar-default-border-right-width $navbar-default-border-bottom-width $navbar-default-border-left-width !default;
+
+$navbar-default-height: $navbar-height - $navbar-default-border-top-width - $navbar-default-border-bottom-width !default; // Atlas
+$navbar-default-desktop-height: $navbar-desktop-height - $navbar-default-border-top-width - $navbar-default-border-bottom-width !default; // Atlas
+
+$navbar-default-padding-horizontal: $navbar-padding-horizontal !default; // Atlas
+$navbar-default-padding-vertical: ($navbar-default-height - $navbar-link-line-height) / 2 !default; // Atlas
+$navbar-default-desktop-padding-horizontal: $navbar-default-padding-horizontal !default; // Atlas
+$navbar-default-desktop-padding-vertical: ($navbar-default-desktop-height - $navbar-desktop-link-line-height) / 2 !default; // Atlas
 // Skin
 
 $navbar-border-radius:                     0 !default;
