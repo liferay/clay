@@ -1,8 +1,17 @@
-.portlet-borderless-container:hover {
-	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+.portlet-borderless-container {
+	&.focus,
+	&:hover {
+		border-radius: $portlet-borderless-container-border-radius;
+		box-shadow: 0 0 0 2px $borderless-portlet-bar-border;
+
+		.portlet-borderless-bar {
+			margin-top: -$borderless-portlet-bar-border-top-width;
+			top: -44px;
+		}
+	}
 }
 
 .portlet-borderless-bar {
-	border-radius: 0;
-	border-width: 0;
+	left: -$borderless-portlet-bar-border-left-width;
+	border-radius: $borderless-portlet-bar-border-radius;
 }

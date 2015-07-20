@@ -21,18 +21,17 @@
 
 .portlet-borderless-bar {
 	background-color: $borderless-portlet-bar-bg;
-	border: 1px solid $borderless-portlet-bar-border;
-	border-radius: 4px;
+	border-color: $borderless-portlet-bar-border;
+	border-style: solid;
+	border-width: $borderless-portlet-bar-border-width;
+	border-radius: $borderless-portlet-bar-border-radius;
 	color: $borderless-portlet-bar-color;
 	line-height: 44px;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		left: 0;
-		margin: 0 auto;
 		max-width: 360px;
 		opacity: 0;
 		position: absolute;
-		right: 0;
 
 		@include transition(all 0.25s ease);
 
@@ -40,7 +39,7 @@
 		width: 90%;
 	}
 
-	a {
+	> a {
 		color: $borderless-portlet-bar-link-color;
 
 		&:focus,
@@ -55,8 +54,52 @@
 
 	.portlet-title-default {
 		margin-left: 10px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+
+		@include text-overflow;
+	}
+}
+
+.portlet-borderless-bar-center {
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	right: 0;
+}
+
+.portlet-borderless-bar-right {
+	right: 0;
+}
+
+// Bordered Portlet
+
+.portlet {
+	margin-bottom: 10px;
+}
+
+.portlet-content {
+	border-color: $portlet-topper-border;
+	border-radius: $portlet-content-border-radius;
+	border-style: solid;
+	border-width: $portlet-content-border-width;
+	padding: 10px;
+}
+
+.portlet-topper {
+	background-color: $portlet-topper-bg;
+	border-color: $portlet-topper-border;
+	border-radius: $portlet-topper-border-radius $portlet-topper-border-radius 0 0;
+	border-style: solid;
+	border-width: $portlet-topper-border-width;
+	color: $portlet-topper-color;
+	line-height: 45px;
+
+	.portlet-actions {
+		float: right;
+	}
+
+	.portlet-title-default {
+		margin-left: 10px;
+
+		@include text-overflow;
 	}
 }
