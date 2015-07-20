@@ -147,9 +147,17 @@ body.fixed {
 
 #blogActions {
 	.management-bar {
+		padding-left: 4px;
+
 		@media screen and (min-width: 768px) {
 			padding-left: 0;
 		}
+	}
+
+	.navbar {
+		margin-bottom: 0;
+		position: relative;
+		z-index: 1;
 	}
 
 	.tabular-list-group .list-group-item .list-group-item-content:first-child,
