@@ -1094,6 +1094,19 @@ body.fixed {
   top: 0;
 }
 
+@media screen and (min-width: 768px) {
+  #blogActions .management-bar {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #blogActions .tabular-list-group .list-group-item .list-group-item-content:first-child,
+  #blogActions .tabular-list-group .list-group-item .list-group-item-field:first-child {
+    display: none;
+  }
+}
+
 .uxgl-fullscreen-fixed {
   background-color: #F5F8FA;
   bottom: 0;
