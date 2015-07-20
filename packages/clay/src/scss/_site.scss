@@ -145,6 +145,15 @@ body.fixed {
 	top: 0;
 }
 
+#blogActions {
+	.tabular-list-group .list-group-item .list-group-item-content:first-child,
+	.tabular-list-group .list-group-item .list-group-item-field:first-child {
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
+	}
+}
+
 .uxgl-fullscreen-fixed {
 	background-color: #F5F8FA;
 	bottom: 0;
@@ -165,6 +174,7 @@ body.fixed {
 	padding-left: 0;
 	padding-right: 0;
 }
+
 
 // Breadcrumbs Page
 
