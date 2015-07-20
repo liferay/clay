@@ -226,38 +226,6 @@
 // Tabular List Group Skins
 
 .detailed-list-view {
-	.active {
-		.user-icon {
-			background-color: transparent;
-
-			&:after {
-				color: $list-group-active-color;
-				content: '\f00c';
-				font-family: 'fontawesome-alloy';
-				font-size: 16px;
-			}
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				&:after {
-					content: normal;
-				}
-			}
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				background-color: #999;
-			}
-
-			img,
-			span {
-				display: none;
-
-				@media screen and (min-width: $grid-float-breakpoint) {
-					display: block;
-				}
-			}
-		}
-	}
-
 	.list-group-item {
 		cursor: pointer;
 	}
@@ -289,6 +257,53 @@
 	}
 }
 
+.detailed-list-view > .active .detailed-list-view-icon {
+	&:after {
+		color: $list-group-active-color;
+		content: '\f00c';
+		font-family: 'fontawesome-alloy';
+		font-size: 16px;
+		vertical-align: middle;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			content: normal;
+		}
+	}
+
+	> [class^="icon-"],
+	> .user-icon {
+		display: none;
+	}
+
+	> [class^="icon"] {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			display: inline;
+		}
+	}
+
+	> .user-icon {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			display: block;
+		}
+	}
+}
+
+.detailed-list-view-icon {
+	@include monospace(34px);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include monospace(48px);
+	}
+
+	[class^="icon-"] {
+		font-size: 28px;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			font-size: 38px;
+		}
+	}
+}
+
 @media screen and (max-width: 279px) {
 	.detailed-list-view {
 		.dropdown {
@@ -304,7 +319,7 @@
 			top: 100%;
 		}
 
-		.user-icon {
+		.detailed-list-view-icon {
 			margin-left: auto;
 			margin-right: auto;
 		}
