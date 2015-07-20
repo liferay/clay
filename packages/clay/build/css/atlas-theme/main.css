@@ -8880,6 +8880,8 @@ button.close {
 
 .container-fluid-1280 {
   max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -11975,21 +11977,20 @@ mark:before, .mark:before {
 }
 
 .lexicon-x .portlet-borderless-bar {
-  background-color: #1F282E;
-  border: 1px solid #0a0e10;
-  border-radius: 4px;
-  color: #FFF;
+  background-color: #FFF;
+  border-color: #65B6F0;
+  border-style: solid;
+  border-width: 2px 2px 0 2px;
+  border-radius: 2px 2px 0 0;
+  color: #65B6F0;
   line-height: 44px;
 }
 
 @media screen and (min-width: 768px) {
   .lexicon-x .portlet-borderless-bar {
-    left: 0;
-    margin: 0 auto;
     max-width: 360px;
     opacity: 0;
     position: absolute;
-    right: 0;
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
@@ -11998,13 +11999,13 @@ mark:before, .mark:before {
   }
 }
 
-.lexicon-x .portlet-borderless-bar a {
-  color: #FFF;
+.lexicon-x .portlet-borderless-bar > a {
+  color: #65B6F0;
 }
 
-.lexicon-x .portlet-borderless-bar a:focus,
-.lexicon-x .portlet-borderless-bar a:hover {
-  color: #FFF;
+.lexicon-x .portlet-borderless-bar > a:focus,
+.lexicon-x .portlet-borderless-bar > a:hover {
+  color: #65B6F0;
 }
 
 .lexicon-x .portlet-borderless-bar .portlet-actions {
@@ -12012,6 +12013,50 @@ mark:before, .mark:before {
 }
 
 .lexicon-x .portlet-borderless-bar .portlet-title-default {
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lexicon-x .portlet-borderless-bar-center {
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+}
+
+.lexicon-x .portlet-borderless-bar-right {
+  right: 0;
+}
+
+.lexicon-x .portlet {
+  margin-bottom: 10px;
+}
+
+.lexicon-x .portlet-content {
+  border-color: #65B6F0;
+  border-radius: 0 0 2px 2px;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  padding: 10px;
+}
+
+.lexicon-x .portlet-topper {
+  background-color: #FFF;
+  border-color: #65B6F0;
+  border-radius: 2px 2px 0 0 2px 2px 0 0 0 0;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  color: #65B6F0;
+  line-height: 45px;
+}
+
+.lexicon-x .portlet-topper .portlet-actions {
+  float: right;
+}
+
+.lexicon-x .portlet-topper .portlet-title-default {
   margin-left: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -16535,13 +16580,21 @@ a.bg-primary:focus {
   }
 }
 
+.lexicon-x .portlet-borderless-container.focus,
 .lexicon-x .portlet-borderless-container:hover {
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 0 2px 2px 2px;
+  box-shadow: 0 0 0 2px #65B6F0;
+}
+
+.lexicon-x .portlet-borderless-container.focus .portlet-borderless-bar,
+.lexicon-x .portlet-borderless-container:hover .portlet-borderless-bar {
+  margin-top: -2px;
+  top: -44px;
 }
 
 .lexicon-x .portlet-borderless-bar {
-  border-radius: 0;
-  border-width: 0;
+  left: -2px;
+  border-radius: 2px 2px 0 0;
 }
 
 /*# sourceMappingURL=main.css.map */
