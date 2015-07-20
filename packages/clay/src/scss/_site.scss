@@ -146,6 +146,12 @@ body.fixed {
 }
 
 #blogActions {
+	.management-bar {
+		@media screen and (min-width: 768px) {
+			padding-left: 0;
+		}
+	}
+
 	.tabular-list-group .list-group-item .list-group-item-content:first-child,
 	.tabular-list-group .list-group-item .list-group-item-field:first-child {
 		@media screen and (max-width: 767px) {
