@@ -9385,12 +9385,14 @@ figcaption,
 }
 
 .detailed-list-view > .active .detailed-list-view-icon > [class^="icon-"],
+.detailed-list-view > .active .detailed-list-view-icon > [class*=" icon-"],
 .detailed-list-view > .active .detailed-list-view-icon > .user-icon {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .detailed-list-view > .active .detailed-list-view-icon > [class^="icon"] {
+  .detailed-list-view > .active .detailed-list-view-icon > [class^="icon-"],
+  .detailed-list-view > .active .detailed-list-view-icon > [class*=" icon-"] {
     display: inline;
   }
 }
@@ -9415,12 +9417,14 @@ figcaption,
   }
 }
 
-.detailed-list-view-icon [class^="icon-"] {
+.detailed-list-view-icon [class^="icon-"],
+.detailed-list-view-icon [class*=" icon-"] {
   font-size: 28px;
 }
 
 @media screen and (min-width: 768px) {
-  .detailed-list-view-icon [class^="icon-"] {
+  .detailed-list-view-icon [class^="icon-"],
+  .detailed-list-view-icon [class*=" icon-"] {
     font-size: 38px;
   }
 }
