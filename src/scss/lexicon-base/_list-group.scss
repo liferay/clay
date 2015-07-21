@@ -271,11 +271,13 @@
 	}
 
 	> [class^="icon-"],
+	> [class*=" icon-"],
 	> .user-icon {
 		display: none;
 	}
 
-	> [class^="icon"] {
+	> [class^="icon"],
+	> [class*=" icon-"] {
 		@media screen and (min-width: $grid-float-breakpoint) {
 			display: inline;
 		}
@@ -295,7 +297,8 @@
 		@include monospace(48px);
 	}
 
-	[class^="icon-"] {
+	[class^="icon-"],
+	[class*=" icon-"] {
 		font-size: 28px;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
