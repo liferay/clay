@@ -276,7 +276,7 @@
 		display: none;
 	}
 
-	> [class^="icon"],
+	> [class^="icon-"],
 	> [class*=" icon-"] {
 		@media screen and (min-width: $grid-float-breakpoint) {
 			display: inline;
