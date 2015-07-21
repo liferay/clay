@@ -1,3 +1,111 @@
+@include keyframes(slideIn) {
+	0% {
+		@include transform(translateX(-100%));
+	}
+	100% {
+		@include transform(translateX(0));
+	}
+}
+
+@include keyframes(dropHeader) {
+	0% {
+		@include transform(translateY(-100%));
+	}
+	100% {
+		@include transform(translateY(0));
+	}
+}
+
+@include keyframes(removeBorder) {
+	0% {
+		border-bottom-color: #D8D8D8;
+	}
+	100% {
+		border-bottom-color: transparent;
+	}
+}
+
+@include keyframes(fadeIn) {
+	0% {
+		opacity: 0.25;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: $grid-float-breakpoint-max) {
+	.nav-tabs-scrollbar {
+		$anim-key-frames: dropHeader 0.5s $ease-out-quint, removeBorder 0.75s $ease-out-quint;
+		$anim-delay: 0s, 0.45s;
+
+		@include prefixer(animation, $anim-key-frames, moz o webkit spec);
+		// @include prefixer(animation-fill-mode, both, moz o webkit spec); // breaks overflow scroll on safari and mobile safari
+		@include prefixer(animation-delay, $anim-delay, moz o webkit spec);
+		min-height: 54px;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+
+		// &::-webkit-scrollbar {
+		// 	display: none;
+		// }
+
+		> .nav.nav-tabs,
+		> .nav.nav-pills {
+			@include prefixer(animation, slideIn 0.5s $ease-out-quint, moz o webkit spec);
+			@include prefixer(animation-delay, 0.4s, moz o webkit spec);
+			@include prefixer(animation-fill-mode, both, moz o webkit spec);
+			@include prefixer(animation-iteration-count, 1, moz o webkit spec);
+
+			white-space: nowrap;
+
+			> li {
+				@include prefixer(animation, fadeIn 0.5s ease-in, moz o webkit spec);
+				@include prefixer(animation-fill-mode, both, moz o webkit spec);
+				@include prefixer(animation-delay, 0.5s, moz o webkit spec);
+				float: none;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.nav-tabs-scroll {
+	position: relative;
+
+	> .dropdown-menu {
+		left: 0;
+		max-width: none;
+		right: 0;
+
+		&.open {
+			display: block;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				display: none;
+			}
+		}
+	}
+
+	.open > .dropdown-menu {
+		display: none;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			display: block;
+		}
+	}
+}
+
+.nav-tabs-scrollbar {
+	.nav {
+		float: left;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			float: none;
+		}
+	}
+}
+
 .nav-tabs {
 	> li {
 		&[class*='col-'] {

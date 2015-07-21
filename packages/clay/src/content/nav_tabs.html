@@ -2,6 +2,58 @@
 title: Nav Tabs
 section: Components
 ---
+<script src="../../js/nav-tabs-scroll-dropdown.js"></script>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Nav Tabs Scroll</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>
+				Horizontally scrolling tabs in mobile view.
+			</p>
+		</blockquote>
+
+		<div class="nav-tabs-scroll">
+			<div class="nav-tabs-scrollbar">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#1">Fields</a></li>
+					<li><a href="#1">Settings</a></li>
+					<li class="disabled"><a href="#">Documents</a></li>
+					<li><a href="#1">Forms</a></li>
+
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" data-nav-tabs-scroll-target="#navTabsScrollDropdown01" href="#1">Configuration <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Setup</a></li>
+							<li><a href="#1">Supported Clients</a></li>
+							<li><a href="#1">Permissions</a></li>
+							<li><a href="#1">Sharing</a></li>
+							<li class="divider"></li>
+							<li><a href="#1">Scope</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#1">Applications</a></li>
+					<li><a href="#1">Documents</a></li>
+				</ul>
+			</div>
+
+			<ul class="dropdown-menu dropdown-menu-no-arrow" id="navTabsScrollDropdown01">
+				<li><a href="#1">Setup</a></li>
+				<li><a href="#1">Supported Clients</a></li>
+				<li><a href="#1">Permissions</a></li>
+				<li><a href="#1">Sharing</a></li>
+				<li class="divider"></li>
+				<li><a href="#1">Scope</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('.nav-tabs-scroll').navTabsScrollDropdown();
+</script>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
