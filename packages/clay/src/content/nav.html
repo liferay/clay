@@ -5,8 +5,6 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Basic Nav</h3>
-
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Minimally styled navigation with <code>.nav</code>.</p>
 			<p>Use <code>.nav-heading</code> on a list element with a nested <code>```<span></span>```</code> or <code>```<a></a>```</code> to style the heading.</p>
@@ -43,27 +41,27 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Nested Basic Nav</h3>
+		<h3>Nested Nav</h3>
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Nested navigation, also collapsible (requires javascript). Add class nav-nested to the outermost nav to indent each nested nav.</p>
+			<p>Nested navigation, also collapsible (requires <a href="http://getbootstrap.com/javascript/#collapse">Bootstrap Collapse Plugin</a>). Add class nav-nested to the outermost nav to indent each nested nav.</p>
 
 			<p>Set the icon for the closed state by setting the variable <code>$nav-collapse-icon-closed</code> in <code>_variables.scss</code> or overwrite in your css by setting <code>.nav-collapse-icon:before { content: "" }</code></p>
 
-			<p>Set the icon for the open state by setting the variable <code>$nav-collapse-icon-closed</code> in <code>_variables.scss</code> or overwrite in your css by setting the content property of <code>.open a > .nav-collapse-icon:before { content: "" }</code></p>
+			<p>Set the icon for the open state by setting the variable <code>$nav-collapse-icon-open</code> in <code>_variables.scss</code> or overwrite in your css by setting the content property of <code>.collapsed .nav-collapse-icon:before { content: "" }</code></p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
 		<ul class="nav nav-nested">
 			<li>
-				<a href="#1">Basic Information <span class="nav-collapse-icon"></span></a>
-				<div class="collapse">
+				<a class="collapsed" data-toggle="collapse" href="#navCollapse01">Basic Information <span class="nav-collapse-icon"></span></a>
+				<div class="collapse" id="navCollapse01">
 					<ul class="nav">
 						<li><a href="#1">Details</a></li>
 						<li><a href="#1">Catagorization</a></li>
 						<li>
-							<a href="#1">Documents and Media <span class="nav-collapse-icon"></span></a>
-							<div class="collapse">
+							<a class="collapsed" data-toggle="collapse" href="#navCollapse02">Documents and Media <span class="nav-collapse-icon"></span></a>
+							<div class="collapse" id="navCollapse02">
 								<ul class="nav">
 									<li><a href="#1">Details</a></li>
 									<li><a href="#1">Catagorization</a></li>
@@ -77,8 +75,8 @@ section: Components
 				</div>
 			</li>
 			<li>
-				<a href="#1">SEO <span class="nav-collapse-icon"></span></a>
-				<div class="collapse">
+				<a class="collapsed" data-toggle="collapse" href="#navCollapse03">SEO <span class="nav-collapse-icon"></span></a>
+				<div class="collapse" id="navCollapse03">
 					<ul class="nav">
 						<li><a href="#1">Sitemap</a></li>
 						<li><a href="#1">Robots</a></li>
@@ -86,8 +84,8 @@ section: Components
 				</div>
 			</li>
 			<li>
-				<a href="#1">Advanced <span class="nav-collapse-icon"></span></a>
-				<div class="collapse">
+				<a class="collapsed" data-toggle="collapse" href="#navCollapse04">Advanced <span class="nav-collapse-icon"></span></a>
+				<div class="collapse" id="navCollapse04">
 					<ul class="nav">
 						<li><a href="#1">Default User Associations</a></li>
 						<li><a href="#1">Staging</a></li>
@@ -107,23 +105,52 @@ section: Components
 <div class="collapse" id="codeCollapse1">
 	<pre><code>```<ul class="nav nav-nested">
     <li>
-        <a href="#">Basic Information <span class="nav-collapse-icon"></span></a>
-        <div class="collapse">
+        <a class="collapsed" data-toggle="collapse" href="#navCollapse01">
+            Basic Information
+            <span class="nav-collapse-icon"></span>
+        </a>
+        <div class="collapse" id="navCollapse01">
             <ul class="nav">
-                <li><a href="#">Details</a></li>
-                <li><a href="#">Catagorization</a></li>
+                <li><a href="#1">Details</a></li>
+                <li><a href="#1">Catagorization</a></li>
                 <li>
-                    <a href="#">Documents and Media <span class="nav-collapse-icon"></span></a>
-                    <div class="collapse">
+                    <a class="collapsed" data-toggle="collapse" href="#navCollapse02">Documents and Media <span class="nav-collapse-icon"></span></a>
+                    <div class="collapse" id="navCollapse02">
                         <ul class="nav">
-                            <li><a href="#">Details</a></li>
-                            <li><a href="#">Catagorization</a></li>
-                            <li><a href="#">Documents and Media</a></li>
-                            <li><a href="#">Site Template</a></li>
+                            <li><a href="#1">Details</a></li>
+                            <li><a href="#1">Catagorization</a></li>
+                            <li><a href="#1">Documents and Media</a></li>
+                            <li><a href="#1">Site Template</a></li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="#">Site Template</a></li>
+                <li><a href="#1">Site Template</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a class="collapsed" data-toggle="collapse" href="#navCollapse03">
+            SEO
+            <span class="nav-collapse-icon"></span>
+        </a>
+        <div class="collapse" id="navCollapse03">
+            <ul class="nav">
+                <li><a href="#1">Sitemap</a></li>
+                <li><a href="#1">Robots</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a class="collapsed" data-toggle="collapse" href="#navCollapse04">
+            Advanced
+            <span class="nav-collapse-icon"></span>
+        </a>
+        <div class="collapse" id="navCollapse04">
+            <ul class="nav">
+                <li><a href="#1">Default User Associations</a></li>
+                <li><a href="#1">Staging</a></li>
+                <li><a href="#1">Analytics</a></li>
+                <li><a href="#1">Maps</a></li>
             </ul>
         </div>
     </li>
@@ -222,7 +249,7 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Nav Stacked Pills</h3>
+		<h3>Nav Pills Stacked</h3>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Add <code>.nav-stacked</code> to stack nav-pills vertically.</p>
 		</blockquote>
@@ -269,7 +296,7 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Nested Nav Stacked Pills</h3>
+		<h3>Nested Nav Nav Pills Stacked</h3>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Add <code>.nav-nested .nav-stacked</code> to style background colors and borders for stacked nav-pills.</p>
 		</blockquote>
@@ -277,15 +304,15 @@ section: Components
 
 	<div class="col-md-4">
 		<ul class="nav nav-nested nav-pills nav-stacked">
-			<li class="active open">
-				<a href="#">Basic Information <span class="nav-collapse-icon"></span></a>
-				<div class="collapse in">
+			<li>
+				<a data-toggle="collapse" href="#navPillsCollapse01">Basic Information <span class="nav-collapse-icon"></span></a>
+				<div class="collapse in" id="navPillsCollapse01">
 					<ul class="nav">
 						<li><a href="#">Details</a></li>
 						<li><a href="#">Catagorization</a></li>
 						<li>
-							<a href="#">Documents and Media <span class="nav-collapse-icon"></span></a>
-							<div class="collapse">
+							<a class="collapsed" data-toggle="collapse" href="#navPillsCollapse02">Documents and Media <span class="nav-collapse-icon"></span></a>
+							<div class="collapse" id="navPillsCollapse02">
 								<ul class="nav">
 									<li><a href="#">Details</a></li>
 									<li><a href="#">Catagorization</a></li>
@@ -406,23 +433,23 @@ section: Components
 </div>
 
 <script>
-	$(function() {
-		$('#mainContent').on('click', '.nav > li > a', function(event) {
-			var collapse;
+	// $(function() {
+	// 	$('#mainContent').on('click', '.nav > li > a', function(event) {
+	// 		var collapse;
 
-			var ct = $(event.currentTarget);
-			var li = ct.closest('li');
+	// 		var ct = $(event.currentTarget);
+	// 		var li = ct.closest('li');
 
-			if (li) {
-				collapse = li.find('.collapse');
-			}
+	// 		if (li) {
+	// 			collapse = li.find('.collapse');
+	// 		}
 
-			event.preventDefault();
+	// 		event.preventDefault();
 
-			if (collapse) {
-				collapse.toggleClass('in');
-				li.toggleClass('open');
-			}
-		});
-	});
+	// 		if (collapse) {
+	// 			collapse.toggleClass('in');
+	// 			li.toggleClass('open');
+	// 		}
+	// 	});
+	// });
 </script>

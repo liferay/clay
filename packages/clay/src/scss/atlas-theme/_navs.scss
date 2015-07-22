@@ -17,18 +17,16 @@
 	-webkit-font-smoothing: antialiased;
 
 	&:before {
-		content: $nav-collapse-icon-closed;
+		content: $nav-collapse-icon-open;
 		display: inline-block;
 		speak: none;
 		text-decoration: inherit;
 		vertical-align: sub;
 	}
+}
 
-	&:before {
-		.open > a & {
-			content: $nav-collapse-icon-open;
-		}
-	}
+.collapsed .nav-collapse-icon:before {
+	content: $nav-collapse-icon-closed;
 }
 
 .nav-heading {
