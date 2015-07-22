@@ -13,46 +13,6 @@
 	}
 }
 
-// Nav helper classes
-// -------------------------
-
-.nav.nav-circle {
-	> li > a,
-	.nav > li > a {
-		border-radius: 20px;
-	}
-}
-
-.nav.nav-rounded {
-	> li > a,
-	.nav > li > a {
-		border-radius: 5px;
-	}
-}
-
-.nav.nav-square {
-	> li > a,
-	.nav > li > a {
-		border-radius: 0;
-	}
-}
-
-.nav.nav-justified {
-	> li {
-		border-left: 2px solid transparent;
-
-		&:first-child {
-			border-left-width: 0;
-		}
-	}
-}
-
-.nav-justified, .nav-stacked {
-	.dropdown-menu {
-		width: 100%;
-	}
-}
-
 .nav-nested {
 	@include make-nav-nested($nav-link-padding-horizontal);
 }

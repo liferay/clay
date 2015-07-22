@@ -296,7 +296,7 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Nested Nav Nav Pills Stacked</h3>
+		<h3>Nested Nav Pills Stacked</h3>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Add <code>.nav-nested .nav-stacked</code> to style background colors and borders for stacked nav-pills.</p>
 		</blockquote>
@@ -335,15 +335,21 @@ section: Components
 </div>
 <div class="collapse" id="codeCollapse5">
 	<pre><code>```<ul class="nav nav-nested nav-pills nav-stacked">
-    <li class="active">
-        <a href="#">Basic Information <span class="nav-collapse-icon"></span></a>
-        <div class="collapse">
+    <li>
+        <a aria-expanded="true" data-toggle="collapse" href="#navPillsCollapse01">
+            Basic Information
+            <span class="nav-collapse-icon"></span>
+        </a>
+        <div class="collapse in" id="navPillsCollapse01">
             <ul class="nav">
                 <li><a href="#">Details</a></li>
                 <li><a href="#">Catagorization</a></li>
                 <li>
-                    <a href="#">Documents and Media <span class="nav-collapse-icon"></span></a>
-                    <div class="collapse">
+                    <a class="collapsed" data-toggle="collapse" href="#navPillsCollapse02">
+                        Documents and Media
+                        <span class="nav-collapse-icon"></span>
+                    </a>
+                    <div class="collapse" id="navPillsCollapse02">
                         <ul class="nav">
                             <li><a href="#">Details</a></li>
                             <li><a href="#">Catagorization</a></li>

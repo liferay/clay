@@ -52,3 +52,24 @@
 		}
 	}
 }
+
+.nav-circle {
+	> li > a,
+	.nav > li > a {
+		border-radius: 100px;
+	}
+}
+
+.nav-rounded {
+	> li > a,
+	.nav > li > a {
+		border-radius: 5px;
+	}
+}
+
+.nav-square {
+	> li > a,
+	.nav > li > a {
+		border-radius: 0;
+	}
+}
