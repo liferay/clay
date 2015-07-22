@@ -8,13 +8,10 @@ $nav-link-padding:                                $nav-link-padding-vertical $na
 
 $nav-link-color: #2B4259 !default; // Atlas
 
-$nav-link-active-bg: transparent !default; // Atlas
-$nav-link-active-color: $brand-primary !default; // Atlas
 $nav-link-hover-bg:                               transparent !default;
-$nav-link-hover-color: $brand-primary !default; // Atlas
 
 $nav-disabled-link-color:                         #C5CDD0 !default;
-$nav-disabled-link-hover-color:                   #C5CDD0 !default;
+$nav-disabled-link-hover-color:                   $nav-disabled-link-color !default;
 
 $nav-collapse-icon-closed: "\f0da" !default; // Atlas
 $nav-collapse-icon-open: "\f0d7" !default; // Atlas
