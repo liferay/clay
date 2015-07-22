@@ -4,31 +4,6 @@
 	}
 }
 
-.nav-collapse-icon {
-	display: inline;
-	font-family: 'fontawesome-alloy';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	float: right;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-
-	&:before {
-		content: $nav-collapse-icon-open;
-		display: inline-block;
-		speak: none;
-		text-decoration: inherit;
-		vertical-align: sub;
-	}
-}
-
-.collapsed .nav-collapse-icon:before {
-	content: $nav-collapse-icon-closed;
-}
-
 .nav-heading {
 	color: $brand-default;
 	display: block;
@@ -127,17 +102,6 @@
 	}
 }
 
-// indents each nested navigation by 16px (default)
-@mixin make-nav-nested($i: 1, $nav-class: ".nav", $nest-level: 15) {
-	.nav-nested {
-		@for $i from (1) through $nest-level {
-			#{$nav-class} > li > a {
-				padding-left: $nav-link-padding-horizontal * ($i + 1);
-			}
-
-			$nav-class: "#{$nav-class} .nav";
-		}
-	}
+.nav-nested {
+	@include make-nav-nested($nav-link-padding-horizontal);
 }
-
-@include make-nav-nested();
