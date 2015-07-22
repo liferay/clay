@@ -4,6 +4,13 @@
  * @param $height - height
  */
 /**
+ * Indents each nested navigation by $indent (15px default)
+ * @param $indent - amount to indent in pixels
+ * @param $nest-level - number of levels to iterate
+ * @param $nav-class - class name of nav element
+ * @param $i - start value
+ */
+/**
  * Calculates text-indent of data-label-on and data-label-off
  * @param $toggle-switch-width - Width of switch bar
  * @param $toggle-switch-padding - Space between button and bar
