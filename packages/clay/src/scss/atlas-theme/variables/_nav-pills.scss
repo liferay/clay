@@ -4,12 +4,5 @@ $nav-pills-border-radius:                         5px !default;
 
 // Skin
 
-$nav-pills-link-bg: transparent !default; // Atlas
-$nav-pills-link-color: $text-color !default; // Atlas
-
-$nav-pills-link-hover-bg: $gray-lighter !default; // Atlas
-$nav-pills-link-hover-color: $text-color !default; // Atlas
-
-$nav-pills-active-link-bg: $state-primary-border !default; // Atlas
-$nav-pills-active-link-hover-bg:                  $nav-pills-active-link-bg !default;
+$nav-pills-active-link-hover-bg:                  $state-primary-border !default;
 $nav-pills-active-link-hover-color:               #FFF !default;

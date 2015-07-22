@@ -6,59 +6,10 @@
 
 .nav-heading {
 	color: $brand-default;
-	display: block;
 	margin-top: 10px;
 
 	&:first-child {
 		margin-top: 0;
-	}
-}
-
-// Nav pills
-// -------------------------
-
-.nav-pills {
-	> li, .nav > li {
-		> a {
-			background-color: $nav-pills-link-bg;
-			border-radius: $nav-pills-border-radius;
-			color: $nav-pills-link-color;
-
-			&:focus, &:hover {
-				background-color: $nav-pills-link-hover-bg;
-				color: $nav-pills-link-hover-color;
-			}
-		}
-
-		&.open > a {
-			&, &:focus, &:hover {
-				background-color: $nav-pills-link-hover-bg;
-				color: $nav-pills-link-hover-color;
-			}
-		}
-
-		&.active > a {
-			background-color: $nav-pills-active-link-bg;
-			color: #FFF;
-			font-weight: bold;
-
-			&:focus, &:hover {
-				background-color: $nav-pills-active-link-hover-bg;
-				color: $nav-pills-active-link-hover-color;
-			}
-		}
-
-		&.nav-heading > a {
-			&, &:focus, &:hover {
-				background-color: transparent;
-			}
-		}
-	}
-}
-
-.nav-pills.nav-stacked {
-	.nav > li {
-		margin-top: 2px;
 	}
 }
 

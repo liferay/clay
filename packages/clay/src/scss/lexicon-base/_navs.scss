@@ -23,6 +23,32 @@
 	content: $nav-collapse-icon-closed;
 }
 
+.nav-heading {
+	color: $text-color;
+	display: block;
+}
+
 .nav-nested {
 	@include make-nav-nested();
+
+	.nav > li {
+		margin-top: 2px;
+	}
+
+	&.nav-pills {
+		.nav > li > a {
+			border-radius: $nav-pills-border-radius;
+		}
+	}
+}
+
+.nav-pills {
+	a[aria-expanded="true"] {
+		&,
+		&:hover,
+		&:focus {
+			color: $nav-pills-active-link-hover-color;
+			background-color: $nav-pills-active-link-hover-bg;
+		}
+	}
 }
