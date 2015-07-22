@@ -348,6 +348,8 @@
 			doc.on('screenChange.lexicon.sidenav', function(event, winWidth) {
 				instance._setScreenSize();
 
+				var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
+
 				var type = desktop ? instance.options.type : instance.options.typeMobile;
 
 				var fixedMenu = type === 'fixed' || type === 'fixed-push';
