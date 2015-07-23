@@ -5856,12 +5856,12 @@ a.label:focus {
 }
 
 .label-default {
-  background-color: #869CAD;
+  background-color: #E7F1F9;
 }
 
 .label-default[href]:hover,
 .label-default[href]:focus {
-  background-color: #688398;
+  background-color: #bed9ef;
 }
 
 .label-primary {
@@ -8220,28 +8220,6 @@ button.close {
   height: 22px;
   line-height: 22px;
   width: 22px;
-}
-
-.badge-absolute {
-  height: 40px;
-  line-height: 40px;
-  width: 40px;
-  border-radius: 0;
-  left: 15px;
-  padding: 0;
-  position: absolute;
-  text-align: center;
-  top: 15px;
-}
-
-.badge-absolute-bottom {
-  bottom: 15px;
-  top: auto;
-}
-
-.badge-absolute-right {
-  left: auto;
-  right: 15px;
 }
 
 .badge-monospaced {
@@ -12623,6 +12601,7 @@ mark:before, .mark:before {
 .badge {
   border-radius: 50px;
   font-size: 12px;
+  font-weight: 500;
   line-height: 32px;
   padding: 0 12px;
 }
@@ -12674,6 +12653,17 @@ mark:before, .mark:before {
 
 .badge-monospaced {
   padding: 0;
+}
+
+.badge-default {
+  background-color: #E7F1F9;
+  color: #65B6F0;
+}
+
+.badge-default a,
+.badge-default a:focus,
+.badge-default a:hover {
+  color: #65B6F0;
 }
 
 .breadcrumb {
@@ -14291,6 +14281,7 @@ label.radio-default1,
 .label {
   display: inline-block;
   font-size: 12px;
+  font-weight: 500;
   line-height: 32px;
   padding: 0 12px;
 }
@@ -14306,6 +14297,16 @@ label.radio-default1,
   height: 32px;
   line-height: 32px;
   width: 32px;
+}
+
+.label-default {
+  color: #65B6F0;
+}
+
+.label-default a,
+.label-default a:focus,
+.label-default a:hover {
+  color: #65B6F0;
 }
 
 .label-lg {
@@ -16328,6 +16329,17 @@ input[type="range"].vertical {
   padding: 0;
   writing-mode: bt-lr;
   -webkit-appearance: slider-vertical;
+}
+
+.sticker-default {
+  background-color: #E7F1F9;
+  color: #65B6F0;
+}
+
+.sticker-default a,
+.sticker-default a:focus,
+.sticker-default a:hover {
+  color: #65B6F0;
 }
 
 @media screen and (max-width: 479px) {

@@ -10258,28 +10258,6 @@ button.close {
   width: 22px;
 }
 
-.badge-absolute {
-  height: 40px;
-  line-height: 40px;
-  width: 40px;
-  border-radius: 0;
-  left: 15px;
-  padding: 0;
-  position: absolute;
-  text-align: center;
-  top: 15px;
-}
-
-.badge-absolute-bottom {
-  bottom: 15px;
-  top: auto;
-}
-
-.badge-absolute-right {
-  left: auto;
-  right: 15px;
-}
-
 .badge-monospaced {
   border-radius: 100px;
   height: 32px;
