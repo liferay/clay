@@ -190,6 +190,46 @@ body.fixed {
 	padding-right: 0;
 }
 
+// Blog Appearance Page
+
+#blogAppearance {
+
+}
+
+.blog-appearance-current-theme {
+	background-color: #FFF;
+	box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+	min-height: 400px;
+	width: 100%;
+}
+
+.blog-appearance-current-theme-heading {
+	border-bottom: 1px solid #DDD;
+	padding: 15px 0 10px;
+	margin-bottom: 15px;
+
+	h4 {
+		float: left;
+		line-height: 26px;
+		margin: 0;
+	}
+
+	.help-icon {
+		float: right;
+	}
+}
+
+.blog-appearance-left-column {
+	img {
+		margin-bottom: 15px;
+	}
+}
+
+.blog-appearance-right-column {
+	h4 {
+		margin-top: 31px;
+	}
+}
 
 // Breadcrumbs Page
 
