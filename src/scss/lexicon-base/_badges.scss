@@ -29,27 +29,6 @@
 	}
 }
 
-.badge-absolute {
-	@include monospace(40px);
-
-	border-radius: 0;
-	left: $grid-gutter-width / 2;
-	padding: 0;
-	position: absolute;
-	text-align: center;
-	top: $grid-gutter-width / 2;
-}
-
-.badge-absolute-bottom {
-	bottom: $grid-gutter-width / 2;
-	top: auto;
-}
-
-.badge-absolute-right {
-	left: auto;
-	right: $grid-gutter-width / 2;
-}
-
 .badge-monospaced {
 	border-radius: 100px;
 
