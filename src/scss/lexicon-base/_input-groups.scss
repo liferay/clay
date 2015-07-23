@@ -52,28 +52,24 @@
 			margin-right: -10px;
 		}
 	}
+
+	.help-icon {
+		@include monospace(28px);
+	}
+}
+
+.input-sm {
+	.help-icon {
+		@include monospace(20px);
+	}
+}
+
+.input-lg {
+	.help-icon {
+		@include monospace(35px);
+	}
 }
 
 .input-group-addon-content {
 	display: inline-block;
-}
-
-.input-group-icon {
-	background-color: $input-group-icon-bg;
-	border-radius: 100px;
-	display: inline-block;
-
-	@include monospace(20px);
-
-	position: relative;
-}
-
-a.input-group-icon {
-	color: $input-group-icon-link-color;
-
-	&:focus,
-	&:hover {
-		color: $input-group-icon-link-hover-color;
-		text-decoration: none;
-	}
 }

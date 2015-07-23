@@ -26,15 +26,18 @@ a .icon-monospaced {
 		}
 	}
 
-	&.btn-xs {
+	&.btn-xs,
+	&.icon-xs {
 		@include monospace(20px);
 	}
 
-	&.btn-sm {
+	&.btn-sm,
+	&.icon-sm {
 		@include monospace(26px);
 	}
 
-	&.btn-lg {
+	&.btn-lg,
+	&.icon-lg {
 		@include monospace(40px);
 	}
 }
@@ -58,5 +61,23 @@ a .icon-monospaced {
 
 	&.icon-5x {
 		@include monospace(100px);
+	}
+}
+
+// Skins
+
+.help-icon {
+	@extend .icon-monospaced;
+
+	border-radius: 100px;
+}
+
+.help-icon-default {
+	background-color: $gray-lighter;
+	color: $gray-light;
+
+	&:focus,
+	&:hover {
+		color: $gray-dark;
 	}
 }
