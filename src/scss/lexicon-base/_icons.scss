@@ -1,16 +1,26 @@
+a .icon-monospaced {
+	display: inline-block;
+}
+
 .icon-monospaced {
-	height: $icon-monospaced-size;
-	line-height: $icon-monospaced-size;
+	display: inline-block;
+
+	@include monospace($icon-monospaced-size);
+
 	text-align: center;
-	width: $icon-monospaced-size;
 
-	&,
-	a & {
-		display: inline-block;
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
 
-		&:focus,
-		&:hover {
-			text-decoration: none;
+	&.btn {
+		line-height: $icon-monospaced-size;
+		padding: 0;
+
+		&:before {
+			position: relative;
+			top: -1px;
 		}
 	}
 }
