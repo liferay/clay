@@ -1,6 +1,7 @@
 .label {
 	display: inline-block;
 	font-size: $label-font-size;
+	font-weight: 500;
 	line-height: $label-height;
 	padding: $label-padding-vertical $label-padding-horizontal;
 
@@ -14,6 +15,22 @@
 		@include monospace($label-monospaced-size);
 	}
 }
+
+// Skin
+
+.label-default {
+	color: $label-default-color;
+
+	a {
+		&,
+		&:focus,
+		&:hover {
+			color: $label-default-color;
+		}
+	}
+}
+
+// Sizes
 
 .label-lg {
 	font-size: 85%;
