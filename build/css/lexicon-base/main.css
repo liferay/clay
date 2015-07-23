@@ -8173,7 +8173,7 @@ button.close {
   padding-bottom: 56.25%;
 }
 
-.badge .icon-monospaced {
+.badge .icon-monospaced, .badge .help-icon {
   height: 26px;
   line-height: 26px;
   width: 26px;
@@ -8187,7 +8187,7 @@ button.close {
   padding-right: 18px;
 }
 
-.badge-lg .icon-monospaced {
+.badge-lg .icon-monospaced, .badge-lg .help-icon {
   margin-right: -9px;
   height: 44px;
   line-height: 44px;
@@ -8201,7 +8201,7 @@ button.close {
   padding-top: 0;
 }
 
-.badge-sm .icon-monospaced {
+.badge-sm .icon-monospaced, .badge-sm .help-icon {
   height: 22px;
   line-height: 22px;
   width: 22px;
@@ -8895,23 +8895,106 @@ button.close {
   padding-right: 0;
 }
 
-.icon-monospaced {
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-  width: 32px;
-}
-
-.icon-monospaced,
-a .icon-monospaced {
+a .icon-monospaced, a .help-icon {
   display: inline-block;
 }
 
+.icon-monospaced, .help-icon {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  text-align: center;
+}
+
 .icon-monospaced:focus,
-.icon-monospaced:hover,
-a .icon-monospaced:focus,
-a .icon-monospaced:hover {
+.help-icon:focus,
+.icon-monospaced:hover, .help-icon:hover {
   text-decoration: none;
+}
+
+.icon-monospaced.btn, .btn.help-icon {
+  line-height: 32px;
+  padding: 0;
+}
+
+.icon-monospaced.btn:before, .btn.help-icon:before {
+  position: relative;
+  top: -1px;
+}
+
+.icon-monospaced.btn-xs,
+.btn-group-xs > .icon-monospaced.btn,
+.btn-group-xs > .btn.help-icon,
+.btn-xs.help-icon,
+.icon-monospaced.icon-xs, .icon-xs.help-icon {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.icon-monospaced.btn-sm,
+.btn-group-sm > .icon-monospaced.btn,
+.btn-group-sm > .btn.help-icon,
+.btn-sm.help-icon,
+.icon-monospaced.icon-sm, .icon-sm.help-icon {
+  height: 26px;
+  line-height: 26px;
+  width: 26px;
+}
+
+.icon-monospaced.btn-lg,
+.btn-group-lg > .icon-monospaced.btn,
+.btn-group-lg > .btn.help-icon,
+.btn-lg.help-icon,
+.icon-monospaced.icon-lg, .icon-lg.help-icon {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+}
+
+.icon-monospaced.icon-large, .icon-large.help-icon {
+  height: 26px;
+  line-height: 26px;
+  width: 26px;
+}
+
+.icon-monospaced.icon-2x, .icon-2x.help-icon {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+}
+
+.icon-monospaced.icon-3x, .icon-3x.help-icon {
+  height: 48px;
+  line-height: 48px;
+  width: 48px;
+}
+
+.icon-monospaced.icon-4x, .icon-4x.help-icon {
+  height: 75px;
+  line-height: 75px;
+  width: 75px;
+}
+
+.icon-monospaced.icon-5x, .icon-5x.help-icon {
+  height: 100px;
+  line-height: 100px;
+  width: 100px;
+}
+
+.help-icon {
+  border-radius: 100px;
+}
+
+.help-icon-default {
+  background-color: #eeeeee;
+  color: #777777;
+}
+
+.help-icon-default:focus,
+.help-icon-default:hover {
+  color: #333333;
 }
 
 .input-group .form-control:focus {
@@ -8960,28 +9043,30 @@ a .icon-monospaced:hover {
   margin-right: -10px;
 }
 
-.input-group-addon-content {
-  display: inline-block;
+.input-group-default .help-icon {
+  height: 28px;
+  line-height: 28px;
+  width: 28px;
 }
 
-.input-group-icon {
-  background-color: #eeeeee;
-  border-radius: 100px;
-  display: inline-block;
+.input-sm .help-icon, .input-group-sm > .form-control .help-icon,
+.input-group-sm > .input-group-addon .help-icon,
+.input-group-sm > .input-group-btn > .btn .help-icon {
   height: 20px;
   line-height: 20px;
   width: 20px;
-  position: relative;
 }
 
-a.input-group-icon {
-  color: #777;
+.input-lg .help-icon, .input-group-lg > .form-control .help-icon,
+.input-group-lg > .input-group-addon .help-icon,
+.input-group-lg > .input-group-btn > .btn .help-icon {
+  height: 35px;
+  line-height: 35px;
+  width: 35px;
 }
 
-a.input-group-icon:focus,
-a.input-group-icon:hover {
-  color: #333;
-  text-decoration: none;
+.input-group-addon-content {
+  display: inline-block;
 }
 
 @media screen and (max-width: 768px) {
@@ -9083,7 +9168,7 @@ figcaption,
   display: inline-block;
 }
 
-.label .icon-monospaced {
+.label .icon-monospaced, .label .help-icon {
   height: 10px;
   line-height: 10px;
   width: 10px;
@@ -9095,7 +9180,7 @@ figcaption,
   padding: 3px 18px;
 }
 
-.label-lg .icon-monospaced {
+.label-lg .icon-monospaced, .label-lg .help-icon {
   margin-right: -9px;
   height: 28px;
   line-height: 28px;
@@ -9108,7 +9193,7 @@ figcaption,
   padding-top: 1px;
 }
 
-.label-sm .icon-monospaced {
+.label-sm .icon-monospaced, .label-sm .help-icon {
   height: 10px;
   line-height: 10px;
   width: 10px;
@@ -10911,7 +10996,7 @@ figcaption,
   margin: 16px 0;
 }
 
-.search-bar .btn .icon-monospaced {
+.search-bar .btn .icon-monospaced, .search-bar .btn .help-icon {
   height: 20px;
   line-height: 20px;
   width: 20px;
@@ -10988,7 +11073,7 @@ figcaption,
   z-index: 1;
 }
 
-.product-menu-tab-icon .icon-monospaced {
+.product-menu-tab-icon .icon-monospaced, .product-menu-tab-icon .help-icon {
   height: 0.9em;
   width: 0.9em;
 }
