@@ -993,6 +993,7 @@ section.row {
 
 #headerTopBar {
   background: #0058BA url(../images/back_decoration_nav.png) no-repeat 100% 0;
+  position: relative;
 }
 
 #headerTopBar a {
@@ -1143,6 +1144,37 @@ body.fixed {
 .uxgl-fullscreen-fixed.row > .col-md-12 {
   padding-left: 0;
   padding-right: 0;
+}
+
+.blog-appearance-current-theme {
+  background-color: #FFF;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+  min-height: 400px;
+  width: 100%;
+}
+
+.blog-appearance-current-theme-heading {
+  border-bottom: 1px solid #DDD;
+  padding: 15px 0 10px;
+  margin-bottom: 15px;
+}
+
+.blog-appearance-current-theme-heading h4 {
+  float: left;
+  line-height: 26px;
+  margin: 0;
+}
+
+.blog-appearance-current-theme-heading .help-icon {
+  float: right;
+}
+
+.blog-appearance-left-column img {
+  margin-bottom: 15px;
+}
+
+.blog-appearance-right-column h4 {
+  margin-top: 31px;
 }
 
 .uxgl-breadcrumbs .breadcrumb {

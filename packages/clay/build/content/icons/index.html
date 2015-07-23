@@ -175,6 +175,8 @@ collapse
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/blogs-action">Blog - Actions</a>
 </li>
+<li class=""><a href="../../content/blogs-appearance">Blog - Appearance</a>
+</li>
 <li class=""><a href="../../content/borderless-portlet-bar">Borderless Portlet Bar</a>
 </li>
 <li class=""><a href="../../content/chat">Chat</a>
@@ -279,6 +281,18 @@ collapse
 &lt;span class=&quot;icon-monospaced icon-heart&quot;&gt;&lt;/span&gt;</code></pre>
 </div>
 
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Help Icon</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Icon with a circular border, use for creating helpful tooltips for your users.</p>
+		</blockquote>
+
+		<a class="help-icon help-icon-default icon-question" href="#1" data-toggle="popover"></a>
 	</div>
 </div>
 
@@ -432,6 +446,15 @@ collapse
 
 	</div>
 </div>
+
+<script>
+$('[data-toggle="popover"]').popover({
+	container: 'body',
+	content: 'Some helpful text.',
+	placement: 'left',
+	trigger: 'hover'
+});
+</script>
 	</div>
 
 		</section>
