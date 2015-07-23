@@ -39,6 +39,18 @@ section: Elements
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<h3>Help Icon</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Icon with a circular border, use for creating helpful tooltips for your users.</p>
+		</blockquote>
+
+		<a class="help-icon help-icon-default icon-question" href="#1" data-toggle="popover"></a>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
 		<h3>Icon Sizes</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
@@ -187,3 +199,12 @@ section: Elements
 
 	</div>
 </div>
+
+<script>
+$('[data-toggle="popover"]').popover({
+	container: 'body',
+	content: 'Some helpful text.',
+	placement: 'left',
+	trigger: 'hover'
+});
+</script>

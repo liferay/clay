@@ -1,3 +1,10 @@
 .icon-monospaced.btn:before {
 	top: -$btn-border-width;
 }
+
+.help-icon-default {
+	&:focus,
+	&:hover {
+		color: $gray-light;
+	}
+}
