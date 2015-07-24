@@ -14,3 +14,35 @@
 		}
 	}
 }
+
+.panel-primary {
+	> .panel-footer {
+		background-color: $panel-primary-heading-bg;
+		border-color: $panel-primary-border;
+		color: #FFF;
+	}
+}
+
+.panel-success {
+	> .panel-footer {
+		background-color: $panel-success-heading-bg;
+		border-color: $panel-success-border;
+		color: $brand-success;
+	}
+}
+
+.panel-warning {
+	> .panel-footer {
+		background-color: $panel-warning-heading-bg;
+		border-color: $panel-warning-border;
+		color: $brand-warning;
+	}
+}
+
+.panel-danger {
+	> .panel-footer {
+		background-color: $panel-danger-heading-bg;
+		border-color: $panel-danger-border;
+		color: $brand-danger;
+	}
+}
