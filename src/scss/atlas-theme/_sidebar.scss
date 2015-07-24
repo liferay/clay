@@ -77,6 +77,10 @@
 }
 
 .product-menu {
+	.collapse-icon:before {
+		top: 0;
+	}
+
 	.list-group-heading,
 	.list-group-item {
 		padding-left: 10px;

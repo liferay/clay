@@ -54,6 +54,19 @@
 
 // Product Menu
 
+.product-menu {
+	.list-group-heading {
+		h1, h2, h3, h4, h5, h6 {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+	}
+
+	.collapse-icon:before {
+		top: 5px;
+	}
+}
+
 .product-menu .sidebar-body {
 	bottom: 54px;
 	left: 0;
