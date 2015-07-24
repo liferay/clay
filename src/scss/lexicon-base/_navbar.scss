@@ -1,7 +1,7 @@
 .basic-search {
 	float: right;
 	max-width: none;
-	padding: 8px $navbar-padding-horizontal;
+	padding: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		max-width: 220px;
@@ -171,8 +171,8 @@
 
 // navbar-form
 .navbar-form {
-	margin-bottom: 8px;
-	margin-top: 8px;
+	margin-bottom: floor(($navbar-height - $input-height-base) / 2);
+	margin-top: floor(($navbar-height - $input-height-base) / 2);
 }
 
 .navbar-header .navbar-form, .navbar-no-collapse .navbar-form {
@@ -194,8 +194,6 @@
 	margin: 0 15px;
 
 	> li {
-		border: solid #DDD;
-		border-width: 0 1px;
 		float: left;
 		margin-left: -1px;
 
@@ -305,7 +303,7 @@
 
 	.navbar-form {
 		margin: 0;
-		padding: 8px 0;
+		padding: floor(($navbar-height - $input-height-base) / 2) 0;
 
 		.btn {
 			vertical-align: top;
