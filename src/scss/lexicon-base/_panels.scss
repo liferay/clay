@@ -1,0 +1,23 @@
+.collapse-icon {
+	display: block;
+	padding-right: 30px;
+	position: relative;
+
+	&:before {
+		content: $panel-heading-icon-open;
+		font-size: $panel-heading-icon-font-size;
+		font-family: $panel-heading-icon-font-family;
+		position: absolute;
+		right: 0;
+	}
+
+	&.collapsed:before {
+		content: $panel-heading-icon-closed;
+	}
+}
+
+.vertical-align-middle:before {
+	@include transform(translateY(-50%));
+
+	top: 50%;
+}

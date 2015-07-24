@@ -7,18 +7,12 @@
 	word-wrap: break-word;
 }
 
-.list-group-heading.show-collapse-icon {
-	padding-right: 30px;
-
+.list-group-heading.collapse-icon {
 	&:before {
 		content: $list-group-header-icon-open;
 		font-size: $list-group-header-icon-font-size;
-		font-family: 'fontawesome-alloy';
-		position: absolute;
+		font-family: $list-group-header-icon-font-family;
 		right: 15px;
-		top: 50%;
-
-		@include transform(translateY(-50%));
 	}
 
 	&.collapsed:before {
