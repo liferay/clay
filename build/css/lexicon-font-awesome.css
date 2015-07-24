@@ -12994,6 +12994,30 @@ figcaption,
   content: "";
 }
 
+.panel-primary > .panel-footer {
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: #FFF;
+}
+
+.panel-success > .panel-footer {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #5cb85c;
+}
+
+.panel-warning > .panel-footer {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #f0ad4e;
+}
+
+.panel-danger > .panel-footer {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #d9534f;
+}
+
 .sidebar {
   -webkit-overflow-scrolling: touch;
   height: 100%;
