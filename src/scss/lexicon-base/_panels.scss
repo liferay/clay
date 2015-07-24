@@ -1,23 +1,16 @@
-.collapse-icon {
-	display: block;
-	padding-right: 30px;
-	position: relative;
+.panel {
+	.collapse-icon {
+		padding-right: 30px;
 
-	&:before {
-		content: $panel-heading-icon-open;
-		font-size: $panel-heading-icon-font-size;
-		font-family: $panel-heading-icon-font-family;
-		position: absolute;
-		right: 0;
+		&:before {
+			content: $panel-heading-icon-open;
+			font-size: $panel-heading-icon-font-size;
+			font-family: $panel-heading-icon-font-family;
+			right: 3px;
+		}
+
+		&.collapsed:before {
+			content: $panel-heading-icon-closed;
+		}
 	}
-
-	&.collapsed:before {
-		content: $panel-heading-icon-closed;
-	}
-}
-
-.collapse-icon-middle:before {
-	@include transform(translateY(-50%));
-
-	top: 50%;
 }
