@@ -66,6 +66,29 @@ a .icon-monospaced {
 
 // Skins
 
+.collapse-icon {
+	display: block;
+	padding-right: $padding-base-horizontal * 2;
+	position: relative;
+
+	&:before {
+		content: $collapse-icon-open;
+		font-family: $collapse-icon-font-family;
+		position: absolute;
+		right: $padding-base-horizontal;
+	}
+
+	&.collapsed:before {
+		content: $collapse-icon-closed;
+	}
+}
+
+.collapse-icon-middle:before {
+	@include transform(translateY(-50%));
+
+	top: 50%;
+}
+
 .help-icon {
 	@extend .icon-monospaced;
 

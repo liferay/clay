@@ -1,26 +1,15 @@
-.nav-collapse-icon {
-	display: inline;
-	font-family: 'fontawesome-alloy';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	float: right;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+.nav > li > .collapse-icon {
+	padding-right: $navbar-padding-horizontal * 2;
 
 	&:before {
 		content: $nav-collapse-icon-open;
-		display: inline-block;
-		speak: none;
-		text-decoration: inherit;
-		vertical-align: sub;
+		font-family: $nav-collapse-icon-font-family;
+		right: $navbar-padding-horizontal;
 	}
-}
 
-.collapsed .nav-collapse-icon:before {
-	content: $nav-collapse-icon-closed;
+	&.collapsed:before {
+		content: $nav-collapse-icon-closed;
+	}
 }
 
 .nav-heading {

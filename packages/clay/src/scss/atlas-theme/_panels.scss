@@ -1,70 +1,27 @@
-@mixin color-panel($bg-color, $border-color, $color) {
-	border-color: lighten($border-color, 29%);
-
-	.panel-footer, .panel-heading {
-		background-color: lighten($bg-color, 29%);
-		border-color: lighten($border-color, 29%);
-		color: $color;
-	}
-}
-
 .panel {
-	box-shadow: none;
-
-	> .collapse > .list-group {
-		margin-bottom: 0;
-	}
-
-	.list-group > a {
-		display: block;
-		padding: 7px 15px;
-	}
-
-	.panel-footer {
-		background-color: transparent;
-		border-top: 1px solid transparent;
-	}
+	border: $panel-border-width solid transparent;
+	box-shadow: $panel-box-shadow;
 }
 
-.panel-collapse {
-	.panel-heading {
-		padding: 0;
-
-		> a {
-			color: #555;
-			display: block;
-			padding: 10px 15px;
-			text-decoration: none;
-
-			&:focus, &:hover {
-				color: lighten(#555, 12%);
-			}
-
-			.icon-caret-down,
-			.icon-caret-left,
-			.icon-caret-right {
-				float: right;
-			}
-		}
-	}
+.panel-footer {
+	border-top-width: 0;
 }
 
-.panel-danger {
-	@include color-panel(#E8295A, #E8295A, #555);
+.panel-heading {
+	border-bottom-width: 2px;
 }
 
 .panel-default {
-	@include color-panel(#868896, #868896, #555);
+	> .panel-heading,
+	> .panel-footer {
+		color: $brand-default;
+	}
 }
 
-.panel-primary {
-	@include color-panel(#1D5EC7, #1D5EC7, #555);
+.panel-group .panel-heading {
+	border-bottom-width: 0;
 }
 
-.panel-success {
-	@include color-panel(#34ADAB, #34ADAB, #555);
-}
-
-.panel-warning {
-	@include color-panel(#FF6C58, #FF6C58, #555);
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+	border-top-width: 2px;
 }

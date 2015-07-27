@@ -77,6 +77,10 @@
 }
 
 .product-menu {
+	.collapse-icon:before {
+		top: 0;
+	}
+
 	.list-group-heading,
 	.list-group-item {
 		padding-left: 10px;
@@ -84,12 +88,6 @@
 
 	.list-group-heading {
 		min-height: 47px;
-
-		&.show-collapse-icon:before {
-			top: 0;
-
-			@include transform(none);
-		}
 
 		h1, h2, h3, h4, h5, h6 {
 			margin-bottom: 0;
