@@ -229,12 +229,38 @@
 	}
 }
 
-.dropdown-wide,
-.dropdown-full {
+.dropdown-full,
+.dropdown-wide {
+	&.open {
+		@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
+			@include clearfix-hack();
+		}
+	}
+
 	.dropdown-menu {
 		padding: 5px 0;
 		width: 100%;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			padding: 20px 0;
+			width: 100%;
+		}
+
+		[class*="col-sm"],
+		[class*="col-md"],
+		[class*="col-lg"] {
+			@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
+				padding: 0;
+			}
+		}
 	}
+}
+
+.dropdown-full,
+.dropdown-wide,
+.nav > li.dropdown-full,
+.nav > li.dropdown-wide {
+	position: static;
 }
 
 .dropdown-full .dropdown-menu {
@@ -244,56 +270,24 @@
 	}
 }
 
-.dropdown-wide,
-.dropdown-full,
-.nav > li.dropdown-wide,
-.nav > li.dropdown-full {
-	position: static;
-}
-
-@media (min-width: $screen-sm-min) { // min-width 768px
-	.dropdown-wide,
-	.dropdown-full {
-		.dropdown-menu {
-			padding: 20px 0;
-			width: 100%;
-		}
-	}
-}
-
-@media (min-width: $screen-md-min) { // min-width 992px
-	.dropdown-wide,
-	.nav > li.dropdown-wide {
-		position: relative;
-	}
-
-	.dropdown-wide .dropdown-menu {
-		min-width: $dropdown-wide-width;
-	}
-}
-
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { // between 768px and 991px
-	.dropdown-wide .dropdown-menu {
-		&:after,
-		&:before {
-			border-bottom-width: 0;
-		}
-	}
-}
-
-@media (max-width: $grid-float-breakpoint-max) { // max-width: 767px
-	.dropdown-full,
-	.dropdown-wide {
-		&.open {
-			@include clearfix-hack();
+.dropdown-wide {
+	.dropdown-menu {
+		@media screen and (min-width: $screen-md-min) { // min-width 992px
+			min-width: $dropdown-wide-width;
 		}
 
-		.dropdown-menu {
-			[class*="col-sm"],
-			[class*="col-md"],
-			[class*="col-lg"] {
-				padding: 0;
+		@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { // between 768px and 991px
+			&:after,
+			&:before {
+				border-bottom-width: 0;
 			}
 		}
+	}
+}
+
+.dropdown-wide,
+.nav > li.dropdown-wide {
+	@media screen and (min-width: $screen-md-min) {
+		position: relative;
 	}
 }
