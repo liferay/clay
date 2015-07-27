@@ -47,6 +47,13 @@
 	}
 }
 
+.dropdown-toggle {
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 // Dropdown inline-scroller
 
 .inline-scroller {
