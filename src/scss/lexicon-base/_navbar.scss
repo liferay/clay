@@ -181,20 +181,20 @@
 .navbar-no-collapse .navbar-form {
 	border-width: 0;
 	margin: 0;
-	padding: 7px 15px;
+	padding: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
 }
 
 .navbar-nav {
 	> li > a {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: $navbar-padding-horizontal;
+		padding-right: $navbar-padding-horizontal;
 	}
 }
 
 //navbar-no-collapse
 .navbar-no-collapse .navbar-nav {
 	float: left;
-	margin: 0 15px;
+	margin: 0 $navbar-padding-horizontal;
 
 	> li {
 		float: left;
@@ -219,7 +219,7 @@
 //navbar toggle
 .navbar-toggle,
 .navbar-toggle-left {
-	margin: floor(($navbar-height - $input-height-base) / 2) 15px;
+	margin: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
 	padding: $padding-base-vertical 10px;
 }
 
@@ -329,11 +329,11 @@
 	}
 
 	.navbar-nav {
-		margin-right: 15px;
+		margin-right: $navbar-padding-horizontal;
 
 		&.navbar-right {
 			margin-right: 0;
-			margin-left: 15px;
+			margin-left: $navbar-padding-horizontal;
 
 			&:last-child {
 				margin-right: 0;
