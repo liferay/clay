@@ -121,6 +121,7 @@
 	}
 
 	.basic-search {
+		bottom: 0;
 		display: block;
 		left: 0;
 		margin: 0;
@@ -158,7 +159,8 @@
 /* make navbar dropdown position absolute
 	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
 .navbar {
-	.navbar-collapse:first-child, .navbar-collapse-absolute {
+	.navbar-collapse:first-child,
+	.navbar-collapse-absolute {
 		background-color: #FFF;
 		border: 1px solid #DDD;
 		left: -1px;
@@ -175,7 +177,8 @@
 	margin-top: floor(($navbar-height - $input-height-base) / 2);
 }
 
-.navbar-header .navbar-form, .navbar-no-collapse .navbar-form {
+.navbar-header .navbar-form,
+.navbar-no-collapse .navbar-form {
 	border-width: 0;
 	margin: 0;
 	padding: 7px 15px;
@@ -207,16 +210,17 @@
 		}
 
 		> a {
-			padding-bottom: 15px;
-			padding-top: 15px;
+			padding-bottom: $navbar-padding-vertical;
+			padding-top: $navbar-padding-vertical;
 		}
 	}
 }
 
 //navbar toggle
-.navbar-toggle, .navbar-toggle-left {
-	margin: 7px 15px;
-	padding: 7px 10px;
+.navbar-toggle,
+.navbar-toggle-left {
+	margin: floor(($navbar-height - $input-height-base) / 2) 15px;
+	padding: $padding-base-vertical 10px;
 }
 
 .navbar-toggle .icon-bar {
