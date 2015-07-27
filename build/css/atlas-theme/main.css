@@ -10203,7 +10203,7 @@ figcaption,
 .basic-search {
   float: right;
   max-width: none;
-  padding: 8px 12px;
+  padding: 0px 12px;
 }
 
 @media screen and (min-width: 768px) {
@@ -10325,6 +10325,7 @@ figcaption,
 }
 
 .collapse-basic-search .basic-search {
+  bottom: 0;
   display: block;
   left: 0;
   margin: 0;
@@ -10365,7 +10366,11 @@ figcaption,
 
 /* make navbar dropdown position absolute
 	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
-.navbar .navbar-collapse:first-child, .management-bar .navbar-collapse:first-child, .navbar .management-bar-collapse:first-child, .management-bar .management-bar-collapse:first-child, .navbar .navbar-collapse-absolute, .management-bar .navbar-collapse-absolute {
+.navbar .navbar-collapse:first-child,
+.management-bar .navbar-collapse:first-child,
+.navbar .management-bar-collapse:first-child,
+.management-bar .management-bar-collapse:first-child,
+.navbar .navbar-collapse-absolute, .management-bar .navbar-collapse-absolute {
   background-color: #FFF;
   border: 1px solid #DDD;
   left: -1px;
@@ -10376,29 +10381,29 @@ figcaption,
 }
 
 .navbar-form {
-  margin-bottom: 8px;
-  margin-top: 8px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
-.navbar-header .navbar-form, .management-bar-header .navbar-form, .navbar-no-collapse .navbar-form {
+.navbar-header .navbar-form,
+.management-bar-header .navbar-form,
+.navbar-no-collapse .navbar-form {
   border-width: 0;
   margin: 0;
-  padding: 7px 15px;
+  padding: 0px 12px;
 }
 
 .navbar-nav > li > a, .management-bar-nav > li > a {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .navbar-no-collapse .navbar-nav, .navbar-no-collapse .management-bar-nav {
   float: left;
-  margin: 0 15px;
+  margin: 0 12px;
 }
 
 .navbar-no-collapse .navbar-nav > li, .navbar-no-collapse .management-bar-nav > li {
-  border: solid #DDD;
-  border-width: 0 1px;
   float: left;
   margin-left: -1px;
 }
@@ -10413,13 +10418,15 @@ figcaption,
 }
 
 .navbar-no-collapse .navbar-nav > li > a, .navbar-no-collapse .management-bar-nav > li > a {
-  padding-bottom: 15px;
-  padding-top: 15px;
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
 
-.navbar-toggle, .management-bar-toggle, .navbar-toggle-left, .management-bar-toggle-left {
-  margin: 7px 15px;
-  padding: 7px 10px;
+.navbar-toggle,
+.management-bar-toggle,
+.navbar-toggle-left, .management-bar-toggle-left {
+  margin: 0px 12px;
+  padding: 6px 10px;
 }
 
 .navbar-toggle .icon-bar, .management-bar-toggle .icon-bar {
@@ -10482,7 +10489,7 @@ figcaption,
   }
   .navbar-form {
     margin: 0;
-    padding: 8px 0;
+    padding: 0px 0;
   }
   .navbar-form .btn {
     vertical-align: top;
@@ -10499,11 +10506,11 @@ figcaption,
     float: right;
   }
   .navbar-nav, .management-bar-nav {
-    margin-right: 15px;
+    margin-right: 12px;
   }
   .navbar-nav.navbar-right, .navbar-right.management-bar-nav {
     margin-right: 0;
-    margin-left: 15px;
+    margin-left: 12px;
   }
   .navbar-nav.navbar-right:last-child, .navbar-right.management-bar-nav:last-child {
     margin-right: 0;
