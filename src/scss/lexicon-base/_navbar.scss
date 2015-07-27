@@ -1,7 +1,7 @@
 .basic-search {
 	float: right;
 	max-width: none;
-	padding: 8px $navbar-padding-horizontal;
+	padding: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		max-width: 220px;
@@ -121,6 +121,7 @@
 	}
 
 	.basic-search {
+		bottom: 0;
 		display: block;
 		left: 0;
 		margin: 0;
@@ -158,7 +159,8 @@
 /* make navbar dropdown position absolute
 	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
 .navbar {
-	.navbar-collapse:first-child, .navbar-collapse-absolute {
+	.navbar-collapse:first-child,
+	.navbar-collapse-absolute {
 		background-color: #FFF;
 		border: 1px solid #DDD;
 		left: -1px;
@@ -171,31 +173,30 @@
 
 // navbar-form
 .navbar-form {
-	margin-bottom: 8px;
-	margin-top: 8px;
+	margin-bottom: floor(($navbar-height - $input-height-base) / 2);
+	margin-top: floor(($navbar-height - $input-height-base) / 2);
 }
 
-.navbar-header .navbar-form, .navbar-no-collapse .navbar-form {
+.navbar-header .navbar-form,
+.navbar-no-collapse .navbar-form {
 	border-width: 0;
 	margin: 0;
-	padding: 7px 15px;
+	padding: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
 }
 
 .navbar-nav {
 	> li > a {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: $navbar-padding-horizontal;
+		padding-right: $navbar-padding-horizontal;
 	}
 }
 
 //navbar-no-collapse
 .navbar-no-collapse .navbar-nav {
 	float: left;
-	margin: 0 15px;
+	margin: 0 $navbar-padding-horizontal;
 
 	> li {
-		border: solid #DDD;
-		border-width: 0 1px;
 		float: left;
 		margin-left: -1px;
 
@@ -209,16 +210,17 @@
 		}
 
 		> a {
-			padding-bottom: 15px;
-			padding-top: 15px;
+			padding-bottom: $navbar-padding-vertical;
+			padding-top: $navbar-padding-vertical;
 		}
 	}
 }
 
 //navbar toggle
-.navbar-toggle, .navbar-toggle-left {
-	margin: 7px 15px;
-	padding: 7px 10px;
+.navbar-toggle,
+.navbar-toggle-left {
+	margin: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
+	padding: $padding-base-vertical 10px;
 }
 
 .navbar-toggle .icon-bar {
@@ -305,7 +307,7 @@
 
 	.navbar-form {
 		margin: 0;
-		padding: 8px 0;
+		padding: floor(($navbar-height - $input-height-base) / 2) 0;
 
 		.btn {
 			vertical-align: top;
@@ -327,11 +329,11 @@
 	}
 
 	.navbar-nav {
-		margin-right: 15px;
+		margin-right: $navbar-padding-horizontal;
 
 		&.navbar-right {
 			margin-right: 0;
-			margin-left: 15px;
+			margin-left: $navbar-padding-horizontal;
 
 			&:last-child {
 				margin-right: 0;

@@ -23,4 +23,6 @@ $label-lg-padding-horizontal: $badge-lg-padding-horizontal !default; // Atlas
 
 // Skin
 
-$label-default-bg:                      $brand-default !default;
+$label-default-bg:                      $badge-default-bg !default;
+$label-default-color: $badge-default-color !default; // Atlas
+$label-default-link-color: $label-default-color !default; // Atlas
