@@ -1,0 +1,24 @@
+$portlet-topper-bg: $navbar-default-bg !default;
+$portlet-topper-border: $navbar-default-border !default;
+$portlet-topper-color: $navbar-default-color !default;
+$portlet-topper-link-color: $navbar-default-link-color !default;
+$portlet-topper-link-hover-color: $navbar-default-link-hover-color !default;
+
+$portlet-topper-border-radius: $navbar-border-radius $navbar-border-radius 0 0 !default;
+
+$portlet-topper-border-top-width: 1px !default;
+$portlet-topper-border-right-width: 1px !default;
+$portlet-topper-border-bottom-width: 0 !default;
+$portlet-topper-border-left-width: 1px !default;
+$portlet-topper-border-width: $portlet-topper-border-top-width $portlet-topper-border-right-width $portlet-topper-border-bottom-width $portlet-topper-border-left-width !default;
+
+$portlet-topper-height: 40px !default;
+$portlet-topper-line-height: $portlet-topper-height - $portlet-topper-border-top-width - $portlet-topper-border-bottom-width !default;
+
+$portlet-content-border-radius: 0 0 $navbar-border-radius $navbar-border-radius !default;
+
+$portlet-content-border-top-width: 1px !default;
+$portlet-content-border-right-width: 1px !default;
+$portlet-content-border-bottom-width: 1px !default;
+$portlet-content-border-left-width: 1px !default;
+$portlet-content-border-width: $portlet-content-border-top-width $portlet-content-border-right-width $portlet-content-border-bottom-width $portlet-content-border-left-width !default;
