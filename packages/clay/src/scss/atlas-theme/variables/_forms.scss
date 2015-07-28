@@ -21,13 +21,13 @@ $input-font-size-small: 13px !default; // Atlas
 
 /*** When changing input, make sure to match the corresponding
 		 btn settings to the input height. ***/
-$input-height-base:                        48px !default;
-$input-height-large:                       61px !default;
-$input-height-small:                       37px !default;
+$input-height-base:                        40px !default;
+$input-height-large:                       48px !default;
+$input-height-small:                       32px !default;
 
 $input-mobile-height-base: 40px !default; // Atlas
-$input-mobile-height-large: 61px !default; // Atlas
-$input-mobile-height-small: 37px !default; // Atlas
+$input-mobile-height-large: 48px !default; // Atlas
+$input-mobile-height-small: 32px !default; // Atlas
 
 $checkbox-size: 20px !default; // Atlas
 
