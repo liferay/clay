@@ -104,11 +104,21 @@ select[disabled].form-control > option {
 	&.input-lg {
 		border-radius: $input-border-radius-large;
 		font-size: $input-font-size-large;
+		height: $input-mobile-height-large;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: $input-height-large;
+		}
 	}
 
 	&.input-sm {
 		border-radius: $input-border-radius-small;
 		font-size: $input-font-size-small;
+		height: $input-mobile-height-small;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: $input-height-small;
+		}
 	}
 }
 

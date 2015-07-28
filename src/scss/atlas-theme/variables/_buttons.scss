@@ -1,6 +1,5 @@
 // Structure
 
-// Button Sizes
 /* When changing any settings below, make sure to match the corresponding
 	 input-height to the button height. */
 $btn-border-width: 2px !default; // Atlas
@@ -15,36 +14,36 @@ $btn-lg-font-size: 16px !default; // Atlas
 $btn-lg-padding-vertical: 12px !default; // Atlas
 $btn-lg-padding-horizontal: round($btn-lg-padding-vertical * 3) !default; // Atlas
 
-$btn-sm-font-size: 12px !default; // Atlas
-$btn-sm-padding-vertical: 6px !default; // Atlas
+$btn-sm-font-size: 13px !default; // Atlas
+$btn-sm-padding-vertical: 4px !default; // Atlas
 $btn-sm-padding-horizontal: round($btn-sm-padding-vertical * 3) !default; // Atlas
 
 $btn-xs-font-size: 10px !default; // Atlas
-$btn-xs-padding-vertical: 4px !default; // Atlas
+$btn-xs-padding-vertical: 1px !default; // Atlas
 $btn-xs-padding-horizontal: round($btn-xs-padding-vertical * 3) !default; // Atlas
 
 $btn-desktop-font-size: 16px !default; // Atlas
-$btn-desktop-padding-vertical: 12px !default; // Atlas
-$btn-desktop-padding-horizontal: round($btn-desktop-padding-vertical * 4) !default; // Atlas
+$btn-desktop-padding-vertical: 8px !default; // Atlas
+$btn-desktop-padding-horizontal: 14px !default; // Atlas
 
-$btn-desktop-lg-font-size: 18px !default; // Atlas
-$btn-desktop-lg-padding-vertical: 16px !default; // Atlas
-$btn-desktop-lg-padding-horizontal: round($btn-lg-padding-vertical * 4) !default; // Atlas
+$btn-desktop-lg-font-size: $btn-lg-font-size !default; // Atlas
+$btn-desktop-lg-padding-vertical: 12px !default; // Atlas
+$btn-desktop-lg-padding-horizontal: 48px !default; // Atlas
 
-$btn-desktop-sm-font-size: 12px !default; // Atlas
-$btn-desktop-sm-padding-vertical: 8px !default; // Atlas
-$btn-desktop-sm-padding-horizontal: round($btn-sm-padding-vertical * 4) !default; // Atlas
+$btn-desktop-sm-font-size: $btn-sm-font-size !default; // Atlas
+$btn-desktop-sm-padding-vertical: 4px !default; // Atlas
+$btn-desktop-sm-padding-horizontal: round($btn-desktop-sm-padding-vertical * 4) !default; // Atlas
 
 $btn-desktop-xs-font-size: 10px !default; // Atlas
-$btn-desktop-xs-padding-vertical: 4px !default; // Atlas
-$btn-desktop-xs-padding-horizontal: round($btn-xs-padding-vertical * 4) !default; // Atlas
+$btn-desktop-xs-padding-vertical: 1px !default; // Atlas
+$btn-desktop-xs-padding-horizontal: round($btn-desktop-xs-padding-vertical * 4) !default; // Atlas
 
 // Skin
 
 $btn-action-border-radius: 4px !default; // Atlas
 $btn-border-radius: 4px !default; // Atlas
 
-$btn-lg-border-radius: round($btn-border-radius * 1.5) !default; // Atlas
+$btn-lg-border-radius: $btn-border-radius !default; // Atlas
 $btn-sm-border-radius: round($btn-border-radius * 0.75) !default; // Atlas
 $btn-xs-border-radius: round($btn-border-radius * 0.5) !default; // Atlas
 
