@@ -8095,6 +8095,11 @@ button.close {
  * @param $i - start value
  */
 /**
+ * Sets portlet topper width based on grid column
+ * @param $size - grid size
+ * @param $i - loop initialization
+ */
+/**
  * Calculates text-indent of data-label-on and data-label-off
  * @param $toggle-switch-width - Width of switch bar
  * @param $toggle-switch-padding - Space between button and bar
@@ -8600,6 +8605,11 @@ button.close {
   padding: 3px 20px;
 }
 
+.dropdown-toggle:focus,
+.dropdown-toggle:hover {
+  text-decoration: none;
+}
+
 .inline-scroller {
   height: 125px;
   list-style: none;
@@ -8775,50 +8785,7 @@ button.close {
   white-space: nowrap;
 }
 
-.dropdown-wide .dropdown-menu,
-.dropdown-full .dropdown-menu {
-  padding: 5px 0;
-  width: 100%;
-}
-
-.dropdown-full .dropdown-menu:after,
-.dropdown-full .dropdown-menu:before {
-  border-bottom-width: 0;
-}
-
-.dropdown-wide,
-.dropdown-full,
-.nav > li.dropdown-wide,
-.nav > li.dropdown-full {
-  position: static;
-}
-
-@media (min-width: 768px) {
-  .dropdown-wide .dropdown-menu,
-  .dropdown-full .dropdown-menu {
-    padding: 20px 0;
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .dropdown-wide,
-  .nav > li.dropdown-wide {
-    position: relative;
-  }
-  .dropdown-wide .dropdown-menu {
-    min-width: 500px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .dropdown-wide .dropdown-menu:after,
-  .dropdown-wide .dropdown-menu:before {
-    border-bottom-width: 0;
-  }
-}
-
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .dropdown-full.open:after,
   .dropdown-wide.open:after {
     clear: both;
@@ -8828,6 +8795,23 @@ button.close {
     height: 0;
     visibility: hidden;
   }
+}
+
+.dropdown-full .dropdown-menu,
+.dropdown-wide .dropdown-menu {
+  padding: 5px 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .dropdown-full .dropdown-menu,
+  .dropdown-wide .dropdown-menu {
+    padding: 20px 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .dropdown-full .dropdown-menu [class*="col-sm"],
   .dropdown-full .dropdown-menu [class*="col-md"],
   .dropdown-full .dropdown-menu [class*="col-lg"],
@@ -8835,6 +8819,38 @@ button.close {
   .dropdown-wide .dropdown-menu [class*="col-md"],
   .dropdown-wide .dropdown-menu [class*="col-lg"] {
     padding: 0;
+  }
+}
+
+.dropdown-full,
+.dropdown-wide,
+.nav > li.dropdown-full,
+.nav > li.dropdown-wide {
+  position: static;
+}
+
+.dropdown-full .dropdown-menu:after,
+.dropdown-full .dropdown-menu:before {
+  border-bottom-width: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .dropdown-wide .dropdown-menu {
+    min-width: 500px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .dropdown-wide .dropdown-menu:after,
+  .dropdown-wide .dropdown-menu:before {
+    border-bottom-width: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .dropdown-wide,
+  .nav > li.dropdown-wide {
+    position: relative;
   }
 }
 
@@ -12474,74 +12490,22 @@ mark:before, .mark:before {
   }
 }
 
-.lexicon-x .portlet-actions .dropdown {
-  display: inline-block;
-}
-
 @media screen and (min-width: 768px) {
-  .lexicon-x .portlet-borderless-container {
-    position: relative;
-  }
-  .lexicon-x .portlet-borderless-container.focus .portlet-borderless-bar,
-  .lexicon-x .portlet-borderless-container:hover .portlet-borderless-bar {
-    opacity: 1;
-    top: -40px;
-    z-index: 1060;
+  .lexicon-x .col-xs-6 .portlet-topper, .lexicon-x .col-sm-6 .portlet-topper, .lexicon-x .col-xs-7 .portlet-topper, .lexicon-x .col-sm-7 .portlet-topper, .lexicon-x .col-xs-8 .portlet-topper, .lexicon-x .col-sm-8 .portlet-topper, .lexicon-x .col-xs-9 .portlet-topper, .lexicon-x .col-sm-9 .portlet-topper, .lexicon-x .col-xs-10 .portlet-topper, .lexicon-x .col-sm-10 .portlet-topper, .lexicon-x .col-xs-11 .portlet-topper, .lexicon-x .col-sm-11 .portlet-topper, .lexicon-x .col-xs-12 .portlet-topper, .lexicon-x .col-sm-12 .portlet-topper {
+    width: 65%;
   }
 }
 
-.lexicon-x .portlet-borderless-bar {
-  background-color: #FFF;
-  border-color: #65B6F0;
-  border-style: solid;
-  border-width: 2px 2px 0 2px;
-  border-radius: 2px 2px 0 0;
-  color: #65B6F0;
-  line-height: 44px;
-}
-
-@media screen and (min-width: 768px) {
-  .lexicon-x .portlet-borderless-bar {
-    max-width: 360px;
-    opacity: 0;
-    position: absolute;
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-    top: 0;
-    width: 90%;
+@media screen and (min-width: 992px) {
+  .lexicon-x .col-md-6 .portlet-topper, .lexicon-x .col-md-7 .portlet-topper, .lexicon-x .col-md-8 .portlet-topper, .lexicon-x .col-md-9 .portlet-topper, .lexicon-x .col-md-10 .portlet-topper, .lexicon-x .col-md-11 .portlet-topper, .lexicon-x .col-md-12 .portlet-topper {
+    width: 65%;
   }
 }
 
-.lexicon-x .portlet-borderless-bar > a {
-  color: #65B6F0;
-}
-
-.lexicon-x .portlet-borderless-bar > a:focus,
-.lexicon-x .portlet-borderless-bar > a:hover {
-  color: #65B6F0;
-}
-
-.lexicon-x .portlet-borderless-bar .portlet-actions {
-  float: right;
-}
-
-.lexicon-x .portlet-borderless-bar .portlet-title-default {
-  margin-left: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.lexicon-x .portlet-borderless-bar-center {
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
-  right: 0;
-}
-
-.lexicon-x .portlet-borderless-bar-right {
-  right: 0;
+@media screen and (min-width: 1200px) {
+  .lexicon-x .col-lg-6 .portlet-topper, .lexicon-x .col-lg-7 .portlet-topper, .lexicon-x .col-lg-8 .portlet-topper, .lexicon-x .col-lg-9 .portlet-topper, .lexicon-x .col-lg-10 .portlet-topper, .lexicon-x .col-lg-11 .portlet-topper, .lexicon-x .col-lg-12 .portlet-topper {
+    width: 65%;
+  }
 }
 
 .lexicon-x .portlet {
@@ -12549,32 +12513,142 @@ mark:before, .mark:before {
 }
 
 .lexicon-x .portlet-content {
-  border-color: #65B6F0;
+  border-color: #869CAD;
   border-radius: 0 0 2px 2px;
   border-style: solid;
-  border-width: 0 1px 1px 1px;
+  border-width: 1px 1px 1px 1px;
   padding: 10px;
 }
 
-.lexicon-x .portlet-topper {
-  background-color: #FFF;
-  border-color: #65B6F0;
-  border-radius: 2px 2px 0 0 2px 2px 0 0 0 0;
-  border-style: solid;
-  border-width: 1px 1px 0 1px;
-  color: #65B6F0;
-  line-height: 45px;
-}
-
-.lexicon-x .portlet-topper .portlet-actions {
+.lexicon-x .portlet-actions {
   float: right;
 }
 
-.lexicon-x .portlet-topper .portlet-title-default {
-  margin-left: 10px;
+.lexicon-x.portlet-admin-controls .portlet-topper,
+.lexicon-x .portlet-admin-controls .portlet-topper {
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .lexicon-x.portlet-admin-controls .portlet-topper,
+  .lexicon-x .portlet-admin-controls .portlet-topper {
+    padding-right: 75px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .lexicon-x.portlet-admin-controls .portlet-topper-toolbar,
+  .lexicon-x .portlet-admin-controls .portlet-topper-toolbar {
+    display: block;
+  }
+}
+
+.lexicon-x .portlet-options {
+  display: inline-block;
+}
+
+.lexicon-x .portlet-title-default {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.lexicon-x .portlet-topper {
+  background-color: #869CAD;
+  border-color: #869CAD;
+  border-radius: 8px 8px 0 0;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  color: #FFF;
+  line-height: 39px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.lexicon-x .portlet-topper-toolbar {
+  display: none;
+  float: right;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.lexicon-x .portlet-topper-toolbar > a,
+.lexicon-x .portlet-topper-toolbar .lfr-icon-menu > a {
+  color: #FFF;
+}
+
+.lexicon-x .portlet-topper-toolbar > a:focus,
+.lexicon-x .portlet-topper-toolbar > a:hover {
+  text-decoration: none;
+}
+
+.lexicon-x .hide-portlet-borders .portlet {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .lexicon-x .hide-portlet-borders .portlet:hover .portlet-content,
+  .lexicon-x .hide-portlet-borders .portlet.focus .portlet-content {
+    border-color: #869CAD;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .lexicon-x .hide-portlet-borders .portlet:hover .portlet-topper,
+  .lexicon-x .hide-portlet-borders .portlet.focus .portlet-topper {
+    opacity: 1;
+    top: -40px;
+  }
+}
+
+.lexicon-x .hide-portlet-borders .portlet-content {
+  border-color: transparent;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.lexicon-x .hide-portlet-borders .portlet-topper {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .lexicon-x .hide-portlet-borders .portlet-topper {
+    display: block;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transition: opacity 0.25s, top 0.25s;
+    -o-transition: opacity 0.25s, top 0.25s;
+    transition: opacity 0.25s, top 0.25s;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lexicon-x.mobile-show-portlet-controls .portlet-content {
+    border-color: #869CAD;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lexicon-x.mobile-show-portlet-controls .portlet-topper {
+    display: block;
+    padding-right: 75px;
+  }
+}
+
+.lexicon-x.mobile-show-portlet-controls .portlet-topper-toolbar {
+  display: block;
 }
 
 .alert {
@@ -16969,23 +17043,6 @@ a.bg-primary:focus {
     width: 16px;
     font-size: 8px;
   }
-}
-
-.lexicon-x .portlet-borderless-container.focus,
-.lexicon-x .portlet-borderless-container:hover {
-  border-radius: 0 2px 2px 2px;
-  box-shadow: 0 0 0 2px #65B6F0;
-}
-
-.lexicon-x .portlet-borderless-container.focus .portlet-borderless-bar,
-.lexicon-x .portlet-borderless-container:hover .portlet-borderless-bar {
-  margin-top: -2px;
-  top: -44px;
-}
-
-.lexicon-x .portlet-borderless-bar {
-  left: -2px;
-  border-radius: 2px 2px 0 0;
 }
 
 /*# sourceMappingURL=atlas.css.map */

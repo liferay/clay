@@ -11,6 +11,11 @@
  * @param $i - start value
  */
 /**
+ * Sets portlet topper width based on grid column
+ * @param $size - grid size
+ * @param $i - loop initialization
+ */
+/**
  * Calculates text-indent of data-label-on and data-label-off
  * @param $toggle-switch-width - Width of switch bar
  * @param $toggle-switch-padding - Space between button and bar
