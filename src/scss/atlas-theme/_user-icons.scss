@@ -4,7 +4,7 @@
 .user-icon {
 	border-radius: 50%;
 
-	@include color-user-icon(#999, $text-color);
+	@include color-user-icon(transparent, $text-color);
 
 	font-size: floor($font-size-base / 1.3333);
 	font-weight: 500;
