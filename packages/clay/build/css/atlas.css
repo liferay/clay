@@ -11131,19 +11131,7 @@ figcaption,
 }
 
 .product-menu-tabs > li > a {
-  padding-bottom: 2px;
-  padding-top: 2px;
-}
-
-.product-menu-tab-icon .label-sm {
-  left: 50%;
-  position: absolute;
-  z-index: 1;
-}
-
-.product-menu-tab-icon .icon-monospaced, .product-menu-tab-icon .help-icon {
-  height: 0.9em;
-  width: 0.9em;
+  padding: 10px 0;
 }
 
 .product-menu-tabs .sticker {
@@ -11159,6 +11147,21 @@ figcaption,
 .product-menu-tabs .sticker-right {
   left: auto;
   right: 5px;
+}
+
+.product-menu-tab-icon .label-sm {
+  left: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.product-menu-tab-icon .icon-monospaced, .product-menu-tab-icon .help-icon {
+  height: 0.9em;
+  width: 0.9em;
+}
+
+.product-menu-tab-text {
+  font-size: 11px;
 }
 
 .sidebar-default {
