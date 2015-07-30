@@ -17,8 +17,85 @@
 	display: block;
 }
 
+// Nav Equal Height
+
+.nav-equal-height > li > a,
+.nav-equal-height .nav > li > a,
+.nav-equal-height-heading > a {
+	height: 40px;
+}
+
+.nav-equal-height {
+	> li {
+		display: table;
+		width: 100%;
+
+		> a {
+			display: table-cell;
+			padding: 0 $navbar-padding-horizontal;
+			vertical-align: middle;
+		}
+	}
+
+	.nav > li {
+		display: table;
+		width: 100%;
+
+		> a {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+}
+
+.nav-equal-height-heading {
+	display: table;
+	width: 100%;
+
+	&:focus,
+	&:hover {
+		background-color: $nav-link-hover-bg;
+		text-decoration: none;
+	}
+
+	> a {
+		display: table-cell;
+		vertical-align: middle;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:first-child {
+			padding-left: $navbar-padding-horizontal;
+		}
+	}
+
+	> .icon-monospaced {
+		height: auto;
+		line-height: 20px;
+	}
+}
+
+.nav-equal-height.nav-nested {
+	.nav > li {
+		display: table;
+		width: 100%;
+
+		> a {
+			display: table-cell;
+			height: 40px;
+			vertical-align: middle;
+			width: 100%;
+		}
+	}
+}
+
+// Nav Nested
+
 .nav-nested {
-	@include make-nav-nested();
+	@include make-nav-nested($nav-nested-padding-horizontal);
 
 	.nav > li {
 		margin-top: 2px;
@@ -30,6 +107,14 @@
 		}
 	}
 }
+
+.nav-nested-margins {
+	> li .nav > li {
+		margin-left: $nav-nested-margins-margin-horizontal;
+	}
+}
+
+// Nav Pills
 
 .nav-pills {
 	a[aria-expanded="true"] {
