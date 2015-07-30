@@ -8,8 +8,14 @@
 
 @mixin make-nav-nested($indent: 15px, $nest-level: 15, $nav-class: ".nav", $i: 1) {
 	@for $i from (1) through $nest-level {
-		#{$nav-class} > li > a {
-			padding-left: $indent * ($i + 1);
+		#{$nav-class} > li {
+			> a {
+				padding-left: $indent * ($i + 1);
+			}
+
+			> .nav-equal-height-heading {
+				padding-left: $indent * $i;
+			}
 		}
 
 		$nav-class: "#{$nav-class} .nav";
