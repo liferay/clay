@@ -10111,64 +10111,193 @@ figcaption,
   display: block;
 }
 
+.nav-equal-height > li > a,
+.nav-equal-height .nav > li > a,
+.nav-equal-height-heading > a {
+  height: 40px;
+}
+
+.nav-equal-height > li {
+  display: table;
+  width: 100%;
+}
+
+.nav-equal-height > li > a {
+  display: table-cell;
+  padding: 0 15px;
+  vertical-align: middle;
+}
+
+.nav-equal-height .nav > li {
+  display: table;
+  width: 100%;
+}
+
+.nav-equal-height .nav > li > a {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.nav-equal-height-heading {
+  display: table;
+  width: 100%;
+}
+
+.nav-equal-height-heading:focus,
+.nav-equal-height-heading:hover {
+  background-color: #eeeeee;
+  text-decoration: none;
+}
+
+.nav-equal-height-heading > a {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.nav-equal-height-heading > a:focus,
+.nav-equal-height-heading > a:hover {
+  text-decoration: none;
+}
+
+.nav-equal-height-heading > a:first-child {
+  padding-left: 15px;
+}
+
+.nav-equal-height-heading > .icon-monospaced, .nav-equal-height-heading > .help-icon {
+  height: auto;
+  line-height: 20px;
+}
+
+.nav-equal-height.nav-nested .nav > li {
+  display: table;
+  width: 100%;
+}
+
+.nav-equal-height.nav-nested .nav > li > a {
+  display: table-cell;
+  height: 40px;
+  vertical-align: middle;
+  width: 100%;
+}
+
 .nav-nested .nav > li > a {
   padding-left: 30px;
+}
+
+.nav-nested .nav > li > .nav-equal-height-heading {
+  padding-left: 15px;
 }
 
 .nav-nested .nav .nav > li > a {
   padding-left: 45px;
 }
 
+.nav-nested .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 30px;
+}
+
 .nav-nested .nav .nav .nav > li > a {
   padding-left: 60px;
+}
+
+.nav-nested .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 45px;
 }
 
 .nav-nested .nav .nav .nav .nav > li > a {
   padding-left: 75px;
 }
 
+.nav-nested .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 60px;
+}
+
 .nav-nested .nav .nav .nav .nav .nav > li > a {
   padding-left: 90px;
+}
+
+.nav-nested .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 75px;
 }
 
 .nav-nested .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 105px;
 }
 
+.nav-nested .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 90px;
+}
+
 .nav-nested .nav .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 120px;
+}
+
+.nav-nested .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 105px;
 }
 
 .nav-nested .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 135px;
 }
 
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 120px;
+}
+
 .nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 150px;
+}
+
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 135px;
 }
 
 .nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 165px;
 }
 
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 150px;
+}
+
 .nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 180px;
+}
+
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 165px;
 }
 
 .nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 195px;
 }
 
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 180px;
+}
+
 .nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 210px;
+}
+
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 195px;
 }
 
 .nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 225px;
 }
 
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 210px;
+}
+
 .nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > a {
   padding-left: 240px;
+}
+
+.nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
+  padding-left: 225px;
 }
 
 .nav-nested .nav > li {
@@ -10177,6 +10306,10 @@ figcaption,
 
 .nav-nested.nav-pills .nav > li > a {
   border-radius: 4px;
+}
+
+.nav-nested-margins > li .nav > li {
+  margin-left: 15px;
 }
 
 .nav-pills a[aria-expanded="true"],
@@ -11051,10 +11184,6 @@ figcaption,
   margin-top: 0;
 }
 
-.product-menu .collapse-icon:before {
-  top: 5px;
-}
-
 .product-menu .sidebar-body {
   bottom: 54px;
   left: 0;
@@ -11108,6 +11237,58 @@ figcaption,
 
 .product-menu .sidebar-header .sidenav-close {
   float: right;
+}
+
+.product-menu .nav a {
+  color: #337ab7;
+}
+
+.product-menu .nav-equal-height .nav > .active,
+.product-menu .nav-equal-height > .active {
+  border-left: 2px solid #23527c;
+}
+
+.product-menu .nav-equal-height > .active > a,
+.product-menu .nav-equal-height > .active > a:focus,
+.product-menu .nav-equal-height > .active > a:hover,
+.product-menu .nav-equal-height .nav > .active > a,
+.product-menu .nav-equal-height .nav > .active > a:focus,
+.product-menu .nav-equal-height .nav > .active > a:hover {
+  color: #23527c;
+}
+
+.product-menu .nav-equal-height > .active,
+.product-menu .nav-equal-height .nav > .active {
+  border-left-color: #23527c;
+}
+
+.product-menu .nav-equal-height-heading .collapse-icon:before {
+  background-color: #FFF;
+  content: "";
+  font-size: 13px;
+  left: -6px;
+  right: auto;
+}
+
+.product-menu .nav-equal-height-heading .collapse-icon.collapsed:before {
+  content: "";
+}
+
+.product-menu .nav-nested-margins > li .nav > li {
+  border-left: 2px solid #337ab7;
+}
+
+.product-menu .nav-nested-margins > li .nav > li .nav > li {
+  border-left: 1px dotted #337ab7;
+  margin-bottom: 1px;
+}
+
+.product-menu .nav-nested-margins > li .nav > li .nav > li.active {
+  border-left: 1px solid #23527c;
+}
+
+.product-menu .nav-nested-margins > li .nav > li .nav > li.active > a {
+  color: #23527c;
 }
 
 .product-menu-tabs {
