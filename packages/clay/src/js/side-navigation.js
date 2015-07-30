@@ -391,6 +391,11 @@
 
 				if ($this.hasClass('closed')) {
 					instance.clearStyle($this, 'min-height');
+
+					$this.trigger('closed.lexicon.sidenav');
+				}
+				else {
+					$this.trigger('open.lexicon.sidenav');
 				}
 
 				if (instance.mobile) {
