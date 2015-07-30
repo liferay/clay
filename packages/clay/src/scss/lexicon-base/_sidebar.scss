@@ -61,10 +61,6 @@
 			margin-top: 0;
 		}
 	}
-
-	.collapse-icon:before {
-		top: 5px;
-	}
 }
 
 .product-menu .sidebar-body {
@@ -114,6 +110,66 @@
 
 	.sidenav-close {
 		float: right;
+	}
+}
+
+.product-menu {
+	.nav a {
+		color: $product-menu-nav-link-color;
+	}
+
+	.nav-equal-height {
+		.nav > .active,
+		> .active {
+			border-left: 2px solid $product-menu-nav-active-link-color;
+		}
+
+		> .active > a,
+		.nav > .active > a {
+			&,
+			&:focus,
+			&:hover {
+				color: $product-menu-nav-active-link-color;
+			}
+		}
+
+		> .active,
+		.nav > .active {
+			border-left-color: $product-menu-nav-active-link-color;
+		}
+	}
+
+	.nav-equal-height-heading {
+		.collapse-icon {
+			&:before {
+				background-color: #FFF;
+				content: $product-menu-nav-equal-height-heading-open-collapse-icon;
+				font-size: 13px;
+				left: -6px;
+				right: auto;
+			}
+
+			&.collapsed:before {
+				content: $product-menu-nav-equal-height-heading-closed-collapse-icon;
+			}
+		}
+	}
+
+	.nav-nested-margins > li .nav > li {
+		border-left: 2px solid $product-menu-nav-link-color;
+
+		.nav > li {
+			border-left: 1px dotted $product-menu-nav-link-color;
+			margin-bottom: 1px;
+
+			&.active {
+				border-left: 1px solid $product-menu-nav-active-link-color;
+
+				> a {
+					color: $product-menu-nav-active-link-color;
+				}
+			}
+		}
 	}
 }
 

@@ -14,5 +14,5 @@
 }
 
 .nav-nested {
-	@include make-nav-nested($nav-link-padding-horizontal);
+	@include make-nav-nested(12px);
 }
