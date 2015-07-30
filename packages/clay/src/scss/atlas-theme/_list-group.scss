@@ -120,21 +120,14 @@ a.list-group-heading {
 
 // Remove top border on first list-group-item after list-group-heading
 
-.list-group-heading {
-	+ .collapse,
-	+ .collapsing {
-		.list-group-item:first-child {
-			&,
-			.list-group-item-content,
-			.list-group-item-field {
-				border-top-width: 0;
-			}
-		}
-	}
-
-	+ .list-group-item {
-		border-top-width: 0;
-	}
+.list-group-heading + .list-group-item,
+.list-group-heading + .collapse .list-group-item:first-child,
+.list-group-heading + .collapse .list-group-item:first-child .list-group-item-content,
+.list-group-heading + .collapse .list-group-item:first-child .list-group-item-field,
+.list-group-heading + .collapsing .list-group-item:first-child,
+.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-content,
+.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-field {
+	border-top-width: 0;
 }
 
 // Remove left and right borders on tabular list group due to box shadows
