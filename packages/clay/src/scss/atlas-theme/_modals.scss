@@ -49,26 +49,50 @@
 
 h1.modal-title {
 	font-size: $font-size-h1;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h1;
+	}
 }
 
 h2.modal-title {
 	font-size: $font-size-h2;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h2;
+	}
 }
 
 h3.modal-title {
 	font-size: $font-size-h3;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h3;
+	}
 }
 
 h4.modal-title {
 	font-size: $font-size-h4;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h4;
+	}
 }
 
 h5.modal-title {
 	font-size: $font-size-h5;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h5;
+	}
 }
 
 h6.modal-title {
 	font-size: $font-size-h6;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h6;
+	}
 }
 
 // Modal Full Screen
