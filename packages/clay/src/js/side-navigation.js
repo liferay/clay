@@ -112,6 +112,9 @@
 				if (type === 'fixed-push') {
 					contentCss.left = '';
 				}
+				else if (type === 'fixed') {
+					contentCss.paddingLeft = '';
+				}
 			}
 
 			return contentCss;
