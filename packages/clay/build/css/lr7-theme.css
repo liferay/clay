@@ -3550,7 +3550,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.2;
   color: inherit;
 }
 
@@ -3612,19 +3612,19 @@ h6 .small, .h6 small,
 }
 
 h1, .h1 {
-  font-size: 36px;
+  font-size: 28px;
 }
 
 h2, .h2 {
-  font-size: 30px;
-}
-
-h3, .h3 {
   font-size: 24px;
 }
 
+h3, .h3 {
+  font-size: 21px;
+}
+
 h4, .h4 {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 h5, .h5 {
@@ -3632,7 +3632,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 12px;
+  font-size: 11px;
 }
 
 p {
@@ -5212,7 +5212,7 @@ input[type="search"] {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .radio,
@@ -14413,41 +14413,6 @@ input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.heading1, .heading2, .heading3, .heading4, .heading5, .heading6 {
-  font-weight: 500;
-  margin: 0;
-}
-
-.heading1 {
-  font-size: 36px;
-}
-
-.heading2 {
-  font-size: 30px;
-}
-
-.heading3 {
-  font-size: 24px;
-}
-
-.heading4 {
-  font-size: 18px;
-}
-
-.heading5 {
-  font-size: 14px;
-}
-
-.heading6 {
-  font-size: 12px;
-}
-
-.sub-heading {
-  font-size: 12px;
-  font-weight: 500;
-  margin: 0;
-}
-
 .icon-angle-left {
   font-size: 1.5em;
 }
@@ -14792,7 +14757,7 @@ mark:before, .mark:before {
 .lexicon-x .portlet-topper {
   background-color: #869CAD;
   border-color: #869CAD;
-  border-radius: 8px 8px 0 0;
+  border-radius: 4px 4px 0 0;
   border-style: solid;
   border-width: 1px 1px 0 1px;
   color: #FFF;
@@ -16027,6 +15992,7 @@ label {
   color: #869CAD;
   font-size: 12px;
   font-weight: 500;
+  margin-bottom: 2px;
 }
 
 @media screen and (min-width: 768px) {
@@ -16062,7 +16028,7 @@ select.form-control::-ms-expand {
 
 select.form-control[multiple] {
   background: none;
-  padding: 8px 0;
+  padding: 6px 4px;
 }
 
 .form-control {
@@ -16070,7 +16036,7 @@ select.form-control[multiple] {
   box-shadow: none;
   font-size: 14px;
   height: 40px;
-  padding: 8px 0;
+  padding: 6px 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -17193,27 +17159,63 @@ a.list-group-heading:hover {
 }
 
 h1.modal-title {
-  font-size: 36px;
+  font-size: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  h1.modal-title {
+    font-size: 32px;
+  }
 }
 
 h2.modal-title {
-  font-size: 30px;
-}
-
-h3.modal-title {
   font-size: 24px;
 }
 
+@media screen and (min-width: 768px) {
+  h2.modal-title {
+    font-size: 28px;
+  }
+}
+
+h3.modal-title {
+  font-size: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  h3.modal-title {
+    font-size: 24px;
+  }
+}
+
 h4.modal-title {
-  font-size: 18px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  h4.modal-title {
+    font-size: 19px;
+  }
 }
 
 h5.modal-title {
   font-size: 14px;
 }
 
+@media screen and (min-width: 768px) {
+  h5.modal-title {
+    font-size: 16px;
+  }
+}
+
 h6.modal-title {
-  font-size: 12px;
+  font-size: 11px;
+}
+
+@media screen and (min-width: 768px) {
+  h6.modal-title {
+    font-size: 13px;
+  }
 }
 
 .modal-full-screen .modal-body {
@@ -19172,6 +19174,78 @@ input[type="range"].vertical {
 
 .no-shadow .tooltip-inner, .no-shadows .tooltip-inner {
   box-shadow: none;
+}
+
+h1,
+.h1 {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 32px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  h2,
+  .h2 {
+    font-size: 28px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  h3,
+  .h3 {
+    font-size: 24px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  h4,
+  .h4 {
+    font-size: 19px;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  h5,
+  .h5 {
+    font-size: 16px;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 11px;
+}
+
+@media screen and (min-width: 768px) {
+  h6,
+  .h6 {
+    font-size: 13px;
+  }
 }
 
 .text-default {
