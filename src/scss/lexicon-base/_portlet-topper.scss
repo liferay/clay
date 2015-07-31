@@ -28,28 +28,12 @@
 	float: right;
 }
 
-&.portlet-admin-controls,
-.portlet-admin-controls {
-	.portlet-topper {
-		padding-right: 10px;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			padding-right: 75px;
-		}
-	}
-
-	.portlet-topper-toolbar {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			display: block;
-		}
-	}
-}
-
 .portlet-options {
 	display: inline-block;
 }
 
 .portlet-title-default {
+	@include flex(1 0 0);
 	@include text-overflow;
 }
 
@@ -60,6 +44,9 @@
 	border-style: solid;
 	border-width: $portlet-topper-border-width;
 	color: $portlet-topper-color;
+
+	@include display(flex);
+
 	line-height: $portlet-topper-line-height;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -67,14 +54,10 @@
 }
 
 .portlet-topper-toolbar {
-	display: none;
-	float: right;
 	margin-bottom: 0;
+	margin-right: -10px;
 	margin-top: 0;
 	padding-left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
 
 	> a,
 	.lfr-icon-menu > a {
@@ -124,7 +107,7 @@
 		display: none;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			display: block;
+			@include display(flex);
 			left: 0;
 			opacity: 0;
 			position: absolute;
@@ -150,8 +133,7 @@
 
 	.portlet-topper {
 		@media screen and (max-width: $grid-float-breakpoint-max) {
-			display: block;
-			padding-right: 75px;
+			@include display(flex);
 		}
 	}
 
