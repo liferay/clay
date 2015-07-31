@@ -54,7 +54,7 @@
 
 			options = $.extend({}, $.fn.sideNavigation.defaults, options);
 			options.selector = element.selector;
-			options.transitions = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+			options.transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 			options.widthOriginal = options.width;
 
 			// find toggler
@@ -381,9 +381,9 @@
 		_onSidenavTransitionEnd: function(element) {
 			var instance = this;
 
-			var transitions = instance.options.transitions;
+			var transitionEnd = instance.options.transitionEnd;
 
-			element.on(transitions, function(event) {
+			element.on(transitionEnd, function(event) {
 				var $this = $(this);
 				var menu = $this.find('.sidenav-menu').first();
 
@@ -402,7 +402,7 @@
 					instance._focusElement(menu);
 				}
 
-				$this.off(transitions);
+				$this.off(transitionEnd);
 			});
 		},
 
