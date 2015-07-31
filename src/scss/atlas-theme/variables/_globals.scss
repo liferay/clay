@@ -6,18 +6,26 @@ $font-size-base:                           14px !default;
 $font-size-large:                          ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:                          ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-base-desktop: 16px !default; // Atlas
-$font-size-large-desktop: ceil(($font-size-base-desktop * 1.25)) !default; // Atlas // ~20px
-$font-size-small-desktop: ceil(($font-size-base-desktop * 0.85)) !default; // Atlas // ~14px
+$font-size-desktop-base: 16px !default; // Atlas
+$font-size-desktop-large: ceil(($font-size-desktop-base * 1.25)) !default; // Atlas ~20px
+$font-size-desktop-small: ceil(($font-size-desktop-base * 0.85)) !default; // Atlas ~14px
 
-$font-size-h1:                             floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:                             floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:                             ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:                             ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h1:                             floor(($font-size-base * 2)) !default; // ~28px
+$font-size-h2:                             floor(($font-size-base * 1.75)) !default; // ~24px
+$font-size-h3:                             floor(($font-size-base * 1.5)) !default; // ~21px
+$font-size-h4:                             floor(($font-size-base * 1.1875)) !default; // ~16px
 $font-size-h5:                             $font-size-base !default;
-$font-size-h6:                             ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-h6:                             floor(($font-size-base / 1.1875)) !default; // ~11px
+
+$font-size-desktop-h1: floor(($font-size-desktop-base * 2)) !default; // Atlas 32px
+$font-size-desktop-h2: floor(($font-size-desktop-base * 1.75)) !default; // Atlas 28px
+$font-size-desktop-h3: floor(($font-size-desktop-base * 1.5)) !default; // Atlas 24px
+$font-size-desktop-h4: floor(($font-size-desktop-base * 1.1875)) !default; // Atlas 19px
+$font-size-desktop-h5: $font-size-desktop-base !default; // Atlas 16px
+$font-size-desktop-h6: floor(($font-size-desktop-base / 1.1875)) !default; // Atlas 13px
 
 $line-height-base:                         1.4286 !default;
+$headings-line-height:                     1.2 !default;
 
 $padding-base-vertical:                    6px !default;
 $padding-base-horizontal:                  16px !default;
