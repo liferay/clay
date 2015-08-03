@@ -14571,7 +14571,7 @@ mark:before, .mark:before {
 
 .user-icon {
   border-radius: 50%;
-  background-color: #999;
+  background-color: transparent;
   color: #29353D;
   font-size: 14px;
   text-align: center;
@@ -14725,30 +14725,18 @@ mark:before, .mark:before {
   float: right;
 }
 
-.lexicon-x.portlet-admin-controls .portlet-topper,
-.lexicon-x .portlet-admin-controls .portlet-topper {
-  padding-right: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .lexicon-x.portlet-admin-controls .portlet-topper,
-  .lexicon-x .portlet-admin-controls .portlet-topper {
-    padding-right: 75px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .lexicon-x.portlet-admin-controls .portlet-topper-toolbar,
-  .lexicon-x .portlet-admin-controls .portlet-topper-toolbar {
-    display: block;
-  }
-}
-
 .lexicon-x .portlet-options {
   display: inline-block;
 }
 
 .lexicon-x .portlet-title-default {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 0 0;
+  -moz-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -14761,6 +14749,13 @@ mark:before, .mark:before {
   border-style: solid;
   border-width: 1px 1px 0 1px;
   color: #FFF;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
   line-height: 39px;
   padding-left: 10px;
   padding-right: 10px;
@@ -14768,14 +14763,10 @@ mark:before, .mark:before {
 }
 
 .lexicon-x .portlet-topper-toolbar {
-  display: none;
-  float: right;
   margin-bottom: 0;
+  margin-right: -10px;
   margin-top: 0;
   padding-left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
 .lexicon-x .portlet-topper-toolbar > a,
@@ -14821,7 +14812,13 @@ mark:before, .mark:before {
 
 @media screen and (min-width: 768px) {
   .lexicon-x .hide-portlet-borders .portlet-topper {
-    display: block;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
     left: 0;
     opacity: 0;
     position: absolute;
@@ -14843,8 +14840,13 @@ mark:before, .mark:before {
 
 @media screen and (max-width: 767px) {
   .lexicon-x.mobile-show-portlet-controls .portlet-topper {
-    display: block;
-    padding-right: 75px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
