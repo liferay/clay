@@ -3,9 +3,73 @@ title: Blog - Actions
 section: Example Pages
 ---
 
+<style>
+.sidenav-fixed.sidenav-menu-slider {
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	transition: all 0.5s ease;
+}
+
+.sidenav-fixed.sidenav-menu-slider.sidenav-right {
+	left: auto;
+	right: 0;
+}
+
+#simpleSidenav.closed {
+	width: 0;
+}
+
+#simpleSidenav,
+#simpleSidenav .sidenav-menu {
+	width: 220px;
+}
+
+@media screen and (min-width: 768px) {
+	#simpleSidenav,
+	#simpleSidenav .sidenav-menu {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 319px) {
+	#simpleSidenav,
+	#simpleSidenav .sidenav-menu {
+		max-width: 220px;
+		width: 100%;
+	}
+}
+</style>
+
+
+
+
+
+
+<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav">Simple Sidenav Toggler</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="row" id="blogActions">
 	<div class="col-md-12">
-		<div class="sidenav-container closed uxgl-slideout-nav" id="blogActionsSidenav">
+		<div class="sidenav-container sidenav-fixed uxgl-slideout-nav" id="blogActionsSidenav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu sidebar sidebar-inverse product-menu">
 					<div class="sidebar-header">
@@ -650,14 +714,317 @@ section: Example Pages
 
 <a class="btn btn-primary btn-action btn-bottom-right" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sidenav-fixed sidenav-menu-slider closed" id="simpleSidenav">
+	<div class="sidenav-menu sidebar sidebar-default product-menu">
+		<div class="sidebar-header">
+			<h4>
+				<a href="#1">
+					<span class="icon-fb-radio icon-monospaced sidebar-header-logo">
+					</span>
+					<span>Squareup</span>
+				</a>
+
+				<a class="icon-remove icon-monospaced sidenav-close" href="#1"></a>
+			</h4>
+		</div>
+
+		<ul class="nav nav-tabs product-menu-tabs">
+			<li class="active col-xs-4">
+				<a data-toggle="tab" href="#tab01">
+					<div class="product-menu-tab-icon"><span class="icon-android icon-monospaced"></span></div>
+					<div class="product-menu-tab-text">Android</div>
+				</a>
+			</li>
+
+			<li class="col-xs-4">
+				<a data-toggle="tab" href="#tab02">
+					<div class="product-menu-tab-icon"><span class="icon-github icon-monospaced"></span></div>
+					<div class="product-menu-tab-text">Github</div>
+				</a>
+			</li>
+
+			<li class="col-xs-4">
+				<a data-toggle="tab" href="#tab03">
+					<div class="product-menu-tab-icon">
+						<span class="icon-keyboard icon-monospaced"></span>
+						<span class="sticker sticker-warning sticker-sm sticker-right sticker-rounded">24</span>
+					</div>
+					<div class="product-menu-tab-text">Editor</div>
+				</a>
+			</li>
+		</ul>
+
+		<div class="sidebar-body">
+			<div class="tab-content">
+				<div class="active fade in tab-pane" id="tab01">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Returning</label>
+									<input class="form-control" type="text" placeholder="Returning Date">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="fade in tab-pane" id="tab02">
+					<form role="form">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>From</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>To</label>
+									<input class="form-control" type="text" placeholder="City or Airport">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Departing</label>
+									<input class="form-control" type="text" placeholder="Departing Date">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 form-group">
+								<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Adults</label>
+									<select class="form-control">
+										<option>0 Adults</option>
+										<option>1 Adult</option>
+										<option>2 Adults</option>
+										<option>3 Adults</option>
+										<option>4 Adults</option>
+										<option>5 Adults</option>
+										<option>6 Adults</option>
+										<option>7 Adults</option>
+										<option>8 Adults</option>
+										<option>9 Adults</option>
+										<option>10 Adults</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Children</label>
+									<select class="form-control">
+										<option>0 Children</option>
+										<option>1 Child</option>
+										<option>2 Children</option>
+										<option>3 Children</option>
+										<option>4 Children</option>
+										<option>5 Children</option>
+										<option>6 Children</option>
+										<option>7 Children</option>
+										<option>8 Children</option>
+										<option>9 Children</option>
+										<option>10 Children</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<button class="btn btn-success btn-md">Search Flights</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="fade in tab-pane" id="tab03">
+					<form>
+						<div class="input-group search-bar">
+							<input class="form-control" placeholder="Search Site..." type="text">
+
+							<span class="input-group-btn">
+								<button class="btn" type="button"><span class="icon-search icon-monospaced"></span></button>
+							</span>
+						</div>
+					</form>
+
+					<div class="list-group">
+						<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0004">
+							<h5>Junkers Marketing <small>STAGING</small></h5>
+						</a>
+						<div class="collapse" id="listGroupCollapse0004">
+							<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+						</div>
+
+						<a aria-expanded="true" class="list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0005">
+							<h5>Junkers RRHH</h5>
+						</a>
+						<div class="collapse in" id="listGroupCollapse0005" aria-expanded="true">
+							<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+						</div>
+
+						<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0006">
+							<h5>Junkers Design <small>STAGING</small></h5>
+						</a>
+						<div class="collapse" id="listGroupCollapse0006">
+							<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+						</div>
+						<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0007">
+							<h5>Junkers UX</h5>
+						</a>
+						<div class="collapse" id="listGroupCollapse0007">
+							<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+						</div>
+						<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0008">
+							<h5>Junkers Java</h5>
+						</a>
+						<div class="collapse" id="listGroupCollapse0008">
+							<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+						</div>
+						<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0009">
+							<h5>Junkers Ruby <small>STAGING</small></h5>
+						</a>
+						<div class="collapse" id="listGroupCollapse0009">
+							<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+						</div>
+						<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse00010">
+							<h5>Junkers Python <small>STAGING</small></h5>
+						</a>
+						<div class="collapse" id="listGroupCollapse00010">
+							<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sidebar-footer">
+			<div class="nameplate">
+				<div class="nameplate-field">
+					<div class="user-icon user-icon-warning">
+						:D
+					</div>
+				</div>
+
+				<div class="nameplate-content">
+					<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+				</div>
+
+				<div class="nameplate-field">
+					<a class="icon-monospaced" href="#1"></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
 <script>
 	$('#blogActionsSidenav').sideNavigation({
 		gutter: 0,
 		toggler: '#blogActionsToggler',
-		typeMobile: 'fixed',
-		type: 'fixed-push',
+		typeMobile: 'fixed-push',
+		type: 'fixed',
 		width: 320
 	});
+
+	// $('#simpleSidenav').sideNavigation({
+	// 	content: 'body',
+	// 	toggler: '#simpleSidenavToggler',
+	// 	typeMobile: 'fixed',
+	// 	type: 'fixed-push',
+	// 	width: ''
+	// });
+
+	$('[data-toggle="sidenav"]').sideNavigation();
 
 	$('.collapse-basic-search').collapsibleSearch();
 
