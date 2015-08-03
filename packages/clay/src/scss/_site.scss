@@ -311,14 +311,6 @@ body.fixed {
 	width: 64px;
 }
 
-/* Media Queries */
-
-@media (min-width: $screen-sm-min) {
-	#wrapper {
-		overflow-x: visible;
-	}
-}
-
 // Extending Nameplates Page
 
 .uxgl-extending-nameplates {
