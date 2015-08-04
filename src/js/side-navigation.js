@@ -67,6 +67,7 @@
 
 				options.content = element.data('content');
 				options.equalHeight = false;
+				options.target = element.data('target');
 				options.toggler = element;
 				options.type = element.data('type');
 				options.typeMobile = element.data('type-mobile');
@@ -344,7 +345,7 @@
 			var instance = this;
 
 			if (instance.useDataAttribute) {
-				var container = $(document).find(element.attr('href'));
+				var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
 				var closeButton = container.find('.sidenav-close');
 
 				closeButton.on('click.lexicon.sidenav', function(event) {
@@ -368,7 +369,7 @@
 			var instance = this;
 
 			var body = $('body');
-			var container = $(document).find(element.attr('href'));
+			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
 			var content = $(instance.options.content);
 			var type = instance.options.type;
 			var typeMobile = instance.options.typeMobile;
@@ -405,7 +406,7 @@
 		_openSimpleSidenav: function(element) {
 			var instance = this;
 
-			var container = $(document).find(element.attr('href'));
+			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
 			var content = $(instance.options.content);
 			var type = instance.options.type;
 			var typeMobile = instance.options.typeMobile;
@@ -438,7 +439,7 @@
 			var instance = this;
 
 			if (instance.useDataAttribute) {
-				var container = $(document).find(element.attr('href'));
+				var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
 
 				container.on(instance.options.transitionEnd, function(event) {
 					event.stopPropagation();
