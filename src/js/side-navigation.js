@@ -377,6 +377,10 @@
 			var desktopFixedPush = desktop && (type === 'fixed-push');
 			var mobileFixedPush = !desktop && (typeMobile === 'fixed-push');
 
+			instance._onSidenavTransitionEnd(container);
+
+			container.addClass('sidenav-transition');
+
 			if (container.hasClass('closed')) {
 				if (!desktop) {
 					$('body').addClass('body-fixed');
