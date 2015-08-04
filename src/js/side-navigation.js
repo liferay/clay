@@ -297,6 +297,8 @@
 				if (container.hasClass('closed')) {
 					instance.clearStyle(container, 'min-height');
 
+					instance._removeBodyFixed();
+
 					container.trigger('closed.lexicon.sidenav');
 				}
 				else {
@@ -344,95 +346,74 @@
 		_onClickSidenavClose: function(element) {
 			var instance = this;
 
+			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+			var closeButton = element.find('.sidenav-close').first();
+
 			if (instance.useDataAttribute) {
-				var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
-				var closeButton = container.find('.sidenav-close');
-
-				closeButton.on('click.lexicon.sidenav', function(event) {
-					event.preventDefault();
-
-					instance._closeSimpleSidenav(element);
-				});
+				closeButton = container.find('.sidenav-close');
 			}
-			else {
-				var closeButton = element.find('.sidenav-close').first();
 
-				closeButton.on('click.lexicon.sidenav', function(event) {
-					event.preventDefault();
+			closeButton.on('click.lexicon.sidenav', function(event) {
+				event.preventDefault();
 
+				if (instance.useDataAttribute) {
+					instance._toggleSimpleSidenav(element);
+				}
+				else {
 					instance.toggleNavigation(element);
-				});
-			}
+				}
+			});
 		},
 
-		_closeSimpleSidenav: function(element) {
+		_toggleSimpleSidenav: function(element) {
 			var instance = this;
 
-			var body = $('body');
 			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
 			var content = $(instance.options.content);
 			var type = instance.options.type;
 			var typeMobile = instance.options.typeMobile;
-			var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
 
-			if (desktop) {
-				if (type === 'fixed-push') {
+			var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
+			var desktopFixedPush = desktop && (type === 'fixed-push');
+			var mobileFixedPush = !desktop && (typeMobile === 'fixed-push');
+
+			if (container.hasClass('closed')) {
+				if (!desktop) {
+					$('body').addClass('body-fixed');
+				}
+
+				if (desktopFixedPush || mobileFixedPush) {
 					instance._onSidenavTransitionEnd(content, function() {
-						$('body').removeClass('body-fixed');
+						container.trigger('open.lexicon.sidenav');
 					});
 
 					content.addClass('sidenav-transition');
 				}
+
+				setTimeout(function() {
+					container.removeClass('closed');
+					content.addClass('open');
+				}, 0);
 			}
-			else { // mobile
-				if (typeMobile === 'fixed-push') {
+			else {
+				if ( desktopFixedPush || mobileFixedPush ) {
 					instance._onSidenavTransitionEnd(content, function() {
-						body.removeClass('body-fixed');
+						instance._removeBodyFixed();
+
+						container.trigger('closed.lexicon.sidenav');
 					});
 
 					content.addClass('sidenav-transition');
 				}
 				else {
-					body.removeClass('body-fixed');
+					instance._removeBodyFixed();
 				}
+
+				setTimeout(function() {
+					container.addClass('closed');
+					content.removeClass('open');
+				}, 0);
 			}
-
-			setTimeout(function() {
-				container.addClass('closed');
-				content.removeClass('open');
-			}, 0);
-		},
-
-		_openSimpleSidenav: function(element) {
-			var instance = this;
-
-			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
-			var content = $(instance.options.content);
-			var type = instance.options.type;
-			var typeMobile = instance.options.typeMobile;
-			var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
-
-			if (desktop) {
-				if (type === 'fixed-push') {
-					instance._onSidenavTransitionEnd(content);
-
-					content.addClass('sidenav-transition');
-				}
-			}
-			else { // mobile
-				$('body').addClass('body-fixed');
-
-				if (typeMobile === 'fixed-push') {
-					instance._onSidenavTransitionEnd(content);
-
-					content.addClass('sidenav-transition');
-				}
-			}
-
-			setTimeout(function() {
-				container.removeClass('closed');
-				content.addClass('open');
-			}, 0);
 		},
 
 		_onClickTrigger: function(element) {
@@ -448,12 +429,7 @@
 				element.on('click.lexicon.sidenav', function(event) {
 					event.preventDefault();
 
-					if (container.hasClass('closed')) { // open nav
-						instance._openSimpleSidenav(element);
-					}
-					else { // close nav
-						instance._closeSimpleSidenav(element);
-					}
+					instance._toggleSimpleSidenav(element);
 				});
 			}
 			else {
@@ -532,6 +508,14 @@
 
 				$this.off(transitionEnd);
 			});
+		},
+
+		_removeBodyFixed: function() {
+			var instance = this;
+
+			var body = $('body');
+
+			body.removeClass('body-fixed');
 		},
 
 		_renderNav: function(element) {
