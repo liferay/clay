@@ -341,6 +341,16 @@ body.fixed {
 	}
 }
 
+// Sidenav Page
+
+#wrapper.open {
+	padding-left: 400px;
+}
+
+[href="#simpleSidenav"] {
+	margin-bottom: 15px;
+}
+
 // Switches Page
 .uxgl-switches {
 	@include clearfix;
