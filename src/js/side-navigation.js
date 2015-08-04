@@ -369,7 +369,7 @@
 			var instance = this;
 
 			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
-			var content = $(instance.options.content);
+			var content = $(instance.options.content).first();
 			var type = instance.options.type;
 			var typeMobile = instance.options.typeMobile;
 
