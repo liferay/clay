@@ -57,12 +57,28 @@
 			options.transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 			options.widthOriginal = options.width;
 
-			// find toggler
+			var toggler;
+			var useDataAttribute = element.data('toggle') === 'sidenav';
 
-			var toggler = element.find(options.toggler);
+			instance.useDataAttribute = useDataAttribute;
 
-			if (!toggler.length) {
-				toggler = element.closest('body').find(options.toggler).first();
+			if (useDataAttribute) { // instantiate using data attribute
+				toggler = element;
+
+				options.content = element.data('content');
+				options.equalHeight = false;
+				options.target = element.data('target');
+				options.toggler = element;
+				options.type = element.data('type');
+				options.typeMobile = element.data('type-mobile');
+				options.width = '';
+			}
+			else { // find toggler
+				toggler = element.find(options.toggler);
+
+				if (!toggler.length) {
+					toggler = element.closest('body').find(options.toggler).first();
+				}
 			}
 
 			element.toggler = toggler;
@@ -210,11 +226,13 @@
 						var navNode = node.find(navigation).first();
 						var sideNavMenuNode = node.find('.sidenav-menu').first();
 
-						var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
+						setTimeout(function() {
+							var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
 
-						contentNode.css('min-height', tallest);
-						navNode.css('min-height', tallest);
-						sideNavMenuNode.css('min-height', tallest);
+							contentNode.css('min-height', tallest);
+							navNode.css('min-height', tallest);
+							sideNavMenuNode.css('min-height', tallest);
+						}, 0);
 					});
 				}
 			}
@@ -266,8 +284,6 @@
 			var widthMethod = closed ? 'showSidenav' : 'hideSidenav';
 
 			if (closed) {
-				instance.setEqualHeight(container);
-
 				menu.css('width', width);
 
 				if (container.hasClass('sidenav-right') && container.hasClass('sidenav-fixed')) {
@@ -275,7 +291,26 @@
 				}
 			}
 
-			instance._onSidenavTransitionEnd(container);
+			instance._onSidenavTransitionEnd(container, function() {
+				var menu = container.find('.sidenav-menu').first();
+
+				if (container.hasClass('closed')) {
+					instance.clearStyle(container, 'min-height');
+
+					instance._removeBodyFixed();
+
+					container.trigger('closed.lexicon.sidenav');
+				}
+				else {
+					instance.setEqualHeight(container);
+
+					container.trigger('open.lexicon.sidenav');
+				}
+
+				if (instance.mobile) {
+					instance._focusElement(menu);
+				}
+			});
 
 			setTimeout(function() {
 				container.toggleClass('closed', !closed).addClass('sidenav-transition');
@@ -294,11 +329,13 @@
 		_bindUI: function(element) {
 			var instance = this;
 
-			addResizeListener();
+			if (!instance.useDataAttribute) {
+				addResizeListener();
+				instance._onScreenChange(element);
+			}
 
 			instance._onClickTrigger(element);
 			instance._onClickSidenavClose(element);
-			instance._onScreenChange(element);
 		},
 
 		_focusElement: function(element) {
@@ -309,36 +346,114 @@
 		_onClickSidenavClose: function(element) {
 			var instance = this;
 
+			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
 			var closeButton = element.find('.sidenav-close').first();
 
-			closeButton.on('click.lexicon.sidenav', function(event) {
-				var container = $(this).closest('.sidenav-container');
+			if (instance.useDataAttribute) {
+				closeButton = container.find('.sidenav-close');
+			}
 
+			closeButton.on('click.lexicon.sidenav', function(event) {
 				event.preventDefault();
 
-				instance.toggleNavigation(container);
+				if (instance.useDataAttribute) {
+					instance._toggleSimpleSidenav(element);
+				}
+				else {
+					instance.toggleNavigation(element);
+				}
 			});
+		},
+
+		_toggleSimpleSidenav: function(element) {
+			var instance = this;
+
+			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+			var content = $(instance.options.content).first();
+			var type = instance.options.type;
+			var typeMobile = instance.options.typeMobile;
+
+			var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
+			var desktopFixedPush = desktop && (type === 'fixed-push');
+			var mobileFixedPush = !desktop && (typeMobile === 'fixed-push');
+
+			instance._onSidenavTransitionEnd(container);
+
+			container.addClass('sidenav-transition');
+
+			if (container.hasClass('closed')) {
+				if (!desktop) {
+					$('body').addClass('body-fixed');
+				}
+
+				if (desktopFixedPush || mobileFixedPush) {
+					instance._onSidenavTransitionEnd(content, function() {
+						container.trigger('open.lexicon.sidenav');
+					});
+
+					content.addClass('sidenav-transition');
+				}
+
+				setTimeout(function() {
+					container.removeClass('closed');
+					content.addClass('open');
+				}, 0);
+			}
+			else {
+				if ( desktopFixedPush || mobileFixedPush ) {
+					instance._onSidenavTransitionEnd(content, function() {
+						instance._removeBodyFixed();
+
+						container.trigger('closed.lexicon.sidenav');
+					});
+
+					content.addClass('sidenav-transition');
+				}
+				else {
+					instance._removeBodyFixed();
+				}
+
+				setTimeout(function() {
+					container.addClass('closed');
+					content.removeClass('open');
+				}, 0);
+			}
 		},
 
 		_onClickTrigger: function(element) {
 			var instance = this;
 
-			var container = element;
-			var toggler = element.toggler;
+			if (instance.useDataAttribute) {
+				var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
 
-			toggler.on('click.lexicon.sidenav', function(event) {
-				var $this = $(this);
+				container.on(instance.options.transitionEnd, function(event) {
+					event.stopPropagation();
+				});
 
-				var selector = $this.closest(instance.options.selector);
+				element.on('click.lexicon.sidenav', function(event) {
+					event.preventDefault();
 
-				if (selector.length) {
-					container = selector;
-				}
+					instance._toggleSimpleSidenav(element);
+				});
+			}
+			else {
+				var container = element;
+				var toggler = element.toggler;
 
-				event.preventDefault();
+				toggler.on('click.lexicon.sidenav', function(event) {
+					var $this = $(this);
 
-				instance.toggleNavigation(container);
-			});
+					var selector = $this.closest(instance.options.selector);
+
+					if (selector.length) {
+						container = selector;
+					}
+
+					event.preventDefault();
+
+					instance.toggleNavigation(container);
+				});
+			}
 		},
 
 		_onScreenChange: function(element) {
@@ -374,39 +489,37 @@
 
 					if (!node.hasClass('closed')) {
 						instance.clearStyle(node, 'min-height');
-						instance.setEqualHeight(node);
 						instance.showSidenav(node);
+						instance.setEqualHeight(node);
 					}
 				});
 			});
 		},
 
-		_onSidenavTransitionEnd: function(element) {
+		_onSidenavTransitionEnd: function(element, func) {
 			var instance = this;
 
 			var transitionEnd = instance.options.transitionEnd;
 
 			element.on(transitionEnd, function(event) {
 				var $this = $(this);
-				var menu = $this.find('.sidenav-menu').first();
 
 				$this.removeClass('sidenav-transition');
 
-				if ($this.hasClass('closed')) {
-					instance.clearStyle($this, 'min-height');
-
-					$this.trigger('closed.lexicon.sidenav');
-				}
-				else {
-					$this.trigger('open.lexicon.sidenav');
-				}
-
-				if (instance.mobile) {
-					instance._focusElement(menu);
+				if (func) {
+					func();
 				}
 
 				$this.off(transitionEnd);
 			});
+		},
+
+		_removeBodyFixed: function() {
+			var instance = this;
+
+			var body = $('body');
+
+			body.removeClass('body-fixed');
 		},
 
 		_renderNav: function(element) {
@@ -429,8 +542,8 @@
 				}
 
 				if (!node.hasClass('closed')) {
-					instance.setEqualHeight(node);
 					instance.showSidenav(node);
+					instance.setEqualHeight(node);
 				}
 			});
 		},

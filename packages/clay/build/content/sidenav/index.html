@@ -261,7 +261,7 @@ collapse
 		<h5>Syntax with Options:</h5>
 
 <pre><code class="html">&lt;head&gt;
-    &lt;script src=&quot;slideout-drawer.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;side-navigation.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
@@ -286,6 +286,7 @@ collapse
             breakpoint: 768, // The window width that defines the desktop size. Default: 768.
             content: &apos;.sidenav-content&apos;, // The class or ID of the content container. Default: &apos;.sidenav-content&apos;.
             gutter: &apos;15px&apos;, // The space between the sidenav-slider and the sidenav-content. Default: 15px.
+            equalHeight: true, // The height of content and navigation should be equal.
             navigation: &apos;.sidenav-menu-slider&apos;, // The class or ID of the navigation container. Default: &apos;.sidenav-menu-slider&apos;.
             position: &apos;left&apos;, // The position of the sidenav-slider. Possible values: left, right. Default: &apos;left&apos;.
             toggler: &apos;.sidenav-toggler&apos;, // The class or ID of the toggle button. Default: &apos;.sidenav-toggler&apos;.
@@ -403,124 +404,331 @@ collapse
 	</div>
 </div>
 
-<div class="sidenav-container uxgl-sidenav-demo closed" id="sidenavDemo">
-	<button class="btn btn-default sidenav-toggler"><span class="glyphicon glyphicon-align-justify"></span> Toggle</button>
 
-	<div class="sidenav-menu-slider">
-		<div class="sidenav-menu">
-			<h3><em>Menu</em></h3>
-			<ul class="nav nav-stacked">
-				<li><a href="#1">Setting Up Maven</a></li>
-				<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
-				<li><a href="#1">Using Maven From Liferay IDE</a></li>
-				<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
-				<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
-				<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
-				<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
-				<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
-				<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
-			</ul>
-		</div>
-	</div>
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Side Navigation Data Api</h3>
 
-	<div class="sidenav-content">
-		<div class="col-md-12">
-			<h3><em>Content</em></h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The Side Navigation data api was created for situations where there is limited control over the markup structure. The only markup needed is a toggler and a panel to hide and show. These items can be included anywhere on the page.</p>
+		</blockquote>
 
-			<div id="myDocumentation">
-				<h4>Introduction</h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The minimum amount of attributes required is <code>data-toggle="sidenav"</code> and <code>href="#target"</code> or <code>data-target="#target"</code>. This will open and close a fixed position sidenav provided the markup below. The width of the <code>sidenav-slider</code>, <code>sidenav-menu</code>, and position of the sidenav must be set through css. When using <code>fixed-push</code>, padding must also be set via css on open to push the content over.</p>
+		</blockquote>
 
-				<p>Welcome to Liferay Tutorials! These tutorials show you how to build powerful, robust apps using Liferay’s tools, frameworks, and APIs. The tutorials compliment the fundamentals that you can master in Liferay’s Learning Paths, giving you keen insight into the Liferay platform for building top-notch apps, designing stylish themes, and customizing Liferay Portal to meet your needs. The tutorials cover the following three main areas: </p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The data api allows for fixed-push style sidenavs with the attributes <code>data-content</code>, <code>data-type</code>, and <code>data-type-mobile</code>. <code>Data-content</code> is the id of the content to be pushed over when the nav is open. <code>Data-type</code> and <code>data-type-mobile</code> give the option to specify the style of sidenav in desktop and mobile, respectively. The values can be <code>fixed</code> or <code>fixed-push</code> and defaults to fixed.</p>
+		</blockquote>
 
-				<ul>
-					<li>Using Liferay Development Tools</li>
-					<li>Developing Liferay Applications</li>
-					<li>Styling and Customizing Liferay</li>
+		<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push">Simple Sidenav Toggler</a>
+
+		<div class="sidenav-fixed sidenav-menu-slider closed" id="simpleSidenav">
+			<div class="sidenav-menu sidebar sidebar-default product-menu">
+				<div class="sidebar-header">
+					<h4>
+						<a href="#1">
+							<span class="icon-fb-radio icon-monospaced sidebar-header-logo">
+							</span>
+							<span>Squareup</span>
+						</a>
+
+						<a class="icon-remove icon-monospaced sidenav-close" href="#1"></a>
+					</h4>
+				</div>
+
+				<ul class="nav nav-tabs product-menu-tabs">
+					<li class="active col-xs-4">
+						<a data-toggle="tab" href="#tab01">
+							<div class="product-menu-tab-icon"><span class="icon-android icon-monospaced"></span></div>
+							<div class="product-menu-tab-text">Android</div>
+						</a>
+					</li>
+
+					<li class="col-xs-4">
+						<a data-toggle="tab" href="#tab02">
+							<div class="product-menu-tab-icon"><span class="icon-github icon-monospaced"></span></div>
+							<div class="product-menu-tab-text">Github</div>
+						</a>
+					</li>
+
+					<li class="col-xs-4">
+						<a data-toggle="tab" href="#tab03">
+							<div class="product-menu-tab-icon">
+								<span class="icon-keyboard icon-monospaced"></span>
+								<span class="sticker sticker-warning sticker-sm sticker-right sticker-rounded">24</span>
+							</div>
+							<div class="product-menu-tab-text">Editor</div>
+						</a>
+					</li>
 				</ul>
 
-				<h4>Using Liferay Development Tools</h4>
+				<div class="sidebar-body">
+					<div class="tab-content">
+						<div class="active fade in tab-pane" id="tab01">
+							<form role="form">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>From</label>
+											<input class="form-control" type="text" placeholder="City or Airport">
+										</div>
+									</div>
 
-				<p>Since many developers coming to Liferay already have a set of tools they use, these tutorials assume you’re using one of three common environments: 1) An Ant-based command-line environment that integrates with a wide variety of tools, 2) The easy-to-use Liferay IDE that minimizes your learning curve while giving you powerful development features, and 3) Maven, a widely adopted project management system. The Liferay Developer Network provides learning paths and tutorials that teach you how to use these three environments.
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>To</label>
+											<input class="form-control" type="text" placeholder="City or Airport">
+										</div>
+									</div>
 
-				If you don’t like Eclipse (which Liferay IDE is based on) and prefer to use NetBeans, IntelliJ IDEA, or something else, you certainly can. Liferay code can be written in any way Java code is written. </p>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Departing</label>
+											<input class="form-control" type="text" placeholder="Departing Date">
+										</div>
+									</div>
 
-				<h4>Developing Liferay Applications</h4>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Returning</label>
+											<input class="form-control" type="text" placeholder="Returning Date">
+										</div>
+									</div>
 
-				<p>As a developer wanting to run your own applications on top of Liferay Portal, you probably want to know what’s the best and quickest way to do it? Liferay supports two main, standards-based technologies for incorporating your applications into Liferay: Portlets and OpenSocial gadgets. Portlets can be written using any of the Java web frameworks that support portlet development, including Liferay’s MVC Portlet framework and JavaServer™ Faces (JSF).
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Adults</label>
+											<select class="form-control">
+												<option>0 Adults</option>
+												<option>1 Adult</option>
+												<option>2 Adults</option>
+												<option>3 Adults</option>
+												<option>4 Adults</option>
+												<option>5 Adults</option>
+												<option>6 Adults</option>
+												<option>7 Adults</option>
+												<option>8 Adults</option>
+												<option>9 Adults</option>
+												<option>10 Adults</option>
+											</select>
+										</div>
+									</div>
 
-				As you write apps, you’ll want to leverage powerful frameworks that work seamlessly with Liferay and help you complete your app faster. Liferay contains several frameworks that give you all the tools you need to perform various common tasks that you don’t want to have to write yourself, such as handling permissions and letting users enter comments, categories, and tags.
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Children</label>
+											<select class="form-control">
+												<option>0 Children</option>
+												<option>1 Child</option>
+												<option>2 Children</option>
+												<option>3 Children</option>
+												<option>4 Children</option>
+												<option>5 Children</option>
+												<option>6 Children</option>
+												<option>7 Children</option>
+												<option>8 Children</option>
+												<option>9 Children</option>
+												<option>10 Children</option>
+											</select>
+										</div>
+									</div>
 
-				In addition to Liferay’s frameworks, you’ll want to check out the powerful tag libraries and snazzy UI components that AlloyUI and Liferay UI Taglibs provide.</p>
+									<div class="col-md-12">
+										<button class="btn btn-success btn-md">Search Flights</button>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="fade in tab-pane" id="tab02">
+							<form role="form">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>From</label>
+											<input class="form-control" type="text" placeholder="City or Airport">
+										</div>
+									</div>
+
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>To</label>
+											<input class="form-control" type="text" placeholder="City or Airport">
+										</div>
+									</div>
+
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Departing</label>
+											<input class="form-control" type="text" placeholder="Departing Date">
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<button class="btn btn-default btn-xs" type="button">Add Destination</button>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Adults</label>
+											<select class="form-control">
+												<option>0 Adults</option>
+												<option>1 Adult</option>
+												<option>2 Adults</option>
+												<option>3 Adults</option>
+												<option>4 Adults</option>
+												<option>5 Adults</option>
+												<option>6 Adults</option>
+												<option>7 Adults</option>
+												<option>8 Adults</option>
+												<option>9 Adults</option>
+												<option>10 Adults</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Children</label>
+											<select class="form-control">
+												<option>0 Children</option>
+												<option>1 Child</option>
+												<option>2 Children</option>
+												<option>3 Children</option>
+												<option>4 Children</option>
+												<option>5 Children</option>
+												<option>6 Children</option>
+												<option>7 Children</option>
+												<option>8 Children</option>
+												<option>9 Children</option>
+												<option>10 Children</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-md-12">
+										<button class="btn btn-success btn-md">Search Flights</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="fade in tab-pane" id="tab03">
+							<form>
+								<div class="input-group search-bar">
+									<input class="form-control" placeholder="Search Site..." type="text">
+
+									<span class="input-group-btn">
+										<button class="btn" type="button"><span class="icon-search icon-monospaced"></span></button>
+									</span>
+								</div>
+							</form>
+
+							<div class="list-group">
+								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0004">
+									<h5>Junkers Marketing <small>STAGING</small></h5>
+								</a>
+								<div class="collapse" id="listGroupCollapse0004">
+									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+								</div>
+
+								<a aria-expanded="true" class="list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0005">
+									<h5>Junkers RRHH</h5>
+								</a>
+								<div class="collapse in" id="listGroupCollapse0005" aria-expanded="true">
+									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+								</div>
+
+								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0006">
+									<h5>Junkers Design <small>STAGING</small></h5>
+								</a>
+								<div class="collapse" id="listGroupCollapse0006">
+									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+								</div>
+								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0007">
+									<h5>Junkers UX</h5>
+								</a>
+								<div class="collapse" id="listGroupCollapse0007">
+									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+								</div>
+								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0008">
+									<h5>Junkers Java</h5>
+								</a>
+								<div class="collapse" id="listGroupCollapse0008">
+									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+								</div>
+								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0009">
+									<h5>Junkers Ruby <small>STAGING</small></h5>
+								</a>
+								<div class="collapse" id="listGroupCollapse0009">
+									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+								</div>
+								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse00010">
+									<h5>Junkers Python <small>STAGING</small></h5>
+								</a>
+								<div class="collapse" id="listGroupCollapse00010">
+									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sidebar-footer">
+					<div class="nameplate">
+						<div class="nameplate-field">
+							<div class="user-icon user-icon-warning">
+								:D
+							</div>
+						</div>
+
+						<div class="nameplate-content">
+							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+						</div>
+
+						<div class="nameplate-field">
+							<a class="icon-monospaced" href="#1"></a>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
-	</div>
-</div>
 
-<div class="sidenav-container uxgl-sidenav-demo sidenav-right">
-	<button class="btn btn-default sidenav-toggler"><span class="glyphicon glyphicon-align-justify"></span> Toggle</button>
+		<div>
 
-	<div class="sidenav-menu-slider">
-		<div class="sidenav-menu">
-			<h3><em>Menu</em></h3>
-			<ul class="nav nav-stacked">
-				<li><a href="#1">Setting Up Maven</a></li>
-				<li><a href="#1">Installing and Managing Liferay Maven Artifacts</a></li>
-				<li><a href="#1">Using Maven From Liferay IDE</a></li>
-				<li><a href="#1">Using Liferay Maven Parent Plugin Projects</a></li>
-				<li><a href="#1">Adding Properties to a Maven Project in Liferay IDE</a></li>
-				<li><a href="#1">Deploying Liferay Plugins with Maven</a></li>
-				<li><a href="#1">Creating Liferay Maven Plugins from Liferay IDE</a></li>
-				<li><a href="#1">Creating Liferay Maven Plugins from the Command Line</a></li>
-				<li><a href="#1">Developing Liferay Portlets with Maven</a></li>
-			</ul>
-		</div>
-	</div>
+			<pre><code>&lt;head&gt;
+    &lt;script src=&quot;side-navigation.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
 
-	<div class="sidenav-content">
-		<h3><em>Content</em></h3>
+&lt;div id=&quot;#wrapper&quot;&gt;
+    &lt;a class=&quot;btn btn-default&quot; href=&quot;#simpleSidenav&quot; data-content=&quot;#wrapper&quot; data-toggle=&quot;sidenav&quot; data-type=&quot;fixed-push&quot;&gt;Simple Sidenav Toggler&lt;/a&gt;
 
-		<div id="myDocumentation">
-			<h4>Introduction</h4>
-
-			<p>Welcome to Liferay Tutorials! These tutorials show you how to build powerful, robust apps using Liferay’s tools, frameworks, and APIs. The tutorials compliment the fundamentals that you can master in Liferay’s Learning Paths, giving you keen insight into the Liferay platform for building top-notch apps, designing stylish themes, and customizing Liferay Portal to meet your needs. The tutorials cover the following three main areas: </p>
-
-			<ul>
-				<li>Using Liferay Development Tools</li>
-				<li>Developing Liferay Applications</li>
-				<li>Styling and Customizing Liferay</li>
-			</ul>
-
-			<h4>Using Liferay Development Tools</h4>
-
-			<p>Since many developers coming to Liferay already have a set of tools they use, these tutorials assume you’re using one of three common environments: 1) An Ant-based command-line environment that integrates with a wide variety of tools, 2) The easy-to-use Liferay IDE that minimizes your learning curve while giving you powerful development features, and 3) Maven, a widely adopted project management system. The Liferay Developer Network provides learning paths and tutorials that teach you how to use these three environments.
-
-			If you don’t like Eclipse (which Liferay IDE is based on) and prefer to use NetBeans, IntelliJ IDEA, or something else, you certainly can. Liferay code can be written in any way Java code is written. </p>
-
-			<h4>Developing Liferay Applications</h4>
-
-			<p>As a developer wanting to run your own applications on top of Liferay Portal, you probably want to know what’s the best and quickest way to do it? Liferay supports two main, standards-based technologies for incorporating your applications into Liferay: Portlets and OpenSocial gadgets. Portlets can be written using any of the Java web frameworks that support portlet development, including Liferay’s MVC Portlet framework and JavaServer™ Faces (JSF).
-
-			As you write apps, you’ll want to leverage powerful frameworks that work seamlessly with Liferay and help you complete your app faster. Liferay contains several frameworks that give you all the tools you need to perform various common tasks that you don’t want to have to write yourself, such as handling permissions and letting users enter comments, categories, and tags.
-
-			In addition to Liferay’s frameworks, you’ll want to check out the powerful tag libraries and snazzy UI components that AlloyUI and Liferay UI Taglibs provide.</p>
-		</div>
-	</div>
-</div>
-
-<pre><code>&lt;div class=&quot;sidenav-container&quot;&gt;
-  &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
-    &lt;div class=&quot;sidenav-menu&quot;&gt;
-      &lt;!-- nav goes here --&gt;
+    &lt;div class=&quot;sidenav-fixed sidenav-menu-slider closed&quot; id=&quot;simpleSidenav&quot;&gt;
+        &lt;div class=&quot;sidenav-menu sidebar sidebar-default&quot;&gt;
+            ...
+        &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;sidenav-content&quot;&gt;
-    &lt;!-- content goes here --&gt;
-  &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;script&gt;
-    $(&apos;#sidenavDemo&apos;).sideNavigation();
+    $(&apos;[data-toggle=&quot;sidenav&quot;]&apos;).sideNavigation();
 &lt;/script&gt;</code></pre>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
 
 <script>
 	$('#mySidenavContainerId').sideNavigation({
@@ -532,10 +740,7 @@ collapse
 		toggler: '#mySidenavToggleId1'
 	});
 
-	$('.uxgl-sidenav-demo').sideNavigation({
-		position: 'left',
-		width: '300px'
-	});
+	$('[data-toggle="sidenav"]').sideNavigation();
 </script>
 	</div>
 
