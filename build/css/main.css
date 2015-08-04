@@ -1249,13 +1249,6 @@ body.fixed {
   width: 64px;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
-  #wrapper {
-    overflow-x: visible;
-  }
-}
-
 .uxgl-extending-nameplates .profile-header {
   float: left;
   margin-bottom: 15px;
@@ -1276,6 +1269,14 @@ body.fixed {
 
 #modalsDemo > .btn {
   margin-bottom: 5px;
+}
+
+#wrapper.open {
+  padding-left: 400px;
+}
+
+[href="#simpleSidenav"] {
+  margin-bottom: 15px;
 }
 
 .uxgl-switches:before,

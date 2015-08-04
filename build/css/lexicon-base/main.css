@@ -11404,6 +11404,20 @@ figcaption,
   position: relative;
 }
 
+@media screen and (min-width: 768px) {
+  .sidenav-content {
+    position: static;
+  }
+  .sidenav-content:after {
+    clear: both;
+    content: "";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
 .sidenav-menu {
   height: 100%;
   position: relative;
@@ -11436,7 +11450,10 @@ figcaption,
   overflow: visible;
 }
 
-.sidenav-transition .sidenav-content {
+.sidenav-transition,
+.sidenav-transition .sidenav-content,
+.sidenav-transition .sidenav-menu-slider,
+.sidenav-transition .sidenav-menu-slider .sidenav-menu {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -11446,24 +11463,34 @@ figcaption,
   overflow: hidden;
 }
 
-.sidenav-transition .sidenav-menu-slider, .sidenav-transition .sidenav-menu-slider .sidenav-menu {
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.body-fixed {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
-@media (min-width: 768px) {
-  .sidenav-content {
-    position: static;
-  }
-  .sidenav-content:after {
-    clear: both;
-    content: "";
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-  }
+.sidenav-fixed.sidenav-menu-slider {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+
+.sidenav-fixed.sidenav-menu-slider.closed {
+  width: 0;
+}
+
+.sidenav-fixed.sidenav-menu-slider,
+.sidenav-fixed.sidenav-menu-slider .sidenav-menu {
+  width: 400px;
+}
+
+.sidenav-fixed.sidenav-menu-slider.sidenav-right {
+  left: auto;
+  right: 0;
 }
 
 .sticker {
