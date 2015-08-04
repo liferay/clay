@@ -225,11 +225,13 @@
 						var navNode = node.find(navigation).first();
 						var sideNavMenuNode = node.find('.sidenav-menu').first();
 
-						var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
+						setTimeout(function() {
+							var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
 
-						contentNode.css('min-height', tallest);
-						navNode.css('min-height', tallest);
-						sideNavMenuNode.css('min-height', tallest);
+							contentNode.css('min-height', tallest);
+							navNode.css('min-height', tallest);
+							sideNavMenuNode.css('min-height', tallest);
+						}, 0);
 					});
 				}
 			}
@@ -281,8 +283,6 @@
 			var widthMethod = closed ? 'showSidenav' : 'hideSidenav';
 
 			if (closed) {
-				instance.setEqualHeight(container);
-
 				menu.css('width', width);
 
 				if (container.hasClass('sidenav-right') && container.hasClass('sidenav-fixed')) {
@@ -299,6 +299,8 @@
 					container.trigger('closed.lexicon.sidenav');
 				}
 				else {
+					instance.setEqualHeight(container);
+
 					container.trigger('open.lexicon.sidenav');
 				}
 
@@ -506,8 +508,8 @@
 
 					if (!node.hasClass('closed')) {
 						instance.clearStyle(node, 'min-height');
-						instance.setEqualHeight(node);
 						instance.showSidenav(node);
+						instance.setEqualHeight(node);
 					}
 				});
 			});
@@ -551,8 +553,8 @@
 				}
 
 				if (!node.hasClass('closed')) {
-					instance.setEqualHeight(node);
 					instance.showSidenav(node);
+					instance.setEqualHeight(node);
 				}
 			});
 		},
