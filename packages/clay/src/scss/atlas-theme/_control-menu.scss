@@ -1,0 +1,25 @@
+.control-menu-nav {
+	.btn-default,
+	.form-control {
+		background-color: transparent;
+		color: #FFF;
+	}
+}
+
+.control-menu-level-2 .control-menu-nav {
+	> .active {
+		.control-menu-icon .icon-monospaced {
+			background-color: #3A4D5A;
+			border-radius: 4px;
+			color: #88C37C;
+		}
+
+		.control-menu-icon-label {
+			color: #FFF;
+		}
+	}
+
+	.control-menu-icon {
+		color: $inverse-color;
+	}
+}
