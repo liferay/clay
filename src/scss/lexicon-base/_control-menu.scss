@@ -17,24 +17,33 @@
 .control-menu-level-1 {
 	background-color: $control-menu-bg;
 
-	.control-menu-nav > li {
-		@include flex(0 1 auto);
-
-		&:first-child {
-			@include flex(1);
-
-			margin-left: 0;
-
-			@media screen and (max-width: 279px) {
-				@include flex(0 1 auto);
-			}
+	.control-menu-nav {
+		@media screen and (max-width: 279px) {
+			@include flex-wrap(wrap);
 		}
 
-		&:nth-last-child(2) {
-			@include flex(1);
-
+		> li {
 			@media screen and (max-width: 279px) {
-				@include flex(0 1 auto);
+				margin-bottom: 2px;
+				margin-left: 2px;
+			}
+
+			&:first-child {
+				@include flex(1);
+
+				margin-left: 0;
+
+				@media screen and (max-width: 279px) {
+					@include flex(0 1 auto);
+				}
+			}
+
+			&:nth-last-child(2) {
+				@include flex(1);
+
+				@media screen and (max-width: 279px) {
+					@include flex(0 1 auto);
+				}
 			}
 		}
 	}
@@ -45,11 +54,8 @@
 	border-bottom: 1px solid $control-menu-level-2-border;
 
 	.control-menu-nav {
-		display: block;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			@include display(flex);
-		}
+		@include justify-content(space-between);
+		@include flex-wrap(wrap);
 
 		> li {
 			margin-bottom: 5px;
@@ -58,39 +64,30 @@
 			@media screen and (min-width: $grid-float-breakpoint) {
 				margin-bottom: 0;
 			}
-
-			&:first-child {
-				@include flex(0 1 auto);
-			}
 		}
 	}
 }
 
 .control-menu-nav {
 	@include display(flex);
-	@include flex-direction(row);
 
 	list-style: none;
 	margin-bottom: 0;
 	padding-left: 0;
 
-	@media screen and (max-width: 279px) {
-		display: block;
-	}
-
 	> li {
 		@include align-self(center);
 
 		display: block;
-
-		@include flex(1);
-
 		float: left;
 		margin-left: 16px;
+	}
 
-		@media screen and (max-width: 279px) {
-			margin-bottom: 2px;
-			margin-left: 2px;
+	> .active .control-menu-icon {
+		&,
+		&:focus,
+		&:hover {
+			color: $control-menu-link-active-color;
 		}
 	}
 }
@@ -104,14 +101,6 @@
 	&:hover {
 		color: $control-menu-link-hover-color;
 		text-decoration: none;
-	}
-}
-
-li.active .control-menu-icon {
-	&,
-	&:focus,
-	&:hover {
-		color: $control-menu-link-active-color;
 	}
 }
 
