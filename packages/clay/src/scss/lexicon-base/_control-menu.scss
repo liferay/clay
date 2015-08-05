@@ -1,0 +1,73 @@
+.control-menu {
+	background-color: $control-menu-bg;
+	bottom: 0;
+	left: 0;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	position: fixed;
+	right: 0;
+	z-index: 500;
+
+	ul {
+		@include display(flex);
+
+		list-style: none;
+		margin-bottom: 0;
+		padding-left: 0;
+
+		@media screen and (max-width: 279px) {
+			display: block;
+		}
+
+		> li {
+			display: block;
+			float: left;
+			margin-left: 16px;
+
+			@media screen and (max-width: 279px) {
+				margin-bottom: 2px;
+				margin-left: 2px;
+			}
+
+			&:first-child {
+				@include flex(1 0 0);
+
+				margin-left: 0;
+
+				@media screen and (max-width: 279px) {
+					@include flex(0 1 auto);
+				}
+			}
+
+			&:nth-last-child(2) {
+				@include flex(1 0 0);
+
+				@media screen and (max-width: 279px) {
+					@include flex(0 1 auto);
+				}
+			}
+
+			a {
+				color: $control-menu-link-color;
+				display: block;
+				font-size: 20px;
+				float: left;
+
+				&:focus,
+				&:hover {
+					background-color: $control-menu-link-hover-bg;
+					color: $control-menu-link-hover-color;
+					text-decoration: none;
+				}
+			}
+		}
+
+		> .active a {
+			&,
+			&:focus,
+			&:hover {
+				color: $control-menu-link-active-color;
+			}
+		}
+	}
+}
