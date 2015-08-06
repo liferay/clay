@@ -64,7 +64,7 @@
 }
 
 .product-menu .sidebar-body {
-	bottom: 54px;
+	bottom: 65px;
 	left: 0;
 	padding-bottom: 0;
 	padding-top: 0;
@@ -75,32 +75,6 @@
 	@media screen and (max-width: 320px) {
 		overflow: visible;
 		position: static;
-	}
-}
-
-.product-menu .sidebar-footer {
-	bottom: 0;
-	padding: 10px 24px;
-	position: absolute;
-	width: 100%;
-
-	@media screen and (max-width: 320px) {
-		position: static;
-	}
-
-	.nameplate {
-		h1, h2, h3, h4, h5, h6 {
-			margin: 0 8px;
-		}
-	}
-
-	.nameplate-content,
-	.nameplate-field {
-		vertical-align: middle;
-
-		@media screen and (max-width: 320px) {
-			display: block;
-		}
 	}
 }
 
@@ -141,12 +115,25 @@
 
 	.nav-equal-height-heading {
 		.collapse-icon {
+			&:after,
+			&.collapsed:after {
+				background-color: $product-menu-collapse-icon-bg;
+				content: '';
+				display: block;
+				height: 12px;
+				left: -6px;
+				position: absolute;
+				right: auto;
+				top: 14px;
+				width: 9px;
+			}
+
 			&:before {
-				background-color: #FFF;
 				content: $product-menu-nav-equal-height-heading-open-collapse-icon;
 				font-size: 13px;
 				left: -6px;
 				right: auto;
+				z-index: 1;
 			}
 
 			&.collapsed:before {
@@ -172,6 +159,58 @@
 		}
 	}
 }
+
+// Product Menu Footer
+
+.product-menu .sidebar-footer {
+	bottom: 0;
+	padding: 10px 24px;
+	position: absolute;
+	width: 100%;
+
+	@media screen and (max-width: 320px) {
+		position: static;
+	}
+
+	.nameplate-content,
+	.nameplate-field {
+		vertical-align: middle;
+
+		@media screen and (max-width: 320px) {
+			display: block;
+		}
+	}
+
+	.user-signout {
+		background-color: $product-menu-user-signout-bg;
+		border-radius: $product-menu-user-signout-border-radius;
+		color: $product-menu-user-signout-icon-color;
+	}
+}
+
+.product-menu {
+	.user-heading {
+		font-size: 19px;
+		font-weight: 500;
+		margin: 0 8px;
+	}
+
+	.user-subheading {
+		list-style: none;
+		margin: 0 8px;
+		padding: 0;
+
+		> li {
+			float: left;
+
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+}
+
+// Product Menu Tabs
 
 .product-menu-tabs {
 	margin-left: 24px;
