@@ -43,6 +43,7 @@ section: Components (JS)
             toggler: '.sidenav-toggler', // The class or ID of the toggle button. Default: '.sidenav-toggler'.
             type: 'relative', // The type of sidenav in desktop. Possible values: relative, fixed, fixed-push. Default: 'relative'.
             typeMobile: 'relative', // The type of sidenav in mobile. Possible values: relative, fixed, fixed-push. Default: 'relative'.
+            useDelegate: true, // The type of reference to use on the toggler event handler. Value false, directly binds click to the toggler.
             width: '225px' // The width of the side navigation. Default: '225px'.
         });
     </script>
@@ -155,7 +156,6 @@ section: Components (JS)
 	</div>
 </div>
 
-
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Side Navigation Data Api</h3>
@@ -172,7 +172,7 @@ section: Components (JS)
 			<p>The data api allows for fixed-push style sidenavs with the attributes <code>data-content</code>, <code>data-type</code>, and <code>data-type-mobile</code>. <code>Data-content</code> is the id of the content to be pushed over when the nav is open. <code>Data-type</code> and <code>data-type-mobile</code> give the option to specify the style of sidenav in desktop and mobile, respectively. The values can be <code>fixed</code> or <code>fixed-push</code> and defaults to fixed.</p>
 		</blockquote>
 
-		<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push">Simple Sidenav Toggler</a>
+		<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">Simple Sidenav Toggler</a>
 
 		<div class="sidenav-fixed sidenav-menu-slider closed" id="simpleSidenav">
 			<div class="sidenav-menu sidebar sidebar-default product-menu">
@@ -446,7 +446,6 @@ section: Components (JS)
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
@@ -473,13 +472,6 @@ section: Components (JS)
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-
 
 <script>
 	$('#mySidenavContainerId').sideNavigation({
