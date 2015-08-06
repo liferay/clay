@@ -40,21 +40,7 @@
 	}
 }
 
-// Sidebar Product Menu
-
-.product-menu .sidebar-body {
-	@media screen and (min-width: $grid-float-breakpoint) {
-		bottom: 80px;
-		top: 233px;
-	}
-}
-
-.product-menu .sidebar-footer {
-	@media screen and (min-width: $grid-float-breakpoint) {
-		padding-bottom: 16px;
-		padding-top: 16px;
-	}
-}
+// Product Menu Header
 
 .product-menu .sidebar-header {
 	@media screen and (min-width: $grid-float-breakpoint) {
@@ -66,13 +52,12 @@
 	margin-right: 10px;
 }
 
-.product-menu {
-	.user-icon {
-		@include monospace(32px);
+// Product Menu Body
 
-		@media screen and (min-width: $grid-float-breakpoint) {
-			@include monospace(48px);
-		}
+.product-menu .sidebar-body {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		bottom: 80px;
+		top: 233px;
 	}
 }
 
@@ -115,7 +100,6 @@
 	.nav-equal-height-heading {
 		.collapse-icon {
 			&:before {
-				background-color: darken($inverse-bg, 8%);
 				color: $product-menu-nav-link-color;
 				font-size: 15px;
 				left: -8px;
@@ -124,6 +108,25 @@
 	}
 }
 
+.product-menu {
+	.site-administration-toolbar {
+		a {
+			color: $product-menu-nav-link-color;
+		}
+
+		.active a {
+			background-color: #3A4D5A;
+			border-radius: $border-radius-base;
+			color: #88C37C;
+		}
+
+		.site-administration-title {
+			color: #FFF;
+		}
+	}
+}
+
+// Product Menu Tabs
 
 .product-menu-tab-icon {
 	@media screen and (min-width: $grid-float-breakpoint) {
@@ -156,6 +159,40 @@
 
 		@media screen and (min-width: $grid-float-breakpoint) {
 			padding: 0;
+		}
+	}
+}
+
+// Product Menu Footer
+
+.product-menu .sidebar-footer {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding-bottom: 16px;
+		padding-top: 16px;
+	}
+}
+
+.product-menu {
+	.user-icon {
+		@include monospace(32px);
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			@include monospace(48px);
+		}
+	}
+
+	.user-subheading {
+		> li {
+			> a {
+				font-size: 14px;
+				font-weight: 500;
+
+				&,
+				&:focus,
+				&:hover {
+					color: $product-menu-header-color;
+				}
+			}
 		}
 	}
 }
@@ -198,7 +235,7 @@
 	.collapse,
 	.collapsing {
 		> .list-group-item {
-			background-color: darken($inverse-bg, 8%);
+			background-color: #1A2126;
 		}
 	}
 }
