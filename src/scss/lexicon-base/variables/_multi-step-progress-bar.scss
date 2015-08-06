@@ -1,0 +1,13 @@
+$multi-step-progress-bar-icon: "\f10c" !default;
+$multi-step-progress-bar-complete-icon: "\f00c" !default;
+$multi-step-progress-bar-active-icon: "\f111" !default;
+
+$multi-step-progress-bar-icon-bg: $body-bg !default;
+$multi-step-progress-bar-color: #BBB !default; // Shared
+
+$multi-step-progress-bar-active-color: $brand-primary !default;
+
+$multi-step-progress-bar-complete-color: $gray !default; // Shared
+$multi-step-progress-bar-complete-icon-color: $brand-primary !default;
+
+$multi-step-progress-bar-divider-height: 1px !default; // Shared

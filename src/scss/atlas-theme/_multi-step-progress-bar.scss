@@ -1,0 +1,14 @@
+.multi-step-progress-bar {
+	> .complete .divider:after {
+		padding: 0 2px;
+	}
+
+	.divider {
+		margin: 20px 0;
+	}
+
+	.progress-bar-step,
+	.progress-bar-title {
+		font-weight: 500;
+	}
+}
