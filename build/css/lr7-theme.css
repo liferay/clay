@@ -13493,7 +13493,7 @@ figcaption,
 }
 
 .product-menu .sidebar-body {
-  bottom: 54px;
+  bottom: 65px;
   left: 0;
   padding-bottom: 0;
   padding-top: 0;
@@ -13506,35 +13506,6 @@ figcaption,
   .product-menu .sidebar-body {
     overflow: visible;
     position: static;
-  }
-}
-
-.product-menu .sidebar-footer {
-  bottom: 0;
-  padding: 10px 24px;
-  position: absolute;
-  width: 100%;
-}
-
-@media screen and (max-width: 320px) {
-  .product-menu .sidebar-footer {
-    position: static;
-  }
-}
-
-.product-menu .sidebar-footer .nameplate h1, .product-menu .sidebar-footer .nameplate-label h1, .product-menu .sidebar-footer .nameplate-list > li h1, .product-menu .sidebar-footer .nameplate h2, .product-menu .sidebar-footer .nameplate-label h2, .product-menu .sidebar-footer .nameplate-list > li h2, .product-menu .sidebar-footer .nameplate h3, .product-menu .sidebar-footer .nameplate-label h3, .product-menu .sidebar-footer .nameplate-list > li h3, .product-menu .sidebar-footer .nameplate h4, .product-menu .sidebar-footer .nameplate-label h4, .product-menu .sidebar-footer .nameplate-list > li h4, .product-menu .sidebar-footer .nameplate h5, .product-menu .sidebar-footer .nameplate-label h5, .product-menu .sidebar-footer .nameplate-list > li h5, .product-menu .sidebar-footer .nameplate h6, .product-menu .sidebar-footer .nameplate-label h6, .product-menu .sidebar-footer .nameplate-list > li h6 {
-  margin: 0 8px;
-}
-
-.product-menu .sidebar-footer .nameplate-content,
-.product-menu .sidebar-footer .nameplate-field {
-  vertical-align: middle;
-}
-
-@media screen and (max-width: 320px) {
-  .product-menu .sidebar-footer .nameplate-content,
-  .product-menu .sidebar-footer .nameplate-field {
-    display: block;
   }
 }
 
@@ -13570,12 +13541,25 @@ figcaption,
   border-left-color: #FFF;
 }
 
+.product-menu .nav-equal-height-heading .collapse-icon:after,
+.product-menu .nav-equal-height-heading .collapse-icon.collapsed:after {
+  background-color: #1A2126;
+  content: '';
+  display: block;
+  height: 12px;
+  left: -6px;
+  position: absolute;
+  right: auto;
+  top: 14px;
+  width: 9px;
+}
+
 .product-menu .nav-equal-height-heading .collapse-icon:before {
-  background-color: #FFF;
   content: "";
   font-size: 13px;
   left: -6px;
   right: auto;
+  z-index: 1;
 }
 
 .product-menu .nav-equal-height-heading .collapse-icon.collapsed:before {
@@ -13597,6 +13581,57 @@ figcaption,
 
 .product-menu .nav-nested-margins > li .nav > li .nav > li.active > a {
   color: #FFF;
+}
+
+.product-menu .sidebar-footer {
+  bottom: 0;
+  padding: 10px 24px;
+  position: absolute;
+  width: 100%;
+}
+
+@media screen and (max-width: 320px) {
+  .product-menu .sidebar-footer {
+    position: static;
+  }
+}
+
+.product-menu .sidebar-footer .nameplate-content,
+.product-menu .sidebar-footer .nameplate-field {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 320px) {
+  .product-menu .sidebar-footer .nameplate-content,
+  .product-menu .sidebar-footer .nameplate-field {
+    display: block;
+  }
+}
+
+.product-menu .sidebar-footer .user-signout {
+  background-color: #3A4D5A;
+  border-radius: 4px;
+  color: #FFF;
+}
+
+.product-menu .user-heading {
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0 8px;
+}
+
+.product-menu .user-subheading {
+  list-style: none;
+  margin: 0 8px;
+  padding: 0;
+}
+
+.product-menu .user-subheading > li {
+  float: left;
+}
+
+.product-menu .user-subheading > li:last-child {
+  float: right;
 }
 
 .product-menu-tabs {
@@ -18787,20 +18822,6 @@ h6.modal-title {
 }
 
 @media screen and (min-width: 768px) {
-  .product-menu .sidebar-body {
-    bottom: 80px;
-    top: 233px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .product-menu .sidebar-footer {
-    padding-bottom: 16px;
-    padding-top: 16px;
-  }
-}
-
-@media screen and (min-width: 768px) {
   .product-menu .sidebar-header {
     padding: 24px;
   }
@@ -18810,17 +18831,10 @@ h6.modal-title {
   margin-right: 10px;
 }
 
-.product-menu .user-icon {
-  height: 32px;
-  line-height: 32px;
-  width: 32px;
-}
-
 @media screen and (min-width: 768px) {
-  .product-menu .user-icon {
-    height: 48px;
-    line-height: 48px;
-    width: 48px;
+  .product-menu .sidebar-body {
+    bottom: 80px;
+    top: 233px;
   }
 }
 
@@ -18855,10 +18869,23 @@ h6.modal-title {
 }
 
 .product-menu .nav-equal-height-heading .collapse-icon:before {
-  background-color: #0f1316;
   color: #869CAD;
   font-size: 15px;
   left: -8px;
+}
+
+.product-menu .site-administration-toolbar a {
+  color: #869CAD;
+}
+
+.product-menu .site-administration-toolbar .active a {
+  background-color: #3A4D5A;
+  border-radius: 4px;
+  color: #88C37C;
+}
+
+.product-menu .site-administration-toolbar .site-administration-title {
+  color: #FFF;
 }
 
 @media screen and (min-width: 768px) {
@@ -18898,6 +18925,38 @@ h6.modal-title {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .product-menu .sidebar-footer {
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+}
+
+.product-menu .user-icon {
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .product-menu .user-icon {
+    height: 48px;
+    line-height: 48px;
+    width: 48px;
+  }
+}
+
+.product-menu .user-subheading > li > a {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.product-menu .user-subheading > li > a,
+.product-menu .user-subheading > li > a:focus,
+.product-menu .user-subheading > li > a:hover {
+  color: #869CAD;
+}
+
 .product-menu .sidebar-header {
   background-color: #1B2228;
 }
@@ -18933,7 +18992,7 @@ h6.modal-title {
 .product-menu .collapse > .list-group-item,
 .product-menu .collapse > .list-group-heading,
 .product-menu .collapsing > .list-group-item, .product-menu .collapsing > .list-group-heading {
-  background-color: #0f1316;
+  background-color: #1A2126;
 }
 
 @media screen and (min-width: 768px) {
@@ -18946,7 +19005,7 @@ h6.modal-title {
 .product-menu-tabs > li.active > a,
 .product-menu-tabs > li.active > a:focus,
 .product-menu-tabs > li.active > a:hover {
-  background-color: #869CAD;
+  background-color: #3A4D5A;
   border-color: transparent;
   color: #FFF;
 }
@@ -18987,7 +19046,7 @@ h6.modal-title {
 
 @media screen and (min-width: 768px) {
   .product-menu-tabs > .active .product-menu-tab-icon {
-    background-color: #869CAD;
+    background-color: #3A4D5A;
   }
 }
 
