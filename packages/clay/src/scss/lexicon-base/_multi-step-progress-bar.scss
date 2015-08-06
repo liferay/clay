@@ -1,0 +1,72 @@
+.multi-step-progress-bar {
+	display: table;
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+	width: 100%;
+
+	> li {
+		color: $multi-step-progress-bar-color;
+		display: table-cell;
+		vertical-align: bottom;
+		width: 1%;
+
+		@media screen and (max-width: 767px) {
+			display: inline-block;
+			margin-bottom: 5px;
+			width: 100px;
+		}
+	}
+
+	> .active {
+		color: $multi-step-progress-bar-active-color;
+
+		.divider {
+			background-color: $multi-step-progress-bar-active-color;
+			color: $multi-step-progress-bar-active-color;
+
+			&:after {
+				content: $multi-step-progress-bar-active-icon;
+			}
+		}
+	}
+
+	> .complete {
+		color: $multi-step-progress-bar-complete-color;
+
+		.divider {
+			background-color: $multi-step-progress-bar-complete-color;
+			color: $multi-step-progress-bar-complete-icon-color;
+
+			&:after {
+				content: $multi-step-progress-bar-complete-icon;
+			}
+		}
+	}
+
+	.divider {
+		background-color: $multi-step-progress-bar-color;
+		color: $multi-step-progress-bar-color;
+		height: $multi-step-progress-bar-divider-height;
+		margin: 10px 0;
+		position: relative;
+
+		&:after {
+			background-color: $multi-step-progress-bar-icon-bg;
+			content: $multi-step-progress-bar-icon;
+			display: block;
+			font-family: 'fontawesome-alloy';
+			left: 0;
+			position: absolute;
+
+			@include transform(translateY(-50%));
+
+			top: 50%;
+		}
+	}
+
+	.progress-bar-step,
+	.progress-bar-title {
+		margin-right: 10px;
+	}
+}
