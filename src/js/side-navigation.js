@@ -71,6 +71,7 @@
 				options.toggler = element;
 				options.type = element.data('type');
 				options.typeMobile = element.data('type-mobile');
+				options.useDelegate = element.data('use-delegate') ? element.data('use-delegate') : false;
 				options.width = '';
 			}
 			else { // find toggler
@@ -334,7 +335,13 @@
 				instance._onScreenChange(element);
 			}
 
-			instance._onClickTrigger(element);
+			if (instance.options.useDelegate) {
+				instance._onDelegateClickTrigger(element);
+			}
+			else {
+				instance._onClickTrigger(element);
+			}
+
 			instance._onClickSidenavClose(element);
 		},
 
@@ -423,8 +430,10 @@
 		_onClickTrigger: function(element) {
 			var instance = this;
 
+			var container = element;
+
 			if (instance.useDataAttribute) {
-				var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+				container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
 
 				container.on(instance.options.transitionEnd, function(event) {
 					event.stopPropagation();
@@ -437,10 +446,48 @@
 				});
 			}
 			else {
-				var container = element;
 				var toggler = element.toggler;
 
 				toggler.on('click.lexicon.sidenav', function(event) {
+					var $this = $(this);
+
+					var selector = $this.closest(instance.options.selector);
+
+					if (selector.length) {
+						container = selector;
+					}
+
+					event.preventDefault();
+
+					instance.toggleNavigation(container);
+				});
+			}
+		},
+
+		_onDelegateClickTrigger: function(element) {
+			var instance = this;
+
+			var doc = $(document);
+
+			var container = element;
+
+			if (instance.useDataAttribute) {
+				var togglerSelector = instance.options.target ? '[data-target="' + instance.options.target + '"]' : '[href="' + element.attr('href') + '"]';
+
+				container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+
+				container.on(instance.options.transitionEnd, function(event) {
+					event.stopPropagation();
+				});
+
+				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
+					event.preventDefault();
+
+					instance._toggleSimpleSidenav(element);
+				});
+			}
+			else {
+				doc.on('click.lexicon.sidenav', instance.options.toggler, function(event) {
 					var $this = $(this);
 
 					var selector = $this.closest(instance.options.selector);
@@ -637,6 +684,7 @@
 	 * @property {String}         toggler     The class or ID of the toggle button.
 	 * @property {String}         type        The type of sidenav in desktop. Possible values: relative, fixed, fixed-push
 	 * @property {String}         typeMobile  The type of sidenav in mobile. Possible values: relative, fixed, fixed-push
+	 * @property {String|Boolean} useDelegate The type of reference to use on the toggler event handler. Value false, directly binds click to the toggler.
 	 * @property {String|Number}  width       The width of the side navigation.
 	 */
 
@@ -650,6 +698,7 @@
 		toggler: '.sidenav-toggler',
 		type: 'relative',
 		typeMobile: 'relative',
+		useDelegate: true,
 		width: '225px'
 	};
 
