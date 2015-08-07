@@ -10148,26 +10148,27 @@ figcaption,
 .multi-step-progress-bar > .complete .divider {
   background-color: #869CAD;
   color: #65B6F0;
+  margin-left: 15px;
 }
 
 .multi-step-progress-bar > .complete .divider:after {
   content: "";
+  left: -14px;
 }
 
 .multi-step-progress-bar .divider {
   background-color: #CAD3DB;
   color: #CAD3DB;
   height: 2px;
-  margin: 10px 0;
+  margin: 10px 0 10px 12px;
   position: relative;
 }
 
 .multi-step-progress-bar .divider:after {
-  background-color: #FFF;
   content: "";
   display: block;
   font-family: 'fontawesome-alloy';
-  left: 0;
+  left: -12px;
   position: absolute;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -15561,12 +15562,17 @@ h6.modal-title {
   background-color: #111314;
 }
 
+.multi-step-progress-bar > .complete .divider {
+  margin-left: 18px;
+}
+
 .multi-step-progress-bar > .complete .divider:after {
-  padding: 0 2px;
+  left: -16px;
 }
 
 .multi-step-progress-bar .divider {
-  margin: 20px 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .multi-step-progress-bar .progress-bar-step,
