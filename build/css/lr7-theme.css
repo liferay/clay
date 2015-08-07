@@ -6842,7 +6842,7 @@ tbody.collapse.in {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 9px 16px;
+  padding: 10px 15px;
 }
 
 .nav > li > a:hover,
@@ -12401,13 +12401,13 @@ figcaption,
 }
 
 .nav > li > .collapse-icon {
-  padding-right: 24px;
+  padding-right: 32px;
 }
 
 .nav > li > .collapse-icon:before {
   content: "";
   font-family: "fontawesome-alloy";
-  right: 12px;
+  right: 16px;
 }
 
 .nav > li > .collapse-icon.collapsed:before {
@@ -12421,7 +12421,8 @@ figcaption,
 
 .nav-equal-height > li > a,
 .nav-equal-height .nav > li > a,
-.nav-equal-height-heading > a {
+.nav-equal-height-heading > a,
+.nav-equal-height-heading > span {
   height: 40px;
 }
 
@@ -12432,7 +12433,7 @@ figcaption,
 
 .nav-equal-height > li > a {
   display: table-cell;
-  padding: 0 12px;
+  padding: 0 16px;
   vertical-align: middle;
 }
 
@@ -12457,9 +12458,16 @@ figcaption,
   text-decoration: none;
 }
 
-.nav-equal-height-heading > a {
+.nav-equal-height-heading > a,
+.nav-equal-height-heading > span {
   display: table-cell;
   vertical-align: middle;
+  word-break: break-word;
+}
+
+.nav-equal-height-heading > a:first-child,
+.nav-equal-height-heading > span:first-child {
+  padding-left: 16px;
 }
 
 .nav-equal-height-heading > a:focus,
@@ -12467,13 +12475,13 @@ figcaption,
   text-decoration: none;
 }
 
-.nav-equal-height-heading > a:first-child {
-  padding-left: 12px;
-}
-
 .nav-equal-height-heading > .icon-monospaced, .nav-equal-height-heading > .help-icon {
   height: auto;
   line-height: 20px;
+}
+
+.nav-equal-height-heading > .nav-equal-height-heading-field {
+  width: 1%;
 }
 
 .nav-equal-height.nav-nested .nav > li {
@@ -13492,6 +13500,20 @@ figcaption,
   margin-top: 0;
 }
 
+.product-menu .lfr-icon-menu .btn-default {
+  background-color: transparent;
+  border-width: 0;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  padding: 0;
+}
+
+.product-menu .lfr-icon-menu .btn-default:active {
+  box-shadow: none;
+  color: #869CAD;
+}
+
 .product-menu .sidebar-body {
   bottom: 65px;
   left: 0;
@@ -13546,7 +13568,7 @@ figcaption,
   background-color: #1A2126;
   content: '';
   display: block;
-  height: 12px;
+  height: 9px;
   left: -6px;
   position: absolute;
   right: auto;
@@ -18866,6 +18888,11 @@ h6.modal-title {
 
 .product-menu small {
   display: block;
+}
+
+.product-menu .nav-equal-height-heading .collapse-icon:after,
+.product-menu .nav-equal-height-heading .collapse-icon.collapsed:after {
+  height: 12px;
 }
 
 .product-menu .nav-equal-height-heading .collapse-icon:before {
