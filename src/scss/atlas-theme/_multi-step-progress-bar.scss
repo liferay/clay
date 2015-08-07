@@ -1,10 +1,15 @@
 .multi-step-progress-bar {
-	> .complete .divider:after {
-		padding: 0 2px;
+	> .complete .divider {
+		margin-left: 18px;
+
+		&:after {
+			left: -16px;
+		}
 	}
 
 	.divider {
-		margin: 20px 0;
+		margin-bottom: 20px;
+		margin-top: 20px;
 	}
 
 	.progress-bar-step,

@@ -37,9 +37,11 @@
 		.divider {
 			background-color: $multi-step-progress-bar-complete-color;
 			color: $multi-step-progress-bar-complete-icon-color;
+			margin-left: 15px;
 
 			&:after {
 				content: $multi-step-progress-bar-complete-icon;
+				left: -14px;
 			}
 		}
 	}
@@ -48,15 +50,14 @@
 		background-color: $multi-step-progress-bar-color;
 		color: $multi-step-progress-bar-color;
 		height: $multi-step-progress-bar-divider-height;
-		margin: 10px 0;
+		margin: 10px 0 10px 12px;
 		position: relative;
 
 		&:after {
-			background-color: $multi-step-progress-bar-icon-bg;
 			content: $multi-step-progress-bar-icon;
 			display: block;
 			font-family: 'fontawesome-alloy';
-			left: 0;
+			left: -12px;
 			position: absolute;
 
 			@include transform(translateY(-50%));
