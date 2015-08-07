@@ -16,10 +16,3 @@
 .nav-nested {
 	@include make-nav-nested(12px);
 }
-
-.nav-equal-height-heading {
-	> a,
-	> span {
-		padding-right: 0;
-	}
-}
