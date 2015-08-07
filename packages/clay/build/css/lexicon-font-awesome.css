@@ -12146,6 +12146,7 @@ figcaption,
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
+  position: relative;
   width: 100%;
 }
 
@@ -12154,14 +12155,6 @@ figcaption,
   display: table-cell;
   vertical-align: bottom;
   width: 1%;
-}
-
-@media screen and (max-width: 767px) {
-  .multi-step-progress-bar > li {
-    display: inline-block;
-    margin-bottom: 5px;
-    width: 100px;
-  }
 }
 
 .multi-step-progress-bar > .active {
@@ -12217,6 +12210,52 @@ figcaption,
 .multi-step-progress-bar .progress-bar-step,
 .multi-step-progress-bar .progress-bar-title {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .multi-step-progress-bar-collapse {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .multi-step-progress-bar-collapse > li {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .multi-step-progress-bar-collapse > li:last-child {
+    width: 1%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .multi-step-progress-bar-collapse > li:last-child .divider {
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .multi-step-progress-bar-collapse > .active .progress-bar-title {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .multi-step-progress-bar-collapse .progress-bar-title {
+    display: none;
+  }
+}
+
+.multi-step-progress-bar-fixed > li {
+  display: inline-block;
+  width: 100px;
 }
 
 .nameplate-checkbox,
