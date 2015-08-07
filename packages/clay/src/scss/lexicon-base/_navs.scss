@@ -1,10 +1,10 @@
 .nav > li > .collapse-icon {
-	padding-right: $navbar-padding-horizontal * 2;
+	padding-right: $nav-link-padding-horizontal * 2;
 
 	&:before {
 		content: $nav-collapse-icon-open;
 		font-family: $nav-collapse-icon-font-family;
-		right: $navbar-padding-horizontal;
+		right: $nav-link-padding-horizontal;
 	}
 
 	&.collapsed:before {
@@ -32,7 +32,7 @@
 
 		> a {
 			display: table-cell;
-			padding: 0 $navbar-padding-horizontal;
+			padding: 0 $nav-link-padding-horizontal;
 			vertical-align: middle;
 		}
 	}
@@ -68,7 +68,7 @@
 		}
 
 		&:first-child {
-			padding-left: $navbar-padding-horizontal;
+			padding-left: $nav-link-padding-horizontal;
 		}
 	}
 
