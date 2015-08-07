@@ -71,6 +71,13 @@
 // Arrows and dropdown-menu positions
 // ($arrow-size, $border-width, $offset, $arrow-color, $border-color)
 
+.dropdown-menu,
+.dropdown-menu-center,
+.dropdown-menu-right,
+.navbar-right .dropdown-menu {
+	margin-top: $dropdown-margin-vertical;
+}
+
 .dropdown-menu {
 	@include arrow("top-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 }
@@ -85,82 +92,72 @@
 }
 
 .dropdown-menu-top,
+.dropdown-menu-top-center,
+.dropdown-menu-top-right,
+.dropup .dropdown-menu {
+	bottom: 100%;
+	margin-bottom: $dropdown-margin-vertical;
+	top: auto;
+}
+
+.dropdown-menu-top,
 .dropup .dropdown-menu {
 	@include arrow("bottom-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	bottom: 100%;
-	margin-bottom: 0;
-	top: auto;
 }
 
 .dropdown-menu-top-center {
 	@include arrow("bottom-center", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
-	bottom: 100%;
 	left: 50%;
-	margin-bottom: 0;
 
 	@include transform(translateX(-50%));
-
-	top: auto;
 }
 
 .dropdown-menu-top-right {
 	@include arrow("bottom-right", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
 
-	bottom: 100%;
 	left: auto;
-	margin-bottom: 0;
 	right: 0;
-	top: auto;
+}
+
+.dropdown-menu-left-side,
+.dropdown-menu-left-side-bottom,
+.dropdown-menu-left-side-middle {
+	margin: 0 $dropdown-margin-horizontal 0 0;
+
+	.inline-scroller {
+		margin-right: 3px;
+	}
 }
 
 .dropdown-menu-left-side {
 	@include arrow("right-top", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	margin: 0;
-
-	.inline-scroller {
-		margin-right: 3px;
-	}
 }
 
 .dropdown-menu-left-side-bottom {
 	@include arrow("right-bottom", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	margin: 0;
-
-	.inline-scroller {
-		margin-right: 3px;
-	}
 }
 
 .dropdown-menu-left-side-middle {
 	@include arrow("right-middle", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+}
 
-	margin: 0;
-
-	.inline-scroller {
-		margin-right: 3px;
-	}
+.dropdown-menu-right-side,
+.dropdown-menu-right-side-bottom,
+.dropdown-menu-right-side-middle {
+	margin: 0 0 0 $dropdown-margin-horizontal;
 }
 
 .dropdown-menu-right-side {
 	@include arrow("left-top", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	margin: 0;
 }
 
 .dropdown-menu-right-side-bottom {
 	@include arrow("left-bottom", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	margin: 0;
 }
 
 .dropdown-menu-right-side-middle {
 	@include arrow("left-middle", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	margin: 0;
 }
 
 .dropdown-menu-no-arrow,
