@@ -10133,26 +10133,27 @@ figcaption,
 .multi-step-progress-bar > .complete .divider {
   background-color: #555555;
   color: #337ab7;
+  margin-left: 15px;
 }
 
 .multi-step-progress-bar > .complete .divider:after {
   content: "";
+  left: -14px;
 }
 
 .multi-step-progress-bar .divider {
   background-color: #BBB;
   color: #BBB;
   height: 1px;
-  margin: 10px 0;
+  margin: 10px 0 10px 12px;
   position: relative;
 }
 
 .multi-step-progress-bar .divider:after {
-  background-color: #fff;
   content: "";
   display: block;
   font-family: 'fontawesome-alloy';
-  left: 0;
+  left: -12px;
   position: absolute;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
