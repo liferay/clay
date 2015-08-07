@@ -61,6 +61,22 @@
 			margin-top: 0;
 		}
 	}
+
+	.lfr-icon-menu {
+		.btn-default {
+			background-color: transparent;
+			border-width: 0;
+
+			@include monospace(32px);
+
+			padding: 0;
+
+			&:active {
+				box-shadow: none;
+				color: $product-menu-nav-link-color;
+			}
+		}
+	}
 }
 
 .product-menu .sidebar-body {
