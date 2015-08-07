@@ -21,7 +21,8 @@
 
 .nav-equal-height > li > a,
 .nav-equal-height .nav > li > a,
-.nav-equal-height-heading > a {
+.nav-equal-height-heading > a,
+.nav-equal-height-heading > span {
 	height: 40px;
 }
 
@@ -58,23 +59,30 @@
 		text-decoration: none;
 	}
 
-	> a {
+	> a,
+	> span {
 		display: table-cell;
+		padding-right: $nav-link-padding-horizontal;
 		vertical-align: middle;
-
-		&:focus,
-		&:hover {
-			text-decoration: none;
-		}
+		word-break: break-word;
 
 		&:first-child {
 			padding-left: $nav-link-padding-horizontal;
 		}
 	}
 
+	> a:focus,
+	>	a:hover {
+		text-decoration: none;
+	}
+
 	> .icon-monospaced {
 		height: auto;
 		line-height: 20px;
+	}
+
+	> .nav-equal-height-heading-field {
+		width: 1%;
 	}
 }
 

@@ -99,6 +99,11 @@
 .product-menu {
 	.nav-equal-height-heading {
 		.collapse-icon {
+			&:after,
+			&.collapsed:after {
+				height: 12px;
+			}
+
 			&:before {
 				color: $product-menu-nav-link-color;
 				font-size: 15px;
