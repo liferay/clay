@@ -1,5 +1,9 @@
 // Alert Notifications
 
 .alert-notification {
-	width: 280px;
+	width: 100%;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		width: 280px;
+	}
 }
