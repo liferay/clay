@@ -3,6 +3,10 @@
 
 	font-weight: 500;
 
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include button-size($btn-desktop-padding-vertical, $btn-desktop-padding-horizontal, $btn-desktop-font-size, $btn-line-height, $btn-border-radius);
+	}
+
 	&,
 	&:focus,
 	&:hover {
@@ -57,14 +61,26 @@
 
 .btn-lg {
 	@include button-size($btn-lg-padding-vertical, $btn-lg-padding-horizontal, $btn-lg-font-size, $btn-line-height, $btn-lg-border-radius);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include button-size($btn-desktop-lg-padding-vertical, $btn-desktop-lg-padding-horizontal, $btn-desktop-lg-font-size, $btn-line-height, $btn-lg-border-radius);
+	}
 }
 
 .btn-sm {
 	@include button-size($btn-sm-padding-vertical, $btn-sm-padding-horizontal, $btn-sm-font-size, $btn-line-height, $btn-sm-border-radius);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include button-size($btn-desktop-sm-padding-vertical, $btn-desktop-sm-padding-horizontal, $btn-desktop-sm-font-size, $btn-line-height, $btn-sm-border-radius);
+	}
 }
 
 .btn-xs {
 	@include button-size($btn-xs-padding-vertical, $btn-xs-padding-horizontal, $btn-xs-font-size, $btn-line-height, $btn-xs-border-radius);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include button-size($btn-desktop-xs-padding-vertical, $btn-desktop-xs-padding-horizontal, $btn-desktop-xs-font-size, $btn-line-height, $btn-xs-border-radius);
+	}
 }
 
 // Action Buttons
@@ -76,6 +92,10 @@ a.btn-action,
 
 	[class*="icon-"] {
 		line-height: 52px - ($btn-border-width * 2);
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			line-height: 64px - ($btn-border-width * 2);
+		}
 	}
 }
 
@@ -87,12 +107,24 @@ a.btn-action,
 	line-height: 16px;
 	padding: 0;
 	width: 52px;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $btn-desktop-font-size;
+		height: 64px;
+		line-height: 24px;
+		width: 64px;
+	}
 }
 
 .btn-action-secondary {
 	height: 52px;
 	text-align: right;
 	width: 52px;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		height: 64px;
+		width: 64px;
+	}
 
 	.dropdown-menu-left-side {
 		margin-right: 20px;
@@ -106,21 +138,38 @@ a.btn-action,
 	.dropdown-menu-top {
 		&:after {
 			left: 18px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				left: 24px;
+			}
 		}
 
 		&:before {
 			left: 17px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				left: 23px;
+			}
 		}
 	}
+
 
 	.dropdown-menu-right,
 	.dropdown-menu-top-right {
 		&:after {
 			right: 18px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				right: 24px;
+			}
 		}
 
 		&:before {
 			right: 17px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				right: 23px;
+			}
 		}
 	}
 
@@ -128,10 +177,18 @@ a.btn-action,
 	.dropdown-menu-right-side, {
 		&:after {
 			top: 18px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				top: 24px;
+			}
 		}
 
 		&:before {
 			top: 17px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				top: 23px;
+			}
 		}
 	}
 
@@ -140,95 +197,18 @@ a.btn-action,
 		&:after {
 			bottom: 18px;
 			top: auto;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				bottom: 24px;
+				top: auto;
+			}
 		}
 
 		&:before {
 			bottom: 17px;
 			top: auto;
-		}
-	}
-}
 
-@media screen and (min-width: $grid-float-breakpoint) {
-	.btn {
-		@include button-size($btn-desktop-padding-vertical, $btn-desktop-padding-horizontal, $btn-desktop-font-size, $btn-line-height, $btn-border-radius);
-	}
-
-	.btn-lg{
-		@include button-size($btn-desktop-lg-padding-vertical, $btn-desktop-lg-padding-horizontal, $btn-desktop-lg-font-size, $btn-line-height, $btn-lg-border-radius);
-	}
-
-	.btn-sm {
-		@include button-size($btn-desktop-sm-padding-vertical, $btn-desktop-sm-padding-horizontal, $btn-desktop-sm-font-size, $btn-line-height, $btn-sm-border-radius);
-	}
-
-	.btn-xs {
-		@include button-size($btn-desktop-xs-padding-vertical, $btn-desktop-xs-padding-horizontal, $btn-desktop-xs-font-size, $btn-line-height, $btn-xs-border-radius);
-	}
-
-	a.btn-action,
-	.btn-action-secondary > a.btn {
-		border-radius: $btn-action-border-radius;
-		padding: 0;
-
-		[class*="icon-"] {
-			line-height: 64px - ($btn-border-width * 2);
-		}
-	}
-
-	.btn-action,
-	.btn-action-secondary .btn {
-		font-size: $btn-desktop-font-size;
-		height: 64px;
-		line-height: 24px;
-		width: 64px;
-	}
-
-	.btn-action-secondary {
-		height: 64px;
-		width: 64px;
-
-		.dropdown-menu-left,
-		.dropdown-menu-top {
-			&:after {
-				left: 24px;
-			}
-
-			&:before {
-				left: 23px;
-			}
-		}
-
-		.dropdown-menu-right,
-		.dropdown-menu-top-right {
-			&:after {
-				right: 24px;
-			}
-
-			&:before {
-				right: 23px;
-			}
-		}
-
-		.dropdown-menu-left-side,
-		.dropdown-menu-right-side, {
-			&:after {
-				top: 24px;
-			}
-
-			&:before {
-				top: 23px;
-			}
-		}
-
-		.dropdown-menu-left-side-bottom,
-		.dropdown-menu-right-side-bottom {
-			&:after {
-				bottom: 24px;
-				top: auto;
-			}
-
-			&:before {
+			@media screen and (min-width: $grid-float-breakpoint) {
 				bottom: 23px;
 				top: auto;
 			}
