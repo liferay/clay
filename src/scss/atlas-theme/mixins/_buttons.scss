@@ -13,7 +13,13 @@
 @mixin color-btn-active($bg, $border) {
 	&:active,
 	&.active,
-	.open > &.dropdown-toggle {
+	&:active:focus,
+	&:active:hover,
+	&.active:focus,
+	&.active:hover,
+	.open > &.dropdown-toggle,
+	.open > &.dropdown-toggle:focus,
+	.open > &.dropdown-toggle:hover {
 		background-color: $bg;
 		border-color: $border;
 	}
