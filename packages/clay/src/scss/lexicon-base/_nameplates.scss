@@ -40,12 +40,12 @@
 .nameplate-label {
 	@extend .nameplate;
 
-	background-color: #EEE;
 	border-radius: 20px;
+	float: left;
 	font-size: 11px;
 	margin: 0 5px 2px 0;
 	padding: 3px;
-	width: auto;
+	max-width: 200px;
 
 	&.form-control {
 		display: table;
@@ -64,26 +64,112 @@
 		border-radius: 0;
 	}
 
-	a[class*="icon-"] {
-		color: #999;
-		margin-left: 5px;
+	a {
 		text-decoration: none;
-
-		&:focus,
-		&:hover {
-			color: #555;
-		}
 	}
 
 	.nameplate-content,
 	.nameplate-field,
 	.nameplate-icon {
 		vertical-align: middle;
-		width: auto;
 	}
 
 	.nameplate-content {
 		padding: 3px 5px 2px;
+		position: relative;
+	}
+
+	.nameplate-label-text {
+		line-height: 32px;
+		overflow: hidden;
+		position: absolute;
+		text-overflow: ellipsis;
+		top: 0;
+		white-space: nowrap;
+		width: 100%;
+	}
+}
+
+.nameplate-label-default {
+	background-color: $gray-lighter;
+
+	a {
+		color: #999;
+
+		&:focus,
+		&:hover {
+			color: #555;
+		}
+	}
+}
+
+.nameplate-label-primary {
+	background-color: $brand-primary;
+	color: #FFF;
+
+	a {
+		color: #FFF;
+
+		&:focus,
+		&:hover {
+			color: #FFF;
+		}
+	}
+}
+
+.nameplate-label-success {
+	background-color: $brand-success;
+	color: #FFF;
+
+	a {
+		color: #FFF;
+
+		&:focus,
+		&:hover {
+			color: #FFF;
+		}
+	}
+}
+
+.nameplate-label-info {
+	background-color: $brand-info;
+	color: #FFF;
+
+	a {
+		color: #FFF;
+
+		&:focus,
+		&:hover {
+			color: #FFF;
+		}
+	}
+}
+
+.nameplate-label-warning {
+	background-color: $brand-warning;
+	color: #FFF;
+
+	a {
+		color: #FFF;
+
+		&:focus,
+		&:hover {
+			color: #FFF;
+		}
+	}
+}
+
+.nameplate-label-danger {
+	background-color: $brand-danger;
+	color: #FFF;
+
+	a {
+		color: #FFF;
+
+		&:focus,
+		&:hover {
+			color: #FFF;
+		}
 	}
 }
 
