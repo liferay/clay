@@ -164,20 +164,6 @@ select[disabled].form-control > option {
 				width: 100%;
 			}
 		}
-
-		&[disabled] {
-			opacity: 0.5;
-		}
-	}
-}
-
-[disabled],
-.disabled {
-	.checkbox-default input[type='checkbox'],
-	.radio-default input[type='radio'],
-	input[type='checkbox'],
-	input[type='radio'] {
-		opacity: 0.5;
 	}
 }
 
@@ -209,11 +195,17 @@ select[disabled].form-control > option {
 				width: 100%;
 			}
 		}
-
-		&[disabled] {
-			opacity: 0.5;
-		}
 	}
+}
+
+.checkbox-default.disabled,
+.radio-default.disabled,
+.checkbox-default.disabled input[type="checkbox"],
+.radio-default.disabled input[type="radio"],
+.checkbox-default [disabled],
+.radio-default [disabled] {
+	cursor: not-allowed;
+	opacity: 0.5;
 }
 
 .input-group {
