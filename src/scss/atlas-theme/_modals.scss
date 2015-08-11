@@ -100,7 +100,7 @@ h6.modal-title {
 .modal-full-screen {
 	.modal-body {
 		background-color: $modal-full-screen-body-bg;
-		top: 52px;
+		top: 53px;
 
 		@media screen and (min-width: $grid-float-breakpoint) { // min-width: 768px
 			background-color: $modal-full-screen-desktop-body-bg;
