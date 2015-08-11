@@ -3,28 +3,3 @@
 		color: $brand-default;
 	}
 }
-
-// Nameplate Label
-
-.nameplate-label {
-	font-size: 14px;
-	height: 26px;
-	max-width: 250px;
-}
-
-.nameplate-label-default {
-	background-color : $nameplate-label-default-bg;
-	color :$brand-primary;
-
-	a {
-		&,
-		&:focus,
-		&:hover {
-			color: $brand-primary;
-		}
-	}
-}
-
-.nameplate-label-text {
-	font-weight: 500;
-}
