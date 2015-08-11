@@ -56,6 +56,7 @@
 		box-shadow: none;
 		display: table;
 		height: $input-height-base;
+		width: auto;
 	}
 
 	a {
@@ -142,97 +143,4 @@
 
 .nameplate-label-danger {
 	@include color-nameplate-label($nameplate-label-danger-bg, $nameplate-label-danger-link-color, $nameplate-label-danger-link-hover-color);
-}
-
-// Nameplate List
-
-.nameplate-list {
-	list-style: none;
-	margin: 0 0 10px 0;
-	padding: 0;
-
-	> li,
-	> .nameplate {
-		@extend .nameplate;
-
-		border-left-width: 0;
-		margin: 0;
-		padding: 0.8em;
-
-		&:hover {
-			background-color: #DDD;
-		}
-	}
-
-	.nameplate-content,
-	.nameplate-icon,
-	.nameplate-field {
-		padding: 0 0.3em;
-		vertical-align: middle;
-	}
-
-	.nameplate-field .icon-remove {
-		background-color: #DDD;
-		text-align: center;
-		border-radius: 50%;
-		display: block;
-		line-height: 19px;
-		padding: 0 3px 0 4px;
-		text-decoration: none;
-	}
-}
-
-.nameplate-list-heading {
-	background-color: #F8F8F8;
-
-	> a,
-	> span {
-		color: $text-color;
-		display: inline-block;
-		padding: 1.1em;
-
-		&:focus,
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
-	> a {
-		display: block;
-	}
-
-	+ .collapse .nameplate-list,
-	+ .collapsing .nameplate-list,
-	+ .nameplate-list {
-		margin-bottom: 0;
-	}
-}
-
-.nameplate-list-bordered {
-	&.nameplate-list-heading,
-	.nameplate-list-heading,
-	.nameplate-list > li,
-	> li {
-		border: 1px solid #DDD;
-		margin-top: -1px;
-	}
-}
-
-// Profile Header
-
-.profile-header {
-	max-width: 300px;
-
-	.nameplate,
-	&.nameplate {
-		margin: 0;
-	}
-
-	.nameplate-content {
-		padding: 10px;
-	}
-
-	.nameplate-field {
-		padding: 10px;
-	}
 }
