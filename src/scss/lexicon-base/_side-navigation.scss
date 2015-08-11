@@ -21,7 +21,7 @@
 		left: 0;
 		position: fixed;
 		top: 0;
-		z-index: $zindex-tooltip;
+		z-index: $zindex-navbar-fixed + 5;
 	}
 }
 
