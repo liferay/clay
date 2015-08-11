@@ -8055,9 +8055,7 @@ button.close {
  * @param $width - width
  * @param $height - height
  */
-.card-row [class*="card-col"], .equal-height-column-cell, .nameplate-checkbox,
-.nameplate-icon,
-.nameplate-field, .nameplate-content {
+.card-row [class*="card-col"], .equal-height-column-cell {
   display: table-cell;
   vertical-align: top;
 }
@@ -8066,8 +8064,7 @@ button.close {
   display: table-row;
 }
 
-.card-row, .equal-height-columns, .nameplate, .nameplate-label, .nameplate-list > li,
-.nameplate-list > .nameplate {
+.card-row, .equal-height-columns {
   display: table;
   width: 100%;
 }
@@ -8113,6 +8110,16 @@ button.close {
  * @param $off-color - Switch button off icon font color
  * @param $on-color - Switch button on icon font color
  */
+.alert-notification {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .alert-notification {
+    width: 280px;
+  }
+}
+
 .aspect-ratio {
   display: block;
   overflow: hidden;
@@ -10207,15 +10214,25 @@ figcaption,
   width: 100px;
 }
 
+.nameplate, .nameplate-list > li,
+.nameplate-list > .nameplate {
+  display: table;
+  width: 100%;
+}
+
 .nameplate-checkbox,
 .nameplate-icon,
 .nameplate-field {
+  display: table-cell;
   padding: 0 0.3em;
+  vertical-align: top;
   width: 1%;
 }
 
 .nameplate-content {
+  display: table-cell;
   padding: 0 0.3em;
+  vertical-align: top;
   word-break: break-word;
 }
 
@@ -10237,51 +10254,179 @@ figcaption,
 }
 
 .nameplate-label {
-  background-color: #EEE;
-  border-radius: 20px;
-  font-size: 11px;
+  border-radius: 100px;
+  display: table;
+  float: left;
   margin: 0 5px 2px 0;
-  padding: 3px;
-  width: auto;
+  min-width: 50px;
+  padding: 0 3px;
+}
+
+@media screen and (max-width: 767px) {
+  .nameplate-label {
+    height: 32px;
+    margin-right: 0;
+  }
 }
 
 .nameplate-label.form-control {
+  border-width: 0;
+  box-shadow: none;
   display: table;
   height: 34px;
 }
 
-.nameplate-label.nameplate-label-circle {
-  border-radius: 20px;
-}
-
-.nameplate-label.nameplate-label-rounded {
-  border-radius: 3px;
-}
-
-.nameplate-label.nameplate-label-square {
-  border-radius: 0;
-}
-
-.nameplate-label a[class*="icon-"] {
-  color: #999;
-  margin-left: 5px;
+.nameplate-label a {
   text-decoration: none;
-}
-
-.nameplate-label a[class*="icon-"]:focus,
-.nameplate-label a[class*="icon-"]:hover {
-  color: #555;
 }
 
 .nameplate-label .nameplate-content,
 .nameplate-label .nameplate-field,
 .nameplate-label .nameplate-icon {
+  display: table-cell;
   vertical-align: middle;
-  width: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .nameplate-label .nameplate-content,
+  .nameplate-label .nameplate-field,
+  .nameplate-label .nameplate-icon {
+    width: auto;
+  }
 }
 
 .nameplate-label .nameplate-content {
+  height: auto;
   padding: 3px 5px 2px;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .nameplate-label .nameplate-content {
+    width: auto;
+  }
+}
+
+.nameplate-label .nameplate-label-text {
+  display: block;
+  font-weight: 500;
+  line-height: 32px;
+  max-width: 200px;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+  .nameplate-label .nameplate-label-text {
+    left: 5px;
+    max-width: none;
+    position: absolute;
+    right: 5px;
+    text-align: left;
+    top: 0;
+  }
+}
+
+.nameplate-label-next .nameplate-label-text {
+  text-align: center;
+}
+
+.nameplate-label-circle {
+  border-radius: 100px;
+}
+
+.nameplate-label-rounded {
+  border-radius: 3px;
+}
+
+.nameplate-label-square {
+  border-radius: 0;
+}
+
+.nameplate-label-default {
+  background-color: #f8f8f8;
+  color: #777;
+}
+
+.nameplate-label-default a {
+  color: #777;
+}
+
+.nameplate-label-default a:focus,
+.nameplate-label-default a:hover {
+  color: #777;
+}
+
+.nameplate-label-primary {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.nameplate-label-primary a {
+  color: #fff;
+}
+
+.nameplate-label-primary a:focus,
+.nameplate-label-primary a:hover {
+  color: #fff;
+}
+
+.nameplate-label-success {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.nameplate-label-success a {
+  color: #fff;
+}
+
+.nameplate-label-success a:focus,
+.nameplate-label-success a:hover {
+  color: #fff;
+}
+
+.nameplate-label-info {
+  background-color: #5bc0de;
+  color: #fff;
+}
+
+.nameplate-label-info a {
+  color: #fff;
+}
+
+.nameplate-label-info a:focus,
+.nameplate-label-info a:hover {
+  color: #fff;
+}
+
+.nameplate-label-warning {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.nameplate-label-warning a {
+  color: #fff;
+}
+
+.nameplate-label-warning a:focus,
+.nameplate-label-warning a:hover {
+  color: #fff;
+}
+
+.nameplate-label-danger {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.nameplate-label-danger a {
+  color: #fff;
+}
+
+.nameplate-label-danger a:focus,
+.nameplate-label-danger a:hover {
+  color: #fff;
 }
 
 .nameplate-list {
@@ -10291,14 +10436,14 @@ figcaption,
 }
 
 .nameplate-list > li,
-.nameplate-list > .nameplate-label, .nameplate-list > li, .nameplate-list > .nameplate {
+.nameplate-list > li, .nameplate-list > .nameplate {
   border-left-width: 0;
   margin: 0;
   padding: 0.8em;
 }
 
 .nameplate-list > li:hover,
-.nameplate-list > .nameplate-label:hover, .nameplate-list > li:hover, .nameplate-list > .nameplate:hover {
+.nameplate-list > li:hover, .nameplate-list > .nameplate:hover {
   background-color: #DDD;
 }
 
@@ -10360,9 +10505,8 @@ figcaption,
 }
 
 .profile-header .nameplate,
-.profile-header .nameplate-label,
 .profile-header .nameplate-list > li,
-.profile-header.nameplate, .profile-header.nameplate-label, .nameplate-list > li.profile-header {
+.profile-header.nameplate, .nameplate-list > li.profile-header {
   margin: 0;
 }
 

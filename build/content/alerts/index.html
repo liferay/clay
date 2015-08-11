@@ -102,8 +102,6 @@ collapse in
 </li>
 <li class=""><a href="../../content/navbar">Navbars</a>
 </li>
-<li class=""><a href="../../content/notifications">Notifications</a>
-</li>
 <li class=""><a href="../../content/page-header-and-jumbotron">Page Header and Jumbotron</a>
 </li>
 <li class=""><a href="../../content/pagers">Pager</a>
@@ -439,6 +437,69 @@ collapse
 
     &lt;strong class=&quot;lead&quot;&gt;Danger&lt;/strong&gt; Something is not right.
 &lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Alert Notification</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Alternate alert style for notifications</p>
+		</blockquote>
+
+		<div class="alert alert-dismissible alert-notification alert-danger" data-dismiss="alert" role="alert" style="float: left;margin-right: 5px;">
+			<button class="close" type="button">
+				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+			</button>
+
+			<strong class="lead">Danger:</strong>
+			<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a class="alert-link" href="#1">Log in</a></p>
+		</div>
+
+		<div class="alert alert-dismissible alert-notification alert-warning" data-dismiss="alert" role="alert" style="float: left;margin-right: 5px;">
+			<button class="close" type="button">
+				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+			</button>
+
+			<strong class="lead">Warning:</strong>
+			<p>Due to inactivity, your session will expire in 00:00:56. To extend your session another 2 minutes click: <a class="alert-link" href="#1">Extend</a>.</p>
+		</div>
+
+		<div class="alert alert-dismissible alert-notification alert-info" data-dismiss="alert" role="alert" style="float: left;margin-right: 5px;">
+			<button class="close" type="button">
+				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+			</button>
+
+			<strong class="lead">Meeting Rescheduled:</strong>
+			<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>
+			<p>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</p>
+		</div>
+
+		<div class="alert alert-dismissible alert-notification alert-success" data-dismiss="alert" role="alert" style="float: left;margin-right: 5px;">
+			<button class="close" type="button">
+				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+			</button>
+
+			<strong class="lead">Meeting Rescheduled:</strong>
+			<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>
+			<p>Please complete the attendance form to confirm your attendance: <a class="alert-link" href="#1">More Info</a>.</p>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse10"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse10">
+  <pre><code class="html">&lt;div class=&quot;alert alert-dismissible alert-notification alert-danger&quot; data-dismiss=&quot;alert&quot; role=&quot;alert&quot;&gt;
+        &lt;button class=&quot;close&quot; type=&quot;button&quot;&gt;
+            &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;
+        &lt;/button&gt;
+
+        &lt;strong class=&quot;lead&quot;&gt;Danger:&lt;/strong&gt;
+        &lt;p&gt;Your session has expired. Please &lt;a class=&quot;alert-link&quot; href=&quot;#1&quot;&gt;log in&lt;/a&gt;.&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
 </div>
 
 	</div>
