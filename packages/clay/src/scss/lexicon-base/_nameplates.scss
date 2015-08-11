@@ -1,20 +1,21 @@
 .nameplate {
-	@extend %equal-height-columns;
+	display: table;
+	width: 100%;
 }
 
 .nameplate-checkbox,
 .nameplate-icon,
 .nameplate-field {
-	@extend %equal-height-column-cell;
-
+	display: table-cell;
 	padding: 0 0.3em;
+	vertical-align: top;
 	width: 1%;
 }
 
 .nameplate-content {
-	@extend %equal-height-column-cell;
-
+	display: table-cell;
 	padding: 0 0.3em;
+	vertical-align: top;
 	word-break: break-word;
 
 	h1,
@@ -38,30 +39,23 @@
 // Nameplate Label
 
 .nameplate-label {
-	@extend .nameplate;
-
-	border-radius: 20px;
+	border-radius: 100px;
+	display: table;
 	float: left;
-	font-size: 11px;
 	margin: 0 5px 2px 0;
-	padding: 3px;
-	max-width: 200px;
+	min-width: 50px;
+	padding: 0 3px;
+
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		height: 32px;
+		margin-right: 0;
+	}
 
 	&.form-control {
+		border-width: 0;
+		box-shadow: none;
 		display: table;
 		height: $input-height-base;
-	}
-
-	&.nameplate-label-circle {
-		border-radius: 20px;
-	}
-
-	&.nameplate-label-rounded {
-		border-radius: 3px;
-	}
-
-	&.nameplate-label-square {
-		border-radius: 0;
 	}
 
 	a {
@@ -71,106 +65,83 @@
 	.nameplate-content,
 	.nameplate-field,
 	.nameplate-icon {
+		display: table-cell;
 		vertical-align: middle;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			width: auto;
+		}
 	}
 
 	.nameplate-content {
+		height: auto;
 		padding: 3px 5px 2px;
 		position: relative;
+
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			width: auto;
+		}
 	}
 
 	.nameplate-label-text {
-		line-height: 32px;
+		display: block;
+		font-weight: 500;
+		line-height: $nameplate-label-text-line-height;
+		max-width: 200px;
 		overflow: hidden;
-		position: absolute;
+		position: relative;
 		text-overflow: ellipsis;
-		top: 0;
 		white-space: nowrap;
-		width: 100%;
+
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			left: 5px;
+			max-width: none;
+			position: absolute;
+			right: 5px;
+			text-align: left;
+			top: 0;
+		}
 	}
+}
+
+.nameplate-label-next .nameplate-label-text {
+	text-align: center;
+}
+
+.nameplate-label-circle {
+	border-radius: 100px;
+}
+
+.nameplate-label-rounded {
+	border-radius: 3px;
+}
+
+.nameplate-label-square {
+	border-radius: 0;
 }
 
 .nameplate-label-default {
-	background-color: $gray-lighter;
-
-	a {
-		color: #999;
-
-		&:focus,
-		&:hover {
-			color: #555;
-		}
-	}
+	@include color-nameplate-label($nameplate-label-default-bg, $nameplate-label-default-link-color, $nameplate-label-default-link-hover-color);
 }
 
 .nameplate-label-primary {
-	background-color: $brand-primary;
-	color: #FFF;
-
-	a {
-		color: #FFF;
-
-		&:focus,
-		&:hover {
-			color: #FFF;
-		}
-	}
+	@include color-nameplate-label($nameplate-primary-default-bg, $nameplate-primary-default-link-color, $nameplate-primary-default-link-hover-color);
 }
 
 .nameplate-label-success {
-	background-color: $brand-success;
-	color: #FFF;
-
-	a {
-		color: #FFF;
-
-		&:focus,
-		&:hover {
-			color: #FFF;
-		}
-	}
+	@include color-nameplate-label($nameplate-success-default-bg, $nameplate-success-default-link-color, $nameplate-success-default-link-hover-color);
 }
 
 .nameplate-label-info {
-	background-color: $brand-info;
-	color: #FFF;
-
-	a {
-		color: #FFF;
-
-		&:focus,
-		&:hover {
-			color: #FFF;
-		}
-	}
+	@include color-nameplate-label($nameplate-info-default-bg, $nameplate-info-default-link-color, $nameplate-info-default-link-hover-color);
 }
 
 .nameplate-label-warning {
-	background-color: $brand-warning;
-	color: #FFF;
-
-	a {
-		color: #FFF;
-
-		&:focus,
-		&:hover {
-			color: #FFF;
-		}
-	}
+	@include color-nameplate-label($nameplate-warning-default-bg, $nameplate-warning-default-link-color, $nameplate-warning-default-link-hover-color);
 }
 
 .nameplate-label-danger {
-	background-color: $brand-danger;
-	color: #FFF;
-
-	a {
-		color: #FFF;
-
-		&:focus,
-		&:hover {
-			color: #FFF;
-		}
-	}
+	@include color-nameplate-label($nameplate-danger-default-bg, $nameplate-danger-default-link-color, $nameplate-danger-default-link-hover-color);
 }
 
 // Nameplate List
