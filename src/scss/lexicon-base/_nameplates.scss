@@ -125,23 +125,23 @@
 }
 
 .nameplate-label-primary {
-	@include color-nameplate-label($nameplate-primary-default-bg, $nameplate-primary-default-link-color, $nameplate-primary-default-link-hover-color);
+	@include color-nameplate-label($nameplate-label-primary-bg, $nameplate-label-primary-link-color, $nameplate-label-primary-link-hover-color);
 }
 
 .nameplate-label-success {
-	@include color-nameplate-label($nameplate-success-default-bg, $nameplate-success-default-link-color, $nameplate-success-default-link-hover-color);
+	@include color-nameplate-label($nameplate-label-success-bg, $nameplate-label-success-link-color, $nameplate-label-success-link-hover-color);
 }
 
 .nameplate-label-info {
-	@include color-nameplate-label($nameplate-info-default-bg, $nameplate-info-default-link-color, $nameplate-info-default-link-hover-color);
+	@include color-nameplate-label($nameplate-label-info-bg, $nameplate-label-info-link-color, $nameplate-label-info-link-hover-color);
 }
 
 .nameplate-label-warning {
-	@include color-nameplate-label($nameplate-warning-default-bg, $nameplate-warning-default-link-color, $nameplate-warning-default-link-hover-color);
+	@include color-nameplate-label($nameplate-label-warning-bg, $nameplate-label-warning-link-color, $nameplate-label-warning-link-hover-color);
 }
 
 .nameplate-label-danger {
-	@include color-nameplate-label($nameplate-danger-default-bg, $nameplate-danger-default-link-color, $nameplate-danger-default-link-hover-color);
+	@include color-nameplate-label($nameplate-label-danger-bg, $nameplate-label-danger-link-color, $nameplate-label-danger-link-hover-color);
 }
 
 // Nameplate List
