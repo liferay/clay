@@ -8055,20 +8055,6 @@ button.close {
  * @param $width - width
  * @param $height - height
  */
-.card-row [class*="card-col"], .equal-height-column-cell {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.equal-height-column-row {
-  display: table-row;
-}
-
-.card-row, .equal-height-columns {
-  display: table;
-  width: 100%;
-}
-
 /**
  * Indents each nested navigation by $indent (15px default)
  * @param $indent - amount to indent in pixels
@@ -8453,8 +8439,10 @@ button.close {
 }
 
 .card-row {
+  display: table;
   height: 100%;
   overflow: hidden;
+  width: 100%;
 }
 
 .card-row.card-row-padded .card-col-gutters:first-child {
@@ -8480,6 +8468,7 @@ button.close {
 }
 
 .card-row [class*="card-col"] {
+  display: table-cell;
   overflow: hidden;
   position: relative;
   vertical-align: middle;
@@ -8942,18 +8931,6 @@ button.close {
   white-space: nowrap;
 }
 
-@media screen and (max-width: 767px) {
-  .dropdown-full.open:after,
-  .dropdown-wide.open:after {
-    clear: both;
-    content: "";
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-  }
-}
-
 .dropdown-full .dropdown-menu,
 .dropdown-wide .dropdown-menu {
   padding: 5px 0;
@@ -9012,6 +8989,7 @@ button.close {
 }
 
 .equal-height-column-cell {
+  display: table-cell;
   vertical-align: middle;
 }
 
@@ -9020,8 +8998,14 @@ button.close {
   padding-right: 0;
 }
 
+.equal-height-column-row {
+  display: table-row;
+}
+
 .equal-height-columns {
+  display: table;
   height: 100%;
+  width: 100%;
 }
 
 .has-error .validation-message {
@@ -10214,8 +10198,7 @@ figcaption,
   width: 100px;
 }
 
-.nameplate, .nameplate-list > li,
-.nameplate-list > .nameplate {
+.nameplate {
   display: table;
   width: 100%;
 }
@@ -10274,6 +10257,7 @@ figcaption,
   box-shadow: none;
   display: table;
   height: 34px;
+  width: auto;
 }
 
 .nameplate-label a {
@@ -10427,95 +10411,6 @@ figcaption,
 .nameplate-label-danger a:focus,
 .nameplate-label-danger a:hover {
   color: #fff;
-}
-
-.nameplate-list {
-  list-style: none;
-  margin: 0 0 10px 0;
-  padding: 0;
-}
-
-.nameplate-list > li,
-.nameplate-list > li, .nameplate-list > .nameplate {
-  border-left-width: 0;
-  margin: 0;
-  padding: 0.8em;
-}
-
-.nameplate-list > li:hover,
-.nameplate-list > li:hover, .nameplate-list > .nameplate:hover {
-  background-color: #DDD;
-}
-
-.nameplate-list .nameplate-content,
-.nameplate-list .nameplate-icon,
-.nameplate-list .nameplate-field {
-  padding: 0 0.3em;
-  vertical-align: middle;
-}
-
-.nameplate-list .nameplate-field .icon-remove {
-  background-color: #DDD;
-  text-align: center;
-  border-radius: 50%;
-  display: block;
-  line-height: 19px;
-  padding: 0 3px 0 4px;
-  text-decoration: none;
-}
-
-.nameplate-list-heading {
-  background-color: #F8F8F8;
-}
-
-.nameplate-list-heading > a,
-.nameplate-list-heading > span {
-  color: #333333;
-  display: inline-block;
-  padding: 1.1em;
-}
-
-.nameplate-list-heading > a:focus,
-.nameplate-list-heading > a:hover,
-.nameplate-list-heading > span:focus,
-.nameplate-list-heading > span:hover {
-  text-decoration: none;
-}
-
-.nameplate-list-heading > a {
-  display: block;
-}
-
-.nameplate-list-heading + .collapse .nameplate-list,
-.nameplate-list-heading + .collapsing .nameplate-list,
-.nameplate-list-heading + .nameplate-list {
-  margin-bottom: 0;
-}
-
-.nameplate-list-bordered.nameplate-list-heading,
-.nameplate-list-bordered .nameplate-list-heading,
-.nameplate-list-bordered .nameplate-list > li,
-.nameplate-list-bordered > li {
-  border: 1px solid #DDD;
-  margin-top: -1px;
-}
-
-.profile-header {
-  max-width: 300px;
-}
-
-.profile-header .nameplate,
-.profile-header .nameplate-list > li,
-.profile-header.nameplate, .nameplate-list > li.profile-header {
-  margin: 0;
-}
-
-.profile-header .nameplate-content {
-  padding: 10px;
-}
-
-.profile-header .nameplate-field {
-  padding: 10px;
 }
 
 .nav > li > .collapse-icon {
@@ -11867,7 +11762,7 @@ figcaption,
   left: 0;
   position: fixed;
   top: 0;
-  z-index: 1070;
+  z-index: 1035;
 }
 
 .sidenav-container {
@@ -11891,13 +11786,13 @@ figcaption,
   .sidenav-content {
     position: static;
   }
+  .sidenav-content:before,
+  .sidenav-content:after {
+    content: " ";
+    display: table;
+  }
   .sidenav-content:after {
     clear: both;
-    content: "";
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
   }
 }
 

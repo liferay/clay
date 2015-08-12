@@ -204,8 +204,6 @@ collapse
 </li>
 <li class=""><a href="../../content/extending-list-groups">Extending List Groups</a>
 </li>
-<li class=""><a href="../../content/extending-nameplates">Extending Nameplates</a>
-</li>
 <li class=""><a href="../../content/extending-tab-groups">Extending Tab Groups</a>
 </li>
 <li class=""><a href="../../content/extending-toggles">Extending Toggles</a>
@@ -421,6 +419,56 @@ collapse
 				<a class="nameplate-label-text" href="#1">...</a>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Add <code>.form-control</code> to <code>.nameplate-label</code> to size nameplate-labels to bootstrap's form elements.</p>
+		</blockquote>
+
+		<div class="form-control nameplate-label nameplate-label-default">
+			<div class="nameplate-icon">
+				<div class="user-icon user-icon-primary user-icon-sm">JB</div>
+			</div>
+			<div class="nameplate-content">
+				<span class="nameplate-label-text">Joe Bloggs</span>
+			</div>
+			<div class="nameplate-field"><a class="icon-remove icon-monospaced" href="#1"></a></div>
+		</div>
+
+		<div class="form-control nameplate-label nameplate-label-default">
+			<div class="nameplate-icon">
+				<div class="user-icon user-icon-warning user-icon-sm">SP</div>
+			</div>
+			<div class="nameplate-content">
+				<span class="nameplate-label-text">Space Program</span>
+			</div>
+			<div class="nameplate-field"><a class="icon-remove icon-monospaced" href="#1"></a></div>
+		</div>
+
+		<form class="form-inline">
+			<div class="form-group">
+				<input class="form-control" type="text" />
+			</div>
+		</form>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+	<pre><code class="html">&lt;div class=&quot;nameplate-label nameplate-label-default&quot;&gt;
+    &lt;div class=&quot;nameplate-icon&quot;&gt;
+        &lt;div class=&quot;user-icon user-icon-primary user-icon-sm&quot;&gt;JB&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;nameplate-content&quot;&gt;Joe Bloggs &lt;a class=&quot;icon-remove&quot; href=&quot;#1&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;form&gt;&lt;input type=&quot;text&quot; /&gt;&lt;/form&gt;</code></pre>
+</div>
+
 	</div>
 </div>
 	</div>
