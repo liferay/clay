@@ -277,6 +277,7 @@
 .sidebar-default {
 	background-color: $sidebar-default-bg;
 	border-left: 1px solid $sidebar-default-border;
+	color: $sidebar-default-color;
 
 	.sidebar-panel {
 		background-color: $sidebar-default-panel-bg;
@@ -287,16 +288,20 @@
 	background-color: $sidebar-inverse-bg;
 	color: $sidebar-inverse-color;
 
-	.sidebar-footer,
-	.sidebar-header {
-		a {
-			color: $sidebar-inverse-link-color;
+	a {
+		color: $sidebar-inverse-link-color;
 
-			&:focus,
-			&:hover {
-				color: $sidebar-inverse-link-hover-color;
-				text-decoration: none;
-			}
+		&:focus,
+		&:hover {
+			color: $sidebar-inverse-link-hover-color;
+			text-decoration: none;
+		}
+	}
+
+	.nav > li > a {
+		&:focus,
+		&:hover {
+			color: $sidebar-inverse-link-color;
 		}
 	}
 
