@@ -9386,10 +9386,25 @@ figcaption,
 }
 
 .list-group-heading {
-  background-color: #f8f8f8;
   font-weight: 500;
   overflow: hidden;
   word-wrap: break-word;
+}
+
+a.list-group-heading,
+button.list-group-heading,
+.list-group-heading[data-toggle="collapse"] {
+  color: #555;
+}
+
+a.list-group-heading:focus,
+a.list-group-heading:hover,
+button.list-group-heading:focus,
+button.list-group-heading:hover,
+.list-group-heading[data-toggle="collapse"]:focus,
+.list-group-heading[data-toggle="collapse"]:hover {
+  background-color: #f5f5f5;
+  color: #555;
 }
 
 .list-group-heading.collapse-icon:before {
@@ -9902,7 +9917,7 @@ figcaption,
 
 @media screen and (min-width: 768px) {
   .modal-full-screen .modal-body {
-    bottom: 65px;
+    bottom: 64.0px;
     top: 65px;
   }
 }
@@ -10046,8 +10061,19 @@ figcaption,
   }
 }
 
+.modal-inverse a,
+.modal-inverse .btn-link,
 .modal-inverse .close {
   color: #9d9d9d;
+}
+
+@media screen and (max-width: 767px) {
+  .modal-inverse .modal-btn-icon:before {
+    color: #9d9d9d;
+  }
+}
+
+.modal-inverse .close {
   text-shadow: 0 1px 0 #090909;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -10733,6 +10759,7 @@ figcaption,
 .basic-search-slider .basic-search-close {
   background-color: transparent;
   border-color: transparent;
+  color: #337ab7;
   left: 0;
   position: absolute;
   z-index: 4;
@@ -10745,7 +10772,7 @@ figcaption,
 .basic-search-slider .basic-search-close:focus {
   background-color: transparent;
   border-color: transparent;
-  color: #337ab7;
+  color: #23527c;
   outline: none;
 }
 
@@ -11712,6 +11739,7 @@ figcaption,
 .sidebar-default {
   background-color: #f8f8f8;
   border-left: 1px solid #e7e7e7;
+  color: #777;
 }
 
 .sidebar-default .sidebar-panel {
@@ -11723,17 +11751,19 @@ figcaption,
   color: #9d9d9d;
 }
 
-.sidebar-inverse .sidebar-footer a,
-.sidebar-inverse .sidebar-header a {
+.sidebar-inverse a {
   color: #9d9d9d;
 }
 
-.sidebar-inverse .sidebar-footer a:focus,
-.sidebar-inverse .sidebar-footer a:hover,
-.sidebar-inverse .sidebar-header a:focus,
-.sidebar-inverse .sidebar-header a:hover {
+.sidebar-inverse a:focus,
+.sidebar-inverse a:hover {
   color: #fff;
   text-decoration: none;
+}
+
+.sidebar-inverse .nav > li > a:focus,
+.sidebar-inverse .nav > li > a:hover {
+  color: #9d9d9d;
 }
 
 .sidebar-inverse .sidebar-panel {
@@ -12496,8 +12526,8 @@ input.toggle-card:empty ~ .toggle-card-container .toggle-card-icon [class*="icon
 
 input.toggle-card:checked ~ .toggle-card-container {
   background-color: #fff;
-  border: 1px solid #66afe9;
-  color: #66afe9;
+  border: 1px solid #337ab7;
+  color: #337ab7;
   padding-bottom: 4px;
   padding-left: 4px;
   padding-right: 4px;
@@ -12514,7 +12544,7 @@ input.toggle-card:checked ~ .toggle-card-container .toggle-card-on {
 
 input.toggle-card:checked ~ .toggle-card-container .toggle-card-icon {
   background-color: transparent;
-  border: 0 solid #66afe9;
+  border: 0 solid #337ab7;
 }
 
 input.toggle-card:checked ~ .toggle-card-container .toggle-card-icon [class*="icon-"] {
@@ -12596,8 +12626,8 @@ input.toggle-switch:empty ~ .toggle-switch-bar:before {
 }
 
 input.toggle-switch:checked ~ .toggle-switch-bar:before {
-  background-color: #66afe9;
-  border: 1px solid #66afe9;
+  background-color: #337ab7;
+  border: 1px solid #337ab7;
 }
 
 input.toggle-switch:empty ~ .toggle-switch-bar:after {
@@ -12607,7 +12637,7 @@ input.toggle-switch:empty ~ .toggle-switch-bar:after {
 
 input.toggle-switch:checked ~ .toggle-switch-bar:after {
   background-color: #FFF;
-  border: 1px solid #66afe9;
+  border: 1px solid #337ab7;
 }
 
 input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon {
@@ -12623,7 +12653,7 @@ input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon.button-icon {
 }
 
 input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon.button-icon {
-  color: #66afe9;
+  color: #337ab7;
 }
 
 input.toggle-switch:empty ~ .toggle-switch-bar {
