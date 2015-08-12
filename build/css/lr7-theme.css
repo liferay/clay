@@ -11452,10 +11452,25 @@ figcaption,
 }
 
 .list-group-heading {
-  background-color: #F5F8FA;
   font-weight: 500;
   overflow: hidden;
   word-wrap: break-word;
+}
+
+a.list-group-heading,
+button.list-group-heading,
+.list-group-heading[data-toggle="collapse"] {
+  color: #869CAD;
+}
+
+a.list-group-heading:focus,
+a.list-group-heading:hover,
+button.list-group-heading:focus,
+button.list-group-heading:hover,
+.list-group-heading[data-toggle="collapse"]:focus,
+.list-group-heading[data-toggle="collapse"]:hover {
+  background-color: #f5f5f5;
+  color: #869CAD;
 }
 
 .list-group-heading.collapse-icon:before {
@@ -11968,7 +11983,7 @@ figcaption,
 
 @media screen and (min-width: 768px) {
   .modal-full-screen .modal-body {
-    bottom: 65px;
+    bottom: 72.0004px;
     top: 65px;
   }
 }
@@ -12112,8 +12127,19 @@ figcaption,
   }
 }
 
+.modal-inverse a,
+.modal-inverse .btn-link,
 .modal-inverse .close {
-  color: #869CAD;
+  color: #65B6F0;
+}
+
+@media screen and (max-width: 767px) {
+  .modal-inverse .modal-btn-icon:before {
+    color: #FFF;
+  }
+}
+
+.modal-inverse .close {
   text-shadow: 0 1px 0 #E4E6E8;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -12799,6 +12825,7 @@ figcaption,
 .basic-search-slider .basic-search-close {
   background-color: transparent;
   border-color: transparent;
+  color: #65B6F0;
   left: 0;
   position: absolute;
   z-index: 4;
@@ -12811,7 +12838,7 @@ figcaption,
 .basic-search-slider .basic-search-close:focus {
   background-color: transparent;
   border-color: transparent;
-  color: #65B6F0;
+  color: #40a4ec;
   outline: none;
 }
 
@@ -13778,6 +13805,7 @@ figcaption,
 .sidebar-default {
   background-color: #F5F8FA;
   border-left: 1px solid #DFE0E3;
+  color: #869CAD;
 }
 
 .sidebar-default .sidebar-panel {
@@ -13789,17 +13817,19 @@ figcaption,
   color: #869CAD;
 }
 
-.sidebar-inverse .sidebar-footer a,
-.sidebar-inverse .sidebar-header a {
+.sidebar-inverse a {
   color: #FFF;
 }
 
-.sidebar-inverse .sidebar-footer a:focus,
-.sidebar-inverse .sidebar-footer a:hover,
-.sidebar-inverse .sidebar-header a:focus,
-.sidebar-inverse .sidebar-header a:hover {
+.sidebar-inverse a:focus,
+.sidebar-inverse a:hover {
   color: #FFF;
   text-decoration: none;
+}
+
+.sidebar-inverse .nav > li > a:focus,
+.sidebar-inverse .nav > li > a:hover {
+  color: #FFF;
 }
 
 .sidebar-inverse .sidebar-panel {
@@ -17517,7 +17547,6 @@ h6.modal-title {
 @media screen and (min-width: 768px) {
   .modal-full-screen .modal-body {
     background-color: #F5F8F8;
-    bottom: 73px;
     top: 61px;
   }
 }
