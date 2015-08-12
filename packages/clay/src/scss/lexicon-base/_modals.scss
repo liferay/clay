@@ -75,7 +75,7 @@
 		top: 51px;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			bottom: 65px;
+			bottom: $modal-footer-height;
 			top: 65px;
 		}
 	}
