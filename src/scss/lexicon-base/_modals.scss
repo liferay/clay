@@ -209,8 +209,19 @@
 }
 
 .modal-inverse {
+	a,
+	.btn-link,
 	.close {
-		color: $modal-inverse-header-close-color;
+		color: $modal-inverse-link-color;
+	}
+
+	.modal-btn-icon:before {
+		@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
+			color: $modal-inverse-btn-icon-color;
+		}
+	}
+
+	.close {
 		text-shadow: 0 1px 0 $modal-inverse-header-border-color;
 
 		@include opacity(0.5);
