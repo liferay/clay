@@ -1,8 +1,13 @@
 // Structure
 
-$modal-inner-padding:                            16px 24px !default;
+$modal-inner-padding-horizontal: 24px !default; // Atlas
+$modal-inner-padding-vertical: 16px !default; // Atlas
+$modal-inner-padding:                            $modal-inner-padding-vertical $modal-inner-padding-horizontal !default;
 $modal-title-padding:                            12px !default;
 $modal-title-line-height:                        36px !default;
+
+$btn-text-height: $line-height-base * $font-size-base !default;
+$modal-footer-height: $btn-border-width + $btn-border-width + ($btn-padding-vertical * 2) + $modal-inner-padding-vertical + $modal-inner-padding-vertical + $btn-text-height !default;
 
 // Skin
 

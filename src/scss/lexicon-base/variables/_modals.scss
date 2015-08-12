@@ -1,3 +1,6 @@
+$btn-text-height: $line-height-base * $font-size-base !default;
+$modal-footer-height: 2 + ($padding-base-vertical * 2) + $modal-inner-padding + $modal-inner-padding + $btn-text-height !default;
+
 $modal-body-bg: transparent !default;
 $modal-body-color: $text-color !default;
 
