@@ -19,6 +19,16 @@
 	padding: 24px;
 }
 
+.sidebar-footer,
+.sidebar-header {
+	a {
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
 .sidebar-footer {
 	padding: 24px;
 }
@@ -30,6 +40,10 @@
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0;
 	}
+}
+
+.sidebar-header-actions {
+	float: right;
 }
 
 .sidebar-panel {
@@ -288,15 +302,15 @@
 	background-color: $sidebar-inverse-bg;
 	color: $sidebar-inverse-color;
 
-	a {
-		color: $sidebar-inverse-link-color;
+	// a {
+	// 	color: $sidebar-inverse-link-color;
 
-		&:focus,
-		&:hover {
-			color: $sidebar-inverse-link-hover-color;
-			text-decoration: none;
-		}
-	}
+	// 	&:focus,
+	// 	&:hover {
+	// 		color: $sidebar-inverse-link-hover-color;
+	// 		text-decoration: none;
+	// 	}
+	// }
 
 	.nav > li > a {
 		&:focus,
