@@ -1,17 +1,16 @@
 .equal-height-column-cell {
-	@extend %equal-height-column-cell;
-
+	display: table-cell;
 	vertical-align: middle;
 
 	@include make-eqh-grid-columns();
 }
 
 .equal-height-column-row {
-	@extend %equal-height-column-row;
+	display: table-row;
 }
 
 .equal-height-columns {
-	@extend %equal-height-columns;
-
+	display: table;
 	height: 100%;
+	width: 100%;
 }

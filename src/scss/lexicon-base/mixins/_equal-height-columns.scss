@@ -8,17 +8,3 @@
 		padding-right: 0;
 	}
 }
-
-%equal-height-column-cell {
-	display: table-cell;
-	vertical-align: top;
-}
-
-%equal-height-column-row {
-	display: table-row;
-}
-
-%equal-height-columns {
-	display: table;
-	width: 100%;
-}

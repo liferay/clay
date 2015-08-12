@@ -109,10 +109,10 @@
 }
 
 .card-row {
-	@extend %equal-height-columns;
-
+	display: table;
 	height: 100%;
 	overflow: hidden;
+	width: 100%;
 
 	&.card-row-padded .card-col-gutters {
 		&:first-child {
@@ -139,8 +139,7 @@
 	}
 
 	[class*="card-col"] {
-		@extend %equal-height-column-cell;
-
+		display: table-cell;
 		overflow: hidden;
 		position: relative;
 		vertical-align: middle;
