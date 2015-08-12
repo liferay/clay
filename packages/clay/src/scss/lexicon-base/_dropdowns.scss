@@ -231,12 +231,6 @@
 
 .dropdown-full,
 .dropdown-wide {
-	&.open {
-		@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
-			@include clearfix-hack();
-		}
-	}
-
 	.dropdown-menu {
 		padding: 5px 0;
 		width: 100%;

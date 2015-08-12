@@ -44,7 +44,7 @@
 	position: relative;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		@include clearfix-hack();
+		@include clearfix;
 
 		position: static;
 	}
