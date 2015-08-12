@@ -63,6 +63,7 @@
 	.basic-search-close {
 		background-color: transparent;
 		border-color: transparent;
+		color: $link-color;
 		left: 0;
 		position: absolute;
 		z-index: 4;
@@ -74,7 +75,7 @@
 		&:focus {
 			background-color: transparent;
 			border-color: transparent;
-			color: $brand-primary;
+			color: $link-hover-color;
 			outline: none;
 		}
 
