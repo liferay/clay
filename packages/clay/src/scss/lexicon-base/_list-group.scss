@@ -1,10 +1,21 @@
 .list-group-heading {
 	@extend .list-group-item;
 
-	background-color: $list-group-header-bg;
 	font-weight: $list-group-header-font-weight;
 	overflow: hidden;
 	word-wrap: break-word;
+}
+
+a.list-group-heading,
+button.list-group-heading,
+.list-group-heading[data-toggle="collapse"] {
+	color: $list-group-link-color;
+
+	&:focus,
+	&:hover {
+		background-color: $list-group-hover-bg;
+		color: $list-group-link-hover-color;
+	}
 }
 
 .list-group-heading.collapse-icon {
