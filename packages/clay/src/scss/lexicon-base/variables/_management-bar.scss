@@ -1,6 +1,21 @@
+$management-bar-height: $navbar-height !default;
+
 $management-bar-padding-horizontal: $navbar-padding-horizontal !default;
 $management-bar-padding-vertical: $navbar-padding-vertical !default;
+
+$management-bar-btn-padding-horizontal: $management-bar-padding-horizontal !default;
+$management-bar-btn-padding-vertical: ($management-bar-height - $icon-monospaced-size - 2) / 2 !default;
 
 $management-bar-collapse-bg: $dropdown-bg !default;
 
 $management-bar-default-bg: $navbar-default-bg !default;
+$management-bar-default-border: $navbar-default-border !default;
+$management-bar-default-color: $navbar-default-color !default;
+
+$management-bar-default-link-color: $navbar-default-link-color !default;
+$management-bar-default-link-hover-color: $navbar-default-link-hover-color !default;
+$management-bar-default-link-hover-bg: $navbar-default-link-hover-bg !default;
+$management-bar-default-link-active-color: $navbar-default-link-active-color !default;
+$management-bar-default-link-active-bg: $navbar-default-link-active-bg !default;
+$management-bar-default-link-disabled-color: $navbar-default-link-disabled-color !default;
+$management-bar-default-link-disabled-bg: $navbar-default-link-disabled-bg !default;
