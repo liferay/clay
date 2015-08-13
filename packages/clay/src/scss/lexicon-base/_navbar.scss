@@ -8,12 +8,7 @@
 	}
 
 	&.open {
-		background-color: $navbar-default-bg;
 		z-index: 10;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			background-color: transparent;
-		}
 	}
 
 	&.basic-search-transition,
@@ -162,8 +157,6 @@
 .navbar {
 	.navbar-collapse:first-child,
 	.navbar-collapse-absolute {
-		background-color: #FFF;
-		border: 1px solid #DDD;
 		left: -1px;
 		position: absolute;
 		right: -1px;
@@ -218,6 +211,7 @@
 }
 
 //navbar toggle
+
 .navbar-toggle,
 .navbar-toggle-left {
 	margin: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
@@ -340,5 +334,49 @@
 				margin-right: 0;
 			}
 		}
+	}
+}
+
+// Skin
+
+.navbar-default {
+	.basic-search.open {
+		background-color: $navbar-default-bg;
+	}
+
+	.navbar-collapse:first-child,
+	.navbar-collapse-absolute {
+		background-color: $navbar-default-bg;
+		border: 1px solid $navbar-default-border;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			border-width: 0;
+		}
+	}
+
+	.navbar-toggle,
+	.navbar-toggle-left {
+		color: $navbar-default-link-active-color;
+	}
+}
+
+.navbar-inverse {
+	.basic-search.open {
+		background-color: $navbar-inverse-bg;
+	}
+
+	.navbar-collapse:first-child,
+	.navbar-collapse-absolute {
+		background-color: $navbar-inverse-bg;
+		border: 1px solid $navbar-inverse-border;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			border-width: 0;
+		}
+	}
+
+	.navbar-toggle,
+	.navbar-toggle-left {
+		color: $navbar-inverse-link-active-color;
 	}
 }
