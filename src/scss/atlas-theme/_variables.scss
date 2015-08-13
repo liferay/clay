@@ -11,7 +11,6 @@
 @import "variables/forms";
 @import "variables/labels";
 @import "variables/list-group";
-@import "variables/management-bar";
 @import "variables/modals";
 @import "variables/multi-step-progress-bar";
 @import "variables/nameplates";
@@ -19,6 +18,7 @@
 @import "variables/nav-pills";
 @import "variables/nav-tabs";
 @import "variables/navbar";
+@import "variables/management-bar"; // management-bar inherits from navbar
 @import "variables/pagination";
 @import "variables/pager"; // pager references variables in pagination
 @import "variables/panels";

@@ -6,11 +6,13 @@
 	label {
 		margin-bottom: 0;
 	}
+}
 
-	.btn {
-		margin: 3px;
-		padding: 5px 9px;
-	}
+.management-bar .management-bar-nav > li > .btn,
+.management-bar-header > .btn,
+.management-bar-header-right > .btn {
+	margin: $management-bar-btn-padding-vertical 0 $management-bar-btn-padding-vertical $management-bar-btn-padding-horizontal;
+	padding: 0;
 }
 
 .management-bar-right {
@@ -131,11 +133,6 @@
 			padding-bottom: $management-bar-padding-vertical;
 			padding-top: $management-bar-padding-vertical;
 		}
-
-		> .btn {
-			margin: 3px;
-			padding: 5px 9px;
-		}
 	}
 }
 
@@ -158,8 +155,56 @@
 
 .management-bar-default {
 	background-color: $management-bar-default-bg;
+	color: $management-bar-default-color;
 
 	.management-bar-collapse {
 		background-color: $management-bar-default-bg;
+	}
+
+	.management-bar-nav > li > .btn,
+	.management-bar-header > .btn,
+	.management-bar-header-right > .btn {
+		box-shadow: none;
+
+		&:focus {
+			background-color: $management-bar-default-link-active-bg;
+			color: $management-bar-default-link-active-color;
+		}
+	}
+
+	.management-bar-header,
+	.management-bar-header-right {
+		a {
+			color: $management-bar-default-link-color;
+
+			&:focus,
+			&:hover {
+				background-color: $management-bar-default-link-hover-bg;
+				color: $management-bar-default-link-hover-color;
+			}
+		}
+	}
+
+	.nav {
+		> li > a {
+			color: $management-bar-default-link-color;
+
+			&:hover {
+				background-color: $management-bar-default-link-hover-bg;
+				color: $management-bar-default-link-hover-color;
+			}
+
+			&:focus {
+				background-color: $management-bar-default-link-active-bg;
+				color: $management-bar-default-link-active-color;
+			}
+		}
+
+		.open > a {
+			&,
+			&:focus {
+				background-color: $management-bar-default-link-active-bg;
+			}
+		}
 	}
 }
