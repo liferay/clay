@@ -8313,7 +8313,7 @@ button.close {
 
 .card,
 .card-horizontal {
-  border: 0 solid #E3E6E8;
+  border: 0 solid #777777;
   border-radius: 0;
   margin-bottom: 20px;
   position: relative;
@@ -8336,7 +8336,7 @@ button.close {
 
 .card .divider,
 .card-horizontal .divider {
-  background-color: #E3E6E8;
+  background-color: #777777;
   border-width: 0;
   height: 1px;
 }
@@ -9729,9 +9729,11 @@ button.list-group-heading:hover,
   margin-bottom: 0;
 }
 
-.management-bar .btn {
-  margin: 3px;
-  padding: 5px 9px;
+.management-bar .management-bar-nav > li > .btn,
+.management-bar-header > .btn,
+.management-bar-header-right > .btn {
+  margin: 13px 0 13px 12px;
+  padding: 0;
 }
 
 .management-bar-right {
@@ -9834,11 +9836,6 @@ button.list-group-heading:hover,
   padding-top: 12px;
 }
 
-.management-bar-no-collapse .management-bar-nav > li > .btn {
-  margin: 3px;
-  padding: 5px 9px;
-}
-
 .management-bar-nav > li > .checkbox-default,
 .management-bar-nav > li .management-bar-text {
   padding: 12px 12px;
@@ -9850,10 +9847,56 @@ button.list-group-heading:hover,
 
 .management-bar-default {
   background-color: #F5F8FA;
+  color: #869CAD;
 }
 
 .management-bar-default .management-bar-collapse {
   background-color: #F5F8FA;
+}
+
+.management-bar-default .management-bar-nav > li > .btn,
+.management-bar-default .management-bar-header > .btn,
+.management-bar-default .management-bar-header-right > .btn {
+  box-shadow: none;
+}
+
+.management-bar-default .management-bar-nav > li > .btn:focus,
+.management-bar-default .management-bar-header > .btn:focus,
+.management-bar-default .management-bar-header-right > .btn:focus {
+  background-color: transparent;
+  color: #869CAD;
+}
+
+.management-bar-default .management-bar-header a,
+.management-bar-default .management-bar-header-right a {
+  color: #869CAD;
+}
+
+.management-bar-default .management-bar-header a:focus,
+.management-bar-default .management-bar-header a:hover,
+.management-bar-default .management-bar-header-right a:focus,
+.management-bar-default .management-bar-header-right a:hover {
+  background-color: transparent;
+  color: #869CAD;
+}
+
+.management-bar-default .nav > li > a {
+  color: #869CAD;
+}
+
+.management-bar-default .nav > li > a:hover {
+  background-color: transparent;
+  color: #869CAD;
+}
+
+.management-bar-default .nav > li > a:focus {
+  background-color: transparent;
+  color: #869CAD;
+}
+
+.management-bar-default .nav .open > a,
+.management-bar-default .nav .open > a:focus {
+  background-color: transparent;
 }
 
 .modal-body {
@@ -10717,14 +10760,7 @@ button.list-group-heading:hover,
 }
 
 .basic-search.open {
-  background-color: #FCFEFF;
   z-index: 10;
-}
-
-@media screen and (min-width: 768px) {
-  .basic-search.open {
-    background-color: transparent;
-  }
 }
 
 .basic-search.basic-search-transition button[type='submit'].btn,
@@ -10845,8 +10881,26 @@ button.list-group-heading:hover,
   }
 }
 
+@media screen and (min-width: 768px) {
+  .collapse-basic-search .basic-search.open .basic-search-close {
+    display: none;
+  }
+}
+
 .collapse-basic-search .basic-search .input-group-input {
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .collapse-basic-search .basic-search .input-group-input {
+    overflow: visible;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .collapse-basic-search .basic-search .input-group-input .form-control {
+    left: auto;
+  }
 }
 
 .collapse-basic-search .basic-search .form-control {
@@ -10863,6 +10917,12 @@ button.list-group-heading:hover,
   float: none;
 }
 
+@media screen and (min-width: 768px) {
+  .collapse-basic-search .navbar-nav:first-child, .collapse-basic-search .management-bar-nav:first-child {
+    float: left;
+  }
+}
+
 .collapse-basic-search .navbar-nav > li > a,
 .collapse-basic-search .management-bar-nav > li > a,
 .collapse-basic-search .navbar-toggle, .collapse-basic-search .management-bar-toggle {
@@ -10876,8 +10936,6 @@ button.list-group-heading:hover,
 .navbar .management-bar-collapse:first-child,
 .management-bar .management-bar-collapse:first-child,
 .navbar .navbar-collapse-absolute, .management-bar .navbar-collapse-absolute {
-  background-color: #FFF;
-  border: 1px solid #DDD;
   left: -1px;
   position: absolute;
   right: -1px;
@@ -10885,9 +10943,80 @@ button.list-group-heading:hover,
   z-index: 1000;
 }
 
+@media screen and (min-width: 768px) {
+  .navbar .navbar-collapse, .management-bar .navbar-collapse, .navbar .management-bar-collapse, .management-bar .management-bar-collapse {
+    background-color: transparent;
+    border-width: 0;
+    float: none;
+    left: auto;
+    position: static;
+    right: auto;
+    top: auto;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar .navbar-collapse:first-child, .management-bar .navbar-collapse:first-child, .navbar .management-bar-collapse:first-child, .management-bar .management-bar-collapse:first-child {
+    background-color: transparent;
+    border-width: 0;
+    float: left;
+    left: auto;
+    position: static;
+    right: auto;
+    top: auto;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar .navbar-collapse + .navbar-header, .management-bar .navbar-collapse + .navbar-header, .navbar .management-bar-collapse + .navbar-header, .management-bar .management-bar-collapse + .navbar-header, .navbar .navbar-collapse + .management-bar-header, .management-bar .navbar-collapse + .management-bar-header, .navbar .management-bar-collapse + .management-bar-header, .management-bar .management-bar-collapse + .management-bar-header {
+    float: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar .navbar-collapse + .navbar-header .basic-search, .management-bar .navbar-collapse + .navbar-header .basic-search, .navbar .management-bar-collapse + .navbar-header .basic-search, .management-bar .management-bar-collapse + .navbar-header .basic-search, .navbar .navbar-collapse + .management-bar-header .basic-search, .management-bar .navbar-collapse + .management-bar-header .basic-search, .navbar .management-bar-collapse + .management-bar-header .basic-search, .management-bar .management-bar-collapse + .management-bar-header .basic-search {
+    width: auto;
+  }
+}
+
 .navbar-form {
   margin-bottom: 4px;
   margin-top: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-form {
+    margin: 0;
+    padding: 4px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-form .btn {
+    vertical-align: top;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-form .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-header .input-group-input .form-control, .management-bar-header .input-group-input .form-control {
+    max-width: none;
+    min-width: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-header-right, .management-bar-header-right {
+    float: right;
+  }
 }
 
 .navbar-header .navbar-form,
@@ -10896,6 +11025,25 @@ button.list-group-heading:hover,
   border-width: 0;
   margin: 0;
   padding: 4px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-nav, .management-bar-nav {
+    margin-right: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-nav.navbar-right, .navbar-right.management-bar-nav {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-nav.navbar-right:last-child, .navbar-right.management-bar-nav:last-child {
+    margin-right: 0;
+  }
 }
 
 .navbar-nav > li > a, .management-bar-nav > li > a {
@@ -10950,76 +11098,54 @@ button.list-group-heading:hover,
   min-width: 100px;
 }
 
+.navbar-default .basic-search.open {
+  background-color: #FCFEFF;
+}
+
+.navbar-default .navbar-collapse:first-child,
+.navbar-default .management-bar-collapse:first-child,
+.navbar-default .navbar-collapse-absolute {
+  background-color: #FCFEFF;
+  border: 1px solid #E3E6E8;
+}
+
 @media screen and (min-width: 768px) {
-  .collapse-basic-search .basic-search {
-    position: static;
-  }
-  .collapse-basic-search .basic-search .input-group-input {
-    overflow: visible;
-  }
-  .collapse-basic-search .basic-search .input-group-input .form-control {
-    left: auto;
-  }
-  .collapse-basic-search .navbar-nav:first-child, .collapse-basic-search .management-bar-nav:first-child {
-    float: left;
-  }
-  .collapse-basic-search .basic-search.open .basic-search-close {
-    display: none;
-  }
-  .navbar .navbar-collapse, .management-bar .navbar-collapse, .navbar .management-bar-collapse, .management-bar .management-bar-collapse {
-    background-color: transparent;
+  .navbar-default .navbar-collapse:first-child,
+  .navbar-default .management-bar-collapse:first-child,
+  .navbar-default .navbar-collapse-absolute {
     border-width: 0;
-    float: none;
-    left: auto;
-    position: static;
-    right: auto;
-    top: auto;
-    z-index: 0;
   }
-  .navbar .navbar-collapse:first-child, .management-bar .navbar-collapse:first-child, .navbar .management-bar-collapse:first-child, .management-bar .management-bar-collapse:first-child {
-    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .management-bar-toggle,
+.navbar-default .navbar-toggle-left, .navbar-default .management-bar-toggle-left {
+  color: #869CAD;
+}
+
+.navbar-inverse .basic-search.open {
+  background-color: #869CAD;
+}
+
+.navbar-inverse .navbar-collapse:first-child,
+.navbar-inverse .management-bar-collapse:first-child,
+.navbar-inverse .navbar-collapse-absolute {
+  background-color: #869CAD;
+  border: 1px solid #869CAD;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-inverse .navbar-collapse:first-child,
+  .navbar-inverse .management-bar-collapse:first-child,
+  .navbar-inverse .navbar-collapse-absolute {
     border-width: 0;
-    float: left;
-    left: auto;
-    position: static;
-    right: auto;
-    top: auto;
-    z-index: 0;
   }
-  .navbar .navbar-collapse + .navbar-header, .management-bar .navbar-collapse + .navbar-header, .navbar .management-bar-collapse + .navbar-header, .management-bar .management-bar-collapse + .navbar-header, .navbar .navbar-collapse + .management-bar-header, .management-bar .navbar-collapse + .management-bar-header, .navbar .management-bar-collapse + .management-bar-header, .management-bar .management-bar-collapse + .management-bar-header {
-    float: none;
-  }
-  .navbar .navbar-collapse + .navbar-header .basic-search, .management-bar .navbar-collapse + .navbar-header .basic-search, .navbar .management-bar-collapse + .navbar-header .basic-search, .management-bar .management-bar-collapse + .navbar-header .basic-search, .navbar .navbar-collapse + .management-bar-header .basic-search, .management-bar .navbar-collapse + .management-bar-header .basic-search, .navbar .management-bar-collapse + .management-bar-header .basic-search, .management-bar .management-bar-collapse + .management-bar-header .basic-search {
-    width: auto;
-  }
-  .navbar-form {
-    margin: 0;
-    padding: 4px 0;
-  }
-  .navbar-form .btn {
-    vertical-align: top;
-  }
-  .navbar-form .form-group {
-    display: inline-block;
-    margin-bottom: 0;
-  }
-  .navbar-header .input-group-input .form-control, .management-bar-header .input-group-input .form-control {
-    max-width: none;
-    min-width: 0;
-  }
-  .navbar-header-right, .management-bar-header-right {
-    float: right;
-  }
-  .navbar-nav, .management-bar-nav {
-    margin-right: 12px;
-  }
-  .navbar-nav.navbar-right, .navbar-right.management-bar-nav {
-    margin-right: 0;
-    margin-left: 12px;
-  }
-  .navbar-nav.navbar-right:last-child, .navbar-right.management-bar-nav:last-child {
-    margin-right: 0;
-  }
+}
+
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .management-bar-toggle,
+.navbar-inverse .navbar-toggle-left, .navbar-inverse .management-bar-toggle-left {
+  color: #65B6F0;
 }
 
 @-webkit-keyframes slideIn {
@@ -11515,6 +11641,13 @@ button.list-group-heading:hover,
   padding: 24px;
 }
 
+.sidebar-footer a:focus,
+.sidebar-footer a:hover,
+.sidebar-header a:focus,
+.sidebar-header a:hover {
+  text-decoration: none;
+}
+
 .sidebar-footer {
   padding: 24px;
 }
@@ -11526,6 +11659,10 @@ button.list-group-heading:hover,
 
 .sidebar-header h1, .sidebar-header h2, .sidebar-header h3, .sidebar-header h4, .sidebar-header h5, .sidebar-header h6 {
   margin: 0;
+}
+
+.sidebar-header-actions {
+  float: right;
 }
 
 .sidebar-panel {
@@ -11764,16 +11901,6 @@ button.list-group-heading:hover,
 .sidebar-inverse {
   background-color: #1F282E;
   color: #869CAD;
-}
-
-.sidebar-inverse a {
-  color: #FFF;
-}
-
-.sidebar-inverse a:focus,
-.sidebar-inverse a:hover {
-  color: #FFF;
-  text-decoration: none;
 }
 
 .sidebar-inverse .nav > li > a:focus,
@@ -15175,14 +15302,7 @@ a.list-group-heading:hover {
 .management-bar .btn {
   border: 1px solid #EDF0F2;
   border-radius: 3px;
-  margin: 6px 3px;
   padding: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .management-bar .btn {
-    margin: 13px 3px;
-  }
 }
 
 .management-bar-header > .checkbox-default,
@@ -15242,14 +15362,7 @@ a.list-group-heading:hover {
 }
 
 .management-bar-no-collapse .management-bar-nav > li > .btn {
-  margin: 6px 3px;
   padding: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .management-bar-no-collapse .management-bar-nav > li > .btn {
-    margin: 13px 3px;
-  }
 }
 
 .management-bar-toggle {
