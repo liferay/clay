@@ -129,8 +129,24 @@
 			position: static;
 		}
 
+		&.open .basic-search-close {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				display: none;
+			}
+		}
+
 		.input-group-input {
 			overflow: hidden;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				overflow: visible;
+			}
+
+			.form-control {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					left: auto;
+				}
+			}
 		}
 
 		.form-control {
@@ -144,6 +160,10 @@
 
 	.navbar-nav:first-child {
 		float: none;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			float: left;
+		}
 	}
 
 	.navbar-nav > li > a,
@@ -154,6 +174,7 @@
 
 /* make navbar dropdown position absolute
 	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+
 .navbar {
 	.navbar-collapse:first-child,
 	.navbar-collapse-absolute {
@@ -163,12 +184,82 @@
 		top: 100%;
 		z-index: $zindex-navbar;
 	}
+
+	.navbar-collapse {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: transparent;
+			border-width: 0;
+			float: none;
+			left: auto;
+			position: static;
+			right: auto;
+			top: auto;
+			z-index: 0;
+		}
+
+		&:first-child {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: transparent;
+				border-width: 0;
+				float: left;
+				left: auto;
+				position: static;
+				right: auto;
+				top: auto;
+				z-index: 0;
+			}
+		}
+
+		+ .navbar-header {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				float: none;
+			}
+
+			.basic-search {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					width: auto;
+				}
+			}
+		}
+	}
 }
 
-// navbar-form
+// Navbar Form
+
 .navbar-form {
 	margin-bottom: floor(($navbar-height - $input-height-base) / 2);
 	margin-top: floor(($navbar-height - $input-height-base) / 2);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		margin: 0;
+		padding: floor(($navbar-height - $input-height-base) / 2) 0;
+	}
+
+	.btn {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			vertical-align: top;
+		}
+	}
+
+	.form-group {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.navbar-header .input-group-input .form-control {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		max-width: none;
+		min-width: 0;
+	}
+}
+
+.navbar-header-right {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		float: right;
+	}
 }
 
 .navbar-header .navbar-form,
@@ -179,13 +270,31 @@
 }
 
 .navbar-nav {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		margin-right: $navbar-padding-horizontal;
+	}
+
+	&.navbar-right {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin-right: 0;
+			margin-left: $navbar-padding-horizontal;
+		}
+
+		&:last-child {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				margin-right: 0;
+			}
+		}
+	}
+
 	> li > a {
 		padding-left: $navbar-padding-horizontal;
 		padding-right: $navbar-padding-horizontal;
 	}
 }
 
-//navbar-no-collapse
+// Navbar No Collapse
+
 .navbar-no-collapse .navbar-nav {
 	float: left;
 	margin: 0 $navbar-padding-horizontal;
@@ -210,7 +319,7 @@
 	}
 }
 
-//navbar toggle
+// Navbar Toggle
 
 .navbar-toggle,
 .navbar-toggle-left {
@@ -232,107 +341,6 @@
 
 		.form-control {
 			min-width: 100px;
-		}
-	}
-}
-
-@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
-	//lr7 undo collapse-basic-search for desktop
-	.collapse-basic-search {
-		.basic-search {
-			position: static;
-
-			.input-group-input {
-				overflow: visible;
-
-				.form-control {
-					left: auto;
-				}
-			}
-		}
-
-		.navbar-nav:first-child {
-			float: left;
-		}
-	}
-
-	// collapse-basic-search plugin undo open state on desktop
-	.collapse-basic-search {
-		.basic-search {
-			&.open {
-				.basic-search-close {
-					display: none;
-				}
-			}
-		}
-	}
-
-	//lr7 navbar mobile (when navbar-header comes after navbar-collapse)
-	.navbar .navbar-collapse {
-		background-color: transparent;
-		border-width: 0;
-		float: none;
-		left: auto;
-		position: static;
-		right: auto;
-		top: auto;
-		z-index: 0;
-	}
-
-	.navbar .navbar-collapse {
-		&:first-child {
-			background-color: transparent;
-			border-width: 0;
-			float: left;
-			left: auto;
-			position: static;
-			right: auto;
-			top: auto;
-			z-index: 0;
-		}
-
-		+ .navbar-header {
-			float: none;
-
-			.basic-search {
-				width: auto;
-			}
-		}
-	}
-
-	.navbar-form {
-		margin: 0;
-		padding: floor(($navbar-height - $input-height-base) / 2) 0;
-
-		.btn {
-			vertical-align: top;
-		}
-
-		.form-group {
-			display: inline-block;
-			margin-bottom: 0;
-		}
-	}
-
-	.navbar-header .input-group-input .form-control {
-		max-width: none;
-		min-width: 0;
-	}
-
-	.navbar-header-right {
-		float: right;
-	}
-
-	.navbar-nav {
-		margin-right: $navbar-padding-horizontal;
-
-		&.navbar-right {
-			margin-right: 0;
-			margin-left: $navbar-padding-horizontal;
-
-			&:last-child {
-				margin-right: 0;
-			}
 		}
 	}
 }
