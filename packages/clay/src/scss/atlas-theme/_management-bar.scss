@@ -14,6 +14,7 @@
 }
 
 .management-bar .management-bar-nav > li > .btn,
+.management-bar .management-bar-nav > .dropdown > .btn,
 .management-bar-header > .btn,
 .management-bar-header-right > .btn {
 	@media screen and (min-width: $grid-float-breakpoint) {
