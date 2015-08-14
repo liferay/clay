@@ -89,9 +89,3 @@
 		margin-left: -$popover-arrow-width + $popover-box-shadow-x;
 	}
 }
-
-.no-shadow, .no-shadows {
-	&.popover, .popover {
-		box-shadow: none;
-	}
-}
