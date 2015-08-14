@@ -11,10 +11,17 @@
 			var headerTopBar = $('#headerTopBar');
 			var wrapper = $('#wrapper');
 
+			var forceReflow = function(el) {
+				el.css('display', 'table');
+
+				setTimeout(function() {
+					el.css('display', '');
+				}, 0);
+			};
+
 			headerTopBar.find('.navbar-toggle').on(
 				'click',
 				function(event) {
-					var ct = $(event.currentTarget);
 					var sidenavContainer = headerTopBar.next('.sidenav-container');
 
 					event.preventDefault();
@@ -23,6 +30,8 @@
 						'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
 						function(event) {
 							sidenavContainer.removeClass('sidenav-transition');
+
+							forceReflow($('.main-nav-open'));
 						}
 					);
 
@@ -37,7 +46,7 @@
 				function(event) {
 					event.preventDefault();
 
-					$(event.currentTarget).nextAll('.collapse').toggleClass('in');
+					$(this).nextAll('.collapse').toggleClass('in');
 				}
 			);
 		});
