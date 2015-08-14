@@ -2,6 +2,8 @@
 	@extend .navbar;
 
 	border-radius: 0;
+	padding-left: $management-bar-padding-horizontal;
+	padding-right: $management-bar-padding-horizontal;
 
 	label {
 		margin-bottom: 0;
