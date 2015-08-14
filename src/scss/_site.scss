@@ -340,6 +340,24 @@ body.fixed {
 	}
 }
 
+// Dropdowns Page
+
+.uxgl-dropdown-display {
+	.dropdown-menu {
+		display: block;
+		position: relative;
+	}
+
+	.dropdown-wide-container {
+		float: left;
+	}
+
+	.mega-menu .dropdown-menu {
+		float: left;
+		max-width: 100%;
+	}
+}
+
 // Figures Page
 
 .uxgl-figures .figure {
