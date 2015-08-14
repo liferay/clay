@@ -179,15 +179,11 @@ collapse
 </li>
 <li class=""><a href="../../content/blogs-appearance">Blog - Appearance</a>
 </li>
-<li class=""><a href="../../content/chat">Chat</a>
-</li>
 <li class=""><a href="../../content/documents-and-media">Documents and Media</a>
 </li>
 <li class=""><a href="../../content/form-examples">Form Examples</a>
 </li>
 <li class=""><a href="../../content/examples-portlet-topper">Portlets</a>
-</li>
-<li class=""><a href="../../content/profile-page">Profile Page</a>
 </li>
 <li class=""><a href="../../content/timelines">Timeline</a>
 </li>
@@ -209,29 +205,6 @@ collapse
 <li class=""><a href="../../content/extending-toggles">Extending Toggles</a>
 </li>
 <li class=""><a href="../../content/extending-toolbars">Extending Toolbars</a>
-</li>
-</ul>
-</div>
-</li>
-<li class="side-navigation-dropdown-container"><a href="javascript:;">Mail Template</a>
-<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
-<div class="
-collapse
-">
-<ul class="nav nav-stacked">
-<li class=""><a href="../../content/mail-template-inbox">Inbox</a>
-</li>
-<li class=""><a href="../../content/mail-template-sent">Sent</a>
-</li>
-<li class=""><a href="../../content/mail-template-compose">Compose</a>
-</li>
-<li class=""><a href="../../content/mail-template-drafts">Drafts</a>
-</li>
-<li class=""><a href="../../content/mail-template-spam">Spam</a>
-</li>
-<li class=""><a href="../../content/mail-template-trash">Trash</a>
-</li>
-<li class=""><a href="../../content/mail-template-view-message">View Message</a>
 </li>
 </ul>
 </div>
@@ -729,10 +702,17 @@ Checkboxes unable to be styled in IE with this method. -->
 			var headerTopBar = $('#headerTopBar');
 			var wrapper = $('#wrapper');
 
+			var forceReflow = function(el) {
+				el.css('display', 'table');
+
+				setTimeout(function() {
+					el.css('display', '');
+				}, 0);
+			};
+
 			headerTopBar.find('.navbar-toggle').on(
 				'click',
 				function(event) {
-					var ct = $(event.currentTarget);
 					var sidenavContainer = headerTopBar.next('.sidenav-container');
 
 					event.preventDefault();
@@ -741,6 +721,8 @@ Checkboxes unable to be styled in IE with this method. -->
 						'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
 						function(event) {
 							sidenavContainer.removeClass('sidenav-transition');
+
+							forceReflow($('.main-nav-open'));
 						}
 					);
 
@@ -755,7 +737,7 @@ Checkboxes unable to be styled in IE with this method. -->
 				function(event) {
 					event.preventDefault();
 
-					$(event.currentTarget).nextAll('.collapse').toggleClass('in');
+					$(this).nextAll('.collapse').toggleClass('in');
 				}
 			);
 		});

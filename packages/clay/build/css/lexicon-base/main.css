@@ -9708,6 +9708,8 @@ button.list-group-heading:hover,
 
 .management-bar {
   border-radius: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .management-bar label {
@@ -9715,6 +9717,7 @@ button.list-group-heading:hover,
 }
 
 .management-bar .management-bar-nav > li > .btn,
+.management-bar .management-bar-nav > .dropdown > .btn,
 .management-bar-header > .btn,
 .management-bar-header-right > .btn {
   margin: 8px 0 8px 15px;
@@ -9840,12 +9843,14 @@ button.list-group-heading:hover,
 }
 
 .management-bar-default .management-bar-nav > li > .btn,
+.management-bar-default .management-bar-nav > li > .dropdown > .btn,
 .management-bar-default .management-bar-header > .btn,
 .management-bar-default .management-bar-header-right > .btn {
   box-shadow: none;
 }
 
 .management-bar-default .management-bar-nav > li > .btn:focus,
+.management-bar-default .management-bar-nav > li > .dropdown > .btn:focus,
 .management-bar-default .management-bar-header > .btn:focus,
 .management-bar-default .management-bar-header-right > .btn:focus {
   background-color: #e7e7e7;
@@ -9865,18 +9870,25 @@ button.list-group-heading:hover,
   color: #333;
 }
 
-.management-bar-default .nav > li > a {
+.management-bar-default .nav > li > a,
+.management-bar-default .nav > .dropdown > a {
   color: #777;
 }
 
-.management-bar-default .nav > li > a:hover {
+.management-bar-default .nav > li > a:hover,
+.management-bar-default .nav > .dropdown > a:hover {
   background-color: transparent;
   color: #333;
 }
 
-.management-bar-default .nav > li > a:focus {
+.management-bar-default .nav > li > a:focus,
+.management-bar-default .nav > .dropdown > a:focus {
   background-color: #e7e7e7;
   color: #555;
+}
+
+.management-bar-default .nav > .open > a {
+  border-color: #e7e7e7;
 }
 
 .management-bar-default .nav .open > a,

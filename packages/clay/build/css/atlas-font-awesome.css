@@ -11774,6 +11774,8 @@ button.list-group-heading:hover,
 
 .management-bar {
   border-radius: 0;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .management-bar label {
@@ -11781,9 +11783,10 @@ button.list-group-heading:hover,
 }
 
 .management-bar .management-bar-nav > li > .btn,
+.management-bar .management-bar-nav > .dropdown > .btn,
 .management-bar-header > .btn,
 .management-bar-header-right > .btn {
-  margin: 13px 0 13px 12px;
+  margin: 7px 0 7px 12px;
   padding: 0;
 }
 
@@ -11793,7 +11796,7 @@ button.list-group-heading:hover,
 
 .management-bar-header > .checkbox-default,
 .management-bar-header-right > .checkbox-default {
-  padding: 12px 12px;
+  padding: 14px 12px;
 }
 
 .management-bar-header {
@@ -11807,7 +11810,7 @@ button.list-group-heading:hover,
 .management-bar-header-right > a {
   display: block;
   float: left;
-  padding: 12px 12px;
+  padding: 14px 12px;
 }
 
 .management-bar-header-right {
@@ -11837,7 +11840,7 @@ button.list-group-heading:hover,
 
 .management-bar-toggle-link.management-bar-toggle {
   margin: 0;
-  padding: 12px 12px;
+  padding: 14px 12px;
 }
 
 .management-bar-toggle-link:focus,
@@ -11883,13 +11886,13 @@ button.list-group-heading:hover,
 }
 
 .management-bar-no-collapse .management-bar-nav > li > a {
-  padding-bottom: 12px;
-  padding-top: 12px;
+  padding-bottom: 14px;
+  padding-top: 14px;
 }
 
 .management-bar-nav > li > .checkbox-default,
 .management-bar-nav > li .management-bar-text {
-  padding: 12px 12px;
+  padding: 14px 12px;
 }
 
 .management-bar-nav > li .management-bar-text {
@@ -11906,12 +11909,14 @@ button.list-group-heading:hover,
 }
 
 .management-bar-default .management-bar-nav > li > .btn,
+.management-bar-default .management-bar-nav > li > .dropdown > .btn,
 .management-bar-default .management-bar-header > .btn,
 .management-bar-default .management-bar-header-right > .btn {
   box-shadow: none;
 }
 
 .management-bar-default .management-bar-nav > li > .btn:focus,
+.management-bar-default .management-bar-nav > li > .dropdown > .btn:focus,
 .management-bar-default .management-bar-header > .btn:focus,
 .management-bar-default .management-bar-header-right > .btn:focus {
   background-color: transparent;
@@ -11931,18 +11936,25 @@ button.list-group-heading:hover,
   color: #869CAD;
 }
 
-.management-bar-default .nav > li > a {
+.management-bar-default .nav > li > a,
+.management-bar-default .nav > .dropdown > a {
   color: #869CAD;
 }
 
-.management-bar-default .nav > li > a:hover {
+.management-bar-default .nav > li > a:hover,
+.management-bar-default .nav > .dropdown > a:hover {
   background-color: transparent;
   color: #869CAD;
 }
 
-.management-bar-default .nav > li > a:focus {
+.management-bar-default .nav > li > a:focus,
+.management-bar-default .nav > .dropdown > a:focus {
   background-color: transparent;
   color: #869CAD;
+}
+
+.management-bar-default .nav > .open > a {
+  border-color: #E3E6E8;
 }
 
 .management-bar-default .nav .open > a,
@@ -17356,6 +17368,15 @@ a.list-group-heading:hover {
   padding: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .management-bar .management-bar-nav > li > .btn,
+  .management-bar .management-bar-nav > .dropdown > .btn,
+  .management-bar-header > .btn,
+  .management-bar-header-right > .btn {
+    margin: 13px 0 13px 15px;
+  }
+}
+
 .management-bar-header > .checkbox-default,
 .management-bar-header > .radio-default,
 .management-bar-header-right > .checkbox-default,
@@ -17430,7 +17451,7 @@ a.list-group-heading:hover {
 
 @media screen and (min-width: 768px) {
   .management-bar-toggle-link.management-bar-toggle {
-    padding: 12px 12px;
+    padding: 14px 12px;
   }
 }
 
@@ -18642,10 +18663,6 @@ h6.modal-title {
   margin-left: -8px;
 }
 
-.no-shadow.popover, .no-shadow .popover, .no-shadows.popover, .no-shadows .popover {
-  box-shadow: none;
-}
-
 @media screen and (min-width: 768px) {
   body {
     font-size: 16px;
@@ -19421,10 +19438,6 @@ input[type="range"].vertical {
 
 .tooltip-inner {
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
-}
-
-.no-shadow .tooltip-inner, .no-shadows .tooltip-inner {
-  box-shadow: none;
 }
 
 h1,
