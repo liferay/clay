@@ -421,6 +421,23 @@ body.fixed {
 	}
 }
 
+// Nameplates Page
+
+.uxgl-nameplates-page {
+	.col-md-2 {
+		text-align: center;
+
+		p {
+			font-size: 12px;
+		}
+	}
+
+	.user-icon {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 // Site Main Nav
 
 #wrapper.open {
