@@ -91,9 +91,3 @@
 .tooltip-inner {
 	box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg;
 }
-
-.no-shadow, .no-shadows {
-	.tooltip-inner {
-		box-shadow: none;
-	}
-}
