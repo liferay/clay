@@ -370,6 +370,72 @@ body.fixed {
 	width: 64px;
 }
 
+// Extending Cards Page
+
+.usage-section {
+	p {
+		line-height: 1.6667em;
+		margin-bottom: 1.6667em;
+	}
+}
+
+.usage-heading {
+	margin-bottom: 1em;
+	margin-top: 0.25em;
+}
+
+.extend-cards-page {
+	.card {
+		max-width: 300px;
+	}
+
+	.card-label {
+		background: rgb(120, 171, 240);
+		color: #FFF;
+		display: block;
+		float: left;
+		font-size: 10px;
+		font-weight: 200;
+		margin-bottom: 15px;
+		margin-left: 10px;
+		padding: 2px 10px;
+		text-transform: uppercase;
+	}
+
+	.card-section table {
+		font-weight: 200;
+		margin: 15px 0;
+		width: 100%;
+
+		td {
+			padding: 10px;
+			text-align: right;
+
+			&:first-child {
+				text-align: left;
+			}
+		}
+	}
+
+	.control-panel {
+		.card-header {
+			background-color: #F8F8F8;
+			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+			padding: 0;
+		}
+
+		.card-row {
+			background-color: #F8F8F8;
+			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+			width: 100%;
+		}
+
+		.card-column {
+			padding: 10px 15px;
+		}
+	}
+}
+
 // Extending Nameplates Page
 
 .uxgl-extending-nameplates {
