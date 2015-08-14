@@ -9,12 +9,15 @@
 	.btn {
 		border: 1px solid $management-bar-border;
 		border-radius: 3px;
-		// margin: 6px 3px;
 		padding: 0;
+	}
+}
 
-		// @media screen and (min-width: $grid-float-breakpoint) {
-		// 	margin: 13px 3px;
-		// }
+.management-bar .management-bar-nav > li > .btn,
+.management-bar-header > .btn,
+.management-bar-header-right > .btn {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		margin: $management-bar-desktop-btn-padding-vertical 0 $management-bar-desktop-btn-padding-vertical $management-bar-desktop-btn-padding-horizontal;
 	}
 }
 
@@ -62,12 +65,7 @@
 }
 
 .management-bar-no-collapse .management-bar-nav > li > .btn {
-	// margin: 6px 3px;
 	padding: 0;
-
-	// @media screen and (min-width: $grid-float-breakpoint) {
-	// 	margin: 13px 3px;
-	// }
 }
 
 .management-bar-toggle {

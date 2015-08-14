@@ -1,6 +1,9 @@
 // Structure
 
-$management-bar-height: $navbar-desktop-height !default;
+$management-bar-height: $navbar-height !default; // Shared
+$management-bar-desktop-height: $navbar-desktop-height !default; // Atlas
+$management-bar-desktop-btn-padding-horizontal: $navbar-desktop-padding-horizontal !default; // Atlas
+$management-bar-desktop-btn-padding-vertical: ($management-bar-desktop-height - $icon-monospaced-size - 2) / 2 !default; // Atlas
 
 $management-bar-border-width: 0 0 1px 0 !default; // Atlas
 

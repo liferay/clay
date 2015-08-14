@@ -1,7 +1,7 @@
 $management-bar-height: $navbar-height !default;
 
 $management-bar-padding-horizontal: $navbar-padding-horizontal !default;
-$management-bar-padding-vertical: $navbar-padding-vertical !default;
+$management-bar-padding-vertical: (($management-bar-height - $line-height-computed) / 2) !default;
 
 $management-bar-btn-padding-horizontal: $management-bar-padding-horizontal !default;
 $management-bar-btn-padding-vertical: ($management-bar-height - $icon-monospaced-size - 2) / 2 !default;
