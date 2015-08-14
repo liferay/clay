@@ -11,6 +11,7 @@
 }
 
 .management-bar .management-bar-nav > li > .btn,
+.management-bar .management-bar-nav > .dropdown > .btn,
 .management-bar-header > .btn,
 .management-bar-header-right > .btn {
 	margin: $management-bar-btn-padding-vertical 0 $management-bar-btn-padding-vertical $management-bar-btn-padding-horizontal;
@@ -164,6 +165,7 @@
 	}
 
 	.management-bar-nav > li > .btn,
+	.management-bar-nav > li > .dropdown > .btn,
 	.management-bar-header > .btn,
 	.management-bar-header-right > .btn {
 		box-shadow: none;
@@ -188,7 +190,8 @@
 	}
 
 	.nav {
-		> li > a {
+		> li > a,
+		> .dropdown > a {
 			color: $management-bar-default-link-color;
 
 			&:hover {
@@ -200,6 +203,10 @@
 				background-color: $management-bar-default-link-active-bg;
 				color: $management-bar-default-link-active-color;
 			}
+		}
+
+		> .open > a {
+			border-color: $management-bar-default-border;
 		}
 
 		.open > a {
