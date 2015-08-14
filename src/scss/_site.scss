@@ -347,7 +347,7 @@ body.fixed {
 	}
 }
 
-// Sidenav Page
+// Site Main Nav
 
 #wrapper.open {
 	padding-left: 400px;
@@ -357,7 +357,220 @@ body.fixed {
 	margin-bottom: 15px;
 }
 
+body,
+html {
+	height: 100%;
+}
+
+.main-nav-open {
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.modal-open .main-nav-open {
+	-webkit-overflow-scrolling: auto;
+}
+
+$sideNavWidth: 220px;
+
+#mainContent {
+	display: block;
+	position: relative;
+	width: 100%;
+
+	@media screen and (min-width: 768px) {
+		padding-left: $sideNavWidth + 10;
+	}
+
+	pre {
+		margin-bottom: 0;
+	}
+}
+
+.main-nav-open #mainContent {
+	left: $sideNavWidth + 10;
+
+	@media screen and (min-width: 768px) {
+		left: auto;
+	}
+}
+
+#mainNav {
+	> .sidenav-menu {
+		width: $sideNavWidth;
+	}
+}
+
+.main-nav-open #mainNav {
+	width: $sideNavWidth;
+
+	> .sidenav-menu {
+		width: $sideNavWidth;
+	}
+}
+
+.menu-toggle {
+	color: #FFF;
+	display: block;
+	float: left;
+	padding: 10px 15px;
+	text-align: left;
+
+	.glyphicon {
+		font-size: 22px;
+	}
+}
+
+.side-navigation {
+	padding-top: 35px;
+	z-index: 1;
+
+	li {
+		> a {
+			&:hover, &:focus {
+				background-color: transparent;
+				text-decoration: underline;
+			}
+		}
+
+		&.child-active, &.active {
+			> a {
+				font-weight: bold;
+			}
+		}
+	}
+
+	.nav-stacked li {
+		> h4 {
+			color: #F3F3F3;
+			padding: 10px 15px;
+		}
+
+		div > .nav-stacked li > a {
+			padding-left: 35px;
+		}
+	}
+}
+
+.side-navigation-dropdown-container {
+	&:after {
+		clear: both;
+		content: " ";
+		display: block;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	> a {
+		float: right;
+		text-align: center;
+		width: 25%;
+
+		&:first-child {
+			float: left;
+			text-align: left;
+			width: 75%;
+		}
+	}
+
+	.collapse {
+		clear: both;
+	}
+}
+
+/* Styles for side navigation component page */
+
+#mySidebar {
+	background-color: #222328;
+	box-shadow: -3px 0px 3px -3px #000 inset;
+	color: #F8F8F8;
+
+	ul {
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #3E3E3E;
+
+		li {
+			border-top: 1px solid #3E3E3E;
+			border-bottom: 1px solid #000;
+			margin-top: 0;
+
+			a {
+				background-color: #2C2D32;
+				box-shadow: -3px 0px 3px -3px #000 inset;
+
+				&, &:hover, &:focus {
+					color: #B3B6BC;
+					font-weight: 200;
+					text-shadow: 0px 1px 0 #000;
+				}
+			}
+		}
+	}
+}
+
+#mySidebar h3 {
+	margin: 0;
+	padding: 15px;
+}
+
+#sidenavDemo {
+	margin-top: 20px;
+
+	h4 {
+		border-bottom: 2px dotted #AEAEAE;
+		color: #BA3A37;
+		padding-bottom: 8px;
+		margin: 20px 0;
+	}
+
+	.sidenav-main-content h3 {
+		@include background-image(linear-gradient(top, #242B39 50%, #1E2639 100%));
+
+		border-bottom: 1px solid #1E2639;
+		color: #F8F8F8;
+		margin: 0 -20px;
+		padding: 15px;
+	}
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+	#wrapper {
+		> .sidenav-container.closed {
+			> .sidenav-menu-slider {
+				width: $sideNavWidth;
+			}
+
+			> .sidenav-content {
+				padding-left: $sideNavWidth + 35;
+			}
+		}
+	}
+
+	#headerTopBar .title {
+		padding-left: 15px;
+	}
+
+	#mainContent {
+		left: 0;
+		margin-left: 7px;
+		width: 100%;
+	}
+
+	.main-nav-closed .side-navigation-container {
+		width: $sideNavWidth;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+}
+
 // Switches Page
+
 .uxgl-switches {
 	@include clearfix;
 
