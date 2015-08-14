@@ -438,6 +438,28 @@ body.fixed {
 	}
 }
 
+// Popovers Page
+
+#popovers {
+	.popover {
+		display: block;
+		position: relative;
+		margin-top: 25px;
+
+		&.left {
+			margin-left: 0;
+		}
+	}
+}
+
+// Tooltips Page
+
+.tooltip-display {
+	> div {
+		height: 50px;
+	}
+}
+
 // Site Main Nav
 
 #wrapper.open {
