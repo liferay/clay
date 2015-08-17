@@ -9,7 +9,7 @@
 	border-right-width: 0;
 	padding: 4px 12px 4px 24px;
 
-	@media screen and (min-width: $screen-sm-min) {
+	@media screen and (min-width: $grid-float-breakpoint) {
 		padding: 8px 12px 8px 24px;
 	}
 
@@ -29,6 +29,7 @@ a.list-group-heading {
 }
 
 .list-group-heading {
+	background-color: $list-group-header-bg;
 	border-bottom-width: 0;
 	border-top-width: 0;
 	color: $list-group-header-color;
