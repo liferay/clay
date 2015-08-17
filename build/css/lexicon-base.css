@@ -8298,7 +8298,7 @@ button.close {
 
 .card,
 .card-horizontal {
-  border: 1px solid #777777;
+  border: 1px solid #eeeeee;
   border-radius: 4px;
   margin-bottom: 20px;
   position: relative;
@@ -8321,7 +8321,7 @@ button.close {
 
 .card .divider,
 .card-horizontal .divider {
-  background-color: #777777;
+  background-color: #eeeeee;
   border-width: 0;
   height: 1px;
 }
@@ -8532,7 +8532,6 @@ button.close {
 
 .control-menu {
   bottom: 0;
-  color: #9d9d9d;
   left: 0;
   position: fixed;
   right: 0;
