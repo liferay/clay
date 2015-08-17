@@ -8313,7 +8313,7 @@ button.close {
 
 .card,
 .card-horizontal {
-  border: 0 solid #777777;
+  border: 0 solid #eeeeee;
   border-radius: 0;
   margin-bottom: 20px;
   position: relative;
@@ -8336,7 +8336,7 @@ button.close {
 
 .card .divider,
 .card-horizontal .divider {
-  background-color: #777777;
+  background-color: #eeeeee;
   border-width: 0;
   height: 1px;
 }
@@ -8547,7 +8547,6 @@ button.close {
 
 .control-menu {
   bottom: 0;
-  color: #FFF;
   left: 0;
   position: fixed;
   right: 0;
@@ -15136,6 +15135,7 @@ a.list-group-heading:hover {
 }
 
 .list-group-heading {
+  background-color: #F5F8FA;
   border-bottom-width: 0;
   border-top-width: 0;
   color: #869CAD;
