@@ -10,5 +10,9 @@
 
 	input[type="checkbox"] {
 		position: absolute;
+
+		~ .toggle-card-container {
+			border-width: 0;
+		}
 	}
 }
