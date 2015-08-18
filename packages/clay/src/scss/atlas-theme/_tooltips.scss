@@ -1,7 +1,7 @@
 .tooltip-inner {
 	border-radius: $tooltip-border-radius;
 	line-height: 24px;
-	padding: 12px 24px;
+	padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
 	max-width: 230px;
 }
 
