@@ -620,7 +620,7 @@
 				element.addClass('sidenav-right');
 			}
 
-			if (type === 'fixed' || type === 'fixed-push') {
+			if (type === 'fixed' || type === 'fixed-push' && !instance.useDataAttribute) {
 				element.addClass('sidenav-fixed');
 			}
 
