@@ -277,6 +277,7 @@
 			var instance = this;
 
 			var menu = container.find('.sidenav-menu').first();
+			var toggler = $(instance.options.toggler);
 
 			var width = instance.options.width;
 
@@ -300,10 +301,14 @@
 
 					instance._removeBodyFixed();
 
+					toggler.removeClass('active').removeClass('sidenav-transition');
+
 					container.trigger('closed.lexicon.sidenav');
 				}
 				else {
 					instance.setEqualHeight(container);
+
+					toggler.addClass('active').removeClass('sidenav-transition');
 
 					container.trigger('open.lexicon.sidenav');
 				}
@@ -315,6 +320,8 @@
 
 			setTimeout(function() {
 				container.toggleClass('closed', !closed).addClass('sidenav-transition');
+
+				toggler.addClass('sidenav-transition');
 
 				if (closed && instance.desktop) {
 					menu.css('right', '');
@@ -353,7 +360,7 @@
 		_onClickSidenavClose: function(element) {
 			var instance = this;
 
-			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 			var closeButton = element.find('.sidenav-close').first();
 
 			if (instance.useDataAttribute) {
@@ -375,8 +382,9 @@
 		_toggleSimpleSidenav: function(element) {
 			var instance = this;
 
-			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 			var content = $(instance.options.content).first();
+			var toggler = instance.options.toggler;
 			var type = instance.options.type;
 			var typeMobile = instance.options.typeMobile;
 
@@ -384,9 +392,12 @@
 			var desktopFixedPush = desktop && (type === 'fixed-push');
 			var mobileFixedPush = !desktop && (typeMobile === 'fixed-push');
 
-			instance._onSidenavTransitionEnd(container);
+			instance._onSidenavTransitionEnd(container, function() {
+				toggler.removeClass('sidenav-transition');
+			});
 
 			container.addClass('sidenav-transition');
+			toggler.addClass('sidenav-transition');
 
 			if (container.hasClass('closed')) {
 				if (!desktop) {
@@ -401,13 +412,15 @@
 					content.addClass('sidenav-transition');
 				}
 
+				toggler.addClass('active');
+
 				setTimeout(function() {
 					container.removeClass('closed');
 					content.addClass('open');
 				}, 0);
 			}
 			else {
-				if ( desktopFixedPush || mobileFixedPush ) {
+				if (desktopFixedPush || mobileFixedPush) {
 					instance._onSidenavTransitionEnd(content, function() {
 						instance._removeBodyFixed();
 
@@ -419,6 +432,8 @@
 				else {
 					instance._removeBodyFixed();
 				}
+
+				toggler.removeClass('active');
 
 				setTimeout(function() {
 					container.addClass('closed');
@@ -433,7 +448,7 @@
 			var container = element;
 
 			if (instance.useDataAttribute) {
-				container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 
 				container.on(instance.options.transitionEnd, function(event) {
 					event.stopPropagation();
@@ -467,14 +482,12 @@
 		_onDelegateClickTrigger: function(element) {
 			var instance = this;
 
-			var doc = $(document);
-
 			var container = element;
 
 			if (instance.useDataAttribute) {
 				var togglerSelector = instance.options.target ? '[data-target="' + instance.options.target + '"]' : '[href="' + element.attr('href') + '"]';
 
-				container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 
 				container.on(instance.options.transitionEnd, function(event) {
 					event.stopPropagation();
@@ -607,7 +620,7 @@
 				element.addClass('sidenav-right');
 			}
 
-			if (type === 'fixed' || type === 'fixed-push') {
+			if (type === 'fixed' || type === 'fixed-push' && !instance.useDataAttribute) {
 				element.addClass('sidenav-fixed');
 			}
 
