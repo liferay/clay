@@ -360,7 +360,7 @@
 		_onClickSidenavClose: function(element) {
 			var instance = this;
 
-			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 			var closeButton = element.find('.sidenav-close').first();
 
 			if (instance.useDataAttribute) {
@@ -382,7 +382,7 @@
 		_toggleSimpleSidenav: function(element) {
 			var instance = this;
 
-			var container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 			var content = $(instance.options.content).first();
 			var toggler = instance.options.toggler;
 			var type = instance.options.type;
@@ -448,7 +448,7 @@
 			var container = element;
 
 			if (instance.useDataAttribute) {
-				container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 
 				container.on(instance.options.transitionEnd, function(event) {
 					event.stopPropagation();
@@ -482,14 +482,12 @@
 		_onDelegateClickTrigger: function(element) {
 			var instance = this;
 
-			var doc = $(document);
-
 			var container = element;
 
 			if (instance.useDataAttribute) {
 				var togglerSelector = instance.options.target ? '[data-target="' + instance.options.target + '"]' : '[href="' + element.attr('href') + '"]';
 
-				container = instance.options.target ? $(instance.options.target) : $(document).find(element.attr('href'));
+				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 
 				container.on(instance.options.transitionEnd, function(event) {
 					event.stopPropagation();
