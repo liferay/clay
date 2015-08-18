@@ -14784,7 +14784,7 @@ input.toggle-card[disabled] ~ .toggle-card-container {
 }
 
 .toggle-card-dm input[type="checkbox"] ~ .toggle-card-container {
-  border-width: 0;
+  border-width: 1px;
   padding: 0;
 }
 
@@ -18720,7 +18720,7 @@ h6.modal-title {
 
 @media screen and (min-width: 768px) {
   .product-menu .sidebar-header {
-    padding: 24px;
+    padding: 19px 24px;
   }
 }
 
@@ -18731,7 +18731,7 @@ h6.modal-title {
 @media screen and (min-width: 768px) {
   .product-menu .sidebar-body {
     bottom: 80px;
-    top: 233px;
+    top: 223px;
   }
 }
 
@@ -18749,7 +18749,7 @@ h6.modal-title {
 
 .product-menu .list-group-item, .product-menu .list-group-heading {
   border-top-width: 0;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .product-menu .list-group-heading {
@@ -19236,6 +19236,10 @@ input[type="range"].vertical {
   position: absolute;
 }
 
+.toggle-card-dm input[type="checkbox"] ~ .toggle-card-container {
+  border-width: 0;
+}
+
 @media screen and (min-width: 768px) {
   .toggle-switch-bar .toggle-switch-handle {
     min-width: 60px;
@@ -19390,7 +19394,7 @@ input[type="range"].vertical {
 .tooltip-inner {
   border-radius: 4px;
   line-height: 24px;
-  padding: 12px 24px;
+  padding: 8px 24px;
   max-width: 230px;
 }
 

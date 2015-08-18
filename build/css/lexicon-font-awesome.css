@@ -14769,7 +14769,7 @@ input.toggle-card[disabled] ~ .toggle-card-container {
 }
 
 .toggle-card-dm input[type="checkbox"] ~ .toggle-card-container {
-  border-width: 0;
+  border-width: 1px;
   padding: 0;
 }
 
