@@ -44,7 +44,7 @@
 
 .product-menu .sidebar-header {
 	@media screen and (min-width: $grid-float-breakpoint) {
-		padding: 24px;
+		padding: 19px 24px;
 	}
 }
 
@@ -57,7 +57,7 @@
 .product-menu .sidebar-body {
 	@media screen and (min-width: $grid-float-breakpoint) {
 		bottom: 80px;
-		top: 233px;
+		top: 223px;
 	}
 }
 
@@ -79,7 +79,7 @@
 
 	.list-group-item {
 		border-top-width: 0;
-		padding: 20px;
+		padding: 10px 20px;
 	}
 
 	.list-group-heading {
