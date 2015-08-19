@@ -8324,10 +8324,8 @@ button.close {
   background-color: #eeeeee;
   border-width: 0;
   height: 1px;
-}
-
-.card {
-  overflow: hidden;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .card .card-row {
@@ -8336,6 +8334,22 @@ button.close {
 
 .card .figure {
   overflow: visible;
+}
+
+.card-header:before,
+.card-header:after,
+.card-footer:before,
+.card-footer:after,
+.card-section:before,
+.card-section:after {
+  content: " ";
+  display: table;
+}
+
+.card-header:after,
+.card-footer:after,
+.card-section:after {
+  clear: both;
 }
 
 .card-header .divider,
@@ -8358,7 +8372,6 @@ button.close {
 }
 
 .card-horizontal {
-  overflow: hidden;
   position: relative;
 }
 
@@ -8441,7 +8454,6 @@ button.close {
 .card-row {
   display: table;
   height: 100%;
-  overflow: hidden;
   width: 100%;
 }
 
@@ -8463,21 +8475,14 @@ button.close {
 }
 
 .card-row .card-col-gutters .divider {
-  margin-left: -10%;
-  margin-right: -10%;
+  margin-left: -5%;
+  margin-right: -5%;
 }
 
 .card-row [class*="card-col"] {
   display: table-cell;
-  overflow: hidden;
   position: relative;
   vertical-align: middle;
-}
-
-.card-row [class*="card-col"] .img-absolute {
-  left: 0;
-  position: absolute;
-  top: 0;
 }
 
 .card-row [class*="card-col"] .img-responsive {
@@ -8487,6 +8492,13 @@ button.close {
 
 .card-row-padded {
   padding: 10px;
+}
+
+[class*="card-col"] figure,
+[class*="card-col"] .figure {
+  height: 100%;
+  margin-bottom: 0;
+  width: 100%;
 }
 
 .card-dm {
@@ -8692,6 +8704,54 @@ button.close {
 .control-menu-icon-label {
   display: block;
   font-size: 14px;
+}
+
+.crop-img {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.crop-img img {
+  left: 0;
+  position: absolute;
+}
+
+.crop-img-center img {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.crop-img-right img {
+  left: auto;
+  right: 0;
+}
+
+.crop-img-bottom img {
+  bottom: 0;
+  top: auto;
+}
+
+.crop-img-middle img {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.crop-img-center.crop-img-middle img {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .dropdown-menu form .checkbox-default:hover,
