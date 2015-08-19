@@ -21,12 +21,12 @@
 		background-color: $card-divider-bg;
 		border-width: 0;
 		height: $card-divider-height;
+		margin-bottom: 10px;
+		margin-top: 10px;
 	}
 }
 
 .card {
-	overflow: hidden;
-
 	.card-row {
 		width: 100.4%; // Webkit rounding
 	}
@@ -39,6 +39,8 @@
 .card-header,
 .card-footer,
 .card-section {
+	@include clearfix();
+
 	.divider {
 		margin-left: -$card-gutter-width;
 		margin-right: -$card-gutter-width;
@@ -58,7 +60,6 @@
 }
 
 .card-horizontal {
-	overflow: hidden;
 	position: relative;
 
 	&.card-circle {
@@ -111,7 +112,6 @@
 .card-row {
 	display: table;
 	height: 100%;
-	overflow: hidden;
 	width: 100%;
 
 	&.card-row-padded .card-col-gutters {
@@ -133,22 +133,15 @@
 		padding: 0 3%;
 
 		.divider {
-			margin-left: -10%;
-			margin-right: -10%;
+			margin-left: -5%;
+			margin-right: -5%;
 		}
 	}
 
 	[class*="card-col"] {
 		display: table-cell;
-		overflow: hidden;
 		position: relative;
 		vertical-align: middle;
-
-		.img-absolute {
-			left: 0;
-			position: absolute;
-			top: 0;
-		}
 
 		.img-responsive {
 			max-width: none;
@@ -159,6 +152,15 @@
 
 .card-row-padded {
 	padding: $card-gutter-width;
+}
+
+[class*="card-col"] {
+	figure,
+	.figure {
+		height: 100%;
+		margin-bottom: 0;
+		width: 100%;
+	}
 }
 
 // Card Skins
