@@ -250,10 +250,10 @@ collapse in
 				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
 			</div>
 
-			<hr class="divider" />
+			<div class="divider"></div>
 
 			<div class="card-footer">
-				<div class="link-group">
+				<div class="link-group" style="margin-top:0;">
 					<a href="#" class="btn btn-default btn-block" role="button">Subscribe</a>
 				</div>
 			</div>
@@ -413,7 +413,9 @@ collapse in
 		<div class="card-horizontal">
 			<div class="card-row">
 				<div class="card-col-5">
-					<img alt="thumbnail" class="img-absolute" src="../../images/thumbnail_hot_air_ballon.jpg">
+					<div class="crop-img crop-img-middle crop-img-center">
+						<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+					</div>
 				</div>
 
 				<div class="card-col-7 card-col-gutters">
@@ -421,8 +423,39 @@ collapse in
 
 					<p>Space Program LLC is offering balloon rides to space!</p>
 
+					<div class="divider"></div>
+
 					<div class="link-group">
-						<hr class="divider" />
+						<button type="button" class="btn btn-primary btn-xs">Sign Up</button>
+						<button type="button" class="btn btn-link btn-xs">No Thanks</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card-horizontal">
+			<div class="card-row">
+				<div class="card-col-5">
+					<div class="figure">
+						<div class="crop-img crop-img-center crop-img-middle">
+							<img alt="Image of a dock." src="../../images/thumbnail_dock.jpg">
+						</div>
+
+						<div class="figcaption-bottom">
+							Carajillo strong, grounds redeye.
+						</div>
+					</div>
+				</div>
+
+				<div class="card-col-7 card-col-gutters">
+					<h4>Space Elevator</h4>
+
+					<p>Space Program LLC is building an elevator to space!</p>
+
+					<div class="divider"></div>
+
+					<div class="link-group">
 						<button type="button" class="btn btn-primary btn-xs">Sign Up</button>
 						<button type="button" class="btn btn-link btn-xs">No Thanks</button>
 					</div>
@@ -432,9 +465,9 @@ collapse in
 	</div>
 
 	<div class="col-md-7">
-		<h3 class="usage-heading">Use img-absolute to make an image fill card-col</h3>
+		<h3 class="usage-heading">Make an image fill card-col</h3>
 
-		<p>Make an image fill the width and height of a card column (image width and height must be larger than the column) by using <code>.img-absolute</code> and manually setting its top, right, bottom, or left position.</p>
+		<p>Use the <a href="../images-and-thumbnails/#cropImage">crop-img</a> and <a href="../figures">figures</a> component to make an image fill a card column.</p>
 	</div>
 
 	<div class="col-md-12">
@@ -470,7 +503,7 @@ collapse in
 	</div>
 
 	<div class="col-md-4">
-		<div class="card" style="height:150px;">
+		<div class="card">
 			<div class="card-section text-center">
 				<p style="margin-top: 20px;font-size: 21px;font-weight: 200;margin-bottom: 0;">New Users</p>
 				<p>14,543</p>
