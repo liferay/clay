@@ -93,6 +93,72 @@ section: Components
 
 	<div class="row row-spacing">
 		<div class="col-md-12">
+			<h3>Figures with Crop Img</h3>
+
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Combine <code>figure</code> with <a href="../images-and-thumbnails/#cropImage">crop-img</a> to add captions to your cropped images, setting the height on <code>figure</code> or <code>crop-img</code> is required. </p>
+			</blockquote>
+		</div>
+
+		<div class="col-md-4">
+			<h6>figcaption</h6>
+			<div class="figure">
+				<div class="crop-img crop-img-middle crop-img-center" style="height: 125px;">
+					<img alt="Cropped image of a coffee mug" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+				</div>
+
+				<div class="figcaption">
+					Carajillo strong, grounds redeye half and half so percolator.
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<h6>figcaption-bottom</h6>
+			<div class="figure" style="height: 179px;">
+				<div class="crop-img crop-img-middle crop-img-center">
+					<img alt="Cropped image of a house on a pier" src="{{rootPath}}/images/thumbnail_dock.jpg">
+				</div>
+
+				<div class="figcaption-bottom">
+					Carajillo strong, grounds redeye half and half so percolator.
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<h6>figcaption-top</h6>
+			<div class="figure" style="height: 179px;">
+				<div class="crop-img crop-img-middle crop-img-center">
+					<img alt="Cropped image of a desk" src="{{rootPath}}/images/thumbnail_desk.jpg">
+				</div>
+
+				<div class="figcaption-top">
+					Carajillo strong, grounds redeye half and half so percolator.
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4" style="clear: left;">
+			<h6>figcaption-full</h6>
+			<div class="figure" style="height: 179px;">
+				<div class="crop-img crop-img-middle crop-img-center">
+					<img alt="Cropped image of typewriter" src="{{rootPath}}/images/thumbnail_typewriter.jpg">
+				</div>
+
+				<div class="figcaption-full">
+					<div class="equal-height-columns">
+						<div class="equal-height-column-cell">
+							Carajillo strong, grounds redeye half and half so percolator.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col-md-12">
 			<h3>Figcaption Helpers</h3>
 			<blockquote class="blockquote-sm blockquote-success">
 				<p>Change the background color of <code>.figcaption</code>.</p>
