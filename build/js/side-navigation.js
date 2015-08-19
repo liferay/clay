@@ -301,14 +301,14 @@
 
 					instance._removeBodyFixed();
 
-					toggler.removeClass('active').removeClass('sidenav-transition');
+					toggler.removeClass('open').removeClass('sidenav-transition');
 
 					container.trigger('closed.lexicon.sidenav');
 				}
 				else {
 					instance.setEqualHeight(container);
 
-					toggler.addClass('active').removeClass('sidenav-transition');
+					toggler.addClass('open').removeClass('sidenav-transition');
 
 					container.trigger('open.lexicon.sidenav');
 				}
@@ -412,7 +412,7 @@
 					content.addClass('sidenav-transition');
 				}
 
-				toggler.addClass('active');
+				toggler.addClass('open');
 
 				setTimeout(function() {
 					container.removeClass('closed');
@@ -433,7 +433,7 @@
 					instance._removeBodyFixed();
 				}
 
-				toggler.removeClass('active');
+				toggler.removeClass('open');
 
 				setTimeout(function() {
 					container.addClass('closed');
