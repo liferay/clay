@@ -9985,9 +9985,11 @@ button.list-group-heading:hover,
 }
 
 .modal-open {
+  bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
+  top: 0;
 }
 
 .modal-iframe iframe {
