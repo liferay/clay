@@ -6,11 +6,32 @@
 	}
 
 	.form-control {
-		color: $input-label-color;
+		color: $input-color;
 
 		&,
 		&:focus {
 			box-shadow: none;
 		}
+	}
+}
+
+.has-success {
+	.checkbox-default label,
+	.radio-default label {
+		color: $state-success-text;
+	}
+}
+
+.has-warning {
+	.checkbox-default label,
+	.radio-default label {
+		color: $state-warning-text;
+	}
+}
+
+.has-error {
+	.checkbox-default label,
+	.radio-default label {
+		color: $state-danger-text;
 	}
 }
