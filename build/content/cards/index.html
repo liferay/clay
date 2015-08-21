@@ -261,7 +261,7 @@ collapse
 		<h3>Horizontal Card</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Display card content horizontally. <code>.card-horizontal</code> uses a simplified version of Bootstrap's grid system to help align content. It is based on the 12 column grid (default), but columns can be customized to any size.</p>
+			<p>Display card content horizontally. <code>.card-horizontal</code> uses a simplified version of Bootstrap 3's grid system to help align content. It is based on the 12 column grid (default), but columns can be customized to any size.</p>
 
 			<p>Card columns do not break at smaller screen widths. They were designed to help align small chunks of content and are not meant to be used for page layouts.</p>
 		</blockquote>
@@ -496,6 +496,137 @@ collapse
 </div>
 
 	</div>
+</div>
+
+<div class="row row-spacing" id="truncatingText">
+	<div class="col-md-12">
+		<h3>Truncating Text Inside Horizontal Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use class <code>card-row-layout-fixed</code> on card row and add class <code>truncate-text</code> on a text element.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded card-row-layout-fixed">
+				<div class="card-col-5">
+					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+				</div>
+
+				<div class="card-col-7 card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+					<p class="truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ul class="list-unstyled" style="clear:both;">
+		<li class="col-md-6">
+			<div class="card-horizontal">
+				<div class="card-row card-row-padded card-row-layout-fixed" style="padding-right:2px;">
+					<div class="card-col-field" style="width:60px;">
+						<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<h4 class="truncate-text" title="5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F">5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F</h4>
+					</div>
+					<div class="card-col-field" style="width:32px;vertical-align:top;">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="col-md-6">
+			<div class="card-horizontal">
+				<div class="card-row card-row-padded card-row-layout-fixed" style="padding-right:2px;">
+					<div class="card-col-field" style="width:60px;">
+						<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<h4 title="Folder 01">Folder 01</h4>
+					</div>
+					<div class="card-col-field" style="width:32px;vertical-align:top;">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="col-md-6">
+			<div class="card-horizontal">
+				<div class="card-row card-row-padded card-row-layout-fixed" style="padding-right:2px;">
+					<div class="card-col-field" style="width:60px;">
+						<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<h4 title="Folder 02">Folder 02</h4>
+					</div>
+					<div class="card-col-field" style="width:32px;vertical-align:top;">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="col-md-6">
+			<div class="card-horizontal">
+				<div class="card-row card-row-padded card-row-layout-fixed" style="padding-right:2px;">
+					<div class="card-col-field" style="width:60px;">
+						<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+					</div>
+					<div class="card-col-content card-col-gutters">
+						<h4 title="Folder 03">Folder 03</h4>
+					</div>
+					<div class="card-col-field" style="width:32px;vertical-align:top;">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
 </div>
 
 <div class="row row-spacing uxgl-vertical-card">
