@@ -130,11 +130,11 @@
 	}
 
 	.card-col-gutters {
-		padding: 0 3%;
+		padding: 0 10px;
 
 		.divider {
-			margin-left: -5%;
-			margin-right: -5%;
+			margin-left: -10px;
+			margin-right: -10px;
 		}
 	}
 
@@ -142,11 +142,20 @@
 		display: table-cell;
 		position: relative;
 		vertical-align: middle;
+		word-break: break-word;
 
 		.img-responsive {
 			max-width: none;
 			width: 101%;
 		}
+	}
+}
+
+.card-row-layout-fixed {
+	table-layout: fixed;
+
+	.card-col-field {
+		width: auto;
 	}
 }
 
@@ -206,5 +215,39 @@
 	&:focus,
 	&:hover {
 		text-decoration: none;
+	}
+}
+
+.card-horizontal-dm {
+	.card-row {
+		padding: 10px 2px 10px 10px;
+		table-layout: fixed;
+	}
+
+	.card-col-field {
+		&:first-child {
+			width: 60px;
+
+			.icon-monospaced {
+				background-color: #F1F5FA;
+				height: 60px;
+				line-height: 60px;
+				width: 60px;
+			}
+		}
+
+		&:last-child {
+			vertical-align: top;
+			width: 32px;
+		}
+	}
+
+	.card-col-content {
+		h1, h2, h3, h4, h5, h6, a, div, p, span {
+			display: block;
+			margin: 0;
+
+			@include text-overflow;
+		}
 	}
 }
