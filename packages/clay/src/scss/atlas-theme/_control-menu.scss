@@ -1,6 +1,6 @@
-.control-menu-nav {
-	.btn-default,
-	.form-control {
+.control-menu-nav > li {
+	> .btn-default,
+	> .form-control {
 		background-color: transparent;
 		color: #FFF;
 	}
