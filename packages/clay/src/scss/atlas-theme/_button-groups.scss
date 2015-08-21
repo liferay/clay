@@ -31,17 +31,6 @@
 	box-shadow: none;
 }
 
-.btn-toolbar {
-	.btn-group {
-		border: solid transparent;
-		z-index: 1;
-	}
-
-	> .btn-group-vertical {
-		margin-left: 5px;
-	}
-}
-
 .btn-group-vertical {
 	> .btn + .btn,
 	> .btn + .btn-group,
