@@ -14189,8 +14189,8 @@ a.btn-action [class*="icon-"],
   color: #869CAD;
 }
 
-.control-menu-nav .btn-default,
-.control-menu-nav .form-control {
+.control-menu-nav > li > .btn-default,
+.control-menu-nav > li > .form-control {
   background-color: transparent;
   color: #FFF;
 }
