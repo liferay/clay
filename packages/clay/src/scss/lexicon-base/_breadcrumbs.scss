@@ -1,0 +1,13 @@
+.breadcrumb > li {
+	max-width: 150px;
+
+	@include text-overflow;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		max-width: 300px;
+	}
+
+	+ li:before {
+		content: "#{$breadcrumb-separator}"+"\00a0";
+	}
+}
