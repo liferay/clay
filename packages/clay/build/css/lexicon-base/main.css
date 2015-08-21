@@ -8255,6 +8255,23 @@ button.close {
   background-color: #f0ad4e;
 }
 
+.breadcrumb > li {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .breadcrumb > li {
+    max-width: 300px;
+  }
+}
+
+.breadcrumb > li + li:before {
+  content: "/ ";
+}
+
 .btn-action,
 .btn-action-secondary .btn {
   z-index: 1000;
@@ -8471,23 +8488,32 @@ button.close {
 }
 
 .card-row .card-col-gutters {
-  padding: 0 3%;
+  padding: 0 10px;
 }
 
 .card-row .card-col-gutters .divider {
-  margin-left: -5%;
-  margin-right: -5%;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .card-row [class*="card-col"] {
   display: table-cell;
   position: relative;
   vertical-align: middle;
+  word-break: break-word;
 }
 
 .card-row [class*="card-col"] .img-responsive {
   max-width: none;
   width: 101%;
+}
+
+.card-row-layout-fixed {
+  table-layout: fixed;
+}
+
+.card-row-layout-fixed .card-col-field {
+  width: auto;
 }
 
 .card-row-padded {
@@ -8540,6 +8566,35 @@ button.close {
 .card-dm-more-options:focus,
 .card-dm-more-options:hover {
   text-decoration: none;
+}
+
+.card-horizontal-dm .card-row {
+  padding: 10px 2px 10px 10px;
+  table-layout: fixed;
+}
+
+.card-horizontal-dm .card-col-field:first-child {
+  width: 60px;
+}
+
+.card-horizontal-dm .card-col-field:first-child .icon-monospaced, .card-horizontal-dm .card-col-field:first-child .help-icon {
+  background-color: #F1F5FA;
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+}
+
+.card-horizontal-dm .card-col-field:last-child {
+  vertical-align: top;
+  width: 32px;
+}
+
+.card-horizontal-dm .card-col-content h1, .card-horizontal-dm .card-col-content h2, .card-horizontal-dm .card-col-content h3, .card-horizontal-dm .card-col-content h4, .card-horizontal-dm .card-col-content h5, .card-horizontal-dm .card-col-content h6, .card-horizontal-dm .card-col-content a, .card-horizontal-dm .card-col-content div, .card-horizontal-dm .card-col-content p, .card-horizontal-dm .card-col-content span {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .control-menu {
@@ -13048,7 +13103,8 @@ a.bg-default:focus {
   line-height: normal;
 }
 
-mark, .mark {
+mark,
+.mark {
   background-color: #fcf8e3;
   box-decoration-break: clone;
   box-shadow: -0.25em 0 0 #fcf8e3;
@@ -13060,7 +13116,8 @@ mark, .mark {
   white-space: pre-wrap;
 }
 
-mark:before, .mark:before {
+mark:before,
+.mark:before {
   background-color: #fcf8e3;
   bottom: 0;
   content: '';
@@ -13070,6 +13127,13 @@ mark:before, .mark:before {
   top: 0;
   width: 0.25em;
   z-index: -1;
+}
+
+.truncate-text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .blockquote-xs {
