@@ -17037,7 +17037,7 @@ fieldset[disabled] .form-control:-ms-input-placeholder {
 .has-success .form-control,
 .has-warning .form-control,
 .has-error .form-control {
-  color: #869CAD;
+  color: #29353D;
 }
 
 .has-success .form-control,
@@ -17047,6 +17047,21 @@ fieldset[disabled] .form-control:-ms-input-placeholder {
 .has-error .form-control,
 .has-error .form-control:focus {
   box-shadow: none;
+}
+
+.has-success .checkbox-default label,
+.has-success .radio-default label {
+  color: #76BD4A;
+}
+
+.has-warning .checkbox-default label,
+.has-warning .radio-default label {
+  color: #F5984C;
+}
+
+.has-error .checkbox-default label,
+.has-error .radio-default label {
+  color: #CC6677;
 }
 
 .icon-monospaced.btn:before, .btn.help-icon:before {
