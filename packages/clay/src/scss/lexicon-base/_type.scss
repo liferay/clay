@@ -77,8 +77,17 @@
 
 // Marked Text
 
-mark, .mark {
+mark,
+.mark {
 	@include highlight-text();
+}
+
+// Truncate Text
+
+.truncate-text {
+	display: block;
+
+	@include text-overflow;
 }
 
 // Blockquote Variations
