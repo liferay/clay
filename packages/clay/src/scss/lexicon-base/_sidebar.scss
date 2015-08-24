@@ -68,7 +68,7 @@
 
 // Product Menu
 
-.product-menu {
+.product-menu1 {
 	.list-group-heading {
 		h1, h2, h3, h4, h5, h6 {
 			margin-bottom: 0;
@@ -93,7 +93,7 @@
 	}
 }
 
-.product-menu .sidebar-body {
+.product-menu1 .sidebar-body {
 	bottom: 65px;
 	left: 0;
 	padding-bottom: 0;
@@ -108,7 +108,7 @@
 	}
 }
 
-.product-menu .sidebar-header {
+.product-menu1 .sidebar-header {
 	padding-bottom: 5px;
 	padding-top: 5px;
 
@@ -117,7 +117,7 @@
 	}
 }
 
-.product-menu {
+.product-menu1 {
 	.nav a {
 		color: $product-menu-nav-link-color;
 	}
@@ -192,7 +192,7 @@
 
 // Product Menu Footer
 
-.product-menu .sidebar-footer {
+.product-menu1 .sidebar-footer {
 	bottom: 0;
 	padding: 10px 24px;
 	position: absolute;
@@ -218,7 +218,7 @@
 	}
 }
 
-.product-menu {
+.product-menu1 {
 	.user-heading {
 		font-size: 19px;
 		font-weight: 500;
@@ -242,7 +242,7 @@
 
 // Product Menu Tabs
 
-.product-menu-tabs {
+.product-menu-tabs1 {
 	margin-left: 24px;
 	margin-right: 24px;
 	margin-top: 15px;
@@ -252,7 +252,7 @@
 	}
 }
 
-.product-menu-tabs {
+.product-menu-tabs1 {
 	.sticker {
 		left: 5px;
 		top: 3px;
@@ -269,7 +269,7 @@
 	}
 }
 
-.product-menu-tab-icon {
+.product-menu-tab-icon1 {
 	.label-sm {
 		left: 50%;
 		position: absolute;
@@ -282,7 +282,7 @@
 	}
 }
 
-.product-menu-tab-text {
+.product-menu-tab-text1 {
 	font-size: 11px;
 }
 
@@ -301,16 +301,6 @@
 .sidebar-inverse {
 	background-color: $sidebar-inverse-bg;
 	color: $sidebar-inverse-color;
-
-	// a {
-	// 	color: $sidebar-inverse-link-color;
-
-	// 	&:focus,
-	// 	&:hover {
-	// 		color: $sidebar-inverse-link-hover-color;
-	// 		text-decoration: none;
-	// 	}
-	// }
 
 	.nav > li > a {
 		&:focus,
