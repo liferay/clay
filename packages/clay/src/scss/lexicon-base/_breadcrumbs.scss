@@ -1,13 +1,17 @@
-.breadcrumb > li {
-	max-width: 150px;
+.breadcrumb {
+	padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal 3px;
 
-	@include text-overflow;
+	> li {
+		max-width: 150px;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
-		max-width: 300px;
-	}
+		@include text-overflow;
 
-	+ li:before {
-		content: "#{$breadcrumb-separator}"+"\00a0";
+		@media screen and (min-width: $grid-float-breakpoint) {
+			max-width: 300px;
+		}
+
+		+ li:before {
+			content: "#{$breadcrumb-separator}"+"\00a0";
+		}
 	}
 }
