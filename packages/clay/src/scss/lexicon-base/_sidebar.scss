@@ -87,7 +87,7 @@
 
 			&:active {
 				box-shadow: none;
-				color: $product-menu-nav-link-color;
+				color: $product-menu1-nav-link-color;
 			}
 		}
 	}
@@ -119,13 +119,13 @@
 
 .product-menu1 {
 	.nav a {
-		color: $product-menu-nav-link-color;
+		color: $product-menu1-nav-link-color;
 	}
 
 	.nav-equal-height {
 		.nav > .active,
 		> .active {
-			border-left: 2px solid $product-menu-nav-active-link-color;
+			border-left: 2px solid $product-menu1-nav-active-link-color;
 		}
 
 		> .active > a,
@@ -133,13 +133,13 @@
 			&,
 			&:focus,
 			&:hover {
-				color: $product-menu-nav-active-link-color;
+				color: $product-menu1-nav-active-link-color;
 			}
 		}
 
 		> .active,
 		.nav > .active {
-			border-left-color: $product-menu-nav-active-link-color;
+			border-left-color: $product-menu1-nav-active-link-color;
 		}
 	}
 
@@ -147,7 +147,7 @@
 		.collapse-icon {
 			&:after,
 			&.collapsed:after {
-				background-color: $product-menu-collapse-icon-bg;
+				background-color: $product-menu1-collapse-icon-bg;
 				content: '';
 				display: block;
 				height: 9px;
@@ -159,7 +159,7 @@
 			}
 
 			&:before {
-				content: $product-menu-nav-equal-height-heading-open-collapse-icon;
+				content: $product-menu1-nav-equal-height-heading-open-collapse-icon;
 				font-size: 13px;
 				left: -6px;
 				right: auto;
@@ -167,23 +167,23 @@
 			}
 
 			&.collapsed:before {
-				content: $product-menu-nav-equal-height-heading-closed-collapse-icon;
+				content: $product-menu1-nav-equal-height-heading-closed-collapse-icon;
 			}
 		}
 	}
 
 	.nav-nested-margins > li .nav > li {
-		border-left: 2px solid $product-menu-nav-link-color;
+		border-left: 2px solid $product-menu1-nav-link-color;
 
 		.nav > li {
-			border-left: 1px dotted $product-menu-nav-link-color;
+			border-left: 1px dotted $product-menu1-nav-link-color;
 			margin-bottom: 1px;
 
 			&.active {
-				border-left: 1px solid $product-menu-nav-active-link-color;
+				border-left: 1px solid $product-menu1-nav-active-link-color;
 
 				> a {
-					color: $product-menu-nav-active-link-color;
+					color: $product-menu1-nav-active-link-color;
 				}
 			}
 		}
@@ -212,9 +212,9 @@
 	}
 
 	.user-signout {
-		background-color: $product-menu-user-signout-bg;
-		border-radius: $product-menu-user-signout-border-radius;
-		color: $product-menu-user-signout-icon-color;
+		background-color: $product-menu1-user-signout-bg;
+		border-radius: $product-menu1-user-signout-border-radius;
+		color: $product-menu1-user-signout-icon-color;
 	}
 }
 
