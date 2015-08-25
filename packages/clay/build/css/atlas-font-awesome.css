@@ -10321,6 +10321,10 @@ button.close {
   background-color: #F5984C;
 }
 
+.breadcrumb {
+  padding: 4px 15px 3px;
+}
+
 .breadcrumb > li {
   max-width: 150px;
   overflow: hidden;
