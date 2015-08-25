@@ -105,7 +105,7 @@
 			}
 
 			&:before {
-				color: $product-menu-nav-link-color;
+				color: $product-menu1-nav-link-color;
 				font-size: 15px;
 				left: -8px;
 			}
@@ -116,7 +116,7 @@
 .product-menu1 {
 	.site-administration-toolbar {
 		a {
-			color: $product-menu-nav-link-color;
+			color: $product-menu1-nav-link-color;
 		}
 
 		.active a {
@@ -195,7 +195,7 @@
 				&,
 				&:focus,
 				&:hover {
-					color: $product-menu-header-color;
+					color: $product-menu1-header-color;
 				}
 			}
 		}
@@ -205,20 +205,20 @@
 // Product Menu Skins
 
 .product-menu1 .sidebar-header {
-	background-color: $product-menu-header-bg;
+	background-color: $product-menu1-header-bg;
 
 	a {
-		color: $product-menu-header-link-color;
+		color: $product-menu1-header-link-color;
 
 		&:focus,
 		&:hover {
-			color: $product-menu-header-link-hover-color;
+			color: $product-menu1-header-link-hover-color;
 		}
 	}
 }
 
 .product-menu1 .sidebar-header-logo {
-	background-color: $product-menu-header-logo-bg;
+	background-color: $product-menu1-header-logo-bg;
 	border-radius: $border-radius-base;
 }
 
@@ -247,7 +247,7 @@
 
 .product-menu-tab-icon1 {
 	@media screen and (min-width: $grid-float-breakpoint) {
-		background-color: $product-menu-tabs-bg;
+		background-color: $product-menu1-tabs-bg;
 		border-radius: $border-radius-base;
 	}
 }
@@ -257,9 +257,9 @@
 		&,
 		&:focus,
 		&:hover {
-			background-color: $product-menu-tabs-active-bg;
-			border-color: $product-menu-tabs-active-border;
-			color: $product-menu-tabs-active-color;
+			background-color: $product-menu1-tabs-active-bg;
+			border-color: $product-menu1-tabs-active-border;
+			color: $product-menu1-tabs-active-color;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
 				background-color: transparent;
@@ -268,9 +268,9 @@
 	}
 
 	> li > a {
-		background-color: $product-menu-tabs-bg;
+		background-color: $product-menu1-tabs-bg;
 		border-radius: $border-radius-base;
-		color: $product-menu-tabs-color;
+		color: $product-menu1-tabs-color;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
 			background-color: transparent;
@@ -278,9 +278,9 @@
 
 		&:focus,
 		&:hover {
-			background-color: $product-menu-tabs-hover-bg;
-			border-color: $product-menu-tabs-hover-border;
-			color: $product-menu-tabs-hover-color;
+			background-color: $product-menu1-tabs-hover-bg;
+			border-color: $product-menu1-tabs-hover-border;
+			color: $product-menu1-tabs-hover-color;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
 				background-color: transparent;
@@ -290,7 +290,7 @@
 
 	> .active .product-menu-tab-icon1 {
 		@media screen and (min-width: $grid-float-breakpoint) {
-			background-color: $product-menu-tabs-active-bg;
+			background-color: $product-menu1-tabs-active-bg;
 		}
 	}
 }
