@@ -10376,21 +10376,6 @@ button.close {
   position: relative;
 }
 
-.card.card-circle,
-.card-horizontal.card-circle {
-  border-radius: 20px;
-}
-
-.card.card-rounded,
-.card-horizontal.card-rounded {
-  border-radius: 4px;
-}
-
-.card.card-square,
-.card-horizontal.card-square {
-  border-radius: 0;
-}
-
 .card .divider,
 .card-horizontal .divider {
   background-color: #eeeeee;
@@ -10580,6 +10565,60 @@ button.close {
   height: 100%;
   margin-bottom: 0;
   width: 100%;
+}
+
+.card-circle {
+  border-radius: 20px;
+}
+
+.card-circle .card-header:first-child,
+.card-circle .card-section:first-child,
+.card-circle .card-footer:first-child {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-circle .card-header:last-child,
+.card-circle .card-section:last-child,
+.card-circle .card-footer:last-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card-rounded {
+  border-radius: 4px;
+}
+
+.card-rounded .card-header:first-child,
+.card-rounded .card-section:first-child,
+.card-rounded .card-footer:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.card-rounded .card-header:last-child,
+.card-rounded .card-section:last-child,
+.card-rounded .card-footer:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.card-square {
+  border-radius: 0;
+}
+
+.card-square .card-header:first-child,
+.card-square .card-section:first-child,
+.card-square .card-footer:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.card-square .card-header:last-child,
+.card-square .card-section:last-child,
+.card-square .card-footer:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .card-dm {
