@@ -12065,7 +12065,6 @@ button.list-group-heading:hover,
   background-color: #777777;
 }
 
-/* ---------- Tables --------- */
 .table-responsive {
   overflow-x: auto;
   overflow-y: hidden;
@@ -12178,6 +12177,81 @@ button.list-group-heading:hover,
 @media screen and (max-width: 479px) {
   .table-responsive-flip .table > thead {
     max-width: 100px;
+  }
+}
+
+.table-list {
+  table-layout: fixed;
+}
+
+.table-list > thead > tr > td,
+.table-list > thead > tr > th {
+  border-bottom-width: 0;
+}
+
+.table-list > tbody > tr > td,
+.table-list > tbody > tr > th,
+.table-list > tfoot > tr > td,
+.table-list > tfoot > tr > th {
+  border-top-width: 0;
+  vertical-align: middle;
+}
+
+.table-list > tbody td,
+.table-list > tfoot td {
+  box-shadow: inset 0 -1px #ddd;
+}
+
+.table-list > tbody > tr.active:hover td,
+.table-list > tbody > tr.active td,
+.table-list > tfoot > tr.active:hover td,
+.table-list > tfoot > tr.active td {
+  box-shadow: inset 0 -1px #ddd;
+}
+
+.table-list > tbody > tr:hover td,
+.table-list > tfoot > tr:hover td {
+  box-shadow: inset 0 -1px #ddd;
+}
+
+.table-list .checkbox-default,
+.table-list .checkbox-default label {
+  margin-bottom: 0;
+}
+
+.table-list .checkbox-cell {
+  width: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .table-list .label-cell {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .table-list .label-cell {
+    width: 140px;
+  }
+}
+
+.table-responsive .table-list .label-cell {
+  width: 75px;
+}
+
+@media screen and (min-width: 1200px) {
+  .table-responsive .table-list .label-cell {
+    width: 140px;
+  }
+}
+
+.table-responsive .table-list .text-cell {
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .table-responsive .table-list .text-cell {
+    width: auto;
   }
 }
 
