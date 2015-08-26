@@ -14,3 +14,19 @@
 		}
 	}
 }
+
+// Table List Skin
+
+.table-list {
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			height: $table-list-row-height;
+		}
+	}
+
+	a {
+		color: $table-list-link-color;
+	}
+}
