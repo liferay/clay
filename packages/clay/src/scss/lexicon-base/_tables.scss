@@ -1,5 +1,3 @@
-/* ---------- Tables --------- */
-
 .table-responsive {
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -157,6 +155,84 @@
 		.table {
 			> thead {
 				max-width: 100px;
+			}
+		}
+	}
+}
+
+// Table List Skin
+
+.table-list {
+	table-layout: fixed;
+
+	> thead > tr > td,
+	> thead > tr > th {
+		border-bottom-width: 0;
+	}
+
+	> tbody > tr > td,
+	> tbody > tr > th,
+	> tfoot > tr > td,
+	> tfoot > tr > th {
+		border-top-width: 0;
+		vertical-align: middle;
+	}
+
+	> tbody,
+	> tfoot {
+		td {
+			box-shadow: inset 0 -#{$table-list-row-border-bottom-width} $table-list-row-border-color;
+		}
+
+		> tr.active {
+			&:hover td,
+			td {
+				box-shadow: inset 0 -#{$table-list-row-active-border-bottom-width} $table-list-row-active-border-color;
+			}
+		}
+
+		> tr:hover {
+			td {
+				box-shadow: inset 0 -#{$table-list-row-border-bottom-width} $table-list-row-border-color;
+			}
+		}
+	}
+
+	.checkbox-default,
+	.checkbox-default label {
+		margin-bottom: 0;
+	}
+
+	.checkbox-cell {
+		width: 48px;
+	}
+
+	.label-cell {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			width: 100px;
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			width: 140px;
+		}
+	}
+}
+
+.table-responsive {
+	.table-list {
+		.label-cell {
+			width: 75px;
+
+			@media screen and (min-width: $screen-lg) {
+				width: 140px;
+			}
+		}
+
+		.text-cell {
+			width: 200px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				width: auto;
 			}
 		}
 	}
