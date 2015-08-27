@@ -1,6 +1,8 @@
 module.exports = function(gulp, plugins, _, config) {
 	var REGEX_SCSS = /^scss(\/|$)/;
 
+	var license = require('./copyright_banner');
+
 	gulp.task(
 		'release:clean',
 		function() {
@@ -13,6 +15,16 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task(
 		'release:build',
 		function() {
+			var REGEX_ALLOW = /\.((s)?css|js)/;
+			var REGEX_DISALLOW = /\/bootstrap\//;
+
+			var assetFilter = plugins.filter(
+				function(file) {
+					var filePath = file.path;
+
+					return REGEX_ALLOW.test(filePath) && !(REGEX_DISALLOW.test(filePath));
+				}
+			);
 
 			return gulp.src([
 				// 'src/fonts/**/*',
@@ -20,7 +32,10 @@ module.exports = function(gulp, plugins, _, config) {
 				'src/scss/+(atlas|atlas-variables|bootstrap|lexicon-base|lexicon-base-variables).scss',
 				'src/js/*.js',
 				], {base: './src'})
+			.pipe(assetFilter)
+			.pipe(plugins.header(license.tpl, license.metadata))
 			// .pipe(plugins.debug())
+			.pipe(assetFilter.restore())
 			.pipe(gulp.dest('./release'));
 		}
 	);
