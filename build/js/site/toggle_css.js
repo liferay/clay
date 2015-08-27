@@ -1,3 +1,10 @@
+/**
+* Lexicon 0.1.14
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
  (function($) {
 	var REGEX_LINK = /(atlas|lexicon)(-font-awesome)?\.css$/;
 	var REGEX_LEXICON_LINK = /(lexicon)(-font-awesome)?\.css$/;

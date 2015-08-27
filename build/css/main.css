@@ -1,4 +1,11 @@
 /**
+* Lexicon 0.1.14
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+/**
  * Calculates and sets aspect ratio
  * @param $width - width
  * @param $height - height
@@ -112,6 +119,12 @@ section.row {
   margin-top: 14px;
 }
 
+#headerTopBar .title .lexicon-version {
+  font-size: 60%;
+  line-height: 16px;
+  vertical-align: middle;
+}
+
 #headerTopBar .navbar-toggle {
   float: left;
   margin-left: -10px;
@@ -124,13 +137,9 @@ section.row {
 #headerTopBar .uxgl-site-config {
   position: absolute;
   right: 15px;
-  top: 5px;
-}
-
-@media screen and (min-width: 768px) {
-  #headerTopBar .uxgl-site-config {
-    top: 3px;
-  }
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
 }
 
 #headerTopBar .uxgl-site-config .dropdown-menu {
