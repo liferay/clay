@@ -16,14 +16,18 @@ var handlePermalink = require('../lib/handle_permalink');
 var handleTemplate = require('../lib/handle_template');
 
 module.exports = function(gulp, plugins, _, config) {
+	var license = require('./copyright_banner');
+
 	var metadata = {
 		_: _,
 		heading: '',
-		subHeading: ''
+		subHeading: '',
+		version: license.metadata.version
 	};
 
 	gulp.task('build:metalsmith', function(cb) {
 		var filter = plugins.filter(['**/*.md', '**/*.html']);
+		var assetFilter = plugins.filter(['**/*.*css', '**/*.js']);
 
 		var REGEX_VAR_FILEPATH = new RegExp(config.BOOTSTRAP_VAR_FILE + '$');
 
@@ -39,6 +43,9 @@ module.exports = function(gulp, plugins, _, config) {
 					}
 				)
 				.pipe(filter.restore())
+				.pipe(assetFilter)
+				.pipe(plugins.header(license.tpl, license.metadata))
+				.pipe(assetFilter.restore())
 				.pipe(plugins.plumber())
 				.pipe(
 					gulpsmith()

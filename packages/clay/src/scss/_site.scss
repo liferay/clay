@@ -48,6 +48,12 @@ section.row {
 		float: left;
 		margin-bottom: 14px;
 		margin-top: 14px;
+
+		.lexicon-version {
+			font-size: 60%;
+			line-height: 16px;
+			vertical-align: middle;
+		}
 	}
 
 	.navbar-toggle {
@@ -62,11 +68,9 @@ section.row {
 	.uxgl-site-config {
 		position: absolute;
 		right: 15px;
-		top: 5px;
-
-		@media screen and (min-width: 768px) {
-			top: 3px;
-		}
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 5;
 
 		.dropdown-menu {
 			width: 240px;

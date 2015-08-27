@@ -4,6 +4,8 @@ var gulp = require('gulp-help')(require('gulp'));
 var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 
+var chalk = require('chalk');
+
 var _ = require('./lib/lodash_utils');
 
 var BOOTSTRAP_VAR_FILE = path.join('src','scss', 'bootstrap', '_variables.scss');
@@ -40,7 +42,33 @@ gulp.task(
 			'release:build',
 			'release:zip',
 			'build:clean-bootstrap-patch',
-			cb
+			function() {
+				setTimeout(
+					function() {
+						var center = require('center-align');
+						var windowSize = require('window-size');
+
+						var line = '+' + (new Array(windowSize.width - 2).join('-')) + '+';
+						var footer = [
+							'',
+							'',
+							line,
+							'Remember to run "npm run deploy"!',
+							line,
+							''
+						].join('\n');
+
+						function centerAlign(len, longest, line, lines) {
+							return Math.floor((longest - len) / 2);
+						}
+
+						console.log(center(chalk.red(footer)));
+					},
+					0
+				);
+
+				cb();
+			}
 		);
 	}
 );
