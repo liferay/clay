@@ -293,3 +293,86 @@
 		}
 	}
 }
+
+// Toggle DM Cards
+
+.card-horizontal-flex.toggle-card-dm {
+	.toggle-card-container {
+		@include display(flex);
+	}
+
+	.aspect-ratio {
+		@include flex(0 1 auto);
+
+		padding-bottom: 0;
+
+		&:first-child {
+			border-radius: 4px 0 0 4px;
+		}
+	}
+
+	.card-header,
+	.card-footer,
+	.card-section {
+		@include flex(1);
+	}
+}
+
+.card-dm .card-footer {
+	@include display(flex);
+}
+
+// Flexbox Simple Grid
+
+.flex-container {
+	@include display(flex);
+	@include flex-direction(column);
+}
+
+.flex-container-horizontal {
+	@include flex-direction(row);
+	@include flex-flow(row wrap);
+}
+
+.flex-item-expand {
+	@include flex(1);
+	@include flex-wrap(wrap);
+}
+
+.flex-item-bottom {
+	@include align-self(flex-end);
+}
+
+.flex-item-top {
+	@include align-self(flex-start);
+}
+
+.flex-items-center {
+	@include display(flex);
+	@include align-items(center);
+}
+
+.flex-row {
+	@include display(flex);
+	@include flex(1 100%);
+}
+
+// Flexbox Cards
+
+.checkbox-card {
+	label {
+		padding-left: 0;
+	}
+
+	input[type="checkbox"] {
+		margin-left: 0;
+		z-index: 1;
+	}
+}
+
+.card {
+	figure,
+	.figure {
+		margin-bottom: 0;
+	}
+}
