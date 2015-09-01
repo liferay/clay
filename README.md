@@ -1,3 +1,6 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## About
 This is the repo of Liferay's Lexicon Design Language, and an implementation of that design language based on [Bootstrap](http://getbootstrap.com).
 
@@ -57,3 +60,5 @@ This will generate all of the HTML/CSS/etc into the `build/` directory.
 
 `release`: This task will create a zip file located in the root of the repo with the version number located in the package.json.
 We use this to deploy into Liferay.
+
+`toc`: If you add a section to the README file, running `gulp toc` will generate a new table of contents.
