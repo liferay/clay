@@ -53,8 +53,28 @@ section: Experimental
 		<h3>Horizontal Card</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add class <code>flex-container</code> to the card element, to the card-section. and tweak a few styles to change the orientation of the card.</p>
+			<p>Add class <code>flex-container</code> to the card element, to the card-section, and tweak a few styles to change the orientation of the card.</p>
 		</blockquote>
+
+<p><pre><code>```<style>
+    #uxglHorizontalCard1 {
+        max-width: 300px;
+    }
+
+    #uxglHorizontalCard1 .figure {
+        border-radius: 4px 4px 0 0;
+        overflow: hidden;
+    }
+
+    #uxglHorizontalCard1.flex-container {
+        max-width: none;
+    }
+
+    #uxglHorizontalCard1.flex-container .figure {
+        border-radius: 4px 0 0 4px;
+       width: 150px;
+    }
+</style>```</code></pre></p>
 
 		<p><a class="btn btn-default" href="#1" id="uxglHorizontalCard1Toggler">Toggle Class: flex-container</a></p>
 
@@ -133,9 +153,9 @@ section: Experimental
 	</div>
 
 	<div class="col-xs-6">
-		<div class="checkbox checkbox-default checkbox-card">
+		<div class="checkbox checkbox-default checkbox-card checkbox-middle-left">
 			<label>
-				<input class="checkbox-middle-left" type="checkbox" />
+				<input type="checkbox" />
 				<div class="card flex-container">
 					<div class="flex-item-center">
 						<span class="icon-monospaced icon-folder-close-alt" style="background-color: #EEE;width:60px;height:60px;line-height:60px;font-size:28px;    margin: 10px 0 10px 40px;"></span>
@@ -166,9 +186,9 @@ section: Experimental
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<div style="max-width: 300px;">
-			<div class="checkbox checkbox-default checkbox-card">
+			<div class="checkbox checkbox-default checkbox-card checkbox-top-left">
 				<label>
-					<input class="checkbox-top-left" type="checkbox">
+					<input type="checkbox">
 					<div class="card" id="uxglVerticalCard2">
 						<div class="figure" style="overflow:hidden;border-radius: 4px 4px 0 0;">
 							<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
