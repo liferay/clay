@@ -1,4 +1,18 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+### Jump to Section
+
+- [About](#about)
+- [Building](#building)
+  - [Clone the repo](#clone-the-repo)
+  - [Install Node.js and NPM](#install-nodejs-and-npm)
+  - [Install the NPM modules](#install-the-npm-modules)
+  - [Modify files in src/](#modify-files-in-src)
+  - [Build the static files](#build-the-static-files)
+  - [View the files](#view-the-files)
+  - [File Heading Options](#file-heading-options)
+  - [Available Build Tasks](#available-build-tasks)
+
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## About
