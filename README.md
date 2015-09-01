@@ -1,5 +1,5 @@
 ## About
-These are Liferay's UX Guidelines.
+This is the repo of Liferay's Lexicon Design Language, and an implementation of that design language based on [Bootstrap](http://getbootstrap.com).
 
 They are meant to help explain our design principles, offer direction and best practices in building your web apps, and provide a documented HTML and CSS API.
 
@@ -14,7 +14,7 @@ If you don't already have it installed. You can find more info here: http://node
 Node and NPM come bundled together, so you only need to install one package.
 
 ### Install the NPM modules
-Run `npm install` inside of the `liferay-ux-guidelines` directory
+Run `npm install` inside of the `lexicon` directory
 
 ### Modify files in src/
 The files are generated from the `src/` directory, however, most of the files you'd be interested in changing are in `src/content/`. Files can be either HTML (`.html`) or Markdown (`.md`).
@@ -27,7 +27,7 @@ title: Title of the Page
 This section has a couple of options that can be leveraged for different purposes. Those will be covered below.
 
 ### Build the static files
-Run `node index` to generate the static files.
+Run `gulp build` to generate the static files.
 
 ### View the files
 The generated files are placed into the `build/` directory.
@@ -47,13 +47,13 @@ The property is any number, with `0` as the first position, but you can also pas
 
 `section:`: If you want to group multiple files into sections, in each of those files, pass the same title to the `section:` property. That title will be used for the section heading, and the files will be sorted in there. The `navIndex:` property works inside of sections as well.
 
-## Available Build Options
-You can pass these options when running `node index`.
+## Available Build Tasks
+You can pass these options when running `gulp`.
 
-`-w, --watch`: Because running a script after every change can get tedious, run `node index -w` or `node index --watch` to rebuild the files automatically as you change files.
+`build`: This is the default task, so running just `gulp` will fire off the build task.
+This will generate all of the HTML/CSS/etc into the `build/` directory.
 
-`--offline`: By default, we load the JavaScript from the AlloyUI.com CDN. However, there may be times you want to build and test the files, but don't have an available internet connection. If you pass --offline, it will load AlloyUI locally from the file system. It's not recommended to commit the build files generated with this option.
+`watch`: Because running a script after every change can get tedious, run `gulp watch` to rebuild the files automatically as you change files.
 
-`-d, --dev`: By default, we generate the included JS to be production ready, but if you are trying to debug the JavaScript, the minified and combined source may be a bit of a pain.
-Passing `-d` or `--dev` will load the unminified JS and the individual JS files, making it easier to debug.
-As with `--offline`, it's not recommended to commit the build files generated with this option.
+`release`: This task will create a zip file located in the root of the repo with the version number located in the package.json.
+We use this to deploy into Liferay.
