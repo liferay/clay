@@ -22,11 +22,13 @@ Run `npm install` inside of the `lexicon` directory
 ### Modify files in src/
 The files are generated from the `src/` directory, however, most of the files you'd be interested in changing are in `src/content/`. Files can be either HTML (`.html`) or Markdown (`.md`).
 Every file in `src/content/` has a heading at the top in YAML format that looks something like:
+
 ```
 ---
 title: Title of the Page
 ---
 ```
+
 This section has a couple of options that can be leveraged for different purposes. Those will be covered below.
 
 ### Build the static files
@@ -40,7 +42,7 @@ Sass files in the `.scss` format are generated to CSS, Markdown files with the e
 	<div>Foo</div>
     ```
 
-## File Heading Options
+### File Heading Options
 There are a couple of properties you can add to the headings of files, only one of which is required:
 
 `title:`: **(Required)** This is used for the title of the page in the heading and in the navigation sidebar
