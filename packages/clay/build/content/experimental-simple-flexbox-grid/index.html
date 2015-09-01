@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - User Icons</title>
+	<title>Lexicon - Simple Flexbox Grid</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
@@ -67,7 +67,7 @@
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Components</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse in
+collapse
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/alerts">Alerts</a>
@@ -122,7 +122,7 @@ collapse in
 </li>
 <li class=""><a href="../../content/toolbars">Toolbars</a>
 </li>
-<li class="active"><a href="../../content/user-icons">User Icons</a>
+<li class=""><a href="../../content/user-icons">User Icons</a>
 </li>
 </ul>
 </div>
@@ -193,12 +193,12 @@ collapse
 <li class="side-navigation-dropdown-container"><a href="javascript:;">Experimental</a>
 <a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>
 <div class="
-collapse
+collapse in
 ">
 <ul class="nav nav-stacked">
 <li class=""><a href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
-<li class=""><a href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+<li class="active"><a href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
 </li>
 </ul>
 </div>
@@ -230,256 +230,179 @@ collapse
 
 	<div class="sidenav-content" id="mainContent">
 		<h1 class="page-title">
-			User Icons
+			Simple Flexbox Grid
 
 			
 		</h1>
 
 		
-<div class="uxgl-nameplates-page row row-spacing">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>User Icon with Image</h3>
+		<h3>Simple Flexbox Grid</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Quickly style user avatars and icons with the user icon component. Wrap an image with <code>&lt;div class=&quot;user-icon&quot;&gt;</code> to give it round borders.</p>
+			<p>Simple Flexbox Grid was created to help layout small chunks of content more efficiently because vertical alignment, equal heights, and auto fitting content in CSS is incredibly time consuming. This grid was designed to cover some specific cases not covered by bootstrap 3's grid. If you wish to use bootstrap 3's grid inside Simple Flexbox Grid, it only reliably works with col-xs-(# of columns) in its current state.</p>
 		</blockquote>
-	</div>
 
-	<div class="col-md-2">
-		<div class="user-icon">
-			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>flex-container</code> to define the container for your grid, any elements that are direct children are now part of your grid. By default, each item will only be as wide as its content.</p>
+		</blockquote>
+
+		<div class="flex-container">
+			<div style="background-color: #B4B4B4;">Some content</div>
+			<div style="background-color: #EEE;">Single shot extraction, qui beans saucer seasonal robust.</div>
+			<div style="background-color: #B4B4B4;">Some content</div>
 		</div>
-		<p>user-icon</p>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">&lt;div class=&quot;user-icon&quot;&gt;
-    &lt;img alt=&quot;thumbnail&quot; class=&quot;img-responsive&quot; src=&quot;../../images/thumbnail_placeholder.gif&quot;&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="uxgl-nameplates-page row row-spacing">
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>User Icon with Text</h3>
+		<h3>Auto Fitting Content</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>If no image is supplied, insert placeholder text or an icon instead.</p>
+			Adding class <code>flex-item-expand</code> to any direct child will expand the element to fill the remaining space.
 		</blockquote>
-	</div>
 
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-default"><span>JB</span></div>
-		<p>user-icon<br>user-icon-default</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-primary"><span>SP</span></div>
-		<p>user-icon<br>user-icon-primary</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-success"><span>TT</span></div>
-		<p>user-icon<br>user-icon-success</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-info"><span>WW</span></div>
-		<p>user-icon<br>user-icon-info</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-warning"><span>JB</span></div>
-		<p>user-icon<br>user-icon-warning</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-danger"><span>JB</span></div>
-		<p>user-icon<br>user-icon-danger</p>
-	</div>
-
-	<div class="col-md-12 col-xs-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;div class=&quot;user-icon user-icon-default&quot;&gt;&lt;span&gt;JB&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-primary&quot;&gt;&lt;span&gt;SP&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-success&quot;&gt;&lt;span&gt;TT&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-info&quot;&gt;&lt;span&gt;WW&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-warning&quot;&gt;&lt;span&gt;JB&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-danger&quot;&gt;&lt;span&gt;JB&lt;/span&gt;&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="uxgl-nameplates-page row row-spacing">
-	<div class="col-md-12">
-		<h3>User Icon Helper Classes</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add class <code>.user-icon-circle</code>, <code>.user-icon-rounded</code>, or <code>.user-icon-square</code> to style the borders.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-circle">
-			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+		<div class="flex-container">
+			<div style="background-color: #B4B4B4;">Some content</div>
+			<div class="flex-item-expand" style="background-color: #EEE;">Single shot extraction, qui beans saucer seasonal robust.</div>
+			<div style="background-color: #B4B4B4;">Some content</div>
 		</div>
-		<p>user-icon-circle</p>
 	</div>
+</div>
 
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-rounded">
-			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
-		</div>
-		<p>user-icon-rounded</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-square">
-			<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
-		</div>
-		<p>user-icon-square</p>
-	</div>
-
+<div class="row row-spacing">
 	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code class="html">&lt;div class=&quot;user-icon user-icon-circle&quot;&gt;
-    &lt;img alt=&quot;thumbnail&quot; class=&quot;img-responsive&quot; src=&quot;../../images/thumbnail_placeholder.gif&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;user-icon user-icon-rounded&quot;&gt;
-    &lt;img alt=&quot;thumbnail&quot; class=&quot;img-responsive&quot; src=&quot;../../images/thumbnail_placeholder.gif&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;user-icon user-icon-square&quot;&gt;
-    &lt;img alt=&quot;thumbnail&quot; class=&quot;img-responsive&quot; src=&quot;../../images/thumbnail_placeholder.gif&quot;&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="uxgl-nameplates-page row row-spacing user-icon-square">
-	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add it on the parent container to style everything inside.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-default"><span>JB</span></div>
-		<p>user-icon<br>user-icon-default</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-primary"><span>SP</span></div>
-		<p>user-icon<br>user-icon-primary</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-success"><span>TT</span></div>
-		<p>user-icon<br>user-icon-success</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-info"><span>WW</span></div>
-		<p>user-icon<br>user-icon-info</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-warning"><span>JB</span></div>
-		<p>user-icon<br>user-icon-warning</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-danger"><span>JB</span></div>
-		<p>user-icon<br>user-icon-danger</p>
-	</div>
-
-	<div class="col-md-12 col-xs-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code class="html">&lt;div class=&quot;user-icon-square&quot;&gt;
-&lt;div class=&quot;user-icon user-icon-default&quot;&gt;&lt;span&gt;JB&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-primary&quot;&gt;&lt;span&gt;SP&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-success&quot;&gt;&lt;span&gt;TT&lt;/span&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="uxgl-nameplates-page row row-spacing">
-	<div class="col-md-12">
-		<h3>User Icon Sizes</h3>
+		<h3>Full Width Flex Items</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.user-icon-xs</code>, <code>.user-icon-sm</code>, <code>.user-icon-lg</code>, <code>.user-icon-xl</code>, and <code>.user-icon-xxl</code> to size the user icon component.</p>
+			<p>Adding class <code>flex-item-full</code> to any direct child will expand the element to fill 100% of the container width.</p>
 		</blockquote>
+
+		<div class="flex-container">
+			<div class="flex-item-full" style="background-color: #B4B4B4;">Some content</div>
+			<div class="flex-item-expand" style="background-color: #EEE;">Single shot extraction, qui beans saucer seasonal robust.</div>
+			<div style="background-color: #B4B4B4;">Some content</div>
+		</div>
 	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-default user-icon-xs"><span>JB</span></div>
-		<p>user-icon<br>user-icon-xs</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-primary user-icon-sm"><span>SP</span></div>
-		<p>user-icon<br>user-icon-sm</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-success"><span>TT</span></div>
-		<p>user-icon</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-info user-icon-lg"><span>WW</span></div>
-		<p>user-icon<br>user-icon-lg</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-warning user-icon-xl"><span>JB</span></div>
-		<p>user-icon<br>user-icon-xl</p>
-	</div>
-
-	<div class="col-md-2 col-xs-4">
-		<div class="user-icon user-icon-danger user-icon-xxl"><span>JB</span></div>
-		<p>user-icon<br>user-icon-xxl</p>
-	</div>
-
-	<div class="col-md-12 col-xs-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;div class=&quot;user-icon user-icon-xs&quot;&gt;&lt;span&gt;JB&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-sm&quot;&gt;&lt;span&gt;SP&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon&quot;&gt;&lt;span&gt;TT&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-lg&quot;&gt;&lt;span&gt;TT&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-xl&quot;&gt;&lt;span&gt;TT&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;user-icon user-icon-xxl&quot;&gt;&lt;span&gt;TT&lt;/span&gt;&lt;/div&gt;</code></pre>
 </div>
 
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Equal Height Columns</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Columns with the Simple Flexbox Grid are always equal height. If you change the height of one column, the other column's height will change, unless a fixed height is set via css.</p>
+		</blockquote>
+
+		<div class="flex-container">
+			<div class="" style="background-color:#BBB;width:150px;height:150px;">150px x 150px</div>
+			<div class="flex-item-expand" style="background-color:#EEE;">Expand to fill rest of space.</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Vertical Centering</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Wrap each of the texts in <code class="html">&lt;div class=&quot;flex-item-center&quot;&gt;&lt;/div&gt;</code> and add class <code>flex-container</code> to the parent of each <code>flex-item-center</code> to vertically center. Horizontally center an item with css <code>margin-left: auto; margin-right: auto;</code></p>
+		</blockquote>
+
+		<div class="flex-container">
+			<div class="flex-container" style="background-color:#BBB;width:150px;height:150px;">
+				<div class="flex-item-center" style="margin-left:auto;margin-right:auto;">150px x 150px</div>
+			</div>
+			<div class="flex-container flex-item-expand" style="background-color:#EEE;">
+				<div class="flex-item-center">Expand to fill rest of space.</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Nesting the Simple Flexbox Grid</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Adding <code>flex-container</code> to an element creates a new container for the Simple Flexbox Grid, and allows you to start a new grid inside.</p>
+		</blockquote>
+
+		<div class="flex-container">
+			<div class="flex-container" style="background-color:#BBB;width:150px;height:150px;">
+				<div class="flex-item-center" style="margin-left:auto;margin-right:auto;">150px x 150px</div>
+			</div>
+			<div class="flex-container flex-item-expand" style="background-color:#EEE;">
+				<div class="flex-container">
+					<div class="flex-item-center">Nested Grid</div>
+				</div>
+				<div class="flex-container flex-item-expand" style="background-color:#BBB;">
+					<div class="flex-item-center">Expand to fill rest of space.</div>
+				</div>
+				<div class="flex-container flex-item-full">
+					<div class="flex-item-center">Aged bar, percolator siphon barista coffee extraction. Whipped sugar americano id decaffeinated as trifecta foam black beans at frappuccino. Strong coffee, extraction mocha foam, coffee dripper americano medium viennese.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Stacking Flex Containers</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Make <code>flex-container</code> stack all its direct descendants at specific screen widths with classes:</p>
+			<ul>
+				<li><code>flex-container-stacked-xxs</code> 479px and below.</li>
+				<li><code>flex-container-stacked-xs</code> 767px and below.</li>
+				<li><code>flex-container-stacked-sm</code> 991px and below.</li>
+				<li><code>flex-container-stacked-md</code> 1199px and below.</li>
+				<li><code>flex-container-stacked-lg</code> 1200px and above.</li>
+				<li><code>flex-container-stacked-xs-only</code> between 480px and 767px.</li>
+				<li><code>flex-container-stacked-sm-only</code> between 768px and 991px.</li>
+				<li><code>flex-container-stacked-md-only</code> between 992px and 1199px.</li>
+			</ul>
+		</blockquote>
+
+		<div class="flex-container">
+			<div class="flex-container" style="background-color:#BBB;width:150px;height:150px;">
+				<div class="flex-item-center" style="margin-left:auto;margin-right:auto;">150px x 150px</div>
+			</div>
+			<div class="flex-container flex-container-stacked-md-only flex-item-expand" style="background-color:#EEE;">
+				<div class="flex-container">
+					<div class="flex-item-center">Nested Grid</div>
+				</div>
+				<div class="flex-container flex-item-expand" style="background-color:#BBB;">
+					<div class="flex-item-center">Expand to fill rest of space.</div>
+				</div>
+				<div class="flex-container flex-item-full">
+					<div class="flex-item-center">Aged bar, percolator siphon barista coffee extraction. Whipped sugar americano id decaffeinated as trifecta foam black beans at frappuccino. Strong coffee, extraction mocha foam, coffee dripper americano medium viennese.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Force Flex Items to Break into New Lines</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Force a direct descendant of <code>flex-container</code> to break to a new line with classes:</p>
+			<ul>
+				<li><code>flex-item-break-xxs</code> 479px and below.</li>
+				<li><code>flex-item-break-xs</code> 767px and below.</li>
+				<li><code>flex-item-break-sm</code> 991px and below.</li>
+				<li><code>flex-item-break-md</code> 1199px and below.</li>
+				<li><code>flex-item-break-lg</code> 1200px and above.</li>
+				<li><code>flex-item-break-xs-only</code> between 480px and 767px.</li>
+				<li><code>flex-item-break-sm-only</code> between 768px and 991px.</li>
+				<li><code>flex-item-break-md-only</code> between 992px and 1199px.</li>
+			</ul>
+		</blockquote>
 	</div>
 </div>
 	</div>

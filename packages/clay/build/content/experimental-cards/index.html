@@ -198,6 +198,8 @@ collapse in
 <ul class="nav nav-stacked">
 <li class="active"><a href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
+<li class=""><a href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+</li>
 </ul>
 </div>
 </li>
@@ -236,157 +238,33 @@ collapse
 		
 <div class="row row-spacing">
 	<div class="col-xs-12">
-		<h3>Simple Flexbox Grid</h3>
+
+		<h3>Vertical Card</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Simple Flexbox Grid to quickly prototype stuff.</p>
+			<p>Combine <a href="../cards">Cards</a> and <a href="../experimental-simple-flexbox-grid">Simple Flexbox Grid</a> to build cards with CSS Flexible Box.</p>
 		</blockquote>
-
-		<div class="flex-container flex-container-horizontal">
-			<div style="background-color: #B4B4B4;width: 150px;padding: 20px;">Fixed Width 150px</div>
-			<div class="flex-item-expand flex-items-center" style="background-color: #EEE;padding: 20px;">
-				<div>Expand to fill remaining space.</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-xs-12">
-		<h3>Vertically Centering Content</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use class <code>flex-items-center</code> to vertically center content. Content should be wrapped in an html element such as a <code>div</code>. You can horizontally center content by setting <code>text-align: center;</code>, <code>margin-left: auto; margin-right: auto;</code> or both on the content element and its children.</p>
-		</blockquote>
-
-		<div class="flex-items-center" style="background-color: #EEE;height: 250px;">
-			<div style="margin-left:auto;margin-right:auto;text-align:center;">
-				<div class="figure" style="max-width:100px;margin-left:auto;margin-right:auto;">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
-					<div class="figcaption-bottom figcaption-lg monospace">10 Most Delicious Space Foods</div>
-				</div>
-				Some content I would like to vertically center.
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-xs-12">
-		<h3>Equal Height Columns and Expanding Content to Fill Remaining Space</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Wrap <code>&lt;div class=&quot;flex-container flex-container-horizontal&quot;&gt;&lt;/div&gt;</code> around a group of elements to create a row of equal height floated items, atleast one of the child elements must have the class <code>flex-item-expand</code>.</p>
-
-			<p>Remove class <code>flex-container-horizontal</code> stack elements vertically.</p>
-		</blockquote>
-
-		<p><pre><code>&lt;div class=&quot;flex-container flex-container-horizontal&quot;&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div class=&quot;flex-item-expand&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre></p>
-
-		<div class="flex-container flex-container-horizontal">
-			<div style="background-color: #B4B4B4;width: 150px;padding: 20px;">Fixed Width 150px</div>
-			<div class="flex-item-expand flex-items-center" style="background-color: #EEE;padding: 20px;">
-				<div>Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space. Expand to fill remaining space.</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-xs-12">
-		<h3>Equal Width Equal Height Elements</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add class <code>flex-item-expand</code> to each of the child elements inside <code>&lt;div class=&quot;flex-container flex-container-horizontal&quot;&gt;&lt;/div&gt;</code> to create equally spaced elements.</p>
-		</blockquote>
-
-		<p><pre><code class="html">&lt;div class=&quot;flex-container flex-container-horizontal&quot;&gt;
-    &lt;div class=&quot;flex-item-expand&quot;&gt;...&lt;/div&gt;
-    &lt;div class=&quot;flex-item-expand&quot;&gt;...&lt;/div&gt;
-&lt;/div&gt;</code></pre></p>
-
-		<div class="flex-container flex-container-horizontal" style="height:150px;">
-			<div class="flex-item-expand flex-items-center" style="background-color: #B4B4B4;">
-				<div style="text-align:center;width:100%;">column 1</div>
-			</div>
-			<div class="flex-item-expand flex-items-center" style="background-color: #EEE;">
-				<div style="text-align:center;width:100%;">column 2</div>
-			</div>
-			<div class="flex-item-expand flex-items-center" style="background-color: #B4B4B4;">
-				<div style="text-align:center;width:100%;">column 3</div>
-			</div>
-			<div class="flex-item-expand flex-items-center" style="background-color: #EEE;">
-				<div style="text-align:center;width:100%;">column 4</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-xs-12">
-		<h3>Flexbox Cards</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Change the orientation of cards with minimal style changes.</p>
-		</blockquote>
-
-		<div class="row-spacing"><pre><code>&lt;style&gt;
-    .card.flex-container {
-        width: 300px;
-    }
-
-    .card.flex-container-horizontal {
-        width: 50%;
-    }
-
-    .card.flex-container-horizontal .figure {
-        width: 135px;
-    }
-&lt;/style&gt;</code></pre></div>
 
 		<style>
-			.card.flex-container {
+			#uxglVerticalCard1 {
 				width: 300px;
-			}
-
-			#cardOrientation.flex-container-horizontal {
-				width: 50%;
-			}
-
-			#cardOrientation.flex-container-horizontal .figure {
-				width: 135px;
 			}
 		</style>
 
-		<p><a class="btn btn-default" href="#1" id="cardOrientationToggler">Toggle Class: flex-container-horizontal</a></p>
-
-		<script>
-			$('#cardOrientationToggler').on('click', function(event) {
-				event.preventDefault();
-
-				$('#cardOrientation').toggleClass('flex-container-horizontal');
-			});
-		</script>
-
-		<div class="card flex-container" id="cardOrientation">
+		<div class="card" id="uxglVerticalCard1">
 			<div class="figure">
 				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
 				<div class="figcaption-bottom figcaption-lg monospace">10 Most Delicious Space Foods</div>
 			</div>
-
-			<div class="card-section flex-item-expand flex-items-center">
+			<div class="card-section flex-container">
 				<div class="flex-item-expand">
 					<p class="text-default">Number 1</p>
 					<h4>Mystery Meal</h4>
 					<p>Because you like to live life on the edge of space.</p>
 				</div>
 
-				<div class="flex-item-top">
-					<div class="dropdown">
+				<div class="">
+					<div class="dropdown" style="margin-right: -10px;">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 						<ul class="dropdown-menu dropdown-menu-right">
 							<li><a href="#1">Download</a></li>
@@ -404,52 +282,123 @@ collapse
 </div>
 
 <div class="row row-spacing">
+	<div class="col-xs-12">
+		<h3>Horizontal Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class <code>flex-container</code> to the card element, to the card-section, and tweak a few styles to change the orientation of the card.</p>
+		</blockquote>
+
+<p><pre><code>&lt;style&gt;
+    #uxglHorizontalCard1 {
+        max-width: 300px;
+    }
+
+    #uxglHorizontalCard1 .figure {
+        border-radius: 4px 4px 0 0;
+        overflow: hidden;
+    }
+
+    #uxglHorizontalCard1.flex-container {
+        max-width: none;
+    }
+
+    #uxglHorizontalCard1.flex-container .figure {
+        border-radius: 4px 0 0 4px;
+       width: 150px;
+    }
+&lt;/style&gt;</code></pre></p>
+
+		<p><a class="btn btn-default" href="#1" id="uxglHorizontalCard1Toggler">Toggle Class: flex-container</a></p>
+
+		<script>
+			$('#uxglHorizontalCard1Toggler').on('click', function(event) {
+				event.preventDefault();
+
+				$('#uxglHorizontalCard1').toggleClass('flex-container');
+			});
+		</script>
+
+		<style>
+			#uxglHorizontalCard1 {
+				max-width: 300px;
+			}
+
+			#uxglHorizontalCard1 .figure {
+				border-radius: 4px 4px 0 0;
+				overflow: hidden;
+			}
+
+			#uxglHorizontalCard1.flex-container {
+				max-width: none;
+			}
+
+			#uxglHorizontalCard1.flex-container .figure {
+				border-radius: 4px 0 0 4px;
+				width: 150px;
+			}
+		</style>
+
+		<div class="card flex-container" id="uxglHorizontalCard1">
+			<div class="figure">
+				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
+				<div class="figcaption-bottom figcaption-lg monospace">10 Most Delicious Space Foods</div>
+			</div>
+			<div class="card-section flex-item-expand flex-container">
+				<div class="flex-item-expand flex-item-center">
+					<p class="text-default">Number 1</p>
+					<h4>Mystery Meal</h4>
+					<p>Because you like to live life on the edge of space.</p>
+				</div>
+
+				<div class="">
+					<div class="dropdown" style="margin-right: -10px;">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Download</a></li>
+							<li><a href="#1">Edit</a></li>
+							<li><a href="#1">Move</a></li>
+							<li><a href="#1">Checkout</a></li>
+							<li><a href="#1">Permissions</a></li>
+							<li><a href="#1">Move to Recycle Bin</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Checkable Cards</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Wrap cards with:
+			<pre><code>&lt;div class=&quot;checkbox checkbox-default&quot;&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot; /&gt;
+        ... Card Markup Here ...
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre> to create a checkable card.</p>
+		</blockquote>
+	</div>
+
 	<div class="col-xs-6">
-		<div class="checkbox checkbox-default checkbox-card">
-			<div class="card flex-container flex-container-horizontal">
-				<div class="card-section flex-items-center">
-					<span class="icon-monospaced icon-folder-close-alt" style="background-color: #EEE;width:60px;height:60px;line-height:60px;font-size:28px;"></span>
-				</div>
-				<div class="card-section flex-item-expand flex-items-center">
-					<h4 class="truncate-text" title="5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F">5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F</h4>
-				</div>
-
-				<div class="card-section flex-items-center">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#1">Download</a></li>
-							<li><a href="#1">Edit</a></li>
-							<li><a href="#1">Move</a></li>
-							<li><a href="#1">Checkout</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Move to Recycle Bin</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-xs-4">
-		<div class="checkbox checkbox-default toggle-card-dm card-horizontal-fle">
+		<div class="checkbox checkbox-default checkbox-card checkbox-middle-left">
 			<label>
-				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
-					<div class="aspect-ratio aspect-ratio-vertical">
-						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+				<input type="checkbox" />
+				<div class="card flex-container">
+					<div class="flex-item-center">
+						<span class="icon-monospaced icon-folder-close-alt" style="background-color: #EEE;width:60px;height:60px;line-height:60px;font-size:28px;    margin: 10px 0 10px 40px;"></span>
+					</div>
+					<div class="card-section flex-item-expand flex-item-center">
+						<h4 class="truncate-text" title="5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F">5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F</h4>
 					</div>
 
-					<div class="card-footer">
-						<div class="card-dm-details">
-							<div class="card-dm-text">Aldcott Gage George Polwarth-Kitchener</div>
-							<div class="card-dm-text-large" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-							<div class="card-dm-text-small">Approved</div>
-						</div>
-						<div class="dropdown card-dm-more-options">
+					<div class="flex-item-center">
+						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#1">Download</a></li>
@@ -463,6 +412,45 @@ collapse
 					</div>
 				</div>
 			</label>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<div style="max-width: 300px;">
+			<div class="checkbox checkbox-default checkbox-card checkbox-top-left">
+				<label>
+					<input type="checkbox">
+					<div class="card" id="uxglVerticalCard2">
+						<div class="figure" style="overflow:hidden;border-radius: 4px 4px 0 0;">
+							<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
+							<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						</div>
+						<div class="card-section flex-item-expand flex-container">
+							<div class="flex-item-expand">
+								<p class="truncate-text">Number 1</p>
+								<h4 class="truncate-text">Mystery Meal</h4>
+								<p class="truncate-text">Because you like to live life on the edge of space.</p>
+							</div>
+
+							<div class="">
+								<div class="dropdown" style="margin-right: -10px;">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="#1">Download</a></li>
+										<li><a href="#1">Edit</a></li>
+										<li><a href="#1">Move</a></li>
+										<li><a href="#1">Checkout</a></li>
+										<li><a href="#1">Permissions</a></li>
+										<li><a href="#1">Move to Recycle Bin</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</label>
+			</div>
 		</div>
 	</div>
 </div>
