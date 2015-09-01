@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gulp build && cd ./build && git init . && git add . && git commit -m 'Deploy'; git push 'git@github.com:natecavanaugh/lexicon.git' master:gh-pages --force && rm -rf .git"
+    "deploy": "gulp build && cd ./build && git init . && git add . && git commit -m 'Deploy'; git push 'git@github.com:liferay/lexicon.git' master:gh-pages --force && rm -rf .git"
   },
   "author": "Nate Cavanaugh <nate@shift22.com> (http://alterform.com/)",
   "license": "MIT",
