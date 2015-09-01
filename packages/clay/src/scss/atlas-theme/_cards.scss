@@ -8,3 +8,53 @@
 		color: $brand-default;
 	}
 }
+
+.checkbox-default {
+	&.checkbox-middle-left {
+		input[type="checkbox"] {
+			left: 10px;
+			margin-top: -22px;
+			position: absolute;
+		}
+	}
+
+	&.checkbox-middle-right {
+		input[type="checkbox"] {
+			margin-top: -22px;
+			position: absolute;
+			right: 10px;
+		}
+	}
+
+	&.checkbox-bottom-left {
+		input[type="checkbox"] {
+			bottom: 15px;
+			left: 15px;
+			position: absolute;
+		}
+	}
+
+	&.checkbox-bottom-right {
+		input[type="checkbox"] {
+			bottom: 15px;
+			position: absolute;
+			right: 15px;
+		}
+	}
+
+	&.checkbox-top-left {
+		input[type="checkbox"] {
+			left: 15px;
+			position: absolute;
+			top: 15px;
+		}
+	}
+
+	&.checkbox-top-right {
+		input[type="checkbox"] {
+			position: absolute;
+			right: 15px;
+			top: 15px;
+		}
+	}
+}

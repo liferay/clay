@@ -322,41 +322,6 @@
 	@include display(flex);
 }
 
-// Flexbox Simple Grid
-
-.flex-container {
-	@include display(flex);
-	@include flex-direction(column);
-}
-
-.flex-container-horizontal {
-	@include flex-direction(row);
-	@include flex-flow(row wrap);
-}
-
-.flex-item-expand {
-	@include flex(1);
-	@include flex-wrap(wrap);
-}
-
-.flex-item-bottom {
-	@include align-self(flex-end);
-}
-
-.flex-item-top {
-	@include align-self(flex-start);
-}
-
-.flex-items-center {
-	@include display(flex);
-	@include align-items(center);
-}
-
-.flex-row {
-	@include display(flex);
-	@include flex(1 100%);
-}
-
 // Flexbox Cards
 
 .checkbox-card {
@@ -366,7 +331,38 @@
 
 	input[type="checkbox"] {
 		margin-left: 0;
+		margin-top: 0;
 		z-index: 1;
+	}
+}
+
+.checkbox-middle-left {
+	input[type="checkbox"] {
+		margin-top: -16px;
+		left: 15px;
+		top: 50%;
+	}
+}
+
+.checkbox-middle-right {
+	input[type="checkbox"] {
+		margin-top: -16px;
+		right: 15px;
+		top: 50%;
+	}
+}
+
+.checkbox-top-left {
+	input[type="checkbox"] {
+		left: 15px;
+		top: 15px;
+	}
+}
+
+.checkbox-top-right {
+	input[type="checkbox"] {
+		right: 15px;
+		top: 15px;
 	}
 }
 
