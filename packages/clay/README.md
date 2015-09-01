@@ -23,11 +23,10 @@ Run `npm install` inside of the `lexicon` directory
 The files are generated from the `src/` directory, however, most of the files you'd be interested in changing are in `src/content/`. Files can be either HTML (`.html`) or Markdown (`.md`).
 Every file in `src/content/` has a heading at the top in YAML format that looks something like:
 
-```
----
-title: Title of the Page
----
-```
+
+    ---
+    title: Title of the Page
+    ---
 
 This section has a couple of options that can be leveraged for different purposes. Those will be covered below.
 
@@ -52,7 +51,7 @@ The property is any number, with `0` as the first position, but you can also pas
 
 `section:`: If you want to group multiple files into sections, in each of those files, pass the same title to the `section:` property. That title will be used for the section heading, and the files will be sorted in there. The `navIndex:` property works inside of sections as well.
 
-## Available Build Tasks
+### Available Build Tasks
 You can pass these options when running `gulp`.
 
 `build`: This is the default task, so running just `gulp` will fire off the build task.
