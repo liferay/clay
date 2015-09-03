@@ -486,12 +486,14 @@
 
 			var container = element;
 
+			var options = instance.options;
+
 			if (instance.useDataAttribute) {
-				togglerSelector = instance.options.target ? '[data-target="' + instance.options.target + '"]' : '[href="' + element.attr('href') + '"]';
+				togglerSelector = options.target ? '[data-target="' + options.target + '"]' : '[href="' + element.attr('href') + '"]';
 
-				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
+				container = options.target ? $(options.target) : doc.find(element.attr('href'));
 
-				container.on(instance.options.transitionEnd, function(event) {
+				container.on(options.transitionEnd, function(event) {
 					event.stopPropagation();
 				});
 
@@ -502,19 +504,21 @@
 				});
 			}
 			else {
-				var useDefaultTogglerClass = instance.options.toggler === '.sidenav-toggler';
+				var toggler = options.toggler;
+
+				var useDefaultTogglerClass = toggler === '.sidenav-toggler';
 
 				if (useDefaultTogglerClass) {
-					togglerSelector = instance.options.selector + ' ' + instance.options.toggler;
+					togglerSelector = options.selector + ' ' + toggler;
 				}
 				else {
-					togglerSelector = instance.options.toggler;
+					togglerSelector = toggler;
 				}
 
 				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
 					var $this = $(this);
 
-					var selector = $this.closest(instance.options.selector);
+					var selector = $this.closest(options.selector);
 
 					if (selector.length) {
 						container = selector;
