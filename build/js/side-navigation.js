@@ -59,13 +59,13 @@
 		init: function(element, options) {
 			var instance = this;
 
+			var toggler;
+
+			var useDataAttribute = element.data('toggle') === 'sidenav';
+
 			options = $.extend({}, $.fn.sideNavigation.defaults, options);
-			options.selector = element.selector;
 			options.transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 			options.widthOriginal = options.width;
-
-			var toggler;
-			var useDataAttribute = element.data('toggle') === 'sidenav';
 
 			instance.useDataAttribute = useDataAttribute;
 
@@ -489,14 +489,18 @@
 		_onDelegateClickTrigger: function(element) {
 			var instance = this;
 
+			var togglerSelector;
+
 			var container = element;
 
+			var options = instance.options;
+
 			if (instance.useDataAttribute) {
-				var togglerSelector = instance.options.target ? '[data-target="' + instance.options.target + '"]' : '[href="' + element.attr('href') + '"]';
+				togglerSelector = options.target ? '[data-target="' + options.target + '"]' : '[href="' + element.attr('href') + '"]';
 
-				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
+				container = options.target ? $(options.target) : doc.find(element.attr('href'));
 
-				container.on(instance.options.transitionEnd, function(event) {
+				container.on(options.transitionEnd, function(event) {
 					event.stopPropagation();
 				});
 
@@ -507,10 +511,21 @@
 				});
 			}
 			else {
-				doc.on('click.lexicon.sidenav', instance.options.toggler, function(event) {
+				var toggler = options.toggler;
+
+				var useDefaultTogglerClass = toggler === '.sidenav-toggler';
+
+				if (useDefaultTogglerClass) {
+					togglerSelector = options.selector + ' ' + toggler;
+				}
+				else {
+					togglerSelector = toggler;
+				}
+
+				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
 					var $this = $(this);
 
-					var selector = $this.closest(instance.options.selector);
+					var selector = $this.closest(options.selector);
 
 					if (selector.length) {
 						container = selector;
@@ -668,6 +683,8 @@
 	var old = $.fn.sideNavigation;
 
 	var Plugin = function(options) {
+		var selector = this.selector;
+
 		return this.each(
 			function() {
 				var $this = $(this);
@@ -675,7 +692,13 @@
 				var data = $this.data('lexicon.sidenav');
 
 				if (!data) {
-					data = new SideNavigation($this, typeof options === 'object' ? options : null);
+					if (!options) {
+						options = {};
+					}
+
+					options.selector = selector;
+
+					data = new SideNavigation($this, options);
 
 					$this.data('lexicon.sidenav', data);
 				}
