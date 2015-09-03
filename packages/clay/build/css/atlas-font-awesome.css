@@ -17698,12 +17698,15 @@ fieldset[disabled] .form-control:-ms-input-placeholder {
   z-index: 1;
 }
 
-a.list-group-heading {
+a.list-group-heading,
+.list-group-heading[data-toggle="collapse"] {
   color: #869CAD;
 }
 
 a.list-group-heading:focus,
-a.list-group-heading:hover {
+a.list-group-heading:hover,
+.list-group-heading[data-toggle="collapse"]:focus,
+.list-group-heading[data-toggle="collapse"]:hover {
   background-color: #F5F8FA;
   color: #869CAD;
 }
