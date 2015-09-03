@@ -67,12 +67,12 @@
 
 				options.content = element.data('content');
 				options.equalHeight = false;
-				options.openClass = element.data('open-class') ? element.data('open-class') : 'open';
+				options.openClass = element.data('open-class') || 'open';
 				options.target = element.data('target');
 				options.toggler = element;
 				options.type = element.data('type');
 				options.typeMobile = element.data('type-mobile');
-				options.useDelegate = element.data('use-delegate') ? element.data('use-delegate') : false;
+				options.useDelegate = element.data('use-delegate') || false;
 				options.width = '';
 			}
 			else { // find toggler
