@@ -55,6 +55,10 @@ section: Components (JS)
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
+			<p>To create a sidenav relative to other elements inside your page, you must follow the markup structure shown above.</p>
+		</blockquote>
+
+		<blockquote class="blockquote-sm blockquote-success">
 			<p>The toggle button should be placed inside <code>.sidenav-container</code>, but can be placed outside if needed. Just add a unique id to the toggle button and container, instantiate the sideNavigation plugin on the container id, and pass the toggle button id through plugin options.</p>
 		</blockquote>
 
@@ -161,7 +165,7 @@ section: Components (JS)
 		<h3>Side Navigation Data Api</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>The Side Navigation data api was created for situations where there is limited control over the markup structure. The only markup needed is a toggler and a panel to hide and show. These items can be included anywhere on the page.</p>
+			<p>The Side Navigation data api was added for situations where there is limited control over the markup structure. The only markup needed is a toggler and a panel to hide and show. These items can be included anywhere on the page.</p>
 		</blockquote>
 
 		<blockquote class="blockquote-sm blockquote-success">
@@ -170,6 +174,8 @@ section: Components (JS)
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>The data api allows for fixed-push style sidenavs with the attributes <code>data-content</code>, <code>data-type</code>, and <code>data-type-mobile</code>. <code>Data-content</code> is the id of the content to be pushed over when the nav is open. <code>Data-type</code> and <code>data-type-mobile</code> give the option to specify the style of sidenav in desktop and mobile, respectively. The values can be <code>fixed</code> or <code>fixed-push</code> and defaults to fixed.</p>
+
+			<p>The open class name can be customized through the attribute <code>data-open-class</code> and will be added to toggler and content on open. </p>
 		</blockquote>
 
 		<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">Simple Sidenav Toggler</a>
