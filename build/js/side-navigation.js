@@ -74,11 +74,12 @@
 
 				options.content = element.data('content');
 				options.equalHeight = false;
+				options.openClass = element.data('open-class') || 'open';
 				options.target = element.data('target');
 				options.toggler = element;
 				options.type = element.data('type');
 				options.typeMobile = element.data('type-mobile');
-				options.useDelegate = element.data('use-delegate') ? element.data('use-delegate') : false;
+				options.useDelegate = element.data('use-delegate') || false;
 				options.width = '';
 			}
 			else { // find toggler
@@ -391,6 +392,7 @@
 
 			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 			var content = $(instance.options.content).first();
+			var openClass = instance.options.openClass;
 			var toggler = instance.options.toggler;
 			var type = instance.options.type;
 			var typeMobile = instance.options.typeMobile;
@@ -419,11 +421,11 @@
 					content.addClass('sidenav-transition');
 				}
 
-				toggler.addClass('open');
+				toggler.addClass(openClass);
 
 				setTimeout(function() {
 					container.removeClass('closed');
-					content.addClass('open');
+					content.addClass(openClass);
 				}, 0);
 			}
 			else {
@@ -440,11 +442,11 @@
 					instance._removeBodyFixed();
 				}
 
-				toggler.removeClass('open');
+				toggler.removeClass(openClass);
 
 				setTimeout(function() {
 					container.addClass('closed');
-					content.removeClass('open');
+					content.removeClass(openClass);
 				}, 0);
 			}
 		},
