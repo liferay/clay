@@ -18,7 +18,8 @@
 	}
 }
 
-a.list-group-heading {
+a.list-group-heading,
+.list-group-heading[data-toggle="collapse"] {
 	color: $list-group-header-color;
 
 	&:focus,
