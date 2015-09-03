@@ -52,13 +52,13 @@
 		init: function(element, options) {
 			var instance = this;
 
+			var toggler;
+
+			var useDataAttribute = element.data('toggle') === 'sidenav';
+
 			options = $.extend({}, $.fn.sideNavigation.defaults, options);
-			options.selector = element.selector;
 			options.transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 			options.widthOriginal = options.width;
-
-			var toggler;
-			var useDataAttribute = element.data('toggle') === 'sidenav';
 
 			instance.useDataAttribute = useDataAttribute;
 
@@ -482,10 +482,12 @@
 		_onDelegateClickTrigger: function(element) {
 			var instance = this;
 
+			var togglerSelector;
+
 			var container = element;
 
 			if (instance.useDataAttribute) {
-				var togglerSelector = instance.options.target ? '[data-target="' + instance.options.target + '"]' : '[href="' + element.attr('href') + '"]';
+				togglerSelector = instance.options.target ? '[data-target="' + instance.options.target + '"]' : '[href="' + element.attr('href') + '"]';
 
 				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
 
@@ -500,7 +502,16 @@
 				});
 			}
 			else {
-				doc.on('click.lexicon.sidenav', instance.options.toggler, function(event) {
+				var useDefaultTogglerClass = instance.options.toggler === '.sidenav-toggler';
+
+				if (useDefaultTogglerClass) {
+					togglerSelector = instance.options.selector + ' ' + instance.options.toggler;
+				}
+				else {
+					togglerSelector = instance.options.toggler;
+				}
+
+				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
 					var $this = $(this);
 
 					var selector = $this.closest(instance.options.selector);
@@ -661,6 +672,8 @@
 	var old = $.fn.sideNavigation;
 
 	var Plugin = function(options) {
+		var selector = this.selector;
+
 		return this.each(
 			function() {
 				var $this = $(this);
@@ -668,7 +681,13 @@
 				var data = $this.data('lexicon.sidenav');
 
 				if (!data) {
-					data = new SideNavigation($this, typeof options === 'object' ? options : null);
+					if (!options) {
+						options = {};
+					}
+
+					options.selector = selector;
+
+					data = new SideNavigation($this, options);
 
 					$this.data('lexicon.sidenav', data);
 				}
