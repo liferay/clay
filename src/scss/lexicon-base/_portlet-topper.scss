@@ -12,6 +12,47 @@
 
 .portlet {
 	margin-bottom: 10px;
+	position: relative;
+
+	&:hover,
+	&.focus {
+		> .portlet-content {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				border-color: $portlet-topper-border;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+		}
+
+		> .portlet-topper {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				opacity: 1;
+				top: -$portlet-topper-height;
+			}
+		}
+	}
+
+	> .portlet-content {
+		border-color: transparent;
+		border-top-left-radius: $navbar-border-radius;
+		border-top-right-radius: $navbar-border-radius;
+	}
+
+	> .portlet-topper {
+		display: none;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			@include display(flex);
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+
+			@include transition(opacity 0.25s, top 0.25s);
+
+			top: 0;
+		}
+	}
 }
 
 .portlet-content {
@@ -37,6 +78,15 @@
 	@include text-overflow;
 }
 
+.portlet-title-menu {
+	@include flex(1);
+
+	> span > a {
+		display: inline-block;
+		text-decoration: none;
+	}
+}
+
 .portlet-topper {
 	background-color: $portlet-topper-bg;
 	border-color: $portlet-topper-border;
@@ -60,6 +110,7 @@
 	padding-left: 0;
 
 	> a,
+	> span > a,
 	.lfr-icon-menu > a {
 		color: $portlet-topper-link-color;
 	}
@@ -72,58 +123,10 @@
 	}
 }
 
-// Borderless Portlet
-
-.hide-portlet-borders {
-	.portlet {
-		position: relative;
-
-		&:hover,
-		&.focus {
-			.portlet-content {
-				@media screen and (min-width: $grid-float-breakpoint) {
-					border-color: $portlet-topper-border;
-					border-top-left-radius: 0;
-					border-top-right-radius: 0;
-				}
-			}
-
-			.portlet-topper {
-				@media screen and (min-width: $grid-float-breakpoint) {
-					opacity: 1;
-					top: -$portlet-topper-height;
-				}
-			}
-		}
-	}
-
-	.portlet-content {
-		border-color: transparent;
-		border-top-left-radius: $navbar-border-radius;
-		border-top-right-radius: $navbar-border-radius;
-	}
-
-	.portlet-topper {
-		display: none;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			@include display(flex);
-			left: 0;
-			opacity: 0;
-			position: absolute;
-			right: 0;
-
-			@include transition(opacity 0.25s, top 0.25s);
-
-			top: 0;
-		}
-	}
-}
-
 // Portlet Controls in Mobile
 
-&.mobile-show-portlet-controls {
-	.portlet-content {
+.mobile-show-portlet-controls {
+	> .portlet-content {
 		@media screen and (max-width: $grid-float-breakpoint-max) {
 			border-color: $portlet-topper-border;
 			border-top-left-radius: 0;
@@ -131,13 +134,13 @@
 		}
 	}
 
-	.portlet-topper {
+	> .portlet-topper {
 		@media screen and (max-width: $grid-float-breakpoint-max) {
 			@include display(flex);
 		}
 	}
 
-	.portlet-topper-toolbar {
+	> .portlet-topper-toolbar {
 		display: block;
 	}
 }
