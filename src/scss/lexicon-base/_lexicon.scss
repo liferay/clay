@@ -24,6 +24,7 @@
 @import "nav-tabs";
 @import "pagination";
 @import "panels";
+@import "portlet-topper";
 @import "sidebar";
 @import "side-navigation";
 @import "simple-flexbox-grid";
@@ -35,8 +36,3 @@
 @import "toggle-switch";
 @import "type";
 @import "user-icons";
-
-// Experimental
-.lexicon-x {
-	@import "portlet-topper";
-}
