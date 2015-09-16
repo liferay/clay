@@ -9,8 +9,12 @@
 		background-color: transparent;
 		border-width: 0;
 		height: $input-mobile-height-base;
-		padding: 0;
+		padding: 0 12px;
 	}
+}
+
+.basic-search-close:active:focus {
+	background-color: transparent;
 }
 
 // Navbar Collapse Basic Search Styles
@@ -18,6 +22,7 @@
 .collapse-basic-search {
 	.basic-search {
 		// todo after adding input-mobile-height-base;
+
 		@if $input-mobile-height-base >= $navbar-height {
 			padding: 0;
 		}
@@ -115,7 +120,9 @@
 	}
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) { //max-width: 768px
+//max-width: 768px
+
+@media screen and (max-width: $grid-float-breakpoint-max) {
 	.navbar-nav .dropdown-menu {
 		max-width: none;
 	}
@@ -148,8 +155,8 @@
 	}
 }
 
-/* make navbar dropdown position absolute
-	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+/*  make navbar dropdown position absolute
+	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
 
 .navbar {
 	.navbar-collapse:first-child,
@@ -166,6 +173,7 @@
 
 @media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
 	//lr7 navbar mobile (when navbar-header comes after navbar-collapse)
+
 	.navbar .navbar-collapse {
 		background-color: transparent;
 		border-width: 0;
@@ -224,8 +232,8 @@
 		margin-right: 15px;
 
 		&.navbar-right {
-			margin-right: 0;
 			margin-left: 15px;
+			margin-right: 0;
 
 			&:last-child {
 				margin-right: 0;
@@ -440,8 +448,8 @@
 	}
 }
 
-/* make navbar dropdown position absolute
-	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+/*	make navbar dropdown position absolute
+	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
 
 .navbar-default {
 	.navbar-collapse:first-child,

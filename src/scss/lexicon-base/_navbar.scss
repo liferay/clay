@@ -20,8 +20,8 @@
 	}
 
 	button[type='submit'].btn {
-		border-bottom-left-radius: $input-border-radius;
-		border-top-left-radius: $input-border-radius;
+		border-bottom-left-radius: $btn-border-radius-base;
+		border-top-left-radius: $btn-border-radius-base;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
 			border-bottom-left-radius: 0;
@@ -36,8 +36,8 @@
 
 	.input-group-input {
 		.basic-search-slider .form-control {
-			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
+			border-top-right-radius: 0;
 		}
 
 		.form-control {
@@ -63,7 +63,7 @@
 		position: absolute;
 		z-index: 4;
 
-		&:active{
+		&:active {
 			box-shadow: none;
 		}
 
@@ -103,7 +103,11 @@
 // Navbar Collapse Basic Search Styles
 
 .collapse-basic-search {
-	@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+	position: relative;
+
+	//min-width: 768px
+
+	@media screen and (min-width: $grid-float-breakpoint) {
 		&.navbar-no-collapse {
 			.navbar-nav:first-child {
 				float: left;
@@ -172,8 +176,8 @@
 	}
 }
 
-/* make navbar dropdown position absolute
-	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+/*	make navbar dropdown position absolute
+	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
 
 .navbar {
 	.navbar-collapse:first-child,
@@ -276,8 +280,8 @@
 
 	&.navbar-right {
 		@media screen and (min-width: $grid-float-breakpoint) {
-			margin-right: 0;
 			margin-left: $navbar-padding-horizontal;
+			margin-right: 0;
 		}
 
 		&:last-child {
