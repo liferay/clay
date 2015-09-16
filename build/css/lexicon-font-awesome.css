@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.1.15
+* Lexicon 0.1.16
 *
 * Copyright 2015, Liferay, Inc.
 * All rights reserved.
@@ -10121,11 +10121,6 @@ button.close {
  * @param $i - start value
  */
 /**
- * Sets portlet topper width based on grid column
- * @param $size - grid size
- * @param $i - loop initialization
- */
-/**
  * Calculates text-indent of data-label-on and data-label-off
  * @param $toggle-switch-width - Width of switch bar
  * @param $toggle-switch-padding - Space between button and bar
@@ -11121,26 +11116,6 @@ button.close {
   .nav > li.dropdown-wide {
     position: relative;
   }
-}
-
-.equal-height-column-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.equal-height-column-cell .col-xs-1, .equal-height-column-cell .col-sm-1, .equal-height-column-cell .col-md-1, .equal-height-column-cell .col-lg-1, .equal-height-column-cell .col-xs-2, .equal-height-column-cell .col-sm-2, .equal-height-column-cell .col-md-2, .equal-height-column-cell .col-lg-2, .equal-height-column-cell .col-xs-3, .equal-height-column-cell .col-sm-3, .equal-height-column-cell .col-md-3, .equal-height-column-cell .col-lg-3, .equal-height-column-cell .col-xs-4, .equal-height-column-cell .col-sm-4, .equal-height-column-cell .col-md-4, .equal-height-column-cell .col-lg-4, .equal-height-column-cell .col-xs-5, .equal-height-column-cell .col-sm-5, .equal-height-column-cell .col-md-5, .equal-height-column-cell .col-lg-5, .equal-height-column-cell .col-xs-6, .equal-height-column-cell .col-sm-6, .equal-height-column-cell .col-md-6, .equal-height-column-cell .col-lg-6, .equal-height-column-cell .col-xs-7, .equal-height-column-cell .col-sm-7, .equal-height-column-cell .col-md-7, .equal-height-column-cell .col-lg-7, .equal-height-column-cell .col-xs-8, .equal-height-column-cell .col-sm-8, .equal-height-column-cell .col-md-8, .equal-height-column-cell .col-lg-8, .equal-height-column-cell .col-xs-9, .equal-height-column-cell .col-sm-9, .equal-height-column-cell .col-md-9, .equal-height-column-cell .col-lg-9, .equal-height-column-cell .col-xs-10, .equal-height-column-cell .col-sm-10, .equal-height-column-cell .col-md-10, .equal-height-column-cell .col-lg-10, .equal-height-column-cell .col-xs-11, .equal-height-column-cell .col-sm-11, .equal-height-column-cell .col-md-11, .equal-height-column-cell .col-lg-11, .equal-height-column-cell .col-xs-12, .equal-height-column-cell .col-sm-12, .equal-height-column-cell .col-md-12, .equal-height-column-cell .col-lg-12 {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.equal-height-column-row {
-  display: table-row;
-}
-
-.equal-height-columns {
-  display: table;
-  height: 100%;
-  width: 100%;
 }
 
 .has-error .validation-message {
@@ -12921,8 +12896,8 @@ button.list-group-heading:hover,
 }
 
 .basic-search .input-group-input .basic-search-slider .form-control {
-  border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .basic-search .input-group-input .form-control {
@@ -12987,6 +12962,10 @@ button.list-group-heading:hover,
   -webkit-transition: left 0.5s ease;
   -o-transition: left 0.5s ease;
   transition: left 0.5s ease;
+}
+
+.collapse-basic-search {
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -13063,8 +13042,8 @@ button.list-group-heading:hover,
   z-index: 1;
 }
 
-/* make navbar dropdown position absolute
-	 lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+/*	make navbar dropdown position absolute
+	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
 .navbar .navbar-collapse:first-child,
 .management-bar .navbar-collapse:first-child,
 .navbar .management-bar-collapse:first-child,
@@ -13169,8 +13148,8 @@ button.list-group-heading:hover,
 
 @media screen and (min-width: 768px) {
   .navbar-nav.navbar-right, .navbar-right.management-bar-nav {
-    margin-right: 0;
     margin-left: 15px;
+    margin-right: 0;
   }
 }
 
@@ -14641,12 +14620,12 @@ button.list-group-heading:hover,
   .table-responsive-flip .table > thead {
     border-left: 1px solid #DDD;
     border-right: 3px solid #DDD;
-    overflow: auto;
     max-width: 200px;
+    overflow: auto;
   }
   .table-responsive-flip .table > thead > tr > th {
-    border-top-width: 0;
     border-bottom-width: 0;
+    border-top-width: 0;
   }
   .table-responsive-flip .table tr {
     border-top: 1px solid #DDD;
@@ -14679,13 +14658,17 @@ button.list-group-heading:hover,
   }
 }
 
-.table-list {
-  table-layout: fixed;
-}
-
 .table-list > thead > tr > td,
 .table-list > thead > tr > th {
   border-bottom-width: 0;
+}
+
+.table-list > thead > tr > td.table-list-content .truncate-text,
+.table-list > thead > tr > th.table-list-content .truncate-text {
+  bottom: 10px;
+  line-height: normal;
+  margin-top: 0;
+  top: auto;
 }
 
 .table-list > tbody > tr > td,
@@ -14718,40 +14701,21 @@ button.list-group-heading:hover,
   margin-bottom: 0;
 }
 
-.table-list .checkbox-cell {
-  width: 48px;
+.table-list .table-list-content {
+  position: relative;
 }
 
-@media screen and (min-width: 768px) {
-  .table-list .label-cell {
-    width: 100px;
-  }
+.table-list .table-list-content .truncate-text {
+  left: 0;
+  line-height: 50px;
+  margin-top: -25px;
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 
-@media screen and (min-width: 1200px) {
-  .table-list .label-cell {
-    width: 140px;
-  }
-}
-
-.table-responsive .table-list .label-cell {
-  width: 75px;
-}
-
-@media screen and (min-width: 1200px) {
-  .table-responsive .table-list .label-cell {
-    width: 140px;
-  }
-}
-
-.table-responsive .table-list .text-cell {
-  width: 200px;
-}
-
-@media screen and (min-width: 768px) {
-  .table-responsive .table-list .text-cell {
-    width: auto;
-  }
+.table-list .table-list-field {
+  width: 1%;
 }
 
 .tab-group > .nav-tabs {
@@ -15735,169 +15699,6 @@ mark:before,
     width: 22px;
     font-size: 8px;
   }
-}
-
-@media screen and (min-width: 768px) {
-  .lexicon-x .col-xs-6 .portlet-topper, .lexicon-x .col-sm-6 .portlet-topper, .lexicon-x .col-xs-7 .portlet-topper, .lexicon-x .col-sm-7 .portlet-topper, .lexicon-x .col-xs-8 .portlet-topper, .lexicon-x .col-sm-8 .portlet-topper, .lexicon-x .col-xs-9 .portlet-topper, .lexicon-x .col-sm-9 .portlet-topper, .lexicon-x .col-xs-10 .portlet-topper, .lexicon-x .col-sm-10 .portlet-topper, .lexicon-x .col-xs-11 .portlet-topper, .lexicon-x .col-sm-11 .portlet-topper, .lexicon-x .col-xs-12 .portlet-topper, .lexicon-x .col-sm-12 .portlet-topper {
-    width: 65%;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .lexicon-x .col-md-6 .portlet-topper, .lexicon-x .col-md-7 .portlet-topper, .lexicon-x .col-md-8 .portlet-topper, .lexicon-x .col-md-9 .portlet-topper, .lexicon-x .col-md-10 .portlet-topper, .lexicon-x .col-md-11 .portlet-topper, .lexicon-x .col-md-12 .portlet-topper {
-    width: 65%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .lexicon-x .col-lg-6 .portlet-topper, .lexicon-x .col-lg-7 .portlet-topper, .lexicon-x .col-lg-8 .portlet-topper, .lexicon-x .col-lg-9 .portlet-topper, .lexicon-x .col-lg-10 .portlet-topper, .lexicon-x .col-lg-11 .portlet-topper, .lexicon-x .col-lg-12 .portlet-topper {
-    width: 65%;
-  }
-}
-
-.lexicon-x .portlet {
-  margin-bottom: 10px;
-}
-
-.lexicon-x .portlet-content {
-  border-color: #e7e7e7;
-  border-radius: 0 0 4px 4px;
-  border-style: solid;
-  border-width: 1px 1px 1px 1px;
-  padding: 10px;
-}
-
-.lexicon-x .portlet-actions {
-  float: right;
-}
-
-.lexicon-x .portlet-options {
-  display: inline-block;
-}
-
-.lexicon-x .portlet-title-default {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1 0 0;
-  -moz-flex: 1 0 0;
-  -ms-flex: 1 0 0;
-  flex: 1 0 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.lexicon-x .portlet-topper {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
-  border-radius: 4px 4px 0 0;
-  border-style: solid;
-  border-width: 1px 1px 0 1px;
-  color: #777;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 39px;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: relative;
-}
-
-.lexicon-x .portlet-topper-toolbar {
-  margin-bottom: 0;
-  margin-right: -10px;
-  margin-top: 0;
-  padding-left: 0;
-}
-
-.lexicon-x .portlet-topper-toolbar > a,
-.lexicon-x .portlet-topper-toolbar .lfr-icon-menu > a {
-  color: #777;
-}
-
-.lexicon-x .portlet-topper-toolbar > a:focus,
-.lexicon-x .portlet-topper-toolbar > a:hover {
-  text-decoration: none;
-}
-
-.lexicon-x .hide-portlet-borders .portlet {
-  position: relative;
-}
-
-@media screen and (min-width: 768px) {
-  .lexicon-x .hide-portlet-borders .portlet:hover .portlet-content,
-  .lexicon-x .hide-portlet-borders .portlet.focus .portlet-content {
-    border-color: #e7e7e7;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .lexicon-x .hide-portlet-borders .portlet:hover .portlet-topper,
-  .lexicon-x .hide-portlet-borders .portlet.focus .portlet-topper {
-    opacity: 1;
-    top: -40px;
-  }
-}
-
-.lexicon-x .hide-portlet-borders .portlet-content {
-  border-color: transparent;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-
-.lexicon-x .hide-portlet-borders .portlet-topper {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .lexicon-x .hide-portlet-borders .portlet-topper {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    -webkit-transition: opacity 0.25s, top 0.25s;
-    -o-transition: opacity 0.25s, top 0.25s;
-    transition: opacity 0.25s, top 0.25s;
-    top: 0;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .lexicon-x.mobile-show-portlet-controls .portlet-content {
-    border-color: #e7e7e7;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .lexicon-x.mobile-show-portlet-controls .portlet-topper {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.lexicon-x.mobile-show-portlet-controls .portlet-topper-toolbar {
-  display: block;
 }
 
 /*# sourceMappingURL=lexicon-font-awesome.css.map */

@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.15
+* Lexicon 0.1.16
 *
 * Copyright 2015, Liferay, Inc.
 * All rights reserved.
@@ -16,11 +16,6 @@
  * @param $nest-level - number of levels to iterate
  * @param $nav-class - class name of nav element
  * @param $i - start value
- */
-/**
- * Sets portlet topper width based on grid column
- * @param $size - grid size
- * @param $i - loop initialization
  */
 /**
  * Calculates text-indent of data-label-on and data-label-off
@@ -400,11 +395,6 @@ body.fixed {
   max-width: 300px;
 }
 
-/* -------- Media Page -------- */
-#mediaPage img {
-  width: 64px;
-}
-
 .usage-section p {
   line-height: 1.6667em;
   margin-bottom: 1.6667em;
@@ -524,21 +514,6 @@ body.fixed {
 
 #popovers .popover.left {
   margin-left: 0;
-}
-
-.item-center.timeline-item img {
-  float: none;
-  padding: 0;
-}
-
-.timestamp-icon {
-  color: #999;
-  font-size: 12px !important;
-  line-height: inherit;
-}
-
-.timeline-avatar {
-  width: 36px;
 }
 
 .tooltip-display > div {
