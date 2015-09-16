@@ -6,7 +6,6 @@
 @import "cards";
 @import "crop-image";
 @import "dropdowns";
-@import "equal-height-columns";
 @import "form-validation";
 @import "grid";
 @import "icons";
@@ -35,8 +34,3 @@
 @import "toggle-switch";
 @import "type";
 @import "user-icons";
-
-// Experimental
-.lexicon-x {
-	@import "portlet-topper";
-}
