@@ -9,8 +9,12 @@
 		background-color: transparent;
 		border-width: 0;
 		height: $input-mobile-height-base;
-		padding: 0;
+		padding: 0 12px;
 	}
+}
+
+.basic-search-close:active:focus {
+	background-color: transparent;
 }
 
 // Navbar Collapse Basic Search Styles

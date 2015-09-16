@@ -20,8 +20,8 @@
 	}
 
 	button[type='submit'].btn {
-		border-bottom-left-radius: $input-border-radius;
-		border-top-left-radius: $input-border-radius;
+		border-bottom-left-radius: $btn-border-radius-base;
+		border-top-left-radius: $btn-border-radius-base;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
 			border-bottom-left-radius: 0;
@@ -103,6 +103,8 @@
 // Navbar Collapse Basic Search Styles
 
 .collapse-basic-search {
+	position: relative;
+
 	@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
 		&.navbar-no-collapse {
 			.navbar-nav:first-child {
