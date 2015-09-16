@@ -116,16 +116,18 @@
 			function() {
 				var $this = $(this);
 
-				var data = $this.data('lexicon.collapsible-search')
+				var data = $this.data('lexicon.collapsible-search');
+
+				if ($this.is('[data-toggle="collapsible-search"]')) {
+					options = {
+						breakpoint: $this.data('breakpoint')
+					};
+				}
 
 				if (!data) {
 					data = new CollapsibleSearch($this, typeof options === 'object' ? options : null);
 
 					$this.data('lexicon.collapsible-search', data);
-				}
-
-				if (typeof options === 'string') {
-					data[options].call($this);
 				}
 			}
 		);
@@ -144,4 +146,8 @@
 	Plugin.Constructor = CollapsibleSearch;
 
 	$.fn.collapsibleSearch = Plugin;
+
+	$(function() {
+		Plugin.call($('[data-toggle="collapsible-search"]'));
+	});
 }(jQuery);
