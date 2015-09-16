@@ -319,10 +319,11 @@
 				}
 			});
 
-			setTimeout(function() {
-				container.toggleClass('closed', !closed).addClass('sidenav-transition');
+			container.addClass('sidenav-transition');
+			toggler.addClass('sidenav-transition');
 
-				toggler.addClass('sidenav-transition');
+			setTimeout(function() {
+				container.toggleClass('closed', !closed);
 
 				if (closed && instance.desktop) {
 					menu.css('right', '');
@@ -394,10 +395,6 @@
 			var desktopFixedPush = desktop && (type === 'fixed-push');
 			var mobileFixedPush = !desktop && (typeMobile === 'fixed-push');
 
-			instance._onSidenavTransitionEnd(container, function() {
-				toggler.removeClass('sidenav-transition');
-			});
-
 			container.addClass('sidenav-transition');
 			toggler.addClass('sidenav-transition');
 
@@ -408,6 +405,9 @@
 
 				if (desktopFixedPush || mobileFixedPush) {
 					instance._onSidenavTransitionEnd(content, function() {
+						container.removeClass('sidenav-transition');
+						toggler.removeClass('sidenav-transition');
+
 						container.trigger('open.lexicon.sidenav');
 					});
 
@@ -425,6 +425,9 @@
 				if (desktopFixedPush || mobileFixedPush) {
 					instance._onSidenavTransitionEnd(content, function() {
 						instance._removeBodyFixed();
+
+						container.removeClass('sidenav-transition');
+						toggler.removeClass('sidenav-transition');
 
 						container.trigger('closed.lexicon.sidenav');
 					});
@@ -451,10 +454,6 @@
 
 			if (instance.useDataAttribute) {
 				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
-
-				container.on(instance.options.transitionEnd, function(event) {
-					event.stopPropagation();
-				});
 
 				element.on('click.lexicon.sidenav', function(event) {
 					event.preventDefault();
@@ -494,10 +493,6 @@
 				togglerSelector = options.target ? '[data-target="' + options.target + '"]' : '[href="' + element.attr('href') + '"]';
 
 				container = options.target ? $(options.target) : doc.find(element.attr('href'));
-
-				container.on(options.transitionEnd, function(event) {
-					event.stopPropagation();
-				});
 
 				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
 					event.preventDefault();
@@ -581,13 +576,15 @@
 			element.on(transitionEnd, function(event) {
 				var $this = $(this);
 
-				$this.removeClass('sidenav-transition');
+				if ($(event.target).is(instance.options.navigation)) {
+					$this.removeClass('sidenav-transition');
 
-				if (func) {
-					func();
+					if (func) {
+						func();
+					}
+
+					$this.off(transitionEnd);
 				}
-
-				$this.off(transitionEnd);
 			});
 		},
 
