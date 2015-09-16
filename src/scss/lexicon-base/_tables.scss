@@ -103,12 +103,12 @@
 			> thead {
 				border-left: 1px solid #DDD;
 				border-right: 3px solid #DDD;
-				overflow: auto;
 				max-width: 200px;
+				overflow: auto;
 
 				> tr > th {
-					border-top-width: 0;
 					border-bottom-width: 0;
+					border-top-width: 0;
 				}
 			}
 
