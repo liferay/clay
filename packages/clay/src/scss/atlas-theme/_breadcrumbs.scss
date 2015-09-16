@@ -6,16 +6,20 @@
 		font-weight: 500;
 		text-transform: uppercase;
 
+		&:before {
+			content: '';
+			font-family: 'fontawesome-alloy';
+			font-size: 16px;
+			font-weight: 900;
+			position: relative;
+		}
+
 		> a {
 			color: $breadcrumb-link-color;
 		}
 
 		+ li:before {
 			content: $breadcrumb-separator;
-			font-family: 'fontawesome-alloy';
-			font-size: 16px;
-			font-weight: 900;
-			position: relative;
 		}
 
 		+ li.truncate:before {

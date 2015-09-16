@@ -47,41 +47,20 @@
 			});
 		},
 
-		_onTransitionEnd: function(basicSearch) {
-			var instance = this;
-
-			var transitionEnd = instance.options.transitionEnd;
-
-			basicSearch.find('.basic-search-slider').on(transitionEnd, function(event) {
-				var basicSearch = $(this).closest('.basic-search');
-
-				basicSearch.removeClass('basic-search-transition');
-
-				if (basicSearch.data('lexicon.collapsible-search-open')) {
-					basicSearch.find('input[type="text"]').focus();
-				}
-
-				$(this).off(transitionEnd);
-			});
-		},
-
 		_onClickCloseButton: function(basicSearch) {
 			var instance = this;
 
 			basicSearch.on('click', '.basic-search-close', function(event) {
 				var basicSearch = $(this).closest('.basic-search');
 
-				// Webkit needs time to unfocus input
-				setTimeout(function() {
-					basicSearch.data('lexicon.collapsible-search-open', false);
+				basicSearch.data('lexicon.collapsible-search-open', false);
 
-					basicSearch.addClass('basic-search-transition');
+				basicSearch.addClass('basic-search-transition');
 
-					instance._onTransitionEnd(basicSearch);
+				instance._onTransitionEnd(basicSearch);
 
-					basicSearch.removeClass('open');
-					basicSearch.off('click');
-				}, 200);
+				basicSearch.removeClass('open');
+				basicSearch.off('click');
 			});
 		},
 
@@ -107,6 +86,26 @@
 					}
 				}
 			});
+		},
+
+		_onTransitionEnd: function(basicSearch) {
+			var instance = this;
+
+			var transitionEnd = instance.options.transitionEnd;
+
+			basicSearch.find('.basic-search-slider').on(transitionEnd, function(event) {
+				var basicSearch = $(this).closest('.basic-search');
+
+				if ($(event.target).is('.basic-search-slider')) {
+					basicSearch.removeClass('basic-search-transition');
+
+					if (basicSearch.data('lexicon.collapsible-search-open')) {
+						basicSearch.find('input[type="text"]').focus();
+					}
+
+					$(this).off(transitionEnd);
+				}
+			});
 		}
 	};
 
@@ -117,16 +116,18 @@
 			function() {
 				var $this = $(this);
 
-				var data = $this.data('lexicon.collapsible-search')
+				var data = $this.data('lexicon.collapsible-search');
+
+				if ($this.is('[data-toggle="collapsible-search"]')) {
+					options = {
+						breakpoint: $this.data('breakpoint')
+					};
+				}
 
 				if (!data) {
 					data = new CollapsibleSearch($this, typeof options === 'object' ? options : null);
 
 					$this.data('lexicon.collapsible-search', data);
-				}
-
-				if (typeof options === 'string') {
-					data[options].call($this);
 				}
 			}
 		);
@@ -145,4 +146,8 @@
 	Plugin.Constructor = CollapsibleSearch;
 
 	$.fn.collapsibleSearch = Plugin;
+
+	$(function() {
+		Plugin.call($('[data-toggle="collapsible-search"]'));
+	});
 }(jQuery);
