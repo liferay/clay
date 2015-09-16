@@ -47,26 +47,6 @@
 			});
 		},
 
-		_onTransitionEnd: function(basicSearch) {
-			var instance = this;
-
-			var transitionEnd = instance.options.transitionEnd;
-
-			basicSearch.find('.basic-search-slider').on(transitionEnd, function(event) {
-				var basicSearch = $(this).closest('.basic-search');
-
-				if ($(event.target).is('.basic-search-slider')) {
-					basicSearch.removeClass('basic-search-transition');
-
-					if (basicSearch.data('lexicon.collapsible-search-open')) {
-						basicSearch.find('input[type="text"]').focus();
-					}
-
-					$(this).off(transitionEnd);
-				}
-			});
-		},
-
 		_onClickCloseButton: function(basicSearch) {
 			var instance = this;
 
@@ -104,6 +84,26 @@
 						basicSearch.addClass('open');
 						basicSearch.addClass('basic-search-transition');
 					}
+				}
+			});
+		},
+
+		_onTransitionEnd: function(basicSearch) {
+			var instance = this;
+
+			var transitionEnd = instance.options.transitionEnd;
+
+			basicSearch.find('.basic-search-slider').on(transitionEnd, function(event) {
+				var basicSearch = $(this).closest('.basic-search');
+
+				if ($(event.target).is('.basic-search-slider')) {
+					basicSearch.removeClass('basic-search-transition');
+
+					if (basicSearch.data('lexicon.collapsible-search-open')) {
+						basicSearch.find('input[type="text"]').focus();
+					}
+
+					$(this).off(transitionEnd);
 				}
 			});
 		}
