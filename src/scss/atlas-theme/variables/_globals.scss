@@ -17,12 +17,12 @@ $font-size-h4:                             floor(($font-size-base * 1.1875)) !de
 $font-size-h5:                             $font-size-base !default;
 $font-size-h6:                             floor(($font-size-base / 1.1875)) !default; // ~11px
 
-$font-size-desktop-h1: floor(($font-size-desktop-base * 2)) !default; // Atlas 32px
-$font-size-desktop-h2: floor(($font-size-desktop-base * 1.75)) !default; // Atlas 28px
-$font-size-desktop-h3: floor(($font-size-desktop-base * 1.5)) !default; // Atlas 24px
-$font-size-desktop-h4: floor(($font-size-desktop-base * 1.1875)) !default; // Atlas 19px
-$font-size-desktop-h5: $font-size-desktop-base !default; // Atlas 16px
-$font-size-desktop-h6: floor(($font-size-desktop-base / 1.1875)) !default; // Atlas 13px
+$font-size-desktop-h1: floor(($font-size-desktop-base * 1.625)) !default; // Atlas 26px
+$font-size-desktop-h2: floor(($font-size-desktop-base * 1.375)) !default; // Atlas 22px
+$font-size-desktop-h3: floor(($font-size-desktop-base * 1.1875)) !default; // Atlas 19px
+$font-size-desktop-h4: $font-size-desktop-base !default; // Atlas 16px
+$font-size-desktop-h5: floor(($font-size-desktop-base / 1.1428)) !default; // Atlas 14px
+$font-size-desktop-h6: floor(($font-size-desktop-base / 1.2307)) !default; // Atlas 13px
 
 $line-height-base:                         1.4286 !default;
 $headings-line-height:                     1.2 !default;
