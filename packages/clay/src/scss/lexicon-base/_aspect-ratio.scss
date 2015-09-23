@@ -57,3 +57,13 @@
 .aspect-ratio-16-to-9 {
 	@include aspect-ratio(16, 9);
 }
+
+.aspect-ratio-bg-cover {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.aspect-ratio-bg-center {
+	background-repeat: no-repeat;
+	background-position: center;
+}
