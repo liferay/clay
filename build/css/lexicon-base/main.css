@@ -8642,53 +8642,6 @@ button.close {
   white-space: nowrap;
 }
 
-.card-horizontal-flex.toggle-card-dm .toggle-card-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.card-horizontal-flex.toggle-card-dm .aspect-ratio {
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -moz-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  padding-bottom: 0;
-}
-
-.card-horizontal-flex.toggle-card-dm .aspect-ratio:first-child {
-  border-radius: 4px 0 0 4px;
-}
-
-.card-horizontal-flex.toggle-card-dm .card-header,
-.card-horizontal-flex.toggle-card-dm .card-footer,
-.card-horizontal-flex.toggle-card-dm .card-section {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.card-dm .card-footer {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .checkbox-card label {
   padding-left: 0;
 }
@@ -8700,8 +8653,8 @@ button.close {
 }
 
 .checkbox-middle-left input[type="checkbox"] {
-  margin-top: -16px;
   left: 15px;
+  margin-top: -16px;
   top: 50%;
 }
 
@@ -13349,6 +13302,11 @@ input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
   -webkit-transition: all 100ms ease-in;
   -o-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 .monospace {

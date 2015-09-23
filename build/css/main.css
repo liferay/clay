@@ -61,10 +61,6 @@
 /**
  * @param $size - User icon size
  */
-body {
-  -webkit-font-smoothing: antialiased;
-}
-
 header.row {
   margin: 0;
 }
@@ -201,6 +197,10 @@ section.row {
 
 .uxgl-alerts .uxgl-toggle-code ~ .alert {
   margin-top: 10px;
+}
+
+#bestPractices tr th {
+  padding-top: 20px;
 }
 
 body.fixed {
