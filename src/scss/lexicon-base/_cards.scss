@@ -294,34 +294,6 @@
 	}
 }
 
-// Toggle DM Cards
-
-.card-horizontal-flex.toggle-card-dm {
-	.toggle-card-container {
-		@include display(flex);
-	}
-
-	.aspect-ratio {
-		@include flex(0 1 auto);
-
-		padding-bottom: 0;
-
-		&:first-child {
-			border-radius: 4px 0 0 4px;
-		}
-	}
-
-	.card-header,
-	.card-footer,
-	.card-section {
-		@include flex(1);
-	}
-}
-
-.card-dm .card-footer {
-	@include display(flex);
-}
-
 // Flexbox Cards
 
 .checkbox-card {
@@ -338,8 +310,8 @@
 
 .checkbox-middle-left {
 	input[type="checkbox"] {
-		margin-top: -16px;
 		left: 15px;
+		margin-top: -16px;
 		top: 50%;
 	}
 }

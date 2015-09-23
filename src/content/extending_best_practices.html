@@ -1,0 +1,282 @@
+---
+title: Best Practices
+section: Extending Components
+---
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<p>Lexicon is an extension of <a href="http://getbootstrap.com/">Bootstrap's</a> CSS Framework. It fills the gaps between Bootstrap and the specific needs of Liferay Portal. It's built with <a href="http://sass-lang.com/">Sass</a> and we use <a href="http://bourbon.io/">Bourbon</a> to handle browser prefixing in css.</p>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h2>Choosing the Right Lexicon Component</h2>
+
+		<p>There are many components in Lexicon, some components overlap, some look the same at first glance, while several are combined to form a whole new component. When building your module, be careful not to choose and modify the first component that looks like a fit and take the time to choose the right component for the job.</p>
+
+		<p><a href="../figures/">Figures</a>, <a href="../images-and-thumbnails/">Aspect Ratio</a>, and <a href="../images-and-thumbnails/">Crop Img</a> are components that are similar but serve different purposes.</p>
+
+		<p><a href="../figures/">Figures</a> are intended to be used for captioning images, while Aspect Ratio, and Crop Img are intended for sizing images. Aspect Ratio maintains a specific ratio relative to its container and Crop Img crops the viewable area of an image instead of changing the image size.</p>
+
+		<p>Aspect Ratio and Crop Img can be used in Figures, but Figures shouldn't be used in Aspect Ratio or Crop Img.</p>
+	</div>
+</div>
+
+<div class="row row-spacing" id="bestPractices">
+	<div class="col-md-12">
+		<h2>How Sass Files are Loaded in Liferay 7.0</h2>
+
+		<table>
+			<tbody>
+				<tr>
+					<th>File</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>theme's aui.scss</td>
+					<td>contains Bootstrap, Lexicon/Atlas</td>
+				</tr>
+				<tr>
+					<td>|---- _aui_variables.scss</td>
+					<td>overwrites Bootstrap/Lexicon/Atlas variables</td>
+				</tr>
+				<tr>
+					<td>|---- ../alloy-font-awesome/scss/font-awesome</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- lexicon-base/main</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- ../../liferay_variables_custom</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- ../../liferay_variables</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- ../../aui_custom</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- ../../liferay_custom</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>File</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>frontend-css-web/main.scss</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- portal/aui_deprecated.css</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- portal</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- taglib</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- portal/accessibility</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>File</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>apps/all main.scss</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>File</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>theme's main.scss</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- imports</td>
+					<td>Imports third-party libraries required for theme e.g. Bourbon, Liferay Mixins, Lexicon Base Variables, and Bootstrap Mixins</td>
+				</tr>
+				<tr>
+					<td>|---- base</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- portal</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- taglib</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- application</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- layout</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- control_menu</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- navigation</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- portlet</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- extras</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>|---- custom</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h2>Lexicon Variables in a Liferay Component</h2>
+		<p>Leverage Lexicon variables inside a 7.0 component by adding <code>_variables.scss</code> and <code>_variables_custom.scss</code> files to the directory containing the component e.g. Portlet.</p>
+		<p>Import them by adding <code>@import "portlet/variables_custom";</code> and <code>@import "portlet/variables";</code> at the top of <code>_styled/css/_portlet.scss</code>.</p>
+
+<h5>_styled/css/_portlet.scss</h5>
+<pre><code>```@import "portlet/variables_custom";
+@import "portlet/variables";
+
+@import "portlet/controls";
+@import "portlet/controls_borderless";
+@import "portlet/labels";
+@import "portlet/messages";
+@import "portlet/spec";
+@import "portlet/topper";
+
+@import "portlet/misc";
+
+@import "portlet/app_components";```</code></pre>
+
+		<p><code>_variables.scss</code> should contain lexicon-base style variables and <code>_variables_custom.scss</code> should contain variables that overwrite or add atlas styles.</p>
+		<p>The file structure should look similar to:</p>
+		<pre><code>```frontend-theme-classic-web
+  src
+    META-INF
+      resources
+        classic
+          _diffs
+            css
+              portlet
+                _variables_custom.scss
+frontend-theme-styled
+  src
+    META-INF
+      resources
+        _styled
+          css
+            portlet
+              _variables.scss
+              _variables_custom.scss```</code></pre>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h2>Extending a Lexicon Component in 7.0</h2>
+
+		<p>In this walkthrough, we will extend the Lexicon Cards Component to create an inverse colored card for the Card Taglib. The Card Taglib exists for all themes, so we will need to add an inverse style that matches the _styled theme as well as classic theme.</p>
+
+		<p>The first thing we need to do is create a files inside <code>_styled/css/taglib</code> called <code>_card.scss</code>, <code>_variables.scss</code>, and <code>_variables_custom.scss</code> and import them in <code>_styled/css/_taglib.scss</code>. </p>
+
+<pre><code>```@import "taglib/variables_custom";
+@import "taglib/variables";
+
+@import "./taglib/app_view_common";
+@import "./taglib/app_view_entry";
+@import "./taglib/app_view_search_entry";
+@import "./taglib/app_view_toolbar";
+@import "./taglib/asset_links";
+@import "./taglib/asset_metadata";
+@import "./taglib/calendar";
+
+@import "taglib/card";
+
+@import "./taglib/categorization_filter";
+@import "./taglib/diff";
+@import "./taglib/diff_html";
+@import "./taglib/diff_version_comparator";
+@import "./taglib/discussion";
+@import "./taglib/drop_here_info";
+@import "./taglib/field_wrapper";
+@import "./taglib/flags";
+@import "./taglib/form_navigator";
+@import "./taglib/header";
+@import "./taglib/icon";
+@import "./taglib/image_selector";
+@import "./taglib/input_localized";
+@import "./taglib/input_move_boxes";
+@import "./taglib/layouts_tree";
+@import "./taglib/map";
+@import "./taglib/navbar";
+@import "./taglib/preview";
+@import "./taglib/search_container";
+@import "./taglib/search_toggle";
+@import "./taglib/social_activities";
+@import "./taglib/social_bookmarks";
+@import "./taglib/user_display";
+@import "./taglib/webdav";
+@import "./taglib/workflow_status";```</code></pre>
+
+	<p><code>_variables_custom.scss</code> should be an empty file in _styled. In classic and admin it should contain the variable overrides below.</p>
+
+<pre><code>```$card-inverse-bg: $inverse-bg !default;
+$card-inverse-border: $inverse-border !default;
+$card-inverse-color: $inverse-color !default;
+$card-inverse-link-color: $inverse-link-color !default;```</code></pre>
+
+	<p><code>_variables.scss</code> will contain variables for _styled.</p>
+
+<pre><code>```$card-inverse-bg: $navbar-inverse-bg !default;
+$card-inverse-border: $navbar-inverse-border !default;
+$card-inverse-color: #FFF !default;
+$card-inverse-link-color: $navbar-inverse-link-color !default;```</code></pre>
+
+	<p><code>_card.scss</code> will contain styles for our inverse card.</p>
+
+<pre><code>```.card-inverse {
+	background-color: $card-inverse-bg;
+	color: $card-inverse-color;
+
+	a {
+		color: $card-inverse-link-color;
+	}
+}```</code></pre>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h2>Third Party Bootstrap Theme with Lexicon</h2>
+		<p>Copy and paste the sass variables from the third party Bootstrap theme into <code>_aui_variables.scss</code> and the styles into <code>aui_custom.scss</code>.</p>
+
+	</div>
+</div>
