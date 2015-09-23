@@ -10708,53 +10708,6 @@ button.close {
   white-space: nowrap;
 }
 
-.card-horizontal-flex.toggle-card-dm .toggle-card-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.card-horizontal-flex.toggle-card-dm .aspect-ratio {
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -moz-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  padding-bottom: 0;
-}
-
-.card-horizontal-flex.toggle-card-dm .aspect-ratio:first-child {
-  border-radius: 4px 0 0 4px;
-}
-
-.card-horizontal-flex.toggle-card-dm .card-header,
-.card-horizontal-flex.toggle-card-dm .card-footer,
-.card-horizontal-flex.toggle-card-dm .card-section {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.card-dm .card-footer {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .checkbox-card label {
   padding-left: 0;
 }
@@ -10766,8 +10719,8 @@ button.close {
 }
 
 .checkbox-middle-left input[type="checkbox"] {
-  margin-top: -16px;
   left: 15px;
+  margin-top: -16px;
   top: 50%;
 }
 
@@ -15417,6 +15370,11 @@ input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
   transition: all 100ms ease-in;
 }
 
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 .monospace {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -17950,7 +17908,7 @@ h1.modal-title {
 
 @media screen and (min-width: 768px) {
   h1.modal-title {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
@@ -17960,7 +17918,7 @@ h2.modal-title {
 
 @media screen and (min-width: 768px) {
   h2.modal-title {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 
@@ -17970,7 +17928,7 @@ h3.modal-title {
 
 @media screen and (min-width: 768px) {
   h3.modal-title {
-    font-size: 24px;
+    font-size: 19px;
   }
 }
 
@@ -17980,7 +17938,7 @@ h4.modal-title {
 
 @media screen and (min-width: 768px) {
   h4.modal-title {
-    font-size: 19px;
+    font-size: 16px;
   }
 }
 
@@ -17990,7 +17948,7 @@ h5.modal-title {
 
 @media screen and (min-width: 768px) {
   h5.modal-title {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -19646,7 +19604,7 @@ h1,
 @media screen and (min-width: 768px) {
   h1,
   .h1 {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
@@ -19658,7 +19616,7 @@ h2,
 @media screen and (min-width: 768px) {
   h2,
   .h2 {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 
@@ -19670,7 +19628,7 @@ h3,
 @media screen and (min-width: 768px) {
   h3,
   .h3 {
-    font-size: 24px;
+    font-size: 19px;
   }
 }
 
@@ -19682,7 +19640,7 @@ h4,
 @media screen and (min-width: 768px) {
   h4,
   .h4 {
-    font-size: 19px;
+    font-size: 16px;
   }
 }
 
@@ -19694,7 +19652,7 @@ h5,
 @media screen and (min-width: 768px) {
   h5,
   .h5 {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
