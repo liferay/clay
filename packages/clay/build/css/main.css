@@ -598,7 +598,7 @@ html {
 }
 
 .side-navigation {
-  padding-top: 35px;
+  padding-top: 10px;
   z-index: 1;
 }
 
@@ -636,6 +636,10 @@ html {
 .side-navigation .nav-stacked li div > .nav-stacked li.child-active > a, .side-navigation .nav-stacked li div > .nav-stacked li.active > a {
   border-left: 3px solid #0058BA;
   margin-left: -3px;
+}
+
+.side-navigation .side-navigation-container > .nav-stacked > li > a.nav-title {
+  padding-bottom: 0;
 }
 
 .side-navigation-dropdown-container > a {
