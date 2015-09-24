@@ -298,6 +298,7 @@
 
 .checkbox-card {
 	label {
+		display: block;
 		padding-left: 0;
 	}
 
@@ -311,14 +312,14 @@
 .checkbox-middle-left {
 	input[type="checkbox"] {
 		left: 15px;
-		margin-top: -16px;
+		margin-top: -6px;
 		top: 50%;
 	}
 }
 
 .checkbox-middle-right {
 	input[type="checkbox"] {
-		margin-top: -16px;
+		margin-top: -6px;
 		right: 15px;
 		top: 50%;
 	}

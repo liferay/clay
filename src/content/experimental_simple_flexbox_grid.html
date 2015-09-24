@@ -170,5 +170,22 @@ section: Experimental
 				<li><code>flex-item-break-md-only</code> between 992px and 1199px.</li>
 			</ul>
 		</blockquote>
+
+		<div class="flex-container">
+			<div class="flex-container" style="background-color:#BBB;width:150px;height:150px;">
+				<div class="flex-item-center" style="margin-left:auto;margin-right:auto;">150px x 150px</div>
+			</div>
+			<div class="flex-container flex-item-expand" style="background-color:#EEE;">
+				<div class="flex-container">
+					<div class="flex-item-center">Nested Grid</div>
+				</div>
+				<div class="flex-container flex-item-expand" style="background-color:#BBB;">
+					<div class="flex-item-center">Expand to fill rest of space.</div>
+				</div>
+				<div class="flex-container flex-item-expand flex-item-break-md-only">
+					<div class="flex-item-center">Aged bar, percolator siphon barista coffee extraction. Whipped sugar americano id decaffeinated as trifecta foam black beans at frappuccino. Strong coffee, extraction mocha foam, coffee dripper americano medium viennese.</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
