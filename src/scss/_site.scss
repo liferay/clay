@@ -618,47 +618,48 @@ $sideNavWidth: 220px;
 
 		&.child-active, &.active {
 			> a {
+				color: #0058BA;
 				font-weight: bold;
 			}
 		}
 	}
 
 	.nav-stacked li {
+		.nav-title {
+			display: block;
+			padding: 10px 15px;
+		}
+
 		> h4 {
 			color: #F3F3F3;
 			padding: 10px 15px;
 		}
 
-		div > .nav-stacked li > a {
-			padding-left: 35px;
+		div > .nav-stacked {
+			border-left: 3px solid #E4E4E4;
+			margin-left: 15px;
+
+			li {
+				 > a {
+					font-size: 0.9em;
+					padding: 2px;
+					padding-left: 10px;
+				}
+
+				&.child-active, &.active {
+					> a {
+						border-left: 3px solid #0058BA;
+						margin-left: -3px;
+					}
+				}
+			}
 		}
 	}
 }
 
 .side-navigation-dropdown-container {
-	&:after {
-		clear: both;
-		content: " ";
-		display: block;
-		height: 0;
-		overflow: hidden;
-		visibility: hidden;
-	}
-
 	> a {
-		float: right;
-		text-align: center;
-		width: 25%;
-
-		&:first-child {
-			float: left;
-			text-align: left;
-			width: 75%;
-		}
-	}
-
-	.collapse {
-		clear: both;
+		font-weight: bold;
 	}
 }
 

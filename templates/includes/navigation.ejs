@@ -9,9 +9,14 @@
 						var cssClass = ((path == item.path) ? 'active' : '');
 						var url = rootPath + '/' + item.path;
 
+						var tpl = '<li class="{cssClass}">';
+
 						if (item.children) {
-							url = 'javascript:;'
 							cssClass = 'side-navigation-dropdown-container';
+							tpl += '<span class="nav-title">{title}</span>';
+						}
+						else {
+							tpl += '<a class="nav-title" href="{url}">{title}</a>';
 						}
 
 						var tplObj = {
@@ -20,12 +25,10 @@
 							url: url
 						};
 
-						buffer.push(_.sub('<li class="{cssClass}"><a href="{url}">{title}</a>', tplObj));
+						buffer.push(_.sub(tpl, tplObj));
 
 						if (item.children) {
 							var sectionNav = createMainNavList(item.children, path, item);
-
-							buffer.push('<a class="side-navigation-dropdown" href="#"><span class="caret"></span></a>');
 
 							var collapseCssClass = 'collapse';
 
@@ -39,7 +42,7 @@
 								collapseCssClass += ' in';
 							}
 
-							buffer.push('<div class="', collapseCssClass,'">');
+							buffer.push('<div class="">');
 
 							buffer.push(sectionNav);
 
