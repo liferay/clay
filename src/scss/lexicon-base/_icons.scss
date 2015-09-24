@@ -1,6 +1,8 @@
 .lexicon-icon {
-	width: $lexicon-icon-size;
+	display: inline-block;
 	height: $lexicon-icon-size;
+	width: $lexicon-icon-size;
+	vertical-align: middle;
 }
 
 a .icon-monospaced {
