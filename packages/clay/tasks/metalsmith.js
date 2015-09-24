@@ -9,6 +9,7 @@ var markdown = require('metalsmith-markdown');
 var permalinks = require('metalsmith-permalinks');
 var sass = require('metalsmith-sass');
 var templates = require('metalsmith-templates');
+var headingsId = require('metalsmith-headings-identifier');
 
 var handleNav = require('../lib/handle_nav');
 var handlePath = require('../lib/handle_path');
@@ -61,6 +62,11 @@ module.exports = function(gulp, plugins, _, config) {
 								}
 							)
 						)
+						.use(headingsId(
+							{
+								linkTemplate: '<a class="heading-anchor" href="#%s"><i class="icon icon-link"></i></a>'
+							}
+						))
 						.use(handlePermalink())
 						.use(
 							permalinks(
