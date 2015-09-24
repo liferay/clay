@@ -395,6 +395,10 @@ body.fixed {
   max-width: 300px;
 }
 
+.card-background-image-demo .aspect-ratio {
+  background-color: #000;
+}
+
 .usage-section p {
   line-height: 1.6667em;
   margin-bottom: 1.6667em;
@@ -604,7 +608,13 @@ html {
 }
 
 .side-navigation li.child-active > a, .side-navigation li.active > a {
+  color: #0058BA;
   font-weight: bold;
+}
+
+.side-navigation .nav-stacked li .nav-title {
+  display: block;
+  padding: 10px 15px;
 }
 
 .side-navigation .nav-stacked li > h4 {
@@ -612,33 +622,24 @@ html {
   padding: 10px 15px;
 }
 
-.side-navigation .nav-stacked li div > .nav-stacked li > a {
-  padding-left: 35px;
+.side-navigation .nav-stacked li div > .nav-stacked {
+  border-left: 3px solid #E4E4E4;
+  margin-left: 15px;
 }
 
-.side-navigation-dropdown-container:after {
-  clear: both;
-  content: " ";
-  display: block;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
+.side-navigation .nav-stacked li div > .nav-stacked li > a {
+  font-size: 0.9em;
+  padding: 2px;
+  padding-left: 10px;
+}
+
+.side-navigation .nav-stacked li div > .nav-stacked li.child-active > a, .side-navigation .nav-stacked li div > .nav-stacked li.active > a {
+  border-left: 3px solid #0058BA;
+  margin-left: -3px;
 }
 
 .side-navigation-dropdown-container > a {
-  float: right;
-  text-align: center;
-  width: 25%;
-}
-
-.side-navigation-dropdown-container > a:first-child {
-  float: left;
-  text-align: left;
-  width: 75%;
-}
-
-.side-navigation-dropdown-container .collapse {
-  clear: both;
+  font-weight: bold;
 }
 
 /* Styles for side navigation component page */

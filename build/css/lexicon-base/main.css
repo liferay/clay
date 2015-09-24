@@ -8173,6 +8173,16 @@ button.close {
   padding-bottom: 56.25%;
 }
 
+.aspect-ratio-bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aspect-ratio-bg-center {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .badge .icon-monospaced, .badge .help-icon {
   height: 26px;
   line-height: 26px;
