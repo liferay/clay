@@ -646,6 +646,28 @@ html {
   font-weight: bold;
 }
 
+h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, h5 .heading-anchor, h6 .heading-anchor {
+  float: right;
+  font-size: 14px;
+  line-height: 1.5;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  width: 20px;
+}
+
+@media (min-width: 768px) {
+  h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, h5 .heading-anchor, h6 .heading-anchor {
+    float: none;
+    opacity: 0;
+    margin-left: -20px;
+  }
+  h1:hover .heading-anchor, h2:hover .heading-anchor, h3:hover .heading-anchor, h4:hover .heading-anchor, h5:hover .heading-anchor, h6:hover .heading-anchor {
+    opacity: 1;
+  }
+}
+
 /* Styles for side navigation component page */
 #mySidebar {
   background-color: #222328;

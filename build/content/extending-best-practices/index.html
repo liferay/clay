@@ -210,13 +210,13 @@
 		
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<p>Lexicon is an extension of <a href="http://getbootstrap.com/">Bootstrap's</a> CSS Framework. It fills the gaps between Bootstrap and the specific needs of Liferay Portal. It's built with <a href="http://sass-lang.com/">Sass</a> and we use <a href="http://bourbon.io/">Bourbon</a> to handle browser prefixing in css.</p>
+		<p>Lexicon is an extension of <a href="http://getbootstrap.com/">Bootstrap&apos;s</a> CSS Framework. It fills the gaps between Bootstrap and the specific needs of Liferay Portal. It&apos;s built with <a href="http://sass-lang.com/">Sass</a> and we use <a href="http://bourbon.io/">Bourbon</a> to handle browser prefixing in css.</p>
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2>Choosing the Right Lexicon Component</h2>
+		<h2 id="choosing-the-right-lexicon-component"><a class="heading-anchor" href="#choosing-the-right-lexicon-component"><i class="icon icon-link"></i></a>Choosing the Right Lexicon Component</h2>
 
 		<p>There are many components in Lexicon, some components overlap, some look the same at first glance, while several are combined to form a whole new component. When building your module, be careful not to choose and modify the first component that looks like a fit and take the time to choose the right component for the job.</p>
 
@@ -224,13 +224,13 @@
 
 		<p><a href="../figures/">Figures</a> are intended to be used for captioning images, while Aspect Ratio, and Crop Img are intended for sizing images. Aspect Ratio maintains a specific ratio relative to its container and Crop Img crops the viewable area of an image instead of changing the image size.</p>
 
-		<p>Aspect Ratio and Crop Img can be used in Figures, but Figures shouldn't be used in Aspect Ratio or Crop Img.</p>
+		<p>Aspect Ratio and Crop Img can be used in Figures, but Figures shouldn&apos;t be used in Aspect Ratio or Crop Img.</p>
 	</div>
 </div>
 
 <div class="row row-spacing" id="bestPractices">
 	<div class="col-md-12">
-		<h2>How Sass Files are Loaded in Liferay 7.0</h2>
+		<h2 id="how-sass-files-are-loaded-in-liferay-70"><a class="heading-anchor" href="#how-sass-files-are-loaded-in-liferay-70"><i class="icon icon-link"></i></a>How Sass Files are Loaded in Liferay 7.0</h2>
 
 		<table>
 			<tbody>
@@ -239,7 +239,7 @@
 					<th>Description</th>
 				</tr>
 				<tr>
-					<td>theme's aui.scss</td>
+					<td>theme&apos;s aui.scss</td>
 					<td>contains Bootstrap, Lexicon/Atlas</td>
 				</tr>
 				<tr>
@@ -307,7 +307,7 @@
 					<th>Description</th>
 				</tr>
 				<tr>
-					<td>theme's main.scss</td>
+					<td>theme&apos;s main.scss</td>
 					<td></td>
 				</tr>
 				<tr>
@@ -361,11 +361,11 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2>Lexicon Variables in a Liferay Component</h2>
+		<h2 id="lexicon-variables-in-a-liferay-component"><a class="heading-anchor" href="#lexicon-variables-in-a-liferay-component"><i class="icon icon-link"></i></a>Lexicon Variables in a Liferay Component</h2>
 		<p>Leverage Lexicon variables inside a 7.0 component by adding <code>_variables.scss</code> and <code>_variables_custom.scss</code> files to the directory containing the component e.g. Portlet.</p>
-		<p>Import them by adding <code>@import "portlet/variables_custom";</code> and <code>@import "portlet/variables";</code> at the top of <code>_styled/css/_portlet.scss</code>.</p>
+		<p>Import them by adding <code>@import &quot;portlet/variables_custom&quot;;</code> and <code>@import &quot;portlet/variables&quot;;</code> at the top of <code>_styled/css/_portlet.scss</code>.</p>
 
-<h5>_styled/css/_portlet.scss</h5>
+<h5 id="_styledcss_portletscss"><a class="heading-anchor" href="#_styledcss_portletscss"><i class="icon icon-link"></i></a>_styled/css/_portlet.scss</h5>
 <pre><code>@import &quot;portlet/variables_custom&quot;;
 @import &quot;portlet/variables&quot;;
 
@@ -405,7 +405,7 @@ frontend-theme-styled
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2>Extending a Lexicon Component in 7.0</h2>
+		<h2 id="extending-a-lexicon-component-in-70"><a class="heading-anchor" href="#extending-a-lexicon-component-in-70"><i class="icon icon-link"></i></a>Extending a Lexicon Component in 7.0</h2>
 
 		<p>In this walkthrough, we will extend the Lexicon Cards Component to create an inverse colored card for the Card Taglib. The Card Taglib exists for all themes, so we will need to add an inverse style that matches the _styled theme as well as classic theme.</p>
 
@@ -467,12 +467,12 @@ $card-inverse-link-color: $navbar-inverse-link-color !default;</code></pre>
 	<p><code>_card.scss</code> will contain styles for our inverse card.</p>
 
 <pre><code>.card-inverse {
-&#x9;background-color: $card-inverse-bg;
-&#x9;color: $card-inverse-color;
+	background-color: $card-inverse-bg;
+	color: $card-inverse-color;
 
-&#x9;a {
-&#x9;&#x9;color: $card-inverse-link-color;
-&#x9;}
+	a {
+		color: $card-inverse-link-color;
+	}
 }</code></pre>
 
 	</div>
@@ -480,7 +480,7 @@ $card-inverse-link-color: $navbar-inverse-link-color !default;</code></pre>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2>Third Party Bootstrap Theme with Lexicon</h2>
+		<h2 id="third-party-bootstrap-theme-with-lexicon"><a class="heading-anchor" href="#third-party-bootstrap-theme-with-lexicon"><i class="icon icon-link"></i></a>Third Party Bootstrap Theme with Lexicon</h2>
 		<p>Copy and paste the sass variables from the third party Bootstrap theme into <code>_aui_variables.scss</code> and the styles into <code>aui_custom.scss</code>.</p>
 
 	</div>
