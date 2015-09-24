@@ -605,7 +605,7 @@ $sideNavWidth: 220px;
 }
 
 .side-navigation {
-	padding-top: 35px;
+	padding-top: $line-height-computed - nth($nav-link-padding, 1);
 	z-index: 1;
 
 	li {
@@ -654,6 +654,10 @@ $sideNavWidth: 220px;
 				}
 			}
 		}
+	}
+
+	.side-navigation-container > .nav-stacked > li > a.nav-title {
+		padding-bottom: 0;
 	}
 }
 
