@@ -33,7 +33,7 @@
 .flex-item-bottom {
 	@include align-self(flex-end);
 
-	// IE10 only Hack
+	// IE10, 11 Hack
 
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 		max-width: 100%;
@@ -43,7 +43,7 @@
 .flex-item-center {
 	@include align-self(center);
 
-	// IE10 only Hack
+	// IE10, 11 Hack
 
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 		max-width: 100%;
@@ -53,7 +53,7 @@
 .flex-item-top {
 	@include align-self(flex-start);
 
-	// IE10 only Hack
+	// IE10, 11 Hack
 
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 		max-width: 100%;
