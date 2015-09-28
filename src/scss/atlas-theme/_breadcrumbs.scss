@@ -7,7 +7,6 @@
 		text-transform: uppercase;
 
 		&:before {
-			content: '';
 			font-family: 'fontawesome-alloy';
 			font-size: 16px;
 			font-weight: 900;
@@ -24,6 +23,18 @@
 
 		+ li.truncate:before {
 			content: '#{$breadcrumb-separator}  ... #{$breadcrumb-separator}';
+		}
+	}
+}
+
+.breadcrumb-vertical {
+	> li {
+		&:before {
+			content: $breadcrumb-vertical-separator;
+		}
+
+		+ li:before {
+			content: $breadcrumb-vertical-separator;
 		}
 	}
 }
