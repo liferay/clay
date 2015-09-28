@@ -11,6 +11,15 @@
 	border-bottom-width: 2px;
 }
 
+.panel-barebone {
+	border: none;
+	box-shadow: none;
+
+	.panel-title a:not(.collapsed) {
+		color: $brand-primary;
+	}
+}
+
 .panel-default {
 	> .panel-heading,
 	> .panel-footer {

@@ -15,6 +15,13 @@
 	}
 }
 
+.panel-barebone {
+	> .panel-footer {
+		background-color: transparent;
+		border-color: transparent;
+	}
+}
+
 .panel-primary {
 	> .panel-footer {
 		background-color: $panel-primary-heading-bg;
