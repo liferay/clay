@@ -458,9 +458,10 @@ body.fixed {
 }
 
 @media screen and (min-width: 768px) {
-	.font-awesome-icons-list li {
+	.font-awesome-icons-list li, .lexicon-icon-list li {
 		float: left;
 		width: 33%;
+		padding: 5px;
 	}
 
 	.glyphicons-list li {
@@ -469,40 +470,34 @@ body.fixed {
 	}
 }
 
-.lexicon-icon-list {
-	> div {
-		display: table-row;
-		// float: left;
-		padding: 10px 0;
-		margin-bottom: 5px;
-		border-bottom: 1px solid;
-		min-width: 4%;
-		color: #000;
+.lexicon-icon-examples {
+	display: block;
+	padding: 35px 20px 20px;
+	text-align: center;
 
-		span {
-			display: none;
-		}
+	.lexicon-icon {
+		height: 160px;
+		width: 30%;
+	}
 
-		div {
-			width: 100%/6;
-			// width: 25%;
-			display: table-cell;
-			text-align: center;
-		}
+	.lexicon-icon-asterisk {
+		fill-opacity: 0;
+		stroke: #078DD8;
+		stroke-width: 10px;
+	}
 
-		&.list-header {
-			font-weight: bold;
-		}
+	.lexicon-icon-logout {
+		fill: #DA3A35;
+		fill-opacity: 0.15;
+		stroke: #DA3A35;
+		stroke-width: 10px;
+	}
 
-		// &:nth-of-type(5n) {
-		// 	span {
-		// 		display: inline-block;
-		// 	}
-		// }
-
-		// &:nth-of-type(5n + 1) {
-		// 	clear: left;
-		// }
+	.lexicon-icon-exclamation-full {
+		stroke: #FFF;
+		stroke-width: 40px;
+		stroke-opacity: 0.4;
+		fill: #E3A200;
 	}
 }
 
