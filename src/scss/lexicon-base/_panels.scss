@@ -15,10 +15,23 @@
 	}
 }
 
-.panel-barebone {
+.panel-blank {
+	box-shadow: none;
+
+	@include panel-variant($panel-blank-border, $panel-blank-text, $panel-blank-heading-bg, $panel-blank-border);
+
 	> .panel-footer {
-		background-color: transparent;
-		border-color: transparent;
+		background-color: $panel-blank-heading-bg;
+		border-color: $panel-blank-border;
+	}
+}
+
+.panel-group {
+	.panel-blank .panel-heading {
+		+ .panel-collapse > .panel-body,
+		+ .panel-collapse > .list-group {
+			border-top-color: $panel-blank-heading-bg;
+		}
 	}
 }
 

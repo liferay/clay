@@ -11,12 +11,22 @@
 	border-bottom-width: 2px;
 }
 
-.panel-barebone {
-	border: none;
+.panel-blank {
 	box-shadow: none;
 
-	.panel-title a:not(.collapsed) {
-		color: $brand-primary;
+	> .panel-heading {
+		a {
+			color: $panel-blank-heading-link-open-color;
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+
+			&.collapsed {
+				color: $panel-blank-heading-link-color;
+			}
+		}
 	}
 }
 
