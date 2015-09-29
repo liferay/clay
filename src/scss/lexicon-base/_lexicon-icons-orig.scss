@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "lexicon-orig";
+  src: url('../fonts/lexicon/lexicon-orig.eot');
+  src: url('../fonts/lexicon/lexicon-orig.eot?#iefix') format('eot'),
+    url('../fonts/lexicon/lexicon-orig.woff') format('woff'),
+    url('../fonts/lexicon/lexicon-orig.ttf') format('truetype'),
+    url('../fonts/lexicon/lexicon-orig.svg#lexicon-orig') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.l-icon-lexicon:before {
+  display: inline-block;
+  font-family: "lexicon-orig";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.l-icon-lexicon-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.l-icon-lexicon-2x { font-size: 2em; }
+.l-icon-lexicon-3x { font-size: 3em; }
+.l-icon-lexicon-4x { font-size: 4em; }
+.l-icon-lexicon-5x { font-size: 5em; }
+.l-icon-lexicon-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.l-icon-lexicon-2cards:before { content: "\EA01" }
+.l-icon-lexicon-2columns:before { content: "\EA02" }
+.l-icon-lexicon-add-cell:before { content: "\EA03" }
+.l-icon-lexicon-add-column:before { content: "\EA04" }
+.l-icon-lexicon-add-row:before { content: "\EA05" }
+.l-icon-lexicon-adjust:before { content: "\EA06" }
+.l-icon-lexicon-align-center:before { content: "\EA07" }
+.l-icon-lexicon-align-justify:before { content: "\EA08" }
+.l-icon-lexicon-align-left:before { content: "\EA09" }
+.l-icon-lexicon-align-right:before { content: "\EA0A" }
+.l-icon-lexicon-angle-down:before { content: "\EA0B" }
+.l-icon-lexicon-angle-left:before { content: "\EA0C" }
+.l-icon-lexicon-angle-right:before { content: "\EA0D" }
+.l-icon-lexicon-angle-up:before { content: "\EA0E" }
+.l-icon-lexicon-archive:before { content: "\EA0F" }
+.l-icon-lexicon-asterisk:before { content: "\EA10" }
+.l-icon-lexicon-bars:before { content: "\EA11" }
+.l-icon-lexicon-bold:before { content: "\EA12" }
+.l-icon-lexicon-camera:before { content: "\EA13" }
+.l-icon-lexicon-cards:before { content: "\EA14" }
+.l-icon-lexicon-caret-double-l:before { content: "\EA15" }
+.l-icon-lexicon-caret-double:before { content: "\EA16" }
+.l-icon-lexicon-chain-broken:before { content: "\EA17" }
+.l-icon-lexicon-check:before { content: "\EA18" }
+.l-icon-lexicon-code:before { content: "\EA19" }
+.l-icon-lexicon-cog:before { content: "\EA1A" }
+.l-icon-lexicon-compress:before { content: "\EA1B" }
+.l-icon-lexicon-control-panel:before { content: "\EA1C" }
+.l-icon-lexicon-edit-layout:before { content: "\EA1D" }
+.l-icon-lexicon-effects:before { content: "\EA1E" }
+.l-icon-lexicon-ellipsis-h:before { content: "\EA1F" }
+.l-icon-lexicon-ellipsis-v:before { content: "\EA20" }
+.l-icon-lexicon-exclamation-circle:before { content: "\EA21" }
+.l-icon-lexicon-exclamation-full:before { content: "\EA22" }
+.l-icon-lexicon-expand:before { content: "\EA23" }
+.l-icon-lexicon-folder:before { content: "\EA24" }
+.l-icon-lexicon-grid:before { content: "\EA25" }
+.l-icon-lexicon-h1:before { content: "\EA26" }
+.l-icon-lexicon-h2:before { content: "\EA27" }
+.l-icon-lexicon-heart:before { content: "\EA28" }
+.l-icon-lexicon-home:before { content: "\EA29" }
+.l-icon-lexicon-hr:before { content: "\EA2A" }
+.l-icon-lexicon-information-live:before { content: "\EA2B" }
+.l-icon-lexicon-italic:before { content: "\EA2C" }
+.l-icon-lexicon-link:before { content: "\EA2D" }
+.l-icon-lexicon-list-ol:before { content: "\EA2E" }
+.l-icon-lexicon-list-ul:before { content: "\EA2F" }
+.l-icon-lexicon-list:before { content: "\EA30" }
+.l-icon-lexicon-live:before { content: "\EA31" }
+.l-icon-lexicon-lock:before { content: "\EA32" }
+.l-icon-lexicon-logout:before { content: "\EA33" }
+.l-icon-lexicon-magic:before { content: "\EA34" }
+.l-icon-lexicon-moon:before { content: "\EA35" }
+.l-icon-lexicon-myspace:before { content: "\EA36" }
+.l-icon-lexicon-paperclip:before { content: "\EA37" }
+.l-icon-lexicon-pencil:before { content: "\EA38" }
+.l-icon-lexicon-phone:before { content: "\EA39" }
+.l-icon-lexicon-picture:before { content: "\EA3A" }
+.l-icon-lexicon-play:before { content: "\EA3B" }
+.l-icon-lexicon-plus:before { content: "\EA3C" }
+.l-icon-lexicon-print:before { content: "\EA3D" }
+.l-icon-lexicon-product-menu-closed:before { content: "\EA3E" }
+.l-icon-lexicon-product-menu-open:before { content: "\EA3F" }
+.l-icon-lexicon-product-menu:before { content: "\EA40" }
+.l-icon-lexicon-question-circle-full:before { content: "\EA41" }
+.l-icon-lexicon-question-circle:before { content: "\EA42" }
+.l-icon-lexicon-quote-left:before { content: "\EA43" }
+.l-icon-lexicon-quote-right:before { content: "\EA44" }
+.l-icon-lexicon-reload:before { content: "\EA45" }
+.l-icon-lexicon-remove-style:before { content: "\EA46" }
+.l-icon-lexicon-repository:before { content: "\EA47" }
+.l-icon-lexicon-search:before { content: "\EA48" }
+.l-icon-lexicon-share-alt:before { content: "\EA49" }
+.l-icon-lexicon-simulation-menu-closed:before { content: "\EA4A" }
+.l-icon-lexicon-simulation-menu-open:before { content: "\EA4B" }
+.l-icon-lexicon-simulation-menu:before { content: "\EA4C" }
+.l-icon-lexicon-sites:before { content: "\EA4D" }
+.l-icon-lexicon-staging:before { content: "\EA4E" }
+.l-icon-lexicon-star-half:before { content: "\EA4F" }
+.l-icon-lexicon-star-o:before { content: "\EA50" }
+.l-icon-lexicon-star:before { content: "\EA51" }
+.l-icon-lexicon-strikethrough:before { content: "\EA52" }
+.l-icon-lexicon-subscript:before { content: "\EA53" }
+.l-icon-lexicon-suitcase:before { content: "\EA54" }
+.l-icon-lexicon-sun:before { content: "\EA55" }
+.l-icon-lexicon-superscript:before { content: "\EA56" }
+.l-icon-lexicon-table:before { content: "\EA57" }
+.l-icon-lexicon-table2:before { content: "\EA58" }
+.l-icon-lexicon-thumbs-down:before { content: "\EA59" }
+.l-icon-lexicon-thumbs-up:before { content: "\EA5A" }
+.l-icon-lexicon-times-circle:before { content: "\EA5B" }
+.l-icon-lexicon-times:before { content: "\EA5C" }
+.l-icon-lexicon-trash:before { content: "\EA5D" }
+.l-icon-lexicon-twitter:before { content: "\EA5E" }
+.l-icon-lexicon-underline:before { content: "\EA5F" }
+.l-icon-lexicon-unlock:before { content: "\EA60" }
+.l-icon-lexicon-user:before { content: "\EA61" }
+.l-icon-lexicon-users:before { content: "\EA62" }

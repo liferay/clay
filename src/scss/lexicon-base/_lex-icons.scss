@@ -1,0 +1,335 @@
+@font-face {
+  font-family: 'lex-icon';
+  src:url('../fonts/lex-icon/lexicon.eot?n9p8i3');
+  src:url('../fonts/lex-icon/lexicon.eot?#iefixn9p8i3') format('embedded-opentype'),
+    url('../fonts/lex-icon/lexicon.ttf?n9p8i3') format('truetype'),
+    url('../fonts/lex-icon/lexicon.woff?n9p8i3') format('woff'),
+    url('../fonts/lex-icon/lexicon.svg?n9p8i3#lexicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="lex-icon-"], [class*=" lex-icon-"] {
+  font-family: 'lex-icon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lex-icon-2cards:before {
+  content: "\e600";
+}
+.lex-icon-2columns:before {
+  content: "\e601";
+}
+.lex-icon-add-cell:before {
+  content: "\e602";
+}
+.lex-icon-add-column:before {
+  content: "\e603";
+}
+.lex-icon-add-row:before {
+  content: "\e604";
+}
+.lex-icon-adjust:before {
+  content: "\e605";
+}
+.lex-icon-align-center:before {
+  content: "\e606";
+}
+.lex-icon-align-justify:before {
+  content: "\e607";
+}
+.lex-icon-align-left:before {
+  content: "\e608";
+}
+.lex-icon-align-right:before {
+  content: "\e609";
+}
+.lex-icon-angle-down:before {
+  content: "\e60a";
+}
+.lex-icon-angle-left:before {
+  content: "\e60b";
+}
+.lex-icon-angle-right:before {
+  content: "\e60c";
+}
+.lex-icon-angle-up:before {
+  content: "\e60d";
+}
+.lex-icon-archive:before {
+  content: "\e60e";
+}
+.lex-icon-asterisk:before {
+  content: "\e60f";
+}
+.lex-icon-bars:before {
+  content: "\e610";
+}
+.lex-icon-bold:before {
+  content: "\e611";
+}
+.lex-icon-camera:before {
+  content: "\e612";
+}
+.lex-icon-cards2:before {
+  content: "\e613";
+}
+.lex-icon-caret-double-l:before {
+  content: "\e614";
+}
+.lex-icon-caret-double:before {
+  content: "\e615";
+}
+.lex-icon-chain-broken:before {
+  content: "\e616";
+}
+.lex-icon-check:before {
+  content: "\e617";
+}
+.lex-icon-code:before {
+  content: "\e618";
+}
+.lex-icon-cog:before {
+  content: "\e619";
+}
+.lex-icon-compress:before {
+  content: "\e61a";
+}
+.lex-icon-control-panel:before {
+  content: "\e61b";
+}
+.lex-icon-edit-layout .path1:before {
+  content: "\e61c";
+  color: rgb(0, 0, 0);
+}
+.lex-icon-edit-layout .path2:before {
+  content: "\e662";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.lex-icon-edit-layout .path3:before {
+  content: "\e663";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.lex-icon-edit-layout .path4:before {
+  content: "\e664";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.lex-icon-effects:before {
+  content: "\e61d";
+}
+.lex-icon-ellipsis-h:before {
+  content: "\e61e";
+}
+.lex-icon-ellipsis-v:before {
+  content: "\e61f";
+}
+.lex-icon-exclamation-circle:before {
+  content: "\e620";
+}
+.lex-icon-exclamation-full:before {
+  content: "\e621";
+}
+.lex-icon-expand:before {
+  content: "\e622";
+}
+.lex-icon-folder:before {
+  content: "\e623";
+}
+.lex-icon-grid:before {
+  content: "\e624";
+}
+.lex-icon-h1:before {
+  content: "\e625";
+}
+.lex-icon-h2:before {
+  content: "\e626";
+}
+.lex-icon-heart:before {
+  content: "\e627";
+}
+.lex-icon-home:before {
+  content: "\e628";
+}
+.lex-icon-hr:before {
+  content: "\e629";
+}
+.lex-icon-information-live:before {
+  content: "\e62a";
+}
+.lex-icon-italic:before {
+  content: "\e62b";
+}
+.lex-icon-link:before {
+  content: "\e62c";
+}
+.lex-icon-list-ol:before {
+  content: "\e62d";
+}
+.lex-icon-list-ul:before {
+  content: "\e62e";
+}
+.lex-icon-list:before {
+  content: "\e62f";
+}
+.lex-icon-live:before {
+  content: "\e630";
+}
+.lex-icon-lock:before {
+  content: "\e631";
+}
+.lex-icon-log-out:before {
+  content: "\e632";
+}
+.lex-icon-magic:before {
+  content: "\e633";
+}
+.lex-icon-moon:before {
+  content: "\e634";
+}
+.lex-icon-myspace:before {
+  content: "\e635";
+}
+.lex-icon-paperclip:before {
+  content: "\e636";
+}
+.lex-icon-pencil:before {
+  content: "\e637";
+}
+.lex-icon-phone:before {
+  content: "\e638";
+}
+.lex-icon-picture:before {
+  content: "\e639";
+}
+.lex-icon-play:before {
+  content: "\e63a";
+}
+.lex-icon-plus:before {
+  content: "\e63b";
+}
+.lex-icon-print:before {
+  content: "\e63c";
+}
+.lex-icon-product-menu-closed:before {
+  content: "\e63d";
+}
+.lex-icon-product-menu-open:before {
+  content: "\e63e";
+}
+.lex-icon-product-menu:before {
+  content: "\e63f";
+}
+.lex-icon-question-circle-full:before {
+  content: "\e640";
+}
+.lex-icon-question-circle:before {
+  content: "\e641";
+}
+.lex-icon-quote-left:before {
+  content: "\e642";
+}
+.lex-icon-quote-right:before {
+  content: "\e643";
+}
+.lex-icon-reload:before {
+  content: "\e644";
+}
+.lex-icon-remove-style:before {
+  content: "\e645";
+}
+.lex-icon-repository:before {
+  content: "\e646";
+}
+.lex-icon-search:before {
+  content: "\e647";
+}
+.lex-icon-share-alt:before {
+  content: "\e648";
+}
+.lex-icon-simulation-menu-closed:before {
+  content: "\e649";
+}
+.lex-icon-simulation-menu-open:before {
+  content: "\e64a";
+}
+.lex-icon-simulation-menu:before {
+  content: "\e64b";
+}
+.lex-icon-sites:before {
+  content: "\e64c";
+}
+.lex-icon-staging:before {
+  content: "\e64d";
+}
+.lex-icon-star-half:before {
+  content: "\e64e";
+}
+.lex-icon-star-o:before {
+  content: "\e64f";
+}
+.lex-icon-star:before {
+  content: "\e650";
+}
+.lex-icon-strikethrough:before {
+  content: "\e651";
+}
+.lex-icon-subscript:before {
+  content: "\e652";
+}
+.lex-icon-suitcase:before {
+  content: "\e653";
+}
+.lex-icon-sun:before {
+  content: "\e654";
+}
+.lex-icon-superscript:before {
+  content: "\e655";
+}
+.lex-icon-table:before {
+  content: "\e656";
+}
+.lex-icon-table2:before {
+  content: "\e657";
+}
+.lex-icon-thumbs-down:before {
+  content: "\e658";
+}
+.lex-icon-thumbs-up:before {
+  content: "\e659";
+}
+.lex-icon-times-circle:before {
+  content: "\e65a";
+}
+.lex-icon-times:before {
+  content: "\e65b";
+}
+.lex-icon-trash:before {
+  content: "\e65c";
+}
+.lex-icon-twitter:before {
+  content: "\e65d";
+}
+.lex-icon-underline:before {
+  content: "\e65e";
+}
+.lex-icon-unlock:before {
+  content: "\e65f";
+}
+.lex-icon-user:before {
+  content: "\e660";
+}
+.lex-icon-users:before {
+  content: "\e661";
+}

@@ -469,6 +469,43 @@ body.fixed {
 	}
 }
 
+.lexicon-icon-list {
+	> div {
+		display: table-row;
+		// float: left;
+		padding: 10px 0;
+		margin-bottom: 5px;
+		border-bottom: 1px solid;
+		min-width: 4%;
+		color: #000;
+
+		span {
+			display: none;
+		}
+
+		div {
+			width: 100%/6;
+			// width: 25%;
+			display: table-cell;
+			text-align: center;
+		}
+
+		&.list-header {
+			font-weight: bold;
+		}
+
+		// &:nth-of-type(5n) {
+		// 	span {
+		// 		display: inline-block;
+		// 	}
+		// }
+
+		// &:nth-of-type(5n + 1) {
+		// 	clear: left;
+		// }
+	}
+}
+
 // Modals Page
 
 #modalDisplays {
