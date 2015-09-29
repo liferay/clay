@@ -470,14 +470,46 @@ body.fixed {
 }
 
 @media screen and (min-width: 768px) {
-  .font-awesome-icons-list li {
+  .font-awesome-icons-list li, .lexicon-icon-list li {
     float: left;
     width: 33%;
+    padding: 5px;
   }
   .glyphicons-list li {
     float: left;
     width: 50%;
   }
+}
+
+.lexicon-icon-examples {
+  display: block;
+  padding: 35px 20px 20px;
+  text-align: center;
+}
+
+.lexicon-icon-examples .lexicon-icon {
+  height: 160px;
+  width: 30%;
+}
+
+.lexicon-icon-examples .lexicon-icon-asterisk {
+  fill-opacity: 0;
+  stroke: #078DD8;
+  stroke-width: 10px;
+}
+
+.lexicon-icon-examples .lexicon-icon-logout {
+  fill: #DA3A35;
+  fill-opacity: 0.15;
+  stroke: #DA3A35;
+  stroke-width: 10px;
+}
+
+.lexicon-icon-examples .lexicon-icon-exclamation-full {
+  stroke: #FFF;
+  stroke-width: 40px;
+  stroke-opacity: 0.4;
+  fill: #E3A200;
 }
 
 #modalDisplays .modal-dialog {

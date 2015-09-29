@@ -9082,6 +9082,14 @@ button.close {
   padding-right: 0;
 }
 
+.lexicon-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+}
+
 a .icon-monospaced, a .help-icon {
   display: inline-block;
 }
