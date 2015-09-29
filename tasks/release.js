@@ -14,7 +14,7 @@ module.exports = function(gulp, plugins, _, config) {
 
 	gulp.task(
 		'release:svg',
-		gulp.task('svgstore', require('../lib/svgstore')(gulp, plugins, _, {dest: './release/images/icons'}))
+		require('../lib/svgstore')(gulp, plugins, _, {dest: './release/images/icons'})
 	);
 
 	gulp.task(

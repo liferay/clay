@@ -1,5 +1,6 @@
-.lexicon-icon, .lex-icon, .l-ex-icon, .lexicon-icon-new {
+.lexicon-icon {
 	display: inline-block;
+	fill: currentColor;
 	height: $lexicon-icon-size;
 	width: $lexicon-icon-size;
 	vertical-align: middle;
