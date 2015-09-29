@@ -28,9 +28,6 @@ gulp.task('build', function(cb) {
 	runSequence(
 		'build:patch-bootstrap',
 		'svgstore',
-		'svgstore-orig',
-		'svg:font',
-		'svg:fontorig',
 		'build:metalsmith',
 		'build:clean-bootstrap-patch',
 		cb
