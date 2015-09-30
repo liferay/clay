@@ -18,6 +18,14 @@
  * @param $i - start value
  */
 /**
+ * Make a direct descendant of .flex-container to break to a new line, should be
+ * applied to direct descendant of .flex-container
+ */
+/**
+ * Make .flex-container stack all its direct descendants, should be applied to
+ * .flex-container
+ */
+/**
  * Calculates text-indent of data-label-on and data-label-off
  * @param $toggle-switch-width - Width of switch bar
  * @param $toggle-switch-padding - Space between button and bar
