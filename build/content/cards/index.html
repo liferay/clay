@@ -196,8 +196,6 @@
 </ul>
 </div>
 </li>
-<li class=""><a class="nav-title" href="../../content/todo">TODO</a>
-</li>
 </ul>
 	</div>
 </nav>
@@ -252,6 +250,8 @@
 
 			<p>Card columns do not break at smaller screen widths. They were designed to help align small chunks of content and are not meant to be used for page layouts.</p>
 		</blockquote>
+
+		<div class="alert alert-warning">Card-horizontal maybe omitted if not using box-shadows.</div>
 	</div>
 
 	<div class="col-md-4">
@@ -421,7 +421,7 @@
 				<div class="card-col-7 card-col-gutters">
 					<h4 id="so-ristretto-cappuccino"><a class="heading-anchor" href="#so-ristretto-cappuccino"><i class="icon icon-link"></i></a>So ristretto cappuccino</h4>
 
-					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					<p>Wings eu, pumpkin spice robusta.</p>
 				</div>
 			</div>
 		</div>
@@ -463,7 +463,7 @@
 
 				<div class="card-col-7 card-col-gutters">
 					<h4 id="so-ristretto-cappuccino-6"><a class="heading-anchor" href="#so-ristretto-cappuccino-6"><i class="icon icon-link"></i></a>So ristretto cappuccino</h4>
-					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					<p>Wings eu, pumpkin spice robusta.</p>
 				</div>
 			</div>
 		</div>
@@ -490,7 +490,7 @@
 		<h3 id="truncating-text-inside-horizontal-card"><a class="heading-anchor" href="#truncating-text-inside-horizontal-card"><i class="icon icon-link"></i></a>Truncating Text Inside Horizontal Card</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use class <code>card-row-layout-fixed</code> on card row and add class <code>truncate-text</code> on a text element.</p>
+			<p>Use class <code>card-row-layout-fixed</code> on card row and add class <code>truncate-text</code> on a text element. Every column except the one that should expand to fill the remaining space needs to have a fixed width set.</p>
 		</blockquote>
 	</div>
 
@@ -517,7 +517,7 @@
 						<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
 					</div>
 					<div class="card-col-content card-col-gutters">
-						<h4 class="truncate-text" title="5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F" id="5nrv4tvbdpi9zm253a253bymrcz15kzjgz3m253bhttp25253a25252f25252f5nrv4tvbdpi9zm253a253bymrcz15kzjgz3m253bhttp25253a25252f25252f"><a class="heading-anchor" href="#5nrv4tvbdpi9zm253a253bymrcz15kzjgz3m253bhttp25253a25252f25252f5nrv4tvbdpi9zm253a253bymrcz15kzjgz3m253bhttp25253a25252f25252f"><i class="icon icon-link"></i></a>5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F</h4>
+						<h4 class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual" id="reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual"><a class="heading-anchor" href="#reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual"><i class="icon icon-link"></i></a>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
 					</div>
 					<div class="card-col-field" style="width:32px;vertical-align:top;">
 						<div class="dropdown">
@@ -616,6 +616,129 @@
 	</ul>
 </div>
 
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="truncating-text-inside-horizontal-card-without-card-row-layout-fixed"><a class="heading-anchor" href="#truncating-text-inside-horizontal-card-without-card-row-layout-fixed"><i class="icon icon-link"></i></a>Truncating Text Inside Horizontal Card without Card Row Layout Fixed</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>If the text inside your container is shorter than the container, add class <code>clamp-horizontal</code> to card-col-{name} and wrap the content in <code>clamp-container</code>. If the text is larger than your container use <code>clamp-all</code> and wrap the content in <code>clamp-container</code>. Clamp-horizontal will vertically center and prevent content from overflowing horizontally. Clamp-all will prevent content from overflowing vertically and horizontally, but will not vertically center. These should generally be used when you want to keep the card size fixed, but have variable content size.</p>
+
+			<p>Use <code>clamp-all-scroll</code> instead of <code>clamp-all</code> to show scroll bars.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters clamp-horizontal">
+					<div class="clamp-container">
+						<div class="h4 truncate-text">So ristretto cappuccino</div>
+						<p class="truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters clamp-all">
+					<div class="clamp-container">
+						<div class="h4 truncate-text">So ristretto cappuccino kopi-luwak mocha caffeine froth grounds.</div>
+						<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters clamp-all-scroll">
+					<div class="clamp-container">
+						<div class="h4 truncate-text">So ristretto cappuccino kopi-luwak mocha caffeine froth grounds.</div>
+						<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6" style="clear:left;">
+		<div class="checkbox checkbox-card checkbox-middle-left checkbox-default">
+			<label>
+				<input type="checkbox" value="">
+				<div class="card card-horizontal">
+					<div class="card-row card-row-padded">
+						<div class="card-col-field">
+							<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+						</div>
+						<div class="card-col-content card-col-gutters clamp-horizontal">
+							<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+						</div>
+						<div class="card-col-field" style="vertical-align:top;">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img src="../../images/switch_on_icon.png">
+				</div>
+				<div class="card-col-field card-col-gutters">
+					<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+				</div>
+				<div class="card-col-content card-col-gutters clamp-horizontal">
+					<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+				</div>
+				<div class="card-col-field" style="vertical-align:top;">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1" aria-expanded="false"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Download</a></li>
+							<li><a href="#1">Edit</a></li>
+							<li><a href="#1">Move</a></li>
+							<li><a href="#1">Checkout</a></li>
+							<li><a href="#1">Permissions</a></li>
+							<li><a href="#1">Move to Recycle Bin</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="row row-spacing uxgl-vertical-card">
 	<div class="col-md-12">
 		<h3 id="card-helper-classes"><a class="heading-anchor" href="#card-helper-classes"><i class="icon icon-link"></i></a>Card Helper Classes</h3>
@@ -627,25 +750,25 @@
 
 	<div class="col-md-4">
 		<div class="card card-rounded">
-			<div class="card-header"><h4 id="header-14"><a class="heading-anchor" href="#header-14"><i class="icon icon-link"></i></a>Header</h4></div>
-			<div class="card-section"><h4 id="section-15"><a class="heading-anchor" href="#section-15"><i class="icon icon-link"></i></a>Section</h4></div>
-			<div class="card-footer"><h4 id="footer-16"><a class="heading-anchor" href="#footer-16"><i class="icon icon-link"></i></a>Footer</h4></div>
+			<div class="card-header"><h4 id="header-15"><a class="heading-anchor" href="#header-15"><i class="icon icon-link"></i></a>Header</h4></div>
+			<div class="card-section"><h4 id="section-16"><a class="heading-anchor" href="#section-16"><i class="icon icon-link"></i></a>Section</h4></div>
+			<div class="card-footer"><h4 id="footer-17"><a class="heading-anchor" href="#footer-17"><i class="icon icon-link"></i></a>Footer</h4></div>
 		</div>
 	</div>
 
 	<div class="col-md-4">
 		<div class="card card-circle">
-			<div class="card-header"><h4 id="header-17"><a class="heading-anchor" href="#header-17"><i class="icon icon-link"></i></a>Header</h4></div>
-			<div class="card-section"><h4 id="section-18"><a class="heading-anchor" href="#section-18"><i class="icon icon-link"></i></a>Section</h4></div>
-			<div class="card-footer"><h4 id="footer-19"><a class="heading-anchor" href="#footer-19"><i class="icon icon-link"></i></a>Footer</h4></div>
+			<div class="card-header"><h4 id="header-18"><a class="heading-anchor" href="#header-18"><i class="icon icon-link"></i></a>Header</h4></div>
+			<div class="card-section"><h4 id="section-19"><a class="heading-anchor" href="#section-19"><i class="icon icon-link"></i></a>Section</h4></div>
+			<div class="card-footer"><h4 id="footer-20"><a class="heading-anchor" href="#footer-20"><i class="icon icon-link"></i></a>Footer</h4></div>
 		</div>
 	</div>
 
 	<div class="col-md-4">
 		<div class="card card-square">
-			<div class="card-header"><h4 id="header-20"><a class="heading-anchor" href="#header-20"><i class="icon icon-link"></i></a>Header</h4></div>
-			<div class="card-section"><h4 id="section-21"><a class="heading-anchor" href="#section-21"><i class="icon icon-link"></i></a>Section</h4></div>
-			<div class="card-footer"><h4 id="footer-22"><a class="heading-anchor" href="#footer-22"><i class="icon icon-link"></i></a>Footer</h4></div>
+			<div class="card-header"><h4 id="header-21"><a class="heading-anchor" href="#header-21"><i class="icon icon-link"></i></a>Header</h4></div>
+			<div class="card-section"><h4 id="section-22"><a class="heading-anchor" href="#section-22"><i class="icon icon-link"></i></a>Section</h4></div>
+			<div class="card-footer"><h4 id="footer-23"><a class="heading-anchor" href="#footer-23"><i class="icon icon-link"></i></a>Footer</h4></div>
 		</div>
 	</div>
 
@@ -670,15 +793,15 @@
 
 	<div class="col-md-6">
 		<div class="card">
-			<div class="card-header"><h4 id="header-23"><a class="heading-anchor" href="#header-23"><i class="icon icon-link"></i></a>Header</h4></div>
+			<div class="card-header"><h4 id="header-24"><a class="heading-anchor" href="#header-24"><i class="icon icon-link"></i></a>Header</h4></div>
 
 			<div class="card-section">
-				<h4 id="section-24"><a class="heading-anchor" href="#section-24"><i class="icon icon-link"></i></a>Section</h4>
+				<h4 id="section-25"><a class="heading-anchor" href="#section-25"><i class="icon icon-link"></i></a>Section</h4>
 				<hr class="divider">
 				<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
 			</div>
 
-			<div class="card-footer"><h4 id="footer-25"><a class="heading-anchor" href="#footer-25"><i class="icon icon-link"></i></a>Footer</h4></div>
+			<div class="card-footer"><h4 id="footer-26"><a class="heading-anchor" href="#footer-26"><i class="icon icon-link"></i></a>Footer</h4></div>
 		</div>
 	</div>
 
@@ -686,7 +809,7 @@
 		<div class="card-horizontal">
 			<div class="card-row">
 				<div class="card-col-6 card-col-gutters">
-					<h4 id="section-26"><a class="heading-anchor" href="#section-26"><i class="icon icon-link"></i></a>Section</h4>
+					<h4 id="section-27"><a class="heading-anchor" href="#section-27"><i class="icon icon-link"></i></a>Section</h4>
 					<hr class="divider">
 					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
 				</div>

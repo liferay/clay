@@ -8070,6 +8070,14 @@ button.close {
  * @param $i - start value
  */
 /**
+ * Make a direct descendant of .flex-container to break to a new line, should be
+ * applied to direct descendant of .flex-container
+ */
+/**
+ * Make .flex-container stack all its direct descendants, should be applied to
+ * .flex-container
+ */
+/**
  * Calculates text-indent of data-label-on and data-label-off
  * @param $toggle-switch-width - Width of switch bar
  * @param $toggle-switch-padding - Space between button and bar
@@ -8174,13 +8182,14 @@ button.close {
 }
 
 .aspect-ratio-bg-cover {
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .aspect-ratio-bg-center {
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .badge .icon-monospaced, .badge .help-icon {
@@ -8284,8 +8293,28 @@ button.close {
   }
 }
 
+.breadcrumb > li:before {
+  content: '\00a0';
+}
+
 .breadcrumb > li + li:before {
   content: "/ ";
+}
+
+.breadcrumb-vertical > li {
+  display: block;
+  max-width: none;
+  word-wrap: break-word;
+}
+
+.breadcrumb-vertical > li:before {
+  color: #ccc;
+}
+
+.breadcrumb-vertical > li:before,
+.breadcrumb-vertical > li + li:before {
+  content: " ";
+  padding: 0;
 }
 
 .btn-action,
@@ -8623,37 +8652,19 @@ button.close {
   text-decoration: none;
 }
 
-.card-horizontal-dm .card-row {
-  padding: 10px 2px 10px 10px;
-  table-layout: fixed;
-}
-
-.card-horizontal-dm .card-col-field:first-child {
-  width: 60px;
-}
-
-.card-horizontal-dm .card-col-field:first-child .icon-monospaced, .card-horizontal-dm .card-col-field:first-child .help-icon {
-  background-color: #F1F5FA;
-  height: 60px;
-  line-height: 60px;
-  width: 60px;
-}
-
-.card-horizontal-dm .card-col-field:last-child {
-  vertical-align: top;
-  width: 32px;
-}
-
-.card-horizontal-dm .card-col-content h1, .card-horizontal-dm .card-col-content h2, .card-horizontal-dm .card-col-content h3, .card-horizontal-dm .card-col-content h4, .card-horizontal-dm .card-col-content h5, .card-horizontal-dm .card-col-content h6, .card-horizontal-dm .card-col-content a, .card-horizontal-dm .card-col-content div, .card-horizontal-dm .card-col-content p, .card-horizontal-dm .card-col-content span {
-  display: block;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.checkbox-card {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .checkbox-card label {
+  color: #333333;
+  display: block;
   padding-left: 0;
+}
+
+.checkbox-card label a {
+  color: #337ab7;
 }
 
 .checkbox-card input[type="checkbox"] {
@@ -8662,14 +8673,48 @@ button.close {
   z-index: 1;
 }
 
+.checkbox-bottom-left input[type="checkbox"] + .card.flex-container,
+.checkbox-middle-left input[type="checkbox"] + .card.flex-container,
+.checkbox-top-left input[type="checkbox"] + .card.flex-container {
+  padding-left: 40px;
+}
+
+.checkbox-bottom-left input[type="checkbox"] + .card .card-row,
+.checkbox-middle-left input[type="checkbox"] + .card .card-row,
+.checkbox-top-left input[type="checkbox"] + .card .card-row {
+  padding-left: 40px;
+}
+
+.checkbox-bottom-right input[type="checkbox"] + .card.flex-container,
+.checkbox-middle-right input[type="checkbox"] + .card.flex-container,
+.checkbox-top-right input[type="checkbox"] + .card.flex-container {
+  padding-right: 40px;
+}
+
+.checkbox-bottom-right input[type="checkbox"] + .card .card-row,
+.checkbox-middle-right input[type="checkbox"] + .card .card-row,
+.checkbox-top-right input[type="checkbox"] + .card .card-row {
+  padding-right: 40px;
+}
+
+.checkbox-bottom-left input[type="checkbox"] {
+  bottom: 15px;
+  left: 15px;
+}
+
+.checkbox-bottom-right input[type="checkbox"] {
+  bottom: 15px;
+  right: 15px;
+}
+
 .checkbox-middle-left input[type="checkbox"] {
   left: 15px;
-  margin-top: -16px;
+  margin-top: -6px;
   top: 50%;
 }
 
 .checkbox-middle-right input[type="checkbox"] {
-  margin-top: -16px;
+  margin-top: -6px;
   right: 15px;
   top: 50%;
 }
@@ -8687,6 +8732,55 @@ button.close {
 .card figure,
 .card .figure {
   margin-bottom: 0;
+}
+
+.clamp-container {
+  left: 10px;
+  margin: 0;
+  position: absolute;
+  right: 10px;
+}
+
+.clamp-horizontal .clamp-container {
+  overflow: hidden;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .clamp-all,
+  .clamp-all-scroll {
+    overflow: hidden;
+  }
+}
+
+.clamp-all .clamp-container,
+.clamp-all-scroll .clamp-container {
+  bottom: 0;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .clamp-all .clamp-container,
+  .clamp-all-scroll .clamp-container {
+    bottom: auto;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .clamp-all-scroll {
+    overflow: auto;
+  }
+}
+
+.clamp-all-scroll .clamp-container {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
 }
 
 .crop-img {
@@ -11629,6 +11723,40 @@ button.list-group-heading:hover,
   content: "";
 }
 
+.panel-blank {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.panel-blank > .panel-heading {
+  color: #333333;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.panel-blank > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: transparent;
+}
+
+.panel-blank > .panel-heading .badge {
+  color: transparent;
+  background-color: #333333;
+}
+
+.panel-blank > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: transparent;
+}
+
+.panel-blank > .panel-footer {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.panel-group .panel-blank .panel-heading + .panel-collapse > .panel-body,
+.panel-group .panel-blank .panel-heading + .panel-collapse > .list-group {
+  border-top-color: transparent;
+}
+
 .panel-primary > .panel-footer {
   background-color: #337ab7;
   border-color: #337ab7;
@@ -12094,9 +12222,16 @@ button.list-group-heading:hover,
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  flex-flow: row wrap;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .flex-container-stacked {
@@ -12147,6 +12282,7 @@ button.list-group-heading:hover,
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  min-width: 0;
 }
 
 .flex-item-full {
@@ -12180,6 +12316,12 @@ button.list-group-heading:hover,
   -ms-flex-item-align: end;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .flex-item-bottom {
+    max-width: 100%;
+  }
+}
+
 .flex-item-center {
   -webkit-align-self: center;
   -moz-align-self: center;
@@ -12187,11 +12329,23 @@ button.list-group-heading:hover,
   -ms-flex-item-align: center;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .flex-item-center {
+    max-width: 100%;
+  }
+}
+
 .flex-item-top {
   -webkit-align-self: flex-start;
   -moz-align-self: flex-start;
   align-self: flex-start;
   -ms-flex-item-align: start;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .flex-item-top {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -12206,6 +12360,12 @@ button.list-group-heading:hover,
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+  }
+  .flex-container-stacked-xxs .flex-item-full {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
   }
 }
 
@@ -12222,6 +12382,12 @@ button.list-group-heading:hover,
     flex-direction: column;
     -ms-flex-direction: column;
   }
+  .flex-container-stacked-xs .flex-item-full {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -12236,6 +12402,12 @@ button.list-group-heading:hover,
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+  }
+  .flex-container-stacked-sm .flex-item-full {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
   }
 }
 
@@ -12252,6 +12424,12 @@ button.list-group-heading:hover,
     flex-direction: column;
     -ms-flex-direction: column;
   }
+  .flex-container-stacked-md .flex-item-full {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -12266,6 +12444,12 @@ button.list-group-heading:hover,
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+  }
+  .flex-container-stacked-lg .flex-item-full {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
   }
 }
 
@@ -12282,6 +12466,12 @@ button.list-group-heading:hover,
     flex-direction: column;
     -ms-flex-direction: column;
   }
+  .flex-container-stacked-xs-only .flex-item-full {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -12297,6 +12487,12 @@ button.list-group-heading:hover,
     flex-direction: column;
     -ms-flex-direction: column;
   }
+  .flex-container-stacked-sm-only .flex-item-full {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -12311,6 +12507,12 @@ button.list-group-heading:hover,
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
+  }
+  .flex-container-stacked-md-only .flex-item-full {
+    -webkit-flex-basis: auto;
+    -moz-flex-basis: auto;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
   }
 }
 
