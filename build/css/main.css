@@ -470,14 +470,125 @@ body.fixed {
 }
 
 @media screen and (min-width: 768px) {
-  .font-awesome-icons-list li {
+  .font-awesome-icons-list li, .lexicon-icon-list li {
     float: left;
     width: 33%;
+    padding: 5px;
   }
   .glyphicons-list li {
     float: left;
     width: 50%;
   }
+}
+
+.lexicon-icon-examples {
+  display: block;
+  padding: 35px 20px 20px;
+  text-align: center;
+}
+
+.lexicon-icon-examples .lexicon-icon {
+  height: 160px;
+  width: 140px;
+  margin: 0 5%;
+  transition: all 0.1s ease-in;
+}
+
+.lexicon-icon-examples .lexicon-icon-asterisk {
+  fill-opacity: 0;
+  stroke: #078DD8;
+  stroke-width: 10px;
+}
+
+.lexicon-icon-examples .lexicon-icon-asterisk:hover {
+  fill-opacity: 1;
+  fill: #078DD8;
+  stroke-width: 5px;
+  stroke: #000;
+  stroke-opacity: 0.3;
+}
+
+.lexicon-icon-examples .lexicon-icon-logout {
+  fill: #DA3A35;
+  fill-opacity: 1;
+  stroke: #FFF;
+  stroke-width: 55px;
+}
+
+.lexicon-icon-examples .lexicon-icon-logout:hover {
+  fill-opacity: 1;
+  stroke-width: 25px;
+  stroke: #900;
+  stroke-opacity: 0.5;
+}
+
+@-webkit-keyframes exclamationHover {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  60% {
+    stroke-width: 10px;
+    -webkit-transform: scale(1.5);
+  }
+  100% {
+    fill: #ec297b;
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes exclamationHover {
+  0% {
+    -moz-transform: scale(1);
+  }
+  60% {
+    stroke-width: 10px;
+    -moz-transform: scale(1.5);
+  }
+  100% {
+    fill: #ec297b;
+    -moz-transform: scale(1);
+  }
+}
+
+@keyframes exclamationHover {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    stroke-width: 10px;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    fill: #ec297b;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.lexicon-icon-examples .lexicon-icon-exclamation-full {
+  stroke: #FFF;
+  stroke-width: 40px;
+  stroke-opacity: 0.4;
+  fill: #E3A200;
+}
+
+.lexicon-icon-examples .lexicon-icon-exclamation-full:hover {
+  -webkit-animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 #modalDisplays .modal-dialog {
