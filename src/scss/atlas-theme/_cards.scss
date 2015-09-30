@@ -3,26 +3,48 @@
 	box-shadow: $card-box-shadow;
 }
 
-.card-horizontal-dm {
-	a {
-		color: $brand-default;
-	}
-}
-
 .checkbox-default {
+	&.checkbox-bottom-left,
+	&.checkbox-middle-left,
+	&.checkbox-top-left {
+		input[type="checkbox"] {
+			+ .card.flex-container {
+				padding-left: 50px;
+			}
+
+			+ .card .card-row {
+				padding-left: 50px;
+			}
+		}
+	}
+
+	&.checkbox-bottom-right,
+	&.checkbox-middle-right,
+	&.checkbox-top-right {
+		input[type="checkbox"] {
+			+ .card.flex-container {
+				padding-right: 50px;
+			}
+
+			+ .card .card-row {
+				padding-right: 50px;
+			}
+		}
+	}
+
 	&.checkbox-middle-left {
 		input[type="checkbox"] {
-			left: 10px;
-			margin-top: -22px;
+			left: 15px;
+			margin-top: -10px;
 			position: absolute;
 		}
 	}
 
 	&.checkbox-middle-right {
 		input[type="checkbox"] {
-			margin-top: -22px;
+			margin-top: -10px;
 			position: absolute;
-			right: 10px;
+			right: 15px;
 		}
 	}
 
@@ -57,4 +79,10 @@
 			top: 15px;
 		}
 	}
+}
+
+// Checkbox Cards
+
+.checkbox-card label a {
+	color: $dropdown-link-color;
 }
