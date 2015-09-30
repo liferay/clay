@@ -260,45 +260,20 @@
 	}
 }
 
-.card-horizontal-dm {
-	.card-row {
-		padding: 10px 2px 10px 10px;
-		table-layout: fixed;
-	}
-
-	.card-col-field {
-		&:first-child {
-			width: 60px;
-
-			.icon-monospaced {
-				background-color: #F1F5FA;
-				height: 60px;
-				line-height: 60px;
-				width: 60px;
-			}
-		}
-
-		&:last-child {
-			vertical-align: top;
-			width: 32px;
-		}
-	}
-
-	.card-col-content {
-		h1, h2, h3, h4, h5, h6, a, div, p, span {
-			display: block;
-			margin: 0;
-
-			@include text-overflow;
-		}
-	}
-}
-
-// Flexbox Cards
+// Checkbox Cards
 
 .checkbox-card {
+	margin-bottom: 0;
+	margin-top: 0;
+
 	label {
+		color: $text-color;
+		display: block;
 		padding-left: 0;
+
+		a {
+			color: $link-color;
+		}
 	}
 
 	input[type="checkbox"] {
@@ -308,17 +283,59 @@
 	}
 }
 
+.checkbox-bottom-left,
+.checkbox-middle-left,
+.checkbox-top-left {
+	input[type="checkbox"] {
+		+ .card.flex-container {
+			padding-left: 40px;
+		}
+
+		+ .card .card-row {
+			padding-left: 40px;
+		}
+	}
+}
+
+.checkbox-bottom-right,
+.checkbox-middle-right,
+.checkbox-top-right {
+	input[type="checkbox"] {
+		+ .card.flex-container {
+			padding-right: 40px;
+		}
+
+		+ .card .card-row {
+			padding-right: 40px;
+		}
+	}
+}
+
+.checkbox-bottom-left {
+	input[type="checkbox"] {
+		bottom: 15px;
+		left: 15px;
+	}
+}
+
+.checkbox-bottom-right {
+	input[type="checkbox"] {
+		bottom: 15px;
+		right: 15px;
+	}
+}
+
 .checkbox-middle-left {
 	input[type="checkbox"] {
 		left: 15px;
-		margin-top: -16px;
+		margin-top: -6px;
 		top: 50%;
 	}
 }
 
 .checkbox-middle-right {
 	input[type="checkbox"] {
-		margin-top: -16px;
+		margin-top: -6px;
 		right: 15px;
 		top: 50%;
 	}
@@ -342,5 +359,57 @@
 	figure,
 	.figure {
 		margin-bottom: 0;
+	}
+}
+
+// Clamping
+
+.clamp-container {
+	left: 10px;
+	margin: 0;
+	position: absolute;
+	right: 10px;
+}
+
+.clamp-horizontal {
+	.clamp-container {
+		overflow: hidden;
+
+		@include transform(translateY(-50%));
+	}
+}
+
+.clamp-all,
+.clamp-all-scroll {
+	// IE 10, 11 Hack
+
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		overflow: hidden;
+	}
+
+	.clamp-container {
+		bottom: 0;
+		overflow: hidden;
+		right: 0;
+		top: 0;
+
+		// IE 10, 11 Hack
+
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			bottom: auto;
+		}
+	}
+}
+
+.clamp-all-scroll {
+	// IE 10, 11 Hack
+
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		overflow: auto;
+	}
+
+	.clamp-container {
+		-webkit-overflow-scrolling: touch;
+		overflow: auto;
 	}
 }

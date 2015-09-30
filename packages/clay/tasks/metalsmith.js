@@ -1,3 +1,4 @@
+var path = require('path');
 var gulpsmith = require('gulpsmith');
 var gulpFrontMatter = require('gulp-front-matter');
 
@@ -16,6 +17,8 @@ var handlePath = require('../lib/handle_path');
 var handlePermalink = require('../lib/handle_permalink');
 var handleTemplate = require('../lib/handle_template');
 
+var _s = require('underscore.string');
+
 module.exports = function(gulp, plugins, _, config) {
 	var license = require('./copyright_banner');
 
@@ -26,11 +29,19 @@ module.exports = function(gulp, plugins, _, config) {
 		version: license.metadata.version
 	};
 
+	var TPL_SVG = '<li><svg class="lexicon-icon"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg> <span>{0}</span></li>';
+
 	gulp.task('build:metalsmith', function(cb) {
 		var filter = plugins.filter(['**/*.md', '**/*.html']);
 		var assetFilter = plugins.filter(['**/*.*css', '**/*.js']);
+		var svgFilter = plugins.filter(['content/icons-lexicon.html']);
 
 		var REGEX_VAR_FILEPATH = new RegExp(config.BOOTSTRAP_VAR_FILE + '$');
+
+		var svgFiles = gulp.src(['src/images/icons/*.svg'], {read: false})
+						.pipe(plugins.rename(function(file) {
+							file.basename = _s.slugify(file.basename);
+						}));
 
 		return gulp.src(config.SRC_GLOB)
 				.pipe(filter)
@@ -48,6 +59,15 @@ module.exports = function(gulp, plugins, _, config) {
 				.pipe(plugins.header(license.tpl, license.metadata))
 				.pipe(assetFilter.restore())
 				.pipe(plugins.plumber())
+				.pipe(svgFilter)
+				.pipe(plugins.inject(svgFiles, {
+					transform: function(filepath, file, index, length, targetFile) {
+						var basename = path.basename(filepath, '.svg');
+
+						return _.sub(TPL_SVG, basename);
+					}
+				}))
+				.pipe(svgFilter.restore())
 				.pipe(
 					gulpsmith()
 						.use(define(metadata))

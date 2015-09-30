@@ -1,3 +1,11 @@
+.lexicon-icon {
+	display: inline-block;
+	fill: currentColor;
+	height: $lexicon-icon-size;
+	width: $lexicon-icon-size;
+	vertical-align: middle;
+}
+
 a .icon-monospaced {
 	display: inline-block;
 }

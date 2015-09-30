@@ -45,6 +45,8 @@ section: Components
 
 			<p>Card columns do not break at smaller screen widths. They were designed to help align small chunks of content and are not meant to be used for page layouts.</p>
 		</blockquote>
+
+		<div class="alert alert-warning">Card-horizontal maybe omitted if not using box-shadows.</div>
 	</div>
 
 	<div class="col-md-4">
@@ -214,7 +216,7 @@ section: Components
 				<div class="card-col-7 card-col-gutters">
 					<h4>So ristretto cappuccino</h4>
 
-					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					<p>Wings eu, pumpkin spice robusta.</p>
 				</div>
 			</div>
 		</div>
@@ -256,7 +258,7 @@ section: Components
 
 				<div class="card-col-7 card-col-gutters">
 					<h4>So ristretto cappuccino</h4>
-					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					<p>Wings eu, pumpkin spice robusta.</p>
 				</div>
 			</div>
 		</div>
@@ -283,7 +285,7 @@ section: Components
 		<h3>Truncating Text Inside Horizontal Card</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use class <code>card-row-layout-fixed</code> on card row and add class <code>truncate-text</code> on a text element.</p>
+			<p>Use class <code>card-row-layout-fixed</code> on card row and add class <code>truncate-text</code> on a text element. Every column except the one that should expand to fill the remaining space needs to have a fixed width set.</p>
 		</blockquote>
 	</div>
 
@@ -310,7 +312,7 @@ section: Components
 						<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
 					</div>
 					<div class="card-col-content card-col-gutters">
-						<h4 class="truncate-text" title="5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F">5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F5nRv4TvBDpi9zM%253A%253BYmrCZ15KzJgz3M%253Bhttp%25253A%25252F%25252F</h4>
+						<h4 class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
 					</div>
 					<div class="card-col-field" style="width:32px;vertical-align:top;">
 						<div class="dropdown">
@@ -407,6 +409,129 @@ section: Components
 			</div>
 		</li>
 	</ul>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Truncating Text Inside Horizontal Card without Card Row Layout Fixed</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>If the text inside your container is shorter than the container, add class <code>clamp-horizontal</code> to card-col-{name} and wrap the content in <code>clamp-container</code>. If the text is larger than your container use <code>clamp-all</code> and wrap the content in <code>clamp-container</code>. Clamp-horizontal will vertically center and prevent content from overflowing horizontally. Clamp-all will prevent content from overflowing vertically and horizontally, but will not vertically center. These should generally be used when you want to keep the card size fixed, but have variable content size.</p>
+
+			<p>Use <code>clamp-all-scroll</code> instead of <code>clamp-all</code> to show scroll bars.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters clamp-horizontal">
+					<div class="clamp-container">
+						<div class="h4 truncate-text">So ristretto cappuccino</div>
+						<p class="truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters clamp-all">
+					<div class="clamp-container">
+						<div class="h4 truncate-text">So ristretto cappuccino kopi-luwak mocha caffeine froth grounds.</div>
+						<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters clamp-all-scroll">
+					<div class="clamp-container">
+						<div class="h4 truncate-text">So ristretto cappuccino kopi-luwak mocha caffeine froth grounds.</div>
+						<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6" style="clear:left;">
+		<div class="checkbox checkbox-card checkbox-middle-left checkbox-default">
+			<label>
+				<input type="checkbox" value="">
+				<div class="card card-horizontal">
+					<div class="card-row card-row-padded">
+						<div class="card-col-field">
+							<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+						</div>
+						<div class="card-col-content card-col-gutters clamp-horizontal">
+							<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+						</div>
+						<div class="card-col-field" style="vertical-align:top;">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img src="../../images/switch_on_icon.png">
+				</div>
+				<div class="card-col-field card-col-gutters">
+					<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+				</div>
+				<div class="card-col-content card-col-gutters clamp-horizontal">
+					<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+				</div>
+				<div class="card-col-field" style="vertical-align:top;">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1" aria-expanded="false"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Download</a></li>
+							<li><a href="#1">Edit</a></li>
+							<li><a href="#1">Move</a></li>
+							<li><a href="#1">Checkout</a></li>
+							<li><a href="#1">Permissions</a></li>
+							<li><a href="#1">Move to Recycle Bin</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="row row-spacing uxgl-vertical-card">

@@ -13,6 +13,11 @@ module.exports = function(gulp, plugins, _, config) {
 	);
 
 	gulp.task(
+		'release:svg',
+		require('../lib/svgstore')(gulp, plugins, _, {dest: './release/images/icons'})
+	);
+
+	gulp.task(
 		'release:build',
 		function() {
 			var REGEX_ALLOW = /\.((s)?css|js)/;
@@ -30,7 +35,7 @@ module.exports = function(gulp, plugins, _, config) {
 				// 'src/fonts/**/*',
 				'src/scss/+(atlas-theme|bootstrap|lexicon-base)/**/*',
 				'src/scss/+(atlas|atlas-variables|bootstrap|lexicon-base|lexicon-base-variables).scss',
-				'src/js/*.js',
+				'src/js/*.js'
 				], {base: './src'})
 			.pipe(assetFilter)
 			.pipe(plugins.header(license.tpl, license.metadata))

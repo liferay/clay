@@ -27,6 +27,7 @@ gulp.task('default', ['build']);
 gulp.task('build', function(cb) {
 	runSequence(
 		'build:patch-bootstrap',
+		'build:svg',
 		'build:metalsmith',
 		'build:clean-bootstrap-patch',
 		cb
@@ -40,6 +41,7 @@ gulp.task(
 			'build:patch-bootstrap',
 			'release:clean',
 			'release:build',
+			'release:svg',
 			'release:zip',
 			'build:clean-bootstrap-patch',
 			function() {

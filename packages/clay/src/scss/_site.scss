@@ -458,14 +458,82 @@ body.fixed {
 }
 
 @media screen and (min-width: 768px) {
-	.font-awesome-icons-list li {
+	.font-awesome-icons-list li, .lexicon-icon-list li {
 		float: left;
 		width: 33%;
+		padding: 5px;
 	}
 
 	.glyphicons-list li {
 		float: left;
 		width: 50%;
+	}
+}
+
+.lexicon-icon-examples {
+	display: block;
+	padding: 35px 20px 20px;
+	text-align: center;
+
+	.lexicon-icon {
+		height: 160px;
+		width: 140px;
+		margin: 0 5%;
+		transition: all 0.1s ease-in;
+	}
+
+	.lexicon-icon-asterisk {
+		fill-opacity: 0;
+		stroke: #078DD8;
+		stroke-width: 10px;
+
+		&:hover {
+			fill-opacity: 1;
+			fill: #078DD8;
+			stroke-width: 5px;
+			stroke: #000;
+			stroke-opacity: 0.3;
+		}
+	}
+
+	.lexicon-icon-logout {
+		fill: #DA3A35;
+		fill-opacity: 1;
+		stroke: #FFF;
+		stroke-width: 55px;
+
+		&:hover {
+			fill-opacity: 1;
+			stroke-width: 25px;
+			stroke: #900;
+			stroke-opacity: 0.5;
+		}
+	}
+
+	@include keyframes(exclamationHover) {
+		0% {
+			@include transform(scale(1));
+		}
+		60% {
+			stroke-width: 10px;
+			@include transform(scale(1.5));
+		}
+		100% {
+			fill: #ec297b;
+			@include transform(scale(1));
+		}
+	}
+
+	.lexicon-icon-exclamation-full {
+		stroke: #FFF;
+		stroke-width: 40px;
+		stroke-opacity: 0.4;
+		fill: #E3A200;
+
+		&:hover {
+			@include animation(exclamationHover 0.25s $ease-out-back);
+			@include animation-fill-mode(both);
+		}
 	}
 }
 
