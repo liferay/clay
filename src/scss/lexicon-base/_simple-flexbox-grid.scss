@@ -1,7 +1,8 @@
 .flex-container {
 	@include display(flex);
 	@include flex-direction(row);
-	@include flex-flow(row wrap);
+	@include flex-flow(row);
+	@include flex-wrap(wrap);
 }
 
 .flex-container-stacked {
@@ -16,6 +17,8 @@
 .flex-item-expand {
 	@include flex(1);
 	@include flex-wrap(wrap);
+
+	min-width: 0;
 }
 
 .flex-item-full {
@@ -29,63 +32,81 @@
 
 .flex-item-bottom {
 	@include align-self(flex-end);
+
+	// IE10, 11 Hack
+
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		max-width: 100%;
+	}
 }
 
 .flex-item-center {
 	@include align-self(center);
+
+	// IE10, 11 Hack
+
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		max-width: 100%;
+	}
 }
 
 .flex-item-top {
 	@include align-self(flex-start);
+
+	// IE10, 11 Hack
+
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		max-width: 100%;
+	}
 }
 
 // Stacking Flex Container
 
 .flex-container-stacked-xxs {
 	@media screen and (max-width: 479px) {
-		@include flex-direction(column);
+		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-xs {
 	@media screen and (max-width: $screen-xs-max) {
-		@include flex-direction(column);
+		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-sm {
 	@media screen and (max-width: $screen-sm-max) {
-		@include flex-direction(column);
+		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-md {
 	@media screen and (max-width: $screen-md-max) {
-		@include flex-direction(column);
+		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-lg {
 	@media screen and (min-width: $screen-lg-min) {
-		@include flex-direction(column);
+		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-xs-only {
 	@media screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-		@include flex-direction(column);
+		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-sm-only {
 	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-		@include flex-direction(column);
+		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-md-only {
 	@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-		@include flex-direction(column);
+		@include stack-flex-container;
 	}
 }
 
@@ -93,64 +114,48 @@
 
 .flex-item-break-xxs {
 	@media screen and (max-width: 479px) {
-		@include flex-basis(auto);
-
-		width: 100%;
+		@include break-flex-item;
 	}
 }
 
 .flex-item-break-xs {
 	@media screen and (max-width: $screen-xs-max) {
-		@include flex-basis(auto);
-
-		width: 100%;
+		@include break-flex-item;
 	}
 }
 
 .flex-item-break-sm {
 	@media screen and (max-width: $screen-sm-max) {
-		@include flex-basis(auto);
-
-		width: 100%;
+		@include break-flex-item;
 	}
 }
 
 .flex-item-break-md {
 	@media screen and (max-width: $screen-md-max) {
-		@include flex-basis(auto);
-
-		width: 100%;
+		@include break-flex-item;
 	}
 }
 
 .flex-item-break-lg {
 	@media screen and (min-width: $screen-lg) {
-		@include flex-basis(auto);
-
-		width: 100%;
+		@include break-flex-item;
 	}
 }
 
 .flex-item-break-xs-only {
 	@media screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-		@include flex-basis(auto);
-
-		width: 100%;
+		@include break-flex-item;
 	}
 }
 
 .flex-item-break-sm-only {
 	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-		@include flex-basis(auto);
-
-		width: 100%;
+		@include break-flex-item;
 	}
 }
 
 .flex-item-break-md-only {
 	@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-		@include flex-basis(auto);
-
-		width: 100%;
+		@include break-flex-item;
 	}
 }
