@@ -18,16 +18,21 @@
     "gulp": "^3.9.0",
     "gulp-change": "^1.0.0",
     "gulp-clean": "^0.3.1",
+    "gulp-consolidate": "^0.1.2",
     "gulp-debug": "^2.0.1",
     "gulp-doctoc": "^0.1.2",
     "gulp-filter": "^2.0.2",
     "gulp-front-matter": "^1.2.3",
     "gulp-header": "^1.7.1",
     "gulp-help": "^1.6.0",
+    "gulp-iconfont": "^5.0.0",
+    "gulp-inject": "^3.0.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-metalsmith": "0.0.3",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
+    "gulp-svgmin": "^1.2.0",
+    "gulp-svgstore": "^5.0.4",
     "gulp-zip": "^3.0.2",
     "gulpsmith": "^0.5.3",
     "lodash": "^3.9.3",
@@ -41,9 +46,8 @@
     "node-bourbon": "^4.2.3",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
+    "underscore.string": "^3.2.2",
     "window-size": "^0.1.2"
   },
-  "dependencies": {
-    "metalsmith-headings-identifier": "0.0.6"
-  }
+  "dependencies": {}
 }
