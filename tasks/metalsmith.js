@@ -33,7 +33,7 @@ module.exports = function(gulp, plugins, _, config) {
 
 	gulp.task('build:metalsmith', function(cb) {
 		var filter = plugins.filter(['**/*.md', '**/*.html']);
-		var assetFilter = plugins.filter(['**/*.*css', '**/*.js']);
+		var assetFilter = plugins.filter(['**/*.*css', '**/*.js', '!**/js/bootstrap{*,/*}.js']);
 		var svgFilter = plugins.filter(['content/icons-lexicon.html']);
 
 		var REGEX_VAR_FILEPATH = new RegExp(config.BOOTSTRAP_VAR_FILE + '$');
