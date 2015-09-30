@@ -19,7 +19,8 @@ module.exports = function(gulp, plugins, _, config) {
 						var filter = plugins.filter(['**/bootstrap.scss']);
 
 						gulp.src(['./bower_components/bootstrap-sass/assets/**/*',
-							'!./bower_components/bootstrap-sass/assets/javascripts/**/*',
+							// '!./bower_components/bootstrap-sass/assets/javascripts/**/*',
+							'!./bower_components/bootstrap-sass/assets/javascripts/bootstrap-sprockets.js',
 							'!./bower_components/bootstrap-sass/assets/stylesheets/_bootstrap-*.scss'])
 						.pipe(
 							plugins.rename(
@@ -27,6 +28,7 @@ module.exports = function(gulp, plugins, _, config) {
 									var dirname = path.dirname;
 
 									dirname = dirname.replace('stylesheets', 'scss');
+									dirname = dirname.replace('javascripts', 'js');
 									// console.log(dirname.indexOf(STR_FONT_PATH), dirname);
 									dirname = dirname.replace(STR_FONT_PATH, 'fonts');
 
