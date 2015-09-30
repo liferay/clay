@@ -1,0 +1,39 @@
+---
+title: Icons (Lexicon)
+section: Elements
+---
+
+<div class="alert alert-info" style="margin-top: 20px;">
+	<p>Lexicon icon's do not use same format as Font Awesome or Bootstrap's Glyphicons.</p>
+</div>
+<p>We use SVG elements that link to an SVG sprite, like so:</p>
+<p><pre><code>```<svg class="lexicon-icon">
+    <use xlink:href="path/to/icons.svg#add-column" />
+</svg>
+```</code></pre></p>
+<p>Note that the ID after the # symbol is the ID of the icon to use, so if you wanted to use plus icon, you would do change the <code>href</code> to <code>path/to/icons.svg#plus</code>.<br />
+<a href="#lexicon-icon-explanation">Why do we use SVG?</a>
+</p>
+
+<ul class="clearfix lexicon-icon-list list-unstyled">
+<!-- inject:svg -->
+<!-- endinject -->
+</ul>
+
+<h2>Why do we use SVG?</h2>
+<p id="lexicon-icon-explanation">
+	SVG gives us and you a greater amount of freedom in styling the icons, as well as a higher level of fidelity and clarity in the icons.
+	Font icons, while fairly simple, also suffer some drawbacks, mainly with sub-pixel aliasing that cause the quality to not be as high as we would like.
+	Also SVG allows for multi-color icons, for example:
+	<span class="lexicon-icon-examples">
+		<svg class="lexicon-icon lexicon-icon-asterisk">
+			<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
+		</svg>
+		<svg class="lexicon-icon lexicon-icon-logout">
+			<use xlink:href="{{rootPath}}/images/icons/icons.svg#logout" />
+		</svg>
+		<svg class="lexicon-icon lexicon-icon-exclamation-full">
+			<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
+		</svg>
+	</span>
+</p>
