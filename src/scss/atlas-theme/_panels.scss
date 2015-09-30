@@ -11,6 +11,25 @@
 	border-bottom-width: 2px;
 }
 
+.panel-blank {
+	box-shadow: none;
+
+	> .panel-heading {
+		a {
+			color: $panel-blank-heading-link-open-color;
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+
+			&.collapsed {
+				color: $panel-blank-heading-link-color;
+			}
+		}
+	}
+}
+
 .panel-default {
 	> .panel-heading,
 	> .panel-footer {
