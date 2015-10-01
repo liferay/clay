@@ -226,13 +226,11 @@
 						var navNode = node.find(navigation).first();
 						var sideNavMenuNode = node.find('.sidenav-menu').first();
 
-						setTimeout(function() {
-							var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
+						var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
 
-							contentNode.css('min-height', tallest);
-							navNode.css('min-height', tallest);
-							sideNavMenuNode.css('min-height', tallest);
-						}, 0);
+						contentNode.css('min-height', tallest);
+						navNode.css('min-height', tallest);
+						sideNavMenuNode.css('min-height', tallest);
 					});
 				}
 			}
@@ -285,6 +283,10 @@
 			var widthMethod = closed ? 'showSidenav' : 'hideSidenav';
 
 			if (closed) {
+				setTimeout(function() {
+					instance.setEqualHeight(container);
+				}, 0);
+
 				menu.css('width', width);
 
 				if (container.hasClass('sidenav-right') && container.hasClass('sidenav-fixed')) {
@@ -305,8 +307,6 @@
 					container.trigger('closed.lexicon.sidenav');
 				}
 				else {
-					instance.setEqualHeight(container);
-
 					toggler.addClass('open').removeClass('sidenav-transition');
 
 					container.trigger('open.lexicon.sidenav');
