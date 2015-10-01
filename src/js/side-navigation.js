@@ -426,11 +426,15 @@
 
 				container = options.target ? $(options.target) : doc.find(element.attr('href'));
 
-				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
-					event.preventDefault();
+				if (!doc.data('lexicon.' + togglerSelector)) {
+					doc.data('lexicon.' + togglerSelector, 'true');
 
-					instance._toggleSimpleSidenav(element);
-				});
+					doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
+						event.preventDefault();
+
+						instance._toggleSimpleSidenav(element);
+					});
+				}
 			}
 			else {
 				var toggler = options.toggler;
@@ -444,19 +448,23 @@
 					togglerSelector = toggler;
 				}
 
-				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
-					var $this = $(this);
+				if (!doc.data('lexicon.' + togglerSelector)) {
+					doc.data('lexicon.' + togglerSelector, 'true');
 
-					var selector = $this.closest(options.selector);
+					doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
+						var $this = $(this);
 
-					if (selector.length) {
-						container = selector;
-					}
+						var selector = $this.closest(options.selector);
 
-					event.preventDefault();
+						if (selector.length) {
+							container = selector;
+						}
 
-					instance.toggleNavigation(container);
-				});
+						event.preventDefault();
+
+						instance.toggleNavigation(container);
+					});
+				}
 			}
 		},
 
