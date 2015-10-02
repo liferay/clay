@@ -65,8 +65,30 @@
 	}
 }
 
-.management-bar-no-collapse .management-bar-nav > li > .btn {
-	padding: 0;
+.management-bar-no-collapse .management-bar-nav {
+	> li > .btn {
+		padding: 0;
+	}
+
+	.dropdown-menu {
+		@include arrow("top-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	}
+
+	.dropdown-menu-center {
+		@include arrow("top-center", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	}
+
+	.dropdown-menu-right,
+	.navbar-right .dropdown-menu {
+		@include arrow("top-right", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	}
+
+	.open .dropdown-menu {
+		&:after,
+		&:before {
+			display: block;
+		}
+	}
 }
 
 .management-bar-toggle {
@@ -88,6 +110,14 @@
 }
 
 // Skins
+
+.management-bar-default {
+	.management-bar-collapse {
+		border-top-width: 0;
+		left: 0;
+		right: 0;
+	}
+}
 
 .management-bar-nav.nav {
 	> li {
@@ -113,7 +143,6 @@
 	> a {
 		color: $management-bar-link-color;
 
-		// &:focus,
 		&:hover {
 			color: $management-bar-link-hover-color;
 		}
