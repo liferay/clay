@@ -251,6 +251,19 @@
 	> li {
 		float: left;
 	}
+
+	.dropdown-menu {
+		@include arrow("top-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	}
+
+	.dropdown-menu-center {
+		@include arrow("top-center", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	}
+
+	.dropdown-menu-right,
+	.navbar-right .dropdown-menu {
+		@include arrow("top-right", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	}
 }
 
 // Navbar Default Collapse Basic Search Styles
