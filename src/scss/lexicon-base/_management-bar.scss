@@ -137,6 +137,12 @@
 			padding-top: $management-bar-padding-vertical;
 		}
 	}
+
+	.dropdown-menu {
+		border: 1px solid $dropdown-border;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+		position: absolute;
+	}
 }
 
 .management-bar-nav {
