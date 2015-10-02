@@ -1,24 +1,16 @@
 // Structure
 
+$management-bar-border-left-width: 0 !default; // Shared
+$management-bar-border-right-width: 0 !default; // Shared
+$management-bar-border-top-width: 0 !default; // Shared
+
 $management-bar-height: $navbar-height !default; // Shared
 $management-bar-desktop-height: $navbar-desktop-height !default; // Atlas
-$management-bar-desktop-btn-padding-horizontal: $navbar-desktop-padding-horizontal !default; // Atlas
-$management-bar-desktop-btn-padding-vertical: ($management-bar-desktop-height - $icon-monospaced-size - 2) / 2 !default; // Atlas
-
-$management-bar-border-width: 0 0 1px 0 !default; // Atlas
+$management-bar-desktop-btn-padding-horizontal: $navbar-desktop-padding-horizontal !default; // Shared
+$management-bar-desktop-btn-padding-vertical: ($management-bar-desktop-height - $icon-monospaced-size - 2) / 2 !default; // Shared
 
 // Skin
 
-$management-bar-border: #EDF0F2 !default; // Atlas
-$management-bar-color: #869CAD !default; // Atlas
-
-$management-bar-button-border: #E4E9EC !default; // Atlas
-
-$management-bar-link-color: $management-bar-color !default; // Atlas
-$management-bar-link-hover-color: $management-bar-link-color !default; // Atlas
-$management-bar-link-active-color: $brand-primary !default; // Atlas
-
-$management-bar-toggle-open-color: $brand-primary !default; // Atlas
-$management-bar-toggle-close-color: $management-bar-link-color !default; // Atlas
-
 $management-bar-default-bg: #F5F8FA !default; // Shared
+$management-bar-default-border: #EDF0F2 !default; // Shared
+$management-bar-default-color: #869CAD !default; // Shared
