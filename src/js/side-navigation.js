@@ -415,56 +415,49 @@
 		_onDelegateClickTrigger: function(element) {
 			var instance = this;
 
+			var togglerFn;
 			var togglerSelector;
-
-			var container = element;
 
 			var options = instance.options;
 
 			if (instance.useDataAttribute) {
 				togglerSelector = options.target ? '[data-target="' + options.target + '"]' : '[href="' + element.attr('href') + '"]';
 
-				container = options.target ? $(options.target) : doc.find(element.attr('href'));
+				togglerFn = function(event) {
+					event.preventDefault();
 
-				if (!doc.data('lexicon.' + togglerSelector)) {
-					doc.data('lexicon.' + togglerSelector, 'true');
-
-					doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
-						event.preventDefault();
-
-						instance._toggleSimpleSidenav(element);
-					});
-				}
+					instance._toggleSimpleSidenav(element);
+				};
 			}
 			else {
 				var toggler = options.toggler;
 
-				var useDefaultTogglerClass = toggler === '.sidenav-toggler';
-
-				if (useDefaultTogglerClass) {
+				if (toggler === '.sidenav-toggler') {
 					togglerSelector = options.selector + ' ' + toggler;
 				}
 				else {
 					togglerSelector = toggler;
 				}
 
-				if (!doc.data('lexicon.' + togglerSelector)) {
-					doc.data('lexicon.' + togglerSelector, 'true');
+				togglerFn = function(event) {
+					var $this = $(this);
 
-					doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
-						var $this = $(this);
+					var selector = $this.closest(options.selector);
 
-						var selector = $this.closest(options.selector);
+					var container = selector.length ? selector : element;
 
-						if (selector.length) {
-							container = selector;
-						}
+					event.preventDefault();
 
-						event.preventDefault();
+					instance.toggleNavigation(container);
+				};
+			}
 
-						instance.toggleNavigation(container);
-					});
-				}
+			var dataTogglerSelector = 'lexicon.' + togglerSelector;
+
+			if (!doc.data(dataTogglerSelector)) {
+				doc.data(dataTogglerSelector, 'true');
+
+				doc.on('click.lexicon.sidenav', togglerSelector, togglerFn);
 			}
 		},
 
