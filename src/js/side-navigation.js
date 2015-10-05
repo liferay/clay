@@ -382,34 +382,34 @@
 		_onClickTrigger: function(element) {
 			var instance = this;
 
-			var container = element;
+			var togglerFn;
+
+			var el = element;
 
 			if (instance.useDataAttribute) {
-				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
-
-				element.on('click.lexicon.sidenav', function(event) {
+				togglerFn = function(event) {
 					event.preventDefault();
 
 					instance._toggleSimpleSidenav(element);
-				});
+				};
 			}
 			else {
-				var toggler = element.toggler;
+				el = element.toggler;
 
-				toggler.on('click.lexicon.sidenav', function(event) {
+				togglerFn = function(event) {
 					var $this = $(this);
 
 					var selector = $this.closest(instance.options.selector);
 
-					if (selector.length) {
-						container = selector;
-					}
+					var container = selector.length ? selector : element;
 
 					event.preventDefault();
 
 					instance.toggleNavigation(container);
-				});
+				};
 			}
+
+			el.on('click.lexicon.sidenav', togglerFn);
 		},
 
 		_onDelegateClickTrigger: function(element) {
