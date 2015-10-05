@@ -32,10 +32,10 @@ module.exports = function(gulp, plugins, _, config) {
 			);
 
 			return gulp.src([
-				// 'src/fonts/**/*',
+				'src/fonts/**/*',
 				'src/scss/+(atlas-theme|bootstrap|lexicon-base)/**/*',
 				'src/scss/+(atlas|atlas-variables|bootstrap|lexicon-base|lexicon-base-variables).scss',
-				'src/js/*.js'
+				'src/js/{,bootstrap/}*.js'
 				], {base: './src'})
 			.pipe(assetFilter)
 			.pipe(plugins.header(license.tpl, license.metadata))
