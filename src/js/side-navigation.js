@@ -382,81 +382,82 @@
 		_onClickTrigger: function(element) {
 			var instance = this;
 
-			var container = element;
+			var togglerFn;
+
+			var el = element;
 
 			if (instance.useDataAttribute) {
-				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
-
-				element.on('click.lexicon.sidenav', function(event) {
+				togglerFn = function(event) {
 					event.preventDefault();
 
 					instance._toggleSimpleSidenav(element);
-				});
+				};
 			}
 			else {
-				var toggler = element.toggler;
+				el = element.toggler;
 
-				toggler.on('click.lexicon.sidenav', function(event) {
+				togglerFn = function(event) {
 					var $this = $(this);
 
 					var selector = $this.closest(instance.options.selector);
 
-					if (selector.length) {
-						container = selector;
-					}
+					var container = selector.length ? selector : element;
 
 					event.preventDefault();
 
 					instance.toggleNavigation(container);
-				});
+				};
 			}
+
+			el.on('click.lexicon.sidenav', togglerFn);
 		},
 
 		_onDelegateClickTrigger: function(element) {
 			var instance = this;
 
+			var togglerFn;
 			var togglerSelector;
-
-			var container = element;
 
 			var options = instance.options;
 
 			if (instance.useDataAttribute) {
 				togglerSelector = options.target ? '[data-target="' + options.target + '"]' : '[href="' + element.attr('href') + '"]';
 
-				container = options.target ? $(options.target) : doc.find(element.attr('href'));
-
-				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
+				togglerFn = function(event) {
 					event.preventDefault();
 
 					instance._toggleSimpleSidenav(element);
-				});
+				};
 			}
 			else {
 				var toggler = options.toggler;
 
-				var useDefaultTogglerClass = toggler === '.sidenav-toggler';
-
-				if (useDefaultTogglerClass) {
+				if (toggler === '.sidenav-toggler') {
 					togglerSelector = options.selector + ' ' + toggler;
 				}
 				else {
 					togglerSelector = toggler;
 				}
 
-				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
+				togglerFn = function(event) {
 					var $this = $(this);
 
 					var selector = $this.closest(options.selector);
 
-					if (selector.length) {
-						container = selector;
-					}
+					var container = selector.length ? selector : element;
 
 					event.preventDefault();
 
 					instance.toggleNavigation(container);
-				});
+				};
+			}
+
+			var dataTogglerSelector = 'lexicon.' + togglerSelector;
+
+			if (!doc.data(dataTogglerSelector)) {
+				doc.data(dataTogglerSelector, 'true');
+
+				doc.on('click.lexicon.sidenav', togglerSelector, togglerFn);
 			}
 		},
 
