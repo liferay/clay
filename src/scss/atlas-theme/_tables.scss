@@ -1,4 +1,4 @@
-@media screen and (max-width: ($screen-xs-min - 1)) {
+@media screen and (max-width: ($screen-xs-min - 1)) { // max-width: 479px
 	.table-responsive-flip {
 		.table {
 			> thead,
@@ -18,14 +18,6 @@
 // Table List Skin
 
 .table-list {
-	> thead,
-	> tbody,
-	> tfoot {
-		> tr {
-			height: $table-list-row-height;
-		}
-	}
-
 	a {
 		color: $table-list-link-color;
 	}
