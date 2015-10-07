@@ -166,15 +166,10 @@
 	> thead > tr > td,
 	> thead > tr > th {
 		border-bottom-width: 0;
+	}
 
-		&.table-list-content {
-			.truncate-text {
-				bottom: 10px;
-				line-height: normal;
-				margin-top: 0;
-				top: auto;
-			}
-		}
+	> tbody > tr {
+		height: $table-list-row-height;
 	}
 
 	> tbody > tr > td,
@@ -212,14 +207,11 @@
 
 	.table-list-content {
 		position: relative;
+		word-break: break-all; // IE
+		word-break: break-word;
 
-		.truncate-text {
-			left: 0;
-			line-height: $table-list-content-height;
-			margin-top: -(ceil($table-list-content-height / 2));
-			position: absolute;
-			right: 0;
-			top: 50%;
+		&.clamp-horizontal {
+			vertical-align: middle;
 		}
 	}
 
