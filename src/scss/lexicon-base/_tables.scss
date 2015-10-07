@@ -1,3 +1,17 @@
+.table-cell-content {
+	position: relative;
+	word-break: break-all; // IE
+	word-break: break-word;
+
+	&.clamp-horizontal {
+		vertical-align: middle;
+	}
+}
+
+.table-cell-field {
+	width: 1%;
+}
+
 .table-responsive {
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -203,19 +217,5 @@
 	.checkbox-default,
 	.checkbox-default label {
 		margin-bottom: 0;
-	}
-
-	.table-list-content {
-		position: relative;
-		word-break: break-all; // IE
-		word-break: break-word;
-
-		&.clamp-horizontal {
-			vertical-align: middle;
-		}
-	}
-
-	.table-list-field {
-		width: 1%;
 	}
 }
