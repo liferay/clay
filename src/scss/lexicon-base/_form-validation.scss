@@ -1,13 +1,67 @@
-.validation-message {
-	.has-error & {
-		color: $state-danger-text;
+// Bootstrap Form Control Validation Reset
+// TWBS won't fix. See https://github.com/twbs/bootstrap/pull/17897
+
+.has-error,
+.has-success,
+.has-warning {
+	.help-block,
+	.control-label,
+	.radio,
+	.checkbox,
+	.radio-inline,
+	.checkbox-inline,
+	&.radio label,
+	&.checkbox label,
+	&.radio-inline label,
+	&.checkbox-inline label {
+		color: $input-color;
 	}
 
-	.has-success & {
+	.form-control {
+		border-color: $input-border;
+
+		&:focus {
+			$color-rgba: rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), 0.6);
+
+			border-color: $input-border-focus;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $color-rgba; // Undo from Bootstrap _vendor-prefixes mixin
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $color-rgba;
+		}
+	}
+
+	.input-group-addon {
+		color: $input-color;
+		border-color: $input-group-addon-border-color;
+		background-color: $input-group-addon-bg;
+	}
+
+	.form-control-feedback {
+		color: $text-color;
+	}
+}
+
+// Redo Bootstrap Form Control Validation
+
+.has-success {
+	@include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
+
+	.validation-message {
 		color: $state-success-text;
 	}
+}
 
-	.has-warning & {
+.has-warning {
+	@include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
+
+	.validation-message {
 		color: $state-warning-text;
+	}
+}
+
+.has-error {
+	@include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
+
+	.validation-message {
+		color: $state-danger-text;
 	}
 }
