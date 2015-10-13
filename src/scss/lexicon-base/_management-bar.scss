@@ -217,8 +217,8 @@
 		color: $management-bar-default-link-color;
 
 		&:focus {
-			color: $management-bar-default-link-active-color;
 			background-color: $management-bar-default-link-active-bg;
+			color: $management-bar-default-link-active-color;
 		}
 	}
 
