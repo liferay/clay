@@ -1,4 +1,6 @@
-@media screen and (max-width: ($screen-xs-min - 1)) { // max-width: 479px
+// max-width: 479px
+
+@media screen and (max-width: ($screen-xs-min - 1)) {
 	.table-responsive-flip {
 		.table {
 			> thead,

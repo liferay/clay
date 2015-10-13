@@ -17,7 +17,9 @@
 	font-weight: bold;
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
+// max-width: 767px
+
+@media screen and (max-width: $grid-float-breakpoint-max) {
 	.table-responsive-flip {
 		.table {
 			> thead,
@@ -42,7 +44,9 @@
 	}
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
+// max-width: 767px
+
+@media screen and (max-width: $grid-float-breakpoint-max) {
 	.table-responsive-collapse {
 		.table,
 		thead,
@@ -170,7 +174,9 @@
 	}
 }
 
-@media screen and (max-width: ($screen-xs-min - 1)) { // max-width: 479px
+// max-width: 479px
+
+@media screen and (max-width: ($screen-xs-min - 1)) {
 	.table-responsive-flip {
 		.table {
 			> thead {
