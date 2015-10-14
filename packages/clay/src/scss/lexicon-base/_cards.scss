@@ -48,6 +48,7 @@
 }
 
 .card-horizontal {
+	background-color: $card-vertical;
 	position: relative;
 
 	&.card-circle {
@@ -217,6 +218,7 @@
 // Card Skins
 
 .card-dm {
+	background-color: $card-dm;
 	overflow: visible;
 
 	.card-footer {
