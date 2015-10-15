@@ -4,6 +4,8 @@ $list-group-header-close-border-width: 1px !default; // Atlas
 $list-group-header-open-border-width: 2px !default; // Atlas
 $list-group-header-icon-font-size: 20px !default; // Shared
 
+$tabular-list-group-item-height: 110px !default;
+
 // Skin
 
 $list-group-header-bg:                           #F5F8FA !default;
@@ -25,3 +27,8 @@ $list-group-header-bg: #F5F8FA !default; // Shared
 $list-group-header-color: $brand-default !default; // Atlas
 $list-group-header-close-border-color: $list-group-border !default; // Atlas
 $list-group-header-open-border-color: $brand-primary !default; // Atlas
+
+$list-group-card-active-bg: $list-group-active-bg !default;
+$list-group-card-active-border: $list-group-active-border !default;
+$list-group-card-active-border-width: 2px !default;
+$list-group-card-active-color: $list-group-active-color !default;
