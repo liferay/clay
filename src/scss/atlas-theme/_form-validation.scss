@@ -16,22 +16,22 @@
 }
 
 .has-success {
-	.checkbox-default label,
-	.radio-default label {
+	.checkbox label,
+	.radio label {
 		color: $state-success-text;
 	}
 }
 
 .has-warning {
-	.checkbox-default label,
-	.radio-default label {
+	.checkbox label,
+	.radio label {
 		color: $state-warning-text;
 	}
 }
 
 .has-error {
-	.checkbox-default label,
-	.radio-default label {
+	.checkbox label,
+	.radio label {
 		color: $state-danger-text;
 	}
 }
