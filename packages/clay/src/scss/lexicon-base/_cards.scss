@@ -1,5 +1,6 @@
 .card,
 .card-horizontal {
+	background-color: $card-bg;
 	border: $card-border-width solid $card-border;
 	border-radius: $card-border-radius;
 	margin-bottom: $card-margin-bottom;
@@ -48,7 +49,6 @@
 }
 
 .card-horizontal {
-	background-color: $card-vertical;
 	position: relative;
 
 	&.card-circle {
@@ -218,7 +218,6 @@
 // Card Skins
 
 .card-dm {
-	background-color: $card-dm;
 	overflow: visible;
 
 	.card-footer {
