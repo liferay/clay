@@ -16,22 +16,34 @@
 }
 
 .has-success {
-	.checkbox-default label,
-	.radio-default label {
+	.checkbox label,
+	.radio label {
 		color: $state-success-text;
+	}
+
+	.form-control[readonly] {
+		border-color: $state-success-border;
 	}
 }
 
 .has-warning {
-	.checkbox-default label,
-	.radio-default label {
+	.checkbox label,
+	.radio label {
 		color: $state-warning-text;
+	}
+
+	.form-control[readonly] {
+		border-color: $state-warning-border;
 	}
 }
 
 .has-error {
-	.checkbox-default label,
-	.radio-default label {
+	.checkbox label,
+	.radio label {
 		color: $state-danger-text;
+	}
+
+	.form-control[readonly] {
+		border-color: $state-danger-border;
 	}
 }
