@@ -11,10 +11,130 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Management Bar Default</h3>
+		<h3>Management Bar</h3>
 
 		<blockquote class="blockquote-success blockquote-sm">
 			<p>Management Bar is an extension of Navbar. Combine different management-bar components to create a toolbar that fits your needs.</p>
+		</blockquote>
+
+		<div class="management-bar">
+			<div class="management-bar-header">
+				<label class="checkbox-default">
+					<input type="checkbox" value="">
+				</label>
+
+				<a class="management-bar-toggle management-bar-toggle-link collapsed" data-toggle="collapse" href="#mgmtBarCollapse00">
+					<span class="management-bar-item-title">Label</span>
+					<span class="icon-sort">
+				</a>
+			</div>
+
+			<div class="management-bar-header-right">
+				<a class="btn" href="#"><span class="icon-th-large icon-monospaced"></span></a>
+				<a class="btn" href="#"><span class="icon-th-list icon-monospaced"></span></a>
+				<a class="btn hidden-xs" href="#"><span class="icon-th icon-monospaced"></span></a>
+			</div>
+
+			<div class="collapse management-bar-collapse" id="mgmtBarCollapse00">
+				<ul class="nav management-bar-nav">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
+							<span class="icon-sort"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<form>
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail3">Email address</label>
+										<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Approved
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Draft
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Pending
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Expired
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Scheduled
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Rejected
+										</label>
+									</div>
+								</form>
+							</li>
+							<li><a href="#1">Something Outside</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="management-bar-item-title">Recent</span>
+							<span class="icon-sort"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">All</a></li>
+							<li class="active"><a href="#1">Recent</a></li>
+							<li><a href="#1">Mine</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="management-bar-item-title">Order By: Modified Date</span>
+							<span class="icon-sort"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#1">Name</a></li>
+							<li><a href="#1">Create Date</a></li>
+							<li class="active"><a href="#1">Modified Date</a></li>
+							<li><a href="#1">Downloads</a></li>
+							<li><a href="#1">Size</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="btn hidden-xs" href="#1"><span class="icon-caret-up icon-monospaced"></span></a>
+					</li>
+					<li>
+						<a class="btn hidden-xs" href="#1"><span class="icon-caret-down icon-monospaced"></span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Management Bar Default</h3>
+
+		<blockquote class="blockquote-success blockquote-sm">
+			<p>Default Skin for Management Bar</p>
 		</blockquote>
 
 		<div class="management-bar management-bar-default">

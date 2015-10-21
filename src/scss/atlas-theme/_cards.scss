@@ -7,28 +7,24 @@
 	&.checkbox-bottom-left,
 	&.checkbox-middle-left,
 	&.checkbox-top-left {
-		input[type="checkbox"] {
-			+ .card.flex-container {
-				padding-left: 50px;
-			}
+		.card.flex-container {
+			padding-left: 50px;
+		}
 
-			+ .card .card-row {
-				padding-left: 50px;
-			}
+		.card-row {
+			padding-left: 50px;
 		}
 	}
 
 	&.checkbox-bottom-right,
 	&.checkbox-middle-right,
 	&.checkbox-top-right {
-		input[type="checkbox"] {
-			+ .card.flex-container {
-				padding-right: 50px;
-			}
+		.card.flex-container {
+			padding-right: 50px;
+		}
 
-			+ .card .card-row {
-				padding-right: 50px;
-			}
+		.card-row {
+			padding-right: 50px;
 		}
 	}
 
@@ -79,10 +75,4 @@
 			top: 15px;
 		}
 	}
-}
-
-// Checkbox Cards
-
-.checkbox-card label a {
-	color: $dropdown-link-color;
 }
