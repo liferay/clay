@@ -3,6 +3,20 @@
 	vertical-align: top;
 }
 
+.list-group-item-content {
+	&.clamp-horizontal {
+		.clamp-container {
+			@include transform(none);
+		}
+	}
+
+	&.clamp-all {
+		.clamp-container {
+			padding-top: 1em;
+		}
+	}
+}
+
 .list-group-heading,
 .list-group-item {
 	border-left-width: 0;
@@ -172,6 +186,76 @@ a.list-group-heading,
 
 	.list-group-item-warning {
 		@include color-tabular-list-group-item($brand-warning);
+	}
+}
+
+// List Group Card
+
+.list-group-card {
+	.checkbox input[type="checkbox"] {
+		&:checked {
+			+ .card {
+				background-color: $list-group-card-active-bg;
+
+				&:after {
+					background-color: $list-group-card-active-border;
+					bottom: -1px;
+					content: '';
+					display: block;
+					height: $list-group-card-active-border-width;
+					left: -1px;
+					position: absolute;
+					right: -1px;
+					z-index: 1;
+				}
+
+				.dropdown-toggle {
+					color: $brand-default;
+				}
+			}
+		}
+	}
+
+	.list-group-heading + .list-group-item {
+		margin-top: 0;
+
+		.card {
+			border-top-width: 0;
+		}
+	}
+}
+
+.list-group-card-checkbox-hidden-xs {
+	.checkbox-bottom-left,
+	.checkbox-middle-left,
+	.checkbox-top-left {
+		.card.flex-container {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-left: 20px;
+			}
+		}
+
+		.card-row {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	.checkbox-bottom-right,
+	.checkbox-middle-right,
+	.checkbox-top-right {
+		.card.flex-container {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-right: 20px;
+			}
+		}
+
+		.card-row {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-right: 20px;
+			}
+		}
 	}
 }
 
