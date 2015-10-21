@@ -1,15 +1,18 @@
 .management-bar {
-	border: 1px solid $management-bar-border;
-	border-width: $management-bar-border-width;
-	color: $management-bar-color;
 	margin-bottom: 0;
 	padding-left: $management-bar-padding-horizontal;
 	padding-right: $management-bar-padding-horizontal;
 
+	a {
+		color: $nav-link-color;
+	}
+
 	.btn {
-		border: 1px solid $management-bar-border;
-		border-radius: 3px;
-		padding: 0;
+		&,
+		&:focus,
+		&:hover {
+			color: $nav-link-color;
+		}
 	}
 }
 
@@ -91,14 +94,6 @@
 	}
 }
 
-.management-bar-toggle {
-	color: $management-bar-link-color;
-
-	&:hover {
-		color: $management-bar-link-hover-color;
-	}
-}
-
 .management-bar-toggle-link {
 	&.management-bar-toggle {
 		padding: 13px 15px;
@@ -112,109 +107,28 @@
 // Skins
 
 .management-bar-default {
+	border-color: $management-bar-default-border;
+
+	a {
+		color: $management-bar-default-link-color;
+	}
+
+	.btn {
+		border: 1px solid $management-bar-default-border;
+		border-radius: 3px;
+		color: $management-bar-default-link-color;
+		padding: 0;
+
+		&:focus,
+		&:hover {
+			color: $management-bar-default-link-hover-color;
+		}
+	}
+
 	.management-bar-collapse {
 		border-top-width: 0;
 		left: 0;
+		margin-top: $management-bar-border-bottom-width;
 		right: 0;
-	}
-}
-
-.management-bar-nav.nav {
-	> li {
-		> a {
-			color: $management-bar-link-color;
-
-			&:hover {
-				color: $management-bar-link-hover-color;
-			}
-		}
-
-		&.active,
-		&.open {
-			> a {
-				color: $management-bar-link-active-color;
-			}
-		}
-	}
-}
-
-.management-bar-header,
-.management-bar-header-right {
-	> a {
-		color: $management-bar-link-color;
-
-		&:hover {
-			color: $management-bar-link-hover-color;
-		}
-	}
-
-	> .management-bar-toggle {
-		color: $management-bar-toggle-open-color;
-
-		&:hover {
-			color: $management-bar-toggle-open-color;
-		}
-
-		&.collapsed {
-			color: $management-bar-toggle-close-color;
-
-			&:hover {
-				color: $management-bar-toggle-close-color;
-			}
-		}
-	}
-
-	> .btn-default {
-		color: $btn-default-color;
-
-		&:hover,
-		&.active {
-			border-color: $btn-default-hover-border;
-		}
-	}
-
-	> .btn-danger {
-		color: $btn-danger-color;
-
-		&:hover {
-			color: $btn-danger-color;
-		}
-	}
-
-	> .btn-primary {
-		color: $btn-primary-color;
-
-		&:hover {
-			color: $btn-primary-color;
-		}
-	}
-
-	> .btn-success {
-		color: $btn-success-color;
-
-		&:hover {
-			color: $btn-success-color;
-		}
-	}
-
-	> .btn-warning {
-		color: $btn-warning-color;
-
-		&:hover {
-			color: $btn-warning-color;
-		}
-	}
-}
-
-.management-bar-header-right {
-	.btn-primary {
-		border-color: $btn-primary-bg;
-		color: $btn-primary-color;
-
-		&:hover {
-			background-color: $btn-primary-hover-bg;
-			border-color: $btn-primary-hover-bg;
-			color: $btn-primary-color;
-		}
 	}
 }

@@ -12,32 +12,40 @@ section: Elements
 			<p>Class <code>table-bordered</code> not compatible with <code>table-list</code>.</p>
 		</blockquote>
 
+		<div class="alert alert-warning">Truncating text inside a table requires the use of the <a href="../cards/#truncating-text-inside-horizontal-card-without-card-row-layout-fixed">clamp component</a>.</div>
+
 		<table class="table table-list">
 			<thead>
 				<tr>
-					<th class="table-list-field"></th>
-					<th class="table-list-content"><span class="truncate-text">Description</span></th>
-					<th class="table-list-field">Format</th>
-					<th class="table-list-field">Label</th>
-					<th class="table-list-field">Label</th>
-					<th class="table-list-field"></th>
+					<th class="table-cell-field"></th>
+					<th class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Description">Description</span>
+						</div>
+					</th>
+					<th class="table-cell-field">Format</th>
+					<th class="table-cell-field">Label</th>
+					<th class="table-cell-field">Label</th>
+					<th class="table-cell-field"></th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<tr>
-					<td class="table-list-field">
+					<td class="table-cell-field">
 						<label class="checkbox-default">
 							<input class="input-sm" type="checkbox" value="">
 						</label>
 					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</div>
 					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-left-side">
@@ -52,18 +60,18 @@ section: Elements
 					</td>
 				</tr>
 				<tr class="active">
-					<td class="table-list-field">
+					<td class="table-cell-field">
 						<label class="checkbox-default">
 							<input checked class="input-sm" type="checkbox" value="">
 						</label>
 					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+					<td class="table-cell-content">
+						<span title="reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual">reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual</span>
 					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-left-side">
@@ -78,18 +86,20 @@ section: Elements
 					</td>
 				</tr>
 				<tr>
-					<td class="table-list-field">
+					<td class="table-cell-field">
 						<label class="checkbox-default">
 							<input class="input-sm" type="checkbox" value="">
 						</label>
 					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+						</div>
 					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-left-side">
@@ -104,262 +114,20 @@ section: Elements
 					</td>
 				</tr>
 				<tr>
-					<td class="table-list-field">
+					<td class="table-cell-field">
 						<label class="checkbox-default">
 							<input class="input-sm" type="checkbox" value="">
 						</label>
 					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
-					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 						</div>
 					</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<h3>Table List Striped</h3>
-
-		<table class="table table-list table-striped">
-			<thead>
-				<tr>
-					<th class="table-list-field"></th>
-					<th class="table-list-content"><span class="truncate-text">Description</span></th>
-					<th class="table-list-field">Format</th>
-					<th class="table-list-field">Label</th>
-					<th class="table-list-field">Label</th>
-					<th class="table-list-field"></th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<tr>
-					<td class="table-list-field">
-						<label class="checkbox-default">
-							<input class="input-sm" type="checkbox" value="">
-						</label>
-					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="table-list-field">
-						<label class="checkbox-default">
-							<input class="input-sm" type="checkbox" value="">
-						</label>
-					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
-					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="table-list-field">
-						<label class="checkbox-default">
-							<input class="input-sm" type="checkbox" value="">
-						</label>
-					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
-					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="table-list-field">
-						<label class="checkbox-default">
-							<input class="input-sm" type="checkbox" value="">
-						</label>
-					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
-					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<h3>Table List Hover</h3>
-
-		<table class="table table-list table-hover">
-			<thead>
-				<tr>
-					<th class="table-list-field"></th>
-					<th class="table-list-content"><span class="truncate-text" title="Description">Description</span></th>
-					<th class="table-list-field">Format</th>
-					<th class="table-list-field">Label</th>
-					<th class="table-list-field">Label</th>
-					<th class="table-list-field"></th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<tr>
-					<td class="table-list-field">
-						<label class="checkbox-default">
-							<input class="input-sm" type="checkbox" value="">
-						</label>
-					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr class="active">
-					<td class="table-list-field">
-						<label class="checkbox-default">
-							<input checked class="input-sm" type="checkbox" value="">
-						</label>
-					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
-					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="table-list-field">
-						<label class="checkbox-default">
-							<input class="input-sm" type="checkbox" value="">
-						</label>
-					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
-					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="table-list-field">
-						<label class="checkbox-default">
-							<input class="input-sm" type="checkbox" value="">
-						</label>
-					</td>
-					<td class="table-list-content">
-						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
-					</td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field"><a href="#1">jpg</a></td>
-					<td class="table-list-field">
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-left-side">
@@ -378,7 +146,283 @@ section: Elements
 	</div>
 </div>
 
-<div class="row">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Table List Striped</h3>
+
+		<table class="table table-list table-striped">
+			<thead>
+				<tr>
+					<th class="table-cell-field"></th>
+					<th class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Description">Description</span>
+						</div>
+					</th>
+					<th class="table-cell-field">Format</th>
+					<th class="table-cell-field">Label</th>
+					<th class="table-cell-field">Label</th>
+					<th class="table-cell-field"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td class="table-cell-field">
+						<label class="checkbox-default">
+							<input class="input-sm" type="checkbox" value="">
+						</label>
+					</td>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</div>
+					</td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-cell-field">
+						<label class="checkbox-default">
+							<input class="input-sm" type="checkbox" value="">
+						</label>
+					</td>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+						</div>
+					</td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-cell-field">
+						<label class="checkbox-default">
+							<input class="input-sm" type="checkbox" value="">
+						</label>
+					</td>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+						</div>
+					</td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-cell-field">
+						<label class="checkbox-default">
+							<input class="input-sm" type="checkbox" value="">
+						</label>
+					</td>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						</div>
+					</td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Table List Hover</h3>
+
+		<table class="table table-list table-hover">
+			<thead>
+				<tr>
+					<th class="table-cell-field"></th>
+					<th class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Description">Description</span>
+						</div>
+					</th>
+					<th class="table-cell-field">Format</th>
+					<th class="table-cell-field">Label</th>
+					<th class="table-cell-field">Label</th>
+					<th class="table-cell-field"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td class="table-cell-field">
+						<label class="checkbox-default">
+							<input class="input-sm" type="checkbox" value="">
+						</label>
+					</td>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</div>
+					</td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr class="active">
+					<td class="table-cell-field">
+						<label class="checkbox-default">
+							<input checked class="input-sm" type="checkbox" value="">
+						</label>
+					</td>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+						</div>
+					</td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-cell-field">
+						<label class="checkbox-default">
+							<input class="input-sm" type="checkbox" value="">
+						</label>
+					</td>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+						</div>
+					</td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-cell-field">
+						<label class="checkbox-default">
+							<input class="input-sm" type="checkbox" value="">
+						</label>
+					</td>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						</div>
+					</td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Default Table</h3>
 
@@ -464,7 +508,9 @@ section: Elements
 </div>
 
 	</div>
+</div>
 
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Table Striped (Not Compatible with IE8)</h3>
 
@@ -550,7 +596,9 @@ section: Elements
 </div>
 
 	</div>
+</div>
 
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Table Bordered</h3>
 
@@ -636,7 +684,9 @@ section: Elements
 </div>
 
 	</div>
+</div>
 
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Table Hover</h3>
 
@@ -722,9 +772,11 @@ section: Elements
 </div>
 
 	</div>
+</div>
 
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Responsive Table (CSS Only)</h3>
+		<h3>Table Responsive Flip (CSS Only)</h3>
 		<div class="table-responsive table-responsive-flip">
 			<table class="table table-hover table-bordered">
 				<thead>
@@ -819,9 +871,11 @@ section: Elements
 </div>
 
 	</div>
+</div>
 
+<div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Table Collapse</h3>
+		<h3>Table Responsive Collapse (Requires JS Plugin)</h3>
 
 		<div class="table-responsive table-responsive-collapse">
 			<table class="table table-bordered">
