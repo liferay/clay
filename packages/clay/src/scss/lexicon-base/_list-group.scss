@@ -1,9 +1,26 @@
 .list-group-heading {
-	@extend .list-group-item;
-
+	background-color: $list-group-bg;
+	border: 1px solid $list-group-border;
+	display: block;
 	font-weight: $list-group-header-font-weight;
+	margin-bottom: -1px;
 	overflow: hidden;
+	padding: 10px 15px;
+	position: relative;
 	word-wrap: break-word;
+
+	&:first-child {
+		border-top-left-radius: $list-group-border-radius;
+		border-top-right-radius: $list-group-border-radius;
+	}
+
+	&:last-child {
+		border-bottom-left-radius: $list-group-border-radius;
+		border-bottom-right-radius: $list-group-border-radius;
+		margin-bottom: 0;
+	}
+
+
 }
 
 a.list-group-heading,
@@ -101,6 +118,7 @@ button.list-group-heading,
 	.list-group-item {
 		border-width: 0;
 		display: table-row;
+		height: $tabular-list-group-item-height;
 		padding: 0;
 
 		&:first-child {
@@ -129,6 +147,8 @@ button.list-group-heading,
 		border-top-width: 0;
 		padding: 1em 0.3em;
 		position: relative;
+		word-break: break-all; // IE
+		word-break: break-word;
 
 		&:first-child {
 			border-left-width: $tabular-list-group-border-width;
@@ -218,6 +238,7 @@ button.list-group-heading,
 		> li,
 		.list-group-item {
 			display: block;
+			height: auto;
 		}
 
 		.list-group-item-content,
@@ -330,6 +351,161 @@ button.list-group-heading,
 		.detailed-list-view-icon {
 			margin-left: auto;
 			margin-right: auto;
+		}
+	}
+}
+
+// List Group Card
+
+.list-group-card {
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 5px;
+		margin-top: 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.card {
+		border-color: $list-group-border;
+		border-radius: 0;
+		border-width: 1px;
+		box-shadow: none;
+		margin: 0;
+	}
+
+	.card-col-content,
+	.card-col-field {
+		vertical-align: top;
+	}
+
+	.checkbox input[type="checkbox"] {
+		&:checked {
+			+ .card {
+				background-color: $list-group-card-active-bg;
+				color: $list-group-card-active-color;
+
+				.dropdown-toggle {
+					color: $list-group-card-active-color;
+				}
+			}
+		}
+	}
+
+	.list-group-card-icon {
+		font-size: 2.4em;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			font-size: 3em;
+		}
+
+		> [class^="icon-"],
+		> [class*=" icon-"],
+		> .user-icon {
+			display: block;
+
+			@include monospace(34px);
+
+			text-align: center;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				@include monospace(45px);
+			}
+		}
+	}
+
+	.list-group-item {
+		border-width: 0;
+		margin-bottom: 0;
+		margin-top: -1px;
+		padding: 0;
+
+		&:last-child {
+			.card {
+				border-bottom-left-radius: $list-group-border-radius;
+				border-bottom-right-radius: $list-group-border-radius;
+			}
+		}
+	}
+}
+
+.list-group-card-checkbox-hidden-xs {
+	.checkbox input[type="checkbox"] {
+		display: none;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			display: block;
+		}
+
+		&:checked + .card .list-group-card-icon {
+			&:after {
+				color: $list-group-active-color;
+				content: $list-group-card-checkbox-hidden-icon;
+				display: block;
+				font-family: 'fontawesome-alloy';
+				font-size: 16px;
+
+				@include monospace(34px);
+
+				text-align: center;
+				vertical-align: middle;
+
+				@media screen and (min-width: $grid-float-breakpoint) {
+					content: normal;
+				}
+			}
+
+			> [class^="icon-"],
+			> [class*=" icon-"],
+			> .user-icon {
+				display: none;
+			}
+
+			> [class^="icon-"],
+			> [class*=" icon-"] {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					display: block;
+				}
+			}
+
+			> .user-icon {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.checkbox-bottom-left,
+	.checkbox-middle-left,
+	.checkbox-top-left {
+		.card.flex-container {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-left: 20px;
+			}
+		}
+
+		.card-row {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	.checkbox-bottom-right,
+	.checkbox-middle-right,
+	.checkbox-top-right {
+		.card.flex-container {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-right: 20px;
+			}
+		}
+
+		.card-row {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-right: 20px;
+			}
 		}
 	}
 }

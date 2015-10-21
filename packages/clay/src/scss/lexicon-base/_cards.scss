@@ -271,10 +271,6 @@
 		color: $text-color;
 		display: block;
 		padding-left: 0;
-
-		a {
-			color: $link-color;
-		}
 	}
 
 	input[type="checkbox"] {
@@ -287,28 +283,24 @@
 .checkbox-bottom-left,
 .checkbox-middle-left,
 .checkbox-top-left {
-	input[type="checkbox"] {
-		+ .card.flex-container {
-			padding-left: 40px;
-		}
+	.card.flex-container {
+		padding-left: 40px;
+	}
 
-		+ .card .card-row {
-			padding-left: 40px;
-		}
+	.card-row {
+		padding-left: 40px;
 	}
 }
 
 .checkbox-bottom-right,
 .checkbox-middle-right,
 .checkbox-top-right {
-	input[type="checkbox"] {
-		+ .card.flex-container {
-			padding-right: 40px;
-		}
+	.card.flex-container {
+		padding-right: 40px;
+	}
 
-		+ .card .card-row {
-			padding-right: 40px;
-		}
+	.card-row {
+		padding-right: 40px;
 	}
 }
 

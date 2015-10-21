@@ -20,6 +20,13 @@
 	}
 }
 
+.dropdown-toggle {
+	&.icon-ellipsis-vertical,
+	.icon-ellipsis-vertical {
+		color: $dropdown-link-color;
+	}
+}
+
 // Dropdown inline-scroller
 
 .dropdown-menu {
@@ -49,7 +56,7 @@
 			&:focus,
 			&:hover {
 				background-color: $dropdown-link-active-bg;
-				color :$dropdown-link-active-color;
+				color : $dropdown-link-active-color;
 			}
 		}
 	}
@@ -192,6 +199,7 @@
 }
 
 @media (min-width: $grid-float-breakpoint) { // min-width: 768px
+
 	.dropdown-header {
 		font-size: $dropdown-header-font-size-desktop;
 	}

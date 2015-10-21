@@ -1,7 +1,5 @@
 // Structure
 
-$golden-ratio: 1.6180339 !default; // Atlas
-
 $font-size-base:                           14px !default;
 $font-size-large:                          ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:                          ceil(($font-size-base * 0.85)) !default; // ~12px
@@ -24,7 +22,7 @@ $font-size-desktop-h4: $font-size-desktop-base !default; // Atlas 16px
 $font-size-desktop-h5: floor(($font-size-desktop-base / 1.1428)) !default; // Atlas 14px
 $font-size-desktop-h6: floor(($font-size-desktop-base / 1.2307)) !default; // Atlas 13px
 
-$line-height-base:                         1.4286 !default;
+$line-height-base:                         1.428571429 !default;
 $headings-line-height:                     1.2 !default;
 
 $padding-base-vertical:                    6px !default;

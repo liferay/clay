@@ -1,7 +1,15 @@
-.table-responsive {
-	overflow-x: auto;
-	overflow-y: hidden;
-	width: 100%;
+.table-cell-content {
+	position: relative;
+	word-break: break-all; // IE
+	word-break: break-word;
+
+	&.clamp-horizontal {
+		vertical-align: middle;
+	}
+}
+
+.table-cell-field {
+	width: 1%;
 }
 
 .table-responsive-collapse .label-collapse {
@@ -9,12 +17,17 @@
 	font-weight: bold;
 }
 
-@media screen and (max-width: $screen-sm-min) {
+// max-width: 767px
+
+@media screen and (max-width: $grid-float-breakpoint-max) {
 	.table-responsive-flip {
 		.table {
-			> thead, > tbody, > tfoot {
+			> thead,
+			> tbody,
+			> tfoot {
 				> tr {
-					> th, > td {
+					> th,
+					> td {
 						line-height: 40px;
 					}
 				}
@@ -31,9 +44,14 @@
 	}
 }
 
-@media screen and (max-width: $screen-xs-max) {
+// max-width: 767px
+
+@media screen and (max-width: $grid-float-breakpoint-max) {
 	.table-responsive-collapse {
-		.table, thead, tbody, th {
+		.table,
+		thead,
+		tbody,
+		th {
 			display: block;
 		}
 
@@ -55,7 +73,7 @@
 		}
 
 		tr {
-			border-top: 1px solid #DDD;
+			border-top: 1px solid $table-border-color;
 			display: table;
 			width: 100%;
 
@@ -63,8 +81,8 @@
 				border-top-width: 0;
 			}
 
-			&:nth-of-type(even) {
-				background: #EEE;
+			&:nth-of-type(odd) {
+				background-color: $table-bg-accent;
 			}
 
 			td {
@@ -86,7 +104,12 @@
 			border-width: 0;
 		}
 
-		.table, thead, tbody, th, td, tr {
+		.table,
+		thead,
+		tbody,
+		th,
+		td,
+		tr {
 			display: block;
 		}
 
@@ -101,8 +124,8 @@
 			}
 
 			> thead {
-				border-left: 1px solid #DDD;
-				border-right: 3px solid #DDD;
+				border-left: 1px solid $table-border-color;
+				border-right: 3px solid $table-border-color;
 				max-width: 200px;
 				overflow: auto;
 
@@ -113,14 +136,15 @@
 			}
 
 			tr {
-				border-top: 1px solid #DDD;
+				border-top: 1px solid $table-border-color;
 				display: inline-block;
 				margin: 0 -2px;
 			}
 
-			> tbody > tr > td, > thead > tr > th {
-				border-bottom: 1px solid #DDD;
-				border-left: 1px solid #DDD;
+			> tbody > tr > td,
+			> thead > tr > th {
+				border-bottom: 1px solid $table-border-color;
+				border-left: 1px solid $table-border-color;
 				border-top-width: 0;
 			}
 		}
@@ -134,10 +158,10 @@
 		> .table-bordered {
 			> tbody {
 				> tr {
-					border-right: 1px solid #DDD;
+					border-right: 1px solid $table-border-color;
 
 					&:last-child > td {
-						border-bottom: 1px solid #DDD;
+						border-bottom: 1px solid $table-border-color;
 					}
 
 					> td {
@@ -149,6 +173,8 @@
 		}
 	}
 }
+
+// max-width: 479px
 
 @media screen and (max-width: ($screen-xs-min - 1)) {
 	.table-responsive-flip {
@@ -166,15 +192,10 @@
 	> thead > tr > td,
 	> thead > tr > th {
 		border-bottom-width: 0;
+	}
 
-		&.table-list-content {
-			.truncate-text {
-				bottom: 10px;
-				line-height: normal;
-				margin-top: 0;
-				top: auto;
-			}
-		}
+	> tbody > tr {
+		height: $table-list-row-height;
 	}
 
 	> tbody > tr > td,
@@ -208,22 +229,5 @@
 	.checkbox-default,
 	.checkbox-default label {
 		margin-bottom: 0;
-	}
-
-	.table-list-content {
-		position: relative;
-
-		.truncate-text {
-			left: 0;
-			line-height: $table-list-content-height;
-			margin-top: -(ceil($table-list-content-height / 2));
-			position: absolute;
-			right: 0;
-			top: 50%;
-		}
-	}
-
-	.table-list-field {
-		width: 1%;
 	}
 }

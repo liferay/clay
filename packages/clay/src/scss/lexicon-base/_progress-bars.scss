@@ -1,3 +1,35 @@
+.progress-xs {
+	border-radius: $progress-bar-xs-border-radius;
+	height: $progress-bar-xs-height;
+
+	.progress-bar {
+		font-size: 8px;
+		line-height: $progress-bar-xs-height;
+	}
+}
+
+.progress-lg {
+	border-radius: $progress-bar-lg-border-radius;
+	height: $progress-bar-lg-height;
+
+	.progress-bar {
+		font-size: 14px;
+		line-height: $progress-bar-lg-height;
+	}
+}
+
+.progress-xl {
+	border-radius: $progress-bar-xl-border-radius;
+	height: $progress-bar-xl-height;
+
+	.progress-bar {
+		font-size: 18px;
+		line-height: $progress-bar-xl-height;
+	}
+}
+
+// Multi Step Progress Bar
+
 .multi-step-progress-bar {
 	display: table;
 	list-style: none;
