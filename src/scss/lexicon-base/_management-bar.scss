@@ -1,12 +1,50 @@
 .management-bar {
 	@extend .navbar;
 
-	border-radius: 0;
+	border-style: solid;
+	border-width: $management-bar-border-width;
 	padding-left: $management-bar-padding-horizontal;
 	padding-right: $management-bar-padding-horizontal;
 
 	label {
 		margin-bottom: 0;
+	}
+
+	.btn {
+		&:active,
+		&.active {
+			box-shadow: none;
+		}
+
+		&:focus,
+		&:hover {
+			background-color: $nav-link-hover-bg;
+			color: $link-hover-color;
+		}
+
+		&.btn-danger {
+			@include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+		}
+
+		&.btn-default {
+			@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+		}
+
+		&.btn-info {
+			@include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+		}
+
+		&.btn-primary {
+			@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+		}
+
+		&.btn-success {
+			@include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+		}
+
+		&.btn-warning {
+			@include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+		}
 	}
 }
 
@@ -102,10 +140,13 @@
 	@extend .navbar-collapse;
 
 	background-color: $management-bar-collapse-bg;
+	border-color: transparent;
+	border-style: solid;
+	border-width: $management-bar-border-width;
 	clear: both;
-	left: 0;
+	left: -$management-bar-border-left-width;
 	position: absolute;
-	right: 0;
+	right: -$management-bar-border-right-width;
 	top: 100%;
 	z-index: 1001;
 
@@ -164,17 +205,16 @@
 
 .management-bar-default {
 	background-color: $management-bar-default-bg;
+	border-color: $management-bar-default-border;
 	color: $management-bar-default-color;
 
-	.management-bar-collapse {
-		background-color: $management-bar-default-bg;
+	a {
+		color: $management-bar-default-link-color;
 	}
 
-	.management-bar-nav > li > .btn,
-	.management-bar-nav > li > .dropdown > .btn,
-	.management-bar-header > .btn,
-	.management-bar-header-right > .btn {
-		box-shadow: none;
+	a.btn {
+		border: 1px solid $management-bar-default-border;
+		color: $management-bar-default-link-color;
 
 		&:focus {
 			background-color: $management-bar-default-link-active-bg;
@@ -182,17 +222,9 @@
 		}
 	}
 
-	.management-bar-header,
-	.management-bar-header-right {
-		a {
-			color: $management-bar-default-link-color;
-
-			&:focus,
-			&:hover {
-				background-color: $management-bar-default-link-hover-bg;
-				color: $management-bar-default-link-hover-color;
-			}
-		}
+	.management-bar-collapse {
+		background-color: $management-bar-default-bg;
+		border-color: $management-bar-default-border;
 	}
 
 	.nav {
@@ -221,5 +253,13 @@
 				background-color: $management-bar-default-link-active-bg;
 			}
 		}
+	}
+}
+
+.management-bar-default .btn {
+	&:focus,
+	&:hover {
+		background-color: $management-bar-default-link-hover-bg;
+		color: $management-bar-default-link-hover-color;
 	}
 }
