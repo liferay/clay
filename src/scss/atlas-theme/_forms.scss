@@ -134,13 +134,18 @@ select[disabled].form-control > option {
 	}
 }
 
+.checkbox input[type="checkbox"],
+.radio input[type="radio"] {
+	margin-top: 0;
+}
+
 // Webkit only checkboxes
 
-.checkbox-default {
+.checkbox {
 	input[type="checkbox"] {
 		-webkit-appearance: none;
-		background-color: $checkbox-default-bg;
-		border: 1px solid $checkbox-default-border;
+		background-color: $checkbox-bg;
+		border: 1px solid $checkbox-border;
 		border-width: 0 \9;
 		border-radius: 2px;
 		height: $checkbox-size;
@@ -150,12 +155,12 @@ select[disabled].form-control > option {
 		width: $checkbox-size;
 
 		&:checked {
-			background-color: $checkbox-default-checked-bg;
-			border-color: $checkbox-default-checked-border;
+			background-color: $checkbox-checked-bg;
+			border-color: $checkbox-checked-border;
 
 			&:after {
-				color: $checkbox-default-checked-color;
-				content: $checkbox-default-check;
+				color: $checkbox-checked-color;
+				content: $checkbox-check;
 				display: block;
 				font-family: 'fontawesome-alloy';
 				font-size: 10px;
@@ -167,11 +172,11 @@ select[disabled].form-control > option {
 	}
 }
 
-.radio-default {
+.radio {
 	input[type='radio'] {
 		-webkit-appearance: none;
-		background-color: $radio-default-bg;
-		border: 1px solid $radio-default-border;
+		background-color: $radio-bg;
+		border: 1px solid $radio-border;
 		border-width: 0 \9;
 		border-radius: 50%;
 		height: $radio-size;
@@ -181,48 +186,54 @@ select[disabled].form-control > option {
 		width: $radio-size;
 
 		&:checked {
-			background-color: $radio-default-checked-bg;
-			border-color: $radio-default-checked-border;
+			background-color: $radio-checked-bg;
+			border-color: $radio-checked-border;
 
 			&:after {
-				color: $radio-default-checked-color;
-				content: $radio-default-check;
+				color: $radio-checked-color;
+				content: $radio-check;
 				display: block;
 				font-family: 'fontawesome-alloy';
-				font-size: 7px;
+				font-size: 8px;
 				height: 100%;
-				line-height: $radio-size;
+				line-height: $radio-size - 2;
+				margin-left: 0.1px; // Chrome
 				width: 100%;
 			}
 		}
 	}
 }
 
-.checkbox-default.disabled,
-.radio-default.disabled,
-.checkbox-default.disabled input[type="checkbox"],
-.radio-default.disabled input[type="radio"],
-.checkbox-default [disabled],
-.radio-default [disabled] {
+.checkbox.disabled,
+.radio.disabled,
+.checkbox.disabled input[type="checkbox"],
+.radio.disabled input[type="radio"],
+.checkbox [disabled],
+.radio [disabled] {
 	cursor: not-allowed;
 	opacity: 0.5;
 }
 
 .input-group {
 	label {
-		&.checkbox-default,
-		&.radio-default {
+		&.checkbox,
+		&.radio {
 			margin-bottom: 0;
 		}
 
-		&.checkbox-default input[type="checkbox"] {
+		&.checkbox input[type="checkbox"] {
 			border-color: transparent;
 		}
 
-		&.radio-default input[type="radio"] {
+		&.radio input[type="radio"] {
 			border-color: transparent;
 		}
 	}
+}
+
+.input-group-addon.checkbox input[type="checkbox"],
+.input-group-addon.radio input[type="radio"] {
+	margin-left: 0;
 }
 
 // Form Control Feedback
