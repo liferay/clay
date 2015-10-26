@@ -1,6 +1,13 @@
 .card,
 .card-horizontal {
 	box-shadow: $card-box-shadow;
+
+	.dropdown-toggle {
+		&.icon-ellipsis-vertical,
+		.icon-ellipsis-vertical {
+			color: $dropdown-link-color;
+		}
+	}
 }
 
 .checkbox-default {
