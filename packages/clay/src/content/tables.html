@@ -8,7 +8,7 @@ section: Elements
 		<h3>Table List</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>A table styled like a list.</p>
+			<p>A table styled like a list. The active state can be invoked by adding class <code>active</code> to the <code>```<tr></tr>```</code> element. It is recommended that table-list's columns containing information of lesser importance be hidden in smaller screen sizes with <a href="http://getbootstrap.com/css/#responsive-utilities">Responsive Utilities</a> due to space constraints.</p>
 			<p>Class <code>table-bordered</code> not compatible with <code>table-list</code>.</p>
 		</blockquote>
 
@@ -18,14 +18,17 @@ section: Elements
 			<thead>
 				<tr>
 					<th class="table-cell-field"></th>
+					<th class="table-cell-field hidden-xs hidden-sm">ID</th>
 					<th class="table-cell-content clamp-horizontal">
 						<div class="clamp-container">
-							<span class="truncate-text" title="Description">Description</span>
+							<span class="truncate-text" title="Description">Title</span>
 						</div>
 					</th>
-					<th class="table-cell-field">Format</th>
-					<th class="table-cell-field">Label</th>
-					<th class="table-cell-field">Label</th>
+					<th class="table-cell-field hidden-xs hidden-sm">Status</th>
+					<th class="table-cell-field hidden-xs hidden-sm">Modified Date</th>
+					<th class="table-cell-field hidden-xs hidden-sm">Display Date</th>
+					<th class="table-cell-field">Author</th>
+					<th class="table-cell-field hidden-xs hidden-sm">Type</th>
 					<th class="table-cell-field"></th>
 				</tr>
 			</thead>
@@ -39,14 +42,17 @@ section: Elements
 							</label>
 						</div>
 					</td>
+					<td class="table-cell-field hidden-xs hidden-sm">21146</td>
 					<td class="table-cell-content clamp-horizontal">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 						</div>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
+					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="table-cell-field">Stanley Nelson</td>
+					<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
 					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
@@ -69,42 +75,19 @@ section: Elements
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-content">
-						<span title="reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual">reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual</span>
-					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="table-list-field">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
-							</label>
-						</div>
+					<td class="table-cell-field hidden-xs hidden-sm">
+						21148
 					</td>
 					<td class="table-cell-content clamp-horizontal">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 						</div>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
+					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="table-cell-field">Stanley Nelson</td>
+					<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
 					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
@@ -127,14 +110,50 @@ section: Elements
 							</label>
 						</div>
 					</td>
+					<td class="table-cell-field hidden-xs hidden-sm">21149</td>
 					<td class="table-cell-content clamp-horizontal">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 						</div>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
+					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
+					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="table-cell-field">Stanley Nelson</td>
+					<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-list-field">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="table-cell-field hidden-xs hidden-sm">21150</td>
+					<td class="table-cell-content clamp-horizontal">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						</div>
+					</td>
+					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
+					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="table-cell-field">Stanley Nelson</td>
+					<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
 					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
@@ -986,6 +1005,12 @@ section: Elements
 </div>
 
 <script>
+	$('.table-list').on('click', 'input[type="checkbox"]', function(event) {
+		var $this = $(this);
+
+		$this.closest('tr').toggleClass('active');
+	});
+
 	$(function() {
 		var tables = $('.table-responsive-collapse table');
 

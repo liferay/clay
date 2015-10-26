@@ -2,10 +2,6 @@
 	position: relative;
 	word-break: break-all; // IE
 	word-break: break-word;
-
-	&.clamp-horizontal {
-		vertical-align: middle;
-	}
 }
 
 .table-cell-field {
