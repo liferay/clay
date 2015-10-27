@@ -61,16 +61,6 @@
 	}
 }
 
-.product-menu1 .list-group {
-	> .collapse,
-	> .collapsing {
-		> .list-group-item > .tabular-list-group {
-			margin-bottom: -10px;
-			margin-top: -10px;
-		}
-	}
-}
-
 .product-menu1 {
 	.collapse-icon:before {
 		right: 20px;
