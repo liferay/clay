@@ -11,7 +11,7 @@ section: Components
 			<p>Header Toolbar is based on <a href="../toolbars/">Toolbars</a>, and was created to quickly prototype headings for portlets, mobile pages, and page sections.</p>
 		</blockquote>
 
-		<div class="sidenav-container closed uxgl-slideout-nav">
+		<div class="closed sidenav-container uxgl-slideout-nav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<ul class="nav nav-stacked">
@@ -100,7 +100,7 @@ section: Components
 			<div class="toolbar-group-right">
 				<div class="toolbar-group-content">
 					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-pencil icon-monospaced"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-monospaced icon-pencil"></span></a>
 						<ul class="dropdown-menu dropdown-menu-right">
 							<li><a href="#1">Export</a></li>
 							<li><a href="#1">Import</a></li>
@@ -151,18 +151,18 @@ section: Components
 			<p>The example below uses <code>header-toolbar-default</code> with <a href="../list-groups/">tabular-list-group</a> and <a href="../sidenav/">sidenav</a>.</p>
 		</blockquote>
 
-		<div class="sidenav-container closed uxgl-slideout-nav">
+		<div class="closed sidenav-container uxgl-slideout-nav">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<div class="sidebar sidebar-inverse">
 						<div class="sidebar-header">
 							<h4>
 								<a href="#1">
-									<span class="icon-rocket icon-monospaced"></span>
+									<span class="icon-monospaced icon-rocket"></span>
 									<span>Squaredown</span>
 								</a>
 
-								<a class="icon-remove icon-monospaced sidenav-close" href="#1"></a>
+								<a class="icon-monospaced icon-remove sidenav-close" href="#1"></a>
 							</h4>
 						</div>
 
@@ -455,96 +455,147 @@ section: Components
 					</div>
 				</nav>
 
-				<ul class="tabular-list-group">
+				<ul class="list-group list-group-card">
 					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<input type="checkbox">
-						</div>
-
-						<div class="list-group-item-field">
-							<span class="icon-folder-close icon-xl text-default"></span>
-						</div>
-
-						<div class="list-group-item-content">
-							<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
-							<h6 class="text-default">Monica Bellucci</h6>
-							<h6 class="text-default">
-								<span>5 Folders</span>
-								<span>4 Entries</span>
-							</h6>
-						</div>
-
-						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical" href="#1"></a>
+						<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+							<label>
+								<input type="checkbox" value="">
+								<div class="card card-horizontal">
+									<div class="card-row card-row-padded">
+										<div class="card-col-field">
+											<div class="list-group-card-icon">
+												<div class="user-icon user-icon-default">
+													<span>AC</span>
+												</div>
+											</div>
+										</div>
+										<div class="card-col-content card-col-gutters">
+											<h5 class="text-default" title="Alberto Calvo, modified 2 hours ago">Alberto Calvo, modified 2 hours ago</h5>
+											<h4 title="7 UX Trends of 2015: Get Ready for Big Changes">7 UX Trends of 2015: Get Ready for Big Changes</h4>
+											<h5 class="text-default" title="Approved">Approved</h5>
+										</div>
+										<div class="card-col-field">
+											<div class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#1">Download</a></li>
+													<li><a href="#1">Edit</a></li>
+													<li><a href="#1">Move</a></li>
+													<li><a href="#1">Checkout</a></li>
+													<li><a href="#1">Permissions</a></li>
+													<li><a href="#1">Move to Recycle Bin</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</label>
 						</div>
 					</li>
-
 					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<input type="checkbox">
-						</div>
-
-						<div class="list-group-item-field">
-							<span class="icon-folder-close icon-xl text-default"></span>
-						</div>
-
-						<div class="list-group-item-content">
-							<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
-							<h6 class="text-default">Monica Bellucci</h6>
-							<h6 class="text-default">
-								<span>5 Folders</span>
-								<span>4 Entries</span>
-							</h6>
-						</div>
-
-						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical" href="#1"></a>
+						<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+							<label>
+								<input type="checkbox" value="">
+								<div class="card card-horizontal">
+									<div class="card-row card-row-padded">
+										<div class="card-col-field">
+											<div class="list-group-card-icon">
+												<div class="user-icon">
+													<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+												</div>
+											</div>
+										</div>
+										<div class="card-col-content card-col-gutters">
+											<h5 class="text-default" title="Cristina Pineiro, modified 2 hours ago">Cristina Pineiro, modified 2 hours ago</h5>
+											<h4 title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
+											<h5 class="text-default" title="Approved">Approved</h5>
+										</div>
+										<div class="card-col-field">
+											<div class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#1">Download</a></li>
+													<li><a href="#1">Edit</a></li>
+													<li><a href="#1">Move</a></li>
+													<li><a href="#1">Checkout</a></li>
+													<li><a href="#1">Permissions</a></li>
+													<li><a href="#1">Move to Recycle Bin</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</label>
 						</div>
 					</li>
-
 					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<input type="checkbox">
-						</div>
-
-						<div class="list-group-item-field">
-							<span class="icon-folder-close icon-xl text-default"></span>
-						</div>
-
-						<div class="list-group-item-content">
-							<h5 class="text-primary">Larry Bird the best power forward in Celtic's history.</h5>
-							<h6 class="text-default">Monica Bellucci</h6>
-							<h6 class="text-default">
-								<span>5 Folders</span>
-								<span>4 Entries</span>
-							</h6>
-						</div>
-
-						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical" href="#1"></a>
+						<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+							<label>
+								<input type="checkbox" value="">
+								<div class="card card-horizontal">
+									<div class="card-row card-row-padded">
+										<div class="card-col-field">
+											<div class="list-group-card-icon">
+												<span class="icon-folder-close text-default"></span>
+											</div>
+										</div>
+										<div class="card-col-content card-col-gutters">
+											<h5 class="text-default" title="Susan Brown, modified 3 hours ago">Susan Brown, modified 3 hours ago</h5>
+											<h4 title="Getting Up to Speed">Getting Up to Speed</h4>
+											<h5 class="text-default" title="Approved">Approved</h5>
+										</div>
+										<div class="card-col-field">
+											<div class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#1">Download</a></li>
+													<li><a href="#1">Edit</a></li>
+													<li><a href="#1">Move</a></li>
+													<li><a href="#1">Checkout</a></li>
+													<li><a href="#1">Permissions</a></li>
+													<li><a href="#1">Move to Recycle Bin</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</label>
 						</div>
 					</li>
-
 					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<input type="checkbox">
-						</div>
-
-						<div class="list-group-item-field">
-							<span class="icon-folder-close icon-xl text-default"></span>
-						</div>
-
-						<div class="list-group-item-content">
-							<h5 class="text-primary">Karl Malone the best power forward in Jazz history.</h5>
-							<h6 class="text-default">Monica Bellucci</h6>
-							<h6 class="text-default">
-								<span>5 Folders</span>
-								<span>4 Entries</span>
-							</h6>
-						</div>
-
-						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical" href="#1"></a>
+						<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+							<label>
+								<input type="checkbox" value="">
+								<div class="card card-horizontal">
+									<div class="card-row card-row-padded">
+										<div class="card-col-field">
+											<div class="list-group-card-icon">
+												<div class="user-icon">
+													<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
+												</div>
+											</div>
+										</div>
+										<div class="card-col-content card-col-gutters">
+											<h5 class="text-default" title="Sergio Ruiz, modified 9 hours ago">Sergio Ruiz, modified 9 hours ago</h5>
+											<h4 title="Introducing FS3">Introducing FS3</h4>
+											<h5 class="text-default" title="Approved">Approved</h5>
+										</div>
+										<div class="card-col-field">
+											<div class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#1">Download</a></li>
+													<li><a href="#1">Edit</a></li>
+													<li><a href="#1">Move</a></li>
+													<li><a href="#1">Checkout</a></li>
+													<li><a href="#1">Permissions</a></li>
+													<li><a href="#1">Move to Recycle Bin</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</label>
 						</div>
 					</li>
 				</ul>

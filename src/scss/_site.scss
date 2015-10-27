@@ -82,10 +82,10 @@ section.row {
 	position: relative;
 	top: 0;
 
-	@include transition-property(background, opacity, top, transform);
-	@include transition-duration(0.2s);
-	@include transition-timing-function($ease-in-out-circ);
 	@include transition-delay(0s 0s 0.2s 0s);
+	@include transition-duration(0.2s);
+	@include transition-property(background, opacity, top, transform);
+	@include transition-timing-function($ease-in-out-circ);
 }
 
 #mainNav > .sidenav-menu {
@@ -114,7 +114,6 @@ section.row {
 		}
 	}
 }
-
 
 #imageShapes img {
 	display: block;
@@ -157,13 +156,6 @@ body.fixed {
 		position: relative;
 		z-index: 1;
 	}
-
-	.tabular-list-group .list-group-item .list-group-item-content:first-child,
-	.tabular-list-group .list-group-item .list-group-item-field:first-child {
-		@media screen and (max-width: 767px) {
-			display: none;
-		}
-	}
 }
 
 .uxgl-fullscreen-fixed {
@@ -189,21 +181,17 @@ body.fixed {
 
 // Blog Appearance Page
 
-#blogAppearance {
-
-}
-
 .blog-appearance-current-theme {
 	background-color: #FFF;
-	box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 	min-height: 400px;
 	width: 100%;
 }
 
 .blog-appearance-current-theme-heading {
 	border-bottom: 1px solid #DDD;
-	padding: 15px 0 10px;
 	margin-bottom: 15px;
+	padding: 15px 0 10px;
 
 	h4 {
 		float: left;
@@ -296,8 +284,8 @@ body.fixed {
 		.icon-folder-close-alt {
 			background-color: #F1F5FA;
 			font-size: 28px;
-			line-height: 60px;
 			height: 60px;
+			line-height: 60px;
 			width: 60px;
 		}
 	}
@@ -452,8 +440,8 @@ body.fixed {
 @media screen and (min-width: 768px) {
 	.font-awesome-icons-list li, .lexicon-icon-list li {
 		float: left;
-		width: 33%;
 		padding: 5px;
+		width: 33%;
 	}
 
 	.glyphicons-list li {
@@ -469,9 +457,11 @@ body.fixed {
 
 	.lexicon-icon {
 		height: 160px;
-		width: 140px;
 		margin: 0 5%;
-		transition: all 0.1s ease-in;
+
+		@include transition(all 0.1s ease-in);
+
+		width: 140px;
 	}
 
 	.lexicon-icon-asterisk {
@@ -480,11 +470,11 @@ body.fixed {
 		stroke-width: 10px;
 
 		&:hover {
-			fill-opacity: 1;
 			fill: #078DD8;
-			stroke-width: 5px;
+			fill-opacity: 1;
 			stroke: #000;
 			stroke-opacity: 0.3;
+			stroke-width: 5px;
 		}
 	}
 
@@ -496,9 +486,9 @@ body.fixed {
 
 		&:hover {
 			fill-opacity: 1;
-			stroke-width: 25px;
 			stroke: #900;
 			stroke-opacity: 0.5;
+			stroke-width: 25px;
 		}
 	}
 
@@ -506,21 +496,25 @@ body.fixed {
 		0% {
 			@include transform(scale(1));
 		}
+
 		60% {
 			stroke-width: 10px;
+
 			@include transform(scale(1.5));
 		}
+
 		100% {
-			fill: #ec297b;
+			fill: #EC297B;
+
 			@include transform(scale(1));
 		}
 	}
 
 	.lexicon-icon-exclamation-full {
-		stroke: #FFF;
-		stroke-width: 40px;
-		stroke-opacity: 0.4;
 		fill: #E3A200;
+		stroke: #FFF;
+		stroke-opacity: 0.4;
+		stroke-width: 40px;
 
 		&:hover {
 			@include animation(exclamationHover 0.25s $ease-out-back);
@@ -572,8 +566,8 @@ body.fixed {
 #popovers {
 	.popover {
 		display: block;
-		position: relative;
 		margin-top: 25px;
+		position: relative;
 
 		&.left {
 			margin-left: 0;
@@ -700,7 +694,7 @@ $sideNavWidth: 220px;
 			margin-left: 15px;
 
 			li {
-				 > a {
+				> a {
 					font-size: 0.9em;
 					padding: 2px;
 					padding-left: 10px;
@@ -729,13 +723,13 @@ $sideNavWidth: 220px;
 
 h1, h2, h3, h4, h5, h6 {
 	.heading-anchor {
+		color: inherit;
+		cursor: pointer;
+		display: inline-block;
 		float: right;
 		font-size: 14px;
 		line-height: 1.5;
-		display: inline-block;
-		cursor: pointer;
 		text-decoration: none;
-		color: inherit;
 		width: 20px;
 	}
 
@@ -756,31 +750,30 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-
 /* Styles for side navigation component page */
 
 #mySidebar {
 	background-color: #222328;
-	box-shadow: -3px 0px 3px -3px #000 inset;
+	box-shadow: -3px 0 3px -3px #000 inset;
 	color: #F8F8F8;
 
 	ul {
-		border-top: 1px solid #000;
 		border-bottom: 1px solid #3E3E3E;
+		border-top: 1px solid #000;
 
 		li {
-			border-top: 1px solid #3E3E3E;
 			border-bottom: 1px solid #000;
+			border-top: 1px solid #3E3E3E;
 			margin-top: 0;
 
 			a {
 				background-color: #2C2D32;
-				box-shadow: -3px 0px 3px -3px #000 inset;
+				box-shadow: -3px 0 3px -3px #000 inset;
 
 				&, &:hover, &:focus {
 					color: #B3B6BC;
 					font-weight: 200;
-					text-shadow: 0px 1px 0 #000;
+					text-shadow: 0 1px 0 #000;
 				}
 			}
 		}
@@ -798,8 +791,8 @@ h1, h2, h3, h4, h5, h6 {
 	h4 {
 		border-bottom: 2px dotted #AEAEAE;
 		color: #BA3A37;
-		padding-bottom: 8px;
 		margin: 20px 0;
+		padding-bottom: 8px;
 	}
 
 	.sidenav-main-content h3 {
