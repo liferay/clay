@@ -11,7 +11,7 @@ section: Extending Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2>Choosing the Right Lexicon Component</h2>
+		<h3>Choosing the Right Lexicon Component</h3>
 
 		<p>There are many components in Lexicon, some components overlap, some look the same at first glance, while several are combined to form a whole new component. When building your module, be careful not to choose and modify the first component that looks like a fit and take the time to choose the right component for the job.</p>
 
@@ -25,7 +25,7 @@ section: Extending Components
 
 <div class="row row-spacing" id="bestPractices">
 	<div class="col-md-12">
-		<h2>How Sass Files are Loaded in Liferay 7.0</h2>
+		<h3>How Sass Files are Loaded in Liferay 7.0</h3>
 
 		<table>
 			<tbody>
@@ -156,11 +156,12 @@ section: Extending Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2>Lexicon Variables in a Liferay Component</h2>
+		<h3>Lexicon Variables in a Liferay Component</h3>
 		<p>Leverage Lexicon variables inside a 7.0 component by adding <code>_variables.scss</code> and <code>_variables_custom.scss</code> files to the directory containing the component e.g. Portlet.</p>
 		<p>Import them by adding <code>@import "portlet/variables_custom";</code> and <code>@import "portlet/variables";</code> at the top of <code>_styled/css/_portlet.scss</code>.</p>
 
-<h5>_styled/css/_portlet.scss</h5>
+		<h5>_styled/css/_portlet.scss</h5>
+
 <pre><code>```@import "portlet/variables_custom";
 @import "portlet/variables";
 
@@ -174,6 +175,7 @@ section: Extending Components
 @import "portlet/misc";
 
 @import "portlet/app_components";```</code></pre>
+
 
 		<p><code>_variables.scss</code> should contain lexicon-base style variables and <code>_variables_custom.scss</code> should contain variables that overwrite or add atlas styles.</p>
 		<p>The file structure should look similar to:</p>
@@ -200,7 +202,7 @@ frontend-theme-styled
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2>Extending a Lexicon Component in 7.0</h2>
+		<h3>Extending a Lexicon Component in 7.0</h3>
 
 		<p>In this walkthrough, we will extend the Lexicon Cards Component to create an inverse colored card for the Card Taglib. The Card Taglib exists for all themes, so we will need to add an inverse style that matches the _styled theme as well as classic theme.</p>
 
@@ -275,8 +277,7 @@ $card-inverse-link-color: $navbar-inverse-link-color !default;```</code></pre>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2>Third Party Bootstrap Theme with Lexicon</h2>
+		<h3>Third Party Bootstrap Theme with Lexicon</h3>
 		<p>Copy and paste the sass variables from the third party Bootstrap theme into <code>_aui_variables.scss</code> and the styles into <code>aui_custom.scss</code>.</p>
-
 	</div>
 </div>
