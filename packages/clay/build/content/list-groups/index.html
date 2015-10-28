@@ -8,11 +8,9 @@
 	<link rel="stylesheet" href="../../css/main.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
 	<script src="../../js/collapsible-search.js"></script>
-	<script src="../../js/notifications.js"></script>
 	<script src="../../js/side-navigation.js"></script>
-	<script src="../../js/slideout-drawer.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -71,15 +69,21 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/cards">Cards</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
 </li>
 <li class="active"><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -87,15 +91,11 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -105,11 +105,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/tab-groups">Tab Groups</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
+<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
 </li>
@@ -131,13 +127,9 @@
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+<li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
@@ -145,13 +137,19 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nameplates">Nameplates</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tab-groups">Tab Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
+<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 </ul>
 </div>
@@ -210,9 +208,323 @@
 		
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="tabularListGroups"><a class="heading-anchor" href="#tabularListGroups"><i class="icon icon-link"></i></a>Tabular List Group</h3>
+		<h3 id="list-group-card"><a class="heading-anchor" href="#list-group-card"><i class="icon icon-link"></i></a>List Group Card</h3>
 
-		<blockquote class="blockquote-success blockquote-sm">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class <code>list-group-card</code> to <code>list-group</code> then put a <a href="../extending-cards/#checkbox-inside-horizontal-card">checkbox-card</a> in a <code>list-group-item</code>.</p>
+		</blockquote>
+
+		<ul class="list-group list-group-card">
+			<li class="list-group-heading">List Heading</li>
+			<li class="list-group-item">
+				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+					<label>
+						<input type="checkbox" value="">
+						<div class="card card-horizontal">
+							<div class="card-row card-row-padded">
+								<div class="card-col-field">
+									<div class="list-group-card-icon">
+										<div class="user-icon user-icon-default">
+											<span>AC</span>
+										</div>
+									</div>
+								</div>
+								<div class="card-col-content card-col-gutters">
+									<h5 class="text-default" title="Alberto Calvo, modified 2 hours ago" id="alberto-calvo-modified-2-hours-ago"><a class="heading-anchor" href="#alberto-calvo-modified-2-hours-ago"><i class="icon icon-link"></i></a>Alberto Calvo, modified 2 hours ago</h5>
+									<h4 title="7 UX Trends of 2015: Get Ready for Big Changes" id="7-ux-trends-of-2015-get-ready-for-big-changes"><a class="heading-anchor" href="#7-ux-trends-of-2015-get-ready-for-big-changes"><i class="icon icon-link"></i></a>7 UX Trends of 2015: Get Ready for Big Changes</h4>
+									<h5 class="text-default" title="Approved" id="approved"><a class="heading-anchor" href="#approved"><i class="icon icon-link"></i></a>Approved</h5>
+								</div>
+								<div class="card-col-field">
+									<div class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#1">Download</a></li>
+											<li><a href="#1">Edit</a></li>
+											<li><a href="#1">Move</a></li>
+											<li><a href="#1">Checkout</a></li>
+											<li><a href="#1">Permissions</a></li>
+											<li><a href="#1">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+					<label>
+						<input type="checkbox" value="">
+						<div class="card card-horizontal">
+							<div class="card-row card-row-padded">
+								<div class="card-col-field">
+									<div class="list-group-card-icon">
+										<div class="user-icon">
+											<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="card-col-content card-col-gutters">
+									<h5 class="text-default" title="Cristina Pineiro, modified 2 hours ago" id="cristina-pineiro-modified-2-hours-ago"><a class="heading-anchor" href="#cristina-pineiro-modified-2-hours-ago"><i class="icon icon-link"></i></a>Cristina Pineiro, modified 2 hours ago</h5>
+									<h4 title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual" id="reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual"><a class="heading-anchor" href="#reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual"><i class="icon icon-link"></i></a>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
+									<h5 class="text-default" title="Approved" id="approved-1"><a class="heading-anchor" href="#approved-1"><i class="icon icon-link"></i></a>Approved</h5>
+								</div>
+								<div class="card-col-field">
+									<div class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#1">Download</a></li>
+											<li><a href="#1">Edit</a></li>
+											<li><a href="#1">Move</a></li>
+											<li><a href="#1">Checkout</a></li>
+											<li><a href="#1">Permissions</a></li>
+											<li><a href="#1">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+					<label>
+						<input type="checkbox" value="">
+						<div class="card card-horizontal">
+							<div class="card-row card-row-padded">
+								<div class="card-col-field">
+									<div class="list-group-card-icon">
+										<span class="icon-folder-close text-default"></span>
+									</div>
+								</div>
+								<div class="card-col-content card-col-gutters">
+									<h5 class="text-default" title="Susan Brown, modified 3 hours ago" id="susan-brown-modified-3-hours-ago"><a class="heading-anchor" href="#susan-brown-modified-3-hours-ago"><i class="icon icon-link"></i></a>Susan Brown, modified 3 hours ago</h5>
+									<h4 title="Getting Up to Speed" id="getting-up-to-speed"><a class="heading-anchor" href="#getting-up-to-speed"><i class="icon icon-link"></i></a>Getting Up to Speed</h4>
+									<h5 class="text-default" title="Approved" id="approved-2"><a class="heading-anchor" href="#approved-2"><i class="icon icon-link"></i></a>Approved</h5>
+								</div>
+								<div class="card-col-field">
+									<div class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#1">Download</a></li>
+											<li><a href="#1">Edit</a></li>
+											<li><a href="#1">Move</a></li>
+											<li><a href="#1">Checkout</a></li>
+											<li><a href="#1">Permissions</a></li>
+											<li><a href="#1">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+					<label>
+						<input type="checkbox" value="">
+						<div class="card card-horizontal">
+							<div class="card-row card-row-padded">
+								<div class="card-col-field">
+									<div class="list-group-card-icon">
+										<div class="user-icon">
+											<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="card-col-content card-col-gutters">
+									<h5 class="text-default" title="Sergio Ruiz, modified 9 hours ago" id="sergio-ruiz-modified-9-hours-ago"><a class="heading-anchor" href="#sergio-ruiz-modified-9-hours-ago"><i class="icon icon-link"></i></a>Sergio Ruiz, modified 9 hours ago</h5>
+									<h4 title="Introducing FS3" id="introducing-fs3"><a class="heading-anchor" href="#introducing-fs3"><i class="icon icon-link"></i></a>Introducing FS3</h4>
+									<h5 class="text-default" title="Approved" id="approved-3"><a class="heading-anchor" href="#approved-3"><i class="icon icon-link"></i></a>Approved</h5>
+								</div>
+								<div class="card-col-field">
+									<div class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#1">Download</a></li>
+											<li><a href="#1">Edit</a></li>
+											<li><a href="#1">Move</a></li>
+											<li><a href="#1">Checkout</a></li>
+											<li><a href="#1">Permissions</a></li>
+											<li><a href="#1">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="hide-checkboxes-in-mobile"><a class="heading-anchor" href="#hide-checkboxes-in-mobile"><i class="icon icon-link"></i></a>Hide Checkboxes in Mobile</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class <code>list-group-card-checkbox-hidden-xs</code> to <code>list-group-card</code> to hide <code>input[type=&quot;checkbox&quot;]</code> in mobile, then wrap your icon or user-icon with <code>list-group-card-icon</code> to toggle the check icon.</p>
+
+			<p>The check icon can be customized through the variable <code>$list-group-card-checkbox-hidden-icon</code>.</p>
+		</blockquote>
+
+		<ul class="list-group list-group-card list-group-card-checkbox-hidden-xs">
+			<li class="list-group-heading">List Heading</li>
+			<li class="list-group-item">
+				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+					<label>
+						<input type="checkbox" value="">
+						<div class="card card-horizontal">
+							<div class="card-row card-row-padded">
+								<div class="card-col-field">
+									<div class="list-group-card-icon">
+										<div class="user-icon user-icon-default">
+											<span>AC</span>
+										</div>
+									</div>
+								</div>
+								<div class="card-col-content card-col-gutters">
+									<h5 class="text-default" title="Alberto Calvo, modified 2 hours ago" id="alberto-calvo-modified-2-hours-ago-1"><a class="heading-anchor" href="#alberto-calvo-modified-2-hours-ago-1"><i class="icon icon-link"></i></a>Alberto Calvo, modified 2 hours ago</h5>
+									<h4 title="7 UX Trends of 2015: Get Ready for Big Changes" id="7-ux-trends-of-2015-get-ready-for-big-changes-1"><a class="heading-anchor" href="#7-ux-trends-of-2015-get-ready-for-big-changes-1"><i class="icon icon-link"></i></a>7 UX Trends of 2015: Get Ready for Big Changes</h4>
+									<h5 class="text-default" title="Approved" id="approved-4"><a class="heading-anchor" href="#approved-4"><i class="icon icon-link"></i></a>Approved</h5>
+								</div>
+								<div class="card-col-field">
+									<div class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#1">Download</a></li>
+											<li><a href="#1">Edit</a></li>
+											<li><a href="#1">Move</a></li>
+											<li><a href="#1">Checkout</a></li>
+											<li><a href="#1">Permissions</a></li>
+											<li><a href="#1">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+					<label>
+						<input type="checkbox" value="">
+						<div class="card card-horizontal">
+							<div class="card-row card-row-padded">
+								<div class="card-col-field">
+									<div class="list-group-card-icon">
+										<div class="user-icon">
+											<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="card-col-content card-col-gutters">
+									<h5 class="text-default" title="Cristina Pineiro, modified 2 hours ago" id="cristina-pineiro-modified-2-hours-ago-1"><a class="heading-anchor" href="#cristina-pineiro-modified-2-hours-ago-1"><i class="icon icon-link"></i></a>Cristina Pineiro, modified 2 hours ago</h5>
+									<h4 title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual" id="reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual-1"><a class="heading-anchor" href="#reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual-1"><i class="icon icon-link"></i></a>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
+									<h5 class="text-default" title="Approved" id="approved-5"><a class="heading-anchor" href="#approved-5"><i class="icon icon-link"></i></a>Approved</h5>
+								</div>
+								<div class="card-col-field">
+									<div class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#1">Download</a></li>
+											<li><a href="#1">Edit</a></li>
+											<li><a href="#1">Move</a></li>
+											<li><a href="#1">Checkout</a></li>
+											<li><a href="#1">Permissions</a></li>
+											<li><a href="#1">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+					<label>
+						<input type="checkbox" value="">
+						<div class="card card-horizontal">
+							<div class="card-row card-row-padded">
+								<div class="card-col-field">
+									<div class="list-group-card-icon">
+										<span class="icon-folder-close text-default"></span>
+									</div>
+								</div>
+								<div class="card-col-content card-col-gutters">
+									<h5 class="text-default" title="Susan Brown, modified 3 hours ago" id="susan-brown-modified-3-hours-ago-1"><a class="heading-anchor" href="#susan-brown-modified-3-hours-ago-1"><i class="icon icon-link"></i></a>Susan Brown, modified 3 hours ago</h5>
+									<h4 title="Getting Up to Speed" id="getting-up-to-speed-1"><a class="heading-anchor" href="#getting-up-to-speed-1"><i class="icon icon-link"></i></a>Getting Up to Speed</h4>
+									<h5 class="text-default" title="Approved" id="approved-6"><a class="heading-anchor" href="#approved-6"><i class="icon icon-link"></i></a>Approved</h5>
+								</div>
+								<div class="card-col-field">
+									<div class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#1">Download</a></li>
+											<li><a href="#1">Edit</a></li>
+											<li><a href="#1">Move</a></li>
+											<li><a href="#1">Checkout</a></li>
+											<li><a href="#1">Permissions</a></li>
+											<li><a href="#1">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</li>
+			<li class="list-group-item">
+				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+					<label>
+						<input type="checkbox" value="">
+						<div class="card card-horizontal">
+							<div class="card-row card-row-padded">
+								<div class="card-col-field">
+									<div class="list-group-card-icon">
+										<div class="user-icon">
+											<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
+										</div>
+									</div>
+								</div>
+								<div class="card-col-content card-col-gutters">
+									<h5 class="text-default" title="Sergio Ruiz, modified 9 hours ago" id="sergio-ruiz-modified-9-hours-ago-1"><a class="heading-anchor" href="#sergio-ruiz-modified-9-hours-ago-1"><i class="icon icon-link"></i></a>Sergio Ruiz, modified 9 hours ago</h5>
+									<h4 title="Introducing FS3" id="introducing-fs3-1"><a class="heading-anchor" href="#introducing-fs3-1"><i class="icon icon-link"></i></a>Introducing FS3</h4>
+									<h5 class="text-default" title="Approved" id="approved-7"><a class="heading-anchor" href="#approved-7"><i class="icon icon-link"></i></a>Approved</h5>
+								</div>
+								<div class="card-col-field">
+									<div class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#1">Download</a></li>
+											<li><a href="#1">Edit</a></li>
+											<li><a href="#1">Move</a></li>
+											<li><a href="#1">Checkout</a></li>
+											<li><a href="#1">Permissions</a></li>
+											<li><a href="#1">Move to Recycle Bin</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="tabular-list-group"><a class="heading-anchor" href="#tabular-list-group"><i class="icon icon-link"></i></a>Tabular List Group</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
 			<p>Align content inside a list-group like a table with <code>.tabular-list-group</code>.</p>
 
 			<p><code>.list-group-item</code> behaves as a table row.</p>
@@ -234,28 +546,28 @@
 					<span class="icon-folder-close icon-xl text-default"></span>
 				</div>
 
-				<div class="list-group-item-content">
-					<h6 id="alberto-calvo-modified-2-hours-ago"><a class="heading-anchor" href="#alberto-calvo-modified-2-hours-ago"><i class="icon icon-link"></i></a>Alberto Calvo, modified 2 hours ago.</h6>
-					<h5 id="7-ux-trends-of-2015-get-ready-for-big-changes"><a class="heading-anchor" href="#7-ux-trends-of-2015-get-ready-for-big-changes"><i class="icon icon-link"></i></a>7 UX Trends of 2015: Get Ready for Big Changes</h5>
-					<h6 id="approved"><a class="heading-anchor" href="#approved"><i class="icon icon-link"></i></a>Approved</h6>
+				<div class="clamp-horizontal list-group-item-content">
+					<div class="clamp-container">
+						<h6 class="truncate-text" id="alberto-calvo-modified-2-hours-ago-2"><a class="heading-anchor" href="#alberto-calvo-modified-2-hours-ago-2"><i class="icon icon-link"></i></a>Alberto Calvo, modified 2 hours ago.</h6>
+						<h5 class="truncate-text" id="reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual-2"><a class="heading-anchor" href="#reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual-2"><i class="icon icon-link"></i></a>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h5>
+						<h6 class="truncate-text" id="approved-8"><a class="heading-anchor" href="#approved-8"><i class="icon icon-link"></i></a>Approved</h6>
+					</div>
 				</div>
 
 				<div class="list-group-item-field">
 					<div class="dropdown">
 						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
+						<ul class="dropdown-menu dropdown-menu-left-side">
+							<li class="dropdown-header">Dropdown Header</li>
+							<li><a href="#">Action 1</a></li>
+							<li><a href="#">Action 2</a></li>
+							<li><a href="#">Action 3</a></li>
+							<li><a href="#">Action 4</a></li>
+							<li><a href="#">Action 5</a></li>
+							<li><a href="#">Action 6</a></li>
+							<li><a href="#">Action 7</a></li>
+							<li><a href="#">Action 8</a></li>
+						</ul>
 					</div>
 				</div>
 			</li>
@@ -273,7 +585,7 @@
 
 				<div class="list-group-item-content">
 					<h5 id="bookmarks"><a class="heading-anchor" href="#bookmarks"><i class="icon icon-link"></i></a>Bookmarks</h5>
-					<h6 id="this-is-a-description-of-the-folder"><a class="heading-anchor" href="#this-is-a-description-of-the-folder"><i class="icon icon-link"></i></a>This is a description of the folder.</h6>
+					<h6 id="reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual-3"><a class="heading-anchor" href="#reallysuperinsanelyjustincrediblylongandtotallynotpossiblewordbutwearereallytryingtocoverallourbasesherejustincasesomeoneisnutsasperusual-3"><i class="icon icon-link"></i></a>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</h6>
 					<h6 id="-5-folders-4-entries-"><a class="heading-anchor" href="#-5-folders-4-entries-"><i class="icon icon-link"></i></a>
 						<span>5 Folders</span>
 						<span>4 Entries</span>
@@ -283,19 +595,17 @@
 				<div class="list-group-item-field">
 					<div class="dropdown">
 						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
+						<ul class="dropdown-menu dropdown-menu-left-side">
+							<li class="dropdown-header">Dropdown Header</li>
+							<li><a href="#">Action 1</a></li>
+							<li><a href="#">Action 2</a></li>
+							<li><a href="#">Action 3</a></li>
+							<li><a href="#">Action 4</a></li>
+							<li><a href="#">Action 5</a></li>
+							<li><a href="#">Action 6</a></li>
+							<li><a href="#">Action 7</a></li>
+							<li><a href="#">Action 8</a></li>
+						</ul>
 					</div>
 				</div>
 			</li>
@@ -358,13 +668,18 @@
 &lt;/ul&gt;</code></pre>
 </div>
 
-		<h3 id="tabularListGroups"><a class="heading-anchor" href="#tabularListGroups"><i class="icon icon-link"></i></a>Tabular List Group Borders</h3>
+	</div>
+</div>
 
-		<blockquote class="blockquote-success blockquote-sm">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="tabular-list-group-no-borders"><a class="heading-anchor" href="#tabular-list-group-no-borders"><i class="icon icon-link"></i></a>Tabular List Group No Borders</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
 			<p>Tabular List Group rows are bordered by default. You can remove borders by adding <code>.no-borders</code> to <code>.tabular-list-group</code>.</p>
 		</blockquote>
 
-		<ul class="tabular-list-group no-borders">
+		<ul class="no-borders tabular-list-group">
 			<li class="list-group-item">
 				<div class="list-group-item-field">
 					<label class="checkbox-default">
@@ -379,7 +694,7 @@
 				<div class="list-group-item-content">
 					<h5 id="larry-bird-the-best-power-forward-in-celtics-history"><a class="heading-anchor" href="#larry-bird-the-best-power-forward-in-celtics-history"><i class="icon icon-link"></i></a>Larry Bird the best power forward in Celtic&apos;s history.</h5>
 					<h6 id="monica-bellucci"><a class="heading-anchor" href="#monica-bellucci"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
-					<h6 id="-5-folders-4-entries--10"><a class="heading-anchor" href="#-5-folders-4-entries--10"><i class="icon icon-link"></i></a>
+					<h6 id="-5-folders-4-entries--1"><a class="heading-anchor" href="#-5-folders-4-entries--1"><i class="icon icon-link"></i></a>
 						<span>5 Folders</span>
 						<span>4 Entries</span>
 					</h6>
@@ -418,8 +733,8 @@
 
 				<div class="list-group-item-content">
 					<h5 id="karl-malone-the-best-power-forward-in-jazz-history"><a class="heading-anchor" href="#karl-malone-the-best-power-forward-in-jazz-history"><i class="icon icon-link"></i></a>Karl Malone the best power forward in Jazz history.</h5>
-					<h6 id="monica-bellucci-12"><a class="heading-anchor" href="#monica-bellucci-12"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
-					<h6 id="-5-folders-4-entries--13"><a class="heading-anchor" href="#-5-folders-4-entries--13"><i class="icon icon-link"></i></a>
+					<h6 id="monica-bellucci-1"><a class="heading-anchor" href="#monica-bellucci-1"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
+					<h6 id="-5-folders-4-entries--2"><a class="heading-anchor" href="#-5-folders-4-entries--2"><i class="icon icon-link"></i></a>
 						<span>5 Folders</span>
 						<span>4 Entries</span>
 					</h6>
@@ -450,14 +765,18 @@
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;ul class=&quot;tabular-list-group no-borders&quot;&gt;...&lt;/ul&gt;</code></pre>
+	<pre><code class="html">&lt;ul class=&quot;no-borders tabular-list-group&quot;&gt;...&lt;/ul&gt;</code></pre>
 </div>
 
-		<blockquote class="blockquote-success blockquote-sm">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="tabular-list-group-full-borders"><a class="heading-anchor" href="#tabular-list-group-full-borders"><i class="icon icon-link"></i></a>Tabular List Group Full Borders</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
 			<p>Similarly, you can add borders around each cell with <code>.full-borders</code>.</p>
 		</blockquote>
 
-		<ul class="tabular-list-group full-borders">
+		<ul class="full-borders tabular-list-group">
 			<li class="list-group-item">
 				<div class="list-group-item-field">
 					<label class="checkbox-default">
@@ -470,9 +789,9 @@
 				</div>
 
 				<div class="list-group-item-content">
-					<h5 id="larry-bird-the-best-power-forward-in-celtics-history-14"><a class="heading-anchor" href="#larry-bird-the-best-power-forward-in-celtics-history-14"><i class="icon icon-link"></i></a>Larry Bird the best power forward in Celtic&apos;s history.</h5>
-					<h6 id="monica-bellucci-15"><a class="heading-anchor" href="#monica-bellucci-15"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
-					<h6 id="-5-folders-4-entries--16"><a class="heading-anchor" href="#-5-folders-4-entries--16"><i class="icon icon-link"></i></a>
+					<h5 id="larry-bird-the-best-power-forward-in-celtics-history-1"><a class="heading-anchor" href="#larry-bird-the-best-power-forward-in-celtics-history-1"><i class="icon icon-link"></i></a>Larry Bird the best power forward in Celtic&apos;s history.</h5>
+					<h6 id="monica-bellucci-2"><a class="heading-anchor" href="#monica-bellucci-2"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
+					<h6 id="-5-folders-4-entries--3"><a class="heading-anchor" href="#-5-folders-4-entries--3"><i class="icon icon-link"></i></a>
 						<span>5 Folders</span>
 						<span>4 Entries</span>
 					</h6>
@@ -510,9 +829,9 @@
 				</div>
 
 				<div class="list-group-item-content">
-					<h5 id="karl-malone-the-best-power-forward-in-jazz-history-17"><a class="heading-anchor" href="#karl-malone-the-best-power-forward-in-jazz-history-17"><i class="icon icon-link"></i></a>Karl Malone the best power forward in Jazz history.</h5>
-					<h6 id="monica-bellucci-18"><a class="heading-anchor" href="#monica-bellucci-18"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
-					<h6 id="-5-folders-4-entries--19"><a class="heading-anchor" href="#-5-folders-4-entries--19"><i class="icon icon-link"></i></a>
+					<h5 id="karl-malone-the-best-power-forward-in-jazz-history-1"><a class="heading-anchor" href="#karl-malone-the-best-power-forward-in-jazz-history-1"><i class="icon icon-link"></i></a>Karl Malone the best power forward in Jazz history.</h5>
+					<h6 id="monica-bellucci-3"><a class="heading-anchor" href="#monica-bellucci-3"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
+					<h6 id="-5-folders-4-entries--4"><a class="heading-anchor" href="#-5-folders-4-entries--4"><i class="icon icon-link"></i></a>
 						<span>5 Folders</span>
 						<span>4 Entries</span>
 					</h6>
@@ -543,9 +862,14 @@
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse2">
-	<pre><code class="html">&lt;ul class=&quot;tabular-list-group full-borders&quot;&gt;...&lt;/ul&gt;</code></pre>
+	<pre><code class="html">&lt;ul class=&quot;full-borders tabular-list-group&quot;&gt;...&lt;/ul&gt;</code></pre>
 </div>
 
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
 		<h3 id="tabular-list-group-item-states"><a class="heading-anchor" href="#tabular-list-group-item-states"><i class="icon icon-link"></i></a>Tabular List Group Item States</h3>
 		<ul class="tabular-list-group">
 			<li class="list-group-item list-group-item-success">
@@ -556,12 +880,12 @@
 				</div>
 
 				<div class="list-group-item-field">
-					<span class="icon-folder-close"></span>
+					<span class="icon-folder-close icon-xl"></span>
 				</div>
 
 				<div class="list-group-item-content">
-					<h5 id="larry-bird-the-best-power-forward-in-celtics-history-21"><a class="heading-anchor" href="#larry-bird-the-best-power-forward-in-celtics-history-21"><i class="icon icon-link"></i></a>Larry Bird the best power forward in Celtic&apos;s history.</h5>
-					<h6 id="monica-bellucci-22"><a class="heading-anchor" href="#monica-bellucci-22"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
+					<h5 id="larry-bird-the-best-power-forward-in-celtics-history-2"><a class="heading-anchor" href="#larry-bird-the-best-power-forward-in-celtics-history-2"><i class="icon icon-link"></i></a>Larry Bird the best power forward in Celtic&apos;s history.</h5>
+					<h6 id="monica-bellucci-4"><a class="heading-anchor" href="#monica-bellucci-4"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
 					<div class="status">Approved</div>
 				</div>
 
@@ -593,12 +917,12 @@
 				</div>
 
 				<div class="list-group-item-field">
-					<span class="icon-folder-close"></span>
+					<span class="icon-folder-close icon-xl"></span>
 				</div>
 
 				<div class="list-group-item-content">
-					<h5 id="karl-malone-the-best-power-forward-in-jazz-history-23"><a class="heading-anchor" href="#karl-malone-the-best-power-forward-in-jazz-history-23"><i class="icon icon-link"></i></a>Karl Malone the best power forward in Jazz history.</h5>
-					<h6 id="monica-bellucci-24"><a class="heading-anchor" href="#monica-bellucci-24"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
+					<h5 id="karl-malone-the-best-power-forward-in-jazz-history-2"><a class="heading-anchor" href="#karl-malone-the-best-power-forward-in-jazz-history-2"><i class="icon icon-link"></i></a>Karl Malone the best power forward in Jazz history.</h5>
+					<h6 id="monica-bellucci-5"><a class="heading-anchor" href="#monica-bellucci-5"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
 					<div class="status">Pending</div>
 				</div>
 
@@ -630,12 +954,12 @@
 				</div>
 
 				<div class="list-group-item-field">
-					<span class="icon-folder-close"></span>
+					<span class="icon-folder-close icon-xl"></span>
 				</div>
 
 				<div class="list-group-item-content">
 					<h5 id="dennis-rodman-the-best-power-forward-in-bulls-history"><a class="heading-anchor" href="#dennis-rodman-the-best-power-forward-in-bulls-history"><i class="icon icon-link"></i></a>Dennis Rodman the best power forward in Bulls history.</h5>
-					<h6 id="monica-bellucci-26"><a class="heading-anchor" href="#monica-bellucci-26"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
+					<h6 id="monica-bellucci-6"><a class="heading-anchor" href="#monica-bellucci-6"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
 					<div class="status">Draft</div>
 				</div>
 
@@ -667,12 +991,12 @@
 				</div>
 
 				<div class="list-group-item-field">
-					<span class="icon-folder-close"></span>
+					<span class="icon-folder-close icon-xl"></span>
 				</div>
 
 				<div class="list-group-item-content">
 					<h5 id="lebron-james-the-best-power-forward-in-heat-history"><a class="heading-anchor" href="#lebron-james-the-best-power-forward-in-heat-history"><i class="icon icon-link"></i></a>LeBron James the best power forward in Heat history.</h5>
-					<h6 id="monica-bellucci-28"><a class="heading-anchor" href="#monica-bellucci-28"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
+					<h6 id="monica-bellucci-7"><a class="heading-anchor" href="#monica-bellucci-7"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
 					<div class="status">Expired</div>
 				</div>
 
@@ -704,12 +1028,12 @@
 				</div>
 
 				<div class="list-group-item-field">
-					<span class="icon-folder-close"></span>
+					<span class="icon-folder-close icon-xl"></span>
 				</div>
 
 				<div class="list-group-item-content">
 					<h5 id="tim-duncan-the-best-power-forward-in-spurs-history"><a class="heading-anchor" href="#tim-duncan-the-best-power-forward-in-spurs-history"><i class="icon icon-link"></i></a>Tim Duncan the best power forward in Spurs&apos; history.</h5>
-					<h6 id="monica-bellucci-30"><a class="heading-anchor" href="#monica-bellucci-30"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
+					<h6 id="monica-bellucci-8"><a class="heading-anchor" href="#monica-bellucci-8"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
 					<div class="status">Scheduled</div>
 				</div>
 
@@ -741,12 +1065,12 @@
 				</div>
 
 				<div class="list-group-item-field">
-					<span class="icon-folder-close"></span>
+					<span class="icon-folder-close icon-xl"></span>
 				</div>
 
 				<div class="list-group-item-content">
 					<h5 id="kevin-garnett-the-best-power-forward-in-pistons-history"><a class="heading-anchor" href="#kevin-garnett-the-best-power-forward-in-pistons-history"><i class="icon icon-link"></i></a>Kevin Garnett the best power forward in Pistons&apos; history.</h5>
-					<h6 id="monica-bellucci-32"><a class="heading-anchor" href="#monica-bellucci-32"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
+					<h6 id="monica-bellucci-9"><a class="heading-anchor" href="#monica-bellucci-9"><i class="icon icon-link"></i></a>Monica Bellucci</h6>
 					<div class="status">Rejected</div>
 				</div>
 
@@ -789,7 +1113,7 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="listGroups"><a class="heading-anchor" href="#listGroups"><i class="icon icon-link"></i></a>List Group</h3>
+		<h3 id="list-group"><a class="heading-anchor" href="#list-group"><i class="icon icon-link"></i></a>List Group</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Use <code>.list-group</code> or <code>.linked-list-group</code> to quickly assemble a list of elements such as a checklist, vertical navigation, or a news feed.</p>
@@ -822,7 +1146,7 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="linkedListGroups"><a class="heading-anchor" href="#linkedListGroups"><i class="icon icon-link"></i></a>Linked List Groups</h3>
+		<h3 id="linked-list-groups"><a class="heading-anchor" href="#linked-list-groups"><i class="icon icon-link"></i></a>Linked List Groups</h3>
 
 		<div class="list-group">
 			<div class="list-group-heading">List Group Heading</div>
@@ -907,7 +1231,7 @@
 $('.tabular-list-group .list-group-item input[type="checkbox"]').on('click', function(event) {
 	$(this).closest('.list-group-item').toggleClass('active');
 });
-</script>
+</script></div></div>
 	</div>
 
 		</section>

@@ -233,13 +233,11 @@
 						var navNode = node.find(navigation).first();
 						var sideNavMenuNode = node.find('.sidenav-menu').first();
 
-						setTimeout(function() {
-							var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
+						var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
 
-							contentNode.css('min-height', tallest);
-							navNode.css('min-height', tallest);
-							sideNavMenuNode.css('min-height', tallest);
-						}, 0);
+						contentNode.css('min-height', tallest);
+						navNode.css('min-height', tallest);
+						sideNavMenuNode.css('min-height', tallest);
 					});
 				}
 			}
@@ -292,6 +290,10 @@
 			var widthMethod = closed ? 'showSidenav' : 'hideSidenav';
 
 			if (closed) {
+				setTimeout(function() {
+					instance.setEqualHeight(container);
+				}, 0);
+
 				menu.css('width', width);
 
 				if (container.hasClass('sidenav-right') && container.hasClass('sidenav-fixed')) {
@@ -312,8 +314,6 @@
 					container.trigger('closed.lexicon.sidenav');
 				}
 				else {
-					instance.setEqualHeight(container);
-
 					toggler.addClass('open').removeClass('sidenav-transition');
 
 					container.trigger('open.lexicon.sidenav');
@@ -389,81 +389,82 @@
 		_onClickTrigger: function(element) {
 			var instance = this;
 
-			var container = element;
+			var togglerFn;
+
+			var el = element;
 
 			if (instance.useDataAttribute) {
-				container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
-
-				element.on('click.lexicon.sidenav', function(event) {
+				togglerFn = function(event) {
 					event.preventDefault();
 
 					instance._toggleSimpleSidenav(element);
-				});
+				};
 			}
 			else {
-				var toggler = element.toggler;
+				el = element.toggler;
 
-				toggler.on('click.lexicon.sidenav', function(event) {
+				togglerFn = function(event) {
 					var $this = $(this);
 
 					var selector = $this.closest(instance.options.selector);
 
-					if (selector.length) {
-						container = selector;
-					}
+					var container = selector.length ? selector : element;
 
 					event.preventDefault();
 
 					instance.toggleNavigation(container);
-				});
+				};
 			}
+
+			el.on('click.lexicon.sidenav', togglerFn);
 		},
 
 		_onDelegateClickTrigger: function(element) {
 			var instance = this;
 
+			var togglerFn;
 			var togglerSelector;
-
-			var container = element;
 
 			var options = instance.options;
 
 			if (instance.useDataAttribute) {
 				togglerSelector = options.target ? '[data-target="' + options.target + '"]' : '[href="' + element.attr('href') + '"]';
 
-				container = options.target ? $(options.target) : doc.find(element.attr('href'));
-
-				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
+				togglerFn = function(event) {
 					event.preventDefault();
 
 					instance._toggleSimpleSidenav(element);
-				});
+				};
 			}
 			else {
 				var toggler = options.toggler;
 
-				var useDefaultTogglerClass = toggler === '.sidenav-toggler';
-
-				if (useDefaultTogglerClass) {
+				if (toggler === '.sidenav-toggler') {
 					togglerSelector = options.selector + ' ' + toggler;
 				}
 				else {
 					togglerSelector = toggler;
 				}
 
-				doc.on('click.lexicon.sidenav', togglerSelector, function(event) {
+				togglerFn = function(event) {
 					var $this = $(this);
 
 					var selector = $this.closest(options.selector);
 
-					if (selector.length) {
-						container = selector;
-					}
+					var container = selector.length ? selector : element;
 
 					event.preventDefault();
 
 					instance.toggleNavigation(container);
-				});
+				};
+			}
+
+			var dataTogglerSelector = 'lexicon.' + togglerSelector;
+
+			if (!doc.data(dataTogglerSelector)) {
+				doc.data(dataTogglerSelector, 'true');
+
+				doc.on('click.lexicon.sidenav', togglerSelector, togglerFn);
 			}
 		},
 
