@@ -100,6 +100,13 @@
 	}
 }
 
+// Bootstrap Navbar Overrides
+
+.navbar-brand:focus {
+	position: relative;
+	z-index: 1;
+}
+
 // Navbar Collapse Basic Search Styles
 
 .collapse-basic-search {
