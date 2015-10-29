@@ -1,43 +1,41 @@
 .label {
-	display: inline-block;
+	@extend .badge;
 
-	.icon-monospaced {
-		@include monospace($label-monospaced-size);
-	}
+	border-radius: $label-border-radius;
 }
 
 .label-lg {
-	font-size: 16px;
-	line-height: $label-lg-height;
-	padding: 3px 18px;
-
-	.icon-monospaced {
-		margin-right: -9px;
-
-		@include monospace($label-lg-monospaced-size);
-	}
+	@extend .badge-lg;
 }
 
 .label-sm {
-	font-size: 9px;
-	padding-bottom: 1px;
-	padding-top: 1px;
-
-	.icon-monospaced {
-		@include monospace($label-sm-monospaced-size);
-	}
+	@extend .badge-sm;
 }
 
-// Skin
+// Monospaced Labels
 
-.label {
-	a {
-		color: $label-color;
+.label-monospaced {
+	@extend .badge-monospaced;
+}
 
-		&:focus,
-		&:hover {
-			color: $label-link-hover-color;
-			text-decoration: none;
-		}
-	}
+// Skins
+
+.label-danger {
+	@extend .badge-danger;
+}
+
+.label-info {
+	@extend .badge-info;
+}
+
+.label-primary {
+	@extend .badge-primary;
+}
+
+.label-success {
+	@extend .badge-success;
+}
+
+.label-warning {
+	@extend .badge-warning;
 }
