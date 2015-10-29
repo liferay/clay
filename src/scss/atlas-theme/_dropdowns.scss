@@ -7,8 +7,8 @@
 }
 
 .dropdown-menu form {
-	> .checkbox-default,
-	> .radio-default {
+	> .checkbox,
+	> .radio {
 		label {
 			padding: $dropdown-link-padding;
 			padding-left: 32px;
@@ -17,13 +17,6 @@
 
 	.form-group {
 		padding: $dropdown-link-padding;
-	}
-}
-
-.dropdown-toggle {
-	&.icon-ellipsis-vertical,
-	.icon-ellipsis-vertical {
-		color: $dropdown-link-color;
 	}
 }
 
