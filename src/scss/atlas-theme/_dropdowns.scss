@@ -7,8 +7,8 @@
 }
 
 .dropdown-menu form {
-	> .checkbox-default,
-	> .radio-default {
+	> .checkbox,
+	> .radio {
 		label {
 			padding: $dropdown-link-padding;
 			padding-left: 32px;
