@@ -16,15 +16,23 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass": "~3.3.5",
+    "svg4everybody": "~2.0.0"
   },
   "overrides": {
     "bootstrap-sass": {
-      "main": ["*/**/_bootstrap.scss", "*/**/bootstrap/*.scss"],
+      "main": [
+        "*/**/_bootstrap.scss",
+        "*/**/bootstrap/*.scss"
+      ],
       "normalize": {
-          "js": "*/**/*.js",
-          "css": ["*/**/*.css"],
-          "scss": ["*/**/*.scss"]
+        "js": "*/**/*.js",
+        "css": [
+          "*/**/*.css"
+        ],
+        "scss": [
+          "*/**/*.scss"
+        ]
       }
     }
   }
