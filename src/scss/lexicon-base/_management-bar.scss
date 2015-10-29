@@ -60,6 +60,12 @@
 	float: right;
 }
 
+.management-bar .management-bar-collapse {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		float: left;
+	}
+}
+
 // management bar headers
 
 .management-bar-header,
@@ -112,6 +118,10 @@
 
 .management-bar-toggle {
 	@extend .navbar-toggle;
+
+	&:focus {
+		@include tab-focus;
+	}
 }
 
 .management-bar-toggle-link {
