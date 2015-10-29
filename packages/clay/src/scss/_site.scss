@@ -752,6 +752,10 @@ h1, h2, h3, h4, h5, h6 {
 			float: none;
 			opacity: 0;
 			margin-left: -20px;
+
+			&:focus {
+				opacity: 1;
+			}
 		}
 
 		&:hover .heading-anchor {
