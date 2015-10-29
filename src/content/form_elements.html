@@ -60,38 +60,34 @@ section: Components
 <!-- Checkboxes unable to be styled in Firefox with this method. See https://bugzilla.mozilla.org/show_bug.cgi?id=605985
 Checkboxes unable to be styled in IE with this method. -->
 
-		<div>
-			<label class="checkbox-default">
-				<input class="input-sm" type="checkbox" value="">
-			</label>
-		</div>
-		<label class="checkbox-default">
-			<input type="checkbox" value="">
-			Label
-		</label>
-		<div class="checkbox checkbox-default">
+		<div class="checkbox">
 			<label>
-				<input class="input-sm" type="checkbox" value="">
-				Label with class checkbox
+				<input type="checkbox" value="">
 			</label>
 		</div>
-		<div class="checkbox checkbox-default disabled">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="">
+				Label
+			</label>
+		</div>
+		<div class="checkbox disabled">
 			<label>
 				<input checked disabled type="checkbox" value="">
 				Disabled Check Box
 			</label>
 		</div>
 
-		<div>
-			<label class="checkbox-inline checkbox-default">
+		<div class="checkbox">
+			<label class="checkbox-inline">
 				<input type="checkbox" id="inlineCheckbox1" value="option1">
 				1
 			</label>
-			<label class="checkbox-inline checkbox-default">
+			<label class="checkbox-inline">
 				<input type="checkbox" id="inlineCheckbox2" value="option2">
 				2
 			</label>
-			<label class="checkbox-inline checkbox-default">
+			<label class="checkbox-inline">
 				<input type="checkbox" id="inlineCheckbox3" value="option3">
 				3
 			</label>
@@ -101,40 +97,37 @@ Checkboxes unable to be styled in IE with this method. -->
 	<div class="col-md-6">
 		<h5>Radio Buttons</h5>
 
-		<div>
-			<label class="radio-default">
+		<div class="radio">
+			<label>
 				<input type="radio" value="">
 			</label>
 		</div>
 
-		<label class="radio-default">
-			<input type="radio" value="">
-			Label
-		</label>
-
-		<div class="radio radio-default">
+		<div class="radio">
 			<label>
-				<input type="radio">
-				Regular Radio Button
+				<input type="radio" value="">
+				Label
 			</label>
 		</div>
 
-		<div class="radio radio-default disabled">
+		<div class="radio disabled">
 			<label>
 				<input disabled type="radio">
 				Disabled Radio Button
 			</label>
 		</div>
 
-		<label class="radio-default radio-inline">
-			<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"> 1
-		</label>
-		<label class="radio-default radio-inline">
-			<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"> 2
-		</label>
-		<label class="radio-default radio-inline">
-			<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"> 3
-		</label>
+		<div class="radio">
+			<label class="radio-inline">
+				<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"> 1
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"> 2
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"> 3
+			</label>
+		</div>
 	</div>
 </div>
 
@@ -142,14 +135,14 @@ Checkboxes unable to be styled in IE with this method. -->
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-  <pre><code class="html">```<div class="checkbox checkbox-default">
+  <pre><code class="html">```<div class="checkbox">
     <label>
         <input type="checkbox" value="">
         Label with class checkbox
     </label>
 </div>
 
-<div class="radio radio-default">
+<div class="radio">
     <label>
         <input type="radio">
         Regular Radio Button
@@ -159,7 +152,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Select Box</h4>
+		<h3>Select Box</h3>
 
 		<div class="form-group">
 			<label>Regular Select Box</label>
@@ -332,7 +325,7 @@ Checkboxes unable to be styled in IE with this method. -->
 					</select>
 				</div>
 
-				<div class="checkbox checkbox-default">
+				<div class="checkbox">
 					<label>
 						<input checked type="checkbox" value="">
 						<span class="skin"></span>
@@ -340,7 +333,7 @@ Checkboxes unable to be styled in IE with this method. -->
 					</label>
 				</div>
 
-				<div class="radio radio-default">
+				<div class="radio">
 					<label>
 						<input type="radio" value="">
 						<span class="skin"></span>
@@ -370,7 +363,7 @@ Checkboxes unable to be styled in IE with this method. -->
             </select>
         </div>
 
-        <div class="checkbox checkbox-default">
+        <div class="checkbox">
             <label>
                 <input checked type="checkbox" value="">
                 <span class="skin"></span>
@@ -378,7 +371,7 @@ Checkboxes unable to be styled in IE with this method. -->
             </label>
         </div>
 
-        <div class="radio radio-default">
+        <div class="radio">
             <label>
                 <input type="radio" value="">
                 <span class="skin"></span>
@@ -396,7 +389,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Read Only States<h3>
+		<h3>Read Only States</h3>
 
 		<div class="form-group">
 			<label>Text Input (Read Only)</label>

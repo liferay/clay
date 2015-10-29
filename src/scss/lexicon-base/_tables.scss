@@ -226,8 +226,12 @@
 		}
 	}
 
-	.checkbox-default,
-	.checkbox-default label {
-		margin-bottom: 0;
+	.checkbox,
+	.radio {
+		float: left;
+
+		label {
+			display: block;
+		}
 	}
 }
