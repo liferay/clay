@@ -1,37 +1,31 @@
 .badge {
-	.icon-monospaced {
-		@include monospace($badge-monospaced-size - 6);
-	}
+	border-radius: 100px;
+	font-size: $badge-font-size;
+	padding-bottom: $badge-padding-bottom;
+	padding-left: $badge-padding-left;
+	padding-right: $badge-padding-right;
+	padding-top: $badge-padding-top;
 }
 
 .badge-lg {
-	border-radius: 100px;
-	font-size: 16px;
-	line-height: $badge-lg-height;
-	padding-left: 18px;
-	padding-right: 18px;
-
-	.icon-monospaced {
-		margin-right: -9px;
-
-		@include monospace($badge-lg-monospaced-size);
-	}
+	font-size: $badge-lg-font-size;
+	padding-bottom: $badge-lg-padding-bottom;
+	padding-left: $badge-lg-padding-left;
+	padding-right: $badge-lg-padding-right;
+	padding-top: $badge-lg-padding-top;
 }
 
 .badge-sm {
-	font-size: 9px;
-	line-height: $badge-sm-height;
-	padding-bottom: 0;
-	padding-top: 0;
-
-	.icon-monospaced {
-		@include monospace($badge-sm-monospaced-size);
-	}
+	font-size: $badge-sm-font-size;
+	padding-bottom: $badge-sm-padding-bottom;
+	padding-left: $badge-sm-padding-left;
+	padding-right: $badge-sm-padding-right;
+	padding-top: $badge-sm-padding-top;
 }
 
-.badge-monospaced {
-	border-radius: 100px;
+// Monospaced Badges
 
+.badge-monospaced {
 	@include monospace($badge-monospaced-size);
 
 	padding: 0;
@@ -42,6 +36,48 @@
 
 	&.badge-sm {
 		@include monospace($badge-sm-monospaced-size);
+	}
+}
+
+// Badge Icon Monospaced Sizes
+
+.icon-monospaced {
+	.badge & {
+		@include monospace($badge-font-size);
+	}
+
+	.badge-lg & {
+		@include monospace($badge-lg-font-size);
+	}
+
+	.badge-sm & {
+		@include monospace($badge-sm-font-size);
+	}
+}
+
+// Badge Lexicon Icon Sizes
+
+.lexicon-icon {
+	.badge & {
+		height: $badge-font-size * 0.75;
+		width: $badge-font-size * 0.75;
+	}
+
+	.badge-lg & {
+		height: $badge-lg-font-size * 0.75;
+		width: $badge-lg-font-size * 0.75;
+	}
+
+	.badge-sm & {
+		height: $badge-sm-font-size * 0.75;
+		width: $badge-sm-font-size * 0.75;
+	}
+
+	.badge .icon-monospaced &,
+	.badge-lg .icon-monospaced &,
+	.badge-sm .icon-monospaced & {
+		height: 75%;
+		width: 75%;
 	}
 }
 
