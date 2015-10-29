@@ -1,5 +1,6 @@
 $timeline-border: $panel-inner-border !default;
 $timeline-border-width: 2px !default;
+
 $timeline-border-modifier: ceil($timeline-border-width / 2);
 
 $timeline-icon-active-bg: $component-active-bg !default;
