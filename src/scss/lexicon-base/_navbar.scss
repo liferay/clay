@@ -100,6 +100,13 @@
 	}
 }
 
+// Bootstrap Navbar Overrides
+
+.navbar-brand:focus {
+	position: relative;
+	z-index: 1;
+}
+
 // Navbar Collapse Basic Search Styles
 
 .collapse-basic-search {
@@ -193,7 +200,6 @@
 		@media screen and (min-width: $grid-float-breakpoint) {
 			background-color: transparent;
 			border-width: 0;
-			float: none;
 			left: auto;
 			position: static;
 			right: auto;
