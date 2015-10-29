@@ -20,6 +20,7 @@ section.row {
 }
 
 .page-title {
+	display: inline-block;
 	font-weight: bold;
 	margin-bottom: 25px;
 
@@ -60,21 +61,35 @@ section.row {
 			background-color: #FFF;
 		}
 	}
+}
 
-	.uxgl-site-config {
-		position: absolute;
-		right: 15px;
-		top: 50%;
-		transform: translateY(-50%);
-		z-index: 5;
+#siteConfig {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 5;
 
-		.dropdown-menu {
-			width: 240px;
+	.dropdown-menu {
+		width: 240px;
 
-			a {
-				color: initial;
-			}
+		a {
+			color: initial;
 		}
+	}
+}
+
+#skipTo {
+	min-width: 170px;
+	position: absolute;
+	top: 50%;
+
+	@include transform(translateY(-50%));
+
+	z-index: -1;
+
+	&:focus {
+		z-index: 1;
 	}
 }
 

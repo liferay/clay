@@ -16,6 +16,8 @@
 	<div id="wrapper">
 		<header class="row" id="headerTopBar">
 			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
 				<button type="button" class="animated-toggle navbar-toggle">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -24,9 +26,9 @@
 				</button>
 
 				<h4 class="title"><a href="<%= rootPath %>">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v<%= version %></span></h4>
-			</div>
 
-			<% include site_config %>
+				<% include site_config %>
+			</div>
 		</header>
 
 		<section class="closed container sidenav-container">
