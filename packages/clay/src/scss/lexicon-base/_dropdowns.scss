@@ -47,7 +47,15 @@
 	}
 }
 
+.dropdown-menu > .active > a:focus {
+	@include tab-focus;
+}
+
 .dropdown-toggle {
+	&:focus {
+		@include tab-focus;
+	}
+
 	&:focus,
 	&:hover {
 		text-decoration: none;
