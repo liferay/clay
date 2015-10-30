@@ -12,6 +12,7 @@
   - [View the files](#view-the-files)
   - [File Heading Options](#file-heading-options)
   - [Available Build Tasks](#available-build-tasks)
+- [Changelog](#changelog)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -77,3 +78,7 @@ This will generate all of the HTML/CSS/etc into the `build/` directory.
 We use this to deploy into Liferay.
 
 `toc`: If you add a section to the README file, running `gulp toc` will generate a new table of contents.
+
+## Changelog
+
+You can view the [full changelog here](CHANGELOG.md).
