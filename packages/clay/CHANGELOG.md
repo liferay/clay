@@ -1,5 +1,7 @@
 ## Next Release
 
+## v0.1.21 - October 30, 2015
+
 * New: Add sizes sm, default,  md, lg to Lexicon icons
 * New: Add timeline component
 * Update: Size Lexicon icons in badges and labels, labels fully extends badges
