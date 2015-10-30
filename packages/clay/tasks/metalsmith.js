@@ -43,13 +43,24 @@ module.exports = function(gulp, plugins, _, config) {
 							file.basename = _s.slugify(file.basename);
 						}));
 
-		return gulp.src(config.SRC_GLOB)
+		return gulp.src(['./CHANGELOG.md', config.SRC_GLOB])
 				.pipe(filter)
 				.pipe(gulpFrontMatter())
 				.on(
 					'data',
 					function(file) {
-						_.assign(file, file.frontMatter);
+						var metadata = file.frontMatter;
+
+						if (_.isEmpty(metadata)) {
+							var filePath = file.relative;
+							var ext = path.extname(file.relative);
+
+							metadata = {
+								title: path.basename(filePath, ext)
+							};
+						}
+
+						_.assign(file, metadata);
 
 						delete file.frontMatter;
 					}
