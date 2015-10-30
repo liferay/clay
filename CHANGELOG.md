@@ -23,18 +23,13 @@
 * Adding svg4everybody via bower, and changing the update task to updating bower in general
 * LPS-59013 - Update metalsmith-headings-identifier
 * Atlas: color dropdown-toggle icon-ellipsis-vertical only in cards
-* General SF
 * Make structural class names, table-list-field and table-list-content, more general
 * Truncating text should work inside table-list-content
-* Clean up lexicon version of management bar
 * LPS-59013 hidden-xs class deleted
 * Lexicon-base _variables should only be importing partials and remove unused variables from atlas
 * Add progress bar sizes
 * Add form validation states for select and readonly input, remove unused mixins, and docs
 * Add list-group-card
-* BG from body for Card dm and Card vertical
-* Following the same pattern for _onClickTrigger
-* Removing redunant work
 * Navbar and Management Bar No Collapse dropdowns should be styled in mobile
 * Side-navigation and content should be equal height before opening
 * Use site's bootstrap.js instead of cdn and remove unused includes from head
@@ -157,7 +152,6 @@
 * Add nameplate label states
 * atlas: fix gap between modal-body and modal-footer
 * lexicon: alert-notification should be 100% in mobile
-* atlas: changing border colors on active and hover and source format
 * Add alert-notification class for notifications
 * atlas: Remove notifications component in favor of alternate alert style
 * atlas: Remove duplicate css in disabled checkbox and radios
@@ -176,13 +170,11 @@
 * side-navigation: add option to delegate click event
 * Add Multi-step-progress-bar
 * control-menu: use justify-content and colors for atlas control-menu
-* Source format control menu component, add control-menu-level-2, and update docs
 * atlas: select input should have no top or bottom padding
 * Control Menu component
 * Update side-navigation docs
 * side-navigation: sidenav-slider should have transition
 * side-navigation: toggleSimpleSidenav content should match first element
-* side-navigation: source format simple sidenav methods
 * side-navigation: add data-target option to simple sidenav
 * side-navigation: menu and content should be the right height on load, equal height should run after dom operations
 * site: remove overflow on #wrapper
@@ -238,7 +230,6 @@
 * uxgl-site-config should stay inside header
 * atlas: nav-tabs-default calculate padding based on height
 * side-navigation: check if window size is desktop
-* collapsible-search: Source format plugin
 * Update nav and nav-tabs docs
 * Update nav tabs demo to use bs3 tabs.js
 * Move more common nav styles to lexicon and update nav docs
@@ -256,7 +247,6 @@
 * container-fluid-1280 inherits too many styles from container-fluid
 * Use class detail-list-view-icon instead of user-icon for active state
 * lexicon: container-fluid-1280 should extend container-fluid
-* atlas: Add border to navbar and source format
 * atlas: update brand and state colors
 * atlas: update form validation colors
 * Z-index issues in navbar basic search after input-group update
