@@ -1,5 +1,5 @@
-<nav class="side-navigation sidenav-menu-slider" id="mainNav">
-	<div class="side-navigation-container sidenav-menu">
+<nav class="" id="mainNav">
+	<div class="main-nav-inner">
 			<%
 			var createMainNavList = function(nav, path, parent) {
 				var buffer = ['<ul class="nav nav-stacked">'];
@@ -12,7 +12,7 @@
 						var tpl = '<li class="{cssClass}">';
 
 						if (item.children) {
-							cssClass = 'side-navigation-dropdown-container';
+							cssClass = '';
 							tpl += '<span class="nav-title">{title}</span>';
 						}
 						else {
