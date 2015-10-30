@@ -23,7 +23,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.20</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
 			</div>
 
 			<div class="dropdown uxgl-site-config" id="siteConfig">
@@ -104,6 +104,8 @@
 <li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
 </li>
@@ -194,6 +196,8 @@
 </ul>
 </div>
 </li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
 </ul>
 	</div>
 </nav>
@@ -214,7 +218,7 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2 id="choosing-the-right-lexicon-component"><a class="heading-anchor" href="#choosing-the-right-lexicon-component"><i class="icon icon-link"></i></a>Choosing the Right Lexicon Component</h2>
+		<h3 id="choosing-the-right-lexicon-component"><a class="heading-anchor" href="#choosing-the-right-lexicon-component"><i class="icon icon-link"></i></a>Choosing the Right Lexicon Component</h3>
 
 		<p>There are many components in Lexicon, some components overlap, some look the same at first glance, while several are combined to form a whole new component. When building your module, be careful not to choose and modify the first component that looks like a fit and take the time to choose the right component for the job.</p>
 
@@ -228,7 +232,7 @@
 
 <div class="row row-spacing" id="bestPractices">
 	<div class="col-md-12">
-		<h2 id="how-sass-files-are-loaded-in-liferay-70"><a class="heading-anchor" href="#how-sass-files-are-loaded-in-liferay-70"><i class="icon icon-link"></i></a>How Sass Files are Loaded in Liferay 7.0</h2>
+		<h3 id="how-sass-files-are-loaded-in-liferay-70"><a class="heading-anchor" href="#how-sass-files-are-loaded-in-liferay-70"><i class="icon icon-link"></i></a>How Sass Files are Loaded in Liferay 7.0</h3>
 
 		<table>
 			<tbody>
@@ -359,11 +363,12 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2 id="lexicon-variables-in-a-liferay-component"><a class="heading-anchor" href="#lexicon-variables-in-a-liferay-component"><i class="icon icon-link"></i></a>Lexicon Variables in a Liferay Component</h2>
+		<h3 id="lexicon-variables-in-a-liferay-component"><a class="heading-anchor" href="#lexicon-variables-in-a-liferay-component"><i class="icon icon-link"></i></a>Lexicon Variables in a Liferay Component</h3>
 		<p>Leverage Lexicon variables inside a 7.0 component by adding <code>_variables.scss</code> and <code>_variables_custom.scss</code> files to the directory containing the component e.g. Portlet.</p>
 		<p>Import them by adding <code>@import &quot;portlet/variables_custom&quot;;</code> and <code>@import &quot;portlet/variables&quot;;</code> at the top of <code>_styled/css/_portlet.scss</code>.</p>
 
-<h5 id="_styledcss_portletscss"><a class="heading-anchor" href="#_styledcss_portletscss"><i class="icon icon-link"></i></a>_styled/css/_portlet.scss</h5>
+		<h5>_styled/css/_portlet.scss</h5>
+
 <pre><code>@import &quot;portlet/variables_custom&quot;;
 @import &quot;portlet/variables&quot;;
 
@@ -377,6 +382,7 @@
 @import &quot;portlet/misc&quot;;
 
 @import &quot;portlet/app_components&quot;;</code></pre>
+
 
 		<p><code>_variables.scss</code> should contain lexicon-base style variables and <code>_variables_custom.scss</code> should contain variables that overwrite or add atlas styles.</p>
 		<p>The file structure should look similar to:</p>
@@ -403,7 +409,7 @@ frontend-theme-styled
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2 id="extending-a-lexicon-component-in-70"><a class="heading-anchor" href="#extending-a-lexicon-component-in-70"><i class="icon icon-link"></i></a>Extending a Lexicon Component in 7.0</h2>
+		<h3 id="extending-a-lexicon-component-in-70"><a class="heading-anchor" href="#extending-a-lexicon-component-in-70"><i class="icon icon-link"></i></a>Extending a Lexicon Component in 7.0</h3>
 
 		<p>In this walkthrough, we will extend the Lexicon Cards Component to create an inverse colored card for the Card Taglib. The Card Taglib exists for all themes, so we will need to add an inverse style that matches the _styled theme as well as classic theme.</p>
 
@@ -478,9 +484,8 @@ $card-inverse-link-color: $navbar-inverse-link-color !default;</code></pre>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h2 id="third-party-bootstrap-theme-with-lexicon"><a class="heading-anchor" href="#third-party-bootstrap-theme-with-lexicon"><i class="icon icon-link"></i></a>Third Party Bootstrap Theme with Lexicon</h2>
+		<h3 id="third-party-bootstrap-theme-with-lexicon"><a class="heading-anchor" href="#third-party-bootstrap-theme-with-lexicon"><i class="icon icon-link"></i></a>Third Party Bootstrap Theme with Lexicon</h3>
 		<p>Copy and paste the sass variables from the third party Bootstrap theme into <code>_aui_variables.scss</code> and the styles into <code>aui_custom.scss</code>.</p>
-
 	</div>
 </div>
 	</div>

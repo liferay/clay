@@ -23,7 +23,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.20</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
 			</div>
 
 			<div class="dropdown uxgl-site-config" id="siteConfig">
@@ -104,6 +104,8 @@
 <li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
 </li>
@@ -194,6 +196,8 @@
 </ul>
 </div>
 </li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
 </ul>
 	</div>
 </nav>
@@ -213,7 +217,7 @@
 		<blockquote class="blockquote-sm blockquote-success">Add class <code>aspect-ratio-bg-cover</code> to aspect-ratio to make the background image fill all remaining space.</blockquote>
 	</div>
 	<div class="col-xs-6 col-md-3">
-		<div class="checkbox checkbox-default toggle-card-dm">
+		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
 				<div class="toggle-card-container card card-dm">
@@ -243,7 +247,7 @@
 		</div>
 	</div>
 	<div class="col-xs-6 col-md-3">
-		<div class="checkbox checkbox-default toggle-card-dm">
+		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
 				<div class="toggle-card-container card card-dm">
@@ -273,7 +277,7 @@
 		</div>
 	</div>
 	<div class="col-xs-6 col-md-3">
-		<div class="checkbox checkbox-default toggle-card-dm">
+		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
 				<div class="toggle-card-container card card-dm">
@@ -303,7 +307,7 @@
 		</div>
 	</div>
 	<div class="col-xs-6 col-md-3">
-		<div class="checkbox checkbox-default toggle-card-dm">
+		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
 				<div class="toggle-card-container card card-dm">
@@ -342,7 +346,7 @@
 	</div>
 
 	<div class="col-xs-6 col-md-3">
-		<div class="checkbox checkbox-default toggle-card-dm">
+		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
 				<div class="toggle-card-container card card-dm">
@@ -372,7 +376,7 @@
 		</div>
 	</div>
 	<div class="col-xs-6 col-md-3">
-		<div class="checkbox checkbox-default toggle-card-dm">
+		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
 				<div class="toggle-card-container card card-dm">
@@ -402,7 +406,7 @@
 		</div>
 	</div>
 	<div class="col-xs-6 col-md-3">
-		<div class="checkbox checkbox-default toggle-card-dm">
+		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
 				<div class="toggle-card-container card card-dm">
@@ -432,7 +436,7 @@
 		</div>
 	</div>
 	<div class="col-xs-6 col-md-3">
-		<div class="checkbox checkbox-default toggle-card-dm">
+		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
 				<div class="toggle-card-container card card-dm">
@@ -469,7 +473,7 @@
 	</div>
 
 	<div class="col-xs-6">
-		<div class="checkbox checkbox-card checkbox-middle-left checkbox-default">
+		<div class="checkbox checkbox-card checkbox-middle-left">
 			<label>
 				<input type="checkbox" value="">
 				<div class="card card-horizontal">
@@ -500,7 +504,6 @@
 	</div>
 
 	<div class="col-xs-6">
-
 		<div class="card card-horizontal">
 			<div class="card-row card-row-padded">
 				<div class="card-col-field">
@@ -527,14 +530,19 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 
 <div class="extend-cards-page row row-spacing">
 	<div class="col-md-12">
+		<h3 id="vertical-card-example"><a class="heading-anchor" href="#vertical-card-example"><i class="icon icon-link"></i></a>Vertical Card Example</h3>
+
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use the cards component as a foundation to quickly mimic common patterns used throughout the web.</p>
+			<p>Cards are a great way of summarizing a lot of related content, such as products, bookmarks, and favorites. Use the cards component as a foundation to quickly mimic common patterns used throughout the web.</p>
+
+			<p>The card header and footer classes, were created to make it easier to style headers and footers across several cards, only one <code>.card-header</code> and one <code>.card-footer</code> should appear per card.</p>
+
+			<p>Use <code>.card-section</code> to group blocks of content and place between header and footer.</p>
 		</blockquote>
 	</div>
 
@@ -549,7 +557,7 @@
 					</div>
 
 					<div class="nameplate-content">
-						<h4 id="space-program-category"><a class="heading-anchor" href="#space-program-category"><i class="icon icon-link"></i></a>Space Program <small>Category</small></h4>
+						<h4>Space Program <small>Category</small></h4>
 					</div>
 				</div>
 			</div>
@@ -566,15 +574,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="col-md-7 col-lg-8 usage-section">
-		<h3 class="usage-heading" id="usage"><a class="heading-anchor" href="#usage"><i class="icon icon-link"></i></a>Usage</h3>
-		<p>Cards are a great way of summarizing a lot of related content, such as products, bookmarks, and favorites.</p>
-
-		<p>The card header and footer classes, were created to make it easier to style headers and footers across several cards, only one <code>.card-header</code> and one <code>.card-footer</code> should appear per card.</p>
-
-		<p>Use <code>.card-section</code> to group blocks of content and place between header and footer.</p>
 	</div>
 
 	<div class="col-md-12">
@@ -600,6 +599,13 @@
 </div>
 
 <div class="extend-cards-page row row-spacing">
+	<div class="col-md-12">
+		<h3 id="make-content-span-full-width"><a class="heading-anchor" href="#make-content-span-full-width"><i class="icon icon-link"></i></a>Make Content Span Full Width</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Don&apos;t wrap content in <code>.card-header</code>, <code>.card-footer</code>, or <code>.card-section</code> to make images and content span the full width of the card.</p>
+		</blockquote>
+	</div>
 	<div class="col-md-4">
 		<div class="card">
 			<div class="figure">
@@ -609,17 +615,10 @@
 
 			<div class="card-section">
 				<p class="text-default">Number 1</p>
-
-				<h4 id="mystery-meal"><a class="heading-anchor" href="#mystery-meal"><i class="icon icon-link"></i></a>Mystery Meal</h4>
-
+				<h4>Mystery Meal</h4>
 				<p>Because you like to live life on the edge of space.</p>
 			</div>
 		</div>
-	</div>
-
-	<div class="col-md-8 usage-section">
-		<h3 class="usage-heading" id="make-content-span-full-width"><a class="heading-anchor" href="#make-content-span-full-width"><i class="icon icon-link"></i></a>Make content span full width</h3>
-		<p>Don&apos;t wrap content in <code>.card-header</code>, <code>.card-footer</code>, or <code>.card-section</code> to make images and content span the full width of the card.</p>
 	</div>
 
 	<div class="col-md-12">
@@ -644,80 +643,14 @@
 	</div>
 </div>
 
-<div class="extend-cards-page row row-spacing">
-	<div class="col-md-4">
-		<div class="card">
-			<div class="figure">
-				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
-				<div class="figcaption-bottom figcaption-lg monospace">10 Most Delicious Space Foods</div>
-			</div>
-
-			<div class="card-section">
-				<p class="text-default">Number 1</p>
-
-				<h4 id="mystery-meal-1"><a class="heading-anchor" href="#mystery-meal-1"><i class="icon icon-link"></i></a>Mystery Meal</h4>
-
-				<p>Because you like to live life on the edge of space.</p>
-			</div>
-
-			<div class="card-footer" style="border-top:1px solid #DDD;">
-				<div class="link-group pull-left">
-					<a class="text-regular" href="#1">Share</a>
-					<a class="text-warning" href="#1">Explore</a>
-				</div>
-				<div class="link-group pull-right">
-					<a class="btn btn-sm btn-success" href="#1"><span class="icon-heart"></span></a>
-					<a class="btn btn-sm btn-success" href="#1" style="padding-left:6px;padding-right:5px;"><span class="icon-bookmark"></span></a>
-					<a class="btn btn-sm btn-warning" href="#1"><span class="icon-share-alt"></span></a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-8 usage-section">
-		<h3 class="usage-heading" id="create-a-custom-action-area-with-link-groups-and-buttons"><a class="heading-anchor" href="#create-a-custom-action-area-with-link-groups-and-buttons"><i class="icon icon-link"></i></a>Create a custom action area with link-groups and buttons</h3>
-		<p></p>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code class="html">&lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;figure&quot;&gt;
-        &lt;img class=&quot;img-responsive&quot; src=&quot;thumbnail.jpg&quot;&gt;
-        &lt;div class=&quot;figcaption-bottom figcaption-lg monospace&quot;&gt;10 Most Delicious Space Foods&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;card-section&quot;&gt;
-        &lt;p class=&quot;text-default&quot;&gt;Number 1&lt;/p&gt;
-
-        &lt;h4&gt;Mystery Meal&lt;/h4&gt;
-
-        &lt;p&gt;Because you like to live life on the edge of space.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;card-footer&quot; style=&quot;border-top:1px solid #DDD;&quot;&gt;
-        &lt;div class=&quot;link-group pull-left&quot;&gt;
-            &lt;a class=&quot;text-regular&quot; href=&quot;#1&quot;&gt;Share&lt;/a&gt;
-            &lt;a class=&quot;text-warning&quot; href=&quot;#1&quot;&gt;Explore&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;link-group pull-right&quot;&gt;
-            &lt;a class=&quot;btn btn-sm btn-success&quot; href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-heart&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-            &lt;a class=&quot;btn btn-sm btn-success&quot; href=&quot;#1&quot; style=&quot;padding-left:6px;padding-right:5px;&quot;&gt;&lt;span class=&quot;icon-bookmark&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-            &lt;a class=&quot;btn btn-sm btn-warning&quot; href=&quot;#1&quot;&gt;&lt;span class=&quot;icon-share-alt&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
 <div class="row row-spacing">
-	<div class="col-md-5">
+	<div class="col-md-12">
+		<h3 id="make-an-image-fill-card-col"><a class="heading-anchor" href="#make-an-image-fill-card-col"><i class="icon icon-link"></i></a>Make an Image Fill Card-col</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">Use the <a href="../images-and-thumbnails/#cropImage">crop-img</a> and <a href="../figures">figures</a> component to make an image fill a card column.</blockquote>
+	</div>
+
+	<div class="col-md-6">
 		<div class="card-horizontal">
 			<div class="card-row">
 				<div class="card-col-5">
@@ -727,7 +660,7 @@
 				</div>
 
 				<div class="card-col-7 card-col-gutters">
-					<h4 id="travel-to-space-by-balloon"><a class="heading-anchor" href="#travel-to-space-by-balloon"><i class="icon icon-link"></i></a>Travel to Space by Balloon</h4>
+					<h4>Travel to Space by Balloon</h4>
 
 					<p>Space Program LLC is offering balloon rides to space!</p>
 
@@ -740,8 +673,9 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-
+	<div class="col-md-6">
 		<div class="card-horizontal">
 			<div class="card-row">
 				<div class="card-col-5">
@@ -757,7 +691,7 @@
 				</div>
 
 				<div class="card-col-7 card-col-gutters">
-					<h4 id="space-elevator"><a class="heading-anchor" href="#space-elevator"><i class="icon icon-link"></i></a>Space Elevator</h4>
+					<h4>Space Elevator</h4>
 
 					<p>Space Program LLC is building an elevator to space!</p>
 
@@ -770,12 +704,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="col-md-7">
-		<h3 class="usage-heading" id="make-an-image-fill-card-col"><a class="heading-anchor" href="#make-an-image-fill-card-col"><i class="icon icon-link"></i></a>Make an image fill card-col</h3>
-
-		<p>Use the <a href="../images-and-thumbnails/#cropImage">crop-img</a> and <a href="../figures">figures</a> component to make an image fill a card column.</p>
 	</div>
 
 	<div class="col-md-12">
@@ -807,7 +735,7 @@
 
 <div class="extend-cards-page row row-spacing">
 	<div class="col-md-12">
-		<h3 id="some-alternate-styles"><a class="heading-anchor" href="#some-alternate-styles"><i class="icon icon-link"></i></a>Some alternate styles</h3>
+		<h3 id="some-alternate-styles"><a class="heading-anchor" href="#some-alternate-styles"><i class="icon icon-link"></i></a>Some Alternate Styles</h3>
 	</div>
 
 	<div class="col-md-4">

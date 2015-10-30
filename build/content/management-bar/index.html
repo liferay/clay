@@ -23,7 +23,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.20</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
 			</div>
 
 			<div class="dropdown uxgl-site-config" id="siteConfig">
@@ -104,6 +104,8 @@
 <li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
 </li>
@@ -194,6 +196,8 @@
 </ul>
 </div>
 </li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
 </ul>
 	</div>
 </nav>
@@ -230,12 +234,6 @@
 					<span class="management-bar-item-title">Label</span>
 					<span class="icon-sort">
 				</span></a>
-			</div>
-
-			<div class="management-bar-header-right">
-				<a class="btn" href="#"><span class="icon-th-large icon-monospaced"></span></a>
-				<a class="btn" href="#"><span class="icon-th-list icon-monospaced"></span></a>
-				<a class="btn hidden-xs" href="#"><span class="icon-th icon-monospaced"></span></a>
 			</div>
 
 			<div class="collapse management-bar-collapse" id="mgmtBarCollapse00">
@@ -328,6 +326,12 @@
 					</li>
 				</ul>
 			</div>
+
+			<div class="management-bar-header-right">
+				<a class="btn" href="#"><span class="icon-th-large icon-monospaced"></span></a>
+				<a class="btn" href="#"><span class="icon-th-list icon-monospaced"></span></a>
+				<a class="btn hidden-xs" href="#"><span class="icon-th icon-monospaced"></span></a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -342,20 +346,16 @@
 
 		<div class="management-bar management-bar-default">
 			<div class="management-bar-header">
-				<label class="checkbox-default">
-					<input type="checkbox" value="">
-				</label>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+					</label>
+				</div>
 
 				<a class="management-bar-toggle management-bar-toggle-link collapsed" data-toggle="collapse" href="#mgmtBarCollapse0">
 					<span class="management-bar-item-title">Label</span>
 					<span class="icon-sort">
 				</span></a>
-			</div>
-
-			<div class="management-bar-header-right">
-				<a class="btn" href="#"><span class="icon-th-large icon-monospaced"></span></a>
-				<a class="btn" href="#"><span class="icon-th-list icon-monospaced"></span></a>
-				<a class="btn hidden-xs" href="#"><span class="icon-th icon-monospaced"></span></a>
 			</div>
 
 			<div class="collapse management-bar-collapse" id="mgmtBarCollapse0">
@@ -381,32 +381,32 @@
 										<label for="exampleInputEmail3">Email address</label>
 										<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
 									</div>
-									<div class="checkbox checkbox-default active">
+									<div class="checkbox active">
 										<label>
 											<input checked type="checkbox" value=""> Approved
 										</label>
 									</div>
-									<div class="checkbox checkbox-default active">
+									<div class="checkbox active">
 										<label>
 											<input checked type="checkbox" value=""> Draft
 										</label>
 									</div>
-									<div class="checkbox checkbox-default active">
+									<div class="checkbox active">
 										<label>
 											<input checked type="checkbox" value=""> Pending
 										</label>
 									</div>
-									<div class="checkbox checkbox-default active">
+									<div class="checkbox active">
 										<label>
 											<input checked type="checkbox" value=""> Expired
 										</label>
 									</div>
-									<div class="checkbox checkbox-default">
+									<div class="checkbox">
 										<label>
 											<input type="checkbox" value=""> Scheduled
 										</label>
 									</div>
-									<div class="checkbox checkbox-default">
+									<div class="checkbox">
 										<label>
 											<input type="checkbox" value=""> Rejected
 										</label>
@@ -448,6 +448,12 @@
 					</li>
 				</ul>
 			</div>
+
+			<div class="management-bar-header-right">
+				<a class="btn" href="#"><span class="icon-th-large icon-monospaced"></span></a>
+				<a class="btn" href="#"><span class="icon-th-list icon-monospaced"></span></a>
+				<a class="btn hidden-xs" href="#"><span class="icon-th icon-monospaced"></span></a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -458,9 +464,11 @@
 <div class="collapse" id="codeCollapse0">
 	<pre><code class="html">&lt;div class=&quot;management-bar management-bar-default&quot;&gt;
     &lt;div class=&quot;management-bar-header&quot;&gt;
-        &lt;label class=&quot;checkbox-default&quot;&gt;
-            &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
-        &lt;/label&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;label&gt;
+                &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
 
         &lt;a class=&quot;management-bar-toggle management-bar-toggle-link collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#mgmtBarCollapse0&quot;&gt;
             &lt;span class=&quot;management-bar-item-title&quot;&gt;Label&lt;/span&gt;
@@ -497,22 +505,22 @@
                                 &lt;label for=&quot;exampleInputEmail3&quot;&gt;Email address&lt;/label&gt;
                                 &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Email&quot;&gt;
                             &lt;/div&gt;
-                            &lt;div class=&quot;checkbox checkbox-default active&quot;&gt;
+                            &lt;div class=&quot;checkbox active&quot;&gt;
                                 &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Approved&lt;/label&gt;
                             &lt;/div&gt;
-                            &lt;div class=&quot;checkbox checkbox-default active&quot;&gt;
+                            &lt;div class=&quot;checkbox active&quot;&gt;
                                 &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Draft&lt;/label&gt;
                             &lt;/div&gt;
-                            &lt;div class=&quot;checkbox checkbox-default active&quot;&gt;
+                            &lt;div class=&quot;checkbox active&quot;&gt;
                                 &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Pending&lt;/label&gt;
                             &lt;/div&gt;
-                            &lt;div class=&quot;checkbox checkbox-default active&quot;&gt;
+                            &lt;div class=&quot;checkbox active&quot;&gt;
                                 &lt;label&gt;&lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt; Expired&lt;/label&gt;
                             &lt;/div&gt;
-                            &lt;div class=&quot;checkbox checkbox-default&quot;&gt;
+                            &lt;div class=&quot;checkbox&quot;&gt;
                                 &lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt; Scheduled&lt;/label&gt;
                             &lt;/div&gt;
-                            &lt;div class=&quot;checkbox checkbox-default&quot;&gt;
+                            &lt;div class=&quot;checkbox&quot;&gt;
                                 &lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt; Rejected&lt;/label&gt;
                             &lt;/div&gt;
                         &lt;/form&gt;
@@ -566,9 +574,11 @@
 		<div class="management-bar management-bar-default management-bar-no-collapse">
 			<ul class="nav management-bar-nav">
 				<li>
-					<label class="checkbox-default">
-						<input type="checkbox" value="">
-					</label>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" value="">
+						</label>
+					</div>
 				</li>
 				<li>
 					<span class="management-bar-text">4 items selected</span>
@@ -602,14 +612,16 @@
 <div class="collapse" id="codeCollapse1">
 	<pre><code class="html">&lt;div class=&quot;management-bar management-bar-default management-bar-no-collapse&quot;&gt;
     &lt;ul class=&quot;nav management-bar-nav&quot;&gt;
-      &lt;li&gt;
-          &lt;label class=&quot;checkbox-default&quot;&gt;
-              &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
-          &lt;/label&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-          &lt;span class=&quot;management-bar-text&quot;&gt;4 items selected&lt;/span&gt;
-      &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class=&quot;checkbox&quot;&gt;
+                &lt;label&gt;
+                    &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;span class=&quot;management-bar-text&quot;&gt;4 items selected&lt;/span&gt;
+        &lt;/li&gt;
     &lt;/ul&gt;
 
     &lt;ul class=&quot;nav management-bar-nav management-bar-right&quot;&gt;
