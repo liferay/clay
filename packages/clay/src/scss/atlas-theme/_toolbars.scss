@@ -71,8 +71,8 @@
 	.toolbar-group:first-child {
 		.toolbar-group-content,
 		.toolbar-group-field {
-			&:first-child {
-				border-right: 1px solid rgba(255, 255, 255, 0.05);
+			&:nth-of-type(2) {
+				border-left: $header-toolbar-default-divider-width solid $header-toolbar-default-divider;
 			}
 		}
 	}

@@ -27,37 +27,17 @@
 
 .management-bar-header,
 .management-bar-header-right {
-	> .checkbox-default,
-	> .radio-default {
-		padding: 13px 15px;
-
+	> .checkbox,
+	> .radio {
 		@media screen and (min-width: $grid-float-breakpoint) {
-			padding: 20px 15px;
-		}
-
-		input[type="checkbox"],
-		input[type="radio"] {
-			margin-top: 0;
+			padding-bottom: 20px;
+			padding-top: 20px;
 		}
 	}
 }
 
 .management-bar-nav {
 	> li {
-		> .checkbox-default,
-		> .radio-default {
-			padding: 13px 15px;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				padding: 20px 15px;
-			}
-
-			input[type="checkbox"],
-			input[type="radio"] {
-				margin-top: 0;
-			}
-		}
-
 		> .management-bar-text {
 			padding: 13px 15px;
 
@@ -69,8 +49,17 @@
 }
 
 .management-bar-no-collapse .management-bar-nav {
-	> li > .btn {
-		padding: 0;
+	> li {
+		> .btn {
+			padding: 0;
+		}
+
+		> .checkbox,
+		> .radio {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				padding: 20px 15px;
+			}
+		}
 	}
 
 	.dropdown-menu {
@@ -96,7 +85,7 @@
 
 .management-bar-toggle-link {
 	&.management-bar-toggle {
-		padding: 13px 15px;
+		padding: 14px 15px;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
 			padding: $management-bar-padding-vertical $management-bar-padding-horizontal;

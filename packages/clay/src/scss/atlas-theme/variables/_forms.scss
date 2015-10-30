@@ -31,10 +31,6 @@ $input-mobile-height-small: 32px !default; // Atlas
 
 $form-group-margin-bottom:                 20px !default;
 
-$checkbox-size: 20px !default; // Atlas
-
-$radio-size: $checkbox-size !default; // Atlas
-
 // Skin
 
 $input-border-radius:                      0 !default;
@@ -77,17 +73,3 @@ $input-group-default-addon-border-color: #DDD !default; // Atlas
 $input-danger: $brand-danger !default; // Atlas
 $input-success: $brand-success !default; // Atlas
 $input-warning: $brand-warning !default; // Atlas
-
-$checkbox-default-bg: $body-bg !default; // Atlas
-$checkbox-default-border: #B0B4BB !default; // Atlas
-$checkbox-default-check: "\f00c" !default; // Atlas
-$checkbox-default-checked-bg: $brand-primary !default; // Atlas
-$checkbox-default-checked-border: transparent !default; // Atlas
-$checkbox-default-checked-color: #FFF !default; // Atlas
-
-$radio-default-check: "\e009" !default; // Atlas
-$radio-default-bg: $checkbox-default-bg !default; // Atlas
-$radio-default-border: $checkbox-default-border !default; // Atlas
-$radio-default-checked-bg: $checkbox-default-checked-bg !default; // Atlas
-$radio-default-checked-border: $checkbox-default-checked-border !default; // Atlas
-$radio-default-checked-color: $checkbox-default-checked-color !default; // Atlas

@@ -2,17 +2,31 @@
 	display: inline-block;
 	fill: currentColor;
 	height: $lexicon-icon-size;
-	width: $lexicon-icon-size;
 	vertical-align: middle;
+	width: $lexicon-icon-size;
 }
 
-a .icon-monospaced {
+.lexicon-icon-sm {
+	height: $lexicon-icon-sm-size;
+	width: $lexicon-icon-sm-size;
+}
+
+.lexicon-icon-md {
+	height: $lexicon-icon-md-size;
+	width: $lexicon-icon-md-size;
+}
+
+.lexicon-icon-lg {
+	height: $lexicon-icon-lg-size;
+	width: $lexicon-icon-lg-size;
+}
+
+a .icon-monospaced,
+.icon-monospaced {
 	display: inline-block;
 }
 
 .icon-monospaced {
-	display: inline-block;
-
 	@include monospace($icon-monospaced-size);
 
 	text-align: center;
