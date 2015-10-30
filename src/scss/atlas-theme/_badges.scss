@@ -1,51 +1,65 @@
 .badge {
-	border-radius: $badge-border-radius;
-	font-size: $badge-font-size;
 	font-weight: 500;
-	line-height: $badge-height;
-	padding: $badge-padding-vertical $badge-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		font-size: $badge-desktop-font-size;
 	}
-
-	.icon-monospaced {
-		margin-right: -($badge-padding-horizontal / 2);
-
-		@include monospace($badge-monospaced-size);
-	}
 }
 
 .badge-lg {
-	font-size: 85%;
-	line-height: $badge-lg-height;
-	padding: $badge-lg-padding-vertical $badge-lg-padding-horizontal;
-
 	@media screen and (min-width: $grid-float-breakpoint) {
-		font-size: 100%;
-	}
-
-	.icon-monospaced {
-		margin-right: -($badge-lg-padding-horizontal / 2);
-
-		@include monospace($badge-lg-monospaced-size);
+		font-size: $badge-lg-desktop-font-size;
 	}
 }
 
 .badge-sm {
-	font-size: 75%;
-	line-height: $badge-sm-height;
-	padding: $badge-sm-padding-vertical $badge-sm-padding-horizontal;
-
-	.icon-monospaced {
-		margin-right: -($badge-sm-padding-horizontal / 2);
-
-		@include monospace($badge-sm-monospaced-size);
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $badge-sm-desktop-font-size;
 	}
 }
 
-.badge-monospaced {
-	padding: 0;
+// .badge-monospaced {
+//	padding: 0;
+// }
+
+// Badge Icon Monospaced Sizes
+
+.icon-monospaced {
+	.badge & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			@include monospace($badge-desktop-font-size);
+		}
+	}
+
+	.badge-lg & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			@include monospace($badge-lg-desktop-font-size);
+		}
+	}
+
+	.badge-sm & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			@include monospace($badge-sm-desktop-font-size);
+		}
+	}
+}
+
+// Badge Lexicon Icon Sizes
+
+.lexicon-icon {
+	.badge & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: floor($badge-desktop-font-size * 0.75);
+			width: floor($badge-desktop-font-size * 0.75);
+		}
+	}
+
+	.badge-lg & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: floor($badge-lg-desktop-font-size * 0.75);
+			width: floor($badge-lg-desktop-font-size * 0.75);
+		}
+	}
 }
 
 // Skins

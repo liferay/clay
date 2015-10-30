@@ -1,4 +1,4 @@
-label {
+label, .control-label {
 	color: $input-label-color;
 	font-size: $input-label-font-size;
 	font-weight: 500;
@@ -131,97 +131,6 @@ select[disabled].form-control > option {
 .radio {
 	label {
 		font-weight: 500;
-	}
-}
-
-// Webkit only checkboxes
-
-.checkbox-default {
-	input[type="checkbox"] {
-		-webkit-appearance: none;
-		background-color: $checkbox-default-bg;
-		border: 1px solid $checkbox-default-border;
-		border-width: 0 \9;
-		border-radius: 2px;
-		height: $checkbox-size;
-		position: relative;
-		text-align: center;
-		vertical-align: bottom;
-		width: $checkbox-size;
-
-		&:checked {
-			background-color: $checkbox-default-checked-bg;
-			border-color: $checkbox-default-checked-border;
-
-			&:after {
-				color: $checkbox-default-checked-color;
-				content: $checkbox-default-check;
-				display: block;
-				font-family: 'fontawesome-alloy';
-				font-size: 10px;
-				height: 100%;
-				line-height: $checkbox-size - 2;
-				width: 100%;
-			}
-		}
-	}
-}
-
-.radio-default {
-	input[type='radio'] {
-		-webkit-appearance: none;
-		background-color: $radio-default-bg;
-		border: 1px solid $radio-default-border;
-		border-width: 0 \9;
-		border-radius: 50%;
-		height: $radio-size;
-		position: relative;
-		text-align: center;
-		vertical-align: bottom;
-		width: $radio-size;
-
-		&:checked {
-			background-color: $radio-default-checked-bg;
-			border-color: $radio-default-checked-border;
-
-			&:after {
-				color: $radio-default-checked-color;
-				content: $radio-default-check;
-				display: block;
-				font-family: 'fontawesome-alloy';
-				font-size: 7px;
-				height: 100%;
-				line-height: $radio-size;
-				width: 100%;
-			}
-		}
-	}
-}
-
-.checkbox-default.disabled,
-.radio-default.disabled,
-.checkbox-default.disabled input[type="checkbox"],
-.radio-default.disabled input[type="radio"],
-.checkbox-default [disabled],
-.radio-default [disabled] {
-	cursor: not-allowed;
-	opacity: 0.5;
-}
-
-.input-group {
-	label {
-		&.checkbox-default,
-		&.radio-default {
-			margin-bottom: 0;
-		}
-
-		&.checkbox-default input[type="checkbox"] {
-			border-color: transparent;
-		}
-
-		&.radio-default input[type="radio"] {
-			border-color: transparent;
-		}
 	}
 }
 

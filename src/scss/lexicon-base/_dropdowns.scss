@@ -1,6 +1,6 @@
 .dropdown-menu form {
-	.checkbox-default,
-	.radio-default,
+	.checkbox,
+	.radio,
 	.form-group {
 		&:hover {
 			background-color: $dropdown-link-hover-bg;
@@ -25,8 +25,8 @@
 		}
 	}
 
-	.checkbox-default,
-	.radio-default {
+	.checkbox,
+	.radio {
 		margin: 0;
 
 		input[type='checkbox'],

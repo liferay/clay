@@ -6,8 +6,14 @@
 	padding-left: $management-bar-padding-horizontal;
 	padding-right: $management-bar-padding-horizontal;
 
-	label {
+	.checkbox,
+	.radio {
 		margin-bottom: 0;
+		margin-top: 0;
+
+		label {
+			display: block;
+		}
 	}
 
 	.btn {
@@ -70,8 +76,10 @@
 
 .management-bar-header,
 .management-bar-header-right {
-	> .checkbox-default {
-		padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+	> .checkbox,
+	> .radio {
+		float: left;
+		padding: $management-bar-padding-vertical 0;
 	}
 }
 
@@ -79,10 +87,6 @@
 	@extend .navbar-header;
 
 	float: left;
-
-	.checkbox-default {
-		margin-bottom: 0;
-	}
 }
 
 .management-bar-header-right {
@@ -181,6 +185,12 @@
 
 		&:first-child {
 			margin-left: 0;
+
+			> .checkbox,
+			> .radio {
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 
 		> a {
@@ -200,7 +210,7 @@
 	@extend .navbar-nav;
 
 	> li {
-		> .checkbox-default,
+		> .checkbox,
 		.management-bar-text {
 			padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
 		}
