@@ -23,7 +23,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.20</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
 			</div>
 
 			<div class="dropdown uxgl-site-config" id="siteConfig">
@@ -104,6 +104,8 @@
 <li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggles">Toggles</a>
 </li>
@@ -194,6 +196,8 @@
 </ul>
 </div>
 </li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
 </ul>
 	</div>
 </nav>
@@ -258,43 +262,39 @@
 	</div>
 
 	<div class="col-md-6">
-		<h5 id="checkboxes"><a class="heading-anchor" href="#checkboxes"><i class="icon icon-link"></i></a>Checkboxes</h5>
+		<h5>Checkboxes</h5>
 
 <!-- Checkboxes unable to be styled in Firefox with this method. See https://bugzilla.mozilla.org/show_bug.cgi?id=605985
 Checkboxes unable to be styled in IE with this method. -->
 
-		<div>
-			<label class="checkbox-default">
-				<input class="input-sm" type="checkbox" value="">
-			</label>
-		</div>
-		<label class="checkbox-default">
-			<input type="checkbox" value="">
-			Label
-		</label>
-		<div class="checkbox checkbox-default">
+		<div class="checkbox">
 			<label>
-				<input class="input-sm" type="checkbox" value="">
-				Label with class checkbox
+				<input type="checkbox" value="">
 			</label>
 		</div>
-		<div class="checkbox checkbox-default disabled">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="">
+				Label
+			</label>
+		</div>
+		<div class="checkbox disabled">
 			<label>
 				<input checked disabled type="checkbox" value="">
 				Disabled Check Box
 			</label>
 		</div>
 
-		<div>
-			<label class="checkbox-inline checkbox-default">
+		<div class="checkbox">
+			<label class="checkbox-inline">
 				<input type="checkbox" id="inlineCheckbox1" value="option1">
 				1
 			</label>
-			<label class="checkbox-inline checkbox-default">
+			<label class="checkbox-inline">
 				<input type="checkbox" id="inlineCheckbox2" value="option2">
 				2
 			</label>
-			<label class="checkbox-inline checkbox-default">
+			<label class="checkbox-inline">
 				<input type="checkbox" id="inlineCheckbox3" value="option3">
 				3
 			</label>
@@ -302,42 +302,39 @@ Checkboxes unable to be styled in IE with this method. -->
 	</div>
 
 	<div class="col-md-6">
-		<h5 id="radio-buttons"><a class="heading-anchor" href="#radio-buttons"><i class="icon icon-link"></i></a>Radio Buttons</h5>
+		<h5>Radio Buttons</h5>
 
-		<div>
-			<label class="radio-default">
+		<div class="radio">
+			<label>
 				<input type="radio" value="">
 			</label>
 		</div>
 
-		<label class="radio-default">
-			<input type="radio" value="">
-			Label
-		</label>
-
-		<div class="radio radio-default">
+		<div class="radio">
 			<label>
-				<input type="radio">
-				Regular Radio Button
+				<input type="radio" value="">
+				Label
 			</label>
 		</div>
 
-		<div class="radio radio-default disabled">
+		<div class="radio disabled">
 			<label>
 				<input disabled type="radio">
 				Disabled Radio Button
 			</label>
 		</div>
 
-		<label class="radio-default radio-inline">
-			<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"> 1
-		</label>
-		<label class="radio-default radio-inline">
-			<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"> 2
-		</label>
-		<label class="radio-default radio-inline">
-			<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"> 3
-		</label>
+		<div class="radio">
+			<label class="radio-inline">
+				<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"> 1
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"> 2
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"> 3
+			</label>
+		</div>
 	</div>
 </div>
 
@@ -345,14 +342,14 @@ Checkboxes unable to be styled in IE with this method. -->
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-  <pre><code class="html">&lt;div class=&quot;checkbox checkbox-default&quot;&gt;
+  <pre><code class="html">&lt;div class=&quot;checkbox&quot;&gt;
     &lt;label&gt;
         &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
         Label with class checkbox
     &lt;/label&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;radio radio-default&quot;&gt;
+&lt;div class=&quot;radio&quot;&gt;
     &lt;label&gt;
         &lt;input type=&quot;radio&quot;&gt;
         Regular Radio Button
@@ -362,7 +359,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="select-box-regular-select-box-sample-1-sample-2-sample-3-sample-4-select-box-with-multiple-select-options-sample-1-sample-2-sample-3-sample-4-sample-5-sample-6-sample-7-sample-8-div-classform-group-labelregular-select-boxlabel-select-classform-control-optionsample-1option-optionsample-2option-optionsample-3option-optionsample-4option-select-div-div-classform-group-labelselect-box-with-multiple-select-optionslabel-select-classform-control-multiple-optionsample-1option-optionsample-2option-optionsample-3option-optionsample-4option-optionsample-5option-optionsample-6option-optionsample-7option-optionsample-8option-select-div-"><a class="heading-anchor" href="#select-box-regular-select-box-sample-1-sample-2-sample-3-sample-4-select-box-with-multiple-select-options-sample-1-sample-2-sample-3-sample-4-sample-5-sample-6-sample-7-sample-8-div-classform-group-labelregular-select-boxlabel-select-classform-control-optionsample-1option-optionsample-2option-optionsample-3option-optionsample-4option-select-div-div-classform-group-labelselect-box-with-multiple-select-optionslabel-select-classform-control-multiple-optionsample-1option-optionsample-2option-optionsample-3option-optionsample-4option-optionsample-5option-optionsample-6option-optionsample-7option-optionsample-8option-select-div-"><i class="icon icon-link"></i></a>Select Box
+		<h3 id="select-box"><a class="heading-anchor" href="#select-box"><i class="icon icon-link"></i></a>Select Box</h3>
 
 		<div class="form-group">
 			<label>Regular Select Box</label>
@@ -417,7 +414,7 @@ Checkboxes unable to be styled in IE with this method. -->
 &lt;/div&gt;</code></pre>
 </div>
 
-	</h3></div>
+	</div>
 </div>
 
 <div class="row row-spacing">
@@ -535,7 +532,7 @@ Checkboxes unable to be styled in IE with this method. -->
 					</select>
 				</div>
 
-				<div class="checkbox checkbox-default">
+				<div class="checkbox">
 					<label>
 						<input checked type="checkbox" value="">
 						<span class="skin"></span>
@@ -543,7 +540,7 @@ Checkboxes unable to be styled in IE with this method. -->
 					</label>
 				</div>
 
-				<div class="radio radio-default">
+				<div class="radio">
 					<label>
 						<input type="radio" value="">
 						<span class="skin"></span>
@@ -573,7 +570,7 @@ Checkboxes unable to be styled in IE with this method. -->
             &lt;/select&gt;
         &lt;/div&gt;
 
-        &lt;div class=&quot;checkbox checkbox-default&quot;&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
             &lt;label&gt;
                 &lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt;
                 &lt;span class=&quot;skin&quot;&gt;&lt;/span&gt;
@@ -581,7 +578,7 @@ Checkboxes unable to be styled in IE with this method. -->
             &lt;/label&gt;
         &lt;/div&gt;
 
-        &lt;div class=&quot;radio radio-default&quot;&gt;
+        &lt;div class=&quot;radio&quot;&gt;
             &lt;label&gt;
                 &lt;input type=&quot;radio&quot; value=&quot;&quot;&gt;
                 &lt;span class=&quot;skin&quot;&gt;&lt;/span&gt;
@@ -599,7 +596,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="read-only-states-text-input-read-only-textarea-read-only-plunger-pot-extra-siphon-latte-as-americano-aromatic-roast-cultivar-cup-cup-frappuccino-to-go-strong-half-and-half-foam-single-origin-cultivar-affogato-black-grounds-shop-ut-plunger-pot-con-panna-aroma-pumpkin-spice-to-go-wings-aromatic-single-shot-aged-single-shot-to-go-extraction-java-percolator-americano-at-cultivar-grinder-est-java-percolator-plunger-pot-shop-con-panna-div-classform-group-labeltext-input-read-onlylabel-input-classform-control-placeholderplaceholder-readonly-typetext-div-div-classform-group-labeltextarea-read-onlylabel-textarea-classform-control-placeholderplaceholder-readonlytextarea-div-"><a class="heading-anchor" href="#read-only-states-text-input-read-only-textarea-read-only-plunger-pot-extra-siphon-latte-as-americano-aromatic-roast-cultivar-cup-cup-frappuccino-to-go-strong-half-and-half-foam-single-origin-cultivar-affogato-black-grounds-shop-ut-plunger-pot-con-panna-aroma-pumpkin-spice-to-go-wings-aromatic-single-shot-aged-single-shot-to-go-extraction-java-percolator-americano-at-cultivar-grinder-est-java-percolator-plunger-pot-shop-con-panna-div-classform-group-labeltext-input-read-onlylabel-input-classform-control-placeholderplaceholder-readonly-typetext-div-div-classform-group-labeltextarea-read-onlylabel-textarea-classform-control-placeholderplaceholder-readonlytextarea-div-"><i class="icon icon-link"></i></a>Read Only States<h3 id="-text-input-read-only-textarea-read-only-plunger-pot-extra-siphon-latte-as-americano-aromatic-roast-cultivar-cup-cup-frappuccino-to-go-strong-half-and-half-foam-single-origin-cultivar-affogato-black-grounds-shop-ut-plunger-pot-con-panna-aroma-pumpkin-spice-to-go-wings-aromatic-single-shot-aged-single-shot-to-go-extraction-java-percolator-americano-at-cultivar-grinder-est-java-percolator-plunger-pot-shop-con-panna-div-classform-group-labeltext-input-read-onlylabel-input-classform-control-placeholderplaceholder-readonly-typetext-div-div-classform-group-labeltextarea-read-onlylabel-textarea-classform-control-placeholderplaceholder-readonlytextarea-div-"><a class="heading-anchor" href="#-text-input-read-only-textarea-read-only-plunger-pot-extra-siphon-latte-as-americano-aromatic-roast-cultivar-cup-cup-frappuccino-to-go-strong-half-and-half-foam-single-origin-cultivar-affogato-black-grounds-shop-ut-plunger-pot-con-panna-aroma-pumpkin-spice-to-go-wings-aromatic-single-shot-aged-single-shot-to-go-extraction-java-percolator-americano-at-cultivar-grinder-est-java-percolator-plunger-pot-shop-con-panna-div-classform-group-labeltext-input-read-onlylabel-input-classform-control-placeholderplaceholder-readonly-typetext-div-div-classform-group-labeltextarea-read-onlylabel-textarea-classform-control-placeholderplaceholder-readonlytextarea-div-"><i class="icon icon-link"></i></a>
+		<h3 id="read-only-states"><a class="heading-anchor" href="#read-only-states"><i class="icon icon-link"></i></a>Read Only States</h3>
 
 		<div class="form-group">
 			<label>Text Input (Read Only)</label>
@@ -626,7 +623,7 @@ Checkboxes unable to be styled in IE with this method. -->
 &lt;/div&gt;</code></pre>
 </div>
 
-	</h3></h3></div>
+	</div>
 </div>
 
 <div class="row row-spacing">

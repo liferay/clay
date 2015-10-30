@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.20
+* Lexicon 0.1.21
 *
 * Copyright 2015, Liferay, Inc.
 * All rights reserved.
@@ -217,16 +217,6 @@ body.fixed {
   position: fixed;
   right: 0;
   top: 0;
-}
-
-#blogActions .management-bar {
-  padding-left: 4px;
-}
-
-@media screen and (min-width: 768px) {
-  #blogActions .management-bar {
-    padding-left: 0;
-  }
 }
 
 #blogActions .navbar {
@@ -781,6 +771,9 @@ h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, 
     float: none;
     opacity: 0;
     margin-left: -20px;
+  }
+  h1 .heading-anchor:focus, h2 .heading-anchor:focus, h3 .heading-anchor:focus, h4 .heading-anchor:focus, h5 .heading-anchor:focus, h6 .heading-anchor:focus {
+    opacity: 1;
   }
   h1:hover .heading-anchor, h2:hover .heading-anchor, h3:hover .heading-anchor, h4:hover .heading-anchor, h5:hover .heading-anchor, h6:hover .heading-anchor {
     opacity: 1;
