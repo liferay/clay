@@ -635,12 +635,9 @@
 					content.addClass('sidenav-transition');
 				}
 
+				container.removeClass('closed');
+				content.addClass(openClass);
 				toggler.addClass(openClass);
-
-				setTimeout(function() {
-					container.removeClass('closed');
-					content.addClass(openClass);
-				}, 0);
 			}
 			else {
 				if (desktopFixedPush || mobileFixedPush) {
@@ -659,12 +656,9 @@
 					instance._removeBodyFixed();
 				}
 
+				container.addClass('closed');
+				content.removeClass(openClass);
 				toggler.removeClass(openClass);
-
-				setTimeout(function() {
-					container.addClass('closed');
-					content.removeClass(openClass);
-				}, 0);
 			}
 		}
 	};

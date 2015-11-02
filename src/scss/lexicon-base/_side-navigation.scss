@@ -32,6 +32,7 @@
 .sidenav-container.closed {
 	> .sidenav-menu-slider {
 		overflow: hidden;
+		visibility: hidden;
 		width: 0;
 	}
 
@@ -113,6 +114,7 @@
 	top: 0;
 
 	&.closed {
+		visibility: hidden;
 		width: 0;
 	}
 
