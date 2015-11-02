@@ -610,7 +610,9 @@ body.fixed {
 // Site Main Nav
 
 #wrapper.open {
-	padding-left: 400px;
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding-left: 400px;
+	}
 }
 
 [href="#simpleSidenav"] {
@@ -842,6 +844,11 @@ h1, h2, h3, h4, h5, h6 {
 		margin: 0 -20px;
 		padding: 15px;
 	}
+}
+
+.sidenav-demo-container {
+	overflow: hidden;
+	padding-top: 3px;
 }
 
 // Switches Page
