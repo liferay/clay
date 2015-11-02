@@ -1,4 +1,6 @@
 ## Next Release
+* No changes yet
+***
 
 ## v0.1.21 - October 30, 2015
 
