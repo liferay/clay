@@ -1,5 +1,9 @@
 ## Next Release
 
+* Site: Added skip to content button
+* Site: Align settings button on mobile
+* Site: Don't use side-navigation plugin for sites nav
+
 ## v0.1.21 - October 30, 2015
 
 * New: Add sizes sm, default,  md, lg to Lexicon icons
