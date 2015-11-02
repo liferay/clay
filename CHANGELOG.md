@@ -2,6 +2,8 @@
 * No changes yet
 ***
 
+* Breaking: Remove tabular-list-group in favor of list-group-card
+
 ## v0.1.21 - October 30, 2015
 
 * New: Add sizes sm, default,  md, lg to Lexicon icons
