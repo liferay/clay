@@ -1,5 +1,7 @@
 ## Next Release
 
+* Breaking: Remove link-group
+
 ## v0.1.21 - October 30, 2015
 
 * New: Add sizes sm, default,  md, lg to Lexicon icons
