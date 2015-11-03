@@ -1,6 +1,6 @@
 ## Next Release
-* No changes yet
-***
+
+Site: Increase Sass precision to 8
 
 ## v0.1.21 - October 30, 2015
 
