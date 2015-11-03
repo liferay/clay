@@ -107,6 +107,12 @@
 	z-index: 1;
 }
 
+.navbar-collapse-left {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		float: left;
+	}
+}
+
 // Navbar Collapse Basic Search Styles
 
 .collapse-basic-search {
@@ -196,7 +202,6 @@
 	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
 
 .navbar {
-	.navbar-collapse:first-child,
 	.navbar-collapse-absolute {
 		left: -1px;
 		position: absolute;
@@ -230,10 +235,6 @@
 		}
 
 		+ .navbar-header {
-			@media screen and (min-width: $grid-float-breakpoint) {
-				float: none;
-			}
-
 			.basic-search {
 				@media screen and (min-width: $grid-float-breakpoint) {
 					width: auto;
@@ -272,6 +273,18 @@
 	@media screen and (min-width: $grid-float-breakpoint) {
 		max-width: none;
 		min-width: 0;
+	}
+}
+
+.navbar-header-left-xs {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		float: left;
+	}
+}
+
+.navbar-header-right-xs {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		float: right;
 	}
 }
 
