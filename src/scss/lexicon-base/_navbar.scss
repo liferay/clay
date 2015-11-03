@@ -140,6 +140,13 @@
 			position: static;
 		}
 
+		&.basic-search-transition,
+		&.open {
+			.input-group-input {
+				visibility: visible;
+			}
+		}
+
 		&.open .basic-search-close {
 			@media screen and (min-width: $grid-float-breakpoint) {
 				display: none;
@@ -148,9 +155,11 @@
 
 		.input-group-input {
 			overflow: hidden;
+			visibility: hidden;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
 				overflow: visible;
+				visibility: visible;
 			}
 
 			.form-control {
