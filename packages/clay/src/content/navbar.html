@@ -13,17 +13,20 @@ section: Components
 		</blockquote>
 
 		<nav class="navbar navbar-default">
-			<div class="navbar-header">
+			<div class="navbar-header navbar-header-left-xs">
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<div class="navbar-header navbar-header-right">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-0" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Brand</a>
 			</div>
 
-			<div class="navbar-collapse navbar-collapse-absolute collapse" id="navbar-collapse-0" aria-expanded="false">
+			<div class="navbar-collapse collapse" id="navbar-collapse-0" aria-expanded="false">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
 					<li class="dropdown">
@@ -129,14 +132,17 @@ section: Components
 		</blockquote>
 
 		<nav class="navbar navbar-default">
-			<div class="navbar-header">
+			<div class="navbar-header navbar-header-left-xs">
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<div class="navbar-header navbar-header-right">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Brand</a>
 			</div>
 
 			<div class="navbar-collapse collapse" id="navbar-collapse-2" aria-expanded="false">
@@ -208,11 +214,19 @@ section: Components
 
 		<h3>Alternate Navbar Toggle Style</h3>
 		<blockquote class="blockquote-success blockquote-sm">
-			<p>Style navbar toggle like a navbar navigation item with <code>navbar-toggle-page-name</code>.</p>
+			<p>In mobile screen sizes, style the navbar toggle like a navbar navigation item with <code>navbar-toggle-page-name</code>.</p>
 		</blockquote>
 
 		<nav class="navbar navbar-default collapse-basic-search">
-			<div class="collapse navbar-collapse" id="navbar-collapse-001">
+			<div class="navbar-header visible-xs">
+				<button type="button" class="navbar-toggle navbar-toggle-left navbar-toggle-page-name collapsed" data-toggle="collapse" data-target="#navbar-collapse-001">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
+					<span class="caret"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-collapse-left" id="navbar-collapse-001">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Message Boards</a></li>
 					<li class="dropdown">
@@ -251,17 +265,11 @@ section: Components
 			</div>
 
 			<div class="navbar-header navbar-header-right">
-				<button type="button" class="navbar-toggle navbar-toggle-left navbar-toggle-page-name collapsed" data-toggle="collapse" data-target="#navbar-collapse-001">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
-					<span class="caret"></span>
-				</button>
-
-				<form class="basic-search input-group">
+				<form action="../navbar" class="basic-search input-group" method="GET">
 					<div class="input-group-input">
 						<div class="basic-search-slider">
 							<button class="basic-search-close btn btn-default" type="button"><span class="icon-remove"></span></button>
-							<input class="form-control" placeholder=" Search..." type="text" />
+							<input class="form-control" name="search" placeholder=" Search..." type="text" />
 						</div>
 					</div>
 					<div class="input-group-btn">
@@ -278,7 +286,15 @@ section: Components
 		</blockquote>
 
 		<nav class="navbar navbar-default collapse-basic-search">
-			<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<div class="navbar-header visible-xs">
+				<button type="button" class="navbar-toggle navbar-toggle-left navbar-toggle-page-name collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
+					<span class="caret"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-collapse-left" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Message Boards</a></li>
 					<li class="dropdown">
@@ -317,12 +333,6 @@ section: Components
 			</div>
 
 			<div class="navbar-header navbar-header-right">
-				<button type="button" class="navbar-toggle navbar-toggle-left navbar-toggle-page-name collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
-					<span class="caret"></span>
-				</button>
-
 				<form class="basic-search input-group">
 					<div class="input-group-input">
 						<div class="basic-search-slider">
