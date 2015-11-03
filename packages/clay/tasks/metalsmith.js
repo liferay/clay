@@ -117,6 +117,7 @@ module.exports = function(gulp, plugins, _, config) {
 										return dir.replace(/^scss(\/|$)/, 'css$1');
 									},
 									outputStyle: 'expanded',
+									precision: 8,
 									sourceMap: true
 								}
 							)
