@@ -1,4 +1,6 @@
 ## Next Release
+* No changes yet
+***
 
 * Site: Added skip to content button
 * Site: Align settings button on mobile
