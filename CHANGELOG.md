@@ -6,6 +6,9 @@
 * Site: Align settings button on mobile
 * Site: Don't use side-navigation plugin for sites nav
 
+* Update: Move clamp css to its own file
+* Site: Update table-list demo to something more useful
+
 ## v0.1.21 - October 30, 2015
 
 * New: Add sizes sm, default,  md, lg to Lexicon icons
