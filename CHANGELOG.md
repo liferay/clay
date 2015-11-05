@@ -1,6 +1,10 @@
 ## Next Release
-* No changes yet
-***
+
+* Update: Add navbar layout helper classes for better keyboard accessibility
+* Update: Keyboard focus shouldn't enter collapsible search when closed
+* Fix: Navbar-toggle should have outline on focus
+* Site: Update navbar docs
+* Site: Reorganize navbar contents for better tabbing
 
 ## v0.1.21 - October 30, 2015
 
