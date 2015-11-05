@@ -37,8 +37,8 @@ button.list-group-heading,
 .list-group-heading.collapse-icon {
 	&:before {
 		content: $list-group-header-icon-open;
-		font-size: $list-group-header-icon-font-size;
 		font-family: $list-group-header-icon-font-family;
+		font-size: $list-group-header-icon-font-size;
 		right: 15px;
 	}
 
