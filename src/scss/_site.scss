@@ -20,6 +20,7 @@ section.row {
 }
 
 .page-title {
+	display: inline-block;
 	font-weight: bold;
 	margin-bottom: 25px;
 
@@ -60,21 +61,37 @@ section.row {
 			background-color: #FFF;
 		}
 	}
+}
 
-	.uxgl-site-config {
-		position: absolute;
-		right: 15px;
-		top: 50%;
-		transform: translateY(-50%);
-		z-index: 5;
+#siteConfig {
+	position: absolute;
+	right: 15px;
+	top: 50%;
 
-		.dropdown-menu {
-			width: 240px;
+	@include transform(translateY(-50%));
 
-			a {
-				color: initial;
-			}
+	z-index: 5;
+
+	.dropdown-menu {
+		width: 240px;
+
+		a {
+			color: initial;
 		}
+	}
+}
+
+#skipTo {
+	min-width: 170px;
+	position: absolute;
+	top: 50%;
+
+	@include transform(translateY(-50%));
+
+	z-index: -1;
+
+	&:focus {
+		z-index: 1;
 	}
 }
 
@@ -525,6 +542,10 @@ body.fixed {
 
 // Modals Page
 
+.modal-open .main-nav-open {
+	-webkit-overflow-scrolling: auto;
+}
+
 #modalDisplays {
 	.modal-dialog {
 		margin: 0 0 30px 0;
@@ -593,59 +614,6 @@ body.fixed {
 	margin-bottom: 15px;
 }
 
-body,
-html {
-	height: 100%;
-}
-
-.main-nav-open {
-	-webkit-overflow-scrolling: touch;
-	height: 100%;
-	overflow-x: hidden;
-}
-
-.modal-open .main-nav-open {
-	-webkit-overflow-scrolling: auto;
-}
-
-$sideNavWidth: 220px;
-
-#mainContent {
-	display: block;
-	position: relative;
-	width: 100%;
-
-	@media screen and (min-width: 768px) {
-		padding-left: $sideNavWidth + 10;
-	}
-
-	pre {
-		margin-bottom: 0;
-	}
-}
-
-.main-nav-open #mainContent {
-	left: $sideNavWidth + 10;
-
-	@media screen and (min-width: 768px) {
-		left: auto;
-	}
-}
-
-#mainNav {
-	> .sidenav-menu {
-		width: $sideNavWidth;
-	}
-}
-
-.main-nav-open #mainNav {
-	width: $sideNavWidth;
-
-	> .sidenav-menu {
-		width: $sideNavWidth;
-	}
-}
-
 .menu-toggle {
 	color: #FFF;
 	display: block;
@@ -658,7 +626,83 @@ $sideNavWidth: 220px;
 	}
 }
 
-.side-navigation {
+// Main Nav Structure
+
+$mainNavWidth: 220px;
+
+.lexicon-site-body-fixed {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		position: static;
+	}
+}
+
+#mainContent {
+	left: 0;
+	position: relative;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding-left: $mainNavWidth + 10;
+	}
+}
+
+#mainNav {
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		width: $mainNavWidth;
+	}
+}
+
+.main-nav-container {
+	position: relative;
+}
+
+.main-nav-inner {
+	padding: 3px;
+	width: $mainNavWidth;
+}
+
+.main-nav-open {
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+	overflow-x: hidden;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		overflow-x: visible;
+	}
+
+	#mainNav {
+		width: $mainNavWidth;
+	}
+
+	#mainContent {
+		left: $mainNavWidth + 10;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			left: auto;
+			position: static;
+		}
+	}
+}
+
+.main-nav-transition {
+	#mainNav,
+	#mainContent {
+		@include transition(all 0.25s ease);
+	}
+}
+
+// Main Nav Skin
+
+#mainNav {
 	padding-top: $line-height-computed - nth($nav-link-padding, 1);
 	z-index: 1;
 
@@ -709,17 +753,9 @@ $sideNavWidth: 220px;
 			}
 		}
 	}
-
-	.side-navigation-container > .nav-stacked > li > a.nav-title {
-		padding-bottom: 0;
-	}
 }
 
-.side-navigation-dropdown-container {
-	> a {
-		font-weight: bold;
-	}
-}
+// Metalsmith Headings Identifiers
 
 h1, h2, h3, h4, h5, h6 {
 	.heading-anchor {
@@ -736,8 +772,8 @@ h1, h2, h3, h4, h5, h6 {
 	@media (min-width: $screen-sm-min) {
 		.heading-anchor {
 			float: none;
-			opacity: 0;
 			margin-left: -20px;
+			opacity: 0;
 
 			&:focus {
 				opacity: 1;
@@ -802,40 +838,6 @@ h1, h2, h3, h4, h5, h6 {
 		color: #F8F8F8;
 		margin: 0 -20px;
 		padding: 15px;
-	}
-}
-
-/* Media Queries */
-
-@media screen and (min-width: 768px) {
-	#wrapper {
-		> .sidenav-container.closed {
-			> .sidenav-menu-slider {
-				width: $sideNavWidth;
-			}
-
-			> .sidenav-content {
-				padding-left: $sideNavWidth + 35;
-			}
-		}
-	}
-
-	#headerTopBar .title {
-		padding-left: 15px;
-	}
-
-	#mainContent {
-		left: 0;
-		margin-left: 7px;
-		width: 100%;
-	}
-
-	.main-nav-closed .side-navigation-container {
-		width: $sideNavWidth;
-	}
-
-	.menu-toggle {
-		display: none;
 	}
 }
 

@@ -1,4 +1,9 @@
 ## Next Release
+* Update: Move clamp css to its own file
+* Site: Added skip to content button
+* Site: Align settings button on mobile
+* Site: Don't use side-navigation plugin for sites nav
+* Site: Update table-list demo to something more useful
 
 * Breaking: Remove tabular-list-group in favor of list-group-card
 
