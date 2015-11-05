@@ -107,6 +107,12 @@
 	z-index: 1;
 }
 
+.navbar-collapse-left {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		float: left;
+	}
+}
+
 // Navbar Collapse Basic Search Styles
 
 .collapse-basic-search {
@@ -140,6 +146,13 @@
 			position: static;
 		}
 
+		&.basic-search-transition,
+		&.open {
+			.input-group-input {
+				visibility: visible;
+			}
+		}
+
 		&.open .basic-search-close {
 			@media screen and (min-width: $grid-float-breakpoint) {
 				display: none;
@@ -148,9 +161,11 @@
 
 		.input-group-input {
 			overflow: hidden;
+			visibility: hidden;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
 				overflow: visible;
+				visibility: visible;
 			}
 
 			.form-control {
@@ -187,7 +202,6 @@
 	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
 
 .navbar {
-	.navbar-collapse:first-child,
 	.navbar-collapse-absolute {
 		left: -1px;
 		position: absolute;
@@ -221,10 +235,6 @@
 		}
 
 		+ .navbar-header {
-			@media screen and (min-width: $grid-float-breakpoint) {
-				float: none;
-			}
-
 			.basic-search {
 				@media screen and (min-width: $grid-float-breakpoint) {
 					width: auto;
@@ -263,6 +273,18 @@
 	@media screen and (min-width: $grid-float-breakpoint) {
 		max-width: none;
 		min-width: 0;
+	}
+}
+
+.navbar-header-left-xs {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		float: left;
+	}
+}
+
+.navbar-header-right-xs {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		float: right;
 	}
 }
 
@@ -341,6 +363,10 @@
 .navbar-toggle-left {
 	margin: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
 	padding: $padding-base-vertical 10px;
+}
+
+.navbar-toggle:focus {
+	@include tab-focus;
 }
 
 .navbar-toggle .icon-bar {
