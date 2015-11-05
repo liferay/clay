@@ -61,25 +61,6 @@ body {
 
 @include bg-variant('.bg-default', $gray-lighter);
 
-// Anchor Tags
-
-.link-group {
-	margin: 10px 0;
-
-	a {
-		line-height: 2em;
-		padding: 0.25em;
-
-		&:first-child {
-			margin-left: 0;
-		}
-
-		&.btn {
-			line-height: normal;
-		}
-	}
-}
-
 // Marked Text
 
 mark,
