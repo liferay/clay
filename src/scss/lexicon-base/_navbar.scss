@@ -365,6 +365,10 @@
 	padding: $padding-base-vertical 10px;
 }
 
+.navbar-toggle:focus {
+	@include tab-focus;
+}
+
 .navbar-toggle .icon-bar {
 	width: 18px;
 }
