@@ -1,6 +1,6 @@
 ## Next Release
-* No changes yet
-***
+
+* Update: Atlas modal-title font-weight 400
 
 ## v0.1.21 - October 30, 2015
 
