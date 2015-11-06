@@ -105,6 +105,11 @@ section.row {
 	@include transition-timing-function($ease-in-out-circ);
 }
 
+#mainNav > .sidenav-menu {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
 .main-nav-open {
 	.animated-toggle.navbar-toggle {
 		.icon-bar:nth-of-type(even) {
@@ -168,13 +173,6 @@ body.fixed {
 		position: relative;
 		z-index: 1;
 	}
-
-	.tabular-list-group .list-group-item .list-group-item-content:first-child,
-	.tabular-list-group .list-group-item .list-group-item-field:first-child {
-		@media screen and (max-width: 767px) {
-			display: none;
-		}
-	}
 }
 
 .uxgl-fullscreen-fixed {
@@ -199,9 +197,6 @@ body.fixed {
 }
 
 // Blog Appearance Page
-
-#blogAppearance {
-}
 
 .blog-appearance-current-theme {
 	background-color: #FFF;
@@ -480,7 +475,9 @@ body.fixed {
 	.lexicon-icon {
 		height: 160px;
 		margin: 0 5%;
-		transition: all 0.1s ease-in;
+
+		@include transition(all 0.1s ease-in);
+
 		width: 140px;
 	}
 
@@ -518,9 +515,9 @@ body.fixed {
 		}
 
 		60% {
-			@include transform(scale(1.5));
-
 			stroke-width: 10px;
+
+			@include transform(scale(1.5));
 		}
 
 		100% {
@@ -791,7 +788,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-// Side Navigation Component Page
+/* Styles for side navigation component page */
 
 #mySidebar {
 	background-color: #222328;
