@@ -1,6 +1,18 @@
 ## Next Release
 
-Site: Increase Sass precision to 8
+* Fix: Navbar-toggle should have outline on focus
+* Breaking: Remove tabular-list-group in favor of list-group-card
+* Breaking: Remove link-group
+* Update: Add navbar layout helper classes for better keyboard accessibility
+* Update: Keyboard focus shouldn't enter collapsible search when closed
+* Update: Move clamp css to its own file
+* Site: Update navbar docs
+* Site: Reorganize navbar contents for better tabbing
+* Site: Added skip to content button
+* Site: Align settings button on mobile
+* Site: Don't use side-navigation plugin for sites nav
+* Site: Update table-list demo to something more useful
+* Site: Increase Sass precision to 8
 
 ## v0.1.21 - October 30, 2015
 
