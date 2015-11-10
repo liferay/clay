@@ -3,11 +3,13 @@
 * Fix: Navbar-toggle should have outline on focus
 * Breaking: Remove tabular-list-group in favor of list-group-card
 * Breaking: Remove link-group
+* Update: All modals should be full screen in mobile and update styles
 * Update: Add navbar layout helper classes for better keyboard accessibility
 * Update: Keyboard focus shouldn't enter collapsible search when closed
 * Update: Keyboard focus shouldn't enter a side navigation that is closed
 * Update: Move clamp css to its own file
 * Update: Atlas modal-title font-weight 400
+* Site: Modals should respect tab order
 * Site: Update side navigation docs
 * Site: Update navbar docs
 * Site: Reorganize navbar contents for better tabbing
