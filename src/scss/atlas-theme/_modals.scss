@@ -1,29 +1,35 @@
-.modal-footer {
-	box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15);
-	position: relative;
-}
-
 .modal-backdrop.in {
 	@include opacity($modal-backdrop-opacity);
 }
 
 .modal-content {
 	box-shadow: $modal-box-shadow;
+}
+
+.modal-footer {
+	box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15);
+	position: absolute;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		border-radius: $modal-border-radius;
+		background-color: $modal-desktop-footer-bg;
+		color: $modal-desktop-footer-color;
+		position: relative;
 	}
 }
 
 .modal-header {
 	text-align: center;
 
-	.close {
-		color: $modal-header-close-color;
+	@media screen and (min-width: $grid-float-breakpoint) {
+		background-color: $modal-desktop-header-bg;
+		color: $modal-desktop-header-color;
+	}
+
+	.close,
+	.modal-primary-action-button {
 		height: $modal-title-line-height;
 		line-height: $modal-title-line-height;
-		margin-left: 0;
-		margin-top: 0;
+		margin: 0;
 
 		@include opacity(1);
 
@@ -31,11 +37,20 @@
 		text-shadow: none;
 		width: $modal-title-line-height;
 
-		span {
-			display: block;
-			font-size: 30px;
-			margin-top: -6px;
-			position: relative;
+		&,
+		&:focus,
+		&:hover {
+			color: $modal-header-close-color;
+
+			@include opacity(1);
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				color: $modal-desktop-header-close-color;
+			}
+		}
+
+		&:active {
+			background-color: transparent;
 		}
 	}
 }
@@ -43,8 +58,6 @@
 .modal-title {
 	font-size: 19px;
 	font-weight: 400;
-
-	@include text-overflow;
 }
 
 h1.modal-title {
@@ -95,49 +108,32 @@ h6.modal-title {
 	}
 }
 
-// Modal Full Screen
+// Modal Inverse
 
-.modal-full-screen {
+.modal-inverse {
 	.modal-body {
-		background-color: $modal-full-screen-body-bg;
-		top: 53px;
-
-		@media screen and (min-width: $grid-float-breakpoint) { // min-width: 768px
-			background-color: $modal-full-screen-desktop-body-bg;
-			top: 61px;
-		}
-	}
-
-	.modal-content {
-		@media screen and (min-width: $grid-float-breakpoint) { // min-width: 768px
-			border-radius: $modal-border-radius;
-		}
+		background-color: $modal-inverse-body-bg;
 	}
 
 	.modal-footer {
-		background-color: $modal-full-screen-footer-bg;
-		border-bottom-width: 0;
-		color: $modal-full-screen-footer-color;
-
-		@media screen and (min-width: $grid-float-breakpoint) { // min-width: 768px
-			background-color: $modal-full-screen-desktop-footer-bg;
-			color: $modal-full-screen-desktop-footer-color;
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: $modal-inverse-desktop-footer-bg;
+			border-color: $modal-inverse-desktop-footer-border-color;
+			color: $modal-inverse-desktop-footer-color;
 		}
 	}
 
 	.modal-header {
-		border-color: $modal-header-border-color;
-	}
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: $modal-inverse-desktop-header-bg;
+			border-color: $modal-inverse-desktop-header-border-color;
+			color: $modal-inverse-desktop-header-color;
+		}
 
-	.modal-title {
-		line-height: $modal-title-line-height;
-	}
-}
-
-// Modal Inverse
-
-.modal-inverse.modal-full-screen {
-	.modal-body {
-		background-color: $modal-inverse-body-bg;
+		.close {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				color: $modal-inverse-desktop-header-close-color;
+			}
+		}
 	}
 }
