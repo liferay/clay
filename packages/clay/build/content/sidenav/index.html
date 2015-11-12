@@ -16,6 +16,8 @@
 	<div id="wrapper">
 		<header class="row" id="headerTopBar">
 			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
 				<button type="button" class="animated-toggle navbar-toggle">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -24,9 +26,8 @@
 				</button>
 
 				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
-			</div>
 
-			<div class="dropdown uxgl-site-config" id="siteConfig">
+				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
 	<ul class="dropdown-menu dropdown-menu-right">
 		<li class="dropdown-header">Site Settings</li>
@@ -52,17 +53,18 @@
 		</li>
 	</ul>
 </div>
+			</div>
 		</header>
 
-		<section class="closed container sidenav-container">
-			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
-	<div class="side-navigation-container sidenav-menu">
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
 			
 
 		<ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components</span>
+<li class=""><span class="nav-title">Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
@@ -114,7 +116,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components (JS)</span>
+<li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
@@ -124,7 +126,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Elements</span>
+<li class=""><span class="nav-title">Elements</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
@@ -156,7 +158,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Example Pages</span>
+<li class=""><span class="nav-title">Example Pages</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
@@ -170,7 +172,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Experimental</span>
+<li class=""><span class="nav-title">Experimental</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
@@ -180,7 +182,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Extending Components</span>
+<li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
@@ -202,8 +204,8 @@
 	</div>
 </nav>
 
-	<div class="sidenav-content" id="mainContent">
-		<h1 class="page-title">
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
 			Sidenav
 
 			
@@ -259,7 +261,7 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="row row-spacing sidenav-demo-container">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>To create a sidenav relative to other elements inside your page, you must follow the markup structure shown above.</p>
@@ -269,21 +271,21 @@
 			<p>The toggle button should be placed inside <code>.sidenav-container</code>, but can be placed outside if needed. Just add a unique id to the toggle button and container, instantiate the sideNavigation plugin on the container id, and pass the toggle button id through plugin options.</p>
 		</blockquote>
 
-<button class="btn btn-default" id="mySidenavToggleId" style="margin-bottom:5px;">
-	<span class="glyphicon glyphicon-align-justify"></span> Toggle
-</button>
+		<button class="btn btn-default" id="mySidenavToggleId" style="margin-bottom:5px;">
+			<span class="glyphicon glyphicon-align-justify"></span> Toggle
+		</button>
 
-<div class="sidenav-container" id="mySidenavContainerId">
-	<div class="sidenav-menu-slider" style="background:#FFF;">
-		<div class="sidenav-menu">
-			<div class="col-md-12">... Your Side Nav Content ...</div>
+		<div class="sidenav-container" id="mySidenavContainerId">
+			<div class="sidenav-menu-slider" style="background:#FFF;">
+				<div class="sidenav-menu">
+					<div class="col-md-12">... Your Side Nav Content ...</div>
+				</div>
+			</div>
+
+			<div class="sidenav-content" style="background:#EEE;">
+				<div class="col-md-12">... Your Main Content ...</div>
+			</div>
 		</div>
-	</div>
-
-	<div class="sidenav-content" style="background:#EEE;">
-		<div class="col-md-12">... Your Main Content ...</div>
-	</div>
-</div>
 
 <div class="uxgl-toggle-code">
   <a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
@@ -315,27 +317,23 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="row row-spacing sidenav-demo-container">
 	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>The toggle button should be placed inside <code>.sidenav-container</code>, but can be placed outside if needed. Just add a unique id to the toggle button and container, instantiate the sideNavigation plugin on the container id, and pass the toggle button id through plugin options.</p>
-		</blockquote>
+		<button class="btn btn-default" id="mySidenavToggleId1" style="margin-bottom:5px;">
+			<span class="glyphicon glyphicon-align-justify"></span> Toggle
+		</button>
 
-<button class="btn btn-default" id="mySidenavToggleId1" style="margin-bottom:5px;">
-	<span class="glyphicon glyphicon-align-justify"></span> Toggle
-</button>
+		<div class="sidenav-container" id="mySidenavContainerId1">
+			<div class="sidenav-menu-slider" style="background:#FFF;">
+				<div class="sidenav-menu">
+					<div class="col-md-12">... Your Side Nav Content ...</div>
+				</div>
+			</div>
 
-<div class="sidenav-container" id="mySidenavContainerId1">
-	<div class="sidenav-menu-slider" style="background:#FFF;">
-		<div class="sidenav-menu">
-			<div class="col-md-12">... Your Side Nav Content ...</div>
+			<div class="sidenav-content" style="background:#EEE;">
+				<div class="col-md-12">... Your Main Content ...</div>
+			</div>
 		</div>
-	</div>
-
-	<div class="sidenav-content" style="background:#EEE;">
-		<div class="col-md-12">... Your Main Content ...</div>
-	</div>
-</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
@@ -387,8 +385,8 @@
 
 		<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">Simple Sidenav Toggler</a>
 
-		<div class="sidenav-fixed sidenav-menu-slider closed" id="simpleSidenav">
-			<div class="sidenav-menu sidebar sidebar-default product-menu1">
+		<div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
+			<div class="product-menu1 sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
 					<h4>
 						<a href="#1">
@@ -397,7 +395,7 @@
 							<span>Squareup</span>
 						</a>
 
-						<a class="icon-remove icon-monospaced sidenav-close" href="#1"></a>
+						<a class="icon-monospaced icon-remove sidenav-close" href="#1"></a>
 					</h4>
 				</div>
 
@@ -420,7 +418,7 @@
 						<a data-toggle="tab" href="#tab03">
 							<div class="product-menu-tab-icon1">
 								<span class="icon-keyboard icon-monospaced"></span>
-								<span class="sticker sticker-warning sticker-sm sticker-right sticker-rounded">24</span>
+								<span class="sticker sticker-right sticker-rounded sticker-sm sticker-warning">24</span>
 							</div>
 							<div class="product-menu-tab-text1">Editor</div>
 						</a>
@@ -499,7 +497,7 @@
 									</div>
 
 									<div class="col-md-12">
-										<button class="btn btn-success btn-md">Search Flights</button>
+										<button class="btn btn-md btn-success">Search Flights</button>
 									</div>
 								</div>
 							</form>
@@ -576,7 +574,7 @@
 									</div>
 
 									<div class="col-md-12">
-										<button class="btn btn-success btn-md">Search Flights</button>
+										<button class="btn btn-md btn-success">Search Flights</button>
 									</div>
 								</div>
 							</form>
@@ -587,51 +585,51 @@
 									<input class="form-control" placeholder="Search Site..." type="text">
 
 									<span class="input-group-btn">
-										<button class="btn" type="button"><span class="icon-search icon-monospaced"></span></button>
+										<button class="btn" type="button"><span class="icon-monospaced icon-search"></span></button>
 									</span>
 								</div>
 							</form>
 
 							<div class="list-group">
-								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0004">
+								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0004">
 									<h5>Junkers Marketing <small>STAGING</small></h5>
 								</a>
 								<div class="collapse" id="listGroupCollapse0004">
 									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 								</div>
 
-								<a aria-expanded="true" class="list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0005">
+								<a aria-expanded="true" class="collapse-icon list-group-heading" data-toggle="collapse" href="#listGroupCollapse0005">
 									<h5>Junkers RRHH</h5>
 								</a>
 								<div class="collapse in" id="listGroupCollapse0005" aria-expanded="true">
 									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 								</div>
 
-								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0006">
+								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0006">
 									<h5>Junkers Design <small>STAGING</small></h5>
 								</a>
 								<div class="collapse" id="listGroupCollapse0006">
 									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 								</div>
-								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0007">
+								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0007">
 									<h5>Junkers UX</h5>
 								</a>
 								<div class="collapse" id="listGroupCollapse0007">
 									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 								</div>
-								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0008">
+								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0008">
 									<h5>Junkers Java</h5>
 								</a>
 								<div class="collapse" id="listGroupCollapse0008">
 									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 								</div>
-								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse0009">
+								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0009">
 									<h5>Junkers Ruby <small>STAGING</small></h5>
 								</a>
 								<div class="collapse" id="listGroupCollapse0009">
 									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 								</div>
-								<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse00010">
+								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse00010">
 									<h5>Junkers Python <small>STAGING</small></h5>
 								</a>
 								<div class="collapse" id="listGroupCollapse00010">
@@ -671,8 +669,8 @@
 &lt;div id=&quot;#wrapper&quot;&gt;
     &lt;a class=&quot;btn btn-default&quot; href=&quot;#simpleSidenav&quot; data-content=&quot;#wrapper&quot; data-toggle=&quot;sidenav&quot; data-type=&quot;fixed-push&quot;&gt;Simple Sidenav Toggler&lt;/a&gt;
 
-    &lt;div class=&quot;sidenav-fixed sidenav-menu-slider closed&quot; id=&quot;simpleSidenav&quot;&gt;
-        &lt;div class=&quot;sidenav-menu sidebar sidebar-default&quot;&gt;
+    &lt;div class=&quot;closed sidenav-fixed sidenav-menu-slider&quot; id=&quot;simpleSidenav&quot;&gt;
+        &lt;div class=&quot;sidebar sidebar-default sidenav-menu&quot;&gt;
             ...
         &lt;/div&gt;
     &lt;/div&gt;
@@ -715,45 +713,66 @@
 		});
 
 		$(function() {
+			var body = $('body');
 			var headerTopBar = $('#headerTopBar');
-			var wrapper = $('#wrapper');
-
-			var forceReflow = function(el) {
-				el.css('display', 'table');
-
-				setTimeout(function() {
-					el.css('display', '');
-				}, 0);
-			};
 
 			headerTopBar.find('.navbar-toggle').on(
 				'click',
 				function(event) {
-					var sidenavContainer = headerTopBar.next('.sidenav-container');
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({ 
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
 
 					event.preventDefault();
 
-					sidenavContainer.one(
-						'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+					mainNavContainer.on(
+						transitionEnd,
 						function(event) {
-							sidenavContainer.removeClass('sidenav-transition');
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
 
-							forceReflow($('.main-nav-open'));
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
 						}
 					);
 
-					sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
-					wrapper.toggleClass('main-nav-open');
-				}
-			);
+					mainNavContainer.addClass('main-nav-transition');
 
-			$('.side-navigation').on(
-				'click',
-				'li.side-navigation-dropdown-container > a',
-				function(event) {
-					event.preventDefault();
-
-					$(this).nextAll('.collapse').toggleClass('in');
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
 				}
 			);
 		});
