@@ -84,6 +84,7 @@ section.row {
 #skipTo {
 	min-width: 170px;
 	position: absolute;
+	left: 15px;
 	top: 50%;
 
 	@include transform(translateY(-50%));
@@ -652,16 +653,18 @@ $mainNavWidth: 220px;
 	position: relative;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		padding-left: $mainNavWidth + 10;
+		padding-left: $mainNavWidth + 20;
 	}
 }
 
 #mainNav {
 	overflow: hidden;
 	position: absolute;
+	visibility: hidden;
 	width: 0;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
+		visibility: visible;
 		width: $mainNavWidth;
 	}
 }
@@ -685,6 +688,7 @@ $mainNavWidth: 220px;
 	}
 
 	#mainNav {
+		visibility: visible;
 		width: $mainNavWidth;
 	}
 
@@ -699,6 +703,10 @@ $mainNavWidth: 220px;
 }
 
 .main-nav-transition {
+	#mainNav {
+		visibility: visible;
+	}
+
 	#mainNav,
 	#mainContent {
 		@include transition(all 0.25s ease);
