@@ -2,6 +2,24 @@
 * No changes yet
 ***
 
+## v0.1.22 - November 12, 2015
+
+* Fix: Navbar-toggle should have outline on focus
+* Breaking: Remove link-group
+* Update: Add navbar layout helper classes for better keyboard accessibility
+* Update: Keyboard focus shouldn't enter collapsible search when closed
+* Update: Keyboard focus shouldn't enter a side navigation that is closed
+* Update: Move clamp css to its own file
+* Update: Atlas modal-title font-weight 400
+* Site: Update side navigation docs
+* Site: Update navbar docs
+* Site: Reorganize navbar contents for better tabbing
+* Site: Added skip to content button
+* Site: Align settings button on mobile
+* Site: Don't use side-navigation plugin for sites nav
+* Site: Update table-list demo to something more useful
+* Site: Increase Sass precision to 8
+
 ## v0.1.21 - October 30, 2015
 
 * New: Add sizes sm, default,  md, lg to Lexicon icons
