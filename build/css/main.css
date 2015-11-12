@@ -880,8 +880,7 @@ h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, 
   padding-top: 3px;
 }
 
-.uxgl-switches:before,
-.uxgl-switches:after {
+.uxgl-switches:before, .uxgl-switches:after {
   content: " ";
   display: table;
 }
