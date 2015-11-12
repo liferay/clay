@@ -1,4 +1,8 @@
 ## Next Release
+* No changes yet
+***
+
+## v0.1.22 - November 12, 2015
 
 * Fix: Navbar-toggle should have outline on focus
 * Breaking: Remove tabular-list-group in favor of list-group-card
