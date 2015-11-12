@@ -16,6 +16,8 @@
 	<div id="wrapper">
 		<header class="row" id="headerTopBar">
 			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
 				<button type="button" class="animated-toggle navbar-toggle">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -24,9 +26,8 @@
 				</button>
 
 				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
-			</div>
 
-			<div class="dropdown uxgl-site-config" id="siteConfig">
+				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
 	<ul class="dropdown-menu dropdown-menu-right">
 		<li class="dropdown-header">Site Settings</li>
@@ -52,17 +53,18 @@
 		</li>
 	</ul>
 </div>
+			</div>
 		</header>
 
-		<section class="closed container sidenav-container">
-			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
-	<div class="side-navigation-container sidenav-menu">
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
 			
 
 		<ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components</span>
+<li class=""><span class="nav-title">Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
@@ -114,7 +116,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components (JS)</span>
+<li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
@@ -124,7 +126,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Elements</span>
+<li class=""><span class="nav-title">Elements</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class="active"><a class="nav-title" href="../../content/typography">Typography</a>
@@ -156,7 +158,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Example Pages</span>
+<li class=""><span class="nav-title">Example Pages</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
@@ -170,7 +172,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Experimental</span>
+<li class=""><span class="nav-title">Experimental</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
@@ -180,7 +182,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Extending Components</span>
+<li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
@@ -202,8 +204,8 @@
 	</div>
 </nav>
 
-	<div class="sidenav-content" id="mainContent">
-		<h1 class="page-title">
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
 			Typography
 
 			
@@ -339,38 +341,6 @@
 			</blockquote>
 
 			<p class="truncate-text">Milk filter lungo as gal&#xE3;o roast that crema blue mountain shop turkish. Milk filter lungo as gal&#xE3;o roast that crema blue mountain shop turkish. Milk filter lungo as gal&#xE3;o roast that crema blue mountain shop turkish.</p>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-12">
-			<h3 id="link-group"><a class="heading-anchor" href="#link-group"><i class="icon icon-link"></i></a>Link Group</h3>
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Wrap <code>.link-group</code> around a group of anchor tags to increase the click area and spacing.</p>
-			</blockquote>
-			<div class="link-group">
-				<a href="#1">Link #1</a>
-				<a href="#1">Link #2</a>
-				<a href="#1">Link #3</a>
-				<a href="#1">Link #4</a>
-				<a href="#1">Link #5</a>
-				<a href="#1">Link #6</a>
-			</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;div class=&quot;link-group&quot;&gt;
-    &lt;a href=&quot;#&quot;&gt;Link #1&lt;/a&gt;
-    &lt;a href=&quot;#&quot;&gt;Link #2&lt;/a&gt;
-    &lt;a href=&quot;#&quot;&gt;Link #3&lt;/a&gt;
-    &lt;a href=&quot;#&quot;&gt;Link #4&lt;/a&gt;
-    &lt;a href=&quot;#&quot;&gt;Link #5&lt;/a&gt;
-    &lt;a href=&quot;#&quot;&gt;Link #6&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 		</div>
 	</div>
 
@@ -510,7 +480,6 @@
 		</div>
 	</div>
 
-
 	<div class="row">
 		<div class="col-md-12">
 			<h3 id="blockquotes"><a class="heading-anchor" href="#blockquotes"><i class="icon icon-link"></i></a>Blockquotes</h3>
@@ -620,7 +589,7 @@
 			</blockquote>
 
 			<h6>blockquote-lg</h6>
-			<blockquote class="blockquote-primary blockquote-lg">
+			<blockquote class="blockquote-lg blockquote-primary">
 				<p>Milk filter lungo as gal&#xE3;o roast that crema blue mountain shop turkish.</p>
 				<small>Someone famous in <cite title="Source Title">Source Title</cite></small>
 			</blockquote>
@@ -629,7 +598,7 @@
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse9">
-	<pre><code class="html">&lt;blockquote class=&quot;blockquote-primary blockquote-lg&quot;&gt;
+	<pre><code class="html">&lt;blockquote class=&quot;blockquote-lg blockquote-primary&quot;&gt;
     ...
 &lt;/blockquote&gt;</code></pre>
 </div>
@@ -637,7 +606,6 @@
 		</div>
 	</div>
 </div>
-
 	</div>
 
 		</section>
@@ -655,45 +623,66 @@
 		});
 
 		$(function() {
+			var body = $('body');
 			var headerTopBar = $('#headerTopBar');
-			var wrapper = $('#wrapper');
-
-			var forceReflow = function(el) {
-				el.css('display', 'table');
-
-				setTimeout(function() {
-					el.css('display', '');
-				}, 0);
-			};
 
 			headerTopBar.find('.navbar-toggle').on(
 				'click',
 				function(event) {
-					var sidenavContainer = headerTopBar.next('.sidenav-container');
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({ 
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
 
 					event.preventDefault();
 
-					sidenavContainer.one(
-						'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+					mainNavContainer.on(
+						transitionEnd,
 						function(event) {
-							sidenavContainer.removeClass('sidenav-transition');
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
 
-							forceReflow($('.main-nav-open'));
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
 						}
 					);
 
-					sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
-					wrapper.toggleClass('main-nav-open');
-				}
-			);
+					mainNavContainer.addClass('main-nav-transition');
 
-			$('.side-navigation').on(
-				'click',
-				'li.side-navigation-dropdown-container > a',
-				function(event) {
-					event.preventDefault();
-
-					$(this).nextAll('.collapse').toggleClass('in');
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
 				}
 			);
 		});

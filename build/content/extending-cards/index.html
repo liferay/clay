@@ -16,6 +16,8 @@
 	<div id="wrapper">
 		<header class="row" id="headerTopBar">
 			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
 				<button type="button" class="animated-toggle navbar-toggle">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -24,9 +26,8 @@
 				</button>
 
 				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
-			</div>
 
-			<div class="dropdown uxgl-site-config" id="siteConfig">
+				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
 	<ul class="dropdown-menu dropdown-menu-right">
 		<li class="dropdown-header">Site Settings</li>
@@ -52,17 +53,18 @@
 		</li>
 	</ul>
 </div>
+			</div>
 		</header>
 
-		<section class="closed container sidenav-container">
-			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
-	<div class="side-navigation-container sidenav-menu">
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
 			
 
 		<ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components</span>
+<li class=""><span class="nav-title">Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
@@ -114,7 +116,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components (JS)</span>
+<li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
@@ -124,7 +126,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Elements</span>
+<li class=""><span class="nav-title">Elements</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
@@ -156,7 +158,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Example Pages</span>
+<li class=""><span class="nav-title">Example Pages</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
@@ -170,7 +172,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Experimental</span>
+<li class=""><span class="nav-title">Experimental</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
@@ -180,7 +182,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Extending Components</span>
+<li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
@@ -202,8 +204,8 @@
 	</div>
 </nav>
 
-	<div class="sidenav-content" id="mainContent">
-		<h1 class="page-title">
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
 			Extending Cards
 
 			
@@ -216,16 +218,16 @@
 
 		<blockquote class="blockquote-sm blockquote-success">Add class <code>aspect-ratio-bg-cover</code> to aspect-ratio to make the background image fill all remaining space.</blockquote>
 	</div>
-	<div class="col-xs-6 col-md-3">
+	<div class="col-md-3 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio aspect-ratio-bg-cover" style="background-image:url(../../images/thumbnail_coffee.jpg);">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#1">Download</a></li>
@@ -246,16 +248,16 @@
 			</label>
 		</div>
 	</div>
-	<div class="col-xs-6 col-md-3">
+	<div class="col-md-3 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio aspect-ratio-bg-cover" style="background-image:url(../../images/switch_on_icon.png);">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#1">Download</a></li>
@@ -276,16 +278,16 @@
 			</label>
 		</div>
 	</div>
-	<div class="col-xs-6 col-md-3">
+	<div class="col-md-3 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio aspect-ratio-bg-cover" style="background-image:url(../../images/tv-at-beach.png);">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#1">Download</a></li>
@@ -306,16 +308,16 @@
 			</label>
 		</div>
 	</div>
-	<div class="col-xs-6 col-md-3">
+	<div class="col-md-3 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio aspect-ratio-bg-cover" style="background-image:url(../../images/liferay_logo_tagline.png);">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#1">Download</a></li>
@@ -345,16 +347,16 @@
 		<blockquote class="blockquote-sm blockquote-success">Add class <code>aspect-ratio-bg-center</code> to aspect-ratio to center the background image.</blockquote>
 	</div>
 
-	<div class="col-xs-6 col-md-3">
+	<div class="col-md-3 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio aspect-ratio-bg-center" style="background-image:url(../../images/thumbnail_coffee.jpg);">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#1">Download</a></li>
@@ -375,16 +377,16 @@
 			</label>
 		</div>
 	</div>
-	<div class="col-xs-6 col-md-3">
+	<div class="col-md-3 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio aspect-ratio-bg-center" style="background-image:url(../../images/switch_on_icon.png);">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#1">Download</a></li>
@@ -405,16 +407,16 @@
 			</label>
 		</div>
 	</div>
-	<div class="col-xs-6 col-md-3">
+	<div class="col-md-3 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio aspect-ratio-bg-center" style="background-image:url(../../images/tv-at-beach.png);">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#1">Download</a></li>
@@ -435,16 +437,16 @@
 			</label>
 		</div>
 	</div>
-	<div class="col-xs-6 col-md-3">
+	<div class="col-md-3 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio aspect-ratio-bg-center" style="background-image:url(../../images/liferay_logo_tagline.png);">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
 							<ul class="dropdown-menu dropdown-menu-right">
 								<li><a href="#1">Download</a></li>
@@ -479,7 +481,7 @@
 				<div class="card card-horizontal">
 					<div class="card-row card-row-padded">
 						<div class="card-col-field">
-							<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+							<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 						</div>
 						<div class="card-col-content card-col-gutters clamp-horizontal">
 							<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
@@ -546,7 +548,7 @@
 		</blockquote>
 	</div>
 
-	<div class="col-md-5 col-lg-4">
+	<div class="col-lg-4 col-md-5">
 		<div class="card">
 			<div class="card-header">
 				<div class="nameplate" style="margin: 15px 0 10px;">
@@ -569,9 +571,7 @@
 			<div class="divider"></div>
 
 			<div class="card-footer">
-				<div class="link-group" style="margin-top:0;">
-					<a href="#" class="btn btn-default btn-block" role="button">Subscribe</a>
-				</div>
+				<a class="btn btn-block btn-default" href="#" role="button" style="margin-bottom:10px;">Subscribe</a>
 			</div>
 		</div>
 	</div>
@@ -654,7 +654,7 @@
 		<div class="card-horizontal">
 			<div class="card-row">
 				<div class="card-col-5">
-					<div class="crop-img crop-img-middle crop-img-center">
+					<div class="crop-img crop-img-center crop-img-middle">
 						<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
 					</div>
 				</div>
@@ -666,9 +666,9 @@
 
 					<div class="divider"></div>
 
-					<div class="link-group">
-						<button type="button" class="btn btn-primary btn-xs">Sign Up</button>
-						<button type="button" class="btn btn-link btn-xs">No Thanks</button>
+					<div style="margin: 10px 0;">
+						<button class="btn btn-primary btn-xs" type="button">Sign Up</button>
+						<button class="btn btn-link btn-xs" type="button">No Thanks</button>
 					</div>
 				</div>
 			</div>
@@ -681,7 +681,7 @@
 				<div class="card-col-5">
 					<div class="figure">
 						<div class="crop-img crop-img-center crop-img-middle">
-							<img alt="Image of a dock." src="../../images/thumbnail_dock.jpg">
+							<img alt="Image a dock. of" src="../../images/thumbnail_dock.jpg">
 						</div>
 
 						<div class="figcaption-bottom">
@@ -697,9 +697,9 @@
 
 					<div class="divider"></div>
 
-					<div class="link-group">
-						<button type="button" class="btn btn-primary btn-xs">Sign Up</button>
-						<button type="button" class="btn btn-link btn-xs">No Thanks</button>
+					<div style="margin: 10px 0;">
+						<button class="btn btn-primary btn-xs" type="button">Sign Up</button>
+						<button class="btn btn-link btn-xs" type="button">No Thanks</button>
 					</div>
 				</div>
 			</div>
@@ -721,10 +721,9 @@
             &lt;h4&gt;Travel to Space by Balloon&lt;/h4&gt;
             &lt;p&gt;Space Program LLC is offering balloon rides to space!&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;link-group&quot;&gt;
-            &lt;hr class=&quot;divider&quot; /&gt;
-            &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-xs&quot;&gt;Sign Up&lt;/button&gt;
-            &lt;button type=&quot;button&quot; class=&quot;btn btn-link btn-xs&quot;&gt;No Thanks&lt;/button&gt;
+        &lt;div style=&quot;margin: 10px 0;&quot;&gt;
+            &lt;button class=&quot;btn btn-primary btn-xs&quot; type=&quot;button&quot;&gt;Sign Up&lt;/button&gt;
+            &lt;button class=&quot;btn btn-link btn-xs&quot; type=&quot;button&quot;&gt;No Thanks&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -741,7 +740,7 @@
 	<div class="col-md-4">
 		<div class="card">
 			<div class="card-section text-center">
-				<p style="margin-top: 20px;font-size: 21px;font-weight: 200;margin-bottom: 0;">New Users</p>
+				<p style="font-size: 21px; font-weight: 200; margin-bottom: 0; margin-top: 20px;">New Users</p>
 				<p>14,543</p>
 			</div>
 
@@ -781,8 +780,8 @@
 	<div class="col-md-8 control-panel">
 		<div class="card" style="max-width:none;">
 			<div class="card-row">
-				<div class="card-column card-col-11">Browser</div>
-				<div class="card-column card-col-1">Stats</div>
+				<div class="card-col-11 card-column">Browser</div>
+				<div class="card-col-1 card-column">Stats</div>
 			</div>
 
 			<div class="card-section">
@@ -839,45 +838,66 @@
 		});
 
 		$(function() {
+			var body = $('body');
 			var headerTopBar = $('#headerTopBar');
-			var wrapper = $('#wrapper');
-
-			var forceReflow = function(el) {
-				el.css('display', 'table');
-
-				setTimeout(function() {
-					el.css('display', '');
-				}, 0);
-			};
 
 			headerTopBar.find('.navbar-toggle').on(
 				'click',
 				function(event) {
-					var sidenavContainer = headerTopBar.next('.sidenav-container');
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({ 
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
 
 					event.preventDefault();
 
-					sidenavContainer.one(
-						'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+					mainNavContainer.on(
+						transitionEnd,
 						function(event) {
-							sidenavContainer.removeClass('sidenav-transition');
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
 
-							forceReflow($('.main-nav-open'));
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
 						}
 					);
 
-					sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
-					wrapper.toggleClass('main-nav-open');
-				}
-			);
+					mainNavContainer.addClass('main-nav-transition');
 
-			$('.side-navigation').on(
-				'click',
-				'li.side-navigation-dropdown-container > a',
-				function(event) {
-					event.preventDefault();
-
-					$(this).nextAll('.collapse').toggleClass('in');
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
 				}
 			);
 		});

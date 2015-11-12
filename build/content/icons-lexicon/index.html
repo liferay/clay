@@ -16,6 +16,8 @@
 	<div id="wrapper">
 		<header class="row" id="headerTopBar">
 			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
 				<button type="button" class="animated-toggle navbar-toggle">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -24,9 +26,8 @@
 				</button>
 
 				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
-			</div>
 
-			<div class="dropdown uxgl-site-config" id="siteConfig">
+				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
 	<ul class="dropdown-menu dropdown-menu-right">
 		<li class="dropdown-header">Site Settings</li>
@@ -52,17 +53,18 @@
 		</li>
 	</ul>
 </div>
+			</div>
 		</header>
 
-		<section class="closed container sidenav-container">
-			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
-	<div class="side-navigation-container sidenav-menu">
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
 			
 
 		<ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components</span>
+<li class=""><span class="nav-title">Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
@@ -114,7 +116,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components (JS)</span>
+<li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
@@ -124,7 +126,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Elements</span>
+<li class=""><span class="nav-title">Elements</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
@@ -156,7 +158,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Example Pages</span>
+<li class=""><span class="nav-title">Example Pages</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
@@ -170,7 +172,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Experimental</span>
+<li class=""><span class="nav-title">Experimental</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
@@ -180,7 +182,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Extending Components</span>
+<li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
@@ -202,8 +204,8 @@
 	</div>
 </nav>
 
-	<div class="sidenav-content" id="mainContent">
-		<h1 class="page-title">
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
 			Icons (Lexicon)
 
 			
@@ -246,12 +248,15 @@
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#caret-double-l"></svg> <span>caret-double-l</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#caret-double"></svg> <span>caret-double</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#chain-broken"></svg> <span>chain-broken</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#change"></svg> <span>change</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#check"></svg> <span>check</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#code"></svg> <span>code</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#cog"></svg> <span>cog</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#columns"></svg> <span>columns</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#comments"></svg> <span>comments</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#compress"></svg> <span>compress</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#control-panel"></svg> <span>control-panel</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#date"></svg> <span>date</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#edit-layout"></svg> <span>edit-layout</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#effects"></svg> <span>effects</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#ellipsis-h"></svg> <span>ellipsis-h</span></li>
@@ -259,13 +264,20 @@
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#exclamation-circle"></svg> <span>exclamation-circle</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#exclamation-full"></svg> <span>exclamation-full</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#expand"></svg> <span>expand</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#flag-empty"></svg> <span>flag-empty</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#flag-full"></svg> <span>flag-full</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#folder"></svg> <span>folder</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#format"></svg> <span>format</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#geolocation"></svg> <span>geolocation</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#grid"></svg> <span>grid</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#h1"></svg> <span>h1</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#h2"></svg> <span>h2</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#heart"></svg> <span>heart</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#hidden"></svg> <span>hidden</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#home"></svg> <span>home</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#horizontal-scroll"></svg> <span>horizontal-scroll</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#hr"></svg> <span>hr</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#import-export"></svg> <span>import-export</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#information-live"></svg> <span>information-live</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#italic"></svg> <span>italic</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#link"></svg> <span>link</span></li>
@@ -279,6 +291,7 @@
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#moon"></svg> <span>moon</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#myspace"></svg> <span>myspace</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#paperclip"></svg> <span>paperclip</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#pause"></svg> <span>pause</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#pencil"></svg> <span>pencil</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#phone"></svg> <span>phone</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#picture"></svg> <span>picture</span></li>
@@ -295,6 +308,7 @@
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#reload"></svg> <span>reload</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#remove-style"></svg> <span>remove-style</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#repository"></svg> <span>repository</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#restore"></svg> <span>restore</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#search"></svg> <span>search</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#share-alt"></svg> <span>share-alt</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#simulation-menu-closed"></svg> <span>simulation-menu-closed</span></li>
@@ -314,14 +328,18 @@
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#table2"></svg> <span>table2</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#thumbs-down"></svg> <span>thumbs-down</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#thumbs-up"></svg> <span>thumbs-up</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#time"></svg> <span>time</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#times-circle"></svg> <span>times-circle</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#times"></svg> <span>times</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#transform"></svg> <span>transform</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#trash"></svg> <span>trash</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#twitter"></svg> <span>twitter</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#underline"></svg> <span>underline</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#unlock"></svg> <span>unlock</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#user"></svg> <span>user</span></li>
 <li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#users"></svg> <span>users</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#vertical-scroll"></svg> <span>vertical-scroll</span></li>
+<li><svg class="lexicon-icon"><use xlink:href="../../images/icons/icons.svg#view"></svg> <span>view</span></li>
 <!-- endinject -->
 </ul>
 
@@ -359,45 +377,66 @@
 		});
 
 		$(function() {
+			var body = $('body');
 			var headerTopBar = $('#headerTopBar');
-			var wrapper = $('#wrapper');
-
-			var forceReflow = function(el) {
-				el.css('display', 'table');
-
-				setTimeout(function() {
-					el.css('display', '');
-				}, 0);
-			};
 
 			headerTopBar.find('.navbar-toggle').on(
 				'click',
 				function(event) {
-					var sidenavContainer = headerTopBar.next('.sidenav-container');
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({ 
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
 
 					event.preventDefault();
 
-					sidenavContainer.one(
-						'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+					mainNavContainer.on(
+						transitionEnd,
 						function(event) {
-							sidenavContainer.removeClass('sidenav-transition');
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
 
-							forceReflow($('.main-nav-open'));
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
 						}
 					);
 
-					sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
-					wrapper.toggleClass('main-nav-open');
-				}
-			);
+					mainNavContainer.addClass('main-nav-transition');
 
-			$('.side-navigation').on(
-				'click',
-				'li.side-navigation-dropdown-container > a',
-				function(event) {
-					event.preventDefault();
-
-					$(this).nextAll('.collapse').toggleClass('in');
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
 				}
 			);
 		});
