@@ -16,6 +16,8 @@
 	<div id="wrapper">
 		<header class="row" id="headerTopBar">
 			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
 				<button type="button" class="animated-toggle navbar-toggle">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -23,10 +25,9 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
-			</div>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.22</span></h4>
 
-			<div class="dropdown uxgl-site-config" id="siteConfig">
+				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
 	<ul class="dropdown-menu dropdown-menu-right">
 		<li class="dropdown-header">Site Settings</li>
@@ -52,17 +53,18 @@
 		</li>
 	</ul>
 </div>
+			</div>
 		</header>
 
-		<section class="closed container sidenav-container">
-			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
-	<div class="side-navigation-container sidenav-menu">
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
 			
 
 		<ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components</span>
+<li class=""><span class="nav-title">Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
@@ -114,7 +116,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components (JS)</span>
+<li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
@@ -124,7 +126,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Elements</span>
+<li class=""><span class="nav-title">Elements</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
@@ -156,7 +158,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Example Pages</span>
+<li class=""><span class="nav-title">Example Pages</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
@@ -170,7 +172,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Experimental</span>
+<li class=""><span class="nav-title">Experimental</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
@@ -180,7 +182,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Extending Components</span>
+<li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
@@ -202,8 +204,8 @@
 	</div>
 </nav>
 
-	<div class="sidenav-content" id="mainContent">
-		<h1 class="page-title">
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
 			List Groups
 
 			
@@ -526,625 +528,6 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="tabular-list-group"><a class="heading-anchor" href="#tabular-list-group"><i class="icon icon-link"></i></a>Tabular List Group</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Align content inside a list-group like a table with <code>.tabular-list-group</code>.</p>
-
-			<p><code>.list-group-item</code> behaves as a table row.</p>
-
-			<p>Use a combination of <code>.list-group-item-field</code> and <code>.list-group-item-content</code> to control the size of each cell. <code>.list-group-item-field</code> has width: 1% and will expand only as wide as its content as long as <code>.list-group-item-content</code> is present as a sibling.</p>
-
-			<p><code>.list-group-item-content</code> will expand to fill the remaining space.</p>
-		</blockquote>
-
-		<ul class="tabular-list-group">
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="clamp-horizontal list-group-item-content">
-					<div class="clamp-container">
-						<h6 class="truncate-text">Alberto Calvo, modified 2 hours ago.</h6>
-						<h5 class="truncate-text">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h5>
-						<h6 class="truncate-text">Approved</h6>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Bookmarks</h5>
-					<h6>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</h6>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code>&lt;ul class=&quot;tabular-list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;div class=&quot;checkbox&quot;&gt;
-                &lt;label&gt;
-                    &lt;input type=&quot;checkbox&quot; /&gt;
-                &lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;span class=&quot;icon-folder-close icon-xl text-default&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-content&quot;&gt;
-            &lt;h5&gt;Larry Bird the best power forward in Celtic&apos;s history.&lt;/h5&gt;
-            &lt;h6&gt;Monica Bellucci&lt;/h6&gt;
-            &lt;h6&gt;
-                &lt;span&gt;5 Folders&lt;/span&gt;
-                &lt;span&gt;4 Entries&lt;/span&gt;
-            &lt;/h6&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;a class=&quot;icon-ellipsis-vertical icon-lg&quot; href=&quot;#1&quot;&gt;&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-
-    &lt;li class=&quot;list-group-item&quot;&gt;
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;div class=&quot;checkbox&quot;&gt;
-                &lt;label&gt;
-                    &lt;input type=&quot;checkbox&quot; /&gt;
-                &lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;span class=&quot;icon-folder-close icon-xl text-default&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-content&quot;&gt;
-            &lt;h5&gt;Karl Malone the best power forward in Jazz history.&lt;/h5&gt;
-            &lt;h6&gt;Monica Bellucci&lt;/h6&gt;
-            &lt;h6&gt;
-                &lt;span&gt;5 Folders&lt;/span&gt;
-                &lt;span&gt;4 Entries&lt;/span&gt;
-            &lt;/h6&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;a class=&quot;icon-ellipsis-vertical icon-lg&quot; href=&quot;#1&quot;&gt;&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="tabular-list-group-no-borders"><a class="heading-anchor" href="#tabular-list-group-no-borders"><i class="icon icon-link"></i></a>Tabular List Group No Borders</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Tabular List Group rows are bordered by default. You can remove borders by adding <code>.no-borders</code> to <code>.tabular-list-group</code>.</p>
-		</blockquote>
-
-		<ul class="no-borders tabular-list-group">
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Larry Bird the best power forward in Celtic&apos;s history.</h5>
-					<h6>Monica Bellucci</h6>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Karl Malone the best power forward in Jazz history.</h5>
-					<h6>Monica Bellucci</h6>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;ul class=&quot;no-borders tabular-list-group&quot;&gt;...&lt;/ul&gt;</code></pre>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="tabular-list-group-full-borders"><a class="heading-anchor" href="#tabular-list-group-full-borders"><i class="icon icon-link"></i></a>Tabular List Group Full Borders</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Similarly, you can add borders around each cell with <code>.full-borders</code>.</p>
-		</blockquote>
-
-		<ul class="full-borders tabular-list-group">
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Larry Bird the best power forward in Celtic&apos;s history.</h5>
-					<h6>Monica Bellucci</h6>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl text-default"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Karl Malone the best power forward in Jazz history.</h5>
-					<h6>Monica Bellucci</h6>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code class="html">&lt;ul class=&quot;full-borders tabular-list-group&quot;&gt;...&lt;/ul&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="tabular-list-group-item-states"><a class="heading-anchor" href="#tabular-list-group-item-states"><i class="icon icon-link"></i></a>Tabular List Group Item States</h3>
-		<ul class="tabular-list-group">
-			<li class="list-group-item list-group-item-success">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Larry Bird the best power forward in Celtic&apos;s history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Approved</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-warning">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Karl Malone the best power forward in Jazz history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Pending</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-info">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Dennis Rodman the best power forward in Bulls history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Draft</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-default">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>LeBron James the best power forward in Heat history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Expired</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-primary">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Tim Duncan the best power forward in Spurs&apos; history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Scheduled</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-danger">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<span class="icon-folder-close icon-xl"></span>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Kevin Garnett the best power forward in Pistons&apos; history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Rejected</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<ul class="inline-scroller">
-								<li class="dropdown-header">Dropdown Header</li>
-								<li><a href="#">Action 1</a></li>
-								<li><a href="#">Action 2</a></li>
-								<li><a href="#">Action 3</a></li>
-								<li><a href="#">Action 4</a></li>
-								<li><a href="#">Action 5</a></li>
-								<li><a href="#">Action 6</a></li>
-								<li><a href="#">Action 7</a></li>
-								<li><a href="#">Action 8</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a></div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code class="html">&lt;ul class=&quot;tabular-list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item list-group-item-success&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-warning&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-info&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-default&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-primary&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-danger&quot;&gt;...&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
 		<h3 id="list-group"><a class="heading-anchor" href="#list-group"><i class="icon icon-link"></i></a>List Group</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
@@ -1182,10 +565,10 @@
 
 		<div class="list-group">
 			<div class="list-group-heading">List Group Heading</div>
-			<a href="#" class="list-group-item">List Item 1</a>
-			<a href="#" class="list-group-item">List Item 2</a>
-			<a href="#" class="list-group-item">List Item 3</a>
-			<a href="#" class="list-group-item">List Item 4</a>
+			<a class="list-group-item" href="#">List Item 1</a>
+			<a class="list-group-item" href="#">List Item 2</a>
+			<a class="list-group-item" href="#">List Item 3</a>
+			<a class="list-group-item" href="#">List Item 4</a>
 		</div>
 
 <div class="uxgl-toggle-code">
@@ -1193,7 +576,7 @@
 </div>
 <div class="collapse" id="codeCollapse5">
 	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;...&lt;/a&gt;
+    &lt;a class=&quot;list-group-item&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
@@ -1230,19 +613,19 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="list-group">
-					<a href="#" class="list-group-item list-group-item-success">List Item 1 - Success</a>
-					<a href="#" class="list-group-item list-group-item-info">List Item 2 - Info</a>
-					<a href="#" class="list-group-item list-group-item-warning">List Item 3 - Warning</a>
-					<a href="#" class="list-group-item list-group-item-danger">List Item 4 - Danger</a>
+					<a class="list-group-item list-group-item-success" href="#">List Item 1 - Success</a>
+					<a class="list-group-item list-group-item-info" href="#">List Item 2 - Info</a>
+					<a class="list-group-item list-group-item-warning" href="#">List Item 3 - Warning</a>
+					<a class="list-group-item list-group-item-danger" href="#">List Item 4 - Danger</a>
 				</div>
 			</div>
 
 			<div class="col-sm-6">
 				<div class="list-group">
-					<a href="#" class="active list-group-item list-group-item-success">List Item 1 - Active Success</a>
-					<a href="#" class="active list-group-item list-group-item-info">List Item 2 - Active Info</a>
-					<a href="#" class="active list-group-item list-group-item-warning">List Item 3 - Active Warning</a>
-					<a href="#" class="active list-group-item list-group-item-danger">List Item 4 - Active Danger</a>
+					<a class="active list-group-item list-group-item-success" href="#">List Item 1 - Active Success</a>
+					<a class="active list-group-item list-group-item-info" href="#">List Item 2 - Active Info</a>
+					<a class="active list-group-item list-group-item-warning" href="#">List Item 3 - Active Warning</a>
+					<a class="active list-group-item list-group-item-danger" href="#">List Item 4 - Active Danger</a>
 				</div>
 			</div>
 		</div>
@@ -1252,7 +635,7 @@
 </div>
 <div class="collapse" id="codeCollapse7">
 	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;active list-group-item list-group-item-success&quot;&gt;...&lt;/a&gt;
+    &lt;a class=&quot;active list-group-item list-group-item-success&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
@@ -1260,10 +643,13 @@
 </div>
 
 <script>
-$('.tabular-list-group .list-group-item input[type="checkbox"]').on('click', function(event) {
-	$(this).closest('.list-group-item').toggleClass('active');
-});
-</script></div></div>
+$('.tabular-list-group .list-group-item input[type="checkbox"]').on(
+	'click',
+	function(event) {
+		$(this).closest('.list-group-item').toggleClass('active');
+	}
+);
+</script>
 	</div>
 
 		</section>
@@ -1281,45 +667,66 @@ $('.tabular-list-group .list-group-item input[type="checkbox"]').on('click', fun
 		});
 
 		$(function() {
+			var body = $('body');
 			var headerTopBar = $('#headerTopBar');
-			var wrapper = $('#wrapper');
-
-			var forceReflow = function(el) {
-				el.css('display', 'table');
-
-				setTimeout(function() {
-					el.css('display', '');
-				}, 0);
-			};
 
 			headerTopBar.find('.navbar-toggle').on(
 				'click',
 				function(event) {
-					var sidenavContainer = headerTopBar.next('.sidenav-container');
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({ 
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
 
 					event.preventDefault();
 
-					sidenavContainer.one(
-						'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+					mainNavContainer.on(
+						transitionEnd,
 						function(event) {
-							sidenavContainer.removeClass('sidenav-transition');
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
 
-							forceReflow($('.main-nav-open'));
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
 						}
 					);
 
-					sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
-					wrapper.toggleClass('main-nav-open');
-				}
-			);
+					mainNavContainer.addClass('main-nav-transition');
 
-			$('.side-navigation').on(
-				'click',
-				'li.side-navigation-dropdown-container > a',
-				function(event) {
-					event.preventDefault();
-
-					$(this).nextAll('.collapse').toggleClass('in');
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
 				}
 			);
 		});

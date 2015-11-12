@@ -16,6 +16,8 @@
 	<div id="wrapper">
 		<header class="row" id="headerTopBar">
 			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
 				<button type="button" class="animated-toggle navbar-toggle">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
@@ -23,10 +25,9 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.21</span></h4>
-			</div>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.22</span></h4>
 
-			<div class="dropdown uxgl-site-config" id="siteConfig">
+				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
 	<ul class="dropdown-menu dropdown-menu-right">
 		<li class="dropdown-header">Site Settings</li>
@@ -52,17 +53,18 @@
 		</li>
 	</ul>
 </div>
+			</div>
 		</header>
 
-		<section class="closed container sidenav-container">
-			<nav class="side-navigation sidenav-menu-slider" id="mainNav">
-	<div class="side-navigation-container sidenav-menu">
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
 			
 
 		<ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components</span>
+<li class=""><span class="nav-title">Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
@@ -114,7 +116,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Components (JS)</span>
+<li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
@@ -124,7 +126,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Elements</span>
+<li class=""><span class="nav-title">Elements</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
@@ -156,7 +158,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Example Pages</span>
+<li class=""><span class="nav-title">Example Pages</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class="active"><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
@@ -170,7 +172,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Experimental</span>
+<li class=""><span class="nav-title">Experimental</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
@@ -180,7 +182,7 @@
 </ul>
 </div>
 </li>
-<li class="side-navigation-dropdown-container"><span class="nav-title">Extending Components</span>
+<li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
@@ -202,8 +204,8 @@
 	</div>
 </nav>
 
-	<div class="sidenav-content" id="mainContent">
-		<h1 class="page-title">
+	<div class="" id="mainContent">
+		<h1 class="page-title" id="beginContent" tabindex="-1">
 			Blog - Actions
 
 			
@@ -261,28 +263,28 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label>From</label>
-												<input class="form-control" type="text" placeholder="City or Airport">
+												<input class="form-control" placeholder="City or Airport" type="text">
 											</div>
 										</div>
 
 										<div class="col-md-6">
 											<div class="form-group">
 												<label>To</label>
-												<input class="form-control" type="text" placeholder="City or Airport">
+												<input class="form-control" placeholder="City or Airport" type="text">
 											</div>
 										</div>
 
 										<div class="col-md-6">
 											<div class="form-group">
 												<label>Departing</label>
-												<input class="form-control" type="text" placeholder="Departing Date">
+												<input class="form-control" placeholder="Departing Date" type="text">
 											</div>
 										</div>
 
 										<div class="col-md-6">
 											<div class="form-group">
 												<label>Returning</label>
-												<input class="form-control" type="text" placeholder="Returning Date">
+												<input class="form-control" placeholder="Returning Date" type="text">
 											</div>
 										</div>
 
@@ -337,21 +339,21 @@
 										<div class="col-md-4">
 											<div class="form-group">
 												<label>From</label>
-												<input class="form-control" type="text" placeholder="City or Airport">
+												<input class="form-control" placeholder="City or Airport" type="text">
 											</div>
 										</div>
 
 										<div class="col-md-4">
 											<div class="form-group">
 												<label>To</label>
-												<input class="form-control" type="text" placeholder="City or Airport">
+												<input class="form-control" placeholder="City or Airport" type="text">
 											</div>
 										</div>
 
 										<div class="col-md-4">
 											<div class="form-group">
 												<label>Departing</label>
-												<input class="form-control" type="text" placeholder="Departing Date">
+												<input class="form-control" placeholder="Departing Date" type="text">
 											</div>
 										</div>
 									</div>
@@ -429,7 +431,7 @@
 									<a aria-expanded="true" class="collapse-icon list-group-heading" data-toggle="collapse" href="#listGroupCollapse005">
 										<h5>Junkers RRHH</h5>
 									</a>
-									<div class="collapse in" id="listGroupCollapse005" aria-expanded="true">
+									<div aria-expanded="true" class="collapse in" id="listGroupCollapse005">
 										<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 									</div>
 
@@ -638,7 +640,8 @@
 				</div>
 
 				<div class="container-fluid-1280" style="margin: 15px 0;">
-					<button class="btn btn-info" data-toggle="modal" data-target="#imageSelectorModal">Select / Change Items</button>
+					<button class="btn btn-info" data-target="#imageSelectorModal" data-toggle="modal">Select / Change Items</button>
+
 					<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="imageSelectorModal" role="dialog" tabindex="-1">
 						<div class="modal-dialog modal-full-screen">
 							<div class="modal-content">
@@ -676,7 +679,7 @@
 												</label>
 											</div>
 
-											<a class="collapsed management-bar-toggle management-bar-toggle-link" data-toggle="collapse" href="#mgmtBarCollapse00" aria-expanded="false">
+											<a aria-expanded="false" class="collapsed management-bar-toggle management-bar-toggle-link" data-toggle="collapse" href="#mgmtBarCollapse00">
 												<span class="management-bar-item-title">Label</span>
 												<span class="icon-sort">
 											</span></a>
@@ -688,7 +691,7 @@
 											<a class="btn hidden-xs" href="#"><span class="icon-monospaced icon-th"></span></a>
 										</div>
 
-										<div class="collapse management-bar-collapse" id="mgmtBarCollapse00" aria-expanded="false">
+										<div aria-expanded="false" class="collapse management-bar-collapse" id="mgmtBarCollapse00">
 											<ul class="management-bar-nav nav">
 												<li class="dropdown">
 													<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -766,8 +769,9 @@
 										</div>
 									</div>
 
-									<div class="panel">
-										<div class="panel-heading" style="background-color: #DDD;">10 item(s) to be added</div>
+									<div style="background-color: #DDD;padding:10px 15px;">10 item(s) to be added</div>
+
+									<div class="panel" style="margin-bottom: 0;">
 										<div class="panel-body">
 											<div class="nameplate-label nameplate-label-default">
 												<div class="nameplate-icon">
@@ -872,184 +876,155 @@
 													<a class="nameplate-label-text" href="#1">...</a>
 												</div>
 											</div>
-
 										</div>
-
-										<div class="panel-heading" style="background-color: #DDD;">All items</div>
-
-										<ul class="detailed-list-view tabular-list-group" style="margin-bottom:0;">
-											<li class="list-group-item">
-												<div class="list-group-item-field">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox" value="">
-														</label>
-													</div>
-												</div>
-
-												<div class="list-group-item-field">
-													<div class="detailed-list-view-icon">
-														<div class="user-icon user-icon-default user-icon-lg">
-															<span>AC</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="list-group-item-content">
-													<h5 class="text-default">Alberto Calvo, modified 2 hours ago</h5>
-													<h4>7 UX Trends of 2015: Get Ready for Big Changes</h4>
-													<h5 class="text-default">
-														<span>Approved</span>
-													</h5>
-												</div>
-
-												<div class="list-group-item-field">
-													<div class="dropdown">
-														<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-														<ul class="dropdown-menu dropdown-menu-left-side">
-															<li class="dropdown-header">Dropdown Header</li>
-															<li><a href="#">Action 1</a></li>
-															<li><a href="#">Action 2</a></li>
-															<li><a href="#">Action 3</a></li>
-															<li><a href="#">Action 4</a></li>
-															<li><a href="#">Action 5</a></li>
-															<li><a href="#">Action 6</a></li>
-															<li><a href="#">Action 7</a></li>
-															<li><a href="#">Action 8</a></li>
-														</ul>
-													</div>
-												</div>
-											</li>
-
-											<li class="list-group-item">
-												<div class="list-group-item-field">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox" value="">
-														</label>
-													</div>
-												</div>
-
-												<div class="list-group-item-field">
-													<div class="detailed-list-view-icon">
-														<div class="user-icon user-icon-lg">
-															<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
-														</div>
-													</div>
-												</div>
-
-												<div class="list-group-item-content">
-													<h5 class="text-default">Cristina Pineiro, modified 2 hours ago</h5>
-													<h4>30 Brilliant Mobile Navigation Menu Design Concepts</h4>
-													<h5 class="text-default">
-														<span>Approved</span>
-													</h5>
-												</div>
-
-												<div class="list-group-item-field">
-													<div class="dropdown">
-														<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-														<ul class="dropdown-menu dropdown-menu-left-side">
-															<li class="dropdown-header">Dropdown Header</li>
-															<li><a href="#">Action 1</a></li>
-															<li><a href="#">Action 2</a></li>
-															<li><a href="#">Action 3</a></li>
-															<li><a href="#">Action 4</a></li>
-															<li><a href="#">Action 5</a></li>
-															<li><a href="#">Action 6</a></li>
-															<li><a href="#">Action 7</a></li>
-															<li><a href="#">Action 8</a></li>
-														</ul>
-													</div>
-												</div>
-											</li>
-
-											<li class="list-group-item">
-												<div class="list-group-item-field">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox" value="">
-														</label>
-													</div>
-												</div>
-
-												<div class="list-group-item-field">
-													<div class="detailed-list-view-icon">
-														<span class="icon-folder-open icon-xl"></span>
-													</div>
-												</div>
-
-												<div class="list-group-item-content">
-													<h5 class="text-default">Susan Brown, modified 3 hours ago</h5>
-													<h4>Getting Up to Speed</h4>
-													<h5 class="text-default">
-														<span>Approved</span>
-													</h5>
-												</div>
-
-												<div class="list-group-item-field">
-													<div class="dropdown">
-														<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-														<ul class="dropdown-menu dropdown-menu-left-side">
-															<li class="dropdown-header">Dropdown Header</li>
-															<li><a href="#">Action 1</a></li>
-															<li><a href="#">Action 2</a></li>
-															<li><a href="#">Action 3</a></li>
-															<li><a href="#">Action 4</a></li>
-															<li><a href="#">Action 5</a></li>
-															<li><a href="#">Action 6</a></li>
-															<li><a href="#">Action 7</a></li>
-															<li><a href="#">Action 8</a></li>
-														</ul>
-													</div>
-												</div>
-											</li>
-
-											<li class="list-group-item">
-												<div class="list-group-item-field">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox" value="">
-														</label>
-													</div>
-												</div>
-
-												<div class="list-group-item-field">
-													<div class="detailed-list-view-icon">
-														<div class="user-icon user-icon-lg">
-															<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
-														</div>
-													</div>
-												</div>
-
-												<div class="list-group-item-content">
-													<h5 class="text-default">Sergio Ruiz, modified 9 hours ago</h5>
-													<h4>Introducing FS3</h4>
-													<h5 class="text-default">
-														<span>Approved</span>
-													</h5>
-												</div>
-
-												<div class="list-group-item-field">
-													<div class="dropdown">
-														<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-														<ul class="dropdown-menu dropdown-menu-left-side">
-															<li class="dropdown-header">Dropdown Header</li>
-															<li><a href="#">Action 1</a></li>
-															<li><a href="#">Action 2</a></li>
-															<li><a href="#">Action 3</a></li>
-															<li><a href="#">Action 4</a></li>
-															<li><a href="#">Action 5</a></li>
-															<li><a href="#">Action 6</a></li>
-															<li><a href="#">Action 7</a></li>
-															<li><a href="#">Action 8</a></li>
-														</ul>
-													</div>
-												</div>
-											</li>
-										</ul>
-
 									</div>
+
+									<div style="background-color: #DDD;padding:10px 15px;">All items</div>
+
+									<ul class="list-group list-group-card list-group-card-checkbox-hidden-xs" style="margin-bottom: 0;">
+										<li class="list-group-item">
+											<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+												<label>
+													<input type="checkbox" value="">
+													<div class="card card-horizontal">
+														<div class="card-row card-row-padded">
+															<div class="card-col-field">
+																<div class="list-group-card-icon">
+																	<div class="user-icon user-icon-default">
+																		<span>AC</span>
+																	</div>
+																</div>
+															</div>
+															<div class="card-col-content card-col-gutters">
+																<h5 class="text-default" title="Alberto Calvo, modified 2 hours ago">Alberto Calvo, modified 2 hours ago</h5>
+																<h4 title="7 UX Trends of 2015: Get Ready for Big Changes">7 UX Trends of 2015: Get Ready for Big Changes</h4>
+																<h5 class="text-default" title="Approved">Approved</h5>
+															</div>
+															<div class="card-col-field">
+																<div class="dropdown">
+																	<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+																	<ul class="dropdown-menu dropdown-menu-right">
+																		<li><a href="#1">Download</a></li>
+																		<li><a href="#1">Edit</a></li>
+																		<li><a href="#1">Move</a></li>
+																		<li><a href="#1">Checkout</a></li>
+																		<li><a href="#1">Permissions</a></li>
+																		<li><a href="#1">Move to Recycle Bin</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+												<label>
+													<input type="checkbox" value="">
+													<div class="card card-horizontal">
+														<div class="card-row card-row-padded">
+															<div class="card-col-field">
+																<div class="list-group-card-icon">
+																	<div class="user-icon">
+																		<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+																	</div>
+																</div>
+															</div>
+															<div class="card-col-content card-col-gutters">
+																<h5 class="text-default" title="Cristina Pineiro, modified 2 hours ago">Cristina Pineiro, modified 2 hours ago</h5>
+																<h4 title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
+																<h5 class="text-default" title="Approved">Approved</h5>
+															</div>
+															<div class="card-col-field">
+																<div class="dropdown">
+																	<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+																	<ul class="dropdown-menu dropdown-menu-right">
+																		<li><a href="#1">Download</a></li>
+																		<li><a href="#1">Edit</a></li>
+																		<li><a href="#1">Move</a></li>
+																		<li><a href="#1">Checkout</a></li>
+																		<li><a href="#1">Permissions</a></li>
+																		<li><a href="#1">Move to Recycle Bin</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+												<label>
+													<input type="checkbox" value="">
+													<div class="card card-horizontal">
+														<div class="card-row card-row-padded">
+															<div class="card-col-field">
+																<div class="list-group-card-icon">
+																	<span class="icon-folder-close text-default"></span>
+																</div>
+															</div>
+															<div class="card-col-content card-col-gutters">
+																<h5 class="text-default" title="Susan Brown, modified 3 hours ago">Susan Brown, modified 3 hours ago</h5>
+																<h4 title="Getting Up to Speed">Getting Up to Speed</h4>
+																<h5 class="text-default" title="Approved">Approved</h5>
+															</div>
+															<div class="card-col-field">
+																<div class="dropdown">
+																	<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+																	<ul class="dropdown-menu dropdown-menu-right">
+																		<li><a href="#1">Download</a></li>
+																		<li><a href="#1">Edit</a></li>
+																		<li><a href="#1">Move</a></li>
+																		<li><a href="#1">Checkout</a></li>
+																		<li><a href="#1">Permissions</a></li>
+																		<li><a href="#1">Move to Recycle Bin</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+												<label>
+													<input type="checkbox" value="">
+													<div class="card card-horizontal">
+														<div class="card-row card-row-padded">
+															<div class="card-col-field">
+																<div class="list-group-card-icon">
+																	<div class="user-icon">
+																		<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
+																	</div>
+																</div>
+															</div>
+															<div class="card-col-content card-col-gutters">
+																<h5 class="text-default" title="Sergio Ruiz, modified 9 hours ago">Sergio Ruiz, modified 9 hours ago</h5>
+																<h4 title="Introducing FS3">Introducing FS3</h4>
+																<h5 class="text-default" title="Approved">Approved</h5>
+															</div>
+															<div class="card-col-field">
+																<div class="dropdown">
+																	<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+																	<ul class="dropdown-menu dropdown-menu-right">
+																		<li><a href="#1">Download</a></li>
+																		<li><a href="#1">Edit</a></li>
+																		<li><a href="#1">Move</a></li>
+																		<li><a href="#1">Checkout</a></li>
+																		<li><a href="#1">Permissions</a></li>
+																		<li><a href="#1">Move to Recycle Bin</a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</label>
+											</div>
+										</li>
+									</ul>
 								</div>
 
 								<div class="modal-footer">
@@ -1068,174 +1043,147 @@
 					</div>
 				</div>
 
-				<ul class="container-fluid-1280 detailed-list-view tabular-list-group" style="margin-left:2px;margin-right:2px;">
+				<ul class="list-group list-group-card list-group-card-checkbox-hidden-xs">
 					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="detailed-list-view-icon">
-								<div class="user-icon user-icon-default user-icon-lg">
-									<span>AC</span>
+						<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+							<label>
+								<input type="checkbox" value="">
+								<div class="card card-horizontal">
+									<div class="card-row card-row-padded">
+										<div class="card-col-field">
+											<div class="list-group-card-icon">
+												<div class="user-icon user-icon-default">
+													<span>AC</span>
+												</div>
+											</div>
+										</div>
+										<div class="card-col-content card-col-gutters">
+											<h5 class="text-default" title="Alberto Calvo, modified 2 hours ago">Alberto Calvo, modified 2 hours ago</h5>
+											<h4 title="7 UX Trends of 2015: Get Ready for Big Changes">7 UX Trends of 2015: Get Ready for Big Changes</h4>
+											<h5 class="text-default" title="Approved">Approved</h5>
+										</div>
+										<div class="card-col-field">
+											<div class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#1">Download</a></li>
+													<li><a href="#1">Edit</a></li>
+													<li><a href="#1">Move</a></li>
+													<li><a href="#1">Checkout</a></li>
+													<li><a href="#1">Permissions</a></li>
+													<li><a href="#1">Move to Recycle Bin</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-
-						<div class="list-group-item-content">
-							<h5 class="text-default">Alberto Calvo, modified 2 hours ago</h5>
-							<h4>7 UX Trends of 2015: Get Ready for Big Changes</h4>
-							<h5 class="text-default">
-								<span>Approved</span>
-							</h5>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-								<ul class="dropdown-menu dropdown-menu-left-side">
-									<li class="dropdown-header">Dropdown Header</li>
-									<li><a href="#">Action 1</a></li>
-									<li><a href="#">Action 2</a></li>
-									<li><a href="#">Action 3</a></li>
-									<li><a href="#">Action 4</a></li>
-									<li><a href="#">Action 5</a></li>
-									<li><a href="#">Action 6</a></li>
-									<li><a href="#">Action 7</a></li>
-									<li><a href="#">Action 8</a></li>
-								</ul>
-							</div>
+							</label>
 						</div>
 					</li>
-
 					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="detailed-list-view-icon">
-								<div class="user-icon user-icon-lg">
-									<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+						<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+							<label>
+								<input type="checkbox" value="">
+								<div class="card card-horizontal">
+									<div class="card-row card-row-padded">
+										<div class="card-col-field">
+											<div class="list-group-card-icon">
+												<div class="user-icon">
+													<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+												</div>
+											</div>
+										</div>
+										<div class="card-col-content card-col-gutters">
+											<h5 class="text-default" title="Cristina Pineiro, modified 2 hours ago">Cristina Pineiro, modified 2 hours ago</h5>
+											<h4 title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
+											<h5 class="text-default" title="Approved">Approved</h5>
+										</div>
+										<div class="card-col-field">
+											<div class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#1">Download</a></li>
+													<li><a href="#1">Edit</a></li>
+													<li><a href="#1">Move</a></li>
+													<li><a href="#1">Checkout</a></li>
+													<li><a href="#1">Permissions</a></li>
+													<li><a href="#1">Move to Recycle Bin</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-
-						<div class="list-group-item-content">
-							<h5 class="text-default">Cristina Pineiro, modified 2 hours ago</h5>
-							<h4>30 Brilliant Mobile Navigation Menu Design Concepts</h4>
-							<h5 class="text-default">
-								<span>Approved</span>
-							</h5>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-								<ul class="dropdown-menu dropdown-menu-left-side">
-									<li class="dropdown-header">Dropdown Header</li>
-									<li><a href="#">Action 1</a></li>
-									<li><a href="#">Action 2</a></li>
-									<li><a href="#">Action 3</a></li>
-									<li><a href="#">Action 4</a></li>
-									<li><a href="#">Action 5</a></li>
-									<li><a href="#">Action 6</a></li>
-									<li><a href="#">Action 7</a></li>
-									<li><a href="#">Action 8</a></li>
-								</ul>
-							</div>
+							</label>
 						</div>
 					</li>
-
 					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="detailed-list-view-icon">
-								<span class="icon-folder-open icon-xl"></span>
-							</div>
-						</div>
-
-						<div class="list-group-item-content">
-							<h5 class="text-default">Susan Brown, modified 3 hours ago</h5>
-							<h4>Getting Up to Speed</h4>
-							<h5 class="text-default">
-								<span>Approved</span>
-							</h5>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-								<ul class="dropdown-menu dropdown-menu-left-side">
-									<li class="dropdown-header">Dropdown Header</li>
-									<li><a href="#">Action 1</a></li>
-									<li><a href="#">Action 2</a></li>
-									<li><a href="#">Action 3</a></li>
-									<li><a href="#">Action 4</a></li>
-									<li><a href="#">Action 5</a></li>
-									<li><a href="#">Action 6</a></li>
-									<li><a href="#">Action 7</a></li>
-									<li><a href="#">Action 8</a></li>
-								</ul>
-							</div>
+						<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+							<label>
+								<input type="checkbox" value="">
+								<div class="card card-horizontal">
+									<div class="card-row card-row-padded">
+										<div class="card-col-field">
+											<div class="list-group-card-icon">
+												<span class="icon-folder-close text-default"></span>
+											</div>
+										</div>
+										<div class="card-col-content card-col-gutters">
+											<h5 class="text-default" title="Susan Brown, modified 3 hours ago">Susan Brown, modified 3 hours ago</h5>
+											<h4 title="Getting Up to Speed">Getting Up to Speed</h4>
+											<h5 class="text-default" title="Approved">Approved</h5>
+										</div>
+										<div class="card-col-field">
+											<div class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#1">Download</a></li>
+													<li><a href="#1">Edit</a></li>
+													<li><a href="#1">Move</a></li>
+													<li><a href="#1">Checkout</a></li>
+													<li><a href="#1">Permissions</a></li>
+													<li><a href="#1">Move to Recycle Bin</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</label>
 						</div>
 					</li>
-
 					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="detailed-list-view-icon">
-								<div class="user-icon user-icon-lg">
-									<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
+						<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
+							<label>
+								<input type="checkbox" value="">
+								<div class="card card-horizontal">
+									<div class="card-row card-row-padded">
+										<div class="card-col-field">
+											<div class="list-group-card-icon">
+												<div class="user-icon">
+													<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
+												</div>
+											</div>
+										</div>
+										<div class="card-col-content card-col-gutters">
+											<h5 class="text-default" title="Sergio Ruiz, modified 9 hours ago">Sergio Ruiz, modified 9 hours ago</h5>
+											<h4 title="Introducing FS3">Introducing FS3</h4>
+											<h5 class="text-default" title="Approved">Approved</h5>
+										</div>
+										<div class="card-col-field">
+											<div class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li><a href="#1">Download</a></li>
+													<li><a href="#1">Edit</a></li>
+													<li><a href="#1">Move</a></li>
+													<li><a href="#1">Checkout</a></li>
+													<li><a href="#1">Permissions</a></li>
+													<li><a href="#1">Move to Recycle Bin</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-
-						<div class="list-group-item-content">
-							<h5 class="text-default">Sergio Ruiz, modified 9 hours ago</h5>
-							<h4>Introducing FS3</h4>
-							<h5 class="text-default">
-								<span>Approved</span>
-							</h5>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle icon-ellipsis-vertical icon-lg icon-monospaced" data-toggle="dropdown" href="#1"></a>
-								<ul class="dropdown-menu dropdown-menu-left-side">
-									<li class="dropdown-header">Dropdown Header</li>
-									<li><a href="#">Action 1</a></li>
-									<li><a href="#">Action 2</a></li>
-									<li><a href="#">Action 3</a></li>
-									<li><a href="#">Action 4</a></li>
-									<li><a href="#">Action 5</a></li>
-									<li><a href="#">Action 6</a></li>
-									<li><a href="#">Action 7</a></li>
-									<li><a href="#">Action 8</a></li>
-								</ul>
-							</div>
+							</label>
 						</div>
 					</li>
 				</ul>
@@ -1288,59 +1236,50 @@
 	</div>
 </div>
 
-<a class="btn btn-action btn-bottom-right btn-primary" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
+<a class="btn btn-action btn-bottom-right btn-primary" data-placement="left" data-toggle="tooltip" href="#1" id="fullscreenBtn" title="Fullscreen"><span class="icon-desktop"></span></a>
 
 <script>
-	$('#blogActionsSidenav').sideNavigation({
-		gutter: 0,
-		toggler: '#blogActionsToggler',
-		typeMobile: 'fixed-push',
-		type: 'fixed',
-		width: 320
-	});
+	$('#blogActionsSidenav').sideNavigation(
+		{
+			gutter: 0,
+			toggler: '#blogActionsToggler',
+			type: 'fixed',
+			typeMobile: 'fixed-push',
+			width: 320
+		}
+	);
 
 	$('.collapse-basic-search').collapsibleSearch();
 
-	$('#fullscreenBtn').on('click', function(event) {
-		event.preventDefault();
+	$('#fullscreenBtn').on(
+		'click',
+		function(event) {
+			event.preventDefault();
 
-		$('#blogActions').toggleClass('uxgl-fullscreen-fixed');
-		$('body').toggleClass('fixed');
-	});
+			$('#blogActions').toggleClass('uxgl-fullscreen-fixed');
+			$('body').toggleClass('fixed');
+		}
+	);
 
 	$('[data-toggle="tooltip"]').tooltip();
 
-	// Check/uncheck if list group item clicked
-
-	$('.tabular-list-group .list-group-item').on('click', function(event) {
-		var target = $(event.target);
-
-		if (!target.closest('.dropdown').length) {
-			$(this).toggleClass('active');
-
-			if ($(this).hasClass('active')) {
-				$(this).find('input[type="checkbox"]').prop('checked', true);
-			}
-			else {
-				$(this).find('input[type="checkbox"]').prop('checked', false);
-			}
-		}
-	});
-
 	// Check / uncheck all
 
-	$('.management-bar .check-all').on('click', function(event) {
-		var listGroupItem = $('.tabular-list-group .list-group-item');
+	$('.management-bar .check-all').on(
+		'click',
+		function(event) {
+			var listGroupItem = $('.list-group-card .list-group-item');
 
-		if ($(this).prop('checked')) {
-			listGroupItem.addClass('active');
-			listGroupItem.find('input[type="checkbox"]').prop('checked', true);
+			if ($(this).prop('checked')) {
+				listGroupItem.addClass('active');
+				listGroupItem.find('input[type="checkbox"]').prop('checked', true);
+			}
+			else {
+				listGroupItem.removeClass('active');
+				listGroupItem.find('input[type="checkbox"]').prop('checked', false);
+			}
 		}
-		else {
-			listGroupItem.removeClass('active');
-			listGroupItem.find('input[type="checkbox"]').prop('checked', false);
-		}
-	});
+	);
 </script>
 	</div>
 
@@ -1359,45 +1298,66 @@
 		});
 
 		$(function() {
+			var body = $('body');
 			var headerTopBar = $('#headerTopBar');
-			var wrapper = $('#wrapper');
-
-			var forceReflow = function(el) {
-				el.css('display', 'table');
-
-				setTimeout(function() {
-					el.css('display', '');
-				}, 0);
-			};
 
 			headerTopBar.find('.navbar-toggle').on(
 				'click',
 				function(event) {
-					var sidenavContainer = headerTopBar.next('.sidenav-container');
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({ 
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
 
 					event.preventDefault();
 
-					sidenavContainer.one(
-						'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+					mainNavContainer.on(
+						transitionEnd,
 						function(event) {
-							sidenavContainer.removeClass('sidenav-transition');
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
 
-							forceReflow($('.main-nav-open'));
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
 						}
 					);
 
-					sidenavContainer.toggleClass('closed').addClass('sidenav-transition');
-					wrapper.toggleClass('main-nav-open');
-				}
-			);
+					mainNavContainer.addClass('main-nav-transition');
 
-			$('.side-navigation').on(
-				'click',
-				'li.side-navigation-dropdown-container > a',
-				function(event) {
-					event.preventDefault();
-
-					$(this).nextAll('.collapse').toggleClass('in');
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
 				}
 			);
 		});

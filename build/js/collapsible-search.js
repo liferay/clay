@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.21
+* Lexicon 0.1.22
 *
 * Copyright 2015, Liferay, Inc.
 * All rights reserved.
@@ -67,6 +67,7 @@
 				instance._onTransitionEnd(basicSearch);
 
 				basicSearch.removeClass('open');
+				basicSearch.find('[type="submit"]').focus();
 				basicSearch.off('click');
 			});
 		},
@@ -74,7 +75,7 @@
 		_onClickSubmitButton: function(element) {
 			var instance = this;
 
-			var submitButton = instance.basicSearch.find('button[type="submit"]');
+			var submitButton = instance.basicSearch.find('[type="submit"]');
 
 			submitButton.on('click', function(event) {
 				if (window.innerWidth < instance.options.breakpoint) {
