@@ -11,6 +11,7 @@
 * Update: Keyboard focus shouldn't enter a side navigation that is closed
 * Update: Move clamp css to its own file
 * Update: Atlas modal-title font-weight 400
+* Site: Change icons to lexicon svg icons on Alert, Cards, Header Toolbar, and Management Bar pages
 * Site: Misc site updates
 * Site: Update side navigation docs
 * Site: Update navbar docs
