@@ -31,14 +31,26 @@ section: Components
 				<header class="header-toolbar">
 					<div class="toolbar-group">
 						<div class="toolbar-group-content">
-							<a class="sidenav-toggler" href="#1"><span class="icon-align-justify icon-monospaced"></span></a>
+							<a class="sidenav-toggler" href="#1">
+								<span class="icon-monospaced">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
+									</svg>
+								</span>
+							</a>
 						</div>
 					</div>
 
 					<div class="toolbar-group-right">
 						<div class="toolbar-group-content">
 							<div class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-cog icon-monospaced"></span></a>
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+									<span class="icon-monospaced">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</span>
+								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a href="#1">Export</a></li>
 									<li><a href="#1">Import</a></li>
@@ -89,18 +101,36 @@ section: Components
 		<header class="header-toolbar">
 			<div class="toolbar-group">
 				<div class="toolbar-group-content">
-					<a class="sidenav-toggler" href="#1"><span class="icon-align-justify icon-monospaced"></span></a>
+					<a class="sidenav-toggler" href="#1">
+						<span class="icon-monospaced">
+							<svg aria-hidden="true" class="lexicon-icon">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
+							</svg>
+						</span>
+					</a>
 				</div>
 
 				<div class="toolbar-group-content">
-					<a href="#"><span class="icon-angle-left icon-monospaced"></span></a>
+					<a href="#">
+						<span class="icon-monospaced">
+							<svg aria-hidden="true" class="lexicon-icon">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+							</svg>
+						</span>
+					</a>
 				</div>
 			</div>
 
 			<div class="toolbar-group-right">
 				<div class="toolbar-group-content">
 					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-pencil icon-monospaced"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+							<span class="icon-monospaced">
+								<svg aria-hidden="true" class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</span>
+						</a>
 						<ul class="dropdown-menu dropdown-menu-right">
 							<li><a href="#1">Export</a></li>
 							<li><a href="#1">Import</a></li>
@@ -158,16 +188,20 @@ section: Components
 						<div class="sidebar-header">
 							<h4>
 								<a href="#1">
-									<span class="icon-rocket icon-monospaced"></span>
-									<span>Squaredown</span>
+									<span>Squareup</span>
 								</a>
 
-								<a class="icon-remove icon-monospaced sidenav-close" href="#1"></a>
+								<a class="sidenav-close" href="#1" style="float:right;padding:0 5px;">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+									</svg>
+									<span class="sr-only">Close</span>
+								</a>
 							</h4>
 						</div>
 
 						<div class="sidebar-body">
-							<ul class="nav nav-tabs product-menu-tabs1">
+							<ul class="nav nav-tabs product-menu-tabs1" style="padding:0;">
 								<li class="active col-xs-4">
 									<a data-toggle="tab" href="#tab1">
 										<div class="product-menu-tab-icon1"><span class="icon-android icon-monospaced"></span></div>
@@ -408,18 +442,32 @@ section: Components
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1"><span class="icon-align-justify icon-monospaced"></span></a>
+								<a class="sidenav-toggler icon-monospaced" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
+									</svg>
+								</a>
 							</div>
 
 							<div class="toolbar-group-content">
-								<a href="#"><span class="icon-angle-left icon-monospaced"></span></a>
+								<a class="icon-monospaced" href="#">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+									</svg>
+								</a>
 							</div>
 						</div>
 
 						<div class="toolbar-group-right">
 							<div class="toolbar-group-content">
 								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1"><span class="icon-ellipsis-vertical icon-monospaced"></span></a>
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+										<div class="icon-monospaced">
+											<svg aria-hidden="true" class="lexicon-icon">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+											</svg>
+										</div>
+									</a>
 									<ul class="dropdown-menu dropdown-menu-right">
 										<li><a href="#1">Export</a></li>
 										<li><a href="#1">Import</a></li>
@@ -444,12 +492,21 @@ section: Components
 						<form class="basic-search input-group">
 							<div class="input-group-input">
 								<div class="basic-search-slider">
-									<button class="basic-search-close btn btn-default" type="button"><span class="icon-remove"></span></button>
+									<button class="basic-search-close btn btn-default" type="button">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+										</svg>
+										<span class="sr-only">Close</span>
+									</button>
 									<input class="form-control" placeholder=" Search..." type="text">
 								</div>
 							</div>
 							<div class="input-group-btn">
-								<button class="btn btn-default" type="submit"><span class="icon-search"></span></button>
+								<button class="btn btn-default" type="submit">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+									</svg>
+								</button>
 							</div>
 						</form>
 					</div>
@@ -475,7 +532,20 @@ section: Components
 						</div>
 
 						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical" href="#1"></a>
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+									<div class="icon-monospaced">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</div>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Export</a></li>
+									<li><a href="#1">Import</a></li>
+									<li><a href="#1">Configuration</a></li>
+								</ul>
+							</div>
 						</div>
 					</li>
 
@@ -498,7 +568,20 @@ section: Components
 						</div>
 
 						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical" href="#1"></a>
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+									<div class="icon-monospaced">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</div>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Export</a></li>
+									<li><a href="#1">Import</a></li>
+									<li><a href="#1">Configuration</a></li>
+								</ul>
+							</div>
 						</div>
 					</li>
 
@@ -521,7 +604,20 @@ section: Components
 						</div>
 
 						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical" href="#1"></a>
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+									<div class="icon-monospaced">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</div>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Export</a></li>
+									<li><a href="#1">Import</a></li>
+									<li><a href="#1">Configuration</a></li>
+								</ul>
+							</div>
 						</div>
 					</li>
 
@@ -544,7 +640,20 @@ section: Components
 						</div>
 
 						<div class="list-group-item-field">
-							<a class="icon-ellipsis-vertical" href="#1"></a>
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+									<div class="icon-monospaced">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</div>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Export</a></li>
+									<li><a href="#1">Import</a></li>
+									<li><a href="#1">Configuration</a></li>
+								</ul>
+							</div>
 						</div>
 					</li>
 				</ul>
