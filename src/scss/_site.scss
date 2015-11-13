@@ -147,6 +147,16 @@ section.row {
 	}
 }
 
+#alertNotifications {
+	.lexicon-site-display-container {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			float: left;
+			margin-right: 15px;
+			min-height: 200px;
+		}
+	}
+}
+
 // Best Practices Page
 
 #bestPractices tr th {
