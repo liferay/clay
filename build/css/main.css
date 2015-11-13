@@ -157,6 +157,7 @@ section.row {
 #skipTo {
   min-width: 170px;
   position: absolute;
+  left: 15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -696,18 +697,20 @@ body.fixed {
 
 @media screen and (min-width: 768px) {
   #mainContent {
-    padding-left: 230px;
+    padding-left: 240px;
   }
 }
 
 #mainNav {
   overflow: hidden;
   position: absolute;
+  visibility: hidden;
   width: 0;
 }
 
 @media screen and (min-width: 768px) {
   #mainNav {
+    visibility: visible;
     width: 220px;
   }
 }
@@ -734,6 +737,7 @@ body.fixed {
 }
 
 .main-nav-open #mainNav {
+  visibility: visible;
   width: 220px;
 }
 
@@ -746,6 +750,10 @@ body.fixed {
     left: auto;
     position: static;
   }
+}
+
+.main-nav-transition #mainNav {
+  visibility: visible;
 }
 
 .main-nav-transition #mainNav,
