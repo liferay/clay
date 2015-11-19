@@ -18,9 +18,9 @@ section: Components
 			<div class="navbar-header navbar-header-right">
 				<button aria-expanded="false" class="collapsed navbar-toggle" data-target="#navbar-collapse-0" data-toggle="collapse" type="button">
 					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<svg aria-hidden="true" class="lexicon-icon">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
+					</svg>
 				</button>
 			</div>
 
@@ -142,9 +142,9 @@ section: Components
 			<div class="navbar-header navbar-header-right">
 				<button aria-expanded="false" class="collapsed navbar-toggle" data-target="#navbar-collapse-2" data-toggle="collapse" type="button">
 					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<svg aria-hidden="true" class="lexicon-icon">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
+					</svg>
 				</button>
 			</div>
 
@@ -184,7 +184,11 @@ section: Components
 					</div>
 
 					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+						<button class="btn btn-default" type="submit">
+							<svg aria-hidden="true" class="lexicon-icon">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+							</svg>
+						</button>
 					</div>
 				</form>
 			</div>
@@ -316,12 +320,20 @@ section: Components
 				<form action="../navbar" class="basic-search input-group" method="GET">
 					<div class="input-group-input">
 						<div class="basic-search-slider">
-							<button class="basic-search-close btn btn-default" type="button"><span class="icon-remove"></span></button>
+							<button class="basic-search-close btn btn-default" type="button">
+								<svg aria-hidden="true" class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+								</svg>
+							</button>
 							<input class="form-control" name="search" placeholder=" Search..." type="text" />
 						</div>
 					</div>
 					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit"><span class="icon-search"></span></button>
+						<button class="btn btn-default" type="submit">
+							<svg aria-hidden="true" class="lexicon-icon">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+							</svg>
+						</button>
 					</div>
 				</form>
 			</div>
@@ -442,12 +454,20 @@ section: Components
 			<form class="basic-search input-group">
 				<div class="input-group-input">
 					<div class="basic-search-slider">
-						<button class="basic-search-close btn btn-default" type="button"><span class="icon-remove"></span></button>
+						<button class="basic-search-close btn btn-default" type="button">
+							<svg aria-hidden="true" class="lexicon-icon">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</button>
 						<input class="form-control" placeholder=" Search..." type="text" />
 					</div>
 				</div>
 				<div class="input-group-btn">
-					<button class="btn btn-default" type="submit"><span class="icon-search"></span></button>
+					<button class="btn btn-default" type="submit">
+						<svg aria-hidden="true" class="lexicon-icon">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+						</svg>
+					</button>
 				</div>
 			</form>
 		</nav>
