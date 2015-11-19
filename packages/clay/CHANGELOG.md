@@ -1,5 +1,5 @@
 ## Next Release
-* No changes yet
+* Site: Use table-cell-field instead of table-list-field for consistency.
 ***
 
 ## v0.1.22 - November 12, 2015
