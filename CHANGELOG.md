@@ -1,5 +1,5 @@
 ## Next Release
-* Site: Use table-cell-field instead of table-list-field for consistency.
+* No changes yet
 ***
 
 ## v0.1.22 - November 12, 2015
@@ -11,6 +11,7 @@
 * Update: Keyboard focus shouldn't enter a side navigation that is closed
 * Update: Move clamp css to its own file
 * Update: Atlas modal-title font-weight 400
+* Site: Use table-cell-field instead of table-list-field for consistency.
 * Site: Change icons to lexicon svg icons on Alert, Cards, Header Toolbar, and Management Bar pages
 * Site: Misc site updates
 * Site: Update side navigation docs
