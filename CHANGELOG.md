@@ -11,6 +11,7 @@
 * Update: Keyboard focus shouldn't enter a side navigation that is closed
 * Update: Move clamp css to its own file
 * Update: Atlas modal-title font-weight 400
+* Site: Convert remaining icons to svg, except ones in pseudo elements
 * Site: Convert to lexicon icons in input-groups, form-validation, list-groups, and navbar
 * Site: Use table-cell-field instead of table-list-field for consistency.
 * Site: Change icons to lexicon svg icons on Alert, Cards, Header Toolbar, and Management Bar pages
