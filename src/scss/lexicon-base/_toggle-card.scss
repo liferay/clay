@@ -26,21 +26,18 @@
 
 .toggle-card-icon {
 	border-radius: $toggle-card-icon-border-radius;
-	height: $toggle-card-icon-height;
 	font-size: $toggle-card-icon-font-size;
-	margin: 0 auto;
-	width: $toggle-card-icon-width;
-
-	[class*="icon-"] {
-		display: block;
-	}
 }
 
 .toggle-card-label {
+	font-size: $toggle-card-label-font-size;
 	height: $toggle-card-height - $toggle-card-icon-height - ($toggle-card-border-width * 2) - $toggle-card-padding-vertical;
-	line-height: 16px;
 	overflow: hidden;
 	padding-top: $toggle-card-padding-vertical;
+}
+
+.toggle-switch-icon .lexicon-icon {
+	margin-top: -3px;
 }
 
 input.toggle-card {
@@ -63,10 +60,6 @@ input.toggle-card {
 		.toggle-card-icon {
 			background-color: $toggle-card-icon-bg;
 			border: $toggle-card-icon-border solid $toggle-card-icon-border-width;
-
-			[class*="icon-"] {
-				line-height: $toggle-card-icon-height - ($toggle-card-icon-border-width * 2);
-			}
 		}
 	}
 
@@ -90,10 +83,6 @@ input.toggle-card {
 		.toggle-card-icon {
 			background-color: $toggle-card-on-icon-bg;
 			border: $toggle-card-on-icon-border-width solid $toggle-card-on-icon-border;
-
-			[class*="icon-"] {
-				line-height: $toggle-card-icon-height - ($toggle-card-on-icon-border-width * 2);
-			}
 		}
 	}
 
