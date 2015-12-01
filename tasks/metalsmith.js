@@ -96,7 +96,7 @@ module.exports = function(gulp, plugins, _, config) {
 						.use(headingsId(
 							{
 								linkTemplate: '<a class="heading-anchor" href="#%s"><i class="icon icon-link"></i></a>',
-								selector: '.col-md-12 h3'
+								selector: '.col-md-12 > h3'
 							}
 						))
 						.use(handlePermalink())
