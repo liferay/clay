@@ -214,16 +214,16 @@
 		
 <div class="row">
 	<div class="col-md-12">
+		<div class="alert alert-warning">For customizing toggles, see <a href="../extending-toggles/">extending-toggles</a>.</div>
+
+		<h3 id="toggle-switch"><a class="heading-anchor" href="#toggle-switch"><i class="icon icon-link"></i></a>Toggle Switch</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.toggle-switch</code> to <code>position: static</code> and hide the <code>.toggle-switch-bar</code> element to display a regular checkbox.</p>
+		</blockquote>
+
 		<form action="#" method="get">
-			<h3 id="toggle-switch"><a class="heading-anchor" href="#toggle-switch"><i class="icon icon-link"></i></a>Toggle Switch</h3>
-
-			<p>For customizing toggles, see <a href="../extending-toggles/">extending-toggles</a>.</p>
-
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.toggle-switch</code> to <code>position: static</code> and hide the <code>.toggle-switch-bar</code> element to display a regular checkbox.</p>
-			</blockquote>
-
-			<div class="form-group" style="margin-bottom:0;">
+			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
 
@@ -231,7 +231,6 @@
 						<span class="toggle-switch-handle"></span>
 					</span>
 				</label>
-			</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
@@ -248,11 +247,19 @@
 &lt;/div&gt;</code></pre>
 </div>
 
-			<blockquote class="blockquote-sm blockquote-success" style="margin-top:15px;">
-				<p>Use data attributes <code>data-label-on=&quot;&quot;</code> and <code>data-label-off=&quot;&quot;</code> on <code>&lt;span class=&quot;toggle-switch-handle&quot;&gt;&lt;/span&gt;</code> to display specific text when the switch is on and off.</p>
-			</blockquote>
+			</div>
+		</form>
+	</div>
+</div>
 
-			<div class="form-group" style="margin-bottom:0;">
+<div class="row">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success" style="margin-top:15px;">
+			<p>Use data attributes <code>data-label-on=&quot;&quot;</code> and <code>data-label-off=&quot;&quot;</code> on <code>&lt;span class=&quot;toggle-switch-handle&quot;&gt;&lt;/span&gt;</code> to display specific text when the switch is on and off.</p>
+		</blockquote>
+
+		<form action="#" method="get">
+			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
 					Toggle Switch with data-label-on
@@ -262,7 +269,6 @@
 						</span>
 					</span>
 				</label>
-			</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
@@ -281,7 +287,15 @@
 &lt;/div&gt;</code></pre>
 </div>
 
-			<div class="form-group" style="margin-bottom:0;margin-top:15px;">
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<form action="#" method="get">
+			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
 					Toggle Switch with data-label on and data-label-off
@@ -291,7 +305,6 @@
 						</span>
 					</span>
 				</label>
-			</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
@@ -310,16 +323,24 @@
 &lt;/div&gt;</code></pre>
 </div>
 
-			<h3 id="toggle-switches-with-icons"><a class="heading-anchor" href="#toggle-switches-with-icons"><i class="icon icon-link"></i></a>Toggle Switches with Icons</h3>
+			</div>
+		</form>
+	</div>
+</div>
 
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;button-icon button-icon-on icon-volume-up toggle-switch-icon&quot;&gt;&lt;/span&gt;</code>.</p>
+<div class="row">
+	<div class="col-md-12">
+		<h3 id="toggle-switches-with-icons"><a class="heading-anchor" href="#toggle-switches-with-icons"><i class="icon icon-link"></i></a>Toggle Switches with Icons</h3>
 
-				<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;button-icon button-icon-off icon-volume-off toggle-switch-icon&quot;&gt;&lt;/span&gt;</code>.</p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;button-icon button-icon-on icon-volume-up toggle-switch-icon&quot;&gt;&lt;/span&gt;</code>.</p>
 
-				<p>Substitute <code>icon-volume-up</code> / <code>icon-volume-down</code> with any font awesome icon.</p>
-			</blockquote>
+			<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;button-icon button-icon-off icon-volume-off toggle-switch-icon&quot;&gt;&lt;/span&gt;</code>.</p>
 
+			<p>Substitute <code>icon-volume-up</code> / <code>icon-volume-down</code> with any font awesome icon.</p>
+		</blockquote>
+
+		<form action="#" method="get">
 			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
@@ -347,7 +368,7 @@
 				</label>
 			</div>
 
-			<div class="form-group" style="margin-bottom:0;">
+			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
 					Toggle Switch with data-label on and data-label-off
@@ -359,7 +380,6 @@
 						</span>
 					</span>
 				</label>
-			</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
@@ -380,17 +400,25 @@
 &lt;/div&gt;</code></pre>
 </div>
 
-			<h3 id="toggle-switches-with-icons-alternate"><a class="heading-anchor" href="#toggle-switches-with-icons-alternate"><i class="icon icon-link"></i></a>Toggle Switches with Icons (Alternate)</h3>
+			</div>
+		</form>
+	</div>
+</div>
 
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;icon-ok toggle-switch-icon toggle-switch-icon-on&quot;&gt;&lt;/span&gt;</code>.</p>
+<div class="row">
+	<div class="col-md-12">
+		<h3 id="toggle-switches-with-icons-alternate"><a class="heading-anchor" href="#toggle-switches-with-icons-alternate"><i class="icon icon-link"></i></a>Toggle Switches with Icons (Alternate)</h3>
 
-				<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;icon-remove toggle-switch-icon toggle-switch-icon-off&quot;&gt;&lt;/span&gt;</code>.</p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add an icon to the switch for the on position with <code>&lt;span class=&quot;icon-ok toggle-switch-icon toggle-switch-icon-on&quot;&gt;&lt;/span&gt;</code>.</p>
 
-				<p>Substitute <code>icon-ok</code> / <code>icon-remove</code> with any font awesome icon.</p>
-			</blockquote>
+			<p>Add an icon to the switch for the off position with <code>&lt;span class=&quot;icon-remove toggle-switch-icon toggle-switch-icon-off&quot;&gt;&lt;/span&gt;</code>.</p>
 
-			<div class="form-group" style="margin-bottom:0;">
+			<p>Substitute <code>icon-ok</code> / <code>icon-remove</code> with any font awesome icon.</p>
+		</blockquote>
+
+		<form action="#" method="get">
+			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
 
@@ -401,7 +429,6 @@
 						</span>
 					</span>
 				</label>
-			</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
@@ -421,13 +448,21 @@
 &lt;/div&gt;</code></pre>
 </div>
 
-			<h3 id="disabled-toggle-switches"><a class="heading-anchor" href="#disabled-toggle-switches"><i class="icon icon-link"></i></a>Disabled Toggle Switches</h3>
+			</div>
+		</form>
+	</div>
+</div>
 
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Disable a toggle-switch by adding the attribute <code>disabled=&quot;disabled&quot;</code> to <code>&lt;input type=&quot;checkbox&quot;&gt;</code>.</p>
-			</blockquote>
+<div class="row">
+	<div class="col-md-12">
+		<h3 id="disabled-toggle-switches"><a class="heading-anchor" href="#disabled-toggle-switches"><i class="icon icon-link"></i></a>Disabled Toggle Switches</h3>
 
-			<div class="form-group" style="margin-bottom:0;">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Disable a toggle-switch by adding the attribute <code>disabled=&quot;disabled&quot;</code> to <code>&lt;input type=&quot;checkbox&quot;&gt;</code>.</p>
+		</blockquote>
+
+		<form action="#" method="get">
+			<div class="form-group">
 				<label>
 					<input class="toggle-switch" disabled type="checkbox">
 
@@ -438,7 +473,6 @@
 						</span>
 					</span>
 				</label>
-			</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
@@ -458,12 +492,20 @@
 &lt;/div&gt;</code></pre>
 </div>
 
-			<h3 id="toggleCard"><a class="heading-anchor" href="#toggleCard"><i class="icon icon-link"></i></a>Toggle Card</h3>
+			</div>
+		</form>
+	</div>
+</div>
 
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>A checkbox styled like a card.</p>
-			</blockquote>
+<div class="row">
+	<div class="col-md-12">
+		<h3 id="toggleCard"><a class="heading-anchor" href="#toggleCard"><i class="icon icon-link"></i></a>Toggle Card</h3>
 
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>A checkbox styled like a card.</p>
+		</blockquote>
+
+		<form action="#" method="get">
 			<div class="form-group">
 				<label>
 					<input class="toggle-card" type="checkbox" value="">
@@ -541,7 +583,6 @@
 </div>
 
 			</div>
-
 			<div class="form-group">
 				<label>
 					<input class="toggle-card" type="checkbox" value="">
@@ -583,13 +624,19 @@
 </div>
 
 			</div>
+		</form>
+	</div>
+</div>
 
-			<h3 id="disabled-toggle-cards"><a class="heading-anchor" href="#disabled-toggle-cards"><i class="icon icon-link"></i></a>Disabled Toggle Cards</h3>
+<div class="row">
+	<div class="col-md-12">
+		<h3 id="disabled-toggle-cards"><a class="heading-anchor" href="#disabled-toggle-cards"><i class="icon icon-link"></i></a>Disabled Toggle Cards</h3>
 
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Disable a toggle-card by adding the attribute <code>disabled=&quot;disabled&quot;</code> to <code>&lt;input class=&quot;toggle-card&quot; type=&quot;checkbox&quot;&gt;</code>.</p>
-			</blockquote>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Disable a toggle-card by adding the attribute <code>disabled=&quot;disabled&quot;</code> to <code>&lt;input class=&quot;toggle-card&quot; type=&quot;checkbox&quot;&gt;</code>.</p>
+		</blockquote>
 
+		<form action="#" method="get">
 			<div class="form-group">
 				<label>
 					<input class="toggle-card" disabled type="checkbox" value="">
@@ -636,8 +683,8 @@
 </div>
 
 <div class="row row-spacing">
-	<div class="col-xs-12">
-		<h3>Toggle Card DM</h3>
+	<div class="col-xs-12 col-md-12">
+		<h3 id="toggle-card-dm"><a class="heading-anchor" href="#toggle-card-dm"><i class="icon icon-link"></i></a>Toggle Card DM</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Checkbox styled like a card, used in Documents and Media portlet. Use <code>toggle-card-dm</code> and the mark up structure below to add a checkbox to any card.</p>
