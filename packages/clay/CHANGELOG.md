@@ -11,6 +11,8 @@
 * Update: Keyboard focus shouldn't enter a side navigation that is closed
 * Update: Move clamp css to its own file
 * Update: Atlas modal-title font-weight 400
+* Site: Update pages to work with new headings identifier selector
+* Site: Use more specific heading identifier to prevent unwanted headings to be targetted
 * Site: Convert remaining icons to svg, except ones in pseudo elements
 * Site: Convert to lexicon icons in input-groups, form-validation, list-groups, and navbar
 * Site: Use table-cell-field instead of table-list-field for consistency.
