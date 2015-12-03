@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.22</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.24</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -774,13 +774,21 @@
 			<p><code>.btn-action</code> should be used where only one primary action can be taken. A good use of <code>.btn-action</code> is adding a new entry in the blog portlet, where the user will be led to the new blog entry page.</p>
 		</blockquote>
 
-		<a class="btn btn-primary btn-action" href="../blogs-action"><span class="icon-plus"></span></a>
+		<a class="btn btn-primary btn-action" href="../../content/blogs-action" onclick="alert(&apos;Link to Somewhere&apos;);return false;">
+			<svg class="icon-monospaced lexicon-icon">
+				<use xlink:href="../../images/icons/icons.svg#plus">
+			</svg>
+		</a>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse12"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse12">
-	<pre><code class="html">&lt;a class=&quot;btn btn-primary btn-action&quot; href=&quot;../blogs-action&quot;&gt;&lt;span class=&quot;icon-plus&quot;&gt;&lt;/span&gt;&lt;/a&gt;</code></pre>
+	<pre><code class="html">&lt;a class=&quot;btn btn-primary btn-action&quot; href=&quot;../blogs-action&quot;&gt;
+    &lt;svg class=&quot;icon-monospaced lexicon-icon&quot;&gt;
+        &lt;use xlink:href=&quot;../../images/icons/icons.svg#plus&quot; /&gt;
+    &lt;/svg&gt;
+&lt;/a&gt;</code></pre>
 </div>
 
 		<blockquote class="blockquote-sm blockquote-success" style="margin-top:20px;">
@@ -788,7 +796,11 @@
 		</blockquote>
 
 		<div class="btn-action-secondary dropdown">
-			<button class="btn btn-primary" data-toggle="dropdown" type="button"><span class="icon-plus"></span></button>
+			<button class="btn btn-primary" data-toggle="dropdown" type="button">
+				<svg class="icon-monospaced lexicon-icon">
+					<use xlink:href="../../images/icons/icons.svg#plus">
+				</svg>
+			</button>
 			<ul class="dropdown-menu dropdown-menu-right-side-bottom">
 				<li><a href="../blogs-action">User</a></li>
 				<li><a href="../blogs-action">Regular Organization</a></li>
@@ -801,7 +813,11 @@
 </div>
 <div class="collapse" id="codeCollapse13">
 	<pre><code class="html">&lt;div class=&quot;btn-action-secondary dropdown&quot;&gt;
-    &lt;button class=&quot;btn btn-primary&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;icon-plus&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button class=&quot;btn btn-primary&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
+        &lt;svg class=&quot;icon-monospaced lexicon-icon&quot;&gt;
+            &lt;use xlink:href=&quot;../../images/icons/icons.svg#plus&quot; /&gt;
+        &lt;/svg&gt;
+    &lt;/button&gt;
     &lt;ul class=&quot;dropdown-menu dropdown-menu-right-side dropdown-menu-bottom&quot;&gt;
         &lt;li&gt;&lt;a href=&quot;../blogs-action&quot;&gt;User&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;../blogs-action&quot;&gt;Regular Organization&lt;/a&gt;&lt;/li&gt;
@@ -810,10 +826,18 @@
 &lt;/div&gt;</code></pre>
 </div>
 
-		<a class="btn btn-primary btn-action btn-top-left" href="../blogs-action" type="submit"><span class="icon-plus"></span></a>
+		<a class="btn btn-primary btn-action btn-top-left" href="../blogs-action" type="submit">
+			<svg class="icon-monospaced lexicon-icon">
+				<use xlink:href="../../images/icons/icons.svg#plus">
+			</svg>
+		</a>
 
 		<div class="btn-action-secondary btn-bottom-right dropdown">
-			<button class="btn btn-primary" data-toggle="dropdown" type="button"><span class="icon-plus"></span></button>
+			<button class="btn btn-primary" data-toggle="dropdown" type="button">
+				<svg class="icon-monospaced lexicon-icon">
+					<use xlink:href="../../images/icons/icons.svg#plus">
+				</svg>
+			</button>
 			<ul class="dropdown-menu dropdown-menu-left-side-bottom">
 				<li><a href="../blogs-action">User</a></li>
 				<li><a href="../blogs-action">Regular Organization</a></li>

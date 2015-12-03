@@ -2,6 +2,14 @@
 * No changes yet
 ***
 
+## v0.1.24 - November 12, 2015
+Publishing the build files (Nate's fault)
+
+## v0.1.23 - November 12, 2015
+* Update: Icon-monospaced should work with svg icons
+* Update: Added new icons, `info-circle`, `info-circle-open`, `caret-top`, and `caret-bottom`
+* Site: Add icon-monospaced to svg icons
+
 ## v0.1.22 - November 12, 2015
 
 * Fix: Navbar-toggle should have outline on focus
@@ -11,6 +19,8 @@
 * Update: Keyboard focus shouldn't enter a side navigation that is closed
 * Update: Move clamp css to its own file
 * Update: Atlas modal-title font-weight 400
+* Site: Update pages to work with new headings identifier selector
+* Site: Use more specific heading identifier to prevent unwanted headings to be targetted
 * Site: Convert remaining icons to svg, except ones in pseudo elements
 * Site: Convert to lexicon icons in input-groups, form-validation, list-groups, and navbar
 * Site: Use table-cell-field instead of table-list-field for consistency.
