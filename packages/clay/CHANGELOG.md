@@ -2,6 +2,14 @@
 * No changes yet
 ***
 
+## v0.1.24 - November 12, 2015
+Publishing the build files (Nate's fault)
+
+## v0.1.23 - November 12, 2015
+* Update: Icon-monospaced should work with svg icons
+* Update: Added new icons, `info-circle`, `info-circle-open`, `caret-top`, and `caret-bottom`
+* Site: Add icon-monospaced to svg icons
+
 ## v0.1.22 - November 12, 2015
 
 * Fix: Navbar-toggle should have outline on focus

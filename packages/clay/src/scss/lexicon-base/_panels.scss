@@ -1,12 +1,10 @@
 .panel {
 	.collapse-icon {
-		padding-right: 30px;
-
 		&:before {
 			content: $panel-heading-icon-open;
 			font-size: $panel-heading-icon-font-size;
 			font-family: $panel-heading-icon-font-family;
-			right: 3px;
+			right: 15px;
 		}
 
 		&.collapsed:before {
@@ -14,6 +12,26 @@
 		}
 	}
 }
+
+.panel-group {
+	.panel-heading {
+		padding: 0;
+
+		.collapse-icon {
+			padding-right: 35px;
+		}
+	}
+
+	.panel-title {
+		> a,
+		> span {
+			display: block;
+			padding: $panel-heading-padding;
+		}
+	}
+}
+
+// Skins
 
 .panel-blank {
 	box-shadow: none;
@@ -26,12 +44,10 @@
 	}
 }
 
-.panel-group {
-	.panel-blank .panel-heading {
-		+ .panel-collapse > .panel-body,
-		+ .panel-collapse > .list-group {
-			border-top-color: $panel-blank-heading-bg;
-		}
+.panel-group .panel-blank .panel-heading {
+	+ .panel-collapse > .panel-body,
+	+ .panel-collapse > .list-group {
+		border-top-color: $panel-blank-heading-bg;
 	}
 }
 

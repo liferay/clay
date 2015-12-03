@@ -1,5 +1,10 @@
-$btn-text-height: $line-height-base * $font-size-base !default;
-$modal-footer-height: 2 + ($padding-base-vertical * 2) + $modal-inner-padding + $modal-inner-padding + $btn-text-height !default;
+$modal-footer-height: 64px !default;
+$modal-desktop-footer-height:  $modal-footer-height !default;
+
+$modal-header-height: 56px !default;
+$modal-desktop-header-height:  $modal-header-height !default;
+
+// Skin
 
 $modal-body-bg: transparent !default;
 $modal-body-color: $text-color !default;
@@ -10,10 +15,6 @@ $modal-header-close-color: $text-color !default;
 
 $modal-footer-bg: $modal-header-bg !default;
 $modal-footer-color: $modal-header-color !default;
-
-$modal-full-screen-body-bg: transparent !default;
-$modal-full-screen-footer-bg: transparent !default;
-$modal-full-screen-footer-color: $text-color !default;
 
 $modal-inverse-body-bg: $modal-body-bg !default;
 $modal-inverse-body-color: $navbar-inverse-color !default;
@@ -32,7 +33,3 @@ $modal-inverse-footer-color: $modal-inverse-header-color !default;
 
 $modal-inverse-link-color: $navbar-inverse-link-color !default;
 $modal-inverse-link-hover-color: $navbar-inverse-link-hover-color !default;
-
-$modal-inverse-btn-icon-color: $modal-inverse-link-color !default;
-
-$modal-btn-icon-color: $link-color !default;

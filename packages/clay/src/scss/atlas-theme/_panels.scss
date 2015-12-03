@@ -11,6 +11,28 @@
 	border-bottom-width: 2px;
 }
 
+.panel-group {
+	.panel + .panel {
+		margin-top: 0;
+	}
+
+	.panel-heading {
+		border-bottom-width: 0;
+
+		+ .panel-collapse > .panel-body {
+			border-top-width: 2px;
+		}
+	}
+}
+
+.panel-title {
+	a {
+		text-decoration: none;
+	}
+}
+
+// Skins
+
 .panel-blank {
 	box-shadow: none;
 
@@ -35,12 +57,4 @@
 	> .panel-footer {
 		color: $brand-default;
 	}
-}
-
-.panel-group .panel-heading {
-	border-bottom-width: 0;
-}
-
-.panel-group .panel-heading + .panel-collapse > .panel-body {
-	border-top-width: 2px;
 }

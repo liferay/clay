@@ -1,3 +1,7 @@
+@function calcLexiconIconPadding($monospaced-size, $icon-size) {
+	@return floor(($monospaced-size - $icon-size) / 2);
+}
+
 .lexicon-icon {
 	display: inline-block;
 	fill: currentColor;
@@ -5,6 +9,10 @@
 	transform: translateZ(0);
 	vertical-align: middle;
 	width: $lexicon-icon-size;
+
+	&.icon-monospaced {
+		padding: calcLexiconIconPadding($icon-monospaced-size, $lexicon-icon-size);
+	}
 }
 
 .lexicon-icon-sm {

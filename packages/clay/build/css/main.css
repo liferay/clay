@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.22
+* Lexicon 0.1.24
 *
 * Copyright 2015, Liferay, Inc.
 * All rights reserved.
@@ -618,23 +618,6 @@ body.fixed {
   -webkit-overflow-scrolling: auto;
 }
 
-#modalDisplays .modal-dialog {
-  margin: 0 0 30px 0;
-}
-
-#modalDisplays .modal-lg {
-  max-width: 900px;
-  width: 100%;
-}
-
-#modalsDemo {
-  margin: 0 0 30px 0;
-}
-
-#modalsDemo > .btn {
-  margin-bottom: 5px;
-}
-
 .uxgl-nameplates-page .col-md-2 {
   text-align: center;
 }
@@ -895,8 +878,7 @@ h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, 
   padding-top: 3px;
 }
 
-.uxgl-switches:before,
-.uxgl-switches:after {
+.uxgl-switches:before, .uxgl-switches:after {
   content: " ";
   display: table;
 }

@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.22
+* Lexicon 0.1.24
 *
 * Copyright 2015, Liferay, Inc.
 * All rights reserved.
@@ -63,9 +63,9 @@
   padding-bottom: 4px;
 }
 
-.btn [class^="icon-"].pull-left,
-.btn [class^="icon-"].pull-right,
-.btn [class*=" icon-"].pull-left, .btn [class*=" icon-"].pull-right {
+.btn [class^="icon-"].pull-left, .btn [class^="icon-"].pull-right,
+.btn [class*=" icon-"].pull-left,
+.btn [class*=" icon-"].pull-right {
   vertical-align: inherit;
 }
 

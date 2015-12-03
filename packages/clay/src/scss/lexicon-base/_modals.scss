@@ -2,6 +2,15 @@
 	background-color: $modal-body-bg;
 	color: $modal-body-color;
 
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		bottom: $modal-footer-height;
+		left: 0;
+		overflow: auto;
+		position: absolute;
+		right: 0;
+		top: $modal-header-height;
+	}
+
 	&.inline-scroller {
 		-webkit-overflow-scrolling: touch;
 		overflow: auto;
@@ -9,8 +18,45 @@
 	}
 }
 
+.modal-body-iframe {
+	padding: 0;
+
+	iframe {
+		border-width: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.modal-body-no-footer {
+	bottom: 0;
+}
+
+.modal-header-no-header {
+	top: 0;
+}
+
 .modal-content {
-	overflow: hidden;
+	overflow: auto;
+
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		border-radius: 0;
+		border-width: 0;
+		box-shadow: none;
+		height: 100%;
+	}
+}
+
+.modal-dialog {
+	@media screen and (max-width: $grid-float-breakpoint) {
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
 }
 
 .modal-footer {
@@ -19,6 +65,13 @@
 	color: $modal-footer-color;
 	clear: both;
 	text-align: left;
+
+	@media screen and (max-width: $grid-float-breakpoint) {
+		bottom: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
 }
 
 .modal-header {
@@ -33,6 +86,54 @@
 	position: fixed;
 	right: 0;
 	top: 0;
+}
+
+.modal-title {
+	display: block;
+	text-align: center;
+
+	@include text-overflow;
+}
+
+// Modal Buttons
+
+.modal-header {
+	.modal-primary-action-button,
+	.close {
+		-webkit-appearance: none;
+		background-color: transparent;
+		border-width: 0;
+		color: #000;
+		cursor: pointer;
+
+		@include opacity(0.2);
+
+		padding: 0;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			border-width: 0;
+			color: #000;
+
+			@include opacity(0.5);
+		}
+	}
+
+	.close {
+		float: left;
+		margin-right: 10px;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			float: right;
+			margin-right: 0;
+		}
+	}
+
+	.modal-primary-action-button {
+		float: right;
+		margin-left: 10px;
+	}
 }
 
 // Modal Iframe
@@ -69,16 +170,16 @@
 	}
 
 	.modal-body {
-		bottom: 0;
+		bottom: $modal-footer-height;
 		left: 0;
 		overflow: auto;
 		position: absolute;
 		right: 0;
-		top: 51px;
+		top: $modal-header-height;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			bottom: $modal-footer-height;
-			top: 65px;
+			bottom: $modal-desktop-footer-height;
+			top: $modal-desktop-header-height;
 		}
 	}
 
@@ -91,6 +192,14 @@
 			float: left;
 			width: 100%;
 		}
+	}
+
+	.modal-body-no-footer {
+		bottom: 0;
+	}
+
+	.modal-body-no-header {
+		top: 0;
 	}
 
 	.modal-content {
@@ -106,106 +215,14 @@
 	}
 
 	.modal-footer {
-		border-bottom: 1px solid $modal-footer-border-color;
+		bottom: 0;
 		left: 0;
-		padding: 8px;
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: auto;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
-			border-bottom-width: 0;
-			bottom: 0;
 			padding: $modal-inner-padding;
-			top: auto;
-		}
-
-		.modal-title {
-			@media screen and (min-width: $grid-float-breakpoint) {
-				display: none;
-			}
-		}
-	}
-
-	.modal-footer-left,
-	.modal-footer-right {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			display: inline-block;
-			float: none;
-		}
-	}
-
-	.modal-footer-left {
-		float: left;
-		margin-right: 10px;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			margin-right: 0;
-		}
-	}
-
-	.modal-footer-right {
-		float: right;
-		margin-left: 10px;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			margin-left: 0;
-		}
-	}
-
-	.modal-header {
-		display: none;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			display: block;
-		}
-
-		.close {
-			@media screen and (min-width: $grid-float-breakpoint) {
-				margin-top: 0;
-			}
-		}
-	}
-
-	.modal-title {
-		line-height: 34px;
-
-		@include text-overflow;
-	}
-}
-
-.modal-full-screen {
-	.modal-btn-icon {
-		@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
-			@include monospace(34px);
-
-			padding: 0;
-			position: relative;
-			overflow: hidden;
-			text-align: center;
-		}
-
-		&,
-		&:active,
-		&:active:focus,
-		&:focus,
-		&:hover {
-			@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
-				background-color: transparent;
-				border-width: 0;
-				text-decoration: none;
-			}
-		}
-
-		&:before {
-			display: none;
-
-			@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
-				color: $modal-btn-icon-color;
-				display: block;
-				font-family: 'fontawesome-alloy';
-				font-size: 20px;
-			}
 		}
 	}
 }
@@ -215,12 +232,6 @@
 	.btn-link,
 	.close {
 		color: $modal-inverse-link-color;
-	}
-
-	.modal-btn-icon:before {
-		@media screen and (max-width: $grid-float-breakpoint-max) { // max-width: 767px
-			color: $modal-inverse-btn-icon-color;
-		}
 	}
 
 	.close {
