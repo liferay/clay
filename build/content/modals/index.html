@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.22</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.24</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -212,16 +212,30 @@
 		</h1>
 
 		
-<div class="row">
-	<div class="col-md-12" id="modalsDemo">
-		<h4>Demos</h4>
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="small-modal"><a class="heading-anchor" href="#small-modal"><i class="icon icon-link"></i></a>Small Modal</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>300px wide modal window.</p>
+		</blockquote>
 
 		<button class="btn btn-info" data-toggle="modal" data-target="#lexSmallModal">Small Modal</button>
 		<div aria-labelledby="lexSmallModalLabel" class="fade modal" id="lexSmallModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="close close-modal" data-dismiss="modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
+						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+
+						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
 
 						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
 					</div>
@@ -231,21 +245,40 @@
 					</div>
 
 					<div class="modal-footer">
-						<button class="btn btn-primary btn-sm" type="button">Primary</button>
-						<button class="btn btn-link btn-sm close-modal" data-dismiss="modal" type="button">Close</button>
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="default-modal"><a class="heading-anchor" href="#default-modal"><i class="icon icon-link"></i></a>Default Modal</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>600px wide modal window.</p>
+		</blockquote>
 
 		<button class="btn btn-info" data-toggle="modal" data-target="#lexDefaultModal">Default Modal</button>
 		<div aria-labelledby="lexDefaultModalLabel" class="fade modal" id="lexDefaultModal" role="dialog" tabindex="-1">
-			<div class="modal-dialog">
+			<div class="modal-dialog modal-inverse">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="close close-modal" data-dismiss="modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
+						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
 
-						<h4 class="modal-title" id="lexDefaultModalLabel">Modal Title</h4>
+						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
 					</div>
 
 					<div class="modal-body">
@@ -254,25 +287,44 @@
 
 					<div class="modal-footer">
 						<button class="btn btn-primary" type="button">Primary</button>
-						<button class="btn btn-default" type="button">Alt</button>
 						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="large-modal"><a class="heading-anchor" href="#large-modal"><i class="icon icon-link"></i></a>Large Modal</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>900px wide modal in window sizes greater than 992px. 600px wide modal in window sizes between 768px and 992px.</p>
+		</blockquote>
 
 		<button class="btn btn-info" data-toggle="modal" data-target="#lexLargeModal">Large Modal</button>
 		<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexLargeModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="close close-modal" data-dismiss="modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
+						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+
+						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
 
 						<h4 class="modal-title" id="lexLargeModalLabel">Modal Title</h4>
 					</div>
 
 					<div class="modal-body">
-						<h4>Modal Body</h4>
+						<h4><a href="#1">Modal Body</a></h4>
 					</div>
 
 					<div class="modal-footer">
@@ -282,6 +334,20 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="full-screen-modal"><a class="heading-anchor" href="#full-screen-modal"><i class="icon icon-link"></i></a>Full Screen Modal</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>A modal that stretches to fit the browser window with 45px padding on every side.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">
+			<p>The add button must be duplicated in the header and hidden in screen sizes greater than or equal to 768px if we want to preserve the tab order in mobile.</p>
 		</div>
 
 		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModal">Full Screen Modal</button>
@@ -289,7 +355,17 @@
 			<div class="modal-dialog modal-full-screen">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="close close-modal" data-dismiss="modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
+						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+
+						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
 
 						<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
 					</div>
@@ -298,7 +374,7 @@
 						<h4>Modal Body</h4>
 						<div>
 							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+								<a href="#1">Crema coffee</a> a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
 							</p>
 
 							<p>
@@ -399,31 +475,168 @@
 					</div>
 
 					<div class="modal-footer">
-						<div class="modal-footer-right">
-							<button class="btn btn-primary modal-btn-icon icon-ok" type="button">Add</button>
-						</div>
+						<button class="btn btn-primary" type="button">Add</button>
 
-						<div class="modal-footer-left">
-							<button class="btn btn-link close-modal modal-btn-icon icon-remove" data-dismiss="modal" type="button">Cancel</button>
-						</div>
-
-						<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Cancel</button>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModalInverse">Full Screen Modal Inverse</button>
-		<div aria-labelledby="lexFullScreenModalInverseLabel" class="fade modal" id="lexFullScreenModalInverse" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen modal-inverse">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="modal-body-no-footer"><a class="heading-anchor" href="#modal-body-no-footer"><i class="icon icon-link"></i></a>Modal Body No Footer</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>modal-body-no-footer</code> is a <code>modal-body</code> helper class that removes the reserved space for modal-footer. Add it to modal-body when no modal-footer is present.</p>
+		</blockquote>
+
+		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModal01">Full Screen Modal</button>
+
+		<div aria-labelledby="lexFullScreenModal01Label" class="fade modal" id="lexFullScreenModal01" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-full-screen">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button aria-labelledby="Close" class="close close-modal" data-dismiss="modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
+						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+
+						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
 
 						<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
 					</div>
 
-					<div class="modal-body">
+					<div class="modal-body modal-body-no-footer">
+						<h4>Modal Body</h4>
+						<div>
+							<p>
+								<a href="#1">Crema coffee a turkish</a> decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+
+							<p>
+								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+						</div>
+						<div>
+							<p>
+								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+
+							<p>
+								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+						</div>
+						<div>
+							<p>
+								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+
+							<p>
+								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+						</div>
+						<div>
+							<p>
+								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+
+							<p>
+								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="modal-body-no-header"><a class="heading-anchor" href="#modal-body-no-header"><i class="icon icon-link"></i></a>Modal Body No Header</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>modal-body-no-header</code> is a <code>modal-body</code> helper class that removes the reserved space for modal-header. Add it to modal-body when no modal-header is present.</p>
+		</blockquote>
+
+		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModal02">Full Screen Modal</button>
+
+		<div aria-labelledby="lexFullScreenModal02Label" class="fade modal" id="lexFullScreenModal02" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-full-screen">
+				<div class="modal-content">
+					<div class="modal-body modal-body-no-header">
 						<h4>Modal Body</h4>
 						<div>
 							<p>
@@ -528,44 +741,54 @@
 					</div>
 
 					<div class="modal-footer">
-						<div class="modal-footer-right">
-							<button class="btn btn-primary modal-btn-icon icon-ok" type="button">Add</button>
-						</div>
+						<button class="btn btn-primary" type="button">Add</button>
 
-						<div class="modal-footer-left">
-							<button class="btn btn-link close-modal modal-btn-icon icon-remove" data-dismiss="modal" type="button">Cancel</button>
-						</div>
-
-						<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Cancel</button>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="modal-body-iframe"><a class="heading-anchor" href="#modal-body-iframe"><i class="icon icon-link"></i></a>Modal Body Iframe</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>modal-body-iframe</code> is a <code>modal-body</code> helper class that sizes and styles an iframe nested inside modal-body. Add it to modal-body when you want the iframe to be the same width and height as modal-body.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
 
 		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModalIframe">Full Screen Modal Iframe</button>
 		<div aria-labelledby="lexFullScreenModalIframeLabel" class="fade modal" id="lexFullScreenModalIframe" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-full-screen modal-inverse">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button class="close close-modal" data-dismiss="modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
+						<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+
+						<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
 
 						<h4 class="modal-title" id="lexFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</h4>
 					</div>
 
 					<div class="modal-body modal-body-iframe">
-						<iframe src="../borderless-portlet-bar/"></iframe>
+						<iframe src="../../content/blogs-appearance"></iframe>
 					</div>
 
 					<div class="modal-footer">
-						<div class="modal-footer-right">
-							<button class="btn btn-primary modal-btn-icon icon-ok" type="button">Add</button>
-						</div>
+						<button class="btn btn-primary" type="button">Add</button>
 
-						<div class="modal-footer-left">
-							<a href="#1" class="btn btn-link close-modal modal-btn-icon icon-remove" data-dismiss="modal" type="button">Cancel</a>
-						</div>
-
-						<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
+						<a href="#1" class="btn btn-link close-modal" data-dismiss="modal" type="button">Cancel</a>
 					</div>
 				</div>
 			</div>
@@ -573,332 +796,25 @@
 	</div>
 </div>
 
-<div id="modalDisplays">
-	<div class="row row-spacing">
-		<div class="col-md-12">
-			<h3 id="full-screen-modal"><a class="heading-anchor" href="#full-screen-modal"><i class="icon icon-link"></i></a>Full Screen Modal</h3>
-
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>A specialized fixed position modal that expands to fit the browser window.</p>
-				<p>In mobile:</p>
-				<p>It becomes an overlay with width and height equal to the viewport width and height. Modal-header content is hidden and modal-footer content becomes the heading. </p>
-				<p>Change modal button text into icons by combining class <code>modal-btn-icon</code> with an icon class name. For example, add <code>modal-btn-icon</code> and <code>icon-ok</code> on the primary button to change the text into a checkmark in mobile.</p>
-			</blockquote>
-
-			<div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
-
-			<div style="height:300px;position:relative;">
-				<div class="modal-dialog modal-full-screen" style="top:0;right:0;bottom:0;left:0;">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close close-modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
-
-							<h4 class="modal-title">Modal Title</h4>
-						</div>
-
-						<div class="modal-body">
-							<h4>Modal Body</h4>
-						</div>
-
-						<div class="modal-footer">
-							<div class="modal-footer-right">
-								<button class="btn btn-primary modal-btn-icon icon-ok" type="button">Primary</button>
-							</div>
-
-							<div class="modal-footer-left">
-								<button class="btn btn-link close-modal modal-btn-icon icon-remove" type="button">Close</button>
-							</div>
-
-							<h4 class="modal-title">Modal Title</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">&lt;button class=&quot;btn btn-info&quot; data-target=&quot;#modalFullScreen&quot; data-toggle=&quot;modal&quot;&gt;Full Screen Modal&lt;/button&gt;
-
-&lt;div class=&quot;fade modal&quot; id=&quot;modalFullScreen&quot;&gt;
-    &lt;div class=&quot;modal-dialog modal-full-screen&quot;&gt;
-        &lt;div class=&quot;modal-content&quot;&gt;
-            &lt;div class=&quot;modal-header&quot;&gt;
-                &lt;button class=&quot;close close-modal&quot; data-dismiss=&quot;modal&quot; type=&quot;button&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-
-                &lt;h4 class=&quot;modal-title&quot;&gt;Modal Title&lt;/h4&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;modal-body&quot;&gt;
-                &lt;h4&gt;Modal Body&lt;/h4&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;modal-footer&quot;&gt;
-                &lt;div class=&quot;modal-footer-right&quot;&gt;
-                    &lt;button class=&quot;btn btn-primary modal-btn-icon icon-ok&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;modal-footer-left&quot;&gt;
-                    &lt;button class=&quot;btn btn-link close-modal modal-btn-icon icon-remove&quot; type=&quot;button&quot;&gt;Close&lt;/button&gt;
-                &lt;/div&gt;
-
-                &lt;h4 class=&quot;modal-title&quot;&gt;Add Picture to Documents and Media Library in Liferay Seven&lt;/h4&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-12">
-			<h3 id="small-modal"><a class="heading-anchor" href="#small-modal"><i class="icon icon-link"></i></a>Small Modal</h3>
-		</div>
-		<div class="col-md-6">
-			<div class="modal-dialog modal-sm">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button class="close close-modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
-
-						<h4 class="modal-title">Modal Title</h4>
-					</div>
-
-					<div class="modal-body">
-						<h4>Modal Body</h4>
-					</div>
-
-					<div class="modal-footer">
-						<button class="btn btn-primary btn-sm" type="button">Primary</button>
-						<button class="btn btn-link btn-sm close-modal" type="button">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;button class=&quot;btn btn-info&quot; data-target=&quot;#smallModal&quot; data-toggle=&quot;modal&quot;&gt;Small Modal&lt;/button&gt;
-
-&lt;div class=&quot;modal fade&quot; id=&quot;smallModal&quot;&gt;
-    &lt;div class=&quot;modal-dialog modal-sm&quot;&gt;
-        &lt;div class=&quot;modal-content&quot;&gt;
-            &lt;div class=&quot;modal-header&quot;&gt;
-                &lt;button class=&quot;close close-modal&quot; data-dismiss=&quot;modal&quot; type=&quot;button&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-
-                &lt;h4 class=&quot;modal-title&quot;&gt;Modal Title&lt;/h4&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;modal-body&quot;&gt;
-                &lt;h4&gt;Modal Body&lt;/h4&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;modal-footer&quot;&gt;
-                &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
-                &lt;button class=&quot;btn btn-link btn-sm close-modal&quot; type=&quot;button&quot;&gt;Close&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-		</div>
-
-		<div class="col-md-12">
-			<h3 id="modal"><a class="heading-anchor" href="#modal"><i class="icon icon-link"></i></a>Modal</h3>
-
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button class="close close-modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
-
-						<h4 class="modal-title">Modal Title</h4>
-					</div>
-
-					<div class="modal-body">
-						<h4>Modal Body</h4>
-					</div>
-
-					<div class="modal-footer">
-						<button class="btn btn-primary" type="button">Primary</button>
-
-						<button class="btn btn-default" type="button">Alt</button>
-
-						<button class="btn btn-link close-modal" type="button">Close</button>
-					</div>
-				</div>
-			</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code class="html">&lt;button class=&quot;btn btn-info&quot; data-target=&quot;#defaultModal&quot; data-toggle=&quot;modal&quot;&gt;Default Modal&lt;/button&gt;
-
-&lt;div class=&quot;modal fade&quot; id=&quot;defaultModal&quot;&gt;
-    &lt;div class=&quot;modal-dialog&quot;&gt;
-        &lt;div class=&quot;modal-content&quot;&gt;
-            &lt;div class=&quot;modal-header&quot;&gt;
-                &lt;button class=&quot;close close-modal&quot; data-dismiss=&quot;modal&quot; type=&quot;button&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-
-                &lt;h4 class=&quot;modal-title&quot;&gt;Modal Title&lt;/h4&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;modal-body&quot;&gt;
-                &lt;h4&gt;Modal Body&lt;/h4&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;modal-footer&quot;&gt;
-                &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
-                &lt;button class=&quot;btn btn-link btn-sm close-modal&quot; type=&quot;button&quot;&gt;Close&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-		</div>
-
-		<div class="col-md-12">
-			<h3 id="large-modal"><a class="heading-anchor" href="#large-modal"><i class="icon icon-link"></i></a>Large Modal</h3>
-
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button class="close close-modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
-
-						<h4 class="modal-title">Modal Title</h4>
-					</div>
-
-					<div class="modal-body">
-						<h4>Modal Body</h4>
-					</div>
-
-					<div class="modal-footer">
-						<button class="btn btn-primary" type="button">Primary</button>
-
-						<button class="btn btn-default" type="button">Alt</button>
-
-						<button class="btn btn-link close-modal" type="button">Close</button>
-					</div>
-				</div>
-			</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code class="html">&lt;button class=&quot;btn btn-info&quot; data-target=&quot;#largeModal&quot; data-toggle=&quot;modal&quot;&gt;Large Modal&lt;/button&gt;
-
-&lt;div class=&quot;modal fade&quot; id=&quot;largeModal&quot;&gt;
-    &lt;div class=&quot;modal-dialog modal-lg&quot;&gt;
-        &lt;div class=&quot;modal-content&quot;&gt;
-            &lt;div class=&quot;modal-header&quot;&gt;
-                &lt;button class=&quot;close close-modal&quot; data-dismiss=&quot;modal&quot; type=&quot;button&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
-
-                &lt;h4 class=&quot;modal-title&quot;&gt;Modal Title&lt;/h4&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;modal-body&quot;&gt;
-                &lt;h4&gt;Modal Body&lt;/h4&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;modal-footer&quot;&gt;
-                &lt;button class=&quot;btn btn-primary btn-sm&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
-                &lt;button class=&quot;btn btn-link btn-sm close-modal&quot; type=&quot;button&quot;&gt;Close&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-12">
-			<h3 id="modal-inline-scroller"><a class="heading-anchor" href="#modal-inline-scroller"><i class="icon icon-link"></i></a>Modal Inline Scroller</h3>
-
-			<blockquote class="blockquote-success blockquote-sm">
-				<p>Use <code>inline-scroller</code> with <code>modal-body</code> to create a scrollable area inside a modal, just adjust the height to match your needs.</p>
-			</blockquote>
-
-			<div class="modal-dialog modal-sm">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button class="close close-modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
-
-						<h4 class="modal-title">Modal Title</h4>
-					</div>
-
-					<div class="inline-scroller modal-body">
-						<p>
-							Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-						</p>
-
-						<p>
-							Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-						</p>
-
-						<p>
-							Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-						</p>
-
-						<p>
-							Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-						</p>
-
-						<p>
-							Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-						</p>
-
-						<p>
-							Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-						</p>
-					</div>
-
-					<div class="modal-footer">
-						<button class="btn btn-primary btn-sm" type="button">Primary</button>
-						<button class="btn btn-link btn-sm close-modal" type="button">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="inline-scroller"><a class="heading-anchor" href="#inline-scroller"><i class="icon icon-link"></i></a>Inline Scroller</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">If using modal-fullscreen the class inline-scroller shouldn&apos;t be added to modal-body.</div>
 	</div>
 </div>
 
-<div class="row row-spacing" id="modalDisplays">
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3 id="modal-inverse"><a class="heading-anchor" href="#modal-inverse"><i class="icon icon-link"></i></a>Modal Inverse</h3>
 
-		<blockquote class="blockquote-success blockquote-sm">
-			<p>Use class <code>modal-inverse</code> to add inverted styles to your modal.</p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>modal-inverse</code> is a helper class that styles a modal with inverted colors, add it to modal-dialog.</p>
 		</blockquote>
-
-		<div class="modal-dialog modal-inverse modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button class="close close-modal" type="button"><span aria-hidden="true">&#xD7;</span></button>
-
-					<h4 class="modal-title">Modal Inverse</h4>
-				</div>
-
-				<div class="modal-body">
-					<h4>Modal Body</h4>
-				</div>
-
-				<div class="modal-footer">
-					<button class="btn btn-primary btn-sm" type="button">Primary</button>
-					<button class="btn btn-link btn-sm close-modal" type="button">Close</button>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 	</div>

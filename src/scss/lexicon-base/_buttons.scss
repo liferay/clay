@@ -5,6 +5,17 @@
 	z-index: $zindex-btn-action;
 }
 
+.btn-action,
+.btn-action-secondary .btn {
+	padding: 0;
+}
+
+.btn-action .lexicon-icon {
+	display: block;
+	height: 100%;
+	margin: auto;
+}
+
 .btn-action-secondary {
 	display: inline-block;
 
