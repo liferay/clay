@@ -2,6 +2,11 @@
 * No changes yet
 ***
 
+## v0.1.25 - November 12, 2015
+Fix: Caret Icons `caret-top` and `caret-bottom` should be center aligned
+Update: Action button should be under dropdowns, popovers, and tooltips
+Update: Collapsible panels whole panel heading should be clickable
+
 ## v0.1.24 - November 12, 2015
 Publishing the build files (Nate's fault)
 
