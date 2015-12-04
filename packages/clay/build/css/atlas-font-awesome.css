@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.1.24
+* Lexicon 0.1.25
 *
 * Copyright 2015, Liferay, Inc.
 * All rights reserved.
@@ -10114,7 +10114,7 @@ button.close {
 
 .btn-action,
 .btn-action-secondary {
-  z-index: 1000;
+  z-index: 950;
 }
 
 .btn-action,
@@ -13900,19 +13900,29 @@ fieldset[disabled] .management-bar .btn.btn-warning.active {
   }
 }
 
-.panel .collapse-icon {
-  padding-right: 30px;
-}
-
 .panel .collapse-icon:before {
   content: "";
   font-size: 20px;
   font-family: "fontawesome-alloy";
-  right: 3px;
+  right: 15px;
 }
 
 .panel .collapse-icon.collapsed:before {
   content: "";
+}
+
+.panel-group .panel-heading {
+  padding: 0;
+}
+
+.panel-group .panel-heading .collapse-icon {
+  padding-right: 35px;
+}
+
+.panel-group .panel-title > a,
+.panel-group .panel-title > span {
+  display: block;
+  padding: 10px 15px;
 }
 
 .panel-blank {
@@ -19530,6 +19540,22 @@ h6.modal-title {
   border-bottom-width: 2px;
 }
 
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel-group .panel-heading {
+  border-bottom-width: 0;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top-width: 2px;
+}
+
+.panel-title a {
+  text-decoration: none;
+}
+
 .panel-blank {
   box-shadow: none;
 }
@@ -19549,14 +19575,6 @@ h6.modal-title {
 .panel-default > .panel-heading,
 .panel-default > .panel-footer {
   color: #869CAD;
-}
-
-.panel-group .panel-heading {
-  border-bottom-width: 0;
-}
-
-.panel-group .panel-heading + .panel-collapse > .panel-body {
-  border-top-width: 2px;
 }
 
 .popover {
