@@ -20,3 +20,14 @@
 		color: $color;
 	}
 }
+
+/**
+ * @param $color - Icon Color
+ */
+
+@mixin select-box-icon($color) {
+	$rgb: "rgb(#{red($color)}, #{green($color)}, #{blue($color)})";
+	$select-arrows-svg: "data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20width%3D%27512%27%20height%3D%27512%27%20viewBox%3D%270%200%20512%20512%27%3E%3Cpath%20d%3D%27M347.913%20199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6%200l-81.538%2085c-8.73%209.1-2.548%2024.664%209.8%2024.664h163.077c12.348%200%2018.53-15.563%209.8-24.664zM165.236%20312.664l81.538%2085c5.412%205.642%2014.188%205.642%2019.6%200l81.538-85c8.73-9.1%202.548-24.664-9.8-24.664H175.035c-12.347%200-18.53%2015.563-9.8%2024.664z%27%20fill%3D%27#{$rgb}%27%3E%3C%2Fpath%3E%3C%2Fsvg%3E";
+
+	background-image: url($select-arrows-svg);
+}
