@@ -45,6 +45,8 @@ section: Components
 
 <div class="row">
 	<div class="col-md-12">
+		<h3>Toggle Switch with Data Attributes</h3>
+
 		<blockquote class="blockquote-sm blockquote-success" style="margin-top:15px;">
 			<p>Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</code> on <code>```<span class="toggle-switch-handle"></span>```</code> to display specific text when the switch is on and off.</p>
 		</blockquote>
@@ -53,7 +55,7 @@ section: Components
 			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-					Toggle Switch with data-label-on
+					<span class="toggle-switch-label">Toggle Switch with data-label-on</span>
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -68,7 +70,7 @@ section: Components
 	<pre><code>```<div class="form-group">
     <label>
         <input class="toggle-switch" type="checkbox">
-        Toggle Switch with data-label-on
+        <span class="toggle-switch-label">Toggle Switch with data-label-on</span>
 
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -89,7 +91,7 @@ section: Components
 			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-					Toggle Switch with data-label on and data-label-off
+					<span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
@@ -104,7 +106,7 @@ section: Components
 	<pre><code>```<div class="form-group">
     <label>
         <input class="toggle-switch" type="checkbox">
-        Toggle Switch with data-label on and data-label-off
+        <span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
 
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
@@ -114,6 +116,94 @@ section: Components
 </div>```</code></pre>
 </div>
 
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Toggle Switch Text</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add additional text with class <code>toggle-switch-text</code>.</p>
+		</blockquote>
+
+		<form action="#" method="get">
+			<div class="form-group">
+				<label>
+					<input class="toggle-switch" type="checkbox">
+					<span class="toggle-switch-label">Adding Required Text</span>
+
+					<span class="toggle-switch-text">Required *</span>
+
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
+						</span>
+					</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label>
+					<input class="toggle-switch" type="checkbox">
+					<span class="toggle-switch-label">Adding Required Text</span>
+
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
+						</span>
+					</span>
+
+					<span class="toggle-switch-text">Required *</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label>
+					<input class="toggle-switch" type="checkbox">
+					<span class="toggle-switch-label">Required Text on Right</span>
+
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
+						</span>
+					</span>
+
+					<span class="toggle-switch-text toggle-switch-text-right">Required *</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label>
+					<input class="toggle-switch" type="checkbox">
+					<span class="toggle-switch-label">Required Text on Left</span>
+
+					<span class="toggle-switch-text toggle-switch-text-left">Required *</span>
+
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
+						</span>
+					</span>
+				</label>
+			</div>
+
+			<div>
+				<label>
+					<input class="toggle-switch" type="checkbox">
+					<span class="toggle-switch-label">The Kitchen Sink</span>
+
+					<span class="toggle-switch-text">Top Text</span>
+
+					<span class="toggle-switch-text toggle-switch-text-left">Error</span>
+
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="OFF" data-label-on="ON">
+						</span>
+					</span>
+
+					<span class="toggle-switch-text toggle-switch-text-right">Required *</span>
+
+					<span class="toggle-switch-text">Bottom Text</span>
+				</label>
 			</div>
 		</form>
 	</div>
@@ -148,7 +238,7 @@ section: Components
 			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-					Toggle Switch with data-label-on
+					<span class="toggle-switch-label">Toggle Switch with data-label-on</span>
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
@@ -162,7 +252,7 @@ section: Components
 			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-					Toggle Switch with data-label on and data-label-off
+					<span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
@@ -179,7 +269,7 @@ section: Components
 	<pre><code>```<div class="form-group">
     <label>
         <input class="toggle-switch" type="checkbox">
-        Toggle Switch with data-label on and data-label-off
+        <span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
 
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
@@ -474,7 +564,7 @@ section: Components
 </div>
 
 <div class="row row-spacing">
-	<div class="col-xs-12 col-md-12">
+	<div class="col-md-12 col-xs-12">
 		<h3>Toggle Card DM</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
