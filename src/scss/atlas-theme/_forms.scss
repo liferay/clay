@@ -131,6 +131,28 @@ select[disabled].form-control > option {
 .radio {
 	label {
 		font-weight: 500;
+		padding-left: 25px;
+
+		@media screen and (-webkit-min-device-pixel-ratio: 0) {
+			padding-left: 20px;
+		}
+	}
+}
+
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+	height: 20px;
+	margin-left: -25px;
+	margin-top: 0;
+	width: 20px;
+
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		height: 15px;
+		margin-left: -20px;
+		margin-top: 3px;
+		width: 14px;
 	}
 }
 
