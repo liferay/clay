@@ -16,6 +16,10 @@
 }
 
 .has-success {
+	select.form-control {
+		@include select-box-icon($state-success-border);
+	}
+
 	.checkbox label,
 	.radio label {
 		color: $state-success-text;
@@ -27,6 +31,10 @@
 }
 
 .has-warning {
+	select.form-control {
+		@include select-box-icon($state-warning-border);
+	}
+
 	.checkbox label,
 	.radio label {
 		color: $state-warning-text;
@@ -38,6 +46,10 @@
 }
 
 .has-error {
+	select.form-control {
+		@include select-box-icon($state-danger-border);
+	}
+
 	.checkbox label,
 	.radio label {
 		color: $state-danger-text;
