@@ -40,23 +40,21 @@
 		};
 	};
 
-	var generateId = (function() {
-		var counter = 0;
+	var guid = (function() {
+			var counter = 0;
 
-		return function(namespace) {
-			return(namespace + counter++);
-		}
-	})();
+			return function(element, ns) {
+				var strId = element.attr('id');
 
-	var getId = function(element) {
-		var strId = element.attr('id');
+				if (!strId) {
+					strId = (ns + counter++);
 
-		if (strId) {
-			return '#' + strId;
-		}
+					element.attr('id', strId);
+				}
 
-		return false;
-	};
+				return strId;
+			};
+	}());
 
 	var toInt = function(str) {
 		return parseInt(str, 10) || 0;
@@ -443,16 +441,7 @@
 			var options = instance.options;
 
 			if (instance.useDataAttribute) {
-				if (getId(element)) {
-					togglerSelector = getId(element);
-				}
-				else {
-					var id = generateId('generatedLexiconSidenavTogglerId');
-
-					element.attr('id', id);
-
-					togglerSelector = '#' + id;
-				}
+				togglerSelector = '#' + guid(element, 'generatedLexiconSidenavTogglerId');
 
 				togglerFn = function(event) {
 					event.preventDefault();
