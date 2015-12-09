@@ -40,6 +40,24 @@
 		};
 	};
 
+	var generateId = (function() {
+		var counter = 0;
+
+		return function(namespace) {
+			return(namespace + counter++);
+		}
+	})();
+
+	var getId = function(element) {
+		var strId = element.attr('id');
+
+		if (strId) {
+			return '#' + strId;
+		}
+
+		return false;
+	};
+
 	var toInt = function(str) {
 		return parseInt(str, 10) || 0;
 	};
@@ -367,16 +385,20 @@
 				closeButton = container.find('.sidenav-close');
 			}
 
-			closeButton.on('click.lexicon.sidenav', function(event) {
-				event.preventDefault();
+			if (!closeButton.data('click.lexicon.sidenav')) {
+				closeButton.on('click.lexicon.sidenav', function(event) {
+					event.preventDefault();
 
-				if (instance.useDataAttribute) {
-					instance._toggleSimpleSidenav(element);
-				}
-				else {
-					instance.toggleNavigation(element);
-				}
-			});
+					if (instance.useDataAttribute) {
+						instance._toggleSimpleSidenav(element);
+					}
+					else {
+						instance.toggleNavigation(element);
+					}
+				});
+
+				closeButton.data('click.lexicon.sidenav', true);
+			}
 		},
 
 		_onClickTrigger: function(element) {
@@ -416,12 +438,21 @@
 			var instance = this;
 
 			var togglerFn;
-			var togglerSelector;
+			var togglerSelector = '';
 
 			var options = instance.options;
 
 			if (instance.useDataAttribute) {
-				togglerSelector = options.target ? '[data-target="' + options.target + '"]' : '[href="' + element.attr('href') + '"]';
+				if (getId(element)) {
+					togglerSelector = getId(element);
+				}
+				else {
+					var id = generateId('generatedLexiconSidenavTogglerId');
+
+					element.attr('id', id);
+
+					togglerSelector = '#' + id;
+				}
 
 				togglerFn = function(event) {
 					event.preventDefault();
@@ -605,7 +636,10 @@
 		_toggleSimpleSidenav: function(element) {
 			var instance = this;
 
-			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
+			var hrefAttr = element.attr('href');
+			var dataTarget = element.data('target');
+
+			var container = instance.options.target ? $(instance.options.target) : doc.find(hrefAttr);
 			var content = $(instance.options.content).first();
 			var openClass = instance.options.openClass;
 			var toggler = instance.options.toggler;
@@ -615,6 +649,14 @@
 			var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
 			var desktopFixedPush = desktop && (type === 'fixed-push');
 			var mobileFixedPush = !desktop && (typeMobile === 'fixed-push');
+
+			if (hrefAttr) {
+				toggler = $('[href="' + hrefAttr + '"');
+			}
+
+			if (dataTarget) {
+				toggler = $('[data-target="' + dataTarget + '"');
+			}
 
 			container.addClass('sidenav-transition');
 			toggler.addClass('sidenav-transition');
