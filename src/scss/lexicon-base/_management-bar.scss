@@ -62,10 +62,6 @@
 	padding: 0;
 }
 
-.management-bar-right {
-	float: right;
-}
-
 .management-bar .management-bar-collapse {
 	@media screen and (min-width: $grid-float-breakpoint) {
 		float: left;
@@ -171,38 +167,40 @@
 	}
 }
 
-.management-bar-no-collapse .management-bar-nav {
-	float: left;
-	margin: 0;
-
-	&.management-bar-right {
-		float: right;
-	}
-
-	> li {
+.management-bar-no-collapse {
+	.management-bar-nav {
 		float: left;
-		margin-left: -1px;
+		margin: 0;
 
-		&:first-child {
-			margin-left: 0;
+		> li {
+			float: left;
+			margin-left: -1px;
 
-			> .checkbox,
-			> .radio {
-				padding-left: 0;
-				padding-right: 0;
+			&:first-child {
+				margin-left: 0;
+
+				> .checkbox,
+				> .radio {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+
+			> a {
+				padding-bottom: $management-bar-padding-vertical;
+				padding-top: $management-bar-padding-vertical;
 			}
 		}
 
-		> a {
-			padding-bottom: $management-bar-padding-vertical;
-			padding-top: $management-bar-padding-vertical;
+		.dropdown-menu {
+			border: 1px solid $dropdown-border;
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+			position: absolute;
 		}
 	}
 
-	.dropdown-menu {
-		border: 1px solid $dropdown-border;
-		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-		position: absolute;
+	.management-bar-nav-right {
+		float: right;
 	}
 }
 
