@@ -2,7 +2,7 @@
 	border-radius: $tooltip-border-radius;
 	line-height: $tooltip-line-height;
 	padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
-	max-width: 230px;
+	max-width: $tooltip-inner-max-width;
 }
 
 .tooltip-arrow:before {
