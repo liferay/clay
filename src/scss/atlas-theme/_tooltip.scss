@@ -1,8 +1,10 @@
+.tooltip {
+	font-size: $tooltip-font-size;
+}
+
 .tooltip-inner {
 	border-radius: $tooltip-border-radius;
-	line-height: $tooltip-line-height;
 	padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
-	max-width: $tooltip-inner-max-width;
 }
 
 .tooltip-arrow:before {
@@ -12,10 +14,6 @@
 	border-color: transparent;
 	border-style: solid;
 	z-index: -1;
-}
-
-.tooltip {
-	font-size: $tooltip-font-size;
 }
 
 // Tooltip box shadows
