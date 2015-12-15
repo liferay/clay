@@ -388,7 +388,7 @@
 					event.preventDefault();
 
 					if (instance.useDataAttribute) {
-						instance._toggleSimpleSidenav(element);
+						instance.toggleSimpleSidenav(element);
 					}
 					else {
 						instance.toggleNavigation(element);
@@ -410,7 +410,7 @@
 				togglerFn = function(event) {
 					event.preventDefault();
 
-					instance._toggleSimpleSidenav(element);
+					instance.toggleSimpleSidenav(element);
 				};
 			}
 			else {
@@ -446,7 +446,7 @@
 				togglerFn = function(event) {
 					event.preventDefault();
 
-					instance._toggleSimpleSidenav(element);
+					instance.toggleSimpleSidenav(element);
 				};
 			}
 			else {
@@ -622,7 +622,7 @@
 			instance.desktop = desktop;
 		},
 
-		_toggleSimpleSidenav: function(element) {
+		toggleSimpleSidenav: function(element) {
 			var instance = this;
 
 			var hrefAttr = element.attr('href');
