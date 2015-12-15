@@ -1,3 +1,8 @@
+var argv = require('minimist')(process.argv.slice(2));
+var cmdPromise = require('../lib/cmd_promise');
+var semver = require('semver');
+var updateVersion = require('../lib/update_version');
+
 module.exports = function(gulp, plugins, _, config) {
 	var REGEX_SCSS = /^scss(\/|$)/;
 
@@ -53,6 +58,81 @@ module.exports = function(gulp, plugins, _, config) {
 			return gulp.src('release/**/*')
 			.pipe(plugins.zip(pkg.name + '-' + pkg.version + '.zip'))
 			.pipe(gulp.dest('.'));
+		}
+	);
+
+	gulp.task(
+		'release:git',
+		function(done) {
+			var branchName = 'bower-staging-' + Math.random().toString(16).replace(/[^0-9a-fA-F]/g, '');
+
+			var currentVersion = require('../package.json').version;
+
+			var types = ['major', 'minor', 'patch'];
+
+			var type = _.find(
+				types,
+				function(item, index) {
+					return argv[item];
+				}
+			);
+
+			if (!type) {
+				type = 'patch';
+			}
+
+			var bumpedVersion = semver.inc(currentVersion, type);
+
+			var browserCommitMessage = 'Browser files for v' + bumpedVersion;
+			var rebuildCommitMessage = 'Rebuild v' + bumpedVersion;
+			var releaseCommitMessage = 'Release v' + bumpedVersion;
+			var tagMessage = 'Version ' + bumpedVersion;
+			var tagName = 'v' + bumpedVersion;
+
+			cmdPromise.resolve()
+				.git('checkout', 'master')
+				.git('status').then(function(status) {
+					var stdout = status.stdout;
+
+					if (!(/nothing to commit, working directory clean/.test(stdout))) {
+						throw new Error('working directory not clean, aborting');
+					}
+
+					if (!(/Your branch is up-to-date/.test(stdout))) {
+						throw new Error('branch is not up to date, aborting');
+					}
+
+					updateVersion(bumpedVersion);
+
+					return bumpedVersion;
+				})
+				.git('add', 'package.json')
+				.git('commit', '-a', '-m', releaseCommitMessage)
+				.cmd('gulp', 'build')
+				.git('commit', '-a', '-m', rebuildCommitMessage)
+				.git('checkout', '-b', branchName)
+				.git('add', '--force', 'release')
+				.git('commit', '-a', '-m', browserCommitMessage)
+				.git('tag', '-a', tagName, '-m', tagMessage)
+				.git('checkout', 'master')
+				.git('branch', '-D', branchName)
+				.git('checkout', tagName, '--', 'release')
+				.git('reset')
+				.then(function() {
+					done();
+				});
+		}
+	);
+
+	gulp.task(
+		'release:publish',
+		function(done) {
+			cmdPromise.resolve()
+				.git('push', 'upstream', '--tags')
+				.cmd('npm', 'run', 'deploy')
+				.then(function() {
+					done();
+				});
 		}
 	);
 };

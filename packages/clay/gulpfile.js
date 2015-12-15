@@ -1,3 +1,4 @@
+var inquirer = require('inquirer');
 var path = require('path');
 
 var gulp = require('gulp-help')(require('gulp'));
@@ -35,7 +36,7 @@ gulp.task('build', function(cb) {
 });
 
 gulp.task(
-	'release',
+	'release:files',
 	function(cb) {
 		runSequence(
 			'build:patch-bootstrap',
@@ -44,32 +45,41 @@ gulp.task(
 			'release:svg',
 			'release:zip',
 			'build:clean-bootstrap-patch',
+			cb
+		);
+	}
+);
+
+gulp.task(
+	'release',
+	function(cb) {
+		var questions = [
+			{
+				default: false,
+				message: 'Do you want to create a git tag and push to gh-pages?',
+				name: 'publish',
+				type: 'confirm'
+			}
+		];
+
+		runSequence(
+			'release:files',
 			function() {
-				setTimeout(
-					function() {
-						var center = require('center-align');
-						var windowSize = require('window-size');
-
-						var line = '+' + (new Array(windowSize.width - 2).join('-')) + '+';
-						var footer = [
-							'',
-							'',
-							line,
-							'Remember to run "npm run deploy"!',
-							line,
-							''
-						].join('\n');
-
-						function centerAlign(len, longest, line, lines) {
-							return Math.floor((longest - len) / 2);
+				inquirer.prompt(
+					questions,
+					function(answers) {
+						if (answers.publish) {
+							runSequence(
+								'release:git',
+								'release:publish',
+								cb
+							);
 						}
-
-						console.log(center(chalk.red(footer)));
-					},
-					0
+						else {
+							cb();
+						}
+					}
 				);
-
-				cb();
 			}
 		);
 	}
