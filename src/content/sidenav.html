@@ -170,23 +170,17 @@ section: Components (JS)
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>The Side Navigation data api was added for situations where there is limited control over the markup structure. The only markup needed is a toggler and a panel to hide and show. These items can be included anywhere on the page.</p>
-		</blockquote>
 
-		<blockquote class="blockquote-sm blockquote-success">
 			<p>The minimum amount of attributes required is <code>data-toggle="sidenav"</code> and <code>href="#target"</code> or <code>data-target="#target"</code>. This will open and close a fixed position sidenav provided the markup below. The width of the <code>sidenav-slider</code>, <code>sidenav-menu</code>, and position of the sidenav must be set through css. When using <code>fixed-push</code>, padding must also be set via css on open to push the content over.</p>
 		</blockquote>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>The data api allows for fixed-push style sidenavs with the attributes <code>data-content</code>, <code>data-type</code>, and <code>data-type-mobile</code>. <code>Data-content</code> is the id of the content to be pushed over when the nav is open. <code>Data-type</code> and <code>data-type-mobile</code> give the option to specify the style of sidenav in desktop and mobile, respectively. The values can be <code>fixed</code> or <code>fixed-push</code> and defaults to fixed.</p>
+		<div class="side-navigation-data-api-buttons">
+			<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav">Simple Sidenav Toggler</a>
 
-			<p>The open class name can be customized through the attribute <code>data-open-class</code> and will be added to toggler and content on open. </p>
-		</blockquote>
-
-		<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">Simple Sidenav Toggler</a>
-
-		<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">
-			And Another Simple Sidenav Toggler
-		</a>
+			<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav">
+				Another Simple Sidenav Toggler
+			</a>
+		</div>
 
 		<div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
 			<div class="product-menu1 sidebar sidebar-default sidenav-menu">
@@ -196,7 +190,72 @@ section: Components (JS)
 							<svg class="icon-monospaced lexicon-icon sidebar-header-logo">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
 							</svg>
-							<span>Squareup</span>
+							<span>Simple Sidenav</span>
+						</a>
+
+						<a class="sidenav-close" href="#1">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</a>
+					</h4>
+				</div>
+
+				<div class="sidebar-body">
+
+				</div>
+
+				<div class="sidebar-footer">
+					<div class="nameplate">
+						<div class="nameplate-field">
+							<div class="user-icon user-icon-warning">
+								:D
+							</div>
+						</div>
+
+						<div class="nameplate-content">
+							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+						</div>
+
+						<div class="nameplate-field">
+							<a class="icon-monospaced" href="#1"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The data api allows for fixed-push style sidenavs with the attributes <code>data-content</code>, <code>data-type</code>, and <code>data-type-mobile</code>. <code>Data-content</code> is the id of the content to be pushed over when the nav is open. <code>Data-type</code> and <code>data-type-mobile</code> give the option to specify the style of sidenav in desktop and mobile, respectively. The values can be <code>fixed</code> or <code>fixed-push</code> and defaults to fixed.</p>
+
+			<p>The open class name can be customized through the attribute <code>data-open-class</code> and will be added to toggler and content on open. </p>
+		</blockquote>
+
+		<div class="side-navigation-data-api-buttons">
+			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-use-delegate="true">Simple Sidenav 2 Toggler</a>
+
+			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">
+				Another Simple Sidenav 2 Toggler
+			</a>
+
+			<a class="btn btn-default" href="#1" id="showSimpleSidenav2">
+				Show Simple Sidenav 2
+			</a>
+
+			<a class="btn btn-default" href="#1" id="hideSimpleSidenav2">
+				Hide Simple Sidenav 2
+			</a>
+		</div>
+
+		<div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
+			<div class="product-menu1 sidebar sidebar-default sidenav-menu">
+				<div class="sidebar-header">
+					<h4>
+						<a href="#1">
+							<svg class="icon-monospaced lexicon-icon sidebar-header-logo" style="background-color: red;">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
+							</svg>
+							<span>Simple Sidenav 2</span>
 						</a>
 
 						<a class="sidenav-close" href="#1">
@@ -266,4 +325,20 @@ section: Components (JS)
 	});
 
 	$('[data-toggle="sidenav"]').sideNavigation();
+
+	$('#showSimpleSidenav2').on('click', function(event) {
+		event.preventDefault();
+
+		var sidenavToggle = $('[data-toggle="sidenav"]').eq(2).data('lexicon.sidenav');
+
+		sidenavToggle.showSimpleSidenav();
+	});
+
+	$('#hideSimpleSidenav2').on('click', function(event) {
+		event.preventDefault();
+
+		var sidenavToggle = $('[data-toggle="sidenav"]').eq(2).data('lexicon.sidenav');
+
+		sidenavToggle.hideSimpleSidenav();
+	});
 </script>
