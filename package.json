@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "exit 0",
-    "deploy": "gulp build && cd ./build && git init . && git add . && git commit -m 'Deploy'; git push 'git@github.com:liferay/lexicon.git' master:gh-pages --force && rm -rf .git"
+    "deploy": "cd ./build && git init . && git add . && git commit -m 'Deploy'; git push 'git@github.com:liferay/lexicon.git' master:gh-pages --force && rm -rf .git"
   },
   "author": "Nate Cavanaugh <nate@shift22.com> (http://alterform.com/)",
   "license": "MIT",
   "devDependencies": {
+    "bluebird": "^3.0.6",
     "bower": "^1.4.1",
     "center-align": "^0.1.1",
     "chalk": "^1.0.0",
+    "cross-spawn": "^2.1.0",
     "ejs": "^2.3.1",
     "fs-extra": "^0.10.0",
     "gulp": "^3.9.0",
@@ -35,6 +37,7 @@
     "gulp-svgstore": "^5.0.4",
     "gulp-zip": "^3.0.2",
     "gulpsmith": "^0.5.3",
+    "inquirer": "^0.11.0",
     "lodash": "^3.9.3",
     "metalsmith": "^1.7.0",
     "metalsmith-define": "^1.0.0",
@@ -44,9 +47,11 @@
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-sass": "^1.2.1",
     "metalsmith-templates": "^0.7.0",
+    "minimist": "^1.2.0",
     "node-bourbon": "^4.2.3",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
+    "semver": "^5.1.0",
     "underscore.string": "^3.2.2",
     "window-size": "^0.1.2"
   },
