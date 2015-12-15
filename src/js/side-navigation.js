@@ -576,24 +576,26 @@
 		_renderUI: function(element) {
 			var instance = this;
 
-			var mobile = instance.mobile;
-			var options = instance.options;
+			if (!instance.useDataAttribute) {
+				var mobile = instance.mobile;
+				var options = instance.options;
 
-			var type = mobile ? options.typeMobile : options.type;
+				var type = mobile ? options.typeMobile : options.type;
 
-			if (options.position === 'right') {
-				element.addClass('sidenav-right');
+				if (options.position === 'right') {
+					element.addClass('sidenav-right');
+				}
+
+				if (type === 'fixed' || type === 'fixed-push' && !instance.useDataAttribute) {
+					element.addClass('sidenav-fixed');
+				}
+
+				if (mobile) {
+					element.addClass('closed');
+				}
+
+				instance._renderNav(element);
 			}
-
-			if (type === 'fixed' || type === 'fixed-push' && !instance.useDataAttribute) {
-				element.addClass('sidenav-fixed');
-			}
-
-			if (mobile) {
-				element.addClass('closed');
-			}
-
-			instance._renderNav(element);
 		},
 
 		_resizeSidenav: function() {
