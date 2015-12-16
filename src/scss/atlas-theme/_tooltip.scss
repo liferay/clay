@@ -8,11 +8,11 @@
 }
 
 .tooltip-arrow:before {
-	position: absolute;
-	width: 0;
-	height: 0;
 	border-color: transparent;
 	border-style: solid;
+	height: 0;
+	position: absolute;
+	width: 0;
 	z-index: -1;
 }
 
