@@ -157,6 +157,18 @@ select[disabled].form-control > option {
 	}
 }
 
+.checkbox-card,
+.toggle-card-dm {
+	label {
+		padding-left: 0;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		margin-left: 0;
+	}
+}
+
 // Form Control Feedback
 
 .form-control-feedback {
