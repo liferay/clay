@@ -293,3 +293,58 @@
 		position: relative;
 	}
 }
+
+// Navbar Component Dropdowns
+
+.navbar-nav {
+	> li {
+		> .dropdown-menu-left-side,
+		> .dropdown-menu-left-side-bottom,
+		> .dropdown-menu-left-side-middle,
+		> .dropdown-menu-right-side,
+		> .dropdown-menu-right-side-bottom,
+		> .dropdown-menu-right-side-middle,
+		> .dropdown-menu-top,
+		> .dropdown-menu-top-center,
+		> .dropdown-menu-top-right {
+			border-top-right-radius: $border-radius-base;
+			border-top-left-radius: $border-radius-base;
+		}
+	}
+
+	.dropdown-menu-center,
+	.dropdown-menu-left-side-middle,
+	.dropdown-menu-right-side-middle,
+	.dropdown-menu-top-center {
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			@include transform(none);
+		}
+	}
+}
+
+.navbar-right {
+	.dropdown-menu-center,
+	.dropdown-menu-top-center {
+		left: 50%;
+		right: auto;
+	}
+
+	.dropdown-menu-left-side,
+	.dropdown-menu-left-side-bottom,
+	.dropdown-menu-left-side-middle {
+		left: auto;
+		right: 100%;
+	}
+
+	.dropdown-menu-right-side,
+	.dropdown-menu-right-side-bottom,
+	.dropdown-menu-right-side-middle {
+		left: 100%;
+		right: auto;
+	}
+
+	.dropdown-menu-top {
+		left: 0;
+		right: auto;
+	}
+}
