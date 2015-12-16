@@ -17,7 +17,14 @@
 	}
 }
 
-// Table List Skin
+// Skins
+
+th,
+.table-list .table-cell-field {
+	color: $table-header-color;
+	font-size: $table-header-font-size;
+	font-weight: $table-header-font-weight;
+}
 
 .table-list {
 	a {
