@@ -388,7 +388,7 @@
 					event.preventDefault();
 
 					if (instance.useDataAttribute) {
-						instance._toggleSimpleSidenav(element);
+						instance.toggleSimpleSidenav(element);
 					}
 					else {
 						instance.toggleNavigation(element);
@@ -410,7 +410,7 @@
 				togglerFn = function(event) {
 					event.preventDefault();
 
-					instance._toggleSimpleSidenav(element);
+					instance.toggleSimpleSidenav(element);
 				};
 			}
 			else {
@@ -446,7 +446,7 @@
 				togglerFn = function(event) {
 					event.preventDefault();
 
-					instance._toggleSimpleSidenav(element);
+					instance.toggleSimpleSidenav(element);
 				};
 			}
 			else {
@@ -576,24 +576,26 @@
 		_renderUI: function(element) {
 			var instance = this;
 
-			var mobile = instance.mobile;
-			var options = instance.options;
+			if (!instance.useDataAttribute) {
+				var mobile = instance.mobile;
+				var options = instance.options;
 
-			var type = mobile ? options.typeMobile : options.type;
+				var type = mobile ? options.typeMobile : options.type;
 
-			if (options.position === 'right') {
-				element.addClass('sidenav-right');
+				if (options.position === 'right') {
+					element.addClass('sidenav-right');
+				}
+
+				if (type === 'fixed' || type === 'fixed-push' && !instance.useDataAttribute) {
+					element.addClass('sidenav-fixed');
+				}
+
+				if (mobile) {
+					element.addClass('closed');
+				}
+
+				instance._renderNav(element);
 			}
-
-			if (type === 'fixed' || type === 'fixed-push' && !instance.useDataAttribute) {
-				element.addClass('sidenav-fixed');
-			}
-
-			if (mobile) {
-				element.addClass('closed');
-			}
-
-			instance._renderNav(element);
 		},
 
 		_resizeSidenav: function() {
@@ -622,74 +624,135 @@
 			instance.desktop = desktop;
 		},
 
-		_toggleSimpleSidenav: function(element) {
+		_getSimpleSidenavContent: function() {
 			var instance = this;
 
-			var hrefAttr = element.attr('href');
-			var dataTarget = element.data('target');
+			return $(instance.options.content).first();
+		},
 
-			var container = instance.options.target ? $(instance.options.target) : doc.find(hrefAttr);
-			var content = $(instance.options.content).first();
-			var openClass = instance.options.openClass;
+		_getSimpleSidenavNavigation: function() {
+			var instance = this;
+
 			var toggler = instance.options.toggler;
+
+			var hrefAttr = toggler.attr('href');
+
+			return instance.options.target ? $(instance.options.target) : doc.find(hrefAttr);
+		},
+
+		_getSimpleSidenavType: function() {
+			var instance = this;
+
+			var desktop = instance._isDesktop();
 			var type = instance.options.type;
 			var typeMobile = instance.options.typeMobile;
 
-			var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
-			var desktopFixedPush = desktop && (type === 'fixed-push');
-			var mobileFixedPush = !desktop && (typeMobile === 'fixed-push');
-
-			if (hrefAttr) {
-				toggler = $('[href="' + hrefAttr + '"');
+			if (desktop && (type === 'fixed-push')) {
+				return 'desktop-fixed-push';
+			}
+			else if (!desktop && (typeMobile === 'fixed-push')) {
+				return 'mobile-fixed-push';
 			}
 
-			if (dataTarget) {
-				toggler = $('[data-target="' + dataTarget + '"');
+			return 'fixed';
+		},
+
+		_isDesktop: function() {
+			return window.innerWidth >= toInt(this.options.breakpoint);
+		},
+
+		_isSimpleSidenavClosed: function() {
+			var instance = this;
+
+			var hrefAttr = instance.options.toggler.attr('href');
+
+			var container = instance.options.target ? $(instance.options.target) : doc.find(hrefAttr);
+
+			return container.hasClass('closed');
+		},
+
+		hideSimpleSidenav: function() {
+			var instance = this;
+
+			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
+
+			if (!simpleSidenavClosed) {
+				var content = instance._getSimpleSidenavContent();
+				var sidenav = instance._getSimpleSidenavNavigation();
+
+				var openClass = instance.options.openClass;
+
+				var toggler = instance.options.toggler;
+
+				instance._onSidenavTransitionEnd(content, function() {
+					instance._removeBodyFixed();
+
+					sidenav.removeClass('sidenav-transition');
+					toggler.removeClass('sidenav-transition');
+
+					sidenav.trigger('closed.lexicon.sidenav');
+				});
+
+				content.addClass('sidenav-transition');
+				sidenav.addClass('sidenav-transition closed');
+				toggler.addClass('sidenav-transition');
+
+				content.removeClass(openClass);
+				toggler.removeClass(openClass);
 			}
+		},
 
-			container.addClass('sidenav-transition');
-			toggler.addClass('sidenav-transition');
+		showSimpleSidenav: function() {
+			var instance = this;
 
-			if (container.hasClass('closed')) {
+			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
+
+			if (simpleSidenavClosed) {
+				var content = instance._getSimpleSidenavContent();
+				var sidenav = instance._getSimpleSidenavNavigation();
+
+				var openClass = instance.options.openClass;
+
+				var toggler = instance.options.toggler;
+
+				var desktop = instance._isDesktop();
+				var desktopFixedPush = instance._getSimpleSidenavType() === 'desktop-fixed-push';
+				var mobileFixedPush = instance._getSimpleSidenavType() === 'mobile-fixed-push';
+
+				instance._onSidenavTransitionEnd(content, function() {
+					sidenav.removeClass('sidenav-transition');
+					toggler.removeClass('sidenav-transition');
+
+					sidenav.trigger('open.lexicon.sidenav');
+				});
+
+				sidenav.addClass('sidenav-transition');
+				toggler.addClass('sidenav-transition');
+
 				if (!desktop) {
 					$('body').addClass('body-fixed');
 				}
 
 				if (desktopFixedPush || mobileFixedPush) {
-					instance._onSidenavTransitionEnd(content, function() {
-						container.removeClass('sidenav-transition');
-						toggler.removeClass('sidenav-transition');
-
-						container.trigger('open.lexicon.sidenav');
-					});
-
 					content.addClass('sidenav-transition');
+					content.addClass(openClass);
+					toggler.addClass(openClass);
 				}
 
-				container.removeClass('closed');
-				content.addClass(openClass);
-				toggler.addClass(openClass);
+				sidenav.removeClass('closed');
+			}
+		},
+
+		toggleSimpleSidenav: function() {
+			var instance = this;
+
+			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
+
+			if (simpleSidenavClosed) {
+				instance.showSimpleSidenav();
 			}
 			else {
-				if (desktopFixedPush || mobileFixedPush) {
-					instance._onSidenavTransitionEnd(content, function() {
-						instance._removeBodyFixed();
-
-						container.removeClass('sidenav-transition');
-						toggler.removeClass('sidenav-transition');
-
-						container.trigger('closed.lexicon.sidenav');
-					});
-
-					content.addClass('sidenav-transition');
-				}
-				else {
-					instance._removeBodyFixed();
-				}
-
-				container.addClass('closed');
-				content.removeClass(openClass);
-				toggler.removeClass(openClass);
+				instance.hideSimpleSidenav();
 			}
 		}
 	};

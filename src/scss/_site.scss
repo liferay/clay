@@ -599,14 +599,19 @@ body.fixed {
 
 // Site Main Nav
 
-#wrapper.open {
+#wrapper.open,
+#wrapper.simple-sidenav-2-open {
 	@media screen and (min-width: $grid-float-breakpoint) {
 		padding-left: 400px;
 	}
 }
 
-[href="#simpleSidenav"] {
+.side-navigation-data-api-buttons {
 	margin-bottom: 15px;
+
+	.btn {
+		margin-bottom: 3px;
+	}
 }
 
 .menu-toggle {
