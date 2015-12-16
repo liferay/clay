@@ -781,7 +781,7 @@
 				}
 
 				if (typeof options === 'string') {
-					data[options].call($this);
+					data[options].call(data);
 				}
 			}
 		);
