@@ -8,27 +8,38 @@
 }
 
 .btn-group > .btn + .dropdown-toggle {
-	padding-left: $btn-padding-horizontal / 3;
-	padding-right: $btn-padding-horizontal / 3;
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		padding-left: $btn-desktop-padding-horizontal / 3;
-		padding-right: $btn-desktop-padding-horizontal / 3;
-	}
-}
-
-.btn-group > .btn-lg + .dropdown-toggle {
-	padding-left: $btn-lg-padding-horizontal / 3;
-	padding-right: $btn-lg-padding-horizontal / 3;
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		padding-left: $btn-desktop-lg-padding-horizontal / 3;
-		padding-right: $btn-desktop-lg-padding-horizontal / 3;
-	}
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .btn-group.open .dropdown-toggle {
 	box-shadow: none;
+}
+
+.btn-group {
+	.btn-danger,
+	.btn-info,
+	.btn-primary,
+	.btn-success,
+	.btn-warning {
+		&:first-child {
+			border-right: 1px solid #FFF;
+		}
+
+		+ .btn-danger,
+		+ .btn-info,
+		+ .btn-primary,
+		+ .btn-success,
+		+ .btn-warning {
+			border-left: 1px solid #FFF;
+			margin-left: -1px;
+
+			&:focus,
+			&:hover {
+				border-left-color: #FFF;
+			}
+		}
+	}
 }
 
 .btn-group-vertical {
