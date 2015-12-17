@@ -84,6 +84,7 @@ module.exports = function(gulp, plugins, _, config) {
 			var bumpedVersion = semver.inc(currentVersion, type);
 
 			var browserCommitMessage = 'Browser files for v' + bumpedVersion;
+			var mergeCommitMessage = 'Merging master@v' + bumpedVersion + ' into develop';
 			var rebuildCommitMessage = 'Rebuild v' + bumpedVersion;
 			var releaseCommitMessage = 'Release v' + bumpedVersion;
 			var tagMessage = 'Version ' + bumpedVersion;
@@ -118,6 +119,8 @@ module.exports = function(gulp, plugins, _, config) {
 				.git('branch', '-D', branchName)
 				.git('checkout', tagName, '--', 'release')
 				.git('reset')
+				.git('checkout', 'develop')
+				.git('merge', 'master', '-m', mergeCommitMessage)
 				.then(function() {
 					done();
 				});
@@ -129,6 +132,8 @@ module.exports = function(gulp, plugins, _, config) {
 		function(done) {
 			cmdPromise.resolve()
 				.git('push', 'upstream', '--tags')
+				.git('push', 'upstream', 'master')
+				.git('push', 'upstream', 'develop')
 				.cmd('npm', 'run', 'deploy')
 				.then(function() {
 					done();
