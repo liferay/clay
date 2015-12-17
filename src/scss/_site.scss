@@ -614,6 +614,16 @@ body.fixed {
 	}
 }
 
+.side-navigation-methods {
+	h4 {
+		margin-top: 2em;
+
+		&:nth-of-type(1) {
+			margin-top: 1em;
+		}
+	}
+}
+
 .menu-toggle {
 	color: #FFF;
 	display: block;

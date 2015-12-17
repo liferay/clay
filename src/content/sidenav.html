@@ -166,7 +166,7 @@ section: Components (JS)
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Side Navigation Data Api</h3>
+		<h3>Side Navigation Data API</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>The Side Navigation data api was added for situations where there is limited control over the markup structure. The only markup needed is a toggler and a panel to hide and show. These items can be included anywhere on the page.</p>
@@ -314,6 +314,40 @@ section: Components (JS)
 	</div>
 </div>
 
+<div class="side-navigation-methods row row-spacing">
+	<div class="col-md-12">
+		<h3>Methods</h3>
+
+		<h4><code>.sideNavigation('toggle')</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown or hidden.</b></p>
+		</blockquote>
+		<p><pre><code>```$('#myContainerId').sideNavigation('toggle')```</code></pre></p>
+
+		<h4><code>.sideNavigation('show')</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Manually shows the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown.</b></p>
+		</blockquote>
+		<p><pre><code>```$('#myContainerId').sideNavigation('show')```</code></pre></p>
+
+		<h4><code>.sideNavigation('hide')</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been hidden.</b></p>
+		</blockquote>
+		<p><pre><code>```$('#myContainerId').sideNavigation('hide')```</code></pre></p>
+
+		<h4><code>sideNavInstance.visible()</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Returns the visible state of the sidenav. <b>In order to use this method, you need to access the underlying SideNavigation instance.</b></p>
+			<p>If the sidenav is in the middle of transitioning, this will report what the visible state <b>will be after</b> the transition is finished. This allows you to call it in any state and accurately get the state of the sidenav.</p>
+		</blockquote>
+		<p><pre><code>```var sideNavInstance = $('#myContainerId').data('lexicon.sidenav');
+
+sideNavInstance.show().visible(); // returns true
+sideNavInstance.hide().visible(); // returns false```</code></pre></p>
+	</div>
+</div>
+
 <script>
 	$('#mySidenavContainerId').sideNavigation({
 		toggler: '#mySidenavToggleId'
@@ -329,16 +363,12 @@ section: Components (JS)
 	$('#showSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		var sidenavToggle = $('[data-toggle="sidenav"]').eq(2).data('lexicon.sidenav');
-
-		sidenavToggle.showSimpleSidenav();
+		$('[data-toggle="sidenav"]').eq(2).sideNavigation('show');
 	});
 
 	$('#hideSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		var sidenavToggle = $('[data-toggle="sidenav"]').eq(2).data('lexicon.sidenav');
-
-		sidenavToggle.hideSimpleSidenav();
+		$('[data-toggle="sidenav"]').eq(2).sideNavigation('hide');
 	});
 </script>
