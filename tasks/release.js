@@ -131,9 +131,7 @@ module.exports = function(gulp, plugins, _, config) {
 		'release:publish',
 		function(done) {
 			cmdPromise.resolve()
-				.git('push', 'upstream', '--tags')
-				.git('push', 'upstream', 'master')
-				.git('push', 'upstream', 'develop')
+				.git('push', 'upstream', '--tags', 'master', 'develop')
 				.cmd('npm', 'run', 'deploy')
 				.then(function() {
 					done();
