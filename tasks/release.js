@@ -92,14 +92,14 @@ module.exports = function(gulp, plugins, _, config) {
 
 			cmdPromise.resolve()
 				.git('checkout', 'master')
-				.git('status').then(function(status) {
-					var stdout = status.stdout;
-
-					if (!(/nothing to commit, working directory clean/.test(stdout))) {
+				.git('status', '--porcelain').then(function(status) {
+					if (!!status.stdout) {
 						throw new Error('working directory not clean, aborting');
 					}
+				})
+				.git('rev-list', '--count', '--left-only', '@{u}...master').then(function(revCount) {
+					if (revCount.stdout !== '0') {
 
-					if (!(/Your branch is up-to-date/.test(stdout))) {
 						throw new Error('branch is not up to date, aborting');
 					}
 
