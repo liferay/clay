@@ -97,9 +97,14 @@ module.exports = function(gulp, plugins, _, config) {
 						throw new Error('working directory not clean, aborting');
 					}
 				})
+				.git('fetch', 'upstream', '--quiet')
+				.git('tag', '--list', tagName).then(function(tag) {
+					if (!!tag.stdout) {
+						throw new Error('The tag ' + tagName + ' already exists. Type git tag -d ' + tagName + ' to remove it');
+					}
+				})
 				.git('rev-list', '--count', '--left-only', '@{u}...master').then(function(revCount) {
 					if (revCount.stdout !== '0') {
-
 						throw new Error('branch is not up to date, aborting');
 					}
 
