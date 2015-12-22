@@ -9,6 +9,10 @@
 	position: relative;
 	word-wrap: break-word;
 
+	&:focus {
+		z-index: 1;
+	}
+
 	&:focus,
 	&:hover {
 		text-decoration: none;
