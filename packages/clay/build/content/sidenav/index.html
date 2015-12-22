@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.25</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.26</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -375,33 +375,31 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="side-navigation-data-api"><a class="heading-anchor" href="#side-navigation-data-api"><i class="icon icon-link"></i></a>Side Navigation Data Api</h3>
+		<h3 id="side-navigation-data-api"><a class="heading-anchor" href="#side-navigation-data-api"><i class="icon icon-link"></i></a>Side Navigation Data API</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>The Side Navigation data api was added for situations where there is limited control over the markup structure. The only markup needed is a toggler and a panel to hide and show. These items can be included anywhere on the page.</p>
-		</blockquote>
 
-		<blockquote class="blockquote-sm blockquote-success">
 			<p>The minimum amount of attributes required is <code>data-toggle=&quot;sidenav&quot;</code> and <code>href=&quot;#target&quot;</code> or <code>data-target=&quot;#target&quot;</code>. This will open and close a fixed position sidenav provided the markup below. The width of the <code>sidenav-slider</code>, <code>sidenav-menu</code>, and position of the sidenav must be set through css. When using <code>fixed-push</code>, padding must also be set via css on open to push the content over.</p>
 		</blockquote>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>The data api allows for fixed-push style sidenavs with the attributes <code>data-content</code>, <code>data-type</code>, and <code>data-type-mobile</code>. <code>Data-content</code> is the id of the content to be pushed over when the nav is open. <code>Data-type</code> and <code>data-type-mobile</code> give the option to specify the style of sidenav in desktop and mobile, respectively. The values can be <code>fixed</code> or <code>fixed-push</code> and defaults to fixed.</p>
+		<div class="side-navigation-data-api-buttons">
+			<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav">Simple Sidenav Toggler</a>
 
-			<p>The open class name can be customized through the attribute <code>data-open-class</code> and will be added to toggler and content on open. </p>
-		</blockquote>
-
-		<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">Simple Sidenav Toggler</a>
+			<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav">
+				Another Simple Sidenav Toggler
+			</a>
+		</div>
 
 		<div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
 			<div class="product-menu1 sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
 					<h4>
 						<a href="#1">
-							<svg class="lexicon-icon sidebar-header-logo">
+							<svg class="icon-monospaced lexicon-icon sidebar-header-logo">
 								<use xlink:href="../../images/icons/icons.svg#staging">
 							</svg>
-							<span>Squareup</span>
+							<span>Simple Sidenav</span>
 						</a>
 
 						<a class="sidenav-close" href="#1">
@@ -412,245 +410,73 @@
 					</h4>
 				</div>
 
-				<ul class="nav nav-tabs product-menu-tabs1">
-					<li class="active col-xs-4">
-						<a data-toggle="tab" href="#tab01">
-							<div class="product-menu-tab-icon1"><span class="icon-android icon-monospaced"></span></div>
-							<div class="product-menu-tab-text1">Android</div>
-						</a>
-					</li>
-
-					<li class="col-xs-4">
-						<a data-toggle="tab" href="#tab02">
-							<div class="product-menu-tab-icon1"><span class="icon-github icon-monospaced"></span></div>
-							<div class="product-menu-tab-text1">Github</div>
-						</a>
-					</li>
-
-					<li class="col-xs-4">
-						<a data-toggle="tab" href="#tab03">
-							<div class="product-menu-tab-icon1">
-								<span class="icon-keyboard icon-monospaced"></span>
-								<span class="sticker sticker-right sticker-rounded sticker-sm sticker-warning">24</span>
-							</div>
-							<div class="product-menu-tab-text1">Editor</div>
-						</a>
-					</li>
-				</ul>
-
 				<div class="sidebar-body">
-					<div class="tab-content">
-						<div class="active fade in tab-pane" id="tab01">
-							<form role="form">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>From</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
-										</div>
-									</div>
 
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>To</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
-										</div>
-									</div>
+				</div>
 
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Departing</label>
-											<input class="form-control" type="text" placeholder="Departing Date">
-										</div>
-									</div>
-
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Returning</label>
-											<input class="form-control" type="text" placeholder="Returning Date">
-										</div>
-									</div>
-
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Adults</label>
-											<select class="form-control">
-												<option>0 Adults</option>
-												<option>1 Adult</option>
-												<option>2 Adults</option>
-												<option>3 Adults</option>
-												<option>4 Adults</option>
-												<option>5 Adults</option>
-												<option>6 Adults</option>
-												<option>7 Adults</option>
-												<option>8 Adults</option>
-												<option>9 Adults</option>
-												<option>10 Adults</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Children</label>
-											<select class="form-control">
-												<option>0 Children</option>
-												<option>1 Child</option>
-												<option>2 Children</option>
-												<option>3 Children</option>
-												<option>4 Children</option>
-												<option>5 Children</option>
-												<option>6 Children</option>
-												<option>7 Children</option>
-												<option>8 Children</option>
-												<option>9 Children</option>
-												<option>10 Children</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="col-md-12">
-										<button class="btn btn-md btn-success">Search Flights</button>
-									</div>
-								</div>
-							</form>
-						</div>
-
-						<div class="fade in tab-pane" id="tab02">
-							<form role="form">
-								<div class="row">
-									<div class="col-md-4">
-										<div class="form-group">
-											<label>From</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
-										</div>
-									</div>
-
-									<div class="col-md-4">
-										<div class="form-group">
-											<label>To</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
-										</div>
-									</div>
-
-									<div class="col-md-4">
-										<div class="form-group">
-											<label>Departing</label>
-											<input class="form-control" type="text" placeholder="Departing Date">
-										</div>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-md-12 form-group">
-										<button class="btn btn-default btn-xs" type="button">Add Destination</button>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Adults</label>
-											<select class="form-control">
-												<option>0 Adults</option>
-												<option>1 Adult</option>
-												<option>2 Adults</option>
-												<option>3 Adults</option>
-												<option>4 Adults</option>
-												<option>5 Adults</option>
-												<option>6 Adults</option>
-												<option>7 Adults</option>
-												<option>8 Adults</option>
-												<option>9 Adults</option>
-												<option>10 Adults</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Children</label>
-											<select class="form-control">
-												<option>0 Children</option>
-												<option>1 Child</option>
-												<option>2 Children</option>
-												<option>3 Children</option>
-												<option>4 Children</option>
-												<option>5 Children</option>
-												<option>6 Children</option>
-												<option>7 Children</option>
-												<option>8 Children</option>
-												<option>9 Children</option>
-												<option>10 Children</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="col-md-12">
-										<button class="btn btn-md btn-success">Search Flights</button>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="fade in tab-pane" id="tab03">
-							<form>
-								<div class="input-group search-bar">
-									<input class="form-control" placeholder="Search Site..." type="text">
-
-									<span class="input-group-btn">
-										<button class="btn" type="button"><span class="icon-monospaced icon-search"></span></button>
-									</span>
-								</div>
-							</form>
-
-							<div class="list-group">
-								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0004">
-									<h5>Junkers Marketing <small>STAGING</small></h5>
-								</a>
-								<div class="collapse" id="listGroupCollapse0004">
-									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
-								</div>
-
-								<a aria-expanded="true" class="collapse-icon list-group-heading" data-toggle="collapse" href="#listGroupCollapse0005">
-									<h5>Junkers RRHH</h5>
-								</a>
-								<div class="collapse in" id="listGroupCollapse0005" aria-expanded="true">
-									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
-								</div>
-
-								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0006">
-									<h5>Junkers Design <small>STAGING</small></h5>
-								</a>
-								<div class="collapse" id="listGroupCollapse0006">
-									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
-								</div>
-								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0007">
-									<h5>Junkers UX</h5>
-								</a>
-								<div class="collapse" id="listGroupCollapse0007">
-									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
-								</div>
-								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0008">
-									<h5>Junkers Java</h5>
-								</a>
-								<div class="collapse" id="listGroupCollapse0008">
-									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
-								</div>
-								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse0009">
-									<h5>Junkers Ruby <small>STAGING</small></h5>
-								</a>
-								<div class="collapse" id="listGroupCollapse0009">
-									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
-								</div>
-								<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse00010">
-									<h5>Junkers Python <small>STAGING</small></h5>
-								</a>
-								<div class="collapse" id="listGroupCollapse00010">
-									<div class="list-group-item">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
-								</div>
+				<div class="sidebar-footer">
+					<div class="nameplate">
+						<div class="nameplate-field">
+							<div class="user-icon user-icon-warning">
+								:D
 							</div>
+						</div>
+
+						<div class="nameplate-content">
+							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+						</div>
+
+						<div class="nameplate-field">
+							<a class="icon-monospaced" href="#1"></a>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>The data api allows for fixed-push style sidenavs with the attributes <code>data-content</code>, <code>data-type</code>, and <code>data-type-mobile</code>. <code>Data-content</code> is the id of the content to be pushed over when the nav is open. <code>Data-type</code> and <code>data-type-mobile</code> give the option to specify the style of sidenav in desktop and mobile, respectively. The values can be <code>fixed</code> or <code>fixed-push</code> and defaults to fixed.</p>
+
+			<p>The open class name can be customized through the attribute <code>data-open-class</code> and will be added to toggler and content on open. </p>
+		</blockquote>
+
+		<div class="side-navigation-data-api-buttons">
+			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-use-delegate="true">Simple Sidenav 2 Toggler</a>
+
+			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">
+				Another Simple Sidenav 2 Toggler
+			</a>
+
+			<a class="btn btn-default" href="#1" id="showSimpleSidenav2">
+				Show Simple Sidenav 2
+			</a>
+
+			<a class="btn btn-default" href="#1" id="hideSimpleSidenav2">
+				Hide Simple Sidenav 2
+			</a>
+		</div>
+
+		<div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
+			<div class="product-menu1 sidebar sidebar-default sidenav-menu">
+				<div class="sidebar-header">
+					<h4>
+						<a href="#1">
+							<svg class="icon-monospaced lexicon-icon sidebar-header-logo" style="background-color: red;">
+								<use xlink:href="../../images/icons/icons.svg#home">
+							</svg>
+							<span>Simple Sidenav 2</span>
+						</a>
+
+						<a class="sidenav-close" href="#1">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</h4>
+				</div>
+
+				<div class="sidebar-body">
+
 				</div>
 
 				<div class="sidebar-footer">
@@ -697,6 +523,40 @@
 	</div>
 </div>
 
+<div class="side-navigation-methods row row-spacing">
+	<div class="col-md-12">
+		<h3 id="methods"><a class="heading-anchor" href="#methods"><i class="icon icon-link"></i></a>Methods</h3>
+
+		<h4><code>.sideNavigation(&apos;toggle&apos;)</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown or hidden.</b></p>
+		</blockquote>
+		<p><pre><code>$(&apos;#myContainerId&apos;).sideNavigation(&apos;toggle&apos;)</code></pre></p>
+
+		<h4><code>.sideNavigation(&apos;show&apos;)</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Manually shows the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown.</b></p>
+		</blockquote>
+		<p><pre><code>$(&apos;#myContainerId&apos;).sideNavigation(&apos;show&apos;)</code></pre></p>
+
+		<h4><code>.sideNavigation(&apos;hide&apos;)</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been hidden.</b></p>
+		</blockquote>
+		<p><pre><code>$(&apos;#myContainerId&apos;).sideNavigation(&apos;hide&apos;)</code></pre></p>
+
+		<h4><code>sideNavInstance.visible()</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Returns the visible state of the sidenav. <b>In order to use this method, you need to access the underlying SideNavigation instance.</b></p>
+			<p>If the sidenav is in the middle of transitioning, this will report what the visible state <b>will be after</b> the transition is finished. This allows you to call it in any state and accurately get the state of the sidenav.</p>
+		</blockquote>
+		<p><pre><code>var sideNavInstance = $(&apos;#myContainerId&apos;).data(&apos;lexicon.sidenav&apos;);
+
+sideNavInstance.show().visible(); // returns true
+sideNavInstance.hide().visible(); // returns false</code></pre></p>
+	</div>
+</div>
+
 <script>
 	$('#mySidenavContainerId').sideNavigation({
 		toggler: '#mySidenavToggleId'
@@ -708,6 +568,18 @@
 	});
 
 	$('[data-toggle="sidenav"]').sideNavigation();
+
+	$('#showSimpleSidenav2').on('click', function(event) {
+		event.preventDefault();
+
+		$('[data-toggle="sidenav"]').eq(2).sideNavigation('show');
+	});
+
+	$('#hideSimpleSidenav2').on('click', function(event) {
+		event.preventDefault();
+
+		$('[data-toggle="sidenav"]').eq(2).sideNavigation('hide');
+	});
 </script>
 	</div>
 
