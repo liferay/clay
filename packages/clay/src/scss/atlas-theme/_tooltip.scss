@@ -1,21 +1,19 @@
+.tooltip {
+	font-size: $tooltip-font-size;
+}
+
 .tooltip-inner {
 	border-radius: $tooltip-border-radius;
-	line-height: 24px;
 	padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
-	max-width: 230px;
 }
 
 .tooltip-arrow:before {
-	position: absolute;
-	width: 0;
-	height: 0;
 	border-color: transparent;
 	border-style: solid;
+	height: 0;
+	position: absolute;
+	width: 0;
 	z-index: -1;
-}
-
-.tooltip {
-	font-size: 16px;
 }
 
 // Tooltip box shadows

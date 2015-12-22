@@ -11,6 +11,12 @@ $management-bar-desktop-btn-padding-vertical: ($management-bar-desktop-height - 
 
 // Skin
 
+$management-bar-link-active-color: $brand-primary !default;
+
 $management-bar-default-bg: #F5F8FA !default; // Shared
 $management-bar-default-border: #EDF0F2 !default; // Shared
 $management-bar-default-color: #869CAD !default; // Shared
+
+$management-bar-default-btn-default-bg: transparent !default;
+$management-bar-default-btn-default-border: #E4E9EC !default;
+$management-bar-default-btn-default-color: #869CAD !default;

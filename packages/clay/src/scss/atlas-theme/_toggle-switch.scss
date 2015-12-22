@@ -58,4 +58,9 @@
 			}
 		}
 	}
+
+	.toggle-switch-text-left,
+	.toggle-switch-text-right {
+		line-height: $toggle-switch-bar-desktop-height;
+	}
 }
