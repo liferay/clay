@@ -8,6 +8,27 @@ module.exports = function(gulp, plugins, _, config) {
 
 	var license = require('./copyright_banner');
 
+	var GIT_REMOTE;
+
+	var getGitRemote = function() {
+		if (!GIT_REMOTE) {
+			GIT_REMOTE = cmdPromise.resolve()
+			.git('remote', '-v').then(function(response) {
+				var remotes = response.stdout;
+
+				var remote = 'origin';
+
+				if ((/^upstream(?:\s+)/m).test(remotes)) {
+					remote = 'upstream';
+				}
+
+				return remote;
+			});
+		}
+
+		return GIT_REMOTE;
+	};
+
 	gulp.task(
 		'release:clean',
 		function() {
@@ -97,7 +118,10 @@ module.exports = function(gulp, plugins, _, config) {
 						throw new Error('working directory not clean, aborting');
 					}
 				})
-				.git('fetch', 'upstream', '--quiet')
+				.then(getGitRemote)
+				.then(function(remote) {
+					return cmdPromise.resolve().git('fetch', remote, '--quiet');
+				})
 				.git('tag', '--list', tagName).then(function(tag) {
 					if (!!tag.stdout) {
 						throw new Error('The tag ' + tagName + ' already exists. Type git tag -d ' + tagName + ' to remove it');
@@ -137,7 +161,10 @@ module.exports = function(gulp, plugins, _, config) {
 		'release:publish',
 		function(done) {
 			cmdPromise.resolve()
-				.git('push', 'upstream', '--tags', 'master', 'develop')
+				.then(getGitRemote)
+				.then(function(remote){
+					return cmdPromise.resolve().git('push', remote, '--tags', 'master', 'develop');
+				})
 				.cmd('npm', 'run', 'deploy')
 				.then(function() {
 					done();
