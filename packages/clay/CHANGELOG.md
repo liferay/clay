@@ -2,6 +2,9 @@
 * No changes yet
 ***
 
+## v0.1.27 - December 22, 2015
+* Updated bower.json to exclude non-essential directories
+
 ## v0.1.26 - December 22, 2015
 * Breaking: Rename management-bar-right to management-bar-nav-right
 * New: Updated the Sidenav component, adding the following new methods: `hide()`, `show()`, `toggle()`, and `visible()` ([Documentation](http://liferay.github.io/lexicon/content/sidenav/#methods))
