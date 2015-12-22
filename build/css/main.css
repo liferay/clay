@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.25
+* Lexicon 0.1.26
 *
 * Copyright 2015, Liferay, Inc.
 * All rights reserved.
@@ -61,6 +61,9 @@
 /**
  * @param $element - CSS Selector
  * @param $color - Placeholder Color
+ */
+/**
+ * @param $color - Icon Color
  */
 /**
  * @param $bg-color - User icon background color
@@ -646,13 +649,26 @@ body.fixed {
 }
 
 @media screen and (min-width: 768px) {
-  #wrapper.open {
+  #wrapper.open,
+  #wrapper.simple-sidenav-2-open {
     padding-left: 400px;
   }
 }
 
-[href="#simpleSidenav"] {
+.side-navigation-data-api-buttons {
   margin-bottom: 15px;
+}
+
+.side-navigation-data-api-buttons .btn {
+  margin-bottom: 3px;
+}
+
+.side-navigation-methods h4 {
+  margin-top: 2em;
+}
+
+.side-navigation-methods h4:nth-of-type(1) {
+  margin-top: 1em;
 }
 
 .menu-toggle {
