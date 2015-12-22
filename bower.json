@@ -1,18 +1,18 @@
 {
   "name": "lexicon",
-  "main": "index.js",
-  "homepage": "https://github.com/natecavanaugh/lexicon",
+  "main": "release/scss/atlas.scss",
+  "homepage": "https://liferay.github.io/lexicon",
   "authors": [
     "Nate Cavanaugh",
     "Patrick Yeo"
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "**/*",
+    "!release/**/*",
+    "!package.json",
+    "!CHANGELOG.md",
+    "!README.md"
   ],
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
