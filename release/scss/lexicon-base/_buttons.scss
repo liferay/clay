@@ -1,0 +1,60 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Action Buttons
+
+.btn-action,
+.btn-action-secondary {
+	z-index: $zindex-btn-action;
+}
+
+.btn-action,
+.btn-action-secondary .btn {
+	padding: 0;
+}
+
+.btn-action .lexicon-icon {
+	display: block;
+	height: 100%;
+	margin: auto;
+}
+
+.btn-action-secondary {
+	display: inline-block;
+
+	.dropdown-menu-left-side {
+		margin-right: 5px;
+	}
+
+	.dropdown-menu-right-side {
+		margin-left: 5px;
+	}
+}
+
+.btn-bottom-left {
+	bottom: 20px;
+	left: 20px;
+	position: fixed;
+}
+
+.btn-bottom-right {
+	bottom: 20px;
+	position: fixed;
+	right: 20px;
+}
+
+.btn-top-left {
+	left: 20px;
+	position: fixed;
+	top: 20px;
+}
+
+.btn-top-right {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+}

@@ -1,0 +1,276 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.modal-body {
+	background-color: $modal-body-bg;
+	color: $modal-body-color;
+
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		bottom: $modal-footer-height;
+		left: 0;
+		overflow: auto;
+		position: absolute;
+		right: 0;
+		top: $modal-header-height;
+	}
+
+	&.inline-scroller {
+		-webkit-overflow-scrolling: touch;
+		overflow: auto;
+		padding: $modal-inner-padding;
+	}
+}
+
+.modal-body-iframe {
+	padding: 0;
+
+	iframe {
+		border-width: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.modal-body-no-footer {
+	bottom: 0;
+}
+
+.modal-header-no-header {
+	top: 0;
+}
+
+.modal-content {
+	overflow: auto;
+
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		border-radius: 0;
+		border-width: 0;
+		box-shadow: none;
+		height: 100%;
+	}
+}
+
+.modal-dialog {
+	@media screen and (max-width: $grid-float-breakpoint) {
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+.modal-footer {
+	background-color: $modal-footer-bg;
+	border-color: $modal-footer-border-color;
+	color: $modal-footer-color;
+	clear: both;
+	text-align: left;
+
+	@media screen and (max-width: $grid-float-breakpoint) {
+		bottom: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+}
+
+.modal-header {
+	background-color: $modal-header-bg;
+	border-color: $modal-header-border-color;
+	color: $modal-header-color;
+}
+
+.modal-open {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.modal-title {
+	display: block;
+	text-align: center;
+
+	@include text-overflow;
+}
+
+// Modal Buttons
+
+.modal-header {
+	.modal-primary-action-button,
+	.close {
+		-webkit-appearance: none;
+		background-color: transparent;
+		border-width: 0;
+		color: #000;
+		cursor: pointer;
+
+		@include opacity(0.2);
+
+		padding: 0;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			border-width: 0;
+			color: #000;
+
+			@include opacity(0.5);
+		}
+	}
+
+	.close {
+		float: left;
+		margin-right: 10px;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			float: right;
+			margin-right: 0;
+		}
+	}
+
+	.modal-primary-action-button {
+		float: right;
+		margin-left: 10px;
+	}
+}
+
+// Modal Iframe
+
+.modal-iframe {
+	iframe {
+		border-width: 0;
+		float: left;
+		height: 300px;
+		width: 100%;
+	}
+
+	.modal-body {
+		padding: 0;
+	}
+}
+
+// Modal Full Screen
+
+.modal-full-screen {
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: auto;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		bottom: 45px;
+		left: 45px;
+		right: 45px;
+		top: 45px;
+	}
+
+	.modal-body {
+		bottom: $modal-footer-height;
+		left: 0;
+		overflow: auto;
+		position: absolute;
+		right: 0;
+		top: $modal-header-height;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			bottom: $modal-desktop-footer-height;
+			top: $modal-desktop-header-height;
+		}
+	}
+
+	.modal-body-iframe {
+		padding: 0;
+
+		iframe {
+			height: 100%;
+			border-width: 0;
+			float: left;
+			width: 100%;
+		}
+	}
+
+	.modal-body-no-footer {
+		bottom: 0;
+	}
+
+	.modal-body-no-header {
+		top: 0;
+	}
+
+	.modal-content {
+		border-color: $modal-content-border-color;
+		border-radius: 0;
+		border-width: 0;
+		height: 100%;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			border-radius: 6px;
+			border-width: 1px;
+		}
+	}
+
+	.modal-footer {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: auto;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			padding: $modal-inner-padding;
+		}
+	}
+}
+
+.modal-inverse {
+	a,
+	.btn-link,
+	.close {
+		color: $modal-inverse-link-color;
+	}
+
+	.close {
+		text-shadow: 0 1px 0 $modal-inverse-header-border-color;
+
+		@include opacity(0.5);
+
+		&:focus,
+		&:hover {
+			@include opacity(1);
+		}
+	}
+
+	.modal-content {
+		background-color: $modal-inverse-content-bg;
+		border-color: $modal-inverse-content-border-color;
+	}
+
+	.modal-body {
+		background-color: $modal-inverse-body-bg;
+		color: $modal-inverse-body-color;
+	}
+
+	.modal-header {
+		background-color: $modal-inverse-header-bg;
+		border-color: $modal-inverse-header-border-color;
+		color: $modal-inverse-header-color;
+	}
+
+	.modal-footer {
+		background-color: $modal-inverse-footer-bg;
+		border-color: $modal-inverse-footer-border-color;
+		color: $modal-inverse-footer-color;
+	}
+}

@@ -1,0 +1,19 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Sets background and text color of user icon component
+@mixin color-user-icon($bg-color: #999, $color: #FFF) {
+	background-color: $bg-color;
+	color: $color;
+}
+
+// Sets height, width, and line-height of user icon component
+@mixin size-user-icon($size: 32px) {
+	height: $size;
+	line-height: $size;
+	width: $size;
+}

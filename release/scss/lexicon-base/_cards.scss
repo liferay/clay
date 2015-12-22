@@ -1,0 +1,363 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.card,
+.card-horizontal {
+	background-color: $card-bg;
+	border: $card-border-width solid $card-border;
+	border-radius: $card-border-radius;
+	margin-bottom: $card-margin-bottom;
+	position: relative;
+
+	.divider {
+		background-color: $card-divider-bg;
+		border-width: 0;
+		height: $card-divider-height;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+}
+
+.card {
+	.card-row {
+		width: 100.4%; // Webkit rounding
+	}
+
+	.figure {
+		overflow: visible;
+	}
+}
+
+.card-header,
+.card-footer,
+.card-section {
+	@include clearfix();
+
+	.divider {
+		margin-left: -$card-gutter-width;
+		margin-right: -$card-gutter-width;
+	}
+}
+
+.card-header {
+	padding: 1px $card-gutter-width 0;
+}
+
+.card-footer {
+	padding: 0 $card-gutter-width 1px;
+}
+
+.card-section {
+	padding: 1px $card-gutter-width;
+}
+
+.card-horizontal {
+	position: relative;
+
+	&.card-circle {
+		[class*="card-col"] {
+			&:first-child {
+				border-radius: $card-circle-border-radius 0 0 $card-circle-border-radius;
+			}
+
+			&:last-child {
+				border-radius: 0 $card-circle-border-radius $card-circle-border-radius 0;
+			}
+		}
+	}
+
+	&.card-rounded {
+		[class*="card-col"] {
+			&:first-child {
+				border-radius: $card-rounded-border-radius 0 0 $card-rounded-border-radius;
+			}
+
+			&:last-child {
+				border-radius: 0 $card-rounded-border-radius $card-rounded-border-radius 0;
+			}
+		}
+	}
+
+	&.card-square {
+		[class*="card-col"] {
+			&:first-child {
+				border-radius: 0;
+			}
+
+			&:last-child {
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+.card-col-field {
+	width: 1%;
+}
+
+@for $i from 1 through $grid-columns {
+	.card-col-#{$i} {
+		width: percentage(($i / $grid-columns));
+	}
+}
+
+.card-row {
+	display: table;
+	height: 100%;
+	width: 100%;
+
+	&.card-row-padded .card-col-gutters {
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		.divider {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.card-col-gutters {
+		padding: 0 10px;
+
+		.divider {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
+
+	[class*="card-col"] {
+		display: table-cell;
+		position: relative;
+		vertical-align: middle;
+		word-break: break-word;
+
+		.img-responsive {
+			max-width: none;
+			width: 101%;
+		}
+	}
+}
+
+.card-row-layout-fixed {
+	table-layout: fixed;
+
+	.card-col-field {
+		width: auto;
+	}
+}
+
+.card-row-padded {
+	padding: $card-gutter-width;
+}
+
+[class*="card-col"] {
+	figure,
+	.figure {
+		height: 100%;
+		margin-bottom: 0;
+		width: 100%;
+	}
+}
+
+.card-circle {
+	border-radius: $card-circle-border-radius;
+
+	.card-header,
+	.card-section,
+	.card-footer {
+		&:first-child {
+			border-top-left-radius: $card-circle-border-radius;
+			border-top-right-radius: $card-circle-border-radius;
+		}
+
+		&:last-child {
+			border-bottom-left-radius: $card-circle-border-radius;
+			border-bottom-right-radius: $card-circle-border-radius;
+		}
+	}
+}
+
+.card-rounded {
+	border-radius: $card-rounded-border-radius;
+
+	.card-header,
+	.card-section,
+	.card-footer {
+		&:first-child {
+			border-top-left-radius: $card-rounded-border-radius;
+			border-top-right-radius: $card-rounded-border-radius;
+		}
+
+		&:last-child {
+			border-bottom-left-radius: $card-rounded-border-radius;
+			border-bottom-right-radius: $card-rounded-border-radius;
+		}
+	}
+}
+
+.card-square {
+	border-radius: 0;
+
+	.card-header,
+	.card-section,
+	.card-footer {
+		&:first-child {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+
+		&:last-child {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+}
+
+// Card Skins
+
+.card-dm {
+	overflow: visible;
+
+	.card-footer {
+		padding: 10px 0;
+	}
+}
+
+.card-dm-details {
+	margin-left: $card-gutter-width;
+	margin-top: 3px;
+	overflow: hidden;
+	text-align: left;
+}
+
+.card-dm-text {
+	color: $text-color;
+
+	@include text-overflow;
+}
+
+.card-dm-text-large {
+	@extend .card-dm-text;
+
+	font-size: $font-size-large;
+	font-weight: $headings-font-weight;
+}
+
+.card-dm-text-small {
+	@extend .card-dm-text;
+
+	font-size: $font-size-small;
+}
+
+.card-dm-more-options {
+	display: block;
+	float: right;
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// Checkbox Cards
+
+.checkbox-card {
+	margin-bottom: 0;
+	margin-top: 0;
+
+	label {
+		color: $text-color;
+		display: block;
+		padding-left: 0;
+	}
+
+	input[type="checkbox"] {
+		margin-left: 0;
+		margin-top: 0;
+		z-index: 1;
+	}
+}
+
+.checkbox-bottom-left,
+.checkbox-middle-left,
+.checkbox-top-left {
+	.card.flex-container {
+		padding-left: 40px;
+	}
+
+	.card-row {
+		padding-left: 40px;
+	}
+}
+
+.checkbox-bottom-right,
+.checkbox-middle-right,
+.checkbox-top-right {
+	.card.flex-container {
+		padding-right: 40px;
+	}
+
+	.card-row {
+		padding-right: 40px;
+	}
+}
+
+.checkbox-bottom-left {
+	input[type="checkbox"] {
+		bottom: 15px;
+		left: 15px;
+	}
+}
+
+.checkbox-bottom-right {
+	input[type="checkbox"] {
+		bottom: 15px;
+		right: 15px;
+	}
+}
+
+.checkbox-middle-left {
+	input[type="checkbox"] {
+		left: 15px;
+		margin-top: -6px;
+		top: 50%;
+	}
+}
+
+.checkbox-middle-right {
+	input[type="checkbox"] {
+		margin-top: -6px;
+		right: 15px;
+		top: 50%;
+	}
+}
+
+.checkbox-top-left {
+	input[type="checkbox"] {
+		left: 15px;
+		top: 15px;
+	}
+}
+
+.checkbox-top-right {
+	input[type="checkbox"] {
+		right: 15px;
+		top: 15px;
+	}
+}
+
+.card {
+	figure,
+	.figure {
+		margin-bottom: 0;
+	}
+}

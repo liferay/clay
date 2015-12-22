@@ -1,0 +1,224 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.btn {
+	@include button-size($btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $line-height-base, $btn-border-radius);
+
+	font-weight: 500;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include button-size($btn-desktop-padding-vertical, $btn-desktop-padding-horizontal, $btn-desktop-font-size, $btn-line-height, $btn-border-radius);
+	}
+
+	&,
+	&:focus,
+	&:hover {
+		border: $btn-border-width solid transparent;
+	}
+
+	&:active,
+	&.active {
+		box-shadow: none;
+	}
+}
+
+.btn-default {
+	@include color-btn($btn-default-border);
+	@include color-btn-hover($btn-default-hover-bg, $btn-default-hover-border);
+	@include color-btn-active($btn-default-active-bg, $btn-default-active-border);
+}
+
+.btn-primary {
+	@include color-btn($btn-primary-border);
+	@include color-btn-hover($btn-primary-hover-bg, $btn-primary-hover-border);
+	@include color-btn-active($btn-primary-active-bg, $btn-primary-active-border);
+}
+
+.btn-success {
+	@include color-btn($btn-success-border);
+	@include color-btn-hover($btn-success-hover-bg, $btn-success-hover-border);
+	@include color-btn-active($btn-success-active-bg, $btn-success-active-border);
+}
+
+.btn-info {
+	@include color-btn($btn-info-border);
+	@include color-btn-hover($btn-info-hover-bg, $btn-info-hover-border);
+	@include color-btn-active($btn-info-active-bg, $btn-info-active-border);
+}
+
+.btn-warning {
+	@include color-btn($btn-warning-border);
+	@include color-btn-hover($btn-warning-hover-bg, $btn-warning-hover-border);
+	@include color-btn-active($btn-warning-active-bg, $btn-warning-active-border);
+}
+
+.btn-danger {
+	@include color-btn($btn-danger-border);
+	@include color-btn-hover($btn-danger-hover-bg, $btn-danger-hover-border);
+	@include color-btn-active($btn-danger-active-bg, $btn-danger-active-border);
+}
+
+.btn-link {
+	@include button-variant($link-color, transparent, transparent);
+}
+
+.btn-lg {
+	@include button-size($btn-lg-padding-vertical, $btn-lg-padding-horizontal, $btn-lg-font-size, $btn-line-height, $btn-lg-border-radius);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include button-size($btn-desktop-lg-padding-vertical, $btn-desktop-lg-padding-horizontal, $btn-desktop-lg-font-size, $btn-line-height, $btn-lg-border-radius);
+	}
+}
+
+.btn-sm {
+	@include button-size($btn-sm-padding-vertical, $btn-sm-padding-horizontal, $btn-sm-font-size, $btn-line-height, $btn-sm-border-radius);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include button-size($btn-desktop-sm-padding-vertical, $btn-desktop-sm-padding-horizontal, $btn-desktop-sm-font-size, $btn-line-height, $btn-sm-border-radius);
+	}
+}
+
+.btn-xs {
+	@include button-size($btn-xs-padding-vertical, $btn-xs-padding-horizontal, $btn-xs-font-size, $btn-line-height, $btn-xs-border-radius);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include button-size($btn-desktop-xs-padding-vertical, $btn-desktop-xs-padding-horizontal, $btn-desktop-xs-font-size, $btn-line-height, $btn-xs-border-radius);
+	}
+}
+
+// Action Buttons
+
+a.btn-action,
+.btn-action-secondary > a.btn {
+	border-radius: $btn-action-border-radius;
+	padding: 0;
+
+	[class*="icon-"] {
+		line-height: 52px - ($btn-border-width * 2);
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			line-height: 64px - ($btn-border-width * 2);
+		}
+	}
+}
+
+.btn-action,
+.btn-action-secondary .btn {
+	border-radius: $btn-action-border-radius;
+	font-size: 12px;
+	height: 52px;
+	line-height: 16px;
+	padding: 0;
+	width: 52px;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $btn-desktop-font-size;
+		height: 64px;
+		line-height: 24px;
+		width: 64px;
+	}
+}
+
+.btn-action-secondary {
+	height: 52px;
+	text-align: right;
+	width: 52px;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		height: 64px;
+		width: 64px;
+	}
+
+	.dropdown-menu-left-side {
+		margin-right: 20px;
+	}
+
+	.dropdown-menu-right-side {
+		margin-left: 20px;
+	}
+
+	.dropdown-menu-left,
+	.dropdown-menu-top {
+		&:after {
+			left: 18px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				left: 24px;
+			}
+		}
+
+		&:before {
+			left: 17px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				left: 23px;
+			}
+		}
+	}
+
+
+	.dropdown-menu-right,
+	.dropdown-menu-top-right {
+		&:after {
+			right: 18px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				right: 24px;
+			}
+		}
+
+		&:before {
+			right: 17px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				right: 23px;
+			}
+		}
+	}
+
+	.dropdown-menu-left-side,
+	.dropdown-menu-right-side, {
+		&:after {
+			top: 18px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				top: 24px;
+			}
+		}
+
+		&:before {
+			top: 17px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				top: 23px;
+			}
+		}
+	}
+
+	.dropdown-menu-left-side-bottom,
+	.dropdown-menu-right-side-bottom {
+		&:after {
+			bottom: 18px;
+			top: auto;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				bottom: 24px;
+				top: auto;
+			}
+		}
+
+		&:before {
+			bottom: 17px;
+			top: auto;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				bottom: 23px;
+				top: auto;
+			}
+		}
+	}
+}

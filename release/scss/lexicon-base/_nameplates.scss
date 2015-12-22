@@ -1,0 +1,153 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.nameplate {
+	display: table;
+	width: 100%;
+}
+
+.nameplate-checkbox,
+.nameplate-icon,
+.nameplate-field {
+	display: table-cell;
+	padding: 0 0.3em;
+	vertical-align: top;
+	width: 1%;
+}
+
+.nameplate-content {
+	display: table-cell;
+	padding: 0 0.3em;
+	vertical-align: top;
+	word-break: break-word;
+
+	h1,
+	h2,
+	h3 {
+		margin-top: 0;
+	}
+
+	h4,
+	h5,
+	h6 {
+		margin-top: 2px;
+	}
+
+	small {
+		color: $gray-light;
+		display: block;
+	}
+}
+
+// Nameplate Label
+
+.nameplate-label {
+	border-radius: 100px;
+	display: table;
+	float: left;
+	margin: 0 5px 2px 0;
+	min-width: 50px;
+	padding: 0 3px;
+
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		height: 32px;
+		margin-right: 0;
+	}
+
+	&.form-control {
+		border-width: 0;
+		box-shadow: none;
+		display: table;
+		height: $input-height-base;
+		width: auto;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.nameplate-content,
+	.nameplate-field,
+	.nameplate-icon {
+		display: table-cell;
+		vertical-align: middle;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			width: auto;
+		}
+	}
+
+	.nameplate-content {
+		height: auto;
+		padding: 3px 5px 2px;
+		position: relative;
+
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			width: auto;
+		}
+	}
+
+	.nameplate-label-text {
+		display: block;
+		font-weight: 500;
+		line-height: $nameplate-label-text-line-height;
+		max-width: 200px;
+		overflow: hidden;
+		position: relative;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			left: 5px;
+			max-width: none;
+			position: absolute;
+			right: 5px;
+			text-align: left;
+			top: 0;
+		}
+	}
+}
+
+.nameplate-label-next .nameplate-label-text {
+	text-align: center;
+}
+
+.nameplate-label-circle {
+	border-radius: 100px;
+}
+
+.nameplate-label-rounded {
+	border-radius: 3px;
+}
+
+.nameplate-label-square {
+	border-radius: 0;
+}
+
+.nameplate-label-default {
+	@include color-nameplate-label($nameplate-label-default-bg, $nameplate-label-default-link-color, $nameplate-label-default-link-hover-color);
+}
+
+.nameplate-label-primary {
+	@include color-nameplate-label($nameplate-label-primary-bg, $nameplate-label-primary-link-color, $nameplate-label-primary-link-hover-color);
+}
+
+.nameplate-label-success {
+	@include color-nameplate-label($nameplate-label-success-bg, $nameplate-label-success-link-color, $nameplate-label-success-link-hover-color);
+}
+
+.nameplate-label-info {
+	@include color-nameplate-label($nameplate-label-info-bg, $nameplate-label-info-link-color, $nameplate-label-info-link-hover-color);
+}
+
+.nameplate-label-warning {
+	@include color-nameplate-label($nameplate-label-warning-bg, $nameplate-label-warning-link-color, $nameplate-label-warning-link-hover-color);
+}
+
+.nameplate-label-danger {
+	@include color-nameplate-label($nameplate-label-danger-bg, $nameplate-label-danger-link-color, $nameplate-label-danger-link-hover-color);
+}

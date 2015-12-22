@@ -1,0 +1,248 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.toolbar,
+.header-toolbar {
+	@include clearfix();
+
+	.nameplate-content,
+	.nameplate-field {
+		vertical-align: middle;
+	}
+}
+
+.toolbar-group,
+.toolbar-group-expand,
+.toolbar-group-right {
+	display: table;
+}
+
+.toolbar-group,
+.toolbar-group-right {
+	height: $toolbar-group-height;
+	margin-bottom: 0;
+}
+
+.toolbar-group {
+	float: left;
+}
+
+.toolbar-group-right {
+	float: right;
+}
+
+.toolbar-group-expand {
+	.input-group {
+		width: 100%;
+	}
+
+	.toolbar-group-content,
+	.toolbar-group-field {
+		display: table-cell;
+		float: none;
+		vertical-align: middle;
+	}
+
+	.toolbar-group-field {
+		width: 1%;
+	}
+}
+
+.toolbar-group-expand-text {
+	line-height: $toolbar-group-height;
+
+	@include text-overflow();
+}
+
+.toolbar-group-content,
+.toolbar-group-field {
+	display: table-cell;
+	float: none;
+	margin-bottom: 0;
+	min-height: 0;
+	vertical-align: middle;
+
+	> a,
+	> .dropdown > a {
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.toolbar-group-field {
+	width: 1%;
+}
+
+@media screen and (min-width: $grid-float-breakpoint) {
+	.toolbar {
+		margin-bottom: 10px;
+	}
+
+	.toolbar-group,
+	.toolbar-group-right {
+		display: table;
+		height: $toolbar-group-height;
+		width: auto;
+	}
+
+	.toolbar-group {
+		float: left;
+		padding-right: $toolbar-group-padding-horizontal;
+	}
+
+	.toolbar-group-right {
+		float: right;
+		padding-left: $toolbar-group-padding-horizontal;
+	}
+
+	.toolbar-group-row {
+		clear: none;
+		display: table-row;
+	}
+
+	.toolbar-group-content,
+	.toolbar-group-field {
+		display: table-cell;
+		float: none;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+
+	.toolbar-group-expand {
+		clear: none;
+		display: table;
+	}
+
+	.toolbar-group-expand-text {
+		clear: none;
+	}
+
+	.toolbar-group-field {
+		width: 1%;
+	}
+}
+
+// Toolbar Group Newlines
+
+@media screen and (max-width: $screen-xs-max) {
+	.tbg-xs-newline {
+		clear: both;
+		display: block;
+		float: left;
+	}
+}
+
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.tbg-sm-newline,
+	.tbg-md-newline,
+	.tbg-lg-newline {
+		margin-top: 10px;
+	}
+
+	.tbg-sm-newline {
+		clear: both;
+
+		&.toolbar-group-right {
+			float: left;
+		}
+	}
+
+	.tbg-md-newline,
+	.tbg-lg-newline {
+		&.toolbar-group-right {
+			float: left;
+		}
+	}
+}
+
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	.tbg-md-newline,
+	.tbg-lg-newline {
+		margin-top: 10px;
+	}
+
+	.tbg-md-newline {
+		clear: both;
+		margin-top: 10px;
+
+		&.toolbar-group-right {
+			float: left;
+		}
+	}
+
+	.tbg-lg-newline.toolbar-group-right {
+		float: left;
+	}
+}
+
+@media screen and (min-width: $screen-lg-min) {
+	.tbg-lg-newline {
+		clear: both;
+		margin-top: 10px;
+
+		&.toolbar-group-right {
+			float: left;
+		}
+	}
+}
+
+// Header Toolbar Component
+
+.header-toolbar {
+	border-radius: $header-toolbar-border-radius;
+	margin-bottom: $header-toolbar-margin-bottom;
+	padding-left: $header-toolbar-padding-horizontal;
+	padding-right: $header-toolbar-padding-horizontal;
+
+	.dropdown-menu {
+		margin-top: 5px + 2;
+	}
+
+	.toolbar-group,
+	.toolbar-group-expand,
+	.toolbar-group-right {
+		height: $header-toolbar-height;
+	}
+
+	.toolbar-group-expand-text {
+		line-height: $header-toolbar-height;
+	}
+
+	.toolbar-group-content {
+		> a,
+		> .dropdown > a {
+			border-radius: $header-toolbar-border-radius;
+		}
+	}
+}
+
+// Header Toolbar Skins
+
+.header-toolbar-default {
+	background-color: $header-toolbar-default-bg;
+	border: $header-toolbar-default-border-width solid $header-toolbar-default-border;
+
+	.toolbar-group-content {
+		> a,
+		> .dropdown > a {
+			color: $header-toolbar-default-link-color;
+
+			&:focus,
+			&:hover {
+				background-color: $header-toolbar-default-link-hover-bg;
+				color: $header-toolbar-default-link-hover-color;
+			}
+		}
+	}
+
+	.toolbar-group-expand,
+	.toolbar-group-expand-text {
+		color: $header-toolbar-default-color;
+	}
+}

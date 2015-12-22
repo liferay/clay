@@ -1,0 +1,82 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.input-group .form-control:focus {
+	z-index: 3;
+}
+
+// Button input groups
+
+.input-group-btn .btn {
+	&:focus,
+	&:hover {
+		z-index: 3;
+	}
+}
+
+.input-group-btn {
+	&:first-child {
+		> .btn,
+		> .btn-group {
+			margin-right: -2px;
+		}
+	}
+}
+
+.input-group-input {
+	display: table-cell;
+
+	.form-control {
+		display: block;
+	}
+}
+
+// Input Group Default
+
+.input-group-default {
+	display: table;
+
+	.input-group-addon,
+	.input-group-btn {
+		display: table-cell;
+		width: 1%;
+	}
+
+	.input-group-addon {
+		background-color: transparent;
+		border-width: 0;
+		padding: 0 10px;
+
+		&:first-child .input-group-addon-content {
+			margin-left: -10px;
+		}
+
+		&:last-child .input-group-addon-content {
+			margin-right: -10px;
+		}
+	}
+
+	.help-icon {
+		@include monospace(28px);
+	}
+}
+
+.input-sm {
+	.help-icon {
+		@include monospace(20px);
+	}
+}
+
+.input-lg {
+	.help-icon {
+		@include monospace(35px);
+	}
+}
+
+.input-group-addon-content {
+	display: inline-block;
+}

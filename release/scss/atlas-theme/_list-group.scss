@@ -1,0 +1,281 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.list-group-item-content,
+.list-group-item-field {
+	vertical-align: top;
+}
+
+.list-group-item-content {
+	&.clamp-horizontal {
+		.clamp-container {
+			@include transform(none);
+		}
+	}
+
+	&.clamp-all {
+		.clamp-container {
+			padding-top: 1em;
+		}
+	}
+}
+
+.list-group-heading,
+.list-group-item {
+	border-left-width: 0;
+	border-right-width: 0;
+	padding: 4px 12px 4px 24px;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding: 8px 12px 8px 24px;
+	}
+
+	&:focus {
+		z-index: 1;
+	}
+}
+
+a.list-group-heading,
+.list-group-heading[data-toggle="collapse"] {
+	color: $list-group-header-color;
+
+	&:focus,
+	&:hover {
+		background-color: $list-group-header-bg;
+		color: $list-group-header-color;
+	}
+}
+
+.list-group-heading {
+	background-color: $list-group-header-bg;
+	border-bottom-width: 0;
+	border-top-width: 0;
+	color: $list-group-header-color;
+	line-height: 32px;
+	margin-bottom: 0;
+
+	&:after {
+		background-color: $list-group-header-open-border-color;
+		bottom: 0;
+		content: '';
+		display: block;
+		height: $list-group-header-open-border-width;
+		left: 0;
+		position: absolute;
+		right: 0;
+	}
+
+	&:focus:after {
+		z-index: -1;
+	}
+
+	&.collapsed {
+		font-weight: 300;
+
+		&:after {
+			height: $list-group-header-close-border-width;
+			background-color: $list-group-header-close-border-color;
+		}
+	}
+}
+
+.list-group-item {
+	&.active {
+		&,
+		&:focus,
+		&:hover {
+			background-color: $list-group-active-bg;
+			color: $list-group-active-color;
+		}
+
+		.list-group-item-content,
+		.list-group-item-field {
+			border-bottom-color: $list-group-active-border;
+			box-shadow: inset 0 -1px 0 $list-group-active-border;
+		}
+	}
+}
+
+.no-borders .active {
+	.list-group-item-content,
+	.list-group-item-field {
+		box-shadow: none;
+	}
+}
+
+// Nested list groups shouldn't have box shadows
+
+.list-group,
+.tabular-list-group {
+	box-shadow: $list-group-box-shadow;
+
+	.list-group,
+	.tabular-list-group {
+		box-shadow: none;
+	}
+}
+
+// Last list-group-heading shouldn't have bottom border
+
+.list-group {
+	.list-group-heading {
+		margin-top: 0;
+
+		&.collapsed:nth-last-child(2):after {
+			background-color: transparent;
+		}
+	}
+
+	.list-group-item {
+		&:first-child {
+			border-top-width: 0;
+		}
+
+		&:last-child {
+			border-bottom-width: 0;
+		}
+	}
+}
+
+// Remove top border on first list-group-item after list-group-heading
+
+.list-group-heading + .list-group-item,
+.list-group-heading + .collapse .list-group-item:first-child,
+.list-group-heading + .collapse .list-group-item:first-child .list-group-item-content,
+.list-group-heading + .collapse .list-group-item:first-child .list-group-item-field,
+.list-group-heading + .collapsing .list-group-item:first-child,
+.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-content,
+.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-field {
+	border-top-width: 0;
+}
+
+// Remove left and right borders on tabular list group due to box shadows
+
+.tabular-list-group {
+	.list-group-item-content,
+	.list-group-item-field {
+		&:first-child {
+			border-left-width: 0;
+		}
+
+		&:last-child {
+			border-right-width: 0;
+		}
+	}
+}
+
+// List Group Item States
+
+.tabular-list-group {
+	.list-group-item-danger {
+		@include color-tabular-list-group-item($brand-danger);
+	}
+
+	.list-group-item-default {
+		@include color-tabular-list-group-item($brand-default);
+	}
+
+	.list-group-item-primary {
+		@include color-tabular-list-group-item($brand-primary);
+	}
+
+	.list-group-item-info {
+		@include color-tabular-list-group-item($brand-info);
+	}
+
+	.list-group-item-success {
+		@include color-tabular-list-group-item($brand-success);
+	}
+
+	.list-group-item-warning {
+		@include color-tabular-list-group-item($brand-warning);
+	}
+}
+
+// List Group Card
+
+.list-group-card {
+	.checkbox input[type="checkbox"] {
+		&:checked {
+			+ .card {
+				background-color: $list-group-card-active-bg;
+
+				&:after {
+					background-color: $list-group-card-active-border;
+					bottom: -1px;
+					content: '';
+					display: block;
+					height: $list-group-card-active-border-width;
+					left: -1px;
+					position: absolute;
+					right: -1px;
+					z-index: 1;
+				}
+
+				.dropdown-toggle {
+					color: $brand-default;
+				}
+			}
+		}
+	}
+
+	.list-group-heading + .list-group-item {
+		margin-top: 0;
+
+		.card {
+			border-top-width: 0;
+		}
+	}
+}
+
+.list-group-card-checkbox-hidden-xs {
+	.checkbox-bottom-left,
+	.checkbox-middle-left,
+	.checkbox-top-left {
+		.card.flex-container {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-left: 20px;
+			}
+		}
+
+		.card-row {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	.checkbox-bottom-right,
+	.checkbox-middle-right,
+	.checkbox-top-right {
+		.card.flex-container {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-right: 20px;
+			}
+		}
+
+		.card-row {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				padding-right: 20px;
+			}
+		}
+	}
+}
+
+// Tabular List Group Skins
+
+.detailed-list-view {
+	.active {
+		a {
+			&,
+			&:focus,
+			&:hover {
+				color: $brand-default;
+			}
+		}
+	}
+}

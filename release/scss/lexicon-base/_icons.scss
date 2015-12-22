@@ -1,0 +1,144 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@function calcLexiconIconPadding($monospaced-size, $icon-size) {
+	@return floor(($monospaced-size - $icon-size) / 2);
+}
+
+.lexicon-icon {
+	display: inline-block;
+	fill: currentColor;
+	height: $lexicon-icon-size;
+	transform: translateZ(0);
+	vertical-align: middle;
+	width: $lexicon-icon-size;
+
+	&.icon-monospaced {
+		padding: calcLexiconIconPadding($icon-monospaced-size, $lexicon-icon-size);
+	}
+}
+
+.lexicon-icon-sm {
+	height: $lexicon-icon-sm-size;
+	width: $lexicon-icon-sm-size;
+}
+
+.lexicon-icon-md {
+	height: $lexicon-icon-md-size;
+	width: $lexicon-icon-md-size;
+}
+
+.lexicon-icon-lg {
+	height: $lexicon-icon-lg-size;
+	width: $lexicon-icon-lg-size;
+}
+
+a .icon-monospaced,
+.icon-monospaced {
+	display: inline-block;
+}
+
+.icon-monospaced {
+	@include monospace($icon-monospaced-size);
+
+	text-align: center;
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.icon-monospaced {
+	&.btn {
+		line-height: $icon-monospaced-size;
+		padding: 0;
+
+		&:before {
+			position: relative;
+			top: -1px;
+		}
+	}
+
+	&.btn-xs,
+	&.icon-xs {
+		@include monospace(20px);
+	}
+
+	&.btn-sm,
+	&.icon-sm {
+		@include monospace(26px);
+	}
+
+	&.btn-lg,
+	&.icon-lg {
+		@include monospace(40px);
+	}
+}
+
+.icon-monospaced {
+	&.icon-large {
+		@include monospace(26px);
+	}
+
+	&.icon-2x {
+		@include monospace(40px);
+	}
+
+	&.icon-3x {
+		@include monospace(48px);
+	}
+
+	&.icon-4x {
+		@include monospace(75px);
+	}
+
+	&.icon-5x {
+		@include monospace(100px);
+	}
+}
+
+// Skins
+
+.collapse-icon {
+	display: block;
+	padding-right: $padding-base-horizontal * 2;
+	position: relative;
+
+	&:before {
+		content: $collapse-icon-open;
+		font-family: $collapse-icon-font-family;
+		position: absolute;
+		right: $padding-base-horizontal;
+	}
+
+	&.collapsed:before {
+		content: $collapse-icon-closed;
+	}
+}
+
+.collapse-icon-middle:before {
+	@include transform(translateY(-50%));
+
+	top: 50%;
+}
+
+.help-icon {
+	@extend .icon-monospaced;
+
+	border-radius: 100px;
+}
+
+.help-icon-default {
+	background-color: $gray-lighter;
+	color: $gray-light;
+
+	&:focus,
+	&:hover {
+		color: $gray-dark;
+	}
+}

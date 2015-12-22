@@ -1,0 +1,25 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.nav {
+	a {
+		color: $nav-link-color;
+	}
+}
+
+.nav-heading {
+	color: $brand-default;
+	margin-top: 10px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.nav-nested {
+	@include make-nav-nested(12px);
+}

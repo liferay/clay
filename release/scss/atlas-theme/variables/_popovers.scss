@@ -1,0 +1,31 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$popover-max-width:                               276px !default;
+$popover-arrow-width:                             8px !default;
+
+// Skin
+
+$popover-border-radius: $border-radius-base !default; // Atlas
+
+//** Popover box shadow settings (Default is global box shadow settings)
+$popover-box-shadow-x: $box-shadow-default-x !default; // Atlas
+$popover-box-shadow-y: $box-shadow-default-y !default; // Atlas
+$popover-box-shadow-blur: $box-shadow-default-blur !default; // Atlas
+$popover-box-shadow-spread: $box-shadow-default-spread !default; // Atlas
+$popover-box-shadow-bg: $box-shadow-default-bg !default; // Atlas
+$popover-box-shadow: $popover-box-shadow-x $popover-box-shadow-y $popover-box-shadow-blur $popover-box-shadow-spread $popover-box-shadow-bg !default; // Atlas
+
+$popover-bg:                                      #FFF !default;
+
+$popover-border-color:                            #AEB7BD !default;
+$popover-fallback-border-color:                   #AEB7BD !default;
+$popover-title-color: $text-color;
+$popover-title-bg:                                #FFF !default;
+$popover-arrow-color:                             #FFF !default;

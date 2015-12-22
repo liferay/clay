@@ -1,0 +1,157 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.tab-group {
+	> .nav-tabs {
+		margin-bottom: -1px;
+	}
+
+	> .tab-content {
+		border: 1px solid $nav-tabs-border-color;
+		padding: 15px;
+	}
+}
+
+.tab-group-bottom {
+	> .nav-tabs {
+		border-bottom-width: 0;
+		border-top: 1px solid $nav-tabs-border-color;
+		margin-bottom: 0;
+		margin-top: -1px;
+
+		> li {
+			margin-bottom: 0;
+			margin-top: -1px;
+
+			> a {
+				border-radius: 0 0 $border-radius-base $border-radius-base;
+				border-width-top: 0;
+				border-width-bottom: 1px;
+
+				&:focus,
+				&:hover {
+					border-color: $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+				}
+			}
+
+			&.active > a {
+				border-bottom-color: $nav-tabs-border-color;
+				border-top-color: transparent;
+			}
+
+			&.disabled > a {
+				border-color: transparent;
+			}
+		}
+	}
+
+	.nav-justified {
+		> li > a {
+			margin-top: -1px;
+		}
+	}
+}
+
+.tab-group-left,
+.tab-group-right {
+	> .nav-tabs {
+		border-bottom-width: 0;
+		display: table-cell;
+		vertical-align: top;
+		width: 25%;
+
+		> li {
+			float: none;
+			margin-bottom: 0;
+
+			> a {
+				display: block;
+				margin-bottom: 2px;
+				margin-right: 0;
+				max-width: 10em;
+				word-break: break-word;
+				word-wrap: break-word;
+			}
+		}
+	}
+
+	> .tab-content {
+		display: table-cell;
+		margin-top: 0;
+	}
+}
+
+.tab-group-left {
+	> .nav-tabs {
+		border-top: 1px solid transparent;
+
+		> li {
+			margin-top: -1px;
+
+			> a {
+				border-radius: $border-radius-base 0 0 $border-radius-base;
+				margin-right: -1px;
+
+				&:focus,
+				&:hover {
+					border-color: $nav-tabs-link-hover-border-color $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+				}
+			}
+
+			&.active > a {
+				border-color: $nav-tabs-border-color transparent $nav-tabs-border-color $nav-tabs-border-color;
+			}
+
+			&.disabled > a {
+				border-color: transparent;
+			}
+		}
+	}
+}
+
+.tab-group-right {
+	> .nav-tabs {
+		border-top: 1px solid transparent;
+
+		> li {
+			margin-top: -1px;
+
+			> a {
+				border-radius: 0 $border-radius-base $border-radius-base 0;
+				margin-left: -1px;
+
+				&:focus,
+				&:hover {
+					border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+				}
+			}
+
+			&.active > a {
+				border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color transparent;
+			}
+
+			&.disabled > a {
+				border-color: transparent;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $screen-xs-min) {
+	.tab-group-left,
+	.tab-group-right {
+		> .nav-tabs {
+			width: 1%;
+
+			> li {
+				> a {
+					word-break: normal;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,119 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// color-user-icon parameters (background-color, color); defaults: #999, #FFF
+// size-user-icon parameters (size); default: 32px 
+
+.user-icon {
+	border-radius: 50%;
+
+	@include color-user-icon(transparent, $text-color);
+
+	font-size: $font-size-base;
+	text-align: center;
+	overflow: hidden;
+
+	@include size-user-icon(floor($line-height-base * $font-size-base + ($padding-base-vertical * 2) + 2));
+
+	&.user-icon-circle, .user-icon-circle & {
+		border-radius: 50%;
+	}
+
+	&.user-icon-rounded, .user-icon-rounded & {
+		border-radius: 5px;
+	}
+
+	&.user-icon-square, .user-icon-square & {
+		border-radius: 0;
+	}
+}
+
+.user-icon-xxl {
+	@include size-user-icon(floor(128px / 1.3333));
+
+	font-size: floor(50px / 1.3333);
+}
+
+.user-icon-xl {
+	@include size-user-icon(floor(64px / 1.3333));
+
+	font-size: floor(30px / 1.3333);
+}
+
+.user-icon-lg {
+	@include size-user-icon(floor(($line-height-large * $font-size-large + ($padding-large-vertical * 2) + 2) / 1.3333));
+
+	font-size: floor($font-size-large / 1.3333);
+}
+
+.user-icon-sm {
+	@include size-user-icon((floor($line-height-small * $font-size-small + ($padding-small-vertical * 2) + 2) / 1.3333));
+
+	font-size: floor($font-size-small / 1.3333);
+}
+
+.user-icon-xs {
+	@include size-user-icon((floor($line-height-small * $font-size-small + ($padding-xs-vertical * 2) + 2) / 1.3333));
+
+	font-size: 8px;
+}
+
+.user-icon-danger {
+	@include color-user-icon($brand-danger);
+}
+
+.user-icon-default {
+	@include color-user-icon($gray-light);
+}
+
+.user-icon-info {
+	@include color-user-icon($brand-info);
+}
+
+.user-icon-primary {
+	@include color-user-icon($brand-primary);
+}
+
+.user-icon-success {
+	@include color-user-icon($brand-success);
+}
+
+.user-icon-warning {
+	@include color-user-icon($brand-warning);
+}
+
+@media screen and (min-width: $screen-sm-min) {
+	.user-icon-xxl {
+		@include size-user-icon(128px);
+
+		font-size: 50px;
+	}
+
+	.user-icon-xl {
+		@include size-user-icon(64px);
+
+		font-size: 30px;
+	}
+
+	.user-icon-lg {
+		@include size-user-icon(floor($line-height-large * $font-size-large + ($padding-large-vertical * 2) + 2));
+
+		font-size: $font-size-large;
+	}
+
+	.user-icon-sm {
+		@include size-user-icon(floor($line-height-small * $font-size-small + ($padding-small-vertical * 2) + 2));
+
+		font-size: $font-size-small;
+	}
+
+	.user-icon-xs {
+		@include size-user-icon(floor($line-height-small * $font-size-small + ($padding-xs-vertical * 2) + 2));
+
+		font-size: 8px;
+	}
+}

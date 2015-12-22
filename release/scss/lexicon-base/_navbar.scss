@@ -1,0 +1,439 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.basic-search {
+	float: right;
+	max-width: none;
+	padding: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		max-width: 220px;
+	}
+
+	&.open {
+		z-index: 10;
+	}
+
+	&.basic-search-transition,
+	&.open {
+		button[type='submit'].btn {
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		}
+	}
+
+	button[type='submit'].btn {
+		border-bottom-left-radius: $btn-border-radius-base;
+		border-top-left-radius: $btn-border-radius-base;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		}
+	}
+
+	.form-control {
+		float: right;
+		width: 100%;
+	}
+
+	.input-group-input {
+		.basic-search-slider .form-control {
+			border-bottom-right-radius: 0;
+			border-top-right-radius: 0;
+		}
+
+		.form-control {
+			border-bottom-left-radius: $input-border-radius;
+			border-top-left-radius: $input-border-radius;
+		}
+	}
+}
+
+.basic-search-slider {
+	left: 101%;
+	position: relative;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		left: 0;
+	}
+
+	.basic-search-close {
+		background-color: transparent;
+		border-color: transparent;
+		color: $link-color;
+		left: 0;
+		position: absolute;
+		z-index: 4;
+
+		&:active {
+			box-shadow: none;
+		}
+
+		&:focus {
+			background-color: transparent;
+			border-color: transparent;
+			color: $link-hover-color;
+			outline: none;
+		}
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			display: none;
+			line-height: normal;
+		}
+	}
+
+	.basic-search.open & {
+		left: 0;
+	}
+}
+
+.basic-search-autofit {
+	float: none;
+	max-width: none;
+}
+
+.basic-search-transition {
+	&:after {
+		@include transition(all 0.1s ease);
+	}
+
+	.basic-search-slider {
+		@include transition(left 0.5s ease);
+	}
+}
+
+// Bootstrap Navbar Overrides
+
+.navbar-brand:focus {
+	position: relative;
+	z-index: 1;
+}
+
+.navbar-collapse-left {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		float: left;
+	}
+}
+
+// Navbar Collapse Basic Search Styles
+
+.collapse-basic-search {
+	position: relative;
+
+	//min-width: 768px
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		&.navbar-no-collapse {
+			.navbar-nav:first-child {
+				float: left;
+			}
+		}
+
+		.basic-search-autofit {
+			float: none;
+			max-width: none;
+		}
+	}
+
+	.basic-search {
+		bottom: 0;
+		display: block;
+		left: 0;
+		margin: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+			position: static;
+		}
+
+		&.basic-search-transition,
+		&.open {
+			.input-group-input {
+				visibility: visible;
+			}
+		}
+
+		&.open .basic-search-close {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				display: none;
+			}
+		}
+
+		.input-group-input {
+			overflow: hidden;
+			visibility: hidden;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				overflow: visible;
+				visibility: visible;
+			}
+
+			.form-control {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					left: auto;
+				}
+			}
+		}
+
+		.form-control {
+			padding-left: 40px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				padding-left: 5px;
+			}
+		}
+	}
+
+	.navbar-nav:first-child {
+		float: none;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			float: left;
+		}
+	}
+
+	.navbar-nav > li > a,
+	.navbar-toggle {
+		z-index: 1;
+	}
+}
+
+/*	make navbar dropdown position absolute
+	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+
+.navbar {
+	.navbar-collapse-absolute {
+		left: -1px;
+		position: absolute;
+		right: -1px;
+		top: 100%;
+		z-index: $zindex-navbar;
+	}
+
+	.navbar-collapse {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: transparent;
+			border-width: 0;
+			left: auto;
+			position: static;
+			right: auto;
+			top: auto;
+			z-index: 0;
+		}
+
+		&:first-child {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: transparent;
+				border-width: 0;
+				float: left;
+				left: auto;
+				position: static;
+				right: auto;
+				top: auto;
+				z-index: 0;
+			}
+		}
+
+		+ .navbar-header {
+			.basic-search {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+// Navbar Form
+
+.navbar-form {
+	margin-bottom: floor(($navbar-height - $input-height-base) / 2);
+	margin-top: floor(($navbar-height - $input-height-base) / 2);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		margin: 0;
+		padding: floor(($navbar-height - $input-height-base) / 2) 0;
+	}
+
+	.btn {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			vertical-align: top;
+		}
+	}
+
+	.form-group {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.navbar-header .input-group-input .form-control {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		max-width: none;
+		min-width: 0;
+	}
+}
+
+.navbar-header-left-xs {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		float: left;
+	}
+}
+
+.navbar-header-right-xs {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		float: right;
+	}
+}
+
+.navbar-header-right {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		float: right;
+	}
+}
+
+.navbar-header .navbar-form,
+.navbar-no-collapse .navbar-form {
+	border-width: 0;
+	margin: 0;
+	padding: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
+}
+
+.navbar-nav {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		margin-right: $navbar-padding-horizontal;
+	}
+
+	&.navbar-right {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin-left: $navbar-padding-horizontal;
+			margin-right: 0;
+		}
+
+		&:last-child {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	> li > a {
+		padding-left: $navbar-padding-horizontal;
+		padding-right: $navbar-padding-horizontal;
+	}
+}
+
+// Navbar No Collapse
+
+.navbar-no-collapse .navbar-nav {
+	float: left;
+	margin: 0 $navbar-padding-horizontal;
+
+	> li {
+		float: left;
+		margin-left: -1px;
+
+		&:first-child {
+			border-left-width: 0;
+			margin-left: 0;
+		}
+
+		&:last-child {
+			border-right-width: 0;
+		}
+
+		> a {
+			padding-bottom: $navbar-padding-vertical;
+			padding-top: $navbar-padding-vertical;
+		}
+	}
+
+	.dropdown-menu {
+		border: 1px solid $dropdown-border;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+		position: absolute;
+	}
+}
+
+// Navbar Toggle
+
+.navbar-toggle,
+.navbar-toggle-left {
+	margin: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
+	padding: $padding-base-vertical 10px;
+}
+
+.navbar-toggle:focus {
+	@include tab-focus;
+}
+
+.navbar-toggle .icon-bar {
+	width: 18px;
+}
+
+.navbar-toggle-left {
+	float: left;
+}
+
+.basic-search {
+	.input-group-input {
+		text-align: right;
+
+		.form-control {
+			min-width: 100px;
+		}
+	}
+}
+
+// Skin
+
+.navbar-default {
+	.basic-search.open {
+		background-color: $navbar-default-bg;
+	}
+
+	.navbar-collapse:first-child,
+	.navbar-collapse-absolute {
+		background-color: $navbar-default-bg;
+		border: 1px solid $navbar-default-border;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			border-width: 0;
+		}
+	}
+
+	.navbar-toggle,
+	.navbar-toggle-left {
+		color: $navbar-default-link-active-color;
+	}
+}
+
+.navbar-inverse {
+	.basic-search.open {
+		background-color: $navbar-inverse-bg;
+	}
+
+	.navbar-collapse:first-child,
+	.navbar-collapse-absolute {
+		background-color: $navbar-inverse-bg;
+		border: 1px solid $navbar-inverse-border;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			border-width: 0;
+		}
+	}
+
+	.navbar-toggle,
+	.navbar-toggle-left {
+		color: $navbar-inverse-link-active-color;
+	}
+}

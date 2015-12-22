@@ -1,0 +1,97 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.pagination-bar {
+	@include clearfix();
+
+	.pagination {
+		width: 100%;
+
+		> li {
+			display: block;
+			float: left;
+
+			&:first-child {
+				text-align: left;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+}
+
+.pagination-items-per-page {
+	float: left;
+
+	[class*="icon-"] {
+		margin-left: 10px;
+	}
+
+	a {
+		display: block;
+		padding-bottom: $padding-base-vertical;
+		padding-top: $padding-base-vertical;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.pagination-results {
+	float: right;
+	padding-bottom: $padding-base-vertical;
+	padding-top: $padding-base-vertical;
+}
+
+.pagination-lg {
+	&.pagination-items-per-page a,
+	&.pagination-results,
+	.pagination-items-per-page a,
+	.pagination-results {
+		font-size: $font-size-large;
+		padding-bottom: $padding-large-vertical;
+		padding-top: $padding-large-vertical;
+	}
+
+	&.pagination,
+	.pagination {
+		@include pagination-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $border-radius-large);
+	}
+}
+
+.pagination-sm {
+	&.pagination-items-per-page a,
+	&.pagination-results,
+	.pagination-items-per-page a,
+	.pagination-results {
+		font-size: $font-size-small;
+		padding-bottom: $padding-small-vertical;
+		padding-top: $padding-small-vertical;
+	}
+
+	&.pagination,
+	.pagination {
+		@include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+	}
+}
+
+@media screen and (min-width: $grid-float-breakpoint) {
+	.pagination-bar .pagination {
+		float: right;
+		margin: 0;
+		width: auto;
+	}
+
+	.pagination-results {
+		float: left;
+		margin-left: 25px;
+	}
+}

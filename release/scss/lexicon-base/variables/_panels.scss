@@ -1,0 +1,20 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$panel-blank-border: transparent !default;
+$panel-blank-heading-bg: transparent !default;
+$panel-blank-text: $panel-default-text !default;
+
+$panel-border-bottom-width: 1px !default;
+$panel-border-left-width: 1px !default;
+$panel-border-right-width: 1px !default;
+$panel-border-top-width: 1px !default;
+
+$panel-heading-icon-font-family: 'fontawesome-alloy' !default; // Shared
+$panel-heading-icon-open: '\f107' !default; // Shared
+$panel-heading-icon-closed: '\f105' !default; // Shared
+$panel-heading-icon-font-size: $list-group-header-icon-font-size !default; // Shared

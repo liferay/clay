@@ -1,0 +1,17 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$nav-link-padding-horizontal: 15px !default; // Shared
+$nav-link-padding-vertical: 10px !default; // Shared
+$nav-link-padding:                          $nav-link-padding-vertical $nav-link-padding-horizontal !default;
+
+$nav-collapse-icon-closed: $collapse-icon-closed !default; // Shared
+$nav-collapse-icon-open: $collapse-icon-open !default; // Shared
+$nav-collapse-icon-font-family: $collapse-icon-font-family !default; // Shared
+
+$nav-nested-padding-horizontal: $navbar-padding-horizontal !default;
+$nav-nested-margins-margin-horizontal: $navbar-padding-horizontal !default;

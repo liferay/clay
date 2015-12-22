@@ -1,0 +1,157 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.progress-xs {
+	border-radius: $progress-bar-xs-border-radius;
+	height: $progress-bar-xs-height;
+
+	.progress-bar {
+		font-size: 8px;
+		line-height: $progress-bar-xs-height;
+	}
+}
+
+.progress-lg {
+	border-radius: $progress-bar-lg-border-radius;
+	height: $progress-bar-lg-height;
+
+	.progress-bar {
+		font-size: 14px;
+		line-height: $progress-bar-lg-height;
+	}
+}
+
+.progress-xl {
+	border-radius: $progress-bar-xl-border-radius;
+	height: $progress-bar-xl-height;
+
+	.progress-bar {
+		font-size: 18px;
+		line-height: $progress-bar-xl-height;
+	}
+}
+
+// Multi Step Progress Bar
+
+.multi-step-progress-bar {
+	display: table;
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+	position: relative;
+	width: 100%;
+
+	> li {
+		color: $multi-step-progress-bar-color;
+		display: table-cell;
+		vertical-align: bottom;
+		width: 1%;
+	}
+
+	> .active {
+		color: $multi-step-progress-bar-active-color;
+
+		.divider {
+			background-color: $multi-step-progress-bar-active-color;
+			color: $multi-step-progress-bar-active-color;
+
+			&:after {
+				content: $multi-step-progress-bar-active-icon;
+			}
+		}
+	}
+
+	> .complete {
+		color: $multi-step-progress-bar-complete-color;
+
+		.divider {
+			background-color: $multi-step-progress-bar-complete-color;
+			color: $multi-step-progress-bar-complete-icon-color;
+			margin-left: 15px;
+
+			&:after {
+				content: $multi-step-progress-bar-complete-icon;
+				left: -14px;
+			}
+		}
+	}
+
+	.divider {
+		background-color: $multi-step-progress-bar-color;
+		color: $multi-step-progress-bar-color;
+		height: $multi-step-progress-bar-divider-height;
+		margin: 10px 0 10px 12px;
+		position: relative;
+
+		&:after {
+			content: $multi-step-progress-bar-icon;
+			display: block;
+			font-family: 'fontawesome-alloy';
+			left: -12px;
+			position: absolute;
+
+			@include transform(translateY(-50%));
+
+			top: 50%;
+		}
+	}
+
+	.progress-bar-step,
+	.progress-bar-title {
+		margin-right: 10px;
+	}
+}
+
+.multi-step-progress-bar-collapse {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		padding-top: 20px;
+	}
+
+	> li {
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			width: auto;
+		}
+
+		&:last-child {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				width: 1%;
+			}
+
+			.divider {
+				@media screen and (max-width: $grid-float-breakpoint-max) {
+					width: 0;
+				}
+			}
+		}
+	}
+
+	> .active {
+		.progress-bar-title {
+			@media screen and (max-width: $grid-float-breakpoint-max) {
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				text-align: center;
+				top: 0;
+			}
+		}
+	}
+
+	.progress-bar-title {
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			display: none;
+		}
+	}
+}
+
+.multi-step-progress-bar-fixed {
+	> li {
+		display: inline-block;
+		width: $multi-step-progress-bar-fixed-width;
+	}
+}

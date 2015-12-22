@@ -1,0 +1,74 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+h1,
+.h1 {
+	font-size: $font-size-h1;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h1;
+	}
+}
+
+h2,
+.h2 {
+	font-size: $font-size-h2;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h2;
+	}
+}
+
+h3,
+.h3 {
+	font-size: $font-size-h3;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h3;
+	}
+}
+
+h4,
+.h4 {
+	font-size: $font-size-h4;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h4;
+	}
+}
+
+h5,
+.h5 {
+	font-size: $font-size-h5;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h5;
+	}
+}
+
+h6,
+.h6 {
+	font-size: $font-size-h6;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h6;
+	}
+}
+
+@include text-emphasis-variant('.text-default', $state-default-text);
+
+@include text-emphasis-variant('.text-primary', $state-primary-text);
+
+@include text-emphasis-variant('.text-regular', $text-color);
+
+.bg-primary {
+	color: $text-color;
+}
+
+@include bg-variant('.bg-default', $state-default-bg);
+
+@include bg-variant('.bg-primary', $state-primary-bg);

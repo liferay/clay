@@ -1,0 +1,41 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$pager-border-width: $pagination-border-width !default; // Atlas
+
+$pager-item-height: $pagination-item-height - ($pager-border-width * 2) !default; // Atlas
+
+$pager-padding-base-horizontal: 20px !default; // Atlas
+$pager-padding-base-vertical: 0 !default; // Atlas
+
+$pager-lg-font-size: $pagination-lg-font-size !default; // Atlas
+$pager-lg-item-height: $pagination-lg-item-height - ($pager-border-width * 2) !default; // Atlas
+$pager-lg-padding-horizontal: 48px !default; // Atlas
+$pager-lg-padding-vertical: $pager-padding-base-vertical !default; // Atlas
+
+$pager-sm-font-size: $pagination-sm-font-size !default; // Atlas
+$pager-sm-item-height: $pagination-sm-item-height - ($pager-border-width * 2) !default; // Atlas
+$pager-sm-padding-horizontal: 12px !default; // Atlas
+$pager-sm-padding-vertical: $pager-padding-base-vertical !default; // Atlas
+
+// Skin
+
+$pager-border-radius:                      $pagination-border-radius !default;
+
+$pager-border:                             $pagination-border !default;
+
+$pager-color: $pagination-color !default; // Atlas
+
+$pager-hover-bg: $pagination-hover-bg !default; // Atlas
+$pager-hover-border: $pagination-hover-border !default; // Atlas
+$pager-hover-color: $pagination-hover-color !default; // Atlas
+
+$pager-disabled-bg: $pagination-disabled-bg !default; // Atlas
+$pager-disabled-border: $pagination-disabled-border !default; // Atlas
+$pager-disabled-color:                     $pagination-disabled-color !default;

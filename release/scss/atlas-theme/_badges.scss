@@ -1,0 +1,85 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.badge {
+	font-weight: 500;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $badge-desktop-font-size;
+	}
+}
+
+.badge-lg {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $badge-lg-desktop-font-size;
+	}
+}
+
+.badge-sm {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $badge-sm-desktop-font-size;
+	}
+}
+
+// .badge-monospaced {
+//	padding: 0;
+// }
+
+// Badge Icon Monospaced Sizes
+
+.icon-monospaced {
+	.badge & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			@include monospace($badge-desktop-font-size);
+		}
+	}
+
+	.badge-lg & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			@include monospace($badge-lg-desktop-font-size);
+		}
+	}
+
+	.badge-sm & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			@include monospace($badge-sm-desktop-font-size);
+		}
+	}
+}
+
+// Badge Lexicon Icon Sizes
+
+.lexicon-icon {
+	.badge & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: floor($badge-desktop-font-size * 0.75);
+			width: floor($badge-desktop-font-size * 0.75);
+		}
+	}
+
+	.badge-lg & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: floor($badge-lg-desktop-font-size * 0.75);
+			width: floor($badge-lg-desktop-font-size * 0.75);
+		}
+	}
+}
+
+// Skins
+
+.badge-default {
+	background-color: $badge-default-bg;
+	color: $badge-default-color;
+
+	a {
+		&,
+		&:focus,
+		&:hover {
+			color: $badge-default-link-color;
+		}
+	}
+}

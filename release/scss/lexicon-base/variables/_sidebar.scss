@@ -1,0 +1,30 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$sidebar-default-bg: $navbar-default-bg !default;
+$sidebar-default-border: $navbar-default-border !default;
+$sidebar-default-color: $navbar-default-color !default;
+$sidebar-default-panel-bg: $navbar-default-link-active-bg !default;
+
+$sidebar-inverse-bg: $navbar-inverse-bg !default;
+$sidebar-inverse-border: $navbar-inverse-border !default;
+$sidebar-inverse-color: $navbar-inverse-color !default;
+$sidebar-inverse-link-color: $navbar-inverse-link-color !default;
+$sidebar-inverse-link-hover-color: $navbar-inverse-link-hover-color !default;
+$sidebar-inverse-panel-bg: $navbar-inverse-link-active-bg !default;
+
+$product-menu1-collapse-icon-bg: $body-bg !default; // Shared
+
+$product-menu1-nav-equal-height-heading-open-collapse-icon: '\f146' !default;
+$product-menu1-nav-equal-height-heading-closed-collapse-icon: '\f0fe' !default;
+
+$product-menu1-nav-link-color: $link-color !default; // Shared
+$product-menu1-nav-active-link-color: $link-hover-color !default; // Shared
+
+$product-menu1-user-signout-bg: $navbar-inverse-bg !default; // Shared
+$product-menu1-user-signout-border-radius: $border-radius-base !default; // Shared
+$product-menu1-user-signout-icon-color: $navbar-inverse-link-active-color !default; // Shared

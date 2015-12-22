@@ -1,0 +1,16 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Alert Notifications
+
+.alert-notification {
+	width: 100%;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		width: 280px;
+	}
+}

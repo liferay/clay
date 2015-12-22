@@ -1,0 +1,92 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.card,
+.card-horizontal {
+	box-shadow: $card-box-shadow;
+
+	.dropdown-toggle {
+		&.icon-ellipsis-vertical,
+		.icon-ellipsis-vertical {
+			color: $dropdown-link-color;
+		}
+	}
+}
+
+.checkbox {
+	&.checkbox-bottom-left,
+	&.checkbox-middle-left,
+	&.checkbox-top-left {
+		.card.flex-container {
+			padding-left: 50px;
+		}
+
+		.card-row {
+			padding-left: 50px;
+		}
+	}
+
+	&.checkbox-bottom-right,
+	&.checkbox-middle-right,
+	&.checkbox-top-right {
+		.card.flex-container {
+			padding-right: 50px;
+		}
+
+		.card-row {
+			padding-right: 50px;
+		}
+	}
+
+	&.checkbox-middle-left {
+		input[type="checkbox"] {
+			left: 15px;
+			margin-top: -10px;
+			position: absolute;
+		}
+	}
+
+	&.checkbox-middle-right {
+		input[type="checkbox"] {
+			margin-top: -10px;
+			position: absolute;
+			right: 15px;
+		}
+	}
+
+	&.checkbox-bottom-left {
+		input[type="checkbox"] {
+			bottom: 15px;
+			left: 15px;
+			position: absolute;
+		}
+	}
+
+	&.checkbox-bottom-right {
+		input[type="checkbox"] {
+			bottom: 15px;
+			position: absolute;
+			right: 15px;
+		}
+	}
+
+	&.checkbox-top-left {
+		input[type="checkbox"] {
+			left: 15px;
+			position: absolute;
+			top: 15px;
+		}
+	}
+
+	&.checkbox-top-right {
+		input[type="checkbox"] {
+			position: absolute;
+			right: 15px;
+			top: 15px;
+		}
+	}
+}

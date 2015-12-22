@@ -1,0 +1,117 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin arrow($direction, $arrow-size, $border-width, $offset, $arrow-color, $border-color) {
+	$arrow-left: auto;
+	$arrow-top: auto;
+	$arrow-margin-left: auto;
+	$arrow-margin-top: auto;
+	$arrow-bottom: auto;
+	$arrow-right: auto;
+	$border-left: auto;
+	$border-top: auto;
+	$border-margin-left: auto;
+	$border-margin-top: auto;
+	$border-bottom: auto;
+	$border-right: auto;
+
+	$direction-map: (
+		bottom: top,
+		left: right,
+		right: left,
+		top: bottom
+	);
+
+	$index: str-index($direction, '-');
+	$main-direction: str-slice($direction, 0, $index - 1);
+	$secondary-direction: str-slice($direction, $index + 1);
+	$opposite-direction: map-get($direction-map, $main-direction);
+
+	@if $main-direction == "bottom" {
+		$arrow-bottom: -$arrow-size;
+		$border-bottom: -($arrow-size + $border-width);
+	}
+	@else if $main-direction == "top" {
+		$arrow-top: -$arrow-size;
+		$border-top: -($arrow-size + $border-width);
+	}
+	@else if $main-direction == "right" {
+		$arrow-left: 100%;
+		$border-left: 100%;
+	}
+	@else if $main-direction == "left" {
+		$arrow-left: -$arrow-size;
+		$border-left: -($arrow-size + $border-width);
+	}
+
+	@if $main-direction == "left" or $main-direction == "right" {
+		@if $secondary-direction == "middle" {
+			$arrow-top: 50%;
+			$border-top: 50%;
+			$arrow-margin-top: -$arrow-size;
+			$border-margin-top: -($arrow-size + $border-width);
+		}
+		@else if $secondary-direction == "bottom" {
+			$arrow-bottom: $offset + $border-width;
+			$border-bottom: $offset;
+		}
+		@else if $secondary-direction == "top" {
+			$arrow-top: $offset + $border-width;
+			$border-top: $offset;
+		}
+	}
+	@else if $main-direction == "top" or $main-direction == "bottom" {
+		@if $secondary-direction == "right" {
+			$arrow-right: $offset + $border-width;
+			$border-right: $offset;
+		}
+		@else if $secondary-direction == "left" {
+			$arrow-left: $offset + $border-width;
+			$border-left: $offset;
+		}
+		@else if $secondary-direction == "center" {
+			$arrow-left: 50%;
+			$border-left: 50%;
+			$arrow-margin-left: -$arrow-size;
+			$border-margin-left: -($arrow-size + $border-width);
+		}
+	}
+
+	// arrow
+	&:after {
+		border: $arrow-size solid transparent;
+		@if str-index($direction, "bottom-") == 1 { border-bottom-width: 0; }
+		border-#{$opposite-direction}-color: $arrow-color;
+		border-#{$main-direction}-width: 0;
+		content: '';
+		display: inline-block;
+		bottom: $arrow-bottom;
+		left: $arrow-left;
+		margin-left: $arrow-margin-left;
+		margin-top: $arrow-margin-top;
+		position: absolute;
+		right: $arrow-right;
+		top: $arrow-top;
+	}
+
+	// border
+	&:before {
+		border: $arrow-size + $border-width solid transparent;
+		@if str-index($direction, "bottom-") == 1 { border-bottom-width: 0; }
+		border-#{$opposite-direction}-color: $border-color;
+		border-#{$main-direction}-width: 0;
+		content: '';
+		bottom: $border-bottom;
+		display: inline-block;
+		left: $border-left;
+		margin-left: $border-margin-left;
+		margin-top: $border-margin-top;
+		position: absolute;
+		right: $border-right;
+		top: $border-top;
+	}
+}

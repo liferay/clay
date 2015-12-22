@@ -1,0 +1,39 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin color-blockquote ($color) {
+	border-color: $color;
+
+	footer, small, .small {
+		color: $color;
+	}
+}
+
+// Highlight inline text
+@mixin highlight-text($bg-color: $state-warning-bg, $color: $text-color) {
+	background-color: $bg-color;
+	box-decoration-break: clone;
+	box-shadow: -0.25em 0 0 $bg-color;
+	color: $color;
+	display: inline;
+	line-height: normal;
+	padding: 2px 0.25em 3px 0;
+	position: relative;
+	white-space: pre-wrap;
+
+	&:before {
+		background-color: $bg-color;
+		bottom: 0;
+		content: '';
+		display: block;
+		position: absolute;
+		right: 100%;
+		top: 0;
+		width: 0.25em;
+		z-index: -1;
+	}
+}

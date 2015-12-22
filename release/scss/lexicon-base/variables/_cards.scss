@@ -1,0 +1,23 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$card-border-width: 1px !default;
+$card-divider-height: 1px !default;
+$card-gutter-width: 10px !default;
+$card-margin-bottom: $line-height-computed !default;
+
+// Skin
+
+$card-bg: #FFF !default;
+$card-border: $gray-lighter !default;
+$card-border-radius: $border-radius-base !default;
+
+$card-circle-border-radius: 20px !default;
+$card-rounded-border-radius: 4px !default;
+$card-square-border-radius: 0 !default;
+
+$card-divider-bg: $card-border !default;

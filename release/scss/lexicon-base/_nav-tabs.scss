@@ -1,0 +1,218 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@include keyframes(slideIn) {
+	0% {
+		@include transform(translateX(-100%));
+	}
+	100% {
+		@include transform(translateX(0));
+	}
+}
+
+@include keyframes(dropHeader) {
+	0% {
+		@include transform(translateY(-100%));
+	}
+	100% {
+		@include transform(translateY(0));
+	}
+}
+
+@include keyframes(removeBorder) {
+	0% {
+		border-bottom-color: #D8D8D8;
+	}
+	100% {
+		border-bottom-color: transparent;
+	}
+}
+
+@include keyframes(fadeIn) {
+	0% {
+		opacity: 0.25;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: $grid-float-breakpoint-max) {
+	.nav-tabs-scrollbar {
+		$anim-key-frames: dropHeader 0.5s $ease-out-quint, removeBorder 0.75s $ease-out-quint;
+		$anim-delay: 0s, 0.45s;
+
+		@include prefixer(animation, $anim-key-frames, moz o webkit spec);
+		// @include prefixer(animation-fill-mode, both, moz o webkit spec); // breaks overflow scroll on safari and mobile safari
+		@include prefixer(animation-delay, $anim-delay, moz o webkit spec);
+		min-height: 54px;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+
+		// &::-webkit-scrollbar {
+		// 	display: none;
+		// }
+
+		> .nav.nav-tabs,
+		> .nav.nav-pills {
+			@include prefixer(animation, slideIn 0.5s $ease-out-quint, moz o webkit spec);
+			@include prefixer(animation-delay, 0.4s, moz o webkit spec);
+			@include prefixer(animation-fill-mode, both, moz o webkit spec);
+			@include prefixer(animation-iteration-count, 1, moz o webkit spec);
+
+			white-space: nowrap;
+
+			> li {
+				@include prefixer(animation, fadeIn 0.5s ease-in, moz o webkit spec);
+				@include prefixer(animation-fill-mode, both, moz o webkit spec);
+				@include prefixer(animation-delay, 0.5s, moz o webkit spec);
+				float: none;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.nav-tabs-scroll {
+	position: relative;
+
+	> .dropdown-menu {
+		left: 0;
+		max-width: none;
+		right: 0;
+		top: auto;
+
+		&.open {
+			display: block;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				display: none;
+			}
+		}
+	}
+
+	.open > .dropdown-menu {
+		display: none;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			display: block;
+		}
+	}
+}
+
+.nav-tabs-scrollbar {
+	.nav {
+		float: left;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			float: none;
+		}
+	}
+}
+
+.nav-tabs {
+	> li {
+		&[class*='col-'] {
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+
+			&:first-child {
+				> .dropdown-menu {
+					margin-left: 0;
+				}
+			}
+
+			&:last-child {
+				float: right;
+			}
+
+			> a {
+				margin-left: 2px;
+				margin-right: 0;
+
+				@include text-overflow();
+			}
+
+			> .dropdown-menu {
+				margin-left: 2px;
+			}
+		}
+
+		&:first-child > a {
+			margin-left: 0;
+		}
+	}
+}
+
+.nav-tabs.nav-justified {
+	> li > a {
+		margin-left: 0;
+	}
+}
+
+// Nav Tabs Default
+
+.nav-tabs-default {
+	border-bottom-color: transparent;
+
+	> li:first-child {
+		&,
+		&.open,
+		&.active {
+			> a {
+				&,
+				&:focus,
+				&:hover {
+					border-left-color: transparent;
+				}
+			}
+		}
+	}
+
+	> li > a {
+		border-left-color: $nav-tabs-border-color;
+		border-radius: 0;
+		border-width: 0 0 0 1px;
+		margin-right: 0;
+
+		&:hover {
+			border-color: transparent transparent transparent $nav-tabs-border-color;
+		}
+	}
+
+	> li.active > a {
+		&,
+		&:focus,
+		&:hover {
+			border-color: transparent transparent transparent $nav-tabs-border-color;
+			border-width: 0 0 0 1px;
+		}
+	}
+
+	.open > a {
+		&,
+		&:focus,
+		&:hover {
+			border-color: transparent transparent transparent $nav-tabs-border-color;
+		}
+	}
+}
+
+@media screen and (max-width: $grid-float-breakpoint-max) {
+	.nav-tabs-scroll .nav-tabs-default {
+		> li {
+			&:first-child > a {
+				margin-left: 0;
+			}
+
+			> a {
+				margin-left: -4px;
+			}
+		}
+	}
+}

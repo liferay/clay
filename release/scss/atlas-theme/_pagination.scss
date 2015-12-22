@@ -1,0 +1,158 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.pagination-bar {
+	.pagination {
+		float: right;
+
+		> li {
+			text-align: center;
+			width: 16.66667%;
+
+			&:first-child,
+			&:last-child {
+				> a,
+				> span {
+					border-radius: $pagination-border-radius;
+				}
+			}
+		}
+	}
+}
+
+.pagination {
+	> li {
+		&:first-child,
+		&:last-child {
+			> a,
+			> span {
+				border-radius: $pagination-border-radius;
+			}
+		}
+
+		> a,
+		> span {
+			display: inline-block;
+			float: none;
+			margin: 0 auto;
+			border-radius: $pagination-border-radius;
+			border: $pagination-border-width solid $pagination-border;
+			height: $pagination-item-height;
+			line-height: $pagination-item-height - ($pagination-border-width * 2);
+			padding: 0;
+			text-align: center;
+			width: $pagination-item-width;
+		}
+	}
+
+	> .disabled {
+		> a,
+		> span {
+			&,
+			&:focus,
+			&:hover {
+				@include opacity(0.5);
+			}
+		}
+	}
+
+	> .dropdown,
+	> .ellipsis {
+		> a,
+		> span {
+			border-width: 0;
+
+			&:focus,
+			&:hover {
+				background-color: $pagination-ellipsis-hover-bg;
+				color: $pagination-ellipsis-hover-color;
+			}
+		}
+	}
+
+	.dropdown-menu-top-center {
+		margin-bottom: 10px;
+	}
+}
+
+.pagination-items-per-page {
+	line-height: $pagination-item-height;
+
+	a {
+		color: $pagination-items-per-page-color;
+	}
+}
+
+.pagination-results {
+	color: $pagination-results-color;
+	line-height: $pagination-item-height;
+}
+
+.pagination-lg {
+	&.pagination-items-per-page a,
+	&.pagination-results,
+	.pagination-items-per-page a,
+	.pagination-results {
+		font-size: $pagination-lg-font-size;
+		line-height: $pagination-lg-item-height;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	&.pagination > li,
+	.pagination > li {
+		> a,
+		> span {
+			font-size: $pagination-lg-font-size;
+			height: $pagination-lg-item-height;
+			line-height: $pagination-lg-item-height - ($pagination-border-width * 2);
+			padding: 0;
+			width: $pagination-lg-item-width;
+		}
+	}
+}
+
+.pagination-sm {
+	&.pagination-items-per-page a,
+	&.pagination-results,
+	.pagination-items-per-page a,
+	.pagination-results {
+		font-size: $pagination-sm-font-size;
+		line-height: $pagination-sm-item-height;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	&.pagination > li,
+	.pagination > li {
+		> a,
+		> span {
+			font-size: $pagination-sm-font-size;
+			height: $pagination-sm-item-height;
+			line-height: $pagination-sm-item-height - ($pagination-border-width * 2);
+			padding: 0;
+			width: $pagination-sm-item-height;
+		}
+	}
+}
+
+@media screen and (min-width: $grid-float-breakpoint) {
+	.pagination-bar .pagination {
+		> li {
+			display: inline-block;
+			float: none;
+			width: auto;
+		}
+	}
+
+	.pagination > li {
+		> a,
+		> span {
+			margin: 0 2px;
+		}
+	}
+}

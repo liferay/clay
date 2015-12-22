@@ -1,0 +1,168 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.nav > li > a:focus {
+	position: relative;
+	z-index: 1;
+}
+
+.nav > li > .collapse-icon {
+	padding-right: $nav-link-padding-horizontal * 2;
+
+	&:before {
+		content: $nav-collapse-icon-open;
+		font-family: $nav-collapse-icon-font-family;
+		right: $nav-link-padding-horizontal;
+	}
+
+	&.collapsed:before {
+		content: $nav-collapse-icon-closed;
+	}
+}
+
+.nav-heading {
+	color: $text-color;
+	display: block;
+}
+
+// Nav Equal Height
+
+.nav-equal-height > li > a,
+.nav-equal-height .nav > li > a,
+.nav-equal-height-heading > a,
+.nav-equal-height-heading > span {
+	height: 40px;
+}
+
+.nav-equal-height {
+	> li {
+		display: table;
+		width: 100%;
+
+		> a {
+			display: table-cell;
+			padding: 0 $nav-link-padding-horizontal;
+			vertical-align: middle;
+		}
+	}
+
+	.nav > li {
+		display: table;
+		width: 100%;
+
+		> a {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+}
+
+.nav-equal-height-heading {
+	display: table;
+	width: 100%;
+
+	&:focus,
+	&:hover {
+		background-color: $nav-link-hover-bg;
+		text-decoration: none;
+	}
+
+	> a,
+	> span {
+		display: table-cell;
+		vertical-align: middle;
+		word-break: break-word;
+
+		&:first-child {
+			padding-left: $nav-link-padding-horizontal;
+		}
+	}
+
+	> a:focus,
+	>	a:hover {
+		text-decoration: none;
+	}
+
+	> .icon-monospaced {
+		height: auto;
+		line-height: 20px;
+	}
+
+	> .nav-equal-height-heading-field {
+		width: 1%;
+	}
+}
+
+.nav-equal-height.nav-nested {
+	.nav > li {
+		display: table;
+		width: 100%;
+
+		> a {
+			display: table-cell;
+			height: 40px;
+			vertical-align: middle;
+			width: 100%;
+		}
+	}
+}
+
+// Nav Nested
+
+.nav-nested {
+	@include make-nav-nested($nav-nested-padding-horizontal);
+
+	.nav > li {
+		margin-top: 2px;
+	}
+
+	&.nav-pills {
+		.nav > li > a {
+			border-radius: $nav-pills-border-radius;
+		}
+	}
+}
+
+.nav-nested-margins {
+	> li .nav > li {
+		margin-left: $nav-nested-margins-margin-horizontal;
+	}
+}
+
+// Nav Pills
+
+.nav-pills {
+	a[aria-expanded="true"] {
+		&,
+		&:hover,
+		&:focus {
+			color: $nav-pills-active-link-hover-color;
+			background-color: $nav-pills-active-link-hover-bg;
+		}
+	}
+}
+
+.nav-circle {
+	> li > a,
+	.nav > li > a {
+		border-radius: 100px;
+	}
+}
+
+.nav-rounded {
+	> li > a,
+	.nav > li > a {
+		border-radius: 5px;
+	}
+}
+
+.nav-square {
+	> li > a,
+	.nav > li > a {
+		border-radius: 0;
+	}
+}

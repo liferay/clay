@@ -1,0 +1,23 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$nav-link-padding-horizontal: 16px !default; // Shared
+$nav-link-padding-vertical: 9px !default; // Shared
+
+// Skin
+
+$nav-link-color: #2B4259 !default; // Atlas
+
+$nav-link-hover-bg:                               transparent !default;
+
+$nav-disabled-link-color:                         #C5CDD0 !default;
+$nav-disabled-link-hover-color:                   $nav-disabled-link-color !default;
+
+$nav-collapse-icon-closed: "\f0da" !default; // Shared
+$nav-collapse-icon-open: "\f0d7" !default; // Shared

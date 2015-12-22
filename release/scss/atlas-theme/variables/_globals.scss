@@ -1,0 +1,156 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$font-size-base:                           14px !default;
+$font-size-large:                          ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:                          ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-desktop-base: 16px !default; // Atlas
+$font-size-desktop-large: ceil(($font-size-desktop-base * 1.25)) !default; // Atlas ~20px
+$font-size-desktop-small: ceil(($font-size-desktop-base * 0.85)) !default; // Atlas ~14px
+
+$font-size-h1:                             floor(($font-size-base * 2)) !default; // ~28px
+$font-size-h2:                             floor(($font-size-base * 1.75)) !default; // ~24px
+$font-size-h3:                             floor(($font-size-base * 1.5)) !default; // ~21px
+$font-size-h4:                             floor(($font-size-base * 1.1875)) !default; // ~16px
+$font-size-h5:                             $font-size-base !default;
+$font-size-h6:                             floor(($font-size-base / 1.1875)) !default; // ~11px
+
+$font-size-desktop-h1: floor(($font-size-desktop-base * 1.625)) !default; // Atlas 26px
+$font-size-desktop-h2: floor(($font-size-desktop-base * 1.375)) !default; // Atlas 22px
+$font-size-desktop-h3: floor(($font-size-desktop-base * 1.1875)) !default; // Atlas 19px
+$font-size-desktop-h4: $font-size-desktop-base !default; // Atlas 16px
+$font-size-desktop-h5: floor(($font-size-desktop-base / 1.1428)) !default; // Atlas 14px
+$font-size-desktop-h6: floor(($font-size-desktop-base / 1.2307)) !default; // Atlas 13px
+
+$line-height-base:                         1.428571429 !default;
+$headings-line-height:                     1.2 !default;
+
+$padding-base-vertical:                    6px !default;
+$padding-base-horizontal:                  16px !default;
+
+$padding-large-vertical:                   10px !default;
+$padding-large-horizontal:                 16px !default;
+
+$padding-small-vertical:                   5px !default;
+$padding-small-horizontal:                 10px !default;
+
+$padding-xs-vertical:                      1px !default;
+$padding-xs-horizontal:                    5px !default;
+
+$grid-gutter-width:                        30px !default;
+
+// Skin
+
+$font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+//== Border Radius
+//## Defines global border-radius
+$border-radius-base:                       4px !default;
+$border-radius-large:                      $border-radius-base * 1.5 !default;
+$border-radius-small:                      $border-radius-base * 0.75 !default;
+
+$body-bg:                                  #FFF !default;
+$gray-darker:                              lighten(#000, 13.5%) !default; // #222
+$gray-dark:                                lighten(#000, 20%) !default;   // #333
+$gray:                                     lighten(#000, 33.5%) !default; // #555
+$gray-light:                               lighten(#000, 46.7%) !default; // #777
+$gray-lighter:                             lighten(#000, 93.5%) !default; // #eee
+
+$brand-default: #869CAD !default; // Atlas
+$brand-default-active: darken($brand-default, 12%) !default; // Atlas
+$brand-default-hover: darken($brand-default, 8%) !default; // Atlas
+
+$brand-primary:                            #65B6F0 !default;
+$brand-primary-active: darken($brand-primary, 12%) !default; // Atlas
+$brand-primary-hover: darken($brand-primary, 8%) !default; // Atlas
+
+$brand-success:                            #76BD4A !default;
+$brand-success-active: darken($brand-success, 12%) !default; // Atlas
+$brand-success-hover: darken($brand-success, 8%) !default; // Atlas
+
+$brand-info:                               #1E5EC8 !default;
+$brand-info-active: darken($brand-info, 12%) !default; // Atlas
+$brand-info-hover: darken($brand-info, 8%) !default; // Atlas
+
+$brand-warning:                            #F5984C !default;
+$brand-warning-active: darken($brand-warning, 12%) !default; // Atlas
+$brand-warning-hover: darken($brand-warning, 8%) !default; // Atlas
+
+$brand-danger:                             #CC6677 !default;
+$brand-danger-active: darken($brand-danger, 12%) !default; // Atlas
+$brand-danger-hover: darken($brand-danger, 8%) !default; // Atlas
+
+$text-color:                               #29353D !default;
+$text-muted:                               lighten($text-color, 55%) !default;
+
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:                      $brand-primary !default;
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:                   #FFF !default;
+
+$link-hover-color:                         $brand-primary-hover !default;
+
+//States for Form and alert
+
+$state-default-text: $brand-default !default; // Atlas
+$state-default-bg: lighten($state-default-text, 34%) !default; // Atlas
+$state-default-border: $state-default-text !default; // Atlas
+
+$state-primary-text: $brand-primary !default; // Atlas
+$state-primary-bg: lighten($state-primary-text, 12%) !default; // Atlas
+$state-primary-border: $state-primary-text !default; // Atlas
+
+$state-success-text:                       $brand-success !default;
+$state-success-bg:                         lighten($state-success-text, 34%) !default;
+$state-success-border:                     $state-success-text !default;
+
+$state-info-text:                          $brand-info !default;
+$state-info-bg:                            lighten($state-info-text, 34%) !default;
+$state-info-border:                        $state-info-text !default;
+
+$state-warning-text:                       $brand-warning !default;
+$state-warning-bg:                         #F8F4D5 !default;
+$state-warning-border:                     $state-warning-text !default;
+
+$state-danger-text:                        $brand-danger !default;
+$state-danger-bg:                          lighten($state-danger-text, 34%) !default;
+$state-danger-border:                      $state-danger-text !default;
+
+// Inverse Colors
+
+$inverse-bg: #1F282E !default; // Atlas
+$inverse-border: darken($inverse-bg, 10%) !default; // Atlas
+$inverse-color: #869CAD !default; // Atlas
+
+$inverse-active-bg: #3A4D5A !default; // Atlas
+$inverse-active-border: darken($inverse-active-bg, 1%) !default; // Atlas
+$inverse-active-color: #FFF !default; // Atlas
+
+$inverse-disabled-color: #394956 !default; // Atlas
+
+$inverse-hover-bg: #1C252C !default; // Atlas
+$inverse-hover-border: darken($inverse-hover-bg, 1%) !default; // Atlas
+$inverse-hover-color: $inverse-color !default; // Atlas
+
+$inverse-header-bg: #1B2228 !default; // Atlas
+$inverse-header-border: darken($inverse-header-bg, 1%) !default; // Atlas
+$inverse-header-color: $inverse-color !default; // Atlas
+
+$inverse-link-color: #FFF !default; // Atlas
+$inverse-link-hover-color: $inverse-link-color !default; // Atlas
+
+//== Box Shadow
+//## Defines global box-shadows
+$box-shadow-default-x: 0 !default; // Atlas
+$box-shadow-default-y: 0 !default; // Atlas
+$box-shadow-default-blur: 3px !default; // Atlas
+$box-shadow-default-spread: 1px !default; // Atlas
+$box-shadow-default-bg: rgba(0, 0, 0, 0.2) !default; // Atlas
+$box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default; // Atlas

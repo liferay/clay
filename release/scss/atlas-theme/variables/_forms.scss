@@ -1,0 +1,82 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$input-font-size: 14px !default; // Atlas
+$input-desktop-font-size: 16px !default; // Atlas
+
+$input-label-font-size: 12px !default; // Atlas
+$input-label-desktop-font-size: 14px !default; // Atlas
+
+$input-border-top-width: 0 !default; // Atlas
+$input-border-right-width: 0 !default; // Atlas
+$input-border-bottom-width: 2px !default; // Atlas
+$input-border-left-width: 0 !default; // Atlas
+$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default; // Atlas
+
+$input-padding-horizontal: 4px !default; // Atlas
+$input-padding-vertical: 6px !default; // Atlas
+
+$input-font-size-base: 16px !default; // Atlas
+$input-font-size-large: 18px !default; // Atlas
+$input-font-size-small: 13px !default; // Atlas
+
+/*** When changing input, make sure to match the corresponding
+		 btn settings to the input height. ***/
+$input-height-base:                        40px !default;
+$input-height-large:                       48px !default;
+$input-height-small:                       32px !default;
+
+$input-mobile-height-base: 40px !default; // Atlas
+$input-mobile-height-large: 48px !default; // Atlas
+$input-mobile-height-small: 32px !default; // Atlas
+
+$form-group-margin-bottom:                 20px !default;
+
+// Skin
+
+$input-border-radius:                      0 !default;
+$input-border-radius-large:                $input-border-radius !default;
+$input-border-radius-small:                $input-border-radius !default;
+
+$input-bg:                                 transparent !default;
+$input-bg-disabled:                        $input-bg !default;
+
+$input-color:                              $text-color !default;
+$input-color-focus: $brand-primary !default; // Atlas
+
+$input-border:                             $brand-default !default;
+$input-border-focus:                       $input-color-focus !default;
+$input-border-disabled: #CFD7DE !default; // Atlas
+
+$input-box-shadow: none !default; // Atlas
+$input-box-shadow-focus: none !default; // Atlas
+
+$input-color-placeholder:                  darken(#E4E9EC, 12%) !default;
+$input-color-placeholder-focus: $input-border-focus !default; // Atlas
+
+$input-label-color: $brand-default !default; // Atlas
+$input-label-focus-color: $input-color-focus !default; // Atlas
+
+$input-readonly-bg: #FAFAFA !default; // Atlas
+$input-readonly-border: $input-border !default; // Atlas
+$input-readonly-color: darken($input-color-placeholder, 12%) !default; // Atlas
+
+$legend-border-color:                      #B0B4BB !default;
+
+$input-group-addon-bg:                     $brand-default !default;
+$input-group-addon-border-color:           $input-group-addon-bg !default;
+$input-group-addon-border-radius: 0 !default; // Atlas
+$input-group-addon-color: #FFF !default; // Atlas
+
+$input-group-default-addon-color: #BBB !default; // Atlas
+$input-group-default-addon-border-color: #DDD !default; // Atlas
+
+$input-danger: $brand-danger !default; // Atlas
+$input-success: $brand-success !default; // Atlas
+$input-warning: $brand-warning !default; // Atlas

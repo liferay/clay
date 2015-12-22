@@ -1,0 +1,146 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.modal-backdrop.in {
+	@include opacity($modal-backdrop-opacity);
+}
+
+.modal-content {
+	box-shadow: $modal-box-shadow;
+}
+
+.modal-footer {
+	box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15);
+	position: absolute;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		background-color: $modal-desktop-footer-bg;
+		color: $modal-desktop-footer-color;
+		position: relative;
+	}
+}
+
+.modal-header {
+	text-align: center;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		background-color: $modal-desktop-header-bg;
+		color: $modal-desktop-header-color;
+	}
+
+	.close,
+	.modal-primary-action-button {
+		height: $modal-title-line-height;
+		line-height: $modal-title-line-height;
+		margin: 0;
+
+		@include opacity(1);
+
+		overflow: hidden;
+		text-shadow: none;
+		width: $modal-title-line-height;
+
+		&,
+		&:focus,
+		&:hover {
+			color: $modal-header-close-color;
+
+			@include opacity(1);
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				color: $modal-desktop-header-close-color;
+			}
+		}
+
+		&:active {
+			background-color: transparent;
+		}
+	}
+}
+
+.modal-title {
+	font-size: 19px;
+	font-weight: 400;
+}
+
+h1.modal-title {
+	font-size: $font-size-h1;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h1;
+	}
+}
+
+h2.modal-title {
+	font-size: $font-size-h2;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h2;
+	}
+}
+
+h3.modal-title {
+	font-size: $font-size-h3;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h3;
+	}
+}
+
+h4.modal-title {
+	font-size: $font-size-h4;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h4;
+	}
+}
+
+h5.modal-title {
+	font-size: $font-size-h5;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h5;
+	}
+}
+
+h6.modal-title {
+	font-size: $font-size-h6;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h6;
+	}
+}
+
+// Modal Inverse
+
+.modal-inverse {
+	.modal-body {
+		background-color: $modal-inverse-body-bg;
+	}
+
+	.modal-footer {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: $modal-inverse-desktop-footer-bg;
+			border-color: $modal-inverse-desktop-footer-border-color;
+			color: $modal-inverse-desktop-footer-color;
+		}
+	}
+
+	.modal-header {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			background-color: $modal-inverse-desktop-header-bg;
+			border-color: $modal-inverse-desktop-header-border-color;
+			color: $modal-inverse-desktop-header-color;
+		}
+
+		.close {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				color: $modal-inverse-desktop-header-close-color;
+			}
+		}
+	}
+}

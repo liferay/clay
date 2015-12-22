@@ -1,0 +1,67 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.panel {
+	border: $panel-border-width solid transparent;
+	box-shadow: $panel-box-shadow;
+}
+
+.panel-footer {
+	border-top-width: 0;
+}
+
+.panel-heading {
+	border-bottom-width: 2px;
+}
+
+.panel-group {
+	.panel + .panel {
+		margin-top: 0;
+	}
+
+	.panel-heading {
+		border-bottom-width: 0;
+
+		+ .panel-collapse > .panel-body {
+			border-top-width: 2px;
+		}
+	}
+}
+
+.panel-title {
+	a {
+		text-decoration: none;
+	}
+}
+
+// Skins
+
+.panel-blank {
+	box-shadow: none;
+
+	> .panel-heading {
+		a {
+			color: $panel-blank-heading-link-open-color;
+
+			&:focus,
+			&:hover {
+				text-decoration: none;
+			}
+
+			&.collapsed {
+				color: $panel-blank-heading-link-color;
+			}
+		}
+	}
+}
+
+.panel-default {
+	> .panel-heading,
+	> .panel-footer {
+		color: $brand-default;
+	}
+}

@@ -1,0 +1,322 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sidebar {
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+	overflow: auto;
+
+	.navbar {
+		margin-bottom: 0;
+	}
+
+	.navbar-no-collapse .navbar-nav {
+		margin: 0 15px;
+	}
+}
+
+.sidebar-body {
+	-webkit-overflow-scrolling: touch;
+	font-size: 14px;
+	overflow: auto;
+	padding: 24px;
+}
+
+.sidebar-footer,
+.sidebar-header {
+	a {
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.sidebar-footer {
+	padding: 24px;
+}
+
+.sidebar-header {
+	margin: 0;
+	padding: 24px;
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+	}
+}
+
+.sidebar-header-actions {
+	float: right;
+}
+
+.sidebar-panel {
+	height: 155px;
+	overflow: hidden;
+	position: relative;
+}
+
+.sidebar-transition {
+	@include transition(all 0.25s ease);
+}
+
+.search-bar {
+	margin: 16px 0;
+
+	.btn .icon-monospaced {
+		height: $input-height-base - ($padding-base-vertical * 2) - 2;
+		line-height: $input-height-base - ($padding-base-vertical * 2) - 2;
+		width: $input-height-base - ($padding-base-vertical * 2) - 2;
+	}
+}
+
+// Product Menu
+
+.product-menu1 {
+	.list-group-heading {
+		h1, h2, h3, h4, h5, h6 {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+	}
+
+	.lfr-icon-menu {
+		.btn-default {
+			background-color: transparent;
+			border-width: 0;
+
+			@include monospace(32px);
+
+			padding: 0;
+
+			&:active {
+				box-shadow: none;
+				color: $product-menu1-nav-link-color;
+			}
+		}
+	}
+}
+
+.product-menu1 .sidebar-body {
+	bottom: 65px;
+	left: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+	position: absolute;
+	right: 0;
+	top: 120px;
+
+	@media screen and (max-width: 320px) {
+		overflow: visible;
+		position: static;
+	}
+}
+
+.product-menu1 .sidebar-header {
+	padding-bottom: 5px;
+	padding-top: 5px;
+
+	.sidenav-close {
+		float: right;
+	}
+}
+
+.product-menu1 {
+	.nav a {
+		color: $product-menu1-nav-link-color;
+	}
+
+	.nav-equal-height {
+		.nav > .active,
+		> .active {
+			border-left: 2px solid $product-menu1-nav-active-link-color;
+		}
+
+		> .active > a,
+		.nav > .active > a {
+			&,
+			&:focus,
+			&:hover {
+				color: $product-menu1-nav-active-link-color;
+			}
+		}
+
+		> .active,
+		.nav > .active {
+			border-left-color: $product-menu1-nav-active-link-color;
+		}
+	}
+
+	.nav-equal-height-heading {
+		.collapse-icon {
+			&:after,
+			&.collapsed:after {
+				background-color: $product-menu1-collapse-icon-bg;
+				content: '';
+				display: block;
+				height: 9px;
+				left: -6px;
+				position: absolute;
+				right: auto;
+				top: 14px;
+				width: 9px;
+			}
+
+			&:before {
+				content: $product-menu1-nav-equal-height-heading-open-collapse-icon;
+				font-size: 13px;
+				left: -6px;
+				right: auto;
+				z-index: 1;
+			}
+
+			&.collapsed:before {
+				content: $product-menu1-nav-equal-height-heading-closed-collapse-icon;
+			}
+		}
+	}
+
+	.nav-nested-margins > li .nav > li {
+		border-left: 2px solid $product-menu1-nav-link-color;
+
+		.nav > li {
+			border-left: 1px dotted $product-menu1-nav-link-color;
+			margin-bottom: 1px;
+
+			&.active {
+				border-left: 1px solid $product-menu1-nav-active-link-color;
+
+				> a {
+					color: $product-menu1-nav-active-link-color;
+				}
+			}
+		}
+	}
+}
+
+// Product Menu Footer
+
+.product-menu1 .sidebar-footer {
+	bottom: 0;
+	padding: 10px 24px;
+	position: absolute;
+	width: 100%;
+
+	@media screen and (max-width: 320px) {
+		position: static;
+	}
+
+	.nameplate-content,
+	.nameplate-field {
+		vertical-align: middle;
+
+		@media screen and (max-width: 320px) {
+			display: block;
+		}
+	}
+
+	.user-signout {
+		background-color: $product-menu1-user-signout-bg;
+		border-radius: $product-menu1-user-signout-border-radius;
+		color: $product-menu1-user-signout-icon-color;
+	}
+}
+
+.product-menu1 {
+	.user-heading {
+		font-size: 19px;
+		font-weight: 500;
+		margin: 0 8px;
+	}
+
+	.user-subheading {
+		list-style: none;
+		margin: 0 8px;
+		padding: 0;
+
+		> li {
+			float: left;
+
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+}
+
+// Product Menu Tabs
+
+.product-menu-tabs1 {
+	margin-left: 24px;
+	margin-right: 24px;
+	margin-top: 15px;
+
+	> li > a {
+		padding: 10px 0;
+	}
+}
+
+.product-menu-tabs1 {
+	.sticker {
+		left: 5px;
+		top: 3px;
+	}
+
+	.sticker-bottom {
+		bottom: 3px;
+		top: auto;
+	}
+
+	.sticker-right {
+		left: auto;
+		right: 5px;
+	}
+}
+
+.product-menu-tab-icon1 {
+	.label-sm {
+		left: 50%;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.icon-monospaced {
+		height: 0.9em;
+		width: 0.9em;
+	}
+}
+
+.product-menu-tab-text1 {
+	font-size: 11px;
+}
+
+// Skins
+
+.sidebar-default {
+	background-color: $sidebar-default-bg;
+	border-left: 1px solid $sidebar-default-border;
+	color: $sidebar-default-color;
+
+	.sidebar-panel {
+		background-color: $sidebar-default-panel-bg;
+	}
+}
+
+.sidebar-inverse {
+	background-color: $sidebar-inverse-bg;
+	color: $sidebar-inverse-color;
+
+	.nav > li > a {
+		&:focus,
+		&:hover {
+			color: $sidebar-inverse-link-color;
+		}
+	}
+
+	.sidebar-panel {
+		background-color: $sidebar-inverse-panel-bg;
+	}
+}

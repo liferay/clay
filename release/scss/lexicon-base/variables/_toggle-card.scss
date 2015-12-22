@@ -1,0 +1,40 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Toggle Card Settings
+$toggle-card-height: 78px !default;
+$toggle-card-width: 69px !default;
+
+$toggle-card-padding-horizontal: 4px !default;
+$toggle-card-padding-vertical: 4px !default;
+
+$toggle-card-border-radius: 4px !default;
+
+$toggle-card-box-shadow: none !default;
+
+$toggle-card-icon-border-radius: 30px !default;
+$toggle-card-icon-font-size: 16px !default;
+$toggle-card-icon-height: 32px !default;
+$toggle-card-icon-width: 32px !default;
+
+// Toggle Card Off Styles
+$toggle-card-bg: $input-bg !default;
+$toggle-card-border: $input-border !default;
+$toggle-card-border-width: 1px !default;
+$toggle-card-icon-bg: transparent !default;
+$toggle-card-icon-border: #869CAD !default;
+$toggle-card-icon-border-width: 0 !default;
+$toggle-card-text-color: $text-color !default;
+
+// Toggle Card On Styles
+$toggle-card-on-bg: $body-bg !default;
+$toggle-card-on-border: $brand-primary !default;
+$toggle-card-on-border-width: 1px !default;
+$toggle-card-on-icon-bg: transparent !default;
+$toggle-card-on-icon-border: $toggle-card-on-border !default;
+$toggle-card-on-icon-border-width: 0 !default;
+$toggle-card-on-text-color: $brand-primary !default;

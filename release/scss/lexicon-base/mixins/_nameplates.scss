@@ -1,0 +1,20 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin color-nameplate-label($bg, $color, $hover-color) {
+	background-color: $bg;
+	color: $color;
+
+	a {
+		color: $color;
+
+		&:focus,
+		&:hover {
+			color: $hover-color;
+		}
+	}
+}

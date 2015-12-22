@@ -1,0 +1,158 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.toggle-card {
+	-webkit-user-select: none;
+	float: left;
+	line-height: normal;
+	position: relative;
+}
+
+.toggle-card-container {
+	background-color: $toggle-card-bg;
+	border: $toggle-card-border-width solid $toggle-card-border;
+	border-radius: $toggle-card-border-radius;
+	box-shadow: $toggle-card-box-shadow;
+	color: $toggle-card-text-color;
+	display: table;
+	padding: $toggle-card-padding-vertical $toggle-card-padding-horizontal;
+	text-align: center;
+	height: $toggle-card-height;
+	width: $toggle-card-width;
+}
+
+.toggle-card-cell {
+	display: table-cell;
+	text-align: center;
+	word-break: break-word;
+}
+
+.toggle-card-icon {
+	border-radius: $toggle-card-icon-border-radius;
+	height: $toggle-card-icon-height;
+	font-size: $toggle-card-icon-font-size;
+	margin: 0 auto;
+	width: $toggle-card-icon-width;
+
+	[class*="icon-"] {
+		display: block;
+	}
+}
+
+.toggle-card-label {
+	height: $toggle-card-height - $toggle-card-icon-height - ($toggle-card-border-width * 2) - $toggle-card-padding-vertical;
+	line-height: 16px;
+	overflow: hidden;
+	padding-top: $toggle-card-padding-vertical;
+}
+
+input.toggle-card {
+	height: $toggle-card-height; // toggle should be clickable if not nested inside label
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	width: $toggle-card-width; // toggle should be clickable if not nested inside label
+
+	.toggle-card & {
+		height: auto;
+		width: auto;
+	}
+
+	&:empty ~ .toggle-card-container {
+		.toggle-card-on {
+			display: none;
+		}
+
+		.toggle-card-icon {
+			background-color: $toggle-card-icon-bg;
+			border: $toggle-card-icon-border solid $toggle-card-icon-border-width;
+
+			[class*="icon-"] {
+				line-height: $toggle-card-icon-height - ($toggle-card-icon-border-width * 2);
+			}
+		}
+	}
+
+	&:checked ~ .toggle-card-container {
+		background-color: $toggle-card-on-bg;
+		border: $toggle-card-on-border-width solid $toggle-card-on-border;
+		color: $toggle-card-on-text-color;
+		padding-bottom: $toggle-card-padding-vertical - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-left: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-right: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-top: $toggle-card-padding-vertical - abs($toggle-card-border-width - $toggle-card-on-border-width);
+
+		.toggle-card-off {
+			display: none;
+		}
+
+		.toggle-card-on {
+			display: block;
+		}
+
+		.toggle-card-icon {
+			background-color: $toggle-card-on-icon-bg;
+			border: $toggle-card-on-icon-border-width solid $toggle-card-on-icon-border;
+
+			[class*="icon-"] {
+				line-height: $toggle-card-icon-height - ($toggle-card-on-icon-border-width * 2);
+			}
+		}
+	}
+
+	&:focus ~ .toggle-card-container {
+		box-shadow: 0 0 3px 2px rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), .6);
+	}
+
+	&[disabled] ~ .toggle-card-container {
+		cursor: not-allowed;
+		opacity: 0.4;
+	}
+}
+
+// Documents and Media Toggle Cards
+
+.toggle-card-dm {
+	margin-top: 0;
+
+	input[type="checkbox"] {
+		left: $grid-gutter-width / 2;
+		margin-left: 0;
+		margin-top: 0;
+		opacity: 1;
+		position: absolute;
+		top: $grid-gutter-width / 2;
+		z-index: 1;
+
+		&:checked,
+		&:focus {
+			~ .toggle-card-container {
+				box-shadow: 0 0 3px 2px rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), .6);
+			}
+		}
+
+		~ .toggle-card-container {
+			border-width: 1px;
+			padding: 0;
+		}
+	}
+
+	label {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.toggle-card-container {
+		display: block;
+		height: auto;
+		width: auto;
+	}
+
+	~ .toggle-card-dm {
+		margin-top: 0;
+	}
+}

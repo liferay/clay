@@ -1,0 +1,59 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.alert {
+	border-width: $alert-border-width;
+	font-size: 16px;
+
+	.alert-link {
+		text-decoration: underline;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.close {
+		color: $text-color;
+		opacity: 1;
+	}
+
+	.lead {
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 0;
+		margin-right: 16px;
+	}
+}
+
+.alert-dismissible .close {
+	top: -1px;
+}
+
+// Alert Skins
+
+.alert-default {
+	@include alert-variant($alert-default-bg, $alert-default-border, $alert-default-text);
+	@include color-alert-text($alert-default-text, $alert-default-text-bold);
+}
+
+.alert-danger {
+	@include color-alert-text($alert-danger-text, $alert-danger-text-bold);
+}
+
+.alert-info {
+	@include color-alert-text($alert-info-text, $alert-info-text-bold);
+}
+
+.alert-success {
+	@include color-alert-text($alert-success-text, $alert-success-text-bold);
+}
+
+.alert-warning {
+	@include color-alert-text($alert-warning-text, $alert-warning-text-bold);
+}

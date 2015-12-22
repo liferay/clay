@@ -1,0 +1,25 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.toggle-card-dm {
+	a {
+		color: $brand-default;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	input[type="checkbox"] {
+		position: absolute;
+
+		~ .toggle-card-container {
+			border-width: 0;
+		}
+	}
+}

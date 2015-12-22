@@ -1,0 +1,118 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+/* When changing any settings below, make sure to match the corresponding
+	 input-height to the button height. */
+$btn-border-width: 2px !default; // Atlas
+
+$btn-line-height: 24 - ($btn-border-width * 2) !default; // Atlas
+
+$btn-font-size: 14px !default; // Atlas
+$btn-padding-vertical: 8px !default; // Atlas
+$btn-padding-horizontal: round($btn-padding-vertical * 3) !default; // Atlas
+
+$btn-lg-font-size: 16px !default; // Atlas
+$btn-lg-padding-vertical: 12px !default; // Atlas
+$btn-lg-padding-horizontal: round($btn-lg-padding-vertical * 3) !default; // Atlas
+
+$btn-sm-font-size: 13px !default; // Atlas
+$btn-sm-padding-vertical: 4px !default; // Atlas
+$btn-sm-padding-horizontal: round($btn-sm-padding-vertical * 3) !default; // Atlas
+
+$btn-xs-font-size: 10px !default; // Atlas
+$btn-xs-padding-vertical: 1px !default; // Atlas
+$btn-xs-padding-horizontal: round($btn-xs-padding-vertical * 3) !default; // Atlas
+
+$btn-desktop-font-size: 16px !default; // Atlas
+$btn-desktop-padding-vertical: 8px !default; // Atlas
+$btn-desktop-padding-horizontal: 14px !default; // Atlas
+
+$btn-desktop-lg-font-size: $btn-lg-font-size !default; // Atlas
+$btn-desktop-lg-padding-vertical: 12px !default; // Atlas
+$btn-desktop-lg-padding-horizontal: 48px !default; // Atlas
+
+$btn-desktop-sm-font-size: $btn-sm-font-size !default; // Atlas
+$btn-desktop-sm-padding-vertical: 4px !default; // Atlas
+$btn-desktop-sm-padding-horizontal: round($btn-desktop-sm-padding-vertical * 4) !default; // Atlas
+
+$btn-desktop-xs-font-size: 10px !default; // Atlas
+$btn-desktop-xs-padding-vertical: 1px !default; // Atlas
+$btn-desktop-xs-padding-horizontal: round($btn-desktop-xs-padding-vertical * 4) !default; // Atlas
+
+// Skin
+
+$btn-action-border-radius: 4px !default; // Atlas
+$btn-border-radius: 4px !default; // Atlas
+
+$btn-lg-border-radius: $btn-border-radius !default; // Atlas
+$btn-sm-border-radius: round($btn-border-radius * 0.75) !default; // Atlas
+$btn-xs-border-radius: round($btn-border-radius * 0.5) !default; // Atlas
+
+$btn-default-color:                        $brand-default !default;
+$btn-default-bg:                           #FFF !default;
+$btn-default-border:                       $brand-default !default;
+$btn-default-hover-color: $btn-default-color !default; // Atlas
+$btn-default-hover-bg: $btn-default-bg !default; // Atlas
+$btn-default-hover-border: $brand-primary !default; // Atlas
+$btn-default-active-color: $btn-default-color !default; // Atlas
+$btn-default-active-bg: $btn-default-bg !default; // Atlas
+$btn-default-active-border: darken($btn-default-hover-border, 8%) !default; // Atlas
+
+$btn-primary-color:                        #FFF !default;
+$btn-primary-bg:                           $brand-primary !default;
+$btn-primary-border:                       $btn-primary-bg !default;
+$btn-primary-hover-color: $btn-primary-color !default; // Atlas
+$btn-primary-hover-bg: darken($btn-primary-bg, 8%) !default; // Atlas
+$btn-primary-hover-border: $btn-primary-hover-bg !default; // Atlas
+$btn-primary-active-color: $btn-primary-color !default; // Atlas
+$btn-primary-active-bg: darken($btn-primary-hover-bg, 12%) !default; // Atlas
+$btn-primary-active-border: $btn-primary-active-bg !default; // Atlas
+
+
+$btn-success-color:                        #FFF !default;
+$btn-success-bg:                           $brand-success !default;
+$btn-success-border:                       $btn-success-bg !default;
+$btn-success-hover-color: $btn-success-color !default; // Atlas
+$btn-success-hover-bg: darken($btn-success-bg, 8%) !default; // Atlas
+$btn-success-hover-border: $btn-success-hover-bg !default; // Atlas
+$btn-success-active-color: $btn-success-color !default; // Atlas
+$btn-success-active-bg: darken($btn-success-hover-bg, 12%) !default; // Atlas
+$btn-success-active-border: $btn-success-active-bg !default; // Atlas
+
+$btn-info-color:                           #FFF !default;
+$btn-info-bg:                              $brand-info !default;
+$btn-info-border:                          $btn-info-bg !default;
+$btn-info-hover-color: $btn-info-color !default; // Atlas
+$btn-info-hover-bg: darken($btn-info-bg, 8%) !default; // Atlas
+$btn-info-hover-border: $btn-info-hover-bg !default; // Atlas
+$btn-info-active-color: $btn-info-color !default; // Atlas
+$btn-info-active-bg: darken($btn-info-hover-bg, 12%) !default; // Atlas
+$btn-info-active-border: $btn-info-active-bg !default; // Atlas
+
+$btn-warning-color:                        #FFF !default;
+$btn-warning-bg:                           $brand-warning !default;
+$btn-warning-border:                       $btn-warning-bg !default;
+$btn-warning-hover-color: $btn-warning-color !default; // Atlas
+$btn-warning-hover-bg: darken($btn-warning-bg, 8%) !default; // Atlas
+$btn-warning-hover-border: $btn-warning-hover-bg !default; // Atlas
+$btn-warning-active-color: $btn-warning-color !default; // Atlas
+$btn-warning-active-bg: darken($btn-warning-hover-bg, 12%) !default; // Atlas
+$btn-warning-active-border: $btn-warning-active-bg !default; // Atlas
+
+$btn-danger-color:                         #FFF !default;
+$btn-danger-bg:                            $brand-danger !default;
+$btn-danger-border:                        $btn-danger-bg !default;
+$btn-danger-hover-color: $btn-danger-color !default; // Atlas
+$btn-danger-hover-bg: darken($btn-danger-bg, 8%) !default; // Atlas
+$btn-danger-hover-border: $btn-danger-hover-bg !default; // Atlas
+$btn-danger-active-color: $btn-danger-color !default; // Atlas
+$btn-danger-active-bg: darken($btn-danger-hover-bg, 12%) !default; // Atlas
+$btn-danger-active-border: $btn-danger-active-bg !default; // Atlas
+
+$btn-link-disabled-color:                  #FFF !default;

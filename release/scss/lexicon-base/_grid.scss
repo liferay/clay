@@ -1,0 +1,25 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.container-fluid-1280 {
+	@include clearfix;
+
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $grid-gutter-width / 2;
+	padding-right: $grid-gutter-width / 2;
+}
+
+.header-toolbar,
+.management-bar,
+.navbar {
+	> .container-fluid-1280 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

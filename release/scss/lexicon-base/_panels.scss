@@ -1,0 +1,91 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.panel {
+	.collapse-icon {
+		&:before {
+			content: $panel-heading-icon-open;
+			font-size: $panel-heading-icon-font-size;
+			font-family: $panel-heading-icon-font-family;
+			right: 15px;
+		}
+
+		&.collapsed:before {
+			content: $panel-heading-icon-closed;
+		}
+	}
+}
+
+.panel-group {
+	.panel-heading {
+		padding: 0;
+
+		.collapse-icon {
+			padding-right: 35px;
+		}
+	}
+
+	.panel-title {
+		> a,
+		> span {
+			display: block;
+			padding: $panel-heading-padding;
+		}
+	}
+}
+
+// Skins
+
+.panel-blank {
+	box-shadow: none;
+
+	@include panel-variant($panel-blank-border, $panel-blank-text, $panel-blank-heading-bg, $panel-blank-border);
+
+	> .panel-footer {
+		background-color: $panel-blank-heading-bg;
+		border-color: $panel-blank-border;
+	}
+}
+
+.panel-group .panel-blank .panel-heading {
+	+ .panel-collapse > .panel-body,
+	+ .panel-collapse > .list-group {
+		border-top-color: $panel-blank-heading-bg;
+	}
+}
+
+.panel-primary {
+	> .panel-footer {
+		background-color: $panel-primary-heading-bg;
+		border-color: $panel-primary-border;
+		color: #FFF;
+	}
+}
+
+.panel-success {
+	> .panel-footer {
+		background-color: $panel-success-heading-bg;
+		border-color: $panel-success-border;
+		color: $brand-success;
+	}
+}
+
+.panel-warning {
+	> .panel-footer {
+		background-color: $panel-warning-heading-bg;
+		border-color: $panel-warning-border;
+		color: $brand-warning;
+	}
+}
+
+.panel-danger {
+	> .panel-footer {
+		background-color: $panel-danger-heading-bg;
+		border-color: $panel-danger-border;
+		color: $brand-danger;
+	}
+}

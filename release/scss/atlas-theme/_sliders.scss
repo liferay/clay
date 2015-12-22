@@ -1,0 +1,28 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.slider-container {
+	max-width: 201px;
+}
+
+.slider-container-vertical {
+	text-align: center;
+	max-width: 101px;
+
+	input[type="range"], output {
+		width: 31px;
+	}
+}
+
+// Vertical Sliders
+
+input[type="range"].vertical {
+	height: 100%;
+	padding: 0;
+	writing-mode: bt-lr;
+	-webkit-appearance: slider-vertical;
+}

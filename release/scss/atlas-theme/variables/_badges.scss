@@ -1,0 +1,40 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$badge-font-size: ceil($font-size-base / 1.166667) !default; // Atlas
+$badge-desktop-font-size: $font-size-base !default; // Atlas
+
+$badge-lg-desktop-font-size: $font-size-large !default;
+$badge-lg-font-size: ceil($font-size-large / 1.166667) !default;
+
+$badge-sm-desktop-font-size: $font-size-small !default;
+$badge-sm-font-size: ceil($font-size-small / 1.166667) !default;
+
+$badge-padding-bottom: 9px !default;
+$badge-padding-left: 12px !default;
+$badge-padding-right: 12px !default;
+$badge-padding-top: 9px !default;
+
+$badge-lg-padding-bottom: 14px !default;
+$badge-lg-padding-left: 20px !default;
+$badge-lg-padding-right: 20px !default;
+$badge-lg-padding-top: 14px !default;
+
+$badge-sm-padding-bottom: 4px !default;
+$badge-sm-padding-left: 10px !default;
+$badge-sm-padding-right: 10px !default;
+$badge-sm-padding-top: 4px !default;
+
+// Skin
+
+$badge-bg: $brand-default !default;
+
+$badge-default-bg: #E7F1F9 !default; // Atlas
+$badge-default-color: $brand-primary !default; // Atlas
+$badge-default-link-color: $badge-default-color !default; // Atlas

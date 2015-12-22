@@ -1,0 +1,521 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.basic-search {
+	.form-control:focus {
+		z-index: 0;
+	}
+}
+
+.basic-search-slider {
+	.basic-search-close {
+		background-color: transparent;
+		border-width: 0;
+		height: $input-mobile-height-base;
+		padding: 0 12px;
+	}
+}
+
+.basic-search-close:active:focus {
+	background-color: transparent;
+}
+
+// Navbar Collapse Basic Search Styles
+
+.collapse-basic-search {
+	.basic-search {
+		// todo after adding input-mobile-height-base;
+
+		@if $input-mobile-height-base >= $navbar-height {
+			padding: 0;
+		}
+		@else {
+			padding: floor(($navbar-height - $input-mobile-height-base - 1) / 2);
+		}
+
+		.input-group-btn:last-child {
+			> .btn,
+			> .btn-group {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+// Navbar Styles
+
+.navbar {
+	border-radius: $navbar-border-radius;
+	min-height: $navbar-height;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		border-radius: $navbar-border-radius;
+		min-height: $navbar-desktop-height;
+	}
+}
+
+.navbar-nav {
+	> li > a {
+		line-height: $navbar-link-line-height;
+
+		// .navbar border-width increases size of navbar by border-width*2
+		padding: ($navbar-padding-vertical - 1) $navbar-padding-horizontal;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			line-height: $navbar-desktop-link-line-height;
+			padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
+		}
+	}
+}
+
+.navbar-brand {
+	color: $nav-link-color;
+	height: $navbar-height;
+	line-height: $navbar-link-line-height;
+	padding: $navbar-padding-vertical $navbar-padding-horizontal;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		height: $navbar-desktop-height;
+		line-height: $navbar-desktop-link-line-height;
+		padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
+	}
+}
+
+.navbar-header .navbar-form,
+.navbar-no-collapse .navbar-form {
+	border-width: 0;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@if $input-height-base >= $navbar-desktop-height {
+			padding: 0 $navbar-desktop-padding-horizontal;
+		}
+		@else {
+			padding: (($navbar-desktop-height - $input-height-base) / 2) $navbar-desktop-padding-horizontal;
+		}
+	}
+}
+
+.navbar-toggle,
+.navbar-toggle-left {
+	margin: (($navbar-height - 36) / 2) $navbar-padding-horizontal;
+	padding: 10px;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: $nav-link-color;
+}
+
+.navbar-toggle-page-name {
+	border-radius: 0;
+	color: $navbar-default-link-active-color;
+	margin: 0;
+	padding: (($navbar-height - $navbar-link-line-height) / 2) $navbar-padding-horizontal;
+
+	&:after {
+		background-color: $navbar-default-link-active-highlight;
+		content: '';
+		display: block;
+		height: $navbar-link-active-bottom-border-width;
+		margin-top: -$navbar-link-active-bottom-border-width;
+		position: relative;
+		top: (($navbar-height - $navbar-link-line-height) / 2) + 1;
+		width: 100%;
+	}
+}
+
+//max-width: 768px
+
+@media screen and (max-width: $grid-float-breakpoint-max) {
+	.navbar-nav .dropdown-menu {
+		max-width: none;
+	}
+
+	.navbar-nav .open .dropdown-menu {
+		box-shadow: none;
+		padding: 0;
+
+		&:after,
+		&:before {
+			display: none;
+		}
+
+		> li > a,
+		.dropdown-header {
+			padding: $navbar-padding-vertical $navbar-padding-horizontal;
+		}
+
+		.inline-scroller,
+		.linked-list {
+			li a {
+				padding: $navbar-padding-vertical $navbar-padding-horizontal;
+
+				&:focus,
+				&:hover {
+					color: $navbar-default-link-active-color;
+				}
+			}
+		}
+	}
+}
+
+/*  make navbar dropdown position absolute
+	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+
+.navbar {
+	.navbar-collapse:first-child,
+	.navbar-collapse-absolute {
+		background-color: #FFF;
+		border: 1px solid #DDD;
+		left: -1px;
+		position: absolute;
+		right: -1px;
+		top: 100%;
+		z-index: $zindex-navbar;
+	}
+}
+
+@media screen and (min-width: $grid-float-breakpoint) { //min-width: 768px
+	//lr7 navbar mobile (when navbar-header comes after navbar-collapse)
+
+	.navbar .navbar-collapse {
+		background-color: transparent;
+		border-width: 0;
+		left: auto;
+		position: static;
+		right: auto;
+		top: auto;
+		z-index: 0;
+	}
+
+	.navbar .navbar-collapse {
+		&:first-child {
+			background-color: transparent;
+			border-width: 0;
+			float: left;
+			left: auto;
+			position: static;
+			right: auto;
+			top: auto;
+			z-index: 0;
+		}
+
+		+ .navbar-header {
+			float: none;
+
+			.basic-search {
+				width: auto;
+			}
+		}
+	}
+
+	.navbar-form {
+		padding: (($navbar-desktop-height - $input-height-base) / 2) 0;
+
+		.btn {
+			vertical-align: top;
+		}
+
+		.form-group {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
+
+	.navbar-header .input-group-input .form-control {
+		max-width: none;
+		min-width: 0;
+	}
+
+	.navbar-header-right {
+		float: right;
+	}
+
+	.navbar-nav {
+		margin-right: 15px;
+
+		&.navbar-right {
+			margin-left: 15px;
+			margin-right: 0;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+// Navbar-no-collapse
+
+.navbar-no-collapse .navbar-nav {
+	float: left;
+	margin: 0 15px 0 0;
+
+	> li {
+		float: left;
+	}
+
+	.dropdown-menu {
+		@include arrow("top-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	}
+
+	.dropdown-menu-center {
+		@include arrow("top-center", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	}
+
+	.dropdown-menu-right,
+	.navbar-right .dropdown-menu {
+		@include arrow("top-right", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
+	}
+}
+
+// Navbar Default Collapse Basic Search Styles
+
+.navbar-default .basic-search {
+	&:after {
+		background-color: $brand-default;
+		content: '';
+		display: block;
+		height: 0;
+		overflow: hidden;
+		position: relative;
+		top: $navbar-default-border-bottom-width;
+		z-index: 2;
+	}
+
+	&.focus:after {
+		background-color: $brand-primary;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: $navbar-link-active-bottom-border-width;
+			margin-top: -$navbar-link-active-bottom-border-width;
+		}
+	}
+
+	&.open {
+		&:after {
+			height: $navbar-link-active-bottom-border-width;
+			margin-top: -$navbar-link-active-bottom-border-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: transparent;
+			}
+		}
+
+		&.focus:after {
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: $brand-primary;
+			}
+		}
+	}
+}
+
+.navbar-default.collapse-basic-search {
+	.basic-search {
+		padding: 0;
+
+		input[type="text"] {
+			background-color: $navbar-default-bg;
+			border-width: 0;
+			height: $navbar-default-height;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				height: $navbar-default-desktop-height;
+			}
+		}
+
+		&.focus button[type='submit'] {
+			color: $brand-primary;
+		}
+
+		.btn {
+			background-color: transparent;
+			border-radius: 0;
+			border-width: 0;
+			color: $brand-default;
+			padding-left: 12px;
+			padding-right: 12px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				height: $navbar-default-desktop-height;
+			}
+
+			&:focus {
+				color: $brand-primary;
+				outline: none;
+			}
+		}
+	}
+}
+
+.navbar-default {
+	.basic-search-close {
+		height: $navbar-default-height;
+	}
+}
+
+// Navbar Default Styles
+
+.navbar-default {
+	border-width: $navbar-default-border-width;
+	margin-bottom: 0;
+	min-height: $navbar-default-height;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		min-height: $navbar-default-desktop-height;
+	}
+
+	.navbar-brand {
+		height: $navbar-default-height;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: $navbar-default-desktop-height;
+		}
+	}
+
+	.navbar-form {
+		padding: (($navbar-default-desktop-height - $input-height-base) / 2) 0;
+	}
+
+	.navbar-toggle {
+		&:focus,
+		&:hover {
+			background-color: transparent;
+		}
+
+		.page-name {
+			display: inline-block;
+			line-height: $navbar-link-line-height;
+		}
+	}
+
+	.navbar-toggle-page-name {
+		border-width: 0;
+		padding-bottom: $navbar-default-padding-vertical;
+		padding-top: $navbar-default-padding-vertical;
+
+		&:after {
+			top: $navbar-default-padding-vertical + $navbar-default-border-bottom-width;
+		}
+	}
+
+	.navbar-collapse {
+		border-width: 0;
+		left: 0;
+		right: 0;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			padding: 0;
+		}
+	}
+
+	.navbar-nav {
+		> li > a {
+			padding: $navbar-default-padding-vertical $navbar-default-padding-horizontal;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				padding: $navbar-default-desktop-padding-vertical $navbar-default-desktop-padding-horizontal;
+			}
+		}
+
+		> .active > a {
+			padding-bottom: $navbar-default-padding-vertical - $navbar-link-active-bottom-border-width;
+			padding-top: $navbar-default-padding-vertical;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				background-color: $navbar-default-link-active-bg;
+				border-color: transparent;
+				display: inline-block;
+				padding-bottom: $navbar-default-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
+				padding-top: $navbar-default-desktop-padding-vertical;
+			}
+
+			&:after {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					background-color: $navbar-default-link-active-highlight;
+					content: '';
+					display: block;
+					height: $navbar-link-active-bottom-border-width;
+					position: relative;
+					width: 100%;
+				}
+			}
+
+			&:focus,
+			&:hover {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					background-color: $navbar-default-link-active-bg;
+				}
+			}
+		}
+	}
+}
+
+.navbar-default .navbar-nav,
+.navbar-default.navbar-no-collapse .navbar-nav {
+	> .active > a {
+		&:after {
+			top: $navbar-default-padding-vertical - $navbar-link-active-bottom-border-width + $navbar-default-border-bottom-width;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				top: $navbar-default-desktop-padding-vertical - $navbar-link-active-bottom-border-width + $navbar-default-border-bottom-width;
+			}
+		}
+	}
+}
+
+/*	make navbar dropdown position absolute
+	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
+
+.navbar-default {
+	.navbar-collapse:first-child,
+	.navbar-collapse-absolute {
+		border-top-width: 0;
+		left: 0;
+		margin-top: $navbar-default-border-bottom-width;
+		right: 0;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin-top: 0;
+		}
+	}
+}
+
+// Navbar Default navbar-no-collapse
+
+.navbar-default.navbar-no-collapse .navbar-nav {
+	> li {
+		border-width: 0;
+
+		> a {
+			&:focus,
+			&:hover {
+				background-color: $navbar-default-link-hover-bg;
+				color: $navbar-default-link-hover-color;
+			}
+		}
+	}
+
+	> .active > a {
+		background-color: $navbar-default-link-active-bg;
+		border-color: transparent;
+		display: inline-block;
+
+		&:after {
+			background-color: $navbar-default-link-active-highlight;
+			content: '';
+			display: block;
+			height: $navbar-link-active-bottom-border-width;
+			position: relative;
+			width: 100%;
+		}
+
+		&:focus,
+		&:hover {
+			background-color: $navbar-default-link-active-bg;
+		}
+	}
+}

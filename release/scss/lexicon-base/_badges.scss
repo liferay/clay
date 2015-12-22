@@ -1,0 +1,123 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.badge {
+	border-radius: 100px;
+	font-size: $badge-font-size;
+	padding-bottom: $badge-padding-bottom;
+	padding-left: $badge-padding-left;
+	padding-right: $badge-padding-right;
+	padding-top: $badge-padding-top;
+}
+
+.badge-lg {
+	font-size: $badge-lg-font-size;
+	padding-bottom: $badge-lg-padding-bottom;
+	padding-left: $badge-lg-padding-left;
+	padding-right: $badge-lg-padding-right;
+	padding-top: $badge-lg-padding-top;
+}
+
+.badge-sm {
+	font-size: $badge-sm-font-size;
+	padding-bottom: $badge-sm-padding-bottom;
+	padding-left: $badge-sm-padding-left;
+	padding-right: $badge-sm-padding-right;
+	padding-top: $badge-sm-padding-top;
+}
+
+// Monospaced Badges
+
+.badge-monospaced {
+	@include monospace($badge-monospaced-size);
+
+	padding: 0;
+
+	&.badge-lg {
+		@include monospace($badge-lg-monospaced-size);
+	}
+
+	&.badge-sm {
+		@include monospace($badge-sm-monospaced-size);
+	}
+}
+
+// Badge Icon Monospaced Sizes
+
+.icon-monospaced {
+	.badge & {
+		@include monospace($badge-font-size);
+	}
+
+	.badge-lg & {
+		@include monospace($badge-lg-font-size);
+	}
+
+	.badge-sm & {
+		@include monospace($badge-sm-font-size);
+	}
+}
+
+// Badge Lexicon Icon Sizes
+
+.lexicon-icon {
+	.badge & {
+		height: $badge-font-size * 0.75;
+		width: $badge-font-size * 0.75;
+	}
+
+	.badge-lg & {
+		height: $badge-lg-font-size * 0.75;
+		width: $badge-lg-font-size * 0.75;
+	}
+
+	.badge-sm & {
+		height: $badge-sm-font-size * 0.75;
+		width: $badge-sm-font-size * 0.75;
+	}
+
+	.badge .icon-monospaced &,
+	.badge-lg .icon-monospaced &,
+	.badge-sm .icon-monospaced & {
+		height: 75%;
+		width: 75%;
+	}
+}
+
+// Skins
+
+.badge {
+	a {
+		color: $badge-color;
+
+		&:focus,
+		&:hover {
+			color: $badge-link-hover-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.badge-danger {
+	background-color: $brand-danger;
+}
+
+.badge-info {
+	background-color: $brand-info;
+}
+
+.badge-primary {
+	background-color: $brand-primary;
+}
+
+.badge-success {
+	background-color: $brand-success;
+}
+
+.badge-warning {
+	background-color: $brand-warning;
+}

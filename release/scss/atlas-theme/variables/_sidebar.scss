@@ -1,0 +1,49 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Skin
+
+$sidebar-default-bg: #F5F8FA !default; // Shared
+$sidebar-default-border: #DFE0E3 !default; // Shared
+$sidebar-default-color: $navbar-default-color !default; // Shared
+$sidebar-default-panel-bg: #DFE6EB !default;
+
+$sidebar-inverse-bg: $inverse-bg !default; // Shared
+$sidebar-inverse-border: $inverse-border !default; // Shared
+$sidebar-inverse-color: $inverse-color !default; // Shared
+$sidebar-inverse-link-color: $inverse-link-color !default; // Shared
+$sidebar-inverse-link-hover-color: $sidebar-inverse-link-color !default; // Shared
+$sidebar-inverse-panel-bg: $inverse-header-bg !default; // Shared
+
+$sidebar-inverse-input-bg: $inverse-header-bg !default; // Atlas
+
+$product-menu1-header-bg: $inverse-header-bg !default; // Atlas
+$product-menu1-header-color: $inverse-header-color !default; // Atlas
+$product-menu1-header-link-color: $inverse-link-color !default; // Atlas
+$product-menu1-header-link-hover-color: $inverse-link-hover-color !default; // Atlas
+
+$product-menu1-header-logo-bg: $brand-primary !default; // Atlas
+
+$product-menu1-tabs-bg: $inverse-hover-bg !default; // Atlas
+$product-menu1-tabs-color: $inverse-hover-color!default; // Atlas
+
+$product-menu1-tabs-active-bg: $inverse-active-bg !default; // Atlas
+$product-menu1-tabs-active-border: transparent !default; // Atlas
+$product-menu1-tabs-active-color: $inverse-active-color !default; // Atlas
+
+$product-menu1-tabs-hover-bg: $inverse-hover-bg !default; // Atlas
+$product-menu1-tabs-hover-border: transparent !default; // Atlas
+$product-menu1-tabs-hover-color: $inverse-hover-color !default; // Atlas
+
+$product-menu1-nav-link-color: $inverse-color !default; // Atlas
+$product-menu1-nav-active-link-color: $inverse-active-color !default; // Atlas
+
+$product-menu1-collapse-icon-bg: #1A2126 !default; // Shared
+
+$product-menu1-user-signout-bg: $inverse-active-bg!default; // Shared
+$product-menu1-user-signout-border-radius: $border-radius-base !default; // Shared
+$product-menu1-user-signout-icon-color: $inverse-active-color !default; // Shared

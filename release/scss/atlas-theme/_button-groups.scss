@@ -1,0 +1,54 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.btn-group {
+	.btn + .btn,
+	.btn + .btn-group,
+	.btn-group + .btn,
+	.btn-group + .btn-group {
+		margin-left: -$btn-border-width;
+	}
+}
+
+.btn-group > .btn + .dropdown-toggle {
+	padding-left: $btn-padding-horizontal / 3;
+	padding-right: $btn-padding-horizontal / 3;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding-left: $btn-desktop-padding-horizontal / 3;
+		padding-right: $btn-desktop-padding-horizontal / 3;
+	}
+}
+
+.btn-group > .btn-lg + .dropdown-toggle {
+	padding-left: $btn-lg-padding-horizontal / 3;
+	padding-right: $btn-lg-padding-horizontal / 3;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding-left: $btn-desktop-lg-padding-horizontal / 3;
+		padding-right: $btn-desktop-lg-padding-horizontal / 3;
+	}
+}
+
+.btn-group.open .dropdown-toggle {
+	box-shadow: none;
+}
+
+.btn-group-vertical {
+	> .btn + .btn,
+	> .btn + .btn-group,
+	> .btn-group + .btn,
+	> .btn-group + .btn-group {
+		margin-top: -$btn-border-width;
+	}
+}
+
+.btn-group-vertical > .btn {
+	&:first-child:not(:last-child) {
+		border-top-right-radius: $btn-border-radius;
+	}
+}

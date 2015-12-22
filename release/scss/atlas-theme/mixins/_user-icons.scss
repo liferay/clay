@@ -1,0 +1,26 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+/**
+ * @param $bg-color - User icon background color
+ * @param $color - User icon color
+ */
+
+@mixin color-user-icon($bg-color: #999, $color: #FFF) {
+	background-color: $bg-color;
+	color: $color;
+}
+
+/**
+ * @param $size - User icon size
+ */
+
+@mixin size-user-icon($size) {
+	height: $size;
+	line-height: $size;
+	width: $size;
+}

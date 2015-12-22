@@ -1,0 +1,79 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+// Basics of a navbar
+$navbar-height:                            48px !default;
+$navbar-link-line-height: 24px !default; // Atlas
+$navbar-padding-horizontal:                12px !default;
+$navbar-padding-vertical:                  floor(($navbar-height - $navbar-link-line-height) / 2) !default;
+
+$navbar-desktop-height: 60px !default; // Atlas
+$navbar-desktop-link-line-height: 28px !default; // Atlas
+$navbar-desktop-padding-horizontal: floor(($grid-gutter-width / 2)) !default; // Atlas
+$navbar-desktop-padding-vertical: floor(($navbar-desktop-height - $navbar-desktop-link-line-height) / 2) !default; // Atlas
+
+$navbar-link-active-bottom-border-width: 2px !default; // Atlas
+
+$navbar-default-border-top-width: 0 !default; // Atlas
+$navbar-default-border-right-width: 0 !default; // Atlas
+$navbar-default-border-bottom-width: 1px !default; // Atlas
+$navbar-default-border-left-width: 0 !default; // Atlas
+$navbar-default-border-width: $navbar-default-border-top-width $navbar-default-border-right-width $navbar-default-border-bottom-width $navbar-default-border-left-width !default;
+
+$navbar-default-height: $navbar-height - $navbar-default-border-top-width - $navbar-default-border-bottom-width !default; // Atlas
+$navbar-default-desktop-height: $navbar-desktop-height - $navbar-default-border-top-width - $navbar-default-border-bottom-width !default; // Atlas
+
+$navbar-default-padding-horizontal: $navbar-padding-horizontal !default; // Atlas
+$navbar-default-padding-vertical: ($navbar-default-height - $navbar-link-line-height) / 2 !default; // Atlas
+$navbar-default-desktop-padding-horizontal: $navbar-default-padding-horizontal !default; // Atlas
+$navbar-default-desktop-padding-vertical: ($navbar-default-desktop-height - $navbar-desktop-link-line-height) / 2 !default; // Atlas
+// Skin
+
+$navbar-border-radius:                     0 !default;
+
+//== Navbar Default
+$navbar-default-color:                     $brand-default !default;
+$navbar-default-bg:                        #FCFEFF !default;
+$navbar-default-border:                    #E3E6E8 !default;
+
+$navbar-default-link-color:                $brand-default !default;
+$navbar-default-link-hover-color:          $brand-default !default;
+$navbar-default-link-hover-bg:             transparent !default;
+
+$navbar-default-link-active-color:         $brand-default !default;
+$navbar-default-link-active-bg:            transparent !default;
+$navbar-default-link-active-highlight: $brand-primary !default;
+
+$navbar-default-link-disabled-color:       #CACDD2 !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         $navbar-default-link-hover-color !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+
+$navbar-default-link-open-bg: $brand-primary !default; // Atlas
+$navbar-default-link-open-color: #FFF !default; // Atlas
+
+//== Navbar Inverse
+$navbar-inverse-color:                     #FFF !default;
+$navbar-inverse-bg:                        $brand-default !default;
+$navbar-inverse-border:                    $brand-default !default;
+
+$navbar-inverse-link-color:                #FFF !default;
+$navbar-inverse-link-hover-color:          $brand-primary !default;
+$navbar-inverse-link-active-color:         $brand-primary !default;
+$navbar-inverse-link-active-bg:            transparent !default;
+$navbar-inverse-link-disabled-color:       #122F51 !default;
+$navbar-inverse-brand-color:               $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:         $brand-primary !default;
+$navbar-inverse-toggle-border-color:       #18293D !default;
+$navbar-inverse-toggle-hover-bg:           #426384 !default;
+
+$navbar-inverse-link-open-bg: $brand-primary !default; // Atlas
+$navbar-inverse-link-open-color: #FFF !default; // Atlas

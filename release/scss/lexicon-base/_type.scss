@@ -1,0 +1,128 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+.monospace {
+	font-family: $font-family-monospace;
+}
+
+.sans-serif {
+	font-family: $font-family-sans-serif;
+}
+
+.serif {
+	font-family: $font-family-serif;
+}
+
+// Icon Sizes
+
+.icon-angle-left {
+	font-size: 1.5em;
+}
+
+.icon-xs {
+	font-size: 0.6em;
+
+	&.icon-angle-left {
+		font-size: 0.9em;
+	}
+}
+
+.icon-sm {
+	font-size: 0.8em;
+
+	&.icon-angle-left {
+		font-size: 1.2em;
+	}
+}
+
+.icon-lg {
+	font-size: 1.667em;
+
+	&.icon-angle-left {
+		font-size: 2.667em;
+	}
+}
+
+.icon-xl {
+	font-size: 3.334em;
+
+	&.icon-angle-left {
+		font-size: 4.667em;
+	}
+}
+
+.icon-xxl {
+	font-size: 5em;
+}
+
+// Contextual backgrounds
+
+@include bg-variant('.bg-default', $gray-lighter);
+
+// Marked Text
+
+mark,
+.mark {
+	@include highlight-text();
+}
+
+// Truncate Text
+
+.truncate-text {
+	display: block;
+
+	@include text-overflow;
+}
+
+// Blockquote Variations
+
+.blockquote-xs {
+	border-left: 1px solid $blockquote-border-color;
+	font-size: $blockquote-font-size * 0.7;
+	padding: ($line-height-computed / 2) ($line-height-computed * 0.7);
+}
+
+.blockquote-sm {
+	border-left: 3px solid $blockquote-border-color;
+	font-size: $blockquote-font-size * 0.8;
+	padding: ($line-height-computed / 2) ($line-height-computed * 0.8);
+}
+
+.blockquote-lg {
+	border-left: 8px solid $blockquote-border-color;
+	font-size: $blockquote-font-size * 1.5;
+	padding: ($line-height-computed / 2) ($line-height-computed * 1.5);
+}
+
+.blockquote-danger {
+	@include color-blockquote ($brand-danger);
+}
+
+.blockquote-default {
+	@include color-blockquote ($blockquote-border-color);
+}
+
+.blockquote-info {
+	@include color-blockquote ($brand-info);
+}
+
+.blockquote-primary {
+	@include color-blockquote ($brand-primary);
+}
+
+.blockquote-success {
+	@include color-blockquote ($brand-success);
+}
+
+.blockquote-warning {
+	@include color-blockquote ($brand-warning);
+}

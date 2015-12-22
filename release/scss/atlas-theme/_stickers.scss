@@ -1,0 +1,19 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sticker-default {
+	background-color: $badge-default-bg;
+	color: $badge-default-color;
+
+	a {
+		&,
+		&:focus,
+		&:hover {
+			color: $badge-default-color;
+		}
+	}
+}

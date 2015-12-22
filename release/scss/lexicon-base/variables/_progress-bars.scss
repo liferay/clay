@@ -1,0 +1,28 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$multi-step-progress-bar-icon: "\f10c" !default;
+$multi-step-progress-bar-complete-icon: "\f00c" !default;
+$multi-step-progress-bar-active-icon: "\f111" !default;
+
+$multi-step-progress-bar-color: #BBB !default; // Shared
+
+$multi-step-progress-bar-active-color: $brand-primary !default;
+
+$multi-step-progress-bar-complete-color: $gray !default; // Shared
+$multi-step-progress-bar-complete-icon-color: $brand-primary !default;
+
+$multi-step-progress-bar-divider-height: 1px !default; // Shared
+
+$multi-step-progress-bar-fixed-width: 100px !default;
+
+$progress-bar-lg-border-radius: $border-radius-base !default;
+$progress-bar-lg-height: 32px !default;
+$progress-bar-xl-border-radius: $border-radius-large !default;
+$progress-bar-xl-height: 52px !default;
+$progress-bar-xs-border-radius: 2px !default;
+$progress-bar-xs-height: 8px !default;

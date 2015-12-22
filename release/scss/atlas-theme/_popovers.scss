@@ -1,0 +1,98 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.popover {
+	border-radius: $popover-border-radius;
+	box-shadow: none;
+	max-width: 240px;
+	padding: 0;
+
+	&.bottom > .arrow:after {
+		border-bottom-color: $popover-title-bg;
+	}
+
+	> .arrow:before {
+		border-color: transparent;
+		border-style: solid;
+		border-width: $popover-arrow-width + 2;
+		display: block;
+		height: 0;
+		position: absolute;
+		width: 0;
+		z-index: -1;
+	}
+}
+
+.popover-content {
+	padding: 16px;
+}
+
+.popover-title {
+	background-color: $popover-title-bg;
+	border-color: $popover-border-color;
+	border-radius: $popover-border-radius $popover-border-radius 0 0;
+	color: $popover-title-color;
+	font-size: 16px;
+	margin: 0 16px;
+	padding: 16px 0;
+}
+
+// Popover box shadows
+//
+// Arrow shadows only appear when $popover-box-shadow-blur > 0
+
+.popover {
+	box-shadow: $popover-box-shadow;
+
+	&.bottom > .arrow:before {
+		border-top-width: 0;
+		border-bottom-color: $popover-box-shadow-bg;
+
+		@if ($popover-box-shadow-y < 0) and ($popover-box-shadow-blur == 0) {
+			content: '';
+		}
+
+		margin-left: -$popover-arrow-width - $popover-box-shadow-x;
+		top: $popover-box-shadow-y - 2 - $popover-box-shadow-spread;
+	}
+
+	&.left > .arrow:before {
+		border-left-color: $popover-box-shadow-bg;
+		border-right-width: 0;
+		bottom: -$popover-arrow-width - $popover-box-shadow-y;
+
+		@if ($popover-box-shadow-x > 0) and ($popover-box-shadow-blur == 0) {
+			content: '';
+		}
+
+		right: -$popover-box-shadow-x - 2 - $popover-box-shadow-spread;
+	}
+
+	&.right > .arrow:before {
+		border-left-width: 0;
+		border-right-color: $popover-box-shadow-bg;
+		bottom: -$popover-arrow-width - $popover-box-shadow-y;
+
+		@if ($popover-box-shadow-x < 0) and ($popover-box-shadow-blur == 0) {
+			content: '';
+		}
+
+		left: $popover-box-shadow-x - 2 - $popover-box-shadow-spread;
+	}
+
+	&.top > .arrow:before {
+		border-bottom-width: 0;
+		border-top-color: $popover-box-shadow-bg;
+		bottom: -$popover-box-shadow-y - 2 - $popover-box-shadow-spread;
+
+		@if ($popover-box-shadow-y > 1) and ($popover-box-shadow-blur == 0) {
+			content: '';
+		}
+
+		margin-left: -$popover-arrow-width + $popover-box-shadow-x;
+	}
+}

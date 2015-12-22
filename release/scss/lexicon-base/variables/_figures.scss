@@ -1,0 +1,38 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$figure-margin-bottom: $line-height-computed !default;
+
+$figure-circle-border-radius: 50% !default;
+$figure-rounded-border-radius: 4px !default;
+$figure-square-border-radius: 0 !default;
+
+// Skin
+
+$figcaption-bg: #000 !default;
+$figcaption-bg-alpha: 0.7 !default;
+$figcaption-color: #FFF !default;
+
+$figcaption-danger-bg: $brand-danger !default;
+$figcaption-danger-bg-alpha: $figcaption-bg-alpha !default;
+$figcaption-danger-color: $figcaption-color !default;
+
+$figcaption-info-bg: $brand-info !default;
+$figcaption-info-color: $figcaption-color !default;
+$figcaption-info-bg-alpha: $figcaption-bg-alpha !default;
+
+$figcaption-primary-bg: $brand-primary !default;
+$figcaption-primary-color: $figcaption-color !default;
+$figcaption-primary-bg-alpha: $figcaption-bg-alpha !default;
+
+$figcaption-success-bg: $brand-success !default;
+$figcaption-success-color: $figcaption-color !default;
+$figcaption-success-bg-alpha: $figcaption-bg-alpha !default;
+
+$figcaption-warning-bg: $brand-warning !default;
+$figcaption-warning-color: $figcaption-color !default;
+$figcaption-warning-bg-alpha: $figcaption-bg-alpha !default;

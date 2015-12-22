@@ -1,0 +1,48 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.label {
+	@extend .badge;
+
+	border-radius: $label-border-radius;
+}
+
+.label-lg {
+	@extend .badge-lg;
+}
+
+.label-sm {
+	@extend .badge-sm;
+}
+
+// Monospaced Labels
+
+.label-monospaced {
+	@extend .badge-monospaced;
+}
+
+// Skins
+
+.label-danger {
+	@extend .badge-danger;
+}
+
+.label-info {
+	@extend .badge-info;
+}
+
+.label-primary {
+	@extend .badge-primary;
+}
+
+.label-success {
+	@extend .badge-success;
+}
+
+.label-warning {
+	@extend .badge-warning;
+}

@@ -1,0 +1,41 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$list-group-header-close-border-width: 1px !default; // Atlas
+$list-group-header-open-border-width: 2px !default; // Atlas
+$list-group-header-icon-font-size: 20px !default; // Shared
+
+$tabular-list-group-item-height: 110px !default;
+
+// Skin
+
+$list-group-header-bg: #F5F8FA !default;
+
+$list-group-border-radius: 0 !default;
+
+$list-group-border: lighten($brand-default, 30%) !default;
+$list-group-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) !default; // Atlas
+
+$list-group-link-color: $brand-default !default;
+$list-group-link-hover-color: $list-group-link-color !default;
+
+$list-group-active-bg: #FCFEFF !default;
+$list-group-active-border: $brand-primary !default;
+$list-group-active-color: $brand-primary !default;
+
+$list-group-header-font-weight: 500 !default; // Shared
+$list-group-header-bg: #F5F8FA !default; // Shared
+$list-group-header-color: $brand-default !default; // Atlas
+$list-group-header-close-border-color: $list-group-border !default; // Atlas
+$list-group-header-open-border-color: $brand-primary !default; // Atlas
+
+$list-group-card-active-bg: $list-group-active-bg !default;
+$list-group-card-active-border: $list-group-active-border !default;
+$list-group-card-active-border-width: 2px !default;
+$list-group-card-active-color: $list-group-active-color !default;

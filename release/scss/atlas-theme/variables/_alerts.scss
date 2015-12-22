@@ -1,0 +1,43 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$alert-padding:                                   18px !default;
+$alert-border-radius:                             4px !default;
+
+//** For top only border use: 2px 0 0 0
+$alert-border-width: 0 !default; // Atlas
+
+$alert-link-font-weight:                          bold !default;
+
+// Skin
+
+$alert-default-bg: $state-default-bg !default; // Atlas
+$alert-default-text: #9698A4 !default; // Atlas
+$alert-default-text-bold: darken($alert-default-text, 6%) !default; // Atlas
+$alert-default-border: lighten($alert-default-text, 12%) !default; // Atlas
+
+$alert-success-bg:                                #DDF3D5 !default;
+$alert-success-text:                              #97C783 !default;
+$alert-success-text-bold: darken($alert-success-text, 6%) !default; // Atlas
+$alert-success-border:                            lighten($alert-success-text, 12%) !default;
+
+$alert-info-bg:                                   #E7F1F9 !default;
+$alert-info-text:                                 #86BADA !default;
+$alert-info-text-bold: darken($alert-info-text, 6%) !default; // Atlas
+$alert-info-border:                               lighten($alert-info-text, 12%) !default;
+
+$alert-warning-bg:                                #F8F4D5 !default;
+$alert-warning-text:                              #D6B679 !default;
+$alert-warning-text-bold: darken($alert-warning-text, 6%) !default; // Atlas
+$alert-warning-border:                            lighten($alert-warning-text, 12%) !default;
+
+$alert-danger-bg:                                 #F1D1D8 !default;
+$alert-danger-text:                               #D77C8A !default;
+$alert-danger-text-bold: darken($alert-danger-text, 6%) !default; // Atlas
+$alert-danger-border:                             lighten($alert-danger-text, 12%) !default;

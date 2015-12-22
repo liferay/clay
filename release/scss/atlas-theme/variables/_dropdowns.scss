@@ -1,0 +1,46 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$dropdown-border-width: 1px !default; // Atlas
+
+$dropdown-wide-width: 500px !default; // Atlas
+
+$dropdown-font-size: $font-size-base !default; // Atlas
+$dropdown-font-size-desktop: $font-size-desktop-base !default; // Atlas
+
+$dropdown-link-padding: 8px 12px !default; // Atlas
+
+$dropdown-header-font-size: $font-size-small !default; // Atlas
+$dropdown-header-font-size-desktop: $font-size-desktop-small !default; // Atlas
+
+$dropdown-margin-horizontal: 15px; // Atlas
+$dropdown-margin-vertical: 15px; // Atlas
+
+// Skin
+
+$dropdown-box-shadow: 0 2px 4px 0 rgba(228, 235, 240, 0.3) !default; // Atlas
+$dropdown-bg:                              #FFF !default;
+$dropdown-border:                          #DCE0E3 !default;
+
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border:                 #DCE0E3 !default;
+$dropdown-divider-bg:                      $dropdown-border !default;
+
+$dropdown-link-color:                      $brand-default !default;
+$dropdown-link-hover-color:                $brand-default !default;
+$dropdown-link-hover-bg:                   #F7FAFA !default;
+
+$dropdown-link-active-color:               $brand-primary !default;
+$dropdown-link-active-bg:                  $dropdown-link-hover-bg !default;
+
+$dropdown-link-disabled-color:             #CACDD2 !default;
+
+$dropdown-header-color:                    #B0B4BB !default;
+
+$dropdown-arrow-color: $dropdown-bg; // Atlas

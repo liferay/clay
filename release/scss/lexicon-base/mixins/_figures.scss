@@ -1,0 +1,21 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin color-figcaption ($bgColor: $figcaption-bg, $alpha: $figcaption-bg-alpha, $color: $figcaption-color) {
+	background-color: $bgColor;
+	background-color: rgba($bgColor, $alpha);
+	color: $color;
+}
+
+@mixin style-figcaption($bgColor: $figcaption-bg, $alpha: $figcaption-bg-alpha, $color: $figcaption-color) {
+	@include color-figcaption($bgColor, $alpha, $color);
+
+	font-weight: 300;
+	padding: 10px 15px;
+	position: absolute;
+	width: 100%;
+}

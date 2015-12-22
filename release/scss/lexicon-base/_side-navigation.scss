@@ -1,0 +1,137 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.container-fluid-1280.sidenav-container {
+	padding-left: floor(($grid-gutter-width / 2));
+	padding-right: floor(($grid-gutter-width / 2));
+
+	@media screen and (min-width: 1300px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.sidenav-fixed {
+	&.sidenav-right {
+		> .sidenav-menu-slider {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	> .sidenav-menu-slider {
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		top: 0;
+		z-index: $zindex-navbar-fixed + 5;
+	}
+}
+
+.sidenav-container {
+	position: relative;
+}
+
+.sidenav-container.closed {
+	> .sidenav-menu-slider {
+		overflow: hidden;
+		visibility: hidden;
+		width: 0;
+	}
+
+	> .sidenav-content {
+		left: 0;
+	}
+}
+
+.sidenav-content {
+	position: relative;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include clearfix;
+
+		position: static;
+	}
+}
+
+.sidenav-menu {
+	height: 100%;
+	position: relative;
+}
+
+.sidenav-menu-slider {
+	overflow: visible;
+	position: absolute;
+	z-index: 10;
+}
+
+.sidenav-container.sidenav-right {
+	.sidenav-content {
+		left: auto;
+		right: 0;
+	}
+
+	.sidenav-menu {
+		right: 0;
+	}
+
+	.sidenav-menu-slider {
+		right: 0;
+	}
+}
+
+.sidenav-fixed.sidenav-container {
+	overflow: hidden;
+
+	&.closed {
+		overflow: visible;
+	}
+}
+
+.sidenav-transition,
+.sidenav-transition .sidenav-content,
+.sidenav-transition .sidenav-menu-slider,
+.sidenav-transition .sidenav-menu-slider .sidenav-menu {
+	@include transition(all 0.5s ease);
+}
+
+.sidenav-transition .sidenav-menu-slider {
+	overflow: hidden;
+}
+
+// Simple Sidenav
+
+.body-fixed {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.sidenav-fixed.sidenav-menu-slider {
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+
+	&.closed {
+		visibility: hidden;
+		width: 0;
+	}
+
+	&,
+	.sidenav-menu {
+		width: 400px;
+	}
+}
+
+.sidenav-fixed.sidenav-menu-slider.sidenav-right {
+	left: auto;
+	right: 0;
+}

@@ -1,0 +1,17 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.icon-monospaced.btn:before {
+	top: -$btn-border-width;
+}
+
+.help-icon-default {
+	&:focus,
+	&:hover {
+		color: $gray-light;
+	}
+}

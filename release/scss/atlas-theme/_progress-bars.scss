@@ -1,0 +1,26 @@
+/**
+* Lexicon 0.1.25
+*
+* Copyright 2015, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.multi-step-progress-bar {
+	> .complete .divider {
+		margin-left: 18px;
+
+		&:after {
+			left: -16px;
+		}
+	}
+
+	.divider {
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+
+	.progress-bar-step,
+	.progress-bar-title {
+		font-weight: 500;
+	}
+}
