@@ -40,6 +40,22 @@
 		};
 	};
 
+	var guid = (function() {
+			var counter = 0;
+
+			return function(element, ns) {
+				var strId = element.attr('id');
+
+				if (!strId) {
+					strId = (ns + counter++);
+
+					element.attr('id', strId);
+				}
+
+				return strId;
+			};
+	}());
+
 	var toInt = function(str) {
 		return parseInt(str, 10) || 0;
 	};
@@ -60,6 +76,7 @@
 			options.transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 			options.widthOriginal = options.width;
 
+			instance.element = element;
 			instance.useDataAttribute = useDataAttribute;
 
 			if (useDataAttribute) { // instantiate using data attribute
@@ -87,13 +104,14 @@
 
 			instance.options = options;
 
-			instance._bindUI(element);
-			instance._renderUI(element);
+			instance._bindUI();
+			instance._renderUI();
 		},
 
-		clearStyle: function(element, attribute) {
+		clearStyle: function(attribute) {
 			var instance = this;
 
+			var element = instance.element;
 			var options = instance.options;
 
 			var content = element.find(options.content).first();
@@ -106,10 +124,12 @@
 			els.css(attribute, '');
 		},
 
-		getSidenavLeftWidth: function(element, type, offset, width) {
+		getSidenavLeftWidth: function(type, offset, width) {
 			var instance = this;
 
 			var contentCss = {};
+
+			var element = instance.element;
 
 			if (instance.mobile) {
 				var left = '';
@@ -138,10 +158,12 @@
 			return contentCss;
 		},
 
-		getSidenavRightWidth: function(element, type, offset, width) {
+		getSidenavRightWidth: function(type, offset, width) {
 			var instance = this;
 
 			var contentCss = {};
+
+			var element = instance.element;
 
 			if (type === 'fixed' || type === 'fixed-push') {
 				contentCss.left = '';
@@ -170,10 +192,23 @@
 			return contentCss;
 		},
 
-		hideSidenav: function(element) {
+		hide: function() {
+			var instance = this;
+
+			if (instance.useDataAttribute) {
+				instance.hideSimpleSidenav();
+			}
+			else {
+				instance.toggleNavigation(false);
+			}
+		},
+
+		hideSidenav: function() {
 			var instance = this;
 
 			var options = instance.options;
+
+			var element = instance.element;
 
 			var content = element.find(options.content).first();
 			var navigation = element.find(options.navigation).first();
@@ -207,10 +242,42 @@
 			navigation.css('width', '');
 		},
 
-		setEqualHeight: function(container) {
+		hideSimpleSidenav: function() {
+			var instance = this;
+
+			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
+
+			if (!simpleSidenavClosed) {
+				var content = instance._getSimpleSidenavContent();
+				var sidenav = instance._getSimpleSidenavNavigation();
+
+				var openClass = instance.options.openClass;
+
+				var toggler = instance.options.toggler;
+
+				instance._onSidenavTransitionEnd(content, function() {
+					instance._removeBodyFixed();
+
+					sidenav.removeClass('sidenav-transition');
+					toggler.removeClass('sidenav-transition');
+
+					sidenav.trigger('closed.lexicon.sidenav');
+				});
+
+				content.addClass('sidenav-transition');
+				sidenav.addClass('sidenav-transition closed');
+				toggler.addClass('sidenav-transition');
+
+				content.removeClass(openClass);
+				toggler.removeClass(openClass);
+			}
+		},
+
+		setEqualHeight: function() {
 			var instance = this;
 
 			if (instance.options.equalHeight) {
+				var element = instance.element;
 				var options = instance.options;
 
 				var content = options.content;
@@ -219,29 +286,37 @@
 				var type = instance.mobile ? options.typeMobile : options.type;
 
 				if (type !== 'fixed' && type !== 'fixed-push') {
-					container.each(function(index, node) {
-						node = $(node);
+					var contentNode = element.find(content).first();
+					var navNode = element.find(navigation).first();
+					var sideNavMenuNode = element.find('.sidenav-menu').first();
 
-						var contentNode = node.find(content).first();
-						var navNode = node.find(navigation).first();
-						var sideNavMenuNode = node.find('.sidenav-menu').first();
+					var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
 
-						var tallest = Math.max(contentNode.outerHeight(), navNode.outerHeight());
-
-						contentNode.css('min-height', tallest);
-						navNode.css('min-height', tallest);
-						sideNavMenuNode.css('min-height', tallest);
-					});
+					contentNode.css('min-height', tallest);
+					navNode.css('min-height', tallest);
+					sideNavMenuNode.css('min-height', tallest);
 				}
 			}
 		},
 
-		showSidenav: function(element) {
+		show: function() {
+			var instance = this;
+
+			if (instance.useDataAttribute) {
+				instance.showSimpleSidenav();
+			}
+			else {
+				instance.toggleNavigation(true);
+			}
+		},
+
+		showSidenav: function() {
 			var instance = this;
 
 			instance._resizeSidenav();
 
 			var options = instance.options;
+			var element = instance.element;
 
 			var mobile = instance.mobile;
 
@@ -258,7 +333,7 @@
 
 			var widthMethod = element.hasClass('sidenav-right') ? 'getSidenavRightWidth' : 'getSidenavLeftWidth';
 
-			var contentCss = instance[widthMethod](element, type, offset, width);
+			var contentCss = instance[widthMethod](type, offset, width);
 
 			if (mobile) {
 				menu.css('right', '');
@@ -270,46 +345,100 @@
 			menu.css('width', width);
 		},
 
-		toggleNavigation: function(container) {
+		showSimpleSidenav: function() {
 			var instance = this;
 
-			var menu = container.find('.sidenav-menu').first();
+			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
+
+			if (simpleSidenavClosed) {
+				var content = instance._getSimpleSidenavContent();
+				var sidenav = instance._getSimpleSidenavNavigation();
+
+				var openClass = instance.options.openClass;
+
+				var toggler = instance.options.toggler;
+
+				var desktop = instance._isDesktop();
+				var desktopFixedPush = instance._getSimpleSidenavType() === 'desktop-fixed-push';
+				var mobileFixedPush = instance._getSimpleSidenavType() === 'mobile-fixed-push';
+
+				instance._onSidenavTransitionEnd(content, function() {
+					sidenav.removeClass('sidenav-transition');
+					toggler.removeClass('sidenav-transition');
+
+					sidenav.trigger('open.lexicon.sidenav');
+				});
+
+				sidenav.addClass('sidenav-transition');
+				toggler.addClass('sidenav-transition');
+
+				if (!desktop) {
+					$('body').addClass('body-fixed');
+				}
+
+				if (desktopFixedPush || mobileFixedPush) {
+					content.addClass('sidenav-transition');
+					content.addClass(openClass);
+					toggler.addClass(openClass);
+				}
+
+				sidenav.removeClass('closed');
+			}
+		},
+
+		toggle: function() {
+			var instance = this;
+
+			if (instance.useDataAttribute) {
+				instance.toggleSimpleSidenav();
+			}
+			else {
+				instance.toggleNavigation();
+			}
+		},
+
+		toggleNavigation: function(force) {
+			var instance = this;
+
+			var element = instance.element;
+
+			var menu = element.find('.sidenav-menu').first();
 			var toggler = $(instance.options.toggler);
 
 			var width = instance.options.width;
 
-			var closed = container.hasClass('closed');
+			var closed = $.type(force) === 'boolean' ? force : element.hasClass('closed');
 
 			var widthMethod = closed ? 'showSidenav' : 'hideSidenav';
 
 			if (closed) {
 				setTimeout(function() {
-					instance.setEqualHeight(container);
+					instance.setEqualHeight();
 				}, 0);
 
 				menu.css('width', width);
 
-				if (container.hasClass('sidenav-right') && container.hasClass('sidenav-fixed')) {
+				if (element.hasClass('sidenav-right') && element.hasClass('sidenav-fixed')) {
 					menu.css('right', width);
 				}
 			}
 
-			instance._onSidenavTransitionEnd(container, function() {
-				var menu = container.find('.sidenav-menu').first();
+			instance._onSidenavTransitionEnd(element, function() {
+				var menu = element.find('.sidenav-menu').first();
 
-				if (container.hasClass('closed')) {
-					instance.clearStyle(container, 'min-height');
+				if (element.hasClass('closed')) {
+					instance.clearStyle('min-height');
 
 					instance._removeBodyFixed();
 
 					toggler.removeClass('open').removeClass('sidenav-transition');
 
-					container.trigger('closed.lexicon.sidenav');
+					element.trigger('closed.lexicon.sidenav');
 				}
 				else {
 					toggler.addClass('open').removeClass('sidenav-transition');
 
-					container.trigger('open.lexicon.sidenav');
+					element.trigger('open.lexicon.sidenav');
 				}
 
 				if (instance.mobile) {
@@ -317,48 +446,129 @@
 				}
 			});
 
-			container.addClass('sidenav-transition');
+			element.addClass('sidenav-transition');
 			toggler.addClass('sidenav-transition');
 
 			setTimeout(function() {
-				container.toggleClass('closed', !closed);
+				element.toggleClass('closed', !closed);
 
 				if (closed && instance.desktop) {
 					menu.css('right', '');
 				}
-				else if (!closed && instance.mobile && container.hasClass('sidenav-right')) {
+				else if (!closed && instance.mobile && element.hasClass('sidenav-right')) {
 					menu.css('right', width);
 				}
 
-				instance[widthMethod](container);
+				instance[widthMethod](element);
 			}, 0);
 		},
 
-		_bindUI: function(element) {
+		toggleSimpleSidenav: function() {
 			var instance = this;
+
+			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
+
+			if (simpleSidenavClosed) {
+				instance.showSimpleSidenav();
+			}
+			else {
+				instance.hideSimpleSidenav();
+			}
+		},
+
+		visible: function() {
+			var instance = this;
+
+			var closed;
+
+			if (instance.useDataAttribute) {
+				closed = instance._isSimpleSidenavClosed();
+			}
+			else {
+				var element = instance.element;
+
+				closed = element.hasClass('sidenav-transition') ? !element.hasClass('closed') : element.hasClass('closed');
+			}
+
+			return !closed;
+		},
+
+		_bindUI: function() {
+			var instance = this;
+
+			var element = instance.element;
 
 			if (!instance.useDataAttribute) {
 				addResizeListener();
-				instance._onScreenChange(element);
+				instance._onScreenChange();
 			}
 
 			if (instance.options.useDelegate) {
-				instance._onDelegateClickTrigger(element);
+				instance._onDelegateClickTrigger();
 			}
 			else {
-				instance._onClickTrigger(element);
+				instance._onClickTrigger();
 			}
 
-			instance._onClickSidenavClose(element);
+			instance._onClickSidenavClose();
 		},
 
-		_focusElement: function(element) {
+		_focusElement: function(el) {
 			// ios 8 fixed element disappears when trying to scroll
-			element.focus();
+			el.focus();
 		},
 
-		_onClickSidenavClose: function(element) {
+		_getSimpleSidenavContent: function() {
 			var instance = this;
+
+			return $(instance.options.content).first();
+		},
+
+		_getSimpleSidenavNavigation: function() {
+			var instance = this;
+
+			var toggler = instance.options.toggler;
+
+			var hrefAttr = toggler.attr('href');
+
+			return instance.options.target ? $(instance.options.target) : doc.find(hrefAttr);
+		},
+
+		_getSimpleSidenavType: function() {
+			var instance = this;
+
+			var desktop = instance._isDesktop();
+			var type = instance.options.type;
+			var typeMobile = instance.options.typeMobile;
+
+			if (desktop && (type === 'fixed-push')) {
+				return 'desktop-fixed-push';
+			}
+			else if (!desktop && (typeMobile === 'fixed-push')) {
+				return 'mobile-fixed-push';
+			}
+
+			return 'fixed';
+		},
+
+		_isDesktop: function() {
+			return window.innerWidth >= toInt(this.options.breakpoint);
+		},
+
+		_isSimpleSidenavClosed: function() {
+			var instance = this;
+
+			var hrefAttr = instance.options.toggler.attr('href');
+
+			var container = instance.options.target ? $(instance.options.target) : doc.find(hrefAttr);
+
+			return container.hasClass('closed');
+		},
+
+		_onClickSidenavClose: function() {
+			var instance = this;
+
+			var element = instance.element;
 
 			var closeButton = element.find('.sidenav-close').first();
 			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
@@ -367,89 +577,59 @@
 				closeButton = container.find('.sidenav-close');
 			}
 
-			closeButton.on('click.lexicon.sidenav', function(event) {
-				event.preventDefault();
+			if (!closeButton.data('click.lexicon.sidenav')) {
+				closeButton.on('click.lexicon.sidenav', function(event) {
+					event.preventDefault();
 
-				if (instance.useDataAttribute) {
-					instance._toggleSimpleSidenav(element);
-				}
-				else {
-					instance.toggleNavigation(element);
-				}
-			});
+					instance.toggle();
+				});
+
+				closeButton.data('click.lexicon.sidenav', true);
+			}
 		},
 
-		_onClickTrigger: function(element) {
+		_onClickTrigger: function() {
 			var instance = this;
 
 			var togglerFn;
+
+			var element = instance.element;
 
 			var el = element;
 
-			if (instance.useDataAttribute) {
-				togglerFn = function(event) {
-					event.preventDefault();
-
-					instance._toggleSimpleSidenav(element);
-				};
-			}
-			else {
+			if (!instance.useDataAttribute) {
 				el = element.toggler;
-
-				togglerFn = function(event) {
-					var $this = $(this);
-
-					var selector = $this.closest(instance.options.selector);
-
-					var container = selector.length ? selector : element;
-
-					event.preventDefault();
-
-					instance.toggleNavigation(container);
-				};
 			}
 
-			el.on('click.lexicon.sidenav', togglerFn);
+			el.on(
+				'click.lexicon.sidenav',
+				function(event) {
+					instance.toggle();
+				}
+			);
 		},
 
-		_onDelegateClickTrigger: function(element) {
+		_onDelegateClickTrigger: function() {
 			var instance = this;
 
 			var togglerFn;
-			var togglerSelector;
+			var togglerSelector = '';
 
+			var element = instance.element;
 			var options = instance.options;
 
 			if (instance.useDataAttribute) {
-				togglerSelector = options.target ? '[data-target="' + options.target + '"]' : '[href="' + element.attr('href') + '"]';
-
-				togglerFn = function(event) {
-					event.preventDefault();
-
-					instance._toggleSimpleSidenav(element);
-				};
+				togglerSelector = '#' + guid(element, 'generatedLexiconSidenavTogglerId');
 			}
 			else {
 				var toggler = options.toggler;
 
 				if (toggler === '.sidenav-toggler') {
-					togglerSelector = options.selector + ' ' + toggler;
+					togglerSelector = '#' + guid(element, 'generatedLexiconSidenavTogglerId') + ' ' + toggler;
 				}
 				else {
 					togglerSelector = toggler;
 				}
-
-				togglerFn = function(event) {
-					var $this = $(this);
-
-					var selector = $this.closest(options.selector);
-
-					var container = selector.length ? selector : element;
-
-					event.preventDefault();
-
-					instance.toggleNavigation(container);
-				};
 			}
 
 			var dataTogglerSelector = 'lexicon.' + togglerSelector;
@@ -457,14 +637,22 @@
 			if (!doc.data(dataTogglerSelector)) {
 				doc.data(dataTogglerSelector, 'true');
 
-				doc.on('click.lexicon.sidenav', togglerSelector, togglerFn);
+				doc.on(
+					'click.lexicon.sidenav',
+					togglerSelector,
+					function(event) {
+						instance.toggle();
+					}
+				);
 			}
 		},
 
-		_onScreenChange: function(element) {
+		_onScreenChange: function() {
 			var instance = this;
 
 			instance._setScreenSize();
+
+			var element = instance.element;
 
 			doc.on('screenChange.lexicon.sidenav', function(event, winWidth) {
 				instance._setScreenSize();
@@ -478,40 +666,36 @@
 				element.toggleClass('sidenav-fixed', fixedMenu);
 
 				if (!desktop && fixedMenu) {
-					instance.hideSidenav(element);
+					instance.hideSidenav();
 
 					setTimeout(function() {
 						element.addClass('closed');
 
-						instance.clearStyle(element, 'width');
+						instance.clearStyle('width');
 					}, 0);
 				}
 
-				element.each(function(index, node) {
-					node = $(node);
-
-					if (!node.hasClass('closed')) {
-						instance.clearStyle(node, 'min-height');
-						instance.showSidenav(node);
-						instance.setEqualHeight(node);
-					}
-				});
+				if (!element.hasClass('closed')) {
+					instance.clearStyle('min-height');
+					instance.showSidenav();
+					instance.setEqualHeight();
+				}
 			});
 		},
 
-		_onSidenavTransitionEnd: function(element, func) {
+		_onSidenavTransitionEnd: function(el, fn) {
 			var instance = this;
 
 			var transitionEnd = instance.options.transitionEnd;
 
-			element.on(transitionEnd, function(event) {
+			el.on(transitionEnd, function(event) {
 				var $this = $(this);
 
 				if ($(event.target).is(instance.options.navigation)) {
 					$this.removeClass('sidenav-transition');
 
-					if (func) {
-						func();
+					if (fn) {
+						fn();
 					}
 
 					$this.off(transitionEnd);
@@ -527,53 +711,55 @@
 			body.removeClass('body-fixed');
 		},
 
-		_renderNav: function(element) {
+		_renderNav: function() {
 			var instance = this;
 
 			instance._resizeSidenav();
 
+			var element = instance.element;
+
 			var width = instance.options.width;
 
-			element.each(function(index, node) {
-				node = $(node);
+			var menu = element.find('.sidenav-menu').first();
 
-				var menu = node.find('.sidenav-menu').first();
+			if (element.hasClass('closed') && element.hasClass('sidenav-right')) {
+				menu.css({
+					right: width,
+					width: width
+				});
+			}
 
-				if (node.hasClass('closed') && node.hasClass('sidenav-right')) {
-					menu.css({
-						right: width,
-						width: width
-					});
-				}
-
-				if (!node.hasClass('closed')) {
-					instance.showSidenav(node);
-					instance.setEqualHeight(node);
-				}
-			});
+			if (!element.hasClass('closed')) {
+				instance.showSidenav();
+				instance.setEqualHeight();
+			}
 		},
 
-		_renderUI: function(element) {
+		_renderUI: function() {
 			var instance = this;
 
-			var mobile = instance.mobile;
-			var options = instance.options;
+			var element = instance.element;
 
-			var type = mobile ? options.typeMobile : options.type;
+			if (!instance.useDataAttribute) {
+				var mobile = instance.mobile;
+				var options = instance.options;
 
-			if (options.position === 'right') {
-				element.addClass('sidenav-right');
+				var type = mobile ? options.typeMobile : options.type;
+
+				if (options.position === 'right') {
+					element.addClass('sidenav-right');
+				}
+
+				if (type === 'fixed' || type === 'fixed-push') {
+					element.addClass('sidenav-fixed');
+				}
+
+				if (mobile) {
+					element.addClass('closed');
+				}
+
+				instance._renderNav();
 			}
-
-			if (type === 'fixed' || type === 'fixed-push' && !instance.useDataAttribute) {
-				element.addClass('sidenav-fixed');
-			}
-
-			if (mobile) {
-				element.addClass('closed');
-			}
-
-			instance._renderNav(element);
 		},
 
 		_resizeSidenav: function() {
@@ -600,66 +786,6 @@
 
 			instance.mobile = !desktop;
 			instance.desktop = desktop;
-		},
-
-		_toggleSimpleSidenav: function(element) {
-			var instance = this;
-
-			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
-			var content = $(instance.options.content).first();
-			var openClass = instance.options.openClass;
-			var toggler = instance.options.toggler;
-			var type = instance.options.type;
-			var typeMobile = instance.options.typeMobile;
-
-			var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
-			var desktopFixedPush = desktop && (type === 'fixed-push');
-			var mobileFixedPush = !desktop && (typeMobile === 'fixed-push');
-
-			container.addClass('sidenav-transition');
-			toggler.addClass('sidenav-transition');
-
-			if (container.hasClass('closed')) {
-				if (!desktop) {
-					$('body').addClass('body-fixed');
-				}
-
-				if (desktopFixedPush || mobileFixedPush) {
-					instance._onSidenavTransitionEnd(content, function() {
-						container.removeClass('sidenav-transition');
-						toggler.removeClass('sidenav-transition');
-
-						container.trigger('open.lexicon.sidenav');
-					});
-
-					content.addClass('sidenav-transition');
-				}
-
-				container.removeClass('closed');
-				content.addClass(openClass);
-				toggler.addClass(openClass);
-			}
-			else {
-				if (desktopFixedPush || mobileFixedPush) {
-					instance._onSidenavTransitionEnd(content, function() {
-						instance._removeBodyFixed();
-
-						container.removeClass('sidenav-transition');
-						toggler.removeClass('sidenav-transition');
-
-						container.trigger('closed.lexicon.sidenav');
-					});
-
-					content.addClass('sidenav-transition');
-				}
-				else {
-					instance._removeBodyFixed();
-				}
-
-				container.addClass('closed');
-				content.removeClass(openClass);
-				toggler.removeClass(openClass);
-			}
 		}
 	};
 
@@ -687,7 +813,7 @@
 				}
 
 				if (typeof options === 'string') {
-					data[options].call($this);
+					data[options].call(data);
 				}
 			}
 		);
