@@ -2,13 +2,44 @@
 * No changes yet
 ***
 
+## v0.1.26 - November 22, 2015
+* Breaking: Rename management-bar-right to management-bar-nav-right
+* New: Updated the Sidenav component, adding the following new methods: `hide()`, `show()`, `toggle()`, and `visible()` ([Documentation](http://liferay.github.io/lexicon/content/sidenav/#methods))
+* New: Added the following new icons:
+	- blogs
+	- bookmarks
+	- calendar
+	- categories
+	- documents-and-media
+	- download
+	- dynamic-data-list
+	- forms
+	- info-panel-closed
+	- info-panel-open
+	- message-boards
+	- polls
+	- reply
+	- rss.svg
+	- tag
+	- web-content
+	- wiki
+	- workflow
+* Update: Atlas th element and .table-cell-field should be styled to match Lexicon mock ups
+* Update: Dropdowns in navbar should be properly styled in all screen sizes (Fixes [#91](https://github.com/liferay/lexicon/issues/91))
+* Update: Moved variable tooltip-inner-max-width to Lexicon Base, renamed files from tooltips to tooltip
+* Update: Btn-default styles in management-bar and active state
+* Update: ([Fixes #82](https://github.com/liferay/lexicon/issues/82)) Atlas checkboxes and radio buttons to be bigger
+* Update: Allow multiple Simple Sidenav Togglers to open sidenav
+* Update: Add support for placing text around toggle-switch ([Fixes #81](https://github.com/liferay/lexicon/issues/81))
+* Update: Atlas select box arrows are svg instead of image
+
 ## v0.1.25 - November 12, 2015
-Fix: Caret Icons `caret-top` and `caret-bottom` should be center aligned
-Update: Action button should be under dropdowns, popovers, and tooltips
-Update: Collapsible panels whole panel heading should be clickable
+* Fix: Caret Icons `caret-top` and `caret-bottom` should be center aligned
+* Update: Action button should be under dropdowns, popovers, and tooltips
+* Update: Collapsible panels whole panel heading should be clickable
 
 ## v0.1.24 - November 12, 2015
-Publishing the build files (Nate's fault)
+* Publishing the build files (Nate's fault)
 
 ## v0.1.23 - November 12, 2015
 * Update: Icon-monospaced should work with svg icons
