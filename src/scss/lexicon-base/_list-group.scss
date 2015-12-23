@@ -145,19 +145,19 @@ button.list-group-heading,
 		border-left-width: 0;
 		border-right-width: 0;
 		border-top-width: 0;
-		padding: 1em 0.3em;
+		padding: $table-cell-padding;
 		position: relative;
 		word-break: break-all; // IE
 		word-break: break-word;
 
 		&:first-child {
 			border-left-width: $tabular-list-group-border-width;
-			padding-left: 1em;
+			padding-left: 15px;
 		}
 
 		&:last-child {
 			border-right-width: $tabular-list-group-border-width;
-			padding-right: 1em;
+			padding-right: 15px;
 		}
 	}
 
