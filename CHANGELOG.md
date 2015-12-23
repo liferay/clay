@@ -2,6 +2,9 @@
 * No changes yet
 ***
 
+## v0.1.28 - December 23, 2015
+* No changes, just bumping because of issues with WebJars/Maven caching.
+
 ## v0.1.27 - December 22, 2015
 * Updated bower.json to exclude non-essential directories
 
