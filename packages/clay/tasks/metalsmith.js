@@ -16,6 +16,7 @@ var handleNav = require('../lib/handle_nav');
 var handlePath = require('../lib/handle_path');
 var handlePermalink = require('../lib/handle_permalink');
 var handleTemplate = require('../lib/handle_template');
+var wrapChangelog = require('../lib/wrap_changelog');
 
 var _s = require('underscore.string');
 
@@ -35,6 +36,7 @@ module.exports = function(gulp, plugins, _, config) {
 		var filter = plugins.filter(['**/*.md', '**/*.html']);
 		var assetFilter = plugins.filter(['**/*.*css', '**/*.js', '!**/js/bootstrap{*,/*}.js']);
 		var svgFilter = plugins.filter(['content/icons-lexicon.html']);
+		var changelogFilter = plugins.filter(['./CHANGELOG.md']);
 
 		var REGEX_VAR_FILEPATH = new RegExp(config.BOOTSTRAP_VAR_FILE + '$');
 
@@ -93,6 +95,7 @@ module.exports = function(gulp, plugins, _, config) {
 								}
 							)
 						)
+						.use(wrapChangelog())
 						.use(headingsId(
 							{
 								linkTemplate: '<a class="heading-anchor" href="#%s"><i class="icon icon-link"></i></a>',
