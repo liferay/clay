@@ -237,7 +237,7 @@ section: Visual Tests
 			</label>
 		</div>
 
-		<a class="management-bar-toggle management-bar-toggle-link collapsed" data-toggle="collapse" href="#mgmtBarCollapse0">
+		<a class="collapsed management-bar-toggle management-bar-toggle-link" data-toggle="collapse" href="#mgmtBarCollapse0">
 			<span class="management-bar-item-title">Label</span>
 			<svg class="lexicon-icon">
 				<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
@@ -246,7 +246,7 @@ section: Visual Tests
 	</div>
 
 	<div class="collapse management-bar-collapse" id="mgmtBarCollapse0">
-		<ul class="nav management-bar-nav">
+		<ul class="management-bar-nav nav">
 			<li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 					<span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
@@ -268,24 +268,24 @@ section: Visual Tests
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail3">Email address</label>
-								<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+								<input class="form-control" id="exampleInputEmail3" placeholder="Email" type="email">
 							</div>
-							<div class="checkbox checkbox-default active">
+							<div class="active checkbox checkbox-default">
 								<label>
 									<input checked type="checkbox" value=""> Approved
 								</label>
 							</div>
-							<div class="checkbox checkbox-default active">
+							<div class="active checkbox checkbox-default">
 								<label>
 									<input checked type="checkbox" value=""> Draft
 								</label>
 							</div>
-							<div class="checkbox checkbox-default active">
+							<div class="active checkbox checkbox-default">
 								<label>
 									<input checked type="checkbox" value=""> Pending
 								</label>
 							</div>
-							<div class="checkbox checkbox-default active">
+							<div class="active checkbox checkbox-default">
 								<label>
 									<input checked type="checkbox" value=""> Expired
 								</label>
@@ -362,7 +362,7 @@ section: Visual Tests
 </div>
 
 <div class="management-bar management-bar-default management-bar-no-collapse">
-	<ul class="nav management-bar-nav">
+	<ul class="management-bar-nav nav">
 		<li>
 			<div class="checkbox">
 				<label>
@@ -375,7 +375,7 @@ section: Visual Tests
 		</li>
 	</ul>
 
-	<ul class="nav management-bar-nav management-bar-nav-right">
+	<ul class="management-bar-nav management-bar-nav-right nav">
 		<li>
 			<a class="btn btn-default" href="#">
 				<svg class="icon-monospaced lexicon-icon">
@@ -432,8 +432,8 @@ section: Visual Tests
 </div>
 <div class="uxgl-assorted-section">
 	<ul class="nav nav-tabs" role="tablist">
-		<li class="active" role="presentation"><a aria-controls="fields" href="#fields" data-toggle="tab" role="tab">Fields</a></li>
-		<li role="presentation"><a aria-controls="settings" href="#settings" data-toggle="tab" role="tab">Settings</a></li>
+		<li class="active" role="presentation"><a aria-controls="fields" data-toggle="tab" href="#fields" role="tab">Fields</a></li>
+		<li role="presentation"><a aria-controls="settings" data-toggle="tab" href="#settings" role="tab">Settings</a></li>
 		<li class="disabled" role="presentation"><a href="#documents">Documents</a></li>
 		<li class="dropdown" role="presentation">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#configuration">Configuration <span class="caret"></span></a>
@@ -452,15 +452,15 @@ section: Visual Tests
 		<thead>
 			<tr>
 				<th class="table-cell-field"></th>
-				<th class="table-cell-field hidden-xs hidden-sm">ID</th>
+				<th class="hidden-sm hidden-xs table-cell-field">ID</th>
 				<th class="table-cell-content">
 					Title
 				</th>
-				<th class="table-cell-field hidden-xs hidden-sm">Status</th>
-				<th class="table-cell-field hidden-xs hidden-sm">Modified Date</th>
-				<th class="table-cell-field hidden-xs hidden-sm">Display Date</th>
+				<th class="hidden-sm hidden-xs table-cell-field">Status</th>
+				<th class="hidden-sm hidden-xs table-cell-field">Modified Date</th>
+				<th class="hidden-sm hidden-xs table-cell-field">Display Date</th>
 				<th class="table-cell-field">Author</th>
-				<th class="table-cell-field hidden-xs hidden-sm">Type</th>
+				<th class="hidden-sm hidden-xs table-cell-field">Type</th>
 				<th class="table-cell-field"></th>
 			</tr>
 		</thead>
@@ -474,15 +474,15 @@ section: Visual Tests
 						</label>
 					</div>
 				</td>
-				<td class="table-cell-field hidden-xs hidden-sm">21146</td>
+				<td class="hidden-sm hidden-xs table-cell-field">21146</td>
 				<td class="table-cell-content">
 					Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.
 				</td>
-				<td class="table-cell-field hidden-xs hidden-sm">--</td>
-				<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
-				<td class="table-cell-field hidden-xs hidden-sm">--</td>
+				<td class="hidden-sm hidden-xs table-cell-field">--</td>
+				<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+				<td class="hidden-sm hidden-xs table-cell-field">--</td>
 				<td class="table-cell-field">Stanley Nelson</td>
-				<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
+				<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
 				<td class="table-cell-field">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -509,19 +509,19 @@ section: Visual Tests
 						</label>
 					</div>
 				</td>
-				<td class="table-cell-field hidden-xs hidden-sm">
+				<td class="hidden-sm hidden-xs table-cell-field">
 					21148
 				</td>
-				<td class="table-cell-content clamp-horizontal">
+				<td class="clamp-horizontal table-cell-content">
 					<div class="clamp-container">
 						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</div>
 				</td>
-				<td class="table-cell-field hidden-xs hidden-sm">--</td>
-				<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
-				<td class="table-cell-field hidden-xs hidden-sm">--</td>
+				<td class="hidden-sm hidden-xs table-cell-field">--</td>
+				<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+				<td class="hidden-sm hidden-xs table-cell-field">--</td>
 				<td class="table-cell-field">Stanley Nelson</td>
-				<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
+				<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
 				<td class="table-cell-field">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -549,15 +549,15 @@ section: Visual Tests
 		<thead>
 			<tr>
 				<th class="table-cell-field"></th>
-				<th class="table-cell-field hidden-xs hidden-sm">ID</th>
+				<th class="hidden-sm hidden-xs table-cell-field">ID</th>
 				<th class="table-cell-content">
 					Title
 				</th>
-				<th class="table-cell-field hidden-xs hidden-sm">Status</th>
-				<th class="table-cell-field hidden-xs hidden-sm">Modified Date</th>
-				<th class="table-cell-field hidden-xs hidden-sm">Display Date</th>
+				<th class="hidden-sm hidden-xs table-cell-field">Status</th>
+				<th class="hidden-sm hidden-xs table-cell-field">Modified Date</th>
+				<th class="hidden-sm hidden-xs table-cell-field">Display Date</th>
 				<th class="table-cell-field">Author</th>
-				<th class="table-cell-field hidden-xs hidden-sm">Type</th>
+				<th class="hidden-sm hidden-xs table-cell-field">Type</th>
 				<th class="table-cell-field"></th>
 			</tr>
 		</thead>
@@ -571,15 +571,15 @@ section: Visual Tests
 						</label>
 					</div>
 				</td>
-				<td class="table-cell-field hidden-xs hidden-sm">21146</td>
+				<td class="hidden-sm hidden-xs table-cell-field">21146</td>
 				<td class="table-cell-content">
 					Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.
 				</td>
-				<td class="table-cell-field hidden-xs hidden-sm">--</td>
-				<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
-				<td class="table-cell-field hidden-xs hidden-sm">--</td>
+				<td class="hidden-sm hidden-xs table-cell-field">--</td>
+				<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+				<td class="hidden-sm hidden-xs table-cell-field">--</td>
 				<td class="table-cell-field">Stanley Nelson</td>
-				<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
+				<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
 				<td class="table-cell-field">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -606,17 +606,17 @@ section: Visual Tests
 						</label>
 					</div>
 				</td>
-				<td class="table-cell-field hidden-xs hidden-sm">
+				<td class="hidden-sm hidden-xs table-cell-field">
 					21148
 				</td>
 				<td class="table-cell-content">
 					Frappuccino medium americano
 				</td>
-				<td class="table-cell-field hidden-xs hidden-sm">--</td>
-				<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
-				<td class="table-cell-field hidden-xs hidden-sm">--</td>
+				<td class="hidden-sm hidden-xs table-cell-field">--</td>
+				<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+				<td class="hidden-sm hidden-xs table-cell-field">--</td>
 				<td class="table-cell-field">Stanley Nelson</td>
-				<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
+				<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
 				<td class="table-cell-field">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -639,7 +639,7 @@ section: Visual Tests
 	</table>
 </div>
 
-<ul class="row list-unstyled">
+<ul class="list-unstyled row">
 	<li class="col-md-6">
 		<div class="checkbox checkbox-card checkbox-middle-left">
 			<label>
@@ -797,7 +797,7 @@ section: Visual Tests
 				<div class="card card-horizontal">
 					<div class="card-row card-row-padded">
 						<div class="card-col-field">
-							<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+							<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 						</div>
 						<div class="card-col-content card-col-gutters clamp-horizontal">
 							<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
@@ -832,14 +832,14 @@ section: Visual Tests
 					<img src="../../images/switch_on_icon.png">
 				</div>
 				<div class="card-col-field card-col-gutters">
-					<span class="icon-monospaced icon-folder-close-alt" style="width: 60px;height: 60px;line-height: 60px;background-color: #EEE;"></span>
+					<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 				</div>
 				<div class="card-col-content card-col-gutters clamp-horizontal">
 					<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
 				</div>
 				<div class="card-col-field" style="vertical-align:top;">
 					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1" aria-expanded="false">
+						<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
@@ -859,18 +859,18 @@ section: Visual Tests
 	</div>
 </div>
 
-<ul class="row list-unstyled" id="cardSection">
-	<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+<ul class="list-unstyled row" id="cardSection">
+	<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio">
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
@@ -896,17 +896,17 @@ section: Visual Tests
 		</div>
 	</li>
 
-	<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+	<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio">
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-						<span class="sticker sticker-default sticker-bottom">TXT</span>
+						<span class="sticker sticker-bottom sticker-default">TXT</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
@@ -932,17 +932,17 @@ section: Visual Tests
 		</div>
 	</li>
 
-	<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+	<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio">
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-						<span class="sticker sticker-danger sticker-bottom">PDF</span>
+						<span class="sticker sticker-bottom sticker-danger">PDF</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
@@ -968,17 +968,17 @@ section: Visual Tests
 		</div>
 	</li>
 
-	<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+	<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio">
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-						<span class="sticker sticker-info sticker-bottom">DOC</span>
+						<span class="sticker sticker-bottom sticker-info">DOC</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
@@ -1004,17 +1004,17 @@ section: Visual Tests
 		</div>
 	</li>
 
-	<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+	<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio">
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-						<span class="sticker sticker-success sticker-bottom">XLS</span>
+						<span class="sticker sticker-bottom sticker-success">XLS</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
@@ -1040,17 +1040,17 @@ section: Visual Tests
 		</div>
 	</li>
 
-	<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+	<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 		<div class="checkbox toggle-card-dm">
 			<label>
 				<input type="checkbox" value="">
-				<div class="toggle-card-container card card-dm">
+				<div class="card card-dm toggle-card-container">
 					<div class="aspect-ratio">
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-						<span class="sticker sticker-warning sticker-bottom">PNG</span>
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
 					<div class="card-footer">
-						<div class="dropdown card-dm-more-options">
+						<div class="card-dm-more-options dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
