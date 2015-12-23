@@ -599,14 +599,29 @@ body.fixed {
 
 // Site Main Nav
 
-#wrapper.open {
+#wrapper.open,
+#wrapper.simple-sidenav-2-open {
 	@media screen and (min-width: $grid-float-breakpoint) {
 		padding-left: 400px;
 	}
 }
 
-[href="#simpleSidenav"] {
+.side-navigation-data-api-buttons {
 	margin-bottom: 15px;
+
+	.btn {
+		margin-bottom: 3px;
+	}
+}
+
+.side-navigation-methods {
+	h4 {
+		margin-top: 2em;
+
+		&:nth-of-type(1) {
+			margin-top: 1em;
+		}
+	}
 }
 
 .menu-toggle {
@@ -883,6 +898,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .uxgl-newline-demo h3:first-child + blockquote {
 	margin-top: 0;
+}
+
+// Assorted Examples Page
+
+.uxgl-assorted-section {
+	margin: 2em 0;
 }
 
 @media screen and (min-width: 1200px) {
