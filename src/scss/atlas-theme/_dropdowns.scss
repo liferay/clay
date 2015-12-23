@@ -1,3 +1,12 @@
+.dropdown,
+.dropdown-toggle {
+	display: inline-block;
+}
+
+.dropdown .icon-monospaced {
+	margin: 2px;
+}
+
 .dropdown-header {
 	font-size: $dropdown-header-font-size;
 	overflow: hidden;
