@@ -19,8 +19,6 @@
 		border-bottom-right-radius: $list-group-border-radius;
 		margin-bottom: 0;
 	}
-
-
 }
 
 a.list-group-heading,
@@ -32,19 +30,6 @@ button.list-group-heading,
 	&:hover {
 		background-color: $list-group-hover-bg;
 		color: $list-group-link-hover-color;
-	}
-}
-
-.list-group-heading.collapse-icon {
-	&:before {
-		content: $list-group-header-icon-open;
-		font-size: $list-group-header-icon-font-size;
-		font-family: $list-group-header-icon-font-family;
-		right: 15px;
-	}
-
-	&.collapsed:before {
-		content: $list-group-header-icon-closed;
 	}
 }
 
