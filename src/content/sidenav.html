@@ -314,6 +314,20 @@ section: Components (JS)
 	</div>
 </div>
 
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Lazy Loading Content</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use attribute <code>data-url</code> on the toggle to load content into <code>.sidenav-body</code> when the side navigation is opened.</p>
+		</blockquote>
+
+		<div>
+			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-url="{{rootPath}}/partials/alerts" data-use-delegate="true">Simple Sidenav 2 Toggler</a>
+		</div>
+	</div>
+</div>
+
 <div class="side-navigation-methods row row-spacing">
 	<div class="col-md-12">
 		<h3>Methods</h3>
@@ -363,12 +377,12 @@ sideNavInstance.hide().visible(); // returns false```</code></pre></p>
 	$('#showSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		$('[data-toggle="sidenav"]').eq(2).sideNavigation('show');
+		$('[href="#simpleSidenav2"]').sideNavigation('show');
 	});
 
 	$('#hideSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		$('[data-toggle="sidenav"]').eq(2).sideNavigation('hide');
+		$('[href="#simpleSidenav2"]').sideNavigation('hide');
 	});
 </script>

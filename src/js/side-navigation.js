@@ -89,6 +89,7 @@
 				options.toggler = element;
 				options.type = element.data('type');
 				options.typeMobile = element.data('type-mobile');
+				options.url = element.data('url');
 				options.useDelegate = element.data('use-delegate') || false;
 				options.width = '';
 			}
@@ -350,6 +351,10 @@
 
 			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
 
+			if (instance.options.toggler.data('url')) {
+				instance._loadUrl();
+			}
+
 			if (simpleSidenavClosed) {
 				var content = instance._getSimpleSidenavContent();
 				var sidenav = instance._getSimpleSidenavNavigation();
@@ -563,6 +568,30 @@
 			var container = instance.options.target ? $(instance.options.target) : doc.find(hrefAttr);
 
 			return container.hasClass('closed');
+		},
+
+		_loadUrl: function() {
+			var instance = this;
+
+			var sidenav = instance._getSimpleSidenavNavigation();
+			var toggler = instance.options.toggler;
+
+			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
+
+			if (simpleSidenavClosed) {
+				if (!sidenav.data('url-loaded')) {
+					$.ajax({
+						url: toggler.data('url'),
+						success: function(response) {
+							var sidebarBody = sidenav.find('.sidebar-body');
+
+							sidebarBody.append(response);
+						}
+					});
+
+					sidenav.data('url-loaded', true);
+				}
+			}
 		},
 
 		_onClickSidenavClose: function() {
