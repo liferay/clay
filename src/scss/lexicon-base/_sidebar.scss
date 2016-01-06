@@ -3,7 +3,14 @@
 	height: 100%;
 	overflow: auto;
 
+	.management-bar,
 	.navbar {
+		border-radius: 0;
+		border-width: 1px 0;
+	}
+
+	.navbar-default,
+	.navbar-inverse {
 		margin-bottom: 0;
 	}
 

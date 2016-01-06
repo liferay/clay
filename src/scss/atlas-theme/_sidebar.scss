@@ -1,3 +1,10 @@
+.sidebar {
+	.management-bar-default,
+	.navbar-default {
+		border-width: $navbar-default-border-width;
+	}
+}
+
 .sidebar-inverse {
 	@include color-placeholder('input', $brand-default);
 
