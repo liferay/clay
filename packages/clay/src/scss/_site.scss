@@ -174,10 +174,14 @@ body.fixed {
 }
 
 #blogActions {
-	.navbar {
+	[data-target="#imageSelectorModal"] {
+		margin-bottom: 15px;
+		margin-left: -15px;
+		margin-top: 15px;
+	}
+
+	.management-bar {
 		margin-bottom: 0;
-		position: relative;
-		z-index: 1;
 	}
 
 	.tabular-list-group .list-group-item .list-group-item-content:first-child,

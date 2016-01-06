@@ -132,7 +132,7 @@ section: Example Pages
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
 								<a class="sidenav-toggler" href="#1" id="blogActionsToggler">
-									<svg aria-hidden="true" class="lexicon-icon">
+									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 									</svg>
 								</a>
@@ -143,7 +143,7 @@ section: Example Pages
 							<div class="toolbar-group-content">
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-										<svg aria-hidden="true" class="lexicon-icon">
+										<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#cog" />
 										</svg>
 									</a>
@@ -208,18 +208,18 @@ section: Example Pages
 						</div>
 
 						<div class="management-bar-header-right">
-							<a class="btn" href="#">
-								<svg aria-hidden="true" class="lexicon-icon">
+							<a class="btn btn-default" href="#">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
 								</svg>
 							</a>
-							<a class="btn" href="#">
-								<svg aria-hidden="true" class="lexicon-icon">
+							<a class="btn btn-default" href="#">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
 								</svg>
 							</a>
-							<a class="btn hidden-xs" href="#">
-								<svg aria-hidden="true" class="lexicon-icon">
+							<a class="btn btn-default hidden-xs" href="#">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#table2" />
 								</svg>
 							</a>
@@ -300,25 +300,31 @@ section: Example Pages
 									</ul>
 								</li>
 								<li>
-									<a class="btn hidden-xs" href="#1"><span class="icon-caret-up icon-monospaced"></span></a>
+									<a class="btn btn-default hidden-xs" href="#1"><span class="icon-caret-up icon-monospaced"></span></a>
 								</li>
 								<li>
-									<a class="btn hidden-xs" href="#1"><span class="icon-caret-down icon-monospaced"></span></a>
+									<a class="btn btn-default hidden-xs" href="#1"><span class="icon-caret-down icon-monospaced"></span></a>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 
-				<div class="container-fluid-1280" style="margin: 15px 0;">
+				<div class="container-fluid-1280">
 					<button class="btn btn-info" data-toggle="modal" data-target="#imageSelectorModal">Select / Change Items</button>
 					<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="imageSelectorModal" role="dialog" tabindex="-1">
 						<div class="modal-dialog modal-full-screen">
 							<div class="modal-content">
 								<div class="modal-header">
-									<button aria-labelledby="Close" class="close close-modal" data-dismiss="modal" type="button">
-										<svg aria-hidden="true" class="lexicon-icon">
+									<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+										</svg>
+									</button>
+
+									<button class="btn btn-default modal-primary-action-button visible-xs" type="button">
+										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
 										</svg>
 									</button>
 
@@ -370,18 +376,18 @@ section: Example Pages
 										</div>
 
 										<div class="management-bar-header-right">
-											<a class="btn" href="#">
-												<svg aria-hidden="true" class="lexicon-icon">
+											<a class="btn btn-default" href="#">
+												<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 													<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
 												</svg>
 											</a>
-											<a class="btn" href="#">
-												<svg aria-hidden="true" class="lexicon-icon">
+											<a class="btn btn-default" href="#">
+												<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 													<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
 												</svg>
 											</a>
-											<a class="btn hidden-xs" href="#">
-												<svg aria-hidden="true" class="lexicon-icon">
+											<a class="btn btn-default hidden-xs" href="#">
+												<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 													<use xlink:href="{{rootPath}}/images/icons/icons.svg#table2" />
 												</svg>
 											</a>
@@ -462,10 +468,10 @@ section: Example Pages
 													</ul>
 												</li>
 												<li>
-													<a class="btn hidden-xs" href="#1"><span class="icon-caret-up icon-monospaced"></span></a>
+													<a class="btn btn-default hidden-xs" href="#1"><span class="icon-caret-up icon-monospaced"></span></a>
 												</li>
 												<li>
-													<a class="btn hidden-xs" href="#1"><span class="icon-caret-down icon-monospaced"></span></a>
+													<a class="btn btn-default hidden-xs" href="#1"><span class="icon-caret-down icon-monospaced"></span></a>
 												</li>
 											</ul>
 										</div>
@@ -653,7 +659,7 @@ section: Example Pages
 												<div class="list-group-item-field">
 													<div class="dropdown">
 														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg aria-hidden="true" class="lexicon-icon">
+															<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 																<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 															</svg>
 														</a>
@@ -700,7 +706,7 @@ section: Example Pages
 												<div class="list-group-item-field">
 													<div class="dropdown">
 														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg aria-hidden="true" class="lexicon-icon">
+															<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 																<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 															</svg>
 														</a>
@@ -747,7 +753,7 @@ section: Example Pages
 												<div class="list-group-item-field">
 													<div class="dropdown">
 														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg aria-hidden="true" class="lexicon-icon">
+															<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 																<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 															</svg>
 														</a>
@@ -794,7 +800,7 @@ section: Example Pages
 												<div class="list-group-item-field">
 													<div class="dropdown">
 														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg aria-hidden="true" class="lexicon-icon">
+															<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 																<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 															</svg>
 														</a>
@@ -818,22 +824,15 @@ section: Example Pages
 								</div>
 
 								<div class="modal-footer">
-									<div class="modal-footer-right">
-										<button class="btn btn-primary icon-ok modal-btn-icon" type="button">Add</button>
-									</div>
-
-									<div class="modal-footer-left">
-										<button class="btn btn-link close-modal icon-remove modal-btn-icon" data-dismiss="modal" type="button">Cancel</button>
-									</div>
-
-									<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
+									<button class="btn btn-primary" type="button">Add</button>
+									<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Cancel</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<ul class="container-fluid-1280 detailed-list-view tabular-list-group" style="margin-left:2px;margin-right:2px;">
+				<ul class="container-fluid-1280 detailed-list-view tabular-list-group">
 					<li class="list-group-item">
 						<div class="list-group-item-field">
 							<div class="checkbox">
@@ -862,7 +861,7 @@ section: Example Pages
 						<div class="list-group-item-field">
 							<div class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon">
+									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -909,7 +908,7 @@ section: Example Pages
 						<div class="list-group-item-field">
 							<div class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon">
+									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -956,7 +955,7 @@ section: Example Pages
 						<div class="list-group-item-field">
 							<div class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon">
+									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -1003,7 +1002,7 @@ section: Example Pages
 						<div class="list-group-item-field">
 							<div class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon">
+									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
@@ -1076,7 +1075,7 @@ section: Example Pages
 	</div>
 </div>
 
-<a class="btn btn-action btn-bottom-right btn-primary" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
+<a class="btn btn-action btn-bottom-right btn-primary icon-monospaced" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
 
 <script>
 	$('#blogActionsSidenav').sideNavigation({
