@@ -1,16 +1,8 @@
-.panel {
-	.collapse-icon {
-		&:before {
-			content: $panel-heading-icon-open;
-			font-size: $panel-heading-icon-font-size;
-			font-family: $panel-heading-icon-font-family;
-			right: 15px;
-		}
+.panel-title {
+	font-size: $panel-title-font-size;
+	font-weight: $panel-title-font-weight;
 
-		&.collapsed:before {
-			content: $panel-heading-icon-closed;
-		}
-	}
+	@include word-wrap(break-word);
 }
 
 .panel-group {
@@ -18,7 +10,7 @@
 		padding: 0;
 
 		.collapse-icon {
-			padding-right: 35px;
+			padding-right: 45px;
 		}
 	}
 
@@ -27,6 +19,7 @@
 		> span {
 			display: block;
 			padding: $panel-heading-padding;
+			position: relative;
 		}
 	}
 }
