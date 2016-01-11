@@ -191,230 +191,79 @@ section: Components
 						</div>
 
 						<div class="sidebar-body">
-							<ul class="nav nav-tabs product-menu-tabs1" style="padding: 0;">
-								<li class="active col-xs-4">
-									<a data-toggle="tab" href="#tab1">
-										<div class="product-menu-tab-icon1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="{{rootPath}}/images/icons/icons.svg#sites" />
-											</svg>
-										</div>
-										<div class="product-menu-tab-text1">Sites</div>
-									</a>
-								</li>
-
-								<li class="col-xs-4">
-									<a data-toggle="tab" href="#tab2">
-										<div class="product-menu-tab-icon1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="{{rootPath}}/images/icons/icons.svg#myspace" />
-											</svg>
-										</div>
-										<div class="product-menu-tab-text1">Account</div>
-									</a>
-								</li>
-
-								<li class="col-xs-4">
-									<a data-toggle="tab" href="#tab3">
-										<div class="product-menu-tab-icon1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="{{rootPath}}/images/icons/icons.svg#control-panel" />
-											</svg>
-											<span class="sticker sticker-right sticker-rounded sticker-sm sticker-warning">24</span>
-										</div>
-										<div class="product-menu-tab-text1">Control Panel</div>
-									</a>
-								</li>
-							</ul>
-
-							<div class="tab-content">
-								<div class="active fade in tab-pane" id="tab1">
-									<form role="form">
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>From</label>
-													<input class="form-control" type="text" placeholder="City or Airport">
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>To</label>
-													<input class="form-control" type="text" placeholder="City or Airport">
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Departing</label>
-													<input class="form-control" type="text" placeholder="Departing Date">
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Returning</label>
-													<input class="form-control" type="text" placeholder="Returning Date">
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Adults</label>
-													<select class="form-control">
-														<option>0 Adults</option>
-														<option>1 Adult</option>
-														<option>2 Adults</option>
-														<option>3 Adults</option>
-														<option>4 Adults</option>
-														<option>5 Adults</option>
-														<option>6 Adults</option>
-														<option>7 Adults</option>
-														<option>8 Adults</option>
-														<option>9 Adults</option>
-														<option>10 Adults</option>
-													</select>
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Children</label>
-													<select class="form-control">
-														<option>0 Children</option>
-														<option>1 Child</option>
-														<option>2 Children</option>
-														<option>3 Children</option>
-														<option>4 Children</option>
-														<option>5 Children</option>
-														<option>6 Children</option>
-														<option>7 Children</option>
-														<option>8 Children</option>
-														<option>9 Children</option>
-														<option>10 Children</option>
-													</select>
-												</div>
-											</div>
-
-											<div class="col-md-12">
-												<button class="btn btn-success btn-md">Search Flights</button>
-											</div>
-										</div>
-									</form>
-								</div>
-
-								<div class="fade in tab-pane" id="tab2">
-									<form role="form">
-										<div class="row">
-											<div class="col-md-4">
-												<div class="form-group">
-													<label>From</label>
-													<input class="form-control" type="text" placeholder="City or Airport">
-												</div>
-											</div>
-
-											<div class="col-md-4">
-												<div class="form-group">
-													<label>To</label>
-													<input class="form-control" type="text" placeholder="City or Airport">
-												</div>
-											</div>
-
-											<div class="col-md-4">
-												<div class="form-group">
-													<label>Departing</label>
-													<input class="form-control" type="text" placeholder="Departing Date">
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-12 form-group">
-												<button class="btn btn-default btn-xs" type="button">Add Destination</button>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Adults</label>
-													<select class="form-control">
-														<option>0 Adults</option>
-														<option>1 Adult</option>
-														<option>2 Adults</option>
-														<option>3 Adults</option>
-														<option>4 Adults</option>
-														<option>5 Adults</option>
-														<option>6 Adults</option>
-														<option>7 Adults</option>
-														<option>8 Adults</option>
-														<option>9 Adults</option>
-														<option>10 Adults</option>
-													</select>
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Children</label>
-													<select class="form-control">
-														<option>0 Children</option>
-														<option>1 Child</option>
-														<option>2 Children</option>
-														<option>3 Children</option>
-														<option>4 Children</option>
-														<option>5 Children</option>
-														<option>6 Children</option>
-														<option>7 Children</option>
-														<option>8 Children</option>
-														<option>9 Children</option>
-														<option>10 Children</option>
-													</select>
-												</div>
-											</div>
-
-											<div class="col-md-12">
-												<button class="btn btn-success btn-md">Search Flights</button>
-											</div>
-										</div>
-									</form>
-								</div>
-								<div class="fade in tab-pane" id="tab3">
-									<form>
-										<div class="input-group search-bar">
-											<input class="form-control" placeholder="Search Site..." type="text">
-
-											<span class="input-group-btn">
-												<button class="btn" type="button"><span class="icon-search icon-monospaced"></span></button>
-											</span>
-										</div>
-									</form>
-
-									<div class="list-group" style="margin-bottom: 0;">
-										<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse004">
-											List Group Heading
-										</a>
-										<div class="collapse" id="listGroupCollapse004">
-											<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
-										</div>
-
-										<a aria-expanded="true" class="list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse005">
-											List Group Heading
-										</a>
-										<div class="collapse in" id="listGroupCollapse005" aria-expanded="true">
-											<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
-										</div>
-
-										<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse006">
-											List Group Heading
-										</a>
-										<div class="collapse" id="listGroupCollapse006">
-											<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
+							<form role="form">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>From</label>
+											<input class="form-control" type="text" placeholder="City or Airport">
 										</div>
 									</div>
+
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>To</label>
+											<input class="form-control" type="text" placeholder="City or Airport">
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Departing</label>
+											<input class="form-control" type="text" placeholder="Departing Date">
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Returning</label>
+											<input class="form-control" type="text" placeholder="Returning Date">
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Adults</label>
+											<select class="form-control">
+												<option>0 Adults</option>
+												<option>1 Adult</option>
+												<option>2 Adults</option>
+												<option>3 Adults</option>
+												<option>4 Adults</option>
+												<option>5 Adults</option>
+												<option>6 Adults</option>
+												<option>7 Adults</option>
+												<option>8 Adults</option>
+												<option>9 Adults</option>
+												<option>10 Adults</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Children</label>
+											<select class="form-control">
+												<option>0 Children</option>
+												<option>1 Child</option>
+												<option>2 Children</option>
+												<option>3 Children</option>
+												<option>4 Children</option>
+												<option>5 Children</option>
+												<option>6 Children</option>
+												<option>7 Children</option>
+												<option>8 Children</option>
+												<option>9 Children</option>
+												<option>10 Children</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-md-12">
+										<button class="btn btn-success btn-md">Search Flights</button>
+									</div>
 								</div>
-							</div>
+							</form>
 						</div>
 
 						<div class="sidebar-footer">
