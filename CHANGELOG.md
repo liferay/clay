@@ -1,14 +1,10 @@
-## Next Release
-* No changes yet
-***
-
-## v0.1.28 - December 23, 2015
+### v0.1.28 - December 23, 2015
 * No changes, just bumping because of issues with WebJars/Maven caching.
 
-## v0.1.27 - December 22, 2015
+### v0.1.27 - December 22, 2015
 * Updated bower.json to exclude non-essential directories
 
-## v0.1.26 - December 22, 2015
+### v0.1.26 - December 22, 2015
 * Breaking: Rename management-bar-right to management-bar-nav-right
 * New: Updated the Sidenav component, adding the following new methods: `hide()`, `show()`, `toggle()`, and `visible()` ([Documentation](http://liferay.github.io/lexicon/content/sidenav/#methods))
 * New: Added the following new icons:
@@ -39,20 +35,20 @@
 * Update: Add support for placing text around toggle-switch ([Fixes #81](https://github.com/liferay/lexicon/issues/81))
 * Update: Atlas select box arrows are svg instead of image
 
-## v0.1.25 - November 12, 2015
+### v0.1.25 - November 12, 2015
 * Fix: Caret Icons `caret-top` and `caret-bottom` should be center aligned
 * Update: Action button should be under dropdowns, popovers, and tooltips
 * Update: Collapsible panels whole panel heading should be clickable
 
-## v0.1.24 - November 12, 2015
+### v0.1.24 - November 12, 2015
 * Publishing the build files (Nate's fault)
 
-## v0.1.23 - November 12, 2015
+### v0.1.23 - November 12, 2015
 * Update: Icon-monospaced should work with svg icons
 * Update: Added new icons, `info-circle`, `info-circle-open`, `caret-top`, and `caret-bottom`
 * Site: Add icon-monospaced to svg icons
 
-## v0.1.22 - November 12, 2015
+### v0.1.22 - November 12, 2015
 
 * Fix: Navbar-toggle should have outline on focus
 * Breaking: Remove link-group
@@ -77,7 +73,7 @@
 * Site: Update table-list demo to something more useful
 * Site: Increase Sass precision to 8
 
-## v0.1.21 - October 30, 2015
+### v0.1.21 - October 30, 2015
 
 * New: Add sizes sm, default,  md, lg to Lexicon icons
 * New: Add timeline component
@@ -95,7 +91,7 @@
 * Site: Update headings selector and reorganize sections
 * Misc: Added this changelog :)
 
-## v0.1.20 - October 28, 2015
+### v0.1.20 - October 28, 2015
 
 * Moving svg4everybody to the footer to be available on all pages
 * Adding svg4everybody to our icons page
@@ -117,7 +113,7 @@
 * Adding bootstrap resources
 * Adding Bootstrap JS to the payload
 
-## v0.1.19 - September 30, 2015
+### v0.1.19 - September 30, 2015
 
 * Adding hover effects
 * Cleaning up unneeded files/changes
@@ -135,7 +131,7 @@
 * Adding gulp tasks for creating svgs
 * Adding svgs
 
-## v0.1.18 - September 24, 2015
+### v0.1.18 - September 24, 2015
 
 * Adding links in headers
 * Nav spacing improvements
@@ -146,7 +142,7 @@
 * New font sizes:
 * Remove old flexbox card styles
 
-## v0.1.17 - September 16, 2015
+### v0.1.17 - September 16, 2015
 
 * Lexicon: Remove control menu
 * Lexicon: add data api to collapsible-search and also documentation
@@ -155,7 +151,7 @@
 * Side-navigation transition ending too early
 * Rename cells to table-list-field and table-list-content, also vertically center table-list-content with top: 50%
 
-## v0.1.16 - September 03, 2015
+### v0.1.16 - September 03, 2015
 
 * Added custom open class name to _toggleSimpleSidenav
 * Side-navigation.js delegate causes all menus to open
@@ -177,7 +173,7 @@
 * lexicon: add truncate-text class
 * lexicon: breadcrumb > li should have max-width and truncate text
 
-## v0.1.12 - August 21, 2015
+### v0.1.12 - August 21, 2015
 
 * atlas: Validation inputs should have input-color not input-label-color, add validation state colors for radios and checkbox
 * lexicon: add bottom and top properties to modal-open class for safari/chrome
@@ -197,7 +193,7 @@
 * side-navigation: use doc variable instead of
 * side-navigation: add/remove active and sidenav-transition class on toggler when menu opens/closes
 
-## v0.1.11 - August 17, 2015
+### v0.1.11 - August 17, 2015
 
 * Read-only inputs are partially obstructed by padding in Firefox
 * lexicon: remove color property from control-menu
@@ -243,7 +239,7 @@
 * nav-equal-height-heading span tags should be aligned
 * Add documentation for nav-equal-height and add vertical and horizontal padding variables
 
-## v0.1.10 - August 06, 2015
+### v0.1.10 - August 06, 2015
 
 * Add links to footer and update site-administration-toolbar
 * side-navigation: add option to delegate click event
@@ -259,7 +255,7 @@
 * site: remove overflow on #wrapper
 * side-navigation: add simple sidenav option
 
-## v0.1.9 - August 03, 2015
+### v0.1.9 - August 03, 2015
 
 * side-navigation: type fixed shouldn't push content over
 * side-navigation: rename transitions variable to transitionEnd
@@ -277,14 +273,14 @@
 * side-navigation: fire events open.lexicon.sidenav and closed.lexicon.sidenav when state changes
 * lexicon: product-menu-tabs font-size should be smaller
 
-## v0.1.8 - July 28, 2015
+### v0.1.8 - July 28, 2015
 
 * atlas: user-icon bg should be transparent
 * atlas: change button sizes
 * lexicon: create portlet-topper component
 * lexicon: anchor tags with dropdown-toggle class shouldn't be underlined on focus or hover
 
-## v0.1.7 - July 27, 2015
+### v0.1.7 - July 27, 2015
 
 * lexicon: use navbar-padding-horizontal for left right margin and padding
 * lexicon: navbar-toggle and navbar-collapse items should use calculated vertical padding
@@ -333,7 +329,7 @@
 * Update form validation mark up and add checkbox examples
 * input-group-default houses help text on form inputs
 
-## v0.1.6 - July 16, 2015
+### v0.1.6 - July 16, 2015
 
 * Namespacing borderless portlet component styling for now
 * Removed modals stylesheet from site
@@ -345,7 +341,7 @@
 * atlas: add box shadow to borderless portlet
 * Add borderless-portlet-bar component
 
-## v0.1.5 - July 14, 2015
+### v0.1.5 - July 14, 2015
 
 * side-navigation: instance.equalHeight should be instance.options.equalHeight
 * lexicon: add line-height variable to pagination-size
@@ -367,7 +363,7 @@
 * lexicon: add stickers component
 * lexicon: increase badge-monospaced sizes to make it more useable
 
-## v0.1.4 - July 08, 2015
+### v0.1.4 - July 08, 2015
 
 * atlas: style product menu
 * sidebar: product menu header and footer should be fixed and clean up unused sidebar css
@@ -394,11 +390,11 @@
 * Created Documents and Media mock up example page
 * Fixing release script
 
-## v0.1.3 - June 29, 2015
+### v0.1.3 - June 29, 2015
 
 * Moving lexicon to lexicon-base
 
-## v0.1.2 - June 29, 2015
+### v0.1.2 - June 29, 2015
 
 * Fixing parent selector reference
 * Splitting up CSS files
@@ -411,7 +407,7 @@
 * Demo Site: make code example page smaller
 * Cards component: move some css properties to variables
 
-## v0.1.1 - June 25, 2015
+### v0.1.1 - June 25, 2015
 
 * Label atlas only and shared variables
 * Breadcrumbs remove unused variables
