@@ -55,6 +55,18 @@ button.list-group-heading,
 	}
 }
 
+.list-group-item .checkbox input[type="checkbox"]:checked + .card,
+.list-group-item.active {
+	@include color-dropdown-toggle-link($list-group-active-color, $list-group-active-color, $list-group-active-color);
+
+	.card-col-content,
+	.list-group-item-content {
+		a {
+			color: $list-group-active-color;
+		}
+	}
+}
+
 // Collapsible List Group
 
 .list-group {
@@ -112,15 +124,6 @@ button.list-group-heading,
 	margin-bottom: 20px;
 	padding: 0;
 
-	a {
-		color: $list-group-link-color;
-
-		&:focus,
-		&:hover {
-			color: $list-group-link-hover-color;
-		}
-	}
-
 	> li,
 	.list-group-item {
 		border-width: 0;
@@ -132,16 +135,6 @@ button.list-group-heading,
 			.list-group-item-content,
 			.list-group-item-field {
 				border-top: $tabular-list-group-border-width solid $list-group-border;
-			}
-		}
-	}
-
-	.active {
-		a {
-			&,
-			&:focus,
-			&:hover {
-				color: $list-group-active-color;
 			}
 		}
 	}
@@ -392,10 +385,6 @@ button.list-group-heading,
 			+ .card {
 				background-color: $list-group-card-active-bg;
 				color: $list-group-card-active-color;
-
-				.dropdown-toggle {
-					color: $list-group-card-active-color;
-				}
 			}
 		}
 	}
