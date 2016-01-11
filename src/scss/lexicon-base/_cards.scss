@@ -131,7 +131,8 @@
 		display: table-cell;
 		position: relative;
 		vertical-align: middle;
-		word-break: break-word;
+
+		@include word-wrap;
 
 		.img-responsive {
 			max-width: none;
