@@ -9,6 +9,15 @@
 	position: relative;
 	word-wrap: break-word;
 
+	&:focus {
+		z-index: 1;
+	}
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+
 	&:first-child {
 		border-top-left-radius: $list-group-border-radius;
 		border-top-right-radius: $list-group-border-radius;
