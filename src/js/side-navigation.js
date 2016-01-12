@@ -340,6 +340,19 @@
 				menu.css('right', '');
 			}
 
+			var url = options.url;
+
+			if (url) {
+				element.one(
+					'urlLoaded.lexicon.sidenav',
+					function(event) {
+						instance.setEqualHeight();
+					}
+				);
+
+				instance._loadUrl(menu, url, element);
+			}
+
 			content.css(contentCss);
 
 			navigation.css('width', width);
@@ -351,10 +364,6 @@
 
 			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
 
-			if (instance.options.toggler.data('url')) {
-				instance._loadUrl();
-			}
-
 			if (simpleSidenavClosed) {
 				var content = instance._getSimpleSidenavContent();
 				var sidenav = instance._getSimpleSidenavNavigation();
@@ -362,6 +371,12 @@
 				var openClass = instance.options.openClass;
 
 				var toggler = instance.options.toggler;
+
+				var url = toggler.data('url');
+
+				if (url) {
+					instance._loadUrl(sidenav, url);
+				}
 
 				var desktop = instance._isDesktop();
 				var desktopFixedPush = instance._getSimpleSidenavType() === 'desktop-fixed-push';
@@ -570,28 +585,32 @@
 			return container.hasClass('closed');
 		},
 
-		_loadUrl: function() {
+		_loadUrl: function(sidenav, url, eventTarget) {
 			var instance = this;
 
-			var sidenav = instance._getSimpleSidenavNavigation();
-			var toggler = instance.options.toggler;
+			var urlLoaded = sidenav.data('url-loaded');
 
-			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
+			eventTarget = eventTarget || sidenav;
 
-			if (simpleSidenavClosed) {
-				if (!sidenav.data('url-loaded')) {
-					$.ajax({
-						url: toggler.data('url'),
-						success: function(response) {
-							var sidebarBody = sidenav.find('.sidebar-body');
+			var sidebarBody = sidenav.find('.sidebar-body');
 
-							sidebarBody.append(response);
-						}
-					});
+			if (!urlLoaded && sidebarBody.length && (typeof url === 'string' || $.isPlainObject(url))) {
+				sidenav.addClass('sidebar-loading');
 
-					sidenav.data('url-loaded', true);
-				}
+				urlLoaded = $.ajax(url).done(
+					function(response) {
+						sidebarBody.append(response);
+
+						eventTarget.trigger('urlLoaded.lexicon.sidenav');
+
+						sidenav.removeClass('sidebar-loading');
+					}
+				);
+
+				sidenav.data('url-loaded', urlLoaded);
 			}
+
+			return urlLoaded;
 		},
 
 		_onClickSidenavClose: function() {
@@ -866,6 +885,7 @@
 	 * @property {String}         type        The type of sidenav in desktop. Possible values: relative, fixed, fixed-push
 	 * @property {String}         typeMobile  The type of sidenav in mobile. Possible values: relative, fixed, fixed-push
 	 * @property {String|Boolean} useDelegate The type of reference to use on the toggler event handler. Value false, directly binds click to the toggler.
+	 * @property {String|Object}  url         The URL or $.ajax config object to fetch the content to inject into .sidebar-body
 	 * @property {String|Number}  width       The width of the side navigation.
 	 */
 
@@ -879,6 +899,7 @@
 		toggler: '.sidenav-toggler',
 		type: 'relative',
 		typeMobile: 'relative',
+		url: null,
 		useDelegate: true,
 		width: '225px'
 	};
