@@ -130,8 +130,6 @@
 
 			var contentCss = {};
 
-			var element = instance.element;
-
 			if (instance.mobile) {
 				var left = '';
 
@@ -163,8 +161,6 @@
 			var instance = this;
 
 			var contentCss = {};
-
-			var element = instance.element;
 
 			if (type === 'fixed' || type === 'fixed-push') {
 				contentCss.left = '';
@@ -516,8 +512,6 @@
 		_bindUI: function() {
 			var instance = this;
 
-			var element = instance.element;
-
 			if (!instance.useDataAttribute) {
 				addResizeListener();
 				instance._onScreenChange();
@@ -639,8 +633,6 @@
 		_onClickTrigger: function() {
 			var instance = this;
 
-			var togglerFn;
-
 			var element = instance.element;
 
 			var el = element;
@@ -660,7 +652,6 @@
 		_onDelegateClickTrigger: function() {
 			var instance = this;
 
-			var togglerFn;
 			var togglerSelector = '';
 
 			var element = instance.element;
