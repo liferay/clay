@@ -15,12 +15,12 @@ $list-group-border-radius: 0 !default;
 $list-group-border: lighten($brand-default, 30%) !default;
 $list-group-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) !default; // Atlas
 
-$list-group-link-color: $brand-default !default;
+$list-group-link-color: $text-color !default;
 $list-group-link-hover-color: $list-group-link-color !default;
 
 $list-group-active-bg: #FCFEFF !default;
 $list-group-active-border: $brand-primary !default;
-$list-group-active-color: $brand-primary !default;
+$list-group-active-color: $text-color !default;
 
 $list-group-header-font-weight: 500 !default; // Shared
 $list-group-header-bg: #F5F8FA !default; // Shared
@@ -32,3 +32,6 @@ $list-group-card-active-bg: $list-group-active-bg !default;
 $list-group-card-active-border: $list-group-active-border !default;
 $list-group-card-active-border-width: 2px !default;
 $list-group-card-active-color: $list-group-active-color !default;
+
+$list-group-item-dropdown-toggle-color: $brand-default !default;
+$list-group-item-active-dropdown-toggle-color: $list-group-item-dropdown-toggle-color !default;

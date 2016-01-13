@@ -1,3 +1,25 @@
+.table {
+	> thead,
+	> tbody,
+	> tfoot {
+		tr td {
+			&:first-child {
+				padding-left: 15px;
+
+				.checkbox {
+					margin-bottom: 0;
+					margin-left: 1px;
+					margin-top: 0;
+				}
+			}
+
+			&:last-child {
+				padding-right: 15px;
+			}
+		}
+	}
+}
+
 .table-cell-content {
 	position: relative;
 	word-break: break-all; // IE
