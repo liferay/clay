@@ -681,6 +681,8 @@
 					togglerSelector,
 					function(event) {
 						instance.toggle();
+
+						event.preventDefault();
 					}
 				);
 			}
