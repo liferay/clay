@@ -1,11 +1,11 @@
 .sticker {
 	color: $sticker-color;
 	display: inline-block;
+	font-size: $sticker-font-size;
+	left: $sticker-gutter-width;
 
 	@include monospace($sticker-monospaced-size);
 
-	font-size: $sticker-font-size;
-	left: $sticker-gutter-width;
 	padding: 0;
 	position: absolute;
 	text-align: center;
@@ -49,40 +49,40 @@
 	@include monospace($sticker-lg-monospaced-size);
 }
 
+// Sticker Skins
+
 .sticker-circle {
-	border-radius: 100px;
+	border-radius: $sticker-circle-border-radius;
 }
 
 .sticker-rounded {
-	border-radius: 4px;
+	border-radius: $sticker-rounded-border-radius;
 }
 
 .sticker-square {
-	border-radius: 0;
+	border-radius: $sticker-square-border-radius;
 }
 
-// Sticker Skins
-
 .sticker-danger {
-	@extend .badge-danger;
+	background-color: $label-danger-bg;
 }
 
 .sticker-default {
-	background-color: $badge-bg;
+	background-color: $label-default-bg;
 }
 
 .sticker-info {
-	@extend .badge-info;
+	background-color: $label-info-bg;
 }
 
 .sticker-primary {
-	@extend .badge-primary;
+	background-color: $label-primary-bg;
 }
 
 .sticker-success {
-	@extend .badge-success;
+	background-color: $label-success-bg;
 }
 
 .sticker-warning {
-	@extend .badge-warning;
+	background-color: $label-warning-bg;
 }
