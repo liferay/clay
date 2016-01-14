@@ -18,51 +18,19 @@
 	}
 }
 
-// .badge-monospaced {
-//	padding: 0;
-// }
+// Lexicon Icons in Badges
 
-// Badge Icon Monospaced Sizes
-
-.icon-monospaced {
-	.badge & {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			@include monospace($badge-desktop-font-size);
-		}
-	}
-
-	.badge-lg & {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			@include monospace($badge-lg-desktop-font-size);
-		}
-	}
-
-	.badge-sm & {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			@include monospace($badge-sm-desktop-font-size);
-		}
-	}
+.badge .lexicon-icon {
+	height: 10px;
+	width: 10px;
 }
 
-// Badge Lexicon Icon Sizes
-
-.lexicon-icon {
-	.badge & {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			height: floor($badge-desktop-font-size * 0.75);
-			width: floor($badge-desktop-font-size * 0.75);
-		}
-	}
-
-	.badge-lg & {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			height: floor($badge-lg-desktop-font-size * 0.75);
-			width: floor($badge-lg-desktop-font-size * 0.75);
-		}
-	}
+.badge-sm .lexicon-icon {
+	height: 7px;
+	width: 7px;
 }
 
-// Skins
+// Skin
 
 .badge-default {
 	background-color: $badge-default-bg;

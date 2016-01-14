@@ -137,6 +137,8 @@
 	@media screen and (min-width: $grid-float-breakpoint) {
 		clear: none;
 		margin-top: 0;
+		padding-left: 0;
+		padding-right: 0;
 		position: static;
 	}
 }
@@ -152,12 +154,6 @@
 
 			&:first-child {
 				margin-left: 0;
-
-				> .checkbox,
-				> .radio {
-					padding-left: 0;
-					padding-right: 0;
-				}
 			}
 
 			> a {
@@ -167,6 +163,7 @@
 		}
 
 		.dropdown-menu {
+			background-color: $dropdown-bg;
 			border: 1px solid $dropdown-border;
 			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 			position: absolute;
@@ -182,13 +179,14 @@
 	@extend .navbar-nav;
 
 	> li {
-		> .checkbox,
-		.management-bar-text {
-			padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+		> .checkbox {
+			padding-bottom: $management-bar-padding-vertical;
+			padding-top: $management-bar-padding-vertical;
 		}
 
 		.management-bar-text {
 			display: inline-block;
+			padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
 		}
 	}
 }

@@ -1,6 +1,16 @@
-@mixin color-tabular-list-group-item($color) {
+@mixin color-tabular-list-group-item($color, $active-bg: $list-group-active-bg) {
 	background-color: transparent;
 	border-left: 5px solid $color;
+
+	&,
+	&:focus,
+	&:hover {
+		color: $color;
+	}
+
+	&.active {
+		background-color: $active-bg;
+	}
 
 	.status {
 		color: $color;

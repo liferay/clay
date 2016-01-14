@@ -3,20 +3,6 @@
 	z-index: 1;
 }
 
-.nav > li > .collapse-icon {
-	padding-right: $nav-link-padding-horizontal * 2;
-
-	&:before {
-		content: $nav-collapse-icon-open;
-		font-family: $nav-collapse-icon-font-family;
-		right: $nav-link-padding-horizontal;
-	}
-
-	&.collapsed:before {
-		content: $nav-collapse-icon-closed;
-	}
-}
-
 .nav-heading {
 	color: $text-color;
 	display: block;
@@ -56,6 +42,7 @@
 
 .nav-equal-height-heading {
 	display: table;
+	position: relative;
 	width: 100%;
 
 	&:focus,
@@ -133,8 +120,8 @@
 		&,
 		&:hover,
 		&:focus {
-			color: $nav-pills-active-link-hover-color;
 			background-color: $nav-pills-active-link-hover-bg;
+			color: $nav-pills-active-link-hover-color;
 		}
 	}
 }
