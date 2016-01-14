@@ -1,3 +1,37 @@
+### v0.1.29 - January 14, 2015
+* Breaking: Change collapse open and close icons to be compatible with svg
+* Breaking: Don't apply figure styles to element
+* Breaking: Removed the Product Menu from the code base, since it's now only in Liferay.
+* Fix: ([Fixes #88](https://github.com/liferay/lexicon/issues/88))  links inside list-group-item should be properly colored
+* Fix: ([Fixes #109](https://github.com/liferay/lexicon/issues/109)) Delegate click handler needs event.preventDefault().
+* Fix: Fix Lexicon navbar and management-bar borders inside sidebar
+* Fix: Long text inside horizontal card should break to new line in firefox
+* Fix: List-group-heading focus border shouldn't be covered by next element
+* Fix: List-group-heading shouldn't be underlined on hover or focus
+* Fix: Atlas dropdown arrows should be aligned to monospaced icon
+* Update: Add lazy loading through data-url to side navigation plugin
+* Update: Badges and Stickers should inherit from Labels
+* Update: Separate Lexicon labels from badges
+* Update: Add mixins for coloring dropdown-toggle and dropdown-menu
+* Update: navbar and management-bar no collapse dropdown should have background color
+* Update: Cards dropdown color should be $dropdown-link-color
+* Update: Align checkboxes and buttons on the left and right side for:
+	- header-toolbar
+	- navbar
+	- management-bar
+	- breadcrumbs
+	- tabs
+	- tables
+	- cards
+	- list-groups
+* Site: Updated the Sidebar Detail list to use a DL element
+* Site: Release entries in the changelog can be linked to
+* Site: Checkbox should be checked when table list is active
+* Site: Update documents and media demo to current mark up
+* Site: Update blog appearance demo to current mark up
+* Site: Update blog actions demo to current mark up
+* Site: Added a Visual Tests section to compare and test changes
+
 ### v0.1.28 - December 23, 2015
 * No changes, just bumping because of issues with WebJars/Maven caching.
 
