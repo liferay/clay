@@ -1,5 +1,5 @@
 ### v0.1.29 - January 14, 2015
-* Breaking: Change collapse open and close icons to be compatible with svg
+* Breaking: Change collapse open and close icons to be compatible with svg. Please see
 * Breaking: Don't apply figure styles to element
 * Breaking: Removed the Product Menu from the code base, since it's now only in Liferay.
 * Fix: ([Fixes #88](https://github.com/liferay/lexicon/issues/88))  links inside list-group-item should be properly colored
@@ -31,6 +31,9 @@
 * Site: Update blog appearance demo to current mark up
 * Site: Update blog actions demo to current mark up
 * Site: Added a Visual Tests section to compare and test changes
+
+### v0.1.29 - January 14, 2015
+* Nate botched this release -- ignore
 
 ### v0.1.28 - December 23, 2015
 * No changes, just bumping because of issues with WebJars/Maven caching.
