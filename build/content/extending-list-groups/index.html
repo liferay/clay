@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.29</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.30</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -198,6 +198,14 @@
 </ul>
 </div>
 </li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
 <li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
 </li>
 </ul>
@@ -219,12 +227,21 @@
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Create collapsible list groups with <a href="/liferay-ux-guidelines/content/list-groups/#listGroups">List Group</a> and the Collapse module.</p>
-			<p>Add <code>collapse-icon</code> to <code>list-group-heading</code> to display a toggle icon between collapsed and open states. The icons can be changed by editing the <code>$list-group-header-icon-closed</code> and <code>$list-group-header-icon-open</code> variables.</p>
 		</blockquote>
 
 		<div class="list-group">
 			<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse4">
 				List Group Heading
+				<span class="collapse-icon-closed">
+					<svg class="lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#angle-right">
+					</svg>
+				</span>
+				<span class="collapse-icon-open">
+					<svg class="lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#angle-down">
+					</svg>
+				</span>
 			</a>
 			<div class="collapse" id="listGroupCollapse4">
 				<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
@@ -232,6 +249,16 @@
 
 			<a aria-expanded="true" class="list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse5">
 				List Group Heading
+				<span class="collapse-icon-closed">
+					<svg class="lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#angle-right">
+					</svg>
+				</span>
+				<span class="collapse-icon-open">
+					<svg class="lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#angle-down">
+					</svg>
+				</span>
 			</a>
 			<div class="collapse in" id="listGroupCollapse5">
 				<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
@@ -239,6 +266,16 @@
 
 			<a aria-expanded="false" class="collapsed list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse6">
 				List Group Heading
+				<span class="collapse-icon-closed">
+					<svg class="lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#angle-right">
+					</svg>
+				</span>
+				<span class="collapse-icon-open">
+					<svg class="lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#angle-down">
+					</svg>
+				</span>
 			</a>
 			<div class="collapse" id="listGroupCollapse6">
 				<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
@@ -289,7 +326,15 @@
 		</blockquote>
 
 		<div class="list-group">
-			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse1">List Group Heading</a>
+			<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse1">
+				List Group Heading
+				<span class="collapse-icon-closed">
+					<span class="icon-caret-right"></span>
+				</span>
+				<span class="collapse-icon-open">
+					<span class="icon-caret-down"></span>
+				</span>
+			</a>
 			<div class="collapse" id="listGroupCollapse1">
 				<a href="#" class="list-group-item">List Item 1</a>
 				<a href="#" class="list-group-item">List Item 2</a>
@@ -297,7 +342,15 @@
 				<a href="#" class="list-group-item">List Item 4</a>
 			</div>
 
-			<a aria-expanded="true" class="list-group-heading" data-toggle="collapse" href="#listGroupCollapse2">List Group Heading</a>
+			<a aria-expanded="true" class="collapse-icon list-group-heading" data-toggle="collapse" href="#listGroupCollapse2">
+				List Group Heading
+				<span class="collapse-icon-closed">
+					<span class="icon-caret-right"></span>
+				</span>
+				<span class="collapse-icon-open">
+					<span class="icon-caret-down"></span>
+				</span>
+			</a>
 			<div class="collapse in" id="listGroupCollapse2">
 				<a href="#" class="list-group-item">List Item 1</a>
 				<a href="#" class="list-group-item">List Item 2</a>
@@ -305,7 +358,15 @@
 				<a href="#" class="list-group-item">List Item 4</a>
 			</div>
 
-			<a aria-expanded="false" class="collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse3">List Group Heading</a>
+			<a aria-expanded="false" class="collapse-icon collapsed list-group-heading" data-toggle="collapse" href="#listGroupCollapse3">
+				List Group Heading
+				<span class="collapse-icon-closed">
+					<span class="icon-caret-right"></span>
+				</span>
+				<span class="collapse-icon-open">
+					<span class="icon-caret-down"></span>
+				</span>
+			</a>
 			<div class="collapse" id="listGroupCollapse3">
 				<a href="#" class="list-group-item">List Item 1</a>
 				<a href="#" class="list-group-item">List Item 2</a>

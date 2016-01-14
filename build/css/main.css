@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.29
+* Lexicon 0.1.30
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -934,6 +934,10 @@ h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, 
 
 .uxgl-newline-demo h3:first-child + blockquote {
   margin-top: 0;
+}
+
+.uxgl-assorted-section {
+  margin: 2em 0;
 }
 
 @media screen and (min-width: 1200px) {

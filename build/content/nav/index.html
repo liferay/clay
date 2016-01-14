@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.29</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.30</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -198,6 +198,14 @@
 </ul>
 </div>
 </li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
 <li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
 </li>
 </ul>
@@ -253,23 +261,35 @@
 		<h3 id="nested-nav"><a class="heading-anchor" href="#nested-nav"><i class="icon icon-link"></i></a>Nested Nav</h3>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Nested navigation, also collapsible (requires <a href="http://getbootstrap.com/javascript/#collapse">Bootstrap Collapse Plugin</a>). Add class nav-nested to the outermost nav to indent each nested nav.</p>
-
-			<p>Set the icon for the closed state by setting the variable <code>$nav-collapse-icon-closed</code> in <code>_variables.scss</code> or overwrite in your css by setting <code>.nav-collapse-icon:before { content: &quot;&quot; }</code></p>
-
-			<p>Set the icon for the open state by setting the variable <code>$nav-collapse-icon-open</code> in <code>_variables.scss</code> or overwrite in your css by setting the content property of <code>.collapsed .nav-collapse-icon:before { content: &quot;&quot; }</code></p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
 		<ul class="nav nav-nested">
 			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse01">Basic Information</a>
+				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse01">
+					Basic Information
+					<span class="collapse-icon-closed">
+						<span class="icon-caret-right"></span>
+					</span>
+					<span class="collapse-icon-open">
+						<span class="icon-caret-down"></span>
+					</span>
+				</a>
 				<div class="collapse" id="navCollapse01">
 					<ul class="nav">
 						<li><a href="#1">Details</a></li>
 						<li><a href="#1">Catagorization</a></li>
 						<li>
-							<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse02">Documents and Media</a>
+							<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse02">
+								Documents and Media
+								<span class="collapse-icon-closed">
+									<span class="icon-caret-right"></span>
+								</span>
+								<span class="collapse-icon-open">
+									<span class="icon-caret-down"></span>
+								</span>
+							</a>
 							<div class="collapse" id="navCollapse02">
 								<ul class="nav">
 									<li><a href="#1">Details</a></li>
@@ -284,7 +304,15 @@
 				</div>
 			</li>
 			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse03">SEO</a>
+				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse03">
+					SEO
+					<span class="collapse-icon-closed">
+						<span class="icon-caret-right"></span>
+					</span>
+					<span class="collapse-icon-open">
+						<span class="icon-caret-down"></span>
+					</span>
+				</a>
 				<div class="collapse" id="navCollapse03">
 					<ul class="nav">
 						<li><a href="#1">Sitemap</a></li>
@@ -293,7 +321,15 @@
 				</div>
 			</li>
 			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse04">Advanced</a>
+				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse04">
+					Advanced
+					<span class="collapse-icon-closed">
+						<span class="icon-caret-right"></span>
+					</span>
+					<span class="collapse-icon-open">
+						<span class="icon-caret-down"></span>
+					</span>
+				</a>
 				<div class="collapse" id="navCollapse04">
 					<ul class="nav">
 						<li><a href="#1">Default User Associations</a></li>
@@ -316,13 +352,19 @@
     &lt;li&gt;
         &lt;a class=&quot;collapsed collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navCollapse01&quot;&gt;
             Basic Information
+            &lt;span class=&quot;collapse-icon-closed icon-caret-right&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;collapse-icon-open icon-caret-down&quot;&gt;&lt;/span&gt;
         &lt;/a&gt;
         &lt;div class=&quot;collapse&quot; id=&quot;navCollapse01&quot;&gt;
             &lt;ul class=&quot;nav&quot;&gt;
                 &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Catagorization&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;
-                    &lt;a class=&quot;collapsed collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navCollapse02&quot;&gt;Documents and Media&lt;/a&gt;
+                    &lt;a class=&quot;collapsed collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navCollapse02&quot;&gt;
+                        Documents and Media
+                        &lt;span class=&quot;collapse-icon-closed icon-caret-right&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;collapse-icon-open icon-caret-down&quot;&gt;&lt;/span&gt;
+                    &lt;/a&gt;
                     &lt;div class=&quot;collapse&quot; id=&quot;navCollapse02&quot;&gt;
                         &lt;ul class=&quot;nav&quot;&gt;
                             &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
@@ -339,6 +381,8 @@
     &lt;li&gt;
         &lt;a class=&quot;collapsed collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navCollapse03&quot;&gt;
             SEO
+            &lt;span class=&quot;collapse-icon-closed icon-caret-right&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;collapse-icon-open icon-caret-down&quot;&gt;&lt;/span&gt;
         &lt;/a&gt;
         &lt;div class=&quot;collapse&quot; id=&quot;navCollapse03&quot;&gt;
             &lt;ul class=&quot;nav&quot;&gt;
@@ -378,13 +422,37 @@
 	<div class="col-md-6">
 		<ul class="nav nav-nested-margins">
 			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse001">Basic Information</a>
+				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse001">
+					Basic Information
+					<span class="collapse-icon-closed">
+						<svg class="lexicon-icon">
+							<use xlink:href="../../images/icons/icons.svg#angle-right">
+						</svg>
+					</span>
+					<span class="collapse-icon-open">
+						<svg class="lexicon-icon">
+							<use xlink:href="../../images/icons/icons.svg#angle-down">
+						</svg>
+					</span>
+				</a>
 				<div class="collapse" id="navCollapse001">
 					<ul class="nav">
 						<li><a href="#1">Details</a></li>
 						<li><a href="#1">Catagorization</a></li>
 						<li>
-							<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse002">Documents and Media</a>
+							<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse002">
+								Documents and Media
+								<span class="collapse-icon-closed">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#angle-right">
+									</svg>
+								</span>
+								<span class="collapse-icon-open">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#angle-down">
+									</svg>
+								</span>
+							</a>
 							<div class="collapse" id="navCollapse002">
 								<ul class="nav">
 									<li><a href="#1">Details</a></li>
@@ -399,7 +467,19 @@
 				</div>
 			</li>
 			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse003">SEO</a>
+				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse003">
+					SEO
+					<span class="collapse-icon-closed">
+						<svg class="lexicon-icon">
+							<use xlink:href="../../images/icons/icons.svg#angle-right">
+						</svg>
+					</span>
+					<span class="collapse-icon-open">
+						<svg class="lexicon-icon">
+							<use xlink:href="../../images/icons/icons.svg#angle-down">
+						</svg>
+					</span>
+				</a>
 				<div class="collapse" id="navCollapse003">
 					<ul class="nav">
 						<li><a href="#1">Sitemap</a></li>
@@ -408,7 +488,19 @@
 				</div>
 			</li>
 			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse004">Advanced</a>
+				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse004">
+					Advanced
+					<span class="collapse-icon-closed">
+						<svg class="lexicon-icon">
+							<use xlink:href="../../images/icons/icons.svg#angle-right">
+						</svg>
+					</span>
+					<span class="collapse-icon-open">
+						<svg class="lexicon-icon">
+							<use xlink:href="../../images/icons/icons.svg#angle-down">
+						</svg>
+					</span>
+				</a>
 				<div class="collapse" id="navCollapse004">
 					<ul class="nav">
 						<li><a href="#1">Default User Associations</a></li>
@@ -437,6 +529,12 @@
 				<div class="nav-equal-height-heading">
 					<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0001">
 						Basic Information
+						<span class="collapse-icon-closed">
+							<span class="icon-caret-right"></span>
+						</span>
+						<span class="collapse-icon-open">
+							<span class="icon-caret-down"></span>
+						</span>
 						<div>Subheading</div>
 					</a>
 				</div>
@@ -446,7 +544,15 @@
 						<li><a href="#1">Categorization</a></li>
 						<li>
 							<div class="nav-equal-height-heading">
-								<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0002">Documents and Media</a>
+								<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0002">
+									Documents and Media
+									<span class="collapse-icon-closed">
+										<span class="icon-caret-right"></span>
+									</span>
+									<span class="collapse-icon-open">
+										<span class="icon-caret-down"></span>
+									</span>
+								</a>
 							</div>
 							<div class="collapse" id="navCollapse0002">
 								<ul class="nav">
@@ -463,7 +569,15 @@
 			</li>
 			<li>
 				<div class="nav-equal-height-heading">
-					<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0003">SEO</a>
+					<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0003">
+						SEO
+						<span class="collapse-icon-closed">
+							<span class="icon-caret-right"></span>
+						</span>
+						<span class="collapse-icon-open">
+							<span class="icon-caret-down"></span>
+						</span>
+					</a>
 				</div>
 				<div class="collapse" id="navCollapse0003">
 					<ul class="nav">
@@ -474,7 +588,15 @@
 			</li>
 			<li>
 				<div class="nav-equal-height-heading">
-					<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0004">Advanced</a>
+					<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0004">
+						Advanced
+						<span class="collapse-icon-closed">
+							<span class="icon-caret-right"></span>
+						</span>
+						<span class="collapse-icon-open">
+							<span class="icon-caret-down"></span>
+						</span>
+					</a>
 				</div>
 				<div class="collapse" id="navCollapse0004">
 					<ul class="nav">
@@ -634,13 +756,29 @@
 	<div class="col-md-4">
 		<ul class="nav nav-nested nav-pills nav-stacked">
 			<li>
-				<a aria-expanded="true" class="collapse-icon" data-toggle="collapse" href="#navPillsCollapse01">Basic Information</a>
+				<a aria-expanded="true" class="collapse-icon" data-toggle="collapse" href="#navPillsCollapse01">
+					Basic Information
+					<span class="collapse-icon-closed">
+						<span class="icon-caret-right"></span>
+					</span>
+					<span class="collapse-icon-open">
+						<span class="icon-caret-down"></span>
+					</span>
+				</a>
 				<div class="collapse in" id="navPillsCollapse01">
 					<ul class="nav">
 						<li><a href="#">Details</a></li>
 						<li><a href="#">Catagorization</a></li>
 						<li>
-							<a class="collapsed collapse-icon" data-toggle="collapse" href="#navPillsCollapse02">Documents and Media</a>
+							<a class="collapsed collapse-icon" data-toggle="collapse" href="#navPillsCollapse02">
+								Documents and Media
+								<span class="collapse-icon-closed">
+									<span class="icon-caret-right"></span>
+								</span>
+								<span class="collapse-icon-open">
+									<span class="icon-caret-down"></span>
+								</span>
+							</a>
 							<div class="collapse" id="navPillsCollapse02">
 								<ul class="nav">
 									<li><a href="#">Details</a></li>
