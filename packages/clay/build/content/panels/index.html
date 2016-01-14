@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.29</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.1.30</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -198,6 +198,14 @@
 </ul>
 </div>
 </li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav nav-stacked">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
 <li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
 </li>
 </ul>
@@ -312,7 +320,7 @@
 		<div aria-multiselectable="true" class="panel-group" id="accordion00" role="tablist">
 			<div class="panel panel-default">
 				<div class="panel-heading" id="heading00" role="tab">
-					<div class="h4 panel-title">
+					<div class="panel-title">
 						<a aria-controls="collapseOne" aria-expanded="true" data-toggle="collapse" data-parent="#accordion00" href="#panelCollapse00" role="button">
 							Single Collapsible Panel
 						</a>
@@ -333,7 +341,7 @@
 	<pre><code class="html">&lt;div aria-multiselectable=&quot;true&quot; class=&quot;panel-group&quot; id=&quot;accordion00&quot; role=&quot;tablist&quot;&gt;
     &lt;div class=&quot;panel panel-default&quot;&gt;
         &lt;div class=&quot;panel-heading&quot; id=&quot;heading00&quot; role=&quot;tab&quot;&gt;
-            &lt;div class=&quot;h4 panel-title&quot;&gt;
+            &lt;div class=&quot;panel-title&quot;&gt;
                 &lt;a aria-controls=&quot;collapseOne&quot; aria-expanded=&quot;true&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion00&quot; href=&quot;#panelCollapse00&quot; role=&quot;button&quot;&gt;
                   Single Collapsible Panel
                 &lt;/a&gt;
@@ -356,7 +364,7 @@
 		<div aria-multiselectable="true" class="panel-group" id="accordion" role="tablist">
 			<div class="panel panel-default">
 				<div class="panel-heading" id="headingOne" role="tab">
-					<div class="h4 panel-title">
+					<div class="panel-title">
 						<a aria-controls="collapseOne" aria-expanded="true" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" role="button">
 							Collapsible Group Item #1
 						</a>
@@ -370,7 +378,7 @@
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading" id="headingTwo" role="tab">
-					<div class="h4 panel-title">
+					<div class="panel-title">
 						<a aria-controls="collapseTwo" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" role="button">
 							Collapsible Group Item #2
 						</a>
@@ -384,7 +392,7 @@
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading" id="headingThree" role="tab">
-					<div class="h4 panel-title">
+					<div class="panel-title">
 						<a aria-controls="collapseThree" aria-expanded="false" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" role="button">
 							Collapsible Group Item #3
 						</a>
@@ -405,7 +413,7 @@
 	<pre><code class="html">&lt;div aria-multiselectable=&quot;true&quot; class=&quot;panel-group&quot; id=&quot;accordion&quot; role=&quot;tablist&quot;&gt;
     &lt;div class=&quot;panel panel-default&quot;&gt;
         &lt;div class=&quot;panel-heading&quot; id=&quot;headingOne&quot; role=&quot;tab&quot;&gt;
-            &lt;div class=&quot;h4 panel-title&quot;&gt;
+            &lt;div class=&quot;panel-title&quot;&gt;
                 &lt;a aria-controls=&quot;collapseOne&quot; aria-expanded=&quot;true&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseOne&quot; role=&quot;button&quot;&gt;
                     Collapsible Group Item #1
                 &lt;/a&gt;
@@ -419,7 +427,7 @@
     &lt;/div&gt;
     &lt;div class=&quot;panel panel-default&quot;&gt;
         &lt;div class=&quot;panel-heading&quot; id=&quot;headingTwo&quot; role=&quot;tab&quot;&gt;
-            &lt;div class=&quot;h4 panel-title&quot;&gt;
+            &lt;div class=&quot;panel-title&quot;&gt;
                 &lt;a aria-controls=&quot;collapseTwo&quot; aria-expanded=&quot;false&quot; class=&quot;collapsed&quot; data-parent=&quot;#accordion&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseTwo&quot; role=&quot;button&quot;&gt;
                     Collapsible Group Item #2
               &lt;/a&gt;
@@ -433,7 +441,7 @@
     &lt;/div&gt;
     &lt;div class=&quot;panel panel-default&quot;&gt;
         &lt;div class=&quot;panel-heading&quot; id=&quot;headingThree&quot; role=&quot;tab&quot;&gt;
-            &lt;div class=&quot;h4 panel-title&quot;&gt;
+            &lt;div class=&quot;panel-title&quot;&gt;
                 &lt;a aria-controls=&quot;collapseThree&quot; aria-expanded=&quot;false&quot; class=&quot;collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseThree&quot; role=&quot;button&quot;&gt;
                     Collapsible Group Item #3
               &lt;/a&gt;
@@ -453,16 +461,32 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<h3 id="accordions-with-open-and-close-icon"><a class="heading-anchor" href="#accordions-with-open-and-close-icon"><i class="icon icon-link"></i></a>Accordions with Open and Close Icon</h3>
+
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add open and close icons to the collapse control with the class <code>collapse-icon</code> and vertically center with the class <code>collapse-icon-middle</code>.</p>
+			<p>Add icons to the open and close states in an accordion. The class <code>collapse-icon-closed</code> displays the icon in the collapsed state. The class <code>collapse-icon-open</code> displays the icon in the open state.</p>
+
+			<p>Add class <code>collapse-icon</code> to the [data-toggle=&quot;collapse&quot;] element to create space for the icons and vertically center it with the class <code>collapse-icon-middle</code>.</p>
 		</blockquote>
 
 		<div aria-multiselectable="true" class="panel-group" id="accordion03" role="tablist">
 			<div class="panel panel-blank">
 				<div class="panel-heading" id="accordion03HeadingTwo" role="tab">
-					<div class="h4 panel-title">
-						<a aria-controls="collapseTwo" aria-expanded="false" class="collapsed collapse-icon collapse-icon-middle" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseTwo" role="button">
-							Collapsible Group Item #1
+					<div class="panel-title">
+						<a aria-controls="collapseTwo" aria-expanded="false" class="collapse-icon collapsed" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseTwo" role="button">
+							ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
+
+							<span class="collapse-icon-closed">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
 						</a>
 					</div>
 				</div>
@@ -474,9 +498,21 @@
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading" id="accordion03HeadingOne" role="tab">
-					<div class="h4 panel-title">
-						<a aria-controls="accordion03CollapseOne" aria-expanded="true" class="collapse-icon" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseOne" role="button">
+					<div class="panel-title">
+						<a aria-controls="accordion03CollapseOne" aria-expanded="true" class="collapse-icon collapse-icon-middle" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseOne" role="button">
 							Collapsible Group Item #2 (Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.)
+
+							<span class="collapse-icon-closed">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
 						</a>
 					</div>
 				</div>
@@ -488,9 +524,21 @@
 			</div>
 			<div class="panel panel-primary">
 				<div class="panel-heading" id="accordion03HeadingThree" role="tab">
-					<div class="h4 panel-title">
-						<a aria-controls="collapseThree" aria-expanded="false" class="collapsed collapse-icon collapse-icon-middle" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseThree" role="button">
+					<div class="panel-title">
+						<a aria-controls="collapseThree" aria-expanded="false" class="collapse-icon collapsed" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseThree" role="button">
 							Collapsible Group Item #3
+
+							<span class="collapse-icon-closed">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
 						</a>
 					</div>
 				</div>
@@ -502,9 +550,21 @@
 			</div>
 			<div class="panel panel-success">
 				<div class="panel-heading" id="accordion03HeadingFour" role="tab">
-					<div class="h4 panel-title">
-						<a aria-controls="accordion03CollapseFour" aria-expanded="false" class="collapsed collapse-icon" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFour" role="button">
+					<div class="panel-title">
+						<a aria-controls="accordion03CollapseFour" aria-expanded="false" class="collapse-icon collapsed" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFour" role="button">
 							Collapsible Group Item #4
+
+							<span class="collapse-icon-closed">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
 						</a>
 					</div>
 				</div>
@@ -516,9 +576,21 @@
 			</div>
 			<div class="panel panel-warning">
 				<div class="panel-heading" id="accordion03HeadingFive" role="tab">
-					<div class="h4 panel-title">
-						<a aria-controls="accordion03CollapseFive" aria-expanded="false" class="collapsed collapse-icon" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFive" role="button">
+					<div class="panel-title">
+						<a aria-controls="accordion03CollapseFive" aria-expanded="false" class="collapse-icon collapsed" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFive" role="button">
 							Collapsible Group Item #5
+
+							<span class="collapse-icon-closed">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
 						</a>
 					</div>
 				</div>
@@ -530,9 +602,21 @@
 			</div>
 			<div class="panel panel-danger">
 				<div class="panel-heading" id="accordion03HeadingSix" role="tab">
-					<div class="h4 panel-title">
-						<a aria-controls="accordion03CollapseSix" aria-expanded="false" class="collapsed collapse-icon" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseSix" role="button">
+					<div class="panel-title">
+						<a aria-controls="accordion03CollapseSix" aria-expanded="false" class="collapse-icon collapsed" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseSix" role="button">
 							Collapsible Group Item #6
+
+							<span class="collapse-icon-closed">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-right">
+								</svg>
+							</span>
+
+							<span class="collapse-icon-open">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
+								</svg>
+							</span>
 						</a>
 					</div>
 				</div>
