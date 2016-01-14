@@ -1,7 +1,7 @@
 /**
-* Lexicon 0.1.28
+* Lexicon 0.1.29
 *
-* Copyright 2015, Liferay, Inc.
+* Copyright 2016, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -247,10 +247,14 @@ body.fixed {
   top: 0;
 }
 
-#blogActions .navbar {
+#blogActions [data-target="#imageSelectorModal"] {
+  margin-bottom: 15px;
+  margin-left: -15px;
+  margin-top: 15px;
+}
+
+#blogActions .management-bar {
   margin-bottom: 0;
-  position: relative;
-  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
