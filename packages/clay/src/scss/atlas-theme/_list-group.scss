@@ -21,11 +21,6 @@
 .list-group-item {
 	border-left-width: 0;
 	border-right-width: 0;
-	padding: 4px 12px 4px 24px;
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		padding: 8px 12px 8px 24px;
-	}
 
 	&:focus {
 		z-index: 1;
@@ -48,7 +43,6 @@ a.list-group-heading,
 	border-bottom-width: 0;
 	border-top-width: 0;
 	color: $list-group-header-color;
-	line-height: 32px;
 	margin-bottom: 0;
 
 	&:after {
@@ -70,26 +64,38 @@ a.list-group-heading,
 		font-weight: 300;
 
 		&:after {
-			height: $list-group-header-close-border-width;
 			background-color: $list-group-header-close-border-color;
+			height: $list-group-header-close-border-width;
 		}
 	}
 }
 
 .list-group-item {
-	&.active {
-		&,
-		&:focus,
-		&:hover {
-			background-color: $list-group-active-bg;
-			color: $list-group-active-color;
-		}
+	@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-color);
 
-		.list-group-item-content,
-		.list-group-item-field {
-			border-bottom-color: $list-group-active-border;
-			box-shadow: inset 0 -1px 0 $list-group-active-border;
+	.card-col-content,
+	.list-group-item-content {
+		a {
+			color: $list-group-link-color;
+
+			&:focus,
+			&:hover {
+				color: $list-group-link-hover-color;
+			}
 		}
+	}
+}
+
+.list-group-item .checkbox input[type="checkbox"]:checked + .card,
+.list-group-item.active {
+	@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color);
+}
+
+.list-group-item.active {
+	.list-group-item-content,
+	.list-group-item-field {
+		border-bottom-color: $list-group-active-border;
+		box-shadow: inset 0 -1px 0 $list-group-active-border;
 	}
 }
 
@@ -208,10 +214,6 @@ a.list-group-heading,
 					right: -1px;
 					z-index: 1;
 				}
-
-				.dropdown-toggle {
-					color: $brand-default;
-				}
 			}
 		}
 	}
@@ -254,20 +256,6 @@ a.list-group-heading,
 		.card-row {
 			@media screen and (max-width: $grid-float-breakpoint-max) {
 				padding-right: 20px;
-			}
-		}
-	}
-}
-
-// Tabular List Group Skins
-
-.detailed-list-view {
-	.active {
-		a {
-			&,
-			&:focus,
-			&:hover {
-				color: $brand-default;
 			}
 		}
 	}

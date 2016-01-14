@@ -203,8 +203,32 @@
 		height: $header-toolbar-height;
 	}
 
+	.toolbar-group {
+		margin-right: $toolbar-group-padding-horizontal;
+		padding-right: 0;
+
+		&:first-child {
+			.toolbar-group-content,
+			.toolbar-group-field {
+				padding-left: $header-toolbar-padding-horizontal;
+
+				&:first-child {
+					padding-left: 0;
+					padding-right: $header-toolbar-padding-horizontal;
+				}
+			}
+		}
+	}
+
+	.toolbar-group-right {
+		margin-left: $toolbar-group-padding-horizontal;
+		padding-left: 0;
+	}
+
 	.toolbar-group-expand-text {
 		line-height: $header-toolbar-height;
+
+		margin-right: $toolbar-group-padding-horizontal;
 	}
 
 	.toolbar-group-content {
@@ -220,6 +244,15 @@
 .header-toolbar-default {
 	background-color: $header-toolbar-default-bg;
 	border: $header-toolbar-default-border-width solid $header-toolbar-default-border;
+
+	.toolbar-group:first-child {
+		.toolbar-group-content,
+		.toolbar-group-field {
+			&:first-child {
+				border-right: $header-toolbar-default-border-width solid $header-toolbar-default-border;
+			}
+		}
+	}
 
 	.toolbar-group-content {
 		> a,

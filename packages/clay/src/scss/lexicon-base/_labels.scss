@@ -1,41 +1,69 @@
 .label {
-	@extend .badge;
+	display: inline-block;
+	font-size: $label-font-size;
+	padding-bottom: $label-padding-bottom;
+	padding-left: $label-padding-left;
+	padding-right: $label-padding-right;
+	padding-top: $label-padding-top;
 
-	border-radius: $label-border-radius;
+	a {
+		color: $label-color;
+		display: inline-block;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 .label-lg {
-	@extend .badge-lg;
+	font-size: $label-lg-font-size;
+	padding-bottom: $label-lg-padding-bottom;
+	padding-left: $label-lg-padding-left;
+	padding-right: $label-lg-padding-right;
+	padding-top: $label-lg-padding-top;
 }
 
 .label-sm {
-	@extend .badge-sm;
+	font-size: $label-sm-font-size;
+	padding-bottom: $label-sm-padding-bottom;
+	padding-left: $label-sm-padding-left;
+	padding-right: $label-sm-padding-right;
+	padding-top: $label-sm-padding-top;
 }
 
 // Monospaced Labels
 
 .label-monospaced {
-	@extend .badge-monospaced;
+	@include monospace($label-monospaced-size);
+
+	padding: 0;
+
+	&.label-lg {
+		@include monospace($label-lg-monospaced-size);
+	}
+
+	&.label-sm {
+		@include monospace($label-sm-monospaced-size);
+	}
 }
 
-// Skins
+// Lexicon Icons in Labels
 
-.label-danger {
-	@extend .badge-danger;
+.label .lexicon-icon {
+	height: 9px;
+	margin-left: 2px;
+	width: 9px;
 }
 
-.label-info {
-	@extend .badge-info;
+.label-lg .lexicon-icon {
+	height: 13px;
+	margin-left: 4px;
+	width: 13px;
 }
 
-.label-primary {
-	@extend .badge-primary;
-}
-
-.label-success {
-	@extend .badge-success;
-}
-
-.label-warning {
-	@extend .badge-warning;
+.label-sm .lexicon-icon {
+	height: 5px;
+	width: 5px;
 }

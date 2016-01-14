@@ -9,6 +9,15 @@
 	position: relative;
 	word-wrap: break-word;
 
+	&:focus {
+		z-index: 1;
+	}
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+
 	&:first-child {
 		border-top-left-radius: $list-group-border-radius;
 		border-top-right-radius: $list-group-border-radius;
@@ -19,8 +28,6 @@
 		border-bottom-right-radius: $list-group-border-radius;
 		margin-bottom: 0;
 	}
-
-
 }
 
 a.list-group-heading,
@@ -35,16 +42,15 @@ button.list-group-heading,
 	}
 }
 
-.list-group-heading.collapse-icon {
-	&:before {
-		content: $list-group-header-icon-open;
-		font-size: $list-group-header-icon-font-size;
-		font-family: $list-group-header-icon-font-family;
-		right: 15px;
-	}
+.list-group-item .checkbox input[type="checkbox"]:checked + .card,
+.list-group-item.active {
+	@include color-dropdown-toggle-link($list-group-active-color, $list-group-active-color, $list-group-active-color);
 
-	&.collapsed:before {
-		content: $list-group-header-icon-closed;
+	.card-col-content,
+	.list-group-item-content {
+		a {
+			color: $list-group-active-color;
+		}
 	}
 }
 
@@ -105,15 +111,6 @@ button.list-group-heading,
 	margin-bottom: 20px;
 	padding: 0;
 
-	a {
-		color: $list-group-link-color;
-
-		&:focus,
-		&:hover {
-			color: $list-group-link-hover-color;
-		}
-	}
-
 	> li,
 	.list-group-item {
 		border-width: 0;
@@ -129,35 +126,25 @@ button.list-group-heading,
 		}
 	}
 
-	.active {
-		a {
-			&,
-			&:focus,
-			&:hover {
-				color: $list-group-active-color;
-			}
-		}
-	}
-
 	.list-group-item-content,
 	.list-group-item-field {
 		border: $tabular-list-group-border-width solid $list-group-border;
 		border-left-width: 0;
 		border-right-width: 0;
 		border-top-width: 0;
-		padding: 1em 0.3em;
+		padding: $table-cell-padding;
 		position: relative;
 		word-break: break-all; // IE
 		word-break: break-word;
 
 		&:first-child {
 			border-left-width: $tabular-list-group-border-width;
-			padding-left: 1em;
+			padding-left: 15px;
 		}
 
 		&:last-child {
 			border-right-width: $tabular-list-group-border-width;
-			padding-right: 1em;
+			padding-right: 15px;
 		}
 	}
 
@@ -385,10 +372,6 @@ button.list-group-heading,
 			+ .card {
 				background-color: $list-group-card-active-bg;
 				color: $list-group-card-active-color;
-
-				.dropdown-toggle {
-					color: $list-group-card-active-color;
-				}
 			}
 		}
 	}

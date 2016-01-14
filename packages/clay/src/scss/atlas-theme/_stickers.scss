@@ -1,12 +1,5 @@
-.sticker-default {
-	background-color: $badge-default-bg;
-	color: $badge-default-color;
+// Skin
 
-	a {
-		&,
-		&:focus,
-		&:hover {
-			color: $badge-default-color;
-		}
-	}
+.sticker-default {
+	color: $label-default-color;
 }

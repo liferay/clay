@@ -17,7 +17,7 @@
 
 .card {
 	.card-row {
-		width: 100.4%; // Webkit rounding
+		width: 100%;
 	}
 
 	.figure {
@@ -131,7 +131,8 @@
 		display: table-cell;
 		position: relative;
 		vertical-align: middle;
-		word-break: break-word;
+
+		@include word-wrap;
 
 		.img-responsive {
 			max-width: none;

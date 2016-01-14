@@ -47,7 +47,8 @@
 		> .checkbox,
 		> .radio {
 			@media screen and (min-width: $grid-float-breakpoint) {
-				padding: 20px 15px;
+				padding-bottom: 20px;
+				padding-top: 20px;
 			}
 		}
 	}

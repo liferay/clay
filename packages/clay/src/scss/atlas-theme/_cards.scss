@@ -3,10 +3,7 @@
 	box-shadow: $card-box-shadow;
 
 	.dropdown-toggle {
-		&.icon-ellipsis-vertical,
-		.icon-ellipsis-vertical {
-			color: $dropdown-link-color;
-		}
+		color: $dropdown-link-color;
 	}
 }
 

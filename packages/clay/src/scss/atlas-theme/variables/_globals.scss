@@ -80,6 +80,8 @@ $brand-danger:                             #CC6677 !default;
 $brand-danger-active: darken($brand-danger, 12%) !default; // Atlas
 $brand-danger-hover: darken($brand-danger, 8%) !default; // Atlas
 
+$link-color:            $brand-primary !default;
+
 $text-color:                               #29353D !default;
 $text-muted:                               lighten($text-color, 55%) !default;
 

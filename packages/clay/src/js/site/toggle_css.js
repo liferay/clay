@@ -40,7 +40,6 @@
 		localStorage.setItem('nate.lexiconSiteHref', disabled);
 	};
 
-	var $html = $('html');
 	var siteConfig = $('#siteConfig');
 
 	var toggleAtlas = $('#toggleAtlas');
@@ -49,13 +48,6 @@
 
 	toggleAtlas.on('click', function(e) {
 		toggleLexiconLink();
-
-		if (toggleAtlas.prop('checked')) {
-			$html.removeClass('lexicon-base').addClass('atlas');
-		}
-		else {
-			$html.removeClass('atlas').addClass('lexicon-base');
-		}
 	});
 
 	toggleSiteCss.on('click', function(e) {
@@ -78,10 +70,6 @@
 		if(lexiconHref && lexiconLink.prop('href') != lexiconHref) {
 			lexiconLink.prop('href', lexiconHref);
 			toggleAtlas.prop('checked', REGEX_ATLAS_LINK.test(lexiconHref));
-			$html.addClass('lexicon-base');
-		}
-		else {
-			$html.addClass('atlas');
 		}
 
 		var lexiconSiteLink = getLexiconSiteLink();
