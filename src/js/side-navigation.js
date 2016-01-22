@@ -900,4 +900,11 @@
 	Plugin.Constructor = SideNavigation;
 
 	$.fn.sideNavigation = Plugin;
+
+	$(function() {
+		var sidenav = $('[data-toggle="sidenav"]');
+		var target = sidenav.attr('data-target') || sidenav.attr('href');
+
+		Plugin.call(sidenav);
+	});
 }(jQuery);
