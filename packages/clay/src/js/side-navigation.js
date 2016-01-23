@@ -90,8 +90,12 @@
 				options.type = element.data('type');
 				options.typeMobile = element.data('type-mobile');
 				options.url = element.data('url');
-				options.useDelegate = element.data('use-delegate') || false;
+				options.useDelegate = element.data('use-delegate');
 				options.width = '';
+
+				if (options.useDelegate === undefined) {
+					options.useDelegate = true;
+				}
 			}
 			else { // find toggler
 				toggler = element.find(options.toggler);
