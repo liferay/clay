@@ -684,6 +684,10 @@
 					'click.lexicon.sidenav',
 					togglerSelector,
 					function(event) {
+						if (!instance.useDataAttribute) {
+							instance.element = doc.find(options.selector);
+						}
+
 						instance.toggle();
 
 						event.preventDefault();
