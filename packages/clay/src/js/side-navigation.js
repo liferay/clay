@@ -136,16 +136,8 @@
 
 			// Detach sidenav close
 
-			var closeButton = element.find('.sidenav-close').first();
-
-			if (instance.useDataAttribute) {
-				var simpleSidenav = instance._getSimpleSidenavNavigation();
-
-				closeButton = simpleSidenav.find('.sidenav-close').first();
-			}
-
-			closeButton.off('click.lexicon.sidenav');
-			closeButton.data('click.lexicon.sidenav', null);
+			doc.off('click.close.lexicon.sidenav', instance.closeButtonSelector);
+			doc.data(instance.dataCloseButtonSelector, null);
 
 			// Detach toggler
 
@@ -648,23 +640,34 @@
 			var instance = this;
 
 			var element = instance.element;
+			var options = instance.options;
 
-			var closeButton = element.find('.sidenav-close').first();
-			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
+			var containerSelector = '#' + element.attr('id');
 
 			if (instance.useDataAttribute) {
-				closeButton = container.find('.sidenav-close');
+				containerSelector = options.target || element.attr('href');
 			}
 
-			if (!closeButton.data('click.lexicon.sidenav')) {
-				closeButton.on('click.lexicon.sidenav', function(event) {
+			var closeButton = $(containerSelector).find('.sidenav-close').first();
+			var closeButtonSelector = '#' + guid(closeButton, 'generatedLexiconSidenavCloseId');
+			var dataCloseButtonSelector ='lexicon.' + closeButtonSelector;
+
+			if (!doc.data(dataCloseButtonSelector)) {
+				doc.data(dataCloseButtonSelector, 'true');
+
+				doc.on('click.close.lexicon.sidenav', closeButtonSelector, function(event) {
 					event.preventDefault();
+
+					if (!instance.useDataAttribute) {
+						instance.element = doc.find(options.selector);
+					}
 
 					instance.toggle();
 				});
-
-				closeButton.data('click.lexicon.sidenav', true);
 			}
+
+			instance.closeButtonSelector = closeButtonSelector;
+			instance.dataCloseButtonSelector = dataCloseButtonSelector;
 		},
 
 		_onClickTrigger: function() {
