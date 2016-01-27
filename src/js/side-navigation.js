@@ -129,6 +129,39 @@
 			els.css(attribute, '');
 		},
 
+		destroy: function() {
+			var instance = this;
+			var element = instance.element;
+			var options = instance.options;
+
+			// Detach sidenav close
+
+			var closeButton = element.find('.sidenav-close').first();
+
+			if (instance.useDataAttribute) {
+				var simpleSidenav = instance._getSimpleSidenavNavigation();
+
+				closeButton = simpleSidenav.find('.sidenav-close').first();
+			}
+
+			closeButton.off('click.lexicon.sidenav');
+			closeButton.data('click.lexicon.sidenav', null);
+
+			// Detach toggler
+
+			if (options.useDelegate) {
+				doc.off('click.lexicon.sidenav', instance.togglerSelector);
+				doc.data(instance.dataTogglerSelector, null);
+			}
+			else {
+				element.off('click.lexicon.sidenav');
+			}
+
+			// Remove Side Navigation
+
+			element.data('lexicon.sidenav', null);
+		},
+
 		getSidenavLeftWidth: function(type, offset, width) {
 			var instance = this;
 
@@ -694,6 +727,9 @@
 					}
 				);
 			}
+
+			instance.togglerSelector = togglerSelector;
+			instance.dataTogglerSelector = dataTogglerSelector;
 		},
 
 		_onScreenChange: function() {
