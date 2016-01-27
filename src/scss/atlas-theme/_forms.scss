@@ -59,6 +59,12 @@ select.form-control {
 		box-shadow: $input-box-shadow-focus;
 		color: $input-color-focus;
 	}
+
+	&::-ms-clear, &::-ms-reveal {
+		display: none;
+		height: 0;
+		width: 0;
+	}
 }
 
 // Disabled State
