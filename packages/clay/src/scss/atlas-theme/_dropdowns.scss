@@ -36,7 +36,6 @@
 	border: $dropdown-border-width solid $dropdown-fallback-border; // IE8 fallback
 	box-shadow: $dropdown-box-shadow;
 	font-size: $dropdown-font-size;
-	margin-top: 0;
 	max-width: 230px;
 	min-height: 40px;
 	padding: 6px 0;
@@ -77,126 +76,6 @@
 	}
 }
 
-// Arrows and dropdown-menu positions
-// ($arrow-size, $border-width, $offset, $arrow-color, $border-color)
-
-.dropdown-menu,
-.dropdown-menu-center,
-.dropdown-menu-right,
-.navbar-right .dropdown-menu {
-	margin-top: $dropdown-margin-vertical;
-}
-
-.dropdown-menu {
-	@include arrow("top-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-center,
-.navbar-right .dropdown-menu.dropdown-menu-center {
-	@include arrow("top-center", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-right,
-.navbar-right .dropdown-menu {
-	@include arrow("top-right", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-top,
-.dropdown-menu-top-center,
-.dropdown-menu-top-right,
-.dropup .dropdown-menu {
-	bottom: 100%;
-	margin-bottom: $dropdown-margin-vertical;
-	top: auto;
-}
-
-.dropdown-menu-top,
-.dropup .dropdown-menu,
-.navbar-right .dropdown-menu.dropdown-menu-top {
-	@include arrow("bottom-left", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-top-center,
-.navbar-right .dropdown-menu.dropdown-menu-top-center {
-	@include arrow("bottom-center", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	left: 50%;
-
-	@include transform(translateX(-50%));
-}
-
-.dropdown-menu-top-right,
-.navbar-right .dropdown-menu.dropdown-menu-top-right {
-	@include arrow("bottom-right", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-
-	left: auto;
-	right: 0;
-}
-
-.dropdown-menu-left-side,
-.dropdown-menu-left-side-bottom,
-.dropdown-menu-left-side-middle {
-	margin: 0 $dropdown-margin-horizontal 0 0;
-
-	.inline-scroller {
-		margin-right: 3px;
-	}
-}
-
-.dropdown-menu-left-side,
-.navbar-right .dropdown-menu.dropdown-menu-left-side {
-	@include arrow("right-top", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-left-side-bottom,
-.navbar-right .dropdown-menu.dropdown-menu-left-side-bottom {
-	@include arrow("right-bottom", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-left-side-middle,
-.navbar-right .dropdown-menu.dropdown-menu-left-side-middle {
-	@include arrow("right-middle", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-right-side,
-.dropdown-menu-right-side-bottom,
-.dropdown-menu-right-side-middle {
-	margin: 0 0 0 $dropdown-margin-horizontal;
-}
-
-.dropdown-menu-right-side,
-.navbar-right .dropdown-menu.dropdown-menu-right-side {
-	@include arrow("left-top", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-right-side-bottom,
-.navbar-right .dropdown-menu.dropdown-menu-right-side-bottom {
-	@include arrow("left-bottom", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-right-side-middle,
-.navbar-right .dropdown-menu.dropdown-menu-right-side-middle {
-	@include arrow("left-middle", 8px, 1px, 9px, $dropdown-arrow-color, $dropdown-border);
-}
-
-.dropdown-menu-no-arrow,
-.dropdown-menu-no-arrow .dropdown-menu,
-.navbar-right .dropdown-menu-clear-arrow {
-	&:after,
-	&:before {
-		content: none;
-	}
-}
-
-// Dropup Menus
-
-.dropup .dropdown-menu-right {
-	&:after,
-	&:before {
-		left: auto;
-	}
-}
-
 .link-list {
 	.link-list-heading {
 		font-size: $dropdown-header-font-size;
@@ -211,7 +90,6 @@
 }
 
 @media (min-width: $grid-float-breakpoint) { // min-width: 768px
-
 	.dropdown-header {
 		font-size: $dropdown-header-font-size-desktop;
 	}

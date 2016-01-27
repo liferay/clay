@@ -3,20 +3,19 @@
 	width: 100%;
 }
 
-.nameplate-checkbox,
-.nameplate-icon,
+.nameplate-content,
 .nameplate-field {
 	display: table-cell;
-	padding: 0 0.3em;
+	padding: 6px;
 	vertical-align: top;
+}
+
+.nameplate-field {
 	width: 1%;
 }
 
 .nameplate-content {
-	display: table-cell;
-	padding: 0 0.3em;
-	vertical-align: top;
-	word-break: break-word;
+	word-wrap: break-word;
 
 	h1,
 	h2,
@@ -51,22 +50,12 @@
 		margin-right: 0;
 	}
 
-	&.form-control {
-		border-width: 0;
-		box-shadow: none;
-		display: table;
-		height: $input-height-base;
-		width: auto;
-	}
-
 	a {
 		text-decoration: none;
 	}
 
 	.nameplate-content,
-	.nameplate-field,
-	.nameplate-icon {
-		display: table-cell;
+	.nameplate-field {
 		vertical-align: middle;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
@@ -76,7 +65,6 @@
 
 	.nameplate-content {
 		height: auto;
-		padding: 3px 5px 2px;
 		position: relative;
 
 		@media screen and (max-width: $grid-float-breakpoint-max) {
@@ -87,7 +75,6 @@
 	.nameplate-label-text {
 		display: block;
 		font-weight: 500;
-		line-height: $nameplate-label-text-line-height;
 		max-width: 200px;
 		overflow: hidden;
 		position: relative;
@@ -105,42 +92,81 @@
 	}
 }
 
-.nameplate-label-next .nameplate-label-text {
-	text-align: center;
+.nameplate-label {
+	.icon-monospaced,
+	.icon-monospaced.lexicon-icon {
+		margin: 0;
+
+		@include monospace(20px);
+	}
+
+	.icon-monospaced.lexicon-icon {
+		padding: 4px;
+	}
+
+	.user-icon {
+		@include monospace(22px);
+	}
 }
+
+.nameplate-label-more {
+	.icon-monospaced.lexicon-icon {
+		padding: 6px 4px 0;
+	}
+
+	.nameplate-label-text {
+		text-align: center;
+	}
+}
+
+// Nameplate Label Helpers
 
 .nameplate-label-circle {
 	border-radius: 100px;
 }
 
 .nameplate-label-rounded {
-	border-radius: 3px;
+	border-radius: $nameplate-label-rounded-border-radius;
 }
 
 .nameplate-label-square {
 	border-radius: 0;
 }
 
+// Skins
+
 .nameplate-label-default {
-	@include color-nameplate-label($nameplate-label-default-bg, $nameplate-label-default-link-color, $nameplate-label-default-link-hover-color);
+	@include color-nameplate-label($nameplate-label-default-bg, $nameplate-label-default-color);
+}
+
+.nameplate-label-inverse {
+	@include color-nameplate-label($nameplate-label-inverse-bg, $nameplate-label-inverse-color);
 }
 
 .nameplate-label-primary {
-	@include color-nameplate-label($nameplate-label-primary-bg, $nameplate-label-primary-link-color, $nameplate-label-primary-link-hover-color);
+	@include color-nameplate-label($nameplate-label-primary-bg, $nameplate-label-primary-color);
+
+	a {
+		@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+	}
 }
 
 .nameplate-label-success {
-	@include color-nameplate-label($nameplate-label-success-bg, $nameplate-label-success-link-color, $nameplate-label-success-link-hover-color);
+	@include color-nameplate-label($nameplate-label-success-bg, $nameplate-label-success-color);
 }
 
 .nameplate-label-info {
-	@include color-nameplate-label($nameplate-label-info-bg, $nameplate-label-info-link-color, $nameplate-label-info-link-hover-color);
+	@include color-nameplate-label($nameplate-label-info-bg, $nameplate-label-info-color);
 }
 
 .nameplate-label-warning {
-	@include color-nameplate-label($nameplate-label-warning-bg, $nameplate-label-warning-link-color, $nameplate-label-warning-link-hover-color);
+	@include color-nameplate-label($nameplate-label-warning-bg, $nameplate-label-warning-color);
 }
 
 .nameplate-label-danger {
-	@include color-nameplate-label($nameplate-label-danger-bg, $nameplate-label-danger-link-color, $nameplate-label-danger-link-hover-color);
+	@include color-nameplate-label($nameplate-label-danger-bg, $nameplate-label-danger-color);
+
+	a {
+		@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+	}
 }

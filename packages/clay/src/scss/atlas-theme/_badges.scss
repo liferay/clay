@@ -35,12 +35,13 @@
 .badge-default {
 	background-color: $badge-default-bg;
 	color: $badge-default-color;
+}
 
-	a {
-		&,
-		&:focus,
-		&:hover {
-			color: $badge-default-link-color;
-		}
+a.badge-default,
+.badge-default a {
+	&,
+	&:focus,
+	&:hover {
+		color: $badge-default-link-color;
 	}
 }

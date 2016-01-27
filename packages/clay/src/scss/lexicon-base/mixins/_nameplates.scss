@@ -1,13 +1,4 @@
-@mixin color-nameplate-label($bg, $color, $hover-color) {
+@mixin color-nameplate-label($bg, $color: $text-color) {
 	background-color: $bg;
 	color: $color;
-
-	a {
-		color: $color;
-
-		&:focus,
-		&:hover {
-			color: $hover-color;
-		}
-	}
 }

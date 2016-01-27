@@ -149,3 +149,5 @@ $box-shadow-default-blur: 3px !default; // Atlas
 $box-shadow-default-spread: 1px !default; // Atlas
 $box-shadow-default-bg: rgba(0, 0, 0, 0.2) !default; // Atlas
 $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default; // Atlas
+
+$close-text-shadow: none !default;

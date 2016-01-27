@@ -2,8 +2,8 @@
 .card-horizontal {
 	box-shadow: $card-box-shadow;
 
-	.dropdown-toggle {
-		color: $dropdown-link-color;
+	a {
+		color: $card-link-color;
 	}
 }
 
