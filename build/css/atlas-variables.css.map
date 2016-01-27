@@ -6,7 +6,6 @@
 		"atlas-theme/_variables.scss",
 		"atlas-theme/variables/_globals.scss",
 		"atlas-theme/variables/_alerts.scss",
-		"atlas-theme/variables/_badges.scss",
 		"atlas-theme/variables/_breadcrumbs.scss",
 		"atlas-theme/variables/_buttons.scss",
 		"atlas-theme/variables/_cards.scss",
@@ -14,6 +13,8 @@
 		"atlas-theme/variables/_figures.scss",
 		"atlas-theme/variables/_forms.scss",
 		"atlas-theme/variables/_icons.scss",
+		"atlas-theme/variables/_labels.scss",
+		"atlas-theme/variables/_badges.scss",
 		"atlas-theme/variables/_list-group.scss",
 		"atlas-theme/variables/_modals.scss",
 		"atlas-theme/variables/_nameplates.scss",
@@ -37,7 +38,6 @@
 		"atlas-theme/variables/_user-icons.scss",
 		"bootstrap/_variables.scss",
 		"lexicon-base/_variables.scss",
-		"lexicon-base/variables/_badges.scss",
 		"lexicon-base/variables/_breadcrumbs.scss",
 		"lexicon-base/variables/_buttons.scss",
 		"lexicon-base/variables/_cards.scss",
@@ -45,6 +45,7 @@
 		"lexicon-base/variables/_figures.scss",
 		"lexicon-base/variables/_icons.scss",
 		"lexicon-base/variables/_labels.scss",
+		"lexicon-base/variables/_badges.scss",
 		"lexicon-base/variables/_management-bar.scss",
 		"lexicon-base/variables/_modals.scss",
 		"lexicon-base/variables/_list-group.scss",
@@ -61,6 +62,6 @@
 		"lexicon-base/variables/_toggle-switch.scss",
 		"lexicon-base/variables/_tooltip.scss"
 	],
-	"mappings": "AAAA;;;;;;EAME;AMJF;uCACuC;AIkBvC;yCACyC",
+	"mappings": "AAAA;;;;;;EAME;AKJF;uCACuC;AIkBvC;yCACyC",
 	"names": []
 }

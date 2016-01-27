@@ -42,19 +42,6 @@ button.list-group-heading,
 	}
 }
 
-.list-group-heading.collapse-icon {
-	&:before {
-		content: $list-group-header-icon-open;
-		font-size: $list-group-header-icon-font-size;
-		font-family: $list-group-header-icon-font-family;
-		right: 15px;
-	}
-
-	&.collapsed:before {
-		content: $list-group-header-icon-closed;
-	}
-}
-
 .list-group-item .checkbox input[type="checkbox"]:checked + .card,
 .list-group-item.active {
 	@include color-dropdown-toggle-link($list-group-active-color, $list-group-active-color, $list-group-active-color);
