@@ -314,6 +314,74 @@ section: Components (JS)
 	</div>
 </div>
 
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Lazy Loading Side Navigation Content</h3>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>You can load content into the sidebar of the Side Navigation in one of two ways. At the very minimum, the only two things you need are a URL and that the sidebar has a child element with the <code>sidebar-body</code> class. Data fetched from the URL will be appended to the <code>sidebar-body</code> element.</p>
+		</blockquote>
+
+		<h4>Using the Data API</h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use attribute <code>data-url</code> on the toggle to load content into <code>.sidenav-body</code> when the side navigation is opened.</p>
+		</blockquote>
+
+		<div>
+			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-url="{{rootPath}}/partials/alerts" data-use-delegate="true">Simple Sidenav 2 Toggler</a>
+		</div>
+
+		<h4>Using the Options API</h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			When configuring your sidenav, you can specify the url using either a string or a configuration object that will be passed to <code>$.ajax</code> (though make sure the config object contains the url property).
+		</blockquote>
+
+		<pre><code class="html">```<div class="sidenav-container">
+        <a class="btn btn-default sidenav-toggler" href="">
+            <span class="glyphicon glyphicon-align-justify"></span> Toggle
+        </a>
+
+        <div class="sidenav-menu-slider">
+            <div class="sidenav-menu">
+                <div class="sidebar-body">
+                	Dynamic Content will be appended here...
+                </div>
+            </div>
+        </div>
+
+        <div class="sidenav-content">
+            <div class="col-md-12">... Your Main Content ...</div>
+        </div>
+    </div>
+
+    <script>
+        $('.sidenav-container').sideNavigation({
+            ...
+            // url can be either a string
+            url: '/foo.html',
+
+            // or it can be an ajax config object
+            url: {
+                url: '/foo.html',
+                type: 'POST',
+                success: function(response) {
+                    // runs before the content is appended
+                },
+                // ...etc...
+            },
+            ...
+        });
+    </script>
+</body>```</code></pre>
+
+		<h4>Lazy Loading Events and State</h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>When using the <code>url</code> or <code>data-url</code> options, the plugin will fire an event when the content is loaded <code>urlLoaded.lexicon.sidenav</code>.</p>
+			<p>Also, while the content is being loaded, a class name of <code>sidebar-loading</code> will be added to the sidenav element. If you're using the data API, this will be the element matching the <code>data-target</code> or <code>href</code> attributes.</p>
+			<p>If using the options API, the class will be added to the <code>.sidenav-menu</code> element.</p>
+		</blockquote>
+	</div>
+</div>
+
 <div class="side-navigation-methods row row-spacing">
 	<div class="col-md-12">
 		<h3>Methods</h3>
@@ -363,12 +431,12 @@ sideNavInstance.hide().visible(); // returns false```</code></pre></p>
 	$('#showSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		$('[data-toggle="sidenav"]').eq(2).sideNavigation('show');
+		$('[href="#simpleSidenav2"]').sideNavigation('show');
 	});
 
 	$('#hideSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		$('[data-toggle="sidenav"]').eq(2).sideNavigation('hide');
+		$('[href="#simpleSidenav2"]').sideNavigation('hide');
 	});
 </script>

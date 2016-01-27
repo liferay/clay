@@ -30,6 +30,69 @@
 	width: $lexicon-icon-lg-size;
 }
 
+// Collapse Icon
+
+a.collapse-icon {
+	padding-right: 45px;
+}
+
+.collapse-icon-closed,
+.collapse-icon-open {
+	[class^="icon-"],
+	[class*=" icon-"],
+	.lexicon-icon {
+		display: block;
+	}
+}
+
+.collapse-icon {
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		position: absolute;
+		right: 15px;
+		top: 10px;
+
+		[class^="icon-"],
+		[class*=" icon-"] {
+			margin-top: calc(((1em * #{$line-height-base}) - 1em) / 2);
+		}
+
+		.lexicon-icon {
+			margin-top: calc(((1em * #{$line-height-base}) - #{$lexicon-icon-size}) / 2);
+		}
+	}
+
+	.collapse-icon-closed {
+		display: none;
+	}
+
+	.collapse-icon-open {
+		display: inline-block;
+	}
+}
+
+.collapsed {
+	.collapse-icon-closed {
+		display: inline-block;
+	}
+
+	.collapse-icon-open {
+		display: none;
+	}
+}
+
+.collapse-icon-middle {
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		margin-top: 0;
+		top: 50%;
+
+		@include transform(translateY(-50%));
+	}
+}
+
+// Icon Monospaced
+
 a .icon-monospaced,
 .icon-monospaced {
 	display: inline-block;
@@ -96,29 +159,6 @@ a .icon-monospaced,
 }
 
 // Skins
-
-.collapse-icon {
-	display: block;
-	padding-right: $padding-base-horizontal * 2;
-	position: relative;
-
-	&:before {
-		content: $collapse-icon-open;
-		font-family: $collapse-icon-font-family;
-		position: absolute;
-		right: $padding-base-horizontal;
-	}
-
-	&.collapsed:before {
-		content: $collapse-icon-closed;
-	}
-}
-
-.collapse-icon-middle:before {
-	@include transform(translateY(-50%));
-
-	top: 50%;
-}
 
 .help-icon {
 	@extend .icon-monospaced;
