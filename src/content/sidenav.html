@@ -181,7 +181,7 @@ section: Components (JS)
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav">Simple Sidenav Toggler</a>
+			<a class="btn btn-default" href="#simpleSidenav" id="simpleToggle1" data-content="#wrapper" data-toggle="sidenav">Simple Sidenav Toggler</a>
 
 			<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav">
 				Another Simple Sidenav Toggler
@@ -199,7 +199,7 @@ section: Components (JS)
 							<span>Simple Sidenav</span>
 						</a>
 
-						<a class="sidenav-close" href="#1">
+						<a id="sidenavClose1" class="sidenav-close" href="#1">
 							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 							</svg>
@@ -410,15 +410,26 @@ section: Components (JS)
 		</blockquote>
 		<p><pre><code>```$('#myContainerId').sideNavigation('hide')```</code></pre></p>
 
-		<h4><code>sideNavInstance.visible()</code></h4>
+		<h4><code>.sideNavigation('destroy')</code></h4>
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Returns the visible state of the sidenav. <b>In order to use this method, you need to access the underlying SideNavigation instance.</b></p>
+			<p>Destroys the Side Navigation instance for the items in the jQuery collection, and removes any attached event handlers and any associated data added by the plugin.</p>
+		</blockquote>
+		<p><pre><code>```$('#myContainerId').sideNavigation('destroy')```</code></pre></p>
+
+		<h4><code>.sideNavigation('instance')</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Returns the Side Navigation instance for the first item in the jQuery collection (similar to how any other jQuery getter method works). If the plugin hasn't been initialized, it will return null.</p>
+		</blockquote>
+		<p><pre><code>```$('#myContainerId').sideNavigation('instance')```</code></pre></p>
+
+		<h4><code>.sideNavigation('visible')</code></h4>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Returns the visible state of the sidenav.</p>
 			<p>If the sidenav is in the middle of transitioning, this will report what the visible state <b>will be after</b> the transition is finished. This allows you to call it in any state and accurately get the state of the sidenav.</p>
 		</blockquote>
-		<p><pre><code>```var sideNavInstance = $('#myContainerId').data('lexicon.sidenav');
+		<p><pre><code>```$('#myContainerId').sideNavigation('show').sideNavigation('visible'); // returns true
 
-sideNavInstance.show().visible(); // returns true
-sideNavInstance.hide().visible(); // returns false```</code></pre></p>
+$('#myContainerId').sideNavigation('hide').sideNavigation('visible'); // returns false```</code></pre></p>
 	</div>
 </div>
 
