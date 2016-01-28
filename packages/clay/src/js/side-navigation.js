@@ -650,7 +650,7 @@
 
 			var closeButton = $(containerSelector).find('.sidenav-close').first();
 			var closeButtonSelector = '#' + guid(closeButton, 'generatedLexiconSidenavCloseId');
-			var dataCloseButtonSelector ='lexicon.' + closeButtonSelector;
+			var dataCloseButtonSelector = 'lexicon.' + closeButtonSelector;
 
 			if (!doc.data(dataCloseButtonSelector)) {
 				doc.data(dataCloseButtonSelector, 'true');
@@ -879,32 +879,80 @@
 
 	var old = $.fn.sideNavigation;
 
+	var initialize = function(element, options, selector) {
+		var data = element.data('lexicon.sidenav');
+
+		if (!data) {
+			if (!options) {
+				options = {};
+			}
+
+			options.selector = selector;
+
+			data = new SideNavigation(element, options);
+
+			element.data('lexicon.sidenav', data);
+		}
+
+		return data;
+	};
+
 	var Plugin = function(options) {
 		var selector = this.selector;
 
-		return this.each(
-			function() {
-				var $this = $(this);
+		var retVal = this;
+		var methodCall = typeof options === 'string';
+		var returnInstance = options === 'instance';
+		var args = $.makeArray(arguments).slice(1);
 
-				var data = $this.data('lexicon.sidenav');
+		if (methodCall) {
+			this.each(
+				function() {
+					var $this = $(this);
 
-				if (!data) {
-					if (!options) {
-						options = {};
+					var data = $this.data('lexicon.sidenav');
+
+					if (data) {
+						if (returnInstance) {
+							retVal = data;
+
+							return false;
+						}
+
+						var methodRetVal;
+
+						if ($.isFunction(data[options]) && options.indexOf('_') !== 0) {
+							methodRetVal = data[options].apply(data, args);
+						}
+
+						if (methodRetVal !== data && methodRetVal !== undefined) {
+							if (methodRetVal.jquery) {
+								retVal = retVal.pushStack(methodRetVal.get());
+							}
+							else {
+								retVal = methodRetVal;
+							}
+
+							return false;
+						}
 					}
+					else if (returnInstance) {
+						retVal = null;
 
-					options.selector = selector;
-
-					data = new SideNavigation($this, options);
-
-					$this.data('lexicon.sidenav', data);
+						return false;
+					}
 				}
-
-				if (typeof options === 'string') {
-					data[options].call(data);
+			);
+		}
+		else {
+			this.each(
+				function() {
+					initialize($(this), options, selector);
 				}
-			}
-		);
+			);
+		}
+
+		return retVal;
 	};
 
 	Plugin.noConflict = function() {
@@ -950,7 +998,6 @@
 
 	$(function() {
 		var sidenav = $('[data-toggle="sidenav"]');
-		var target = sidenav.attr('data-target') || sidenav.attr('href');
 
 		Plugin.call(sidenav);
 	});
