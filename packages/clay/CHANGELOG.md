@@ -1,3 +1,22 @@
+### v0.2.33 - January 29, 2015
+* Breaking: Remove IE's clear field button in Atlas
+* Breaking: Side Navigation plugin instantiates on page load when using data-toggle="sidenav"
+* Fix: `<a class="badge badge-default">` text color should be blue on hover
+* Fix: Side Navigation defaults to delegate false if use-delegate undefined
+* Fix: Side Navigation delegate should work on regular sidenav
+* Update: Updating some Lexicon icons (calendar.svg, date.svg, format.svg, home.svg, info-circle-open.svg, sites.svg, thumbs-down.svg, thumbs-up.svg, trash.svg)
+* Update: Adding new Lexicon icons (desktop.svg, full-size.svg, mark-as-answer.svg, mark-as-question.svg, mobile-landscape.svg, move.svg, page.svg, share.svg, shortcut.svg, tablet-landscape.svg, tablet-portrait.svg, wiki-page.svg)
+* Update: Side Navigation close button should use delegate
+* Update: Allowing the sidenav plugin to return a value from methods that can be invoked, as well as add an instance method that will return the current instance
+* Update: Side Navigation adding destroy method ([Fixes #116](https://github.com/liferay/lexicon/issues/116))
+* Update: Nameplates links and text styles should be different
+* Update: Remove text-shadow from Atlas .close
+* Update: Remove Atlas dropdown arrows
+* Site: Document new side navigation methods
+
+### v0.1.32 - January 29, 2015
+* Pat botched this release -- ignore
+
 ### v0.1.31 - January 14, 2015
 * Breaking: Change collapse open and close icons to be compatible with svg. Please see [this page](http://liferay.github.io/lexicon/content/panels/) to find the updated markup.
 * Breaking: Don't apply figure styles to element
