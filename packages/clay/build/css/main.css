@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.31
+* Lexicon 0.1.32
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -898,7 +898,8 @@ h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, 
   padding-top: 3px;
 }
 
-.uxgl-switches:before, .uxgl-switches:after {
+.uxgl-switches:before,
+.uxgl-switches:after {
   content: " ";
   display: table;
 }

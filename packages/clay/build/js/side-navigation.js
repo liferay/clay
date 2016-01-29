@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.31
+* Lexicon 0.1.32
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -97,8 +97,12 @@
 				options.type = element.data('type');
 				options.typeMobile = element.data('type-mobile');
 				options.url = element.data('url');
-				options.useDelegate = element.data('use-delegate') || false;
+				options.useDelegate = element.data('use-delegate');
 				options.width = '';
+
+				if (options.useDelegate === undefined) {
+					options.useDelegate = true;
+				}
 			}
 			else { // find toggler
 				toggler = element.find(options.toggler);
@@ -130,6 +134,31 @@
 			var els = content.add(navigation).add(menu);
 
 			els.css(attribute, '');
+		},
+
+		destroy: function() {
+			var instance = this;
+			var element = instance.element;
+			var options = instance.options;
+
+			// Detach sidenav close
+
+			doc.off('click.close.lexicon.sidenav', instance.closeButtonSelector);
+			doc.data(instance.dataCloseButtonSelector, null);
+
+			// Detach toggler
+
+			if (options.useDelegate) {
+				doc.off('click.lexicon.sidenav', instance.togglerSelector);
+				doc.data(instance.dataTogglerSelector, null);
+			}
+			else {
+				element.off('click.lexicon.sidenav');
+			}
+
+			// Remove Side Navigation
+
+			element.data('lexicon.sidenav', null);
 		},
 
 		getSidenavLeftWidth: function(type, offset, width) {
@@ -618,23 +647,34 @@
 			var instance = this;
 
 			var element = instance.element;
+			var options = instance.options;
 
-			var closeButton = element.find('.sidenav-close').first();
-			var container = instance.options.target ? $(instance.options.target) : doc.find(element.attr('href'));
+			var containerSelector = '#' + element.attr('id');
 
 			if (instance.useDataAttribute) {
-				closeButton = container.find('.sidenav-close');
+				containerSelector = options.target || element.attr('href');
 			}
 
-			if (!closeButton.data('click.lexicon.sidenav')) {
-				closeButton.on('click.lexicon.sidenav', function(event) {
+			var closeButton = $(containerSelector).find('.sidenav-close').first();
+			var closeButtonSelector = '#' + guid(closeButton, 'generatedLexiconSidenavCloseId');
+			var dataCloseButtonSelector = 'lexicon.' + closeButtonSelector;
+
+			if (!doc.data(dataCloseButtonSelector)) {
+				doc.data(dataCloseButtonSelector, 'true');
+
+				doc.on('click.close.lexicon.sidenav', closeButtonSelector, function(event) {
 					event.preventDefault();
+
+					if (!instance.useDataAttribute) {
+						instance.element = doc.find(options.selector);
+					}
 
 					instance.toggle();
 				});
-
-				closeButton.data('click.lexicon.sidenav', true);
 			}
+
+			instance.closeButtonSelector = closeButtonSelector;
+			instance.dataCloseButtonSelector = dataCloseButtonSelector;
 		},
 
 		_onClickTrigger: function() {
@@ -687,12 +727,19 @@
 					'click.lexicon.sidenav',
 					togglerSelector,
 					function(event) {
+						if (!instance.useDataAttribute) {
+							instance.element = doc.find(options.selector);
+						}
+
 						instance.toggle();
 
 						event.preventDefault();
 					}
 				);
 			}
+
+			instance.togglerSelector = togglerSelector;
+			instance.dataTogglerSelector = dataTogglerSelector;
 		},
 
 		_onScreenChange: function() {
@@ -839,32 +886,80 @@
 
 	var old = $.fn.sideNavigation;
 
+	var initialize = function(element, options, selector) {
+		var data = element.data('lexicon.sidenav');
+
+		if (!data) {
+			if (!options) {
+				options = {};
+			}
+
+			options.selector = selector;
+
+			data = new SideNavigation(element, options);
+
+			element.data('lexicon.sidenav', data);
+		}
+
+		return data;
+	};
+
 	var Plugin = function(options) {
 		var selector = this.selector;
 
-		return this.each(
-			function() {
-				var $this = $(this);
+		var retVal = this;
+		var methodCall = typeof options === 'string';
+		var returnInstance = options === 'instance';
+		var args = $.makeArray(arguments).slice(1);
 
-				var data = $this.data('lexicon.sidenav');
+		if (methodCall) {
+			this.each(
+				function() {
+					var $this = $(this);
 
-				if (!data) {
-					if (!options) {
-						options = {};
+					var data = $this.data('lexicon.sidenav');
+
+					if (data) {
+						if (returnInstance) {
+							retVal = data;
+
+							return false;
+						}
+
+						var methodRetVal;
+
+						if ($.isFunction(data[options]) && options.indexOf('_') !== 0) {
+							methodRetVal = data[options].apply(data, args);
+						}
+
+						if (methodRetVal !== data && methodRetVal !== undefined) {
+							if (methodRetVal.jquery) {
+								retVal = retVal.pushStack(methodRetVal.get());
+							}
+							else {
+								retVal = methodRetVal;
+							}
+
+							return false;
+						}
 					}
+					else if (returnInstance) {
+						retVal = null;
 
-					options.selector = selector;
-
-					data = new SideNavigation($this, options);
-
-					$this.data('lexicon.sidenav', data);
+						return false;
+					}
 				}
-
-				if (typeof options === 'string') {
-					data[options].call(data);
+			);
+		}
+		else {
+			this.each(
+				function() {
+					initialize($(this), options, selector);
 				}
-			}
-		);
+			);
+		}
+
+		return retVal;
 	};
 
 	Plugin.noConflict = function() {
@@ -907,4 +1002,10 @@
 	Plugin.Constructor = SideNavigation;
 
 	$.fn.sideNavigation = Plugin;
+
+	$(function() {
+		var sidenav = $('[data-toggle="sidenav"]');
+
+		Plugin.call(sidenav);
+	});
 }(jQuery);
