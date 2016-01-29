@@ -1,4 +1,4 @@
-### v0.2.33 - January 29, 2015
+### v0.2.1 - January 29, 2015
 * Breaking: Remove IE's clear field button in Atlas
 * Breaking: Side Navigation plugin instantiates on page load when using data-toggle="sidenav"
 * Fix: `<a class="badge badge-default">` text color should be blue on hover
