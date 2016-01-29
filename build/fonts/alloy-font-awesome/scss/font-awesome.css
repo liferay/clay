@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.31
+* Lexicon 0.1.32
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -121,7 +121,7 @@ a [class*=" icon-"] {
 
 .icon-border {
   border: solid 1px #eeeeee;
-  padding: .2em .25em .15em;
+  padding: 0.2em 0.25em 0.15em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -235,17 +235,17 @@ a [class*=" icon-"] {
   display: inline-block;
 }
 
-.nav-tabs [class^="icon-"], .nav-tabs [class^="icon-"].icon-large,
-.nav-tabs [class*=" icon-"],
-.nav-tabs [class*=" icon-"].icon-large, .nav-pills [class^="icon-"], .nav-pills [class^="icon-"].icon-large,
-.nav-pills [class*=" icon-"],
-.nav-pills [class*=" icon-"].icon-large {
+.nav-tabs [class^="icon-"],
+.nav-tabs [class^="icon-"].icon-large,
+.nav-tabs [class*=" icon-"], .nav-tabs [class*=" icon-"].icon-large, .nav-pills [class^="icon-"],
+.nav-pills [class^="icon-"].icon-large,
+.nav-pills [class*=" icon-"], .nav-pills [class*=" icon-"].icon-large {
   line-height: .9em;
 }
 
-.btn [class^="icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x,
-.btn [class*=" icon-"].pull-left.icon-2x,
-.btn [class*=" icon-"].pull-right.icon-2x {
+.btn [class^="icon-"].pull-left.icon-2x,
+.btn [class^="icon-"].pull-right.icon-2x,
+.btn [class*=" icon-"].pull-left.icon-2x, .btn [class*=" icon-"].pull-right.icon-2x {
   margin-top: .18em;
 }
 
@@ -254,9 +254,9 @@ a [class*=" icon-"] {
   line-height: .8em;
 }
 
-.btn.btn-small [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x,
-.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
-.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+.btn.btn-small [class^="icon-"].pull-left.icon-2x,
+.btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-left.icon-2x, .btn.btn-small [class*=" icon-"].pull-right.icon-2x {
   margin-top: .25em;
 }
 
@@ -265,9 +265,9 @@ a [class*=" icon-"] {
   margin-top: 0;
 }
 
-.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x, .btn.btn-large [class*=" icon-"].pull-right.icon-2x {
   margin-top: .05em;
 }
 
