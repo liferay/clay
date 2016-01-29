@@ -281,13 +281,15 @@
 
 				var toggler = instance.options.toggler;
 
+				sidenav.trigger('closeStart.lexicon.sidenav');
+
 				instance._onSidenavTransitionEnd(content, function() {
 					instance._removeBodyFixed();
 
 					sidenav.removeClass('sidenav-transition');
 					toggler.removeClass('sidenav-transition');
 
-					sidenav.trigger('closed.lexicon.sidenav');
+					sidenav.trigger('closeEnd.lexicon.sidenav');
 				});
 
 				content.addClass('sidenav-transition');
@@ -407,11 +409,13 @@
 				var desktopFixedPush = instance._getSimpleSidenavType() === 'desktop-fixed-push';
 				var mobileFixedPush = instance._getSimpleSidenavType() === 'mobile-fixed-push';
 
+				sidenav.trigger('openStart.lexicon.sidenav');
+
 				instance._onSidenavTransitionEnd(content, function() {
 					sidenav.removeClass('sidenav-transition');
 					toggler.removeClass('sidenav-transition');
 
-					sidenav.trigger('open.lexicon.sidenav');
+					sidenav.trigger('openEnd.lexicon.sidenav');
 				});
 
 				sidenav.addClass('sidenav-transition');
@@ -457,6 +461,8 @@
 			var widthMethod = closed ? 'showSidenav' : 'hideSidenav';
 
 			if (closed) {
+				element.trigger('openStart.lexicon.sidenav');
+
 				setTimeout(function() {
 					instance.setEqualHeight();
 				}, 0);
@@ -466,6 +472,9 @@
 				if (element.hasClass('sidenav-right') && element.hasClass('sidenav-fixed')) {
 					menu.css('right', width);
 				}
+			}
+			else {
+				element.trigger('closeStart.lexicon.sidenav');
 			}
 
 			instance._onSidenavTransitionEnd(element, function() {
@@ -478,12 +487,12 @@
 
 					toggler.removeClass('open').removeClass('sidenav-transition');
 
-					element.trigger('closed.lexicon.sidenav');
+					element.trigger('closeEnd.lexicon.sidenav');
 				}
 				else {
 					toggler.addClass('open').removeClass('sidenav-transition');
 
-					element.trigger('open.lexicon.sidenav');
+					element.trigger('openEnd.lexicon.sidenav');
 				}
 
 				if (instance.mobile) {
