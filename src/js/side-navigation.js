@@ -615,7 +615,7 @@
 
 			eventTarget = eventTarget || sidenav;
 
-			var sidebarBody = sidenav.find('.sidebar-body');
+			var sidebarBody = sidenav.find('.sidebar-body').first();
 
 			if (!urlLoaded && sidebarBody.length && (typeof url === 'string' || $.isPlainObject(url))) {
 				sidenav.addClass('sidebar-loading');
