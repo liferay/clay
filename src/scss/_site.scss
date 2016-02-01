@@ -773,6 +773,10 @@ $mainNavWidth: 220px;
 				}
 			}
 		}
+
+		&.nav-static-link > .nav-title {
+			padding-top: 0;
+		}
 	}
 }
 
