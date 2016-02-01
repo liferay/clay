@@ -815,6 +815,10 @@ body.fixed {
   margin-left: -3px;
 }
 
+#mainNav .nav-stacked li.nav-static-link > .nav-title {
+  padding-top: 0;
+}
+
 h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, h5 .heading-anchor, h6 .heading-anchor {
   color: inherit;
   cursor: pointer;
@@ -898,8 +902,7 @@ h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, 
   padding-top: 3px;
 }
 
-.uxgl-switches:before,
-.uxgl-switches:after {
+.uxgl-switches:before, .uxgl-switches:after {
   content: " ";
   display: table;
 }

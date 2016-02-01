@@ -4,7 +4,6 @@
 	"sources": [
 		"atlas-variables.scss",
 		"atlas-theme/_variables.scss",
-		"bootstrap/_variables.scss",
 		"atlas-theme/variables/_globals.scss",
 		"atlas-theme/variables/_alerts.scss",
 		"atlas-theme/variables/_breadcrumbs.scss",
@@ -37,6 +36,7 @@
 		"atlas-theme/variables/_toolbars.scss",
 		"atlas-theme/variables/_tooltip.scss",
 		"atlas-theme/variables/_user-icons.scss",
+		"bootstrap/_variables.scss",
 		"lexicon-base/_variables.scss",
 		"lexicon-base/variables/_breadcrumbs.scss",
 		"lexicon-base/variables/_buttons.scss",
@@ -62,7 +62,6 @@
 		"lexicon-base/variables/_toggle-switch.scss",
 		"lexicon-base/variables/_tooltip.scss"
 	],
-	"sourcesContent": [],
-	"mappings": "AAAA;;;;;;EAME;AMJF;uCACuC;AIkBvC;yCACyC",
+	"mappings": "AAAA;;;;;;EAME;AKJF;uCACuC;AIkBvC;yCACyC",
 	"names": []
 }
