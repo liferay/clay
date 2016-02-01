@@ -494,6 +494,8 @@
 			element.addClass('sidenav-transition');
 			toggler.addClass('sidenav-transition');
 
+			toggler.toggleClass('active', closed);
+
 			setTimeout(function() {
 				element.toggleClass('closed', !closed);
 
@@ -512,6 +514,8 @@
 			var instance = this;
 
 			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
+
+			$(instance.options.toggler).toggleClass('active', simpleSidenavClosed);
 
 			if (simpleSidenavClosed) {
 				instance.showSimpleSidenav();
