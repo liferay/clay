@@ -295,7 +295,7 @@
 				toggler.addClass('sidenav-transition');
 
 				content.removeClass(openClass);
-				toggler.removeClass(openClass);
+				toggler.removeClass(openClass).removeClass('active');
 			}
 		},
 
@@ -415,7 +415,7 @@
 				});
 
 				sidenav.addClass('sidenav-transition');
-				toggler.addClass('sidenav-transition');
+				toggler.addClass('sidenav-transition').addClass('active');
 
 				if (!desktop) {
 					$('body').addClass('body-fixed');
@@ -514,8 +514,6 @@
 			var instance = this;
 
 			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
-
-			$(instance.options.toggler).toggleClass('active', simpleSidenavClosed);
 
 			if (simpleSidenavClosed) {
 				instance.showSimpleSidenav();
