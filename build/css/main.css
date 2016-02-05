@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.1.31
+* Lexicon 0.2.1
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -813,6 +813,10 @@ body.fixed {
 #mainNav .nav-stacked li div > .nav-stacked li.child-active > a, #mainNav .nav-stacked li div > .nav-stacked li.active > a {
   border-left: 3px solid #0058BA;
   margin-left: -3px;
+}
+
+#mainNav .nav-stacked li.nav-static-link > .nav-title {
+  padding-top: 0;
 }
 
 h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, h5 .heading-anchor, h6 .heading-anchor {

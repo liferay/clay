@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.1.31
+* Lexicon 0.2.1
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -13100,20 +13100,19 @@ fieldset[disabled]
   width: 100%;
 }
 
-.nameplate-checkbox,
-.nameplate-icon,
+.nameplate-content,
 .nameplate-field {
   display: table-cell;
-  padding: 0 0.3em;
+  padding: 6px;
   vertical-align: top;
+}
+
+.nameplate-field {
   width: 1%;
 }
 
 .nameplate-content {
-  display: table-cell;
-  padding: 0 0.3em;
-  vertical-align: top;
-  word-break: break-word;
+  word-wrap: break-word;
 }
 
 .nameplate-content h1,
@@ -13149,36 +13148,24 @@ fieldset[disabled]
   }
 }
 
-.nameplate-label.form-control {
-  border-width: 0;
-  box-shadow: none;
-  display: table;
-  height: 34px;
-  width: auto;
-}
-
 .nameplate-label a {
   text-decoration: none;
 }
 
 .nameplate-label .nameplate-content,
-.nameplate-label .nameplate-field,
-.nameplate-label .nameplate-icon {
-  display: table-cell;
+.nameplate-label .nameplate-field {
   vertical-align: middle;
 }
 
 @media screen and (min-width: 768px) {
   .nameplate-label .nameplate-content,
-  .nameplate-label .nameplate-field,
-  .nameplate-label .nameplate-icon {
+  .nameplate-label .nameplate-field {
     width: auto;
   }
 }
 
 .nameplate-label .nameplate-content {
   height: auto;
-  padding: 3px 5px 2px;
   position: relative;
 }
 
@@ -13191,7 +13178,6 @@ fieldset[disabled]
 .nameplate-label .nameplate-label-text {
   display: block;
   font-weight: 500;
-  line-height: 32px;
   max-width: 200px;
   overflow: hidden;
   position: relative;
@@ -13210,7 +13196,30 @@ fieldset[disabled]
   }
 }
 
-.nameplate-label-next .nameplate-label-text {
+.nameplate-label .icon-monospaced, .nameplate-label .help-icon,
+.nameplate-label .icon-monospaced.lexicon-icon,
+.nameplate-label .lexicon-icon.help-icon {
+  margin: 0;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.nameplate-label .icon-monospaced.lexicon-icon, .nameplate-label .lexicon-icon.help-icon {
+  padding: 4px;
+}
+
+.nameplate-label .user-icon {
+  height: 22px;
+  line-height: 22px;
+  width: 22px;
+}
+
+.nameplate-label-more .icon-monospaced.lexicon-icon, .nameplate-label-more .lexicon-icon.help-icon {
+  padding: 6px 4px 0;
+}
+
+.nameplate-label-more .nameplate-label-text {
   text-align: center;
 }
 
@@ -13231,12 +13240,9 @@ fieldset[disabled]
   color: #777;
 }
 
-.nameplate-label-default a {
-  color: #777;
-}
-
-.nameplate-label-default a:focus, .nameplate-label-default a:hover {
-  color: #777;
+.nameplate-label-inverse {
+  background-color: #222;
+  color: #9d9d9d;
 }
 
 .nameplate-label-primary {
@@ -13245,23 +13251,15 @@ fieldset[disabled]
 }
 
 .nameplate-label-primary a {
-  color: #fff;
+  color: #23527C;
 }
 
 .nameplate-label-primary a:focus, .nameplate-label-primary a:hover {
-  color: #fff;
+  color: #122b40;
 }
 
 .nameplate-label-success {
   background-color: #5cb85c;
-  color: #fff;
-}
-
-.nameplate-label-success a {
-  color: #fff;
-}
-
-.nameplate-label-success a:focus, .nameplate-label-success a:hover {
   color: #fff;
 }
 
@@ -13270,24 +13268,8 @@ fieldset[disabled]
   color: #fff;
 }
 
-.nameplate-label-info a {
-  color: #fff;
-}
-
-.nameplate-label-info a:focus, .nameplate-label-info a:hover {
-  color: #fff;
-}
-
 .nameplate-label-warning {
   background-color: #f0ad4e;
-  color: #fff;
-}
-
-.nameplate-label-warning a {
-  color: #fff;
-}
-
-.nameplate-label-warning a:focus, .nameplate-label-warning a:hover {
   color: #fff;
 }
 
@@ -13297,11 +13279,11 @@ fieldset[disabled]
 }
 
 .nameplate-label-danger a {
-  color: #fff;
+  color: #23527C;
 }
 
 .nameplate-label-danger a:focus, .nameplate-label-danger a:hover {
-  color: #fff;
+  color: #122b40;
 }
 
 .nav > li > a:focus {

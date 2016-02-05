@@ -21,6 +21,8 @@ This is the repo of Liferay's Lexicon Design Language, and an implementation of 
 
 They are meant to help explain our design principles, offer direction and best practices in building your web apps, and provide a documented HTML and CSS API.
 
+You can view the guidelines on [the Lexicon site](https://liferay.github.io/lexicon).
+
 ## Building
 If you would like to contribute to the guidelines, or make changes on your system you need to do the following:
 
