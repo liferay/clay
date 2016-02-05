@@ -1,7 +1,7 @@
 <nav class="" id="mainNav">
 	<div class="main-nav-inner">
 			<%
-			var createMainNavList = function(nav, path, parent) {
+			var createMainNavList = function(nav, path, parent, staticLinks) {
 				var buffer = ['<ul class="nav nav-stacked">'];
 
 				nav.forEach(
@@ -53,12 +53,29 @@
 					}
 				);
 
+				if (staticLinks) {
+					staticLinks.forEach(
+						function(item, index) {
+							var tpl = '<li class="nav-static-link"><a class="nav-title" href="{url}">{title}</a>';
+
+							buffer.push(_.sub(tpl, item));
+						}
+					);
+				}
+
 				buffer.push('</ul>');
 
 				return buffer.join('\n');
 			};
+
+			var staticLinks = [
+				{
+					title: 'Github',
+					url: 'https://github.com/liferay/lexicon'
+				}
+			];
 			%>
 
-		<%- createMainNavList(nav, path) %>
+		<%- createMainNavList(nav, path, null, staticLinks) %>
 	</div>
 </nav>

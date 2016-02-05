@@ -303,7 +303,7 @@
 				toggler.addClass('sidenav-transition');
 
 				content.removeClass(openClass);
-				toggler.removeClass(openClass);
+				toggler.removeClass(openClass).removeClass('active');
 			}
 		},
 
@@ -431,7 +431,7 @@
 				});
 
 				sidenav.addClass('sidenav-transition');
-				toggler.addClass('sidenav-transition');
+				toggler.addClass('sidenav-transition').addClass('active');
 
 				if (!desktop) {
 					$('body').addClass('body-fixed');
@@ -526,6 +526,8 @@
 
 			element.addClass('sidenav-transition');
 			toggler.addClass('sidenav-transition');
+
+			toggler.toggleClass('active', closed);
 
 			setTimeout(function() {
 				element.toggleClass('closed', !closed);
