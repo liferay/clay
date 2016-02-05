@@ -255,6 +255,17 @@
 			}
 		}
 
+		> .disabled {
+			> a {
+				&,
+				&:focus,
+				&:hover {
+					background-color: $management-bar-default-link-disabled-bg;
+					color: $management-bar-default-link-disabled-color;
+				}
+			}
+		}
+
 		> .open > a {
 			border-color: $management-bar-default-border;
 		}
