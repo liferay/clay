@@ -231,7 +231,7 @@
 
 		&.navbar-right {
 			margin-left: 15px;
-			margin-right: 0;
+			margin-right: 15px;
 
 			&:last-child {
 				margin-right: 0;
@@ -242,12 +242,14 @@
 
 // Navbar-no-collapse
 
-.navbar-no-collapse .navbar-nav {
-	float: left;
-	margin: 0 15px 0 0;
-
-	> li {
+.navbar-no-collapse {
+	.navbar-nav {
 		float: left;
+		margin: 0 15px 0 0;
+
+		> li {
+			float: left;
+		}
 	}
 }
 
