@@ -188,10 +188,11 @@
 // Header Toolbar Component
 
 .header-toolbar {
-	border-radius: $header-toolbar-border-radius;
 	margin-bottom: $header-toolbar-margin-bottom;
-	padding-left: $header-toolbar-padding-horizontal;
-	padding-right: $header-toolbar-padding-horizontal;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		border-radius: $header-toolbar-border-radius;
+	}
 
 	.dropdown-menu {
 		margin-top: 5px + 2;
@@ -204,7 +205,7 @@
 	}
 
 	.toolbar-group {
-		margin-right: $toolbar-group-padding-horizontal;
+		margin-left: $toolbar-group-padding-horizontal;
 		padding-right: 0;
 
 		&:first-child {
@@ -222,13 +223,17 @@
 
 	.toolbar-group-right {
 		margin-left: $toolbar-group-padding-horizontal;
+		margin-right: $toolbar-group-padding-horizontal;
 		padding-left: 0;
+
+		+ .toolbar-group-right {
+			margin-left: 0;
+		}
 	}
 
 	.toolbar-group-expand-text {
 		line-height: $header-toolbar-height;
-
-		margin-right: $toolbar-group-padding-horizontal;
+		padding-left: $toolbar-group-padding-horizontal;
 	}
 
 	.toolbar-group-content {
@@ -236,6 +241,16 @@
 		> .dropdown > a {
 			border-radius: $header-toolbar-border-radius;
 		}
+	}
+}
+
+.header-toolbar .container-fluid-1280 {
+	.toolbar-group {
+		margin-left: 0;
+	}
+
+	.toolbar-group-right {
+		margin-right: 0;
 	}
 }
 
