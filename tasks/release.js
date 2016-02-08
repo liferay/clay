@@ -109,6 +109,7 @@ module.exports = function(gulp, plugins, _, config) {
 			var rebuildCommitMessage = 'Rebuild v' + bumpedVersion;
 			var releaseCommitMessage = 'Release v' + bumpedVersion;
 			var tagMessage = 'Version ' + bumpedVersion;
+			var previousTagName = 'v' + currentVersion;
 			var tagName = 'v' + bumpedVersion;
 
 			cmdPromise.resolve()
@@ -135,6 +136,13 @@ module.exports = function(gulp, plugins, _, config) {
 					updateVersion(bumpedVersion);
 
 					return bumpedVersion;
+				})
+				.git('log', previousTagName + '...HEAD', '-n', '1', '--', 'CHANGELOG.md').then(function(log) {
+					if (!log.stdout && !argv.f) {
+						throw new Error('There are no commits for the CHANGELOG. If this is intentional, re-run this command with -f');
+					}
+
+					return log.stdout;
 				})
 				.git('add', 'package.json')
 				.git('commit', '-a', '-m', releaseCommitMessage)
