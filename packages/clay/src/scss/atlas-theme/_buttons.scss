@@ -17,6 +17,12 @@
 	&.active {
 		box-shadow: none;
 	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		@include opacity($btn-disabled-opacity);
+	}
 }
 
 .btn-default {

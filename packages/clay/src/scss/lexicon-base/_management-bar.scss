@@ -3,8 +3,6 @@
 
 	border-style: solid;
 	border-width: $management-bar-border-width;
-	padding-left: $management-bar-padding-horizontal;
-	padding-right: $management-bar-padding-horizontal;
 
 	.checkbox,
 	.radio {
@@ -49,7 +47,7 @@
 	> .checkbox,
 	> .radio {
 		float: left;
-		padding: $management-bar-padding-vertical 0;
+		padding: $management-bar-padding-vertical 0 $management-bar-padding-vertical $management-bar-padding-horizontal;
 	}
 }
 
@@ -75,6 +73,11 @@
 	@extend .navbar-header-right;
 
 	float: right;
+	margin-right: $management-bar-padding-horizontal;
+}
+
+.container-fluid-1280 .management-bar-header-right {
+	margin-right: 0;
 }
 
 .management-bar-item-title {
@@ -172,6 +175,13 @@
 
 	.management-bar-nav-right {
 		float: right;
+		margin-right: $management-bar-padding-horizontal;
+	}
+}
+
+.management-bar-no-collapse .container-fluid-1280 {
+	.management-bar-nav-right {
+		margin-right: 0;
 	}
 }
 
@@ -181,6 +191,7 @@
 	> li {
 		> .checkbox {
 			padding-bottom: $management-bar-padding-vertical;
+			padding-left: $management-bar-padding-horizontal;
 			padding-top: $management-bar-padding-vertical;
 		}
 
@@ -252,6 +263,17 @@
 			&:focus {
 				background-color: $management-bar-default-link-active-bg;
 				color: $management-bar-default-link-active-color;
+			}
+		}
+
+		> .disabled {
+			> a {
+				&,
+				&:focus,
+				&:hover {
+					background-color: $management-bar-default-link-disabled-bg;
+					color: $management-bar-default-link-disabled-color;
+				}
 			}
 		}
 

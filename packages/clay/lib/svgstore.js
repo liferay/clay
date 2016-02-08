@@ -17,12 +17,22 @@ module.exports = function(gulp, plugins, _, config) {
 				var prefix = path.basename(file.relative, path.extname(file.relative));
 
 				return {
-					plugins: [{
-						cleanupIDs: {
-							prefix: prefix + '-',
-							minify: true
+					plugins: [
+						{
+							cleanupIDs: {
+								prefix: prefix + '-',
+								minify: true
+							}
+						},
+						{
+							moveElemsAttrsToGroup: false
+						},
+						{
+							removeAttrs: {
+								attrs: ['fill', 'stroke']
+							}
 						}
-					}]
+					]
 				}
 			}))
 			.pipe(plugins.svgstore())

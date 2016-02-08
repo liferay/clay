@@ -59,6 +59,15 @@ gulp.task(
 				message: 'Do you want to create a git tag and push to gh-pages?',
 				name: 'publish',
 				type: 'confirm'
+			},
+			{
+				default: false,
+				message: 'Do you want to push to the Maven repo?',
+				name: 'maven',
+				type: 'confirm',
+				when: function(answers) {
+					return answers.publish;
+				}
 			}
 		];
 
@@ -69,11 +78,17 @@ gulp.task(
 					questions,
 					function(answers) {
 						if (answers.publish) {
-							runSequence(
+							var args = [
 								'release:git',
 								'release:publish',
 								cb
-							);
+							];
+
+							if (answers.maven) {
+								args.splice(2, 0, 'maven-publish');
+							}
+
+							runSequence.apply(null, args);
 						}
 						else {
 							cb();
