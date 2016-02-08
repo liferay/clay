@@ -29,6 +29,7 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task('publish-maven-artifact', function() {
 		return gulp.src('.')
 			.pipe(plugins.mavenDeploy.deploy({
+				snapshot: false,
 				'config': {
 					'artifactId': 'com.liferay.webjars.lexicon',
 					'buildDir': 'maven-dist',
