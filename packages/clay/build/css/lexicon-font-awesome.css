@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.1
+* Lexicon 0.2.2
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -10955,9 +10955,9 @@ th.clamp-horizontal .clamp-container {
 }
 
 .container-fluid-1280 {
-  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1280px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -10969,13 +10969,6 @@ th.clamp-horizontal .clamp-container {
 
 .container-fluid-1280:after {
   clear: both;
-}
-
-.header-toolbar > .container-fluid-1280,
-.management-bar > .container-fluid-1280,
-.navbar > .container-fluid-1280, .management-bar > .container-fluid-1280 {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .lexicon-icon {
@@ -11878,8 +11871,6 @@ button.list-group-heading:hover,
 .management-bar {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .management-bar .checkbox,
@@ -11924,7 +11915,7 @@ button.list-group-heading:hover,
 .management-bar-header-right > .checkbox,
 .management-bar-header-right > .radio {
   float: left;
-  padding: 15px 0;
+  padding: 15px 0 15px 15px;
 }
 
 .management-bar-header {
@@ -11939,6 +11930,11 @@ button.list-group-heading:hover,
 
 .management-bar-header-right {
   float: right;
+  margin-right: 15px;
+}
+
+.container-fluid-1280 .management-bar-header-right {
+  margin-right: 0;
 }
 
 .management-bar-item-title {
@@ -12029,10 +12025,16 @@ button.list-group-heading:hover,
 
 .management-bar-no-collapse .management-bar-nav-right {
   float: right;
+  margin-right: 15px;
+}
+
+.management-bar-no-collapse .container-fluid-1280 .management-bar-nav-right {
+  margin-right: 0;
 }
 
 .management-bar-nav > li > .checkbox {
   padding-bottom: 15px;
+  padding-left: 15px;
   padding-top: 15px;
 }
 
@@ -12695,6 +12697,11 @@ fieldset[disabled]
 .management-bar-default .nav > .dropdown > a:focus {
   background-color: #e7e7e7;
   color: #555;
+}
+
+.management-bar-default .nav > .disabled > a, .management-bar-default .nav > .disabled > a:focus, .management-bar-default .nav > .disabled > a:hover {
+  background-color: transparent;
+  color: #ccc;
 }
 
 .management-bar-default .nav > .open > a {
@@ -13932,6 +13939,11 @@ fieldset[disabled]
   color: #555;
 }
 
+.navbar-default .container-fluid-1280 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .navbar-inverse .basic-search.open {
   background-color: #222;
 }
@@ -14690,13 +14702,6 @@ fieldset[disabled]
 .container-fluid-1280.sidenav-container {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-@media screen and (min-width: 1300px) {
-  .container-fluid-1280.sidenav-container {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 .sidenav-fixed.sidenav-right > .sidenav-menu-slider {
@@ -16095,10 +16100,13 @@ fieldset[disabled]
 }
 
 .header-toolbar {
-  border-radius: 4px;
   margin-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-toolbar {
+    border-radius: 4px;
+  }
 }
 
 .header-toolbar .dropdown-menu {
@@ -16112,7 +16120,7 @@ fieldset[disabled]
 }
 
 .header-toolbar .toolbar-group {
-  margin-right: 15px;
+  margin-left: 15px;
   padding-right: 0;
 }
 
@@ -16129,17 +16137,30 @@ fieldset[disabled]
 
 .header-toolbar .toolbar-group-right {
   margin-left: 15px;
+  margin-right: 15px;
   padding-left: 0;
+}
+
+.header-toolbar .toolbar-group-right + .toolbar-group-right {
+  margin-left: 0;
 }
 
 .header-toolbar .toolbar-group-expand-text {
   line-height: 50px;
-  margin-right: 15px;
+  padding-left: 15px;
 }
 
 .header-toolbar .toolbar-group-content > a,
 .header-toolbar .toolbar-group-content > .dropdown > a {
   border-radius: 4px;
+}
+
+.header-toolbar .container-fluid-1280 .toolbar-group {
+  margin-left: 0;
+}
+
+.header-toolbar .container-fluid-1280 .toolbar-group-right {
+  margin-right: 0;
 }
 
 .header-toolbar-default {

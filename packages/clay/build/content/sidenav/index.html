@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.1</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.2</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -603,6 +603,47 @@
 			<p>Also, while the content is being loaded, a class name of <code>sidebar-loading</code> will be added to the sidenav element. If you&apos;re using the data API, this will be the element matching the <code>data-target</code> or <code>href</code> attributes.</p>
 			<p>If using the options API, the class will be added to the <code>.sidenav-menu</code> element.</p>
 		</blockquote>
+	</div>
+</div>
+
+<div class="side-navigation-events row row-spacing">
+	<div class="col-md-12">
+		<h3 id="events"><a class="heading-anchor" href="#events"><i class="icon icon-link"></i></a>Events</h3>
+
+		<p><code>openStart.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation begins to open.</p>
+		</blockquote>
+
+		<p><code>open.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation is fully opened.</p>
+		</blockquote>
+
+		<p><code>closedStart.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation begins to close.</p>
+		</blockquote>
+
+		<p><code>closed.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation is fully closed.</p>
+		</blockquote>
+
+		<pre><code class="hljs">// Listen directly on the side navigation element
+
+$(SIDENAV).on(&apos;closed.lexicon.sidenav&apos;, function(event) {
+    var sidenav = $(event.target);
+    var toggler = event.toggler;
+});
+
+// Listen for it on the document (will not work with event.stopPropagation())
+
+$(document).on(&apos;closed.lexicon.sidenav&apos;, function(event) {
+    var sidenav = $(event.target);
+    var toggler = event.toggler;
+});</code></pre>
+
 	</div>
 </div>
 
