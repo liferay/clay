@@ -388,6 +388,47 @@ section: Components (JS)
 	</div>
 </div>
 
+<div class="side-navigation-events row row-spacing">
+	<div class="col-md-12">
+		<h3>Events</h3>
+
+		<p><code>openStart.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation begins to open.</p>
+		</blockquote>
+
+		<p><code>open.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation is fully opened.</p>
+		</blockquote>
+
+		<p><code>closedStart.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation begins to close.</p>
+		</blockquote>
+
+		<p><code>closed.lexicon.sidenav</code></p>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Fires when the side navigation is fully closed.</p>
+		</blockquote>
+
+		<pre><code class="hljs">```// Listen directly on the side navigation element
+
+$(SIDENAV).on('closed.lexicon.sidenav', function(event) {
+    var sidenav = $(event.target);
+    var toggler = event.toggler;
+});
+
+// Listen for it on the document (will not work with event.stopPropagation())
+
+$(document).on('closed.lexicon.sidenav', function(event) {
+    var sidenav = $(event.target);
+    var toggler = event.toggler;
+});```</code></pre>
+
+	</div>
+</div>
+
 <div class="side-navigation-methods row row-spacing">
 	<div class="col-md-12">
 		<h3>Methods</h3>

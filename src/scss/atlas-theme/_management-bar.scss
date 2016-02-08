@@ -1,7 +1,5 @@
 .management-bar {
 	margin-bottom: 0;
-	padding-left: $management-bar-padding-horizontal;
-	padding-right: $management-bar-padding-horizontal;
 
 	a {
 		color: $nav-link-color;
@@ -33,7 +31,7 @@
 .management-bar-nav {
 	> li {
 		> .management-bar-text {
-			padding: 13px 15px;
+			padding: 14px 15px;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
 				padding: 19px 15px;
@@ -44,6 +42,16 @@
 
 .management-bar-no-collapse .management-bar-nav {
 	> li {
+		> a {
+			padding-bottom: 12px;
+			padding-top: 12px;
+
+			@media screen and (min-width: $grid-float-breakpoint) {
+				padding-bottom: 16px;
+				padding-top: 16px;
+			}
+		}
+
 		> .checkbox,
 		> .radio {
 			@media screen and (min-width: $grid-float-breakpoint) {
