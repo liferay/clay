@@ -1,3 +1,15 @@
+### v0.2.2 - February 8, 2015
+* Fix: Remove margins on dropdown icon-monospaced
+* Fix: Management bar link spacing in Atlas
+* Fix: Data url shouldn't place content inside multiple sidebar-body when nested
+* Fix: Padding on the `.sidenav-container` in resolutions wider than 1300px is no longer removed ([Fixes #129](https://github.com/liferay/lexicon/issues/129))
+* Fix: The SVG desktop icon had an inline attribute that prevented styling
+* Update: the sidenav plugin now toggles a CSS class of `active` when it's open and closed.
+* Update: Add disabled class to management bar
+* Update: Add events openStart.lexicon.sidenav and closedStart.lexicon.sidenav
+* Update: Align items in left and right sides of nav components when using container-fluid-1280
+* Update: New buttons opacity for disabled buttons (configurable via the variable `$btn-disabled-opacity`)
+
 ### v0.2.1 - January 29, 2015
 * Breaking: Remove IE's clear field button in Atlas
 * Breaking: Side Navigation plugin instantiates on page load when using data-toggle="sidenav"
