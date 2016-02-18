@@ -649,11 +649,13 @@
 
 			var urlLoaded = sidenav.data('url-loaded');
 
+			var readyState = urlLoaded ? urlLoaded.readyState : 0;
+
 			eventTarget = eventTarget || sidenav;
 
 			var sidebarBody = sidenav.find('.sidebar-body').first();
 
-			if (!urlLoaded && sidebarBody.length && (typeof url === 'string' || $.isPlainObject(url))) {
+			if (!readyState && sidebarBody.length && (typeof url === 'string' || $.isPlainObject(url))) {
 				sidebarBody.append('<div class="sidenav-loading">' + instance.options.loadingIndicatorTPL + '</div>');
 
 				urlLoaded = $.ajax(url).done(
