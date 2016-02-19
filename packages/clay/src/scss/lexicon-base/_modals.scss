@@ -48,7 +48,7 @@
 }
 
 .modal-dialog {
-	@media screen and (max-width: $grid-float-breakpoint) {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
 		bottom: 0;
 		left: 0;
 		margin: 0;
@@ -66,7 +66,7 @@
 	clear: both;
 	text-align: left;
 
-	@media screen and (max-width: $grid-float-breakpoint) {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
 		bottom: 0;
 		position: absolute;
 		left: 0;
@@ -78,14 +78,6 @@
 	background-color: $modal-header-bg;
 	border-color: $modal-header-border-color;
 	color: $modal-header-color;
-}
-
-.modal-open {
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
 }
 
 .modal-title {

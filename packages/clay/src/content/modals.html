@@ -608,3 +608,87 @@ section: Components
 		</blockquote>
 	</div>
 </div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Modal Browser Bugs</h3>
+
+		<blockquote class="blockquote-sm blockquote-warning">
+			<p>iOS Safari doesn't respect <code>overflow: hidden</code> on the body element. See <a href="https://bugs.webkit.org/show_bug.cgi?id=153852">https://bugs.webkit.org/show_bug.cgi?id=153852</a>.</p>
+
+			<p>In iOS Safari, body content under the modal will scroll when the beginning or end of scrollable content inside a modal is reached. Use the position fixed workaround by adding <code>position: fixed;</code> to the <code>modal-open</code> class. The body content will be scrolled to the top as a side effect.</p>
+
+			<pre><code>```@media screen and (max-width: 767px) {
+    .modal-open {
+        position: fixed;
+    }
+}```</code></pre>
+
+		<p>The jQuery work around:</p>
+
+		<pre><code>```(function($) {
+	var winScrollPos;
+	var $doc = $(document);
+	var $body = $('body');
+	var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+	$doc.on('hidden.bs.modal', function(e) {
+		if (iOS && !(winScrollPos === 0)) {
+				window.scrollTo(0, winScrollPos);
+
+				$body.css({
+					position: '',
+					top: ''
+				});
+			}
+	});
+
+	$doc.on('show.bs.modal', function(e) {
+		if (iOS) {
+			winScrollPos = window.scrollY;
+
+			if (!(winScrollPos === 0)) {
+				$body.css({
+					position: 'fixed',
+					top: -winScrollPos
+				});
+			}
+		}
+	});
+})(jQuery);```</code></pre>
+		</blockquote>
+	</div>
+</div>
+
+<script>
+	(function($) {
+		var winScrollPos;
+		var $doc = $(document);
+		var $body = $('body');
+		var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+		$doc.on('hidden.bs.modal', function(e) {
+			if (iOS && !(winScrollPos === 0)) {
+					window.scrollTo(0, winScrollPos);
+
+					$body.css({
+						position: '',
+						top: ''
+					});
+				}
+		});
+
+		$doc.on('show.bs.modal', function(e) {
+			if (iOS) {
+				winScrollPos = window.scrollY;
+
+				if (!(winScrollPos === 0)) {
+					$body.css({
+						position: 'fixed',
+						top: -winScrollPos
+					});
+				}
+			}
+		});
+	})(jQuery);
+</script>
