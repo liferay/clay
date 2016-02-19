@@ -1,8 +1,8 @@
 // Loading Animation
 
-.loading-animation,
+.loading-icon,
 .loadingmask-message .loadingmask-message-content {
-	@include animation(loading-animation 1.7s infinite ease);
+	@include animation(loading-icon 1.7s infinite ease);
 
 	border-radius: 50%;
 	display: block;
@@ -26,32 +26,9 @@
 	}
 }
 
-button > .loading-animation {
-	display: inline-block;
-	font-size: 1em;
-	margin-right: 0.8em;
-	vertical-align: middle;
-}
-
-.loading-animation-xs {
-	font-size: 8px;
-}
-
-.loading-animation-sm {
-	font-size: 10px;
-}
-
-.loading-animation-md {
-	font-size: 32px;
-}
-
-.loading-animation-lg {
-	font-size: 64px;
-}
-
-@include keyframes(loading-animation) {
+@include keyframes(loading-icon) {
 	0% {
-		@include trailing-shadow(0, -0.83em, $loading-animation-color);
+		@include trailing-shadow(0, -0.83em, $loading-icon-color);
 
 		@include transform(rotate(0));
 	}
@@ -78,7 +55,7 @@ button > .loading-animation {
 		@include trailing-shadow(
 			(0, -0.377em, -0.645em, -0.775em, -0.82em),
 			(-0.83em, -0.74em, -0.522em, -0.297em, -0.13em),
-			adjust-hue($loading-animation-color, 330)
+			adjust-hue($loading-icon-color, 330)
 		);
 	}
 
@@ -98,94 +75,146 @@ button > .loading-animation {
 
 // Linear Spinner
 
-.linear-spinner {
-	margin: 0px auto;
-	position: relative;
-	width: 1em;
+.loading-icon.linear {
+	&, &:before, &:after {
+		border-radius: 50%;
+		box-shadow: none;
+	}
+
+	& {
+		animation: none;
+		height: 1em;
+		margin: 0 auto;
+		position: relative;
+		transform: translateZ(0);
+		width: 1em;
+	}
+
+	&:before, &:after {
+		animation: 2s ease-out infinite both;
+		border: 0.15em solid transparent;
+		border-left-color: $loading-icon-linear-color;
+		border-radius: 50%;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transform: rotate(270deg);
+		transform-origin: 50%;
+		width: 100%;
+	}
 
 	&:before {
-		content:'';
-		display: block;
-		padding-top: 100%;
+		animation-name: loading-icon-linear;
+	}
+
+	&:after {
+		animation-name: loading-icon-spin;
 	}
 }
 
-.circular {
-	@include animation(rotate 3s linear infinite);
+@keyframes loading-icon-linear {
+  0% {
+	transform: rotate(0deg);
+  }
 
-	bottom: 0;
-	height: 100%;
-	left: 0;
-	margin: auto;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 100%;
+  10.99% {
+  	border-bottom-color: transparent;
+  }
+
+  11% {
+  	border-bottom-color: $loading-icon-linear-color;
+  }
+
+  66% {
+	border-bottom-color: $loading-icon-linear-color;
+  }
+
+  66.6% {
+	border-bottom-color: transparent;
+  }
+
+  66.6%, 100% {
+	transform: rotate(360deg);
+  }
 }
 
-.path {
-	@include animation(dash 1.5s ease-in-out infinite);
+@keyframes loading-icon-spin {
+	0%, 22% {
+		transform: rotate(0deg);
+	}
 
-	fill: none;
-	stroke: #0077FF;
-	stroke-dasharray: 1,200;
-	stroke-dashoffset: 0;
-	stroke-width: 5px;
-}
-
-.linear-spinner-xs {
-	width: 0.5em; // 8px
-}
-
-.linear-spinner-sm {
-	width: 0.625em; // 10px
-}
-
-.linear-spinner-md,
-.linear-spinner-lg {
-	.path {
-		stroke-width: 2px;
+	100% {
+		transform: rotate(360deg);
 	}
 }
 
-.linear-spinner-md {
-	width: 2em; // 32px
-}
+// Variations
 
-.linear-spinner-lg {
-	width: 4em; // 64px
-}
+button {
+	> .loading-icon {
+		// This is specifically in a less specific selector
+		// to allow the size to be set via the
+		// `loading-icon-{size}` classes
+		& {
+			font-size: 1em;
+		}
 
-button > .linear-spinner {
-	display: inline-block;
-	margin-left: -3px;
-	margin-right: 5px;
-	margin-top: -3px;
-	vertical-align: middle;
-	width: 16px;
+		&, &.linear {
+			display: none;
+			margin-bottom: 0;
+			margin-right: 0.8em;
+			margin-top: 0;
+			vertical-align: middle;
+		}
+	}
 
-	.path {
-		stroke-width: 5px;
+	&.loading {
+		> .loading-icon {
+			&, &.linear {
+				display: inline-block;
+			}
+		}
 	}
 }
 
-@include keyframes(rotate) {
-	100%{
-		@include transform(rotate(360deg));
+.loading-icon {
+	&.loading-icon-xs {
+		font-size: 8px;
+	}
+
+	&.loading-icon-sm {
+		font-size: 10px;
+	}
+
+	&.loading-icon-md {
+		font-size: 32px;
+	}
+
+	&.loading-icon-lg {
+		font-size: 64px;
 	}
 }
 
-@include keyframes(dash) {
-	0%{
-		stroke-dasharray: 1,200;
-		stroke-dashoffset: 0;
+// Backwards compatability
+
+.loading-animation {
+	@extend .loading-icon;
+
+	&.loading-animation-xs {
+		@extend .loading-icon-xs;
 	}
-	50%{
-		stroke-dasharray: 89,200;
-		stroke-dashoffset: -35px;
+
+	&.loading-animation-sm {
+		@extend .loading-icon-sm;
 	}
-	100%{
-		stroke-dasharray: 89,200;
-		stroke-dashoffset: -124px;
+
+	&.loading-animation-md {
+		@extend .loading-icon-md;
+	}
+
+	&.loading-animation-lg {
+		@extend .loading-icon-lg;
 	}
 }
