@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Simple Flexbox Grid</title>
+	<title>Lexicon - Loading Indicators</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/main.css" />
@@ -89,7 +89,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+<li class="active"><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
 </li>
@@ -179,7 +179,7 @@
 <ul class="nav nav-stacked">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
-<li class="active"><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
+<li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
 </li>
 </ul>
 </div>
@@ -217,7 +217,7 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title" id="beginContent" tabindex="-1">
-			Simple Flexbox Grid
+			Loading Indicators
 
 			
 		</h1>
@@ -225,188 +225,101 @@
 		
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="simple-flexbox-grid"><a class="heading-anchor" href="#simple-flexbox-grid"><i class="icon icon-link"></i></a>Simple Flexbox Grid</h3>
-
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Simple Flexbox Grid was created to help layout small chunks of content more efficiently because vertical alignment, equal heights, and auto fitting content in CSS is incredibly time consuming. This grid was designed to cover some specific cases not covered by bootstrap 3&apos;s grid. If you wish to use bootstrap 3&apos;s grid inside Simple Flexbox Grid, it only reliably works with col-xs-(# of columns) in its current state.</p>
+			<p>CSS only loading indicators</p>
 		</blockquote>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>flex-container</code> to define the container for your grid, any elements that are direct children are now part of your grid. By default, each item will only be as wide as its content.</p>
-		</blockquote>
-
-		<div class="flex-container">
-			<div style="background-color: #B4B4B4;">Some content</div>
-			<div style="background-color: #EEE;">Single shot extraction, qui beans saucer seasonal robust.</div>
-			<div style="background-color: #B4B4B4;">Some content</div>
-		</div>
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="auto-fitting-content"><a class="heading-anchor" href="#auto-fitting-content"><i class="icon icon-link"></i></a>Auto Fitting Content</h3>
+		<h3 id="dotted-spinner"><a class="heading-anchor" href="#dotted-spinner"><i class="icon icon-link"></i></a>Dotted Spinner</h3>
+	</div>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			Adding class <code>flex-item-expand</code> to any direct child will expand the element to fill the remaining space.
-		</blockquote>
-
-		<div class="flex-container">
-			<div style="background-color: #B4B4B4;">Some content</div>
-			<div class="flex-item-expand" style="background-color: #EEE;">Single shot extraction, qui beans saucer seasonal robust.</div>
-			<div style="background-color: #B4B4B4;">Some content</div>
-		</div>
+	<div class="col-md-3">
+		<div class="loading-icon loading-icon-sm"></div>
+	</div>
+	<div class="col-md-3">
+		<div class="loading-icon"></div>
+	</div>
+	<div class="col-md-3">
+		<div class="loading-icon loading-icon-md"></div>
+	</div>
+	<div class="col-md-3">
+		<div class="loading-icon loading-icon-lg"></div>
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="full-width-flex-items"><a class="heading-anchor" href="#full-width-flex-items"><i class="icon icon-link"></i></a>Full Width Flex Items</h3>
+		<h3 id="linear-spinner"><a class="heading-anchor" href="#linear-spinner"><i class="icon icon-link"></i></a>Linear Spinner</h3>
+	</div>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Adding class <code>flex-item-full</code> to any direct child will expand the element to fill 100% of the container width.</p>
-		</blockquote>
-
-		<div class="flex-container">
-			<div class="flex-item-full" style="background-color: #B4B4B4;">Some content</div>
-			<div class="flex-item-expand" style="background-color: #EEE;">Single shot extraction, qui beans saucer seasonal robust.</div>
-			<div style="background-color: #B4B4B4;">Some content</div>
-		</div>
+	<div class="col-md-3">
+		<div class="loading-icon linear loading-icon-sm"></div>
+	</div>
+	<div class="col-md-3">
+		<div class="loading-icon linear"></div>
+	</div>
+	<div class="col-md-3">
+		<div class="loading-icon linear loading-icon-md"></div>
+	</div>
+	<div class="col-md-3">
+		<div class="loading-icon linear loading-icon-lg"></div>
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="equal-height-columns"><a class="heading-anchor" href="#equal-height-columns"><i class="icon icon-link"></i></a>Equal Height Columns</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Columns with the Simple Flexbox Grid are always equal height. If you change the height of one column, the other column&apos;s height will change, unless a fixed height is set via css.</p>
-		</blockquote>
-
-		<div class="flex-container">
-			<div class="" style="background-color:#BBB;width:150px;height:150px;">150px x 150px</div>
-			<div class="flex-item-expand" style="background-color:#EEE;">Expand to fill rest of space.</div>
-		</div>
+		<h3 id="combining-with-buttons"><a class="heading-anchor" href="#combining-with-buttons"><i class="icon icon-link"></i></a>Combining with buttons</h3>
 	</div>
-</div>
 
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="vertical-centering"><a class="heading-anchor" href="#vertical-centering"><i class="icon icon-link"></i></a>Vertical Centering</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Wrap each of the texts in <code class="html">&lt;div class=&quot;flex-item-center&quot;&gt;&lt;/div&gt;</code> and add class <code>flex-container</code> to the parent of each <code>flex-item-center</code> to vertically center. Horizontally center an item with css <code>margin-left: auto; margin-right: auto;</code></p>
-		</blockquote>
-
-		<div class="flex-container">
-			<div class="flex-container" style="background-color:#BBB;width:150px;height:150px;">
-				<div class="flex-item-center" style="margin-left:auto;margin-right:auto;">150px x 150px</div>
-			</div>
-			<div class="flex-container flex-item-expand" style="background-color:#EEE;">
-				<div class="flex-item-center">Expand to fill rest of space.</div>
-			</div>
-		</div>
+	<div class="col-md-6">
+			<button class="btn btn-default loading" type="button">
+				<span class="loading-icon"></span> Loading
+			</button>
+			<button class="btn btn-primary loading" type="button">
+				<span class="loading-icon"></span> Loading
+			</button>
+			<button class="btn btn-info loading" type="button">
+				<span class="loading-icon"></span> Loading
+			</button>
+			<button class="btn btn-success loading" type="button">
+				<span class="loading-icon"></span> Loading
+			</button>
+			<button class="btn btn-warning loading" type="button">
+				<span class="loading-icon"></span> Loading
+			</button>
+			<button class="btn btn-danger loading" type="button">
+				<span class="loading-icon"></span> Loading
+			</button>
+			<button class="btn btn-link loading" type="button">
+				<span class="loading-icon"></span> Loading
+			</button>
 	</div>
-</div>
 
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="nesting-the-simple-flexbox-grid"><a class="heading-anchor" href="#nesting-the-simple-flexbox-grid"><i class="icon icon-link"></i></a>Nesting the Simple Flexbox Grid</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Adding <code>flex-container</code> to an element creates a new container for the Simple Flexbox Grid, and allows you to start a new grid inside.</p>
-		</blockquote>
-
-		<div class="flex-container">
-			<div class="flex-container" style="background-color:#BBB;width:150px;height:150px;">
-				<div class="flex-item-center" style="margin-left:auto;margin-right:auto;">150px x 150px</div>
-			</div>
-			<div class="flex-container flex-item-expand" style="background-color:#EEE;">
-				<div class="flex-container">
-					<div class="flex-item-center">Nested Grid</div>
-				</div>
-				<div class="flex-container flex-item-expand" style="background-color:#BBB;">
-					<div class="flex-item-center">Expand to fill rest of space.</div>
-				</div>
-				<div class="flex-container flex-item-full">
-					<div class="flex-item-center">Aged bar, percolator siphon barista coffee extraction. Whipped sugar americano id decaffeinated as trifecta foam black beans at frappuccino. Strong coffee, extraction mocha foam, coffee dripper americano medium viennese.</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="stacking-flex-containers"><a class="heading-anchor" href="#stacking-flex-containers"><i class="icon icon-link"></i></a>Stacking Flex Containers</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Make <code>flex-container</code> stack all its direct descendants at specific screen widths with classes:</p>
-			<ul>
-				<li><code>flex-container-stacked-xxs</code> 479px and below.</li>
-				<li><code>flex-container-stacked-xs</code> 767px and below.</li>
-				<li><code>flex-container-stacked-sm</code> 991px and below.</li>
-				<li><code>flex-container-stacked-md</code> 1199px and below.</li>
-				<li><code>flex-container-stacked-lg</code> 1200px and above.</li>
-				<li><code>flex-container-stacked-xs-only</code> between 480px and 767px.</li>
-				<li><code>flex-container-stacked-sm-only</code> between 768px and 991px.</li>
-				<li><code>flex-container-stacked-md-only</code> between 992px and 1199px.</li>
-			</ul>
-		</blockquote>
-
-		<div class="flex-container">
-			<div class="flex-container" style="background-color:#BBB;width:150px;height:150px;">
-				<div class="flex-item-center" style="margin-left:auto;margin-right:auto;">150px x 150px</div>
-			</div>
-			<div class="flex-container flex-container-stacked-md-only flex-item-expand" style="background-color:#EEE;">
-				<div class="flex-container">
-					<div class="flex-item-center">Nested Grid</div>
-				</div>
-				<div class="flex-container flex-item-expand" style="background-color:#BBB;">
-					<div class="flex-item-center">Expand to fill rest of space.</div>
-				</div>
-				<div class="flex-container flex-item-full">
-					<div class="flex-item-center">Aged bar, percolator siphon barista coffee extraction. Whipped sugar americano id decaffeinated as trifecta foam black beans at frappuccino. Strong coffee, extraction mocha foam, coffee dripper americano medium viennese.</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="force-flex-items-to-break-into-new-lines"><a class="heading-anchor" href="#force-flex-items-to-break-into-new-lines"><i class="icon icon-link"></i></a>Force Flex Items to Break into New Lines</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Force a direct descendant of <code>flex-container</code> to break to a new line with classes:</p>
-			<ul>
-				<li><code>flex-item-break-xxs</code> 479px and below.</li>
-				<li><code>flex-item-break-xs</code> 767px and below.</li>
-				<li><code>flex-item-break-sm</code> 991px and below.</li>
-				<li><code>flex-item-break-md</code> 1199px and below.</li>
-				<li><code>flex-item-break-lg</code> 1200px and above.</li>
-				<li><code>flex-item-break-xs-only</code> between 480px and 767px.</li>
-				<li><code>flex-item-break-sm-only</code> between 768px and 991px.</li>
-				<li><code>flex-item-break-md-only</code> between 992px and 1199px.</li>
-			</ul>
-		</blockquote>
-
-		<div class="flex-container">
-			<div class="flex-container" style="background-color:#BBB;width:150px;height:150px;">
-				<div class="flex-item-center" style="margin-left:auto;margin-right:auto;">150px x 150px</div>
-			</div>
-			<div class="flex-container flex-item-expand" style="background-color:#EEE;">
-				<div class="flex-container">
-					<div class="flex-item-center">Nested Grid</div>
-				</div>
-				<div class="flex-container flex-item-expand" style="background-color:#BBB;">
-					<div class="flex-item-center">Expand to fill rest of space.</div>
-				</div>
-				<div class="flex-container flex-item-expand flex-item-break-md-only">
-					<div class="flex-item-center">Aged bar, percolator siphon barista coffee extraction. Whipped sugar americano id decaffeinated as trifecta foam black beans at frappuccino. Strong coffee, extraction mocha foam, coffee dripper americano medium viennese.</div>
-				</div>
-			</div>
-		</div>
+	<div class="col-md-6">
+			<button class="btn btn-default loading" type="button">
+				<span class="loading-icon linear"></span> Loading
+			</button>
+			<button class="btn btn-primary loading" type="button">
+				<span class="loading-icon linear"></span> Loading
+			</button>
+			<button class="btn btn-info loading" type="button">
+				<span class="loading-icon linear"></span> Loading
+			</button>
+			<button class="btn btn-success loading" type="button">
+				<span class="loading-icon linear"></span> Loading
+			</button>
+			<button class="btn btn-warning loading" type="button">
+				<span class="loading-icon linear"></span> Loading
+			</button>
+			<button class="btn btn-danger loading" type="button">
+				<span class="loading-icon linear"></span> Loading
+			</button>
+			<button class="btn btn-link loading" type="button">
+				<span class="loading-icon linear"></span> Loading
+			</button>
 	</div>
 </div>
 	</div>

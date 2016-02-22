@@ -37,6 +37,7 @@ section: Components (JS)
             breakpoint: 768, // The window width that defines the desktop size. Default: 768.
             content: '.sidenav-content', // The class or ID of the content container. Default: '.sidenav-content'.
             gutter: '15px', // The space between the sidenav-slider and the sidenav-content. Default: 15px.
+            loadingIndicatorTPL: '<div class="loading-animation loading-animation-md"></div>', // Loading indicator template
             equalHeight: true, // The height of content and navigation should be equal.
             navigation: '.sidenav-menu-slider', // The class or ID of the navigation container. Default: '.sidenav-menu-slider'.
             position: 'left', // The position of the sidenav-slider. Possible values: left, right. Default: 'left'.
@@ -382,7 +383,8 @@ section: Components (JS)
 		<h4>Lazy Loading Events and State</h4>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>When using the <code>url</code> or <code>data-url</code> options, the plugin will fire an event when the content is loaded <code>urlLoaded.lexicon.sidenav</code>.</p>
-			<p>Also, while the content is being loaded, a class name of <code>sidebar-loading</code> will be added to the sidenav element. If you're using the data API, this will be the element matching the <code>data-target</code> or <code>href</code> attributes.</p>
+			<p>Also, while the content is being loaded, an element <code>.sidebar-loading</code> containing a loading animation will be added to the <code>.sidebar-body</code> element. The <code>.sidebar-loading</code> element will be removed when the content is done loading.</p>
+			<p>The loading animation defaults to <a href="{{rootPath}}/content/loaders/#dotted-spinner">dotted spinner</a> but can be customized through <code>loadingIndicatorTPL</code> in the options API or <code>data-loading-indicator-tpl</code> in the data API.</p>
 			<p>If using the options API, the class will be added to the <code>.sidenav-menu</code> element.</p>
 		</blockquote>
 	</div>

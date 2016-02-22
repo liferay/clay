@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.2.2
+* Lexicon 0.2.6
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -91,6 +91,7 @@
 
 				options.content = element.data('content');
 				options.equalHeight = false;
+				options.loadingIndicatorTPL = element.data('loading-indicator-tpl') || options.loadingIndicatorTPL;
 				options.openClass = element.data('open-class') || 'open';
 				options.target = element.data('target');
 				options.toggler = element;
@@ -655,12 +656,14 @@
 
 			var urlLoaded = sidenav.data('url-loaded');
 
+			var readyState = urlLoaded ? urlLoaded.readyState : 0;
+
 			eventTarget = eventTarget || sidenav;
 
 			var sidebarBody = sidenav.find('.sidebar-body').first();
 
-			if (!urlLoaded && sidebarBody.length && (typeof url === 'string' || $.isPlainObject(url))) {
-				sidenav.addClass('sidebar-loading');
+			if (!readyState && sidebarBody.length && (typeof url === 'string' || $.isPlainObject(url))) {
+				sidebarBody.append('<div class="sidenav-loading">' + instance.options.loadingIndicatorTPL + '</div>');
 
 				urlLoaded = $.ajax(url).done(
 					function(response) {
@@ -668,7 +671,7 @@
 
 						eventTarget.trigger('urlLoaded.lexicon.sidenav');
 
-						sidenav.removeClass('sidebar-loading');
+						sidebarBody.find('.sidenav-loading').remove();
 					}
 				);
 
@@ -1024,6 +1027,7 @@
 		content: '.sidenav-content',
 		equalHeight: true,
 		gutter: '15px',
+		loadingIndicatorTPL: '<div class="loading-animation loading-animation-md"></div>',
 		navigation: '.sidenav-menu-slider',
 		position: 'left',
 		toggler: '.sidenav-toggler',
