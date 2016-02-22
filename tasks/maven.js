@@ -1,11 +1,13 @@
 module.exports = function(gulp, plugins, _, config) {
 	var runSequence = require('run-sequence');
 
-	var version = require('../package.json').version;
+	var getVersion = function() {
+		return require('../package.json').version;
+	};
 
 	gulp.task('prepare-maven-snapshot', function() {
 		return gulp.src(['release/**/*'])
-			.pipe(gulp.dest('maven-dist/META-INF/resources/webjars/lexicon/' + version + '/release'));
+			.pipe(gulp.dest('maven-dist/META-INF/resources/webjars/lexicon/' + getVersion() + '/release'));
 	});
 
 	gulp.task('install-maven-snapshot', function() {
@@ -23,7 +25,7 @@ module.exports = function(gulp, plugins, _, config) {
 
 	gulp.task('prepare-maven-artifact', function() {
 		return gulp.src(['release/**/*'])
-			.pipe(gulp.dest('maven-dist/META-INF/resources/webjars/lexicon/' + version + '/release'));
+			.pipe(gulp.dest('maven-dist/META-INF/resources/webjars/lexicon/' + getVersion() + '/release'));
 	});
 
 	gulp.task('publish-maven-artifact', function() {
