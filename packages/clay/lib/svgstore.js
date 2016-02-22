@@ -5,11 +5,22 @@ module.exports = function(gulp, plugins, _, config) {
 	var src = config.src || 'src/images/icons/*.svg';
 	var dest = config.dest || './build/images/icons/';
 
+	var REGEX_FLAGS = /^flags-/;
+
 	return gulp
 			.src(src)
+			.pipe(plugins.cheerio({
+				run: function ($, file) {
+					if (!REGEX_FLAGS.test(file.relative)) {
+						$('[fill]').removeAttr('fill');
+						$('[stroke]').removeAttr('fill');
+					}
+				},
+				parserOptions: { xmlMode: true }
+			}))
 			.pipe(plugins.rename(
 				function(file) {
-					file.basename = _s.slugify(file.basename);
+					file.basename = _s.slugify(file.basename.replace(REGEX_FLAGS, ''));
 				}
 			))
 			// .pipe(plugins.debug())
@@ -26,11 +37,6 @@ module.exports = function(gulp, plugins, _, config) {
 						},
 						{
 							moveElemsAttrsToGroup: false
-						},
-						{
-							removeAttrs: {
-								attrs: ['fill', 'stroke']
-							}
 						}
 					]
 				}
