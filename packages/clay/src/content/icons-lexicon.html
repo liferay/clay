@@ -4,7 +4,7 @@ section: Components
 ---
 
 <div class="alert alert-info" style="margin-top: 20px;">
-	<p>Lexicon icons do not use same format as Font Awesome or Bootstrap's Glyphicons.</p>
+	<p>Lexicon icons do not use the same format as Font Awesome or Bootstrap's Glyphicons.</p>
 </div>
 <p>We use SVG elements that link to an SVG sprite, like so:</p>
 <p><pre><code>```<svg class="lexicon-icon">
@@ -17,6 +17,25 @@ section: Components
 
 <ul class="clearfix lexicon-icon-list list-unstyled">
 <!-- inject:svg -->
+<!-- endinject -->
+</ul>
+
+<h4 style="margin-top: 20px">Language Flags</h4>
+
+<blockquote class="blockquote-sm blockquote-success">
+	<p>
+		People tend to have pretty strong opinions on whether flags should be used as a visual cue for indicating a language, mainly because in many parts of the world, the flag may have cultural and geographic meanings that we might not be aware of, or the flag itself isn't fully accurate to the dialects spoken in that region.<br />
+		While we understand that reasoning, we've found that the times they are actually needed (when a user is not familiar with the currently displayed language) somewhat eliminates using other mechanisms, such as the name of the language (since the current language could be in an entirely different character set). Given this, there is often at least some familiarity with the identity of a country that speaks a shared language.<br />
+		Or, to paraphrase Winston Churchill, "Using flags is the worst system for indicating language, except for all others". :)
+	</p>
+</blockquote>
+<blockquote class="blockquote-sm blockquote-success">
+	<p>
+		To use the flags below, follow the same process as above, but the name of the icon is the locale and country code indicated in parenthesis (e.g. to use the Japanese icon, you would use <code>ja-jp</code>)
+	</p>
+</blockquote>
+<ul class="clearfix lexicon-icon-list list-unstyled">
+<!-- inject:flags:svg -->
 <!-- endinject -->
 </ul>
 
