@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.2
+* Lexicon 0.2.6
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -9815,6 +9815,219 @@ button.list-group-heading:hover,
   .list-group-card-checkbox-hidden-xs .checkbox-top-right .card-row {
     padding-right: 20px;
   }
+}
+
+.loading-icon, .loading-animation,
+.loadingmask-message .loadingmask-message-content {
+  -webkit-animation: loading-icon 1.7s infinite ease;
+  -o-animation: loading-icon 1.7s infinite ease;
+  animation: loading-icon 1.7s infinite ease;
+  border-radius: 50%;
+  display: block;
+  font-size: 16px;
+  height: 1em;
+  margin: 1em auto;
+  position: relative;
+  width: 1em;
+}
+
+.loading-icon:after, .loading-animation:after, .loading-icon:before, .loading-animation:before,
+.loadingmask-message .loadingmask-message-content:after,
+.loadingmask-message .loadingmask-message-content:before {
+  border-radius: 50%;
+  content: '';
+  display: block;
+  font-size: inherit;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@-webkit-keyframes loading-icon {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    -webkit-transform: rotate(0);
+  }
+  2%, 96% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+  }
+  10% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
+  }
+  25% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a1ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
+  }
+  40% {
+    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb2;
+  }
+  60% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes loading-icon {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    -moz-transform: rotate(0);
+  }
+  2%, 96% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+  }
+  10% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
+  }
+  25% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a1ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
+  }
+  40% {
+    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb2;
+  }
+  60% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-icon {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  2%, 96% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+  }
+  10% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
+  }
+  25% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a1ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
+  }
+  40% {
+    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb2;
+  }
+  60% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loading-icon.linear, .linear.loading-animation, .loading-icon.linear:before, .linear.loading-animation:before, .loading-icon.linear:after, .linear.loading-animation:after {
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.loading-icon.linear, .linear.loading-animation {
+  animation: none;
+  height: 1em;
+  margin: 0 auto;
+  position: relative;
+  transform: translateZ(0);
+  width: 1em;
+}
+
+.loading-icon.linear:before, .linear.loading-animation:before, .loading-icon.linear:after, .linear.loading-animation:after {
+  animation: 2s ease-out infinite both;
+  border: 0.15em solid transparent;
+  border-left-color: #07F;
+  border-radius: 50%;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(270deg);
+  transform-origin: 50%;
+  width: 100%;
+}
+
+.loading-icon.linear:before, .linear.loading-animation:before {
+  animation-name: loading-icon-linear;
+}
+
+.loading-icon.linear:after, .linear.loading-animation:after {
+  animation-name: loading-icon-spin;
+}
+
+@keyframes loading-icon-linear {
+  0% {
+    transform: rotate(0deg);
+  }
+  10.99% {
+    border-bottom-color: transparent;
+  }
+  11% {
+    border-bottom-color: #07F;
+  }
+  66% {
+    border-bottom-color: #07F;
+  }
+  66.6% {
+    border-bottom-color: transparent;
+  }
+  66.6%, 100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-icon-spin {
+  0%, 22% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button > .loading-icon, button > .loading-animation {
+  font-size: 1em;
+}
+
+button > .loading-icon, button > .loading-animation, button > .loading-icon.linear, button > .linear.loading-animation {
+  display: none;
+  margin-bottom: 0;
+  margin-right: 0.8em;
+  margin-top: 0;
+  vertical-align: middle;
+}
+
+button.loading > .loading-icon, button.loading > .loading-animation, button.loading > .loading-icon.linear, button.loading > .linear.loading-animation {
+  display: inline-block;
+}
+
+.loading-icon.loading-icon-xs, .loading-icon-xs.loading-animation, .loading-animation.loading-animation-xs {
+  font-size: 8px;
+}
+
+.loading-icon.loading-icon-sm, .loading-icon-sm.loading-animation, .loading-animation.loading-animation-sm {
+  font-size: 10px;
+}
+
+.loading-icon.loading-icon-md, .loading-icon-md.loading-animation, .loading-animation.loading-animation-md {
+  font-size: 32px;
+}
+
+.loading-icon.loading-icon-lg, .loading-icon-lg.loading-animation, .loading-animation.loading-animation-lg {
+  font-size: 64px;
 }
 
 .management-bar {
