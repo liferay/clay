@@ -1,5 +1,5 @@
-### v0.2.4 - February 22, 2015
-* The last release didn't contain the changes needed (Nate's fault), this release resolves the issue.
+### v0.2.6 - February 22, 2015
+* The released versions for v0.2.3-v0.2.5 had invalid jars being created due to an error in the maven build script. This should be finally resolved.
 
 ### v0.2.3 - February 19, 2015
 * Fix: Side Navigation lazy loading doesn't try to reload content that was never loaded
