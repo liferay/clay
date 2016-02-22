@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.2.3
+* Lexicon 0.2.4
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
