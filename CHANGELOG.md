@@ -1,10 +1,10 @@
 ### v0.2.3 - February 19, 2015
-Fix: Side Navigation lazy loading doesn't try to reload content that was never loaded
-New: Add Lexicon CSS only Loaders
-Update: Sidenav will now add the css loading indicator automatically
-Update: Side Navigation should show loading indicator when using ajax
-Update: Higher contrast tooltip bg color
-Site: Update Side Navigation docs with loading indicator
+* Fix: Side Navigation lazy loading doesn't try to reload content that was never loaded
+* New: Add Lexicon CSS only Loaders
+* Update: Sidenav will now add the css loading indicator automatically
+* Update: Side Navigation should show loading indicator when using ajax
+* Update: Higher contrast tooltip bg color
+* Site: Update Side Navigation docs with loading indicator
 
 ### v0.2.2 - February 8, 2015
 * Fix: Remove margins on dropdown icon-monospaced
