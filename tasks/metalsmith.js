@@ -22,6 +22,7 @@ var _s = require('underscore.string');
 
 module.exports = function(gulp, plugins, _, config) {
 	var license = require('./copyright_banner');
+	var flagData = require('../lib/flag_data.json');
 
 	var metadata = {
 		_: _,
@@ -31,6 +32,7 @@ module.exports = function(gulp, plugins, _, config) {
 	};
 
 	var TPL_SVG = '<li><svg class="lexicon-icon"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg> <span>{0}</span></li>';
+	var TPL_FLAGS_SVG = '<li><svg class="lexicon-icon"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg> <span>{1} ({0})</span></li>';
 
 	gulp.task('build:metalsmith', function(cb) {
 		var filter = plugins.filter(['**/*.md', '**/*.html']);
@@ -40,9 +42,14 @@ module.exports = function(gulp, plugins, _, config) {
 
 		var REGEX_VAR_FILEPATH = new RegExp(config.BOOTSTRAP_VAR_FILE + '$');
 
-		var svgFiles = gulp.src(['src/images/icons/*.svg'], {read: false})
+		var svgFiles = gulp.src(['src/images/icons/*.svg', '!src/images/icons/flags-*.svg'], {read: false})
 						.pipe(plugins.rename(function(file) {
 							file.basename = _s.slugify(file.basename);
+						}));
+
+		var svgFlags = gulp.src(['src/images/icons/flags-*.svg'], {read: false})
+						.pipe(plugins.rename(function(file) {
+							file.basename = _s.slugify(file.basename.replace(/^flags-/, ''));
 						}));
 
 		return gulp.src(['./CHANGELOG.md', config.SRC_GLOB])
@@ -73,6 +80,16 @@ module.exports = function(gulp, plugins, _, config) {
 				.pipe(assetFilter.restore())
 				.pipe(plugins.plumber())
 				.pipe(svgFilter)
+				.pipe(plugins.inject(svgFlags, {
+					starttag: '<!-- inject:flags:{{ext}} -->',
+					transform: function(filepath, file, index, length, targetFile) {
+						var basename = path.basename(filepath, '.svg');
+
+						var flagName = flagData[basename] || 'UNKNOWN';
+
+						return _.sub(TPL_FLAGS_SVG, basename, flagName);
+					}
+				}))
 				.pipe(plugins.inject(svgFiles, {
 					transform: function(filepath, file, index, length, targetFile) {
 						var basename = path.basename(filepath, '.svg');
