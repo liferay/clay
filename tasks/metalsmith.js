@@ -31,8 +31,8 @@ module.exports = function(gulp, plugins, _, config) {
 		version: license.metadata.version
 	};
 
-	var TPL_SVG = '<li><svg class="lexicon-icon"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg> <span>{0}</span></li>';
-	var TPL_FLAGS_SVG = '<li><svg class="lexicon-icon"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg> <span>{1} ({0})</span></li>';
+	var TPL_SVG = '<li><svg class="lexicon-icon lexicon-icon-{0}"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg> <span>{0}</span></li>';
+	var TPL_FLAGS_SVG = '<li><svg class="lexicon-icon lexicon-icon-{0}"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg> <span>{1} ({0})</span></li>';
 
 	gulp.task('build:metalsmith', function(cb) {
 		var filter = plugins.filter(['**/*.md', '**/*.html']);
