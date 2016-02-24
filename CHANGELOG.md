@@ -1,3 +1,8 @@
+### v0.2.7 - February 24, 2015
+* Fix: Add work around for ios not respecting overflow hidden on body ([Fixes  #132](https://github.com/liferay/lexicon/issues/132))
+* Update: Added new icons check-circle, cut, paragraph, paste, radio-button, select-from-list, and text
+* Update: Added new flag icons
+
 ### v0.2.6 - February 22, 2015
 * The released versions for v0.2.3-v0.2.5 had invalid jars being created due to an error in the maven build script. This should be finally resolved.
 
