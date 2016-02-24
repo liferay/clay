@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.6</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.7</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -210,7 +210,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
 </li>
-<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">Github</a>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
 </ul>
 	</div>
 </nav>
@@ -828,6 +828,90 @@
 		</blockquote>
 	</div>
 </div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="modal-browser-bugs"><a class="heading-anchor" href="#modal-browser-bugs"><i class="icon icon-link"></i></a>Modal Browser Bugs</h3>
+
+		<blockquote class="blockquote-sm blockquote-warning">
+			<p>iOS Safari doesn&apos;t respect <code>overflow: hidden</code> on the body element. See <a href="https://bugs.webkit.org/show_bug.cgi?id=153852">https://bugs.webkit.org/show_bug.cgi?id=153852</a>.</p>
+
+			<p>In iOS Safari, body content under the modal will scroll when the beginning or end of scrollable content inside a modal is reached. Use the position fixed workaround by adding <code>position: fixed;</code> to the <code>modal-open</code> class. The body content will be scrolled to the top as a side effect.</p>
+
+			<pre><code>@media screen and (max-width: 767px) {
+    .modal-open {
+        position: fixed;
+    }
+}</code></pre>
+
+		<p>The jQuery work around:</p>
+
+		<pre><code>(function($) {
+	var winScrollPos;
+	var $doc = $(document);
+	var $body = $(&apos;body&apos;);
+	var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) &amp;&amp; !window.MSStream;
+
+	$doc.on(&apos;hidden.bs.modal&apos;, function(e) {
+		if (iOS &amp;&amp; !(winScrollPos === 0)) {
+				window.scrollTo(0, winScrollPos);
+
+				$body.css({
+					position: &apos;&apos;,
+					top: &apos;&apos;
+				});
+			}
+	});
+
+	$doc.on(&apos;show.bs.modal&apos;, function(e) {
+		if (iOS) {
+			winScrollPos = window.scrollY;
+
+			if (!(winScrollPos === 0)) {
+				$body.css({
+					position: &apos;fixed&apos;,
+					top: -winScrollPos
+				});
+			}
+		}
+	});
+})(jQuery);</code></pre>
+		</blockquote>
+	</div>
+</div>
+
+<script>
+	(function($) {
+		var winScrollPos;
+		var $doc = $(document);
+		var $body = $('body');
+		var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+		$doc.on('hidden.bs.modal', function(e) {
+			if (iOS && !(winScrollPos === 0)) {
+					window.scrollTo(0, winScrollPos);
+
+					$body.css({
+						position: '',
+						top: ''
+					});
+				}
+		});
+
+		$doc.on('show.bs.modal', function(e) {
+			if (iOS) {
+				winScrollPos = window.scrollY;
+
+				if (!(winScrollPos === 0)) {
+					$body.css({
+						position: 'fixed',
+						top: -winScrollPos
+					});
+				}
+			}
+		});
+	})(jQuery);
+</script>
 	</div>
 
 		</section>
