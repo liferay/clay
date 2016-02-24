@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.6
+* Lexicon 0.2.7
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -13093,7 +13093,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .modal-dialog {
     bottom: 0;
     left: 0;
@@ -13113,7 +13113,7 @@ fieldset[disabled]
   text-align: left;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .modal-footer {
     bottom: 0;
     position: absolute;
@@ -13126,14 +13126,6 @@ fieldset[disabled]
   background-color: transparent;
   border-color: #e5e5e5;
   color: #333333;
-}
-
-.modal-open {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
 }
 
 .modal-title {
