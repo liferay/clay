@@ -1,0 +1,95 @@
+/**
+* Lexicon 0.2.6
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sticker {
+	color: $sticker-color;
+	display: inline-block;
+	font-size: $sticker-font-size;
+	left: $sticker-gutter-width;
+
+	@include monospace($sticker-monospaced-size);
+
+	padding: 0;
+	position: absolute;
+	text-align: center;
+	top: $sticker-gutter-width;
+}
+
+.sticker-bottom {
+	bottom: $sticker-gutter-width;
+	top: auto;
+}
+
+.sticker-right {
+	left: auto;
+	right: $sticker-gutter-width;
+}
+
+.sticker-outside {
+	left: -$sticker-gutter-width;
+	top: -$sticker-gutter-width;
+
+	&.sticker-bottom {
+		bottom: -$sticker-gutter-width;
+		top: auto;
+	}
+
+	&.sticker-right {
+		left: auto;
+		right: -$sticker-gutter-width;
+	}
+}
+
+.sticker-sm {
+	font-size: $sticker-sm-font-size;
+
+	@include monospace($sticker-sm-monospaced-size);
+}
+
+.sticker-lg {
+	font-size: $sticker-lg-font-size;
+
+	@include monospace($sticker-lg-monospaced-size);
+}
+
+// Sticker Skins
+
+.sticker-circle {
+	border-radius: $sticker-circle-border-radius;
+}
+
+.sticker-rounded {
+	border-radius: $sticker-rounded-border-radius;
+}
+
+.sticker-square {
+	border-radius: $sticker-square-border-radius;
+}
+
+.sticker-danger {
+	background-color: $label-danger-bg;
+}
+
+.sticker-default {
+	background-color: $label-default-bg;
+}
+
+.sticker-info {
+	background-color: $label-info-bg;
+}
+
+.sticker-primary {
+	background-color: $label-primary-bg;
+}
+
+.sticker-success {
+	background-color: $label-success-bg;
+}
+
+.sticker-warning {
+	background-color: $label-warning-bg;
+}

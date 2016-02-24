@@ -1,0 +1,43 @@
+/**
+* Lexicon 0.2.6
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// max-width: 479px
+
+@media screen and (max-width: ($screen-xs-min - 1)) {
+	.table-responsive-flip {
+		.table {
+			> thead,
+			> tbody,
+			> tfoot {
+				> tr {
+					> th,
+					> td {
+						line-height: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Skins
+
+th {
+	font-size: $table-header-font-size;
+	font-weight: $table-header-font-weight;
+}
+
+th,
+.table-list .table-cell-field {
+	color: $table-header-color;
+}
+
+.table-list {
+	a {
+		color: $table-list-link-color;
+	}
+}
