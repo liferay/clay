@@ -55,7 +55,7 @@ module.exports = function(gulp, plugins, _, config) {
 					'type': 'jar',
 					'repositories': [
 						{
-							'id': 'liferay-nexus-ce',
+							'id': 'liferay-releases-ce',
 							'url': 'https://repository.liferay.com/nexus/content/repositories/liferay-releases-ce/'
 						}
 					]
