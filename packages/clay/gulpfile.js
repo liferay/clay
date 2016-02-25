@@ -2,6 +2,7 @@ var inquirer = require('inquirer');
 var path = require('path');
 
 var gulp = require('gulp-help')(require('gulp'));
+var liferayGulpTasks = require('liferay-gulp-tasks');
 var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 
@@ -20,6 +21,10 @@ var config = {
 };
 
 var tasks = require('require-dir')('./tasks');
+
+liferayGulpTasks.registerTasks({
+	artifactSrc: ['**/release/**/*', '!node_modules/', '!node_modules/**']
+});
 
 _.invoke(tasks, 'call', tasks, gulp, plugins, _, config);
 
