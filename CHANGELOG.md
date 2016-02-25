@@ -1,3 +1,7 @@
+### v0.2.8 - February 25, 2015
+* Update: Normalized the viewBox attribute for the flag icons to use the same metrics as the other icons
+* Fix: Removed IDs from flag icon groups as they would cause issues when using the icon
+
 ### v0.2.7 - February 24, 2015
 * Fix: Add work around for ios not respecting overflow hidden on body ([Fixes  #132](https://github.com/liferay/lexicon/issues/132))
 * Update: Added new icons check-circle, cut, paragraph, paste, radio-button, select-from-list, and text
