@@ -92,12 +92,10 @@
 		}
 	};
 
-	var old = $.fn.collapsibleSearch;
-
 	var Plugin = function(option) {
-		return this.each(function () {
+		return this.each(function() {
 			var $this = $(this);
-			var data  = $this.data('lexicon.collapsible-search');
+			var data = $this.data('lexicon.collapsible-search');
 
 			if (!data) {
 				data = new CollapsibleSearch(this);
@@ -120,7 +118,7 @@
 		$.fn.collapsibleSearch = old;
 
 		return this;
-	}
+	};
 
 	var close = '[data-toggle="collapsible-search"] .basic-search-close';
 	var input = '[data-toggle="collapsible-search"] input[type="text"]';

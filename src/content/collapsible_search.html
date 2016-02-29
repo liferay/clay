@@ -57,13 +57,13 @@ section: Components (JS)
 		<h3>Data API:</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Enable by data attribute with <code>data-toggle="collapsible-search"</code>. This method uses event delegation on the document.</p>
+			<p>Enable using data attributes with <code>data-toggle="collapsible-search"</code>. This method uses event delegation on the document.</p>
 		</blockquote>
 
 		<h3>Javascript:</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Enable by javascript with <code>$('#myElement').collapsibleSearch();</code>. This method attaches the event handler on the element specified.</p>
+			<p>Enable using javascript with <code>$('#myElement').collapsibleSearch();</code>. This method attaches the event handler on the element specified.</p>
 		</blockquote>
 
 		<h3>Options:</h3>
@@ -89,11 +89,11 @@ section: Components (JS)
 <div class="row">
 	<div class="col-md-12">
 		<h3>Alternate Navbar Toggle Style</h3>
-		<blockquote class="blockquote-success blockquote-sm">
+		<blockquote class="blockquote-sm blockquote-success">
 			<p>Style navbar toggle like a navbar navigation item with <code>navbar-toggle-page-name</code>.</p>
 		</blockquote>
 
-		<nav class="navbar navbar-default collapse-basic-search" data-toggle="collapsible-search">
+		<nav class="collapse-basic-search navbar navbar-default" data-toggle="collapsible-search">
 			<div class="collapse navbar-collapse" id="navbar-collapse-001">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Message Boards</a></li>
@@ -133,7 +133,7 @@ section: Components (JS)
 			</div>
 
 			<div class="navbar-header navbar-header-right">
-				<button type="button" class="navbar-toggle navbar-toggle-left navbar-toggle-page-name collapsed" data-toggle="collapse" data-target="#navbar-collapse-001">
+				<button class="collapsed navbar-toggle navbar-toggle-left navbar-toggle-page-name" data-target="#navbar-collapse-001" data-toggle="collapse" type="button">
 					<span class="sr-only">Toggle Navigation</span>
 					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
 					<span class="caret"></span>
@@ -162,12 +162,12 @@ section: Components (JS)
 		</nav>
 
 		<h3>Navbar with Custom Toggle and Basic Search in Navbar Header</h3>
-		<blockquote class="blockquote-success blockquote-sm">
+		<blockquote class="blockquote-sm blockquote-success">
 			<p>Use this pattern when you want the search bar to always be shown (in mobile and desktop). </p>
 			<p><code>.navbar-collapse</code> needs to be declared before <code>.navbar-header</code>. It allows the search box to fill the remaining space in smaller spaces.</p>
 		</blockquote>
 
-		<nav class="navbar navbar-default collapse-basic-search" id="mySearch">
+		<nav class="collapse-basic-search navbar navbar-default" id="mySearch">
 			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Message Boards</a></li>
@@ -207,7 +207,7 @@ section: Components (JS)
 			</div>
 
 			<div class="navbar-header navbar-header-right">
-				<button type="button" class="navbar-toggle navbar-toggle-left navbar-toggle-page-name collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+				<button class="collapsed navbar-toggle navbar-toggle-left navbar-toggle-page-name" data-target="#navbar-collapse-1" data-toggle="collapse" type="button">
 					<span class="sr-only">Toggle Navigation</span>
 					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
 					<span class="caret"></span>
@@ -253,7 +253,7 @@ section: Components (JS)
 			<p>Use the navbar-no-collapse component to preserve desktop navbar styles in mobile. It's useful when there are only one or two links in the navbar; where collapsing doesn't make sense.</p>
 		</blockquote>
 
-		<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" data-toggle="collapsible-search">
+		<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse" data-toggle="collapsible-search">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Message Boards</a></li>
 				<li><a href="#">Blogs</a></li>
