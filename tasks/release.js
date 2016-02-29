@@ -59,6 +59,7 @@ module.exports = function(gulp, plugins, _, config) {
 
 			return gulp.src([
 				'src/fonts/**/*',
+				'src/images/icons/*',
 				'src/scss/+(atlas-theme|bootstrap|lexicon-base)/**/*',
 				'src/scss/+(atlas|atlas-variables|bootstrap|lexicon-base|lexicon-base-variables).scss',
 				'src/js/{,bootstrap/}*.js'
