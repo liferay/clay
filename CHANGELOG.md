@@ -1,3 +1,9 @@
+### v0.2.9 - March 1st, 2015
+* Update: Collapsible Search should use event delegation
+* Update: the (non-flag) icons to have either (or both in many cases) of a class of `lexicon-icon-outline` or `lexicon-icon-body` on their child elements. This allows them to be more easily targeted via CSS.
+* Update: Include all icons in release task (so that people can use icons individually)
+* Site: Update Collapsible Search documentation with event delegation stuff
+
 ### v0.2.8 - February 25, 2015
 * Update: Normalized the viewBox attribute for the flag icons to use the same metrics as the other icons
 * Fix: Removed IDs from flag icon groups as they would cause issues when using the icon
