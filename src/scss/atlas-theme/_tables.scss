@@ -30,6 +30,10 @@ th,
 }
 
 .table-list {
+	tbody tr {
+		background-color: $table-list-body-row-bg;
+	}
+
 	a {
 		color: $table-list-link-color;
 	}
