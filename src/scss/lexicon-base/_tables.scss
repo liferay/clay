@@ -4,7 +4,7 @@
 	> tfoot {
 		tr td {
 			&:first-child {
-				padding-left: 15px;
+				padding-left: $table-cell-gutters;
 
 				.checkbox {
 					margin-bottom: 0;
@@ -14,7 +14,24 @@
 			}
 
 			&:last-child {
-				padding-right: 15px;
+				padding-right: $table-cell-gutters;
+			}
+		}
+	}
+
+	tr {
+		td,
+		th {
+			&:first-child {
+				.clamp-container {
+					left: $table-cell-gutters;
+				}
+			}
+
+			&:last-child {
+				.clamp-container {
+					right: $table-cell-gutters;
+				}
 			}
 		}
 	}
@@ -252,4 +269,12 @@
 			display: block;
 		}
 	}
+}
+
+.content-column {
+	min-width: 200px;
+}
+
+.text-column {
+	min-width: 115px;
 }
