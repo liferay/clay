@@ -1,4 +1,4 @@
-### v0.3.0 - March 8, 2015
+### v0.2.10 - March 8, 2015
 * Fix: Collapsible Search covers navbar-collapse items on mobile
 * Fix: Encoding spaces in the SVG mixin, as the YUI compressor will munge the whole thing up
 * Update: Lexicon table clamp-container spacing when its first child and add min-widths to table cells inside table-responsive
