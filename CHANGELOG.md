@@ -1,4 +1,10 @@
-### v0.2.9 - March 1st, 2015
+### v0.3.0 - March 8, 2015
+* Fix: Collapsible Search covers navbar-collapse items on mobile
+* Fix: Encoding spaces in the SVG mixin, as the YUI compressor will munge the whole thing up
+* Update: Lexicon table clamp-container spacing when its first child and add min-widths to table cells inside table-responsive
+* Update: Change table-list row background color in Atlas
+
+### v0.2.9 - March 1, 2015
 * Update: Collapsible Search should use event delegation
 * Update: the (non-flag) icons to have either (or both in many cases) of a class of `lexicon-icon-outline` or `lexicon-icon-body` on their child elements. This allows them to be more easily targeted via CSS.
 * Update: Include all icons in release task (so that people can use icons individually)
