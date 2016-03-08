@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.9
+* Lexicon 0.2.10
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -13870,7 +13870,6 @@ fieldset[disabled]
 }
 
 .collapse-basic-search .basic-search {
-  bottom: 0;
   display: block;
   left: 0;
   margin: 0;
@@ -15530,6 +15529,16 @@ fieldset[disabled]
   padding-right: 15px;
 }
 
+.table tr td:first-child .clamp-container,
+.table tr th:first-child .clamp-container {
+  left: 15px;
+}
+
+.table tr td:last-child .clamp-container,
+.table tr th:last-child .clamp-container {
+  right: 15px;
+}
+
 .table-cell-content {
   position: relative;
   word-break: break-all;
@@ -15705,6 +15714,14 @@ fieldset[disabled]
 .table-list .checkbox label,
 .table-list .radio label {
   display: block;
+}
+
+.content-column {
+  min-width: 200px;
+}
+
+.text-column {
+  min-width: 115px;
 }
 
 .tab-group > .nav-tabs {

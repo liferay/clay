@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.9
+* Lexicon 0.2.10
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -13888,7 +13888,6 @@ fieldset[disabled]
 }
 
 .collapse-basic-search .basic-search {
-  bottom: 0;
   display: block;
   left: 0;
   margin: 0;
@@ -15548,6 +15547,16 @@ fieldset[disabled]
   padding-right: 15px;
 }
 
+.table tr td:first-child .clamp-container,
+.table tr th:first-child .clamp-container {
+  left: 15px;
+}
+
+.table tr td:last-child .clamp-container,
+.table tr th:last-child .clamp-container {
+  right: 15px;
+}
+
 .table-cell-content {
   position: relative;
   word-break: break-all;
@@ -15723,6 +15732,14 @@ fieldset[disabled]
 .table-list .checkbox label,
 .table-list .radio label {
   display: block;
+}
+
+.content-column {
+  min-width: 200px;
+}
+
+.text-column {
+  min-width: 115px;
 }
 
 .tab-group > .nav-tabs {
@@ -17838,11 +17855,11 @@ select.form-control {
   padding-bottom: 0;
   padding-right: 18px;
   padding-top: 0;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='512' height='512' viewBox='0 0 512 512'%3E%3Cpath d='M347.913 199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6 0l-81.538 85c-8.73 9.1-2.548 24.664 9.8 24.664h163.077c12.348 0 18.53-15.563 9.8-24.664zM165.236 312.664l81.538 85c5.412 5.642 14.188 5.642 19.6 0l81.538-85c8.73-9.1 2.548-24.664-9.8-24.664H175.035c-12.347 0-18.53 15.563-9.8 24.664z' fill='%23869CAD'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20d='M347.913%20199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6%200l-81.538%2085c-8.73%209.1-2.548%2024.664%209.8%2024.664h163.077c12.348%200%2018.53-15.563%209.8-24.664zM165.236%20312.664l81.538%2085c5.412%205.642%2014.188%205.642%2019.6%200l81.538-85c8.73-9.1%202.548-24.664-9.8-24.664H175.035c-12.347%200-18.53%2015.563-9.8%2024.664z'%20fill='%23869CAD'%3E%3C/path%3E%3C/svg%3E");
 }
 
 select.form-control:focus {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='512' height='512' viewBox='0 0 512 512'%3E%3Cpath d='M347.913 199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6 0l-81.538 85c-8.73 9.1-2.548 24.664 9.8 24.664h163.077c12.348 0 18.53-15.563 9.8-24.664zM165.236 312.664l81.538 85c5.412 5.642 14.188 5.642 19.6 0l81.538-85c8.73-9.1 2.548-24.664-9.8-24.664H175.035c-12.347 0-18.53 15.563-9.8 24.664z' fill='%2365B6F0'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20d='M347.913%20199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6%200l-81.538%2085c-8.73%209.1-2.548%2024.664%209.8%2024.664h163.077c12.348%200%2018.53-15.563%209.8-24.664zM165.236%20312.664l81.538%2085c5.412%205.642%2014.188%205.642%2019.6%200l81.538-85c8.73-9.1%202.548-24.664-9.8-24.664H175.035c-12.347%200-18.53%2015.563-9.8%2024.664z'%20fill='%2365B6F0'%3E%3C/path%3E%3C/svg%3E");
 }
 
 select.form-control::-ms-expand {
@@ -18109,7 +18126,7 @@ fieldset[disabled] .form-control:-ms-input-placeholder {
 }
 
 .has-success select.form-control {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='512' height='512' viewBox='0 0 512 512'%3E%3Cpath d='M347.913 199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6 0l-81.538 85c-8.73 9.1-2.548 24.664 9.8 24.664h163.077c12.348 0 18.53-15.563 9.8-24.664zM165.236 312.664l81.538 85c5.412 5.642 14.188 5.642 19.6 0l81.538-85c8.73-9.1 2.548-24.664-9.8-24.664H175.035c-12.347 0-18.53 15.563-9.8 24.664z' fill='%2376BD4A'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20d='M347.913%20199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6%200l-81.538%2085c-8.73%209.1-2.548%2024.664%209.8%2024.664h163.077c12.348%200%2018.53-15.563%209.8-24.664zM165.236%20312.664l81.538%2085c5.412%205.642%2014.188%205.642%2019.6%200l81.538-85c8.73-9.1%202.548-24.664-9.8-24.664H175.035c-12.347%200-18.53%2015.563-9.8%2024.664z'%20fill='%2376BD4A'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .has-success .checkbox label,
@@ -18122,7 +18139,7 @@ fieldset[disabled] .form-control:-ms-input-placeholder {
 }
 
 .has-warning select.form-control {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='512' height='512' viewBox='0 0 512 512'%3E%3Cpath d='M347.913 199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6 0l-81.538 85c-8.73 9.1-2.548 24.664 9.8 24.664h163.077c12.348 0 18.53-15.563 9.8-24.664zM165.236 312.664l81.538 85c5.412 5.642 14.188 5.642 19.6 0l81.538-85c8.73-9.1 2.548-24.664-9.8-24.664H175.035c-12.347 0-18.53 15.563-9.8 24.664z' fill='%23F5984C'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20d='M347.913%20199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6%200l-81.538%2085c-8.73%209.1-2.548%2024.664%209.8%2024.664h163.077c12.348%200%2018.53-15.563%209.8-24.664zM165.236%20312.664l81.538%2085c5.412%205.642%2014.188%205.642%2019.6%200l81.538-85c8.73-9.1%202.548-24.664-9.8-24.664H175.035c-12.347%200-18.53%2015.563-9.8%2024.664z'%20fill='%23F5984C'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .has-warning .checkbox label,
@@ -18135,7 +18152,7 @@ fieldset[disabled] .form-control:-ms-input-placeholder {
 }
 
 .has-error select.form-control {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='512' height='512' viewBox='0 0 512 512'%3E%3Cpath d='M347.913 199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6 0l-81.538 85c-8.73 9.1-2.548 24.664 9.8 24.664h163.077c12.348 0 18.53-15.563 9.8-24.664zM165.236 312.664l81.538 85c5.412 5.642 14.188 5.642 19.6 0l81.538-85c8.73-9.1 2.548-24.664-9.8-24.664H175.035c-12.347 0-18.53 15.563-9.8 24.664z' fill='%23CC6677'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20d='M347.913%20199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6%200l-81.538%2085c-8.73%209.1-2.548%2024.664%209.8%2024.664h163.077c12.348%200%2018.53-15.563%209.8-24.664zM165.236%20312.664l81.538%2085c5.412%205.642%2014.188%205.642%2019.6%200l81.538-85c8.73-9.1%202.548-24.664-9.8-24.664H175.035c-12.347%200-18.53%2015.563-9.8%2024.664z'%20fill='%23CC6677'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .has-error .checkbox label,
@@ -19925,6 +19942,10 @@ th {
 th,
 .table-list .table-cell-field {
   color: #869CAD;
+}
+
+.table-list tbody tr {
+  background-color: #FFF;
 }
 
 .table-list a {
