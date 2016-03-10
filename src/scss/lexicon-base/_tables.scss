@@ -62,8 +62,8 @@ th {
 
 .table-cell-content {
 	position: relative;
-	word-break: break-all; // IE
-	word-break: break-word;
+
+	@include word-wrap;
 }
 
 .table-cell-field {
@@ -115,7 +115,8 @@ th {
 
 		> .table > tbody > tr > td {
 			white-space: normal;
-			word-break: break-word;
+
+			@include word-wrap;
 		}
 
 		tbody {
