@@ -47,15 +47,3 @@
 		overflow: auto;
 	}
 }
-
-// Table List
-
-th.clamp-horizontal .clamp-container {
-	bottom: $table-cell-padding;
-
-	@include transform(none);
-}
-
-.clamp-horizontal .table-cell-content {
-	vertical-align: middle;
-}
