@@ -112,7 +112,7 @@ input.toggle-card {
 .toggle-card-dm {
 	margin-top: 0;
 
-	input[type="checkbox"] {
+	input[type="checkbox"], input[type="radio"] {
 		left: $grid-gutter-width / 2;
 		margin-left: 0;
 		margin-top: 0;
