@@ -1,3 +1,7 @@
+th {
+	height: 20px;
+}
+
 .table-valign-bottom,
 .thead-valign-bottom {
 	thead .clamp-container {
@@ -28,6 +32,10 @@
 
 	thead .clamp-container {
 		bottom: $table-cell-padding;
+	}
+
+	th {
+		height: 36px;
 	}
 
 	tr {
