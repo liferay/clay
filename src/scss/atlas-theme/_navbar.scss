@@ -412,6 +412,7 @@
 				display: inline-block;
 				padding-bottom: $navbar-default-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
 				padding-top: $navbar-default-desktop-padding-vertical;
+				z-index: 3;
 			}
 
 			&:after {
