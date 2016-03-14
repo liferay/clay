@@ -5,26 +5,47 @@ section: Example Pages
 
 <div class="row" id="blogActions">
 	<div class="col-md-12">
-		<div class="sidenav-container sidenav-fixed uxgl-slideout-nav" id="blogActionsSidenav">
+		<div class="closed sidenav-container sidenav-fixed uxgl-slideout-nav" id="blogActionsSidenav">
 			<div class="sidenav-menu-slider">
 				<div class="sidebar sidebar-inverse sidenav-menu">
 					<div class="sidebar-header">
-						<h4>
-							<a href="#1">
-								<span class="sidebar-header-logo">
-									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
+						<ul class="list-unstyled list-inline sidebar-header-actions">
+							<li>
+								<a class="" href="#1">
+									<svg class="icon-monospaced lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#star-o" />
 									</svg>
-								</span>
-								<span>Squareup</span>
-							</a>
+								</a>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+									<svg class="icon-monospaced lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="sidenav-close" href="#1">
+									<svg class="icon-monospaced lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+									</svg>
+								</a>
+							</li>
+						</ul>
 
-							<a class="sidenav-close" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-								</svg>
-							</a>
-						</h4>
+						<h4>Image1.jpg</h4>
+
+						<h5 classs="text-default">
+							<span>Approved</span>
+						</h5>
 					</div>
 
 					<div class="sidebar-body">
@@ -481,7 +502,7 @@ section: Example Pages
 										<div class="panel-heading" style="background-color: #DDD;">10 item(s) to be added</div>
 										<div class="panel-body">
 											<div class="nameplate-label nameplate-label-default">
-												<div class="nameplate-icon">
+												<div class="nameplate-field">
 													<div class="user-icon user-icon-sm">
 														<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
 													</div>
@@ -501,7 +522,7 @@ section: Example Pages
 											</div>
 
 											<div class="nameplate-label nameplate-label-default">
-												<div class="nameplate-icon">
+												<div class="nameplate-field">
 													<div class="user-icon user-icon-sm">
 														<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
 													</div>
@@ -521,7 +542,7 @@ section: Example Pages
 											</div>
 
 											<div class="nameplate-label nameplate-label-default">
-												<div class="nameplate-icon">
+												<div class="nameplate-field">
 													<div class="user-icon user-icon-sm">
 														<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
 													</div>
@@ -541,7 +562,7 @@ section: Example Pages
 											</div>
 
 											<div class="nameplate-label nameplate-label-default">
-												<div class="nameplate-icon">
+												<div class="nameplate-field">
 													<div class="user-icon user-icon-sm">
 														<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
 													</div>
@@ -561,7 +582,7 @@ section: Example Pages
 											</div>
 
 											<div class="nameplate-label nameplate-label-default">
-												<div class="nameplate-icon">
+												<div class="nameplate-field">
 													<div class="user-icon user-icon-sm">
 														<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
 													</div>
@@ -581,7 +602,7 @@ section: Example Pages
 											</div>
 
 											<div class="nameplate-label nameplate-label-default">
-												<div class="nameplate-icon">
+												<div class="nameplate-field">
 													<div class="user-icon user-icon-sm">
 														<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
 													</div>
@@ -601,7 +622,7 @@ section: Example Pages
 											</div>
 
 											<div class="nameplate-label nameplate-label-default">
-												<div class="nameplate-icon">
+												<div class="nameplate-field">
 													<div class="user-icon user-icon-sm">
 														<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
 													</div>
@@ -620,7 +641,7 @@ section: Example Pages
 												</div>
 											</div>
 
-											<div class="nameplate-label nameplate-label-default nameplate-label-next">
+											<div class="nameplate-label nameplate-label-default nameplate-label-more">
 												<div class="nameplate-content">
 													<a class="nameplate-label-text" href="#1">...</a>
 												</div>
@@ -1081,7 +1102,7 @@ section: Example Pages
 	$('#blogActionsSidenav').sideNavigation({
 		gutter: 0,
 		toggler: '#blogActionsToggler',
-		typeMobile: 'fixed-push',
+		typeMobile: 'fixed',
 		type: 'fixed',
 		width: 320
 	});
