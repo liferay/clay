@@ -1,4 +1,4 @@
-$table-cell-gutters: floor($grid-gutter-width / 2);
+$table-cell-gutters: floor($grid-gutter-width / 2) !default; // 15px
 
 $table-list-content-height: 50px !default;
 

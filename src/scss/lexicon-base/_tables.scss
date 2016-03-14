@@ -1,3 +1,14 @@
+th {
+	height: 20px;
+}
+
+.table-valign-bottom,
+.thead-valign-bottom {
+	thead .clamp-container {
+		bottom: 0;
+	}
+}
+
 .table {
 	> thead,
 	> tbody,
@@ -19,6 +30,14 @@
 		}
 	}
 
+	thead .clamp-container {
+		bottom: $table-cell-padding;
+	}
+
+	th {
+		height: 36px;
+	}
+
 	tr {
 		td,
 		th {
@@ -35,12 +54,16 @@
 			}
 		}
 	}
+
+	.clamp-container {
+		@include transform(none);
+	}
 }
 
 .table-cell-content {
 	position: relative;
-	word-break: break-all; // IE
-	word-break: break-word;
+
+	@include word-wrap;
 }
 
 .table-cell-field {
@@ -92,7 +115,8 @@
 
 		> .table > tbody > tr > td {
 			white-space: normal;
-			word-break: break-word;
+
+			@include word-wrap;
 		}
 
 		tbody {
@@ -269,12 +293,154 @@
 			display: block;
 		}
 	}
+
+	thead .clamp-container {
+		@include transform(none);
+	}
+
+	&.table-valign-middle thead .clamp-container,
+	.clamp-container {
+		@include transform(translateY(-50%));
+	}
 }
 
-.content-column {
-	min-width: 200px;
+// Table Vertical Align
+
+.table-valign-bottom {
+	> thead > tr > th,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		vertical-align: bottom;
+	}
+
+	.clamp-container {
+		bottom: $table-cell-padding;
+
+		@include transform(none);
+	}
 }
 
-.text-column {
-	min-width: 115px;
+.table-valign-middle {
+	> thead > tr > th,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		vertical-align: middle;
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+	}
+
+	.clamp-container {
+		@include transform(translateY(-50%));
+
+		top: auto;
+	}
+}
+
+.table-valign-top {
+	> thead > tr > th,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		vertical-align: top;
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+	}
+
+	.clamp-container {
+		@include transform(none);
+	}
+}
+
+// Tbody Vertical Align
+
+.tbody-valign-bottom {
+	> tbody > tr > td {
+		vertical-align: bottom;
+	}
+
+	tbody .clamp-container {
+		bottom: $table-cell-padding;
+
+		@include transform(none);
+	}
+}
+
+.tbody-valign-middle {
+	> tbody > tr > td {
+		vertical-align: middle;
+	}
+
+	tbody .clamp-container {
+		@include transform(translateY(-50%));
+
+		top: auto;
+	}
+}
+
+.tbody-valign-top {
+	> tbody > tr > td {
+		vertical-align: top;
+	}
+
+	tbody .clamp-container {
+		@include transform(none);
+	}
+}
+
+// Thead Vertical Align
+
+.thead-valign-bottom {
+	> thead > tr {
+		> td,
+		> th {
+			vertical-align: bottom;
+		}
+	}
+
+	thead .clamp-container {
+		@include transform(none);
+	}
+}
+
+.thead-valign-middle {
+	> thead > tr {
+		> td,
+		> th {
+			vertical-align: middle;
+		}
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+
+		@include transform(translateY(-50%));
+	}
+}
+
+.thead-valign-top {
+	> thead > tr {
+		> td,
+		> th {
+			vertical-align: top;
+		}
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+
+		@include transform(none);
+	}
+}
+
+.table-responsive {
+	.table-cell-content {
+		min-width: 200px;
+	}
+
+	.table-cell-text {
+		min-width: 115px;
+	}
 }
