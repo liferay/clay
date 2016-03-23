@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.10
+* Lexicon 0.2.11
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -8493,19 +8493,6 @@ button.close {
   overflow: auto;
 }
 
-th.clamp-horizontal .clamp-container {
-  bottom: 8px;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
-}
-
-.clamp-horizontal .table-cell-content {
-  vertical-align: middle;
-}
-
 .crop-img {
   height: 100%;
   overflow: hidden;
@@ -11353,7 +11340,12 @@ fieldset[disabled]
     position: absolute;
     right: 5px;
     text-align: left;
-    top: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
   }
 }
 
@@ -13458,6 +13450,15 @@ fieldset[disabled]
   background-color: #f0ad4e;
 }
 
+th {
+  height: 20px;
+}
+
+.table-valign-bottom thead .clamp-container,
+.thead-valign-bottom thead .clamp-container {
+  bottom: 0;
+}
+
 .table > thead tr td:first-child,
 .table > tbody tr td:first-child,
 .table > tfoot tr td:first-child {
@@ -13478,6 +13479,14 @@ fieldset[disabled]
   padding-right: 15px;
 }
 
+.table thead .clamp-container {
+  bottom: 8px;
+}
+
+.table th {
+  height: 36px;
+}
+
 .table tr td:first-child .clamp-container,
 .table tr th:first-child .clamp-container {
   left: 15px;
@@ -13488,10 +13497,19 @@ fieldset[disabled]
   right: 15px;
 }
 
+.table .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
 .table-cell-content {
   position: relative;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   word-break: break-all;
-  word-break: break-word;
 }
 
 .table-cell-field {
@@ -13529,7 +13547,9 @@ fieldset[disabled]
   }
   .table-responsive-collapse > .table > tbody > tr > td {
     white-space: normal;
-    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
   }
   .table-responsive-collapse tbody {
     border-width: 0;
@@ -13665,11 +13685,159 @@ fieldset[disabled]
   display: block;
 }
 
-.content-column {
+.table-list thead .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.table-list.table-valign-middle thead .clamp-container,
+.table-list .clamp-container {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.table-valign-bottom > thead > tr > th,
+.table-valign-bottom > tbody > tr > td,
+.table-valign-bottom > tfoot > tr > td {
+  vertical-align: bottom;
+}
+
+.table-valign-bottom .clamp-container {
+  bottom: 8px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.table-valign-middle > thead > tr > th,
+.table-valign-middle > tbody > tr > td,
+.table-valign-middle > tfoot > tr > td {
+  vertical-align: middle;
+}
+
+.table-valign-middle thead .clamp-container {
+  bottom: auto;
+}
+
+.table-valign-middle .clamp-container {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: auto;
+}
+
+.table-valign-top > thead > tr > th,
+.table-valign-top > tbody > tr > td,
+.table-valign-top > tfoot > tr > td {
+  vertical-align: top;
+}
+
+.table-valign-top thead .clamp-container {
+  bottom: auto;
+}
+
+.table-valign-top .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.tbody-valign-bottom > tbody > tr > td {
+  vertical-align: bottom;
+}
+
+.tbody-valign-bottom tbody .clamp-container {
+  bottom: 8px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.tbody-valign-middle > tbody > tr > td {
+  vertical-align: middle;
+}
+
+.tbody-valign-middle tbody .clamp-container {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: auto;
+}
+
+.tbody-valign-top > tbody > tr > td {
+  vertical-align: top;
+}
+
+.tbody-valign-top tbody .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.thead-valign-bottom > thead > tr > td,
+.thead-valign-bottom > thead > tr > th {
+  vertical-align: bottom;
+}
+
+.thead-valign-bottom thead .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.thead-valign-middle > thead > tr > td,
+.thead-valign-middle > thead > tr > th {
+  vertical-align: middle;
+}
+
+.thead-valign-middle thead .clamp-container {
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.thead-valign-top > thead > tr > td,
+.thead-valign-top > thead > tr > th {
+  vertical-align: top;
+}
+
+.thead-valign-top thead .clamp-container {
+  bottom: auto;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.table-responsive .table-cell-content {
   min-width: 200px;
 }
 
-.text-column {
+.table-responsive .table-cell-text {
   min-width: 115px;
 }
 
@@ -14477,7 +14645,7 @@ input.toggle-card[disabled] ~ .toggle-card-container {
   margin-top: 0;
 }
 
-.toggle-card-dm input[type="checkbox"] {
+.toggle-card-dm input[type="checkbox"], .toggle-card-dm input[type="radio"] {
   left: 15px;
   margin-left: 0;
   margin-top: 0;
@@ -14487,11 +14655,11 @@ input.toggle-card[disabled] ~ .toggle-card-container {
   z-index: 1;
 }
 
-.toggle-card-dm input[type="checkbox"]:checked ~ .toggle-card-container, .toggle-card-dm input[type="checkbox"]:focus ~ .toggle-card-container {
+.toggle-card-dm input[type="checkbox"]:checked ~ .toggle-card-container, .toggle-card-dm input[type="checkbox"]:focus ~ .toggle-card-container, .toggle-card-dm input[type="radio"]:checked ~ .toggle-card-container, .toggle-card-dm input[type="radio"]:focus ~ .toggle-card-container {
   box-shadow: 0 0 3px 2px rgba(102, 175, 233, 0.6);
 }
 
-.toggle-card-dm input[type="checkbox"] ~ .toggle-card-container {
+.toggle-card-dm input[type="checkbox"] ~ .toggle-card-container, .toggle-card-dm input[type="radio"] ~ .toggle-card-container {
   border-width: 1px;
   padding: 0;
 }
