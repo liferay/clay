@@ -1,3 +1,12 @@
+### v0.2.11 - March 23, 2015
+* Update: Search bar covers active style when navbars are in narrow column
+* Update: Nameplate content text should be vertically centered in mobile
+* Update: Added styling for cards to also have a radio
+* Update: th element should have height so headings aren't clipped when every column is clamped
+* Update: Add table helper classes for vertical alignment
+* Site: Clean up Blog Actions demo
+* Site: Update tables page with helper documentation
+
 ### v0.2.10 - March 8, 2015
 * Fix: Collapsible Search covers navbar-collapse items on mobile
 * Fix: Encoding spaces in the SVG mixin, as the YUI compressor will munge the whole thing up
