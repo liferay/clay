@@ -23,6 +23,8 @@ module.exports = function(gulp, plugins, _, config) {
 			}
 		);
 
+		var src;
+
 		if (newSrc) {
 			newSrc = newSrc.replace(/^svg-src=/, '');
 
@@ -34,7 +36,9 @@ module.exports = function(gulp, plugins, _, config) {
 			}
 		}
 
-		config.src = src;
+		if (src) {
+			config.src = src;
+		}
 	}
 
 	var svgstore = require('../lib/svgstore');
