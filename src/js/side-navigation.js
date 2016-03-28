@@ -40,20 +40,48 @@
 		};
 	};
 
+	var getBreakpointRegion = function() {
+		var screenXs = 480;
+		var screenSm = 768;
+		var screenMd = 992;
+		var screenLg = 1200;
+
+		var windowWidth = $(window).width();
+		var region = '';
+
+		if (windowWidth >= screenLg) {
+			region = 'lg';
+		}
+		else if (windowWidth >= screenMd && windowWidth < screenLg) {
+			region = 'md';
+		}
+		else if (windowWidth >= screenSm && windowWidth < screenMd) {
+			region = 'sm';
+		}
+		else if (windowWidth >= screenXs && windowWidth < screenSm) {
+			region = 'xs';
+		}
+		else if (windowWidth < screenXs) {
+			region = 'xxs';
+		}
+
+		return region;
+	};
+
 	var guid = (function() {
-			var counter = 0;
+		var counter = 0;
 
-			return function(element, ns) {
-				var strId = element.attr('id');
+		return function(element, ns) {
+			var strId = element.attr('id');
 
-				if (!strId) {
-					strId = (ns + counter++);
+			if (!strId) {
+				strId = (ns + counter++);
 
-					element.attr('id', strId);
-				}
+				element.attr('id', strId);
+			}
 
-				return strId;
-			};
+			return strId;
+		};
 	}());
 
 	var toInt = function(str) {
@@ -776,29 +804,61 @@
 		_onScreenChange: function() {
 			var instance = this;
 
-			instance._setScreenSize();
-
 			var element = instance.element;
 
-			doc.on('screenChange.lexicon.sidenav', function(event, winWidth) {
-				instance._setScreenSize();
+			var screenStartDesktop = instance._setScreenSize();
 
-				var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
+			doc.on('screenChange.lexicon.sidenav', function(event) {
+				var desktop = instance._setScreenSize();
 
 				var type = desktop ? instance.options.type : instance.options.typeMobile;
 
 				var fixedMenu = type === 'fixed' || type === 'fixed-push';
 
+				var menu = element.find('.sidenav-menu').first();
+
+				var menuWidth;
+
+				var originalMenuWidth = instance.options.widthOriginal;
+
 				element.toggleClass('sidenav-fixed', fixedMenu);
 
-				if (!desktop && fixedMenu) {
+				if ((!desktop && screenStartDesktop) || (desktop && !screenStartDesktop)) {
 					instance.hideSidenav();
 
-					setTimeout(function() {
-						element.addClass('closed');
+					element.addClass('closed');
 
-						instance.clearStyle('width');
-					}, 0);
+					screenStartDesktop = false;
+
+					if (desktop) {
+						if (instance.options.position === 'right') {
+							menu.css(
+								{
+									right: originalMenuWidth,
+									width: originalMenuWidth
+								}
+							);
+						}
+
+						screenStartDesktop = true;
+					}
+				}
+
+				if (!desktop) {
+					menuWidth = originalMenuWidth;
+
+					if (window.innerWidth <= originalMenuWidth) {
+						menuWidth = window.innerWidth - toInt(instance.options.gutter) - 25;
+					}
+
+					menu.css(
+						{
+							right: menuWidth,
+							width: menuWidth
+						}
+					);
+
+					screenStartDesktop = false;
 				}
 
 				if (!element.hasClass('closed')) {
@@ -908,10 +968,14 @@
 		_setScreenSize: function() {
 			var instance = this;
 
-			var desktop = window.innerWidth >= toInt(instance.options.breakpoint);
+			var screenSize = getBreakpointRegion();
+
+			var desktop = screenSize === 'md' || screenSize === 'lg';
 
 			instance.mobile = !desktop;
 			instance.desktop = desktop;
+
+			return desktop;
 		}
 	};
 
