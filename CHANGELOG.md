@@ -1,3 +1,6 @@
+### v0.2.12 - March 25, 2015
+* Update: Remove icon-* selector from alloy-font-awesome, and instead only target defined icons
+
 ### v0.2.11 - March 23, 2015
 * Update: Search bar covers active style when navbars are in narrow column
 * Update: Nameplate content text should be vertically centered in mobile
