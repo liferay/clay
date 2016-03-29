@@ -131,8 +131,7 @@
 		display: table-cell;
 		position: relative;
 		vertical-align: middle;
-
-		@include word-wrap;
+		word-break: break-all; // IE
 
 		.img-responsive {
 			max-width: none;
