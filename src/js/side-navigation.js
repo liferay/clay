@@ -52,16 +52,16 @@
 		if (windowWidth >= screenLg) {
 			region = 'lg';
 		}
-		else if (windowWidth >= screenMd && windowWidth < screenLg) {
+		else if (windowWidth >= screenMd) {
 			region = 'md';
 		}
-		else if (windowWidth >= screenSm && windowWidth < screenMd) {
+		else if (windowWidth >= screenSm) {
 			region = 'sm';
 		}
-		else if (windowWidth >= screenXs && windowWidth < screenSm) {
+		else if (windowWidth >= screenXs) {
 			region = 'xs';
 		}
-		else if (windowWidth < screenXs) {
+		else {
 			region = 'xxs';
 		}
 
