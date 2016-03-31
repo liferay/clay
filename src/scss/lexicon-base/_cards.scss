@@ -152,6 +152,38 @@
 	padding: $card-gutter-width;
 }
 
+// Card Row Vertical Alignment
+
+.card-row-valign-top {
+	.card-col-content,
+	.card-col-field {
+		vertical-align: top;
+	}
+
+	.clamp-container {
+		top: 0;
+	}
+
+	.clamp-horizontal .clamp-container {
+		@include transform(none);
+	}
+}
+
+.card-row-valign-bottom {
+	.card-col-content,
+	.card-col-field {
+		vertical-align: bottom;
+	}
+
+	.clamp-container {
+		bottom: 0;
+	}
+
+	.clamp-horizontal .clamp-container {
+		@include transform(none);
+	}
+}
+
 [class*="card-col"] {
 	figure,
 	.figure {
@@ -269,7 +301,7 @@
 
 	label {
 		color: $text-color;
-		display: block;
+		display: inline;
 		padding-left: 0;
 	}
 
@@ -283,68 +315,76 @@
 .checkbox-bottom-left,
 .checkbox-middle-left,
 .checkbox-top-left {
-	.card.flex-container {
-		padding-left: 40px;
-	}
+	.card-horizontal {
+		.card.flex-container {
+			padding-left: $checkbox-left-card-padding;
+		}
 
-	.card-row {
-		padding-left: 40px;
+		.card-row {
+			padding-left: $checkbox-left-card-padding;
+		}
 	}
 }
 
 .checkbox-bottom-right,
 .checkbox-middle-right,
 .checkbox-top-right {
-	.card.flex-container {
-		padding-right: 40px;
-	}
+	.card-horizontal {
+		.card.flex-container {
+			padding-right: $checkbox-right-card-padding;
+		}
 
-	.card-row {
-		padding-right: 40px;
+		.card-row {
+			padding-right: $checkbox-right-card-padding;
+		}
 	}
 }
 
 .checkbox-bottom-left {
-	input[type="checkbox"] {
-		bottom: 15px;
-		left: 15px;
+	input[type="checkbox"],
+	label > input[type="checkbox"] {
+		bottom: $checkbox-position;
+		left: $checkbox-position;
 	}
 }
 
 .checkbox-bottom-right {
-	input[type="checkbox"] {
-		bottom: 15px;
-		right: 15px;
+	input[type="checkbox"],
+	label > input[type="checkbox"] {
+		bottom: $checkbox-position;
+		right: $checkbox-position;
 	}
 }
 
 .checkbox-middle-left {
-	input[type="checkbox"] {
-		left: 15px;
+	input[type="checkbox"],
+	label > input[type="checkbox"] {
+		left: $checkbox-position;
 		margin-top: -6px;
 		top: 50%;
 	}
 }
 
 .checkbox-middle-right {
-	input[type="checkbox"] {
+	input[type="checkbox"],
+	label > input[type="checkbox"] {
 		margin-top: -6px;
-		right: 15px;
+		right: $checkbox-position;
 		top: 50%;
 	}
 }
 
 .checkbox-top-left {
-	input[type="checkbox"] {
-		left: 15px;
-		top: 15px;
+	label > input[type="checkbox"] {
+		left: $checkbox-position;
+		top: $checkbox-position;
 	}
 }
 
 .checkbox-top-right {
-	input[type="checkbox"] {
-		right: 15px;
-		top: 15px;
+	label > input[type="checkbox"] {
+		right: $checkbox-position;
+		top: $checkbox-position;
 	}
 }
 
