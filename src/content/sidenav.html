@@ -477,13 +477,13 @@ $('#myContainerId').sideNavigation('hide').sideNavigation('visible'); // returns
 </div>
 
 <script>
-	$('#mySidenavContainerId').sideNavigation({
-		toggler: '#mySidenavToggleId'
+	$('#mySidenavToggleId').sideNavigation({
+		container: '#mySidenavContainerId'
 	});
 
-	$('#mySidenavContainerId1').sideNavigation({
-		position: 'right',
-		toggler: '#mySidenavToggleId1'
+	$('#mySidenavToggleId1').sideNavigation({
+		container: '#mySidenavContainerId1',
+		position: 'right'
 	});
 
 	$('#showSimpleSidenav2').on('click', function(event) {

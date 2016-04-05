@@ -755,21 +755,19 @@ section: Example Pages
 		$('body').toggleClass('fixed');
 	});
 
-	$('#documentsAndMediaSidenav').sideNavigation({
+	$('#documentsAndMediaToggler').sideNavigation({
+		container: '#documentsAndMediaSidenav',
 		gutter: 0,
 		position: 'left',
-		toggler: '#documentsAndMediaToggler',
 		typeMobile: 'fixed',
 		type: 'fixed-push',
 		width: 320
 	});
 
-	$('#documentsAndMediaRightSidenav').sideNavigation({
-		gutter: 15,
+	$('#documentsAndMediaRightSidenavToggler').sideNavigation({
+		container: '#documentsAndMediaRightSidenav',
 		position: 'right',
-		toggler: '#documentsAndMediaRightSidenavToggler',
 		typeMobile: 'fixed',
-		type: 'relative',
 		width: 320
 	});
 
