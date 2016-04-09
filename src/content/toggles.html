@@ -10,7 +10,7 @@ section: Components
 		<h3>Toggle Switch</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.toggle-switch</code> to <code>position: static</code> and hide the <code>.toggle-switch-bar</code> element to display a regular checkbox.</p>
+			<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.toggle-switch</code> to <code>position: static; opacity: 1;</code> and hide the <code>.toggle-switch-bar</code> element to display a regular checkbox.</p>
 		</blockquote>
 
 		<form action="#" method="get">
@@ -214,9 +214,9 @@ section: Components
 		<h3>Toggle Switches with Icons</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add an icon to the switch for the on position with <code>```<span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"></span>```</code>.</p>
+			<p>Add an icon to the switch for the on position with <code>```<span class="button-icon button-icon-on toggle-switch-icon"><span class="icon-volume-up"></span></span>```</code>.</p>
 
-			<p>Add an icon to the switch for the off position with <code>```<span class="button-icon button-icon-off icon-volume-off toggle-switch-icon"></span>```</code>.</p>
+			<p>Add an icon to the switch for the off position with <code>```<span class="button-icon button-icon-off toggle-switch-icon"><span class="icon-volume-off"></span></span>```</code>.</p>
 
 			<p>Substitute <code>icon-volume-up</code> / <code>icon-volume-down</code> with any font awesome icon.</p>
 		</blockquote>
@@ -225,11 +225,58 @@ section: Components
 			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-
+					Lexicon Svg Icons
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="" data-label-on="">
-							<span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"></span>
-							<span class="button-icon button-icon-off icon-volume-off toggle-switch-icon"></span>
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<svg class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#unlock" />
+								</svg>
+							</span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<svg class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#lock" />
+								</svg>
+							</span>
+						</span>
+					</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label>
+					<input class="toggle-switch" type="checkbox">
+					Font Awesome
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="">
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<span class="icon-volume-up"></span>
+							</span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<span class="icon-volume-off"></span>
+							</span>
+						</span>
+					</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label>
+					<input class="toggle-switch" type="checkbox">
+					Toggle Switch with data-label-on
+
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<svg class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#pencil" />
+								</svg>
+							</span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<svg class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#lock" />
+								</svg>
+							</span>
 						</span>
 					</span>
 				</label>
@@ -242,8 +289,12 @@ section: Components
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
-							<span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"></span>
-							<span class="button-icon button-icon-off icon-volume-off toggle-switch-icon"></span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<span class="icon-lock"></span>
+							</span>
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<span class="icon-pencil"></span>
+							</span>
 						</span>
 					</span>
 				</label>
@@ -256,8 +307,12 @@ section: Components
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
-							<span class="button-icon button-icon-on icon-pencil toggle-switch-icon"></span>
-							<span class="button-icon button-icon-off icon-lock toggle-switch-icon"></span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<span class="icon-volume-off"></span>
+							</span>
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<span class="icon-volume-up"></span>
+							</span>
 						</span>
 					</span>
 				</label>
@@ -273,8 +328,12 @@ section: Components
 
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
-                <span class="button-icon button-icon-on icon-pencil toggle-switch-icon"></span>
-                <span class="button-icon button-icon-off icon-lock toggle-switch-icon"></span>
+                <span class="button-icon button-icon-off toggle-switch-icon">
+                    <span class="icon-volume-off"></span>
+                </span>
+                <span class="button-icon button-icon-on toggle-switch-icon">
+                  <span class="icon-volume-up"></span>
+                </span>
             </span>
         </span>
     </label>
@@ -302,11 +361,36 @@ section: Components
 			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
-
+					Lexicon Svg Icons
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle">
-							<span class="icon-ok toggle-switch-icon toggle-switch-icon-on"></span>
-							<span class="icon-remove toggle-switch-icon toggle-switch-icon-off"></span>
+							<span class="toggle-switch-icon toggle-switch-icon-on">
+								<svg class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+								</svg>
+							</span>
+							<span class="toggle-switch-icon toggle-switch-icon-off">
+								<svg class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+								</svg>
+							</span>
+						</span>
+					</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label>
+					<input class="toggle-switch" type="checkbox">
+					Font Awesome
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle">
+							<span class="toggle-switch-icon toggle-switch-icon-on">
+								<span class="icon-ok"></span>
+							</span>
+							<span class="toggle-switch-icon toggle-switch-icon-off">
+								<span class="icon-remove"></span>
+							</span>
 						</span>
 					</span>
 				</label>
@@ -321,8 +405,12 @@ section: Components
 
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle">
-                <span class="icon-ok toggle-switch-icon toggle-switch-icon-on"></span>
-                <span class="icon-remove toggle-switch-icon toggle-switch-icon-off"></span>
+                <span class="toggle-switch-icon toggle-switch-icon-on">
+                    <span class="icon-ok"></span>
+                </span>
+                <span class="toggle-switch-icon toggle-switch-icon-off">
+                    <span class="icon-remove"></span>
+                </span>
             </span>
         </span>
     </label>
@@ -349,8 +437,33 @@ section: Components
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle">
-							<span class="icon-ok toggle-switch-icon toggle-switch-icon-on"></span>
-							<span class="icon-remove toggle-switch-icon toggle-switch-icon-off"></span>
+							<span class="toggle-switch-icon toggle-switch-icon-on">
+								<svg class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+								</svg>
+							</span>
+							<span class="toggle-switch-icon toggle-switch-icon-off">
+								<svg class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+								</svg>
+							</span>
+						</span>
+					</span>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label>
+					<input class="toggle-switch" disabled type="checkbox">
+
+					<span aria-hidden="true" class="toggle-switch-bar">
+						<span class="toggle-switch-handle">
+							<span class="toggle-switch-icon toggle-switch-icon-on">
+								<span class="icon-ok"></span>
+							</span>
+							<span class="toggle-switch-icon toggle-switch-icon-off">
+								<span class="icon-remove"></span>
+							</span>
 						</span>
 					</span>
 				</label>
@@ -365,8 +478,12 @@ section: Components
 
         <span aria-hidden="true" class="toggle-switch-bar">
             <span class="toggle-switch-handle">
-                <span class="icon-ok toggle-switch-icon toggle-switch-icon-on"></span>
-                <span class="icon-remove toggle-switch-icon toggle-switch-icon-off"></span>
+                <span class="toggle-switch-icon toggle-switch-icon-on">
+                    <span class="icon-ok"></span>
+                </span>
+                <span class="toggle-switch-icon toggle-switch-icon-off">
+                    <span class="icon-remove"></span>
+                </span>
             </span>
         </span>
     </label>
@@ -393,10 +510,28 @@ section: Components
 					<div class="toggle-card-container">
 						<div class="toggle-card-cell">
 							<div class="toggle-card-icon">
-								<span class="icon-ok"></span>
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+								</svg>
 							</div>
 							<div class="toggle-card-label">
-								<span>Regular Label</span>
+								<span>Lexicon Svg Icons</span>
+							</div>
+						</div>
+					</div>
+				</label>
+			</div>
+
+			<div class="form-group">
+				<label>
+					<input class="toggle-card" type="checkbox" value="">
+					<div class="toggle-card-container">
+						<div class="toggle-card-cell">
+							<div class="toggle-card-icon">
+								<span class="icon-monospaced icon-ok"></span>
+							</div>
+							<div class="toggle-card-label">
+								<span>Font Awesome</span>
 							</div>
 						</div>
 					</div>
@@ -412,7 +547,7 @@ section: Components
         <div class="toggle-card-container">
             <div class="toggle-card-cell">
                 <div class="toggle-card-icon">
-                    <span class="icon-ok"></span>
+                    <span class="icon-monospaced icon-ok"></span>
                 </div>
                 <div class="toggle-card-label">
                     <span>Regular Label</span>
@@ -431,8 +566,12 @@ section: Components
 					<div class="toggle-card-container">
 						<div class="toggle-card-cell">
 							<div class="toggle-card-icon">
-								<span class="icon-lock toggle-card-off"></span>
-								<span class="icon-ok toggle-card-on"></span>
+								<span class="toggle-card-off">
+									<span class="icon-lock icon-monospaced"></span>
+								</span>
+								<span class="toggle-card-on">
+									<span class="icon-monospaced icon-ok"></span>
+								</span>
 							</div>
 							<div class="toggle-card-label">
 								<span>Regular Label</span>
@@ -451,8 +590,12 @@ section: Components
         <div class="toggle-card-container">
             <div class="toggle-card-cell">
                 <div class="toggle-card-icon">
-                    <span class="icon-lock toggle-card-off"></span>
-                    <span class="icon-ok toggle-card-on"></span>
+                    <span class="toggle-card-off">
+                        <span class="icon-lock icon-monospaced"></span>
+                    </span>
+                    <span class="toggle-card-on">
+                        <span class="icon-monospaced icon-ok"></span>
+                    </span>
                 </div>
                 <div class="toggle-card-label">
                     <span>Regular Label</span>
@@ -464,14 +607,19 @@ section: Components
 </div>
 
 			</div>
+
 			<div class="form-group">
 				<label>
 					<input class="toggle-card" type="checkbox" value="">
 					<div class="toggle-card-container">
 						<div class="toggle-card-cell">
 							<div class="toggle-card-icon">
-								<span class="icon-lock toggle-card-off"></span>
-								<span class="icon-ok toggle-card-on"></span>
+								<span class="toggle-card-off">
+									<span class="icon-lock icon-monospaced"></span>
+								</span>
+								<span class="toggle-card-on">
+									<span class="icon-monospaced icon-ok"></span>
+								</span>
 							</div>
 							<div class="toggle-card-label">
 								<span class="toggle-card-off">labelOff</span>
@@ -491,8 +639,12 @@ section: Components
         <div class="toggle-card-container">
             <div class="toggle-card-cell">
                 <div class="toggle-card-icon">
-                    <span class="icon-lock toggle-card-off"></span>
-                    <span class="icon-ok toggle-card-on"></span>
+                    <span class="toggle-card-off">
+                        <span class="icon-lock icon-monospaced"></span>
+                    </span>
+                    <span class="toggle-card-on">
+                        <span class="icon-monospaced icon-ok"></span>
+                    </span>
                 </div>
                 <div class="toggle-card-label">
                     <span class="toggle-card-off">labelOff</span>
@@ -524,8 +676,12 @@ section: Components
 					<div class="toggle-card-container">
 						<div class="toggle-card-cell">
 							<div class="toggle-card-icon">
-								<span class="icon-lock toggle-card-off"></span>
-								<span class="icon-ok toggle-card-on"></span>
+								<span class="toggle-card-off">
+									<span class="icon-lock icon-monospaced"></span>
+								</span>
+								<span class="toggle-card-on">
+									<span class="icon-monospaced icon-ok"></span>
+								</span>
 							</div>
 							<div class="toggle-card-label">
 								<span class="toggle-card-off">labelOff</span>
@@ -545,8 +701,12 @@ section: Components
         <div class="toggle-card-container">
             <div class="toggle-card-cell">
                 <div class="toggle-card-icon">
-                    <span class="icon-lock toggle-card-off"></span>
-                    <span class="icon-ok toggle-card-on"></span>
+                    <span class="toggle-card-off">
+                        <span class="icon-lock icon-monospaced"></span>
+                    </span>
+                    <span class="toggle-card-on">
+                        <span class="icon-monospaced icon-ok"></span>
+                    </span>
                 </div>
                 <div class="toggle-card-label">
                     <span class="toggle-card-off">labelOff</span>
