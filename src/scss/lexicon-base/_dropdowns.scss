@@ -1,3 +1,12 @@
+.dropdown-menu {
+	max-height: 295px;
+	overflow: auto;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		max-height: 320px;
+	}
+}
+
 .dropdown-menu form {
 	.checkbox,
 	.radio,
@@ -244,6 +253,7 @@
 		width: 100%;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
+			max-height: none;
 			padding: 20px 0;
 			width: 100%;
 		}
