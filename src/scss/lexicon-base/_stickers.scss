@@ -12,6 +12,10 @@
 	top: $sticker-gutter-width;
 }
 
+.sticker-static {
+	position: static;
+}
+
 .sticker-bottom {
 	bottom: $sticker-gutter-width;
 	top: auto;
