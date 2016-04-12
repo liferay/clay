@@ -16,6 +16,26 @@
 	position: static;
 }
 
+// Sticker Positions
+
+.sticker-bottom-left {
+	bottom: $sticker-gutter-width;
+	right: auto;
+	top: auto;
+}
+
+.sticker-bottom-right {
+	bottom: $sticker-gutter-width;
+	left: auto;
+	right: $sticker-gutter-width;
+	top: auto;
+}
+
+.sticker-top-right {
+	left: auto;
+	right: $sticker-gutter-width;
+}
+
 .sticker-bottom {
 	bottom: $sticker-gutter-width;
 	top: auto;
@@ -30,6 +50,23 @@
 	left: -$sticker-gutter-width;
 	top: -$sticker-gutter-width;
 
+	&.sticker-bottom-left {
+		bottom: -$sticker-gutter-width;
+		top: auto;
+	}
+
+	&.sticker-bottom-right {
+		bottom: -$sticker-gutter-width;
+		left: auto;
+		right: -$sticker-gutter-width;
+		top: auto;
+	}
+
+	&.sticker-top-right {
+		left: auto;
+		right: -$sticker-gutter-width;
+	}
+
 	&.sticker-bottom {
 		bottom: -$sticker-gutter-width;
 		top: auto;
@@ -40,6 +77,8 @@
 		right: -$sticker-gutter-width;
 	}
 }
+
+// Sticker Sizes
 
 .sticker-sm {
 	font-size: $sticker-sm-font-size;
