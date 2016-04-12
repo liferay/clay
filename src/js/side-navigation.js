@@ -92,6 +92,8 @@
 		this.init(toggler, options);
 	};
 
+	SideNavigation.TRANSITION_DURATION = 500;
+
 	SideNavigation.prototype = {
 		init: function(toggler, options) {
 			var instance = this;
@@ -99,7 +101,6 @@
 			var useDataAttribute = toggler.data('toggle') === 'sidenav';
 
 			options = $.extend({}, $.fn.sideNavigation.defaults, options);
-			options.transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 			options.widthOriginal = options.width;
 
 			if (useDataAttribute) { // instantiate using data attribute
@@ -402,7 +403,9 @@
 				instance._loadUrl(menu, url, container);
 			}
 
+			setTimeout(function() {
 			content.css(contentCss);
+			}, 10);
 
 			navigation.css('width', width);
 			menu.css('width', width);
@@ -833,21 +836,24 @@
 		_onSidenavTransitionEnd: function(el, fn) {
 			var instance = this;
 
-			var transitionEnd = instance.options.transitionEnd;
+			var transitionEnd = 'bsTransitionEnd';
 
-			el.on(transitionEnd, function(event) {
-				var $this = $(this);
+			var complete = function() {
+				el.removeClass('sidenav-transition');
 
-				if ($(event.target).is(instance.options.navigation)) {
-					$this.removeClass('sidenav-transition');
-
-					if (fn) {
-						fn();
-					}
-
-					$this.off(transitionEnd);
+				if (fn) {
+					fn();
 				}
-			});
+			};
+
+			if (!$.support.transition) {
+				return complete.call(instance);
+			}
+
+			el.one(transitionEnd, function(event) {
+				complete();
+			})
+			.emulateTransitionEnd(SideNavigation.TRANSITION_DURATION);
 		},
 
 		_removeBodyFixed: function() {
