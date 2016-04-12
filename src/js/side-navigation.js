@@ -103,12 +103,13 @@
 			options = $.extend({}, $.fn.sideNavigation.defaults, options);
 			options.widthOriginal = options.width;
 
+			options.container = options.container || toggler.attr('href') || toggler.data('target');
+
 			if (useDataAttribute) { // instantiate using data attribute
 				options.content = toggler.data('content');
 				options.equalHeight = false;
 				options.loadingIndicatorTPL = toggler.data('loading-indicator-tpl') || options.loadingIndicatorTPL;
 				options.openClass = toggler.data('open-class') || 'open';
-				options.target = toggler.data('target');
 				options.toggler = toggler;
 				options.type = toggler.data('type');
 				options.typeMobile = toggler.data('type-mobile');
@@ -148,8 +149,9 @@
 		destroy: function() {
 			var instance = this;
 
-			var container = $(instance.options.container);
 			var options = instance.options;
+
+			var container = $(instance.options.container);
 
 			// Detach sidenav close
 
@@ -251,7 +253,7 @@
 
 			var options = instance.options;
 
-			var container = $(instance.options.container);
+			var container = $(options.container);
 
 			var content = container.find(options.content).first();
 			var navigation = container.find(options.navigation).first();
@@ -288,13 +290,15 @@
 		hideSimpleSidenav: function() {
 			var instance = this;
 
+			var options = instance.options;
+
 			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
 
 			if (!simpleSidenavClosed) {
-				var content = instance._getSimpleSidenavContent();
-				var sidenav = instance._getSimpleSidenavNavigation();
+				var content = $(options.content).first();
+				var sidenav = $(options.container);
 
-				var openClass = instance.options.openClass;
+				var openClass = options.openClass;
 
 				var toggler = instance.toggler;
 
@@ -327,9 +331,10 @@
 		setEqualHeight: function() {
 			var instance = this;
 
-			if (instance.options.equalHeight) {
-				var container = $(instance.options.container);
-				var options = instance.options;
+			var options = instance.options;
+
+			if (options.equalHeight) {
+				var container = $(options.container);
 
 				var content = options.content;
 				var navigation = options.navigation;
@@ -364,10 +369,11 @@
 		showSidenav: function() {
 			var instance = this;
 
+			var options = instance.options;
+
 			instance._resizeSidenav();
 
-			var options = instance.options;
-			var container = $(instance.options.container);
+			var container = $(options.container);
 
 			var mobile = instance.mobile;
 
@@ -403,9 +409,7 @@
 				instance._loadUrl(menu, url, container);
 			}
 
-			setTimeout(function() {
 			content.css(contentCss);
-			}, 10);
 
 			navigation.css('width', width);
 			menu.css('width', width);
@@ -414,15 +418,17 @@
 		showSimpleSidenav: function() {
 			var instance = this;
 
+			var options = instance.options;
+
 			var simpleSidenavClosed = instance._isSimpleSidenavClosed();
 
 			if (simpleSidenavClosed) {
-				var content = instance._getSimpleSidenavContent();
-				var sidenav = instance._getSimpleSidenavNavigation();
+				var content = $(options.content).first();
+				var sidenav = $(options.container);
 
-				var openClass = instance.options.openClass;
+				var openClass = options.openClass;
 
-				var toggler = instance.options.toggler;
+				var toggler = options.toggler;
 
 				var url = toggler.data('url');
 
@@ -452,10 +458,6 @@
 				sidenav.addClass('sidenav-transition');
 				toggler.addClass('sidenav-transition').addClass('active');
 
-				// if (!desktop) {
-				// 	$('body').addClass('body-fixed');
-				// }
-
 				if (desktopFixedPush || mobileFixedPush) {
 					content.addClass('sidenav-transition');
 					content.addClass(openClass);
@@ -480,13 +482,15 @@
 		toggleNavigation: function(force) {
 			var instance = this;
 
-			var container = $(instance.options.container);
+			var options = instance.options;
+
+			var container = $(options.container);
 
 			var menu = container.find('.sidenav-menu').first();
 
 			var toggler = instance.toggler;
 
-			var width = instance.options.width;
+			var width = options.width;
 
 			var closed = $.type(force) === 'boolean' ? force : container.hasClass('closed');
 
@@ -612,28 +616,14 @@
 			el.focus();
 		},
 
-		_getSimpleSidenavContent: function() {
-			var instance = this;
-
-			return $(instance.options.content).first();
-		},
-
-		_getSimpleSidenavNavigation: function() {
-			var instance = this;
-
-			var toggler = instance.options.toggler;
-
-			var hrefAttr = toggler.attr('href');
-
-			return instance.options.target ? $(instance.options.target) : doc.find(hrefAttr);
-		},
-
 		_getSimpleSidenavType: function() {
 			var instance = this;
 
+			var options = instance.options;
+
 			var desktop = instance._isDesktop();
-			var type = instance.options.type;
-			var typeMobile = instance.options.typeMobile;
+			var type = options.type;
+			var typeMobile = options.typeMobile;
 
 			if (desktop && (type === 'fixed-push')) {
 				return 'desktop-fixed-push';
@@ -652,9 +642,7 @@
 		_isSimpleSidenavClosed: function() {
 			var instance = this;
 
-			var hrefAttr = instance.options.toggler.attr('href');
-
-			var container = instance.options.target ? $(instance.options.target) : doc.find(hrefAttr);
+			var container = $(instance.options.container);
 
 			return container.hasClass('closed');
 		},
@@ -692,14 +680,10 @@
 		_onClickSidenavClose: function() {
 			var instance = this;
 
-			var container = $(instance.options.container);
 			var options = instance.options;
 
-			var containerSelector = instance.options.container;
-
-			if (instance.useDataAttribute) {
-				containerSelector = options.target || instance.toggler.attr('href');
-			}
+			var container = $(options.container);
+			var containerSelector = options.container;
 
 			var closeButton = $(containerSelector).find('.sidenav-close').first();
 			var closeButtonSelector = '#' + guid(closeButton, 'generatedLexiconSidenavCloseId');
@@ -712,7 +696,7 @@
 					event.preventDefault();
 
 					if (!instance.useDataAttribute) {
-						instance.toggler = $(instance.options.container);
+						instance.toggler = container;
 					}
 
 					instance.toggle();
@@ -739,9 +723,8 @@
 		_onDelegateClickTrigger: function() {
 			var instance = this;
 
-			var toggler = instance.toggler;
 			var container = $(instance.options.container);
-			var options = instance.options;
+			var toggler = instance.toggler;
 
 			var togglerSelector = '#' + guid(toggler, 'generatedLexiconSidenavTogglerId');
 
@@ -768,14 +751,16 @@
 		_onScreenChange: function() {
 			var instance = this;
 
-			var container = $(instance.options.container);
+			var options = instance.options;
+
+			var container = $(options.container);
 
 			var screenStartDesktop = instance._setScreenSize();
 
 			doc.on('screenChange.lexicon.sidenav', function(event) {
 				var desktop = instance._setScreenSize();
 
-				var type = desktop ? instance.options.type : instance.options.typeMobile;
+				var type = desktop ? options.type : options.typeMobile;
 
 				var fixedMenu = type === 'fixed' || type === 'fixed-push';
 
@@ -783,7 +768,7 @@
 
 				var menuWidth;
 
-				var originalMenuWidth = instance.options.widthOriginal;
+				var originalMenuWidth = options.widthOriginal;
 
 				container.toggleClass('sidenav-fixed', fixedMenu);
 
@@ -795,7 +780,7 @@
 					screenStartDesktop = false;
 
 					if (desktop) {
-						if (instance.options.position === 'right') {
+						if (options.position === 'right') {
 							menu.css(
 								{
 									right: originalMenuWidth,
@@ -812,7 +797,7 @@
 					menuWidth = originalMenuWidth;
 
 					if (window.innerWidth <= originalMenuWidth) {
-						menuWidth = window.innerWidth - toInt(instance.options.gutter) - 25;
+						menuWidth = window.innerWidth - toInt(options.gutter) - 25;
 					}
 
 					menu.css(
@@ -867,11 +852,13 @@
 		_renderNav: function() {
 			var instance = this;
 
-			var container = $(instance.options.container);
+			var options = instance.options;
 
-			var width = instance.options.width;
+			var container = $(options.container);
 
-			var slider = $(instance.options.navigation);
+			var width = options.width;
+
+			var slider = $(options.navigation);
 			var menu = slider.find('.sidenav-menu').first();
 
 			instance._resizeSidenav();
@@ -892,12 +879,13 @@
 		_renderUI: function() {
 			var instance = this;
 
-			var container = $(instance.options.container);
+			var options = instance.options;
+
+			var container = $(options.container);
 			var toggler = instance.toggler;
 
 			if (!instance.useDataAttribute) {
 				var mobile = instance.mobile;
-				var options = instance.options;
 
 				var type = mobile ? options.typeMobile : options.type;
 
@@ -1040,7 +1028,6 @@
 	 * @property {String|Boolean} equalHeight The height of content and navigation should be equal.
 	 * @property {String}         navigation  The class or ID of the navigation container.
 	 * @property {String}         position    The position of the sidenav-slider. Possible values: left, right
-	 * @property {String}         toggler     The class or ID of the toggle button.
 	 * @property {String}         type        The type of sidenav in desktop. Possible values: relative, fixed, fixed-push
 	 * @property {String}         typeMobile  The type of sidenav in mobile. Possible values: relative, fixed, fixed-push
 	 * @property {String|Boolean} useDelegate The type of reference to use on the toggler event handler. Value false, directly binds click to the toggler.
@@ -1050,14 +1037,12 @@
 
 	Plugin.defaults = {
 		breakpoint: 768,
-		container: '.sidenav-container',
 		content: '.sidenav-content',
 		equalHeight: true,
 		gutter: '15px',
 		loadingIndicatorTPL: '<div class="loading-animation loading-animation-md"></div>',
 		navigation: '.sidenav-menu-slider',
 		position: 'left',
-		toggler: '.sidenav-toggler',
 		type: 'relative',
 		typeMobile: 'relative',
 		url: null,

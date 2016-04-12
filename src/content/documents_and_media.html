@@ -131,7 +131,7 @@ section: Example Pages
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1" id="documentsAndMediaToggler">
+								<a class="sidenav-toggler" href="#documentsAndMediaSidenav" id="documentsAndMediaToggler">
 									<svg class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 									</svg>
@@ -188,7 +188,7 @@ section: Example Pages
 
 							<ul class="nav management-bar-nav management-bar-nav-right">
 								<li>
-									<a class="btn btn-default" href="#" id="documentsAndMediaRightSidenavToggler">
+									<a class="btn btn-default" href="#documentsAndMediaRightSidenav" id="documentsAndMediaRightSidenavToggler">
 										<span class="icon-info-sign icon-monospaced"></span>
 									</a>
 								</li>
@@ -756,7 +756,6 @@ section: Example Pages
 	});
 
 	$('#documentsAndMediaToggler').sideNavigation({
-		container: '#documentsAndMediaSidenav',
 		gutter: 0,
 		position: 'left',
 		typeMobile: 'fixed',
@@ -765,7 +764,7 @@ section: Example Pages
 	});
 
 	$('#documentsAndMediaRightSidenavToggler').sideNavigation({
-		container: '#documentsAndMediaRightSidenav',
+		gutter: 0,
 		position: 'right',
 		typeMobile: 'fixed',
 		width: 320
