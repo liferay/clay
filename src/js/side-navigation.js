@@ -1024,6 +1024,7 @@
 	 * Plugin options
 	 * @property {String|Number}  breakpoint  The window width that defines the desktop size.
 	 * @property {String}         content     The class or ID of the content container.
+	 * @property {String}         container    The class or ID of the sidenav container.
 	 * @property {String|Number}  gutter      The space between the sidenav-slider and the sidenav-content.
 	 * @property {String|Boolean} equalHeight The height of content and navigation should be equal.
 	 * @property {String}         navigation  The class or ID of the navigation container.
