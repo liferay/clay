@@ -79,6 +79,7 @@
 	margin: 0;
 	overflow: auto;
 	padding: 0;
+
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -317,8 +318,8 @@
 		> .dropdown-menu-top,
 		> .dropdown-menu-top-center,
 		> .dropdown-menu-top-right {
-			border-top-right-radius: $border-radius-base;
 			border-top-left-radius: $border-radius-base;
+			border-top-right-radius: $border-radius-base;
 		}
 	}
 
