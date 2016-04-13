@@ -51,8 +51,8 @@ select.form-control {
 	padding: $input-padding-vertical $input-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		height: $input-height-base;
 		font-size: $input-desktop-font-size;
+		height: $input-height-base;
 	}
 
 	&:focus {
