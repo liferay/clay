@@ -101,7 +101,7 @@
 			var useDataAttribute = toggler.data('toggle') === 'sidenav';
 
 			options = $.extend({}, $.fn.sideNavigation.defaults, options);
-			options.widthOriginal = options.width;
+			options.widthOriginal = toInt(options.width);
 
 			options.container = options.container || toggler.attr('href') || toggler.data('target');
 
