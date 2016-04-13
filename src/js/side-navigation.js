@@ -849,21 +849,20 @@
 
 		_renderNav: function() {
 			var instance = this;
-
 			var options = instance.options;
 
 			var container = $(options.container);
+			var slider = container.find(options.navigation).first();
+			var menu = slider.find('.sidenav-menu').first();
 
 			var width = instance._getSidenavWidth();
 
-			var slider = $(options.navigation);
-			var menu = slider.find('.sidenav-menu').first();
+			if (container.hasClass('closed')) {
+				menu.css('width', width);
 
-			if (container.hasClass('closed') && container.hasClass('sidenav-right')) {
-				menu.css({
-					right: width,
-					width: width
-				});
+				if (container.hasClass('sidenav-right')) {
+					menu.css('right', width);
+				}
 			}
 
 			if (!container.hasClass('closed')) {
