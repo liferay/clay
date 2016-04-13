@@ -371,8 +371,6 @@
 
 			var options = instance.options;
 
-			instance._resizeSidenav();
-
 			var container = $(options.container);
 
 			var mobile = instance.mobile;
@@ -384,7 +382,7 @@
 
 			var menu = container.find('.sidenav-menu').first();
 
-			var width = options.width;
+			var width = instance._getSidenavWidth();
 
 			var offset = toInt(width) + toInt(options.gutter);
 
@@ -856,12 +854,10 @@
 
 			var container = $(options.container);
 
-			var width = options.width;
+			var width = instance._getSidenavWidth();
 
 			var slider = $(options.navigation);
 			var menu = slider.find('.sidenav-menu').first();
-
-			instance._resizeSidenav();
 
 			if (container.hasClass('closed') && container.hasClass('sidenav-right')) {
 				menu.css({
@@ -905,7 +901,7 @@
 			}
 		},
 
-		_resizeSidenav: function() {
+		_getSidenavWidth: function() {
 			var instance = this;
 
 			var options = instance.options;
@@ -919,7 +915,7 @@
 				width = winWidth - 40;
 			}
 
-			options.width = width;
+			return width;
 		},
 
 		_setScreenSize: function() {
