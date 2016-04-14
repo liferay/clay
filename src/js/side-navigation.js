@@ -250,41 +250,36 @@
 
 		hideSidenav: function() {
 			var instance = this;
-
 			var options = instance.options;
 
-			var container = $(options.container);
+			var contentCssProp = {};
+			var menuCssProp = {};
 
+			var container = $(options.container);
 			var content = container.find(options.content).first();
 			var navigation = container.find(options.navigation).first();
-
-			var mobile = instance.mobile;
+			var menu = navigation.find('.sidenav-menu').first();
 
 			if (container.hasClass('sidenav-right')) {
-				content.css({
-					left: '',
-					paddingRight: ''
-				});
+				contentCssProp = {
+					paddingRight: '',
+					right: ''
+				};
 
-				var menu = container.find('.sidenav-menu').first();
-
-				var el = menu;
-				var val = options.width;
-
-				if (mobile && options.typeMobile !== 'fixed-push') {
-					el = content;
-					val = '';
-				}
-
-				el.css('right', val);
+				menuCssProp = {
+					right: instance._getSidenavWidth()
+				};
 			}
 			else {
-				var resetCssProp = mobile ? 'left' : 'padding-left';
-
-				content.css(resetCssProp, '');
+				contentCssProp = {
+					left: '',
+					paddingLeft: ''
+				};
 			}
 
+			content.css(contentCssProp);
 			navigation.css('width', '');
+			menu.css(menuCssProp);
 		},
 
 		hideSimpleSidenav: function() {
@@ -772,6 +767,7 @@
 
 				if ((!desktop && screenStartDesktop) || (desktop && !screenStartDesktop)) {
 					instance.hideSidenav();
+					instance.clearStyle('min-height');
 
 					container.addClass('closed');
 
@@ -798,12 +794,14 @@
 						menuWidth = window.innerWidth - toInt(options.gutter) - 25;
 					}
 
-					menu.css(
-						{
-							right: menuWidth,
-							width: menuWidth
-						}
-					);
+					if (container.hasClass('sidenav-right')) {
+						menu.css(
+							{
+								right: menuWidth,
+								width: menuWidth
+							}
+						);
+					}
 
 					screenStartDesktop = false;
 				}
@@ -922,7 +920,7 @@
 
 			var screenSize = getBreakpointRegion();
 
-			var desktop = screenSize === 'md' || screenSize === 'lg';
+			var desktop = screenSize === 'sm' || screenSize === 'md' || screenSize === 'lg';
 
 			instance.mobile = !desktop;
 			instance.desktop = desktop;
