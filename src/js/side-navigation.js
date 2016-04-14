@@ -107,7 +107,7 @@
 			options.width = toInt(options.width);
 			options.widthOriginal = options.width;
 
-			options.container = options.container || toggler.attr('href') || toggler.data('target');
+			options.container = options.container || toggler.data('target') || toggler.attr('href');
 
 			if (useDataAttribute) { // instantiate using data attribute
 				options.content = toggler.data('content');
