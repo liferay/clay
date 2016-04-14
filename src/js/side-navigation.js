@@ -101,7 +101,11 @@
 			var useDataAttribute = toggler.data('toggle') === 'sidenav';
 
 			options = $.extend({}, $.fn.sideNavigation.defaults, options);
-			options.widthOriginal = toInt(options.width);
+
+			options.breakpoint = toInt(options.breakpoint);
+			options.gutter = toInt(options.gutter);
+			options.width = toInt(options.width);
+			options.widthOriginal = options.width;
 
 			options.container = options.container || toggler.attr('href') || toggler.data('target');
 
@@ -379,7 +383,7 @@
 
 			var width = instance._getSidenavWidth();
 
-			var offset = toInt(width) + toInt(options.gutter);
+			var offset = width + options.gutter;
 
 			var widthMethod = container.hasClass('sidenav-right') ? 'getSidenavRightWidth' : 'getSidenavLeftWidth';
 
@@ -629,7 +633,7 @@
 		},
 
 		_isDesktop: function() {
-			return window.innerWidth >= toInt(this.options.breakpoint);
+			return window.innerWidth >= this.options.breakpoint;
 		},
 
 		_isSimpleSidenavClosed: function() {
@@ -791,7 +795,7 @@
 					menuWidth = originalMenuWidth;
 
 					if (window.innerWidth <= originalMenuWidth) {
-						menuWidth = window.innerWidth - toInt(options.gutter) - 25;
+						menuWidth = window.innerWidth - options.gutter - 25;
 					}
 
 					if (container.hasClass('sidenav-right')) {
