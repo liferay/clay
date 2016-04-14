@@ -307,8 +307,6 @@
 				});
 
 				instance._onSidenavTransitionEnd(content, function() {
-					instance._removeBodyFixed();
-
 					sidenav.removeClass('sidenav-transition');
 					toggler.removeClass('sidenav-transition');
 
@@ -519,8 +517,6 @@
 
 				if (container.hasClass('closed')) {
 					instance.clearStyle('min-height');
-
-					instance._removeBodyFixed();
 
 					toggler.removeClass('open').removeClass('sidenav-transition');
 
@@ -839,14 +835,6 @@
 				complete();
 			})
 			.emulateTransitionEnd(SideNavigation.TRANSITION_DURATION);
-		},
-
-		_removeBodyFixed: function() {
-			var instance = this;
-
-			var body = $('body');
-
-			body.removeClass('body-fixed');
 		},
 
 		_renderNav: function() {
