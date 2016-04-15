@@ -33,22 +33,6 @@
 	padding-top: $label-sm-padding-top;
 }
 
-// Monospaced Labels
-
-.label-monospaced {
-	@include monospace($label-monospaced-size);
-
-	padding: 0;
-
-	&.label-lg {
-		@include monospace($label-lg-monospaced-size);
-	}
-
-	&.label-sm {
-		@include monospace($label-sm-monospaced-size);
-	}
-}
-
 // Lexicon Icons in Labels
 
 .label .lexicon-icon {
