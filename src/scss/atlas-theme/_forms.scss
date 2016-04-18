@@ -176,15 +176,16 @@ select[disabled].form-control > option {
 	}
 }
 
-.checkbox-card {
+.checkbox-card,
+.radio-card {
 	label {
 		padding-left: 0;
 	}
+}
 
-	input[type="checkbox"],
-	input[type="radio"] {
-		margin-left: 0;
-	}
+.checkbox-card input[type="checkbox"],
+.radio-card input[type="radio"] {
+	margin-left: 0;
 }
 
 // Form Control Feedback
