@@ -1,10 +1,13 @@
-.card,
-.card-horizontal {
+.card {
 	background-color: $card-bg;
 	border: $card-border-width solid $card-border;
 	border-radius: $card-border-radius;
 	margin-bottom: $card-margin-bottom;
 	position: relative;
+
+	.card-row {
+		width: 100%;
+	}
 
 	.divider {
 		background-color: $card-divider-bg;
@@ -13,39 +16,10 @@
 		margin-bottom: 10px;
 		margin-top: 10px;
 	}
-}
-
-.card {
-	.card-row {
-		width: 100%;
-	}
 
 	.figure {
 		overflow: visible;
 	}
-}
-
-.card-header,
-.card-footer,
-.card-section {
-	@include clearfix();
-
-	.divider {
-		margin-left: -$card-gutter-width;
-		margin-right: -$card-gutter-width;
-	}
-}
-
-.card-header {
-	padding: 1px $card-gutter-width 0;
-}
-
-.card-footer {
-	padding: 0 $card-gutter-width 1px;
-}
-
-.card-section {
-	padding: 1px $card-gutter-width;
 }
 
 .card-horizontal {
@@ -195,56 +169,14 @@
 
 .card-circle {
 	border-radius: $card-circle-border-radius;
-
-	.card-header,
-	.card-section,
-	.card-footer {
-		&:first-child {
-			border-top-left-radius: $card-circle-border-radius;
-			border-top-right-radius: $card-circle-border-radius;
-		}
-
-		&:last-child {
-			border-bottom-left-radius: $card-circle-border-radius;
-			border-bottom-right-radius: $card-circle-border-radius;
-		}
-	}
 }
 
 .card-rounded {
 	border-radius: $card-rounded-border-radius;
-
-	.card-header,
-	.card-section,
-	.card-footer {
-		&:first-child {
-			border-top-left-radius: $card-rounded-border-radius;
-			border-top-right-radius: $card-rounded-border-radius;
-		}
-
-		&:last-child {
-			border-bottom-left-radius: $card-rounded-border-radius;
-			border-bottom-right-radius: $card-rounded-border-radius;
-		}
-	}
 }
 
 .card-square {
 	border-radius: 0;
-
-	.card-header,
-	.card-section,
-	.card-footer {
-		&:first-child {
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
-		}
-
-		&:last-child {
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 0;
-		}
-	}
 }
 
 // Checkbox and Radio Cards
