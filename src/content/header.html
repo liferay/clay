@@ -11,7 +11,7 @@ section: Components
 			<p>Header Toolbar is based on <a href="../toolbars/">Toolbars</a>, and was created to quickly prototype headings for portlets, mobile pages, and page sections.</p>
 		</blockquote>
 
-		<div class="sidenav-container closed uxgl-slideout-nav">
+		<div class="sidenav-container uxgl-slideout-nav" id="headerToolbarSidenav1">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<ul class="nav nav-stacked">
@@ -31,7 +31,7 @@ section: Components
 				<header class="header-toolbar">
 					<div class="toolbar-group">
 						<div class="toolbar-group-content">
-							<a class="sidenav-toggler" href="#1">
+							<a class="sidenav-toggler" href="#headerToolbarSidenav1">
 								<svg class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 								</svg>
@@ -171,7 +171,7 @@ section: Components
 			<p>The example below uses <code>header-toolbar-default</code> with <a href="../list-groups/">tabular-list-group</a> and <a href="../sidenav/">sidenav</a>.</p>
 		</blockquote>
 
-		<div class="sidenav-container closed uxgl-slideout-nav">
+		<div class="sidenav-container closed uxgl-slideout-nav" id="headerToolbarSidenav2">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<div class="sidebar sidebar-inverse">
@@ -297,7 +297,7 @@ section: Components
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1">
+								<a class="sidenav-toggler" href="#headerToolbarSidenav2">
 									<svg class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 									</svg>
@@ -516,9 +516,10 @@ section: Components
 </div>
 
 <script>
-	$('.uxgl-slideout-nav').sideNavigation({
+	$('.sidenav-toggler').sideNavigation({
 		gutter: 0,
 		width: 240
 	});
+
 	$('.collapse-basic-search').collapsibleSearch();
 </script>
