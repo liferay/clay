@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.13</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -151,8 +151,6 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/tab-groups">Tab Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
@@ -192,8 +190,6 @@
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/extending-tab-groups">Extending Tab Groups</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
 </li>
@@ -1030,6 +1026,187 @@
 		<div class="checkbox checkbox-card checkbox-middle-left">
 			<label>
 				<input type="checkbox" value="">
+				<div class="card card-horizontal">
+					<div class="card-row card-row-padded">
+						<div class="card-col-field">
+							<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
+						</div>
+						<div class="card-col-content card-col-gutters clamp-horizontal">
+							<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+						</div>
+						<div class="card-col-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="radio-card"><a class="heading-anchor" href="#radio-card"><i class="icon icon-link"></i></a>Radio Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>We have created a pattern to add radio inputs to cards, just wrap the radio input and card in:</p>
+		</blockquote>
+		<pre><code>&lt;div class=&quot;radio radio-card radio-top-left&quot;&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;radio&quot;&gt;
+    &lt;/label&gt;
+    &lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+
+	<div class="col-xs-4">
+		<div class="radio radio-card radio-top-left">
+			<label>
+				<input name="cardRadios1" type="radio" value="cardOption1">
+			</label>
+			<div class="card">
+				<div class="aspect-ratio">
+					<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
+					<span class="sticker sticker-bottom sticker-warning">PNG</span>
+				</div>
+				<div class="card-row card-row-layout-fixed card-row-padded card-row-valign-top">
+					<div class="card-col-content">
+						<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+						<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+						<span class="truncate-text">Approved</span>
+					</div>
+
+					<div class="card-col-field" style="width: 32px;">
+						<div class="dropdown" style="margin-left: 5px;">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-8">
+		<div class="radio radio-card radio-middle-left">
+			<label>
+				<input name="cardRadios1" type="radio" value="cardOption2">
+			</label>
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
+						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
+					</div>
+					<div class="card-col-content card-col-gutters clamp-horizontal">
+						<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+					</div>
+					<div class="card-col-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="clickable-radio-card"><a class="heading-anchor" href="#clickable-radio-card"><i class="icon icon-link"></i></a>Clickable Radio Card</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>To make the whole card clickable just wrap the radio input and card in:</p>
+		</blockquote>
+
+		<pre><code>&lt;div class=&quot;radio radio-card radio-top-left&quot;&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;radio&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+
+	<div class="col-xs-4">
+		<div class="radio radio-card radio-top-left">
+			<label>
+				<input name="cardRadios" type="radio" value="cardOption1">
+				<div class="card">
+					<div class="aspect-ratio">
+						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
+						<span class="sticker sticker-bottom sticker-warning">PNG</span>
+					</div>
+					<div class="card-row card-row-layout-fixed card-row-padded card-row-valign-top">
+						<div class="card-col-content">
+							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+							<span class="truncate-text">Approved</span>
+						</div>
+
+						<div class="card-col-field" style="width: 32px;">
+							<div class="dropdown" style="margin-left: 5px;">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="col-xs-8">
+		<div class="radio radio-card radio-middle-left">
+			<label>
+				<input name="cardRadios" type="radio" value="cardOption2">
 				<div class="card card-horizontal">
 					<div class="card-row card-row-padded">
 						<div class="card-col-field">
