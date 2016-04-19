@@ -3,6 +3,18 @@
   "version": "0.2.13",
   "description": "",
   "main": "index.js",
+  "csfConfig": {
+    "js": {
+        "lint": {
+            "globals": {
+                "jQuery": true
+            },
+
+            "rules": {
+            }
+        }
+    }
+  },
   "scripts": {
     "test": "exit 0",
     "deploy": "cd ./build && git init . && git add . && git commit -m 'Deploy'; git push 'git@github.com:liferay/lexicon.git' master:gh-pages --force && rm -rf .git"
