@@ -26,7 +26,6 @@
 
 .sidenav-container.closed {
 	> .sidenav-menu-slider {
-		overflow: hidden;
 		visibility: hidden;
 		width: 0;
 	}
@@ -37,6 +36,8 @@
 }
 
 .sidenav-content {
+	padding-left: 0;
+	padding-right: 0;
 	position: relative;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
@@ -52,7 +53,7 @@
 }
 
 .sidenav-menu-slider {
-	overflow: visible;
+	overflow: hidden;
 	position: absolute;
 	z-index: 10;
 }
@@ -87,10 +88,6 @@
 	@include transition(all 0.5s ease);
 }
 
-.sidenav-transition .sidenav-menu-slider {
-	overflow: hidden;
-}
-
 // Simple Sidenav
 
 .body-fixed {
@@ -104,7 +101,6 @@
 .sidenav-fixed.sidenav-menu-slider {
 	bottom: 0;
 	left: 0;
-	overflow: hidden;
 	position: fixed;
 	top: 0;
 
