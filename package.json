@@ -1,18 +1,16 @@
 {
   "name": "lexicon",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "",
   "main": "index.js",
   "csfConfig": {
     "js": {
-        "lint": {
-            "globals": {
-                "jQuery": true
-            },
-
-            "rules": {
-            }
-        }
+      "lint": {
+        "globals": {
+          "jQuery": true
+        },
+        "rules": {}
+      }
     }
   },
   "scripts": {
