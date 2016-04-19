@@ -5,6 +5,7 @@
 
 	// Make sure we only add one resize listener to the page,
 	// no matter how many components we have
+
 	var addResizeListener = function() {
 		if (!listenerAdded) {
 			$(window).on(
@@ -25,13 +26,14 @@
 		var id;
 
 		return function() {
+			var instance = this;
+
 			var args = arguments;
-			var context = this;
 
 			var later = function() {
 				id = null;
 
-				fn.apply(context, args);
+				fn.apply(instance, args);
 			};
 
 			clearTimeout(id);
@@ -109,7 +111,9 @@
 
 			options.container = options.container || toggler.data('target') || toggler.attr('href');
 
-			if (useDataAttribute) { // instantiate using data attribute
+			// instantiate using data attribute
+
+			if (useDataAttribute) {
 				options.content = toggler.data('content');
 				options.equalHeight = false;
 				options.loadingIndicatorTPL = toggler.data('loading-indicator-tpl') || options.loadingIndicatorTPL;
@@ -431,7 +435,6 @@
 					instance._loadUrl(sidenav, url);
 				}
 
-				var desktop = instance._isDesktop();
 				var desktopFixedPush = instance._getSimpleSidenavType() === 'desktop-fixed-push';
 				var mobileFixedPush = instance._getSimpleSidenavType() === 'mobile-fixed-push';
 
@@ -605,8 +608,27 @@
 		},
 
 		_focusElement: function(el) {
+
 			// ios 8 fixed element disappears when trying to scroll
+
 			el.focus();
+		},
+
+		_getSidenavWidth: function() {
+			var instance = this;
+
+			var options = instance.options;
+
+			var widthOriginal = options.widthOriginal;
+
+			var width = widthOriginal;
+			var winWidth = window.innerWidth;
+
+			if (winWidth < widthOriginal + 40) {
+				width = winWidth - 40;
+			}
+
+			return width;
 		},
 
 		_getSimpleSidenavType: function() {
@@ -716,7 +738,6 @@
 		_onDelegateClickTrigger: function() {
 			var instance = this;
 
-			var container = $(instance.options.container);
 			var toggler = instance.toggler;
 
 			var togglerSelector = '#' + guid(toggler, 'generatedLexiconSidenavTogglerId');
@@ -828,13 +849,14 @@
 			};
 
 			if (!$.support.transition) {
-				return complete.call(instance);
+				complete.call(instance);
 			}
-
-			el.one(transitionEnd, function(event) {
-				complete();
-			})
-			.emulateTransitionEnd(SideNavigation.TRANSITION_DURATION);
+			else {
+				el.one(transitionEnd, function(event) {
+					complete();
+				})
+				.emulateTransitionEnd(SideNavigation.TRANSITION_DURATION);
+			}
 		},
 
 		_renderNav: function() {
@@ -867,7 +889,6 @@
 			var options = instance.options;
 
 			var container = $(options.container);
-			var toggler = instance.toggler;
 
 			if (!instance.useDataAttribute) {
 				var mobile = instance.mobile;
@@ -888,23 +909,6 @@
 
 				instance._renderNav();
 			}
-		},
-
-		_getSidenavWidth: function() {
-			var instance = this;
-
-			var options = instance.options;
-
-			var widthOriginal = options.widthOriginal;
-
-			var width = widthOriginal;
-			var winWidth = window.innerWidth;
-
-			if (winWidth < widthOriginal + 40) {
-				width = winWidth - 40;
-			}
-
-			return width;
 		},
 
 		_setScreenSize: function() {
@@ -942,9 +946,11 @@
 	};
 
 	var Plugin = function(options) {
-		var selector = this.selector;
+		var instance = this;
 
-		var retVal = this;
+		var selector = instance.selector;
+
+		var retVal = instance;
 		var methodCall = typeof options === 'string';
 		var returnInstance = options === 'instance';
 		var args = $.makeArray(arguments).slice(1);

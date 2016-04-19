@@ -68,7 +68,7 @@ section: Components (JS)
 			<div class="sidenav-menu-slider" style="background:#FFF;">
 				<div class="sidenav-menu">
 					<div class="col-md-12">
-						<a class="sidenav-close pull-right" href="#1">X</a>
+						<a class="pull-right sidenav-close" href="#1">X</a>
 						<p>... Your Side Nav Content ...</p>
 					</div>
 				</div>
@@ -117,7 +117,7 @@ section: Components (JS)
 			<div class="sidenav-menu-slider" style="background:#FFF;">
 				<div class="sidenav-menu">
 					<div class="col-md-12">
-						<a class="sidenav-close pull-right" href="#1">X</a>
+						<a class="pull-right sidenav-close" href="#1">X</a>
 						<p>... Your Side Nav Content ...</p>
 					</div>
 				</div>
@@ -170,9 +170,9 @@ section: Components (JS)
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" href="#simpleSidenav" id="simpleToggle1" data-content="#wrapper" data-toggle="sidenav">Simple Sidenav Toggler</a>
+			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav" id="simpleToggle1">Simple Sidenav Toggler</a>
 
-			<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav">
+			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav">
 				Another Simple Sidenav Toggler
 			</a>
 		</div>
@@ -188,7 +188,7 @@ section: Components (JS)
 							<span>Simple Sidenav</span>
 						</a>
 
-						<a id="sidenavClose1" class="sidenav-close" href="#1">
+						<a class="sidenav-close" href="#1" id="sidenavClose1">
 							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 							</svg>
@@ -227,9 +227,9 @@ section: Components (JS)
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-use-delegate="true">Simple Sidenav 2 Toggler</a>
+			<a class="btn btn-default" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-use-delegate="true" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
 
-			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">
+			<a class="btn btn-default" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true" href="#simpleSidenav2">
 				Another Simple Sidenav 2 Toggler
 			</a>
 
@@ -292,7 +292,7 @@ section: Components (JS)
 </head>
 
 <div id="#wrapper">
-    <a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push">Simple Sidenav Toggler</a>
+    <a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push" href="#simpleSidenav">Simple Sidenav Toggler</a>
 
     <div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
         <div class="sidebar sidebar-default sidenav-menu">
@@ -318,7 +318,7 @@ section: Components (JS)
 		</blockquote>
 
 		<div>
-			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-url="{{rootPath}}/partials/alerts" data-use-delegate="true">Simple Sidenav 2 Toggler</a>
+			<a class="btn btn-default" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-url="{{rootPath}}/partials/alerts" data-use-delegate="true" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
 		</div>
 
 		<h4>Using the Options API</h4>
@@ -373,7 +373,7 @@ section: Components (JS)
 	</div>
 </div>
 
-<div class="side-navigation-events row row-spacing">
+<div class="row row-spacing side-navigation-events">
 	<div class="col-md-12">
 		<h3>Events</h3>
 
@@ -414,7 +414,7 @@ $(document).on('closed.lexicon.sidenav', function(event) {
 	</div>
 </div>
 
-<div class="side-navigation-methods row row-spacing">
+<div class="row row-spacing side-navigation-methods">
 	<div class="col-md-12">
 		<h3>Methods</h3>
 
