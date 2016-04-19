@@ -96,7 +96,7 @@
 	}
 
 	.basic-search-slider {
-		@include transition(left 0.5s ease);
+		@include transition(left 0.5s ease, right 0.5s ease);
 	}
 }
 
