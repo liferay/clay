@@ -1,6 +1,7 @@
 .clamp-container {
 	left: $table-cell-padding;
-	margin: 0;
+	margin: -2px;
+	padding: 2px;
 	position: absolute;
 	right: $table-cell-padding;
 }

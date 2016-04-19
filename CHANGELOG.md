@@ -1,3 +1,21 @@
+### v0.2.13 - April 15, 2015
+* Breaking: Remove label-monospaced use stickers instead
+* Breaking: Remove badge-monospaced use stickers instead
+* Breaking: Remove card-dm and toggle-card-dm styles
+* Fix: IE text in card not truncating
+* Fix: Side Navigation animation when changing orientation from landscape to portrait
+* Update: Add sticker positional classes that match other components e.g. checkbox-card
+* Update: Add class sticker-static for statically positioned stickers
+* Update: Add max-height to dropdowns
+* Update: Focus outline for truncated links are cut off
+* Update: Checkbox card should work if you only want the checkbox to be clickable
+* Site: Remove references to dropdown-menu-no-arrow
+* Site: Update badges, labels, and stickers documentation
+* Site: Cards page dropdown-toggle alignment
+* Site: Cards page move icon-monospaced to the parent element
+* Site: Remove docs related to card-dm and toggle-card-dm
+* Site: Add checkbox card documentation
+
 ### v0.2.12 - March 25, 2015
 * Update: Remove icon-* selector from alloy-font-awesome, and instead only target defined icons
 
