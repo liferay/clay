@@ -81,6 +81,11 @@
 	}
 }
 
+.sidenav-js-fouc {
+	opacity: 0;
+	visibility: hidden;
+}
+
 .sidenav-transition,
 .sidenav-transition .sidenav-content,
 .sidenav-transition .sidenav-menu-slider,
