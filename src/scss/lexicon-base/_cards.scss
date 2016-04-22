@@ -223,7 +223,7 @@
 			padding-left: $checkbox-left-card-padding;
 		}
 
-		.card-row {
+		> .card-row {
 			padding-left: $checkbox-left-card-padding;
 		}
 	}
@@ -240,7 +240,7 @@
 			padding-right: $checkbox-right-card-padding;
 		}
 
-		.card-row {
+		> .card-row {
 			padding-right: $checkbox-right-card-padding;
 		}
 	}
