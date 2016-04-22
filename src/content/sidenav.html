@@ -60,11 +60,15 @@ section: Components (JS)
 			<p>To create a sidenav relative to other elements inside your page, you must follow the markup structure shown above and pass the sidenav-container element to the plugin with the <code>href</code> attribute or the <code>data-target</code> attribute on the toggler. The <code>container</code> option also allows you to pass the container via javascript if <code>href</code> or <code>data-target</code> can't be used. The options above are optional.</p>
 		</blockquote>
 
+		<div class="alert alert-info">
+			Avoid the flash of unstyled content when using the Javascript api by adding the class <span class="text-danger">sidenav-js-fouc</span> to the <span class="text-danger">sidenav-container</span>.
+		</div>
+
 		<button class="btn btn-default sidenav-toggler" data-target="#mySidenavContainerId" style="margin-bottom:5px;">
 			Sidenav Toggler
 		</button>
 
-		<div class="sidenav-container" id="mySidenavContainerId">
+		<div class="sidenav-container sidenav-js-fouc" id="mySidenavContainerId">
 			<div class="sidenav-menu-slider" style="background:#FFF;">
 				<div class="sidenav-menu">
 					<div class="col-md-12">
@@ -113,7 +117,7 @@ section: Components (JS)
 			Sidenav Toggler 1
 		</button>
 
-		<div class="sidenav-container" id="mySidenavContainerId1">
+		<div class="sidenav-container sidenav-js-fouc" id="mySidenavContainerId1">
 			<div class="sidenav-menu-slider" style="background:#FFF;">
 				<div class="sidenav-menu">
 					<div class="col-md-12">
