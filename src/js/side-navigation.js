@@ -805,6 +805,8 @@
 				instance.showSidenav();
 				instance.setEqualHeight();
 			}
+
+			container.removeClass('sidenav-js-fouc');
 		},
 
 		_renderUI: function() {
