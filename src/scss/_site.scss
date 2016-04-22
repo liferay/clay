@@ -673,6 +673,13 @@ $mainNavWidth: 220px;
 	@media screen and (min-width: $grid-float-breakpoint) {
 		padding-left: $mainNavWidth + 20;
 	}
+
+	[dir="rtl"] & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			padding-right: $mainNavWidth + 20;
+			padding-left: 0;
+		}
+	}
 }
 
 #mainNav {
@@ -879,6 +886,46 @@ h1, h2, h3, h4, h5, h6 {
 .sidenav-demo-container {
 	overflow: hidden;
 	padding-top: 3px;
+}
+
+// Side Navigation RTL
+
+[dir="rtl"] {
+	.sidenav-fixed > .sidenav-menu-slider {
+		left: auto;
+		right: 0;
+	}
+
+	.sidenav-fixed.sidenav-right > .sidenav-menu-slider {
+		left: 0;
+		right: auto;
+	}
+
+	.sidenav-container.closed > .sidenav-content {
+		right: 0;
+	}
+
+	.sidenav-container.sidenav-right {
+		.sidenav-content {
+			left: 0;
+			right: auto;
+		}
+
+		.sidenav-menu {
+			left: 0;
+			right: auto;
+		}
+
+		.sidenav-menu-slider {
+			right: auto;
+			left: 0;
+		}
+	}
+
+	.sidenav-fixed.sidenav-menu-slider.sidenav-right {
+		left: 0;
+		right: auto;
+	}
 }
 
 // Switches Page
