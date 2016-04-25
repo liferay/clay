@@ -70,12 +70,6 @@
 	width: 1%;
 }
 
-@for $i from 1 through $grid-columns {
-	.card-col-#{$i} {
-		width: percentage(($i / $grid-columns));
-	}
-}
-
 .card-row {
 	display: table;
 	height: 100%;
