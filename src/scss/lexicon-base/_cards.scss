@@ -28,41 +28,21 @@
 
 .card-horizontal {
 	position: relative;
+}
 
-	&.card-circle {
-		[class*="card-col"] {
-			&:first-child {
-				border-radius: $card-circle-border-radius 0 0 $card-circle-border-radius;
-			}
+// Card Simple Grid
 
-			&:last-child {
-				border-radius: 0 $card-circle-border-radius $card-circle-border-radius 0;
-			}
-		}
-	}
+.card-col-content,
+.card-col-field {
+	display: table-cell;
+	position: relative;
+	vertical-align: middle;
 
-	&.card-rounded {
-		[class*="card-col"] {
-			&:first-child {
-				border-radius: $card-rounded-border-radius 0 0 $card-rounded-border-radius;
-			}
-
-			&:last-child {
-				border-radius: 0 $card-rounded-border-radius $card-rounded-border-radius 0;
-			}
-		}
-	}
-
-	&.card-square {
-		[class*="card-col"] {
-			&:first-child {
-				border-radius: 0;
-			}
-
-			&:last-child {
-				border-radius: 0;
-			}
-		}
+	figure,
+	.figure {
+		height: 100%;
+		margin-bottom: 0;
+		width: 100%;
 	}
 }
 
@@ -98,22 +78,15 @@
 			margin-right: -10px;
 		}
 	}
-
-	[class*="card-col"] {
-		display: table-cell;
-		position: relative;
-		vertical-align: middle;
-		word-break: break-all; // IE
-
-		.img-responsive {
-			max-width: none;
-			width: 101%;
-		}
-	}
 }
 
 .card-row-layout-fixed {
 	table-layout: fixed;
+
+	.card-col-content,
+	.card-col-field {
+		word-wrap: break-word;
+	}
 
 	.card-col-field {
 		width: auto;
@@ -156,25 +129,51 @@
 	}
 }
 
-[class*="card-col"] {
-	figure,
-	.figure {
-		height: 100%;
-		margin-bottom: 0;
-		width: 100%;
-	}
-}
+// Card Border Helpers
 
 .card-circle {
 	border-radius: $card-circle-border-radius;
+
+	.card-col-content,
+	.card-col-field {
+		&:first-child {
+			border-radius: $card-circle-border-radius 0 0 $card-circle-border-radius;
+		}
+
+		&:last-child {
+			border-radius: 0 $card-circle-border-radius $card-circle-border-radius 0;
+		}
+	}
 }
 
 .card-rounded {
 	border-radius: $card-rounded-border-radius;
+
+	.card-col-content,
+	.card-col-field {
+		&:first-child {
+			border-radius: $card-rounded-border-radius 0 0 $card-rounded-border-radius;
+		}
+
+		&:last-child {
+			border-radius: 0 $card-rounded-border-radius $card-rounded-border-radius 0;
+		}
+	}
 }
 
 .card-square {
 	border-radius: 0;
+
+	.card-col-content,
+	.card-col-field {
+		&:first-child {
+			border-radius: 0;
+		}
+
+		&:last-child {
+			border-radius: 0;
+		}
+	}
 }
 
 // Checkbox and Radio Cards
