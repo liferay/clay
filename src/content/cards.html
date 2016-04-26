@@ -5,18 +5,24 @@ section: Components
 
 <div class="row row-spacing uxgl-vertical-card">
 	<div class="col-md-12">
-		<h3>Default Card</h3>
+		<h3>Card</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Display card content vertically.</p>
+			<p>A container styled like a card for your stuff. Combine different Lexicon components inside a card to create a variety of cards.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-4">
 		<div class="card">
-			<div class="card-header"><h4>Header</h4></div>
-			<div class="card-section"><h4>Section</h4></div>
-			<div class="card-footer"><h4>Footer</h4></div>
+			<div class="crop-img crop-img-bottom crop-img-center" style="height: 150px;">
+				<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			</div>
+			<div class="user-icon user-icon-danger user-icon-xxl" style="margin: -64px auto 0;position: relative;line-height:120px;border: 4px solid #FFF;"><span>JB</span></div>
+			<div class="card-block" style="text-align: center;">
+				<h3 style="margin:0;">Joe Bloggs</h4>
+				<h5 class="text-default" style="margin-top:0;">Administrator</h5>
+				<p>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</p>
+			</div>
 		</div>
 	</div>
 
@@ -26,11 +32,7 @@ section: Components
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse0">
-	<pre><code>```<div class="card">
-    <div class="card-header"><h1>Header</h1></div>
-    <div class="card-section"><h1>Section</h1></div>
-    <div class="card-footer"><h1>Footer</h1></div>
-</div>```</code></pre>
+	<pre><code class="html">```<div class="card">...</div>```</code></pre>
 </div>
 
 	</div>
@@ -38,90 +40,21 @@ section: Components
 
 <div class="row row-spacing uxgl-horizontal-card">
 	<div class="col-md-12">
-		<h3>Horizontal Card</h3>
+		<h3>Horizontal Card with Simple Grid</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Display card content horizontally. <code>.card-horizontal</code> uses a simplified version of Bootstrap 3's grid system to help align content. It is based on the 12 column grid (default), but columns can be customized to any size.</p>
-
-			<p>Card columns do not break at smaller screen widths. They were designed to help align small chunks of content and are not meant to be used for page layouts.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-6">card-col-6</div>
-				<div class="card-col-6">card-col-6</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-7">card-col-7</div>
-				<div class="card-col-4">card-col-4</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-4">card-col-4</div>
-				<div class="card-col-7">card-col-7</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">```<div class="card-horizontal">
-    <div class="card-row">
-        <div class="card-col-6">card-col-6</div>
-        <div class="card-col-6">card-col-6</div>
-    </div>
-</div>```</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing uxgl-horizontal-card">
-	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Create a column only as wide as its content with <code>card-col-field</code> and fill the remaing space with <code>card-col-content</code>. <code>card-col-field</code> has width: 1% and will expand only as wide as its content as long as <code>card-col-content</code> is present as a sibling.</p>
+			<p>Use <code>card-row</code> with <code>card-col-content</code> and <code>card-col-field</code> to create a number of custom horizontal cards. <code>card-col-field</code> used in conjunction with <code>card-col-content</code> will only expand as wide as its content. <code>card-col-content</code> will cover the remaining space.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
+		<div class="card card-horizontal">
 			<div class="card-row card-row-padded">
 				<div class="card-col-field">
 					<span class="icon-folder-close-alt icon-monospaced" style="width: 90px;"></span>
 				</div>
 				<div class="card-col-content card-col-gutters">
 					<span>Fills Remaining Space</span>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<span class="icon-folder-close-alt icon-monospaced" style="width: 90px;"></span>
-				</div>
-				<div class="card-col-content card-col-gutters">
-					<span>Fills Remaining Space</span>
-				</div>
-				<div class="card-col-field">
-					<span class="icon-folder-close-alt icon-monospaced" style="width: 140px;"></span>
 				</div>
 			</div>
 		</div>
@@ -133,16 +66,13 @@ section: Components
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse001"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse001">
-	<pre><code class="html">```<div class="card-horizontal">
+	<pre><code class="html">```<div class="card card-horizontal">
     <div class="card-row card-row-padded">
         <div class="card-col-field">
             <span class="icon-folder-close-alt icon-monospaced" style="width: 90px;"></span>
         </div>
         <div class="card-col-content card-col-gutters">
             <span>Fills Remaining Space</span>
-        </div>
-        <div class="card-col-field">
-            <span class="icon-folder-close-alt icon-monospaced" style="width: 140px;"></span>
         </div>
     </div>
 </div>```</code></pre>
@@ -152,29 +82,129 @@ section: Components
 	</div>
 </div>
 
-<div class="row row-spacing uxgl-horizontal-card">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Card Row Layout Fixed</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Sometimes you may have really long text that needs to fit inside <code>card-col-content</code>, just add class <code>card-row-layout-fixed</code> to the <code>card-row</code> and set a fixed width for each <code>card-col-field</code>.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">
+			<span class="text-danger">card-row-layout-fixed</span> must be used to apply the css property <span class="text-danger">word-wrap: break-word</span> to <span class="text-danger">card-col-content</span> and <span class="text-danger">card-col-field</span>.
+		</div>
+	</div>
+
+	<div class="col-md-8 uxgl-horizontal-card">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-layout-fixed card-row-padded">
+				<div class="card-col-field" style="width: 90px;">
+					<span class="icon-folder-close-alt icon-monospaced"></span>
+				</div>
+				<div class="card-col-content card-col-gutters">
+					<span>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</div>
+				<div class="card-col-field" style="width: 60px;">
+					<span class="icon-folder-close-alt icon-monospaced"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code>.</p>
+			<p>Use <code>card-row-layout-fixed</code> to create horizontal cards with an image on the left and text on the right and vice versa, just set a fixed width on the column containing the image.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-4" style="vertical-align: top;">top</div>
-				<div class="card-col-4">middle</div>
-				<div class="card-col-4" style="vertical-align: bottom;">bottom</div>
+		<div class="card card-horizontal">
+			<div class="card-row card-row-layout-fixed">
+				<div class="card-col-field" style="width: 150px;">
+					<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+				</div>
+
+				<div class="card-col-field card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-layout-fixed card-row-padded">
+				<div class="card-col-field" style="width: 121px;">
+					<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+				</div>
+
+				<div class="card-col-field card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-layout-fixed">
+				<div class="card-col-field card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+				<div class="card-col-field" style="width: 150px;">
+					<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-layout-fixed card-row-padded">
+				<div class="card-col-field card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+				<div class="card-col-field" style="width: 121px;">
+					<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing uxgl-horizontal-card">
+	<div class="col-md-12">
+		<h3>Card Row Vertical Alignment Helpers</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code> or use the helper classes <code>card-row-valign-bottom</code>and <code>card-row-valign-top</code> on the <code>card-row</code> to vertically align all columns inside the row.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="card-col-4" style="text-align:left;">left</div>
-				<div class="card-col-4">center</div>
-				<div class="card-col-4" style="text-align:right;">right</div>
+				<div class="card-col-field" style="vertical-align: top;">top</div>
+				<div class="card-col-field">middle</div>
+				<div class="card-col-field" style="vertical-align: bottom;">bottom</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field" style="text-align:left;">left</div>
+				<div class="card-col-field">center</div>
+				<div class="card-col-field" style="text-align:right;">right</div>
 			</div>
 		</div>
 	</div>
@@ -185,11 +215,11 @@ section: Components
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse2">
-		<pre><code class="html">```<div class="card-horizontal">
+		<pre><code class="html">```<div class="card card-horizontal">
     <div class="card-row">
-        <div class="card-col-4" style="vertical-align: top;">top</div>
-        <div class="card-col-4">middle</div>
-        <div class="card-col-4" style="vertical-align: bottom;">bottom</div>
+        <div class="card-col-field" style="vertical-align: top;">top</div>
+        <div class="card-col-field">middle</div>
+        <div class="card-col-field" style="vertical-align: bottom;">bottom</div>
     </div>
 </div>```</code></pre>
 </div>
@@ -200,18 +230,18 @@ section: Components
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add gutters to a specific card card column by using <code>.card-col-gutters</code>.</p>
+			<p>Add gutters to a specific card card column by using the class <code>card-col-gutters</code>.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-5">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-layout-fixed">
+				<div class="card-col-field" style="width: 150px;">
 					<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 				</div>
 
-				<div class="card-col-7 card-col-gutters">
+				<div class="card-col-field card-col-gutters">
 					<h4>So ristretto cappuccino</h4>
 
 					<p>Wings eu, pumpkin spice robusta.</p>
@@ -226,13 +256,13 @@ section: Components
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-		<pre><code class="html">```<div class="card-horizontal">
-    <div class="card-row">
-        <div class="card-col-5">
+		<pre><code class="html">```<div class="card card-horizontal">
+    <div class="card-row" style="width: 150px;">
+        <div class="card-col-field">
             <img alt="thumbnail" class="img-responsive" src="/images/thumbnail_coffee.jpg">
         </div>
 
-        <div class="card-col-7 card-col-gutters">
+        <div class="card-col-field card-col-gutters">
             ...
         </div>
     </div>
@@ -243,18 +273,18 @@ section: Components
 
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.card-row-padded</code> with <code>.card-row</code> to add some spacing around a horizontal card.</p>
+			<p>Use <code>card-row-padded</code> on <code>card-row</code> to add some spacing around a horizontal card.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-5">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-layout-fixed card-row-padded">
+				<div class="card-col-field" style="width: 121px;">
 					<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 				</div>
 
-				<div class="card-col-7 card-col-gutters">
+				<div class="card-col-field card-col-gutters">
 					<h4>So ristretto cappuccino</h4>
 					<p>Wings eu, pumpkin spice robusta.</p>
 				</div>
@@ -268,7 +298,7 @@ section: Components
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse4">
-	<pre><code class="html">```<div class="card-horizontal">
+	<pre><code class="html">```<div class="card card-horizontal">
     <div class="card-row card-row-padded">
         ...
     </div>
@@ -280,7 +310,7 @@ section: Components
 
 <div class="row row-spacing" id="truncatingText">
 	<div class="col-md-12">
-		<h3>Truncating Text Inside Horizontal Card</h3>
+		<h3>Truncating Text Inside Horizontal Card with Card Row Layout Fixed</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Use class <code>card-row-layout-fixed</code> on card row and add class <code>truncate-text</code> on a text element. Every column except the one that should expand to fill the remaining space needs to have a fixed width set.</p>
@@ -288,13 +318,13 @@ section: Components
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
+		<div class="card card-horizontal">
 			<div class="card-row card-row-layout-fixed card-row-padded">
-				<div class="card-col-5">
+				<div class="card-col-field" style="width: 150px;">
 					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
 				</div>
 
-				<div class="card-col-7 card-col-gutters">
+				<div class="card-col-field card-col-gutters">
 					<h4>So ristretto cappuccino</h4>
 					<p class="truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
 				</div>
@@ -304,7 +334,7 @@ section: Components
 
 	<ul class="list-unstyled" style="clear:both;">
 		<li class="col-md-6">
-			<div class="card-horizontal">
+			<div class="card card-horizontal">
 				<div class="card-row card-row-layout-fixed card-row-padded">
 					<div class="card-col-field" style="width:60px;">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
@@ -334,7 +364,7 @@ section: Components
 		</li>
 
 		<li class="col-md-6">
-			<div class="card-horizontal">
+			<div class="card card-horizontal">
 				<div class="card-row card-row-layout-fixed card-row-padded">
 					<div class="card-col-field" style="width:60px;">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
@@ -364,7 +394,7 @@ section: Components
 		</li>
 
 		<li class="col-md-6">
-			<div class="card-horizontal">
+			<div class="card card-horizontal">
 				<div class="card-row card-row-layout-fixed card-row-padded">
 					<div class="card-col-field" style="width:60px;">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
@@ -394,7 +424,7 @@ section: Components
 		</li>
 
 		<li class="col-md-6">
-			<div class="card-horizontal">
+			<div class="card card-horizontal">
 				<div class="card-row card-row-layout-fixed card-row-padded">
 					<div class="card-col-field" style="width:60px;">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
@@ -436,8 +466,8 @@ section: Components
 		</blockquote>
 	</div>
 
-	<div class="col-xs-6">
-		<div class="card-horizontal">
+	<div class="col-md-6">
+		<div class="card card-horizontal">
 			<div class="card-row card-row-padded">
 				<div class="card-col-field">
 					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
@@ -453,8 +483,8 @@ section: Components
 		</div>
 	</div>
 
-	<div class="col-xs-6">
-		<div class="card-horizontal">
+	<div class="col-md-6">
+		<div class="card card-horizontal">
 			<div class="card-row card-row-padded">
 				<div class="card-col-field">
 					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
@@ -470,8 +500,8 @@ section: Components
 		</div>
 	</div>
 
-	<div class="col-xs-6">
-		<div class="card-horizontal">
+	<div class="col-md-6">
+		<div class="card card-horizontal">
 			<div class="card-row card-row-padded">
 				<div class="card-col-field">
 					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
@@ -487,7 +517,7 @@ section: Components
 		</div>
 	</div>
 
-	<div class="col-xs-6" style="clear:left;">
+	<div class="col-md-6" style="clear:left;">
 		<div class="checkbox checkbox-card checkbox-middle-left">
 			<label>
 				<input type="checkbox" value="">
@@ -522,7 +552,7 @@ section: Components
 		</div>
 	</div>
 
-	<div class="col-xs-6">
+	<div class="col-md-6">
 		<div class="card card-horizontal">
 			<div class="card-row card-row-padded">
 				<div class="card-col-field">
@@ -556,36 +586,39 @@ section: Components
 	</div>
 </div>
 
-<div class="row row-spacing uxgl-vertical-card">
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Card Helper Classes</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.card-rounded</code>, <code>.card-circle</code>, or <code>.card-square</code> on the card to quickly shape the borders.</p>
+			<p>Use classes <code>card-rounded</code>, <code>card-circle</code>, or <code>card-square</code> on the card to quickly shape the borders.</p>
 		</blockquote>
 	</div>
 
-	<div class="col-md-4">
-		<div class="card card-rounded">
-			<div class="card-header"><h4>Header</h4></div>
-			<div class="card-section"><h4>Section</h4></div>
-			<div class="card-footer"><h4>Footer</h4></div>
+	<div class="col-md-4 uxgl-horizontal-card">
+		<div class="card card-horizontal card-rounded">
+			<div class="card-row">
+				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">card-col-field</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="col-md-4">
-		<div class="card card-circle">
-			<div class="card-header"><h4>Header</h4></div>
-			<div class="card-section"><h4>Section</h4></div>
-			<div class="card-footer"><h4>Footer</h4></div>
+	<div class="col-md-4 uxgl-horizontal-card">
+		<div class="card card-horizontal card-circle">
+			<div class="card-row">
+				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">card-col-field</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="col-md-4">
-		<div class="card card-square">
-			<div class="card-header"><h4>Header</h4></div>
-			<div class="card-section"><h4>Section</h4></div>
-			<div class="card-footer"><h4>Footer</h4></div>
+	<div class="col-md-4 uxgl-horizontal-card">
+		<div class="card card-horizontal card-square">
+			<div class="card-row">
+				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">card-col-field</div>
+			</div>
 		</div>
 	</div>
 
@@ -595,69 +628,77 @@ section: Components
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse5">
-	<pre><code class="html">```<div class="card card-rounded">...</div>
-<div class="card card-circle">...</div>
-<div class="card card-square">...</div>```</code></pre>
+	<pre><code class="html">```<div class="card card-horizontal card-rounded">...</div>
+<div class="card card-horizontal card-circle">...</div>
+<div class="card card-horizontal card-square">...</div>```</code></pre>
 </div>
 
 	</div>
 
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.divider</code> on an <code>```<hr>```</code> or <code>```<div>```</code> element to create a division between content inside a card.</p>
+			We didn't add <code>overflow: hidden</code> to the <code>card</code> class because it prevents nested dropdowns, popups, and tooltips from fully displaying. You can work around this by adding <code>border-radius</code> to the image or <code>overflow: hidden</code> to the card.
+		</blockquote>
+
+		<div class="alert alert-warning">
+			When using card border helper classes with images as the first or last item, add the css property <span class="text-danger">overflow: hidden</span> to the card or <span class="text-danger">border-radius</span> to the image.
+		</div>
+	</div>
+
+	<div class="col-xs-6 col-md-4">
+		<div class="card card-rounded" style="overflow: hidden;">
+			<div class="aspect-ratio aspect-ratio-16-to-9">
+				<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			</div>
+
+			<div class="card-row card-row-layout-fixed card-row-padded card-row-valign-top">
+				<div class="card-col-content" style="text-align: center;height: 125px;">
+					<h3 style="margin:0;">Joe Bloggs</h3>
+					<h5 class="text-default" style="margin-top:0;">Administrator</h5>
+					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-12 col-md-6">
+		<div class="card card-horizontal card-rounded">
+			<div class="card-row card-row-layout-fixed card-row-valign-top">
+				<div class="card-col-field" style="width:150px;">
+					<img class="img-responsive" src="../../images/thumbnail_dock.jpg" style="border-radius: 4px 0 0 4px;" />
+				</div>
+				<div class="card-col-content card-col-gutters">
+					<h4>Space Program</h4>
+					<div class="divider"></div>
+					<p>Because you live life on the edge of space.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Card Dividers</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>```<hr class="divider" />```</code> or <code>```<div class="divider"></div>```</code> to create a horizontal division between content inside a card.</p>
 		</blockquote>
 	</div>
 
-	<div class="col-md-6">
-		<div class="card">
-			<div class="card-header"><h4>Header</h4></div>
-
-			<div class="card-section">
-				<h4>Section</h4>
-				<hr class="divider" />
-				<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
-			</div>
-
-			<div class="card-footer"><h4>Footer</h4></div>
-		</div>
-	</div>
-
 	<div class="col-md-6 uxgl-horizontal-card">
-		<div class="card-horizontal">
+		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="card-col-6 card-col-gutters">
-					<h4>Section</h4>
-					<hr class="divider" />
-					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+				<div class="card-col-field">
+					card-col-field
 				</div>
-				<div class="card-col-6">card-col-6</div>
+				<div class="card-col-field card-col-gutters">
+					<h4>Title</h4>
+					<div class="divider"></div>
+					<p>card-col-field</p>
+				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse6">
-	<pre><code class="html">```<div class="card">
-    <div class="card-section">
-      <hr class="divider" />
-    </div>
-</div>
-
-<div class="card-horizontal">
-    <div class="card-row">
-        <div class="card-col-6 card-col-gutters">
-          <hr class="divider" />
-        </div>
-
-        <div class="card-col-6">card-col-6</div>
-    </div>
-</div>```</code></pre>
-</div>
-
 	</div>
 </div>
 

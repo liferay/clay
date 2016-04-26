@@ -1,10 +1,13 @@
-.card,
-.card-horizontal {
+.card {
 	background-color: $card-bg;
 	border: $card-border-width solid $card-border;
 	border-radius: $card-border-radius;
 	margin-bottom: $card-margin-bottom;
 	position: relative;
+
+	.card-row {
+		width: 100%;
+	}
 
 	.divider {
 		background-color: $card-divider-bg;
@@ -13,89 +16,39 @@
 		margin-bottom: 10px;
 		margin-top: 10px;
 	}
-}
-
-.card {
-	.card-row {
-		width: 100%;
-	}
 
 	.figure {
 		overflow: visible;
 	}
 }
 
-.card-header,
-.card-footer,
-.card-section {
-	@include clearfix();
-
-	.divider {
-		margin-left: -$card-gutter-width;
-		margin-right: -$card-gutter-width;
-	}
-}
-
-.card-header {
-	padding: 1px $card-gutter-width 0;
-}
-
-.card-footer {
-	padding: 0 $card-gutter-width 1px;
-}
-
-.card-section {
-	padding: 1px $card-gutter-width;
+.card-block {
+	padding: $card-gutter-width;
+	word-wrap: break-word;
 }
 
 .card-horizontal {
 	position: relative;
+}
 
-	&.card-circle {
-		[class*="card-col"] {
-			&:first-child {
-				border-radius: $card-circle-border-radius 0 0 $card-circle-border-radius;
-			}
+// Card Simple Grid
 
-			&:last-child {
-				border-radius: 0 $card-circle-border-radius $card-circle-border-radius 0;
-			}
-		}
-	}
+.card-col-content,
+.card-col-field {
+	display: table-cell;
+	position: relative;
+	vertical-align: middle;
 
-	&.card-rounded {
-		[class*="card-col"] {
-			&:first-child {
-				border-radius: $card-rounded-border-radius 0 0 $card-rounded-border-radius;
-			}
-
-			&:last-child {
-				border-radius: 0 $card-rounded-border-radius $card-rounded-border-radius 0;
-			}
-		}
-	}
-
-	&.card-square {
-		[class*="card-col"] {
-			&:first-child {
-				border-radius: 0;
-			}
-
-			&:last-child {
-				border-radius: 0;
-			}
-		}
+	figure,
+	.figure {
+		height: 100%;
+		margin-bottom: 0;
+		width: 100%;
 	}
 }
 
 .card-col-field {
 	width: 1%;
-}
-
-@for $i from 1 through $grid-columns {
-	.card-col-#{$i} {
-		width: percentage(($i / $grid-columns));
-	}
 }
 
 .card-row {
@@ -126,22 +79,15 @@
 			margin-right: -10px;
 		}
 	}
-
-	[class*="card-col"] {
-		display: table-cell;
-		position: relative;
-		vertical-align: middle;
-		word-break: break-all; // IE
-
-		.img-responsive {
-			max-width: none;
-			width: 101%;
-		}
-	}
 }
 
 .card-row-layout-fixed {
 	table-layout: fixed;
+
+	.card-col-content,
+	.card-col-field {
+		word-wrap: break-word;
+	}
 
 	.card-col-field {
 		width: auto;
@@ -184,29 +130,19 @@
 	}
 }
 
-[class*="card-col"] {
-	figure,
-	.figure {
-		height: 100%;
-		margin-bottom: 0;
-		width: 100%;
-	}
-}
+// Card Border Helpers
 
 .card-circle {
 	border-radius: $card-circle-border-radius;
 
-	.card-header,
-	.card-section,
-	.card-footer {
+	.card-col-content,
+	.card-col-field {
 		&:first-child {
-			border-top-left-radius: $card-circle-border-radius;
-			border-top-right-radius: $card-circle-border-radius;
+			border-radius: $card-circle-border-radius 0 0 $card-circle-border-radius;
 		}
 
 		&:last-child {
-			border-bottom-left-radius: $card-circle-border-radius;
-			border-bottom-right-radius: $card-circle-border-radius;
+			border-radius: 0 $card-circle-border-radius $card-circle-border-radius 0;
 		}
 	}
 }
@@ -214,17 +150,14 @@
 .card-rounded {
 	border-radius: $card-rounded-border-radius;
 
-	.card-header,
-	.card-section,
-	.card-footer {
+	.card-col-content,
+	.card-col-field {
 		&:first-child {
-			border-top-left-radius: $card-rounded-border-radius;
-			border-top-right-radius: $card-rounded-border-radius;
+			border-radius: $card-rounded-border-radius 0 0 $card-rounded-border-radius;
 		}
 
 		&:last-child {
-			border-bottom-left-radius: $card-rounded-border-radius;
-			border-bottom-right-radius: $card-rounded-border-radius;
+			border-radius: 0 $card-rounded-border-radius $card-rounded-border-radius 0;
 		}
 	}
 }
@@ -232,17 +165,14 @@
 .card-square {
 	border-radius: 0;
 
-	.card-header,
-	.card-section,
-	.card-footer {
+	.card-col-content,
+	.card-col-field {
 		&:first-child {
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
+			border-radius: 0;
 		}
 
 		&:last-child {
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 0;
+			border-radius: 0;
 		}
 	}
 }
@@ -266,14 +196,6 @@
 	margin-left: 0;
 	margin-top: 0;
 	z-index: 1;
-
-	&:checked,
-	&:focus {
-		~ .card {
-			border-color: rgba(red($card-border-focus), green($card-border-focus), blue($card-border-focus), 0.6);
-			box-shadow: 0 0 3px 2px rgba(red($card-border-focus), green($card-border-focus), blue($card-border-focus), 0.6);
-		}
-	}
 }
 
 .checkbox-bottom-left,
@@ -287,7 +209,7 @@
 			padding-left: $checkbox-left-card-padding;
 		}
 
-		.card-row {
+		> .card-row {
 			padding-left: $checkbox-left-card-padding;
 		}
 	}
@@ -304,7 +226,7 @@
 			padding-right: $checkbox-right-card-padding;
 		}
 
-		.card-row {
+		> .card-row {
 			padding-right: $checkbox-right-card-padding;
 		}
 	}
