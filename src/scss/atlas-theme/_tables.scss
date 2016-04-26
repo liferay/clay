@@ -5,12 +5,9 @@ th {
 	font-weight: $table-header-font-weight;
 }
 
-th,
-.table-list .table-cell-field {
-	color: $table-header-color;
-}
-
 .table-list {
+	color: $table-header-color;
+
 	tbody tr {
 		background-color: $table-list-body-row-bg;
 	}
