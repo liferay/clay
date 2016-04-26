@@ -129,6 +129,25 @@ th {
 	}
 }
 
+// Table Helpers
+
+.table-autofit {
+	th,
+	td {
+		width: 1%;
+	}
+
+	.table-cell-content {
+		width: auto;
+	}
+}
+
+.table-heading-nowrap {
+	th {
+		white-space: nowrap;
+	}
+}
+
 // Table Vertical Align
 
 .table-valign-bottom {
