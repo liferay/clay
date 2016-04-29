@@ -54,18 +54,23 @@ th {
 }
 
 .table-cell-content {
+	max-width: 100px;
 	min-width: 100px;
 	position: relative;
+	width: auto;
+	word-wrap: break-word;
+}
 
-	@include word-wrap;
+.table-responsive {
+	.table .table-cell-content {
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			white-space: normal;
+		}
+	}
 }
 
 .table-cell-field {
 	width: 1%;
-}
-
-.table-responsive .table-cell-content {
-	min-width: 200px;
 }
 
 // Table List Skin
@@ -130,9 +135,14 @@ th {
 // Table Helpers
 
 .table-autofit {
-	th,
-	td {
-		width: 1%;
+	> thead,
+	> tbody {
+		> tr {
+			> th,
+			> td {
+				width: 1%;
+			}
+		}
 	}
 
 	.table-cell-content {
@@ -140,20 +150,14 @@ th {
 	}
 }
 
-.table-heading-nowrap {
-	th {
+.table-heading-nowrap > thead > tr {
+	> th,
+	> td {
 		white-space: nowrap;
 	}
 }
 
 // Table Vertical Align
-
-.table-valign-bottom,
-.thead-valign-bottom {
-	thead .clamp-container {
-		bottom: 0;
-	}
-}
 
 .table-valign-bottom {
 	> thead > tr > th,

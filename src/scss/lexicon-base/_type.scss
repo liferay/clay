@@ -74,6 +74,8 @@ mark,
 	display: block;
 
 	@include text-overflow;
+
+	word-wrap: normal;
 }
 
 // Blockquote Variations
