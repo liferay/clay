@@ -5,43 +5,20 @@ section: Elements
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Vertical Alignment</h3>
+		<h3>Table List</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>We have added some classes to help vertically align contents inside a table. The classes <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> on <code>```<table>```</code> will vertically align table cell contents on the bottom, middle, and top, respectively.</p>
-
-			<p>The classes <code>thead-valign-bottom</code>, <code>thead-valign-middle</code>, and <code>thead-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table head.</p>
-
-			<p>The classes <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table body.</p>
+			<p>A table styled like a list. The active state can be invoked by adding class <code>active</code> to the <code>```<tr></tr>```</code> element. It is recommended that table-list's columns containing information of lesser importance be hidden in smaller screen sizes with <a href="http://getbootstrap.com/css/#responsive-utilities">Responsive Utilities</a> due to space constraints.</p>
+			<p>Class <code>table-bordered</code> not compatible with <code>table-list</code>.</p>
 		</blockquote>
 
-		<div class="row-spacing">
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignBottom">table-valign-bottom</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignMiddle">table-valign-middle</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignTop">table-valign-top</a>
-		</div>
-
-		<div class="row-spacing">
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignBottom">tbody-valign-bottom</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignMiddle">tbody-valign-middle</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignTop">tbody-valign-top</a>
-		</div>
-
-		<div class="row-spacing">
-			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignBottom">thead-valign-bottom</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignMiddle">thead-valign-middle</a>
-			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignTop">thead-valign-top</a>
-		</div>
-
-		<table class="table table-list table-autofit table-heading-nowrap" id="verticalAlignTableListDemo">
+		<table class="table table-list table-autofit">
 			<thead>
 				<tr>
 					<th></th>
 					<th class="hidden-sm hidden-xs">ID</th>
-					<th class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Description">Title</span>
-						</div>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Title</span>
 					</th>
 					<th class="hidden-sm hidden-xs">Status</th>
 					<th class="hidden-sm hidden-xs">Modified Date</th>
@@ -62,10 +39,8 @@ section: Elements
 						</div>
 					</td>
 					<td class="hidden-sm hidden-xs">21146</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
 					<td class="hidden-sm hidden-xs">--</td>
 					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
@@ -101,10 +76,8 @@ section: Elements
 					<td class="hidden-sm hidden-xs">
 						21148
 					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</td>
 					<td class="hidden-sm hidden-xs">--</td>
 					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
@@ -138,10 +111,8 @@ section: Elements
 						</div>
 					</td>
 					<td class="hidden-sm hidden-xs">21149</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 					</td>
 					<td class="hidden-sm hidden-xs">--</td>
 					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
@@ -175,10 +146,8 @@ section: Elements
 						</div>
 					</td>
 					<td class="hidden-sm hidden-xs">21150</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 					</td>
 					<td class="hidden-sm hidden-xs">--</td>
 					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
@@ -210,330 +179,38 @@ section: Elements
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Table Helpers</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>table-autofit</code> constrains table cells to be only as wide as its content, but must be used with <code>table-cell-content</code>. <code>table-cell-content</code> will fill the remaining space.</p>
-		</blockquote>
-
-		<div class="table-responsive">
-			<table class="table table-list table-autofit">
-				<thead>
-					<tr>
-						<th></th>
-						<th>ID</th>
-						<th class="clamp-horizontal table-cell-content">
-							<div class="clamp-container">
-								<span class="truncate-text" title="Description">Title</span>
-							</div>
-						</th>
-						<th>Status</th>
-						<th>Modified Date</th>
-						<th>Display Date</th>
-						<th>Author</th>
-						<th>Type</th>
-					</tr>
-				</thead>
-
-				<tbody>
-					<tr>
-						<td>
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</td>
-						<td>21146</td>
-						<td class="clamp-horizontal table-cell-content">
-							<div class="clamp-container">
-								<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-							</div>
-						</td>
-						<td>--</td>
-						<td>2 Hours Ago</td>
-						<td>--</td>
-						<td>Stanley Nelson</td>
-						<td>Folder</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>table-heading-nowrap</code> keeps headings on one line.</p>
-		</blockquote>
-
-		<div class="table-responsive">
-			<table class="table table-list table-autofit table-heading-nowrap">
-				<thead>
-					<tr>
-						<th></th>
-						<th>ID</th>
-						<th class="clamp-horizontal table-cell-content">
-							<div class="clamp-container">
-								<span class="truncate-text" title="Description">Title</span>
-							</div>
-						</th>
-						<th>Status</th>
-						<th>Modified Date</th>
-						<th>Display Date</th>
-						<th>Author</th>
-						<th>Type</th>
-					</tr>
-				</thead>
-
-				<tbody>
-					<tr>
-						<td>
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</td>
-						<td>21146</td>
-						<td class="clamp-horizontal table-cell-content">
-							<div class="clamp-container">
-								<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-							</div>
-						</td>
-						<td>--</td>
-						<td>2 Hours Ago</td>
-						<td>--</td>
-						<td>Stanley Nelson</td>
-						<td>Folder</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3>Table List</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>A table styled like a list. The active state can be invoked by adding class <code>active</code> to the <code>```<tr></tr>```</code> element. It is recommended that table-list's columns containing information of lesser importance be hidden in smaller screen sizes with <a href="http://getbootstrap.com/css/#responsive-utilities">Responsive Utilities</a> due to space constraints.</p>
-			<p>Class <code>table-bordered</code> not compatible with <code>table-list</code>.</p>
-		</blockquote>
-
-		<div class="alert alert-warning">Truncating text inside a table requires the use of the <a href="../cards/#truncating-text-inside-horizontal-card-without-card-row-layout-fixed">clamp component</a>.</div>
-
-		<table class="table table-list">
-			<thead>
-				<tr>
-					<th class="table-cell-field"></th>
-					<th class="hidden-sm hidden-xs table-cell-field">ID</th>
-					<th class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Description">Title</span>
-						</div>
-					</th>
-					<th class="hidden-sm hidden-xs table-cell-field">Status</th>
-					<th class="hidden-sm hidden-xs table-cell-field">Modified Date</th>
-					<th class="hidden-sm hidden-xs table-cell-field">Display Date</th>
-					<th class="table-cell-field">Author</th>
-					<th class="hidden-sm hidden-xs table-cell-field">Type</th>
-					<th class="table-cell-field"></th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<tr>
-					<td class="table-cell-field">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
-							</label>
-						</div>
-					</td>
-					<td class="hidden-sm hidden-xs table-cell-field">21146</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-						</div>
-					</td>
-					<td class="hidden-sm hidden-xs table-cell-field">--</td>
-					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs table-cell-field">--</td>
-					<td class="table-cell-field">Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
-					<td class="table-cell-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr class="active">
-					<td class="table-cell-field">
-						<div class="checkbox">
-							<label>
-								<input checked type="checkbox" value="">
-							</label>
-						</div>
-					</td>
-					<td class="hidden-sm hidden-xs table-cell-field">
-						21148
-					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
-						</div>
-					</td>
-					<td class="hidden-sm hidden-xs table-cell-field">--</td>
-					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs table-cell-field">--</td>
-					<td class="table-cell-field">Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
-					<td class="table-cell-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="table-cell-field">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
-							</label>
-						</div>
-					</td>
-					<td class="hidden-sm hidden-xs table-cell-field">21149</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
-						</div>
-					</td>
-					<td class="hidden-sm hidden-xs table-cell-field">--</td>
-					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs table-cell-field">--</td>
-					<td class="table-cell-field">Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
-					<td class="table-cell-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class="table-cell-field">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
-							</label>
-						</div>
-					</td>
-					<td class="hidden-sm hidden-xs table-cell-field">21150</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
-						</div>
-					</td>
-					<td class="hidden-sm hidden-xs table-cell-field">--</td>
-					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs table-cell-field">--</td>
-					<td class="table-cell-field">Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
-					<td class="table-cell-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
 		<h3>Table List Striped</h3>
 
-		<table class="table table-list table-striped">
+		<table class="table table-list table-striped table-autofit">
 			<thead>
 				<tr>
-					<th class="table-cell-field"></th>
-					<th class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Description">Description</span>
-						</div>
+					<th></th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Description</span>
 					</th>
-					<th class="table-cell-field">Format</th>
-					<th class="table-cell-field">Label</th>
-					<th class="table-cell-field">Label</th>
-					<th class="table-cell-field"></th>
+					<th>Format</th>
+					<th>Label</th>
+					<th>Label</th>
+					<th></th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<tr>
-					<td class="table-cell-field">
+					<td>
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field">
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
@@ -552,22 +229,20 @@ section: Elements
 					</td>
 				</tr>
 				<tr>
-					<td class="table-cell-field">
+					<td>
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field">
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
@@ -586,22 +261,20 @@ section: Elements
 					</td>
 				</tr>
 				<tr>
-					<td class="table-cell-field">
+					<td>
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field">
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
@@ -620,22 +293,20 @@ section: Elements
 					</td>
 				</tr>
 				<tr>
-					<td class="table-cell-field">
+					<td>
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field">
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
@@ -662,40 +333,36 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Table List Hover</h3>
 
-		<table class="table table-hover table-list">
+		<table class="table table-hover table-list table-autofit">
 			<thead>
 				<tr>
-					<th class="table-cell-field"></th>
-					<th class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Description">Description</span>
-						</div>
+					<th></th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Description</span>
 					</th>
-					<th class="table-cell-field">Format</th>
-					<th class="table-cell-field">Label</th>
-					<th class="table-cell-field">Label</th>
-					<th class="table-cell-field"></th>
+					<th>Format</th>
+					<th>Label</th>
+					<th>Label</th>
+					<th></th>
 				</tr>
 			</thead>
 
 			<tbody>
 				<tr>
-					<td class="table-cell-field">
+					<td>
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field">
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
@@ -714,22 +381,20 @@ section: Elements
 					</td>
 				</tr>
 				<tr class="active">
-					<td class="table-cell-field">
+					<td>
 						<div class="checkbox">
 							<label>
 								<input checked type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field">
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
@@ -748,22 +413,20 @@ section: Elements
 					</td>
 				</tr>
 				<tr>
-					<td class="table-cell-field">
+					<td>
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field">
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
@@ -782,22 +445,20 @@ section: Elements
 					</td>
 				</tr>
 				<tr>
-					<td class="table-cell-field">
+					<td>
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="clamp-horizontal table-cell-content">
-						<div class="clamp-container">
-							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
-						</div>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 					</td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field"><a href="#1">jpg</a></td>
-					<td class="table-cell-field">
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td><a href="#1">jpg</a></td>
+					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 								<svg class="icon-monospaced lexicon-icon">
@@ -817,6 +478,296 @@ section: Elements
 				</tr>
 			</tbody>
 		</table>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Table Helpers</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>table-autofit</code> constrains table columns to be only as wide as its content, but must be used with <code>table-cell-content</code>. <code>table-cell-content</code> will fill the remaining space.</p>
+		</blockquote>
+
+		<div class="table-responsive">
+			<table class="table table-autofit">
+				<thead>
+					<tr>
+						<th></th>
+						<th>ID</th>
+						<th class="table-cell-content">
+							<span class="truncate-text" title="Description">Title</span>
+						</th>
+						<th>Status</th>
+						<th>Modified Date</th>
+						<th>Display Date</th>
+						<th>Author</th>
+						<th>Type</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">
+								</label>
+							</div>
+						</td>
+						<td>21146</td>
+						<td class="table-cell-content">
+							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</td>
+						<td>--</td>
+						<td>2 Hours Ago</td>
+						<td>--</td>
+						<td>Stanley Nelson</td>
+						<td>Folder</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p><code>table-heading-nowrap</code> keeps headings on one line.</p>
+		</blockquote>
+
+		<div class="table-responsive">
+			<table class="table table-autofit table-heading-nowrap">
+				<thead>
+					<tr>
+						<th></th>
+						<th>ID</th>
+						<th class="table-cell-content">
+							<span class="truncate-text" title="Description">Title</span>
+						</th>
+						<th>Status</th>
+						<th>Modified Date</th>
+						<th>Display Date</th>
+						<th>Author</th>
+						<th>Type</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">
+								</label>
+							</div>
+						</td>
+						<td>21146</td>
+						<td class="table-cell-content">
+							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</td>
+						<td>--</td>
+						<td>2 Hours Ago</td>
+						<td>--</td>
+						<td>Stanley Nelson</td>
+						<td>Folder</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Vertical Alignment</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>We have added some classes to help vertically align contents inside a table. The classes <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> on <code>```<table>```</code> will vertically align table cell contents on the bottom, middle, and top, respectively.</p>
+
+			<p>The classes <code>thead-valign-bottom</code>, <code>thead-valign-middle</code>, and <code>thead-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table head.</p>
+
+			<p>The classes <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table body.</p>
+		</blockquote>
+
+		<div class="row-spacing">
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignBottom">table-valign-bottom</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignMiddle">table-valign-middle</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignTop">table-valign-top</a>
+		</div>
+
+		<div class="row-spacing">
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignBottom">tbody-valign-bottom</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignMiddle">tbody-valign-middle</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignTop">tbody-valign-top</a>
+		</div>
+
+		<div class="row-spacing">
+			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignBottom">thead-valign-bottom</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignMiddle">thead-valign-middle</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignTop">thead-valign-top</a>
+		</div>
+
+		<table class="table table-list table-autofit table-heading-nowrap" id="verticalAlignTableListDemo">
+			<thead>
+				<tr>
+					<th></th>
+					<th class="hidden-sm hidden-xs">ID</th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Title</span>
+					</th>
+					<th class="hidden-sm hidden-xs">Status</th>
+					<th class="hidden-sm hidden-xs">Modified Date</th>
+					<th class="hidden-sm hidden-xs">Display Date</th>
+					<th>Author</th>
+					<th class="hidden-sm hidden-xs">Type</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr class="active">
+					<td>
+						<div class="checkbox">
+							<label>
+								<input checked type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">
+						21148
+					</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">21149</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs">21150</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+					</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs">--</td>
+					<td>Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
 	</div>
 </div>
 
