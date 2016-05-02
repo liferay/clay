@@ -58,6 +58,7 @@ th {
 	min-width: 100px;
 	position: relative;
 	width: auto;
+	word-break: break-all \ ; // IE 8, 9
 	word-wrap: break-word;
 }
 
