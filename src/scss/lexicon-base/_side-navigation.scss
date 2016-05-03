@@ -95,14 +95,6 @@
 
 // Simple Sidenav
 
-.body-fixed {
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-}
-
 .sidenav-fixed.sidenav-menu-slider {
 	bottom: 0;
 	left: 0;
@@ -113,14 +105,16 @@
 		visibility: hidden;
 		width: 0;
 	}
-
-	&,
-	.sidenav-menu {
-		width: 400px;
-	}
 }
 
 .sidenav-fixed.sidenav-menu-slider.sidenav-right {
 	left: auto;
 	right: 0;
+}
+
+.sidenav-menu-slider {
+	&,
+	.sidenav-menu {
+		width: 320px;
+	}
 }
