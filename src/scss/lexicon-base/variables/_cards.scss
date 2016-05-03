@@ -10,7 +10,7 @@ $checkbox-position: 15px !default;
 
 // Skin
 
-$card-bg: #FFF !default;
+$card-bg: $dropdown-bg !default;
 $card-border: $gray-lighter !default;
 $card-border-radius: $border-radius-base !default;
 
