@@ -27,10 +27,6 @@
 	word-wrap: break-word;
 }
 
-.card-horizontal {
-	position: relative;
-}
-
 // Card Simple Grid
 
 .card-col-content,
@@ -45,6 +41,14 @@
 		margin-bottom: 0;
 		width: 100%;
 	}
+}
+
+.card-col-content {
+	max-width: 10px;
+	position: relative;
+	width: auto;
+	word-break: break-all \ ; // IE 8, 9
+	word-wrap: break-word;
 }
 
 .card-col-field {
