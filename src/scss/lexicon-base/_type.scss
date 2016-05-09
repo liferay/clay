@@ -73,7 +73,7 @@ mark,
 td,
 th {
 	.truncate-text {
-		white-space: normal \ ; // IE 8, 9
+		white-space: normal \9; // IE 8, 9
 	}
 }
 
@@ -82,7 +82,7 @@ th {
 
 	@include text-overflow;
 
-	word-break: normal \ ; // IE 8, 9
+	word-break: normal \9; // IE 8, 9
 	word-wrap: normal;
 }
 
