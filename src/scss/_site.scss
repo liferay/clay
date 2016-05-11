@@ -613,13 +613,6 @@ body.fixed {
 
 // Site Main Nav
 
-#wrapper.open,
-#wrapper.simple-sidenav-2-open {
-	@media screen and (min-width: $grid-float-breakpoint) {
-		padding-left: 320px;
-	}
-}
-
 .side-navigation-data-api-buttons {
 	margin-bottom: 15px;
 
@@ -829,6 +822,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Side Navigation Component Page
+
+body {
+	left: 0;
+	position: relative;
+}
+
+body.open {
+	left: 320px;
+	overflow: hidden;
+}
+
+body.sidenav-transition {
+	overflow: hidden;
+}
 
 #mySidebar {
 	background-color: #222328;
