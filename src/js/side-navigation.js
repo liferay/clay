@@ -114,6 +114,7 @@
 			// instantiate using data attribute
 
 			if (useDataAttribute) {
+				options.closedClass = toggler.data('closed-class') || 'closed';
 				options.content = toggler.data('content');
 				options.equalHeight = false;
 				options.loadingIndicatorTPL = toggler.data('loading-indicator-tpl') || options.loadingIndicatorTPL;
@@ -230,6 +231,7 @@
 				var content = $(options.content).first();
 				var sidenav = $(options.container);
 
+				var closedClass = options.closedClass;
 				var openClass = options.openClass;
 
 				var toggler = instance.toggler;
@@ -249,11 +251,14 @@
 					});
 				});
 
-				content.addClass('sidenav-transition');
-				sidenav.addClass('sidenav-transition closed');
+				if (content.hasClass(openClass)) {
+					content.addClass('sidenav-transition').addClass(closedClass).removeClass(openClass);
+				}
+
+				sidenav.addClass('sidenav-transition');
 				toggler.addClass('sidenav-transition');
 
-				content.removeClass(openClass);
+				sidenav.addClass(closedClass).removeClass(openClass);
 				toggler.removeClass(openClass).removeClass('active');
 			}
 		},
@@ -354,6 +359,7 @@
 				var content = $(options.content).first();
 				var sidenav = $(options.container);
 
+				var closedClass = options.closedClass;
 				var openClass = options.openClass;
 
 				var toggler = options.toggler;
@@ -383,15 +389,14 @@
 				});
 
 				sidenav.addClass('sidenav-transition');
-				toggler.addClass('sidenav-transition').addClass('active');
+				toggler.addClass('sidenav-transition');
 
 				if (desktopFixedPush || mobileFixedPush) {
-					content.addClass('sidenav-transition');
-					content.addClass(openClass);
-					toggler.addClass(openClass);
+					content.addClass('sidenav-transition').addClass(openClass).removeClass(closedClass);
 				}
 
-				sidenav.removeClass('closed');
+				sidenav.addClass(openClass).removeClass(closedClass);
+				toggler.addClass('active').addClass(openClass);
 			}
 		},
 
@@ -475,8 +480,8 @@
 
 			instance[widthMethod](container);
 
-			container.addClass('sidenav-transition').toggleClass('closed', !closed);
-			toggler.addClass('sidenav-transition').toggleClass('active', closed);
+			container.addClass('sidenav-transition').toggleClass('closed', !closed).toggleClass('open', closed);
+			toggler.addClass('sidenav-transition').toggleClass('active', closed).toggleClass('open', closed);
 		},
 
 		toggleSimpleSidenav: function() {
@@ -586,10 +591,13 @@
 
 		_isSimpleSidenavClosed: function() {
 			var instance = this;
+			var options = instance.options;
 
-			var container = $(instance.options.container);
+			var openClass = options.openClass;
 
-			return container.hasClass('closed');
+			var container = $(options.container);
+
+			return !container.hasClass(openClass);
 		},
 
 		_loadUrl: function(sidenav, url, eventTarget) {
@@ -639,10 +647,6 @@
 
 				doc.on('click.close.lexicon.sidenav', closeButtonSelector, function(event) {
 					event.preventDefault();
-
-					if (!instance.useDataAttribute) {
-						instance.toggler = container;
-					}
 
 					instance.toggle();
 				});
@@ -697,6 +701,7 @@
 			var options = instance.options;
 
 			var container = $(options.container);
+			var toggler = instance.toggler;
 
 			var screenStartDesktop = instance._setScreenSize();
 
@@ -721,7 +726,8 @@
 					instance.hideSidenav();
 					instance.clearStyle('min-height');
 
-					container.addClass('closed');
+					container.addClass('closed').removeClass('open');
+					toggler.removeClass('active').removeClass('open');
 
 					screenStartDesktop = false;
 
@@ -814,13 +820,15 @@
 			var options = instance.options;
 
 			var container = $(options.container);
+			var toggler = instance.toggler;
 
 			var mobile = instance.mobile;
 			var type = mobile ? options.typeMobile : options.type;
 
 			if (!instance.useDataAttribute) {
 				if (mobile) {
-					container.addClass('closed');
+					container.addClass('closed').removeClass('open');
+					toggler.removeClass('active').removeClass('open');
 				}
 
 				if (options.position === 'right') {
