@@ -708,6 +708,7 @@
 				var fixedMenu = type === 'fixed' || type === 'fixed-push';
 
 				var menu = container.find('.sidenav-menu').first();
+				var navigation = container.find(options.navigation).first();
 
 				var menuWidth;
 
@@ -734,6 +735,8 @@
 					}
 				}
 
+				var closed = container.hasClass('closed');
+
 				if (!desktop) {
 					menuWidth = originalMenuWidth;
 
@@ -742,13 +745,17 @@
 					}
 
 					if (sidenavRight) {
-						menu.css(positionDirection, menuWidth).css('width', menuWidth);
+						if (closed) {
+							menu.css(positionDirection, menuWidth);
+						}
+
+						menu.css('width', menuWidth);
 					}
 
 					screenStartDesktop = false;
 				}
 
-				if (!container.hasClass('closed')) {
+				if (!closed) {
 					instance.clearStyle('min-height');
 					instance.showSidenav();
 					instance.setEqualHeight();
