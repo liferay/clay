@@ -1,161 +1,139 @@
 /**
-* Lexicon 0.2.7
+* Lexicon 0.2.14
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
 +function($) {
-	var CollapsibleSearch = function(element, options) {
-		this.init(element, options);
+	var CollapsibleSearch = function(element) {
+		var instance = this;
+
+		instance.$element = $(element);
+		instance.$close = instance.$element.find('.basic-search-close');
+		instance.$input = instance.$element.find('input[type="text"]');
+		instance.$submit = instance.$element.find('[type="submit"]');
+
+		instance.$close.on('click.lexicon.close.collapsible-search', $.proxy(instance.close, instance));
+		instance.$input.on('blur.lexicon.collapsible-search', $.proxy(instance.blur, instance));
+		instance.$input.on('focus.lexicon.collapsible-search', $.proxy(instance.focus, instance));
+		instance.$submit.on('click.lexicon.submit.collapsible-search', $.proxy(instance.submit, instance));
 	};
 
+	CollapsibleSearch.BREAKPOINT = 768;
+	CollapsibleSearch.TRANSITION_DURATION = 500;
+
 	CollapsibleSearch.prototype = {
-		init: function(element, options) {
-			var instance = this;
+		blur: function(event) {
+			var $input = $(event.currentTarget);
 
-			options = $.extend({}, $.fn.collapsibleSearch.defaults, options);
-			options.selector = element.selector;
-			options.transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
-
-			instance.options = options;
-
-			instance.basicSearch = element.find('.basic-search');
-			instance.searchInput = instance.basicSearch.find('input[type="text"]');
-
-			instance._bindUI(element);
+			$input.closest('.basic-search').removeClass('focus');
 		},
 
-		_bindUI: function(element) {
+		close: function(event) {
 			var instance = this;
 
-			instance._onSearchInputBlur(element);
-			instance._onClickSubmitButton(element);
-			instance._onSearchInputFocus(element);
+			var basicSearch = $(event.currentTarget).closest('.basic-search');
+			var basicSearchSlider = basicSearch.find('.basic-search-slider');
+			var basicSearchSubmit = basicSearch.find('[type="submit"]');
+
+			var complete = function() {
+				basicSearch.removeClass('basic-search-transition');
+
+				basicSearch.trigger('closed.lexicon.collapsible.search');
+			};
+
+			if (!$.support.transition) {
+				return complete.call(instance);
+			}
+
+			basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
+				.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+
+			basicSearch.addClass('basic-search-transition').removeClass('open');
+
+			basicSearchSubmit.focus();
 		},
 
-		_onSearchInputBlur: function(element) {
+		destroy: function() {
 			var instance = this;
 
-			var searchInput = instance.searchInput;
-
-			searchInput.on('blur', function(event) {
-				$(this).closest('.basic-search').removeClass('focus');
-			});
+			instance.$close.off('click.lexicon.close.collapsible-search');
+			instance.$input.off('blur.lexicon.collapsible-search');
+			instance.$input.off('focus.lexicon.collapsible-search');
+			instance.$submit.off('click.lexicon.submit.collapsible-search');
 		},
 
-		_onSearchInputFocus: function(element) {
-			var instance = this;
-
-			var searchInput = instance.searchInput;
-
-			searchInput.on('focus', function(event) {
-				$(this).closest('.basic-search').addClass('focus');
-			});
+		focus: function(event) {
+			$(event.currentTarget).closest('.basic-search').addClass('focus');
 		},
 
-		_onClickCloseButton: function(basicSearch) {
+		submit: function(event) {
 			var instance = this;
 
-			basicSearch.on('click', '.basic-search-close', function(event) {
-				var basicSearch = $(this).closest('.basic-search');
+			if (window.innerWidth < CollapsibleSearch.BREAKPOINT) {
+				var basicSearch = $(event.currentTarget).parents('.basic-search');
+				var basicSearchInput = basicSearch.find('input[type="text"]');
+				var basicSearchSlider = basicSearch.find('.basic-search-slider');
 
-				basicSearch.data('lexicon.collapsible-search-open', false);
-
-				basicSearch.addClass('basic-search-transition');
-
-				instance._onTransitionEnd(basicSearch);
-
-				basicSearch.removeClass('open');
-				basicSearch.find('[type="submit"]').focus();
-				basicSearch.off('click');
-			});
-		},
-
-		_onClickSubmitButton: function(element) {
-			var instance = this;
-
-			var submitButton = instance.basicSearch.find('[type="submit"]');
-
-			submitButton.on('click', function(event) {
-				if (window.innerWidth < instance.options.breakpoint) {
-					var basicSearch = $(this).parents('.basic-search');
-
-					instance._onTransitionEnd(basicSearch);
-
-					instance._onClickCloseButton(basicSearch);
-
-					if (!basicSearch.hasClass('open')) {
-						event.preventDefault();
-
-						basicSearch.data('lexicon.collapsible-search-open', true);
-						basicSearch.addClass('open');
-						basicSearch.addClass('basic-search-transition');
-					}
-				}
-			});
-		},
-
-		_onTransitionEnd: function(basicSearch) {
-			var instance = this;
-
-			var transitionEnd = instance.options.transitionEnd;
-
-			basicSearch.find('.basic-search-slider').on(transitionEnd, function(event) {
-				var basicSearch = $(this).closest('.basic-search');
-
-				if ($(event.target).is('.basic-search-slider')) {
+				var complete = function() {
 					basicSearch.removeClass('basic-search-transition');
+					basicSearchInput.focus();
 
-					if (basicSearch.data('lexicon.collapsible-search-open')) {
-						basicSearch.find('input[type="text"]').focus();
-					}
+					basicSearch.trigger('open.lexicon.collapsible.search');
+				};
 
-					$(this).off(transitionEnd);
+				if (!$.support.transition) {
+					return complete.call(instance);
 				}
-			});
+
+				if (!basicSearch.hasClass('open')) {
+					event.preventDefault();
+
+					basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
+						.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+
+					basicSearch.addClass('basic-search-transition').addClass('open');
+				}
+			}
 		}
+	};
+
+	var Plugin = function(option) {
+		return this.each(function() {
+			var $this = $(this);
+			var data = $this.data('lexicon.collapsible-search');
+
+			if (!data) {
+				data = new CollapsibleSearch(this);
+
+				$this.data('lexicon.collapsible-search', data);
+			}
+
+			if (typeof option == 'string') {
+				data[option]();
+			}
+		});
 	};
 
 	var old = $.fn.collapsibleSearch;
 
-	var Plugin = function(options) {
-		return this.each(
-			function() {
-				var $this = $(this);
+	$.fn.collapsibleSearch = Plugin;
+	$.fn.collapsibleSearch.Constructor = CollapsibleSearch;
 
-				var data = $this.data('lexicon.collapsible-search');
-
-				if ($this.is('[data-toggle="collapsible-search"]')) {
-					options = {
-						breakpoint: $this.data('breakpoint')
-					};
-				}
-
-				if (!data) {
-					data = new CollapsibleSearch($this, typeof options === 'object' ? options : null);
-
-					$this.data('lexicon.collapsible-search', data);
-				}
-			}
-		);
-	};
-
-	Plugin.noConflict = function() {
+	$.fn.collapsibleSearch.noConflict = function() {
 		$.fn.collapsibleSearch = old;
 
 		return this;
 	};
 
-	Plugin.defaults = {
-		breakpoint: 768
-	};
+	var close = '[data-toggle="collapsible-search"] .basic-search-close';
+	var input = '[data-toggle="collapsible-search"] input[type="text"]';
+	var submit = '[data-toggle="collapsible-search"] [type="submit"]';
 
-	Plugin.Constructor = CollapsibleSearch;
-
-	$.fn.collapsibleSearch = Plugin;
-
-	$(function() {
-		Plugin.call($('[data-toggle="collapsible-search"]'));
-	});
+	$(document)
+		.on('blur.lexicon.collapsible-search.data-api', input, $.proxy(CollapsibleSearch.prototype.blur, CollapsibleSearch))
+		.on('click.lexicon.close.collapsible-search.data-api', close, $.proxy(CollapsibleSearch.prototype.close, CollapsibleSearch))
+		.on('click.lexicon.submit.collapsible-search.data-api', submit, $.proxy(CollapsibleSearch.prototype.submit, CollapsibleSearch))
+		.on('focus.lexicon.collapsible-search.data-api', input, $.proxy(CollapsibleSearch.prototype.focus, CollapsibleSearch));
 }(jQuery);

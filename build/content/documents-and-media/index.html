@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.7</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -151,8 +151,6 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/tab-groups">Tab Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
@@ -193,8 +191,6 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/extending-tab-groups">Extending Tab Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
@@ -225,9 +221,9 @@
 		
 <div class="row" id="documentsAndMediaExample">
 	<div class="col-md-12">
-		<div class="sidenav-container closed" id="documentsAndMediaSidenav">
+		<div class="closed sidenav-container" id="documentsAndMediaSidenav">
 			<div class="sidenav-menu-slider">
-				<div class="sidenav-menu sidebar sidebar-inverse">
+				<div class="sidebar sidebar-inverse sidenav-menu">
 					<div class="sidebar-header">
 						<h4>
 							<a href="#1">
@@ -253,28 +249,28 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>From</label>
-										<input class="form-control" type="text" placeholder="City or Airport">
+										<input class="form-control" placeholder="City or Airport" type="text">
 									</div>
 								</div>
 
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>To</label>
-										<input class="form-control" type="text" placeholder="City or Airport">
+										<input class="form-control" placeholder="City or Airport" type="text">
 									</div>
 								</div>
 
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>Departing</label>
-										<input class="form-control" type="text" placeholder="Departing Date">
+										<input class="form-control" placeholder="Departing Date" type="text">
 									</div>
 								</div>
 
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>Returning</label>
-										<input class="form-control" type="text" placeholder="Returning Date">
+										<input class="form-control" placeholder="Returning Date" type="text">
 									</div>
 								</div>
 
@@ -317,7 +313,7 @@
 								</div>
 
 								<div class="col-md-12">
-									<button class="btn btn-success btn-md">Search Flights</button>
+									<button class="btn btn-md btn-success">Search Flights</button>
 								</div>
 							</div>
 						</form>
@@ -351,7 +347,7 @@
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1" id="documentsAndMediaToggler">
+								<a class="sidenav-toggler" href="#documentsAndMediaSidenav" id="documentsAndMediaToggler">
 									<svg class="icon-monospaced lexicon-icon">
 										<use xlink:href="../../images/icons/icons.svg#bars">
 									</svg>
@@ -376,13 +372,13 @@
 							</div>
 						</div>
 
-						<div class="toolbar-group-expand-text text-center">
+						<div class="text-center toolbar-group-expand-text">
 							<span>Documents and Media</span>
 						</div>
 					</div>
 				</header>
 
-				<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search">
+				<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
 					<div class="container-fluid-1280">
 						<ul class="nav navbar-nav">
 							<li><a href="#1">All Posts</a></li>
@@ -393,7 +389,7 @@
 				<form action="" method="post">
 					<div class="management-bar management-bar-default management-bar-no-collapse">
 						<div class="container-fluid-1280">
-							<ul class="nav management-bar-nav">
+							<ul class="management-bar-nav nav">
 								<li>
 									<div class="checkbox">
 										<label>
@@ -406,9 +402,9 @@
 								</li>
 							</ul>
 
-							<ul class="nav management-bar-nav management-bar-nav-right">
+							<ul class="management-bar-nav management-bar-nav-right nav">
 								<li>
-									<a class="btn btn-default" href="#" id="documentsAndMediaRightSidenavToggler">
+									<a class="btn btn-default" href="#documentsAndMediaRightSidenav" id="documentsAndMediaRightSidenavToggler">
 										<span class="icon-info-sign icon-monospaced"></span>
 									</a>
 								</li>
@@ -438,9 +434,9 @@
 
 					<div class="container-fluid-1280 sidenav-container" id="documentsAndMediaRightSidenav">
 						<div class="sidenav-menu-slider">
-							<div class="sidenav-menu sidebar sidebar-default">
+							<div class="sidebar sidebar-default sidenav-menu">
 								<div class="sidebar-header">
-									<ul class="list-unstyled list-inline sidebar-header-actions">
+									<ul class="list-inline list-unstyled sidebar-header-actions">
 										<li>
 											<a href="#1">
 												<svg class="icon-monospaced lexicon-icon">
@@ -470,10 +466,10 @@
 										<span>Approved<span>
 									</span></span></h5>
 								</div>
-								<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search">
+								<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
 									<ul class="nav navbar-nav">
 										<li class="active dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Details <span class="caret"></span></a>
+											<a aria-expanded="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
 											<ul class="dropdown-menu" role="menu">
 												<li><a href="#">Details</a></li>
 												<li><a href="#">Versions</a></li>
@@ -486,7 +482,7 @@
 								<div class="sidebar-body">
 									<div class="sidebar-panel">
 										<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_hot_air_ballon.jpg">
-										<div class="sticker sticker-danger sticker-bottom">PDF</div>
+										<div class="sticker sticker-bottom sticker-danger">PDF</div>
 									</div>
 
 									<dl>
@@ -541,7 +537,7 @@
 								<li class="active"><span title="Data">Data</span></li>
 							</ul>
 
-							<ul class="row list-unstyled">
+							<ul class="list-unstyled row">
 								<li class="col-md-6">
 									<div class="checkbox checkbox-card checkbox-middle-left">
 										<label>
@@ -691,36 +687,41 @@
 								</li>
 							</ul>
 
-							<ul class="row list-unstyled" id="cardSection">
-								<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-									<div class="checkbox toggle-card-dm">
+							<ul class="list-unstyled row" id="cardSection">
+								<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+									<div class="checkbox checkbox-card checkbox-top-left">
 										<label>
 											<input type="checkbox" value="">
-											<div class="toggle-card-container card card-dm">
+											<div class="card">
 												<div class="aspect-ratio">
 													<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-													<span class="sticker sticker-warning sticker-bottom">PNG</span>
+													<span class="sticker sticker-bottom sticker-warning">PNG</span>
 												</div>
-												<div class="card-footer">
-													<div class="dropdown card-dm-more-options">
-														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg class="icon-monospaced lexicon-icon">
-																<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-															</svg>
-														</a>
-														<ul class="dropdown-menu dropdown-menu-right">
-															<li><a href="#1">Download</a></li>
-															<li><a href="#1">Edit</a></li>
-															<li><a href="#1">Move</a></li>
-															<li><a href="#1">Checkout</a></li>
-															<li><a href="#1">Permissions</a></li>
-															<li><a href="#1">Move to Recycle Bin</a></li>
-														</ul>
+
+												<div class="card-row card-row-padded card-row-valign-top">
+													<div class="card-col-content clamp-horizontal" style="height: 75px;">
+														<div class="clamp-container">
+															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+															<span class="truncate-text">Approved</span>
+														</div>
 													</div>
-													<div class="card-dm-details">
-														<div class="card-dm-text">Aldcott Gage George Polwarth-Kitchener</div>
-														<div class="card-dm-text-large" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-														<div class="card-dm-text-small">Approved</div>
+													<div class="card-col-field">
+														<div class="dropdown">
+															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+																<svg class="icon-monospaced lexicon-icon">
+																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+																</svg>
+															</a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#1">Download</a></li>
+																<li><a href="#1">Edit</a></li>
+																<li><a href="#1">Move</a></li>
+																<li><a href="#1">Checkout</a></li>
+																<li><a href="#1">Permissions</a></li>
+																<li><a href="#1">Move to Recycle Bin</a></li>
+															</ul>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -728,35 +729,40 @@
 									</div>
 								</li>
 
-								<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-									<div class="checkbox toggle-card-dm">
+								<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+									<div class="checkbox checkbox-card checkbox-top-left">
 										<label>
 											<input type="checkbox" value="">
-											<div class="toggle-card-container card card-dm">
+											<div class="card">
 												<div class="aspect-ratio">
 													<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-													<span class="sticker sticker-default sticker-bottom">TXT</span>
+													<span class="sticker sticker-bottom sticker-warning">PNG</span>
 												</div>
-												<div class="card-footer">
-													<div class="dropdown card-dm-more-options">
-														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg class="icon-monospaced lexicon-icon">
-																<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-															</svg>
-														</a>
-														<ul class="dropdown-menu dropdown-menu-right">
-															<li><a href="#1">Download</a></li>
-															<li><a href="#1">Edit</a></li>
-															<li><a href="#1">Move</a></li>
-															<li><a href="#1">Checkout</a></li>
-															<li><a href="#1">Permissions</a></li>
-															<li><a href="#1">Move to Recycle Bin</a></li>
-														</ul>
+
+												<div class="card-row card-row-padded card-row-valign-top">
+													<div class="card-col-content clamp-horizontal" style="height: 75px;">
+														<div class="clamp-container">
+															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+															<span class="truncate-text">Approved</span>
+														</div>
 													</div>
-													<div class="card-dm-details">
-														<div class="card-dm-text">Aldcott Gage George Polwarth-Kitchener</div>
-														<div class="card-dm-text-large" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-														<div class="card-dm-text-small">Approved</div>
+													<div class="card-col-field">
+														<div class="dropdown">
+															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+																<svg class="icon-monospaced lexicon-icon">
+																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+																</svg>
+															</a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#1">Download</a></li>
+																<li><a href="#1">Edit</a></li>
+																<li><a href="#1">Move</a></li>
+																<li><a href="#1">Checkout</a></li>
+																<li><a href="#1">Permissions</a></li>
+																<li><a href="#1">Move to Recycle Bin</a></li>
+															</ul>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -764,35 +770,40 @@
 									</div>
 								</li>
 
-								<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-									<div class="checkbox toggle-card-dm">
+								<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+									<div class="checkbox checkbox-card checkbox-top-left">
 										<label>
 											<input type="checkbox" value="">
-											<div class="toggle-card-container card card-dm">
+											<div class="card">
 												<div class="aspect-ratio">
 													<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-													<span class="sticker sticker-danger sticker-bottom">PDF</span>
+													<span class="sticker sticker-bottom sticker-warning">PNG</span>
 												</div>
-												<div class="card-footer">
-													<div class="dropdown card-dm-more-options">
-														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-																<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-															</svg>
-														</a>
-														<ul class="dropdown-menu dropdown-menu-right">
-															<li><a href="#1">Download</a></li>
-															<li><a href="#1">Edit</a></li>
-															<li><a href="#1">Move</a></li>
-															<li><a href="#1">Checkout</a></li>
-															<li><a href="#1">Permissions</a></li>
-															<li><a href="#1">Move to Recycle Bin</a></li>
-														</ul>
+
+												<div class="card-row card-row-padded card-row-valign-top">
+													<div class="card-col-content clamp-horizontal" style="height: 75px;">
+														<div class="clamp-container">
+															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+															<span class="truncate-text">Approved</span>
+														</div>
 													</div>
-													<div class="card-dm-details">
-														<div class="card-dm-text">Aldcott Gage George Polwarth-Kitchener</div>
-														<div class="card-dm-text-large" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-														<div class="card-dm-text-small">Approved</div>
+													<div class="card-col-field">
+														<div class="dropdown">
+															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+																<svg class="icon-monospaced lexicon-icon">
+																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+																</svg>
+															</a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#1">Download</a></li>
+																<li><a href="#1">Edit</a></li>
+																<li><a href="#1">Move</a></li>
+																<li><a href="#1">Checkout</a></li>
+																<li><a href="#1">Permissions</a></li>
+																<li><a href="#1">Move to Recycle Bin</a></li>
+															</ul>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -800,35 +811,40 @@
 									</div>
 								</li>
 
-								<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-									<div class="checkbox toggle-card-dm">
+								<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+									<div class="checkbox checkbox-card checkbox-top-left">
 										<label>
 											<input type="checkbox" value="">
-											<div class="toggle-card-container card card-dm">
+											<div class="card">
 												<div class="aspect-ratio">
 													<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-													<span class="sticker sticker-info sticker-bottom">DOC</span>
+													<span class="sticker sticker-bottom sticker-warning">PNG</span>
 												</div>
-												<div class="card-footer">
-													<div class="dropdown card-dm-more-options">
-														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg class="icon-monospaced lexicon-icon">
-																<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-															</svg>
-														</a>
-														<ul class="dropdown-menu dropdown-menu-right">
-															<li><a href="#1">Download</a></li>
-															<li><a href="#1">Edit</a></li>
-															<li><a href="#1">Move</a></li>
-															<li><a href="#1">Checkout</a></li>
-															<li><a href="#1">Permissions</a></li>
-															<li><a href="#1">Move to Recycle Bin</a></li>
-														</ul>
+
+												<div class="card-row card-row-padded card-row-valign-top">
+													<div class="card-col-content clamp-horizontal" style="height: 75px;">
+														<div class="clamp-container">
+															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+															<span class="truncate-text">Approved</span>
+														</div>
 													</div>
-													<div class="card-dm-details">
-														<div class="card-dm-text">Aldcott Gage George Polwarth-Kitchener</div>
-														<div class="card-dm-text-large" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-														<div class="card-dm-text-small">Approved</div>
+													<div class="card-col-field">
+														<div class="dropdown">
+															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+																<svg class="icon-monospaced lexicon-icon">
+																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+																</svg>
+															</a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#1">Download</a></li>
+																<li><a href="#1">Edit</a></li>
+																<li><a href="#1">Move</a></li>
+																<li><a href="#1">Checkout</a></li>
+																<li><a href="#1">Permissions</a></li>
+																<li><a href="#1">Move to Recycle Bin</a></li>
+															</ul>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -836,35 +852,40 @@
 									</div>
 								</li>
 
-								<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-									<div class="checkbox toggle-card-dm">
+								<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+									<div class="checkbox checkbox-card checkbox-top-left">
 										<label>
 											<input type="checkbox" value="">
-											<div class="toggle-card-container card card-dm">
+											<div class="card">
 												<div class="aspect-ratio">
 													<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-													<span class="sticker sticker-success sticker-bottom">XLS</span>
+													<span class="sticker sticker-bottom sticker-warning">PNG</span>
 												</div>
-												<div class="card-footer">
-													<div class="dropdown card-dm-more-options">
-														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-																<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-															</svg>
-														</a>
-														<ul class="dropdown-menu dropdown-menu-right">
-															<li><a href="#1">Download</a></li>
-															<li><a href="#1">Edit</a></li>
-															<li><a href="#1">Move</a></li>
-															<li><a href="#1">Checkout</a></li>
-															<li><a href="#1">Permissions</a></li>
-															<li><a href="#1">Move to Recycle Bin</a></li>
-														</ul>
+
+												<div class="card-row card-row-padded card-row-valign-top">
+													<div class="card-col-content clamp-horizontal" style="height: 75px;">
+														<div class="clamp-container">
+															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+															<span class="truncate-text">Approved</span>
+														</div>
 													</div>
-													<div class="card-dm-details">
-														<div class="card-dm-text">Aldcott Gage George Polwarth-Kitchener</div>
-														<div class="card-dm-text-large" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-														<div class="card-dm-text-small">Approved</div>
+													<div class="card-col-field">
+														<div class="dropdown">
+															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+																<svg class="icon-monospaced lexicon-icon">
+																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+																</svg>
+															</a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#1">Download</a></li>
+																<li><a href="#1">Edit</a></li>
+																<li><a href="#1">Move</a></li>
+																<li><a href="#1">Checkout</a></li>
+																<li><a href="#1">Permissions</a></li>
+																<li><a href="#1">Move to Recycle Bin</a></li>
+															</ul>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -872,35 +893,40 @@
 									</div>
 								</li>
 
-								<li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-									<div class="checkbox toggle-card-dm">
+								<li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+									<div class="checkbox checkbox-card checkbox-top-left">
 										<label>
 											<input type="checkbox" value="">
-											<div class="toggle-card-container card card-dm">
+											<div class="card">
 												<div class="aspect-ratio">
 													<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
-													<span class="sticker sticker-warning sticker-bottom">PNG</span>
+													<span class="sticker sticker-bottom sticker-warning">PNG</span>
 												</div>
-												<div class="card-footer">
-													<div class="dropdown card-dm-more-options">
-														<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-															<svg class="icon-monospaced lexicon-icon">
-																<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-															</svg>
-														</a>
-														<ul class="dropdown-menu dropdown-menu-right">
-															<li><a href="#1">Download</a></li>
-															<li><a href="#1">Edit</a></li>
-															<li><a href="#1">Move</a></li>
-															<li><a href="#1">Checkout</a></li>
-															<li><a href="#1">Permissions</a></li>
-															<li><a href="#1">Move to Recycle Bin</a></li>
-														</ul>
+
+												<div class="card-row card-row-padded card-row-valign-top">
+													<div class="card-col-content clamp-horizontal" style="height: 75px;">
+														<div class="clamp-container">
+															<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+															<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+															<span class="truncate-text">Approved</span>
+														</div>
 													</div>
-													<div class="card-dm-details">
-														<div class="card-dm-text">Aldcott Gage George Polwarth-Kitchener</div>
-														<div class="card-dm-text-large" title="thumbnail_dock.jpg">thumbnail_dock.jpg</div>
-														<div class="card-dm-text-small">Approved</div>
+													<div class="card-col-field">
+														<div class="dropdown">
+															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+																<svg class="icon-monospaced lexicon-icon">
+																	<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+																</svg>
+															</a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#1">Download</a></li>
+																<li><a href="#1">Edit</a></li>
+																<li><a href="#1">Move</a></li>
+																<li><a href="#1">Checkout</a></li>
+																<li><a href="#1">Permissions</a></li>
+																<li><a href="#1">Move to Recycle Bin</a></li>
+															</ul>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -965,7 +991,7 @@
 	</div>
 </div>
 
-<a class="btn btn-primary btn-action btn-bottom-right" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-monospaced"><span class="icon-desktop"></span></span></a>
+<a class="btn btn-action btn-bottom-right btn-primary" data-placement="left" data-toggle="tooltip" href="#1" id="fullscreenBtn" title="Fullscreen"><span class="icon-monospaced"><span class="icon-desktop"></span></span></a>
 
 <script>
 	$('#fullscreenBtn').on('click', function(event) {
@@ -975,21 +1001,18 @@
 		$('body').toggleClass('fixed');
 	});
 
-	$('#documentsAndMediaSidenav').sideNavigation({
+	$('#documentsAndMediaToggler').sideNavigation({
 		gutter: 0,
 		position: 'left',
-		toggler: '#documentsAndMediaToggler',
 		typeMobile: 'fixed',
 		type: 'fixed-push',
 		width: 320
 	});
 
-	$('#documentsAndMediaRightSidenav').sideNavigation({
-		gutter: 15,
+	$('#documentsAndMediaRightSidenavToggler').sideNavigation({
+		gutter: 0,
 		position: 'right',
-		toggler: '#documentsAndMediaRightSidenavToggler',
 		typeMobile: 'fixed',
-		type: 'relative',
 		width: 320
 	});
 

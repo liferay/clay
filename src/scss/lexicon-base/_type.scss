@@ -70,10 +70,20 @@ mark,
 
 // Truncate Text
 
+td,
+th {
+	.truncate-text {
+		white-space: normal \9; // IE 8, 9
+	}
+}
+
 .truncate-text {
 	display: block;
 
 	@include text-overflow;
+
+	word-break: normal \9; // IE 8, 9
+	word-wrap: normal;
 }
 
 // Blockquote Variations

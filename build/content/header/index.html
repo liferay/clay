@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.7</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -151,8 +151,6 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/tab-groups">Tab Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
@@ -193,8 +191,6 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/extending-tab-groups">Extending Tab Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
@@ -231,7 +227,7 @@
 			<p>Header Toolbar is based on <a href="../toolbars/">Toolbars</a>, and was created to quickly prototype headings for portlets, mobile pages, and page sections.</p>
 		</blockquote>
 
-		<div class="sidenav-container closed uxgl-slideout-nav">
+		<div class="sidenav-container uxgl-slideout-nav" id="headerToolbarSidenav1">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<ul class="nav nav-stacked">
@@ -251,7 +247,7 @@
 				<header class="header-toolbar">
 					<div class="toolbar-group">
 						<div class="toolbar-group-content">
-							<a class="sidenav-toggler" href="#1">
+							<a class="sidenav-toggler" href="#headerToolbarSidenav1">
 								<svg class="icon-monospaced lexicon-icon">
 									<use xlink:href="../../images/icons/icons.svg#bars">
 								</svg>
@@ -391,7 +387,7 @@
 			<p>The example below uses <code>header-toolbar-default</code> with <a href="../list-groups/">tabular-list-group</a> and <a href="../sidenav/">sidenav</a>.</p>
 		</blockquote>
 
-		<div class="sidenav-container closed uxgl-slideout-nav">
+		<div class="closed sidenav-container uxgl-slideout-nav" id="headerToolbarSidenav2">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<div class="sidebar sidebar-inverse">
@@ -416,28 +412,28 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>From</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
+											<input class="form-control" placeholder="City or Airport" type="text">
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>To</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
+											<input class="form-control" placeholder="City or Airport" type="text">
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Departing</label>
-											<input class="form-control" type="text" placeholder="Departing Date">
+											<input class="form-control" placeholder="Departing Date" type="text">
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Returning</label>
-											<input class="form-control" type="text" placeholder="Returning Date">
+											<input class="form-control" placeholder="Returning Date" type="text">
 										</div>
 									</div>
 
@@ -480,7 +476,7 @@
 									</div>
 
 									<div class="col-md-12">
-										<button class="btn btn-success btn-md">Search Flights</button>
+										<button class="btn btn-md btn-success">Search Flights</button>
 									</div>
 								</div>
 							</form>
@@ -517,7 +513,7 @@
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1">
+								<a class="sidenav-toggler" href="#headerToolbarSidenav2">
 									<svg class="icon-monospaced lexicon-icon">
 										<use xlink:href="../../images/icons/icons.svg#bars">
 									</svg>
@@ -556,7 +552,7 @@
 					</div>
 				</header>
 
-				<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="position:relative;z-index:1;margin-bottom:0;">
+				<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse" style="margin-bottom:0; position:relative; z-index:1;">
 					<div class="container-fluid-1280">
 						<ul class="nav navbar-nav">
 							<li><a href="#1">All Posts</a></li>
@@ -736,10 +732,11 @@
 </div>
 
 <script>
-	$('.uxgl-slideout-nav').sideNavigation({
+	$('.sidenav-toggler').sideNavigation({
 		gutter: 0,
 		width: 240
 	});
+
 	$('.collapse-basic-search').collapsibleSearch();
 </script>
 	</div>

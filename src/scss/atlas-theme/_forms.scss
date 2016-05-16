@@ -51,8 +51,8 @@ select.form-control {
 	padding: $input-padding-vertical $input-padding-horizontal;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		height: $input-height-base;
 		font-size: $input-desktop-font-size;
+		height: $input-height-base;
 	}
 
 	&:focus {
@@ -158,21 +158,34 @@ select[disabled].form-control > option {
 	@media screen and (-webkit-min-device-pixel-ratio: 0) {
 		height: 15px;
 		margin-left: -20px;
-		margin-top: 3px;
 		width: 14px;
 	}
 }
 
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		margin-top: 3px;
+	}
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		margin-top: 2.4px; // Safari Hack
+	}
+}
+
 .checkbox-card,
-.toggle-card-dm {
+.radio-card {
 	label {
 		padding-left: 0;
 	}
+}
 
-	input[type="checkbox"],
-	input[type="radio"] {
-		margin-left: 0;
-	}
+.checkbox-card input[type="checkbox"],
+.radio-card input[type="radio"] {
+	margin-left: 0;
 }
 
 // Form Control Feedback

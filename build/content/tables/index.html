@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.7</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -151,8 +151,6 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/tab-groups">Tab Groups</a>
-</li>
 <li class="active"><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
@@ -193,8 +191,6 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/extending-tab-groups">Extending Tab Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
@@ -225,30 +221,49 @@
 		
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="table-list"><a class="heading-anchor" href="#table-list"><i class="icon icon-link"></i></a>Table List</h3>
+		<h3 id="vertical-alignment"><a class="heading-anchor" href="#vertical-alignment"><i class="icon icon-link"></i></a>Vertical Alignment</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>A table styled like a list. The active state can be invoked by adding class <code>active</code> to the <code>&lt;tr&gt;&lt;/tr&gt;</code> element. It is recommended that table-list&apos;s columns containing information of lesser importance be hidden in smaller screen sizes with <a href="http://getbootstrap.com/css/#responsive-utilities">Responsive Utilities</a> due to space constraints.</p>
-			<p>Class <code>table-bordered</code> not compatible with <code>table-list</code>.</p>
+			<p>We have added some classes to help vertically align contents inside a table. The classes <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> on <code>&lt;table&gt;</code> will vertically align table cell contents on the bottom, middle, and top, respectively.</p>
+
+			<p>The classes <code>thead-valign-bottom</code>, <code>thead-valign-middle</code>, and <code>thead-valign-top</code> on <code>&lt;table&gt;</code> will vertically align the contents inside the table head.</p>
+
+			<p>The classes <code>tbody-valign-bottom</code>, <code>tbody-valign-middle</code>, and <code>tbody-valign-top</code> on <code>&lt;table&gt;</code> will vertically align the contents inside the table body.</p>
 		</blockquote>
 
-		<div class="alert alert-warning">Truncating text inside a table requires the use of the <a href="../cards/#truncating-text-inside-horizontal-card-without-card-row-layout-fixed">clamp component</a>.</div>
+		<div class="row-spacing">
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignBottom">table-valign-bottom</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignMiddle">table-valign-middle</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tableValignTop">table-valign-top</a>
+		</div>
 
-		<table class="table table-list">
+		<div class="row-spacing">
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignBottom">tbody-valign-bottom</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignMiddle">tbody-valign-middle</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="tbodyValignTop">tbody-valign-top</a>
+		</div>
+
+		<div class="row-spacing">
+			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignBottom">thead-valign-bottom</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignMiddle">thead-valign-middle</a>
+			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignTop">thead-valign-top</a>
+		</div>
+
+		<table class="table table-list" id="verticalAlignTableListDemo">
 			<thead>
 				<tr>
 					<th class="table-cell-field"></th>
-					<th class="table-cell-field hidden-xs hidden-sm">ID</th>
-					<th class="table-cell-content clamp-horizontal">
+					<th class="hidden-sm hidden-xs table-cell-field">ID</th>
+					<th class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Description">Title</span>
 						</div>
 					</th>
-					<th class="table-cell-field hidden-xs hidden-sm">Status</th>
-					<th class="table-cell-field hidden-xs hidden-sm">Modified Date</th>
-					<th class="table-cell-field hidden-xs hidden-sm">Display Date</th>
+					<th class="hidden-sm hidden-xs table-cell-field">Status</th>
+					<th class="hidden-sm hidden-xs table-cell-field">Modified Date</th>
+					<th class="hidden-sm hidden-xs table-cell-field">Display Date</th>
 					<th class="table-cell-field">Author</th>
-					<th class="table-cell-field hidden-xs hidden-sm">Type</th>
+					<th class="hidden-sm hidden-xs table-cell-field">Type</th>
 					<th class="table-cell-field"></th>
 				</tr>
 			</thead>
@@ -262,17 +277,17 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-field hidden-xs hidden-sm">21146</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="hidden-sm hidden-xs table-cell-field">21146</td>
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 						</div>
 					</td>
-					<td class="table-cell-field hidden-xs hidden-sm">--</td>
-					<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
-					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
 					<td class="table-cell-field">Stanley Nelson</td>
-					<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
+					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
 					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -299,19 +314,19 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-field hidden-xs hidden-sm">
+					<td class="hidden-sm hidden-xs table-cell-field">
 						21148
 					</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 						</div>
 					</td>
-					<td class="table-cell-field hidden-xs hidden-sm">--</td>
-					<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
-					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
 					<td class="table-cell-field">Stanley Nelson</td>
-					<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
+					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
 					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -338,17 +353,17 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-field hidden-xs hidden-sm">21149</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="hidden-sm hidden-xs table-cell-field">21149</td>
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 						</div>
 					</td>
-					<td class="table-cell-field hidden-xs hidden-sm">--</td>
-					<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
-					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
 					<td class="table-cell-field">Stanley Nelson</td>
-					<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
+					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
 					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -375,17 +390,203 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-field hidden-xs hidden-sm">21150</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="hidden-sm hidden-xs table-cell-field">21150</td>
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 						</div>
 					</td>
-					<td class="table-cell-field hidden-xs hidden-sm">--</td>
-					<td class="table-cell-field hidden-xs hidden-sm">2 Hours Ago</td>
-					<td class="table-cell-field hidden-xs hidden-sm">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
 					<td class="table-cell-field">Stanley Nelson</td>
-					<td class="table-cell-field hidden-xs hidden-sm">Folder</td>
+					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="table-list"><a class="heading-anchor" href="#table-list"><i class="icon icon-link"></i></a>Table List</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>A table styled like a list. The active state can be invoked by adding class <code>active</code> to the <code>&lt;tr&gt;&lt;/tr&gt;</code> element. It is recommended that table-list&apos;s columns containing information of lesser importance be hidden in smaller screen sizes with <a href="http://getbootstrap.com/css/#responsive-utilities">Responsive Utilities</a> due to space constraints.</p>
+			<p>Class <code>table-bordered</code> not compatible with <code>table-list</code>.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">Truncating text inside a table requires the use of the <a href="../cards/#truncating-text-inside-horizontal-card-without-card-row-layout-fixed">clamp component</a>.</div>
+
+		<table class="table table-list">
+			<thead>
+				<tr>
+					<th class="table-cell-field"></th>
+					<th class="hidden-sm hidden-xs table-cell-field">ID</th>
+					<th class="clamp-horizontal table-cell-content">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Description">Title</span>
+						</div>
+					</th>
+					<th class="hidden-sm hidden-xs table-cell-field">Status</th>
+					<th class="hidden-sm hidden-xs table-cell-field">Modified Date</th>
+					<th class="hidden-sm hidden-xs table-cell-field">Display Date</th>
+					<th class="table-cell-field">Author</th>
+					<th class="hidden-sm hidden-xs table-cell-field">Type</th>
+					<th class="table-cell-field"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td class="table-cell-field">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs table-cell-field">21146</td>
+					<td class="clamp-horizontal table-cell-content">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="table-cell-field">Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr class="active">
+					<td class="table-cell-field">
+						<div class="checkbox">
+							<label>
+								<input checked type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs table-cell-field">
+						21148
+					</td>
+					<td class="clamp-horizontal table-cell-content">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="table-cell-field">Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-cell-field">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs table-cell-field">21149</td>
+					<td class="clamp-horizontal table-cell-content">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="table-cell-field">Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
+					<td class="table-cell-field">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="table-cell-field">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs table-cell-field">21150</td>
+					<td class="clamp-horizontal table-cell-content">
+						<div class="clamp-container">
+							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						</div>
+					</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
+					<td class="hidden-sm hidden-xs table-cell-field">--</td>
+					<td class="table-cell-field">Stanley Nelson</td>
+					<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
 					<td class="table-cell-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -417,7 +618,7 @@
 			<thead>
 				<tr>
 					<th class="table-cell-field"></th>
-					<th class="table-cell-content clamp-horizontal">
+					<th class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Description">Description</span>
 						</div>
@@ -438,7 +639,7 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 						</div>
@@ -472,7 +673,7 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
 						</div>
@@ -506,7 +707,7 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 						</div>
@@ -540,7 +741,7 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 						</div>
@@ -575,11 +776,11 @@
 	<div class="col-md-12">
 		<h3 id="table-list-hover"><a class="heading-anchor" href="#table-list-hover"><i class="icon icon-link"></i></a>Table List Hover</h3>
 
-		<table class="table table-list table-hover">
+		<table class="table table-hover table-list">
 			<thead>
 				<tr>
 					<th class="table-cell-field"></th>
-					<th class="table-cell-content clamp-horizontal">
+					<th class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Description">Description</span>
 						</div>
@@ -600,7 +801,7 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 						</div>
@@ -634,7 +835,7 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
 						</div>
@@ -668,7 +869,7 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 						</div>
@@ -702,7 +903,7 @@
 							</label>
 						</div>
 					</td>
-					<td class="table-cell-content clamp-horizontal">
+					<td class="clamp-horizontal table-cell-content">
 						<div class="clamp-container">
 							<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 						</div>
@@ -1089,7 +1290,7 @@
 	<div class="col-md-12">
 		<h3 id="table-responsive-flip-css-only"><a class="heading-anchor" href="#table-responsive-flip-css-only"><i class="icon icon-link"></i></a>Table Responsive Flip (CSS Only)</h3>
 		<div class="table-responsive table-responsive-flip">
-			<table class="table table-hover table-bordered">
+			<table class="table table-bordered table-hover">
 				<thead>
 					<tr>
 						<th>Country</th>
@@ -1277,6 +1478,14 @@
 		var $this = $(this);
 
 		$this.closest('tr').toggleClass('active');
+	});
+
+	$(document).on('click', '.table-vertical-align-button', function(event) {
+		event.preventDefault();
+
+		var className = $(this).text();
+
+		$('#verticalAlignTableListDemo').removeClass().addClass('table table-list ' + className);
 	});
 
 	$(function() {

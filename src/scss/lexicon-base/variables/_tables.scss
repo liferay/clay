@@ -1,4 +1,6 @@
-$table-list-content-height: 50px;
+$table-cell-gutters: floor($grid-gutter-width / 2) !default; // 15px
+
+$table-list-content-height: 50px !default;
 
 $table-list-row-active-border-bottom-width: 1px !default;
 $table-list-row-active-border-color: $table-border-color !default;

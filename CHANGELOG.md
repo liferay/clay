@@ -1,3 +1,58 @@
+### v0.2.14 - April 19, 2015
+* Breaking: Remove tab-groups component
+* Update: Collapsible Search should work with RTL
+* Update: Create radio-card
+* Update: Radio input in chrome is off by 1px
+* Site: Add check-source-formatter custom config
+* Site: Remove reference to Bourbon 3.2.1 bug in Progress Bars
+* Site: Update cards docs to include radio-card
+
+### v0.2.13 - April 15, 2015
+* Breaking: Remove label-monospaced use stickers instead
+* Breaking: Remove badge-monospaced use stickers instead
+* Breaking: Remove card-dm and toggle-card-dm styles
+* Fix: IE text in card not truncating
+* Fix: Side Navigation animation when changing orientation from landscape to portrait
+* Update: Add sticker positional classes that match other components e.g. checkbox-card
+* Update: Add class sticker-static for statically positioned stickers
+* Update: Add max-height to dropdowns
+* Update: Focus outline for truncated links are cut off
+* Update: Checkbox card should work if you only want the checkbox to be clickable
+* Site: Remove references to dropdown-menu-no-arrow
+* Site: Update badges, labels, and stickers documentation
+* Site: Cards page dropdown-toggle alignment
+* Site: Cards page move icon-monospaced to the parent element
+* Site: Remove docs related to card-dm and toggle-card-dm
+* Site: Add checkbox card documentation
+
+### v0.2.12 - March 25, 2015
+* Update: Remove icon-* selector from alloy-font-awesome, and instead only target defined icons
+
+### v0.2.11 - March 23, 2015
+* Update: Search bar covers active style when navbars are in narrow column
+* Update: Nameplate content text should be vertically centered in mobile
+* Update: Added styling for cards to also have a radio
+* Update: th element should have height so headings aren't clipped when every column is clamped
+* Update: Add table helper classes for vertical alignment
+* Site: Clean up Blog Actions demo
+* Site: Update tables page with helper documentation
+
+### v0.2.10 - March 8, 2015
+* Fix: Collapsible Search covers navbar-collapse items on mobile
+* Fix: Encoding spaces in the SVG mixin, as the YUI compressor will munge the whole thing up
+* Update: Lexicon table clamp-container spacing when its first child and add min-widths to table cells inside table-responsive
+* Update: Change table-list row background color in Atlas
+
+### v0.2.9 - March 1, 2015
+* Update: Collapsible Search should use event delegation
+* Update: the (non-flag) icons to have either (or both in many cases) of a class of `lexicon-icon-outline` or `lexicon-icon-body` on their child elements. This allows them to be more easily targeted via CSS.
+* Update: Include all icons in release task (so that people can use icons individually)
+* Site: Update Collapsible Search documentation with event delegation stuff
+
+### v0.2.8 - February 25, 2015
+* Update: Normalized the viewBox attribute for the flag icons to use the same metrics as the other icons
+* Fix: Removed IDs from flag icon groups as they would cause issues when using the icon
+
 ### v0.2.7 - February 24, 2015
 * Fix: Add work around for ios not respecting overflow hidden on body ([Fixes  #132](https://github.com/liferay/lexicon/issues/132))
 * Update: Added new icons check-circle, cut, paragraph, paste, radio-button, select-from-list, and text
