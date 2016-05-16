@@ -22,7 +22,7 @@ var config = {
 
 var tasks = require('require-dir')('./tasks');
 
-liferayGulpTasks.registerTasks({
+liferayGulpTasks(gulp, {
 	artifactSrc: ['**/release/**/*', '!node_modules/', '!node_modules/**']
 });
 
