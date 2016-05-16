@@ -82,9 +82,9 @@ section.row {
 }
 
 #skipTo {
+	left: 15px;
 	min-width: 170px;
 	position: absolute;
-	left: 15px;
 	top: 50%;
 
 	@include transform(translateY(-50%));
@@ -669,8 +669,8 @@ $mainNavWidth: 220px;
 
 	[dir="rtl"] & {
 		@media screen and (min-width: $grid-float-breakpoint) {
-			padding-right: $mainNavWidth + 20;
 			padding-left: 0;
+			padding-right: $mainNavWidth + 20;
 		}
 	}
 }
@@ -924,8 +924,8 @@ body.sidenav-transition {
 		}
 
 		.sidenav-menu-slider {
-			right: auto;
 			left: 0;
+			right: auto;
 		}
 	}
 
