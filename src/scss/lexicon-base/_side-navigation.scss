@@ -3,28 +3,9 @@
 	padding-right: floor(($grid-gutter-width / 2));
 }
 
-.sidenav-fixed {
-	&.sidenav-right {
-		> .sidenav-menu-slider {
-			left: auto;
-			right: 0;
-		}
-	}
-
-	> .sidenav-menu-slider {
-		bottom: 0;
-		left: 0;
-		position: fixed;
-		top: 0;
-		z-index: $zindex-navbar-fixed + 5;
-	}
-}
-
 .sidenav-container {
 	position: relative;
-}
 
-.sidenav-container.closed {
 	> .sidenav-menu-slider {
 		visibility: hidden;
 		width: 0;
@@ -32,6 +13,12 @@
 
 	> .sidenav-content {
 		left: 0;
+	}
+}
+
+.sidenav-container.open {
+	> .sidenav-menu-slider {
+		visibility: visible;
 	}
 }
 
@@ -58,26 +45,20 @@
 	z-index: 10;
 }
 
-.sidenav-container.sidenav-right {
-	.sidenav-content {
-		left: auto;
-		right: 0;
-	}
+.sidenav-fixed > .sidenav-menu-slider {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: $zindex-sidenav;
+}
+
+.sidenav-right > .sidenav-menu-slider {
+	left: auto;
+	right: 0;
 
 	.sidenav-menu {
 		right: 0;
-	}
-
-	.sidenav-menu-slider {
-		right: 0;
-	}
-}
-
-.sidenav-fixed.sidenav-container {
-	overflow: hidden;
-
-	&.closed {
-		overflow: visible;
 	}
 }
 
@@ -86,11 +67,20 @@
 	visibility: hidden;
 }
 
-.sidenav-transition,
-.sidenav-transition .sidenav-content,
-.sidenav-transition .sidenav-menu-slider,
-.sidenav-transition .sidenav-menu-slider .sidenav-menu {
-	@include transition(all 0.5s ease);
+// JS API Transition
+
+.sidenav-transition {
+	.sidenav-content,
+	.sidenav-menu,
+	.sidenav-menu-slider {
+		@include transition($sidenav-transition);
+	}
+}
+
+// Simple Sidenav Transition
+
+.sidenav-transition {
+	@include transition($sidenav-transition);
 }
 
 // Simple Sidenav
@@ -100,21 +90,31 @@
 	left: 0;
 	position: fixed;
 	top: 0;
+	visibility: hidden;
+	width: 0;
 
-	&.closed {
-		visibility: hidden;
-		width: 0;
+	&.open {
+		visibility: visible;
+		width: $sidenav-width;
 	}
-}
 
-.sidenav-fixed.sidenav-menu-slider.sidenav-right {
-	left: auto;
-	right: 0;
+	.sidenav-menu {
+		position: absolute;
+	}
 }
 
 .sidenav-menu-slider {
 	&,
 	.sidenav-menu {
-		width: 320px;
+		width: $sidenav-width;
+	}
+
+	&.sidenav-right {
+		left: auto;
+		right: 0;
+
+		.sidenav-menu {
+			right: 0;
+		}
 	}
 }

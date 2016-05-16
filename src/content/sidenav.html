@@ -64,11 +64,11 @@ section: Components (JS)
 			Avoid the flash of unstyled content when using the Javascript api by adding the class <span class="text-danger">sidenav-js-fouc</span> to the <span class="text-danger">sidenav-container</span>.
 		</div>
 
-		<button class="btn btn-default sidenav-toggler" data-target="#mySidenavContainerId" style="margin-bottom:5px;">
+		<button class="active open btn btn-default sidenav-toggler" data-target="#mySidenavContainerId" style="margin-bottom:5px;">
 			Sidenav Toggler
 		</button>
 
-		<div class="sidenav-container sidenav-js-fouc" id="mySidenavContainerId">
+		<div class="open sidenav-container sidenav-js-fouc" id="mySidenavContainerId">
 			<div class="sidenav-menu-slider" style="background:#FFF;">
 				<div class="sidenav-menu">
 					<div class="col-md-12">
@@ -113,11 +113,11 @@ section: Components (JS)
 
 <div class="row row-spacing sidenav-demo-container">
 	<div class="col-md-12">
-		<button class="btn btn-default sidenav-toggler1" style="margin-bottom:5px;">
+		<button class="active open btn btn-default sidenav-toggler1" style="margin-bottom:5px;">
 			Sidenav Toggler 1
 		</button>
 
-		<div class="sidenav-container sidenav-js-fouc" id="mySidenavContainerId1">
+		<div class="open sidenav-container sidenav-js-fouc" id="mySidenavContainerId1">
 			<div class="sidenav-menu-slider" style="background:#FFF;">
 				<div class="sidenav-menu">
 					<div class="col-md-12">
@@ -181,18 +181,18 @@ section: Components (JS)
 			</a>
 		</div>
 
-		<div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
+		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
 					<h4>
 						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon sidebar-header-logo">
+							<svg class="icon-monospaced lexicon-icon sticker sticker-static sticker-default">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
 							</svg>
 							<span>Simple Sidenav</span>
 						</a>
 
-						<a class="sidenav-close" href="#1" id="sidenavClose1">
+						<a class="pull-right sidenav-close" href="#1" id="sidenavClose1">
 							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 							</svg>
@@ -231,9 +231,9 @@ section: Components (JS)
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-use-delegate="true" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
+			<a class="btn btn-default" data-content="body" data-toggle="sidenav" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
 
-			<a class="btn btn-default" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true" href="#simpleSidenav2">
+			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-type-mobile="fixed-push" href="#simpleSidenav2">
 				Another Simple Sidenav 2 Toggler
 			</a>
 
@@ -246,18 +246,19 @@ section: Components (JS)
 			</a>
 		</div>
 
-		<div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
+		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
 					<h4>
 						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon sidebar-header-logo" style="background-color: red;">
+
+							<svg class="icon-monospaced lexicon-icon sticker sticker-static sticker-danger">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
 							</svg>
 							<span>Simple Sidenav 2</span>
 						</a>
 
-						<a class="sidenav-close" href="#1">
+						<a class="pull-right sidenav-close" href="#1">
 							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 							</svg>
@@ -296,9 +297,9 @@ section: Components (JS)
 </head>
 
 <div id="#wrapper">
-    <a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push" href="#simpleSidenav">Simple Sidenav Toggler</a>
+    <a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
 
-    <div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
+    <div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
         <div class="sidebar sidebar-default sidenav-menu">
             ...
         </div>
@@ -322,7 +323,50 @@ section: Components (JS)
 		</blockquote>
 
 		<div>
-			<a class="btn btn-default" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-url="{{rootPath}}/partials/alerts" data-use-delegate="true" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
+			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-url="{{rootPath}}/partials/alerts" href="#simpleSidenav3">Simple Sidenav 3 Toggler</a>
+		</div>
+
+		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav3">
+			<div class="sidebar sidebar-default sidenav-menu">
+				<div class="sidebar-header">
+					<h4>
+						<a href="#1">
+							<svg class="icon-monospaced lexicon-icon sticker sticker-static sticker-warning">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
+							</svg>
+							<span>Simple Sidenav 3</span>
+						</a>
+
+						<a class="pull-right sidenav-close" href="#1">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</a>
+					</h4>
+				</div>
+
+				<div class="sidebar-body">
+
+				</div>
+
+				<div class="sidebar-footer">
+					<div class="nameplate">
+						<div class="nameplate-field">
+							<div class="user-icon user-icon-warning">
+								:D
+							</div>
+						</div>
+
+						<div class="nameplate-content">
+							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+						</div>
+
+						<div class="nameplate-field">
+							<a class="icon-monospaced" href="#1"></a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<h4>Using the Options API</h4>
@@ -474,12 +518,12 @@ $('#myTogglerId').sideNavigation('hide').sideNavigation('visible'); // returns f
 	$('#showSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		$('[href="#simpleSidenav2"]').sideNavigation('show');
+		$('[href="#simpleSidenav2"]').first().sideNavigation('show');
 	});
 
 	$('#hideSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		$('[href="#simpleSidenav2"]').sideNavigation('hide');
+		$('[href="#simpleSidenav2"]').first().sideNavigation('hide');
 	});
 </script>
