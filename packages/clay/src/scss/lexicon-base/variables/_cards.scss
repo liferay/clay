@@ -3,9 +3,14 @@ $card-divider-height: 1px !default;
 $card-gutter-width: 15px !default;
 $card-margin-bottom: $line-height-computed !default;
 
+$checkbox-left-card-padding: 40px !default;
+$checkbox-right-card-padding: $checkbox-left-card-padding !default;
+
+$checkbox-position: 15px !default;
+
 // Skin
 
-$card-bg: #FFF !default;
+$card-bg: $dropdown-bg !default;
 $card-border: $gray-lighter !default;
 $card-border-radius: $border-radius-base !default;
 

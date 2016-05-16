@@ -82,9 +82,9 @@ section.row {
 }
 
 #skipTo {
+	left: 15px;
 	min-width: 170px;
 	position: absolute;
-	left: 15px;
 	top: 50%;
 
 	@include transform(translateY(-50%));
@@ -593,6 +593,16 @@ body.fixed {
 	}
 }
 
+// Tables Page
+
+#verticalAlignTableListDemo {
+	background-color: #F5F7F8;
+
+	tr {
+		height: 120px;
+	}
+}
+
 // Tooltips Page
 
 .tooltip-display {
@@ -602,13 +612,6 @@ body.fixed {
 }
 
 // Site Main Nav
-
-#wrapper.open,
-#wrapper.simple-sidenav-2-open {
-	@media screen and (min-width: $grid-float-breakpoint) {
-		padding-left: 400px;
-	}
-}
 
 .side-navigation-data-api-buttons {
 	margin-bottom: 15px;
@@ -662,6 +665,13 @@ $mainNavWidth: 220px;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		padding-left: $mainNavWidth + 20;
+	}
+
+	[dir="rtl"] & {
+		@media screen and (min-width: $grid-float-breakpoint) {
+			padding-left: 0;
+			padding-right: $mainNavWidth + 20;
+		}
 	}
 }
 
@@ -813,6 +823,20 @@ h1, h2, h3, h4, h5, h6 {
 
 // Side Navigation Component Page
 
+body {
+	left: 0;
+	position: relative;
+}
+
+body.open {
+	left: 320px;
+	overflow: hidden;
+}
+
+body.sidenav-transition {
+	overflow: hidden;
+}
+
 #mySidebar {
 	background-color: #222328;
 	box-shadow: -3px 0 3px -3px #000 inset;
@@ -869,6 +893,46 @@ h1, h2, h3, h4, h5, h6 {
 .sidenav-demo-container {
 	overflow: hidden;
 	padding-top: 3px;
+}
+
+// Side Navigation RTL
+
+[dir="rtl"] {
+	.sidenav-fixed > .sidenav-menu-slider {
+		left: auto;
+		right: 0;
+	}
+
+	.sidenav-fixed.sidenav-right > .sidenav-menu-slider {
+		left: 0;
+		right: auto;
+	}
+
+	.sidenav-container.closed > .sidenav-content {
+		right: 0;
+	}
+
+	.sidenav-container.sidenav-right {
+		.sidenav-content {
+			left: 0;
+			right: auto;
+		}
+
+		.sidenav-menu {
+			left: 0;
+			right: auto;
+		}
+
+		.sidenav-menu-slider {
+			left: 0;
+			right: auto;
+		}
+	}
+
+	.sidenav-fixed.sidenav-menu-slider.sidenav-right {
+		left: 0;
+		right: auto;
+	}
 }
 
 // Switches Page

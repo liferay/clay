@@ -12,9 +12,9 @@
 	box-shadow: $toggle-card-box-shadow;
 	color: $toggle-card-text-color;
 	display: table;
+	height: $toggle-card-height;
 	padding: $toggle-card-padding-vertical $toggle-card-padding-horizontal;
 	text-align: center;
-	height: $toggle-card-height;
 	width: $toggle-card-width;
 }
 
@@ -26,8 +26,8 @@
 
 .toggle-card-icon {
 	border-radius: $toggle-card-icon-border-radius;
-	height: $toggle-card-icon-height;
 	font-size: $toggle-card-icon-font-size;
+	height: $toggle-card-icon-height;
 	margin: 0 auto;
 	width: $toggle-card-icon-width;
 
@@ -98,54 +98,11 @@ input.toggle-card {
 	}
 
 	&:focus ~ .toggle-card-container {
-		box-shadow: 0 0 3px 2px rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), .6);
+		box-shadow: 0 0 3px 2px rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), 0.6);
 	}
 
 	&[disabled] ~ .toggle-card-container {
 		cursor: not-allowed;
 		opacity: 0.4;
-	}
-}
-
-// Documents and Media Toggle Cards
-
-.toggle-card-dm {
-	margin-top: 0;
-
-	input[type="checkbox"] {
-		left: $grid-gutter-width / 2;
-		margin-left: 0;
-		margin-top: 0;
-		opacity: 1;
-		position: absolute;
-		top: $grid-gutter-width / 2;
-		z-index: 1;
-
-		&:checked,
-		&:focus {
-			~ .toggle-card-container {
-				box-shadow: 0 0 3px 2px rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), .6);
-			}
-		}
-
-		~ .toggle-card-container {
-			border-width: 1px;
-			padding: 0;
-		}
-	}
-
-	label {
-		padding-left: 0;
-		width: 100%;
-	}
-
-	.toggle-card-container {
-		display: block;
-		height: auto;
-		width: auto;
-	}
-
-	~ .toggle-card-dm {
-		margin-top: 0;
 	}
 }

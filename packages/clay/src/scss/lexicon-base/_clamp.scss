@@ -1,6 +1,7 @@
 .clamp-container {
 	left: $table-cell-padding;
-	margin: 0;
+	margin: -2px;
+	padding: 2px;
 	position: absolute;
 	right: $table-cell-padding;
 }
@@ -46,16 +47,4 @@
 		-webkit-overflow-scrolling: touch;
 		overflow: auto;
 	}
-}
-
-// Table List
-
-th.clamp-horizontal .clamp-container {
-	bottom: $table-cell-padding;
-
-	@include transform(none);
-}
-
-.clamp-horizontal .table-cell-content {
-	vertical-align: middle;
 }

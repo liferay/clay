@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.2.7
+* Lexicon 0.2.14
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -646,6 +646,14 @@ body.fixed {
 
 #popovers .popover.left {
   margin-left: 0;
+}
+
+#verticalAlignTableListDemo {
+  background-color: #F5F7F8;
+}
+
+#verticalAlignTableListDemo tr {
+  height: 120px;
 }
 
 .tooltip-display > div {

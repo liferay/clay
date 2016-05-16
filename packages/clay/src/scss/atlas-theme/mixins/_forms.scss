@@ -54,6 +54,7 @@
 		$chunk: str-slice($svg, $index, $index + $slice - 1);
 
 		$chunk: str-replace($chunk, '"', '\'');
+		$chunk: str-replace($chunk, ' ', '%20');
 		$chunk: str-replace($chunk, '<', '%3C');
 		$chunk: str-replace($chunk, '>', '%3E');
 		$chunk: str-replace($chunk, '&', '%26');

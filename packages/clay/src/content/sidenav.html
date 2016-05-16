@@ -16,34 +16,35 @@ section: Components (JS)
 </head>
 
 <body>
-    <div class="sidenav-container">
-        <a class="btn btn-default sidenav-toggler" href="">
+    <div class="sidenav-container" id="mySidenavContainerId">
+        <a class="btn btn-default sidenav-toggler" href="#mySidenavContainerId">
             <span class="glyphicon glyphicon-align-justify"></span> Toggle
         </a>
 
         <div class="sidenav-menu-slider">
             <div class="sidenav-menu">
-                <div class="col-md-12">... Your Side Nav Content ...</div>
+                ... Your Side Nav Content ...
             </div>
         </div>
 
         <div class="sidenav-content">
-            <div class="col-md-12">... Your Main Content ...</div>
+            ... Your Main Content ...
         </div>
     </div>
 
     <script>
-        $('.sidenav-container').sideNavigation({
+        $('.sidenav-toggler').sideNavigation({
             breakpoint: 768, // The window width that defines the desktop size. Default: 768.
-            content: '.sidenav-content', // The class or ID of the content container. Default: '.sidenav-content'.
+            content: '.sidenav-content', // The class or ID of the content. Default: '.sidenav-content'.
+            container: null, // The class or ID of the container. Default: null.
+            equalHeight: true, // The height of content and navigation should be equal.
             gutter: '15px', // The space between the sidenav-slider and the sidenav-content. Default: 15px.
             loadingIndicatorTPL: '<div class="loading-animation loading-animation-md"></div>', // Loading indicator template
-            equalHeight: true, // The height of content and navigation should be equal.
-            navigation: '.sidenav-menu-slider', // The class or ID of the navigation container. Default: '.sidenav-menu-slider'.
+            navigation: '.sidenav-menu-slider', // The class or ID of the slider. Default: '.sidenav-menu-slider'.
             position: 'left', // The position of the sidenav-slider. Possible values: left, right. Default: 'left'.
-            toggler: '.sidenav-toggler', // The class or ID of the toggle button. Default: '.sidenav-toggler'.
             type: 'relative', // The type of sidenav in desktop. Possible values: relative, fixed, fixed-push. Default: 'relative'.
             typeMobile: 'relative', // The type of sidenav in mobile. Possible values: relative, fixed, fixed-push. Default: 'relative'.
+            url: null, // The URL or $.ajax config object to fetch the content to inject into .sidebar-body. Default: null.
             useDelegate: true, // The type of reference to use on the toggler event handler. Value false, directly binds click to the toggler.
             width: '225px' // The width of the side navigation. Default: '225px'.
         });
@@ -56,26 +57,22 @@ section: Components (JS)
 <div class="row row-spacing sidenav-demo-container">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>To create a sidenav relative to other elements inside your page, you must follow the markup structure shown above.</p>
+			<p>To create a sidenav relative to other elements inside your page, you must follow the markup structure shown above and pass the sidenav-container element to the plugin with the <code>href</code> attribute or the <code>data-target</code> attribute on the toggler. The <code>container</code> option also allows you to pass the container via javascript if <code>href</code> or <code>data-target</code> can't be used. The options above are optional.</p>
 		</blockquote>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>The toggle button should be placed inside <code>.sidenav-container</code>, but can be placed outside if needed. Just add a unique id to the toggle button and container, instantiate the sideNavigation plugin on the container id, and pass the toggle button id through plugin options.</p>
-		</blockquote>
+		<div class="alert alert-info">
+			Avoid the flash of unstyled content when using the Javascript api by adding the class <span class="text-danger">sidenav-js-fouc</span> to the <span class="text-danger">sidenav-container</span>.
+		</div>
 
-		<button class="btn btn-default" id="mySidenavToggleId" style="margin-bottom:5px;">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
-			</svg>
-
-			Toggle
+		<button class="active btn btn-default open sidenav-toggler" data-target="#mySidenavContainerId" style="margin-bottom:5px;">
+			Sidenav Toggler
 		</button>
 
-		<div class="sidenav-container" id="mySidenavContainerId">
+		<div class="open sidenav-container sidenav-js-fouc" id="mySidenavContainerId">
 			<div class="sidenav-menu-slider" style="background:#FFF;">
 				<div class="sidenav-menu">
 					<div class="col-md-12">
-						<a class="sidenav-close pull-right" href="#1">X</a>
+						<a class="pull-right sidenav-close" href="#1">X</a>
 						<p>... Your Side Nav Content ...</p>
 					</div>
 				</div>
@@ -90,8 +87,8 @@ section: Components (JS)
   <a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse0">
-<pre><code class="html">```<button class="btn btn-default" id="mySidenavToggleId">
-    <span class="glyphicon glyphicon-align-justify"></span> Toggle
+<pre><code class="html">```<button class="btn btn-default sidenav-toggler" data-target="#mySidenavContainerId">
+    Sidenav Toggler
 </button>
 
 <div class="sidenav-container" id="mySidenavContainerId">
@@ -107,9 +104,7 @@ section: Components (JS)
 </div>
 
 <script>
-    $('#mySidenavContainerId').sideNavigation({
-        toggler: '#mySidenavToggleId'
-    });
+    $('.sidenav-toggler').sideNavigation();
 </script>```</code></pre>
 </div>
 
@@ -118,19 +113,15 @@ section: Components (JS)
 
 <div class="row row-spacing sidenav-demo-container">
 	<div class="col-md-12">
-		<button class="btn btn-default" id="mySidenavToggleId1" style="margin-bottom:5px;">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
-			</svg>
-
-			Toggle
+		<button class="active btn btn-default open sidenav-toggler1" style="margin-bottom:5px;">
+			Sidenav Toggler 1
 		</button>
 
-		<div class="sidenav-container" id="mySidenavContainerId1">
+		<div class="open sidenav-container sidenav-js-fouc" id="mySidenavContainerId1">
 			<div class="sidenav-menu-slider" style="background:#FFF;">
 				<div class="sidenav-menu">
 					<div class="col-md-12">
-						<a class="sidenav-close pull-right" href="#1">X</a>
+						<a class="pull-right sidenav-close" href="#1">X</a>
 						<p>... Your Side Nav Content ...</p>
 					</div>
 				</div>
@@ -145,11 +136,11 @@ section: Components (JS)
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse1">
-	<pre><code class="html">```<button class="btn btn-default" id="mySidenavToggleId">
-    <span class="glyphicon glyphicon-align-justify"></span> Toggle
+	<pre><code class="html">```<button class="btn btn-default sidenav-toggler1">
+    Sidenav Toggler 1
 </button>
 
-<div class="sidenav-container" id="mySidenavContainerId">
+<div class="sidenav-container" id="mySidenavContainerId1">
     <div class="sidenav-menu-slider">
         <div class="sidenav-menu">
             <div class="col-md-12">... Your Side Nav Content ...</div>
@@ -162,8 +153,9 @@ section: Components (JS)
 </div>
 
 <script>
-    $('#mySidenavContainerId').sideNavigation({
-        toggler: '#mySidenavToggleId'
+    $('.sidenav-toggler1').sideNavigation({
+        container: '#mySidenavContainerId1',
+        position: 'right'
     });
 </script>```</code></pre>
 </div>
@@ -182,25 +174,25 @@ section: Components (JS)
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" href="#simpleSidenav" id="simpleToggle1" data-content="#wrapper" data-toggle="sidenav">Simple Sidenav Toggler</a>
+			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav" id="simpleToggle1">Simple Sidenav Toggler</a>
 
-			<a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav">
+			<a class="btn btn-default" data-content="#wrapper" data-toggle="sidenav" href="#simpleSidenav">
 				Another Simple Sidenav Toggler
 			</a>
 		</div>
 
-		<div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
+		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
 					<h4>
 						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon sidebar-header-logo">
+							<svg class="icon-monospaced lexicon-icon sticker sticker-default sticker-static">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
 							</svg>
 							<span>Simple Sidenav</span>
 						</a>
 
-						<a id="sidenavClose1" class="sidenav-close" href="#1">
+						<a class="pull-right sidenav-close" href="#1" id="sidenavClose1">
 							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 							</svg>
@@ -239,9 +231,9 @@ section: Components (JS)
 		</blockquote>
 
 		<div class="side-navigation-data-api-buttons">
-			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-use-delegate="true">Simple Sidenav 2 Toggler</a>
+			<a class="btn btn-default" data-content="body" data-toggle="sidenav" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
 
-			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="fixed-push" data-use-delegate="true">
+			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-type-mobile="fixed-push" href="#simpleSidenav2">
 				Another Simple Sidenav 2 Toggler
 			</a>
 
@@ -254,18 +246,19 @@ section: Components (JS)
 			</a>
 		</div>
 
-		<div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
+		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
 					<h4>
 						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon sidebar-header-logo" style="background-color: red;">
+
+							<svg class="icon-monospaced lexicon-icon sticker sticker-danger sticker-static">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
 							</svg>
 							<span>Simple Sidenav 2</span>
 						</a>
 
-						<a class="sidenav-close" href="#1">
+						<a class="pull-right sidenav-close" href="#1">
 							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 							</svg>
@@ -304,18 +297,14 @@ section: Components (JS)
 </head>
 
 <div id="#wrapper">
-    <a class="btn btn-default" href="#simpleSidenav" data-content="#wrapper" data-toggle="sidenav" data-type="fixed-push">Simple Sidenav Toggler</a>
+    <a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" href="#simpleSidenav2">Simple Sidenav 2 Toggler</a>
 
-    <div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
+    <div class="closed sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
         <div class="sidebar sidebar-default sidenav-menu">
             ...
         </div>
     </div>
-</div>
-
-<script>
-    $('[data-toggle="sidenav"]').sideNavigation();
-</script>```</code></pre>
+</div>```</code></pre>
 
 		</div>
 	</div>
@@ -334,7 +323,50 @@ section: Components (JS)
 		</blockquote>
 
 		<div>
-			<a class="btn btn-default" href="#simpleSidenav2" data-content="#wrapper" data-open-class="simple-sidenav-2-open" data-toggle="sidenav" data-type="relative" data-url="{{rootPath}}/partials/alerts" data-use-delegate="true">Simple Sidenav 2 Toggler</a>
+			<a class="btn btn-default" data-content="body" data-toggle="sidenav" data-type="fixed-push" data-url="{{rootPath}}/partials/alerts" href="#simpleSidenav3">Simple Sidenav 3 Toggler</a>
+		</div>
+
+		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav3">
+			<div class="sidebar sidebar-default sidenav-menu">
+				<div class="sidebar-header">
+					<h4>
+						<a href="#1">
+							<svg class="icon-monospaced lexicon-icon sticker sticker-static sticker-warning">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
+							</svg>
+							<span>Simple Sidenav 3</span>
+						</a>
+
+						<a class="pull-right sidenav-close" href="#1">
+							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</a>
+					</h4>
+				</div>
+
+				<div class="sidebar-body">
+
+				</div>
+
+				<div class="sidebar-footer">
+					<div class="nameplate">
+						<div class="nameplate-field">
+							<div class="user-icon user-icon-warning">
+								:D
+							</div>
+						</div>
+
+						<div class="nameplate-content">
+							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+						</div>
+
+						<div class="nameplate-field">
+							<a class="icon-monospaced" href="#1"></a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<h4>Using the Options API</h4>
@@ -343,42 +375,41 @@ section: Components (JS)
 		</blockquote>
 
 		<pre><code class="html">```<div class="sidenav-container">
-        <a class="btn btn-default sidenav-toggler" href="">
-            <span class="glyphicon glyphicon-align-justify"></span> Toggle
-        </a>
+    <a class="btn btn-default sidenav-toggler" href="">
+        <span class="glyphicon glyphicon-align-justify"></span> Toggle
+    </a>
 
-        <div class="sidenav-menu-slider">
-            <div class="sidenav-menu">
-                <div class="sidebar-body">
-                	Dynamic Content will be appended here...
-                </div>
+    <div class="sidenav-menu-slider">
+        <div class="sidenav-menu">
+            <div class="sidebar-body">
+                Dynamic Content will be appended here...
             </div>
-        </div>
-
-        <div class="sidenav-content">
-            <div class="col-md-12">... Your Main Content ...</div>
         </div>
     </div>
 
-    <script>
-        $('.sidenav-container').sideNavigation({
-            ...
-            // url can be either a string
-            url: '/foo.html',
+    <div class="sidenav-content">
+        <div class="col-md-12">... Your Main Content ...</div>
+    </div>
+</div>
 
-            // or it can be an ajax config object
-            url: {
-                url: '/foo.html',
-                type: 'POST',
-                success: function(response) {
-                    // runs before the content is appended
-                },
-                // ...etc...
+<script>
+    $('.sidenav-toggler').sideNavigation({
+        ...
+        // url can be either a string
+        url: '/foo.html',
+
+        // or it can be an ajax config object
+        url: {
+            url: '/foo.html',
+            type: 'POST',
+            success: function(response) {
+                // runs before the content is appended
             },
-            ...
-        });
-    </script>
-</body>```</code></pre>
+            // ...etc...
+        },
+        ...
+    });
+</script>```</code></pre>
 
 		<h4>Lazy Loading Events and State</h4>
 		<blockquote class="blockquote-sm blockquote-success">
@@ -390,7 +421,7 @@ section: Components (JS)
 	</div>
 </div>
 
-<div class="side-navigation-events row row-spacing">
+<div class="row row-spacing side-navigation-events">
 	<div class="col-md-12">
 		<h3>Events</h3>
 
@@ -431,7 +462,7 @@ $(document).on('closed.lexicon.sidenav', function(event) {
 	</div>
 </div>
 
-<div class="side-navigation-methods row row-spacing">
+<div class="row row-spacing side-navigation-methods">
 	<div class="col-md-12">
 		<h3>Methods</h3>
 
@@ -439,62 +470,60 @@ $(document).on('closed.lexicon.sidenav', function(event) {
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown or hidden.</b></p>
 		</blockquote>
-		<p><pre><code>```$('#myContainerId').sideNavigation('toggle')```</code></pre></p>
+		<p><pre><code>```$('#myTogglerId').sideNavigation('toggle')```</code></pre></p>
 
 		<h4><code>.sideNavigation('show')</code></h4>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Manually shows the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown.</b></p>
 		</blockquote>
-		<p><pre><code>```$('#myContainerId').sideNavigation('show')```</code></pre></p>
+		<p><pre><code>```$('#myTogglerId').sideNavigation('show')```</code></pre></p>
 
 		<h4><code>.sideNavigation('hide')</code></h4>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been hidden.</b></p>
 		</blockquote>
-		<p><pre><code>```$('#myContainerId').sideNavigation('hide')```</code></pre></p>
+		<p><pre><code>```$('#myTogglerId').sideNavigation('hide')```</code></pre></p>
 
 		<h4><code>.sideNavigation('destroy')</code></h4>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Destroys the Side Navigation instance for the items in the jQuery collection, and removes any attached event handlers and any associated data added by the plugin.</p>
 		</blockquote>
-		<p><pre><code>```$('#myContainerId').sideNavigation('destroy')```</code></pre></p>
+		<p><pre><code>```$('#myTogglerId').sideNavigation('destroy')```</code></pre></p>
 
 		<h4><code>.sideNavigation('instance')</code></h4>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Returns the Side Navigation instance for the first item in the jQuery collection (similar to how any other jQuery getter method works). If the plugin hasn't been initialized, it will return null.</p>
 		</blockquote>
-		<p><pre><code>```$('#myContainerId').sideNavigation('instance')```</code></pre></p>
+		<p><pre><code>```$('#myTogglerId').sideNavigation('instance')```</code></pre></p>
 
 		<h4><code>.sideNavigation('visible')</code></h4>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Returns the visible state of the sidenav.</p>
 			<p>If the sidenav is in the middle of transitioning, this will report what the visible state <b>will be after</b> the transition is finished. This allows you to call it in any state and accurately get the state of the sidenav.</p>
 		</blockquote>
-		<p><pre><code>```$('#myContainerId').sideNavigation('show').sideNavigation('visible'); // returns true
+		<p><pre><code>```$('#myTogglerId').sideNavigation('show').sideNavigation('visible'); // returns true
 
-$('#myContainerId').sideNavigation('hide').sideNavigation('visible'); // returns false```</code></pre></p>
+$('#myTogglerId').sideNavigation('hide').sideNavigation('visible'); // returns false```</code></pre></p>
 	</div>
 </div>
 
 <script>
-	$('#mySidenavContainerId').sideNavigation({
-		toggler: '#mySidenavToggleId'
-	});
+	$('.sidenav-toggler').sideNavigation();
 
-	$('#mySidenavContainerId1').sideNavigation({
-		position: 'right',
-		toggler: '#mySidenavToggleId1'
+	$('.sidenav-toggler1').sideNavigation({
+		container: '#mySidenavContainerId1',
+		position: 'right'
 	});
 
 	$('#showSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		$('[href="#simpleSidenav2"]').sideNavigation('show');
+		$('[href="#simpleSidenav2"]').first().sideNavigation('show');
 	});
 
 	$('#hideSimpleSidenav2').on('click', function(event) {
 		event.preventDefault();
 
-		$('[href="#simpleSidenav2"]').sideNavigation('hide');
+		$('[href="#simpleSidenav2"]').first().sideNavigation('hide');
 	});
 </script>

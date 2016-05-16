@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.7</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -151,8 +151,6 @@
 </li>
 <li class=""><a class="nav-title" href="../content/sidebar">Sidebar</a>
 </li>
-<li class=""><a class="nav-title" href="../content/tab-groups">Tab Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../content/tables">Tables</a>
 </li>
 <li class=""><a class="nav-title" href="../content/toolbars">Toolbars</a>
@@ -193,8 +191,6 @@
 </li>
 <li class=""><a class="nav-title" href="../content/extending-list-groups">Extending List Groups</a>
 </li>
-<li class=""><a class="nav-title" href="../content/extending-tab-groups">Extending Tab Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
@@ -222,7 +218,69 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v0-2-7-february-24-2015"><a class="heading-anchor" href="#v0-2-7-february-24-2015"><i class="icon icon-link"></i></a>v0.2.7 - February 24, 2015</h3>
+		<div class="col-md-12"><h3 id="v0-2-14-april-19-2015"><a class="heading-anchor" href="#v0-2-14-april-19-2015"><i class="icon icon-link"></i></a>v0.2.14 - April 19, 2015</h3>
+<ul>
+<li>Breaking: Remove tab-groups component</li>
+<li>Update: Collapsible Search should work with RTL</li>
+<li>Update: Create radio-card</li>
+<li>Update: Radio input in chrome is off by 1px</li>
+<li>Site: Add check-source-formatter custom config</li>
+<li>Site: Remove reference to Bourbon 3.2.1 bug in Progress Bars</li>
+<li>Site: Update cards docs to include radio-card</li>
+</ul>
+<h3 id="v0-2-13-april-15-2015"><a class="heading-anchor" href="#v0-2-13-april-15-2015"><i class="icon icon-link"></i></a>v0.2.13 - April 15, 2015</h3>
+<ul>
+<li>Breaking: Remove label-monospaced use stickers instead</li>
+<li>Breaking: Remove badge-monospaced use stickers instead</li>
+<li>Breaking: Remove card-dm and toggle-card-dm styles</li>
+<li>Fix: IE text in card not truncating</li>
+<li>Fix: Side Navigation animation when changing orientation from landscape to portrait</li>
+<li>Update: Add sticker positional classes that match other components e.g. checkbox-card</li>
+<li>Update: Add class sticker-static for statically positioned stickers</li>
+<li>Update: Add max-height to dropdowns</li>
+<li>Update: Focus outline for truncated links are cut off</li>
+<li>Update: Checkbox card should work if you only want the checkbox to be clickable</li>
+<li>Site: Remove references to dropdown-menu-no-arrow</li>
+<li>Site: Update badges, labels, and stickers documentation</li>
+<li>Site: Cards page dropdown-toggle alignment</li>
+<li>Site: Cards page move icon-monospaced to the parent element</li>
+<li>Site: Remove docs related to card-dm and toggle-card-dm</li>
+<li>Site: Add checkbox card documentation</li>
+</ul>
+<h3 id="v0-2-12-march-25-2015"><a class="heading-anchor" href="#v0-2-12-march-25-2015"><i class="icon icon-link"></i></a>v0.2.12 - March 25, 2015</h3>
+<ul>
+<li>Update: Remove icon-* selector from alloy-font-awesome, and instead only target defined icons</li>
+</ul>
+<h3 id="v0-2-11-march-23-2015"><a class="heading-anchor" href="#v0-2-11-march-23-2015"><i class="icon icon-link"></i></a>v0.2.11 - March 23, 2015</h3>
+<ul>
+<li>Update: Search bar covers active style when navbars are in narrow column</li>
+<li>Update: Nameplate content text should be vertically centered in mobile</li>
+<li>Update: Added styling for cards to also have a radio</li>
+<li>Update: th element should have height so headings aren&#x2019;t clipped when every column is clamped</li>
+<li>Update: Add table helper classes for vertical alignment</li>
+<li>Site: Clean up Blog Actions demo</li>
+<li>Site: Update tables page with helper documentation</li>
+</ul>
+<h3 id="v0-2-10-march-8-2015"><a class="heading-anchor" href="#v0-2-10-march-8-2015"><i class="icon icon-link"></i></a>v0.2.10 - March 8, 2015</h3>
+<ul>
+<li>Fix: Collapsible Search covers navbar-collapse items on mobile</li>
+<li>Fix: Encoding spaces in the SVG mixin, as the YUI compressor will munge the whole thing up</li>
+<li>Update: Lexicon table clamp-container spacing when its first child and add min-widths to table cells inside table-responsive</li>
+<li>Update: Change table-list row background color in Atlas</li>
+</ul>
+<h3 id="v0-2-9-march-1-2015"><a class="heading-anchor" href="#v0-2-9-march-1-2015"><i class="icon icon-link"></i></a>v0.2.9 - March 1, 2015</h3>
+<ul>
+<li>Update: Collapsible Search should use event delegation</li>
+<li>Update: the (non-flag) icons to have either (or both in many cases) of a class of <code>lexicon-icon-outline</code> or <code>lexicon-icon-body</code> on their child elements. This allows them to be more easily targeted via CSS.</li>
+<li>Update: Include all icons in release task (so that people can use icons individually)</li>
+<li>Site: Update Collapsible Search documentation with event delegation stuff</li>
+</ul>
+<h3 id="v0-2-8-february-25-2015"><a class="heading-anchor" href="#v0-2-8-february-25-2015"><i class="icon icon-link"></i></a>v0.2.8 - February 25, 2015</h3>
+<ul>
+<li>Update: Normalized the viewBox attribute for the flag icons to use the same metrics as the other icons</li>
+<li>Fix: Removed IDs from flag icon groups as they would cause issues when using the icon</li>
+</ul>
+<h3 id="v0-2-7-february-24-2015"><a class="heading-anchor" href="#v0-2-7-february-24-2015"><i class="icon icon-link"></i></a>v0.2.7 - February 24, 2015</h3>
 <ul>
 <li>Fix: Add work around for ios not respecting overflow hidden on body (<a href="https://github.com/liferay/lexicon/issues/132">Fixes  #132</a>)</li>
 <li>Update: Added new icons check-circle, cut, paragraph, paste, radio-button, select-from-list, and text</li>

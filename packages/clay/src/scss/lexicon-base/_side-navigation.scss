@@ -3,30 +3,10 @@
 	padding-right: floor(($grid-gutter-width / 2));
 }
 
-.sidenav-fixed {
-	&.sidenav-right {
-		> .sidenav-menu-slider {
-			left: auto;
-			right: 0;
-		}
-	}
-
-	> .sidenav-menu-slider {
-		bottom: 0;
-		left: 0;
-		position: fixed;
-		top: 0;
-		z-index: $zindex-navbar-fixed + 5;
-	}
-}
-
 .sidenav-container {
 	position: relative;
-}
 
-.sidenav-container.closed {
 	> .sidenav-menu-slider {
-		overflow: hidden;
 		visibility: hidden;
 		width: 0;
 	}
@@ -36,7 +16,15 @@
 	}
 }
 
+.sidenav-container.open {
+	> .sidenav-menu-slider {
+		visibility: visible;
+	}
+}
+
 .sidenav-content {
+	padding-left: 0;
+	padding-right: 0;
 	position: relative;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
@@ -52,74 +40,81 @@
 }
 
 .sidenav-menu-slider {
-	overflow: visible;
+	overflow: hidden;
 	position: absolute;
 	z-index: 10;
 }
 
-.sidenav-container.sidenav-right {
-	.sidenav-content {
-		left: auto;
-		right: 0;
-	}
+.sidenav-fixed > .sidenav-menu-slider {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: $zindex-sidenav;
+}
+
+.sidenav-right > .sidenav-menu-slider {
+	left: auto;
+	right: 0;
 
 	.sidenav-menu {
 		right: 0;
 	}
+}
 
+.sidenav-js-fouc {
+	opacity: 0;
+	visibility: hidden;
+}
+
+// JS API Transition
+
+.sidenav-transition {
+	.sidenav-content,
+	.sidenav-menu,
 	.sidenav-menu-slider {
-		right: 0;
+		@include transition($sidenav-transition);
 	}
 }
 
-.sidenav-fixed.sidenav-container {
-	overflow: hidden;
+// Simple Sidenav Transition
 
-	&.closed {
-		overflow: visible;
-	}
-}
-
-.sidenav-transition,
-.sidenav-transition .sidenav-content,
-.sidenav-transition .sidenav-menu-slider,
-.sidenav-transition .sidenav-menu-slider .sidenav-menu {
-	@include transition(all 0.5s ease);
-}
-
-.sidenav-transition .sidenav-menu-slider {
-	overflow: hidden;
+.sidenav-transition {
+	@include transition($sidenav-transition);
 }
 
 // Simple Sidenav
 
-.body-fixed {
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-}
-
 .sidenav-fixed.sidenav-menu-slider {
 	bottom: 0;
 	left: 0;
-	overflow: hidden;
 	position: fixed;
 	top: 0;
+	visibility: hidden;
+	width: 0;
 
-	&.closed {
-		visibility: hidden;
-		width: 0;
+	&.open {
+		visibility: visible;
+		width: $sidenav-width;
 	}
 
-	&,
 	.sidenav-menu {
-		width: 400px;
+		position: absolute;
 	}
 }
 
-.sidenav-fixed.sidenav-menu-slider.sidenav-right {
-	left: auto;
-	right: 0;
+.sidenav-menu-slider {
+	&,
+	.sidenav-menu {
+		width: $sidenav-width;
+	}
+
+	&.sidenav-right {
+		left: auto;
+		right: 0;
+
+		.sidenav-menu {
+			right: 0;
+		}
+	}
 }

@@ -30,6 +30,10 @@
 			padding: floor(($navbar-height - $input-mobile-height-base - 1) / 2);
 		}
 
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin-right: 12px;
+		}
+
 		.input-group-btn:last-child {
 			> .btn,
 			> .btn-group {
@@ -322,6 +326,7 @@
 
 			@media screen and (min-width: $grid-float-breakpoint) {
 				height: $navbar-default-desktop-height;
+				padding-right: 12px;
 			}
 
 			&:focus {
@@ -412,6 +417,7 @@
 				display: inline-block;
 				padding-bottom: $navbar-default-desktop-padding-vertical - $navbar-link-active-bottom-border-width;
 				padding-top: $navbar-default-desktop-padding-vertical;
+				z-index: 3;
 			}
 
 			&:after {

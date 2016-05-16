@@ -11,7 +11,7 @@ section: Components
 			<p>Header Toolbar is based on <a href="../toolbars/">Toolbars</a>, and was created to quickly prototype headings for portlets, mobile pages, and page sections.</p>
 		</blockquote>
 
-		<div class="sidenav-container closed uxgl-slideout-nav">
+		<div class="sidenav-container sidenav-js-fouc uxgl-slideout-nav" id="headerToolbarSidenav1">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<ul class="nav nav-stacked">
@@ -31,7 +31,7 @@ section: Components
 				<header class="header-toolbar">
 					<div class="toolbar-group">
 						<div class="toolbar-group-content">
-							<a class="sidenav-toggler" href="#1">
+							<a class="sidenav-toggler" href="#headerToolbarSidenav1">
 								<svg class="icon-monospaced lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 								</svg>
@@ -171,7 +171,7 @@ section: Components
 			<p>The example below uses <code>header-toolbar-default</code> with <a href="../list-groups/">tabular-list-group</a> and <a href="../sidenav/">sidenav</a>.</p>
 		</blockquote>
 
-		<div class="sidenav-container closed uxgl-slideout-nav">
+		<div class="closed sidenav-container sidenav-js-fouc uxgl-slideout-nav" id="headerToolbarSidenav2">
 			<div class="sidenav-menu-slider">
 				<div class="sidenav-menu">
 					<div class="sidebar sidebar-inverse">
@@ -196,28 +196,28 @@ section: Components
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>From</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
+											<input class="form-control" placeholder="City or Airport" type="text">
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>To</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
+											<input class="form-control" placeholder="City or Airport" type="text">
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Departing</label>
-											<input class="form-control" type="text" placeholder="Departing Date">
+											<input class="form-control" placeholder="Departing Date" type="text">
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Returning</label>
-											<input class="form-control" type="text" placeholder="Returning Date">
+											<input class="form-control" placeholder="Returning Date" type="text">
 										</div>
 									</div>
 
@@ -260,7 +260,7 @@ section: Components
 									</div>
 
 									<div class="col-md-12">
-										<button class="btn btn-success btn-md">Search Flights</button>
+										<button class="btn btn-md btn-success">Search Flights</button>
 									</div>
 								</div>
 							</form>
@@ -297,7 +297,7 @@ section: Components
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1">
+								<a class="sidenav-toggler" href="#headerToolbarSidenav2">
 									<svg class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 									</svg>
@@ -336,7 +336,7 @@ section: Components
 					</div>
 				</header>
 
-				<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search" style="position:relative;z-index:1;margin-bottom:0;">
+				<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse" style="margin-bottom:0; position:relative; z-index:1;">
 					<div class="container-fluid-1280">
 						<ul class="nav navbar-nav">
 							<li><a href="#1">All Posts</a></li>
@@ -516,9 +516,10 @@ section: Components
 </div>
 
 <script>
-	$('.uxgl-slideout-nav').sideNavigation({
+	$('.sidenav-toggler').sideNavigation({
 		gutter: 0,
 		width: 240
 	});
+
 	$('.collapse-basic-search').collapsibleSearch();
 </script>

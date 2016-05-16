@@ -12,8 +12,8 @@ module.exports = function(gulp, plugins, _, config) {
 			.pipe(plugins.cheerio({
 				run: function ($, file) {
 					if (!REGEX_FLAGS.test(file.relative)) {
-						$('[fill]').removeAttr('fill');
-						$('[stroke]').removeAttr('fill');
+						$('[fill]').not('[fill=none]').removeAttr('fill');
+						$('[stroke]').not('[stroke=none]').removeAttr('stroke');
 					}
 				},
 				parserOptions: { xmlMode: true }

@@ -5,7 +5,7 @@ var setRootPath = function(file) {
 	var rootPath = '.';
 
 	if (fullPath) {
-		rootPath = path.relative(fullPath, '.');
+		rootPath = path.posix.relative(fullPath, '.');
 	}
 
 	file.rootPath = rootPath;

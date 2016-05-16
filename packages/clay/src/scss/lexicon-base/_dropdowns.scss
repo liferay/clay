@@ -1,3 +1,12 @@
+.dropdown-menu {
+	max-height: 295px;
+	overflow: auto;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		max-height: 320px;
+	}
+}
+
 .dropdown-menu form {
 	.checkbox,
 	.radio,
@@ -70,6 +79,7 @@
 	margin: 0;
 	overflow: auto;
 	padding: 0;
+
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -244,6 +254,7 @@
 		width: 100%;
 
 		@media screen and (min-width: $grid-float-breakpoint) {
+			max-height: none;
 			padding: 20px 0;
 			width: 100%;
 		}
@@ -307,8 +318,8 @@
 		> .dropdown-menu-top,
 		> .dropdown-menu-top-center,
 		> .dropdown-menu-top-right {
-			border-top-right-radius: $border-radius-base;
 			border-top-left-radius: $border-radius-base;
+			border-top-right-radius: $border-radius-base;
 		}
 	}
 

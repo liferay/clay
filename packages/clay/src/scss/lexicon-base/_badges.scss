@@ -23,22 +23,6 @@
 	padding-top: $badge-sm-padding-top;
 }
 
-// Monospaced Badges
-
-.badge-monospaced {
-	@include monospace($badge-monospaced-size);
-
-	padding: 0;
-
-	&.badge-lg {
-		@include monospace($badge-lg-monospaced-size);
-	}
-
-	&.badge-sm {
-		@include monospace($badge-sm-monospaced-size);
-	}
-}
-
 // Lexicon Icons in Badges
 
 .badge .lexicon-icon {

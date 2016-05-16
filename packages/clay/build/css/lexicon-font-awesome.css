@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.7
+* Lexicon 0.2.14
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -43,47 +43,10 @@
 
 /* FONT AWESOME CORE
  * -------------------------- */
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: 'fontawesome-alloy';
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  *margin-right: .3em;
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  text-decoration: inherit;
-  display: inline-block;
-  speak: none;
-}
-
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
   vertical-align: -10%;
   font-size: 1.33333333em;
-}
-
-/* makes sure icons active on rollover in links */
-a [class^="icon-"],
-a [class*=" icon-"] {
-  display: inline;
-}
-
-/* increased font size for icon-large */
-[class^="icon-"].icon-fixed-width,
-[class*=" icon-"].icon-fixed-width {
-  display: inline-block;
-  width: 1.14285714em;
-  text-align: right;
-  padding-right: 0.28571429em;
-}
-
-[class^="icon-"].icon-fixed-width.icon-large,
-[class*=" icon-"].icon-fixed-width.icon-large {
-  width: 1.42857143em;
 }
 
 .icons-ul {
@@ -101,11 +64,6 @@ a [class*=" icon-"] {
   width: 2.14285714em;
   text-align: center;
   line-height: inherit;
-}
-
-[class^="icon-"].hide,
-[class*=" icon-"].hide {
-  display: none;
 }
 
 .icon-muted {
@@ -180,114 +138,6 @@ a [class*=" icon-"] {
   float: left;
 }
 
-[class^="icon-"].pull-left,
-[class*=" icon-"].pull-left {
-  margin-right: .3em;
-}
-
-[class^="icon-"].pull-right,
-[class*=" icon-"].pull-right {
-  margin-left: .3em;
-}
-
-/* BOOTSTRAP SPECIFIC CLASSES
- * -------------------------- */
-/* Bootstrap 2.0 sprites.less reset */
-[class^="icon-"],
-[class*=" icon-"] {
-  display: inline;
-  width: auto;
-  height: auto;
-  line-height: normal;
-  vertical-align: baseline;
-  background-image: none;
-  background-position: 0% 0%;
-  background-repeat: repeat;
-  margin-top: 0;
-}
-
-/* more sprites.less reset */
-.icon-white,
-.nav-pills > .active > a > [class^="icon-"],
-.nav-pills > .active > a > [class*=" icon-"],
-.nav-list > .active > a > [class^="icon-"],
-.nav-list > .active > a > [class*=" icon-"],
-.navbar-inverse .nav > .active > a > [class^="icon-"],
-.navbar-inverse .nav > .active > a > [class*=" icon-"],
-.dropdown-menu > li > a:hover > [class^="icon-"],
-.dropdown-menu > li > a:hover > [class*=" icon-"],
-.dropdown-menu > .active > a > [class^="icon-"],
-.dropdown-menu > .active > a > [class*=" icon-"],
-.dropdown-submenu:hover > a > [class^="icon-"],
-.dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: none;
-}
-
-/* keeps Bootstrap styles with and without icons the same */
-.btn [class^="icon-"].icon-large,
-.btn [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large,
-.nav [class*=" icon-"].icon-large {
-  line-height: .9em;
-}
-
-.btn [class^="icon-"].icon-spin,
-.btn [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin,
-.nav [class*=" icon-"].icon-spin {
-  display: inline-block;
-}
-
-.nav-tabs [class^="icon-"], .nav-tabs [class^="icon-"].icon-large,
-.nav-tabs [class*=" icon-"],
-.nav-tabs [class*=" icon-"].icon-large, .nav-pills [class^="icon-"], .nav-pills [class^="icon-"].icon-large,
-.nav-pills [class*=" icon-"],
-.nav-pills [class*=" icon-"].icon-large {
-  line-height: .9em;
-}
-
-.btn [class^="icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x,
-.btn [class*=" icon-"].pull-left.icon-2x,
-.btn [class*=" icon-"].pull-right.icon-2x {
-  margin-top: .18em;
-}
-
-.btn [class^="icon-"].icon-spin.icon-large,
-.btn [class*=" icon-"].icon-spin.icon-large {
-  line-height: .8em;
-}
-
-.btn.btn-small [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x,
-.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
-.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
-  margin-top: .25em;
-}
-
-.btn.btn-large [class^="icon-"],
-.btn.btn-large [class*=" icon-"] {
-  margin-top: 0;
-}
-
-.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
-  margin-top: .05em;
-}
-
-.btn.btn-large [class^="icon-"].pull-left.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
-  margin-right: .2em;
-}
-
-.btn.btn-large [class^="icon-"].pull-right.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
-  margin-left: .2em;
-}
-
-/* Fixes alignment in nav lists */
-.nav-list [class^="icon-"],
-.nav-list [class*=" icon-"] {
-  line-height: inherit;
-}
-
 /* EXTRAS
  * -------------------------- */
 /* Stacked and layered icon */
@@ -302,13 +152,6 @@ a [class*=" icon-"] {
 
 .icon-stack [class^="icon-"],
 .icon-stack [class*=" icon-"] {
-  display: block;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-size: 1em;
-  line-height: inherit;
   *line-height: 2em;
 }
 
@@ -448,13 +291,65 @@ you can use the generic selector below, but it's slower:
 */
 .icon-caret-bottom-right, .icon-glass, .icon-music, .icon-search, .icon-envelope, .icon-heart, .icon-star, .icon-star-empty, .icon-user, .icon-film, .icon-th-large, .icon-th, .icon-th-list, .icon-ok, .icon-remove, .icon-zoom-in, .icon-zoom-out, .icon-off, .icon-signal, .icon-cog, .icon-trash, .icon-home, .icon-file, .icon-inbox, .icon-play-circle, .icon-repeat, .icon-refresh, .icon-list-alt, .icon-lock, .icon-flag, .icon-headphones, .icon-volume-off, .icon-volume-down, .icon-volume-up, .icon-qrcode, .icon-barcode, .icon-tag, .icon-tags, .icon-book, .icon-bookmark, .icon-print, .icon-camera, .icon-font, .icon-bold, .icon-italic, .icon-align-justify, .icon-list, .icon-indent-left, .icon-indent-right, .icon-facetime-video, .icon-picture, .icon-pencil, .icon-map-marker, .icon-adjust, .icon-tint, .icon-edit, .icon-share, .icon-check, .icon-move, .icon-step-backward, .icon-fast-backward, .icon-backward, .icon-play, .icon-pause, .icon-stop, .icon-forward, .icon-fast-forward, .icon-minus-sign, .icon-remove-sign, .icon-ok-sign, .icon-question-sign, .icon-info-sign, .icon-screenshot, .icon-remove-circle, .icon-ok-circle, .icon-ban-circle, .icon-arrow-left, .icon-arrow-right, .icon-arrow-up, .icon-arrow-down, .icon-share-alt, .icon-resize-full, .icon-resize-small, .icon-plus, .icon-minus, .icon-asterisk, .icon-exclamation-sign, .icon-gift, .icon-leaf, .icon-calendar, .icon-random, .icon-comment, .icon-magnet, .icon-chevron-up, .icon-chevron-down, .icon-retweet, .icon-shopping-cart, .icon-folder-close, .icon-folder-open, .icon-resize-vertical, .icon-resize-horizontal, .icon-bar-chart, .icon-twitter-sign, .icon-facebook-sign, .icon-camera-retro, .icon-key, .icon-cogs, .icon-comments, .icon-thumbs-up, .icon-thumbs-down, .icon-star-half, .icon-signin, .icon-trophy, .icon-github-sign, .icon-upload-alt, .icon-lemon, .icon-phone, .icon-check-empty, .icon-bookmark-empty, .icon-phone-sign, .icon-twitter, .icon-facebook, .icon-github, .icon-unlock, .icon-credit, .icon-rss, .icon-hdd, .icon-bullhorn, .icon-bell, .icon-certificate, .icon-hand-right, .icon-hand-left, .icon-hand-up, .icon-globe, .icon-wrench, .icon-tasks, .icon-filter, .icon-briefcase, .icon-fullscreen, .icon-group, .icon-link, .icon-cloud, .icon-beaker, .icon-cut, .icon-copy, .icon-paper-clip, .icon-save, .icon-sign-blank, .icon-reorder, .icon-list-ul, .icon-list-ol, .icon-strikethrough, .icon-underline, .icon-table, .icon-magic, .icon-money, .icon-caret-down, .icon-caret-up, .icon-caret-left, .icon-caret-right, .icon-columns, .icon-sort, .icon-sort-down, .icon-sort-up, .icon-envelope-alt, .icon-linkedin, .icon-undo, .icon-legal, .icon-dashboard, .icon-comment-alt, .icon-comments-alt, .icon-bolt, .icon-sitemap, .icon-umbrella, .icon-paste, .icon-lightbulb, .icon-exchange, .icon-bell-alt, .icon-coffee, .icon-food, .icon-file-alt, .icon-building, .icon-hospital, .icon-ambulance, .icon-medkit, .icon-fighter-jet, .icon-beer, .icon-h-sign, .icon-plus-sign, .icon-double-angle-left, .icon-double-angle-right, .icon-double-angle-up, .icon-double-angle-down, .icon-angle-left, .icon-angle-right, .icon-angle-up, .icon-angle-down, .icon-desktop, .icon-laptop, .icon-spinner, .icon-circle, .icon-reply, .icon-github-alt, .icon-folder-close-alt, .icon-folder-open-alt, .icon-expand-alt, .icon-collapse-alt, .icon-smile, .icon-frown, .icon-meh, .icon-gamepad, .icon-keyboard, .icon-flag-alt, .icon-flag-checkered, .icon-terminal, .icon-code, .icon-reply-all, .icon-star-half-full, .icon-location-arrow, .icon-crop, .icon-code-fork, .icon-subscript, .icon-eraser, .icon-puzzle, .icon-microphone, .icon-microphone-off, .icon-shield, .icon-calendar-empty, .icon-fire-extinguisher, .icon-rocket, .icon-maxcdn, .icon-chevron-sign-left, .icon-chevron-sign-right, .icon-chevron-sign-up, .icon-chevron-sign-down, .icon-html5, .icon-css3, .icon-anchor, .icon-unlock-alt, .icon-bullseye, .icon-ellipsis-horizontal, .icon-ellipsis-vertical, .icon-rss-sign, .icon-fb-boolean, .icon-text-height, .icon-text-width, .icon-align-left, .icon-align-center, .icon-align-right, .icon-step-forward, .icon-eject, .icon-chevron-left, .icon-chevron-right, .icon-plus-sign-2, .icon-fire, .icon-eye-open, .icon-eye-close, .icon-warning-sign, .icon-plane, .icon-heart-empty, .icon-signout, .icon-linkedin-sign, .icon-pushpin, .icon-external-link, .icon-hand-down, .icon-circle-arrow-left, .icon-circle-arrow-right, .icon-circle-arrow-up, .icon-circle-arrow-down, .icon-truck, .icon-pinterest, .icon-pinterest-sign, .icon-google-plus-sign, .icon-google-plus, .icon-cloud-download, .icon-cloud-upload, .icon-user-md, .icon-stethoscope, .icon-suitcase, .icon-tablet, .icon-mobile, .icon-circle-blank, .icon-quote-left, .icon-quote-right, .icon-unlink, .icon-question, .icon-info, .icon-exclamation, .icon-superscript, .icon-play-sign, .icon-ticket, .icon-minus-sign-alt, .icon-check-minus, .icon-level-up, .icon-sort-by-attributes-alt, .icon-sort-by-order, .icon-sort-by-order-alt, .icon-thumbs-up-2, .icon-thumbs-down-2, .icon-dribbble, .icon-skype, .icon-foursquare, .icon-trello, .icon-female, .icon-level-down, .icon-check-sign, .icon-edit-sign, .icon-external-link-sign, .icon-share-sign, .icon-compass, .icon-collapse, .icon-collapse-top, .icon-expand, .icon-euro, .icon-gbp, .icon-dollar, .icon-rupee, .icon-yen, .icon-renminbi, .icon-won, .icon-bitcoin, .icon-file-2, .icon-file-text, .icon-sort-by-alphabet, .icon-sort-by-alphabet-alt, .icon-sort-by-attributes, .icon-youtube-sign, .icon-youtube, .icon-xing, .icon-xing-sign, .icon-youtube-play, .icon-dropbox, .icon-stackexchange, .icon-instagram, .icon-flickr, .icon-adn, .icon-bitbucket, .icon-bitbucket-sign, .icon-tumblr, .icon-tumblr-sign, .icon-long-arrow-down, .icon-long-arrow-up, .icon-long-arrow-left, .icon-long-arrow-right, .icon-apple, .icon-windows, .icon-android, .icon-linux, .icon-male, .icon-gittip, .icon-sun, .icon-moon, .icon-archive, .icon-bug, .icon-vk, .icon-weibo, .icon-renren, .icon-time, .icon-road, .icon-download-alt, .icon-download, .icon-upload, .icon-db-joinxor, .icon-db-state, .icon-db-start, .icon-db-end, .icon-db-fork, .icon-db-condition, .icon-db-task, .icon-db-join, .icon-fb-button, .icon-fb-fieldset, .icon-fb-custom-field, .icon-fb-separator, .icon-fb-paragraph, .icon-fb-file-upload, .icon-fb-text, .icon-fb-text-box, .icon-fb-select, .icon-fb-radio, .icon-fb-number, .icon-fb-integer, .icon-fb-decimal {
   font-family: 'fontawesome-alloy';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  *margin-right: .3em;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+.icon-caret-bottom-right:before, .icon-glass:before, .icon-music:before, .icon-search:before, .icon-envelope:before, .icon-heart:before, .icon-star:before, .icon-star-empty:before, .icon-user:before, .icon-film:before, .icon-th-large:before, .icon-th:before, .icon-th-list:before, .icon-ok:before, .icon-remove:before, .icon-zoom-in:before, .icon-zoom-out:before, .icon-off:before, .icon-signal:before, .icon-cog:before, .icon-trash:before, .icon-home:before, .icon-file:before, .icon-inbox:before, .icon-play-circle:before, .icon-repeat:before, .icon-refresh:before, .icon-list-alt:before, .icon-lock:before, .icon-flag:before, .icon-headphones:before, .icon-volume-off:before, .icon-volume-down:before, .icon-volume-up:before, .icon-qrcode:before, .icon-barcode:before, .icon-tag:before, .icon-tags:before, .icon-book:before, .icon-bookmark:before, .icon-print:before, .icon-camera:before, .icon-font:before, .icon-bold:before, .icon-italic:before, .icon-align-justify:before, .icon-list:before, .icon-indent-left:before, .icon-indent-right:before, .icon-facetime-video:before, .icon-picture:before, .icon-pencil:before, .icon-map-marker:before, .icon-adjust:before, .icon-tint:before, .icon-edit:before, .icon-share:before, .icon-check:before, .icon-move:before, .icon-step-backward:before, .icon-fast-backward:before, .icon-backward:before, .icon-play:before, .icon-pause:before, .icon-stop:before, .icon-forward:before, .icon-fast-forward:before, .icon-minus-sign:before, .icon-remove-sign:before, .icon-ok-sign:before, .icon-question-sign:before, .icon-info-sign:before, .icon-screenshot:before, .icon-remove-circle:before, .icon-ok-circle:before, .icon-ban-circle:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-arrow-up:before, .icon-arrow-down:before, .icon-share-alt:before, .icon-resize-full:before, .icon-resize-small:before, .icon-plus:before, .icon-minus:before, .icon-asterisk:before, .icon-exclamation-sign:before, .icon-gift:before, .icon-leaf:before, .icon-calendar:before, .icon-random:before, .icon-comment:before, .icon-magnet:before, .icon-chevron-up:before, .icon-chevron-down:before, .icon-retweet:before, .icon-shopping-cart:before, .icon-folder-close:before, .icon-folder-open:before, .icon-resize-vertical:before, .icon-resize-horizontal:before, .icon-bar-chart:before, .icon-twitter-sign:before, .icon-facebook-sign:before, .icon-camera-retro:before, .icon-key:before, .icon-cogs:before, .icon-comments:before, .icon-thumbs-up:before, .icon-thumbs-down:before, .icon-star-half:before, .icon-signin:before, .icon-trophy:before, .icon-github-sign:before, .icon-upload-alt:before, .icon-lemon:before, .icon-phone:before, .icon-check-empty:before, .icon-bookmark-empty:before, .icon-phone-sign:before, .icon-twitter:before, .icon-facebook:before, .icon-github:before, .icon-unlock:before, .icon-credit:before, .icon-rss:before, .icon-hdd:before, .icon-bullhorn:before, .icon-bell:before, .icon-certificate:before, .icon-hand-right:before, .icon-hand-left:before, .icon-hand-up:before, .icon-globe:before, .icon-wrench:before, .icon-tasks:before, .icon-filter:before, .icon-briefcase:before, .icon-fullscreen:before, .icon-group:before, .icon-link:before, .icon-cloud:before, .icon-beaker:before, .icon-cut:before, .icon-copy:before, .icon-paper-clip:before, .icon-save:before, .icon-sign-blank:before, .icon-reorder:before, .icon-list-ul:before, .icon-list-ol:before, .icon-strikethrough:before, .icon-underline:before, .icon-table:before, .icon-magic:before, .icon-money:before, .icon-caret-down:before, .icon-caret-up:before, .icon-caret-left:before, .icon-caret-right:before, .icon-columns:before, .icon-sort:before, .icon-sort-down:before, .icon-sort-up:before, .icon-envelope-alt:before, .icon-linkedin:before, .icon-undo:before, .icon-legal:before, .icon-dashboard:before, .icon-comment-alt:before, .icon-comments-alt:before, .icon-bolt:before, .icon-sitemap:before, .icon-umbrella:before, .icon-paste:before, .icon-lightbulb:before, .icon-exchange:before, .icon-bell-alt:before, .icon-coffee:before, .icon-food:before, .icon-file-alt:before, .icon-building:before, .icon-hospital:before, .icon-ambulance:before, .icon-medkit:before, .icon-fighter-jet:before, .icon-beer:before, .icon-h-sign:before, .icon-plus-sign:before, .icon-double-angle-left:before, .icon-double-angle-right:before, .icon-double-angle-up:before, .icon-double-angle-down:before, .icon-angle-left:before, .icon-angle-right:before, .icon-angle-up:before, .icon-angle-down:before, .icon-desktop:before, .icon-laptop:before, .icon-spinner:before, .icon-circle:before, .icon-reply:before, .icon-github-alt:before, .icon-folder-close-alt:before, .icon-folder-open-alt:before, .icon-expand-alt:before, .icon-collapse-alt:before, .icon-smile:before, .icon-frown:before, .icon-meh:before, .icon-gamepad:before, .icon-keyboard:before, .icon-flag-alt:before, .icon-flag-checkered:before, .icon-terminal:before, .icon-code:before, .icon-reply-all:before, .icon-star-half-full:before, .icon-location-arrow:before, .icon-crop:before, .icon-code-fork:before, .icon-subscript:before, .icon-eraser:before, .icon-puzzle:before, .icon-microphone:before, .icon-microphone-off:before, .icon-shield:before, .icon-calendar-empty:before, .icon-fire-extinguisher:before, .icon-rocket:before, .icon-maxcdn:before, .icon-chevron-sign-left:before, .icon-chevron-sign-right:before, .icon-chevron-sign-up:before, .icon-chevron-sign-down:before, .icon-html5:before, .icon-css3:before, .icon-anchor:before, .icon-unlock-alt:before, .icon-bullseye:before, .icon-ellipsis-horizontal:before, .icon-ellipsis-vertical:before, .icon-rss-sign:before, .icon-fb-boolean:before, .icon-text-height:before, .icon-text-width:before, .icon-align-left:before, .icon-align-center:before, .icon-align-right:before, .icon-step-forward:before, .icon-eject:before, .icon-chevron-left:before, .icon-chevron-right:before, .icon-plus-sign-2:before, .icon-fire:before, .icon-eye-open:before, .icon-eye-close:before, .icon-warning-sign:before, .icon-plane:before, .icon-heart-empty:before, .icon-signout:before, .icon-linkedin-sign:before, .icon-pushpin:before, .icon-external-link:before, .icon-hand-down:before, .icon-circle-arrow-left:before, .icon-circle-arrow-right:before, .icon-circle-arrow-up:before, .icon-circle-arrow-down:before, .icon-truck:before, .icon-pinterest:before, .icon-pinterest-sign:before, .icon-google-plus-sign:before, .icon-google-plus:before, .icon-cloud-download:before, .icon-cloud-upload:before, .icon-user-md:before, .icon-stethoscope:before, .icon-suitcase:before, .icon-tablet:before, .icon-mobile:before, .icon-circle-blank:before, .icon-quote-left:before, .icon-quote-right:before, .icon-unlink:before, .icon-question:before, .icon-info:before, .icon-exclamation:before, .icon-superscript:before, .icon-play-sign:before, .icon-ticket:before, .icon-minus-sign-alt:before, .icon-check-minus:before, .icon-level-up:before, .icon-sort-by-attributes-alt:before, .icon-sort-by-order:before, .icon-sort-by-order-alt:before, .icon-thumbs-up-2:before, .icon-thumbs-down-2:before, .icon-dribbble:before, .icon-skype:before, .icon-foursquare:before, .icon-trello:before, .icon-female:before, .icon-level-down:before, .icon-check-sign:before, .icon-edit-sign:before, .icon-external-link-sign:before, .icon-share-sign:before, .icon-compass:before, .icon-collapse:before, .icon-collapse-top:before, .icon-expand:before, .icon-euro:before, .icon-gbp:before, .icon-dollar:before, .icon-rupee:before, .icon-yen:before, .icon-renminbi:before, .icon-won:before, .icon-bitcoin:before, .icon-file-2:before, .icon-file-text:before, .icon-sort-by-alphabet:before, .icon-sort-by-alphabet-alt:before, .icon-sort-by-attributes:before, .icon-youtube-sign:before, .icon-youtube:before, .icon-xing:before, .icon-xing-sign:before, .icon-youtube-play:before, .icon-dropbox:before, .icon-stackexchange:before, .icon-instagram:before, .icon-flickr:before, .icon-adn:before, .icon-bitbucket:before, .icon-bitbucket-sign:before, .icon-tumblr:before, .icon-tumblr-sign:before, .icon-long-arrow-down:before, .icon-long-arrow-up:before, .icon-long-arrow-left:before, .icon-long-arrow-right:before, .icon-apple:before, .icon-windows:before, .icon-android:before, .icon-linux:before, .icon-male:before, .icon-gittip:before, .icon-sun:before, .icon-moon:before, .icon-archive:before, .icon-bug:before, .icon-vk:before, .icon-weibo:before, .icon-renren:before, .icon-time:before, .icon-road:before, .icon-download-alt:before, .icon-download:before, .icon-upload:before, .icon-db-joinxor:before, .icon-db-state:before, .icon-db-start:before, .icon-db-end:before, .icon-db-fork:before, .icon-db-condition:before, .icon-db-task:before, .icon-db-join:before, .icon-fb-button:before, .icon-fb-fieldset:before, .icon-fb-custom-field:before, .icon-fb-separator:before, .icon-fb-paragraph:before, .icon-fb-file-upload:before, .icon-fb-text:before, .icon-fb-text-box:before, .icon-fb-select:before, .icon-fb-radio:before, .icon-fb-number:before, .icon-fb-integer:before, .icon-fb-decimal:before {
+  display: inline-block;
+  speak: none;
+  text-decoration: inherit;
+}
+
+.icon-caret-bottom-right.hide, .icon-glass.hide, .icon-music.hide, .icon-search.hide, .icon-envelope.hide, .icon-heart.hide, .icon-star.hide, .icon-star-empty.hide, .icon-user.hide, .icon-film.hide, .icon-th-large.hide, .icon-th.hide, .icon-th-list.hide, .icon-ok.hide, .icon-remove.hide, .icon-zoom-in.hide, .icon-zoom-out.hide, .icon-off.hide, .icon-signal.hide, .icon-cog.hide, .icon-trash.hide, .icon-home.hide, .icon-file.hide, .icon-inbox.hide, .icon-play-circle.hide, .icon-repeat.hide, .icon-refresh.hide, .icon-list-alt.hide, .icon-lock.hide, .icon-flag.hide, .icon-headphones.hide, .icon-volume-off.hide, .icon-volume-down.hide, .icon-volume-up.hide, .icon-qrcode.hide, .icon-barcode.hide, .icon-tag.hide, .icon-tags.hide, .icon-book.hide, .icon-bookmark.hide, .icon-print.hide, .icon-camera.hide, .icon-font.hide, .icon-bold.hide, .icon-italic.hide, .icon-align-justify.hide, .icon-list.hide, .icon-indent-left.hide, .icon-indent-right.hide, .icon-facetime-video.hide, .icon-picture.hide, .icon-pencil.hide, .icon-map-marker.hide, .icon-adjust.hide, .icon-tint.hide, .icon-edit.hide, .icon-share.hide, .icon-check.hide, .icon-move.hide, .icon-step-backward.hide, .icon-fast-backward.hide, .icon-backward.hide, .icon-play.hide, .icon-pause.hide, .icon-stop.hide, .icon-forward.hide, .icon-fast-forward.hide, .icon-minus-sign.hide, .icon-remove-sign.hide, .icon-ok-sign.hide, .icon-question-sign.hide, .icon-info-sign.hide, .icon-screenshot.hide, .icon-remove-circle.hide, .icon-ok-circle.hide, .icon-ban-circle.hide, .icon-arrow-left.hide, .icon-arrow-right.hide, .icon-arrow-up.hide, .icon-arrow-down.hide, .icon-share-alt.hide, .icon-resize-full.hide, .icon-resize-small.hide, .icon-plus.hide, .icon-minus.hide, .icon-asterisk.hide, .icon-exclamation-sign.hide, .icon-gift.hide, .icon-leaf.hide, .icon-calendar.hide, .icon-random.hide, .icon-comment.hide, .icon-magnet.hide, .icon-chevron-up.hide, .icon-chevron-down.hide, .icon-retweet.hide, .icon-shopping-cart.hide, .icon-folder-close.hide, .icon-folder-open.hide, .icon-resize-vertical.hide, .icon-resize-horizontal.hide, .icon-bar-chart.hide, .icon-twitter-sign.hide, .icon-facebook-sign.hide, .icon-camera-retro.hide, .icon-key.hide, .icon-cogs.hide, .icon-comments.hide, .icon-thumbs-up.hide, .icon-thumbs-down.hide, .icon-star-half.hide, .icon-signin.hide, .icon-trophy.hide, .icon-github-sign.hide, .icon-upload-alt.hide, .icon-lemon.hide, .icon-phone.hide, .icon-check-empty.hide, .icon-bookmark-empty.hide, .icon-phone-sign.hide, .icon-twitter.hide, .icon-facebook.hide, .icon-github.hide, .icon-unlock.hide, .icon-credit.hide, .icon-rss.hide, .icon-hdd.hide, .icon-bullhorn.hide, .icon-bell.hide, .icon-certificate.hide, .icon-hand-right.hide, .icon-hand-left.hide, .icon-hand-up.hide, .icon-globe.hide, .icon-wrench.hide, .icon-tasks.hide, .icon-filter.hide, .icon-briefcase.hide, .icon-fullscreen.hide, .icon-group.hide, .icon-link.hide, .icon-cloud.hide, .icon-beaker.hide, .icon-cut.hide, .icon-copy.hide, .icon-paper-clip.hide, .icon-save.hide, .icon-sign-blank.hide, .icon-reorder.hide, .icon-list-ul.hide, .icon-list-ol.hide, .icon-strikethrough.hide, .icon-underline.hide, .icon-table.hide, .icon-magic.hide, .icon-money.hide, .icon-caret-down.hide, .icon-caret-up.hide, .icon-caret-left.hide, .icon-caret-right.hide, .icon-columns.hide, .icon-sort.hide, .icon-sort-down.hide, .icon-sort-up.hide, .icon-envelope-alt.hide, .icon-linkedin.hide, .icon-undo.hide, .icon-legal.hide, .icon-dashboard.hide, .icon-comment-alt.hide, .icon-comments-alt.hide, .icon-bolt.hide, .icon-sitemap.hide, .icon-umbrella.hide, .icon-paste.hide, .icon-lightbulb.hide, .icon-exchange.hide, .icon-bell-alt.hide, .icon-coffee.hide, .icon-food.hide, .icon-file-alt.hide, .icon-building.hide, .icon-hospital.hide, .icon-ambulance.hide, .icon-medkit.hide, .icon-fighter-jet.hide, .icon-beer.hide, .icon-h-sign.hide, .icon-plus-sign.hide, .icon-double-angle-left.hide, .icon-double-angle-right.hide, .icon-double-angle-up.hide, .icon-double-angle-down.hide, .icon-angle-left.hide, .icon-angle-right.hide, .icon-angle-up.hide, .icon-angle-down.hide, .icon-desktop.hide, .icon-laptop.hide, .icon-spinner.hide, .icon-circle.hide, .icon-reply.hide, .icon-github-alt.hide, .icon-folder-close-alt.hide, .icon-folder-open-alt.hide, .icon-expand-alt.hide, .icon-collapse-alt.hide, .icon-smile.hide, .icon-frown.hide, .icon-meh.hide, .icon-gamepad.hide, .icon-keyboard.hide, .icon-flag-alt.hide, .icon-flag-checkered.hide, .icon-terminal.hide, .icon-code.hide, .icon-reply-all.hide, .icon-star-half-full.hide, .icon-location-arrow.hide, .icon-crop.hide, .icon-code-fork.hide, .icon-subscript.hide, .icon-eraser.hide, .icon-puzzle.hide, .icon-microphone.hide, .icon-microphone-off.hide, .icon-shield.hide, .icon-calendar-empty.hide, .icon-fire-extinguisher.hide, .icon-rocket.hide, .icon-maxcdn.hide, .icon-chevron-sign-left.hide, .icon-chevron-sign-right.hide, .icon-chevron-sign-up.hide, .icon-chevron-sign-down.hide, .icon-html5.hide, .icon-css3.hide, .icon-anchor.hide, .icon-unlock-alt.hide, .icon-bullseye.hide, .icon-ellipsis-horizontal.hide, .icon-ellipsis-vertical.hide, .icon-rss-sign.hide, .icon-fb-boolean.hide, .icon-text-height.hide, .icon-text-width.hide, .icon-align-left.hide, .icon-align-center.hide, .icon-align-right.hide, .icon-step-forward.hide, .icon-eject.hide, .icon-chevron-left.hide, .icon-chevron-right.hide, .icon-plus-sign-2.hide, .icon-fire.hide, .icon-eye-open.hide, .icon-eye-close.hide, .icon-warning-sign.hide, .icon-plane.hide, .icon-heart-empty.hide, .icon-signout.hide, .icon-linkedin-sign.hide, .icon-pushpin.hide, .icon-external-link.hide, .icon-hand-down.hide, .icon-circle-arrow-left.hide, .icon-circle-arrow-right.hide, .icon-circle-arrow-up.hide, .icon-circle-arrow-down.hide, .icon-truck.hide, .icon-pinterest.hide, .icon-pinterest-sign.hide, .icon-google-plus-sign.hide, .icon-google-plus.hide, .icon-cloud-download.hide, .icon-cloud-upload.hide, .icon-user-md.hide, .icon-stethoscope.hide, .icon-suitcase.hide, .icon-tablet.hide, .icon-mobile.hide, .icon-circle-blank.hide, .icon-quote-left.hide, .icon-quote-right.hide, .icon-unlink.hide, .icon-question.hide, .icon-info.hide, .icon-exclamation.hide, .icon-superscript.hide, .icon-play-sign.hide, .icon-ticket.hide, .icon-minus-sign-alt.hide, .icon-check-minus.hide, .icon-level-up.hide, .icon-sort-by-attributes-alt.hide, .icon-sort-by-order.hide, .icon-sort-by-order-alt.hide, .icon-thumbs-up-2.hide, .icon-thumbs-down-2.hide, .icon-dribbble.hide, .icon-skype.hide, .icon-foursquare.hide, .icon-trello.hide, .icon-female.hide, .icon-level-down.hide, .icon-check-sign.hide, .icon-edit-sign.hide, .icon-external-link-sign.hide, .icon-share-sign.hide, .icon-compass.hide, .icon-collapse.hide, .icon-collapse-top.hide, .icon-expand.hide, .icon-euro.hide, .icon-gbp.hide, .icon-dollar.hide, .icon-rupee.hide, .icon-yen.hide, .icon-renminbi.hide, .icon-won.hide, .icon-bitcoin.hide, .icon-file-2.hide, .icon-file-text.hide, .icon-sort-by-alphabet.hide, .icon-sort-by-alphabet-alt.hide, .icon-sort-by-attributes.hide, .icon-youtube-sign.hide, .icon-youtube.hide, .icon-xing.hide, .icon-xing-sign.hide, .icon-youtube-play.hide, .icon-dropbox.hide, .icon-stackexchange.hide, .icon-instagram.hide, .icon-flickr.hide, .icon-adn.hide, .icon-bitbucket.hide, .icon-bitbucket-sign.hide, .icon-tumblr.hide, .icon-tumblr-sign.hide, .icon-long-arrow-down.hide, .icon-long-arrow-up.hide, .icon-long-arrow-left.hide, .icon-long-arrow-right.hide, .icon-apple.hide, .icon-windows.hide, .icon-android.hide, .icon-linux.hide, .icon-male.hide, .icon-gittip.hide, .icon-sun.hide, .icon-moon.hide, .icon-archive.hide, .icon-bug.hide, .icon-vk.hide, .icon-weibo.hide, .icon-renren.hide, .icon-time.hide, .icon-road.hide, .icon-download-alt.hide, .icon-download.hide, .icon-upload.hide, .icon-db-joinxor.hide, .icon-db-state.hide, .icon-db-start.hide, .icon-db-end.hide, .icon-db-fork.hide, .icon-db-condition.hide, .icon-db-task.hide, .icon-db-join.hide, .icon-fb-button.hide, .icon-fb-fieldset.hide, .icon-fb-custom-field.hide, .icon-fb-separator.hide, .icon-fb-paragraph.hide, .icon-fb-file-upload.hide, .icon-fb-text.hide, .icon-fb-text-box.hide, .icon-fb-select.hide, .icon-fb-radio.hide, .icon-fb-number.hide, .icon-fb-integer.hide, .icon-fb-decimal.hide {
+  display: none;
+}
+
+.icon-caret-bottom-right.icon-fixed-width, .icon-glass.icon-fixed-width, .icon-music.icon-fixed-width, .icon-search.icon-fixed-width, .icon-envelope.icon-fixed-width, .icon-heart.icon-fixed-width, .icon-star.icon-fixed-width, .icon-star-empty.icon-fixed-width, .icon-user.icon-fixed-width, .icon-film.icon-fixed-width, .icon-th-large.icon-fixed-width, .icon-th.icon-fixed-width, .icon-th-list.icon-fixed-width, .icon-ok.icon-fixed-width, .icon-remove.icon-fixed-width, .icon-zoom-in.icon-fixed-width, .icon-zoom-out.icon-fixed-width, .icon-off.icon-fixed-width, .icon-signal.icon-fixed-width, .icon-cog.icon-fixed-width, .icon-trash.icon-fixed-width, .icon-home.icon-fixed-width, .icon-file.icon-fixed-width, .icon-inbox.icon-fixed-width, .icon-play-circle.icon-fixed-width, .icon-repeat.icon-fixed-width, .icon-refresh.icon-fixed-width, .icon-list-alt.icon-fixed-width, .icon-lock.icon-fixed-width, .icon-flag.icon-fixed-width, .icon-headphones.icon-fixed-width, .icon-volume-off.icon-fixed-width, .icon-volume-down.icon-fixed-width, .icon-volume-up.icon-fixed-width, .icon-qrcode.icon-fixed-width, .icon-barcode.icon-fixed-width, .icon-tag.icon-fixed-width, .icon-tags.icon-fixed-width, .icon-book.icon-fixed-width, .icon-bookmark.icon-fixed-width, .icon-print.icon-fixed-width, .icon-camera.icon-fixed-width, .icon-font.icon-fixed-width, .icon-bold.icon-fixed-width, .icon-italic.icon-fixed-width, .icon-align-justify.icon-fixed-width, .icon-list.icon-fixed-width, .icon-indent-left.icon-fixed-width, .icon-indent-right.icon-fixed-width, .icon-facetime-video.icon-fixed-width, .icon-picture.icon-fixed-width, .icon-pencil.icon-fixed-width, .icon-map-marker.icon-fixed-width, .icon-adjust.icon-fixed-width, .icon-tint.icon-fixed-width, .icon-edit.icon-fixed-width, .icon-share.icon-fixed-width, .icon-check.icon-fixed-width, .icon-move.icon-fixed-width, .icon-step-backward.icon-fixed-width, .icon-fast-backward.icon-fixed-width, .icon-backward.icon-fixed-width, .icon-play.icon-fixed-width, .icon-pause.icon-fixed-width, .icon-stop.icon-fixed-width, .icon-forward.icon-fixed-width, .icon-fast-forward.icon-fixed-width, .icon-minus-sign.icon-fixed-width, .icon-remove-sign.icon-fixed-width, .icon-ok-sign.icon-fixed-width, .icon-question-sign.icon-fixed-width, .icon-info-sign.icon-fixed-width, .icon-screenshot.icon-fixed-width, .icon-remove-circle.icon-fixed-width, .icon-ok-circle.icon-fixed-width, .icon-ban-circle.icon-fixed-width, .icon-arrow-left.icon-fixed-width, .icon-arrow-right.icon-fixed-width, .icon-arrow-up.icon-fixed-width, .icon-arrow-down.icon-fixed-width, .icon-share-alt.icon-fixed-width, .icon-resize-full.icon-fixed-width, .icon-resize-small.icon-fixed-width, .icon-plus.icon-fixed-width, .icon-minus.icon-fixed-width, .icon-asterisk.icon-fixed-width, .icon-exclamation-sign.icon-fixed-width, .icon-gift.icon-fixed-width, .icon-leaf.icon-fixed-width, .icon-calendar.icon-fixed-width, .icon-random.icon-fixed-width, .icon-comment.icon-fixed-width, .icon-magnet.icon-fixed-width, .icon-chevron-up.icon-fixed-width, .icon-chevron-down.icon-fixed-width, .icon-retweet.icon-fixed-width, .icon-shopping-cart.icon-fixed-width, .icon-folder-close.icon-fixed-width, .icon-folder-open.icon-fixed-width, .icon-resize-vertical.icon-fixed-width, .icon-resize-horizontal.icon-fixed-width, .icon-bar-chart.icon-fixed-width, .icon-twitter-sign.icon-fixed-width, .icon-facebook-sign.icon-fixed-width, .icon-camera-retro.icon-fixed-width, .icon-key.icon-fixed-width, .icon-cogs.icon-fixed-width, .icon-comments.icon-fixed-width, .icon-thumbs-up.icon-fixed-width, .icon-thumbs-down.icon-fixed-width, .icon-star-half.icon-fixed-width, .icon-signin.icon-fixed-width, .icon-trophy.icon-fixed-width, .icon-github-sign.icon-fixed-width, .icon-upload-alt.icon-fixed-width, .icon-lemon.icon-fixed-width, .icon-phone.icon-fixed-width, .icon-check-empty.icon-fixed-width, .icon-bookmark-empty.icon-fixed-width, .icon-phone-sign.icon-fixed-width, .icon-twitter.icon-fixed-width, .icon-facebook.icon-fixed-width, .icon-github.icon-fixed-width, .icon-unlock.icon-fixed-width, .icon-credit.icon-fixed-width, .icon-rss.icon-fixed-width, .icon-hdd.icon-fixed-width, .icon-bullhorn.icon-fixed-width, .icon-bell.icon-fixed-width, .icon-certificate.icon-fixed-width, .icon-hand-right.icon-fixed-width, .icon-hand-left.icon-fixed-width, .icon-hand-up.icon-fixed-width, .icon-globe.icon-fixed-width, .icon-wrench.icon-fixed-width, .icon-tasks.icon-fixed-width, .icon-filter.icon-fixed-width, .icon-briefcase.icon-fixed-width, .icon-fullscreen.icon-fixed-width, .icon-group.icon-fixed-width, .icon-link.icon-fixed-width, .icon-cloud.icon-fixed-width, .icon-beaker.icon-fixed-width, .icon-cut.icon-fixed-width, .icon-copy.icon-fixed-width, .icon-paper-clip.icon-fixed-width, .icon-save.icon-fixed-width, .icon-sign-blank.icon-fixed-width, .icon-reorder.icon-fixed-width, .icon-list-ul.icon-fixed-width, .icon-list-ol.icon-fixed-width, .icon-strikethrough.icon-fixed-width, .icon-underline.icon-fixed-width, .icon-table.icon-fixed-width, .icon-magic.icon-fixed-width, .icon-money.icon-fixed-width, .icon-caret-down.icon-fixed-width, .icon-caret-up.icon-fixed-width, .icon-caret-left.icon-fixed-width, .icon-caret-right.icon-fixed-width, .icon-columns.icon-fixed-width, .icon-sort.icon-fixed-width, .icon-sort-down.icon-fixed-width, .icon-sort-up.icon-fixed-width, .icon-envelope-alt.icon-fixed-width, .icon-linkedin.icon-fixed-width, .icon-undo.icon-fixed-width, .icon-legal.icon-fixed-width, .icon-dashboard.icon-fixed-width, .icon-comment-alt.icon-fixed-width, .icon-comments-alt.icon-fixed-width, .icon-bolt.icon-fixed-width, .icon-sitemap.icon-fixed-width, .icon-umbrella.icon-fixed-width, .icon-paste.icon-fixed-width, .icon-lightbulb.icon-fixed-width, .icon-exchange.icon-fixed-width, .icon-bell-alt.icon-fixed-width, .icon-coffee.icon-fixed-width, .icon-food.icon-fixed-width, .icon-file-alt.icon-fixed-width, .icon-building.icon-fixed-width, .icon-hospital.icon-fixed-width, .icon-ambulance.icon-fixed-width, .icon-medkit.icon-fixed-width, .icon-fighter-jet.icon-fixed-width, .icon-beer.icon-fixed-width, .icon-h-sign.icon-fixed-width, .icon-plus-sign.icon-fixed-width, .icon-double-angle-left.icon-fixed-width, .icon-double-angle-right.icon-fixed-width, .icon-double-angle-up.icon-fixed-width, .icon-double-angle-down.icon-fixed-width, .icon-angle-left.icon-fixed-width, .icon-angle-right.icon-fixed-width, .icon-angle-up.icon-fixed-width, .icon-angle-down.icon-fixed-width, .icon-desktop.icon-fixed-width, .icon-laptop.icon-fixed-width, .icon-spinner.icon-fixed-width, .icon-circle.icon-fixed-width, .icon-reply.icon-fixed-width, .icon-github-alt.icon-fixed-width, .icon-folder-close-alt.icon-fixed-width, .icon-folder-open-alt.icon-fixed-width, .icon-expand-alt.icon-fixed-width, .icon-collapse-alt.icon-fixed-width, .icon-smile.icon-fixed-width, .icon-frown.icon-fixed-width, .icon-meh.icon-fixed-width, .icon-gamepad.icon-fixed-width, .icon-keyboard.icon-fixed-width, .icon-flag-alt.icon-fixed-width, .icon-flag-checkered.icon-fixed-width, .icon-terminal.icon-fixed-width, .icon-code.icon-fixed-width, .icon-reply-all.icon-fixed-width, .icon-star-half-full.icon-fixed-width, .icon-location-arrow.icon-fixed-width, .icon-crop.icon-fixed-width, .icon-code-fork.icon-fixed-width, .icon-subscript.icon-fixed-width, .icon-eraser.icon-fixed-width, .icon-puzzle.icon-fixed-width, .icon-microphone.icon-fixed-width, .icon-microphone-off.icon-fixed-width, .icon-shield.icon-fixed-width, .icon-calendar-empty.icon-fixed-width, .icon-fire-extinguisher.icon-fixed-width, .icon-rocket.icon-fixed-width, .icon-maxcdn.icon-fixed-width, .icon-chevron-sign-left.icon-fixed-width, .icon-chevron-sign-right.icon-fixed-width, .icon-chevron-sign-up.icon-fixed-width, .icon-chevron-sign-down.icon-fixed-width, .icon-html5.icon-fixed-width, .icon-css3.icon-fixed-width, .icon-anchor.icon-fixed-width, .icon-unlock-alt.icon-fixed-width, .icon-bullseye.icon-fixed-width, .icon-ellipsis-horizontal.icon-fixed-width, .icon-ellipsis-vertical.icon-fixed-width, .icon-rss-sign.icon-fixed-width, .icon-fb-boolean.icon-fixed-width, .icon-text-height.icon-fixed-width, .icon-text-width.icon-fixed-width, .icon-align-left.icon-fixed-width, .icon-align-center.icon-fixed-width, .icon-align-right.icon-fixed-width, .icon-step-forward.icon-fixed-width, .icon-eject.icon-fixed-width, .icon-chevron-left.icon-fixed-width, .icon-chevron-right.icon-fixed-width, .icon-plus-sign-2.icon-fixed-width, .icon-fire.icon-fixed-width, .icon-eye-open.icon-fixed-width, .icon-eye-close.icon-fixed-width, .icon-warning-sign.icon-fixed-width, .icon-plane.icon-fixed-width, .icon-heart-empty.icon-fixed-width, .icon-signout.icon-fixed-width, .icon-linkedin-sign.icon-fixed-width, .icon-pushpin.icon-fixed-width, .icon-external-link.icon-fixed-width, .icon-hand-down.icon-fixed-width, .icon-circle-arrow-left.icon-fixed-width, .icon-circle-arrow-right.icon-fixed-width, .icon-circle-arrow-up.icon-fixed-width, .icon-circle-arrow-down.icon-fixed-width, .icon-truck.icon-fixed-width, .icon-pinterest.icon-fixed-width, .icon-pinterest-sign.icon-fixed-width, .icon-google-plus-sign.icon-fixed-width, .icon-google-plus.icon-fixed-width, .icon-cloud-download.icon-fixed-width, .icon-cloud-upload.icon-fixed-width, .icon-user-md.icon-fixed-width, .icon-stethoscope.icon-fixed-width, .icon-suitcase.icon-fixed-width, .icon-tablet.icon-fixed-width, .icon-mobile.icon-fixed-width, .icon-circle-blank.icon-fixed-width, .icon-quote-left.icon-fixed-width, .icon-quote-right.icon-fixed-width, .icon-unlink.icon-fixed-width, .icon-question.icon-fixed-width, .icon-info.icon-fixed-width, .icon-exclamation.icon-fixed-width, .icon-superscript.icon-fixed-width, .icon-play-sign.icon-fixed-width, .icon-ticket.icon-fixed-width, .icon-minus-sign-alt.icon-fixed-width, .icon-check-minus.icon-fixed-width, .icon-level-up.icon-fixed-width, .icon-sort-by-attributes-alt.icon-fixed-width, .icon-sort-by-order.icon-fixed-width, .icon-sort-by-order-alt.icon-fixed-width, .icon-thumbs-up-2.icon-fixed-width, .icon-thumbs-down-2.icon-fixed-width, .icon-dribbble.icon-fixed-width, .icon-skype.icon-fixed-width, .icon-foursquare.icon-fixed-width, .icon-trello.icon-fixed-width, .icon-female.icon-fixed-width, .icon-level-down.icon-fixed-width, .icon-check-sign.icon-fixed-width, .icon-edit-sign.icon-fixed-width, .icon-external-link-sign.icon-fixed-width, .icon-share-sign.icon-fixed-width, .icon-compass.icon-fixed-width, .icon-collapse.icon-fixed-width, .icon-collapse-top.icon-fixed-width, .icon-expand.icon-fixed-width, .icon-euro.icon-fixed-width, .icon-gbp.icon-fixed-width, .icon-dollar.icon-fixed-width, .icon-rupee.icon-fixed-width, .icon-yen.icon-fixed-width, .icon-renminbi.icon-fixed-width, .icon-won.icon-fixed-width, .icon-bitcoin.icon-fixed-width, .icon-file-2.icon-fixed-width, .icon-file-text.icon-fixed-width, .icon-sort-by-alphabet.icon-fixed-width, .icon-sort-by-alphabet-alt.icon-fixed-width, .icon-sort-by-attributes.icon-fixed-width, .icon-youtube-sign.icon-fixed-width, .icon-youtube.icon-fixed-width, .icon-xing.icon-fixed-width, .icon-xing-sign.icon-fixed-width, .icon-youtube-play.icon-fixed-width, .icon-dropbox.icon-fixed-width, .icon-stackexchange.icon-fixed-width, .icon-instagram.icon-fixed-width, .icon-flickr.icon-fixed-width, .icon-adn.icon-fixed-width, .icon-bitbucket.icon-fixed-width, .icon-bitbucket-sign.icon-fixed-width, .icon-tumblr.icon-fixed-width, .icon-tumblr-sign.icon-fixed-width, .icon-long-arrow-down.icon-fixed-width, .icon-long-arrow-up.icon-fixed-width, .icon-long-arrow-left.icon-fixed-width, .icon-long-arrow-right.icon-fixed-width, .icon-apple.icon-fixed-width, .icon-windows.icon-fixed-width, .icon-android.icon-fixed-width, .icon-linux.icon-fixed-width, .icon-male.icon-fixed-width, .icon-gittip.icon-fixed-width, .icon-sun.icon-fixed-width, .icon-moon.icon-fixed-width, .icon-archive.icon-fixed-width, .icon-bug.icon-fixed-width, .icon-vk.icon-fixed-width, .icon-weibo.icon-fixed-width, .icon-renren.icon-fixed-width, .icon-time.icon-fixed-width, .icon-road.icon-fixed-width, .icon-download-alt.icon-fixed-width, .icon-download.icon-fixed-width, .icon-upload.icon-fixed-width, .icon-db-joinxor.icon-fixed-width, .icon-db-state.icon-fixed-width, .icon-db-start.icon-fixed-width, .icon-db-end.icon-fixed-width, .icon-db-fork.icon-fixed-width, .icon-db-condition.icon-fixed-width, .icon-db-task.icon-fixed-width, .icon-db-join.icon-fixed-width, .icon-fb-button.icon-fixed-width, .icon-fb-fieldset.icon-fixed-width, .icon-fb-custom-field.icon-fixed-width, .icon-fb-separator.icon-fixed-width, .icon-fb-paragraph.icon-fixed-width, .icon-fb-file-upload.icon-fixed-width, .icon-fb-text.icon-fixed-width, .icon-fb-text-box.icon-fixed-width, .icon-fb-select.icon-fixed-width, .icon-fb-radio.icon-fixed-width, .icon-fb-number.icon-fixed-width, .icon-fb-integer.icon-fixed-width, .icon-fb-decimal.icon-fixed-width {
+  display: inline-block;
+  padding-right: 0.28571429em;
+  text-align: right;
+  width: 1.14285714em;
+}
+
+.icon-caret-bottom-right.icon-fixed-width.icon-large, .icon-glass.icon-fixed-width.icon-large, .icon-music.icon-fixed-width.icon-large, .icon-search.icon-fixed-width.icon-large, .icon-envelope.icon-fixed-width.icon-large, .icon-heart.icon-fixed-width.icon-large, .icon-star.icon-fixed-width.icon-large, .icon-star-empty.icon-fixed-width.icon-large, .icon-user.icon-fixed-width.icon-large, .icon-film.icon-fixed-width.icon-large, .icon-th-large.icon-fixed-width.icon-large, .icon-th.icon-fixed-width.icon-large, .icon-th-list.icon-fixed-width.icon-large, .icon-ok.icon-fixed-width.icon-large, .icon-remove.icon-fixed-width.icon-large, .icon-zoom-in.icon-fixed-width.icon-large, .icon-zoom-out.icon-fixed-width.icon-large, .icon-off.icon-fixed-width.icon-large, .icon-signal.icon-fixed-width.icon-large, .icon-cog.icon-fixed-width.icon-large, .icon-trash.icon-fixed-width.icon-large, .icon-home.icon-fixed-width.icon-large, .icon-file.icon-fixed-width.icon-large, .icon-inbox.icon-fixed-width.icon-large, .icon-play-circle.icon-fixed-width.icon-large, .icon-repeat.icon-fixed-width.icon-large, .icon-refresh.icon-fixed-width.icon-large, .icon-list-alt.icon-fixed-width.icon-large, .icon-lock.icon-fixed-width.icon-large, .icon-flag.icon-fixed-width.icon-large, .icon-headphones.icon-fixed-width.icon-large, .icon-volume-off.icon-fixed-width.icon-large, .icon-volume-down.icon-fixed-width.icon-large, .icon-volume-up.icon-fixed-width.icon-large, .icon-qrcode.icon-fixed-width.icon-large, .icon-barcode.icon-fixed-width.icon-large, .icon-tag.icon-fixed-width.icon-large, .icon-tags.icon-fixed-width.icon-large, .icon-book.icon-fixed-width.icon-large, .icon-bookmark.icon-fixed-width.icon-large, .icon-print.icon-fixed-width.icon-large, .icon-camera.icon-fixed-width.icon-large, .icon-font.icon-fixed-width.icon-large, .icon-bold.icon-fixed-width.icon-large, .icon-italic.icon-fixed-width.icon-large, .icon-align-justify.icon-fixed-width.icon-large, .icon-list.icon-fixed-width.icon-large, .icon-indent-left.icon-fixed-width.icon-large, .icon-indent-right.icon-fixed-width.icon-large, .icon-facetime-video.icon-fixed-width.icon-large, .icon-picture.icon-fixed-width.icon-large, .icon-pencil.icon-fixed-width.icon-large, .icon-map-marker.icon-fixed-width.icon-large, .icon-adjust.icon-fixed-width.icon-large, .icon-tint.icon-fixed-width.icon-large, .icon-edit.icon-fixed-width.icon-large, .icon-share.icon-fixed-width.icon-large, .icon-check.icon-fixed-width.icon-large, .icon-move.icon-fixed-width.icon-large, .icon-step-backward.icon-fixed-width.icon-large, .icon-fast-backward.icon-fixed-width.icon-large, .icon-backward.icon-fixed-width.icon-large, .icon-play.icon-fixed-width.icon-large, .icon-pause.icon-fixed-width.icon-large, .icon-stop.icon-fixed-width.icon-large, .icon-forward.icon-fixed-width.icon-large, .icon-fast-forward.icon-fixed-width.icon-large, .icon-minus-sign.icon-fixed-width.icon-large, .icon-remove-sign.icon-fixed-width.icon-large, .icon-ok-sign.icon-fixed-width.icon-large, .icon-question-sign.icon-fixed-width.icon-large, .icon-info-sign.icon-fixed-width.icon-large, .icon-screenshot.icon-fixed-width.icon-large, .icon-remove-circle.icon-fixed-width.icon-large, .icon-ok-circle.icon-fixed-width.icon-large, .icon-ban-circle.icon-fixed-width.icon-large, .icon-arrow-left.icon-fixed-width.icon-large, .icon-arrow-right.icon-fixed-width.icon-large, .icon-arrow-up.icon-fixed-width.icon-large, .icon-arrow-down.icon-fixed-width.icon-large, .icon-share-alt.icon-fixed-width.icon-large, .icon-resize-full.icon-fixed-width.icon-large, .icon-resize-small.icon-fixed-width.icon-large, .icon-plus.icon-fixed-width.icon-large, .icon-minus.icon-fixed-width.icon-large, .icon-asterisk.icon-fixed-width.icon-large, .icon-exclamation-sign.icon-fixed-width.icon-large, .icon-gift.icon-fixed-width.icon-large, .icon-leaf.icon-fixed-width.icon-large, .icon-calendar.icon-fixed-width.icon-large, .icon-random.icon-fixed-width.icon-large, .icon-comment.icon-fixed-width.icon-large, .icon-magnet.icon-fixed-width.icon-large, .icon-chevron-up.icon-fixed-width.icon-large, .icon-chevron-down.icon-fixed-width.icon-large, .icon-retweet.icon-fixed-width.icon-large, .icon-shopping-cart.icon-fixed-width.icon-large, .icon-folder-close.icon-fixed-width.icon-large, .icon-folder-open.icon-fixed-width.icon-large, .icon-resize-vertical.icon-fixed-width.icon-large, .icon-resize-horizontal.icon-fixed-width.icon-large, .icon-bar-chart.icon-fixed-width.icon-large, .icon-twitter-sign.icon-fixed-width.icon-large, .icon-facebook-sign.icon-fixed-width.icon-large, .icon-camera-retro.icon-fixed-width.icon-large, .icon-key.icon-fixed-width.icon-large, .icon-cogs.icon-fixed-width.icon-large, .icon-comments.icon-fixed-width.icon-large, .icon-thumbs-up.icon-fixed-width.icon-large, .icon-thumbs-down.icon-fixed-width.icon-large, .icon-star-half.icon-fixed-width.icon-large, .icon-signin.icon-fixed-width.icon-large, .icon-trophy.icon-fixed-width.icon-large, .icon-github-sign.icon-fixed-width.icon-large, .icon-upload-alt.icon-fixed-width.icon-large, .icon-lemon.icon-fixed-width.icon-large, .icon-phone.icon-fixed-width.icon-large, .icon-check-empty.icon-fixed-width.icon-large, .icon-bookmark-empty.icon-fixed-width.icon-large, .icon-phone-sign.icon-fixed-width.icon-large, .icon-twitter.icon-fixed-width.icon-large, .icon-facebook.icon-fixed-width.icon-large, .icon-github.icon-fixed-width.icon-large, .icon-unlock.icon-fixed-width.icon-large, .icon-credit.icon-fixed-width.icon-large, .icon-rss.icon-fixed-width.icon-large, .icon-hdd.icon-fixed-width.icon-large, .icon-bullhorn.icon-fixed-width.icon-large, .icon-bell.icon-fixed-width.icon-large, .icon-certificate.icon-fixed-width.icon-large, .icon-hand-right.icon-fixed-width.icon-large, .icon-hand-left.icon-fixed-width.icon-large, .icon-hand-up.icon-fixed-width.icon-large, .icon-globe.icon-fixed-width.icon-large, .icon-wrench.icon-fixed-width.icon-large, .icon-tasks.icon-fixed-width.icon-large, .icon-filter.icon-fixed-width.icon-large, .icon-briefcase.icon-fixed-width.icon-large, .icon-fullscreen.icon-fixed-width.icon-large, .icon-group.icon-fixed-width.icon-large, .icon-link.icon-fixed-width.icon-large, .icon-cloud.icon-fixed-width.icon-large, .icon-beaker.icon-fixed-width.icon-large, .icon-cut.icon-fixed-width.icon-large, .icon-copy.icon-fixed-width.icon-large, .icon-paper-clip.icon-fixed-width.icon-large, .icon-save.icon-fixed-width.icon-large, .icon-sign-blank.icon-fixed-width.icon-large, .icon-reorder.icon-fixed-width.icon-large, .icon-list-ul.icon-fixed-width.icon-large, .icon-list-ol.icon-fixed-width.icon-large, .icon-strikethrough.icon-fixed-width.icon-large, .icon-underline.icon-fixed-width.icon-large, .icon-table.icon-fixed-width.icon-large, .icon-magic.icon-fixed-width.icon-large, .icon-money.icon-fixed-width.icon-large, .icon-caret-down.icon-fixed-width.icon-large, .icon-caret-up.icon-fixed-width.icon-large, .icon-caret-left.icon-fixed-width.icon-large, .icon-caret-right.icon-fixed-width.icon-large, .icon-columns.icon-fixed-width.icon-large, .icon-sort.icon-fixed-width.icon-large, .icon-sort-down.icon-fixed-width.icon-large, .icon-sort-up.icon-fixed-width.icon-large, .icon-envelope-alt.icon-fixed-width.icon-large, .icon-linkedin.icon-fixed-width.icon-large, .icon-undo.icon-fixed-width.icon-large, .icon-legal.icon-fixed-width.icon-large, .icon-dashboard.icon-fixed-width.icon-large, .icon-comment-alt.icon-fixed-width.icon-large, .icon-comments-alt.icon-fixed-width.icon-large, .icon-bolt.icon-fixed-width.icon-large, .icon-sitemap.icon-fixed-width.icon-large, .icon-umbrella.icon-fixed-width.icon-large, .icon-paste.icon-fixed-width.icon-large, .icon-lightbulb.icon-fixed-width.icon-large, .icon-exchange.icon-fixed-width.icon-large, .icon-bell-alt.icon-fixed-width.icon-large, .icon-coffee.icon-fixed-width.icon-large, .icon-food.icon-fixed-width.icon-large, .icon-file-alt.icon-fixed-width.icon-large, .icon-building.icon-fixed-width.icon-large, .icon-hospital.icon-fixed-width.icon-large, .icon-ambulance.icon-fixed-width.icon-large, .icon-medkit.icon-fixed-width.icon-large, .icon-fighter-jet.icon-fixed-width.icon-large, .icon-beer.icon-fixed-width.icon-large, .icon-h-sign.icon-fixed-width.icon-large, .icon-plus-sign.icon-fixed-width.icon-large, .icon-double-angle-left.icon-fixed-width.icon-large, .icon-double-angle-right.icon-fixed-width.icon-large, .icon-double-angle-up.icon-fixed-width.icon-large, .icon-double-angle-down.icon-fixed-width.icon-large, .icon-angle-left.icon-fixed-width.icon-large, .icon-angle-right.icon-fixed-width.icon-large, .icon-angle-up.icon-fixed-width.icon-large, .icon-angle-down.icon-fixed-width.icon-large, .icon-desktop.icon-fixed-width.icon-large, .icon-laptop.icon-fixed-width.icon-large, .icon-spinner.icon-fixed-width.icon-large, .icon-circle.icon-fixed-width.icon-large, .icon-reply.icon-fixed-width.icon-large, .icon-github-alt.icon-fixed-width.icon-large, .icon-folder-close-alt.icon-fixed-width.icon-large, .icon-folder-open-alt.icon-fixed-width.icon-large, .icon-expand-alt.icon-fixed-width.icon-large, .icon-collapse-alt.icon-fixed-width.icon-large, .icon-smile.icon-fixed-width.icon-large, .icon-frown.icon-fixed-width.icon-large, .icon-meh.icon-fixed-width.icon-large, .icon-gamepad.icon-fixed-width.icon-large, .icon-keyboard.icon-fixed-width.icon-large, .icon-flag-alt.icon-fixed-width.icon-large, .icon-flag-checkered.icon-fixed-width.icon-large, .icon-terminal.icon-fixed-width.icon-large, .icon-code.icon-fixed-width.icon-large, .icon-reply-all.icon-fixed-width.icon-large, .icon-star-half-full.icon-fixed-width.icon-large, .icon-location-arrow.icon-fixed-width.icon-large, .icon-crop.icon-fixed-width.icon-large, .icon-code-fork.icon-fixed-width.icon-large, .icon-subscript.icon-fixed-width.icon-large, .icon-eraser.icon-fixed-width.icon-large, .icon-puzzle.icon-fixed-width.icon-large, .icon-microphone.icon-fixed-width.icon-large, .icon-microphone-off.icon-fixed-width.icon-large, .icon-shield.icon-fixed-width.icon-large, .icon-calendar-empty.icon-fixed-width.icon-large, .icon-fire-extinguisher.icon-fixed-width.icon-large, .icon-rocket.icon-fixed-width.icon-large, .icon-maxcdn.icon-fixed-width.icon-large, .icon-chevron-sign-left.icon-fixed-width.icon-large, .icon-chevron-sign-right.icon-fixed-width.icon-large, .icon-chevron-sign-up.icon-fixed-width.icon-large, .icon-chevron-sign-down.icon-fixed-width.icon-large, .icon-html5.icon-fixed-width.icon-large, .icon-css3.icon-fixed-width.icon-large, .icon-anchor.icon-fixed-width.icon-large, .icon-unlock-alt.icon-fixed-width.icon-large, .icon-bullseye.icon-fixed-width.icon-large, .icon-ellipsis-horizontal.icon-fixed-width.icon-large, .icon-ellipsis-vertical.icon-fixed-width.icon-large, .icon-rss-sign.icon-fixed-width.icon-large, .icon-fb-boolean.icon-fixed-width.icon-large, .icon-text-height.icon-fixed-width.icon-large, .icon-text-width.icon-fixed-width.icon-large, .icon-align-left.icon-fixed-width.icon-large, .icon-align-center.icon-fixed-width.icon-large, .icon-align-right.icon-fixed-width.icon-large, .icon-step-forward.icon-fixed-width.icon-large, .icon-eject.icon-fixed-width.icon-large, .icon-chevron-left.icon-fixed-width.icon-large, .icon-chevron-right.icon-fixed-width.icon-large, .icon-plus-sign-2.icon-fixed-width.icon-large, .icon-fire.icon-fixed-width.icon-large, .icon-eye-open.icon-fixed-width.icon-large, .icon-eye-close.icon-fixed-width.icon-large, .icon-warning-sign.icon-fixed-width.icon-large, .icon-plane.icon-fixed-width.icon-large, .icon-heart-empty.icon-fixed-width.icon-large, .icon-signout.icon-fixed-width.icon-large, .icon-linkedin-sign.icon-fixed-width.icon-large, .icon-pushpin.icon-fixed-width.icon-large, .icon-external-link.icon-fixed-width.icon-large, .icon-hand-down.icon-fixed-width.icon-large, .icon-circle-arrow-left.icon-fixed-width.icon-large, .icon-circle-arrow-right.icon-fixed-width.icon-large, .icon-circle-arrow-up.icon-fixed-width.icon-large, .icon-circle-arrow-down.icon-fixed-width.icon-large, .icon-truck.icon-fixed-width.icon-large, .icon-pinterest.icon-fixed-width.icon-large, .icon-pinterest-sign.icon-fixed-width.icon-large, .icon-google-plus-sign.icon-fixed-width.icon-large, .icon-google-plus.icon-fixed-width.icon-large, .icon-cloud-download.icon-fixed-width.icon-large, .icon-cloud-upload.icon-fixed-width.icon-large, .icon-user-md.icon-fixed-width.icon-large, .icon-stethoscope.icon-fixed-width.icon-large, .icon-suitcase.icon-fixed-width.icon-large, .icon-tablet.icon-fixed-width.icon-large, .icon-mobile.icon-fixed-width.icon-large, .icon-circle-blank.icon-fixed-width.icon-large, .icon-quote-left.icon-fixed-width.icon-large, .icon-quote-right.icon-fixed-width.icon-large, .icon-unlink.icon-fixed-width.icon-large, .icon-question.icon-fixed-width.icon-large, .icon-info.icon-fixed-width.icon-large, .icon-exclamation.icon-fixed-width.icon-large, .icon-superscript.icon-fixed-width.icon-large, .icon-play-sign.icon-fixed-width.icon-large, .icon-ticket.icon-fixed-width.icon-large, .icon-minus-sign-alt.icon-fixed-width.icon-large, .icon-check-minus.icon-fixed-width.icon-large, .icon-level-up.icon-fixed-width.icon-large, .icon-sort-by-attributes-alt.icon-fixed-width.icon-large, .icon-sort-by-order.icon-fixed-width.icon-large, .icon-sort-by-order-alt.icon-fixed-width.icon-large, .icon-thumbs-up-2.icon-fixed-width.icon-large, .icon-thumbs-down-2.icon-fixed-width.icon-large, .icon-dribbble.icon-fixed-width.icon-large, .icon-skype.icon-fixed-width.icon-large, .icon-foursquare.icon-fixed-width.icon-large, .icon-trello.icon-fixed-width.icon-large, .icon-female.icon-fixed-width.icon-large, .icon-level-down.icon-fixed-width.icon-large, .icon-check-sign.icon-fixed-width.icon-large, .icon-edit-sign.icon-fixed-width.icon-large, .icon-external-link-sign.icon-fixed-width.icon-large, .icon-share-sign.icon-fixed-width.icon-large, .icon-compass.icon-fixed-width.icon-large, .icon-collapse.icon-fixed-width.icon-large, .icon-collapse-top.icon-fixed-width.icon-large, .icon-expand.icon-fixed-width.icon-large, .icon-euro.icon-fixed-width.icon-large, .icon-gbp.icon-fixed-width.icon-large, .icon-dollar.icon-fixed-width.icon-large, .icon-rupee.icon-fixed-width.icon-large, .icon-yen.icon-fixed-width.icon-large, .icon-renminbi.icon-fixed-width.icon-large, .icon-won.icon-fixed-width.icon-large, .icon-bitcoin.icon-fixed-width.icon-large, .icon-file-2.icon-fixed-width.icon-large, .icon-file-text.icon-fixed-width.icon-large, .icon-sort-by-alphabet.icon-fixed-width.icon-large, .icon-sort-by-alphabet-alt.icon-fixed-width.icon-large, .icon-sort-by-attributes.icon-fixed-width.icon-large, .icon-youtube-sign.icon-fixed-width.icon-large, .icon-youtube.icon-fixed-width.icon-large, .icon-xing.icon-fixed-width.icon-large, .icon-xing-sign.icon-fixed-width.icon-large, .icon-youtube-play.icon-fixed-width.icon-large, .icon-dropbox.icon-fixed-width.icon-large, .icon-stackexchange.icon-fixed-width.icon-large, .icon-instagram.icon-fixed-width.icon-large, .icon-flickr.icon-fixed-width.icon-large, .icon-adn.icon-fixed-width.icon-large, .icon-bitbucket.icon-fixed-width.icon-large, .icon-bitbucket-sign.icon-fixed-width.icon-large, .icon-tumblr.icon-fixed-width.icon-large, .icon-tumblr-sign.icon-fixed-width.icon-large, .icon-long-arrow-down.icon-fixed-width.icon-large, .icon-long-arrow-up.icon-fixed-width.icon-large, .icon-long-arrow-left.icon-fixed-width.icon-large, .icon-long-arrow-right.icon-fixed-width.icon-large, .icon-apple.icon-fixed-width.icon-large, .icon-windows.icon-fixed-width.icon-large, .icon-android.icon-fixed-width.icon-large, .icon-linux.icon-fixed-width.icon-large, .icon-male.icon-fixed-width.icon-large, .icon-gittip.icon-fixed-width.icon-large, .icon-sun.icon-fixed-width.icon-large, .icon-moon.icon-fixed-width.icon-large, .icon-archive.icon-fixed-width.icon-large, .icon-bug.icon-fixed-width.icon-large, .icon-vk.icon-fixed-width.icon-large, .icon-weibo.icon-fixed-width.icon-large, .icon-renren.icon-fixed-width.icon-large, .icon-time.icon-fixed-width.icon-large, .icon-road.icon-fixed-width.icon-large, .icon-download-alt.icon-fixed-width.icon-large, .icon-download.icon-fixed-width.icon-large, .icon-upload.icon-fixed-width.icon-large, .icon-db-joinxor.icon-fixed-width.icon-large, .icon-db-state.icon-fixed-width.icon-large, .icon-db-start.icon-fixed-width.icon-large, .icon-db-end.icon-fixed-width.icon-large, .icon-db-fork.icon-fixed-width.icon-large, .icon-db-condition.icon-fixed-width.icon-large, .icon-db-task.icon-fixed-width.icon-large, .icon-db-join.icon-fixed-width.icon-large, .icon-fb-button.icon-fixed-width.icon-large, .icon-fb-fieldset.icon-fixed-width.icon-large, .icon-fb-custom-field.icon-fixed-width.icon-large, .icon-fb-separator.icon-fixed-width.icon-large, .icon-fb-paragraph.icon-fixed-width.icon-large, .icon-fb-file-upload.icon-fixed-width.icon-large, .icon-fb-text.icon-fixed-width.icon-large, .icon-fb-text-box.icon-fixed-width.icon-large, .icon-fb-select.icon-fixed-width.icon-large, .icon-fb-radio.icon-fixed-width.icon-large, .icon-fb-number.icon-fixed-width.icon-large, .icon-fb-integer.icon-fixed-width.icon-large, .icon-fb-decimal.icon-fixed-width.icon-large {
+  width: 1.42857143em;
+}
+
+.icon-caret-bottom-right.pull-left, .icon-glass.pull-left, .icon-music.pull-left, .icon-search.pull-left, .icon-envelope.pull-left, .icon-heart.pull-left, .icon-star.pull-left, .icon-star-empty.pull-left, .icon-user.pull-left, .icon-film.pull-left, .icon-th-large.pull-left, .icon-th.pull-left, .icon-th-list.pull-left, .icon-ok.pull-left, .icon-remove.pull-left, .icon-zoom-in.pull-left, .icon-zoom-out.pull-left, .icon-off.pull-left, .icon-signal.pull-left, .icon-cog.pull-left, .icon-trash.pull-left, .icon-home.pull-left, .icon-file.pull-left, .icon-inbox.pull-left, .icon-play-circle.pull-left, .icon-repeat.pull-left, .icon-refresh.pull-left, .icon-list-alt.pull-left, .icon-lock.pull-left, .icon-flag.pull-left, .icon-headphones.pull-left, .icon-volume-off.pull-left, .icon-volume-down.pull-left, .icon-volume-up.pull-left, .icon-qrcode.pull-left, .icon-barcode.pull-left, .icon-tag.pull-left, .icon-tags.pull-left, .icon-book.pull-left, .icon-bookmark.pull-left, .icon-print.pull-left, .icon-camera.pull-left, .icon-font.pull-left, .icon-bold.pull-left, .icon-italic.pull-left, .icon-align-justify.pull-left, .icon-list.pull-left, .icon-indent-left.pull-left, .icon-indent-right.pull-left, .icon-facetime-video.pull-left, .icon-picture.pull-left, .icon-pencil.pull-left, .icon-map-marker.pull-left, .icon-adjust.pull-left, .icon-tint.pull-left, .icon-edit.pull-left, .icon-share.pull-left, .icon-check.pull-left, .icon-move.pull-left, .icon-step-backward.pull-left, .icon-fast-backward.pull-left, .icon-backward.pull-left, .icon-play.pull-left, .icon-pause.pull-left, .icon-stop.pull-left, .icon-forward.pull-left, .icon-fast-forward.pull-left, .icon-minus-sign.pull-left, .icon-remove-sign.pull-left, .icon-ok-sign.pull-left, .icon-question-sign.pull-left, .icon-info-sign.pull-left, .icon-screenshot.pull-left, .icon-remove-circle.pull-left, .icon-ok-circle.pull-left, .icon-ban-circle.pull-left, .icon-arrow-left.pull-left, .icon-arrow-right.pull-left, .icon-arrow-up.pull-left, .icon-arrow-down.pull-left, .icon-share-alt.pull-left, .icon-resize-full.pull-left, .icon-resize-small.pull-left, .icon-plus.pull-left, .icon-minus.pull-left, .icon-asterisk.pull-left, .icon-exclamation-sign.pull-left, .icon-gift.pull-left, .icon-leaf.pull-left, .icon-calendar.pull-left, .icon-random.pull-left, .icon-comment.pull-left, .icon-magnet.pull-left, .icon-chevron-up.pull-left, .icon-chevron-down.pull-left, .icon-retweet.pull-left, .icon-shopping-cart.pull-left, .icon-folder-close.pull-left, .icon-folder-open.pull-left, .icon-resize-vertical.pull-left, .icon-resize-horizontal.pull-left, .icon-bar-chart.pull-left, .icon-twitter-sign.pull-left, .icon-facebook-sign.pull-left, .icon-camera-retro.pull-left, .icon-key.pull-left, .icon-cogs.pull-left, .icon-comments.pull-left, .icon-thumbs-up.pull-left, .icon-thumbs-down.pull-left, .icon-star-half.pull-left, .icon-signin.pull-left, .icon-trophy.pull-left, .icon-github-sign.pull-left, .icon-upload-alt.pull-left, .icon-lemon.pull-left, .icon-phone.pull-left, .icon-check-empty.pull-left, .icon-bookmark-empty.pull-left, .icon-phone-sign.pull-left, .icon-twitter.pull-left, .icon-facebook.pull-left, .icon-github.pull-left, .icon-unlock.pull-left, .icon-credit.pull-left, .icon-rss.pull-left, .icon-hdd.pull-left, .icon-bullhorn.pull-left, .icon-bell.pull-left, .icon-certificate.pull-left, .icon-hand-right.pull-left, .icon-hand-left.pull-left, .icon-hand-up.pull-left, .icon-globe.pull-left, .icon-wrench.pull-left, .icon-tasks.pull-left, .icon-filter.pull-left, .icon-briefcase.pull-left, .icon-fullscreen.pull-left, .icon-group.pull-left, .icon-link.pull-left, .icon-cloud.pull-left, .icon-beaker.pull-left, .icon-cut.pull-left, .icon-copy.pull-left, .icon-paper-clip.pull-left, .icon-save.pull-left, .icon-sign-blank.pull-left, .icon-reorder.pull-left, .icon-list-ul.pull-left, .icon-list-ol.pull-left, .icon-strikethrough.pull-left, .icon-underline.pull-left, .icon-table.pull-left, .icon-magic.pull-left, .icon-money.pull-left, .icon-caret-down.pull-left, .icon-caret-up.pull-left, .icon-caret-left.pull-left, .icon-caret-right.pull-left, .icon-columns.pull-left, .icon-sort.pull-left, .icon-sort-down.pull-left, .icon-sort-up.pull-left, .icon-envelope-alt.pull-left, .icon-linkedin.pull-left, .icon-undo.pull-left, .icon-legal.pull-left, .icon-dashboard.pull-left, .icon-comment-alt.pull-left, .icon-comments-alt.pull-left, .icon-bolt.pull-left, .icon-sitemap.pull-left, .icon-umbrella.pull-left, .icon-paste.pull-left, .icon-lightbulb.pull-left, .icon-exchange.pull-left, .icon-bell-alt.pull-left, .icon-coffee.pull-left, .icon-food.pull-left, .icon-file-alt.pull-left, .icon-building.pull-left, .icon-hospital.pull-left, .icon-ambulance.pull-left, .icon-medkit.pull-left, .icon-fighter-jet.pull-left, .icon-beer.pull-left, .icon-h-sign.pull-left, .icon-plus-sign.pull-left, .icon-double-angle-left.pull-left, .icon-double-angle-right.pull-left, .icon-double-angle-up.pull-left, .icon-double-angle-down.pull-left, .icon-angle-left.pull-left, .icon-angle-right.pull-left, .icon-angle-up.pull-left, .icon-angle-down.pull-left, .icon-desktop.pull-left, .icon-laptop.pull-left, .icon-spinner.pull-left, .icon-circle.pull-left, .icon-reply.pull-left, .icon-github-alt.pull-left, .icon-folder-close-alt.pull-left, .icon-folder-open-alt.pull-left, .icon-expand-alt.pull-left, .icon-collapse-alt.pull-left, .icon-smile.pull-left, .icon-frown.pull-left, .icon-meh.pull-left, .icon-gamepad.pull-left, .icon-keyboard.pull-left, .icon-flag-alt.pull-left, .icon-flag-checkered.pull-left, .icon-terminal.pull-left, .icon-code.pull-left, .icon-reply-all.pull-left, .icon-star-half-full.pull-left, .icon-location-arrow.pull-left, .icon-crop.pull-left, .icon-code-fork.pull-left, .icon-subscript.pull-left, .icon-eraser.pull-left, .icon-puzzle.pull-left, .icon-microphone.pull-left, .icon-microphone-off.pull-left, .icon-shield.pull-left, .icon-calendar-empty.pull-left, .icon-fire-extinguisher.pull-left, .icon-rocket.pull-left, .icon-maxcdn.pull-left, .icon-chevron-sign-left.pull-left, .icon-chevron-sign-right.pull-left, .icon-chevron-sign-up.pull-left, .icon-chevron-sign-down.pull-left, .icon-html5.pull-left, .icon-css3.pull-left, .icon-anchor.pull-left, .icon-unlock-alt.pull-left, .icon-bullseye.pull-left, .icon-ellipsis-horizontal.pull-left, .icon-ellipsis-vertical.pull-left, .icon-rss-sign.pull-left, .icon-fb-boolean.pull-left, .icon-text-height.pull-left, .icon-text-width.pull-left, .icon-align-left.pull-left, .icon-align-center.pull-left, .icon-align-right.pull-left, .icon-step-forward.pull-left, .icon-eject.pull-left, .icon-chevron-left.pull-left, .icon-chevron-right.pull-left, .icon-plus-sign-2.pull-left, .icon-fire.pull-left, .icon-eye-open.pull-left, .icon-eye-close.pull-left, .icon-warning-sign.pull-left, .icon-plane.pull-left, .icon-heart-empty.pull-left, .icon-signout.pull-left, .icon-linkedin-sign.pull-left, .icon-pushpin.pull-left, .icon-external-link.pull-left, .icon-hand-down.pull-left, .icon-circle-arrow-left.pull-left, .icon-circle-arrow-right.pull-left, .icon-circle-arrow-up.pull-left, .icon-circle-arrow-down.pull-left, .icon-truck.pull-left, .icon-pinterest.pull-left, .icon-pinterest-sign.pull-left, .icon-google-plus-sign.pull-left, .icon-google-plus.pull-left, .icon-cloud-download.pull-left, .icon-cloud-upload.pull-left, .icon-user-md.pull-left, .icon-stethoscope.pull-left, .icon-suitcase.pull-left, .icon-tablet.pull-left, .icon-mobile.pull-left, .icon-circle-blank.pull-left, .icon-quote-left.pull-left, .icon-quote-right.pull-left, .icon-unlink.pull-left, .icon-question.pull-left, .icon-info.pull-left, .icon-exclamation.pull-left, .icon-superscript.pull-left, .icon-play-sign.pull-left, .icon-ticket.pull-left, .icon-minus-sign-alt.pull-left, .icon-check-minus.pull-left, .icon-level-up.pull-left, .icon-sort-by-attributes-alt.pull-left, .icon-sort-by-order.pull-left, .icon-sort-by-order-alt.pull-left, .icon-thumbs-up-2.pull-left, .icon-thumbs-down-2.pull-left, .icon-dribbble.pull-left, .icon-skype.pull-left, .icon-foursquare.pull-left, .icon-trello.pull-left, .icon-female.pull-left, .icon-level-down.pull-left, .icon-check-sign.pull-left, .icon-edit-sign.pull-left, .icon-external-link-sign.pull-left, .icon-share-sign.pull-left, .icon-compass.pull-left, .icon-collapse.pull-left, .icon-collapse-top.pull-left, .icon-expand.pull-left, .icon-euro.pull-left, .icon-gbp.pull-left, .icon-dollar.pull-left, .icon-rupee.pull-left, .icon-yen.pull-left, .icon-renminbi.pull-left, .icon-won.pull-left, .icon-bitcoin.pull-left, .icon-file-2.pull-left, .icon-file-text.pull-left, .icon-sort-by-alphabet.pull-left, .icon-sort-by-alphabet-alt.pull-left, .icon-sort-by-attributes.pull-left, .icon-youtube-sign.pull-left, .icon-youtube.pull-left, .icon-xing.pull-left, .icon-xing-sign.pull-left, .icon-youtube-play.pull-left, .icon-dropbox.pull-left, .icon-stackexchange.pull-left, .icon-instagram.pull-left, .icon-flickr.pull-left, .icon-adn.pull-left, .icon-bitbucket.pull-left, .icon-bitbucket-sign.pull-left, .icon-tumblr.pull-left, .icon-tumblr-sign.pull-left, .icon-long-arrow-down.pull-left, .icon-long-arrow-up.pull-left, .icon-long-arrow-left.pull-left, .icon-long-arrow-right.pull-left, .icon-apple.pull-left, .icon-windows.pull-left, .icon-android.pull-left, .icon-linux.pull-left, .icon-male.pull-left, .icon-gittip.pull-left, .icon-sun.pull-left, .icon-moon.pull-left, .icon-archive.pull-left, .icon-bug.pull-left, .icon-vk.pull-left, .icon-weibo.pull-left, .icon-renren.pull-left, .icon-time.pull-left, .icon-road.pull-left, .icon-download-alt.pull-left, .icon-download.pull-left, .icon-upload.pull-left, .icon-db-joinxor.pull-left, .icon-db-state.pull-left, .icon-db-start.pull-left, .icon-db-end.pull-left, .icon-db-fork.pull-left, .icon-db-condition.pull-left, .icon-db-task.pull-left, .icon-db-join.pull-left, .icon-fb-button.pull-left, .icon-fb-fieldset.pull-left, .icon-fb-custom-field.pull-left, .icon-fb-separator.pull-left, .icon-fb-paragraph.pull-left, .icon-fb-file-upload.pull-left, .icon-fb-text.pull-left, .icon-fb-text-box.pull-left, .icon-fb-select.pull-left, .icon-fb-radio.pull-left, .icon-fb-number.pull-left, .icon-fb-integer.pull-left, .icon-fb-decimal.pull-left {
+  margin-right: 0.3em;
+}
+
+.icon-caret-bottom-right.pull-right, .icon-glass.pull-right, .icon-music.pull-right, .icon-search.pull-right, .icon-envelope.pull-right, .icon-heart.pull-right, .icon-star.pull-right, .icon-star-empty.pull-right, .icon-user.pull-right, .icon-film.pull-right, .icon-th-large.pull-right, .icon-th.pull-right, .icon-th-list.pull-right, .icon-ok.pull-right, .icon-remove.pull-right, .icon-zoom-in.pull-right, .icon-zoom-out.pull-right, .icon-off.pull-right, .icon-signal.pull-right, .icon-cog.pull-right, .icon-trash.pull-right, .icon-home.pull-right, .icon-file.pull-right, .icon-inbox.pull-right, .icon-play-circle.pull-right, .icon-repeat.pull-right, .icon-refresh.pull-right, .icon-list-alt.pull-right, .icon-lock.pull-right, .icon-flag.pull-right, .icon-headphones.pull-right, .icon-volume-off.pull-right, .icon-volume-down.pull-right, .icon-volume-up.pull-right, .icon-qrcode.pull-right, .icon-barcode.pull-right, .icon-tag.pull-right, .icon-tags.pull-right, .icon-book.pull-right, .icon-bookmark.pull-right, .icon-print.pull-right, .icon-camera.pull-right, .icon-font.pull-right, .icon-bold.pull-right, .icon-italic.pull-right, .icon-align-justify.pull-right, .icon-list.pull-right, .icon-indent-left.pull-right, .icon-indent-right.pull-right, .icon-facetime-video.pull-right, .icon-picture.pull-right, .icon-pencil.pull-right, .icon-map-marker.pull-right, .icon-adjust.pull-right, .icon-tint.pull-right, .icon-edit.pull-right, .icon-share.pull-right, .icon-check.pull-right, .icon-move.pull-right, .icon-step-backward.pull-right, .icon-fast-backward.pull-right, .icon-backward.pull-right, .icon-play.pull-right, .icon-pause.pull-right, .icon-stop.pull-right, .icon-forward.pull-right, .icon-fast-forward.pull-right, .icon-minus-sign.pull-right, .icon-remove-sign.pull-right, .icon-ok-sign.pull-right, .icon-question-sign.pull-right, .icon-info-sign.pull-right, .icon-screenshot.pull-right, .icon-remove-circle.pull-right, .icon-ok-circle.pull-right, .icon-ban-circle.pull-right, .icon-arrow-left.pull-right, .icon-arrow-right.pull-right, .icon-arrow-up.pull-right, .icon-arrow-down.pull-right, .icon-share-alt.pull-right, .icon-resize-full.pull-right, .icon-resize-small.pull-right, .icon-plus.pull-right, .icon-minus.pull-right, .icon-asterisk.pull-right, .icon-exclamation-sign.pull-right, .icon-gift.pull-right, .icon-leaf.pull-right, .icon-calendar.pull-right, .icon-random.pull-right, .icon-comment.pull-right, .icon-magnet.pull-right, .icon-chevron-up.pull-right, .icon-chevron-down.pull-right, .icon-retweet.pull-right, .icon-shopping-cart.pull-right, .icon-folder-close.pull-right, .icon-folder-open.pull-right, .icon-resize-vertical.pull-right, .icon-resize-horizontal.pull-right, .icon-bar-chart.pull-right, .icon-twitter-sign.pull-right, .icon-facebook-sign.pull-right, .icon-camera-retro.pull-right, .icon-key.pull-right, .icon-cogs.pull-right, .icon-comments.pull-right, .icon-thumbs-up.pull-right, .icon-thumbs-down.pull-right, .icon-star-half.pull-right, .icon-signin.pull-right, .icon-trophy.pull-right, .icon-github-sign.pull-right, .icon-upload-alt.pull-right, .icon-lemon.pull-right, .icon-phone.pull-right, .icon-check-empty.pull-right, .icon-bookmark-empty.pull-right, .icon-phone-sign.pull-right, .icon-twitter.pull-right, .icon-facebook.pull-right, .icon-github.pull-right, .icon-unlock.pull-right, .icon-credit.pull-right, .icon-rss.pull-right, .icon-hdd.pull-right, .icon-bullhorn.pull-right, .icon-bell.pull-right, .icon-certificate.pull-right, .icon-hand-right.pull-right, .icon-hand-left.pull-right, .icon-hand-up.pull-right, .icon-globe.pull-right, .icon-wrench.pull-right, .icon-tasks.pull-right, .icon-filter.pull-right, .icon-briefcase.pull-right, .icon-fullscreen.pull-right, .icon-group.pull-right, .icon-link.pull-right, .icon-cloud.pull-right, .icon-beaker.pull-right, .icon-cut.pull-right, .icon-copy.pull-right, .icon-paper-clip.pull-right, .icon-save.pull-right, .icon-sign-blank.pull-right, .icon-reorder.pull-right, .icon-list-ul.pull-right, .icon-list-ol.pull-right, .icon-strikethrough.pull-right, .icon-underline.pull-right, .icon-table.pull-right, .icon-magic.pull-right, .icon-money.pull-right, .icon-caret-down.pull-right, .icon-caret-up.pull-right, .icon-caret-left.pull-right, .icon-caret-right.pull-right, .icon-columns.pull-right, .icon-sort.pull-right, .icon-sort-down.pull-right, .icon-sort-up.pull-right, .icon-envelope-alt.pull-right, .icon-linkedin.pull-right, .icon-undo.pull-right, .icon-legal.pull-right, .icon-dashboard.pull-right, .icon-comment-alt.pull-right, .icon-comments-alt.pull-right, .icon-bolt.pull-right, .icon-sitemap.pull-right, .icon-umbrella.pull-right, .icon-paste.pull-right, .icon-lightbulb.pull-right, .icon-exchange.pull-right, .icon-bell-alt.pull-right, .icon-coffee.pull-right, .icon-food.pull-right, .icon-file-alt.pull-right, .icon-building.pull-right, .icon-hospital.pull-right, .icon-ambulance.pull-right, .icon-medkit.pull-right, .icon-fighter-jet.pull-right, .icon-beer.pull-right, .icon-h-sign.pull-right, .icon-plus-sign.pull-right, .icon-double-angle-left.pull-right, .icon-double-angle-right.pull-right, .icon-double-angle-up.pull-right, .icon-double-angle-down.pull-right, .icon-angle-left.pull-right, .icon-angle-right.pull-right, .icon-angle-up.pull-right, .icon-angle-down.pull-right, .icon-desktop.pull-right, .icon-laptop.pull-right, .icon-spinner.pull-right, .icon-circle.pull-right, .icon-reply.pull-right, .icon-github-alt.pull-right, .icon-folder-close-alt.pull-right, .icon-folder-open-alt.pull-right, .icon-expand-alt.pull-right, .icon-collapse-alt.pull-right, .icon-smile.pull-right, .icon-frown.pull-right, .icon-meh.pull-right, .icon-gamepad.pull-right, .icon-keyboard.pull-right, .icon-flag-alt.pull-right, .icon-flag-checkered.pull-right, .icon-terminal.pull-right, .icon-code.pull-right, .icon-reply-all.pull-right, .icon-star-half-full.pull-right, .icon-location-arrow.pull-right, .icon-crop.pull-right, .icon-code-fork.pull-right, .icon-subscript.pull-right, .icon-eraser.pull-right, .icon-puzzle.pull-right, .icon-microphone.pull-right, .icon-microphone-off.pull-right, .icon-shield.pull-right, .icon-calendar-empty.pull-right, .icon-fire-extinguisher.pull-right, .icon-rocket.pull-right, .icon-maxcdn.pull-right, .icon-chevron-sign-left.pull-right, .icon-chevron-sign-right.pull-right, .icon-chevron-sign-up.pull-right, .icon-chevron-sign-down.pull-right, .icon-html5.pull-right, .icon-css3.pull-right, .icon-anchor.pull-right, .icon-unlock-alt.pull-right, .icon-bullseye.pull-right, .icon-ellipsis-horizontal.pull-right, .icon-ellipsis-vertical.pull-right, .icon-rss-sign.pull-right, .icon-fb-boolean.pull-right, .icon-text-height.pull-right, .icon-text-width.pull-right, .icon-align-left.pull-right, .icon-align-center.pull-right, .icon-align-right.pull-right, .icon-step-forward.pull-right, .icon-eject.pull-right, .icon-chevron-left.pull-right, .icon-chevron-right.pull-right, .icon-plus-sign-2.pull-right, .icon-fire.pull-right, .icon-eye-open.pull-right, .icon-eye-close.pull-right, .icon-warning-sign.pull-right, .icon-plane.pull-right, .icon-heart-empty.pull-right, .icon-signout.pull-right, .icon-linkedin-sign.pull-right, .icon-pushpin.pull-right, .icon-external-link.pull-right, .icon-hand-down.pull-right, .icon-circle-arrow-left.pull-right, .icon-circle-arrow-right.pull-right, .icon-circle-arrow-up.pull-right, .icon-circle-arrow-down.pull-right, .icon-truck.pull-right, .icon-pinterest.pull-right, .icon-pinterest-sign.pull-right, .icon-google-plus-sign.pull-right, .icon-google-plus.pull-right, .icon-cloud-download.pull-right, .icon-cloud-upload.pull-right, .icon-user-md.pull-right, .icon-stethoscope.pull-right, .icon-suitcase.pull-right, .icon-tablet.pull-right, .icon-mobile.pull-right, .icon-circle-blank.pull-right, .icon-quote-left.pull-right, .icon-quote-right.pull-right, .icon-unlink.pull-right, .icon-question.pull-right, .icon-info.pull-right, .icon-exclamation.pull-right, .icon-superscript.pull-right, .icon-play-sign.pull-right, .icon-ticket.pull-right, .icon-minus-sign-alt.pull-right, .icon-check-minus.pull-right, .icon-level-up.pull-right, .icon-sort-by-attributes-alt.pull-right, .icon-sort-by-order.pull-right, .icon-sort-by-order-alt.pull-right, .icon-thumbs-up-2.pull-right, .icon-thumbs-down-2.pull-right, .icon-dribbble.pull-right, .icon-skype.pull-right, .icon-foursquare.pull-right, .icon-trello.pull-right, .icon-female.pull-right, .icon-level-down.pull-right, .icon-check-sign.pull-right, .icon-edit-sign.pull-right, .icon-external-link-sign.pull-right, .icon-share-sign.pull-right, .icon-compass.pull-right, .icon-collapse.pull-right, .icon-collapse-top.pull-right, .icon-expand.pull-right, .icon-euro.pull-right, .icon-gbp.pull-right, .icon-dollar.pull-right, .icon-rupee.pull-right, .icon-yen.pull-right, .icon-renminbi.pull-right, .icon-won.pull-right, .icon-bitcoin.pull-right, .icon-file-2.pull-right, .icon-file-text.pull-right, .icon-sort-by-alphabet.pull-right, .icon-sort-by-alphabet-alt.pull-right, .icon-sort-by-attributes.pull-right, .icon-youtube-sign.pull-right, .icon-youtube.pull-right, .icon-xing.pull-right, .icon-xing-sign.pull-right, .icon-youtube-play.pull-right, .icon-dropbox.pull-right, .icon-stackexchange.pull-right, .icon-instagram.pull-right, .icon-flickr.pull-right, .icon-adn.pull-right, .icon-bitbucket.pull-right, .icon-bitbucket-sign.pull-right, .icon-tumblr.pull-right, .icon-tumblr-sign.pull-right, .icon-long-arrow-down.pull-right, .icon-long-arrow-up.pull-right, .icon-long-arrow-left.pull-right, .icon-long-arrow-right.pull-right, .icon-apple.pull-right, .icon-windows.pull-right, .icon-android.pull-right, .icon-linux.pull-right, .icon-male.pull-right, .icon-gittip.pull-right, .icon-sun.pull-right, .icon-moon.pull-right, .icon-archive.pull-right, .icon-bug.pull-right, .icon-vk.pull-right, .icon-weibo.pull-right, .icon-renren.pull-right, .icon-time.pull-right, .icon-road.pull-right, .icon-download-alt.pull-right, .icon-download.pull-right, .icon-upload.pull-right, .icon-db-joinxor.pull-right, .icon-db-state.pull-right, .icon-db-start.pull-right, .icon-db-end.pull-right, .icon-db-fork.pull-right, .icon-db-condition.pull-right, .icon-db-task.pull-right, .icon-db-join.pull-right, .icon-fb-button.pull-right, .icon-fb-fieldset.pull-right, .icon-fb-custom-field.pull-right, .icon-fb-separator.pull-right, .icon-fb-paragraph.pull-right, .icon-fb-file-upload.pull-right, .icon-fb-text.pull-right, .icon-fb-text-box.pull-right, .icon-fb-select.pull-right, .icon-fb-radio.pull-right, .icon-fb-number.pull-right, .icon-fb-integer.pull-right, .icon-fb-decimal.pull-right {
+  margin-left: 0.3em;
+}
+
+a .icon-caret-bottom-right, a .icon-glass, a .icon-music, a .icon-search, a .icon-envelope, a .icon-heart, a .icon-star, a .icon-star-empty, a .icon-user, a .icon-film, a .icon-th-large, a .icon-th, a .icon-th-list, a .icon-ok, a .icon-remove, a .icon-zoom-in, a .icon-zoom-out, a .icon-off, a .icon-signal, a .icon-cog, a .icon-trash, a .icon-home, a .icon-file, a .icon-inbox, a .icon-play-circle, a .icon-repeat, a .icon-refresh, a .icon-list-alt, a .icon-lock, a .icon-flag, a .icon-headphones, a .icon-volume-off, a .icon-volume-down, a .icon-volume-up, a .icon-qrcode, a .icon-barcode, a .icon-tag, a .icon-tags, a .icon-book, a .icon-bookmark, a .icon-print, a .icon-camera, a .icon-font, a .icon-bold, a .icon-italic, a .icon-align-justify, a .icon-list, a .icon-indent-left, a .icon-indent-right, a .icon-facetime-video, a .icon-picture, a .icon-pencil, a .icon-map-marker, a .icon-adjust, a .icon-tint, a .icon-edit, a .icon-share, a .icon-check, a .icon-move, a .icon-step-backward, a .icon-fast-backward, a .icon-backward, a .icon-play, a .icon-pause, a .icon-stop, a .icon-forward, a .icon-fast-forward, a .icon-minus-sign, a .icon-remove-sign, a .icon-ok-sign, a .icon-question-sign, a .icon-info-sign, a .icon-screenshot, a .icon-remove-circle, a .icon-ok-circle, a .icon-ban-circle, a .icon-arrow-left, a .icon-arrow-right, a .icon-arrow-up, a .icon-arrow-down, a .icon-share-alt, a .icon-resize-full, a .icon-resize-small, a .icon-plus, a .icon-minus, a .icon-asterisk, a .icon-exclamation-sign, a .icon-gift, a .icon-leaf, a .icon-calendar, a .icon-random, a .icon-comment, a .icon-magnet, a .icon-chevron-up, a .icon-chevron-down, a .icon-retweet, a .icon-shopping-cart, a .icon-folder-close, a .icon-folder-open, a .icon-resize-vertical, a .icon-resize-horizontal, a .icon-bar-chart, a .icon-twitter-sign, a .icon-facebook-sign, a .icon-camera-retro, a .icon-key, a .icon-cogs, a .icon-comments, a .icon-thumbs-up, a .icon-thumbs-down, a .icon-star-half, a .icon-signin, a .icon-trophy, a .icon-github-sign, a .icon-upload-alt, a .icon-lemon, a .icon-phone, a .icon-check-empty, a .icon-bookmark-empty, a .icon-phone-sign, a .icon-twitter, a .icon-facebook, a .icon-github, a .icon-unlock, a .icon-credit, a .icon-rss, a .icon-hdd, a .icon-bullhorn, a .icon-bell, a .icon-certificate, a .icon-hand-right, a .icon-hand-left, a .icon-hand-up, a .icon-globe, a .icon-wrench, a .icon-tasks, a .icon-filter, a .icon-briefcase, a .icon-fullscreen, a .icon-group, a .icon-link, a .icon-cloud, a .icon-beaker, a .icon-cut, a .icon-copy, a .icon-paper-clip, a .icon-save, a .icon-sign-blank, a .icon-reorder, a .icon-list-ul, a .icon-list-ol, a .icon-strikethrough, a .icon-underline, a .icon-table, a .icon-magic, a .icon-money, a .icon-caret-down, a .icon-caret-up, a .icon-caret-left, a .icon-caret-right, a .icon-columns, a .icon-sort, a .icon-sort-down, a .icon-sort-up, a .icon-envelope-alt, a .icon-linkedin, a .icon-undo, a .icon-legal, a .icon-dashboard, a .icon-comment-alt, a .icon-comments-alt, a .icon-bolt, a .icon-sitemap, a .icon-umbrella, a .icon-paste, a .icon-lightbulb, a .icon-exchange, a .icon-bell-alt, a .icon-coffee, a .icon-food, a .icon-file-alt, a .icon-building, a .icon-hospital, a .icon-ambulance, a .icon-medkit, a .icon-fighter-jet, a .icon-beer, a .icon-h-sign, a .icon-plus-sign, a .icon-double-angle-left, a .icon-double-angle-right, a .icon-double-angle-up, a .icon-double-angle-down, a .icon-angle-left, a .icon-angle-right, a .icon-angle-up, a .icon-angle-down, a .icon-desktop, a .icon-laptop, a .icon-spinner, a .icon-circle, a .icon-reply, a .icon-github-alt, a .icon-folder-close-alt, a .icon-folder-open-alt, a .icon-expand-alt, a .icon-collapse-alt, a .icon-smile, a .icon-frown, a .icon-meh, a .icon-gamepad, a .icon-keyboard, a .icon-flag-alt, a .icon-flag-checkered, a .icon-terminal, a .icon-code, a .icon-reply-all, a .icon-star-half-full, a .icon-location-arrow, a .icon-crop, a .icon-code-fork, a .icon-subscript, a .icon-eraser, a .icon-puzzle, a .icon-microphone, a .icon-microphone-off, a .icon-shield, a .icon-calendar-empty, a .icon-fire-extinguisher, a .icon-rocket, a .icon-maxcdn, a .icon-chevron-sign-left, a .icon-chevron-sign-right, a .icon-chevron-sign-up, a .icon-chevron-sign-down, a .icon-html5, a .icon-css3, a .icon-anchor, a .icon-unlock-alt, a .icon-bullseye, a .icon-ellipsis-horizontal, a .icon-ellipsis-vertical, a .icon-rss-sign, a .icon-fb-boolean, a .icon-text-height, a .icon-text-width, a .icon-align-left, a .icon-align-center, a .icon-align-right, a .icon-step-forward, a .icon-eject, a .icon-chevron-left, a .icon-chevron-right, a .icon-plus-sign-2, a .icon-fire, a .icon-eye-open, a .icon-eye-close, a .icon-warning-sign, a .icon-plane, a .icon-heart-empty, a .icon-signout, a .icon-linkedin-sign, a .icon-pushpin, a .icon-external-link, a .icon-hand-down, a .icon-circle-arrow-left, a .icon-circle-arrow-right, a .icon-circle-arrow-up, a .icon-circle-arrow-down, a .icon-truck, a .icon-pinterest, a .icon-pinterest-sign, a .icon-google-plus-sign, a .icon-google-plus, a .icon-cloud-download, a .icon-cloud-upload, a .icon-user-md, a .icon-stethoscope, a .icon-suitcase, a .icon-tablet, a .icon-mobile, a .icon-circle-blank, a .icon-quote-left, a .icon-quote-right, a .icon-unlink, a .icon-question, a .icon-info, a .icon-exclamation, a .icon-superscript, a .icon-play-sign, a .icon-ticket, a .icon-minus-sign-alt, a .icon-check-minus, a .icon-level-up, a .icon-sort-by-attributes-alt, a .icon-sort-by-order, a .icon-sort-by-order-alt, a .icon-thumbs-up-2, a .icon-thumbs-down-2, a .icon-dribbble, a .icon-skype, a .icon-foursquare, a .icon-trello, a .icon-female, a .icon-level-down, a .icon-check-sign, a .icon-edit-sign, a .icon-external-link-sign, a .icon-share-sign, a .icon-compass, a .icon-collapse, a .icon-collapse-top, a .icon-expand, a .icon-euro, a .icon-gbp, a .icon-dollar, a .icon-rupee, a .icon-yen, a .icon-renminbi, a .icon-won, a .icon-bitcoin, a .icon-file-2, a .icon-file-text, a .icon-sort-by-alphabet, a .icon-sort-by-alphabet-alt, a .icon-sort-by-attributes, a .icon-youtube-sign, a .icon-youtube, a .icon-xing, a .icon-xing-sign, a .icon-youtube-play, a .icon-dropbox, a .icon-stackexchange, a .icon-instagram, a .icon-flickr, a .icon-adn, a .icon-bitbucket, a .icon-bitbucket-sign, a .icon-tumblr, a .icon-tumblr-sign, a .icon-long-arrow-down, a .icon-long-arrow-up, a .icon-long-arrow-left, a .icon-long-arrow-right, a .icon-apple, a .icon-windows, a .icon-android, a .icon-linux, a .icon-male, a .icon-gittip, a .icon-sun, a .icon-moon, a .icon-archive, a .icon-bug, a .icon-vk, a .icon-weibo, a .icon-renren, a .icon-time, a .icon-road, a .icon-download-alt, a .icon-download, a .icon-upload, a .icon-db-joinxor, a .icon-db-state, a .icon-db-start, a .icon-db-end, a .icon-db-fork, a .icon-db-condition, a .icon-db-task, a .icon-db-join, a .icon-fb-button, a .icon-fb-fieldset, a .icon-fb-custom-field, a .icon-fb-separator, a .icon-fb-paragraph, a .icon-fb-file-upload, a .icon-fb-text, a .icon-fb-text-box, a .icon-fb-select, a .icon-fb-radio, a .icon-fb-number, a .icon-fb-integer, a .icon-fb-decimal {
+  display: inline;
+}
+
+.icon-stack .icon-caret-bottom-right, .icon-stack .icon-glass, .icon-stack .icon-music, .icon-stack .icon-search, .icon-stack .icon-envelope, .icon-stack .icon-heart, .icon-stack .icon-star, .icon-stack .icon-star-empty, .icon-stack .icon-user, .icon-stack .icon-film, .icon-stack .icon-th-large, .icon-stack .icon-th, .icon-stack .icon-th-list, .icon-stack .icon-ok, .icon-stack .icon-remove, .icon-stack .icon-zoom-in, .icon-stack .icon-zoom-out, .icon-stack .icon-off, .icon-stack .icon-signal, .icon-stack .icon-cog, .icon-stack .icon-trash, .icon-stack .icon-home, .icon-stack .icon-file, .icon-stack .icon-inbox, .icon-stack .icon-play-circle, .icon-stack .icon-repeat, .icon-stack .icon-refresh, .icon-stack .icon-list-alt, .icon-stack .icon-lock, .icon-stack .icon-flag, .icon-stack .icon-headphones, .icon-stack .icon-volume-off, .icon-stack .icon-volume-down, .icon-stack .icon-volume-up, .icon-stack .icon-qrcode, .icon-stack .icon-barcode, .icon-stack .icon-tag, .icon-stack .icon-tags, .icon-stack .icon-book, .icon-stack .icon-bookmark, .icon-stack .icon-print, .icon-stack .icon-camera, .icon-stack .icon-font, .icon-stack .icon-bold, .icon-stack .icon-italic, .icon-stack .icon-align-justify, .icon-stack .icon-list, .icon-stack .icon-indent-left, .icon-stack .icon-indent-right, .icon-stack .icon-facetime-video, .icon-stack .icon-picture, .icon-stack .icon-pencil, .icon-stack .icon-map-marker, .icon-stack .icon-adjust, .icon-stack .icon-tint, .icon-stack .icon-edit, .icon-stack .icon-share, .icon-stack .icon-check, .icon-stack .icon-move, .icon-stack .icon-step-backward, .icon-stack .icon-fast-backward, .icon-stack .icon-backward, .icon-stack .icon-play, .icon-stack .icon-pause, .icon-stack .icon-stop, .icon-stack .icon-forward, .icon-stack .icon-fast-forward, .icon-stack .icon-minus-sign, .icon-stack .icon-remove-sign, .icon-stack .icon-ok-sign, .icon-stack .icon-question-sign, .icon-stack .icon-info-sign, .icon-stack .icon-screenshot, .icon-stack .icon-remove-circle, .icon-stack .icon-ok-circle, .icon-stack .icon-ban-circle, .icon-stack .icon-arrow-left, .icon-stack .icon-arrow-right, .icon-stack .icon-arrow-up, .icon-stack .icon-arrow-down, .icon-stack .icon-share-alt, .icon-stack .icon-resize-full, .icon-stack .icon-resize-small, .icon-stack .icon-plus, .icon-stack .icon-minus, .icon-stack .icon-asterisk, .icon-stack .icon-exclamation-sign, .icon-stack .icon-gift, .icon-stack .icon-leaf, .icon-stack .icon-calendar, .icon-stack .icon-random, .icon-stack .icon-comment, .icon-stack .icon-magnet, .icon-stack .icon-chevron-up, .icon-stack .icon-chevron-down, .icon-stack .icon-retweet, .icon-stack .icon-shopping-cart, .icon-stack .icon-folder-close, .icon-stack .icon-folder-open, .icon-stack .icon-resize-vertical, .icon-stack .icon-resize-horizontal, .icon-stack .icon-bar-chart, .icon-stack .icon-twitter-sign, .icon-stack .icon-facebook-sign, .icon-stack .icon-camera-retro, .icon-stack .icon-key, .icon-stack .icon-cogs, .icon-stack .icon-comments, .icon-stack .icon-thumbs-up, .icon-stack .icon-thumbs-down, .icon-stack .icon-star-half, .icon-stack .icon-signin, .icon-stack .icon-trophy, .icon-stack .icon-github-sign, .icon-stack .icon-upload-alt, .icon-stack .icon-lemon, .icon-stack .icon-phone, .icon-stack .icon-check-empty, .icon-stack .icon-bookmark-empty, .icon-stack .icon-phone-sign, .icon-stack .icon-twitter, .icon-stack .icon-facebook, .icon-stack .icon-github, .icon-stack .icon-unlock, .icon-stack .icon-credit, .icon-stack .icon-rss, .icon-stack .icon-hdd, .icon-stack .icon-bullhorn, .icon-stack .icon-bell, .icon-stack .icon-certificate, .icon-stack .icon-hand-right, .icon-stack .icon-hand-left, .icon-stack .icon-hand-up, .icon-stack .icon-globe, .icon-stack .icon-wrench, .icon-stack .icon-tasks, .icon-stack .icon-filter, .icon-stack .icon-briefcase, .icon-stack .icon-fullscreen, .icon-stack .icon-group, .icon-stack .icon-link, .icon-stack .icon-cloud, .icon-stack .icon-beaker, .icon-stack .icon-cut, .icon-stack .icon-copy, .icon-stack .icon-paper-clip, .icon-stack .icon-save, .icon-stack .icon-sign-blank, .icon-stack .icon-reorder, .icon-stack .icon-list-ul, .icon-stack .icon-list-ol, .icon-stack .icon-strikethrough, .icon-stack .icon-underline, .icon-stack .icon-table, .icon-stack .icon-magic, .icon-stack .icon-money, .icon-stack .icon-caret-down, .icon-stack .icon-caret-up, .icon-stack .icon-caret-left, .icon-stack .icon-caret-right, .icon-stack .icon-columns, .icon-stack .icon-sort, .icon-stack .icon-sort-down, .icon-stack .icon-sort-up, .icon-stack .icon-envelope-alt, .icon-stack .icon-linkedin, .icon-stack .icon-undo, .icon-stack .icon-legal, .icon-stack .icon-dashboard, .icon-stack .icon-comment-alt, .icon-stack .icon-comments-alt, .icon-stack .icon-bolt, .icon-stack .icon-sitemap, .icon-stack .icon-umbrella, .icon-stack .icon-paste, .icon-stack .icon-lightbulb, .icon-stack .icon-exchange, .icon-stack .icon-bell-alt, .icon-stack .icon-coffee, .icon-stack .icon-food, .icon-stack .icon-file-alt, .icon-stack .icon-building, .icon-stack .icon-hospital, .icon-stack .icon-ambulance, .icon-stack .icon-medkit, .icon-stack .icon-fighter-jet, .icon-stack .icon-beer, .icon-stack .icon-h-sign, .icon-stack .icon-plus-sign, .icon-stack .icon-double-angle-left, .icon-stack .icon-double-angle-right, .icon-stack .icon-double-angle-up, .icon-stack .icon-double-angle-down, .icon-stack .icon-angle-left, .icon-stack .icon-angle-right, .icon-stack .icon-angle-up, .icon-stack .icon-angle-down, .icon-stack .icon-desktop, .icon-stack .icon-laptop, .icon-stack .icon-spinner, .icon-stack .icon-circle, .icon-stack .icon-reply, .icon-stack .icon-github-alt, .icon-stack .icon-folder-close-alt, .icon-stack .icon-folder-open-alt, .icon-stack .icon-expand-alt, .icon-stack .icon-collapse-alt, .icon-stack .icon-smile, .icon-stack .icon-frown, .icon-stack .icon-meh, .icon-stack .icon-gamepad, .icon-stack .icon-keyboard, .icon-stack .icon-flag-alt, .icon-stack .icon-flag-checkered, .icon-stack .icon-terminal, .icon-stack .icon-code, .icon-stack .icon-reply-all, .icon-stack .icon-star-half-full, .icon-stack .icon-location-arrow, .icon-stack .icon-crop, .icon-stack .icon-code-fork, .icon-stack .icon-subscript, .icon-stack .icon-eraser, .icon-stack .icon-puzzle, .icon-stack .icon-microphone, .icon-stack .icon-microphone-off, .icon-stack .icon-shield, .icon-stack .icon-calendar-empty, .icon-stack .icon-fire-extinguisher, .icon-stack .icon-rocket, .icon-stack .icon-maxcdn, .icon-stack .icon-chevron-sign-left, .icon-stack .icon-chevron-sign-right, .icon-stack .icon-chevron-sign-up, .icon-stack .icon-chevron-sign-down, .icon-stack .icon-html5, .icon-stack .icon-css3, .icon-stack .icon-anchor, .icon-stack .icon-unlock-alt, .icon-stack .icon-bullseye, .icon-stack .icon-ellipsis-horizontal, .icon-stack .icon-ellipsis-vertical, .icon-stack .icon-rss-sign, .icon-stack .icon-fb-boolean, .icon-stack .icon-text-height, .icon-stack .icon-text-width, .icon-stack .icon-align-left, .icon-stack .icon-align-center, .icon-stack .icon-align-right, .icon-stack .icon-step-forward, .icon-stack .icon-eject, .icon-stack .icon-chevron-left, .icon-stack .icon-chevron-right, .icon-stack .icon-plus-sign-2, .icon-stack .icon-fire, .icon-stack .icon-eye-open, .icon-stack .icon-eye-close, .icon-stack .icon-warning-sign, .icon-stack .icon-plane, .icon-stack .icon-heart-empty, .icon-stack .icon-signout, .icon-stack .icon-linkedin-sign, .icon-stack .icon-pushpin, .icon-stack .icon-external-link, .icon-stack .icon-hand-down, .icon-stack .icon-circle-arrow-left, .icon-stack .icon-circle-arrow-right, .icon-stack .icon-circle-arrow-up, .icon-stack .icon-circle-arrow-down, .icon-stack .icon-truck, .icon-stack .icon-pinterest, .icon-stack .icon-pinterest-sign, .icon-stack .icon-google-plus-sign, .icon-stack .icon-google-plus, .icon-stack .icon-cloud-download, .icon-stack .icon-cloud-upload, .icon-stack .icon-user-md, .icon-stack .icon-stethoscope, .icon-stack .icon-suitcase, .icon-stack .icon-tablet, .icon-stack .icon-mobile, .icon-stack .icon-circle-blank, .icon-stack .icon-quote-left, .icon-stack .icon-quote-right, .icon-stack .icon-unlink, .icon-stack .icon-question, .icon-stack .icon-info, .icon-stack .icon-exclamation, .icon-stack .icon-superscript, .icon-stack .icon-play-sign, .icon-stack .icon-ticket, .icon-stack .icon-minus-sign-alt, .icon-stack .icon-check-minus, .icon-stack .icon-level-up, .icon-stack .icon-sort-by-attributes-alt, .icon-stack .icon-sort-by-order, .icon-stack .icon-sort-by-order-alt, .icon-stack .icon-thumbs-up-2, .icon-stack .icon-thumbs-down-2, .icon-stack .icon-dribbble, .icon-stack .icon-skype, .icon-stack .icon-foursquare, .icon-stack .icon-trello, .icon-stack .icon-female, .icon-stack .icon-level-down, .icon-stack .icon-check-sign, .icon-stack .icon-edit-sign, .icon-stack .icon-external-link-sign, .icon-stack .icon-share-sign, .icon-stack .icon-compass, .icon-stack .icon-collapse, .icon-stack .icon-collapse-top, .icon-stack .icon-expand, .icon-stack .icon-euro, .icon-stack .icon-gbp, .icon-stack .icon-dollar, .icon-stack .icon-rupee, .icon-stack .icon-yen, .icon-stack .icon-renminbi, .icon-stack .icon-won, .icon-stack .icon-bitcoin, .icon-stack .icon-file-2, .icon-stack .icon-file-text, .icon-stack .icon-sort-by-alphabet, .icon-stack .icon-sort-by-alphabet-alt, .icon-stack .icon-sort-by-attributes, .icon-stack .icon-youtube-sign, .icon-stack .icon-youtube, .icon-stack .icon-xing, .icon-stack .icon-xing-sign, .icon-stack .icon-youtube-play, .icon-stack .icon-dropbox, .icon-stack .icon-stackexchange, .icon-stack .icon-instagram, .icon-stack .icon-flickr, .icon-stack .icon-adn, .icon-stack .icon-bitbucket, .icon-stack .icon-bitbucket-sign, .icon-stack .icon-tumblr, .icon-stack .icon-tumblr-sign, .icon-stack .icon-long-arrow-down, .icon-stack .icon-long-arrow-up, .icon-stack .icon-long-arrow-left, .icon-stack .icon-long-arrow-right, .icon-stack .icon-apple, .icon-stack .icon-windows, .icon-stack .icon-android, .icon-stack .icon-linux, .icon-stack .icon-male, .icon-stack .icon-gittip, .icon-stack .icon-sun, .icon-stack .icon-moon, .icon-stack .icon-archive, .icon-stack .icon-bug, .icon-stack .icon-vk, .icon-stack .icon-weibo, .icon-stack .icon-renren, .icon-stack .icon-time, .icon-stack .icon-road, .icon-stack .icon-download-alt, .icon-stack .icon-download, .icon-stack .icon-upload, .icon-stack .icon-db-joinxor, .icon-stack .icon-db-state, .icon-stack .icon-db-start, .icon-stack .icon-db-end, .icon-stack .icon-db-fork, .icon-stack .icon-db-condition, .icon-stack .icon-db-task, .icon-stack .icon-db-join, .icon-stack .icon-fb-button, .icon-stack .icon-fb-fieldset, .icon-stack .icon-fb-custom-field, .icon-stack .icon-fb-separator, .icon-stack .icon-fb-paragraph, .icon-stack .icon-fb-file-upload, .icon-stack .icon-fb-text, .icon-stack .icon-fb-text-box, .icon-stack .icon-fb-select, .icon-stack .icon-fb-radio, .icon-stack .icon-fb-number, .icon-stack .icon-fb-integer, .icon-stack .icon-fb-decimal {
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: inherit;
+}
+
+.icon-stack .icon-text {
+  height: 100%;
+  line-height: inherit;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
 .icon-caret-bottom-right:before {
@@ -9964,25 +9859,6 @@ button.close {
   padding-top: 2px;
 }
 
-.badge-monospaced {
-  height: 32px;
-  line-height: 32px;
-  width: 32px;
-  padding: 0;
-}
-
-.badge-monospaced.badge-lg {
-  height: 44px;
-  line-height: 44px;
-  width: 44px;
-}
-
-.badge-monospaced.badge-sm {
-  height: 22px;
-  line-height: 22px;
-  width: 22px;
-}
-
 .badge .lexicon-icon {
   height: 9px;
   margin-left: 2px;
@@ -10294,8 +10170,6 @@ button.close {
   display: table-cell;
   position: relative;
   vertical-align: middle;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
   word-break: break-all;
 }
 
@@ -10314,6 +10188,40 @@ button.close {
 
 .card-row-padded {
   padding: 15px;
+}
+
+.card-row-valign-top .card-col-content,
+.card-row-valign-top .card-col-field {
+  vertical-align: top;
+}
+
+.card-row-valign-top .clamp-container {
+  top: 0;
+}
+
+.card-row-valign-top .clamp-horizontal .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.card-row-valign-bottom .card-col-content,
+.card-row-valign-bottom .card-col-field {
+  vertical-align: bottom;
+}
+
+.card-row-valign-bottom .clamp-container {
+  bottom: 0;
+}
+
+.card-row-valign-bottom .clamp-horizontal .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
 [class*="card-col"] figure,
@@ -10377,115 +10285,111 @@ button.close {
   border-bottom-right-radius: 0;
 }
 
-.card-dm {
-  overflow: visible;
-}
-
-.card-dm .card-footer {
-  padding: 10px 0;
-}
-
-.card-dm-details {
-  margin-left: 15px;
-  margin-top: 3px;
-  overflow: hidden;
-  text-align: left;
-}
-
-.card-dm-text, .card-dm-text-large, .card-dm-text-small {
-  color: #333333;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.card-dm-text-large {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.card-dm-text-small {
-  font-size: 12px;
-}
-
-.card-dm-more-options {
-  display: block;
-  float: right;
-}
-
-.card-dm-more-options:focus, .card-dm-more-options:hover {
-  text-decoration: none;
-}
-
-.checkbox-card {
+.checkbox-card,
+.radio-card {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.checkbox-card label {
+.checkbox-card label,
+.radio-card label {
   color: #333333;
-  display: block;
+  display: inline;
   padding-left: 0;
 }
 
-.checkbox-card input[type="checkbox"] {
+.checkbox-card input[type="checkbox"],
+.radio-card input[type="radio"] {
   margin-left: 0;
   margin-top: 0;
   z-index: 1;
 }
 
-.checkbox-bottom-left .card.flex-container,
-.checkbox-middle-left .card.flex-container,
-.checkbox-top-left .card.flex-container {
+.checkbox-card input[type="checkbox"]:checked ~ .card, .checkbox-card input[type="checkbox"]:focus ~ .card,
+.radio-card input[type="radio"]:checked ~ .card,
+.radio-card input[type="radio"]:focus ~ .card {
+  border-color: rgba(102, 175, 233, 0.6);
+  box-shadow: 0 0 3px 2px rgba(102, 175, 233, 0.6);
+}
+
+.checkbox-bottom-left .card-horizontal .card.flex-container,
+.checkbox-middle-left .card-horizontal .card.flex-container,
+.checkbox-top-left .card-horizontal .card.flex-container,
+.radio-bottom-left .card-horizontal .card.flex-container,
+.radio-middle-left .card-horizontal .card.flex-container,
+.radio-top-left .card-horizontal .card.flex-container {
   padding-left: 40px;
 }
 
-.checkbox-bottom-left .card-row,
-.checkbox-middle-left .card-row,
-.checkbox-top-left .card-row {
+.checkbox-bottom-left .card-horizontal .card-row,
+.checkbox-middle-left .card-horizontal .card-row,
+.checkbox-top-left .card-horizontal .card-row,
+.radio-bottom-left .card-horizontal .card-row,
+.radio-middle-left .card-horizontal .card-row,
+.radio-top-left .card-horizontal .card-row {
   padding-left: 40px;
 }
 
-.checkbox-bottom-right .card.flex-container,
-.checkbox-middle-right .card.flex-container,
-.checkbox-top-right .card.flex-container {
+.checkbox-bottom-right .card-horizontal .card.flex-container,
+.checkbox-middle-right .card-horizontal .card.flex-container,
+.checkbox-top-right .card-horizontal .card.flex-container,
+.radio-bottom-right .card-horizontal .card.flex-container,
+.radio-middle-right .card-horizontal .card.flex-container,
+.radio-top-right .card-horizontal .card.flex-container {
   padding-right: 40px;
 }
 
-.checkbox-bottom-right .card-row,
-.checkbox-middle-right .card-row,
-.checkbox-top-right .card-row {
+.checkbox-bottom-right .card-horizontal .card-row,
+.checkbox-middle-right .card-horizontal .card-row,
+.checkbox-top-right .card-horizontal .card-row,
+.radio-bottom-right .card-horizontal .card-row,
+.radio-middle-right .card-horizontal .card-row,
+.radio-top-right .card-horizontal .card-row {
   padding-right: 40px;
 }
 
-.checkbox-bottom-left input[type="checkbox"] {
+.checkbox-bottom-left input[type="checkbox"],
+.checkbox-bottom-left label > input[type="checkbox"],
+.radio-bottom-left input[type="radio"],
+.radio-bottom-left label > input[type="radio"] {
   bottom: 15px;
   left: 15px;
 }
 
-.checkbox-bottom-right input[type="checkbox"] {
+.checkbox-bottom-right input[type="checkbox"],
+.checkbox-bottom-right label > input[type="checkbox"],
+.radio-bottom-right input[type="radio"],
+.radio-bottom-right label > input[type="radio"] {
   bottom: 15px;
   right: 15px;
 }
 
-.checkbox-middle-left input[type="checkbox"] {
+.checkbox-middle-left input[type="checkbox"],
+.checkbox-middle-left label > input[type="checkbox"],
+.radio-middle-left input[type="radio"],
+.radio-middle-left label > input[type="radio"] {
   left: 15px;
   margin-top: -6px;
   top: 50%;
 }
 
-.checkbox-middle-right input[type="checkbox"] {
+.checkbox-middle-right input[type="checkbox"],
+.checkbox-middle-right label > input[type="checkbox"],
+.radio-middle-right input[type="radio"],
+.radio-middle-right label > input[type="radio"] {
   margin-top: -6px;
   right: 15px;
   top: 50%;
 }
 
-.checkbox-top-left input[type="checkbox"] {
+.checkbox-top-left label > input[type="checkbox"],
+.radio-top-left label > input[type="radio"] {
   left: 15px;
   top: 15px;
 }
 
-.checkbox-top-right input[type="checkbox"] {
+.checkbox-top-right label > input[type="checkbox"],
+.radio-top-right label > input[type="radio"] {
   right: 15px;
   top: 15px;
 }
@@ -10497,7 +10401,8 @@ button.close {
 
 .clamp-container {
   left: 8px;
-  margin: 0;
+  margin: -2px;
+  padding: 2px;
   position: absolute;
   right: 8px;
 }
@@ -10542,19 +10447,6 @@ button.close {
 .clamp-all-scroll .clamp-container {
   -webkit-overflow-scrolling: touch;
   overflow: auto;
-}
-
-th.clamp-horizontal .clamp-container {
-  bottom: 8px;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
-}
-
-.clamp-horizontal .table-cell-content {
-  vertical-align: middle;
 }
 
 .crop-img {
@@ -10603,6 +10495,17 @@ th.clamp-horizontal .clamp-container {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.dropdown-menu {
+  max-height: 295px;
+  overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .dropdown-menu {
+    max-height: 320px;
+  }
 }
 
 .dropdown-menu form .checkbox:hover,
@@ -10857,6 +10760,7 @@ th.clamp-horizontal .clamp-container {
 @media screen and (min-width: 768px) {
   .dropdown-full .dropdown-menu,
   .dropdown-wide .dropdown-menu {
+    max-height: none;
     padding: 20px 0;
     width: 100%;
   }
@@ -10912,8 +10816,8 @@ th.clamp-horizontal .clamp-container {
 .navbar-nav > li > .dropdown-menu-top, .management-bar-nav > li > .dropdown-menu-top,
 .navbar-nav > li > .dropdown-menu-top-center, .management-bar-nav > li > .dropdown-menu-top-center,
 .navbar-nav > li > .dropdown-menu-top-right, .management-bar-nav > li > .dropdown-menu-top-right {
-  border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 @media screen and (max-width: 767px) {
@@ -11342,25 +11246,6 @@ a .icon-monospaced, a .help-icon,
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 2px;
-}
-
-.label-monospaced {
-  height: 32px;
-  line-height: 32px;
-  width: 32px;
-  padding: 0;
-}
-
-.label-monospaced.label-lg {
-  height: 44px;
-  line-height: 44px;
-  width: 44px;
-}
-
-.label-monospaced.label-sm {
-  height: 22px;
-  line-height: 22px;
-  width: 22px;
 }
 
 .label .lexicon-icon {
@@ -11898,59 +11783,59 @@ button.list-group-heading:hover,
 
 @-webkit-keyframes loading-icon {
   0% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
     -webkit-transform: rotate(0);
   }
   2%, 96% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
   }
   10% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
   }
   25% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a1ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a2ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
   }
   40% {
-    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb2;
+    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb3;
   }
   60% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
   }
   100% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
     -webkit-transform: rotate(360deg);
   }
 }
 
 @-moz-keyframes loading-icon {
   0% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
     -moz-transform: rotate(0);
   }
   2%, 96% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
   }
   10% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
   }
   25% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a1ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a2ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
   }
   40% {
-    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb2;
+    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb3;
   }
   60% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
   }
   100% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
     -moz-transform: rotate(360deg);
   }
 }
 
 @keyframes loading-icon {
   0% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
@@ -11958,22 +11843,22 @@ button.list-group-heading:hover,
     transform: rotate(0);
   }
   2%, 96% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
   }
   10% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
   }
   25% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a1ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a2ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
   }
   40% {
-    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb2;
+    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb3;
   }
   60% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a1ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
   }
   100% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a1ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
@@ -13404,7 +13289,12 @@ fieldset[disabled]
     position: absolute;
     right: 5px;
     text-align: left;
-    top: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
   }
 }
 
@@ -13839,9 +13729,9 @@ fieldset[disabled]
 }
 
 .basic-search-transition .basic-search-slider {
-  -webkit-transition: left 0.5s ease;
-  -o-transition: left 0.5s ease;
-  transition: left 0.5s ease;
+  -webkit-transition: left 0.5s ease, right 0.5s ease;
+  -o-transition: left 0.5s ease, right 0.5s ease;
+  transition: left 0.5s ease, right 0.5s ease;
 }
 
 .navbar-brand:focus, .management-bar-header-item:focus {
@@ -13870,7 +13760,6 @@ fieldset[disabled]
 }
 
 .collapse-basic-search .basic-search {
-  bottom: 0;
   display: block;
   left: 0;
   margin: 0;
@@ -14927,7 +14816,6 @@ fieldset[disabled]
 }
 
 .sidenav-container.closed > .sidenav-menu-slider {
-  overflow: hidden;
   visibility: hidden;
   width: 0;
 }
@@ -14937,6 +14825,8 @@ fieldset[disabled]
 }
 
 .sidenav-content {
+  padding-left: 0;
+  padding-right: 0;
   position: relative;
 }
 
@@ -14959,7 +14849,7 @@ fieldset[disabled]
 }
 
 .sidenav-menu-slider {
-  overflow: visible;
+  overflow: hidden;
   position: absolute;
   z-index: 10;
 }
@@ -14994,10 +14884,6 @@ fieldset[disabled]
   transition: all 0.5s ease;
 }
 
-.sidenav-transition .sidenav-menu-slider {
-  overflow: hidden;
-}
-
 .body-fixed {
   bottom: 0;
   left: 0;
@@ -15009,7 +14895,6 @@ fieldset[disabled]
 .sidenav-fixed.sidenav-menu-slider {
   bottom: 0;
   left: 0;
-  overflow: hidden;
   position: fixed;
   top: 0;
 }
@@ -15435,6 +15320,28 @@ fieldset[disabled]
   top: 15px;
 }
 
+.sticker-static {
+  position: static;
+}
+
+.sticker-bottom-left {
+  bottom: 15px;
+  right: auto;
+  top: auto;
+}
+
+.sticker-bottom-right {
+  bottom: 15px;
+  left: auto;
+  right: 15px;
+  top: auto;
+}
+
+.sticker-top-right {
+  left: auto;
+  right: 15px;
+}
+
 .sticker-bottom {
   bottom: 15px;
   top: auto;
@@ -15448,6 +15355,23 @@ fieldset[disabled]
 .sticker-outside {
   left: -15px;
   top: -15px;
+}
+
+.sticker-outside.sticker-bottom-left {
+  bottom: -15px;
+  top: auto;
+}
+
+.sticker-outside.sticker-bottom-right {
+  bottom: -15px;
+  left: auto;
+  right: -15px;
+  top: auto;
+}
+
+.sticker-outside.sticker-top-right {
+  left: auto;
+  right: -15px;
 }
 
 .sticker-outside.sticker-bottom {
@@ -15510,6 +15434,15 @@ fieldset[disabled]
   background-color: #f0ad4e;
 }
 
+th {
+  height: 20px;
+}
+
+.table-valign-bottom thead .clamp-container,
+.thead-valign-bottom thead .clamp-container {
+  bottom: 0;
+}
+
 .table > thead tr td:first-child,
 .table > tbody tr td:first-child,
 .table > tfoot tr td:first-child {
@@ -15530,10 +15463,37 @@ fieldset[disabled]
   padding-right: 15px;
 }
 
+.table thead .clamp-container {
+  bottom: 8px;
+}
+
+.table th {
+  height: 36px;
+}
+
+.table tr td:first-child .clamp-container,
+.table tr th:first-child .clamp-container {
+  left: 15px;
+}
+
+.table tr td:last-child .clamp-container,
+.table tr th:last-child .clamp-container {
+  right: 15px;
+}
+
+.table .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
 .table-cell-content {
   position: relative;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   word-break: break-all;
-  word-break: break-word;
 }
 
 .table-cell-field {
@@ -15571,7 +15531,9 @@ fieldset[disabled]
   }
   .table-responsive-collapse > .table > tbody > tr > td {
     white-space: normal;
-    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
   }
   .table-responsive-collapse tbody {
     border-width: 0;
@@ -15682,19 +15644,19 @@ fieldset[disabled]
 
 .table-list > tbody td,
 .table-list > tfoot td {
-  box-shadow: inset 0-"1px" #ddd;
+  box-shadow: inset 0 - 1px #ddd;
 }
 
 .table-list > tbody > tr.active:hover td,
 .table-list > tbody > tr.active td,
 .table-list > tfoot > tr.active:hover td,
 .table-list > tfoot > tr.active td {
-  box-shadow: inset 0-"1px" #ddd;
+  box-shadow: inset 0 - 1px #ddd;
 }
 
 .table-list > tbody > tr:hover td,
 .table-list > tfoot > tr:hover td {
-  box-shadow: inset 0-"1px" #ddd;
+  box-shadow: inset 0 - 1px #ddd;
 }
 
 .table-list .checkbox,
@@ -15707,139 +15669,160 @@ fieldset[disabled]
   display: block;
 }
 
-.tab-group > .nav-tabs {
-  margin-bottom: -1px;
+.table-list thead .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
-.tab-group > .tab-content {
-  border: 1px solid #ddd;
-  padding: 15px;
+.table-list.table-valign-middle thead .clamp-container,
+.table-list .clamp-container {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.tab-group-bottom > .nav-tabs {
-  border-bottom-width: 0;
-  border-top: 1px solid #ddd;
-  margin-bottom: 0;
-  margin-top: -1px;
+.table-valign-bottom > thead > tr > th,
+.table-valign-bottom > tbody > tr > td,
+.table-valign-bottom > tfoot > tr > td {
+  vertical-align: bottom;
 }
 
-.tab-group-bottom > .nav-tabs > li {
-  margin-bottom: 0;
-  margin-top: -1px;
+.table-valign-bottom .clamp-container {
+  bottom: 8px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
-.tab-group-bottom > .nav-tabs > li > a {
-  border-radius: 0 0 4px 4px;
-  border-width-top: 0;
-  border-width-bottom: 1px;
+.table-valign-middle > thead > tr > th,
+.table-valign-middle > tbody > tr > td,
+.table-valign-middle > tfoot > tr > td {
+  vertical-align: middle;
 }
 
-.tab-group-bottom > .nav-tabs > li > a:focus, .tab-group-bottom > .nav-tabs > li > a:hover {
-  border-color: #ddd #eeeeee #eeeeee #eeeeee;
+.table-valign-middle thead .clamp-container {
+  bottom: auto;
 }
 
-.tab-group-bottom > .nav-tabs > li.active > a {
-  border-bottom-color: #ddd;
-  border-top-color: transparent;
+.table-valign-middle .clamp-container {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: auto;
 }
 
-.tab-group-bottom > .nav-tabs > li.disabled > a {
-  border-color: transparent;
-}
-
-.tab-group-bottom .nav-justified > li > a {
-  margin-top: -1px;
-}
-
-.tab-group-left > .nav-tabs,
-.tab-group-right > .nav-tabs {
-  border-bottom-width: 0;
-  display: table-cell;
+.table-valign-top > thead > tr > th,
+.table-valign-top > tbody > tr > td,
+.table-valign-top > tfoot > tr > td {
   vertical-align: top;
-  width: 25%;
 }
 
-.tab-group-left > .nav-tabs > li,
-.tab-group-right > .nav-tabs > li {
-  float: none;
-  margin-bottom: 0;
+.table-valign-top thead .clamp-container {
+  bottom: auto;
 }
 
-.tab-group-left > .nav-tabs > li > a,
-.tab-group-right > .nav-tabs > li > a {
-  display: block;
-  margin-bottom: 2px;
-  margin-right: 0;
-  max-width: 10em;
-  word-break: break-word;
-  word-wrap: break-word;
+.table-valign-top .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
-.tab-group-left > .tab-content,
-.tab-group-right > .tab-content {
-  display: table-cell;
-  margin-top: 0;
+.tbody-valign-bottom > tbody > tr > td {
+  vertical-align: bottom;
 }
 
-.tab-group-left > .nav-tabs {
-  border-top: 1px solid transparent;
+.tbody-valign-bottom tbody .clamp-container {
+  bottom: 8px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
-.tab-group-left > .nav-tabs > li {
-  margin-top: -1px;
+.tbody-valign-middle > tbody > tr > td {
+  vertical-align: middle;
 }
 
-.tab-group-left > .nav-tabs > li > a {
-  border-radius: 4px 0 0 4px;
-  margin-right: -1px;
+.tbody-valign-middle tbody .clamp-container {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: auto;
 }
 
-.tab-group-left > .nav-tabs > li > a:focus, .tab-group-left > .nav-tabs > li > a:hover {
-  border-color: #eeeeee #ddd #eeeeee #eeeeee;
+.tbody-valign-top > tbody > tr > td {
+  vertical-align: top;
 }
 
-.tab-group-left > .nav-tabs > li.active > a {
-  border-color: #ddd transparent #ddd #ddd;
+.tbody-valign-top tbody .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
-.tab-group-left > .nav-tabs > li.disabled > a {
-  border-color: transparent;
+.thead-valign-bottom > thead > tr > td,
+.thead-valign-bottom > thead > tr > th {
+  vertical-align: bottom;
 }
 
-.tab-group-right > .nav-tabs {
-  border-top: 1px solid transparent;
+.thead-valign-bottom thead .clamp-container {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
-.tab-group-right > .nav-tabs > li {
-  margin-top: -1px;
+.thead-valign-middle > thead > tr > td,
+.thead-valign-middle > thead > tr > th {
+  vertical-align: middle;
 }
 
-.tab-group-right > .nav-tabs > li > a {
-  border-radius: 0 4px 4px 0;
-  margin-left: -1px;
+.thead-valign-middle thead .clamp-container {
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.tab-group-right > .nav-tabs > li > a:focus, .tab-group-right > .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #eeeeee #ddd;
+.thead-valign-top > thead > tr > td,
+.thead-valign-top > thead > tr > th {
+  vertical-align: top;
 }
 
-.tab-group-right > .nav-tabs > li.active > a {
-  border-color: #ddd #ddd #ddd transparent;
+.thead-valign-top thead .clamp-container {
+  bottom: auto;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
-.tab-group-right > .nav-tabs > li.disabled > a {
-  border-color: transparent;
+.table-responsive .table-cell-content {
+  min-width: 200px;
 }
 
-@media screen and (min-width: 480px) {
-  .tab-group-left > .nav-tabs,
-  .tab-group-right > .nav-tabs {
-    width: 1%;
-  }
-  .tab-group-left > .nav-tabs > li > a,
-  .tab-group-right > .nav-tabs > li > a {
-    word-break: normal;
-  }
+.table-responsive .table-cell-text {
+  min-width: 115px;
 }
 
 .timeline {
@@ -16414,9 +16397,9 @@ fieldset[disabled]
   box-shadow: none;
   color: #333333;
   display: table;
+  height: 78px;
   padding: 4px 4px;
   text-align: center;
-  height: 78px;
   width: 69px;
 }
 
@@ -16428,8 +16411,8 @@ fieldset[disabled]
 
 .toggle-card-icon {
   border-radius: 30px;
-  height: 32px;
   font-size: 16px;
+  height: 32px;
   margin: 0 auto;
   width: 32px;
 }
@@ -16505,44 +16488,6 @@ input.toggle-card:focus ~ .toggle-card-container {
 input.toggle-card[disabled] ~ .toggle-card-container {
   cursor: not-allowed;
   opacity: 0.4;
-}
-
-.toggle-card-dm {
-  margin-top: 0;
-}
-
-.toggle-card-dm input[type="checkbox"] {
-  left: 15px;
-  margin-left: 0;
-  margin-top: 0;
-  opacity: 1;
-  position: absolute;
-  top: 15px;
-  z-index: 1;
-}
-
-.toggle-card-dm input[type="checkbox"]:checked ~ .toggle-card-container, .toggle-card-dm input[type="checkbox"]:focus ~ .toggle-card-container {
-  box-shadow: 0 0 3px 2px rgba(102, 175, 233, 0.6);
-}
-
-.toggle-card-dm input[type="checkbox"] ~ .toggle-card-container {
-  border-width: 1px;
-  padding: 0;
-}
-
-.toggle-card-dm label {
-  padding-left: 0;
-  width: 100%;
-}
-
-.toggle-card-dm .toggle-card-container {
-  display: block;
-  height: auto;
-  width: auto;
-}
-
-.toggle-card-dm ~ .toggle-card-dm {
-  margin-top: 0;
 }
 
 .toggle-switch-bar .toggle-switch-handle {
