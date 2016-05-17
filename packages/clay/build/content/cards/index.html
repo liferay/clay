@@ -25,7 +25,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.14</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v0.2.15</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -221,18 +221,22 @@
 		
 <div class="row row-spacing uxgl-vertical-card">
 	<div class="col-md-12">
-		<h3 id="default-card"><a class="heading-anchor" href="#default-card"><i class="icon icon-link"></i></a>Default Card</h3>
+		<h3 id="card"><a class="heading-anchor" href="#card"><i class="icon icon-link"></i></a>Card</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Display card content vertically.</p>
+			<p>A container styled like a card for your stuff. Combine different Lexicon components inside a card to create a variety of cards.</p>
 		</blockquote>
-	</div>
 
-	<div class="col-md-4">
-		<div class="card">
-			<div class="card-header"><h4>Header</h4></div>
-			<div class="card-section"><h4>Section</h4></div>
-			<div class="card-footer"><h4>Footer</h4></div>
+		<div class="card" style="max-width: 300px;">
+			<div class="crop-img crop-img-bottom crop-img-center" style="height: 150px;">
+				<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			</div>
+			<div class="user-icon user-icon-danger user-icon-xxl" style="border: 4px solid #FFF; line-height:120px; margin: -64px auto 0; position: relative;"><span>JB</span></div>
+			<div class="card-block" style="text-align: center;">
+				<h3 style="margin:0;">Joe Bloggs
+				<h5 class="text-default" style="margin-top:0;">Administrator</h5>
+				<p>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</p>
+			</h3></div>
 		</div>
 	</div>
 
@@ -242,11 +246,7 @@
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse0">
-	<pre><code>&lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;card-header&quot;&gt;&lt;h1&gt;Header&lt;/h1&gt;&lt;/div&gt;
-    &lt;div class=&quot;card-section&quot;&gt;&lt;h1&gt;Section&lt;/h1&gt;&lt;/div&gt;
-    &lt;div class=&quot;card-footer&quot;&gt;&lt;h1&gt;Footer&lt;/h1&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+	<pre><code class="html">&lt;div class=&quot;card&quot;&gt;...&lt;/div&gt;</code></pre>
 </div>
 
 	</div>
@@ -254,90 +254,21 @@
 
 <div class="row row-spacing uxgl-horizontal-card">
 	<div class="col-md-12">
-		<h3 id="horizontal-card"><a class="heading-anchor" href="#horizontal-card"><i class="icon icon-link"></i></a>Horizontal Card</h3>
+		<h3 id="horizontal-card-with-simple-grid"><a class="heading-anchor" href="#horizontal-card-with-simple-grid"><i class="icon icon-link"></i></a>Horizontal Card with Simple Grid</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Display card content horizontally. <code>.card-horizontal</code> uses a simplified version of Bootstrap 3&apos;s grid system to help align content. It is based on the 12 column grid (default), but columns can be customized to any size.</p>
-
-			<p>Card columns do not break at smaller screen widths. They were designed to help align small chunks of content and are not meant to be used for page layouts.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-6">card-col-6</div>
-				<div class="card-col-6">card-col-6</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-7">card-col-7</div>
-				<div class="card-col-4">card-col-4</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-4">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-4">card-col-4</div>
-				<div class="card-col-7">card-col-7</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;div class=&quot;card-horizontal&quot;&gt;
-    &lt;div class=&quot;card-row&quot;&gt;
-        &lt;div class=&quot;card-col-6&quot;&gt;card-col-6&lt;/div&gt;
-        &lt;div class=&quot;card-col-6&quot;&gt;card-col-6&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing uxgl-horizontal-card">
-	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Create a column only as wide as its content with <code>card-col-field</code> and fill the remaing space with <code>card-col-content</code>. <code>card-col-field</code> has width: 1% and will expand only as wide as its content as long as <code>card-col-content</code> is present as a sibling.</p>
-		</blockquote>
+			<p>Use <code>card-row</code> with <code>card-col-content</code> and <code>card-col-field</code> to create a number of custom horizontal cards. <code>card-col-content</code> fills the remaining space when used in conjunction with <code>card-col-field</code>. <code>card-col-field</code> will only be as wide as the content inside.
+		</p></blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
+		<div class="card card-horizontal">
 			<div class="card-row card-row-padded">
 				<div class="card-col-field">
 					<span class="icon-folder-close-alt icon-monospaced" style="width: 90px;"></span>
 				</div>
 				<div class="card-col-content card-col-gutters">
 					<span>Fills Remaining Space</span>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<span class="icon-folder-close-alt icon-monospaced" style="width: 90px;"></span>
-				</div>
-				<div class="card-col-content card-col-gutters">
-					<span>Fills Remaining Space</span>
-				</div>
-				<div class="card-col-field">
-					<span class="icon-folder-close-alt icon-monospaced" style="width: 140px;"></span>
 				</div>
 			</div>
 		</div>
@@ -349,7 +280,7 @@
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse001"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse001">
-	<pre><code class="html">&lt;div class=&quot;card-horizontal&quot;&gt;
+	<pre><code class="html">&lt;div class=&quot;card card-horizontal&quot;&gt;
     &lt;div class=&quot;card-row card-row-padded&quot;&gt;
         &lt;div class=&quot;card-col-field&quot;&gt;
             &lt;span class=&quot;icon-folder-close-alt icon-monospaced&quot; style=&quot;width: 90px;&quot;&gt;&lt;/span&gt;
@@ -357,57 +288,9 @@
         &lt;div class=&quot;card-col-content card-col-gutters&quot;&gt;
             &lt;span&gt;Fills Remaining Space&lt;/span&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;card-col-field&quot;&gt;
-            &lt;span class=&quot;icon-folder-close-alt icon-monospaced&quot; style=&quot;width: 140px;&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing uxgl-horizontal-card">
-	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code>.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-4" style="vertical-align: top;">top</div>
-				<div class="card-col-4">middle</div>
-				<div class="card-col-4" style="vertical-align: bottom;">bottom</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row">
-				<div class="card-col-4" style="text-align:left;">left</div>
-				<div class="card-col-4">center</div>
-				<div class="card-col-4" style="text-align:right;">right</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-		<pre><code class="html">&lt;div class=&quot;card-horizontal&quot;&gt;
-    &lt;div class=&quot;card-row&quot;&gt;
-        &lt;div class=&quot;card-col-4&quot; style=&quot;vertical-align: top;&quot;&gt;top&lt;/div&gt;
-        &lt;div class=&quot;card-col-4&quot;&gt;middle&lt;/div&gt;
-        &lt;div class=&quot;card-col-4&quot; style=&quot;vertical-align: bottom;&quot;&gt;bottom&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
 </div>
 
 	</div>
@@ -415,102 +298,109 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<h3 id="horizontal-cards-with-fixed-width-content"><a class="heading-anchor" href="#horizontal-cards-with-fixed-width-content"><i class="icon icon-link"></i></a>Horizontal Cards with Fixed Width Content</h3>
+
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add gutters to a specific card card column by using <code>.card-col-gutters</code>.</p>
+			<p>Set a fixed width on the content inside <code>card-col-field</code>.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
+		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
 				</div>
 
-				<div class="card-col-7 card-col-gutters">
+				<div class="card-col-content card-col-gutters">
 					<h4>So ristretto cappuccino</h4>
 
 					<p>Wings eu, pumpkin spice robusta.</p>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-		<pre><code class="html">&lt;div class=&quot;card-horizontal&quot;&gt;
-    &lt;div class=&quot;card-row&quot;&gt;
-        &lt;div class=&quot;card-col-5&quot;&gt;
-            &lt;img alt=&quot;thumbnail&quot; class=&quot;img-responsive&quot; src=&quot;/images/thumbnail_coffee.jpg&quot;&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;card-col-7 card-col-gutters&quot;&gt;
-            ...
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-
-	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.card-row-padded</code> with <code>.card-row</code> to add some spacing around a horizontal card.</p>
-		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
+		<div class="card card-horizontal">
 			<div class="card-row card-row-padded">
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 121px;">
 				</div>
 
-				<div class="card-col-7 card-col-gutters">
+				<div class="card-col-content card-col-gutters">
 					<h4>So ristretto cappuccino</h4>
+
 					<p>Wings eu, pumpkin spice robusta.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-md-12">
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;div class=&quot;card-horizontal&quot;&gt;
-    &lt;div class=&quot;card-row card-row-padded&quot;&gt;
-        ...
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 121px;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-8">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field" style="background-color: #EEE;text-align: center;">
+					<span class="icon-folder-close-alt icon-monospaced" style="width: 90px;"></span>
+				</div>
+				<div class="card-col-content card-col-gutters">
+					<span>Really super insanely just incredibly long and totally not possible word. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</div>
+				<div class="card-col-field" style="background-color: #EEE;text-align: center;width: 60px;">
+					<span class="icon-folder-close-alt icon-monospaced"></span>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 <div class="row row-spacing" id="truncatingText">
 	<div class="col-md-12">
-		<h3 id="truncating-text-inside-horizontal-card"><a class="heading-anchor" href="#truncating-text-inside-horizontal-card"><i class="icon icon-link"></i></a>Truncating Text Inside Horizontal Card</h3>
+		<h3 id="truncating-text-inside-card"><a class="heading-anchor" href="#truncating-text-inside-card"><i class="icon icon-link"></i></a>Truncating Text Inside Card</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use class <code>card-row-layout-fixed</code> on card row and add class <code>truncate-text</code> on a text element. Every column except the one that should expand to fill the remaining space needs to have a fixed width set.</p>
+			<p>Add class <code>truncate-text</code> on whatever text you want to be truncated.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<div class="card-horizontal">
-			<div class="card-row card-row-layout-fixed card-row-padded">
-				<div class="card-col-5">
-					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_placeholder.gif">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
 				</div>
 
-				<div class="card-col-7 card-col-gutters">
+				<div class="card-col-content card-col-gutters">
 					<h4>So ristretto cappuccino</h4>
 					<p class="truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
 				</div>
@@ -520,15 +410,15 @@
 
 	<ul class="list-unstyled" style="clear:both;">
 		<li class="col-md-6">
-			<div class="card-horizontal">
-				<div class="card-row card-row-layout-fixed card-row-padded">
-					<div class="card-col-field" style="width:60px;">
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 					</div>
 					<div class="card-col-content card-col-gutters">
 						<h4 class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
 					</div>
-					<div class="card-col-field" style="vertical-align:top; width:32px;">
+					<div class="card-col-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
@@ -550,15 +440,15 @@
 		</li>
 
 		<li class="col-md-6">
-			<div class="card-horizontal">
-				<div class="card-row card-row-layout-fixed card-row-padded">
-					<div class="card-col-field" style="width:60px;">
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 					</div>
 					<div class="card-col-content card-col-gutters">
 						<h4 title="Folder 01">Folder 01</h4>
 					</div>
-					<div class="card-col-field" style="vertical-align:top; width:32px;">
+					<div class="card-col-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
@@ -580,15 +470,15 @@
 		</li>
 
 		<li class="col-md-6">
-			<div class="card-horizontal">
-				<div class="card-row card-row-layout-fixed card-row-padded">
-					<div class="card-col-field" style="width:60px;">
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 					</div>
 					<div class="card-col-content card-col-gutters">
 						<h4 title="Folder 02">Folder 02</h4>
 					</div>
-					<div class="card-col-field" style="vertical-align:top; width:32px;">
+					<div class="card-col-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
@@ -610,15 +500,15 @@
 		</li>
 
 		<li class="col-md-6">
-			<div class="card-horizontal">
-				<div class="card-row card-row-layout-fixed card-row-padded">
-					<div class="card-col-field" style="width:60px;">
+			<div class="card card-horizontal">
+				<div class="card-row card-row-padded">
+					<div class="card-col-field">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 					</div>
 					<div class="card-col-content card-col-gutters">
 						<h4 title="Folder 03">Folder 03</h4>
 					</div>
-					<div class="card-col-field" style="vertical-align:top; width:32px;">
+					<div class="card-col-field">
 						<div class="dropdown">
 							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
@@ -641,167 +531,167 @@
 	</ul>
 </div>
 
-<div class="row row-spacing">
+<div class="row row-spacing uxgl-horizontal-card">
 	<div class="col-md-12">
-		<h3 id="truncating-text-inside-horizontal-card-without-card-row-layout-fixed"><a class="heading-anchor" href="#truncating-text-inside-horizontal-card-without-card-row-layout-fixed"><i class="icon icon-link"></i></a>Truncating Text Inside Horizontal Card without Card Row Layout Fixed</h3>
+		<h3 id="card-row-vertical-alignment-helpers"><a class="heading-anchor" href="#card-row-vertical-alignment-helpers"><i class="icon icon-link"></i></a>Card Row Vertical Alignment Helpers</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>If the text inside your container is shorter than the container, add class <code>clamp-horizontal</code> to card-col-{name} and wrap the content in <code>clamp-container</code>. If the text is larger than your container use <code>clamp-all</code> and wrap the content in <code>clamp-container</code>. Clamp-horizontal will vertically center and prevent content from overflowing horizontally. Clamp-all will prevent content from overflowing vertically and horizontally, but will not vertically center. These should generally be used when you want to keep the card size fixed, but have variable content size.</p>
-
-			<p>Use <code>clamp-all-scroll</code> instead of <code>clamp-all</code> to show scroll bars.</p>
+			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code> or use the helper classes <code>card-row-valign-bottom</code>and <code>card-row-valign-top</code> on the <code>card-row</code> to vertically align all columns inside the row.</p>
 		</blockquote>
 	</div>
 
-	<div class="col-xs-6">
-		<div class="card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
-				</div>
-
-				<div class="card-col-content card-col-gutters clamp-horizontal">
-					<div class="clamp-container">
-						<div class="h4 truncate-text">So ristretto cappuccino</div>
-						<p class="truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-xs-6">
-		<div class="card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
-				</div>
-
-				<div class="card-col-content card-col-gutters clamp-all">
-					<div class="clamp-container">
-						<div class="h4 truncate-text">So ristretto cappuccino kopi-luwak mocha caffeine froth grounds.</div>
-						<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-xs-6">
-		<div class="card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width:140px;">
-				</div>
-
-				<div class="card-col-content card-col-gutters clamp-all-scroll">
-					<div class="clamp-container">
-						<div class="h4 truncate-text">So ristretto cappuccino kopi-luwak mocha caffeine froth grounds.</div>
-						<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds. Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-xs-6" style="clear:left;">
-		<div class="checkbox checkbox-card checkbox-middle-left">
-			<label>
-				<input type="checkbox" value="">
-				<div class="card card-horizontal">
-					<div class="card-row card-row-padded">
-						<div class="card-col-field">
-							<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
-						</div>
-						<div class="card-col-content card-col-gutters clamp-horizontal">
-							<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
-						</div>
-						<div class="card-col-field" style="vertical-align:top;">
-							<div class="dropdown">
-								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-									</svg>
-								</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#1">Download</a></li>
-									<li><a href="#1">Edit</a></li>
-									<li><a href="#1">Move</a></li>
-									<li><a href="#1">Checkout</a></li>
-									<li><a href="#1">Permissions</a></li>
-									<li><a href="#1">Move to Recycle Bin</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</label>
-		</div>
-	</div>
-
-	<div class="col-xs-6">
+	<div class="col-md-6">
 		<div class="card card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<img src="../../images/switch_on_icon.png">
-				</div>
-				<div class="card-col-field card-col-gutters">
-					<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
-				</div>
-				<div class="card-col-content card-col-gutters clamp-horizontal">
-					<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
-				</div>
-				<div class="card-col-field" style="vertical-align:top;">
-					<div class="dropdown">
-						<a aria-expanded="false" class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#1">Download</a></li>
-							<li><a href="#1">Edit</a></li>
-							<li><a href="#1">Move</a></li>
-							<li><a href="#1">Checkout</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Move to Recycle Bin</a></li>
-						</ul>
-					</div>
-				</div>
+			<div class="card-row">
+				<div class="card-col-field" style="vertical-align: top;">top</div>
+				<div class="card-col-field">middle</div>
+				<div class="card-col-field" style="vertical-align: bottom;">bottom</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field" style="text-align:left;">left</div>
+				<div class="card-col-field">center</div>
+				<div class="card-col-field" style="text-align:right;">right</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+		<pre><code class="html">&lt;div class=&quot;card card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row&quot;&gt;
+        &lt;div class=&quot;card-col-field&quot; style=&quot;vertical-align: top;&quot;&gt;top&lt;/div&gt;
+        &lt;div class=&quot;card-col-field&quot;&gt;middle&lt;/div&gt;
+        &lt;div class=&quot;card-col-field&quot; style=&quot;vertical-align: bottom;&quot;&gt;bottom&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
 	</div>
 </div>
 
-<div class="row row-spacing uxgl-vertical-card">
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add gutters to a specific card card column by using the class <code>card-col-gutters</code>.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse3">
+		<pre><code class="html">&lt;div class=&quot;card card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row&quot;&gt;
+        &lt;div class=&quot;card-col-field&quot;&gt;
+            &lt;img alt=&quot;thumbnail&quot; src=&quot;/images/thumbnail_coffee.jpg&quot; style=&quot;width: 150px;&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;card-col-content card-col-gutters&quot;&gt;
+            ...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>card-row-padded</code> on <code>card-row</code> to add some spacing around a horizontal card.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-md-6">
+		<div class="card card-horizontal">
+			<div class="card-row card-row-padded">
+				<div class="card-col-field">
+					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 121px;">
+				</div>
+
+				<div class="card-col-content card-col-gutters">
+					<h4>So ristretto cappuccino</h4>
+					<p>Wings eu, pumpkin spice robusta.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+	<pre><code class="html">&lt;div class=&quot;card card-horizontal&quot;&gt;
+    &lt;div class=&quot;card-row card-row-padded&quot;&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
 	<div class="col-md-12">
 		<h3 id="card-helper-classes"><a class="heading-anchor" href="#card-helper-classes"><i class="icon icon-link"></i></a>Card Helper Classes</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.card-rounded</code>, <code>.card-circle</code>, or <code>.card-square</code> on the card to quickly shape the borders.</p>
+			<p>Use classes <code>card-rounded</code>, <code>card-circle</code>, or <code>card-square</code> on the card to quickly shape the borders.</p>
 		</blockquote>
 	</div>
 
-	<div class="col-md-4">
-		<div class="card card-rounded">
-			<div class="card-header"><h4>Header</h4></div>
-			<div class="card-section"><h4>Section</h4></div>
-			<div class="card-footer"><h4>Footer</h4></div>
+	<div class="col-md-4 uxgl-horizontal-card">
+		<div class="card card-horizontal card-rounded">
+			<div class="card-row">
+				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">card-col-field</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="col-md-4">
-		<div class="card card-circle">
-			<div class="card-header"><h4>Header</h4></div>
-			<div class="card-section"><h4>Section</h4></div>
-			<div class="card-footer"><h4>Footer</h4></div>
+	<div class="col-md-4 uxgl-horizontal-card">
+		<div class="card card-circle card-horizontal">
+			<div class="card-row">
+				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">card-col-field</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="col-md-4">
-		<div class="card card-square">
-			<div class="card-header"><h4>Header</h4></div>
-			<div class="card-section"><h4>Section</h4></div>
-			<div class="card-footer"><h4>Footer</h4></div>
+	<div class="col-md-4 uxgl-horizontal-card">
+		<div class="card card-horizontal card-square">
+			<div class="card-row">
+				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">card-col-field</div>
+			</div>
 		</div>
 	</div>
 
@@ -811,69 +701,77 @@
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse5">
-	<pre><code class="html">&lt;div class=&quot;card card-rounded&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;card card-circle&quot;&gt;...&lt;/div&gt;
-&lt;div class=&quot;card card-square&quot;&gt;...&lt;/div&gt;</code></pre>
+	<pre><code class="html">&lt;div class=&quot;card card-horizontal card-rounded&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;card card-circle card-horizontal&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;card card-horizontal card-square&quot;&gt;...&lt;/div&gt;</code></pre>
 </div>
 
 	</div>
 
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.divider</code> on an <code>&lt;hr&gt;</code> or <code>&lt;div&gt;</code> element to create a division between content inside a card.</p>
+			We didn&apos;t add <code>overflow: hidden</code> to the <code>card</code> class because it prevents nested dropdowns, popups, and tooltips from fully displaying. You can work around this by adding <code>border-radius</code> to the image or <code>overflow: hidden</code> to the card.
+		</blockquote>
+
+		<div class="alert alert-warning">
+			When using card border helper classes with images as the first or last item, add the css property <span class="text-danger">overflow: hidden</span> to the card or <span class="text-danger">border-radius</span> to the image.
+		</div>
+	</div>
+
+	<div class="col-md-4 col-xs-6">
+		<div class="card card-rounded" style="overflow: hidden;">
+			<div class="aspect-ratio aspect-ratio-16-to-9">
+				<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			</div>
+
+			<div class="card-row card-row-padded card-row-valign-top">
+				<div class="card-col-content" style="height: 125px; text-align: center;">
+					<h3 style="margin:0;">Joe Bloggs</h3>
+					<h5 class="text-default" style="margin-top:0;">Administrator</h5>
+					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6 col-sm-12 col-xs-12">
+		<div class="card card-horizontal card-rounded">
+			<div class="card-row card-row-valign-top">
+				<div class="card-col-field">
+					<img src="../../images/thumbnail_dock.jpg" style="border-radius: 4px 0 0 4px;width: 150px;">
+				</div>
+				<div class="card-col-content card-col-gutters">
+					<h4>Space Program</h4>
+					<div class="divider"></div>
+					<p>Because you live life on the edge of space.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="card-dividers"><a class="heading-anchor" href="#card-dividers"><i class="icon icon-link"></i></a>Card Dividers</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;</code> to create a horizontal division between content inside a card.</p>
 		</blockquote>
 	</div>
 
-	<div class="col-md-6">
-		<div class="card">
-			<div class="card-header"><h4>Header</h4></div>
-
-			<div class="card-section">
-				<h4>Section</h4>
-				<hr class="divider">
-				<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
-			</div>
-
-			<div class="card-footer"><h4>Footer</h4></div>
-		</div>
-	</div>
-
 	<div class="col-md-6 uxgl-horizontal-card">
-		<div class="card-horizontal">
+		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="card-col-6 card-col-gutters">
-					<h4>Section</h4>
-					<hr class="divider">
-					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+				<div class="card-col-field">
+					card-col-field
 				</div>
-				<div class="card-col-6">card-col-6</div>
+				<div class="card-col-field card-col-gutters">
+					<h4>Title</h4>
+					<div class="divider"></div>
+					<p>card-col-field</p>
+				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse6">
-	<pre><code class="html">&lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;card-section&quot;&gt;
-      &lt;hr class=&quot;divider&quot; /&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;card-horizontal&quot;&gt;
-    &lt;div class=&quot;card-row&quot;&gt;
-        &lt;div class=&quot;card-col-6 card-col-gutters&quot;&gt;
-          &lt;hr class=&quot;divider&quot; /&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;card-col-6&quot;&gt;card-col-6&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
@@ -902,15 +800,15 @@
 					<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 					<span class="sticker sticker-bottom sticker-warning">PNG</span>
 				</div>
-				<div class="card-row card-row-layout-fixed card-row-padded card-row-valign-top">
+				<div class="card-row card-row-padded card-row-valign-top">
 					<div class="card-col-content">
 						<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
 						<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
 						<span class="truncate-text">Approved</span>
 					</div>
 
-					<div class="card-col-field" style="width: 32px;">
-						<div class="dropdown" style="margin-left: 5px;">
+					<div class="card-col-field">
+						<div class="dropdown" style="margin-right: -8px;">
 							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
@@ -941,8 +839,8 @@
 					<div class="card-col-field">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 					</div>
-					<div class="card-col-content card-col-gutters clamp-horizontal">
-						<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+					<div class="card-col-content card-col-gutters">
+						<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 					</div>
 					<div class="card-col-field">
 						<div class="dropdown">
@@ -992,15 +890,15 @@
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
-					<div class="card-row card-row-layout-fixed card-row-padded card-row-valign-top">
+					<div class="card-row card-row-padded card-row-valign-top">
 						<div class="card-col-content">
 							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
 							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
 							<span class="truncate-text">Approved</span>
 						</div>
 
-						<div class="card-col-field" style="width: 32px;">
-							<div class="dropdown" style="margin-left: 5px;">
+						<div class="card-col-field">
+							<div class="dropdown" style="margin-right: -8px;">
 								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
@@ -1031,8 +929,8 @@
 						<div class="card-col-field">
 							<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 						</div>
-						<div class="card-col-content card-col-gutters clamp-horizontal">
-							<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+						<div class="card-col-content card-col-gutters">
+							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 						</div>
 						<div class="card-col-field">
 							<div class="dropdown">
@@ -1083,15 +981,15 @@
 					<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 					<span class="sticker sticker-bottom sticker-warning">PNG</span>
 				</div>
-				<div class="card-row card-row-layout-fixed card-row-padded card-row-valign-top">
+				<div class="card-row card-row-padded card-row-valign-top">
 					<div class="card-col-content">
 						<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
 						<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
 						<span class="truncate-text">Approved</span>
 					</div>
 
-					<div class="card-col-field" style="width: 32px;">
-						<div class="dropdown" style="margin-left: 5px;">
+					<div class="card-col-field">
+						<div class="dropdown" style="margin-right: -8px;">
 							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
@@ -1122,8 +1020,8 @@
 					<div class="card-col-field">
 						<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 					</div>
-					<div class="card-col-content card-col-gutters clamp-horizontal">
-						<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+					<div class="card-col-content card-col-gutters">
+						<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 					</div>
 					<div class="card-col-field">
 						<div class="dropdown">
@@ -1173,15 +1071,15 @@
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
-					<div class="card-row card-row-layout-fixed card-row-padded card-row-valign-top">
+					<div class="card-row card-row-padded card-row-valign-top">
 						<div class="card-col-content">
 							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
 							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
 							<span class="truncate-text">Approved</span>
 						</div>
 
-						<div class="card-col-field" style="width: 32px;">
-							<div class="dropdown" style="margin-left: 5px;">
+						<div class="card-col-field">
+							<div class="dropdown" style="margin-right: -8px;">
 								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
@@ -1212,8 +1110,8 @@
 						<div class="card-col-field">
 							<span class="icon-folder-close-alt icon-monospaced" style="background-color: #EEE; height: 60px; line-height: 60px; width: 60px;"></span>
 						</div>
-						<div class="card-col-content card-col-gutters clamp-horizontal">
-							<div class="clamp-container"><span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
+						<div class="card-col-content card-col-gutters">
+							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 						</div>
 						<div class="card-col-field">
 							<div class="dropdown">
