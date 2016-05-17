@@ -1,3 +1,35 @@
+### v0.2.15 - May 17, 2016
+* Breaking: Sidenav should use open instead of closed to display nav, reduce specificity, active class should be removed from toggler
+* Breaking: Remove table-responsive-flip and table-responsive-collapse
+* Breaking: Remove card focus styles
+* Breaking: Remove card-col-*
+* Breaking: Cards remove card-header, card-footer, card-section
+* Fix: Side Navigation mobile bug introduced in 4a3ae4f
+* Fix: Atlas navbar collapse-basic-search focus style extends too far right
+* Fix: path/url issues on Windows when building
+* Fix: Cards to use dropdown bg color (otherwise, dark themes don't properly display cards)
+* Update: truncate-text and table-cell-content older browser css fallback
+* Update: Card Simple Grid to work with truncate-text without clamp component
+* Update: Add fallback for truncated text inside tables
+* Update: Alert Notification should use max-width
+* Update: Reduce simple side nav default width to 320px and remove body-fixed class
+* Update: Tables make truncate-text work without clamp component
+* Update: Table-list text color
+* Update: Add table-autofit and table-heading-nowrap to tables
+* Update: Adding new Lexicon icons
+* Update: card-block should break really long words
+* Update: Cards don't use class*= selector, reorganize card scss, and add card-block
+* Update: Nested card-rows in checkbox-card have space for checkbox
+* Update: Cards add class card-block
+* Update: Side Navigation add class sidenav-js-fouc to avoid flash of unstyled content
+* Update: Side Navigation support for RTL
+* Site: Update sidenav demos to use open class
+* Site: Remove clamp component from card demos and horizontal cards with images should work in ie10
+* Site: Tables remove clamp component and table-cell-field from table demos
+* Site: Update table docs with table-autofit and table-heading-nowrap
+* Site: Update card docs with changes
+* Site: Update sidenav docs and pages using side-navigation
+
 ### v0.2.14 - April 19, 2016
 * Breaking: Remove tab-groups component
 * Update: Collapsible Search should work with RTL
