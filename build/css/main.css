@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.2.14
+* Lexicon 0.2.15
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -158,9 +158,9 @@ section.row {
 }
 
 #skipTo {
+  left: 15px;
   min-width: 170px;
   position: absolute;
-  left: 15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -660,13 +660,6 @@ body.fixed {
   height: 50px;
 }
 
-@media screen and (min-width: 768px) {
-  #wrapper.open,
-  #wrapper.simple-sidenav-2-open {
-    padding-left: 400px;
-  }
-}
-
 .side-navigation-data-api-buttons {
   margin-bottom: 15px;
 }
@@ -717,6 +710,13 @@ body.fixed {
 @media screen and (min-width: 768px) {
   #mainContent {
     padding-left: 240px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  [dir="rtl"] #mainContent {
+    padding-left: 0;
+    padding-right: 240px;
   }
 }
 
@@ -852,6 +852,20 @@ h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, 
   }
 }
 
+body {
+  left: 0;
+  position: relative;
+}
+
+body.open {
+  left: 320px;
+  overflow: hidden;
+}
+
+body.sidenav-transition {
+  overflow: hidden;
+}
+
 #mySidebar {
   background-color: #222328;
   box-shadow: -3px 0 3px -3px #000 inset;
@@ -908,6 +922,40 @@ h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor, h4 .heading-anchor, 
 .sidenav-demo-container {
   overflow: hidden;
   padding-top: 3px;
+}
+
+[dir="rtl"] .sidenav-fixed > .sidenav-menu-slider {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .sidenav-fixed.sidenav-right > .sidenav-menu-slider {
+  left: 0;
+  right: auto;
+}
+
+[dir="rtl"] .sidenav-container.closed > .sidenav-content {
+  right: 0;
+}
+
+[dir="rtl"] .sidenav-container.sidenav-right .sidenav-content {
+  left: 0;
+  right: auto;
+}
+
+[dir="rtl"] .sidenav-container.sidenav-right .sidenav-menu {
+  left: 0;
+  right: auto;
+}
+
+[dir="rtl"] .sidenav-container.sidenav-right .sidenav-menu-slider {
+  left: 0;
+  right: auto;
+}
+
+[dir="rtl"] .sidenav-fixed.sidenav-menu-slider.sidenav-right {
+  left: 0;
+  right: auto;
 }
 
 .uxgl-switches:before, .uxgl-switches:after {
