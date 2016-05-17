@@ -1,4 +1,4 @@
-### v0.2.14 - April 19, 2015
+### v0.2.14 - April 19, 2016
 * Breaking: Remove tab-groups component
 * Update: Collapsible Search should work with RTL
 * Update: Create radio-card
@@ -7,7 +7,7 @@
 * Site: Remove reference to Bourbon 3.2.1 bug in Progress Bars
 * Site: Update cards docs to include radio-card
 
-### v0.2.13 - April 15, 2015
+### v0.2.13 - April 15, 2016
 * Breaking: Remove label-monospaced use stickers instead
 * Breaking: Remove badge-monospaced use stickers instead
 * Breaking: Remove card-dm and toggle-card-dm styles
@@ -25,10 +25,10 @@
 * Site: Remove docs related to card-dm and toggle-card-dm
 * Site: Add checkbox card documentation
 
-### v0.2.12 - March 25, 2015
+### v0.2.12 - March 25, 2016
 * Update: Remove icon-* selector from alloy-font-awesome, and instead only target defined icons
 
-### v0.2.11 - March 23, 2015
+### v0.2.11 - March 23, 2016
 * Update: Search bar covers active style when navbars are in narrow column
 * Update: Nameplate content text should be vertically centered in mobile
 * Update: Added styling for cards to also have a radio
@@ -37,31 +37,31 @@
 * Site: Clean up Blog Actions demo
 * Site: Update tables page with helper documentation
 
-### v0.2.10 - March 8, 2015
+### v0.2.10 - March 8, 2016
 * Fix: Collapsible Search covers navbar-collapse items on mobile
 * Fix: Encoding spaces in the SVG mixin, as the YUI compressor will munge the whole thing up
 * Update: Lexicon table clamp-container spacing when its first child and add min-widths to table cells inside table-responsive
 * Update: Change table-list row background color in Atlas
 
-### v0.2.9 - March 1, 2015
+### v0.2.9 - March 1, 2016
 * Update: Collapsible Search should use event delegation
 * Update: the (non-flag) icons to have either (or both in many cases) of a class of `lexicon-icon-outline` or `lexicon-icon-body` on their child elements. This allows them to be more easily targeted via CSS.
 * Update: Include all icons in release task (so that people can use icons individually)
 * Site: Update Collapsible Search documentation with event delegation stuff
 
-### v0.2.8 - February 25, 2015
+### v0.2.8 - February 25, 2016
 * Update: Normalized the viewBox attribute for the flag icons to use the same metrics as the other icons
 * Fix: Removed IDs from flag icon groups as they would cause issues when using the icon
 
-### v0.2.7 - February 24, 2015
+### v0.2.7 - February 24, 2016
 * Fix: Add work around for ios not respecting overflow hidden on body ([Fixes  #132](https://github.com/liferay/lexicon/issues/132))
 * Update: Added new icons check-circle, cut, paragraph, paste, radio-button, select-from-list, and text
 * Update: Added new flag icons
 
-### v0.2.6 - February 22, 2015
+### v0.2.6 - February 22, 2016
 * The released versions for v0.2.3-v0.2.5 had invalid jars being created due to an error in the maven build script. This should be finally resolved.
 
-### v0.2.3 - February 19, 2015
+### v0.2.3 - February 19, 2016
 * Fix: Side Navigation lazy loading doesn't try to reload content that was never loaded
 * New: Add Lexicon CSS only Loaders
 * Update: Sidenav will now add the css loading indicator automatically
@@ -69,7 +69,7 @@
 * Update: Higher contrast tooltip bg color
 * Site: Update Side Navigation docs with loading indicator
 
-### v0.2.2 - February 8, 2015
+### v0.2.2 - February 8, 2016
 * Fix: Remove margins on dropdown icon-monospaced
 * Fix: Management bar link spacing in Atlas
 * Fix: Data url shouldn't place content inside multiple sidebar-body when nested
@@ -81,7 +81,7 @@
 * Update: Align items in left and right sides of nav components when using container-fluid-1280
 * Update: New buttons opacity for disabled buttons (configurable via the variable `$btn-disabled-opacity`)
 
-### v0.2.1 - January 29, 2015
+### v0.2.1 - January 29, 2016
 * Breaking: Remove IE's clear field button in Atlas
 * Breaking: Side Navigation plugin instantiates on page load when using data-toggle="sidenav"
 * Fix: `<a class="badge badge-default">` text color should be blue on hover
@@ -97,10 +97,10 @@
 * Update: Remove Atlas dropdown arrows
 * Site: Document new side navigation methods
 
-### v0.1.32 - January 29, 2015
+### v0.1.32 - January 29, 2016
 * Pat botched this release -- ignore
 
-### v0.1.31 - January 14, 2015
+### v0.1.31 - January 14, 2016
 * Breaking: Change collapse open and close icons to be compatible with svg. Please see [this page](http://liferay.github.io/lexicon/content/panels/) to find the updated markup.
 * Breaking: Don't apply figure styles to element
 * Breaking: Removed the Product Menu from the code base, since it's now only in Liferay.
@@ -134,10 +134,10 @@
 * Site: Update blog actions demo to current mark up
 * Site: Added a Visual Tests section to compare and test changes
 
-### v0.1.30 - January 14, 2015
+### v0.1.30 - January 14, 2016
 * Bad CHANGELOG
 
-### v0.1.29 - January 14, 2015
+### v0.1.29 - January 14, 2016
 * Nate botched this release -- ignore
 
 ### v0.1.28 - December 23, 2015
