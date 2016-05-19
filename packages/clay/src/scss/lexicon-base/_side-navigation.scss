@@ -53,12 +53,19 @@
 	z-index: $zindex-sidenav;
 }
 
-.sidenav-right > .sidenav-menu-slider {
-	left: auto;
-	right: 0;
-
-	.sidenav-menu {
+.sidenav-right {
+	> .sidenav-content {
+		left: auto;
 		right: 0;
+	}
+
+	> .sidenav-menu-slider {
+		left: auto;
+		right: 0;
+
+		.sidenav-menu {
+			right: 0;
+		}
 	}
 }
 
