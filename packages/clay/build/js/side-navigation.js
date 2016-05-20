@@ -1,5 +1,5 @@
 /**
-* Lexicon 0.2.15
+* Lexicon 0.2.16
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -485,10 +485,13 @@
 				}
 			}
 
+			container.addClass('sidenav-transition');
+			toggler.addClass('sidenav-transition');
+
 			instance[widthMethod](container);
 
-			container.addClass('sidenav-transition').toggleClass('closed', !closed).toggleClass('open', closed);
-			toggler.addClass('sidenav-transition').toggleClass('active', closed).toggleClass('open', closed);
+			container.toggleClass('closed', !closed).toggleClass('open', closed);
+			toggler.toggleClass('active', closed).toggleClass('open', closed);
 		},
 
 		toggleSimpleSidenav: function() {
