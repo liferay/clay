@@ -158,6 +158,10 @@ th {
 	}
 }
 
+.table-responsive .table-heading-nowrap > thead > tr > .table-cell-content {
+	white-space: nowrap;
+}
+
 // Table Vertical Align
 
 .table-valign-bottom {

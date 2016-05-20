@@ -1,8 +1,8 @@
 .panel-title {
 	font-size: $panel-title-font-size;
 	font-weight: $panel-title-font-weight;
-
-	@include word-wrap(break-word);
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .panel-group {
