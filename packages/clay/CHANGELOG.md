@@ -1,3 +1,8 @@
+### v0.2.16 - May 20, 2016
+* Fix: Sidenav-right js api should animate properly on android
+* Fix: Panel-title should break-word not break-all
+* Fix: Table-heading-nowrap should work on .table-cell-content in thead
+
 ### v0.2.15 - May 17, 2016
 * Breaking: Sidenav should use open instead of closed to display nav, reduce specificity, active class should be removed from toggler
 * Breaking: Remove table-responsive-flip and table-responsive-collapse
