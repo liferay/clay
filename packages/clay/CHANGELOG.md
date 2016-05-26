@@ -1,3 +1,8 @@
+### v1.0.0 - May 26, 2016
+* Breaking: Move sidebar-header-actions link colors to separate variables
+* Update: Card-horizontal should use card styles
+* Site: Update sidenavs to use sidebar-header-actions
+
 ### v0.2.16 - May 20, 2016
 * Fix: Sidenav-right js api should animate properly on android
 * Fix: Panel-title should break-word not break-all
