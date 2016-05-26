@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.16
+* Lexicon 1.0.0
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -8070,7 +8070,8 @@ button.close {
   top: 20px;
 }
 
-.card {
+.card,
+.card-horizontal {
   background-color: #FFF;
   border: 0 solid #eeeeee;
   border-radius: 0;
@@ -8078,11 +8079,13 @@ button.close {
   position: relative;
 }
 
-.card .card-row {
+.card .card-row,
+.card-horizontal .card-row {
   width: 100%;
 }
 
-.card .divider {
+.card .divider,
+.card-horizontal .divider {
   background-color: #eeeeee;
   border-width: 0;
   height: 1px;
@@ -8090,7 +8093,8 @@ button.close {
   margin-top: 10px;
 }
 
-.card .figure {
+.card .figure,
+.card-horizontal .figure {
   overflow: visible;
 }
 
@@ -12711,6 +12715,12 @@ fieldset[disabled]
 
 .sidebar-header-actions {
   float: right;
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-header-actions > li {
+  display: inline-block;
 }
 
 .sidebar-panel {
@@ -12731,6 +12741,20 @@ fieldset[disabled]
   color: #869CAD;
 }
 
+.sidebar-default a.sidenav-close,
+.sidebar-default .sidebar-header-actions > li a,
+.sidebar-default .sidebar-header-actions > li .dropdown-toggle {
+  color: #869CAD;
+}
+
+.sidebar-default a.sidenav-close:focus, .sidebar-default a.sidenav-close:hover,
+.sidebar-default .sidebar-header-actions > li a:focus,
+.sidebar-default .sidebar-header-actions > li a:hover,
+.sidebar-default .sidebar-header-actions > li .dropdown-toggle:focus,
+.sidebar-default .sidebar-header-actions > li .dropdown-toggle:hover {
+  color: #869CAD;
+}
+
 .sidebar-default .sidebar-panel {
   background-color: #DFE6EB;
 }
@@ -12740,12 +12764,30 @@ fieldset[disabled]
   color: #869CAD;
 }
 
-.sidebar-inverse .nav > li > a:focus, .sidebar-inverse .nav > li > a:hover {
-  color: #FFF;
+.sidebar-inverse a.sidenav-close,
+.sidebar-inverse .sidebar-header-actions > li a,
+.sidebar-inverse .sidebar-header-actions > li .dropdown-toggle {
+  color: #869CAD;
+}
+
+.sidebar-inverse a.sidenav-close:focus, .sidebar-inverse a.sidenav-close:hover,
+.sidebar-inverse .sidebar-header-actions > li a:focus,
+.sidebar-inverse .sidebar-header-actions > li a:hover,
+.sidebar-inverse .sidebar-header-actions > li .dropdown-toggle:focus,
+.sidebar-inverse .sidebar-header-actions > li .dropdown-toggle:hover {
+  color: #869CAD;
 }
 
 .sidebar-inverse .sidebar-panel {
   background-color: #1B2228;
+}
+
+.sidebar .dropdown-menu > li > a {
+  color: #869CAD;
+}
+
+.sidebar .dropdown-menu > li > a:focus, .sidebar .dropdown-menu > li > a:hover {
+  color: #869CAD;
 }
 
 .container-fluid-1280.sidenav-container {
@@ -15437,11 +15479,13 @@ a.btn-action [class*="icon-"],
   border-top-right-radius: 4px;
 }
 
-.card {
+.card,
+.card-horizontal {
   box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.9);
 }
 
-.card a {
+.card a,
+.card-horizontal a {
   color: #869CAD;
 }
 
