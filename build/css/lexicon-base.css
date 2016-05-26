@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.15
+* Lexicon 0.2.16
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -12421,7 +12421,6 @@ fieldset[disabled]
   font-weight: 500;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  word-break: break-all;
 }
 
 .panel-group .panel-heading {
@@ -12789,6 +12788,11 @@ fieldset[disabled]
   position: fixed;
   top: 0;
   z-index: 1035;
+}
+
+.sidenav-right > .sidenav-content {
+  left: auto;
+  right: 0;
 }
 
 .sidenav-right > .sidenav-menu-slider {
@@ -13514,6 +13518,10 @@ th {
 
 .table-heading-nowrap > thead > tr > th,
 .table-heading-nowrap > thead > tr > td {
+  white-space: nowrap;
+}
+
+.table-responsive .table-heading-nowrap > thead > tr > .table-cell-content {
   white-space: nowrap;
 }
 
