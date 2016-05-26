@@ -1,4 +1,5 @@
-.card {
+.card,
+.card-horizontal {
 	background-color: $card-bg;
 	border: $card-border-width solid $card-border;
 	border-radius: $card-border-radius;
