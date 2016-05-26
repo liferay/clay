@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 0.2.16
+* Lexicon 1.0.0
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -8052,7 +8052,8 @@ button.close {
   top: 20px;
 }
 
-.card {
+.card,
+.card-horizontal {
   background-color: #fff;
   border: 1px solid #eeeeee;
   border-radius: 4px;
@@ -8060,11 +8061,13 @@ button.close {
   position: relative;
 }
 
-.card .card-row {
+.card .card-row,
+.card-horizontal .card-row {
   width: 100%;
 }
 
-.card .divider {
+.card .divider,
+.card-horizontal .divider {
   background-color: #eeeeee;
   border-width: 0;
   height: 1px;
@@ -8072,7 +8075,8 @@ button.close {
   margin-top: 10px;
 }
 
-.card .figure {
+.card .figure,
+.card-horizontal .figure {
   overflow: visible;
 }
 
@@ -12693,6 +12697,12 @@ fieldset[disabled]
 
 .sidebar-header-actions {
   float: right;
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-header-actions > li {
+  display: inline-block;
 }
 
 .sidebar-panel {
@@ -12713,6 +12723,20 @@ fieldset[disabled]
   color: #777;
 }
 
+.sidebar-default a.sidenav-close,
+.sidebar-default .sidebar-header-actions > li a,
+.sidebar-default .sidebar-header-actions > li .dropdown-toggle {
+  color: #777;
+}
+
+.sidebar-default a.sidenav-close:focus, .sidebar-default a.sidenav-close:hover,
+.sidebar-default .sidebar-header-actions > li a:focus,
+.sidebar-default .sidebar-header-actions > li a:hover,
+.sidebar-default .sidebar-header-actions > li .dropdown-toggle:focus,
+.sidebar-default .sidebar-header-actions > li .dropdown-toggle:hover {
+  color: #333;
+}
+
 .sidebar-default .sidebar-panel {
   background-color: #e7e7e7;
 }
@@ -12722,12 +12746,30 @@ fieldset[disabled]
   color: #9d9d9d;
 }
 
-.sidebar-inverse .nav > li > a:focus, .sidebar-inverse .nav > li > a:hover {
+.sidebar-inverse a.sidenav-close,
+.sidebar-inverse .sidebar-header-actions > li a,
+.sidebar-inverse .sidebar-header-actions > li .dropdown-toggle {
   color: #9d9d9d;
+}
+
+.sidebar-inverse a.sidenav-close:focus, .sidebar-inverse a.sidenav-close:hover,
+.sidebar-inverse .sidebar-header-actions > li a:focus,
+.sidebar-inverse .sidebar-header-actions > li a:hover,
+.sidebar-inverse .sidebar-header-actions > li .dropdown-toggle:focus,
+.sidebar-inverse .sidebar-header-actions > li .dropdown-toggle:hover {
+  color: #fff;
 }
 
 .sidebar-inverse .sidebar-panel {
   background-color: #090909;
+}
+
+.sidebar .dropdown-menu > li > a {
+  color: #333333;
+}
+
+.sidebar .dropdown-menu > li > a:focus, .sidebar .dropdown-menu > li > a:hover {
+  color: #262626;
 }
 
 .container-fluid-1280.sidenav-container {
