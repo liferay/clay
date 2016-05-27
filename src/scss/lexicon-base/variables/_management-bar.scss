@@ -17,6 +17,7 @@ $management-bar-btn-padding-vertical: ($management-bar-height - $icon-monospaced
 // Skin
 
 $management-bar-collapse-bg: $dropdown-bg !default;
+$management-bar-collapse-border: transparent !default;
 
 $management-bar-default-bg: $navbar-default-bg !default;
 $management-bar-default-border: $navbar-default-border !default;
@@ -25,6 +26,9 @@ $management-bar-default-color: $navbar-default-color !default;
 $management-bar-default-btn-default-bg: #F8F8F8 !default;
 $management-bar-default-btn-default-border: #E7E7E7 !default;
 $management-bar-default-btn-default-color: #777 !default;
+
+$management-bar-default-collapse-bg: $management-bar-default-bg !default;
+$management-bar-default-collapse-border: $management-bar-default-border !default
 
 $management-bar-default-link-color: $navbar-default-link-color !default;
 

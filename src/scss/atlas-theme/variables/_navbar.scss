@@ -26,9 +26,11 @@ $navbar-default-padding-horizontal: $navbar-padding-horizontal !default; // Atla
 $navbar-default-padding-vertical: ($navbar-default-height - $navbar-link-line-height) / 2 !default; // Atlas
 $navbar-default-desktop-padding-horizontal: $navbar-default-padding-horizontal !default; // Atlas
 $navbar-default-desktop-padding-vertical: ($navbar-default-desktop-height - $navbar-desktop-link-line-height) / 2 !default; // Atlas
+
 // Skin
 
 $navbar-border-radius: 0 !default;
+$navbar-collapse-absolute-box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.7) !default;
 
 //== Navbar Default
 $navbar-default-color: $brand-default !default;
