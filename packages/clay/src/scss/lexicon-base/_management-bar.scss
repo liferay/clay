@@ -126,16 +126,18 @@
 .management-bar-collapse {
 	@extend .navbar-collapse;
 
-	background-color: $management-bar-collapse-bg;
-	border-color: transparent;
-	border-style: solid;
-	border-width: $management-bar-border-width;
-	clear: both;
-	left: -$management-bar-border-left-width;
-	position: absolute;
-	right: -$management-bar-border-right-width;
-	top: 100%;
-	z-index: 1001;
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		background-color: $management-bar-collapse-bg;
+		border-color: $management-bar-collapse-border;
+		border-style: solid;
+		border-width: $management-bar-border-width;
+		clear: both;
+		left: -$management-bar-border-left-width;
+		position: absolute;
+		right: -$management-bar-border-right-width;
+		top: 100%;
+		z-index: 1001;
+	}
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		clear: none;
@@ -246,8 +248,10 @@
 	}
 
 	.management-bar-collapse {
-		background-color: $management-bar-default-bg;
-		border-color: $management-bar-default-border;
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			background-color: $management-bar-default-collapse-bg;
+			border-color: $management-bar-default-collapse-border;
+		}
 	}
 
 	.nav {

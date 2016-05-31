@@ -43,6 +43,14 @@
 	}
 }
 
+.navbar-collapse-absolute {
+	.navbar-collapse.in {
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			box-shadow: $navbar-collapse-absolute-box-shadow;
+		}
+	}
+}
+
 // Navbar Styles
 
 .navbar {

@@ -197,48 +197,19 @@
 	}
 }
 
-/*	make navbar dropdown position absolute
-	lr7 navbar mobile (when navbar-header comes after navbar-collapse) */
-
-.navbar {
-	.navbar-collapse-absolute {
-		left: -1px;
-		position: absolute;
-		right: -1px;
-		top: 100%;
-		z-index: $zindex-navbar;
-	}
-
+.navbar-collapse-absolute {
 	.navbar-collapse {
-		@media screen and (min-width: $grid-float-breakpoint) {
-			background-color: transparent;
-			border-width: 0;
-			left: auto;
-			position: static;
-			right: auto;
-			top: auto;
-			z-index: 0;
-		}
-
-		&:first-child {
-			@media screen and (min-width: $grid-float-breakpoint) {
-				background-color: transparent;
-				border-width: 0;
-				float: left;
-				left: auto;
-				position: static;
-				right: auto;
-				top: auto;
-				z-index: 0;
-			}
-		}
-
-		+ .navbar-header {
-			.basic-search {
-				@media screen and (min-width: $grid-float-breakpoint) {
-					width: auto;
-				}
-			}
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			background-color: $dropdown-bg;
+			border-color: transparent;
+			border-style: solid;
+			border-width: 0 1px 1px 1px;
+			left: -1px;
+			margin-top: 1px;
+			position: absolute;
+			right: -1px;
+			top: 100%;
+			z-index: $zindex-navbar;
 		}
 	}
 }
@@ -390,18 +361,15 @@
 // Skin
 
 .navbar-default {
-	.basic-search.open {
-		background-color: $navbar-default-bg;
+	&.navbar-collapse-absolute .navbar-collapse {
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			background-color: $navbar-default-bg;
+			border-color: $navbar-default-border;
+		}
 	}
 
-	.navbar-collapse:first-child,
-	.navbar-collapse-absolute {
+	.basic-search.open {
 		background-color: $navbar-default-bg;
-		border: 1px solid $navbar-default-border;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			border-width: 0;
-		}
 	}
 
 	.navbar-toggle,
@@ -416,18 +384,15 @@
 }
 
 .navbar-inverse {
-	.basic-search.open {
-		background-color: $navbar-inverse-bg;
+	&.navbar-collapse-absolute .navbar-collapse {
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			background-color: $navbar-inverse-bg;
+			border-color: $navbar-default-border;
+		}
 	}
 
-	.navbar-collapse:first-child,
-	.navbar-collapse-absolute {
+	.basic-search.open {
 		background-color: $navbar-inverse-bg;
-		border: 1px solid $navbar-inverse-border;
-
-		@media screen and (min-width: $grid-float-breakpoint) {
-			border-width: 0;
-		}
 	}
 
 	.navbar-toggle,
