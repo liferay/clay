@@ -1,5 +1,9 @@
 var argv = require('minimist')(process.argv.slice(2));
 var cmdPromise = require('../lib/cmd_promise');
+var fs = require('fs-extra');
+var inquirer = require('inquirer');
+var packageJSONUtil = require('../lib/package_json_util');
+var path = require('path');
 var semver = require('semver');
 var updateVersion = require('../lib/update_version');
 
@@ -8,7 +12,11 @@ module.exports = function(gulp, plugins, _, config) {
 
 	var license = require('./copyright_banner');
 
+	var runSequence = require('run-sequence').use(gulp);
+
 	var GIT_REMOTE;
+
+	var TEMP_PATH = path.join(process.cwd(), 'temp');
 
 	var getGitRemote = function() {
 		if (!GIT_REMOTE) {
@@ -174,7 +182,159 @@ module.exports = function(gulp, plugins, _, config) {
 				.then(function(remote){
 					return cmdPromise.resolve().git('push', remote, '--tags', 'master', 'develop');
 				})
-				.cmd('npm', 'run', 'deploy')
+				.npm('run', 'deploy')
+				.then(function() {
+					done();
+				});
+		}
+	);
+
+	gulp.task(
+		'release:npm-clean',
+		function(done) {
+			return gulp.src('./temp')
+				.pipe(plugins.clean({
+					read: false
+				}));
+		}
+	);
+
+	gulp.task(
+		'release:npm-index',
+		function(done) {
+			return gulp.src('./lib/module_index.js')
+				.pipe(plugins.rename('index.js'))
+				.pipe(gulp.dest('temp/lexicon-release'))
+				.pipe(gulp.dest('temp/lexicon-src'))
+				.pipe(gulp.dest('temp/lexicon'));
+		}
+	);
+
+	gulp.task(
+		'release:npm-package',
+		function() {
+			var version = packageJSONUtil.getVersion();
+
+			var depVersion = '^' + version;
+
+			var lexiconPkg = packageJSONUtil.generate(
+				'lexicon',
+				version,
+				{
+					dependencies: {
+						'lexicon-release': depVersion,
+						'lexicon-src': depVersion
+					},
+					description: 'Lexicon full package'
+				}
+			);
+
+			fs.writeFileSync(path.join(TEMP_PATH, 'lexicon', 'package.json'), lexiconPkg);
+
+			var lexiconReleasePkg = packageJSONUtil.generate(
+				'lexicon-release',
+				version,
+				{
+					description: 'Lexicon release, everything needed for client side integration'
+				}
+			);
+
+			fs.writeFileSync(path.join(TEMP_PATH, 'lexicon-release', 'package.json'), lexiconReleasePkg);
+
+			var lexiconSrcPkg = packageJSONUtil.generate(
+				'lexicon-src',
+				version,
+				{
+					description: 'Lexicon source files for custom builds'
+				}
+			);
+
+			fs.writeFileSync(path.join(TEMP_PATH, 'lexicon-src', 'package.json'), lexiconSrcPkg);
+		}
+	);
+
+	gulp.task(
+		'release:npm-publish',
+		function(done) {
+			var lexiconPath = path.join(TEMP_PATH, 'lexicon');
+			var lexiconReleasePath = path.join(TEMP_PATH, 'lexicon-release');
+			var lexiconSrcPath = path.join(TEMP_PATH, 'lexicon-src');
+
+			cmdPromise.resolve()
+				.npm('publish', lexiconPath)
+				.npm('publish', lexiconReleasePath)
+				.npm('publish', lexiconSrcPath)
+				.then(function() {
+					done();
+				});
+		}
+	);
+
+	gulp.task(
+		'release:npm-publish-prompt',
+		function(done) {
+			inquirer.prompt(
+				{
+					message: 'Does everything look alright?',
+					name: 'publish',
+					type: 'confirm'
+				},
+				function(answers) {
+					if (answers.publish) {
+						runSequence('release:npm-publish', done);
+					}
+					else {
+						runSequence('release:npm-undo-version', done);
+					}
+				}
+			);
+		}
+	);
+
+	gulp.task(
+		'release:npm-release-files',
+		function(done) {
+			return gulp.src('build/{css,fonts,images,js}/**/*')
+				.pipe(gulp.dest('temp/lexicon-release'));
+		}
+	);
+
+	gulp.task(
+		'release:npm-src-files',
+		function(done) {
+			return gulp.src('src/{fonts,images,js,scss}/**/*')
+				.pipe(gulp.dest('temp/lexicon-src'));
+		}
+	);
+
+	gulp.task(
+		'release:npm-undo-version',
+		function(done) {
+			var version = packageJSONUtil.getVersion();
+
+			cmdPromise.resolve()
+				.git('reset', '--soft', 'HEAD~')
+				.git('tag', '-d', 'v' + version)
+				.then(function() {
+					done();
+				});
+		}
+	);
+
+	gulp.task(
+		'release:npm-version',
+		function(done) {
+			var type = 'patch';
+
+			if (argv.minor) {
+				type = 'minor';
+			}
+			else if (argv.major) {
+				type = 'major';
+			}
+
+			cmdPromise.resolve()
+				.npm('version', type)
 				.then(function() {
 					done();
 				});

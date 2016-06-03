@@ -56,6 +56,22 @@ gulp.task(
 );
 
 gulp.task(
+	'release:npm',
+	function(done) {
+		runSequence(
+			'release:npm-release-files',
+			'release:npm-src-files',
+			'release:npm-index',
+			'release:npm-version',
+			'release:npm-package',
+			'release:npm-publish-prompt',
+			'release:npm-clean',
+			done
+		);
+	}
+);
+
+gulp.task(
 	'release',
 	function(cb) {
 		var questions = [
