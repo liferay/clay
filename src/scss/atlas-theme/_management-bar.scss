@@ -121,6 +121,10 @@
 		left: 0;
 		margin-top: $management-bar-border-bottom-width;
 		right: 0;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin-top: 0;
+		}
 	}
 }
 
