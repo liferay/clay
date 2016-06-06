@@ -59,12 +59,11 @@ gulp.task(
 	'release:npm',
 	function(done) {
 		runSequence(
-			'release:npm-release-files',
+			'release:npm-build-files',
 			'release:npm-src-files',
 			'release:npm-index',
-			'release:npm-version',
 			'release:npm-package',
-			'release:npm-publish-prompt',
+			'release:npm-publish',
 			'release:npm-clean',
 			done
 		);
