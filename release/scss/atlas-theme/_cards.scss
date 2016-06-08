@@ -1,0 +1,15 @@
+/**
+* Lexicon 1.0.0
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.card,
+.card-horizontal {
+	box-shadow: $card-box-shadow;
+
+	a {
+		color: $card-link-color;
+	}
+}
