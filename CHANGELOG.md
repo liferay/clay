@@ -1,3 +1,8 @@
+### v1.0.1 - June 8, 2016
+* Breaking: Move navbar-collapse-absolute from navbar-collapse to navbar
+* Update: Table-responsive should use momentum based scrolling for touch devices
+* Site: Update navbar-collapse-absolute docs
+
 ### v1.0.0 - May 26, 2016
 * Breaking: Move sidebar-header-actions link colors to separate variables
 * Update: Card-horizontal should use card styles
