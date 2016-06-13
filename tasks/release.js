@@ -213,7 +213,7 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task(
 		'release:npm-index',
 		function(done) {
-			return gulp.src('./index.js')
+			return gulp.src(['./index.js', './{README,CHANGELOG}.md'])
 				.pipe(gulp.dest('temp/lexicon-ux'));
 		}
 	);
