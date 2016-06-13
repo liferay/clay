@@ -1,3 +1,18 @@
+### v1.0.2 - June 13, 2016
+* Update: Adding new icons
+	- mobile-device-rules.svg
+	- page-template.svg
+	- shortcut.svg
+	- site-template.svg
+	- vocabulary.svg
+* Site: Removing unneeded files
+* Misc: Forgot to include a README and CHANGELOG in published NPM package (will be there on next publish)
+* Misc: Since this info can live in the package.json, and it's not updated frequently, we can just pluck out all of the fields from the root package.json
+* Misc: Excluding the website specific items
+* Misc: We can replace the index.js at the root and just use it as the template to include
+* Misc: Making the package private to prevent accidental publishing
+* Misc: Moving the clean to happen at the start
+
 ### v1.0.1 - June 8, 2016
 * Breaking: Move navbar-collapse-absolute from navbar-collapse to navbar
 * Update: Table-responsive should use momentum based scrolling for touch devices
