@@ -56,6 +56,21 @@ gulp.task(
 );
 
 gulp.task(
+	'release:npm',
+	function(cb) {
+		runSequence(
+			'release:npm-clean',
+			'release:npm-build-files',
+			'release:npm-src-files',
+			'release:npm-index',
+			'release:npm-package',
+			'release:npm-publish',
+			cb
+		);
+	}
+);
+
+gulp.task(
 	'release',
 	function(cb) {
 		var questions = [
@@ -67,8 +82,8 @@ gulp.task(
 			},
 			{
 				default: false,
-				message: 'Do you want to push to the Maven repo?',
-				name: 'maven',
+				message: 'Do you want to push to the Maven repo and publish to npm?',
+				name: 'packageManagers',
 				type: 'confirm',
 				when: function(answers) {
 					return answers.publish;
@@ -89,8 +104,9 @@ gulp.task(
 								cb
 							];
 
-							if (answers.maven) {
+							if (answers.packageManagers) {
 								args.splice(2, 0, 'maven-publish');
+								args.splice(3, 0, 'release:npm');
 							}
 
 							runSequence.apply(null, args);

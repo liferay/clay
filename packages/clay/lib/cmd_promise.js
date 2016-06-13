@@ -90,12 +90,18 @@ Promise.prototype.cmd = promised(
 	}
 );
 
-Promise.prototype.git = function() {
-	var args = [].slice.call(arguments);
+Promise.prototype.git = createShorthand('git');
 
-	args.unshift('git');
+Promise.prototype.npm = createShorthand('npm');
 
-	return this.cmd.apply(this, args);
-};
+function createShorthand(cmd) {
+	return function() {
+		var args = [].slice.call(arguments);
+
+		args.unshift(cmd);
+
+		return this.cmd.apply(this, args);
+	}
+}
 
 module.exports = Promise;
