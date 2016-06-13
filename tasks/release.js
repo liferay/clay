@@ -189,8 +189,14 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task(
 		'release:npm-build-files',
 		function(done) {
-			return gulp.src('build/{css,fonts,images,js}/**/*')
-				.pipe(gulp.dest('temp/lexicon-ux/build'));
+			return gulp.src(
+				[
+					'build/{fonts,js,css,images/icons}/**/*',
+					'!build/js/site{,/**}',
+					'!build/css/main.css{,.map}'
+				]
+			)
+			.pipe(gulp.dest('temp/lexicon-ux/build'));
 		}
 	);
 
@@ -207,8 +213,7 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task(
 		'release:npm-index',
 		function(done) {
-			return gulp.src('./lib/module_index.js')
-				.pipe(plugins.rename('index.js'))
+			return gulp.src('./index.js')
 				.pipe(gulp.dest('temp/lexicon-ux'));
 		}
 	);
@@ -218,7 +223,7 @@ module.exports = function(gulp, plugins, _, config) {
 		function() {
 			var version = packageJSONUtil.getVersion();
 
-			var lexiconPkg = packageJSONUtil.generate('lexicon-ux', version, 'Lexicon src and build files');
+			var lexiconPkg = packageJSONUtil.generate('lexicon-ux', version);
 
 			fs.writeFileSync(path.join(TEMP_PATH, 'lexicon-ux', 'package.json'), lexiconPkg);
 		}
@@ -240,8 +245,15 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task(
 		'release:npm-src-files',
 		function(done) {
-			return gulp.src('src/{fonts,images,js,scss}/**/*')
-				.pipe(gulp.dest('temp/lexicon-ux/src'));
+			return gulp.src(
+				[
+					'src/{fonts,js,scss,images/icons}/**/*',
+					'!src/js/site{,/**}',
+					'!src/scss/{_site,main}.scss',
+					'!src/scss/highlightjs{,/**/*}'
+				]
+			)
+			.pipe(gulp.dest('temp/lexicon-ux/src'));
 		}
 	);
 };
