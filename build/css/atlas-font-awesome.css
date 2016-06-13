@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.1
+* Lexicon 1.0.2
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -10069,7 +10069,7 @@ button.close {
   max-width: 10px;
   position: relative;
   width: auto;
-  word-break: break-all \;
+  word-break: break-all \\;
   word-wrap: break-word;
 }
 
@@ -18418,6 +18418,12 @@ a.list-group-heading:focus, a.list-group-heading:hover,
   left: 0;
   margin-top: 1px;
   right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .management-bar-default .management-bar-collapse {
+    margin-top: 0;
+  }
 }
 
 .management-bar-default .btn-default:focus, .management-bar-default .btn-default:hover,
