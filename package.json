@@ -1,7 +1,7 @@
 {
-  "name": "lexicon",
-  "version": "1.0.0",
-  "description": "",
+  "name": "lexicon-ux",
+  "version": "1.0.1",
+  "description": "Liferay's Lexicon Design Language",
   "main": "index.js",
   "csfConfig": {
     "js": {
@@ -17,7 +17,29 @@
     "test": "exit 0",
     "deploy": "cd ./build && git init . && git add . && git commit -m 'Deploy'; git push 'git@github.com:liferay/lexicon.git' master:gh-pages --force && rm -rf .git"
   },
-  "author": "Nate Cavanaugh <nate@shift22.com> (http://alterform.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liferay/lexicon"
+  },
+  "bugs": "https://github.com/liferay/lexicon/issues",
+  "homepage": "http://liferay.github.io/lexicon",
+  "author": {
+    "name": "Nate Cavanaugh",
+    "email": "nathan.cavanaugh@liferay.com",
+    "url": "https://github.com/natecavanaugh"
+  },
+  "contributors": [
+    {
+      "name": "Patrick Yeo",
+      "email": "patrick.yeo@liferay.com",
+      "web": "https://github.com/pat270"
+    },
+    {
+      "name": "Rob Frampton",
+      "email": "rob.g.frampton@gmail.com",
+      "web": "https://github.com/Robert-Frampton"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "bluebird": "^3.0.6",
@@ -68,5 +90,6 @@
     "underscore.string": "^3.2.2",
     "window-size": "^0.1.2"
   },
+  "private": true,
   "dependencies": {}
 }
