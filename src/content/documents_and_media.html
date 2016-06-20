@@ -11,8 +11,8 @@ section: Example Pages
 					<div class="sidebar-header">
 						<ul class="sidebar-header-actions">
 							<li>
-								<a class="sidenav-close" href="#1">
-									<svg class="icon-monospaced lexicon-icon">
+								<a class="icon-monospaced sidenav-close" href="#1">
+									<svg class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 									</svg>
 								</a>
@@ -21,10 +21,12 @@ section: Example Pages
 
 						<h4>
 							<a href="#1">
-								<svg class="icon-monospaced lexicon-icon sticker sticker-static sticker-success">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
-								</svg>
-								<span>Squareup</span>
+								<span class="icon-monospaced">
+									<svg class="lexicon-icon sticker sticker-static sticker-success">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
+									</svg>
+								</span>
+								<span>Documents and Media</span>
 							</a>
 						</h4>
 					</div>
@@ -104,27 +106,6 @@ section: Example Pages
 							</div>
 						</form>
 					</div>
-
-					<div class="sidebar-footer">
-						<div class="nameplate">
-							<div class="nameplate-field">
-								<div class="user-icon user-icon-warning">
-									<svg class="icon-monospaced lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#user" />
-									</svg>
-								</div>
-							</div>
-
-							<div class="nameplate-content">
-								<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
-							</div>
-
-							<div class="nameplate-field">
-								<a class="icon-monospaced" href="#1"></a>
-							</div>
-						</div>
-					</div>
-
 				</div>
 			</div>
 
@@ -133,8 +114,8 @@ section: Example Pages
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#documentsAndMediaSidenav" id="documentsAndMediaToggler">
-									<svg class="icon-monospaced lexicon-icon">
+								<a class="icon-monospaced sidenav-toggler" href="#documentsAndMediaSidenav" id="documentsAndMediaToggler">
+									<svg class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 									</svg>
 								</a>
@@ -144,8 +125,8 @@ section: Example Pages
 						<div class="toolbar-group-right">
 							<div class="toolbar-group-content">
 								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-										<svg class="icon-monospaced lexicon-icon">
+									<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg class="lexicon-icon">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#cog" />
 										</svg>
 									</a>
@@ -190,20 +171,20 @@ section: Example Pages
 
 							<ul class="management-bar-nav management-bar-nav-right nav">
 								<li>
-									<a class="active btn btn-default open" href="#documentsAndMediaRightSidenav" id="documentsAndMediaRightSidenavToggler">
-										<span class="icon-info-sign icon-monospaced"></span>
+									<a class="active btn btn-default icon-monospaced open" href="#documentsAndMediaRightSidenav" id="documentsAndMediaRightSidenavToggler">
+										<span class="icon-info-sign"></span>
 									</a>
 								</li>
 								<li>
-									<a class="btn btn-default" href="#">
-										<svg class="icon-monospaced lexicon-icon">
+									<a class="btn btn-default icon-monospaced" href="#">
+										<svg class="lexicon-icon">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
 										</svg>
 									</a>
 								</li>
 								<li class="dropdown">
-									<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
-										<svg class="icon-monospaced lexicon-icon">
+									<a class="btn btn-default dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#">
+										<svg class="lexicon-icon">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 										</svg>
 									</a>
@@ -224,22 +205,22 @@ section: Example Pages
 								<div class="sidebar-header">
 									<ul class="sidebar-header-actions">
 										<li>
-											<a href="#1">
-												<svg class="icon-monospaced lexicon-icon">
+											<a class="icon-monospaced" href="#1">
+												<svg class="lexicon-icon">
 													<use xlink:href="{{rootPath}}/images/icons/icons.svg#star-o" />
 												</svg>
 											</a>
 										</li>
 										<li>
-											<a class="" href="#1">
-												<svg class="icon-monospaced lexicon-icon">
+											<a class="icon-monospaced" href="#1">
+												<svg class="lexicon-icon">
 													<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 												</svg>
 											</a>
 										</li>
 										<li>
-											<a class="sidenav-close" href="#1">
-												<svg class="icon-monospaced lexicon-icon">
+											<a class="icon-monospaced sidenav-close" href="#1">
+												<svg class="lexicon-icon">
 													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 												</svg>
 											</a>
@@ -331,17 +312,19 @@ section: Example Pages
 											<div class="card card-horizontal">
 												<div class="card-row card-row-padded">
 													<div class="card-col-field">
-														<svg class="icon-monospaced lexicon-icon">
-															<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
-														</svg>
+														<span class="sticker sticker-default sticker-lg sticker-static">
+															<svg class="lexicon-icon">
+																<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+															</svg>
+														</span>
 													</div>
 													<div class="card-col-content card-col-gutters clamp-horizontal">
 														<div class="clamp-container"><span class="h4 truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span></div>
 													</div>
-													<div class="card-col-field" style="vertical-align:top;">
+													<div class="card-col-field">
 														<div class="dropdown">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -368,17 +351,19 @@ section: Example Pages
 											<div class="card card-horizontal">
 												<div class="card-row card-row-padded">
 													<div class="card-col-field">
-														<svg class="icon-monospaced lexicon-icon">
-															<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
-														</svg>
+														<span class="sticker sticker-default sticker-lg sticker-static">
+															<svg class="lexicon-icon">
+																<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+															</svg>
+														</span>
 													</div>
 													<div class="card-col-content card-col-gutters clamp-horizontal">
 														<div class="clamp-container"><span class="h4 truncate-text" title="Folder 01">Folder 01</span></div>
 													</div>
-													<div class="card-col-field" style="vertical-align:top;">
+													<div class="card-col-field">
 														<div class="dropdown">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -405,17 +390,19 @@ section: Example Pages
 											<div class="card card-horizontal">
 												<div class="card-row card-row-padded">
 													<div class="card-col-field">
-														<svg class="icon-monospaced lexicon-icon">
-															<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
-														</svg>
+														<span class="sticker sticker-default sticker-lg sticker-static">
+															<svg class="lexicon-icon">
+																<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+															</svg>
+														</span>
 													</div>
 													<div class="card-col-content card-col-gutters clamp-horizontal">
 														<div class="clamp-container"><span class="h4 truncate-text" title="Folder 02">Folder 02</span></div>
 													</div>
-													<div class="card-col-field" style="vertical-align:top;">
+													<div class="card-col-field">
 														<div class="dropdown">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -442,17 +429,19 @@ section: Example Pages
 											<div class="card card-horizontal">
 												<div class="card-row card-row-padded">
 													<div class="card-col-field">
-														<svg class="icon-monospaced lexicon-icon">
-															<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
-														</svg>
+														<span class="sticker sticker-default sticker-lg sticker-static">
+															<svg class="lexicon-icon">
+																<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
+															</svg>
+														</span>
 													</div>
 													<div class="card-col-content card-col-gutters clamp-horizontal">
 														<div class="clamp-container"><span class="h4 truncate-text" title="Folder 03">Folder 03</span></div>
 													</div>
-													<div class="card-col-field" style="vertical-align:top;">
+													<div class="card-col-field">
 														<div class="dropdown">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -492,8 +481,8 @@ section: Example Pages
 													</div>
 													<div class="card-col-field">
 														<div class="dropdown" style="margin-right: -8px;">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -531,8 +520,8 @@ section: Example Pages
 													</div>
 													<div class="card-col-field">
 														<div class="dropdown" style="margin-right: -8px;">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -570,8 +559,8 @@ section: Example Pages
 													</div>
 													<div class="card-col-field">
 														<div class="dropdown" style="margin-right: -8px;">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -609,8 +598,8 @@ section: Example Pages
 													</div>
 													<div class="card-col-field">
 														<div class="dropdown" style="margin-right: -8px;">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -648,8 +637,8 @@ section: Example Pages
 													</div>
 													<div class="card-col-field">
 														<div class="dropdown" style="margin-right: -8px;">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -687,8 +676,8 @@ section: Example Pages
 													</div>
 													<div class="card-col-field">
 														<div class="dropdown" style="margin-right: -8px;">
-															<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-																<svg class="icon-monospaced lexicon-icon">
+															<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+																<svg class="lexicon-icon">
 																	<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 																</svg>
 															</a>
@@ -765,7 +754,11 @@ section: Example Pages
 	</div>
 </div>
 
-<a class="btn btn-action btn-bottom-right btn-primary" data-placement="left" data-toggle="tooltip" href="#1" id="fullscreenBtn" title="Fullscreen"><span class="icon-monospaced"><span class="icon-desktop"></span></span></a>
+<a class="btn btn-action btn-bottom-right btn-primary" data-placement="left" data-toggle="tooltip" href="#1" id="fullscreenBtn" title="Fullscreen">
+	<span class="icon-monospaced">
+		<span class="icon-desktop"></span>
+	</span>
+</a>
 
 <script>
 	$('#fullscreenBtn').on('click', function(event) {

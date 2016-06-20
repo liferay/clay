@@ -11,15 +11,15 @@ section: Example Pages
 					<div class="sidebar-header">
 						<h4>
 							<a href="#1">
-								<span class="sidebar-header-logo">
+								<span class="icon-monospaced">
 									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
 									</svg>
 								</span>
-								<span>Squareup</span>
+								<span>Blog Appearance</span>
 							</a>
 
-							<a class="sidenav-close" href="#1">
+							<a class="pull-right sidenav-close" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 								</svg>
@@ -104,27 +104,6 @@ section: Example Pages
 							</form>
 						</div>
 					</div>
-
-					<div class="sidebar-footer">
-						<div class="nameplate">
-							<div class="nameplate-field">
-								<div class="user-icon user-icon-warning">
-									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#user" />
-									</svg>
-								</div>
-							</div>
-
-							<div class="nameplate-content">
-								<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
-							</div>
-
-							<div class="nameplate-field">
-								<a class="icon-monospaced" href="#1"></a>
-							</div>
-						</div>
-					</div>
-
 				</div>
 			</div>
 
@@ -133,8 +112,8 @@ section: Example Pages
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1" id="blogSidenavToggler">
-									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+								<a class="icon-monospaced sidenav-toggler" href="#blogSidenav" id="blogSidenavToggler">
+									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 									</svg>
 								</a>
@@ -144,8 +123,8 @@ section: Example Pages
 						<div class="toolbar-group-right">
 							<div class="toolbar-group-content">
 								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-										<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+									<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#cog" />
 										</svg>
 									</a>
@@ -276,14 +255,17 @@ section: Example Pages
 	</div>
 </div>
 
-<a class="btn btn-primary btn-action btn-bottom-right icon-monospaced" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
+<a class="btn btn-primary btn-action btn-bottom-right" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn">
+	<span class="icon-monospaced">
+		<span class="icon-desktop"></span>
+	</span>
+</a>
 
 <script>
-	$('#blogSidenav').sideNavigation({
+	$('#blogSidenavToggler').sideNavigation({
 		gutter: 0,
-		toggler: '#blogSidenavToggler',
 		typeMobile: 'fixed',
-		type: 'fixed-push',
+		type: 'fixed',
 		width: 320
 	});
 
