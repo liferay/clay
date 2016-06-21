@@ -96,14 +96,13 @@
 }
 
 .nameplate-label {
-	.icon-monospaced,
-	.icon-monospaced.lexicon-icon {
+	.icon-monospaced .lexicon-icon {
 		margin: 0;
 
 		@include monospace(20px);
 	}
 
-	.icon-monospaced.lexicon-icon {
+	.icon-monospaced .lexicon-icon {
 		padding: 4px;
 	}
 
@@ -113,7 +112,7 @@
 }
 
 .nameplate-label-more {
-	.icon-monospaced.lexicon-icon {
+	.icon-monospaced .lexicon-icon {
 		padding: 6px 4px 0;
 	}
 
