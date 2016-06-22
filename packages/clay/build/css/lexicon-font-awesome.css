@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.2
+* Lexicon 1.0.3
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -10772,10 +10772,6 @@ button.close {
   width: 16px;
 }
 
-.lexicon-icon.icon-monospaced, .lexicon-icon.help-icon {
-  padding: 8px;
-}
-
 .lexicon-icon-sm {
   height: 7px;
   width: 7px;
@@ -10850,83 +10846,116 @@ a.collapse-icon {
   transform: translateY(-50%);
 }
 
-a .icon-monospaced, a .help-icon,
-.icon-monospaced,
-.help-icon {
+.icon-monospaced {
   display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.icon-monospaced, .help-icon {
+.icon-monospaced.btn {
+  line-height: 32px;
+  padding: 0;
+}
+
+.icon-monospaced.btn:before {
+  position: relative;
+  top: -1px;
+}
+
+.icon-monospaced.btn-xs, .btn-group-xs > .icon-monospaced.btn, .icon-monospaced.icon-xs {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.icon-monospaced.btn-sm, .btn-group-sm > .icon-monospaced.btn, .icon-monospaced.icon-sm {
+  height: 26px;
+  line-height: 26px;
+  width: 26px;
+}
+
+.icon-monospaced.btn-lg, .btn-group-lg > .icon-monospaced.btn, .icon-monospaced.icon-lg {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+}
+
+.icon-monospaced.icon-large {
+  height: 26px;
+  line-height: 26px;
+  width: 26px;
+}
+
+.icon-monospaced.icon-2x {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+}
+
+.icon-monospaced.icon-3x {
+  height: 48px;
+  line-height: 48px;
+  width: 48px;
+}
+
+.icon-monospaced.icon-4x {
+  height: 75px;
+  line-height: 75px;
+  width: 75px;
+}
+
+.icon-monospaced.icon-5x {
+  height: 100px;
+  line-height: 100px;
+  width: 100px;
+}
+
+.icon-monospaced .glyphicon {
+  display: inline-block;
   height: 32px;
   line-height: 32px;
   width: 32px;
   text-align: center;
 }
 
-.icon-monospaced:focus, .help-icon:focus, .icon-monospaced:hover, .help-icon:hover {
-  text-decoration: none;
+.icon-monospaced.lexicon-icon {
+  padding: 8px;
 }
 
-.icon-monospaced.btn, .btn.help-icon {
+.icon-monospaced .lexicon-icon {
+  display: block;
+  height: 32px;
   line-height: 32px;
-  padding: 0;
+  width: 32px;
+  padding: 8px;
 }
 
-.icon-monospaced.btn:before, .btn.help-icon:before {
-  position: relative;
-  top: -1px;
-}
-
-.icon-monospaced.btn-xs, .btn-group-xs > .icon-monospaced.btn, .btn-group-xs > .btn.help-icon, .btn-xs.help-icon, .icon-monospaced.icon-xs, .icon-xs.help-icon {
-  height: 20px;
-  line-height: 20px;
-  width: 20px;
-}
-
-.icon-monospaced.btn-sm, .btn-group-sm > .icon-monospaced.btn, .btn-group-sm > .btn.help-icon, .btn-sm.help-icon, .icon-monospaced.icon-sm, .icon-sm.help-icon {
-  height: 26px;
-  line-height: 26px;
-  width: 26px;
-}
-
-.icon-monospaced.btn-lg, .btn-group-lg > .icon-monospaced.btn, .btn-group-lg > .btn.help-icon, .btn-lg.help-icon, .icon-monospaced.icon-lg, .icon-lg.help-icon {
-  height: 40px;
-  line-height: 40px;
-  width: 40px;
-}
-
-.icon-monospaced.icon-large, .icon-large.help-icon {
-  height: 26px;
-  line-height: 26px;
-  width: 26px;
-}
-
-.icon-monospaced.icon-2x, .icon-2x.help-icon {
-  height: 40px;
-  line-height: 40px;
-  width: 40px;
-}
-
-.icon-monospaced.icon-3x, .icon-3x.help-icon {
-  height: 48px;
-  line-height: 48px;
-  width: 48px;
-}
-
-.icon-monospaced.icon-4x, .icon-4x.help-icon {
-  height: 75px;
-  line-height: 75px;
-  width: 75px;
-}
-
-.icon-monospaced.icon-5x, .icon-5x.help-icon {
-  height: 100px;
-  line-height: 100px;
-  width: 100px;
+.icon-monospaced .icon-caret-bottom-right, .icon-monospaced .icon-glass, .icon-monospaced .icon-music, .icon-monospaced .icon-search, .icon-monospaced .icon-envelope, .icon-monospaced .icon-heart, .icon-monospaced .icon-star, .icon-monospaced .icon-star-empty, .icon-monospaced .icon-user, .icon-monospaced .icon-film, .icon-monospaced .icon-th-large, .icon-monospaced .icon-th, .icon-monospaced .icon-th-list, .icon-monospaced .icon-ok, .icon-monospaced .icon-remove, .icon-monospaced .icon-zoom-in, .icon-monospaced .icon-zoom-out, .icon-monospaced .icon-off, .icon-monospaced .icon-signal, .icon-monospaced .icon-cog, .icon-monospaced .icon-trash, .icon-monospaced .icon-home, .icon-monospaced .icon-file, .icon-monospaced .icon-inbox, .icon-monospaced .icon-play-circle, .icon-monospaced .icon-repeat, .icon-monospaced .icon-refresh, .icon-monospaced .icon-list-alt, .icon-monospaced .icon-lock, .icon-monospaced .icon-flag, .icon-monospaced .icon-headphones, .icon-monospaced .icon-volume-off, .icon-monospaced .icon-volume-down, .icon-monospaced .icon-volume-up, .icon-monospaced .icon-qrcode, .icon-monospaced .icon-barcode, .icon-monospaced .icon-tag, .icon-monospaced .icon-tags, .icon-monospaced .icon-book, .icon-monospaced .icon-bookmark, .icon-monospaced .icon-print, .icon-monospaced .icon-camera, .icon-monospaced .icon-font, .icon-monospaced .icon-bold, .icon-monospaced .icon-italic, .icon-monospaced .icon-align-justify, .icon-monospaced .icon-list, .icon-monospaced .icon-indent-left, .icon-monospaced .icon-indent-right, .icon-monospaced .icon-facetime-video, .icon-monospaced .icon-picture, .icon-monospaced .icon-pencil, .icon-monospaced .icon-map-marker, .icon-monospaced .icon-adjust, .icon-monospaced .icon-tint, .icon-monospaced .icon-edit, .icon-monospaced .icon-share, .icon-monospaced .icon-check, .icon-monospaced .icon-move, .icon-monospaced .icon-step-backward, .icon-monospaced .icon-fast-backward, .icon-monospaced .icon-backward, .icon-monospaced .icon-play, .icon-monospaced .icon-pause, .icon-monospaced .icon-stop, .icon-monospaced .icon-forward, .icon-monospaced .icon-fast-forward, .icon-monospaced .icon-minus-sign, .icon-monospaced .icon-remove-sign, .icon-monospaced .icon-ok-sign, .icon-monospaced .icon-question-sign, .icon-monospaced .icon-info-sign, .icon-monospaced .icon-screenshot, .icon-monospaced .icon-remove-circle, .icon-monospaced .icon-ok-circle, .icon-monospaced .icon-ban-circle, .icon-monospaced .icon-arrow-left, .icon-monospaced .icon-arrow-right, .icon-monospaced .icon-arrow-up, .icon-monospaced .icon-arrow-down, .icon-monospaced .icon-share-alt, .icon-monospaced .icon-resize-full, .icon-monospaced .icon-resize-small, .icon-monospaced .icon-plus, .icon-monospaced .icon-minus, .icon-monospaced .icon-asterisk, .icon-monospaced .icon-exclamation-sign, .icon-monospaced .icon-gift, .icon-monospaced .icon-leaf, .icon-monospaced .icon-calendar, .icon-monospaced .icon-random, .icon-monospaced .icon-comment, .icon-monospaced .icon-magnet, .icon-monospaced .icon-chevron-up, .icon-monospaced .icon-chevron-down, .icon-monospaced .icon-retweet, .icon-monospaced .icon-shopping-cart, .icon-monospaced .icon-folder-close, .icon-monospaced .icon-folder-open, .icon-monospaced .icon-resize-vertical, .icon-monospaced .icon-resize-horizontal, .icon-monospaced .icon-bar-chart, .icon-monospaced .icon-twitter-sign, .icon-monospaced .icon-facebook-sign, .icon-monospaced .icon-camera-retro, .icon-monospaced .icon-key, .icon-monospaced .icon-cogs, .icon-monospaced .icon-comments, .icon-monospaced .icon-thumbs-up, .icon-monospaced .icon-thumbs-down, .icon-monospaced .icon-star-half, .icon-monospaced .icon-signin, .icon-monospaced .icon-trophy, .icon-monospaced .icon-github-sign, .icon-monospaced .icon-upload-alt, .icon-monospaced .icon-lemon, .icon-monospaced .icon-phone, .icon-monospaced .icon-check-empty, .icon-monospaced .icon-bookmark-empty, .icon-monospaced .icon-phone-sign, .icon-monospaced .icon-twitter, .icon-monospaced .icon-facebook, .icon-monospaced .icon-github, .icon-monospaced .icon-unlock, .icon-monospaced .icon-credit, .icon-monospaced .icon-rss, .icon-monospaced .icon-hdd, .icon-monospaced .icon-bullhorn, .icon-monospaced .icon-bell, .icon-monospaced .icon-certificate, .icon-monospaced .icon-hand-right, .icon-monospaced .icon-hand-left, .icon-monospaced .icon-hand-up, .icon-monospaced .icon-globe, .icon-monospaced .icon-wrench, .icon-monospaced .icon-tasks, .icon-monospaced .icon-filter, .icon-monospaced .icon-briefcase, .icon-monospaced .icon-fullscreen, .icon-monospaced .icon-group, .icon-monospaced .icon-link, .icon-monospaced .icon-cloud, .icon-monospaced .icon-beaker, .icon-monospaced .icon-cut, .icon-monospaced .icon-copy, .icon-monospaced .icon-paper-clip, .icon-monospaced .icon-save, .icon-monospaced .icon-sign-blank, .icon-monospaced .icon-reorder, .icon-monospaced .icon-list-ul, .icon-monospaced .icon-list-ol, .icon-monospaced .icon-strikethrough, .icon-monospaced .icon-underline, .icon-monospaced .icon-table, .icon-monospaced .icon-magic, .icon-monospaced .icon-money, .icon-monospaced .icon-caret-down, .icon-monospaced .icon-caret-up, .icon-monospaced .icon-caret-left, .icon-monospaced .icon-caret-right, .icon-monospaced .icon-columns, .icon-monospaced .icon-sort, .icon-monospaced .icon-sort-down, .icon-monospaced .icon-sort-up, .icon-monospaced .icon-envelope-alt, .icon-monospaced .icon-linkedin, .icon-monospaced .icon-undo, .icon-monospaced .icon-legal, .icon-monospaced .icon-dashboard, .icon-monospaced .icon-comment-alt, .icon-monospaced .icon-comments-alt, .icon-monospaced .icon-bolt, .icon-monospaced .icon-sitemap, .icon-monospaced .icon-umbrella, .icon-monospaced .icon-paste, .icon-monospaced .icon-lightbulb, .icon-monospaced .icon-exchange, .icon-monospaced .icon-bell-alt, .icon-monospaced .icon-coffee, .icon-monospaced .icon-food, .icon-monospaced .icon-file-alt, .icon-monospaced .icon-building, .icon-monospaced .icon-hospital, .icon-monospaced .icon-ambulance, .icon-monospaced .icon-medkit, .icon-monospaced .icon-fighter-jet, .icon-monospaced .icon-beer, .icon-monospaced .icon-h-sign, .icon-monospaced .icon-plus-sign, .icon-monospaced .icon-double-angle-left, .icon-monospaced .icon-double-angle-right, .icon-monospaced .icon-double-angle-up, .icon-monospaced .icon-double-angle-down, .icon-monospaced .icon-angle-left, .icon-monospaced .icon-angle-right, .icon-monospaced .icon-angle-up, .icon-monospaced .icon-angle-down, .icon-monospaced .icon-desktop, .icon-monospaced .icon-laptop, .icon-monospaced .icon-spinner, .icon-monospaced .icon-circle, .icon-monospaced .icon-reply, .icon-monospaced .icon-github-alt, .icon-monospaced .icon-folder-close-alt, .icon-monospaced .icon-folder-open-alt, .icon-monospaced .icon-expand-alt, .icon-monospaced .icon-collapse-alt, .icon-monospaced .icon-smile, .icon-monospaced .icon-frown, .icon-monospaced .icon-meh, .icon-monospaced .icon-gamepad, .icon-monospaced .icon-keyboard, .icon-monospaced .icon-flag-alt, .icon-monospaced .icon-flag-checkered, .icon-monospaced .icon-terminal, .icon-monospaced .icon-code, .icon-monospaced .icon-reply-all, .icon-monospaced .icon-star-half-full, .icon-monospaced .icon-location-arrow, .icon-monospaced .icon-crop, .icon-monospaced .icon-code-fork, .icon-monospaced .icon-subscript, .icon-monospaced .icon-eraser, .icon-monospaced .icon-puzzle, .icon-monospaced .icon-microphone, .icon-monospaced .icon-microphone-off, .icon-monospaced .icon-shield, .icon-monospaced .icon-calendar-empty, .icon-monospaced .icon-fire-extinguisher, .icon-monospaced .icon-rocket, .icon-monospaced .icon-maxcdn, .icon-monospaced .icon-chevron-sign-left, .icon-monospaced .icon-chevron-sign-right, .icon-monospaced .icon-chevron-sign-up, .icon-monospaced .icon-chevron-sign-down, .icon-monospaced .icon-html5, .icon-monospaced .icon-css3, .icon-monospaced .icon-anchor, .icon-monospaced .icon-unlock-alt, .icon-monospaced .icon-bullseye, .icon-monospaced .icon-ellipsis-horizontal, .icon-monospaced .icon-ellipsis-vertical, .icon-monospaced .icon-rss-sign, .icon-monospaced .icon-fb-boolean, .icon-monospaced .icon-text-height, .icon-monospaced .icon-text-width, .icon-monospaced .icon-align-left, .icon-monospaced .icon-align-center, .icon-monospaced .icon-align-right, .icon-monospaced .icon-step-forward, .icon-monospaced .icon-eject, .icon-monospaced .icon-chevron-left, .icon-monospaced .icon-chevron-right, .icon-monospaced .icon-plus-sign-2, .icon-monospaced .icon-fire, .icon-monospaced .icon-eye-open, .icon-monospaced .icon-eye-close, .icon-monospaced .icon-warning-sign, .icon-monospaced .icon-plane, .icon-monospaced .icon-heart-empty, .icon-monospaced .icon-signout, .icon-monospaced .icon-linkedin-sign, .icon-monospaced .icon-pushpin, .icon-monospaced .icon-external-link, .icon-monospaced .icon-hand-down, .icon-monospaced .icon-circle-arrow-left, .icon-monospaced .icon-circle-arrow-right, .icon-monospaced .icon-circle-arrow-up, .icon-monospaced .icon-circle-arrow-down, .icon-monospaced .icon-truck, .icon-monospaced .icon-pinterest, .icon-monospaced .icon-pinterest-sign, .icon-monospaced .icon-google-plus-sign, .icon-monospaced .icon-google-plus, .icon-monospaced .icon-cloud-download, .icon-monospaced .icon-cloud-upload, .icon-monospaced .icon-user-md, .icon-monospaced .icon-stethoscope, .icon-monospaced .icon-suitcase, .icon-monospaced .icon-tablet, .icon-monospaced .icon-mobile, .icon-monospaced .icon-circle-blank, .icon-monospaced .icon-quote-left, .icon-monospaced .icon-quote-right, .icon-monospaced .icon-unlink, .icon-monospaced .icon-question, .icon-monospaced .icon-info, .icon-monospaced .icon-exclamation, .icon-monospaced .icon-superscript, .icon-monospaced .icon-play-sign, .icon-monospaced .icon-ticket, .icon-monospaced .icon-minus-sign-alt, .icon-monospaced .icon-check-minus, .icon-monospaced .icon-level-up, .icon-monospaced .icon-sort-by-attributes-alt, .icon-monospaced .icon-sort-by-order, .icon-monospaced .icon-sort-by-order-alt, .icon-monospaced .icon-thumbs-up-2, .icon-monospaced .icon-thumbs-down-2, .icon-monospaced .icon-dribbble, .icon-monospaced .icon-skype, .icon-monospaced .icon-foursquare, .icon-monospaced .icon-trello, .icon-monospaced .icon-female, .icon-monospaced .icon-level-down, .icon-monospaced .icon-check-sign, .icon-monospaced .icon-edit-sign, .icon-monospaced .icon-external-link-sign, .icon-monospaced .icon-share-sign, .icon-monospaced .icon-compass, .icon-monospaced .icon-collapse, .icon-monospaced .icon-collapse-top, .icon-monospaced .icon-expand, .icon-monospaced .icon-euro, .icon-monospaced .icon-gbp, .icon-monospaced .icon-dollar, .icon-monospaced .icon-rupee, .icon-monospaced .icon-yen, .icon-monospaced .icon-renminbi, .icon-monospaced .icon-won, .icon-monospaced .icon-bitcoin, .icon-monospaced .icon-file-2, .icon-monospaced .icon-file-text, .icon-monospaced .icon-sort-by-alphabet, .icon-monospaced .icon-sort-by-alphabet-alt, .icon-monospaced .icon-sort-by-attributes, .icon-monospaced .icon-youtube-sign, .icon-monospaced .icon-youtube, .icon-monospaced .icon-xing, .icon-monospaced .icon-xing-sign, .icon-monospaced .icon-youtube-play, .icon-monospaced .icon-dropbox, .icon-monospaced .icon-stackexchange, .icon-monospaced .icon-instagram, .icon-monospaced .icon-flickr, .icon-monospaced .icon-adn, .icon-monospaced .icon-bitbucket, .icon-monospaced .icon-bitbucket-sign, .icon-monospaced .icon-tumblr, .icon-monospaced .icon-tumblr-sign, .icon-monospaced .icon-long-arrow-down, .icon-monospaced .icon-long-arrow-up, .icon-monospaced .icon-long-arrow-left, .icon-monospaced .icon-long-arrow-right, .icon-monospaced .icon-apple, .icon-monospaced .icon-windows, .icon-monospaced .icon-android, .icon-monospaced .icon-linux, .icon-monospaced .icon-male, .icon-monospaced .icon-gittip, .icon-monospaced .icon-sun, .icon-monospaced .icon-moon, .icon-monospaced .icon-archive, .icon-monospaced .icon-bug, .icon-monospaced .icon-vk, .icon-monospaced .icon-weibo, .icon-monospaced .icon-renren, .icon-monospaced .icon-time, .icon-monospaced .icon-road, .icon-monospaced .icon-download-alt, .icon-monospaced .icon-download, .icon-monospaced .icon-upload, .icon-monospaced .icon-db-joinxor, .icon-monospaced .icon-db-state, .icon-monospaced .icon-db-start, .icon-monospaced .icon-db-end, .icon-monospaced .icon-db-fork, .icon-monospaced .icon-db-condition, .icon-monospaced .icon-db-task, .icon-monospaced .icon-db-join, .icon-monospaced .icon-fb-button, .icon-monospaced .icon-fb-fieldset, .icon-monospaced .icon-fb-custom-field, .icon-monospaced .icon-fb-separator, .icon-monospaced .icon-fb-paragraph, .icon-monospaced .icon-fb-file-upload, .icon-monospaced .icon-fb-text, .icon-monospaced .icon-fb-text-box, .icon-monospaced .icon-fb-select, .icon-monospaced .icon-fb-radio, .icon-monospaced .icon-fb-number, .icon-monospaced .icon-fb-integer, .icon-monospaced .icon-fb-decimal {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  text-align: center;
 }
 
 .help-icon {
   border-radius: 100px;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  text-align: center;
+}
+
+.help-icon:hover, .help-icon:focus {
+  text-decoration: none;
+}
+
+.help-icon.icon-monospaced {
+  vertical-align: baseline;
 }
 
 .help-icon-default {
@@ -13190,16 +13219,15 @@ fieldset[disabled]
   }
 }
 
-.nameplate-label .icon-monospaced, .nameplate-label .help-icon,
-.nameplate-label .icon-monospaced.lexicon-icon,
-.nameplate-label .lexicon-icon.help-icon {
+.nameplate-label .icon-monospaced,
+.nameplate-label .icon-monospaced.lexicon-icon {
   margin: 0;
   height: 20px;
   line-height: 20px;
   width: 20px;
 }
 
-.nameplate-label .icon-monospaced.lexicon-icon, .nameplate-label .lexicon-icon.help-icon {
+.nameplate-label .icon-monospaced.lexicon-icon {
   padding: 4px;
 }
 
@@ -13209,7 +13237,7 @@ fieldset[disabled]
   width: 22px;
 }
 
-.nameplate-label-more .icon-monospaced.lexicon-icon, .nameplate-label-more .lexicon-icon.help-icon {
+.nameplate-label-more .icon-monospaced.lexicon-icon {
   padding: 6px 4px 0;
 }
 
@@ -13346,7 +13374,7 @@ fieldset[disabled]
   text-decoration: none;
 }
 
-.nav-equal-height-heading > .icon-monospaced, .nav-equal-height-heading > .help-icon {
+.nav-equal-height-heading > .icon-monospaced {
   height: auto;
   line-height: 20px;
 }
@@ -14758,7 +14786,7 @@ fieldset[disabled]
   right: 0;
 }
 
-.sidenav-js-fouc {
+.sidenav-js-fouc > .sidenav-menu-slider {
   opacity: 0;
   visibility: hidden;
 }
