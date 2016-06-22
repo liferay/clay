@@ -23,7 +23,8 @@ var config = {
 var tasks = require('require-dir')('./tasks');
 
 liferayGulpTasks(gulp, {
-	artifactSrc: ['**/release/**/*', '!node_modules/', '!node_modules/**']
+	artifactSrc: ['**/release/**/*', '!node_modules/', '!node_modules/**'],
+	artifactName: 'lexicon'
 });
 
 _.invoke(tasks, 'call', tasks, gulp, plugins, _, config);
