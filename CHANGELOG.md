@@ -1,3 +1,10 @@
+### v1.0.3 - June 22, 2016
+* Update: sidenav-js-fouc should hide only the sidenav
+* Update: icon-monospaced should work on an icon if it is a direct parent
+* Update: Checkboxes in card should be vertically centered
+* Site: Update icon-monospaced doc and add example of icon wrapped by icon-monospaced in management bar
+* Misc: Setting artifactName back to the proper one
+
 ### v1.0.2 - June 13, 2016
 * Update: Adding new icons
 	- mobile-device-rules.svg
