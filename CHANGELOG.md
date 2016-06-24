@@ -1,3 +1,7 @@
+### v1.0.4 - June 24, 2016
+* New: adding 2 new icons (organizations and password-policies)
+* Update: thickening the user and users icon
+
 ### v1.0.3 - June 22, 2016
 * Update: sidenav-js-fouc should hide only the sidenav
 * Update: icon-monospaced should work on an icon if it is a direct parent
