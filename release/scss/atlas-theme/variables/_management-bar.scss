@@ -1,0 +1,34 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$management-bar-border-left-width: 0 !default;
+$management-bar-border-right-width: 0 !default;
+$management-bar-border-top-width: 0 !default;
+
+$management-bar-height: $navbar-height !default;
+$management-bar-desktop-height: $navbar-desktop-height !default;
+$management-bar-desktop-btn-padding-horizontal: $navbar-desktop-padding-horizontal !default;
+$management-bar-desktop-btn-padding-vertical: ($management-bar-desktop-height - $icon-monospaced-size - 2) / 2 !default;
+
+// Skin
+
+$management-bar-collapse-absolute-box-shadow: $navbar-collapse-absolute-box-shadow !default;
+
+$management-bar-link-active-color: $brand-primary !default;
+
+$management-bar-default-bg: #F5F8FA !default;
+$management-bar-default-border: #EDF0F2 !default;
+$management-bar-default-color: #869CAD !default;
+
+$management-bar-default-btn-default-bg: transparent !default;
+$management-bar-default-btn-default-border: #E4E9EC !default;
+$management-bar-default-btn-default-color: #869CAD !default;
+
+$management-bar-default-collapse-bg: $management-bar-default-bg !default;
+$management-bar-default-collapse-border: $management-bar-default-border !default;

@@ -1,0 +1,129 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sidebar {
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+	overflow: auto;
+
+	.management-bar,
+	.navbar {
+		border-radius: 0;
+		border-width: 1px 0;
+	}
+
+	.navbar-default,
+	.navbar-inverse {
+		margin-bottom: 0;
+	}
+
+	.navbar-no-collapse .navbar-nav {
+		margin: 0 15px;
+	}
+}
+
+.sidebar-body {
+	-webkit-overflow-scrolling: touch;
+	font-size: 14px;
+	overflow: auto;
+	padding: 24px;
+}
+
+.sidebar-footer,
+.sidebar-header {
+	a {
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.sidebar-footer {
+	padding: 24px;
+}
+
+.sidebar-header {
+	margin: 0;
+	padding: 24px;
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+	}
+}
+
+.sidebar-header-actions {
+	float: right;
+
+	@include list-unstyled;
+
+	> li {
+		display: inline-block;
+	}
+}
+
+.sidebar-panel {
+	height: 155px;
+	overflow: hidden;
+	position: relative;
+}
+
+.sidebar-transition {
+	@include transition(all 0.25s ease);
+}
+
+// Skins
+
+.sidebar-default {
+	background-color: $sidebar-default-bg;
+	border-left: 1px solid $sidebar-default-border;
+	color: $sidebar-default-color;
+
+	a.sidenav-close,
+	.sidebar-header-actions > li a,
+	.sidebar-header-actions > li .dropdown-toggle {
+		color: $sidebar-default-header-actions-link-color;
+
+		&:focus,
+		&:hover {
+			color: $sidebar-default-header-actions-link-hover-color;
+		}
+	}
+
+	.sidebar-panel {
+		background-color: $sidebar-default-panel-bg;
+	}
+}
+
+.sidebar-inverse {
+	background-color: $sidebar-inverse-bg;
+	color: $sidebar-inverse-color;
+
+	a.sidenav-close,
+	.sidebar-header-actions > li a,
+	.sidebar-header-actions > li .dropdown-toggle {
+		color: $sidebar-inverse-header-actions-link-color;
+
+		&:focus,
+		&:hover {
+			color: $sidebar-inverse-header-actions-link-hover-color;
+		}
+	}
+
+	.sidebar-panel {
+		background-color: $sidebar-inverse-panel-bg;
+	}
+}
+
+.sidebar .dropdown-menu > li > a {
+	color: $dropdown-link-color;
+
+	&:focus,
+	&:hover {
+		color: $dropdown-link-hover-color;
+	}
+}

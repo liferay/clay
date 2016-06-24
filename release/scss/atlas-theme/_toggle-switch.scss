@@ -1,0 +1,73 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@media screen and (min-width: $grid-float-breakpoint) {
+	.toggle-switch-bar {
+		.toggle-switch-handle {
+			min-width: $toggle-switch-bar-desktop-width;
+		}
+
+		.toggle-switch-icon {
+			font-size: $toggle-switch-bar-desktop-font-size;
+		}
+
+		.button-icon {
+			font-size: $toggle-switch-button-desktop-font-size;
+		}
+	}
+
+	input.toggle-switch {
+		&:empty ~ .toggle-switch-bar {
+			line-height: $toggle-switch-bar-desktop-height;
+			min-height: $toggle-switch-bar-desktop-height;
+			text-indent: set-data-label-text-position($toggle-switch-bar-desktop-width, $toggle-switch-bar-desktop-padding);
+
+			&:after,
+			&:before {
+				width: $toggle-switch-bar-desktop-width;
+			}
+
+			&:after {
+				bottom: $toggle-switch-bar-desktop-padding;
+				height: $toggle-switch-button-desktop-width;
+				left: $toggle-switch-bar-desktop-padding;
+				top: $toggle-switch-bar-desktop-padding;
+				width: $toggle-switch-button-desktop-width;
+			}
+
+			.toggle-switch-icon {
+				left: $toggle-switch-bar-desktop-padding;
+				line-height: $toggle-switch-button-desktop-width;
+				top: $toggle-switch-bar-desktop-padding;
+				width: $toggle-switch-button-desktop-width;
+			}
+
+			.toggle-switch-icon-on {
+				left: $toggle-switch-bar-desktop-padding;
+			}
+
+			.toggle-switch-icon-off {
+				left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+			}
+		}
+
+		&:checked ~ .toggle-switch-bar {
+			&:after {
+				left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+			}
+
+			.button-icon {
+				left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+			}
+		}
+	}
+
+	.toggle-switch-text-left,
+	.toggle-switch-text-right {
+		line-height: $toggle-switch-bar-desktop-height;
+	}
+}

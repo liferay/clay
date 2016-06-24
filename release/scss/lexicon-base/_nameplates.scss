@@ -1,0 +1,182 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.nameplate {
+	display: table;
+	width: 100%;
+}
+
+.nameplate-content,
+.nameplate-field {
+	display: table-cell;
+	padding: 6px;
+	vertical-align: top;
+}
+
+.nameplate-field {
+	width: 1%;
+}
+
+.nameplate-content {
+	word-wrap: break-word;
+
+	h1,
+	h2,
+	h3 {
+		margin-top: 0;
+	}
+
+	h4,
+	h5,
+	h6 {
+		margin-top: 2px;
+	}
+
+	small {
+		color: $gray-light;
+		display: block;
+	}
+}
+
+// Nameplate Label
+
+.nameplate-label {
+	border-radius: 100px;
+	display: table;
+	float: left;
+	margin: 0 5px 2px 0;
+	min-width: 50px;
+	padding: 0 3px;
+
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		height: 32px;
+		margin-right: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.nameplate-content,
+	.nameplate-field {
+		vertical-align: middle;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			width: auto;
+		}
+	}
+
+	.nameplate-content {
+		height: auto;
+		position: relative;
+
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			width: auto;
+		}
+	}
+
+	.nameplate-label-text {
+		display: block;
+		font-weight: 500;
+		max-width: 200px;
+		overflow: hidden;
+		position: relative;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			left: 5px;
+			max-width: none;
+			position: absolute;
+			right: 5px;
+			text-align: left;
+
+			@include transform(translateY(-50%));
+
+			top: 50%;
+		}
+	}
+}
+
+.nameplate-label {
+	.icon-monospaced,
+	.icon-monospaced.lexicon-icon {
+		margin: 0;
+
+		@include monospace(20px);
+	}
+
+	.icon-monospaced.lexicon-icon {
+		padding: 4px;
+	}
+
+	.user-icon {
+		@include monospace(22px);
+	}
+}
+
+.nameplate-label-more {
+	.icon-monospaced.lexicon-icon {
+		padding: 6px 4px 0;
+	}
+
+	.nameplate-label-text {
+		text-align: center;
+	}
+}
+
+// Nameplate Label Helpers
+
+.nameplate-label-circle {
+	border-radius: 100px;
+}
+
+.nameplate-label-rounded {
+	border-radius: $nameplate-label-rounded-border-radius;
+}
+
+.nameplate-label-square {
+	border-radius: 0;
+}
+
+// Skins
+
+.nameplate-label-default {
+	@include color-nameplate-label($nameplate-label-default-bg, $nameplate-label-default-color);
+}
+
+.nameplate-label-inverse {
+	@include color-nameplate-label($nameplate-label-inverse-bg, $nameplate-label-inverse-color);
+}
+
+.nameplate-label-primary {
+	@include color-nameplate-label($nameplate-label-primary-bg, $nameplate-label-primary-color);
+
+	a {
+		@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+	}
+}
+
+.nameplate-label-success {
+	@include color-nameplate-label($nameplate-label-success-bg, $nameplate-label-success-color);
+}
+
+.nameplate-label-info {
+	@include color-nameplate-label($nameplate-label-info-bg, $nameplate-label-info-color);
+}
+
+.nameplate-label-warning {
+	@include color-nameplate-label($nameplate-label-warning-bg, $nameplate-label-warning-color);
+}
+
+.nameplate-label-danger {
+	@include color-nameplate-label($nameplate-label-danger-bg, $nameplate-label-danger-color);
+
+	a {
+		@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+	}
+}

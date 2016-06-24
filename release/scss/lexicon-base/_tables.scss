@@ -1,0 +1,303 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+th {
+	height: 20px;
+}
+
+.table {
+	> thead,
+	> tbody,
+	> tfoot {
+		tr td {
+			&:first-child {
+				padding-left: $table-cell-gutters;
+
+				.checkbox {
+					margin-bottom: 0;
+					margin-left: 1px;
+					margin-top: 0;
+				}
+			}
+
+			&:last-child {
+				padding-right: $table-cell-gutters;
+			}
+		}
+	}
+
+	thead .clamp-container {
+		bottom: $table-cell-padding;
+	}
+
+	th {
+		height: 36px;
+	}
+
+	tr {
+		td,
+		th {
+			&:first-child {
+				.clamp-container {
+					left: $table-cell-gutters;
+				}
+			}
+
+			&:last-child {
+				.clamp-container {
+					right: $table-cell-gutters;
+				}
+			}
+		}
+	}
+
+	.clamp-container {
+		@include transform(none);
+	}
+}
+
+.table-cell-content {
+	max-width: 100px;
+	min-width: 100px;
+	position: relative;
+	width: auto;
+	word-break: break-all \9; // IE 8, 9
+	word-wrap: break-word;
+}
+
+.table-responsive {
+	-webkit-overflow-scrolling: touch;
+
+	.table .table-cell-content {
+		@media screen and (max-width: $grid-float-breakpoint-max) {
+			white-space: normal;
+		}
+	}
+}
+
+.table-cell-field {
+	width: 1%;
+}
+
+// Table List Skin
+
+.table-list {
+	> thead > tr > td,
+	> thead > tr > th {
+		border-bottom-width: 0;
+	}
+
+	> tbody > tr {
+		height: $table-list-row-height;
+	}
+
+	> tbody > tr > td,
+	> tbody > tr > th,
+	> tfoot > tr > td,
+	> tfoot > tr > th {
+		border-top-width: 0;
+		vertical-align: middle;
+	}
+
+	> tbody,
+	> tfoot {
+		td {
+			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
+		}
+
+		> tr.active {
+			&:hover td,
+			td {
+				box-shadow: inset 0 #{-$table-list-row-active-border-bottom-width} $table-list-row-active-border-color;
+			}
+		}
+
+		> tr:hover {
+			td {
+				box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
+			}
+		}
+	}
+
+	.checkbox,
+	.radio {
+		float: left;
+
+		label {
+			display: block;
+		}
+	}
+
+	thead .clamp-container {
+		@include transform(none);
+	}
+
+	&.table-valign-middle thead .clamp-container,
+	.clamp-container {
+		@include transform(translateY(-50%));
+	}
+}
+
+// Table Helpers
+
+.table-autofit {
+	> thead,
+	> tbody {
+		> tr {
+			> th,
+			> td {
+				width: 1%;
+			}
+		}
+	}
+
+	.table-cell-content {
+		width: auto;
+	}
+}
+
+.table-heading-nowrap > thead > tr {
+	> th,
+	> td {
+		white-space: nowrap;
+	}
+}
+
+.table-responsive .table-heading-nowrap > thead > tr > .table-cell-content {
+	white-space: nowrap;
+}
+
+// Table Vertical Align
+
+.table-valign-bottom {
+	> thead > tr > th,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		vertical-align: bottom;
+	}
+
+	.clamp-container {
+		bottom: $table-cell-padding;
+
+		@include transform(none);
+	}
+}
+
+.table-valign-middle {
+	> thead > tr > th,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		vertical-align: middle;
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+	}
+
+	.clamp-container {
+		@include transform(translateY(-50%));
+
+		top: auto;
+	}
+}
+
+.table-valign-top {
+	> thead > tr > th,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		vertical-align: top;
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+	}
+
+	.clamp-container {
+		@include transform(none);
+	}
+}
+
+// Tbody Vertical Align
+
+.tbody-valign-bottom {
+	> tbody > tr > td {
+		vertical-align: bottom;
+	}
+
+	tbody .clamp-container {
+		bottom: $table-cell-padding;
+
+		@include transform(none);
+	}
+}
+
+.tbody-valign-middle {
+	> tbody > tr > td {
+		vertical-align: middle;
+	}
+
+	tbody .clamp-container {
+		@include transform(translateY(-50%));
+
+		top: auto;
+	}
+}
+
+.tbody-valign-top {
+	> tbody > tr > td {
+		vertical-align: top;
+	}
+
+	tbody .clamp-container {
+		@include transform(none);
+	}
+}
+
+// Thead Vertical Align
+
+.thead-valign-bottom {
+	> thead > tr {
+		> td,
+		> th {
+			vertical-align: bottom;
+		}
+	}
+
+	thead .clamp-container {
+		@include transform(none);
+	}
+}
+
+.thead-valign-middle {
+	> thead > tr {
+		> td,
+		> th {
+			vertical-align: middle;
+		}
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+
+		@include transform(translateY(-50%));
+	}
+}
+
+.thead-valign-top {
+	> thead > tr {
+		> td,
+		> th {
+			vertical-align: top;
+		}
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+
+		@include transform(none);
+	}
+}

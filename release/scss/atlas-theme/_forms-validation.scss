@@ -1,0 +1,68 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.has-success,
+.has-warning,
+.has-error {
+	.control-label {
+		color: $input-label-color;
+	}
+
+	.form-control {
+		color: $input-color;
+
+		&,
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
+
+.has-success {
+	select.form-control {
+		@include select-box-icon($state-success-border);
+	}
+
+	.checkbox label,
+	.radio label {
+		color: $state-success-text;
+	}
+
+	.form-control[readonly] {
+		border-color: $state-success-border;
+	}
+}
+
+.has-warning {
+	select.form-control {
+		@include select-box-icon($state-warning-border);
+	}
+
+	.checkbox label,
+	.radio label {
+		color: $state-warning-text;
+	}
+
+	.form-control[readonly] {
+		border-color: $state-warning-border;
+	}
+}
+
+.has-error {
+	select.form-control {
+		@include select-box-icon($state-danger-border);
+	}
+
+	.checkbox label,
+	.radio label {
+		color: $state-danger-text;
+	}
+
+	.form-control[readonly] {
+		border-color: $state-danger-border;
+	}
+}

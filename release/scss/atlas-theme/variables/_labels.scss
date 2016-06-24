@@ -1,0 +1,32 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$label-desktop-font-size: $font-size-base !default; // Atlas
+$label-font-size: ceil($font-size-base / 1.166667) !default; // Atlas
+$label-padding-bottom: 9px !default;
+$label-padding-left: 12px !default;
+$label-padding-right: 12px !default;
+$label-padding-top: 9px !default;
+
+$label-lg-desktop-font-size: $font-size-large !default;
+$label-lg-font-size: ceil($font-size-large / 1.166667) !default;
+$label-lg-padding-bottom: 14px !default;
+$label-lg-padding-left: 20px !default;
+$label-lg-padding-right: 20px !default;
+$label-lg-padding-top: 14px !default;
+
+$label-sm-desktop-font-size: $font-size-small !default;
+$label-sm-font-size: ceil($font-size-small / 1.166667) !default;
+$label-sm-padding-bottom: 4px !default;
+$label-sm-padding-left: 10px !default;
+$label-sm-padding-right: 10px !default;
+$label-sm-padding-top: 4px !default;
+
+// Skin
+
+$label-default-bg: #E7F1F9 !default;
+$label-default-color: $brand-primary !default;

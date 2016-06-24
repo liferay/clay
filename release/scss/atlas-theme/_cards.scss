@@ -1,0 +1,33 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.card,
+.card-horizontal {
+	box-shadow: $card-box-shadow;
+
+	a {
+		color: $card-link-color;
+	}
+}
+
+.checkbox-middle-left input[type="checkbox"],
+.checkbox-middle-left label > input[type="checkbox"],
+.radio-middle-left input[type="radio"],
+.radio-middle-left label > input[type="radio"] {
+	margin-top: 0;
+
+	@include transform(translateY(-50%));
+}
+
+.checkbox-middle-right input[type="checkbox"],
+.checkbox-middle-right label > input[type="checkbox"],
+.radio-middle-right input[type="radio"],
+.radio-middle-right label > input[type="radio"] {
+	margin-top: 0;
+
+	@include transform(translateY(-50%));
+}

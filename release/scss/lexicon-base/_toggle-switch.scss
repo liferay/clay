@@ -1,0 +1,183 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.toggle-switch-bar {
+	.toggle-switch-handle {
+		display: block;
+		float: left;
+		min-width: $toggle-switch-bar-width;
+		text-transform: uppercase;
+	}
+
+	.toggle-switch-icon {
+		font-size: $toggle-switch-bar-font-size;
+	}
+
+	.button-icon {
+		font-size: $toggle-switch-button-font-size;
+	}
+}
+
+input.toggle-switch {
+	font-size: 62.5%;
+	opacity: 0;
+	position: absolute;
+
+	// ($off-bg, $off-border: $off-bg, $on-bg: $off-bg, $on-border: $off-border)
+	@include color-toggle-switch-bar($toggle-switch-bar-bg, $toggle-switch-bar-border-color, $toggle-switch-bar-on-bg, $toggle-switch-bar-on-border-color);
+	// ($button-off-bg, $button-off-border: $button-off-bg, $button-on-bg: $button-off-bg, $button-on-border: $button-off-border)
+	@include color-toggle-switch-button($toggle-switch-button-bg, $toggle-switch-button-border-color, $toggle-switch-button-on-bg, $toggle-switch-button-on-border-color);
+	// ($off-color, $on-color: $off-color)
+	@include color-toggle-switch-bar-icon($toggle-switch-bar-icon-color, $toggle-switch-bar-on-icon-color);
+	// ($off-color, $on-color: $off-color)
+	@include color-toggle-switch-button-icon($toggle-switch-button-icon-color, $toggle-switch-button-on-icon-color);
+
+	&:empty ~ .toggle-switch-bar {
+		cursor: pointer;
+		display: block;
+		float: left;
+		font-size: 1.2rem;
+		line-height: $toggle-switch-bar-height;
+		min-height: $toggle-switch-bar-height;
+		position: relative;
+		text-indent: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding);
+
+		@include user-select(none);
+
+		&:after,
+		&:before {
+			bottom: 0;
+			content: ' ';
+			display: block;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: $toggle-switch-bar-width;
+		}
+
+		&:after {
+			border-radius: $toggle-switch-button-border-radius;
+			bottom: $toggle-switch-bar-padding;
+			height: $toggle-switch-button-width;
+			left: $toggle-switch-bar-padding;
+			top: $toggle-switch-bar-padding;
+			width: $toggle-switch-button-width;
+		}
+
+		&:before {
+			border-radius: $toggle-switch-bar-border-radius;
+		}
+
+		.toggle-switch-handle:after {
+			content: attr(data-label-off);
+			margin-left: 6px;
+		}
+
+		.toggle-switch-icon {
+			left: $toggle-switch-bar-padding;
+			line-height: $toggle-switch-button-width;
+			position: absolute;
+			text-align: center;
+			text-indent: 0;
+			top: $toggle-switch-bar-padding;
+			width: $toggle-switch-button-width;
+			z-index: 1;
+		}
+
+		.button-icon-on,
+		.toggle-switch-icon-on {
+			opacity: 0;
+		}
+
+		.toggle-switch-icon-on {
+			left: $toggle-switch-bar-padding;
+		}
+
+		.toggle-switch-icon-off {
+			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
+		}
+	}
+
+	&:checked ~ .toggle-switch-bar {
+		&:after {
+			border-radius: $toggle-switch-button-on-border-radius;
+			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
+		}
+
+		&:before {
+			border-radius: $toggle-switch-bar-border-radius;
+		}
+
+		.toggle-switch-handle:after {
+			content: attr(data-label-on);
+			margin-left: 6px;
+		}
+
+		.button-icon {
+			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
+		}
+
+		.button-icon-on,
+		.toggle-switch-icon-on {
+			opacity: 1;
+		}
+
+		.button-icon-off,
+		.toggle-switch-icon-off {
+			opacity: 0;
+		}
+	}
+
+	&:disabled, &.disabled {
+		~ .toggle-switch-bar {
+			cursor: not-allowed;
+			opacity: 0.4;
+		}
+	}
+
+	&:focus ~ .toggle-switch-bar:before {
+		box-shadow: 0 0 3px 2px #66AFE6;
+	}
+}
+
+input.toggle-switch {
+	&:empty ~ .toggle-switch-bar {
+		&:after,
+		&:before,
+		.toggle-switch-icon,
+		.toggle-switch-handle:after,
+		.toggle-switch-handle:before {
+			@include transition(all 100ms ease-in);
+		}
+	}
+}
+
+.toggle-switch-label {
+	display: block;
+	margin-bottom: 2px;
+}
+
+.toggle-switch-text {
+	clear: both;
+	display: block;
+	font-size: 1.25rem;
+}
+
+.toggle-switch-text-left,
+.toggle-switch-text-right {
+	float: left;
+	line-height: $toggle-switch-bar-height;
+}
+
+.toggle-switch-text-left {
+	margin-right: 7px;
+}
+
+.toggle-switch-text-right {
+	clear: none;
+	margin-left: 7px;
+}

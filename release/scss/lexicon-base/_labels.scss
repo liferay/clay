@@ -1,0 +1,60 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.label {
+	display: inline-block;
+	font-size: $label-font-size;
+	padding-bottom: $label-padding-bottom;
+	padding-left: $label-padding-left;
+	padding-right: $label-padding-right;
+	padding-top: $label-padding-top;
+
+	a {
+		color: $label-color;
+		display: inline-block;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.label-lg {
+	font-size: $label-lg-font-size;
+	padding-bottom: $label-lg-padding-bottom;
+	padding-left: $label-lg-padding-left;
+	padding-right: $label-lg-padding-right;
+	padding-top: $label-lg-padding-top;
+}
+
+.label-sm {
+	font-size: $label-sm-font-size;
+	padding-bottom: $label-sm-padding-bottom;
+	padding-left: $label-sm-padding-left;
+	padding-right: $label-sm-padding-right;
+	padding-top: $label-sm-padding-top;
+}
+
+// Lexicon Icons in Labels
+
+.label .lexicon-icon {
+	height: 9px;
+	margin-left: 2px;
+	width: 9px;
+}
+
+.label-lg .lexicon-icon {
+	height: 13px;
+	margin-left: 4px;
+	width: 13px;
+}
+
+.label-sm .lexicon-icon {
+	height: 5px;
+	width: 5px;
+}

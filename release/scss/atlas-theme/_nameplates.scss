@@ -1,0 +1,22 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.nameplate-content {
+	small {
+		color: $brand-default;
+	}
+}
+
+// Skins
+
+.nameplate-label-inverse,
+.nameplate-label-success,
+.nameplate-label-warning {
+	a {
+		@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+	}
+}

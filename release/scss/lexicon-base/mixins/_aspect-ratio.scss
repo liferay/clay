@@ -1,0 +1,16 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+/**
+ * Calculates and sets aspect ratio
+ * @param $width - width
+ * @param $height - height
+ */
+
+@mixin aspect-ratio($width: 1, $height: 1) {
+	padding-bottom: percentage($height / $width);
+}

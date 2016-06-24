@@ -1,0 +1,54 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.badge {
+	font-weight: 500;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $badge-desktop-font-size;
+	}
+}
+
+.badge-lg {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $badge-lg-desktop-font-size;
+	}
+}
+
+.badge-sm {
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $badge-sm-desktop-font-size;
+	}
+}
+
+// Lexicon Icons in Badges
+
+.badge .lexicon-icon {
+	height: 10px;
+	width: 10px;
+}
+
+.badge-sm .lexicon-icon {
+	height: 7px;
+	width: 7px;
+}
+
+// Skin
+
+.badge-default {
+	background-color: $badge-default-bg;
+	color: $badge-default-color;
+}
+
+a.badge-default,
+.badge-default a {
+	&,
+	&:focus,
+	&:hover {
+		color: $badge-default-link-color;
+	}
+}

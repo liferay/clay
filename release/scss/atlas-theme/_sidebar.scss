@@ -1,0 +1,24 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sidebar {
+	.management-bar-default,
+	.navbar-default {
+		border-width: $navbar-default-border-width;
+	}
+}
+
+.sidebar-inverse {
+	@include color-placeholder('input', $brand-default);
+
+	.form-control {
+		background-color: $sidebar-inverse-input-bg;
+		border-width: 0;
+		color: $brand-default;
+		padding: 8px 12px;
+	}
+}

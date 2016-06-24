@@ -1,0 +1,98 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.tooltip {
+	font-size: $tooltip-font-size;
+}
+
+.tooltip-inner {
+	border-radius: $tooltip-border-radius;
+	padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
+}
+
+.tooltip-arrow:before {
+	border-color: transparent;
+	border-style: solid;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: -1;
+}
+
+// Tooltip box shadows
+//
+// Arrow shadows only appear when $tooltip-box-shadow-blur > 0
+
+.tooltip {
+	&.top .tooltip-arrow:before {
+		@if $tooltip-box-shadow-blur == 0 {
+			border-top-color: $tooltip-box-shadow-bg;
+		}
+
+		border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
+		bottom: -$tooltip-box-shadow-y - $tooltip-box-shadow-spread;
+
+		@if $tooltip-box-shadow-y > 0 {
+			content: "";
+		}
+
+		left: 50%;
+		margin-left: -$tooltip-arrow-width + $tooltip-box-shadow-x;
+	}
+
+	&.right .tooltip-arrow:before {
+		@if $tooltip-box-shadow-blur == 0 {
+			border-right-color: $tooltip-box-shadow-bg;
+		}
+
+		border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
+
+		@if $tooltip-box-shadow-x < 0 {
+			content: "";
+		}
+
+		left: $tooltip-box-shadow-x - $tooltip-box-shadow-spread;
+		margin-top: -$tooltip-arrow-width + $tooltip-box-shadow-y;
+		top: 50%;
+	}
+
+	&.left .tooltip-arrow:before {
+		@if $tooltip-box-shadow-blur == 0 {
+			border-left-color: $tooltip-box-shadow-bg;
+		}
+
+		border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
+
+		@if $tooltip-box-shadow-x > 0 {
+			content: "";
+		}
+
+		margin-top: -$tooltip-arrow-width + $tooltip-box-shadow-y;
+		right: -$tooltip-box-shadow-x - $tooltip-box-shadow-spread;
+		top: 50%;
+	}
+
+	&.bottom .tooltip-arrow:before {
+		@if $tooltip-box-shadow-blur == 0 {
+			border-bottom-color: $tooltip-box-shadow-bg;
+		}
+
+		border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
+
+		@if $tooltip-box-shadow-y < 0 {
+			content: "";
+		}
+
+		left: 50%;
+		margin-left: -$tooltip-arrow-width + $tooltip-box-shadow-x;
+		top: $tooltip-box-shadow-y - $tooltip-box-shadow-spread;
+	}
+}
+
+.tooltip-inner {
+	box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg;
+}

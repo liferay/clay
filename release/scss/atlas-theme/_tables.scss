@@ -1,0 +1,25 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Skins
+
+th {
+	font-size: $table-header-font-size;
+	font-weight: $table-header-font-weight;
+}
+
+.table-list {
+	color: $table-header-color;
+
+	tbody tr {
+		background-color: $table-list-body-row-bg;
+	}
+
+	a {
+		color: $table-list-link-color;
+	}
+}

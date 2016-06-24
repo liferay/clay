@@ -1,0 +1,109 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.dropdown,
+.dropdown-toggle {
+	display: inline-block;
+}
+
+.dropdown-header {
+	font-size: $dropdown-header-font-size;
+	overflow: hidden;
+	padding: $dropdown-link-padding;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dropdown-menu form {
+	> .checkbox,
+	> .radio {
+		label {
+			padding: $dropdown-link-padding;
+			padding-left: 32px;
+		}
+	}
+
+	.form-group {
+		padding: $dropdown-link-padding;
+	}
+}
+
+// Dropdown inline-scroller
+
+.dropdown-menu {
+	border: $dropdown-border-width solid $dropdown-border;
+	border: $dropdown-border-width solid $dropdown-fallback-border; // IE8 fallback
+	box-shadow: $dropdown-box-shadow;
+	font-size: $dropdown-font-size;
+	max-width: 230px;
+	min-height: 40px;
+	padding: 6px 0;
+
+	> li > a {
+		overflow: hidden;
+		padding: $dropdown-link-padding;
+		text-overflow: ellipsis;
+	}
+
+	.inline-scroller,
+	.link-list {
+		li a {
+			padding: $dropdown-link-padding;
+		}
+
+		> .active > a {
+			&,
+			&:focus,
+			&:hover {
+				background-color: $dropdown-link-active-bg;
+				color : $dropdown-link-active-color;
+			}
+		}
+	}
+
+	.inline-scroller {
+		li a {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+
+	.link-list .link-list-heading {
+		line-height: $line-height-base;
+		padding: $dropdown-link-padding;
+	}
+}
+
+.link-list {
+	.link-list-heading {
+		font-size: $dropdown-header-font-size;
+	}
+}
+
+.dropdown-wide,
+.dropdown-full {
+	.dropdown-menu {
+		max-width: none;
+	}
+}
+
+@media (min-width: $grid-float-breakpoint) { // min-width: 768px
+	.dropdown-header {
+		font-size: $dropdown-header-font-size-desktop;
+	}
+
+	.dropdown-menu {
+		font-size: $dropdown-font-size-desktop;
+		max-width: 300px;
+		min-height: 40px;
+	}
+
+	.link-list .link-list-heading {
+		font-size: $dropdown-header-font-size-desktop;
+	}
+}

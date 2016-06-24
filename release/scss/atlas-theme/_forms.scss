@@ -1,0 +1,206 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+label, .control-label {
+	color: $input-label-color;
+	font-size: $input-label-font-size;
+	font-weight: 500;
+	margin-bottom: 2px;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $input-label-desktop-font-size;
+	}
+
+	&.disabled {
+		opacity: 0.5;
+	}
+
+	&.focus {
+		color: $input-label-focus-color;
+	}
+}
+
+select.form-control {
+	@include prefixer(appearance, none, moz webkit);
+
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: 18px auto;
+	padding-bottom: 0;
+	padding-right: 18px;
+	padding-top: 0;
+
+	@include select-box-icon($input-border);
+
+	&:focus {
+		@include select-box-icon($input-border-focus);
+	}
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	&[multiple] {
+		background: none;
+		padding: $input-padding-vertical $input-padding-horizontal;
+	}
+}
+
+.form-control {
+	border-width: $input-border-width;
+	box-shadow: $input-box-shadow;
+	font-size: $input-font-size;
+	height: $input-mobile-height-base;
+	padding: $input-padding-vertical $input-padding-horizontal;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: $input-desktop-font-size;
+		height: $input-height-base;
+	}
+
+	&:focus {
+		box-shadow: $input-box-shadow-focus;
+		color: $input-color-focus;
+	}
+
+	&::-ms-clear, &::-ms-reveal {
+		display: none;
+		height: 0;
+		width: 0;
+	}
+}
+
+// Disabled State
+
+.form-control {
+	fieldset[disabled] &,
+	&[disabled],
+	&select[disabled] {
+		border-color: $input-border-disabled;
+		color: $input-border;
+		opacity: 0.5;
+	}
+}
+
+fieldset[disabled] label {
+	opacity: 0.5;
+}
+
+select[disabled].form-control > option {
+	@media screen and (-webkit-min-device-pixel-ratio: 0) { // Webkit only
+		color: $input-border;
+	}
+}
+
+// Readonly State
+
+.form-control[readonly] {
+	background-color: $input-readonly-bg;
+	border-color: $input-readonly-border;
+	color: $input-readonly-color;
+	cursor: default;
+}
+
+// Input Placeholders
+// ($element, $color)
+
+@include color-placeholder("input:focus", $input-color-placeholder-focus);
+@include color-placeholder("textarea:focus", $input-color-placeholder-focus);
+@include color-placeholder("input[disabled]");
+@include color-placeholder("select[disabled]");
+@include color-placeholder("input[readonly]");
+@include color-placeholder("fieldset[disabled] .form-control");
+
+// Input Sizes
+
+.form-control {
+	&.input-lg {
+		border-radius: $input-border-radius-large;
+		font-size: $input-font-size-large;
+		height: $input-mobile-height-large;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: $input-height-large;
+		}
+	}
+
+	&.input-sm {
+		border-radius: $input-border-radius-small;
+		font-size: $input-font-size-small;
+		height: $input-mobile-height-small;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			height: $input-height-small;
+		}
+	}
+}
+
+// Checkbox and Radio Styles
+
+.checkbox,
+.radio {
+	label {
+		font-weight: 500;
+		padding-left: 25px;
+
+		@media screen and (-webkit-min-device-pixel-ratio: 0) {
+			padding-left: 20px;
+		}
+	}
+}
+
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+	height: 20px;
+	margin-left: -25px;
+	margin-top: 0;
+	width: 20px;
+
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		height: 15px;
+		margin-left: -20px;
+		width: 14px;
+	}
+}
+
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		margin-top: 3px;
+	}
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		margin-top: 2.4px; // Safari Hack
+	}
+}
+
+.checkbox-card,
+.radio-card {
+	label {
+		padding-left: 0;
+	}
+}
+
+.checkbox-card input[type="checkbox"],
+.radio-card input[type="radio"] {
+	margin-left: 0;
+}
+
+// Form Control Feedback
+
+.form-control-feedback {
+	@include monospace($input-mobile-height-base);
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		@include monospace($input-height-base);
+	}
+}

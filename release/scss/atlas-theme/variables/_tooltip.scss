@@ -1,0 +1,28 @@
+/**
+* Lexicon 1.0.3
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$tooltip-font-size: 14px !default; // Atlas
+
+$tooltip-padding-horizontal: 24px !default; // Atlas
+$tooltip-padding-vertical: 8px !default; // Atlas
+
+// Skin
+
+$tooltip-border-radius: $border-radius-base !default; // Atlas
+
+//** Tooltip box shadow settings (Default is global box shadow settings)
+$tooltip-box-shadow-x: $box-shadow-default-x !default; // Atlas
+$tooltip-box-shadow-y: $box-shadow-default-y !default; // Atlas
+$tooltip-box-shadow-blur: $box-shadow-default-blur !default; // Atlas
+$tooltip-box-shadow-spread: $box-shadow-default-spread !default; // Atlas
+$tooltip-box-shadow-bg: $box-shadow-default-bg !default; // Atlas
+$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg !default; // Atlas
+
+$tooltip-bg: #0E191D !default;
+$tooltip-opacity: 1 !default;
