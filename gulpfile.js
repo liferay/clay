@@ -60,12 +60,14 @@ gulp.task(
 	'release:npm',
 	function(cb) {
 		runSequence(
+			'build:patch-bootstrap',
 			'release:npm-clean',
 			'release:npm-build-files',
 			'release:npm-src-files',
 			'release:npm-index',
 			'release:npm-package',
 			'release:npm-publish',
+			'build:clean-bootstrap-patch',
 			cb
 		);
 	}
