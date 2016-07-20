@@ -50,6 +50,10 @@ section.row {
 		margin-bottom: 14px;
 		margin-top: 14px;
 
+		@media screen and (min-width: $grid-float-breakpoint) {
+			margin-left: 18px;
+		}
+
 		.lexicon-version {
 			font-size: 60%;
 			line-height: 16px;
