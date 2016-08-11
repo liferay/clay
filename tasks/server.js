@@ -5,11 +5,13 @@ module.exports = function(gulp) {
 
 	gulp.task('browser-sync:start', function() {
 		browserSync({
-			notify: false,
-			open: false,
+			notify: true,
+			open: true,
 			server: {
 				baseDir: 'build'
 			}
 		});
+
+		gulp.on('build:finished', browserSync.reload);
 	});
 };

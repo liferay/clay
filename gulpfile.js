@@ -37,7 +37,11 @@ gulp.task('build', function(cb) {
 		'build:svg',
 		'build:metalsmith',
 		'build:clean-bootstrap-patch',
-		cb
+		function(err) {
+			gulp.emit('build:finished', err);
+
+			cb(err);
+		}
 	);
 });
 
