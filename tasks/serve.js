@@ -4,7 +4,7 @@ module.exports = function(gulp) {
 	gulp.task('serve:start', function() {
 		browserSync({
 			notify: true,
-			open: true,
+			open: false,
 			server: {
 				baseDir: 'build'
 			}
