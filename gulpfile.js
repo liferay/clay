@@ -45,6 +45,8 @@ gulp.task('build', function(cb) {
 	);
 });
 
+gulp.task('serve', ['serve:start', 'watch']);
+
 gulp.task(
 	'release:files',
 	function(cb) {
