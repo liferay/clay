@@ -140,7 +140,8 @@ module.exports = function(gulp, plugins, _, config) {
 									},
 									outputStyle: 'expanded',
 									precision: 8,
-									sourceMap: true
+									sourceMap: true,
+									sourceMapContents: true
 								}
 							)
 						)
