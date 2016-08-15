@@ -28,7 +28,7 @@
 
 @include keyframes(loading-icon) {
 	0% {
-		@include trailing-shadow(0, -0.83em, set-loader-color($loading-icon-color, $loading-icon-shading));
+		@include trailing-shadow(0, -0.83em, shade($loading-icon-color, $loading-icon-shading));
 
 		@include transform(rotate(0));
 	}
@@ -55,7 +55,7 @@
 		@include trailing-shadow(
 			(0, -0.377em, -0.645em, -0.775em, -0.82em),
 			(-0.83em, -0.74em, -0.522em, -0.297em, -0.13em),
-			adjust-hue(set-loader-color($loading-icon-color, $loading-icon-shading), 330)
+			adjust-hue(shade($loading-icon-color, $loading-icon-shading), 330)
 		);
 	}
 
@@ -93,7 +93,7 @@
 	&:before, &:after {
 		animation: 2s ease-out infinite both;
 		border: 0.15em solid transparent;
-		border-left-color: set-loader-color($loading-icon-linear-color, $loading-icon-shading);
+		border-left-color: shade($loading-icon-linear-color, $loading-icon-shading);
 		border-radius: 50%;
 		content: '';
 		height: 100%;
@@ -124,11 +124,11 @@
   }
 
   11% {
-  	border-bottom-color: set-loader-color($loading-icon-linear-color, $loading-icon-shading);
+  	border-bottom-color: shade($loading-icon-linear-color, $loading-icon-shading);
   }
 
   66% {
-	border-bottom-color: set-loader-color($loading-icon-linear-color, $loading-icon-shading);
+	border-bottom-color: shade($loading-icon-linear-color, $loading-icon-shading);
   }
 
   66.6% {
@@ -152,20 +152,26 @@
 
 // Variations
 
-button {
+button,
+a.btn {
 	> .loading-icon {
 		// This is specifically in a less specific selector
 		// to allow the size to be set via the
 		// `loading-icon-{size}` classes
 		& {
 			font-size: 1em;
+			margin-right: 0.8em;
+			margin-top: 0;
+		}
+
+		&.linear {
+			margin-right: 0.2em;
+			margin-top: -0.2em;
 		}
 
 		&, &.linear {
 			display: none;
 			margin-bottom: 0;
-			margin-right: 0.8em;
-			margin-top: 0;
 			vertical-align: middle;
 		}
 	}
