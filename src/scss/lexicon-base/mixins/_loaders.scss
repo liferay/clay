@@ -1,3 +1,16 @@
+// Sets color of loader icon
+// @param $loader-color - Color of loader icon
+// @param $amount - Amount to lighten or darken
+// @param $bg-color - Color to compare
+
+@function shade($loader-color: $btn-primary-bg, $amount: 15%, $bg-color: $body-bg, $requirement: lightness($bg-color) < 50) {
+	@if ($requirement) {
+		@return lighten($loader-color, $amount);
+	}
+
+	@return darken($loader-color, $amount);
+}
+
 @function to-list($value, $num: 5) {
 	$newList: ($value);
 

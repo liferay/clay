@@ -1,3 +1,4 @@
-$loading-icon-color: #0CF !default;
-$loading-icon-linear-color: #07F !default;
+$loading-icon-color: $btn-primary-bg !default;
+$loading-icon-linear-color: $btn-primary-bg !default;
+$loading-icon-shading: 20% !default;
 $loading-icon-size: 64px !default;
