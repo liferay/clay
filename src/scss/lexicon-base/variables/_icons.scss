@@ -1,3 +1,32 @@
+// Calculates primary and secondary colors based on the difference in lightness between two colors
+// @param $color - Text color
+// @param $bg - Background color
+// @param $type - Primary will return primary color, any other string will return secondary color
+// @param $amount - Amount to darken or lighten by
+
+@function color-by-lightness($color, $bg, $type: "primary", $amount: 30%) {
+	$colors: (
+		1: $color,
+		2: darken($color, $amount)
+	);
+
+	$lightness-diff: abs(lightness($bg) - lightness($color));
+
+	@if ($lightness-diff < 40 or $lightness-diff > 60) {
+		$colors: map-merge($colors, (1: lighten($color, $amount), 2: $color));
+	}
+
+	@if ($type == "primary") {
+		@return map-get($colors, 1);
+	}
+
+	@return map-get($colors, 2);
+}
+
+$help-icon-default-bg: $input-group-addon-bg !default;
+$help-icon-default-color: color-by-lightness($text-color, $help-icon-default-bg) !default;
+$help-icon-default-hover-color: color-by-lightness($text-color, $help-icon-default-bg, "secondary") !default;
+
 $icon-monospaced-size: 32px !default; // Shared
 
 $lexicon-icon-size: 16px;
