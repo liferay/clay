@@ -11,7 +11,7 @@
 /**
  * @param $size - User icon size
  */
- 
+
 @mixin size-user-icon($size: 32px) {
 	height: $size;
 	line-height: $size;
