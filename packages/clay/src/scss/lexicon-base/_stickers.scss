@@ -10,6 +10,10 @@
 	position: absolute;
 	text-align: center;
 	top: $sticker-gutter-width;
+
+	.lexicon-icon {
+		margin-top: -1px;
+	}
 }
 
 .sticker-static {
@@ -84,12 +88,24 @@
 	font-size: $sticker-sm-font-size;
 
 	@include monospace($sticker-sm-monospaced-size);
+
+	.lexicon-icon {
+		height: $sticker-sm-font-size;
+		margin-top: -2px;
+		width: $sticker-sm-font-size;
+	}
 }
 
 .sticker-lg {
 	font-size: $sticker-lg-font-size;
 
 	@include monospace($sticker-lg-monospaced-size);
+
+	.lexicon-icon {
+		height: $sticker-lg-font-size;
+		margin-top: -3px;
+		width: $sticker-lg-font-size;
+	}
 }
 
 // Sticker Skins

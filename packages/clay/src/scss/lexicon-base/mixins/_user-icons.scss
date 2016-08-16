@@ -1,10 +1,17 @@
-// Sets background and text color of user icon component
+/**
+ * @param $bg-color - User icon background color
+ * @param $color - User icon color
+ */
+
 @mixin color-user-icon($bg-color: #999, $color: #FFF) {
 	background-color: $bg-color;
 	color: $color;
 }
 
-// Sets height, width, and line-height of user icon component
+/**
+ * @param $size - User icon size
+ */
+
 @mixin size-user-icon($size: 32px) {
 	height: $size;
 	line-height: $size;

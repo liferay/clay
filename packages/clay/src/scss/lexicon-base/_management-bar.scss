@@ -241,7 +241,6 @@
 .management-bar-default {
 	background-color: $management-bar-default-bg;
 	border-color: $management-bar-default-border;
-	color: $management-bar-default-color;
 
 	a {
 		color: $management-bar-default-link-color;
@@ -252,6 +251,10 @@
 			background-color: $management-bar-default-collapse-bg;
 			border-color: $management-bar-default-collapse-border;
 		}
+	}
+
+	.management-bar-text {
+		color: $management-bar-default-link-color;
 	}
 
 	.nav {
