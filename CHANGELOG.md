@@ -1,3 +1,29 @@
+### v1.0.5 - August 16, 2016
+* Fix: Center linear loader icon inside button and styles should apply to anchor tags with btn class
+* Fix: Loader icon colors should change color based on theme
+* Fix: management-bar-default color bleeds into dropdowns
+* Fix: solved unclosed line 32
+* Fix: Lexicon Icon vertical alignment in sticker component
+* Update: Bootstrap mixins shouldn't overwrite Bourbon mixins
+* Update: Move Atlas mixins to Lexicon Base
+* Update: Remove duplicate user-icon mixins from Atlas
+* Update: Management Bar btn-default should inherit colors from Bootstrap
+* Update: Lexicon Base card component add $fallback-border and $border-style
+* Update: Scrollbar in IE covers content
+* Site: Code examples should only have one background color
+* Site: Fix Nav Tabs Grid code panel
+* Site: Use svg icons in the heading links
+* Site: Progress bar demo page update progress bar sizes titles
+* Site: Progress bar demo page fix example code collapsible panel
+* Site: Site header should be aligned with main nav
+* Site: siteConfig button should be in container in large screens
+* Site: Add more examples of lexicon icons in sticker component
+* Misc: Update readme
+* Misc: Reload page after changes
+* Misc: Add browser-sync static file server
+* Misc: Show sourcemap contents
+* Misc: We need to patch the variables file before we publish to NPM (otherwise, the files throw errors when including the sass files)
+
 ### v1.0.4 - June 24, 2016
 * New: adding 2 new icons (organizations and password-policies)
 * Update: thickening the user and users icon
