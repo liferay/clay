@@ -1,14 +1,25 @@
 /**
-* Lexicon 1.0.4
+* Lexicon 1.0.5
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
+/* When changing any settings below, make sure to match the corresponding
+	 input-height to the button height. */
+/*** When changing input, make sure to match the corresponding
+		 btn settings to the input height. ***/
 /**
  * Calculates and sets aspect ratio
  * @param $width - width
  * @param $height - height
+ */
+/**
+ * @param $element - CSS Selector
+ * @param $color - Placeholder Color
+ */
+/**
+ * @param $color - Icon Color
  */
 /**
  * Indents each nested navigation by $indent (15px default)
@@ -53,17 +64,6 @@
  * Color icon in toggle-switch-button
  * @param $off-color - Switch button off icon font color
  * @param $on-color - Switch button on icon font color
- */
-/* When changing any settings below, make sure to match the corresponding
-	 input-height to the button height. */
-/*** When changing input, make sure to match the corresponding
-		 btn settings to the input height. ***/
-/**
- * @param $element - CSS Selector
- * @param $color - Placeholder Color
- */
-/**
- * @param $color - Icon Color
  */
 /**
  * @param $bg-color - User icon background color
@@ -116,10 +116,20 @@ section.row {
   color: #FFF;
 }
 
+#headerTopBar .container {
+  position: relative;
+}
+
 #headerTopBar .title {
   float: left;
   margin-bottom: 14px;
   margin-top: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  #headerTopBar .title {
+    margin-left: 18px;
+  }
 }
 
 #headerTopBar .title .lexicon-version {
@@ -178,12 +188,16 @@ section.row {
   position: relative;
   top: 0;
   -webkit-transition-delay: 0s 0s 0.2s 0s;
+  -moz-transition-delay: 0s 0s 0.2s 0s;
   transition-delay: 0s 0s 0.2s 0s;
   -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
-  -webkit-transition-property: background, opacity, top, transform;
+  -webkit-transition-property: background, opacity, top, -webkit-transform;
+  -moz-transition-property: background, opacity, top, -moz-transform;
   transition-property: background, opacity, top, transform;
   -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
@@ -195,6 +209,7 @@ section.row {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transition-delay: 0s 0s 0s 0.2s;
+  -moz-transition-delay: 0s 0s 0s 0.2s;
   transition-delay: 0s 0s 0s 0.2s;
 }
 
@@ -217,6 +232,10 @@ section.row {
   max-height: 150px;
   max-width: 150px;
   width: 100%;
+}
+
+.hljs {
+  background-color: transparent;
 }
 
 .uxgl-alerts .alert {
@@ -615,9 +634,10 @@ body.fixed {
 
 .lexicon-icon-examples .lexicon-icon-exclamation-full:hover {
   -webkit-animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -o-animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
@@ -778,7 +798,7 @@ body.fixed {
 .main-nav-transition #mainNav,
 .main-nav-transition #mainContent {
   -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
@@ -958,13 +978,10 @@ body.sidenav-transition {
   right: auto;
 }
 
-.uxgl-switches:before, .uxgl-switches:after {
-  content: " ";
-  display: table;
-}
-
-.uxgl-switches:after {
+.uxgl-switches::after {
   clear: both;
+  content: "";
+  display: table;
 }
 
 .uxgl-switches .form-group {
