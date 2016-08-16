@@ -23,12 +23,8 @@ $management-bar-default-bg: $navbar-default-bg !default;
 $management-bar-default-border: $navbar-default-border !default;
 $management-bar-default-color: $navbar-default-color !default;
 
-$management-bar-default-btn-default-bg: #F8F8F8 !default;
-$management-bar-default-btn-default-border: #E7E7E7 !default;
-$management-bar-default-btn-default-color: #777 !default;
-
 $management-bar-default-collapse-bg: $management-bar-default-bg !default;
-$management-bar-default-collapse-border: $management-bar-default-border !default
+$management-bar-default-collapse-border: $management-bar-default-border !default;
 
 $management-bar-default-link-color: $navbar-default-link-color !default;
 
@@ -38,3 +34,7 @@ $management-bar-default-link-disabled-bg: $navbar-default-link-disabled-bg !defa
 $management-bar-default-link-disabled-color: $navbar-default-link-disabled-color !default;
 $management-bar-default-link-hover-bg: $navbar-default-link-hover-bg !default;
 $management-bar-default-link-hover-color: $navbar-default-link-hover-color !default;
+
+$management-bar-default-btn-default-bg: $management-bar-default-bg !default;
+$management-bar-default-btn-default-border: $management-bar-default-border !default;
+$management-bar-default-btn-default-color: $management-bar-default-link-color !default;

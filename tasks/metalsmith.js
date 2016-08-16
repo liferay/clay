@@ -31,8 +31,10 @@ module.exports = function(gulp, plugins, _, config) {
 		version: license.metadata.version
 	};
 
-	var TPL_SVG = '<li><svg class="lexicon-icon lexicon-icon-{0}"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg> <span>{0}</span></li>';
-	var TPL_FLAGS_SVG = '<li><svg class="lexicon-icon lexicon-icon-{0}"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg> <span>{1} ({0})</span></li>';
+	var TPL_SVG = '<svg class="lexicon-icon lexicon-icon-{0}"><use xlink:href="{{rootPath}}/images/icons/icons.svg#{0}" /></svg>';
+
+	var TPL_SVG_LI = '<li>' + TPL_SVG + ' <span>{0}</span></li>';
+	var TPL_FLAGS_SVG = '<li>' + TPL_SVG + ' <span>{1} ({0})</span></li>';
 
 	gulp.task('build:metalsmith', function(cb) {
 		var filter = plugins.filter(['**/*.md', '**/*.html']);
@@ -94,7 +96,7 @@ module.exports = function(gulp, plugins, _, config) {
 					transform: function(filepath, file, index, length, targetFile) {
 						var basename = path.basename(filepath, '.svg');
 
-						return _.sub(TPL_SVG, basename);
+						return _.sub(TPL_SVG_LI, basename);
 					}
 				}))
 				.pipe(svgFilter.restore())
@@ -115,7 +117,7 @@ module.exports = function(gulp, plugins, _, config) {
 						.use(wrapChangelog())
 						.use(headingsId(
 							{
-								linkTemplate: '<a class="heading-anchor" href="#%s"><i class="icon icon-link"></i></a>',
+								linkTemplate: '<a class="heading-anchor" href="#%s">' + _.sub(TPL_SVG, 'link') + '</a>',
 								selector: '.col-md-12 > h3'
 							}
 						))
@@ -138,7 +140,8 @@ module.exports = function(gulp, plugins, _, config) {
 									},
 									outputStyle: 'expanded',
 									precision: 8,
-									sourceMap: true
+									sourceMap: true,
+									sourceMapContents: true
 								}
 							)
 						)
