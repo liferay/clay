@@ -152,6 +152,7 @@
 
 // Variations
 
+a.btn,
 button {
 	> .loading-icon {
 		// This is specifically in a less specific selector
@@ -159,13 +160,18 @@ button {
 		// `loading-icon-{size}` classes
 		& {
 			font-size: 1em;
+			margin-right: 0.8em;
+			margin-top: 0;
+		}
+
+		&.linear {
+			margin-right: 0.2em;
+			margin-top: -0.2em;
 		}
 
 		&, &.linear {
 			display: none;
 			margin-bottom: 0;
-			margin-right: 0.8em;
-			margin-top: 0;
 			vertical-align: middle;
 		}
 	}
