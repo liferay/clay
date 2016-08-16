@@ -210,11 +210,11 @@ a.collapse-icon {
 // Skins
 
 .help-icon-default {
-	background-color: $gray-lighter;
-	color: $gray-light;
+	background-color: $help-icon-default-bg;
+	color: $help-icon-default-color;
 
 	&:focus,
 	&:hover {
-		color: $gray-dark;
+		color: $help-icon-default-hover-color;
 	}
 }
