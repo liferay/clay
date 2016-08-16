@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.4
+* Lexicon 1.0.5
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -1956,20 +1956,6 @@ a .icon-caret-bottom-right, a .icon-glass, a .icon-music, a .icon-search, a .ico
 	 input-height to the button height. */
 /*** When changing input, make sure to match the corresponding
 		 btn settings to the input height. ***/
-/**
- * @param $element - CSS Selector
- * @param $color - Placeholder Color
- */
-/**
- * @param $color - Icon Color
- */
-/**
- * @param $bg-color - User icon background color
- * @param $color - User icon color
- */
-/**
- * @param $size - User icon size
- */
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -9723,6 +9709,13 @@ button.close {
  * @param $height - height
  */
 /**
+ * @param $element - CSS Selector
+ * @param $color - Placeholder Color
+ */
+/**
+ * @param $color - Icon Color
+ */
+/**
  * Indents each nested navigation by $indent (15px default)
  * @param $indent - amount to indent in pixels
  * @param $nest-level - number of levels to iterate
@@ -9765,6 +9758,13 @@ button.close {
  * Color icon in toggle-switch-button
  * @param $off-color - Switch button off icon font color
  * @param $on-color - Switch button on icon font color
+ */
+/**
+ * @param $bg-color - User icon background color
+ * @param $color - User icon color
+ */
+/**
+ * @param $size - User icon size
  */
 .alert-notification {
   width: 100%;
@@ -10019,7 +10019,10 @@ button.close {
 .card,
 .card-horizontal {
   background-color: #FFF;
-  border: 0 solid #eeeeee;
+  border-color: #DCE0E3;
+  border-color: #DCE0E3;
+  border-style: solid;
+  border-width: 0;
   border-radius: 0;
   margin-bottom: 20px;
   position: relative;
@@ -10032,7 +10035,7 @@ button.close {
 
 .card .divider,
 .card-horizontal .divider {
-  background-color: #eeeeee;
+  background-color: #DCE0E3;
   border-width: 0;
   height: 1px;
   margin-bottom: 10px;
@@ -10772,13 +10775,10 @@ button.close {
   padding-right: 15px;
 }
 
-.container-fluid-1280:before, .container-fluid-1280:after {
-  content: " ";
-  display: table;
-}
-
-.container-fluid-1280:after {
+.container-fluid-1280::after {
   clear: both;
+  content: "";
+  display: table;
 }
 
 .lexicon-icon {
@@ -11691,7 +11691,7 @@ button.list-group-heading:hover,
 .loading-icon, .loading-animation,
 .loadingmask-message .loadingmask-message-content {
   -webkit-animation: loading-icon 1.7s infinite ease;
-  -o-animation: loading-icon 1.7s infinite ease;
+  -moz-animation: loading-icon 1.7s infinite ease;
   animation: loading-icon 1.7s infinite ease;
   border-radius: 50%;
   display: block;
@@ -11718,59 +11718,59 @@ button.list-group-heading:hover,
 
 @-webkit-keyframes loading-icon {
   0% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, 0 -0.83em 0 -0.42em #abc4f7, 0 -0.83em 0 -0.44em #abcaf7, 0 -0.83em 0 -0.46em #abd1f7, 0 -0.83em 0 -0.477em #abd7f7;
     -webkit-transform: rotate(0);
   }
   2%, 96% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, 0 -0.83em 0 -0.42em #abc4f7, 0 -0.83em 0 -0.44em #abcaf7, 0 -0.83em 0 -0.46em #abd1f7, 0 -0.83em 0 -0.477em #abd7f7;
   }
   10% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, -0.087em -0.825em 0 -0.42em #abc4f7, -0.173em -0.812em 0 -0.44em #abcaf7, -0.256em -0.789em 0 -0.46em #abd1f7, -0.338em -0.758em 0 -0.477em #abd7f7;
   }
   25% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a2ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, -0.338em -0.758em 0 -0.42em #abc4f7, -0.555em -0.617em 0 -0.44em #abcaf7, -0.671em -0.488em 0 -0.46em #abd1f7, -0.719em -0.415em 0 -0.477em #abd7f7;
   }
   40% {
-    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb3;
+    box-shadow: 0 -0.83em 0 -0.4em #abe4f7, -0.377em -0.74em 0 -0.42em #abeaf7, -0.645em -0.522em 0 -0.44em #abf0f7, -0.775em -0.297em 0 -0.46em #abf7f7, -0.82em -0.13em 0 -0.477em #abf7f0;
   }
   60% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, -0.087em -0.825em 0 -0.42em #abc4f7, -0.173em -0.812em 0 -0.44em #abcaf7, -0.256em -0.789em 0 -0.46em #abd1f7, -0.297em -0.775em 0 -0.477em #abd7f7;
   }
   100% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, 0 -0.83em 0 -0.42em #abc4f7, 0 -0.83em 0 -0.44em #abcaf7, 0 -0.83em 0 -0.46em #abd1f7, 0 -0.83em 0 -0.477em #abd7f7;
     -webkit-transform: rotate(360deg);
   }
 }
 
 @-moz-keyframes loading-icon {
   0% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, 0 -0.83em 0 -0.42em #abc4f7, 0 -0.83em 0 -0.44em #abcaf7, 0 -0.83em 0 -0.46em #abd1f7, 0 -0.83em 0 -0.477em #abd7f7;
     -moz-transform: rotate(0);
   }
   2%, 96% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, 0 -0.83em 0 -0.42em #abc4f7, 0 -0.83em 0 -0.44em #abcaf7, 0 -0.83em 0 -0.46em #abd1f7, 0 -0.83em 0 -0.477em #abd7f7;
   }
   10% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, -0.087em -0.825em 0 -0.42em #abc4f7, -0.173em -0.812em 0 -0.44em #abcaf7, -0.256em -0.789em 0 -0.46em #abd1f7, -0.338em -0.758em 0 -0.477em #abd7f7;
   }
   25% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a2ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, -0.338em -0.758em 0 -0.42em #abc4f7, -0.555em -0.617em 0 -0.44em #abcaf7, -0.671em -0.488em 0 -0.46em #abd1f7, -0.719em -0.415em 0 -0.477em #abd7f7;
   }
   40% {
-    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb3;
+    box-shadow: 0 -0.83em 0 -0.4em #abe4f7, -0.377em -0.74em 0 -0.42em #abeaf7, -0.645em -0.522em 0 -0.44em #abf0f7, -0.775em -0.297em 0 -0.46em #abf7f7, -0.82em -0.13em 0 -0.477em #abf7f0;
   }
   60% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, -0.087em -0.825em 0 -0.42em #abc4f7, -0.173em -0.812em 0 -0.44em #abcaf7, -0.256em -0.789em 0 -0.46em #abd1f7, -0.297em -0.775em 0 -0.477em #abd7f7;
   }
   100% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, 0 -0.83em 0 -0.42em #abc4f7, 0 -0.83em 0 -0.44em #abcaf7, 0 -0.83em 0 -0.46em #abd1f7, 0 -0.83em 0 -0.477em #abd7f7;
     -moz-transform: rotate(360deg);
   }
 }
 
 @keyframes loading-icon {
   0% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, 0 -0.83em 0 -0.42em #abc4f7, 0 -0.83em 0 -0.44em #abcaf7, 0 -0.83em 0 -0.46em #abd1f7, 0 -0.83em 0 -0.477em #abd7f7;
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
@@ -11778,22 +11778,22 @@ button.list-group-heading:hover,
     transform: rotate(0);
   }
   2%, 96% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, 0 -0.83em 0 -0.42em #abc4f7, 0 -0.83em 0 -0.44em #abcaf7, 0 -0.83em 0 -0.46em #abd1f7, 0 -0.83em 0 -0.477em #abd7f7;
   }
   10% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.338em -0.758em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, -0.087em -0.825em 0 -0.42em #abc4f7, -0.173em -0.812em 0 -0.44em #abcaf7, -0.256em -0.789em 0 -0.46em #abd1f7, -0.338em -0.758em 0 -0.477em #abd7f7;
   }
   25% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.338em -0.758em 0 -0.42em #008cff, -0.555em -0.617em 0 -0.44em #00a2ff, -0.671em -0.488em 0 -0.46em #00b7ff, -0.719em -0.415em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, -0.338em -0.758em 0 -0.42em #abc4f7, -0.555em -0.617em 0 -0.44em #abcaf7, -0.671em -0.488em 0 -0.46em #abd1f7, -0.719em -0.415em 0 -0.477em #abd7f7;
   }
   40% {
-    box-shadow: 0 -0.83em 0 -0.4em #00f7ff, -0.377em -0.74em 0 -0.42em #00fff2, -0.645em -0.522em 0 -0.44em #00ffdd, -0.775em -0.297em 0 -0.46em #00ffc8, -0.82em -0.13em 0 -0.477em #00ffb3;
+    box-shadow: 0 -0.83em 0 -0.4em #abe4f7, -0.377em -0.74em 0 -0.42em #abeaf7, -0.645em -0.522em 0 -0.44em #abf0f7, -0.775em -0.297em 0 -0.46em #abf7f7, -0.82em -0.13em 0 -0.477em #abf7f0;
   }
   60% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, -0.087em -0.825em 0 -0.42em #008cff, -0.173em -0.812em 0 -0.44em #00a2ff, -0.256em -0.789em 0 -0.46em #00b7ff, -0.297em -0.775em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, -0.087em -0.825em 0 -0.42em #abc4f7, -0.173em -0.812em 0 -0.44em #abcaf7, -0.256em -0.789em 0 -0.46em #abd1f7, -0.297em -0.775em 0 -0.477em #abd7f7;
   }
   100% {
-    box-shadow: 0 -0.83em 0 -0.4em #0077ff, 0 -0.83em 0 -0.42em #008cff, 0 -0.83em 0 -0.44em #00a2ff, 0 -0.83em 0 -0.46em #00b7ff, 0 -0.83em 0 -0.477em #0CF;
+    box-shadow: 0 -0.83em 0 -0.4em #abbef7, 0 -0.83em 0 -0.42em #abc4f7, 0 -0.83em 0 -0.44em #abcaf7, 0 -0.83em 0 -0.46em #abd1f7, 0 -0.83em 0 -0.477em #abd7f7;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
@@ -11819,7 +11819,7 @@ button.list-group-heading:hover,
 .loading-icon.linear:before, .linear.loading-animation:before, .loading-icon.linear:after, .linear.loading-animation:after {
   animation: 2s ease-out infinite both;
   border: 0.15em solid transparent;
-  border-left-color: #07F;
+  border-left-color: #93ccf5;
   border-radius: 50%;
   content: '';
   height: 100%;
@@ -11847,10 +11847,10 @@ button.list-group-heading:hover,
     border-bottom-color: transparent;
   }
   11% {
-    border-bottom-color: #07F;
+    border-bottom-color: #93ccf5;
   }
   66% {
-    border-bottom-color: #07F;
+    border-bottom-color: #93ccf5;
   }
   66.6% {
     border-bottom-color: transparent;
@@ -11869,19 +11869,36 @@ button.list-group-heading:hover,
   }
 }
 
-button > .loading-icon, button > .loading-animation {
+a.btn > .loading-icon, a.btn > .loading-animation,
+button > .loading-icon,
+button > .loading-animation {
   font-size: 1em;
-}
-
-button > .loading-icon, button > .loading-animation, button > .loading-icon.linear, button > .linear.loading-animation {
-  display: none;
-  margin-bottom: 0;
   margin-right: 0.8em;
   margin-top: 0;
+}
+
+a.btn > .loading-icon.linear, a.btn > .linear.loading-animation,
+button > .loading-icon.linear,
+button > .linear.loading-animation {
+  margin-right: 0.2em;
+  margin-top: -0.2em;
+}
+
+a.btn > .loading-icon, a.btn > .loading-animation, a.btn > .loading-icon.linear, a.btn > .linear.loading-animation,
+button > .loading-icon,
+button > .loading-animation,
+button > .loading-icon.linear,
+button > .linear.loading-animation {
+  display: none;
+  margin-bottom: 0;
   vertical-align: middle;
 }
 
-button.loading > .loading-icon, button.loading > .loading-animation, button.loading > .loading-icon.linear, button.loading > .linear.loading-animation {
+a.btn.loading > .loading-icon, a.btn.loading > .loading-animation, a.btn.loading > .loading-icon.linear, a.btn.loading > .linear.loading-animation,
+button.loading > .loading-icon,
+button.loading > .loading-animation,
+button.loading > .loading-icon.linear,
+button.loading > .linear.loading-animation {
   display: inline-block;
 }
 
@@ -12705,7 +12722,6 @@ fieldset[disabled]
 .management-bar-default {
   background-color: #F5F8FA;
   border-color: #EDF0F2;
-  color: #869CAD;
 }
 
 .management-bar-default a {
@@ -12717,6 +12733,10 @@ fieldset[disabled]
     background-color: #F5F8FA;
     border-color: #EDF0F2;
   }
+}
+
+.management-bar-default .management-bar-text {
+  color: #869CAD;
 }
 
 .management-bar-default .nav > li > a,
@@ -13662,13 +13682,13 @@ fieldset[disabled]
 
 .basic-search-transition:after {
   -webkit-transition: all 0.1s ease;
-  -o-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 
 .basic-search-transition .basic-search-slider {
   -webkit-transition: left 0.5s ease, right 0.5s ease;
-  -o-transition: left 0.5s ease, right 0.5s ease;
+  -moz-transition: left 0.5s ease, right 0.5s ease;
   transition: left 0.5s ease, right 0.5s ease;
 }
 
@@ -14250,13 +14270,10 @@ fieldset[disabled]
   }
 }
 
-.pagination-bar:before, .pagination-bar:after {
-  content: " ";
-  display: table;
-}
-
-.pagination-bar:after {
+.pagination-bar::after {
   clear: both;
+  content: "";
+  display: table;
 }
 
 .pagination-bar .pagination {
@@ -14671,7 +14688,7 @@ fieldset[disabled]
 
 .sidebar-transition {
   -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
@@ -14762,12 +14779,10 @@ fieldset[disabled]
   .sidenav-content {
     position: static;
   }
-  .sidenav-content:before, .sidenav-content:after {
-    content: " ";
-    display: table;
-  }
-  .sidenav-content:after {
+  .sidenav-content::after {
     clear: both;
+    content: "";
+    display: table;
   }
 }
 
@@ -14813,13 +14828,13 @@ fieldset[disabled]
 .sidenav-transition .sidenav-menu,
 .sidenav-transition .sidenav-menu-slider {
   -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 .sidenav-transition {
   -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -15261,6 +15276,10 @@ fieldset[disabled]
   top: 15px;
 }
 
+.sticker .lexicon-icon {
+  margin-top: -1px;
+}
+
 .sticker-static {
   position: static;
 }
@@ -15332,11 +15351,23 @@ fieldset[disabled]
   width: 22px;
 }
 
+.sticker-sm .lexicon-icon {
+  height: 11px;
+  margin-top: -2px;
+  width: 11px;
+}
+
 .sticker-lg {
   font-size: 16px;
   height: 44px;
   line-height: 44px;
   width: 44px;
+}
+
+.sticker-lg .lexicon-icon {
+  height: 16px;
+  margin-top: -3px;
+  width: 16px;
 }
 
 .sticker-circle {
@@ -15944,16 +15975,11 @@ th {
   left: -49px;
 }
 
-.toolbar:before, .toolbar:after,
-.header-toolbar:before,
-.header-toolbar:after {
-  content: " ";
-  display: table;
-}
-
-.toolbar:after,
-.header-toolbar:after {
+.toolbar::after,
+.header-toolbar::after {
   clear: both;
+  content: "";
+  display: table;
 }
 
 .toolbar .nameplate-content,
@@ -16491,7 +16517,7 @@ input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon,
 input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:after,
 input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
   -webkit-transition: all 100ms ease-in;
-  -o-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
 }
 
@@ -16524,6 +16550,7 @@ input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: scrollbar;
 }
 
 .monospace {
