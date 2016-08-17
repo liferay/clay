@@ -1,3 +1,7 @@
+@if not (variable-exists(lexicon-functions)) {
+	@import "mixins/functions";
+}
+
 @import "variables/alerts";
 @import "variables/breadcrumbs";
 @import "variables/buttons";
