@@ -1,28 +1,30 @@
 $lexicon-functions: true;
 
-// Calculates primary and secondary colors based on the difference in lightness between two colors
-// @param $color - Text color
+// Helper for coloring hover states, compares two colors and returns a primary
+// or secondary color based on the lightness threshold between $fg and $bg
+// @param $color - Foreground color
 // @param $bg - Background color
-// @param $type - Primary will return primary color, any other string will return secondary color
+// @param $type - Values primary or secondary will return the primary or 
+// secondary color, respectively
 // @param $amount - Amount to darken or lighten by
 
-@function color-by-lightness($color, $bg, $type: "primary", $amount: 30%) {
+@function color-by-lightness($fg, $bg, $type: primary, $amount: 30%) {
+	@if not ($type == primary or $type == secondary) {
+		@error "argument `$type` of `color-by-lightness($fg, $bg, $type, $amount)` must be primary or secondary";
+	}
+
 	$colors: (
-		1: $color,
-		2: darken($color, $amount)
+		primary: $fg,
+		secondary: darken($fg, $amount)
 	);
 
-	$lightness-diff: abs(lightness($bg) - lightness($color));
+	$lightness-diff: abs(lightness($bg) - lightness($fg));
 
 	@if ($lightness-diff < 40 or $lightness-diff > 60) {
-		$colors: map-merge($colors, (1: lighten($color, $amount), 2: $color));
+		$colors: map-merge($colors, (primary: lighten($fg, $amount), secondary: $fg));
 	}
 
-	@if ($type == "primary") {
-		@return map-get($colors, 1);
-	}
-
-	@return map-get($colors, 2);
+	@return map-get($colors, $type);
 }
 
 @function calcLexiconIconPadding($monospaced-size, $icon-size) {
