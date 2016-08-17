@@ -12,8 +12,11 @@
  * @param $size - User icon size
  */
 
+// Deprecated as of v1.0.6 (will be removed in v2.0.0)
+// This duplicates the `monospace()` mixin.
+
 @mixin size-user-icon($size: 32px) {
-	height: $size;
-	line-height: $size;
-	width: $size;
+	@warn "Lexicon's `size-user-icon($size)` mixin is deprecated as of v1.0.6 and will be removed in v2.0.0. Please use `monospace($size)` instead.";
+
+	@include monospace($size);
 }
