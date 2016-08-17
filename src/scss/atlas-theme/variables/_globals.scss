@@ -43,8 +43,8 @@ $grid-gutter-width:                        30px !default;
 
 $font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-//== Border Radius
-//## Defines global border-radius
+// Border Radius
+// Defines global border-radius
 $border-radius-base:                       4px !default;
 $border-radius-large:                      $border-radius-base * 1.5 !default;
 $border-radius-small:                      $border-radius-base * 0.75 !default;
@@ -85,14 +85,14 @@ $link-color:            $brand-primary !default;
 $text-color:                               #29353D !default;
 $text-muted:                               lighten($text-color, 55%) !default;
 
-//** Global background color for active items (e.g., navs or dropdowns).
+// Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:                      $brand-primary !default;
-//** Global color for active items (e.g., navs or dropdowns).
+// Global color for active items (e.g., navs or dropdowns).
 $component-active-color:                   #FFF !default;
 
 $link-hover-color:                         $brand-primary-hover !default;
 
-//States for Form and alert
+// States for Form and alert
 
 $state-default-text: $brand-default !default; // Atlas
 $state-default-bg: lighten($state-default-text, 34%) !default; // Atlas
@@ -141,8 +141,8 @@ $inverse-header-color: $inverse-color !default; // Atlas
 $inverse-link-color: #FFF !default; // Atlas
 $inverse-link-hover-color: $inverse-link-color !default; // Atlas
 
-//== Box Shadow
-//## Defines global box-shadows
+// Box Shadow
+// Defines global box-shadows
 $box-shadow-default-x: 0 !default; // Atlas
 $box-shadow-default-y: 0 !default; // Atlas
 $box-shadow-default-blur: 3px !default; // Atlas

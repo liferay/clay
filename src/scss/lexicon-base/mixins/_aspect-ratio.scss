@@ -1,8 +1,6 @@
-/**
- * Calculates and sets aspect ratio
- * @param $width - width
- * @param $height - height
- */
+// Calculates and sets aspect ratio
+// @param $width - width
+// @param $height - height
 
 @mixin aspect-ratio($width: 1, $height: 1) {
 	padding-bottom: percentage($height / $width);
