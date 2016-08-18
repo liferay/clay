@@ -1,7 +1,7 @@
 // Structure
 
-$popover-max-width:                               276px !default;
-$popover-arrow-width:                             8px !default;
+$popover-max-width: 276px !default;
+$popover-arrow-width: 8px !default;
 
 // Skin
 
@@ -15,10 +15,10 @@ $popover-box-shadow-spread: $box-shadow-default-spread !default; // Atlas
 $popover-box-shadow-bg: $box-shadow-default-bg !default; // Atlas
 $popover-box-shadow: $popover-box-shadow-x $popover-box-shadow-y $popover-box-shadow-blur $popover-box-shadow-spread $popover-box-shadow-bg !default; // Atlas
 
-$popover-bg:                                      #FFF !default;
+$popover-bg: #FFF !default;
 
-$popover-border-color:                            #AEB7BD !default;
-$popover-fallback-border-color:                   #AEB7BD !default;
+$popover-border-color: #AEB7BD !default;
+$popover-fallback-border-color: #AEB7BD !default;
 $popover-title-color: $text-color;
-$popover-title-bg:                                #FFF !default;
-$popover-arrow-color:                             #FFF !default;
+$popover-title-bg: #FFF !default;
+$popover-arrow-color: #FFF !default;

@@ -2,9 +2,9 @@
 
 $modal-inner-padding-horizontal: 24px !default;
 $modal-inner-padding-vertical: 16px !default;
-$modal-inner-padding:                            $modal-inner-padding-vertical $modal-inner-padding-horizontal !default;
-$modal-title-padding:                            12px !default;
-$modal-title-line-height:                        36px !default;
+$modal-inner-padding: $modal-inner-padding-vertical $modal-inner-padding-horizontal !default;
+$modal-title-padding: 12px !default;
+$modal-title-line-height: 36px !default;
 
 $modal-footer-height: 72px !default;
 $modal-footer-desktop-height: $modal-footer-height !default;
@@ -16,13 +16,13 @@ $modal-header-desktop-height: $modal-header-height !default;
 
 $modal-box-shadow: $box-shadow-default !default;
 
-$modal-backdrop-opacity:                          0.15 !default;
+$modal-backdrop-opacity: 0.15 !default;
 
-$modal-content-border-color:                      transparent !default;
-$modal-content-fallback-border-color:             transparent !default;
+$modal-content-border-color: transparent !default;
+$modal-content-fallback-border-color: transparent !default;
 
 $modal-header-bg: #29353D !default;
-$modal-header-border-color:                       #E4E6E8 !default;
+$modal-header-border-color: #E4E6E8 !default;
 $modal-header-color: #FFF !default;
 $modal-header-close-color: #FFF !default;
 
@@ -30,7 +30,7 @@ $modal-body-bg: #F5F8F8 !default;
 $modal-body-color: $text-color !default;
 
 $modal-footer-bg: $modal-header-bg !default;
-$modal-footer-border-color:                       transparent !default;
+$modal-footer-border-color: transparent !default;
 $modal-footer-color: $modal-header-color !default;
 
 $modal-desktop-header-bg: #FCFEFF !default;
