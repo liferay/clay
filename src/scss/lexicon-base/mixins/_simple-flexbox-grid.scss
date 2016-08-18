@@ -4,8 +4,8 @@
  */
 
 @mixin break-flex-item() {
-	@include flex-basis(auto);
-
+	-ms-flex-preferred-size: auto;
+	flex-basis: auto;
 	width: 100%;
 }
 
@@ -15,9 +15,11 @@
  */
 
 @mixin stack-flex-container() {
-	@include flex-direction(column);
+	-ms-flex-direction: column;
+	flex-direction: column;
 
 	.flex-item-full {
-		@include flex-basis(auto);
+ 		-ms-flex-preferred-size: auto;
+ 		flex-basis: auto;
 	}
 }

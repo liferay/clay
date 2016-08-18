@@ -80,14 +80,14 @@
 	.sidenav-content,
 	.sidenav-menu,
 	.sidenav-menu-slider {
-		@include transition($sidenav-transition);
+		transition: $sidenav-transition;
 	}
 }
 
 // Simple Sidenav Transition
 
 .sidenav-transition {
-	@include transition($sidenav-transition);
+	transition: $sidenav-transition;
 }
 
 // Simple Sidenav
