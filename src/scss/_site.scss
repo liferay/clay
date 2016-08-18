@@ -75,9 +75,8 @@ section.row {
 	position: absolute;
 	right: 15px;
 	top: 50%;
-
-	@include transform(translateY(-50%));
-
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 	z-index: 5;
 
 	.dropdown-menu {
@@ -94,9 +93,8 @@ section.row {
 	min-width: 170px;
 	position: absolute;
 	top: 50%;
-
-	@include transform(translateY(-50%));
-
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 	z-index: -1;
 
 	&:focus {
@@ -107,26 +105,25 @@ section.row {
 .animated-toggle.navbar-toggle .icon-bar {
 	position: relative;
 	top: 0;
-
-	@include transition-delay(0s 0s 0.2s 0s);
-	@include transition-duration(0.2s);
-	@include transition-property(background, opacity, top, transform);
-	@include transition-timing-function($ease-in-out-circ);
+	transition-delay: 0s 0s 0.2s 0s;
+	transition-duration: 0.2s;
+	transition-property: background, opacity, top, transform;
+	transition-timing-function: cubic-bezier(0.785,  0.135, 0.150, 0.860);
 }
 
 .main-nav-open {
 	.animated-toggle.navbar-toggle {
 		.icon-bar:nth-of-type(even) {
 			top: 6px;
-
-			@include transform(rotate(45deg));
-			@include transition-delay(0s 0s 0s 0.2s);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+			transition-delay: 0s 0s 0s 0.2s;
 		}
 
 		.icon-bar:nth-of-type(4) {
 			top: -6px;
-
-			@include transform(rotate(-45deg));
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
 		}
 
 		.icon-bar:nth-of-type(odd) {
@@ -539,21 +536,18 @@ body.fixed {
 		}
 	}
 
-	@include keyframes(exclamationHover) {
+	@keyframes exclamationHover {
 		0% {
-			@include transform(scale(1));
+			transform: scale(1);
 		}
 
 		60% {
-			@include transform(scale(1.5));
-
 			stroke-width: 10px;
+			transform: scale(1.5);
 		}
 
 		100% {
-			fill: #EC297B;
-
-			@include transform(scale(1));
+			transform: scale(1);
 		}
 	}
 
@@ -564,8 +558,9 @@ body.fixed {
 		stroke-width: 40px;
 
 		&:hover {
-			@include animation(exclamationHover 0.25s $ease-out-back);
-			@include animation-fill-mode(both);
+			animation: exclamationHover 0.25s cubic-bezier(0.175,  0.885, 0.320, 1.275);
+			animation-fill-mode: both;
+			fill: #EC297B;
 		}
 	}
 }
@@ -739,7 +734,7 @@ $mainNavWidth: 220px;
 
 	#mainNav,
 	#mainContent {
-		@include transition(all 0.25s ease);
+		transition: all 0.25s ease;
 	}
 }
 
@@ -893,8 +888,6 @@ body.sidenav-transition {
 	}
 
 	.sidenav-main-content h3 {
-		@include background-image(linear-gradient(top, #242B39 50%, #1E2639 100%));
-
 		border-bottom: 1px solid #1E2639;
 		color: #F8F8F8;
 		margin: 0 -20px;
