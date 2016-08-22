@@ -86,9 +86,8 @@
 			font-family: 'fontawesome-alloy';
 			left: -12px;
 			position: absolute;
-
-			@include transform(translateY(-50%));
-
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
 			top: 50%;
 		}
 	}

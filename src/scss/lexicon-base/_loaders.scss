@@ -2,8 +2,7 @@
 
 .loading-icon,
 .loadingmask-message .loadingmask-message-content {
-	@include animation(loading-icon 1.7s infinite ease);
-
+	animation: loading-icon 1.7s infinite ease;
 	border-radius: 50%;
 	display: block;
 	font-size: 16px;
@@ -26,11 +25,11 @@
 	}
 }
 
-@include keyframes(loading-icon) {
+@keyframes loading-icon {
 	0% {
 		@include trailing-shadow(0, -0.83em, $loading-icon-color);
 
-		@include transform(rotate(0));
+		transform: rotate(0);
 	}
 
 	2%, 96% {
@@ -69,7 +68,7 @@
 	100% {
 		@include trailing-shadow(0, -0.83em);
 
-		@include transform(rotate(360deg));
+		transform: rotate(360deg);
 	}
 }
 
@@ -115,29 +114,55 @@
 }
 
 @keyframes loading-icon-linear {
-  0% {
-	transform: rotate(0deg);
-  }
+	0% {
+		transform: rotate(0deg);
+	}
 
-  10.99% {
-  	border-bottom-color: transparent;
-  }
+	10.99% {
+		border-bottom-color: transparent;
+	}
 
-  11% {
-  	border-bottom-color: $loading-icon-linear-color;
-  }
+	11% {
+		border-bottom-color: $loading-icon-linear-color;
+	}
 
-  66% {
-	border-bottom-color: $loading-icon-linear-color;
-  }
+	66% {
+		border-bottom-color: $loading-icon-linear-color;
+	}
 
-  66.6% {
-	border-bottom-color: transparent;
-  }
+	66.6% {
+		border-bottom-color: transparent;
+	}
 
-  66.6%, 100% {
-	transform: rotate(360deg);
-  }
+	66.6%, 100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loading-icon-linear {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	10.99% {
+		border-bottom-color: transparent;
+	}
+
+	11% {
+		border-bottom-color: $loading-icon-linear-color;
+	}
+
+	66% {
+		border-bottom-color: $loading-icon-linear-color;
+	}
+
+	66.6% {
+		border-bottom-color: transparent;
+	}
+
+	66.6%, 100% {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes loading-icon-spin {

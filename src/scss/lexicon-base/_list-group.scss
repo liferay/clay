@@ -329,9 +329,8 @@ button.list-group-heading,
 		.dropdown-menu {
 			left: 50%;
 			right: auto;
-
-			@include transform(translateX(-50%));
-
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
 			top: 100%;
 		}
 

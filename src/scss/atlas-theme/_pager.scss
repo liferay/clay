@@ -27,8 +27,7 @@
 		> span {
 			background-color: $pager-disabled-bg;
 			border-color: $pager-disabled-border;
-
-			@include opacity(0.5);
+			opacity: 0.5;
 		}
 	}
 

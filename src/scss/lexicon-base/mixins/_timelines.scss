@@ -17,8 +17,8 @@
 	.timeline-increment-icon {
 		left: auto;
 		right: -($timeline-inner-spacing + $timeline-border-modifier);
-
-		@include transform(translate(50%, -50%));
+		-ms-transform: translate(50%, -50%);
+		transform: translate(50%, -50%);
 	}
 }
 

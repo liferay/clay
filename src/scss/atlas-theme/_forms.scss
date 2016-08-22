@@ -18,8 +18,8 @@ label, .control-label {
 }
 
 select.form-control {
-	@include prefixer(appearance, none, moz webkit);
-
+	-moz-appearance: none;
+	-webkit-appearance: none;
 	background-position: right center;
 	background-repeat: no-repeat;
 	background-size: 18px auto;
