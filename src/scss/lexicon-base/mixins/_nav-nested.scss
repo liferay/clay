@@ -1,10 +1,8 @@
-/**
- * Indents each nested navigation by $indent (15px default)
- * @param $indent - amount to indent in pixels
- * @param $nest-level - number of levels to iterate
- * @param $nav-class - class name of nav element
- * @param $i - start value
- */
+// Indents each nested navigation by $indent (15px default)
+// @param $indent - amount to indent in pixels
+// @param $nest-level - number of levels to iterate
+// @param $nav-class - class name of nav element
+// @param $i - start value
 
 @mixin make-nav-nested($indent: 15px, $nest-level: 15, $nav-class: ".nav", $i: 1) {
 	@for $i from (1) through $nest-level {
