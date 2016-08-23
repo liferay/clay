@@ -1,3 +1,16 @@
+### v1.0.6 - August 23, 2016
+* Breaking: Remove Bourbon dependency from Lexicon Base and Atlas
+* New: Add lx-color-by-lightness function
+* Fix: Atlas input-group-lg help-icon should be fully underlined
+* Update: Deprecate calcLexiconIconPadding, and move global functions to having an 'lx-' prefix (and also, normalizing function name style)
+* Update: Move functions to separate file so they can be used in variables
+* Update: Move help-icon-default colors to variables and calculate color, hover color based on background
+* Update: Deprecate `size-user-icon()` mixin
+* Update: Comments to sass comments
+* Site: Header Toolbar demo sidenav should be open
+* Site: Remove Bourbon dependency from sites
+* Misc: Removing bourbon devDependencies
+
 ### v1.0.5 - August 16, 2016
 * Fix: Center linear loader icon inside button and styles should apply to anchor tags with btn class
 * Fix: Loader icon colors should change color based on theme
