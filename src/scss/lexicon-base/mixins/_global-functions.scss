@@ -1,5 +1,3 @@
-$lexicon-functions: true;
-
 // Helper for coloring hover states, compares two colors and returns a primary
 // or secondary color based on the lightness threshold between $fg and $bg
 // @param $color - Foreground color
@@ -8,7 +6,7 @@ $lexicon-functions: true;
 // secondary color, respectively
 // @param $amount - Amount to darken or lighten by
 
-@function color-by-lightness($fg, $bg, $type: primary, $amount: 30%) {
+@function lexicon-color-by-lightness($fg, $bg, $type: primary, $amount: 30%) {
 	@if not ($type == primary or $type == secondary) {
 		@error "argument `$type` of `color-by-lightness($fg, $bg, $type, $amount)` must be primary or secondary";
 	}

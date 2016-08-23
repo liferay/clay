@@ -1,6 +1,6 @@
 $help-icon-default-bg: $input-group-addon-bg !default;
-$help-icon-default-color: color-by-lightness($text-color, $help-icon-default-bg) !default;
-$help-icon-default-hover-color: color-by-lightness($text-color, $help-icon-default-bg, "secondary") !default;
+$help-icon-default-color: lexicon-color-by-lightness($text-color, $help-icon-default-bg) !default;
+$help-icon-default-hover-color: lexicon-color-by-lightness($text-color, $help-icon-default-bg, "secondary") !default;
 
 $icon-monospaced-size: 32px !default; // Shared
 
