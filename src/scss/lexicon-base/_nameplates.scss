@@ -87,9 +87,8 @@
 			position: absolute;
 			right: 5px;
 			text-align: left;
-
-			@include transform(translateY(-50%));
-
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
 			top: 50%;
 		}
 	}

@@ -17,21 +17,21 @@ $pagination-sm-item-width: $pagination-sm-item-height !default; // Atlas
 
 $pagination-border-radius: 4px !default; // Atlas
 
-$pagination-color:                         $brand-default !default;
-$pagination-bg:                            transparent !default;
-$pagination-border:                        $pagination-bg !default;
+$pagination-color: $brand-default !default;
+$pagination-bg: transparent !default;
+$pagination-border: $pagination-bg !default;
 
-$pagination-hover-color:                   $brand-default !default;
-$pagination-hover-bg:                      transparent !default;
-$pagination-hover-border:                  $pagination-hover-bg !default;
+$pagination-hover-color: $brand-default !default;
+$pagination-hover-bg: transparent !default;
+$pagination-hover-border: $pagination-hover-bg !default;
 
-$pagination-active-color:                  $brand-default !default;
-$pagination-active-bg:                     lighten($brand-default, 30%) !default;
-$pagination-active-border:                 $brand-default !default;
+$pagination-active-color: $brand-default !default;
+$pagination-active-bg: lighten($brand-default, 30%) !default;
+$pagination-active-border: $brand-default !default;
 
-$pagination-disabled-color:                $brand-default !default;
-$pagination-disabled-bg:                   transparent !default;
-$pagination-disabled-border:               $pagination-disabled-bg !default;
+$pagination-disabled-color: $brand-default !default;
+$pagination-disabled-bg: transparent !default;
+$pagination-disabled-border: $pagination-disabled-bg !default;
 
 $pagination-ellipsis-hover-color: $link-hover-color !default; // Atlas
 $pagination-ellipsis-hover-bg: transparent !default; // Atlas

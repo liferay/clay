@@ -1,5 +1,5 @@
 .modal-backdrop.in {
-	@include opacity($modal-backdrop-opacity);
+	opacity: $modal-backdrop-opacity;
 }
 
 .modal-content {
@@ -30,9 +30,7 @@
 		height: $modal-title-line-height;
 		line-height: $modal-title-line-height;
 		margin: 0;
-
-		@include opacity(1);
-
+		opacity: 1;
 		overflow: hidden;
 		text-shadow: none;
 		width: $modal-title-line-height;
@@ -41,8 +39,7 @@
 		&:focus,
 		&:hover {
 			color: $modal-header-close-color;
-
-			@include opacity(1);
+			opacity: 1;
 
 			@media screen and (min-width: $grid-float-breakpoint) {
 				color: $modal-desktop-header-close-color;

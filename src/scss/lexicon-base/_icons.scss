@@ -1,7 +1,3 @@
-@function calcLexiconIconPadding($monospaced-size, $icon-size) {
-	@return floor(($monospaced-size - $icon-size) / 2);
-}
-
 .lexicon-icon {
 	display: inline-block;
 	fill: currentColor;
@@ -82,8 +78,8 @@ a.collapse-icon {
 	.collapse-icon-open {
 		margin-top: 0;
 		top: 50%;
-
-		@include transform(translateY(-50%));
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
 	}
 }
 
@@ -163,7 +159,7 @@ a.collapse-icon {
 
 .icon-monospaced {
 	&.lexicon-icon {
-		padding: calcLexiconIconPadding($icon-monospaced-size, $lexicon-icon-size);
+		padding: lx-icon-padding($icon-monospaced-size, $lexicon-icon-size);
 	}
 
 	.lexicon-icon {
@@ -171,7 +167,7 @@ a.collapse-icon {
 
 		@include monospace($icon-monospaced-size);
 
-		padding: calcLexiconIconPadding($icon-monospaced-size, $lexicon-icon-size);
+		padding: lx-icon-padding($icon-monospaced-size, $lexicon-icon-size);
 	}
 }
 
@@ -210,11 +206,11 @@ a.collapse-icon {
 // Skins
 
 .help-icon-default {
-	background-color: $gray-lighter;
-	color: $gray-light;
+	background-color: $help-icon-default-bg;
+	color: $help-icon-default-color;
 
 	&:focus,
 	&:hover {
-		color: $gray-dark;
+		color: $help-icon-default-hover-color;
 	}
 }

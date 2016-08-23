@@ -6,7 +6,8 @@
 .list-group-item-content {
 	&.clamp-horizontal {
 		.clamp-container {
-			@include transform(none);
+			-ms-transform: none;
+			transform: none;
 		}
 	}
 
