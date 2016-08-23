@@ -1,77 +1,10 @@
 /**
-* Lexicon 1.0.5
+* Lexicon 1.0.6
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
-/* When changing any settings below, make sure to match the corresponding
-	 input-height to the button height. */
-/*** When changing input, make sure to match the corresponding
-		 btn settings to the input height. ***/
-/**
- * Calculates and sets aspect ratio
- * @param $width - width
- * @param $height - height
- */
-/**
- * @param $element - CSS Selector
- * @param $color - Placeholder Color
- */
-/**
- * @param $color - Icon Color
- */
-/**
- * Indents each nested navigation by $indent (15px default)
- * @param $indent - amount to indent in pixels
- * @param $nest-level - number of levels to iterate
- * @param $nav-class - class name of nav element
- * @param $i - start value
- */
-/**
- * Make a direct descendant of .flex-container to break to a new line, should be
- * applied to direct descendant of .flex-container
- */
-/**
- * Make .flex-container stack all its direct descendants, should be applied to
- * .flex-container
- */
-/**
- * Calculates text-indent of data-label-on and data-label-off
- * @param $toggle-switch-width - Width of switch bar
- * @param $toggle-switch-padding - Space between button and bar
- */
-/**
- * Color toggle-switch-bar
- * @param $off-bg - Switch bar off background-color
- * @param $off-border - Switch bar off border-color
- * @param $on-bg - Switch bar on background-color
- * @param $on-border - Switch bar on border-color
- */
-/**
- * Color toggle-switch-button
- * @param $button-off-bg - Switch button off background-color
- * @param $button-off-border - Switch button off border-color
- * @param $button-on-bg - Switch button on background-color
- * @param $button-on-border - Switch button on border-color
- */
-/**
- * Color icon in toggle-switch-bar
- * @param $off-color - Switch bar off icon font color
- * @param $on-color - Switch bar on icon font color
- */
-/**
- * Color icon in toggle-switch-button
- * @param $off-color - Switch button off icon font color
- * @param $on-color - Switch button on icon font color
- */
-/**
- * @param $bg-color - User icon background color
- * @param $color - User icon color
- */
-/**
- * @param $size - User icon size
- */
 header.row {
   margin: 0;
 }
@@ -151,10 +84,7 @@ section.row {
   position: absolute;
   right: 15px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 5;
 }
@@ -172,10 +102,7 @@ section.row {
   min-width: 170px;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: -1;
 }
@@ -187,38 +114,22 @@ section.row {
 .animated-toggle.navbar-toggle .icon-bar {
   position: relative;
   top: 0;
-  -webkit-transition-delay: 0s 0s 0.2s 0s;
-  -moz-transition-delay: 0s 0s 0.2s 0s;
   transition-delay: 0s 0s 0.2s 0s;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
-  -webkit-transition-property: background, opacity, top, -webkit-transform;
-  -moz-transition-property: background, opacity, top, -moz-transform;
   transition-property: background, opacity, top, transform;
-  -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -moz-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .main-nav-open .animated-toggle.navbar-toggle .icon-bar:nth-of-type(even) {
   top: 6px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  -webkit-transition-delay: 0s 0s 0s 0.2s;
-  -moz-transition-delay: 0s 0s 0s 0.2s;
   transition-delay: 0s 0s 0s 0.2s;
 }
 
 .main-nav-open .animated-toggle.navbar-toggle .icon-bar:nth-of-type(4) {
   top: -6px;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -571,56 +482,15 @@ body.fixed {
   stroke-width: 25px;
 }
 
-@-webkit-keyframes exclamationHover {
-  0% {
-    -webkit-transform: scale(1);
-  }
-  60% {
-    -webkit-transform: scale(1.5);
-    stroke-width: 10px;
-  }
-  100% {
-    fill: #EC297B;
-    -webkit-transform: scale(1);
-  }
-}
-
-@-moz-keyframes exclamationHover {
-  0% {
-    -moz-transform: scale(1);
-  }
-  60% {
-    -moz-transform: scale(1.5);
-    stroke-width: 10px;
-  }
-  100% {
-    fill: #EC297B;
-    -moz-transform: scale(1);
-  }
-}
-
 @keyframes exclamationHover {
   0% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
   60% {
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    transform: scale(1.5);
     stroke-width: 10px;
+    transform: scale(1.5);
   }
   100% {
-    fill: #EC297B;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -633,12 +503,9 @@ body.fixed {
 }
 
 .lexicon-icon-examples .lexicon-icon-exclamation-full:hover {
-  -webkit-animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
   animation-fill-mode: both;
+  fill: #EC297B;
 }
 
 .modal-open .main-nav-open {
@@ -797,8 +664,6 @@ body.fixed {
 
 .main-nav-transition #mainNav,
 .main-nav-transition #mainContent {
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
@@ -931,8 +796,6 @@ body.sidenav-transition {
 }
 
 #sidenavDemo .sidenav-main-content h3 {
-  background-image: -webkit-linear-gradient(top, #242B39 50%, #1E2639 100%);
-  background-image: linear-gradient(to bottom, #242B39 50%, #1E2639 100%);
   border-bottom: 1px solid #1E2639;
   color: #F8F8F8;
   margin: 0 -20px;
@@ -978,10 +841,13 @@ body.sidenav-transition {
   right: auto;
 }
 
-.uxgl-switches::after {
-  clear: both;
-  content: "";
+.uxgl-switches:before, .uxgl-switches:after {
+  content: " ";
   display: table;
+}
+
+.uxgl-switches:after {
+  clear: both;
 }
 
 .uxgl-switches .form-group {
