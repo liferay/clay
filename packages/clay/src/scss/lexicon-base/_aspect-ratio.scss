@@ -21,15 +21,15 @@
 .aspect-ratio-center img {
 	left: 50%;
 	right: auto;
-
-	@include transform(translateX(-50%));
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .aspect-ratio-middle img {
 	bottom: auto;
 	top: 50%;
-
-	@include transform(translateY(-50%));
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .aspect-ratio-right img {

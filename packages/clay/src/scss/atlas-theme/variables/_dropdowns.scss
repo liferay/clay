@@ -18,22 +18,22 @@ $dropdown-margin-vertical: 15px; // Atlas
 // Skin
 
 $dropdown-box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.3) !default;
-$dropdown-bg:                              #FFF !default;
-$dropdown-border:                          #DCE0E3 !default;
+$dropdown-bg: #FFF !default;
+$dropdown-border: #DCE0E3 !default;
 
-//** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:                 #DCE0E3 !default;
-$dropdown-divider-bg:                      $dropdown-border !default;
+// Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border: #DCE0E3 !default;
+$dropdown-divider-bg: $dropdown-border !default;
 
-$dropdown-link-color:                      $brand-default !default;
-$dropdown-link-hover-color:                $brand-default !default;
-$dropdown-link-hover-bg:                   #F7FAFA !default;
+$dropdown-link-color: $brand-default !default;
+$dropdown-link-hover-color: $brand-default !default;
+$dropdown-link-hover-bg: #F7FAFA !default;
 
-$dropdown-link-active-color:               $brand-primary !default;
-$dropdown-link-active-bg:                  $dropdown-link-hover-bg !default;
+$dropdown-link-active-color: $brand-primary !default;
+$dropdown-link-active-bg: $dropdown-link-hover-bg !default;
 
-$dropdown-link-disabled-color:             #CACDD2 !default;
+$dropdown-link-disabled-color: #CACDD2 !default;
 
-$dropdown-header-color:                    #B0B4BB !default;
+$dropdown-header-color: #B0B4BB !default;
 
 $dropdown-arrow-color: $dropdown-bg; // Atlas

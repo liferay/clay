@@ -16,10 +16,10 @@ $nav-tabs-default-desktop-padding-vertical: floor($nav-tabs-default-desktop-heig
 
 $nav-tabs-border-radius: 0 !default; // Atlas
 
-$nav-tabs-border-color:                           #D8D8D8 !default;
-$nav-tabs-link-hover-border-color:                transparent !default;
+$nav-tabs-border-color: #D8D8D8 !default;
+$nav-tabs-link-hover-border-color: transparent !default;
 
-$nav-tabs-active-link-hover-color:                $brand-primary !default;
-$nav-tabs-active-link-hover-border-color:         $nav-tabs-border-color !default;
+$nav-tabs-active-link-hover-color: $brand-primary !default;
+$nav-tabs-active-link-hover-border-color: $nav-tabs-border-color !default;
 
-$nav-tabs-justified-link-border-color:            $nav-tabs-border-color !default;
+$nav-tabs-justified-link-border-color: $nav-tabs-border-color !default;

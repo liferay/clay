@@ -126,8 +126,8 @@
 
 .dropdown-menu-center {
 	left: 50%;
-
-	@include transform(translateX(-50%));
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .dropdown-menu-left-side {
@@ -149,9 +149,8 @@
 	left: auto;
 	margin: 0 2px 0 0;
 	right: 100%;
-
-	@include transform(translateY(-50%));
-
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 	top: 50%;
 }
 
@@ -171,9 +170,8 @@
 .dropdown-menu-right-side-middle {
 	left: 100%;
 	margin: 0 0 0 2px;
-
-	@include transform(translateY(-50%));
-
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 	top: 50%;
 }
 
@@ -188,9 +186,8 @@
 	bottom: 100%;
 	left: 50%;
 	margin-bottom: 2px;
-
-	@include transform(translateX(-50%));
-
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 	top: auto;
 }
 
@@ -328,7 +325,8 @@
 	.dropdown-menu-right-side-middle,
 	.dropdown-menu-top-center {
 		@media screen and (max-width: $grid-float-breakpoint-max) {
-			@include transform(none);
+			-ms-transform: none;
+			transform: none;
 		}
 	}
 }

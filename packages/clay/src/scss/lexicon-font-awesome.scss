@@ -2,4 +2,6 @@ $icon-font-path: "../fonts/";
 
 @import "../fonts/alloy-font-awesome/scss/font-awesome";
 
+@import "lexicon-base/mixins/global-functions";
+
 @import "lexicon-base/main";

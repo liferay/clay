@@ -1,23 +1,21 @@
-/**
- * Make a direct descendant of .flex-container to break to a new line, should be
- * applied to direct descendant of .flex-container
- */
+// Make a direct descendant of .flex-container to break to a new line, should be
+// applied to direct descendant of .flex-container
 
 @mixin break-flex-item() {
-	@include flex-basis(auto);
-
+	-ms-flex-preferred-size: auto;
+	flex-basis: auto;
 	width: 100%;
 }
 
-/**
- * Make .flex-container stack all its direct descendants, should be applied to
- * .flex-container
- */
+// Make .flex-container stack all its direct descendants, should be applied to
+// .flex-container
 
 @mixin stack-flex-container() {
-	@include flex-direction(column);
+	-ms-flex-direction: column;
+	flex-direction: column;
 
 	.flex-item-full {
-		@include flex-basis(auto);
+ 		-ms-flex-preferred-size: auto;
+ 		flex-basis: auto;
 	}
 }

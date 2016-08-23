@@ -61,9 +61,8 @@
 		left: -($timeline-inner-spacing - $timeline-border-modifier);
 		position: absolute;
 		top: 50%;
-
-		@include transform(translate(-50%, -50%));
-
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 		z-index: 1;
 	}
 }
@@ -106,6 +105,7 @@
 				position: absolute;
 				text-align: right;
 				top: 50%;
+				-ms-transform: translateY(-50%);
 				transform: translateY(-50%);
 				width: 100%;
 			}

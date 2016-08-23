@@ -19,9 +19,9 @@ $pager-sm-padding-vertical: $pager-padding-base-vertical !default; // Atlas
 
 // Skin
 
-$pager-border-radius:                      $pagination-border-radius !default;
+$pager-border-radius: $pagination-border-radius !default;
 
-$pager-border:                             $pagination-border !default;
+$pager-border: $pagination-border !default;
 
 $pager-color: $pagination-color !default; // Atlas
 
@@ -31,4 +31,4 @@ $pager-hover-color: $pagination-hover-color !default; // Atlas
 
 $pager-disabled-bg: $pagination-disabled-bg !default; // Atlas
 $pager-disabled-border: $pagination-disabled-border !default; // Atlas
-$pager-disabled-color:                     $pagination-disabled-color !default;
+$pager-disabled-color: $pagination-disabled-color !default;

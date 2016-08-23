@@ -2,8 +2,6 @@ var path = require('path');
 var gulpsmith = require('gulpsmith');
 var gulpFrontMatter = require('gulp-front-matter');
 
-var bourbon = require('node-bourbon');
-
 var define = require('metalsmith-define');
 var encodeHTML = require('metalsmith-encode-html');
 var markdown = require('metalsmith-markdown');
@@ -134,7 +132,6 @@ module.exports = function(gulp, plugins, _, config) {
 						.use(
 							sass(
 								{
-									includePaths: bourbon.includePaths,
 									outputDir: function(dir) {
 										return dir.replace(/^scss(\/|$)/, 'css$1');
 									},

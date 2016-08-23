@@ -92,11 +92,11 @@
 
 .basic-search-transition {
 	&:after {
-		@include transition(all 0.1s ease);
+		transition: all 0.1s ease;
 	}
 
 	.basic-search-slider {
-		@include transition(left 0.5s ease, right 0.5s ease);
+		transition: left 0.5s ease, right 0.5s ease;
 	}
 }
 
