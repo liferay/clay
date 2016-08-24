@@ -89,27 +89,36 @@
 
 // Modal Buttons
 
-.modal-header {
-	.modal-primary-action-button,
-	.close {
-		-webkit-appearance: none;
-		background-color: transparent;
-		border-width: 0;
-		color: #000;
-		cursor: pointer;
-		opacity: 0.2;
-		padding: 0;
+.modal-primary-action-button {
+	@extend .close;
+}
 
-		&:focus,
-		&:hover {
-			background-color: transparent;
-			border-width: 0;
-			color: #000;
-			opacity: 0.5;
-		}
+.close.btn-default {
+	background-color: transparent;
+	background-image: none;
+	box-shadow: none;
+
+	&:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:hover {
+		background-color: transparent;
+		background-image: none;
+		border: 0;
+		color: inherit;
 	}
 
+	&:active:focus,
+	&:active:hover {
+		border-color: transparent;
+		box-shadow: none;
+	}
+}
+
+.modal-header {
 	.close {
+		color: $modal-header-close-color;
 		float: left;
 		margin-right: 10px;
 
@@ -122,6 +131,8 @@
 	.modal-primary-action-button {
 		float: right;
 		margin-left: 10px;
+		margin-top: -1px;
+		padding: 0;
 	}
 }
 
@@ -219,18 +230,9 @@
 .modal-inverse {
 	a,
 	.btn-link,
-	.close {
+	.close,
+	.close.btn-default:active:focus {
 		color: $modal-inverse-link-color;
-	}
-
-	.close {
-		opacity: 0.5;
-		text-shadow: 0 1px 0 $modal-inverse-header-border-color;
-
-		&:focus,
-		&:hover {
-			opacity: 1;
-		}
 	}
 
 	.modal-content {
