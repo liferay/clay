@@ -12,8 +12,11 @@
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		background-color: $modal-desktop-footer-bg;
-		color: $modal-desktop-footer-color;
 		position: relative;
+
+		&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $modal-desktop-footer-color;
+		}
 	}
 }
 
@@ -22,7 +25,10 @@
 
 	@media screen and (min-width: $grid-float-breakpoint) {
 		background-color: $modal-desktop-header-bg;
-		color: $modal-desktop-header-color;
+
+		&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $modal-desktop-header-color;
+		}
 	}
 
 	.close {
@@ -115,7 +121,10 @@ h6.modal-title {
 		@media screen and (min-width: $grid-float-breakpoint) {
 			background-color: $modal-inverse-desktop-footer-bg;
 			border-color: $modal-inverse-desktop-footer-border-color;
-			color: $modal-inverse-desktop-footer-color;
+
+			&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+				color: $modal-inverse-desktop-footer-color;
+			}
 		}
 	}
 
@@ -123,7 +132,10 @@ h6.modal-title {
 		@media screen and (min-width: $grid-float-breakpoint) {
 			background-color: $modal-inverse-desktop-header-bg;
 			border-color: $modal-inverse-desktop-header-border-color;
-			color: $modal-inverse-desktop-header-color;
+
+			&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+				color: $modal-inverse-desktop-header-color;
+			}
 		}
 	}
 
