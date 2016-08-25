@@ -144,6 +144,15 @@ section.row {
 	background-color: transparent;
 }
 
+.uxgl-toggle-code {
+	+ .collapse,
+	+ .collapsing {
+		pre {
+			margin-bottom: 0;
+		}
+	}
+}
+
 // Alerts Page
 
 .uxgl-alerts {
