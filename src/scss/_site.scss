@@ -297,7 +297,8 @@ body.fixed {
 			text-align: center;
 
 			&:nth-child(odd) {
-				background-color: #EEE;
+				background-color: $navbar-default-bg;
+				color: $navbar-default-color;
 			}
 		}
 	}
