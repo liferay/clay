@@ -10,7 +10,7 @@
 	box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15);
 	position: absolute;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		background-color: $modal-desktop-footer-bg;
 		color: $modal-desktop-footer-color;
 		position: relative;
@@ -20,7 +20,7 @@
 .modal-header {
 	text-align: center;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		background-color: $modal-desktop-header-bg;
 		color: $modal-desktop-header-color;
 	}
@@ -41,7 +41,7 @@
 			color: $modal-header-close-color;
 			opacity: 1;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				color: $modal-desktop-header-close-color;
 			}
 		}
@@ -60,7 +60,7 @@
 h1.modal-title {
 	font-size: $font-size-h1;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h1;
 	}
 }
@@ -68,7 +68,7 @@ h1.modal-title {
 h2.modal-title {
 	font-size: $font-size-h2;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h2;
 	}
 }
@@ -76,7 +76,7 @@ h2.modal-title {
 h3.modal-title {
 	font-size: $font-size-h3;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h3;
 	}
 }
@@ -84,7 +84,7 @@ h3.modal-title {
 h4.modal-title {
 	font-size: $font-size-h4;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h4;
 	}
 }
@@ -92,7 +92,7 @@ h4.modal-title {
 h5.modal-title {
 	font-size: $font-size-h5;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h5;
 	}
 }
@@ -100,7 +100,7 @@ h5.modal-title {
 h6.modal-title {
 	font-size: $font-size-h6;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h6;
 	}
 }
@@ -113,7 +113,7 @@ h6.modal-title {
 	}
 
 	.modal-footer {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			background-color: $modal-inverse-desktop-footer-bg;
 			border-color: $modal-inverse-desktop-footer-border-color;
 			color: $modal-inverse-desktop-footer-color;
@@ -121,14 +121,14 @@ h6.modal-title {
 	}
 
 	.modal-header {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			background-color: $modal-inverse-desktop-header-bg;
 			border-color: $modal-inverse-desktop-header-border-color;
 			color: $modal-inverse-desktop-header-color;
 		}
 
 		.close {
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				color: $modal-inverse-desktop-header-close-color;
 			}
 		}

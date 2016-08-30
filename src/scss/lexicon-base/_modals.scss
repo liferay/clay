@@ -2,7 +2,7 @@
 	background-color: $modal-body-bg;
 	color: $modal-body-color;
 
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		bottom: $modal-footer-height;
 		left: 0;
 		overflow: auto;
@@ -39,7 +39,7 @@
 .modal-content {
 	overflow: auto;
 
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		border-radius: 0;
 		border-width: 0;
 		box-shadow: none;
@@ -48,7 +48,7 @@
 }
 
 .modal-dialog {
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		bottom: 0;
 		left: 0;
 		margin: 0;
@@ -66,7 +66,7 @@
 	clear: both;
 	text-align: left;
 
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		bottom: 0;
 		position: absolute;
 		left: 0;
@@ -113,7 +113,7 @@
 		float: left;
 		margin-right: 10px;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			float: right;
 			margin-right: 0;
 		}
@@ -151,7 +151,7 @@
 	top: 0;
 	width: auto;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		bottom: 45px;
 		left: 45px;
 		right: 45px;
@@ -166,7 +166,7 @@
 		right: 0;
 		top: $modal-header-height;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			bottom: $modal-desktop-footer-height;
 			top: $modal-desktop-header-height;
 		}
@@ -197,7 +197,7 @@
 		border-width: 0;
 		height: 100%;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			border-radius: 6px;
 			border-width: 1px;
 		}
@@ -210,7 +210,7 @@
 		right: 0;
 		top: auto;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			padding: $modal-inner-padding;
 		}
 	}
