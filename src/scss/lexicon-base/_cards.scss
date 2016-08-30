@@ -17,13 +17,13 @@
 		.card-col-content,
 		.card-col-field {
 			&:first-child {
-				border-top-left-radius: $card-border-radius;
 				border-bottom-left-radius: $card-border-radius;
+				border-top-left-radius: $card-border-radius;
 			}
 
 			&:last-child {
-				border-top-right-radius: $card-border-radius;
 				border-bottom-right-radius: $card-border-radius;
+				border-top-right-radius: $card-border-radius;
 			}
 		}
 	}
@@ -167,13 +167,13 @@
 	.card-col-content,
 	.card-col-field {
 		&:first-child {
-			border-top-left-radius: $card-circle-border-radius;
 			border-bottom-left-radius: $card-circle-border-radius;
+			border-top-left-radius: $card-circle-border-radius;
 		}
 
 		&:last-child {
-			border-top-right-radius: $card-circle-border-radius;
 			border-bottom-right-radius: $card-circle-border-radius;
+			border-top-right-radius: $card-circle-border-radius;
 		}
 	}
 }
@@ -184,13 +184,13 @@
 	.card-col-content,
 	.card-col-field {
 		&:first-child {
-			border-top-left-radius: $card-rounded-border-radius;
 			border-bottom-left-radius: $card-rounded-border-radius;
+			border-top-left-radius: $card-rounded-border-radius;
 		}
 
 		&:last-child {
-			border-top-right-radius: $card-rounded-border-radius;
 			border-bottom-right-radius: $card-rounded-border-radius;
+			border-top-right-radius: $card-rounded-border-radius;
 		}
 	}
 }
@@ -201,13 +201,13 @@
 	.card-col-content,
 	.card-col-field {
 		&:first-child {
-			border-top-left-radius: $card-square-border-radius;
 			border-bottom-left-radius: $card-square-border-radius;
+			border-top-left-radius: $card-square-border-radius;
 		}
 
 		&:last-child {
-			border-top-right-radius: $card-square-border-radius;
 			border-bottom-right-radius: $card-square-border-radius;
+			border-top-right-radius: $card-square-border-radius;
 		}
 	}
 }
