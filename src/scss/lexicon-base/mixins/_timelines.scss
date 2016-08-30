@@ -28,7 +28,7 @@
 	}
 
 	&.timeline-center {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			padding-left: 0;
 
 			.timeline-item {
@@ -54,7 +54,7 @@
 
 	&.timeline-even .timeline-item:nth-of-type(even),
 	&.timeline-odd .timeline-item:nth-of-type(odd) {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			padding-right: $inner-spacing;
 
 			.timeline-increment-icon {
@@ -81,7 +81,7 @@
 	}
 
 	&.timeline-right-xs-only {
-		@media screen and (max-width: $screen-xs-max) {
+		@media (max-width: $screen-xs-max) {
 			padding-left: 0;
 			padding-right: $outer-spacing;
 

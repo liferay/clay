@@ -3,7 +3,7 @@
 .header-toolbar {
 	font-size: 16px;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: 19px;
 	}
 
@@ -15,7 +15,7 @@
 	.toolbar-group-right {
 		height: $header-toolbar-height;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			height: $header-toolbar-desktop-height;
 		}
 	}
@@ -23,7 +23,7 @@
 	.toolbar-group-expand-text {
 		line-height: $header-toolbar-height;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			line-height: $header-toolbar-desktop-height;
 		}
 

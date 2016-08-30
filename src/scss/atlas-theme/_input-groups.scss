@@ -96,7 +96,7 @@
 		line-height: $input-mobile-height-base;
 		width: 30px;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			height: $input-height-base;
 			line-height: $input-height-base;
 		}
