@@ -133,7 +133,7 @@
 	}
 }
 
-@media screen and (min-width: $grid-float-breakpoint) {
+@media (min-width: $grid-float-breakpoint) {
 	.pagination-bar .pagination {
 		> li {
 			display: inline-block;

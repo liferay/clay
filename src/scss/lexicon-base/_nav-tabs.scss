@@ -2,6 +2,7 @@
 	0% {
 		transform: translateX(-100%);
 	}
+
 	100% {
 		transform: translateX(0);
 	}
@@ -11,6 +12,7 @@
 	0% {
 		transform: translateY(-100%);
 	}
+
 	100% {
 		transform: translateY(0);
 	}
@@ -20,6 +22,7 @@
 	0% {
 		border-bottom-color: #D8D8D8;
 	}
+
 	100% {
 		border-bottom-color: transparent;
 	}
@@ -29,12 +32,13 @@
 	0% {
 		opacity: 0.25;
 	}
+
 	100% {
 		opacity: 1;
 	}
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) {
+@media (max-width: $grid-float-breakpoint-max) {
 	.nav-tabs-scrollbar {
 		$ease-out-quint: cubic-bezier(0.230,  1.000, 0.320, 1.000);
 		$anim-key-frames: dropHeader 0.5s $ease-out-quint, removeBorder 0.75s $ease-out-quint;
@@ -76,7 +80,7 @@
 		&.open {
 			display: block;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				display: none;
 			}
 		}
@@ -85,7 +89,7 @@
 	.open > .dropdown-menu {
 		display: none;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			display: block;
 		}
 	}
@@ -95,7 +99,7 @@
 	.nav {
 		float: left;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			float: none;
 		}
 	}
@@ -190,7 +194,7 @@
 	}
 }
 
-@media screen and (max-width: $grid-float-breakpoint-max) {
+@media (max-width: $grid-float-breakpoint-max) {
 	.nav-tabs-scroll .nav-tabs-default {
 		> li {
 			&:first-child > a {

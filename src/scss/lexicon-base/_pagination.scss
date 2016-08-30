@@ -76,7 +76,7 @@
 	}
 }
 
-@media screen and (min-width: $grid-float-breakpoint) {
+@media (min-width: $grid-float-breakpoint) {
 	.pagination-bar .pagination {
 		float: right;
 		margin: 0;

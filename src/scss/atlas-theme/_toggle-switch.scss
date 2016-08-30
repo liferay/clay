@@ -1,4 +1,4 @@
-@media screen and (min-width: $grid-float-breakpoint) {
+@media (min-width: $grid-float-breakpoint) {
 	.toggle-switch-bar {
 		.toggle-switch-handle {
 			min-width: $toggle-switch-bar-desktop-width;
