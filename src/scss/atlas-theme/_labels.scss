@@ -1,19 +1,19 @@
 .label {
 	font-weight: 500;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $label-desktop-font-size;
 	}
 }
 
 .label-lg {
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $label-lg-desktop-font-size;
 	}
 }
 
 .label-sm {
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $label-sm-desktop-font-size;
 	}
 }

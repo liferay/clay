@@ -1,14 +1,17 @@
 .modal-body {
 	background-color: $modal-body-bg;
-	color: $modal-body-color;
 
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		bottom: $modal-footer-height;
 		left: 0;
 		overflow: auto;
 		position: absolute;
 		right: 0;
 		top: $modal-header-height;
+	}
+
+	&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		color: $modal-body-color;
 	}
 
 	&.inline-scroller {
@@ -39,7 +42,7 @@
 .modal-content {
 	overflow: auto;
 
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		border-radius: 0;
 		border-width: 0;
 		box-shadow: none;
@@ -48,7 +51,7 @@
 }
 
 .modal-dialog {
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		bottom: 0;
 		left: 0;
 		margin: 0;
@@ -62,22 +65,28 @@
 .modal-footer {
 	background-color: $modal-footer-bg;
 	border-color: $modal-footer-border-color;
-	color: $modal-footer-color;
 	clear: both;
 	text-align: left;
 
-	@media screen and (max-width: $grid-float-breakpoint-max) {
+	@media (max-width: $grid-float-breakpoint-max) {
 		bottom: 0;
-		position: absolute;
 		left: 0;
+		position: absolute;
 		right: 0;
+	}
+
+	&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		color: $modal-footer-color;
 	}
 }
 
 .modal-header {
 	background-color: $modal-header-bg;
 	border-color: $modal-header-border-color;
-	color: $modal-header-color;
+
+	&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		color: $modal-header-color;
+	}
 }
 
 .modal-title {
@@ -89,31 +98,40 @@
 
 // Modal Buttons
 
-.modal-header {
-	.modal-primary-action-button,
-	.close {
-		-webkit-appearance: none;
-		background-color: transparent;
-		border-width: 0;
-		color: #000;
-		cursor: pointer;
-		opacity: 0.2;
-		padding: 0;
+.modal-primary-action-button {
+	@extend .close;
+}
 
-		&:focus,
-		&:hover {
-			background-color: transparent;
-			border-width: 0;
-			color: #000;
-			opacity: 0.5;
-		}
+.close.btn-default {
+	background-color: transparent;
+	background-image: none;
+	box-shadow: none;
+
+	&:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:hover {
+		background-color: transparent;
+		background-image: none;
+		border-width: 0;
+		color: inherit;
 	}
 
+	&:active:focus,
+	&:active:hover {
+		border-color: transparent;
+		box-shadow: none;
+	}
+}
+
+.modal-header {
 	.close {
+		color: $modal-header-close-color;
 		float: left;
 		margin-right: 10px;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			float: right;
 			margin-right: 0;
 		}
@@ -122,6 +140,8 @@
 	.modal-primary-action-button {
 		float: right;
 		margin-left: 10px;
+		margin-top: -1px;
+		padding: 0;
 	}
 }
 
@@ -151,7 +171,7 @@
 	top: 0;
 	width: auto;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		bottom: 45px;
 		left: 45px;
 		right: 45px;
@@ -166,7 +186,7 @@
 		right: 0;
 		top: $modal-header-height;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			bottom: $modal-desktop-footer-height;
 			top: $modal-desktop-header-height;
 		}
@@ -176,9 +196,9 @@
 		padding: 0;
 
 		iframe {
-			height: 100%;
 			border-width: 0;
 			float: left;
+			height: 100%;
 			width: 100%;
 		}
 	}
@@ -197,7 +217,7 @@
 		border-width: 0;
 		height: 100%;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			border-radius: 6px;
 			border-width: 1px;
 		}
@@ -210,7 +230,7 @@
 		right: 0;
 		top: auto;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			padding: $modal-inner-padding;
 		}
 	}
@@ -219,18 +239,9 @@
 .modal-inverse {
 	a,
 	.btn-link,
-	.close {
+	.close,
+	.close.btn-default:active:focus {
 		color: $modal-inverse-link-color;
-	}
-
-	.close {
-		opacity: 0.5;
-		text-shadow: 0 1px 0 $modal-inverse-header-border-color;
-
-		&:focus,
-		&:hover {
-			opacity: 1;
-		}
 	}
 
 	.modal-content {
@@ -240,18 +251,27 @@
 
 	.modal-body {
 		background-color: $modal-inverse-body-bg;
-		color: $modal-inverse-body-color;
+
+		&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $modal-inverse-body-color;
+		}
 	}
 
 	.modal-header {
 		background-color: $modal-inverse-header-bg;
 		border-color: $modal-inverse-header-border-color;
-		color: $modal-inverse-header-color;
+
+		&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $modal-inverse-header-color;
+		}
 	}
 
 	.modal-footer {
 		background-color: $modal-inverse-footer-bg;
 		border-color: $modal-inverse-footer-border-color;
-		color: $modal-inverse-footer-color;
+
+		&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $modal-inverse-footer-color;
+		}
 	}
 }
