@@ -1,5 +1,5 @@
 /**
-* Lexicon 1.0.6
+* Lexicon 1.0.7
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -59,7 +59,7 @@ section.row {
   margin-top: 14px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #headerTopBar .title {
     margin-left: 18px;
   }
@@ -149,6 +149,11 @@ section.row {
   background-color: transparent;
 }
 
+.uxgl-toggle-code + .collapse pre,
+.uxgl-toggle-code + .collapsing pre {
+  margin-bottom: 0;
+}
+
 .uxgl-alerts .alert {
   margin-bottom: 5px;
 }
@@ -157,7 +162,7 @@ section.row {
   margin-top: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #alertNotifications .lexicon-site-display-container {
     float: left;
     margin-right: 15px;
@@ -187,7 +192,7 @@ body.fixed {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   #blogActions .tabular-list-group .list-group-item .list-group-item-content:first-child,
   #blogActions .tabular-list-group .list-group-item .list-group-item-field:first-child {
     display: none;
@@ -274,7 +279,8 @@ body.fixed {
 }
 
 .uxgl-horizontal-card .card-row [class*="card-col"]:nth-child(odd) {
-  background-color: #EEE;
+  background-color: #f8f8f8;
+  color: #777;
 }
 
 .uxgl-card-section .card {
@@ -325,13 +331,13 @@ body.fixed {
   clear: both;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #documentsAndMediaSidenav .container-fluid-1280.sidenav-container {
     padding-left: 15px;
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media (min-width: 1300px) {
   #documentsAndMediaSidenav.closed .container-fluid-1280.sidenav-container {
     padding-right: 15px;
   }
@@ -422,14 +428,14 @@ body.fixed {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 321px) {
+@media (min-width: 321px) {
   .font-awesome-icons-list li {
     float: left;
     width: 50%;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .font-awesome-icons-list li, .lexicon-icon-list li {
     float: left;
     padding: 5px;
@@ -583,7 +589,7 @@ body.fixed {
   top: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .lexicon-site-body-fixed {
     position: static;
   }
@@ -594,13 +600,13 @@ body.fixed {
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #mainContent {
     padding-left: 240px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   [dir="rtl"] #mainContent {
     padding-left: 0;
     padding-right: 240px;
@@ -614,7 +620,7 @@ body.fixed {
   width: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #mainNav {
     visibility: visible;
     width: 220px;
@@ -636,7 +642,7 @@ body.fixed {
   overflow-x: hidden;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .main-nav-open {
     overflow-x: visible;
   }
@@ -651,7 +657,7 @@ body.fixed {
   left: 230px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .main-nav-open #mainContent {
     left: auto;
     position: static;
@@ -855,7 +861,7 @@ body.sidenav-transition {
   width: 50%;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .uxgl-switches .form-group {
     width: 115px;
   }
@@ -883,25 +889,25 @@ body.sidenav-transition {
   margin: 2em 0;
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .uxgl-lg-newline-demo {
     background-color: #FFFEDC;
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .uxgl-md-newline-demo {
     background-color: #FFFEDC;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .uxgl-sm-newline-demo {
     background-color: #FFFEDC;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .uxgl-xs-newline-demo {
     background-color: #FFFEDC;
   }

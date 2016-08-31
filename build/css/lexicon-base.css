@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.6
+* Lexicon 1.0.7
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -5824,8 +5824,9 @@ a.thumbnail.active {
   padding-right: 35px;
 }
 
-.alert-dismissable .close,
-.alert-dismissible .close {
+.alert-dismissable .close, .alert-dismissable .modal-primary-action-button,
+.alert-dismissible .close,
+.alert-dismissible .modal-primary-action-button {
   position: relative;
   top: -2px;
   right: -21px;
@@ -6742,7 +6743,7 @@ button.list-group-item-danger.active:focus {
   border-radius: 3px;
 }
 
-.close {
+.close, .modal-primary-action-button {
   float: right;
   font-size: 21px;
   font-weight: bold;
@@ -6753,7 +6754,7 @@ button.list-group-item-danger.active:focus {
   filter: alpha(opacity=20);
 }
 
-.close:hover, .close:focus {
+.close:hover, .modal-primary-action-button:hover, .close:focus, .modal-primary-action-button:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -6761,7 +6762,7 @@ button.list-group-item-danger.active:focus {
   filter: alpha(opacity=50);
 }
 
-button.close {
+button.close, button.modal-primary-action-button {
   padding: 0;
   cursor: pointer;
   background: transparent;
@@ -6853,7 +6854,7 @@ button.close {
   min-height: 16.42857143px;
 }
 
-.modal-header .close {
+.modal-header .close, .modal-header .modal-primary-action-button {
   margin-top: -2px;
 }
 
@@ -7757,7 +7758,7 @@ button.close {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .alert-notification {
     max-width: 280px;
   }
@@ -7915,7 +7916,7 @@ button.close {
   white-space: nowrap;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .breadcrumb > li {
     max-width: 300px;
   }
@@ -8009,6 +8010,22 @@ button.close {
   position: relative;
 }
 
+.card .card-col-content:first-child,
+.card .card-col-field:first-child,
+.card-horizontal .card-col-content:first-child,
+.card-horizontal .card-col-field:first-child {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.card .card-col-content:last-child,
+.card .card-col-field:last-child,
+.card-horizontal .card-col-content:last-child,
+.card-horizontal .card-col-field:last-child {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
 .card .card-row,
 .card-horizontal .card-row {
   width: 100%;
@@ -8053,7 +8070,7 @@ button.close {
   max-width: 10px;
   position: relative;
   width: auto;
-  word-break: break-all \;
+  word-break: break-all \9;
   word-wrap: break-word;
 }
 
@@ -8140,12 +8157,14 @@ button.close {
 
 .card-circle .card-col-content:first-child,
 .card-circle .card-col-field:first-child {
-  border-radius: 20px 0 0 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .card-circle .card-col-content:last-child,
 .card-circle .card-col-field:last-child {
-  border-radius: 0 20px 20px 0;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .card-rounded {
@@ -8154,12 +8173,14 @@ button.close {
 
 .card-rounded .card-col-content:first-child,
 .card-rounded .card-col-field:first-child {
-  border-radius: 4px 0 0 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
 }
 
 .card-rounded .card-col-content:last-child,
 .card-rounded .card-col-field:last-child {
-  border-radius: 0 4px 4px 0;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .card-square {
@@ -8168,12 +8189,14 @@ button.close {
 
 .card-square .card-col-content:first-child,
 .card-square .card-col-field:first-child {
-  border-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .card-square .card-col-content:last-child,
 .card-square .card-col-field:last-child {
-  border-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .checkbox-card,
@@ -8297,7 +8320,7 @@ button.close {
   transform: translateY(-50%);
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .clamp-all,
   .clamp-all-scroll {
     overflow: hidden;
@@ -8312,14 +8335,14 @@ button.close {
   top: 0;
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .clamp-all .clamp-container,
   .clamp-all-scroll .clamp-container {
     bottom: auto;
   }
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .clamp-all-scroll {
     overflow: auto;
   }
@@ -8374,7 +8397,7 @@ button.close {
   overflow: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .dropdown-menu {
     max-height: 320px;
   }
@@ -8617,7 +8640,7 @@ button.close {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .dropdown-full .dropdown-menu,
   .dropdown-wide .dropdown-menu {
     max-height: none;
@@ -8626,7 +8649,7 @@ button.close {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .dropdown-full .dropdown-menu [class*="col-sm"],
   .dropdown-full .dropdown-menu [class*="col-md"],
   .dropdown-full .dropdown-menu [class*="col-lg"],
@@ -8648,19 +8671,19 @@ button.close {
   border-bottom-width: 0;
 }
 
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .dropdown-wide .dropdown-menu {
     min-width: 500px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .dropdown-wide .dropdown-menu:after, .dropdown-wide .dropdown-menu:before {
     border-bottom-width: 0;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .dropdown-wide,
   .nav > li.dropdown-wide {
     position: relative;
@@ -8680,7 +8703,7 @@ button.close {
   border-top-right-radius: 4px;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar-nav .dropdown-menu-center, .management-bar-nav .dropdown-menu-center,
   .navbar-nav .dropdown-menu-left-side-middle, .management-bar-nav .dropdown-menu-left-side-middle,
   .navbar-nav .dropdown-menu-right-side-middle, .management-bar-nav .dropdown-menu-right-side-middle,
@@ -8899,7 +8922,390 @@ a.collapse-icon {
   padding: 8px;
 }
 
-.icon-monospaced .icon-caret-bottom-right, .icon-monospaced .icon-glass, .icon-monospaced .icon-music, .icon-monospaced .icon-search, .icon-monospaced .icon-envelope, .icon-monospaced .icon-heart, .icon-monospaced .icon-star, .icon-monospaced .icon-star-empty, .icon-monospaced .icon-user, .icon-monospaced .icon-film, .icon-monospaced .icon-th-large, .icon-monospaced .icon-th, .icon-monospaced .icon-th-list, .icon-monospaced .icon-ok, .icon-monospaced .icon-remove, .icon-monospaced .icon-zoom-in, .icon-monospaced .icon-zoom-out, .icon-monospaced .icon-off, .icon-monospaced .icon-signal, .icon-monospaced .icon-cog, .icon-monospaced .icon-trash, .icon-monospaced .icon-home, .icon-monospaced .icon-file, .icon-monospaced .icon-inbox, .icon-monospaced .icon-play-circle, .icon-monospaced .icon-repeat, .icon-monospaced .icon-refresh, .icon-monospaced .icon-list-alt, .icon-monospaced .icon-lock, .icon-monospaced .icon-flag, .icon-monospaced .icon-headphones, .icon-monospaced .icon-volume-off, .icon-monospaced .icon-volume-down, .icon-monospaced .icon-volume-up, .icon-monospaced .icon-qrcode, .icon-monospaced .icon-barcode, .icon-monospaced .icon-tag, .icon-monospaced .icon-tags, .icon-monospaced .icon-book, .icon-monospaced .icon-bookmark, .icon-monospaced .icon-print, .icon-monospaced .icon-camera, .icon-monospaced .icon-font, .icon-monospaced .icon-bold, .icon-monospaced .icon-italic, .icon-monospaced .icon-align-justify, .icon-monospaced .icon-list, .icon-monospaced .icon-indent-left, .icon-monospaced .icon-indent-right, .icon-monospaced .icon-facetime-video, .icon-monospaced .icon-picture, .icon-monospaced .icon-pencil, .icon-monospaced .icon-map-marker, .icon-monospaced .icon-adjust, .icon-monospaced .icon-tint, .icon-monospaced .icon-edit, .icon-monospaced .icon-share, .icon-monospaced .icon-check, .icon-monospaced .icon-move, .icon-monospaced .icon-step-backward, .icon-monospaced .icon-fast-backward, .icon-monospaced .icon-backward, .icon-monospaced .icon-play, .icon-monospaced .icon-pause, .icon-monospaced .icon-stop, .icon-monospaced .icon-forward, .icon-monospaced .icon-fast-forward, .icon-monospaced .icon-minus-sign, .icon-monospaced .icon-remove-sign, .icon-monospaced .icon-ok-sign, .icon-monospaced .icon-question-sign, .icon-monospaced .icon-info-sign, .icon-monospaced .icon-screenshot, .icon-monospaced .icon-remove-circle, .icon-monospaced .icon-ok-circle, .icon-monospaced .icon-ban-circle, .icon-monospaced .icon-arrow-left, .icon-monospaced .icon-arrow-right, .icon-monospaced .icon-arrow-up, .icon-monospaced .icon-arrow-down, .icon-monospaced .icon-share-alt, .icon-monospaced .icon-resize-full, .icon-monospaced .icon-resize-small, .icon-monospaced .icon-plus, .icon-monospaced .icon-minus, .icon-monospaced .icon-asterisk, .icon-monospaced .icon-exclamation-sign, .icon-monospaced .icon-gift, .icon-monospaced .icon-leaf, .icon-monospaced .icon-calendar, .icon-monospaced .icon-random, .icon-monospaced .icon-comment, .icon-monospaced .icon-magnet, .icon-monospaced .icon-chevron-up, .icon-monospaced .icon-chevron-down, .icon-monospaced .icon-retweet, .icon-monospaced .icon-shopping-cart, .icon-monospaced .icon-folder-close, .icon-monospaced .icon-folder-open, .icon-monospaced .icon-resize-vertical, .icon-monospaced .icon-resize-horizontal, .icon-monospaced .icon-bar-chart, .icon-monospaced .icon-twitter-sign, .icon-monospaced .icon-facebook-sign, .icon-monospaced .icon-camera-retro, .icon-monospaced .icon-key, .icon-monospaced .icon-cogs, .icon-monospaced .icon-comments, .icon-monospaced .icon-thumbs-up, .icon-monospaced .icon-thumbs-down, .icon-monospaced .icon-star-half, .icon-monospaced .icon-signin, .icon-monospaced .icon-trophy, .icon-monospaced .icon-github-sign, .icon-monospaced .icon-upload-alt, .icon-monospaced .icon-lemon, .icon-monospaced .icon-phone, .icon-monospaced .icon-check-empty, .icon-monospaced .icon-bookmark-empty, .icon-monospaced .icon-phone-sign, .icon-monospaced .icon-twitter, .icon-monospaced .icon-facebook, .icon-monospaced .icon-github, .icon-monospaced .icon-unlock, .icon-monospaced .icon-credit, .icon-monospaced .icon-rss, .icon-monospaced .icon-hdd, .icon-monospaced .icon-bullhorn, .icon-monospaced .icon-bell, .icon-monospaced .icon-certificate, .icon-monospaced .icon-hand-right, .icon-monospaced .icon-hand-left, .icon-monospaced .icon-hand-up, .icon-monospaced .icon-globe, .icon-monospaced .icon-wrench, .icon-monospaced .icon-tasks, .icon-monospaced .icon-filter, .icon-monospaced .icon-briefcase, .icon-monospaced .icon-fullscreen, .icon-monospaced .icon-group, .icon-monospaced .icon-link, .icon-monospaced .icon-cloud, .icon-monospaced .icon-beaker, .icon-monospaced .icon-cut, .icon-monospaced .icon-copy, .icon-monospaced .icon-paper-clip, .icon-monospaced .icon-save, .icon-monospaced .icon-sign-blank, .icon-monospaced .icon-reorder, .icon-monospaced .icon-list-ul, .icon-monospaced .icon-list-ol, .icon-monospaced .icon-strikethrough, .icon-monospaced .icon-underline, .icon-monospaced .icon-table, .icon-monospaced .icon-magic, .icon-monospaced .icon-money, .icon-monospaced .icon-caret-down, .icon-monospaced .icon-caret-up, .icon-monospaced .icon-caret-left, .icon-monospaced .icon-caret-right, .icon-monospaced .icon-columns, .icon-monospaced .icon-sort, .icon-monospaced .icon-sort-down, .icon-monospaced .icon-sort-up, .icon-monospaced .icon-envelope-alt, .icon-monospaced .icon-linkedin, .icon-monospaced .icon-undo, .icon-monospaced .icon-legal, .icon-monospaced .icon-dashboard, .icon-monospaced .icon-comment-alt, .icon-monospaced .icon-comments-alt, .icon-monospaced .icon-bolt, .icon-monospaced .icon-sitemap, .icon-monospaced .icon-umbrella, .icon-monospaced .icon-paste, .icon-monospaced .icon-lightbulb, .icon-monospaced .icon-exchange, .icon-monospaced .icon-bell-alt, .icon-monospaced .icon-coffee, .icon-monospaced .icon-food, .icon-monospaced .icon-file-alt, .icon-monospaced .icon-building, .icon-monospaced .icon-hospital, .icon-monospaced .icon-ambulance, .icon-monospaced .icon-medkit, .icon-monospaced .icon-fighter-jet, .icon-monospaced .icon-beer, .icon-monospaced .icon-h-sign, .icon-monospaced .icon-plus-sign, .icon-monospaced .icon-double-angle-left, .icon-monospaced .icon-double-angle-right, .icon-monospaced .icon-double-angle-up, .icon-monospaced .icon-double-angle-down, .icon-monospaced .icon-angle-left, .icon-monospaced .icon-angle-right, .icon-monospaced .icon-angle-up, .icon-monospaced .icon-angle-down, .icon-monospaced .icon-desktop, .icon-monospaced .icon-laptop, .icon-monospaced .icon-spinner, .icon-monospaced .icon-circle, .icon-monospaced .icon-reply, .icon-monospaced .icon-github-alt, .icon-monospaced .icon-folder-close-alt, .icon-monospaced .icon-folder-open-alt, .icon-monospaced .icon-expand-alt, .icon-monospaced .icon-collapse-alt, .icon-monospaced .icon-smile, .icon-monospaced .icon-frown, .icon-monospaced .icon-meh, .icon-monospaced .icon-gamepad, .icon-monospaced .icon-keyboard, .icon-monospaced .icon-flag-alt, .icon-monospaced .icon-flag-checkered, .icon-monospaced .icon-terminal, .icon-monospaced .icon-code, .icon-monospaced .icon-reply-all, .icon-monospaced .icon-star-half-full, .icon-monospaced .icon-location-arrow, .icon-monospaced .icon-crop, .icon-monospaced .icon-code-fork, .icon-monospaced .icon-subscript, .icon-monospaced .icon-eraser, .icon-monospaced .icon-puzzle, .icon-monospaced .icon-microphone, .icon-monospaced .icon-microphone-off, .icon-monospaced .icon-shield, .icon-monospaced .icon-calendar-empty, .icon-monospaced .icon-fire-extinguisher, .icon-monospaced .icon-rocket, .icon-monospaced .icon-maxcdn, .icon-monospaced .icon-chevron-sign-left, .icon-monospaced .icon-chevron-sign-right, .icon-monospaced .icon-chevron-sign-up, .icon-monospaced .icon-chevron-sign-down, .icon-monospaced .icon-html5, .icon-monospaced .icon-css3, .icon-monospaced .icon-anchor, .icon-monospaced .icon-unlock-alt, .icon-monospaced .icon-bullseye, .icon-monospaced .icon-ellipsis-horizontal, .icon-monospaced .icon-ellipsis-vertical, .icon-monospaced .icon-rss-sign, .icon-monospaced .icon-fb-boolean, .icon-monospaced .icon-text-height, .icon-monospaced .icon-text-width, .icon-monospaced .icon-align-left, .icon-monospaced .icon-align-center, .icon-monospaced .icon-align-right, .icon-monospaced .icon-step-forward, .icon-monospaced .icon-eject, .icon-monospaced .icon-chevron-left, .icon-monospaced .icon-chevron-right, .icon-monospaced .icon-plus-sign-2, .icon-monospaced .icon-fire, .icon-monospaced .icon-eye-open, .icon-monospaced .icon-eye-close, .icon-monospaced .icon-warning-sign, .icon-monospaced .icon-plane, .icon-monospaced .icon-heart-empty, .icon-monospaced .icon-signout, .icon-monospaced .icon-linkedin-sign, .icon-monospaced .icon-pushpin, .icon-monospaced .icon-external-link, .icon-monospaced .icon-hand-down, .icon-monospaced .icon-circle-arrow-left, .icon-monospaced .icon-circle-arrow-right, .icon-monospaced .icon-circle-arrow-up, .icon-monospaced .icon-circle-arrow-down, .icon-monospaced .icon-truck, .icon-monospaced .icon-pinterest, .icon-monospaced .icon-pinterest-sign, .icon-monospaced .icon-google-plus-sign, .icon-monospaced .icon-google-plus, .icon-monospaced .icon-cloud-download, .icon-monospaced .icon-cloud-upload, .icon-monospaced .icon-user-md, .icon-monospaced .icon-stethoscope, .icon-monospaced .icon-suitcase, .icon-monospaced .icon-tablet, .icon-monospaced .icon-mobile, .icon-monospaced .icon-circle-blank, .icon-monospaced .icon-quote-left, .icon-monospaced .icon-quote-right, .icon-monospaced .icon-unlink, .icon-monospaced .icon-question, .icon-monospaced .icon-info, .icon-monospaced .icon-exclamation, .icon-monospaced .icon-superscript, .icon-monospaced .icon-play-sign, .icon-monospaced .icon-ticket, .icon-monospaced .icon-minus-sign-alt, .icon-monospaced .icon-check-minus, .icon-monospaced .icon-level-up, .icon-monospaced .icon-sort-by-attributes-alt, .icon-monospaced .icon-sort-by-order, .icon-monospaced .icon-sort-by-order-alt, .icon-monospaced .icon-thumbs-up-2, .icon-monospaced .icon-thumbs-down-2, .icon-monospaced .icon-dribbble, .icon-monospaced .icon-skype, .icon-monospaced .icon-foursquare, .icon-monospaced .icon-trello, .icon-monospaced .icon-female, .icon-monospaced .icon-level-down, .icon-monospaced .icon-check-sign, .icon-monospaced .icon-edit-sign, .icon-monospaced .icon-external-link-sign, .icon-monospaced .icon-share-sign, .icon-monospaced .icon-compass, .icon-monospaced .icon-collapse, .icon-monospaced .icon-collapse-top, .icon-monospaced .icon-expand, .icon-monospaced .icon-euro, .icon-monospaced .icon-gbp, .icon-monospaced .icon-dollar, .icon-monospaced .icon-rupee, .icon-monospaced .icon-yen, .icon-monospaced .icon-renminbi, .icon-monospaced .icon-won, .icon-monospaced .icon-bitcoin, .icon-monospaced .icon-file-2, .icon-monospaced .icon-file-text, .icon-monospaced .icon-sort-by-alphabet, .icon-monospaced .icon-sort-by-alphabet-alt, .icon-monospaced .icon-sort-by-attributes, .icon-monospaced .icon-youtube-sign, .icon-monospaced .icon-youtube, .icon-monospaced .icon-xing, .icon-monospaced .icon-xing-sign, .icon-monospaced .icon-youtube-play, .icon-monospaced .icon-dropbox, .icon-monospaced .icon-stackexchange, .icon-monospaced .icon-instagram, .icon-monospaced .icon-flickr, .icon-monospaced .icon-adn, .icon-monospaced .icon-bitbucket, .icon-monospaced .icon-bitbucket-sign, .icon-monospaced .icon-tumblr, .icon-monospaced .icon-tumblr-sign, .icon-monospaced .icon-long-arrow-down, .icon-monospaced .icon-long-arrow-up, .icon-monospaced .icon-long-arrow-left, .icon-monospaced .icon-long-arrow-right, .icon-monospaced .icon-apple, .icon-monospaced .icon-windows, .icon-monospaced .icon-android, .icon-monospaced .icon-linux, .icon-monospaced .icon-male, .icon-monospaced .icon-gittip, .icon-monospaced .icon-sun, .icon-monospaced .icon-moon, .icon-monospaced .icon-archive, .icon-monospaced .icon-bug, .icon-monospaced .icon-vk, .icon-monospaced .icon-weibo, .icon-monospaced .icon-renren, .icon-monospaced .icon-time, .icon-monospaced .icon-road, .icon-monospaced .icon-download-alt, .icon-monospaced .icon-download, .icon-monospaced .icon-upload, .icon-monospaced .icon-db-joinxor, .icon-monospaced .icon-db-state, .icon-monospaced .icon-db-start, .icon-monospaced .icon-db-end, .icon-monospaced .icon-db-fork, .icon-monospaced .icon-db-condition, .icon-monospaced .icon-db-task, .icon-monospaced .icon-db-join, .icon-monospaced .icon-fb-button, .icon-monospaced .icon-fb-fieldset, .icon-monospaced .icon-fb-custom-field, .icon-monospaced .icon-fb-separator, .icon-monospaced .icon-fb-paragraph, .icon-monospaced .icon-fb-file-upload, .icon-monospaced .icon-fb-text, .icon-monospaced .icon-fb-text-box, .icon-monospaced .icon-fb-select, .icon-monospaced .icon-fb-radio, .icon-monospaced .icon-fb-number, .icon-monospaced .icon-fb-integer, .icon-monospaced .icon-fb-decimal {
+.icon-caret-bottom-right.icon-monospaced,
+.icon-monospaced .icon-caret-bottom-right, .icon-glass.icon-monospaced,
+.icon-monospaced .icon-glass, .icon-music.icon-monospaced,
+.icon-monospaced .icon-music, .icon-search.icon-monospaced,
+.icon-monospaced .icon-search, .icon-envelope.icon-monospaced,
+.icon-monospaced .icon-envelope, .icon-heart.icon-monospaced,
+.icon-monospaced .icon-heart, .icon-star.icon-monospaced,
+.icon-monospaced .icon-star, .icon-star-empty.icon-monospaced,
+.icon-monospaced .icon-star-empty, .icon-user.icon-monospaced,
+.icon-monospaced .icon-user, .icon-film.icon-monospaced,
+.icon-monospaced .icon-film, .icon-th-large.icon-monospaced,
+.icon-monospaced .icon-th-large, .icon-th.icon-monospaced,
+.icon-monospaced .icon-th, .icon-th-list.icon-monospaced,
+.icon-monospaced .icon-th-list, .icon-ok.icon-monospaced,
+.icon-monospaced .icon-ok, .icon-remove.icon-monospaced,
+.icon-monospaced .icon-remove, .icon-zoom-in.icon-monospaced,
+.icon-monospaced .icon-zoom-in, .icon-zoom-out.icon-monospaced,
+.icon-monospaced .icon-zoom-out, .icon-off.icon-monospaced,
+.icon-monospaced .icon-off, .icon-signal.icon-monospaced,
+.icon-monospaced .icon-signal, .icon-cog.icon-monospaced,
+.icon-monospaced .icon-cog, .icon-trash.icon-monospaced,
+.icon-monospaced .icon-trash, .icon-home.icon-monospaced,
+.icon-monospaced .icon-home, .icon-file.icon-monospaced,
+.icon-monospaced .icon-file, .icon-inbox.icon-monospaced,
+.icon-monospaced .icon-inbox, .icon-play-circle.icon-monospaced,
+.icon-monospaced .icon-play-circle, .icon-repeat.icon-monospaced,
+.icon-monospaced .icon-repeat, .icon-refresh.icon-monospaced,
+.icon-monospaced .icon-refresh, .icon-list-alt.icon-monospaced,
+.icon-monospaced .icon-list-alt, .icon-lock.icon-monospaced,
+.icon-monospaced .icon-lock, .icon-flag.icon-monospaced,
+.icon-monospaced .icon-flag, .icon-headphones.icon-monospaced,
+.icon-monospaced .icon-headphones, .icon-volume-off.icon-monospaced,
+.icon-monospaced .icon-volume-off, .icon-volume-down.icon-monospaced,
+.icon-monospaced .icon-volume-down, .icon-volume-up.icon-monospaced,
+.icon-monospaced .icon-volume-up, .icon-qrcode.icon-monospaced,
+.icon-monospaced .icon-qrcode, .icon-barcode.icon-monospaced,
+.icon-monospaced .icon-barcode, .icon-tag.icon-monospaced,
+.icon-monospaced .icon-tag, .icon-tags.icon-monospaced,
+.icon-monospaced .icon-tags, .icon-book.icon-monospaced,
+.icon-monospaced .icon-book, .icon-bookmark.icon-monospaced,
+.icon-monospaced .icon-bookmark, .icon-print.icon-monospaced,
+.icon-monospaced .icon-print, .icon-camera.icon-monospaced,
+.icon-monospaced .icon-camera, .icon-font.icon-monospaced,
+.icon-monospaced .icon-font, .icon-bold.icon-monospaced,
+.icon-monospaced .icon-bold, .icon-italic.icon-monospaced,
+.icon-monospaced .icon-italic, .icon-align-justify.icon-monospaced,
+.icon-monospaced .icon-align-justify, .icon-list.icon-monospaced,
+.icon-monospaced .icon-list, .icon-indent-left.icon-monospaced,
+.icon-monospaced .icon-indent-left, .icon-indent-right.icon-monospaced,
+.icon-monospaced .icon-indent-right, .icon-facetime-video.icon-monospaced,
+.icon-monospaced .icon-facetime-video, .icon-picture.icon-monospaced,
+.icon-monospaced .icon-picture, .icon-pencil.icon-monospaced,
+.icon-monospaced .icon-pencil, .icon-map-marker.icon-monospaced,
+.icon-monospaced .icon-map-marker, .icon-adjust.icon-monospaced,
+.icon-monospaced .icon-adjust, .icon-tint.icon-monospaced,
+.icon-monospaced .icon-tint, .icon-edit.icon-monospaced,
+.icon-monospaced .icon-edit, .icon-share.icon-monospaced,
+.icon-monospaced .icon-share, .icon-check.icon-monospaced,
+.icon-monospaced .icon-check, .icon-move.icon-monospaced,
+.icon-monospaced .icon-move, .icon-step-backward.icon-monospaced,
+.icon-monospaced .icon-step-backward, .icon-fast-backward.icon-monospaced,
+.icon-monospaced .icon-fast-backward, .icon-backward.icon-monospaced,
+.icon-monospaced .icon-backward, .icon-play.icon-monospaced,
+.icon-monospaced .icon-play, .icon-pause.icon-monospaced,
+.icon-monospaced .icon-pause, .icon-stop.icon-monospaced,
+.icon-monospaced .icon-stop, .icon-forward.icon-monospaced,
+.icon-monospaced .icon-forward, .icon-fast-forward.icon-monospaced,
+.icon-monospaced .icon-fast-forward, .icon-minus-sign.icon-monospaced,
+.icon-monospaced .icon-minus-sign, .icon-remove-sign.icon-monospaced,
+.icon-monospaced .icon-remove-sign, .icon-ok-sign.icon-monospaced,
+.icon-monospaced .icon-ok-sign, .icon-question-sign.icon-monospaced,
+.icon-monospaced .icon-question-sign, .icon-info-sign.icon-monospaced,
+.icon-monospaced .icon-info-sign, .icon-screenshot.icon-monospaced,
+.icon-monospaced .icon-screenshot, .icon-remove-circle.icon-monospaced,
+.icon-monospaced .icon-remove-circle, .icon-ok-circle.icon-monospaced,
+.icon-monospaced .icon-ok-circle, .icon-ban-circle.icon-monospaced,
+.icon-monospaced .icon-ban-circle, .icon-arrow-left.icon-monospaced,
+.icon-monospaced .icon-arrow-left, .icon-arrow-right.icon-monospaced,
+.icon-monospaced .icon-arrow-right, .icon-arrow-up.icon-monospaced,
+.icon-monospaced .icon-arrow-up, .icon-arrow-down.icon-monospaced,
+.icon-monospaced .icon-arrow-down, .icon-share-alt.icon-monospaced,
+.icon-monospaced .icon-share-alt, .icon-resize-full.icon-monospaced,
+.icon-monospaced .icon-resize-full, .icon-resize-small.icon-monospaced,
+.icon-monospaced .icon-resize-small, .icon-plus.icon-monospaced,
+.icon-monospaced .icon-plus, .icon-minus.icon-monospaced,
+.icon-monospaced .icon-minus, .icon-asterisk.icon-monospaced,
+.icon-monospaced .icon-asterisk, .icon-exclamation-sign.icon-monospaced,
+.icon-monospaced .icon-exclamation-sign, .icon-gift.icon-monospaced,
+.icon-monospaced .icon-gift, .icon-leaf.icon-monospaced,
+.icon-monospaced .icon-leaf, .icon-calendar.icon-monospaced,
+.icon-monospaced .icon-calendar, .icon-random.icon-monospaced,
+.icon-monospaced .icon-random, .icon-comment.icon-monospaced,
+.icon-monospaced .icon-comment, .icon-magnet.icon-monospaced,
+.icon-monospaced .icon-magnet, .icon-chevron-up.icon-monospaced,
+.icon-monospaced .icon-chevron-up, .icon-chevron-down.icon-monospaced,
+.icon-monospaced .icon-chevron-down, .icon-retweet.icon-monospaced,
+.icon-monospaced .icon-retweet, .icon-shopping-cart.icon-monospaced,
+.icon-monospaced .icon-shopping-cart, .icon-folder-close.icon-monospaced,
+.icon-monospaced .icon-folder-close, .icon-folder-open.icon-monospaced,
+.icon-monospaced .icon-folder-open, .icon-resize-vertical.icon-monospaced,
+.icon-monospaced .icon-resize-vertical, .icon-resize-horizontal.icon-monospaced,
+.icon-monospaced .icon-resize-horizontal, .icon-bar-chart.icon-monospaced,
+.icon-monospaced .icon-bar-chart, .icon-twitter-sign.icon-monospaced,
+.icon-monospaced .icon-twitter-sign, .icon-facebook-sign.icon-monospaced,
+.icon-monospaced .icon-facebook-sign, .icon-camera-retro.icon-monospaced,
+.icon-monospaced .icon-camera-retro, .icon-key.icon-monospaced,
+.icon-monospaced .icon-key, .icon-cogs.icon-monospaced,
+.icon-monospaced .icon-cogs, .icon-comments.icon-monospaced,
+.icon-monospaced .icon-comments, .icon-thumbs-up.icon-monospaced,
+.icon-monospaced .icon-thumbs-up, .icon-thumbs-down.icon-monospaced,
+.icon-monospaced .icon-thumbs-down, .icon-star-half.icon-monospaced,
+.icon-monospaced .icon-star-half, .icon-signin.icon-monospaced,
+.icon-monospaced .icon-signin, .icon-trophy.icon-monospaced,
+.icon-monospaced .icon-trophy, .icon-github-sign.icon-monospaced,
+.icon-monospaced .icon-github-sign, .icon-upload-alt.icon-monospaced,
+.icon-monospaced .icon-upload-alt, .icon-lemon.icon-monospaced,
+.icon-monospaced .icon-lemon, .icon-phone.icon-monospaced,
+.icon-monospaced .icon-phone, .icon-check-empty.icon-monospaced,
+.icon-monospaced .icon-check-empty, .icon-bookmark-empty.icon-monospaced,
+.icon-monospaced .icon-bookmark-empty, .icon-phone-sign.icon-monospaced,
+.icon-monospaced .icon-phone-sign, .icon-twitter.icon-monospaced,
+.icon-monospaced .icon-twitter, .icon-facebook.icon-monospaced,
+.icon-monospaced .icon-facebook, .icon-github.icon-monospaced,
+.icon-monospaced .icon-github, .icon-unlock.icon-monospaced,
+.icon-monospaced .icon-unlock, .icon-credit.icon-monospaced,
+.icon-monospaced .icon-credit, .icon-rss.icon-monospaced,
+.icon-monospaced .icon-rss, .icon-hdd.icon-monospaced,
+.icon-monospaced .icon-hdd, .icon-bullhorn.icon-monospaced,
+.icon-monospaced .icon-bullhorn, .icon-bell.icon-monospaced,
+.icon-monospaced .icon-bell, .icon-certificate.icon-monospaced,
+.icon-monospaced .icon-certificate, .icon-hand-right.icon-monospaced,
+.icon-monospaced .icon-hand-right, .icon-hand-left.icon-monospaced,
+.icon-monospaced .icon-hand-left, .icon-hand-up.icon-monospaced,
+.icon-monospaced .icon-hand-up, .icon-globe.icon-monospaced,
+.icon-monospaced .icon-globe, .icon-wrench.icon-monospaced,
+.icon-monospaced .icon-wrench, .icon-tasks.icon-monospaced,
+.icon-monospaced .icon-tasks, .icon-filter.icon-monospaced,
+.icon-monospaced .icon-filter, .icon-briefcase.icon-monospaced,
+.icon-monospaced .icon-briefcase, .icon-fullscreen.icon-monospaced,
+.icon-monospaced .icon-fullscreen, .icon-group.icon-monospaced,
+.icon-monospaced .icon-group, .icon-link.icon-monospaced,
+.icon-monospaced .icon-link, .icon-cloud.icon-monospaced,
+.icon-monospaced .icon-cloud, .icon-beaker.icon-monospaced,
+.icon-monospaced .icon-beaker, .icon-cut.icon-monospaced,
+.icon-monospaced .icon-cut, .icon-copy.icon-monospaced,
+.icon-monospaced .icon-copy, .icon-paper-clip.icon-monospaced,
+.icon-monospaced .icon-paper-clip, .icon-save.icon-monospaced,
+.icon-monospaced .icon-save, .icon-sign-blank.icon-monospaced,
+.icon-monospaced .icon-sign-blank, .icon-reorder.icon-monospaced,
+.icon-monospaced .icon-reorder, .icon-list-ul.icon-monospaced,
+.icon-monospaced .icon-list-ul, .icon-list-ol.icon-monospaced,
+.icon-monospaced .icon-list-ol, .icon-strikethrough.icon-monospaced,
+.icon-monospaced .icon-strikethrough, .icon-underline.icon-monospaced,
+.icon-monospaced .icon-underline, .icon-table.icon-monospaced,
+.icon-monospaced .icon-table, .icon-magic.icon-monospaced,
+.icon-monospaced .icon-magic, .icon-money.icon-monospaced,
+.icon-monospaced .icon-money, .icon-caret-down.icon-monospaced,
+.icon-monospaced .icon-caret-down, .icon-caret-up.icon-monospaced,
+.icon-monospaced .icon-caret-up, .icon-caret-left.icon-monospaced,
+.icon-monospaced .icon-caret-left, .icon-caret-right.icon-monospaced,
+.icon-monospaced .icon-caret-right, .icon-columns.icon-monospaced,
+.icon-monospaced .icon-columns, .icon-sort.icon-monospaced,
+.icon-monospaced .icon-sort, .icon-sort-down.icon-monospaced,
+.icon-monospaced .icon-sort-down, .icon-sort-up.icon-monospaced,
+.icon-monospaced .icon-sort-up, .icon-envelope-alt.icon-monospaced,
+.icon-monospaced .icon-envelope-alt, .icon-linkedin.icon-monospaced,
+.icon-monospaced .icon-linkedin, .icon-undo.icon-monospaced,
+.icon-monospaced .icon-undo, .icon-legal.icon-monospaced,
+.icon-monospaced .icon-legal, .icon-dashboard.icon-monospaced,
+.icon-monospaced .icon-dashboard, .icon-comment-alt.icon-monospaced,
+.icon-monospaced .icon-comment-alt, .icon-comments-alt.icon-monospaced,
+.icon-monospaced .icon-comments-alt, .icon-bolt.icon-monospaced,
+.icon-monospaced .icon-bolt, .icon-sitemap.icon-monospaced,
+.icon-monospaced .icon-sitemap, .icon-umbrella.icon-monospaced,
+.icon-monospaced .icon-umbrella, .icon-paste.icon-monospaced,
+.icon-monospaced .icon-paste, .icon-lightbulb.icon-monospaced,
+.icon-monospaced .icon-lightbulb, .icon-exchange.icon-monospaced,
+.icon-monospaced .icon-exchange, .icon-bell-alt.icon-monospaced,
+.icon-monospaced .icon-bell-alt, .icon-coffee.icon-monospaced,
+.icon-monospaced .icon-coffee, .icon-food.icon-monospaced,
+.icon-monospaced .icon-food, .icon-file-alt.icon-monospaced,
+.icon-monospaced .icon-file-alt, .icon-building.icon-monospaced,
+.icon-monospaced .icon-building, .icon-hospital.icon-monospaced,
+.icon-monospaced .icon-hospital, .icon-ambulance.icon-monospaced,
+.icon-monospaced .icon-ambulance, .icon-medkit.icon-monospaced,
+.icon-monospaced .icon-medkit, .icon-fighter-jet.icon-monospaced,
+.icon-monospaced .icon-fighter-jet, .icon-beer.icon-monospaced,
+.icon-monospaced .icon-beer, .icon-h-sign.icon-monospaced,
+.icon-monospaced .icon-h-sign, .icon-plus-sign.icon-monospaced,
+.icon-monospaced .icon-plus-sign, .icon-double-angle-left.icon-monospaced,
+.icon-monospaced .icon-double-angle-left, .icon-double-angle-right.icon-monospaced,
+.icon-monospaced .icon-double-angle-right, .icon-double-angle-up.icon-monospaced,
+.icon-monospaced .icon-double-angle-up, .icon-double-angle-down.icon-monospaced,
+.icon-monospaced .icon-double-angle-down, .icon-angle-left.icon-monospaced,
+.icon-monospaced .icon-angle-left, .icon-angle-right.icon-monospaced,
+.icon-monospaced .icon-angle-right, .icon-angle-up.icon-monospaced,
+.icon-monospaced .icon-angle-up, .icon-angle-down.icon-monospaced,
+.icon-monospaced .icon-angle-down, .icon-desktop.icon-monospaced,
+.icon-monospaced .icon-desktop, .icon-laptop.icon-monospaced,
+.icon-monospaced .icon-laptop, .icon-spinner.icon-monospaced,
+.icon-monospaced .icon-spinner, .icon-circle.icon-monospaced,
+.icon-monospaced .icon-circle, .icon-reply.icon-monospaced,
+.icon-monospaced .icon-reply, .icon-github-alt.icon-monospaced,
+.icon-monospaced .icon-github-alt, .icon-folder-close-alt.icon-monospaced,
+.icon-monospaced .icon-folder-close-alt, .icon-folder-open-alt.icon-monospaced,
+.icon-monospaced .icon-folder-open-alt, .icon-expand-alt.icon-monospaced,
+.icon-monospaced .icon-expand-alt, .icon-collapse-alt.icon-monospaced,
+.icon-monospaced .icon-collapse-alt, .icon-smile.icon-monospaced,
+.icon-monospaced .icon-smile, .icon-frown.icon-monospaced,
+.icon-monospaced .icon-frown, .icon-meh.icon-monospaced,
+.icon-monospaced .icon-meh, .icon-gamepad.icon-monospaced,
+.icon-monospaced .icon-gamepad, .icon-keyboard.icon-monospaced,
+.icon-monospaced .icon-keyboard, .icon-flag-alt.icon-monospaced,
+.icon-monospaced .icon-flag-alt, .icon-flag-checkered.icon-monospaced,
+.icon-monospaced .icon-flag-checkered, .icon-terminal.icon-monospaced,
+.icon-monospaced .icon-terminal, .icon-code.icon-monospaced,
+.icon-monospaced .icon-code, .icon-reply-all.icon-monospaced,
+.icon-monospaced .icon-reply-all, .icon-star-half-full.icon-monospaced,
+.icon-monospaced .icon-star-half-full, .icon-location-arrow.icon-monospaced,
+.icon-monospaced .icon-location-arrow, .icon-crop.icon-monospaced,
+.icon-monospaced .icon-crop, .icon-code-fork.icon-monospaced,
+.icon-monospaced .icon-code-fork, .icon-subscript.icon-monospaced,
+.icon-monospaced .icon-subscript, .icon-eraser.icon-monospaced,
+.icon-monospaced .icon-eraser, .icon-puzzle.icon-monospaced,
+.icon-monospaced .icon-puzzle, .icon-microphone.icon-monospaced,
+.icon-monospaced .icon-microphone, .icon-microphone-off.icon-monospaced,
+.icon-monospaced .icon-microphone-off, .icon-shield.icon-monospaced,
+.icon-monospaced .icon-shield, .icon-calendar-empty.icon-monospaced,
+.icon-monospaced .icon-calendar-empty, .icon-fire-extinguisher.icon-monospaced,
+.icon-monospaced .icon-fire-extinguisher, .icon-rocket.icon-monospaced,
+.icon-monospaced .icon-rocket, .icon-maxcdn.icon-monospaced,
+.icon-monospaced .icon-maxcdn, .icon-chevron-sign-left.icon-monospaced,
+.icon-monospaced .icon-chevron-sign-left, .icon-chevron-sign-right.icon-monospaced,
+.icon-monospaced .icon-chevron-sign-right, .icon-chevron-sign-up.icon-monospaced,
+.icon-monospaced .icon-chevron-sign-up, .icon-chevron-sign-down.icon-monospaced,
+.icon-monospaced .icon-chevron-sign-down, .icon-html5.icon-monospaced,
+.icon-monospaced .icon-html5, .icon-css3.icon-monospaced,
+.icon-monospaced .icon-css3, .icon-anchor.icon-monospaced,
+.icon-monospaced .icon-anchor, .icon-unlock-alt.icon-monospaced,
+.icon-monospaced .icon-unlock-alt, .icon-bullseye.icon-monospaced,
+.icon-monospaced .icon-bullseye, .icon-ellipsis-horizontal.icon-monospaced,
+.icon-monospaced .icon-ellipsis-horizontal, .icon-ellipsis-vertical.icon-monospaced,
+.icon-monospaced .icon-ellipsis-vertical, .icon-rss-sign.icon-monospaced,
+.icon-monospaced .icon-rss-sign, .icon-fb-boolean.icon-monospaced,
+.icon-monospaced .icon-fb-boolean, .icon-text-height.icon-monospaced,
+.icon-monospaced .icon-text-height, .icon-text-width.icon-monospaced,
+.icon-monospaced .icon-text-width, .icon-align-left.icon-monospaced,
+.icon-monospaced .icon-align-left, .icon-align-center.icon-monospaced,
+.icon-monospaced .icon-align-center, .icon-align-right.icon-monospaced,
+.icon-monospaced .icon-align-right, .icon-step-forward.icon-monospaced,
+.icon-monospaced .icon-step-forward, .icon-eject.icon-monospaced,
+.icon-monospaced .icon-eject, .icon-chevron-left.icon-monospaced,
+.icon-monospaced .icon-chevron-left, .icon-chevron-right.icon-monospaced,
+.icon-monospaced .icon-chevron-right, .icon-plus-sign-2.icon-monospaced,
+.icon-monospaced .icon-plus-sign-2, .icon-fire.icon-monospaced,
+.icon-monospaced .icon-fire, .icon-eye-open.icon-monospaced,
+.icon-monospaced .icon-eye-open, .icon-eye-close.icon-monospaced,
+.icon-monospaced .icon-eye-close, .icon-warning-sign.icon-monospaced,
+.icon-monospaced .icon-warning-sign, .icon-plane.icon-monospaced,
+.icon-monospaced .icon-plane, .icon-heart-empty.icon-monospaced,
+.icon-monospaced .icon-heart-empty, .icon-signout.icon-monospaced,
+.icon-monospaced .icon-signout, .icon-linkedin-sign.icon-monospaced,
+.icon-monospaced .icon-linkedin-sign, .icon-pushpin.icon-monospaced,
+.icon-monospaced .icon-pushpin, .icon-external-link.icon-monospaced,
+.icon-monospaced .icon-external-link, .icon-hand-down.icon-monospaced,
+.icon-monospaced .icon-hand-down, .icon-circle-arrow-left.icon-monospaced,
+.icon-monospaced .icon-circle-arrow-left, .icon-circle-arrow-right.icon-monospaced,
+.icon-monospaced .icon-circle-arrow-right, .icon-circle-arrow-up.icon-monospaced,
+.icon-monospaced .icon-circle-arrow-up, .icon-circle-arrow-down.icon-monospaced,
+.icon-monospaced .icon-circle-arrow-down, .icon-truck.icon-monospaced,
+.icon-monospaced .icon-truck, .icon-pinterest.icon-monospaced,
+.icon-monospaced .icon-pinterest, .icon-pinterest-sign.icon-monospaced,
+.icon-monospaced .icon-pinterest-sign, .icon-google-plus-sign.icon-monospaced,
+.icon-monospaced .icon-google-plus-sign, .icon-google-plus.icon-monospaced,
+.icon-monospaced .icon-google-plus, .icon-cloud-download.icon-monospaced,
+.icon-monospaced .icon-cloud-download, .icon-cloud-upload.icon-monospaced,
+.icon-monospaced .icon-cloud-upload, .icon-user-md.icon-monospaced,
+.icon-monospaced .icon-user-md, .icon-stethoscope.icon-monospaced,
+.icon-monospaced .icon-stethoscope, .icon-suitcase.icon-monospaced,
+.icon-monospaced .icon-suitcase, .icon-tablet.icon-monospaced,
+.icon-monospaced .icon-tablet, .icon-mobile.icon-monospaced,
+.icon-monospaced .icon-mobile, .icon-circle-blank.icon-monospaced,
+.icon-monospaced .icon-circle-blank, .icon-quote-left.icon-monospaced,
+.icon-monospaced .icon-quote-left, .icon-quote-right.icon-monospaced,
+.icon-monospaced .icon-quote-right, .icon-unlink.icon-monospaced,
+.icon-monospaced .icon-unlink, .icon-question.icon-monospaced,
+.icon-monospaced .icon-question, .icon-info.icon-monospaced,
+.icon-monospaced .icon-info, .icon-exclamation.icon-monospaced,
+.icon-monospaced .icon-exclamation, .icon-superscript.icon-monospaced,
+.icon-monospaced .icon-superscript, .icon-play-sign.icon-monospaced,
+.icon-monospaced .icon-play-sign, .icon-ticket.icon-monospaced,
+.icon-monospaced .icon-ticket, .icon-minus-sign-alt.icon-monospaced,
+.icon-monospaced .icon-minus-sign-alt, .icon-check-minus.icon-monospaced,
+.icon-monospaced .icon-check-minus, .icon-level-up.icon-monospaced,
+.icon-monospaced .icon-level-up, .icon-sort-by-attributes-alt.icon-monospaced,
+.icon-monospaced .icon-sort-by-attributes-alt, .icon-sort-by-order.icon-monospaced,
+.icon-monospaced .icon-sort-by-order, .icon-sort-by-order-alt.icon-monospaced,
+.icon-monospaced .icon-sort-by-order-alt, .icon-thumbs-up-2.icon-monospaced,
+.icon-monospaced .icon-thumbs-up-2, .icon-thumbs-down-2.icon-monospaced,
+.icon-monospaced .icon-thumbs-down-2, .icon-dribbble.icon-monospaced,
+.icon-monospaced .icon-dribbble, .icon-skype.icon-monospaced,
+.icon-monospaced .icon-skype, .icon-foursquare.icon-monospaced,
+.icon-monospaced .icon-foursquare, .icon-trello.icon-monospaced,
+.icon-monospaced .icon-trello, .icon-female.icon-monospaced,
+.icon-monospaced .icon-female, .icon-level-down.icon-monospaced,
+.icon-monospaced .icon-level-down, .icon-check-sign.icon-monospaced,
+.icon-monospaced .icon-check-sign, .icon-edit-sign.icon-monospaced,
+.icon-monospaced .icon-edit-sign, .icon-external-link-sign.icon-monospaced,
+.icon-monospaced .icon-external-link-sign, .icon-share-sign.icon-monospaced,
+.icon-monospaced .icon-share-sign, .icon-compass.icon-monospaced,
+.icon-monospaced .icon-compass, .icon-collapse.icon-monospaced,
+.icon-monospaced .icon-collapse, .icon-collapse-top.icon-monospaced,
+.icon-monospaced .icon-collapse-top, .icon-expand.icon-monospaced,
+.icon-monospaced .icon-expand, .icon-euro.icon-monospaced,
+.icon-monospaced .icon-euro, .icon-gbp.icon-monospaced,
+.icon-monospaced .icon-gbp, .icon-dollar.icon-monospaced,
+.icon-monospaced .icon-dollar, .icon-rupee.icon-monospaced,
+.icon-monospaced .icon-rupee, .icon-yen.icon-monospaced,
+.icon-monospaced .icon-yen, .icon-renminbi.icon-monospaced,
+.icon-monospaced .icon-renminbi, .icon-won.icon-monospaced,
+.icon-monospaced .icon-won, .icon-bitcoin.icon-monospaced,
+.icon-monospaced .icon-bitcoin, .icon-file-2.icon-monospaced,
+.icon-monospaced .icon-file-2, .icon-file-text.icon-monospaced,
+.icon-monospaced .icon-file-text, .icon-sort-by-alphabet.icon-monospaced,
+.icon-monospaced .icon-sort-by-alphabet, .icon-sort-by-alphabet-alt.icon-monospaced,
+.icon-monospaced .icon-sort-by-alphabet-alt, .icon-sort-by-attributes.icon-monospaced,
+.icon-monospaced .icon-sort-by-attributes, .icon-youtube-sign.icon-monospaced,
+.icon-monospaced .icon-youtube-sign, .icon-youtube.icon-monospaced,
+.icon-monospaced .icon-youtube, .icon-xing.icon-monospaced,
+.icon-monospaced .icon-xing, .icon-xing-sign.icon-monospaced,
+.icon-monospaced .icon-xing-sign, .icon-youtube-play.icon-monospaced,
+.icon-monospaced .icon-youtube-play, .icon-dropbox.icon-monospaced,
+.icon-monospaced .icon-dropbox, .icon-stackexchange.icon-monospaced,
+.icon-monospaced .icon-stackexchange, .icon-instagram.icon-monospaced,
+.icon-monospaced .icon-instagram, .icon-flickr.icon-monospaced,
+.icon-monospaced .icon-flickr, .icon-adn.icon-monospaced,
+.icon-monospaced .icon-adn, .icon-bitbucket.icon-monospaced,
+.icon-monospaced .icon-bitbucket, .icon-bitbucket-sign.icon-monospaced,
+.icon-monospaced .icon-bitbucket-sign, .icon-tumblr.icon-monospaced,
+.icon-monospaced .icon-tumblr, .icon-tumblr-sign.icon-monospaced,
+.icon-monospaced .icon-tumblr-sign, .icon-long-arrow-down.icon-monospaced,
+.icon-monospaced .icon-long-arrow-down, .icon-long-arrow-up.icon-monospaced,
+.icon-monospaced .icon-long-arrow-up, .icon-long-arrow-left.icon-monospaced,
+.icon-monospaced .icon-long-arrow-left, .icon-long-arrow-right.icon-monospaced,
+.icon-monospaced .icon-long-arrow-right, .icon-apple.icon-monospaced,
+.icon-monospaced .icon-apple, .icon-windows.icon-monospaced,
+.icon-monospaced .icon-windows, .icon-android.icon-monospaced,
+.icon-monospaced .icon-android, .icon-linux.icon-monospaced,
+.icon-monospaced .icon-linux, .icon-male.icon-monospaced,
+.icon-monospaced .icon-male, .icon-gittip.icon-monospaced,
+.icon-monospaced .icon-gittip, .icon-sun.icon-monospaced,
+.icon-monospaced .icon-sun, .icon-moon.icon-monospaced,
+.icon-monospaced .icon-moon, .icon-archive.icon-monospaced,
+.icon-monospaced .icon-archive, .icon-bug.icon-monospaced,
+.icon-monospaced .icon-bug, .icon-vk.icon-monospaced,
+.icon-monospaced .icon-vk, .icon-weibo.icon-monospaced,
+.icon-monospaced .icon-weibo, .icon-renren.icon-monospaced,
+.icon-monospaced .icon-renren, .icon-time.icon-monospaced,
+.icon-monospaced .icon-time, .icon-road.icon-monospaced,
+.icon-monospaced .icon-road, .icon-download-alt.icon-monospaced,
+.icon-monospaced .icon-download-alt, .icon-download.icon-monospaced,
+.icon-monospaced .icon-download, .icon-upload.icon-monospaced,
+.icon-monospaced .icon-upload, .icon-db-joinxor.icon-monospaced,
+.icon-monospaced .icon-db-joinxor, .icon-db-state.icon-monospaced,
+.icon-monospaced .icon-db-state, .icon-db-start.icon-monospaced,
+.icon-monospaced .icon-db-start, .icon-db-end.icon-monospaced,
+.icon-monospaced .icon-db-end, .icon-db-fork.icon-monospaced,
+.icon-monospaced .icon-db-fork, .icon-db-condition.icon-monospaced,
+.icon-monospaced .icon-db-condition, .icon-db-task.icon-monospaced,
+.icon-monospaced .icon-db-task, .icon-db-join.icon-monospaced,
+.icon-monospaced .icon-db-join, .icon-fb-button.icon-monospaced,
+.icon-monospaced .icon-fb-button, .icon-fb-fieldset.icon-monospaced,
+.icon-monospaced .icon-fb-fieldset, .icon-fb-custom-field.icon-monospaced,
+.icon-monospaced .icon-fb-custom-field, .icon-fb-separator.icon-monospaced,
+.icon-monospaced .icon-fb-separator, .icon-fb-paragraph.icon-monospaced,
+.icon-monospaced .icon-fb-paragraph, .icon-fb-file-upload.icon-monospaced,
+.icon-monospaced .icon-fb-file-upload, .icon-fb-text.icon-monospaced,
+.icon-monospaced .icon-fb-text, .icon-fb-text-box.icon-monospaced,
+.icon-monospaced .icon-fb-text-box, .icon-fb-select.icon-monospaced,
+.icon-monospaced .icon-fb-select, .icon-fb-radio.icon-monospaced,
+.icon-monospaced .icon-fb-radio, .icon-fb-number.icon-monospaced,
+.icon-monospaced .icon-fb-number, .icon-fb-integer.icon-monospaced,
+.icon-monospaced .icon-fb-integer, .icon-fb-decimal.icon-monospaced,
+.icon-monospaced .icon-fb-decimal {
   display: inline-block;
   height: 32px;
   line-height: 32px;
@@ -9004,7 +9410,7 @@ a.collapse-icon {
   display: inline-block;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .form-control {
     font-size: 16px;
   }
@@ -9362,7 +9768,7 @@ button.list-group-heading:hover,
   }
 }
 
-@media screen and (max-width: 279px) {
+@media (max-width: 279px) {
   .tabular-list-group > li,
   .tabular-list-group .list-group-item {
     display: block;
@@ -9385,7 +9791,7 @@ button.list-group-heading:hover,
   padding-right: 16px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .detailed-list-view .list-group-item-field:first-child + .list-group-item-field {
     border-left-width: 0;
   }
@@ -9401,7 +9807,7 @@ button.list-group-heading:hover,
   vertical-align: middle;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .detailed-list-view .list-group-item-content,
   .detailed-list-view .list-group-item-field {
     vertical-align: top;
@@ -9416,7 +9822,7 @@ button.list-group-heading:hover,
   vertical-align: middle;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .detailed-list-view > .active .detailed-list-view-icon:after {
     content: normal;
   }
@@ -9428,14 +9834,14 @@ button.list-group-heading:hover,
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .detailed-list-view > .active .detailed-list-view-icon > [class^="icon-"],
   .detailed-list-view > .active .detailed-list-view-icon > [class*=" icon-"] {
     display: inline;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .detailed-list-view > .active .detailed-list-view-icon > .user-icon {
     display: block;
   }
@@ -9447,7 +9853,7 @@ button.list-group-heading:hover,
   width: 34px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .detailed-list-view-icon {
     height: 48px;
     line-height: 48px;
@@ -9460,14 +9866,14 @@ button.list-group-heading:hover,
   font-size: 28px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .detailed-list-view-icon [class^="icon-"],
   .detailed-list-view-icon [class*=" icon-"] {
     font-size: 38px;
   }
 }
 
-@media screen and (max-width: 279px) {
+@media (max-width: 279px) {
   .detailed-list-view .dropdown {
     display: inline-block;
   }
@@ -9515,7 +9921,7 @@ button.list-group-heading:hover,
   font-size: 2.4em;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .list-group-card .list-group-card-icon {
     font-size: 3em;
   }
@@ -9531,7 +9937,7 @@ button.list-group-heading:hover,
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .list-group-card .list-group-card-icon > [class^="icon-"],
   .list-group-card .list-group-card-icon > [class*=" icon-"],
   .list-group-card .list-group-card-icon > .user-icon {
@@ -9557,7 +9963,7 @@ button.list-group-heading:hover,
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .list-group-card-checkbox-hidden-xs .checkbox input[type="checkbox"] {
     display: block;
   }
@@ -9576,7 +9982,7 @@ button.list-group-heading:hover,
   vertical-align: middle;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .list-group-card-checkbox-hidden-xs .checkbox input[type="checkbox"]:checked + .card .list-group-card-icon:after {
     content: normal;
   }
@@ -9588,20 +9994,20 @@ button.list-group-heading:hover,
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .list-group-card-checkbox-hidden-xs .checkbox input[type="checkbox"]:checked + .card .list-group-card-icon > [class^="icon-"],
   .list-group-card-checkbox-hidden-xs .checkbox input[type="checkbox"]:checked + .card .list-group-card-icon > [class*=" icon-"] {
     display: block;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .list-group-card-checkbox-hidden-xs .checkbox input[type="checkbox"]:checked + .card .list-group-card-icon > .user-icon {
     display: block;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .list-group-card-checkbox-hidden-xs .checkbox-bottom-left .card.flex-container,
   .list-group-card-checkbox-hidden-xs .checkbox-middle-left .card.flex-container,
   .list-group-card-checkbox-hidden-xs .checkbox-top-left .card.flex-container {
@@ -9609,7 +10015,7 @@ button.list-group-heading:hover,
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .list-group-card-checkbox-hidden-xs .checkbox-bottom-left .card-row,
   .list-group-card-checkbox-hidden-xs .checkbox-middle-left .card-row,
   .list-group-card-checkbox-hidden-xs .checkbox-top-left .card-row {
@@ -9617,7 +10023,7 @@ button.list-group-heading:hover,
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .list-group-card-checkbox-hidden-xs .checkbox-bottom-right .card.flex-container,
   .list-group-card-checkbox-hidden-xs .checkbox-middle-right .card.flex-container,
   .list-group-card-checkbox-hidden-xs .checkbox-top-right .card.flex-container {
@@ -9625,7 +10031,7 @@ button.list-group-heading:hover,
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .list-group-card-checkbox-hidden-xs .checkbox-bottom-right .card-row,
   .list-group-card-checkbox-hidden-xs .checkbox-middle-right .card-row,
   .list-group-card-checkbox-hidden-xs .checkbox-top-right .card-row {
@@ -9858,7 +10264,7 @@ button.loading > .linear.loading-animation {
   padding: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .management-bar .management-bar-collapse {
     float: left;
   }
@@ -9901,7 +10307,7 @@ button.loading > .linear.loading-animation {
   white-space: nowrap;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .management-bar-item-title {
     max-width: 150px;
   }
@@ -9928,7 +10334,7 @@ button.loading > .linear.loading-animation {
   text-decoration: none;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .management-bar-collapse {
     background-color: #fff;
     border-color: transparent;
@@ -9943,7 +10349,7 @@ button.loading > .linear.loading-animation {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .management-bar-collapse {
     clear: none;
     margin-top: 0;
@@ -10632,7 +11038,7 @@ fieldset[disabled]
   color: #777;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .management-bar-default .management-bar-collapse {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
@@ -10790,10 +11196,9 @@ fieldset[disabled]
 
 .modal-body {
   background-color: transparent;
-  color: #333333;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .modal-body {
     bottom: 64px;
     left: 0;
@@ -10802,6 +11207,10 @@ fieldset[disabled]
     right: 0;
     top: 56px;
   }
+}
+
+.modal-body, .modal-body h1, .modal-body h2, .modal-body h3, .modal-body h4, .modal-body h5, .modal-body h6, .modal-body .h1, .modal-body .h2, .modal-body .h3, .modal-body .h4, .modal-body .h5, .modal-body .h6 {
+  color: #333333;
 }
 
 .modal-body.inline-scroller {
@@ -10832,7 +11241,7 @@ fieldset[disabled]
   overflow: auto;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .modal-content {
     border-radius: 0;
     border-width: 0;
@@ -10841,7 +11250,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .modal-dialog {
     bottom: 0;
     left: 0;
@@ -10856,23 +11265,29 @@ fieldset[disabled]
 .modal-footer {
   background-color: transparent;
   border-color: #e5e5e5;
-  color: #333333;
   clear: both;
   text-align: left;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .modal-footer {
     bottom: 0;
-    position: absolute;
     left: 0;
+    position: absolute;
     right: 0;
   }
+}
+
+.modal-footer, .modal-footer h1, .modal-footer h2, .modal-footer h3, .modal-footer h4, .modal-footer h5, .modal-footer h6, .modal-footer .h1, .modal-footer .h2, .modal-footer .h3, .modal-footer .h4, .modal-footer .h5, .modal-footer .h6 {
+  color: #333333;
 }
 
 .modal-header {
   background-color: transparent;
   border-color: #e5e5e5;
+}
+
+.modal-header, .modal-header h1, .modal-header h2, .modal-header h3, .modal-header h4, .modal-header h5, .modal-header h6, .modal-header .h1, .modal-header .h2, .modal-header .h3, .modal-header .h4, .modal-header .h5, .modal-header .h6 {
   color: #333333;
 }
 
@@ -10884,33 +11299,32 @@ fieldset[disabled]
   white-space: nowrap;
 }
 
-.modal-header .modal-primary-action-button,
-.modal-header .close {
-  -webkit-appearance: none;
+.close.btn-default, .btn-default.modal-primary-action-button {
   background-color: transparent;
-  border-width: 0;
-  color: #000;
-  cursor: pointer;
-  opacity: 0.2;
-  padding: 0;
+  background-image: none;
+  box-shadow: none;
 }
 
-.modal-header .modal-primary-action-button:focus, .modal-header .modal-primary-action-button:hover,
-.modal-header .close:focus,
-.modal-header .close:hover {
+.close.btn-default:active, .btn-default.modal-primary-action-button:active, .close.btn-default:active:focus, .btn-default.modal-primary-action-button:active:focus, .close.btn-default:active:hover, .btn-default.modal-primary-action-button:active:hover, .close.btn-default:focus, .btn-default.modal-primary-action-button:focus, .close.btn-default:hover, .btn-default.modal-primary-action-button:hover {
   background-color: transparent;
+  background-image: none;
   border-width: 0;
-  color: #000;
-  opacity: 0.5;
+  color: inherit;
 }
 
-.modal-header .close {
+.close.btn-default:active:focus, .btn-default.modal-primary-action-button:active:focus, .close.btn-default:active:hover, .btn-default.modal-primary-action-button:active:hover {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.modal-header .close, .modal-header .modal-primary-action-button {
+  color: #333333;
   float: left;
   margin-right: 10px;
 }
 
-@media screen and (min-width: 768px) {
-  .modal-header .close {
+@media (min-width: 768px) {
+  .modal-header .close, .modal-header .modal-primary-action-button {
     float: right;
     margin-right: 0;
   }
@@ -10919,6 +11333,8 @@ fieldset[disabled]
 .modal-header .modal-primary-action-button {
   float: right;
   margin-left: 10px;
+  margin-top: -1px;
+  padding: 0;
 }
 
 .modal-iframe iframe {
@@ -10942,7 +11358,7 @@ fieldset[disabled]
   width: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .modal-full-screen {
     bottom: 45px;
     left: 45px;
@@ -10960,7 +11376,7 @@ fieldset[disabled]
   top: 56px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .modal-full-screen .modal-body {
     bottom: 64px;
     top: 56px;
@@ -10972,9 +11388,9 @@ fieldset[disabled]
 }
 
 .modal-full-screen .modal-body-iframe iframe {
-  height: 100%;
   border-width: 0;
   float: left;
+  height: 100%;
   width: 100%;
 }
 
@@ -10993,7 +11409,7 @@ fieldset[disabled]
   height: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .modal-full-screen .modal-content {
     border-radius: 6px;
     border-width: 1px;
@@ -11008,7 +11424,7 @@ fieldset[disabled]
   top: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .modal-full-screen .modal-footer {
     padding: 15px;
   }
@@ -11016,17 +11432,11 @@ fieldset[disabled]
 
 .modal-inverse a,
 .modal-inverse .btn-link,
-.modal-inverse .close {
+.modal-inverse .close,
+.modal-inverse .modal-primary-action-button,
+.modal-inverse .close.btn-default:active:focus,
+.modal-inverse .btn-default.modal-primary-action-button:active:focus {
   color: #9d9d9d;
-}
-
-.modal-inverse .close {
-  opacity: 0.5;
-  text-shadow: 0 1px 0 #090909;
-}
-
-.modal-inverse .close:focus, .modal-inverse .close:hover {
-  opacity: 1;
 }
 
 .modal-inverse .modal-content {
@@ -11036,18 +11446,27 @@ fieldset[disabled]
 
 .modal-inverse .modal-body {
   background-color: transparent;
+}
+
+.modal-inverse .modal-body, .modal-inverse .modal-body h1, .modal-inverse .modal-body h2, .modal-inverse .modal-body h3, .modal-inverse .modal-body h4, .modal-inverse .modal-body h5, .modal-inverse .modal-body h6, .modal-inverse .modal-body .h1, .modal-inverse .modal-body .h2, .modal-inverse .modal-body .h3, .modal-inverse .modal-body .h4, .modal-inverse .modal-body .h5, .modal-inverse .modal-body .h6 {
   color: #9d9d9d;
 }
 
 .modal-inverse .modal-header {
   background-color: transparent;
   border-color: #090909;
+}
+
+.modal-inverse .modal-header, .modal-inverse .modal-header h1, .modal-inverse .modal-header h2, .modal-inverse .modal-header h3, .modal-inverse .modal-header h4, .modal-inverse .modal-header h5, .modal-inverse .modal-header h6, .modal-inverse .modal-header .h1, .modal-inverse .modal-header .h2, .modal-inverse .modal-header .h3, .modal-inverse .modal-header .h4, .modal-inverse .modal-header .h5, .modal-inverse .modal-header .h6 {
   color: #9d9d9d;
 }
 
 .modal-inverse .modal-footer {
   background-color: transparent;
   border-color: #090909;
+}
+
+.modal-inverse .modal-footer, .modal-inverse .modal-footer h1, .modal-inverse .modal-footer h2, .modal-inverse .modal-footer h3, .modal-inverse .modal-footer h4, .modal-inverse .modal-footer h5, .modal-inverse .modal-footer h6, .modal-inverse .modal-footer .h1, .modal-inverse .modal-footer .h2, .modal-inverse .modal-footer .h3, .modal-inverse .modal-footer .h4, .modal-inverse .modal-footer .h5, .modal-inverse .modal-footer .h6 {
   color: #9d9d9d;
 }
 
@@ -11097,7 +11516,7 @@ fieldset[disabled]
   padding: 0 3px;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .nameplate-label {
     height: 32px;
     margin-right: 0;
@@ -11113,7 +11532,7 @@ fieldset[disabled]
   vertical-align: middle;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .nameplate-label .nameplate-content,
   .nameplate-label .nameplate-field {
     width: auto;
@@ -11125,7 +11544,7 @@ fieldset[disabled]
   position: relative;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .nameplate-label .nameplate-content {
     width: auto;
   }
@@ -11141,7 +11560,7 @@ fieldset[disabled]
   white-space: nowrap;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .nameplate-label .nameplate-label-text {
     left: 5px;
     max-width: none;
@@ -11488,7 +11907,7 @@ fieldset[disabled]
   padding: 8px 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .basic-search {
     max-width: 220px;
   }
@@ -11508,7 +11927,7 @@ fieldset[disabled]
   border-top-left-radius: 4px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .basic-search button[type='submit'].btn {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
@@ -11535,7 +11954,7 @@ fieldset[disabled]
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .basic-search-slider {
     left: 0;
   }
@@ -11561,7 +11980,7 @@ fieldset[disabled]
   outline: none;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .basic-search-slider .basic-search-close {
     display: none;
     line-height: normal;
@@ -11590,7 +12009,7 @@ fieldset[disabled]
   z-index: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-collapse-left {
     float: left;
   }
@@ -11600,7 +12019,7 @@ fieldset[disabled]
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .collapse-basic-search.navbar-no-collapse .navbar-nav:first-child, .collapse-basic-search.navbar-no-collapse .management-bar-nav:first-child {
     float: left;
   }
@@ -11619,7 +12038,7 @@ fieldset[disabled]
   top: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .collapse-basic-search .basic-search {
     position: static;
   }
@@ -11629,7 +12048,7 @@ fieldset[disabled]
   visibility: visible;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .collapse-basic-search .basic-search.open .basic-search-close {
     display: none;
   }
@@ -11640,14 +12059,14 @@ fieldset[disabled]
   visibility: hidden;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .collapse-basic-search .basic-search .input-group-input {
     overflow: visible;
     visibility: visible;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .collapse-basic-search .basic-search .input-group-input .form-control {
     left: auto;
   }
@@ -11657,7 +12076,7 @@ fieldset[disabled]
   padding-left: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .collapse-basic-search .basic-search .form-control {
     padding-left: 5px;
   }
@@ -11667,7 +12086,7 @@ fieldset[disabled]
   float: none;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .collapse-basic-search .navbar-nav:first-child, .collapse-basic-search .management-bar-nav:first-child {
     float: left;
   }
@@ -11679,7 +12098,7 @@ fieldset[disabled]
   z-index: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar-collapse-absolute .navbar-collapse, .navbar-collapse-absolute .management-bar-collapse {
     background-color: #fff;
     border-color: transparent;
@@ -11699,46 +12118,46 @@ fieldset[disabled]
   margin-top: 8px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-form {
     margin: 0;
     padding: 8px 0;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-form .btn {
     vertical-align: top;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-form .form-group {
     display: inline-block;
     margin-bottom: 0;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-header .input-group-input .form-control, .management-bar-header .input-group-input .form-control {
     max-width: none;
     min-width: 0;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar-header-left-xs {
     float: left;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar-header-right-xs {
     float: right;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-header-right, .management-bar-header-right {
     float: right;
   }
@@ -11751,20 +12170,20 @@ fieldset[disabled]
   padding: 8px 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-nav, .management-bar-nav {
     margin-right: 15px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-nav.navbar-right, .navbar-right.management-bar-nav {
     margin-left: 15px;
     margin-right: 0;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-nav.navbar-right:last-child, .navbar-right.management-bar-nav:last-child {
     margin-right: 0;
   }
@@ -11835,7 +12254,7 @@ fieldset[disabled]
   min-width: 100px;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar-default.navbar-collapse-absolute .navbar-collapse, .navbar-default.navbar-collapse-absolute .management-bar-collapse {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
@@ -11857,7 +12276,7 @@ fieldset[disabled]
   padding-right: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar-inverse.navbar-collapse-absolute .navbar-collapse, .navbar-inverse.navbar-collapse-absolute .management-bar-collapse {
     background-color: #222;
     border-color: #e7e7e7;
@@ -11910,7 +12329,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .nav-tabs-scrollbar {
     animation: dropHeader 0.5s cubic-bezier(0.23, 1, 0.32, 1), removeBorder 0.75s cubic-bezier(0.23, 1, 0.32, 1);
     animation-delay: 0s, 0.45s;
@@ -11951,7 +12370,7 @@ fieldset[disabled]
   display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .nav-tabs-scroll > .dropdown-menu.open {
     display: none;
   }
@@ -11961,7 +12380,7 @@ fieldset[disabled]
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .nav-tabs-scroll .open > .dropdown-menu {
     display: block;
   }
@@ -11971,7 +12390,7 @@ fieldset[disabled]
   float: left;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .nav-tabs-scrollbar .nav {
     float: none;
   }
@@ -12039,7 +12458,7 @@ fieldset[disabled]
   border-color: transparent transparent transparent #ddd;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .nav-tabs-scroll .nav-tabs-default > li:first-child > a {
     margin-left: 0;
   }
@@ -12164,7 +12583,7 @@ fieldset[disabled]
   border-top-right-radius: 3px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .pagination-bar .pagination {
     float: right;
     margin: 0;
@@ -12354,31 +12773,31 @@ fieldset[disabled]
   margin-right: 10px;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .multi-step-progress-bar-collapse {
     padding-top: 20px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .multi-step-progress-bar-collapse > li {
     width: auto;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .multi-step-progress-bar-collapse > li:last-child {
     width: 1%;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .multi-step-progress-bar-collapse > li:last-child .divider {
     width: 0;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .multi-step-progress-bar-collapse > .active .progress-bar-title {
     display: block;
     position: absolute;
@@ -12389,7 +12808,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .multi-step-progress-bar-collapse .progress-bar-title {
     display: none;
   }
@@ -12551,7 +12970,7 @@ fieldset[disabled]
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .sidenav-content {
     position: static;
   }
@@ -12701,7 +13120,7 @@ fieldset[disabled]
   align-self: flex-start;
 }
 
-@media screen and (max-width: 479px) {
+@media (max-width: 479px) {
   .flex-container-stacked-xxs {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -12712,7 +13131,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .flex-container-stacked-xs {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -12723,7 +13142,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 991px) {
+@media (max-width: 991px) {
   .flex-container-stacked-sm {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -12734,7 +13153,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .flex-container-stacked-md {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -12745,7 +13164,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .flex-container-stacked-lg {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -12756,7 +13175,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .flex-container-stacked-xs-only {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -12767,7 +13186,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .flex-container-stacked-sm-only {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -12778,7 +13197,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .flex-container-stacked-md-only {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -12789,7 +13208,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 479px) {
+@media (max-width: 479px) {
   .flex-item-break-xxs {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -12797,7 +13216,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .flex-item-break-xs {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -12805,7 +13224,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 991px) {
+@media (max-width: 991px) {
   .flex-item-break-sm {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -12813,7 +13232,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .flex-item-break-md {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -12821,7 +13240,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .flex-item-break-lg {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -12829,7 +13248,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .flex-item-break-xs-only {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -12837,7 +13256,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .flex-item-break-sm-only {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -12845,7 +13264,7 @@ fieldset[disabled]
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .flex-item-break-md-only {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -13057,7 +13476,7 @@ th {
   -webkit-overflow-scrolling: touch;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .table-responsive .table .table-cell-content {
     white-space: normal;
   }
@@ -13337,7 +13756,7 @@ th {
   transform: translate(50%, -50%);
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .timeline-right-xs-only {
     padding-left: 0;
     padding-right: 20px;
@@ -13362,7 +13781,7 @@ th {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .timeline-center {
     padding-left: 0;
   }
@@ -13407,7 +13826,7 @@ th {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .timeline-even .timeline-item:nth-of-type(even),
   .timeline-odd .timeline-item:nth-of-type(odd) {
     padding-left: 0;
@@ -13444,7 +13863,7 @@ th {
   padding-left: 25px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .timeline-spacing-xl.timeline-center {
     padding-left: 0;
   }
@@ -13463,7 +13882,7 @@ th {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .timeline-spacing-xl.timeline-even .timeline-item:nth-of-type(even),
   .timeline-spacing-xl.timeline-odd .timeline-item:nth-of-type(odd) {
     padding-right: 50px;
@@ -13491,7 +13910,7 @@ th {
   right: -51px;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .timeline-spacing-xl.timeline-right-xs-only {
     padding-left: 0;
     padding-right: 25px;
@@ -13600,7 +14019,7 @@ th {
   width: 1%;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .toolbar {
     margin-bottom: 10px;
   }
@@ -13641,7 +14060,7 @@ th {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .tbg-xs-newline {
     clear: both;
     display: block;
@@ -13649,7 +14068,7 @@ th {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .tbg-sm-newline,
   .tbg-md-newline,
   .tbg-lg-newline {
@@ -13667,7 +14086,7 @@ th {
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .tbg-md-newline,
   .tbg-lg-newline {
     margin-top: 10px;
@@ -13684,7 +14103,7 @@ th {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .tbg-lg-newline {
     clear: both;
     margin-top: 10px;
@@ -13698,7 +14117,7 @@ th {
   margin-bottom: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .header-toolbar {
     border-radius: 4px;
   }
@@ -14353,7 +14772,7 @@ th .truncate-text {
   color: #FFF;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .user-icon-xxl {
     height: 128px;
     line-height: 128px;
