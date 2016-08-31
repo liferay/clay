@@ -1,3 +1,16 @@
+### v1.0.7 - August 30, 2016
+* Fix: Word-wrap should work on card-col-content
+* Update: Horizontal card first and last columns should have border radius
+* Update: icon-monospaced should work for Font Awesome icons if class is on the same element
+* Update: Modal text should change color based on theme
+* Update: Modal Close button should change color based on theme
+* Update: Remove keyword screen from media-queries
+* Update: Use variable $default-text to set panel-default heading and footer text
+* Site: Margin on pre element throws off code panel slide animation
+* Site: Cards page use stickers inside horizontal card demos
+* Site: _site.scss doesn't use atlas variables
+* Site: Remove keyword screen from media-queries
+
 ### v1.0.6 - August 23, 2016
 * Breaking: Remove Bourbon dependency from Lexicon Base and Atlas
 * New: Add lx-color-by-lightness function
