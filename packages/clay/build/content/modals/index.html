@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.6</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.7</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -228,7 +228,7 @@
 			<p>300px wide modal window.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexSmallModal">Small Modal</button>
+		<button class="btn btn-info" data-target="#lexSmallModal" data-toggle="modal">Small Modal</button>
 		<div aria-labelledby="lexSmallModalLabel" class="fade modal" id="lexSmallModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
@@ -270,7 +270,7 @@
 			<p>600px wide modal window.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexDefaultModal">Default Modal</button>
+		<button class="btn btn-info" data-target="#lexDefaultModal" data-toggle="modal">Default Modal</button>
 		<div aria-labelledby="lexDefaultModalLabel" class="fade modal" id="lexDefaultModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-inverse">
 				<div class="modal-content">
@@ -311,7 +311,7 @@
 			<p>900px wide modal in window sizes greater than 992px. 600px wide modal in window sizes between 768px and 992px.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexLargeModal">Large Modal</button>
+		<button class="btn btn-info" data-target="#lexLargeModal" data-toggle="modal">Large Modal</button>
 		<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexLargeModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
@@ -358,7 +358,7 @@
 			<p>The add button must be duplicated in the header and hidden in screen sizes greater than or equal to 768px if we want to preserve the tab order in mobile.</p>
 		</div>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModal">Full Screen Modal</button>
+		<button class="btn btn-info" data-target="#lexFullScreenModal" data-toggle="modal">Full Screen Modal</button>
 		<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexFullScreenModal" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-full-screen">
 				<div class="modal-content">
@@ -501,7 +501,7 @@
 			<p><code>modal-body-no-footer</code> is a <code>modal-body</code> helper class that removes the reserved space for modal-footer. Add it to modal-body when no modal-footer is present.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModal01">Full Screen Modal</button>
+		<button class="btn btn-info" data-target="#lexFullScreenModal01" data-toggle="modal">Full Screen Modal</button>
 
 		<div aria-labelledby="lexFullScreenModal01Label" class="fade modal" id="lexFullScreenModal01" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-full-screen">
@@ -639,7 +639,7 @@
 			<p><code>modal-body-no-header</code> is a <code>modal-body</code> helper class that removes the reserved space for modal-header. Add it to modal-body when no modal-header is present.</p>
 		</blockquote>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModal02">Full Screen Modal</button>
+		<button class="btn btn-info" data-target="#lexFullScreenModal02" data-toggle="modal">Full Screen Modal</button>
 
 		<div aria-labelledby="lexFullScreenModal02Label" class="fade modal" id="lexFullScreenModal02" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-full-screen">
@@ -769,7 +769,7 @@
 
 		<div class="alert alert-warning">In mobile safari (iOS 8.3), any content inside an iframe that triggers a browser reflow will cause the iframe to scroll to the top.</div>
 
-		<button class="btn btn-info" data-toggle="modal" data-target="#lexFullScreenModalIframe">Full Screen Modal Iframe</button>
+		<button class="btn btn-info" data-target="#lexFullScreenModalIframe" data-toggle="modal">Full Screen Modal Iframe</button>
 		<div aria-labelledby="lexFullScreenModalIframeLabel" class="fade modal" id="lexFullScreenModalIframe" role="dialog" tabindex="-1">
 			<div class="modal-dialog modal-full-screen modal-inverse">
 				<div class="modal-content">
@@ -796,7 +796,7 @@
 					<div class="modal-footer">
 						<button class="btn btn-primary" type="button">Add</button>
 
-						<a href="#1" class="btn btn-link close-modal" data-dismiss="modal" type="button">Cancel</a>
+						<a class="btn btn-link close-modal" data-dismiss="modal" href="#1" type="button">Cancel</a>
 					</div>
 				</div>
 			</div>
@@ -835,7 +835,7 @@
 
 			<p>In iOS Safari, body content under the modal will scroll when the beginning or end of scrollable content inside a modal is reached. Use the position fixed workaround by adding <code>position: fixed;</code> to the <code>modal-open</code> class. The body content will be scrolled to the top as a side effect.</p>
 
-			<pre><code>@media screen and (max-width: 767px) {
+			<pre><code>@media (max-width: 767px) {
     .modal-open {
         position: fixed;
     }
