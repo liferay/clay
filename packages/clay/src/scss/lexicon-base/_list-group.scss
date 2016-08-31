@@ -220,7 +220,7 @@ button.list-group-heading,
 	}
 }
 
-@media screen and (max-width: 279px) {
+@media (max-width: 279px) {
 	.tabular-list-group {
 		> li,
 		.list-group-item {
@@ -249,7 +249,7 @@ button.list-group-heading,
 			padding-left: 12px;
 			padding-right: 16px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				border-left-width: 0;
 			}
 		}
@@ -264,7 +264,7 @@ button.list-group-heading,
 	.list-group-item-field {
 		vertical-align: middle;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			vertical-align: top;
 		}
 	}
@@ -278,7 +278,7 @@ button.list-group-heading,
 		font-size: 16px;
 		vertical-align: middle;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			content: normal;
 		}
 	}
@@ -291,13 +291,13 @@ button.list-group-heading,
 
 	> [class^="icon-"],
 	> [class*=" icon-"] {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			display: inline;
 		}
 	}
 
 	> .user-icon {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			display: block;
 		}
 	}
@@ -306,7 +306,7 @@ button.list-group-heading,
 .detailed-list-view-icon {
 	@include monospace(34px);
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		@include monospace(48px);
 	}
 
@@ -314,13 +314,13 @@ button.list-group-heading,
 	[class*=" icon-"] {
 		font-size: 28px;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			font-size: 38px;
 		}
 	}
 }
 
-@media screen and (max-width: 279px) {
+@media (max-width: 279px) {
 	.detailed-list-view {
 		.dropdown {
 			display: inline-block;
@@ -378,7 +378,7 @@ button.list-group-heading,
 	.list-group-card-icon {
 		font-size: 2.4em;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			font-size: 3em;
 		}
 
@@ -391,7 +391,7 @@ button.list-group-heading,
 
 			text-align: center;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				@include monospace(45px);
 			}
 		}
@@ -416,7 +416,7 @@ button.list-group-heading,
 	.checkbox input[type="checkbox"] {
 		display: none;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			display: block;
 		}
 
@@ -433,7 +433,7 @@ button.list-group-heading,
 				text-align: center;
 				vertical-align: middle;
 
-				@media screen and (min-width: $grid-float-breakpoint) {
+				@media (min-width: $grid-float-breakpoint) {
 					content: normal;
 				}
 			}
@@ -446,13 +446,13 @@ button.list-group-heading,
 
 			> [class^="icon-"],
 			> [class*=" icon-"] {
-				@media screen and (min-width: $grid-float-breakpoint) {
+				@media (min-width: $grid-float-breakpoint) {
 					display: block;
 				}
 			}
 
 			> .user-icon {
-				@media screen and (min-width: $grid-float-breakpoint) {
+				@media (min-width: $grid-float-breakpoint) {
 					display: block;
 				}
 			}
@@ -463,13 +463,13 @@ button.list-group-heading,
 	.checkbox-middle-left,
 	.checkbox-top-left {
 		.card.flex-container {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media (max-width: $grid-float-breakpoint-max) {
 				padding-left: 20px;
 			}
 		}
 
 		.card-row {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media (max-width: $grid-float-breakpoint-max) {
 				padding-left: 20px;
 			}
 		}
@@ -479,13 +479,13 @@ button.list-group-heading,
 	.checkbox-middle-right,
 	.checkbox-top-right {
 		.card.flex-container {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media (max-width: $grid-float-breakpoint-max) {
 				padding-right: 20px;
 			}
 		}
 
 		.card-row {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media (max-width: $grid-float-breakpoint-max) {
 				padding-right: 20px;
 			}
 		}

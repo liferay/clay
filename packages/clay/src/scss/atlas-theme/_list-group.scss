@@ -233,13 +233,13 @@ a.list-group-heading,
 	.checkbox-middle-left,
 	.checkbox-top-left {
 		.card.flex-container {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media (max-width: $grid-float-breakpoint-max) {
 				padding-left: 20px;
 			}
 		}
 
 		.card-row {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media (max-width: $grid-float-breakpoint-max) {
 				padding-left: 20px;
 			}
 		}
@@ -249,13 +249,13 @@ a.list-group-heading,
 	.checkbox-middle-right,
 	.checkbox-top-right {
 		.card.flex-container {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media (max-width: $grid-float-breakpoint-max) {
 				padding-right: 20px;
 			}
 		}
 
 		.card-row {
-			@media screen and (max-width: $grid-float-breakpoint-max) {
+			@media (max-width: $grid-float-breakpoint-max) {
 				padding-right: 20px;
 			}
 		}

@@ -79,7 +79,7 @@
 	@include color-user-icon($brand-warning);
 }
 
-@media screen and (min-width: $screen-sm-min) {
+@media (min-width: $screen-sm-min) {
 	.user-icon-xxl {
 		@include monospace(128px);
 

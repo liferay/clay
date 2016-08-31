@@ -1,19 +1,19 @@
 .badge {
 	font-weight: 500;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $badge-desktop-font-size;
 	}
 }
 
 .badge-lg {
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $badge-lg-desktop-font-size;
 	}
 }
 
 .badge-sm {
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $badge-sm-desktop-font-size;
 	}
 }

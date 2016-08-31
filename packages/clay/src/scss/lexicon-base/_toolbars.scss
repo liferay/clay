@@ -72,7 +72,7 @@
 	width: 1%;
 }
 
-@media screen and (min-width: $grid-float-breakpoint) {
+@media (min-width: $grid-float-breakpoint) {
 	.toolbar {
 		margin-bottom: 10px;
 	}
@@ -123,7 +123,7 @@
 
 // Toolbar Group Newlines
 
-@media screen and (max-width: $screen-xs-max) {
+@media (max-width: $screen-xs-max) {
 	.tbg-xs-newline {
 		clear: both;
 		display: block;
@@ -131,7 +131,7 @@
 	}
 }
 
-@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 	.tbg-sm-newline,
 	.tbg-md-newline,
 	.tbg-lg-newline {
@@ -154,7 +154,7 @@
 	}
 }
 
-@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 	.tbg-md-newline,
 	.tbg-lg-newline {
 		margin-top: 10px;
@@ -174,7 +174,7 @@
 	}
 }
 
-@media screen and (min-width: $screen-lg-min) {
+@media (min-width: $screen-lg-min) {
 	.tbg-lg-newline {
 		clear: both;
 		margin-top: 10px;
@@ -190,7 +190,7 @@
 .header-toolbar {
 	margin-bottom: $header-toolbar-margin-bottom;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		border-radius: $header-toolbar-border-radius;
 	}
 

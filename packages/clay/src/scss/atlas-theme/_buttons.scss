@@ -3,7 +3,7 @@
 
 	font-weight: 500;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		@include button-size($btn-desktop-padding-vertical, $btn-desktop-padding-horizontal, $btn-desktop-font-size, $btn-line-height, $btn-border-radius);
 	}
 
@@ -68,7 +68,7 @@
 .btn-lg {
 	@include button-size($btn-lg-padding-vertical, $btn-lg-padding-horizontal, $btn-lg-font-size, $btn-line-height, $btn-lg-border-radius);
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		@include button-size($btn-desktop-lg-padding-vertical, $btn-desktop-lg-padding-horizontal, $btn-desktop-lg-font-size, $btn-line-height, $btn-lg-border-radius);
 	}
 }
@@ -76,7 +76,7 @@
 .btn-sm {
 	@include button-size($btn-sm-padding-vertical, $btn-sm-padding-horizontal, $btn-sm-font-size, $btn-line-height, $btn-sm-border-radius);
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		@include button-size($btn-desktop-sm-padding-vertical, $btn-desktop-sm-padding-horizontal, $btn-desktop-sm-font-size, $btn-line-height, $btn-sm-border-radius);
 	}
 }
@@ -84,7 +84,7 @@
 .btn-xs {
 	@include button-size($btn-xs-padding-vertical, $btn-xs-padding-horizontal, $btn-xs-font-size, $btn-line-height, $btn-xs-border-radius);
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		@include button-size($btn-desktop-xs-padding-vertical, $btn-desktop-xs-padding-horizontal, $btn-desktop-xs-font-size, $btn-line-height, $btn-xs-border-radius);
 	}
 }
@@ -99,7 +99,7 @@ a.btn-action,
 	[class*="icon-"] {
 		line-height: 52px - ($btn-border-width * 2);
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			line-height: 64px - ($btn-border-width * 2);
 		}
 	}
@@ -114,7 +114,7 @@ a.btn-action,
 	padding: 0;
 	width: 52px;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $btn-desktop-font-size;
 		height: 64px;
 		line-height: 24px;
@@ -127,7 +127,7 @@ a.btn-action,
 	text-align: right;
 	width: 52px;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		height: 64px;
 		width: 64px;
 	}
@@ -145,7 +145,7 @@ a.btn-action,
 		&:after {
 			left: 18px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				left: 24px;
 			}
 		}
@@ -153,7 +153,7 @@ a.btn-action,
 		&:before {
 			left: 17px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				left: 23px;
 			}
 		}
@@ -165,7 +165,7 @@ a.btn-action,
 		&:after {
 			right: 18px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				right: 24px;
 			}
 		}
@@ -173,18 +173,18 @@ a.btn-action,
 		&:before {
 			right: 17px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				right: 23px;
 			}
 		}
 	}
 
 	.dropdown-menu-left-side,
-	.dropdown-menu-right-side, {
+	.dropdown-menu-right-side {
 		&:after {
 			top: 18px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				top: 24px;
 			}
 		}
@@ -192,7 +192,7 @@ a.btn-action,
 		&:before {
 			top: 17px;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				top: 23px;
 			}
 		}
@@ -204,7 +204,7 @@ a.btn-action,
 			bottom: 18px;
 			top: auto;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				bottom: 24px;
 				top: auto;
 			}
@@ -214,7 +214,7 @@ a.btn-action,
 			bottom: 17px;
 			top: auto;
 
-			@media screen and (min-width: $grid-float-breakpoint) {
+			@media (min-width: $grid-float-breakpoint) {
 				bottom: 23px;
 				top: auto;
 			}

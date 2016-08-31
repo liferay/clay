@@ -18,7 +18,7 @@
 .clamp-all-scroll {
 	// IE 10, 11 Hack
 
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
 		overflow: hidden;
 	}
 
@@ -30,7 +30,7 @@
 
 		// IE 10, 11 Hack
 
-		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
 			bottom: auto;
 		}
 	}
@@ -39,7 +39,7 @@
 .clamp-all-scroll {
 	// IE 10, 11 Hack
 
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
 		overflow: auto;
 	}
 

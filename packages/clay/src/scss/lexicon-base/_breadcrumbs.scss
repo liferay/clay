@@ -6,7 +6,7 @@
 
 		@include text-overflow;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			max-width: 300px;
 		}
 
