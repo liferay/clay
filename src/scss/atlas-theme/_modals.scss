@@ -10,57 +10,62 @@
 	box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15);
 	position: absolute;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		background-color: $modal-desktop-footer-bg;
-		color: $modal-desktop-footer-color;
 		position: relative;
+
+		&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $modal-desktop-footer-color;
+		}
 	}
 }
 
 .modal-header {
 	text-align: center;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		background-color: $modal-desktop-header-bg;
-		color: $modal-desktop-header-color;
+
+		&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $modal-desktop-header-color;
+		}
+	}
+
+	.close {
+		height: $modal-title-line-height;
+		line-height: $modal-title-line-height;
+		opacity: 1;
+		width: $modal-title-line-height;
+
+		&:focus,
+		&:hover {
+			opacity: 1;
+		}
 	}
 
 	.close,
-	.modal-primary-action-button {
-		height: $modal-title-line-height;
-		line-height: $modal-title-line-height;
-		margin: 0;
-		opacity: 1;
-		overflow: hidden;
-		text-shadow: none;
-		width: $modal-title-line-height;
+	.close:focus,
+	.close:hover,
+	.close.btn-default:active,
+	.close.btn-default:active:focus,
+	.close.btn-default:active:hover {
+		color: $modal-header-close-color;
 
-		&,
-		&:focus,
-		&:hover {
-			color: $modal-header-close-color;
-			opacity: 1;
-
-			@media screen and (min-width: $grid-float-breakpoint) {
-				color: $modal-desktop-header-close-color;
-			}
-		}
-
-		&:active {
-			background-color: transparent;
+		@media screen and (min-width: $grid-float-breakpoint) {
+			color: $modal-desktop-header-close-color;
 		}
 	}
 }
 
 .modal-title {
 	font-size: 19px;
-	font-weight: 400;
+	font-weight: normal;
 }
 
 h1.modal-title {
 	font-size: $font-size-h1;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h1;
 	}
 }
@@ -68,7 +73,7 @@ h1.modal-title {
 h2.modal-title {
 	font-size: $font-size-h2;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h2;
 	}
 }
@@ -76,7 +81,7 @@ h2.modal-title {
 h3.modal-title {
 	font-size: $font-size-h3;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h3;
 	}
 }
@@ -84,7 +89,7 @@ h3.modal-title {
 h4.modal-title {
 	font-size: $font-size-h4;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h4;
 	}
 }
@@ -92,7 +97,7 @@ h4.modal-title {
 h5.modal-title {
 	font-size: $font-size-h5;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h5;
 	}
 }
@@ -100,7 +105,7 @@ h5.modal-title {
 h6.modal-title {
 	font-size: $font-size-h6;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		font-size: $font-size-desktop-h6;
 	}
 }
@@ -113,24 +118,37 @@ h6.modal-title {
 	}
 
 	.modal-footer {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			background-color: $modal-inverse-desktop-footer-bg;
 			border-color: $modal-inverse-desktop-footer-border-color;
-			color: $modal-inverse-desktop-footer-color;
+
+			&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+				color: $modal-inverse-desktop-footer-color;
+			}
 		}
 	}
 
 	.modal-header {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			background-color: $modal-inverse-desktop-header-bg;
 			border-color: $modal-inverse-desktop-header-border-color;
-			color: $modal-inverse-desktop-header-color;
-		}
 
-		.close {
-			@media screen and (min-width: $grid-float-breakpoint) {
-				color: $modal-inverse-desktop-header-close-color;
+			&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+				color: $modal-inverse-desktop-header-color;
 			}
+		}
+	}
+
+	.close,
+	.close:focus,
+	.close:hover,
+	.close.btn-default:active,
+	.close.btn-default:active:focus,
+	.close.btn-default:active:hover {
+		color: $modal-inverse-header-close-color;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			color: $modal-inverse-desktop-header-close-color;
 		}
 	}
 }

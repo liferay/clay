@@ -5,9 +5,28 @@
 	border-color: $card-border;
 	border-style: $card-border-style;
 	border-width: $card-border-width;
-	border-radius: $card-border-radius;
+
+	@if ($card-border-radius > 0) {
+		border-radius: $card-border-radius;
+	}
+
 	margin-bottom: $card-margin-bottom;
 	position: relative;
+
+	@if ($card-border-radius > 0) {
+		.card-col-content,
+		.card-col-field {
+			&:first-child {
+				border-bottom-left-radius: $card-border-radius;
+				border-top-left-radius: $card-border-radius;
+			}
+
+			&:last-child {
+				border-bottom-right-radius: $card-border-radius;
+				border-top-right-radius: $card-border-radius;
+			}
+		}
+	}
 
 	.card-row {
 		width: 100%;
@@ -51,7 +70,7 @@
 	max-width: 10px;
 	position: relative;
 	width: auto;
-	word-break: break-all \ ; // IE 8, 9
+	word-break: break-all \9; // IE 8, 9
 	word-wrap: break-word;
 }
 
@@ -148,11 +167,13 @@
 	.card-col-content,
 	.card-col-field {
 		&:first-child {
-			border-radius: $card-circle-border-radius 0 0 $card-circle-border-radius;
+			border-bottom-left-radius: $card-circle-border-radius;
+			border-top-left-radius: $card-circle-border-radius;
 		}
 
 		&:last-child {
-			border-radius: 0 $card-circle-border-radius $card-circle-border-radius 0;
+			border-bottom-right-radius: $card-circle-border-radius;
+			border-top-right-radius: $card-circle-border-radius;
 		}
 	}
 }
@@ -163,26 +184,30 @@
 	.card-col-content,
 	.card-col-field {
 		&:first-child {
-			border-radius: $card-rounded-border-radius 0 0 $card-rounded-border-radius;
+			border-bottom-left-radius: $card-rounded-border-radius;
+			border-top-left-radius: $card-rounded-border-radius;
 		}
 
 		&:last-child {
-			border-radius: 0 $card-rounded-border-radius $card-rounded-border-radius 0;
+			border-bottom-right-radius: $card-rounded-border-radius;
+			border-top-right-radius: $card-rounded-border-radius;
 		}
 	}
 }
 
 .card-square {
-	border-radius: 0;
+	border-radius: $card-square-border-radius;
 
 	.card-col-content,
 	.card-col-field {
 		&:first-child {
-			border-radius: 0;
+			border-bottom-left-radius: $card-square-border-radius;
+			border-top-left-radius: $card-square-border-radius;
 		}
 
 		&:last-child {
-			border-radius: 0;
+			border-bottom-right-radius: $card-square-border-radius;
+			border-top-right-radius: $card-square-border-radius;
 		}
 	}
 }

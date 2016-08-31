@@ -50,7 +50,7 @@ section.row {
 		margin-bottom: 14px;
 		margin-top: 14px;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			margin-left: 18px;
 		}
 
@@ -167,7 +167,7 @@ section.row {
 
 #alertNotifications {
 	.lexicon-site-display-container {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			float: left;
 			margin-right: 15px;
 			min-height: 200px;
@@ -204,7 +204,7 @@ body.fixed {
 
 	.tabular-list-group .list-group-item .list-group-item-content:first-child,
 	.tabular-list-group .list-group-item .list-group-item-field:first-child {
-		@media screen and (max-width: 767px) {
+		@media (max-width: 767px) {
 			display: none;
 		}
 	}
@@ -369,13 +369,13 @@ body.fixed {
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
 	#documentsAndMediaSidenav .container-fluid-1280.sidenav-container {
 		padding-left: 15px;
 	}
 }
 
-@media screen and (min-width: 1300px) {
+@media (min-width: 1300px) {
 	#documentsAndMediaSidenav.closed .container-fluid-1280.sidenav-container {
 		padding-right: 15px;
 	}
@@ -486,14 +486,14 @@ body.fixed {
 
 // Icons (Font Awesome Page)
 
-@media screen and (min-width: 321px) {
+@media (min-width: 321px) {
 	.font-awesome-icons-list li {
 		float: left;
 		width: 50%;
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
 	.font-awesome-icons-list li, .lexicon-icon-list li {
 		float: left;
 		padding: 5px;
@@ -671,7 +671,7 @@ $mainNavWidth: 220px;
 	right: 0;
 	top: 0;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		position: static;
 	}
 }
@@ -680,12 +680,12 @@ $mainNavWidth: 220px;
 	left: 0;
 	position: relative;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		padding-left: $mainNavWidth + 20;
 	}
 
 	[dir="rtl"] & {
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			padding-left: 0;
 			padding-right: $mainNavWidth + 20;
 		}
@@ -698,7 +698,7 @@ $mainNavWidth: 220px;
 	visibility: hidden;
 	width: 0;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		visibility: visible;
 		width: $mainNavWidth;
 	}
@@ -718,7 +718,7 @@ $mainNavWidth: 220px;
 	height: 100%;
 	overflow-x: hidden;
 
-	@media screen and (min-width: $grid-float-breakpoint) {
+	@media (min-width: $grid-float-breakpoint) {
 		overflow-x: visible;
 	}
 
@@ -730,7 +730,7 @@ $mainNavWidth: 220px;
 	#mainContent {
 		left: $mainNavWidth + 10;
 
-		@media screen and (min-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
 			left: auto;
 			position: static;
 		}
@@ -961,7 +961,7 @@ body.sidenav-transition {
 	}
 }
 
-@media screen and (min-width: $grid-float-breakpoint) {
+@media (min-width: $grid-float-breakpoint) {
 	.uxgl-switches .form-group {
 		width: 115px;
 	}
@@ -993,25 +993,25 @@ body.sidenav-transition {
 	margin: 2em 0;
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
 	.uxgl-lg-newline-demo {
 		background-color: #FFFEDC;
 	}
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
 	.uxgl-md-newline-demo {
 		background-color: #FFFEDC;
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
 	.uxgl-sm-newline-demo {
 		background-color: #FFFEDC;
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 	.uxgl-xs-newline-demo {
 		background-color: #FFFEDC;
 	}

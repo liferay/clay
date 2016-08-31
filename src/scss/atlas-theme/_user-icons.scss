@@ -84,7 +84,7 @@
 	@include color-user-icon($user-icon-warning-bg);
 }
 
-@media screen and (min-width: $screen-sm-min) {
+@media (min-width: $screen-sm-min) {
 	// User Icon Desktop Sizes
 
 	.user-icon {

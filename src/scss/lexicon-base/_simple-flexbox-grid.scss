@@ -35,8 +35,8 @@
 	flex-wrap: wrap;
 
 	+ .flex-item-expand {
- 		-ms-flex-preferred-size: auto;
- 		flex-basis: auto;
+		-ms-flex-preferred-size: auto;
+		flex-basis: auto;
 	}
 }
 
@@ -58,49 +58,49 @@
 // Stacking Flex Container
 
 .flex-container-stacked-xxs {
-	@media screen and (max-width: 479px) {
+	@media (max-width: 479px) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-xs {
-	@media screen and (max-width: $screen-xs-max) {
+	@media (max-width: $screen-xs-max) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-sm {
-	@media screen and (max-width: $screen-sm-max) {
+	@media (max-width: $screen-sm-max) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-md {
-	@media screen and (max-width: $screen-md-max) {
+	@media (max-width: $screen-md-max) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-lg {
-	@media screen and (min-width: $screen-lg-min) {
+	@media (min-width: $screen-lg-min) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-xs-only {
-	@media screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-sm-only {
-	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-md-only {
-	@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 		@include stack-flex-container;
 	}
 }
@@ -108,49 +108,49 @@
 // Flex Item Break
 
 .flex-item-break-xxs {
-	@media screen and (max-width: 479px) {
+	@media (max-width: 479px) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-xs {
-	@media screen and (max-width: $screen-xs-max) {
+	@media (max-width: $screen-xs-max) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-sm {
-	@media screen and (max-width: $screen-sm-max) {
+	@media (max-width: $screen-sm-max) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-md {
-	@media screen and (max-width: $screen-md-max) {
+	@media (max-width: $screen-md-max) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-lg {
-	@media screen and (min-width: $screen-lg) {
+	@media (min-width: $screen-lg) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-xs-only {
-	@media screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-sm-only {
-	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-md-only {
-	@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 		@include break-flex-item;
 	}
 }
