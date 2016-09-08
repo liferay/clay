@@ -152,7 +152,7 @@ section: Example Pages
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1" id="blogActionsToggler">
+								<a class="sidenav-toggler" href="#blogActionsSidenav" id="blogActionsToggler">
 									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 									</svg>
@@ -1099,9 +1099,8 @@ section: Example Pages
 <a class="btn btn-action btn-bottom-right btn-primary icon-monospaced" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
 
 <script>
-	$('#blogActionsSidenav').sideNavigation({
+	$('#blogActionsToggler').sideNavigation({
 		gutter: 0,
-		toggler: '#blogActionsToggler',
 		typeMobile: 'fixed',
 		type: 'fixed',
 		width: 320
