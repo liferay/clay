@@ -36,14 +36,16 @@
 				basicSearch.trigger('closed.lexicon.collapsible.search');
 			};
 
+			if ($.support.transition) {
+				basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
+					.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+			}
+
+			basicSearch.addClass('basic-search-transition').removeClass('open');
+
 			if (!$.support.transition) {
 				return complete.call(instance);
 			}
-
-			basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
-				.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
-
-			basicSearch.addClass('basic-search-transition').removeClass('open');
 
 			basicSearchSubmit.focus();
 		},
@@ -76,17 +78,19 @@
 					basicSearch.trigger('open.lexicon.collapsible.search');
 				};
 
-				if (!$.support.transition) {
-					return complete.call(instance);
-				}
-
 				if (!basicSearch.hasClass('open')) {
 					event.preventDefault();
 
-					basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
-						.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+					if ($.support.transition) {
+						basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
+							.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
+					}
 
 					basicSearch.addClass('basic-search-transition').addClass('open');
+
+					if (!$.support.transition) {
+						return complete.call(instance);
+					}
 				}
 			}
 		}
