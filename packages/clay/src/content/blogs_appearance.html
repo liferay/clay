@@ -19,7 +19,7 @@ section: Example Pages
 								<span>Squareup</span>
 							</a>
 
-							<a class="sidenav-close" href="#1">
+							<a class="sidenav-close pull-right" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 								</svg>
@@ -133,7 +133,7 @@ section: Example Pages
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1" id="blogSidenavToggler">
+								<a class="sidenav-toggler" href="#blogSidenav" id="blogSidenavToggler">
 									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 									</svg>
@@ -279,9 +279,8 @@ section: Example Pages
 <a class="btn btn-primary btn-action btn-bottom-right icon-monospaced" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
 
 <script>
-	$('#blogSidenav').sideNavigation({
+	$('#blogSidenavToggler').sideNavigation({
 		gutter: 0,
-		toggler: '#blogSidenavToggler',
 		typeMobile: 'fixed',
 		type: 'fixed-push',
 		width: 320
