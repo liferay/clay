@@ -9,7 +9,6 @@
 	min-height: $management-bar-height;
 	position: relative;
 
-
 	@media (min-width: $grid-float-breakpoint) {
 		border-radius: $navbar-border-radius;
 	}
@@ -56,12 +55,12 @@
 .container-fluid {
 	> .management-bar-header,
 	> .management-bar-collapse {
+		margin-left: -$management-bar-padding-horizontal;
 		margin-right: -$management-bar-padding-horizontal;
-		margin-left:  -$management-bar-padding-horizontal;
 
 		@media (min-width: $grid-float-breakpoint) {
+			margin-left: 0;
 			margin-right: 0;
-			margin-left:  0;
 		}
 	}
 }
@@ -134,8 +133,8 @@
 .management-bar-toggle {
 	background-color: transparent;
 	background-image: none;
-	border-radius: $border-radius-base;
 	border: 1px solid transparent;
+	border-radius: $border-radius-base;
 	float: right;
 	margin-right: $management-bar-padding-horizontal;
 
@@ -191,7 +190,7 @@
 	@include clearfix;
 
 	overflow-x: visible;
-	padding-left:  $management-bar-padding-horizontal;
+	padding-left: $management-bar-padding-horizontal;
 	padding-right: $management-bar-padding-horizontal;
 
 	@media (max-width: $grid-float-breakpoint-max) {
@@ -208,7 +207,7 @@
 	}
 
 	@media (min-width: $grid-float-breakpoint) {
-		border-top: 0;
+		border-top-width: 0;
 		box-shadow: none;
 		clear: none;
 		margin-top: 0;
@@ -290,7 +289,7 @@
 	.open .dropdown-menu {
 		@media (max-width: $grid-float-breakpoint-max) {
 			background-color: transparent;
-			border: 0;
+			border-width: 0;
 			box-shadow: none;
 			float: none;
 			margin-top: 0;
@@ -357,8 +356,8 @@
 
 			&:hover,
 			&:focus {
-				color: $management-bar-default-link-hover-color;
 				background-color: $management-bar-default-link-hover-bg;
+				color: $management-bar-default-link-hover-color;
 			}
 		}
 
@@ -366,8 +365,8 @@
 			&,
 			&:hover,
 			&:focus {
-				color: $management-bar-default-link-active-color;
 				background-color: $management-bar-default-link-active-bg;
+				color: $management-bar-default-link-active-color;
 			}
 		}
 
@@ -375,8 +374,8 @@
 			&,
 			&:hover,
 			&:focus {
-				color: $management-bar-default-link-disabled-color;
 				background-color: $management-bar-default-link-disabled-bg;
+				color: $management-bar-default-link-disabled-color;
 			}
 		}
 	}
@@ -398,8 +397,8 @@
 
 					&:hover,
 					&:focus {
-						color: $management-bar-default-link-hover-color;
 						background-color: $management-bar-default-link-hover-bg;
+						color: $management-bar-default-link-hover-color;
 					}
 				}
 
@@ -407,8 +406,8 @@
 					&,
 					&:hover,
 					&:focus {
-						color: $management-bar-default-link-active-color;
 						background-color: $management-bar-default-link-active-bg;
+						color: $management-bar-default-link-active-color;
 					}
 				}
 
@@ -416,8 +415,8 @@
 					&,
 					&:hover,
 					&:focus {
-						color: $management-bar-default-link-disabled-color;
 						background-color: $management-bar-default-link-disabled-bg;
+						color: $management-bar-default-link-disabled-color;
 					}
 				}
 			}
