@@ -2,6 +2,8 @@
 
 $dropdown-border-width: 1px !default; // Atlas
 
+$dropdown-checkbox-label-spacer: 32px !default;
+
 $dropdown-wide-width: 500px !default; // Atlas
 
 $dropdown-font-size: $font-size-base !default; // Atlas
@@ -36,4 +38,4 @@ $dropdown-link-disabled-color: #CACDD2 !default;
 
 $dropdown-header-color: #B0B4BB !default;
 
-$dropdown-arrow-color: $dropdown-bg; // Atlas
+$dropdown-arrow-color: $dropdown-bg !default; // Atlas

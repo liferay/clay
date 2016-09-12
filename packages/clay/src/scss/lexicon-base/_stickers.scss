@@ -123,25 +123,49 @@
 }
 
 .sticker-danger {
-	background-color: $label-danger-bg;
+	background-color: $sticker-danger-bg;
+
+	@if variable-exists(sticker-danger-color) {
+		color: $sticker-danger-color;
+	}
 }
 
 .sticker-default {
-	background-color: $label-default-bg;
+	background-color: $sticker-default-bg;
+
+	@if variable-exists(sticker-default-color) {
+		color: $sticker-default-color;
+	}
 }
 
 .sticker-info {
-	background-color: $label-info-bg;
+	background-color: $sticker-info-bg;
+
+	@if variable-exists(sticker-info-color) {
+		color: $sticker-info-color;
+	}
 }
 
 .sticker-primary {
-	background-color: $label-primary-bg;
+	background-color: $sticker-primary-bg;
+
+	@if variable-exists(sticker-primary-color) {
+		color: $sticker-primary-color;
+	}
 }
 
 .sticker-success {
-	background-color: $label-success-bg;
+	background-color: $sticker-success-bg;
+
+	@if variable-exists(sticker-success-color) {
+		color: $sticker-success-color;
+	}
 }
 
 .sticker-warning {
-	background-color: $label-warning-bg;
+	background-color: $sticker-warning-bg;
+
+	@if variable-exists(sticker-warning-color) {
+		color: $sticker-warning-color;
+	}
 }
