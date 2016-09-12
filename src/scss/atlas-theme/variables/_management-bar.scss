@@ -5,9 +5,15 @@ $management-bar-border-right-width: 0 !default;
 $management-bar-border-top-width: 0 !default;
 
 $management-bar-height: $navbar-height !default;
+
+$management-bar-btn-padding-vertical: ($management-bar-height - $icon-monospaced-size - ($btn-border-width * 2)) / 2 !default;
+
 $management-bar-desktop-height: $navbar-desktop-height !default;
+$management-bar-desktop-padding-horizontal: $navbar-desktop-padding-horizontal !default;
+$management-bar-desktop-padding-vertical: 19px !default;
+
 $management-bar-desktop-btn-padding-horizontal: $navbar-desktop-padding-horizontal !default;
-$management-bar-desktop-btn-padding-vertical: ($management-bar-desktop-height - $icon-monospaced-size - 2) / 2 !default;
+$management-bar-desktop-btn-padding-vertical: ($management-bar-desktop-height - $icon-monospaced-size - ($btn-border-width * 2)) / 2 !default;
 
 // Skin
 
