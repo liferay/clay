@@ -58,6 +58,8 @@ select.form-control {
 	&:focus {
 		box-shadow: $input-box-shadow-focus;
 		color: $input-color-focus;
+
+		@include placeholder($input-color-placeholder-focus);
 	}
 
 	&::-ms-clear, &::-ms-reveal {
@@ -76,6 +78,8 @@ select.form-control {
 		border-color: $input-border-disabled;
 		color: $input-border;
 		opacity: 0.5;
+
+		@include placeholder;
 	}
 }
 
@@ -97,16 +101,6 @@ select[disabled].form-control > option {
 	color: $input-readonly-color;
 	cursor: default;
 }
-
-// Input Placeholders
-// ($element, $color)
-
-@include color-placeholder("input:focus", $input-color-placeholder-focus);
-@include color-placeholder("textarea:focus", $input-color-placeholder-focus);
-@include color-placeholder("input[disabled]");
-@include color-placeholder("select[disabled]");
-@include color-placeholder("input[readonly]");
-@include color-placeholder("fieldset[disabled] .form-control");
 
 // Input Sizes
 
