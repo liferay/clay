@@ -12,3 +12,18 @@ $sticker-lg-monospaced-size: ceil($sticker-monospaced-size * 1.375) !default; //
 
 $sticker-sm-font-size: $label-sm-font-size !default;
 $sticker-sm-monospaced-size: ceil($sticker-monospaced-size * 0.6875) !default; // 22px
+
+// Skin
+
+$sticker-danger-bg: $label-danger-bg !default;
+$sticker-danger-color: null !default;
+$sticker-default-bg: $label-default-bg !default;
+$sticker-default-color: null !default;
+$sticker-info-bg: $label-info-bg !default;
+$sticker-info-color: null !default;
+$sticker-primary-bg: $label-primary-bg !default;
+$sticker-primary-color: null !default;
+$sticker-success-bg: $label-success-bg !default;
+$sticker-success-color: null !default;
+$sticker-warning-bg: $label-warning-bg !default;
+$sticker-warning-color: null !default;
