@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.7</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -236,7 +236,7 @@
 								<span>Squareup</span>
 							</a>
 
-							<a class="sidenav-close" href="#1">
+							<a class="sidenav-close pull-right" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
 									<use xlink:href="../../images/icons/icons.svg#times">
 								</svg>
@@ -350,7 +350,7 @@
 					<div class="container-fluid-1280">
 						<div class="toolbar-group">
 							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#1" id="blogSidenavToggler">
+								<a class="sidenav-toggler" href="#blogSidenav" id="blogSidenavToggler">
 									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
 										<use xlink:href="../../images/icons/icons.svg#bars">
 									</svg>
@@ -496,9 +496,8 @@
 <a class="btn btn-primary btn-action btn-bottom-right icon-monospaced" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
 
 <script>
-	$('#blogSidenav').sideNavigation({
+	$('#blogSidenavToggler').sideNavigation({
 		gutter: 0,
-		toggler: '#blogSidenavToggler',
 		typeMobile: 'fixed',
 		type: 'fixed-push',
 		width: 320

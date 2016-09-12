@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.7</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -334,13 +334,13 @@
 					<ul class="link-list">
 						<li class="link-list-heading">By Resource</li>
 						<li><a href="#1">Support Home</a></li>
-						<li class="disabled"><a href="#1">Ask the Experts</a></li>
+						<li class="disabled"><a href="#1">Disabled Link</a></li>
 						<li><a href="#1">Chat or Call</a></li>
 					</ul>
 
 					<ul class="link-list">
 						<li class="link-list-heading">By Product</li>
-						<li><a href="#1">Developing for the Platform</a></li>
+						<li class="active"><a href="#1">Developing for the Platform</a></li>
 						<li><a href="#1">Mastering Fundamentals</a></li>
 						<li><a href="#1">Styling with Themes</a></li>
 						<li><a href="#1">Managing Content</a></li>
@@ -786,36 +786,60 @@
 	<div class="col-md-12">
 		<h3 id="dropdown-examples"><a class="heading-anchor" href="#dropdown-examples"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Dropdown Examples</h3>
 
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default" style="margin-bottom:566px;">
 			<div class="container-fluid">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <span class="caret"></span></a>
-						<ul aria-labelledby="dropdownMenu" class="dropdown-menu">
-							<li class="dropdown-header" role="presentation">Dropdown Header</li>
-							<li role="presentation">
-								<ul class="inline-scroller">
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-									<li><a href="#">Actions</a></li>
-									<li><a href="#">Edit</a></li>
-									<li><a href="#">View</a></li>
-									<li><a href="#">Permissions</a></li>
-								</ul>
+						<ul class="dropdown-menu">
+							<li>
+								<form>
+									<div class="form-group">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail3">Email address</label>
+										<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Approved
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Draft
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Pending
+										</label>
+									</div>
+									<div class="checkbox checkbox-default active">
+										<label>
+											<input checked type="checkbox" value=""> Expired
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Scheduled
+										</label>
+									</div>
+									<div class="checkbox checkbox-default">
+										<label>
+											<input type="checkbox" value=""> Rejected
+										</label>
+									</div>
+								</form>
 							</li>
-							<li class="disabled" role="presentation"><a href="#" role="menuitem">Disabled</a></li>
-							<li class="divider" role="presentation"></li>
-							<li role="presentation"><a href="#" role="menuitem">Scope</a></li>
+							<li><a href="#1">Something Outside</a></li>
 						</ul>
 					</li>
 
@@ -833,7 +857,7 @@
 
 								<ul class="link-list">
 									<li class="link-list-heading">By Product</li>
-									<li><a href="#1">Developing for the Platform</a></li>
+									<li class="active"><a href="#1">Developing for the Platform</a></li>
 									<li><a href="#1">Mastering Fundamentals</a></li>
 									<li><a href="#1">Styling with Themes</a></li>
 									<li><a href="#1">Managing Content</a></li>
@@ -878,8 +902,8 @@
 							<li class="col-sm-4">
 								<ul class="link-list">
 									<li class="link-list-heading">By Resource</li>
-									<li class="disabled"><a href="#1">Support Home</a></li>
-									<li><a href="#1">Ask the Experts</a></li>
+									<li><a href="#1">Support Home</a></li>
+									<li class="disabled"><a href="#1">Disabled Link</a></li>
 									<li><a href="#1">Chat or Call</a></li>
 								</ul>
 
@@ -914,7 +938,7 @@
 							<li class="col-sm-4">
 								<ul class="link-list">
 									<li class="link-list-heading">By Audience</li>
-									<li><a href="#1">For Home Users</a></li>
+									<li class="active"><a href="#1">For Home Users</a></li>
 									<li><a href="#1">For Small Business</a></li>
 									<li><a href="#1">For IT Professionals</a></li>
 									<li><a href="#1">For Developers</a></li>
@@ -970,9 +994,30 @@
 </div>
 
 <script>
-	$('#mainContent').on('click', 'a', function(event) {
-		event.preventDefault();
-	});
+	$('#mainContent').on(
+		'click',
+		'a',
+		function(event) {
+			event.preventDefault();
+		}
+	);
+
+	$('select, input[type="email"], input[type="checkbox"]').on(
+		'focus blur',
+		function(event) {
+			var el = $(this);
+
+			var selector = this.type === 'checkbox' ? '.checkbox' : '.form-group';
+
+			el.closest(selector).toggleClass('focus', event.type === 'focus');
+		}
+	);
+
+	$('input[type="checkbox"]').change(
+		function(event) {
+			$(this).closest('.checkbox').toggleClass('active', this.checked);
+		}
+	);
 </script>
 	</div>
 
