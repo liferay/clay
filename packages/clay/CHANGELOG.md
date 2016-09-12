@@ -1,3 +1,19 @@
+### v1.0.8 - September 12, 2016
+* Breaking: Remove dropdown-left-side, right-side, and top use cases from navbar
+* Breaking: Removed support for contextual buttons (btn-primary, btn-danger, btn-warning, etc) in management bar
+* Fix: Collapsible Search should work for browsers that don't support css transitions
+* Fix: Atlas table heading font weight and font size should only apply to bootstrap tables
+* Update: Change checkbox and radio cursor to pointer
+* Update: Atlas move modal-footer box shadow to variable
+* Update: Optimize css dropdown selectors
+* Update: Reduce card css selectors
+* Update: Add sticker color variables
+* Update: Reduce number of css selectors for icon-monospaced with font awesome icons
+* Update: Reduce number of selectors in management bar
+* Site: Add more cases to dropdown demos
+* Site: Fix alignment on collapsible search navbar examples
+* Site: Sidenav should work on Blog Appearance and Blog Actions pages
+
 ### v1.0.7 - August 30, 2016
 * Fix: Word-wrap should work on card-col-content
 * Update: Horizontal card first and last columns should have border radius
