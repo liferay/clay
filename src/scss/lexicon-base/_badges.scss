@@ -5,6 +5,12 @@
 	padding-left: $badge-padding-left;
 	padding-right: $badge-padding-right;
 	padding-top: $badge-padding-top;
+
+	@if (variable-exists(badge-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $badge-desktop-font-size;
+		}
+	}
 }
 
 .badge-lg {
@@ -13,6 +19,12 @@
 	padding-left: $badge-lg-padding-left;
 	padding-right: $badge-lg-padding-right;
 	padding-top: $badge-lg-padding-top;
+
+	@if (variable-exists(badge-lg-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $badge-lg-desktop-font-size;
+		}
+	}
 }
 
 .badge-sm {
@@ -21,25 +33,31 @@
 	padding-left: $badge-sm-padding-left;
 	padding-right: $badge-sm-padding-right;
 	padding-top: $badge-sm-padding-top;
+
+	@if (variable-exists(badge-sm-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $badge-sm-desktop-font-size;
+		}
+	}
 }
 
 // Lexicon Icons in Badges
 
 .badge .lexicon-icon {
-	height: 9px;
+	height: $badge-lexicon-icon-height;
 	margin-left: 2px;
-	width: 9px;
+	width: $badge-lexicon-icon-width;
 }
 
 .badge-lg .lexicon-icon {
-	height: 13px;
+	height: $badge-lg-lexicon-icon-height;
 	margin-left: 4px;
-	width: 13px;
+	width: $badge-lg-lexicon-icon-width;
 }
 
 .badge-sm .lexicon-icon {
-	height: 5px;
-	width: 5px;
+	height: $badge-sm-lexicon-icon-height;
+	width: $badge-sm-lexicon-icon-width;
 }
 
 // Skins
@@ -58,6 +76,22 @@
 
 .badge-danger {
 	background-color: $brand-danger;
+}
+
+@if (variable-exists(badge-default-bg)) {
+	.badge-default {
+		background-color: $badge-default-bg;
+		color: $badge-default-color;
+	}
+
+	a.badge-default,
+	.badge-default a {
+		&,
+		&:focus,
+		&:hover {
+			color: $badge-default-link-color;
+		}
+	}
 }
 
 .badge-info {
