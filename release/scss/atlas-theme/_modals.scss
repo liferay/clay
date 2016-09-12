@@ -1,0 +1,161 @@
+/**
+* Lexicon 1.0.7
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.modal-backdrop.in {
+	opacity: $modal-backdrop-opacity;
+}
+
+.modal-content {
+	box-shadow: $modal-box-shadow;
+}
+
+.modal-footer {
+	box-shadow: $modal-footer-box-shadow;
+	position: absolute;
+
+	@media (min-width: $grid-float-breakpoint) {
+		background-color: $modal-desktop-footer-bg;
+		position: relative;
+
+		&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $modal-desktop-footer-color;
+		}
+	}
+}
+
+.modal-header {
+	text-align: center;
+
+	@media (min-width: $grid-float-breakpoint) {
+		background-color: $modal-desktop-header-bg;
+
+		&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			color: $modal-desktop-header-color;
+		}
+	}
+
+	.close {
+		height: $modal-title-line-height;
+		line-height: $modal-title-line-height;
+		opacity: 1;
+		width: $modal-title-line-height;
+
+		&:focus,
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.close,
+	.close:focus,
+	.close:hover,
+	.close.btn-default:active,
+	.close.btn-default:active:focus,
+	.close.btn-default:active:hover {
+		color: $modal-header-close-color;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			color: $modal-desktop-header-close-color;
+		}
+	}
+}
+
+.modal-title {
+	font-size: 19px;
+	font-weight: normal;
+}
+
+h1.modal-title {
+	font-size: $font-size-h1;
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h1;
+	}
+}
+
+h2.modal-title {
+	font-size: $font-size-h2;
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h2;
+	}
+}
+
+h3.modal-title {
+	font-size: $font-size-h3;
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h3;
+	}
+}
+
+h4.modal-title {
+	font-size: $font-size-h4;
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h4;
+	}
+}
+
+h5.modal-title {
+	font-size: $font-size-h5;
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h5;
+	}
+}
+
+h6.modal-title {
+	font-size: $font-size-h6;
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $font-size-desktop-h6;
+	}
+}
+
+// Modal Inverse
+
+.modal-inverse {
+	.modal-body {
+		background-color: $modal-inverse-body-bg;
+	}
+
+	.modal-footer {
+		@media (min-width: $grid-float-breakpoint) {
+			background-color: $modal-inverse-desktop-footer-bg;
+			border-color: $modal-inverse-desktop-footer-border-color;
+
+			&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+				color: $modal-inverse-desktop-footer-color;
+			}
+		}
+	}
+
+	.modal-header {
+		@media (min-width: $grid-float-breakpoint) {
+			background-color: $modal-inverse-desktop-header-bg;
+			border-color: $modal-inverse-desktop-header-border-color;
+
+			&, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+				color: $modal-inverse-desktop-header-color;
+			}
+		}
+	}
+
+	.close,
+	.close:focus,
+	.close:hover,
+	.close.btn-default:active,
+	.close.btn-default:active:focus,
+	.close.btn-default:active:hover {
+		color: $modal-inverse-header-close-color;
+
+		@media screen and (min-width: $grid-float-breakpoint) {
+			color: $modal-inverse-desktop-header-close-color;
+		}
+	}
+}

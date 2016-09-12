@@ -1,0 +1,216 @@
+/**
+* Lexicon 1.0.7
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@keyframes slideIn {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes dropHeader {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes removeBorder {
+	0% {
+		border-bottom-color: #D8D8D8;
+	}
+
+	100% {
+		border-bottom-color: transparent;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0.25;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: $grid-float-breakpoint-max) {
+	.nav-tabs-scrollbar {
+		$ease-out-quint: cubic-bezier(0.230,  1.000, 0.320, 1.000);
+		$anim-key-frames: dropHeader 0.5s $ease-out-quint, removeBorder 0.75s $ease-out-quint;
+
+		animation: $anim-key-frames;
+		animation-delay: 0s, 0.45s;
+		min-height: 54px;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+
+		> .nav.nav-tabs,
+		> .nav.nav-pills {
+			animation: slideIn 0.5s $ease-out-quint;
+			animation-delay: 0.4s;
+			animation-fill-mode: both;
+			animation-iteration-count: 1;
+			white-space: nowrap;
+
+			> li {
+				animation: fadeIn 0.5s ease-in;
+				animation-fill-mode: both;
+				animation-delay: 0.5s;
+				float: none;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.nav-tabs-scroll {
+	position: relative;
+
+	> .dropdown-menu {
+		left: 0;
+		max-width: none;
+		right: 0;
+		top: auto;
+
+		&.open {
+			display: block;
+
+			@media (min-width: $grid-float-breakpoint) {
+				display: none;
+			}
+		}
+	}
+
+	.open > .dropdown-menu {
+		display: none;
+
+		@media (min-width: $grid-float-breakpoint) {
+			display: block;
+		}
+	}
+}
+
+.nav-tabs-scrollbar {
+	.nav {
+		float: left;
+
+		@media (min-width: $grid-float-breakpoint) {
+			float: none;
+		}
+	}
+}
+
+.nav-tabs {
+	> li {
+		&[class*='col-'] {
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+
+			&:first-child {
+				> .dropdown-menu {
+					margin-left: 0;
+				}
+			}
+
+			&:last-child {
+				float: right;
+			}
+
+			> a {
+				margin-left: 2px;
+				margin-right: 0;
+
+				@include text-overflow();
+			}
+
+			> .dropdown-menu {
+				margin-left: 2px;
+			}
+		}
+
+		&:first-child > a {
+			margin-left: 0;
+		}
+	}
+}
+
+.nav-tabs.nav-justified {
+	> li > a {
+		margin-left: 0;
+	}
+}
+
+// Nav Tabs Default
+
+.nav-tabs-default {
+	border-bottom-color: transparent;
+
+	> li:first-child {
+		&,
+		&.open,
+		&.active {
+			> a {
+				&,
+				&:focus,
+				&:hover {
+					border-left-color: transparent;
+				}
+			}
+		}
+	}
+
+	> li > a {
+		border-left-color: $nav-tabs-border-color;
+		border-radius: 0;
+		border-width: 0 0 0 1px;
+		margin-right: 0;
+
+		&:hover {
+			border-color: transparent transparent transparent $nav-tabs-border-color;
+		}
+	}
+
+	> li.active > a {
+		&,
+		&:focus,
+		&:hover {
+			border-color: transparent transparent transparent $nav-tabs-border-color;
+			border-width: 0 0 0 1px;
+		}
+	}
+
+	.open > a {
+		&,
+		&:focus,
+		&:hover {
+			border-color: transparent transparent transparent $nav-tabs-border-color;
+		}
+	}
+}
+
+@media (max-width: $grid-float-breakpoint-max) {
+	.nav-tabs-scroll .nav-tabs-default {
+		> li {
+			&:first-child > a {
+				margin-left: 0;
+			}
+
+			> a {
+				margin-left: -4px;
+			}
+		}
+	}
+}

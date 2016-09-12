@@ -1,0 +1,138 @@
+/**
+* Lexicon 1.0.7
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.management-bar {
+	margin-bottom: 0;
+
+	a {
+		color: $nav-link-color;
+	}
+}
+
+.management-bar .management-bar-nav > li > .btn,
+.management-bar .management-bar-nav > .dropdown > .btn,
+.management-bar-header > .btn,
+.management-bar-header-right > .btn,
+.management-bar-header > .dropdown,
+.management-bar-header-right > .dropdown {
+	@media (min-width: $grid-float-breakpoint) {
+		margin: $management-bar-desktop-btn-padding-vertical 0 $management-bar-desktop-btn-padding-vertical $management-bar-desktop-btn-padding-horizontal;
+	}
+}
+
+.management-bar-header > .checkbox,
+.management-bar-header > .radio,
+.management-bar-header-right > .checkbox,
+.management-bar-header-right > .radio,
+.management-bar-nav > li > .checkbox,
+.management-bar-nav > li > .radio {
+	@media (min-width: $grid-float-breakpoint) {
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+}
+
+.management-bar-nav > li,
+.management-bar-collapse .management-bar-nav > li {
+	> a,
+	> span {
+		@media (min-width: $grid-float-breakpoint) {
+			padding-bottom: $management-bar-desktop-padding-vertical;
+			padding-top: $management-bar-desktop-padding-vertical;
+		}
+	}
+}
+
+.management-bar-no-collapse .management-bar-nav {
+	.open .dropdown-menu {
+		&:after,
+		&:before {
+			display: block;
+		}
+	}
+}
+
+// Skins
+
+.management-bar {
+	.management-bar-collapse {
+		@media (max-width: $grid-float-breakpoint) {
+			border-width: 0;
+		}
+	}
+
+	.management-bar-collapse.in {
+		@media (max-width: $grid-float-breakpoint) {
+			box-shadow: $management-bar-collapse-absolute-box-shadow;
+		}
+	}
+
+	.nav > .active > a {
+		&,
+		&:hover {
+			color: $management-bar-link-active-color;
+		}
+	}
+
+	.nav > .open > a {
+		&,
+		&:hover,
+		&:focus {
+			color: $management-bar-link-active-color;
+		}
+	}
+}
+
+.management-bar-default {
+	border-color: $management-bar-default-border;
+
+	a {
+		color: $management-bar-default-link-color;
+	}
+
+	.management-bar-collapse {
+		left: 0;
+		margin-top: $management-bar-border-bottom-width;
+		right: 0;
+
+		@media (min-width: $grid-float-breakpoint) {
+			margin-top: 0;
+		}
+	}
+}
+
+// Management Bar Default Btn Default
+
+.management-bar-default {
+	.btn-default,
+	.nav > li > .btn-default {
+		border-color: $management-bar-default-btn-default-border;
+
+		&:focus,
+		&:hover {
+			background-color: $management-bar-default-btn-default-bg;
+			border-color: $management-bar-default-btn-default-border;
+		}
+
+		&:active,
+		&.active {
+			background-color: $management-bar-default-btn-default-border;
+		}
+	}
+
+	.open .btn-default,
+	.nav > .open > .btn-default {
+		&,
+		&:active,
+		&.active,
+		&:focus,
+		&:hover {
+			background-color: $management-bar-default-btn-default-border;
+			color: $management-bar-default-btn-default-color;
+		}
+	}
+}
