@@ -6,6 +6,10 @@
 	border-style: $card-border-style;
 	border-width: $card-border-width;
 
+	@if (variable-exists(card-box-shadow)) {
+		box-shadow: $card-box-shadow;
+	}
+
 	@if ($card-border-radius > 0) {
 		border-radius: $card-border-radius;
 	}
@@ -28,10 +32,6 @@
 		}
 	}
 
-	.card-row {
-		width: 100%;
-	}
-
 	.divider {
 		background-color: $card-divider-bg;
 		border-width: 0;
@@ -41,6 +41,7 @@
 	}
 
 	.figure {
+		margin-bottom: 0;
 		overflow: visible;
 	}
 }
@@ -52,21 +53,15 @@
 
 // Card Simple Grid
 
-.card-col-content,
-.card-col-field {
+%card-col {
 	display: table-cell;
 	position: relative;
 	vertical-align: middle;
-
-	figure,
-	.figure {
-		height: 100%;
-		margin-bottom: 0;
-		width: 100%;
-	}
 }
 
 .card-col-content {
+	@extend %card-col;
+
 	max-width: 10px;
 	position: relative;
 	width: auto;
@@ -75,6 +70,8 @@
 }
 
 .card-col-field {
+	@extend %card-col;
+
 	width: 1%;
 }
 
@@ -111,13 +108,13 @@
 .card-row-layout-fixed {
 	table-layout: fixed;
 
-	.card-col-content,
-	.card-col-field {
+	.card-col-content {
 		word-wrap: break-word;
 	}
 
 	.card-col-field {
 		width: auto;
+		word-wrap: break-word;
 	}
 }
 
@@ -161,53 +158,59 @@
 
 // Card Border Helpers
 
-.card-circle {
-	border-radius: $card-circle-border-radius;
+@if not ($card-border-radius == $card-circle-border-radius) {
+	.card-circle {
+		border-radius: $card-circle-border-radius;
 
-	.card-col-content,
-	.card-col-field {
-		&:first-child {
-			border-bottom-left-radius: $card-circle-border-radius;
-			border-top-left-radius: $card-circle-border-radius;
-		}
+		.card-col-content,
+		.card-col-field {
+			&:first-child {
+				border-bottom-left-radius: $card-circle-border-radius;
+				border-top-left-radius: $card-circle-border-radius;
+			}
 
-		&:last-child {
-			border-bottom-right-radius: $card-circle-border-radius;
-			border-top-right-radius: $card-circle-border-radius;
-		}
-	}
-}
-
-.card-rounded {
-	border-radius: $card-rounded-border-radius;
-
-	.card-col-content,
-	.card-col-field {
-		&:first-child {
-			border-bottom-left-radius: $card-rounded-border-radius;
-			border-top-left-radius: $card-rounded-border-radius;
-		}
-
-		&:last-child {
-			border-bottom-right-radius: $card-rounded-border-radius;
-			border-top-right-radius: $card-rounded-border-radius;
+			&:last-child {
+				border-bottom-right-radius: $card-circle-border-radius;
+				border-top-right-radius: $card-circle-border-radius;
+			}
 		}
 	}
 }
 
-.card-square {
-	border-radius: $card-square-border-radius;
+@if not ($card-border-radius == $card-rounded-border-radius) {
+	.card-rounded {
+		border-radius: $card-rounded-border-radius;
 
-	.card-col-content,
-	.card-col-field {
-		&:first-child {
-			border-bottom-left-radius: $card-square-border-radius;
-			border-top-left-radius: $card-square-border-radius;
+		.card-col-content,
+		.card-col-field {
+			&:first-child {
+				border-bottom-left-radius: $card-rounded-border-radius;
+				border-top-left-radius: $card-rounded-border-radius;
+			}
+
+			&:last-child {
+				border-bottom-right-radius: $card-rounded-border-radius;
+				border-top-right-radius: $card-rounded-border-radius;
+			}
 		}
+	}
+}
 
-		&:last-child {
-			border-bottom-right-radius: $card-square-border-radius;
-			border-top-right-radius: $card-square-border-radius;
+@if not ($card-border-radius == $card-square-border-radius) {
+	.card-square {
+		border-radius: $card-square-border-radius;
+
+		.card-col-content,
+		.card-col-field {
+			&:first-child {
+				border-bottom-left-radius: $card-square-border-radius;
+				border-top-left-radius: $card-square-border-radius;
+			}
+
+			&:last-child {
+				border-bottom-right-radius: $card-square-border-radius;
+				border-top-right-radius: $card-square-border-radius;
+			}
 		}
 	}
 }
@@ -288,17 +291,21 @@
 .radio-middle-left input[type="radio"],
 .radio-middle-left label > input[type="radio"] {
 	left: $checkbox-position;
-	margin-top: -6px;
+	margin-top: 0;
 	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .checkbox-middle-right input[type="checkbox"],
 .checkbox-middle-right label > input[type="checkbox"],
 .radio-middle-right input[type="radio"],
 .radio-middle-right label > input[type="radio"] {
-	margin-top: -6px;
+	margin-top: 0;
 	right: $checkbox-position;
 	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .checkbox-top-left label > input[type="checkbox"],
@@ -311,11 +318,4 @@
 .radio-top-right label > input[type="radio"] {
 	right: $checkbox-position;
 	top: $checkbox-position;
-}
-
-.card {
-	figure,
-	.figure {
-		margin-bottom: 0;
-	}
 }
