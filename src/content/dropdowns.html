@@ -777,42 +777,28 @@ section: Components
 </div>
 
 <script>
-	$('#mainContent').on('click', 'a', function(event) {
-		event.preventDefault();
-	});
-
-	$('select').on('focus', function(event) {
-		$(this).closest('.form-group').addClass('focus');
-	});
-
-	$('input[type="email"]').on('focus', function(event) {
-		$(this).closest('.form-group').addClass('focus');
-	});
-
-	$('input[type="checkbox"]').on('focus', function(event) {
-		$(this).closest('.checkbox').addClass('focus');
-	});
-
-	$('input[type="checkbox"]').change(function(event) {
-		var $this = $(this);
-
-		if ($this.prop('checked')) {
-			$this.closest('.checkbox').addClass('active');
+	$('#mainContent').on(
+		'click',
+		'a',
+		function(event) {
+			event.preventDefault();
 		}
-		else {
-			$this.closest('.checkbox').removeClass('active');
+	);
+
+	$('select, input[type="email"], input[type="checkbox"]').on(
+		'focus blur',
+		function(event) {
+			var el = $(this);
+
+			var selector = this.type === 'checkbox' ? '.checkbox' : '.form-group';
+
+			el.closest(selector).toggleClass('focus', event.type === 'focus');
 		}
-	});
+	);
 
-	$('select').on('blur', function(event) {
-		$(this).closest('.form-group').removeClass('focus');
-	});
-
-	$('input[type="email"]').on('blur', function(event) {
-		$(this).closest('.form-group').removeClass('focus');
-	});
-
-	$('input[type="checkbox"]').on('blur', function(event) {
-		$(this).closest('.checkbox').removeClass('focus');
-	});
+	$('input[type="checkbox"]').change(
+		function(event) {
+			$(this).closest('.checkbox').toggleClass('active', this.checked);
+		}
+	);
 </script>
