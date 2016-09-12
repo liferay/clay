@@ -33,9 +33,9 @@
 	$index: str-index($string, $search);
 
 	@if $index {
-		@return str-slice($string, 1, $index - 1) +
-		$replace +
-		str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+		$string: str-slice($string, 1, $index - 1) +
+			$replace +
+			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
 	}
 
 	@return $string;
@@ -49,7 +49,7 @@
 	$index: 0;
 	$slice: 2000;
 
-	$loops: ceil(str-length($svg)/$slice);
+	$loops: ceil(str-length($svg) / $slice);
 
 	@for $i from 1 through $loops {
 		$chunk: str-slice($svg, $index, $index + $slice - 1);
