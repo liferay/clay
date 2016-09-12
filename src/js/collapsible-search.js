@@ -1,4 +1,6 @@
 +function($) {
+	var SUPPORTS_TRANSITIONS = $.support.transition;
+
 	var CollapsibleSearch = function(element) {
 		var instance = this;
 
@@ -27,6 +29,7 @@
 			var instance = this;
 
 			var basicSearch = $(event.currentTarget).closest('.basic-search');
+
 			var basicSearchSlider = basicSearch.find('.basic-search-slider');
 			var basicSearchSubmit = basicSearch.find('[type="submit"]');
 
@@ -36,18 +39,19 @@
 				basicSearch.trigger('closed.lexicon.collapsible.search');
 			};
 
-			if ($.support.transition) {
+			if (SUPPORTS_TRANSITIONS) {
 				basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
 					.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
 			}
 
 			basicSearch.addClass('basic-search-transition').removeClass('open');
 
-			if (!$.support.transition) {
-				return complete.call(instance);
+			if (!SUPPORTS_TRANSITIONS) {
+				complete.call(instance);
 			}
-
-			basicSearchSubmit.focus();
+			else {
+				basicSearchSubmit.focus();
+			}
 		},
 
 		destroy: function() {
@@ -68,6 +72,7 @@
 
 			if (window.innerWidth < CollapsibleSearch.BREAKPOINT) {
 				var basicSearch = $(event.currentTarget).parents('.basic-search');
+
 				var basicSearchInput = basicSearch.find('input[type="text"]');
 				var basicSearchSlider = basicSearch.find('.basic-search-slider');
 
@@ -81,15 +86,15 @@
 				if (!basicSearch.hasClass('open')) {
 					event.preventDefault();
 
-					if ($.support.transition) {
+					if (SUPPORTS_TRANSITIONS) {
 						basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
 							.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
 					}
 
 					basicSearch.addClass('basic-search-transition').addClass('open');
 
-					if (!$.support.transition) {
-						return complete.call(instance);
+					if (!SUPPORTS_TRANSITIONS) {
+						complete.call(instance);
 					}
 				}
 			}
@@ -97,20 +102,23 @@
 	};
 
 	var Plugin = function(option) {
-		return this.each(function() {
-			var $this = $(this);
-			var data = $this.data('lexicon.collapsible-search');
+		return this.each(
+			function() {
+				var $this = $(this);
 
-			if (!data) {
-				data = new CollapsibleSearch(this);
+				var data = $this.data('lexicon.collapsible-search');
 
-				$this.data('lexicon.collapsible-search', data);
+				if (!data) {
+					data = new CollapsibleSearch(this);
+
+					$this.data('lexicon.collapsible-search', data);
+				}
+
+				if (typeof option == 'string') {
+					data[option]();
+				}
 			}
-
-			if (typeof option == 'string') {
-				data[option]();
-			}
-		});
+		);
 	};
 
 	var old = $.fn.collapsibleSearch;
