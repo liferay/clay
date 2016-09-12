@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.7</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -319,7 +319,7 @@
 				</button>
 			</div>
 
-			<div class="collapse navbar-collapse" id="navbar-collapse-001">
+			<div class="collapse navbar-collapse navbar-collapse-left" id="navbar-collapse-001">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Message Boards</a></li>
 					<li class="dropdown">
@@ -387,7 +387,15 @@
 		</blockquote>
 
 		<nav class="collapse-basic-search navbar navbar-default" id="mySearch">
-			<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<div class="navbar-header">
+				<button class="collapsed navbar-toggle navbar-toggle-left navbar-toggle-page-name" data-target="#navbar-collapse-1" data-toggle="collapse" type="button">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
+					<span class="caret"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-collapse-left" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Message Boards</a></li>
 					<li class="dropdown">
@@ -426,12 +434,6 @@
 			</div>
 
 			<div class="navbar-header navbar-header-right">
-				<button class="collapsed navbar-toggle navbar-toggle-left navbar-toggle-page-name" data-target="#navbar-collapse-1" data-toggle="collapse" type="button">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="page-name">Message Boards</span><!-- current page name goes here e.g. Message Boards Home -->
-					<span class="caret"></span>
-				</button>
-
 				<form class="basic-search input-group">
 					<div class="input-group-input">
 						<div class="basic-search-slider">
