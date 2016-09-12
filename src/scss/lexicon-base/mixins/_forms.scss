@@ -3,6 +3,8 @@
 // @param $color - Placeholder Color
 
 @mixin color-placeholder($element, $color: $input-color-placeholder) {
+	@warn "Lexicon's `color-placeholder($element, $color: $input-color-placeholder)` mixin is deprecated as of v1.0.9 and will be removed in v2.0.0. Please use `placeholder($color: $input-color-placeholder)` instead.";
+
 	#{$element}::-webkit-input-placeholder {
 		color: $color;
 	}
@@ -31,9 +33,9 @@
 	$index: str-index($string, $search);
 
 	@if $index {
-		@return str-slice($string, 1, $index - 1) +
-		$replace +
-		str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+		$string: str-slice($string, 1, $index - 1) +
+			$replace +
+			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
 	}
 
 	@return $string;
@@ -47,7 +49,7 @@
 	$index: 0;
 	$slice: 2000;
 
-	$loops: ceil(str-length($svg)/$slice);
+	$loops: ceil(str-length($svg) / $slice);
 
 	@for $i from 1 through $loops {
 		$chunk: str-slice($svg, $index, $index + $slice - 1);
