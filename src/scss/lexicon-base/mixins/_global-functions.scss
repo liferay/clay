@@ -34,3 +34,64 @@
 
 	@return lx-icon-padding($monospaced-size, $icon-size);
 }
+
+// str-replace and svg-url functions from http://codepen.io/jakob-e/pen/doMoML
+
+// Function to replace characters in a string
+// @param $string - the string to operate on
+// @param $search - the character to replace
+// @param $replace - the character to replace $search with
+
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	@if $index {
+		$string: str-slice($string, 1, $index - 1) +
+			$replace +
+			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// Function to encode SVG and provide back a data url
+// @param $svg - The SVG markup to encode
+
+@function svg-url($svg) {
+	$encoded: '';
+	$index: 0;
+	$slice: 2000;
+
+	$loops: ceil(str-length($svg) / $slice);
+
+	@for $i from 1 through $loops {
+		$chunk: str-slice($svg, $index, $index + $slice - 1);
+
+		$chunk: str-replace($chunk, '"', '\'');
+		$chunk: str-replace($chunk, ' ', '%20');
+		$chunk: str-replace($chunk, '<', '%3C');
+		$chunk: str-replace($chunk, '>', '%3E');
+		$chunk: str-replace($chunk, '&', '%26');
+		$chunk: str-replace($chunk, '#', '%23');
+
+		$encoded: #{$encoded}#{$chunk};
+
+		$index: $index + $slice;
+	}
+
+	@return url("data:image/svg+xml;charset=utf8,#{$encoded}");
+}
+
+// Function that colors and returns a specified lexicon icon as data uri
+// @param $name - Icon name e.g. angle-right
+// @param $color - Color of icon
+
+@function get-lx-svg-icon($name, $color) {
+	$lx-icons: (
+		angle-right: "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='512' height='512' viewBox='0 0 512 512'><path d='M396.394 255.607c-0.22-6.936-2.973-13.81-8.272-19.111l-227.221-227.221c-11.026-11.059-28.94-11.059-39.999 0-11.058 11.026-11.058 28.941 0 39.999l206.333 206.333c0 0-206.333 206.333-206.333 206.333-11.058 11.058-11.058 28.973 0 39.999 11.059 11.059 28.972 11.059 39.999 0l227.221-227.221c5.3-5.3 8.053-12.175 8.272-19.111z' fill='#{$color}'></path></svg>",
+		caret-double-l: "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='512' height='512' viewBox='0 0 512 512'><path d='M347.913 199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6 0l-81.538 85c-8.73 9.1-2.548 24.664 9.8 24.664h163.077c12.348 0 18.53-15.563 9.8-24.664zM165.236 312.664l81.538 85c5.412 5.642 14.188 5.642 19.6 0l81.538-85c8.73-9.1 2.548-24.664-9.8-24.664H175.035c-12.347 0-18.53 15.563-9.8 24.664z' fill='#{$color}'></path></svg>",
+		play: "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='512' height='512' viewBox='0 0 512 512'><path d='M127.499 453.745v-395.49c0-46.992 26.018-58.255 57.841-25.017l189.245 197.744c13.165 13.751 13.165 36.28 0 50.067l-189.245 197.745c-31.788 33.205-57.841 21.941-57.841-25.050z' fill='#{$color}'></path></svg>"
+	);
+
+	@return svg-url(map-get($lx-icons, $name));
+}
