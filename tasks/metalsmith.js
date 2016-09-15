@@ -1,6 +1,7 @@
 var path = require('path');
 var gulpsmith = require('gulpsmith');
 var gulpFrontMatter = require('gulp-front-matter');
+var basename = require('basename');
 
 var define = require('metalsmith-define');
 var encodeHTML = require('metalsmith-encode-html');
@@ -14,6 +15,7 @@ var handleNav = require('../lib/handle_nav');
 var handlePath = require('../lib/handle_path');
 var handlePermalink = require('../lib/handle_permalink');
 var handleTemplate = require('../lib/handle_template');
+var svgstore = require('../lib/svgstore');
 var wrapChangelog = require('../lib/wrap_changelog');
 
 var _s = require('underscore.string');
@@ -49,7 +51,7 @@ module.exports = function(gulp, plugins, _, config) {
 
 		var svgFlags = gulp.src(['src/images/icons/flags-*.svg'], {read: false})
 						.pipe(plugins.rename(function(file) {
-							file.basename = _s.slugify(file.basename.replace(/^flags-/, ''));
+							file.basename = _s.slugify(file.basename.replace(svgstore.REGEX_FLAGS, ''));
 						}));
 
 		return gulp.src(['./CHANGELOG.md', config.SRC_GLOB])
@@ -61,11 +63,8 @@ module.exports = function(gulp, plugins, _, config) {
 						var metadata = file.frontMatter;
 
 						if (_.isEmpty(metadata)) {
-							var filePath = file.relative;
-							var ext = path.extname(file.relative);
-
 							metadata = {
-								title: path.basename(filePath, ext)
+								title: basename(file.relative)
 							};
 						}
 

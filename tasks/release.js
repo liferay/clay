@@ -118,13 +118,20 @@ module.exports = function(gulp, plugins, _, config) {
 			var previousTagName = 'v' + currentVersion;
 			var tagName = 'v' + bumpedVersion;
 
-			cmdPromise.resolve()
-				.git('checkout', 'master')
-				.git('status', '--porcelain').then(function(status) {
+			var checkStatus = function(msg) {
+				return function(status) {
 					if (!!status.stdout) {
-						throw new Error('working directory not clean, aborting');
+						throw new Error(msg);
 					}
-				})
+				};
+			};
+
+			cmdPromise.resolve()
+				.git('checkout', 'develop')
+				.cmd('gulp', 'build:svg:scss-icons')
+				.git('status', '--porcelain', './src/scss/lexicon-base/mixins/_global-functions.scss').then(checkStatus('It appears that there are new icons. Please commit the modified Sass functions file.'))
+				.git('checkout', 'master')
+				.git('status', '--porcelain').then(checkStatus('working directory not clean, aborting'))
 				.then(getGitRemote)
 				.then(function(remote) {
 					return cmdPromise.resolve().git('fetch', remote, '--quiet');
