@@ -93,13 +93,13 @@ section: Components
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Anchor Elements and Inputs as Buttons</h3>
-		<a href="#1" class="btn btn-default">Default</a>
+		<a href="#1" class="btn btn-default">Anchor</a>
 		<input class="btn btn-primary" type="button" value="Input" />
 		<input class="btn btn-info" type="submit" value="Submit" />
-		<a href="#1" class="btn btn-success">Success</a>
-		<a href="#1" class="btn btn-warning">Warning</a>
-		<a href="#1" class="btn btn-danger">Danger</a>
-		<a href="#1" class="btn btn-link">Link</a>
+		<a href="#1" class="btn btn-success">Anchor</a>
+		<a href="#1" class="btn btn-warning">Anchor</a>
+		<a href="#1" class="btn btn-danger">Anchor</a>
+		<a href="#1" class="btn btn-link">Anchor</a>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
@@ -559,17 +559,36 @@ section: Components
 	<div class="col-md-12">
 		<h3>Action Buttons</h3>
 
+		<div class="alert alert-info">Position the action buttons on any corner of the page using the classes <code>btn-top-left</code>, <code>btn-top-right</code>, <code>btn-bottom-right</code>, and <code>btn-bottom-left</code>.</div>
+
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Action buttons are used for providing easy access to primary actions, such as adding new entities (users, organizations, new blog entries). There are two kinds of action buttons: <code>.btn-action</code> and <code>.btn-action-secondary</code>.</p>
 
 			<p><code>.btn-action</code> should be used where only one primary action can be taken. A good use of <code>.btn-action</code> is adding a new entry in the blog portlet, where the user will be led to the new blog entry page.</p>
 		</blockquote>
 
-		<a class="btn btn-primary btn-action" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
-			</svg>
-		</a>
+		<div class="lx-site-btn-action-column">
+			<h6>Lexicon SVG</h6>
+			<a class="btn btn-primary btn-action" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
+				<svg class="icon-monospaced lexicon-icon">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
+				</svg>
+			</a>
+		</div>
+
+		<div class="lx-site-btn-action-column">
+			<h6>Font Awesome</h6>
+			<a class="btn btn-primary btn-action" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
+				<span class="icon-plus"></span>
+			</a>
+		</div>
+
+		<div class="lx-site-btn-action-column">
+			<h6>Glyphicon</h6>
+			<a class="btn btn-primary btn-action" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
+				<span class="glyphicon glyphicon-plus"></span>
+			</a>
+		</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse12"><span class="icon-caret-down"></span></a>
@@ -616,12 +635,6 @@ section: Components
     </ul>
 </div>```</code></pre>
 </div>
-
-		<a class="btn btn-primary btn-action btn-top-left" href="../blogs-action" type="submit">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
-			</svg>
-		</a>
 
 		<div class="btn-action-secondary btn-bottom-right dropdown">
 			<button class="btn btn-primary" data-toggle="dropdown" type="button">
