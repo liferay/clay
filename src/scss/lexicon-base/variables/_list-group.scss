@@ -1,3 +1,15 @@
+// Deprecated `$enable-detailed-list-view` as of v1.0.9 and will be removed as
+// of v2.0.0.
+$enable-detailed-list-view: true !default;
+
+// Deprecated `$enable-list-group-card` as of v1.0.9 and will be removed as of
+// v2.0.0.
+$enable-list-group-card: true !default;
+
+// Deprecated `$enable-list-group-card-checkbox-hidden-xs` as of v1.0.9 and will
+// be removed as of v2.0.0.
+$enable-list-group-card-checkbox-hidden-xs: true !default;
+
 $list-group-border-width: 1px !default;
 $list-group-header-font-weight: 500 !default;
 
