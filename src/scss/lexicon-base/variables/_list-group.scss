@@ -1,7 +1,19 @@
-$list-group-header-font-weight: 500 !default; // Shared
+// Deprecated `$enable-detailed-list-view` as of v1.0.9 and will be removed as
+// of v2.0.0.
+$enable-detailed-list-view: true !default;
 
-$tabular-list-group-border-width: 1px !default; // Shared
+// Deprecated `$enable-list-group-card` as of v1.0.9 and will be removed as of
+// v2.0.0.
+$enable-list-group-card: true !default;
 
+// Deprecated `$enable-list-group-card-checkbox-hidden-xs` as of v1.0.9 and will
+// be removed as of v2.0.0.
+$enable-list-group-card-checkbox-hidden-xs: true !default;
+
+$list-group-border-width: 1px !default;
+$list-group-header-font-weight: 500 !default;
+
+$tabular-list-group-border-width: $list-group-border-width !default;
 $tabular-list-group-item-height: 100px !default;
 
 // Skins
@@ -9,3 +21,9 @@ $tabular-list-group-item-height: 100px !default;
 $list-group-card-active-bg: $component-active-bg !default;
 $list-group-card-active-color: $component-active-color !default;
 $list-group-card-checkbox-hidden-icon: '\f00c' !default;
+
+$list-group-header-bg: $list-group-hover-bg !default;
+$list-group-header-color: $list-group-link-heading-color !default;
+$list-group-header-hover-color: $list-group-header-color !default;
+
+$list-group-item-active-dropdown-toggle-color: $list-group-active-color !default;
