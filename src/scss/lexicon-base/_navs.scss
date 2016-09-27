@@ -8,9 +8,9 @@
 .nav > li > span,
 .nav-heading > a,
 .nav-heading > span {
-		display: block;
-		padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
-		position: relative;
+	display: block;
+	padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
+	position: relative;
 }
 
 .nav > li > a:focus {
