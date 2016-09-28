@@ -52,7 +52,7 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task('build:svg:scss-icons', function() {
 		var svgFiles = gulp.src(['src/images/icons/*.svg'])
 						.pipe(plugins.cheerio(svgstore.cheerio({
-							run: function ($, file) {
+							run: function($, file) {
 								if (!svgstore.REGEX_FLAGS.test(file.relative)) {
 									$('.lexicon-icon-outline').each(function() {
 										$(this).attr('fill', '#{$color}');
