@@ -617,35 +617,35 @@ $site-lexicon-icon-color: #5AF;
 }
 
 .site-add-cell {
-	background-image: get-lx-svg-icon(add-cell, $site-lexicon-icon-color);
+	background-image: lx-icon(add-cell, $site-lexicon-icon-color);
 }
 
 .site-add-column {
-	background-image: get-lx-svg-icon(add-column, $site-lexicon-icon-color);
+	background-image: lx-icon(add-column, $site-lexicon-icon-color);
 }
 
 .site-add-row {
-	background-image: get-lx-svg-icon(add-row, $site-lexicon-icon-color);
+	background-image: lx-icon(add-row, $site-lexicon-icon-color);
 }
 
 .site-adjust {
-	background-image: get-lx-svg-icon(adjust, $site-lexicon-icon-color);
+	background-image: lx-icon(adjust, $site-lexicon-icon-color);
 }
 
 .site-align-center {
-	background-image: get-lx-svg-icon(align-center, $site-lexicon-icon-color);
+	background-image: lx-icon(align-center, $site-lexicon-icon-color);
 }
 
 .site-asterisk {
-	background-image: get-lx-svg-icon(asterisk, $site-lexicon-icon-color);
+	background-image: lx-icon(asterisk, $site-lexicon-icon-color);
 }
 
 .site-times-circle {
-	background-image: get-lx-svg-icon(times-circle, $site-lexicon-icon-color);
+	background-image: lx-icon(times-circle, $site-lexicon-icon-color);
 }
 
 .site-workflow {
-	background-image: get-lx-svg-icon(workflow, $site-lexicon-icon-color);
+	background-image: lx-icon(workflow, $site-lexicon-icon-color);
 }
 
 .site-linux-tux {

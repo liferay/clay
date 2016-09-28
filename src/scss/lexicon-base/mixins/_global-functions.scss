@@ -84,7 +84,7 @@
 // @param $name - Icon name e.g. angle-right
 // @param $color - Color of icon
 
-@function get-lx-svg-icon($name, $color) {
+@function lx-icon($name, $color) {
 	$lx-icons: get-lx-icons($color);
 
 	@return svg-url(map-get($lx-icons, $name));
