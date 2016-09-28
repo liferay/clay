@@ -3,6 +3,12 @@
 	font-weight: $panel-title-font-weight;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
+
+	@if (variable-exists(atlas-theme)) {
+		a {
+			text-decoration: none;
+		}
+	}
 }
 
 .panel-group {
@@ -11,6 +17,14 @@
 
 		.collapse-icon {
 			padding-right: 45px;
+		}
+
+		@if (variable-exists(atlas-theme)) {
+			border-bottom-width: $panel-border-bottom-width;
+
+			+ .panel-collapse > .panel-body {
+				border-top-width: 2px;
+			}
 		}
 	}
 
@@ -21,6 +35,27 @@
 			padding: $panel-heading-padding;
 			position: relative;
 		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.panel + .panel {
+			margin-top: 0;
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	.panel {
+		border: $panel-border-width solid transparent;
+		box-shadow: $panel-box-shadow;
+	}
+
+	.panel-footer {
+		border-top-width: $panel-border-top-width;
+	}
+
+	.panel-heading {
+		border-bottom-width: 2px;
 	}
 }
 
@@ -35,6 +70,23 @@
 		background-color: $panel-blank-heading-bg;
 		border-color: $panel-blank-border;
 	}
+
+	@if (variable-exists(atlas-theme)) {
+		> .panel-heading {
+			a {
+				color: $panel-blank-heading-link-open-color;
+
+				&:focus,
+				&:hover {
+					text-decoration: none;
+				}
+
+				&.collapsed {
+					color: $panel-blank-heading-link-color;
+				}
+			}
+		}
+	}
 }
 
 .panel-group .panel-blank .panel-heading {
@@ -48,7 +100,7 @@
 	> .panel-footer {
 		background-color: $panel-primary-heading-bg;
 		border-color: $panel-primary-border;
-		color: #FFF;
+		color: $panel-bg;
 	}
 }
 
@@ -73,5 +125,13 @@
 		background-color: $panel-danger-heading-bg;
 		border-color: $panel-danger-border;
 		color: $brand-danger;
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	.panel-default {
+		> .panel-footer {
+			color: $panel-default-text;
+		}
 	}
 }
