@@ -62,11 +62,15 @@
 	$index: 0;
 	$slice: 2000;
 
-	$loops: ceil(str-length($svg) / $slice);
+	$loops: ceil(str-length($svg)/$slice);
 
 	@for $i from 1 through $loops {
 		$chunk: str-slice($svg, $index, $index + $slice - 1);
 
+		$chunk: str-replace($chunk, '"', '\'');
+		$chunk: str-replace($chunk, ' ', '%20');
+        $chunk: str-replace($chunk, '{', '%7B');
+        $chunk: str-replace($chunk, '}', '%7D');
 		$chunk: str-replace($chunk, '<', '%3C');
 		$chunk: str-replace($chunk, '>', '%3E');
 		$chunk: str-replace($chunk, '&', '%26');
