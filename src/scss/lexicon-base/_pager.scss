@@ -1,17 +1,11 @@
 @if (variable-exists(atlas-theme)) {
 	.pager {
-		li {
-			> a,
-			> span {
-				border: $pager-border-width solid $pager-border;
-				border-radius: $pager-border-radius;
-				line-height: $pager-item-height;
-				padding: $pager-padding-base-vertical $pager-padding-base-horizontal;
-			}
-		}
-
-		a {
+		li > a {
+			border-radius: $pager-border-radius;
+			border: $pager-border-width solid $pager-border;
 			color: $pager-color;
+			line-height: $pager-item-height;
+			padding: $pager-padding-base-vertical $pager-padding-base-horizontal;
 
 			&:focus,
 			&:hover {
@@ -19,6 +13,13 @@
 				border-color: $pager-hover-border;
 				color: $pager-hover-color;
 			}
+		}
+
+		li > span {
+			border: $pager-border-width solid $pager-border;
+			border-radius: $pager-border-radius;
+			line-height: $pager-item-height;
+			padding: $pager-padding-base-vertical $pager-padding-base-horizontal;
 		}
 
 		.disabled {
@@ -29,18 +30,6 @@
 				background-color: $pager-disabled-bg;
 				border-color: $pager-disabled-border;
 				opacity: 0.5;
-			}
-		}
-
-		.next {
-			> .btn {
-				float: right;
-			}
-		}
-
-		.previous {
-			> .btn {
-				float: left;
 			}
 		}
 	}
