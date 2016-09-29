@@ -52,18 +52,14 @@ module.exports = function(gulp, plugins, _, config) {
 	gulp.task('build:svg:scss-icons', function() {
 		var svgFiles = gulp.src(['src/images/icons/*.svg'])
 						.pipe(plugins.cheerio(svgstore.cheerio({
-							run: function ($, file) {
+							run: function($, file) {
 								if (!svgstore.REGEX_FLAGS.test(file.relative)) {
-									$('[fill]').filter('[fill]').attr('fill', '#{$color}');
+									$('.lexicon-icon-outline').each(function() {
+										$(this).attr('fill', '#{$color}');
+									});
+
 									$('[stroke]').filter('[stroke]').attr('stroke', '#{$color}');
 								}
-
-								$('svg').filter('[width],[height]').attr(
-									{
-										height: null,
-										width: null
-									}
-								);
 							}
 						})))
 						.pipe(plugins.rename(svgstore.rename))

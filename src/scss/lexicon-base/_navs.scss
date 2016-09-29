@@ -1,42 +1,55 @@
-.nav > li > a:focus {
+.nav a {
+	@if (variable-exists(nav-link-color)) {
+		color: $nav-link-color;
+	}
+}
+
+.nav > li > a,
+.nav > li > span,
+.nav-heading > a,
+.nav-heading > span {
+	display: block;
+	padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
 	position: relative;
+}
+
+.nav > li > a:focus {
 	z-index: 1;
 }
 
 .nav-heading {
-	color: $text-color;
+	color: $nav-heading-color;
 	display: block;
+	position: relative;
 }
 
 // Nav Equal Height
 
-.nav-equal-height > li > a,
-.nav-equal-height .nav > li > a,
-.nav-equal-height-heading > a,
-.nav-equal-height-heading > span {
-	height: 40px;
+%nav-equal-height-item {
+	display: table-cell;
+	height: $nav-equal-height-height;
+	max-width: 100px;
+	min-width: 100px;
+	vertical-align: middle;
+	word-break: break-all \9;
+	word-wrap: break-word;
 }
 
 .nav-equal-height {
-	> li {
-		display: table;
-		width: 100%;
-
-		> a {
-			display: table-cell;
-			padding: 0 $nav-link-padding-horizontal;
-			vertical-align: middle;
-		}
-	}
-
+	> li,
 	.nav > li {
 		display: table;
 		width: 100%;
+	}
 
-		> a {
-			display: table-cell;
-			vertical-align: middle;
-		}
+	> li > a {
+		@extend %nav-equal-height-item;
+
+		padding: 0 $nav-link-padding-horizontal;
+	}
+
+	.nav > li > a {
+		@extend %nav-equal-height-item;
 	}
 }
 
@@ -53,41 +66,20 @@
 
 	> a,
 	> span {
-		display: table-cell;
-		vertical-align: middle;
-		word-break: break-word;
+		@extend %nav-equal-height-item;
+
+		text-decoration: none;
 
 		&:first-child {
 			padding-left: $nav-link-padding-horizontal;
 		}
 	}
 
-	> a:focus,
-	>	a:hover {
-		text-decoration: none;
-	}
-
-	> .icon-monospaced {
-		height: auto;
-		line-height: 20px;
-	}
+	// Deprecated `.nav-equal-height-heading-field` as of v1.0.9 in favor of
+	// `.table-cell-field` and will be removed in v2.0.0
 
 	> .nav-equal-height-heading-field {
 		width: 1%;
-	}
-}
-
-.nav-equal-height.nav-nested {
-	.nav > li {
-		display: table;
-		width: 100%;
-
-		> a {
-			display: table-cell;
-			height: 40px;
-			vertical-align: middle;
-			width: 100%;
-		}
 	}
 }
 
@@ -95,22 +87,10 @@
 
 .nav-nested {
 	@include make-nav-nested($nav-nested-padding-horizontal);
-
-	.nav > li {
-		margin-top: 2px;
-	}
-
-	&.nav-pills {
-		.nav > li > a {
-			border-radius: $nav-pills-border-radius;
-		}
-	}
 }
 
-.nav-nested-margins {
-	> li .nav > li {
-		margin-left: $nav-nested-margins-margin-horizontal;
-	}
+.nav-nested-margins > li .nav > li {
+	margin-left: $nav-nested-margins-margin-horizontal;
 }
 
 // Nav Pills
@@ -123,6 +103,10 @@
 			background-color: $nav-pills-active-link-hover-bg;
 			color: $nav-pills-active-link-hover-color;
 		}
+	}
+
+	.nav > li > a {
+		border-radius: $nav-pills-border-radius;
 	}
 }
 
