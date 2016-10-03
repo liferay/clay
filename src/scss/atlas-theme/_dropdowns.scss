@@ -7,8 +7,6 @@
 	font-size: $dropdown-header-font-size;
 	overflow: hidden;
 	padding: $dropdown-link-padding;
-	text-overflow: ellipsis;
-	white-space: nowrap;
 
 	@media (min-width: $grid-float-breakpoint) { // min-width: 768px
 		font-size: $dropdown-header-font-size-desktop;
@@ -35,14 +33,5 @@
 	> li > a {
 		overflow: hidden;
 		padding: $dropdown-link-padding;
-		text-overflow: ellipsis;
-	}
-
-	.inline-scroller {
-		li a {
-			overflow: hidden;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-		}
 	}
 }
