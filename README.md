@@ -29,7 +29,7 @@ If you would like to contribute to the guidelines, or make changes on your syste
 ### Clone the repo
 Clone the repo to your computer
 
-### Install Node.js and NPM
+### Install Node.js (v4.6.0 LTS) and NPM
 If you don't already have it installed. You can find more info here: http://nodejs.org/
 Node and NPM come bundled together, so you only need to install one package.
 
