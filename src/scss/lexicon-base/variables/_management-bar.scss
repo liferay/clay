@@ -11,10 +11,10 @@ $management-bar-height: $navbar-height !default;
 $management-bar-margin-bottom: $navbar-margin-bottom !default;
 
 $management-bar-padding-horizontal: $navbar-padding-horizontal !default;
-$management-bar-padding-vertical: (($management-bar-height - $line-height-computed - $management-bar-border-top-width - $management-bar-border-bottom-width) / 2) !default;
+$management-bar-padding-vertical: ($management-bar-height - $line-height-computed - $management-bar-border-bottom-width - $management-bar-border-top-width) / 2 !default;
 
 $management-bar-btn-padding-horizontal: $management-bar-padding-horizontal !default;
-$management-bar-btn-padding-vertical: ($management-bar-height - $management-bar-border-top-width - $management-bar-border-bottom-width - $icon-monospaced-size - 2) / 2 !default; // Shared
+$management-bar-btn-padding-vertical: ($management-bar-height - $management-bar-border-bottom-width - $management-bar-border-top-width - $icon-monospaced-size - 2) / 2 !default;
 
 // Skin
 
