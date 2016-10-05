@@ -603,6 +603,12 @@ body.fixed {
 	}
 }
 
+// Navbars Page
+
+#navbarsPage ~ .row .navbar {
+	margin-bottom: 10px;
+}
+
 // Icons (Lexicon Page)
 
 $site-lexicon-icon-color: #5AF;
