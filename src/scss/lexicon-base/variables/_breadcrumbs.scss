@@ -1,5 +1,5 @@
 $breadcrumb-separator-font-family: null !default;
-$breadcrumb-separator-svg-icon: get-lx-svg-icon(angle-right, $breadcrumb-color) !default;
+$breadcrumb-separator-svg-icon: lx-icon(angle-right, $breadcrumb-color) !default;
 $breadcrumb-separator-svg-icon-height: 0.75em !default;
 $breadcrumb-separator-svg-icon-width: $breadcrumb-separator-svg-icon-height !default;
 
