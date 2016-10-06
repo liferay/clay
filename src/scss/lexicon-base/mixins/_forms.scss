@@ -26,5 +26,5 @@
 // @param $color - Icon Color
 
 @mixin select-box-icon($color) {
-	background-image: get-lx-svg-icon(caret-double-l, $color);
+	background-image: lx-icon(caret-double-l, $color);
 }
