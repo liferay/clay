@@ -10,7 +10,7 @@ section: Components
 		<div class="form-group has-success">
 			<label class="control-label" for="inputSuccess1">
 				Input with success
-				<svg class="lexicon-icon">
+				<svg class="text-warning reference-mark lexicon-icon">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
@@ -21,9 +21,8 @@ section: Components
 		<div class="form-group has-warning">
 			<label class="control-label" for="inputWarning1">
 				Input with warning
-				<svg class="lexicon-icon">
-					<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
-				</svg>
+
+				<span class="icon-asterisk reference-mark text-warning"></span>
 			</label>
 			<input class="form-control" id="inputWarning1" type="text">
 			<div class="help-block">Warning this input is a warning!</div>
@@ -32,9 +31,9 @@ section: Components
 		<div class="form-group has-error">
 			<label class="control-label" for="inputError1">
 				Input with error
-				<svg class="lexicon-icon">
-					<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
-				</svg>
+				<span class="reference-mark text-warning">
+					<span class="glyphicon glyphicon-asterisk"></span>
+				</span>
 			</label>
 			<input class="form-control" id="inputError1" type="text">
 			<div class="help-block">This input is invalid!</div>
@@ -202,7 +201,7 @@ section: Components
 
 		<div class="form-group has-feedback">
 			<label class="control-label" for="inputSuccess2">Label
-				<svg class="lexicon-icon">
+				<svg class="lexicon-icon reference-mark text-warning">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
@@ -218,7 +217,7 @@ section: Components
 		<div class="form-group has-success has-feedback">
 			<label class="control-label" for="inputSuccess2">
 				Success Label
-				<svg class="lexicon-icon">
+				<svg class="lexicon-icon reference-mark text-warning">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
@@ -235,7 +234,7 @@ section: Components
 			<label class="control-label" for="inputWarning2">Warning Label</label>
 			<input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
 			<span class="form-control-feedback" aria-hidden="true">
-				<svg class="lexicon-icon">
+				<svg class="lexicon-icon ">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
 				</svg>
 			</span>
