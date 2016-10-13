@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.9
+* Lexicon 1.0.10
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -9316,6 +9316,23 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+label .lexicon-icon,
+.control-label .lexicon-icon {
+  vertical-align: baseline;
+}
+
+label .reference-mark,
+.control-label .reference-mark {
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: baseline;
+}
+
+label .reference-mark .lexicon-icon,
+.control-label .reference-mark .lexicon-icon {
+  top: 0;
+}
+
 @media (max-width: 768px) {
   .form-control {
     font-size: 16px;
@@ -11269,6 +11286,16 @@ button.loading > .linear.loading-animation {
 .navbar .container-fluid-1280 {
   padding-left: 0;
   padding-right: 0;
+}
+
+.navbar .nav-tabs {
+  border-width: 0;
+}
+
+.navbar .nav-tabs > li > a, .navbar .nav-tabs > li > a:focus, .navbar .nav-tabs > li > a:hover {
+  border-radius: 0;
+  border-width: 0;
+  margin-right: 0;
 }
 
 .navbar {
@@ -14731,7 +14758,8 @@ th .truncate-text {
   color: #FFF;
 }
 
-label, .control-label {
+label,
+.control-label {
   color: #869CAD;
   font-size: 12px;
   font-weight: 500;
@@ -14739,16 +14767,19 @@ label, .control-label {
 }
 
 @media (min-width: 768px) {
-  label, .control-label {
+  label,
+  .control-label {
     font-size: 14px;
   }
 }
 
-label.disabled, .control-label.disabled {
+label.disabled,
+.control-label.disabled {
   opacity: 0.5;
 }
 
-label.focus, .control-label.focus {
+label.focus,
+.control-label.focus {
   color: #65B6F0;
 }
 
