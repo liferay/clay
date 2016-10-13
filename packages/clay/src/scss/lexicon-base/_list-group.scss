@@ -1,6 +1,9 @@
 .list-group-heading {
-	background-color: $list-group-bg;
-	border: 1px solid $list-group-border;
+	background-color: $list-group-header-bg;
+	border-color: $list-group-border;
+	border-style: solid;
+	border-width: $list-group-border-width;
+	color: $list-group-header-color;
 	display: block;
 	font-weight: $list-group-header-font-weight;
 	margin-bottom: -1px;
@@ -9,12 +12,44 @@
 	position: relative;
 	word-wrap: break-word;
 
+	@if (variable-exists(atlas-theme)) {
+		margin-bottom: 0;
+
+		&:after {
+			background-color: $list-group-header-open-border-color;
+			bottom: 0;
+			content: '';
+			display: block;
+			height: $list-group-header-open-border-width;
+			left: 0;
+			position: absolute;
+			right: 0;
+		}
+
+		&:after:focus {
+			z-index: -1;
+		}
+
+		&.collapsed {
+			font-weight: 300;
+
+			&:after {
+				background-color: $list-group-header-close-border-color;
+				height: $list-group-header-close-border-width;
+			}
+		}
+	}
+
 	&:focus {
+		background-color: $list-group-header-bg;
+		color: $list-group-header-hover-color;
+		text-decoration: none;
 		z-index: 1;
 	}
 
-	&:focus,
 	&:hover {
+		background-color: $list-group-header-bg;
+		color: $list-group-header-hover-color;
 		text-decoration: none;
 	}
 
@@ -30,21 +65,54 @@
 	}
 }
 
-a.list-group-heading,
-button.list-group-heading,
-.list-group-heading[data-toggle="collapse"] {
-	color: $list-group-link-color;
+button.list-group-heading {
+	text-align: left;
+	width: 100%;
+}
 
-	&:focus,
-	&:hover {
-		background-color: $list-group-hover-bg;
-		color: $list-group-link-hover-color;
+@if (variable-exists(atlas-theme)) {
+	.list-group-item {
+		border-left-width: 0;
+		border-right-width: 0;
+
+		@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-color);
+
+		&:focus {
+			z-index: 1;
+		}
+
+		.card-col-content,
+		.list-group-item-content {
+			a {
+				color: $list-group-link-color;
+
+				&:focus,
+				&:hover {
+					color: $list-group-link-hover-color;
+				}
+			}
+		}
+	}
+
+	.list-group-item.active {
+		.list-group-item-content,
+		.list-group-item-field {
+			border-bottom-color: $list-group-active-border;
+			box-shadow: inset 0 -1px 0 $list-group-active-border;
+		}
+	}
+
+	.no-borders .active {
+		.list-group-item-content,
+		.list-group-item-field {
+			box-shadow: inset 0 -2px 0 $list-group-active-border;
+		}
 	}
 }
 
 .list-group-item .checkbox input[type="checkbox"]:checked + .card,
 .list-group-item.active {
-	@include color-dropdown-toggle-link($list-group-active-color, $list-group-active-color, $list-group-active-color);
+	@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color);
 
 	.card-col-content,
 	.list-group-item-content {
@@ -103,7 +171,126 @@ button.list-group-heading,
 	}
 }
 
+@if (variable-exists(atlas-theme)) {
+	// Nested list groups shouldn't have box shadows
+
+	.list-group,
+	.tabular-list-group {
+		box-shadow: $list-group-box-shadow;
+
+		.list-group,
+		.tabular-list-group {
+			box-shadow: none;
+		}
+	}
+
+	// Last list-group-heading shouldn't have bottom border
+
+	.list-group {
+		.list-group-heading {
+			margin-top: 0;
+
+			&.collapsed:nth-last-child(2):after {
+				background-color: transparent;
+			}
+		}
+
+		.list-group-item {
+			&:first-child {
+				border-top-width: 0;
+			}
+
+			&:last-child {
+				border-bottom-width: 0;
+			}
+		}
+	}
+
+	// Remove top border on first list-group-item after list-group-heading
+
+	.list-group-heading + .list-group-item,
+	.list-group-heading + .collapse .list-group-item:first-child,
+	.list-group-heading + .collapse .list-group-item:first-child .list-group-item-content,
+	.list-group-heading + .collapse .list-group-item:first-child .list-group-item-field,
+	.list-group-heading + .collapsing .list-group-item:first-child,
+	.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-content,
+	.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-field {
+		border-top-width: 0;
+	}
+}
+
 // Tabular List Group
+
+%tabular-list-group-item-cell {
+	border: $tabular-list-group-border-width solid $list-group-border;
+	border-left-width: 0;
+	border-right-width: 0;
+	border-top-width: 0;
+	display: table-cell;
+	padding: $table-cell-padding;
+	position: relative;
+	vertical-align: middle;
+	word-break: break-all \9; // IE9
+	word-wrap: break-word;
+
+	&:first-child {
+		border-left-width: $tabular-list-group-border-width;
+		padding-left: 15px;
+	}
+
+	&:last-child {
+		border-right-width: $tabular-list-group-border-width;
+		padding-right: 15px;
+	}
+}
+
+.list-group-item-field {
+	@extend %tabular-list-group-item-cell;
+
+	text-align: center;
+
+	@if (variable-exists(atlas-theme)) {
+		vertical-align: top;
+	}
+
+	width: 1%;
+}
+
+.list-group-item-content {
+	@extend %tabular-list-group-item-cell;
+
+	max-width: 100px;
+	min-width: 100px;
+
+	@if (variable-exists(atlas-theme)) {
+		vertical-align: top;
+	}
+
+	&.clamp-horizontal {
+		.clamp-container {
+			-ms-transform: none;
+			transform: none;
+		}
+	}
+
+	&.clamp-all {
+		.clamp-container {
+			padding-top: 1em;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0.5em 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
 
 .tabular-list-group {
 	border-collapse: separate;
@@ -124,46 +311,6 @@ button.list-group-heading,
 				border-top: $tabular-list-group-border-width solid $list-group-border;
 			}
 		}
-	}
-
-	.list-group-item-content,
-	.list-group-item-field {
-		border: $tabular-list-group-border-width solid $list-group-border;
-		border-left-width: 0;
-		border-right-width: 0;
-		border-top-width: 0;
-		padding: $table-cell-padding;
-		position: relative;
-		word-break: break-all; // IE
-		word-break: break-word;
-
-		&:first-child {
-			border-left-width: $tabular-list-group-border-width;
-			padding-left: 15px;
-		}
-
-		&:last-child {
-			border-right-width: $tabular-list-group-border-width;
-			padding-right: 15px;
-		}
-	}
-
-	.list-group-item-content {
-		h1, h2, h3, h4, h5, h6 {
-			margin: 0.5em 0;
-
-			&:first-child {
-				margin-top: 0;
-			}
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
-
-	.list-group-item-field {
-		text-align: center;
 	}
 }
 
@@ -198,15 +345,21 @@ button.list-group-heading,
 	}
 }
 
-.list-group-item-content,
-.list-group-item-field {
-	display: table-cell;
-	padding: 0 0.3em;
-	vertical-align: middle;
-}
+// Remove left and right borders on tabular list group due to box shadows
 
-.list-group-item-field {
-	width: 1%;
+@if (variable-exists(atlas-theme)) {
+	.tabular-list-group {
+		.list-group-item-content,
+		.list-group-item-field {
+			&:first-child {
+				border-left-width: 0;
+			}
+
+			&:last-child {
+				border-right-width: 0;
+			}
+		}
+	}
 }
 
 // min width 992px
@@ -222,6 +375,8 @@ button.list-group-heading,
 
 @media (max-width: 279px) {
 	.tabular-list-group {
+		display: block;
+
 		> li,
 		.list-group-item {
 			display: block;
@@ -238,255 +393,292 @@ button.list-group-heading,
 
 // Tabular List Group Skins
 
-.detailed-list-view {
-	.list-group-item {
-		cursor: pointer;
-	}
+// Deprecated detailed list view as of v1.0.9 and will be removed in v2.0.0.
 
-	.list-group-item-field {
-		&:first-child + .list-group-item-field {
-			border-left-width: $tabular-list-group-border-width;
-			padding-left: 12px;
-			padding-right: 16px;
+@if not ($enable-ie9-compatibility) {
+	.detailed-list-view {
+		.list-group-item {
+			cursor: pointer;
+		}
 
-			@media (min-width: $grid-float-breakpoint) {
-				border-left-width: 0;
+		.list-group-item-field {
+			&:first-child + .list-group-item-field {
+				border-left-width: $tabular-list-group-border-width;
+				padding-left: 12px;
+				padding-right: 16px;
+
+				@media (min-width: $grid-float-breakpoint) {
+					border-left-width: 0;
+				}
+			}
+
+			&:last-child {
+				padding-left: 8px;
+				padding-right: 12px;
 			}
 		}
 
-		&:last-child {
-			padding-left: 8px;
-			padding-right: 12px;
+		.list-group-item-content,
+		.list-group-item-field {
+			vertical-align: middle;
+
+			@media (min-width: $grid-float-breakpoint) {
+				vertical-align: top;
+			}
 		}
 	}
 
-	.list-group-item-content,
-	.list-group-item-field {
-		vertical-align: middle;
+	.detailed-list-view > .active .detailed-list-view-icon {
+		&:after {
+			color: $list-group-active-color;
+			content: '\f00c';
+			font-family: 'fontawesome-alloy';
+			font-size: 16px;
+			vertical-align: middle;
+
+			@media (min-width: $grid-float-breakpoint) {
+				content: normal;
+			}
+		}
+
+		> [class^="icon-"],
+		> [class*=" icon-"],
+		> .user-icon {
+			display: none;
+		}
+
+		> [class^="icon-"],
+		> [class*=" icon-"] {
+			@media (min-width: $grid-float-breakpoint) {
+				display: inline;
+			}
+		}
+
+		> .user-icon {
+			@media (min-width: $grid-float-breakpoint) {
+				display: block;
+			}
+		}
+	}
+
+	.detailed-list-view-icon {
+		@include monospace(34px);
 
 		@media (min-width: $grid-float-breakpoint) {
-			vertical-align: top;
+			@include monospace(48px);
 		}
-	}
-}
 
-.detailed-list-view > .active .detailed-list-view-icon {
-	&:after {
-		color: $list-group-active-color;
-		content: '\f00c';
-		font-family: 'fontawesome-alloy';
-		font-size: 16px;
-		vertical-align: middle;
+		[class^="icon-"],
+		[class*=" icon-"] {
+			font-size: 28px;
 
-		@media (min-width: $grid-float-breakpoint) {
-			content: normal;
+			@media (min-width: $grid-float-breakpoint) {
+				font-size: 38px;
+			}
 		}
 	}
 
-	> [class^="icon-"],
-	> [class*=" icon-"],
-	> .user-icon {
-		display: none;
-	}
+	@media (max-width: 279px) {
+		.detailed-list-view {
+			.dropdown {
+				display: inline-block;
+			}
 
-	> [class^="icon-"],
-	> [class*=" icon-"] {
-		@media (min-width: $grid-float-breakpoint) {
-			display: inline;
-		}
-	}
+			.dropdown-menu {
+				left: 50%;
+				right: auto;
+				top: 100%;
+				-ms-transform: translateX(-50%);
+				transform: translateX(-50%);
+			}
 
-	> .user-icon {
-		@media (min-width: $grid-float-breakpoint) {
-			display: block;
-		}
-	}
-}
-
-.detailed-list-view-icon {
-	@include monospace(34px);
-
-	@media (min-width: $grid-float-breakpoint) {
-		@include monospace(48px);
-	}
-
-	[class^="icon-"],
-	[class*=" icon-"] {
-		font-size: 28px;
-
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: 38px;
-		}
-	}
-}
-
-@media (max-width: 279px) {
-	.detailed-list-view {
-		.dropdown {
-			display: inline-block;
-		}
-
-		.dropdown-menu {
-			left: 50%;
-			right: auto;
-			-ms-transform: translateX(-50%);
-			transform: translateX(-50%);
-			top: 100%;
-		}
-
-		.detailed-list-view-icon {
-			margin-left: auto;
-			margin-right: auto;
+			.detailed-list-view-icon {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 	}
 }
 
 // List Group Card
 
-.list-group-card {
-	h1, h2, h3, h4, h5, h6 {
-		margin-bottom: 5px;
-		margin-top: 0;
+// Deprecated list-group-card as of v1.0.9 and will be removed in 2.0.0.
 
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+@if not ($enable-ie9-compatibility) {
+	.list-group-card {
+		h1, h2, h3, h4, h5, h6 {
+			margin-bottom: 5px;
+			margin-top: 0;
 
-	.card {
-		border-color: $list-group-border;
-		border-radius: 0;
-		border-width: 1px;
-		box-shadow: none;
-		margin: 0;
-	}
-
-	.card-col-content,
-	.card-col-field {
-		vertical-align: top;
-	}
-
-	.checkbox input[type="checkbox"] {
-		&:checked {
-			+ .card {
-				background-color: $list-group-card-active-bg;
-				color: $list-group-card-active-color;
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
-	}
 
-	.list-group-card-icon {
-		font-size: 2.4em;
-
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: 3em;
+		.card {
+			border-color: $list-group-border;
+			border-radius: 0;
+			border-width: 1px;
+			box-shadow: none;
+			margin: 0;
 		}
 
-		> [class^="icon-"],
-		> [class*=" icon-"],
-		> .user-icon {
-			display: block;
+		.card-col-content,
+		.card-col-field {
+			vertical-align: top;
+		}
 
-			@include monospace(34px);
+		.checkbox input[type="checkbox"] {
+			&:checked {
+				+ .card {
+					background-color: $list-group-card-active-bg;
+					color: $list-group-card-active-color;
 
-			text-align: center;
+					@if (variable-exists(atlas-theme)) {
+						&:after {
+							background-color: $list-group-card-active-border;
+							bottom: -1px;
+							content: '';
+							display: block;
+							height: $list-group-card-active-border-width;
+							left: -1px;
+							position: absolute;
+							right: -1px;
+							z-index: 1;
+						}
+					}
+				}
+			}
+		}
+
+		.list-group-card-icon {
+			font-size: 2.4em;
 
 			@media (min-width: $grid-float-breakpoint) {
-				@include monospace(45px);
-			}
-		}
-	}
-
-	.list-group-item {
-		border-width: 0;
-		margin-bottom: 0;
-		margin-top: -1px;
-		padding: 0;
-
-		&:last-child {
-			.card {
-				border-bottom-left-radius: $list-group-border-radius;
-				border-bottom-right-radius: $list-group-border-radius;
-			}
-		}
-	}
-}
-
-.list-group-card-checkbox-hidden-xs {
-	.checkbox input[type="checkbox"] {
-		display: none;
-
-		@media (min-width: $grid-float-breakpoint) {
-			display: block;
-		}
-
-		&:checked + .card .list-group-card-icon {
-			&:after {
-				color: $list-group-active-color;
-				content: $list-group-card-checkbox-hidden-icon;
-				display: block;
-				font-family: 'fontawesome-alloy';
-				font-size: 16px;
-
-				@include monospace(34px);
-
-				text-align: center;
-				vertical-align: middle;
-
-				@media (min-width: $grid-float-breakpoint) {
-					content: normal;
-				}
+				font-size: 3em;
 			}
 
 			> [class^="icon-"],
 			> [class*=" icon-"],
 			> .user-icon {
-				display: none;
-			}
+				display: block;
 
-			> [class^="icon-"],
-			> [class*=" icon-"] {
+				@include monospace(34px);
+
+				text-align: center;
+
 				@media (min-width: $grid-float-breakpoint) {
-					display: block;
+					@include monospace(45px);
 				}
 			}
+		}
 
-			> .user-icon {
-				@media (min-width: $grid-float-breakpoint) {
-					display: block;
+		@if (variable-exists(atlas-theme)) {
+			.list-group-heading + .list-group-item {
+				margin-top: 0;
+
+				.card {
+					border-top-width: 0;
+				}
+			}
+		}
+
+		.list-group-item {
+			border-width: 0;
+			margin-bottom: 0;
+			margin-top: -1px;
+			padding: 0;
+
+			&:last-child {
+				.card {
+					border-bottom-left-radius: $list-group-border-radius;
+					border-bottom-right-radius: $list-group-border-radius;
 				}
 			}
 		}
 	}
+}
 
-	.checkbox-bottom-left,
-	.checkbox-middle-left,
-	.checkbox-top-left {
-		.card.flex-container {
-			@media (max-width: $grid-float-breakpoint-max) {
-				padding-left: 20px;
+// Deprecated list-group-card-checkbox-hidden-xs as of v1.0.9 and will be
+// removed in v2.0.0.
+
+@if not ($enable-ie9-compatibility) {
+	.list-group-card-checkbox-hidden-xs {
+		.checkbox input[type="checkbox"] {
+			display: none;
+
+			@media (min-width: $grid-float-breakpoint) {
+				display: block;
+			}
+
+			&:checked + .card .list-group-card-icon {
+				&:after {
+					color: $list-group-active-color;
+					content: $list-group-card-checkbox-hidden-icon;
+					display: block;
+					font-family: 'fontawesome-alloy';
+					font-size: 16px;
+
+					@include monospace(34px);
+
+					text-align: center;
+					vertical-align: middle;
+
+					@media (min-width: $grid-float-breakpoint) {
+						content: normal;
+					}
+				}
+
+				> [class^="icon-"],
+				> [class*=" icon-"],
+				> .user-icon {
+					display: none;
+				}
+
+				> [class^="icon-"],
+				> [class*=" icon-"] {
+					@media (min-width: $grid-float-breakpoint) {
+						display: block;
+					}
+				}
+
+				> .user-icon {
+					@media (min-width: $grid-float-breakpoint) {
+						display: block;
+					}
+				}
 			}
 		}
 
-		.card-row {
-			@media (max-width: $grid-float-breakpoint-max) {
-				padding-left: 20px;
+		.checkbox-bottom-left,
+		.checkbox-middle-left,
+		.checkbox-top-left {
+			.card.flex-container {
+				@media (max-width: $grid-float-breakpoint-max) {
+					padding-left: 20px;
+				}
+			}
+
+			.card-row {
+				@media (max-width: $grid-float-breakpoint-max) {
+					padding-left: 20px;
+				}
 			}
 		}
-	}
 
-	.checkbox-bottom-right,
-	.checkbox-middle-right,
-	.checkbox-top-right {
-		.card.flex-container {
-			@media (max-width: $grid-float-breakpoint-max) {
-				padding-right: 20px;
+		.checkbox-bottom-right,
+		.checkbox-middle-right,
+		.checkbox-top-right {
+			.card.flex-container {
+				@media (max-width: $grid-float-breakpoint-max) {
+					padding-right: 20px;
+				}
 			}
-		}
 
-		.card-row {
-			@media (max-width: $grid-float-breakpoint-max) {
-				padding-right: 20px;
+			.card-row {
+				@media (max-width: $grid-float-breakpoint-max) {
+					padding-right: 20px;
+				}
 			}
 		}
 	}

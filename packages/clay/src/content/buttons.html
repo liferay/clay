@@ -64,15 +64,14 @@ section: Components
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Disabled State</h3>
-		<div>
-			<button class="btn btn-default" disabled type="button">Default</button>
-			<button class="btn btn-primary" disabled type="button">Primary</button>
-			<button class="btn btn-info" disabled type="button">Info</button>
-			<button class="btn btn-success" disabled type="button">Success</button>
-			<button class="btn btn-warning" disabled type="button">Warning</button>
-			<button class="btn btn-danger" disabled type="button">Danger</button>
-			<button class="btn btn-link" disabled type="button">Link</button>
-		</div>
+
+		<button class="btn btn-default" disabled type="button">Default</button>
+		<button class="btn btn-primary" disabled type="button">Primary</button>
+		<button class="btn btn-info" disabled type="button">Info</button>
+		<button class="btn btn-success" disabled type="button">Success</button>
+		<button class="btn btn-warning" disabled type="button">Warning</button>
+		<button class="btn btn-danger" disabled type="button">Danger</button>
+		<button class="btn btn-link" disabled type="button">Link</button>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
@@ -93,25 +92,25 @@ section: Components
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3>Anchor Elements and Inputs as Buttons</h3>
-		<a href="#1" class="btn btn-default">Default</a>
+		<a class="btn btn-default" href="#1">Anchor</a>
 		<input class="btn btn-primary" type="button" value="Input" />
 		<input class="btn btn-info" type="submit" value="Submit" />
-		<a href="#1" class="btn btn-success">Success</a>
-		<a href="#1" class="btn btn-warning">Warning</a>
-		<a href="#1" class="btn btn-danger">Danger</a>
-		<a href="#1" class="btn btn-link">Link</a>
+		<a class="btn btn-success" href="#1">Anchor</a>
+		<a class="btn btn-warning" href="#1">Anchor</a>
+		<a class="btn btn-danger" href="#1">Anchor</a>
+		<a class="btn btn-link" href="#1">Anchor</a>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-	<pre><code class="html">```<a href="#1" class="btn btn-default">Default</a>
+	<pre><code class="html">```<a class="btn btn-default" href="#1">Default</a>
 <input class="btn btn-primary" type="button" value="Input" />
 <input class="btn btn-info" type="submit" value="Submit" />
-<a href="#1" class="btn btn-success">Success</a>
-<a href="#1" class="btn btn-warning">Warning</a>
-<a href="#1" class="btn btn-danger">Danger</a>
-<a href="#1" class="btn btn-link">Link</a>```</code></pre>
+<a class="btn btn-success" href="#1">Success</a>
+<a class="btn btn-warning" href="#1">Warning</a>
+<a class="btn btn-danger" href="#1">Danger</a>
+<a class="btn btn-link" href="#1">Link</a>```</code></pre>
 </div>
 
 	</div>
@@ -249,8 +248,8 @@ section: Components
 
 		<div class="btn-toolbar">
 			<div class="btn-group dropup">
-				<button type="button" class="btn btn-default">Dropup</button>
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-default" type="button">Dropup</button>
+				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="caret"></span>
 					<span class="sr-only">Toggle Dropdown</span>
 				</button>
@@ -264,8 +263,8 @@ section: Components
 			</div>
 
 			<div class="btn-group dropup">
-				<button type="button" class="btn btn-primary">Right dropup</button>
-				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-primary" type="button">Right dropup</button>
+				<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="caret"></span>
 					<span class="sr-only">Toggle Dropdown</span>
 				</button>
@@ -284,8 +283,8 @@ section: Components
 </div>
 <div class="collapse" id="codeCollapse7">
 	<pre><code class="html">```<div class="btn-group dropup">
-    <button type="button" class="btn btn-default">Dropup</button>
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <button class="btn btn-default" type="button">Dropup</button>
+    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
     </button>
@@ -427,7 +426,6 @@ section: Components
 </div>```</code></pre>
 </div>
 
-
 	</div>
 </div>
 
@@ -449,7 +447,7 @@ section: Components
 				</ul>
 			</div>
 			<div class="btn-group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 					Dropdown
 					<span class="caret"></span>
 				</button>
@@ -491,7 +489,7 @@ section: Components
     </div>
 
     <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
             Dropdown
             <span class="caret"></span>
         </button>
@@ -559,23 +557,42 @@ section: Components
 	<div class="col-md-12">
 		<h3>Action Buttons</h3>
 
+		<div class="alert alert-info">Position the action buttons on any corner of the page using the classes <code>btn-top-left</code>, <code>btn-top-right</code>, <code>btn-bottom-right</code>, and <code>btn-bottom-left</code>.</div>
+
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Action buttons are used for providing easy access to primary actions, such as adding new entities (users, organizations, new blog entries). There are two kinds of action buttons: <code>.btn-action</code> and <code>.btn-action-secondary</code>.</p>
 
 			<p><code>.btn-action</code> should be used where only one primary action can be taken. A good use of <code>.btn-action</code> is adding a new entry in the blog portlet, where the user will be led to the new blog entry page.</p>
 		</blockquote>
 
-		<a class="btn btn-primary btn-action" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
-			</svg>
-		</a>
+		<div class="lx-site-btn-action-column">
+			<h6>Lexicon SVG</h6>
+			<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
+				<svg class="icon-monospaced lexicon-icon">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
+				</svg>
+			</a>
+		</div>
+
+		<div class="lx-site-btn-action-column">
+			<h6>Font Awesome</h6>
+			<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
+				<span class="icon-plus"></span>
+			</a>
+		</div>
+
+		<div class="lx-site-btn-action-column">
+			<h6>Glyphicon</h6>
+			<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
+				<span class="glyphicon glyphicon-plus"></span>
+			</a>
+		</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse12"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse12">
-	<pre><code class="html">```<a class="btn btn-primary btn-action" href="../blogs-action">
+	<pre><code class="html">```<a class="btn btn-action btn-primary" href="../blogs-action">
     <svg class="icon-monospaced lexicon-icon">
         <use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
     </svg>
@@ -609,19 +626,13 @@ section: Components
             <use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
         </svg>
     </button>
-    <ul class="dropdown-menu dropdown-menu-right-side dropdown-menu-bottom">
+    <ul class="dropdown-menu dropdown-menu-bottom dropdown-menu-right-side">
         <li><a href="../blogs-action">User</a></li>
         <li><a href="../blogs-action">Regular Organization</a></li>
         <li><a href="../blogs-action">Location</a></li>
     </ul>
 </div>```</code></pre>
 </div>
-
-		<a class="btn btn-primary btn-action btn-top-left" href="../blogs-action" type="submit">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
-			</svg>
-		</a>
 
 		<div class="btn-action-secondary btn-bottom-right dropdown">
 			<button class="btn btn-primary" data-toggle="dropdown" type="button">
@@ -630,9 +641,16 @@ section: Components
 				</svg>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-left-side-bottom">
-				<li><a href="../blogs-action">User</a></li>
-				<li><a href="../blogs-action">Regular Organization</a></li>
-				<li><a href="../blogs-action">Location</a></li>
+				<li class="dropdown-header">Add Button Dropdown Header</li>
+				<li><a href="#1">Folder</a></li>
+				<li><a href="#1">Shortcut</a></li>
+				<li><a href="#1">Repository</a></li>
+				<li><a href="#1">Multiple Documents</a></li>
+				<li><a href="#1">Basic Document</a></li>
+				<li><a href="#1">Google Docs</a></li>
+				<li><a href="#1">Marketing Banner</a></li>
+				<li><a href="#1">Online Training</a></li>
+				<li><a href="#1">Sales Presentation</a></li>
 			</ul>
 		</div>
 	</div>

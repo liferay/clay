@@ -1,7 +1,7 @@
 body {
 	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
 	-ms-overflow-style: scrollbar;
+	-webkit-font-smoothing: antialiased;
 }
 
 .monospace {
@@ -56,6 +56,33 @@ body {
 
 .icon-xxl {
 	font-size: 5em;
+}
+
+// Reference Mark
+
+.reference-mark {
+	display: inline-block;
+	font-size: $reference-mark-font-size;
+	position: relative;
+	vertical-align: top;
+
+	&.lexicon-icon {
+		font-size: 1em;
+		height: $reference-mark-font-size;
+		width: $reference-mark-font-size;
+	}
+
+	.lexicon-icon {
+		height: 1em;
+		position: relative;
+		top: -0.27em;
+		width: 1em;
+	}
+
+	.glyphicon,
+	[class^="icon-"] {
+		display: block;
+	}
 }
 
 // Contextual backgrounds

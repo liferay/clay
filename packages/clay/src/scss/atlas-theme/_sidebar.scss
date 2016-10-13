@@ -6,7 +6,9 @@
 }
 
 .sidebar-inverse {
-	@include color-placeholder('input', $brand-default);
+	input {
+		@include placeholder($brand-default);
+	}
 
 	.form-control {
 		background-color: $sidebar-inverse-input-bg;

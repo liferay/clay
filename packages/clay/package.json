@@ -42,6 +42,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "basename": "^0.1.2",
     "bluebird": "^3.0.6",
     "bower": "^1.4.1",
     "browser-sync": "^2.14.0",
@@ -87,6 +88,7 @@
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
     "semver": "^5.1.0",
+    "string-sub": "0.0.1",
     "underscore.string": "^3.2.2",
     "window-size": "^0.1.2"
   },

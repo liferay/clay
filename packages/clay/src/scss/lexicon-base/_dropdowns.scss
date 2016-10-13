@@ -1,9 +1,47 @@
+@if (variable-exists(atlas-theme)) {
+	.dropdown,
+	.dropdown-toggle {
+		display: inline-block;
+	}
+
+	.dropdown-header {
+		font-size: $dropdown-header-font-size;
+		overflow: hidden;
+		padding: $dropdown-link-padding;
+
+		@media (min-width: $grid-float-breakpoint) { // min-width: 768px
+			font-size: $dropdown-header-font-size-desktop;
+		}
+	}
+}
+
 .dropdown-menu {
-	max-height: 295px;
+	max-height: $dropdown-menu-max-height;
 	overflow: auto;
 
+	@if (variable-exists(atlas-theme)) {
+		border-width: $dropdown-border-width;
+		box-shadow: $dropdown-box-shadow;
+		font-size: $dropdown-font-size;
+		max-width: $dropdown-menu-max-width;
+		min-height: 40px;
+		padding: 6px 0;
+	}
+
 	@media (min-width: $grid-float-breakpoint) {
-		max-height: 320px;
+		max-height: $dropdown-menu-desktop-max-height;
+
+		@if (variable-exists(atlas-theme)) {
+			font-size: $dropdown-font-size-desktop;
+			max-width: $dropdown-menu-desktop-max-width;
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		> li > a {
+			overflow: hidden;
+			padding: $dropdown-link-padding;
+		}
 	}
 }
 
@@ -86,9 +124,10 @@
 	list-style: none;
 	margin: 0;
 	overflow: auto;
-	padding: 0;
 
 	-webkit-overflow-scrolling: touch;
+
+	padding: 0;
 }
 
 .link-list {
@@ -145,14 +184,7 @@
 
 	.link-list .link-list-heading {
 		color: $dropdown-header-color;
-
-		@if (variable-exists(dropdown-header-font-size)) {
-			font-size: $dropdown-header-font-size;
-		}
-		@else {
-			font-size: $font-size-small;
-		}
-
+		font-size: $dropdown-header-font-size;
 		padding: $dropdown-link-padding;
 
 		@if (variable-exists(dropdown-header-font-size-desktop)) {
@@ -167,6 +199,7 @@
 
 .dropdown-menu-center {
 	left: 50%;
+
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
@@ -190,9 +223,10 @@
 	left: auto;
 	margin: 0 2px 0 0;
 	right: 100%;
+	top: 50%;
+
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	top: 50%;
 }
 
 .dropdown-menu-right-side {
@@ -211,9 +245,10 @@
 .dropdown-menu-right-side-middle {
 	left: 100%;
 	margin: 0 0 0 2px;
+	top: 50%;
+
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	top: 50%;
 }
 
 .dropdown-menu-top,
@@ -227,9 +262,10 @@
 	bottom: 100%;
 	left: 50%;
 	margin-bottom: 2px;
+	top: auto;
+
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
-	top: auto;
 }
 
 .dropdown-menu-top-right,

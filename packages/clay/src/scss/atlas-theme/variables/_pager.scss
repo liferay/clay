@@ -1,21 +1,21 @@
 // Structure
 
-$pager-border-width: $pagination-border-width !default; // Atlas
+$pager-border-width: $pagination-border-width !default;
 
-$pager-item-height: $pagination-item-height - ($pager-border-width * 2) !default; // Atlas
+$pager-item-height: $pagination-item-height - ($pager-border-width * 2) !default;
 
-$pager-padding-base-horizontal: 20px !default; // Atlas
-$pager-padding-base-vertical: 0 !default; // Atlas
+$pager-padding-base-horizontal: 20px !default;
+$pager-padding-base-vertical: 0 !default;
 
-$pager-lg-font-size: $pagination-lg-font-size !default; // Atlas
-$pager-lg-item-height: $pagination-lg-item-height - ($pager-border-width * 2) !default; // Atlas
-$pager-lg-padding-horizontal: 48px !default; // Atlas
-$pager-lg-padding-vertical: $pager-padding-base-vertical !default; // Atlas
+$pager-lg-font-size: $pagination-lg-font-size !default;
+$pager-lg-item-height: $pagination-lg-item-height - ($pager-border-width * 2) !default;
+$pager-lg-padding-horizontal: 48px !default;
+$pager-lg-padding-vertical: $pager-padding-base-vertical !default;
 
-$pager-sm-font-size: $pagination-sm-font-size !default; // Atlas
-$pager-sm-item-height: $pagination-sm-item-height - ($pager-border-width * 2) !default; // Atlas
-$pager-sm-padding-horizontal: 12px !default; // Atlas
-$pager-sm-padding-vertical: $pager-padding-base-vertical !default; // Atlas
+$pager-sm-font-size: $pagination-sm-font-size !default;
+$pager-sm-item-height: $pagination-sm-item-height - ($pager-border-width * 2) !default;
+$pager-sm-padding-horizontal: $padding-base-horizontal !default;
+$pager-sm-padding-vertical: $pager-padding-base-vertical !default;
 
 // Skin
 
@@ -23,12 +23,12 @@ $pager-border-radius: $pagination-border-radius !default;
 
 $pager-border: $pagination-border !default;
 
-$pager-color: $pagination-color !default; // Atlas
+$pager-color: $pagination-color !default;
 
-$pager-hover-bg: $pagination-hover-bg !default; // Atlas
-$pager-hover-border: $pagination-hover-border !default; // Atlas
-$pager-hover-color: $pagination-hover-color !default; // Atlas
+$pager-hover-bg: $pagination-hover-bg !default;
+$pager-hover-border: $pagination-hover-border !default;
+$pager-hover-color: $pagination-hover-color !default;
 
-$pager-disabled-bg: $pagination-disabled-bg !default; // Atlas
-$pager-disabled-border: $pagination-disabled-border !default; // Atlas
+$pager-disabled-bg: $pagination-disabled-bg !default;
+$pager-disabled-border: $pagination-disabled-border !default;
 $pager-disabled-color: $pagination-disabled-color !default;

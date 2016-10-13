@@ -1,5 +1,7 @@
 // Structure
 
+$atlas-theme: true !default;
+
 $font-size-base: 14px !default;
 $font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px

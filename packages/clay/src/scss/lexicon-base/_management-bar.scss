@@ -5,7 +5,7 @@
 
 	@include clearfix;
 
-	margin-bottom: $navbar-margin-bottom;
+	margin-bottom: $management-bar-margin-bottom;
 	min-height: $management-bar-height;
 	position: relative;
 
@@ -22,6 +22,20 @@
 			display: block;
 		}
 	}
+
+	.checkbox input[type="checkbox"] {
+		margin-top: 4px;
+	}
+
+	.radio input[type="radio"] {
+		margin-top: 3px;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.btn-link {
+			color: $nav-link-color;
+		}
+	}
 }
 
 .management-bar .management-bar-nav > li > .btn,
@@ -32,6 +46,12 @@
 .management-bar-header-right > .dropdown {
 	margin: $management-bar-btn-padding-vertical 0 $management-bar-btn-padding-vertical $management-bar-btn-padding-horizontal;
 	padding: 0;
+
+	@if (variable-exists(atlas-theme)) {
+		@media (min-width: $grid-float-breakpoint) {
+			margin: $management-bar-desktop-btn-padding-vertical 0 $management-bar-desktop-btn-padding-vertical $management-bar-desktop-btn-padding-horizontal;
+		}
+	}
 }
 
 .management-bar-header > .dropdown,
@@ -40,12 +60,6 @@
 
 	> a {
 		padding: 0;
-	}
-}
-
-.management-bar .management-bar-collapse {
-	@media (min-width: $grid-float-breakpoint) {
-		float: left;
 	}
 }
 
@@ -69,12 +83,20 @@
 	margin-right: 0;
 }
 
-.management-bar-header,
-.management-bar-header-right {
-	> .checkbox,
-	> .radio {
-		float: left;
-		padding: $management-bar-padding-vertical 0 $management-bar-padding-vertical $management-bar-padding-horizontal;
+.management-bar-header > .checkbox,
+.management-bar-header > .radio,
+.management-bar-header-right > .checkbox,
+.management-bar-header-right > .radio,
+.management-bar-nav > li > .checkbox,
+.management-bar-nav > li > .radio {
+	float: left;
+	padding: $management-bar-padding-vertical 0 $management-bar-padding-vertical $management-bar-padding-horizontal;
+
+	@if (variable-exists(atlas-theme)) {
+		@media (min-width: $grid-float-breakpoint) {
+			padding-bottom: $management-bar-desktop-padding-vertical;
+			padding-top: $management-bar-desktop-padding-vertical;
+		}
 	}
 }
 
@@ -88,10 +110,18 @@
 	float: right;
 	margin-right: $management-bar-padding-horizontal;
 
-	> a {
+	> a,
+	> span {
 		display: block;
 		float: left;
 		padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+
+		@if (variable-exists(atlas-theme)) {
+			@media (min-width: $grid-float-breakpoint) {
+				padding-bottom: $management-bar-desktop-padding-vertical;
+				padding-top: $management-bar-desktop-padding-vertical;
+			}
+		}
 	}
 }
 
@@ -176,16 +206,11 @@
 	padding: $padding-base-vertical 10px;
 }
 
-.management-bar-default .management-bar-toggle-left {
-	color: $management-bar-default-link-active-color;
-}
-
 // management bar collapse
 
 .management-bar-collapse {
 	-webkit-overflow-scrolling: touch;
 	border-top: 1px solid transparent;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
 	@include clearfix;
 
@@ -198,6 +223,12 @@
 		border-color: $management-bar-collapse-border;
 		border-style: solid;
 		border-width: $management-bar-border-width;
+
+		@if (variable-exists(atlas-theme)) {
+			border-width: 1px 0;
+			box-shadow: $management-bar-collapse-absolute-box-shadow;
+		}
+
 		clear: both;
 		left: -$management-bar-border-left-width;
 		position: absolute;
@@ -210,6 +241,7 @@
 		border-top-width: 0;
 		box-shadow: none;
 		clear: none;
+		float: left;
 		margin-top: 0;
 		padding-left: 0;
 		padding-right: 0;
@@ -235,25 +267,6 @@
 	}
 }
 
-.management-bar-default {
-	.management-bar-collapse {
-		border-color: $management-bar-default-border;
-	}
-}
-
-.management-bar-collapse .management-bar-nav {
-	> li > a,
-	> li > span {
-		padding-bottom: 10px;
-		padding-top: 10px;
-
-		@media (min-width: $grid-float-breakpoint) {
-			padding-bottom: $management-bar-padding-vertical;
-			padding-top: $management-bar-padding-vertical;
-		}
-	}
-}
-
 .management-bar-nav {
 	margin: ($management-bar-padding-vertical / 2) (-$management-bar-padding-horizontal);
 
@@ -269,14 +282,15 @@
 
 		> a,
 		> span {
-			display: inline-block;
+			display: block;
 			padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
-		}
 
-		> .checkbox {
-			padding-bottom: $management-bar-padding-vertical;
-			padding-left: $management-bar-padding-horizontal;
-			padding-top: $management-bar-padding-vertical;
+			@if (variable-exists(atlas-theme)) {
+				@media (min-width: $grid-float-breakpoint) {
+					padding-bottom: $management-bar-desktop-padding-vertical;
+					padding-top: $management-bar-desktop-padding-vertical;
+				}
+			}
 		}
 
 		> .dropdown-menu {
@@ -293,6 +307,7 @@
 			box-shadow: none;
 			float: none;
 			margin-top: 0;
+			max-width: none;
 			position: static;
 			width: auto;
 		}
@@ -349,137 +364,56 @@
 	}
 }
 
-.management-bar-default {
-	.navbar-nav {
-		> li > a {
-			color: $management-bar-default-link-color;
-
-			&:hover,
-			&:focus {
-				background-color: $management-bar-default-link-hover-bg;
-				color: $management-bar-default-link-hover-color;
-			}
-		}
-
-		> .active > a {
-			&,
-			&:hover,
-			&:focus {
-				background-color: $management-bar-default-link-active-bg;
-				color: $management-bar-default-link-active-color;
-			}
-		}
-
-		> .disabled > a {
-			&,
-			&:hover,
-			&:focus {
-				background-color: $management-bar-default-link-disabled-bg;
-				color: $management-bar-default-link-disabled-color;
-			}
-		}
-	}
-
-	.navbar-nav {
-		> .open > a {
-			&,
-			&:hover,
-			&:focus {
-				background-color: $management-bar-default-link-active-bg;
-				color: $management-bar-default-link-active-color;
-			}
-		}
-
-		@media (max-width: $grid-float-breakpoint-max) {
-			.open .dropdown-menu {
-				> li > a {
-					color: $management-bar-default-link-color;
-
-					&:hover,
-					&:focus {
-						background-color: $management-bar-default-link-hover-bg;
-						color: $management-bar-default-link-hover-color;
-					}
-				}
-
-				> .active > a {
-					&,
-					&:hover,
-					&:focus {
-						background-color: $management-bar-default-link-active-bg;
-						color: $management-bar-default-link-active-color;
-					}
-				}
-
-				> .disabled > a {
-					&,
-					&:hover,
-					&:focus {
-						background-color: $management-bar-default-link-disabled-bg;
-						color: $management-bar-default-link-disabled-color;
-					}
-				}
-			}
-		}
-	}
-}
-
 // Management Bar Skins
 
 .management-bar-default {
-	background-color: $management-bar-default-bg;
-	border-color: $management-bar-default-border;
-
-	a {
-		color: $management-bar-default-link-color;
-	}
-
 	.management-bar-collapse {
+		border-color: $management-bar-default-border;
+
 		@media (max-width: $grid-float-breakpoint-max) {
 			background-color: $management-bar-default-collapse-bg;
 			border-color: $management-bar-default-collapse-border;
 		}
 	}
 
-	.management-bar-text {
+	.management-bar-toggle-left {
+		color: $management-bar-default-link-active-color;
+	}
+}
+
+.management-bar-default {
+	background-color: $management-bar-default-bg;
+	border-color: $management-bar-default-border;
+
+	a,
+	.management-bar-text,
+	.management-bar-nav > li > a,
+	.management-bar-nav > .dropdown > a {
 		color: $management-bar-default-link-color;
 	}
 
-	.nav {
-		> li > a,
-		> .dropdown > a {
-			color: $management-bar-default-link-color;
-
-			&:hover {
-				background-color: $management-bar-default-link-hover-bg;
-				color: $management-bar-default-link-hover-color;
-			}
-
-			&:focus {
-				background-color: $management-bar-default-link-active-bg;
-				color: $management-bar-default-link-active-color;
-			}
+	.management-bar-nav {
+		> li > a:hover,
+		> .dropdown > a:hover {
+			background-color: $management-bar-default-link-hover-bg;
+			color: $management-bar-default-link-hover-color;
 		}
 
-		> .disabled {
-			> a {
-				&,
-				&:focus,
-				&:hover {
-					background-color: $management-bar-default-link-disabled-bg;
-					color: $management-bar-default-link-disabled-color;
-				}
-			}
+		> li > a:focus,
+		> .dropdown > a:focus,
+		.open > a,
+		.open > a:focus,
+		.open > a:hover {
+			background-color: $management-bar-default-link-active-bg;
+			color: $management-bar-default-link-active-color;
 		}
 
-		> .open > a {
-			border-color: $management-bar-default-border;
-		}
-
-		.open > a {
+		> .disabled > a {
 			&,
-			&:focus {
-				background-color: $management-bar-default-link-active-bg;
+			&:focus,
+			&:hover {
+				background-color: $management-bar-default-link-disabled-bg;
+				color: $management-bar-default-link-disabled-color;
 			}
 		}
 	}
@@ -491,18 +425,32 @@
 	.btn-default,
 	.nav > li > .btn-default {
 		background-color: $management-bar-default-btn-default-bg;
+		border-color: $management-bar-default-btn-default-border;
 		color: $management-bar-default-btn-default-color;
 
 		&:focus,
 		&:hover {
-			background-color: darken($management-bar-default-btn-default-bg, 10%);
-			border-color: darken($management-bar-default-btn-default-border, 12%);
-			color: $management-bar-default-btn-default-color;
+			background-color: $management-bar-default-btn-default-hover-bg;
+			border-color: $management-bar-default-btn-default-hover-border;
+			color: $management-bar-default-btn-default-hover-color;
 		}
 
 		&:active,
 		&.active {
-			background-color: darken($management-bar-default-btn-default-bg, 10%);
+			background-color: $management-bar-default-btn-default-active-bg;
+			border-color: $management-bar-default-btn-default-active-border;
+			color: $management-bar-default-btn-default-active-color;
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.dropdown.open .btn-default {
+			&,
+			&:focus {
+				background-color: $management-bar-default-btn-default-active-bg;
+				border-color: $management-bar-default-btn-default-active-border;
+				color: $management-bar-default-btn-default-active-color;
+			}
 		}
 	}
 }

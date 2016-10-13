@@ -129,6 +129,26 @@ navIndex: 0
 
 	<div class="row row-spacing">
 		<div class="col-md-12">
+			<h3>Reference Mark</h3>
+			<blockquote class="blockquote-sm blockquote-success">
+				<p>Add a reference mark next to some text with <code>```<span class="reference-mark"></span>```</code>.</p>
+			</blockquote>
+
+			<div>Reference Mark<span class="reference-mark" id="referenceMark1">[1]</span> with text.</div>
+			<div>Reference Mark<span class="glyphicon glyphicon-asterisk reference-mark" id="referenceMark2"></span> with glyphicon-asterisk.</div>
+			<div>Reference Mark<span class="icon-asterisk reference-mark" id="referenceMark3"></span> with icon-asterisk.</div>
+			<div>Reference Mark<span class="reference-mark" id="referenceMark4"><svg class="lexicon-icon"><use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" /></svg></span> with lexicon-icon-asterisk.</div>
+
+			<h4>Footnotes</h4>
+			<div><a class="reference-mark" href="#referenceMark1">[1]</a> A reference to the text above, respectively.</div>
+			<div><a class="glyphicon glyphicon-asterisk reference-mark" href="#referenceMark2"></a> A reference to the text above, respectively.</div>
+			<div><a class="icon-asterisk reference-mark" href="#referenceMark3"></a> A reference to the text above, respectively.</div>
+			<div><a class="reference-mark" href="#referenceMark4"><svg class="lexicon-icon"><use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" /></svg></a> A reference to the text above, respectively.</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col-md-12">
 			<h3>Truncate Text</h3>
 			<blockquote class="blockquote-sm blockquote-success">
 				<p>Shorten long lines of text with the class <code>truncate-text</code>.</p>
