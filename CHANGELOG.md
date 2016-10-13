@@ -1,3 +1,41 @@
+### v1.0.9 - October 12, 2016
+* Breaking: Atlas dropdown menu no longer truncates text
+* Breaking: Renaming get-lx-svg-icon to lx-icon
+* New: Typography class reference-mark for adding reference marks next to text
+* Fix: Management Bar height should include borders
+* Fix: Rename get-lx-svg-icon to lx-icon in forms and breadcrumbs
+* Fix: Collapsible search should transition for browsers that support css transitions
+* Update: Rebuild svg icon scss map
+* Update: Lexicon SVG icons add attribute width and height to svgs for use with background-image
+* Update: $color should be added on lexicon-icon-outline and width and height are needed for IE
+* Update: Management bar styles should win over nav styles
+* Update: Deprecate unused Atlas dropdown variables
+* Update: Deprecate list-group-card, tabular list group states, detailed-list-view and add option to disable these
+* Update: Adding the ability to use any lexicon icon and build the scss map from the icons directory
+* Update: Optimize alerts for better IE9 support
+* Update: Optimize badges and labels css selectors
+* Update: Optimize breadcrumbs css, add breadcrumb-horizontal, use svg for breadcrumb separator
+* Update: Optimize buttons for better IE9 support
+* Update: Optimize dropdowns for better ie9 support
+* Update: Optimize list-groups for better IE9 support
+* Update: Optimize management bar for better IE9 support
+* Update: Optimize nav component for better IE9 support
+* Update: Optimize Navbar for better IE9 support
+* Update: Optimize Pager for better IE9 support
+* Update: Deprecate color-placeholder mixin in favor of Bootstraps placeholder mixin
+* Site: Add reference-mark example to typography and update pages that need it
+* Site: Fix typo at progress bar
+* Site: Update Navbar demos to include more cases
+* Site: Update Add Button demo to a better use case
+* Site: Document Lexicon SVG functions
+* Site: Clean up documents and media demo
+* Site: Update list-group-card demos, update tabular list group code example, and reorder list-group demos
+* Site: Update buttons demos
+* Site: Add breadcrumb-horizontal demo
+* Site: Font awesome use css import for better ie9 support
+* Misc: Add minimum node.js version (v4.6.0 LTS) to readme
+* Misc: Minimize property access
+
 ### v1.0.8 - September 12, 2016
 * Breaking: Remove dropdown-left-side, right-side, and top use cases from navbar
 * Breaking: Removed support for contextual buttons (btn-primary, btn-danger, btn-warning, etc) in management bar
