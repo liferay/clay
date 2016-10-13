@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.8</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.9</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -281,15 +281,14 @@
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3 id="disabled-state"><a class="heading-anchor" href="#disabled-state"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Disabled State</h3>
-		<div>
-			<button class="btn btn-default" disabled type="button">Default</button>
-			<button class="btn btn-primary" disabled type="button">Primary</button>
-			<button class="btn btn-info" disabled type="button">Info</button>
-			<button class="btn btn-success" disabled type="button">Success</button>
-			<button class="btn btn-warning" disabled type="button">Warning</button>
-			<button class="btn btn-danger" disabled type="button">Danger</button>
-			<button class="btn btn-link" disabled type="button">Link</button>
-		</div>
+
+		<button class="btn btn-default" disabled type="button">Default</button>
+		<button class="btn btn-primary" disabled type="button">Primary</button>
+		<button class="btn btn-info" disabled type="button">Info</button>
+		<button class="btn btn-success" disabled type="button">Success</button>
+		<button class="btn btn-warning" disabled type="button">Warning</button>
+		<button class="btn btn-danger" disabled type="button">Danger</button>
+		<button class="btn btn-link" disabled type="button">Link</button>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
@@ -310,25 +309,25 @@
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3 id="anchor-elements-and-inputs-as-buttons"><a class="heading-anchor" href="#anchor-elements-and-inputs-as-buttons"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Anchor Elements and Inputs as Buttons</h3>
-		<a href="#1" class="btn btn-default">Default</a>
+		<a class="btn btn-default" href="#1">Anchor</a>
 		<input class="btn btn-primary" type="button" value="Input">
 		<input class="btn btn-info" type="submit" value="Submit">
-		<a href="#1" class="btn btn-success">Success</a>
-		<a href="#1" class="btn btn-warning">Warning</a>
-		<a href="#1" class="btn btn-danger">Danger</a>
-		<a href="#1" class="btn btn-link">Link</a>
+		<a class="btn btn-success" href="#1">Anchor</a>
+		<a class="btn btn-warning" href="#1">Anchor</a>
+		<a class="btn btn-danger" href="#1">Anchor</a>
+		<a class="btn btn-link" href="#1">Anchor</a>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-	<pre><code class="html">&lt;a href=&quot;#1&quot; class=&quot;btn btn-default&quot;&gt;Default&lt;/a&gt;
+	<pre><code class="html">&lt;a class=&quot;btn btn-default&quot; href=&quot;#1&quot;&gt;Default&lt;/a&gt;
 &lt;input class=&quot;btn btn-primary&quot; type=&quot;button&quot; value=&quot;Input&quot; /&gt;
 &lt;input class=&quot;btn btn-info&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
-&lt;a href=&quot;#1&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/a&gt;
-&lt;a href=&quot;#1&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/a&gt;
-&lt;a href=&quot;#1&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/a&gt;
-&lt;a href=&quot;#1&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/a&gt;</code></pre>
+&lt;a class=&quot;btn btn-success&quot; href=&quot;#1&quot;&gt;Success&lt;/a&gt;
+&lt;a class=&quot;btn btn-warning&quot; href=&quot;#1&quot;&gt;Warning&lt;/a&gt;
+&lt;a class=&quot;btn btn-danger&quot; href=&quot;#1&quot;&gt;Danger&lt;/a&gt;
+&lt;a class=&quot;btn btn-link&quot; href=&quot;#1&quot;&gt;Link&lt;/a&gt;</code></pre>
 </div>
 
 	</div>
@@ -466,8 +465,8 @@
 
 		<div class="btn-toolbar">
 			<div class="btn-group dropup">
-				<button type="button" class="btn btn-default">Dropup</button>
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-default" type="button">Dropup</button>
+				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="caret"></span>
 					<span class="sr-only">Toggle Dropdown</span>
 				</button>
@@ -481,8 +480,8 @@
 			</div>
 
 			<div class="btn-group dropup">
-				<button type="button" class="btn btn-primary">Right dropup</button>
-				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-primary" type="button">Right dropup</button>
+				<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
 					<span class="caret"></span>
 					<span class="sr-only">Toggle Dropdown</span>
 				</button>
@@ -501,8 +500,8 @@
 </div>
 <div class="collapse" id="codeCollapse7">
 	<pre><code class="html">&lt;div class=&quot;btn-group dropup&quot;&gt;
-    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Dropup&lt;/button&gt;
-    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Dropup&lt;/button&gt;
+    &lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
         &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
         &lt;span class=&quot;sr-only&quot;&gt;Toggle Dropdown&lt;/span&gt;
     &lt;/button&gt;
@@ -644,7 +643,6 @@
 &lt;/div&gt;</code></pre>
 </div>
 
-
 	</div>
 </div>
 
@@ -666,7 +664,7 @@
 				</ul>
 			</div>
 			<div class="btn-group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 					Dropdown
 					<span class="caret"></span>
 				</button>
@@ -708,7 +706,7 @@
     &lt;/div&gt;
 
     &lt;div class=&quot;btn-group&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        &lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; type=&quot;button&quot;&gt;
             Dropdown
             &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
         &lt;/button&gt;
@@ -776,23 +774,42 @@
 	<div class="col-md-12">
 		<h3 id="action-buttons"><a class="heading-anchor" href="#action-buttons"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Action Buttons</h3>
 
+		<div class="alert alert-info">Position the action buttons on any corner of the page using the classes <code>btn-top-left</code>, <code>btn-top-right</code>, <code>btn-bottom-right</code>, and <code>btn-bottom-left</code>.</div>
+
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Action buttons are used for providing easy access to primary actions, such as adding new entities (users, organizations, new blog entries). There are two kinds of action buttons: <code>.btn-action</code> and <code>.btn-action-secondary</code>.</p>
 
 			<p><code>.btn-action</code> should be used where only one primary action can be taken. A good use of <code>.btn-action</code> is adding a new entry in the blog portlet, where the user will be led to the new blog entry page.</p>
 		</blockquote>
 
-		<a class="btn btn-primary btn-action" href="../../content/blogs-action" onclick="alert(&apos;Link to Somewhere&apos;);return false;">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="../../images/icons/icons.svg#plus">
-			</svg>
-		</a>
+		<div class="lx-site-btn-action-column">
+			<h6>Lexicon SVG</h6>
+			<a class="btn btn-action btn-primary" href="../../content/blogs-action" onclick="alert(&apos;Link to Somewhere&apos;);return false;">
+				<svg class="icon-monospaced lexicon-icon">
+					<use xlink:href="../../images/icons/icons.svg#plus">
+				</svg>
+			</a>
+		</div>
+
+		<div class="lx-site-btn-action-column">
+			<h6>Font Awesome</h6>
+			<a class="btn btn-action btn-primary" href="../../content/blogs-action" onclick="alert(&apos;Link to Somewhere&apos;);return false;">
+				<span class="icon-plus"></span>
+			</a>
+		</div>
+
+		<div class="lx-site-btn-action-column">
+			<h6>Glyphicon</h6>
+			<a class="btn btn-action btn-primary" href="../../content/blogs-action" onclick="alert(&apos;Link to Somewhere&apos;);return false;">
+				<span class="glyphicon glyphicon-plus"></span>
+			</a>
+		</div>
 
 <div class="uxgl-toggle-code">
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse12"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse12">
-	<pre><code class="html">&lt;a class=&quot;btn btn-primary btn-action&quot; href=&quot;../blogs-action&quot;&gt;
+	<pre><code class="html">&lt;a class=&quot;btn btn-action btn-primary&quot; href=&quot;../blogs-action&quot;&gt;
     &lt;svg class=&quot;icon-monospaced lexicon-icon&quot;&gt;
         &lt;use xlink:href=&quot;../../images/icons/icons.svg#plus&quot; /&gt;
     &lt;/svg&gt;
@@ -826,19 +843,13 @@
             &lt;use xlink:href=&quot;../../images/icons/icons.svg#plus&quot; /&gt;
         &lt;/svg&gt;
     &lt;/button&gt;
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-right-side dropdown-menu-bottom&quot;&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-bottom dropdown-menu-right-side&quot;&gt;
         &lt;li&gt;&lt;a href=&quot;../blogs-action&quot;&gt;User&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;../blogs-action&quot;&gt;Regular Organization&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;../blogs-action&quot;&gt;Location&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
 </div>
-
-		<a class="btn btn-primary btn-action btn-top-left" href="../blogs-action" type="submit">
-			<svg class="icon-monospaced lexicon-icon">
-				<use xlink:href="../../images/icons/icons.svg#plus">
-			</svg>
-		</a>
 
 		<div class="btn-action-secondary btn-bottom-right dropdown">
 			<button class="btn btn-primary" data-toggle="dropdown" type="button">
@@ -847,9 +858,16 @@
 				</svg>
 			</button>
 			<ul class="dropdown-menu dropdown-menu-left-side-bottom">
-				<li><a href="../blogs-action">User</a></li>
-				<li><a href="../blogs-action">Regular Organization</a></li>
-				<li><a href="../blogs-action">Location</a></li>
+				<li class="dropdown-header">Add Button Dropdown Header</li>
+				<li><a href="#1">Folder</a></li>
+				<li><a href="#1">Shortcut</a></li>
+				<li><a href="#1">Repository</a></li>
+				<li><a href="#1">Multiple Documents</a></li>
+				<li><a href="#1">Basic Document</a></li>
+				<li><a href="#1">Google Docs</a></li>
+				<li><a href="#1">Marketing Banner</a></li>
+				<li><a href="#1">Online Training</a></li>
+				<li><a href="#1">Sales Presentation</a></li>
 			</ul>
 		</div>
 	</div>
