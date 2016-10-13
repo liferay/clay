@@ -39,6 +39,40 @@ section: Components
 <!-- endinject -->
 </ul>
 
+<h3>SVG Icons as Background Images</h3>
+
+<blockquote class="blockquote-sm blockquote-success">
+	<p>We have created a Sass function to turn Lexicon SVG icon's into data uri schemes, which enables you to include them as a background-image on an HTML element. The Sass function <code>lx-icon(icon-name, color)</code> takes the name of a Lexicon SVG Icon and color takes a color. The Sass rule set <code>.site-add-cell { background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; }</code> will place the SVG icon add-cell as a background-image on any element with class site-add-cell.</p>
+</blockquote>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<span class="site-add-cell site-svg-bg">add-cell</span>
+		<span class="site-add-column site-svg-bg">add-column</span>
+		<span class="site-add-row site-svg-bg">add-row</span>
+		<span class="site-adjust site-svg-bg">adjust</span>
+		<span class="site-align-center site-svg-bg">align-center</span>
+		<span class="site-asterisk site-svg-bg">asterisk</span>
+		<span class="site-svg-bg site-times-circle">times-circle</span>
+		<span class="site-svg-bg site-workflow">workflow</span>
+	</div>
+</div>
+
+<blockquote class="blockquote-sm blockquote-success">
+	<p>You can turn your custom SVG into a data uri using the Sass function <code>svg-url($svg)</code> where <code>$svg</code> is the code for your inline SVG. The function returns <code>url(your_svg_as_data_uri)</code>.</p>
+</blockquote>
+
+<div class="alert alert-info">
+	When using <code>svg-url()</code>, wrap your inline SVG code with single quotes if your SVG's attributes are delimited with double quotes.
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<span class="site-linux-tux site-svg-bg">Linux Tux</span>
+	</div>
+</div>
+
+
 <h2>Why do we use SVG?</h2>
 <p id="lexicon-icon-explanation">
 	SVG gives us and you a greater amount of freedom in styling the icons, as well as a higher level of fidelity and clarity in the icons.

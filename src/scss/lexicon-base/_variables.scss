@@ -1,3 +1,5 @@
+@import "variables/globals";
+
 @import "variables/alerts";
 @import "variables/breadcrumbs";
 @import "variables/buttons";
@@ -13,6 +15,7 @@
 @import "variables/loaders";
 @import "variables/nameplates";
 @import "variables/navs";
+@import "variables/navbar";
 @import "variables/panels";
 @import "variables/progress-bars";
 @import "variables/toolbars";
@@ -24,3 +27,4 @@
 @import "variables/toggle-card";
 @import "variables/toggle-switch";
 @import "variables/tooltip";
+@import "variables/type";

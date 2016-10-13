@@ -35,6 +35,7 @@ gulp.task('build', function(cb) {
 	runSequence(
 		'build:patch-bootstrap',
 		'build:svg',
+		'build:svg:scss-icons',
 		'build:metalsmith',
 		'build:clean-bootstrap-patch',
 		function(err) {
