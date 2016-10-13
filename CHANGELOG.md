@@ -1,3 +1,8 @@
+### v1.0.10 - October 13, 2016
+* Update: Align reference-marks and icons inside control-label
+* Update: Reset border styles when using nav-tabs in navbar
+* Site: Add more examples of reference marks and icons inside control-label
+
 ### v1.0.9 - October 12, 2016
 * Breaking: Atlas dropdown menu no longer truncates text
 * Breaking: Renaming get-lx-svg-icon to lx-icon
