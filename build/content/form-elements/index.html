@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.9</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.10</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -229,7 +229,14 @@
 		</blockquote>
 
 		<div class="form-group">
-			<label>Default text input</label>
+			<label>
+				Default text input
+				<span class="reference-mark text-warning">
+					<svg class="lexicon-icon">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
+				</span>
+			</label>
 			<input class="form-control" placeholder="Placeholder" type="text">
 		</div>
 
@@ -248,7 +255,14 @@
 </div>
 <div class="collapse" id="codeCollapse0">
 	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Default text input&lt;/label&gt;
+    &lt;label&gt;
+        Default text input
+        &lt;span class=&quot;reference-mark text-warning&quot;&gt;
+            &lt;svg class=&quot;lexicon-icon&quot;&gt;
+                &lt;use xlink:href=&quot;../../images/icons/icons.svg#asterisk&quot; /&gt;
+            &lt;/svg&gt;
+        &lt;/span&gt;
+    &lt;/label&gt;
     &lt;input class=&quot;form-control&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
 &lt;/div&gt;
 
@@ -297,15 +311,15 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="checkbox">
 			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox1" value="option1">
+				<input id="inlineCheckbox1" type="checkbox" value="option1">
 				1
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox2" value="option2">
+				<input id="inlineCheckbox2" type="checkbox" value="option2">
 				2
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox3" value="option3">
+				<input id="inlineCheckbox3" type="checkbox" value="option3">
 				3
 			</label>
 		</div>
@@ -327,7 +341,7 @@ Checkboxes unable to be styled in IE with this method. -->
 			</label>
 		</div>
 
-		<div class="radio disabled">
+		<div class="disabled radio">
 			<label>
 				<input disabled type="radio">
 				Disabled Radio Button
@@ -336,13 +350,13 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="radio">
 			<label class="radio-inline">
-				<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"> 1
+				<input id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
 			</label>
 			<label class="radio-inline">
-				<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"> 2
+				<input id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
 			</label>
 			<label class="radio-inline">
-				<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"> 3
+				<input id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
 			</label>
 		</div>
 	</div>
@@ -461,7 +475,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="form-group">
 			<label class="disabled">Text Input</label>
-			<input disabled class="form-control" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
+			<input class="form-control" disabled placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
 		</div>
 
 		<div class="form-group">
@@ -529,12 +543,12 @@ Checkboxes unable to be styled in IE with this method. -->
 			<fieldset disabled>
 				<div class="form-group">
 					<label for="disabledTextInput">Disabled input</label>
-					<input type="text" id="disabledTextInput" class="form-control" value="Plunger pot, extra siphon latte">
+					<input class="form-control" id="disabledTextInput" type="text" value="Plunger pot, extra siphon latte">
 				</div>
 
 				<div class="form-group">
 					<label for="disabledSelect">Disabled select menu</label>
-					<select id="disabledSelect" class="form-control">
+					<select class="form-control" id="disabledSelect">
 						<option>Sample 1</option>
 						<option>Sample 2</option>
 						<option>Sample 3</option>
@@ -558,7 +572,7 @@ Checkboxes unable to be styled in IE with this method. -->
 					</label>
 				</div>
 
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button class="btn btn-primary" type="submit">Submit</button>
 			</fieldset>
 		</form>
 
@@ -570,12 +584,12 @@ Checkboxes unable to be styled in IE with this method. -->
     &lt;fieldset disabled=&quot;&quot;&gt;
         &lt;div class=&quot;form-group&quot;&gt;
             &lt;label for=&quot;disabledTextInput&quot;&gt;Disabled input&lt;/label&gt;
-            &lt;input type=&quot;text&quot; id=&quot;disabledTextInput&quot; class=&quot;form-control&quot; placeholder=&quot;Disabled input&quot;&gt;
+            &lt;input class=&quot;form-control&quot; id=&quot;disabledTextInput&quot; placeholder=&quot;Disabled input&quot; type=&quot;text&quot;&gt;
         &lt;/div&gt;
 
         &lt;div class=&quot;form-group&quot;&gt;
             &lt;label for=&quot;disabledSelect&quot;&gt;Disabled select menu&lt;/label&gt;
-            &lt;select id=&quot;disabledSelect&quot; class=&quot;form-control&quot;&gt;
+            &lt;select class=&quot;form-control&quot; id=&quot;disabledSelect&quot;&gt;
                 &lt;option&gt;Disabled select&lt;/option&gt;
             &lt;/select&gt;
         &lt;/div&gt;
@@ -596,7 +610,7 @@ Checkboxes unable to be styled in IE with this method. -->
             &lt;/label&gt;
         &lt;/div&gt;
 
-        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+        &lt;button class=&quot;btn btn-primary&quot; type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
     &lt;/fieldset&gt;
 &lt;/form&gt;</code></pre>
 </div>
