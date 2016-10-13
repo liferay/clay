@@ -732,7 +732,7 @@
 
 .navbar-inverse.collapse-basic-search .basic-search {
 	&.open {
-		background-color: if(variable-exists(atlas-theme), transparent, $navbar-inverse-bg)
+		background-color: if(variable-exists(atlas-theme), transparent, $navbar-inverse-bg);
 	}
 
 	@if (variable-exists(atlas-theme)) {
