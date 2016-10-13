@@ -1,0 +1,37 @@
+/**
+* Lexicon 1.0.9
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+input[type="checkbox"],
+input[type="radio"] {
+	cursor: pointer;
+}
+
+label,
+.control-label {
+	.lexicon-icon {
+		vertical-align: baseline;
+	}
+
+	.reference-mark {
+		@if ($input-label-reference-mark-spacer > 0) {
+			margin-left: $input-label-reference-mark-spacer;
+			margin-right: $input-label-reference-mark-spacer;
+		}
+
+		vertical-align: $input-label-reference-mark-vertical-alignment;
+
+		.lexicon-icon {
+			top: 0;
+		}
+	}
+}
+
+@media (max-width: $grid-float-breakpoint) {
+	.form-control {
+		font-size: 16px;
+	}
+}
