@@ -1,13 +1,11 @@
 /**
-* Lexicon 1.0.8
+* Lexicon 1.0.9
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
 +function($) {
-	var SUPPORTS_TRANSITIONS = $.support.transition;
-
 	var CollapsibleSearch = function(element) {
 		var instance = this;
 
@@ -46,14 +44,16 @@
 				basicSearch.trigger('closed.lexicon.collapsible.search');
 			};
 
-			if (SUPPORTS_TRANSITIONS) {
+			var supportsTransition = $.support.transition;
+
+			if (supportsTransition) {
 				basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
 					.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
 			}
 
 			basicSearch.addClass('basic-search-transition').removeClass('open');
 
-			if (!SUPPORTS_TRANSITIONS) {
+			if (!supportsTransition) {
 				complete.call(instance);
 			}
 			else {
@@ -93,14 +93,16 @@
 				if (!basicSearch.hasClass('open')) {
 					event.preventDefault();
 
-					if (SUPPORTS_TRANSITIONS) {
+					var supportsTransition = $.support.transition;
+
+					if (supportsTransition) {
 						basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
 							.emulateTransitionEnd(CollapsibleSearch.TRANSITION_DURATION);
 					}
 
 					basicSearch.addClass('basic-search-transition').addClass('open');
 
-					if (!SUPPORTS_TRANSITIONS) {
+					if (!supportsTransition) {
 						complete.call(instance);
 					}
 				}
