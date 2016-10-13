@@ -288,9 +288,25 @@
 
 // Navbar
 
-.navbar .container-fluid-1280 {
-	padding-left: 0;
-	padding-right: 0;
+.navbar {
+	.container-fluid-1280 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.nav-tabs {
+		border-width: 0;
+
+		> li > a {
+			&,
+			&:focus,
+			&:hover {
+				border-radius: 0;
+				border-width: 0;
+				margin-right: 0;
+			}
+		}
+	}
 }
 
 @if (variable-exists(atlas-theme)) {
@@ -716,7 +732,7 @@
 
 .navbar-inverse.collapse-basic-search .basic-search {
 	&.open {
-		background-color: if(variable-exists(atlas-theme), transparent, $navbar-inverse-bg)
+		background-color: if(variable-exists(atlas-theme), transparent, $navbar-inverse-bg);
 	}
 
 	@if (variable-exists(atlas-theme)) {
