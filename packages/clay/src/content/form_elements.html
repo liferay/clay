@@ -94,15 +94,15 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="checkbox">
 			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox1" value="option1">
+				<input id="inlineCheckbox1" type="checkbox" value="option1">
 				1
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox2" value="option2">
+				<input id="inlineCheckbox2" type="checkbox" value="option2">
 				2
 			</label>
 			<label class="checkbox-inline">
-				<input type="checkbox" id="inlineCheckbox3" value="option3">
+				<input id="inlineCheckbox3" type="checkbox" value="option3">
 				3
 			</label>
 		</div>
@@ -124,7 +124,7 @@ Checkboxes unable to be styled in IE with this method. -->
 			</label>
 		</div>
 
-		<div class="radio disabled">
+		<div class="disabled radio">
 			<label>
 				<input disabled type="radio">
 				Disabled Radio Button
@@ -133,13 +133,13 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="radio">
 			<label class="radio-inline">
-				<input type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"> 1
+				<input id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
 			</label>
 			<label class="radio-inline">
-				<input type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"> 2
+				<input id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
 			</label>
 			<label class="radio-inline">
-				<input type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"> 3
+				<input id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
 			</label>
 		</div>
 	</div>
@@ -258,7 +258,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="form-group">
 			<label class="disabled">Text Input</label>
-			<input disabled class="form-control" placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
+			<input class="form-control" disabled placeholder="Placeholder" type="text" value="Plunger pot, extra siphon latte">
 		</div>
 
 		<div class="form-group">
@@ -326,12 +326,12 @@ Checkboxes unable to be styled in IE with this method. -->
 			<fieldset disabled>
 				<div class="form-group">
 					<label for="disabledTextInput">Disabled input</label>
-					<input type="text" id="disabledTextInput" class="form-control" value="Plunger pot, extra siphon latte">
+					<input class="form-control" id="disabledTextInput" type="text" value="Plunger pot, extra siphon latte">
 				</div>
 
 				<div class="form-group">
 					<label for="disabledSelect">Disabled select menu</label>
-					<select id="disabledSelect" class="form-control">
+					<select class="form-control" id="disabledSelect">
 						<option>Sample 1</option>
 						<option>Sample 2</option>
 						<option>Sample 3</option>
@@ -355,7 +355,7 @@ Checkboxes unable to be styled in IE with this method. -->
 					</label>
 				</div>
 
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button class="btn btn-primary" type="submit">Submit</button>
 			</fieldset>
 		</form>
 
@@ -367,12 +367,12 @@ Checkboxes unable to be styled in IE with this method. -->
     <fieldset disabled="">
         <div class="form-group">
             <label for="disabledTextInput">Disabled input</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+            <input class="form-control" id="disabledTextInput" placeholder="Disabled input" type="text">
         </div>
 
         <div class="form-group">
             <label for="disabledSelect">Disabled select menu</label>
-            <select id="disabledSelect" class="form-control">
+            <select class="form-control" id="disabledSelect">
                 <option>Disabled select</option>
             </select>
         </div>
@@ -393,7 +393,7 @@ Checkboxes unable to be styled in IE with this method. -->
             </label>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
     </fieldset>
 </form>```</code></pre>
 </div>
