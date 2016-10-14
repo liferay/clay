@@ -8,17 +8,18 @@ th {
 	> tfoot {
 		tr td {
 			&:first-child {
-				padding-left: $table-cell-gutters;
-
-				.checkbox {
+				> .checkbox,
+				> input[type="checkbox"] {
 					margin-bottom: 0;
-					margin-left: 1px;
+					margin-left: 7px;
 					margin-top: 0;
 				}
 			}
 
 			&:last-child {
-				padding-right: $table-cell-gutters;
+				> .dropdown {
+					margin-right: 7px;
+				}
 			}
 		}
 	}
