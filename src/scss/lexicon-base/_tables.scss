@@ -29,6 +29,11 @@ th {
 	}
 
 	th {
+		@if (variable-exists(atlas-theme)) {
+			font-size: $table-header-font-size;
+			font-weight: $table-header-font-weight;
+		}
+
 		height: 36px;
 	}
 
@@ -64,6 +69,10 @@ th {
 	word-wrap: break-word;
 }
 
+.table-cell-field {
+	width: 1%;
+}
+
 .table-responsive {
 	-webkit-overflow-scrolling: touch;
 
@@ -74,19 +83,27 @@ th {
 	}
 }
 
-.table-cell-field {
-	width: 1%;
-}
-
 // Table List Skin
 
 .table-list {
+	@if (variable-exists(atlas-theme)) {
+		color: $table-header-color;
+
+		a {
+			color: $table-list-link-color;
+		}
+	}
+
 	> thead > tr > td,
 	> thead > tr > th {
 		border-bottom-width: 0;
 	}
 
 	> tbody > tr {
+		@if (variable-exists(atlas-theme)) {
+			background-color: $table-list-body-row-bg;
+		}
+
 		height: $table-list-row-height;
 	}
 
@@ -104,17 +121,12 @@ th {
 			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
 		}
 
-		> tr.active {
-			&:hover td,
-			td {
-				box-shadow: inset 0 #{-$table-list-row-active-border-bottom-width} $table-list-row-active-border-color;
-			}
+		> tr:hover td {
+			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
 		}
 
-		> tr:hover {
-			td {
-				box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
-			}
+		> tr.active td {
+			box-shadow: inset 0 #{-$table-list-row-active-border-bottom-width} $table-list-row-active-border-color;
 		}
 	}
 
@@ -179,6 +191,7 @@ th {
 
 	.clamp-container {
 		bottom: $table-cell-padding;
+
 		-ms-transform: none;
 		transform: none;
 	}
@@ -196,9 +209,10 @@ th {
 	}
 
 	.clamp-container {
+		top: auto;
+
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
-		top: auto;
 	}
 }
 
@@ -228,6 +242,7 @@ th {
 
 	tbody .clamp-container {
 		bottom: $table-cell-padding;
+
 		-ms-transform: none;
 		transform: none;
 	}
@@ -239,9 +254,10 @@ th {
 	}
 
 	tbody .clamp-container {
+		top: auto;
+
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
-		top: auto;
 	}
 }
 
@@ -282,6 +298,7 @@ th {
 
 	thead .clamp-container {
 		bottom: auto;
+
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
@@ -297,6 +314,7 @@ th {
 
 	thead .clamp-container {
 		bottom: auto;
+
 		-ms-transform: none;
 		transform: none;
 	}
