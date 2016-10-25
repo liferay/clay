@@ -44,6 +44,12 @@
 	@include color-figcaption($figcaption-danger-bg, $figcaption-danger-bg-alpha, $figcaption-danger-color);
 }
 
+@if (variable-exists(atlas-theme)) {
+	.figcaption-default {
+		@include color-figcaption($figcaption-default-bg, $figcaption-default-bg-alpha, $figcaption-default-color);
+	}
+}
+
 .figcaption-info {
 	@include color-figcaption($figcaption-info-bg, $figcaption-info-bg-alpha, $figcaption-info-color);
 }
