@@ -4,6 +4,14 @@ $figure-circle-border-radius: 50% !default;
 $figure-rounded-border-radius: 4px !default;
 $figure-square-border-radius: 0 !default;
 
+$figcaption-font-weight: 300 !default;
+$figcaption-padding-bottom: 10px !default;
+$figcaption-padding-left: 15px !default;
+$figcaption-padding-right: 15px !default;
+$figcaption-padding-top: 10px !default;
+
+$figcaption-padding: $figcaption-padding-top $figcaption-padding-right $figcaption-padding-bottom $figcaption-padding-left !default;
+
 // Skin
 
 $figcaption-bg: #000 !default;

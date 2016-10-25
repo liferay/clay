@@ -7,8 +7,8 @@
 .figcaption {
 	@include color-figcaption($figcaption-bg, $figcaption-bg-alpha, $figcaption-color);
 
-	font-weight: 300;
-	padding: 10px 15px;
+	font-weight: $figcaption-font-weight;
+	padding: $figcaption-padding;
 }
 
 .figcaption-bottom {
@@ -21,6 +21,17 @@
 	height: 100%;
 	position: absolute;
 	top: 0;
+	width: 100%;
+}
+
+.figcaption-middle {
+	left: 0;
+	padding: $figcaption-padding;
+	position: absolute;
+	top: 50%;
+
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 	width: 100%;
 }
 
