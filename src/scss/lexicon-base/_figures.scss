@@ -5,27 +5,29 @@
 }
 
 .figcaption {
-	padding: 5px 2px;
+	@include color-figcaption($figcaption-bg, $figcaption-bg-alpha, $figcaption-color);
+
+	font-weight: 300;
+	padding: 10px 15px;
 }
 
 .figcaption-bottom {
-	@include style-figcaption();
-
 	bottom: 0;
+	position: absolute;
+	width: 100%;
 }
 
 .figcaption-full {
-	@include style-figcaption();
-
 	height: 100%;
+	position: absolute;
 	top: 0;
 	width: 100%;
 }
 
 .figcaption-top {
-	@include style-figcaption();
-
+	position: absolute;
 	top: 0;
+	width: 100%;
 }
 
 .figure-circle {
