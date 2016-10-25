@@ -47,21 +47,18 @@ label,
 	select.form-control {
 		-moz-appearance: none;
 		-webkit-appearance: none;
+		background-image: lx-icon(caret-double-l, $input-border);
+		background-image: none \9;
 		background-position: right center;
 		background-repeat: no-repeat;
 		background-size: 18px auto;
 		padding-bottom: 0;
 		padding-right: 18px;
+		padding-right: 0 \9;
 		padding-top: 0;
 
-		@include select-box-icon($input-border);
-
-		background-image: none \9;
-		padding-right: 0 \9;
-
 		&:focus {
-			@include select-box-icon($input-border-focus);
-
+			background-image: lx-icon(caret-double-l, $input-border-focus);
 			background-image: none \9;
 			padding-right: 0 \9;
 		}
