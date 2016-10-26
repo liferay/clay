@@ -1,3 +1,18 @@
+.panel {
+	border-width: $panel-border-width;
+	box-shadow: $panel-box-shadow;
+}
+
+.panel-footer {
+	background-color: transparent;
+	border-color: transparent;
+	border-top-width: $panel-footer-border-top-width;
+}
+
+.panel-heading {
+	border-bottom-width: $panel-heading-border-bottom-width;
+}
+
 .panel-title {
 	font-size: $panel-title-font-size;
 	font-weight: $panel-title-font-weight;
@@ -20,10 +35,8 @@
 		}
 
 		@if (variable-exists(atlas-theme)) {
-			border-bottom-width: $panel-border-bottom-width;
-
 			+ .panel-collapse > .panel-body {
-				border-top-width: 2px;
+				border-top-width: $panel-heading-border-bottom-width;
 			}
 		}
 	}
@@ -44,21 +57,6 @@
 	}
 }
 
-@if (variable-exists(atlas-theme)) {
-	.panel {
-		border: $panel-border-width solid transparent;
-		box-shadow: $panel-box-shadow;
-	}
-
-	.panel-footer {
-		border-top-width: $panel-border-top-width;
-	}
-
-	.panel-heading {
-		border-bottom-width: 2px;
-	}
-}
-
 // Skins
 
 .panel-blank {
@@ -69,17 +67,13 @@
 	> .panel-footer {
 		background-color: $panel-blank-heading-bg;
 		border-color: $panel-blank-border;
+		color: $panel-blank-text;
 	}
 
 	@if (variable-exists(atlas-theme)) {
 		> .panel-heading {
 			a {
 				color: $panel-blank-heading-link-open-color;
-
-				&:focus,
-				&:hover {
-					text-decoration: none;
-				}
 
 				&.collapsed {
 					color: $panel-blank-heading-link-color;
@@ -90,9 +84,16 @@
 }
 
 .panel-group .panel-blank .panel-heading {
-	+ .panel-collapse > .panel-body,
-	+ .panel-collapse > .list-group {
-		border-top-color: $panel-blank-heading-bg;
+	+ .panel-collapse > .panel-body {
+		border-top-color: $panel-blank-border;
+	}
+}
+
+.panel-default {
+	> .panel-footer {
+		background-color: $panel-default-heading-bg;
+		border-color: $panel-default-border;
+		color: $panel-default-text;
 	}
 }
 
@@ -100,7 +101,7 @@
 	> .panel-footer {
 		background-color: $panel-primary-heading-bg;
 		border-color: $panel-primary-border;
-		color: $panel-bg;
+		color: $panel-primary-text;
 	}
 }
 
@@ -108,7 +109,7 @@
 	> .panel-footer {
 		background-color: $panel-success-heading-bg;
 		border-color: $panel-success-border;
-		color: $brand-success;
+		color: $panel-success-text;
 	}
 }
 
@@ -116,7 +117,7 @@
 	> .panel-footer {
 		background-color: $panel-warning-heading-bg;
 		border-color: $panel-warning-border;
-		color: $brand-warning;
+		color: $panel-warning-text;
 	}
 }
 
@@ -124,14 +125,6 @@
 	> .panel-footer {
 		background-color: $panel-danger-heading-bg;
 		border-color: $panel-danger-border;
-		color: $brand-danger;
-	}
-}
-
-@if (variable-exists(atlas-theme)) {
-	.panel-default {
-		> .panel-footer {
-			color: $panel-default-text;
-		}
+		color: $panel-danger-text;
 	}
 }
