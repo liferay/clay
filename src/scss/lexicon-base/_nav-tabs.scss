@@ -41,13 +41,15 @@
 @media (max-width: $grid-float-breakpoint-max) {
 	.nav-tabs-scrollbar {
 		$ease-out-quint: cubic-bezier(0.230,  1.000, 0.320, 1.000);
+
 		$anim-key-frames: dropHeader 0.5s $ease-out-quint, removeBorder 0.75s $ease-out-quint;
 
 		animation: $anim-key-frames;
 		animation-delay: 0s, 0.45s;
 		min-height: 54px;
-		overflow-x: scroll;
+
 		-webkit-overflow-scrolling: touch;
+		overflow-x: scroll;
 
 		> .nav.nav-tabs,
 		> .nav.nav-pills {
@@ -59,10 +61,10 @@
 
 			> li {
 				animation: fadeIn 0.5s ease-in;
-				animation-fill-mode: both;
 				animation-delay: 0.5s;
-				float: none;
+				animation-fill-mode: both;
 				display: inline-block;
+				float: none;
 			}
 		}
 	}
