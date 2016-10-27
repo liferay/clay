@@ -73,8 +73,8 @@
 		box-shadow: $modal-footer-box-shadow;
 	}
 
-	color: $modal-footer-color;
 	clear: both;
+	color: $modal-footer-color;
 	text-align: left;
 
 	@media (max-width: $grid-float-breakpoint-max) {
@@ -171,7 +171,7 @@
 button.modal-primary-action-button {
 	-webkit-appearance: none;
 	background: transparent;
-	border: 0;
+	border-width: 0;
 	cursor: pointer;
 	padding: 0;
 }
