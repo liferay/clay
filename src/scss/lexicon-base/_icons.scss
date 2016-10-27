@@ -78,6 +78,7 @@ a.collapse-icon {
 	.collapse-icon-open {
 		margin-top: 0;
 		top: 50%;
+
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
@@ -102,7 +103,7 @@ a .icon-monospaced,
 
 		&:before {
 			position: relative;
-			top: -1px;
+			top: -$btn-border-width;
 		}
 	}
 
