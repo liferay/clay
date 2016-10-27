@@ -40,7 +40,7 @@
 
 @media (max-width: $grid-float-breakpoint-max) {
 	.nav-tabs-scrollbar {
-		$ease-out-quint: cubic-bezier(0.230,  1.000, 0.320, 1.000);
+		$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
 
 		$anim-key-frames: dropHeader 0.5s $ease-out-quint, removeBorder 0.75s $ease-out-quint;
 
