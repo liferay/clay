@@ -1,41 +1,62 @@
 // Structure
 
-$pagination-item-height: 32px !default; // Atlas
-$pagination-item-width: $pagination-item-height !default; // Atlas
+$pagination-item-height: 32px !default;
+$pagination-item-width: $pagination-item-height !default;
 
-$pagination-border-width: 0 !default; // Atlas
+$pagination-border-width: 0 !default;
 
-$pagination-lg-font-size: 18px !default; // Atlas
-$pagination-lg-item-height: 44px !default; // Atlas
-$pagination-lg-item-width: $pagination-lg-item-height !default; // Atlas
+$pagination-item-padding-bottom: 0 !default;
+$pagination-item-padding-left: 0 !default;
+$pagination-item-padding-right: 0 !default;
+$pagination-item-padding-top: 0 !default;
 
-$pagination-sm-font-size: 12px !default; // Atlas
-$pagination-sm-item-height: 24px !default; // Atlas
-$pagination-sm-item-width: $pagination-sm-item-height !default; // Atlas
+$pagination-item-padding: $pagination-item-padding-top $pagination-item-padding-right $pagination-item-padding-bottom $pagination-item-padding-left !default;
+
+$pagination-line-height: $pagination-item-height - ($pagination-border-width * 2) !default;
+
+$pagination-sm-font-size: 12px !default;
+$pagination-sm-item-height: 24px !default;
+$pagination-sm-item-width: $pagination-sm-item-height !default;
+$pagination-sm-line-height: $pagination-sm-item-height - ($pagination-border-width * 2) !default;
+
+$pagination-sm-item-padding-bottom: 0 !default;
+$pagination-sm-item-padding-left: 0 !default;
+$pagination-sm-item-padding-right: 0 !default;
+$pagination-sm-item-padding-top: 0 !default;
+
+$pagination-lg-font-size: 18px !default;
+$pagination-lg-item-height: 44px !default;
+$pagination-lg-item-width: $pagination-lg-item-height !default;
+$pagination-lg-line-height: $pagination-lg-item-height - ($pagination-border-width * 2) !default;
+
+$pagination-lg-item-padding-bottom: 0 !default;
+$pagination-lg-item-padding-left: 0 !default;
+$pagination-lg-item-padding-right: 0 !default;
+$pagination-lg-item-padding-top: 0 !default;
 
 // Skin
 
-$pagination-border-radius: 4px !default; // Atlas
+$pagination-border-radius: 4px !default;
 
-$pagination-color: $brand-default !default;
 $pagination-bg: transparent !default;
 $pagination-border: $pagination-bg !default;
+$pagination-color: $brand-default !default;
 
-$pagination-hover-color: $brand-default !default;
 $pagination-hover-bg: transparent !default;
 $pagination-hover-border: $pagination-hover-bg !default;
+$pagination-hover-color: $brand-default !default;
 
-$pagination-active-color: $brand-default !default;
 $pagination-active-bg: lighten($brand-default, 30%) !default;
 $pagination-active-border: $brand-default !default;
+$pagination-active-color: $brand-default !default;
 
-$pagination-disabled-color: $brand-default !default;
 $pagination-disabled-bg: transparent !default;
 $pagination-disabled-border: $pagination-disabled-bg !default;
+$pagination-disabled-color: $brand-default !default;
 
-$pagination-ellipsis-hover-color: $link-hover-color !default; // Atlas
-$pagination-ellipsis-hover-bg: transparent !default; // Atlas
+$pagination-ellipsis-hover-bg: transparent !default;
+$pagination-ellipsis-hover-color: $link-hover-color !default;
 
-$pagination-items-per-page-color: $pagination-color !default; // Atlas
+$pagination-items-per-page-color: $pagination-color !default;
 
-$pagination-results-color: $pagination-color !default; // Atlas
+$pagination-results-color: $pagination-color !default;
