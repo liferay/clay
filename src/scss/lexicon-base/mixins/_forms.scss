@@ -26,5 +26,7 @@
 // @param $color - Icon Color
 
 @mixin select-box-icon($color) {
+	@warn "Lexicon's `select-box-icon($color)` mixin is deprecated as of v1.0.10 and will be removed in v2.0.0. Please use `background-image: lx-icon($name, $color)` instead.";
+
 	background-image: lx-icon(caret-double-l, $color);
 }
