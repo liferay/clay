@@ -27,8 +27,12 @@ $modal-content-fallback-border-color: transparent !default;
 
 $modal-header-bg: #29353D !default;
 $modal-header-border-color: #E4E6E8 !default;
-$modal-header-close-color: #FFF !default;
 $modal-header-color: #FFF !default;
+
+$modal-header-close-color: #FFF !default;
+$modal-header-close-icon-opacity: 1 !default;
+$modal-header-close-lexicon-icon-opacity: 1 !default;
+$modal-header-close-opacity-modifier: 1 !default;
 
 $modal-body-bg: #F5F8F8 !default;
 $modal-body-color: $text-color !default;

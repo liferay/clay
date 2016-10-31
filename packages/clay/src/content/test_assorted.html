@@ -1621,6 +1621,61 @@ section: Visual Tests
 	<input class="form-control" placeholder="Placeholder" type="text">
 </div>
 
+<div style="height:400px;position:relative;">
+	<div class="modal-dialog" style="margin: 30px 0;width: 100%;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+					<svg class="lexicon-icon lexicon-icon-times">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+					</svg>
+				</button>
+
+				<button aria-labelledby="Close" class="btn btn-default close" data-dismiss="modal" role="button" type="button">
+					<span aria-hidden="true">x</span>
+				</button>
+
+				<button aria-labelledby="Close" class="btn close" data-dismiss="modal" role="button" type="button">
+					<span class="glyphicon glyphicon-remove"></span>
+				</button>
+
+				<button aria-labelledby="Close" class="close" data-dismiss="modal" role="button" type="button">
+					<span class="icon-remove"></span>
+				</button>
+
+				<button class="btn btn-default modal-primary-action-button" type="button">
+					<svg class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+					</svg>
+				</button>
+
+				<button class="btn modal-primary-action-button" type="button">
+					<span class="glyphicon glyphicon-ok"></span>
+				</button>
+
+				<button class="modal-primary-action-button" type="button">
+					<span class="icon-ok"></span>
+				</button>
+
+				<button class="modal-primary-action-button" type="button">
+					<span aria-hidden="true">✔</span>
+				</button>
+
+				<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+			</div>
+
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+
+			<div class="modal-footer">
+				<button class="btn btn-primary" type="button">Primary</button>
+				<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script>
 	$('.collapse-basic-search').collapsibleSearch();
 </script>

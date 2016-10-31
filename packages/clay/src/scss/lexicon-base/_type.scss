@@ -16,46 +16,62 @@ body {
 	font-family: $font-family-serif;
 }
 
-// Icon Sizes
+// Headings
 
-.icon-angle-left {
-	font-size: 1.5em;
-}
+@if (variable-exists(atlas-theme)) {
+	h1,
+	.h1 {
+		font-size: $font-size-h1;
 
-.icon-xs {
-	font-size: 0.6em;
-
-	&.icon-angle-left {
-		font-size: 0.9em;
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h1;
+		}
 	}
-}
 
-.icon-sm {
-	font-size: 0.8em;
+	h2,
+	.h2 {
+		font-size: $font-size-h2;
 
-	&.icon-angle-left {
-		font-size: 1.2em;
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h2;
+		}
 	}
-}
 
-.icon-lg {
-	font-size: 1.667em;
+	h3,
+	.h3 {
+		font-size: $font-size-h3;
 
-	&.icon-angle-left {
-		font-size: 2.667em;
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h3;
+		}
 	}
-}
 
-.icon-xl {
-	font-size: 3.334em;
+	h4,
+	.h4 {
+		font-size: $font-size-h4;
 
-	&.icon-angle-left {
-		font-size: 4.667em;
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h4;
+		}
 	}
-}
 
-.icon-xxl {
-	font-size: 5em;
+	h5,
+	.h5 {
+		font-size: $font-size-h5;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h5;
+		}
+	}
+
+	h6,
+	.h6 {
+		font-size: $font-size-h6;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h6;
+		}
+	}
 }
 
 // Reference Mark
@@ -87,7 +103,26 @@ body {
 
 // Contextual backgrounds
 
-@include bg-variant('.bg-default', $gray-lighter);
+@include bg-variant('.bg-default', $state-default-bg);
+
+@if (variable-exists(atlas-theme)) {
+	@include bg-variant('.bg-primary', $state-primary-bg);
+}
+
+// Contextual Text
+
+a.text-muted {
+	&:hover,
+	&:focus {
+		color: darken($text-muted, 10%);
+	}
+}
+
+@include text-emphasis-variant('.text-default', $state-default-text);
+
+@if (variable-exists(atlas-theme)) {
+	@include text-emphasis-variant('.text-primary', $state-primary-text);
+}
 
 // Marked Text
 
@@ -117,43 +152,58 @@ th {
 // Blockquote Variations
 
 .blockquote-xs {
-	border-left: 1px solid $blockquote-border-color;
-	font-size: $blockquote-font-size * 0.7;
+	border-left-width: $blockquote-xs-border-width;
+	font-size: $blockquote-xs-font-size;
 	padding: ($line-height-computed / 2) ($line-height-computed * 0.7);
+
+	&.blockquote-reverse {
+		border-left-width: 0;
+		border-right-width: $blockquote-xs-border-width;
+	}
 }
 
 .blockquote-sm {
-	border-left: 3px solid $blockquote-border-color;
-	font-size: $blockquote-font-size * 0.8;
+	border-left-width: $blockquote-sm-border-width;
+	font-size: $blockquote-sm-font-size;
 	padding: ($line-height-computed / 2) ($line-height-computed * 0.8);
+
+	&.blockquote-reverse {
+		border-left-width: 0;
+		border-right-width: $blockquote-sm-border-width;
+	}
 }
 
 .blockquote-lg {
-	border-left: 8px solid $blockquote-border-color;
-	font-size: $blockquote-font-size * 1.5;
+	border-left-width: $blockquote-lg-border-width;
+	font-size: $blockquote-lg-font-size;
 	padding: ($line-height-computed / 2) ($line-height-computed * 1.5);
+
+	&.blockquote-reverse {
+		border-left-width: 0;
+		border-right-width: $blockquote-lg-border-width;
+	}
 }
 
 .blockquote-danger {
-	@include color-blockquote ($brand-danger);
+	@include color-blockquote ($blockquote-danger-color);
 }
 
 .blockquote-default {
-	@include color-blockquote ($blockquote-border-color);
+	@include color-blockquote ($blockquote-default-color);
 }
 
 .blockquote-info {
-	@include color-blockquote ($brand-info);
+	@include color-blockquote ($blockquote-info-color);
 }
 
 .blockquote-primary {
-	@include color-blockquote ($brand-primary);
+	@include color-blockquote ($blockquote-primary-color);
 }
 
 .blockquote-success {
-	@include color-blockquote ($brand-success);
+	@include color-blockquote ($blockquote-success-color);
 }
 
 .blockquote-warning {
-	@include color-blockquote ($brand-warning);
+	@include color-blockquote ($blockquote-warning-color);
 }

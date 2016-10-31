@@ -1,48 +1,51 @@
 .sidebar {
-	-webkit-overflow-scrolling: touch;
 	height: 100%;
 	overflow: auto;
 
-	.management-bar,
-	.navbar {
-		border-radius: 0;
-		border-width: 1px 0;
-	}
+	-webkit-overflow-scrolling: touch;
 
+	.management-bar-default,
 	.navbar-default,
 	.navbar-inverse {
+		border-left-width: 0;
+		border-radius: 0;
+		border-right-width: 0;
 		margin-bottom: 0;
 	}
 
-	.navbar-no-collapse .navbar-nav {
-		margin: 0 15px;
-	}
-}
+	.navbar {
+		> .container-fluid {
+			@if (variable-exists(atlas-theme)) {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
 
-.sidebar-body {
-	-webkit-overflow-scrolling: touch;
-	font-size: 14px;
-	overflow: auto;
-	padding: 24px;
-}
-
-.sidebar-footer,
-.sidebar-header {
-	a {
-		&:focus,
-		&:hover {
-			text-decoration: none;
+		> .navbar-nav {
+			@if (variable-exists(atlas-theme)) {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			@else {
+				margin-left: 15px;
+				margin-right: 15px;
+			}
 		}
 	}
-}
 
-.sidebar-footer {
-	padding: 24px;
+	.navbar-no-collapse > .container-fluid > .navbar-nav {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 .sidebar-header {
 	margin: 0;
 	padding: 24px;
+
+	a {
+		text-decoration: none;
+	}
 
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0;
@@ -59,14 +62,27 @@
 	}
 }
 
+.sidebar-body {
+	font-size: 14px;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	padding: 24px;
+}
+
+.sidebar-footer {
+	padding: 24px;
+
+	a {
+		text-decoration: none;
+	}
+}
+
 .sidebar-panel {
 	height: 155px;
 	overflow: hidden;
 	position: relative;
-}
-
-.sidebar-transition {
-	transition: all 0.25s ease;
 }
 
 // Skins
@@ -77,8 +93,7 @@
 	color: $sidebar-default-color;
 
 	a.sidenav-close,
-	.sidebar-header-actions > li a,
-	.sidebar-header-actions > li .dropdown-toggle {
+	.sidebar-header-actions > li a {
 		color: $sidebar-default-header-actions-link-color;
 
 		&:focus,
@@ -97,8 +112,7 @@
 	color: $sidebar-inverse-color;
 
 	a.sidenav-close,
-	.sidebar-header-actions > li a,
-	.sidebar-header-actions > li .dropdown-toggle {
+	.sidebar-header-actions > li a {
 		color: $sidebar-inverse-header-actions-link-color;
 
 		&:focus,
@@ -110,13 +124,17 @@
 	.sidebar-panel {
 		background-color: $sidebar-inverse-panel-bg;
 	}
-}
 
-.sidebar .dropdown-menu > li > a {
-	color: $dropdown-link-color;
+	@if (variable-exists(atlas-theme)) {
+		input {
+			@include placeholder($brand-default);
+		}
 
-	&:focus,
-	&:hover {
-		color: $dropdown-link-hover-color;
+		.form-control {
+			background-color: $sidebar-inverse-input-bg;
+			border-width: 0;
+			color: $brand-default;
+			padding: 8px 12px;
+		}
 	}
 }

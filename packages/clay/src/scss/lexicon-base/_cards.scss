@@ -17,6 +17,12 @@
 	margin-bottom: $card-margin-bottom;
 	position: relative;
 
+	@if (variable-exists(card-link-color)) {
+		a {
+			color: $card-link-color;
+		}
+	}
+
 	@if ($card-border-radius > 0) {
 		.card-col-content,
 		.card-col-field {
@@ -53,25 +59,20 @@
 
 // Card Simple Grid
 
-%card-col {
-	display: table-cell;
-	position: relative;
-	vertical-align: middle;
-}
-
 .card-col-content {
-	@extend %card-col;
-
+	display: table-cell;
 	max-width: 10px;
 	position: relative;
+	vertical-align: middle;
 	width: auto;
 	word-break: break-all \9; // IE 8, 9
 	word-wrap: break-word;
 }
 
 .card-col-field {
-	@extend %card-col;
-
+	display: table-cell;
+	position: relative;
+	vertical-align: middle;
 	width: 1%;
 }
 
@@ -293,6 +294,7 @@
 	left: $checkbox-position;
 	margin-top: 0;
 	top: 50%;
+
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
@@ -304,6 +306,7 @@
 	margin-top: 0;
 	right: $checkbox-position;
 	top: 50%;
+
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }

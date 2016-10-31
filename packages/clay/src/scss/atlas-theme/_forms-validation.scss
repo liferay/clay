@@ -17,7 +17,8 @@
 
 .has-success {
 	select.form-control {
-		@include select-box-icon($state-success-border);
+		background-image: lx-icon(caret-double-l, $state-success-border);
+		background-image: none \9;
 	}
 
 	.checkbox label,
@@ -32,7 +33,8 @@
 
 .has-warning {
 	select.form-control {
-		@include select-box-icon($state-warning-border);
+		background-image: lx-icon(caret-double-l, $state-warning-border);
+		background-image: none \9;
 	}
 
 	.checkbox label,
@@ -47,7 +49,8 @@
 
 .has-error {
 	select.form-control {
-		@include select-box-icon($state-danger-border);
+		background-image: lx-icon(caret-double-l, $state-danger-border);
+		background-image: none \9;
 	}
 
 	.checkbox label,
