@@ -5,8 +5,12 @@ $panel-border-bottom-width: 0 !default;
 $panel-border-left-width: 0 !default;
 $panel-border-right-width: 0 !default;
 $panel-border-top-width: 0 !default;
-$panel-border-width: 0 !default; // Atlas
-$panel-box-shadow: $list-group-box-shadow !default; // Atlas
+
+$panel-footer-border-top-width: 0 !default;
+
+$panel-heading-border-bottom-width: 2px !default;
+
+$panel-box-shadow: $list-group-box-shadow !default;
 
 $panel-border-radius: 0 !default;
 $panel-footer-bg: #F5F8FA !default;
