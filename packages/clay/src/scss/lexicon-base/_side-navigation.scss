@@ -42,6 +42,7 @@
 .sidenav-menu-slider {
 	overflow: hidden;
 	position: absolute;
+	width: $sidenav-width;
 	z-index: 10;
 }
 
@@ -111,7 +112,6 @@
 }
 
 .sidenav-menu-slider {
-	&,
 	.sidenav-menu {
 		width: $sidenav-width;
 	}
