@@ -29,6 +29,7 @@ section.row {
 	}
 }
 
+.lx-site-row-spacer,
 .row-spacing {
 	margin-bottom: 20px;
 }
@@ -108,7 +109,7 @@ section.row {
 	transition-delay: 0s 0s 0.2s 0s;
 	transition-duration: 0.2s;
 	transition-property: background, opacity, top, transform;
-	transition-timing-function: cubic-bezier(0.785,  0.135, 0.150, 0.860);
+	transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .main-nav-open {
@@ -144,13 +145,25 @@ section.row {
 	background-color: transparent;
 }
 
+.lx-site-toggle-code,
 .uxgl-toggle-code {
+	clear: both;
+	padding-bottom: 5px;
+
 	+ .collapse,
 	+ .collapsing {
 		pre {
 			margin-bottom: 0;
 		}
 	}
+}
+
+.lx-site-has-prev-margin-sm {
+	margin-top: -7px;
+}
+
+.lx-site-has-prev-margin {
+	margin-top: -17px;
 }
 
 // Alerts Page
@@ -575,7 +588,7 @@ body.fixed {
 		stroke-width: 40px;
 
 		&:hover {
-			animation: exclamationHover 0.25s cubic-bezier(0.175,  0.885, 0.320, 1.275);
+			animation: exclamationHover 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			animation-fill-mode: both;
 			fill: #EC297B;
 		}
@@ -1035,9 +1048,6 @@ body.sidenav-transition {
 // Toolbars
 
 .uxgl-toggle-code {
-	clear: both;
-	padding-bottom: 5px;
-
 	.btn {
 		border-radius: 2px;
 		padding: 0 5px;
