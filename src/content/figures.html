@@ -9,14 +9,14 @@ section: Elements
 			<h3>Figure (Image Captions)</h3>
 
 			<blockquote class="blockquote-sm blockquote-success">
-				<p>Add captions to your images with <code>.figure</code> and <code>.figcaption</code> or use HTML5 elements <code>```<figure>```</code> and <code>```<figcaption>```</code>.</p>
+				<p>Add captions to your images with <code>.figure</code> and <code>.figcaption</code>.</p>
 			</blockquote>
 		</div>
 
 		<div class="col-md-4">
 			<h6>figcaption</h6>
 			<div class="figure">
-				<img alt="responsive image with rouded edges" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+				<img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
 
 				<div class="figcaption">
 					Carajillo strong, grounds redeye half and half so percolator.
@@ -27,9 +27,9 @@ section: Elements
 		<div class="col-md-4">
 			<h6>figcaption-bottom</h6>
 			<div class="figure">
-				<img alt="responsive image with rouded edges" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
+				<img alt="picture of a dock by water" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
 
-				<div class="figcaption-bottom">
+				<div class="figcaption figcaption-bottom">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -38,24 +38,33 @@ section: Elements
 		<div class="col-md-4">
 			<h6>figcaption-top</h6>
 			<div class="figure">
-				<img alt="responsive image with rouded edges" class="img-responsive" src="{{rootPath}}/images/thumbnail_desk.jpg">
+				<img alt="picture of a desk" class="img-responsive" src="{{rootPath}}/images/thumbnail_desk.jpg">
 
-				<div class="figcaption-top">
+				<div class="figcaption figcaption-top">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
 		</div>
 
 		<div class="col-md-4" style="clear: left;">
+			<h6>figcaption-middle</h6>
+			<div class="figure">
+				<img alt="picture of a typewriter" class="img-responsive" src="{{rootPath}}/images/thumbnail_typewriter.jpg">
+
+				<div class="figcaption figcaption-middle">
+					Carajillo strong, grounds redeye half and half so percolator.
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
 			<h6>figcaption-full</h6>
 			<div class="figure">
-				<img alt="responsive image with rouded edges" class="img-responsive" src="{{rootPath}}/images/thumbnail_typewriter.jpg">
+				<img alt="picture of a typewriter" class="img-responsive" src="{{rootPath}}/images/thumbnail_typewriter.jpg">
 
-				<div class="figcaption-full">
-					<div class="flex-container" style="height: 100%;">
-						<div class="flex-item-center">
-							Carajillo strong, grounds redeye half and half so percolator.
-						</div>
+				<div class="figcaption figcaption-full">
+					<div class="figcaption-middle">
+						Carajillo strong, grounds redeye half and half so percolator.
 					</div>
 				</div>
 			</div>
@@ -68,24 +77,42 @@ section: Elements
 	</div>
 	<div class="collapse" id="codeCollapse0">
 		<pre><code class="html">```<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption">...</div>
-	</div>
+    <img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+    <div class="figcaption">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
 
-	<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption-bottom">...</div>
-	</div>
+<div class="figure">
+    <img alt="picture of a dock by water" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
+    <div class="figcaption figcaption-bottom">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
 
-	<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption-top">...</div>
-	</div>
+<div class="figure">
+    <img alt="picture of a desk" class="img-responsive" src="{{rootPath}}/images/thumbnail_desk.jpg">
+    <div class="figcaption figcaption-top">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
 
-	<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption-full">...</div>
-	</div>```</code></pre>
+<div class="figure">
+    <img alt="picture of a typewriter" class="img-responsive" src="{{rootPath}}/images/thumbnail_typewriter.jpg">
+
+    <div class="figcaption figcaption-middle">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
+
+<div class="figure">
+    <img alt="picture of a typewriter" class="img-responsive" src="{{rootPath}}/images/thumbnail_typewriter.jpg">
+    <div class="figcaption figcaption-full">
+        <div class="figcaption-middle">
+            Carajillo strong, grounds redeye half and half so percolator.
+        </div>
+    </div>
+</div>```</code></pre>
 	</div>
 
 		</div>
@@ -104,7 +131,7 @@ section: Elements
 			<h6>figcaption</h6>
 			<div class="figure">
 				<div class="crop-img crop-img-middle crop-img-center" style="height: 125px;">
-					<img alt="Cropped image of a coffee mug" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+					<img alt="picture of a coffee mug" src="{{rootPath}}/images/thumbnail_coffee.jpg">
 				</div>
 
 				<div class="figcaption">
@@ -117,10 +144,10 @@ section: Elements
 			<h6>figcaption-bottom</h6>
 			<div class="figure" style="height: 179px;">
 				<div class="crop-img crop-img-middle crop-img-center">
-					<img alt="Cropped image of a house on a pier" src="{{rootPath}}/images/thumbnail_dock.jpg">
+					<img alt="picture of a dock by water" src="{{rootPath}}/images/thumbnail_dock.jpg">
 				</div>
 
-				<div class="figcaption-bottom">
+				<div class="figcaption figcaption-bottom">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -130,10 +157,10 @@ section: Elements
 			<h6>figcaption-top</h6>
 			<div class="figure" style="height: 179px;">
 				<div class="crop-img crop-img-middle crop-img-center">
-					<img alt="Cropped image of a desk" src="{{rootPath}}/images/thumbnail_desk.jpg">
+					<img alt="picture of a desk" src="{{rootPath}}/images/thumbnail_desk.jpg">
 				</div>
 
-				<div class="figcaption-top">
+				<div class="figcaption figcaption-top">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -143,14 +170,12 @@ section: Elements
 			<h6>figcaption-full</h6>
 			<div class="figure" style="height: 179px;">
 				<div class="crop-img crop-img-middle crop-img-center">
-					<img alt="Cropped image of typewriter" src="{{rootPath}}/images/thumbnail_typewriter.jpg">
+					<img alt="picture of a typewriter" src="{{rootPath}}/images/thumbnail_typewriter.jpg">
 				</div>
 
-				<div class="figcaption-full">
-					<div class="flex-container" style="height: 100%;">
-						<div class="flex-item-center">
-							Carajillo strong, grounds redeye half and half so percolator.
-						</div>
+				<div class="figcaption figcaption-full">
+					<div class="figcaption-middle">
+						Carajillo strong, grounds redeye half and half so percolator.
 					</div>
 				</div>
 			</div>
@@ -168,9 +193,9 @@ section: Elements
 		<div class="col-md-3">
 			<h6>figcaption</h6>
 			<div class="figure">
-				<img alt="coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+				<img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
 
-				<div class="figcaption-bottom figcaption">
+				<div class="figcaption figcaption-bottom">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -179,9 +204,9 @@ section: Elements
 		<div class="col-md-3">
 			<h6>figcaption-primary</h6>
 			<div class="figure">
-				<img alt="coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+				<img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
 
-				<div class="figcaption-bottom figcaption-primary">
+				<div class="figcaption figcaption-bottom figcaption-primary">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -190,9 +215,9 @@ section: Elements
 		<div class="col-md-3">
 			<h6>figcaption-info</h6>
 			<div class="figure">
-				<img alt="coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+				<img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
 
-				<div class="figcaption-bottom figcaption-info">
+				<div class="figcaption figcaption-bottom figcaption-info">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -201,9 +226,9 @@ section: Elements
 		<div class="col-md-3">
 			<h6>figcaption-success</h6>
 			<div class="figure">
-				<img alt="coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+				<img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
 
-				<div class="figcaption-bottom figcaption-success">
+				<div class="figcaption figcaption-bottom figcaption-success">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -212,9 +237,9 @@ section: Elements
 		<div class="col-md-3">
 			<h6>figcaption-warning</h6>
 			<div class="figure">
-				<img alt="coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+				<img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
 
-				<div class="figcaption-bottom figcaption-warning">
+				<div class="figcaption figcaption-bottom figcaption-warning">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -223,9 +248,9 @@ section: Elements
 		<div class="col-md-3">
 			<h6>figcaption-danger</h6>
 			<div class="figure">
-				<img alt="coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+				<img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
 
-				<div class="figcaption-bottom figcaption-danger">
+				<div class="figcaption figcaption-bottom figcaption-danger">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -237,34 +262,46 @@ section: Elements
 	</div>
 	<div class="collapse" id="codeCollapse1">
 		<pre><code class="html">```<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption-bottom">...</div>
-	</div>
+    <img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+    <div class="figcaption figcaption-bottom">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
 
-	<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption-bottom figcaption-primary">...</div>
-	</div>
+<div class="figure">
+    <img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+    <div class="figcaption figcaption-bottom figcaption-primary">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
 
-	<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption-bottom figcaption-info">...</div>
-	</div>
+<div class="figure">
+    <img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+    <div class="figcaption figcaption-bottom figcaption-info">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
 
-	<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption-bottom figcaption-success">...</div>
-	</div>
+<div class="figure">
+    <img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+    <div class="figcaption figcaption-bottom figcaption-success">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
 
-	<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption-bottom figcaption-warning">...</div>
-	</div>
+<div class="figure">
+    <img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+    <div class="figcaption figcaption-bottom figcaption-warning">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
 
-	<div class="figure">
-	    <img class="img-responsive" src="thumbnail.jpg">
-	    <div class="figcaption-bottom figcaption-danger">...</div>
-	</div>```</code></pre>
+<div class="figure">
+    <img alt="picture of a coffee mug" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+    <div class="figcaption figcaption-bottom figcaption-danger">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>```</code></pre>
 	</div>
 
 		</div>
@@ -295,11 +332,9 @@ section: Elements
 			<div class="figure figure-circle">
 				<img alt="Dock" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
 
-				<div class="figcaption-full">
-					<div class="flex-container" style="height: 100%;">
-						<div class="flex-item-center">
-							Carajillo strong, grounds redeye half and half so percolator.
-						</div>
+				<div class="figcaption figcaption-full">
+					<div class="figcaption-middle">
+						Carajillo strong, grounds redeye half and half so percolator.
 					</div>
 				</div>
 			</div>
@@ -310,7 +345,7 @@ section: Elements
 			<div class="figure figure-rounded">
 				<img alt="Desk" class="img-responsive" src="{{rootPath}}/images/thumbnail_desk.jpg">
 
-				<div class="figcaption-bottom">
+				<div class="figcaption figcaption-bottom">
 					Carajillo strong, grounds redeye half and half so percolator.
 				</div>
 			</div>
@@ -322,12 +357,28 @@ section: Elements
 		<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 	</div>
 	<div class="collapse" id="codeCollapse3">
-		<pre><code class="html">```<div class="figure figure-square">...</div>
-	</div>
+		<pre><code class="html">```<div class="figure figure-square">
+    <img alt="Coffee Cup" class="img-responsive" src="{{rootPath}}/images/thumbnail_coffee.jpg">
+    <div class="figcaption">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>
 
-	<div class="figure figure-circle">...</div>
+<div class="figure figure-circle">
+    <img alt="Dock" class="img-responsive" src="{{rootPath}}/images/thumbnail_dock.jpg">
+    <div class="figcaption figcaption-full">
+        <div class="figcaption-middle">
+            Carajillo strong, grounds redeye half and half so percolator.
+        </div>
+    </div>
+</div>
 
-	<div class="figure-rounded">...</div>```</code></pre>
+<div class="figure figure-rounded">
+    <img alt="Desk" class="img-responsive" src="{{rootPath}}/images/thumbnail_desk.jpg">
+    <div class="figcaption figcaption-bottom">
+        Carajillo strong, grounds redeye half and half so percolator.
+    </div>
+</div>```</code></pre>
 
 		</div>
 	</div>
