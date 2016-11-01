@@ -5,27 +5,40 @@
 }
 
 .figcaption {
-	padding: 5px 2px;
+	@include color-figcaption($figcaption-bg, $figcaption-bg-alpha, $figcaption-color);
+
+	font-weight: $figcaption-font-weight;
+	padding: $figcaption-padding;
 }
 
 .figcaption-bottom {
-	@include style-figcaption();
-
 	bottom: 0;
+	position: absolute;
+	width: 100%;
 }
 
 .figcaption-full {
-	@include style-figcaption();
-
 	height: 100%;
+	position: absolute;
 	top: 0;
 	width: 100%;
 }
 
-.figcaption-top {
-	@include style-figcaption();
+.figcaption-middle {
+	left: 0;
+	padding: $figcaption-padding;
+	position: absolute;
+	top: 50%;
 
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+.figcaption-top {
+	position: absolute;
 	top: 0;
+	width: 100%;
 }
 
 .figure-circle {
@@ -42,6 +55,12 @@
 
 .figcaption-danger {
 	@include color-figcaption($figcaption-danger-bg, $figcaption-danger-bg-alpha, $figcaption-danger-color);
+}
+
+@if (variable-exists(atlas-theme)) {
+	.figcaption-default {
+		@include color-figcaption($figcaption-default-bg, $figcaption-default-bg-alpha, $figcaption-default-color);
+	}
 }
 
 .figcaption-info {

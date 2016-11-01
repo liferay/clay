@@ -5,6 +5,8 @@
 }
 
 @mixin style-figcaption($bgColor: $figcaption-bg, $alpha: $figcaption-bg-alpha, $color: $figcaption-color) {
+	@warn "Lexicon's `style-figcaption($bgColor: $figcaption-bg, $alpha: $figcaption-bg-alpha, $color: $figcaption-color)` mixin is deprecated as of v1.0.10 and will be removed in v2.0.0.";
+
 	@include color-figcaption($bgColor, $alpha, $color);
 
 	font-weight: 300;

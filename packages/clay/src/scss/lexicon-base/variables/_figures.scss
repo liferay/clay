@@ -4,6 +4,14 @@ $figure-circle-border-radius: 50% !default;
 $figure-rounded-border-radius: 4px !default;
 $figure-square-border-radius: 0 !default;
 
+$figcaption-font-weight: 300 !default;
+$figcaption-padding-bottom: 10px !default;
+$figcaption-padding-left: 15px !default;
+$figcaption-padding-right: 15px !default;
+$figcaption-padding-top: 10px !default;
+
+$figcaption-padding: $figcaption-padding-top $figcaption-padding-right $figcaption-padding-bottom $figcaption-padding-left !default;
+
 // Skin
 
 $figcaption-bg: #000 !default;
@@ -15,17 +23,17 @@ $figcaption-danger-bg-alpha: $figcaption-bg-alpha !default;
 $figcaption-danger-color: $figcaption-color !default;
 
 $figcaption-info-bg: $brand-info !default;
-$figcaption-info-color: $figcaption-color !default;
 $figcaption-info-bg-alpha: $figcaption-bg-alpha !default;
+$figcaption-info-color: $figcaption-color !default;
 
 $figcaption-primary-bg: $brand-primary !default;
-$figcaption-primary-color: $figcaption-color !default;
 $figcaption-primary-bg-alpha: $figcaption-bg-alpha !default;
+$figcaption-primary-color: $figcaption-color !default;
 
 $figcaption-success-bg: $brand-success !default;
-$figcaption-success-color: $figcaption-color !default;
 $figcaption-success-bg-alpha: $figcaption-bg-alpha !default;
+$figcaption-success-color: $figcaption-color !default;
 
 $figcaption-warning-bg: $brand-warning !default;
-$figcaption-warning-color: $figcaption-color !default;
 $figcaption-warning-bg-alpha: $figcaption-bg-alpha !default;
+$figcaption-warning-color: $figcaption-color !default;
