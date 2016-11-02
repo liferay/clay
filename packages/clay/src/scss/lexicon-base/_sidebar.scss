@@ -3,45 +3,11 @@
 	overflow: auto;
 
 	-webkit-overflow-scrolling: touch;
-
-	.management-bar-default,
-	.navbar-default,
-	.navbar-inverse {
-		border-left-width: 0;
-		border-radius: 0;
-		border-right-width: 0;
-		margin-bottom: 0;
-	}
-
-	.navbar {
-		> .container-fluid {
-			@if (variable-exists(atlas-theme)) {
-				padding-left: 10px;
-				padding-right: 10px;
-			}
-		}
-
-		> .navbar-nav {
-			@if (variable-exists(atlas-theme)) {
-				margin-left: 10px;
-				margin-right: 10px;
-			}
-			@else {
-				margin-left: 15px;
-				margin-right: 15px;
-			}
-		}
-	}
-
-	.navbar-no-collapse > .container-fluid > .navbar-nav {
-		margin-left: 0;
-		margin-right: 0;
-	}
 }
 
 .sidebar-header {
 	margin: 0;
-	padding: 24px;
+	padding: $sidebar-padding;
 
 	a {
 		text-decoration: none;
@@ -68,11 +34,11 @@
 
 	-webkit-overflow-scrolling: touch;
 
-	padding: 24px;
+	padding: $sidebar-padding;
 }
 
 .sidebar-footer {
-	padding: 24px;
+	padding: $sidebar-padding;
 
 	a {
 		text-decoration: none;
@@ -83,6 +49,86 @@
 	height: 155px;
 	overflow: hidden;
 	position: relative;
+}
+
+// Sidebar Navbars
+
+.sidebar {
+	.management-bar-default,
+	.navbar-default,
+	.navbar-inverse {
+		border-left-width: 0;
+		border-radius: 0;
+		border-right-width: 0;
+		margin-bottom: 0;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.navbar > .navbar-collapse {
+			@media (min-width: $grid-float-breakpoint) {
+				padding-left: $sidebar-navbar-gutter-left;
+				padding-right: $sidebar-navbar-gutter-right;
+
+				> .navbar-nav {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.navbar-no-collapse > .navbar-nav,
+		.navbar > .navbar-header {
+			padding-left: $sidebar-navbar-gutter-left;
+			padding-right: $sidebar-navbar-gutter-right;
+		}
+
+		.navbar-collapse .open .dropdown-menu > .dropdown-header,
+		.navbar-collapse .dropdown-menu > li > a,
+		.navbar-collapse > .navbar-nav > li > a {
+			@media (max-width: $grid-float-breakpoint-max) {
+				@if ($sidebar-padding-left > $navbar-padding-horizontal) {
+					padding-left: $sidebar-padding-left;
+				}
+
+				@if ($sidebar-padding-right > $navbar-padding-horizontal) {
+					padding-right: $sidebar-padding-right;
+				}
+			}
+		}
+
+		.navbar > .container-fluid {
+			padding-left: $sidebar-navbar-gutter-left;
+			padding-right: $sidebar-navbar-gutter-right;
+
+			> .navbar-collapse > .navbar-nav,
+			> .navbar-header,
+			> .navbar-nav {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			> .navbar-collapse {
+				@media (max-width: $grid-float-breakpoint-max) {
+					margin-left: -$sidebar-navbar-gutter-left;
+					margin-right: -$sidebar-navbar-gutter-right;
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+	@else {
+		.navbar > .container-fluid > .navbar-nav {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.navbar > .container-fluid > .navbar-collapse {
+			@media (min-width: $grid-float-breakpoint) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
 }
 
 // Skins

@@ -35,6 +35,21 @@
 	@return lx-icon-padding($monospaced-size, $icon-size);
 }
 
+// Calculates horizontal spacing for Navbar inside of Sidebar based on
+// horizontal Sidebar padding.
+// @param $padding - padding-left or padding-right
+// @param $gutter - width of gutters used in Bootstrap's grid default is 30
+
+@function lx-sidebar-navbar-gutter($padding, $gutter: $grid-gutter-width) {
+	$sidebar-navbar-gutter: $padding - ($gutter / 2);
+
+	@if not ($sidebar-navbar-gutter > 0) {
+		$sidebar-navbar-gutter: 0;
+	}
+
+	@return $sidebar-navbar-gutter;
+}
+
 // str-replace and svg-url functions from http://codepen.io/jakob-e/pen/doMoML
 
 // Function to replace characters in a string
