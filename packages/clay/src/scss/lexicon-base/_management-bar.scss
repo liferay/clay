@@ -24,18 +24,6 @@
 	}
 
 	@if (variable-exists(atlas-theme)) {
-		.checkbox input[type="checkbox"] {
-			@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
-				margin-top: 3px;
-			}
-		}
-
-		.radio input[type="radio"] {
-			@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
-				margin-top: 3px;
-			}
-		}
-
 		.btn-link {
 			color: $nav-link-color;
 		}
