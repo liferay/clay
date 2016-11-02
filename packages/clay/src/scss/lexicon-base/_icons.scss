@@ -22,6 +22,17 @@
 	width: $lexicon-icon-lg-size;
 }
 
+%scale-lexicon-icon {
+	height: 1em;
+	margin-top: -0.13em;
+	width: 1em;
+}
+
+.scale-lexicon-icon.lexicon-icon,
+.scale-lexicon-icon .lexicon-icon {
+	@extend %scale-lexicon-icon;
+}
+
 // Collapse Icon
 
 a.collapse-icon {

@@ -5,8 +5,8 @@ input[type="radio"] {
 
 label,
 .control-label {
-	> .lexicon-icon {
-		vertical-align: baseline;
+	.lexicon-icon {
+		@extend %scale-lexicon-icon;
 	}
 
 	.reference-mark {
@@ -16,10 +16,6 @@ label,
 		}
 
 		vertical-align: $input-label-reference-mark-vertical-alignment;
-
-		.lexicon-icon {
-			top: 0;
-		}
 	}
 }
 
