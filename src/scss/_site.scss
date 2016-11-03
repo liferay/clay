@@ -1091,3 +1091,20 @@ body.sidenav-transition {
 		background-color: #FFFEDC;
 	}
 }
+
+.lx-site-test-assorted-modal {
+	margin-bottom: 20px;
+	min-height: 400px;
+	position: relative;
+
+	@media (min-width: 768px) {
+		min-height: 100px;
+	}
+}
+
+.lx-site-test-assorted-sidebar {
+	.sidebar {
+		float: left;
+		width: 50%;
+	}
+}

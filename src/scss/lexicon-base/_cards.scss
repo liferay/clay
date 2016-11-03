@@ -277,6 +277,9 @@
 .radio-bottom-left label > input[type="radio"] {
 	bottom: $checkbox-position;
 	left: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
 }
 
 .checkbox-bottom-right input[type="checkbox"],
@@ -285,6 +288,9 @@
 .radio-bottom-right label > input[type="radio"] {
 	bottom: $checkbox-position;
 	right: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
 }
 
 .checkbox-middle-left input[type="checkbox"],
@@ -315,10 +321,16 @@
 .radio-top-left label > input[type="radio"] {
 	left: $checkbox-position;
 	top: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
 }
 
 .checkbox-top-right label > input[type="checkbox"],
 .radio-top-right label > input[type="radio"] {
 	right: $checkbox-position;
 	top: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
 }
