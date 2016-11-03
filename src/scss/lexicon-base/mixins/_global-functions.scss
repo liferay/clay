@@ -77,7 +77,7 @@
 	$index: 0;
 	$slice: 2000;
 
-	$loops: ceil(str-length($svg)/$slice);
+	$loops: ceil(str-length($svg) / $slice);
 
 	@for $i from 1 through $loops {
 		$chunk: str-slice($svg, $index, $index + $slice - 1);
