@@ -1,5 +1,5 @@
 /**
-* Lexicon 1.0.10
+* Lexicon 1.0.11
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -36,6 +36,7 @@ section.row {
   display: block;
 }
 
+.lx-site-row-spacer,
 .row-spacing {
   margin-bottom: 20px;
 }
@@ -149,9 +150,25 @@ section.row {
   background-color: transparent;
 }
 
+.lx-site-toggle-code,
+.uxgl-toggle-code {
+  clear: both;
+  padding-bottom: 5px;
+}
+
+.lx-site-toggle-code + .collapse pre,
+.lx-site-toggle-code + .collapsing pre,
 .uxgl-toggle-code + .collapse pre,
 .uxgl-toggle-code + .collapsing pre {
   margin-bottom: 0;
+}
+
+.lx-site-has-prev-margin-sm {
+  margin-top: -7px;
+}
+
+.lx-site-has-prev-margin {
+  margin-top: -17px;
 }
 
 .uxgl-alerts .alert {
@@ -924,11 +941,6 @@ body.sidenav-transition {
   }
 }
 
-.uxgl-toggle-code {
-  clear: both;
-  padding-bottom: 5px;
-}
-
 .uxgl-toggle-code .btn {
   border-radius: 2px;
   padding: 0 5px;
@@ -968,6 +980,23 @@ body.sidenav-transition {
   .uxgl-xs-newline-demo {
     background-color: #FFFEDC;
   }
+}
+
+.lx-site-test-assorted-modal {
+  margin-bottom: 20px;
+  min-height: 400px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .lx-site-test-assorted-modal {
+    min-height: 100px;
+  }
+}
+
+.lx-site-test-assorted-sidebar .sidebar {
+  float: left;
+  width: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */
