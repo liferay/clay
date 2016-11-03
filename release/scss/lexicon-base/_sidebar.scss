@@ -1,0 +1,193 @@
+/**
+* Lexicon 1.0.10
+*
+* Copyright 2016, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sidebar {
+	height: 100%;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+}
+
+.sidebar-header {
+	margin: 0;
+	padding: $sidebar-padding;
+
+	a {
+		text-decoration: none;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+	}
+}
+
+.sidebar-header-actions {
+	float: right;
+
+	@include list-unstyled;
+
+	> li {
+		display: inline-block;
+	}
+}
+
+.sidebar-body {
+	font-size: 14px;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	padding: $sidebar-padding;
+}
+
+.sidebar-footer {
+	padding: $sidebar-padding;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.sidebar-panel {
+	height: 155px;
+	overflow: hidden;
+	position: relative;
+}
+
+// Sidebar Navbars
+
+.sidebar {
+	.management-bar-default,
+	.navbar-default,
+	.navbar-inverse {
+		border-left-width: 0;
+		border-radius: 0;
+		border-right-width: 0;
+		margin-bottom: 0;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.navbar > .navbar-collapse {
+			@media (min-width: $grid-float-breakpoint) {
+				padding-left: $sidebar-navbar-gutter-left;
+				padding-right: $sidebar-navbar-gutter-right;
+
+				> .navbar-nav {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.navbar-no-collapse > .navbar-nav,
+		.navbar > .navbar-header {
+			padding-left: $sidebar-navbar-gutter-left;
+			padding-right: $sidebar-navbar-gutter-right;
+		}
+
+		.navbar-collapse .open .dropdown-menu > .dropdown-header,
+		.navbar-collapse .dropdown-menu > li > a,
+		.navbar-collapse > .navbar-nav > li > a {
+			@media (max-width: $grid-float-breakpoint-max) {
+				@if ($sidebar-padding-left > $navbar-padding-horizontal) {
+					padding-left: $sidebar-padding-left;
+				}
+
+				@if ($sidebar-padding-right > $navbar-padding-horizontal) {
+					padding-right: $sidebar-padding-right;
+				}
+			}
+		}
+
+		.navbar > .container-fluid {
+			padding-left: $sidebar-navbar-gutter-left;
+			padding-right: $sidebar-navbar-gutter-right;
+
+			> .navbar-collapse > .navbar-nav,
+			> .navbar-header,
+			> .navbar-nav {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			> .navbar-collapse {
+				@media (max-width: $grid-float-breakpoint-max) {
+					margin-left: -$sidebar-navbar-gutter-left;
+					margin-right: -$sidebar-navbar-gutter-right;
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+	@else {
+		.navbar > .container-fluid > .navbar-nav {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.navbar > .container-fluid > .navbar-collapse {
+			@media (min-width: $grid-float-breakpoint) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+// Skins
+
+.sidebar-default {
+	background-color: $sidebar-default-bg;
+	border-left: 1px solid $sidebar-default-border;
+	color: $sidebar-default-color;
+
+	a.sidenav-close,
+	.sidebar-header-actions > li a {
+		color: $sidebar-default-header-actions-link-color;
+
+		&:focus,
+		&:hover {
+			color: $sidebar-default-header-actions-link-hover-color;
+		}
+	}
+
+	.sidebar-panel {
+		background-color: $sidebar-default-panel-bg;
+	}
+}
+
+.sidebar-inverse {
+	background-color: $sidebar-inverse-bg;
+	color: $sidebar-inverse-color;
+
+	a.sidenav-close,
+	.sidebar-header-actions > li a {
+		color: $sidebar-inverse-header-actions-link-color;
+
+		&:focus,
+		&:hover {
+			color: $sidebar-inverse-header-actions-link-hover-color;
+		}
+	}
+
+	.sidebar-panel {
+		background-color: $sidebar-inverse-panel-bg;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		input {
+			@include placeholder($brand-default);
+		}
+
+		.form-control {
+			background-color: $sidebar-inverse-input-bg;
+			border-width: 0;
+			color: $brand-default;
+			padding: 8px 12px;
+		}
+	}
+}
