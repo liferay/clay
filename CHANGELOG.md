@@ -1,3 +1,36 @@
+### v1.0.11 - November 3, 2016
+* New: Lexicon text-editor icon
+* Fix: Checkbox alignment in list-group-item-field
+* Fix: More Checkbox alignment in Management Bar, Cards, and List Group
+* Fix: Checkbox and Radio alignment in Management Bar
+* Fix: Navbar alignment in Sidebar
+* Fix: Lexicon Icon alignment in Labels
+* Fix: Label icon styles bleed into Checkbox Card
+* Update: Removing plus sign from Lexicon moon icon
+* Update: Deprecate @mixin select-box-icon($color)
+* Update: Deprecate @mixin style-figcaption()
+* Update: Figures move font-weight and padding values to variables, add figcaption-middle
+* Update: Special spacing only for Checkboxes and Dropdowns in td:first-child and td:last-child
+* Update: More Cards optimization for better IE9 support and source formatting
+* Update: More optimizations to Icons for better IE9 support
+* Update: Optimize Button Groups for better IE9 support
+* Update: Optimize Figures for better IE9 support
+* Update: Optimize Forms for better IE9 support
+* Update: Optimize Modals for better IE9 support
+* Update: Optimize Nav Tabs for better IE9 support
+* Update: Optimize Pagination for better IE9 support
+* Update: Optimize Panels for better IE9 support, move some hard coded values to variables, and source formatting
+* Update: Optimize Progress Bars for better IE9 support
+* Update: Optimize Sidebar for better IE9 support
+* Optimize: Side Navigation for better IE9 support
+* Update: Optimize Tables for better IE9 support
+* Update: Optimize Typography for better IE9 support
+* Site: Update Documents and Media example page and add more examples to Test Assorted
+* Site: Update Figures docs
+* Site: Update Typography docs
+* Site: Add Modal demo to Assorted Visual Tests
+* Site: Add Table example without Checkbox or Dropdown in Test Assorted
+
 ### v1.0.10 - October 13, 2016
 * Update: Align reference-marks and icons inside control-label
 * Update: Reset border styles when using nav-tabs in navbar
