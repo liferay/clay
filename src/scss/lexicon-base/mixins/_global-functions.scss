@@ -84,8 +84,8 @@
 
 		$chunk: str-replace($chunk, '"', '\'');
 		$chunk: str-replace($chunk, ' ', '%20');
-        $chunk: str-replace($chunk, '{', '%7B');
-        $chunk: str-replace($chunk, '}', '%7D');
+		$chunk: str-replace($chunk, '{', '%7B');
+		$chunk: str-replace($chunk, '}', '%7D');
 		$chunk: str-replace($chunk, '<', '%3C');
 		$chunk: str-replace($chunk, '>', '%3E');
 		$chunk: str-replace($chunk, '&', '%26');
