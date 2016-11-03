@@ -254,6 +254,12 @@ button.list-group-heading {
 	}
 
 	width: 1%;
+
+	> .checkbox,
+	> .radio {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
 }
 
 .list-group-item-content {
@@ -488,6 +494,7 @@ button.list-group-heading {
 				left: 50%;
 				right: auto;
 				top: 100%;
+
 				-ms-transform: translateX(-50%);
 				transform: translateX(-50%);
 			}
