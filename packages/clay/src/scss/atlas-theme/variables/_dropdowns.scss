@@ -25,9 +25,9 @@ $dropdown-menu-max-width: 230px !default;
 // Skin
 
 $dropdown-bg: #FFF !default;
-$dropdown-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3) !default;
+$dropdown-box-shadow: 0 1px 1px 0 transparentize(#000, 0.7) !default;
 
-$dropdown-border: #DCE0E3 !default;
+$dropdown-border: transparentize(#DCE0E3, 0.5) !default;
 $dropdown-fallback-border: #DCE0E3 !default;
 
 $dropdown-divider-bg: $dropdown-border !default;
