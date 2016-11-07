@@ -3,6 +3,14 @@ input[type="radio"] {
 	cursor: pointer;
 }
 
+fieldset {
+	word-wrap: break-word;
+
+	@-moz-document url-prefix() { // FF Fieldset workaround
+		display: table-cell;
+	}
+}
+
 label,
 .control-label {
 	.lexicon-icon {
