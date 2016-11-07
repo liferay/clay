@@ -447,101 +447,381 @@ section: Visual Tests
 			</ul>
 		</li>
 	</ul>
+</div>
 
-	<table class="table table-list">
-		<thead>
-			<tr>
-				<th class="table-cell-field"></th>
-				<th class="hidden-sm hidden-xs table-cell-field">ID</th>
-				<th class="table-cell-content">
-					Title
-				</th>
-				<th class="hidden-sm hidden-xs table-cell-field">Status</th>
-				<th class="hidden-sm hidden-xs table-cell-field">Modified Date</th>
-				<th class="hidden-sm hidden-xs table-cell-field">Display Date</th>
-				<th class="table-cell-field">Author</th>
-				<th class="hidden-sm hidden-xs table-cell-field">Type</th>
-				<th class="table-cell-field"></th>
-			</tr>
-		</thead>
+<div class="lx-site-row-spacer">
+	<div class="table-responsive" style="background-color: #EEE;">
+		<table class="table table-autofit table-heading-nowrap table-list">
+			<thead>
+				<tr>
+					<th></th>
+					<th>ID</th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Title</span>
+					</th>
+					<th>Status</th>
+					<th>Modified Date</th>
+					<th>Display Date</th>
+					<th>Author</th>
+					<th>Type</th>
+					<th></th>
+				</tr>
+			</thead>
 
-		<tbody>
-			<tr>
-				<td class="table-cell-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
-						</label>
-					</div>
-				</td>
-				<td class="hidden-sm hidden-xs table-cell-field">21146</td>
-				<td class="table-cell-content">
-					Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.
-				</td>
-				<td class="hidden-sm hidden-xs table-cell-field">--</td>
-				<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
-				<td class="hidden-sm hidden-xs table-cell-field">--</td>
-				<td class="table-cell-field">Stanley Nelson</td>
-				<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
-				<td class="table-cell-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li><a href="#1">Download</a></li>
-							<li><a href="#1">Edit</a></li>
-							<li><a href="#1">Move</a></li>
-							<li><a href="#1">Checkout</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Move to Recycle Bin</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="active">
-				<td class="table-cell-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
-						</label>
-					</div>
-				</td>
-				<td class="hidden-sm hidden-xs table-cell-field">
-					21148
-				</td>
-				<td class="clamp-horizontal table-cell-content">
-					<div class="clamp-container">
-						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
-					</div>
-				</td>
-				<td class="hidden-sm hidden-xs table-cell-field">--</td>
-				<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
-				<td class="hidden-sm hidden-xs table-cell-field">--</td>
-				<td class="table-cell-field">Stanley Nelson</td>
-				<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
-				<td class="table-cell-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li><a href="#1">Download</a></li>
-							<li><a href="#1">Edit</a></li>
-							<li><a href="#1">Move</a></li>
-							<li><a href="#1">Checkout</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Move to Recycle Bin</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+			<tbody>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Pumpkin spice robusta.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Caffeine froth.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side-bottom">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side-bottom">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side-bottom">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
 
 <div class="uxgl-assorted-section">
