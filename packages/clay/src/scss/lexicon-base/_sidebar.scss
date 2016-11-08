@@ -95,7 +95,7 @@
 			}
 		}
 
-		.navbar > .container-fluid {
+		.navbar > [class*='container-fluid'] {
 			padding-left: $sidebar-navbar-gutter-left;
 			padding-right: $sidebar-navbar-gutter-right;
 
@@ -117,12 +117,12 @@
 		}
 	}
 	@else {
-		.navbar > .container-fluid > .navbar-nav {
+		.navbar > [class*='container-fluid'] > .navbar-nav {
 			margin-left: 0;
 			margin-right: 0;
 		}
 
-		.navbar > .container-fluid > .navbar-collapse {
+		.navbar > [class*='container-fluid'] > .navbar-collapse {
 			@media (min-width: $grid-float-breakpoint) {
 				padding-left: 0;
 				padding-right: 0;
