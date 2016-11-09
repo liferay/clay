@@ -1,15 +1,15 @@
 .input-group .form-control:focus {
-	z-index: 3;
+	z-index: $zindex-input-group-focus;
 }
 
 // Input Group Btn
 
 .input-group-btn .btn:hover {
-	z-index: 3;
+	z-index: $zindex-input-group-hover;
 }
 
 .input-group-btn .btn:focus {
-	z-index: 3;
+	z-index: $zindex-input-group-focus;
 }
 
 .input-group-btn {
