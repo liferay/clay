@@ -6,6 +6,9 @@ $input-border-width: $input-border-top-width $input-border-right-width $input-bo
 
 $input-group-constrain-line-height: $input-height-base - $input-border-top-width - $input-border-bottom-width !default;
 
+$input-group-constrain-lg-line-height: $input-height-large - $input-border-top-width - $input-border-bottom-width !default;
+$input-group-constrain-sm-line-height: $input-height-small - $input-border-top-width - $input-border-bottom-width !default;
+
 $input-label-reference-mark-spacer: 0 !default;
 $input-label-reference-mark-vertical-alignment: top !default;
 

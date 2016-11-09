@@ -161,6 +161,21 @@
 // Input Group Sizes
 
 .input-group-lg {
+	.input-group-constrain {
+		line-height: $input-group-constrain-lg-line-height;
+		margin-bottom: -$padding-large-vertical - $input-border-bottom-width;
+		margin-left: -$padding-large-horizontal;
+		margin-right: -$padding-large-horizontal;
+		margin-top: -$padding-large-vertical;
+
+		@if ($input-border-bottom-width > 0) {
+			padding-bottom: $input-border-bottom-width;
+		}
+
+		padding-left: $padding-large-horizontal;
+		padding-right: $padding-large-horizontal;
+	}
+
 	@if (variable-exists(atlas-theme)) {
 		> .input-group-addon {
 			border-radius: $input-group-addon-border-radius;
@@ -189,6 +204,21 @@
 }
 
 .input-group-sm {
+	.input-group-constrain {
+		line-height: $input-group-constrain-sm-line-height;
+		margin-bottom: -$padding-small-vertical - $input-border-bottom-width;
+		margin-left: -$padding-small-horizontal;
+		margin-right: -$padding-small-horizontal;
+		margin-top: -$padding-small-vertical;
+
+		@if ($input-border-bottom-width > 0) {
+			padding-bottom: $input-border-bottom-width;
+		}
+
+		padding-left: $padding-small-horizontal;
+		padding-right: $padding-small-horizontal;
+	}
+
 	@if (variable-exists(atlas-theme)) {
 		> .input-group-addon {
 			border-radius: $input-group-addon-border-radius;
