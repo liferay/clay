@@ -44,7 +44,7 @@
 		border-top-right-radius: 0;
 		left: 0;
 		position: absolute;
-		z-index: 4;
+		z-index: $zindex-basic-search-close;
 
 		@media (min-width: $grid-float-breakpoint) {
 			display: none;
