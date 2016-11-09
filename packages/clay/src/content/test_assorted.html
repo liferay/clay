@@ -2105,7 +2105,7 @@ section: Visual Tests
 		<div class="form-group">
 			<div class="input-group">
 				<input class="form-control" placeholder="Mailbox Name" type="text">
-				<span class="input-group-addon">@</span>
+				<span class="input-group-addon input-group-insert">@</span>
 				<input class="form-control" placeholder="Domain" type="text">
 				<span class="input-group-addon">.com</span>
 			</div>
@@ -2113,8 +2113,19 @@ section: Visual Tests
 
 		<div class="form-group">
 			<div class="input-group">
-				<span class="input-group-addon" id="inputGroupAddon01">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+				<span class="input-group-addon" id="inputGroupAddon02">
+					https://web.liferay.com/community/forums/-/message_boards/category/72632049
+				</span>
 				<input aria-describedby="inputGroupAddon02" class="form-control" placeholder="Change Default URL" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon" id="inputGroupAddon03">
+					<span class="input-group-constrain">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+				</span>
+				<input aria-describedby="inputGroupAddon03" class="form-control" placeholder="Change Default URL" type="text">
 			</div>
 		</div>
 
@@ -2200,13 +2211,13 @@ section: Visual Tests
 		<div class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon">Topic</span>
-				<span class="input-group-btn">
+				<span class="input-group-btn input-group-insert">
 					<button class="btn btn-default" type="button">Go!</button>
 				</span>
-				<span class="input-group-addon">Do Something</span>
+				<span class="input-group-addon input-group-insert">Do Something</span>
 				<input class="form-control" placeholder="Search for..." type="text">
-				<span class="input-group-addon">Topic</span>
-				<div class="input-group-btn">
+				<span class="input-group-addon input-group-insert">Topic</span>
+				<div class="input-group-btn input-group-insert">
 					<button class="btn btn-default" type="button">
 						<svg class="lexicon-icon lexicon-icon-ellipsis-v">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
