@@ -39,23 +39,44 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<h3>Input Group Addon Constrain</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Make long content inside an <code>input-group-addon</code> overflow by wrapping your text with <code>```<span class="input-group-constrain"></span>```</code>.</p>
+		</blockquote>
+
+		<form>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon" id="inputGroupConstrain01">
+						<span class="input-group-constrain">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+					</span>
+					<input aria-describedby="inputGroupConstrain01" class="form-control" placeholder="Change Default URL" type="text">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
 		<h3>Input Group Addon with Checkboxes and Radios</h3>
 
 		<form>
 			<div class="form-group">
 				<div class="input-group">
 					<span class="input-group-addon">
-						<input type="checkbox" aria-label="Checkbox for following text input">
+						<input aria-label="Checkbox for following text input" type="checkbox">
 					</span>
-					<input type="text" class="form-control" aria-label="Text input with checkbox">
+					<input aria-label="Text input with checkbox" class="form-control" type="text">
 				</div>
 			</div>
 
 			<div class="form-group">
 				<div class="input-group">
-					<input type="text" class="form-control" aria-label="Text input with checkbox">
+					<input aria-label="Text input with checkbox" class="form-control" type="text">
 					<span class="input-group-addon">
-						<input type="checkbox" aria-label="Checkbox for previous text input">
+						<input aria-label="Checkbox for previous text input" type="checkbox">
 					</span>
 				</div>
 			</div>
@@ -63,17 +84,17 @@ section: Components
 			<div class="form-group">
 				<div class="input-group">
 					<span class="input-group-addon">
-						<input type="radio" aria-label="Radio button for following text input">
+						<input aria-label="Radio button for following text input" type="radio">
 					</span>
-					<input type="text" class="form-control" aria-label="Text input with radio button">
+					<input aria-label="Text input with radio button" class="form-control" type="text">
 				</div>
 			</div>
 
 			<div class="form-group">
 				<div class="input-group">
-					<input type="text" class="form-control" aria-label="Text input with radio button">
+					<input aria-label="Text input with radio button" class="form-control" type="text">
 					<span class="input-group-addon">
-						<input type="radio" aria-label="Radio button for previous text input">
+						<input aria-label="Radio button for previous text input" type="radio">
 					</span>
 				</div>
 			</div>
@@ -83,20 +104,20 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Input Group Addon with Buttons</h3>
+		<h3>Input Group Buttons</h3>
 
 		<div class="form-group">
 			<div class="input-group">
 				<span class="input-group-btn">
 					<button class="btn btn-default" type="button">Search</button>
 				</span>
-				<input type="text" class="form-control" placeholder="Search for...">
+				<input class="form-control" placeholder="Search for..." type="text">
 			</div>
 		</div>
 
 		<div class="form-group">
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search for...">
+				<input class="form-control" placeholder="Search for..." type="text">
 				<span class="input-group-btn">
 					<button class="btn btn-default" type="button">Search</button>
 				</span>
@@ -106,29 +127,29 @@ section: Components
 		<div class="form-group">
 			<div class="input-group">
 				<div class="input-group-btn">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action <span class="caret"></span></button>
 					<ul class="dropdown-menu">
 						<li><a href="#">Action</a></li>
 						<li><a href="#">Another action</a></li>
 						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
+						<li class="divider" role="separator"></li>
 						<li><a href="#">Separated link</a></li>
 					</ul>
 				</div>
-				<input type="text" class="form-control" aria-label="Text input with dropdown button">
+				<input aria-label="Text input with dropdown button" class="form-control" type="text">
 			</div>
 		</div>
 
 		<div class="form-group">
 			<div class="input-group">
-				<input type="text" class="form-control" aria-label="Text input with dropdown button">
+				<input aria-label="Text input with dropdown button" class="form-control" type="text">
 				<div class="input-group-btn">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action <span class="caret"></span></button>
 					<ul class="dropdown-menu">
 						<li><a href="#">Action</a></li>
 						<li><a href="#">Another action</a></li>
 						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
+						<li class="divider" role="separator"></li>
 						<li><a href="#">Separated link</a></li>
 					</ul>
 				</div>
@@ -138,8 +159,8 @@ section: Components
 		<div class="form-group">
 			<div class="input-group">
 				<div class="input-group-btn">
-					<button type="button" class="btn btn-default">Action</button>
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<button class="btn btn-default" type="button">Action</button>
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 						<span class="caret"></span>
 						<span class="sr-only">Toggle Dropdown</span>
 					</button>
@@ -147,20 +168,20 @@ section: Components
 						<li><a href="#">Action</a></li>
 						<li><a href="#">Another action</a></li>
 						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
+						<li class="divider" role="separator"></li>
 						<li><a href="#">Separated link</a></li>
 					</ul>
 				</div>
-				<input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+				<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
 			</div>
 		</div>
 
 		<div class="form-group">
 			<div class="input-group">
-				<input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+				<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
 				<div class="input-group-btn">
-					<button type="button" class="btn btn-default">Action</button>
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<button class="btn btn-default" type="button">Action</button>
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
 						<span class="caret"></span>
 						<span class="sr-only">Toggle Dropdown</span>
 					</button>
@@ -168,12 +189,36 @@ section: Components
 						<li><a href="#">Action</a></li>
 						<li><a href="#">Another action</a></li>
 						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
+						<li class="divider" role="separator"></li>
 						<li><a href="#">Separated link</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>Input Group Insert</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Chain several <code>input-group-addon</code>'s or <code>input-group-btn</code>'s together by adding the class <code>input-group-insert</code> to any input-group-addon or input-group-btn that sits between the first and last element inside an input-group.</p>
+		</blockquote>
+
+		<form>
+			<div class="form-group">
+				<div class="input-group">
+					<input class="form-control" placeholder="Mailbox Name" type="text">
+					<span class="input-group-addon input-group-insert">@</span>
+					<input class="form-control" placeholder="Domain" type="text">
+					<span class="input-group-addon input-group-insert">.com</span>
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">Submit</button>
+					</span>
+				</div>
+			</div>
+		</form>
 	</div>
 </div>
 
@@ -230,7 +275,7 @@ section: Components
 					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
 					<span class="input-group-addon">
 						<span class="input-group-addon-content">
-							<a href="#1" class="help-icon help-icon-default icon-question icon-monospaced" data-toggle="popover"></a>
+							<a class="help-icon help-icon-default icon-monospaced icon-question" data-toggle="popover" href="#1"></a>
 						</span>
 					</span>
 				</div>
@@ -256,7 +301,7 @@ section: Components
 					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
 					<span class="input-group-addon">
 						<span class="input-group-addon-content">
-							<a href="#1" class="help-icon help-icon-default icon-question icon-monospaced" data-toggle="popover"></a>
+							<a class="help-icon help-icon-default icon-monospaced icon-question" data-toggle="popover" href="#1"></a>
 						</span>
 					</span>
 				</div>
@@ -274,7 +319,7 @@ section: Components
 					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
 					<span class="input-group-addon">
 						<span class="input-group-addon-content">
-							<a href="#1" class="help-icon help-icon-default icon-question icon-monospaced" data-toggle="popover"></a>
+							<a class="help-icon help-icon-default icon-monospaced icon-question" data-toggle="popover" href="#1"></a>
 						</span>
 					</span>
 				</div>
@@ -292,7 +337,7 @@ section: Components
 					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
 					<span class="input-group-addon">
 						<span class="input-group-addon-content">
-							<a href="#1" class="help-icon help-icon-default icon-question icon-monospaced" data-toggle="popover"></a>
+							<a class="help-icon help-icon-default icon-monospaced icon-question" data-toggle="popover" href="#1"></a>
 						</span>
 					</span>
 				</div>
@@ -302,10 +347,12 @@ section: Components
 </div>
 
 <script>
-$('[data-toggle="popover"]').popover({
-	container: 'body',
-	content: 'Some help text for your input.',
-	placement: 'left',
-	trigger: 'hover'
-});
+	$('[data-toggle="popover"]').popover(
+		{
+			container: 'body',
+			content: 'Some help text for your input.',
+			placement: 'left',
+			trigger: 'hover'
+		}
+	);
 </script>
