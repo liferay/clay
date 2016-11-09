@@ -34,8 +34,10 @@
 
 // Input Group Addon
 
-@if (variable-exists(atlas-theme)) {
-	.input-group-addon {
+.input-group-addon {
+	border-width: $input-border-width;
+
+	@if (variable-exists(atlas-theme)) {
 		border-radius: $input-group-addon-border-radius;
 		color: $input-group-addon-color;
 
@@ -44,7 +46,9 @@
 			display: block;
 		}
 	}
+}
 
+@if (variable-exists(atlas-theme)) {
 	.input-group .form-control {
 		padding-right: 10px;
 	}
@@ -64,6 +68,48 @@
 
 	.form-control {
 		display: block;
+	}
+}
+
+// Input Group Constrain
+
+.input-group-constrain {
+	max-width: 150px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-right: $btn-border-width;
+
+	@media (min-width: $grid-float-breakpoint) {
+		max-width: 300px;
+	}
+}
+
+.input-group-addon .input-group-constrain {
+	border-bottom-width: 0;
+	display: block;
+	line-height: $input-group-constrain-line-height;
+	margin-bottom: -$padding-base-vertical - $input-border-bottom-width;
+	margin-left: -$padding-base-horizontal;
+	margin-right: -$padding-base-horizontal;
+	margin-top: -$padding-base-vertical;
+
+	@if ($input-border-bottom-width > 0) {
+		padding-bottom: $input-border-bottom-width;
+	}
+
+	padding-left: $padding-base-horizontal;
+	padding-right: $padding-base-horizontal;
+}
+
+// Input Group Insert
+
+.input-group-insert {
+	border-left-width: 0;
+	border-right-width: 0;
+
+	> .btn {
+		border-radius: 0;
+		margin-right: -($btn-border-width);
 	}
 }
 

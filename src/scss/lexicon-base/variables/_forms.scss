@@ -1,3 +1,11 @@
+$input-border-bottom-width: 1px !default;
+$input-border-left-width: 1px !default;
+$input-border-right-width: 1px !default;
+$input-border-top-width: 1px !default;
+$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
+
+$input-group-constrain-line-height: $input-height-base - $input-border-top-width - $input-border-bottom-width !default;
+
 $input-label-reference-mark-spacer: 0 !default;
 $input-label-reference-mark-vertical-alignment: top !default;
 
