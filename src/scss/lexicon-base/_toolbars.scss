@@ -1,47 +1,28 @@
 .toolbar,
 .header-toolbar {
-	@include clearfix();
-
-	.nameplate-content,
-	.nameplate-field {
-		vertical-align: middle;
-	}
-}
-
-.toolbar-group,
-.toolbar-group-expand,
-.toolbar-group-right {
-	display: table;
-}
-
-.toolbar-group,
-.toolbar-group-right {
-	height: $toolbar-group-height;
-	margin-bottom: 0;
+	margin-bottom: 10px;
 }
 
 .toolbar-group {
+	display: table;
 	float: left;
+	height: $toolbar-group-height;
+	padding-right: $toolbar-group-padding-horizontal;
 }
 
 .toolbar-group-right {
+	display: table;
 	float: right;
+	height: $toolbar-group-height;
+	padding-left: $toolbar-group-padding-horizontal;
 }
 
 .toolbar-group-expand {
+	display: table;
+	height: $toolbar-group-height;
+
 	.input-group {
 		width: 100%;
-	}
-
-	.toolbar-group-content,
-	.toolbar-group-field {
-		display: table-cell;
-		float: none;
-		vertical-align: middle;
-	}
-
-	.toolbar-group-field {
-		width: 1%;
 	}
 }
 
@@ -51,74 +32,15 @@
 	@include text-overflow();
 }
 
-.toolbar-group-content,
+.toolbar-group-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
 .toolbar-group-field {
 	display: table-cell;
-	float: none;
-	margin-bottom: 0;
-	min-height: 0;
 	vertical-align: middle;
-
-	> a,
-	> .dropdown > a {
-		&:focus,
-		&:hover {
-			text-decoration: none;
-		}
-	}
-}
-
-.toolbar-group-field {
 	width: 1%;
-}
-
-@media (min-width: $grid-float-breakpoint) {
-	.toolbar {
-		margin-bottom: 10px;
-	}
-
-	.toolbar-group,
-	.toolbar-group-right {
-		display: table;
-		height: $toolbar-group-height;
-		width: auto;
-	}
-
-	.toolbar-group {
-		float: left;
-		padding-right: $toolbar-group-padding-horizontal;
-	}
-
-	.toolbar-group-right {
-		float: right;
-		padding-left: $toolbar-group-padding-horizontal;
-	}
-
-	.toolbar-group-row {
-		clear: none;
-		display: table-row;
-	}
-
-	.toolbar-group-content,
-	.toolbar-group-field {
-		display: table-cell;
-		float: none;
-		margin-bottom: 0;
-		vertical-align: middle;
-	}
-
-	.toolbar-group-expand {
-		clear: none;
-		display: table;
-	}
-
-	.toolbar-group-expand-text {
-		clear: none;
-	}
-
-	.toolbar-group-field {
-		width: 1%;
-	}
 }
 
 // Toolbar Group Newlines
@@ -194,17 +116,8 @@
 		border-radius: $header-toolbar-border-radius;
 	}
 
-	.dropdown-menu {
-		margin-top: 5px + 2;
-	}
-
-	.toolbar-group,
-	.toolbar-group-expand,
-	.toolbar-group-right {
-		height: $header-toolbar-height;
-	}
-
 	.toolbar-group {
+		height: $header-toolbar-height;
 		margin-left: $toolbar-group-padding-horizontal;
 		padding-right: 0;
 
@@ -222,6 +135,7 @@
 	}
 
 	.toolbar-group-right {
+		height: $header-toolbar-height;
 		margin-left: $toolbar-group-padding-horizontal;
 		margin-right: $toolbar-group-padding-horizontal;
 		padding-left: 0;
@@ -231,16 +145,13 @@
 		}
 	}
 
+	.toolbar-group-expand {
+		height: $header-toolbar-height;
+	}
+
 	.toolbar-group-expand-text {
 		line-height: $header-toolbar-height;
 		padding-left: $toolbar-group-padding-horizontal;
-	}
-
-	.toolbar-group-content {
-		> a,
-		> .dropdown > a {
-			border-radius: $header-toolbar-border-radius;
-		}
 	}
 }
 
@@ -285,5 +196,78 @@
 	.toolbar-group-expand,
 	.toolbar-group-expand-text {
 		color: $header-toolbar-default-color;
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	// Header Toolbar Component
+
+	.header-toolbar {
+		font-size: 16px;
+		margin-bottom: 0;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: 19px;
+		}
+
+		.header-toolbar-title {
+			font-weight: 700;
+		}
+
+		.toolbar-group,
+		.toolbar-group-right {
+			height: $header-toolbar-height;
+
+			@media (min-width: $grid-float-breakpoint) {
+				height: $header-toolbar-desktop-height;
+			}
+		}
+
+		.toolbar-group-expand-text {
+			line-height: $header-toolbar-height;
+
+			@media (min-width: $grid-float-breakpoint) {
+				line-height: $header-toolbar-desktop-height;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				display: inline;
+				margin: 0;
+			}
+		}
+	}
+
+	// Header Toolbar Skins
+
+	.header-toolbar-default {
+		background-color: $header-toolbar-default-bg;
+
+		.toolbar-group:first-child {
+			.toolbar-group-content,
+			.toolbar-group-field {
+				&:nth-of-type(2) {
+					border-left: $header-toolbar-default-divider-width solid $header-toolbar-default-divider;
+				}
+			}
+		}
+
+		.toolbar-group-content,
+		.toolbar-group-field {
+			> a,
+			> .dropdown > a {
+				color: $header-toolbar-default-link-color;
+
+				&:focus,
+				&:hover {
+					background-color: $header-toolbar-default-link-hover-bg;
+					color: $header-toolbar-default-link-hover-color;
+				}
+			}
+		}
+
+		.toolbar-group-expand,
+		.toolbar-group-expand-text {
+			color: $header-toolbar-default-color;
+		}
 	}
 }
