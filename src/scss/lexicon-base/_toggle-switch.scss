@@ -28,7 +28,7 @@ input.toggle-switch {
 		line-height: $toggle-switch-bar-height;
 		min-height: $toggle-switch-bar-height;
 		position: relative;
-		text-indent: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding);
+		text-indent: 0;
 
 		@include user-select(none);
 
@@ -68,7 +68,7 @@ input.toggle-switch {
 		.toggle-switch-handle {
 			&:after {
 				content: attr(data-label-off);
-				margin-left: 6px;
+				margin-left: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding) + 6px;
 				transition: $toggle-switch-transition;
 			}
 
@@ -128,7 +128,7 @@ input.toggle-switch {
 
 		.toggle-switch-handle:after {
 			content: attr(data-label-on);
-			margin-left: 6px;
+			margin-left: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding) + 6px;
 		}
 
 		.toggle-switch-icon {
@@ -208,7 +208,7 @@ input.toggle-switch {
 			&:empty ~ .toggle-switch-bar {
 				line-height: $toggle-switch-bar-desktop-height;
 				min-height: $toggle-switch-bar-desktop-height;
-				text-indent: set-data-label-text-position($toggle-switch-bar-desktop-width, $toggle-switch-bar-desktop-padding);
+				text-indent: 0;
 
 				&:after {
 					bottom: $toggle-switch-bar-desktop-padding;
@@ -220,6 +220,10 @@ input.toggle-switch {
 
 				&:before {
 					width: $toggle-switch-bar-desktop-width;
+				}
+
+				.toggle-switch-handle:after {
+					margin-left: set-data-label-text-position($toggle-switch-bar-desktop-width, $toggle-switch-bar-desktop-padding) + 6px;
 				}
 
 				.toggle-switch-icon {
@@ -241,6 +245,10 @@ input.toggle-switch {
 			&:checked ~ .toggle-switch-bar {
 				&:after {
 					left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+				}
+
+				.toggle-switch-handle:after {
+					margin-left: set-data-label-text-position($toggle-switch-bar-desktop-width, $toggle-switch-bar-desktop-padding) + 6px;
 				}
 
 				.button-icon {
