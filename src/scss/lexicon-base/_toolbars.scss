@@ -1,29 +1,60 @@
 .toolbar,
 .header-toolbar {
+	@include clearfix;
+
 	margin-bottom: 10px;
+
+	.dropdown {
+		display: block;
+		position: static;
+	}
+
+	.dropdown-menu {
+		margin-top: 0;
+		top: $toolbar-group-height \9; // IE9
+	}
+
+	.dropdown-toggle {
+		display: block;
+	}
 }
 
 .toolbar-group {
-	display: table;
 	float: left;
-	height: $toolbar-group-height;
-	padding-right: $toolbar-group-padding-horizontal;
 }
 
 .toolbar-group-right {
-	display: table;
 	float: right;
-	height: $toolbar-group-height;
-	padding-left: $toolbar-group-padding-horizontal;
 }
 
 .toolbar-group-expand {
-	display: table;
-	height: $toolbar-group-height;
-
 	.input-group {
 		width: 100%;
 	}
+
+	.toolbar-group-content:only-child {
+		width: 1%;
+	}
+
+	.toolbar-group-content {
+		max-width: 100px;
+		min-width: 100px;
+
+		.truncate-text {
+			left: 8px \9; // IE9
+			position: absolute \9; // IE9
+			right: 8px \9; // IE9
+
+			-ms-transform: translateY(-50%); // IE9
+		}
+	}
+}
+
+.toolbar-group,
+.toolbar-group-right,
+.toolbar-group-expand {
+	display: table;
+	height: $toolbar-group-height;
 }
 
 .toolbar-group-expand-text {
@@ -34,11 +65,17 @@
 
 .toolbar-group-content {
 	display: table-cell;
+	padding-left: 8px;
+	padding-right: 8px;
+	position: relative;
 	vertical-align: middle;
 }
 
 .toolbar-group-field {
 	display: table-cell;
+	padding-left: 8px;
+	padding-right: 8px;
+	position: relative;
 	vertical-align: middle;
 	width: 1%;
 }
@@ -48,50 +85,20 @@
 @media (max-width: $screen-xs-max) {
 	.tbg-xs-newline {
 		clear: both;
-		display: block;
 		float: left;
 	}
 }
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-	.tbg-sm-newline,
-	.tbg-md-newline,
-	.tbg-lg-newline {
-		margin-top: 10px;
-	}
-
 	.tbg-sm-newline {
 		clear: both;
-
-		&.toolbar-group-right {
-			float: left;
-		}
-	}
-
-	.tbg-md-newline,
-	.tbg-lg-newline {
-		&.toolbar-group-right {
-			float: left;
-		}
+		float: left;
 	}
 }
 
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-	.tbg-md-newline,
-	.tbg-lg-newline {
-		margin-top: 10px;
-	}
-
 	.tbg-md-newline {
 		clear: both;
-		margin-top: 10px;
-
-		&.toolbar-group-right {
-			float: left;
-		}
-	}
-
-	.tbg-lg-newline.toolbar-group-right {
 		float: left;
 	}
 }
@@ -99,11 +106,7 @@
 @media (min-width: $screen-lg-min) {
 	.tbg-lg-newline {
 		clear: both;
-		margin-top: 10px;
-
-		&.toolbar-group-right {
-			float: left;
-		}
+		float: left;
 	}
 }
 
