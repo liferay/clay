@@ -318,6 +318,16 @@ button.list-group-heading {
 			}
 		}
 	}
+
+	.clamp-container .truncate-text {
+		white-space: nowrap \9; // IE9
+		word-break: normal \9; // IE9
+	}
+
+	.truncate-text {
+		white-space: normal \9; // IE9
+		word-break: break-all \9; // IE9
+	}
 }
 
 .tabular-list-group.no-borders {
