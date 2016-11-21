@@ -63,4 +63,9 @@
 			border-color: $state-danger-border;
 		}
 	}
+
+	.form-group select.form-control[multiple] {
+		background: none;
+		padding: $input-padding-vertical $input-padding-horizontal;
+	}
 }
