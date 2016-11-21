@@ -8,11 +8,12 @@ section: Elements
 		<h3>Toolbar</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Quickly prototype a toolbar for your portlet, control panel, or site with this component. Vertically align content by adjusting the height of <code>.toolbar-group</code>, <code>.toolbar-group-right</code>, and <code>.toolbar-group-expand</code>.</p>
-
-			<p>Toolbar shouldn't be used to create a toolbar for your inline/text editing application; use <a href="http://getbootstrap.com/components/#btn-groups-toolbar">btn-toolbar</a> for that.</p>
-
+			<p>Quickly prototype a toolbar for your portlet, control panel, or site with this component and easily adjust the height of your toolbar while maintaining vertical alignment. Adjust the height of your toolbar by changing the height of <code>.toolbar-group</code>, <code>.toolbar-group-right</code>, and <code>.toolbar-group-expand</code>.</p>
 		</blockquote>
+
+		<div class="alert alert-warning">
+			In IE9 you will need to adjust the top css property of dropdown-menu to match the height of your toolbar.
+		</div>
 	</div>
 </div>
 
@@ -21,7 +22,7 @@ section: Elements
 		<div class="toolbar">
 			<div class="toolbar-group">
 				<div class="toolbar-group-content">
-					<a href="#1" style="">Company</a>
+					<a href="#1">Company</a>
 				</div>
 			</div>
 
@@ -58,9 +59,7 @@ section: Elements
 				<div class="toolbar-group-content">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<div>
-								<span class="icon-plus"></span>
-							</div>
+							<span class="icon-plus"></span>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-right">
 							<li><a href="#1">Alphabetical</a></li>
@@ -86,7 +85,7 @@ section: Elements
 			</div>
 
 			<div class="toolbar-group-expand">
-				<div class="toolbar-group-field">
+				<div class="toolbar-group-content">
 					<div class="input-group">
 						<input class="form-control" type="text">
 						<span class="input-group-btn">
@@ -141,9 +140,7 @@ section: Elements
       <div class="toolbar-group-content">
           <div class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-                  <div>
-                      <span class="icon-plus"></span>
-                  </div>
+                  <span class="icon-plus"></span>
               </a>
               <ul class="dropdown-menu dropdown-menu-right">
                   <li><a href="#1">Alphabetical</a></li>
@@ -181,45 +178,101 @@ section: Elements
 </div>```</code></pre>
 </div>
 
+<div class="row row-spacing">
+	<div class="col-md-12">
 		<div class="toolbar">
 			<div class="toolbar-group">
 				<div class="toolbar-group-content">
+					<select class="form-control">
+						<option>Helvetica</option>
+						<option>Arial</option>
+						<option>Futura</option>
+						<option>Georgia</option>
+						<option>Comic Sans</option>
+					</select>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-bold">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-italic">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-underline">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-align-left">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#align-left" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-align-center">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#align-center" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-align-right">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#align-right" />
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-indent-more">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#indent-more" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-indent-less">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#indent-less" />
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-list">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
 					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							Application <span class="icon-caret-down"></span>
+						<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+							<svg class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+							</svg>
 						</a>
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu dropdown-menu-right">
 							<li><a href="#1">Alphabetical</a></li>
 							<li><a href="#1">Reverse</a></li>
 							<li><a href="#1">Split</a></li>
 						</ul>
 					</div>
-				</div>
-			</div>
-
-			<div class="toolbar-group">
-				<div class="toolbar-group-content">
-					<button class="btn btn-default">
-						<input type="checkbox" /> <span class="icon-caret-down"></span>
-					</button>
-				</div>
-				<div class="toolbar-group-content">
-					<button class="btn btn-default">
-						<span class="icon-refresh"></span>
-					</button>
-				</div>
-				<div class="toolbar-group-content">
-					<button class="btn btn-default">
-						More <span class="icon-caret-down"></span>
-					</button>
-				</div>
-			</div>
-
-			<div class="toolbar-group-right">
-				<div class="toolbar-group-content">
-					<button class="btn btn-default">
-						<span class="icon-cog"></span> <span class="icon-caret-down"></span>
-					</button>
 				</div>
 			</div>
 		</div>
@@ -231,11 +284,91 @@ section: Elements
 <pre><code class="html">```<div class="toolbar">
     <div class="toolbar-group">
         <div class="toolbar-group-content">
+            <select class="form-control">
+                <option>Helvetica</option>
+                <option>Arial</option>
+                <option>Futura</option>
+                <option>Georgia</option>
+                <option>Comic Sans</option>
+            </select>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-bold">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-italic">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-underline">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="toolbar-group">
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-align-left">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#align-left" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-align-center">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#align-center" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-align-right">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#align-right" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="toolbar-group">
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-indent-more">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#indent-more" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-indent-less">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#indent-less" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="toolbar-group">
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-list">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
             <div class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-                    Application <span class="icon-caret-down"></span>
+                <a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+                    <svg class="lexicon-icon lexicon-icon-ellipsis-v">
+                        <use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+                    </svg>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-right">
                     <li><a href="#1">Alphabetical</a></li>
                     <li><a href="#1">Reverse</a></li>
                     <li><a href="#1">Split</a></li>
@@ -243,30 +376,269 @@ section: Elements
             </div>
         </div>
     </div>
+</div>```</code></pre>
+</div>
 
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3>How to use toolbar-group-content and toolbar-group-field</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use only <code>toolbar-group-content</code> inside <code>toolbar-group</code> if you want to create a group that is only as wide as the content inside.</p>
+		</blockquote>
+
+		<div class="toolbar">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content" style="background-color: aliceblue;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-bold">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content" style="background-color: antiquewhite;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-italic">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content" style="background-color: aqua;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-underline">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapseOnlyToolbarGroupContent1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapseOnlyToolbarGroupContent1">
+<pre><code class="html">```<div class="toolbar">
     <div class="toolbar-group">
-        <div class="toolbar-group-content">
-            <button class="btn btn-default">
-                <input type="checkbox" /> <span class="icon-caret-down"></span>
-            </button>
+        <div class="toolbar-group-content" style="background-color: aliceblue;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-bold">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+                </svg>
+            </a>
         </div>
-        <div class="toolbar-group-content">
-            <button class="btn btn-default">
-                <span class="icon-refresh"></span>
-            </button>
+        <div class="toolbar-group-content" style="background-color: antiquewhite;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-italic">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+                </svg>
+            </a>
         </div>
-        <div class="toolbar-group-content">
-            <button class="btn btn-default">
-                More <span class="icon-caret-down"></span>
-            </button>
+        <div class="toolbar-group-content" style="background-color: aqua;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-underline">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+                </svg>
+            </a>
         </div>
     </div>
+</div>```</code></pre>
+</div>
 
-    <div class="toolbar-group-right">
-        <div class="toolbar-group-content">
-            <button class="btn btn-default">
-                <span class="icon-cog"></span> <span class="icon-caret-down"></span>
-            </button>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use only <code>toolbar-group-field</code> inside <code>toolbar-group</code> if you want to create a group that is equally spaced across <code>toolbar-group</code>.</p>
+		</blockquote>
+
+		<div class="toolbar">
+			<div class="toolbar-group">
+				<div class="toolbar-group-field" style="background-color: aliceblue;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-bold">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-field" style="background-color: antiquewhite;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-italic">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-field" style="background-color: aqua;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-underline">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapseOnlyToolbarGroupField1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapseOnlyToolbarGroupField1">
+<pre><code class="html">```<div class="toolbar">
+    <div class="toolbar-group">
+        <div class="toolbar-group-field" style="background-color: aliceblue;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-bold">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-field" style="background-color: antiquewhite;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-italic">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-field" style="background-color: aqua;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-underline">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>```</code></pre>
+</div>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use one <code>toolbar-group-content</code> and the rest with <code>toolbar-group-field</code> inside <code>toolbar-group</code> if you want to create a group with one element that spans the remaining width of <code>toolbar-group</code>.</p>
+		</blockquote>
+
+		<div class="toolbar">
+			<div class="toolbar-group">
+				<div class="toolbar-group-field" style="background-color: aliceblue;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-bold">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content" style="background-color: antiquewhite;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-italic">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-field" style="background-color: aqua;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-underline">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapseOneToolbarGroupContent1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapseOneToolbarGroupContent1">
+<pre><code class="html">```<div class="toolbar">
+    <div class="toolbar-group">
+        <div class="toolbar-group-field" style="background-color: aliceblue;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-bold">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content" style="background-color: antiquewhite;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-italic">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-field" style="background-color: aqua;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-underline">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>```</code></pre>
+</div>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use multiple <code>toolbar-group-content</code>s and multiple <code>toolbar-group-field</code>s inside <code>toolbar-group</code> if you want to create a group with multiple items only as wide as its content and the remaining items to share the remaining space inside <code>toolbar-group</code>.</p>
+		</blockquote>
+
+		<div class="toolbar">
+			<div class="toolbar-group">
+				<div class="toolbar-group-field" style="background-color: aliceblue;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-bold">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-field" style="background-color: antiquewhite;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-italic">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content" style="background-color: aqua;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-underline">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content" style="background-color: aquamarine;">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-align-left">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#align-left" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapseMultipleToolbarGroupContent1"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapseMultipleToolbarGroupContent1">
+<pre><code class="html">```<div class="toolbar">
+    <div class="toolbar-group">
+        <div class="toolbar-group-field" style="background-color: aliceblue;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-bold">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#bold" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-field" style="background-color: antiquewhite;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-italic">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#italic" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content" style="background-color: aqua;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-underline">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#underline" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content" style="background-color: aquamarine;">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-align-left">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#align-left" />
+                </svg>
+            </a>
         </div>
     </div>
 </div>```</code></pre>
@@ -280,7 +652,7 @@ section: Elements
 		<h3>Fill Remaining Space with Form Element</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>To fill the remaining space with one form element such as a search box, declare <code>.toolbar-group-expand</code> last and use <code>.toolbar-group-field</code>. </p>
+			<p>To fill the remaining space with one form element such as a search box, declare <code>.toolbar-group-expand</code> last and use <code>.toolbar-group-content</code>. </p>
 		</blockquote>
 
 		<div class="toolbar">
@@ -317,13 +689,13 @@ section: Elements
 				<div class="toolbar-group-content">
 					<a href="#1"><span class="icon-th-list"></span></a>
 				</div>
-				<div class="toolbar-group-content active">
+				<div class="toolbar-group-content">
 					<a href="#1"><span class="icon-reorder"></span></a>
 				</div>
 			</div>
 
 			<div class="toolbar-group-expand">
-				<div class="toolbar-group-field">
+				<div class="toolbar-group-content">
 					<form>
 						<div class="input-group">
 							<input class="form-control" type="text">
@@ -347,7 +719,9 @@ section: Elements
         </div>
         <div class="toolbar-group-content">
             <div class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+                    Order by: <span class="icon-caret-down"></span>
+                </a>
                 <ul class="dropdown-menu">
                     <li><a href="#1">Date</a></li>
                     <li><a href="#1">Time</a></li>
@@ -357,7 +731,9 @@ section: Elements
         </div>
         <div class="toolbar-group-content">
             <div class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+                    Name: <span class="icon-caret-down"></span>
+                </a>
                 <ul class="dropdown-menu">
                     <li><a href="#1">Alphabetical</a></li>
                     <li><a href="#1">Reverse</a></li>
@@ -369,23 +745,31 @@ section: Elements
 
     <div class="toolbar-group-right">
         <div class="toolbar-group-content">
-            <a href="#1"><span class="icon-th-large"></span></a>
+            <a href="#1">
+                <span class="icon-th-large"></span>
+            </a>
         </div>
         <div class="toolbar-group-content">
-            <a href="#1"><span class="icon-th-list"></span></a>
+            <a href="#1">
+                <span class="icon-th-list"></span>
+            </a>
         </div>
-        <div class="toolbar-group-content active">
-            <a href="#1"><span class="icon-reorder"></span></a>
+        <div class="toolbar-group-content">
+            <a href="#1">
+                <span class="icon-reorder"></span>
+            </a>
         </div>
     </div>
 
     <div class="toolbar-group-expand">
-        <div class="toolbar-group-field">
+        <div class="toolbar-group-content">
             <form>
                 <div class="input-group">
                     <input class="form-control" type="text">
                     <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
+                        <button class="btn btn-primary" type="button">
+                            <span class="icon-search"></span>
+                        </button>
                     </span>
                 </div>
             </form>
@@ -399,326 +783,203 @@ section: Elements
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<h3>Fill Remaining Space with Text and Truncate the Rest</h3>
+
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>To fill the remaining space with multiple elements such as a search box, buttons and dropdowns, use a combination of <code>.toolbar-group-field</code> and <code>.toolbar-group-content</code>. The content that should fill the remaining space should be wrapped in <code>.toolbar-group-content</code> and all other content should be wrapped in <code>.toolbar-group-field</code>.</p>
+			<p>Use the same pattern as above and wrap your text inside <code>.toolbar-group-content</code> with <code>```<span class="truncate-text"></span>```</code>.</p>
 		</blockquote>
 
 		<div class="toolbar">
 			<div class="toolbar-group">
 				<div class="toolbar-group-content">
-					<input type="checkbox">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-product-menu-closed">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-closed" />
+						</svg>
+					</a>
 				</div>
 				<div class="toolbar-group-content">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">Date</a></li>
-							<li><a href="#1">Time</a></li>
-							<li><a href="#1">Status</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="toolbar-group-content">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">Alphabetical</a></li>
-							<li><a href="#1">Reverse</a></li>
-							<li><a href="#1">Split</a></li>
-						</ul>
-					</div>
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-angle-left">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+						</svg>
+					</a>
 				</div>
 			</div>
 
 			<div class="toolbar-group-right">
 				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-th-large"></span></a>
-				</div>
-				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-th-list"></span></a>
-				</div>
-				<div class="toolbar-group-content active">
-					<a href="#1"><span class="icon-reorder"></span></a>
+					<div class="dropdown">
+						<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+							<svg class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Edit</a></li>
+							<li><a href="#1">Access from Desktop</a></li>
+							<li><a href="#1">Metadata Sets</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
 			<div class="toolbar-group-expand">
-				<div class="toolbar-group-field">
-					<a class="btn btn-default btn-xs" href="#1"><span class="icon-refresh"></span></a>
-				</div>
-				<div class="toolbar-group-field">
-					<a class="btn btn-default btn-xs" href="#1"><span class="icon-share-alt"></span></a>
-				</div>
-
 				<div class="toolbar-group-content">
-					<form>
-						<div class="input-group">
-							<input class="form-control" type="text">
-							<span class="input-group-btn">
-								<button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
-							</span>
-						</div>
-					</form>
-				</div>
-
-				<div class="toolbar-group-field">
-					<div class="dropdown">
-						<button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-							<span class="icon-cog"></span> <span class="icon-caret-down"></span>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#1">Alphabetical</a></li>
-							<li><a href="#1">Reverse</a></li>
-							<li><a href="#1">Split</a></li>
-						</ul>
-					</div>
+					<span class="truncate-text">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
 				</div>
 			</div>
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapseTruncateText1"><span class="icon-caret-down"></span></a>
 </div>
-<div class="collapse" id="codeCollapse4">
+<div class="collapse" id="codeCollapseTruncateText1">
 <pre><code class="html">```<div class="toolbar">
     <div class="toolbar-group">
         <div class="toolbar-group-content">
-            <input type="checkbox">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-product-menu-closed">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-closed" />
+                </svg>
+            </a>
         </div>
         <div class="toolbar-group-content">
-            <div class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#1">Date</a></li>
-                    <li><a href="#1">Time</a></li>
-                    <li><a href="#1">Status</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="toolbar-group-content">
-            <div class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#1">Alphabetical</a></li>
-                    <li><a href="#1">Reverse</a></li>
-                    <li><a href="#1">Split</a></li>
-                </ul>
-            </div>
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-angle-left">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+                </svg>
+            </a>
         </div>
     </div>
 
     <div class="toolbar-group-right">
         <div class="toolbar-group-content">
-            <a href="#1"><span class="icon-th-large"></span></a>
-        </div>
-        <div class="toolbar-group-content">
-            <a href="#1"><span class="icon-th-list"></span></a>
-        </div>
-        <div class="toolbar-group-content active">
-            <a href="#1"><span class="icon-reorder"></span></a>
+            <div class="dropdown">
+                <a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+                    <svg class="lexicon-icon lexicon-icon-ellipsis-v">
+                        <use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+                    </svg>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#1">Edit</a></li>
+                    <li><a href="#1">Access from Desktop</a></li>
+                    <li><a href="#1">Metadata Sets</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div class="toolbar-group-expand">
-        <div class="toolbar-group-field">
-            <a class="btn btn-default btn-xs" href="#1"><span class="icon-refresh"></span></a>
-        </div>
-        <div class="toolbar-group-field">
-            <a class="btn btn-default btn-xs" href="#1"><span class="icon-share-alt"></span></a>
-        </div>
-
         <div class="toolbar-group-content">
-            <form>
-                <div class="input-group">
-                    <input class="form-control" type="text">
-                    <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
-                    </span>
-                </div>
-            </form>
+            <span class="truncate-text">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
         </div>
+    </div>
+</div>```</code></pre>
+</div>
 
-        <div class="toolbar-group-field">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add additional content to <code>.toolbar-group-expand</code> with <code>.toolbar-group-field</code>.</p>
+		</blockquote>
+
+		<div class="toolbar">
+			<div class="toolbar-group">
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-product-menu-closed">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-closed" />
+						</svg>
+					</a>
+				</div>
+				<div class="toolbar-group-content">
+					<a class="icon-monospaced" href="#1">
+						<svg class="lexicon-icon lexicon-icon-angle-left">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+						</svg>
+					</a>
+				</div>
+			</div>
+
+			<div class="toolbar-group-right">
+				<div class="toolbar-group-content">
+					<div class="dropdown">
+						<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+							<svg class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Edit</a></li>
+							<li><a href="#1">Access from Desktop</a></li>
+							<li><a href="#1">Metadata Sets</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="toolbar-group-expand">
+				<div class="toolbar-group-content" style="padding-right: 0;">
+					<span class="truncate-text">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
+				</div>
+				<div class="toolbar-group-field" style="padding-left: 0;">
+					<a class="icon-monospaced" data-placement="bottom" data-toggle="tooltip" href="#1" title="Help Tooltip.">
+						<svg class="lexicon-icon lexicon-icon-question-circle-full">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#question-circle-full" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapseTruncateText2"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapseTruncateText2">
+<pre><code class="html">```<div class="toolbar">
+    <div class="toolbar-group">
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-product-menu-closed">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-closed" />
+                </svg>
+            </a>
+        </div>
+        <div class="toolbar-group-content">
+            <a class="icon-monospaced" href="#1">
+                <svg class="lexicon-icon lexicon-icon-angle-left">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="toolbar-group-right">
+        <div class="toolbar-group-content">
             <div class="dropdown">
-                <button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                    <span class="icon-cog"></span> <span class="icon-caret-down"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#1">Alphabetical</a></li>
-                    <li><a href="#1">Reverse</a></li>
-                    <li><a href="#1">Split</a></li>
+                <a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+                    <svg class="lexicon-icon lexicon-icon-ellipsis-v">
+                        <use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+                    </svg>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#1">Edit</a></li>
+                    <li><a href="#1">Access from Desktop</a></li>
+                    <li><a href="#1">Metadata Sets</a></li>
                 </ul>
             </div>
         </div>
     </div>
-</div>```</code></pre>
-</div>
-	</div>
-</div>
 
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3>Fill Remaining Space with Text</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>This pattern is specifically for use with long text that should be displayed in a single line and the remainder truncated. Truncated text should have a title attribute or a tooltip so a user still can access the full content.</p>
-			<p>Use <code>.toolbar-group-expand-text</code> with <code>.toolbar-group</code> and <code>.toolbar-group-right</code> to fill the remaining space with text in your toolbar. <code>.toolbar-group-expand-text</code> must be the last toolbar-group declared. It can be vertically aligned by matching the css property <code>line-height</code> to the height of its sibling toolbar-groups.</p>
-		</blockquote>
-
-		<div class="toolbar">
-			<div class="toolbar-group-right">
-				<div class="toolbar-group-content">
-					<input type="checkbox">
-				</div>
-				<div class="toolbar-group-content">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">Date</a></li>
-							<li><a href="#1">Time</a></li>
-							<li><a href="#1">Status</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="toolbar-group-content">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#1">Alphabetical</a></li>
-							<li><a href="#1">Reverse</a></li>
-							<li><a href="#1">Split</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="toolbar-group-right">
-				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-th-large"></span></a>
-				</div>
-				<div class="toolbar-group-content">
-					<a href="#1"><span class="icon-th-list"></span></a>
-				</div>
-				<div class="toolbar-group-content active">
-					<a href="#1"><span class="icon-reorder"></span></a>
-				</div>
-			</div>
-
-			<div class="toolbar-group-expand-text">
-				<span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
-			</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse5">
-	<pre><code>```<div class="toolbar">
-    <div class="toolbar-group-right">
-        <div class="toolbar-group-content">
-            <input type="checkbox">
+    <div class="toolbar-group-expand">
+        <div class="toolbar-group-content" style="padding-right: 0;">
+            <span class="truncate-text">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
         </div>
-        <div class="toolbar-group-content">
-        	<div class="dropdown">
-	            <a class="dropdown-toggle" data-toggle="dropdown" href="#1">Order by: <span class="icon-caret-down"></span></a>
-	            <ul class="dropdown-menu">
-	                <li><a href="#1">Date</a></li>
-	                <li><a href="#1">Time</a></li>
-	                <li><a href="#1">Status</a></li>
-	            </ul>
-            </div>
-        </div>
-        <div class="toolbar-group-content">
-        	<div class="dropdown">
-	            <a class="dropdown-toggle" data-toggle="dropdown" href="#1">Name: <span class="icon-caret-down"></span></a>
-	            <ul class="dropdown-menu dropdown-menu-right">
-	                <li><a href="#1">Alphabetical</a></li>
-	                <li><a href="#1">Reverse</a></li>
-	                <li><a href="#1">Split</a></li>
-	            </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="toolbar-group-right">
-        <div class="toolbar-group-content">
-            <a href="#1"><span class="icon-th-large"></span></a>
-        </div>
-        <div class="toolbar-group-content">
-            <a href="#1"><span class="icon-th-list"></span></a>
-        </div>
-        <div class="toolbar-group-content active">
-            <a href="#1"><span class="icon-reorder"></span></a>
-        </div>
-    </div>
-
-    <div class="toolbar-group-expand-text">
-        <span title="Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.">Con panna plunger pot, café au lait barista so cream so affogato qui whipped. That doppio espresso, aromatic foam crema decaffeinated caramelization. Caramelization coffee, aged arabica sugar, so, half and half, grounds cultivar trifecta aroma chicory. Aromatic crema, cinnamon redeye cortado strong aftertaste sugar java.</span>
-    </div>
-</div>```</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3>Vertically centering different size content.</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Variable height icons/content can be vertically centered by placing each one inside a <code>.toolbar-group-content</code>. Variable height toolbar-groups are vertically aligned by matching the height of each toolbar-group to the tallest one.</p>
-		</blockquote>
-
-		<div class="toolbar">
-			<div class="toolbar-group-right" style="height:70px;">
-				<div class="toolbar-group-content">
-					<a href="#1" style="font-size:20px;"><span class="icon-thumbs-up"></span> <span class="count">0</span></a>
-				</div>
-				<div class="toolbar-group-content">
-					<a href="#1" style="font-size:10px;"><span class="icon-thumbs-down"></span> <span class="count">0</span></a>
-				</div>
-				<div class="toolbar-group-content">
-					<a href="#1" style="font-size:40px;"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a>
-				</div>
-			</div>
-
-			<div class="toolbar-group-expand" style="height: 70px;">
-				<div class="toolbar-group-field">
-					<div class="input-group">
-						<input class="form-control" type="text">
-						<span class="input-group-btn">
-							<button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse6">
-	<pre><code>```<div class="toolbar">
-    <div class="toolbar-group" style="height: 70px;">
-        <div class="toolbar-group-content">
-            <a href="#1" style="font-size:20px;"><span class="icon-thumbs-up"></span> <span class="count">0</span></a>
-        </div>
-        <div class="toolbar-group-content">
-            <a href="#1" style="font-size:10px;"><span class="icon-thumbs-down"></span> <span class="count">0</span></a>
-        </div>
-        <div class="toolbar-group-content">
-            <a href="#1" style="font-size:40px;"><span class="icon-flag-alt"></span> <span class="count">Flag</span></a>
-        </div>
-    </div>
-
-    <div class="toolbar-group-expand" style="height: 70px;">
-        <div class="toolbar-group-field">
-            <div class="input-group">
-                <input class="form-control" type="text">
-                <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button"><span class="icon-search"></span></button>
-                </span>
-            </div>
+        <div class="toolbar-group-field" style="padding-left: 0;">
+            <a class="icon-monospaced" data-placement="bottom" data-toggle="tooltip" href="#1" title="Help Tooltip.">
+                <svg class="lexicon-icon lexicon-icon-question-circle-full">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#question-circle-full" />
+                </svg>
+            </a>
         </div>
     </div>
 </div>```</code></pre>
@@ -748,7 +1009,7 @@ section: Elements
 				</div>
 			</div>
 
-			<div class="toolbar-group-expand tbg-lg-newline" style="height: 70px;">
+			<div class="tbg-lg-newline toolbar-group-expand" style="height: 70px;">
 				<div class="toolbar-group-field">
 					<div class="input-group">
 						<input class="form-control" type="text">
@@ -807,7 +1068,7 @@ section: Elements
 				</div>
 			</div>
 
-			<div class="toolbar-group-expand tbg-md-newline" style="height: 70px;">
+			<div class="tbg-md-newline toolbar-group-expand" style="height: 70px;">
 				<div class="toolbar-group-field">
 					<div class="input-group">
 						<input class="form-control" type="text">
@@ -836,7 +1097,7 @@ section: Elements
         </div>
     </div>
 
-    <div class="toolbar-group-expand tbg-md-newline" style="height: 70px;">
+    <div class="tbg-md-newline toolbar-group-expand" style="height: 70px;">
         <div class="toolbar-group-field">
             <div class="input-group">
                 <input class="form-control" type="text">
@@ -866,7 +1127,7 @@ section: Elements
 				</div>
 			</div>
 
-			<div class="toolbar-group-expand tbg-sm-newline" style="height: 70px;">
+			<div class="tbg-sm-newline toolbar-group-expand" style="height: 70px;">
 				<div class="toolbar-group-field">
 					<div class="input-group">
 						<input class="form-control" type="text">
@@ -895,7 +1156,7 @@ section: Elements
         </div>
     </div>
 
-    <div class="toolbar-group-expand tbg-sm-newline" style="height: 70px;">
+    <div class="tbg-sm-newline toolbar-group-expand" style="height: 70px;">
         <div class="toolbar-group-field">
             <div class="input-group">
                 <input class="form-control" type="text">
@@ -925,7 +1186,7 @@ section: Elements
 				</div>
 			</div>
 
-			<div class="toolbar-group-expand tbg-xs-newline" style="height: 70px;">
+			<div class="tbg-xs-newline toolbar-group-expand" style="height: 70px;">
 				<div class="toolbar-group-field">
 					<div class="input-group">
 						<input class="form-control" type="text">
@@ -954,7 +1215,7 @@ section: Elements
         </div>
     </div>
 
-    <div class="toolbar-group-expand tbg-xs-newline" style="height: 70px;">
+    <div class="tbg-xs-newline toolbar-group-expand" style="height: 70px;">
         <div class="toolbar-group-field">
             <div class="input-group">
                 <input class="form-control" type="text">
@@ -969,3 +1230,7 @@ section: Elements
 
 	</div>
 </div>
+
+<script>
+	$('[data-toggle="tooltip"]').tooltip();
+</script>

@@ -1,1 +1,3 @@
-$tooltip-inner-max-width: 230px !default;
+// Deprecated `$tooltip-inner-max-width` as of v1.0.11 and will be removed in v2.0.0
+// use `$tooltip-max-width` instead
+$tooltip-inner-max-width: $tooltip-max-width !default;

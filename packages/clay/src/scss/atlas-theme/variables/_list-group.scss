@@ -30,10 +30,15 @@ $list-group-header-color: $brand-default !default;
 $list-group-header-close-border-color: $list-group-border !default;
 $list-group-header-open-border-color: $brand-primary !default;
 
+// Deprecated `$list-group-card-active-bg` as of v1.0.11 and will be removed in v2.0.0
 $list-group-card-active-bg: $list-group-active-bg !default;
+// Deprecated `$list-group-card-active-border` as of v1.0.11 and will be removed in v2.0.0
 $list-group-card-active-border: $list-group-active-border !default;
+// Deprecated `$list-group-card-active-border-width` as of v1.0.11 and will be removed in v2.0.0
 $list-group-card-active-border-width: 2px !default;
+// Deprecated `$list-group-card-active-color` as of v1.0.11 and will be removed in v2.0.0
 $list-group-card-active-color: $list-group-active-color !default;
 
 $list-group-item-dropdown-toggle-color: $brand-default !default;
+
 $list-group-item-active-dropdown-toggle-color: $list-group-item-dropdown-toggle-color !default;

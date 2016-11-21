@@ -3,52 +3,39 @@
 	width: 100%;
 }
 
-.nameplate-content,
 .nameplate-field {
+	display: table-cell;
+	padding: 6px;
+	vertical-align: top;
+	width: 1%;
+}
+
+.nameplate-content {
 	display: table-cell;
 	padding: 6px;
 	vertical-align: top;
 }
 
-.nameplate-field {
-	width: 1%;
+.nameplate-heading {
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
-.nameplate-content {
-	word-wrap: break-word;
-
-	h1,
-	h2,
-	h3 {
-		margin-top: 0;
-	}
-
-	h4,
-	h5,
-	h6 {
-		margin-top: 2px;
-	}
-
-	small {
-		color: $gray-light;
-		display: block;
-	}
+.nameplate-subheading {
+	color: $nameplate-subheading-color;
+	display: block;
 }
 
 // Nameplate Label
 
 .nameplate-label {
-	border-radius: 100px;
+	border-radius: $nameplate-label-border-radius;
 	display: table;
 	float: left;
+	height: $nameplate-label-height;
 	margin: 0 5px 2px 0;
 	min-width: 50px;
 	padding: 0 3px;
-
-	@media (max-width: $grid-float-breakpoint-max) {
-		height: 32px;
-		margin-right: 0;
-	}
 
 	a {
 		text-decoration: none;
@@ -56,53 +43,36 @@
 
 	.nameplate-content,
 	.nameplate-field {
-		vertical-align: middle;
-
-		@media (min-width: $grid-float-breakpoint) {
-			width: auto;
-		}
-	}
-
-	.nameplate-content {
-		height: auto;
 		position: relative;
-
-		@media (max-width: $grid-float-breakpoint-max) {
-			width: auto;
-		}
+		vertical-align: middle;
+		width: auto;
 	}
 
 	.nameplate-label-text {
 		display: block;
-		font-weight: 500;
-		max-width: 200px;
+		font-weight: $nameplate-label-text-font-weight;
+		max-width: $nameplate-label-text-max-width;
 		overflow: hidden;
 		position: relative;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-
-		@media (max-width: $grid-float-breakpoint-max) {
-			left: 5px;
-			max-width: none;
-			position: absolute;
-			right: 5px;
-			text-align: left;
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-			top: 50%;
-		}
 	}
 }
 
 .nameplate-label {
 	.icon-monospaced,
-	.icon-monospaced.lexicon-icon {
+	.icon-monospaced .glyphicon {
 		margin: 0;
 
 		@include monospace(20px);
 	}
 
-	.icon-monospaced.lexicon-icon {
+	.icon-monospaced.lexicon-icon,
+	.icon-monospaced .lexicon-icon {
+		margin: 0;
+
+		@include monospace(20px);
+
 		padding: 4px;
 	}
 
@@ -112,7 +82,8 @@
 }
 
 .nameplate-label-more {
-	.icon-monospaced.lexicon-icon {
+	.icon-monospaced.lexicon-icon,
+	.icon-monospaced .lexicon-icon {
 		padding: 6px 4px 0;
 	}
 
@@ -123,16 +94,26 @@
 
 // Nameplate Label Helpers
 
-.nameplate-label-circle {
-	border-radius: 100px;
+.nameplate-label-autofit-xs-max {
+	@include nameplate-label-autofit('max-width: $screen-xs-max');
 }
 
-.nameplate-label-rounded {
-	border-radius: $nameplate-label-rounded-border-radius;
+@if not ($nameplate-label-border-radius == $nameplate-label-circle-border-radius) {
+	.nameplate-label-circle {
+		border-radius: $nameplate-label-circle-border-radius;
+	}
 }
 
-.nameplate-label-square {
-	border-radius: 0;
+@if not ($nameplate-label-border-radius == $nameplate-label-rounded-border-radius) {
+	.nameplate-label-rounded {
+		border-radius: $nameplate-label-rounded-border-radius;
+	}
+}
+
+@if not ($nameplate-label-border-radius == $nameplate-label-square-border-radius) {
+	.nameplate-label-square {
+		border-radius: $nameplate-label-square-border-radius;
+	}
 }
 
 // Skins
@@ -143,6 +124,12 @@
 
 .nameplate-label-inverse {
 	@include color-nameplate-label($nameplate-label-inverse-bg, $nameplate-label-inverse-color);
+
+	@if (variable-exists(atlas-theme)) {
+		a {
+			@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+		}
+	}
 }
 
 .nameplate-label-primary {
@@ -155,6 +142,12 @@
 
 .nameplate-label-success {
 	@include color-nameplate-label($nameplate-label-success-bg, $nameplate-label-success-color);
+
+	@if (variable-exists(atlas-theme)) {
+		a {
+			@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+		}
+	}
 }
 
 .nameplate-label-info {
@@ -163,6 +156,12 @@
 
 .nameplate-label-warning {
 	@include color-nameplate-label($nameplate-label-warning-bg, $nameplate-label-warning-color);
+
+	@if (variable-exists(atlas-theme)) {
+		a {
+			@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+		}
+	}
 }
 
 .nameplate-label-danger {

@@ -206,7 +206,7 @@
 			overflow: hidden;
 			position: relative;
 			top: $navbar-border-bottom-width;
-			z-index: 4;
+			z-index: $zindex-basic-search-close;
 		}
 
 		&.focus:after {

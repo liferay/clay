@@ -14,7 +14,35 @@ section: Elements
 		</blockquote>
 	</div>
 
-	<div class="col-md-3 col-sm-6">
+	<div class="col-xs-12">
+		<div class="nameplate">
+			<div class="nameplate-field">
+				<div class="user-icon user-icon-xl">
+					<img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<h1 class="nameplate-heading">Joe Bloggs <small class="nameplate-subheading">Subheading</small></h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12">
+		<div class="nameplate">
+			<div class="nameplate-field">
+				<div class="user-icon user-icon-lg user-icon-warning">
+					JB
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<h2 class="nameplate-heading">Joe Bloggs <small class="nameplate-subheading">Subheading</small></h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12">
 		<div class="nameplate">
 			<div class="nameplate-field">
 				<div class="user-icon">
@@ -23,26 +51,12 @@ section: Elements
 			</div>
 
 			<div class="nameplate-content">
-				<h4>Joe Bloggs <small>Subheading</small></h4>
+				<h3 class="nameplate-heading">Joe Bloggs <small class="nameplate-subheading">Subheading</small></h3>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-md-3 col-sm-6">
-		<div class="nameplate">
-			<div class="nameplate-field">
-				<div class="user-icon user-icon-warning">
-					JB
-				</div>
-			</div>
-
-			<div class="nameplate-content">
-				<h4>Joe Bloggs <small>Subheading</small></h4>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-3 col-sm-6">
+	<div class="col-xs-12">
 		<div class="nameplate">
 			<div class="nameplate-field">
 				<div class="user-icon user-icon-default">
@@ -51,21 +65,35 @@ section: Elements
 			</div>
 
 			<div class="nameplate-content">
-				<h4>Space Program <small>Subheading</small></h4>
+				<h4 class="nameplate-heading">Space Program <small class="nameplate-subheading">Subheading</small></h4>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-md-3 col-sm-6">
+	<div class="col-xs-12">
 		<div class="nameplate">
 			<div class="nameplate-field">
-				<div class="user-icon user-icon-primary">
+				<div class="user-icon user-icon-primary user-icon-sm">
 					TT
 				</div>
 			</div>
 
 			<div class="nameplate-content">
-				<h4>Test Test <small>Subheading</small></h4>
+				<h5 class="nameplate-heading">Test Test <small class="nameplate-subheading">Subheading</small></h5>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12">
+		<div class="nameplate">
+			<div class="nameplate-field">
+				<div class="user-icon user-icon-danger user-icon-xs">
+					TT
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<h6 class="nameplate-heading">Test Test <small class="nameplate-subheading">Subheading</small></h6>
 			</div>
 		</div>
 	</div>
@@ -76,15 +104,15 @@ section: Elements
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse0">
-	<pre><code>```<div class="nameplate">
+	<pre><code class="html">```<div class="nameplate">
     <div class="nameplate-field">
-        <div class="user-icon user-icon-primary">
-            TT
+        <div class="user-icon user-icon-xl">
+            <img alt="thumbnail" class="img-responsive" src="{{rootPath}}/images/thumbnail_placeholder.gif">
         </div>
     </div>
 
     <div class="nameplate-content">
-        <h4>Test Test <small>Subheading</small></h4>
+        <h1 class="nameplate-heading">Joe Bloggs <small class="nameplate-subheading">Subheading</small></h1>
     </div>
 </div>```</code></pre>
 </div>
@@ -93,7 +121,7 @@ section: Elements
 </div>
 
 <div class="row row-spacing">
-	<div class="col-md-12">
+	<div class="col-xs-12">
 		<h3>Nameplate Labels</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
@@ -101,7 +129,7 @@ section: Elements
 		</blockquote>
 	</div>
 
-	<div class="col-md-12">
+	<div class="col-xs-12">
 		<div class="nameplate-label nameplate-label-default">
 			<div class="nameplate-field">
 				<div class="user-icon">
@@ -115,9 +143,11 @@ section: Elements
 
 			<div class="nameplate-field">
 				<a href="#1">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-					</svg>
+					<span class="">
+						<svg class="icon-monospaced lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</a>
 			</div>
 		</div>
@@ -135,9 +165,11 @@ section: Elements
 
 			<div class="nameplate-field">
 				<a href="#1">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-					</svg>
+					<span class="icon-monospaced">
+						<svg class="lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</a>
 			</div>
 		</div>
@@ -156,9 +188,11 @@ section: Elements
 			<div class="nameplate-field">
 				<div class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-						<svg class="icon-monospaced lexicon-icon">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-						</svg>
+						<span class="icon-monospaced">
+							<svg class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</span>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li><a href="#1">Download</a></li>
@@ -182,9 +216,11 @@ section: Elements
 			</div>
 			<div class="nameplate-field">
 				<a href="#1">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-					</svg>
+					<span class="icon-monospaced">
+						<svg class="lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</a>
 			</div>
 		</div>
@@ -202,9 +238,11 @@ section: Elements
 
 			<div class="nameplate-field">
 				<a href="#1">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-					</svg>
+					<span class="icon-monospaced">
+						<svg class="lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</a>
 			</div>
 		</div>
@@ -220,9 +258,11 @@ section: Elements
 
 			<div class="nameplate-field">
 				<a href="#1">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-					</svg>
+					<span class="icon-monospaced">
+						<svg class="lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
 				</a>
 			</div>
 		</div>
@@ -230,20 +270,308 @@ section: Elements
 		<div class="nameplate-label nameplate-label-danger nameplate-label-more">
 			<div class="nameplate-content">
 				<a class="nameplate-label-text" href="#1">
-					<svg class="icon-monospaced lexicon-icon">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-h">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-h" />
 					</svg>
 				</a>
 			</div>
 		</div>
 	</div>
+
+	<div class="col-xs-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2">
+	<pre><code>```<div class="nameplate-label nameplate-label-default">
+    <div class="nameplate-field">
+        <div class="user-icon">
+            <img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
+        </div>
+    </div>
+
+    <div class="nameplate-content">
+        <span class="nameplate-label-text">30 <a href="#1">Brilliant</a> Mobile Navigations</span>
+    </div>
+
+    <div class="nameplate-field">
+        <a href="#1">
+            <span class="">
+                <svg class="icon-monospaced lexicon-icon lexicon-icon-times">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+                </svg>
+            </span>
+        </a>
+    </div>
+</div>```</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-xs-12">
+		<h3>Nameplate Label Autofit Xs Max</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add class <code>nameplate-label-autofit-xs-max</code> to the container or to a single nameplate-label to make them fill the width of the container in screen sizes 767px and below.</p>
+		</blockquote>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use the Sass mixin <code>nameplate-label-autofit($media-feature)</code> to create custom nameplate-label-autofit breakpoints e.g. <code>.nameplate-label-autofit-sm { @include nameplate-label-autofit('min-width: $screen-sm'); }</code> for screen sizes 768px and up.</p>
+		</blockquote>
+	</div>
+
+	<div class="col-xs-12">
+		<div class="nameplate-label nameplate-label-default">
+			<div class="nameplate-field">
+				<div class="user-icon">
+					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<span class="nameplate-label-text">30 <a href="#1">Brilliant</a> Mobile Navigations</span>
+			</div>
+
+			<div class="nameplate-field">
+				<a href="#1">
+					<span class="">
+						<svg class="icon-monospaced lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="nameplate-label nameplate-label-inverse">
+			<div class="nameplate-field">
+				<div class="user-icon">
+					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<span class="nameplate-label-text">10 <a href="#1">Tricks</a></span>
+			</div>
+
+			<div class="nameplate-field">
+				<a href="#1">
+					<span class="icon-monospaced">
+						<svg class="lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="nameplate-label nameplate-label-autofit-xs-max nameplate-label-primary">
+			<div class="nameplate-field">
+				<div class="user-icon">
+					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<span class="nameplate-label-text">Cream <a href="#1">percolator</a>, foam flavour frappuccino grinder cortado.</span>
+			</div>
+
+			<div class="nameplate-field">
+				<div class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+						<span class="icon-monospaced">
+							<svg class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+							</svg>
+						</span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#1">Download</a></li>
+						<li><a href="#1">Edit</a></li>
+						<li><a href="#1">Move</a></li>
+						<li><a href="#1">Checkout</a></li>
+						<li><a href="#1">Permissions</a></li>
+						<li><a href="#1">Move to Recycle Bin</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="nameplate-label nameplate-label-autofit-xs-max nameplate-label-success">
+			<div class="nameplate-field">
+				<div class="user-icon"><img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_desk.jpg"></div>
+			</div>
+
+			<div class="nameplate-content">
+				<span class="nameplate-label-text">As, <a href="#1">breve</a> java instant cappuccino aftertaste con panna grinder ut robusta.</span>
+			</div>
+			<div class="nameplate-field">
+				<a href="#1">
+					<span class="icon-monospaced">
+						<svg class="lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="nameplate-label nameplate-label-autofit-xs-max nameplate-label-info">
+			<div class="nameplate-field">
+				<div class="user-icon">
+					<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+				</div>
+			</div>
+
+			<div class="nameplate-content">
+				<span class="nameplate-label-text">Cream <a href="#1">irish</a> strong kopi-luwak barista, plunger pot viennese cream extraction aftertaste beans lungo.</span>
+			</div>
+
+			<div class="nameplate-field">
+				<a href="#1">
+					<span class="icon-monospaced">
+						<svg class="lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="nameplate-label nameplate-label-warning">
+			<div class="nameplate-field">
+				<div class="user-icon user-icon-primary">AC</div>
+			</div>
+
+			<div class="nameplate-content">
+				<span class="nameplate-label-text">Caffeine, <a href="#1">rich</a> id.</span>
+			</div>
+
+			<div class="nameplate-field">
+				<a href="#1">
+					<span class="icon-monospaced">
+						<svg class="lexicon-icon lexicon-icon-times">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+						</svg>
+					</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="nameplate-label nameplate-label-danger nameplate-label-more">
+			<div class="nameplate-content">
+				<a class="nameplate-label-text" href="#1">
+					<svg class="lexicon-icon lexicon-icon-ellipsis-h">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-h" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12">
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2a"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse2a">
+	<pre><code>```<div class="nameplate-label nameplate-label-autofit-xs-max nameplate-label-success">
+    <div class="nameplate-field">
+        <div class="user-icon"><img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_desk.jpg"></div>
+    </div>
+
+    <div class="nameplate-content">
+        <span class="nameplate-label-text">As, <a href="#1">breve</a> java instant cappuccino aftertaste con panna grinder ut robusta.</span>
+    </div>
+    <div class="nameplate-field">
+        <a href="#1">
+            <span class="icon-monospaced">
+                <svg class="lexicon-icon lexicon-icon-times">
+                    <use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+                </svg>
+            </span>
+        </a>
+    </div>
+</div>```</code></pre>
+</div>
+
+	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p></p>
-		</blockquote>
+		<form class="form-inline">
+			<div class="form-group">
+				<input class="form-control" type="text" />
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-inverse">
+					<div class="nameplate-field">
+						<div class="user-icon user-icon-primary user-icon-sm">JB</div>
+					</div>
+					<div class="nameplate-content">
+						<span class="nameplate-label-text">Joe Bloggs</span>
+					</div>
+					<div class="nameplate-field">
+						<a href="#1">
+							<span class="icon-monospaced">
+								<svg class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-inverse">
+					<div class="nameplate-field">
+						<div class="user-icon user-icon-sm user-icon-warning">SP</div>
+					</div>
+					<div class="nameplate-content">
+						<span class="nameplate-label-text">Space Program</span>
+					</div>
+					<div class="nameplate-field">
+						<a href="#1">
+							<svg class="icon-monospaced lexicon-icon lexicon-icon-times">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-danger nameplate-label-more">
+					<div class="nameplate-content">
+						<a class="nameplate-label-text" href="#1">
+							<span class="icon-monospaced">
+								<svg class="lexicon-icon lexicon-icon-ellipsis-h">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-h" />
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-danger nameplate-label-more">
+					<div class="nameplate-content">
+						<a class="nameplate-label-text" href="#1">
+							<svg class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-h">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-h" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</form>
 
 		<form class="form-inline">
 			<div class="form-group">
@@ -253,16 +581,16 @@ section: Elements
 			<div class="form-group">
 				<div class="nameplate-label nameplate-label-inverse">
 					<div class="nameplate-field">
-						<div class="user-icon user-icon-primary">JB</div>
+						<div class="user-icon user-icon-primary user-icon-sm">JB</div>
 					</div>
 					<div class="nameplate-content">
 						<span class="nameplate-label-text">Joe Bloggs</span>
 					</div>
 					<div class="nameplate-field">
 						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-							</svg>
+							<span class="icon-monospaced">
+								<span class="icon-remove"></span>
+							</span>
 						</a>
 					</div>
 				</div>
@@ -271,16 +599,96 @@ section: Elements
 			<div class="form-group">
 				<div class="nameplate-label nameplate-label-inverse">
 					<div class="nameplate-field">
-						<div class="user-icon user-icon-warning">SP</div>
+						<div class="user-icon user-icon-sm user-icon-warning">SP</div>
 					</div>
 					<div class="nameplate-content">
 						<span class="nameplate-label-text">Space Program</span>
 					</div>
 					<div class="nameplate-field">
 						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-							</svg>
+							<span class="icon-monospaced icon-remove"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-danger nameplate-label-more">
+					<div class="nameplate-content">
+						<a class="nameplate-label-text" href="#1">
+							<span class="icon-monospaced">
+								<span class="icon-ellipsis-horizontal"></span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-danger nameplate-label-more">
+					<div class="nameplate-content">
+						<a class="nameplate-label-text" href="#1">
+							<span class="icon-ellipsis-horizontal icon-monospaced"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<form class="form-inline">
+			<div class="form-group">
+				<input class="form-control" type="text" />
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-inverse">
+					<div class="nameplate-field">
+						<div class="user-icon user-icon-primary user-icon-sm">JB</div>
+					</div>
+					<div class="nameplate-content">
+						<span class="nameplate-label-text">Joe Bloggs</span>
+					</div>
+					<div class="nameplate-field">
+						<a href="#1">
+							<span class="icon-monospaced">
+								<span class="glyphicon glyphicon-remove"></span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-inverse">
+					<div class="nameplate-field">
+						<div class="user-icon user-icon-sm user-icon-warning">SP</div>
+					</div>
+					<div class="nameplate-content">
+						<span class="nameplate-label-text">Space Program</span>
+					</div>
+					<div class="nameplate-field">
+						<a href="#1">
+							<span class="glyphicon glyphicon-remove icon-monospaced"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-danger nameplate-label-more">
+					<div class="nameplate-content">
+						<a class="nameplate-label-text" href="#1">
+							<span>...</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="nameplate-label nameplate-label-danger nameplate-label-more">
+					<div class="nameplate-content">
+						<a class="nameplate-label-text" href="#1">
+							<span>...</span>
 						</a>
 					</div>
 				</div>
@@ -291,15 +699,63 @@ section: Elements
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-	<pre><code class="html">```<div class="nameplate-label nameplate-label-default">
-    <div class="nameplate-field">
-        <div class="user-icon user-icon-primary">JB</div>
+	<pre><code class="html">```<form class="form-inline">
+    <div class="form-group">
+        <input class="form-control" type="text" />
     </div>
 
-    <div class="nameplate-content">Joe Bloggs <a class="icon-remove" href="#1"></a></div>
-</div>
+    <div class="form-group">
+        <div class="nameplate-label nameplate-label-inverse">
+            <div class="nameplate-field">
+                <div class="user-icon user-icon-primary user-icon-sm">JB</div>
+            </div>
+            <div class="nameplate-content">
+                <span class="nameplate-label-text">Joe Bloggs</span>
+            </div>
+            <div class="nameplate-field">
+                <a href="#1">
+                    <span class="icon-monospaced">
+                        <svg class="lexicon-icon">
+                            <use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
 
-<form><input type="text" /></form>```</code></pre>
+    <div class="form-group">
+        <div class="nameplate-label nameplate-label-inverse">
+            <div class="nameplate-field">
+                <div class="user-icon user-icon-sm user-icon-warning">SP</div>
+            </div>
+            <div class="nameplate-content">
+                <span class="nameplate-label-text">Space Program</span>
+            </div>
+            <div class="nameplate-field">
+                <a href="#1">
+                    <svg class="icon-monospaced lexicon-icon lexicon-icon-times">
+                        <use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="nameplate-label nameplate-label-danger nameplate-label-more">
+            <div class="nameplate-content">
+                <a class="nameplate-label-text" href="#1">
+                    <span class="icon-monospaced">
+                        <svg class="lexicon-icon lexicon-icon-ellipsis-h">
+                            <use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-h" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</form>```</code></pre>
 </div>
 
 	</div>
