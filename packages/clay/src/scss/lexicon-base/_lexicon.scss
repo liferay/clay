@@ -7,7 +7,6 @@
 @import "cards";
 @import "clamp";
 @import "crop-image";
-@import "dropdowns";
 @import "grid";
 @import "icons";
 @import "input-groups";
@@ -16,9 +15,6 @@
 @import "figures";
 @import "labels";
 @import "list-group";
-@import "loaders";
-@import "modals";
-@import "nameplates";
 @import "navs";
 @import "navbar";
 @import "nav-tabs";
@@ -30,15 +26,21 @@
 @import "progress-bars";
 @import "sidebar";
 @import "side-navigation";
-@import "simple-flexbox-grid";
 @import "stickers";
 @import "tables";
-@import "timelines";
-@import "toolbars";
 @import "tooltip";
 @import "toggle-card";
 @import "toggle-switch";
 @import "type";
 @import "user-icons";
 
+@import "dropdowns";
+@import "modals";
+@import "nameplates";
+@import "timelines";
+@import "toolbars";
+@import "nav-tabs-scroll";
 @import "list-group-deprecated";
+
+@import "loaders";
+@import "simple-flexbox-grid";
