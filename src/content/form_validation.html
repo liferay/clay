@@ -10,7 +10,7 @@ section: Components
 		<div class="form-group has-success">
 			<label class="control-label" for="inputSuccess1">
 				Input with success
-				<svg class="text-warning reference-mark lexicon-icon">
+				<svg class="lexicon-icon lexicon-icon-asterisk reference-mark text-warning">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
@@ -50,7 +50,7 @@ section: Components
 		<div class="has-success">
 			<div class="checkbox">
 				<label>
-					<input type="checkbox" id="checkboxSuccess1" value="option1">
+					<input id="checkboxSuccess1" type="checkbox" value="option1">
 					Checkbox with success
 				</label>
 			</div>
@@ -59,7 +59,7 @@ section: Components
 		<div class="has-warning">
 			<div class="checkbox">
 				<label>
-					<input type="checkbox" id="checkboxWarning1" value="option2">
+					<input id="checkboxWarning1" type="checkbox" value="option2">
 					Checkbox with warning
 				</label>
 			</div>
@@ -68,7 +68,7 @@ section: Components
 		<div class="has-error">
 			<div class="checkbox">
 				<label>
-					<input type="checkbox" id="checkboxError1" value="option3">
+					<input id="checkboxError1" type="checkbox" value="option3">
 					Checkbox with error
 				</label>
 			</div>
@@ -79,7 +79,7 @@ section: Components
 		<div class="has-success">
 			<div class="radio">
 				<label>
-					<input type="radio" id="radioSuccess1" value="option1">
+					<input id="radioSuccess1" type="radio" value="option1">
 					Radio with success
 				</label>
 			</div>
@@ -88,7 +88,7 @@ section: Components
 		<div class="has-warning">
 			<div class="radio">
 				<label>
-					<input type="radio" id="radioWarning1" value="option2">
+					<input id="radioWarning1" type="radio" value="option2">
 					Radio with warning
 				</label>
 			</div>
@@ -97,7 +97,7 @@ section: Components
 		<div class="has-error">
 			<div class="radio">
 				<label>
-					<input type="radio" id="radioError1" value="option3">
+					<input id="radioError1" type="radio" value="option3">
 					Radio with error
 				</label>
 			</div>
@@ -247,51 +247,51 @@ section: Components
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
-			<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
-			<span class="form-control-feedback" aria-hidden="true">
-				<svg class="lexicon-icon">
+			<input aria-describedby="inputSuccess2Status" class="form-control" id="inputSuccess2" type="text">
+			<span aria-hidden="true" class="form-control-feedback">
+				<svg class="lexicon-icon lexicon-icon-asterisk">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 				</svg>
 			</span>
-			<span id="inputSuccess2Status" class="sr-only">(success)</span>
+			<span class="sr-only" id="inputSuccess2Status">(success)</span>
 		</div>
 
-		<div class="form-group has-success has-feedback">
+		<div class="form-group has-feedback has-success">
 			<label class="control-label" for="inputSuccess2">
 				Success Label
-				<svg class="lexicon-icon reference-mark text-warning">
+				<svg class="lexicon-icon lexicon-icon-asterisk reference-mark text-warning">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 				</svg>
 			</label>
-			<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
-			<span class="form-control-feedback" aria-hidden="true">
-				<svg class="lexicon-icon">
+			<input aria-describedby="inputSuccess2Status" class="form-control" id="inputSuccess2" type="text">
+			<span aria-hidden="true" class="form-control-feedback">
+				<svg class="lexicon-icon lexicon-icon-check">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
 				</svg>
 			</span>
-			<span id="inputSuccess2Status" class="sr-only">(success)</span>
+			<span class="sr-only" id="inputSuccess2Status">(success)</span>
 		</div>
 
-		<div class="form-group has-warning has-feedback">
+		<div class="form-group has-feedback has-warning">
 			<label class="control-label" for="inputWarning2">Warning Label</label>
-			<input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
-			<span class="form-control-feedback" aria-hidden="true">
-				<svg class="lexicon-icon ">
+			<input aria-describedby="inputWarning2Status" class="form-control" id="inputWarning2" type="text">
+			<span aria-hidden="true" class="form-control-feedback">
+				<svg class="lexicon-icon lexicon-icon-exclamation-full">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
 				</svg>
 			</span>
-			<span id="inputWarning2Status" class="sr-only">(warning)</span>
+			<span class="sr-only" id="inputWarning2Status">(warning)</span>
 		</div>
 
 		<div class="form-group has-error has-feedback">
 			<label class="control-label" for="inputError2">Error Label</label>
-			<input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
-			<span class="form-control-feedback" aria-hidden="true">
-				<svg class="lexicon-icon">
+			<input aria-describedby="inputError2Status" class="form-control" id="inputError2" type="text">
+			<span aria-hidden="true" class="form-control-feedback">
+				<svg class="lexicon-icon lexicon-icon-times">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 				</svg>
 			</span>
-			<span id="inputError2Status" class="sr-only">(error)</span>
+			<span class="sr-only" id="inputError2Status">(error)</span>
 		</div>
 
 <div class="uxgl-toggle-code">
