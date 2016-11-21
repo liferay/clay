@@ -72,7 +72,7 @@ input.toggle-switch {
 				transition: $toggle-switch-transition;
 			}
 
-			&::before {
+			&:before {
 				transition: $toggle-switch-transition;
 			}
 		}
