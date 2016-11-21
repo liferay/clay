@@ -1,6 +1,17 @@
-$nameplate-label-rounded-border-radius: 3px !default;
+$nameplate-label-border-radius: 100px !default;
+$nameplate-label-height: $input-height-base !default;
 
+$nameplate-label-text-font-weight: 500 !default;
 $nameplate-label-text-line-height: 32px !default;
+$nameplate-label-text-max-width: 200px !default;
+
+$nameplate-label-circle-border-radius: 100px !default;
+$nameplate-label-rounded-border-radius: 3px !default;
+$nameplate-label-square-border-radius: 0 !default;
+
+// Skin
+
+$nameplate-subheading-color: $gray-light !default;
 
 $nameplate-label-link-dark-color: #23527C !default;
 $nameplate-label-link-dark-hover-color: darken($nameplate-label-link-dark-color, 15%) !default;
