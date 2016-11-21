@@ -79,8 +79,9 @@ label,
 }
 
 .form-control {
+	border-width: $input-border-width;
+
 	@if (variable-exists(atlas-theme)) {
-		border-width: $input-border-width;
 		box-shadow: $input-box-shadow;
 		font-size: $input-font-size;
 		height: $input-mobile-height-base;
