@@ -2,6 +2,12 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-ms-overflow-style: scrollbar;
 	-webkit-font-smoothing: antialiased;
+
+	@if (variable-exists(atlas-theme)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-base;
+		}
+	}
 }
 
 .monospace {
