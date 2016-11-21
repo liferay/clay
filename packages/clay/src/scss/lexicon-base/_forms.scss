@@ -70,11 +70,6 @@ label,
 		&::-ms-expand {
 			display: none;
 		}
-
-		&[multiple] {
-			background: none;
-			padding: $input-padding-vertical $input-padding-horizontal;
-		}
 	}
 }
 
