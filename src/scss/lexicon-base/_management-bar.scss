@@ -151,7 +151,7 @@
 	@include text-overflow();
 
 	@media (min-width: $grid-float-breakpoint) {
-		max-width: 150px;
+		max-width: 180px;
 	}
 }
 
