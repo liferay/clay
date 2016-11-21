@@ -1,10 +1,11 @@
+$user-icon-font-weight: 500 !default;
+
+$user-icon-font-size: 10px !default;
+$user-icon-size: 24px !default;
+
+$user-icon-desktop-font-size: $font-size-base !default; // 14px
+$user-icon-desktop-size: 32px !default;
+
 // Skin
 
-$user-icon-border-radius: 50% !default; // Atlas
-
-$user-icon-default-bg: #869CAD !default; // Atlas
-$user-icon-primary-bg: #65B3F0 !default; // Atlas
-$user-icon-success-bg: #75BD4A !default; // Atlas
-$user-icon-info-bg: #083781 !default; // Atlas
-$user-icon-warning-bg: #F5984C !default; // Atlas
-$user-icon-danger-bg: #CC6677 !default; // Atlas
+$user-icon-default-bg: $brand-default !default;
