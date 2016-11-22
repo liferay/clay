@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.11</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.12</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -664,101 +664,381 @@
 			</ul>
 		</li>
 	</ul>
+</div>
 
-	<table class="table table-list">
-		<thead>
-			<tr>
-				<th class="table-cell-field"></th>
-				<th class="hidden-sm hidden-xs table-cell-field">ID</th>
-				<th class="table-cell-content">
-					Title
-				</th>
-				<th class="hidden-sm hidden-xs table-cell-field">Status</th>
-				<th class="hidden-sm hidden-xs table-cell-field">Modified Date</th>
-				<th class="hidden-sm hidden-xs table-cell-field">Display Date</th>
-				<th class="table-cell-field">Author</th>
-				<th class="hidden-sm hidden-xs table-cell-field">Type</th>
-				<th class="table-cell-field"></th>
-			</tr>
-		</thead>
+<div class="lx-site-row-spacer">
+	<div class="table-responsive" style="background-color: #EEE;">
+		<table class="table table-autofit table-heading-nowrap table-list">
+			<thead>
+				<tr>
+					<th></th>
+					<th>ID</th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Title</span>
+					</th>
+					<th>Status</th>
+					<th>Modified Date</th>
+					<th>Display Date</th>
+					<th>Author</th>
+					<th>Type</th>
+					<th></th>
+				</tr>
+			</thead>
 
-		<tbody>
-			<tr>
-				<td class="table-cell-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
-						</label>
-					</div>
-				</td>
-				<td class="hidden-sm hidden-xs table-cell-field">21146</td>
-				<td class="table-cell-content">
-					Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.
-				</td>
-				<td class="hidden-sm hidden-xs table-cell-field">--</td>
-				<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
-				<td class="hidden-sm hidden-xs table-cell-field">--</td>
-				<td class="table-cell-field">Stanley Nelson</td>
-				<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
-				<td class="table-cell-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li><a href="#1">Download</a></li>
-							<li><a href="#1">Edit</a></li>
-							<li><a href="#1">Move</a></li>
-							<li><a href="#1">Checkout</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Move to Recycle Bin</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-			<tr class="active">
-				<td class="table-cell-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
-						</label>
-					</div>
-				</td>
-				<td class="hidden-sm hidden-xs table-cell-field">
-					21148
-				</td>
-				<td class="clamp-horizontal table-cell-content">
-					<div class="clamp-container">
-						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
-					</div>
-				</td>
-				<td class="hidden-sm hidden-xs table-cell-field">--</td>
-				<td class="hidden-sm hidden-xs table-cell-field">2 Hours Ago</td>
-				<td class="hidden-sm hidden-xs table-cell-field">--</td>
-				<td class="table-cell-field">Stanley Nelson</td>
-				<td class="hidden-sm hidden-xs table-cell-field">Folder</td>
-				<td class="table-cell-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li><a href="#1">Download</a></li>
-							<li><a href="#1">Edit</a></li>
-							<li><a href="#1">Move</a></li>
-							<li><a href="#1">Checkout</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Move to Recycle Bin</a></li>
-						</ul>
-					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+			<tbody>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Pumpkin spice robusta.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Caffeine froth.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side-bottom">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side-bottom">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+					<td>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+								<svg class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+								</svg>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-left-side-bottom">
+								<li><a href="#1">Download</a></li>
+								<li><a href="#1">Edit</a></li>
+								<li><a href="#1">Move</a></li>
+								<li><a href="#1">Checkout</a></li>
+								<li><a href="#1">Permissions</a></li>
+								<li><a href="#1">Move to Recycle Bin</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
 
 <div class="uxgl-assorted-section">
@@ -2026,6 +2306,169 @@
 		<span class="icon-cog"></span>
 	</label>
 	<input class="form-control" placeholder="Placeholder" type="text">
+</div>
+
+<div class="lx-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="input-groups"><a class="heading-anchor" href="#input-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Input Groups</h3>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon" id="inputGroupAddon01">@</span>
+				<input aria-describedby="inputGroupAddon01" class="form-control" placeholder="Username" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<input class="form-control" placeholder="Mailbox Name" type="text">
+				<span class="input-group-addon input-group-insert">@</span>
+				<input class="form-control" placeholder="Domain" type="text">
+				<span class="input-group-addon">.com</span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon" id="inputGroupAddon02">
+					https://web.liferay.com/community/forums/-/message_boards/category/72632049
+				</span>
+				<input aria-describedby="inputGroupAddon02" class="form-control" placeholder="Change Default URL" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon" id="inputGroupAddon03">
+					<span class="input-group-constrain">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+				</span>
+				<input aria-describedby="inputGroupAddon03" class="form-control" placeholder="Change Default URL" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group input-group-lg">
+				<span class="input-group-addon" id="inputGroupAddon04">
+					<span class="input-group-constrain">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+				</span>
+				<input aria-describedby="inputGroupAddon04" class="form-control" placeholder="Change Default URL" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group input-group-sm">
+				<span class="input-group-addon" id="inputGroupAddon05">
+					<span class="input-group-constrain">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+				</span>
+				<input aria-describedby="inputGroupAddon05" class="form-control" placeholder="Change Default URL" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Go!</button>
+				</span>
+				<input class="form-control" placeholder="Search for..." type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Search</button>
+				</span>
+				<input class="form-control" placeholder="Search for..." type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action <span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li class="divider" role="separator"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</div>
+				<input aria-label="Text input with dropdown button" class="form-control" type="text">
+				<div class="input-group-btn">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action <span class="caret"></span></button>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li class="divider" role="separator"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button class="btn btn-default" type="button">Action</button>
+
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#1">Action</a></li>
+						<li><a href="#1">Another action</a></li>
+						<li><a href="#1">Something else here</a></li>
+						<li class="divider" role="separator"></li>
+						<li><a href="#1">Separated link</a></li>
+					</ul>
+
+					<button aria-label="Ban" class="btn btn-default" type="button"><span class="icon-ban-circle"></span></button>
+
+					<button aria-label="Help" class="btn btn-default" type="button"><span class="glyphicon glyphicon-question-sign"></span></button>
+				</div>
+				<input aria-label="Text input with dropdown button" class="form-control" type="text">
+				<div class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<svg class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+						</svg>
+					</button>
+					<button class="btn btn-default" type="button">Action</button>
+					<button class="btn btn-default" type="button">
+						<svg class="lexicon-icon lexicon-icon-home">
+							<use xlink:href="../../images/icons/icons.svg#home">
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon">Topic</span>
+				<span class="input-group-btn input-group-insert">
+					<button class="btn btn-default" type="button">Go!</button>
+				</span>
+				<span class="input-group-addon input-group-insert">Do Something</span>
+				<input class="form-control" placeholder="Search for..." type="text">
+				<span class="input-group-addon input-group-insert">Topic</span>
+				<div class="input-group-btn input-group-insert">
+					<button class="btn btn-default" type="button">
+						<svg class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+						</svg>
+					</button>
+					<button class="btn btn-default" type="button">Action</button>
+					<button class="btn btn-default" type="button">
+						<svg class="lexicon-icon lexicon-icon-home">
+							<use xlink:href="../../images/icons/icons.svg#home">
+						</svg>
+					</button>
+				</div>
+				<span class="input-group-addon">Topic</span>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="lx-site-test-assorted-modal">

@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.11</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.12</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -233,6 +233,10 @@
 
 			<p><code>.list-group-item-content</code> will expand to fill the remaining space.</p>
 		</blockquote>
+
+		<div class="alert alert-warning">
+			In IE9 the class <code>truncate-text</code> is unsupported in <code>tabular-list-groups</code> and will break to a new line.
+		</div>
 
 		<ul class="tabular-list-group">
 			<li class="list-group-item">
@@ -671,9 +675,125 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<h3 id="list-group"><a class="heading-anchor" href="#list-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Use <code>.list-group</code> or <code>.linked-list-group</code> to quickly assemble a list of elements such as a checklist, vertical navigation, or a news feed.</p>
+
+			<p>To create collapsible list groups with multiple headings see <a href="../extending-list-groups">Extending List Groups</a>.</p>
+		</blockquote>
+
+		<ul class="list-group">
+			<li class="list-group-heading">List Heading</li>
+			<li class="list-group-item">List Item 1</li>
+			<li class="list-group-item">List Item 2</li>
+			<li class="list-group-item">List Item 3</li>
+			<li class="list-group-item">List Item 4</li>
+		</ul>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse4">
+	<pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="linked-list-groups"><a class="heading-anchor" href="#linked-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Linked List Groups</h3>
+
+		<div class="list-group">
+			<div class="list-group-heading">List Group Heading</div>
+			<a class="list-group-item" href="#">List Item 1</a>
+			<a class="list-group-item" href="#">List Item 2</a>
+			<a class="list-group-item" href="#">List Item 3</a>
+			<a class="list-group-item" href="#">List Item 4</a>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse5">
+	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
+    &lt;a class=&quot;list-group-item&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="contextual-list-group"><a class="heading-anchor" href="#contextual-list-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Contextual List Group</h3>
+
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-success">List Item 1 - Success</li>
+			<li class="list-group-item list-group-item-info">List Item 2 - Info</li>
+			<li class="list-group-item list-group-item-warning">List Item 3 - Warning</li>
+			<li class="list-group-item list-group-item-danger">List Item 4 - Danger</li>
+		</ul>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse6">
+	<pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item list-group-item-success&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h3 id="linked-contextual-list-groups"><a class="heading-anchor" href="#linked-contextual-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Linked Contextual List Groups</h3>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="list-group">
+					<a class="list-group-item list-group-item-success" href="#">List Item 1 - Success</a>
+					<a class="list-group-item list-group-item-info" href="#">List Item 2 - Info</a>
+					<a class="list-group-item list-group-item-warning" href="#">List Item 3 - Warning</a>
+					<a class="list-group-item list-group-item-danger" href="#">List Item 4 - Danger</a>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="list-group">
+					<a class="active list-group-item list-group-item-success" href="#">List Item 1 - Active Success</a>
+					<a class="active list-group-item list-group-item-info" href="#">List Item 2 - Active Info</a>
+					<a class="active list-group-item list-group-item-warning" href="#">List Item 3 - Active Warning</a>
+					<a class="active list-group-item list-group-item-danger" href="#">List Item 4 - Active Danger</a>
+				</div>
+			</div>
+		</div>
+
+<div class="uxgl-toggle-code">
+	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
+</div>
+<div class="collapse" id="codeCollapse7">
+	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
+    &lt;a class=&quot;active list-group-item list-group-item-success&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
 		<h3 id="tabular-list-group-item-states"><a class="heading-anchor" href="#tabular-list-group-item-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Tabular List Group Item States</h3>
 
-		<div class="alert alert-warning">Deprecated Tabular List Group Item States as of v1.0.9 and will be removed in v2.0.0. Setting <code>$enable-ie9-compatibility: true;</code> will prevent this CSS from being output.</div>
+		<div class="alert alert-warning">Deprecated Tabular List Group Item States as of v1.0.9 and will be removed in v2.0.0.</div>
 
 		<ul class="tabular-list-group">
 			<li class="list-group-item list-group-item-success">
@@ -967,7 +1087,7 @@
 	<div class="col-md-12">
 		<h3 id="list-group-card"><a class="heading-anchor" href="#list-group-card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group Card</h3>
 
-		<div class="alert alert-warning">Deprecated <code>list-group-card</code> as of v1.0.9 and will be removed in v2.0.0. Setting <code>$enable-ie9-compatibility: true;</code> will prevent this CSS from being output.</div>
+		<div class="alert alert-warning">Deprecated <code>list-group-card</code> as of v1.0.9 and will be removed in v2.0.0.</div>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Add class <code>list-group-card</code> to <code>list-group</code> then put a <a href="../extending-cards/#checkbox-inside-horizontal-card">checkbox-card</a> in a <code>list-group-item</code>.</p>
@@ -1143,7 +1263,7 @@
 	<div class="col-md-12">
 		<h3 id="hide-checkboxes-in-mobile"><a class="heading-anchor" href="#hide-checkboxes-in-mobile"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Hide Checkboxes in Mobile</h3>
 
-		<div class="alert alert-warning">Deprecated <code>list-group-card-checkbox-hidden-xs</code> as of v1.0.9 and will be removed in v2.0.0. Setting <code>$enable-ie9-compatibility: true;</code> will prevent this CSS from being output.</div>
+		<div class="alert alert-warning">Deprecated <code>list-group-card-checkbox-hidden-xs</code> as of v1.0.9 and will be removed in v2.0.0.</div>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Add class <code>list-group-card-checkbox-hidden-xs</code> to <code>list-group-card</code> to hide <code>input[type=&quot;checkbox&quot;]</code> in mobile, then wrap your icon or user-icon with <code>list-group-card-icon</code> to toggle the check icon.</p>
@@ -1314,122 +1434,6 @@
 				</div>
 			</li>
 		</ul>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="list-group"><a class="heading-anchor" href="#list-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.list-group</code> or <code>.linked-list-group</code> to quickly assemble a list of elements such as a checklist, vertical navigation, or a news feed.</p>
-
-			<p>To create collapsible list groups with multiple headings see <a href="../extending-list-groups">Extending List Groups</a>.</p>
-		</blockquote>
-
-		<ul class="list-group">
-			<li class="list-group-heading">List Heading</li>
-			<li class="list-group-item">List Item 1</li>
-			<li class="list-group-item">List Item 2</li>
-			<li class="list-group-item">List Item 3</li>
-			<li class="list-group-item">List Item 4</li>
-		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="linked-list-groups"><a class="heading-anchor" href="#linked-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Linked List Groups</h3>
-
-		<div class="list-group">
-			<div class="list-group-heading">List Group Heading</div>
-			<a class="list-group-item" href="#">List Item 1</a>
-			<a class="list-group-item" href="#">List Item 2</a>
-			<a class="list-group-item" href="#">List Item 3</a>
-			<a class="list-group-item" href="#">List Item 4</a>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse5">
-	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
-    &lt;a class=&quot;list-group-item&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="contextual-list-group"><a class="heading-anchor" href="#contextual-list-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Contextual List Group</h3>
-
-		<ul class="list-group">
-			<li class="list-group-item list-group-item-success">List Item 1 - Success</li>
-			<li class="list-group-item list-group-item-info">List Item 2 - Info</li>
-			<li class="list-group-item list-group-item-warning">List Item 3 - Warning</li>
-			<li class="list-group-item list-group-item-danger">List Item 4 - Danger</li>
-		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse6">
-	<pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item list-group-item-success&quot;&gt;...&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-		<h3 id="linked-contextual-list-groups"><a class="heading-anchor" href="#linked-contextual-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Linked Contextual List Groups</h3>
-
-		<div class="row">
-			<div class="col-sm-6">
-				<div class="list-group">
-					<a class="list-group-item list-group-item-success" href="#">List Item 1 - Success</a>
-					<a class="list-group-item list-group-item-info" href="#">List Item 2 - Info</a>
-					<a class="list-group-item list-group-item-warning" href="#">List Item 3 - Warning</a>
-					<a class="list-group-item list-group-item-danger" href="#">List Item 4 - Danger</a>
-				</div>
-			</div>
-
-			<div class="col-sm-6">
-				<div class="list-group">
-					<a class="active list-group-item list-group-item-success" href="#">List Item 1 - Active Success</a>
-					<a class="active list-group-item list-group-item-info" href="#">List Item 2 - Active Info</a>
-					<a class="active list-group-item list-group-item-warning" href="#">List Item 3 - Active Warning</a>
-					<a class="active list-group-item list-group-item-danger" href="#">List Item 4 - Active Danger</a>
-				</div>
-			</div>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse7">
-	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
-    &lt;a class=&quot;active list-group-item list-group-item-success&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
