@@ -1,3 +1,46 @@
+### v1.0.12 - November 21, 2016
+* Breaking: Nameplates move some hard coded css values to variables, remove selectors .nameplate-content h# and .nameplate-content small, move auto fitting nameplates to .nameplate-label-autofit-xs-max
+* Breaking: Remove unused slider component from Atlas
+* New: Added input-group-constrain and input-group-insert to Input Groups
+* Fix: Atlas form-validation select[multiple] should have no dropdown icon
+* Fix: Toggle Switch data-label-off and data-label-on text positioning in Firefox
+* Fix: Atlas mobile navbar search close button shouldn't overlap input border
+* Fix: Really long text inside fieldsets should break to new line
+* Fix: Atlas management-bar dropdown is misaligned a little bit
+* Fix: Chrome rendering issue with responsive-tables and td position relative
+* Update: Increase Management Bar Item Title max-width to 180px
+* Update: Truncate Text in Tabular List Group should break to new line in IE9
+* Update: Make Toolbars easier to use
+* Update: Move deprecated list-group components to _list-group-deprecated.scss
+* Update: Deprecate list-group-card variables
+* Update: Deprecate `$toolbar-group-padding-horizontal` and `$header-toolbar-padding-horizontal`
+* Update: Deprecate Lexicon mixins `color-toggle-switch-bar()`, `color-toggle-switch-button()`, `color-toggle-switch-bar-icon()`, and `color-toggle-switch-button-icon()`
+* Update: Move Atlas scaffolding styles to type
+* Update: Input Group Constrain should be sized properly with input-group-lg and input-group-sm
+* Update: Move Input Group focus, hover, and basic-search-close z-index to variables
+* Update: Sidebar Navbar to apply to other container-fluid classes e.g. container-fluid-1280
+* Update: Using the transparentize built in function so we can more easily see what the hex values are
+* Update: Dropdown border-color to use rgba
+* Update: Optimize Form Validation for better IE9 support
+* Update: Optimize Input Groups for better IE9 support
+* Update: Optimize Nameplates for better IE9 support
+* Update: Optimize Popovers for better IE9 support
+* Update: Optimize Toggle Switch for better IE9 support
+* Update: Optimize Toolbars for better IE9 support
+* Update: Optimize Tooltip for better IE9 support and deprecate `$tooltip-inner-max-width`
+* Update: Optimize User Icons for better IE9 support
+* Site: Add select[multiple] examples to Form Validation page
+* Site: Update nameplate demos to include more use cases and update code examples
+* Site: Move deprecated List Groups to bottom and add IE9 exception
+* Site: Update Toolbars documentation with better examples
+* Site: Update User Icon code examples
+* Site: Add input-group-constrain sizes to Test Assorted
+* Site: Input Groups page add docs for input-group-constrain and input-group-insert and Source Format
+* Site: Test Assorted page add case for input-group-constrain and input-group-insert
+* Site: Add Input Groups examples to Test Assorted
+* Site: Forms Add really long text example to fieldset demo
+* Site: Update table-list demo in Test Assorted to include more content
+
 ### v1.0.11 - November 3, 2016
 * New: Lexicon text-editor icon
 * Fix: Checkbox alignment in list-group-item-field
