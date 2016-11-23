@@ -35,8 +35,8 @@ section: Components (JS)
     <script>
         $('.sidenav-toggler').sideNavigation({
             breakpoint: 768, // The window width that defines the desktop size. Default: 768.
-            content: '.sidenav-content', // The class or ID of the content. Default: '.sidenav-content'.
             container: null, // The class or ID of the container. Default: null.
+            content: '.sidenav-content', // The class or ID of the content. Default: '.sidenav-content'.
             equalHeight: true, // The height of content and navigation should be equal.
             gutter: '15px', // The space between the sidenav-slider and the sidenav-content. Default: 15px.
             loadingIndicatorTPL: '<div class="loading-animation loading-animation-md"></div>', // Loading indicator template
@@ -184,7 +184,7 @@ section: Components (JS)
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
-					<ul class="sidebar-header-actions">
+					<ul class="sidebar-actions">
 						<li>
 							<a class="sidenav-close" href="#1" id="sidenavClose1">
 								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
@@ -193,19 +193,16 @@ section: Components (JS)
 							</a>
 						</li>
 					</ul>
-					<h4>
-						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon sticker sticker-default sticker-static">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
-							</svg>
-							<span>Simple Sidenav</span>
-						</a>
-					</h4>
+
+					<a class="sidebar-title" href="#1">
+						<svg class="icon-monospaced lexicon-icon sticker sticker-default sticker-static">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
+						</svg>
+						<span>Simple Sidenav</span>
+					</a>
 				</div>
 
-				<div class="sidebar-body">
-
-				</div>
+				<div class="sidebar-body"></div>
 
 				<div class="sidebar-footer">
 					<div class="nameplate">
@@ -216,7 +213,8 @@ section: Components (JS)
 						</div>
 
 						<div class="nameplate-content">
-							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+							Joe Bloggs<br>
+							Subheading
 						</div>
 
 						<div class="nameplate-field">
@@ -252,7 +250,7 @@ section: Components (JS)
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
-					<ul class="sidebar-header-actions">
+					<ul class="sidebar-actions">
 						<li>
 							<a class="sidenav-close" href="#1">
 								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
@@ -262,20 +260,15 @@ section: Components (JS)
 						</li>
 					</ul>
 
-					<h4>
-						<a href="#1">
-
-							<svg class="icon-monospaced lexicon-icon sticker sticker-danger sticker-static">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
-							</svg>
-							<span>Simple Sidenav 2</span>
-						</a>
-					</h4>
+					<a class="sidebar-title" href="#1">
+						<svg class="icon-monospaced lexicon-icon sticker sticker-danger sticker-static">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
+						</svg>
+						<span>Simple Sidenav 2</span>
+					</a>
 				</div>
 
-				<div class="sidebar-body">
-
-				</div>
+				<div class="sidebar-body"></div>
 
 				<div class="sidebar-footer">
 					<div class="nameplate">
@@ -286,7 +279,8 @@ section: Components (JS)
 						</div>
 
 						<div class="nameplate-content">
-							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+							Joe Bloggs<br>
+							Subheading
 						</div>
 
 						<div class="nameplate-field">
@@ -297,9 +291,7 @@ section: Components (JS)
 			</div>
 		</div>
 
-		<div>
-
-			<pre><code>```<head>
+		<pre><code>```<head>
     <script src="side-navigation.js"></script>
 </head>
 
@@ -313,7 +305,6 @@ section: Components (JS)
     </div>
 </div>```</code></pre>
 
-		</div>
 	</div>
 </div>
 
@@ -336,25 +327,25 @@ section: Components (JS)
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav3">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
-					<h4>
-						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon sticker sticker-static sticker-warning">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
-							</svg>
-							<span>Simple Sidenav 3</span>
-						</a>
+					<ul class="sidebar-actions">
+						<li>
+							<a class="sidenav-close" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+								</svg>
+							</a>
+						</li>
+					</ul>
 
-						<a class="pull-right sidenav-close" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-							</svg>
-						</a>
-					</h4>
+					<a class="sidebar-title" href="#1">
+						<svg class="icon-monospaced lexicon-icon sticker sticker-static sticker-warning">
+							<use xlink:href="{{rootPath}}/images/icons/icons.svg#home" />
+						</svg>
+						<span>Simple Sidenav 3</span>
+					</a>
 				</div>
 
-				<div class="sidebar-body">
-
-				</div>
+				<div class="sidebar-body"></div>
 
 				<div class="sidebar-footer">
 					<div class="nameplate">
@@ -365,7 +356,8 @@ section: Components (JS)
 						</div>
 
 						<div class="nameplate-content">
-							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+							Joe Bloggs<br>
+							Subheading
 						</div>
 
 						<div class="nameplate-field">
