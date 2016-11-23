@@ -3,29 +3,75 @@
 	overflow: auto;
 
 	-webkit-overflow-scrolling: touch;
+
+	h1,
+	.h1 {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	h2,
+	.h2 {
+		margin-bottom: 0;
+		margin-top: 3px;
+	}
+
+	h3,
+	.h3 {
+		margin-bottom: 0;
+		margin-top: 5px;
+	}
+
+	h4,
+	.h4 {
+		margin-bottom: 0;
+		margin-top: 6px;
+	}
+
+	h5,
+	.h5 {
+		margin-bottom: 0;
+		margin-top: 8px;
+	}
+
+	h6,
+	.h6 {
+		margin-bottom: 0;
+		margin-top: 9px;
+	}
+
+	.sidebar-title {
+		display: block;
+		font-weight: $headings-font-weight;
+		margin-bottom: 8px;
+	}
 }
 
 .sidebar-header {
 	margin: 0;
 	padding: $sidebar-padding;
-
-	a {
-		text-decoration: none;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		margin: 0;
-	}
+	word-wrap: break-word;
 }
 
+// Deprecated `.sidebar-header-actions` in favor of `.sidebar-actions` as of
+// v1.0.12 and will be removed in v2.0.0.
+
+.sidebar-actions,
 .sidebar-header-actions {
 	float: right;
 
 	@include list-unstyled;
 
+	margin-bottom: 0;
+	margin-right: -9px;
+
 	> li {
 		display: inline-block;
 	}
+}
+
+.sidebar-caption {
+	color: $text-muted;
 }
 
 .sidebar-body {
@@ -35,6 +81,14 @@
 	-webkit-overflow-scrolling: touch;
 
 	padding: $sidebar-padding;
+
+	dt {
+		padding-top: 0.1px;
+	}
+
+	dd {
+		margin-bottom: 20px;
+	}
 }
 
 .sidebar-footer {
@@ -45,8 +99,14 @@
 	}
 }
 
+.sidebar-block {
+	margin-bottom: 32px;
+	position: relative;
+}
+
 .sidebar-panel {
 	height: 155px;
+	margin-bottom: 20px;
 	overflow: hidden;
 	position: relative;
 }
@@ -138,9 +198,31 @@
 	border-left: 1px solid $sidebar-default-border;
 	color: $sidebar-default-color;
 
+	.sidebar-header {
+		.sidebar-title {
+			color: $sidebar-default-header-title-color;
+
+			a {
+				color: $sidebar-default-header-title-color;
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					color: $sidebar-default-header-title-hover-color;
+				}
+			}
+		}
+	}
+
+	// Deprecated `.sidebar-header-actions > li a` in favor of
+	// `.sidebar-actions > li a` as of v1.0.12 and will be removed in v2.0.0.
+
 	a.sidenav-close,
+	.sidebar-actions > li > a,
+	.sidebar-actions > li .dropdown-toggle,
 	.sidebar-header-actions > li a {
 		color: $sidebar-default-header-actions-link-color;
+		text-decoration: none;
 
 		&:focus,
 		&:hover {
@@ -157,9 +239,31 @@
 	background-color: $sidebar-inverse-bg;
 	color: $sidebar-inverse-color;
 
+	.sidebar-header {
+		.sidebar-title {
+			color: $sidebar-inverse-header-title-color;
+
+			a {
+				color: $sidebar-inverse-header-title-color;
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					color: $sidebar-inverse-header-title-hover-color;
+				}
+			}
+		}
+	}
+
+	// Deprecated `.sidebar-header-actions > li a` in favor of
+	// `.sidebar-actions > li a` as of v1.0.12 and will be removed in v2.0.0.
+
 	a.sidenav-close,
+	.sidebar-actions > li > a,
+	.sidebar-actions > li .dropdown-toggle,
 	.sidebar-header-actions > li a {
 		color: $sidebar-inverse-header-actions-link-color;
+		text-decoration: none;
 
 		&:focus,
 		&:hover {
