@@ -220,6 +220,7 @@
 
 	a.sidenav-close,
 	.sidebar-actions > li > a,
+	.sidebar-actions > li > span > a,
 	.sidebar-actions > li .dropdown-toggle,
 	.sidebar-header-actions > li a {
 		color: $sidebar-default-header-actions-link-color;
@@ -262,6 +263,7 @@
 
 	a.sidenav-close,
 	.sidebar-actions > li > a,
+	.sidebar-actions > li > span > a,
 	.sidebar-actions > li .dropdown-toggle,
 	.sidebar-header-actions > li a {
 		color: $sidebar-inverse-header-actions-link-color;
