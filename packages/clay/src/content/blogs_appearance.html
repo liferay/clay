@@ -5,26 +5,27 @@ section: Example Pages
 
 <div class="row" id="blogAppearance">
 	<div class="col-md-12">
-		<div class="sidenav-container closed uxgl-slideout-nav" id="blogSidenav">
+		<div class="closed sidenav-container uxgl-slideout-nav" id="blogSidenav">
 			<div class="sidenav-menu-slider">
-				<div class="sidenav-menu sidebar sidebar-inverse">
+				<div class="sidebar sidebar-inversesidenav-menu">
 					<div class="sidebar-header">
-						<h4>
-							<a href="#1">
-								<span class="sidebar-header-logo">
+						<ul class="sidebar-actions">
+							<li>
+								<a class="icon-monospaced sidenav-close" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
 									</svg>
-								</span>
-								<span>Squareup</span>
-							</a>
-
-							<a class="sidenav-close pull-right" href="#1">
+								</a>
+							</li>
+						</ul>
+						<a class="sidebar-title" href="#1">
+							<span class="sticker sticker-primary sticker-static">
 								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
 								</svg>
-							</a>
-						</h4>
+							</span>
+							<span>Liferay</span>
+						</a>
 					</div>
 
 					<div class="sidebar-body">
@@ -34,28 +35,28 @@ section: Example Pages
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>From</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
+											<input class="form-control" placeholder="City or Airport" type="text">
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>To</label>
-											<input class="form-control" type="text" placeholder="City or Airport">
+											<input class="form-control" placeholder="City or Airport" type="text">
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Departing</label>
-											<input class="form-control" type="text" placeholder="Departing Date">
+											<input class="form-control" placeholder="Departing Date" type="text">
 										</div>
 									</div>
 
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Returning</label>
-											<input class="form-control" type="text" placeholder="Returning Date">
+											<input class="form-control" placeholder="Returning Date" type="text">
 										</div>
 									</div>
 
@@ -98,7 +99,7 @@ section: Example Pages
 									</div>
 
 									<div class="col-md-12">
-										<button class="btn btn-success btn-md">Search Flights</button>
+										<button class="btn btn-md btn-success">Search Flights</button>
 									</div>
 								</div>
 							</form>
@@ -116,7 +117,8 @@ section: Example Pages
 							</div>
 
 							<div class="nameplate-content">
-								<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+								Joe Bloggs<br>
+								Subheading
 							</div>
 
 							<div class="nameplate-field">
@@ -158,13 +160,13 @@ section: Example Pages
 							</div>
 						</div>
 
-						<div class="toolbar-group-expand-text text-center">
+						<div class="text-center toolbar-group-expand-text">
 							<span>Blogs</span>
 						</div>
 					</div>
 				</header>
 
-				<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search">
+				<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
 					<div class="container-fluid-1280">
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="#1">Public Pages</a></li>
@@ -195,7 +197,7 @@ section: Example Pages
 
 				<div class="container-fluid-1280">
 					<div class="row">
-						<div class="col-md-4 col-md-push-8 blog-appearance-right-column">
+						<div class="blog-appearance-right-column col-md-4 col-md-push-8">
 							<h4>Menu</h4>
 
 							<ul class="nav nav-pills nav-stacked">
@@ -205,7 +207,7 @@ section: Example Pages
 								<li><a href="#1">Mobile Device Rules</a></li>
 							</ul>
 						</div>
-						<div class="col-md-8 col-md-pull-4 blog-appearance-left-column">
+						<div class="blog-appearance-left-column col-md-8 col-md-pull-4">
 							<h2>Appearance</h2>
 
 							<div class="blog-appearance-current-theme">
@@ -213,7 +215,7 @@ section: Example Pages
 									<div class="col-md-12">
 										<div class="blog-appearance-current-theme-heading clearfix">
 											<h4>Current Theme</h4>
-											<a href="#1" class="help-icon help-icon-default icon-sm icon-question pull-right" data-toggle="popover"></a>
+											<a class="help-icon help-icon-default icon-question icon-sm pull-right" data-toggle="popover" href="#1"></a>
 										</div>
 									</div>
 								</div>
@@ -244,63 +246,67 @@ section: Example Pages
 								</div>
 							</div>
 							<div class="list-group">
-								<a aria-expanded="true" class="list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse4">
+								<a aria-expanded="true" class="collapse-icon list-group-heading" data-toggle="collapse" href="#listGroupCollapse4">
 									Color Scheme
 								</a>
-								<div class="collapse in" id="listGroupCollapse4" aria-expanded="true">
+								<div aria-expanded="true" class="collapse in" id="listGroupCollapse4">
 									<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 								</div>
 
-								<a aria-expanded="true" class="list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse5">
+								<a aria-expanded="true" class="collapse-icon list-group-heading" data-toggle="collapse" href="#listGroupCollapse5">
 									List Group Heading
 								</a>
-								<div class="collapse in" id="listGroupCollapse5" aria-expanded="true">
+								<div aria-expanded="true" class="collapse in" id="listGroupCollapse5">
 									<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 								</div>
 
-								<a aria-expanded="true" class="list-group-heading collapse-icon" data-toggle="collapse" href="#listGroupCollapse6">
+								<a aria-expanded="true" class="collapse-icon list-group-heading" data-toggle="collapse" href="#listGroupCollapse6">
 									List Group Heading
 								</a>
-								<div class="collapse in" id="listGroupCollapse6" aria-expanded="true">
+								<div aria-expanded="true" class="collapse in" id="listGroupCollapse6">
 									<div class="list-group-item" style="padding: 24px 24px 30px">Breve, french press, shop arabica white blue mountain shop foam acerbic wings extraction white, at iced irish french press rich fair trade rich aromatic whipped. To go variety spoon americano aged froth, milk cup cortado, white redeye cinnamon turkish...</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
-
-
 			</div>
 		</div>
 	</div>
 </div>
 
-<a class="btn btn-primary btn-action btn-bottom-right icon-monospaced" data-toggle="tooltip" data-placement="left" title="Fullscreen" href="#1" id="fullscreenBtn"><span class="icon-desktop"></span></a>
+<a class="btn btn-action btn-bottom-right btn-primary icon-monospaced" data-placement="left" data-toggle="tooltip" href="#1" id="fullscreenBtn" title="Fullscreen"><span class="icon-desktop"></span></a>
 
 <script>
-	$('#blogSidenavToggler').sideNavigation({
-		gutter: 0,
-		typeMobile: 'fixed',
-		type: 'fixed-push',
-		width: 320
-	});
+	$('#blogSidenavToggler').sideNavigation(
+		{
+			gutter: 0,
+			type: 'fixed-push',
+			typeMobile: 'fixed',
+			width: 320
+		}
+	);
 
 	$('.collapse-basic-search').collapsibleSearch();
 
-	$('#fullscreenBtn').on('click', function(event) {
-		event.preventDefault();
+	$('#fullscreenBtn').on(
+		'click',
+		function(event) {
+			event.preventDefault();
 
-		$('#blogAppearance').toggleClass('uxgl-fullscreen-fixed');
-		$('body').toggleClass('fixed');
-	});
+			$('#blogAppearance').toggleClass('uxgl-fullscreen-fixed');
+			$('body').toggleClass('fixed');
+		}
+	);
 
 	$('[data-toggle="tooltip"]').tooltip();
 
-	$('[data-toggle="popover"]').popover({
-		container: 'body',
-		content: 'Some help text for your input.',
-		placement: 'left',
-		trigger: 'hover'
-	});
+	$('[data-toggle="popover"]').popover(
+		{
+			container: 'body',
+			content: 'Some help text for your input.',
+			placement: 'left',
+			trigger: 'hover'
+		}
+	);
 </script>
