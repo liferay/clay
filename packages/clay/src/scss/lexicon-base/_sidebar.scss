@@ -201,15 +201,16 @@
 	.sidebar-header {
 		.sidebar-title {
 			color: $sidebar-default-header-title-color;
+		}
 
-			a {
-				color: $sidebar-default-header-title-color;
-				text-decoration: none;
+		a.sidebar-title,
+		.sidebar-title a {
+			color: $sidebar-default-header-title-color;
+			text-decoration: none;
 
-				&:hover,
-				&:focus {
-					color: $sidebar-default-header-title-hover-color;
-				}
+			&:hover,
+			&:focus {
+				color: $sidebar-default-header-title-hover-color;
 			}
 		}
 	}
@@ -242,15 +243,16 @@
 	.sidebar-header {
 		.sidebar-title {
 			color: $sidebar-inverse-header-title-color;
+		}
 
-			a {
-				color: $sidebar-inverse-header-title-color;
-				text-decoration: none;
+		a.sidebar-title,
+		.sidebar-title a {
+			color: $sidebar-inverse-header-title-color;
+			text-decoration: none;
 
-				&:hover,
-				&:focus {
-					color: $sidebar-inverse-header-title-hover-color;
-				}
+			&:hover,
+			&:focus {
+				color: $sidebar-inverse-header-title-hover-color;
 			}
 		}
 	}
