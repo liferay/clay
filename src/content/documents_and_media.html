@@ -9,7 +9,7 @@ section: Example Pages
 			<div class="sidenav-menu-slider">
 				<div class="sidebar sidebar-inverse sidenav-menu">
 					<div class="sidebar-header">
-						<ul class="sidebar-header-actions">
+						<ul class="sidebar-actions">
 							<li>
 								<a class="sidenav-close" href="#1">
 									<svg class="icon-monospaced lexicon-icon lexicon-icon-times">
@@ -19,16 +19,14 @@ section: Example Pages
 							</li>
 						</ul>
 
-						<h4>
-							<a href="#1">
-								<div class="sticker sticker-static sticker-success">
-									<svg class="lexicon-icon lexicon-icon-staging">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
-									</svg>
-								</div>
-								<span>Squareup</span>
-							</a>
-						</h4>
+						<a class="sidebar-title" href="#1">
+							<div class="sticker sticker-static sticker-success">
+								<svg class="lexicon-icon lexicon-icon-staging">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
+								</svg>
+							</div>
+							<span>Liferay</span>
+						</a>
 					</div>
 
 					<div class="sidebar-body">
@@ -118,7 +116,8 @@ section: Example Pages
 							</div>
 
 							<div class="nameplate-content">
-								<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+								Joe Bloggs<br>
+								Subheading
 							</div>
 
 							<div class="nameplate-field">
@@ -226,7 +225,7 @@ section: Example Pages
 						<div class="sidenav-menu-slider">
 							<div class="sidebar sidebar-default sidenav-menu">
 								<div class="sidebar-header">
-									<ul class="sidebar-header-actions">
+									<ul class="sidebar-actions">
 										<li>
 											<a href="#1">
 												<svg class="icon-monospaced lexicon-icon lexicon-icon-star-o">
@@ -235,7 +234,7 @@ section: Example Pages
 											</a>
 										</li>
 										<li>
-											<a class="" href="#1">
+											<a href="#1">
 												<svg class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 													<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 												</svg>
@@ -250,11 +249,9 @@ section: Example Pages
 										</li>
 									</ul>
 
-									<h4>Image1.jpg</h4>
-
-									<h5 class="text-default">
-										<span>Approved<span>
-									</h5>
+									<h4 class="sidebar-title">Image1.jpg</h4>
+									<h5>Approved</h5>
+									<h6 class="sidebar-caption">Users are allowed to request membership. The request is accepted automatically.</h6>
 								</div>
 
 								<nav class="navbar navbar-default navbar-no-collapse">
@@ -269,12 +266,16 @@ section: Example Pages
 								</nav>
 
 								<div class="sidebar-body">
-									<div class="sidebar-panel">
+									<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
 										<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_hot_air_ballon.jpg">
-										<div class="sticker sticker-bottom sticker-danger">PDF</div>
+										<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 									</div>
 
-									<dl>
+									<div style="margin-bottom:20px;margin-top: 20px;">
+										<a class="btn btn-default btn-sm" href="#1">Download</a>
+									</div>
+
+									<dl class="sidebar-block">
 										<dt class="h5">Size</dt>
 										<dd>136 KB</dd>
 										<dt class="h5">Dimensions</dt>
@@ -283,38 +284,39 @@ section: Example Pages
 										<dd>By Helen Smith on Feb 15 2015, 10:15am</dd>
 										<dt class="h5">Last Modification</dt>
 										<dd>By Helen Smith on Feb 15 2015, 10:15am</dd>
-										<dt class="h5">Tags</dt>
-										<dd>
-											<p>
-												<span class="badge badge-default">
-													History
-													<a class="" href="#1">
-														<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-															<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-														</svg>
-													</a>
-												</span>
-												<span class="badge badge-default">
-													Flat
-													<a class="" href="#1">
-														<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-															<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-														</svg>
-													</a>
-												</span>
-												<span class="badge badge-default">
-													Default
-													<a class="" href="#1">
-														<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-															<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-														</svg>
-													</a>
-												</span>
-											</p>
-
-											<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
-										</dd>
 									</dl>
+
+									<div class="sidebar-block">
+										<span>Tags: </span>
+										<span class="badge badge-default badge-sm">
+											History
+											<a href="#1">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+												</svg>
+											</a>
+										</span>
+										<span class="badge badge-default badge-sm">
+											Flat
+											<a href="#1">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+												</svg>
+											</a>
+										</span>
+										<span class="badge badge-default badge-sm">
+											Default
+											<a href="#1">
+												<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+													<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+												</svg>
+											</a>
+										</span>
+
+										<div style="margin-bottom: 20px;margin-top:20px;">
+											<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
