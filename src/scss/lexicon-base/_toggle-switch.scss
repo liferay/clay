@@ -70,6 +70,7 @@ input.toggle-switch {
 				content: attr(data-label-off);
 				margin-left: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding) + 6px;
 				transition: $toggle-switch-transition;
+				white-space: nowrap;
 			}
 
 			&:before {
