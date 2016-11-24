@@ -128,7 +128,6 @@ input.toggle-switch {
 
 		.toggle-switch-handle:after {
 			content: attr(data-label-on);
-			margin-left: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding) + 6px;
 		}
 
 		.toggle-switch-icon {
