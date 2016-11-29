@@ -108,6 +108,8 @@ th {
 	> tfoot > tr > td,
 	> tfoot > tr > th {
 		@if (variable-exists(atlas-theme)) {
+			// Chrome rendering issue with responsive-tables and td position relative
+
 			background-color: $table-list-body-row-bg;
 		}
 
@@ -148,6 +150,18 @@ th {
 	.clamp-container {
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	// Chrome rendering issue with responsive-tables and td position relative
+
+	.table-striped > tbody > tr:nth-of-type(odd) > td {
+		background-color: $table-bg-accent;
+	}
+
+	.table-hover > tbody > tr:hover > td {
+		background-color: $table-bg-hover;
 	}
 }
 
