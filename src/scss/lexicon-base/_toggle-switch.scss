@@ -26,7 +26,7 @@ input.toggle-switch {
 		float: left;
 		font-size: 1.2rem;
 		line-height: $toggle-switch-bar-height;
-		min-height: $toggle-switch-bar-height;
+		height: $toggle-switch-bar-height;
 		position: relative;
 		text-indent: 0;
 
@@ -207,7 +207,7 @@ input.toggle-switch {
 		input.toggle-switch {
 			&:empty ~ .toggle-switch-bar {
 				line-height: $toggle-switch-bar-desktop-height;
-				min-height: $toggle-switch-bar-desktop-height;
+				height: $toggle-switch-bar-desktop-height;
 				text-indent: 0;
 
 				&:after {
