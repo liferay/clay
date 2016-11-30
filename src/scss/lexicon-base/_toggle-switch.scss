@@ -25,8 +25,8 @@ input.toggle-switch {
 		display: block;
 		float: left;
 		font-size: 1.2rem;
+		height: $toggle-switch-bar-height;
 		line-height: $toggle-switch-bar-height;
-		min-height: $toggle-switch-bar-height;
 		position: relative;
 		text-indent: 0;
 
@@ -70,6 +70,7 @@ input.toggle-switch {
 				content: attr(data-label-off);
 				margin-left: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding) + 6px;
 				transition: $toggle-switch-transition;
+				white-space: nowrap;
 			}
 
 			&:before {
@@ -128,7 +129,6 @@ input.toggle-switch {
 
 		.toggle-switch-handle:after {
 			content: attr(data-label-on);
-			margin-left: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding) + 6px;
 		}
 
 		.toggle-switch-icon {
@@ -206,8 +206,8 @@ input.toggle-switch {
 
 		input.toggle-switch {
 			&:empty ~ .toggle-switch-bar {
+				height: $toggle-switch-bar-desktop-height;
 				line-height: $toggle-switch-bar-desktop-height;
-				min-height: $toggle-switch-bar-desktop-height;
 				text-indent: 0;
 
 				&:after {

@@ -70,8 +70,8 @@ button.list-group-heading {
 	width: 100%;
 }
 
-@if (variable-exists(atlas-theme)) {
-	.list-group-item {
+.list-group-item {
+	@if (variable-exists(atlas-theme)) {
 		border-left-width: 0;
 		border-right-width: 0;
 
@@ -80,43 +80,12 @@ button.list-group-heading {
 		&:focus {
 			z-index: 1;
 		}
-
-		.card-col-content,
-		.list-group-item-content {
-			a {
-				color: $list-group-link-color;
-
-				&:focus,
-				&:hover {
-					color: $list-group-link-hover-color;
-				}
-			}
-		}
 	}
 
-	.list-group-item.active {
-		.list-group-item-content,
-		.list-group-item-field {
-			border-bottom-color: $list-group-active-border;
-			box-shadow: inset 0 -1px 0 $list-group-active-border;
-		}
-	}
+	&.active {
+		@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color);
 
-	.no-borders .active {
-		.list-group-item-content,
-		.list-group-item-field {
-			box-shadow: inset 0 -2px 0 $list-group-active-border;
-		}
-	}
-}
-
-.list-group-item .checkbox input[type="checkbox"]:checked + .card,
-.list-group-item.active {
-	@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color);
-
-	.card-col-content,
-	.list-group-item-content {
-		a {
+		.list-group-item-content a {
 			color: $list-group-active-color;
 		}
 	}
@@ -221,39 +190,15 @@ button.list-group-heading {
 
 // Tabular List Group
 
-%tabular-list-group-item-cell {
-	border: $tabular-list-group-border-width solid $list-group-border;
-	border-left-width: 0;
-	border-right-width: 0;
-	border-top-width: 0;
+.list-group-item-field {
 	display: table-cell;
 	padding: $table-cell-padding;
 	position: relative;
-	vertical-align: middle;
+	text-align: center;
+	vertical-align: $tabular-list-group-vertical-alignment;
+	width: 1%;
 	word-break: break-all \9; // IE9
 	word-wrap: break-word;
-
-	&:first-child {
-		border-left-width: $tabular-list-group-border-width;
-		padding-left: 15px;
-	}
-
-	&:last-child {
-		border-right-width: $tabular-list-group-border-width;
-		padding-right: 15px;
-	}
-}
-
-.list-group-item-field {
-	@extend %tabular-list-group-item-cell;
-
-	text-align: center;
-
-	@if (variable-exists(atlas-theme)) {
-		vertical-align: top;
-	}
-
-	width: 1%;
 
 	> .checkbox,
 	> .radio {
@@ -263,14 +208,14 @@ button.list-group-heading {
 }
 
 .list-group-item-content {
-	@extend %tabular-list-group-item-cell;
-
+	display: table-cell;
 	max-width: 100px;
 	min-width: 100px;
-
-	@if (variable-exists(atlas-theme)) {
-		vertical-align: top;
-	}
+	padding: $table-cell-padding;
+	position: relative;
+	vertical-align: $tabular-list-group-vertical-alignment;
+	word-break: break-all \9; // IE9
+	word-wrap: break-word;
 
 	&.clamp-horizontal {
 		.clamp-container {
@@ -299,14 +244,11 @@ button.list-group-heading {
 }
 
 .tabular-list-group {
-	border-collapse: separate;
 	display: table;
 	margin-bottom: 20px;
 	padding: 0;
 
-	> li,
 	.list-group-item {
-		border-width: 0;
 		display: table-row;
 		height: $tabular-list-group-item-height;
 		padding: 0;
@@ -314,7 +256,44 @@ button.list-group-heading {
 		&:first-child {
 			.list-group-item-content,
 			.list-group-item-field {
-				border-top: $tabular-list-group-border-width solid $list-group-border;
+				border-top-width: $tabular-list-group-border-width;
+			}
+		}
+	}
+
+	.list-group-item-content,
+	.list-group-item-field {
+		border: $tabular-list-group-border-width solid $list-group-border;
+		border-left-width: 0;
+		border-right-width: 0;
+		border-top-width: 0;
+
+		&:first-child {
+			border-left-width: $tabular-list-group-border-width;
+			padding-left: 15px;
+		}
+
+		&:last-child {
+			border-right-width: $tabular-list-group-border-width;
+			padding-right: 15px;
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.list-group-item-content a {
+			color: $list-group-link-color;
+
+			&:hover,
+			&:focus {
+				color: $list-group-link-hover-color;
+			}
+		}
+
+		.list-group-item.active {
+			.list-group-item-content,
+			.list-group-item-field {
+				border-bottom-color: $list-group-active-border;
+				box-shadow: inset 0 -1px 0 $list-group-active-border;
 			}
 		}
 	}
@@ -331,12 +310,20 @@ button.list-group-heading {
 }
 
 .tabular-list-group.no-borders {
-	> li,
 	.list-group-item {
 		&:first-child {
 			.list-group-item-content,
 			.list-group-item-field {
 				border-top-width: 0;
+			}
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.list-group-item.active {
+			.list-group-item-content,
+			.list-group-item-field {
+				box-shadow: inset 0 -2px 0 $list-group-active-border;
 			}
 		}
 	}
@@ -393,7 +380,6 @@ button.list-group-heading {
 	.tabular-list-group {
 		display: block;
 
-		> li,
 		.list-group-item {
 			display: block;
 			height: auto;
@@ -404,5 +390,26 @@ button.list-group-heading {
 			display: block;
 			width: 100%;
 		}
+	}
+}
+
+// Tabular List Group Unstyled
+
+.tabular-list-group-unstyled {
+	list-style: none;
+	padding-left: 0;
+
+	.list-group-item {
+		background-color: transparent;
+		border-width: 0;
+		display: table;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+
+	.list-group-item-content,
+	.list-group-item-field {
+		padding: 0;
+		vertical-align: top;
 	}
 }
