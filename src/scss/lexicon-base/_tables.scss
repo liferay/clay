@@ -61,6 +61,7 @@ th {
 }
 
 .table-cell-content {
+	display: table-cell;
 	max-width: 100px;
 	min-width: 100px;
 	position: relative;
@@ -70,6 +71,7 @@ th {
 }
 
 .table-cell-field {
+	display: table-cell;
 	width: 1%;
 }
 
