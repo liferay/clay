@@ -135,6 +135,14 @@
 
 // Deprecated list-group-card as of v1.0.9 and will be removed in 2.0.0.
 
+.list-group-item .checkbox input[type="checkbox"]:checked + .card {
+	@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color);
+
+	.card-col-content a {
+		color: $list-group-active-color;
+	}
+}
+
 .list-group-card {
 	h1, h2, h3, h4, h5, h6 {
 		margin-bottom: 5px;
@@ -156,6 +164,17 @@
 	.card-col-content,
 	.card-col-field {
 		vertical-align: top;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.card-col-content a {
+			color: $list-group-link-color;
+
+			&:focus,
+			&:hover {
+				color: $list-group-link-hover-color;
+			}
+		}
 	}
 
 	.checkbox input[type="checkbox"] {
