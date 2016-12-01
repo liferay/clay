@@ -1,3 +1,16 @@
+### v1.0.13 - December 01, 2016
+* New: Tabular-list-group-unstyled
+* New: Added `.sidebar-actions`, `.sidebar-title`, `.sidebar-caption`, `.sidebar-block` classes to Sidebar
+* Fix: #290 table-striped and table-hover should work with table-list
+* Update: Change toggle-switch-bar min-height to height
+* Update: #289 Add nowrap in toggle label
+* Update: Toggle Switch remove uneeded margin-left on :checked .toggle-switch-handle:after
+* Update: Move deprecated list-group styles to list-group-deprecated
+* Update: Add styles for case `.sidebar-actions > li > span > a`
+* Update: Add styles for  a.sidebar-title case
+* Site: Update list-group docs with tabular-list-group-unstyled and add tabular-list-group-unstyled to sidebar
+* Site: Update pages with Sidebar demos
+
 ### v1.0.12 - November 21, 2016
 * Breaking: Nameplates move some hard coded css values to variables, remove selectors .nameplate-content h# and .nameplate-content small, move auto fitting nameplates to .nameplate-label-autofit-xs-max
 * Breaking: Remove unused slider component from Atlas
