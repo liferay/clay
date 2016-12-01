@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.12</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.13</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -252,8 +252,8 @@
     &lt;script&gt;
         $(&apos;.sidenav-toggler&apos;).sideNavigation({
             breakpoint: 768, // The window width that defines the desktop size. Default: 768.
-            content: &apos;.sidenav-content&apos;, // The class or ID of the content. Default: &apos;.sidenav-content&apos;.
             container: null, // The class or ID of the container. Default: null.
+            content: &apos;.sidenav-content&apos;, // The class or ID of the content. Default: &apos;.sidenav-content&apos;.
             equalHeight: true, // The height of content and navigation should be equal.
             gutter: &apos;15px&apos;, // The space between the sidenav-slider and the sidenav-content. Default: 15px.
             loadingIndicatorTPL: &apos;&lt;div class=&quot;loading-animation loading-animation-md&quot;&gt;&lt;/div&gt;&apos;, // Loading indicator template
@@ -401,7 +401,7 @@
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
-					<ul class="sidebar-header-actions">
+					<ul class="sidebar-actions">
 						<li>
 							<a class="sidenav-close" href="#1" id="sidenavClose1">
 								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
@@ -410,19 +410,16 @@
 							</a>
 						</li>
 					</ul>
-					<h4>
-						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon sticker sticker-default sticker-static">
-								<use xlink:href="../../images/icons/icons.svg#staging">
-							</svg>
-							<span>Simple Sidenav</span>
-						</a>
-					</h4>
+
+					<a class="sidebar-title" href="#1">
+						<svg class="icon-monospaced lexicon-icon sticker sticker-default sticker-static">
+							<use xlink:href="../../images/icons/icons.svg#staging">
+						</svg>
+						<span>Simple Sidenav</span>
+					</a>
 				</div>
 
-				<div class="sidebar-body">
-
-				</div>
+				<div class="sidebar-body"></div>
 
 				<div class="sidebar-footer">
 					<div class="nameplate">
@@ -433,7 +430,8 @@
 						</div>
 
 						<div class="nameplate-content">
-							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+							Joe Bloggs<br>
+							Subheading
 						</div>
 
 						<div class="nameplate-field">
@@ -469,7 +467,7 @@
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav2">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
-					<ul class="sidebar-header-actions">
+					<ul class="sidebar-actions">
 						<li>
 							<a class="sidenav-close" href="#1">
 								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
@@ -479,20 +477,15 @@
 						</li>
 					</ul>
 
-					<h4>
-						<a href="#1">
-
-							<svg class="icon-monospaced lexicon-icon sticker sticker-danger sticker-static">
-								<use xlink:href="../../images/icons/icons.svg#home">
-							</svg>
-							<span>Simple Sidenav 2</span>
-						</a>
-					</h4>
+					<a class="sidebar-title" href="#1">
+						<svg class="icon-monospaced lexicon-icon sticker sticker-danger sticker-static">
+							<use xlink:href="../../images/icons/icons.svg#home">
+						</svg>
+						<span>Simple Sidenav 2</span>
+					</a>
 				</div>
 
-				<div class="sidebar-body">
-
-				</div>
+				<div class="sidebar-body"></div>
 
 				<div class="sidebar-footer">
 					<div class="nameplate">
@@ -503,7 +496,8 @@
 						</div>
 
 						<div class="nameplate-content">
-							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+							Joe Bloggs<br>
+							Subheading
 						</div>
 
 						<div class="nameplate-field">
@@ -514,9 +508,7 @@
 			</div>
 		</div>
 
-		<div>
-
-			<pre><code>&lt;head&gt;
+		<pre><code>&lt;head&gt;
     &lt;script src=&quot;side-navigation.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 
@@ -530,7 +522,6 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-		</div>
 	</div>
 </div>
 
@@ -553,25 +544,25 @@
 		<div class="sidenav-fixed sidenav-menu-slider" id="simpleSidenav3">
 			<div class="sidebar sidebar-default sidenav-menu">
 				<div class="sidebar-header">
-					<h4>
-						<a href="#1">
-							<svg class="icon-monospaced lexicon-icon sticker sticker-static sticker-warning">
-								<use xlink:href="../../images/icons/icons.svg#home">
-							</svg>
-							<span>Simple Sidenav 3</span>
-						</a>
+					<ul class="sidebar-actions">
+						<li>
+							<a class="sidenav-close" href="#1">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#times">
+								</svg>
+							</a>
+						</li>
+					</ul>
 
-						<a class="pull-right sidenav-close" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#times">
-							</svg>
-						</a>
-					</h4>
+					<a class="sidebar-title" href="#1">
+						<svg class="icon-monospaced lexicon-icon sticker sticker-static sticker-warning">
+							<use xlink:href="../../images/icons/icons.svg#home">
+						</svg>
+						<span>Simple Sidenav 3</span>
+					</a>
 				</div>
 
-				<div class="sidebar-body">
-
-				</div>
+				<div class="sidebar-body"></div>
 
 				<div class="sidebar-footer">
 					<div class="nameplate">
@@ -582,7 +573,8 @@
 						</div>
 
 						<div class="nameplate-content">
-							<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+							Joe Bloggs<br>
+							Subheading
 						</div>
 
 						<div class="nameplate-field">

@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.12</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.13</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -393,17 +393,18 @@
 				<div class="sidenav-menu">
 					<div class="sidebar sidebar-inverse">
 						<div class="sidebar-header">
-							<h4>
-								<a href="#1">
-									<span>Squareup</span>
-								</a>
-
-								<a class="sidenav-close" href="#1">
-									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-										<use xlink:href="../../images/icons/icons.svg#times">
-									</svg>
-									<span class="sr-only">Close</span>
-								</a>
+							<ul class="sidebar-actions">
+								<li>
+									<a class="sidenav-close" href="#1">
+										<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+											<use xlink:href="../../images/icons/icons.svg#times">
+										</svg>
+										<span class="sr-only">Close</span>
+									</a>
+								</li>
+							</ul>
+							<h4 class="sidebar-title">
+								<a href="#1">Liferay</a>
 							</h4>
 						</div>
 
@@ -494,7 +495,8 @@
 								</div>
 
 								<div class="nameplate-content">
-									<h4 class="user-heading">Joe Bloggs<small class="user-subheading">Subheading</small></h4>
+									Joe Bloggs<br>
+									Subheading
 								</div>
 
 								<div class="nameplate-field">
@@ -733,10 +735,12 @@
 </div>
 
 <script>
-	$('.sidenav-toggler').sideNavigation({
-		gutter: 0,
-		width: 240
-	});
+	$('.sidenav-toggler').sideNavigation(
+		{
+			gutter: 0,
+			width: 240
+		}
+	);
 
 	$('.collapse-basic-search').collapsibleSearch();
 </script>

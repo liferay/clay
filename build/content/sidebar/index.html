@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.12</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v1.0.13</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -270,9 +270,9 @@
 	<div class="col-md-6">
 		<div class="sidebar sidebar-default">
 			<div class="sidebar-header">
-				<ul class="sidebar-header-actions">
+				<ul class="sidebar-actions">
 					<li>
-						<a class="" href="#1">
+						<a href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#star-o">
 							</svg>
@@ -296,7 +296,7 @@
 						</div>
 					</li>
 					<li>
-						<a class="" href="#1">
+						<a href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -304,14 +304,17 @@
 					</li>
 				</ul>
 
-				<h4>Image1.jpg</h4>
+				<h4 class="sidebar-title"><a href="#1">Image1.jpg</a></h4>
 
 				<h5>Approved</h5>
+
+				<h6 class="sidebar-caption">Users are allowed to <a href="#1">request</a> membership. The request is accepted automatically.</h6>
 			</div>
-			<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search">
+
+			<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Details <span class="caret"></span></a>
+						<a aria-expanded="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="#">Details</a></li>
 							<li><a href="#">Versions</a></li>
@@ -322,11 +325,61 @@
 			</nav>
 
 			<div class="sidebar-body">
-				<div class="sidebar-panel">
-					<div class="icon-monospaced">PDF</div>
+				<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
+					<img alt="thumbnail" class="img-responsive" src="../../images/DeathtoStock_Desk4.jpg">
+					<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 				</div>
 
-				<dl>
+				<ul class="sidebar-block tabular-list-group-unstyled">
+					<li class="list-group-item">
+						<div class="list-group-item-content">
+							<div class="h4 sidebar-title">Version 1.1</div>
+							<div class="h6 sidebar-caption">By <a href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
+						</div>
+						<div class="list-group-item-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="list-group-item-content">
+							<h4 class="sidebar-title">Version 1.0</h4>
+							<h6 class="sidebar-caption">By <a href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
+						</div>
+						<div class="list-group-item-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<dl class="sidebar-block">
 					<dt class="h5">Size</dt>
 					<dd>136 KB</dd>
 					<dt class="h5">Dimensions</dt>
@@ -335,37 +388,39 @@
 					<dd>By <a href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
 					<dt class="h5">Last Modification</dt>
 					<dd>By <a href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
-					<dt class="h5">Tags</dt>
-					<dd>
-						<p>
-							<span class="badge badge-primary badge-sm">
-								History
-								<a class="" href="#1">
-									<svg class="lexicon-icon">
-										<use xlink:href="../../images/icons/icons.svg#times">
-									</svg>
-								</a>
-							</span>
-							<span class="badge badge-primary badge-sm">
-								Flat
-								<a class="" href="#1">
-									<svg class="lexicon-icon">
-										<use xlink:href="../../images/icons/icons.svg#times">
-									</svg>
-								</a>
-							</span>
-							<span class="badge badge-primary badge-sm">
-								Default
-								<a class="" href="#1">
-									<svg class="lexicon-icon">
-										<use xlink:href="../../images/icons/icons.svg#times">
-									</svg>
-								</a>
-							</span>
-						</p>
-						<a class="btn btn-default btn-sm" href="#" style="margin-top: 20px;">Add new tag</a>
-					</dd>
 				</dl>
+
+				<div class="sidebar-block">
+					<span>Tags: </span>
+					<span class="badge badge-default badge-sm">
+						History
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+					<span class="badge badge-default badge-sm">
+						Flat
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+					<span class="badge badge-default badge-sm">
+						Default
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+
+					<div style="margin-bottom: 20px;margin-top:20px;">
+						<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -382,33 +437,31 @@
 	<div class="col-md-6">
 		<div class="sidebar sidebar-inverse">
 			<div class="sidebar-header">
-				<ul class="sidebar-header-actions">
+				<ul class="sidebar-actions">
 					<li>
-						<a class="" href="#1">
+						<a href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#star-o">
 							</svg>
 						</a>
 					</li>
-					<li>
-						<div class="dropdown">
-							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-								</svg>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
+					<li class="dropdown">
+						<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon">
+								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+							</svg>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#1">Download</a></li>
+							<li><a href="#1">Edit</a></li>
+							<li><a href="#1">Move</a></li>
+							<li><a href="#1">Checkout</a></li>
+							<li><a href="#1">Permissions</a></li>
+							<li><a href="#1">Move to Recycle Bin</a></li>
+						</ul>
 					</li>
 					<li>
-						<a class="" href="#1">
+						<a href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#times">
 							</svg>
@@ -416,14 +469,16 @@
 					</li>
 				</ul>
 
-				<h4>Image1.jpg</h4>
+				<h4 class="sidebar-title"><a href="#1">Image1.jpg</a></h4>
 
 				<h5>Approved</h5>
+
+				<h6 class="sidebar-caption">Users are allowed to <a href="#1">request</a> membership. The request is accepted automatically.</h6>
 			</div>
-			<nav class="navbar navbar-default navbar-no-collapse collapse-basic-search">
+			<nav class="collapse-basic-search navbar navbar-inverse navbar-no-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Details <span class="caret"></span></a>
+						<a aria-expanded="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="#">Details</a></li>
 							<li><a href="#">Versions</a></li>
@@ -434,11 +489,61 @@
 			</nav>
 
 			<div class="sidebar-body">
-				<div class="sidebar-panel">
-					<div class="icon-monospaced">PDF</div>
+				<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
+					<img alt="thumbnail" class="img-responsive" src="../../images/DeathtoStock_Spring10.jpg">
+					<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 				</div>
 
-				<dl>
+				<ul class="sidebar-block tabular-list-group-unstyled">
+					<li class="list-group-item">
+						<div class="list-group-item-content">
+							<div class="h4 sidebar-title">Version 1.1</div>
+							<div class="h6 sidebar-caption">By <a href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
+						</div>
+						<div class="list-group-item-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="list-group-item-content">
+							<h4 class="sidebar-title">Version 1.0</h4>
+							<h6 class="sidebar-caption">By <a href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
+						</div>
+						<div class="list-group-item-field">
+							<div class="dropdown">
+								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#1">Download</a></li>
+									<li><a href="#1">Edit</a></li>
+									<li><a href="#1">Move</a></li>
+									<li><a href="#1">Checkout</a></li>
+									<li><a href="#1">Permissions</a></li>
+									<li><a href="#1">Move to Recycle Bin</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<dl class="sidebar-block">
 					<dt class="h5">Size</dt>
 					<dd>136 KB</dd>
 					<dt class="h5">Dimensions</dt>
@@ -447,38 +552,39 @@
 					<dd>By <a href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
 					<dt class="h5">Last Modification</dt>
 					<dd>By <a href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
-					<dt class="h5">Tags</dt>
-					<dd>
-						<p>
-							<span class="badge badge-primary badge-sm">
-								History
-								<a class="" href="#1">
-									<svg class="lexicon-icon">
-										<use xlink:href="../../images/icons/icons.svg#times">
-									</svg>
-								</a>
-							</span>
-							<span class="badge badge-primary badge-sm">
-								Flat
-								<a class="" href="#1">
-									<svg class="lexicon-icon">
-										<use xlink:href="../../images/icons/icons.svg#times">
-									</svg>
-								</a>
-							</span>
-							<span class="badge badge-primary badge-sm">
-								Default
-								<a class="" href="#1">
-									<svg class="lexicon-icon">
-										<use xlink:href="../../images/icons/icons.svg#times">
-									</svg>
-								</a>
-							</span>
-						</p>
-
-						<a class="btn btn-default btn-sm" href="#" style="margin-top: 20px;">Add new tag</a>
-					</dd>
 				</dl>
+
+				<div class="sidebar-block">
+					<span>Tags: </span>
+					<span class="badge badge-default badge-sm">
+						History
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+					<span class="badge badge-default badge-sm">
+						Flat
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+					<span class="badge badge-default badge-sm">
+						Default
+						<a href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</a>
+					</span>
+
+					<div style="margin-bottom: 20px;margin-top:20px;">
+						<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
