@@ -48,6 +48,8 @@
 }
 
 .sidebar-header {
+	@include clearfix;
+
 	margin: 0;
 	padding: $sidebar-padding;
 	word-wrap: break-word;
