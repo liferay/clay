@@ -48,6 +48,8 @@
 }
 
 .sidebar-header {
+	@include clearfix;
+
 	margin: 0;
 	padding: $sidebar-padding;
 	word-wrap: break-word;
@@ -86,8 +88,9 @@
 		padding-top: 0.1px;
 	}
 
-	dd {
+	dd.sidebar-caption {
 		margin-bottom: 20px;
+		margin-top: 3px;
 	}
 }
 
@@ -102,6 +105,7 @@
 .sidebar-block {
 	margin-bottom: 32px;
 	position: relative;
+	word-wrap: break-word;
 }
 
 .sidebar-panel {
