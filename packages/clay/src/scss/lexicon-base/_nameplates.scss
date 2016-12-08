@@ -95,7 +95,7 @@
 // Nameplate Label Helpers
 
 .nameplate-label-autofit-xs-max {
-	@include nameplate-label-autofit('max-width: $screen-xs-max');
+	@include nameplate-label-autofit('max-width: #{$screen-xs-max}');
 }
 
 @if not ($nameplate-label-border-radius == $nameplate-label-circle-border-radius) {
