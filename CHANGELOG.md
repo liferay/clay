@@ -1,3 +1,14 @@
+### v1.0.14 - December 09, 2016
+* Fix: Nameplates interpolate $screen-xs-max variable inside mixin nameplate-label-autofit
+* Fix: Tabular-list-group and tabular-list-group-unstyled should fill its container width
+* Fix: Long text in badges and labels should break to new line and be constrained to its container
+* Update: Panels in card styles
+* Update: Sidebar adjust data-list spacing and break-word sidebar-block
+* Update: Add clearfix to sidebar-header
+* Site: Add Panel in Card example to Test Assorted page
+* Site: Add example of badge with long text in test assorted
+* Site: Update sidebar dl examples
+
 ### v1.0.13 - December 01, 2016
 * New: Tabular-list-group-unstyled
 * New: Added `.sidebar-actions`, `.sidebar-title`, `.sidebar-caption`, `.sidebar-block` classes to Sidebar
