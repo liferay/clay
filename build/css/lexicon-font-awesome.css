@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.13
+* Lexicon 1.0.14
 *
 * Copyright 2016, Liferay, Inc.
 * All rights reserved.
@@ -7826,10 +7826,15 @@ button.close {
 .badge {
   border-radius: 100px;
   font-size: 12px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  max-width: 100%;
   padding-bottom: 3px;
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .badge-lg {
@@ -8879,10 +8884,15 @@ label .reference-mark,
   display: inline-block;
   font-size: 12px;
   font-weight: bold;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  max-width: 100%;
   padding-bottom: 3px;
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .label a {
@@ -9083,6 +9093,7 @@ button.list-group-heading {
   display: table;
   margin-bottom: 20px;
   padding: 0;
+  width: 100%;
 }
 
 .tabular-list-group .list-group-item {
@@ -9180,6 +9191,7 @@ button.list-group-heading {
   display: table;
   margin-bottom: 20px;
   padding: 0;
+  width: 100%;
 }
 
 .tabular-list-group-unstyled .list-group-item-content,
@@ -10435,6 +10447,27 @@ button.list-group-heading {
   position: relative;
 }
 
+.card .panel,
+.card-horizontal .panel {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.card .panel-heading,
+.card .panel-footer,
+.card-horizontal .panel-heading,
+.card-horizontal .panel-footer {
+  border-radius: 0;
+}
+
+.card .panel:first-child,
+.card .panel-group:first-child,
+.card-horizontal .panel:first-child,
+.card-horizontal .panel-group:first-child {
+  margin-top: 20px;
+}
+
 .panel-blank {
   box-shadow: none;
   border-color: transparent;
@@ -10697,6 +10730,15 @@ button.list-group-heading {
   word-wrap: break-word;
 }
 
+.sidebar-header:before, .sidebar-header:after {
+  content: " ";
+  display: table;
+}
+
+.sidebar-header:after {
+  clear: both;
+}
+
 .sidebar-actions,
 .sidebar-header-actions {
   float: right;
@@ -10726,8 +10768,9 @@ button.list-group-heading {
   padding-top: 0.1px;
 }
 
-.sidebar-body dd {
+.sidebar-body dd.sidebar-caption {
   margin-bottom: 20px;
+  margin-top: 3px;
 }
 
 .sidebar-footer {
@@ -10741,6 +10784,7 @@ button.list-group-heading {
 .sidebar-block {
   margin-bottom: 32px;
   position: relative;
+  word-wrap: break-word;
 }
 
 .sidebar-panel {
