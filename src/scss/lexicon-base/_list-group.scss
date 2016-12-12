@@ -250,6 +250,7 @@ button.list-group-heading {
 	width: 100%;
 
 	.list-group-item {
+		background-color: transparent; // Chrome rendering issue with responsive-tables and td position relative
 		display: table-row;
 		height: $tabular-list-group-item-height;
 		padding: 0;
@@ -260,10 +261,20 @@ button.list-group-heading {
 				border-top-width: $tabular-list-group-border-width;
 			}
 		}
+
+		// Chrome rendering issue with responsive-tables and td position relative
+
+		&.active {
+			.list-group-item-content,
+			.list-group-item-field {
+				background-color: $list-group-active-bg;
+			}
+		}
 	}
 
 	.list-group-item-content,
 	.list-group-item-field {
+		background-color: $list-group-bg; // Chrome rendering issue with responsive-tables and td position relative
 		border: $tabular-list-group-border-width solid $list-group-border;
 		border-left-width: 0;
 		border-right-width: 0;
