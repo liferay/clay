@@ -49,6 +49,11 @@ $btn-default-color: #333 !default;
 $btn-default-bg: #FFF !default;
 $btn-default-border: #CCC !default;
 
+// Dropdowns
+
+$dropdown-border: $dropdown-border-color !default;
+$dropdown-fallback-border: #CCC !default;
+
 // Labels
 
 $label-color: $badge-color !default;
