@@ -115,4 +115,6 @@ $navbar-default-toggle-icon-bar-bg: #888 !default;
 $navbar-inverse-bg: #222 !default;
 $navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
 $navbar-inverse-color: lighten(#777, 15%) !default;
+$navbar-inverse-link-color: lighten(#777, 15%) !default;
+$navbar-inverse-link-hover-color: #FFF !default;
 $navbar-inverse-toggle-icon-bar-bg: #FFF !default;
