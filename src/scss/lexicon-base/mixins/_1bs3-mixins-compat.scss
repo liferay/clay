@@ -7,6 +7,21 @@
 	border-radius: $border-radius;
 }
 
+// BS3 Placeholder mixin
+
+@mixin placeholder($color: $input-color-placeholder) {
+	&::-moz-placeholder { // Firefox
+		color: $color;
+		opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+	}
+
+	&:-ms-input-placeholder { // Internet Explorer 10+
+		color: $color;
+	}
+
+	&::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
 // BS3 Text Overflow mixin
 
 @mixin text-overflow() {
