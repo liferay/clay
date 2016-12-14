@@ -10,7 +10,28 @@ $text-color: $body-color !default;
 
 // Grid
 
-$grid-float-breakpoint: map-get($grid-breakpoints, md) !default;
+$screen-xs:                  map-get($grid-breakpoints, sm) !default; // 576px
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+$screen-sm:                  map-get($grid-breakpoints, md) !default; // 768px
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+$screen-md:                  map-get($grid-breakpoints, lg) !default; // 992px
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+$screen-lg:                  map-get($grid-breakpoints, xl) !default; // 1200px
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+$grid-float-breakpoint: $screen-sm-min !default; // 768px
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default; // 767px
 
 // Breadcrumbs
 
