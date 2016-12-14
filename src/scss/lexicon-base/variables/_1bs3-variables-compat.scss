@@ -51,6 +51,8 @@ $breadcrumb-separator: $breadcrumb-divider !default;
 
 // Buttons
 
+$btn-border-radius-base: $btn-border-radius !default;
+$btn-border-radius-large: $btn-border-radius-lg !default;
 $btn-border-radius-small: $btn-border-radius-sm !default;
 
 $btn-padding-horizontal: $btn-padding-x !default;
@@ -94,8 +96,23 @@ $nav-pills-active-link-hover-color: $nav-pills-active-link-color !default;
 
 // Navbar
 
+$navbar-border-bottom-width: 0.0625rem !default; // 1px
+$navbar-border-left-width: 0.0625rem !default; // 1px
+$navbar-border-right-width: 0.0625rem !default; // 1px
+$navbar-border-top-width: 0.0625rem !default; // 1px
+
+$navbar-height: 3.125rem !default; // 50px
+
 $navbar-padding-horizontal: $navbar-padding-x !default;
 $navbar-padding-vertical: $navbar-padding-y !default;
 
 $navbar-default-bg: #F8F8F8 !default;
+$navbar-default-border: darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-color: #777 !default;
+$navbar-default-link-active-color: #555 !default;
+$navbar-default-toggle-icon-bar-bg: #888 !default;
+
+$navbar-inverse-bg: #222 !default;
+$navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-color: lighten(#777, 15%) !default;
+$navbar-inverse-toggle-icon-bar-bg: #FFF !default;
