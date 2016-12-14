@@ -1,11 +1,11 @@
 // Globals
 
-$font-size-base: 0.875rem !default; // 14px
-$font-size-large: 1.125rem !default; // 18px
-$font-size-small: 0.75rem !default; // 12px
+$font-size-lg: 1.125rem !default; //18px
+$font-size-sm: 0.75rem !default; // 12px
 
-$font-size-lg: 1.125rem !default;
-$font-size-sm: 0.75rem !default;
+$font-size-base: 0.875rem !default; // 14px
+$font-size-large: $font-size-lg !default; // 18px
+$font-size-small: $font-size-sm !default; // 12px
 
 $font-size-desktop-base: 1rem !default; // 16px
 $font-size-desktop-large: 1.25rem !default; // 20px
