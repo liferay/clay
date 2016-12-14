@@ -56,6 +56,20 @@ $btn-default-border: #CCC !default;
 $dropdown-border: $dropdown-border-color !default;
 $dropdown-fallback-border: #CCC !default;
 
+// Forms
+
+$input-height-base: $input-height !default;
+$input-height-large: $input-height-lg !default;
+$input-height-small: $input-height-sm !default;
+
+$input-border: $input-border-color !default;
+$input-border-focus: $input-border-color-focus !default;
+
+$input-border-bottom-width: 0.0625rem !default; // 1px
+$input-border-left-width: 0.0625rem !default; // 1px
+$input-border-right-width: 0.0625rem !default; // 1px
+$input-border-top-width: 0.0625rem !default; // 1px
+
 // Labels
 
 $label-color: $badge-color !default;
