@@ -895,7 +895,7 @@ h1, h2, h3, h4, h5, h6 {
 		width: 20px;
 	}
 
-	@media (min-width: $screen-sm-min) {
+	@media (min-width: $grid-float-breakpoint) {
 		.heading-anchor {
 			float: none;
 			margin-left: -20px;
