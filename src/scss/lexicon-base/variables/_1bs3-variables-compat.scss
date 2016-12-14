@@ -1,6 +1,27 @@
+$font-size-small: $font-size-sm !default;
+
 $line-height-computed: $line-height-base !default;
+$line-height-small: $line-height-sm !default;
+
+$padding-xs-vertical: 1px !default;
+$padding-xs-horizontal: 5px !default;
+
+// Grid
 
 $grid-float-breakpoint: 768px !default;
+
+// Buttons
+
+$btn-border-radius-small: $btn-border-radius-sm !default;
+
+$btn-padding-horizontal: $btn-padding-x !default;
+$btn-padding-vertical: $btn-padding-y !default;
+
+$btn-default-color: #333 !default;
+$btn-default-bg: #FFF !default;
+$btn-default-border: #CCC !default;
+
+// Navbar
 
 $navbar-default-bg: #F8F8F8 !default;
 $navbar-default-color: #777 !default;
