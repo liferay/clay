@@ -10,7 +10,7 @@ $text-color: $body-color !default;
 
 // Grid
 
-$grid-float-breakpoint: 768px !default;
+$grid-float-breakpoint: map-get($grid-breakpoints, md) !default;
 
 // Breadcrumbs
 
