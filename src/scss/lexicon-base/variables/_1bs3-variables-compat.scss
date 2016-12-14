@@ -3,6 +3,15 @@ $font-size-small: $font-size-sm !default;
 $line-height-computed: $line-height-base !default;
 $line-height-small: $line-height-sm !default;
 
+$padding-base-horizontal: $input-padding-x !default;
+$padding-base-vertical: $input-padding-y !default;
+
+$padding-large-horizontal: $input-padding-x-lg !default;
+$padding-large-vertical: $input-padding-y-lg !default;
+
+$padding-small-horizontal: $input-padding-x-sm !default;
+$padding-small-vertical: $input-padding-y-sm !default;
+
 $padding-xs-vertical: 1px !default;
 $padding-xs-horizontal: 5px !default;
 
@@ -10,25 +19,25 @@ $text-color: $body-color !default;
 
 // Grid
 
-$screen-xs:                  map-get($grid-breakpoints, sm) !default; // 576px
-$screen-xs-min:              $screen-xs !default;
-$screen-phone:               $screen-xs-min !default;
+$screen-xs: map-get($grid-breakpoints, sm) !default; // 576px
+$screen-xs-min: $screen-xs !default;
+$screen-phone: $screen-xs-min !default;
 
-$screen-sm:                  map-get($grid-breakpoints, md) !default; // 768px
-$screen-sm-min:              $screen-sm !default;
-$screen-tablet:              $screen-sm-min !default;
+$screen-sm: map-get($grid-breakpoints, md) !default; // 768px
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
 
-$screen-md:                  map-get($grid-breakpoints, lg) !default; // 992px
-$screen-md-min:              $screen-md !default;
-$screen-desktop:             $screen-md-min !default;
+$screen-md: map-get($grid-breakpoints, lg) !default; // 992px
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
 
-$screen-lg:                  map-get($grid-breakpoints, xl) !default; // 1200px
-$screen-lg-min:              $screen-lg !default;
-$screen-lg-desktop:          $screen-lg-min !default;
+$screen-lg: map-get($grid-breakpoints, xl) !default; // 1200px
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
 
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
 
 $grid-float-breakpoint: $screen-sm-min !default; // 768px
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default; // 767px
