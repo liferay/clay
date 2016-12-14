@@ -33,6 +33,8 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 $grid-float-breakpoint: $screen-sm-min !default; // 768px
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default; // 767px
 
+$grid-gutter-width: $grid-gutter-width-base !default; // 30px
+
 // Breadcrumbs
 
 $breadcrumb-color: $breadcrumb-divider-color !default;
