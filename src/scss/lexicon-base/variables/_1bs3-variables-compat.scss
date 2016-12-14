@@ -87,7 +87,15 @@ $label-color: $badge-color !default;
 
 $list-group-border: $list-group-border-color !default;
 
+// Navs
+
+$nav-pills-active-link-hover-bg: $nav-pills-active-link-bg !default;
+$nav-pills-active-link-hover-color: $nav-pills-active-link-color !default;
+
 // Navbar
+
+$navbar-padding-horizontal: $navbar-padding-x !default;
+$navbar-padding-vertical: $navbar-padding-y !default;
 
 $navbar-default-bg: #F8F8F8 !default;
 $navbar-default-color: #777 !default;

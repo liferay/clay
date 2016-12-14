@@ -17,9 +17,9 @@
 @import "figures";
 @import "labels";
 @import "list-group";
-// @import "navs";
+@import "navs";
 // @import "navbar";
-// @import "nav-tabs";
+@import "nav-tabs";
 // @import "management-bar"; // Management-bar styles should win over nav styles
 // @import "pager";
 // @import "pagination";
@@ -41,7 +41,7 @@
 // @import "nameplates";
 // @import "timelines";
 // @import "toolbars";
-// @import "nav-tabs-scroll";
+@import "nav-tabs-scroll";
 @import "list-group-deprecated";
 
 // @import "loaders";
