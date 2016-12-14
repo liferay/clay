@@ -83,7 +83,15 @@ $input-border-top-width: 0.0625rem !default; // 1px
 
 // Labels
 
+$label-default-bg: $gray-light !default;
+$label-primary-bg: $brand-primary !default;
+$label-success-bg: $brand-success !default;
+$label-info-bg: $brand-info !default;
+$label-warning-bg: $brand-warning !default;
+$label-danger-bg: $brand-danger !default;
+
 $label-color: $badge-color !default;
+$label-link-hover-color: #FFF !default;
 
 // List Groups
 
