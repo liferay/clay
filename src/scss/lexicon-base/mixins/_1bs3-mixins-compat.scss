@@ -6,3 +6,9 @@
 	line-height: $line-height;
 	border-radius: $border-radius;
 }
+
+// BS3 Text Overflow mixin
+
+@mixin text-overflow() {
+	@include text-truncate();
+}

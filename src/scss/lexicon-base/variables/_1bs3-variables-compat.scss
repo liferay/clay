@@ -12,6 +12,11 @@ $text-color: $body-color !default;
 
 $grid-float-breakpoint: 768px !default;
 
+// Breadcrumbs
+
+$breadcrumb-color: $breadcrumb-divider-color !default;
+$breadcrumb-separator: $breadcrumb-divider !default;
+
 // Buttons
 
 $btn-border-radius-small: $btn-border-radius-sm !default;
