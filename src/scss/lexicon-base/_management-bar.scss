@@ -163,7 +163,7 @@
 	float: right;
 	margin-right: $management-bar-padding-horizontal;
 
-	@include navbar-vertical-align(34px);
+	@include navbar-vertical-align($management-bar-toggle-height);
 
 	padding: 9px 10px;
 	position: relative;
