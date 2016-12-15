@@ -83,7 +83,7 @@
 	background-color: $brand-danger;
 }
 
-@if (variable-exists(badge-default-bg)) {
+@if (variable-exists(atlas-theme)) {
 	.badge-default {
 		background-color: $badge-default-bg;
 		color: $badge-default-color;
