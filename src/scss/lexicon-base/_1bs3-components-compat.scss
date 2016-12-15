@@ -15,7 +15,7 @@
 }
 
 // Image
-
+// Renamed .img-responsive to .img-fluid
 .img-responsive {
 	@include img-fluid;
 }
