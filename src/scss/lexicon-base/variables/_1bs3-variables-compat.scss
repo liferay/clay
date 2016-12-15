@@ -64,9 +64,9 @@ $btn-border-radius-small: $btn-border-radius-sm !default;
 $btn-padding-horizontal: $btn-padding-x !default;
 $btn-padding-vertical: $btn-padding-y !default;
 
-$btn-default-color: #333 !default;
-$btn-default-bg: #FFF !default;
-$btn-default-border: #CCC !default;
+$btn-default-color: $btn-secondary-color !default;
+$btn-default-bg: $btn-secondary-bg !default;
+$btn-default-border: $btn-secondary-border !default;
 
 // Dropdowns
 
