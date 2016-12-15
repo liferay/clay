@@ -1,7 +1,8 @@
 // Buttons
 
+// Renamed .btn-default to .btn-secondary
 .btn-default {
-	@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  @extend .btn-secondary;
 }
 
 .btn-xs {
