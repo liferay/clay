@@ -54,3 +54,12 @@
 @mixin text-overflow() {
 	@include text-truncate();
 }
+
+// BS3 User Select mixin
+
+@mixin user-select($select) {
+	-webkit-user-select: $select;
+	-moz-user-select: $select;
+	-ms-user-select: $select; // IE10+
+	user-select: $select;
+}
