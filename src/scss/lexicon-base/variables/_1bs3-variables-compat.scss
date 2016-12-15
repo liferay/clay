@@ -70,8 +70,10 @@ $btn-default-border: $btn-secondary-border !default;
 
 // Dropdowns
 
+$caret-width-base: $caret-width !default;
 $dropdown-border: $dropdown-border-color !default;
 $dropdown-fallback-border: #CCC !default;
+$dropdown-link-padding: 3px $dropdown-item-padding-x !default;
 
 // Forms
 
