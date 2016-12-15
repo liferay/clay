@@ -1,7 +1,7 @@
 $font-size-large: $font-size-lg !default;
 $font-size-small: $font-size-sm !default;
 
-$line-height-computed: $line-height-base !default;
+$line-height-computed: $font-size-base * $line-height-base !default;
 $line-height-large: $line-height-lg !default;
 $line-height-small: $line-height-sm !default;
 

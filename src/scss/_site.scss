@@ -825,7 +825,7 @@ $mainNavWidth: 220px;
 // Main Nav Skin
 
 #mainNav {
-	padding-top: $line-height-computed - nth($nav-link-padding, 1);
+	padding-top: 1em;
 	z-index: 1;
 
 	li {
