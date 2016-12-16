@@ -101,6 +101,41 @@ label {
   @extend .form-control-sm;
 }
 
+// Form Validation
+
+.help-block {
+  @extend .form-control-feedback;
+}
+
+.has-error {
+  @extend .has-danger;
+}
+
+.has-feedback {
+  position: relative;
+
+  label,
+  .form-control {
+    + .form-control-feedback {
+      position: absolute;
+      top: ($line-height-computed + 0.3125); // Height of the `label` and its margin
+      right: 0;
+      z-index: 2; // Ensure icon is above input groups
+      display: block;
+      width: $input-height-base;
+      height: $input-height-base;
+      line-height: $input-height-base;
+      text-align: center;
+      pointer-events: none;
+      margin-top: 0;
+    }
+
+    &.sr-only ~ .form-control-feedback {
+       top: 0;
+    }
+  }
+}
+
 // Image
 // Renamed .img-responsive to .img-fluid
 .img-responsive {
