@@ -1036,3 +1036,9 @@ a.label {
 .panel-danger {
   @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
 }
+
+// User Icons
+
+.user-icon img {
+  vertical-align: baseline;
+}
