@@ -208,6 +208,53 @@ a.label {
   @include label-variant($label-danger-bg);
 }
 
+// Nav Tabs
+
+.nav-tabs > li {
+  float: left;
+  // Make the list-items overlay the bottom border
+  margin-bottom: -$nav-tabs-border-width;
+
+  + .nav-item {
+    margin-left: $nav-item-margin;
+  }
+}
+
+.nav-tabs > li > a {
+  display: block;
+  padding: $nav-link-padding;
+  border: $nav-tabs-border-width solid transparent;
+  @include border-top-radius($nav-tabs-border-radius);
+
+  @include hover-focus {
+    border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+  }
+}
+
+.nav-tabs > li > a.disabled,
+.nav-tabs > li.disabled > a {
+  @include plain-hover-focus {
+    color: $nav-disabled-link-color;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+.nav-tabs > li > a.active,
+.nav-tabs > li.active > a {
+  @include plain-hover-focus {
+    color: $nav-tabs-active-link-hover-color;
+    background-color: $nav-tabs-active-link-hover-bg;
+    border-color: $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-border-color transparent;
+  }
+}
+
+.nav-tabs-default > li > a.active,
+.nav-tabs-default > li.disabled a {
+  @include plain-hover-focus {
+    border-left-color: $nav-tabs-border-color;
+  }
+}
 
 // Panels
 // Removed in Bootstrap 4
