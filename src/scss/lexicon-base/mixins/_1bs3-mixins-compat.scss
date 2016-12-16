@@ -20,6 +20,13 @@
   }
 }
 
+// BS3 Navbar Vertical Align mixin
+
+@mixin navbar-vertical-align($element-height) {
+  margin-top: (($navbar-height - $element-height) / 2);
+  margin-bottom: (($navbar-height - $element-height) / 2);
+}
+
 // BS3 Panel Variant mixin
 
 @mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
