@@ -79,6 +79,16 @@ label {
   border-color: $input-border;
 }
 
+@if (variable-exists(atlas-theme)) {
+  .input-group-lg > .form-control {
+    @extend .input-lg;
+  }
+
+  .input-group-sm > .form-control {
+    @extend .input-sm;
+  }
+}
+
 .form-horizontal > .form-group {
   @extend .row;
 }
