@@ -1037,6 +1037,47 @@ a.label {
   @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
 }
 
+// Tables
+
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr {
+  &.active > th,
+  &.active > td,
+  th.active,
+  td.active {
+   background-color: $table-bg-active; 
+  }
+
+  &.success > th,
+  &.success > td,
+  th.success,
+  td.success {
+   background-color: $state-success-bg; 
+  }
+
+  &.info > th,
+  &.info > td,
+  th.info,
+  td.info {
+   background-color: $state-info-bg; 
+  }
+
+  &.warning > th,
+  &.warning > td,
+  th.warning,
+  td.warning {
+   background-color: $state-warning-bg; 
+  }
+
+  &.danger > th,
+  &.danger > td,
+  th.danger,
+  td.danger {
+   background-color: $state-danger-bg; 
+  }
+}
+
 // User Icons
 
 .user-icon img {
