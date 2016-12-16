@@ -142,6 +142,16 @@ label {
 	@include img-fluid;
 }
 
+// Renamed .img-circle to .rounded-circle
+.img-circle {
+  @extend .rounded-circle;
+}
+
+// Renamed .img-rounded to .rounded
+.img-rounded {
+  @extend .rounded;
+}
+
 // Labels
 // Removed in Bootstrap 4
 
