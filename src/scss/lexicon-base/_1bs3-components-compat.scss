@@ -136,6 +136,15 @@ label {
   }
 }
 
+// Grid
+
+// Renamed .col-xs-* to .col-*
+@for $i from 1 through $grid-columns {
+  .col-xs-#{$i} {
+    @extend .col-#{$i};
+  }
+}
+
 // Image
 // Renamed .img-responsive to .img-fluid
 .img-responsive {
