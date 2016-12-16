@@ -201,3 +201,17 @@ $navbar-inverse-brand-hover-bg:             transparent !default;
 $navbar-inverse-toggle-hover-bg:            #333 !default;
 $navbar-inverse-toggle-icon-bar-bg:         #fff !default;
 $navbar-inverse-toggle-border-color:        #333 !default;
+
+// Pager
+// Removed in Bootstrap 4
+
+$pager-bg:                             $pagination-bg !default;
+$pager-border:                         $pagination-border-color !default;
+$pager-border-radius:                  15px !default;
+
+$pager-hover-bg:                       $pagination-hover-bg !default;
+
+$pager-active-bg:                      $pagination-active-bg !default;
+$pager-active-color:                   $pagination-active-color !default;
+
+$pager-disabled-color:                 $pagination-disabled-color !default;
