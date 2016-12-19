@@ -20,7 +20,7 @@
 @import "navs";
 @import "navbar";
 @import "nav-tabs";
-// @import "management-bar"; // Management-bar styles should win over nav styles
+@import "management-bar"; // Management-bar styles should win over nav styles
 @import "pager";
 @import "pagination";
 @import "panels";
