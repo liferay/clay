@@ -84,11 +84,6 @@ $input-height-small: $input-height-sm !default;
 $input-border: $input-border-color !default;
 $input-border-focus: $input-border-color-focus !default;
 
-$input-border-bottom-width: 0.0625rem !default; // 1px
-$input-border-left-width: 0.0625rem !default; // 1px
-$input-border-right-width: 0.0625rem !default; // 1px
-$input-border-top-width: 0.0625rem !default; // 1px
-
 // Labels
 
 $label-default-bg: $gray-light !default;
@@ -152,12 +147,8 @@ $nav-pills-active-link-hover-color: $nav-pills-active-link-color !default;
 
 // Navbar
 
-$navbar-border-bottom-width: 0.0625rem !default; // 1px
-$navbar-border-left-width: 0.0625rem !default; // 1px
-$navbar-border-right-width: 0.0625rem !default; // 1px
-$navbar-border-top-width: 0.0625rem !default; // 1px
-
-$navbar-height: 3.125rem !default; // 50px
+$navbar-height: 50px !default; // 50px
+$navbar-margin-bottom:             $line-height-computed !default;
 
 $navbar-padding-horizontal: $navbar-padding-x !default;
 $navbar-padding-vertical: $navbar-padding-y !default;
