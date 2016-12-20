@@ -82,6 +82,10 @@
   content: normal;
 }
 
+.open > .dropdown-menu {
+  display: block;
+}
+
 // Figures
 
 .figure {
