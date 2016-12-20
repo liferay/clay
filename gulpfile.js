@@ -3,21 +3,30 @@ var path = require('path');
 
 var gulp = require('gulp-help')(require('gulp'));
 var liferayGulpTasks = require('liferay-gulp-tasks');
-var plugins = require('gulp-load-plugins')();
+var plugins = require('gulp-load-plugins')({pattern: ['gulp-*', 'gulp.*', 'merge-stream']});
 var runSequence = require('run-sequence');
 
 var chalk = require('chalk');
 
 var _ = require('./lib/lodash_utils');
 
+var BOOTSTRAP_JS_FILE = path.join('src', 'js', 'bootstrap.js');
+
+var BOOTSTRAP_JS_DIR = path.dirname(BOOTSTRAP_JS_FILE);
+
 var BOOTSTRAP_VAR_FILE = path.join('src','scss', 'bootstrap', '_variables.scss');
 
 var BOOTSTRAP_VAR_DIR = path.dirname(BOOTSTRAP_VAR_FILE);
 
+var TETHER_JS_FILE = path.join('src', 'js', 'tether.js');
+
 var config = {
+	BOOTSTRAP_JS_FILE: BOOTSTRAP_JS_FILE,
+	BOOTSTRAP_JS_DIR: BOOTSTRAP_JS_DIR,
 	BOOTSTRAP_VAR_FILE: BOOTSTRAP_VAR_FILE,
 	BOOTSTRAP_VAR_DIR: BOOTSTRAP_VAR_DIR,
-	SRC_GLOB: 'src/**/*'
+	SRC_GLOB: 'src/**/*',
+	TETHER_JS_FILE: TETHER_JS_FILE
 };
 
 var tasks = require('require-dir')('./tasks');
