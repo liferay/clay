@@ -1,3 +1,14 @@
+// Alerts
+
+@if (variable-exists(atlas-theme)) {
+  .alert-mismissable,
+  .alert-dismissible {
+    .close {
+      padding: 0 18px;
+    }
+  }
+}
+
 // Breadcrumbs
 
 .breadcrumb > li {

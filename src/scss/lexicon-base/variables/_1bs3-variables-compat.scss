@@ -50,6 +50,10 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default; // 767px
 
 $grid-gutter-width: $grid-gutter-width-base !default; // 30px
 
+// Alerts
+
+$alert-padding: $alert-padding-y $alert-padding-x !default;
+
 // Breadcrumbs
 
 $breadcrumb-color: $breadcrumb-divider-color !default;
