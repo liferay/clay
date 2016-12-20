@@ -4,7 +4,7 @@
   .alert-mismissable,
   .alert-dismissible {
     .close {
-      padding: 0 18px;
+      padding: 0 $alert-padding-x;
     }
   }
 }
@@ -147,7 +147,10 @@ label {
 // Form Validation
 
 .help-block {
-  @extend .form-control-feedback;
+  display: block; // account for any element using help-block
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: lighten($text-color, 25%); // lighten the text some for contrast
 }
 
 .has-error {
@@ -161,7 +164,7 @@ label {
   .form-control {
     + .form-control-feedback {
       position: absolute;
-      top: ($line-height-computed + 0.3125); // Height of the `label` and its margin
+      top: ($line-height-computed + 5); // Height of the `label` and its margin
       right: 0;
       z-index: 2; // Ensure icon is above input groups
       display: block;
