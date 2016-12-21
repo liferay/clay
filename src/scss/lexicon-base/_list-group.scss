@@ -217,6 +217,10 @@ button.list-group-heading {
 	word-break: break-all \9; // IE9
 	word-wrap: break-word;
 
+	&:only-child {
+		width: 100%;
+	}
+
 	&.clamp-horizontal {
 		.clamp-container {
 			-ms-transform: none;
