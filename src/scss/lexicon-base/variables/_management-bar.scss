@@ -16,6 +16,8 @@ $management-bar-padding-vertical: ($management-bar-height - $line-height-compute
 $management-bar-btn-padding-horizontal: $management-bar-padding-horizontal !default;
 $management-bar-btn-padding-vertical: ($management-bar-height - $management-bar-border-bottom-width - $management-bar-border-top-width - $icon-monospaced-size - 2) / 2 !default;
 
+$management-bar-toggle-height: 40px + $management-bar-border-bottom-width + $management-bar-border-top-width !default;
+
 // Skin
 
 $management-bar-collapse-bg: $dropdown-bg !default;
