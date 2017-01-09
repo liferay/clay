@@ -23,6 +23,8 @@ $padding-xs-horizontal: 5px !default;
 
 $text-color: $body-color !default;
 
+$zindex-navbar-fixed: $zindex-fixed !default;
+
 // Grid
 
 $screen-xs: map-get($grid-breakpoints, sm) !default; // 576px
@@ -144,6 +146,13 @@ $panel-danger-text:  $state-danger-text !default;
 $panel-danger-border: $state-danger-border !default;
 $panel-danger-heading-bg: $state-danger-bg !default;
 
+// Progress Bar
+
+$progress-bar-danger-bg:      $brand-danger !default;
+$progress-bar-info-bg:        $brand-info !default;
+$progress-bar-success-bg:     $brand-success !default;
+$progress-bar-warning-bg:     $brand-warning !default;
+
 // Navs
 
 $nav-pills-active-link-hover-bg: $nav-pills-active-link-bg !default;
@@ -177,16 +186,16 @@ $navbar-default-toggle-hover-bg:           #ddd !default;
 $navbar-default-toggle-icon-bar-bg:        #888 !default;
 $navbar-default-toggle-border-color:       #ddd !default;
 
-$navbar-inverse-color:                      $navbar-dark-color !default;
+$navbar-inverse-color:                      $navbar-inverse-color !default;
 $navbar-inverse-bg:                         $brand-inverse !default;
 $navbar-inverse-border:                     $navbar-inverse-bg !default;
 
-$navbar-inverse-link-color:                 $navbar-dark-color !default;
-$navbar-inverse-link-hover-color:           $navbar-dark-hover-color !default;
+$navbar-inverse-link-color:                 $navbar-inverse-color !default;
+$navbar-inverse-link-hover-color:           $navbar-inverse-hover-color !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
-$navbar-inverse-link-active-color:          $navbar-dark-active-color !default;
+$navbar-inverse-link-active-color:          $navbar-inverse-active-color !default;
 $navbar-inverse-link-active-bg:             transparent !default;
-$navbar-inverse-link-disabled-color:        $navbar-dark-disabled-color !default;
+$navbar-inverse-link-disabled-color:        $navbar-inverse-disabled-color !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
 
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
