@@ -277,6 +277,21 @@ a.label {
   @include label-variant($label-danger-bg);
 }
 
+// Nav
+
+.nav {
+  flex-direction: column;
+}
+
+.nav-pills,
+.nav-tabs {
+  flex-direction: row;
+}
+
+.nav-stacked {
+  flex-direction: column;
+}
+
 // Navbars
 
 .basic-search .input-group-input .form-control {
