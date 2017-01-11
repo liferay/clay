@@ -11,6 +11,7 @@
 
 .custom-control {
   position: relative;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   min-height: (1rem * $line-height-base);
   padding-left: $custom-control-gutter;
@@ -65,6 +66,9 @@
   width: $custom-control-indicator-size;
   height: $custom-control-indicator-size;
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   background-color: $custom-control-indicator-bg;
   background-repeat: no-repeat;
@@ -114,7 +118,9 @@
 // set. Use these optional classes to tweak the layout.
 
 .custom-controls-stacked {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
 
   .custom-control {
@@ -227,6 +233,9 @@
   line-height: $custom-file-line-height;
   color: $custom-file-color;
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   background-color: $custom-file-bg;
   border: $custom-file-border-width solid $custom-file-border-color;

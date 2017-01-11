@@ -29,11 +29,14 @@
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       // Provide basic `.col-{bp}` classes for equal-width flexbox columns
       .col#{$infix} {
+        -ms-flex-preferred-size: 0;
         flex-basis: 0;
+        -ms-flex-positive: 1;
         flex-grow: 1;
         max-width: 100%;
       }
       .col#{$infix}-auto {
+        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: auto;
       }

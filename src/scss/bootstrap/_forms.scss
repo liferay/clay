@@ -41,6 +41,21 @@
   @include form-control-focus();
 
   // Placeholder
+  &::-webkit-input-placeholder {
+    color: $input-color-placeholder;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $input-color-placeholder;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $input-color-placeholder;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
   &::placeholder {
     color: $input-color-placeholder;
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
@@ -296,8 +311,11 @@ select.form-control-lg {
 // default HTML form controls and our custom form controls (e.g., input groups).
 
 .form-inline {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -ms-flex-align: center;
   align-items: center; // Prevent shorter elements from growing to same height as others (e.g., small buttons growing to normal sized button height)
 
   // Because we use flex, the initial sizing of checkboxes is collapsed and
@@ -310,17 +328,24 @@ select.form-control-lg {
   // Kick in the inline
   @include media-breakpoint-up(sm) {
     label {
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-align: center;
       align-items: center;
+      -ms-flex-pack: center;
       justify-content: center;
       margin-bottom: 0;
     }
 
     // Inline-block all the things for "inline"
     .form-group {
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex: 0 0 auto;
       flex: 0 0 auto;
+      -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+      -ms-flex-align: center;
       align-items: center;
       margin-bottom: 0;
     }
@@ -349,8 +374,11 @@ select.form-control-lg {
     // Remove default margin on radios/checkboxes that were used for stacking, and
     // then undo the floating of radios and checkboxes to match.
     .form-check {
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-align: center;
       align-items: center;
+      -ms-flex-pack: center;
       justify-content: center;
       width: auto;
       margin-top: 0;
@@ -368,8 +396,11 @@ select.form-control-lg {
 
     // Custom form controls
     .custom-control {
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-align: center;
       align-items: center;
+      -ms-flex-pack: center;
       justify-content: center;
       padding-left: 0;
     }

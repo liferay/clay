@@ -4,7 +4,9 @@
 
 .card {
   position: relative;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: $card-bg;
   border: $card-border-width solid $card-border-color;
@@ -14,6 +16,7 @@
 .card-block {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: $card-spacer-x;
 }
@@ -186,12 +189,17 @@
 
 @include media-breakpoint-up(sm) {
   .card-deck {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 
     .card {
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex: 1 0 0px;
       flex: 1 0 0;
+      -ms-flex-direction: column;
       flex-direction: column;
 
       // Selectively apply horizontal margins to cards to avoid doing the
@@ -210,10 +218,13 @@
 
 @include media-breakpoint-up(sm) {
   .card-group {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 
     .card {
+      -ms-flex: 1 0 0px;
       flex: 1 0 0;
 
       + .card {
@@ -264,7 +275,9 @@
 
 @include media-breakpoint-up(sm) {
   .card-columns {
+    -moz-column-count: $card-columns-count;
     column-count: $card-columns-count;
+    -moz-column-gap: $card-columns-gap;
     column-gap: $card-columns-gap;
 
     .card {

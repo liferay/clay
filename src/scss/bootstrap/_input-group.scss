@@ -4,6 +4,7 @@
 
 .input-group {
   position: relative;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
 
@@ -12,6 +13,7 @@
     // proper border colors.
     position: relative;
     z-index: 2;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     // Add width 1% and flex-basis auto to ensure that button will not wrap out
     // the column. Applies to IE Edge+ and Firefox. Chrome does not require this.
@@ -29,8 +31,11 @@
 .input-group-btn,
 .input-group .form-control {
   // Vertically centers the content of the addons within the input group
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: center;
   justify-content: center;
 
   &:not(:first-child):not(:last-child) {
@@ -145,6 +150,7 @@
   > .btn {
     position: relative;
     // Vertically stretch the button and center its content
+    -ms-flex: 1;
     flex: 1;
 
     + .btn {

@@ -12,7 +12,7 @@
     .d#{$infix}-block        { display: block !important; }
     .d#{$infix}-table        { display: table !important; }
     .d#{$infix}-table-cell   { display: table-cell !important; }
-    .d#{$infix}-flex         { display: flex !important; }
-    .d#{$infix}-inline-flex  { display: inline-flex !important; }
+    .d#{$infix}-flex         { display: -ms-flexbox !important; display: flex !important; }
+    .d#{$infix}-inline-flex  { display: -ms-inline-flexbox !important; display: inline-flex !important; }
   }
 }

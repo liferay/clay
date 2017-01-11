@@ -6,6 +6,7 @@
 
 // Basic progress bar
 .progress {
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden; // force rounded corners by cropping it
   font-size: $progress-font-size;
