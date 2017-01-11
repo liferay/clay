@@ -41,8 +41,9 @@
 				height: $pagination-item-height;
 				line-height: $pagination-item-height - ($pagination-border-width * 2);
 				margin: 0 auto;
+				min-width: $pagination-item-width;
 				text-align: center;
-				width: $pagination-item-width;
+				width: auto;
 
 				@media (min-width: $grid-float-breakpoint) {
 					margin: 0 2px;
