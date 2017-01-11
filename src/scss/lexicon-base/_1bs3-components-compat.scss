@@ -186,6 +186,50 @@ label {
   }
 }
 
+// Basic Search
+
+.basic-search-transition {
+  .basic-search-slider {
+    transition: all 0.5s ease;
+  }
+}
+
+.collapse-basic-search .basic-search.input-group {
+  display: flex;
+  justify-content: flex-end;
+
+  .input-group-input {
+    flex: 1;
+  }
+}
+
+div.collapse-basic-search .basic-search .form-control {
+  padding-left: 57px;
+
+  @media (min-width: $grid-float-breakpoint) {
+    padding-left: 5px;
+  }
+}
+
+.input-group-input {
+  display: block;
+}
+
+// Input Groups
+
+.input-group-addon, .input-group-btn,
+.input-group .form-control {
+  flex-direction: row;
+}
+
+div.input-group-default {
+  display: flex;
+}
+
+div.input-group-default .input-group-addon {
+  align-items: center;
+}
+
 // Grid
 
 // Renamed .col-xs-* to .col-*
