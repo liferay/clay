@@ -3,7 +3,7 @@ var path = require('path');
 
 var gulp = require('gulp-help')(require('gulp'));
 var liferayGulpTasks = require('liferay-gulp-tasks');
-var plugins = require('gulp-load-plugins')({pattern: ['gulp-*', 'gulp.*', 'merge-stream']});
+var plugins = require('gulp-load-plugins')({pattern: ['autoprefixer', 'gulp-*', 'gulp.*', 'merge-stream', 'postcss-*']});
 var runSequence = require('run-sequence');
 
 var chalk = require('chalk');
@@ -21,6 +21,11 @@ var BOOTSTRAP_VAR_DIR = path.dirname(BOOTSTRAP_VAR_FILE);
 var TETHER_JS_FILE = path.join('src', 'js', 'tether.js');
 
 var config = {
+	AUTOPREFIXER: {
+		cascade: false,
+		browsers: ['last 2 versions'],
+		remove: false
+	},
 	BOOTSTRAP_JS_FILE: BOOTSTRAP_JS_FILE,
 	BOOTSTRAP_JS_DIR: BOOTSTRAP_JS_DIR,
 	BOOTSTRAP_VAR_FILE: BOOTSTRAP_VAR_FILE,

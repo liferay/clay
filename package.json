@@ -42,6 +42,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^6.6.1",
     "basename": "^0.1.2",
     "bluebird": "^3.0.6",
     "bower": "^1.4.1",
@@ -68,6 +69,7 @@
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-metalsmith": "0.0.3",
     "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.4",
@@ -86,6 +88,7 @@
     "metalsmith-sass": "^1.2.1",
     "metalsmith-templates": "^0.7.0",
     "minimist": "^1.2.0",
+    "postcss-scss": "^0.4.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
     "semver": "^5.1.0",
