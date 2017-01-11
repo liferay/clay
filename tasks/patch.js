@@ -24,6 +24,18 @@ module.exports = function(gulp, plugins, _, config) {
 		};
 	};
 
+	gulp.task('build:autoprefix-bootstrap', function() {
+		var processors = [
+			plugins.autoprefixer(config.AUTOPREFIXER)
+		];
+
+		var bootstrapScssFiles = gulp.src('./src/scss/bootstrap/**/*.scss')
+				.pipe(plugins.postcss(processors, { syntax: plugins.postcssScss }))
+				.pipe(gulp.dest('./src/scss/bootstrap'));
+
+		return bootstrapScssFiles;
+	});
+
 	gulp.task('build:patch-bootstrap', function(cb) {
 		var bootstrapVarFile = gulp.src(config.BOOTSTRAP_VAR_FILE)
 			.pipe(plugins.change(patchBootstrap(LEXICON_IMPORT)))
