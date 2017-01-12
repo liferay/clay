@@ -6,11 +6,9 @@ $pagination-item-width: $pagination-item-height !default;
 $pagination-border-width: 0 !default;
 
 $pagination-item-padding-bottom: 0 !default;
-$pagination-item-padding-left: 0 !default;
-$pagination-item-padding-right: 0 !default;
+$pagination-item-padding-left: 10px !default;
+$pagination-item-padding-right: 10px !default;
 $pagination-item-padding-top: 0 !default;
-
-$pagination-item-padding: $pagination-item-padding-top $pagination-item-padding-right $pagination-item-padding-bottom $pagination-item-padding-left !default;
 
 $pagination-line-height: $pagination-item-height - ($pagination-border-width * 2) !default;
 
@@ -20,8 +18,6 @@ $pagination-sm-item-width: $pagination-sm-item-height !default;
 $pagination-sm-line-height: $pagination-sm-item-height - ($pagination-border-width * 2) !default;
 
 $pagination-sm-item-padding-bottom: 0 !default;
-$pagination-sm-item-padding-left: 0 !default;
-$pagination-sm-item-padding-right: 0 !default;
 $pagination-sm-item-padding-top: 0 !default;
 
 $pagination-lg-font-size: 18px !default;
@@ -30,8 +26,6 @@ $pagination-lg-item-width: $pagination-lg-item-height !default;
 $pagination-lg-line-height: $pagination-lg-item-height - ($pagination-border-width * 2) !default;
 
 $pagination-lg-item-padding-bottom: 0 !default;
-$pagination-lg-item-padding-left: 0 !default;
-$pagination-lg-item-padding-right: 0 !default;
 $pagination-lg-item-padding-top: 0 !default;
 
 // Skin
