@@ -9,19 +9,6 @@
 			margin: 0;
 			width: auto;
 		}
-
-		@if (variable-exists(atlas-theme)) {
-			> li {
-				text-align: center;
-				width: 16.66667%;
-
-				@media (min-width: $grid-float-breakpoint) {
-					display: inline-block;
-					float: none;
-					width: auto;
-				}
-			}
-		}
 	}
 }
 
@@ -38,16 +25,7 @@
 				border-radius: $pagination-border-radius;
 				display: inline-block;
 				float: none;
-				height: $pagination-item-height;
-				line-height: $pagination-item-height - ($pagination-border-width * 2);
-				margin: 0 auto;
-				min-width: $pagination-item-width;
-				text-align: center;
-				width: auto;
-
-				@media (min-width: $grid-float-breakpoint) {
-					margin: 0 2px;
-				}
+				line-height: $pagination-line-height;
 			}
 		}
 	}
@@ -154,11 +132,6 @@
 			> span {
 				line-height: $pagination-sm-line-height;
 				padding: $pagination-sm-item-padding;
-
-				@if (variable-exists(atlas-theme)) {
-					height: $pagination-sm-item-height;
-					width: $pagination-sm-item-width;
-				}
 			}
 
 			&:first-child {
@@ -199,11 +172,6 @@
 			> span {
 				line-height: $pagination-lg-line-height;
 				padding: $pagination-lg-item-padding;
-
-				@if (variable-exists(atlas-theme)) {
-					height: $pagination-lg-item-height;
-					width: $pagination-lg-item-width;
-				}
 			}
 
 			&:first-child {
