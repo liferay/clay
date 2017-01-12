@@ -201,6 +201,10 @@
 			}
 		}
 	}
+
+	.help-icon {
+		@include monospace(35px);
+	}
 }
 
 .input-group-sm {
@@ -243,16 +247,8 @@
 			}
 		}
 	}
-}
 
-.input-sm {
 	.help-icon {
 		@include monospace(20px);
-	}
-}
-
-.input-lg {
-	.help-icon {
-		@include monospace(35px);
 	}
 }
