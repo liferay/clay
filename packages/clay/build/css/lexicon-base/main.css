@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.14
+* Lexicon 1.0.15
 *
-* Copyright 2016, Liferay, Inc.
+* Copyright 2017, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
@@ -8737,6 +8737,12 @@ a .icon-monospaced,
   padding-right: 16px;
 }
 
+.input-group-lg .help-icon {
+  height: 35px;
+  line-height: 35px;
+  width: 35px;
+}
+
 .input-group-sm .input-group-constrain {
   line-height: 28px;
   margin-bottom: -6px;
@@ -8748,20 +8754,10 @@ a .icon-monospaced,
   padding-right: 10px;
 }
 
-.input-sm .help-icon, .input-group-sm > .form-control .help-icon,
-.input-group-sm > .input-group-addon .help-icon,
-.input-group-sm > .input-group-btn > .btn .help-icon {
+.input-group-sm .help-icon {
   height: 20px;
   line-height: 20px;
   width: 20px;
-}
-
-.input-lg .help-icon, .input-group-lg > .form-control .help-icon,
-.input-group-lg > .input-group-addon .help-icon,
-.input-group-lg > .input-group-btn > .btn .help-icon {
-  height: 35px;
-  line-height: 35px;
-  width: 35px;
 }
 
 input[type="checkbox"],
@@ -9096,6 +9092,7 @@ button.list-group-heading {
 }
 
 .tabular-list-group .list-group-item {
+  background-color: transparent;
   display: table-row;
   height: 100px;
   padding: 0;
@@ -9106,8 +9103,14 @@ button.list-group-heading {
   border-top-width: 1px;
 }
 
+.tabular-list-group .list-group-item.active .list-group-item-content,
+.tabular-list-group .list-group-item.active .list-group-item-field {
+  background-color: #337ab7;
+}
+
 .tabular-list-group .list-group-item-content,
 .tabular-list-group .list-group-item-field {
+  background-color: #fff;
   border: 1px solid #ddd;
   border-left-width: 0;
   border-right-width: 0;
@@ -10029,8 +10032,8 @@ button.list-group-heading {
   border-radius: 4px;
   float: right;
   margin-right: 15px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   padding: 9px 10px;
   position: relative;
 }
