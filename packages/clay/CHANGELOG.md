@@ -1,3 +1,16 @@
+### v1.0.15 - January, 2017
+* Fix: Some icon variables are missing the default flag
+* Update: Atlas Pagination items should account for large numbers
+* Update: Don't rely on @extend in Bootstrap to size Help Icon in Input Groups
+* Update: Move management-bar-toggle-height to variable
+* Update: Badges check for atlas-theme instead of badge-default-bg since there are other variables in the block
+* Update: Tabular-list-group move bg-color from rows to cells
+* Site: Add Paginator with big numbers to Test Assorted page
+* Site: Extending List Groups page change vertical ellipsis to links
+* Site: Remove uneeded attributes from Sidebar Navbar demo in Test Assorted
+* Site: Remove type="button" from pagination dropdown-toggle in Blog Action and Documents and Media demo
+* Site: Remove type="button" from dropdown-toggle in Pagination demo
+
 ### v1.0.14 - December 09, 2016
 * Fix: Nameplates interpolate $screen-xs-max variable inside mixin nameplate-label-autofit
 * Fix: Tabular-list-group and tabular-list-group-unstyled should fill its container width
