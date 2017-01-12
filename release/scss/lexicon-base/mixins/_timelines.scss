@@ -1,0 +1,116 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin timeline-item-reverse() {
+	padding-left: 0;
+	padding-right: $timeline-inner-spacing;
+
+	&:before {
+		left: auto;
+		right: -$timeline-border-width;
+	}
+
+	.panel {
+		.timeline-increment-icon {
+			margin-left: auto;
+			margin-right: -$panel-border-right-width;
+		}
+	}
+
+	.timeline-increment-icon {
+		left: auto;
+		right: -($timeline-inner-spacing + $timeline-border-modifier);
+		-ms-transform: translate(50%, -50%);
+		transform: translate(50%, -50%);
+	}
+}
+
+@mixin timeline-spacing($outer-spacing, $inner-spacing, $item-vertical-padding: 10px) {
+	&.timeline {
+		padding-left: $outer-spacing;
+	}
+
+	&.timeline-center {
+		@media (min-width: $grid-float-breakpoint) {
+			padding-left: 0;
+
+			.timeline-item {
+				.timeline-increment-label {
+					margin-left: -($inner-spacing * 2);
+				}
+			}
+
+			.timeline-item.timeline-item-reverse {
+				padding-right: $inner-spacing;
+
+				.timeline-increment-icon {
+					right: -($inner-spacing + $timeline-border-modifier);
+				}
+
+				.timeline-increment-label {
+					margin-left: auto;
+					margin-right: -($inner-spacing * 2);
+				}
+			}
+		}
+	}
+
+	&.timeline-even .timeline-item:nth-of-type(even),
+	&.timeline-odd .timeline-item:nth-of-type(odd) {
+		@media (min-width: $grid-float-breakpoint) {
+			padding-right: $inner-spacing;
+
+			.timeline-increment-icon {
+				right: -($inner-spacing + $timeline-border-modifier);
+			}
+
+			.timeline-increment-label {
+				margin-left: auto;
+				margin-right: -($inner-spacing * 2);
+			}
+		}
+	}
+
+	&.timeline-right {
+		padding-right: $outer-spacing;
+
+		.timeline-item {
+			padding-right: $inner-spacing;
+
+			.timeline-increment-icon {
+				right: -($inner-spacing + $timeline-border-modifier);
+			}
+		}
+	}
+
+	&.timeline-right-xs-only {
+		@media (max-width: $screen-xs-max) {
+			padding-left: 0;
+			padding-right: $outer-spacing;
+
+			.timeline-item {
+				padding-left: 0;
+				padding-right: $inner-spacing;
+
+				.timeline-increment-icon {
+					left: auto;
+					right: -($inner-spacing + $timeline-border-modifier);
+				}
+			}
+		}
+	}
+
+	.timeline-item {
+		padding-bottom: $item-vertical-padding;
+		padding-left: $inner-spacing;
+		padding-top: $item-vertical-padding;
+
+		.timeline-increment-icon {
+			left: -($inner-spacing - $timeline-border-modifier);
+		}
+	}
+}

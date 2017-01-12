@@ -1,0 +1,29 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$toolbar-group-height: 48px !default;
+
+$toolbar-group-desktop-height: 64px !default;
+
+$header-toolbar-height: $toolbar-group-height !default;
+
+$header-toolbar-desktop-height: 64px !default;
+
+$header-toolbar-default-border-width: 0 !default;
+
+// Skin
+
+$header-toolbar-default-bg: #29343D !default;
+$header-toolbar-default-color: #FFF !default;
+$header-toolbar-default-divider: rgba(255, 255, 255, 0.05) !default;
+$header-toolbar-default-divider-width: 1px !default;
+
+$header-toolbar-default-link-color: #FFF !default;
+$header-toolbar-default-link-hover-bg: transparent !default;
+$header-toolbar-default-link-hover-color: $header-toolbar-default-link-color !default;

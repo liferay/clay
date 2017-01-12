@@ -1,0 +1,57 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.clamp-container {
+	left: $table-cell-padding;
+	margin: -2px;
+	padding: 2px;
+	position: absolute;
+	right: $table-cell-padding;
+}
+
+.clamp-horizontal {
+	.clamp-container {
+		overflow: hidden;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+.clamp-all,
+.clamp-all-scroll {
+	// IE 10, 11 Hack
+
+	@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		overflow: hidden;
+	}
+
+	.clamp-container {
+		bottom: 0;
+		overflow: hidden;
+		right: 0;
+		top: 0;
+
+		// IE 10, 11 Hack
+
+		@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			bottom: auto;
+		}
+	}
+}
+
+.clamp-all-scroll {
+	// IE 10, 11 Hack
+
+	@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		overflow: auto;
+	}
+
+	.clamp-container {
+		-webkit-overflow-scrolling: touch;
+		overflow: auto;
+	}
+}

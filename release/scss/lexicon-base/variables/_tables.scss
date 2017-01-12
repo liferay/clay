@@ -1,0 +1,17 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$table-cell-gutters: floor($grid-gutter-width / 2) !default; // 15px
+
+$table-list-content-height: 50px !default;
+
+$table-list-row-active-border-bottom-width: 1px !default;
+$table-list-row-active-border-color: $table-border-color !default;
+$table-list-row-border-bottom-width: 1px !default;
+$table-list-row-border-color: $table-border-color !default;
+
+$table-list-row-height: 55px !default;

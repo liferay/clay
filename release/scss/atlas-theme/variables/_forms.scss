@@ -1,0 +1,87 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$input-font-size: 14px !default;
+
+$input-desktop-font-size: 16px !default;
+
+$input-label-font-size: 12px !default;
+
+$input-label-desktop-font-size: 14px !default;
+
+$input-label-reference-mark-spacer: 5px !default;
+$input-label-reference-mark-vertical-alignment: baseline !default;
+
+$input-border-bottom-width: 2px !default;
+$input-border-left-width: 0 !default;
+$input-border-right-width: 0 !default;
+$input-border-top-width: 0 !default;
+
+$input-padding-horizontal: 4px !default;
+$input-padding-vertical: 6px !default;
+
+$input-font-size-base: 16px !default;
+$input-font-size-large: 18px !default;
+$input-font-size-small: 13px !default;
+
+// When changing input, make sure to match the corresponding
+// btn settings to the input height.
+$input-height-base: 40px !default;
+$input-height-large: 48px !default;
+$input-height-small: 32px !default;
+
+$input-mobile-height-base: 40px !default;
+$input-mobile-height-large: 48px !default;
+$input-mobile-height-small: 32px !default;
+
+$form-group-margin-bottom: 20px !default;
+
+// Skin
+
+$input-border-radius: 0 !default;
+$input-border-radius-large: $input-border-radius !default;
+$input-border-radius-small: $input-border-radius !default;
+
+$input-bg: transparent !default;
+$input-bg-disabled: $input-bg !default;
+
+$input-color: $text-color !default;
+$input-color-focus: $brand-primary !default;
+
+$input-border: $brand-default !default;
+$input-border-focus: $input-color-focus !default;
+
+$input-border-disabled: #CFD7DE !default;
+
+$input-box-shadow: none !default;
+$input-box-shadow-focus: none !default;
+
+$input-color-placeholder: darken(#E4E9EC, 12%) !default;
+$input-color-placeholder-focus: $input-border-focus !default;
+
+$input-label-color: $brand-default !default;
+$input-label-focus-color: $input-color-focus !default;
+
+$input-readonly-bg: #FAFAFA !default;
+$input-readonly-border: $input-border !default;
+$input-readonly-color: darken($input-color-placeholder, 12%) !default;
+
+$legend-border-color: #B0B4BB !default;
+
+$input-group-addon-bg: $brand-default !default;
+$input-group-addon-border-color: $input-group-addon-bg !default;
+$input-group-addon-border-radius: 0 !default;
+$input-group-addon-color: #FFF !default;
+
+$input-group-default-addon-border-color: #DDD !default;
+$input-group-default-addon-color: #BBB !default;
+
+$input-danger: $brand-danger !default;
+$input-success: $brand-success !default;
+$input-warning: $brand-warning !default;

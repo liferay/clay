@@ -1,0 +1,52 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$management-bar-border-bottom-width: 1px !default;
+$management-bar-border-left-width: 0 !default;
+$management-bar-border-right-width: 0 !default;
+$management-bar-border-top-width: 0 !default;
+
+$management-bar-height: $navbar-height !default;
+$management-bar-link-line-height: floor($font-size-base * $line-height-base) !default;
+
+$management-bar-margin-bottom: 0 !default;
+
+$management-bar-btn-padding-vertical: ($management-bar-height - $icon-monospaced-size - $management-bar-border-bottom-width - $management-bar-border-top-width - ($btn-border-width * 2)) / 2 !default;
+
+$management-bar-desktop-height: $navbar-desktop-height !default;
+$management-bar-desktop-link-line-height: floor($font-size-desktop-base * $line-height-base) !default;
+$management-bar-desktop-padding-horizontal: $navbar-desktop-padding-horizontal !default;
+$management-bar-desktop-padding-vertical: (($management-bar-desktop-height - $management-bar-desktop-link-line-height - $management-bar-border-bottom-width - $management-bar-border-top-width) / 2) !default;
+
+$management-bar-desktop-btn-padding-horizontal: $navbar-desktop-padding-horizontal !default;
+$management-bar-desktop-btn-padding-vertical: ($management-bar-desktop-height - $icon-monospaced-size - $management-bar-border-bottom-width - $management-bar-border-top-width - ($btn-border-width * 2)) / 2 !default;
+
+// Skin
+
+$management-bar-collapse-absolute-box-shadow: $navbar-collapse-absolute-box-shadow !default;
+
+$management-bar-link-active-color: $brand-primary !default;
+
+$management-bar-default-bg: #F5F8FA !default;
+$management-bar-default-border: #EDF0F2 !default;
+$management-bar-default-color: $brand-default !default;
+$management-bar-default-link-active-color: $brand-primary !default;
+
+$management-bar-default-btn-default-bg: transparent !default;
+$management-bar-default-btn-default-border: #E4E9EC !default;
+$management-bar-default-btn-default-color: $brand-default !default;
+
+$management-bar-default-btn-default-hover-bg: $management-bar-default-btn-default-bg !default;
+$management-bar-default-btn-default-hover-border: $management-bar-default-btn-default-border !default;
+$management-bar-default-btn-default-hover-color: $management-bar-default-btn-default-color !default;
+
+$management-bar-default-btn-default-active-bg: $management-bar-default-btn-default-border !default;
+
+$management-bar-default-collapse-bg: $management-bar-default-bg !default;
+$management-bar-default-collapse-border: $management-bar-default-border !default;

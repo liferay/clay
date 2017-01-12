@@ -1,0 +1,78 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@if (variable-exists(atlas-theme)) {
+	.has-success,
+	.has-warning,
+	.has-error {
+		.control-label {
+			color: $input-label-color;
+		}
+
+		.form-control {
+			box-shadow: none;
+			color: $input-color;
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+
+	.has-success {
+		select.form-control {
+			background-image: lx-icon(caret-double-l, $state-success-border);
+			background-image: none \9;
+		}
+
+		.checkbox label,
+		.radio label {
+			color: $state-success-text;
+		}
+
+		.form-control[readonly] {
+			border-color: $state-success-border;
+		}
+	}
+
+	.has-warning {
+		select.form-control {
+			background-image: lx-icon(caret-double-l, $state-warning-border);
+			background-image: none \9;
+		}
+
+		.checkbox label,
+		.radio label {
+			color: $state-warning-text;
+		}
+
+		.form-control[readonly] {
+			border-color: $state-warning-border;
+		}
+	}
+
+	.has-error {
+		select.form-control {
+			background-image: lx-icon(caret-double-l, $state-danger-border);
+			background-image: none \9;
+		}
+
+		.checkbox label,
+		.radio label {
+			color: $state-danger-text;
+		}
+
+		.form-control[readonly] {
+			border-color: $state-danger-border;
+		}
+	}
+
+	.form-group select.form-control[multiple] {
+		background: none;
+		padding: $input-padding-vertical $input-padding-horizontal;
+	}
+}

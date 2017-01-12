@@ -1,0 +1,61 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$management-bar-border-bottom-width: 1px !default;
+$management-bar-border-left-width: 1px !default;
+$management-bar-border-right-width: 1px !default;
+$management-bar-border-top-width: 1px !default;
+$management-bar-border-width: $management-bar-border-top-width $management-bar-border-right-width $management-bar-border-bottom-width $management-bar-border-left-width !default;
+
+$management-bar-height: $navbar-height !default;
+
+$management-bar-margin-bottom: $navbar-margin-bottom !default;
+
+$management-bar-padding-horizontal: $navbar-padding-horizontal !default;
+$management-bar-padding-vertical: ($management-bar-height - $line-height-computed - $management-bar-border-bottom-width - $management-bar-border-top-width) / 2 !default;
+
+$management-bar-btn-padding-horizontal: $management-bar-padding-horizontal !default;
+$management-bar-btn-padding-vertical: ($management-bar-height - $management-bar-border-bottom-width - $management-bar-border-top-width - $icon-monospaced-size - 2) / 2 !default;
+
+$management-bar-toggle-height: 40px + $management-bar-border-bottom-width + $management-bar-border-top-width !default;
+
+// Skin
+
+$management-bar-collapse-bg: $dropdown-bg !default;
+$management-bar-collapse-border: transparent !default;
+
+$management-bar-default-bg: $navbar-default-bg !default;
+$management-bar-default-border: $navbar-default-border !default;
+$management-bar-default-color: $navbar-default-color !default;
+
+$management-bar-default-collapse-bg: $management-bar-default-bg !default;
+$management-bar-default-collapse-border: $management-bar-default-border !default;
+
+$management-bar-default-link-color: $navbar-default-link-color !default;
+
+$management-bar-default-link-hover-bg: $navbar-default-link-hover-bg !default;
+$management-bar-default-link-hover-color: $navbar-default-link-hover-color !default;
+
+$management-bar-default-link-active-bg: $navbar-default-link-active-bg !default;
+$management-bar-default-link-active-color: $navbar-default-link-active-color !default;
+
+$management-bar-default-link-disabled-bg: $navbar-default-link-disabled-bg !default;
+$management-bar-default-link-disabled-color: $navbar-default-link-disabled-color !default;
+
+$management-bar-default-btn-default-bg: $management-bar-default-bg !default;
+$management-bar-default-btn-default-border: $management-bar-default-border !default;
+$management-bar-default-btn-default-color: $management-bar-default-link-color !default;
+
+$management-bar-default-btn-default-hover-bg: darken($management-bar-default-btn-default-bg, 10%) !default;
+$management-bar-default-btn-default-hover-border: darken($management-bar-default-btn-default-border, 12%) !default;
+$management-bar-default-btn-default-hover-color: $management-bar-default-btn-default-color !default;
+
+$management-bar-default-btn-default-active-bg: $management-bar-default-btn-default-hover-bg !default;
+$management-bar-default-btn-default-active-border: $management-bar-default-btn-default-hover-border !default;
+$management-bar-default-btn-default-active-color: $management-bar-default-btn-default-hover-color !default;

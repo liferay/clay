@@ -1,0 +1,168 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.panel {
+	border-width: $panel-border-width;
+	box-shadow: $panel-box-shadow;
+}
+
+.panel-footer {
+	background-color: transparent;
+	border-color: transparent;
+	border-top-width: $panel-footer-border-top-width;
+}
+
+.panel-heading {
+	border-bottom-width: $panel-heading-border-bottom-width;
+}
+
+.panel-title {
+	font-size: $panel-title-font-size;
+	font-weight: $panel-title-font-weight;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	@if (variable-exists(atlas-theme)) {
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.panel-group {
+	.panel-heading {
+		padding: 0;
+
+		.collapse-icon {
+			padding-right: 45px;
+		}
+
+		@if (variable-exists(atlas-theme)) {
+			+ .panel-collapse > .panel-body {
+				border-top-width: $panel-heading-border-bottom-width;
+			}
+		}
+	}
+
+	.panel-title {
+		> a,
+		> span {
+			display: block;
+			padding: $panel-heading-padding;
+			position: relative;
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.panel + .panel {
+			margin-top: 0;
+		}
+	}
+}
+
+.card,
+.card-horizontal {
+	.panel {
+		@if ($panel-border-radius > 0) {
+			border-radius: 0;
+		}
+
+		@if ($panel-border-left-width > 0) {
+			border-left-width: 0;
+		}
+
+		@if ($panel-border-right-width > 0) {
+			border-right-width: 0;
+		}
+	}
+
+	.panel-heading,
+	.panel-footer {
+		@if ($panel-border-radius > 0) {
+			border-radius: 0;
+		}
+	}
+
+	.panel:first-child,
+	.panel-group:first-child {
+		@if ($card-border-width > 0) {
+			margin-top: $line-height-computed;
+		}
+	}
+}
+
+// Skins
+
+.panel-blank {
+	box-shadow: none;
+
+	@include panel-variant($panel-blank-border, $panel-blank-text, $panel-blank-heading-bg, $panel-blank-border);
+
+	> .panel-footer {
+		background-color: $panel-blank-heading-bg;
+		border-color: $panel-blank-border;
+		color: $panel-blank-text;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		> .panel-heading {
+			a {
+				color: $panel-blank-heading-link-open-color;
+
+				&.collapsed {
+					color: $panel-blank-heading-link-color;
+				}
+			}
+		}
+	}
+}
+
+.panel-group .panel-blank .panel-heading {
+	+ .panel-collapse > .panel-body {
+		border-top-color: $panel-blank-border;
+	}
+}
+
+.panel-default {
+	> .panel-footer {
+		background-color: $panel-default-heading-bg;
+		border-color: $panel-default-border;
+		color: $panel-default-text;
+	}
+}
+
+.panel-primary {
+	> .panel-footer {
+		background-color: $panel-primary-heading-bg;
+		border-color: $panel-primary-border;
+		color: $panel-primary-text;
+	}
+}
+
+.panel-success {
+	> .panel-footer {
+		background-color: $panel-success-heading-bg;
+		border-color: $panel-success-border;
+		color: $panel-success-text;
+	}
+}
+
+.panel-warning {
+	> .panel-footer {
+		background-color: $panel-warning-heading-bg;
+		border-color: $panel-warning-border;
+		color: $panel-warning-text;
+	}
+}
+
+.panel-danger {
+	> .panel-footer {
+		background-color: $panel-danger-heading-bg;
+		border-color: $panel-danger-border;
+		color: $panel-danger-text;
+	}
+}

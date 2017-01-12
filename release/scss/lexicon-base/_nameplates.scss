@@ -1,0 +1,180 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.nameplate {
+	display: table;
+	width: 100%;
+}
+
+.nameplate-field {
+	display: table-cell;
+	padding: 6px;
+	vertical-align: top;
+	width: 1%;
+}
+
+.nameplate-content {
+	display: table-cell;
+	padding: 6px;
+	vertical-align: top;
+}
+
+.nameplate-heading {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.nameplate-subheading {
+	color: $nameplate-subheading-color;
+	display: block;
+}
+
+// Nameplate Label
+
+.nameplate-label {
+	border-radius: $nameplate-label-border-radius;
+	display: table;
+	float: left;
+	height: $nameplate-label-height;
+	margin: 0 5px 2px 0;
+	min-width: 50px;
+	padding: 0 3px;
+
+	a {
+		text-decoration: none;
+	}
+
+	.nameplate-content,
+	.nameplate-field {
+		position: relative;
+		vertical-align: middle;
+		width: auto;
+	}
+
+	.nameplate-label-text {
+		display: block;
+		font-weight: $nameplate-label-text-font-weight;
+		max-width: $nameplate-label-text-max-width;
+		overflow: hidden;
+		position: relative;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+.nameplate-label {
+	.icon-monospaced,
+	.icon-monospaced .glyphicon {
+		margin: 0;
+
+		@include monospace(20px);
+	}
+
+	.icon-monospaced.lexicon-icon,
+	.icon-monospaced .lexicon-icon {
+		margin: 0;
+
+		@include monospace(20px);
+
+		padding: 4px;
+	}
+
+	.user-icon {
+		@include monospace(22px);
+	}
+}
+
+.nameplate-label-more {
+	.icon-monospaced.lexicon-icon,
+	.icon-monospaced .lexicon-icon {
+		padding: 6px 4px 0;
+	}
+
+	.nameplate-label-text {
+		text-align: center;
+	}
+}
+
+// Nameplate Label Helpers
+
+.nameplate-label-autofit-xs-max {
+	@include nameplate-label-autofit('max-width: #{$screen-xs-max}');
+}
+
+@if not ($nameplate-label-border-radius == $nameplate-label-circle-border-radius) {
+	.nameplate-label-circle {
+		border-radius: $nameplate-label-circle-border-radius;
+	}
+}
+
+@if not ($nameplate-label-border-radius == $nameplate-label-rounded-border-radius) {
+	.nameplate-label-rounded {
+		border-radius: $nameplate-label-rounded-border-radius;
+	}
+}
+
+@if not ($nameplate-label-border-radius == $nameplate-label-square-border-radius) {
+	.nameplate-label-square {
+		border-radius: $nameplate-label-square-border-radius;
+	}
+}
+
+// Skins
+
+.nameplate-label-default {
+	@include color-nameplate-label($nameplate-label-default-bg, $nameplate-label-default-color);
+}
+
+.nameplate-label-inverse {
+	@include color-nameplate-label($nameplate-label-inverse-bg, $nameplate-label-inverse-color);
+
+	@if (variable-exists(atlas-theme)) {
+		a {
+			@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+		}
+	}
+}
+
+.nameplate-label-primary {
+	@include color-nameplate-label($nameplate-label-primary-bg, $nameplate-label-primary-color);
+
+	a {
+		@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+	}
+}
+
+.nameplate-label-success {
+	@include color-nameplate-label($nameplate-label-success-bg, $nameplate-label-success-color);
+
+	@if (variable-exists(atlas-theme)) {
+		a {
+			@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+		}
+	}
+}
+
+.nameplate-label-info {
+	@include color-nameplate-label($nameplate-label-info-bg, $nameplate-label-info-color);
+}
+
+.nameplate-label-warning {
+	@include color-nameplate-label($nameplate-label-warning-bg, $nameplate-label-warning-color);
+
+	@if (variable-exists(atlas-theme)) {
+		a {
+			@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+		}
+	}
+}
+
+.nameplate-label-danger {
+	@include color-nameplate-label($nameplate-label-danger-bg, $nameplate-label-danger-color);
+
+	a {
+		@include color-link($nameplate-label-link-dark-color, $nameplate-label-link-dark-hover-color);
+	}
+}

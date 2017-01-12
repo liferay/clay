@@ -1,0 +1,79 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@if (variable-exists(atlas-theme)) {
+	.alert {
+		border-width: $alert-border-width;
+		font-size: $alert-font-size;
+
+		.close {
+			color: $alert-close-color;
+			opacity: 1;
+			top: -1px;
+		}
+
+		.lead {
+			font-size: $alert-lead-font-size;
+			font-weight: $alert-lead-font-weight;
+			margin-bottom: 0;
+			margin-right: 16px;
+		}
+	}
+
+	.alert-link {
+		text-decoration: underline;
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	// Alert Skins
+
+	.alert-default {
+		background-color: $alert-default-bg;
+		border-color: $alert-default-border;
+		color: $alert-default-text;
+
+		hr {
+			border-top-color: $alert-default-border;
+		}
+
+		.alert-link,
+		.close,
+		.lead {
+			color: $alert-default-text-bold;
+		}
+	}
+
+	.alert-danger {
+		@include color-alert-text($alert-danger-text, $alert-danger-text-bold);
+	}
+
+	.alert-info {
+		@include color-alert-text($alert-info-text, $alert-info-text-bold);
+	}
+
+	.alert-success {
+		@include color-alert-text($alert-success-text, $alert-success-text-bold);
+	}
+
+	.alert-warning {
+		@include color-alert-text($alert-warning-text, $alert-warning-text-bold);
+	}
+}
+
+// Alert Notifications
+
+.alert-notification {
+	width: 100%;
+
+	@media (min-width: $grid-float-breakpoint) {
+		max-width: $alert-notification-max-width;
+	}
+}

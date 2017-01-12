@@ -1,0 +1,93 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@if (variable-exists(atlas-theme)) {
+	.popover {
+		border-radius: $popover-border-radius;
+		box-shadow: $popover-box-shadow;
+		max-width: $popover-max-width;
+		padding: $popover-padding;
+	}
+
+	.popover-content {
+		border-bottom-left-radius: $popover-border-radius - 1;
+		border-bottom-right-radius: $popover-border-radius - 1;
+		padding: $popover-content-padding;
+	}
+
+	.popover-title {
+		border-color: $popover-border-color;
+		border-top-left-radius: $popover-border-radius - 1;
+		border-top-right-radius: $popover-border-radius - 1;
+
+		@if not ($popover-title-color == $text-color) {
+			color: $popover-title-color;
+		}
+
+		font-size: $popover-title-font-size;
+		margin: $popover-title-margin;
+		padding: $popover-title-padding;
+	}
+
+	// Popover box shadows
+	// Arrow shadows only appear when $popover-box-shadow-blur == 0
+
+	@if ($popover-box-shadow-blur == 0) {
+		.popover {
+			> .arrow:before {
+				border-color: transparent;
+				border-style: solid;
+				border-width: $popover-arrow-width + 2;
+				display: block;
+				height: 0;
+				position: absolute;
+				width: 0;
+				z-index: -1;
+			}
+
+			&.bottom > .arrow:before {
+				@if ($popover-box-shadow-y < 0) {
+					border-bottom-color: $popover-box-shadow-bg;
+					border-top-width: 0;
+					content: '';
+					margin-left: -$popover-arrow-width - $popover-box-shadow-x;
+					top: $popover-box-shadow-y - 2 - $popover-box-shadow-spread;
+				}
+			}
+
+			&.left > .arrow:before {
+				@if ($popover-box-shadow-x > 0) {
+					border-left-color: $popover-box-shadow-bg;
+					border-right-width: 0;
+					bottom: -$popover-arrow-width - $popover-box-shadow-y;
+					content: '';
+					right: -$popover-box-shadow-x - 2 - $popover-box-shadow-spread;
+				}
+			}
+
+			&.right > .arrow:before {
+				@if ($popover-box-shadow-x < 0) {
+					border-left-width: 0;
+					border-right-color: $popover-box-shadow-bg;
+					bottom: -$popover-arrow-width - $popover-box-shadow-y;
+					content: '';
+					left: $popover-box-shadow-x - 2 - $popover-box-shadow-spread;
+				}
+			}
+
+			&.top > .arrow:before {
+				@if ($popover-box-shadow-y > 1) {
+					border-bottom-width: 0;
+					border-top-color: $popover-box-shadow-bg;
+					bottom: -$popover-box-shadow-y - 2 - $popover-box-shadow-spread;
+					content: '';
+					margin-left: -$popover-arrow-width + $popover-box-shadow-x;
+				}
+			}
+		}
+	}
+}

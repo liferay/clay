@@ -1,0 +1,27 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$nav-link-padding-horizontal: 16px !default;
+$nav-link-padding-vertical: 9px !default;
+
+// Skin
+
+$nav-heading-color: $brand-default !default;
+
+$nav-link-color: #2B4259 !default;
+
+$nav-link-hover-bg: transparent !default;
+
+$nav-disabled-link-color: #C5CDD0 !default;
+$nav-disabled-link-hover-color: $nav-disabled-link-color !default;
+
+$nav-collapse-icon-closed: "\f0da" !default;
+$nav-collapse-icon-open: "\f0d7" !default;
+
+$nav-nested-padding-horizontal: 12px !default;

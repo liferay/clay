@@ -1,0 +1,36 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin color-dropdown-toggle-link($color: $link-color, $focus-color: $link-hover-color, $hover-color: $link-hover-color) {
+	.dropdown-toggle {
+		color: $color;
+
+		&:focus {
+			color: $focus-color;
+		}
+
+		&:hover {
+			color: $hover-color;
+		}
+	}
+}
+
+@mixin color-dropdown-menu-links($color: $dropdown-link-color, $focus-color: $dropdown-link-active-color, $hover-color: $dropdown-link-hover-color) {
+	.dropdown-menu {
+		a {
+			color: $color;
+
+			&:focus {
+				color: $focus-color;
+			}
+
+			&:hover {
+				color: $hover-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,98 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Calculates text-indent of data-label-on and data-label-off
+// @param $toggle-switch-width - Width of switch bar
+// @param $toggle-switch-padding - Space between button and bar
+
+@function set-data-label-text-position($toggle-switch-width, $toggle-switch-padding) {
+	@if $toggle-switch-padding < 0 {
+		@return $toggle-switch-width + abs($toggle-switch-padding);
+	}
+
+	@return $toggle-switch-width;
+}
+
+// Color toggle-switch-bar
+// @param $off-bg - Switch bar off background-color
+// @param $off-border - Switch bar off border-color
+// @param $on-bg - Switch bar on background-color
+// @param $on-border - Switch bar on border-color
+
+@mixin color-toggle-switch-bar($off-bg, $off-border: $off-bg, $on-bg: $off-bg, $on-border: $off-border) {
+	@warn "Lexicon's `color-toggle-switch-bar($off-bg, $off-border: $off-bg, $on-bg: $off-bg, $on-border: $off-border)` mixin is deprecated as of v1.0.11 and will be removed in v2.0.0.";
+
+	&:empty ~ .toggle-switch-bar {
+		&:before {
+			background-color: $off-bg;
+			border: $toggle-switch-bar-border-width solid $off-border;
+		}
+	}
+
+	&:checked ~ .toggle-switch-bar {
+		&:before {
+			background-color: $on-bg;
+			border: $toggle-switch-bar-border-width solid $on-border;
+		}
+	}
+}
+
+// Color toggle-switch-button
+// @param $button-off-bg - Switch button off background-color
+// @param $button-off-border - Switch button off border-color
+// @param $button-on-bg - Switch button on background-color
+// @param $button-on-border - Switch button on border-color
+
+@mixin color-toggle-switch-button($button-off-bg, $button-off-border: $button-off-bg, $button-on-bg: $button-off-bg, $button-on-border: $button-off-border) {
+	@warn "Lexicon's `color-toggle-switch-button($button-off-bg, $button-off-border: $button-off-bg, $button-on-bg: $button-off-bg, $button-on-border: $button-off-border)` mixin is deprecated as of v1.0.11 and will be removed in v2.0.0.";
+
+	&:empty ~ .toggle-switch-bar {
+		&:after {
+			background-color: $button-off-bg;
+			border: $toggle-switch-button-border-width solid $button-off-border;
+		}
+	}
+
+	&:checked ~ .toggle-switch-bar {
+		&:after {
+			background-color: $button-on-bg;
+			border: $toggle-switch-button-border-width solid $button-on-border;
+		}
+	}
+}
+
+// Color icon in toggle-switch-bar
+// @param $off-color - Switch bar off icon font color
+// @param $on-color - Switch bar on icon font color
+
+@mixin color-toggle-switch-bar-icon($off-color, $on-color: $off-color) {
+	@warn "Lexicon's `color-toggle-switch-bar-icon($off-color, $on-color: $off-color)` mixin is deprecated as of v1.0.11 and will be removed in v2.0.0.";
+
+	&:empty ~ .toggle-switch-bar .toggle-switch-icon {
+		color: $off-color;
+	}
+
+	&:checked ~ .toggle-switch-bar .toggle-switch-icon {
+		color: $on-color;
+	}
+}
+
+// Color icon in toggle-switch-button
+// @param $off-color - Switch button off icon font color
+// @param $on-color - Switch button on icon font color
+
+@mixin color-toggle-switch-button-icon($off-color, $on-color: $off-color) {
+	@warn "Lexicon's `color-toggle-switch-button-icon($off-color, $on-color: $off-color)` mixin is deprecated as of v1.0.11 and will be removed in v2.0.0.";
+
+	&:empty ~ .toggle-switch-bar .toggle-switch-icon.button-icon {
+		color: $off-color;
+	}
+
+	&:checked ~ .toggle-switch-bar .toggle-switch-icon.button-icon {
+		color: $on-color;
+	}
+}

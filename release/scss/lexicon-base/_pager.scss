@@ -1,0 +1,65 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@if (variable-exists(atlas-theme)) {
+	.pager {
+		li > a {
+			border-radius: $pager-border-radius;
+			border: $pager-border-width solid $pager-border;
+			color: $pager-color;
+			line-height: $pager-item-height;
+			padding: $pager-padding-base-vertical $pager-padding-base-horizontal;
+
+			&:focus,
+			&:hover {
+				background-color: $pager-hover-bg;
+				border-color: $pager-hover-border;
+				color: $pager-hover-color;
+			}
+		}
+
+		li > span {
+			border: $pager-border-width solid $pager-border;
+			border-radius: $pager-border-radius;
+			line-height: $pager-item-height;
+			padding: $pager-padding-base-vertical $pager-padding-base-horizontal;
+		}
+
+		.disabled {
+			> a,
+			> a:focus,
+			> a:hover,
+			> span {
+				background-color: $pager-disabled-bg;
+				border-color: $pager-disabled-border;
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.pager-lg {
+		li {
+			> a,
+			> span {
+				font-size: $pager-lg-font-size;
+				line-height: $pager-lg-item-height;
+				padding: $pager-lg-padding-vertical $pager-lg-padding-horizontal;
+			}
+		}
+	}
+
+	.pager-sm {
+		li {
+			> a,
+			> span {
+				font-size: $pager-sm-font-size;
+				line-height: $pager-sm-item-height;
+				padding: $pager-sm-padding-vertical $pager-sm-padding-horizontal;
+			}
+		}
+	}
+}

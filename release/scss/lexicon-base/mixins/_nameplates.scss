@@ -1,0 +1,40 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin color-nameplate-label($bg, $color: $text-color) {
+	background-color: $bg;
+	color: $color;
+}
+
+@mixin nameplate-label-autofit($media-feature) {
+	@media ($media-feature) {
+		&,
+		.nameplate-label {
+			margin-right: 0;
+		}
+
+		.nameplate-field {
+			width: 1%;
+		}
+
+		.nameplate-label-text {
+			left: 5px;
+			max-width: none;
+			position: absolute;
+			right: 5px;
+			text-align: left;
+			top: auto;
+
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+
+		.nameplate-label-more .nameplate-label-text {
+			text-align: center;
+		}
+	}
+}

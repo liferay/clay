@@ -1,0 +1,136 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.nav-tabs {
+	> li {
+		&[class*='col-'] {
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+
+			&:first-child {
+				> .dropdown-menu {
+					margin-left: 0;
+				}
+			}
+
+			&:last-child {
+				float: right;
+			}
+
+			> a {
+				margin-left: 2px;
+				margin-right: 0;
+
+				@include text-overflow();
+			}
+
+			> .dropdown-menu {
+				margin-left: 2px;
+			}
+		}
+
+		&:first-child > a {
+			margin-left: 0;
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	.nav-tabs .open > a {
+		&,
+		&:focus,
+		&:hover {
+			border-color: transparent transparent $nav-tabs-border-color transparent;
+		}
+	}
+}
+
+.nav-tabs.nav-justified {
+	> li > a {
+		margin-left: 0;
+	}
+}
+
+// Nav Tabs Default
+
+.nav-tabs-default {
+	border-bottom-color: transparent;
+
+	@if (variable-exists(atlas-theme)) {
+		> li {
+			padding-bottom: $nav-tabs-default-padding-vertical;
+			padding-top: $nav-tabs-default-padding-vertical;
+
+			@media (min-width: $grid-float-breakpoint) {
+				padding-bottom: $nav-tabs-default-desktop-padding-vertical;
+				padding-top: $nav-tabs-default-desktop-padding-vertical;
+			}
+		}
+	}
+
+	> li:first-child {
+		&,
+		&.open,
+		&.active {
+			> a {
+				&,
+				&:focus,
+				&:hover {
+					border-left-color: transparent;
+				}
+			}
+		}
+	}
+
+	> li > a {
+		border-left-color: $nav-tabs-border-color;
+		border-radius: 0;
+		border-width: 0 0 0 1px;
+		margin-right: 0;
+
+		@if (variable-exists(atlas-theme)) {
+			line-height: $nav-tabs-default-line-height;
+			padding-bottom: 0;
+			padding-top: 0;
+
+			@media (min-width: $grid-float-breakpoint) {
+				line-height: $nav-tabs-default-desktop-line-height;
+			}
+		}
+
+		&:hover {
+			border-color: transparent transparent transparent $nav-tabs-border-color;
+		}
+	}
+
+	> li.active > a {
+		&,
+		&:focus,
+		&:hover {
+			@if (variable-exists(atlas-theme)) {
+				background-color: transparent;
+			}
+
+			border-color: transparent transparent transparent $nav-tabs-border-color;
+			border-width: 0 0 0 1px;
+		}
+	}
+
+	.open > a {
+		&,
+		&:focus,
+		&:hover {
+			@if (variable-exists(atlas-theme)) {
+				border-left-color: $nav-tabs-border-color;
+			}
+			@else {
+				border-color: transparent transparent transparent $nav-tabs-border-color;
+			}
+		}
+	}
+}

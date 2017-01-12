@@ -1,0 +1,248 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+input[type="checkbox"],
+input[type="radio"] {
+	cursor: pointer;
+}
+
+fieldset {
+	word-wrap: break-word;
+
+	@-moz-document url-prefix() { // FF Fieldset workaround
+		display: table-cell;
+	}
+}
+
+label,
+.control-label {
+	.lexicon-icon {
+		@extend %scale-lexicon-icon;
+	}
+
+	.reference-mark {
+		@if ($input-label-reference-mark-spacer > 0) {
+			margin-left: $input-label-reference-mark-spacer;
+			margin-right: $input-label-reference-mark-spacer;
+		}
+
+		vertical-align: $input-label-reference-mark-vertical-alignment;
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	label,
+	.control-label {
+		color: $input-label-color;
+		font-size: $input-label-font-size;
+		font-weight: 500;
+		margin-bottom: 2px;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $input-label-desktop-font-size;
+		}
+
+		&.disabled {
+			opacity: 0.5;
+		}
+
+		&.focus {
+			color: $input-label-focus-color;
+		}
+	}
+
+	select.form-control {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		background-image: lx-icon(caret-double-l, $input-border);
+		background-image: none \9;
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-size: 18px auto;
+		padding-bottom: 0;
+		padding-right: 18px;
+		padding-right: 0 \9;
+		padding-top: 0;
+
+		&:focus {
+			background-image: lx-icon(caret-double-l, $input-border-focus);
+			background-image: none \9;
+			padding-right: 0 \9;
+		}
+
+		&::-ms-expand {
+			display: none;
+		}
+	}
+}
+
+.form-control {
+	border-width: $input-border-width;
+
+	@if (variable-exists(atlas-theme)) {
+		box-shadow: $input-box-shadow;
+		font-size: $input-font-size;
+		height: $input-mobile-height-base;
+		padding: $input-padding-vertical $input-padding-horizontal;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $input-desktop-font-size;
+			height: $input-height-base;
+		}
+	}
+
+	@media (max-width: $grid-float-breakpoint) {
+		font-size: 16px;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		&:focus {
+			box-shadow: $input-box-shadow-focus;
+			color: $input-color-focus;
+
+			@include placeholder($input-color-placeholder-focus);
+		}
+
+		&::-ms-clear,
+		&::-ms-reveal {
+			display: none;
+			height: 0;
+			width: 0;
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	// Disabled State
+
+	.form-control {
+		fieldset[disabled] &,
+		&[disabled],
+		&select[disabled] {
+			border-color: $input-border-disabled;
+			color: $input-border;
+			opacity: 0.5;
+
+			@include placeholder;
+		}
+	}
+
+	fieldset[disabled] label {
+		opacity: 0.5;
+	}
+
+	select[disabled].form-control > option {
+		@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
+			color: $input-border;
+		}
+	}
+
+	// Readonly State
+
+	.form-control[readonly] {
+		background-color: $input-readonly-bg;
+		border-color: $input-readonly-border;
+		color: $input-readonly-color;
+		cursor: default;
+	}
+
+	// Input Sizes
+
+	.form-control {
+		&.input-lg {
+			border-radius: $input-border-radius-large;
+			font-size: $input-font-size-large;
+			height: $input-mobile-height-large;
+
+			@media (min-width: $grid-float-breakpoint) {
+				height: $input-height-large;
+			}
+		}
+
+		&.input-sm {
+			border-radius: $input-border-radius-small;
+			font-size: $input-font-size-small;
+			height: $input-mobile-height-small;
+
+			@media (min-width: $grid-float-breakpoint) {
+				height: $input-height-small;
+			}
+		}
+	}
+
+	// Checkbox and Radio Styles
+
+	.checkbox,
+	.radio {
+		label {
+			font-weight: 500;
+			padding-left: 25px;
+
+			@media (-webkit-min-device-pixel-ratio: 0) {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	.checkbox input[type="checkbox"],
+	.checkbox-inline input[type="checkbox"] {
+		height: 20px;
+		margin-left: -25px;
+		margin-top: 0;
+		top: 50%;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 20px;
+
+		@media (-webkit-min-device-pixel-ratio: 0) {
+			height: 15px;
+			margin-left: -20px;
+			width: 14px;
+		}
+	}
+
+	.radio input[type="radio"],
+	.radio-inline input[type="radio"] {
+		height: 20px;
+		margin-left: -25px;
+		margin-top: 0;
+		top: 50%;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 20px;
+
+		@media (-webkit-min-device-pixel-ratio: 0) {
+			height: 15px;
+			margin-left: -20px;
+			width: 14px;
+		}
+	}
+
+	.checkbox-card,
+	.radio-card {
+		label {
+			padding-left: 0;
+		}
+	}
+
+	.checkbox-card input[type="checkbox"],
+	.radio-card input[type="radio"] {
+		margin-left: 0;
+	}
+
+	// Form Control Feedback
+
+	.form-control-feedback {
+		@include monospace($input-mobile-height-base);
+
+		@media (min-width: $grid-float-breakpoint) {
+			@include monospace($input-height-base);
+		}
+	}
+}

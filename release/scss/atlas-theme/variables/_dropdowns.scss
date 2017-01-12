@@ -1,0 +1,55 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$dropdown-border-width: 1px !default;
+
+$dropdown-checkbox-label-spacer: 32px !default;
+
+$dropdown-wide-width: 500px !default;
+
+$dropdown-font-size: $font-size-base !default;
+$dropdown-font-size-desktop: $font-size-desktop-base !default;
+
+$dropdown-link-padding: 8px 20px !default;
+
+$dropdown-header-font-size: $font-size-small !default;
+$dropdown-header-font-size-desktop: $font-size-desktop-small !default;
+
+// Deprecated `$dropdown-margin-horizontal` as of v1.0.9 and will be removed in v2.0.0
+$dropdown-margin-horizontal: 15px !default;
+// Deprecated `$dropdown-margin-vertical` as of v1.0.9 and will be removed in v2.0.0
+$dropdown-margin-vertical: 15px !default;
+
+$dropdown-menu-desktop-max-width: 300px !default;
+$dropdown-menu-max-width: 230px !default;
+
+// Skin
+
+$dropdown-bg: #FFF !default;
+$dropdown-box-shadow: 0 1px 1px 0 transparentize(#000, 0.7) !default;
+
+$dropdown-border: transparentize(#DCE0E3, 0.5) !default;
+$dropdown-fallback-border: #DCE0E3 !default;
+
+$dropdown-divider-bg: $dropdown-border !default;
+
+$dropdown-link-color: $brand-default !default;
+
+$dropdown-link-hover-bg: #F7FAFA !default;
+$dropdown-link-hover-color: $brand-default !default;
+
+$dropdown-link-active-bg: $dropdown-link-hover-bg !default;
+$dropdown-link-active-color: $brand-primary !default;
+
+$dropdown-link-disabled-color: #CACDD2 !default;
+
+$dropdown-header-color: #B0B4BB !default;
+
+// Deprecated `$dropdown-arrow-color` as of v1.0.9 and will be removed in v2.0.0
+$dropdown-arrow-color: $dropdown-bg !default;

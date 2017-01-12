@@ -1,0 +1,23 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin color-figcaption ($bgColor: $figcaption-bg, $alpha: $figcaption-bg-alpha, $color: $figcaption-color) {
+	background-color: $bgColor;
+	background-color: rgba($bgColor, $alpha);
+	color: $color;
+}
+
+@mixin style-figcaption($bgColor: $figcaption-bg, $alpha: $figcaption-bg-alpha, $color: $figcaption-color) {
+	@warn "Lexicon's `style-figcaption($bgColor: $figcaption-bg, $alpha: $figcaption-bg-alpha, $color: $figcaption-color)` mixin is deprecated as of v1.0.10 and will be removed in v2.0.0.";
+
+	@include color-figcaption($bgColor, $alpha, $color);
+
+	font-weight: 300;
+	padding: 10px 15px;
+	position: absolute;
+	width: 100%;
+}

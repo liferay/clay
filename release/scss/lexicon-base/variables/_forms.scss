@@ -1,0 +1,24 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$input-border-bottom-width: 1px !default;
+$input-border-left-width: 1px !default;
+$input-border-right-width: 1px !default;
+$input-border-top-width: 1px !default;
+$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
+
+$input-group-constrain-line-height: $input-height-base - $input-border-top-width - $input-border-bottom-width !default;
+
+$input-group-constrain-lg-line-height: $input-height-large - $input-border-top-width - $input-border-bottom-width !default;
+$input-group-constrain-sm-line-height: $input-height-small - $input-border-top-width - $input-border-bottom-width !default;
+
+$input-label-reference-mark-spacer: 0 !default;
+$input-label-reference-mark-vertical-alignment: top !default;
+
+$zindex-input-group-hover: 3 !default;
+
+$zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4

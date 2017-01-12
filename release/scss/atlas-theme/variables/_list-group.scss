@@ -1,0 +1,52 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$list-group-border-width: 0 !default;
+
+$list-group-header-close-border-width: 1px !default;
+$list-group-header-open-border-width: 2px !default;
+
+$list-group-header-icon-font-size: 20px !default;
+
+$tabular-list-group-border-width: 1px !default;
+$tabular-list-group-item-height: 110px !default;
+$tabular-list-group-vertical-alignment: top !default;
+
+// Skin
+
+$list-group-border-radius: 0 !default;
+
+$list-group-border: lighten($brand-default, 30%) !default;
+$list-group-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) !default;
+
+$list-group-link-color: $text-color !default;
+$list-group-link-hover-color: $list-group-link-color !default;
+
+$list-group-active-bg: #FCFEFF !default;
+$list-group-active-border: $brand-primary !default;
+$list-group-active-color: $text-color !default;
+
+$list-group-header-bg: #F5F8FA !default;
+$list-group-header-color: $brand-default !default;
+
+$list-group-header-close-border-color: $list-group-border !default;
+$list-group-header-open-border-color: $brand-primary !default;
+
+// Deprecated `$list-group-card-active-bg` as of v1.0.11 and will be removed in v2.0.0
+$list-group-card-active-bg: $list-group-active-bg !default;
+// Deprecated `$list-group-card-active-border` as of v1.0.11 and will be removed in v2.0.0
+$list-group-card-active-border: $list-group-active-border !default;
+// Deprecated `$list-group-card-active-border-width` as of v1.0.11 and will be removed in v2.0.0
+$list-group-card-active-border-width: 2px !default;
+// Deprecated `$list-group-card-active-color` as of v1.0.11 and will be removed in v2.0.0
+$list-group-card-active-color: $list-group-active-color !default;
+
+$list-group-item-dropdown-toggle-color: $brand-default !default;
+
+$list-group-item-active-dropdown-toggle-color: $list-group-item-dropdown-toggle-color !default;

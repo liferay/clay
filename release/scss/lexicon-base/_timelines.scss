@@ -1,0 +1,154 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.timeline {
+	@extend .list-unstyled;
+
+	padding-left: $timeline-outer-spacing;
+
+	.panel,
+	.panel-group {
+		margin-bottom: 0;
+	}
+}
+
+.timeline-icon {
+	background-color: $timeline-icon-bg;
+	border: $timeline-icon-border-width solid $timeline-icon-border;
+	border-radius: $timeline-icon-border-radius;
+	display: block;
+
+	@include monospace($timeline-icon-size);
+}
+
+.timeline-increment-label {
+	color: $timeline-increment-label-color;
+}
+
+.timeline-item {
+	padding-bottom: $timeline-item-padding-bottom;
+	padding-left: $timeline-inner-spacing;
+	padding-top: $timeline-item-padding-top;
+	position: relative;
+
+	&:before {
+		background-color: $timeline-border;
+		bottom: 0;
+		content: '';
+		display: block;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: $timeline-border-width;
+	}
+
+	&.active {
+		.timeline-icon {
+			background-color: $timeline-icon-active-bg;
+			border-color: $timeline-icon-active-border;
+		}
+	}
+
+	.panel,
+	.panel-heading {
+		position: relative;
+	}
+
+	.panel {
+		.timeline-increment-icon {
+			margin-left: -$panel-border-left-width;
+		}
+	}
+
+	.timeline-increment-icon {
+		left: -($timeline-inner-spacing - $timeline-border-modifier);
+		position: absolute;
+		top: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+}
+
+// Timeline Right
+
+.timeline-right {
+	padding-left: 0;
+	padding-right: $timeline-outer-spacing;
+
+	.timeline-item {
+		@include timeline-item-reverse;
+	}
+}
+
+.timeline-right-xs-only {
+	@media (max-width: $screen-xs-max) {
+		padding-left: 0;
+		padding-right: $timeline-outer-spacing;
+
+		.timeline-item {
+			@include timeline-item-reverse;
+		}
+	}
+}
+
+// Timeline Center
+
+.timeline-center {
+	@media (min-width: $grid-float-breakpoint) {
+		padding-left: 0;
+
+		.timeline-item {
+			margin-left: 50%;
+			width: 50%;
+
+			.timeline-increment-label {
+				left: -100%;
+				margin-left: -($timeline-inner-spacing * 2);
+				position: absolute;
+				text-align: right;
+				top: 50%;
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+				width: 100%;
+			}
+		}
+
+		.timeline-item.timeline-item-reverse {
+			@include timeline-item-reverse;
+
+			margin-left: 0;
+
+			.timeline-increment-label {
+				margin-left: auto;
+				margin-right: -($timeline-inner-spacing * 2);
+				right: -100%;
+				text-align: left;
+			}
+		}
+	}
+}
+
+.timeline-even .timeline-item:nth-of-type(even),
+.timeline-odd .timeline-item:nth-of-type(odd) {
+	@media (min-width: $grid-float-breakpoint) {
+		@include timeline-item-reverse;
+
+		margin-left: 0;
+
+		.timeline-increment-label {
+			margin-left: auto;
+			margin-right: -($timeline-inner-spacing * 2);
+			right: -100%;
+			text-align: left;
+		}
+	}
+}
+
+.timeline-spacing-xl {
+	@include timeline-spacing(25px, 50px, 15px);
+}

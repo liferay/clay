@@ -1,0 +1,123 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.badge {
+	border-radius: 100px;
+	font-size: $badge-font-size;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	max-width: 100%;
+	padding-bottom: $badge-padding-bottom;
+	padding-left: $badge-padding-left;
+	padding-right: $badge-padding-right;
+	padding-top: $badge-padding-top;
+	white-space: normal;
+	word-wrap: break-word;
+
+	@if (variable-exists(badge-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $badge-desktop-font-size;
+		}
+	}
+}
+
+.badge-lg {
+	font-size: $badge-lg-font-size;
+	padding-bottom: $badge-lg-padding-bottom;
+	padding-left: $badge-lg-padding-left;
+	padding-right: $badge-lg-padding-right;
+	padding-top: $badge-lg-padding-top;
+
+	@if (variable-exists(badge-lg-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $badge-lg-desktop-font-size;
+		}
+	}
+}
+
+.badge-sm {
+	font-size: $badge-sm-font-size;
+	padding-bottom: $badge-sm-padding-bottom;
+	padding-left: $badge-sm-padding-left;
+	padding-right: $badge-sm-padding-right;
+	padding-top: $badge-sm-padding-top;
+
+	@if (variable-exists(badge-sm-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $badge-sm-desktop-font-size;
+		}
+	}
+}
+
+// Lexicon Icons in Badges
+
+.badge .lexicon-icon {
+	height: $badge-lexicon-icon-height;
+	margin-left: 2px;
+	width: $badge-lexicon-icon-width;
+}
+
+.badge-lg .lexicon-icon {
+	height: $badge-lg-lexicon-icon-height;
+	margin-left: 4px;
+	width: $badge-lg-lexicon-icon-width;
+}
+
+.badge-sm .lexicon-icon {
+	height: $badge-sm-lexicon-icon-height;
+	width: $badge-sm-lexicon-icon-width;
+}
+
+// Skins
+
+.badge {
+	a {
+		color: $badge-color;
+
+		&:focus,
+		&:hover {
+			color: $badge-link-hover-color;
+			text-decoration: none;
+		}
+	}
+}
+
+.badge-danger {
+	background-color: $brand-danger;
+}
+
+@if (variable-exists(atlas-theme)) {
+	.badge-default {
+		background-color: $badge-default-bg;
+		color: $badge-default-color;
+	}
+
+	a.badge-default,
+	.badge-default a {
+		&,
+		&:focus,
+		&:hover {
+			color: $badge-default-link-color;
+		}
+	}
+}
+
+.badge-info {
+	background-color: $brand-info;
+}
+
+.badge-primary {
+	background-color: $brand-primary;
+}
+
+.badge-success {
+	background-color: $brand-success;
+}
+
+.badge-warning {
+	background-color: $brand-warning;
+}

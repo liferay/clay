@@ -1,0 +1,782 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Basic Search
+
+.basic-search {
+	float: right;
+	max-width: none;
+	padding: $navbar-form-padding-vertical $navbar-form-padding-horizontal;
+
+	@media (min-width: $grid-float-breakpoint) {
+		max-width: 220px;
+	}
+
+	&.open {
+		z-index: 10;
+	}
+
+	.form-control {
+		float: right;
+		width: 100%;
+	}
+
+	.input-group-input {
+		.basic-search-slider .form-control {
+			border-bottom-right-radius: 0;
+			border-top-right-radius: 0;
+		}
+
+		.form-control {
+			border-bottom-left-radius: $input-border-radius;
+			border-top-left-radius: $input-border-radius;
+		}
+	}
+}
+
+.basic-search-slider {
+	left: 101%;
+	position: relative;
+
+	@media (min-width: $grid-float-breakpoint) {
+		left: 0;
+	}
+
+	.basic-search-close {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+		left: 0;
+		position: absolute;
+		z-index: $zindex-basic-search-close;
+
+		@media (min-width: $grid-float-breakpoint) {
+			display: none;
+			line-height: normal;
+		}
+
+		&:focus {
+			border-color: $input-border-focus;
+			outline: none;
+		}
+
+		.basic-search.focus & {
+			@if not (variable-exists(atlas-theme)) {
+				border-right-color: $input-border-focus;
+			}
+		}
+	}
+
+	.basic-search.open & {
+		left: 0;
+	}
+}
+
+.basic-search {
+	.input-group-input {
+		text-align: right;
+
+		.form-control {
+			min-width: 100px;
+		}
+	}
+}
+
+.basic-search-autofit {
+	float: none;
+	max-width: none;
+}
+
+.basic-search-transition {
+	&:after {
+		transition: all 0.1s ease;
+	}
+
+	.basic-search-slider {
+		transition: left 0.5s ease, right 0.5s ease;
+	}
+}
+
+// Collapse Basic Search
+
+.collapse-basic-search {
+	position: relative;
+
+	@media (min-width: $grid-float-breakpoint) {
+		&.navbar-no-collapse {
+			.navbar-nav:first-child {
+				float: left;
+			}
+		}
+
+		.basic-search-autofit {
+			float: none;
+			max-width: none;
+		}
+	}
+
+	.basic-search {
+		display: block;
+		left: 0;
+		margin: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		@media (min-width: $grid-float-breakpoint) {
+			@if (variable-exists(atlas-theme)) {
+				margin-right: 12px;
+			}
+
+			position: static;
+		}
+
+		&.basic-search-transition,
+		&.open {
+			.input-group-input {
+				visibility: visible;
+			}
+		}
+
+		&.open .basic-search-close {
+			@media (min-width: $grid-float-breakpoint) {
+				display: none;
+			}
+		}
+
+		&.basic-search-transition .input-group-btn .btn:first-child,
+		&.open .input-group-btn .btn:first-child {
+			@media (max-width: $grid-float-breakpoint-max) {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
+
+		.input-group-btn .btn:first-child {
+			@media (max-width: $grid-float-breakpoint-max) {
+				border-bottom-left-radius: $btn-border-radius-base;
+				border-top-left-radius: $btn-border-radius-base;
+			}
+		}
+
+		.input-group-input {
+			overflow: hidden;
+			visibility: hidden;
+
+			@media (min-width: $grid-float-breakpoint) {
+				overflow: visible;
+				visibility: visible;
+			}
+
+			.form-control {
+				@media (min-width: $grid-float-breakpoint) {
+					left: auto;
+				}
+			}
+		}
+
+		.form-control {
+			padding-left: 47px;
+
+			@media (min-width: $grid-float-breakpoint) {
+				padding-left: 5px;
+			}
+		}
+	}
+
+	.navbar-nav:first-child {
+		float: none;
+
+		@media (min-width: $grid-float-breakpoint) {
+			float: left;
+		}
+	}
+
+	.navbar-nav > li > a,
+	.navbar-toggle {
+		z-index: 1;
+	}
+}
+
+// Navbar Basic Search
+
+@if (variable-exists(atlas-theme)) {
+	.navbar .basic-search {
+		&:after {
+			background-color: $input-border;
+			content: '';
+			display: block;
+			height: 0;
+			overflow: hidden;
+			position: relative;
+			top: $navbar-border-bottom-width;
+			z-index: $zindex-basic-search-close;
+		}
+
+		&.focus:after {
+			background-color: $input-border-focus;
+
+			@media (min-width: $grid-float-breakpoint) {
+				height: $navbar-link-active-bottom-border-width;
+				margin-top: -$navbar-link-active-bottom-border-width;
+			}
+		}
+
+		&.open {
+			&:after {
+				height: $navbar-link-active-bottom-border-width;
+				margin-top: -$navbar-link-active-bottom-border-width;
+
+				@media (min-width: $grid-float-breakpoint) {
+					background-color: transparent;
+				}
+			}
+
+			&.focus:after {
+				@media (min-width: $grid-float-breakpoint) {
+					background-color: $input-border-focus;
+				}
+			}
+		}
+	}
+
+	.navbar.collapse-basic-search .basic-search {
+		padding: 0;
+
+		.btn-default {
+			background-color: $body-bg;
+			border-radius: 0;
+			border-width: 0;
+			color: $brand-default;
+			height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+			padding-left: 12px;
+			padding-right: 12px;
+
+			@media (min-width: $grid-float-breakpoint) {
+				height: $navbar-desktop-height - $navbar-border-bottom-width - $navbar-border-top-width;
+			}
+
+			&:focus {
+				color: $brand-primary;
+				outline: none;
+			}
+		}
+
+		.form-control {
+			background-color: $body-bg;
+			border-width: 0;
+			height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+
+			@media (min-width: $grid-float-breakpoint) {
+				height: $navbar-desktop-height - $navbar-border-bottom-width - $navbar-border-top-width;
+			}
+
+			@media (max-width: $grid-float-breakpoint-max) {
+				padding-left: 45px;
+			}
+		}
+
+		.input-group-btn {
+			padding-right: 12px;
+
+			@media (min-width: $grid-float-breakpoint) {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.navbar .basic-search-close {
+		height: $navbar-height;
+	}
+}
+
+// Navbar
+
+.navbar {
+	.container-fluid-1280 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.nav-tabs {
+		border-width: 0;
+
+		> li > a {
+			&,
+			&:focus,
+			&:hover {
+				border-radius: 0;
+				border-width: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	.navbar {
+		border-width: $navbar-border-width;
+		margin-bottom: 0;
+		min-height: $navbar-height;
+
+		@media (min-width: $grid-float-breakpoint) {
+			min-height: $navbar-desktop-height;
+		}
+	}
+
+	.navbar-nav {
+		> .active > a {
+			&:after {
+				@media (min-width: $grid-float-breakpoint) {
+					background-color: $navbar-link-active-highlight;
+					bottom: -$navbar-border-bottom-width;
+
+					@if not ($navbar-link-active-highlight == transparent) {
+						content: '';
+					}
+
+					display: block;
+					height: $navbar-link-active-bottom-border-width;
+					left: $navbar-desktop-padding-horizontal;
+					position: absolute;
+					right: $navbar-desktop-padding-horizontal;
+					width: auto;
+				}
+			}
+		}
+	}
+
+	.navbar-no-collapse .navbar-nav {
+		> .active > a {
+			&:after {
+				background-color: $navbar-link-active-highlight;
+				bottom: -$navbar-border-bottom-width;
+
+				@if not ($navbar-link-active-highlight == transparent) {
+					content: '';
+				}
+
+				display: block;
+				height: $navbar-link-active-bottom-border-width;
+				left: $navbar-desktop-padding-horizontal;
+				position: absolute;
+				right: $navbar-desktop-padding-horizontal;
+				width: auto;
+			}
+		}
+	}
+}
+
+// Navbar Collapse
+
+.navbar-collapse {
+	@if (variable-exists(atlas-theme)) {
+		@media (min-width: $grid-float-breakpoint) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+.navbar-collapse-left {
+	@media (min-width: $grid-float-breakpoint) {
+		float: left;
+	}
+}
+
+.navbar .navbar-collapse:first-child,
+.navbar-collapse-absolute .navbar-collapse {
+	@media (max-width: $grid-float-breakpoint-max) {
+		background-color: $dropdown-bg;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 0 1px 1px 1px;
+
+		@if (variable-exists(navbar-collapse-absolute-box-shadow)) {
+			box-shadow: $navbar-collapse-absolute-box-shadow;
+		}
+
+		left: -$navbar-border-left-width;
+		margin-top: 1px;
+		position: absolute;
+		right: -$navbar-border-right-width;
+		top: 100%;
+		z-index: $zindex-navbar;
+	}
+}
+
+// Navbar No Collapse
+
+.navbar-no-collapse .navbar-nav {
+	float: left;
+
+	@if (variable-exists(atlas-theme)) {
+		margin: 0;
+	}
+	@else {
+		margin: 0 $navbar-padding-horizontal;
+	}
+
+	> li {
+		float: left;
+	}
+
+	.dropdown-menu {
+		background-color: $dropdown-bg;
+		border: 1px solid $dropdown-border;
+		box-shadow: $dropdown-box-shadow;
+		position: absolute;
+	}
+
+	.open .dropdown-menu {
+		> li > a {
+			@media (max-width: $grid-float-breakpoint-max) {
+				color: $dropdown-link-color;
+				padding: $dropdown-link-padding;
+
+				&:focus,
+				&:hover {
+					background-color: $dropdown-link-hover-bg;
+					color: $dropdown-link-hover-color;
+				}
+			}
+		}
+
+		.divider {
+			@media (max-width: $grid-float-breakpoint-max) {
+				@include nav-divider($dropdown-divider-bg);
+			}
+		}
+
+		.dropdown-header {
+			padding: $dropdown-link-padding;
+		}
+	}
+}
+
+// Navbar Form
+
+.navbar-form {
+	padding: $navbar-form-padding-vertical $navbar-form-padding-horizontal;
+
+	@media (min-width: $grid-float-breakpoint) {
+		margin: 0;
+
+		@if (variable-exists(atlas-theme)) {
+			padding-bottom: ($navbar-desktop-height - $input-height-base - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
+			padding-top: ($navbar-desktop-height - $input-height-base - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
+		}
+	}
+}
+
+// Navbar Header
+
+.navbar-header .input-group-input .form-control {
+	@media (min-width: $grid-float-breakpoint) {
+		max-width: none;
+		min-width: 0;
+	}
+}
+
+.navbar-header-left-xs {
+	@media (max-width: $grid-float-breakpoint-max) {
+		float: left;
+	}
+}
+
+.navbar-header-right-xs {
+	@media (max-width: $grid-float-breakpoint-max) {
+		float: right;
+	}
+}
+
+.navbar-header-right {
+	@media (min-width: $grid-float-breakpoint) {
+		float: right;
+	}
+}
+
+// Navbar Nav
+
+.navbar-nav {
+	@media (min-width: $grid-float-breakpoint) {
+		margin-right: $navbar-padding-horizontal;
+	}
+
+	&.navbar-right {
+		@media (min-width: $grid-float-breakpoint) {
+			margin-left: $navbar-padding-horizontal;
+			margin-right: 0;
+		}
+
+		&:last-child {
+			@media (min-width: $grid-float-breakpoint) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	> li > a {
+		@if (variable-exists(atlas-theme)) {
+			line-height: $navbar-link-line-height;
+			padding-bottom: $navbar-padding-vertical;
+			padding-top: $navbar-padding-vertical;
+
+			@media (min-width: $grid-float-breakpoint) {
+				line-height: $navbar-desktop-link-line-height;
+				padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
+			}
+		}
+		@else {
+			padding-bottom: ($navbar-height - $line-height-computed - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
+			padding-top: ($navbar-height - $line-height-computed - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
+		}
+	}
+}
+
+// Navbar Dropdowns
+
+@if (variable-exists(atlas-theme)) {
+	.navbar-nav {
+		@media (max-width: $grid-float-breakpoint-max) {
+			.dropdown-menu {
+				max-width: none;
+			}
+
+			.open .dropdown-menu {
+				padding: 0;
+
+				> li > a,
+				.dropdown-header {
+					padding: $navbar-padding-vertical $navbar-padding-horizontal;
+				}
+
+				.inline-scroller,
+				.linked-list {
+					li a {
+						padding: $navbar-padding-vertical $navbar-padding-horizontal;
+
+						&:focus,
+						&:hover {
+							color: $navbar-default-link-active-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Navbar Brand
+
+.navbar-brand {
+	height: auto;
+
+	@if (variable-exists(atlas-theme)) {
+		color: $nav-link-color;
+		line-height: $navbar-link-line-height;
+
+		@media (min-width: $grid-float-breakpoint) {
+			line-height: $navbar-desktop-link-line-height;
+			padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
+		}
+	}
+	@else {
+		padding-bottom: ($navbar-height - $line-height-computed - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
+		padding-top: ($navbar-height - $line-height-computed - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
+	}
+
+	&:focus {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+// Navbar Toggles
+
+.navbar-toggle {
+	height: $navbar-toggle-height;
+	margin-left: $navbar-padding-horizontal;
+	padding-bottom: 0;
+	padding-top: 0;
+
+	&:focus {
+		@include tab-focus;
+	}
+
+	.icon-bar {
+		background-color: $navbar-toggle-icon-bar-color;
+
+		@if (variable-exists(navbar-toggle-icon-bar-width)) {
+			width: $navbar-toggle-icon-bar-width;
+		}
+	}
+}
+
+.navbar-toggle-left {
+	float: left;
+}
+
+.navbar-toggle-page-name {
+	@if (variable-exists(atlas-theme)) {
+		border-radius: $navbar-border-radius;
+		border-width: 0;
+		height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+		margin: 0;
+		padding-left: $navbar-padding-horizontal;
+		padding-right: $navbar-padding-horizontal;
+
+		&:after {
+			background-color: $navbar-link-active-highlight;
+			bottom: -$navbar-border-bottom-width;
+
+			@if not ($navbar-link-active-highlight == transparent) {
+				content: '';
+			}
+
+			display: block;
+			height: $navbar-link-active-bottom-border-width;
+			left: $navbar-padding-horizontal;
+			position: absolute;
+			right: $navbar-padding-horizontal;
+		}
+	}
+}
+
+// Skin
+
+.navbar-default {
+	@if (variable-exists(atlas-theme)) {
+		border-width: $navbar-default-border-width;
+		min-height: $navbar-default-height;
+
+		@media (min-width: $grid-float-breakpoint) {
+			min-height: $navbar-default-desktop-height;
+		}
+	}
+}
+
+.navbar-default .navbar-collapse:first-child,
+.navbar-default.navbar-collapse-absolute .navbar-collapse {
+	@media (max-width: $grid-float-breakpoint-max) {
+		background-color: $navbar-default-bg;
+		border-color: $navbar-default-border;
+	}
+}
+
+.navbar-default {
+	.navbar-toggle {
+		color: $navbar-default-link-active-color;
+
+		.icon-bar {
+			background-color: $navbar-default-toggle-icon-bar-bg;
+		}
+	}
+}
+
+.navbar-default.collapse-basic-search .basic-search {
+	&.open {
+		background-color: if(variable-exists(atlas-theme), transparent, $navbar-default-bg);
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.btn-default,
+		.form-control {
+			background-color: $navbar-default-bg;
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	.navbar-default {
+		.navbar-nav {
+			> .active > a {
+				&:after {
+					@media (min-width: $grid-float-breakpoint) {
+						background-color: $navbar-default-link-active-highlight;
+
+						@if not ($navbar-default-link-active-highlight == transparent) {
+							content: '';
+						}
+					}
+				}
+			}
+		}
+
+		&.navbar-no-collapse .navbar-nav > .active > a:after,
+		.navbar-toggle-page-name:after {
+			background-color: $navbar-default-link-active-highlight;
+
+			@if not ($navbar-default-link-active-highlight == transparent) {
+				content: '';
+			}
+		}
+	}
+}
+
+// Navbar Inverse
+
+.navbar-inverse {
+	.navbar-collapse:first-child,
+	&.navbar-collapse-absolute .navbar-collapse {
+		@media (max-width: $grid-float-breakpoint-max) {
+			background-color: $navbar-inverse-bg;
+			border-color: $navbar-inverse-border;
+		}
+	}
+
+	.navbar-toggle {
+		color: $navbar-inverse-toggle-icon-bar-bg;
+
+		.icon-bar {
+			background-color: $navbar-inverse-toggle-icon-bar-bg;
+		}
+	}
+}
+
+.navbar-inverse.collapse-basic-search .basic-search {
+	&.open {
+		background-color: if(variable-exists(atlas-theme), transparent, $navbar-inverse-bg);
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.btn-default {
+			background-color: $navbar-inverse-bg;
+			color: $navbar-inverse-color;
+		}
+
+		.form-control {
+			background-color: $navbar-inverse-bg;
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	.navbar-inverse {
+		.navbar-nav {
+			> .active > a {
+				&:after {
+					@media (min-width: $grid-float-breakpoint) {
+						background-color: $navbar-inverse-link-active-highlight;
+
+						@if not ($navbar-inverse-link-active-highlight == transparent) {
+							content: '';
+						}
+					}
+				}
+			}
+		}
+
+		&.navbar-no-collapse .navbar-nav > .active > a:after,
+		.navbar-toggle-page-name:after {
+			background-color: $navbar-inverse-link-active-highlight;
+
+			@if not ($navbar-inverse-link-active-highlight == transparent) {
+				content: '';
+			}
+		}
+	}
+}

@@ -1,0 +1,344 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+th {
+	height: 20px;
+}
+
+.table {
+	> thead,
+	> tbody,
+	> tfoot {
+		tr td {
+			&:first-child {
+				> .checkbox,
+				> input[type="checkbox"] {
+					margin-bottom: 0;
+					margin-left: 7px;
+					margin-top: 0;
+				}
+			}
+
+			&:last-child {
+				> .dropdown {
+					margin-right: 7px;
+				}
+			}
+		}
+	}
+
+	thead .clamp-container {
+		bottom: $table-cell-padding;
+	}
+
+	th {
+		@if (variable-exists(atlas-theme)) {
+			font-size: $table-header-font-size;
+			font-weight: $table-header-font-weight;
+		}
+
+		height: 36px;
+	}
+
+	tr {
+		td,
+		th {
+			&:first-child {
+				.clamp-container {
+					left: $table-cell-gutters;
+				}
+			}
+
+			&:last-child {
+				.clamp-container {
+					right: $table-cell-gutters;
+				}
+			}
+		}
+	}
+
+	.clamp-container {
+		-ms-transform: none;
+		transform: none;
+	}
+}
+
+.table-cell-content {
+	display: table-cell;
+	max-width: 100px;
+	min-width: 100px;
+	position: relative;
+	width: auto;
+	word-break: break-all \9; // IE 8, 9
+	word-wrap: break-word;
+}
+
+.table-cell-field {
+	display: table-cell;
+	width: 1%;
+}
+
+.table-responsive {
+	-webkit-overflow-scrolling: touch;
+
+	.table .table-cell-content {
+		@media (max-width: $grid-float-breakpoint-max) {
+			white-space: normal;
+		}
+	}
+}
+
+// Table List Skin
+
+.table-list {
+	@if (variable-exists(atlas-theme)) {
+		color: $table-header-color;
+
+		a {
+			color: $table-list-link-color;
+		}
+	}
+
+	> thead > tr > td,
+	> thead > tr > th {
+		border-bottom-width: 0;
+	}
+
+	> tbody > tr {
+		height: $table-list-row-height;
+	}
+
+	> tbody > tr > td,
+	> tbody > tr > th,
+	> tfoot > tr > td,
+	> tfoot > tr > th {
+		@if (variable-exists(atlas-theme)) {
+			// Chrome rendering issue with responsive-tables and td position relative
+
+			background-color: $table-list-body-row-bg;
+		}
+
+		border-top-width: 0;
+		vertical-align: middle;
+	}
+
+	> tbody,
+	> tfoot {
+		td {
+			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
+		}
+
+		> tr:hover td {
+			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
+		}
+
+		> tr.active td {
+			box-shadow: inset 0 #{-$table-list-row-active-border-bottom-width} $table-list-row-active-border-color;
+		}
+	}
+
+	.checkbox,
+	.radio {
+		float: left;
+
+		label {
+			display: block;
+		}
+	}
+
+	thead .clamp-container {
+		-ms-transform: none;
+		transform: none;
+	}
+
+	&.table-valign-middle thead .clamp-container,
+	.clamp-container {
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	// Chrome rendering issue with responsive-tables and td position relative
+
+	.table-striped > tbody > tr:nth-of-type(odd) > td {
+		background-color: $table-bg-accent;
+	}
+
+	.table-hover > tbody > tr:hover > td {
+		background-color: $table-bg-hover;
+	}
+}
+
+// Table Helpers
+
+.table-autofit {
+	> thead,
+	> tbody {
+		> tr {
+			> th,
+			> td {
+				width: 1%;
+			}
+		}
+	}
+
+	.table-cell-content {
+		width: auto;
+	}
+}
+
+.table-heading-nowrap > thead > tr {
+	> th,
+	> td {
+		white-space: nowrap;
+	}
+}
+
+.table-responsive .table-heading-nowrap > thead > tr > .table-cell-content {
+	white-space: nowrap;
+}
+
+// Table Vertical Align
+
+.table-valign-bottom {
+	> thead > tr > th,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		vertical-align: bottom;
+	}
+
+	.clamp-container {
+		bottom: $table-cell-padding;
+
+		-ms-transform: none;
+		transform: none;
+	}
+}
+
+.table-valign-middle {
+	> thead > tr > th,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		vertical-align: middle;
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+	}
+
+	.clamp-container {
+		top: auto;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+.table-valign-top {
+	> thead > tr > th,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		vertical-align: top;
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+	}
+
+	.clamp-container {
+		-ms-transform: none;
+		transform: none;
+	}
+}
+
+// Tbody Vertical Align
+
+.tbody-valign-bottom {
+	> tbody > tr > td {
+		vertical-align: bottom;
+	}
+
+	tbody .clamp-container {
+		bottom: $table-cell-padding;
+
+		-ms-transform: none;
+		transform: none;
+	}
+}
+
+.tbody-valign-middle {
+	> tbody > tr > td {
+		vertical-align: middle;
+	}
+
+	tbody .clamp-container {
+		top: auto;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+.tbody-valign-top {
+	> tbody > tr > td {
+		vertical-align: top;
+	}
+
+	tbody .clamp-container {
+		-ms-transform: none;
+		transform: none;
+	}
+}
+
+// Thead Vertical Align
+
+.thead-valign-bottom {
+	> thead > tr {
+		> td,
+		> th {
+			vertical-align: bottom;
+		}
+	}
+
+	thead .clamp-container {
+		-ms-transform: none;
+		transform: none;
+	}
+}
+
+.thead-valign-middle {
+	> thead > tr {
+		> td,
+		> th {
+			vertical-align: middle;
+		}
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+.thead-valign-top {
+	> thead > tr {
+		> td,
+		> th {
+			vertical-align: top;
+		}
+	}
+
+	thead .clamp-container {
+		bottom: auto;
+
+		-ms-transform: none;
+		transform: none;
+	}
+}

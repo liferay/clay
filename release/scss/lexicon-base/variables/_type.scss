@@ -1,0 +1,26 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$reference-mark-font-size: 0.76em !default;
+
+$blockquote-xs-border-width: 1px !default;
+$blockquote-xs-font-size: $blockquote-font-size * 0.7 !default;
+
+$blockquote-sm-border-width: 3px !default;
+$blockquote-sm-font-size: $blockquote-font-size * 0.8 !default;
+
+$blockquote-lg-border-width: 8px !default;
+$blockquote-lg-font-size: $blockquote-font-size * 1.5 !default;
+
+// Skin
+
+$blockquote-danger-color: $brand-danger !default;
+$blockquote-default-color: $brand-default !default;
+$blockquote-info-color: $brand-info !default;
+$blockquote-primary-color: $brand-primary !default;
+$blockquote-success-color: $brand-success !default;
+$blockquote-warning-color: $brand-warning !default;

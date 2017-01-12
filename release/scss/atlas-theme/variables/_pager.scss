@@ -1,0 +1,41 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$pager-border-width: $pagination-border-width !default;
+
+$pager-item-height: $pagination-item-height - ($pager-border-width * 2) !default;
+
+$pager-padding-base-horizontal: 20px !default;
+$pager-padding-base-vertical: 0 !default;
+
+$pager-lg-font-size: $pagination-lg-font-size !default;
+$pager-lg-item-height: $pagination-lg-item-height - ($pager-border-width * 2) !default;
+$pager-lg-padding-horizontal: 48px !default;
+$pager-lg-padding-vertical: $pager-padding-base-vertical !default;
+
+$pager-sm-font-size: $pagination-sm-font-size !default;
+$pager-sm-item-height: $pagination-sm-item-height - ($pager-border-width * 2) !default;
+$pager-sm-padding-horizontal: $padding-base-horizontal !default;
+$pager-sm-padding-vertical: $pager-padding-base-vertical !default;
+
+// Skin
+
+$pager-border-radius: $pagination-border-radius !default;
+
+$pager-border: $pagination-border !default;
+
+$pager-color: $pagination-color !default;
+
+$pager-hover-bg: $pagination-hover-bg !default;
+$pager-hover-border: $pagination-hover-border !default;
+$pager-hover-color: $pagination-hover-color !default;
+
+$pager-disabled-bg: $pagination-disabled-bg !default;
+$pager-disabled-border: $pagination-disabled-border !default;
+$pager-disabled-color: $pagination-disabled-color !default;

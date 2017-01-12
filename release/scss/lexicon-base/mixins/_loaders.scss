@@ -1,0 +1,48 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@function to-list($value, $num: 5) {
+	$newList: ($value);
+
+	@for $i from 1 to $num {
+		$newList: append($newList, $value, 'comma');
+	}
+
+	@return $newList;
+}
+
+@mixin trailing-shadow($xOffset, $yOffset, $color: $loading-icon-color, $size: (-0.4em, -0.42em, -0.44em, -0.46em, -0.477em)) {
+	@if type-of($xOffset) != 'list' {
+		$xOffset: to-list($xOffset);
+	}
+
+	@if type-of($yOffset) != 'list' {
+		$yOffset: to-list($yOffset);
+	}
+
+	@if type-of($color) != 'list' {
+		$color: to-list($color);
+	}
+
+	@if type-of($size) != 'list' {
+		$size: to-list($size);
+	}
+
+	$len: length($color);
+
+	@for $i from $len * -1 through -2 {
+		$color: set-nth($color, $i, adjust-hue(nth($color, $i), (abs($i) - 1) * 5));
+	}
+
+	$box-shadow: nth($xOffset, 1) nth($yOffset, 1) 0 nth($size, 1) nth($color, 1),
+	nth($xOffset, 2) nth($yOffset, 2) 0 nth($size, 2) nth($color, 2),
+	nth($xOffset, 3) nth($yOffset, 3) 0 nth($size, 3) nth($color, 3),
+	nth($xOffset, 4) nth($yOffset, 4) 0 nth($size, 4) nth($color, 4),
+	nth($xOffset, 5) nth($yOffset, 5) 0 nth($size, 5) nth($color, 5);
+
+	box-shadow: $box-shadow;
+}

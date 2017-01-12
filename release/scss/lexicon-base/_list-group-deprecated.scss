@@ -1,0 +1,338 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Deprecated detailed-list-view as of v1.0.9 and will be removed in v2.0.0.
+
+.detailed-list-view {
+	.list-group-item {
+		cursor: pointer;
+	}
+
+	.list-group-item-field {
+		&:first-child + .list-group-item-field {
+			border-left-width: $tabular-list-group-border-width;
+			padding-left: 12px;
+			padding-right: 16px;
+
+			@media (min-width: $grid-float-breakpoint) {
+				border-left-width: 0;
+			}
+		}
+
+		&:last-child {
+			padding-left: 8px;
+			padding-right: 12px;
+		}
+	}
+
+	.list-group-item-content,
+	.list-group-item-field {
+		vertical-align: middle;
+
+		@media (min-width: $grid-float-breakpoint) {
+			vertical-align: top;
+		}
+	}
+}
+
+.detailed-list-view > .active .detailed-list-view-icon {
+	&:after {
+		color: $list-group-active-color;
+		content: '\f00c';
+		font-family: 'fontawesome-alloy';
+		font-size: 16px;
+		vertical-align: middle;
+
+		@media (min-width: $grid-float-breakpoint) {
+			content: normal;
+		}
+	}
+
+	> [class^="icon-"],
+	> [class*=" icon-"],
+	> .user-icon {
+		display: none;
+	}
+
+	> [class^="icon-"],
+	> [class*=" icon-"] {
+		@media (min-width: $grid-float-breakpoint) {
+			display: inline;
+		}
+	}
+
+	> .user-icon {
+		@media (min-width: $grid-float-breakpoint) {
+			display: block;
+		}
+	}
+}
+
+.detailed-list-view-icon {
+	@include monospace(34px);
+
+	@media (min-width: $grid-float-breakpoint) {
+		@include monospace(48px);
+	}
+
+	[class^="icon-"],
+	[class*=" icon-"] {
+		font-size: 28px;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: 38px;
+		}
+	}
+}
+
+@media (max-width: 279px) {
+	.detailed-list-view {
+		.dropdown {
+			display: inline-block;
+		}
+
+		.dropdown-menu {
+			left: 50%;
+			right: auto;
+			top: 100%;
+
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+
+		.detailed-list-view-icon {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+// Deprecated Tabular List Group Item States as of v1.0.9 and will be removed in
+// v2.0.0.
+
+.tabular-list-group {
+	.list-group-item-danger {
+		@include color-tabular-list-group-item($brand-danger);
+	}
+
+	.list-group-item-default {
+		@include color-tabular-list-group-item($brand-default);
+	}
+
+	.list-group-item-primary {
+		@include color-tabular-list-group-item($brand-primary);
+	}
+
+	.list-group-item-info {
+		@include color-tabular-list-group-item($brand-info);
+	}
+
+	.list-group-item-success {
+		@include color-tabular-list-group-item($brand-success);
+	}
+
+	.list-group-item-warning {
+		@include color-tabular-list-group-item($brand-warning);
+	}
+}
+
+// Deprecated list-group-card as of v1.0.9 and will be removed in 2.0.0.
+
+.list-group-item .checkbox input[type="checkbox"]:checked + .card {
+	@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color);
+
+	.card-col-content a {
+		color: $list-group-active-color;
+	}
+}
+
+.list-group-card {
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 5px;
+		margin-top: 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.card {
+		border-color: $list-group-border;
+		border-radius: 0;
+		border-width: 1px;
+		box-shadow: none;
+		margin: 0;
+	}
+
+	.card-col-content,
+	.card-col-field {
+		vertical-align: top;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.card-col-content a {
+			color: $list-group-link-color;
+
+			&:focus,
+			&:hover {
+				color: $list-group-link-hover-color;
+			}
+		}
+	}
+
+	.checkbox input[type="checkbox"] {
+		&:checked {
+			+ .card {
+				background-color: $list-group-card-active-bg;
+				color: $list-group-card-active-color;
+
+				@if (variable-exists(atlas-theme)) {
+					&:after {
+						background-color: $list-group-card-active-border;
+						bottom: -1px;
+						content: '';
+						display: block;
+						height: $list-group-card-active-border-width;
+						left: -1px;
+						position: absolute;
+						right: -1px;
+						z-index: 1;
+					}
+				}
+			}
+		}
+	}
+
+	.list-group-card-icon {
+		font-size: 2.4em;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: 3em;
+		}
+
+		> [class^="icon-"],
+		> [class*=" icon-"],
+		> .user-icon {
+			display: block;
+
+			@include monospace(34px);
+
+			text-align: center;
+
+			@media (min-width: $grid-float-breakpoint) {
+				@include monospace(45px);
+			}
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.list-group-heading + .list-group-item {
+			margin-top: 0;
+
+			.card {
+				border-top-width: 0;
+			}
+		}
+	}
+
+	.list-group-item {
+		border-width: 0;
+		margin-bottom: 0;
+		margin-top: -1px;
+		padding: 0;
+
+		&:last-child {
+			.card {
+				border-bottom-left-radius: $list-group-border-radius;
+				border-bottom-right-radius: $list-group-border-radius;
+			}
+		}
+	}
+}
+
+// Deprecated list-group-card-checkbox-hidden-xs as of v1.0.9 and will be
+// removed in v2.0.0.
+
+.list-group-card-checkbox-hidden-xs {
+	.checkbox input[type="checkbox"] {
+		display: none;
+
+		@media (min-width: $grid-float-breakpoint) {
+			display: block;
+		}
+
+		&:checked + .card .list-group-card-icon {
+			&:after {
+				color: $list-group-active-color;
+				content: $list-group-card-checkbox-hidden-icon;
+				display: block;
+				font-family: 'fontawesome-alloy';
+				font-size: 16px;
+
+				@include monospace(34px);
+
+				text-align: center;
+				vertical-align: middle;
+
+				@media (min-width: $grid-float-breakpoint) {
+					content: normal;
+				}
+			}
+
+			> [class^="icon-"],
+			> [class*=" icon-"],
+			> .user-icon {
+				display: none;
+			}
+
+			> [class^="icon-"],
+			> [class*=" icon-"] {
+				@media (min-width: $grid-float-breakpoint) {
+					display: block;
+				}
+			}
+
+			> .user-icon {
+				@media (min-width: $grid-float-breakpoint) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.checkbox-bottom-left,
+	.checkbox-middle-left,
+	.checkbox-top-left {
+		.card.flex-container {
+			@media (max-width: $grid-float-breakpoint-max) {
+				padding-left: 20px;
+			}
+		}
+
+		.card-row {
+			@media (max-width: $grid-float-breakpoint-max) {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	.checkbox-bottom-right,
+	.checkbox-middle-right,
+	.checkbox-top-right {
+		.card.flex-container {
+			@media (max-width: $grid-float-breakpoint-max) {
+				padding-right: 20px;
+			}
+		}
+
+		.card-row {
+			@media (max-width: $grid-float-breakpoint-max) {
+				padding-right: 20px;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+	font-family: 'fontawesome-alloy';
+	src:url('#{$font-awesome-path}/fontawesome-alloy.eot');
+	src:url('#{$font-awesome-path}/fontawesome-alloy.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-awesome-path}/fontawesome-alloy.woff') format('woff'),
+		url('#{$font-awesome-path}/fontawesome-alloy.ttf') format('truetype'),
+		url('#{$font-awesome-path}/fontawesome-alloy.svg#fontawesome-alloy') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

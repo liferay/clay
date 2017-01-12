@@ -1,0 +1,178 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sticker {
+	color: $sticker-color;
+	display: inline-block;
+	font-size: $sticker-font-size;
+	left: $sticker-gutter-width;
+
+	@include monospace($sticker-monospaced-size);
+
+	padding: 0;
+	position: absolute;
+	text-align: center;
+	top: $sticker-gutter-width;
+
+	.lexicon-icon {
+		margin-top: -1px;
+	}
+}
+
+.sticker-static {
+	position: static;
+}
+
+// Sticker Positions
+
+.sticker-bottom-left {
+	bottom: $sticker-gutter-width;
+	right: auto;
+	top: auto;
+}
+
+.sticker-bottom-right {
+	bottom: $sticker-gutter-width;
+	left: auto;
+	right: $sticker-gutter-width;
+	top: auto;
+}
+
+.sticker-top-right {
+	left: auto;
+	right: $sticker-gutter-width;
+}
+
+.sticker-bottom {
+	bottom: $sticker-gutter-width;
+	top: auto;
+}
+
+.sticker-right {
+	left: auto;
+	right: $sticker-gutter-width;
+}
+
+.sticker-outside {
+	left: -$sticker-gutter-width;
+	top: -$sticker-gutter-width;
+
+	&.sticker-bottom-left {
+		bottom: -$sticker-gutter-width;
+		top: auto;
+	}
+
+	&.sticker-bottom-right {
+		bottom: -$sticker-gutter-width;
+		left: auto;
+		right: -$sticker-gutter-width;
+		top: auto;
+	}
+
+	&.sticker-top-right {
+		left: auto;
+		right: -$sticker-gutter-width;
+	}
+
+	&.sticker-bottom {
+		bottom: -$sticker-gutter-width;
+		top: auto;
+	}
+
+	&.sticker-right {
+		left: auto;
+		right: -$sticker-gutter-width;
+	}
+}
+
+// Sticker Sizes
+
+.sticker-sm {
+	font-size: $sticker-sm-font-size;
+
+	@include monospace($sticker-sm-monospaced-size);
+
+	.lexicon-icon {
+		height: $sticker-sm-font-size;
+		margin-top: -2px;
+		width: $sticker-sm-font-size;
+	}
+}
+
+.sticker-lg {
+	font-size: $sticker-lg-font-size;
+
+	@include monospace($sticker-lg-monospaced-size);
+
+	.lexicon-icon {
+		height: $sticker-lg-font-size;
+		margin-top: -3px;
+		width: $sticker-lg-font-size;
+	}
+}
+
+// Sticker Skins
+
+.sticker-circle {
+	border-radius: $sticker-circle-border-radius;
+}
+
+.sticker-rounded {
+	border-radius: $sticker-rounded-border-radius;
+}
+
+.sticker-square {
+	border-radius: $sticker-square-border-radius;
+}
+
+.sticker-danger {
+	background-color: $sticker-danger-bg;
+
+	@if variable-exists(sticker-danger-color) {
+		color: $sticker-danger-color;
+	}
+}
+
+.sticker-default {
+	background-color: $sticker-default-bg;
+
+	@if variable-exists(sticker-default-color) {
+		color: $sticker-default-color;
+	}
+}
+
+.sticker-info {
+	background-color: $sticker-info-bg;
+
+	@if variable-exists(sticker-info-color) {
+		color: $sticker-info-color;
+	}
+}
+
+.sticker-primary {
+	background-color: $sticker-primary-bg;
+
+	@if variable-exists(sticker-primary-color) {
+		color: $sticker-primary-color;
+	}
+}
+
+.sticker-success {
+	background-color: $sticker-success-bg;
+
+	@if variable-exists(sticker-success-color) {
+		color: $sticker-success-color;
+	}
+}
+
+.sticker-warning {
+	background-color: $sticker-warning-bg;
+
+	@if variable-exists(sticker-warning-color) {
+		color: $sticker-warning-color;
+	}
+}

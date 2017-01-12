@@ -1,0 +1,58 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Color Blockquote
+// @param $color - Colors border and text inside
+
+@mixin color-blockquote ($color) {
+	border-color: $color;
+
+	footer, small, .small {
+		color: $color;
+	}
+}
+
+// Color Link
+// @param $color - Colors link
+// @param $hover-color - Colors link focus and hover state
+
+@mixin color-link($color, $hover-color) {
+	color: $color;
+
+	&:focus,
+	&:hover {
+		color: $hover-color;
+	}
+}
+
+// Highlight inline text
+// @param $bg-color - Color of the highlight
+// @param $color - Colors the text
+
+@mixin highlight-text($bg-color: $state-warning-bg, $color: $text-color) {
+	background-color: $bg-color;
+	box-decoration-break: clone;
+	box-shadow: -0.25em 0 0 $bg-color;
+	color: $color;
+	display: inline;
+	line-height: normal;
+	padding: 2px 0.25em 3px 0;
+	position: relative;
+	white-space: pre-wrap;
+
+	&:before {
+		background-color: $bg-color;
+		bottom: 0;
+		content: '';
+		display: block;
+		position: absolute;
+		right: 100%;
+		top: 0;
+		width: 0.25em;
+		z-index: -1;
+	}
+}

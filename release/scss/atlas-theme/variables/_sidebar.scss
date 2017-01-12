@@ -1,0 +1,29 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Skin
+
+$sidebar-default-bg: #F5F8FA !default;
+$sidebar-default-border: #DFE0E3 !default;
+$sidebar-default-color: $navbar-default-color !default;
+$sidebar-default-panel-bg: #DFE6EB !default;
+
+$sidebar-default-header-actions-link-color: $brand-default !default;
+$sidebar-default-header-actions-link-hover-color: $sidebar-default-header-actions-link-color !default;
+$sidebar-default-header-title-color: $text-color !default;
+$sidebar-default-header-title-hover-color: $text-color !default;
+
+$sidebar-inverse-bg: $inverse-bg !default;
+$sidebar-inverse-border: $inverse-border !default;
+$sidebar-inverse-color: $inverse-color !default;
+$sidebar-inverse-input-bg: $inverse-header-bg !default;
+$sidebar-inverse-panel-bg: $inverse-header-bg !default;
+
+$sidebar-inverse-header-actions-link-color: $sidebar-inverse-color !default;
+$sidebar-inverse-header-actions-link-hover-color: $sidebar-inverse-header-actions-link-color !default;
+$sidebar-inverse-header-title-color: $navbar-inverse-link-color !default;
+$sidebar-inverse-header-title-hover-color: $navbar-inverse-link-hover-color !default;

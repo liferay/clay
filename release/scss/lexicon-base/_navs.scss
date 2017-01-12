@@ -1,0 +1,139 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.nav a {
+	@if (variable-exists(nav-link-color)) {
+		color: $nav-link-color;
+	}
+}
+
+.nav > li > a,
+.nav > li > span,
+.nav-heading > a,
+.nav-heading > span {
+	display: block;
+	padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
+	position: relative;
+}
+
+.nav > li > a:focus {
+	z-index: 1;
+}
+
+.nav-heading {
+	color: $nav-heading-color;
+	display: block;
+	position: relative;
+}
+
+// Nav Equal Height
+
+%nav-equal-height-item {
+	display: table-cell;
+	height: $nav-equal-height-height;
+	max-width: 100px;
+	min-width: 100px;
+	vertical-align: middle;
+	word-break: break-all \9;
+	word-wrap: break-word;
+}
+
+.nav-equal-height {
+	> li,
+	.nav > li {
+		display: table;
+		width: 100%;
+	}
+
+	> li > a {
+		@extend %nav-equal-height-item;
+
+		padding: 0 $nav-link-padding-horizontal;
+	}
+
+	.nav > li > a {
+		@extend %nav-equal-height-item;
+	}
+}
+
+.nav-equal-height-heading {
+	display: table;
+	position: relative;
+	width: 100%;
+
+	&:focus,
+	&:hover {
+		background-color: $nav-link-hover-bg;
+		text-decoration: none;
+	}
+
+	> a,
+	> span {
+		@extend %nav-equal-height-item;
+
+		text-decoration: none;
+
+		&:first-child {
+			padding-left: $nav-link-padding-horizontal;
+		}
+	}
+
+	// Deprecated `.nav-equal-height-heading-field` as of v1.0.9 in favor of
+	// `.table-cell-field` and will be removed in v2.0.0
+
+	> .nav-equal-height-heading-field {
+		width: 1%;
+	}
+}
+
+// Nav Nested
+
+.nav-nested {
+	@include make-nav-nested($nav-nested-padding-horizontal);
+}
+
+.nav-nested-margins > li .nav > li {
+	margin-left: $nav-nested-margins-margin-horizontal;
+}
+
+// Nav Pills
+
+.nav-pills {
+	a[aria-expanded="true"] {
+		&,
+		&:hover,
+		&:focus {
+			background-color: $nav-pills-active-link-hover-bg;
+			color: $nav-pills-active-link-hover-color;
+		}
+	}
+
+	.nav > li > a {
+		border-radius: $nav-pills-border-radius;
+	}
+}
+
+.nav-circle {
+	> li > a,
+	.nav > li > a {
+		border-radius: 100px;
+	}
+}
+
+.nav-rounded {
+	> li > a,
+	.nav > li > a {
+		border-radius: 5px;
+	}
+}
+
+.nav-square {
+	> li > a,
+	.nav > li > a {
+		border-radius: 0;
+	}
+}

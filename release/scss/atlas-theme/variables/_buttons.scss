@@ -1,0 +1,129 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+// When changing variables that affect the btn's height, make sure to match the
+// corresponding input-height with the button height.
+
+$btn-border-width: 2px !default;
+
+$btn-line-height: 24 - ($btn-border-width * 2) !default;
+
+$btn-font-size: 14px !default;
+$btn-font-weight: 500 !default;
+$btn-padding-vertical: 8px !default;
+$btn-padding-horizontal: round($btn-padding-vertical * 3) !default;
+
+$btn-lg-font-size: 16px !default;
+$btn-lg-padding-vertical: 12px !default;
+$btn-lg-padding-horizontal: round($btn-lg-padding-vertical * 3) !default;
+
+$btn-sm-font-size: 13px !default;
+$btn-sm-padding-vertical: 4px !default;
+$btn-sm-padding-horizontal: round($btn-sm-padding-vertical * 3) !default;
+
+$btn-xs-font-size: 10px !default;
+$btn-xs-padding-vertical: 1px !default;
+$btn-xs-padding-horizontal: round($btn-xs-padding-vertical * 3) !default;
+
+$btn-desktop-font-size: 16px !default;
+$btn-desktop-padding-vertical: 8px !default;
+$btn-desktop-padding-horizontal: 14px !default;
+
+$btn-desktop-lg-font-size: $btn-lg-font-size !default;
+$btn-desktop-lg-padding-vertical: 12px !default;
+$btn-desktop-lg-padding-horizontal: 48px !default;
+
+$btn-desktop-sm-font-size: $btn-sm-font-size !default;
+$btn-desktop-sm-padding-vertical: 4px !default;
+$btn-desktop-sm-padding-horizontal: round($btn-desktop-sm-padding-vertical * 4) !default;
+
+$btn-desktop-xs-font-size: 10px !default;
+$btn-desktop-xs-padding-vertical: 1px !default;
+$btn-desktop-xs-padding-horizontal: round($btn-desktop-xs-padding-vertical * 4) !default;
+
+// End variables that affect btn height
+
+$btn-disabled-opacity: 0.5 !default;
+
+// Skin
+
+$btn-action-size: 52px !default;
+$btn-desktop-action-size: 64px !default;
+
+$btn-border-radius: 4px !default;
+
+$btn-action-border-radius: $btn-border-radius !default;
+
+$btn-lg-border-radius: $btn-border-radius !default;
+$btn-sm-border-radius: round($btn-border-radius * 0.75) !default;
+$btn-xs-border-radius: round($btn-border-radius * 0.5) !default;
+
+$btn-active-box-shadow: none !default;
+
+$btn-default-color: $brand-default !default;
+$btn-default-bg: #FFF !default;
+$btn-default-border: $brand-default !default;
+$btn-default-hover-color: $btn-default-color !default;
+$btn-default-hover-bg: $btn-default-bg !default;
+$btn-default-hover-border: $brand-primary !default;
+$btn-default-active-color: $btn-default-color !default;
+$btn-default-active-bg: $btn-default-bg !default;
+$btn-default-active-border: darken($btn-default-hover-border, 8%) !default;
+
+$btn-primary-color: #FFF !default;
+$btn-primary-bg: $brand-primary !default;
+$btn-primary-border: $btn-primary-bg !default;
+$btn-primary-hover-color: $btn-primary-color !default;
+$btn-primary-hover-bg: darken($btn-primary-bg, 8%) !default;
+$btn-primary-hover-border: $btn-primary-hover-bg !default;
+$btn-primary-active-color: $btn-primary-color !default;
+$btn-primary-active-bg: darken($btn-primary-hover-bg, 12%) !default;
+$btn-primary-active-border: $btn-primary-active-bg !default;
+
+$btn-success-color: #FFF !default;
+$btn-success-bg: $brand-success !default;
+$btn-success-border: $btn-success-bg !default;
+$btn-success-hover-color: $btn-success-color !default;
+$btn-success-hover-bg: darken($btn-success-bg, 8%) !default;
+$btn-success-hover-border: $btn-success-hover-bg !default;
+$btn-success-active-color: $btn-success-color !default;
+$btn-success-active-bg: darken($btn-success-hover-bg, 12%) !default;
+$btn-success-active-border: $btn-success-active-bg !default;
+
+$btn-info-color: #FFF !default;
+$btn-info-bg: $brand-info !default;
+$btn-info-border: $btn-info-bg !default;
+$btn-info-hover-color: $btn-info-color !default;
+$btn-info-hover-bg: darken($btn-info-bg, 8%) !default;
+$btn-info-hover-border: $btn-info-hover-bg !default;
+$btn-info-active-color: $btn-info-color !default;
+$btn-info-active-bg: darken($btn-info-hover-bg, 12%) !default;
+$btn-info-active-border: $btn-info-active-bg !default;
+
+$btn-warning-color: #FFF !default;
+$btn-warning-bg: $brand-warning !default;
+$btn-warning-border: $btn-warning-bg !default;
+$btn-warning-hover-color: $btn-warning-color !default;
+$btn-warning-hover-bg: darken($btn-warning-bg, 8%) !default;
+$btn-warning-hover-border: $btn-warning-hover-bg !default;
+$btn-warning-active-color: $btn-warning-color !default;
+$btn-warning-active-bg: darken($btn-warning-hover-bg, 12%) !default;
+$btn-warning-active-border: $btn-warning-active-bg !default;
+
+$btn-danger-color: #FFF !default;
+$btn-danger-bg: $brand-danger !default;
+$btn-danger-border: $btn-danger-bg !default;
+$btn-danger-hover-color: $btn-danger-color !default;
+$btn-danger-hover-bg: darken($btn-danger-bg, 8%) !default;
+$btn-danger-hover-border: $btn-danger-hover-bg !default;
+$btn-danger-active-color: $btn-danger-color !default;
+$btn-danger-active-bg: darken($btn-danger-hover-bg, 12%) !default;
+$btn-danger-active-border: $btn-danger-active-bg !default;
+
+$btn-link-disabled-color: $link-color !default;

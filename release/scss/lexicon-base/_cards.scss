@@ -1,0 +1,343 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.card,
+.card-horizontal {
+	background-color: $card-bg;
+	border-color: $card-fallback-border;
+	border-color: $card-border;
+	border-style: $card-border-style;
+	border-width: $card-border-width;
+
+	@if (variable-exists(card-box-shadow)) {
+		box-shadow: $card-box-shadow;
+	}
+
+	@if ($card-border-radius > 0) {
+		border-radius: $card-border-radius;
+	}
+
+	margin-bottom: $card-margin-bottom;
+	position: relative;
+
+	@if (variable-exists(card-link-color)) {
+		a {
+			color: $card-link-color;
+		}
+	}
+
+	@if ($card-border-radius > 0) {
+		.card-col-content,
+		.card-col-field {
+			&:first-child {
+				border-bottom-left-radius: $card-border-radius;
+				border-top-left-radius: $card-border-radius;
+			}
+
+			&:last-child {
+				border-bottom-right-radius: $card-border-radius;
+				border-top-right-radius: $card-border-radius;
+			}
+		}
+	}
+
+	.divider {
+		background-color: $card-divider-bg;
+		border-width: 0;
+		height: $card-divider-height;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+
+	.figure {
+		margin-bottom: 0;
+		overflow: visible;
+	}
+}
+
+.card-block {
+	padding: $card-gutter-width;
+	word-wrap: break-word;
+}
+
+// Card Simple Grid
+
+.card-col-content {
+	display: table-cell;
+	max-width: 10px;
+	position: relative;
+	vertical-align: middle;
+	width: auto;
+	word-break: break-all \9; // IE 8, 9
+	word-wrap: break-word;
+}
+
+.card-col-field {
+	display: table-cell;
+	position: relative;
+	vertical-align: middle;
+	width: 1%;
+}
+
+.card-row {
+	display: table;
+	height: 100%;
+	width: 100%;
+
+	&.card-row-padded .card-col-gutters {
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		.divider {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.card-col-gutters {
+		padding: 0 10px;
+
+		.divider {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
+}
+
+.card-row-layout-fixed {
+	table-layout: fixed;
+
+	.card-col-content {
+		word-wrap: break-word;
+	}
+
+	.card-col-field {
+		width: auto;
+		word-wrap: break-word;
+	}
+}
+
+.card-row-padded {
+	padding: $card-gutter-width;
+}
+
+// Card Row Vertical Alignment
+
+.card-row-valign-top {
+	.card-col-content,
+	.card-col-field {
+		vertical-align: top;
+	}
+
+	.clamp-container {
+		top: 0;
+	}
+
+	.clamp-horizontal .clamp-container {
+		-ms-transform: none;
+		transform: none;
+	}
+}
+
+.card-row-valign-bottom {
+	.card-col-content,
+	.card-col-field {
+		vertical-align: bottom;
+	}
+
+	.clamp-container {
+		bottom: 0;
+	}
+
+	.clamp-horizontal .clamp-container {
+		-ms-transform: none;
+		transform: none;
+	}
+}
+
+// Card Border Helpers
+
+@if not ($card-border-radius == $card-circle-border-radius) {
+	.card-circle {
+		border-radius: $card-circle-border-radius;
+
+		.card-col-content,
+		.card-col-field {
+			&:first-child {
+				border-bottom-left-radius: $card-circle-border-radius;
+				border-top-left-radius: $card-circle-border-radius;
+			}
+
+			&:last-child {
+				border-bottom-right-radius: $card-circle-border-radius;
+				border-top-right-radius: $card-circle-border-radius;
+			}
+		}
+	}
+}
+
+@if not ($card-border-radius == $card-rounded-border-radius) {
+	.card-rounded {
+		border-radius: $card-rounded-border-radius;
+
+		.card-col-content,
+		.card-col-field {
+			&:first-child {
+				border-bottom-left-radius: $card-rounded-border-radius;
+				border-top-left-radius: $card-rounded-border-radius;
+			}
+
+			&:last-child {
+				border-bottom-right-radius: $card-rounded-border-radius;
+				border-top-right-radius: $card-rounded-border-radius;
+			}
+		}
+	}
+}
+
+@if not ($card-border-radius == $card-square-border-radius) {
+	.card-square {
+		border-radius: $card-square-border-radius;
+
+		.card-col-content,
+		.card-col-field {
+			&:first-child {
+				border-bottom-left-radius: $card-square-border-radius;
+				border-top-left-radius: $card-square-border-radius;
+			}
+
+			&:last-child {
+				border-bottom-right-radius: $card-square-border-radius;
+				border-top-right-radius: $card-square-border-radius;
+			}
+		}
+	}
+}
+
+// Checkbox and Radio Cards
+
+.checkbox-card,
+.radio-card {
+	margin-bottom: 0;
+	margin-top: 0;
+
+	label {
+		color: $text-color;
+		display: inline;
+		padding-left: 0;
+	}
+}
+
+.checkbox-card input[type="checkbox"],
+.radio-card input[type="radio"] {
+	margin-left: 0;
+	margin-top: 0;
+	z-index: 1;
+}
+
+.checkbox-bottom-left,
+.checkbox-middle-left,
+.checkbox-top-left,
+.radio-bottom-left,
+.radio-middle-left,
+.radio-top-left {
+	.card-horizontal {
+		.card.flex-container {
+			padding-left: $checkbox-left-card-padding;
+		}
+
+		> .card-row {
+			padding-left: $checkbox-left-card-padding;
+		}
+	}
+}
+
+.checkbox-bottom-right,
+.checkbox-middle-right,
+.checkbox-top-right,
+.radio-bottom-right,
+.radio-middle-right,
+.radio-top-right {
+	.card-horizontal {
+		.card.flex-container {
+			padding-right: $checkbox-right-card-padding;
+		}
+
+		> .card-row {
+			padding-right: $checkbox-right-card-padding;
+		}
+	}
+}
+
+.checkbox-bottom-left input[type="checkbox"],
+.checkbox-bottom-left label > input[type="checkbox"],
+.radio-bottom-left input[type="radio"],
+.radio-bottom-left label > input[type="radio"] {
+	bottom: $checkbox-position;
+	left: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
+}
+
+.checkbox-bottom-right input[type="checkbox"],
+.checkbox-bottom-right label > input[type="checkbox"],
+.radio-bottom-right input[type="radio"],
+.radio-bottom-right label > input[type="radio"] {
+	bottom: $checkbox-position;
+	right: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
+}
+
+.checkbox-middle-left input[type="checkbox"],
+.checkbox-middle-left label > input[type="checkbox"],
+.radio-middle-left input[type="radio"],
+.radio-middle-left label > input[type="radio"] {
+	left: $checkbox-position;
+	margin-top: 0;
+	top: 50%;
+
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.checkbox-middle-right input[type="checkbox"],
+.checkbox-middle-right label > input[type="checkbox"],
+.radio-middle-right input[type="radio"],
+.radio-middle-right label > input[type="radio"] {
+	margin-top: 0;
+	right: $checkbox-position;
+	top: 50%;
+
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.checkbox-top-left label > input[type="checkbox"],
+.radio-top-left label > input[type="radio"] {
+	left: $checkbox-position;
+	top: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
+}
+
+.checkbox-top-right label > input[type="checkbox"],
+.radio-top-right label > input[type="radio"] {
+	right: $checkbox-position;
+	top: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
+}

@@ -1,0 +1,180 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.progress-xs {
+	border-radius: $progress-bar-xs-border-radius;
+	height: $progress-bar-xs-height;
+
+	.progress-bar {
+		font-size: $progress-bar-xs-font-size;
+		line-height: $progress-bar-xs-height;
+	}
+}
+
+.progress-lg {
+	border-radius: $progress-bar-lg-border-radius;
+	height: $progress-bar-lg-height;
+
+	.progress-bar {
+		font-size: $progress-bar-lg-font-size;
+		line-height: $progress-bar-lg-height;
+	}
+}
+
+.progress-xl {
+	border-radius: $progress-bar-xl-border-radius;
+	height: $progress-bar-xl-height;
+
+	.progress-bar {
+		font-size: $progress-bar-xl-font-size;
+		line-height: $progress-bar-xl-height;
+	}
+}
+
+// Multi Step Progress Bar
+
+.multi-step-progress-bar {
+	display: table;
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+	position: relative;
+	width: 100%;
+
+	> li {
+		color: $multi-step-progress-bar-color;
+		display: table-cell;
+		vertical-align: bottom;
+		width: 1%;
+	}
+
+	> .active {
+		color: $multi-step-progress-bar-active-color;
+
+		.divider {
+			background-color: $multi-step-progress-bar-active-color;
+			color: $multi-step-progress-bar-active-color;
+
+			&:after {
+				content: $multi-step-progress-bar-active-icon;
+			}
+		}
+	}
+
+	> .complete {
+		color: $multi-step-progress-bar-complete-color;
+
+		.divider {
+			background-color: $multi-step-progress-bar-complete-color;
+			color: $multi-step-progress-bar-complete-icon-color;
+
+			@if (variable-exists(atlas-theme)) {
+				margin-left: 18px;
+			}
+			@else {
+				margin-left: 15px;
+			}
+
+			&:after {
+				content: $multi-step-progress-bar-complete-icon;
+
+				@if (variable-exists(atlas-theme)) {
+					left: -16px;
+				}
+				@else {
+					left: -14px;
+				}
+			}
+		}
+	}
+
+	.divider {
+		background-color: $multi-step-progress-bar-color;
+		color: $multi-step-progress-bar-color;
+		height: $multi-step-progress-bar-divider-height;
+
+		@if (variable-exists(atlas-theme)) {
+			margin: 20px 0 20px 12px;
+		}
+		@else {
+			margin: 10px 0 10px 12px;
+		}
+
+		position: relative;
+
+		&:after {
+			content: $multi-step-progress-bar-icon;
+			display: block;
+			font-family: 'fontawesome-alloy';
+			left: -12px;
+			position: absolute;
+			top: 50%;
+
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+	}
+
+	.progress-bar-step,
+	.progress-bar-title {
+		@if (variable-exists(atlas-theme)) {
+			font-weight: 500;
+		}
+
+		margin-right: 10px;
+	}
+}
+
+.multi-step-progress-bar-collapse {
+	@media (max-width: $grid-float-breakpoint-max) {
+		padding-top: 20px;
+	}
+
+	> li {
+		@media (max-width: $grid-float-breakpoint-max) {
+			width: auto;
+		}
+
+		&:last-child {
+			@media (max-width: $grid-float-breakpoint-max) {
+				width: 1%;
+			}
+
+			.divider {
+				@media (max-width: $grid-float-breakpoint-max) {
+					width: 0;
+				}
+			}
+		}
+	}
+
+	> .active {
+		.progress-bar-title {
+			@media (max-width: $grid-float-breakpoint-max) {
+				display: block;
+				left: 0;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				top: 0;
+			}
+		}
+	}
+
+	.progress-bar-title {
+		@media (max-width: $grid-float-breakpoint-max) {
+			display: none;
+		}
+	}
+}
+
+.multi-step-progress-bar-fixed {
+	> li {
+		display: inline-block;
+		width: $multi-step-progress-bar-fixed-width;
+	}
+}

@@ -1,0 +1,33 @@
+/**
+* Lexicon 1.0.14
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin color-btn($border) {
+	border-color: $border;
+}
+
+@mixin color-btn-hover($bg, $border) {
+	&:focus,
+	&:hover {
+		background-color: $bg;
+		border-color: $border;
+	}
+}
+
+@mixin color-btn-active($bg, $border) {
+	&:active,
+	&.active,
+	&:active:focus,
+	&:active:hover,
+	&.active:focus,
+	&.active:hover,
+	.open > &.dropdown-toggle,
+	.open > &.dropdown-toggle:focus,
+	.open > &.dropdown-toggle:hover {
+		background-color: $bg;
+		border-color: $border;
+	}
+}
