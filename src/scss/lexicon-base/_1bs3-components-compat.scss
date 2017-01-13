@@ -51,6 +51,12 @@
 	@include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
 }
 
+// Button Groups
+
+.btn-group.dropdown {
+  display: inline-flex;
+}
+
 // Dropdowns
 // Moved .caret to .dropdown-toggle:after in BS4
 .caret {
