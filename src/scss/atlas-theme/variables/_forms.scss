@@ -65,6 +65,12 @@ $input-readonly-bg: #FAFAFA !default;
 $input-readonly-border: $input-border !default;
 $input-readonly-color: darken($input-color-placeholder, 12%) !default;
 
+$input-select-icon-color: $input-border !default;
+$input-select-icon-focus-color: $input-border-focus !default;
+
+$input-select-icon: lx-icon(caret-double-l, $input-border) !default;
+$input-select-icon-focus: lx-icon(caret-double-l, $input-border-focus) !default;
+
 $legend-border-color: #B0B4BB !default;
 
 $input-group-addon-bg: $brand-default !default;

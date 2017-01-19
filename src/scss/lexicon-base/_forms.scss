@@ -51,7 +51,7 @@ label,
 	select.form-control {
 		-moz-appearance: none;
 		-webkit-appearance: none;
-		background-image: lx-icon(caret-double-l, $input-border);
+		background-image: $input-select-icon;
 		background-image: none \9;
 		background-position: right center;
 		background-repeat: no-repeat;
@@ -62,7 +62,7 @@ label,
 		padding-top: 0;
 
 		&:focus {
-			background-image: lx-icon(caret-double-l, $input-border-focus);
+			background-image: $input-select-icon-focus;
 			background-image: none \9;
 			padding-right: 0 \9;
 		}
