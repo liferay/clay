@@ -65,13 +65,29 @@ $input-readonly-bg: #FAFAFA !default;
 $input-readonly-border: $input-border !default;
 $input-readonly-color: darken($input-color-placeholder, 12%) !default;
 
+// Select Element
+
+$input-select-bg: null !default;
+$input-select-focus-bg: null !default;
+
+$input-select-bg-position: right center !default;
+$input-select-bg-size: 18px auto !default;
+$input-select-padding-bottom: 0 !default;
+$input-select-padding-left: null !default;
+$input-select-padding-right: 18px !default;
+$input-select-padding-top: 0 !default;
+
 $input-select-icon-color: $input-border !default;
 $input-select-icon-focus-color: $input-border-focus !default;
 
 $input-select-icon: lx-icon(caret-double-l, $input-border) !default;
 $input-select-icon-focus: lx-icon(caret-double-l, $input-border-focus) !default;
 
+// Legend
+
 $legend-border-color: #B0B4BB !default;
+
+// Input Groups
 
 $input-group-addon-bg: $brand-default !default;
 $input-group-addon-border-color: $input-group-addon-bg !default;
@@ -80,6 +96,8 @@ $input-group-addon-color: #FFF !default;
 
 $input-group-default-addon-border-color: #DDD !default;
 $input-group-default-addon-color: #BBB !default;
+
+// Input States
 
 $input-danger: $brand-danger !default;
 $input-success: $brand-success !default;

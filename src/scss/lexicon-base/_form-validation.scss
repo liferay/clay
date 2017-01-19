@@ -65,7 +65,9 @@
 	}
 
 	.form-group select.form-control[multiple] {
-		background: none;
+		background-image: none;
+		background-position: 0% 0%;
+		background-size: auto;
 		padding: $input-padding-vertical $input-padding-horizontal;
 	}
 }
