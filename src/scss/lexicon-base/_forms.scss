@@ -152,16 +152,16 @@ fieldset[disabled] label {
 	}
 }
 
+// Readonly State
+
+.form-control[readonly] {
+	background-color: $input-readonly-bg;
+	border-color: $input-readonly-border;
+	color: $input-readonly-color;
+	cursor: $input-readonly-cursor;
+}
+
 @if (variable-exists(atlas-theme)) {
-	// Readonly State
-
-	.form-control[readonly] {
-		background-color: $input-readonly-bg;
-		border-color: $input-readonly-border;
-		color: $input-readonly-color;
-		cursor: default;
-	}
-
 	// Input Sizes
 
 	.form-control {

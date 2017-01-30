@@ -73,6 +73,7 @@ $input-label-focus-color: $input-color-focus !default;
 $input-readonly-bg: #FAFAFA !default;
 $input-readonly-border: $input-border !default;
 $input-readonly-color: darken($input-color-placeholder, 12%) !default;
+$input-readonly-cursor: default !default;
 
 // Select Element
 

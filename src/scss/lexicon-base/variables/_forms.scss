@@ -24,6 +24,11 @@ $input-label-margin-bottom: null !default;
 $input-label-reference-mark-spacer: 0 !default;
 $input-label-reference-mark-vertical-alignment: top !default;
 
+$input-readonly-bg: null !default;
+$input-readonly-border: null !default;
+$input-readonly-color: null !default;
+$input-readonly-cursor: null !default;
+
 $zindex-input-group-hover: 3 !default;
 
 $zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4
