@@ -13,6 +13,21 @@ fieldset {
 
 label,
 .control-label {
+	color: $input-label-color;
+	font-size: $input-label-font-size;
+	font-weight: $input-label-font-weight;
+	margin-bottom: $input-label-margin-bottom;
+
+	@if (variable-exists(input-label-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $input-label-desktop-font-size;
+		}
+	}
+
+	&.focus {
+		color: $input-label-focus-color;
+	}
+
 	.lexicon-icon {
 		@extend %scale-lexicon-icon;
 	}
@@ -28,26 +43,6 @@ label,
 }
 
 @if (variable-exists(atlas-theme)) {
-	label,
-	.control-label {
-		color: $input-label-color;
-		font-size: $input-label-font-size;
-		font-weight: 500;
-		margin-bottom: 2px;
-
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $input-label-desktop-font-size;
-		}
-
-		&.disabled {
-			opacity: 0.5;
-		}
-
-		&.focus {
-			color: $input-label-focus-color;
-		}
-	}
-
 	select.form-control {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -125,40 +120,48 @@ label,
 	}
 }
 
-@if (variable-exists(atlas-theme)) {
-	// Disabled State
+// Disabled State
 
+fieldset[disabled] label,
+label.disabled,
+.control-label.disabled {
+	opacity: $input-label-disabled-opacity;
+}
+
+fieldset[disabled] label {
 	.form-control {
-		fieldset[disabled] &,
-		&[disabled],
-		&select[disabled] {
-			border-color: $input-border-disabled;
-			color: $input-border;
-			opacity: 0.5;
-
-			@include placeholder;
-		}
+		font-weight: normal;
+		opacity: 1;
 	}
+}
 
-	fieldset[disabled] label {
-		opacity: 0.5;
+.form-control {
+	fieldset[disabled] &,
+	&[disabled] {
+		border-color: $input-disabled-border;
+		color: $input-disabled-color;
+		opacity: $input-disabled-opacity;
+
+		@include placeholder($input-disabled-placeholder-color);
 	}
+}
 
-	select[disabled].form-control > option {
-		@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
-			color: $input-border;
-		}
+.form-control[disabled] > option {
+	@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
+		color: $input-disabled-color;
 	}
+}
 
-	// Readonly State
+// Readonly State
 
-	.form-control[readonly] {
-		background-color: $input-readonly-bg;
-		border-color: $input-readonly-border;
-		color: $input-readonly-color;
-		cursor: default;
-	}
+.form-control[readonly] {
+	background-color: $input-readonly-bg;
+	border-color: $input-readonly-border;
+	color: $input-readonly-color;
+	cursor: $input-readonly-cursor;
+}
 
+@if (variable-exists(atlas-theme)) {
 	// Input Sizes
 
 	.form-control {

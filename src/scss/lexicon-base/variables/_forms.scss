@@ -9,8 +9,25 @@ $input-group-constrain-line-height: $input-height-base - $input-border-top-width
 $input-group-constrain-lg-line-height: $input-height-large - $input-border-top-width - $input-border-bottom-width !default;
 $input-group-constrain-sm-line-height: $input-height-small - $input-border-top-width - $input-border-bottom-width !default;
 
+$input-disabled-border: null !default;
+$input-disabled-color: null !default;
+$input-disabled-opacity: null !default;
+$input-disabled-placeholder-color: null !default;
+
+$input-label-color: null !default;
+$input-label-disabled-opacity: null !default;
+$input-label-focus-color: null !default;
+$input-label-font-size: null !default;
+$input-label-font-weight: null !default;
+$input-label-margin-bottom: null !default;
+
 $input-label-reference-mark-spacer: 0 !default;
 $input-label-reference-mark-vertical-alignment: top !default;
+
+$input-readonly-bg: null !default;
+$input-readonly-border: null !default;
+$input-readonly-color: null !default;
+$input-readonly-cursor: null !default;
 
 $zindex-input-group-hover: 3 !default;
 
