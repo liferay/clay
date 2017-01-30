@@ -52,13 +52,19 @@ $input-color-focus: $brand-primary !default;
 $input-border: $brand-default !default;
 $input-border-focus: $input-color-focus !default;
 
-$input-border-disabled: #CFD7DE !default;
-
 $input-box-shadow: none !default;
 $input-box-shadow-focus: none !default;
 
 $input-color-placeholder: darken(#E4E9EC, 12%) !default;
 $input-color-placeholder-focus: $input-border-focus !default;
+
+// Deprecated `$input-border-disabled` as of v1.0.16 and will be removed in
+// v2.0.0 use `$input-disabled-border` instead
+$input-border-disabled: #CFD7DE !default;
+$input-disabled-border: $input-border-disabled !default;
+$input-disabled-color: $input-border !default;
+$input-disabled-opacity: 0.5 !default;
+$input-disabled-placeholder-color: $input-color-placeholder !default;
 
 $input-label-color: $brand-default !default;
 $input-label-disabled-opacity: 0.5 !default;

@@ -9,6 +9,11 @@ $input-group-constrain-line-height: $input-height-base - $input-border-top-width
 $input-group-constrain-lg-line-height: $input-height-large - $input-border-top-width - $input-border-bottom-width !default;
 $input-group-constrain-sm-line-height: $input-height-small - $input-border-top-width - $input-border-bottom-width !default;
 
+$input-disabled-border: null !default;
+$input-disabled-color: null !default;
+$input-disabled-opacity: null !default;
+$input-disabled-placeholder-color: null !default;
+
 $input-label-color: null !default;
 $input-label-disabled-opacity: null !default;
 $input-label-focus-color: null !default;

@@ -128,27 +128,31 @@ label.disabled,
 	opacity: $input-label-disabled-opacity;
 }
 
-@if (variable-exists(atlas-theme)) {
-	// Disabled State
-
+fieldset[disabled] label {
 	.form-control {
-		fieldset[disabled] &,
-		&[disabled],
-		&select[disabled] {
-			border-color: $input-border-disabled;
-			color: $input-border;
-			opacity: 0.5;
-
-			@include placeholder;
-		}
+		font-weight: normal;
+		opacity: 1;
 	}
+}
 
-	select[disabled].form-control > option {
-		@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
-			color: $input-border;
-		}
+.form-control {
+	fieldset[disabled] &,
+	&[disabled] {
+		border-color: $input-disabled-border;
+		color: $input-disabled-color;
+		opacity: $input-disabled-opacity;
+
+		@include placeholder($input-disabled-placeholder-color);
 	}
+}
 
+.form-control[disabled] > option {
+	@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
+		color: $input-disabled-color;
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
 	// Readonly State
 
 	.form-control[readonly] {
