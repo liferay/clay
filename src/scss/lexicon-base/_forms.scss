@@ -13,6 +13,21 @@ fieldset {
 
 label,
 .control-label {
+	color: $input-label-color;
+	font-size: $input-label-font-size;
+	font-weight: $input-label-font-weight;
+	margin-bottom: $input-label-margin-bottom;
+
+	@if (variable-exists(input-label-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $input-label-desktop-font-size;
+		}
+	}
+
+	&.focus {
+		color: $input-label-focus-color;
+	}
+
 	.lexicon-icon {
 		@extend %scale-lexicon-icon;
 	}
@@ -28,26 +43,6 @@ label,
 }
 
 @if (variable-exists(atlas-theme)) {
-	label,
-	.control-label {
-		color: $input-label-color;
-		font-size: $input-label-font-size;
-		font-weight: 500;
-		margin-bottom: 2px;
-
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $input-label-desktop-font-size;
-		}
-
-		&.disabled {
-			opacity: 0.5;
-		}
-
-		&.focus {
-			color: $input-label-focus-color;
-		}
-	}
-
 	select.form-control {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -125,6 +120,14 @@ label,
 	}
 }
 
+// Disabled State
+
+fieldset[disabled] label,
+label.disabled,
+.control-label.disabled {
+	opacity: $input-label-disabled-opacity;
+}
+
 @if (variable-exists(atlas-theme)) {
 	// Disabled State
 
@@ -138,10 +141,6 @@ label,
 
 			@include placeholder;
 		}
-	}
-
-	fieldset[disabled] label {
-		opacity: 0.5;
 	}
 
 	select[disabled].form-control > option {

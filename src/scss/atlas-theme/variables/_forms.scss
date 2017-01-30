@@ -5,6 +5,8 @@ $input-font-size: 14px !default;
 $input-desktop-font-size: 16px !default;
 
 $input-label-font-size: 12px !default;
+$input-label-font-weight: 500 !default;
+$input-label-margin-bottom: 2px !default;
 
 $input-label-desktop-font-size: 14px !default;
 
@@ -59,6 +61,7 @@ $input-color-placeholder: darken(#E4E9EC, 12%) !default;
 $input-color-placeholder-focus: $input-border-focus !default;
 
 $input-label-color: $brand-default !default;
+$input-label-disabled-opacity: 0.5 !default;
 $input-label-focus-color: $input-color-focus !default;
 
 $input-readonly-bg: #FAFAFA !default;
