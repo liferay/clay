@@ -114,6 +114,10 @@ label,
 	}
 }
 
+textarea.form-control {
+	height: $input-textarea-height;
+}
+
 // Disabled State
 
 fieldset[disabled] label,
