@@ -125,7 +125,7 @@ label,
 fieldset[disabled] label,
 label.disabled,
 .control-label.disabled {
-	opacity: $input-label-disabled-opacity;
+	opacity: $input-opacity-disabled;
 }
 
 fieldset[disabled] label {
@@ -138,17 +138,17 @@ fieldset[disabled] label {
 .form-control {
 	fieldset[disabled] &,
 	&[disabled] {
-		border-color: $input-disabled-border;
-		color: $input-disabled-color;
-		opacity: $input-disabled-opacity;
+		border-color: $input-border-disabled;
+		color: $input-color-disabled;
+		opacity: $input-opacity-disabled;
 
-		@include placeholder($input-disabled-placeholder-color);
+		@include placeholder($input-color-placeholder-disabled);
 	}
 }
 
 .form-control[disabled] > option {
 	@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
-		color: $input-disabled-color;
+		color: $input-color-disabled;
 	}
 }
 
