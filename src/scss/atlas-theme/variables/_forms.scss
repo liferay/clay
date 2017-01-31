@@ -86,8 +86,8 @@ $input-select-padding-top: 0 !default;
 $input-select-icon-color: $input-border !default;
 $input-select-icon-focus-color: $input-border-focus !default;
 
-$input-select-icon: lx-icon(caret-double-l, $input-border) !default;
-$input-select-icon-focus: lx-icon(caret-double-l, $input-border-focus) !default;
+$input-select-icon: lx-icon(caret-double-l, $input-select-icon-color) !default;
+$input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-focus-color) !default;
 
 // Legend
 

@@ -47,10 +47,7 @@ label,
 		-moz-appearance: none;
 		-webkit-appearance: none;
 
-		@if ($input-select-bg != null) {
-			background-color: $input-select-bg;
-		}
-
+		background-color: $input-select-bg;
 		background-image: $input-select-icon;
 		background-image: none \9;
 		background-position: $input-select-bg-position;
@@ -70,10 +67,7 @@ label,
 		}
 
 		&:focus {
-			@if ($input-select-focus-bg != null) {
-				background-color: $input-select-focus-bg;
-			}
-
+			background-color: $input-select-focus-bg;
 			background-image: $input-select-icon-focus;
 			background-image: none \9;
 		}
@@ -118,6 +112,10 @@ label,
 			width: 0;
 		}
 	}
+}
+
+textarea.form-control {
+	height: $input-textarea-height;
 }
 
 // Disabled State
