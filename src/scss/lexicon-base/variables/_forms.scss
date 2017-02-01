@@ -4,6 +4,15 @@ $input-border-right-width: 1px !default;
 $input-border-top-width: 1px !default;
 $input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
 
+$input-bg-focus: null !default;
+$input-box-shadow: null !default;
+$input-box-shadow-focus: null !default;
+$input-color-focus: null !default;
+$input-color-placeholder-focus: null !default;
+$input-font-size: null !default;
+$input-padding-horizontal: null !default;
+$input-padding-vertical: null !default;
+
 $input-group-constrain-line-height: $input-height-base - $input-border-top-width - $input-border-bottom-width !default;
 
 $input-group-constrain-lg-line-height: $input-height-large - $input-border-top-width - $input-border-bottom-width !default;
