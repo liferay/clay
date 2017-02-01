@@ -30,6 +30,42 @@ $input-readonly-cursor: null !default;
 
 $input-textarea-height: null !default;
 
+$input-danger-bg: null !default;
+$input-danger-bg-focus: null !default;
+$input-danger-border: null !default;
+$input-danger-border-focus: null !default;
+$input-danger-box-shadow: null !default;
+$input-danger-box-shadow-focus: null !default;
+$input-danger-color: null !default;
+$input-danger-color-focus: null !default;
+
+$input-danger-checkbox-label-color: null !default;
+$input-danger-label-color: null !default;
+
+$input-success-bg: null !default;
+$input-success-bg-focus: null !default;
+$input-success-border: null !default;
+$input-success-border-focus: null !default;
+$input-success-box-shadow: null !default;
+$input-success-box-shadow-focus: null !default;
+$input-success-color: null !default;
+$input-success-color-focus: null !default;
+
+$input-success-checkbox-label-color: null !default;
+$input-success-label-color: null !default;
+
+$input-warning-bg: null !default;
+$input-warning-bg-focus: null !default;
+$input-warning-border: null !default;
+$input-warning-border-focus: null !default;
+$input-warning-box-shadow: null !default;
+$input-warning-box-shadow-focus: null !default;
+$input-warning-color: null !default;
+$input-warning-color-focus: null !default;
+
+$input-warning-checkbox-label-color: null !default;
+$input-warning-label-color: null !default;
+
 $zindex-input-group-hover: 3 !default;
 
 $zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4
