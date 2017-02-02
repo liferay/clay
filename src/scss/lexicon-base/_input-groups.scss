@@ -183,13 +183,13 @@
 
 		> .input-group-btn {
 			&:first-child > .btn:first-child {
-				border-bottom-left-radius: $btn-lg-border-radius;
-				border-top-left-radius: $btn-lg-border-radius;
+				border-bottom-left-radius: $btn-border-radius-large;
+				border-top-left-radius: $btn-border-radius-large;
 			}
 
 			&:last-child > .btn:last-child {
-				border-bottom-right-radius: $btn-lg-border-radius;
-				border-top-right-radius: $btn-lg-border-radius;
+				border-bottom-right-radius: $btn-border-radius-large;
+				border-top-right-radius: $btn-border-radius-large;
 			}
 		}
 
@@ -230,13 +230,13 @@
 
 		> .input-group-btn {
 			&:first-child > .btn:first-child {
-				border-bottom-left-radius: $btn-sm-border-radius;
-				border-top-left-radius: $btn-sm-border-radius;
+				border-bottom-left-radius: $btn-border-radius-small;
+				border-top-left-radius: $btn-border-radius-small;
 			}
 
 			&:last-child > .btn:last-child {
-				border-bottom-right-radius: $btn-sm-border-radius;
-				border-top-right-radius: $btn-sm-border-radius;
+				border-bottom-right-radius: $btn-border-radius-small;
+				border-top-right-radius: $btn-border-radius-small;
 			}
 		}
 
