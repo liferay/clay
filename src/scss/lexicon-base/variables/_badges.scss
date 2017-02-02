@@ -21,3 +21,52 @@ $badge-sm-padding-bottom: $label-sm-padding-bottom !default;
 $badge-sm-padding-left: $label-sm-padding-left !default;
 $badge-sm-padding-right: $label-sm-padding-right !default;
 $badge-sm-padding-top: $label-sm-padding-top !default;
+
+$badge-border-style: null !default;
+$badge-border-width: null !default;
+
+$badge-danger-bg: $brand-danger !default;
+$badge-danger-border: null !default;
+$badge-danger-color: null !default;
+
+$badge-default-bg: null !default;
+$badge-default-border: null !default;
+$badge-default-color: null !default;
+$badge-default-link-color: null !default; // TODO Deprecate this
+
+$badge-info-bg: $brand-info !default;
+$badge-info-border: null !default;
+$badge-info-color: null !default;
+
+$badge-primary-bg: $brand-primary !default;
+$badge-primary-border: null !default;
+$badge-primary-color: null !default;
+
+$badge-success-bg: $brand-success !default;
+$badge-success-border: null !default;
+$badge-success-color: null !default;
+
+$badge-warning-bg: $brand-warning !default;
+$badge-warning-border: null !default;
+$badge-warning-color: null !default;
+
+// Badge Hover States only work then the Badge is an anchor tag
+
+$badge-danger-hover-bg: null !default;
+$badge-danger-hover-border: null !default;
+$badge-danger-hover-color: null !default;
+$badge-default-hover-bg: null !default;
+$badge-default-hover-border: null !default;
+$badge-default-hover-color: null !default;
+$badge-info-hover-bg: null !default;
+$badge-info-hover-border: null !default;
+$badge-info-hover-color: null !default;
+$badge-primary-hover-bg: null !default;
+$badge-primary-hover-border: null !default;
+$badge-primary-hover-color: null !default;
+$badge-success-hover-bg: null !default;
+$badge-success-hover-border: null !default;
+$badge-success-hover-color: null !default;
+$badge-warning-hover-bg: null !default;
+$badge-warning-hover-border: null !default;
+$badge-warning-hover-color: null !default;
