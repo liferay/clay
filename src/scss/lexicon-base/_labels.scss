@@ -1,4 +1,6 @@
 .label {
+	border-style: $label-border-style;
+	border-width: $label-border-width;
 	display: inline-block;
 	font-size: $label-font-size;
 	font-weight: $label-font-weight;
@@ -78,11 +80,110 @@
 
 // Skin
 
-@if (variable-exists(label-default-color)) {
-	.label-default {
-		&,
-		a {
-			color: $label-default-color;
+.label-danger {
+	border-color: $label-danger-border;
+	color: $label-danger-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-danger-hover-bg;
+			border-color: $label-danger-hover-border;
+			color: $label-danger-hover-color;
 		}
+	}
+
+	a {
+		color: $label-danger-color;
+	}
+}
+
+.label-default {
+	border-color: $label-default-border;
+	color: $label-default-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-default-hover-bg;
+			border-color: $label-default-hover-border;
+			color: $label-default-hover-color;
+		}
+	}
+
+	a {
+		color: $label-default-color;
+	}
+}
+
+.label-info {
+	border-color: $label-info-border;
+	color: $label-info-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-info-hover-bg;
+			border-color: $label-info-hover-border;
+			color: $label-info-hover-color;
+		}
+	}
+
+	a {
+		color: $label-info-color;
+	}
+}
+
+.label-primary {
+	border-color: $label-primary-border;
+	color: $label-primary-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-primary-hover-bg;
+			border-color: $label-primary-hover-border;
+			color: $label-primary-hover-color;
+		}
+	}
+
+	a {
+		color: $label-primary-color;
+	}
+}
+
+.label-success {
+	border-color: $label-success-border;
+	color: $label-success-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-success-hover-bg;
+			border-color: $label-success-hover-border;
+			color: $label-success-hover-color;
+		}
+	}
+
+	a {
+		color: $label-success-color;
+	}
+}
+
+.label-warning {
+	border-color: $label-warning-border;
+	color: $label-warning-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-warning-hover-bg;
+			border-color: $label-warning-hover-border;
+			color: $label-warning-hover-color;
+		}
+	}
+
+	a {
+		color: $label-warning-color;
 	}
 }
