@@ -31,8 +31,10 @@ $badge-danger-color: null !default;
 
 $badge-default-bg: null !default;
 $badge-default-border: null !default;
-$badge-default-color: null !default;
-$badge-default-link-color: null !default; // TODO Deprecate this
+// Deprecated `$badge-default-link-color` as of v1.0.16 and will be removed in v2.0.0
+$badge-default-link-color: null !default;
+
+$badge-default-color: $badge-default-link-color !default;
 
 $badge-info-bg: $brand-info !default;
 $badge-info-border: null !default;

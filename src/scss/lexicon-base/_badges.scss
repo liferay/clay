@@ -103,7 +103,6 @@
 	}
 }
 
-
 .badge-default {
 	background-color: $badge-default-bg;
 	border-color: $badge-default-border;
@@ -119,7 +118,7 @@
 	}
 
 	a {
-		color: $badge-default-link-color;
+		color: $badge-default-color;
 
 		&:focus,
 		&:hover {
