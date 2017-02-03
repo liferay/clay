@@ -1,3 +1,11 @@
+$collapse-icon-padding-left: null !default;
+$collapse-icon-padding-right: 45px !default;
+
+$collapse-icon-position-bottom: null !default;
+$collapse-icon-position-left: null !default;
+$collapse-icon-position-right: 15px !default;
+$collapse-icon-position-top: 15px !default;
+
 $help-icon-default-bg: $input-group-addon-bg !default;
 $help-icon-default-color: lx-color-by-lightness($text-color, $help-icon-default-bg) !default;
 $help-icon-default-hover-color: lx-color-by-lightness($text-color, $help-icon-default-bg, "secondary") !default;

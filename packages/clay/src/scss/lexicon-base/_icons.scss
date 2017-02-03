@@ -36,7 +36,8 @@
 // Collapse Icon
 
 a.collapse-icon {
-	padding-right: 45px;
+	padding-left: $collapse-icon-padding-left;
+	padding-right: $collapse-icon-padding-right;
 }
 
 .collapse-icon-closed,
@@ -51,9 +52,11 @@ a.collapse-icon {
 .collapse-icon {
 	.collapse-icon-closed,
 	.collapse-icon-open {
+		bottom: $collapse-icon-position-bottom;
+		left: $collapse-icon-position-left;
 		position: absolute;
-		right: 15px;
-		top: 10px;
+		right: $collapse-icon-position-right;
+		top: $collapse-icon-position-top;
 
 		[class^="icon-"],
 		[class*=" icon-"] {
