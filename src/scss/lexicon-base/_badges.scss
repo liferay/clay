@@ -21,12 +21,17 @@
 
 	a {
 		color: $badge-color;
+		text-decoration: $badge-link-text-decoration;
 
 		&:focus,
 		&:hover {
 			color: $badge-link-hover-color;
-			text-decoration: none;
+			text-decoration: $badge-link-hover-text-decoration;
 		}
+	}
+
+	[class*="icon-"] {
+		text-decoration: none;
 	}
 }
 

@@ -23,12 +23,17 @@
 	a {
 		color: $label-color;
 		display: inline-block;
+		text-decoration: $label-link-text-decoration;
 
 		&:focus,
 		&:hover {
 			color: $label-link-hover-color;
-			text-decoration: none;
+			text-decoration: $label-link-hover-text-decoration;
 		}
+	}
+
+	[class*="icon-"] {
+		text-decoration: none;
 	}
 }
 
