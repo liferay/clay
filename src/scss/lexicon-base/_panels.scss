@@ -51,10 +51,8 @@
 		}
 	}
 
-	@if (variable-exists(atlas-theme)) {
-		.panel + .panel {
-			margin-top: 0;
-		}
+	.panel + .panel {
+		margin-top: $panel-group-panel-spacer;
 	}
 }
 
