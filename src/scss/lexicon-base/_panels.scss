@@ -31,7 +31,8 @@
 		padding: 0;
 
 		.collapse-icon {
-			padding-right: 45px;
+			padding-left: $collapse-icon-padding-left;
+			padding-right: $collapse-icon-padding-right;
 		}
 
 		@if (variable-exists(atlas-theme)) {
