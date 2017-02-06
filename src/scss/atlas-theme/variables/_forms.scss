@@ -1,6 +1,6 @@
 // Structure
 
-$input-font-size: 14px !default;
+$input-font-size: 16px !default;
 
 $input-desktop-font-size: 16px !default;
 
@@ -70,6 +70,30 @@ $input-readonly-bg: #FAFAFA !default;
 $input-readonly-border: $input-border !default;
 $input-readonly-color: darken($input-color-placeholder, 12%) !default;
 $input-readonly-cursor: default !default;
+
+$input-danger-border: $state-danger-border !default;
+$input-danger-box-shadow: none !default;
+$input-danger-box-shadow-focus: none !default;
+$input-danger-color: $input-color !default;
+
+$input-danger-checkbox-label-color: $state-danger-text !default;
+$input-danger-label-color: $input-label-color !default;
+
+$input-success-border: $state-success-border !default;
+$input-success-box-shadow: none !default;
+$input-success-box-shadow-focus: none !default;
+$input-success-color: $input-color !default;
+
+$input-success-checkbox-label-color: $state-success-text !default;
+$input-success-label-color: $input-label-color !default;
+
+$input-warning-border: $state-warning-border !default;
+$input-warning-box-shadow: none !default;
+$input-warning-box-shadow-focus: none !default;
+$input-warning-color: $input-color !default;
+
+$input-warning-checkbox-label-color: $state-warning-text !default;
+$input-warning-label-color: $input-label-color !default;
 
 // Select Element
 
