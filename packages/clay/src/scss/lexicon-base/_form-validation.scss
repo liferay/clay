@@ -1,34 +1,92 @@
-@if (variable-exists(atlas-theme)) {
-	.has-success,
-	.has-warning,
-	.has-error {
-		.control-label {
-			color: $input-label-color;
-		}
+.has-success {
+	label,
+	.control-label {
+		color: $input-success-label-color;
+	}
 
-		.form-control {
-			box-shadow: none;
-			color: $input-color;
-
-			&:focus {
-				box-shadow: none;
-			}
+	.checkbox,
+	.radio {
+		label {
+			color: $input-success-checkbox-label-color;
 		}
 	}
 
+	.form-control {
+		background-color: $input-success-bg;
+		border-color: $input-success-border;
+		box-shadow: $input-success-box-shadow;
+		color: $input-success-color;
+
+		&:focus {
+			background-color: $input-success-bg-focus;
+			border-color: $input-success-border-focus;
+			box-shadow: $input-success-box-shadow-focus;
+			color: $input-success-color-focus;
+		}
+	}
+}
+
+.has-warning {
+	label,
+	.control-label {
+		color: $input-warning-label-color;
+	}
+
+	.checkbox,
+	.radio {
+		label {
+			color: $input-warning-checkbox-label-color;
+		}
+	}
+
+	.form-control {
+		background-color: $input-warning-bg;
+		border-color: $input-warning-border;
+		box-shadow: $input-warning-box-shadow;
+		color: $input-warning-color;
+
+		&:focus {
+			background-color: $input-warning-bg-focus;
+			border-color: $input-warning-border-focus;
+			box-shadow: $input-warning-box-shadow-focus;
+			color: $input-warning-color-focus;
+		}
+	}
+}
+
+.has-error {
+	label,
+	.control-label {
+		color: $input-danger-label-color;
+	}
+
+	.checkbox,
+	.radio {
+		label {
+			color: $input-danger-checkbox-label-color;
+		}
+	}
+
+	.form-control {
+		background-color: $input-danger-bg;
+		border-color: $input-danger-border;
+		box-shadow: $input-danger-box-shadow;
+		color: $input-danger-color;
+
+		&:focus {
+			background-color: $input-danger-bg-focus;
+			border-color: $input-danger-border-focus;
+			box-shadow: $input-danger-box-shadow-focus;
+			color: $input-danger-color-focus;
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
 	.has-success {
 		select.form-control {
 			background-image: lx-icon(caret-double-l, $state-success-border);
 			background-image: none \9;
-		}
-
-		.checkbox label,
-		.radio label {
-			color: $state-success-text;
-		}
-
-		.form-control[readonly] {
-			border-color: $state-success-border;
 		}
 	}
 
@@ -37,15 +95,6 @@
 			background-image: lx-icon(caret-double-l, $state-warning-border);
 			background-image: none \9;
 		}
-
-		.checkbox label,
-		.radio label {
-			color: $state-warning-text;
-		}
-
-		.form-control[readonly] {
-			border-color: $state-warning-border;
-		}
 	}
 
 	.has-error {
@@ -53,19 +102,12 @@
 			background-image: lx-icon(caret-double-l, $state-danger-border);
 			background-image: none \9;
 		}
-
-		.checkbox label,
-		.radio label {
-			color: $state-danger-text;
-		}
-
-		.form-control[readonly] {
-			border-color: $state-danger-border;
-		}
 	}
 
 	.form-group select.form-control[multiple] {
-		background: none;
+		background-image: none;
+		background-position: 0% 0%;
+		background-size: auto;
 		padding: $input-padding-vertical $input-padding-horizontal;
 	}
 }

@@ -34,13 +34,23 @@
 
 // Input Group Addon
 
+.input-group .input-group-addon {
+	&:first-child {
+		border-bottom-left-radius: $input-group-addon-border-radius;
+		border-top-left-radius: $input-group-addon-border-radius;
+	}
+
+	&:last-child {
+		border-bottom-right-radius: $input-group-addon-border-radius;
+		border-top-right-radius: $input-group-addon-border-radius;
+	}
+}
+
 .input-group-addon {
 	border-width: $input-border-width;
+	color: $input-group-addon-color;
 
 	@if (variable-exists(atlas-theme)) {
-		border-radius: $input-group-addon-border-radius;
-		color: $input-group-addon-color;
-
 		input[type="checkbox"],
 		input[type="radio"] {
 			display: block;
@@ -146,7 +156,7 @@
 	display: inline-block;
 
 	@if (variable-exists(atlas-theme)) {
-		border-bottom: $btn-border-width solid $input-group-default-addon-border-color;
+		border-bottom: $input-group-default-addon-content-border-bottom-width solid $input-group-default-addon-border-color;
 		height: $input-mobile-height-base;
 		line-height: $input-mobile-height-base;
 		width: 30px;
@@ -161,6 +171,18 @@
 // Input Group Sizes
 
 .input-group-lg {
+	> .input-group-addon {
+		&:first-child {
+			border-bottom-left-radius: $input-group-addon-border-radius-large;
+			border-top-left-radius: $input-group-addon-border-radius-large;
+		}
+
+		&:last-child {
+			border-bottom-right-radius: $input-group-addon-border-radius-large;
+			border-top-right-radius: $input-group-addon-border-radius-large;
+		}
+	}
+
 	.input-group-constrain {
 		line-height: $input-group-constrain-lg-line-height;
 		margin-bottom: -$padding-large-vertical - $input-border-bottom-width;
@@ -177,19 +199,15 @@
 	}
 
 	@if (variable-exists(atlas-theme)) {
-		> .input-group-addon {
-			border-radius: $input-group-addon-border-radius;
-		}
-
 		> .input-group-btn {
 			&:first-child > .btn:first-child {
-				border-bottom-left-radius: $btn-lg-border-radius;
-				border-top-left-radius: $btn-lg-border-radius;
+				border-bottom-left-radius: $btn-border-radius-large;
+				border-top-left-radius: $btn-border-radius-large;
 			}
 
 			&:last-child > .btn:last-child {
-				border-bottom-right-radius: $btn-lg-border-radius;
-				border-top-right-radius: $btn-lg-border-radius;
+				border-bottom-right-radius: $btn-border-radius-large;
+				border-top-right-radius: $btn-border-radius-large;
 			}
 		}
 
@@ -208,6 +226,18 @@
 }
 
 .input-group-sm {
+	> .input-group-addon {
+		&:first-child {
+			border-bottom-left-radius: $input-group-addon-border-radius-small;
+			border-top-left-radius: $input-group-addon-border-radius-small;
+		}
+
+		&:last-child {
+			border-bottom-right-radius: $input-group-addon-border-radius-small;
+			border-top-right-radius: $input-group-addon-border-radius-small;
+		}
+	}
+
 	.input-group-constrain {
 		line-height: $input-group-constrain-sm-line-height;
 		margin-bottom: -$padding-small-vertical - $input-border-bottom-width;
@@ -224,19 +254,15 @@
 	}
 
 	@if (variable-exists(atlas-theme)) {
-		> .input-group-addon {
-			border-radius: $input-group-addon-border-radius;
-		}
-
 		> .input-group-btn {
 			&:first-child > .btn:first-child {
-				border-bottom-left-radius: $btn-sm-border-radius;
-				border-top-left-radius: $btn-sm-border-radius;
+				border-bottom-left-radius: $btn-border-radius-small;
+				border-top-left-radius: $btn-border-radius-small;
 			}
 
 			&:last-child > .btn:last-child {
-				border-bottom-right-radius: $btn-sm-border-radius;
-				border-top-right-radius: $btn-sm-border-radius;
+				border-bottom-right-radius: $btn-border-radius-small;
+				border-top-right-radius: $btn-border-radius-small;
 			}
 		}
 
