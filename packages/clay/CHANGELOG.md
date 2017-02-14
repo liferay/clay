@@ -1,4 +1,23 @@
-### v1.0.15 - January, 2017
+### v1.0.16 - February 13, 2017
+* New: Lexicon Base and Atlas added options to customize input state colors `$input-danger-bg`, `$input-danger-bg-focus`, `$input-danger-border`, `$input-danger-border-focus`, `$input-danger-box-shadow`, `$input-danger-box-shadow-focus`, `$input-danger-color`, `$input-danger-color-focus`, `$input-danger-checkbox-label-color`, `$input-danger-label-color`, `$input-success-bg`, `$input-success-bg-focus`, `$input-success-border`, `$input-success-border-focus`, `$input-success-box-shadow`, `$input-success-box-shadow-focus`, `$input-success-color`, `$input-success-color-focus`, `$input-success-checkbox-label-color`, `$input-success-label-color`, `$input-warning-bg`, `$input-warning-bg-focus`, `$input-warning-border`, `$input-warning-border-focus`, `$input-warning-box-shadow`, `$input-warning-box-shadow-focus`, `$input-warning-color`, `$input-warning-color-focus`, `$input-warning-checkbox-label-color`, `$input-warning-label-color`
+* New: Lexicon Base added options to customize `$input-bg-focus`, `$input-box-shadow`, `$input-box-shadow-focus`, `$input-color-focus`, `$input-color-placeholder-focus`, `$input-font-size`, `$input-padding-horizontal`, `$input-padding-vertical`
+* New: Lexicon Base add option to customize `$input-textarea-height`
+* New: Lexicon Base and Atlas added option to customize `$input-color-disabled`, `$input-opacity-disabled`, `$input-placeholder-color-disabled`. Removed redundant selector `select[disabled].form-control`.
+* New: Lexicon Base added options to customize `$input-label-color`, `$input-label-focus-color`, `$input-label-font-size`, `$input-label-font-weight`, `$input-label-margin-bottom`
+* Fix: Atlas input-font-size (mobile) is always 16px
+* Update: Bootstrap to 3.3.7
+* Update: Atlas add option to customize `$input-group-default-addon-content-border-bottom-width`
+* Update: Atlas deprecate `$btn-lg-border-radius`, `$btn-sm-border-radius`, `$btn-xs-border-radius`, use `$btn-border-radius-large`, `$btn-border-radius-small`, `$btn-border-radius-extra-small` respectively
+* Update: Atlas remove border-radius property from .form-control.input-lg and .form-control.input-sm duplicates Bootstrap
+* Update: Atlas remove unnecessary null value check on `$input-select-bg` and `$input-select-focus-bg`
+* Update: Atlas color select element icons with `$input-select-icon-color` and `$input-select-icon-focus-color`
+* Update: Atlas Select element icon positions and backgrounds should be more customizable
+* Update: Atlas Select element icon should be more customizable
+* Site: Test Assorted Page added Badge and Label examples with Font Awesome and Glyphicons
+* Site: Added Badges and Labels examples to Test Page
+* Site: Remove btn-toolbar from Button Dropups demo
+
+### v1.0.15 - January 12, 2017
 * Fix: Some icon variables are missing the default flag
 * Update: Atlas Pagination items should account for large numbers
 * Update: Don't rely on @extend in Bootstrap to size Help Icon in Input Groups
