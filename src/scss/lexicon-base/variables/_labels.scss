@@ -7,6 +7,10 @@ $label-padding-left: 7px !default;
 $label-padding-right: 7px !default;
 $label-padding-top: 3px !default;
 
+$label-link-text-decoration: underline !default;
+
+$label-link-hover-text-decoration: none !default;
+
 $label-lg-font-size: 16px !default;
 $label-lg-lexicon-icon-height: 13px !default;
 $label-lg-lexicon-icon-width: $label-lg-lexicon-icon-height !default;
@@ -22,3 +26,42 @@ $label-sm-padding-bottom: 2px !default;
 $label-sm-padding-left: 7px !default;
 $label-sm-padding-right: 7px !default;
 $label-sm-padding-top: 2px !default;
+
+$label-border-style: null !default;
+$label-border-width: null !default;
+
+$label-danger-border: null !default;
+$label-danger-color: null !default;
+$label-danger-hover-bg: null !default;
+$label-danger-hover-border: null !default;
+$label-danger-hover-color: null !default;
+
+$label-default-border: null !default;
+$label-default-color: null !default;
+$label-default-hover-bg: null !default;
+$label-default-hover-border: null !default;
+$label-default-hover-color: null !default;
+
+$label-info-border: null !default;
+$label-info-color: null !default;
+$label-info-hover-bg: null !default;
+$label-info-hover-border: null !default;
+$label-info-hover-color: null !default;
+
+$label-primary-border: null !default;
+$label-primary-color: null !default;
+$label-primary-hover-bg: null !default;
+$label-primary-hover-border: null !default;
+$label-primary-hover-color: null !default;
+
+$label-success-border: null !default;
+$label-success-color: null !default;
+$label-success-hover-bg: null !default;
+$label-success-hover-border: null !default;
+$label-success-hover-color: null !default;
+
+$label-warning-border: null !default;
+$label-warning-color: null !default;
+$label-warning-hover-bg: null !default;
+$label-warning-hover-border: null !default;
+$label-warning-hover-color: null !default;
