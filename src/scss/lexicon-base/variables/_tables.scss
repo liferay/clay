@@ -1,5 +1,9 @@
 $table-cell-gutters: floor($grid-gutter-width / 2) !default; // 15px
 
+$table-header-font-size: null !default;
+$table-header-font-weight: null !default;
+$table-header-min-height: 36px !default;
+
 $table-list-content-height: 50px !default;
 
 $table-list-row-active-border-bottom-width: 1px !default;

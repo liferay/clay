@@ -29,12 +29,9 @@ th {
 	}
 
 	th {
-		@if (variable-exists(atlas-theme)) {
-			font-size: $table-header-font-size;
-			font-weight: $table-header-font-weight;
-		}
-
-		height: 36px;
+		font-size: $table-header-font-size;
+		font-weight: $table-header-font-weight;
+		height: $table-header-min-height;
 	}
 
 	tr {
