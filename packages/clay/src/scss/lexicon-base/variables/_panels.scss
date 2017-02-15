@@ -1,7 +1,3 @@
-$panel-blank-border: transparent !default;
-$panel-blank-heading-bg: transparent !default;
-$panel-blank-text: $text-color !default;
-
 $panel-border-bottom-width: 1px !default;
 $panel-border-left-width: 1px !default;
 $panel-border-right-width: 1px !default;
@@ -12,12 +8,16 @@ $panel-footer-border-top-width: 1px !default;
 
 $panel-heading-border-bottom-width: 1px !default;
 
-$panel-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) !default;
-
 $panel-title-font-size: 1em !default;
 $panel-title-font-weight: 500 !default;
 
 $panel-group-panel-spacer: null !default;
+
+$panel-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) !default;
+
+$panel-blank-border: transparent !default;
+$panel-blank-heading-bg: transparent !default;
+$panel-blank-text: $text-color !default;
 
 $panel-danger-footer-bg: $panel-danger-heading-bg !default;
 $panel-danger-footer-border: $panel-danger-border !default;
