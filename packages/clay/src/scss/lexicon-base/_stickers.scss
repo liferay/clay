@@ -1,4 +1,5 @@
 .sticker {
+	border-radius: $sticker-border-radius;
 	color: $sticker-color;
 	display: inline-block;
 	font-size: $sticker-font-size;
@@ -111,61 +112,49 @@
 // Sticker Skins
 
 .sticker-circle {
-	border-radius: $sticker-circle-border-radius;
+	@if ($sticker-border-radius != $sticker-circle-border-radius) {
+		border-radius: $sticker-circle-border-radius;
+	}
 }
 
 .sticker-rounded {
-	border-radius: $sticker-rounded-border-radius;
+	@if ($sticker-border-radius != $sticker-rounded-border-radius) {
+		border-radius: $sticker-rounded-border-radius;
+	}
 }
 
 .sticker-square {
-	border-radius: $sticker-square-border-radius;
+	@if ($sticker-border-radius != null or $sticker-border-radius != $sticker-square-border-radius) {
+		border-radius: $sticker-square-border-radius;
+	}
 }
 
 .sticker-danger {
 	background-color: $sticker-danger-bg;
-
-	@if variable-exists(sticker-danger-color) {
-		color: $sticker-danger-color;
-	}
+	color: $sticker-danger-color;
 }
 
 .sticker-default {
 	background-color: $sticker-default-bg;
-
-	@if variable-exists(sticker-default-color) {
-		color: $sticker-default-color;
-	}
+	color: $sticker-default-color;
 }
 
 .sticker-info {
 	background-color: $sticker-info-bg;
-
-	@if variable-exists(sticker-info-color) {
-		color: $sticker-info-color;
-	}
+	color: $sticker-info-color;
 }
 
 .sticker-primary {
 	background-color: $sticker-primary-bg;
-
-	@if variable-exists(sticker-primary-color) {
-		color: $sticker-primary-color;
-	}
+	color: $sticker-primary-color;
 }
 
 .sticker-success {
 	background-color: $sticker-success-bg;
-
-	@if variable-exists(sticker-success-color) {
-		color: $sticker-success-color;
-	}
+	color: $sticker-success-color;
 }
 
 .sticker-warning {
 	background-color: $sticker-warning-bg;
-
-	@if variable-exists(sticker-warning-color) {
-		color: $sticker-warning-color;
-	}
+	color: $sticker-warning-color;
 }
