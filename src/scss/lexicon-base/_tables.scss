@@ -11,14 +11,7 @@ th {
 				> .checkbox,
 				> input[type="checkbox"] {
 					margin-bottom: 0;
-					margin-left: 7px;
 					margin-top: 0;
-				}
-			}
-
-			&:last-child {
-				> .dropdown {
-					margin-right: 7px;
 				}
 			}
 		}
@@ -38,12 +31,16 @@ th {
 		td,
 		th {
 			&:first-child {
+				padding-left: $table-cell-gutters;
+
 				.clamp-container {
 					left: $table-cell-gutters;
 				}
 			}
 
 			&:last-child {
+				padding-right: $table-cell-gutters;
+
 				.clamp-container {
 					right: $table-cell-gutters;
 				}
