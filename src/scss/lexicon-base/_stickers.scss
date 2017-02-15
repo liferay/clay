@@ -131,48 +131,30 @@
 
 .sticker-danger {
 	background-color: $sticker-danger-bg;
-
-	@if variable-exists(sticker-danger-color) {
-		color: $sticker-danger-color;
-	}
+	color: $sticker-danger-color;
 }
 
 .sticker-default {
 	background-color: $sticker-default-bg;
-
-	@if variable-exists(sticker-default-color) {
-		color: $sticker-default-color;
-	}
+	color: $sticker-default-color;
 }
 
 .sticker-info {
 	background-color: $sticker-info-bg;
-
-	@if variable-exists(sticker-info-color) {
-		color: $sticker-info-color;
-	}
+	color: $sticker-info-color;
 }
 
 .sticker-primary {
 	background-color: $sticker-primary-bg;
-
-	@if variable-exists(sticker-primary-color) {
-		color: $sticker-primary-color;
-	}
+	color: $sticker-primary-color;
 }
 
 .sticker-success {
 	background-color: $sticker-success-bg;
-
-	@if variable-exists(sticker-success-color) {
-		color: $sticker-success-color;
-	}
+	color: $sticker-success-color;
 }
 
 .sticker-warning {
 	background-color: $sticker-warning-bg;
-
-	@if variable-exists(sticker-warning-color) {
-		color: $sticker-warning-color;
-	}
+	color: $sticker-warning-color;
 }
