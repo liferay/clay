@@ -88,9 +88,7 @@ th {
 // Table List Skin
 
 .table-list {
-	@if (variable-exists(atlas-theme)) {
-		color: $table-header-color;
-	}
+	color: $table-list-color;
 
 	a {
 		color: $table-list-link-color;
