@@ -1,4 +1,5 @@
 .sticker {
+	border-radius: $sticker-border-radius;
 	color: $sticker-color;
 	display: inline-block;
 	font-size: $sticker-font-size;
@@ -111,15 +112,21 @@
 // Sticker Skins
 
 .sticker-circle {
-	border-radius: $sticker-circle-border-radius;
+	@if ($sticker-border-radius != $sticker-circle-border-radius) {
+		border-radius: $sticker-circle-border-radius;
+	}
 }
 
 .sticker-rounded {
-	border-radius: $sticker-rounded-border-radius;
+	@if ($sticker-border-radius != $sticker-rounded-border-radius) {
+		border-radius: $sticker-rounded-border-radius;
+	}
 }
 
 .sticker-square {
-	border-radius: $sticker-square-border-radius;
+	@if ($sticker-border-radius != null or $sticker-border-radius != $sticker-square-border-radius) {
+		border-radius: $sticker-square-border-radius;
+	}
 }
 
 .sticker-danger {
