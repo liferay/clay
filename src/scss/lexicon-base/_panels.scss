@@ -121,40 +121,40 @@
 
 .panel-default {
 	> .panel-footer {
-		background-color: $panel-default-heading-bg;
-		border-color: $panel-default-border;
-		color: $panel-default-text;
+		background-color: $panel-default-footer-bg;
+		border-color: $panel-default-footer-border;
+		color: $panel-default-footer-text;
 	}
 }
 
 .panel-primary {
 	> .panel-footer {
-		background-color: $panel-primary-heading-bg;
-		border-color: $panel-primary-border;
-		color: $panel-primary-text;
+		background-color: $panel-primary-footer-bg;
+		border-color: $panel-primary-footer-border;
+		color: $panel-primary-footer-text;
 	}
 }
 
 .panel-success {
 	> .panel-footer {
-		background-color: $panel-success-heading-bg;
-		border-color: $panel-success-border;
-		color: $panel-success-text;
+		background-color: $panel-success-footer-bg;
+		border-color: $panel-success-footer-border;
+		color: $panel-success-footer-text;
 	}
 }
 
 .panel-warning {
 	> .panel-footer {
-		background-color: $panel-warning-heading-bg;
-		border-color: $panel-warning-border;
-		color: $panel-warning-text;
+		background-color: $panel-warning-footer-bg;
+		border-color: $panel-warning-footer-border;
+		color: $panel-warning-footer-text;
 	}
 }
 
 .panel-danger {
 	> .panel-footer {
-		background-color: $panel-danger-heading-bg;
-		border-color: $panel-danger-border;
-		color: $panel-danger-text;
+		background-color: $panel-danger-footer-bg;
+		border-color: $panel-danger-footer-border;
+		color: $panel-danger-footer-text;
 	}
 }
