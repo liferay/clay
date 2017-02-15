@@ -24,4 +24,7 @@ $badge-sm-padding-top: $label-sm-padding-top !default;
 
 $badge-default-bg: $label-default-bg !default;
 $badge-default-color: $label-default-color !default;
+
+// Deprecated `$badge-default-link-color` as of v1.0.16 and will be removed in v2.0.0
+$badge-default-hover-color: $badge-default-color !default;
 $badge-default-link-color: $badge-default-color !default;
