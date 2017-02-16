@@ -1,4 +1,6 @@
 .breadcrumb {
+	border-radius: $breadcrumb-border-radius;
+
 	&:after {
 		clear: both;
 		content: '';
