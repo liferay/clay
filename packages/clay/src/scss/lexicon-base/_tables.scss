@@ -11,14 +11,7 @@ th {
 				> .checkbox,
 				> input[type="checkbox"] {
 					margin-bottom: 0;
-					margin-left: 7px;
 					margin-top: 0;
-				}
-			}
-
-			&:last-child {
-				> .dropdown {
-					margin-right: 7px;
 				}
 			}
 		}
@@ -29,24 +22,25 @@ th {
 	}
 
 	th {
-		@if (variable-exists(atlas-theme)) {
-			font-size: $table-header-font-size;
-			font-weight: $table-header-font-weight;
-		}
-
-		height: 36px;
+		font-size: $table-header-font-size;
+		font-weight: $table-header-font-weight;
+		height: $table-header-min-height;
 	}
 
 	tr {
 		td,
 		th {
 			&:first-child {
+				padding-left: $table-cell-gutters;
+
 				.clamp-container {
 					left: $table-cell-gutters;
 				}
 			}
 
 			&:last-child {
+				padding-right: $table-cell-gutters;
+
 				.clamp-container {
 					right: $table-cell-gutters;
 				}
@@ -88,17 +82,26 @@ th {
 // Table List Skin
 
 .table-list {
-	@if (variable-exists(atlas-theme)) {
-		color: $table-header-color;
+	color: $table-list-color;
+	font-size: $table-list-font-size;
 
-		a {
-			color: $table-list-link-color;
+	a {
+		color: $table-list-link-color;
+
+		&:focus,
+		&:hover {
+			color: $table-list-link-color-hover;
 		}
 	}
 
 	> thead > tr > td,
 	> thead > tr > th {
-		border-bottom-width: 0;
+		background-color: $table-list-header-bg;
+		border-bottom-width: $table-list-header-border-bottom-width;
+		font-size: $table-list-header-font-size;
+		font-weight: $table-list-header-font-weight;
+		height: $table-list-header-min-height;
+		vertical-align: $table-list-header-vertical-alignment;
 	}
 
 	> tbody > tr {
@@ -109,12 +112,8 @@ th {
 	> tbody > tr > th,
 	> tfoot > tr > td,
 	> tfoot > tr > th {
-		@if (variable-exists(atlas-theme)) {
-			// Chrome rendering issue with responsive-tables and td position relative
-
-			background-color: $table-list-body-row-bg;
-		}
-
+		// Chrome rendering issue with responsive-tables and td position relative
+		background-color: $table-list-body-row-bg;
 		border-top-width: 0;
 		vertical-align: middle;
 	}
