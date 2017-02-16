@@ -28,10 +28,15 @@
 		+ li:before {
 			content: $breadcrumb-separator;
 			font-family: $breadcrumb-separator-font-family;
+			font-weight: $breadcrumb-separator-font-weight;
 			float: left;
 			padding-left: 0.4em;
 			padding-right: 0.4em;
 		}
+	}
+
+	> .active {
+		font-weight: $breadcrumb-active-font-weight;
 	}
 }
 
