@@ -9,6 +9,13 @@
 
 	a {
 		color: $breadcrumb-link-color;
+		text-decoration: $breadcrumb-link-text-decoration;
+
+		&:focus,
+		&:hover {
+			color: $breadcrumb-link-hover-color;
+			text-decoration: $breadcrumb-link-hover-text-decoration;
+		}
 	}
 
 	> li {
