@@ -5,30 +5,19 @@
 		display: table;
 	}
 
-	@if (variable-exists(breadcrumb-link-color)) {
-		a {
-			color: $breadcrumb-link-color;
-		}
+	a {
+		color: $breadcrumb-link-color;
 	}
 
 	> li {
 		float: left;
-
-		@if (variable-exists(breadcrumb-font-size)) {
-			font-size: $breadcrumb-font-size;
-		}
-
-		@if (variable-exists(breadcrumb-font-weight)) {
-			font-weight: $breadcrumb-font-weight;
-		}
-
+		font-size: $breadcrumb-font-size;
+		font-weight: $breadcrumb-font-weight;
 		max-width: 150px;
 
 		@include text-overflow;
 
-		@if (variable-exists(breadcrumb-text-transform)) {
-			text-transform: $breadcrumb-text-transform;
-		}
+		text-transform: $breadcrumb-text-transform;
 
 		@media (min-width: $grid-float-breakpoint) {
 			max-width: 300px;
@@ -36,11 +25,7 @@
 
 		+ li:before {
 			content: $breadcrumb-separator;
-
-			@if (variable-exists(breadcrumb-separator-font-family)) {
-				font-family: $breadcrumb-separator-font-family;
-			}
-
+			font-family: $breadcrumb-separator-font-family;
 			float: left;
 			padding-left: 0.4em;
 			padding-right: 0.4em;
@@ -48,31 +33,29 @@
 	}
 }
 
-@if (variable-exists(breadcrumb-separator-svg-icon)) {
-	.breadcrumb-horizontal {
-		> li {
-			margin-right: 0.5em;
-			position: relative;
+.breadcrumb-horizontal {
+	> li {
+		margin-right: 0.5em;
+		position: relative;
 
-			+ li {
-				padding-left: 1em;
-			}
+		+ li {
+			padding-left: 1em;
+		}
 
-			+ li:before {
-				background-image: $breadcrumb-separator-svg-icon;
-				background-repeat: no-repeat;
-				background-size: 100%;
-				content: '';
-				display: block;
-				float: left;
-				height: $breadcrumb-separator-svg-icon-height;
-				left: 0;
-				margin-top: -$breadcrumb-separator-svg-icon-height / 2;
-				padding: 0;
-				position: absolute;
-				top: 50%;
-				width: $breadcrumb-separator-svg-icon-width;
-			}
+		+ li:before {
+			background-image: $breadcrumb-separator-svg-icon;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			content: '';
+			display: block;
+			float: left;
+			height: $breadcrumb-separator-svg-icon-height;
+			left: 0;
+			margin-top: -$breadcrumb-separator-svg-icon-height / 2;
+			padding: 0;
+			position: absolute;
+			top: 50%;
+			width: $breadcrumb-separator-svg-icon-width;
 		}
 	}
 }
