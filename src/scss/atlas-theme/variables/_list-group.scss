@@ -11,6 +11,8 @@ $tabular-list-group-border-width: 1px !default;
 $tabular-list-group-item-height: 110px !default;
 $tabular-list-group-vertical-alignment: top !default;
 
+$tabular-list-group-active-border-bottom-width: 2px !default;
+
 // Skin
 
 $list-group-border-radius: 0 !default;
@@ -36,7 +38,7 @@ $list-group-card-active-bg: $list-group-active-bg !default;
 // Deprecated `$list-group-card-active-border` as of v1.0.11 and will be removed in v2.0.0
 $list-group-card-active-border: $list-group-active-border !default;
 // Deprecated `$list-group-card-active-border-width` as of v1.0.11 and will be removed in v2.0.0
-$list-group-card-active-border-width: 2px !default;
+$list-group-card-active-border-width: $tabular-list-group-active-border-bottom-width !default;
 // Deprecated `$list-group-card-active-color` as of v1.0.11 and will be removed in v2.0.0
 $list-group-card-active-color: $list-group-active-color !default;
 
