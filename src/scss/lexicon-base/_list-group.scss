@@ -1,3 +1,22 @@
+.list-group {
+	box-shadow: $list-group-box-shadow;
+}
+
+.tabular-list-group {
+	box-shadow: $list-group-box-shadow;
+}
+
+// Nested list groups shouldn't have box shadows
+
+.list-group .list-group,
+.list-group .tabular-list-group,
+.tabular-list-group .list-group,
+.tabular-list-group .tabular-list-group {
+	@if ($list-group-box-shadow != null) {
+		box-shadow: none;
+	}
+}
+
 .list-group-heading {
 	background-color: $list-group-header-bg;
 	border-color: $list-group-border;
@@ -141,18 +160,6 @@ button.list-group-heading {
 }
 
 @if (variable-exists(atlas-theme)) {
-	// Nested list groups shouldn't have box shadows
-
-	.list-group,
-	.tabular-list-group {
-		box-shadow: $list-group-box-shadow;
-
-		.list-group,
-		.tabular-list-group {
-			box-shadow: none;
-		}
-	}
-
 	// Last list-group-heading shouldn't have bottom border
 
 	.list-group {
