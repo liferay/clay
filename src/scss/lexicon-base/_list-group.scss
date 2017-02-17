@@ -102,7 +102,7 @@ button.list-group-heading {
 	}
 
 	&.active {
-		@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color);
+		@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-focus-color, $list-group-item-active-dropdown-toggle-hover-color);
 
 		.list-group-item-content a {
 			color: $list-group-active-color;

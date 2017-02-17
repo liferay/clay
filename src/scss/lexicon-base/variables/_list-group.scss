@@ -21,3 +21,5 @@ $list-group-header-color: $list-group-link-heading-color !default;
 $list-group-header-hover-color: $list-group-header-color !default;
 
 $list-group-item-active-dropdown-toggle-color: $list-group-active-color !default;
+$list-group-item-active-dropdown-toggle-focus-color: null !default;
+$list-group-item-active-dropdown-toggle-hover-color: $list-group-item-active-dropdown-toggle-focus-color !default;
