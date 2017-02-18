@@ -90,11 +90,11 @@ button.list-group-heading {
 }
 
 .list-group-item {
+	@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-focus-color, $list-group-item-dropdown-toggle-hover-color);
+
 	@if (variable-exists(atlas-theme)) {
 		border-left-width: 0;
 		border-right-width: 0;
-
-		@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-color);
 
 		&:focus {
 			z-index: 1;
