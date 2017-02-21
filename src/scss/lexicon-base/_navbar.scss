@@ -708,6 +708,10 @@
 			}
 		}
 	}
+
+	.navbar-default .basic-search.focus:after {
+		background-color: $navbar-default-collapsible-search-focus-border;
+	}
 }
 
 // Navbar Inverse
@@ -771,5 +775,9 @@
 				content: '';
 			}
 		}
+	}
+
+	.navbar-inverse .basic-search.focus:after {
+		background-color: $navbar-inverse-collapsible-search-focus-border;
 	}
 }
