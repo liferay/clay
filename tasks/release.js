@@ -34,6 +34,27 @@ module.exports = function(gulp, plugins, _, config) {
 		return GIT_REMOTE;
 	};
 
+	var currentVersion = require('../package.json').version;
+
+	var releaseType = (function() {
+		var types = ['major', 'minor', 'patch'];
+
+		var type = _.find(
+			types,
+			function(item, index) {
+				return argv[item];
+			}
+		);
+
+		if (!type) {
+			type = 'patch';
+		}
+
+		return type;
+	}());
+
+	var bumpedVersion = semver.inc(currentVersion, releaseType);
+
 	gulp.task(
 		'release:clean',
 		function() {
@@ -61,6 +82,8 @@ module.exports = function(gulp, plugins, _, config) {
 					return REGEX_ALLOW.test(filePath) && !(REGEX_DISALLOW.test(filePath));
 				}
 			);
+
+			license.metadata.version = bumpedVersion;
 
 			return gulp.src([
 				'src/fonts/**/*',
@@ -92,24 +115,6 @@ module.exports = function(gulp, plugins, _, config) {
 		'release:git',
 		function(done) {
 			var branchName = 'bower-staging-' + Math.random().toString(16).replace(/[^0-9a-fA-F]/g, '');
-
-			var currentVersion = require('../package.json').version;
-
-			var types = ['major', 'minor', 'patch'];
-
-			var type = _.find(
-				types,
-				function(item, index) {
-					return argv[item];
-				}
-			);
-
-			if (!type) {
-				type = 'patch';
-			}
-
-			var bumpedVersion = semver.inc(currentVersion, type);
-
 			var browserCommitMessage = 'Browser files for v' + bumpedVersion;
 			var mergeCommitMessage = 'Merging master@v' + bumpedVersion + ' into develop';
 			var rebuildCommitMessage = 'Rebuild v' + bumpedVersion;
