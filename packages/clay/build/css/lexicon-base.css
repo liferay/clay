@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.16
+* Lexicon 1.0.17
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -3678,20 +3678,20 @@ fieldset[disabled] a.btn {
 
 .btn-default:focus, .btn-default.focus {
   color: #333;
-  background-color: #e6e6e6;
+  background-color: #e6e5e5;
   border-color: #8c8c8c;
 }
 
 .btn-default:hover {
   color: #333;
-  background-color: #e6e6e6;
+  background-color: #e6e5e5;
   border-color: #adadad;
 }
 
 .btn-default:active, .btn-default.active,
 .open > .btn-default.dropdown-toggle {
   color: #333;
-  background-color: #e6e6e6;
+  background-color: #e6e5e5;
   border-color: #adadad;
 }
 
@@ -5185,7 +5185,7 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #5e5d5d;
   background-color: transparent;
 }
 
@@ -7837,6 +7837,27 @@ button.close {
   word-wrap: break-word;
 }
 
+.badge a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.badge a:focus, .badge a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.badge [class*="icon-"] {
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.badge .glyphicon {
+  font-size: 0.8em;
+  top: 0;
+  vertical-align: middle;
+}
+
 .badge-lg {
   font-size: 16px;
   padding-bottom: 6px;
@@ -7868,15 +7889,6 @@ button.close {
 .badge-sm .lexicon-icon {
   height: 5px;
   width: 5px;
-}
-
-.badge a {
-  color: #fff;
-}
-
-.badge a:focus, .badge a:hover {
-  color: #fff;
-  text-decoration: none;
 }
 
 .badge-danger {
@@ -8620,7 +8632,7 @@ a .icon-monospaced,
 
 .help-icon-default {
   background-color: #eeeeee;
-  color: gray;
+  color: #807f7f;
 }
 
 .help-icon-default:focus, .help-icon-default:hover {
@@ -8798,6 +8810,10 @@ fieldset[disabled] .form-control::-moz-placeholder, .form-control[disabled]::-mo
   opacity: 1;
 }
 
+.form-control-feedback .lexicon-icon {
+  margin-top: -3px;
+}
+
 .figure {
   margin-bottom: 20px;
   overflow: hidden;
@@ -8901,10 +8917,23 @@ fieldset[disabled] .form-control::-moz-placeholder, .form-control[disabled]::-mo
 .label a {
   color: #fff;
   display: inline-block;
+  text-decoration: underline;
 }
 
 .label a:focus, .label a:hover {
+  color: #fff;
   text-decoration: none;
+}
+
+.label [class*="icon-"] {
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.label .glyphicon {
+  font-size: 0.8em;
+  top: 0;
+  vertical-align: middle;
 }
 
 .label-lg {
@@ -10285,7 +10314,7 @@ button.list-group-heading {
 .management-bar-default .btn-default:focus, .management-bar-default .btn-default:hover,
 .management-bar-default .nav > li > .btn-default:focus,
 .management-bar-default .nav > li > .btn-default:hover {
-  background-color: #dfdfdf;
+  background-color: #dfdede;
   border-color: #c9c9c9;
   color: #777;
 }
@@ -10293,7 +10322,7 @@ button.list-group-heading {
 .management-bar-default .btn-default:active, .management-bar-default .btn-default.active,
 .management-bar-default .nav > li > .btn-default:active,
 .management-bar-default .nav > li > .btn-default.active {
-  background-color: #dfdfdf;
+  background-color: #dfdede;
   border-color: #c9c9c9;
   color: #777;
 }
@@ -11192,14 +11221,7 @@ th {
 .table > tfoot tr td:first-child > .checkbox,
 .table > tfoot tr td:first-child > input[type="checkbox"] {
   margin-bottom: 0;
-  margin-left: 7px;
   margin-top: 0;
-}
-
-.table > thead tr td:last-child > .dropdown,
-.table > tbody tr td:last-child > .dropdown,
-.table > tfoot tr td:last-child > .dropdown {
-  margin-right: 7px;
 }
 
 .table thead .clamp-container {
@@ -11210,9 +11232,19 @@ th {
   height: 36px;
 }
 
+.table tr td:first-child,
+.table tr th:first-child {
+  padding-left: 15px;
+}
+
 .table tr td:first-child .clamp-container,
 .table tr th:first-child .clamp-container {
   left: 15px;
+}
+
+.table tr td:last-child,
+.table tr th:last-child {
+  padding-right: 15px;
 }
 
 .table tr td:last-child .clamp-container,
@@ -11770,7 +11802,7 @@ body {
 
 a.bg-default:hover,
 a.bg-default:focus {
-  background-color: #5e5e5e;
+  background-color: #5e5d5d;
 }
 
 a.text-muted:hover, a.text-muted:focus {
@@ -11783,7 +11815,7 @@ a.text-muted:hover, a.text-muted:focus {
 
 a.text-default:hover,
 a.text-default:focus {
-  color: #1a1a1a;
+  color: #1a1919;
 }
 
 mark,

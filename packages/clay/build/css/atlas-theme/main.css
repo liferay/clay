@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.16
+* Lexicon 1.0.17
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -3678,20 +3678,20 @@ fieldset[disabled] a.btn {
 
 .btn-default:focus, .btn-default.focus {
   color: #869CAD;
-  background-color: #e6e6e6;
+  background-color: #e6e5e5;
   border-color: #495c6b;
 }
 
 .btn-default:hover {
   color: #869CAD;
-  background-color: #e6e6e6;
+  background-color: #e6e5e5;
   border-color: #637e93;
 }
 
 .btn-default:active, .btn-default.active,
 .open > .btn-default.dropdown-toggle {
   color: #869CAD;
-  background-color: #e6e6e6;
+  background-color: #e6e5e5;
   border-color: #637e93;
 }
 
@@ -7925,6 +7925,27 @@ button.close {
   }
 }
 
+.badge a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.badge a:focus, .badge a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.badge [class*="icon-"] {
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.badge .glyphicon {
+  font-size: 0.8em;
+  top: 0;
+  vertical-align: middle;
+}
+
 .badge-lg {
   font-size: 16px;
   padding-bottom: 14px;
@@ -7970,15 +7991,6 @@ button.close {
   width: 7px;
 }
 
-.badge a {
-  color: #fff;
-}
-
-.badge a:focus, .badge a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
 .badge-danger {
   background-color: #CC6677;
 }
@@ -7988,10 +8000,15 @@ button.close {
   color: #65B6F0;
 }
 
-a.badge-default, a.badge-default:focus, a.badge-default:hover,
-.badge-default a,
-.badge-default a:focus,
-.badge-default a:hover {
+.badge-default[href]:focus, .badge-default[href]:hover {
+  color: #65B6F0;
+}
+
+.badge-default a {
+  color: #65B6F0;
+}
+
+.badge-default a:focus, .badge-default a:hover {
   color: #65B6F0;
 }
 
@@ -9433,6 +9450,14 @@ fieldset[disabled] .form-control::-webkit-input-placeholder, .form-control[disab
   }
 }
 
+.help-block {
+  font-size: 14px;
+}
+
+.form-control-feedback .lexicon-icon {
+  margin-top: -3px;
+}
+
 .has-success label,
 .has-success .control-label {
   color: #869CAD;
@@ -9630,10 +9655,23 @@ fieldset[disabled] .form-control::-webkit-input-placeholder, .form-control[disab
 .label a {
   color: #fff;
   display: inline-block;
+  text-decoration: underline;
 }
 
 .label a:focus, .label a:hover {
+  color: #fff;
   text-decoration: none;
+}
+
+.label [class*="icon-"] {
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.label .glyphicon {
+  font-size: 0.8em;
+  top: 0;
+  vertical-align: middle;
 }
 
 .label-lg {
@@ -9681,8 +9719,19 @@ fieldset[disabled] .form-control::-webkit-input-placeholder, .form-control[disab
   width: 7px;
 }
 
-.label-default,
+.label-default {
+  color: #65B6F0;
+}
+
+.label-default[href]:focus, .label-default[href]:hover {
+  color: #65B6F0;
+}
+
 .label-default a {
+  color: #65B6F0;
+}
+
+.label-default a:focus, .label-default a:hover {
   color: #65B6F0;
 }
 
@@ -12542,14 +12591,7 @@ th {
 .table > tfoot tr td:first-child > .checkbox,
 .table > tfoot tr td:first-child > input[type="checkbox"] {
   margin-bottom: 0;
-  margin-left: 7px;
   margin-top: 0;
-}
-
-.table > thead tr td:last-child > .dropdown,
-.table > tbody tr td:last-child > .dropdown,
-.table > tfoot tr td:last-child > .dropdown {
-  margin-right: 7px;
 }
 
 .table thead .clamp-container {
@@ -12562,9 +12604,19 @@ th {
   height: 36px;
 }
 
+.table tr td:first-child,
+.table tr th:first-child {
+  padding-left: 15px;
+}
+
 .table tr td:first-child .clamp-container,
 .table tr th:first-child .clamp-container {
   left: 15px;
+}
+
+.table tr td:last-child,
+.table tr th:last-child {
+  padding-right: 15px;
 }
 
 .table tr td:last-child .clamp-container,
