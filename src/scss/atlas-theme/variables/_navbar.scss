@@ -65,6 +65,8 @@ $navbar-default-brand-hover-bg: transparent !default;
 $navbar-default-brand-color: $navbar-default-link-color !default;
 $navbar-default-brand-hover-color: $navbar-default-link-hover-color !default;
 
+$navbar-default-collapsible-search-focus-border: null !default;
+
 $navbar-default-link-open-bg: $brand-primary !default;
 $navbar-default-link-open-color: #FFF !default;
 
@@ -89,6 +91,8 @@ $navbar-inverse-link-disabled-color: #CACDD2 !default;
 
 $navbar-inverse-brand-color: $navbar-inverse-link-color !default;
 $navbar-inverse-brand-hover-color: $navbar-inverse-brand-color !default;
+
+$navbar-inverse-collapsible-search-focus-border: null !default;
 
 $navbar-inverse-link-open-bg: $brand-primary !default;
 $navbar-inverse-link-open-color: #FFF !default;
