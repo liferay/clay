@@ -3,9 +3,14 @@
 	.dropdown-toggle {
 		display: inline-block;
 	}
+}
 
-	.dropdown-header {
+.dropdown-header {
+	@if ($dropdown-header-font-size != $font-size-small) {
 		font-size: $dropdown-header-font-size;
+	}
+
+	@if (variable-exists(atlas-theme)) {
 		overflow: hidden;
 		padding: $dropdown-link-padding;
 
