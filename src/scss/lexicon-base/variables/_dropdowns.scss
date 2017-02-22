@@ -1,6 +1,5 @@
 $dropdown-border-style: null !default;
 $dropdown-border-width: 1px !default;
-$dropdown-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175) !default;
 $dropdown-padding-bottom: null !default;
 $dropdown-padding-left: null !default;
 $dropdown-padding-right: null !default;
@@ -22,3 +21,7 @@ $dropdown-menu-min-height: null !default;
 
 $dropdown-menu-max-width: null !default;
 $dropdown-menu-min-width: null !default;
+
+// Skin
+
+$dropdown-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175) !default;
