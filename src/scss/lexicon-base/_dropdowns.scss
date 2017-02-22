@@ -21,6 +21,7 @@
 	box-shadow: $dropdown-box-shadow;
 	font-size: $dropdown-font-size;
 	max-height: $dropdown-menu-max-height;
+	min-height: $dropdown-menu-min-height;
 	max-width: $dropdown-menu-max-width;
 	min-width: $dropdown-menu-min-width;
 	overflow: auto;
@@ -28,10 +29,6 @@
 	padding-left: $dropdown-padding-left;
 	padding-right: $dropdown-padding-right;
 	padding-top: $dropdown-padding-top;
-
-	@if (variable-exists(atlas-theme)) {
-		min-height: 40px;
-	}
 
 	@media (min-width: $grid-float-breakpoint) {
 		max-height: $dropdown-menu-desktop-max-height;
