@@ -10,9 +10,12 @@
 		font-size: $dropdown-header-font-size;
 	}
 
+	@if ($dropdown-link-padding != (3px 20px)) {
+		padding: $dropdown-link-padding;
+	}
+
 	@if (variable-exists(atlas-theme)) {
 		overflow: hidden;
-		padding: $dropdown-link-padding;
 
 		@media (min-width: $grid-float-breakpoint) { // min-width: 768px
 			font-size: $dropdown-header-font-size-desktop;
@@ -44,10 +47,13 @@
 		}
 	}
 
-	@if (variable-exists(atlas-theme)) {
-		> li > a {
-			overflow: hidden;
+	> li > a {
+		@if ($dropdown-link-padding != (3px 20px)) {
 			padding: $dropdown-link-padding;
+		}
+
+		@if (variable-exists(atlas-theme)) {
+			overflow: hidden;
 		}
 	}
 }
