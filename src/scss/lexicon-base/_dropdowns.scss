@@ -19,12 +19,12 @@
 	border-style: $dropdown-border-style;
 	border-width: $dropdown-border-width;
 	box-shadow: $dropdown-box-shadow;
+	font-size: $dropdown-font-size;
 	max-height: $dropdown-menu-max-height;
+	max-width: $dropdown-menu-max-width;
 	overflow: auto;
 
 	@if (variable-exists(atlas-theme)) {
-		font-size: $dropdown-font-size;
-		max-width: $dropdown-menu-max-width;
 		min-height: 40px;
 		padding: 6px 0;
 	}
