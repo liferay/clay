@@ -24,10 +24,13 @@
 	max-width: $dropdown-menu-max-width;
 	min-width: $dropdown-menu-min-width;
 	overflow: auto;
+	padding-bottom: $dropdown-padding-bottom;
+	padding-left: $dropdown-padding-left;
+	padding-right: $dropdown-padding-right;
+	padding-top: $dropdown-padding-top;
 
 	@if (variable-exists(atlas-theme)) {
 		min-height: 40px;
-		padding: 6px 0;
 	}
 
 	@media (min-width: $grid-float-breakpoint) {
