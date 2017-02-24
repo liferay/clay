@@ -38,7 +38,7 @@ $pagination-color: $brand-default !default;
 
 $pagination-hover-bg: transparent !default;
 $pagination-hover-border: $pagination-hover-bg !default;
-$pagination-hover-color: $brand-default !default;
+$pagination-hover-color: $pagination-color !default;
 
 $pagination-active-bg: lighten($brand-default, 30%) !default;
 $pagination-active-border: $brand-default !default;
