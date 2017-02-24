@@ -710,7 +710,7 @@
 	}
 
 	.navbar-default .basic-search.focus:after {
-		background-color: $navbar-default-collapsible-search-focus-border;
+		background-color: $navbar-default-collapsible-search-focus-highlight;
 	}
 }
 
@@ -778,6 +778,6 @@
 	}
 
 	.navbar-inverse .basic-search.focus:after {
-		background-color: $navbar-inverse-collapsible-search-focus-border;
+		background-color: $navbar-inverse-collapsible-search-focus-highlight;
 	}
 }
