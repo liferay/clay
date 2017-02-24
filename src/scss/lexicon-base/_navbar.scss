@@ -716,8 +716,14 @@
 		}
 	}
 
-	.navbar-default .basic-search.focus:after {
-		background-color: $navbar-default-collapsible-search-focus-highlight;
+	.navbar-default .basic-search {
+		&:after {
+			background-color: $navbar-default-collapsible-search-highlight;
+		}
+
+		&.focus:after {
+			background-color: $navbar-default-collapsible-search-focus-highlight;
+		}
 	}
 }
 
@@ -787,7 +793,13 @@
 		}
 	}
 
-	.navbar-inverse .basic-search.focus:after {
-		background-color: $navbar-inverse-collapsible-search-focus-highlight;
+	.navbar-inverse .basic-search {
+		&:after {
+			background-color: $navbar-inverse-collapsible-search-highlight;
+		}
+
+		&.focus:after {
+			background-color: $navbar-inverse-collapsible-search-focus-highlight;
+		}
 	}
 }
