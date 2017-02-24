@@ -17,10 +17,10 @@ $navbar-desktop-padding-vertical: (($navbar-desktop-height - $navbar-desktop-lin
 
 $navbar-link-active-bottom-border-width: 2px !default;
 
-$navbar-default-border-bottom-width: 1px !default;
-$navbar-default-border-left-width: 0 !default;
-$navbar-default-border-right-width: 0 !default;
-$navbar-default-border-top-width: 0 !default;
+$navbar-default-border-bottom-width: $navbar-border-bottom-width !default;
+$navbar-default-border-left-width: $navbar-border-left-width !default;
+$navbar-default-border-right-width: $navbar-border-right-width !default;
+$navbar-default-border-top-width: $navbar-border-top-width !default;
 $navbar-default-border-width: $navbar-default-border-top-width $navbar-default-border-right-width $navbar-default-border-bottom-width $navbar-default-border-left-width !default;
 
 $navbar-default-height: $navbar-height !default;
