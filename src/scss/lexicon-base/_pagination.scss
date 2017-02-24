@@ -82,10 +82,7 @@
 	}
 
 	a {
-		@if (variable-exists(pagination-items-per-page-color)) {
-			color: $pagination-items-per-page-color;
-		}
-
+		color: $pagination-items-per-page-color;
 		display: block;
 		padding-bottom: $pagination-item-padding-bottom;
 		padding-top: $pagination-item-padding-top;
@@ -95,11 +92,7 @@
 
 .pagination-results {
 	border: $pagination-border-width solid transparent;
-
-	@if (variable-exists(pagination-results-color)) {
-		color: $pagination-results-color;
-	}
-
+	color: $pagination-results-color;
 	float: right;
 	line-height: $pagination-line-height;
 	padding-bottom: $pagination-item-padding-bottom;
