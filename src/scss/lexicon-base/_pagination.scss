@@ -73,7 +73,9 @@
 }
 
 .pagination-items-per-page {
-	border: $pagination-border-width solid transparent;
+	border-color: $pagination-items-per-page-border;
+	border-style: solid;
+	border-width: $pagination-border-width;
 	float: left;
 	line-height: $pagination-line-height;
 
