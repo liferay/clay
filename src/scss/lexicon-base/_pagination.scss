@@ -88,8 +88,7 @@
 	a {
 		color: $pagination-items-per-page-color;
 		display: block;
-		padding-bottom: $pagination-item-padding-bottom;
-		padding-top: $pagination-item-padding-top;
+		padding: $pagination-item-padding;
 		text-decoration: none;
 	}
 }
@@ -119,8 +118,7 @@
 	.pagination-results {
 		font-size: $pagination-sm-font-size;
 		line-height: $pagination-sm-line-height;
-		padding-bottom: $pagination-sm-item-padding-bottom;
-		padding-top: $pagination-sm-item-padding-top;
+		padding: $pagination-sm-item-padding
 	}
 
 	.pagination {
@@ -163,8 +161,7 @@
 	.pagination-results {
 		font-size: $pagination-lg-font-size;
 		line-height: $pagination-lg-line-height;
-		padding-bottom: $pagination-lg-item-padding-bottom;
-		padding-top: $pagination-lg-item-padding-top;
+		padding: $pagination-lg-item-padding;
 	}
 
 	.pagination {
