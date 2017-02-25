@@ -111,7 +111,7 @@
 
 .pagination-sm {
 	.pagination-items-per-page {
-		border-radius: $pagination-border-radius-sm;
+		border-radius: $pagination-sm-border-radius;
 	}
 
 	.pagination-items-per-page a,
@@ -136,16 +136,16 @@
 			&:first-child {
 				> a,
 				> span {
-					border-bottom-left-radius: $pagination-border-radius-sm;
-					border-top-left-radius: $pagination-border-radius-sm;
+					border-bottom-left-radius: $pagination-sm-border-radius;
+					border-top-left-radius: $pagination-sm-border-radius;
 				}
 			}
 
 			&:last-child {
 				> a,
 				> span {
-					border-bottom-right-radius: $pagination-border-radius-sm;
-					border-top-right-radius: $pagination-border-radius-sm;
+					border-bottom-right-radius: $pagination-sm-border-radius;
+					border-top-right-radius: $pagination-sm-border-radius;
 				}
 			}
 		}
@@ -154,7 +154,7 @@
 
 .pagination-lg {
 	.pagination-items-per-page {
-		border-radius: $pagination-border-radius-lg;
+		border-radius: $pagination-lg-border-radius;
 	}
 
 	.pagination-items-per-page a,
@@ -179,16 +179,16 @@
 			&:first-child {
 				> a,
 				> span {
-					border-bottom-left-radius: $pagination-border-radius-lg;
-					border-top-left-radius: $pagination-border-radius-lg;
+					border-bottom-left-radius: $pagination-lg-border-radius;
+					border-top-left-radius: $pagination-lg-border-radius;
 				}
 			}
 
 			&:last-child {
 				> a,
 				> span {
-					border-bottom-right-radius: $pagination-border-radius-lg;
-					border-top-right-radius: $pagination-border-radius-lg;
+					border-bottom-right-radius: $pagination-lg-border-radius;
+					border-top-right-radius: $pagination-lg-border-radius;
 				}
 			}
 		}
