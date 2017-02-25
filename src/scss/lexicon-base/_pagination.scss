@@ -75,6 +75,7 @@
 .pagination-items-per-page {
 	background-color: $pagination-items-per-page-bg;
 	border-color: $pagination-items-per-page-border;
+	border-radius: $pagination-border-radius;
 	border-style: solid;
 	border-width: $pagination-border-width;
 	float: left;
@@ -110,6 +111,10 @@
 // Pagination Sizes
 
 .pagination-sm {
+	.pagination-items-per-page {
+		border-radius: $pagination-border-radius-sm;
+	}
+
 	.pagination-items-per-page a,
 	.pagination-results {
 		font-size: $pagination-sm-font-size;
@@ -150,6 +155,10 @@
 }
 
 .pagination-lg {
+	.pagination-items-per-page {
+		border-radius: $pagination-border-radius-lg;
+	}
+
 	.pagination-items-per-page a,
 	.pagination-results {
 		font-size: $pagination-lg-font-size;
