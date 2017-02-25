@@ -133,16 +133,16 @@
 			&:first-child {
 				> a,
 				> span {
-					border-bottom-left-radius: $border-radius-small;
-					border-top-left-radius: $border-radius-small;
+					border-bottom-left-radius: $pagination-border-radius-sm;
+					border-top-left-radius: $pagination-border-radius-sm;
 				}
 			}
 
 			&:last-child {
 				> a,
 				> span {
-					border-bottom-right-radius: $border-radius-small;
-					border-top-right-radius: $border-radius-small;
+					border-bottom-right-radius: $pagination-border-radius-sm;
+					border-top-right-radius: $pagination-border-radius-sm;
 				}
 			}
 		}
@@ -173,16 +173,16 @@
 			&:first-child {
 				> a,
 				> span {
-					border-bottom-left-radius: $border-radius-large;
-					border-top-left-radius: $border-radius-large;
+					border-bottom-left-radius: $pagination-border-radius-lg;
+					border-top-left-radius: $pagination-border-radius-lg;
 				}
 			}
 
 			&:last-child {
 				> a,
 				> span {
-					border-bottom-right-radius: $border-radius-large;
-					border-top-right-radius: $border-radius-large;
+					border-bottom-right-radius: $pagination-border-radius-lg;
+					border-top-right-radius: $pagination-border-radius-lg;
 				}
 			}
 		}
