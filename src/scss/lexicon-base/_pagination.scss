@@ -73,6 +73,7 @@
 }
 
 .pagination-items-per-page {
+	background-color: $pagination-items-per-page-bg;
 	border-color: $pagination-items-per-page-border;
 	border-style: solid;
 	border-width: $pagination-border-width;
