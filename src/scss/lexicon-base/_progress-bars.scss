@@ -1,3 +1,12 @@
+.progress {
+	height: $progress-bar-height;
+}
+
+.progress-bar {
+	box-shadow: $progress-bar-box-shadow;
+	line-height: $progress-bar-height;
+}
+
 .progress-xs {
 	border-radius: $progress-bar-xs-border-radius;
 	height: $progress-bar-xs-height;
