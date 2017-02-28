@@ -341,7 +341,9 @@
 
 		.dropdown-menu {
 			background-color: $dropdown-bg;
-			border: 1px solid $dropdown-border;
+			border-color: $dropdown-border;
+			border-style: $dropdown-border-style;
+			border-width: $dropdown-border-width;
 			box-shadow: $dropdown-box-shadow;
 			position: absolute;
 		}

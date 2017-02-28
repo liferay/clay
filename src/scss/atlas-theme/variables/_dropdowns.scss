@@ -1,7 +1,5 @@
 // Structure
 
-$dropdown-border-width: 1px !default;
-
 $dropdown-checkbox-label-spacer: 32px !default;
 
 $dropdown-wide-width: 500px !default;
@@ -18,6 +16,13 @@ $dropdown-header-font-size-desktop: $font-size-desktop-small !default;
 $dropdown-margin-horizontal: 15px !default;
 // Deprecated `$dropdown-margin-vertical` as of v1.0.9 and will be removed in v2.0.0
 $dropdown-margin-vertical: 15px !default;
+
+$dropdown-padding-bottom: 6px !default;
+$dropdown-padding-left: 0 !default;
+$dropdown-padding-right: 0 !default;
+$dropdown-padding-top: 6px !default;
+
+$dropdown-menu-min-height: 40px !default;
 
 $dropdown-menu-desktop-max-width: 300px !default;
 $dropdown-menu-max-width: 230px !default;
