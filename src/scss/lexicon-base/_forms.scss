@@ -186,6 +186,7 @@ fieldset[disabled] label {
 		label {
 			font-weight: 500;
 			padding-left: 25px;
+			position: relative;
 
 			@media (-webkit-min-device-pixel-ratio: 0) {
 				padding-left: 20px;
