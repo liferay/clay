@@ -185,6 +185,7 @@ fieldset[disabled] label {
 	.radio {
 		label {
 			font-weight: 500;
+			line-height: $input-checkbox-label-line-height;
 			padding-left: 25px;
 			position: relative;
 
