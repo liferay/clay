@@ -37,7 +37,7 @@ $input-mobile-height-base: 40px !default;
 $input-mobile-height-large: 48px !default;
 $input-mobile-height-small: 32px !default;
 
-$input-checkbox-label-line-height: 20px !default;
+$input-checkbox-label-line-height: $line-height-computed !default;
 
 $form-group-margin-bottom: 20px !default;
 

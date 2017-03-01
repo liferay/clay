@@ -25,6 +25,8 @@ $font-size-desktop-h5: floor(($font-size-desktop-base / 1.1428)) !default; // At
 $font-size-desktop-h6: floor(($font-size-desktop-base / 1.2307)) !default; // Atlas 13px
 
 $line-height-base: 1.428571429 !default;
+$line-height-computed: floor(($font-size-base * $line-height-base)) !default;
+
 $headings-line-height: 1.2 !default;
 
 $padding-base-vertical: 6px !default;
