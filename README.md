@@ -22,8 +22,20 @@
   npm install
   ```
 
-5. Run tests:
+5. Build all packages
 
   ```
-  npm test
+  lerna run build
+  ```
+
+6. Start a local server on port 4000
+
+  ```
+  npm run start
+  ```
+
+7. Run tests:
+
+  ```
+  lerna run test
   ```
