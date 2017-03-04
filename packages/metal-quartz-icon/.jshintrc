@@ -1,0 +1,32 @@
+{
+  "asi": false,
+  "bitwise": false,
+  "browser": true,
+  "curly": true,
+  "eqeqeq": true,
+  "esnext": true,
+  "evil": false,
+  "forin": false,
+  "globals": {
+    "IncrementalDOM": true,
+    "soy": true,
+    "soydata": true
+  },
+  "immed": true,
+  "indent": 2,
+  "lastsemic": false,
+  "maxdepth": false,
+  "multistr": false,
+  "newcap": true,
+  "noarg": true,
+  "node": true,
+  "onevar": false,
+  "quotmark": "single",
+  "proto": true,
+  "regexp": true,
+  "smarttabs": true,
+  "strict": true,
+  "trailing": true,
+  "undef": true,
+  "unused": true
+}
