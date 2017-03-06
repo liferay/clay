@@ -73,7 +73,11 @@
 }
 
 .pagination-items-per-page {
-	border: $pagination-border-width solid transparent;
+	background-color: $pagination-items-per-page-bg;
+	border-color: $pagination-items-per-page-border;
+	border-radius: $pagination-border-radius;
+	border-style: solid;
+	border-width: $pagination-border-width;
 	float: left;
 	line-height: $pagination-line-height;
 
@@ -82,24 +86,16 @@
 	}
 
 	a {
-		@if (variable-exists(pagination-items-per-page-color)) {
-			color: $pagination-items-per-page-color;
-		}
-
+		color: $pagination-items-per-page-color;
 		display: block;
-		padding-bottom: $pagination-item-padding-bottom;
-		padding-top: $pagination-item-padding-top;
+		padding: $pagination-item-padding;
 		text-decoration: none;
 	}
 }
 
 .pagination-results {
 	border: $pagination-border-width solid transparent;
-
-	@if (variable-exists(pagination-results-color)) {
-		color: $pagination-results-color;
-	}
-
+	color: $pagination-results-color;
 	float: right;
 	line-height: $pagination-line-height;
 	padding-bottom: $pagination-item-padding-bottom;
@@ -114,12 +110,15 @@
 // Pagination Sizes
 
 .pagination-sm {
+	.pagination-items-per-page {
+		border-radius: $pagination-sm-border-radius;
+	}
+
 	.pagination-items-per-page a,
 	.pagination-results {
 		font-size: $pagination-sm-font-size;
 		line-height: $pagination-sm-line-height;
-		padding-bottom: $pagination-sm-item-padding-bottom;
-		padding-top: $pagination-sm-item-padding-top;
+		padding: $pagination-sm-item-padding;
 	}
 
 	.pagination {
@@ -137,16 +136,16 @@
 			&:first-child {
 				> a,
 				> span {
-					border-bottom-left-radius: $border-radius-small;
-					border-top-left-radius: $border-radius-small;
+					border-bottom-left-radius: $pagination-sm-border-radius;
+					border-top-left-radius: $pagination-sm-border-radius;
 				}
 			}
 
 			&:last-child {
 				> a,
 				> span {
-					border-bottom-right-radius: $border-radius-small;
-					border-top-right-radius: $border-radius-small;
+					border-bottom-right-radius: $pagination-sm-border-radius;
+					border-top-right-radius: $pagination-sm-border-radius;
 				}
 			}
 		}
@@ -154,12 +153,15 @@
 }
 
 .pagination-lg {
+	.pagination-items-per-page {
+		border-radius: $pagination-lg-border-radius;
+	}
+
 	.pagination-items-per-page a,
 	.pagination-results {
 		font-size: $pagination-lg-font-size;
 		line-height: $pagination-lg-line-height;
-		padding-bottom: $pagination-lg-item-padding-bottom;
-		padding-top: $pagination-lg-item-padding-top;
+		padding: $pagination-lg-item-padding;
 	}
 
 	.pagination {
@@ -177,16 +179,16 @@
 			&:first-child {
 				> a,
 				> span {
-					border-bottom-left-radius: $border-radius-large;
-					border-top-left-radius: $border-radius-large;
+					border-bottom-left-radius: $pagination-lg-border-radius;
+					border-top-left-radius: $pagination-lg-border-radius;
 				}
 			}
 
 			&:last-child {
 				> a,
 				> span {
-					border-bottom-right-radius: $border-radius-large;
-					border-top-right-radius: $border-radius-large;
+					border-bottom-right-radius: $pagination-lg-border-radius;
+					border-top-right-radius: $pagination-lg-border-radius;
 				}
 			}
 		}

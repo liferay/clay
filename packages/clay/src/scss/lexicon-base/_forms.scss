@@ -184,7 +184,7 @@ fieldset[disabled] label {
 	.checkbox,
 	.radio {
 		label {
-			font-weight: 500;
+			font-weight: $input-label-font-weight;
 			padding-left: 25px;
 
 			@media (-webkit-min-device-pixel-ratio: 0) {
@@ -205,7 +205,7 @@ fieldset[disabled] label {
 		width: 20px;
 
 		@media (-webkit-min-device-pixel-ratio: 0) {
-			height: 15px;
+			height: 14px;
 			margin-left: -20px;
 			width: 14px;
 		}

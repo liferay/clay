@@ -25,19 +25,21 @@ $font-size-desktop-h5: floor(($font-size-desktop-base / 1.1428)) !default; // At
 $font-size-desktop-h6: floor(($font-size-desktop-base / 1.2307)) !default; // Atlas 13px
 
 $line-height-base: 1.428571429 !default;
+$line-height-computed: floor(($font-size-base * $line-height-base)) !default;
+
 $headings-line-height: 1.2 !default;
 
-$padding-base-vertical: 6px !default;
 $padding-base-horizontal: 16px !default;
+$padding-base-vertical: 6px !default;
 
-$padding-large-vertical: 10px !default;
 $padding-large-horizontal: 16px !default;
+$padding-large-vertical: 10px !default;
 
-$padding-small-vertical: 5px !default;
 $padding-small-horizontal: 10px !default;
+$padding-small-vertical: 5px !default;
 
-$padding-xs-vertical: 1px !default;
 $padding-xs-horizontal: 5px !default;
+$padding-xs-vertical: 1px !default;
 
 $grid-gutter-width: 30px !default;
 
@@ -78,7 +80,7 @@ $brand-warning: #F5984C !default;
 $brand-warning-active: darken($brand-warning, 12%) !default; // Atlas
 $brand-warning-hover: darken($brand-warning, 8%) !default; // Atlas
 
-$brand-danger: #CC6677 !default;
+$brand-danger: #C67 !default;
 $brand-danger-active: darken($brand-danger, 12%) !default; // Atlas
 $brand-danger-hover: darken($brand-danger, 8%) !default; // Atlas
 
@@ -105,18 +107,22 @@ $state-primary-bg: lighten($state-primary-text, 12%) !default; // Atlas
 $state-primary-border: $state-primary-text !default; // Atlas
 
 $state-success-text: $brand-success !default;
+
 $state-success-bg: lighten($state-success-text, 34%) !default;
 $state-success-border: $state-success-text !default;
 
 $state-info-text: $brand-info !default;
+
 $state-info-bg: lighten($state-info-text, 34%) !default;
 $state-info-border: $state-info-text !default;
 
 $state-warning-text: $brand-warning !default;
+
 $state-warning-bg: #F8F4D5 !default;
 $state-warning-border: $state-warning-text !default;
 
 $state-danger-text: $brand-danger !default;
+
 $state-danger-bg: lighten($state-danger-text, 34%) !default;
 $state-danger-border: $state-danger-text !default;
 

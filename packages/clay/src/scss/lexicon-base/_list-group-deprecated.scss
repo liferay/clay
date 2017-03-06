@@ -136,7 +136,7 @@
 // Deprecated list-group-card as of v1.0.9 and will be removed in 2.0.0.
 
 .list-group-item .checkbox input[type="checkbox"]:checked + .card {
-	@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color);
+	@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-focus-color, $list-group-item-active-dropdown-toggle-hover-color);
 
 	.card-col-content a {
 		color: $list-group-active-color;

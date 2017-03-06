@@ -6,6 +6,8 @@ $management-bar-border-right-width: 1px !default;
 $management-bar-border-top-width: 1px !default;
 $management-bar-border-width: $management-bar-border-top-width $management-bar-border-right-width $management-bar-border-bottom-width $management-bar-border-left-width !default;
 
+$management-bar-dropdown-menu-margin-top: 0 !default;
+
 $management-bar-height: $navbar-height !default;
 
 $management-bar-margin-bottom: $navbar-margin-bottom !default;
@@ -25,6 +27,7 @@ $management-bar-collapse-border: transparent !default;
 
 $management-bar-default-bg: $navbar-default-bg !default;
 $management-bar-default-border: $navbar-default-border !default;
+$management-bar-default-box-shadow: null !default;
 $management-bar-default-color: $navbar-default-color !default;
 
 $management-bar-default-collapse-bg: $management-bar-default-bg !default;

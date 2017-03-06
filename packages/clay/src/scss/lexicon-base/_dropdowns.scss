@@ -3,11 +3,19 @@
 	.dropdown-toggle {
 		display: inline-block;
 	}
+}
 
-	.dropdown-header {
+.dropdown-header {
+	@if ($dropdown-header-font-size != $font-size-small) {
 		font-size: $dropdown-header-font-size;
-		overflow: hidden;
+	}
+
+	@if ($dropdown-link-padding != (3px 20px)) {
 		padding: $dropdown-link-padding;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		overflow: hidden;
 
 		@media (min-width: $grid-float-breakpoint) { // min-width: 768px
 			font-size: $dropdown-header-font-size-desktop;
@@ -16,17 +24,19 @@
 }
 
 .dropdown-menu {
+	border-style: $dropdown-border-style;
+	border-width: $dropdown-border-width;
+	box-shadow: $dropdown-box-shadow;
+	font-size: $dropdown-font-size;
 	max-height: $dropdown-menu-max-height;
+	max-width: $dropdown-menu-max-width;
+	min-height: $dropdown-menu-min-height;
+	min-width: $dropdown-menu-min-width;
 	overflow: auto;
-
-	@if (variable-exists(atlas-theme)) {
-		border-width: $dropdown-border-width;
-		box-shadow: $dropdown-box-shadow;
-		font-size: $dropdown-font-size;
-		max-width: $dropdown-menu-max-width;
-		min-height: 40px;
-		padding: 6px 0;
-	}
+	padding-bottom: $dropdown-padding-bottom;
+	padding-left: $dropdown-padding-left;
+	padding-right: $dropdown-padding-right;
+	padding-top: $dropdown-padding-top;
 
 	@media (min-width: $grid-float-breakpoint) {
 		max-height: $dropdown-menu-desktop-max-height;
@@ -37,10 +47,13 @@
 		}
 	}
 
-	@if (variable-exists(atlas-theme)) {
-		> li > a {
-			overflow: hidden;
+	> li > a {
+		@if ($dropdown-link-padding != (3px 20px)) {
 			padding: $dropdown-link-padding;
+		}
+
+		@if (variable-exists(atlas-theme)) {
+			overflow: hidden;
 		}
 	}
 }
@@ -162,7 +175,7 @@
 			&:focus,
 			&:hover {
 				background-color: $dropdown-link-active-bg;
-				color : $dropdown-link-active-color;
+				color: $dropdown-link-active-color;
 			}
 		}
 

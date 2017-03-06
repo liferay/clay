@@ -14,8 +14,16 @@ $list-group-card-active-color: $component-active-color !default;
 // Deprecated `$list-group-card-checkbox-hidden-icon` as of v1.0.11 and will be removed in v2.0.0
 $list-group-card-checkbox-hidden-icon: '\f00c' !default;
 
+$list-group-box-shadow: null !default;
+
 $list-group-header-bg: $list-group-hover-bg !default;
 $list-group-header-color: $list-group-link-heading-color !default;
 $list-group-header-hover-color: $list-group-header-color !default;
 
+$list-group-item-dropdown-toggle-color: null !default;
+$list-group-item-dropdown-toggle-focus-color: null !default;
+$list-group-item-dropdown-toggle-hover-color: $list-group-item-dropdown-toggle-focus-color !default;
+
 $list-group-item-active-dropdown-toggle-color: $list-group-active-color !default;
+$list-group-item-active-dropdown-toggle-focus-color: null !default;
+$list-group-item-active-dropdown-toggle-hover-color: $list-group-item-active-dropdown-toggle-focus-color !default;

@@ -291,7 +291,7 @@
 		> .dropdown-menu {
 			@include border-top-radius(0);
 
-			margin-top: 0;
+			margin-top: $management-bar-dropdown-menu-margin-top;
 		}
 	}
 
@@ -341,7 +341,9 @@
 
 		.dropdown-menu {
 			background-color: $dropdown-bg;
-			border: 1px solid $dropdown-border;
+			border-color: $dropdown-border;
+			border-style: $dropdown-border-style;
+			border-width: $dropdown-border-width;
 			box-shadow: $dropdown-box-shadow;
 			position: absolute;
 		}
@@ -379,6 +381,7 @@
 .management-bar-default {
 	background-color: $management-bar-default-bg;
 	border-color: $management-bar-default-border;
+	box-shadow: $management-bar-default-box-shadow;
 
 	a,
 	.management-bar-text,

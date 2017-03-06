@@ -675,11 +675,18 @@
 		background-color: if(variable-exists(atlas-theme), transparent, $navbar-default-bg);
 	}
 
-	@if (variable-exists(atlas-theme)) {
-		.btn-default,
-		.form-control {
-			background-color: $navbar-default-bg;
-		}
+	.btn-default {
+		background-color: $navbar-default-collapsible-search-btn-default-bg;
+		border-color: $navbar-default-collapsible-search-btn-default-border;
+		color: $navbar-default-collapsible-search-btn-default-color;
+	}
+
+	.form-control {
+		background-color: $navbar-default-collapsible-search-input-bg;
+		border-color: $navbar-default-collapsible-search-input-border;
+		color: $navbar-default-collapsible-search-input-color;
+
+		@include placeholder($navbar-default-collapsible-search-input-placeholder-color);
 	}
 }
 
@@ -706,6 +713,16 @@
 			@if not ($navbar-default-link-active-highlight == transparent) {
 				content: '';
 			}
+		}
+	}
+
+	.navbar-default .basic-search {
+		&:after {
+			background-color: $navbar-default-collapsible-search-highlight;
+		}
+
+		&.focus:after {
+			background-color: $navbar-default-collapsible-search-focus-highlight;
 		}
 	}
 }
@@ -735,15 +752,18 @@
 		background-color: if(variable-exists(atlas-theme), transparent, $navbar-inverse-bg);
 	}
 
-	@if (variable-exists(atlas-theme)) {
-		.btn-default {
-			background-color: $navbar-inverse-bg;
-			color: $navbar-inverse-color;
-		}
+	.btn-default {
+		background-color: $navbar-inverse-collapsible-search-btn-default-bg;
+		border-color: $navbar-inverse-collapsible-search-btn-default-border;
+		color: $navbar-inverse-collapsible-search-btn-default-color;
+	}
 
-		.form-control {
-			background-color: $navbar-inverse-bg;
-		}
+	.form-control {
+		background-color: $navbar-inverse-collapsible-search-input-bg;
+		border-color: $navbar-inverse-collapsible-search-input-border;
+		color: $navbar-inverse-collapsible-search-input-color;
+
+		@include placeholder($navbar-inverse-collapsible-search-input-placeholder-color);
 	}
 }
 
@@ -770,6 +790,16 @@
 			@if not ($navbar-inverse-link-active-highlight == transparent) {
 				content: '';
 			}
+		}
+	}
+
+	.navbar-inverse .basic-search {
+		&:after {
+			background-color: $navbar-inverse-collapsible-search-highlight;
+		}
+
+		&.focus:after {
+			background-color: $navbar-inverse-collapsible-search-focus-highlight;
 		}
 	}
 }
