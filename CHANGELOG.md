@@ -1,3 +1,34 @@
+### v1.0.18 - March 6, 2017
+* New: Progress Bar add option to customize `$progress-bar-font-size`
+* New: Progress Bar add option to customize progress bar container `$progress-box-shadow`
+* New: Progress Bars add option to customize `$progress-bar-box-shadow`, `$progress-bar-height`
+* New: Pagination add option to customize border-radius of pagination-sm and pagination-lg independent of global border-radius variables
+* New: Pagination add option to customize `$pagination-items-per-page-bg`
+* New: Pagination add option to customize `$pagination-items-per-page-border`
+* New: Pagination add options to customize `$pagination-items-per-page-color` `$pagination-results-color` to Lexicon Base
+* New: Atlas Navbar Collapsible Search added options to customize `$navbar-default-collapsible-search-highlight` `$navbar-inverse-collapsible-search-highlight`
+* New: Navbar Default and Navbar Inverse Collapsible Search added options to customize `$navbar-default-collapsible-search-btn-default-bg`, `$navbar-default-collapsible-search-btn-default-border`, `$navbar-default-collapsible-search-btn-default-color`, `$navbar-default-collapsible-search-input-bg`, `$navbar-default-collapsible-search-input-border`, `$navbar-default-collapsible-search-input-color`, `$navbar-default-collapsible-search-input-placeholder-color`, `$navbar-inverse-collapsible-search-btn-default-bg`, `$navbar-inverse-collapsible-search-btn-default-border`, `$navbar-inverse-collapsible-search-btn-default-color`, `$navbar-inverse-collapsible-search-input-bg`, `$navbar-inverse-collapsible-search-input-border`, `$navbar-inverse-collapsible-search-input-color`, `$navbar-inverse-collapsible-search-input-placeholder-color`
+* New: Dropdowns added option to customize `$dropdown-menu-min-height`
+* New: Dropdowns added options to customize `$dropdown-padding-bottom`, `$dropdown-padding-left`, `$dropdown-padding-right`, `$dropdown-padding-top`
+* New: Dropdowns add option to customize `$dropdown-menu-min-width`
+* New: Dropdowns add options to customize `$dropdown-font-size`, `$dropdown-menu-max-width` in Lexicon Base
+* New: Dropdowns add option to customize `$dropdown-box-shadow` in Lexicon Base
+* New: Dropdowns add option to customize `$dropdown-border-style`, `$dropdown-border-width`
+* New: Management Bar add option to customize `$management-bar-dropdown-menu-margin-top`
+* New: Management Bar add option to customize `$management-bar-default-box-shadow`
+* New: Atlas added options to customize `$navbar-default-collapsible-search-focus-border`, `$navbar-inverse-collapsible-search-focus-border`
+* Update: Atlas change checkbox height to 14px in webkit browsers
+* Update: Atlas Checkbox and Radio Label should use `$input-label-font-weight variable`
+* Update: Atlas add `$line-height-computed` to _globals.scss and use in `$input-checkbox-label-line-height`, `$management-bar-link-line-height`
+* Update: Pagination rename `$pagination-border-radius-lg`, `$pagination-border-radius-sm` to `$pagination-lg-border-radius`, `$pagination-sm-border-radius` added in 4be569 respectively
+* Update: pagination-items-per-page dropdown-toggle should use `$pagination-item-padding`
+* Update: Pagination border radius should apply to pagination-items-per-page
+* Update: Pagination `$pagination-hover-color` should inherit from `$pagination-color`
+* Update: Atlas Navbar Collapsible Search rename `$navbar-default-collapsible-search-focus-border`, `$navbar-inverse-collapsible-search-focus-border` to `$navbar-default-collapsible-search-focus-highlight`, `$navbar-inverse-collapsible-search-focus-highlight` added in d082a7d respectively
+* Update: Atlas navbar-default-border-widths should inherit from navbar-border-widths
+* Update: Lexicon Base `$dropdown-link-padding` should change the padding on dropdown links
+* Update: Lexicon Base Dropdowns `$dropdown-header-font-size` should change the font-size of .dropdown-header
+
 ### v1.0.17 - February 21, 2017
 * New: Breadcrumbs add options to customize `$breadcrumb-link-hover-color`, `$breadcrumb-link-text-decoration`, `$breadcrumb-link-hover-text-decoration`
 * New: Breadcrumbs add options to customize `$breadcrumb-separator-font-weight`, `$breadcrumb-active-font-weight`
