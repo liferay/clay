@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.17
+* Lexicon 1.0.18
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -9018,14 +9018,6 @@ button.list-group-heading {
   color: #fff;
 }
 
-.list-group-item.active .dropdown-toggle:focus {
-  color: #fff;
-}
-
-.list-group-item.active .dropdown-toggle:hover {
-  color: #fff;
-}
-
 .list-group-item.active .list-group-item-content a {
   color: #fff;
 }
@@ -9828,6 +9820,10 @@ button.list-group-heading {
   background-color: #f8f8f8;
 }
 
+.navbar-default.collapse-basic-search .basic-search .form-control::-moz-placeholder {
+  opacity: 1;
+}
+
 @media (max-width: 767px) {
   .navbar-inverse .navbar-collapse:first-child,
   .navbar-inverse.navbar-collapse-absolute .navbar-collapse {
@@ -9846,6 +9842,10 @@ button.list-group-heading {
 
 .navbar-inverse.collapse-basic-search .basic-search.open {
   background-color: #222;
+}
+
+.navbar-inverse.collapse-basic-search .basic-search .form-control::-moz-placeholder {
+  opacity: 1;
 }
 
 .nav-tabs > li[class*='col-'] {
@@ -10244,7 +10244,8 @@ button.list-group-heading {
 
 .management-bar-no-collapse .management-bar-nav .dropdown-menu {
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.15);
+  border-width: 1px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   position: absolute;
 }
@@ -10357,7 +10358,10 @@ button.list-group-heading {
 }
 
 .pagination-items-per-page {
-  border: 1px solid transparent;
+  border-color: transparent;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
   float: left;
   line-height: 1.42857143;
 }
@@ -10368,8 +10372,7 @@ button.list-group-heading {
 
 .pagination-items-per-page a {
   display: block;
-  padding-bottom: 6px;
-  padding-top: 6px;
+  padding: 6px 12px 6px 12px;
   text-decoration: none;
 }
 
@@ -10388,12 +10391,15 @@ button.list-group-heading {
   }
 }
 
+.pagination-sm .pagination-items-per-page {
+  border-radius: 3px;
+}
+
 .pagination-sm .pagination-items-per-page a,
 .pagination-sm .pagination-results {
   font-size: 12px;
   line-height: 1.5;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 5px 10px 5px 10px;
 }
 
 .pagination-sm .pagination a {
@@ -10418,12 +10424,15 @@ button.list-group-heading {
   border-top-right-radius: 3px;
 }
 
+.pagination-lg .pagination-items-per-page {
+  border-radius: 6px;
+}
+
 .pagination-lg .pagination-items-per-page a,
 .pagination-lg .pagination-results {
   font-size: 18px;
   line-height: 1.3333333;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 10px 16px 10px 16px;
 }
 
 .pagination-lg .pagination > li a {
@@ -12071,6 +12080,8 @@ th .truncate-text {
 }
 
 .dropdown-menu {
+  border-width: 1px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   max-height: 295px;
   overflow: auto;
 }
@@ -13590,14 +13601,6 @@ button.modal-primary-action-button {
 }
 
 .list-group-item .checkbox input[type="checkbox"]:checked + .card .dropdown-toggle {
-  color: #fff;
-}
-
-.list-group-item .checkbox input[type="checkbox"]:checked + .card .dropdown-toggle:focus {
-  color: #fff;
-}
-
-.list-group-item .checkbox input[type="checkbox"]:checked + .card .dropdown-toggle:hover {
   color: #fff;
 }
 
