@@ -17,10 +17,10 @@ $navbar-desktop-padding-vertical: (($navbar-desktop-height - $navbar-desktop-lin
 
 $navbar-link-active-bottom-border-width: 2px !default;
 
-$navbar-default-border-bottom-width: 1px !default;
-$navbar-default-border-left-width: 0 !default;
-$navbar-default-border-right-width: 0 !default;
-$navbar-default-border-top-width: 0 !default;
+$navbar-default-border-bottom-width: $navbar-border-bottom-width !default;
+$navbar-default-border-left-width: $navbar-border-left-width !default;
+$navbar-default-border-right-width: $navbar-border-right-width !default;
+$navbar-default-border-top-width: $navbar-border-top-width !default;
 $navbar-default-border-width: $navbar-default-border-top-width $navbar-default-border-right-width $navbar-default-border-bottom-width $navbar-default-border-left-width !default;
 
 $navbar-default-height: $navbar-height !default;
@@ -65,6 +65,13 @@ $navbar-default-brand-hover-bg: transparent !default;
 $navbar-default-brand-color: $navbar-default-link-color !default;
 $navbar-default-brand-hover-color: $navbar-default-link-hover-color !default;
 
+$navbar-default-collapsible-search-btn-default-bg: $navbar-default-bg !default;
+$navbar-default-collapsible-search-input-bg: $navbar-default-bg !default;
+
+$navbar-default-collapsible-search-highlight: null !default;
+
+$navbar-default-collapsible-search-focus-highlight: null !default;
+
 $navbar-default-link-open-bg: $brand-primary !default;
 $navbar-default-link-open-color: #FFF !default;
 
@@ -89,6 +96,14 @@ $navbar-inverse-link-disabled-color: #CACDD2 !default;
 
 $navbar-inverse-brand-color: $navbar-inverse-link-color !default;
 $navbar-inverse-brand-hover-color: $navbar-inverse-brand-color !default;
+
+$navbar-inverse-collapsible-search-btn-default-bg: $navbar-inverse-bg !default;
+$navbar-inverse-collapsible-search-btn-default-color: $navbar-inverse-color !default;
+$navbar-inverse-collapsible-search-input-bg: $navbar-inverse-bg !default;
+
+$navbar-inverse-collapsible-search-highlight: null !default;
+
+$navbar-inverse-collapsible-search-focus-highlight: null !default;
 
 $navbar-inverse-link-open-bg: $brand-primary !default;
 $navbar-inverse-link-open-color: #FFF !default;

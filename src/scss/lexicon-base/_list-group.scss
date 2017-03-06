@@ -1,3 +1,22 @@
+.list-group {
+	box-shadow: $list-group-box-shadow;
+}
+
+.tabular-list-group {
+	box-shadow: $list-group-box-shadow;
+}
+
+// Nested list groups shouldn't have box shadows
+
+.list-group .list-group,
+.list-group .tabular-list-group,
+.tabular-list-group .list-group,
+.tabular-list-group .tabular-list-group {
+	@if ($list-group-box-shadow != null) {
+		box-shadow: none;
+	}
+}
+
 .list-group-heading {
 	background-color: $list-group-header-bg;
 	border-color: $list-group-border;
@@ -71,11 +90,11 @@ button.list-group-heading {
 }
 
 .list-group-item {
+	@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-focus-color, $list-group-item-dropdown-toggle-hover-color);
+
 	@if (variable-exists(atlas-theme)) {
 		border-left-width: 0;
 		border-right-width: 0;
-
-		@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-color);
 
 		&:focus {
 			z-index: 1;
@@ -83,7 +102,7 @@ button.list-group-heading {
 	}
 
 	&.active {
-		@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-color);
+		@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-focus-color, $list-group-item-active-dropdown-toggle-hover-color);
 
 		.list-group-item-content a {
 			color: $list-group-active-color;
@@ -141,18 +160,6 @@ button.list-group-heading {
 }
 
 @if (variable-exists(atlas-theme)) {
-	// Nested list groups shouldn't have box shadows
-
-	.list-group,
-	.tabular-list-group {
-		box-shadow: $list-group-box-shadow;
-
-		.list-group,
-		.tabular-list-group {
-			box-shadow: none;
-		}
-	}
-
 	// Last list-group-heading shouldn't have bottom border
 
 	.list-group {
@@ -304,8 +311,13 @@ button.list-group-heading {
 		.list-group-item.active {
 			.list-group-item-content,
 			.list-group-item-field {
+				$tabular-list-group-active-bottom-v-shadow: $tabular-list-group-border-width - $tabular-list-group-active-border-bottom-width;
+
 				border-bottom-color: $list-group-active-border;
-				box-shadow: inset 0 -1px 0 $list-group-active-border;
+
+				@if ($tabular-list-group-active-bottom-v-shadow < 0) {
+					box-shadow: inset 0 #{$tabular-list-group-active-bottom-v-shadow} 0 $list-group-active-border;
+				}
 			}
 		}
 	}
@@ -335,7 +347,9 @@ button.list-group-heading {
 		.list-group-item.active {
 			.list-group-item-content,
 			.list-group-item-field {
-				box-shadow: inset 0 -2px 0 $list-group-active-border;
+				@if ($tabular-list-group-active-border-bottom-width > 0) {
+					box-shadow: inset 0 -#{$tabular-list-group-active-border-bottom-width} 0 $list-group-active-border;
+				}
 			}
 		}
 	}
