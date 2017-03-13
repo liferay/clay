@@ -1,9 +1,23 @@
 'use strict';
 
-import Button from '../src/Button';
+import MetalQuartzButton from '../src/MetalQuartzButton';
 
-describe('Button', function() {
-	it('should be tested', function() {
-		assert.fail('No tests for this module yet.');
+let sample;
+
+describe('MetalQuartzButton', function() {
+	afterEach(() => {
+		if (sample) {
+			sample.dispose();
+		}
+	});
+
+	it('should generate the content markup', function() {
+		sample = new MetalQuartzButton(
+			{
+				content: 'foo'
+			}
+		);
+
+		assert.strictEqual(sample.element.outerHTML, __html__['test/fixture/testDefaultMetalQuartzButton.html'].trim());
 	});
 });

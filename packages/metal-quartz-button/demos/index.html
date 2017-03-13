@@ -14,7 +14,59 @@
 	<h1>Button</h1>
 
 	<script type="text/javascript">
-		new metal.MetalQuartzButton();
+		new metal.MetalQuartzButton({
+			label: 'Default Button'
+		});
+		new metal.MetalQuartzButton({
+			style: 'primary',
+			label: 'Primary Button'
+		});
+		new metal.MetalQuartzButton({
+			style: 'info',
+			label: 'Info Button'
+		});
+		new metal.MetalQuartzButton({
+			style: 'success',
+			label: 'Success Button'
+		});
+		new metal.MetalQuartzButton({
+			style: 'warning',
+			label: 'Warning Button'
+		});
+		new metal.MetalQuartzButton({
+			style: 'danger',
+			label: 'Danger Button'
+		});
+		new metal.MetalQuartzButton({
+			style: 'link',
+			label: 'Link Button'
+		});
+		new metal.MetalQuartzButton({
+			disabled: true,
+			label: 'Disabled Button'
+		});
+		new metal.MetalQuartzButton({
+			label: 'Large Button',
+			size: 'lg'
+		});
+		new metal.MetalQuartzButton({
+			label: 'Small Button',
+			size: 'sm'
+		});
+		new metal.MetalQuartzButton({
+			label: 'Extra Small Button',
+			size: 'xs'
+		});
+		new metal.MetalQuartzButton({
+			label: 'Listening Click'
+		})
+		.on('click', function(e) {
+			alert('click');
+		});
+		new metal.MetalQuartzButton({
+			block: true,
+			label: 'Block Button'
+		});
 	</script>
 </body>
 </html>

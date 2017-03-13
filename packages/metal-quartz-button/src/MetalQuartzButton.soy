@@ -4,5 +4,17 @@
  * This renders the component's whole content.
  */
 {template .render}
-	<div class="button">Hello World</div>
+	{@param? block: bool}
+	{@param? disabled: bool}
+	{@param? label: string}
+	{@param? size: string}
+	{@param? style: string}
+	{@param? type: string}
+	{@param? value: string}
+	<button
+		class="btn btn-{$style ? $style : 'default'}{$size ? ' btn-' + $size : ''}
+		{$block ? ' btn-block' : ''}"
+		{if $disabled}disabled{/if}
+		type="{$type ? $type : ''}"
+		value="{$value ? $value : ''}">{$label ? $label : ''}</button>
 {/template}
