@@ -68,6 +68,18 @@ describe('MetalQuartzIcon', function() {
 		assert.strictEqual(quartzIcon.element.outerHTML, __html__['test/fixture/testGlyphiconsMetalQuartzIcon.html'].trim());
 	});
 
+	it('should append elementClasses to the glyphicon element', function() {
+		quartzIcon = new MetalQuartzIcon(
+			{
+				elementClasses: 'icon-monospaced',
+				spritemap: 'glyphicons',
+				symbol: 'glyphicon-plus'
+			}
+		);
+
+		assert(dom.hasClass(quartzIcon.element, 'icon-monospaced'));
+	});
+
 	it('should output markup for Lexicon Font Awesome Icons if spritemap is `lexicon-fa`.', function() {
 		quartzIcon = new MetalQuartzIcon(
 			{
@@ -77,5 +89,17 @@ describe('MetalQuartzIcon', function() {
 		);
 
 		assert.strictEqual(quartzIcon.element.outerHTML, __html__['test/fixture/testLexiconFaMetalQuartzIcon.html'].trim());
+	});
+
+	it('should append elementClasses to the lexicon-fa element', function() {
+		quartzIcon = new MetalQuartzIcon(
+			{
+				elementClasses: 'icon-monospaced',
+				spritemap: 'lexicon-fa',
+				symbol: 'icon-plus'
+			}
+		);
+
+		assert(dom.hasClass(quartzIcon.element, 'icon-monospaced'));
 	});
 });
