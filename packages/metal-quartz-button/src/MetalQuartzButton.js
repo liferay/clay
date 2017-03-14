@@ -1,6 +1,6 @@
 'use strict';
 
-import Component from 'metal-component';
+import MetalQuartzButtonBase from './MetalQuartzButtonBase';
 import core from 'metal';
 import Soy from 'metal-soy';
 
@@ -9,7 +9,7 @@ import templates from './MetalQuartzButton.soy.js';
 /**
  * Metal Quartz Button component.
  */
-class MetalQuartzButton extends Component {
+class MetalQuartzButton extends MetalQuartzButtonBase {
 }
 
 /**
@@ -28,30 +28,6 @@ MetalQuartzButton.STATE = {
 	block: {
 		validator: core.isBoolean,
 		value: false
-	},
-
-	/**
-	 * The button disabled attribute.
-	 * @instance
-	 * @memberof MetalQuartzButton
-	 * @type {boolean}
-	 * @default false
-	 */
-	disabled: {
-		validator: core.isBoolean,
-		value: false
-	},
-
-	/**
-	 * The button label.
-	 * @instance
-	 * @memberof MetalQuartzButton
-	 * @type {string}
-	 * @default ''
-	 */
-	label: {
-		validator: core.isString,
-		value: ''
 	},
 
 	/**
@@ -76,30 +52,6 @@ MetalQuartzButton.STATE = {
 	style: {
 		validator: core.isString,
 		value: 'default'
-	},
-
-	/**
-	 * The button type.
-	 * @instance
-	 * @memberof MetalQuartzButton
-	 * @type {string}
-	 * @default ''
-	 */
-	type: {
-		validator: core.isString,
-		value: ''
-	},
-
-	/**
-	 * The button value.
-	 * @instance
-	 * @memberof MetalQuartzButton
-	 * @type {string}
-	 * @default ''
-	 */
-	value: {
-		validator: core.isString,
-		value: ''
 	}
 };
 
