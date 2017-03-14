@@ -8,69 +8,167 @@
 	<link rel="stylesheet" href="../node_modules/lexicon-ux/build/css/atlas-font-awesome.css">
 	<link rel="stylesheet" href="../build/button.css">
 
+	<style>
+		.my-personal-class {
+			border-style: dotted;
+		}
+	</style>
+
 	<script src="../build/globals/button.js"></script>
 </head>
 <body>
 	<h1>Button</h1>
 
+	<h1>Button States</h1>
+	<div id="states-block"></div>
+
+	<h1>Desabled Button</h1>
+	<div id="disabled-block"></div>
+
+	<h1>Button Sizes</h1>
+	<div id="sizes-block"></div>
+
+	<h1>Block Button</h1>
+	<div id="block-block"></div>
+
+	<h1>Listening Events</h1>
+	<div id="events-block"></div>
+
+	<h1>Extending Style</h1>
+	<div id="extending-block"></div>
+
 	<script type="text/javascript">
-		new metal.MetalQuartzButton({
-			label: 'Default Button'
-		});
-		new metal.MetalQuartzButton({
-			style: 'primary',
-			label: 'Primary Button'
-		});
-		new metal.MetalQuartzButton({
-			style: 'info',
-			label: 'Info Button'
-		});
-		new metal.MetalQuartzButton({
-			style: 'success',
-			label: 'Success Button'
-		});
-		new metal.MetalQuartzButton({
-			style: 'warning',
-			label: 'Warning Button'
-		});
-		new metal.MetalQuartzButton({
-			style: 'danger',
-			label: 'Danger Button'
-		});
-		new metal.MetalQuartzButton({
-			style: 'link',
-			label: 'Link Button'
-		});
-		new metal.MetalQuartzButton({
-			disabled: true,
-			label: 'Disabled Button'
-		});
-		new metal.MetalQuartzButton({
-			label: 'Large Button',
-			size: 'lg'
-		});
-		new metal.MetalQuartzButton({
-			label: 'Small Button',
-			size: 'sm'
-		});
-		new metal.MetalQuartzButton({
-			label: 'Extra Small Button',
-			size: 'xs'
-		});
-		new metal.MetalQuartzButton({
-			label: 'Listening Click'
-		})
+		/*
+		 * Button States.
+		 * Once state is a reserved key for STATE, we are using style instead.
+		 */ 
+		new metal.MetalQuartzButton(
+			{
+				label: 'Default Button'
+			},
+			'#states-block'
+		);
+
+		new metal.MetalQuartzButton(
+			{
+				style: 'primary',
+				label: 'Primary Button'
+			},
+			'#states-block'
+		);
+
+		new metal.MetalQuartzButton(
+			{
+				style: 'info',
+				label: 'Info Button'
+			},
+			'#states-block'
+		);
+
+		new metal.MetalQuartzButton(
+			{
+				style: 'success',
+				label: 'Success Button'
+			},
+			'#states-block'
+		);
+
+		new metal.MetalQuartzButton(
+			{
+				style: 'warning',
+				label: 'Warning Button'
+			},
+			'#states-block'
+		);
+
+		new metal.MetalQuartzButton(
+			{
+				style: 'danger',
+				label: 'Danger Button'
+			},
+			'#states-block'
+		);
+
+		new metal.MetalQuartzButton(
+			{
+				style: 'link',
+				label: 'Link Button'
+			},
+			'#states-block'
+		);
+
+		/*
+		 * Disabed button.
+		 */ 
+		new metal.MetalQuartzButton(
+			{
+				disabled: true,
+				label: 'Disabled Button'
+			},
+			'#disabled-block'
+		);
+
+		/*
+		 * Button sizes.
+		 */ 
+		new metal.MetalQuartzButton(
+			{
+				label: 'Large Button',
+				size: 'lg'
+			},
+			'#sizes-block'
+		);
+
+		new metal.MetalQuartzButton(
+			{
+				label: 'Small Button',
+				size: 'sm'
+			},
+			'#sizes-block'
+		);
+
+		new metal.MetalQuartzButton(
+			{
+				label: 'Extra Small Button',
+				size: 'xs'
+			},
+			'#sizes-block'
+		);
+
+		/*
+		 * Listening to events.
+		 */ 
+		new metal.MetalQuartzButton(
+			{
+				label: 'Listening Click'
+			},
+			'#events-block'
+		)
 		.on('click', function(e) {
 			alert('click');
 		});
-		new metal.MetalQuartzButton({
-			block: true,
-			label: 'Block Button'
-		});
-		var button = new metal.MetalQuartzButton({
-			label: 'Default Button',
-			elementClasses: 'my-personal-class'
-		});
+
+		/*
+		 * Block button.
+		 */ 
+		new metal.MetalQuartzButton(
+			{
+				block: true,
+				label: 'Block Button'
+			},
+			'#block-block'
+		);
+
+		/*
+		 * Extending button style.
+		 */ 
+		new metal.MetalQuartzButton(
+			{
+				label: 'Default Button',
+				elementClasses: 'my-personal-class'
+			},
+			'#extending-block'
+		);
 	</script>
 </body>
 </html>
