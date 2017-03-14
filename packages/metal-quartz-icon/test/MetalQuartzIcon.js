@@ -56,4 +56,26 @@ describe('MetalQuartzIcon', function() {
 
 		assert.equal(quartzIcon.element, null);
 	});
+
+	it('should output markup for Glyphicons if spritemap is `glyphicons`.', function() {
+		quartzIcon = new MetalQuartzIcon(
+			{
+				spritemap: 'glyphicons',
+				symbol: 'glyphicon-plus'
+			}
+		);
+
+		assert.strictEqual(quartzIcon.element.outerHTML, __html__['test/fixture/testGlyphiconsMetalQuartzIcon.html'].trim());
+	});
+
+	it('should output markup for Lexicon Font Awesome Icons if spritemap is `lexicon-fa`.', function() {
+		quartzIcon = new MetalQuartzIcon(
+			{
+				spritemap: 'lexicon-fa',
+				symbol: 'icon-plus'
+			}
+		);
+
+		assert.strictEqual(quartzIcon.element.outerHTML, __html__['test/fixture/testLexiconFaMetalQuartzIcon.html'].trim());
+	});
 });
