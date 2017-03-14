@@ -9,6 +9,8 @@ import templates from './MetalQuartzIcon.soy.js';
 /**
  * Implementation of the Metal Quartz Icon.
  * @see  {@link http://liferay.github.io/lexicon/content/icons-lexicon/|Lexicon Definition}
+ * {@link http://liferay.github.io/lexicon/content/icons-font-awesome/}
+ * {@link http://liferay.github.io/lexicon/content/icons-glyphicons/}
  */
 class MetalQuartzIcon extends Component {
 }
@@ -20,7 +22,7 @@ class MetalQuartzIcon extends Component {
  */
 MetalQuartzIcon.STATE = {
 	/**
-	 * Path to the spritemap file with the icons.
+	 * The path to the SVG spritemap file containing the icons, `lexicon-fa`, or `glyphicons`.
 	 * @instance
 	 * @memberof MetalQuartzIcon
 	 * @type {string}
@@ -31,7 +33,8 @@ MetalQuartzIcon.STATE = {
 	},
 
 	/**
-	 * Id of the icon to show from the list of available icons.
+	 * The name of the Lexicon SVG Icon, Lexicon Font Awesome Icon, or Glyphicon
+	 * e.g. `plus`, `icon-plus`, or `glyphicon-plus` respectively.
 	 * @instance
 	 * @memberof MetalQuartzIcon
 	 * @type {string}

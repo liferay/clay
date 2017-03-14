@@ -3,6 +3,8 @@
 /**
  * This renders an icon element based on the lexicon icon definition
  * found at http://liferay.github.io/lexicon/content/icons-lexicon/
+ * http://liferay.github.io/lexicon/content/icons-font-awesome/
+ * http://liferay.github.io/lexicon/content/icons-glyphicons/
  *
  * @param? elementClasses
  * @param spritemap
@@ -10,8 +12,47 @@
  */
 {template .render}
 	{if isNonnull($symbol) and isNonnull($spritemap)}
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-{$symbol}{$elementClasses ? ' ' + $elementClasses : ''}">
-			<use xlink:href="{$spritemap}#{$symbol}" />
-		</svg>
+		{let $quartzIconElementClasses kind="text"}
+			{$elementClasses ? ' ' + $elementClasses : ''}
+		{/let}
+
+		{let $quartzIconVariant kind="text"}
+			{$spritemap == 'lexicon-fa' ? 'lexiconFa' : $spritemap}
+		{/let}
+
+		{delcall QuartzIcon variant="$quartzIconVariant"}
+			{param quartzIconElementClasses: $quartzIconElementClasses /}
+			{param spritemap: $spritemap /}
+			{param symbol: $symbol /}
+		{/delcall}
 	{/if}
 {/template}
+
+/**
+ * @param? quartzIconElementClasses
+ * @param spritemap
+ * @param symbol
+ */
+{deltemplate QuartzIcon}
+	<svg aria-hidden="true" class="lexicon-icon lexicon-icon-{$symbol}{$quartzIconElementClasses}">
+		<use xlink:href="{$spritemap}#{$symbol}" />
+	</svg>
+{/deltemplate}
+
+ /**
+ * @param? quartzIconElementClasses
+ * @param spritemap
+ * @param symbol
+ */
+{deltemplate QuartzIcon variant="'glyphicons'"}
+	<span aria-hidden="true" class="glyphicon {$symbol}{$quartzIconElementClasses}"></span>
+{/deltemplate}
+
+ /**
+ * @param? quartzIconElementClasses
+ * @param spritemap
+ * @param symbol
+ */
+{deltemplate QuartzIcon variant="'lexiconFa'"}
+	<span aria-hidden="true" class="lexicon-fa {$symbol}{$quartzIconElementClasses}"></span>
+{/deltemplate}
