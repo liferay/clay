@@ -1,5 +1,6 @@
 'use strict';
 
+import dom from 'metal-dom';
 import MetalQuartzIcon from '../src/MetalQuartzIcon';
 
 const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
@@ -33,9 +34,7 @@ describe('MetalQuartzIcon', function() {
 			}
 		);
 
-		let hasClassIconMonospaced = quartzIcon.element.className.baseVal.replace(/[\n\t]/g, " ").indexOf('icon-monospaced') > -1;
-
-		assert(hasClassIconMonospaced);
+		assert(dom.hasClass(quartzIcon.element, 'icon-monospaced'));
 	});
 
 	it('should not output any markup if symbol is undefined', function() {
@@ -56,5 +55,5 @@ describe('MetalQuartzIcon', function() {
 		);
 
 		assert.equal(quartzIcon.element, null);
-	})
+	});
 });
