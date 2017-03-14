@@ -1,0 +1,41 @@
+{
+  "name": "metal-quartz-collapse",
+  "version": "0.0.0",
+  "description": "Collapse Metal Quartz component.",
+  "license": "BSD",
+  "repository": "metal-quartz-components",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/MetalQuartzCollapse.js",
+  "jsnext:main": "src/MetalQuartzCollapse.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "compile": "babel --presets metal -d lib/ src/",
+    "prepublish": "gulp soy && npm run compile",
+    "test": "gulp test",
+    "watch": "gulp build:watch"
+  },
+  "keywords": [
+    "quartz",
+    "metal"
+  ],
+  "dependencies": {
+    "metal-soy": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.14.0",
+    "gulp": "^3.8.11",
+    "gulp-metal": "^1.0.0",
+    "karma-html2js-preprocessor": "^1.0.0",
+    "lexicon-ux": "^1.0.0",
+    "metal-karma-config": "^2.1.1"
+  }
+}
