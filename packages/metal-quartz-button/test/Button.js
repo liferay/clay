@@ -6,6 +6,7 @@ const FIXTURE_DIR = 'test/fixture/';
 
 const DEFAULT_BUTTON = __html__[FIXTURE_DIR + 'testDefaultMetalQuartzButton.html'].trim();
 const DEFAULT_BUTTON_WITH_LABEL = __html__[FIXTURE_DIR + 'testMetalQuartzButtonWithLabel.html'].trim();
+const DEFAULT_BUTTON_WITH_NAME = __html__[FIXTURE_DIR + 'testMetalQuartzButtonWithName.html'].trim();
 const DISABLED_BUTTON = __html__[FIXTURE_DIR + 'testDisabledMetalQuartzButton.html'].trim();
 const SUBMIT_BUTTON = __html__[FIXTURE_DIR + 'testSubmitMetalQuartzButton.html'].trim();
 const SUCCESS_BUTTON = __html__[FIXTURE_DIR + 'testSuccessMetalQuartzButton.html'].trim();
@@ -55,5 +56,13 @@ describe('MetalQuartzButton', function() {
 			});
 
 		assert.strictEqual(sample.element.outerHTML, DEFAULT_BUTTON_WITH_LABEL);
+	});
+	
+	it('should render a button with label', function() {
+		sample = new MetalQuartzButton({
+				name: 'myButton'
+			});
+
+		assert.strictEqual(sample.element.outerHTML, DEFAULT_BUTTON_WITH_NAME);
 	});
 });

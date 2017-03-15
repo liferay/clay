@@ -40,6 +40,18 @@ MetalQuartzButtonBase.STATE = {
 	},
 
 	/**
+	 * The button name.
+	 * @instance
+	 * @memberof MetalQuartzButtonBase
+	 * @type {string}
+	 * @default ''
+	 */
+	name: {
+		validator: core.isString,
+		value: ''
+	},
+
+	/**
 	 * The button type.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
