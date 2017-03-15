@@ -11,10 +11,37 @@
 	{@param? style: string}
 	{@param? type: string}
 	{@param? value: string}
-	<button
-		class="btn btn-{$style ? $style : 'default'}{$size ? ' btn-' + $size : ''}
-		{$block ? ' btn-block' : ''}"
-		{if $disabled}disabled{/if}
-		type="{$type ? $type : ''}"
-		value="{$value ? $value : ''}">{$label ? $label : ''}</button>
+	<button {call MetalQuartzButton.attributes data="all" /}>
+		{$label or ''}
+	</button>
+{/template}
+
+/**
+ * This renders the button attributes.
+ */
+{template .attributes kind="attributes"}
+	{@param? block: bool}
+	{@param? disabled: bool}
+	{@param? size: string}
+	{@param? style: string}
+	{@param? type: string}
+	{@param? value: string}
+
+	{let $blockClass: $block ? ' btn-block' : '' /}
+	{let $sizeClass: $size ? ' btn' + $size : '' /}
+	{let $styleClass: $style ? ' btn-' + $style : ' btn-default' /}
+
+	class="btn{$blockClass}{$styleClass}{$sizeClass}"
+	
+	{if $disabled}
+		disabled
+	{/if}
+
+	{if $value}
+		value="{$value}"
+	{/if}
+
+	{if $type}
+		type="{$type}"
+	{/if}
 {/template}
