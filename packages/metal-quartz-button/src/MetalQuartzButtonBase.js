@@ -28,6 +28,18 @@ MetalQuartzButtonBase.STATE = {
 	},
 
 	/**
+	 * The link href.
+	 * @instance
+	 * @memberof MetalQuartzButtonBase
+	 * @type {string}
+	 * @default ''
+	 */
+	href: {
+		validator: core.isString,
+		value: ''
+	},
+
+	/**
 	 * The button label.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
