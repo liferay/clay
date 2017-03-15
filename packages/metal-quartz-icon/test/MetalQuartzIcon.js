@@ -80,22 +80,22 @@ describe('MetalQuartzIcon', function() {
 		assert(dom.hasClass(quartzIcon.element, 'icon-monospaced'));
 	});
 
-	it('should output markup for Lexicon Font Awesome Icons if spritemap is `lexicon-fa`.', function() {
+	it('should output markup for Quartz Font Awesome Icons if spritemap is `quartz-fa`.', function() {
 		quartzIcon = new MetalQuartzIcon(
 			{
-				spritemap: 'lexicon-fa',
+				spritemap: 'quartz-fa',
 				symbol: 'icon-plus'
 			}
 		);
 
-		assert.strictEqual(quartzIcon.element.outerHTML, __html__['test/fixture/testLexiconFaMetalQuartzIcon.html'].trim());
+		assert.strictEqual(quartzIcon.element.outerHTML, __html__['test/fixture/testQuartzFaMetalQuartzIcon.html'].trim());
 	});
 
-	it('should append elementClasses to the lexicon-fa element', function() {
+	it('should append elementClasses to the quartz-fa element', function() {
 		quartzIcon = new MetalQuartzIcon(
 			{
 				elementClasses: 'icon-monospaced',
-				spritemap: 'lexicon-fa',
+				spritemap: 'quartz-fa',
 				symbol: 'icon-plus'
 			}
 		);

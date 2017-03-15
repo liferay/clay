@@ -1,10 +1,9 @@
 {namespace MetalQuartzIcon}
 
 /**
- * This renders an icon element based on the lexicon icon definition
- * found at http://liferay.github.io/lexicon/content/icons-lexicon/
- * http://liferay.github.io/lexicon/content/icons-font-awesome/
- * http://liferay.github.io/lexicon/content/icons-glyphicons/
+ * This renders an icon element based on the Quartz Icon, Quartz Font Awesome
+ * Icon, and Glyphicon definition.
+ * http://getbootstrap.com/components/#glyphicons
  *
  * @param? elementClasses
  * @param spritemap
@@ -17,7 +16,7 @@
 		{/let}
 
 		{let $quartzIconVariant kind="text"}
-			{$spritemap == 'lexicon-fa' ? 'lexiconFa' : $spritemap}
+			{$spritemap == 'quartz-fa' ? 'quartzFa' : $spritemap}
 		{/let}
 
 		{delcall QuartzIcon variant="$quartzIconVariant"}
@@ -53,6 +52,6 @@
  * @param spritemap
  * @param symbol
  */
-{deltemplate QuartzIcon variant="'lexiconFa'"}
-	<span aria-hidden="true" class="lexicon-fa {$symbol}{$quartzIconElementClasses}"></span>
+{deltemplate QuartzIcon variant="'quartzFa'"}
+	<span aria-hidden="true" class="quartz-fa {$symbol}{$quartzIconElementClasses}"></span>
 {/deltemplate}
