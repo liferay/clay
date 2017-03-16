@@ -28,40 +28,40 @@ describe('MetalQuartzButton', function() {
 
 	it('should render a submit button', function() {
 		sample = new MetalQuartzButton({
-				type: 'submit'
-			});
+			type: 'submit'
+		});
 
 		assert.strictEqual(sample.element.outerHTML, SUBMIT_BUTTON);
 	});
-	
+
 	it('should render a disabled button', function() {
 		sample = new MetalQuartzButton({
-				disabled: true
-			});
+			disabled: true
+		});
 
 		assert.strictEqual(sample.element.outerHTML, DISABLED_BUTTON);
 	});
-	
+
 	it('should render a success button', function() {
 		sample = new MetalQuartzButton({
-				style: 'success'
-			});
+			style: 'success'
+		});
 
 		assert.strictEqual(sample.element.outerHTML, SUCCESS_BUTTON);
 	});
-	
+
 	it('should render a button with label', function() {
 		sample = new MetalQuartzButton({
-				label: 'Label'
-			});
+			label: 'Label'
+		});
 
 		assert.strictEqual(sample.element.outerHTML, DEFAULT_BUTTON_WITH_LABEL);
 	});
-	
+
 	it('should render a button with label', function() {
 		sample = new MetalQuartzButton({
-				name: 'myButton'
-			});
+			name: 'myButton'
+		});
 
 		assert.strictEqual(sample.element.outerHTML, DEFAULT_BUTTON_WITH_NAME);
 	});
