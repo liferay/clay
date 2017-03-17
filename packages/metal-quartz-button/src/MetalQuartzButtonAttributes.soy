@@ -13,7 +13,7 @@
 	{@param? value: string}
 
 	{let $blockClass: $block ? ' btn-block' : '' /}
-	{let $sizeClass: $size ? ' btn' + $size : '' /}
+	{let $sizeClass: $size ? ' btn-' + $size : '' /}
 	{let $styleClass: $style ? ' btn-' + $style : ' btn-default' /}
 
 	class="btn{$blockClass}{$styleClass}{$sizeClass}"
