@@ -13,35 +13,13 @@
 	{@param? style: string}
 	{@param? type: string}
 	{@param? value: string}
-	{let $variant: $href ? 'link' : 'button' /}
-	{delcall MetalQuartzButton.markup variant="$variant" data="all" /}
+	{if $href}
+		<a href="{$href}" {call MetalQuartzButtonAttributes.attributes data="all" /}>
+			{$label or ''}
+		</a>
+	{else}
+		<button {call MetalQuartzButtonAttributes.attributes data="all" /}>
+			{$label or ''}
+		</button>
+	{/if}
 {/template}
-
-{deltemplate MetalQuartzButton.markup variant="'button'"}
-	{@param? block: bool}
-	{@param? disabled: bool}
-	{@param? label: html}
-	{@param? name: string}
-	{@param? size: string}
-	{@param? style: string}
-	{@param? type: string}
-	{@param? value: string}
-	<button {call MetalQuartzButtonAttributes.attributes data="all" /}>
-		{$label or ''}
-	</button>
-{/deltemplate}
-
-{deltemplate MetalQuartzButton.markup variant="'link'"}
-	{@param? block: bool}
-	{@param? disabled: bool}
-	{@param? href: string}
-	{@param? label: html}
-	{@param? name: string}
-	{@param? size: string}
-	{@param? style: string}
-	{@param? type: string}
-	{@param? value: string}
-	<a href="{$href or ''}" {call MetalQuartzButtonAttributes.attributes data="all" /}>
-		{$label or ''}
-	</a>
-{/deltemplate}
