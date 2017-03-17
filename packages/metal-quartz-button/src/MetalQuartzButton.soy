@@ -17,18 +17,18 @@
 	{@param? value: string}
 	{if $href}
 		<a href="{$href}" {call MetalQuartzButtonAttributes.attributes data="all" /}>
-			{call .iconMarkup data="all" /}
+			{call .icons data="all" /}
 			{$label or ''}
 		</a>
 	{else}
 		<button {call MetalQuartzButtonAttributes.attributes data="all" /}>
-			{call .iconMarkup data="all" /}
+			{call .icons data="all" /}
 			{$label or ''}
 		</button>
 	{/if}
 {/template}
 
-{template .iconMarkup}
+{template .icons}
 	{@param? icon: string}
 	{@param? spritemap: string}
 	{if $icon and $spritemap}
