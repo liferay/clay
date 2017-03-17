@@ -44,7 +44,8 @@ MetalQuartzButton.STATE = {
 	},
 
 	/**
-	 * The button size.
+	 * The name that will make the CSS class name that will represent the 
+	 * button size.
 	 * @instance
 	 * @memberof MetalQuartzButton
 	 * @type {string}
@@ -67,7 +68,7 @@ MetalQuartzButton.STATE = {
 	},
 
 	/**
-	 * The button style.
+	 * The css class that colors the button.
 	 * @instance
 	 * @memberof MetalQuartzButton
 	 * @type {string}

@@ -28,7 +28,7 @@ MetalQuartzButtonBase.STATE = {
 	},
 
 	/**
-	 * The link href.
+	 * The href attribute value of the link.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
 	 * @type {string}
@@ -40,7 +40,7 @@ MetalQuartzButtonBase.STATE = {
 	},
 
 	/**
-	 * The button label.
+	 * The label of the button or link content.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
 	 * @type {string}
@@ -52,7 +52,7 @@ MetalQuartzButtonBase.STATE = {
 	},
 
 	/**
-	 * The button name.
+	 * The name attribute value of the element.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
 	 * @type {string}
@@ -64,7 +64,7 @@ MetalQuartzButtonBase.STATE = {
 	},
 
 	/**
-	 * The button type.
+	 * The type attribute value of the element.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
 	 * @type {string}
@@ -76,7 +76,7 @@ MetalQuartzButtonBase.STATE = {
 	},
 
 	/**
-	 * The button value.
+	 * The value attribute value of the element.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
 	 * @type {string}
