@@ -4,6 +4,8 @@ import MetalQuartzButtonBase from './MetalQuartzButtonBase';
 import core from 'metal';
 import Soy from 'metal-soy';
 
+import 'metal-quartz-icon';
+
 import templates from './MetalQuartzButton.soy.js';
 
 /**
@@ -31,6 +33,17 @@ MetalQuartzButton.STATE = {
 	},
 
 	/**
+	 * The icon name required for the icons library.
+	 * @instance
+	 * @memberof MetalQuartzIcon
+	 * @type {string}
+	 * @default undefined
+	 */
+	icon: {
+		validator: core.isString
+	},
+
+	/**
 	 * The button size.
 	 * @instance
 	 * @memberof MetalQuartzButton
@@ -40,6 +53,17 @@ MetalQuartzButton.STATE = {
 	size: {
 		validator: core.isString,
 		value: ''
+	},
+
+	/**
+	 * The icons library that will be used for providing icons.
+	 * @instance
+	 * @memberof MetalQuartzButton
+	 * @type {string}
+	 * @default ''
+	 */
+	spritemap: {
+		validator: core.isString
 	},
 
 	/**

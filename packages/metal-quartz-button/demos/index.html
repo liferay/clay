@@ -37,6 +37,9 @@
 	<h1>Extending Style</h1>
 	<div id="extending-block"></div>
 
+	<h1>Button with icons</h1>
+	<div id="icons-block"></div>
+
 	<script type="text/javascript">
 		/*
 		 * Button States.
@@ -169,6 +172,18 @@
 				elementClasses: 'my-personal-class'
 			},
 			'#extending-block'
+		);
+
+		/*
+		 * Extending button style.
+		 */ 
+		new metal.MetalQuartzButton(
+			{
+				label: 'Add Button',
+				spritemap: '../node_modules/lexicon-ux/build/images/icons/icons.svg',
+				icon: 'plus'
+			},
+			'#icons-block'
 		);
 	</script>
 </body>
