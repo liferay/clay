@@ -44,7 +44,7 @@ MetalQuartzButton.STATE = {
 	},
 
 	/**
-	 * The name that will make the CSS class name that will represent the 
+	 * The name that will make the CSS class name that will represent the
 	 * button size.
 	 * @instance
 	 * @memberof MetalQuartzButton
@@ -57,7 +57,7 @@ MetalQuartzButton.STATE = {
 	},
 
 	/**
-	 * The icons library that will be used for providing icons.
+	 * The svg spritemap that will be used for loading svg icons.
 	 * @instance
 	 * @memberof MetalQuartzButton
 	 * @type {string}

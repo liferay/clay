@@ -15,22 +15,24 @@
 	{@param? style: string}
 	{@param? type: string}
 	{@param? value: string}
+
 	{if $href}
 		<a href="{$href}" {call MetalQuartzButtonAttributes.attributes data="all" /}>
-			{call .icons data="all" /}
+			{call .icon data="all" /}
 			{$label or ''}
 		</a>
 	{else}
 		<button {call MetalQuartzButtonAttributes.attributes data="all" /}>
-			{call .icons data="all" /}
+			{call .icon data="all" /}
 			{$label or ''}
 		</button>
 	{/if}
 {/template}
 
-{template .icons}
+{template .icon}
 	{@param? icon: string}
 	{@param? spritemap: string}
+
 	{if $icon and $spritemap}
 		{call MetalQuartzIcon.render}
 			{param spritemap: $spritemap /}
