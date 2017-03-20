@@ -1,0 +1,40 @@
+{namespace MetalQuartzButton}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param? block: bool}
+	{@param? disabled: bool}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? label: html}
+	{@param? name: string}
+	{@param? size: string}
+	{@param? spritemap: string}
+	{@param? style: string}
+	{@param? type: string}
+	{@param? value: string}
+	{if $href}
+		<a href="{$href}" {call MetalQuartzButtonAttributes.attributes data="all" /}>
+			{call .icons data="all" /}
+			{$label or ''}
+		</a>
+	{else}
+		<button {call MetalQuartzButtonAttributes.attributes data="all" /}>
+			{call .icons data="all" /}
+			{$label or ''}
+		</button>
+	{/if}
+{/template}
+
+{template .icons}
+	{@param? icon: string}
+	{@param? spritemap: string}
+	{if $icon and $spritemap}
+		{call MetalQuartzIcon.render}
+			{param spritemap: $spritemap /}
+			{param symbol: $icon /}
+		{/call}
+	{/if}
+{/template}
