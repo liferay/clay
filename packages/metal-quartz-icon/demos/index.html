@@ -45,9 +45,7 @@
 
 		for (var k = 0; k < icons.length; k++) {
 			new metal.MetalQuartzIcon({
-				elementClasses: 'icon-monospaced',
-				spritemap: 'glyphicons',
-				symbol: icons[k]
+				elementClasses: 'icon-monospaced glyphicon ' + icons[k]
 			}, '#glyphicons');
 		}
 
@@ -55,9 +53,7 @@
 
 		for (var l = 0; l < icons.length; l++) {
 			new metal.MetalQuartzIcon({
-				elementClasses: 'icon-monospaced',
-				spritemap: 'quartz-fa',
-				symbol: icons[l]
+				elementClasses: 'icon-monospaced quartz-fa ' + icons[l]
 			}, '#quartzFa');
 		}
 
