@@ -57,49 +57,23 @@ describe('MetalQuartzIcon', function() {
 		assert.equal(quartzIcon.element, null);
 	});
 
-	it('should output markup for Glyphicons if spritemap is `glyphicons`.', function() {
+	it('should output markup for Glyphicons.', function() {
 		quartzIcon = new MetalQuartzIcon(
 			{
-				spritemap: 'glyphicons',
-				symbol: 'glyphicon-plus'
+				elementClasses: 'glyphicon glyphicon-plus'
 			}
 		);
 
 		assert.strictEqual(quartzIcon.element.outerHTML, __html__['test/fixture/testGlyphiconsMetalQuartzIcon.html'].trim());
 	});
 
-	it('should append elementClasses to the glyphicon element', function() {
+	it('should output markup for Quartz Font Awesome Icons.', function() {
 		quartzIcon = new MetalQuartzIcon(
 			{
-				elementClasses: 'icon-monospaced',
-				spritemap: 'glyphicons',
-				symbol: 'glyphicon-plus'
-			}
-		);
-
-		assert(dom.hasClass(quartzIcon.element, 'icon-monospaced'));
-	});
-
-	it('should output markup for Quartz Font Awesome Icons if spritemap is `quartz-fa`.', function() {
-		quartzIcon = new MetalQuartzIcon(
-			{
-				spritemap: 'quartz-fa',
-				symbol: 'icon-plus'
+				elementClasses: 'quartz-fa icon-plus'
 			}
 		);
 
 		assert.strictEqual(quartzIcon.element.outerHTML, __html__['test/fixture/testQuartzFaMetalQuartzIcon.html'].trim());
-	});
-
-	it('should append elementClasses to the quartz-fa element', function() {
-		quartzIcon = new MetalQuartzIcon(
-			{
-				elementClasses: 'icon-monospaced',
-				spritemap: 'quartz-fa',
-				symbol: 'icon-plus'
-			}
-		);
-
-		assert(dom.hasClass(quartzIcon.element, 'icon-monospaced'));
 	});
 });
