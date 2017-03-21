@@ -8,7 +8,6 @@ import templates from './MetalQuartzIcon.soy.js';
 
 /**
  * Implementation of the Metal Quartz Icon.
- * @see {@link http://getbootstrap.com/components/#glyphicons}
  */
 class MetalQuartzIcon extends Component {
 }
@@ -20,26 +19,33 @@ class MetalQuartzIcon extends Component {
  */
 MetalQuartzIcon.STATE = {
 	/**
-	 * The path to the SVG spritemap file containing the icons, `quartz-fa`, or `glyphicons`.
+	 * CSS classes to be applied to the element, use this to pass in classes for
+	 * third-party icon libraries e.g. `glyphicon glyphicon-plus`. If
+	 * elementClasses is defined and spritemap or symbol is undefined, it will
+	 * insert elementClasses into a span tag.
+	 * @type {string}
+	 */
+	elementClasses: {
+	},
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof MetalQuartzIcon
 	 * @type {string}
 	 */
 	spritemap: {
-		required: true,
-		validator: core.isString
+		validator: value => core.isString(value)
 	},
 
 	/**
-	 * The name of the Quartz SVG Icon, Quartz Font Awesome Icon, or Glyphicon
-	 * e.g. `plus`, `icon-plus`, or `glyphicon-plus` respectively.
+	 * The name of the Quartz SVG Icon e.g. `plus`.
 	 * @instance
 	 * @memberof MetalQuartzIcon
 	 * @type {string}
 	 */
 	symbol: {
-		required: true,
-		validator: core.isString
+		validator: value => core.isString(value)
 	}
 };
 
