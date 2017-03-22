@@ -47,7 +47,8 @@ class MetalQuartzCollapse extends State {
 	animateClose_() {
 		this.content.transitionType = 0;
 
-		this.content.setAttribute('style', 'height: ' + this.content.firstElementChild.offsetHeight + 'px;');
+		this.updateContentHeight_();
+
 		dom.addClasses(this.content, this.transitionClass);
 		dom.removeClasses(this.content, this.closedClass);
 		dom.removeClasses(this.content, this.openClass);
@@ -66,7 +67,8 @@ class MetalQuartzCollapse extends State {
 
 		dom.removeClasses(this.content, this.closedClass);
 		dom.addClasses(this.content, this.transitionClass);
-		this.content.setAttribute('style', 'height: ' + this.content.firstElementChild.offsetHeight + 'px;');
+
+		this.updateContentHeight_();
 
 		this.shimUnsupportedTransition_(this.content);
 	}
@@ -199,10 +201,17 @@ class MetalQuartzCollapse extends State {
 	 */
 	toggle() {
 		this.transitionEventHandler_.add(
-			dom.delegate(document, this.transitionEnd, '.' + this.transitionClass, this.handleTransitionEnd_.bind(this))
+			dom.delegate(document, this.transitionEnd, `.${this.transitionClass}`, this.handleTransitionEnd_.bind(this))
 		);
 
 		this.collapsed = !this.collapsed;
+	}
+
+	/**
+	 * Calculates what the content height should be and sets it.
+	 */
+	updateContentHeight_() {
+		this.content.setAttribute('style', `height: ${this.content.firstElementChild.offsetHeight}px;`);
 	}
 }
 
