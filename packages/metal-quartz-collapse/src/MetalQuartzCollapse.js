@@ -28,7 +28,7 @@ class MetalQuartzCollapse extends State {
 		this.on('collapsedChanged', this.syncCollapsed);
 
 		if (this.content) {
-			this.collapsed ? this.close() : this.open();
+			this.collapsed ? this.close_() : this.open_();
 		}
 	}
 
@@ -44,7 +44,7 @@ class MetalQuartzCollapse extends State {
 	/**
 	 * Animates close when `collapsed` is true
 	 */
-	animateClose() {
+	animateClose_() {
 		this.content.transitionType = 0;
 
 		this.content.setAttribute('style', 'height: ' + this.content.firstElementChild.offsetHeight + 'px;');
@@ -61,7 +61,7 @@ class MetalQuartzCollapse extends State {
 	/**
 	 * Animates open when `collapsed` is false
 	 */
-	animateOpen() {
+	animateOpen_() {
 		this.content.transitionType = 1;
 
 		dom.removeClasses(this.content, this.closedClass);
@@ -75,7 +75,7 @@ class MetalQuartzCollapse extends State {
 	 * Adds CSS classes and properties to the `content` element when `collapsed`
 	 * is true
 	 */
-	close() {
+	close_() {
 		dom.addClasses(this.content, this.closedClass);
 		dom.removeClasses(this.content, this.openClass);
 		dom.removeClasses(this.content, this.transitionClass);
@@ -134,7 +134,7 @@ class MetalQuartzCollapse extends State {
 	 * @protected
 	 */
 	handleTransitionEnd_(event) {
-		this.content.transitionType ? this.open() : this.close();
+		this.content.transitionType ? this.open_() : this.close_();
 
 		this.transitionEventHandler_.removeAllListeners();
 	}
@@ -143,7 +143,7 @@ class MetalQuartzCollapse extends State {
 	 * Adds CSS classes and properties to the `content` element when `collapsed`
 	 * is false
 	 */
-	open() {
+	open_() {
 		dom.addClasses(this.content, this.closedClass);
 		dom.addClasses(this.content, this.openClass);
 		dom.removeClasses(this.content, this.transitionClass);
@@ -169,7 +169,7 @@ class MetalQuartzCollapse extends State {
 	 * and close the element.
 	 */
 	syncCollapsed() {
-		this.collapsed ? this.animateClose() : this.animateOpen();
+		this.collapsed ? this.animateClose_() : this.animateOpen_();
 	}
 
 	/**

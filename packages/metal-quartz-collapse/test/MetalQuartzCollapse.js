@@ -60,7 +60,7 @@ describe('MetalQuartzCollapse', () => {
 				headers: '[aria-controls="collapseExample1"]',
 			});
 
-			component.close();
+			component.close_();
 
 			checkClosedClasses(component);
 		});
@@ -71,7 +71,7 @@ describe('MetalQuartzCollapse', () => {
 				headers: '[aria-controls="collapseExample1"]',
 			});
 
-			component.open();
+			component.open_();
 
 			checkOpenClasses(component);
 		});
