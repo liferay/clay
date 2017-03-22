@@ -202,7 +202,7 @@ class MetalQuartzCollapse extends State {
 			dom.delegate(document, this.transitionEnd, '.' + this.transitionClass, this.handleTransitionEnd_.bind(this))
 		);
 
-		this.collapsed = this.collapsed ? false : true;
+		this.collapsed = !this.collapsed;
 	}
 }
 
