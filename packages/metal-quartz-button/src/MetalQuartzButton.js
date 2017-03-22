@@ -1,8 +1,8 @@
 'use strict';
 
 import MetalQuartzButtonBase from './MetalQuartzButtonBase';
-import core from 'metal';
 import Soy from 'metal-soy';
+import {validators} from 'metal-state';
 
 import 'metal-quartz-icon';
 
@@ -28,7 +28,7 @@ MetalQuartzButton.STATE = {
 	 * @default false
 	 */
 	block: {
-		validator: core.isBoolean,
+		validator: validators.bool,
 		value: false
 	},
 
@@ -40,7 +40,7 @@ MetalQuartzButton.STATE = {
 	 * @default undefined
 	 */
 	icon: {
-		validator: core.isString
+		validator: validators.string
 	},
 
 	/**
@@ -52,7 +52,7 @@ MetalQuartzButton.STATE = {
 	 * @default ''
 	 */
 	size: {
-		validator: core.isString,
+		validator: validators.string,
 		value: ''
 	},
 
@@ -64,7 +64,7 @@ MetalQuartzButton.STATE = {
 	 * @default ''
 	 */
 	spritemap: {
-		validator: core.isString
+		validator: validators.string
 	},
 
 	/**
@@ -75,7 +75,7 @@ MetalQuartzButton.STATE = {
 	 * @default 'default'
 	 */
 	style: {
-		validator: core.isString,
+		validator: validators.string,
 		value: 'default'
 	}
 };
