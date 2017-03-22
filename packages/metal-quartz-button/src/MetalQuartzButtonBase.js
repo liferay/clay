@@ -1,7 +1,7 @@
 'use strict';
 
 import Component from 'metal-component';
-import core from 'metal';
+import {validators} from 'metal-state';
 
 /**
  * Metal Quartz Button Base component.
@@ -23,7 +23,7 @@ MetalQuartzButtonBase.STATE = {
 	 * @default false
 	 */
 	disabled: {
-		validator: core.isBoolean,
+		validator: validators.bool,
 		value: false
 	},
 
@@ -35,7 +35,7 @@ MetalQuartzButtonBase.STATE = {
 	 * @default ''
 	 */
 	href: {
-		validator: core.isString,
+		validator: validators.string,
 		value: ''
 	},
 
@@ -47,7 +47,7 @@ MetalQuartzButtonBase.STATE = {
 	 * @default ''
 	 */
 	label: {
-		validator: core.isString,
+		validator: validators.string,
 		value: ''
 	},
 
@@ -59,7 +59,7 @@ MetalQuartzButtonBase.STATE = {
 	 * @default ''
 	 */
 	name: {
-		validator: core.isString,
+		validator: validators.string,
 		value: ''
 	},
 
@@ -71,7 +71,7 @@ MetalQuartzButtonBase.STATE = {
 	 * @default ''
 	 */
 	type: {
-		validator: core.isString,
+		validator: validators.string,
 		value: ''
 	},
 
@@ -83,7 +83,7 @@ MetalQuartzButtonBase.STATE = {
 	 * @default ''
 	 */
 	value: {
-		validator: core.isString,
+		validator: validators.string,
 		value: ''
 	}
 };
