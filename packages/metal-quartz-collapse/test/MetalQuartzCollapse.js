@@ -21,16 +21,16 @@ describe('MetalQuartzCollapse', () => {
 	});
 
 	function checkClosedClasses(component) {
-		assert.ok(!dom.hasClass(component.content, component.openClass));
-		assert.ok(!dom.hasClass(component.content, component.transitionClass));
-		assert.ok(dom.hasClass(component.content, component.closedClass));
+		assert.ok(!dom.hasClass(component.content, 'in'));
+		assert.ok(!dom.hasClass(component.content, 'collapsing'));
+		assert.ok(dom.hasClass(component.content, 'collapse'));
 		assert.ok(component.content.getAttribute('aria-expanded') === 'false');
 	}
 
 	function checkOpenClasses(component) {
-		assert.ok(!dom.hasClass(component.content, component.transitionClass));
-		assert.ok(dom.hasClass(component.content, component.closedClass));
-		assert.ok(dom.hasClass(component.content, component.openClass));
+		assert.ok(!dom.hasClass(component.content, 'collapsing'));
+		assert.ok(dom.hasClass(component.content, 'collapse'));
+		assert.ok(dom.hasClass(component.content, 'in'));
 		assert.ok(component.content.getAttribute('aria-expanded') === 'true');
 	}
 
