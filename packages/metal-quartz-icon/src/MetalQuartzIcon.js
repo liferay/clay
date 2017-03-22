@@ -3,6 +3,7 @@
 import Component from 'metal-component';
 import core from 'metal';
 import Soy from 'metal-soy';
+import {validators} from 'metal-state';
 
 import templates from './MetalQuartzIcon.soy.js';
 
@@ -19,23 +20,13 @@ class MetalQuartzIcon extends Component {
  */
 MetalQuartzIcon.STATE = {
 	/**
-	 * CSS classes to be applied to the element, use this to pass in classes for
-	 * third-party icon libraries e.g. `glyphicon glyphicon-plus`. If
-	 * elementClasses is defined and spritemap or symbol is undefined, it will
-	 * insert elementClasses into a span tag.
-	 * @type {string}
-	 */
-	elementClasses: {
-	},
-
-	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof MetalQuartzIcon
 	 * @type {string}
 	 */
 	spritemap: {
-		validator: value => core.isString(value)
+		validator: validators.string
 	},
 
 	/**
@@ -45,7 +36,7 @@ MetalQuartzIcon.STATE = {
 	 * @type {string}
 	 */
 	symbol: {
-		validator: value => core.isString(value)
+		validator: validators.string
 	}
 };
 
