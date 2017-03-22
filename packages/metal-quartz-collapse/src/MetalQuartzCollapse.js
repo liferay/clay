@@ -50,7 +50,6 @@ class MetalQuartzCollapse extends State {
 		this.updateContentHeight_();
 
 		dom.addClasses(this.content, this.transitionClass);
-		dom.removeClasses(this.content, this.closedClass);
 		dom.removeClasses(this.content, this.openClass);
 
 		this.content.offsetHeight;
@@ -78,9 +77,8 @@ class MetalQuartzCollapse extends State {
 	 * is true
 	 */
 	close_() {
+		dom.removeClasses(this.content, `${this.openClass} ${this.transitionClass}`);
 		dom.addClasses(this.content, this.closedClass);
-		dom.removeClasses(this.content, this.openClass);
-		dom.removeClasses(this.content, this.transitionClass);
 		this.content.setAttribute('aria-expanded', false);
 		this.content.style.removeProperty('height');
 	}
@@ -146,7 +144,6 @@ class MetalQuartzCollapse extends State {
 	 * is false
 	 */
 	open_() {
-		dom.addClasses(this.content, this.closedClass);
 		dom.addClasses(this.content, this.openClass);
 		dom.removeClasses(this.content, this.transitionClass);
 		this.content.setAttribute('aria-expanded', true);
@@ -266,7 +263,7 @@ MetalQuartzCollapse.STATE = {
 	 */
 	openClass: {
 		validator: core.isString(),
-		value: 'in'
+		value: 'collapse in'
 	},
 
 	/**
