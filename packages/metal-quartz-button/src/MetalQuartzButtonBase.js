@@ -31,60 +31,55 @@ MetalQuartzButtonBase.STATE = {
 	 * The href attribute value of the link.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
-	 * @type {string}
-	 * @default ''
+	 * @type {?string}
+	 * @default undefined
 	 */
 	href: {
-		validator: validators.string,
-		value: ''
+		validator: validators.string
 	},
 
 	/**
 	 * The label of the button or link content.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
-	 * @type {string}
-	 * @default ''
+	 * @type {?string}
+	 * @default undefined
 	 */
 	label: {
-		validator: validators.string,
-		value: ''
+		validator: validators.string
 	},
 
 	/**
 	 * The name attribute value of the element.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
-	 * @type {string}
-	 * @default ''
+	 * @type {?string}
+	 * @default undefined
 	 */
 	name: {
-		validator: validators.string,
-		value: ''
+		validator: validators.string
 	},
 
 	/**
 	 * The type attribute value of the element.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
-	 * @type {string}
-	 * @default ''
+	 * @type {?string}
+	 * @default undefined
 	 */
 	type: {
-		validator: validators.string,
-		value: ''
+		validator: validators.string
 	},
 
 	/**
 	 * The value attribute value of the element.
 	 * @instance
 	 * @memberof MetalQuartzButtonBase
-	 * @type {string}
-	 * @default ''
+	 * @type {?string}
+	 * @default undefined
 	 */
 	value: {
-		validator: validators.string,
-		value: ''
+		validator: validators.string
 	}
 };
 
