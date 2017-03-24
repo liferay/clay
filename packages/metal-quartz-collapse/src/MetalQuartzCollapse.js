@@ -21,7 +21,6 @@ class MetalQuartzCollapse extends State {
 		super(opt_config);
 
 		this.eventHandler_ = new EventHandler();
-		this.transitionEventHandler_ = new EventHandler();
 
 		const transitionEnd = this.getTransitionEndEvent_();
 
@@ -44,7 +43,6 @@ class MetalQuartzCollapse extends State {
 	disposeInternal() {
 		super.disposeInternal();
 		this.eventHandler_.removeAllListeners();
-		this.transitionEventHandler_.removeAllListeners();
 	}
 
 	/**
@@ -178,8 +176,6 @@ class MetalQuartzCollapse extends State {
 	 */
 	handleTransitionEnd_(event) {
 		this.content.transitionType ? this.open_() : this.close_();
-
-		this.transitionEventHandler_.removeAllListeners();
 	}
 
 	/**
@@ -233,11 +229,11 @@ class MetalQuartzCollapse extends State {
 	 * @public
 	 */
 	toggle() {
-		this.transitionEventHandler_.add(
-			dom.delegate(document, this.transitionEnd, `.${this.transitionClasses}`, this.handleTransitionEnd_.bind(this))
-		);
+		const {collapsed, content, transitionEnd} = this;
 
-		this.collapsed = !this.collapsed;
+		dom.once(content, transitionEnd, this.handleTransitionEnd_.bind(this));
+
+		this.collapsed = !collapsed;
 	}
 
 	/**
