@@ -23,8 +23,10 @@ class MetalQuartzCollapse extends State {
 		this.eventHandler_ = new EventHandler();
 		this.transitionEventHandler_ = new EventHandler();
 
-		this.supportsTransitionEnd = this.getTransitionEndEvent_();
-		this.transitionEnd = this.getTransitionEndEvent_() || 'transitionend';
+		const transitionEnd = this.getTransitionEndEvent_();
+
+		this.supportsTransitionEnd = transitionEnd !== false;
+		this.transitionEnd = transitionEnd || 'transitionend';
 
 		this.on('headersChanged', this.handleHeadersChanged_);
 		this.syncHeaderListeners_();
@@ -257,7 +259,7 @@ class MetalQuartzCollapse extends State {
 MetalQuartzCollapse.STATE = {
 	/**
 	 * The CSS class added to `content` when it's collapsed.
-	 * @type {string}
+	 * @type {!string}
 	 */
 	closedClasses: {
 		validator: core.isString,
@@ -276,7 +278,7 @@ MetalQuartzCollapse.STATE = {
 
 	/**
 	 * The element or selector that should collapse.
-	 * @type {string|!Element}
+	 * @type {!string|!Element}
 	 */
 	content: {
 		setter: dom.toElement,
@@ -288,7 +290,7 @@ MetalQuartzCollapse.STATE = {
 	 * core.isElement value you will lose reference to the element once it is
 	 * removed from the dom. If you pass in a selector it will delegate it on
 	 * the document across all headers matching that selector.
-	 * @type {string|!Array<!Object>|!Element}
+	 * @type {!string|!Array<!Object>|!Element}
 	 */
 	headers: {
 		validator: value => core.isString(value) || Array.isArray(value) || core.isElement(value)
@@ -296,7 +298,7 @@ MetalQuartzCollapse.STATE = {
 
 	/**
 	 * The CSS class added to `content` when it's open.
-	 * @type {string}
+	 * @type {!string}
 	 */
 	openClasses: {
 		validator: core.isString,
@@ -305,7 +307,7 @@ MetalQuartzCollapse.STATE = {
 
 	/**
 	 * The CSS class added to `content` when it's transitioning.
-	 * @type {string}
+	 * @type {!string}
 	 */
 	transitionClasses: {
 		validator: core.isString,
