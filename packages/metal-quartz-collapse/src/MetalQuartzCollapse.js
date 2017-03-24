@@ -4,7 +4,7 @@ import anim from 'metal-anim';
 import core from 'metal';
 import dom from 'metal-dom';
 import { EventHandler } from 'metal-events';
-import State from 'metal-state';
+import State, {validators} from 'metal-state';
 
 const KEY_CODE_ENTER = 13;
 
@@ -258,7 +258,7 @@ MetalQuartzCollapse.STATE = {
 	 * @type {!string}
 	 */
 	closedClasses: {
-		validator: core.isString,
+		validator: validators.string,
 		value: 'collapse'
 	},
 
@@ -268,17 +268,17 @@ MetalQuartzCollapse.STATE = {
 	 * @type {boolean}
 	 */
 	collapsed: {
-		validator: core.isBoolean,
+		validator: validators.bool,
 		value: true
 	},
 
 	/**
 	 * The element or selector that should collapse.
-	 * @type {!string|!Element}
+	 * @type {!(string|Element)}
 	 */
 	content: {
 		setter: dom.toElement,
-		validator: value => core.isString(value) || core.isElement(value)
+		validator: validators.oneOfType([validators.string,  validators.object])
 	},
 
 	/**
@@ -286,10 +286,10 @@ MetalQuartzCollapse.STATE = {
 	 * core.isElement value you will lose reference to the element once it is
 	 * removed from the dom. If you pass in a selector it will delegate it on
 	 * the document across all headers matching that selector.
-	 * @type {!string|!Array<!Object>|!Element}
+	 * @type {!(string|Array<string>|Element)}
 	 */
 	headers: {
-		validator: value => core.isString(value) || Array.isArray(value) || core.isElement(value)
+		validator: validators.oneOfType([validators.string, validators.array, validators.object])
 	},
 
 	/**
@@ -297,7 +297,7 @@ MetalQuartzCollapse.STATE = {
 	 * @type {!string}
 	 */
 	openClasses: {
-		validator: core.isString,
+		validator: validators.string,
 		value: 'collapse in'
 	},
 
@@ -306,7 +306,7 @@ MetalQuartzCollapse.STATE = {
 	 * @type {!string}
 	 */
 	transitionClasses: {
-		validator: core.isString,
+		validator: validators.string,
 		value: 'collapsing'
 	}
 };
