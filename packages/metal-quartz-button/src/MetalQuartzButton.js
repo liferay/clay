@@ -36,7 +36,7 @@ MetalQuartzButton.STATE = {
 	 * The icon name required for the icons library.
 	 * @instance
 	 * @memberof MetalQuartzIcon
-	 * @type {string}
+	 * @type {?string}
 	 * @default undefined
 	 */
 	icon: {
@@ -48,20 +48,19 @@ MetalQuartzButton.STATE = {
 	 * button size.
 	 * @instance
 	 * @memberof MetalQuartzButton
-	 * @type {string}
-	 * @default ''
+	 * @type {?string}
+	 * @default undefined
 	 */
 	size: {
-		validator: validators.string,
-		value: ''
+		validator: validators.string
 	},
 
 	/**
 	 * The svg spritemap that will be used for loading svg icons.
 	 * @instance
 	 * @memberof MetalQuartzButton
-	 * @type {string}
-	 * @default ''
+	 * @type {?string}
+	 * @default undefined
 	 */
 	spritemap: {
 		validator: validators.string
@@ -71,7 +70,7 @@ MetalQuartzButton.STATE = {
 	 * The css class that colors the button.
 	 * @instance
 	 * @memberof MetalQuartzButton
-	 * @type {string}
+	 * @type {?string}
 	 * @default 'default'
 	 */
 	style: {
