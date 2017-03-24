@@ -6,6 +6,10 @@ import dom from 'metal-dom';
 import { EventHandler } from 'metal-events';
 import State from 'metal-state';
 
+const KEY_CODE_ENTER = 13;
+
+const KEY_CODE_SPACE = 32;
+
 /**
  * Collapse Metal Quartz component.
  */
@@ -22,10 +26,10 @@ class MetalQuartzCollapse extends State {
 		this.supportsTransitionEnd = this.getTransitionEndEvent_();
 		this.transitionEnd = this.getTransitionEndEvent_() || 'transitionend';
 
-		this.on('headersChanged', this.syncHeaders);
-		this.syncHeaders();
+		this.on('headersChanged', this.handleHeadersChanged_);
+		this.syncHeaderListeners_();
 
-		this.on('collapsedChanged', this.syncCollapsed);
+		this.on('collapsedChanged', this.handleCollapsedChanged_);
 
 		if (this.content) {
 			this.collapsed ? this.close_() : this.open_();
@@ -46,17 +50,19 @@ class MetalQuartzCollapse extends State {
 	 * @protected
 	 */
 	animateClose_() {
-		this.content.transitionType = 0;
+		const {content, openClasses, transitionClasses} = this;
+
+		content.transitionType = 0;
 
 		this.updateContentHeight_();
 
-		dom.addClasses(this.content, this.transitionClass);
-		dom.removeClasses(this.content, this.openClass);
+		dom.addClasses(content, transitionClasses);
+		dom.removeClasses(content, openClasses);
 
-		this.content.offsetHeight;
-		this.content.style.removeProperty('height');
+		content.offsetHeight;
+		content.style.removeProperty('height');
 
-		this.shimUnsupportedTransition_(this.content);
+		this.shimUnsupportedTransition_(content);
 	}
 
 	/**
@@ -64,14 +70,28 @@ class MetalQuartzCollapse extends State {
 	 * @protected
 	 */
 	animateOpen_() {
-		this.content.transitionType = 1;
+		const {closedClasses, content, transitionClasses} = this;
 
-		dom.removeClasses(this.content, this.closedClass);
-		dom.addClasses(this.content, this.transitionClass);
+		content.transitionType = 1;
+
+		dom.removeClasses(content, closedClasses);
+		dom.addClasses(content, transitionClasses);
 
 		this.updateContentHeight_();
 
-		this.shimUnsupportedTransition_(this.content);
+		this.shimUnsupportedTransition_(content);
+	}
+
+	/**
+	 * Attaches click and keydown listeners to header.
+	 * @param {!Element|!string} header
+	 * @protected
+	 */
+	attachHeaderListeners_(header) {
+		this.eventHandler_.add(
+			dom.on(header, 'click', this.handleClick_.bind(this)),
+			dom.on(header, 'keydown', this.handleKeydown_.bind(this))
+		);
 	}
 
 	/**
@@ -80,14 +100,16 @@ class MetalQuartzCollapse extends State {
 	 * @protected
 	 */
 	close_() {
-		dom.removeClasses(this.content, `${this.openClass} ${this.transitionClass}`);
-		dom.addClasses(this.content, this.closedClass);
-		this.content.setAttribute('aria-expanded', false);
-		this.content.style.removeProperty('height');
+		const {closedClasses, content, openClasses, transitionClasses} = this;
+
+		dom.removeClasses(content, `${openClasses} ${transitionClasses}`);
+		dom.addClasses(content, closedClasses);
+		content.setAttribute('aria-expanded', false);
+		content.style.removeProperty('height');
 	}
 
 	/**
-	 * Checks to see if browser supports CSS3 Transitions and returns the name 
+	 * Checks to see if browser supports CSS3 Transitions and returns the name
 	 * of the transitionend event; returns false if it's not supported
 	 * @protected
 	 */
@@ -120,12 +142,28 @@ class MetalQuartzCollapse extends State {
 	}
 
 	/**
+	 * Syncs the `content` element according to the value of the `collapsed`
+	 * state, attaching and removing css properties and classes needed to open
+	 * and close the element.
+	 */
+	handleCollapsedChanged_() {
+		this.collapsed ? this.animateClose_() : this.animateOpen_();
+	}
+
+	/**
+	 * Handles `changed` event of `headers` and attaches listeners.
+	 */
+	handleHeadersChanged_() {
+		this.syncHeaderListeners_();
+	}
+
+	/**
 	 * Handles a `keydown` event on the headers.
 	 * @param {!Event} event
 	 * @protected
 	 */
 	handleKeydown_(event) {
-		if (event.keyCode === 13 || event.keyCode === 32) {
+		if (event.keyCode === KEY_CODE_ENTER || event.keyCode === KEY_CODE_SPACE) {
 			this.toggle();
 			event.preventDefault();
 		}
@@ -148,10 +186,12 @@ class MetalQuartzCollapse extends State {
 	 * @protected
 	 */
 	open_() {
-		dom.addClasses(this.content, this.openClass);
-		dom.removeClasses(this.content, this.transitionClass);
-		this.content.setAttribute('aria-expanded', true);
-		this.content.style.removeProperty('height');
+		const {content, openClasses, transitionClasses} = this;
+
+		dom.addClasses(content, openClasses);
+		dom.removeClasses(content, transitionClasses);
+		content.setAttribute('aria-expanded', true);
+		content.style.removeProperty('height');
 	}
 
 	/**
@@ -167,42 +207,32 @@ class MetalQuartzCollapse extends State {
 	}
 
 	/**
-	 * Syncs the `content` element according to the value of the `collapsed`
-	 * state, attaching and removing css properties and classes needed to open
-	 * and close the element.
-	 */
-	syncCollapsed() {
-		this.collapsed ? this.animateClose_() : this.animateOpen_();
-	}
-
-	/**
 	 * Syncs the component according to the value of the `headers` state,
 	 * attaching events to the new element and detaching from any previous one.
+	 * @protected
 	 */
-	syncHeaders() {
+	syncHeaderListeners_() {
+		const {headers} = this;
+
 		this.eventHandler_.removeAllListeners();
 
-		if (Array.isArray(this.headers)) {
-			for (let i = 0; i < this.headers.length; i++) {
-				this.eventHandler_.add(
-					dom.on(this.headers[i], 'click', this.handleClick_.bind(this)),
-					dom.on(this.headers[i], 'keydown', this.handleKeydown_.bind(this))
-				);
-			}
-		} else {
-			this.eventHandler_.add(
-				dom.on(this.headers, 'click', this.handleClick_.bind(this)),
-				dom.on(this.headers, 'keydown', this.handleKeydown_.bind(this))
-			);
+		if (Array.isArray(headers)) {
+			headers.forEach(header => {
+				this.attachHeaderListeners_(header);
+			});
+		}
+		else {
+			this.attachHeaderListeners_(headers);
 		}
 	}
 
 	/**
 	 * Toggles the content's visibility.
+	 * @public
 	 */
 	toggle() {
 		this.transitionEventHandler_.add(
-			dom.delegate(document, this.transitionEnd, `.${this.transitionClass}`, this.handleTransitionEnd_.bind(this))
+			dom.delegate(document, this.transitionEnd, `.${this.transitionClasses}`, this.handleTransitionEnd_.bind(this))
 		);
 
 		this.collapsed = !this.collapsed;
@@ -213,7 +243,9 @@ class MetalQuartzCollapse extends State {
 	 * @protected
 	 */
 	updateContentHeight_() {
-		this.content.setAttribute('style', `height: ${this.content.firstElementChild.offsetHeight}px;`);
+		const {content} = this;
+
+		content.setAttribute('style', `height: ${content.firstElementChild.offsetHeight}px;`);
 	}
 }
 
@@ -227,8 +259,8 @@ MetalQuartzCollapse.STATE = {
 	 * The CSS class added to `content` when it's collapsed.
 	 * @type {string}
 	 */
-	closedClass: {
-		validator: core.isString(),
+	closedClasses: {
+		validator: core.isString,
 		value: 'collapse'
 	},
 
@@ -238,12 +270,12 @@ MetalQuartzCollapse.STATE = {
 	 * @type {boolean}
 	 */
 	collapsed: {
-		validator: core.isBoolean(),
+		validator: core.isBoolean,
 		value: true
 	},
 
 	/**
-	 * The element or selector that should collapse. 
+	 * The element or selector that should collapse.
 	 * @type {string|!Element}
 	 */
 	content: {
@@ -256,7 +288,7 @@ MetalQuartzCollapse.STATE = {
 	 * core.isElement value you will lose reference to the element once it is
 	 * removed from the dom. If you pass in a selector it will delegate it on
 	 * the document across all headers matching that selector.
-	 * @type {string|!Array<!Object>}
+	 * @type {string|!Array<!Object>|!Element}
 	 */
 	headers: {
 		validator: value => core.isString(value) || Array.isArray(value) || core.isElement(value)
@@ -266,8 +298,8 @@ MetalQuartzCollapse.STATE = {
 	 * The CSS class added to `content` when it's open.
 	 * @type {string}
 	 */
-	openClass: {
-		validator: core.isString(),
+	openClasses: {
+		validator: core.isString,
 		value: 'collapse in'
 	},
 
@@ -275,8 +307,8 @@ MetalQuartzCollapse.STATE = {
 	 * The CSS class added to `content` when it's transitioning.
 	 * @type {string}
 	 */
-	transitionClass: {
-		validator: core.isString(),
+	transitionClasses: {
+		validator: core.isString,
 		value: 'collapsing'
 	}
 };
