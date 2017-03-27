@@ -23,7 +23,8 @@ MetalQuartzIcon.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof MetalQuartzIcon
-	 * @type {string}
+	 * @type {?string}
+	 * @default undefined
 	 */
 	spritemap: {
 		validator: validators.string
@@ -33,7 +34,8 @@ MetalQuartzIcon.STATE = {
 	 * The name of the Quartz SVG Icon e.g. `plus`.
 	 * @instance
 	 * @memberof MetalQuartzIcon
-	 * @type {string}
+	 * @type {?string}
+	 * @default undefined
 	 */
 	symbol: {
 		validator: validators.string
