@@ -4,5 +4,53 @@
  * This renders an anchor element.
  */
 {template .render}
+	{@param? dataToggle: string}
 	{@param? elementClasses: string}
+	{@param? href: string}
+	{@param? html: html}
+	{@param? icon: ?}
+	{@param? label: html}
+	{@param? id: string}
+
+	{if $html}
+		{$html}
+	{else}
+		{let $attrs kind="attributes"}
+			{if $elementClasses}
+				class="{$elementClasses}"
+			{/if}
+
+			{if $dataToggle}
+				data-toggle="{$dataToggle}"
+			{/if}
+
+			{if $href}
+				href="{$href}"
+			{/if}
+
+			{if $id}
+				id="{$id}"
+			{/if}
+		{/let}
+
+		<a {$attrs}>
+			{if $icon and $icon.alignment == 'left'}
+				{call MetalQuartzIcon.render data="all"}
+					{param elementClasses: $icon.elementClasses /}
+					{param spritemap: $icon.spritemap /}
+					{param symbol: $icon.symbol /}
+				{/call}
+			{/if}
+
+			{$label}
+
+			{if $icon and not $icon.alignment or $icon and $icon.alignment == 'right'}
+				{call MetalQuartzIcon.render data="all"}
+					{param elementClasses: $icon.elementClasses /}
+					{param spritemap: $icon.spritemap /}
+					{param symbol: $icon.symbol /}
+				{/call}
+			{/if}
+		</a>
+	{/if}
 {/template}
