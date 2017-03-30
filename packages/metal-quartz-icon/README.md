@@ -1,32 +1,52 @@
 # metal-quartz-icon
 
-ggg
+A Metal Quartz component for rendering SVG icons and third-party icon fonts. For third-party fonts, make sure the font file and css are included on the page.
+
+Rendering [Quartz SVG Icons](#quartzSvgIcons):
+```javascript
+new metal.MetalQuartzIcon({
+	spritemap: '/path/to/the/spritemap.svg',
+	symbol: 'plus'
+});
+```
+
+Rendering [Quartz Font Awesome Icons](#quartzFontAwesomeIcons)
+```javascript
+new metal.MetalQuartzIcon({
+	elementClasses: 'quartz-fa icon-plus'
+});
+```
+
+Rendering [Glyphicons](http://glyphicons.com/):
+```javascript
+new metal.MetalQuartzIcon({
+	elementClasses: 'glyphicon glyphicon-plus'
+});
+```
+
+Rendering [Font Awesome 4 Icons](http://fontawesome.io/icons/):
+```javascript
+new metal.MetalQuartzIcon({
+	elementClasses: 'fa fa-plus'
+});
+```
 
 ## Setup
 
-1. Install NodeJS >= v0.12.0 and NPM >= v3.0.0, if you don't have it yet. You
-can find it [here](https://nodejs.org).
+1. See [metal-quartz-components/README.md](https://github.com/metal/metal-quartz-components/blob/master/README.md)
 
-2. Install local dependencies:
-
-  ```
-  npm install
-  ```
-
-3. Build the code:
+2. Build the code:
 
   ```
   npm run build
   ```
 
-4. Start the demo server:
+3. Watch task:
 
   ```
-  npm run start
+  npm run watch
   ```
-
-5. Open the demo at http://localhost:4000/demos in your browser.
 
 ## Contribute
 
-We'd love to get contributions from you! Please, check our [Contributing Guidelines](CONTRIBUTING.md) to see how you can help us improve.
+We'd love to get contributions from you! Please, check our [Contributing Guidelines](https://github.com/metal/metal-quartz-components/blob/master/CONTRIBUTING.md) to see how you can help us improve.

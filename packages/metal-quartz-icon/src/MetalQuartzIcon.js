@@ -3,12 +3,12 @@
 import Component from 'metal-component';
 import core from 'metal';
 import Soy from 'metal-soy';
+import {validators} from 'metal-state';
 
 import templates from './MetalQuartzIcon.soy.js';
 
 /**
  * Implementation of the Metal Quartz Icon.
- * @see  {@link http://liferay.github.io/lexicon/content/icons-lexicon/|Lexicon Definition}
  */
 class MetalQuartzIcon extends Component {
 }
@@ -20,25 +20,25 @@ class MetalQuartzIcon extends Component {
  */
 MetalQuartzIcon.STATE = {
 	/**
-	 * Path to the spritemap file with the icons.
+	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof MetalQuartzIcon
-	 * @type {string}
+	 * @type {?string}
+	 * @default undefined
 	 */
 	spritemap: {
-		required: true,
-		validator: core.isString
+		validator: validators.string
 	},
 
 	/**
-	 * Id of the icon to show from the list of available icons.
+	 * The name of the Quartz SVG Icon e.g. `plus`.
 	 * @instance
 	 * @memberof MetalQuartzIcon
-	 * @type {string}
+	 * @type {?string}
+	 * @default undefined
 	 */
 	symbol: {
-		required: true,
-		validator: core.isString
+		validator: validators.string
 	}
 };
 
