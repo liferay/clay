@@ -6,8 +6,38 @@
 	<title>Demo: Metal Quartz Link</title>
 	<link rel="stylesheet" href="../node_modules/lexicon-ux/build/css/atlas-font-awesome.css">
 	<script src="../build/globals/metal-quartz-link.js"></script>
+	<style>
+		a { margin-right: 15px; }
+	</style>
 </head>
 <body>
 	<h1>Metal Quartz Link</h1>
+	<script>
+		new metal.MetalQuartzLink({
+			html: '<a aria-label="my-aria-label" href="#1" target="_blank">Html</a>'
+		});
+
+		new metal.MetalQuartzLink({
+			dataToggle: 'toggle',
+			href: '#1',
+			icon: {
+				alignment: 'left',
+				spritemap: '../node_modules/lexicon-ux/build/images/icons/icons.svg',
+				symbol: 'add-cell'
+			},
+			label: 'My Link Label'
+		});
+
+		new metal.MetalQuartzLink({
+			dataToggle: 'toggle',
+			href: '#1',
+			icon: {
+				alignment: 'right',
+				spritemap: '../node_modules/lexicon-ux/build/images/icons/icons.svg',
+				symbol: 'add-cell'
+			},
+			label: '<span>My Other Link Label</span>'
+		});
+	</script>
 </body>
 </html>
