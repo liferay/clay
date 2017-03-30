@@ -20,12 +20,12 @@ describe('MetalQuartzLink', function() {
 		assert.ok(dom.hasClass(component.element, 'my-test-class'));
 	});
 
-	it('should apply the data-toggle attribute to the anchor tag', () => {
+	it('should apply the download attribute to the anchor tag', () => {
 		component = new MetalQuartzLink({
-			dataToggle: 'collapse'
+			download: 'http://www.example.com'
 		});
 
-		assert.strictEqual(component.element.getAttribute('data-toggle'), 'collapse');
+		assert.strictEqual(component.element.getAttribute('download'), 'http://www.example.com');
 	});
 
 	it('should apply an id to the anchor tag', () => {
@@ -44,6 +44,14 @@ describe('MetalQuartzLink', function() {
 		assert.strictEqual(component.element.getAttribute('href'), 'http://www.example.com');
 	});
 
+	it('should apply the target attribute to the anchor tag', () => {
+		component = new MetalQuartzLink({
+			target: 'http://www.example.com'
+		});
+
+		assert.strictEqual(component.element.getAttribute('target'), 'http://www.example.com');
+	});
+
 	it('should should be able to render straight html', () => {
 		component = new MetalQuartzLink({
 			html: '<a aria-label="my-aria-label" href="#1" target="_blank">Html</a>'
@@ -54,7 +62,6 @@ describe('MetalQuartzLink', function() {
 
 	it('should render the correct markup with icon on the right', () => {
 		component = new MetalQuartzLink({
-			dataToggle: 'toggle',
 			href: '#1',
 			icon: {
 				alignment: 'right',
@@ -69,7 +76,6 @@ describe('MetalQuartzLink', function() {
 
 	it('should render the correct markup with icon on the left', () => {
 		component = new MetalQuartzLink({
-			dataToggle: 'toggle',
 			href: '#1',
 			icon: {
 				alignment: 'left',
