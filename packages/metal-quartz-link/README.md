@@ -18,8 +18,6 @@ A reusable Metal Quartz component that renders an anchor tag with a set list of 
   npm run watch
   ```
 
-5. Open the demo at http://localhost:4000/demos in your browser.
-
 ## Contribute
 
 We'd love to get contributions from you! Please, check our [Contributing Guidelines](https://github.com/metal/metal-quartz-components/blob/master/CONTRIBUTING.md) to see how you can help us improve.
