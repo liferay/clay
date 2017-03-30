@@ -3,7 +3,6 @@
 import Component from 'metal-component';
 import MetalQuartzIcon from 'metal-quartz-icon';
 import Soy from 'metal-soy';
-import { core, object } from 'metal';
 import { validators } from 'metal-state';
 
 import templates from './MetalQuartzLink.soy.js';
@@ -12,12 +11,6 @@ import templates from './MetalQuartzLink.soy.js';
  * Implementation of the Metal Quartz Link.
  */
 class MetalQuartzLink extends Component {
-	/**
-	 * @inheritDoc
-	 */
-	created() {
-		MetalQuartzLink.instances.push(this);
-	}
 }
 
 /**
@@ -27,13 +20,24 @@ class MetalQuartzLink extends Component {
  */
 MetalQuartzLink.STATE = {
 	/**
-	 * Sets the data-toggle attribute on the anchor tag.
+	 * Sets the data-onclick attribute on the anchor tag.
 	 * @instance
 	 * @memberof MetalQuartzLink
 	 * @type {?string}
 	 * default undefined
 	 */
-	dataToggle: {
+	dataOnclick: {
+		validator: validators.string
+	},
+
+	/**
+	 * Sets the download attribute on the anchor tag.
+	 * @instance
+	 * @memberof MetalQuartzLink
+	 * @type {?string}
+	 * default undefined
+	 */
+	download: {
 		validator: validators.string
 	},
 
@@ -91,13 +95,19 @@ MetalQuartzLink.STATE = {
 	 */
 	label: {
 		isHtml: true
+	},
+
+	/**
+	 * Sets the HTML attribute target on the anchor tag.
+	 * @instance
+	 * @memberof MetalQuartzLink
+	 * @type {?string}
+	 * @default undefined
+	 */
+	target: {
+		validator: validators.string
 	}
 };
-
-/**
- * An array of all MetalQuartzLink's that are created on the page.
- */
-MetalQuartzLink.instances = [];
 
 Soy.register(MetalQuartzLink, templates);
 

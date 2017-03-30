@@ -4,13 +4,15 @@
  * This renders an anchor element.
  */
 {template .render}
-	{@param? dataToggle: string}
+	{@param? dataOnclick: string}
+	{@param? download: string}
 	{@param? elementClasses: string}
 	{@param? href: string}
 	{@param? html: html}
 	{@param? icon: ?}
-	{@param? label: html}
 	{@param? id: string}
+	{@param? label: html}
+	{@param? target: string}
 
 	{if $html}
 		{$html}
@@ -20,8 +22,12 @@
 				class="{$elementClasses}"
 			{/if}
 
-			{if $dataToggle}
-				data-toggle="{$dataToggle}"
+			{if $dataOnclick}
+				data-onclick="{$dataOnclick}"
+			{/if}
+
+			{if $download}
+				download="{$download}"
 			{/if}
 
 			{if $href}
@@ -31,26 +37,35 @@
 			{if $id}
 				id="{$id}"
 			{/if}
+
+			{if $target}
+				target="{$target}"
+			{/if}
 		{/let}
 
 		<a {$attrs}>
 			{if $icon and $icon.alignment == 'left'}
-				{call MetalQuartzIcon.render data="all"}
-					{param elementClasses: $icon.elementClasses /}
-					{param spritemap: $icon.spritemap /}
-					{param symbol: $icon.symbol /}
-				{/call}
+				{call .metalQuartzIcon data="all" /}
 			{/if}
 
 			{$label}
 
 			{if $icon and not $icon.alignment or $icon and $icon.alignment == 'right'}
-				{call MetalQuartzIcon.render data="all"}
-					{param elementClasses: $icon.elementClasses /}
-					{param spritemap: $icon.spritemap /}
-					{param symbol: $icon.symbol /}
-				{/call}
+				{call .metalQuartzIcon data="all" /}
 			{/if}
 		</a>
 	{/if}
+{/template}
+
+/**
+ * This renders a Metal Quartz Icon.
+ */
+{template .metalQuartzIcon}
+	{@param icon: ?}
+
+	{call MetalQuartzIcon.render data="all"}
+		{param elementClasses: $icon.elementClasses /}
+		{param spritemap: $icon.spritemap /}
+		{param symbol: $icon.symbol /}
+	{/call}
 {/template}
