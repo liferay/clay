@@ -33,14 +33,15 @@ MetalClayButton.STATE = {
 	},
 
 	/**
-	 * The icon name required for the icons library.
+	 * Render MetalClayIcon in the MetalClayButton element, available options are
+	 * `elementClasses`, `spritemap`, `symbol`.
 	 * @instance
-	 * @memberof MetalClayIcon
-	 * @type {?string}
+	 * @memberof MetalClayButton
+	 * @type {?Object}
 	 * @default undefined
 	 */
 	icon: {
-		validator: validators.string
+		validator: validators.object
 	},
 
 	/**
@@ -52,17 +53,6 @@ MetalClayButton.STATE = {
 	 * @default undefined
 	 */
 	size: {
-		validator: validators.string
-	},
-
-	/**
-	 * The svg spritemap that will be used for loading svg icons.
-	 * @instance
-	 * @memberof MetalClayButton
-	 * @type {?string}
-	 * @default undefined
-	 */
-	spritemap: {
 		validator: validators.string
 	},
 

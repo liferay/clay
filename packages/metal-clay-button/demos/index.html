@@ -196,8 +196,10 @@
 		new metal.MetalClayButton(
 			{
 				label: 'Add Button',
-				spritemap: '../node_modules/clay/build/images/icons/icons.svg',
-				icon: 'plus'
+				icon: {
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'plus'
+				}
 			},
 			'#icons-block'
 		);

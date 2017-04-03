@@ -7,11 +7,10 @@
 	{@param? block: bool}
 	{@param? disabled: bool}
 	{@param? href: string}
-	{@param? icon: string}
+	{@param? icon: ?}
 	{@param? label: html}
 	{@param? name: string}
 	{@param? size: string}
-	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? type: string}
 	{@param? value: string}
@@ -30,13 +29,13 @@
 {/template}
 
 {template .icon}
-	{@param? icon: string}
-	{@param? spritemap: string}
+	{@param? icon: ?}
 
-	{if $icon and $spritemap}
+	{if $icon}
 		{call MetalClayIcon.render}
-			{param spritemap: $spritemap /}
-			{param symbol: $icon /}
+			{param elementClasses: $icon.elementClasses /}
+			{param spritemap: $icon.spritemap /}
+			{param symbol: $icon.symbol /}
 		{/call}
 	{/if}
 {/template}
