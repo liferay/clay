@@ -20,17 +20,6 @@ class MetalQuartzLink extends Component {
  */
 MetalQuartzLink.STATE = {
 	/**
-	 * Sets the data-onclick attribute on the anchor tag.
-	 * @instance
-	 * @memberof MetalQuartzLink
-	 * @type {?string}
-	 * default undefined
-	 */
-	dataOnclick: {
-		validator: validators.string
-	},
-
-	/**
 	 * Sets the download attribute on the anchor tag.
 	 * @instance
 	 * @memberof MetalQuartzLink
