@@ -16,7 +16,7 @@
 	{if $html}
 		{$html}
 	{else}
-		{let $attrs kind="attributes"}
+		{let $attributes kind="attributes"}
 			{if $elementClasses}
 				class="{$elementClasses}"
 			{/if}
@@ -38,15 +38,15 @@
 			{/if}
 		{/let}
 
-		<a {$attrs}>
+		<a {$attributes}>
 			{if $icon and $icon.alignment == 'left'}
-				{call .metalQuartzIcon data="all" /}
+				{call .icon data="all" /}
 			{/if}
 
 			{$label}
 
 			{if $icon and not $icon.alignment or $icon and $icon.alignment == 'right'}
-				{call .metalQuartzIcon data="all" /}
+				{call .icon data="all" /}
 			{/if}
 		</a>
 	{/if}
@@ -55,7 +55,7 @@
 /**
  * This renders a Metal Quartz Icon.
  */
-{template .metalQuartzIcon}
+{template .icon}
 	{@param icon: ?}
 
 	{call MetalQuartzIcon.render data="all"}
