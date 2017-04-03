@@ -1,3 +1,6 @@
+### v1.0.19 - April 3, 2017
+* New: Added Lexicon SVG Icons `add-role.svg` and `remove-role.svg`
+
 ### v1.0.18 - March 6, 2017
 * New: Progress Bar add option to customize `$progress-bar-font-size`
 * New: Progress Bar add option to customize progress bar container `$progress-box-shadow`
