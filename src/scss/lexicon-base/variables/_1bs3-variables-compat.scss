@@ -1,5 +1,7 @@
 // Map Bootstrap 4 Variables to Bootstrap 3 equivalent
 
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+
 $font-size-large: $font-size-lg !default;
 $font-size-small: $font-size-sm !default;
 
@@ -25,6 +27,7 @@ $padding-xs-horizontal: 5px !default;
 
 $text-color: $body-color !default;
 
+$zindex-navbar:            1000 !default;
 $zindex-navbar-fixed: $zindex-fixed !default;
 
 // Grid
@@ -69,8 +72,8 @@ $btn-border-radius-base: $btn-border-radius !default;
 $btn-border-radius-large: $btn-border-radius-lg !default;
 $btn-border-radius-small: $btn-border-radius-sm !default;
 
-$btn-padding-horizontal: $btn-padding-x !default;
-$btn-padding-vertical: $btn-padding-y !default;
+$btn-padding-horizontal: $input-btn-padding-x !default;
+$btn-padding-vertical: $input-btn-padding-y !default;
 
 $btn-default-color: $btn-secondary-color !default;
 $btn-default-bg: $btn-secondary-bg !default;
@@ -107,6 +110,8 @@ $label-link-hover-color: #FFF !default;
 // List Groups
 
 $list-group-border: $list-group-border-color !default;
+
+$list-group-link-heading-color: #333 !default;
 
 // Pagination
 
@@ -162,6 +167,8 @@ $nav-pills-active-link-hover-color: $nav-pills-active-link-color !default;
 
 // Navbar
 
+$navbar-border-radius:             $border-radius !default;
+
 $navbar-height: 50px !default; // 50px
 $navbar-margin-bottom:             $line-height-computed !default;
 
@@ -207,6 +214,12 @@ $navbar-inverse-brand-hover-bg:             transparent !default;
 $navbar-inverse-toggle-hover-bg:            #333 !default;
 $navbar-inverse-toggle-icon-bar-bg:         #fff !default;
 $navbar-inverse-toggle-border-color:        #333 !default;
+
+// Nav Tabs
+
+$nav-tabs-active-link-hover-bg:             $body-bg !default;
+$nav-tabs-active-link-hover-border-color:   #ddd !default;
+$nav-tabs-active-link-hover-color:          $gray !default;
 
 // Pager
 // Removed in Bootstrap 4
