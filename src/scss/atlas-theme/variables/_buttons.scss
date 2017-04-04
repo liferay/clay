@@ -53,9 +53,15 @@ $btn-border-radius: 4px !default;
 
 $btn-action-border-radius: $btn-border-radius !default;
 
+// Deprecated `$btn-lg-border-radius` as of v1.0.16 and will be removed in v2.0.0
 $btn-lg-border-radius: $btn-border-radius !default;
+$btn-border-radius-large: $btn-lg-border-radius !default;
+// Deprecated `$btn-sm-border-radius` as of v1.0.16 and will be removed in v2.0.0
 $btn-sm-border-radius: round($btn-border-radius * 0.75) !default;
+$btn-border-radius-small: $btn-sm-border-radius !default;
+// Deprecated `$btn-xs-border-radius` as of v1.0.16 and will be removed in v2.0.0
 $btn-xs-border-radius: round($btn-border-radius * 0.5) !default;
+$btn-border-radius-extra-small: $btn-xs-border-radius !default;
 
 $btn-active-box-shadow: none !default;
 

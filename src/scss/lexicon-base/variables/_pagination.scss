@@ -28,3 +28,15 @@ $pagination-lg-item-padding-right: $padding-large-horizontal !default;
 $pagination-lg-item-padding-top: $padding-large-vertical !default;
 
 $pagination-lg-item-padding: $pagination-lg-item-padding-top $pagination-lg-item-padding-right $pagination-lg-item-padding-bottom $pagination-lg-item-padding-left !default;
+
+// Skin
+
+$pagination-border-radius: $border-radius-base !default;
+$pagination-lg-border-radius: $border-radius-large !default;
+$pagination-sm-border-radius: $border-radius-small !default;
+
+$pagination-items-per-page-bg: null !default;
+$pagination-items-per-page-border: transparent !default;
+$pagination-items-per-page-color: null !default;
+
+$pagination-results-color: null !default;
