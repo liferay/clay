@@ -77,6 +77,41 @@ gulp.task(
 	}
 );
 
+gulp.task('copy:lexicon', function() {
+	var lexiconBase = gulp.src('../lexicon/src/scss/lexicon-base/**/*.scss')
+	.pipe(gulp.dest('./src/scss/lexicon-base'));
+
+	var atlasTheme = gulp.src('../lexicon/src/scss/atlas-theme/**/*.scss')
+	.pipe(gulp.dest('./src/scss/atlas-theme'));
+
+	return plugins.mergeStream(lexiconBase, atlasTheme);
+});
+
+gulp.task('update:bootstrap', function(cb) {
+	runSequence(
+		'clean:bootstrap',
+		'copy:bootstrap',
+		cb
+	);
+});
+
+gulp.task('clean:bootstrap', function() {
+	var bootstrap = gulp.src('./src/scss/bootstrap').pipe(plugins.clean({ read: false }));
+	var bootstrapjs = gulp.src('./src/js/bootstrap.js').pipe(plugins.clean({ read: false }));
+
+	return plugins.mergeStream(bootstrap, bootstrapjs);
+});
+
+gulp.task('copy:bootstrap', function() {
+	var bootstrap = gulp.src('../bootstrap/scss/**/*.scss')
+	.pipe(gulp.dest('./src/scss/bootstrap'));
+
+	var bootstrapjs = gulp.src('../bootstrap/dist/js/bootstrap.js')
+	.pipe(gulp.dest('./src/js/'));
+
+	return plugins.mergeStream(bootstrap, bootstrapjs);
+});
+
 // gulp.task(
 // 	'release:npm',
 // 	function(cb) {
