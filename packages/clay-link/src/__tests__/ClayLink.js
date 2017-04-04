@@ -58,15 +58,6 @@ describe('ClayLink', function() {
 		);
 	});
 
-	it('should should be able to render straight html', () => {
-		component = new ClayLink({
-			html:
-				'<a aria-label="my-aria-label" href="#1" target="_blank">Html</a>',
-		});
-
-		expect(component).toMatchSnapshot();
-	});
-
 	it('should render the correct markup with icon on the right', () => {
 		component = new ClayLink({
 			href: '#1',

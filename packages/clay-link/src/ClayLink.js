@@ -37,17 +37,6 @@ ClayLink.STATE = {
 	href: Config.string(),
 
 	/**
-	 * Render custom HTML instead of using the template.
-	 * @instance
-	 * @memberof ClayLink
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	html: {
-		isHtml: true,
-	},
-
-	/**
 	 * Render MetalClayIcon in the link, available options are `alignment`,
 	 * `elementClasses`, `spritemap`, `symbol`.
 	 * @instance

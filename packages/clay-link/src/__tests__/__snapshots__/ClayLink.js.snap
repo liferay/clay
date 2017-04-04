@@ -15,5 +15,3 @@ exports[`ClayLink should render the correct markup with icon on the right 1`] = 
   </svg>
 </a>
 `;
-
-exports[`ClayLink should should be able to render straight html 1`] = `<a aria-label="my-aria-label" href="#1" target="_blank">Html</a>`;

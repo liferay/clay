@@ -7,7 +7,6 @@
 	{@param? download: string}
 	{@param? elementClasses: string}
 	{@param? href: string}
-	{@param? html: html}
 	{@param? icon: [
 		alignment: string,
 		elementClasses: string,
@@ -18,43 +17,39 @@
 	{@param? label: html}
 	{@param? target: string}
 
-	{if $html}
-		{$html}
-	{else}
-		{let $attributes kind="attributes"}
-			{if $elementClasses}
-				class="{$elementClasses}"
-			{/if}
+	{let $attributes kind="attributes"}
+		{if $elementClasses}
+			class="{$elementClasses}"
+		{/if}
 
-			{if $download}
-				download="{$download}"
-			{/if}
+		{if $download}
+			download="{$download}"
+		{/if}
 
-			{if $href}
-				href="{$href}"
-			{/if}
+		{if $href}
+			href="{$href}"
+		{/if}
 
-			{if $id}
-				id="{$id}"
-			{/if}
+		{if $id}
+			id="{$id}"
+		{/if}
 
-			{if $target}
-				target="{$target}"
-			{/if}
-		{/let}
+		{if $target}
+			target="{$target}"
+		{/if}
+	{/let}
 
-		<a {$attributes}>
-			{if $icon and $icon.alignment == 'left'}
-				{call .icon data="all" /}
-			{/if}
+	<a {$attributes}>
+		{if $icon and $icon.alignment == 'left'}
+			{call .icon data="all" /}
+		{/if}
 
-			{$label}
+		{$label}
 
-			{if $icon and not $icon.alignment or $icon and $icon.alignment == 'right'}
-				{call .icon data="all" /}
-			{/if}
-		</a>
-	{/if}
+		{if $icon and not $icon.alignment or $icon and $icon.alignment == 'right'}
+			{call .icon data="all" /}
+		{/if}
+	</a>
 {/template}
 
 /**
