@@ -16,7 +16,6 @@
 
   @include if-supports-3d-transforms() {
     @include transition($carousel-transition);
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     perspective: 1000px;
   }
@@ -25,7 +24,6 @@
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -64,11 +62,8 @@
   top: 0;
   bottom: 0;
   // Use flex for alignment (1-3)
-  display: -ms-flexbox;
   display: flex; // 1. allow flex styles
-  -ms-flex-align: center;
   align-items: center; // 2. vertically center contents
-  -ms-flex-pack: center;
   justify-content: center; // 3. horizontally center contents
   width: $carousel-control-width;
   color: $carousel-control-color;
@@ -120,9 +115,7 @@
   bottom: 10px;
   left: 0;
   z-index: 15;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
   justify-content: center;
   padding-left: 0; // override <ol> default
   // Use the .carousel-control's width as margin so we don't overlay those
@@ -132,14 +125,12 @@
 
   li {
     position: relative;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     max-width: $carousel-indicator-width;
     height: $carousel-indicator-height;
     margin-right: $carousel-indicator-spacer;
     margin-left: $carousel-indicator-spacer;
     text-indent: -999px;
-    cursor: pointer;
     background-color: rgba($carousel-indicator-active-bg, .5);
 
     // Use pseudo classes to increase the hit area by 10px on top and bottom.

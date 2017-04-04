@@ -1,4 +1,4 @@
-// scss-lint:disable PropertyCount
+// scss-lint:disable PropertyCount, VendorPrefix
 
 // Embedded icons from Open Iconic.
 // Released under MIT and copyright 2014 Waybury.
@@ -11,12 +11,10 @@
 
 .custom-control {
   position: relative;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   min-height: (1rem * $line-height-base);
   padding-left: $custom-control-gutter;
   margin-right: $custom-control-spacer-x;
-  cursor: pointer;
 }
 
 .custom-control-input {
@@ -66,9 +64,6 @@
   width: $custom-control-indicator-size;
   height: $custom-control-indicator-size;
   pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   background-color: $custom-control-indicator-bg;
   background-repeat: no-repeat;
@@ -118,9 +113,7 @@
 // set. Use these optional classes to tweak the layout.
 
 .custom-controls-stacked {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
 
   .custom-control {
@@ -142,7 +135,7 @@
 .custom-select {
   display: inline-block;
   max-width: 100%;
-  $select-border-width: ($border-width * 2);
+  $select-border-width: ($custom-select-border-width * 2);
   height: calc(#{$input-height} + #{$select-border-width});
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   line-height: $custom-select-line-height;
@@ -152,9 +145,7 @@
   background-size: $custom-select-bg-size;
   border: $custom-select-border-width solid $custom-select-border-color;
   @include border-radius($custom-select-border-radius);
-  // Use vendor prefixes as `appearance` isn't part of the CSS spec.
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  appearance: none;
 
   &:focus {
     border-color: $custom-select-focus-border-color;
@@ -206,7 +197,6 @@
   max-width: 100%;
   height: $custom-file-height;
   margin-bottom: 0;
-  cursor: pointer;
 }
 
 .custom-file-input {
@@ -214,7 +204,6 @@
   max-width: 100%;
   height: $custom-file-height;
   margin: 0;
-  filter: alpha(opacity = 0);
   opacity: 0;
 
   &:focus ~ .custom-file-control {
@@ -233,9 +222,6 @@
   line-height: $custom-file-line-height;
   color: $custom-file-color;
   pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   background-color: $custom-file-bg;
   border: $custom-file-border-width solid $custom-file-border-color;
@@ -243,7 +229,7 @@
   @include box-shadow($custom-file-box-shadow);
 
   @each $lang, $text in map-get($custom-file-text, placeholder) {
-    &:lang(#{$lang})::after {
+    &:lang(#{$lang}):empty::after {
       content: $text;
     }
   }

@@ -4,14 +4,13 @@
 .btn-group,
 .btn-group-vertical {
   position: relative;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle; // match .btn alignment given font-size hack above
 
   > .btn {
     position: relative;
-    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
+    margin-bottom: 0;
 
     // Bring the hover, focused, and "active" buttons to the fron to overlay
     // the borders properly
@@ -36,9 +35,8 @@
 
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: start;
+  flex-wrap: wrap;
   justify-content: flex-start;
 
   .input-group {
@@ -101,8 +99,8 @@
 //
 
 .btn + .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .75;
-  padding-left: $btn-padding-x * .75;
+  padding-right: $input-btn-padding-x * .75;
+  padding-left: $input-btn-padding-x * .75;
 
   &::after {
     margin-left: 0;
@@ -110,13 +108,13 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .75;
-  padding-left: $btn-padding-x-sm * .75;
+  padding-right: $input-btn-padding-x-sm * .75;
+  padding-left: $input-btn-padding-x-sm * .75;
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .75;
-  padding-left: $btn-padding-x-lg * .75;
+  padding-right: $input-btn-padding-x-lg * .75;
+  padding-left: $input-btn-padding-x-lg * .75;
 }
 
 
@@ -137,13 +135,9 @@
 //
 
 .btn-group-vertical {
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -ms-flex-pack: center;
   justify-content: center;
 
   .btn,

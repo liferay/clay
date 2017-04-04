@@ -17,11 +17,25 @@
 
 .navbar {
   position: relative;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  justify-content: space-between; // space out brand from logo
   padding: $navbar-padding-y $navbar-padding-x;
+
+  // Because flex properties aren't inherited, we need to redeclare these first
+  // few properities so that content nested within behave properly.
+  > .container,
+  > .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(nth(map-keys($grid-breakpoints), 1)) {
+      width: 100%; // prevent flex parent container(-fluid) from collapsing
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
 }
 
 
@@ -31,10 +45,11 @@
 
 .navbar-brand {
   display: inline-block;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
+  align-self: flex-start;
+  padding-top: $navbar-brand-padding-y;
+  padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-padding-x;
-  font-size: $font-size-lg;
+  font-size: $navbar-brand-font-size;
   line-height: inherit;
   white-space: nowrap;
 
@@ -49,9 +64,7 @@
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
 .navbar-nav {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding-left: 0;
   margin-bottom: 0;
@@ -70,8 +83,8 @@
 
 .navbar-text {
   display: inline-block;
-  padding-top:    .425rem;
-  padding-bottom: .425rem;
+  padding-top: $nav-link-padding-y;
+  padding-bottom: $nav-link-padding-y;
 }
 
 
@@ -80,9 +93,15 @@
 // Custom styles for responsive collapsing and toggling of navbar contents.
 // Powered by the collapse Bootstrap JavaScript plugin.
 
+// When collapsed, prevent the toggleable navbar contents from appearing in
+// the default flexbox row orienation. Requires the use of `flex-wrap: wrap`
+// on the `.navbar` parent.
+.navbar-collapse {
+  flex-basis: 100%;
+}
+
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  -ms-flex-item-align: start;
   align-self: flex-start; // Prevent toggler from growing to full width when it's the only visible navbar child
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   font-size: $navbar-toggler-font-size;
@@ -108,23 +127,12 @@
   background-size: 100% 100%;
 }
 
-// Use `position` on the toggler to prevent it from being auto placed as a flex
-// item and allow easy placement.
-.navbar-toggler-left {
-  position: absolute;
-  left: $navbar-padding-x;
-}
-.navbar-toggler-right {
-  position: absolute;
-  right: $navbar-padding-x;
-}
-
-// Generate series of `.navbar-toggleable-*` responsive classes for configuring
+// Generate series of `.navbar-expand-*` responsive classes for configuring
 // where your navbar collapses.
-.navbar-toggleable {
+.navbar-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
 
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
@@ -135,22 +143,20 @@
           }
         }
 
-        > .container {
+        > .container,
+        > .container-fluid {
           padding-right: 0;
           padding-left: 0;
         }
       }
 
       @include media-breakpoint-up($next) {
-        -ms-flex-direction: row;
         flex-direction: row;
-        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-        -ms-flex-align: center;
         align-items: center;
+        justify-content: flex-start;
 
         .navbar-nav {
-          -ms-flex-direction: row;
           flex-direction: row;
 
           .nav-link {
@@ -160,20 +166,15 @@
         }
 
         // For nesting containers, have to redeclare for alignment purposes
-        > .container {
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-wrap: nowrap;
+        > .container,
+        > .container-fluid {
           flex-wrap: nowrap;
-          -ms-flex-align: center;
           align-items: center;
         }
 
         // scss-lint:disable ImportantRule
         .navbar-collapse {
-          display: -ms-flexbox !important;
           display: flex !important;
-          width: 100%;
         }
         // scss-lint:enable ImportantRule
 
@@ -192,8 +193,7 @@
 
 // Dark links against a light background
 .navbar-light {
-  .navbar-brand,
-  .navbar-toggler {
+  .navbar-brand {
     color: $navbar-light-active-color;
 
     @include hover-focus {
@@ -223,6 +223,7 @@
   }
 
   .navbar-toggler {
+    color: $navbar-light-color;
     border-color: $navbar-light-toggler-border;
   }
 
@@ -237,8 +238,7 @@
 
 // White links against a dark background
 .navbar-inverse {
-  .navbar-brand,
-  .navbar-toggler {
+  .navbar-brand {
     color: $navbar-inverse-active-color;
 
     @include hover-focus {
@@ -268,6 +268,7 @@
   }
 
   .navbar-toggler {
+    color: $navbar-inverse-color;
     border-color: $navbar-inverse-toggler-border;
   }
 
