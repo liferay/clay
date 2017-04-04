@@ -2,9 +2,9 @@
 
 $atlas-theme: true !default;
 
-$font-size-base: 14px !default; // 14px
-$font-size-large: ceil(($font-size-base * 1.25)) !default; // 18px
-$font-size-small: ceil(($font-size-base * 0.85)) !default; // 12px
+$font-size-base: 14px !default;
+$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $font-size-desktop-base: 16px !default; // Atlas
 $font-size-desktop-large: ceil(($font-size-desktop-base * 1.25)) !default; // Atlas ~20px
