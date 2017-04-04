@@ -192,12 +192,24 @@
 		);
 
 		/*
-		 * Extending button style.
+		 * Button with Icons.
 		 */
 		new metal.MetalClayButton(
 			{
-				label: 'Add Button',
+				label: 'Default Icon Position',
 				icon: {
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'plus'
+				}
+			},
+			'#icons-block'
+		);
+
+		new metal.MetalClayButton(
+			{
+				label: 'Icon positioned at right',
+				icon: {
+					alignment: 'right',
 					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
 					symbol: 'plus'
 				}
