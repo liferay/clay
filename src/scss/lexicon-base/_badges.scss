@@ -14,7 +14,7 @@
 	word-wrap: break-word;
 
 	@if (variable-exists(badge-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			font-size: $badge-desktop-font-size;
 		}
 	}
@@ -50,7 +50,7 @@
 	padding-top: $badge-lg-padding-top;
 
 	@if (variable-exists(badge-lg-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			font-size: $badge-lg-desktop-font-size;
 		}
 	}
@@ -64,7 +64,7 @@
 	padding-top: $badge-sm-padding-top;
 
 	@if (variable-exists(badge-sm-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			font-size: $badge-sm-desktop-font-size;
 		}
 	}

@@ -393,7 +393,7 @@ button.list-group-heading {
 
 // min width 992px
 
-@media (min-width: $screen-md-min) {
+@include media-breakpoint-up(lg) {
 	.tabular-list-group {
 		.list-group-item-content,
 		.list-group-item-field {

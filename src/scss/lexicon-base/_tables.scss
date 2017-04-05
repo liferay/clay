@@ -73,7 +73,7 @@ th {
 	-webkit-overflow-scrolling: touch;
 
 	.table .table-cell-content {
-		@media (max-width: $grid-float-breakpoint-max) {
+		@include media-breakpoint-down(sm) {
 			white-space: normal;
 		}
 	}

@@ -17,7 +17,7 @@
 	@if (variable-exists(atlas-theme)) {
 		overflow: hidden;
 
-		@media (min-width: $grid-float-breakpoint) { // min-width: 768px
+		@include media-breakpoint-up(md) { // min-width: 768px
 			font-size: $dropdown-header-font-size-desktop;
 		}
 	}
@@ -38,7 +38,7 @@
 	padding-right: $dropdown-padding-right;
 	padding-top: $dropdown-padding-top;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		max-height: $dropdown-menu-desktop-max-height;
 
 		@if (variable-exists(atlas-theme)) {
@@ -201,7 +201,7 @@
 		padding: $dropdown-link-padding;
 
 		@if (variable-exists(dropdown-header-font-size-desktop)) {
-			@media (min-width: $grid-float-breakpoint) { // min-width: 768px
+			@include media-breakpoint-up(md) { // min-width: 768px
 				font-size: $dropdown-header-font-size-desktop;
 			}
 		}
@@ -305,7 +305,7 @@
 	[class*="col-sm"],
 	[class*="col-md"],
 	[class*="col-lg"] {
-		@media (max-width: $grid-float-breakpoint-max) { // max-width: 767px
+		@include media-breakpoint-down(sm) { // max-width: 767px
 			padding: 0;
 		}
 	}
@@ -316,7 +316,7 @@
 	padding: 5px 0;
 	width: 100%;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		max-height: none;
 		padding: 20px 0;
 		width: 100%;
@@ -330,7 +330,7 @@
 .dropdown-wide .dropdown-menu {
 	@extend %dropdown-full-wide-dropdown-menu;
 
-	@media (min-width: $screen-md-min) { // min-width 992px
+	@include media-breakpoint-up(lg) { // min-width 992px
 		min-width: $dropdown-wide-width;
 	}
 }
@@ -340,7 +340,7 @@ li.dropdown-full {
 }
 
 li.dropdown-wide {
-	@media (max-width: $screen-sm-max) { // max-width 991px
+	@include media-breakpoint-down(md) { // max-width 991px
 		position: static;
 	}
 }
@@ -348,7 +348,7 @@ li.dropdown-wide {
 // Navbar Component Dropdowns
 
 .navbar-nav .dropdown-menu-center {
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		-ms-transform: none;
 		transform: none;
 	}

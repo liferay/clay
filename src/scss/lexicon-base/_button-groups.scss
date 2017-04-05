@@ -12,7 +12,7 @@
 		padding-left: $btn-padding-horizontal / 3;
 		padding-right: $btn-padding-horizontal / 3;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			padding-left: $btn-desktop-padding-horizontal / 3;
 			padding-right: $btn-desktop-padding-horizontal / 3;
 		}
@@ -22,7 +22,7 @@
 		padding-left: $btn-lg-padding-horizontal / 3;
 		padding-right: $btn-lg-padding-horizontal / 3;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			padding-left: $btn-desktop-lg-padding-horizontal / 3;
 			padding-right: $btn-desktop-lg-padding-horizontal / 3;
 		}

@@ -15,7 +15,7 @@
 	word-wrap: break-word;
 
 	@if (variable-exists(label-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			font-size: $label-desktop-font-size;
 		}
 	}
@@ -52,7 +52,7 @@
 	padding-top: $label-lg-padding-top;
 
 	@if (variable-exists(label-lg-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			font-size: $label-lg-desktop-font-size;
 		}
 	}
@@ -66,7 +66,7 @@
 	padding-top: $label-sm-padding-top;
 
 	@if (variable-exists(label-sm-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			font-size: $label-sm-desktop-font-size;
 		}
 	}

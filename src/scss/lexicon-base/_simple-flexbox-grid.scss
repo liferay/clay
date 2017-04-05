@@ -64,43 +64,43 @@
 }
 
 .flex-container-stacked-xs {
-	@media (max-width: $screen-xs-max) {
+	@include media-breakpoint-down(xs) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-sm {
-	@media (max-width: $screen-sm-max) {
+	@include media-breakpoint-down(md) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-md {
-	@media (max-width: $screen-md-max) {
+	@include media-breakpoint-down(lg) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-lg {
-	@media (min-width: $screen-lg-min) {
+	@include media-breakpoint-up(xl) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-xs-only {
-	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+	@include media-breakpoint-between(xs, md) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-sm-only {
-	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@include media-breakpoint-only(md) {
 		@include stack-flex-container;
 	}
 }
 
 .flex-container-stacked-md-only {
-	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@include media-breakpoint-only(lg) {
 		@include stack-flex-container;
 	}
 }
@@ -114,43 +114,43 @@
 }
 
 .flex-item-break-xs {
-	@media (max-width: $screen-xs-max) {
+	@include media-breakpoint-down(xs) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-sm {
-	@media (max-width: $screen-sm-max) {
+	@include media-breakpoint-down(md) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-md {
-	@media (max-width: $screen-md-max) {
+	@include media-breakpoint-down(lg) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-lg {
-	@media (min-width: $screen-lg) {
+	@include media-breakpoint-up(xl) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-xs-only {
-	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+	@include media-breakpoint-between(xs, md) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-sm-only {
-	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@include media-breakpoint-only(md) {
 		@include break-flex-item;
 	}
 }
 
 .flex-item-break-md-only {
-	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@include media-breakpoint-only(lg) {
 		@include break-flex-item;
 	}
 }

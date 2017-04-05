@@ -11,7 +11,7 @@
 			padding-left: 12px;
 			padding-right: 16px;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				border-left-width: 0;
 			}
 		}
@@ -26,7 +26,7 @@
 	.list-group-item-field {
 		vertical-align: middle;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			vertical-align: top;
 		}
 	}
@@ -40,7 +40,7 @@
 		font-size: 16px;
 		vertical-align: middle;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			content: normal;
 		}
 	}
@@ -53,13 +53,13 @@
 
 	> [class^="icon-"],
 	> [class*=" icon-"] {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			display: inline;
 		}
 	}
 
 	> .user-icon {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			display: block;
 		}
 	}
@@ -68,7 +68,7 @@
 .detailed-list-view-icon {
 	@include monospace(34px);
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		@include monospace(48px);
 	}
 
@@ -76,7 +76,7 @@
 	[class*=" icon-"] {
 		font-size: 28px;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			font-size: 38px;
 		}
 	}
@@ -203,7 +203,7 @@
 	.list-group-card-icon {
 		font-size: 2.4em;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			font-size: 3em;
 		}
 
@@ -216,7 +216,7 @@
 
 			text-align: center;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				@include monospace(45px);
 			}
 		}
@@ -254,7 +254,7 @@
 	.checkbox input[type="checkbox"] {
 		display: none;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			display: block;
 		}
 
@@ -271,7 +271,7 @@
 				text-align: center;
 				vertical-align: middle;
 
-				@media (min-width: $grid-float-breakpoint) {
+				@include media-breakpoint-up(md) {
 					content: normal;
 				}
 			}
@@ -284,13 +284,13 @@
 
 			> [class^="icon-"],
 			> [class*=" icon-"] {
-				@media (min-width: $grid-float-breakpoint) {
+				@include media-breakpoint-up(md) {
 					display: block;
 				}
 			}
 
 			> .user-icon {
-				@media (min-width: $grid-float-breakpoint) {
+				@include media-breakpoint-up(md) {
 					display: block;
 				}
 			}
@@ -301,13 +301,13 @@
 	.checkbox-middle-left,
 	.checkbox-top-left {
 		.card.flex-container {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				padding-left: 20px;
 			}
 		}
 
 		.card-row {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				padding-left: 20px;
 			}
 		}
@@ -317,13 +317,13 @@
 	.checkbox-middle-right,
 	.checkbox-top-right {
 		.card.flex-container {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				padding-right: 20px;
 			}
 		}
 
 		.card-row {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				padding-right: 20px;
 			}
 		}

@@ -28,7 +28,7 @@
 
 		text-transform: $breadcrumb-text-transform;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			max-width: 300px;
 		}
 

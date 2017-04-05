@@ -12,7 +12,7 @@
 	overflow: hidden;
 	text-align: center;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		@if (variable-exists(user-icon-desktop-font-size)) {
 			font-size: $user-icon-desktop-font-size;
 		}
@@ -30,7 +30,7 @@
 
 	@include monospace($user-icon-xs-size);
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		font-size: $user-icon-xs-desktop-font-size;
 
 		@include monospace($user-icon-xs-desktop-size);
@@ -42,7 +42,7 @@
 
 	@include monospace($user-icon-sm-size);
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		font-size: $user-icon-sm-desktop-font-size;
 
 		@include monospace($user-icon-sm-desktop-size);
@@ -54,7 +54,7 @@
 
 	@include monospace($user-icon-lg-size);
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		font-size: $user-icon-lg-desktop-font-size;
 
 		@include monospace($user-icon-lg-desktop-size);
@@ -66,7 +66,7 @@
 
 	@include monospace($user-icon-xl-size);
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		font-size: $user-icon-xl-desktop-font-size;
 
 		@include monospace($user-icon-xl-desktop-size);
@@ -78,7 +78,7 @@
 
 	@include monospace($user-icon-xxl-size);
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		font-size: $user-icon-xxl-desktop-font-size;
 
 		@include monospace($user-icon-xxl-desktop-size);

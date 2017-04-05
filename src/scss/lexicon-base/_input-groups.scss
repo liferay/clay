@@ -89,7 +89,7 @@
 	overflow-y: hidden;
 	padding-right: $btn-border-width;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		max-width: 300px;
 	}
 }
@@ -161,7 +161,7 @@
 		line-height: $input-mobile-height-base;
 		width: 30px;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			height: $input-height-base;
 			line-height: $input-height-base;
 		}

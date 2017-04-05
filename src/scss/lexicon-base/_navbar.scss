@@ -5,7 +5,7 @@
 	max-width: none;
 	padding: $navbar-form-padding-vertical $navbar-form-padding-horizontal;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		max-width: 220px;
 	}
 
@@ -35,7 +35,7 @@
 	left: 101%;
 	position: relative;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		left: 0;
 	}
 
@@ -46,7 +46,7 @@
 		position: absolute;
 		z-index: $zindex-basic-search-close;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			display: none;
 			line-height: normal;
 		}
@@ -98,7 +98,7 @@
 .collapse-basic-search {
 	position: relative;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		&.navbar-no-collapse {
 			.navbar-nav:first-child {
 				float: left;
@@ -119,7 +119,7 @@
 		right: 0;
 		top: 0;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			@if (variable-exists(atlas-theme)) {
 				margin-right: 12px;
 			}
@@ -135,21 +135,21 @@
 		}
 
 		&.open .basic-search-close {
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				display: none;
 			}
 		}
 
 		&.basic-search-transition .input-group-btn .btn:first-child,
 		&.open .input-group-btn .btn:first-child {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				border-bottom-left-radius: 0;
 				border-top-left-radius: 0;
 			}
 		}
 
 		.input-group-btn .btn:first-child {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				border-bottom-left-radius: $btn-border-radius-base;
 				border-top-left-radius: $btn-border-radius-base;
 			}
@@ -159,13 +159,13 @@
 			overflow: hidden;
 			visibility: hidden;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				overflow: visible;
 				visibility: visible;
 			}
 
 			.form-control {
-				@media (min-width: $grid-float-breakpoint) {
+				@include media-breakpoint-up(md) {
 					left: auto;
 				}
 			}
@@ -174,7 +174,7 @@
 		.form-control {
 			padding-left: 47px;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				padding-left: 5px;
 			}
 		}
@@ -183,7 +183,7 @@
 	.navbar-nav:first-child {
 		float: none;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			float: left;
 		}
 	}
@@ -212,7 +212,7 @@
 		&.focus:after {
 			background-color: $input-border-focus;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				height: $navbar-link-active-bottom-border-width;
 				margin-top: -$navbar-link-active-bottom-border-width;
 			}
@@ -223,13 +223,13 @@
 				height: $navbar-link-active-bottom-border-width;
 				margin-top: -$navbar-link-active-bottom-border-width;
 
-				@media (min-width: $grid-float-breakpoint) {
+				@include media-breakpoint-up(md) {
 					background-color: transparent;
 				}
 			}
 
 			&.focus:after {
-				@media (min-width: $grid-float-breakpoint) {
+				@include media-breakpoint-up(md) {
 					background-color: $input-border-focus;
 				}
 			}
@@ -248,7 +248,7 @@
 			padding-left: 12px;
 			padding-right: 12px;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				height: $navbar-desktop-height - $navbar-border-bottom-width - $navbar-border-top-width;
 			}
 
@@ -263,11 +263,11 @@
 			border-width: 0;
 			height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				height: $navbar-desktop-height - $navbar-border-bottom-width - $navbar-border-top-width;
 			}
 
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				padding-left: 45px;
 			}
 		}
@@ -275,7 +275,7 @@
 		.input-group-btn {
 			padding-right: 12px;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				padding-right: 0;
 			}
 		}
@@ -315,7 +315,7 @@
 		margin-bottom: 0;
 		min-height: $navbar-height;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			min-height: $navbar-desktop-height;
 		}
 	}
@@ -323,7 +323,7 @@
 	.navbar-nav {
 		> .active > a {
 			&:after {
-				@media (min-width: $grid-float-breakpoint) {
+				@include media-breakpoint-up(md) {
 					background-color: $navbar-link-active-highlight;
 					bottom: -$navbar-border-bottom-width;
 
@@ -367,7 +367,7 @@
 
 .navbar-collapse {
 	@if (variable-exists(atlas-theme)) {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			padding-left: 0;
 			padding-right: 0;
 		}
@@ -375,14 +375,14 @@
 }
 
 .navbar-collapse-left {
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		float: left;
 	}
 }
 
 .navbar .navbar-collapse:first-child,
 .navbar-collapse-absolute .navbar-collapse {
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		background-color: $dropdown-bg;
 		border-color: transparent;
 		border-style: solid;
@@ -426,7 +426,7 @@
 
 	.open .dropdown-menu {
 		> li > a {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				color: $dropdown-link-color;
 				padding: $dropdown-link-padding;
 
@@ -439,7 +439,7 @@
 		}
 
 		.divider {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				@include nav-divider($dropdown-divider-bg);
 			}
 		}
@@ -455,7 +455,7 @@
 .navbar-form {
 	padding: $navbar-form-padding-vertical $navbar-form-padding-horizontal;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		margin: 0;
 
 		@if (variable-exists(atlas-theme)) {
@@ -468,26 +468,26 @@
 // Navbar Header
 
 .navbar-header .input-group-input .form-control {
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		max-width: none;
 		min-width: 0;
 	}
 }
 
 .navbar-header-left-xs {
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		float: left;
 	}
 }
 
 .navbar-header-right-xs {
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		float: right;
 	}
 }
 
 .navbar-header-right {
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		float: right;
 	}
 }
@@ -495,18 +495,18 @@
 // Navbar Nav
 
 .navbar-nav {
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		margin-right: $navbar-padding-horizontal;
 	}
 
 	&.navbar-right {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			margin-left: $navbar-padding-horizontal;
 			margin-right: 0;
 		}
 
 		&:last-child {
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				margin-right: 0;
 			}
 		}
@@ -518,7 +518,7 @@
 			padding-bottom: $navbar-padding-vertical;
 			padding-top: $navbar-padding-vertical;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				line-height: $navbar-desktop-link-line-height;
 				padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
 			}
@@ -534,7 +534,7 @@
 
 @if (variable-exists(atlas-theme)) {
 	.navbar-nav {
-		@media (max-width: $grid-float-breakpoint-max) {
+		@include media-breakpoint-down(sm) {
 			.dropdown-menu {
 				max-width: none;
 			}
@@ -572,7 +572,7 @@
 		color: $nav-link-color;
 		line-height: $navbar-link-line-height;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			line-height: $navbar-desktop-link-line-height;
 			padding: $navbar-desktop-padding-vertical $navbar-desktop-padding-horizontal;
 		}
@@ -646,7 +646,7 @@
 		border-width: $navbar-default-border-width;
 		min-height: $navbar-default-height;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			min-height: $navbar-default-desktop-height;
 		}
 	}
@@ -654,7 +654,7 @@
 
 .navbar-default .navbar-collapse:first-child,
 .navbar-default.navbar-collapse-absolute .navbar-collapse {
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		background-color: $navbar-default-bg;
 		border-color: $navbar-default-border;
 	}
@@ -695,7 +695,7 @@
 		.navbar-nav {
 			> .active > a {
 				&:after {
-					@media (min-width: $grid-float-breakpoint) {
+					@include media-breakpoint-up(md) {
 						background-color: $navbar-default-link-active-highlight;
 
 						@if not ($navbar-default-link-active-highlight == transparent) {
@@ -732,7 +732,7 @@
 .navbar-inverse {
 	.navbar-collapse:first-child,
 	&.navbar-collapse-absolute .navbar-collapse {
-		@media (max-width: $grid-float-breakpoint-max) {
+		@include media-breakpoint-down(sm) {
 			background-color: $navbar-inverse-bg;
 			border-color: $navbar-inverse-border;
 		}
@@ -772,7 +772,7 @@
 		.navbar-nav {
 			> .active > a {
 				&:after {
-					@media (min-width: $grid-float-breakpoint) {
+					@include media-breakpoint-up(md) {
 						background-color: $navbar-inverse-link-active-highlight;
 
 						@if not ($navbar-inverse-link-active-highlight == transparent) {

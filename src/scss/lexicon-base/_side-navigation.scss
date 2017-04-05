@@ -27,7 +27,7 @@
 	padding-right: 0;
 	position: relative;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		@include clearfix;
 
 		position: static;

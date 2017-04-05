@@ -134,22 +134,22 @@
 }
 
 .multi-step-progress-bar-collapse {
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		padding-top: 20px;
 	}
 
 	> li {
-		@media (max-width: $grid-float-breakpoint-max) {
+		@include media-breakpoint-down(sm) {
 			width: auto;
 		}
 
 		&:last-child {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				width: 1%;
 			}
 
 			.divider {
-				@media (max-width: $grid-float-breakpoint-max) {
+				@include media-breakpoint-down(sm) {
 					width: 0;
 				}
 			}
@@ -158,7 +158,7 @@
 
 	> .active {
 		.progress-bar-title {
-			@media (max-width: $grid-float-breakpoint-max) {
+			@include media-breakpoint-down(sm) {
 				display: block;
 				left: 0;
 				position: absolute;
@@ -170,7 +170,7 @@
 	}
 
 	.progress-bar-title {
-		@media (max-width: $grid-float-breakpoint-max) {
+		@include media-breakpoint-down(sm) {
 			display: none;
 		}
 	}
