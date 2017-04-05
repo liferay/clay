@@ -2,63 +2,89 @@
 
 $atlas-theme: true !default;
 
-$font-size-base: 14px !default;
-$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
+// $font-size-base: 14px !default;
+$font-size-base: 0.875rem !default;
+// $font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-lg: 1.125rem !default;
+// $font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-sm: 0.75rem !default;
 
-$font-size-desktop-base: 16px !default; // Atlas
-$font-size-desktop-large: ceil(($font-size-desktop-base * 1.25)) !default; // Atlas ~20px
-$font-size-desktop-small: ceil(($font-size-desktop-base * 0.85)) !default; // Atlas ~14px
+// $font-size-desktop-base: 16px !default; // Atlas
+$font-size-desktop-base: 1rem !default;
+// $font-size-desktop-large: ceil(($font-size-desktop-base * 1.25)) !default; // Atlas ~20px
+$font-size-desktop-large: 1.25rem !default;
+// $font-size-desktop-small: ceil(($font-size-desktop-base * 0.85)) !default; // Atlas ~14px
+$font-size-desktop-small: 0.875rem !default;
 
-$font-size-h1: floor(($font-size-base * 2)) !default; // ~28px
-$font-size-h2: floor(($font-size-base * 1.75)) !default; // ~24px
-$font-size-h3: floor(($font-size-base * 1.5)) !default; // ~21px
-$font-size-h4: floor(($font-size-base * 1.1875)) !default; // ~16px
-$font-size-h5: $font-size-base !default;
-$font-size-h6: floor(($font-size-base / 1.1875)) !default; // ~11px
+// $font-size-h1: floor(($font-size-base * 2)) !default; // ~28px
+$font-size-h1: 1.75rem !default;
+// $font-size-h2: floor(($font-size-base * 1.75)) !default; // ~24px
+$font-size-h2: 1.5rem !default;
+// $font-size-h3: floor(($font-size-base * 1.5)) !default; // ~21px
+$font-size-h3: 1.3125rem !default;
+// $font-size-h4: floor(($font-size-base * 1.1875)) !default; // ~16px
+$font-size-h4: 1rem !default;
+// $font-size-h5: $font-size-base !default;
+$font-size-h5: 0.875rem !default; // 14px
+// $font-size-h6: floor(($font-size-base / 1.1875)) !default; // ~11px
+$font-size-h6: 0.6875rem !default;
 
-$font-size-desktop-h1: floor(($font-size-desktop-base * 1.625)) !default; // Atlas 26px
-$font-size-desktop-h2: floor(($font-size-desktop-base * 1.375)) !default; // Atlas 22px
-$font-size-desktop-h3: floor(($font-size-desktop-base * 1.1875)) !default; // Atlas 19px
-$font-size-desktop-h4: $font-size-desktop-base !default; // Atlas 16px
-$font-size-desktop-h5: floor(($font-size-desktop-base / 1.1428)) !default; // Atlas 14px
-$font-size-desktop-h6: floor(($font-size-desktop-base / 1.2307)) !default; // Atlas 13px
+// $font-size-desktop-h1: floor(($font-size-desktop-base * 1.625)) !default; // Atlas 26px
+$font-size-desktop-h1: 1.625rem !default;
+// $font-size-desktop-h2: floor(($font-size-desktop-base * 1.375)) !default; // Atlas 22px
+$font-size-desktop-h2: 1.375rem !default;
+// $font-size-desktop-h3: floor(($font-size-desktop-base * 1.1875)) !default; // Atlas 19px
+$font-size-desktop-h3: 1.1875rem !default;
+// $font-size-desktop-h4: $font-size-desktop-base !default; // Atlas 16px
+$font-size-desktop-h4: 1rem !default;
+// $font-size-desktop-h5: floor(($font-size-desktop-base / 1.1428)) !default; // Atlas 14px
+$font-size-desktop-h5: 0.875rem !default;
+// $font-size-desktop-h6: floor(($font-size-desktop-base / 1.2307)) !default; // Atlas 13px
+$font-size-desktop-h6: 0.8125rem !default;
 
-$line-height-base: 1.428571429 !default;
-$line-height-computed: floor(($font-size-base * $line-height-base)) !default;
+// $line-height-base: 1.428571429 !default;
+$line-height-base: 1.5 !default;
+// $line-height-computed: floor(($font-size-base * $line-height-base)) !default;
 
-$headings-line-height: 1.2 !default;
+// $headings-line-height: 1.2 !default;
+$headings-line-height: 1.1 !default;
 
-$padding-base-horizontal: 16px !default;
-$padding-base-vertical: 6px !default;
+// $padding-base-horizontal: 16px !default;
+// $padding-base-vertical: 6px !default;
 
-$padding-large-horizontal: 16px !default;
-$padding-large-vertical: 10px !default;
+// $padding-large-horizontal: 16px !default;
+// $padding-large-vertical: 10px !default;
 
-$padding-small-horizontal: 10px !default;
-$padding-small-vertical: 5px !default;
+// $padding-small-horizontal: 10px !default;
+// $padding-small-vertical: 5px !default;
 
-$padding-xs-horizontal: 5px !default;
-$padding-xs-vertical: 1px !default;
+// $padding-xs-horizontal: 5px !default;
+// $padding-xs-vertical: 1px !default;
 
-$grid-gutter-width: 30px !default;
+// $grid-gutter-width: 30px !default;
+$grid-gutter-width-base: 30px !default;
 
 // Skin
 
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 
 // Border Radius
 // Defines global border-radius
-$border-radius-base: 4px !default;
-$border-radius-large: $border-radius-base * 1.5 !default;
-$border-radius-small: $border-radius-base * 0.75 !default;
+// $border-radius-base: 4px !default;
+$border-radius: 0.25rem !default; // 4px
+// $border-radius-large: $border-radius-base * 1.5 !default;
+$border-radius-lg: 0.375rem !default; // 6px
+// $border-radius-small: $border-radius-base * 0.75 !default;
+$border-radius-sm: 0.1875rem !default; // 3px
 
 $body-bg: #FFF !default;
-$gray-darker: lighten(#000, 13.5%) !default; // #222
-$gray-dark: lighten(#000, 20%) !default;   // #333
-$gray: lighten(#000, 33.5%) !default; // #555
-$gray-light: lighten(#000, 46.7%) !default; // #777
-$gray-lighter: lighten(#000, 93.5%) !default; // #eee
+// $gray-darker: lighten(#000, 13.5%) !default; // #222
+$gray-dark: #292B2C !default;
+$gray: #464A4C !default;
+$gray-light: #636C72 !default;
+$gray-lighter: #ECEEEF !default;
+$gray-lightest: #F7F7F9 !default;
 
 $brand-default: #869CAD !default; // Atlas
 $brand-default-active: darken($brand-default, 12%) !default; // Atlas
@@ -86,8 +112,9 @@ $brand-danger-hover: darken($brand-danger, 8%) !default; // Atlas
 
 $link-color: $brand-primary !default;
 
-$text-color: #29353D !default;
-$text-muted: lighten($text-color, 55%) !default;
+// $text-color: #29353D !default;
+$body-color: #29353D !default;
+$text-muted: lighten($body-color, 55%) !default;
 
 // Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg: $brand-primary !default;
@@ -151,11 +178,12 @@ $inverse-link-hover-color: $inverse-link-color !default; // Atlas
 
 // Box Shadow
 // Defines global box-shadows
-$box-shadow-default-x: 0 !default; // Atlas
-$box-shadow-default-y: 0 !default; // Atlas
-$box-shadow-default-blur: 3px !default; // Atlas
-$box-shadow-default-spread: 1px !default; // Atlas
-$box-shadow-default-bg: rgba(0, 0, 0, 0.2) !default; // Atlas
-$box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default; // Atlas
+// Deprecate THIS 2.0.0
+// $box-shadow-default-x: 0 !default; // Atlas
+// $box-shadow-default-y: 0 !default; // Atlas
+// $box-shadow-default-blur: 3px !default; // Atlas
+// $box-shadow-default-spread: 1px !default; // Atlas
+// $box-shadow-default-bg: rgba(0, 0, 0, 0.2) !default; // Atlas
+// $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default; // Atlas
 
 $close-text-shadow: none !default;

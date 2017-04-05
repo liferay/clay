@@ -1,7 +1,9 @@
 // Structure
 
-$alert-border-radius: 4px !default;
-$alert-padding: 18px !default;
+// $alert-border-radius: 4px !default;
+// $alert-padding: 18px !default;
+$alert-padding-x: 1.125rem !default; // 18px
+$alert-padding-y: 1.125rem !default; // 18px
 
 // For top only border use: 2px 0 0 0
 $alert-border-width: 0 !default;
@@ -14,7 +16,8 @@ $alert-link-font-weight: bold !default;
 
 // Skin
 
-$alert-close-color: $text-color !default;
+// $alert-close-color: $text-color !default;
+$alert-close-color: $body-color !default;
 
 $alert-default-bg: $state-default-bg !default;
 $alert-default-text: #9698A4 !default;
