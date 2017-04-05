@@ -51,7 +51,7 @@ section.row {
 		margin-bottom: 14px;
 		margin-top: 14px;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) { // min-width 768px
 			margin-left: 18px;
 		}
 
@@ -180,7 +180,7 @@ section.row {
 
 #alertNotifications {
 	.lexicon-site-display-container {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) { // min-width 768px
 			float: left;
 			margin-right: 15px;
 			min-height: 200px;
@@ -217,7 +217,7 @@ body.fixed {
 
 	.tabular-list-group .list-group-item .list-group-item-content:first-child,
 	.tabular-list-group .list-group-item .list-group-item-field:first-child {
-		@media (max-width: 767px) {
+		@include media-breakpoint-down(sm) { // min-width 767px
 			display: none;
 		}
 	}
@@ -326,8 +326,8 @@ body.fixed {
 			text-align: center;
 
 			&:nth-child(odd) {
-				background-color: $navbar-default-bg;
-				color: $navbar-default-color;
+				background-color: #f7f7f7;
+				color: #7c7c85;
 			}
 		}
 	}
@@ -385,7 +385,7 @@ body.fixed {
 	}
 }
 
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) { // min-width 768px
 	#documentsAndMediaSidenav .container-fluid-1280.sidenav-container {
 		padding-left: 15px;
 	}
@@ -509,7 +509,7 @@ body.fixed {
 	}
 }
 
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) { // min-width 768px
 	.font-awesome-icons-list li, .lexicon-icon-list li {
 		float: left;
 		padding: 5px;
@@ -745,7 +745,7 @@ $mainNavWidth: 220px;
 	right: 0;
 	top: 0;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) { // min-width 768px
 		position: static;
 	}
 }
@@ -754,12 +754,12 @@ $mainNavWidth: 220px;
 	left: 0;
 	position: relative;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) { // min-width 768px
 		padding-left: $mainNavWidth + 20;
 	}
 
 	[dir="rtl"] & {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) { // min-width 768px
 			padding-left: 0;
 			padding-right: $mainNavWidth + 20;
 		}
@@ -772,7 +772,7 @@ $mainNavWidth: 220px;
 	visibility: hidden;
 	width: 0;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) { // min-width 768px
 		visibility: visible;
 		width: $mainNavWidth;
 	}
@@ -792,7 +792,7 @@ $mainNavWidth: 220px;
 	height: 100%;
 	overflow-x: hidden;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) { // min-width 768px
 		overflow-x: visible;
 	}
 
@@ -804,7 +804,7 @@ $mainNavWidth: 220px;
 	#mainContent {
 		left: $mainNavWidth + 10;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) { // min-width 768px
 			left: auto;
 			position: static;
 		}
@@ -895,7 +895,7 @@ h1, h2, h3, h4, h5, h6 {
 		width: 20px;
 	}
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) { // min-width 768px
 		.heading-anchor {
 			float: none;
 			margin-left: -20px;
@@ -1035,7 +1035,7 @@ body.sidenav-transition {
 	}
 }
 
-@media (min-width: $grid-float-breakpoint) {
+@include media-breakpoint-up(md) { // min-width 768px
 	.uxgl-switches .form-group {
 		width: 115px;
 	}
@@ -1064,25 +1064,25 @@ body.sidenav-transition {
 	margin: 2em 0;
 }
 
-@media (min-width: 1200px) {
+@include media-breakpoint-up(xl) { // min-width 992px
 	.uxgl-lg-newline-demo {
 		background-color: #FFFEDC;
 	}
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@include media-breakpoint-only(lg) { // 992px - 1199px
 	.uxgl-md-newline-demo {
 		background-color: #FFFEDC;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@include media-breakpoint-only(md) { // 768px - 991px
 	.uxgl-sm-newline-demo {
 		background-color: #FFFEDC;
 	}
 }
 
-@media (max-width: 768px) {
+@include media-breakpoint-down(sm) { // max-width 767px
 	.uxgl-xs-newline-demo {
 		background-color: #FFFEDC;
 	}
@@ -1093,7 +1093,7 @@ body.sidenav-transition {
 	min-height: 400px;
 	position: relative;
 
-	@media (min-width: 768px) {
+	@include media-breakpoint-up(md) { // min-width 768
 		min-height: 100px;
 	}
 }
