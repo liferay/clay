@@ -15,6 +15,7 @@
 - [Changelog](#changelog)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+# EXPERIMENTAL BRANCH DO NOT USE
 
 ## About
 This is the repo of Liferay's Lexicon Design Language, and an implementation of that design language based on [Bootstrap](http://getbootstrap.com).
