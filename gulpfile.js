@@ -79,12 +79,21 @@ gulp.task(
 
 gulp.task('copy:lexicon', function() {
 	var lexiconBase = gulp.src('../lexicon/src/scss/lexicon-base/**/*.scss')
-	.pipe(gulp.dest('./src/scss/lexicon-base'));
+		.pipe(gulp.dest('./src/scss/lexicon-base'));
 
 	var atlasTheme = gulp.src('../lexicon/src/scss/atlas-theme/**/*.scss')
-	.pipe(gulp.dest('./src/scss/atlas-theme'));
+		.pipe(gulp.dest('./src/scss/atlas-theme'));
 
-	return plugins.mergeStream(lexiconBase, atlasTheme);
+	var images = gulp.src('../lexicon/src/images/**/*.{svg,jpg,png,jpeg,gif}')
+		.pipe(gulp.dest('./src/images'));
+
+	var fonts = gulp.src('../lexicon/src/fonts/**/*.{svg,eot,ttf,woff,scss,woff2}')
+		.pipe(gulp.dest('./src/fonts'));
+
+	var templates = gulp.src('../lexicon/templates/**/*.ejs')
+		.pipe(gulp.dest('./templates'));
+
+	return plugins.mergeStream(lexiconBase, atlasTheme, images, fonts);
 });
 
 gulp.task('update:bootstrap', function(cb) {
