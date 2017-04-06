@@ -1,8 +1,8 @@
 // Deprecate this
 $enable-ie9-compatibility: false !default;
 
-$brand-default: #777 !default;
+$brand-secondary: #777 !default;
 
-$state-default-bg: $brand-default !default;
-$state-default-border: darken(adjust-hue($state-default-bg, -10), 5%) !default;
-$state-default-text: $gray-dark !default;
+$state-secondary-bg: $brand-secondary !default;
+$state-secondary-border: darken(adjust-hue($state-secondary-bg, -10), 5%) !default;
+$state-secondary-text: $gray-dark !default;
