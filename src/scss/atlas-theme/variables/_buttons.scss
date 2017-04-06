@@ -20,17 +20,17 @@ $input-btn-font-size-sm: 0.8125rem !default; // 13px
 $input-btn-padding-x-sm: 0.75rem !default; // 12px
 $input-btn-padding-y-sm: 0.25rem !default; // 4px
 
-$input-btn-desktop-font-size: 1rem !default; // 16px
-$input-btn-desktop-padding-x: 0.875rem !default; // 14px
-$input-btn-desktop-padding-y: 0.5rem !default; // 8px
+$input-btn-font-size-desktop: 1rem !default; // 16px
+$input-btn-padding-x-desktop: 0.875rem !default; // 14px
+$input-btn-padding-y-desktop: 0.5rem !default; // 8px
 
-$input-btn-desktop-font-size-lg: $input-btn-font-size-lg !default;
-$input-btn-desktop-padding-x-lg: 3rem !default; // 48px
-$input-btn-desktop-padding-y-lg: 0.75rem !default; // 12px
+$input-btn-font-size-lg-desktop: $input-btn-font-size-lg !default;
+$input-btn-padding-x-lg-desktop: 3rem !default; // 48px
+$input-btn-padding-y-lg-desktop: 0.75rem !default; // 12px
 
-$input-btn-desktop-font-size-sm: $input-btn-font-size-sm !default;
-$input-btn-desktop-padding-x-sm: 2.25rem !default; // 36px
-$input-btn-desktop-padding-y-sm: 0.25rem !default; // 4px
+$input-btn-font-size-sm-desktop: $input-btn-font-size-sm !default;
+$input-btn-padding-x-sm-desktop: 2.25rem !default; // 36px
+$input-btn-padding-y-sm-desktop: 0.25rem !default; // 4px
 
 // End variables that affect btn height
 
@@ -39,7 +39,7 @@ $btn-disabled-opacity: 0.5 !default;
 // Skin
 
 $btn-action-size: 3.25rem !default; // 52px
-$btn-desktop-action-size: 4rem !default; // 64px
+$btn-action-size-desktop: 4rem !default; // 64px
 
 $btn-action-border-radius: $border-radius !default;
 
