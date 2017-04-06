@@ -3,42 +3,34 @@
 // When changing variables that affect the btn's height, make sure to match the
 // corresponding input-height with the button height.
 
-$btn-border-width: 2px !default;
+$input-btn-border-width: 0.125rem !default; // 2px
+$input-btn-padding-x: 1.5rem !default; // 24px
+$input-btn-padding-y: 0.5rem !default; // 8px
 
-$btn-line-height: 24 - ($btn-border-width * 2) !default;
+// $input-btn-line-height: 1.5 - ($input-btn-border-width * 2) !default;
 
-$btn-font-size: 14px !default;
-$btn-font-weight: 500 !default;
-$btn-padding-vertical: 8px !default;
-$btn-padding-horizontal: round($btn-padding-vertical * 3) !default;
+$input-btn-font-size: 0.875rem !default; // 14px
+$input-btn-font-weight: 500 !default;
 
-$btn-lg-font-size: 16px !default;
-$btn-lg-padding-vertical: 12px !default;
-$btn-lg-padding-horizontal: round($btn-lg-padding-vertical * 3) !default;
+$input-btn-font-size-lg: 1rem !default; // 16px
+$input-btn-padding-y-lg: 0.75rem !default; // 12px
+$input-btn-padding-x-lg: 2.25rem !default; // 36px
 
-$btn-sm-font-size: 13px !default;
-$btn-sm-padding-vertical: 4px !default;
-$btn-sm-padding-horizontal: round($btn-sm-padding-vertical * 3) !default;
+$input-btn-font-size-sm: 0.8125rem !default; // 13px
+$input-btn-padding-x-sm: 0.75rem !default; // 12px
+$input-btn-padding-y-sm: 0.25rem !default; // 4px
 
-$btn-xs-font-size: 10px !default;
-$btn-xs-padding-vertical: 1px !default;
-$btn-xs-padding-horizontal: round($btn-xs-padding-vertical * 3) !default;
+$input-btn-desktop-font-size: 1rem !default; // 16px
+$input-btn-desktop-padding-x: 0.875rem !default; // 14px
+$input-btn-desktop-padding-y: 0.5rem !default; // 8px
 
-$btn-desktop-font-size: 16px !default;
-$btn-desktop-padding-vertical: 8px !default;
-$btn-desktop-padding-horizontal: 14px !default;
+$input-btn-desktop-font-size-lg: $input-btn-font-size-lg !default;
+$input-btn-desktop-padding-x-lg: 3rem !default; // 48px
+$input-btn-desktop-padding-y-lg: 0.75rem !default; // 12px
 
-$btn-desktop-lg-font-size: $btn-lg-font-size !default;
-$btn-desktop-lg-padding-vertical: 12px !default;
-$btn-desktop-lg-padding-horizontal: 48px !default;
-
-$btn-desktop-sm-font-size: $btn-sm-font-size !default;
-$btn-desktop-sm-padding-vertical: 4px !default;
-$btn-desktop-sm-padding-horizontal: round($btn-desktop-sm-padding-vertical * 4) !default;
-
-$btn-desktop-xs-font-size: 10px !default;
-$btn-desktop-xs-padding-vertical: 1px !default;
-$btn-desktop-xs-padding-horizontal: round($btn-desktop-xs-padding-vertical * 4) !default;
+$input-btn-desktop-font-size-sm: $input-btn-font-size-sm !default;
+$input-btn-desktop-padding-x-sm: 2.25rem !default; // 36px
+$input-btn-desktop-padding-y-sm: 0.25rem !default; // 4px
 
 // End variables that affect btn height
 
@@ -46,34 +38,14 @@ $btn-disabled-opacity: 0.5 !default;
 
 // Skin
 
-$btn-action-size: 52px !default;
-$btn-desktop-action-size: 64px !default;
+$btn-action-size: 3.25rem !default; // 52px
+$btn-desktop-action-size: 4rem !default; // 64px
 
-$btn-border-radius: 4px !default;
+$btn-action-border-radius: $border-radius !default;
 
-$btn-action-border-radius: $btn-border-radius !default;
-
-// Deprecated `$btn-lg-border-radius` as of v1.0.16 and will be removed in v2.0.0
-$btn-lg-border-radius: $btn-border-radius !default;
-$btn-border-radius-large: $btn-lg-border-radius !default;
-// Deprecated `$btn-sm-border-radius` as of v1.0.16 and will be removed in v2.0.0
-$btn-sm-border-radius: round($btn-border-radius * 0.75) !default;
-$btn-border-radius-small: $btn-sm-border-radius !default;
-// Deprecated `$btn-xs-border-radius` as of v1.0.16 and will be removed in v2.0.0
-$btn-xs-border-radius: round($btn-border-radius * 0.5) !default;
-$btn-border-radius-extra-small: $btn-xs-border-radius !default;
+$btn-border-radius-lg: $border-radius !default;
 
 $btn-active-box-shadow: none !default;
-
-$btn-default-color: $brand-default !default;
-$btn-default-bg: #FFF !default;
-$btn-default-border: $brand-default !default;
-$btn-default-hover-color: $btn-default-color !default;
-$btn-default-hover-bg: $btn-default-bg !default;
-$btn-default-hover-border: $brand-primary !default;
-$btn-default-active-color: $btn-default-color !default;
-$btn-default-active-bg: $btn-default-bg !default;
-$btn-default-active-border: darken($btn-default-hover-border, 8%) !default;
 
 $btn-primary-color: #FFF !default;
 $btn-primary-bg: $brand-primary !default;
@@ -84,6 +56,16 @@ $btn-primary-hover-border: $btn-primary-hover-bg !default;
 $btn-primary-active-color: $btn-primary-color !default;
 $btn-primary-active-bg: darken($btn-primary-hover-bg, 12%) !default;
 $btn-primary-active-border: $btn-primary-active-bg !default;
+
+$btn-secondary-color: $brand-secondary !default;
+$btn-secondary-bg: #FFF !default;
+$btn-secondary-border: $brand-secondary !default;
+$btn-secondary-hover-color: $btn-secondary-color !default;
+$btn-secondary-hover-bg: $btn-secondary-bg !default;
+$btn-secondary-hover-border: $brand-primary !default;
+$btn-secondary-active-color: $btn-secondary-color !default;
+$btn-secondary-active-bg: $btn-secondary-bg !default;
+$btn-secondary-active-border: darken($btn-secondary-hover-border, 8%) !default;
 
 $btn-success-color: #FFF !default;
 $btn-success-bg: $brand-success !default;
