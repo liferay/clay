@@ -7,15 +7,15 @@ section: Components
 	<div class="col-md-12">
 		<h3>Default</h3>
 
-		<ul class="dropdown-menu">
-			<li class="dropdown-header">Order by:</li>
-			<li class="active"><a href="#">Author</a></li>
-			<li class="disabled"><a href="#">Title Entry</a></li>
-			<li class="divider"></li>
-			<li><a href="#">Date</a></li>
-			<li><a href="#">Description</a></li>
-			<li><a href="#">Status</a></li>
-		</ul>
+		<div class="dropdown-menu">
+			<div class="dropdown-header">Order by:</div>
+			<a class="active dropdown-item" href="#">Author</a>
+			<a class="disabled dropdown-item" href="#">Title Entry</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">Date</a>
+			<a class="dropdown-item" href="#">Description</a>
+			<a class="dropdown-item" href="#">Status</a>
+		</div>
 	</div>
 </div>
 
@@ -23,15 +23,15 @@ section: Components
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse0">
-	<pre><code class="html">```<ul class="dropdown-menu">
-    <li class="dropdown-header">Order by:</li>
-    <li class="active"><a href="#">Author</a></li>
-    <li class="disabled"><a href="#">Title Entry</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Date</a></li>
-    <li><a href="#">Description</a></li>
-    <li><a href="#">Status</a></li>
-</ul>```</code></pre>
+	<pre><code class="html">```<div class="dropdown-menu">
+    <div class="dropdown-header">Order by:</div>
+    <a class="active dropdown-item" href="#">Author</a>
+    <a class="disabled dropdown-item" href="#">Title Entry</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Date</a>
+    <a class="dropdown-item" href="#">Description</a>
+    <a class="dropdown-item" href="#">Status</a>
+</div>```</code></pre>
 </div>
 
 <div class="row row-spacing uxgl-dropdown-display">
@@ -43,30 +43,28 @@ section: Components
 		</blockquote>
 
 		<ul class="dropdown-menu">
-			<li class="dropdown-header">Dropdown Header</li>
-			<li>
-				<ul class="inline-scroller">
-					<li><a href="#">Actions</a></li>
-					<li><a href="#">Edit</a></li>
-					<li><a href="#">View</a></li>
-					<li><a href="#">Permissions</a></li>
-					<li><a href="#">Actions</a></li>
-					<li><a href="#">Edit</a></li>
-					<li><a href="#">View</a></li>
-					<li><a href="#">Permissions</a></li>
-					<li><a href="#">Actions</a></li>
-					<li><a href="#">Edit</a></li>
-					<li><a href="#">View</a></li>
-					<li><a href="#">Permissions</a></li>
-					<li><a href="#">Actions</a></li>
-					<li><a href="#">Edit</a></li>
-					<li><a href="#">View</a></li>
-					<li><a href="#">Permissions</a></li>
-				</ul>
-			</li>
-			<li class="disabled"><a href="#">Disabled</a></li>
-			<li class="divider"></li>
-			<li><a href="#">Scope</a></li>
+			<div class="dropdown-header">Dropdown Header</div>
+			<div class="inline-scroller">
+				<a class="dropdown-item" href="#">Actions</a>
+				<a class="dropdown-item" href="#">Edit</a>
+				<a class="dropdown-item" href="#">View</a>
+				<a class="dropdown-item" href="#">Permissions</a>
+				<a class="dropdown-item" href="#">Actions</a>
+				<a class="dropdown-item" href="#">Edit</a>
+				<a class="dropdown-item" href="#">View</a>
+				<a class="dropdown-item" href="#">Permissions</a>
+				<a class="dropdown-item" href="#">Actions</a>
+				<a class="dropdown-item" href="#">Edit</a>
+				<a class="dropdown-item" href="#">View</a>
+				<a class="dropdown-item" href="#">Permissions</a>
+				<a class="dropdown-item" href="#">Actions</a>
+				<a class="dropdown-item" href="#">Edit</a>
+				<a class="dropdown-item" href="#">View</a>
+				<a class="dropdown-item" href="#">Permissions</a>
+			</div>
+			<a class="disabled dropdown-item" href="#">Disabled</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">Scope</a>
 		</ul>
 	</div>
 </div>
@@ -76,30 +74,28 @@ section: Components
 </div>
 <div class="collapse" id="codeCollapse1">
 	<pre><code class="html">```<ul class="dropdown-menu">
-    <li class="dropdown-header">Dropdown Header</li>
-    <li>
-        <ul class="inline-scroller">
-            <li><a href="#">Actions</a></li>
-            <li><a href="#">Edit</a></li>
-            <li><a href="#">View</a></li>
-            <li><a href="#">Permissions</a></li>
-            <li><a href="#">Actions</a></li>
-            <li><a href="#">Edit</a></li>
-            <li><a href="#">View</a></li>
-            <li><a href="#">Permissions</a></li>
-            <li><a href="#">Actions</a></li>
-            <li><a href="#">Edit</a></li>
-            <li><a href="#">View</a></li>
-            <li><a href="#">Permissions</a></li>
-            <li><a href="#">Actions</a></li>
-            <li><a href="#">Edit</a></li>
-            <li><a href="#">View</a></li>
-            <li><a href="#">Permissions</a></li>
-        </ul>
-    </li>
-    <li class="disabled"><a href="#">Disabled</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Scope</a></li>
+    <div class="dropdown-header">Dropdown Header</div>
+    <div class="inline-scroller">
+        <a class="dropdown-item" href="#">Actions</a>
+        <a class="dropdown-item" href="#">Edit</a>
+        <a class="dropdown-item" href="#">View</a>
+        <a class="dropdown-item" href="#">Permissions</a>
+        <a class="dropdown-item" href="#">Actions</a>
+        <a class="dropdown-item" href="#">Edit</a>
+        <a class="dropdown-item" href="#">View</a>
+        <a class="dropdown-item" href="#">Permissions</a>
+        <a class="dropdown-item" href="#">Actions</a>
+        <a class="dropdown-item" href="#">Edit</a>
+        <a class="dropdown-item" href="#">View</a>
+        <a class="dropdown-item" href="#">Permissions</a>
+        <a class="dropdown-item" href="#">Actions</a>
+        <a class="dropdown-item" href="#">Edit</a>
+        <a class="dropdown-item" href="#">View</a>
+        <a class="dropdown-item" href="#">Permissions</a>
+    </div>
+    <a class="disabled dropdown-item" href="#">Disabled</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Scope</a>
 </ul>```</code></pre>
 </div>
 
@@ -112,53 +108,41 @@ section: Components
 		</blockquote>
 
 		<div class="dropdown-wide dropdown-wide-container">
-			<ul class="dropdown-menu">
-				<li class="col-sm-4">
-					<ul class="link-list">
-						<li class="link-list-heading">By Resource</li>
-						<li><a href="#1">Support Home</a></li>
-						<li class="disabled"><a href="#1">Disabled Link</a></li>
-						<li><a href="#1">Chat or Call</a></li>
-					</ul>
+			<div class="dropdown-menu">
+				<div class="col-sm-4">
+					<div class="dropdown-header">By Resource</div>
+					<a class="dropdown-item" href="#1">Support Home</a>
+					<a class="disabled dropdown-item" href="#1">Disabled Link</a>
+					<a class="dropdown-item" href="#1">Chat or Call</a>
+					<div class="dropdown-header">By Product</div>
+					<a class="active dropdown-item" href="#1">Developing for the Platform</a>
+					<a class="dropdown-item" href="#1">Mastering Fundamentals</a>
+					<a class="dropdown-item" href="#1">Styling with Themes</a>
+					<a class="dropdown-item" href="#1">Managing Content</a>
+				</div>
 
-					<ul class="link-list">
-						<li class="link-list-heading">By Product</li>
-						<li class="active"><a href="#1">Developing for the Platform</a></li>
-						<li><a href="#1">Mastering Fundamentals</a></li>
-						<li><a href="#1">Styling with Themes</a></li>
-						<li><a href="#1">Managing Content</a></li>
-					</ul>
-				</li>
+				<div class="col-sm-4">
+					<div class="dropdown-header">Popular Picks</div>
+					<a class="dropdown-item" href="#1">Error Messages</a>
+					<a class="dropdown-item" href="#1">Updates: Service Packs & Fixes</a>
+					<a class="dropdown-item" href="#1">Install, Upgrade, & Activate</a>
+					<a class="dropdown-item" href="#1">Regular Drivers</a>
+					<a class="dropdown-item" href="#1">Hardware Drivers</a>
+					<div class="dropdown-header">Security</div>
+					<a class="dropdown-item" href="#1">Security Home</a>
+					<a class="dropdown-item" href="#1">Security Essentials</a>
+					<a class="dropdown-item" href="#1">Protecting Your Data</a>
+					<a class="dropdown-item" href="#1">Securing Your Browser</a>
+				</div>
 
-				<li class="col-sm-4">
-					<ul class="link-list">
-						<li class="link-list-heading">Popular Picks</li>
-						<li><a href="#1">Error Messages</a></li>
-						<li><a href="#1">Updates: Service Packs & Fixes</a></li>
-						<li><a href="#1">Install, Upgrade, & Activate</a></li>
-						<li><a href="#1">Regular Drivers</a></li>
-						<li><a href="#1">Hardware Drivers</a></li>
-					</ul>
-
-					<ul class="link-list">
-						<li class="link-list-heading">Security</li>
-						<li><a href="#1">Security Home</a></li>
-						<li><a href="#1">Security Essentials</a></li>
-						<li><a href="#1">Protecting Your Data</a></li>
-						<li><a href="#1">Securing Your Browser</a></li>
-					</ul>
-				</li>
-
-				<li class="col-sm-4">
-					<ul class="link-list">
-						<li class="link-list-heading">By Audience</li>
-						<li><a href="#1">For Home Users</a></li>
-						<li><a href="#1">For Small Business</a></li>
-						<li><a href="#1">For IT Professionals</a></li>
-						<li><a href="#1">For Developers</a></li>
-					</ul>
-				</li>
-			</ul>
+				<div class="col-sm-4">
+					<div class="dropdown-header">By Audience</div>
+					<a class="dropdown-item" href="#1">For Home Users</a>
+					<a class="dropdown-item" href="#1">For Small Business</a>
+					<a class="dropdown-item" href="#1">For IT Professionals</a>
+					<a class="dropdown-item" href="#1">For Developers</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -167,58 +151,42 @@ section: Components
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse2">
-	<pre><code>```<div class="dropdown dropdown-wide">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        Dropdown <span class="caret"></span>
-    </a>
+	<pre><code>```<div class="dropdown-wide dropdown-wide-container">
+    <div class="dropdown-menu">
+        <div class="col-sm-4">
+            <div class="dropdown-header">By Resource</div>
+            <a class="dropdown-item" href="#1">Support Home</a>
+            <a class="disabled dropdown-item" href="#1">Disabled Link</a>
+            <a class="dropdown-item" href="#1">Chat or Call</a>
+            <div class="dropdown-header">By Product</div>
+            <a class="active dropdown-item" href="#1">Developing for the Platform</a>
+            <a class="dropdown-item" href="#1">Mastering Fundamentals</a>
+            <a class="dropdown-item" href="#1">Styling with Themes</a>
+            <a class="dropdown-item" href="#1">Managing Content</a>
+        </div>
 
-    <ul class="dropdown-menu">
-        <li class="col-sm-4">
-            <ul class="link-list">
-                <li class="link-list-heading">By Resource</li>
-                <li><a href="#1">Support Home</a></li>
-                <li class="disabled"><a href="#1">Ask the Experts</a></li>
-                <li><a href="#1">Chat or Call</a></li>
-            </ul>
+        <div class="col-sm-4">
+            <div class="dropdown-header">Popular Picks</div>
+            <a class="dropdown-item" href="#1">Error Messages</a>
+            <a class="dropdown-item" href="#1">Updates: Service Packs & Fixes</a>
+            <a class="dropdown-item" href="#1">Install, Upgrade, & Activate</a>
+            <a class="dropdown-item" href="#1">Regular Drivers</a>
+            <a class="dropdown-item" href="#1">Hardware Drivers</a>
+            <div class="dropdown-header">Security</div>
+            <a class="dropdown-item" href="#1">Security Home</a>
+            <a class="dropdown-item" href="#1">Security Essentials</a>
+            <a class="dropdown-item" href="#1">Protecting Your Data</a>
+            <a class="dropdown-item" href="#1">Securing Your Browser</a>
+        </div>
 
-            <ul class="link-list">
-                <li class="link-list-heading">By Product</li>
-                <li><a href="#1">Developing for the Platform</a></li>
-                <li><a href="#1">Mastering Fundamentals</a></li>
-                <li><a href="#1">Styling with Themes</a></li>
-                <li><a href="#1">Managing Content</a></li>
-            </ul>
-        </li>
-
-        <li class="col-sm-4">
-            <ul class="link-list">
-                <li class="link-list-heading">Popular Picks</li>
-                <li><a href="#1">Error Messages</a></li>
-                <li><a href="#1">Updates: Service Packs & Fixes</a></li>
-                <li><a href="#1">Install, Upgrade, & Activate</a></li>
-                <li><a href="#1">Regular Drivers</a></li>
-                <li><a href="#1">Hardware Drivers</a></li>
-            </ul>
-
-            <ul class="link-list">
-                <li class="link-list-heading">Security</li>
-                <li><a href="#1">Security Home</a></li>
-                <li><a href="#1">Security Essentials</a></li>
-                <li><a href="#1">Protecting Your Data</a></li>
-                <li><a href="#1">Securing Your Browser</a></li>
-            </ul>
-        </li>
-
-        <li class="col-sm-4">
-            <ul class="link-list">
-                <li class="link-list-heading">By Audience</li>
-                <li><a href="#1">For Home Users</a></li>
-                <li><a href="#1">For Small Business</a></li>
-                <li><a href="#1">For IT Professionals</a></li>
-                <li><a href="#1">For Developers</a></li>
-            </ul>
-        </li>
-    </ul>
+        <div class="col-sm-4">
+            <div class="dropdown-header">By Audience</div>
+            <a class="dropdown-item" href="#1">For Home Users</a>
+            <a class="dropdown-item" href="#1">For Small Business</a>
+            <a class="dropdown-item" href="#1">For IT Professionals</a>
+            <a class="dropdown-item" href="#1">For Developers</a>
+        </div>
+    </div>
 </div>```</code></pre>
 </div>
 
@@ -231,90 +199,48 @@ section: Components
 		</blockquote>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Default <span class="icon-caret-down"></span></button>
-			<ul class="dropdown-menu">
-				<li class="dropdown-header">Dropdown Header</li>
-				<li><a href="#">Action</a></li>
-				<li class="disabled"><a href="#">Disabled</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Scope</a></li>
-			</ul>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Default <span class="icon-caret-down"></span></button>
+			<div class="dropdown-menu">
+				<div class="dropdown-header">Dropdown Header</div>
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="disabled dropdown-item" href="#">Disabled</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Scope</a>
+			</div>
 		</div>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Right <span class="icon-caret-down"></span></button>
-			<ul class="dropdown-menu dropdown-menu-right">
-				<li class="dropdown-header">Dropdown Header</li>
-				<li><a href="#">Action</a></li>
-				<li class="disabled"><a href="#">Disabled</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Scope</a></li>
-			</ul>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Right <span class="icon-caret-down"></span></button>
+			<div class="dropdown-menu dropdown-menu-right">
+				<div class="dropdown-header">Dropdown Header</div>
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="disabled dropdown-item" href="#">Disabled</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Scope</a>
+			</div>
 		</div>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Top <span class="icon-caret-up"></span></button>
-			<ul class="dropdown-menu dropdown-menu-top">
-				<li class="dropdown-header">Dropdown Header</li>
-				<li><a href="#">Action</a></li>
-				<li class="disabled"><a href="#">Disabled</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Scope</a></li>
-			</ul>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Top <span class="icon-caret-up"></span></button>
+			<div class="dropdown-menu dropdown-menu-top">
+				<div class="dropdown-header">Dropdown Header</div>
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="disabled dropdown-item" href="#">Disabled</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Scope</a>
+			</div>
 		</div>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Top Right <span class="icon-caret-up"></span></button>
-			<ul class="dropdown-menu dropdown-menu-top-right">
-				<li class="dropdown-header">Dropdown Header</li>
-				<li><a href="#">Action</a></li>
-				<li class="disabled"><a href="#">Disabled</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Scope</a></li>
-			</ul>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Top Right <span class="icon-caret-up"></span></button>
+			<div class="dropdown-menu dropdown-menu-top-right">
+				<div class="dropdown-header">Dropdown Header</div>
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="disabled dropdown-item" href="#">Disabled</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Scope</a>
+			</div>
 		</div>
-
-<div class="uxgl-toggle-code" style="margin-top:15px;">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code class="html">```<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        Default <span class="icon-caret-down"></span>
-    </button>
-    <ul class="dropdown-menu">
-        ...
-    </ul>
-</div>
-
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        Right <span class="icon-caret-down"></span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-right">
-      ...
-    </ul>
-</div>
-
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        Top <span class="icon-caret-up"></span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-top">
-        ...
-    </ul>
-</div>
-
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        Top Right <span class="icon-caret-up"></span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-top-right">
-        ...
-    </ul>
-</div>```</code></pre>
-</div>
-
 	</div>
 </div>
 
@@ -325,68 +251,66 @@ section: Components
 		</blockquote>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Right Side <span class="icon-caret-right"></span></button>
-			<ul class="dropdown-menu dropdown-menu-right-side">
-				<li class="dropdown-header">Dropdown Header</li>
-				<li><a href="#">Action</a></li>
-				<li class="disabled"><a href="#">Disabled</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Scope</a></li>
-			</ul>
-		</div>
-
-		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side</button>
-			<ul class="dropdown-menu dropdown-menu-left-side">
-				<li class="dropdown-header">Dropdown Header</li>
-				<li>
-					<ul class="inline-scroller">
-						<li><a href="#">Action</a></li>
-						<li class="disabled"><a href="#">Disabled</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-
-		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Right Side Bottom <span class="icon-caret-right"></span></button>
-			<div class="dropdown-menu dropdown-menu-right-side-bottom">
-				<ul class="inline-scroller">
-					<li class="dropdown-header">Dropdown Header</li>
-					<li><a href="#">Action</a></li>
-					<li class="disabled"><a href="#">Disabled</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
-				</ul>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Right Side <span class="icon-caret-right"></span></button>
+			<div class="dropdown-menu dropdown-menu-right-side">
+				<div class="dropdown-header">Dropdown Header</div>
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="disabled dropdown-item" href="#">Disabled</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Scope</a>
 			</div>
 		</div>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side Bottom</button>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side</button>
+			<div class="dropdown-menu dropdown-menu-left-side">
+				<div class="dropdown-header">Dropdown Header</div>
+				<div class="inline-scroller">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="disabled dropdown-item" href="#">Disabled</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Right Side Bottom <span class="icon-caret-right"></span></button>
+			<div class="dropdown-menu dropdown-menu-right-side-bottom">
+				<div class="inline-scroller">
+					<div class="dropdown-header">Dropdown Header</div>
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="disabled dropdown-item" href="#">Disabled</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="dropdown" style="display: inline-block;">
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side Bottom</button>
 			<div class="dropdown-menu dropdown-menu-left-side-bottom">
 				<ul class="inline-scroller">
-					<li class="dropdown-header">Dropdown Header</li>
-					<li><a href="#">Action</a></li>
-					<li class="disabled"><a href="#">Disabled</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
-					<li><a href="#">Scope</a></li>
+					<div class="dropdown-header">Dropdown Header</div>
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="disabled dropdown-item" href="#">Disabled</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
 				</ul>
 			</div>
 		</div>
@@ -396,7 +320,7 @@ section: Components
 </div>
 <div class="collapse" id="codeCollapse4">
 	<pre><code class="html">```<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+    <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
         Right Side <span class="icon-caret-right"></span>
     </button>
     <ul class="dropdown-menu dropdown-menu-right-side">
@@ -405,7 +329,7 @@ section: Components
 </div>
 
 <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+    <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
         <span class="icon-caret-left"></span> Left Side
     </button>
     <ul class="dropdown-menu dropdown-menu-left-side">
@@ -414,7 +338,7 @@ section: Components
 </div>
 
 <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+    <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
         Right Side Bottom <span class="icon-caret-right"></span>
     </button>
     <div class="dropdown-menu dropdown-menu-right-side-bottom">
@@ -423,7 +347,7 @@ section: Components
 </div>
 
 <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+    <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
         <span class="icon-caret-left"></span> Left Side Bottom
     </button>
     <div class="dropdown-menu dropdown-menu-left-side-bottom">
@@ -444,124 +368,55 @@ section: Components
 		</blockquote>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Center <span class="icon-caret-down"></span></button>
-			<ul class="dropdown-menu dropdown-menu-center">
-				<li class="dropdown-header">dropdown-menu-center</li>
-				<li><a href="#">Action</a></li>
-				<li class="disabled"><a href="#">Disabled</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Scope</a></li>
-			</ul>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Center <span class="icon-caret-down"></span></button>
+			<div class="dropdown-menu dropdown-menu-center">
+				<div class="dropdown-header">dropdown-menu-center</div>
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="disabled dropdown-item" href="#">Disabled</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Scope</a>
+			</div>
 		</div>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Top Center <span class="icon-caret-up"></span></button>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Top Center <span class="icon-caret-up"></span></button>
 			<ul class="dropdown-menu dropdown-menu-top-center">
-				<li class="dropdown-header">dropdown-menu-top-center</li>
-				<li><a href="#">Action</a></li>
-				<li class="disabled"><a href="#">Disabled</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Scope</a></li>
+				<div class="dropdown-header">dropdown-menu-top-center</div>
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="disabled dropdown-item" href="#">Disabled</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Scope</a>
 			</ul>
 		</div>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side Middle</button>
-			<ul class="dropdown-menu dropdown-menu-left-side-middle">
-				<li class="dropdown-header">Dropdown Header</li>
-				<li>
-					<ul class="inline-scroller">
-						<li><a href="#">Action</a></li>
-						<li class="disabled"><a href="#">Disabled</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-						<li><a href="#">Scope</a></li>
-					</ul>
-				</li>
-			</ul>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button"><span class="icon-caret-left"></span> Left Side Middle</button>
+			<div class="dropdown-menu dropdown-menu-left-side-middle">
+				<div class="dropdown-header">Dropdown Header</div>
+				<div class="inline-scroller">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="disabled dropdown-item" href="#">Disabled</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+					<a class="dropdown-item" href="#">Scope</a>
+				</div>
+			</div>
 		</div>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Right Side Middle <span class="icon-caret-right"></span></button>
-			<ul class="dropdown-menu dropdown-menu-right-side-middle">
-				<li class="dropdown-header">Dropdown Header</li>
-				<li><a href="#">Action</a></li>
-				<li class="disabled"><a href="#">Disabled</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Scope</a></li>
-			</ul>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Right Side Middle <span class="icon-caret-right"></span></button>
+			<div class="dropdown-menu dropdown-menu-right-side-middle">
+				<div class="dropdown-header">Dropdown Header</div>
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="disabled dropdown-item" href="#">Disabled</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Scope</a>
+			</div>
 		</div>
-
-<div class="uxgl-toggle-code" style="margin-top:15px;">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse5">
-	<pre><code class="html">```<div class="dropdown" style="display: inline-block;">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        Center <span class="icon-caret-down"></span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-center">
-        <li class="dropdown-header">dropdown-menu-center</li>
-        <li><a href="#">Action</a></li>
-        <li class="disabled"><a href="#">Disabled</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Scope</a></li>
-    </ul>
-</div>
-
-<div class="dropdown" style="display: inline-block;">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        Top Center <span class="icon-caret-up"></span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-top-center">
-        <li class="dropdown-header">dropdown-menu-top-center</li>
-        <li><a href="#">Action</a></li>
-        <li class="disabled"><a href="#">Disabled</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Scope</a></li>
-    </ul>
-</div>
-
-<div class="dropdown" style="display: inline-block;">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        <span class="icon-caret-left"></span> Left Side Middle
-    </button>
-    <ul class="dropdown-menu dropdown-menu-left-side-middle">
-        <li class="dropdown-header">Dropdown Header</li>
-        <li>
-            <ul class="inline-scroller">
-                <li><a href="#">Action</a></li>
-                <li class="disabled"><a href="#">Disabled</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Scope</a></li>
-                <li><a href="#">Scope</a></li>
-                <li><a href="#">Scope</a></li>
-                <li><a href="#">Scope</a></li>
-                <li><a href="#">Scope</a></li>
-                <li><a href="#">Scope</a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
-
-<div class="dropdown" style="display: inline-block;">
-    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        Right Side Middle <span class="icon-caret-right"></span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-right-side-middle">
-        <li class="dropdown-header">Dropdown Header</li>
-        <li><a href="#">Action</a></li>
-        <li class="disabled"><a href="#">Disabled</a></li>
-        <li class="divider"></li>
-        <li><a href="#">Scope</a></li>
-    </ul>
-</div>```</code></pre>
-</div>
-
 	</div>
 </div>
 
@@ -736,7 +591,7 @@ section: Components
 						<input class="form-control" type="text" />
 					</div>
 
-					<button class="btn btn-default" type="submit">Submit</button>
+					<button class="btn btn-secondary" type="submit">Submit</button>
 				</form>
 
 				<ul class="nav navbar-nav navbar-right">
