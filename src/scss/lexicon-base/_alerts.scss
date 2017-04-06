@@ -29,19 +29,43 @@
 	// Alert Skins
 
 	.alert-danger {
-		@include color-alert-text($alert-danger-text, $alert-danger-text-bold);
+		color: $alert-danger-text;
+
+		.alert-link,
+		.close,
+		.lead {
+			color: $alert-danger-text-bold;
+		}
 	}
 
 	.alert-info {
-		@include color-alert-text($alert-info-text, $alert-info-text-bold);
+		color: $alert-info-text;
+
+		.alert-link,
+		.close,
+		.lead {
+			color: $alert-info-text-bold;
+		}
 	}
 
 	.alert-success {
-		@include color-alert-text($alert-success-text, $alert-success-text-bold);
+		color: $alert-success-text;
+
+		.alert-link,
+		.close,
+		.lead {
+			color: $alert-success-text-bold;
+		}
 	}
 
 	.alert-warning {
-		@include color-alert-text($alert-warning-text, $alert-warning-text-bold);
+		color: $alert-warning-text;
+
+		.alert-link,
+		.close,
+		.lead {
+			color: $alert-warning-text-bold;
+		}
 	}
 }
 
