@@ -28,22 +28,6 @@
 
 	// Alert Skins
 
-	.alert-default {
-		background-color: $alert-default-bg;
-		border-color: $alert-default-border;
-		color: $alert-default-text;
-
-		hr {
-			border-top-color: $alert-default-border;
-		}
-
-		.alert-link,
-		.close,
-		.lead {
-			color: $alert-default-text-bold;
-		}
-	}
-
 	.alert-danger {
 		@include color-alert-text($alert-danger-text, $alert-danger-text-bold);
 	}
