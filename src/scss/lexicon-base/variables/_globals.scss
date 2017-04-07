@@ -4,5 +4,5 @@ $enable-ie9-compatibility: false !default;
 $brand-secondary: #777 !default;
 
 $state-secondary-bg: $brand-secondary !default;
-$state-secondary-border: darken(adjust-hue($state-secondary-bg, -10), 5%) !default;
+$state-secondary-border-color: darken(adjust-hue($state-secondary-bg, -10), 5%) !default;
 $state-secondary-text: $gray-dark !default;
