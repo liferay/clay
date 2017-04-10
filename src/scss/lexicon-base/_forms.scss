@@ -1,3 +1,14 @@
+// Remove this
+@mixin placeholder($color: $input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
 input[type="checkbox"],
 input[type="radio"] {
 	cursor: pointer;
@@ -18,19 +29,19 @@ label,
 	font-weight: $input-label-font-weight;
 	margin-bottom: $input-label-margin-bottom;
 
-	@if (variable-exists(input-label-desktop-font-size)) {
+	@if (variable-exists(input-label-font-size-desktop)) {
 		@include media-breakpoint-up(md) {
-			font-size: $input-label-desktop-font-size;
+			font-size: $input-label-font-size-desktop;
 		}
 	}
 
 	&.focus {
-		color: $input-label-focus-color;
+		color: $input-label-color-focus;
 	}
 
-	.lexicon-icon {
-		@extend %scale-lexicon-icon;
-	}
+	// .lexicon-icon {
+	// 	@extend %scale-lexicon-icon;
+	// }
 
 	.reference-mark {
 		@if ($input-label-reference-mark-spacer > 0) {
@@ -67,7 +78,7 @@ label,
 		}
 
 		&:focus {
-			background-color: $input-select-focus-bg;
+			background-color: $input-select-bg-focus;
 			background-image: $input-select-icon-focus;
 			background-image: none \9;
 		}
@@ -80,24 +91,19 @@ label,
 
 .form-control {
 	border-width: $input-border-width;
-	box-shadow: $input-box-shadow;
 	font-size: $input-font-size;
-	padding: $input-padding-vertical $input-padding-horizontal;
+	padding: $input-padding-y $input-padding-x;
 
 	@if (variable-exists(atlas-theme)) {
-		height: $input-mobile-height-base;
+		height: $input-height-mobile;
 
 		@include media-breakpoint-up(md) {
-			font-size: $input-desktop-font-size;
-			height: $input-height-base;
+			font-size: $input-font-size-desktop;
+			height: $input-height;
 		}
 	}
 
 	&:focus {
-		background-color: $input-bg-focus;
-		box-shadow: $input-box-shadow-focus;
-		color: $input-color-focus;
-
 		@include placeholder($input-color-placeholder-focus);
 	}
 
@@ -133,7 +139,7 @@ fieldset[disabled] label {
 .form-control {
 	fieldset[disabled] &,
 	&[disabled] {
-		border-color: $input-border-disabled;
+		border-color: $input-border-color-disabled;
 		color: $input-color-disabled;
 		opacity: $input-opacity-disabled;
 
@@ -151,7 +157,7 @@ fieldset[disabled] label {
 
 .form-control[readonly] {
 	background-color: $input-readonly-bg;
-	border-color: $input-readonly-border;
+	border-color: $input-readonly-border-color;
 	color: $input-readonly-color;
 	cursor: $input-readonly-cursor;
 }
@@ -161,20 +167,20 @@ fieldset[disabled] label {
 
 	.form-control {
 		&.input-lg {
-			font-size: $input-font-size-large;
-			height: $input-mobile-height-large;
+			font-size: $input-font-size-lg;
+			height: $input-height-lg-mobile;
 
 			@include media-breakpoint-up(md) {
-				height: $input-height-large;
+				height: $input-height-lg;
 			}
 		}
 
 		&.input-sm {
-			font-size: $input-font-size-small;
-			height: $input-mobile-height-small;
+			font-size: $input-font-size-sm;
+			height: $input-height-sm-mobile;
 
 			@include media-breakpoint-up(md) {
-				height: $input-height-small;
+				height: $input-height-sm;
 			}
 		}
 	}
@@ -244,10 +250,10 @@ fieldset[disabled] label {
 	// Form Control Feedback
 
 	.form-control-feedback {
-		@include monospace($input-mobile-height-base);
+		@include monospace($input-height-mobile);
 
 		@include media-breakpoint-up(md) {
-			@include monospace($input-height-base);
+			@include monospace($input-height);
 		}
 	}
 }
