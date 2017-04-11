@@ -1,8 +1,7 @@
 .card,
 .card-horizontal {
 	background-color: $card-bg;
-	border-color: $card-fallback-border;
-	border-color: $card-border;
+	border-color: $card-border-color;
 	border-style: $card-border-style;
 	border-width: $card-border-width;
 
@@ -224,7 +223,7 @@
 	margin-top: 0;
 
 	label {
-		color: $text-color;
+		color: $body-color;
 		display: inline;
 		padding-left: 0;
 	}
