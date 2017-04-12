@@ -19,7 +19,7 @@
 				margin-left: 2px;
 				margin-right: 0;
 
-				@include text-overflow();
+				@include text-truncate;
 			}
 
 			> .dropdown-menu {
