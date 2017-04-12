@@ -1,7 +1,7 @@
-$sidebar-padding-bottom: 24px !default;
-$sidebar-padding-left: 24px !default;
-$sidebar-padding-right: 24px !default;
-$sidebar-padding-top: 24px !default;
+$sidebar-padding-bottom: 24px !default; // 24px
+$sidebar-padding-left: 24px !default; // 24px
+$sidebar-padding-right: 24px !default; // 24px
+$sidebar-padding-top: 24px !default; // 24px
 
 $sidebar-padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left !default;
 
@@ -10,22 +10,22 @@ $sidebar-navbar-gutter-right: lx-sidebar-navbar-gutter($sidebar-padding-right) !
 
 // Skin
 
-$sidebar-default-bg: $navbar-default-bg !default;
-$sidebar-default-border: $navbar-default-border !default;
-$sidebar-default-color: $navbar-default-color !default;
-$sidebar-default-panel-bg: $navbar-default-link-active-bg !default;
+$sidebar-default-bg: darken($body-bg, 3%) !default;
+$sidebar-default-border: darken($sidebar-default-bg, 6.5%) !default;
+$sidebar-default-color: #777 !default;
+$sidebar-default-panel-bg: darken($sidebar-default-bg, 6.5%) !default;
 
-$sidebar-default-header-actions-link-color: $navbar-default-link-color !default;
-$sidebar-default-header-actions-link-hover-color: $navbar-default-link-hover-color !default;
-$sidebar-default-header-title-color: $navbar-default-link-color !default;
-$sidebar-default-header-title-hover-color: $navbar-default-link-hover-color !default;
+$sidebar-default-header-actions-link-color: #777 !default;
+$sidebar-default-header-actions-link-hover-color: #333 !default;
+$sidebar-default-header-title-color: #777 !default;
+$sidebar-default-header-title-hover-color: #333 !default;
 
-$sidebar-inverse-bg: $navbar-inverse-bg !default;
-$sidebar-inverse-border: $navbar-inverse-border !default;
-$sidebar-inverse-color: $navbar-inverse-color !default;
-$sidebar-inverse-panel-bg: $navbar-inverse-link-active-bg !default;
+$sidebar-inverse-bg: #222 !default;
+$sidebar-inverse-border: darken($sidebar-inverse-bg, 10%) !default;
+$sidebar-inverse-color: lighten($gray-light, 15%) !default;
+$sidebar-inverse-panel-bg: darken($sidebar-inverse-bg, 10%) !default;
 
-$sidebar-inverse-header-actions-link-color: $navbar-inverse-link-color !default;
-$sidebar-inverse-header-actions-link-hover-color: $navbar-inverse-link-hover-color !default;
-$sidebar-inverse-header-title-color: $navbar-inverse-link-color !default;
-$sidebar-inverse-header-title-hover-color: $navbar-inverse-link-hover-color !default;
+$sidebar-inverse-header-actions-link-color: lighten($gray-light, 15%) !default;
+$sidebar-inverse-header-actions-link-hover-color: #fff !default;
+$sidebar-inverse-header-title-color: lighten($gray-light, 15%) !default;
+$sidebar-inverse-header-title-hover-color: #fff !default;

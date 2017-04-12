@@ -149,13 +149,8 @@
 		.navbar-collapse .dropdown-menu > li > a,
 		.navbar-collapse > .navbar-nav > li > a {
 			@include media-breakpoint-down(sm) {
-				@if ($sidebar-padding-left > $navbar-padding-horizontal) {
-					padding-left: $sidebar-padding-left;
-				}
-
-				@if ($sidebar-padding-right > $navbar-padding-horizontal) {
-					padding-right: $sidebar-padding-right;
-				}
+				padding-left: $sidebar-padding-left;
+				padding-right: $sidebar-padding-right;
 			}
 		}
 
@@ -285,13 +280,13 @@
 
 	@if (variable-exists(atlas-theme)) {
 		input {
-			@include placeholder($brand-default);
+			@include placeholder($brand-secondary);
 		}
 
 		.form-control {
 			background-color: $sidebar-inverse-input-bg;
 			border-width: 0;
-			color: $brand-default;
+			color: $brand-secondary;
 			padding: 8px 12px;
 		}
 	}
