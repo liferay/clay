@@ -60,7 +60,7 @@
 .toolbar-group-expand-text {
 	line-height: $toolbar-group-height;
 
-	@include text-overflow();
+	@include text-truncate;
 }
 
 .toolbar-group-content {
