@@ -21,14 +21,14 @@
 		text-align: right;
 
 		> .btn {
-			@if ($btn-border-width > 1) {
-				margin-right: -($btn-border-width);
+			@if ($input-btn-border-width > 1) {
+				margin-right: -($input-btn-border-width);
 			}
 		}
 	}
 
 	&:last-child > .btn {
-		margin-left: -$btn-border-width;
+		margin-left: -$input-btn-border-width;
 	}
 }
 
@@ -87,7 +87,7 @@
 	max-width: 150px;
 	overflow-x: auto;
 	overflow-y: hidden;
-	padding-right: $btn-border-width;
+	padding-right: $input-btn-border-width;
 
 	@include media-breakpoint-up(md) {
 		max-width: 300px;
@@ -119,7 +119,7 @@
 
 	> .btn {
 		border-radius: 0;
-		margin-right: -($btn-border-width);
+		margin-right: -($input-btn-border-width);
 	}
 }
 
