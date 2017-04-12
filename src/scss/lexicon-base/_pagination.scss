@@ -16,12 +16,12 @@
 	> li {
 		> a,
 		> span {
-			border: $pagination-border-width solid $pagination-border;
+			border: $pagination-border-width solid $pagination-border-color;
 			margin-left: -$pagination-border-width;
 			padding: $pagination-item-padding;
 
 			@if (variable-exists(atlas-theme)) {
-				border: $pagination-border-width solid $pagination-border;
+				border: $pagination-border-width solid $pagination-border-color;
 				border-radius: $pagination-border-radius;
 				display: inline-block;
 				float: none;
