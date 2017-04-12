@@ -6,13 +6,13 @@ $sticker-square-border-radius: 0 !default;
 
 $sticker-color: $label-color !default;
 $sticker-font-size: $label-font-size !default;
-$sticker-gutter-width: $grid-gutter-width / 2 !default;
+$sticker-gutter-width: $grid-gutter-width-base / 2 !default;
 $sticker-monospaced-size: $icon-monospaced-size !default; // 32px
 
-$sticker-lg-font-size: $label-lg-font-size !default;
+$sticker-lg-font-size: $label-font-size-lg !default;
 $sticker-lg-monospaced-size: ceil($sticker-monospaced-size * 1.375) !default; // 44px
 
-$sticker-sm-font-size: $label-sm-font-size !default;
+$sticker-sm-font-size: $label-font-size-sm !default;
 $sticker-sm-monospaced-size: ceil($sticker-monospaced-size * 0.6875) !default; // 22px
 
 // Skin
