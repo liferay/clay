@@ -30,7 +30,8 @@ input.toggle-switch {
 		position: relative;
 		text-indent: 0;
 
-		@include user-select(none);
+		-ms-user-select: none;
+		user-select: none;
 
 		&:after {
 			background-color: $toggle-switch-button-bg;

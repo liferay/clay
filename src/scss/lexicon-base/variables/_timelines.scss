@@ -1,4 +1,4 @@
-$timeline-border: $panel-inner-border !default;
+$timeline-border: #DDD !default;
 $timeline-border-width: 2px !default;
 
 $timeline-border-modifier: ceil($timeline-border-width / 2);
@@ -12,7 +12,7 @@ $timeline-icon-border-radius: 50% !default;
 $timeline-icon-border-width: 2px !default;
 $timeline-icon-size: 10px !default;
 
-$timeline-increment-label-color: $text-color !default;
+$timeline-increment-label-color: $body-color !default;
 
 // Sizes
 
