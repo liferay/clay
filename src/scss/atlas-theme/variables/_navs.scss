@@ -1,11 +1,11 @@
 // Structure
 
-$nav-link-padding-horizontal: 16px !default;
-$nav-link-padding-vertical: 9px !default;
+$nav-link-padding-x: 1rem !default; // 16px
+$nav-link-padding-y: 0.5625rem !default; // 9px
 
 // Skin
 
-$nav-heading-color: $brand-default !default;
+$nav-heading-color: $brand-secondary !default;
 
 $nav-link-color: #2B4259 !default;
 
@@ -17,4 +17,4 @@ $nav-disabled-link-hover-color: $nav-disabled-link-color !default;
 $nav-collapse-icon-closed: "\f0da" !default;
 $nav-collapse-icon-open: "\f0d7" !default;
 
-$nav-nested-padding-horizontal: 12px !default;
+$nav-nested-padding-horizontal: 0.75rem !default; // 12px

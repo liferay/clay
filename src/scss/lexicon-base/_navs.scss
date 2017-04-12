@@ -9,7 +9,7 @@
 .nav-heading > a,
 .nav-heading > span {
 	display: block;
-	padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
+	padding: $nav-link-padding-y $nav-link-padding-x;
 	position: relative;
 }
 
@@ -45,7 +45,7 @@
 	> li > a {
 		@extend %nav-equal-height-item;
 
-		padding: 0 $nav-link-padding-horizontal;
+		padding: 0 $nav-link-padding-x;
 	}
 
 	.nav > li > a {
@@ -71,7 +71,7 @@
 		text-decoration: none;
 
 		&:first-child {
-			padding-left: $nav-link-padding-horizontal;
+			padding-left: $nav-link-padding-x;
 		}
 	}
 
