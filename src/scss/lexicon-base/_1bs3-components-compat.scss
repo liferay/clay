@@ -160,6 +160,10 @@ label {
   @extend .form-control-sm;
 }
 
+fieldset {
+  width: 100%;
+}
+
 // Form Validation
 
 .help-block {
