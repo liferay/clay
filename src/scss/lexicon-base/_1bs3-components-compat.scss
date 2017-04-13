@@ -331,6 +331,12 @@ a.label {
   @include label-variant($label-danger-bg);
 }
 
+// Modals
+
+.modal-header {
+  display: block;
+}
+
 // Nav
 
 .nav {

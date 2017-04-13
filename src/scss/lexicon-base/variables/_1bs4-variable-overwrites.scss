@@ -31,4 +31,6 @@ $input-height:                   (($font-size-base * $input-line-height) + ($inp
 $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2)) !default;
 $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2)) !default;
 
+$modal-md: none !default;
+
 $nav-link-padding-y:            8px !default;
