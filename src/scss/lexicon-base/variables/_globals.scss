@@ -1,5 +1,5 @@
-$brand-secondary: #777 !default;
+$brand-secondary: $gray-lightest !default; // #F7F7F9
 
-$state-secondary-bg: $brand-secondary !default;
-$state-secondary-border-color: darken(adjust-hue($state-secondary-bg, -10), 5%) !default;
-$state-secondary-text: $gray-dark !default;
+$state-secondary-bg: $gray-lightest !default; // #F7F7F9
+$state-secondary-border-color: darken($state-secondary-bg, 5%) !default; // #E8E8EE
+$state-secondary-text: $gray-dark !default; // #292B2C
