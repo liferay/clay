@@ -1,17 +1,17 @@
 .btn {
 	border-width: $input-btn-border-width;
 
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		opacity: $btn-disabled-opacity;
+	}
+
 	@if (variable-exists(atlas-theme)) {
 		@include button-size($input-btn-padding-y, $input-btn-padding-x, $input-btn-font-size, $input-btn-line-height, $btn-border-radius);
 
 		@include media-breakpoint-up(md) {
 			@include button-size($input-btn-padding-y-desktop, $input-btn-padding-x-desktop, $input-btn-font-size-desktop, $input-btn-line-height, $btn-border-radius);
-		}
-
-		&.disabled,
-		&[disabled],
-		fieldset[disabled] & {
-			opacity: $btn-disabled-opacity;
 		}
 	}
 }
