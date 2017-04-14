@@ -51,12 +51,12 @@ section: Components
 	<div class="col-md-12">
 		<h3>Anchor Elements and Inputs as Buttons</h3>
 		<input class="btn btn-primary" type="button" value="Input" />
-		<a class="btn btn-secondary" href="#1">Anchor</a>
+		<a class="btn btn-secondary" href="#1" role="button">Anchor</a>
 		<input class="btn btn-info" type="submit" value="Submit" />
-		<a class="btn btn-success" href="#1">Anchor</a>
-		<a class="btn btn-warning" href="#1">Anchor</a>
-		<a class="btn btn-danger" href="#1">Anchor</a>
-		<a class="btn btn-link" href="#1">Anchor</a>
+		<a class="btn btn-success" href="#1" role="button">Anchor</a>
+		<a class="btn btn-warning" href="#1" role="button">Anchor</a>
+		<a class="btn btn-danger" href="#1" role="button">Anchor</a>
+		<a class="btn btn-link" href="#1" role="button">Anchor</a>
 	</div>
 </div>
 
@@ -372,8 +372,8 @@ section: Components
 			<div class="col-12">
 				<div class="lx-site-btn-action-column">
 					<h6>Lexicon SVG</h6>
-					<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
-						<svg class="icon-monospaced lexicon-icon">
+					<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;" role="button">
+						<svg class="icon-monospaced lexicon-icon lexicon-icon-plus">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
 						</svg>
 					</a>
@@ -381,7 +381,7 @@ section: Components
 
 				<div class="lx-site-btn-action-column">
 					<h6>Font Awesome</h6>
-					<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;">
+					<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;" role="button">
 						<span class="icon-plus"></span>
 					</a>
 				</div>
@@ -394,7 +394,7 @@ section: Components
 
 		<div class="btn-action-secondary dropdown">
 			<button class="btn btn-primary" data-toggle="dropdown" type="button">
-				<svg class="icon-monospaced lexicon-icon">
+				<svg class="icon-monospaced lexicon-icon lexicon-icon-plus">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
 				</svg>
 			</button>
@@ -407,7 +407,7 @@ section: Components
 
 		<div class="btn-action-secondary btn-bottom-right dropdown">
 			<button class="btn btn-primary" data-toggle="dropdown" type="button">
-				<svg class="icon-monospaced lexicon-icon">
+				<svg class="icon-monospaced lexicon-icon lexicon-icon-plus">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
 				</svg>
 			</button>
