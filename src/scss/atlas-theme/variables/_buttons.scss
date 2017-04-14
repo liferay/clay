@@ -45,6 +45,8 @@ $btn-action-border-radius: $border-radius !default;
 
 $btn-border-radius-lg: $border-radius !default;
 
+$btn-transition: background 0.2s ease-in-out, border 0.2s ease-in-out, box-shadow 0.2s ease-in-out !default;
+
 $btn-primary-color: #FFF !default;
 $btn-primary-bg: $brand-primary !default;
 $btn-primary-border: $btn-primary-bg !default;
