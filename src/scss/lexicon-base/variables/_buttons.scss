@@ -3,6 +3,54 @@ $btn-action-size: 34px !default;
 $btn-fixed-spacer-x: 20px !default;
 $btn-fixed-spacer-y: $btn-fixed-spacer-x !default;
 
+$btn-primary-hover-color: null !default;
+$btn-primary-hover-bg: null !default;
+$btn-primary-hover-border: null !default;
+$btn-primary-focus-box-shadow: null !default;
+$btn-primary-active-color: null !default;
+$btn-primary-active-bg: null !default;
+$btn-primary-active-border: null !default;
+
+$btn-secondary-hover-color: null !default;
+$btn-secondary-hover-bg: null !default;
+$btn-secondary-hover-border: null !default;
+$btn-secondary-focus-box-shadow: null !default;
+$btn-secondary-active-color: null !default;
+$btn-secondary-active-bg: null !default;
+$btn-secondary-active-border: null !default;
+
+$btn-success-hover-color: null !default;
+$btn-success-hover-bg: null !default;
+$btn-success-hover-border: null !default;
+$btn-success-focus-box-shadow: null !default;
+$btn-success-active-color: null !default;
+$btn-success-active-bg: null !default;
+$btn-success-active-border: null !default;
+
+$btn-info-hover-color: null !default;
+$btn-info-hover-bg: null !default;
+$btn-info-hover-border: null !default;
+$btn-info-focus-box-shadow: null !default;
+$btn-info-active-color: null !default;
+$btn-info-active-bg: null !default;
+$btn-info-active-border: null !default;
+
+$btn-warning-hover-color: null !default;
+$btn-warning-hover-bg: null !default;
+$btn-warning-hover-border: null !default;
+$btn-warning-focus-box-shadow: null !default;
+$btn-warning-active-color: null !default;
+$btn-warning-active-bg: null !default;
+$btn-warning-active-border: null !default;
+
+$btn-danger-hover-color: null !default;
+$btn-danger-hover-bg: null !default;
+$btn-danger-hover-border: null !default;
+$btn-danger-focus-box-shadow: null !default;
+$btn-danger-active-color: null !default;
+$btn-danger-active-bg: null !default;
+$btn-danger-active-border: null !default;
+
 $input-btn-border-width: 0.0625rem !default;
 
 $zindex-btn-action: 950 !default;
