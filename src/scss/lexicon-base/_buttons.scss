@@ -222,23 +222,6 @@
 			width: $btn-action-size-desktop;
 		}
 	}
-
-	// Font Awesome & Glyphicon
-
-	[class*="icon-"] {
-		line-height: $btn-action-size - ($input-btn-border-width * 2);
-
-		@if (variable-exists(btn-action-size-desktop)) {
-			@include media-breakpoint-up(md) {
-				line-height: $btn-action-size-desktop - ($input-btn-border-width * 2);
-			}
-		}
-	}
-
-	.glyphicon {
-		margin-left: 2px;
-		margin-top: -2px;
-	}
 }
 
 .btn-action .lexicon-icon {
