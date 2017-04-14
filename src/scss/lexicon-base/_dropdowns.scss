@@ -105,6 +105,12 @@
 }
 
 .dropdown-toggle {
+	@if ($enable-dropdown-caret == false) {
+		&:after {
+			content: normal;
+		}
+	}
+
 	&:focus {
 		text-decoration: none;
 	}
