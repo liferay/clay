@@ -86,7 +86,7 @@
 	}
 
 	.btn-sm {
-		@include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $input-btn-font-size-sm, $input-btn-line-height, $btn-border-radius-sm);
+		@include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $input-btn-font-size-sm, $input-btn-line-height, $btn-border-radius-sm);
 
 		@include media-breakpoint-up(md) {
 			@include button-size($input-btn-padding-y-sm-desktop, $input-btn-padding-x-sm-desktop, $input-btn-font-size-sm-desktop, $input-btn-line-height, $btn-border-radius-sm);
