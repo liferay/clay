@@ -8,11 +8,6 @@
 			@include button-size($input-btn-padding-y-desktop, $input-btn-padding-x-desktop, $input-btn-font-size-desktop, $input-btn-line-height, $btn-border-radius);
 		}
 
-		&:active,
-		&.active {
-			box-shadow: $btn-active-box-shadow;
-		}
-
 		&.disabled,
 		&[disabled],
 		fieldset[disabled] & {
