@@ -15,6 +15,10 @@ module.exports = function(gulp, plugins, _, config) {
 
 	var TEMP_PATH = path.join(process.cwd(), 'temp');
 
+	var BRANCH_DEV = '1.x-develop';
+
+	var BRANCH_RELEASE = '1.x';
+
 	var getGitRemote = function() {
 		if (!GIT_REMOTE) {
 			GIT_REMOTE = cmdPromise.resolve()
@@ -116,7 +120,7 @@ module.exports = function(gulp, plugins, _, config) {
 		function(done) {
 			var branchName = 'bower-staging-' + Math.random().toString(16).replace(/[^0-9a-fA-F]/g, '');
 			var browserCommitMessage = 'Browser files for v' + bumpedVersion;
-			var mergeCommitMessage = 'Merging master@v' + bumpedVersion + ' into develop';
+			var mergeCommitMessage = 'Merging ' + BRANCH_RELEASE + '@v' + bumpedVersion + ' into ' + BRANCH_DEV;
 			var rebuildCommitMessage = 'Rebuild v' + bumpedVersion;
 			var releaseCommitMessage = 'Release v' + bumpedVersion;
 			var tagMessage = 'Version ' + bumpedVersion;
@@ -132,10 +136,10 @@ module.exports = function(gulp, plugins, _, config) {
 			};
 
 			cmdPromise.resolve()
-				.git('checkout', 'develop')
+				.git('checkout', BRANCH_DEV)
 				.cmd('gulp', 'build:svg:scss-icons')
 				.git('status', '--porcelain', './src/scss/lexicon-base/mixins/_global-functions.scss').then(checkStatus('It appears that there are new icons. Please commit the modified Sass functions file.'))
-				.git('checkout', 'master')
+				.git('checkout', BRANCH_RELEASE)
 				.git('status', '--porcelain').then(checkStatus('working directory not clean, aborting'))
 				.then(getGitRemote)
 				.then(function(remote) {
@@ -146,7 +150,7 @@ module.exports = function(gulp, plugins, _, config) {
 						throw new Error('The tag ' + tagName + ' already exists. Type git tag -d ' + tagName + ' to remove it');
 					}
 				})
-				.git('rev-list', '--count', '--left-only', '@{u}...master').then(function(revCount) {
+				.git('rev-list', '--count', '--left-only', '@{u}...' + BRANCH_RELEASE).then(function(revCount) {
 					if (revCount.stdout !== '0') {
 						throw new Error('branch is not up to date, aborting');
 					}
@@ -171,12 +175,12 @@ module.exports = function(gulp, plugins, _, config) {
 				.git('add', '--force', 'release')
 				.git('commit', '-a', '-m', browserCommitMessage)
 				.git('tag', '-a', tagName, '-m', tagMessage)
-				.git('checkout', 'master')
+				.git('checkout', BRANCH_RELEASE)
 				.git('branch', '-D', branchName)
 				.git('checkout', tagName, '--', 'release')
 				.git('reset')
-				.git('checkout', 'develop')
-				.git('merge', 'master', '-m', mergeCommitMessage)
+				.git('checkout', BRANCH_DEV)
+				.git('merge', BRANCH_RELEASE, '-m', mergeCommitMessage)
 				.then(function() {
 					done();
 				});
@@ -189,7 +193,7 @@ module.exports = function(gulp, plugins, _, config) {
 			cmdPromise.resolve()
 				.then(getGitRemote)
 				.then(function(remote){
-					return cmdPromise.resolve().git('push', remote, '--tags', 'master', 'develop');
+					return cmdPromise.resolve().git('push', remote, '--tags', BRANCH_RELEASE, BRANCH_DEV);
 				})
 				.npm('run', 'deploy')
 				.then(function() {
