@@ -347,32 +347,36 @@ a.label {
   display: block;
 }
 
-// Nav
+// _navs.scss
 
-.nav {
-  display: block;
+.nav-stacked {
+  @extend .flex-column;
 }
 
-.nav-pills > li {
-  float: left;
+// .nav {
+//   display: block;
+// }
 
-  > a {
-    border-radius: $nav-pills-border-radius;
-  }
+// .nav-pills > li {
+//   float: left;
 
-  + li {
-    margin-left: 2px;
-  }
-}
+//   > a {
+//     border-radius: $nav-pills-border-radius;
+//   }
 
-.nav-stacked > li {
-  float: none;
+//   + li {
+//     margin-left: 2px;
+//   }
+// }
 
-  + li {
-    margin-left: 0;
-    margin-top: 2px;
-  }
-}
+// .nav-stacked > li {
+//   float: none;
+
+//   + li {
+//     margin-left: 0;
+//     margin-top: 2px;
+//   }
+// }
 
 // .nav-pills,
 // .nav-tabs {
@@ -455,26 +459,26 @@ a.label {
 //   }
 // }
 
-.navbar {
-  @include clearfix;
+// .navbar {
+//   @include clearfix;
 
-  display: block;
-  padding: 0;
-}
+//   display: block;
+//   padding: 0;
+// }
 
-.navbar-nav {
-  display: block;
+// .navbar-nav {
+//   display: block;
 
-  > li {
-    float: left;
-  }
-}
+//   > li {
+//     float: left;
+//   }
+// }
 
-.navbar-collapse {
-  @include media-breakpoint-up(md) {
-    display: block;
-  }
-}
+// .navbar-collapse {
+//   @include media-breakpoint-up(md) {
+//     display: block;
+//   }
+// }
 
 .navbar-default {
   background-color: $navbar-default-bg;
