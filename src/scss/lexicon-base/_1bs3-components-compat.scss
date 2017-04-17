@@ -348,8 +348,9 @@ a.label {
 
 // _navs.scss
 
+.nav,
 .nav-stacked {
-  @extend .flex-column;
+  flex-direction: column;
 }
 
 // _management-bar.scss
@@ -383,6 +384,10 @@ a.label {
 }
 
 // _nav-tabs.scss
+
+.nav-tabs {
+  flex-direction: row;
+}
 
 .nav-tabs > li {
   float: left;
