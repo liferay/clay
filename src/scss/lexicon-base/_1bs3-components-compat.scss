@@ -348,12 +348,48 @@ a.label {
 
 // _navs.scss
 
-.nav,
-.nav-stacked {
+.nav {
   flex-direction: column;
 }
 
+.nav-justified {
+  flex-direction: row;
+
+  > li {
+    flex: 1;
+  }
+}
+
+.nav-stacked {
+  @extend .flex-column;
+}
+
+.nav.nav-pills {
+  flex-direction: row;
+}
+
+.nav-pills > li > a {
+  @include border-radius($nav-pills-border-radius);
+}
+
+.nav-pills > li.active > a {
+  background-color: $nav-pills-active-link-hover-bg;
+  color: $nav-pills-active-link-hover-color;
+}
+
 // _management-bar.scss
+
+.management-bar-nav {
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+}
+
+.management-bar-no-collapse .management-bar-nav {
+  flex-direction: row;
+}
 
 // _navbars.scss
 
