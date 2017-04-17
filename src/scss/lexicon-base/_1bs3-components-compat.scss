@@ -1,4 +1,4 @@
-// Alerts
+// _alerts.scss
 
 @if (variable-exists(atlas-theme)) {
   .alert-mismissable,
@@ -9,7 +9,7 @@
   }
 }
 
-// Breadcrumbs
+// _breadcrumbs.scss
 
 .breadcrumb > li {
   float: left;
@@ -35,9 +35,8 @@
   text-decoration: none;
 }
 
-// Buttons
+// _buttons.scss
 
-// Renamed .btn-default to .btn-secondary
 .btn-default {
   @extend .btn-secondary;
 }
@@ -51,7 +50,7 @@
 	@include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
 }
 
-// Button Groups
+// _button-groups.scss
 
 .btn-group.dropdown {
   display: inline-flex;
@@ -63,7 +62,7 @@
   @extend .collapse.show;
 }
 
-// Dropdowns
+// _dropdowns.scss
 // Moved .caret to .dropdown-toggle:after in BS4
 .caret {
   display: inline-block;
@@ -98,13 +97,13 @@
   display: block;
 }
 
-// Figures
+// _figures.scss
 
 .figure {
   display: block;
 }
 
-// Forms
+// _forms.scss
 
 label {
   max-width: 100%;
@@ -164,7 +163,7 @@ fieldset {
   width: 100%;
 }
 
-// Form Validation
+// _form-validation.scss
 
 .help-block {
   display: block; // account for any element using help-block
@@ -202,7 +201,7 @@ fieldset {
   }
 }
 
-// Basic Search
+// _basic-search.scss
 
 .basic-search {
   align-items: flex-start;
@@ -235,7 +234,7 @@ div.collapse-basic-search .basic-search .form-control {
   display: block;
 }
 
-// Input Groups
+// _input-groups.scss
 
 .input-group-addon, .input-group-btn,
 .input-group .form-control {
@@ -250,7 +249,7 @@ div.input-group-default .input-group-addon {
   align-items: center;
 }
 
-// Grid
+// _grid.scss
 
 // Renamed .col-xs-* to .col-*
 @for $i from 1 through $grid-columns {
@@ -275,7 +274,7 @@ div.input-group-default .input-group-addon {
   @extend .rounded;
 }
 
-// Labels
+// _labels.scss
 // Removed in Bootstrap 4
 
 .label {
@@ -341,7 +340,7 @@ a.label {
   @include label-variant($label-danger-bg);
 }
 
-// Modals
+// _modals.scss
 
 .modal-header {
   display: block;
@@ -353,70 +352,9 @@ a.label {
   @extend .flex-column;
 }
 
-// .nav {
-//   display: block;
-// }
+// _management-bar.scss
 
-// .nav-pills > li {
-//   float: left;
-
-//   > a {
-//     border-radius: $nav-pills-border-radius;
-//   }
-
-//   + li {
-//     margin-left: 2px;
-//   }
-// }
-
-// .nav-stacked > li {
-//   float: none;
-
-//   + li {
-//     margin-left: 0;
-//     margin-top: 2px;
-//   }
-// }
-
-// .nav-pills,
-// .nav-tabs {
-//   flex-direction: row;
-// }
-
-// .nav-stacked {
-//   flex-direction: column;
-// }
-
-// Management Bar
-// .navbar-nav,
-// .management-bar-nav {
-//   @include media-breakpoint-up(md) {
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//   }
-
-//   > li {
-//     white-space: nowrap;
-//   }
-// }
-
-// .navbar-no-collapse,
-// .management-bar-no-collapse .nav,
-// .navbar-no-collapse .nav {
-//   flex-direction: row;
-// }
-
-// Navbars
-
-// .navbar {
-//   flex-direction: row;
-//   flex-wrap: wrap;
-// }
-
-// .navbar-form {
-//   align-items: flex-start;
-//   display: flex;
-// }
+// _navbars.scss
 
 .navbar-toggle {
   @extend .navbar-toggler;
@@ -436,50 +374,6 @@ a.label {
   }
 }
 
-// .navbar-collapse {
-//   display: none;
-
-//   @include media-breakpoint-up(md) {
-//     display: flex;
-//     flex: 1;
-//   }
-// }
-
-// .navbar-no-collapse .navbar-nav {
-//   flex: 1;
-// }
-
-// .navbar-no-collapse {
-//   @include clearfix;
-
-//   display: block;
-
-//   .navbar-nav {
-//     display: block;
-//   }
-// }
-
-// .navbar {
-//   @include clearfix;
-
-//   display: block;
-//   padding: 0;
-// }
-
-// .navbar-nav {
-//   display: block;
-
-//   > li {
-//     float: left;
-//   }
-// }
-
-// .navbar-collapse {
-//   @include media-breakpoint-up(md) {
-//     display: block;
-//   }
-// }
-
 .navbar-default {
   background-color: $navbar-default-bg;
 }
@@ -488,7 +382,7 @@ a.label {
   background-color: $navbar-inverse-bg;
 }
 
-// Nav Tabs
+// _nav-tabs.scss
 
 .nav-tabs > li {
   float: left;
@@ -536,7 +430,7 @@ a.label {
   }
 }
 
-// Pager Pagination
+// _pager.scss
 // Removed in Bootstrap 4
 
 .pager {
@@ -589,7 +483,7 @@ a.label {
   }
 }
 
-// Pagination
+// _pagination.scss
 
 .pagination > li {
   display: inline; // Remove list-style and block-level defaults
@@ -642,7 +536,7 @@ a.label {
   }
 }
 
-// Panels
+// _panels.scss
 // Removed in Bootstrap 4
 
 // Base class
@@ -910,7 +804,7 @@ a.label {
   @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
 }
 
-// Progress Bars
+// _progress-bars.scss
 
 .progress-bar.active {
   @extend .progress-bar-animated;
@@ -946,7 +840,7 @@ a.label {
   background-color: $brand-warning;
 }
 
-// Responsive Utilities
+// _responsive-utilities.scss
 
 @include responsive-invisibility('.visible-xs');
 @include responsive-invisibility('.visible-sm');
@@ -1057,7 +951,7 @@ a.label {
   @include responsive-invisibility('.hidden-lg');
 }
 
-// Tables
+// _tables.scss
 
 .table > thead > tr,
 .table > tbody > tr,
@@ -1098,13 +992,13 @@ a.label {
   }
 }
 
-// User Icons
+// _user-icons.scss
 
 .user-icon img {
   vertical-align: baseline;
 }
 
-// Utilities
+// _utilities.scss
 
 .hide {
   @extend .d-none;
