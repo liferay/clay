@@ -57,6 +57,12 @@
   display: inline-flex;
 }
 
+// _component-animations.scss
+
+.collapse.in[aria-expanded="true"] {
+  @extend .collapse.show;
+}
+
 // Dropdowns
 // Moved .caret to .dropdown-toggle:after in BS4
 .caret {
