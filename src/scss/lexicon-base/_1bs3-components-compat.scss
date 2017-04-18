@@ -265,6 +265,33 @@ div.collapse-basic-search .basic-search .form-control {
   @extend .rounded;
 }
 
+// _input-groups.scss
+
+.input-group {
+  display: table;
+  width: auto;
+
+  .input-group-addon,
+  .input-group-btn {
+    display: table-cell;
+    width: 1%;
+  }
+
+  .form-control {
+    display: table-cell;
+    width: 100%;
+  }
+}
+
+
+
+.input-group-default {
+  .input-group-addon {
+    display: table-cell;
+    width: 1%;
+  }
+}
+
 // _labels.scss
 // Removed in Bootstrap 4
 
@@ -696,7 +723,12 @@ a.label {
 // Panel contents
 .panel-body {
   padding: $panel-body-padding;
-  @include clearfix;
+
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+  }
 }
 
 // Optional heading
@@ -1164,3 +1196,15 @@ a.label {
     display: block;
   }
 }
+
+.lfr-add-panel .search-bar .input-group-btn {
+    z-index: 4;
+}
+
+// .lfr-friendly-url-input-group .input-localized {
+//   margin-top: 21px;
+
+//   .form-control {
+//     width: 100%;
+//   }
+// }
