@@ -394,18 +394,42 @@ a.label {
 // _management-bar.scss
 
 .management-bar-nav {
-  flex-direction: column;
+  display: block;
 
-  @include media-breakpoint-up(md) {
-    flex-direction: row;
+  > li {
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  .dropdown-menu {
+    @include media-breakpoint-down(sm) {
+      background-color: transparent;
+      border-width: 0;
+      box-shadow: none;
+      max-width: none;
+      position: relative;
+      width: 100%;
+    }
   }
 }
 
-.management-bar-no-collapse .management-bar-nav {
-  flex-direction: row;
+// _navbars.scss
+
+.navbar {
+  padding: 0;
+
+  @extend .navbar-expand-md;
 }
 
-// _navbars.scss
+.navbar-form {
+  display: flex;
+  flex: 1;
+
+  .form-group {
+    margin-bottom: 0;
+  }
+}
 
 .navbar-toggle {
   @extend .navbar-toggler;
