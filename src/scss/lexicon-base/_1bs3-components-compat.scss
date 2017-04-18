@@ -92,10 +92,12 @@
 }
 
 .dropdown-toggle:after {
+  border-width: 0;
   content: normal;
 }
 
 .dropup .dropdown-toggle:after {
+  border-width: 0;
   content: normal;
 }
 
