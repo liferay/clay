@@ -1,0 +1,77 @@
+{namespace MetalClayButton}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param? block: bool}
+	{@param? disabled: bool}
+	{@param? href: string}
+	{@param? icon: string}
+	{@param? label: html}
+	{@param? name: string}
+	{@param? size: string}
+	{@param? spritemap: string}
+	{@param? style: string}
+	{@param? type: string}
+	{@param? value: string}
+
+	{if $href}
+		<a href="{$href}" {call .attributes data="all" /}>
+			{call .icon data="all" /}
+			{$label or ''}
+		</a>
+	{else}
+		<button {call .attributes data="all" /}>
+			{call .icon data="all" /}
+			{$label or ''}
+		</button>
+	{/if}
+{/template}
+
+{template .icon}
+	{@param? icon: string}
+	{@param? spritemap: string}
+
+	{if $icon and $spritemap}
+		{call MetalClayIcon.render}
+			{param spritemap: $spritemap /}
+			{param symbol: $icon /}
+		{/call}
+	{/if}
+{/template}
+
+/**
+ * Renders html attributes for button element
+ */
+{template .attributes kind="attributes"}
+	{@param? block: bool}
+	{@param? disabled: bool}
+	{@param? name: string}
+	{@param? size: string}
+	{@param? style: string}
+	{@param? type: string}
+	{@param? value: string}
+
+	{let $blockClass: $block ? ' btn-block' : '' /}
+	{let $sizeClass: $size ? ' btn-' + $size : '' /}
+	{let $styleClass: $style ? ' btn-' + $style : ' btn-default' /}
+
+	class="btn{$blockClass}{$styleClass}{$sizeClass}"
+
+	{if $disabled}
+		disabled
+	{/if}
+
+	{if $name}
+		name="{$name}"
+	{/if}
+
+	{if $value}
+		value="{$value}"
+	{/if}
+
+	{if $type}
+		type="{$type}"
+	{/if}
+{/template}
