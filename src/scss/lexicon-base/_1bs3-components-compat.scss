@@ -56,6 +56,12 @@
   display: inline-flex;
 }
 
+// _cards.scss
+
+.card {
+  display: block; // FF doesn't display cards properly
+}
+
 // _component-animations.scss
 
 .collapse.in[aria-expanded="true"] {
@@ -334,6 +340,10 @@ a.label {
 .nav {
   flex-direction: column;
 
+  > li {
+    position: relative;
+  }
+
   > li > a {
     display: block;
     padding: $nav-link-padding-y $nav-link-padding-x;
@@ -430,10 +440,11 @@ a.label {
   }
 }
 
+#navigation.site-navigation, // liferay portal specific
 .bs3-navbar,
 .navbar-default,
 .navbar-inverse {
-  border-style: solid;
+  border: 1px solid transparent;
 
   @include clearfix;
 
@@ -1142,4 +1153,12 @@ a.label {
 
 .pull-right {
   @extend .float-right;
+}
+
+// _liferay.scss
+
+#navigationCollapse {
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
 }
