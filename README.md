@@ -1,4 +1,4 @@
-# metal-quartz-components
+# metal-clay-components
 
 ## Setup
 
