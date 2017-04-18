@@ -350,6 +350,19 @@ a.label {
 
 .nav {
   flex-direction: column;
+
+  > li > a {
+    display: block;
+    padding: $nav-link-padding-y $nav-link-padding-x;
+
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  .disabled > a {
+    color: $nav-disabled-link-color;
+  }
 }
 
 .nav-justified {
@@ -427,48 +440,27 @@ a.label {
 }
 
 .nav-tabs > li {
-  float: left;
-  // Make the list-items overlay the bottom border
   margin-bottom: -$nav-tabs-border-width;
 
-  + .nav-item {
-    margin-left: $nav-item-margin;
-  }
-}
+  > a {
+    border: $nav-tabs-border-width solid transparent;
 
-.nav-tabs > li > a {
-  display: block;
-  padding: $nav-link-padding;
-  border: $nav-tabs-border-width solid transparent;
-  @include border-top-radius($nav-tabs-border-radius);
+    @include border-top-radius($border-radius);
 
-  @include hover-focus {
-    border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
-  }
-}
-
-.nav-tabs > li > a.disabled,
-.nav-tabs > li.disabled > a {
-  @include plain-hover-focus {
-    color: $nav-disabled-link-color;
-    background-color: transparent;
-    border-color: transparent;
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+    }
   }
 }
 
 .nav-tabs > li > a.active,
-.nav-tabs > li.active > a {
-  @include plain-hover-focus {
-    color: $nav-tabs-active-link-hover-color;
-    background-color: $nav-tabs-active-link-hover-bg;
-    border-color: $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-border-color transparent;
-  }
-}
+.nav-tabs > .active > a {
+  background-color: $nav-tabs-active-link-bg;
+  border-color: $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color $nav-tabs-active-link-bg;
+  color: $nav-tabs-active-link-hover-color;
 
-.nav-tabs-default > li > a.active,
-.nav-tabs-default > li.disabled a {
-  @include plain-hover-focus {
-    border-left-color: $nav-tabs-border-color;
+  @include hover-focus {
+    border-color: $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color $nav-tabs-active-link-bg;
   }
 }
 
