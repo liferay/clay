@@ -489,6 +489,8 @@ a.label {
 
   .navbar-collapse {
     flex-basis: auto;
+    padding-right: $navbar-padding-horizontal;
+    padding-left: $navbar-padding-horizontal;
 
     @include media-breakpoint-up(md) {
       display: block;
@@ -525,6 +527,21 @@ a.label {
 
     > img {
       display: block;
+    }
+  }
+
+  .navbar-form {
+    margin-left: -$navbar-padding-horizontal;
+    margin-right: -$navbar-padding-horizontal;
+
+    .form-group {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 5px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
@@ -1192,6 +1209,9 @@ a.label {
 // _liferay.scss
 
 #navigationCollapse {
+  padding-right: $navbar-padding-horizontal;
+  padding-left: $navbar-padding-horizontal;
+
   @include media-breakpoint-up(md) {
     display: block;
   }
@@ -1200,11 +1220,3 @@ a.label {
 #banner .row:first-child {
   display: block;
 }
-
-// .lfr-friendly-url-input-group .input-localized {
-//   margin-top: 21px;
-
-//   .form-control {
-//     width: 100%;
-//   }
-// }
