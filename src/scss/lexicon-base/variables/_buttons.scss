@@ -1,3 +1,6 @@
+// When changing variables that affect the btn's height, make sure to match the
+// corresponding input-height with the button height.
+
 $input-btn-font-size-desktop: null !default;
 $input-btn-padding-x-desktop: null !default;
 $input-btn-padding-y-desktop: null !default;
@@ -10,8 +13,11 @@ $input-btn-font-size-sm-desktop: null !default;
 $input-btn-padding-x-sm-desktop: null !default;
 $input-btn-padding-y-sm-desktop: null !default;
 
+// End variables that affect btn height
+
 $btn-action-dropdown-spacer: 5px !default;
 $btn-action-size: 34px !default;
+$btn-action-size-desktop: null !default;
 
 $btn-disabled-opacity: null !default;
 

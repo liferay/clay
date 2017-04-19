@@ -205,8 +205,8 @@ fieldset[disabled] .btn {
 	position: relative;
 	width: $btn-action-size;
 
-	@if (variable-exists(btn-action-size-desktop)) {
-		@include media-breakpoint-up(md) {
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
 			height: $btn-action-size-desktop;
 			width: $btn-action-size-desktop;
 		}
