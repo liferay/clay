@@ -28,6 +28,8 @@ label,
 	font-size: $input-label-font-size;
 	font-weight: $input-label-font-weight;
 	margin-bottom: $input-label-margin-bottom;
+	max-width: 100%;
+	word-wrap: break-word;
 
 	@if (variable-exists(input-label-font-size-desktop)) {
 		@include media-breakpoint-up(md) {
