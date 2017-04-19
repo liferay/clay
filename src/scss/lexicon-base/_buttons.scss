@@ -39,7 +39,7 @@
 	&:disabled,
 	&.disabled {
 		background-color: $btn-primary-bg;
-		border-color: $btn-primary-border;
+		border-color: $btn-primary-border-color;
 		color: $btn-primary-color;
 	}
 }
@@ -67,7 +67,7 @@
 	&:disabled,
 	&.disabled {
 		background-color: $btn-secondary-bg;
-		border-color: $btn-secondary-border;
+		border-color: $btn-secondary-border-color;
 		color: $btn-secondary-color;
 	}
 }
@@ -95,7 +95,7 @@
 	&:disabled,
 	&.disabled {
 		background-color: $btn-success-bg;
-		border-color: $btn-success-border;
+		border-color: $btn-success-border-color;
 		color: $btn-success-color;
 	}
 }
@@ -123,7 +123,7 @@
 	&:disabled,
 	&.disabled {
 		background-color: $btn-info-bg;
-		border-color: $btn-info-border;
+		border-color: $btn-info-border-color;
 		color: $btn-info-color;
 	}
 }
@@ -151,7 +151,7 @@
 	&:disabled,
 	&.disabled {
 		background-color: $btn-warning-bg;
-		border-color: $btn-warning-border;
+		border-color: $btn-warning-border-color;
 		color: $btn-warning-color;
 	}
 }
@@ -179,7 +179,7 @@
 	&:disabled,
 	&.disabled {
 		background-color: $btn-danger-bg;
-		border-color: $btn-danger-border;
+		border-color: $btn-danger-border-color;
 		color: $btn-danger-color;
 	}
 }

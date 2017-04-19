@@ -49,7 +49,7 @@ $btn-transition: background 0.2s ease-in-out, border 0.2s ease-in-out, box-shado
 
 $btn-primary-color: #FFF !default;
 $btn-primary-bg: $brand-primary !default;
-$btn-primary-border: $btn-primary-bg !default;
+$btn-primary-border-color: $btn-primary-bg !default;
 $btn-primary-hover-color: $btn-primary-color !default;
 $btn-primary-hover-bg: darken($btn-primary-bg, 8%) !default;
 $btn-primary-hover-border: $btn-primary-hover-bg !default;
@@ -60,7 +60,7 @@ $btn-primary-active-border: $btn-primary-active-bg !default;
 
 $btn-secondary-color: $brand-secondary !default;
 $btn-secondary-bg: #FFF !default;
-$btn-secondary-border: $brand-secondary !default;
+$btn-secondary-border-color: $brand-secondary !default;
 $btn-secondary-hover-color: $btn-secondary-color !default;
 $btn-secondary-hover-bg: $btn-secondary-bg !default;
 $btn-secondary-hover-border: $brand-primary !default;
@@ -71,7 +71,7 @@ $btn-secondary-active-border: darken($btn-secondary-hover-border, 8%) !default;
 
 $btn-success-color: #FFF !default;
 $btn-success-bg: $brand-success !default;
-$btn-success-border: $btn-success-bg !default;
+$btn-success-border-color: $btn-success-bg !default;
 $btn-success-hover-color: $btn-success-color !default;
 $btn-success-hover-bg: darken($btn-success-bg, 8%) !default;
 $btn-success-hover-border: $btn-success-hover-bg !default;
@@ -82,7 +82,7 @@ $btn-success-active-border: $btn-success-active-bg !default;
 
 $btn-info-color: #FFF !default;
 $btn-info-bg: $brand-info !default;
-$btn-info-border: $btn-info-bg !default;
+$btn-info-border-color: $btn-info-bg !default;
 $btn-info-hover-color: $btn-info-color !default;
 $btn-info-hover-bg: darken($btn-info-bg, 8%) !default;
 $btn-info-hover-border: $btn-info-hover-bg !default;
@@ -93,7 +93,7 @@ $btn-info-active-border: $btn-info-active-bg !default;
 
 $btn-warning-color: #FFF !default;
 $btn-warning-bg: $brand-warning !default;
-$btn-warning-border: $btn-warning-bg !default;
+$btn-warning-border-color: $btn-warning-bg !default;
 $btn-warning-hover-color: $btn-warning-color !default;
 $btn-warning-hover-bg: darken($btn-warning-bg, 8%) !default;
 $btn-warning-hover-border: $btn-warning-hover-bg !default;
@@ -104,7 +104,7 @@ $btn-warning-active-border: $btn-warning-active-bg !default;
 
 $btn-danger-color: #FFF !default;
 $btn-danger-bg: $brand-danger !default;
-$btn-danger-border: $btn-danger-bg !default;
+$btn-danger-border-color: $btn-danger-bg !default;
 $btn-danger-hover-color: $btn-danger-color !default;
 $btn-danger-hover-bg: darken($btn-danger-bg, 8%) !default;
 $btn-danger-hover-border: $btn-danger-hover-bg !default;
