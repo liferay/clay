@@ -1,6 +1,6 @@
 .has-success {
 	label,
-	.control-label {
+	.form-control-label {
 		color: $input-success-label-color;
 	}
 
@@ -28,7 +28,7 @@
 
 .has-warning {
 	label,
-	.control-label {
+	.form-control-label {
 		color: $input-warning-label-color;
 	}
 
@@ -56,7 +56,7 @@
 
 .has-error {
 	label,
-	.control-label {
+	.form-control-label {
 		color: $input-danger-label-color;
 	}
 
