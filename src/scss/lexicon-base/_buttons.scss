@@ -1,17 +1,26 @@
-.btn {
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		opacity: $btn-disabled-opacity;
-	}
+@if ($enable-mobile-desktop-sizes) {
+	@include media-breakpoint-up($mobile-desktop-breakpoint) {
+		.btn {
+			font-size: $input-btn-font-size-desktop;
+			padding: $input-btn-padding-y-desktop $input-btn-padding-x-desktop;
+		}
 
-	@if (variable-exists(atlas-theme)) {
-		@include button-size($input-btn-padding-y, $input-btn-padding-x, $input-btn-font-size, $input-btn-line-height, $btn-border-radius);
+		.btn-lg {
+			font-size: $input-btn-font-size-lg-desktop;
+			padding: $input-btn-padding-y-lg-desktop $input-btn-padding-x-lg-desktop;
+		}
 
-		@include media-breakpoint-up(md) {
-			@include button-size($input-btn-padding-y-desktop, $input-btn-padding-x-desktop, $input-btn-font-size-desktop, $input-btn-line-height, $btn-border-radius);
+		.btn-sm {
+			font-size: $input-btn-font-size-sm-desktop;
+			padding: $input-btn-padding-y-sm-desktop $input-btn-padding-x-sm-desktop;
 		}
 	}
+}
+
+.btn[disabled],
+.btn.disabled,
+fieldset[disabled] .btn {
+	opacity: $btn-disabled-opacity;
 }
 
 .btn-primary {
@@ -179,24 +188,6 @@
 		background-color: $btn-danger-bg;
 		border-color: $btn-danger-border-color;
 		color: $btn-danger-color;
-	}
-}
-
-@if (variable-exists(atlas-theme)) {
-	.btn-lg {
-		@include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $input-btn-font-size-lg, $input-btn-line-height, $btn-border-radius-lg);
-
-		@include media-breakpoint-up(md) {
-			@include button-size($input-btn-padding-y-lg-desktop, $input-btn-padding-x-lg-desktop, $input-btn-font-size-lg-desktop, $input-btn-line-height, $btn-border-radius-lg);
-		}
-	}
-
-	.btn-sm {
-		@include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $input-btn-font-size-sm, $input-btn-line-height, $btn-border-radius-sm);
-
-		@include media-breakpoint-up(md) {
-			@include button-size($input-btn-padding-y-sm-desktop, $input-btn-padding-x-sm-desktop, $input-btn-font-size-sm-desktop, $input-btn-line-height, $btn-border-radius-sm);
-		}
 	}
 }
 
