@@ -46,11 +46,8 @@ label,
 	}
 
 	.reference-mark {
-		@if ($input-label-reference-mark-spacer > 0) {
-			margin-left: $input-label-reference-mark-spacer;
-			margin-right: $input-label-reference-mark-spacer;
-		}
-
+		margin-left: $input-label-reference-mark-spacer;
+		margin-right: $input-label-reference-mark-spacer;
 		vertical-align: $input-label-reference-mark-vertical-alignment;
 	}
 }
