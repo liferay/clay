@@ -193,13 +193,12 @@ fieldset[disabled] .btn {
 
 // Action Buttons
 
-.btn-action,
-.btn-action-secondary {
+.btn-action {
 	z-index: $zindex-btn-action;
 }
 
 .btn-action,
-.btn-action-secondary .btn {
+.btn-action .btn {
 	height: $btn-action-size;
 	padding: 0;
 	position: relative;
@@ -217,20 +216,6 @@ fieldset[disabled] .btn {
 	display: block;
 	height: 100%;
 	margin: auto;
-}
-
-.btn-action-secondary {
-	display: inline-block;
-
-	.dropdown-menu-left-side,
-	.dropdown-menu-left-side-bottom {
-		margin-right: $btn-action-dropdown-spacer;
-	}
-
-	.dropdown-menu-right-side,
-	.dropdown-menu-right-side-bottom {
-		margin-left: $btn-action-dropdown-spacer;
-	}
 }
 
 .btn-bottom-left {
