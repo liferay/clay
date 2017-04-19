@@ -199,6 +199,7 @@ fieldset[disabled] .btn {
 
 .btn-action,
 .btn-action .btn {
+	border-radius: $btn-action-border-radius;
 	height: $btn-action-size;
 	padding: 0;
 	position: relative;
