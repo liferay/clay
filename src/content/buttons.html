@@ -378,49 +378,39 @@ section: Components
 		<div class="alert alert-info">Position the action buttons on any corner of the page using the classes <code>btn-top-left</code>, <code>btn-top-right</code>, <code>btn-bottom-right</code>, and <code>btn-bottom-left</code>.</div>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Action buttons are used for providing easy access to primary actions, such as adding new entities (users, organizations, new blog entries). There are two kinds of action buttons: <code>.btn-action</code> and <code>.btn-action-secondary</code>.</p>
+			<p>Action buttons are used for providing easy access to primary actions, such as adding new entities (users, organizations, new blog entries).</p>
 
 			<p><code>.btn-action</code> should be used where only one primary action can be taken. A good use of <code>.btn-action</code> is adding a new entry in the blog portlet, where the user will be led to the new blog entry page.</p>
 		</blockquote>
 
 		<div class="row">
 			<div class="col-12">
-				<div class="lx-site-btn-action-column">
-					<h6>Lexicon SVG</h6>
-					<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;" role="button">
-						<svg class="icon-monospaced lexicon-icon lexicon-icon-plus">
-							<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
-						</svg>
-					</a>
-				</div>
-
-				<div class="lx-site-btn-action-column">
-					<h6>Font Awesome</h6>
-					<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;" role="button">
-						<span class="icon-plus"></span>
-					</a>
-				</div>
+				<a class="btn btn-action btn-primary" href="{{rootPath}}/content/blogs-action" onClick="alert('Link to Somewhere');return false;" role="button">
+					<svg class="icon-monospaced lexicon-icon lexicon-icon-plus">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
+					</svg>
+				</a>
 			</div>
 		</div>
 
 		<blockquote class="blockquote-sm blockquote-success" style="margin-top:20px;">
-			<p><code>.btn-action-secondary</code> should be used where multiple primary actions can be taken. This button will display an overflow menu with a list of available actions. For example, on the users and organizations page in the control panel, a user, organization, or location can be added. Clicking the button inside btn-action-secondary will open an overflow menu with add user, add organization, or add location options (button on bottom right).</p>
+			<p><code>.btn</code> should be nested inside <code>.btn-action</code> where multiple primary actions can be taken. This button will display an overflow menu with a list of available actions. For example, on the users and organizations page in the control panel, a user, organization, or location can be added. Clicking the button inside btn-action will open an overflow menu with add user, add organization, or add location options (button on bottom right).</p>
 		</blockquote>
 
-		<div class="btn-action-secondary dropdown">
+		<div class="btn-action dropdown">
 			<button class="btn btn-primary" data-toggle="dropdown" type="button">
 				<svg class="icon-monospaced lexicon-icon lexicon-icon-plus">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
 				</svg>
 			</button>
-			<div class="dropdown-menu">
+			<div class="dropdown-menu dropdown-menu-right-side-bottom">
 				<a class="dropdown-item" href="#1">User</a>
 				<a class="dropdown-item" href="#1">Regular Organization</a>
 				<a class="dropdown-item" href="#1">Location</a>
 			</div>
 		</div>
 
-		<div class="btn-action-secondary btn-bottom-right dropdown">
+		<div class="btn-action btn-bottom-right dropdown">
 			<button class="btn btn-primary" data-toggle="dropdown" type="button">
 				<svg class="icon-monospaced lexicon-icon lexicon-icon-plus">
 					<use xlink:href="{{rootPath}}/images/icons/icons.svg#plus" />
