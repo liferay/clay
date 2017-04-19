@@ -31,8 +31,8 @@ label,
 	max-width: 100%;
 	word-wrap: break-word;
 
-	@if (variable-exists(input-label-font-size-desktop)) {
-		@include media-breakpoint-up(md) {
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
 			font-size: $input-label-font-size-desktop;
 		}
 	}
