@@ -313,10 +313,10 @@ button.list-group-heading {
 			.list-group-item-field {
 				$tabular-list-group-active-bottom-v-shadow: $tabular-list-group-border-width - $tabular-list-group-active-border-bottom-width;
 
-				border-bottom-color: $list-group-active-border;
+				border-bottom-color: $list-group-active-border-color;
 
 				@if ($tabular-list-group-active-bottom-v-shadow < 0) {
-					box-shadow: inset 0 #{$tabular-list-group-active-bottom-v-shadow} 0 $list-group-active-border;
+					box-shadow: inset 0 #{$tabular-list-group-active-bottom-v-shadow} 0 $list-group-active-border-color;
 				}
 			}
 		}
@@ -348,7 +348,7 @@ button.list-group-heading {
 			.list-group-item-content,
 			.list-group-item-field {
 				@if ($tabular-list-group-active-border-bottom-width > 0) {
-					box-shadow: inset 0 -#{$tabular-list-group-active-border-bottom-width} 0 $list-group-active-border;
+					box-shadow: inset 0 -#{$tabular-list-group-active-border-bottom-width} 0 $list-group-active-border-color;
 				}
 			}
 		}
