@@ -39,9 +39,9 @@ label,
 		color: $input-label-color-focus;
 	}
 
-	// .lexicon-icon {
-	// 	@extend %scale-lexicon-icon;
-	// }
+	.lexicon-icon {
+		@extend %scale-lexicon-icon;
+	}
 
 	.reference-mark {
 		@if ($input-label-reference-mark-spacer > 0) {
