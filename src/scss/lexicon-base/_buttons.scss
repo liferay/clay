@@ -19,13 +19,13 @@
 .btn-primary {
 	&:hover {
 		background-color: $btn-primary-hover-bg;
-		border-color: $btn-primary-hover-border;
+		border-color: $btn-primary-hover-border-color;
 	}
 
 	&:focus,
 	&.focus {
 		background-color: $btn-primary-hover-bg;
-		border-color: $btn-primary-hover-border;
+		border-color: $btn-primary-hover-border-color;
 		box-shadow: $btn-primary-focus-box-shadow;
 	}
 
@@ -33,7 +33,7 @@
 	&.active,
 	.show > &.dropdown-toggle {
 		background-color: $btn-primary-active-bg;
-		border-color: $btn-primary-active-border;
+		border-color: $btn-primary-active-border-color;
 	}
 
 	&:disabled,
@@ -47,13 +47,13 @@
 .btn-secondary {
 	&:hover {
 		background-color: $btn-secondary-hover-bg;
-		border-color: $btn-secondary-hover-border;
+		border-color: $btn-secondary-hover-border-color;
 	}
 
 	&:focus,
 	&.focus {
 		background-color: $btn-secondary-hover-bg;
-		border-color: $btn-secondary-hover-border;
+		border-color: $btn-secondary-hover-border-color;
 		box-shadow: $btn-secondary-focus-box-shadow;
 	}
 
@@ -61,7 +61,7 @@
 	&.active,
 	.show > &.dropdown-toggle {
 		background-color: $btn-secondary-active-bg;
-		border-color: $btn-secondary-active-border;
+		border-color: $btn-secondary-active-border-color;
 	}
 
 	&:disabled,
@@ -75,13 +75,13 @@
 .btn-success {
 	&:hover {
 		background-color: $btn-success-hover-bg;
-		border-color: $btn-success-hover-border;
+		border-color: $btn-success-hover-border-color;
 	}
 
 	&:focus,
 	&.focus {
 		background-color: $btn-success-hover-bg;
-		border-color: $btn-success-hover-border;
+		border-color: $btn-success-hover-border-color;
 		box-shadow: $btn-success-focus-box-shadow;
 	}
 
@@ -89,7 +89,7 @@
 	&.active,
 	.show > &.dropdown-toggle {
 		background-color: $btn-success-active-bg;
-		border-color: $btn-success-active-border;
+		border-color: $btn-success-active-border-color;
 	}
 
 	&:disabled,
@@ -103,13 +103,13 @@
 .btn-info {
 	&:hover {
 		background-color: $btn-info-hover-bg;
-		border-color: $btn-info-hover-border;
+		border-color: $btn-info-hover-border-color;
 	}
 
 	&:focus,
 	&.focus {
 		background-color: $btn-info-hover-bg;
-		border-color: $btn-info-hover-border;
+		border-color: $btn-info-hover-border-color;
 		box-shadow: $btn-info-focus-box-shadow;
 	}
 
@@ -117,7 +117,7 @@
 	&.active,
 	.show > &.dropdown-toggle {
 		background-color: $btn-info-active-bg;
-		border-color: $btn-info-active-border;
+		border-color: $btn-info-active-border-color;
 	}
 
 	&:disabled,
@@ -131,13 +131,13 @@
 .btn-warning {
 	&:hover {
 		background-color: $btn-warning-hover-bg;
-		border-color: $btn-warning-hover-border;
+		border-color: $btn-warning-hover-border-color;
 	}
 
 	&:focus,
 	&.focus {
 		background-color: $btn-warning-hover-bg;
-		border-color: $btn-warning-hover-border;
+		border-color: $btn-warning-hover-border-color;
 		box-shadow: $btn-warning-focus-box-shadow;
 	}
 
@@ -145,7 +145,7 @@
 	&.active,
 	.show > &.dropdown-toggle {
 		background-color: $btn-warning-active-bg;
-		border-color: $btn-warning-active-border;
+		border-color: $btn-warning-active-border-color;
 	}
 
 	&:disabled,
@@ -159,13 +159,13 @@
 .btn-danger {
 	&:hover {
 		background-color: $btn-danger-hover-bg;
-		border-color: $btn-danger-hover-border;
+		border-color: $btn-danger-hover-border-color;
 	}
 
 	&:focus,
 	&.focus {
 		background-color: $btn-danger-hover-bg;
-		border-color: $btn-danger-hover-border;
+		border-color: $btn-danger-hover-border-color;
 		box-shadow: $btn-danger-focus-box-shadow;
 	}
 
@@ -173,7 +173,7 @@
 	&.active,
 	.show > &.dropdown-toggle {
 		background-color: $btn-danger-active-bg;
-		border-color: $btn-danger-active-border;
+		border-color: $btn-danger-active-border-color;
 	}
 
 	&:disabled,
