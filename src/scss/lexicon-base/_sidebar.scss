@@ -280,7 +280,9 @@
 
 	@if (variable-exists(atlas-theme)) {
 		input {
-			@include placeholder($brand-secondary);
+			&::placeholder {
+				color: $brand-secondary;
+			}
 		}
 
 		.form-control {

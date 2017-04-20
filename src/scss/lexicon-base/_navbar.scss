@@ -688,7 +688,9 @@
 		border-color: $navbar-default-collapsible-search-input-border;
 		color: $navbar-default-collapsible-search-input-color;
 
-		@include placeholder($navbar-default-collapsible-search-input-placeholder-color);
+		&::placeholder {
+			color: $navbar-default-collapsible-search-input-placeholder-color;
+		}
 	}
 }
 
@@ -765,7 +767,9 @@
 		border-color: $navbar-inverse-collapsible-search-input-border;
 		color: $navbar-inverse-collapsible-search-input-color;
 
-		@include placeholder($navbar-inverse-collapsible-search-input-placeholder-color);
+		&::placeholder {
+			color: $navbar-inverse-collapsible-search-input-placeholder-color;
+		}
 	}
 }
 

@@ -1,27 +1,3 @@
-// Helper for setting the color of an input placeholder
-// @param $element - CSS Selector
-// @param $color - Placeholder Color
-
-@mixin color-placeholder($element, $color: $input-color-placeholder) {
-	@warn "Lexicon's `color-placeholder($element, $color: $input-color-placeholder)` mixin is deprecated as of v1.0.9 and will be removed in v2.0.0. Please use `placeholder($color: $input-color-placeholder)` instead.";
-
-	#{$element}::-webkit-input-placeholder {
-		color: $color;
-	}
-
-	#{$element}:-moz-placeholder {
-		color: $color;
-	}
-
-	#{$element}::-moz-placeholder {
-		color: $color;
-	}
-
-	#{$element}:-ms-input-placeholder {
-		color: $color;
-	}
-}
-
 // Sets select element icon
 // @param $color - Icon Color
 

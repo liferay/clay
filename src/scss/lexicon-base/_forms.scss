@@ -1,14 +1,3 @@
-// Remove this
-@mixin placeholder($color: $input-color-placeholder) {
-  // Firefox
-  &::-moz-placeholder {
-    color: $color;
-    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
-  }
-  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
-  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
-}
-
 input[type="checkbox"],
 input[type="radio"] {
 	cursor: pointer;
@@ -119,7 +108,9 @@ label,
 	}
 
 	&:focus {
-		@include placeholder($input-color-placeholder-focus);
+		&::placeholder {
+			color: $input-color-placeholder-focus;
+		}
 	}
 
 	@if (variable-exists(atlas-theme)) {
@@ -158,7 +149,9 @@ fieldset[disabled] label {
 		color: $input-color-disabled;
 		opacity: $input-opacity-disabled;
 
-		@include placeholder($input-color-placeholder-disabled);
+		&::placeholder {
+			color: $input-color-placeholder-disabled;
+		}
 	}
 }
 
