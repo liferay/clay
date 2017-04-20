@@ -35,6 +35,7 @@ label,
 	}
 
 	.reference-mark {
+		color: $input-label-reference-mark-color;
 		margin-left: $input-label-reference-mark-spacer;
 		margin-right: $input-label-reference-mark-spacer;
 		vertical-align: $input-label-reference-mark-vertical-alignment;
