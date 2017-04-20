@@ -93,6 +93,12 @@ label,
 
 	select.form-control:not([size]):not([multiple]) {
 		height: $input-height;
+
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				height: $input-height-desktop;
+			}
+		}
 	}
 }
 
@@ -102,11 +108,13 @@ label,
 	padding: $input-padding-y $input-padding-x;
 
 	@if (variable-exists(atlas-theme)) {
-		height: $input-height-mobile;
+		height: $input-height;
 
-		@include media-breakpoint-up(md) {
-			font-size: $input-font-size-desktop;
-			height: $input-height;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				font-size: $input-font-size-desktop;
+				height: $input-height-desktop;
+			}
 		}
 	}
 
@@ -175,19 +183,23 @@ fieldset[disabled] label {
 	.form-control {
 		&.input-lg {
 			font-size: $input-font-size-lg;
-			height: $input-height-lg-mobile;
+			height: $input-height-lg;
 
-			@include media-breakpoint-up(md) {
-				height: $input-height-lg;
+			@if ($enable-mobile-desktop-sizes) {
+				@include media-breakpoint-up($mobile-desktop-breakpoint) {
+					height: $input-height-lg-desktop;
+				}
 			}
 		}
 
 		&.input-sm {
 			font-size: $input-font-size-sm;
-			height: $input-height-sm-mobile;
+			height: $input-height-sm;
 
-			@include media-breakpoint-up(md) {
-				height: $input-height-sm;
+			@if ($enable-mobile-desktop-sizes) {
+				@include media-breakpoint-up($mobile-desktop-breakpoint) {
+					height: $input-height-sm-desktop;
+				}
 			}
 		}
 	}
@@ -257,10 +269,12 @@ fieldset[disabled] label {
 	// Form Control Feedback
 
 	.form-control-feedback {
-		@include monospace($input-height-mobile);
+		@include monospace($input-height);
 
-		@include media-breakpoint-up(md) {
-			@include monospace($input-height);
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				@include monospace($input-height-desktop);
+			}
 		}
 	}
 }

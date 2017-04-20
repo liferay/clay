@@ -157,13 +157,15 @@
 
 	@if (variable-exists(atlas-theme)) {
 		border-bottom: $input-group-secondary-addon-content-border-bottom-width solid $input-group-secondary-addon-border-color;
-		height: $input-height-mobile;
-		line-height: $input-height-mobile;
+		height: $input-height;
+		line-height: $input-height;
 		width: 30px;
 
-		@include media-breakpoint-up(md) {
-			height: $input-height;
-			line-height: $input-height;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				height: $input-height-desktop;
+				line-height: $input-height-desktop;
+			}
 		}
 	}
 }
@@ -216,6 +218,13 @@
 				height: $input-height-lg;
 				line-height: $input-height-lg;
 				width: 40px;
+
+				@if ($enable-mobile-desktop-sizes) {
+					@include media-breakpoint-up($mobile-desktop-breakpoint) {
+						height: $input-height-lg-desktop;
+						line-height: $input-height-lg-desktop;
+					}
+				}
 			}
 		}
 	}
@@ -270,6 +279,13 @@
 			.input-group-addon-content {
 				height: $input-height-sm;
 				line-height: $input-height-sm;
+
+				@if ($enable-mobile-desktop-sizes) {
+					@include media-breakpoint-up($mobile-desktop-breakpoint) {
+						height: $input-height-sm-desktop;
+						line-height: $input-height-sm-desktop;
+					}
+				}
 			}
 		}
 	}
