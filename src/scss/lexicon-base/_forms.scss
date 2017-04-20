@@ -86,6 +86,14 @@ label,
 			display: none;
 		}
 	}
+
+	select.form-control[multiple] {
+		height: auto;
+	}
+
+	select.form-control:not([size]):not([multiple]) {
+		height: $input-height;
+	}
 }
 
 .form-control {
