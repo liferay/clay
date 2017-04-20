@@ -240,10 +240,6 @@
 .form-check-middle-left,
 .form-check-top-left {
 	.card-horizontal {
-		.card.flex-container {
-			padding-left: $checkbox-left-card-padding;
-		}
-
 		> .card-row {
 			padding-left: $checkbox-left-card-padding;
 		}
@@ -254,20 +250,13 @@
 .form-check-middle-right,
 .form-check-top-right {
 	.card-horizontal {
-		.card.flex-container {
-			padding-right: $checkbox-right-card-padding;
-		}
-
 		> .card-row {
 			padding-right: $checkbox-right-card-padding;
 		}
 	}
 }
 
-.form-check-bottom-left input[type="checkbox"],
-.form-check-bottom-left label > input[type="checkbox"],
-.form-check-bottom-left input[type="radio"],
-.form-check-bottom-left label > input[type="radio"] {
+.form-check-bottom-left .form-check-input {
 	bottom: $checkbox-position;
 	left: $checkbox-position;
 
@@ -275,10 +264,7 @@
 	transform: none;
 }
 
-.form-check-bottom-right input[type="checkbox"],
-.form-check-bottom-right label > input[type="checkbox"],
-.form-check-bottom-right input[type="radio"],
-.form-check-bottom-right label > input[type="radio"] {
+.form-check-bottom-right .form-check-input {
 	bottom: $checkbox-position;
 	right: $checkbox-position;
 
@@ -286,10 +272,7 @@
 	transform: none;
 }
 
-.form-check-middle-left input[type="checkbox"],
-.form-check-middle-left label > input[type="checkbox"],
-.form-check-middle-left input[type="radio"],
-.form-check-middle-left label > input[type="radio"] {
+.form-check-middle-left .form-check-input {
 	left: $checkbox-position;
 	margin-top: 0;
 	top: 50%;
@@ -298,10 +281,7 @@
 	transform: translateY(-50%);
 }
 
-.form-check-middle-right input[type="checkbox"],
-.form-check-middle-right label > input[type="checkbox"],
-.form-check-middle-right input[type="radio"],
-.form-check-middle-right label > input[type="radio"] {
+.form-check-middle-right .form-check-input {
 	margin-top: 0;
 	right: $checkbox-position;
 	top: 50%;
@@ -310,8 +290,7 @@
 	transform: translateY(-50%);
 }
 
-.form-check-top-left label > input[type="checkbox"],
-.form-check-top-left label > input[type="radio"] {
+.form-check-top-left .form-check-input {
 	left: $checkbox-position;
 	top: $checkbox-position;
 
@@ -319,8 +298,7 @@
 	transform: none;
 }
 
-.form-check-top-right label > input[type="checkbox"],
-.form-check-top-right label > input[type="radio"] {
+.form-check-top-right .form-check-input {
 	right: $checkbox-position;
 	top: $checkbox-position;
 
