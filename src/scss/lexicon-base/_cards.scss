@@ -217,23 +217,23 @@
 
 // Checkbox and Radio Cards
 
-.checkbox-card,
-.radio-card {
+.form-check-card {
 	margin-bottom: 0;
 	margin-top: 0;
 
-	label {
+	.form-check-input {
+		margin-left: 0;
+		margin-top: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.form-check-label {
 		color: $body-color;
+		cursor: pointer;
 		display: inline;
 		padding-left: 0;
 	}
-}
-
-.checkbox-card input[type="checkbox"],
-.radio-card input[type="radio"] {
-	margin-left: 0;
-	margin-top: 0;
-	z-index: 1;
 }
 
 .checkbox-bottom-left,
