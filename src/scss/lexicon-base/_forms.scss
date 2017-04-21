@@ -42,10 +42,52 @@ label,
 	}
 }
 
+// Inputs
+
+.form-control {
+	border-width: $input-border-width;
+	font-size: $input-font-size;
+	height: $input-height;
+	padding: $input-padding-y $input-padding-x;
+
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			font-size: $input-font-size-desktop;
+			height: $input-height-desktop;
+		}
+	}
+
+	&:focus {
+		&::placeholder {
+			color: $input-color-placeholder-focus;
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		&::-ms-clear,
+		&::-ms-reveal {
+			display: none;
+			height: 0;
+			width: 0;
+		}
+	}
+}
+
+// Select
+
+.form-control[multiple],
+.form-control[size] {
+	height: auto;
+}
+
 @if (variable-exists(atlas-theme)) {
 	select.form-control {
 		-moz-appearance: none;
 		-webkit-appearance: none;
+
+		&::-ms-expand {
+			display: none;
+		}
 
 		background-color: $input-select-bg;
 		background-image: $input-select-icon;
@@ -71,58 +113,10 @@ label,
 			background-image: $input-select-icon-focus;
 			background-image: none \9;
 		}
-
-		&::-ms-expand {
-			display: none;
-		}
-	}
-
-	select.form-control[multiple] {
-		height: auto;
-	}
-
-	select.form-control:not([size]):not([multiple]) {
-		height: $input-height;
-
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				height: $input-height-desktop;
-			}
-		}
 	}
 }
 
-.form-control {
-	border-width: $input-border-width;
-	font-size: $input-font-size;
-	padding: $input-padding-y $input-padding-x;
-
-	@if (variable-exists(atlas-theme)) {
-		height: $input-height;
-
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				font-size: $input-font-size-desktop;
-				height: $input-height-desktop;
-			}
-		}
-	}
-
-	&:focus {
-		&::placeholder {
-			color: $input-color-placeholder-focus;
-		}
-	}
-
-	@if (variable-exists(atlas-theme)) {
-		&::-ms-clear,
-		&::-ms-reveal {
-			display: none;
-			height: 0;
-			width: 0;
-		}
-	}
-}
+// Textarea
 
 textarea.form-control {
 	height: $input-textarea-height;
