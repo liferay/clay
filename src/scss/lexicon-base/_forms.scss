@@ -189,24 +189,6 @@ fieldset[disabled] label {
 	}
 }
 
-@if (variable-exists(atlas-theme)) {
-	// Form Control Feedback
-
-	.form-control-feedback {
-		@include monospace($input-height);
-
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				@include monospace($input-height-desktop);
-			}
-		}
-	}
-}
-
 .help-block {
 	font-size: $input-help-block-font-size;
-}
-
-.form-control-feedback .lexicon-icon {
-	margin-top: -3px;
 }
