@@ -81,7 +81,7 @@ label,
 }
 
 @if (variable-exists(atlas-theme)) {
-	select.form-control {
+	select.form-control:not([multiple]):not([size]) {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 
