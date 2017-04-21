@@ -82,6 +82,22 @@
 	}
 }
 
+// Form Control Feedback
+
+.form-control-feedback {
+	font-size: $input-help-block-font-size;
+	font-weight: 500;
+}
+
+.form-text {
+	font-size: $input-help-block-font-size;
+}
+
+.form-control-feedback .lexicon-icon,
+.form-text .lexicon-icon {
+	margin-top: -3px;
+}
+
 @if (variable-exists(atlas-theme)) {
 	.has-success {
 		select.form-control {
