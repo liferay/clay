@@ -22,7 +22,9 @@ label,
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			font-size: $input-label-font-size-desktop;
+			@if not ($input-label-font-size-desktop == $input-label-font-size) {
+				font-size: $input-label-font-size-desktop;
+			}
 		}
 	}
 
@@ -52,8 +54,13 @@ label,
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			font-size: $input-font-size-desktop;
-			height: $input-height-desktop;
+			@if not ($input-font-size-desktop == $input-font-size) {
+				font-size: $input-font-size-desktop;
+			}
+
+			@if not ($input-height-desktop == $input-height) {
+				height: $input-height-desktop;
+			}
 		}
 	}
 
@@ -173,7 +180,9 @@ fieldset[disabled] label {
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			height: $input-height-lg-desktop;
+			@if not ($input-height-lg-desktop == $input-height-lg) {
+				height: $input-height-lg-desktop;
+			}
 		}
 	}
 }
@@ -184,7 +193,9 @@ fieldset[disabled] label {
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			height: $input-height-sm-desktop;
+			@if not ($input-height-sm-desktop == $input-height-sm) {
+				height: $input-height-sm-desktop;
+			}
 		}
 	}
 }
