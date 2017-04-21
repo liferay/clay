@@ -39,8 +39,6 @@ $input-label-reference-mark-color: $brand-warning !default;
 $input-label-reference-mark-spacer: null !default;
 $input-label-reference-mark-vertical-alignment: top !default;
 
-$input-help-block-font-size: null !default;
-
 $input-readonly-bg: null !default;
 $input-readonly-border-color: null !default;
 $input-readonly-color: null !default;
@@ -88,6 +86,8 @@ $input-warning-color-focus: null !default;
 
 $input-warning-checkbox-label-color: null !default;
 $input-warning-label-color: null !default;
+
+$form-control-feedback-font-size: null !default;
 
 $zindex-input-group-hover: 3 !default;
 
