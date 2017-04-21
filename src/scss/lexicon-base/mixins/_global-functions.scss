@@ -50,6 +50,25 @@
 	@return $sidebar-navbar-gutter;
 }
 
+// str-replace and svg-url functions from http://codepen.io/jakob-e/pen/doMoML
+
+// Function to replace characters in a string
+// @param $string - the string to operate on
+// @param $search - the character to replace
+// @param $replace - the character to replace $search with
+
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	@if $index {
+		$string: str-slice($string, 1, $index - 1) +
+			$replace +
+			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
 // Function to encode SVG and provide back a data url
 // @param $svg - The SVG markup to encode
 
