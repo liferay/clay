@@ -54,7 +54,7 @@
 	}
 }
 
-.has-error {
+.has-danger {
 	label,
 	.form-control-label {
 		color: $input-danger-label-color;
@@ -97,7 +97,7 @@
 		}
 	}
 
-	.has-error {
+	.has-danger {
 		select.form-control {
 			background-image: lx-icon(caret-double-l, $state-danger-border-color);
 			background-image: none \9;
