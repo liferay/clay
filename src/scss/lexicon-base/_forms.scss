@@ -165,33 +165,31 @@ fieldset[disabled] label {
 	cursor: $input-readonly-cursor;
 }
 
-@if (variable-exists(atlas-theme)) {
-	// Input Sizes
+// Input Sizes
 
-	.form-control {
-		&.input-lg {
-			font-size: $input-font-size-lg;
-			height: $input-height-lg;
+.form-control-lg {
+	font-size: $input-font-size-lg;
+	height: $input-height-lg;
 
-			@if ($enable-mobile-desktop-sizes) {
-				@include media-breakpoint-up($mobile-desktop-breakpoint) {
-					height: $input-height-lg-desktop;
-				}
-			}
-		}
-
-		&.input-sm {
-			font-size: $input-font-size-sm;
-			height: $input-height-sm;
-
-			@if ($enable-mobile-desktop-sizes) {
-				@include media-breakpoint-up($mobile-desktop-breakpoint) {
-					height: $input-height-sm-desktop;
-				}
-			}
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			height: $input-height-lg-desktop;
 		}
 	}
+}
 
+.form-control-sm {
+	font-size: $input-font-size-sm;
+	height: $input-height-sm;
+
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			height: $input-height-sm-desktop;
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
 	// Form Control Feedback
 
 	.form-control-feedback {
