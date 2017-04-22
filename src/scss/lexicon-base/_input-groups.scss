@@ -84,29 +84,19 @@
 // Input Group Constrain
 
 .input-group-constrain {
+	border-bottom-width: 0;
+	line-height: $input-height - $input-border-bottom-width - $input-border-top-width;
 	max-width: 150px;
 	overflow-x: auto;
 	overflow-y: hidden;
-	padding-right: $input-btn-border-width;
+	padding: 0 0 $input-border-bottom-width 0;
 
 	@include media-breakpoint-up(md) {
 		max-width: 300px;
 	}
 }
 
-.input-group-addon .input-group-constrain {
-	border-bottom-width: 0;
-	display: block;
-	line-height: $input-group-constrain-line-height;
-	margin-bottom: -$input-btn-padding-y - $input-border-bottom-width;
-	margin-left: -$input-btn-padding-x;
-	margin-right: -$input-btn-padding-x;
-	margin-top: -$input-btn-padding-y;
-
-	@if ($input-border-bottom-width > 0) {
-		padding-bottom: $input-border-bottom-width;
-	}
-
+.input-group-constrain-text {
 	padding-left: $input-btn-padding-x;
 	padding-right: $input-btn-padding-x;
 }
@@ -183,19 +173,10 @@
 		}
 	}
 
-	.input-group-constrain {
-		line-height: $input-group-constrain-line-height-lg;
-		margin-bottom: -$input-btn-padding-y-lg - $input-border-bottom-width;
-		margin-left: -$input-btn-padding-x-lg;
-		margin-right: -$input-btn-padding-x-lg;
-		margin-top: -$input-btn-padding-y-lg;
-
-		@if ($input-border-bottom-width > 0) {
-			padding-bottom: $input-border-bottom-width;
-		}
-
-		padding-left: $input-btn-padding-x-lg;
-		padding-right: $input-btn-padding-x-lg;
+	.input-group-addon.input-group-constrain {
+		height: auto;
+		line-height: $input-height-lg - $input-border-bottom-width - $input-border-top-width;
+		padding: 0 0 $input-border-bottom-width 0;
 	}
 
 	@if (variable-exists(atlas-theme)) {
@@ -245,19 +226,10 @@
 		}
 	}
 
-	.input-group-constrain {
-		line-height: $input-group-constrain-line-height-sm;
-		margin-bottom: -$input-btn-padding-y-sm - $input-border-bottom-width;
-		margin-left: -$input-btn-padding-x-sm;
-		margin-right: -$input-btn-padding-x-sm;
-		margin-top: -$input-btn-padding-y-sm;
-
-		@if ($input-border-bottom-width > 0) {
-			padding-bottom: $input-border-bottom-width;
-		}
-
-		padding-left: $input-btn-padding-x-sm;
-		padding-right: $input-btn-padding-x-sm;
+	.input-group-addon.input-group-constrain {
+		height: auto;
+		line-height: $input-height-sm - $input-border-bottom-width - $input-border-top-width;
+		padding: 0 0 $input-border-bottom-width 0;
 	}
 
 	@if (variable-exists(atlas-theme)) {
