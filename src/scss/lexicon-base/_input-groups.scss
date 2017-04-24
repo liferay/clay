@@ -116,6 +116,18 @@
 // Input Group Default
 
 .input-group-default {
+	.form-control:not(:first-child):not(:last-child) {
+		@include border-radius($input-border-radius);
+	}
+
+	&.input-group-lg .form-control:not(:first-child):not(:last-child) {
+		@include border-radius($input-border-radius-lg);
+	}
+
+	&.input-group-sm .form-control:not(:first-child):not(:last-child) {
+		@include border-radius($input-border-radius-lg);
+	}
+
 	.input-group-addon {
 		background-color: transparent;
 		border-width: 0;
