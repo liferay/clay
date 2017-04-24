@@ -1,26 +1,10 @@
-.nav a {
-	@if (variable-exists(nav-link-color)) {
-		color: $nav-link-color;
+.nav-link {
+	color: $nav-link-color;
+	position: relative;
+
+	&:focus {
+		z-index: 1;
 	}
-}
-
-.nav > li > a,
-.nav > li > span,
-.nav-heading > a,
-.nav-heading > span {
-	display: block;
-	padding: $nav-link-padding-y $nav-link-padding-x;
-	position: relative;
-}
-
-.nav > li > a:focus {
-	z-index: 1;
-}
-
-.nav-heading {
-	color: $nav-heading-color;
-	display: block;
-	position: relative;
 }
 
 // Nav Equal Height
