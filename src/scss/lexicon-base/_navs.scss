@@ -79,21 +79,6 @@
 
 // Nav Pills
 
-.nav-pills {
-	a[aria-expanded="true"] {
-		&,
-		&:hover,
-		&:focus {
-			background-color: $nav-pills-active-link-hover-bg;
-			color: $nav-pills-active-link-hover-color;
-		}
-	}
-
-	.nav > li > a {
-		border-radius: $nav-pills-border-radius;
-	}
-}
-
 .nav-circle {
 	> li > a,
 	.nav > li > a {
