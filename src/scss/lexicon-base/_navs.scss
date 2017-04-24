@@ -76,26 +76,3 @@
 .nav-nested-margins > li .nav > li {
 	margin-left: $nav-nested-margins-margin-horizontal;
 }
-
-// Nav Pills
-
-.nav-circle {
-	> li > a,
-	.nav > li > a {
-		border-radius: 100px;
-	}
-}
-
-.nav-rounded {
-	> li > a,
-	.nav > li > a {
-		border-radius: 5px;
-	}
-}
-
-.nav-square {
-	> li > a,
-	.nav > li > a {
-		border-radius: 0;
-	}
-}
