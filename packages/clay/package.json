@@ -1,7 +1,7 @@
 {
-  "name": "lexicon-ux",
+  "name": "clay",
   "version": "1.0.19",
-  "description": "Liferay's Lexicon Design Language",
+  "description": "Liferay's web implementation of the Lexicon Design Language",
   "main": "index.js",
   "csfConfig": {
     "js": {
@@ -15,14 +15,14 @@
   },
   "scripts": {
     "test": "exit 0",
-    "deploy": "cd ./build && git init . && git add . && git commit -m 'Deploy'; git push 'git@github.com:liferay/lexicon.git' master:gh-pages --force && rm -rf .git"
+    "deploy": "cd ./build && git init . && git add . && git commit -m 'Deploy'; git push 'git@github.com:liferay/clay.git' master:gh-pages --force && rm -rf .git"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/liferay/lexicon"
+    "url": "https://github.com/liferay/clay"
   },
-  "bugs": "https://github.com/liferay/lexicon/issues",
-  "homepage": "http://liferay.github.io/lexicon",
+  "bugs": "https://github.com/liferay/clay/issues",
+  "homepage": "http://liferay.github.io/clay",
   "author": {
     "name": "Nate Cavanaugh",
     "email": "nathan.cavanaugh@liferay.com",

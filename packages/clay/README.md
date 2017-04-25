@@ -17,14 +17,14 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## About
-This is the repo of Liferay's Lexicon Design Language, and an implementation of that design language based on [Bootstrap](http://getbootstrap.com).
+Clay is Liferay's web implementation of the Lexicon Design Language. It is built with HTML, CSS, and Javascript with Bootstrap as a foundation [Bootstrap](http://getbootstrap.com).
 
-They are meant to help explain our design principles, offer direction and best practices in building your web apps, and provide a documented HTML and CSS API.
+You can view the various components on [the Clay site](https://liferay.github.io/clay).
 
-You can view the guidelines on [the Lexicon site](https://liferay.github.io/lexicon).
+<!-- TODO: provide link to Lexicon site for documentation on design patterns -->
 
 ## Building
-If you would like to contribute to the guidelines, or make changes on your system you need to do the following:
+If you would like to contribute, or make changes on your system you need to do the following:
 
 ### Clone the repo
 Clone the repo to your computer
@@ -34,7 +34,7 @@ If you don't already have it installed. You can find more info here: http://node
 Node and NPM come bundled together, so you only need to install one package.
 
 ### Install the NPM modules
-Run `npm install` inside of the `lexicon` directory
+Run `npm install` inside of the `clay` directory
 
 ### Modify files in src/
 The files are generated from the `src/` directory, however, most of the files you'd be interested in changing are in `src/content/`. Files can be either HTML (`.html`) or Markdown (`.md`).
