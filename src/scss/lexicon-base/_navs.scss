@@ -7,66 +7,6 @@
 	}
 }
 
-// Nav Equal Height
-
-%nav-equal-height-item {
-	display: table-cell;
-	height: $nav-equal-height-height;
-	max-width: 100px;
-	min-width: 100px;
-	vertical-align: middle;
-	word-break: break-all \9;
-	word-wrap: break-word;
-}
-
-.nav-equal-height {
-	> li,
-	.nav > li {
-		display: table;
-		width: 100%;
-	}
-
-	> li > a {
-		@extend %nav-equal-height-item;
-
-		padding: 0 $nav-link-padding-x;
-	}
-
-	.nav > li > a {
-		@extend %nav-equal-height-item;
-	}
-}
-
-.nav-equal-height-heading {
-	display: table;
-	position: relative;
-	width: 100%;
-
-	&:focus,
-	&:hover {
-		background-color: $nav-link-hover-bg;
-		text-decoration: none;
-	}
-
-	> a,
-	> span {
-		@extend %nav-equal-height-item;
-
-		text-decoration: none;
-
-		&:first-child {
-			padding-left: $nav-link-padding-x;
-		}
-	}
-
-	// Deprecated `.nav-equal-height-heading-field` as of v1.0.9 in favor of
-	// `.table-cell-field` and will be removed in v2.0.0
-
-	> .nav-equal-height-heading-field {
-		width: 1%;
-	}
-}
-
 // Nav Nested
 
 .nav-nested {
