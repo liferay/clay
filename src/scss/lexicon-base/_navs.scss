@@ -10,9 +10,9 @@
 // Nav Nested
 
 .nav-nested {
-	@include make-nav-nested($nav-nested-padding-horizontal);
+	@include make-nav-nested($nav-nested-spacer-x);
 }
 
 .nav-nested-margins > li .nav > li {
-	margin-left: $nav-nested-margins-margin-horizontal;
+	margin-left: $nav-nested-margins-spacer-x;
 }
