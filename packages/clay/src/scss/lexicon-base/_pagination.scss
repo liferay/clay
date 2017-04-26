@@ -4,7 +4,7 @@
 	.pagination {
 		width: 100%;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			float: right;
 			margin: 0;
 			width: auto;
@@ -16,12 +16,12 @@
 	> li {
 		> a,
 		> span {
-			border: $pagination-border-width solid $pagination-border;
+			border: $pagination-border-width solid $pagination-border-color;
 			margin-left: -$pagination-border-width;
 			padding: $pagination-item-padding;
 
 			@if (variable-exists(atlas-theme)) {
-				border: $pagination-border-width solid $pagination-border;
+				border: $pagination-border-width solid $pagination-border-color;
 				border-radius: $pagination-border-radius;
 				display: inline-block;
 				float: none;
@@ -101,7 +101,7 @@
 	padding-bottom: $pagination-item-padding-bottom;
 	padding-top: $pagination-item-padding-top;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		float: left;
 		margin-left: 25px;
 	}

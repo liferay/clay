@@ -17,7 +17,7 @@
 		border-top-left-radius: $popover-border-radius - 1;
 		border-top-right-radius: $popover-border-radius - 1;
 
-		@if not ($popover-title-color == $text-color) {
+		@if not ($popover-title-color == $body-color) {
 			color: $popover-title-color;
 		}
 

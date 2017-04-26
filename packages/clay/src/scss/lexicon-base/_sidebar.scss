@@ -129,7 +129,7 @@
 
 	@if (variable-exists(atlas-theme)) {
 		.navbar > .navbar-collapse {
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				padding-left: $sidebar-navbar-gutter-left;
 				padding-right: $sidebar-navbar-gutter-right;
 
@@ -148,14 +148,9 @@
 		.navbar-collapse .open .dropdown-menu > .dropdown-header,
 		.navbar-collapse .dropdown-menu > li > a,
 		.navbar-collapse > .navbar-nav > li > a {
-			@media (max-width: $grid-float-breakpoint-max) {
-				@if ($sidebar-padding-left > $navbar-padding-horizontal) {
-					padding-left: $sidebar-padding-left;
-				}
-
-				@if ($sidebar-padding-right > $navbar-padding-horizontal) {
-					padding-right: $sidebar-padding-right;
-				}
+			@include media-breakpoint-down(sm) {
+				padding-left: $sidebar-padding-left;
+				padding-right: $sidebar-padding-right;
 			}
 		}
 
@@ -171,7 +166,7 @@
 			}
 
 			> .navbar-collapse {
-				@media (max-width: $grid-float-breakpoint-max) {
+				@include media-breakpoint-down(sm) {
 					margin-left: -$sidebar-navbar-gutter-left;
 					margin-right: -$sidebar-navbar-gutter-right;
 					padding-left: 0;
@@ -187,7 +182,7 @@
 		}
 
 		.navbar > [class*='container-fluid'] > .navbar-collapse {
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				padding-left: 0;
 				padding-right: 0;
 			}
@@ -285,13 +280,15 @@
 
 	@if (variable-exists(atlas-theme)) {
 		input {
-			@include placeholder($brand-default);
+			&::placeholder {
+				color: $brand-secondary;
+			}
 		}
 
 		.form-control {
 			background-color: $sidebar-inverse-input-bg;
 			border-width: 0;
-			color: $brand-default;
+			color: $brand-secondary;
 			padding: 8px 12px;
 		}
 	}

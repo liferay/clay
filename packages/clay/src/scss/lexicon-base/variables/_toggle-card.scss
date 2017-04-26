@@ -16,12 +16,12 @@ $toggle-card-icon-width: 32px !default;
 
 // Toggle Card Off Styles
 $toggle-card-bg: $input-bg !default;
-$toggle-card-border: $input-border !default;
+$toggle-card-border: $input-border-color !default;
 $toggle-card-border-width: 1px !default;
 $toggle-card-icon-bg: transparent !default;
 $toggle-card-icon-border: #869CAD !default;
 $toggle-card-icon-border-width: 0 !default;
-$toggle-card-text-color: $text-color !default;
+$toggle-card-text-color: $body-color !default;
 
 // Toggle Card On Styles
 $toggle-card-on-bg: $body-bg !default;

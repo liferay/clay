@@ -19,7 +19,7 @@
 
 .list-group-heading {
 	background-color: $list-group-header-bg;
-	border-color: $list-group-border;
+	border-color: $list-group-border-color;
 	border-style: solid;
 	border-width: $list-group-border-width;
 	color: $list-group-header-color;
@@ -282,7 +282,7 @@ button.list-group-heading {
 	.list-group-item-content,
 	.list-group-item-field {
 		background-color: $list-group-bg; // Chrome rendering issue with responsive-tables and td position relative
-		border: $tabular-list-group-border-width solid $list-group-border;
+		border: $tabular-list-group-border-width solid $list-group-border-color;
 		border-left-width: 0;
 		border-right-width: 0;
 		border-top-width: 0;
@@ -313,10 +313,10 @@ button.list-group-heading {
 			.list-group-item-field {
 				$tabular-list-group-active-bottom-v-shadow: $tabular-list-group-border-width - $tabular-list-group-active-border-bottom-width;
 
-				border-bottom-color: $list-group-active-border;
+				border-bottom-color: $list-group-active-border-color;
 
 				@if ($tabular-list-group-active-bottom-v-shadow < 0) {
-					box-shadow: inset 0 #{$tabular-list-group-active-bottom-v-shadow} 0 $list-group-active-border;
+					box-shadow: inset 0 #{$tabular-list-group-active-bottom-v-shadow} 0 $list-group-active-border-color;
 				}
 			}
 		}
@@ -348,7 +348,7 @@ button.list-group-heading {
 			.list-group-item-content,
 			.list-group-item-field {
 				@if ($tabular-list-group-active-border-bottom-width > 0) {
-					box-shadow: inset 0 -#{$tabular-list-group-active-border-bottom-width} 0 $list-group-active-border;
+					box-shadow: inset 0 -#{$tabular-list-group-active-border-bottom-width} 0 $list-group-active-border-color;
 				}
 			}
 		}
@@ -393,7 +393,7 @@ button.list-group-heading {
 
 // min width 992px
 
-@media (min-width: $screen-md-min) {
+@include media-breakpoint-up(lg) {
 	.tabular-list-group {
 		.list-group-item-content,
 		.list-group-item-field {

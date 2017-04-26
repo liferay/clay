@@ -1,6 +1,6 @@
 .container-fluid-1280.sidenav-container {
-	padding-left: floor(($grid-gutter-width / 2));
-	padding-right: floor(($grid-gutter-width / 2));
+	padding-left: floor(($grid-gutter-width-base / 2));
+	padding-right: floor(($grid-gutter-width-base / 2));
 }
 
 .sidenav-container {
@@ -27,7 +27,7 @@
 	padding-right: 0;
 	position: relative;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		@include clearfix;
 
 		position: static;

@@ -34,19 +34,19 @@ $pagination-border-radius: 4px !default;
 
 $pagination-bg: transparent !default;
 $pagination-border: $pagination-bg !default;
-$pagination-color: $brand-default !default;
+$pagination-color: $brand-secondary !default;
 
 $pagination-hover-bg: transparent !default;
-$pagination-hover-border: $pagination-hover-bg !default;
+$pagination-hover-border-color: $pagination-hover-bg !default;
 $pagination-hover-color: $pagination-color !default;
 
-$pagination-active-bg: lighten($brand-default, 30%) !default;
-$pagination-active-border: $brand-default !default;
-$pagination-active-color: $brand-default !default;
+$pagination-active-bg: lighten($brand-secondary, 30%) !default;
+$pagination-active-border-color: $brand-secondary !default;
+$pagination-active-color: $brand-secondary !default;
 
 $pagination-disabled-bg: transparent !default;
-$pagination-disabled-border: $pagination-disabled-bg !default;
-$pagination-disabled-color: $brand-default !default;
+$pagination-disabled-border-color: $pagination-disabled-bg !default;
+$pagination-disabled-color: $brand-secondary !default;
 
 $pagination-ellipsis-hover-bg: transparent !default;
 $pagination-ellipsis-hover-color: $link-hover-color !default;

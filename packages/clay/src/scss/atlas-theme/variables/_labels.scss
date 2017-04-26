@@ -1,5 +1,5 @@
-$label-desktop-font-size: $font-size-base !default; // Atlas
-$label-font-size: ceil($font-size-base / 1.166667) !default; // Atlas
+$label-font-size: $font-size-base / 1.166667 !default; // 18px
+$label-font-size-desktop: $font-size-base !default;
 $label-font-weight: 500 !default;
 $label-lexicon-icon-height: 10px !default;
 $label-lexicon-icon-width: $label-lexicon-icon-height !default;
@@ -8,26 +8,26 @@ $label-padding-left: 12px !default;
 $label-padding-right: 12px !default;
 $label-padding-top: 9px !default;
 
-$label-lg-desktop-font-size: $font-size-large !default;
-$label-lg-font-size: ceil($font-size-large / 1.166667) !default;
-$label-lg-lexicon-icon-height: 14px !default;
-$label-lg-lexicon-icon-width: $label-lg-lexicon-icon-height !default;
-$label-lg-padding-bottom: 14px !default;
-$label-lg-padding-left: 20px !default;
-$label-lg-padding-right: 20px !default;
-$label-lg-padding-top: 14px !default;
+$label-font-size-lg: $font-size-lg / 1.166667 !default;
+$label-font-size-lg-desktop: $font-size-lg !default;
+$label-lexicon-icon-height-lg: 14px !default;
+$label-lexicon-icon-width-lg: $label-lexicon-icon-height-lg !default;
+$label-padding-bottom-lg: 14px !default;
+$label-padding-left-lg: 20px !default;
+$label-padding-right-lg: 20px !default;
+$label-padding-top-lg: 14px !default;
 
-$label-sm-desktop-font-size: $font-size-small !default;
-$label-sm-font-size: ceil($font-size-small / 1.166667) !default;
-$label-sm-lexicon-icon-height: 7px !default;
-$label-sm-lexicon-icon-width: $label-sm-lexicon-icon-height !default;
-$label-sm-padding-bottom: 4px !default;
-$label-sm-padding-left: 10px !default;
-$label-sm-padding-right: 10px !default;
-$label-sm-padding-top: 4px !default;
+$label-font-size-sm: $font-size-sm / 1.166667 !default;
+$label-font-size-sm-desktop: $font-size-sm !default;
+$label-lexicon-icon-height-sm: 7px !default;
+$label-lexicon-icon-width-sm: $label-lexicon-icon-height-sm !default;
+$label-padding-bottom-sm: 4px !default;
+$label-padding-left-sm: 10px !default;
+$label-padding-right-sm: 10px !default;
+$label-padding-top-sm: 4px !default;
 
 // Skin
 
-$label-default-bg: #E7F1F9 !default;
-$label-default-color: $brand-primary !default;
-$label-default-hover-color: $label-default-color !default;
+$label-secondary-bg: #E7F1F9 !default;
+$label-secondary-color: $brand-primary !default;
+$label-secondary-color-hover: $label-secondary-color !default;

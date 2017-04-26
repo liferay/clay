@@ -4,8 +4,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 
 	@if (variable-exists(atlas-theme)) {
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-base;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-base-desktop;
 		}
 	}
 }
@@ -18,10 +18,6 @@ body {
 	font-family: $font-family-sans-serif;
 }
 
-.serif {
-	font-family: $font-family-serif;
-}
-
 // Headings
 
 @if (variable-exists(atlas-theme)) {
@@ -29,8 +25,8 @@ body {
 	.h1 {
 		font-size: $font-size-h1;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h1;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h1-desktop;
 		}
 	}
 
@@ -38,8 +34,8 @@ body {
 	.h2 {
 		font-size: $font-size-h2;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h2;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h2-desktop;
 		}
 	}
 
@@ -47,8 +43,8 @@ body {
 	.h3 {
 		font-size: $font-size-h3;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h3;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h3-desktop;
 		}
 	}
 
@@ -56,8 +52,8 @@ body {
 	.h4 {
 		font-size: $font-size-h4;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h4;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h4-desktop;
 		}
 	}
 
@@ -65,8 +61,8 @@ body {
 	.h5 {
 		font-size: $font-size-h5;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h5;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h5-desktop;
 		}
 	}
 
@@ -74,8 +70,8 @@ body {
 	.h6 {
 		font-size: $font-size-h6;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h6;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h6-desktop;
 		}
 	}
 }
@@ -109,7 +105,7 @@ body {
 
 // Contextual backgrounds
 
-@include bg-variant('.bg-default', $state-default-bg);
+@include bg-variant('.bg-default', $state-secondary-bg);
 
 @if (variable-exists(atlas-theme)) {
 	@include bg-variant('.bg-primary', $state-primary-bg);
@@ -124,7 +120,7 @@ a.text-muted {
 	}
 }
 
-@include text-emphasis-variant('.text-default', $state-default-text);
+@include text-emphasis-variant('.text-default', $state-secondary-text);
 
 @if (variable-exists(atlas-theme)) {
 	@include text-emphasis-variant('.text-primary', $state-primary-text);
@@ -149,7 +145,7 @@ th {
 .truncate-text {
 	display: block;
 
-	@include text-overflow;
+	@include text-truncate;
 
 	word-break: normal \9; // IE 8, 9
 	word-wrap: normal;
@@ -160,7 +156,6 @@ th {
 .blockquote-xs {
 	border-left-width: $blockquote-xs-border-width;
 	font-size: $blockquote-xs-font-size;
-	padding: ($line-height-computed / 2) ($line-height-computed * 0.7);
 
 	&.blockquote-reverse {
 		border-left-width: 0;
@@ -171,7 +166,6 @@ th {
 .blockquote-sm {
 	border-left-width: $blockquote-sm-border-width;
 	font-size: $blockquote-sm-font-size;
-	padding: ($line-height-computed / 2) ($line-height-computed * 0.8);
 
 	&.blockquote-reverse {
 		border-left-width: 0;
@@ -182,7 +176,6 @@ th {
 .blockquote-lg {
 	border-left-width: $blockquote-lg-border-width;
 	font-size: $blockquote-lg-font-size;
-	padding: ($line-height-computed / 2) ($line-height-computed * 1.5);
 
 	&.blockquote-reverse {
 		border-left-width: 0;

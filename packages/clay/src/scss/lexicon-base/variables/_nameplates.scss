@@ -1,5 +1,5 @@
 $nameplate-label-border-radius: 100px !default;
-$nameplate-label-height: $input-height-base !default;
+$nameplate-label-height: $input-height !default;
 
 $nameplate-label-text-font-weight: 500 !default;
 $nameplate-label-text-line-height: 32px !default;
@@ -16,10 +16,10 @@ $nameplate-subheading-color: $gray-light !default;
 $nameplate-label-link-dark-color: #23527C !default;
 $nameplate-label-link-dark-hover-color: darken($nameplate-label-link-dark-color, 15%) !default;
 
-$nameplate-label-default-bg: $navbar-default-bg !default;
-$nameplate-label-default-color: $navbar-default-color !default;
+$nameplate-label-default-bg: darken($body-bg, 3%) !default;
+$nameplate-label-default-color: $navbar-light-color !default;
 
-$nameplate-label-inverse-bg: $navbar-inverse-bg !default;
+$nameplate-label-inverse-bg: $brand-inverse !default;
 $nameplate-label-inverse-color: $navbar-inverse-color !default;
 
 $nameplate-label-primary-bg: $label-primary-bg !default;

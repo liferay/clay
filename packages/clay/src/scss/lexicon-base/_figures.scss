@@ -59,7 +59,7 @@
 
 @if (variable-exists(atlas-theme)) {
 	.figcaption-default {
-		@include color-figcaption($figcaption-default-bg, $figcaption-default-bg-alpha, $figcaption-default-color);
+		@include color-figcaption($figcaption-secondary-bg, $figcaption-secondary-bg-alpha, $figcaption-secondary-color);
 	}
 }
 

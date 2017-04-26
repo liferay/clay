@@ -1,8 +1,76 @@
+// When changing variables that affect the btn's height, make sure to match the
+// corresponding input-height with the button height.
+
+$input-btn-font-size-desktop: null !default;
+$input-btn-padding-x-desktop: null !default;
+$input-btn-padding-y-desktop: null !default;
+
+$input-btn-font-size-lg-desktop: null !default;
+$input-btn-padding-x-lg-desktop: null !default;
+$input-btn-padding-y-lg-desktop: null !default;
+
+$input-btn-font-size-sm-desktop: null !default;
+$input-btn-padding-x-sm-desktop: null !default;
+$input-btn-padding-y-sm-desktop: null !default;
+
+// End variables that affect btn height
+
+$btn-action-border-radius: null !default;
 $btn-action-dropdown-spacer: 5px !default;
 $btn-action-size: 34px !default;
+$btn-action-size-desktop: null !default;
+
+$btn-disabled-opacity: null !default;
+
 $btn-fixed-spacer-x: 20px !default;
 $btn-fixed-spacer-y: $btn-fixed-spacer-x !default;
 
-$btn-border-width: 1px !default;
+$btn-primary-hover-color: null !default;
+$btn-primary-hover-bg: null !default;
+$btn-primary-hover-border-color: null !default;
+$btn-primary-focus-box-shadow: null !default;
+$btn-primary-active-color: null !default;
+$btn-primary-active-bg: null !default;
+$btn-primary-active-border-color: null !default;
+
+$btn-secondary-hover-color: null !default;
+$btn-secondary-hover-bg: null !default;
+$btn-secondary-hover-border-color: null !default;
+$btn-secondary-focus-box-shadow: null !default;
+$btn-secondary-active-color: null !default;
+$btn-secondary-active-bg: null !default;
+$btn-secondary-active-border-color: null !default;
+
+$btn-success-hover-color: null !default;
+$btn-success-hover-bg: null !default;
+$btn-success-hover-border-color: null !default;
+$btn-success-focus-box-shadow: null !default;
+$btn-success-active-color: null !default;
+$btn-success-active-bg: null !default;
+$btn-success-active-border-color: null !default;
+
+$btn-info-hover-color: null !default;
+$btn-info-hover-bg: null !default;
+$btn-info-hover-border-color: null !default;
+$btn-info-focus-box-shadow: null !default;
+$btn-info-active-color: null !default;
+$btn-info-active-bg: null !default;
+$btn-info-active-border-color: null !default;
+
+$btn-warning-hover-color: null !default;
+$btn-warning-hover-bg: null !default;
+$btn-warning-hover-border-color: null !default;
+$btn-warning-focus-box-shadow: null !default;
+$btn-warning-active-color: null !default;
+$btn-warning-active-bg: null !default;
+$btn-warning-active-border-color: null !default;
+
+$btn-danger-hover-color: null !default;
+$btn-danger-hover-bg: null !default;
+$btn-danger-hover-border-color: null !default;
+$btn-danger-focus-box-shadow: null !default;
+$btn-danger-active-color: null !default;
+$btn-danger-active-bg: null !default;
+$btn-danger-active-border-color: null !default;
 
 $zindex-btn-action: 950 !default;

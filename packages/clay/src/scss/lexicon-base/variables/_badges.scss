@@ -1,30 +1,30 @@
-$badge-font-size: $label-font-size !default;
-$badge-lexicon-icon-height: $label-lexicon-icon-height !default;
-$badge-lexicon-icon-width: $label-lexicon-icon-width !default;
-$badge-padding-bottom: $label-padding-bottom !default;
-$badge-padding-left: $label-padding-left !default;
-$badge-padding-right: $label-padding-right !default;
-$badge-padding-top: $label-padding-top !default;
+$badge-font-size: 12px !default; // 12px
+$badge-lexicon-icon-height: 9px !default; // 9px
+$badge-lexicon-icon-width: $badge-lexicon-icon-height !default; // 9px
+$badge-padding-bottom: 3px !default; // 3px
+$badge-padding-left: 7px !default; // 7px
+$badge-padding-right: 7px !default; // 7px
+$badge-padding-top: 3px !default; // 3px
 
 $badge-link-text-decoration: underline !default;
 
 $badge-link-hover-text-decoration: none !default;
 
-$badge-lg-font-size: $label-lg-font-size !default;
-$badge-lg-lexicon-icon-height: $label-lg-lexicon-icon-height !default;
-$badge-lg-lexicon-icon-width: $label-lg-lexicon-icon-width !default;
-$badge-lg-padding-bottom: $label-lg-padding-bottom !default;
-$badge-lg-padding-left: $label-lg-padding-left !default;
-$badge-lg-padding-right: $label-lg-padding-right !default;
-$badge-lg-padding-top: $label-lg-padding-top !default;
+$badge-lg-font-size: 16px !default; // 16px
+$badge-lg-lexicon-icon-height: 13px !default; // 13px
+$badge-lg-lexicon-icon-width: $badge-lg-lexicon-icon-height !default; // 13px
+$badge-lg-padding-bottom: 6px !default; // 6px
+$badge-lg-padding-left: 12px !default; // 12px
+$badge-lg-padding-right: 12px !default; // 12px
+$badge-lg-padding-top: 6px !default; // 6px
 
-$badge-sm-font-size: $label-sm-font-size !default;
-$badge-sm-lexicon-icon-height: $label-sm-lexicon-icon-height !default;
-$badge-sm-lexicon-icon-width: $label-sm-lexicon-icon-width !default;
-$badge-sm-padding-bottom: $label-sm-padding-bottom !default;
-$badge-sm-padding-left: $label-sm-padding-left !default;
-$badge-sm-padding-right: $label-sm-padding-right !default;
-$badge-sm-padding-top: $label-sm-padding-top !default;
+$badge-sm-font-size: 9px !default; // 9px
+$badge-sm-lexicon-icon-height: 5px !default; // 5px
+$badge-sm-lexicon-icon-width: $badge-sm-lexicon-icon-height !default; // 5px
+$badge-sm-padding-bottom: 2px !default; // 2px
+$badge-sm-padding-left: 7px !default; // 7px
+$badge-sm-padding-right: 7px !default; // 7px
+$badge-sm-padding-top: 2px !default; // 2px
 
 $badge-border-style: null !default;
 $badge-border-width: null !default;

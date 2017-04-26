@@ -4,27 +4,27 @@
 		.btn + .btn-group,
 		.btn-group + .btn,
 		.btn-group + .btn-group {
-			margin-left: -$btn-border-width;
+			margin-left: -$input-btn-border-width;
 		}
 	}
 
 	.btn-group > .btn + .dropdown-toggle {
-		padding-left: $btn-padding-horizontal / 3;
-		padding-right: $btn-padding-horizontal / 3;
+		padding-left: $input-btn-padding-x / 3;
+		padding-right: $input-btn-padding-x / 3;
 
-		@media (min-width: $grid-float-breakpoint) {
-			padding-left: $btn-desktop-padding-horizontal / 3;
-			padding-right: $btn-desktop-padding-horizontal / 3;
+		@include media-breakpoint-up(md) {
+			padding-left: $input-btn-padding-x-desktop / 3;
+			padding-right: $input-btn-padding-x-desktop / 3;
 		}
 	}
 
 	.btn-group > .btn-lg + .dropdown-toggle {
-		padding-left: $btn-lg-padding-horizontal / 3;
-		padding-right: $btn-lg-padding-horizontal / 3;
+		padding-left: $input-btn-padding-x-lg / 3;
+		padding-right: $input-btn-padding-x-lg / 3;
 
-		@media (min-width: $grid-float-breakpoint) {
-			padding-left: $btn-desktop-lg-padding-horizontal / 3;
-			padding-right: $btn-desktop-lg-padding-horizontal / 3;
+		@include media-breakpoint-up(md) {
+			padding-left: $input-btn-padding-x-lg-desktop / 3;
+			padding-right: $input-btn-padding-x-lg-desktop / 3;
 		}
 	}
 
@@ -37,7 +37,7 @@
 		> .btn + .btn-group,
 		> .btn-group + .btn,
 		> .btn-group + .btn-group {
-			margin-top: -$btn-border-width;
+			margin-top: -$input-btn-border-width;
 		}
 	}
 

@@ -6,7 +6,7 @@ module.exports = function(gulp, plugins, _, config) {
 		['build'],
 		function(done) {
 			gulp.watch(
-				['./CHANGELOG.md', config.SRC_GLOB, '!src/scss/bootstrap/_variables.scss', 'templates/**/*'],
+				['./CHANGELOG.md', config.SRC_GLOB, '!src/scss/bootstrap/_variables.scss', '!src/js/bootstrap.js', 'templates/**/*'],
 				['build']
 			);
 		}

@@ -6,6 +6,60 @@ section: Components
 <div id="navbarsPage"></div>
 <div class="row row-spacing">
 	<div class="col-md-12">
+		<nav class="navbar navbar-light bg-faded">
+			<div class="navbar-header navbar-header-left-xs" style="display:none;">
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<div class="navbar-header navbar-header-right">
+				<button aria-expanded="false" class="navbar-toggler hidden-md-up" data-target="#bs4-navbar-collapse-0b" data-toggle="collapse" type="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div aria-expanded="false" class="collapse navbar-toggleable-sm" id="bs4-navbar-collapse-0b">
+				<ul class="nav navbar-nav">
+					<li class="active nav-item"><a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="form-inline float-md-left" role="search">
+					<input class="form-control" placeholder="Search" type="text">
+					<button class="btn btn-default" type="submit">Submit</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
 		<h3>Base Navbar</h3>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Default style navbar. The mark up deviates from Bootstrap 3's mark up with two navbar-headers. This allows us to preserve the tab order for keyboard users.</p>

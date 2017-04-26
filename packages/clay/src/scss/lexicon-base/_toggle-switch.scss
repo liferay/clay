@@ -30,7 +30,8 @@ input.toggle-switch {
 		position: relative;
 		text-indent: 0;
 
-		@include user-select(none);
+		-ms-user-select: none;
+		user-select: none;
 
 		&:after {
 			background-color: $toggle-switch-button-bg;
@@ -189,7 +190,7 @@ input.toggle-switch {
 }
 
 @if (variable-exists(atlas-theme)) {
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		.toggle-switch-bar {
 			.toggle-switch-handle {
 				min-width: $toggle-switch-bar-desktop-width;

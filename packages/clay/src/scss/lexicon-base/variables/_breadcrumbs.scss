@@ -1,10 +1,11 @@
-$breadcrumb-separator-font-family: null !default;
-$breadcrumb-separator-font-weight: null !default;
-$breadcrumb-separator-svg-icon: lx-icon(angle-right, $breadcrumb-color) !default;
-$breadcrumb-separator-svg-icon-height: 0.75em !default;
-$breadcrumb-separator-svg-icon-width: $breadcrumb-separator-svg-icon-height !default;
+$breadcrumb-divider-color: $breadcrumb-active-color !default;
+$breadcrumb-divider-font-family: null !default;
+$breadcrumb-divider-font-weight: null !default;
+$breadcrumb-divider-svg-icon: lx-icon(angle-right, $breadcrumb-divider-color) !default;
+$breadcrumb-divider-svg-icon-height: 0.75em !default;
+$breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;
 
-$breadcrumb-vertical-separator: normal !default;
+$breadcrumb-vertical-divider: normal !default;
 
 $breadcrumb-active-font-weight: null !default;
 

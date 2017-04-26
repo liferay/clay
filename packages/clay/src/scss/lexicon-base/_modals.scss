@@ -1,5 +1,5 @@
 .modal-dialog {
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		bottom: 0;
 		left: 0;
 		margin: 0;
@@ -11,13 +11,11 @@
 }
 
 .modal-content {
-	box-shadow: $modal-box-shadow;
 	overflow: auto;
 
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		border-radius: 0;
 		border-width: 0;
-		box-shadow: none;
 		height: 100%;
 	}
 }
@@ -30,9 +28,9 @@
 	@if (variable-exists(atlas-theme)) {
 		text-align: center;
 
-		@media (min-width: $grid-float-breakpoint) {
-			background-color: $modal-desktop-header-bg;
-			color: $modal-desktop-header-color;
+		@include media-breakpoint-up(md) {
+			background-color: $modal-header-bg-desktop;
+			color: $modal-header-color-desktop;
 		}
 	}
 }
@@ -41,7 +39,7 @@
 	background-color: $modal-body-bg;
 	color: $modal-body-color;
 
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		bottom: $modal-footer-height;
 		left: 0;
 		overflow: auto;
@@ -77,7 +75,7 @@
 	color: $modal-footer-color;
 	text-align: left;
 
-	@media (max-width: $grid-float-breakpoint-max) {
+	@include media-breakpoint-down(sm) {
 		bottom: 0;
 		left: 0;
 		position: absolute;
@@ -85,9 +83,9 @@
 	}
 
 	@if (variable-exists(atlas-theme)) {
-		@media (min-width: $grid-float-breakpoint) {
-			background-color: $modal-desktop-footer-bg;
-			color: $modal-desktop-footer-color;
+		@include media-breakpoint-up(md) {
+			background-color: $modal-footer-bg-desktop;
+			color: $modal-footer-color-desktop;
 			position: relative;
 		}
 	}
@@ -105,55 +103,55 @@
 
 	text-align: center;
 
-	@include text-overflow;
+	@include text-truncate;
 }
 
 @if (variable-exists(atlas-theme)) {
 	h1.modal-title {
 		font-size: $font-size-h1;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h1;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h1-desktop;
 		}
 	}
 
 	h2.modal-title {
 		font-size: $font-size-h2;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h2;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h2-desktop;
 		}
 	}
 
 	h3.modal-title {
 		font-size: $font-size-h3;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h3;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h3-desktop;
 		}
 	}
 
 	h4.modal-title {
 		font-size: $font-size-h4;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h4;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h4-desktop;
 		}
 	}
 
 	h5.modal-title {
 		font-size: $font-size-h5;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h5;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h5-desktop;
 		}
 	}
 
 	h6.modal-title {
 		font-size: $font-size-h6;
 
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $font-size-desktop-h6;
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h6-desktop;
 		}
 	}
 }
@@ -192,9 +190,9 @@ button.modal-primary-action-button {
 			width: $modal-title-line-height;
 		}
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			@if (variable-exists(atlas-theme)) {
-				color: $modal-desktop-header-close-color;
+				color: $modal-header-close-color-desktop;
 			}
 		}
 	}
@@ -226,9 +224,9 @@ button.modal-primary-action-button {
 			box-shadow: none;
 			color: $modal-header-close-color;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				@if (variable-exists(atlas-theme)) {
-					color: $modal-desktop-header-close-color;
+					color: $modal-header-close-color-desktop;
 				}
 			}
 		}
@@ -272,7 +270,7 @@ button.modal-primary-action-button {
 	top: 0;
 	width: auto;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		bottom: 45px;
 		left: 45px;
 		right: 45px;
@@ -285,7 +283,7 @@ button.modal-primary-action-button {
 		border-width: 0;
 		height: 100%;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			border-radius: 6px;
 			border-width: 1px;
 		}
@@ -299,9 +297,9 @@ button.modal-primary-action-button {
 		right: 0;
 		top: $modal-header-height;
 
-		@media (min-width: $grid-float-breakpoint) {
-			bottom: $modal-desktop-footer-height;
-			top: $modal-desktop-header-height;
+		@include media-breakpoint-up(md) {
+			bottom: $modal-footer-height-desktop;
+			top: $modal-header-height-desktop;
 		}
 	}
 
@@ -320,7 +318,7 @@ button.modal-primary-action-button {
 		right: 0;
 		top: auto;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			padding: $modal-inner-padding;
 		}
 	}
@@ -343,10 +341,10 @@ button.modal-primary-action-button {
 		color: $modal-inverse-header-color;
 
 		@if (variable-exists(atlas-theme)) {
-			@media (min-width: $grid-float-breakpoint) {
-				background-color: $modal-inverse-desktop-header-bg;
-				border-color: $modal-inverse-desktop-header-border-color;
-				color: $modal-inverse-desktop-header-color;
+			@include media-breakpoint-up(md) {
+				background-color: $modal-inverse-header-bg-desktop;
+				border-color: $modal-inverse-header-border-color-desktop;
+				color: $modal-inverse-header-color-desktop;
 			}
 		}
 
@@ -355,8 +353,8 @@ button.modal-primary-action-button {
 			color: $modal-inverse-header-close-color;
 
 			@if (variable-exists(atlas-theme)) {
-				@media screen and (min-width: $grid-float-breakpoint) {
-					color: $modal-inverse-desktop-header-close-color;
+				@include media-breakpoint-up(md) {	
+					color: $modal-inverse-header-close-color-desktop;
 				}
 			}
 		}
@@ -373,10 +371,10 @@ button.modal-primary-action-button {
 		color: $modal-inverse-footer-color;
 
 		@if (variable-exists(atlas-theme)) {
-			@media (min-width: $grid-float-breakpoint) {
-				background-color: $modal-inverse-desktop-footer-bg;
-				border-color: $modal-inverse-desktop-footer-border-color;
-				color: $modal-inverse-desktop-footer-color;
+			@include media-breakpoint-up(md) {
+				background-color: $modal-inverse-footer-bg-desktop;
+				border-color: $modal-inverse-footer-border-color-desktop;
+				color: $modal-inverse-footer-color-desktop;
 			}
 		}
 	}

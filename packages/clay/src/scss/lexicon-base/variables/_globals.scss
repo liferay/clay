@@ -1,7 +1,8 @@
-$enable-ie9-compatibility: false !default;
+$enable-mobile-desktop-sizes: false !default;
+$mobile-desktop-breakpoint: md !default;
 
-$brand-default: #777 !default;
+$brand-secondary: $gray-lightest !default; // #F7F7F9
 
-$state-default-bg: $brand-default !default;
-$state-default-border: darken(adjust-hue($state-default-bg, -10), 5%) !default;
-$state-default-text: $gray-dark !default;
+$state-secondary-bg: $gray-lightest !default; // #F7F7F9
+$state-secondary-border-color: darken($state-secondary-bg, 5%) !default; // #E8E8EE
+$state-secondary-text: $gray-dark !default; // #292B2C
