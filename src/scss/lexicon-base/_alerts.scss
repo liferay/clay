@@ -1,63 +1,129 @@
-@if (variable-exists(atlas-theme)) {
-	.alert {
+.alert {
+	@if ($alert-border-width != 1px) {
 		border-width: $alert-border-width;
-		font-size: $alert-font-size;
+	}
 
-		.close {
-			color: $alert-close-color;
-			opacity: 1;
-			top: -1px;
-		}
+	font-size: $alert-font-size;
 
-		.lead {
-			font-size: $alert-lead-font-size;
-			font-weight: $alert-lead-font-weight;
-			margin-bottom: 0;
-			margin-right: 16px;
+	.close {
+		opacity: $alert-close-opacity;
+		padding-bottom: $alert-close-padding-bottom;
+		padding-left: $alert-close-padding-left;
+		padding-right: $alert-close-padding-right;
+		padding-top: $alert-close-padding-top;
+		right: $alert-close-position-right;
+		top: $alert-close-position-top;
+	}
+
+	.lead {
+		font-size: $alert-lead-font-size;
+		font-weight: $alert-lead-font-weight;
+		margin-right: $alert-lead-margin-right;
+	}
+}
+
+.alert-link {
+	text-decoration: $alert-link-decoration;
+
+	&:focus,
+	&:hover {
+		text-decoration: $alert-link-hover-decoration;
+	}
+}
+
+.alert-danger {
+	.close {
+		color: $alert-danger-close-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-danger-close-hover-color;
 		}
 	}
 
 	.alert-link {
-		text-decoration: underline;
+		color: $alert-danger-link-color;
 
 		&:focus,
 		&:hover {
-			text-decoration: none;
+			color: $alert-danger-link-hover-color;
 		}
 	}
 
-	// Alert Skins
+	.lead {
+		color: $alert-danger-lead-color;
+	}
+}
 
-	.alert-default {
-		background-color: $alert-default-bg;
-		border-color: $alert-default-border;
-		color: $alert-default-text;
+.alert-info {
+	.close {
+		color: $alert-info-close-color;
 
-		hr {
-			border-top-color: $alert-default-border;
-		}
-
-		.alert-link,
-		.close,
-		.lead {
-			color: $alert-default-text-bold;
+		&:focus,
+		&:hover {
+			color: $alert-info-close-hover-color;
 		}
 	}
 
-	.alert-danger {
-		@include color-alert-text($alert-danger-text, $alert-danger-text-bold);
+	.alert-link {
+		color: $alert-info-link-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-info-link-hover-color;
+		}
 	}
 
-	.alert-info {
-		@include color-alert-text($alert-info-text, $alert-info-text-bold);
+	.lead {
+		color: $alert-info-lead-color;
+	}
+}
+
+.alert-success {
+	.close {
+		color: $alert-success-close-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-success-close-hover-color;
+		}
 	}
 
-	.alert-success {
-		@include color-alert-text($alert-success-text, $alert-success-text-bold);
+	.alert-link {
+		color: $alert-success-link-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-success-link-hover-color;
+		}
 	}
 
-	.alert-warning {
-		@include color-alert-text($alert-warning-text, $alert-warning-text-bold);
+	.lead {
+		color: $alert-success-lead-color;
+	}
+}
+
+.alert-warning {
+	.close {
+		color: $alert-warning-close-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-warning-close-hover-color;
+		}
+	}
+
+	.alert-link {
+		color: $alert-warning-link-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-warning-link-hover-color;
+		}
+	}
+
+	.lead {
+		color: $alert-warning-lead-color;
 	}
 }
 
@@ -66,7 +132,7 @@
 .alert-notification {
 	width: 100%;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		max-width: $alert-notification-max-width;
 	}
 }

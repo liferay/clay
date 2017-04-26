@@ -26,7 +26,7 @@
 }
 
 @function lx-icon-padding($monospaced-size, $icon-size) {
-	@return floor(($monospaced-size - $icon-size) / 2);
+	@return ($monospaced-size - $icon-size) / 2;
 }
 
 @function calcLexiconIconPadding($monospaced-size, $icon-size) {
@@ -40,7 +40,7 @@
 // @param $padding - padding-left or padding-right
 // @param $gutter - width of gutters used in Bootstrap's grid default is 30
 
-@function lx-sidebar-navbar-gutter($padding, $gutter: $grid-gutter-width) {
+@function lx-sidebar-navbar-gutter($padding, $gutter: $grid-gutter-width-base) {
 	$sidebar-navbar-gutter: $padding - ($gutter / 2);
 
 	@if not ($sidebar-navbar-gutter > 0) {

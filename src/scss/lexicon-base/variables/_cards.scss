@@ -1,7 +1,6 @@
-$card-border-width: 1px !default;
 $card-divider-height: 1px !default;
 $card-gutter-width: 15px !default;
-$card-margin-bottom: $line-height-computed !default;
+$card-margin-bottom: 1.25rem !default;
 
 $checkbox-left-card-padding: 40px !default;
 $checkbox-right-card-padding: $checkbox-left-card-padding !default;
@@ -11,14 +10,13 @@ $checkbox-position: 15px !default;
 // Skin
 
 $card-bg: $dropdown-bg !default;
-$card-fallback-border: $dropdown-fallback-border !default;
-$card-border: $dropdown-border !default;
+$card-border-color: $dropdown-border-color !default;
 $card-border-style: solid !default;
-$card-border-radius: $border-radius-base !default;
+$card-border-radius: $border-radius !default;
 $card-box-shadow: null !default;
 
 $card-circle-border-radius: 20px !default;
 $card-rounded-border-radius: 4px !default;
 $card-square-border-radius: 0 !default;
 
-$card-divider-bg: $card-border !default;
+$card-divider-bg: $card-border-color !default;

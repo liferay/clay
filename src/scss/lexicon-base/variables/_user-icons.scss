@@ -7,7 +7,7 @@ $user-icon-xs-desktop-size: 22px !default;
 $user-icon-sm-font-size: 9px !default;
 $user-icon-sm-size: 22px !default;
 
-$user-icon-sm-desktop-font-size: $font-size-small !default; // 12px
+$user-icon-sm-desktop-font-size: $font-size-sm !default; // 12px
 $user-icon-sm-desktop-size: 30px !default;
 
 $user-icon-font-size: $font-size-base !default; // 14px
@@ -16,7 +16,7 @@ $user-icon-size: 34px !default;
 $user-icon-lg-font-size: 13px !default;
 $user-icon-lg-size: 34px !default;
 
-$user-icon-lg-desktop-font-size: $font-size-large !default; // 18px
+$user-icon-lg-desktop-font-size: $font-size-lg !default; // 18px
 $user-icon-lg-desktop-size: 45px !default;
 
 $user-icon-xl-font-size: 22px !default;
@@ -36,7 +36,7 @@ $user-icon-xxl-desktop-size: 128px !default;
 
 $user-icon-border-radius: 500px !default;
 $user-icon-circle-border-radius: 500px !default;
-$user-icon-rounded-border-radius: $border-radius-base !default;
+$user-icon-rounded-border-radius: $border-radius !default;
 $user-icon-square-border-radius: 0 !default;
 
 // Skin

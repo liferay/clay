@@ -1,25 +1,22 @@
 .has-success {
 	label,
-	.control-label {
+	.form-control-label {
 		color: $input-success-label-color;
 	}
 
-	.checkbox,
-	.radio {
-		label {
-			color: $input-success-checkbox-label-color;
-		}
+	.form-check-label {
+		color: $input-success-checkbox-label-color;
 	}
 
 	.form-control {
 		background-color: $input-success-bg;
-		border-color: $input-success-border;
+		border-color: $input-success-border-color;
 		box-shadow: $input-success-box-shadow;
 		color: $input-success-color;
 
 		&:focus {
 			background-color: $input-success-bg-focus;
-			border-color: $input-success-border-focus;
+			border-color: $input-success-border-color-focus;
 			box-shadow: $input-success-box-shadow-focus;
 			color: $input-success-color-focus;
 		}
@@ -28,86 +25,89 @@
 
 .has-warning {
 	label,
-	.control-label {
+	.form-control-label {
 		color: $input-warning-label-color;
 	}
 
-	.checkbox,
-	.radio {
-		label {
-			color: $input-warning-checkbox-label-color;
-		}
+	.form-check-label {
+		color: $input-warning-checkbox-label-color;
 	}
 
 	.form-control {
 		background-color: $input-warning-bg;
-		border-color: $input-warning-border;
+		border-color: $input-warning-border-color;
 		box-shadow: $input-warning-box-shadow;
 		color: $input-warning-color;
 
 		&:focus {
 			background-color: $input-warning-bg-focus;
-			border-color: $input-warning-border-focus;
+			border-color: $input-warning-border-color-focus;
 			box-shadow: $input-warning-box-shadow-focus;
 			color: $input-warning-color-focus;
 		}
 	}
 }
 
-.has-error {
+.has-danger {
 	label,
-	.control-label {
+	.form-control-label {
 		color: $input-danger-label-color;
 	}
 
-	.checkbox,
-	.radio {
-		label {
-			color: $input-danger-checkbox-label-color;
-		}
+	.form-check-label {
+		color: $input-danger-checkbox-label-color;
 	}
 
 	.form-control {
 		background-color: $input-danger-bg;
-		border-color: $input-danger-border;
+		border-color: $input-danger-border-color;
 		box-shadow: $input-danger-box-shadow;
 		color: $input-danger-color;
 
 		&:focus {
 			background-color: $input-danger-bg-focus;
-			border-color: $input-danger-border-focus;
+			border-color: $input-danger-border-color-focus;
 			box-shadow: $input-danger-box-shadow-focus;
 			color: $input-danger-color-focus;
 		}
 	}
 }
 
+// Form Control Feedback
+
+.form-control-feedback {
+	font-size: $form-control-feedback-font-size;
+	font-weight: 500;
+}
+
+.form-text {
+	font-size: $form-text-font-size;
+}
+
+.form-control-feedback .lexicon-icon,
+.form-text .lexicon-icon {
+	margin-top: -3px;
+}
+
 @if (variable-exists(atlas-theme)) {
 	.has-success {
-		select.form-control {
-			background-image: lx-icon(caret-double-l, $state-success-border);
+		select.form-control:not([multiple]):not([size]) {
+			background-image: lx-icon(caret-double-l, $state-success-border-color);
 			background-image: none \9;
 		}
 	}
 
 	.has-warning {
-		select.form-control {
-			background-image: lx-icon(caret-double-l, $state-warning-border);
+		select.form-control:not([multiple]):not([size]) {
+			background-image: lx-icon(caret-double-l, $state-warning-border-color);
 			background-image: none \9;
 		}
 	}
 
-	.has-error {
-		select.form-control {
-			background-image: lx-icon(caret-double-l, $state-danger-border);
+	.has-danger {
+		select.form-control:not([multiple]):not([size]) {
+			background-image: lx-icon(caret-double-l, $state-danger-border-color);
 			background-image: none \9;
 		}
-	}
-
-	.form-group select.form-control[multiple] {
-		background-image: none;
-		background-position: 0% 0%;
-		background-size: auto;
-		padding: $input-padding-vertical $input-padding-horizontal;
 	}
 }

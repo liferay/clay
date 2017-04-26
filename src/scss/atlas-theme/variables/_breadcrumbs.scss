@@ -1,13 +1,8 @@
-// Structure
+$breadcrumb-bg: transparent !default;
+$breadcrumb-active-color: #C1CBD1 !default;
+$breadcrumb-divider-color: #D4DADF !default;
+$breadcrumb-link-color: #4A5E6A !default;
 
-$breadcrumb-font-size: 12px !default;
+$breadcrumb-font-size: 0.75rem !default; // 12px
 $breadcrumb-font-weight: 500 !default;
 $breadcrumb-text-transform: uppercase !default;
-
-// Skin
-
-$breadcrumb-bg: transparent !default;
-
-$breadcrumb-active-color: #C1CBD1 !default;
-$breadcrumb-color: #D4DADF !default;
-$breadcrumb-link-color: #4A5E6A !default;

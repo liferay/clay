@@ -14,9 +14,9 @@
 	white-space: normal;
 	word-wrap: break-word;
 
-	@if (variable-exists(label-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $label-desktop-font-size;
+	@if (variable-exists(label-font-size-desktop)) {
+		@include media-breakpoint-up(md) {
+			font-size: $label-font-size-desktop;
 		}
 	}
 
@@ -27,8 +27,8 @@
 
 		&:focus,
 		&:hover {
-			color: $label-link-hover-color;
-			text-decoration: $label-link-hover-text-decoration;
+			color: $label-link-color-hover;
+			text-decoration: $label-link-text-decoration-hover;
 		}
 	}
 
@@ -45,29 +45,29 @@
 }
 
 .label-lg {
-	font-size: $label-lg-font-size;
-	padding-bottom: $label-lg-padding-bottom;
-	padding-left: $label-lg-padding-left;
-	padding-right: $label-lg-padding-right;
-	padding-top: $label-lg-padding-top;
+	font-size: $label-font-size-lg;
+	padding-bottom: $label-padding-bottom-lg;
+	padding-left: $label-padding-left-lg;
+	padding-right: $label-padding-right-lg;
+	padding-top: $label-padding-top-lg;
 
-	@if (variable-exists(label-lg-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $label-lg-desktop-font-size;
+	@if (variable-exists(label-font-size-lg-desktop)) {
+		@include media-breakpoint-up(md) {
+			font-size: $label-font-size-lg-desktop;
 		}
 	}
 }
 
 .label-sm {
-	font-size: $label-sm-font-size;
-	padding-bottom: $label-sm-padding-bottom;
-	padding-left: $label-sm-padding-left;
-	padding-right: $label-sm-padding-right;
-	padding-top: $label-sm-padding-top;
+	font-size: $label-font-size-sm;
+	padding-bottom: $label-padding-bottom-sm;
+	padding-left: $label-padding-left-sm;
+	padding-right: $label-padding-right-sm;
+	padding-top: $label-padding-top-sm;
 
-	@if (variable-exists(label-sm-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $label-sm-desktop-font-size;
+	@if (variable-exists(label-font-size-sm-desktop)) {
+		@include media-breakpoint-up(md) {
+			font-size: $label-font-size-sm-desktop;
 		}
 	}
 }
@@ -81,28 +81,28 @@
 }
 
 .label-lg .lexicon-icon {
-	height: $label-lg-lexicon-icon-height;
+	height: $label-lexicon-icon-height-lg;
 	margin-left: 4px;
-	width: $label-lg-lexicon-icon-width;
+	width: $label-lexicon-icon-width-lg;
 }
 
 .label-sm .lexicon-icon {
-	height: $label-sm-lexicon-icon-height;
-	width: $label-sm-lexicon-icon-width;
+	height: $label-lexicon-icon-height-sm;
+	width: $label-lexicon-icon-width-sm;
 }
 
 // Skin
 
 .label-danger {
-	border-color: $label-danger-border;
+	border-color: $label-danger-border-color;
 	color: $label-danger-color;
 
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-danger-hover-bg;
-			border-color: $label-danger-hover-border;
-			color: $label-danger-hover-color;
+			background-color: $label-danger-bg-hover;
+			border-color: $label-danger-border-color-hover;
+			color: $label-danger-color-hover;
 		}
 	}
 
@@ -111,44 +111,44 @@
 
 		&:focus,
 		&:hover {
-			color: $label-danger-hover-color;
+			color: $label-danger-color-hover;
 		}
 	}
 }
 
 .label-default {
-	border-color: $label-default-border;
-	color: $label-default-color;
+	border-color: $label-secondary-border-color;
+	color: $label-secondary-color;
 
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-default-hover-bg;
-			border-color: $label-default-hover-border;
-			color: $label-default-hover-color;
+			background-color: $label-secondary-bg-hover;
+			border-color: $label-secondary-border-color-hover;
+			color: $label-secondary-color-hover;
 		}
 	}
 
 	a {
-		color: $label-default-color;
+		color: $label-secondary-color;
 
 		&:focus,
 		&:hover {
-			color: $label-default-hover-color;
+			color: $label-secondary-color-hover;
 		}
 	}
 }
 
 .label-info {
-	border-color: $label-info-border;
+	border-color: $label-info-border-color;
 	color: $label-info-color;
 
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-info-hover-bg;
-			border-color: $label-info-hover-border;
-			color: $label-info-hover-color;
+			background-color: $label-info-bg-hover;
+			border-color: $label-info-border-color-hover;
+			color: $label-info-color-hover;
 		}
 	}
 
@@ -157,21 +157,21 @@
 
 		&:focus,
 		&:hover {
-			color: $label-info-hover-color;
+			color: $label-info-color-hover;
 		}
 	}
 }
 
 .label-primary {
-	border-color: $label-primary-border;
+	border-color: $label-primary-border-color;
 	color: $label-primary-color;
 
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-primary-hover-bg;
-			border-color: $label-primary-hover-border;
-			color: $label-primary-hover-color;
+			background-color: $label-primary-bg-hover;
+			border-color: $label-primary-border-color-hover;
+			color: $label-primary-color-hover;
 		}
 	}
 
@@ -180,21 +180,21 @@
 
 		&:focus,
 		&:hover {
-			color: $label-primary-hover-color;
+			color: $label-primary-color-hover;
 		}
 	}
 }
 
 .label-success {
-	border-color: $label-success-border;
+	border-color: $label-success-border-color;
 	color: $label-success-color;
 
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-success-hover-bg;
-			border-color: $label-success-hover-border;
-			color: $label-success-hover-color;
+			background-color: $label-success-bg-hover;
+			border-color: $label-success-border-color-hover;
+			color: $label-success-color-hover;
 		}
 	}
 
@@ -203,21 +203,21 @@
 
 		&:focus,
 		&:hover {
-			color: $label-success-hover-color;
+			color: $label-success-color-hover;
 		}
 	}
 }
 
 .label-warning {
-	border-color: $label-warning-border;
+	border-color: $label-warning-border-color;
 	color: $label-warning-color;
 
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-warning-hover-bg;
-			border-color: $label-warning-hover-border;
-			color: $label-warning-hover-color;
+			background-color: $label-warning-bg-hover;
+			border-color: $label-warning-border-color-hover;
+			color: $label-warning-color-hover;
 		}
 	}
 
@@ -226,7 +226,7 @@
 
 		&:focus,
 		&:hover {
-			color: $label-warning-hover-color;
+			color: $label-warning-color-hover;
 		}
 	}
 }

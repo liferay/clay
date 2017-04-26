@@ -1,10 +1,18 @@
-.breadcrumb {
-	border-radius: $breadcrumb-border-radius;
+.breadcrumb-item {
+	font-size: $breadcrumb-font-size;
+	font-weight: $breadcrumb-font-weight;
+	max-width: 150px;
 
-	&:after {
-		clear: both;
-		content: '';
-		display: table;
+	@include text-truncate;
+
+	text-transform: $breadcrumb-text-transform;
+
+	@include media-breakpoint-up(md) {
+		max-width: 300px;
+	}
+
+	&.active {
+		font-weight: $breadcrumb-active-font-weight;
 	}
 
 	a {
@@ -18,73 +26,58 @@
 		}
 	}
 
-	> li {
+	+ .breadcrumb-item:before {
+		content: $breadcrumb-divider;
 		float: left;
-		font-size: $breadcrumb-font-size;
-		font-weight: $breadcrumb-font-weight;
-		max-width: 150px;
-
-		@include text-overflow;
-
-		text-transform: $breadcrumb-text-transform;
-
-		@media (min-width: $grid-float-breakpoint) {
-			max-width: 300px;
-		}
-
-		+ li:before {
-			content: $breadcrumb-separator;
-			float: left;
-			font-family: $breadcrumb-separator-font-family;
-			font-weight: $breadcrumb-separator-font-weight;
-			padding-left: 0.4em;
-			padding-right: 0.4em;
-		}
-	}
-
-	> .active {
-		font-weight: $breadcrumb-active-font-weight;
+		font-family: $breadcrumb-divider-font-family;
+		font-weight: $breadcrumb-divider-font-weight;
+		padding-left: 0.4em;
+		padding-right: 0.4em;
 	}
 }
 
+.breadcrumb {
+	border-radius: $breadcrumb-border-radius;
+}
+
 .breadcrumb-horizontal {
-	> li {
+	.breadcrumb-item {
 		margin-right: 0.5em;
 		position: relative;
 
-		+ li {
+		+ .breadcrumb-item {
 			padding-left: 1em;
 		}
 
-		+ li:before {
-			background-image: $breadcrumb-separator-svg-icon;
+		+ .breadcrumb-item:before {
+			background-image: $breadcrumb-divider-svg-icon;
 			background-repeat: no-repeat;
 			background-size: 100%;
 			content: '';
 			display: block;
 			float: left;
-			height: $breadcrumb-separator-svg-icon-height;
+			height: $breadcrumb-divider-svg-icon-height;
 			left: 0;
-			margin-top: -$breadcrumb-separator-svg-icon-height / 2;
+			margin-top: -$breadcrumb-divider-svg-icon-height / 2;
 			padding: 0;
 			position: absolute;
 			top: 50%;
-			width: $breadcrumb-separator-svg-icon-width;
+			width: $breadcrumb-divider-svg-icon-width;
 		}
 	}
 }
 
 .breadcrumb-vertical {
-	> li {
+	.breadcrumb-item {
 		display: block;
 		float: none;
 		max-width: none;
 	}
 
-	> li:before,
-	> li + li:before {
-		color: $breadcrumb-color;
-		content: $breadcrumb-vertical-separator;
+	.breadcrumb-item:before,
+	.breadcrumb-item + .breadcrumb-item:before {
+		color: $breadcrumb-divider-color;
+		content: $breadcrumb-vertical-divider;
 		float: none;
 		padding-left: 0;
 		padding-right: 0;

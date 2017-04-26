@@ -60,7 +60,7 @@
 .toolbar-group-expand-text {
 	line-height: $toolbar-group-height;
 
-	@include text-overflow();
+	@include text-truncate;
 }
 
 .toolbar-group-content {
@@ -82,28 +82,28 @@
 
 // Toolbar Group Newlines
 
-@media (max-width: $screen-xs-max) {
+@include media-breakpoint-down(xs) {
 	.tbg-xs-newline {
 		clear: both;
 		float: left;
 	}
 }
 
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+@include media-breakpoint-only(md) {
 	.tbg-sm-newline {
 		clear: both;
 		float: left;
 	}
 }
 
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+@include media-breakpoint-only(lg) {
 	.tbg-md-newline {
 		clear: both;
 		float: left;
 	}
 }
 
-@media (min-width: $screen-lg-min) {
+@include media-breakpoint-up(xl) {
 	.tbg-lg-newline {
 		clear: both;
 		float: left;
@@ -115,7 +115,7 @@
 .header-toolbar {
 	margin-bottom: $header-toolbar-margin-bottom;
 
-	@media (min-width: $grid-float-breakpoint) {
+	@include media-breakpoint-up(md) {
 		border-radius: $header-toolbar-border-radius;
 	}
 
@@ -209,7 +209,7 @@
 		font-size: 16px;
 		margin-bottom: 0;
 
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			font-size: 19px;
 		}
 
@@ -221,7 +221,7 @@
 		.toolbar-group-right {
 			height: $header-toolbar-height;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				height: $header-toolbar-desktop-height;
 			}
 		}
@@ -229,7 +229,7 @@
 		.toolbar-group-expand-text {
 			line-height: $header-toolbar-height;
 
-			@media (min-width: $grid-float-breakpoint) {
+			@include media-breakpoint-up(md) {
 				line-height: $header-toolbar-desktop-height;
 			}
 

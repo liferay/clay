@@ -8,19 +8,18 @@
 @import "variables/figures";
 @import "variables/forms";
 @import "variables/icons";
-@import "variables/labels";
+@import "variables/labels"; // dropped
 @import "variables/badges"; // Badges inherit from Labels
 @import "variables/list-group";
 @import "variables/modals";
 @import "variables/nameplates";
 @import "variables/navs";
-@import "variables/nav-pills";
 @import "variables/nav-tabs";
 @import "variables/navbar";
 @import "variables/management-bar"; // Management Bar inherits from Navbar
 @import "variables/pagination";
-@import "variables/pager"; // Pager inherits from Pagination
-@import "variables/panels";
+// @import "variables/pager"; // dropped Pager inherits from Pagination
+// @import "variables/panels"; // dropped
 @import "variables/popovers";
 @import "variables/progress-bars";
 @import "variables/stickers";

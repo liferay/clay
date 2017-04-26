@@ -10,7 +10,7 @@
 	.panel {
 		.timeline-increment-icon {
 			margin-left: auto;
-			margin-right: -$panel-border-right-width;
+			margin-right: -$card-border-width;
 		}
 	}
 
@@ -28,7 +28,7 @@
 	}
 
 	&.timeline-center {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			padding-left: 0;
 
 			.timeline-item {
@@ -54,7 +54,7 @@
 
 	&.timeline-even .timeline-item:nth-of-type(even),
 	&.timeline-odd .timeline-item:nth-of-type(odd) {
-		@media (min-width: $grid-float-breakpoint) {
+		@include media-breakpoint-up(md) {
 			padding-right: $inner-spacing;
 
 			.timeline-increment-icon {
@@ -81,7 +81,7 @@
 	}
 
 	&.timeline-right-xs-only {
-		@media (max-width: $screen-xs-max) {
+		@include media-breakpoint-down(xs) {
 			padding-left: 0;
 			padding-right: $outer-spacing;
 

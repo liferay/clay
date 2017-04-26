@@ -12,20 +12,24 @@ fieldset {
 }
 
 label,
-.control-label {
+.form-control-label {
 	color: $input-label-color;
 	font-size: $input-label-font-size;
 	font-weight: $input-label-font-weight;
 	margin-bottom: $input-label-margin-bottom;
+	max-width: 100%;
+	word-wrap: break-word;
 
-	@if (variable-exists(input-label-desktop-font-size)) {
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $input-label-desktop-font-size;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if not ($input-label-font-size-desktop == $input-label-font-size) {
+				font-size: $input-label-font-size-desktop;
+			}
 		}
 	}
 
 	&.focus {
-		color: $input-label-focus-color;
+		color: $input-label-color-focus;
 	}
 
 	.lexicon-icon {
@@ -33,19 +37,64 @@ label,
 	}
 
 	.reference-mark {
-		@if ($input-label-reference-mark-spacer > 0) {
-			margin-left: $input-label-reference-mark-spacer;
-			margin-right: $input-label-reference-mark-spacer;
-		}
-
+		color: $input-label-reference-mark-color;
+		margin-left: $input-label-reference-mark-spacer;
+		margin-right: $input-label-reference-mark-spacer;
 		vertical-align: $input-label-reference-mark-vertical-alignment;
 	}
 }
 
+// Inputs
+
+.form-control {
+	border-width: $input-border-width;
+	font-size: $input-font-size;
+	height: $input-height;
+	padding: $input-padding-y $input-padding-x;
+
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if not ($input-font-size-desktop == $input-font-size) {
+				font-size: $input-font-size-desktop;
+			}
+
+			@if not ($input-height-desktop == $input-height) {
+				height: $input-height-desktop;
+			}
+		}
+	}
+
+	&:focus {
+		&::placeholder {
+			color: $input-color-placeholder-focus;
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		&::-ms-clear,
+		&::-ms-reveal {
+			display: none;
+			height: 0;
+			width: 0;
+		}
+	}
+}
+
+// Select
+
+.form-control[multiple],
+.form-control[size] {
+	height: auto;
+}
+
 @if (variable-exists(atlas-theme)) {
-	select.form-control {
+	select.form-control:not([multiple]):not([size]) {
 		-moz-appearance: none;
 		-webkit-appearance: none;
+
+		&::-ms-expand {
+			display: none;
+		}
 
 		background-color: $input-select-bg;
 		background-image: $input-select-icon;
@@ -67,49 +116,14 @@ label,
 		}
 
 		&:focus {
-			background-color: $input-select-focus-bg;
+			background-color: $input-select-bg-focus;
 			background-image: $input-select-icon-focus;
 			background-image: none \9;
 		}
-
-		&::-ms-expand {
-			display: none;
-		}
 	}
 }
 
-.form-control {
-	border-width: $input-border-width;
-	box-shadow: $input-box-shadow;
-	font-size: $input-font-size;
-	padding: $input-padding-vertical $input-padding-horizontal;
-
-	@if (variable-exists(atlas-theme)) {
-		height: $input-mobile-height-base;
-
-		@media (min-width: $grid-float-breakpoint) {
-			font-size: $input-desktop-font-size;
-			height: $input-height-base;
-		}
-	}
-
-	&:focus {
-		background-color: $input-bg-focus;
-		box-shadow: $input-box-shadow-focus;
-		color: $input-color-focus;
-
-		@include placeholder($input-color-placeholder-focus);
-	}
-
-	@if (variable-exists(atlas-theme)) {
-		&::-ms-clear,
-		&::-ms-reveal {
-			display: none;
-			height: 0;
-			width: 0;
-		}
-	}
-}
+// Textarea
 
 textarea.form-control {
 	height: $input-textarea-height;
@@ -119,7 +133,7 @@ textarea.form-control {
 
 fieldset[disabled] label,
 label.disabled,
-.control-label.disabled {
+.form-control-label.disabled {
 	opacity: $input-opacity-disabled;
 }
 
@@ -133,11 +147,13 @@ fieldset[disabled] label {
 .form-control {
 	fieldset[disabled] &,
 	&[disabled] {
-		border-color: $input-border-disabled;
+		border-color: $input-border-color-disabled;
 		color: $input-color-disabled;
 		opacity: $input-opacity-disabled;
 
-		@include placeholder($input-color-placeholder-disabled);
+		&::placeholder {
+			color: $input-color-placeholder-disabled;
+		}
 	}
 }
 
@@ -151,111 +167,35 @@ fieldset[disabled] label {
 
 .form-control[readonly] {
 	background-color: $input-readonly-bg;
-	border-color: $input-readonly-border;
+	border-color: $input-readonly-border-color;
 	color: $input-readonly-color;
 	cursor: $input-readonly-cursor;
 }
 
-@if (variable-exists(atlas-theme)) {
-	// Input Sizes
+// Input Sizes
 
-	.form-control {
-		&.input-lg {
-			font-size: $input-font-size-large;
-			height: $input-mobile-height-large;
+.form-control-lg {
+	font-size: $input-font-size-lg;
+	height: $input-height-lg;
 
-			@media (min-width: $grid-float-breakpoint) {
-				height: $input-height-large;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if not ($input-height-lg-desktop == $input-height-lg) {
+				height: $input-height-lg-desktop;
 			}
-		}
-
-		&.input-sm {
-			font-size: $input-font-size-small;
-			height: $input-mobile-height-small;
-
-			@media (min-width: $grid-float-breakpoint) {
-				height: $input-height-small;
-			}
-		}
-	}
-
-	// Checkbox and Radio Styles
-
-	.checkbox,
-	.radio {
-		label {
-			font-weight: $input-label-font-weight;
-			padding-left: 25px;
-
-			@media (-webkit-min-device-pixel-ratio: 0) {
-				padding-left: 20px;
-			}
-		}
-	}
-
-	.checkbox input[type="checkbox"],
-	.checkbox-inline input[type="checkbox"] {
-		height: 20px;
-		margin-left: -25px;
-		margin-top: 0;
-		top: 50%;
-
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-		width: 20px;
-
-		@media (-webkit-min-device-pixel-ratio: 0) {
-			height: 14px;
-			margin-left: -20px;
-			width: 14px;
-		}
-	}
-
-	.radio input[type="radio"],
-	.radio-inline input[type="radio"] {
-		height: 20px;
-		margin-left: -25px;
-		margin-top: 0;
-		top: 50%;
-
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-		width: 20px;
-
-		@media (-webkit-min-device-pixel-ratio: 0) {
-			height: 15px;
-			margin-left: -20px;
-			width: 14px;
-		}
-	}
-
-	.checkbox-card,
-	.radio-card {
-		label {
-			padding-left: 0;
-		}
-	}
-
-	.checkbox-card input[type="checkbox"],
-	.radio-card input[type="radio"] {
-		margin-left: 0;
-	}
-
-	// Form Control Feedback
-
-	.form-control-feedback {
-		@include monospace($input-mobile-height-base);
-
-		@media (min-width: $grid-float-breakpoint) {
-			@include monospace($input-height-base);
 		}
 	}
 }
 
-.help-block {
-	font-size: $input-help-block-font-size;
-}
+.form-control-sm {
+	font-size: $input-font-size-sm;
+	height: $input-height-sm;
 
-.form-control-feedback .lexicon-icon {
-	margin-top: -3px;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if not ($input-height-sm-desktop == $input-height-sm) {
+				height: $input-height-sm-desktop;
+			}
+		}
+	}
 }

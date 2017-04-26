@@ -117,7 +117,7 @@ a .icon-monospaced,
 
 		&:before {
 			position: relative;
-			top: -$btn-border-width;
+			top: -$input-btn-border-width;
 		}
 	}
 
@@ -210,11 +210,11 @@ a .icon-monospaced,
 // Skins
 
 .help-icon-default {
-	background-color: $help-icon-default-bg;
-	color: $help-icon-default-color;
+	background-color: $help-icon-secondary-bg;
+	color: $help-icon-secondary-color;
 
 	&:focus,
 	&:hover {
-		color: $help-icon-default-hover-color;
+		color: $help-icon-secondary-color-hover;
 	}
 }

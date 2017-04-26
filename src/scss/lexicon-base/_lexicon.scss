@@ -5,7 +5,6 @@
 @import "button-groups";
 @import "buttons";
 @import "cards";
-@import "clamp";
 @import "crop-image";
 @import "grid";
 @import "icons";
@@ -19,9 +18,9 @@
 @import "navbar";
 @import "nav-tabs";
 @import "management-bar"; // Management-bar styles should win over nav styles
-@import "pager";
+// @import "pager"; // dropped
 @import "pagination";
-@import "panels";
+// @import "panels"; // dropped
 @import "popovers";
 @import "progress-bars";
 @import "sidebar";
@@ -39,8 +38,6 @@
 @import "nameplates";
 @import "timelines";
 @import "toolbars";
-@import "nav-tabs-scroll";
-@import "list-group-deprecated";
+// @import "nav-tabs-scroll";
 
 @import "loaders";
-@import "simple-flexbox-grid";
