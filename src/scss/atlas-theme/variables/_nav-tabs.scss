@@ -1,26 +1,20 @@
 // Structure
 
-$nav-tabs-border-width: 1px !default; // Atlas
+$nav-tabs-default-height: 48px !default;
+$nav-tabs-default-line-height: 24px !default;
+$nav-tabs-default-padding-x: 0 !default;
+$nav-tabs-default-padding-y: ($nav-tabs-default-height - $nav-tabs-default-line-height) / 2 !default;
 
-$nav-tabs-default-height: 48px !default; // Atlas
-$nav-tabs-default-line-height: 24px !default; // Atlas
-$nav-tabs-default-padding-horizontal: 0 !default; // Atlas
-$nav-tabs-default-padding-vertical: floor($nav-tabs-default-height - $nav-tabs-default-line-height) / 2 !default; // Atlas
-
-$nav-tabs-default-desktop-height: 60px !default; // Atlas
-$nav-tabs-default-desktop-line-height: 28px !default; // Atlas
-$nav-tabs-default-desktop-padding-horizontal: 0 !default; // Atlas
-$nav-tabs-default-desktop-padding-vertical: floor($nav-tabs-default-desktop-height - $nav-tabs-default-desktop-line-height) / 2 !default; // Atlas
+$nav-tabs-default-height-desktop: 60px !default;
+$nav-tabs-default-line-height-desktop: 28px !default;
+$nav-tabs-default-padding-x-desktop: 0 !default;
+$nav-tabs-default-padding-y-desktop: ($nav-tabs-default-height-desktop - $nav-tabs-default-line-height-desktop) / 2 !default;
 
 // Skin
-
-// $nav-tabs-border-radius: 0 !default; // Atlas
 
 $nav-tabs-border-color: #D8D8D8 !default;
 $nav-tabs-link-hover-border-color: transparent !default;
 
 $nav-tabs-active-link-color: $brand-primary !default;
-$nav-tabs-active-link-hover-color: $brand-primary !default; // removed BS4
-$nav-tabs-active-link-hover-border-color: $nav-tabs-border-color !default; // removed BS4
 
 $nav-tabs-justified-link-border-color: $nav-tabs-border-color !default;

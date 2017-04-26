@@ -1,10 +1,13 @@
 $nav-link-color: null !default;
 $nav-link-hover-color: null !default;
 
-$nav-link-padding-x: 0.9375rem !default; // 15px
-$nav-link-padding-y: 0.625rem !default; // 10px
-
-$nav-link-padding: $nav-link-padding-y $nav-link-padding-x !default;
-
 $nav-nested-margins-spacer-x: $navbar-padding-x !default;
 $nav-nested-spacer-x: $navbar-padding-x !default;
+
+$nav-tabs-default-line-height: null !default;
+$nav-tabs-default-padding-x: null !default;
+$nav-tabs-default-padding-y: null !default;
+
+$nav-tabs-default-line-height-desktop: null !default;
+$nav-tabs-default-padding-x-desktop: null !default;
+$nav-tabs-default-padding-y-desktop: null !default;
