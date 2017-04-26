@@ -5,6 +5,10 @@
 	&:focus {
 		z-index: 1;
 	}
+
+	@include hover-focus {
+		color: $nav-link-hover-color;
+	}
 }
 
 // Nav Nested
