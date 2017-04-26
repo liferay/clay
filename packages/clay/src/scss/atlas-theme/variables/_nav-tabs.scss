@@ -14,12 +14,13 @@ $nav-tabs-default-desktop-padding-vertical: floor($nav-tabs-default-desktop-heig
 
 // Skin
 
-$nav-tabs-border-radius: 0 !default; // Atlas
+// $nav-tabs-border-radius: 0 !default; // Atlas
 
 $nav-tabs-border-color: #D8D8D8 !default;
 $nav-tabs-link-hover-border-color: transparent !default;
 
-$nav-tabs-active-link-hover-color: $brand-primary !default;
-$nav-tabs-active-link-hover-border-color: $nav-tabs-border-color !default;
+$nav-tabs-active-link-color: $brand-primary !default;
+$nav-tabs-active-link-hover-color: $brand-primary !default; // removed BS4
+$nav-tabs-active-link-hover-border-color: $nav-tabs-border-color !default; // removed BS4
 
 $nav-tabs-justified-link-border-color: $nav-tabs-border-color !default;
