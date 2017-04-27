@@ -1,14 +1,11 @@
 .pagination-bar {
-	@include clearfix();
+	display: flex;
+	flex-wrap: wrap;
 
 	.pagination {
-		width: 100%;
-
-		@include media-breakpoint-up(md) {
-			float: right;
-			margin: 0;
-			width: auto;
-		}
+		flex: 1;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
 	}
 }
 
@@ -23,8 +20,6 @@
 			@if (variable-exists(atlas-theme)) {
 				border: $pagination-border-width solid $pagination-border-color;
 				border-radius: $pagination-border-radius;
-				display: inline-block;
-				float: none;
 				line-height: $pagination-line-height;
 			}
 		}
@@ -78,7 +73,6 @@
 	border-radius: $pagination-border-radius;
 	border-style: solid;
 	border-width: $pagination-border-width;
-	float: left;
 	line-height: $pagination-line-height;
 
 	[class*="icon-"] {
@@ -96,13 +90,11 @@
 .pagination-results {
 	border: $pagination-border-width solid transparent;
 	color: $pagination-results-color;
-	float: right;
 	line-height: $pagination-line-height;
 	padding-bottom: $pagination-item-padding-bottom;
 	padding-top: $pagination-item-padding-top;
 
 	@include media-breakpoint-up(md) {
-		float: left;
 		margin-left: 25px;
 	}
 }
