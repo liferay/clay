@@ -1,7 +1,6 @@
 // Structure
 
 $pagination-item-height: 32px !default;
-$pagination-item-width: $pagination-item-height !default;
 
 $pagination-border-width: 0 !default;
 
@@ -16,7 +15,6 @@ $pagination-dropdown-menu-spacer-y: 10px !default;
 
 $pagination-font-size-sm: 12px !default;
 $pagination-sm-item-height: 24px !default;
-$pagination-sm-item-width: $pagination-sm-item-height !default;
 $pagination-line-height-sm: $pagination-sm-item-height - ($pagination-border-width * 2) !default;
 
 $pagination-sm-item-padding-bottom: 0 !default;
@@ -24,7 +22,6 @@ $pagination-sm-item-padding-top: 0 !default;
 
 $pagination-lg-font-size: 18px !default;
 $pagination-lg-item-height: 44px !default;
-$pagination-lg-item-width: $pagination-lg-item-height !default;
 $pagination-lg-line-height: $pagination-lg-item-height - ($pagination-border-width * 2) !default;
 
 $pagination-lg-item-padding-bottom: 0 !default;
