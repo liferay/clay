@@ -30,7 +30,9 @@ $pagination-lg-item-padding-top: 0 !default;
 
 // Skin
 
-$pagination-border-radius: 4px !default;
+$pagination-link-border-radius: 4px !default;
+$pagination-link-border-radius-lg: 5px !default;
+$pagination-link-border-radius-sm: 3px !default;
 
 $pagination-bg: transparent !default;
 $pagination-border: $pagination-bg !default;
