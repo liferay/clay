@@ -79,15 +79,15 @@
 
 	.pagination-items-per-page a,
 	.pagination-results {
-		font-size: $pagination-sm-font-size;
-		line-height: $pagination-sm-line-height;
-		padding: $pagination-sm-item-padding;
+		font-size: $pagination-font-size-sm;
+		line-height: $pagination-line-height-sm;
+		padding: $pagination-item-padding-sm;
 	}
 
 	.page-link {
-		font-size: $pagination-sm-font-size;
-		line-height: $pagination-sm-line-height;
-		padding: $pagination-sm-item-padding;
+		font-size: $pagination-font-size-sm;
+		line-height: $pagination-line-height-sm;
+		padding: $pagination-item-padding-sm;
 	}
 }
 
@@ -98,14 +98,14 @@
 
 	.pagination-items-per-page a,
 	.pagination-results {
-		font-size: $pagination-lg-font-size;
-		line-height: $pagination-lg-line-height;
-		padding: $pagination-lg-item-padding;
+		font-size: $pagination-font-size-lg;
+		line-height: $pagination-line-height-lg;
+		padding: $pagination-item-padding-lg;
 	}
 
 	.page-link {
-		font-size: $pagination-lg-font-size;
-		line-height: $pagination-lg-line-height;
-		padding: $pagination-lg-item-padding;
+		font-size: $pagination-font-size-lg;
+		line-height: $pagination-line-height-lg;
+		padding: $pagination-item-padding-lg;
 	}
 }
