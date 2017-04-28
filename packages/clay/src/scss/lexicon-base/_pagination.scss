@@ -6,11 +6,13 @@
 .pagination-bar {
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 1rem;
 
 	.pagination {
 		flex: 1;
 		flex-wrap: nowrap;
 		justify-content: flex-end;
+		margin-bottom: 0;
 	}
 }
 
