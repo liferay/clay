@@ -10,15 +10,10 @@
 }
 
 .page-link {
-	border: $pagination-border-width solid $pagination-border-color;
+	border-radius: $pagination-link-border-radius;
+	// Will be fixed by https://github.com/twbs/bootstrap/pull/22536
 	margin-left: -$pagination-border-width;
 	padding: $pagination-item-padding;
-
-	@if (variable-exists(atlas-theme)) {
-		border: $pagination-border-width solid $pagination-border-color;
-		border-radius: $pagination-link-border-radius;
-		line-height: $pagination-line-height;
-	}
 }
 
 @if (variable-exists(atlas-theme)) {
