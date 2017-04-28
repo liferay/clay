@@ -18,7 +18,6 @@
 	border-radius: $pagination-link-border-radius;
 	// Will be fixed by https://github.com/twbs/bootstrap/pull/22536
 	margin-left: -$pagination-border-width;
-	padding: $pagination-item-padding;
 }
 
 .page-item {
@@ -45,7 +44,7 @@
 	a {
 		color: $pagination-items-per-page-color;
 		display: block;
-		padding: $pagination-item-padding;
+		padding: $pagination-padding-y $pagination-padding-x;
 		text-decoration: none;
 	}
 }
@@ -62,12 +61,7 @@
 	border-width: $pagination-border-width;
 	color: $pagination-results-color;
 	line-height: $pagination-line-height;
-	padding-bottom: $pagination-item-padding-bottom;
-	padding-top: $pagination-item-padding-top;
-}
-
-.pagination-items-per-page + .pagination-results {
-	margin-left: ($grid-gutter-width-base / 2);
+	padding: $pagination-padding-y $pagination-padding-x;
 }
 
 // Pagination Sizes
@@ -81,13 +75,12 @@
 	.pagination-results {
 		font-size: $pagination-font-size-sm;
 		line-height: $pagination-line-height-sm;
-		padding: $pagination-item-padding-sm;
+		padding: $pagination-padding-y-sm $pagination-padding-x;
 	}
 
 	.page-link {
 		font-size: $pagination-font-size-sm;
 		line-height: $pagination-line-height-sm;
-		padding: $pagination-item-padding-sm;
 	}
 }
 
@@ -100,12 +93,11 @@
 	.pagination-results {
 		font-size: $pagination-font-size-lg;
 		line-height: $pagination-line-height-lg;
-		padding: $pagination-item-padding-lg;
+		padding: $pagination-padding-y-lg $pagination-padding-x;
 	}
 
 	.page-link {
 		font-size: $pagination-font-size-lg;
 		line-height: $pagination-line-height-lg;
-		padding: $pagination-item-padding-lg;
 	}
 }
