@@ -16,7 +16,7 @@
 
 	@if (variable-exists(atlas-theme)) {
 		border: $pagination-border-width solid $pagination-border-color;
-		border-radius: $pagination-border-radius;
+		border-radius: $pagination-link-border-radius;
 		line-height: $pagination-line-height;
 	}
 }
@@ -26,7 +26,7 @@
 		&:first-child,
 		&:last-child {
 			.page-link {
-				border-radius: $pagination-border-radius;
+				border-radius: $pagination-link-border-radius;
 			}
 		}
 	}
@@ -61,7 +61,7 @@
 .pagination-items-per-page {
 	background-color: $pagination-items-per-page-bg;
 	border-color: $pagination-items-per-page-border;
-	border-radius: $pagination-border-radius;
+	border-radius: $pagination-link-border-radius;
 	border-style: solid;
 	border-width: $pagination-border-width;
 	line-height: $pagination-line-height;
@@ -94,7 +94,7 @@
 
 .pagination-sm {
 	.pagination-items-per-page {
-		border-radius: $pagination-sm-border-radius;
+		border-radius: $pagination-link-border-radius-sm;
 	}
 
 	.pagination-items-per-page a,
@@ -113,7 +113,7 @@
 
 .pagination-lg {
 	.pagination-items-per-page {
-		border-radius: $pagination-lg-border-radius;
+		border-radius: $pagination-link-border-radius-lg;
 	}
 
 	.pagination-items-per-page a,
