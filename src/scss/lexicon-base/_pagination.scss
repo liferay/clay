@@ -32,11 +32,6 @@
 	&.disabled .page-link {
 		opacity: $pagination-disabled-opacity;
 	}
-
-	.dropdown-menu {
-		margin-bottom: $pagination-dropdown-menu-spacer-y;
-		margin-top: $pagination-dropdown-menu-spacer-y;
-	}
 }
 
 .pagination-items-per-page {
@@ -47,10 +42,6 @@
 	border-width: $pagination-border-width;
 	line-height: $pagination-line-height;
 
-	[class*="icon-"] {
-		margin-left: 10px;
-	}
-
 	a {
 		color: $pagination-items-per-page-color;
 		display: block;
@@ -59,16 +50,22 @@
 	}
 }
 
+.page-item .dropdown-menu,
+.pagination-items-per-page .dropdown-menu {
+	margin-bottom: $pagination-dropdown-menu-spacer-y;
+	margin-top: $pagination-dropdown-menu-spacer-y;
+}
+
 .pagination-results {
 	border: $pagination-border-width solid transparent;
 	color: $pagination-results-color;
 	line-height: $pagination-line-height;
 	padding-bottom: $pagination-item-padding-bottom;
 	padding-top: $pagination-item-padding-top;
+}
 
-	@include media-breakpoint-up(md) {
-		margin-left: 25px;
-	}
+.pagination-items-per-page + .pagination-results {
+	margin-left: ($grid-gutter-width-base / 2);
 }
 
 // Pagination Sizes
