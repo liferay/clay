@@ -10,12 +10,12 @@ $pagination-dropdown-menu-spacer-y: null !default;
 $pagination-font-size-sm: $font-size-sm !default;
 $pagination-line-height-sm: $line-height-sm !default;
 
-$pagination-sm-item-padding-bottom: $pagination-padding-y-sm !default;
-$pagination-sm-item-padding-left: $pagination-padding-x-sm !default;
-$pagination-sm-item-padding-right: $pagination-padding-x-sm !default;
-$pagination-sm-item-padding-top: $pagination-padding-y-sm !default;
+$pagination-item-padding-bottom-sm: $pagination-padding-y-sm !default;
+$pagination-item-padding-left-sm: $pagination-padding-x-sm !default;
+$pagination-item-padding-right-sm: $pagination-padding-x-sm !default;
+$pagination-item-padding-top-sm: $pagination-padding-y-sm !default;
 
-$pagination-sm-item-padding: $pagination-sm-item-padding-top $pagination-sm-item-padding-right $pagination-sm-item-padding-bottom $pagination-sm-item-padding-left !default;
+$pagination-item-padding-sm: $pagination-item-padding-top-sm $pagination-item-padding-right-sm $pagination-item-padding-bottom-sm $pagination-item-padding-left-sm !default;
 
 $pagination-lg-font-size: $font-size-lg !default;
 $pagination-line-height-lg: $line-height-lg !default;

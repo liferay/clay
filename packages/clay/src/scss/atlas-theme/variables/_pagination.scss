@@ -17,8 +17,8 @@ $pagination-font-size-sm: 12px !default;
 $pagination-item-height-sm: 24px !default;
 $pagination-line-height-sm: $pagination-item-height-sm - ($pagination-border-width * 2) !default;
 
-$pagination-sm-item-padding-bottom: 0 !default;
-$pagination-sm-item-padding-top: 0 !default;
+$pagination-item-padding-bottom-sm: 0 !default;
+$pagination-item-padding-top-sm: 0 !default;
 
 $pagination-lg-font-size: 18px !default;
 $pagination-item-height-lg: 44px !default;
