@@ -1,3 +1,8 @@
+.pagination {
+	// Will be fixed by https://github.com/twbs/bootstrap/pull/22541
+	flex-wrap: wrap;
+}
+
 .pagination-bar {
 	display: flex;
 	flex-wrap: wrap;
@@ -16,40 +21,21 @@
 	padding: $pagination-item-padding;
 }
 
-@if (variable-exists(atlas-theme)) {
-	.page-item {
-		&:first-child,
-		&:last-child {
-			.page-link {
-				border-radius: $pagination-link-border-radius;
-			}
+.page-item {
+	&:first-child,
+	&:last-child {
+		.page-link {
+			border-radius: $pagination-link-border-radius;
 		}
 	}
 
-	.disabled .page-link {
-		&,
-		&:focus,
-		&:hover {
-			opacity: 0.5;
-		}
+	&.disabled .page-link {
+		opacity: $pagination-disabled-opacity;
 	}
 
-	.dropdown .page-link {
-		border-width: 0;
-
-		&:focus,
-		&:hover {
-			background-color: $pagination-ellipsis-hover-bg;
-			color: $pagination-ellipsis-hover-color;
-		}
-	}
-}
-
-.pagination {
-	@if (variable-exists(atlas-theme)) {
-		.dropdown-menu-top-center {
-			margin-bottom: 10px;
-		}
+	.dropdown-menu {
+		margin-bottom: $pagination-dropdown-menu-spacer-y;
+		margin-top: $pagination-dropdown-menu-spacer-y;
 	}
 }
 
