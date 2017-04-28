@@ -9,10 +9,11 @@
 	margin-bottom: 1rem;
 
 	.pagination {
-		flex: 1;
-		flex-wrap: nowrap;
-		justify-content: flex-end;
 		margin-bottom: 0;
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
 	}
 }
 
@@ -49,6 +50,20 @@
 		padding: $pagination-padding-y $pagination-padding-x;
 		text-decoration: none;
 	}
+
+	+ .pagination-results {
+		margin-left: auto;
+		margin-right: 0;
+
+		@include media-breakpoint-up(md) {
+			margin-left: 0;
+			margin-right: auto;
+		}
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+	}
 }
 
 .page-item .dropdown-menu,
@@ -63,6 +78,7 @@
 	border-width: $pagination-border-width;
 	color: $pagination-results-color;
 	line-height: $pagination-line-height;
+	margin-right: auto;
 	padding: $pagination-padding-y $pagination-padding-x;
 }
 
