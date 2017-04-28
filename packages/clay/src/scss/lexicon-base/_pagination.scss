@@ -57,7 +57,9 @@
 }
 
 .pagination-results {
-	border: $pagination-border-width solid transparent;
+	border-color: transparent;
+	border-style: solid;
+	border-width: $pagination-border-width;
 	color: $pagination-results-color;
 	line-height: $pagination-line-height;
 	padding-bottom: $pagination-item-padding-bottom;
