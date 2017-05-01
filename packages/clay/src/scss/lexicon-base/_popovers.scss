@@ -5,6 +5,8 @@
 }
 
 .popover-title {
+	border-color: $popover-title-border-color;
+
 	@if not ($popover-title-offset-border-width == calc(#{$border-radius-lg} - #{$popover-border-width})) {
 		@include border-top-radius($popover-title-offset-border-width);
 	}
@@ -23,7 +25,6 @@
 	}
 
 	.popover-title {
-		border-color: $popover-border-color;
 		border-top-left-radius: $popover-border-radius - 1;
 		border-top-right-radius: $popover-border-radius - 1;
 	}

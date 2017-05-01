@@ -31,4 +31,5 @@ $popover-box-shadow-bg: rgba(0, 0, 0, 0.2) !default; // rgba(0, 0, 0, 0.2)
 $popover-box-shadow: $popover-box-shadow-x $popover-box-shadow-y $popover-box-shadow-blur $popover-box-shadow-spread $popover-box-shadow-bg !default;
 
 $popover-title-bg: #FFF !default;
+$popover-title-border-color: $popover-border-color !default;
 $popover-title-color: $body-color !default;
