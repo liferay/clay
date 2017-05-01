@@ -2,7 +2,6 @@
 	@if (variable-exists(atlas-theme)) {
 		border-radius: $tooltip-border-radius;
 		box-shadow: $tooltip-box-shadow;
-		padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
 	}
 
 	word-wrap: break-word;
