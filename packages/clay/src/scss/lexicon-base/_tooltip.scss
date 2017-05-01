@@ -1,3 +1,9 @@
+.tooltip {
+	@if not ($tooltip-font-size == $font-size-sm) {
+		font-size: $tooltip-font-size;
+	}
+}
+
 .tooltip-inner {
 	@if not ($tooltip-border-radius == $border-radius) {
 		@include border-radius($tooltip-border-radius);
@@ -11,10 +17,6 @@
 }
 
 @if (variable-exists(atlas-theme)) {
-	.tooltip {
-		font-size: $tooltip-font-size;
-	}
-
 	@if ($tooltip-box-shadow-blur == 0) {
 		.tooltip-arrow:before {
 			border-color: transparent;
