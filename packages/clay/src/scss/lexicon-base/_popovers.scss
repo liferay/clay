@@ -1,6 +1,17 @@
+.popover {
+	@if not ($popover-border-radius == $border-radius-lg) {
+		@include border-radius($popover-border-radius);
+	}
+}
+
+.popover-title {
+	@if not ($popover-title-offset-border-width == calc(#{$border-radius-lg} - #{$popover-border-width})) {
+		@include border-top-radius($popover-title-offset-border-width);
+	}
+}
+
 @if (variable-exists(atlas-theme)) {
 	.popover {
-		border-radius: $popover-border-radius;
 		box-shadow: $popover-box-shadow;
 		max-width: $popover-max-width;
 		padding: $popover-padding;
