@@ -11,11 +11,6 @@
 }
 
 @if (variable-exists(atlas-theme)) {
-	.popover {
-		box-shadow: $popover-box-shadow;
-		max-width: $popover-max-width;
-	}
-
 	.popover-content {
 		border-bottom-left-radius: $popover-border-radius - 1;
 		border-bottom-right-radius: $popover-border-radius - 1;
