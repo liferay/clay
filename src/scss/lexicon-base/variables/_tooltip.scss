@@ -1,10 +1,3 @@
 $tooltip-border-radius: $border-radius !default;
+$tooltip-box-shadow: null !default;
 $tooltip-font-size: $font-size-sm !default;
-
-$tooltip-box-shadow-x: null !default;
-$tooltip-box-shadow-y: null !default;
-$tooltip-box-shadow-blur: null !default;
-$tooltip-box-shadow-spread: null !default;
-$tooltip-box-shadow-bg: null !default;
-
-$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg !default;

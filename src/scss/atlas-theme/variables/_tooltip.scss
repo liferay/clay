@@ -1,21 +1,7 @@
-// Structure
-
+$tooltip-bg: #0E191D !default;
+$tooltip-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 $tooltip-font-size: 0.875rem !default;
-
 $tooltip-max-width: 230px !default;
-
+$tooltip-opacity: 1 !default;
 $tooltip-padding-x: 24px !default;
 $tooltip-padding-y: 8px !default;
-
-// Skin
-
-$tooltip-box-shadow-x: 0 !default; // 0
-$tooltip-box-shadow-y: 0 !default; // 0
-
-$tooltip-box-shadow-blur: 3px !default; // 3px
-$tooltip-box-shadow-spread: 1px !default; // 1px
-
-$tooltip-box-shadow-bg: rgba(0, 0, 0, 0.2) !default; // rgba(0, 0, 0, 0.2)
-
-$tooltip-bg: #0E191D !default;
-$tooltip-opacity: 1 !default;
