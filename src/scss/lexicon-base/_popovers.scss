@@ -8,6 +8,8 @@
 	@if not ($popover-title-offset-border-width == calc(#{$border-radius-lg} - #{$popover-border-width})) {
 		@include border-top-radius($popover-title-offset-border-width);
 	}
+
+	margin: $popover-title-margin-y $popover-title-margin-x;
 }
 
 @if (variable-exists(atlas-theme)) {
@@ -26,7 +28,6 @@
 		}
 
 		font-size: $popover-title-font-size;
-		margin: $popover-title-margin;
 	}
 
 	// Popover box shadows
