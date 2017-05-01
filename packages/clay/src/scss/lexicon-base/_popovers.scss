@@ -9,6 +9,10 @@
 		@include border-top-radius($popover-title-offset-border-width);
 	}
 
+	@if not ($popover-title-font-size == $font-size-base) {
+		font-size: $popover-title-font-size;
+	}
+
 	margin: $popover-title-margin-y $popover-title-margin-x;
 }
 
@@ -22,12 +26,6 @@
 		border-color: $popover-border-color;
 		border-top-left-radius: $popover-border-radius - 1;
 		border-top-right-radius: $popover-border-radius - 1;
-
-		@if not ($popover-title-color == $body-color) {
-			color: $popover-title-color;
-		}
-
-		font-size: $popover-title-font-size;
 	}
 
 	// Popover box shadows
