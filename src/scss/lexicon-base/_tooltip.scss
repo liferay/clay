@@ -9,10 +9,7 @@
 		@include border-radius($tooltip-border-radius);
 	}
 
-	@if (variable-exists(atlas-theme)) {
-		box-shadow: $tooltip-box-shadow;
-	}
-
+	box-shadow: $tooltip-box-shadow;
 	word-wrap: break-word;
 }
 
