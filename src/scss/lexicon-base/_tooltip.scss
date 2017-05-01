@@ -1,6 +1,9 @@
 .tooltip-inner {
+	@if not ($tooltip-border-radius == $border-radius) {
+		@include border-radius($tooltip-border-radius);
+	}
+
 	@if (variable-exists(atlas-theme)) {
-		border-radius: $tooltip-border-radius;
 		box-shadow: $tooltip-box-shadow;
 	}
 
