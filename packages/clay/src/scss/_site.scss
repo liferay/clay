@@ -29,6 +29,7 @@ section.row {
 	}
 }
 
+.clay-site-row-spacer,
 .lx-site-row-spacer,
 .row-spacing {
 	margin-bottom: 20px;
@@ -661,15 +662,12 @@ $site-lexicon-icon-color: #5AF;
 
 // Popovers Page
 
-#popovers {
+.clay-site-popover-display {
 	.popover {
-		display: block;
-		margin-top: 25px;
+		display: inline-block;
+		margin: 20px;
 		position: relative;
-
-		&.left {
-			margin-left: 0;
-		}
+		z-index: 1;
 	}
 }
 
@@ -685,9 +683,13 @@ $site-lexicon-icon-color: #5AF;
 
 // Tooltips Page
 
-.tooltip-display {
-	> div {
-		height: 50px;
+.clay-site-tooltip-display {
+	.tooltip {
+		display: inline-block;
+		opacity: 1;
+		margin: 10px 20px;
+		position: relative;
+		z-index: 1;
 	}
 }
 
