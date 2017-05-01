@@ -9,5 +9,5 @@
 		@include border-radius($tooltip-border-radius);
 	}
 
-	box-shadow: $tooltip-box-shadow;
+	@include box-shadow($tooltip-box-shadow);
 }
