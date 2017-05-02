@@ -17,6 +17,19 @@ $zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
 
 // Skin
 
+$navbar-light-bg: #F7F7F7 !default;
+$navbar-light-border-color: transparent !default;
+$navbar-light-border-width: $navbar-border-width !default;
+
+$navbar-light-active-bg: null !default;
+$navbar-light-hover-bg: null !default;
+$navbar-light-disabled-bg: null !default;
+
+$navbar-light-brand-bg: null !default;
+$navbar-light-brand-hover-bg: null !default;
+$navbar-light-brand-color: null !default;
+$navbar-light-brand-hover-color: null !default;
+
 $navbar-default-collapsible-search-btn-default-bg: null !default;
 $navbar-default-collapsible-search-btn-default-border: null !default;
 $navbar-default-collapsible-search-btn-default-color: null !default;
