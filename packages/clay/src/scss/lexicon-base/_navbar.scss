@@ -554,7 +554,7 @@
 
 						&:focus,
 						&:hover {
-							color: $navbar-default-link-active-color;
+							color: $navbar-light-active-color;
 						}
 					}
 				}
@@ -643,9 +643,53 @@
 
 // Skin
 
+.navbar-light {
+	.navbar-brand {
+		@if not ($navbar-light-brand-color == $navbar-light-active-color) {
+			color: $navbar-light-brand-color;
+		}
+
+		@include hover-focus {
+			@if not ($navbar-light-brand-hover-color == $navbar-light-active-color) {
+				color: $navbar-light-brand-hover-color;
+			}
+		}
+	}
+}
+
+.navbar-light-bg {
+	background-color: $navbar-light-bg;
+	border-color: $navbar-light-border-color;
+	border-style: solid;
+	border-width: $navbar-light-border-width;
+
+	.navbar-brand {
+		background-color: $navbar-light-brand-bg;
+
+		@include hover-focus {
+			background-color: $navbar-light-brand-hover-bg;
+		}
+	}
+
+	.nav-link {
+		@include hover-focus {
+			background-color: $navbar-light-hover-bg;
+		}
+
+		&.active,
+		&[aria-expanded="true"] {
+			background-color: $navbar-light-active-bg;
+		}
+
+		&.disabled {
+			background-color: $navbar-light-disabled-bg;
+		}
+	}
+}
+
 .navbar-default {
 	@if (variable-exists(atlas-theme)) {
-		border-width: darken($body-bg, 6.5%)-width;
+		border-width: $navbar-default-border-width;
 		min-height: $navbar-default-height;
 
 		@include media-breakpoint-up(md) {
@@ -700,9 +744,9 @@
 			> .active > a {
 				&:after {
 					@include media-breakpoint-up(md) {
-						background-color: $navbar-default-link-active-highlight;
+						background-color: $navbar-light-active-highlight;
 
-						@if not ($navbar-default-link-active-highlight == transparent) {
+						@if not ($navbar-light-active-highlight == transparent) {
 							content: '';
 						}
 					}
@@ -712,9 +756,9 @@
 
 		&.navbar-no-collapse .navbar-nav > .active > a:after,
 		.navbar-toggle-page-name:after {
-			background-color: $navbar-default-link-active-highlight;
+			background-color: $navbar-light-active-highlight;
 
-			@if not ($navbar-default-link-active-highlight == transparent) {
+			@if not ($navbar-light-active-highlight == transparent) {
 				content: '';
 			}
 		}
