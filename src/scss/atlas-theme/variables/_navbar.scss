@@ -10,6 +10,9 @@ $navbar-link-line-height: 1.5rem !default; // 24px
 $navbar-padding-horizontal: 0.9375rem !default; // 15px
 $navbar-padding-vertical: (($navbar-height - $navbar-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 
+$navbar-padding-x: 0 !default;
+$navbar-padding-y: 0 !default;
+
 $navbar-desktop-height: 3.75rem !default; // 60px
 $navbar-desktop-link-line-height: 1.75rem !default; // 28px
 $navbar-desktop-padding-horizontal: (($grid-gutter-width-base / 2)) !default;
