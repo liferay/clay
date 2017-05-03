@@ -1,9 +1,9 @@
 $navbar-height: 3.125rem !default; // 50px
 
-$navbar-border-bottom-width: 0.0625rem !default; // 1px
-$navbar-border-left-width: 0.0625rem !default; // 1px
-$navbar-border-right-width: 0.0625rem !default; // 1px
-$navbar-border-top-width: 0.0625rem !default; // 1px
+$navbar-border-bottom-width: 0 !default;
+$navbar-border-left-width: 0 !default;
+$navbar-border-right-width: 0 !default;
+$navbar-border-top-width: 0 !default;
 $navbar-border-width: $navbar-border-top-width $navbar-border-right-width $navbar-border-bottom-width $navbar-border-left-width !default;
 
 $navbar-form-padding-horizontal: $navbar-padding-x !default;
@@ -24,7 +24,6 @@ $navbar-link-padding-y-desktop: null !default;
 
 $navbar-light-bg: #F7F7F7 !default;
 $navbar-light-border-color: transparent !default;
-$navbar-light-border-width: $navbar-border-width !default;
 
 $navbar-light-active-bg: null !default;
 $navbar-light-hover-bg: null !default;
