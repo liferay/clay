@@ -249,7 +249,7 @@
 			padding-right: 12px;
 
 			@include media-breakpoint-up(md) {
-				height: $navbar-desktop-height - $navbar-border-bottom-width - $navbar-border-top-width;
+				height: $navbar-height-desktop - $navbar-border-bottom-width - $navbar-border-top-width;
 			}
 
 			&:focus {
@@ -264,7 +264,7 @@
 			height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
 
 			@include media-breakpoint-up(md) {
-				height: $navbar-desktop-height - $navbar-border-bottom-width - $navbar-border-top-width;
+				height: $navbar-height-desktop - $navbar-border-bottom-width - $navbar-border-top-width;
 			}
 
 			@include media-breakpoint-down(sm) {
@@ -819,10 +819,16 @@
 }
 
 .navbar-nav .nav-link {
-	padding-bottom: $navbar-link-padding-y;
-	padding-left: $navbar-link-padding-x;
-	padding-right: $navbar-link-padding-x;
-	padding-top: $navbar-link-padding-y;
+	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
+		padding-bottom: $navbar-link-padding-y;
+		padding-top: $navbar-link-padding-y;
+	}
+
+	@if not ($navbar-link-padding-x == $nav-link-padding-x) {
+		padding-left: $navbar-link-padding-x;
+		padding-right: $navbar-link-padding-x;
+
+	}
 }
 
 .navbar-expand {
@@ -833,10 +839,15 @@
 		&#{$infix} {
 			@include media-breakpoint-up($next) {
 				.navbar-nav .nav-link {
-					padding-bottom: $navbar-link-padding-y-desktop;
-					padding-left: $navbar-link-padding-x-desktop;
-					padding-right: $navbar-link-padding-x-desktop;
-					padding-top: $navbar-link-padding-y-desktop;
+					@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
+						padding-bottom: $navbar-link-padding-y-desktop;
+						padding-top: $navbar-link-padding-y-desktop;
+					}
+
+					@if not ($navbar-link-padding-x-desktop == $nav-link-padding-x) {
+						padding-left: $navbar-link-padding-x-desktop;
+						padding-right: $navbar-link-padding-x-desktop;
+					}
 				}
 			}
 		}
