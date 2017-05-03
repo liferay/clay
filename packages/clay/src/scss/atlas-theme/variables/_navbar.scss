@@ -1,19 +1,19 @@
 // Structure
 
+$navbar-height: 3rem !default; // 48px
+$navbar-desktop-height: 3.75rem !default; // 60px
+
 $navbar-border-bottom-width: 0.0625rem !default; // 1px
 $navbar-border-left-width: 0 !default;
 $navbar-border-right-width: 0 !default;
 $navbar-border-top-width: 0 !default;
 
-$navbar-height: 3rem !default; // 48px
-$navbar-desktop-height: 3.75rem !default; // 60px
+$navbar-padding-x: 0 !default;
+$navbar-padding-y: 0 !default;
 
 // Used for computing $navbar-link-padding-y and $navbar-link-padding-y-desktop
 $navbar-link-content-height: $font-size-base * $line-height-base !default; // 21px
 $navbar-link-content-height-desktop: $font-size-base-desktop * $line-height-base !default; // 24px
-
-$navbar-padding-x: 0 !default;
-$navbar-padding-y: 0 !default;
 
 $navbar-link-padding-x: 0.9375rem !default; // 15px
 $navbar-link-padding-y: (($navbar-height - $navbar-link-content-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
