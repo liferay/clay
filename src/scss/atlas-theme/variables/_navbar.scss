@@ -6,17 +6,18 @@ $navbar-border-right-width: 0 !default;
 $navbar-border-top-width: 0 !default;
 
 $navbar-height: 3rem !default; // 48px
+$navbar-desktop-height: 3.75rem !default; // 60px
+
 $navbar-link-line-height: 1.5rem !default; // 24px
-$navbar-padding-horizontal: 0.9375rem !default; // 15px
-$navbar-padding-vertical: (($navbar-height - $navbar-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
+$navbar-desktop-link-line-height: 1.75rem !default; // 28px
 
 $navbar-padding-x: 0 !default;
 $navbar-padding-y: 0 !default;
 
-$navbar-desktop-height: 3.75rem !default; // 60px
-$navbar-desktop-link-line-height: 1.75rem !default; // 28px
-$navbar-desktop-padding-horizontal: (($grid-gutter-width-base / 2)) !default;
-$navbar-desktop-padding-vertical: (($navbar-desktop-height - $navbar-desktop-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
+$navbar-link-padding-x: 0.9375rem !default; // 15px
+$navbar-link-padding-y: (($navbar-height - $navbar-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
+$navbar-link-padding-x-desktop: (($grid-gutter-width-base / 2)) !default;
+$navbar-link-padding-y-desktop: (($navbar-desktop-height - $navbar-desktop-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 
 $navbar-link-active-bottom-border-width: 0.125rem !default; // 2px
 
@@ -30,7 +31,7 @@ $navbar-default-height: $navbar-height !default;
 
 $navbar-default-desktop-height: $navbar-desktop-height !default;
 
-$navbar-default-padding-horizontal: $navbar-padding-horizontal !default;
+$navbar-default-padding-horizontal: $navbar-link-padding-x !default;
 $navbar-default-padding-vertical: ($navbar-default-height - $navbar-link-line-height - $navbar-default-border-bottom-width - $navbar-default-border-top-width) / 2 !default;
 
 $navbar-default-desktop-padding-horizontal: $navbar-default-padding-horizontal !default;

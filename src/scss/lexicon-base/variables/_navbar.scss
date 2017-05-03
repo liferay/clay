@@ -15,6 +15,11 @@ $navbar-toggle-height: 32px !default;
 
 $zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
 
+$navbar-link-padding-x: null !default;
+$navbar-link-padding-y: null !default;
+$navbar-link-padding-x-desktop: null !default;
+$navbar-link-padding-y-desktop: null !default;
+
 // Skin
 
 $navbar-light-bg: #F7F7F7 !default;
