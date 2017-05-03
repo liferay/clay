@@ -818,19 +818,19 @@
 	border-width: $navbar-border-width;
 }
 
+.navbar-nav .nav-link {
+	padding-bottom: $navbar-link-padding-y;
+	padding-left: $navbar-link-padding-x;
+	padding-right: $navbar-link-padding-x;
+	padding-top: $navbar-link-padding-y;
+}
+
 .navbar-expand {
 	@each $breakpoint in map-keys($grid-breakpoints) {
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
 		&#{$infix} {
-			.navbar-nav .nav-link {
-				padding-bottom: $navbar-link-padding-y;
-				padding-left: $navbar-link-padding-x;
-				padding-right: $navbar-link-padding-x;
-				padding-top: $navbar-link-padding-y;
-			}
-
 			@include media-breakpoint-up($next) {
 				.navbar-nav .nav-link {
 					padding-bottom: $navbar-link-padding-y-desktop;
