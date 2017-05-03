@@ -71,19 +71,16 @@ $navbar-default-link-open-color: #FFF !default;
 // Navbar Inverse
 
 $navbar-inverse-bg: $brand-secondary !default;
-$navbar-inverse-border-color: $brand-secondary !default;
+
 $navbar-inverse-color: #FFF !default;
+$navbar-inverse-hover-color: $navbar-inverse-color !default;
+$navbar-inverse-active-color: $navbar-inverse-color !default;
+$navbar-inverse-disabled-color: #CACDD2 !default;
 
-$navbar-inverse-link-color: #FFF !default;
-$navbar-inverse-link-hover-color: $navbar-inverse-link-color !default;
-
-$navbar-inverse-link-active-color: $navbar-inverse-link-color !default;
-$navbar-inverse-link-active-highlight: $brand-primary !default;
-
-$navbar-inverse-link-disabled-color: #CACDD2 !default;
-
-$navbar-inverse-brand-color: $navbar-inverse-link-color !default;
+$navbar-inverse-brand-color: $navbar-inverse-color !default;
 $navbar-inverse-brand-hover-color: $navbar-inverse-brand-color !default;
+
+$navbar-inverse-active-highlight: $brand-primary !default;
 
 $navbar-inverse-collapsible-search-btn-default-bg: $navbar-inverse-bg !default;
 $navbar-inverse-collapsible-search-btn-default-color: $navbar-inverse-color !default;
@@ -96,6 +93,6 @@ $navbar-inverse-collapsible-search-focus-highlight: null !default;
 $navbar-inverse-link-open-bg: $brand-primary !default;
 $navbar-inverse-link-open-color: #FFF !default;
 
-$navbar-inverse-toggle-border-color: $navbar-inverse-border-color !default;
+$navbar-inverse-toggle-border-color: #FFF !default;
 $navbar-inverse-toggle-hover-bg: transparent !default;
 $navbar-inverse-toggle-icon-bar-bg: #FFF !default;
