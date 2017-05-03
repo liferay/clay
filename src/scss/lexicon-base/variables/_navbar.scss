@@ -25,6 +25,11 @@ $navbar-link-padding-y: ($navbar-height - ($navbar-padding-y * 2) - $navbar-link
 $navbar-link-padding-x-desktop: null !default;
 $navbar-link-padding-y-desktop: ($navbar-height-desktop - ($navbar-padding-y * 2) - $navbar-link-content-height-desktop - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
 
+$navbar-brand-font-size-desktop: $font-size-lg-desktop !default;
+$navbar-brand-padding-x: null !default;
+$navbar-brand-padding-x-desktop: null !default;
+$navbar-brand-padding-y-desktop: ($navbar-height-desktop - ($navbar-padding-y * 2) - ($navbar-brand-font-size-desktop * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
+
 // Skin
 
 $navbar-light-bg: #F7F7F7 !default;
