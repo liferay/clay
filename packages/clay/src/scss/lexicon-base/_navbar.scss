@@ -917,7 +917,34 @@
 	}
 }
 
+.navbar-inverse {
+	
+}
+
 .navbar-inverse-bg {
 	background-color: $navbar-inverse-bg;
 	border-color: $navbar-inverse-border-color;
+
+	.navbar-brand {
+		background-color: $navbar-inverse-brand-bg;
+
+		@include hover-focus {
+			background-color: $navbar-inverse-brand-hover-bg;
+		}
+	}
+
+	.nav-link {
+		@include hover-focus {
+			background-color: $navbar-inverse-hover-bg;
+		}
+
+		&.active,
+		&[aria-expanded="true"] {
+			background-color: $navbar-inverse-active-bg;
+		}
+
+		&.disabled {
+			background-color: $navbar-inverse-disabled-bg;
+		}
+	}
 }
