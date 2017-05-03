@@ -82,6 +82,9 @@ $navbar-inverse-brand-hover-color: $navbar-inverse-brand-color !default;
 
 $navbar-inverse-active-highlight: $brand-primary !default;
 
+$navbar-inverse-toggler-border-color: #FFF !default;
+$navbar-inverse-toggler-hover-bg: transparent !default;
+
 $navbar-inverse-collapsible-search-btn-default-bg: $navbar-inverse-bg !default;
 $navbar-inverse-collapsible-search-btn-default-color: $navbar-inverse-color !default;
 $navbar-inverse-collapsible-search-input-bg: $navbar-inverse-bg !default;
@@ -92,7 +95,3 @@ $navbar-inverse-collapsible-search-focus-highlight: null !default;
 
 $navbar-inverse-link-open-bg: $brand-primary !default;
 $navbar-inverse-link-open-color: #FFF !default;
-
-$navbar-inverse-toggle-border-color: #FFF !default;
-$navbar-inverse-toggle-hover-bg: transparent !default;
-$navbar-inverse-toggle-icon-bar-bg: #FFF !default;
