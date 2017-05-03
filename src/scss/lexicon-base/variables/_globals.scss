@@ -1,6 +1,8 @@
 $enable-mobile-desktop-sizes: false !default;
 $mobile-desktop-breakpoint: md !default;
 
+$font-size-base-desktop: $font-size-base !default;
+
 $brand-secondary: $gray-lightest !default; // #F7F7F9
 
 $state-secondary-bg: $gray-lightest !default; // #F7F7F9
