@@ -50,6 +50,34 @@
 	@return $sidebar-navbar-gutter;
 }
 
+// Converts a pixel value to rem based on the `$base` font size. If the return
+// value will be used inside a Sass arithmetic operation don't set `$add-unit`
+// to true
+// @param $number - pixel value to convert
+// @param $add-unit - boolean value that adds rem unit at the end
+// @param $base - base font size to calculate rem value against
+
+@function clay-px-to-rem($number, $add-unit: false, $base: 16) {
+	@if type-of($number) == 'number' {
+		@if unit($number) == 'px' {
+			$number: $number / 1px;
+			$number: $number / $base;
+		}
+		@else if unitless($number) {
+			$number: $number / $base;
+		}
+		@else {
+			@debug 'Unable to convert: #{$number} should be a `px` value.';
+		}
+	}
+
+	@if $add-unit {
+		$number: #{$number}rem;
+	}
+
+	@return $number;
+}
+
 // str-replace and svg-url functions from http://codepen.io/jakob-e/pen/doMoML
 
 // Function to replace characters in a string
