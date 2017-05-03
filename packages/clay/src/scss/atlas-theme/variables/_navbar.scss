@@ -8,16 +8,17 @@ $navbar-border-top-width: 0 !default;
 $navbar-height: 3rem !default; // 48px
 $navbar-desktop-height: 3.75rem !default; // 60px
 
-$navbar-link-line-height: 1.5rem !default; // 24px
-$navbar-desktop-link-line-height: 1.75rem !default; // 28px
+// Used for computing $navbar-link-padding-y and $navbar-link-padding-y-desktop
+$navbar-link-content-height: $font-size-base * $line-height-base !default; // 21px
+$navbar-link-content-height-desktop: $font-size-base-desktop * $line-height-base !default; // 24px
 
 $navbar-padding-x: 0 !default;
 $navbar-padding-y: 0 !default;
 
 $navbar-link-padding-x: 0.9375rem !default; // 15px
-$navbar-link-padding-y: (($navbar-height - $navbar-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
+$navbar-link-padding-y: (($navbar-height - $navbar-link-content-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 $navbar-link-padding-x-desktop: (($grid-gutter-width-base / 2)) !default;
-$navbar-link-padding-y-desktop: (($navbar-desktop-height - $navbar-desktop-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
+$navbar-link-padding-y-desktop: (($navbar-desktop-height - $navbar-link-content-height-desktop - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 
 $navbar-link-active-bottom-border-width: 0.125rem !default; // 2px
 
@@ -32,10 +33,10 @@ $navbar-default-height: $navbar-height !default;
 $navbar-default-desktop-height: $navbar-desktop-height !default;
 
 $navbar-default-padding-horizontal: $navbar-link-padding-x !default;
-$navbar-default-padding-vertical: ($navbar-default-height - $navbar-link-line-height - $navbar-default-border-bottom-width - $navbar-default-border-top-width) / 2 !default;
+$navbar-default-padding-vertical: ($navbar-default-height - $navbar-link-content-height - $navbar-default-border-bottom-width - $navbar-default-border-top-width) / 2 !default;
 
 $navbar-default-desktop-padding-horizontal: $navbar-default-padding-horizontal !default;
-$navbar-default-desktop-padding-vertical: ($navbar-default-desktop-height - $navbar-desktop-link-line-height - $navbar-default-border-bottom-width - $navbar-default-border-top-width) / 2 !default;
+$navbar-default-desktop-padding-vertical: ($navbar-default-desktop-height - $navbar-link-content-height-desktop - $navbar-default-border-bottom-width - $navbar-default-border-top-width) / 2 !default;
 
 // Skin
 
