@@ -818,6 +818,11 @@
 	border-width: $navbar-border-width;
 }
 
+.navbar-brand {
+	padding-left: $navbar-brand-padding-x;
+	padding-right: $navbar-brand-padding-x;
+}
+
 .navbar-nav .nav-link {
 	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
 		padding-bottom: $navbar-link-padding-y;
@@ -838,6 +843,22 @@
 
 		&#{$infix} {
 			@include media-breakpoint-up($next) {
+				.navbar-brand {
+					@if not ($navbar-brand-font-size-desktop == $navbar-brand-font-size) {
+						font-size: $navbar-brand-font-size-desktop;
+					}
+
+					@if not ($navbar-brand-padding-y-desktop == $navbar-brand-padding-y) {
+						padding-bottom: $navbar-brand-padding-y-desktop;
+						padding-top: $navbar-brand-padding-y-desktop;
+					}
+
+					@if not ($navbar-brand-padding-x-desktop == $navbar-brand-padding-x) {
+						padding-left: $navbar-brand-padding-x-desktop;
+						padding-right: $navbar-brand-padding-x-desktop;
+					}
+				}
+
 				.navbar-nav .nav-link {
 					@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
 						padding-bottom: $navbar-link-padding-y-desktop;
