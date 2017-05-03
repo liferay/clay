@@ -452,18 +452,18 @@
 
 // Navbar Form
 
-.navbar-form {
-	padding: $navbar-form-padding-vertical $navbar-form-padding-horizontal;
+// .navbar-form {
+// 	padding: $navbar-form-padding-vertical $navbar-form-padding-horizontal;
 
-	@include media-breakpoint-up(md) {
-		margin: 0;
+// 	@include media-breakpoint-up(md) {
+// 		margin: 0;
 
-		@if (variable-exists(atlas-theme)) {
-			padding-bottom: ($navbar-desktop-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
-			padding-top: ($navbar-desktop-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
-		}
-	}
-}
+// 		@if (variable-exists(atlas-theme)) {
+// 			padding-bottom: ($navbar-desktop-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
+// 			padding-top: ($navbar-desktop-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
+// 		}
+// 	}
+// }
 
 // Navbar Header
 
@@ -643,93 +643,93 @@
 
 // Skin
 
-.navbar-default {
-	@if (variable-exists(atlas-theme)) {
-		border-width: $navbar-default-border-width;
-		min-height: $navbar-default-height;
+// .navbar-default {
+// 	@if (variable-exists(atlas-theme)) {
+// 		border-width: $navbar-default-border-width;
+// 		min-height: $navbar-default-height;
 
-		@include media-breakpoint-up(md) {
-			min-height: $navbar-default-desktop-height;
-		}
-	}
-}
+// 		@include media-breakpoint-up(md) {
+// 			min-height: $navbar-default-desktop-height;
+// 		}
+// 	}
+// }
 
-.navbar-default .navbar-collapse:first-child,
-.navbar-default.navbar-collapse-absolute .navbar-collapse {
-	@include media-breakpoint-down(sm) {
-		background-color: darken($body-bg, 3%);
-		border-color: darken($body-bg, 6.5%);
-	}
-}
+// .navbar-default .navbar-collapse:first-child,
+// .navbar-default.navbar-collapse-absolute .navbar-collapse {
+// 	@include media-breakpoint-down(sm) {
+// 		background-color: darken($body-bg, 3%);
+// 		border-color: darken($body-bg, 6.5%);
+// 	}
+// }
 
-.navbar-default {
-	.navbar-toggle {
-		color: $navbar-light-active-color;
+// .navbar-default {
+// 	.navbar-toggle {
+// 		color: $navbar-light-active-color;
 
-		.icon-bar {
-			background-color: #888;
-		}
-	}
-}
+// 		.icon-bar {
+// 			background-color: #888;
+// 		}
+// 	}
+// }
 
-.navbar-default.collapse-basic-search .basic-search {
-	&.open {
-		background-color: if(variable-exists(atlas-theme), transparent, darken($body-bg, 3%));
-	}
+// .navbar-default.collapse-basic-search .basic-search {
+// 	&.open {
+// 		background-color: if(variable-exists(atlas-theme), transparent, darken($body-bg, 3%));
+// 	}
 
-	.btn-default {
-		background-color: $navbar-default-collapsible-search-btn-default-bg;
-		border-color: $navbar-default-collapsible-search-btn-default-border;
-		color: $navbar-default-collapsible-search-btn-default-color;
-	}
+// 	.btn-default {
+// 		background-color: $navbar-default-collapsible-search-btn-default-bg;
+// 		border-color: $navbar-default-collapsible-search-btn-default-border;
+// 		color: $navbar-default-collapsible-search-btn-default-color;
+// 	}
 
-	.form-control {
-		background-color: $navbar-default-collapsible-search-input-bg;
-		border-color: $navbar-default-collapsible-search-input-border;
-		color: $navbar-default-collapsible-search-input-color;
+// 	.form-control {
+// 		background-color: $navbar-default-collapsible-search-input-bg;
+// 		border-color: $navbar-default-collapsible-search-input-border;
+// 		color: $navbar-default-collapsible-search-input-color;
 
-		&::placeholder {
-			color: $navbar-default-collapsible-search-input-placeholder-color;
-		}
-	}
-}
+// 		&::placeholder {
+// 			color: $navbar-default-collapsible-search-input-placeholder-color;
+// 		}
+// 	}
+// }
 
-@if (variable-exists(atlas-theme)) {
-	.navbar-default {
-		.navbar-nav {
-			> .active > a {
-				&:after {
-					@include media-breakpoint-up(md) {
-						background-color: $navbar-light-active-highlight;
+// @if (variable-exists(atlas-theme)) {
+// 	.navbar-default {
+// 		.navbar-nav {
+// 			> .active > a {
+// 				&:after {
+// 					@include media-breakpoint-up(md) {
+// 						background-color: $navbar-light-active-highlight;
 
-						@if not ($navbar-light-active-highlight == transparent) {
-							content: '';
-						}
-					}
-				}
-			}
-		}
+// 						@if not ($navbar-light-active-highlight == transparent) {
+// 							content: '';
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
 
-		&.navbar-no-collapse .navbar-nav > .active > a:after,
-		.navbar-toggle-page-name:after {
-			background-color: $navbar-light-active-highlight;
+// 		&.navbar-no-collapse .navbar-nav > .active > a:after,
+// 		.navbar-toggle-page-name:after {
+// 			background-color: $navbar-light-active-highlight;
 
-			@if not ($navbar-light-active-highlight == transparent) {
-				content: '';
-			}
-		}
-	}
+// 			@if not ($navbar-light-active-highlight == transparent) {
+// 				content: '';
+// 			}
+// 		}
+// 	}
 
-	.navbar-default .basic-search {
-		&:after {
-			background-color: $navbar-default-collapsible-search-highlight;
-		}
+// 	.navbar-default .basic-search {
+// 		&:after {
+// 			background-color: $navbar-default-collapsible-search-highlight;
+// 		}
 
-		&.focus:after {
-			background-color: $navbar-default-collapsible-search-focus-highlight;
-		}
-	}
-}
+// 		&.focus:after {
+// 			background-color: $navbar-default-collapsible-search-focus-highlight;
+// 		}
+// 	}
+// }
 
 // Navbar Inverse
 
