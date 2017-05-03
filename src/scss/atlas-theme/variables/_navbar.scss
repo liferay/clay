@@ -11,14 +11,9 @@ $navbar-border-top-width: 0 !default;
 $navbar-padding-x: 0 !default;
 $navbar-padding-y: 0 !default;
 
-// Used for computing $navbar-link-padding-y and $navbar-link-padding-y-desktop
-// $navbar-link-content-height: $font-size-base * $line-height-base !default; // 21px
-// $navbar-link-content-height-desktop: $font-size-base-desktop * $line-height-base !default; // 24px
-
 $navbar-link-padding-x: 0.9375rem !default; // 15px
-// $navbar-link-padding-y: (($navbar-height - $navbar-link-content-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
+
 $navbar-link-padding-x-desktop: (($grid-gutter-width-base / 2)) !default;
-// $navbar-link-padding-y-desktop: (($navbar-height-desktop - $navbar-link-content-height-desktop - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 
 $navbar-link-active-bottom-border-width: 0.125rem !default; // 2px
 
@@ -69,6 +64,7 @@ $navbar-light-brand-hover-color: $navbar-light-hover-color !default;
 
 $navbar-light-active-highlight: $brand-primary !default;
 
+$navbar-light-toggler-border-color: $navbar-light-border-color !default;
 
 
 
@@ -82,7 +78,6 @@ $navbar-default-collapsible-search-focus-highlight: null !default;
 $navbar-default-link-open-bg: $brand-primary !default;
 $navbar-default-link-open-color: #FFF !default;
 
-$navbar-default-toggle-border-color: $navbar-light-border-color !default;
 $navbar-default-toggle-hover-bg: transparent !default;
 $navbar-default-toggle-icon-bar-bg: $navbar-light-active-color !default;
 
