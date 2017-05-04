@@ -12,8 +12,6 @@ $navbar-border-width: $navbar-border-top-width $navbar-border-right-width $navba
 $navbar-form-padding-horizontal: $navbar-padding-x !default;
 $navbar-form-padding-vertical: (($navbar-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 
-$navbar-toggle-icon-bar-color: $link-color !default;
-
 $navbar-toggle-height: 32px !default;
 
 $zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
