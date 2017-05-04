@@ -12,10 +12,6 @@ $navbar-border-width: $navbar-border-top-width $navbar-border-right-width $navba
 $navbar-form-padding-horizontal: $navbar-padding-x !default;
 $navbar-form-padding-vertical: (($navbar-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 
-$navbar-toggler-height: null !default;
-$navbar-toggler-margin-x: null !default;
-$navbar-toggler-margin-y: null !default;
-
 $zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
 
 // Used for computing $navbar-link-padding-y and $navbar-link-padding-y-desktop
@@ -34,6 +30,10 @@ $navbar-brand-font-size-desktop: $font-size-lg-desktop !default;
 $navbar-brand-padding-x: null !default;
 $navbar-brand-padding-x-desktop: null !default;
 $navbar-brand-padding-y-desktop: ($navbar-height-desktop - ($navbar-padding-y * 2) - ($navbar-brand-font-size-desktop * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
+
+$navbar-toggler-height: null !default;
+$navbar-toggler-margin-x: null !default;
+$navbar-toggler-margin-y: null !default;
 
 // Skin
 
