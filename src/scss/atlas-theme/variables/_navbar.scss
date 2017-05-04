@@ -19,7 +19,10 @@ $navbar-brand-padding-x: $navbar-link-padding-x !default;
 $navbar-brand-padding-y: ($navbar-height - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
 $navbar-brand-padding-x-desktop: $navbar-brand-padding-x !default;
 
-$navbar-toggler-margin-x: $navbar-link-padding-x !default;
+$navbar-toggler-height: 2rem !default; // 32px
+$navbar-toggler-margin-x: $navbar-link-padding-x !default; // 15px
+$navbar-toggler-padding-x: 0.625rem !default; // 15px
+$navbar-toggler-padding-y: 0 !default;
 
 // Skin
 
