@@ -213,15 +213,15 @@
 			background-color: $input-border-color-focus;
 
 			@include media-breakpoint-up(md) {
-				height: $navbar-link-active-bottom-border-width;
-				margin-top: -$navbar-link-active-bottom-border-width;
+				height: $navbar-active-bottom-border-width;
+				margin-top: -$navbar-active-bottom-border-width;
 			}
 		}
 
 		&.open {
 			&:after {
-				height: $navbar-link-active-bottom-border-width;
-				margin-top: -$navbar-link-active-bottom-border-width;
+				height: $navbar-active-bottom-border-width;
+				margin-top: -$navbar-active-bottom-border-width;
 
 				@include media-breakpoint-up(md) {
 					background-color: transparent;
@@ -625,15 +625,15 @@
 		padding-right: $navbar-padding-x;
 
 		&:after {
-			background-color: $navbar-link-active-highlight;
+			background-color: $navbar-active-highlight;
 			bottom: -$navbar-border-bottom-width;
 
-			@if not ($navbar-link-active-highlight == transparent) {
+			@if not ($navbar-active-highlight == transparent) {
 				content: '';
 			}
 
 			display: block;
-			height: $navbar-link-active-bottom-border-width;
+			height: $navbar-active-bottom-border-width;
 			left: $navbar-padding-x;
 			position: absolute;
 			right: $navbar-padding-x;
@@ -832,7 +832,7 @@
 		padding-top: $navbar-link-padding-y;
 	}
 
-	@if not ($navbar-link-padding-x == $nav-link-padding-x) {
+	@if not ($navbar-link-padding-x == 0.5rem) {
 		padding-left: $navbar-link-padding-x;
 		padding-right: $navbar-link-padding-x;
 
@@ -868,9 +868,41 @@
 						padding-top: $navbar-link-padding-y-desktop;
 					}
 
-					@if not ($navbar-link-padding-x-desktop == $nav-link-padding-x) {
+					@if not ($navbar-link-padding-x-desktop == 0.5rem) {
 						padding-left: $navbar-link-padding-x-desktop;
 						padding-right: $navbar-link-padding-x-desktop;
+					}
+
+					&.active:after {
+						background-color: $navbar-active-highlight;
+						bottom: -$navbar-border-bottom-width;
+
+						@if not ($navbar-active-highlight == transparent) {
+							content: '';
+						}
+
+						display: block;
+						height: $navbar-active-bottom-border-width;
+						left: $navbar-link-padding-x-desktop;
+						position: absolute;
+						right: $navbar-link-padding-x-desktop;
+						width: auto;
+					}
+				}
+
+				&.navbar-inverse-bg .navbar-nav .nav-link.active:after {
+					background-color: $navbar-inverse-active-highlight;
+
+					@if not ($navbar-inverse-active-highlight == transparent) {
+						content: '';
+					}
+				}
+
+				&.navbar-light-bg .navbar-nav .nav-link.active:after {
+					background-color: $navbar-light-active-highlight;
+
+					@if not ($navbar-light-active-highlight == transparent) {
+						content: '';
 					}
 				}
 			}
