@@ -814,7 +814,10 @@
 
 .navbar-toggler {
 	height: $navbar-toggler-height;
-	margin: $navbar-toggler-margin-y $navbar-toggler-margin-x;
+	margin-bottom: $navbar-toggler-margin-y;
+	margin-left: $navbar-toggler-margin-x;
+	margin-right: $navbar-toggler-margin-x;
+	margin-top: $navbar-toggler-margin-y;
 
 	.lexicon-icon {
 		margin-top: -1px;
