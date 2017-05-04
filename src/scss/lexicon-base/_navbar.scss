@@ -814,6 +814,9 @@
 
 .navbar {
 	border-color: transparent;
+
+	@include border-radius($navbar-border-radius);
+
 	border-style: solid;
 	border-width: $navbar-border-width;
 }
