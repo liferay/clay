@@ -1042,12 +1042,12 @@
 .navbar-inverse {
 	.navbar-brand {
 		@if not ($navbar-inverse-brand-color == $navbar-inverse-active-color) {
-			color: $navbar-light-brand-color;
+			color: $navbar-inverse-brand-color;
 		}
 
 		@include hover-focus {
 			@if not ($navbar-inverse-brand-hover-color == $navbar-inverse-active-color) {
-				color: $navbar-light-brand-hover-color;
+				color: $navbar-inverse-brand-hover-color;
 			}
 		}
 	}
