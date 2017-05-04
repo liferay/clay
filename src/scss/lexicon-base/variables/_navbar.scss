@@ -22,10 +22,13 @@ $zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
 $navbar-link-content-height: $font-size-base * $line-height-base !default;
 $navbar-link-content-height-desktop: $font-size-base-desktop * $line-height-base !default;
 
-$navbar-link-padding-x: null !default;
+$navbar-link-padding-x: 0.5rem !default;
 $navbar-link-padding-y: ($navbar-height - ($navbar-padding-y * 2) - $navbar-link-content-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
-$navbar-link-padding-x-desktop: null !default;
+$navbar-link-padding-x-desktop: $navbar-link-padding-x !default;
 $navbar-link-padding-y-desktop: ($navbar-height-desktop - ($navbar-padding-y * 2) - $navbar-link-content-height-desktop - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
+
+$navbar-active-highlight: transparent !default;
+$navbar-active-bottom-border-width: 2px !default;
 
 $navbar-brand-font-size-desktop: $font-size-lg-desktop !default;
 $navbar-brand-padding-x: null !default;
@@ -41,6 +44,8 @@ $navbar-light-active-bg: null !default;
 $navbar-light-hover-bg: null !default;
 $navbar-light-disabled-bg: null !default;
 
+$navbar-light-active-highlight: transparent !default;
+
 $navbar-light-brand-bg: null !default;
 $navbar-light-brand-hover-bg: null !default;
 $navbar-light-brand-color: null !default;
@@ -54,6 +59,8 @@ $navbar-inverse-border-color: transparent !default;
 $navbar-inverse-active-bg: null !default;
 $navbar-inverse-hover-bg: null !default;
 $navbar-inverse-disabled-bg: null !default;
+
+$navbar-inverse-active-highlight: transparent !default;
 
 $navbar-inverse-brand-bg: null !default;
 $navbar-inverse-brand-hover-bg: null !default;
