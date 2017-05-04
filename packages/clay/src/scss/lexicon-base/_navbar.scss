@@ -188,10 +188,10 @@
 		}
 	}
 
-	.navbar-nav > li > a,
-	.navbar-toggle {
-		z-index: 1;
-	}
+	// .navbar-nav > li > a,
+	// .navbar-toggle {
+	// 	z-index: 1;
+	// }
 }
 
 // Navbar Basic Search
@@ -611,35 +611,35 @@
 // 	}
 // }
 
-.navbar-toggle-left {
-	float: left;
-}
+// .navbar-toggle-left {
+// 	float: left;
+// }
 
-.navbar-toggle-page-name {
-	@if (variable-exists(atlas-theme)) {
-		border-radius: $navbar-border-radius;
-		border-width: 0;
-		height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
-		margin: 0;
-		padding-left: $navbar-padding-x;
-		padding-right: $navbar-padding-x;
+// .navbar-toggle-page-name {
+// 	@if (variable-exists(atlas-theme)) {
+// 		border-radius: $navbar-border-radius;
+// 		border-width: 0;
+// 		height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+// 		margin: 0;
+// 		padding-left: $navbar-padding-x;
+// 		padding-right: $navbar-padding-x;
 
-		&:after {
-			background-color: $navbar-active-highlight;
-			bottom: -$navbar-border-bottom-width;
+// 		&:after {
+// 			background-color: $navbar-active-highlight;
+// 			bottom: -$navbar-border-bottom-width;
 
-			@if not ($navbar-active-highlight == transparent) {
-				content: '';
-			}
+// 			@if not ($navbar-active-highlight == transparent) {
+// 				content: '';
+// 			}
 
-			display: block;
-			height: $navbar-active-border-bottom-width;
-			left: $navbar-padding-x;
-			position: absolute;
-			right: $navbar-padding-x;
-		}
-	}
-}
+// 			display: block;
+// 			height: $navbar-active-border-bottom-width;
+// 			left: $navbar-padding-x;
+// 			position: absolute;
+// 			right: $navbar-padding-x;
+// 		}
+// 	}
+// }
 
 // Skin
 
@@ -824,6 +824,75 @@
 	}
 }
 
+// .navbar-toggle-page-name {
+// 	@if (variable-exists(atlas-theme)) {
+// 		border-radius: $navbar-border-radius;
+// 		border-width: 0;
+// 		height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+// 		margin: 0;
+// 		padding-left: $navbar-padding-x;
+// 		padding-right: $navbar-padding-x;
+
+// 		&:after {
+// 			background-color: $navbar-active-highlight;
+// 			bottom: -$navbar-border-bottom-width;
+
+// 			@if not ($navbar-active-highlight == transparent) {
+// 				content: '';
+// 			}
+
+// 			display: block;
+// 			height: $navbar-active-border-bottom-width;
+// 			left: $navbar-padding-x;
+// 			position: absolute;
+// 			right: $navbar-padding-x;
+// 		}
+// 	}
+// }
+
+.navbar-toggler-page-name {
+	border-width: 0;
+	height: ($navbar-height - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width);
+	font-size: $navbar-toggler-page-name-font-size;
+	margin-bottom: $navbar-toggler-page-name-margin-y;
+	margin-left: $navbar-toggler-page-name-margin-x;
+	margin-right: $navbar-toggler-page-name-margin-x;
+	margin-top: $navbar-toggler-page-name-margin-y;
+	padding-bottom: $navbar-toggler-page-name-padding-y;
+	padding-left: $navbar-toggler-page-name-padding-x;
+	padding-right: $navbar-toggler-page-name-padding-x;
+	padding-top: $navbar-toggler-page-name-padding-y;
+	position: relative;
+	z-index: 1;
+
+	@include hover-focus {
+		outline: 0;
+	}
+
+	&:after {
+		background-color: $navbar-active-highlight;
+		bottom: -$navbar-border-bottom-width - $navbar-padding-y;
+
+		@if not ($navbar-active-highlight == transparent) {
+			content: '';
+		}
+
+		display: block;
+		height: $navbar-active-border-bottom-width;
+		left: $navbar-toggler-page-name-padding-x;
+		position: absolute;
+		right: $navbar-toggler-page-name-padding-x;
+		width: auto;
+	}
+}
+
+.collapse-basic-search {
+	.nav-link,
+	.navbar-toggler {
+		z-index: 1;
+	}
+}
+
 .navbar {
 	border-color: transparent;
 
@@ -887,7 +956,7 @@
 
 					&.active:after {
 						background-color: $navbar-active-highlight;
-						bottom: -$navbar-border-bottom-width;
+						bottom: -$navbar-border-bottom-width - $navbar-padding-y;
 
 						@if not ($navbar-active-highlight == transparent) {
 							content: '';
@@ -934,6 +1003,12 @@
 			}
 		}
 	}
+
+	.navbar-toggler-page-name {
+		&[aria-expanded="true"] {
+			color: $navbar-light-active-color;
+		}
+	}
 }
 
 .navbar-light-bg {
@@ -974,6 +1049,12 @@
 			@if not ($navbar-inverse-brand-hover-color == $navbar-inverse-active-color) {
 				color: $navbar-light-brand-hover-color;
 			}
+		}
+	}
+
+	.navbar-toggler-page-name {
+		&[aria-expanded="true"] {
+			color: $navbar-inverse-active-color;
 		}
 	}
 }
