@@ -13,6 +13,8 @@ $navbar-form-padding-horizontal: $navbar-padding-x !default;
 $navbar-form-padding-vertical: (($navbar-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 
 $navbar-toggler-height: null !default;
+$navbar-toggler-margin-x: null !default;
+$navbar-toggler-margin-y: null !default;
 
 $zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
 
