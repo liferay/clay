@@ -19,9 +19,6 @@ $navbar-brand-padding-x: $navbar-link-padding-x !default;
 $navbar-brand-padding-y: ($navbar-height - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
 $navbar-brand-padding-x-desktop: $navbar-brand-padding-x !default;
 
-$navbar-active-bottom-border-width: 0.125rem !default; // 2px
-$navbar-active-highlight: transparent !default;
-
 // Skin
 
 $navbar-border-radius: 0 !default;

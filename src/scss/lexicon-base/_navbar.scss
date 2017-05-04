@@ -213,15 +213,15 @@
 			background-color: $input-border-color-focus;
 
 			@include media-breakpoint-up(md) {
-				height: $navbar-active-bottom-border-width;
-				margin-top: -$navbar-active-bottom-border-width;
+				height: $navbar-active-border-bottom-width;
+				margin-top: -$navbar-active-border-bottom-width;
 			}
 		}
 
 		&.open {
 			&:after {
-				height: $navbar-active-bottom-border-width;
-				margin-top: -$navbar-active-bottom-border-width;
+				height: $navbar-active-border-bottom-width;
+				margin-top: -$navbar-active-border-bottom-width;
 
 				@include media-breakpoint-up(md) {
 					background-color: transparent;
@@ -332,7 +332,7 @@
 // 					}
 
 // 					display: block;
-// 					height: $navbar-link-active-bottom-border-width;
+// 					height: $navbar-link-active-border-bottom-width;
 // 					left: $navbar-link-padding-x-desktop;
 // 					position: absolute;
 // 					right: $navbar-link-padding-x-desktop;
@@ -353,7 +353,7 @@
 // 				}
 
 // 				display: block;
-// 				height: $navbar-link-active-bottom-border-width;
+// 				height: $navbar-link-active-border-bottom-width;
 // 				left: $navbar-link-padding-x-desktop;
 // 				position: absolute;
 // 				right: $navbar-link-padding-x-desktop;
@@ -633,7 +633,7 @@
 			}
 
 			display: block;
-			height: $navbar-active-bottom-border-width;
+			height: $navbar-active-border-bottom-width;
 			left: $navbar-padding-x;
 			position: absolute;
 			right: $navbar-padding-x;
@@ -882,7 +882,7 @@
 						}
 
 						display: block;
-						height: $navbar-active-bottom-border-width;
+						height: $navbar-active-border-bottom-width;
 						left: $navbar-link-padding-x-desktop;
 						position: absolute;
 						right: $navbar-link-padding-x-desktop;
