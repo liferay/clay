@@ -812,6 +812,14 @@
 
 // BS4
 
+.navbar-toggler {
+	height: $navbar-toggler-height;
+
+	.lexicon-icon {
+		margin-top: -1px;
+	}
+}
+
 .navbar {
 	border-color: transparent;
 
