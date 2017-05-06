@@ -475,3 +475,158 @@ Checkboxes unable to be styled in IE with this method. -->
 
 	</div>
 </div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Form Inline</h3>
+
+		<form>
+			<div class="form-group form-inline">
+				<label class="form-control-label">Form Inline</label>
+				<input class="form-control" type="text"></input>
+				<button class="btn btn-primary" type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Form Group</h3>
+
+		<form class="aaa">
+			<div class="form-group">
+				<label class="form-control-label">
+					First Name
+				</label>
+				<input class="form-control" placeholder="First Name" type="text"></input>
+			</div>
+			<div class="form-group">
+				<label class="form-control-label">
+					Last Name
+				</label>
+				<input class="form-control" placeholder="Last Name" type="text"></input>
+			</div>
+			<div class="form-group">
+				<label class="form-control-label">
+					Address 1
+				</label>
+				<input class="form-control" placeholder="Address 1" type="text"></input>
+			</div>
+			<div class="form-group">
+				<label class="form-control-label">
+					Address 2
+				</label>
+				<input class="form-control" placeholder="Address 2" type="text"></input>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Form Inline Autofit</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			Equally spaced form inputs. To set a fixed width use <code class="code">flex-grow: 0; flex-basis: 200px;</code> on <code class="code">.form-inline-group</code> or any direct descendant of <code class="code">.form-inline-autofit</code>.
+		</blockquote>
+
+		<form>
+			<div class="form-group form-inline form-inline-autofit">
+				<div class="form-inline-group">
+					<label class="form-control-label">Form Inline Autofit</label>
+					<input class="form-control" type="text"></input>
+				</div>
+				<div class="form-inline-group">
+					<label class="form-control-label">Select</label>
+					<select class="form-control">
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group form-inline form-inline-autofit">
+				<div class="form-inline-group">
+					<label class="form-control-label">First Name</label>
+					<input class="form-control" placeholder="First Name" type="text"></input>
+				</div>
+				<div class="form-inline-group">
+					<label class="form-control-label">Last Name</label>
+					<input class="form-control" placeholder="Last Name" type="text"></input>
+				</div>
+				<div class="input-group"> <div class="input-group-addon">$</div> <input class="form-control" id="exampleInputAmount" placeholder="Amount"> <div class="input-group-addon">.00</div> </div>
+			</div>
+
+			<div class="form-group form-inline form-inline-autofit">
+				<label>City</label>
+				<input class="form-control" placeholder="City" type="text"></input>
+				<select class="form-control">
+					<option>AL</option>
+					<option>CA</option>
+					<option>FL</option>
+					<option>HI</option>
+					<option>NV</option>
+					<option>WA</option>
+				</select>
+				<input class="form-control" placeholder="Zip" type="number"></input>
+				<div class="form-inline-group">
+					<label class="form-control-label">Donation</label>
+					<div class="input-group"> <div class="input-group-addon">$</div> <input class="form-control" id="exampleInputAmount" placeholder="Amount"> <div class="input-group-addon">.00</div> </div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Submit</button>
+				<a class="btn btn-danger" href="#1">Clear</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Form Inline Autofit 2 Columns</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			An example of an inline form without using Bootstrap's grid.
+		</blockquote>
+
+		<style>
+			@media (min-width: 576px) {
+				.my-custom-form label,
+				.my-custom-form .form-control-label {
+					width: 200px;
+				}
+			}
+		</style>
+		<form class="my-custom-form">
+			<div class="form-group form-inline form-inline-autofit">
+				<label class="form-control-label">
+					Name
+				</label>
+				<input class="form-control" placeholder="First" type="text"></input>
+				<input class="form-control" placeholder="Middle" type="text"></input>
+				<input class="form-control" placeholder="Last" type="text"></input>
+			</div>
+			<div class="form-group form-inline form-inline-autofit">
+				<label class="form-control-label">
+					Address 1
+				</label>
+				<input class="form-control" placeholder="Address 1" type="text"></input>
+			</div>
+			<div class="form-group form-inline form-inline-autofit">
+				<label class="form-control-label">
+					Address 2
+				</label>
+				<input class="form-control" placeholder="Address 2" type="text"></input>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Submit</button>
+				<a class="btn btn-danger" href="#1">Clear</a>
+			</div>
+		</form>
+	</div>
+</div>
