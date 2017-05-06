@@ -199,3 +199,87 @@ fieldset[disabled] label {
 		}
 	}
 }
+
+// Form Inline
+// TODO: Create form-inline-autofit screen sizes?
+// TODO: Create width classes to set widths of inputs in form-inline-autofit?
+
+.form-inline {
+	> .btn,
+	> .form-control,
+	> .form-inline-group {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.form-inline-autofit {
+	align-items: flex-start;
+	flex-direction: column;
+
+	.form-inline-group {
+		flex: 1;
+		width: 100%;
+	}
+
+	.input-group {
+		flex: 1;
+	}
+
+	> label,
+	> .btn,
+	> .form-control,
+	> .form-control-label,
+	> .form-inline-group,
+	> .input-group {
+		@include media-breakpoint-down(xs) {
+			flex-basis: auto !important;
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.form-inline {
+		> label,
+		> .form-control-label {
+			&:not(:last-child) {
+				margin-right: $grid-gutter-width-base / 2;
+			}
+		}
+
+		> .btn,
+		> .form-control,
+		> .form-inline-group {
+			&:not(:last-child) {
+				margin-bottom: 0;
+				margin-right: $grid-gutter-width-base / 2;
+			}
+		}
+	}
+
+	.form-inline-autofit {
+		align-items: flex-end;
+		flex: 1;
+		flex-direction: row;
+		width: 100%;
+
+		.form-control {
+			flex: 1;
+			width: 100%;
+		}
+
+		> label,
+		> .form-control-label {
+			display: inline-block;
+			margin-bottom: ($input-height - ($font-size-base * $line-height-base)) / 2;
+		}
+	}
+
+	.form-inline-group {
+		label,
+		.form-control-label {
+			display: inline-block;
+		}
+	}
+}
