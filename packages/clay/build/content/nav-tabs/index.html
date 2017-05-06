@@ -62,12 +62,12 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
@@ -121,7 +121,7 @@
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -131,7 +131,7 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
@@ -141,8 +141,6 @@
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
@@ -161,7 +159,7 @@
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -175,7 +173,7 @@
 </li>
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
@@ -185,7 +183,7 @@
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -199,7 +197,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -237,47 +235,61 @@
 		<div class="nav-tabs-scroll">
 			<div class="nav-tabs-scrollbar">
 				<ul class="nav nav-tabs nav-tabs-default">
-					<li class="active" role="presentation"><a aria-controls="fields" href="#fields04" data-toggle="tab" role="tab">Fields</a></li>
-					<li role="presentation"><a aria-controls="settings" href="#settings04" data-toggle="tab" role="tab">Settings</a></li>
-					<li class="disabled" role="presentation"><a href="#documents">Documents</a></li>
-					<li role="presentation"><a aria-controls="forms" data-toggle="tab" href="#forms04" role="tab">Forms</a></li>
-
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" data-nav-tabs-scroll-target="#navTabsScrollDropdown01" href="#1">Configuration <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">Setup</a></li>
-							<li><a href="#1">Supported Clients</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Sharing</a></li>
-							<li class="divider"></li>
-							<li><a href="#1">Scope</a></li>
-						</ul>
+					<li class="nav-item" role="presentation">
+						<a aria-controls="fields" class="active nav-link" data-toggle="tab" href="#fields04" role="tab">Fields</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a aria-controls="settings" class="nav-link" data-toggle="tab" href="#settings04" role="tab">Settings</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="disabled nav-link" href="#documents">Documents</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a aria-controls="forms" class="nav-link" data-toggle="tab" href="#forms04" role="tab">Forms</a>
+					</li>
+					<li class="dropdown nav-item">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" data-nav-tabs-scroll-target="#navTabsScrollDropdown01" href="#1">
+							Configuration
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+							</svg>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Setup</a>
+							<a class="dropdown-item" href="#1">Supported Clients</a>
+							<a class="dropdown-item" href="#1">Permissions</a>
+							<a class="dropdown-item" href="#1">Sharing</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#1">Scope</a>
+						</div>
 					</li>
 
-					<li role="presentation"><a aria-controls="applications" data-toggle="tab" href="#applications04" role="tab">Applications</a></li>
+					<li class="nav-item" role="presentation">
+						<a aria-controls="applications" class="nav-link" data-toggle="tab" href="#applications04" role="tab">Applications</a>
+					</li>
 				</ul>
 			</div>
 
-			<ul class="dropdown-menu" id="navTabsScrollDropdown01">
-				<li><a href="#1">Setup</a></li>
-				<li><a href="#1">Supported Clients</a></li>
-				<li><a href="#1">Permissions</a></li>
-				<li><a href="#1">Sharing</a></li>
-				<li class="divider"></li>
-				<li><a href="#1">Scope</a></li>
-			</ul>
+			<div class="dropdown-menu" id="navTabsScrollDropdown01">
+				<a class="dropdown-item" href="#1">Setup</a>
+				<a class="dropdown-item" href="#1">Supported Clients</a>
+				<a class="dropdown-item" href="#1">Permissions</a>
+				<a class="dropdown-item" href="#1">Sharing</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#1">Scope</a>
+			</div>
 
 			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active fade in" id="fields04">
+				<div class="active fade show tab-pane" id="fields04" role="tabpanel">
 					<p style="padding: 10px;"><h4>Fields:</h4> Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.</p>
 				</div>
-				<div role="tabpanel" class="tab-pane fade" id="settings04">
+				<div class="fade tab-pane" id="settings04" role="tabpanel">
 					<p style="padding: 10px;"><h4>Settings:</h4> Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.</p>
 				</div>
-				<div role="tabpanel" class="tab-pane fade" id="forms04">
+				<div class="fade tab-pane" id="forms04" role="tabpanel">
 					<p style="padding: 10px;"><h4>Forms:</h4> Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.</p>
 				</div>
-				<div role="tabpanel" class="tab-pane fade" id="applications04">
+				<div class="fade tab-pane" id="applications04" role="tabpanel">
 					<p style="padding: 10px;"><h4>Applications:</h4> Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.</p>
 				</div>
 			</div>
@@ -289,92 +301,43 @@
 	$('.nav-tabs-scroll').navTabsScrollDropdown();
 </script>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse00"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse00">
-	<pre><code class="html">&lt;script src=&quot;../../js/nav-tabs-scroll-dropdown.js&quot;&gt;&lt;/script&gt;
-
-&lt;div class=&quot;nav-tabs-scroll&quot;&gt;
-    &lt;div class=&quot;nav-tabs-scrollbar&quot;&gt;
-        &lt;ul class=&quot;nav nav-tabs nav-tabs-default&quot;&gt;
-            &lt;li class=&quot;active&quot; role=&quot;presentation&quot;&gt;&lt;a aria-controls=&quot;fields&quot; href=&quot;#fields04&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Fields&lt;/a&gt;&lt;/li&gt;
-            &lt;li role=&quot;presentation&quot;&gt;&lt;a aria-controls=&quot;settings&quot; href=&quot;#settings04&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Settings&lt;/a&gt;&lt;/li&gt;
-            &lt;li class=&quot;disabled&quot; role=&quot;presentation&quot;&gt;&lt;a href=&quot;#documents&quot;&gt;Documents&lt;/a&gt;&lt;/li&gt;
-            &lt;li role=&quot;presentation&quot;&gt;&lt;a aria-controls=&quot;forms&quot; data-toggle=&quot;tab&quot; href=&quot;#forms04&quot; role=&quot;tab&quot;&gt;Forms&lt;/a&gt;&lt;/li&gt;
-
-            &lt;li class=&quot;dropdown&quot;&gt;
-                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; data-nav-tabs-scroll-target=&quot;#navTabsScrollDropdown01&quot; href=&quot;#1&quot;&gt;Configuration &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul class=&quot;dropdown-menu&quot;&gt;
-                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Setup&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Supported Clients&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Sharing&lt;/a&gt;&lt;/li&gt;
-                    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-
-            &lt;li role=&quot;presentation&quot;&gt;&lt;a aria-controls=&quot;applications&quot; data-toggle=&quot;tab&quot; href=&quot;#applications04&quot; role=&quot;tab&quot;&gt;Applications&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-
-    &lt;ul class=&quot;dropdown-menu&quot; id=&quot;navTabsScrollDropdown01&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Setup&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Supported Clients&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Permissions&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Sharing&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;div class=&quot;tab-content&quot;&gt;
-        &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane active fade in&quot; id=&quot;fields04&quot;&gt;
-            &lt;p style=&quot;padding: 10px;&quot;&gt;Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;settings04&quot;&gt;
-            &lt;p style=&quot;padding: 10px;&quot;&gt;Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;forms04&quot;&gt;
-            &lt;p style=&quot;padding: 10px;&quot;&gt;Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;applications04&quot;&gt;
-            &lt;p style=&quot;padding: 10px;&quot;&gt;Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-    $(&apos;.nav-tabs-scroll&apos;).navTabsScrollDropdown();
-&lt;/script&gt;</code></pre>
-</div>
-
 <div class="row row-spacing">
 	<div class="col-md-12">
 		<h3 id="nav-tabs"><a class="heading-anchor" href="#nav-tabs"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Tabs</h3>
 
 		<ul class="nav nav-tabs" role="tablist">
-			<li class="active" role="presentation"><a aria-controls="fields" href="#fields" data-toggle="tab" role="tab">Fields</a></li>
-			<li role="presentation"><a aria-controls="settings" href="#settings" data-toggle="tab" role="tab">Settings</a></li>
-			<li class="disabled" role="presentation"><a href="#documents">Documents</a></li>
-			<li class="dropdown" role="presentation">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#configuration">Configuration <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#1">Setup</a></li>
-					<li><a href="#1">Supported Clients</a></li>
-					<li><a href="#1">Permissions</a></li>
-					<li><a href="#1">Sharing</a></li>
-					<li class="divider"></li>
-					<li><a href="#1">Scope</a></li>
-				</ul>
+			<li class="nav-item" role="presentation">
+				<a aria-controls="fields" class="active nav-link" data-toggle="tab" href="#fields" role="tab">Fields</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a aria-controls="settings" class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a class="disabled nav-link" href="#documents">Documents</a>
+			</li>
+			<li class="dropdown nav-item" role="presentation">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#configuration">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
 			</li>
 		</ul>
 
 		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active fade in" id="fields">
+			<div class="active fade show tab-pane" id="fields" role="tabpanel">
 				<p style="padding: 10px;">Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.</p>
 			</div>
-			<div role="tabpanel" class="tab-pane fade" id="settings">
+			<div class="fade tab-pane" id="settings" role="tabpanel">
 				<p style="padding: 10px;">Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.</p>
 			</div>
 		</div>
@@ -390,27 +353,38 @@
 		</blockquote>
 
 		<ul class="nav nav-tabs nav-tabs-default" role="tablist">
-			<li class="active" role="presentation"><a aria-controls="fields" href="#fields01" data-toggle="tab" role="tab">Fields</a></li>
-			<li role="presentation"><a aria-controls="settings" href="#settings01" data-toggle="tab" role="tab">Settings</a></li>
-			<li class="disabled" role="presentation"><a href="#documents">Documents</a></li>
-			<li class="dropdown" role="presentation">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#configuration">Configuration <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#1">Setup</a></li>
-					<li><a href="#1">Supported Clients</a></li>
-					<li><a href="#1">Permissions</a></li>
-					<li><a href="#1">Sharing</a></li>
-					<li class="divider"></li>
-					<li><a href="#1">Scope</a></li>
-				</ul>
+			<li class="nav-item" role="presentation">
+				<a aria-controls="fields" class="active nav-link" data-toggle="tab" href="#fields01" role="tab">Fields</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a aria-controls="settings" class="nav-link" data-toggle="tab" href="#settings01" role="tab">Settings</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a class="disabled nav-link" href="#documents">Documents</a>
+			</li>
+			<li class="dropdown nav-item" role="presentation">
+				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#configuration">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
 			</li>
 		</ul>
 
 		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active fade in" id="fields01">
+			<div class="active fade show tab-pane" id="fields01" role="tabpanel">
 				<p style="padding: 10px;">Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.</p>
 			</div>
-			<div role="tabpanel" class="tab-pane fade" id="settings01">
+			<div class="fade tab-pane" id="settings01" role="tabpanel">
 				<p style="padding: 10px;">Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.</p>
 			</div>
 		</div>
@@ -422,27 +396,38 @@
 		<h3 id="nav-tabs-justified"><a class="heading-anchor" href="#nav-tabs-justified"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Tabs Justified</h3>
 
 		<ul class="nav nav-tabs nav-justified" role="tablist">
-			<li class="active" role="presentation"><a aria-controls="fields" href="#fields02" data-toggle="tab" role="tab">Fields</a></li>
-			<li role="presentation"><a aria-controls="settings" href="#settings02" data-toggle="tab" role="tab">Settings</a></li>
-			<li class="disabled" role="presentation"><a href="#documents">Documents</a></li>
-			<li class="dropdown" role="presentation">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#configuration">Configuration <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#1">Setup</a></li>
-					<li><a href="#1">Supported Clients</a></li>
-					<li><a href="#1">Permissions</a></li>
-					<li><a href="#1">Sharing</a></li>
-					<li class="divider"></li>
-					<li><a href="#1">Scope</a></li>
-				</ul>
+			<li class="nav-item" role="presentation">
+				<a aria-controls="fields" class="active nav-link" data-toggle="tab" href="#fields02" role="tab">Fields</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a aria-controls="settings" class="nav-link" data-toggle="tab" href="#settings02" role="tab">Settings</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a class="disabled nav-link" href="#documents">Documents</a>
+			</li>
+			<li class="dropdown nav-item" role="presentation">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#configuration">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
 			</li>
 		</ul>
 
 		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active fade in" id="fields02">
+			<div class="active fade show tab-pane" id="fields02" role="tabpanel">
 				<p style="padding: 10px;">Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.</p>
 			</div>
-			<div role="tabpanel" class="tab-pane fade" id="settings02">
+			<div class="fade tab-pane" id="settings02" role="tabpanel">
 				<p style="padding: 10px;">Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.</p>
 			</div>
 		</div>
@@ -458,43 +443,41 @@
 		</blockquote>
 
 		<ul class="nav nav-tabs" role="tablist">
-			<li class="active col-xs-3" role="presentation"><a aria-controls="fields" href="#fields03" data-toggle="tab" role="tab">Fields</a></li>
-			<li class="col-xs-3" role="presentation"><a aria-controls="settings" href="#settings03" data-toggle="tab" role="tab">Settings</a></li>
-			<li class="disabled col-xs-3" role="presentation"><a href="#documents">Documents</a></li>
-			<li class="dropdown col-xs-3" role="presentation">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#configuration">Configuration <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#1">Setup</a></li>
-					<li><a href="#1">Supported Clients</a></li>
-					<li><a href="#1">Permissions</a></li>
-					<li><a href="#1">Sharing</a></li>
-					<li class="divider"></li>
-					<li><a href="#1">Scope</a></li>
-				</ul>
+			<li class="col-3 nav-item" role="presentation">
+				<a aria-controls="fields" class="active nav-link" data-toggle="tab" href="#fields03" role="tab">Fields</a>
+			</li>
+			<li class="col-3 nav-item" role="presentation">
+				<a aria-controls="settings" class="nav-link" data-toggle="tab" href="#settings03" role="tab">Settings</a>
+			</li>
+			<li class="col-3 nav-item" role="presentation">
+				<a class="disabled nav-link" href="#documents">Documents</a>
+			</li>
+			<li class="col-3 dropdown nav-item" role="presentation">
+				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#configuration">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
 			</li>
 		</ul>
 
 		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active fade in" id="fields03">
+			<div class="active fade show tab-pane" id="fields03" role="tabpanel">
 				<p style="padding: 10px;">Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.</p>
 			</div>
-			<div role="tabpanel" class="tab-pane fade" id="settings03">
+			<div class="fade tab-pane" id="settings03" role="tabpanel">
 				<p style="padding: 10px;">Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.</p>
 			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse01"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse01">
-	<pre><code class="html">&lt;ul class=&quot;nav nav-tabs&quot;&gt;
-    &lt;li class=&quot;col-xs-3&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;col-xs-3&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;col-xs-3&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;col-xs-3&quot;&gt;...&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 	</div>

@@ -62,12 +62,12 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
@@ -121,7 +121,7 @@
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -131,7 +131,7 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
 <li class="active"><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
@@ -141,8 +141,6 @@
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
@@ -161,7 +159,7 @@
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -175,7 +173,7 @@
 </li>
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
@@ -185,7 +183,7 @@
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -199,7 +197,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -220,52 +218,36 @@
 		</h1>
 
 		
-<div class="row uxgl-breadcrumbs">
+<div class="lx-site-row-spacer row">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.</p>
 		</blockquote>
 
-		<ul class="breadcrumb">
-			<li>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
 				<a href="#" title="Home">Home</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Components">Components</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Page">Page</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
 			</li>
-			<li class="active">
+			<li class="active breadcrumb-item">
 				<span title="Active">Active</span>
 			</li>
-		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">&lt;ul class=&quot;breadcrumb&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Components&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Breadcrumbs and Paginations&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Page&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;active&quot;&gt;
-        &lt;span&gt;Active&lt;/span&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
+		</ol>
 	</div>
 </div>
 
-<div class="row uxgl-breadcrumbs">
+<div class="lx-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="horizontal-breadcrumbs"><a class="heading-anchor" href="#horizontal-breadcrumbs"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Horizontal Breadcrumbs</h3>
 
@@ -273,30 +255,30 @@
 			<p>Add class <code>breadcrumb-horizontal</code> to breadcrumb to style breadcrumbs horizontally. This skin has the option to use svg icons.</p>
 		</blockquote>
 
-		<ul class="breadcrumb breadcrumb-horizontal">
-			<li>
+		<ol class="breadcrumb breadcrumb-horizontal">
+			<li class="breadcrumb-item">
 				<a href="#" title="Home">Home</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Components">Components</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Page">Page</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
 			</li>
-			<li class="active">
+			<li class="active breadcrumb-item">
 				<span title="Active">Active</span>
 			</li>
-		</ul>
+		</ol>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="lx-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="vertical-breadcrumbs"><a class="heading-anchor" href="#vertical-breadcrumbs"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Breadcrumbs</h3>
 
@@ -304,26 +286,26 @@
 			<p>Add class <code>breadcrumb-vertical</code> to breadcrumb to stack it vertically.</p>
 		</blockquote>
 
-		<ul class="breadcrumb breadcrumb-vertical">
-			<li>
+		<ol class="breadcrumb breadcrumb-vertical">
+			<li class="breadcrumb-item">
 				<a href="#" title="Home">Home</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Components">Components</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#" title="Page">Page</a>
 			</li>
-			<li>
+			<li class="breadcrumb-item">
 				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
 			</li>
-			<li class="active">
+			<li class="active breadcrumb-item">
 				<span>Active</span>
 			</li>
-		</ul>
+		</ol>
 	</div>
 </div>
 	</div>

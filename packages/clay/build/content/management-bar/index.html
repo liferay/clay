@@ -62,12 +62,12 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
@@ -121,7 +121,7 @@
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -131,7 +131,7 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
@@ -141,8 +141,6 @@
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
@@ -161,7 +159,7 @@
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -175,7 +173,7 @@
 </li>
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
@@ -185,7 +183,7 @@
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -199,7 +197,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -226,7 +224,7 @@
 	}
 </style>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="management-bar"><a class="heading-anchor" href="#management-bar"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Management Bar</h3>
 
@@ -236,9 +234,9 @@
 
 		<div class="management-bar">
 			<div class="management-bar-header">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" value="">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="checkbox" value="">
 					</label>
 				</div>
 
@@ -252,94 +250,92 @@
 
 			<div class="collapse management-bar-collapse" id="mgmtBarCollapse00">
 				<ul class="nav management-bar-nav">
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+					<li class="dropdown nav-item">
+						<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 							<span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
 							<svg class="lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 							</svg>
 						</a>
-						<ul class="dropdown-menu">
-							<li>
-								<form>
-									<div class="form-group">
-										<select class="form-control">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="exampleInputEmail3">Email address</label>
-										<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-									</div>
-									<div class="checkbox checkbox-default active">
-										<label>
-											<input checked type="checkbox" value=""> Approved
-										</label>
-									</div>
-									<div class="checkbox checkbox-default active">
-										<label>
-											<input checked type="checkbox" value=""> Draft
-										</label>
-									</div>
-									<div class="checkbox checkbox-default active">
-										<label>
-											<input checked type="checkbox" value=""> Pending
-										</label>
-									</div>
-									<div class="checkbox checkbox-default active">
-										<label>
-											<input checked type="checkbox" value=""> Expired
-										</label>
-									</div>
-									<div class="checkbox checkbox-default">
-										<label>
-											<input type="checkbox" value=""> Scheduled
-										</label>
-									</div>
-									<div class="checkbox checkbox-default">
-										<label>
-											<input type="checkbox" value=""> Rejected
-										</label>
-									</div>
-								</form>
-							</li>
-							<li><a href="#1">Something Outside</a></li>
-						</ul>
+						<div class="dropdown-menu">
+							<form>
+								<div class="dropdown-item">
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="dropdown-item">
+									<label for="exampleInputEmail3">Email address</label>
+									<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+								</div>
+								<div class="active dropdown-item form-check">
+									<label class="form-check-label">
+										<input checked class="form-check-input" type="checkbox" value=""> Approved
+									</label>
+								</div>
+								<div class="active dropdown-item form-check">
+									<label class="form-check-label">
+										<input checked class="form-check-input" type="checkbox" value=""> Draft
+									</label>
+								</div>
+								<div class="active dropdown-item form-check">
+									<label class="form-check-label">
+										<input checked class="form-check-input" type="checkbox" value=""> Pending
+									</label>
+								</div>
+								<div class="active dropdown-item form-check">
+									<label class="form-check-label">
+										<input checked class="form-check-input" type="checkbox" value=""> Expired
+									</label>
+								</div>
+								<div class="dropdown-item form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" value=""> Scheduled
+									</label>
+								</div>
+								<div class="dropdown-item form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" value=""> Rejected
+									</label>
+								</div>
+							</form>
+							<a class="dropdown-item" href="#1">Something Outside</a>
+						</div>
 					</li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+					<li class="dropdown nav-item">
+						<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 							<span class="management-bar-item-title">Recent</span>
 							<svg class="lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 							</svg>
 						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">All</a></li>
-							<li class="active"><a href="#1">Recent</a></li>
-							<li><a href="#1">Mine</a></li>
-						</ul>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#1">All</a>
+							<a class="active dropdown-item" href="#1">Recent</a>
+							<a class="dropdown-item" href="#1">Mine</a>
+						</div>
 					</li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+					<li class="dropdown nav-item">
+						<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 							<span class="management-bar-item-title">Order By: Modified Date</span>
 							<svg class="lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 							</svg>
 						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">Name</a></li>
-							<li><a href="#1">Create Date</a></li>
-							<li class="active"><a href="#1">Modified Date</a></li>
-							<li><a href="#1">Downloads</a></li>
-							<li><a href="#1">Size</a></li>
-						</ul>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Name</a>
+							<a class="dropdown-item" href="#1">Create Date</a>
+							<a class="active dropdown-item" href="#1">Modified Date</a>
+							<a class="dropdown-item" href="#1">Downloads</a>
+							<a class="dropdown-item" href="#1">Size</a>
+						</div>
 					</li>
-					<li class="disabled">
-						<a href="#">Link <span class="sr-only">(current)</span></a>
+					<li class="disabled nav-item">
+						<a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a>
 					</li>
 				</ul>
 			</div>
@@ -375,9 +371,9 @@
 
 		<div class="management-bar management-bar-default">
 			<div class="management-bar-header">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" value="">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="checkbox" value="">
 					</label>
 				</div>
 
@@ -391,104 +387,102 @@
 
 			<div class="collapse management-bar-collapse" id="mgmtBarCollapse0">
 				<ul class="nav management-bar-nav">
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+					<li class="dropdown nav-item">
+						<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 							<span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
 							<svg class="lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 							</svg>
 						</a>
-						<ul class="dropdown-menu">
-							<li>
-								<form>
-									<div class="form-group">
-										<select class="form-control">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="exampleInputEmail3">Email address</label>
-										<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-									</div>
-									<div class="checkbox checkbox-default active">
-										<label>
-											<input checked type="checkbox" value=""> Approved
-										</label>
-									</div>
-									<div class="checkbox checkbox-default active">
-										<label>
-											<input checked type="checkbox" value=""> Draft
-										</label>
-									</div>
-									<div class="checkbox checkbox-default active">
-										<label>
-											<input checked type="checkbox" value=""> Pending
-										</label>
-									</div>
-									<div class="checkbox checkbox-default active">
-										<label>
-											<input checked type="checkbox" value=""> Expired
-										</label>
-									</div>
-									<div class="checkbox checkbox-default">
-										<label>
-											<input type="checkbox" value=""> Scheduled
-										</label>
-									</div>
-									<div class="checkbox checkbox-default">
-										<label>
-											<input type="checkbox" value=""> Rejected
-										</label>
-									</div>
-								</form>
-							</li>
-							<li><a href="#1">Something Outside</a></li>
-						</ul>
+						<div class="dropdown-menu">
+							<form>
+								<div class="dropdown-item">
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="dropdown-item">
+									<label for="exampleInputEmail3">Email address</label>
+									<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+								</div>
+								<div class="active dropdown-item form-check">
+									<label class="form-check-label">
+										<input checked class="form-check-input" type="checkbox" value=""> Approved
+									</label>
+								</div>
+								<div class="active dropdown-item form-check">
+									<label class="form-check-label">
+										<input checked class="form-check-input" type="checkbox" value=""> Draft
+									</label>
+								</div>
+								<div class="active dropdown-item form-check">
+									<label class="form-check-label">
+										<input checked class="form-check-input" type="checkbox" value=""> Pending
+									</label>
+								</div>
+								<div class="active dropdown-item form-check">
+									<label class="form-check-label">
+										<input checked class="form-check-input" type="checkbox" value=""> Expired
+									</label>
+								</div>
+								<div class="dropdown-item form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" value=""> Scheduled
+									</label>
+								</div>
+								<div class="dropdown-item form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" value=""> Rejected
+									</label>
+								</div>
+							</form>
+						<a class="dropdown-item" href="#1">Something Outside</a>
+						</div>
 					</li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+					<li class="dropdown nav-item">
+						<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 							<span class="management-bar-item-title">Recent</span>
 							<svg class="lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 							</svg>
 						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">All</a></li>
-							<li class="active"><a href="#1">Recent</a></li>
-							<li><a href="#1">Mine</a></li>
-						</ul>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#1">All</a>
+							<a class="active dropdown-item" href="#1">Recent</a>
+							<a class="dropdown-item" href="#1">Mine</a>
+						</div>
 					</li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+					<li class="dropdown nav-item">
+						<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 							<span class="management-bar-item-title">Order By: Modified Date</span>
 							<svg class="lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#caret-double-l">
 							</svg>
 						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">Name</a></li>
-							<li><a href="#1">Create Date</a></li>
-							<li class="active"><a href="#1">Modified Date</a></li>
-							<li><a href="#1">Downloads</a></li>
-							<li><a href="#1">Size</a></li>
-						</ul>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Name</a>
+							<a class="dropdown-item" href="#1">Create Date</a>
+							<a class="active dropdown-item" href="#1">Modified Date</a>
+							<a class="dropdown-item" href="#1">Downloads</a>
+							<a class="dropdown-item" href="#1">Size</a>
+						</div>
 					</li>
-					<li class="disabled">
-						<a href="#">Link <span class="sr-only">(current)</span></a>
+					<li class="nav-item">
+						<a class="disabled nav-link" href="#">Link <span class="sr-only">(current)</span></a>
 					</li>
-					<li>
-						<a class="btn btn-default hidden-xs" href="#1">
+					<li class="nav-item">
+						<a class="btn btn-default hidden-xs nav-link" href="#1">
 							<span class="icon-monospaced">
 								<span class="icon-caret-up"></span>
 							</span>
 						</a>
 					</li>
-					<li>
-						<a class="btn btn-default hidden-xs" href="#1">
+					<li class="nav-item">
+						<a class="btn btn-default hidden-xs nav-link" href="#1">
 							<span class="icon-monospaced">
 								<span class="icon-caret-down"></span>
 							</span>
@@ -639,42 +633,42 @@
 
 		<div class="management-bar management-bar-default management-bar-no-collapse">
 			<ul class="nav management-bar-nav">
-				<li>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" value="">
+				<li class="nav-item">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
 						</label>
 					</div>
 				</li>
-				<li>
+				<li class="nav-item">
 					<span class="management-bar-text">4 items selected</span>
 				</li>
-				<li class="disabled">
-					<a href="#">Link <span class="sr-only">(current)</span></a>
+				<li class="nav-item">
+					<a class="disabled nav-link" href="#">Link <span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
 
 			<ul class="nav management-bar-nav management-bar-nav-right">
-				<li>
+				<li class="nav-item">
 					<a class="btn btn-default" href="#">
 						<svg class="icon-monospaced lexicon-icon">
 							<use xlink:href="../../images/icons/icons.svg#trash">
 						</svg>
 					</a>
 				</li>
-				<li class="dropdown">
+				<li class="dropdown nav-item">
 					<a aria-expanded="false" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button">
 						<svg class="icon-monospaced lexicon-icon">
 							<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 						</svg>
 					</a>
-					<ul class="dropdown-menu dropdown-menu-right" role="menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
+					<div class="dropdown-menu dropdown-menu-right" role="menu">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Separated link</a>
+					</div>
 				</li>
 			</ul>
 		</div>

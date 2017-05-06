@@ -62,12 +62,12 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
@@ -121,7 +121,7 @@
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -131,7 +131,7 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
@@ -141,8 +141,6 @@
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
@@ -161,7 +159,7 @@
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -175,7 +173,7 @@
 </li>
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
@@ -185,7 +183,7 @@
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -199,7 +197,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -231,7 +229,7 @@
 		<div class="form-group">
 			<label>
 				Default text input
-				<span class="reference-mark text-warning">
+				<span class="reference-mark">
 					<svg class="lexicon-icon">
 						<use xlink:href="../../images/icons/icons.svg#asterisk">
 					</svg>
@@ -257,7 +255,7 @@
 	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
     &lt;label&gt;
         Default text input
-        &lt;span class=&quot;reference-mark text-warning&quot;&gt;
+        &lt;span class=&quot;reference-mark&quot;&gt;
             &lt;svg class=&quot;lexicon-icon&quot;&gt;
                 &lt;use xlink:href=&quot;../../images/icons/icons.svg#asterisk&quot; /&gt;
             &lt;/svg&gt;
@@ -282,7 +280,7 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="checkboxes-and-radios-no-extra-mark-up"><a class="heading-anchor" href="#checkboxes-and-radios-no-extra-mark-up"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Checkboxes and Radios (no extra mark up)</h3>
+		<h3 id="checkboxes-and-radios"><a class="heading-anchor" href="#checkboxes-and-radios"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Checkboxes and Radios</h3>
 	</div>
 
 	<div class="col-md-6">
@@ -291,35 +289,35 @@
 <!-- Checkboxes unable to be styled in Firefox with this method. See https://bugzilla.mozilla.org/show_bug.cgi?id=605985
 Checkboxes unable to be styled in IE with this method. -->
 
-		<div class="checkbox">
-			<label>
-				<input type="checkbox" value="">
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" value="">
 			</label>
 		</div>
-		<div class="checkbox">
-			<label>
-				<input type="checkbox" value="">
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" value="">
 				Label
 			</label>
 		</div>
-		<div class="checkbox disabled">
-			<label>
-				<input checked disabled type="checkbox" value="">
+		<div class="form-check disabled">
+			<label class="form-check-label">
+				<input checked class="form-check-input" disabled type="checkbox" value="">
 				Disabled Check Box
 			</label>
 		</div>
 
-		<div class="checkbox">
-			<label class="checkbox-inline">
-				<input id="inlineCheckbox1" type="checkbox" value="option1">
+		<div class="form-check">
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
 				1
 			</label>
-			<label class="checkbox-inline">
-				<input id="inlineCheckbox2" type="checkbox" value="option2">
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
 				2
 			</label>
-			<label class="checkbox-inline">
-				<input id="inlineCheckbox3" type="checkbox" value="option3">
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
 				3
 			</label>
 		</div>
@@ -328,35 +326,35 @@ Checkboxes unable to be styled in IE with this method. -->
 	<div class="col-md-6">
 		<h5>Radio Buttons</h5>
 
-		<div class="radio">
-			<label>
-				<input type="radio" value="">
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="radio" value="">
 			</label>
 		</div>
 
-		<div class="radio">
-			<label>
-				<input type="radio" value="">
+		<div class="form-check">
+			<label class="form-check-label">
+				<input class="form-check-input" type="radio" value="">
 				Label
 			</label>
 		</div>
 
-		<div class="disabled radio">
-			<label>
-				<input disabled type="radio">
+		<div class="form-check disabled">
+			<label class="form-check-label">
+				<input class="form-check-input" disabled type="radio">
 				Disabled Radio Button
 			</label>
 		</div>
 
-		<div class="radio">
-			<label class="radio-inline">
-				<input id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
+		<div class="form-check">
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
 			</label>
-			<label class="radio-inline">
-				<input id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
 			</label>
-			<label class="radio-inline">
-				<input id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
+			<label class="form-check-label form-check-inline">
+				<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
 			</label>
 		</div>
 	</div>
@@ -366,16 +364,16 @@ Checkboxes unable to be styled in IE with this method. -->
 	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse3">
-  <pre><code class="html">&lt;div class=&quot;checkbox&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+  <pre><code class="html">&lt;div class=&quot;form-check&quot;&gt;
+    &lt;label class=&quot;form-check-label&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot;&gt;
         Label with class checkbox
     &lt;/label&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;radio&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;radio&quot;&gt;
+&lt;div class=&quot;form-check&quot;&gt;
+    &lt;label class=&quot;form-check-label&quot;&gt;
+        &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot;&gt;
         Regular Radio Button
     &lt;/label&gt;
 &lt;/div&gt;</code></pre>
@@ -561,18 +559,16 @@ Checkboxes unable to be styled in IE with this method. -->
 					</select>
 				</div>
 
-				<div class="checkbox">
-					<label>
-						<input checked type="checkbox" value="">
-						<span class="skin"></span>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input checked class="form-check-input" type="checkbox" value="">
 						Disabled Checkbox
 					</label>
 				</div>
 
-				<div class="radio">
-					<label>
-						<input type="radio" value="">
-						<span class="skin"></span>
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="radio" value="">
 						Disabled Radio
 					</label>
 				</div>
@@ -599,18 +595,16 @@ Checkboxes unable to be styled in IE with this method. -->
             &lt;/select&gt;
         &lt;/div&gt;
 
-        &lt;div class=&quot;checkbox&quot;&gt;
-            &lt;label&gt;
-                &lt;input checked type=&quot;checkbox&quot; value=&quot;&quot;&gt;
-                &lt;span class=&quot;skin&quot;&gt;&lt;/span&gt;
+        &lt;div class=&quot;form-check&quot;&gt;
+            &lt;label class=&quot;form-check-label&quot;&gt;
+                &lt;input checked class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot;&gt;
                 Disabled Checkbox
             &lt;/label&gt;
         &lt;/div&gt;
 
-        &lt;div class=&quot;radio&quot;&gt;
-            &lt;label&gt;
-                &lt;input type=&quot;radio&quot; value=&quot;&quot;&gt;
-                &lt;span class=&quot;skin&quot;&gt;&lt;/span&gt;
+        &lt;div class=&quot;form-check&quot;&gt;
+            &lt;label class=&quot;form-check-label&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;radio&quot; value=&quot;&quot;&gt;
                 Disabled Radio
             &lt;/label&gt;
         &lt;/div&gt;
@@ -661,7 +655,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="form-group">
 			<label>Small text input</label>
-			<input class="form-control input-sm" placeholder="Placeholder" type="text">
+			<input class="form-control form-control-sm" placeholder="Placeholder" type="text">
 		</div>
 
 		<div class="form-group">
@@ -671,7 +665,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 		<div class="form-group">
 			<label>Large text input</label>
-			<input class="form-control input-lg" placeholder="Placeholder" type="text">
+			<input class="form-control form-control-lg" placeholder="Placeholder" type="text">
 		</div>
 
 <div class="uxgl-toggle-code">
@@ -680,7 +674,7 @@ Checkboxes unable to be styled in IE with this method. -->
 <div class="collapse" id="codeCollapse9">
 	<pre><code class="html">&lt;div class=&quot;form-group&quot;&gt;
     &lt;label&gt;Small text input&lt;/label&gt;
-    &lt;input class=&quot;form-control input-sm&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
+    &lt;input class=&quot;form-control form-control-sm&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;form-group&quot;&gt;
@@ -690,7 +684,7 @@ Checkboxes unable to be styled in IE with this method. -->
 
 &lt;div class=&quot;form-group&quot;&gt;
     &lt;label&gt;Large text input&lt;/label&gt;
-    &lt;input class=&quot;form-control input-lg&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
+    &lt;input class=&quot;form-control form-control-lg&quot; placeholder=&quot;Placeholder&quot; type=&quot;text&quot;&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
