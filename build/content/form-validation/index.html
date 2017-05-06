@@ -62,12 +62,12 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
@@ -121,7 +121,7 @@
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -131,7 +131,7 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
@@ -141,8 +141,6 @@
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
@@ -161,7 +159,7 @@
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -175,7 +173,7 @@
 </li>
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
@@ -185,7 +183,7 @@
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -199,7 +197,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -225,35 +223,44 @@
 		<h3 id="input-validation-states"><a class="heading-anchor" href="#input-validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Input Validation States</h3>
 
 		<div class="form-group has-success">
-			<label class="control-label" for="inputSuccess1">
+			<label class="form-control-label" for="inputSuccess1">
 				Input with success
-				<svg class="lexicon-icon lexicon-icon-asterisk reference-mark text-warning">
+				<svg class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="../../images/icons/icons.svg#asterisk">
 				</svg>
 			</label>
 			<input class="form-control" id="successInput1" type="text">
-			<div class="help-block">This input is a success!</div>
+			<div class="form-control-feedback">This input is a success!</div>
 		</div>
 
 		<div class="form-group has-warning">
-			<label class="control-label" for="inputWarning1">
+			<label class="form-control-label" for="inputWarning1">
 				Input with warning
 
-				<span class="icon-asterisk reference-mark text-warning"></span>
+				<span class="icon-asterisk reference-mark"></span>
 			</label>
 			<input class="form-control" id="inputWarning1" type="text">
-			<div class="help-block">Warning this input is a warning!</div>
+			<div class="form-control-feedback">
+				<svg class="lexicon-icon lexicon-icon-check-circle">
+					<use xlink:href="../../images/icons/icons.svg#check-circle">
+				</svg>
+				Warning this input is a warning!
+			</div>
+			<div class="form-text">
+				Use an uppercase letter and a number
+			</div>
 		</div>
 
-		<div class="form-group has-error">
-			<label class="control-label" for="inputError1">
+		<div class="form-group has-danger">
+			<label class="form-control-label" for="inputError1">
 				Input with error
-				<span class="reference-mark text-warning">
+				<span class="reference-mark">
 					<span class="glyphicon glyphicon-asterisk"></span>
 				</span>
 			</label>
 			<input class="form-control" id="inputError1" type="text">
-			<div class="help-block">This input is invalid!</div>
+			<div class="form-control-feedback">This input is invalid!</div>
+			<div class="form-text">Use an uppercase letter and a number</div>
 		</div>
 	</div>
 </div>
@@ -265,27 +272,27 @@
 
 	<div class="col-md-6">
 		<div class="has-success">
-			<div class="checkbox">
-				<label>
-					<input id="checkboxSuccess1" type="checkbox" value="option1">
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" id="checkboxSuccess1" type="checkbox" value="option1">
 					Checkbox with success
 				</label>
 			</div>
 		</div>
 
 		<div class="has-warning">
-			<div class="checkbox">
-				<label>
-					<input id="checkboxWarning1" type="checkbox" value="option2">
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" id="checkboxWarning1" type="checkbox" value="option2">
 					Checkbox with warning
 				</label>
 			</div>
 		</div>
 
-		<div class="has-error">
-			<div class="checkbox">
-				<label>
-					<input id="checkboxError1" type="checkbox" value="option3">
+		<div class="has-danger">
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" id="checkboxError1" type="checkbox" value="option3">
 					Checkbox with error
 				</label>
 			</div>
@@ -294,27 +301,27 @@
 
 	<div class="col-md-6">
 		<div class="has-success">
-			<div class="radio">
-				<label>
-					<input id="radioSuccess1" type="radio" value="option1">
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" id="radioSuccess1" type="radio" value="option1">
 					Radio with success
 				</label>
 			</div>
 		</div>
 
 		<div class="has-warning">
-			<div class="radio">
-				<label>
-					<input id="radioWarning1" type="radio" value="option2">
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" id="radioWarning1" type="radio" value="option2">
 					Radio with warning
 				</label>
 			</div>
 		</div>
 
-		<div class="has-error">
-			<div class="radio">
-				<label>
-					<input id="radioError1" type="radio" value="option3">
+		<div class="has-danger">
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" id="radioError1" type="radio" value="option3">
 					Radio with error
 				</label>
 			</div>
@@ -328,7 +335,7 @@
 
 		<div class="has-success">
 			<div class="form-group">
-				<label class="control-label">Select Box with Success</label>
+				<label class="form-control-label">Select Box with Success</label>
 				<select class="form-control">
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -340,7 +347,7 @@
 
 		<div class="has-warning">
 			<div class="form-group">
-				<label class="control-label">Select Box with Warning</label>
+				<label class="form-control-label">Select Box with Warning</label>
 				<select class="form-control">
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -350,9 +357,9 @@
 			</div>
 		</div>
 
-		<div class="has-error">
+		<div class="has-danger">
 			<div class="form-group">
-				<label class="control-label">Select Box with Error</label>
+				<label class="form-control-label">Select Box with Error</label>
 				<select class="form-control">
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -370,7 +377,7 @@
 
 		<div class="has-success">
 			<div class="form-group">
-				<label class="control-label">Multiple Select Box with Success</label>
+				<label class="form-control-label">Multiple Select Box with Success</label>
 				<select class="form-control" multiple>
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -382,7 +389,7 @@
 
 		<div class="has-warning">
 			<div class="form-group">
-				<label class="control-label">Multiple Select Box with Warning</label>
+				<label class="form-control-label">Multiple Select Box with Warning</label>
 				<select class="form-control" multiple>
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -392,9 +399,9 @@
 			</div>
 		</div>
 
-		<div class="has-error">
+		<div class="has-danger">
 			<div class="form-group">
-				<label class="control-label">Multiple Select Box with Error</label>
+				<label class="form-control-label">Multiple Select Box with Error</label>
 				<select class="form-control" multiple>
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -412,42 +419,42 @@
 
 		<div class="has-success">
 			<div class="form-group">
-				<label class="control-label">Text Input (Read Only) with Success</label>
+				<label class="form-control-label">Text Input (Read Only) with Success</label>
 				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 			</div>
 		</div>
 
 		<div class="has-warning">
 			<div class="form-group">
-				<label class="control-label">Text Input (Read Only) with Warning</label>
+				<label class="form-control-label">Text Input (Read Only) with Warning</label>
 				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 			</div>
 		</div>
 
-		<div class="has-error">
+		<div class="has-danger">
 			<div class="form-group">
-				<label class="control-label">Text Input (Read Only) with Error</label>
+				<label class="form-control-label">Text Input (Read Only) with Error</label>
 				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 			</div>
 		</div>
 
 		<div class="has-success">
 			<div class="form-group">
-				<label class="control-label">Textarea (Read Only) with Success</label>
+				<label class="form-control-label">Textarea (Read Only) with Success</label>
 				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 			</div>
 		</div>
 
 		<div class="has-warning">
 			<div class="form-group">
-				<label class="control-label">Textarea (Read Only) with Warning</label>
+				<label class="form-control-label">Textarea (Read Only) with Warning</label>
 				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 			</div>
 		</div>
 
-		<div class="has-error">
+		<div class="has-danger">
 			<div class="form-group">
-				<label class="control-label">Textarea (Read Only) with Error</label>
+				<label class="form-control-label">Textarea (Read Only) with Error</label>
 				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 			</div>
 		</div>
@@ -458,57 +465,33 @@
 	<div class="col-md-12">
 		<h3 id="inputs-with-feedback-icons"><a class="heading-anchor" href="#inputs-with-feedback-icons"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Inputs with Feedback Icons</h3>
 
-		<div class="form-group has-feedback">
-			<label class="control-label" for="inputSuccess2">Label
-				<svg class="lexicon-icon reference-mark text-warning">
+		<div class="form-group">
+			<label class="form-control-label" for="inputSuccess2">Label
+				<svg class="lexicon-icon reference-mark">
 					<use xlink:href="../../images/icons/icons.svg#asterisk">
 				</svg>
 			</label>
 			<input aria-describedby="inputSuccess2Status" class="form-control" id="inputSuccess2" type="text">
-			<span aria-hidden="true" class="form-control-feedback">
-				<svg class="lexicon-icon lexicon-icon-asterisk">
-					<use xlink:href="../../images/icons/icons.svg#asterisk">
-				</svg>
-			</span>
-			<span class="sr-only" id="inputSuccess2Status">(success)</span>
 		</div>
 
-		<div class="form-group has-feedback has-success">
-			<label class="control-label" for="inputSuccess2">
+		<div class="form-group has-success">
+			<label class="form-control-label" for="inputSuccess2">
 				Success Label
-				<svg class="lexicon-icon lexicon-icon-asterisk reference-mark text-warning">
+				<svg class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="../../images/icons/icons.svg#asterisk">
 				</svg>
 			</label>
-			<input aria-describedby="inputSuccess2Status" class="form-control" id="inputSuccess2" type="text">
-			<span aria-hidden="true" class="form-control-feedback">
-				<svg class="lexicon-icon lexicon-icon-check">
-					<use xlink:href="../../images/icons/icons.svg#check">
-				</svg>
-			</span>
-			<span class="sr-only" id="inputSuccess2Status">(success)</span>
+			<input aria-describedby="inputSuccess2Status" class="form-control form-control-success" id="inputSuccess2" type="text">
 		</div>
 
-		<div class="form-group has-feedback has-warning">
-			<label class="control-label" for="inputWarning2">Warning Label</label>
-			<input aria-describedby="inputWarning2Status" class="form-control" id="inputWarning2" type="text">
-			<span aria-hidden="true" class="form-control-feedback">
-				<svg class="lexicon-icon lexicon-icon-exclamation-full">
-					<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-				</svg>
-			</span>
-			<span class="sr-only" id="inputWarning2Status">(warning)</span>
+		<div class="form-group has-warning">
+			<label class="form-control-label" for="inputWarning2">Warning Label</label>
+			<input aria-describedby="inputWarning2Status" class="form-control form-control-warning" id="inputWarning2" type="text">
 		</div>
 
-		<div class="form-group has-error has-feedback">
-			<label class="control-label" for="inputError2">Error Label</label>
-			<input aria-describedby="inputError2Status" class="form-control" id="inputError2" type="text">
-			<span aria-hidden="true" class="form-control-feedback">
-				<svg class="lexicon-icon lexicon-icon-times">
-					<use xlink:href="../../images/icons/icons.svg#times">
-				</svg>
-			</span>
-			<span class="sr-only" id="inputError2Status">(error)</span>
+		<div class="form-group has-danger">
+			<label class="form-control-label" for="inputError2">Error Label</label>
+			<input aria-describedby="inputError2Status" class="form-control form-control-danger" id="inputError2" type="text">
 		</div>
 
 <div class="uxgl-toggle-code">

@@ -62,12 +62,12 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
@@ -121,7 +121,7 @@
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -131,7 +131,7 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
@@ -141,8 +141,6 @@
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
@@ -161,7 +159,7 @@
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -175,7 +173,7 @@
 </li>
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
@@ -185,7 +183,7 @@
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -199,7 +197,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -258,15 +256,33 @@
 	<div class="col-md-12">
 		<h3 id="input-group-addon-constrain"><a class="heading-anchor" href="#input-group-addon-constrain"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Input Group Addon Constrain</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Make long content inside an <code>input-group-addon</code> overflow by wrapping your text with <code>&lt;span class=&quot;input-group-constrain&quot;&gt;&lt;/span&gt;</code>.</p>
-		</blockquote>
+		<form>
+			<div class="form-group">
+				<div class="input-group input-group-sm">
+					<span class="input-group-addon input-group-constrain" id="inputGroupConstrain01">
+						<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+					</span>
+					<input aria-describedby="inputGroupConstrain01" class="form-control" placeholder="Change Default URL" type="text">
+				</div>
+			</div>
+		</form>
 
 		<form>
 			<div class="form-group">
 				<div class="input-group">
-					<span class="input-group-addon" id="inputGroupConstrain01">
-						<span class="input-group-constrain">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+					<span class="input-group-addon input-group-constrain" id="inputGroupConstrain01">
+						<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
+					</span>
+					<input aria-describedby="inputGroupConstrain01" class="form-control" placeholder="Change Default URL" type="text">
+				</div>
+			</div>
+		</form>
+
+		<form>
+			<div class="form-group">
+				<div class="input-group input-group-lg">
+					<span class="input-group-addon input-group-constrain" id="inputGroupConstrain01">
+						<span class="input-group-constrain-text">https://web.liferay.com/community/forums/-/message_boards/category/72632049</span>
 					</span>
 					<input aria-describedby="inputGroupConstrain01" class="form-control" placeholder="Change Default URL" type="text">
 				</div>
@@ -326,7 +342,7 @@
 		<div class="form-group">
 			<div class="input-group">
 				<span class="input-group-btn">
-					<button class="btn btn-default" type="button">Search</button>
+					<button class="btn btn-secondary" type="button">Search</button>
 				</span>
 				<input class="form-control" placeholder="Search for..." type="text">
 			</div>
@@ -336,7 +352,7 @@
 			<div class="input-group">
 				<input class="form-control" placeholder="Search for..." type="text">
 				<span class="input-group-btn">
-					<button class="btn btn-default" type="button">Search</button>
+					<button class="btn btn-secondary" type="button">Search</button>
 				</span>
 			</div>
 		</div>
@@ -344,14 +360,19 @@
 		<div class="form-group">
 			<div class="input-group">
 				<div class="input-group-btn">
-					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action <span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider" role="separator"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+						Action
+						<svg aria-hidde="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+						</svg>
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+						<div class="divider" role="separator"></div>
+						<a class="dropdown-item" href="#">Separated link</a>
+					</div>
 				</div>
 				<input aria-label="Text input with dropdown button" class="form-control" type="text">
 			</div>
@@ -361,14 +382,19 @@
 			<div class="input-group">
 				<input aria-label="Text input with dropdown button" class="form-control" type="text">
 				<div class="input-group-btn">
-					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">Action <span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider" role="separator"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+						Action
+						<svg aria-hidde="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+						</svg>
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+						<div class="divider" role="separator"></div>
+						<a class="dropdown-item" href="#">Separated link</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -376,18 +402,19 @@
 		<div class="form-group">
 			<div class="input-group">
 				<div class="input-group-btn">
-					<button class="btn btn-default" type="button">Action</button>
-					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-						<span class="caret"></span>
-						<span class="sr-only">Toggle Dropdown</span>
+					<button class="btn btn-secondary" type="button">Action</button>
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+						<svg aria-hidde="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+						</svg>
 					</button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider" role="separator"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+						<div class="divider" role="separator"></div>
+						<a class="dropdown-item" href="#">Separated link</a>
+					</div>
 				</div>
 				<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
 			</div>
@@ -397,18 +424,19 @@
 			<div class="input-group">
 				<input aria-label="Text input with segmented button dropdown" class="form-control" type="text">
 				<div class="input-group-btn">
-					<button class="btn btn-default" type="button">Action</button>
-					<button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-						<span class="caret"></span>
-						<span class="sr-only">Toggle Dropdown</span>
+					<button class="btn btn-secondary" type="button">Action</button>
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+						<svg aria-hidde="true" class="lexicon-icon lexicon-icon-caret-bottom">
+							<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+						</svg>
 					</button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider" role="separator"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+						<div class="divider" role="separator"></div>
+						<a class="dropdown-item" href="#">Separated link</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -431,7 +459,7 @@
 					<input class="form-control" placeholder="Domain" type="text">
 					<span class="input-group-addon input-group-insert">.com</span>
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Submit</button>
+						<button class="btn btn-secondary" type="button">Submit</button>
 					</span>
 				</div>
 			</div>
@@ -483,11 +511,11 @@
 			<div class="form-group">
 				<label for="defaultLogoutPage">
 					Label
-					<svg class="lexicon-icon reference-mark text-warning">
+					<svg aria-hidde="true" class="lexicon-icon reference-mark">
 						<use xlink:href="../../images/icons/icons.svg#asterisk">
 					</svg>
 				</label>
-				<div class="input-group-default">
+				<div class="input-group input-group-default">
 					<span class="input-group-addon">$</span>
 					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
 					<span class="input-group-addon">
@@ -509,11 +537,11 @@
 			<div class="form-group">
 				<label for="defaultLogoutPage">
 					Label Input Group Lg
-					<svg class="lexicon-icon reference-mark text-warning">
+					<svg aria-hidde="true" class="lexicon-icon reference-mark">
 						<use xlink:href="../../images/icons/icons.svg#asterisk">
 					</svg>
 				</label>
-				<div class="input-group-default input-group-lg">
+				<div class="input-group input-group-default input-group-lg">
 					<span class="input-group-addon">$</span>
 					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
 					<span class="input-group-addon">
@@ -527,11 +555,11 @@
 			<div class="form-group">
 				<label for="defaultLogoutPage">
 					Label
-					<svg class="lexicon-icon reference-mark text-warning">
+					<svg aria-hidde="true" class="lexicon-icon reference-mark">
 						<use xlink:href="../../images/icons/icons.svg#asterisk">
 					</svg>
 				</label>
-				<div class="input-group-default">
+				<div class="input-group input-group-default">
 					<span class="input-group-addon">$</span>
 					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
 					<span class="input-group-addon">
@@ -545,11 +573,11 @@
 			<div class="form-group">
 				<label for="defaultLogoutPage">
 					Label Input Group Sm
-					<svg class="lexicon-icon reference-mark text-warning">
+					<svg aria-hidde="true" class="lexicon-icon reference-mark">
 						<use xlink:href="../../images/icons/icons.svg#asterisk">
 					</svg>
 				</label>
-				<div class="input-group-default input-group-sm">
+				<div class="input-group input-group-default input-group-sm">
 					<span class="input-group-addon">$</span>
 					<input aria-label="Amount" class="form-control" id="defaultLogoutPage" placeholder="Some placeholder text..." type="text">
 					<span class="input-group-addon">

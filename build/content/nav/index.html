@@ -62,12 +62,12 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
@@ -121,7 +121,7 @@
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -131,7 +131,7 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
@@ -141,8 +141,6 @@
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
@@ -161,7 +159,7 @@
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -175,7 +173,7 @@
 </li>
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
@@ -185,7 +183,7 @@
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -199,7 +197,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -222,52 +220,46 @@
 		
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Minimally styled navigation with <code>.nav</code>.</p>
-			<p>Use <code>.nav-heading</code> on a list element with a nested <code>&lt;span&gt;&lt;/span&gt;</code> or <code>&lt;a&gt;&lt;/a&gt;</code> to style the heading.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-md-4">
+		<h3 id="base-nav"><a class="heading-anchor" href="#base-nav"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Base Nav</h3>
 		<ul class="nav">
-			<li class="nav-heading"><span>Basic Information</span></li>
-			<li><a href="#1">Details</a></li>
-			<li><a href="#1">Catagorization</a></li>
-			<li><a href="#1">Documents and Media</a></li>
-			<li><a href="#1">Site Template</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Basic Information</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Documents and Media</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 		</ul>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code>&lt;ul class=&quot;nav&quot;&gt;
-    &lt;li class=&quot;nav-heading&quot;&gt;&lt;span&gt;Basic Information&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Catagorization&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Documents and Media&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Site Template&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="nested-nav"><a class="heading-anchor" href="#nested-nav"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nested Nav</h3>
+		<h3 id="vertical-nav"><a class="heading-anchor" href="#vertical-nav"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Nav</h3>
+	</div>
+
+	<div class="col-md-4">
+		<ul class="flex-column nav">
+			<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Documents and Media</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Configuration</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Identification</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="nested-vertical-nav"><a class="heading-anchor" href="#nested-vertical-nav"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nested Vertical Nav</h3>
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Nested navigation, also collapsible (requires <a href="http://getbootstrap.com/javascript/#collapse">Bootstrap Collapse Plugin</a>). Add class nav-nested to the outermost nav to indent each nested nav.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<ul class="nav nav-nested">
-			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse01">
+		<ul class="flex-column nav nav-nested">
+			<li class="nav-item">
+				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse01">
 					Basic Information
 					<span class="collapse-icon-closed">
 						<span class="icon-caret-right"></span>
@@ -277,11 +269,11 @@
 					</span>
 				</a>
 				<div class="collapse" id="navCollapse01">
-					<ul class="nav">
-						<li><a href="#1">Details</a></li>
-						<li><a href="#1">Catagorization</a></li>
-						<li>
-							<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse02">
+					<ul class="flex-column nav">
+						<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+						<li class="nav-item">
+							<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse02">
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<span class="icon-caret-right"></span>
@@ -291,20 +283,20 @@
 								</span>
 							</a>
 							<div class="collapse" id="navCollapse02">
-								<ul class="nav">
-									<li><a href="#1">Details</a></li>
-									<li><a href="#1">Catagorization</a></li>
-									<li><a href="#1">Documents and Media</a></li>
-									<li><a href="#1">Site Template</a></li>
+								<ul class="flex-column nav">
+									<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Documents and Media</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 								</ul>
 							</div>
 						</li>
-						<li><a href="#1">Site Template</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 					</ul>
 				</div>
 			</li>
-			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse03">
+			<li class="nav-item">
+				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse03">
 					SEO
 					<span class="collapse-icon-closed">
 						<span class="icon-caret-right"></span>
@@ -314,14 +306,14 @@
 					</span>
 				</a>
 				<div class="collapse" id="navCollapse03">
-					<ul class="nav">
-						<li><a href="#1">Sitemap</a></li>
-						<li><a href="#1">Robots</a></li>
+					<ul class="flex-column nav">
+						<li class="nav-item"><a class="nav-link" href="#1">Sitemap</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Robots</a></li>
 					</ul>
 				</div>
 			</li>
-			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse04">
+			<li class="nav-item">
+				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse04">
 					Advanced
 					<span class="collapse-icon-closed">
 						<span class="icon-caret-right"></span>
@@ -331,88 +323,21 @@
 					</span>
 				</a>
 				<div class="collapse" id="navCollapse04">
-					<ul class="nav">
-						<li><a href="#1">Default User Associations</a></li>
-						<li><a href="#1">Staging</a></li>
-						<li><a href="#1">Analytics</a></li>
-						<li><a href="#1">Maps</a></li>
+					<ul class="flex-column nav">
+						<li class="nav-item"><a class="nav-link" href="#1">Default User Associations</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Staging</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Analytics</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Maps</a></li>
 					</ul>
 				</div>
 			</li>
 		</ul>
 	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code>&lt;ul class=&quot;nav nav-nested&quot;&gt;
-    &lt;li&gt;
-        &lt;a class=&quot;collapsed collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navCollapse01&quot;&gt;
-            Basic Information
-            &lt;span class=&quot;collapse-icon-closed icon-caret-right&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;collapse-icon-open icon-caret-down&quot;&gt;&lt;/span&gt;
-        &lt;/a&gt;
-        &lt;div class=&quot;collapse&quot; id=&quot;navCollapse01&quot;&gt;
-            &lt;ul class=&quot;nav&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Catagorization&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;collapsed collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navCollapse02&quot;&gt;
-                        Documents and Media
-                        &lt;span class=&quot;collapse-icon-closed icon-caret-right&quot;&gt;&lt;/span&gt;
-                        &lt;span class=&quot;collapse-icon-open icon-caret-down&quot;&gt;&lt;/span&gt;
-                    &lt;/a&gt;
-                    &lt;div class=&quot;collapse&quot; id=&quot;navCollapse02&quot;&gt;
-                        &lt;ul class=&quot;nav&quot;&gt;
-                            &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Catagorization&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Documents and Media&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Site Template&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/div&gt;
-                &lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Site Template&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;a class=&quot;collapsed collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navCollapse03&quot;&gt;
-            SEO
-            &lt;span class=&quot;collapse-icon-closed icon-caret-right&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;collapse-icon-open icon-caret-down&quot;&gt;&lt;/span&gt;
-        &lt;/a&gt;
-        &lt;div class=&quot;collapse&quot; id=&quot;navCollapse03&quot;&gt;
-            &lt;ul class=&quot;nav&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Sitemap&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Robots&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;a class=&quot;collapsed collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navCollapse04&quot;&gt;
-            Advanced
-        &lt;/a&gt;
-        &lt;div class=&quot;collapse&quot; id=&quot;navCollapse04&quot;&gt;
-            &lt;ul class=&quot;nav&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Default User Associations&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Staging&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Analytics&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Maps&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
-	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="nav-nested-margins"><a class="heading-anchor" href="#nav-nested-margins"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Nested (Margins)</h3>
+		<h3 id="nested-vertical-nav-margins"><a class="heading-anchor" href="#nested-vertical-nav-margins"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nested Vertical Nav (Margins)</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p><code>nav-nested-margins</code> uses margins instead of padding to indent.</p>
@@ -420,9 +345,9 @@
 	</div>
 
 	<div class="col-md-6">
-		<ul class="nav nav-nested-margins">
-			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse001">
+		<ul class="flex-column nav nav-nested-margins">
+			<li class="nav-item">
+				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse001">
 					Basic Information
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
@@ -436,11 +361,11 @@
 					</span>
 				</a>
 				<div class="collapse" id="navCollapse001">
-					<ul class="nav">
-						<li><a href="#1">Details</a></li>
-						<li><a href="#1">Catagorization</a></li>
-						<li>
-							<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse002">
+					<ul class="flex-column nav">
+						<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+						<li class="nav-item">
+							<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse002">
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<svg class="lexicon-icon">
@@ -454,20 +379,20 @@
 								</span>
 							</a>
 							<div class="collapse" id="navCollapse002">
-								<ul class="nav">
-									<li><a href="#1">Details</a></li>
-									<li><a href="#1">Catagorization</a></li>
-									<li><a href="#1">Documents and Media</a></li>
-									<li><a href="#1">Site Template</a></li>
+								<ul class="flex-column nav">
+									<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Documents and Media</a></li>
+									<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 								</ul>
 							</div>
 						</li>
-						<li><a href="#1">Site Template</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 					</ul>
 				</div>
 			</li>
-			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse003">
+			<li class="nav-item">
+				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse003">
 					SEO
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
@@ -481,14 +406,14 @@
 					</span>
 				</a>
 				<div class="collapse" id="navCollapse003">
-					<ul class="nav">
-						<li><a href="#1">Sitemap</a></li>
-						<li><a href="#1">Robots</a></li>
+					<ul class="flex-column nav">
+						<li class="nav-item"><a class="nav-link" href="#1">Sitemap</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Robots</a></li>
 					</ul>
 				</div>
 			</li>
-			<li>
-				<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse004">
+			<li class="nav-item">
+				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse004">
 					Advanced
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
@@ -502,108 +427,11 @@
 					</span>
 				</a>
 				<div class="collapse" id="navCollapse004">
-					<ul class="nav">
-						<li><a href="#1">Default User Associations</a></li>
-						<li><a href="#1">Staging</a></li>
-						<li><a href="#1">Analytics</a></li>
-						<li><a href="#1">Maps</a></li>
-					</ul>
-				</div>
-			</li>
-		</ul>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="nav-equal-height"><a class="heading-anchor" href="#nav-equal-height"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Equal Height</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>List style navigation that has equal heights, use <code>nav-equal-height-heading</code> with <a href="http://getbootstrap.com/javascript/#collapse">Bootstrap Collapse Plugin</a> to create equal height navs with collapsible content.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-md-6">
-		<ul class="nav nav-equal-height">
-			<li>
-				<div class="nav-equal-height-heading">
-					<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0001">
-						Basic Information
-						<span class="collapse-icon-closed">
-							<span class="icon-caret-right"></span>
-						</span>
-						<span class="collapse-icon-open">
-							<span class="icon-caret-down"></span>
-						</span>
-						<div>Subheading</div>
-					</a>
-				</div>
-				<div class="collapse" id="navCollapse0001">
-					<ul class="nav">
-						<li><a href="#1">Details</a></li>
-						<li><a href="#1">Categorization</a></li>
-						<li>
-							<div class="nav-equal-height-heading">
-								<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0002">
-									Documents and Media
-									<span class="collapse-icon-closed">
-										<span class="icon-caret-right"></span>
-									</span>
-									<span class="collapse-icon-open">
-										<span class="icon-caret-down"></span>
-									</span>
-								</a>
-							</div>
-							<div class="collapse" id="navCollapse0002">
-								<ul class="nav">
-									<li><a href="#1">Details</a></li>
-									<li><a href="#1">Categorization</a></li>
-									<li><a href="#1">Documents and Media</a></li>
-									<li><a href="#1">Site Template</a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="#1">Site Template</a></li>
-					</ul>
-				</div>
-			</li>
-			<li>
-				<div class="nav-equal-height-heading">
-					<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0003">
-						SEO
-						<span class="collapse-icon-closed">
-							<span class="icon-caret-right"></span>
-						</span>
-						<span class="collapse-icon-open">
-							<span class="icon-caret-down"></span>
-						</span>
-					</a>
-				</div>
-				<div class="collapse" id="navCollapse0003">
-					<ul class="nav">
-						<li><a href="#1">Sitemap</a></li>
-						<li><a href="#1">Robots</a></li>
-					</ul>
-				</div>
-			</li>
-			<li>
-				<div class="nav-equal-height-heading">
-					<a class="collapsed collapse-icon" data-toggle="collapse" href="#navCollapse0004">
-						Advanced
-						<span class="collapse-icon-closed">
-							<span class="icon-caret-right"></span>
-						</span>
-						<span class="collapse-icon-open">
-							<span class="icon-caret-down"></span>
-						</span>
-					</a>
-				</div>
-				<div class="collapse" id="navCollapse0004">
-					<ul class="nav">
-						<li><a href="#1">Default User Associations</a></li>
-						<li><a href="#1">Staging</a></li>
-						<li><a href="#1">Analytics</a></li>
-						<li><a href="#1">Maps</a></li>
+					<ul class="flex-column nav">
+						<li class="nav-item"><a class="nav-link" href="#1">Default User Associations</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Staging</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Analytics</a></li>
+						<li class="nav-item"><a class="nav-link" href="#1">Maps</a></li>
 					</ul>
 				</div>
 			</li>
@@ -620,40 +448,27 @@
 		</blockquote>
 
 		<ul class="nav nav-pills">
-			<li class="active"><a href="#1">Fields</a></li>
+			<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents</a></li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
 
-			<li><a href="#1">Settings</a></li>
-
-			<li class="disabled"><a href="#">Documents</a></li>
-
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Configuration <span class="caret"></span></a>
-
-				<ul class="dropdown-menu">
-					<li><a href="#1">Setup</a></li>
-					<li><a href="#1">Supported Clients</a></li>
-					<li><a href="#1">Permissions</a></li>
-					<li><a href="#1">Sharing</a></li>
-					<li class="divider"></li>
-					<li><a href="#1">Scope</a></li>
-				</ul>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
 			</li>
 		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code>&lt;ul class=&quot;nav nav-pills&quot;&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#1&quot;&gt;Fields&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Settings&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Documents&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;dropdown&quot;&gt;
-        ...
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
@@ -666,97 +481,75 @@
 		</blockquote>
 
 		<ul class="nav nav-justified nav-pills">
-			<li class="active"><a href="#1">Fields</a></li>
+			<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents</a></li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
 
-			<li><a href="#1">Settings</a></li>
-
-			<li class="disabled"><a href="#">Documents</a></li>
-
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Configuration <span class="caret"></span></a>
-
-				<ul class="dropdown-menu">
-					<li><a href="#1">Setup</a></li>
-					<li><a href="#1">Supported Clients</a></li>
-					<li><a href="#1">Permissions</a></li>
-					<li><a href="#1">Sharing</a></li>
-					<li class="divider"></li>
-					<li><a href="#1">Scope</a></li>
-				</ul>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
 			</li>
 		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code class="html">&lt;ul class=&quot;nav nav-justified nav-pills&quot;&gt;
-    ...
-&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="nav-pills-stacked"><a class="heading-anchor" href="#nav-pills-stacked"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Pills Stacked</h3>
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add <code>.nav-stacked</code> to stack nav-pills vertically.</p>
-		</blockquote>
+		<h3 id="vertical-nav-pills"><a class="heading-anchor" href="#vertical-nav-pills"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Nav Pills</h3>
 	</div>
 
 	<div class="col-md-4">
-		<ul class="nav nav-pills nav-stacked">
-			<li class="active"><a href="#1">Fields</a></li>
+		<ul class="flex-column nav nav-pills">
+			<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
+			<li class="nav-item">
+				<a class="nav-link" href="#1">
+					<span class="badge pull-right">2</span>
+					Fields with Badge
+				</a>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
 
-			<li><a href="#1">
-				<span class="badge pull-right">2</span>Fields with Badge
-			</a></li>
-
-			<li><a href="#1">Settings</a></li>
-
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">Configuration <span class="caret"></span></a>
-
-				<ul class="dropdown-menu">
-					<li><a href="#1">Setup</a></li>
-					<li><a href="#1">Supported Clients</a></li>
-					<li><a href="#1">Permissions</a></li>
-					<li><a href="#1">Sharing</a></li>
-					<li class="divider"></li>
-					<li><a href="#1">Scope</a></li>
-				</ul>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
 			</li>
 		</ul>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;ul class=&quot;nav nav-pills nav-stacked&quot;&gt;
-    ...
-&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="nested-nav-pills-stacked"><a class="heading-anchor" href="#nested-nav-pills-stacked"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nested Nav Pills Stacked</h3>
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add <code>.nav-nested .nav-stacked</code> to style background colors and borders for stacked nav-pills.</p>
-		</blockquote>
+		<h3 id="vertical-nested-nav-pills"><a class="heading-anchor" href="#vertical-nested-nav-pills"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Nested Nav Pills</h3>
 	</div>
 
 	<div class="col-md-4">
-		<ul class="nav nav-nested nav-pills nav-stacked">
-			<li>
-				<a aria-expanded="true" class="collapse-icon" data-toggle="collapse" href="#navPillsCollapse01">
+		<ul class="flex-column nav nav-nested nav-pills">
+			<li class="nav-item">
+				<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navPillsCollapse01">
 					Basic Information
 					<span class="collapse-icon-closed">
 						<span class="icon-caret-right"></span>
@@ -765,12 +558,12 @@
 						<span class="icon-caret-down"></span>
 					</span>
 				</a>
-				<div class="collapse in" id="navPillsCollapse01">
-					<ul class="nav">
-						<li><a href="#">Details</a></li>
-						<li><a href="#">Catagorization</a></li>
-						<li>
-							<a class="collapsed collapse-icon" data-toggle="collapse" href="#navPillsCollapse02">
+				<div class="collapse show" id="navPillsCollapse01">
+					<ul class="flex-column nav">
+						<li class="nav-item"><a class="nav-link" href="#">Details</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Catagorization</a></li>
+						<li class="nav-item">
+							<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navPillsCollapse02">
 								Documents and Media
 								<span class="collapse-icon-closed">
 									<span class="icon-caret-right"></span>
@@ -780,126 +573,19 @@
 								</span>
 							</a>
 							<div class="collapse" id="navPillsCollapse02">
-								<ul class="nav">
-									<li><a href="#">Details</a></li>
-									<li><a href="#">Catagorization</a></li>
-									<li><a href="#">Documents and Media</a></li>
-									<li><a href="#">Site Template</a></li>
+								<ul class="flex-column nav">
+									<li class="nav-item"><a class="nav-link" href="#">Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Catagorization</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Documents and Media</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Site Template</a></li>
 								</ul>
 							</div>
 						</li>
-						<li><a href="#">Site Template</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Site Template</a></li>
 					</ul>
 				</div>
 			</li>
 		</ul>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse5">
-	<pre><code>&lt;ul class=&quot;nav nav-nested nav-pills nav-stacked&quot;&gt;
-    &lt;li&gt;
-        &lt;a aria-expanded=&quot;true&quot; class=&quot;collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navPillsCollapse01&quot;&gt;
-            Basic Information
-        &lt;/a&gt;
-        &lt;div class=&quot;collapse in&quot; id=&quot;navPillsCollapse01&quot;&gt;
-            &lt;ul class=&quot;nav&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Catagorization&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a class=&quot;collapsed collapse-icon&quot; data-toggle=&quot;collapse&quot; href=&quot;#navPillsCollapse02&quot;&gt;
-                        Documents and Media
-                    &lt;/a&gt;
-                    &lt;div class=&quot;collapse&quot; id=&quot;navPillsCollapse02&quot;&gt;
-                        &lt;ul class=&quot;nav&quot;&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Catagorization&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Documents and Media&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Site Template&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/div&gt;
-                &lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Site Template&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="nav-helper-classes"><a class="heading-anchor" href="#nav-helper-classes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Helper Classes</h3>
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.nav-rounded</code>, <code>.nav-circle</code>, or <code>.nav-square</code> on the nav to quickly shape the borders.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-md-4">
-		<ul class="nav nav-rounded nav-pills nav-stacked">
-			<li class="active"><a href="#1">Fields</a></li>
-
-			<li><a href="#1">
-				<span class="badge pull-right">2</span>Fields with Badge
-			</a></li>
-
-			<li><a href="#1">Settings</a></li>
-
-			<li>
-				<a href="#1">Configuration</a>
-			</li>
-		</ul>
-	</div>
-
-	<div class="col-md-4">
-		<ul class="nav nav-circle nav-pills nav-stacked">
-			<li class="active"><a href="#1">Fields</a></li>
-
-			<li><a href="#1">
-				<span class="badge pull-right">2</span>Fields with Badge
-			</a></li>
-
-			<li><a href="#1">Settings</a></li>
-
-			<li>
-				<a href="#1">Configuration</a>
-			</li>
-		</ul>
-	</div>
-
-	<div class="col-md-4">
-		<ul class="nav nav-square nav-pills nav-stacked">
-			<li class="active"><a href="#1">Fields</a></li>
-
-			<li><a href="#1">
-				<span class="badge pull-right">2</span>Fields with Badge
-			</a></li>
-
-			<li><a href="#1">Settings</a></li>
-
-			<li>
-				<a href="#1">Configuration</a>
-			</li>
-		</ul>
-	</div>
-
-	<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse6">
-	<pre><code class="html">&lt;ul class=&quot;nav nav-rounded nav-pills nav-stacked&quot;&gt;...&lt;/ul&gt;
-&lt;ul class=&quot;nav nav-circle nav-pills nav-stacked&quot;&gt;...&lt;/ul&gt;
-&lt;ul class=&quot;nav nav-rounded nav-pills nav-stacked&quot;&gt;...&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 	</div>

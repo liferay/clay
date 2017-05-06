@@ -62,12 +62,12 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class="active"><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
@@ -121,7 +121,7 @@
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -131,7 +131,7 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
@@ -141,8 +141,6 @@
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
@@ -161,7 +159,7 @@
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -175,7 +173,7 @@
 </li>
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
@@ -185,7 +183,7 @@
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -199,7 +197,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -230,28 +228,24 @@
 			<p>Use <code>.alert-link</code> to style a link inside your alert.</p>
 		</blockquote>
 
-		<div class="alert alert-default">
-			<strong class="lead">Default</strong>You just read the <a href="#" class="alert-link">alert message</a> successfully.
-		</div>
-
-		<div class="alert alert-success">
+		<div class="alert alert-success" role="alert">
 			<strong class="lead">Success</strong> You just read the <a href="#" class="alert-link">alert message</a> successfully.
 		</div>
 
-		<div class="alert alert-info">
+		<div class="alert alert-info" role="alert">
 			<strong class="lead">Info</strong> This <a href="#" class="alert-link">alert</a> needs your attention.
 		</div>
 
-		<div class="alert alert-warning">
+		<div class="alert alert-warning" role="alert">
 			<strong class="lead">Warning</strong> This alert is a <a href="#" class="alert-link">warning message</a>.
 		</div>
 
-		<div class="alert alert-danger">
+		<div class="alert alert-danger" role="alert">
 			<strong class="lead">Danger</strong> <a href="#" class="alert-link">Something</a> is not right.
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse4">
 	<pre><code class="html">&lt;div class=&quot;alert alert-danger&quot;&gt;
@@ -266,68 +260,53 @@
 	<div class="col-md-12">
 		<h3 id="dismissible-alerts"><a class="heading-anchor" href="#dismissible-alerts"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Dismissible Alerts</h3>
 
-		<div class="alert alert-dismissible alert-default" data-dismiss="alert">
-			<button class="close" type="button">
-				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+		<div class="alert alert-dismissible alert-success" role="alert">
+			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 					<use xlink:href="../../images/icons/icons.svg#times">
 				</svg>
-				<span class="sr-only">Close</span>
-			</button>
-
-			<strong class="lead">Default</strong> You just read the alert message successfully.
-		</div>
-
-		<div class="alert alert-dismissible alert-success" data-dismiss="alert" role="alert">
-			<button class="close" type="button">
-				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-					<use xlink:href="../../images/icons/icons.svg#times">
-				</svg>
-				<span class="sr-only">Close</span>
 			</button>
 
 			<strong class="lead">Success</strong> You just read the alert message successfully.
 		</div>
 
-		<div class="alert alert-dismissible alert-info" data-dismiss="alert" role="alert">
-			<button class="close" type="button">
-				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+		<div class="alert alert-dismissible alert-info" role="alert">
+			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 					<use xlink:href="../../images/icons/icons.svg#times">
 				</svg>
-				<span class="sr-only">Close</span>
 			</button>
 
 			<strong class="lead">Info</strong> This alert needs your attention.
 		</div>
 
-		<div class="alert alert-dismissible alert-warning" data-dismiss="alert" role="alert">
-			<button class="close" type="button">
-				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+		<div class="alert alert-dismissible alert-warning" role="alert">
+			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 					<use xlink:href="../../images/icons/icons.svg#times">
 				</svg>
-				<span class="sr-only">Close</span>
 			</button>
 
 			<strong class="lead">Warning</strong> This alert is a warning message.
 		</div>
 
-		<div class="alert alert-dismissible alert-danger" data-dismiss="alert" role="alert">
-			<button class="close" type="button">
-				<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+		<div class="alert alert-dismissible alert-danger" role="alert">
+			<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 					<use xlink:href="../../images/icons/icons.svg#times">
 				</svg>
-				<span class="sr-only">Close</span>
 			</button>
 
 			<strong class="lead">Danger</strong> Something is not right.
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse9">
-	<pre><code class="html">&lt;div class=&quot;alert alert-dismissible alert-danger&quot; data-dismiss=&quot;alert&quot; role=&quot;alert&quot;&gt;
-    &lt;button class=&quot;close&quot; type=&quot;button&quot;&gt;
-        &lt;svg aria-hidden=&quot;true&quot; class=&quot;icon-monospaced lexicon-icon&quot;&gt;
+	<pre><code class="html">&lt;div class=&quot;alert alert-dismissible alert-danger&quot; role=&quot;alert&quot;&gt;
+    &lt;button aria-label=&quot;Close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; type=&quot;button&quot;&gt;
+        &lt;svg aria-hidden=&quot;true&quot; class=&quot;lexicon-icon lexicon-icon-times&quot;&gt;
             &lt;use xlink:href=&quot;../../images/icons/icons.svg#times&quot; /&gt;
         &lt;/svg&gt;
         &lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;
@@ -349,12 +328,11 @@
 		</blockquote>
 
 		<div class="lexicon-site-display-container">
-			<div class="alert alert-dismissible alert-notification alert-danger" data-dismiss="alert" role="alert">
-				<button class="close" type="button">
-					<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+			<div class="alert alert-dismissible alert-notification alert-danger" role="alert">
+				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-					<span class="sr-only">Close</span>
 				</button>
 
 				<strong class="lead">Danger:</strong>
@@ -363,12 +341,11 @@
 		</div>
 
 		<div class="lexicon-site-display-container">
-			<div class="alert alert-dismissible alert-notification alert-warning" data-dismiss="alert" role="alert">
-				<button class="close" type="button">
-					<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+			<div class="alert alert-dismissible alert-notification alert-warning" role="alert">
+				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-					<span class="sr-only">Close</span>
 				</button>
 
 				<strong class="lead">Warning:</strong>
@@ -377,12 +354,11 @@
 		</div>
 
 		<div class="lexicon-site-display-container">
-			<div class="alert alert-dismissible alert-notification alert-info" data-dismiss="alert" role="alert">
-				<button class="close" type="button">
-					<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+			<div class="alert alert-dismissible alert-notification alert-info" role="alert">
+				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-					<span class="sr-only">Close</span>
 				</button>
 
 				<strong class="lead">Meeting Rescheduled:</strong>
@@ -392,12 +368,11 @@
 		</div>
 
 		<div class="lexicon-site-display-container">
-			<div class="alert alert-dismissible alert-notification alert-success" data-dismiss="alert" role="alert">
-				<button class="close" type="button">
-					<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+			<div class="alert alert-dismissible alert-notification alert-success" role="alert">
+				<button aria-label="Close" class="close" data-dismiss="alert" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-					<span class="sr-only">Close</span>
 				</button>
 
 				<strong class="lead">Meeting Rescheduled:</strong>
@@ -407,15 +382,14 @@
 		</div>
 
 <div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse10"><span class="icon-caret-down"></span></a>
+	<a class="btn btn-warning btn-sm" data-toggle="collapse" href="#codeCollapse10"><span class="icon-caret-down"></span></a>
 </div>
 <div class="collapse" id="codeCollapse10">
-  <pre><code class="html">&lt;div class=&quot;alert alert-dismissible alert-notification alert-danger&quot; data-dismiss=&quot;alert&quot; role=&quot;alert&quot;&gt;
-        &lt;button class=&quot;close&quot; type=&quot;button&quot;&gt;
-            &lt;svg aria-hidden=&quot;true&quot; class=&quot;icon-monospaced lexicon-icon&quot;&gt;
+  <pre><code class="html">&lt;div class=&quot;alert alert-dismissible alert-notification alert-danger&quot; role=&quot;alert&quot;&gt;
+        &lt;button aria-label=&quot;Close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; type=&quot;button&quot;&gt;
+            &lt;svg aria-hidden=&quot;true&quot; class=&quot;lexicon-icon lexicon-icon-times&quot;&gt;
                 &lt;use xlink:href=&quot;../../images/icons/icons.svg#times&quot; /&gt;
             &lt;/svg&gt;
-            &lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;
         &lt;/button&gt;
 
         &lt;strong class=&quot;lead&quot;&gt;Danger:&lt;/strong&gt;

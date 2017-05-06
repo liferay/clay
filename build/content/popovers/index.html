@@ -62,12 +62,12 @@
 	<div class="main-nav-inner">
 			
 
-		<ul class="nav nav-stacked">
+		<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../">Home</a>
 </li>
 <li class=""><span class="nav-title">Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
@@ -121,7 +121,7 @@
 </li>
 <li class=""><span class="nav-title">Components (JS)</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
@@ -131,7 +131,7 @@
 </li>
 <li class=""><span class="nav-title">Elements</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
@@ -141,8 +141,6 @@
 <li class=""><a class="nav-title" href="../../content/icons">Icons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-glyphicons">Icons (Glyphicons)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
 </li>
@@ -161,7 +159,7 @@
 </li>
 <li class=""><span class="nav-title">Example Pages</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
@@ -175,7 +173,7 @@
 </li>
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
@@ -185,7 +183,7 @@
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
@@ -199,7 +197,7 @@
 </li>
 <li class=""><span class="nav-title">Visual Tests</span>
 <div class="">
-<ul class="nav nav-stacked">
+<ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
 </li>
 </ul>
@@ -220,42 +218,30 @@
 		</h1>
 
 		
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="tooltips-default"><a class="heading-anchor" href="#tooltips-default"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Tooltips Default</h3>
-	</div>
+		<h3 id="tooltips"><a class="heading-anchor" href="#tooltips"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Tooltips</h3>
 
-	<div class="tooltip-display">
-		<div class="col-md-3">
-			<div class="tooltip right in">
-				<div class="tooltip-arrow"></div>
+		<div class="clay-site-tooltip-display">
+			<div class="tooltip tooltip-right" role="tooltip">
 				<div class="tooltip-inner">
 					<div>Tooltip on the right</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="col-md-3">
-			<div class="tooltip left in">
-				<div class="tooltip-arrow"></div>
+			<div class="tooltip tooltip-left" role="tooltip">
 				<div class="tooltip-inner">
 					<div>Tooltip on the left</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="col-md-3">
-			<div class="tooltip bottom in">
-				<div class="tooltip-arrow"></div>
+			<div class="tooltip tooltip-bottom" role="tooltip">
 				<div class="tooltip-inner">
 					<div>Tooltip on bottom</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="col-md-3">
-			<div class="tooltip top in">
-				<div class="tooltip-arrow"></div>
+			<div class="tooltip tooltip-top" role="tooltip">
 				<div class="tooltip-inner">
 					<div>Tooltip on top</div>
 				</div>
@@ -264,126 +250,38 @@
 	</div>
 </div>
 
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">&lt;div class=&quot;tooltip right in&quot;&gt;
-    &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;tooltip-inner&quot;&gt;
-        &lt;div&gt;Tooltip&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<div class=" clay-site-popover-display clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="popovers"><a class="heading-anchor" href="#popovers"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Popovers</h3>
 
-&lt;div class=&quot;tooltip left in&quot;&gt;
-    &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;tooltip-inner&quot;&gt;
-        &lt;div&gt;Tooltip&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;tooltip bottom in&quot;&gt;
-    &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;tooltip-inner&quot;&gt;
-        &lt;div&gt;Tooltip&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;tooltip top in&quot;&gt;
-    &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;tooltip-inner&quot;&gt;
-        &lt;div&gt;Tooltip&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-<div id="popovers">
-	<div class="row row-spacing">
-		<div class="col-md-12">
-			<h3 id="popovers-default"><a class="heading-anchor" href="#popovers-default"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Popovers Default</h3>
-			<blockquote class="blockquote-sm blockquote-success">
-				<p>Popovers</p>
-			</blockquote>
-		</div>
-
-		<div class="col-md-6">
-			<div class="popover top">
-				<div class="arrow"></div>
-				<h3 class="popover-title">Popover top</h3>
-				<div class="popover-content">
-					<div>Cup lungo, spoon coffee affogato, brewed extraction skinny percolator blue mountain.</div>
-				</div>
+		<div class="popover popover-top">
+			<h3 class="popover-title">Popover top</h3>
+			<div class="popover-content">
+				<div> Viennese flavour cup eu, percolator froth ristretto mazagran caffeine. White roast seasonal, mocha trifecta, dripper caffeine spoon acerbic to go macchiato strong.</div>
 			</div>
 		</div>
 
-		<div class="col-md-6">
-			<div class="popover right">
-				<div class="arrow"></div>
-				<h3 class="popover-title">Popover right</h3>
-				<div class="popover-content">
-					<div> Viennese flavour cup eu, percolator froth ristretto mazagran caffeine. White roast seasonal, mocha trifecta, dripper caffeine spoon acerbic to go macchiato strong.</div>
-				</div>
+		<div class="popover popover-right">
+			<h3 class="popover-title">Popover right</h3>
+			<div class="popover-content">
+				<div> Viennese flavour cup eu, percolator froth ristretto mazagran caffeine. White roast seasonal, mocha trifecta, dripper caffeine spoon acerbic to go macchiato strong.</div>
 			</div>
 		</div>
 
-		<div class="col-md-6">
-			<div class="popover bottom">
-				<div class="arrow"></div>
-				<h3 class="popover-title">Popover bottom</h3>
-				<div class="popover-content">
-					<div>Single shot, caf&#xE9; au lait aromatic body robusta body cream mocha viennese steamed aged. Irish roast, aromatic seasonal, caramelization grinder french press coffee cortado lungo skinny.</div>
-				</div>
+		<div class="popover popover-bottom">
+			<h3 class="popover-title">Popover bottom</h3>
+			<div class="popover-content">
+				<div>Single shot, caf&#xE9; au lait aromatic body robusta body cream mocha viennese steamed aged. Irish roast, aromatic seasonal, caramelization grinder french press coffee cortado lungo skinny.</div>
 			</div>
 		</div>
 
-		<div class="col-md-6">
-			<div class="popover left">
-				<div class="arrow"></div>
-				<h3 class="popover-title">Popover left</h3>
-				<div class="popover-content">
-					<div>Dark to go foam froth fair trade irish latte dark carajillo. Turkish aromatic a, rich single origin kopi-luwak chicory carajillo.</div>
-				</div>
+		<div class="popover popover-left">
+			<h3 class="popover-title">Popover left</h3>
+			<div class="popover-content">
+				<div>Dark to go foam froth fair trade irish latte dark carajillo. Turkish aromatic a, rich single origin kopi-luwak chicory carajillo.</div>
 			</div>
 		</div>
 	</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code>&lt;div class=&quot;popover top&quot;&gt;
-    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
-    &lt;h3 class=&quot;popover-title&quot;&gt;Popover top&lt;/h3&gt;
-    &lt;div class=&quot;popover-content&quot;&gt;
-        &lt;div&gt;Cup lungo, spoon coffee affogato, brewed extraction skinny percolator blue mountain.&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;popover right&quot;&gt;
-    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
-    &lt;h3 class=&quot;popover-title&quot;&gt;Popover right&lt;/h3&gt;
-    &lt;div class=&quot;popover-content&quot;&gt;
-        &lt;div&gt; Viennese flavour cup eu, percolator froth ristretto mazagran caffeine. White roast seasonal, mocha trifecta, dripper caffeine spoon acerbic to go macchiato strong.&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;popover bottom&quot;&gt;
-    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
-    &lt;h3 class=&quot;popover-title&quot;&gt;Popover bottom&lt;/h3&gt;
-    &lt;div class=&quot;popover-content&quot;&gt;
-        &lt;div&gt;Single shot, caf&#xE9; au lait aromatic body robusta body cream mocha viennese steamed aged. Irish roast, aromatic seasonal, caramelization grinder french press coffee cortado lungo skinny.&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;popover left&quot;&gt;
-    &lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;
-    &lt;h3 class=&quot;popover-title&quot;&gt;Popover left&lt;/h3&gt;
-    &lt;div class=&quot;popover-content&quot;&gt;
-        &lt;div&gt;Dark to go foam froth fair trade irish latte dark carajillo. Turkish aromatic a, rich single origin kopi-luwak chicory carajillo.&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 </div>
 	</div>
 
