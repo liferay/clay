@@ -882,19 +882,27 @@
 	padding-right: $navbar-brand-padding-x;
 }
 
-.navbar-nav .nav-link {
-	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
-		padding-bottom: $navbar-link-padding-y;
-		padding-top: $navbar-link-padding-y;
+.navbar-nav {
+	.nav-link {
+		@if not ($navbar-link-padding-y == $nav-link-padding-y) {
+			padding-bottom: $navbar-link-padding-y;
+			padding-top: $navbar-link-padding-y;
+		}
+
+		@if not ($navbar-link-padding-x == 0.5rem) {
+			padding-left: $navbar-link-padding-x;
+			padding-right: $navbar-link-padding-x;
+
+		}
+
+		white-space: nowrap;
 	}
 
-	@if not ($navbar-link-padding-x == 0.5rem) {
-		padding-left: $navbar-link-padding-x;
-		padding-right: $navbar-link-padding-x;
-
+	.nav-item {
+		.dropdown-menu {
+			margin-top: $navbar-nav-item-dropdown-margin-top;
+		}
 	}
-
-	white-space: nowrap;
 }
 
 .navbar-expand {
