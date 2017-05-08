@@ -310,13 +310,26 @@
 	}
 }
 
-.dropdown-full .dropdown-menu {
-	@extend %dropdown-full-wide-dropdown-menu;
+.dropdown-full,
+.dropdown-wide {
+	&.show > .dropdown-menu {
+		display: flex;
+	}
+
+	.dropdown-header ~ .dropdown-header {
+		margin-top: $dropdown-full-wide-header-spacer-y;
+	}
+
+	.dropdown-menu {
+		@extend %dropdown-full-wide-dropdown-menu;
+
+		.dropdown-item {
+			white-space: normal;
+		}
+	}
 }
 
 .dropdown-wide .dropdown-menu {
-	@extend %dropdown-full-wide-dropdown-menu;
-
 	@include media-breakpoint-up(lg) { // min-width 992px
 		min-width: $dropdown-wide-width;
 	}
