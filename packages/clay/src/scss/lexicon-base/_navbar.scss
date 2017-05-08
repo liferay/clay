@@ -187,8 +187,7 @@
 		}
 	}
 
-	// .navbar-nav > li > a,
-	// .navbar-toggle {
+	// .navbar-nav > li > a {
 	// 	z-index: 1;
 	// }
 }
@@ -545,59 +544,6 @@
 	// }
 }
 
-// Navbar Toggles
-
-// .navbar-toggle {
-// 	height: $navbar-toggle-height;
-// 	margin-left: $navbar-padding-x;
-// 	padding-bottom: 0;
-// 	padding-top: 0;
-
-// 	&:focus {
-// 		outline: thin dotted;
-// 		outline: 5px auto -webkit-focus-ring-color;
-// 		outline-offset: -2px;
-// 	}
-
-// 	.icon-bar {
-// 		background-color: $navbar-toggle-icon-bar-color;
-
-// 		@if (variable-exists(navbar-toggle-icon-bar-width)) {
-// 			width: $navbar-toggle-icon-bar-width;
-// 		}
-// 	}
-// }
-
-// .navbar-toggle-left {
-// 	float: left;
-// }
-
-// .navbar-toggle-page-name {
-// 	@if (variable-exists(atlas-theme)) {
-// 		border-radius: $navbar-border-radius;
-// 		border-width: 0;
-// 		height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
-// 		margin: 0;
-// 		padding-left: $navbar-padding-x;
-// 		padding-right: $navbar-padding-x;
-
-// 		&:after {
-// 			background-color: $navbar-active-highlight;
-// 			bottom: -$navbar-border-bottom-width;
-
-// 			@if not ($navbar-active-highlight == transparent) {
-// 				content: '';
-// 			}
-
-// 			display: block;
-// 			height: $navbar-active-border-bottom-width;
-// 			left: $navbar-padding-x;
-// 			position: absolute;
-// 			right: $navbar-padding-x;
-// 		}
-// 	}
-// }
-
 // Skin
 
 // .navbar-default {
@@ -616,16 +562,6 @@
 // 	@include media-breakpoint-down(sm) {
 // 		background-color: darken($body-bg, 3%);
 // 		border-color: darken($body-bg, 6.5%);
-// 	}
-// }
-
-// .navbar-default {
-// 	.navbar-toggle {
-// 		color: $navbar-light-active-color;
-
-// 		.icon-bar {
-// 			background-color: #888;
-// 		}
 // 	}
 // }
 
@@ -667,8 +603,7 @@
 // 			}
 // 		}
 
-// 		&.navbar-no-collapse .navbar-nav > .active > a:after,
-// 		.navbar-toggle-page-name:after {
+// 		&.navbar-no-collapse .navbar-nav > .active > a:after {
 // 			background-color: $navbar-light-active-highlight;
 
 // 			@if not ($navbar-light-active-highlight == transparent) {
@@ -698,15 +633,6 @@
 // 			border-color: darken($brand-inverse, 10%);
 // 		}
 // 	}
-
-// 	.navbar-toggle {
-// 		color: #fff;
-
-// 		.icon-bar {
-// 			background-color: #fff;
-// 		}
-// 	}
-// }
 
 // .navbar-inverse.collapse-basic-search .basic-search {
 // 	&.open {
@@ -746,8 +672,7 @@
 // 			}
 // 		}
 
-// 		&.navbar-no-collapse .navbar-nav > .active > a:after,
-// 		.navbar-toggle-page-name:after {
+// 		&.navbar-no-collapse .navbar-nav > .active > a:after {
 // 			background-color: $navbar-inverse-link-active-highlight;
 
 // 			@if not ($navbar-inverse-link-active-highlight == transparent) {
