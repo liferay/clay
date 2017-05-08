@@ -397,6 +397,10 @@ body.fixed {
 
 	.dropdown-wide-container {
 		float: left;
+
+		.dropdown-menu {
+			display: flex;
+		}
 	}
 
 	.mega-menu .dropdown-menu {
