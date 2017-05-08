@@ -186,10 +186,6 @@
 			float: left;
 		}
 	}
-
-	// .navbar-nav > li > a {
-	// 	z-index: 1;
-	// }
 }
 
 // Navbar Basic Search
@@ -315,48 +311,6 @@
 
 // 		@include media-breakpoint-up(md) {
 // 			min-height: $navbar-desktop-height;
-// 		}
-// 	}
-
-// 	.navbar-nav {
-// 		> .active > a {
-// 			&:after {
-// 				@include media-breakpoint-up(md) {
-// 					background-color: $navbar-link-active-highlight;
-// 					bottom: -$navbar-border-bottom-width;
-
-// 					@if not ($navbar-link-active-highlight == transparent) {
-// 						content: '';
-// 					}
-
-// 					display: block;
-// 					height: $navbar-link-active-border-bottom-width;
-// 					left: $navbar-link-padding-x-desktop;
-// 					position: absolute;
-// 					right: $navbar-link-padding-x-desktop;
-// 					width: auto;
-// 				}
-// 			}
-// 		}
-// 	}
-
-// 	.navbar-no-collapse .navbar-nav {
-// 		> .active > a {
-// 			&:after {
-// 				background-color: $navbar-link-active-highlight;
-// 				bottom: -$navbar-border-bottom-width;
-
-// 				@if not ($navbar-link-active-highlight == transparent) {
-// 					content: '';
-// 				}
-
-// 				display: block;
-// 				height: $navbar-link-active-border-bottom-width;
-// 				left: $navbar-link-padding-x-desktop;
-// 				position: absolute;
-// 				right: $navbar-link-padding-x-desktop;
-// 				width: auto;
-// 			}
 // 		}
 // 	}
 // }
@@ -588,30 +542,6 @@
 // }
 
 // @if (variable-exists(atlas-theme)) {
-// 	.navbar-default {
-// 		.navbar-nav {
-// 			> .active > a {
-// 				&:after {
-// 					@include media-breakpoint-up(md) {
-// 						background-color: $navbar-light-active-highlight;
-
-// 						@if not ($navbar-light-active-highlight == transparent) {
-// 							content: '';
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-
-// 		&.navbar-no-collapse .navbar-nav > .active > a:after {
-// 			background-color: $navbar-light-active-highlight;
-
-// 			@if not ($navbar-light-active-highlight == transparent) {
-// 				content: '';
-// 			}
-// 		}
-// 	}
-
 // 	.navbar-default .basic-search {
 // 		&:after {
 // 			background-color: $navbar-default-collapsible-search-highlight;
@@ -657,30 +587,6 @@
 // }
 
 // @if (variable-exists(atlas-theme)) {
-// 	.navbar-inverse {
-// 		.navbar-nav {
-// 			> .active > a {
-// 				&:after {
-// 					@include media-breakpoint-up(md) {
-// 						background-color: $navbar-inverse-link-active-highlight;
-
-// 						@if not ($navbar-inverse-link-active-highlight == transparent) {
-// 							content: '';
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-
-// 		&.navbar-no-collapse .navbar-nav > .active > a:after {
-// 			background-color: $navbar-inverse-link-active-highlight;
-
-// 			@if not ($navbar-inverse-link-active-highlight == transparent) {
-// 				content: '';
-// 			}
-// 		}
-// 	}
-
 // 	.navbar-inverse .basic-search {
 // 		&:after {
 // 			background-color: $navbar-inverse-collapsible-search-highlight;
