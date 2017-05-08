@@ -824,32 +824,6 @@
 	}
 }
 
-// .navbar-toggle-page-name {
-// 	@if (variable-exists(atlas-theme)) {
-// 		border-radius: $navbar-border-radius;
-// 		border-width: 0;
-// 		height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
-// 		margin: 0;
-// 		padding-left: $navbar-padding-x;
-// 		padding-right: $navbar-padding-x;
-
-// 		&:after {
-// 			background-color: $navbar-active-highlight;
-// 			bottom: -$navbar-border-bottom-width;
-
-// 			@if not ($navbar-active-highlight == transparent) {
-// 				content: '';
-// 			}
-
-// 			display: block;
-// 			height: $navbar-active-border-bottom-width;
-// 			left: $navbar-padding-x;
-// 			position: absolute;
-// 			right: $navbar-padding-x;
-// 		}
-// 	}
-// }
-
 .navbar-toggler-page-name {
 	border-width: 0;
 	height: ($navbar-height - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width);
@@ -900,6 +874,19 @@
 
 	border-style: solid;
 	border-width: $navbar-border-width;
+
+	.form-inline {
+		align-items: center;
+		flex-wrap: nowrap;
+
+		.form-control {
+			margin-bottom: 0;
+		}
+	}
+
+	.form-inline-autofit {
+		flex-direction: row;
+	}
 }
 
 .navbar-brand {
@@ -918,9 +905,13 @@
 		padding-right: $navbar-link-padding-x;
 
 	}
+
+	white-space: nowrap;
 }
 
 .navbar-expand {
+	justify-content: space-between;
+
 	@each $breakpoint in map-keys($grid-breakpoints) {
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
@@ -941,6 +932,17 @@
 						padding-left: $navbar-brand-padding-x-desktop;
 						padding-right: $navbar-brand-padding-x-desktop;
 					}
+				}
+
+				.form-inline {
+					margin-left: $navbar-link-padding-x-desktop;
+					margin-right: $navbar-link-padding-x-desktop;
+				}
+
+				.navbar-collapse {
+					flex-grow: 1;
+					flex-wrap: wrap;
+					justify-content: space-between;
 				}
 
 				.navbar-nav .nav-link {
