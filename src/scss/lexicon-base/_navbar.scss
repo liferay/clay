@@ -3,7 +3,6 @@
 .basic-search {
 	float: right;
 	max-width: none;
-	padding: $navbar-form-padding-vertical $navbar-form-padding-horizontal;
 
 	@include media-breakpoint-up(md) {
 		max-width: 220px;
@@ -446,21 +445,6 @@
 
 // 		.dropdown-header {
 // 			padding: $dropdown-link-padding;
-// 		}
-// 	}
-// }
-
-// Navbar Form
-
-// .navbar-form {
-// 	padding: $navbar-form-padding-vertical $navbar-form-padding-horizontal;
-
-// 	@include media-breakpoint-up(md) {
-// 		margin: 0;
-
-// 		@if (variable-exists(atlas-theme)) {
-// 			padding-bottom: ($navbar-desktop-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
-// 			padding-top: ($navbar-desktop-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
 // 		}
 // 	}
 // }
