@@ -28,6 +28,8 @@ $navbar-brand-padding-x: null !default;
 $navbar-brand-padding-x-desktop: null !default;
 $navbar-brand-padding-y-desktop: ($navbar-height-desktop - ($navbar-padding-y * 2) - ($navbar-brand-font-size-desktop * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
 
+$navbar-nav-item-dropdown-margin-top: null !default;
+
 $navbar-toggler-height: null !default;
 $navbar-toggler-margin-x: null !default;
 $navbar-toggler-margin-y: null !default;
