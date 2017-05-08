@@ -9,9 +9,6 @@ $navbar-border-right-width: 0 !default;
 $navbar-border-top-width: 0 !default;
 $navbar-border-width: $navbar-border-top-width $navbar-border-right-width $navbar-border-bottom-width $navbar-border-left-width !default;
 
-$navbar-form-padding-horizontal: $navbar-padding-x !default;
-$navbar-form-padding-vertical: (($navbar-height - $input-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
-
 $zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
 
 // Used for computing $navbar-link-padding-y and $navbar-link-padding-y-desktop
