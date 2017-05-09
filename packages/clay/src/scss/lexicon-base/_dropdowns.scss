@@ -15,6 +15,10 @@
 	}
 }
 
+.dropdown-item {
+	white-space: normal;
+}
+
 .dropdown-menu {
 	border-style: $dropdown-border-style;
 	font-size: $dropdown-font-size;
@@ -275,10 +279,6 @@
 
 .dropdown-full,
 .dropdown-wide {
-	&.show > .dropdown-menu {
-		display: flex;
-	}
-
 	.dropdown-header ~ .dropdown-header {
 		margin-top: $dropdown-full-wide-header-spacer-y;
 	}
@@ -286,8 +286,9 @@
 	.dropdown-menu {
 		@extend %dropdown-full-wide-dropdown-menu;
 
-		.dropdown-item {
-			white-space: normal;
+		> .row {
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 }
