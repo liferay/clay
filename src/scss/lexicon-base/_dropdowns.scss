@@ -285,17 +285,17 @@
 	}
 }
 
-li.dropdown-full {
+// Navbar Component Dropdowns
+
+.nav-item.dropdown-full {
 	position: static;
 }
 
-li.dropdown-wide {
+.nav-item.dropdown-wide {
 	@include media-breakpoint-down(md) { // max-width 991px
 		position: static;
 	}
 }
-
-// Navbar Component Dropdowns
 
 .navbar-nav .dropdown-menu-center {
 	@include media-breakpoint-down(sm) { // max-width 767px
