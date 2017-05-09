@@ -136,12 +136,6 @@
 // 	}
 // }
 
-// .navbar-collapse-left {
-// 	@include media-breakpoint-up(md) {
-// 		float: left;
-// 	}
-// }
-
 // .navbar .navbar-collapse:first-child,
 // .navbar-collapse-absolute .navbar-collapse {
 // 	@include media-breakpoint-down(sm) {
@@ -160,55 +154,6 @@
 // 		right: -$navbar-border-right-width;
 // 		top: 100%;
 // 		z-index: $zindex-dropdown;
-// 	}
-// }
-
-// Navbar No Collapse
-
-// .navbar-no-collapse .navbar-nav {
-// 	float: left;
-
-// 	@if (variable-exists(atlas-theme)) {
-// 		margin: 0;
-// 	}
-// 	@else {
-// 		margin: 0 $navbar-padding-x;
-// 	}
-
-// 	> li {
-// 		float: left;
-// 	}
-
-// 	.dropdown-menu {
-// 		background-color: $dropdown-bg;
-// 		border: 1px solid $dropdown-border-color;
-// 		box-shadow: $dropdown-box-shadow;
-// 		position: absolute;
-// 	}
-
-// 	.open .dropdown-menu {
-// 		> li > a {
-// 			@include media-breakpoint-down(sm) {
-// 				color: $dropdown-link-color;
-// 				padding: $dropdown-link-padding;
-
-// 				&:focus,
-// 				&:hover {
-// 					background-color: $dropdown-link-hover-bg;
-// 					color: $dropdown-link-hover-color;
-// 				}
-// 			}
-// 		}
-
-// 		.divider {
-// 			@include media-breakpoint-down(sm) {
-// 				@include nav-divider($dropdown-divider-bg);
-// 			}
-// 		}
-
-// 		.dropdown-header {
-// 			padding: $dropdown-link-padding;
-// 		}
 // 	}
 // }
 
@@ -579,15 +524,16 @@
 .collapse-basic-search {
 	flex-wrap: wrap;
 
-	.basic-search {
-		padding-left: $navbar-link-padding-x;
-		padding-right: $navbar-link-padding-x;
-
-		&.form-inline {
+	&.navbar .basic-search {
+		@include media-breakpoint-down(sm) {
 			margin-left: 0;
 			margin-right: 0;
+			padding-left: $navbar-link-padding-x;
+			padding-right: $navbar-link-padding-x;
 		}
+	}
 
+	.basic-search {
 		.input-group {
 			align-items: center;
 			margin-left: auto;
@@ -612,7 +558,9 @@
 	}
 
 	.navbar-collapse {
-		flex: 1;
+		@include media-breakpoint-up(md) {
+			flex-basis: auto;
+		}
 	}
 
 	.nav-link,
@@ -632,6 +580,11 @@
 	.form-inline {
 		align-items: center;
 		flex-wrap: nowrap;
+
+		@if not ($navbar-link-padding-x == 0.5rem) {
+			padding-left: $navbar-link-padding-x;
+			padding-right: $navbar-link-padding-x;
+		}
 
 		.input-group {
 			width: 100%;
@@ -658,7 +611,6 @@
 	@if not ($navbar-link-padding-x == 0.5rem) {
 		padding-left: $navbar-link-padding-x;
 		padding-right: $navbar-link-padding-x;
-
 	}
 
 	white-space: nowrap;
@@ -672,6 +624,13 @@
 
 .navbar-expand {
 	justify-content: space-between;
+
+	.form-inline {
+		margin-left: $navbar-link-padding-x;
+		margin-right: $navbar-link-padding-x;
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 	.form-inline .form-control {
 		min-width: 100px;
@@ -736,8 +695,10 @@
 			}
 
 			.form-inline {
-				margin-left: $navbar-link-padding-x-desktop;
-				margin-right: $navbar-link-padding-x-desktop;
+				@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
+					margin-left: $navbar-link-padding-x-desktop;
+					margin-right: $navbar-link-padding-x-desktop;
+				}
 			}
 
 			.navbar-nav .nav-link {
@@ -766,10 +727,8 @@
 					.form-inline {
 						margin-left: $navbar-link-padding-x;
 						margin-right: $navbar-link-padding-x;
-
-						&:last-child {
-							margin-right: 0;
-						}
+						padding-left: 0;
+						padding-right: 0;
 					}
 
 					.form-inline .form-control {
@@ -834,8 +793,10 @@
 						}
 
 						.form-inline {
-							margin-left: $navbar-link-padding-x-desktop;
-							margin-right: $navbar-link-padding-x-desktop;
+							@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
+								margin-left: $navbar-link-padding-x-desktop;
+								margin-right: $navbar-link-padding-x-desktop;
+							}
 						}
 
 						.navbar-nav .nav-link {
