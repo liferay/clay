@@ -251,16 +251,6 @@
 
 // Dropdown wide / full
 
-.dropdown-menu {
-	[class*="col-sm"],
-	[class*="col-md"],
-	[class*="col-lg"] {
-		@include media-breakpoint-down(sm) { // max-width: 767px
-			padding: 0;
-		}
-	}
-}
-
 %dropdown-full-wide-dropdown-menu {
 	max-width: none;
 	padding: 5px 0;
