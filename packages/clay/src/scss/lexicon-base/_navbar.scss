@@ -90,79 +90,6 @@
 // 	}
 // }
 
-// Navbar
-
-// .navbar {
-// 	.container-fluid-1280 {
-// 		padding-left: 0;
-// 		padding-right: 0;
-// 	}
-
-// 	.nav-tabs {
-// 		border-width: 0;
-
-// 		> li > a {
-// 			&,
-// 			&:focus,
-// 			&:hover {
-// 				border-radius: 0;
-// 				border-width: 0;
-// 				margin-right: 0;
-// 			}
-// 		}
-// 	}
-// }
-
-// @if (variable-exists(atlas-theme)) {
-// 	.navbar {
-// 		border-width: $navbar-border-width;
-// 		margin-bottom: 0;
-// 		min-height: $navbar-height;
-
-// 		@include media-breakpoint-up(md) {
-// 			min-height: $navbar-desktop-height;
-// 		}
-// 	}
-// }
-
-// Navbar Nav
-
-.navbar-nav {
-	// @include media-breakpoint-up(md) {
-	// 	margin-right: $navbar-padding-x;
-	// }
-
-	// &.navbar-right {
-	// 	@include media-breakpoint-up(md) {
-	// 		margin-left: $navbar-padding-x;
-	// 		margin-right: 0;
-	// 	}
-
-	// 	&:last-child {
-	// 		@include media-breakpoint-up(md) {
-	// 			margin-right: 0;
-	// 		}
-	// 	}
-	// }
-
-	> li > a {
-		// @if (variable-exists(atlas-theme)) {
-		// 	line-height: $navbar-link-line-height;
-		// 	padding-bottom: $navbar-padding-y;
-		// 	padding-top: $navbar-padding-y;
-
-		// 	@include media-breakpoint-up(md) {
-		// 		line-height: $navbar-desktop-link-line-height;
-		// 		padding: $navbar-link-padding-y-desktop $navbar-link-padding-x-desktop;
-		// 	}
-		// }
-		// @else {
-		// 	padding-bottom: ($navbar-height - 1.25rem - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
-		// 	padding-top: ($navbar-height - 1.25rem - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
-		// }
-	}
-}
-
 // Navbar Dropdowns
 
 // @if (variable-exists(atlas-theme)) {
@@ -195,31 +122,6 @@
 // 		}
 // 	}
 // }
-
-// Navbar Brand
-
-.navbar-brand {
-	// height: auto;
-
-	// @if (variable-exists(atlas-theme)) {
-	// 	color: $nav-link-color;
-	// 	line-height: $navbar-link-line-height;
-
-	// 	@include media-breakpoint-up(md) {
-	// 		line-height: $navbar-desktop-link-line-height;
-	// 		padding: $navbar-link-padding-y-desktop $navbar-link-padding-x-desktop;
-	// 	}
-	// }
-	// @else {
-	// 	padding-bottom: ($navbar-height - 1.25rem - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
-	// 	padding-top: ($navbar-height - 1.25rem - $navbar-border-bottom-width - $navbar-border-top-width) / 2;
-	// }
-
-	// &:focus {
-	// 	position: relative;
-	// 	z-index: 1;
-	// }
-}
 
 // Skin
 
