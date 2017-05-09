@@ -577,6 +577,8 @@
 }
 
 .collapse-basic-search {
+	flex-wrap: wrap;
+
 	.basic-search {
 		padding-left: $navbar-link-padding-x;
 		padding-right: $navbar-link-padding-x;
@@ -609,6 +611,10 @@
 		}
 	}
 
+	.navbar-collapse {
+		flex: 1;
+	}
+
 	.nav-link,
 	.navbar-toggler {
 		z-index: 1;
@@ -626,10 +632,6 @@
 	.form-inline {
 		align-items: center;
 		flex-wrap: nowrap;
-
-		.form-control {
-			margin-bottom: 0;
-		}
 
 		.input-group {
 			width: 100%;
@@ -671,6 +673,50 @@
 .navbar-expand {
 	justify-content: space-between;
 
+	.form-inline .form-control {
+		min-width: 100px;
+	}
+
+	.navbar-collapse {
+		flex-grow: 1;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.navbar-nav .nav-link {
+		&.active:after {
+			background-color: $navbar-active-highlight;
+			bottom: -$navbar-border-bottom-width - $navbar-padding-y;
+
+			@if not ($navbar-active-highlight == transparent) {
+				content: '';
+			}
+
+			display: block;
+			height: $navbar-active-border-bottom-width;
+			left: $navbar-link-padding-x-desktop;
+			position: absolute;
+			right: $navbar-link-padding-x-desktop;
+			width: auto;
+		}
+	}
+
+	&.navbar-inverse-bg .navbar-nav .nav-link.active:after {
+		background-color: $navbar-inverse-active-highlight;
+
+		@if not ($navbar-inverse-active-highlight == transparent) {
+			content: '';
+		}
+	}
+
+	&.navbar-light-bg .navbar-nav .nav-link.active:after {
+		background-color: $navbar-light-active-highlight;
+
+		@if not ($navbar-light-active-highlight == transparent) {
+			content: '';
+		}
+	}
+
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
 			.navbar-brand {
@@ -694,12 +740,6 @@
 				margin-right: $navbar-link-padding-x-desktop;
 			}
 
-			.navbar-collapse {
-				flex-grow: 1;
-				flex-wrap: wrap;
-				justify-content: space-between;
-			}
-
 			.navbar-nav .nav-link {
 				@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
 					padding-bottom: $navbar-link-padding-y-desktop;
@@ -709,38 +749,6 @@
 				@if not ($navbar-link-padding-x-desktop == 0.5rem) {
 					padding-left: $navbar-link-padding-x-desktop;
 					padding-right: $navbar-link-padding-x-desktop;
-				}
-
-				&.active:after {
-					background-color: $navbar-active-highlight;
-					bottom: -$navbar-border-bottom-width - $navbar-padding-y;
-
-					@if not ($navbar-active-highlight == transparent) {
-						content: '';
-					}
-
-					display: block;
-					height: $navbar-active-border-bottom-width;
-					left: $navbar-link-padding-x-desktop;
-					position: absolute;
-					right: $navbar-link-padding-x-desktop;
-					width: auto;
-				}
-			}
-
-			&.navbar-inverse-bg .navbar-nav .nav-link.active:after {
-				background-color: $navbar-inverse-active-highlight;
-
-				@if not ($navbar-inverse-active-highlight == transparent) {
-					content: '';
-				}
-			}
-
-			&.navbar-light-bg .navbar-nav .nav-link.active:after {
-				background-color: $navbar-light-active-highlight;
-
-				@if not ($navbar-light-active-highlight == transparent) {
-					content: '';
 				}
 			}
 		}
@@ -752,28 +760,20 @@
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
-		@if ($enable-mobile-desktop-sizes) and not ($infix == '') {
+		@if not ($infix == '') {
 			&#{$infix} {
 				@include media-breakpoint-up($next) {
-					.navbar-brand {
-						@if not ($navbar-brand-font-size-desktop == $navbar-brand-font-size) {
-							font-size: $navbar-brand-font-size-desktop;
-						}
+					.form-inline {
+						margin-left: $navbar-link-padding-x;
+						margin-right: $navbar-link-padding-x;
 
-						@if not ($navbar-brand-padding-y-desktop == $navbar-brand-padding-y) {
-							padding-bottom: $navbar-brand-padding-y-desktop;
-							padding-top: $navbar-brand-padding-y-desktop;
-						}
-
-						@if not ($navbar-brand-padding-x-desktop == $navbar-brand-padding-x) {
-							padding-left: $navbar-brand-padding-x-desktop;
-							padding-right: $navbar-brand-padding-x-desktop;
+						&:last-child {
+							margin-right: 0;
 						}
 					}
 
-					.form-inline {
-						margin-left: $navbar-link-padding-x-desktop;
-						margin-right: $navbar-link-padding-x-desktop;
+					.form-inline .form-control {
+						min-width: 100px;
 					}
 
 					.navbar-collapse {
@@ -783,16 +783,6 @@
 					}
 
 					.navbar-nav .nav-link {
-						@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
-							padding-bottom: $navbar-link-padding-y-desktop;
-							padding-top: $navbar-link-padding-y-desktop;
-						}
-
-						@if not ($navbar-link-padding-x-desktop == 0.5rem) {
-							padding-left: $navbar-link-padding-x-desktop;
-							padding-right: $navbar-link-padding-x-desktop;
-						}
-
 						&.active:after {
 							background-color: $navbar-active-highlight;
 							bottom: -$navbar-border-bottom-width - $navbar-padding-y;
@@ -823,6 +813,41 @@
 
 						@if not ($navbar-light-active-highlight == transparent) {
 							content: '';
+						}
+					}
+
+					@if ($enable-mobile-desktop-sizes) {
+						.navbar-brand {
+							@if not ($navbar-brand-font-size-desktop == $navbar-brand-font-size) {
+								font-size: $navbar-brand-font-size-desktop;
+							}
+
+							@if not ($navbar-brand-padding-y-desktop == $navbar-brand-padding-y) {
+								padding-bottom: $navbar-brand-padding-y-desktop;
+								padding-top: $navbar-brand-padding-y-desktop;
+							}
+
+							@if not ($navbar-brand-padding-x-desktop == $navbar-brand-padding-x) {
+								padding-left: $navbar-brand-padding-x-desktop;
+								padding-right: $navbar-brand-padding-x-desktop;
+							}
+						}
+
+						.form-inline {
+							margin-left: $navbar-link-padding-x-desktop;
+							margin-right: $navbar-link-padding-x-desktop;
+						}
+
+						.navbar-nav .nav-link {
+							@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
+								padding-bottom: $navbar-link-padding-y-desktop;
+								padding-top: $navbar-link-padding-y-desktop;
+							}
+
+							@if not ($navbar-link-padding-x-desktop == 0.5rem) {
+								padding-left: $navbar-link-padding-x-desktop;
+								padding-right: $navbar-link-padding-x-desktop;
+							}
 						}
 					}
 				}
