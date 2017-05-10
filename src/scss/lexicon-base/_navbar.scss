@@ -1,75 +1,75 @@
 // Navbar Basic Search
 
-@if (variable-exists(atlas-theme)) {
-	.navbar .basic-search {
-		height: $navbar-height;
-		position: relative;
+// @if (variable-exists(atlas-theme)) {
+// 	.navbar .basic-search {
+// 		height: $navbar-height;
+// 		position: relative;
 
-		@include media-breakpoint-up(md) {
-			height: $navbar-height-desktop;
-		}
+// 		@include media-breakpoint-up(md) {
+// 			height: $navbar-height-desktop;
+// 		}
 
-		&:after {
-			background-color: $input-border-color;
-			bottom: -$navbar-border-bottom-width;
-			content: '';
-			display: block;
-			height: 0;
-			left: 0;
-			overflow: hidden;
-			position: absolute;
-			right: 0;
-			z-index: $zindex-basic-search-close;
-		}
+// 		&:after {
+// 			background-color: $input-border-color;
+// 			bottom: -$navbar-border-bottom-width;
+// 			content: '';
+// 			display: block;
+// 			height: 0;
+// 			left: 0;
+// 			overflow: hidden;
+// 			position: absolute;
+// 			right: 0;
+// 			z-index: $zindex-basic-search-close;
+// 		}
 
-		&.focus:after {
-			background-color: $input-border-color-focus;
+// 		&.focus:after {
+// 			background-color: $input-border-color-focus;
 
-			@include media-breakpoint-up(md) {
-				height: $navbar-active-border-bottom-width;
-				margin-top: -$navbar-active-border-bottom-width;
-			}
-		}
+// 			@include media-breakpoint-up(md) {
+// 				height: $navbar-active-border-bottom-width;
+// 				margin-top: -$navbar-active-border-bottom-width;
+// 			}
+// 		}
 
-		&.open {
-			&:after {
-				height: $navbar-active-border-bottom-width;
-				margin-top: -$navbar-active-border-bottom-width;
+// 		&.open {
+// 			&:after {
+// 				height: $navbar-active-border-bottom-width;
+// 				margin-top: -$navbar-active-border-bottom-width;
 
-				@include media-breakpoint-up(md) {
-					background-color: transparent;
-				}
-			}
+// 				@include media-breakpoint-up(md) {
+// 					background-color: transparent;
+// 				}
+// 			}
 
-			&.focus:after {
-				@include media-breakpoint-up(md) {
-					background-color: $input-border-color-focus;
-				}
-			}
-		}
-	}
+// 			&.focus:after {
+// 				@include media-breakpoint-up(md) {
+// 					background-color: $input-border-color-focus;
+// 				}
+// 			}
+// 		}
+// 	}
 
-	.navbar.collapse-basic-search .basic-search {
-		.btn-secondary {
-			background-color: $body-bg;
-			border-radius: 0;
-			border-width: 0;
-			color: $brand-secondary;
-			padding: 8px 12px;
+// 	.navbar.collapse-basic-search .basic-search {
+// 		.btn-secondary {
+// 			background-color: $body-bg;
+// 			border-radius: 0;
+// 			border-width: 0;
+// 			color: $brand-secondary;
+// 			padding: 8px 12px;
 
-			&:focus {
-				box-shadow: none;
-				color: $brand-primary;
-				outline: none;
-			}
-		}
+// 			&:focus {
+// 				box-shadow: none;
+// 				color: $brand-primary;
+// 				outline: none;
+// 			}
+// 		}
 
-		.form-control {
-			background-color: $body-bg;
-			border-width: 0;
-		}
-	}
-}
+// 		.form-control {
+// 			background-color: $body-bg;
+// 			border-width: 0;
+// 		}
+// 	}
+// }
 
 // Navbar Dropdowns
 
@@ -106,75 +106,75 @@
 
 // Skin
 
-.navbar-light-bg.collapse-basic-search .basic-search {
-	&.open {
-		background-color: $navbar-light-bg;
-	}
+// .navbar-light-bg.collapse-basic-search .basic-search {
+// 	&.open {
+// 		background-color: $navbar-light-bg;
+// 	}
 
-	.btn-default {
-		background-color: $navbar-light-collapsible-search-btn-secondary-bg;
-		border-color: $navbar-light-collapsible-search-btn-secondary-border-color;
-		color: $navbar-light-collapsible-search-btn-secondary-color;
-	}
+// 	.btn-default {
+// 		background-color: $navbar-light-collapsible-search-btn-secondary-bg;
+// 		border-color: $navbar-light-collapsible-search-btn-secondary-border-color;
+// 		color: $navbar-light-collapsible-search-btn-secondary-color;
+// 	}
 
-	.form-control {
-		background-color: $navbar-light-collapsible-search-input-bg;
-		border-color: $navbar-light-collapsible-search-input-border-color;
-		color: $navbar-light-collapsible-search-input-color;
+// 	.form-control {
+// 		background-color: $navbar-light-collapsible-search-input-bg;
+// 		border-color: $navbar-light-collapsible-search-input-border-color;
+// 		color: $navbar-light-collapsible-search-input-color;
 
-		&::placeholder {
-			color: $navbar-light-collapsible-search-input-placeholder-color;
-		}
-	}
-}
+// 		&::placeholder {
+// 			color: $navbar-light-collapsible-search-input-placeholder-color;
+// 		}
+// 	}
+// }
 
-@if (variable-exists(atlas-theme)) {
-	.navbar-light-bg .basic-search {
-		&:after {
-			background-color: $navbar-light-collapsible-search-highlight;
-		}
+// @if (variable-exists(atlas-theme)) {
+// 	.navbar-light-bg .basic-search {
+// 		&:after {
+// 			background-color: $navbar-light-collapsible-search-highlight;
+// 		}
 
-		&.focus:after {
-			background-color: $navbar-light-collapsible-search-focus-highlight;
-		}
-	}
-}
+// 		&.focus:after {
+// 			background-color: $navbar-light-collapsible-search-focus-highlight;
+// 		}
+// 	}
+// }
 
-// Navbar Inverse
+// // Navbar Inverse
 
-.navbar-inverse.collapse-basic-search .basic-search {
-	&.open {
-		background-color: $navbar-inverse-bg;
-	}
+// .navbar-inverse.collapse-basic-search .basic-search {
+// 	&.open {
+// 		background-color: $navbar-inverse-bg;
+// 	}
 
-	.btn-secondary {
-		background-color: $navbar-inverse-collapsible-search-btn-secondary-bg;
-		border-color: $navbar-inverse-collapsible-search-btn-secondary-border-color;
-		color: $navbar-inverse-collapsible-search-btn-secondary-color;
-	}
+// 	.btn-secondary {
+// 		background-color: $navbar-inverse-collapsible-search-btn-secondary-bg;
+// 		border-color: $navbar-inverse-collapsible-search-btn-secondary-border-color;
+// 		color: $navbar-inverse-collapsible-search-btn-secondary-color;
+// 	}
 
-	.form-control {
-		background-color: $navbar-inverse-collapsible-search-input-bg;
-		border-color: $navbar-inverse-collapsible-search-input-border-color;
-		color: $navbar-inverse-collapsible-search-input-color;
+// 	.form-control {
+// 		background-color: $navbar-inverse-collapsible-search-input-bg;
+// 		border-color: $navbar-inverse-collapsible-search-input-border-color;
+// 		color: $navbar-inverse-collapsible-search-input-color;
 
-		&::placeholder {
-			color: $navbar-inverse-collapsible-search-input-placeholder-color;
-		}
-	}
-}
+// 		&::placeholder {
+// 			color: $navbar-inverse-collapsible-search-input-placeholder-color;
+// 		}
+// 	}
+// }
 
-@if (variable-exists(atlas-theme)) {
-	.navbar-inverse .basic-search {
-		&:after {
-			background-color: $navbar-inverse-collapsible-search-highlight;
-		}
+// @if (variable-exists(atlas-theme)) {
+// 	.navbar-inverse .basic-search {
+// 		&:after {
+// 			background-color: $navbar-inverse-collapsible-search-highlight;
+// 		}
 
-		&.focus:after {
-			background-color: $navbar-inverse-collapsible-search-focus-highlight;
-		}
-	}
-}
+// 		&.focus:after {
+// 			background-color: $navbar-inverse-collapsible-search-focus-highlight;
+// 		}
+// 	}
+// }
 
 // BS4
 
@@ -288,11 +288,23 @@
 
 .collapse-basic-search {
 	.basic-search {
-		left: 0;
-		margin: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
+		@include media-breakpoint-down(sm) {
+			border-color: transparent;
+
+			@include border-radius($navbar-border-radius);
+
+			border-style: solid;
+			border-width: $navbar-border-top-width $navbar-border-right-width $navbar-border-bottom-width $navbar-border-left-width;
+			left: -$navbar-border-left-width;
+			margin: 0;
+			position: absolute;
+			right: -$navbar-border-right-width;
+			top: -$navbar-border-top-width;
+
+			&.open {
+				background-color: $body-bg;
+			}
+		}
 
 		@include media-breakpoint-up(md) {
 			position: relative;
@@ -677,6 +689,8 @@
 	}
 }
 
+// Skin
+
 .navbar-light {
 	.navbar-brand {
 		@if not ($navbar-light-brand-color == $navbar-light-active-color) {
@@ -700,6 +714,11 @@
 .navbar-light-bg {
 	background-color: $navbar-light-bg;
 	border-color: $navbar-light-border-color;
+
+	.basic-search.open {
+		background-color: $navbar-light-bg;
+		border-color: $navbar-light-border-color;
+	}
 
 	.navbar-brand {
 		background-color: $navbar-light-brand-bg;
@@ -748,6 +767,11 @@
 .navbar-inverse-bg {
 	background-color: $navbar-inverse-bg;
 	border-color: $navbar-inverse-border-color;
+
+	.basic-search.open {
+		background-color: $navbar-inverse-bg;
+		border-color: $navbar-inverse-border-color;
+	}
 
 	.navbar-brand {
 		background-color: $navbar-inverse-brand-bg;
