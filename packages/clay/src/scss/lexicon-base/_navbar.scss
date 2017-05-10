@@ -1,76 +1,3 @@
-// Navbar Basic Search
-
-// @if (variable-exists(atlas-theme)) {
-// 	.navbar .basic-search {
-// 		height: $navbar-height;
-// 		position: relative;
-
-// 		@include media-breakpoint-up(md) {
-// 			height: $navbar-height-desktop;
-// 		}
-
-// 		&:after {
-// 			background-color: $input-border-color;
-// 			bottom: -$navbar-border-bottom-width;
-// 			content: '';
-// 			display: block;
-// 			height: 0;
-// 			left: 0;
-// 			overflow: hidden;
-// 			position: absolute;
-// 			right: 0;
-// 			z-index: $zindex-basic-search-close;
-// 		}
-
-// 		&.focus:after {
-// 			background-color: $input-border-color-focus;
-
-// 			@include media-breakpoint-up(md) {
-// 				height: $navbar-active-border-bottom-width;
-// 				margin-top: -$navbar-active-border-bottom-width;
-// 			}
-// 		}
-
-// 		&.open {
-// 			&:after {
-// 				height: $navbar-active-border-bottom-width;
-// 				margin-top: -$navbar-active-border-bottom-width;
-
-// 				@include media-breakpoint-up(md) {
-// 					background-color: transparent;
-// 				}
-// 			}
-
-// 			&.focus:after {
-// 				@include media-breakpoint-up(md) {
-// 					background-color: $input-border-color-focus;
-// 				}
-// 			}
-// 		}
-// 	}
-
-// 	.navbar.collapse-basic-search .basic-search {
-// 		.btn-secondary {
-// 			background-color: $body-bg;
-// 			border-radius: 0;
-// 			border-width: 0;
-// 			color: $brand-secondary;
-// 			padding: 8px 12px;
-
-// 			&:focus {
-// 				box-shadow: none;
-// 				color: $brand-primary;
-// 				outline: none;
-// 			}
-// 		}
-
-// 		.form-control {
-// 			background-color: $body-bg;
-// 			border-width: 0;
-// 		}
-// 	}
-// }
-
 // Navbar Dropdowns
 
 // @if (variable-exists(atlas-theme)) {
@@ -100,78 +27,6 @@
 // 					}
 // 				}
 // 			}
-// 		}
-// 	}
-// }
-
-// Skin
-
-// .navbar-light-bg.collapse-basic-search .basic-search {
-// 	&.open {
-// 		background-color: $navbar-light-bg;
-// 	}
-
-// 	.btn-default {
-// 		background-color: $navbar-light-collapsible-search-btn-secondary-bg;
-// 		border-color: $navbar-light-collapsible-search-btn-secondary-border-color;
-// 		color: $navbar-light-collapsible-search-btn-secondary-color;
-// 	}
-
-// 	.form-control {
-// 		background-color: $navbar-light-collapsible-search-input-bg;
-// 		border-color: $navbar-light-collapsible-search-input-border-color;
-// 		color: $navbar-light-collapsible-search-input-color;
-
-// 		&::placeholder {
-// 			color: $navbar-light-collapsible-search-input-placeholder-color;
-// 		}
-// 	}
-// }
-
-// @if (variable-exists(atlas-theme)) {
-// 	.navbar-light-bg .basic-search {
-// 		&:after {
-// 			background-color: $navbar-light-collapsible-search-highlight;
-// 		}
-
-// 		&.focus:after {
-// 			background-color: $navbar-light-collapsible-search-focus-highlight;
-// 		}
-// 	}
-// }
-
-// // Navbar Inverse
-
-// .navbar-inverse.collapse-basic-search .basic-search {
-// 	&.open {
-// 		background-color: $navbar-inverse-bg;
-// 	}
-
-// 	.btn-secondary {
-// 		background-color: $navbar-inverse-collapsible-search-btn-secondary-bg;
-// 		border-color: $navbar-inverse-collapsible-search-btn-secondary-border-color;
-// 		color: $navbar-inverse-collapsible-search-btn-secondary-color;
-// 	}
-
-// 	.form-control {
-// 		background-color: $navbar-inverse-collapsible-search-input-bg;
-// 		border-color: $navbar-inverse-collapsible-search-input-border-color;
-// 		color: $navbar-inverse-collapsible-search-input-color;
-
-// 		&::placeholder {
-// 			color: $navbar-inverse-collapsible-search-input-placeholder-color;
-// 		}
-// 	}
-// }
-
-// @if (variable-exists(atlas-theme)) {
-// 	.navbar-inverse .basic-search {
-// 		&:after {
-// 			background-color: $navbar-inverse-collapsible-search-highlight;
-// 		}
-
-// 		&.focus:after {
-// 			background-color: $navbar-inverse-collapsible-search-focus-highlight;
 // 		}
 // 	}
 // }
@@ -246,6 +101,18 @@
 	}
 }
 
+.basic-search-transition {
+	&:after {
+		transition: all 0.1s ease;
+	}
+
+	.basic-search-slider {
+		transition: left 0.5s ease, right 0.5s ease;
+	}
+}
+
+// Collapse Basic Search
+
 .basic-search-slider {
 	left: 101%;
 	position: relative;
@@ -262,29 +129,12 @@
 		@include media-breakpoint-up(md) {
 			display: none;
 		}
-
-		&:focus {
-			border-color: $input-border-color-focus;
-			outline: none;
-		}
 	}
 
 	.basic-search.open & {
 		left: 0;
 	}
 }
-
-.basic-search-transition {
-	&:after {
-		transition: all 0.1s ease;
-	}
-
-	.basic-search-slider {
-		transition: left 0.5s ease, right 0.5s ease;
-	}
-}
-
-// Collapse Basic Search
 
 .collapse-basic-search {
 	.basic-search {
@@ -403,6 +253,83 @@
 		z-index: 1;
 	}
 }
+
+.collapse-basic-search-transparent {
+	&.navbar .basic-search {
+		@include media-breakpoint-down(sm) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.basic-search {
+		@include media-breakpoint-up(md) {
+			height: $navbar-height-desktop - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width;
+		}
+
+		&:after {
+			background-color: $input-border-color;
+			bottom: -$navbar-border-bottom-width;
+			content: '';
+			display: block;
+			height: 0;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			right: 0;
+			z-index: $zindex-basic-search-close;
+
+			@include media-breakpoint-up(md) {
+				bottom: -$navbar-border-bottom-width - $navbar-padding-y;
+			}
+		}
+
+		&.focus:after {
+			background-color: $input-border-color-focus;
+
+			@include media-breakpoint-up(md) {
+				height: $navbar-active-border-bottom-width;
+				margin-top: -$navbar-active-border-bottom-width;
+			}
+		}
+
+		&.open {
+			&:after {
+				height: $navbar-active-border-bottom-width;
+				margin-top: -$navbar-active-border-bottom-width;
+
+				@include media-breakpoint-up(md) {
+					background-color: transparent;
+				}
+			}
+
+			&.focus:after {
+				@include media-breakpoint-up(md) {
+					background-color: $input-border-color-focus;
+				}
+			}
+		}
+
+		.btn {
+			background-color: transparent;
+			border-color: transparent;
+			box-shadow: none;
+			padding-left: 12px;
+			padding-right: 12px;
+
+			&:focus {
+				color: $input-border-color-focus;
+			}
+		}
+
+		.form-control {
+			background-color: transparent;
+			border-color: transparent;
+		}
+	}
+}
+
+// Navbar
 
 .navbar {
 	border-color: transparent;
@@ -692,6 +619,13 @@
 // Skin
 
 .navbar-light {
+	&.collapse-basic-search-transparent {
+		.btn,
+		.form-control {
+			color: $navbar-light-color;
+		}
+	}
+
 	.navbar-brand {
 		@if not ($navbar-light-brand-color == $navbar-light-active-color) {
 			color: $navbar-light-brand-color;
@@ -745,6 +679,13 @@
 }
 
 .navbar-inverse {
+	&.collapse-basic-search-transparent {
+		.btn,
+		.form-control {
+			color: $navbar-inverse-color;
+		}
+	}
+
 	.navbar-brand {
 		@if not ($navbar-inverse-brand-color == $navbar-inverse-active-color) {
 			color: $navbar-inverse-brand-color;
