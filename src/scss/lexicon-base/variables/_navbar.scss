@@ -41,7 +41,7 @@ $navbar-toggler-page-name-margin-y: null !default;
 $navbar-toggler-page-name-padding-x: 0 !default;
 $navbar-toggler-page-name-padding-y: null !default;
 
-// Skin
+// Navbar Light
 
 $navbar-light-bg: #F7F7F7 !default;
 $navbar-light-border-color: transparent !default;
@@ -57,14 +57,14 @@ $navbar-light-brand-hover-bg: null !default;
 $navbar-light-brand-color: null !default;
 $navbar-light-brand-hover-color: null !default;
 
-$navbar-light-collapsible-search-btn-secondary-bg: null !default;
-$navbar-light-collapsible-search-btn-secondary-border-color: null !default;
-$navbar-light-collapsible-search-btn-secondary-color: null !default;
+$collapse-basic-search-transparent-light-btn-color: $navbar-light-color !default;
+$collapse-basic-search-transparent-light-btn-focus-color: $navbar-light-active-color !default;
+$collapse-basic-search-transparent-light-input-color: $navbar-light-color !default;
+$collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active-color !default;
+$collapse-basic-search-transparent-light-input-placeholder-color: null !default;
+$collapse-basic-search-transparent-light-input-placeholder-focus-color: null !default;
 
-$navbar-light-collapsible-search-input-bg: null !default;
-$navbar-light-collapsible-search-input-border-color: null !default;
-$navbar-light-collapsible-search-input-color: null !default;
-$navbar-light-collapsible-search-input-placeholder-color: null !default;
+$collapse-basic-search-transparent-light-focus-highlight: $input-border-color-focus !default;
 
 // Navbar Inverse
 
@@ -82,11 +82,11 @@ $navbar-inverse-brand-hover-bg: null !default;
 $navbar-inverse-brand-color: null !default;
 $navbar-inverse-brand-hover-color: null !default;
 
-$navbar-inverse-collapsible-search-btn-secondary-bg: null !default;
-$navbar-inverse-collapsible-search-btn-secondary-border-color: null !default;
-$navbar-inverse-collapsible-search-btn-secondary-color: null !default;
+$collapse-basic-search-transparent-inverse-btn-color: $navbar-inverse-color !default;
+$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-inverse-active-color !default;
+$collapse-basic-search-transparent-inverse-input-color: $navbar-inverse-color !default;
+$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-inverse-active-color !default;
+$collapse-basic-search-transparent-inverse-input-placeholder-color: null !default;
+$collapse-basic-search-transparent-inverse-input-placeholder-focus-color: null !default;
 
-$navbar-inverse-collapsible-search-input-bg: null !default;
-$navbar-inverse-collapsible-search-input-border-color: null !default;
-$navbar-inverse-collapsible-search-input-color: null !default;
-$navbar-inverse-collapsible-search-input-placeholder-color: null !default;
+$collapse-basic-search-transparent-inverse-focus-highlight: $input-border-color-focus !default;

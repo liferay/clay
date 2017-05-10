@@ -1,4 +1,5 @@
 // Navbar Dropdowns
+// TODO: Fix dropdowns in mobile, waiting for BS4 update
 
 // @if (variable-exists(atlas-theme)) {
 // 	.navbar-nav {
@@ -30,8 +31,6 @@
 // 		}
 // 	}
 // }
-
-// BS4
 
 .navbar-toggler {
 	height: $navbar-toggler-height;
@@ -268,7 +267,6 @@
 		}
 
 		&:after {
-			background-color: $input-border-color;
 			bottom: -$navbar-border-bottom-width;
 			content: '';
 			display: block;
@@ -384,6 +382,8 @@
 	}
 }
 
+// TODO: Move stuff to placeholder/mixin? duplicates .navbar-expand below.
+
 .navbar-expand {
 	justify-content: space-between;
 
@@ -477,6 +477,8 @@
 		}
 	}
 }
+
+// TODO: Move stuff to placeholder/mixin? duplicates .navbar-expand above.
 
 .navbar-expand {
 	@each $breakpoint in map-keys($grid-breakpoints) {
@@ -619,10 +621,29 @@
 // Skin
 
 .navbar-light {
-	&.collapse-basic-search-transparent {
-		.btn,
+	&.collapse-basic-search-transparent .basic-search {
+		.btn {
+			color: $collapse-basic-search-transparent-light-btn-color;
+
+			&:focus {
+				color: $collapse-basic-search-transparent-light-btn-focus-color;
+			}
+		}
+
 		.form-control {
-			color: $navbar-light-color;
+			color: $collapse-basic-search-transparent-light-input-color;
+
+			&::placeholder {
+				color: $collapse-basic-search-transparent-light-input-placeholder-color;
+			}
+
+			&::placeholder:focus {
+				color: $collapse-basic-search-transparent-light-input-placeholder-focus-color;
+			}
+
+			&:focus {
+				color: $collapse-basic-search-transparent-light-input-focus-color;
+			}
 		}
 	}
 
@@ -648,6 +669,12 @@
 .navbar-light-bg {
 	background-color: $navbar-light-bg;
 	border-color: $navbar-light-border-color;
+
+	&.collapse-basic-search-transparent .basic-search {
+		&.focus:after {
+			background-color: $collapse-basic-search-transparent-light-focus-highlight;
+		}
+	}
 
 	.basic-search.open {
 		background-color: $navbar-light-bg;
@@ -679,10 +706,29 @@
 }
 
 .navbar-inverse {
-	&.collapse-basic-search-transparent {
-		.btn,
+	&.collapse-basic-search-transparent .basic-search {
+		.btn {
+			color: $collapse-basic-search-transparent-inverse-btn-color;
+
+			&:focus {
+				color: $collapse-basic-search-transparent-inverse-btn-focus-color;
+			}
+		}
+
 		.form-control {
-			color: $navbar-inverse-color;
+			color: $collapse-basic-search-transparent-inverse-input-color;
+
+			&::placeholder {
+				color: $collapse-basic-search-transparent-inverse-input-placeholder-color;
+			}
+
+			&:focus::placeholder {
+				color: $collapse-basic-search-transparent-inverse-input-placeholder-focus-color;
+			}
+
+			&:focus {
+				color: $collapse-basic-search-transparent-inverse-input-focus-color;
+			}
 		}
 	}
 
@@ -708,6 +754,12 @@
 .navbar-inverse-bg {
 	background-color: $navbar-inverse-bg;
 	border-color: $navbar-inverse-border-color;
+
+	&.collapse-basic-search-transparent .basic-search {
+		&.focus:after {
+			background-color: $collapse-basic-search-transparent-inverse-focus-highlight;
+		}
+	}
 
 	.basic-search.open {
 		background-color: $navbar-inverse-bg;

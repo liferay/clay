@@ -54,14 +54,9 @@ $navbar-light-active-highlight: $brand-primary !default;
 
 $navbar-light-toggler-border-color: $navbar-light-border-color !default;
 
-
-
-$navbar-light-collapsible-search-btn-secondary-bg: $navbar-light-bg !default;
-$navbar-light-collapsible-search-input-bg: $navbar-light-bg !default;
-
-$navbar-light-collapsible-search-highlight: null !default;
-$navbar-light-collapsible-search-focus-highlight: null !default;
-
+$collapse-basic-search-transparent-light-btn-focus-color: $navbar-light-active-highlight !default;
+$collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active-highlight !default;
+$collapse-basic-search-transparent-light-focus-highlight: $navbar-light-active-highlight !default;
 
 // Navbar Inverse
 
@@ -75,13 +70,11 @@ $navbar-inverse-disabled-color: #CACDD2 !default;
 $navbar-inverse-brand-color: $navbar-inverse-color !default;
 $navbar-inverse-brand-hover-color: $navbar-inverse-brand-color !default;
 
-$navbar-inverse-active-highlight: $brand-primary !default;
+$navbar-inverse-active-highlight: #2B4259 !default;
 
 $navbar-inverse-toggler-border-color: #FFF !default;
 
-$navbar-inverse-collapsible-search-btn-secondary-bg: $navbar-inverse-bg !default;
-$navbar-inverse-collapsible-search-btn-secondary-color: $navbar-inverse-color !default;
-$navbar-inverse-collapsible-search-input-bg: $navbar-inverse-bg !default;
-
-$navbar-inverse-collapsible-search-highlight: null !default;
-$navbar-inverse-collapsible-search-focus-highlight: null !default;
+$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-inverse-active-highlight !default;
+$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-inverse-active-highlight !default;
+$collapse-basic-search-transparent-inverse-input-placeholder-focus-color: $navbar-inverse-active-highlight !default;
+$collapse-basic-search-transparent-inverse-focus-highlight: $navbar-inverse-active-highlight !default;
