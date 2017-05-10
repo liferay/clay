@@ -50,21 +50,12 @@
 	}
 
 	.navbar.collapse-basic-search .basic-search {
-		// padding: 0;
-
 		.btn-secondary {
 			background-color: $body-bg;
 			border-radius: 0;
 			border-width: 0;
 			color: $brand-secondary;
 			padding: 8px 12px;
-			// height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
-			// padding-left: 12px;
-			// padding-right: 12px;
-
-			// @include media-breakpoint-up(md) {
-			// 	height: $navbar-height-desktop - $navbar-border-bottom-width - $navbar-border-top-width;
-			// }
 
 			&:focus {
 				box-shadow: none;
@@ -76,29 +67,8 @@
 		.form-control {
 			background-color: $body-bg;
 			border-width: 0;
-			// height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
-
-			// @include media-breakpoint-up(md) {
-			// 	height: $navbar-height-desktop - $navbar-border-bottom-width - $navbar-border-top-width;
-			// }
-
-			// @include media-breakpoint-down(sm) {
-			// 	padding-left: 45px;
-			// }
-		}
-
-		.input-group-btn {
-			// padding-right: 12px;
-
-			// @include media-breakpoint-up(md) {
-			// 	padding-right: 0;
-			// }
 		}
 	}
-
-// 	.navbar .basic-search-close {
-// 		height: $navbar-height;
-// 	}
 }
 
 // Navbar Dropdowns
@@ -135,17 +105,6 @@
 // }
 
 // Skin
-
-// .navbar-default {
-// 	@if (variable-exists(atlas-theme)) {
-// 		border-width: $navbar-default-border-width;
-// 		min-height: $navbar-default-height;
-
-// 		@include media-breakpoint-up(md) {
-// 			min-height: $navbar-default-desktop-height;
-// 		}
-// 	}
-// }
 
 .navbar-light-bg.collapse-basic-search .basic-search {
 	&.open {
