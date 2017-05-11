@@ -361,6 +361,10 @@
 			padding-right: $navbar-link-padding-x;
 		}
 
+		.form-control {
+			margin-bottom: 0;
+		}
+
 		.input-group {
 			width: 100%;
 		}
@@ -417,6 +421,11 @@
 		flex-grow: 1;
 		flex-wrap: wrap;
 		justify-content: space-between;
+	}
+
+	.nav-item {
+		align-items: center;
+		display: flex;
 	}
 
 	.navbar-nav .nav-link {
@@ -562,6 +571,11 @@
 						flex-grow: 1;
 						flex-wrap: wrap;
 						justify-content: space-between;
+					}
+
+					.nav-item {
+						align-items: center;
+						display: flex;
 					}
 
 					.navbar-nav .nav-link {
