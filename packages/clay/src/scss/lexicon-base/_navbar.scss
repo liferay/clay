@@ -333,25 +333,6 @@
 	border-style: solid;
 	border-width: $navbar-border-width;
 
-	> .form-check {
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		margin: 0;
-		padding-left: $navbar-link-padding-x;
-		padding-right: $navbar-link-padding-x;
-
-		.form-check-input {
-			margin-left: 0;
-			margin-top: 0;
-		}
-
-		.form-check-label {
-			display: flex;
-			padding-left: 0;
-		}
-	}
-
 	.form-inline {
 		align-items: center;
 		flex-wrap: nowrap;
@@ -378,6 +359,25 @@
 .navbar-brand {
 	padding-left: $navbar-brand-padding-x;
 	padding-right: $navbar-brand-padding-x;
+}
+
+.navbar-nav .nav-item > .form-check {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding-left: $navbar-link-padding-x;
+	padding-right: $navbar-link-padding-x;
+
+	.form-check-input {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	.form-check-label {
+		display: flex;
+		padding-left: 0;
+	}
 }
 
 .navbar-nav .nav-link,
@@ -494,7 +494,7 @@
 				}
 			}
 
-			> .form-check {
+			.navbar-nav .nav-item > .form-check {
 				@if not ($navbar-link-padding-x-desktop == 0.5rem) {
 					padding-left: $navbar-link-padding-x-desktop;
 					padding-right: $navbar-link-padding-x-desktop;
@@ -649,7 +649,7 @@
 							}
 						}
 
-						> .form-check {
+						.navbar-nav .nav-item > .form-check {
 							@if not ($navbar-link-padding-x-desktop == 0.5rem) {
 								padding-left: $navbar-link-padding-x-desktop;
 								padding-right: $navbar-link-padding-x-desktop;
