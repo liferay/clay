@@ -404,6 +404,7 @@
 // TODO: Move stuff to placeholder/mixin? duplicates .navbar-expand below.
 
 .navbar-expand {
+	flex-wrap: wrap;
 	justify-content: space-between;
 
 	.form-inline {
