@@ -380,8 +380,9 @@
 	}
 }
 
+.navbar-expand .navbar-nav .nav-link, // Override BS4 style
 .navbar-nav .nav-link,
-.navbar-expand .navbar-nav .nav-link {
+.navbar-nav .navbar-text {
 	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
 		padding-bottom: $navbar-link-padding-y;
 		padding-top: $navbar-link-padding-y;
@@ -501,7 +502,8 @@
 				}
 			}
 
-			.navbar-nav .nav-link {
+			.navbar-nav .nav-link,
+			.navbar-nav .navbar-text {
 				@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
 					padding-bottom: $navbar-link-padding-y-desktop;
 					padding-top: $navbar-link-padding-y-desktop;
@@ -656,7 +658,8 @@
 							}
 						}
 
-						.navbar-nav .nav-link {
+						.navbar-nav .nav-link,
+						.navbar-nav .navbar-text {
 							@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
 								padding-bottom: $navbar-link-padding-y-desktop;
 								padding-top: $navbar-link-padding-y-desktop;
