@@ -364,6 +364,10 @@ body.fixed {
   float: left;
 }
 
+.uxgl-dropdown-display .dropdown-wide-container .dropdown-menu {
+  display: flex;
+}
+
 .uxgl-dropdown-display .mega-menu .dropdown-menu {
   float: left;
   max-width: 100%;
