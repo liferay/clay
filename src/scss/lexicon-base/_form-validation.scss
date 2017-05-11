@@ -84,11 +84,6 @@
 	font-size: $form-text-font-size;
 }
 
-.form-control-feedback .lexicon-icon,
-.form-text .lexicon-icon {
-	margin-top: -3px;
-}
-
 @if (variable-exists(atlas-theme)) {
 	.has-success {
 		select.form-control:not([multiple]):not([size]) {

@@ -11,10 +11,6 @@
 	position: absolute;
 	text-align: center;
 	top: $sticker-gutter-width;
-
-	.lexicon-icon {
-		margin-top: -1px;
-	}
 }
 
 .sticker-static {
@@ -92,7 +88,6 @@
 
 	.lexicon-icon {
 		height: $sticker-sm-font-size;
-		margin-top: -2px;
 		width: $sticker-sm-font-size;
 	}
 }
@@ -104,7 +99,6 @@
 
 	.lexicon-icon {
 		height: $sticker-lg-font-size;
-		margin-top: -3px;
 		width: $sticker-lg-font-size;
 	}
 }
