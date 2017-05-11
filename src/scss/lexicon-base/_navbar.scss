@@ -428,6 +428,11 @@
 		display: flex;
 	}
 
+	.navbar-nav .nav-btn {
+		margin-left: $navbar-link-padding-x;
+		margin-right: $navbar-link-padding-x;
+	}
+
 	.navbar-nav .nav-link {
 		&.active:after {
 			background-color: $navbar-active-highlight;
@@ -480,7 +485,8 @@
 				}
 			}
 
-			.form-inline {
+			.form-inline,
+			.navbar-nav .nav-btn {
 				@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
 					margin-left: $navbar-link-padding-x-desktop;
 					margin-right: $navbar-link-padding-x-desktop;
@@ -578,6 +584,11 @@
 						display: flex;
 					}
 
+					.navbar-nav .nav-btn {
+						margin-left: $navbar-link-padding-x;
+						margin-right: $navbar-link-padding-x;
+					}
+
 					.navbar-nav .nav-link {
 						&.active:after {
 							background-color: $navbar-active-highlight;
@@ -629,7 +640,8 @@
 							}
 						}
 
-						.form-inline {
+						.form-inline,
+						.navbar-nav .nav-btn {
 							@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
 								margin-left: $navbar-link-padding-x-desktop;
 								margin-right: $navbar-link-padding-x-desktop;
