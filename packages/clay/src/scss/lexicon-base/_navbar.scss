@@ -354,6 +354,10 @@
 	.form-inline-autofit {
 		flex-direction: row;
 	}
+
+	.navbar-d-breakpoint-block {
+		display: none !important;
+	}
 }
 
 .navbar-brand {
@@ -487,6 +491,14 @@
 				}
 			}
 
+			.navbar-d-breakpoint-block {
+				display: block !important;
+			}
+
+			.navbar-d-breakpoint-none {
+				display: none !important;
+			}
+
 			.form-inline,
 			.navbar-nav .nav-btn {
 				@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
@@ -580,6 +592,14 @@
 						flex-grow: 1;
 						flex-wrap: wrap;
 						justify-content: space-between;
+					}
+
+					.navbar-d-breakpoint-block {
+						display: block !important;
+					}
+
+					.navbar-d-breakpoint-none {
+						display: none !important;
 					}
 
 					.nav-item {
