@@ -16,6 +16,7 @@
 }
 
 .dropdown-item {
+	word-wrap: break-word;
 	white-space: normal;
 }
 
@@ -108,10 +109,7 @@
 		}
 	}
 
-	&:focus {
-		text-decoration: none;
-	}
-
+	&:focus,
 	&:hover {
 		text-decoration: none;
 	}
