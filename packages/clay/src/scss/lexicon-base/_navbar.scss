@@ -32,6 +32,10 @@
 // 	}
 // }
 
+.navbar-nav {
+	flex-direction: row;
+}
+
 .navbar-toggler {
 	height: $navbar-toggler-height;
 	margin-bottom: $navbar-toggler-margin-y;
@@ -539,6 +543,11 @@
 
 		@if not ($infix == '') {
 			&#{$infix} {
+				> .navbar-nav .nav-item {
+					align-items: center;
+					display: flex;
+				}
+
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
@@ -574,6 +583,20 @@
 							border-color: $navbar-light-border-color;
 						}
 					}
+
+					.navbar-nav .dropdown-menu {
+						position: absolute;
+					}
+
+					.navbar-collapse {
+						.dropdown-menu {
+							position: static;
+						}
+
+						.navbar-nav {
+							flex-direction: column;
+						}
+					}
 				}
 
 				@include media-breakpoint-up($next) {
@@ -592,6 +615,10 @@
 						flex-grow: 1;
 						flex-wrap: wrap;
 						justify-content: space-between;
+
+						.navbar-nav {
+							flex-wrap: wrap;
+						}
 					}
 
 					.navbar-d-breakpoint-block {
