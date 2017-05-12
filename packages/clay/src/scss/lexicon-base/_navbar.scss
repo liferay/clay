@@ -389,8 +389,7 @@
 }
 
 .navbar-expand .navbar-nav .nav-link, // Override BS4 style
-.navbar-nav .nav-link,
-.navbar-nav .navbar-text {
+.navbar-nav .nav-link {
 	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
 		padding-bottom: $navbar-link-padding-y;
 		padding-top: $navbar-link-padding-y;
@@ -402,6 +401,10 @@
 	}
 
 	white-space: nowrap;
+}
+
+.navbar-nav .navbar-text {
+	padding: $navbar-link-padding-y $navbar-link-padding-x;
 }
 
 .navbar-nav .nav-item {
