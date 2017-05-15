@@ -337,21 +337,13 @@
 	border-style: solid;
 	border-width: $navbar-border-width;
 
-	.form-inline {
+	.navbar-form {
 		align-items: center;
-		flex-wrap: nowrap;
+		display: flex;
 
 		@if not ($navbar-link-padding-x == 0.5rem) {
 			padding-left: $navbar-link-padding-x;
 			padding-right: $navbar-link-padding-x;
-		}
-
-		.form-control {
-			margin-bottom: 0;
-		}
-
-		.input-group {
-			width: 100%;
 		}
 	}
 
@@ -388,6 +380,18 @@
 	}
 }
 
+.navbar-form-autofit {
+	flex-grow: 1;
+
+	form {
+		width: 100%;
+	}
+
+	.form-inline .form-control {
+		flex-grow: 1;
+	}
+}
+
 .navbar-expand .navbar-nav .nav-link, // Override BS4 style
 .navbar-nav .nav-link {
 	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
@@ -419,15 +423,11 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 
-	.form-inline {
+	.navbar-form {
 		margin-left: $navbar-link-padding-x;
 		margin-right: $navbar-link-padding-x;
 		padding-left: 0;
 		padding-right: 0;
-	}
-
-	.form-inline .form-control {
-		min-width: 100px;
 	}
 
 	.navbar-collapse {
@@ -506,7 +506,11 @@
 				display: none !important;
 			}
 
-			.form-inline,
+			.navbar-form.basic-search {
+				max-width: 220px;
+			}
+
+			.navbar-form,
 			.navbar-nav .nav-btn {
 				@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
 					margin-left: $navbar-link-padding-x-desktop;
@@ -603,15 +607,15 @@
 				}
 
 				@include media-breakpoint-up($next) {
-					.form-inline {
+					.navbar-form {
 						margin-left: $navbar-link-padding-x;
 						margin-right: $navbar-link-padding-x;
 						padding-left: 0;
 						padding-right: 0;
 					}
 
-					.form-inline .form-control {
-						min-width: 100px;
+					.navbar-form.basic-search {
+						max-width: 220px;
 					}
 
 					.navbar-collapse {
@@ -693,7 +697,7 @@
 							}
 						}
 
-						.form-inline,
+						.navbar-form,
 						.navbar-nav .nav-btn {
 							@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
 								margin-left: $navbar-link-padding-x-desktop;
