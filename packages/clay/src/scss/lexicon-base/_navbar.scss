@@ -224,6 +224,10 @@
 	.basic-search {
 		@include media-breakpoint-up(md) {
 			max-width: 220px;
+
+			&.navbar-form-autofit {
+				max-width: none;
+			}
 		}
 
 		.input-group {
