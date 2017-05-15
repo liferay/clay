@@ -79,27 +79,20 @@
 		}
 	}
 
-	.checkbox,
-	.radio {
+	.form-check {
 		margin: 0;
-	}
 
-	.checkbox input[type='checkbox'],
-	.radio input[type='radio'] {
-		margin-bottom: 0;
-		margin-right: 6px;
-	}
+		input[type='checkbox'],
+		input[type='radio'] {
+			margin-bottom: 0;
+			margin-right: 6px;
+		}
 
-	.checkbox label {
-		display: block;
-		padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-		padding-left: $dropdown-checkbox-label-spacer;
-	}
-
-	.radio label {
-		display: block;
-		padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-		padding-left: $dropdown-radio-label-spacer;
+		label {
+			display: block;
+			padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+			padding-left: $dropdown-form-check-label-spacer;
+		}
 	}
 
 	.form-group {
