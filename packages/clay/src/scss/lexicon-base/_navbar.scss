@@ -214,10 +214,18 @@
 			margin-right: 0;
 			padding-left: $navbar-link-padding-x;
 			padding-right: $navbar-link-padding-x;
+
+			> form {
+				width: 100%;
+			}
 		}
 	}
 
 	.basic-search {
+		@include media-breakpoint-up(md) {
+			max-width: 220px;
+		}
+
 		.input-group {
 			align-items: center;
 			margin-left: auto;
@@ -506,10 +514,6 @@
 				display: none !important;
 			}
 
-			.navbar-form.basic-search {
-				max-width: 220px;
-			}
-
 			.navbar-form,
 			.navbar-nav .nav-btn {
 				@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
@@ -612,10 +616,6 @@
 						margin-right: $navbar-link-padding-x;
 						padding-left: 0;
 						padding-right: 0;
-					}
-
-					.navbar-form.basic-search {
-						max-width: 220px;
 					}
 
 					.navbar-collapse {
