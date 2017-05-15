@@ -359,6 +359,17 @@
 		}
 	}
 
+	@include media-breakpoint-down(xs) {
+		.form-inline {
+			flex-wrap: nowrap;
+
+			> .form-control:not(:last-child) {
+				margin-bottom: 0;
+				margin-right: 15px;
+			}
+		}
+	}
+
 	.form-inline-autofit {
 		flex-direction: row;
 	}
