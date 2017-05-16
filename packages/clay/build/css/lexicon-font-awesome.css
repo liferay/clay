@@ -11959,6 +11959,22 @@ th .truncate-text {
 
 .dropdown-item {
   white-space: normal;
+  word-wrap: break-word;
+}
+
+.dropdown-item.active label,
+.dropdown-item.active .form-control-label,
+.dropdown-item.active .form-check-label {
+  color: #fff;
+}
+
+.dropdown-item .form-check {
+  margin-bottom: 0;
+}
+
+.dropdown-item .form-check-input {
+  float: left;
+  margin-right: 6px;
 }
 
 .dropdown-menu {
@@ -11977,76 +11993,8 @@ th .truncate-text {
   padding-top: 0.25rem;
 }
 
-.dropdown-menu form .checkbox:hover,
-.dropdown-menu form .radio:hover,
-.dropdown-menu form .form-group:hover {
-  background-color: #f7f7f9;
-  color: #1d1e1f;
-}
-
-.dropdown-menu form .checkbox.focus,
-.dropdown-menu form .radio.focus,
-.dropdown-menu form .form-group.focus {
-  background-color: #f7f7f9;
-  color: #1d1e1f;
-}
-
-.dropdown-menu form .checkbox.focus label,
-.dropdown-menu form .radio.focus label,
-.dropdown-menu form .form-group.focus label {
-  color: #1d1e1f;
-}
-
-.dropdown-menu form .checkbox.active,
-.dropdown-menu form .radio.active,
-.dropdown-menu form .form-group.active {
-  background-color: #0275d8;
-}
-
-.dropdown-menu form .checkbox.active label,
-.dropdown-menu form .radio.active label,
-.dropdown-menu form .form-group.active label {
-  color: #fff;
-}
-
-.dropdown-menu form .checkbox,
-.dropdown-menu form .radio {
-  margin: 0;
-}
-
-.dropdown-menu form .checkbox input[type='checkbox'],
-.dropdown-menu form .radio input[type='radio'] {
-  margin-bottom: 0;
-  margin-right: 6px;
-}
-
-.dropdown-menu form .checkbox label {
-  display: block;
-  padding: 0.25rem 1.5rem;
-  padding-left: 40px;
-}
-
-.dropdown-menu form .radio label {
-  display: block;
-  padding: 0.25rem 1.5rem;
-  padding-left: 40px;
-}
-
-.dropdown-menu form .form-group {
-  margin-bottom: 0;
-  padding: 0.25rem 1.5rem;
-}
-
 .dropdown-toggle:after {
   content: normal;
-}
-
-.dropdown-toggle:focus {
-  text-decoration: none;
-}
-
-.dropdown-toggle:hover {
-  text-decoration: none;
 }
 
 .inline-scroller {
