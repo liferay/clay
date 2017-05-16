@@ -25,11 +25,9 @@
 	border-color: $modal-header-border-color;
 	color: $modal-header-color;
 
-	@if (variable-exists(atlas-theme)) {
-		@include media-breakpoint-up(md) {
-			background-color: $modal-header-bg-desktop;
-			color: $modal-header-color-desktop;
-		}
+	@include media-breakpoint-up(md) {
+		background-color: $modal-header-bg-desktop;
+		color: $modal-header-color-desktop;
 	}
 }
 
@@ -80,12 +78,10 @@
 		right: 0;
 	}
 
-	@if (variable-exists(atlas-theme)) {
-		@include media-breakpoint-up(md) {
-			background-color: $modal-footer-bg-desktop;
-			color: $modal-footer-color-desktop;
-			position: relative;
-		}
+	@include media-breakpoint-up(md) {
+		background-color: $modal-footer-bg-desktop;
+		color: $modal-footer-color-desktop;
+		position: relative;
 	}
 }
 
@@ -189,9 +185,7 @@ button.modal-primary-action-button {
 		}
 
 		@include media-breakpoint-up(md) {
-			@if (variable-exists(atlas-theme)) {
-				color: $modal-header-close-color-desktop;
-			}
+			color: $modal-header-close-color-desktop;
 		}
 	}
 
@@ -223,9 +217,7 @@ button.modal-primary-action-button {
 			color: $modal-header-close-color;
 
 			@include media-breakpoint-up(md) {
-				@if (variable-exists(atlas-theme)) {
-					color: $modal-header-close-color-desktop;
-				}
+				color: $modal-header-close-color-desktop;
 			}
 		}
 	}
@@ -341,22 +333,18 @@ button.modal-primary-action-button {
 		border-color: $modal-inverse-header-border-color;
 		color: $modal-inverse-header-color;
 
-		@if (variable-exists(atlas-theme)) {
-			@include media-breakpoint-up(md) {
-				background-color: $modal-inverse-header-bg-desktop;
-				border-color: $modal-inverse-header-border-color-desktop;
-				color: $modal-inverse-header-color-desktop;
-			}
+		@include media-breakpoint-up(md) {
+			background-color: $modal-inverse-header-bg-desktop;
+			border-color: $modal-inverse-header-border-color-desktop;
+			color: $modal-inverse-header-color-desktop;
 		}
 
 		.close,
 		.modal-primary-action-button {
 			color: $modal-inverse-header-close-color;
 
-			@if (variable-exists(atlas-theme)) {
-				@include media-breakpoint-up(md) {
-					color: $modal-inverse-header-close-color-desktop;
-				}
+			@include media-breakpoint-up(md) {
+				color: $modal-inverse-header-close-color-desktop;
 			}
 		}
 	}
@@ -371,12 +359,10 @@ button.modal-primary-action-button {
 		border-color: $modal-inverse-footer-border-color;
 		color: $modal-inverse-footer-color;
 
-		@if (variable-exists(atlas-theme)) {
-			@include media-breakpoint-up(md) {
-				background-color: $modal-inverse-footer-bg-desktop;
-				border-color: $modal-inverse-footer-border-color-desktop;
-				color: $modal-inverse-footer-color-desktop;
-			}
+		@include media-breakpoint-up(md) {
+			background-color: $modal-inverse-footer-bg-desktop;
+			border-color: $modal-inverse-footer-border-color-desktop;
+			color: $modal-inverse-footer-color-desktop;
 		}
 	}
 }
