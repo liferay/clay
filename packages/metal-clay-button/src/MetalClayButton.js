@@ -72,11 +72,10 @@ MetalClayButton.STATE = {
 	 * @instance
 	 * @memberof MetalClayButton
 	 * @type {?string}
-	 * @default 'default'
+	 * @default undefined
 	 */
 	style: {
 		validator: validators.string,
-		value: 'default'
 	}
 };
 
