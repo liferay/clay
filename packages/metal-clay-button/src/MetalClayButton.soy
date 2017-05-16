@@ -84,11 +84,22 @@
 	{@param? type: string}
 	{@param? value: string}
 
-	{let $blockClass: $block ? ' btn-block' : '' /}
-	{let $sizeClass: $size ? ' btn-' + $size : '' /}
-	{let $styleClass: $style ? ' btn-' + $style : ' btn-default' /}
+	{let $classes kind="text"}
+		btn
+		{if $block}
+			{sp}btn-block
+		{/if}
+		{if $size}
+			{sp}btn-{$size}
+		{/if}
+		{if $style}
+			{sp}btn-{$style}
+			{else}
+			{sp}btn-default
+		{/if}
+	{/let}
 
-	class="btn{$blockClass}{$styleClass}{$sizeClass}"
+	class="{$classes}"
 
 	{if $ariaLabel}
 		aria-label="{$ariaLabel}"
