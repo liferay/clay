@@ -16,8 +16,24 @@
 }
 
 .dropdown-item {
-	word-wrap: break-word;
 	white-space: normal;
+	word-wrap: break-word;
+
+	&.active {
+		label,
+		.form-control-label,
+		.form-check-label {
+			color: $dropdown-link-active-color;
+		}
+	}
+
+	.form-check {
+		margin-bottom: 0;
+	}
+
+	.form-check-input {
+		margin-right: 6px;
+	}
 }
 
 .dropdown-menu {
@@ -50,55 +66,6 @@
 		@if (variable-exists(atlas-theme)) {
 			overflow: hidden;
 		}
-	}
-}
-
-.dropdown-menu form {
-	.checkbox,
-	.radio,
-	.form-group {
-		&:hover {
-			background-color: $dropdown-link-hover-bg;
-			color: $dropdown-link-hover-color;
-		}
-
-		&.focus {
-			background-color: $dropdown-link-hover-bg;
-			color: $dropdown-link-hover-color;
-
-			label {
-				color: $dropdown-link-hover-color;
-			}
-		}
-
-		&.active {
-			background-color: $dropdown-link-active-bg;
-
-			label {
-				color: $dropdown-link-active-color;
-			}
-		}
-	}
-
-	.form-check {
-		margin: 0;
-
-		input[type='checkbox'],
-		input[type='radio'] {
-			margin-bottom: 0;
-			margin-right: 6px;
-		}
-
-		label {
-			display: block;
-			padding: $dropdown-item-padding-y $dropdown-item-padding-x;
-			padding-left: $dropdown-form-check-label-spacer;
-		}
-	}
-
-	.form-group {
-		margin-bottom: 0;
-		padding: $dropdown-item-padding-y $dropdown-item-padding-x;
 	}
 }
 
