@@ -14,8 +14,8 @@ $input-font-size-sm-desktop: null !default;
 $input-height-desktop: null !default;
 $input-height-lg-desktop: null !default;
 $input-height-sm-desktop: null !default;
-$input-padding-x: null !default;
-$input-padding-y: null !default;
+$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: $input-btn-padding-y !default;
 
 $input-group-constrain-line-height: $input-height - $input-border-top-width - $input-border-bottom-width !default;
 

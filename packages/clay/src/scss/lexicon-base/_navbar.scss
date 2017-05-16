@@ -359,20 +359,20 @@
 		}
 	}
 
-	@include media-breakpoint-down(xs) {
-		.form-inline {
-			flex-wrap: nowrap;
+	// @include media-breakpoint-down(xs) {
+	// 	.form-inline {
+	// 		flex-wrap: nowrap;
 
-			> .form-control:not(:last-child) {
-				margin-bottom: 0;
-				margin-right: 15px;
-			}
-		}
-	}
+	// 		> .form-control:not(:last-child) {
+	// 			margin-bottom: 0;
+	// 			margin-right: 15px;
+	// 		}
+	// 	}
+	// }
 
-	.form-inline-autofit {
-		flex-direction: row;
-	}
+	// .form-inline-autofit {
+	// 	flex-direction: row;
+	// }
 
 	.navbar-d-breakpoint-block {
 		display: none !important;
@@ -404,15 +404,21 @@
 }
 
 .navbar-form-autofit {
+	flex-basis: 100px;
 	flex-grow: 1;
 
 	form {
+		display: flex;
 		width: 100%;
 	}
 
-	.form-inline .form-control {
-		flex-grow: 1;
-	}
+	// .form-inline {
+	// 	flex-grow: 1;
+
+	// 	.form-control {
+	// 		flex-grow: 1;
+	// 	}
+	// }
 }
 
 .navbar-expand .navbar-nav .nav-link, // Override BS4 style

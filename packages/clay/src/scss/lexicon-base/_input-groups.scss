@@ -116,8 +116,12 @@
 // Input Group Default
 
 .input-group-default {
-	.form-control:not(:first-child):not(:last-child) {
-		@include border-radius($input-border-radius);
+	.form-control {
+		&:not(:first-child),
+		&:not(:last-child),
+		&:not(:first-child):not(:last-child) {
+			@include border-radius($input-border-radius);
+		}
 	}
 
 	&.input-group-lg .form-control:not(:first-child):not(:last-child) {
@@ -147,6 +151,25 @@
 		}
 	}
 
+	.input-group-btn-inset {
+		margin-left: -40px;
+
+		.btn {
+			@include border-radius($btn-border-radius);
+
+			padding: 3px 10px;
+
+			&,
+			&:hover {
+				z-index: 4;
+			}
+		}
+	}
+
+	.form-control .input-group-inset {
+		margin-left: -40px;
+	}
+
 	.help-icon {
 		@include monospace(28px);
 	}
@@ -168,6 +191,46 @@
 			}
 		}
 	}
+}
+
+// Input Group Inset
+// TODO: Don't use fixed values
+
+.input-group-inset {
+	align-items: center;
+
+	.form-control {
+		padding-right: 45px;
+	}
+
+	.input-group-input {
+		width: 100%;
+	}
+}
+
+.input-group-inset-item {
+	left: 3px;
+	position: absolute;
+	z-index: 5;
+
+	.btn {
+		padding: ($input-btn-padding-y - 0.3125rem) ($input-btn-padding-x - 0.1875rem);
+	}
+
+	.btn-link {
+		box-shadow: none;
+	}
+
+	+ .input-group-input .form-control {
+		padding-left: 45px;
+		padding-right: $input-padding-x;
+	}
+}
+
+.input-group-input + .input-group-inset-item {
+	left: auto;
+	position: absolute;
+	right: 3px;
 }
 
 // Input Group Sizes
