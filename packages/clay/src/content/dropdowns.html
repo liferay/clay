@@ -308,7 +308,7 @@ section: Components
 						</a>
 						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
 							<form>
-								<div class="form-group">
+								<div class="dropdown-item">
 									<select class="form-control">
 										<option>1</option>
 										<option>2</option>
@@ -317,39 +317,51 @@ section: Components
 										<option>5</option>
 									</select>
 								</div>
-								<div class="form-group">
+								<div class="dropdown-item">
 									<label for="exampleInputEmail3">Email address</label>
 									<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
 								</div>
-								<div class="form-check">
-									<label class="form-check-label">
-										<input class="form-check-input" type="checkbox" value=""> Approved
-									</label>
+								<div class="dropdown-item">
+									<div class="form-check">
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" value=""> Approved
+										</label>
+									</div>
 								</div>
-								<div class="form-check">
-									<label class="form-check-label">
-										<input class="form-check-input" type="checkbox" value=""> Draft
-									</label>
+								<div class="dropdown-item">
+									<div class="form-check">
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" value=""> Draft
+										</label>
+									</div>
 								</div>
-								<div class="form-check">
-									<label class="form-check-label">
-										<input class="form-check-input" type="checkbox" value=""> Pending
-									</label>
+								<div class="dropdown-item">
+									<div class="form-check">
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" value=""> Pending
+										</label>
+									</div>
 								</div>
-								<div class="form-check">
-									<label class="form-check-label">
-										<input class="form-check-input" type="checkbox" value=""> Expired
-									</label>
+								<div class="dropdown-item">
+									<div class="form-check">
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" value=""> Expired
+										</label>
+									</div>
 								</div>
-								<div class="form-check">
-									<label class="form-check-label">
-										<input class="form-check-input" type="checkbox" value=""> Scheduled
-									</label>
+								<div class="dropdown-item">
+									<div class="form-check">
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" value=""> Scheduled
+										</label>
+									</div>
 								</div>
-								<div class="form-check">
-									<label class="form-check-label">
-										<input class="form-check-input" type="checkbox" value=""> Rejected
-									</label>
+								<div class="dropdown-item">
+									<div class="form-check">
+										<label class="form-check-label">
+											<input class="form-check-input" type="checkbox" value=""> Rejected
+										</label>
+									</div>
 								</div>
 							</form>
 							<a class="dropdown-item" href="#1">Something Outside</a>
@@ -502,20 +514,9 @@ section: Components
 		}
 	);
 
-	$('select, input[type="email"], input[type="checkbox"]').on(
-		'focus blur',
-		function(event) {
-			var el = $(this);
-
-			var selector = this.type === 'checkbox' ? '.checkbox' : '.form-group';
-
-			el.closest(selector).toggleClass('focus', event.type === 'focus');
-		}
-	);
-
 	$('input[type="checkbox"]').change(
 		function(event) {
-			$(this).closest('.checkbox').toggleClass('active', this.checked);
+			$(this).closest('.dropdown-item').toggleClass('active', this.checked);
 		}
 	);
 </script>
