@@ -50,7 +50,16 @@ label,
 	border-width: $input-border-width;
 	font-size: $input-font-size;
 	height: $input-height;
-	padding: $input-padding-y $input-padding-x;
+
+	@if not ($input-padding-y == $input-btn-padding-y) {
+		padding-bottom: $input-padding-y;
+		padding-top: $input-padding-y;
+	}
+
+	@if not ($input-padding-x == $input-btn-padding-x) {
+		padding-left: $input-padding-x;
+		padding-right: $input-padding-x;
+	}
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
@@ -208,6 +217,7 @@ fieldset[disabled] label {
 	> .btn,
 	> .form-control,
 	> .form-inline-group {
+		// TODO: Use different selector hard to override
 		&:not(:last-child) {
 			margin-bottom: 1rem;
 		}
@@ -243,6 +253,7 @@ fieldset[disabled] label {
 	.form-inline {
 		> label,
 		> .form-control-label {
+			// TODO: Use different selector hard to override
 			&:not(:last-child) {
 				margin-right: $grid-gutter-width-base / 2;
 			}
@@ -251,6 +262,7 @@ fieldset[disabled] label {
 		> .btn,
 		> .form-control,
 		> .form-inline-group {
+			// TODO: Use different selector hard to override
 			&:not(:last-child) {
 				margin-bottom: 0;
 				margin-right: $grid-gutter-width-base / 2;
