@@ -266,7 +266,10 @@ button.modal-primary-action-button {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: auto;
+
+	&.modal-dialog {
+		max-width: none;
+	}
 
 	@include media-breakpoint-up(md) {
 		bottom: 45px;
