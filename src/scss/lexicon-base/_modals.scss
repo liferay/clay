@@ -26,8 +26,6 @@
 	color: $modal-header-color;
 
 	@if (variable-exists(atlas-theme)) {
-		text-align: center;
-
 		@include media-breakpoint-up(md) {
 			background-color: $modal-header-bg-desktop;
 			color: $modal-header-color-desktop;
@@ -95,13 +93,13 @@
 
 .modal-title {
 	display: block;
+	margin-left: auto;
+	margin-right: auto;
 
 	@if (variable-exists(atlas-theme)) {
 		font-size: 19px;
 		font-weight: normal;
 	}
-
-	text-align: center;
 
 	@include text-truncate;
 }
@@ -353,7 +351,7 @@ button.modal-primary-action-button {
 			color: $modal-inverse-header-close-color;
 
 			@if (variable-exists(atlas-theme)) {
-				@include media-breakpoint-up(md) {	
+				@include media-breakpoint-up(md) {
 					color: $modal-inverse-header-close-color-desktop;
 				}
 			}
