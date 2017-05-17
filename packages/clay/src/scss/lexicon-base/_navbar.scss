@@ -34,6 +34,10 @@
 
 .navbar-nav {
 	flex-direction: row;
+
+	.nav-link {
+		padding: $navbar-link-padding-y $navbar-link-padding-x;
+	}
 }
 
 .navbar-toggler {
@@ -654,6 +658,13 @@
 
 						.navbar-nav {
 							flex-direction: column;
+						}
+
+						.nav-link {
+							@if ($navbar-link-padding-x == 0.5rem) {
+								padding-left: 0;
+								padding-right: 0;
+							}
 						}
 					}
 				}
