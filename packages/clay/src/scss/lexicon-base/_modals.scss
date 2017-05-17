@@ -10,6 +10,13 @@
 	}
 }
 
+.modal-dialog,
+.modal-sm {
+	@include media-breakpoint-down(sm) {
+		max-width: none;
+	}
+}
+
 .modal-content {
 	overflow: auto;
 
