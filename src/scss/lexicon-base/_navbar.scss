@@ -352,25 +352,31 @@
 
 	border-style: solid;
 	border-width: $navbar-border-width;
-
-	.navbar-form {
-		align-items: center;
-		display: flex;
-
-		@if not ($navbar-link-padding-x == 0.5rem) {
-			padding-left: $navbar-link-padding-x;
-			padding-right: $navbar-link-padding-x;
-		}
-	}
-
-	.navbar-d-breakpoint-block {
-		display: none !important;
-	}
 }
 
 .navbar-brand {
 	padding-left: $navbar-brand-padding-x;
 	padding-right: $navbar-brand-padding-x;
+}
+
+.navbar-form {
+	align-items: center;
+	display: flex;
+
+	@if not ($navbar-link-padding-x == 0.5rem) {
+		padding-left: $navbar-link-padding-x;
+		padding-right: $navbar-link-padding-x;
+	}
+}
+
+.navbar-form-autofit {
+	flex-basis: 100px;
+	flex-grow: 1;
+
+	form {
+		display: flex;
+		width: 100%;
+	}
 }
 
 .navbar-nav .nav-item > .form-check {
@@ -392,21 +398,9 @@
 	}
 }
 
-.navbar-form-autofit {
-	flex-basis: 100px;
-	flex-grow: 1;
-
-	form {
-		display: flex;
-		width: 100%;
-	}
-}
-
 // TODO: Reduce selectors for .navbar-overlay-*-down skins
 
 @mixin navbar-overlay() {
-	background-color: $body-bg;
-
 	@include border-radius($navbar-border-radius);
 
 	bottom: 0;
@@ -426,33 +420,29 @@
 	}
 }
 
-.navbar .navbar-overlay {
+.navbar-overlay {
+	background-color: $body-bg;
+}
+
+.navbar-overlay-up {
 	@include navbar-overlay;
 }
 
-.navbar-light-bg .navbar-overlay {
-	background-color: $navbar-light-bg;
-}
-
-.navbar-inverse-bg .navbar-overlay {
-	background-color: $navbar-inverse-bg;
-}
-
 @each $breakpoint in map-keys($grid-breakpoints) {
-	.navbar .navbar-overlay-#{$breakpoint}-down {
+	.navbar-overlay-#{$breakpoint}-down {
 		@include media-breakpoint-down($breakpoint) {
 			@include navbar-overlay;
 		}
 	}
-
-	.navbar-light-bg .navbar-overlay-#{$breakpoint}-down {
-		background-color: $navbar-light-bg;
-	}
-
-	.navbar-inverse-bg .navbar-overlay-#{$breakpoint}-down {
-		background-color: $navbar-inverse-bg;
-	}
 }
+
+// Navbar Display Utilities
+
+.navbar-d-breakpoint-block {
+	display: none !important;
+}
+
+// Navbar Item Spacing
 
 .navbar-expand .navbar-nav .nav-link, // Override BS4 style
 .navbar-nav .nav-link {
@@ -479,6 +469,7 @@
 	}
 }
 
+// Navbar Expand
 // TODO: Move stuff to placeholder/mixin? duplicates .navbar-expand below.
 
 .navbar-expand {
@@ -873,6 +864,10 @@
 			background-color: $navbar-light-disabled-bg;
 		}
 	}
+
+	.navbar-overlay {
+		background-color: $navbar-light-bg;
+	}
 }
 
 .navbar-inverse {
@@ -957,5 +952,9 @@
 		&.disabled {
 			background-color: $navbar-inverse-disabled-bg;
 		}
+	}
+
+	.navbar-overlay {
+		background-color: $navbar-inverse-bg;
 	}
 }
