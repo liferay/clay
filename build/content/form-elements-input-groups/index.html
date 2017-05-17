@@ -591,6 +591,81 @@
 	</div>
 </div>
 
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="input-group-inset"><a class="heading-anchor" href="#input-group-inset"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Input Group Inset</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Add class <code class="code">input-group-inset</code> to <code class="code">input-group</code> to place a button or other stuff inside the input.</p>
+		</blockquote>
+
+		<div class="alert alert-warning">
+			You will need to adjust <code class="code">padding-left</code>, <code class="code">padding-right</code>, or both on <code class="code">.input-group-input .form-control</code> depending on what is inside <code class="code">.input-group-inset</code>.
+		</div>
+
+		<form class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<div class="input-group input-group-inset">
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Search..." type="text">
+						</div>
+						<span class="input-group-inset-item">
+							<button class="btn btn-link d-md-none" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="../../images/icons/icons.svg#times">
+								</svg>
+							</button>
+							<button class="btn btn-link d-none d-md-inline-block" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
+						</span>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group input-group-inset">
+						<span class="input-group-inset-item">
+							<button class="btn btn-link" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
+						</span>
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Search..." type="text">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<div class="input-group input-group-inset">
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Enter Email..." type="email" style="padding-right: 92px;">
+						</div>
+						<span class="input-group-inset-item">
+							<button class="btn btn-secondary" type="button">Submit</button>
+						</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group input-group-inset">
+						<span class="input-group-inset-item">
+							<button class="btn btn-secondary" type="button">Submit</button>
+						</span>
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Enter Email..." type="email" style="padding-left: 92px;">
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
 <script>
 	$('[data-toggle="popover"]').popover(
 		{
