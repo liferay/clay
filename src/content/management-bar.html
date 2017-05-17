@@ -51,7 +51,7 @@ section: Components
 					</a>
 				</li>
 			</ul>
-			<div class="navbar-form navbar-form-autofit navbar-overlay-sm-down">
+			<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 				<form role="search">
 					<div class="input-group input-group-inset">
 						<div class="input-group-input">
@@ -144,7 +144,7 @@ section: Components
 					</a>
 				</li>
 			</ul>
-			<div class="navbar-form navbar-form-autofit navbar-overlay-sm-down">
+			<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 				<form role="search">
 					<div class="input-group input-group-inset">
 						<div class="input-group-input">
@@ -237,7 +237,7 @@ section: Components
 					</a>
 				</li>
 			</ul>
-			<div class="navbar-form navbar-form-autofit navbar-overlay-sm-down">
+			<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 				<form role="search">
 					<div class="input-group input-group-inset">
 						<div class="input-group-input">
@@ -336,7 +336,7 @@ section: Components
 					</a>
 				</li>
 			</ul>
-			<div class="navbar-form navbar-form-autofit navbar-overlay-sm-down">
+			<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 				<form role="search">
 					<div class="input-group input-group-inset">
 						<div class="input-group-input">
@@ -380,10 +380,10 @@ section: Components
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="btn btn-secondary clay-site-open-overlay nav-btn" href="#1">Open Overlay</a>
+					<a class="btn btn-secondary clay-site-open-overlay-up nav-btn" href="#1">Open Overlay</a>
 				</li>
 			</ul>
-			<div class="navbar-overlay">
+			<div class="navbar-overlay navbar-overlay-up">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<div class="form-check">
@@ -421,7 +421,7 @@ section: Components
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="btn btn-secondary clay-site-close-overlay nav-btn" href="#1">Close Overlay</a>
+						<a class="btn btn-secondary clay-site-close-overlay-up nav-btn" href="#1">Close Overlay</a>
 					</li>
 				</ul>
 			</div>
@@ -613,11 +613,11 @@ section: Components
 		$(this).closest('.navbar-overlay-sm-down').removeClass('show');
 	});
 
-	$('.clay-site-open-overlay').on('click', function(event) {
-		$(this).closest('.navbar').find('.navbar-overlay').addClass('show');
+	$('.clay-site-open-overlay-up').on('click', function(event) {
+		$(this).closest('.navbar').find('.navbar-overlay-up').addClass('show');
 	});
 
-	$('.clay-site-close-overlay').on('click', function(event) {
-		$(this).closest('.navbar-overlay').removeClass('show');
+	$('.clay-site-close-overlay-up').on('click', function(event) {
+		$(this).closest('.navbar-overlay-up').removeClass('show');
 	});
 </script>
