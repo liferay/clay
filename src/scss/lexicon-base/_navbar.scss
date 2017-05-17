@@ -421,6 +421,58 @@
 	// }
 }
 
+// TODO: Reduce selectors for .navbar-overlay-*-down skins
+
+@mixin navbar-overlay() {
+	background-color: $body-bg;
+
+	@include border-radius($navbar-border-radius);
+
+	bottom: 0;
+	display: none;
+	justify-content: space-between;
+	left: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding: $navbar-padding-y $navbar-padding-x;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: $zindex-dropdown - 1;
+
+	&.show {
+		display: flex;
+	}
+}
+
+.navbar .navbar-overlay {
+	@include navbar-overlay;
+}
+
+.navbar-light-bg .navbar-overlay {
+	background-color: $navbar-light-bg;
+}
+
+.navbar-inverse-bg .navbar-overlay {
+	background-color: $navbar-inverse-bg;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	.navbar .navbar-overlay-#{$breakpoint}-down {
+		@include media-breakpoint-down($breakpoint) {
+			@include navbar-overlay;
+		}
+	}
+
+	.navbar-light-bg .navbar-overlay-#{$breakpoint}-down {
+		background-color: $navbar-light-bg;
+	}
+
+	.navbar-inverse-bg .navbar-overlay-#{$breakpoint}-down {
+		background-color: $navbar-inverse-bg;
+	}
+}
+
 .navbar-expand .navbar-nav .nav-link, // Override BS4 style
 .navbar-nav .nav-link {
 	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
@@ -453,10 +505,8 @@
 	justify-content: space-between;
 
 	.navbar-form {
-		margin-left: $navbar-link-padding-x;
-		margin-right: $navbar-link-padding-x;
-		padding-left: 0;
-		padding-right: 0;
+		padding-left: $navbar-link-padding-x;
+		padding-right: $navbar-link-padding-x;
 	}
 
 	.navbar-collapse {
@@ -535,7 +585,7 @@
 				display: none !important;
 			}
 
-			.navbar-form,
+			// .navbar-form,
 			.navbar-nav .nav-btn {
 				@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
 					margin-left: $navbar-link-padding-x-desktop;
@@ -543,6 +593,7 @@
 				}
 			}
 
+			.navbar-form,
 			.navbar-nav .nav-item > .form-check {
 				@if not ($navbar-link-padding-x-desktop == 0.5rem) {
 					padding-left: $navbar-link-padding-x-desktop;
@@ -633,10 +684,8 @@
 
 				@include media-breakpoint-up($next) {
 					.navbar-form {
-						margin-left: $navbar-link-padding-x;
-						margin-right: $navbar-link-padding-x;
-						padding-left: 0;
-						padding-right: 0;
+						padding-left: $navbar-link-padding-x;
+						padding-right: $navbar-link-padding-x;
 					}
 
 					.navbar-collapse {
@@ -718,7 +767,7 @@
 							}
 						}
 
-						.navbar-form,
+						// .navbar-form,
 						.navbar-nav .nav-btn {
 							@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
 								margin-left: $navbar-link-padding-x-desktop;
@@ -726,6 +775,7 @@
 							}
 						}
 
+						.navbar-form,
 						.navbar-nav .nav-item > .form-check {
 							@if not ($navbar-link-padding-x-desktop == 0.5rem) {
 								padding-left: $navbar-link-padding-x-desktop;
