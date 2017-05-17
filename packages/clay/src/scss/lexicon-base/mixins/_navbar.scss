@@ -1,0 +1,22 @@
+// Styles the `.navbar-overlay-*-down` and `.navbar-overlay-up` components to
+// fill the full width and height of the Navbar.
+
+@mixin navbar-overlay() {
+	@include border-radius($navbar-border-radius);
+
+	bottom: 0;
+	display: none;
+	justify-content: space-between;
+	left: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding: $navbar-padding-y $navbar-padding-x;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: $zindex-navbar-overlay;
+
+	&.show {
+		display: flex;
+	}
+}
