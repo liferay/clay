@@ -266,7 +266,7 @@
 					</a>
 				</li>
 			</ul>
-			<div class="navbar-form navbar-form-autofit navbar-overlay-sm-down">
+			<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 				<form role="search">
 					<div class="input-group input-group-inset">
 						<div class="input-group-input">
@@ -359,7 +359,7 @@
 					</a>
 				</li>
 			</ul>
-			<div class="navbar-form navbar-form-autofit navbar-overlay-sm-down">
+			<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 				<form role="search">
 					<div class="input-group input-group-inset">
 						<div class="input-group-input">
@@ -452,7 +452,7 @@
 					</a>
 				</li>
 			</ul>
-			<div class="navbar-form navbar-form-autofit navbar-overlay-sm-down">
+			<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 				<form role="search">
 					<div class="input-group input-group-inset">
 						<div class="input-group-input">
@@ -512,6 +512,17 @@
 	<div class="col-md-12">
 		<h3 id="navbar-management-bar-example-2"><a class="heading-anchor" href="#navbar-management-bar-example-2"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar Management Bar Example 2</h3>
 
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Use <code class="code">navbar-overlay navbar-overlay-up</code> on any direct descendant of navbar to create an overlay on top of the navbar with alternate content, useful for expanding search bars or an alternate navbar that depends on some state in your application. Toggle the <code class="code">navbar-overlay</code>&apos;s visibility by adding or removing the class <code class="code">show</code> to <code class="code">navbar-overlay</code>.</p>
+
+				<div><code class="code">navbar-overlay-up</code> overlays the navbar at all screen widths.</div>
+				<div><code class="code">navbar-overlay-lg-down</code>: 1199px and below</div>
+				<div><code class="code">navbar-overlay-md-down</code>: 991px and below</div>
+				<div><code class="code">navbar-overlay-sm-down</code>: 767px and below</div>
+				<div><code class="code">navbar-overlay-xs-down</code>: 575px and below</div>
+			<p></p>
+		</blockquote>
+
 		<nav class="navbar navbar-expand navbar-light navbar-light-bg">
 			<ul class="navbar-nav">
 				<li class="nav-item">
@@ -551,7 +562,7 @@
 					</a>
 				</li>
 			</ul>
-			<div class="navbar-form navbar-form-autofit navbar-overlay-sm-down">
+			<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
 				<form role="search">
 					<div class="input-group input-group-inset">
 						<div class="input-group-input">
@@ -595,10 +606,10 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="btn btn-secondary clay-site-open-overlay nav-btn" href="#1">Open Overlay</a>
+					<a class="btn btn-secondary clay-site-open-overlay-up nav-btn" href="#1">Open Overlay</a>
 				</li>
 			</ul>
-			<div class="navbar-overlay">
+			<div class="navbar-overlay navbar-overlay-up">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<div class="form-check">
@@ -636,7 +647,7 @@
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="btn btn-secondary clay-site-close-overlay nav-btn" href="#1">Close Overlay</a>
+						<a class="btn btn-secondary clay-site-close-overlay-up nav-btn" href="#1">Close Overlay</a>
 					</li>
 				</ul>
 			</div>
@@ -828,12 +839,12 @@
 		$(this).closest('.navbar-overlay-sm-down').removeClass('show');
 	});
 
-	$('.clay-site-open-overlay').on('click', function(event) {
-		$(this).closest('.navbar').find('.navbar-overlay').addClass('show');
+	$('.clay-site-open-overlay-up').on('click', function(event) {
+		$(this).closest('.navbar').find('.navbar-overlay-up').addClass('show');
 	});
 
-	$('.clay-site-close-overlay').on('click', function(event) {
-		$(this).closest('.navbar-overlay').removeClass('show');
+	$('.clay-site-close-overlay-up').on('click', function(event) {
+		$(this).closest('.navbar-overlay-up').removeClass('show');
 	});
 </script>
 	</div>
