@@ -258,10 +258,14 @@
 						</div>
 					</li>
 				</ul>
-				<form class="form-inline form-inline-autofit" role="search">
-					<input class="form-control" placeholder="Search" type="text">
-					<button class="btn btn-secondary" type="submit">Submit</button>
-				</form>
+				<div class="navbar-form navbar-form-autofit">
+					<form role="search">
+						<div class="form-inline">
+							<input class="form-control" placeholder="Search" type="text">
+							<button class="btn btn-secondary" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="disabled nav-link" href="#1">Disabled</a></li>
 					<li class="dropdown nav-item">
@@ -317,10 +321,14 @@
 						</div>
 					</li>
 				</ul>
-				<form class="form-inline form-inline-autofit" role="search">
-					<input class="form-control" placeholder="Search" type="text">
-					<button class="btn btn-secondary" type="submit">Submit</button>
-				</form>
+				<div class="navbar-form navbar-form-autofit">
+					<form role="search">
+						<div class="form-inline">
+							<input class="form-control" placeholder="Search" type="text">
+							<button class="btn btn-secondary" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="disabled nav-link" href="#1">Disabled</a></li>
 					<li class="dropdown nav-item">
@@ -370,10 +378,14 @@
 						</div>
 					</li>
 				</ul>
-				<form class="form-inline form-inline-autofit" role="search">
-					<input class="form-control" placeholder="Search" type="text">
-					<button class="btn btn-secondary" type="submit">Submit</button>
-				</form>
+				<div class="navbar-form navbar-form-autofit">
+					<form role="search">
+						<div class="form-inline">
+							<input class="form-control" placeholder="Search" type="text">
+							<button class="btn btn-secondary" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="disabled nav-link" href="#1">Disabled</a></li>
 					<li class="dropdown nav-item">
@@ -399,14 +411,12 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="navbar-with-basic-search"><a class="heading-anchor" href="#navbar-with-basic-search"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar with Basic Search</h3>
+		<h3 id="navbar-with-form"><a class="heading-anchor" href="#navbar-with-form"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar with Form</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>The basic search component was created specifically for search bars inside a navbar. We wanted a search bar that fills the remaining space. The minimum width of the input is 100px and maximum width is 300px.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>The class <code class="code">.navbar-form</code> should be wrapped around your form. It adds the proper spacing between your form and other navbar components e.g. <code class="code">.navbar-nav</code>.</p>
 
-			<p>When using <code>.basic-search</code>, elements should be floated around it. <code>.basic-search</code> should be <code>float: none;</code> and always be the last element declared in a group of floated elements.</p>
-
-			<p>Add class <code>basic-search-autofit</code> on the form to make basic-search fill remaining space. Tab order cannot be preserved with this pattern, the search bar is focused last.</p>
+			<p>The class <code class="code">.navbar-form-autofit</code> should be added to <code class="code">.navbar-form</code> to make the form expand to fill the remaining space.</p>
 		</blockquote>
 
 		<nav class="navbar navbar-expand-md">
@@ -440,32 +450,34 @@
 						</div>
 					</li>
 				</ul>
-				<form class="form-inline">
-					<div class="input-group">
-						<input class="form-control" placeholder=" Search..." type="text">
+				<div class="navbar-form">
+					<form>
+						<div class="input-group">
+							<input class="form-control" placeholder=" Search..." type="text">
 
-						<div class="dropdown-wide input-group-btn">
-							<button class="btn btn-secondary" data-toggle="dropdown" type="button">
-								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#angle-down">
-								</svg>
-							</button>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Action</a>
-								<a class="dropdown-item" href="#1">Another action</a>
-								<a class="dropdown-item" href="#1">Something else here</a>
-								<div class="dropdown-divider" role="separator"></div>
-								<a class="dropdown-item" href="#1">Separated link</a>
+							<div class="dropdown-wide input-group-btn">
+								<button class="btn btn-secondary" data-toggle="dropdown" type="button">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#angle-down">
+									</svg>
+								</button>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Action</a>
+									<a class="dropdown-item" href="#1">Another action</a>
+									<a class="dropdown-item" href="#1">Something else here</a>
+									<div class="dropdown-divider" role="separator"></div>
+									<a class="dropdown-item" href="#1">Separated link</a>
+								</div>
+
+								<button class="btn btn-secondary" type="submit">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#search">
+									</svg>
+								</button>
 							</div>
-
-							<button class="btn btn-secondary" type="submit">
-								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#search">
-								</svg>
-							</button>
 						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="#1">Link</a></li>
 					<li class="dropdown nav-item">
@@ -520,32 +532,34 @@
 						</div>
 					</li>
 				</ul>
-				<form class="form-inline">
-					<div class="input-group">
-						<input class="form-control" placeholder=" Search..." type="text">
+				<div class="navbar-form">
+					<form>
+						<div class="input-group">
+							<input class="form-control" placeholder=" Search..." type="text">
 
-						<div class="dropdown-wide input-group-btn">
-							<button class="btn btn-secondary" data-toggle="dropdown" type="button">
-								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#angle-down">
-								</svg>
-							</button>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li class="divider" role="separator"></li>
-								<li><a href="#">Separated link</a></li>
-							</ul>
+							<div class="dropdown-wide input-group-btn">
+								<button class="btn btn-secondary" data-toggle="dropdown" type="button">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#angle-down">
+									</svg>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li class="divider" role="separator"></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
 
-							<button class="btn btn-secondary" type="submit">
-								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#search">
-								</svg>
-							</button>
+								<button class="btn btn-secondary" type="submit">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#search">
+									</svg>
+								</button>
+							</div>
 						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="#1">Link</a></li>
 					<li class="dropdown nav-item">
@@ -598,32 +612,34 @@
 						</div>
 					</li>
 				</ul>
-				<form class="form-inline">
-					<div class="input-group">
-						<input class="form-control" placeholder=" Search..." type="text">
+				<div class="navbar-form">
+					<form>
+						<div class="input-group">
+							<input class="form-control" placeholder=" Search..." type="text">
 
-						<div class="dropdown-wide input-group-btn">
-							<button class="btn btn-secondary" data-toggle="dropdown" type="button">
-								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#angle-down">
-								</svg>
-							</button>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Action</a>
-								<a class="dropdown-item" href="#1">Another action</a>
-								<a class="dropdown-item" href="#1">Something else here</a>
-								<div class="dropdown-divider" role="separator"></div>
-								<a class="dropdown-item" href="#1">Separated link</a>
+							<div class="dropdown-wide input-group-btn">
+								<button class="btn btn-secondary" data-toggle="dropdown" type="button">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#angle-down">
+									</svg>
+								</button>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Action</a>
+									<a class="dropdown-item" href="#1">Another action</a>
+									<a class="dropdown-item" href="#1">Something else here</a>
+									<div class="dropdown-divider" role="separator"></div>
+									<a class="dropdown-item" href="#1">Separated link</a>
+								</div>
+
+								<button class="btn btn-secondary" type="submit">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#search">
+									</svg>
+								</button>
 							</div>
-
-							<button class="btn btn-secondary" type="submit">
-								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#search">
-								</svg>
-							</button>
 						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="#1">Link</a></li>
 					<li class="dropdown nav-item">
@@ -650,10 +666,8 @@
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="alternate-navbar-toggler-style"><a class="heading-anchor" href="#alternate-navbar-toggler-style"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Alternate Navbar Toggler Style</h3>
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>In mobile screen sizes, style the navbar toggler like a navbar navigation item with <code>navbar-toggler-page-name</code>.</p>
-
-			<p>Also use this pattern when you want the search bar to be easily accessible in both mobile and desktop.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>In mobile screen sizes, style the navbar toggler like a navbar navigation item with <code>navbar-toggler-page-name</code>. Also use this pattern when you want the search bar to be easily accessible in both mobile and desktop.</p>
 		</blockquote>
 
 		<nav class="collapse-basic-search navbar navbar-expand-md">
@@ -691,41 +705,43 @@
 				</ul>
 			</div>
 
-			<form action="../navbar" class="basic-search form-inline" method="GET">
-				<div class="input-group">
-					<div class="input-group-input">
-						<div class="basic-search-slider">
-							<button class="basic-search-close btn btn-secondary" type="button">
+			<div class="basic-search navbar-form">
+				<form action="../navbar" method="GET">
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" name="search" placeholder=" Search..." type="text">
+							</div>
+						</div>
+
+						<div class="dropdown-wide input-group-btn">
+							<button class="btn btn-secondary" data-toggle="dropdown" type="button">
 								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#times">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
 								</svg>
 							</button>
-							<input class="form-control" name="search" placeholder=" Search..." type="text">
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Action</a>
+								<a class="dropdown-item" href="#1">Another action</a>
+								<a class="dropdown-item" href="#1">Something else here</a>
+								<div class="dropdown-divider" role="separator"></div>
+								<a class="dropdown-item" href="#1">Separated link</a>
+							</div>
+
+							<button class="btn btn-secondary" type="submit">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
 						</div>
 					</div>
-
-					<div class="dropdown-wide input-group-btn">
-						<button class="btn btn-secondary" data-toggle="dropdown" type="button">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#angle-down">
-							</svg>
-						</button>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1">Action</a>
-							<a class="dropdown-item" href="#1">Another action</a>
-							<a class="dropdown-item" href="#1">Something else here</a>
-							<div class="dropdown-divider" role="separator"></div>
-							<a class="dropdown-item" href="#1">Separated link</a>
-						</div>
-
-						<button class="btn btn-secondary" type="submit">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#search">
-							</svg>
-						</button>
-					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</nav>
 
 		<nav class="collapse-basic-search navbar navbar-expand-md navbar-light navbar-light-bg">
@@ -762,41 +778,43 @@
 					<li class="nav-item"><a class="disabled nav-link" href="#1">Disabled</a></li>
 				</ul>
 			</div>
-			<form action="../navbar" class="basic-search form-inline" method="GET">
-				<div class="input-group">
-					<div class="input-group-input">
-						<div class="basic-search-slider">
-							<button class="basic-search-close btn btn-secondary" type="button">
+			<div class="basic-search navbar-form">
+				<form action="../navbar" method="GET">
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" name="search" placeholder=" Search..." type="text">
+							</div>
+						</div>
+
+						<div class="dropdown-wide input-group-btn">
+							<button class="btn btn-secondary" data-toggle="dropdown" type="button">
 								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#times">
+									<use xlink:href="../../images/icons/icons.svg#angle-down">
 								</svg>
 							</button>
-							<input class="form-control" name="search" placeholder=" Search..." type="text">
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Action</a>
+								<a class="dropdown-item" href="#1">Another action</a>
+								<a class="dropdown-item" href="#1">Something else here</a>
+								<div class="dropdown-divider" role="separator"></div>
+								<a class="dropdown-item" href="#1">Separated link</a>
+							</div>
+
+							<button class="btn btn-secondary" type="submit">
+								<svg class="lexicon-icon">
+									<use xlink:href="../../images/icons/icons.svg#search">
+								</svg>
+							</button>
 						</div>
 					</div>
-
-					<div class="dropdown-wide input-group-btn">
-						<button class="btn btn-secondary" data-toggle="dropdown" type="button">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#angle-down">
-							</svg>
-						</button>
-						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="#1">Action</a>
-							<a class="dropdown-item" href="#1">Another action</a>
-							<a class="dropdown-item" href="#1">Something else here</a>
-							<div class="dropdown-divider" role="separator"></div>
-							<a class="dropdown-item" href="#1">Separated link</a>
-						</div>
-
-						<button class="btn btn-secondary" type="submit">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#search">
-							</svg>
-						</button>
-					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</nav>
 
 		<nav class="collapse-basic-search navbar navbar-collapse-absolute navbar-expand-md navbar-inverse navbar-inverse-bg">
@@ -832,28 +850,29 @@
 					<li class="nav-item"><a class="disabled nav-link" href="#1">Disabled</a></li>
 				</ul>
 			</div>
-
-			<form action="../navbar" class="basic-search form-inline" method="GET">
-				<div class="input-group">
-					<div class="input-group-input">
-						<div class="basic-search-slider">
-							<button class="basic-search-close btn btn-secondary" type="button">
+			<div class="basic-search navbar-form">
+				<form action="../navbar" method="GET">
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" name="search" placeholder=" Search..." type="text">
+							</div>
+						</div>
+						<div class="input-group-btn">
+							<button class="btn btn-secondary" type="submit">
 								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#times">
+									<use xlink:href="../../images/icons/icons.svg#search">
 								</svg>
 							</button>
-							<input class="form-control" name="search" placeholder=" Search..." type="text">
 						</div>
 					</div>
-					<div class="input-group-btn">
-						<button class="btn btn-secondary" type="submit">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#search">
-							</svg>
-						</button>
-					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</nav>
 	</div>
 </div>
@@ -862,8 +881,8 @@
 	<div class="col-md-12">
 		<h3 id="navbar-expand"><a class="heading-anchor" href="#navbar-expand"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Navbar Expand</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use the navbar-no-collapse component to preserve desktop navbar styles in mobile. It&apos;s useful when there are only one or two links in the navbar; where collapsing doesn&apos;t make sense.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Use the <code class="code">.navbar-expand</code> class on <code class="code">.navbar</code> to preserve desktop navbar styles in mobile. It&apos;s useful when there are only one or two links in the navbar; where collapsing doesn&apos;t make sense.</p>
 		</blockquote>
 
 		<nav class="collapse-basic-search collapse-basic-search-transparent navbar navbar-expand">
@@ -888,28 +907,29 @@
 					</div>
 				</li>
 			</ul>
-
-			<form class="basic-search form-inline">
-				<div class="input-group">
-					<div class="input-group-input">
-						<div class="basic-search-slider">
-							<button class="basic-search-close btn btn-secondary" type="button">
+			<div class="basic-search navbar-form">
+				<form>
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" placeholder=" Search..." type="text">
+							</div>
+						</div>
+						<div class="input-group-btn">
+							<button class="btn btn-secondary" type="submit">
 								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#times">
+									<use xlink:href="../../images/icons/icons.svg#search">
 								</svg>
 							</button>
-							<input class="form-control" placeholder=" Search..." type="text">
 						</div>
 					</div>
-					<div class="input-group-btn">
-						<button class="btn btn-secondary" type="submit">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#search">
-							</svg>
-						</button>
-					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</nav>
 
 		<nav class="collapse-basic-search collapse-basic-search-transparent navbar navbar-expand navbar-light navbar-light-bg">
@@ -934,28 +954,29 @@
 					</div>
 				</li>
 			</ul>
-
-			<form class="basic-search form-inline">
-				<div class="input-group">
-					<div class="input-group-input">
-						<div class="basic-search-slider">
-							<button class="basic-search-close btn btn-secondary" type="button">
+			<div class="basic-search navbar-form">
+				<form>
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" placeholder=" Search..." type="text">
+							</div>
+						</div>
+						<div class="input-group-btn">
+							<button class="btn btn-secondary" type="submit">
 								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#times">
+									<use xlink:href="../../images/icons/icons.svg#search">
 								</svg>
 							</button>
-							<input class="form-control" placeholder=" Search..." type="text">
 						</div>
 					</div>
-					<div class="input-group-btn">
-						<button class="btn btn-secondary" type="submit">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#search">
-							</svg>
-						</button>
-					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</nav>
 
 		<nav class="collapse-basic-search collapse-basic-search-transparent navbar navbar-expand navbar-inverse navbar-inverse-bg">
@@ -980,28 +1001,29 @@
 					</div>
 				</li>
 			</ul>
-
-			<form class="basic-search form-inline">
-				<div class="input-group">
-					<div class="input-group-input">
-						<div class="basic-search-slider">
-							<button class="basic-search-close btn btn-secondary" type="button">
+			<div class="basic-search navbar-form">
+				<form>
+					<div class="input-group">
+						<div class="input-group-input">
+							<div class="basic-search-slider">
+								<button class="basic-search-close btn btn-secondary" type="button">
+									<svg class="lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#times">
+									</svg>
+								</button>
+								<input class="form-control" placeholder=" Search..." type="text">
+							</div>
+						</div>
+						<div class="input-group-btn">
+							<button class="btn btn-secondary" type="submit">
 								<svg class="lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#times">
+									<use xlink:href="../../images/icons/icons.svg#search">
 								</svg>
 							</button>
-							<input class="form-control" placeholder=" Search..." type="text">
 						</div>
 					</div>
-					<div class="input-group-btn">
-						<button class="btn btn-secondary" type="submit">
-							<svg class="lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#search">
-							</svg>
-						</button>
-					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</nav>
 	</div>
 </div>

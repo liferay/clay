@@ -8816,7 +8816,7 @@ a .icon-monospaced,
   margin-right: -1px;
 }
 
-.input-group-default .form-control:not(:first-child):not(:last-child) {
+.input-group-default .form-control:not(:first-child), .input-group-default .form-control:not(:last-child), .input-group-default .form-control:not(:first-child):not(:last-child) {
   border-radius: 0.25rem;
 }
 
@@ -8842,6 +8842,23 @@ a .icon-monospaced,
   margin-right: -10px;
 }
 
+.input-group-default .input-group-btn-inset {
+  margin-left: -40px;
+}
+
+.input-group-default .input-group-btn-inset .btn {
+  border-radius: 0.25rem;
+  padding: 3px 10px;
+}
+
+.input-group-default .input-group-btn-inset .btn, .input-group-default .input-group-btn-inset .btn:hover {
+  z-index: 4;
+}
+
+.input-group-default .form-control .input-group-inset {
+  margin-left: -40px;
+}
+
 .input-group-default .help-icon {
   height: 28px;
   line-height: 28px;
@@ -8850,6 +8867,43 @@ a .icon-monospaced,
 
 .input-group-addon-content {
   display: inline-block;
+}
+
+.input-group-inset {
+  align-items: center;
+}
+
+.input-group-inset .form-control {
+  padding-right: 45px;
+}
+
+.input-group-inset .input-group-input {
+  width: 100%;
+}
+
+.input-group-inset-item {
+  left: 3px;
+  position: absolute;
+  z-index: 5;
+}
+
+.input-group-inset-item .btn {
+  padding: 0.1875rem 0.8125rem;
+}
+
+.input-group-inset-item .btn-link {
+  box-shadow: none;
+}
+
+.input-group-inset-item + .input-group-input .form-control {
+  padding-left: 45px;
+  padding-right: 1rem;
+}
+
+.input-group-input + .input-group-inset-item {
+  left: auto;
+  position: absolute;
+  right: 3px;
 }
 
 .input-group-lg .input-group-addon.input-group-constrain {
@@ -9663,6 +9717,18 @@ button.list-group-heading {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+  .collapse-basic-search.navbar .basic-search > form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .collapse-basic-search .basic-search {
+    max-width: 220px;
+  }
+  .collapse-basic-search .basic-search.navbar-form-autofit {
+    max-width: none;
+  }
 }
 
 .collapse-basic-search .basic-search .input-group {
@@ -9782,21 +9848,9 @@ button.list-group-heading {
   border-width: 0 0 0 0;
 }
 
-.navbar .form-inline {
+.navbar .navbar-form {
   align-items: center;
-  flex-wrap: nowrap;
-}
-
-.navbar .form-inline .form-control {
-  margin-bottom: 0;
-}
-
-.navbar .form-inline .input-group {
-  width: 100%;
-}
-
-.navbar .form-inline-autofit {
-  flex-direction: row;
+  display: flex;
 }
 
 .navbar .navbar-d-breakpoint-block {
@@ -9822,6 +9876,182 @@ button.list-group-heading {
   padding-left: 0;
 }
 
+.navbar-form-autofit {
+  flex-basis: 100px;
+  flex-grow: 1;
+}
+
+.navbar-form-autofit form {
+  display: flex;
+  width: 100%;
+}
+
+.navbar .navbar-overlay {
+  background-color: #fff;
+  bottom: 0;
+  display: none;
+  justify-content: space-between;
+  left: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar .navbar-overlay.show {
+  display: flex;
+}
+
+.navbar-light-bg .navbar-overlay {
+  background-color: #F7F7F7;
+}
+
+.navbar-inverse-bg .navbar-overlay {
+  background-color: #292b2c;
+}
+
+@media (max-width: 575px) {
+  .navbar .navbar-overlay-xs-down {
+    background-color: #fff;
+    bottom: 0;
+    display: none;
+    justify-content: space-between;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+  }
+  .navbar .navbar-overlay-xs-down.show {
+    display: flex;
+  }
+}
+
+.navbar-light-bg .navbar-overlay-xs-down {
+  background-color: #F7F7F7;
+}
+
+.navbar-inverse-bg .navbar-overlay-xs-down {
+  background-color: #292b2c;
+}
+
+@media (max-width: 767px) {
+  .navbar .navbar-overlay-sm-down {
+    background-color: #fff;
+    bottom: 0;
+    display: none;
+    justify-content: space-between;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+  }
+  .navbar .navbar-overlay-sm-down.show {
+    display: flex;
+  }
+}
+
+.navbar-light-bg .navbar-overlay-sm-down {
+  background-color: #F7F7F7;
+}
+
+.navbar-inverse-bg .navbar-overlay-sm-down {
+  background-color: #292b2c;
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-overlay-md-down {
+    background-color: #fff;
+    bottom: 0;
+    display: none;
+    justify-content: space-between;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+  }
+  .navbar .navbar-overlay-md-down.show {
+    display: flex;
+  }
+}
+
+.navbar-light-bg .navbar-overlay-md-down {
+  background-color: #F7F7F7;
+}
+
+.navbar-inverse-bg .navbar-overlay-md-down {
+  background-color: #292b2c;
+}
+
+@media (max-width: 1199px) {
+  .navbar .navbar-overlay-lg-down {
+    background-color: #fff;
+    bottom: 0;
+    display: none;
+    justify-content: space-between;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+  }
+  .navbar .navbar-overlay-lg-down.show {
+    display: flex;
+  }
+}
+
+.navbar-light-bg .navbar-overlay-lg-down {
+  background-color: #F7F7F7;
+}
+
+.navbar-inverse-bg .navbar-overlay-lg-down {
+  background-color: #292b2c;
+}
+
+.navbar .navbar-overlay-xl-down {
+  background-color: #fff;
+  bottom: 0;
+  display: none;
+  justify-content: space-between;
+  left: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar .navbar-overlay-xl-down.show {
+  display: flex;
+}
+
+.navbar-light-bg .navbar-overlay-xl-down {
+  background-color: #F7F7F7;
+}
+
+.navbar-inverse-bg .navbar-overlay-xl-down {
+  background-color: #292b2c;
+}
+
 .navbar-expand .navbar-nav .nav-link,
 .navbar-nav .nav-link {
   white-space: nowrap;
@@ -9836,15 +10066,9 @@ button.list-group-heading {
   justify-content: space-between;
 }
 
-.navbar-expand .form-inline {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.navbar-expand .form-inline .form-control {
-  min-width: 100px;
+.navbar-expand .navbar-form {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .navbar-expand .navbar-collapse {
@@ -9880,6 +10104,15 @@ button.list-group-heading {
 
 .navbar-expand.navbar-light-bg .navbar-nav .nav-link.active:after {
   background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .navbar-expand .navbar-d-breakpoint-block {
+    display: block !important;
+  }
+  .navbar-expand .navbar-d-breakpoint-none {
+    display: none !important;
+  }
 }
 
 .navbar-expand-sm > .navbar-nav .nav-item {
@@ -9921,14 +10154,9 @@ button.list-group-heading {
 }
 
 @media (min-width: 576px) {
-  .navbar-expand-sm .form-inline {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .navbar-expand-sm .form-inline .form-control {
-    min-width: 100px;
+  .navbar-expand-sm .navbar-form {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .navbar-expand-sm .navbar-collapse {
     flex-grow: 1;
@@ -10009,14 +10237,9 @@ button.list-group-heading {
 }
 
 @media (min-width: 768px) {
-  .navbar-expand-md .form-inline {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .navbar-expand-md .form-inline .form-control {
-    min-width: 100px;
+  .navbar-expand-md .navbar-form {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .navbar-expand-md .navbar-collapse {
     flex-grow: 1;
@@ -10097,14 +10320,9 @@ button.list-group-heading {
 }
 
 @media (min-width: 992px) {
-  .navbar-expand-lg .form-inline {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .navbar-expand-lg .form-inline .form-control {
-    min-width: 100px;
+  .navbar-expand-lg .navbar-form {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .navbar-expand-lg .navbar-collapse {
     flex-grow: 1;
@@ -10185,14 +10403,9 @@ button.list-group-heading {
 }
 
 @media (min-width: 1200px) {
-  .navbar-expand-xl .form-inline {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .navbar-expand-xl .form-inline .form-control {
-    min-width: 100px;
+  .navbar-expand-xl .navbar-form {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .navbar-expand-xl .navbar-collapse {
     flex-grow: 1;
