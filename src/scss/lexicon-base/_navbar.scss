@@ -413,7 +413,7 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	z-index: $zindex-dropdown - 1;
+	z-index: $zindex-navbar-overlay;
 
 	&.show {
 		display: flex;

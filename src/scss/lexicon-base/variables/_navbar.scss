@@ -30,6 +30,8 @@ $navbar-brand-padding-y-desktop: ($navbar-height-desktop - ($navbar-padding-y * 
 
 $navbar-nav-item-dropdown-margin-top: null !default;
 
+$zindex-navbar-overlay: $zindex-dropdown - 1 !default; // 999
+
 $navbar-toggler-height: null !default;
 $navbar-toggler-margin-x: null !default;
 $navbar-toggler-margin-y: null !default;
