@@ -19,12 +19,19 @@
 	white-space: normal;
 	word-wrap: break-word;
 
-	&.active {
-		label,
-		.form-control-label,
-		.form-check-label {
-			color: $dropdown-link-active-color;
-		}
+	@if ($dropdown-item-padding-y != 3px) {
+		padding-bottom: $dropdown-item-padding-y;
+		padding-top: $dropdown-item-padding-y;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		overflow: hidden;
+	}
+
+	label,
+	.form-control-label,
+	.form-check-label {
+		color: $dropdown-link-active-color;
 	}
 
 	.form-check {
@@ -55,17 +62,6 @@
 		@if (variable-exists(atlas-theme)) {
 			font-size: $dropdown-font-size-desktop;
 			max-width: $dropdown-max-width-desktop;
-		}
-	}
-
-	> li > a {
-		@if ($dropdown-item-padding-y != 3px) {
-			padding-bottom: $dropdown-item-padding-y;
-			padding-top: $dropdown-item-padding-y;
-		}
-
-		@if (variable-exists(atlas-theme)) {
-			overflow: hidden;
 		}
 	}
 }
