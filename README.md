@@ -1,3 +1,8 @@
+## Notice: 2.0.0-alpha Release
+
+> This project is under active development, we recommended not using alpha
+releases in your project.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ### Jump to Section
@@ -17,7 +22,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## About
-Clay is Liferay's web implementation of the Lexicon Design Language. It is built with HTML, CSS, and Javascript with Bootstrap as a foundation [Bootstrap](http://getbootstrap.com).
+Clay is Liferay's web implementation of the Lexicon Design Language. It is built with HTML, CSS, and Javascript with [Bootstrap](http://getbootstrap.com) as a foundation.
 
 You can view the various components on [the Clay site](https://liferay.github.io/clay).
 
