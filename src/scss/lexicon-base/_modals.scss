@@ -26,14 +26,6 @@
 	}
 }
 
-.modal-body-no-header {
-	top: 0;
-}
-
-.modal-body-no-footer {
-	bottom: 0;
-}
-
 .modal-footer {
 	background-color: $modal-footer-bg;
 	border-color: $modal-footer-border-color;
@@ -320,6 +312,14 @@ button.modal-primary-action-button {
 			bottom: $modal-footer-height;
 			overflow: auto;
 			top: $modal-header-height;
+		}
+
+		.modal-body-no-footer {
+			bottom: 0;
+		}
+
+		.modal-body-no-header {
+			top: 0;
 		}
 
 		.modal-content {
