@@ -1,0 +1,13 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$popover-border-radius: $border-radius-lg !default;
+$popover-title-border-color: null !default;
+$popover-title-font-size: $font-size-base !default;
+$popover-title-offset-border-width: calc(#{$popover-border-radius} - #{$popover-border-width}) !default;
+$popover-title-margin-x: null !default;
+$popover-title-margin-y: null !default;

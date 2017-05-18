@@ -1,0 +1,87 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$navbar-height: 3rem !default; // 48px
+$navbar-height-desktop: 3.75rem !default; // 60px
+
+$navbar-border-bottom-width: 0.0625rem !default; // 1px
+$navbar-border-left-width: 0 !default;
+$navbar-border-right-width: 0 !default;
+$navbar-border-top-width: 0 !default;
+
+$navbar-padding-x: 0 !default;
+$navbar-padding-y: 0 !default;
+
+$navbar-link-padding-x: 0.9375rem !default; // 15px
+$navbar-link-padding-x-desktop: $navbar-link-padding-x !default;
+
+$navbar-brand-font-size: $font-size-lg !default;
+$navbar-brand-padding-x: $navbar-link-padding-x !default;
+$navbar-brand-padding-y: ($navbar-height - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
+$navbar-brand-padding-x-desktop: $navbar-brand-padding-x !default;
+
+$navbar-nav-item-dropdown-margin-top: 0 !default;
+
+$navbar-toggler-height: 2rem !default; // 32px
+$navbar-toggler-margin-x: $navbar-link-padding-x !default; // 15px
+$navbar-toggler-padding-x: 0.625rem !default; // 15px
+$navbar-toggler-padding-y: 0 !default;
+
+// Skin
+
+$navbar-border-radius: 0 !default;
+$navbar-collapse-absolute-box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.7) !default;
+
+// Navbar Default
+
+$navbar-light-bg: #FCFEFF !default;
+$navbar-light-hover-bg: transparent !default;
+$navbar-light-active-bg: transparent !default;
+$navbar-light-disabled-bg: transparent !default;
+
+$navbar-light-border-color: #E3E6E8 !default;
+
+$navbar-light-color: $brand-secondary !default;
+$navbar-light-hover-color: $brand-secondary !default;
+$navbar-light-active-color: $brand-secondary !default;
+$navbar-light-disabled-color: #CACDD2 !default;
+
+$navbar-light-brand-bg: transparent !default;
+$navbar-light-brand-hover-bg: transparent !default;
+$navbar-light-brand-color: $navbar-light-color !default;
+$navbar-light-brand-hover-color: $navbar-light-hover-color !default;
+
+$navbar-light-active-highlight: $brand-primary !default;
+
+$navbar-light-toggler-border-color: $navbar-light-border-color !default;
+
+$collapse-basic-search-transparent-light-btn-focus-color: $navbar-light-active-highlight !default;
+$collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active-highlight !default;
+$collapse-basic-search-transparent-light-focus-highlight: $navbar-light-active-highlight !default;
+
+// Navbar Inverse
+
+$navbar-inverse-bg: $brand-secondary !default;
+
+$navbar-inverse-color: #FFF !default;
+$navbar-inverse-hover-color: $navbar-inverse-color !default;
+$navbar-inverse-active-color: $navbar-inverse-color !default;
+$navbar-inverse-disabled-color: #CACDD2 !default;
+
+$navbar-inverse-brand-color: $navbar-inverse-color !default;
+$navbar-inverse-brand-hover-color: $navbar-inverse-brand-color !default;
+
+$navbar-inverse-active-highlight: #2B4259 !default;
+
+$navbar-inverse-toggler-border-color: #FFF !default;
+
+$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-inverse-active-highlight !default;
+$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-inverse-active-highlight !default;
+$collapse-basic-search-transparent-inverse-input-placeholder-focus-color: $navbar-inverse-active-highlight !default;
+$collapse-basic-search-transparent-inverse-focus-highlight: $navbar-inverse-active-highlight !default;

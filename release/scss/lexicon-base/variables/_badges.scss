@@ -1,0 +1,82 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$badge-font-size: 12px !default; // 12px
+$badge-lexicon-icon-height: 9px !default; // 9px
+$badge-lexicon-icon-width: $badge-lexicon-icon-height !default; // 9px
+$badge-padding-bottom: 3px !default; // 3px
+$badge-padding-left: 7px !default; // 7px
+$badge-padding-right: 7px !default; // 7px
+$badge-padding-top: 3px !default; // 3px
+
+$badge-link-text-decoration: underline !default;
+
+$badge-link-hover-text-decoration: none !default;
+
+$badge-lg-font-size: 16px !default; // 16px
+$badge-lg-lexicon-icon-height: 13px !default; // 13px
+$badge-lg-lexicon-icon-width: $badge-lg-lexicon-icon-height !default; // 13px
+$badge-lg-padding-bottom: 6px !default; // 6px
+$badge-lg-padding-left: 12px !default; // 12px
+$badge-lg-padding-right: 12px !default; // 12px
+$badge-lg-padding-top: 6px !default; // 6px
+
+$badge-sm-font-size: 9px !default; // 9px
+$badge-sm-lexicon-icon-height: 5px !default; // 5px
+$badge-sm-lexicon-icon-width: $badge-sm-lexicon-icon-height !default; // 5px
+$badge-sm-padding-bottom: 2px !default; // 2px
+$badge-sm-padding-left: 7px !default; // 7px
+$badge-sm-padding-right: 7px !default; // 7px
+$badge-sm-padding-top: 2px !default; // 2px
+
+$badge-border-style: null !default;
+$badge-border-width: null !default;
+
+$badge-danger-bg: $brand-danger !default;
+$badge-danger-border: null !default;
+$badge-danger-color: null !default;
+$badge-danger-hover-bg: null !default;
+$badge-danger-hover-border: null !default;
+$badge-danger-hover-color: null !default;
+
+$badge-default-bg: null !default;
+$badge-default-border: null !default;
+// Deprecated `$badge-default-link-color` as of v1.0.16 and will be removed in v2.0.0
+$badge-default-link-color: null !default;
+
+$badge-default-color: $badge-default-link-color !default;
+$badge-default-hover-bg: null !default;
+$badge-default-hover-border: null !default;
+$badge-default-hover-color: null !default;
+
+$badge-info-bg: $brand-info !default;
+$badge-info-border: null !default;
+$badge-info-color: null !default;
+$badge-info-hover-bg: null !default;
+$badge-info-hover-border: null !default;
+$badge-info-hover-color: null !default;
+
+$badge-primary-bg: $brand-primary !default;
+$badge-primary-border: null !default;
+$badge-primary-color: null !default;
+$badge-primary-hover-bg: null !default;
+$badge-primary-hover-border: null !default;
+$badge-primary-hover-color: null !default;
+
+$badge-success-bg: $brand-success !default;
+$badge-success-border: null !default;
+$badge-success-color: null !default;
+$badge-success-hover-bg: null !default;
+$badge-success-hover-border: null !default;
+$badge-success-hover-color: null !default;
+
+$badge-warning-bg: $brand-warning !default;
+$badge-warning-border: null !default;
+$badge-warning-color: null !default;
+$badge-warning-hover-bg: null !default;
+$badge-warning-hover-border: null !default;
+$badge-warning-hover-color: null !default;

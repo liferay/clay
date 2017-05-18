@@ -1,0 +1,382 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.modal-dialog {
+	@include media-breakpoint-down(sm) {
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+.modal-dialog,
+.modal-sm {
+	@include media-breakpoint-down(sm) {
+		max-width: none;
+	}
+}
+
+.modal-content {
+	overflow: auto;
+
+	@include media-breakpoint-down(sm) {
+		border-radius: 0;
+		border-width: 0;
+		height: 100%;
+	}
+}
+
+.modal-header {
+	background-color: $modal-header-bg;
+	border-color: $modal-header-border-color;
+	color: $modal-header-color;
+
+	@include media-breakpoint-up(md) {
+		background-color: $modal-header-bg-desktop;
+		color: $modal-header-color-desktop;
+	}
+}
+
+.modal-body {
+	background-color: $modal-body-bg;
+	color: $modal-body-color;
+
+	@include media-breakpoint-down(sm) {
+		bottom: $modal-footer-height;
+		left: 0;
+		overflow: auto;
+		position: absolute;
+		right: 0;
+		top: $modal-header-height;
+	}
+
+	&.inline-scroller {
+		-webkit-overflow-scrolling: touch;
+		overflow: auto;
+		padding: $modal-inner-padding;
+	}
+}
+
+.modal-body-no-header {
+	top: 0;
+}
+
+.modal-body-no-footer {
+	bottom: 0;
+}
+
+.modal-footer {
+	background-color: $modal-footer-bg;
+	border-color: $modal-footer-border-color;
+
+	@if (variable-exists(modal-footer-box-shadow)) {
+		box-shadow: $modal-footer-box-shadow;
+	}
+
+	clear: both;
+	color: $modal-footer-color;
+	text-align: left;
+
+	@include media-breakpoint-down(sm) {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+	}
+
+	@include media-breakpoint-up(md) {
+		background-color: $modal-footer-bg-desktop;
+		color: $modal-footer-color-desktop;
+		position: relative;
+	}
+}
+
+// Modal Title
+
+.modal-title {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	@if (variable-exists(atlas-theme)) {
+		font-size: 19px;
+		font-weight: normal;
+	}
+
+	@include text-truncate;
+}
+
+@if (variable-exists(atlas-theme)) {
+	h1.modal-title {
+		font-size: $font-size-h1;
+
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h1-desktop;
+		}
+	}
+
+	h2.modal-title {
+		font-size: $font-size-h2;
+
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h2-desktop;
+		}
+	}
+
+	h3.modal-title {
+		font-size: $font-size-h3;
+
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h3-desktop;
+		}
+	}
+
+	h4.modal-title {
+		font-size: $font-size-h4;
+
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h4-desktop;
+		}
+	}
+
+	h5.modal-title {
+		font-size: $font-size-h5;
+
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h5-desktop;
+		}
+	}
+
+	h6.modal-title {
+		font-size: $font-size-h6;
+
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h6-desktop;
+		}
+	}
+}
+
+// Modal Buttons
+
+.modal-primary-action-button {
+	float: left;
+	font-size: ($font-size-base * 1.5);
+	font-weight: $close-font-weight;
+	line-height: 1;
+	text-shadow: $close-text-shadow;
+}
+
+button.modal-primary-action-button {
+	-webkit-appearance: none;
+	background: transparent;
+	border-width: 0;
+	cursor: pointer;
+	padding: 0;
+}
+
+.modal-header {
+	.close,
+	.modal-primary-action-button {
+		background-color: transparent;
+		background-image: none;
+		box-shadow: none;
+		color: $modal-header-close-color;
+		margin-top: -1px;
+		opacity: 1;
+
+		@if (variable-exists(atlas-theme)) {
+			height: $modal-title-line-height;
+			line-height: $modal-title-line-height;
+			width: $modal-title-line-height;
+		}
+
+		@include media-breakpoint-up(md) {
+			color: $modal-header-close-color-desktop;
+		}
+	}
+
+	.close,
+	.modal-primary-action-button {
+		> span {
+			opacity: $modal-header-close-icon-opacity;
+		}
+
+		.lexicon-icon {
+			opacity: $modal-header-close-lexicon-icon-opacity;
+		}
+
+		&:focus,
+		&:hover {
+			> span {
+				opacity: $modal-header-close-icon-opacity * $modal-header-close-opacity-modifier;
+			}
+
+			.lexicon-icon {
+				opacity: $modal-header-close-lexicon-icon-opacity * $modal-header-close-opacity-modifier;
+			}
+		}
+
+		&:active {
+			background-color: transparent;
+			border-color: transparent;
+			box-shadow: none;
+			color: $modal-header-close-color;
+
+			@include media-breakpoint-up(md) {
+				color: $modal-header-close-color-desktop;
+			}
+		}
+	}
+}
+
+// Modal Iframe
+
+.modal-iframe {
+	iframe {
+		border-width: 0;
+		float: left;
+		height: 300px;
+		width: 100%;
+	}
+
+	.modal-body {
+		padding: 0;
+	}
+}
+
+.modal-body-iframe {
+	padding: 0;
+
+	iframe {
+		border-width: 0;
+		float: left;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+// Modal Full Screen
+
+.modal-full-screen {
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	&.modal-dialog {
+		max-width: none;
+	}
+
+	@include media-breakpoint-up(md) {
+		bottom: 45px;
+		left: 45px;
+		right: 45px;
+		top: 45px;
+	}
+
+	.modal-content {
+		border-color: $modal-content-border-color;
+		border-radius: 0;
+		border-width: 0;
+		height: 100%;
+
+		@include media-breakpoint-up(md) {
+			border-radius: 6px;
+			border-width: 1px;
+		}
+	}
+
+	.modal-body {
+		bottom: $modal-footer-height;
+		left: 0;
+		overflow: auto;
+		position: absolute;
+		right: 0;
+		top: $modal-header-height;
+
+		@include media-breakpoint-up(md) {
+			bottom: $modal-footer-height-desktop;
+			top: $modal-header-height-desktop;
+		}
+	}
+
+	.modal-body-no-footer {
+		bottom: 0;
+	}
+
+	.modal-body-no-header {
+		top: 0;
+	}
+
+	.modal-footer {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: auto;
+
+		@include media-breakpoint-up(md) {
+			padding: $modal-inner-padding;
+		}
+	}
+}
+
+.modal-inverse {
+	a,
+	.btn-link {
+		color: $modal-inverse-link-color;
+	}
+
+	.modal-content {
+		background-color: $modal-inverse-content-bg;
+		border-color: $modal-inverse-content-border-color;
+	}
+
+	.modal-header {
+		background-color: $modal-inverse-header-bg;
+		border-color: $modal-inverse-header-border-color;
+		color: $modal-inverse-header-color;
+
+		@include media-breakpoint-up(md) {
+			background-color: $modal-inverse-header-bg-desktop;
+			border-color: $modal-inverse-header-border-color-desktop;
+			color: $modal-inverse-header-color-desktop;
+		}
+
+		.close,
+		.modal-primary-action-button {
+			color: $modal-inverse-header-close-color;
+
+			@include media-breakpoint-up(md) {
+				color: $modal-inverse-header-close-color-desktop;
+			}
+		}
+	}
+
+	.modal-body {
+		background-color: $modal-inverse-body-bg;
+		color: $modal-inverse-body-color;
+	}
+
+	.modal-footer {
+		background-color: $modal-inverse-footer-bg;
+		border-color: $modal-inverse-footer-border-color;
+		color: $modal-inverse-footer-color;
+
+		@include media-breakpoint-up(md) {
+			background-color: $modal-inverse-footer-bg-desktop;
+			border-color: $modal-inverse-footer-border-color-desktop;
+			color: $modal-inverse-footer-color-desktop;
+		}
+	}
+}

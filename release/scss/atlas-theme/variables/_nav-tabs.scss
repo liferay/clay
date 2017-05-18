@@ -1,0 +1,27 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$nav-tabs-default-height: 48px !default;
+$nav-tabs-default-line-height: 24px !default;
+$nav-tabs-default-padding-x: 0 !default;
+$nav-tabs-default-padding-y: ($nav-tabs-default-height - $nav-tabs-default-line-height) / 2 !default;
+
+$nav-tabs-default-height-desktop: 60px !default;
+$nav-tabs-default-line-height-desktop: 28px !default;
+$nav-tabs-default-padding-x-desktop: 0 !default;
+$nav-tabs-default-padding-y-desktop: ($nav-tabs-default-height-desktop - $nav-tabs-default-line-height-desktop) / 2 !default;
+
+// Skin
+
+$nav-tabs-border-color: #D8D8D8 !default;
+$nav-tabs-link-hover-border-color: transparent !default;
+
+$nav-tabs-active-link-color: $brand-primary !default;
+
+$nav-tabs-justified-link-border-color: $nav-tabs-border-color !default;

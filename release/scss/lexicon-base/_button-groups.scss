@@ -1,0 +1,56 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@if (variable-exists(atlas-theme)) {
+	.btn-group {
+		.btn + .btn,
+		.btn + .btn-group,
+		.btn-group + .btn,
+		.btn-group + .btn-group {
+			margin-left: -$input-btn-border-width;
+		}
+	}
+
+	.btn-group > .btn + .dropdown-toggle {
+		padding-left: $input-btn-padding-x / 3;
+		padding-right: $input-btn-padding-x / 3;
+
+		@include media-breakpoint-up(md) {
+			padding-left: $input-btn-padding-x-desktop / 3;
+			padding-right: $input-btn-padding-x-desktop / 3;
+		}
+	}
+
+	.btn-group > .btn-lg + .dropdown-toggle {
+		padding-left: $input-btn-padding-x-lg / 3;
+		padding-right: $input-btn-padding-x-lg / 3;
+
+		@include media-breakpoint-up(md) {
+			padding-left: $input-btn-padding-x-lg-desktop / 3;
+			padding-right: $input-btn-padding-x-lg-desktop / 3;
+		}
+	}
+
+	.btn-group.open .dropdown-toggle {
+		box-shadow: none;
+	}
+
+	.btn-group-vertical {
+		> .btn + .btn,
+		> .btn + .btn-group,
+		> .btn-group + .btn,
+		> .btn-group + .btn-group {
+			margin-top: -$input-btn-border-width;
+		}
+	}
+
+	.btn-group-vertical > .btn {
+		&:first-child:not(:last-child) {
+			border-top-right-radius: $btn-border-radius;
+		}
+	}
+}

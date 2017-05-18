@@ -1,0 +1,239 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.label {
+	border-style: $label-border-style;
+	border-width: $label-border-width;
+	display: inline-block;
+	font-size: $label-font-size;
+	font-weight: $label-font-weight;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	max-width: 100%;
+	padding-bottom: $label-padding-bottom;
+	padding-left: $label-padding-left;
+	padding-right: $label-padding-right;
+	padding-top: $label-padding-top;
+	white-space: normal;
+	word-wrap: break-word;
+
+	@if (variable-exists(label-font-size-desktop)) {
+		@include media-breakpoint-up(md) {
+			font-size: $label-font-size-desktop;
+		}
+	}
+
+	a {
+		color: $label-color;
+		display: inline-block;
+		text-decoration: $label-link-text-decoration;
+
+		&:focus,
+		&:hover {
+			color: $label-link-color-hover;
+			text-decoration: $label-link-text-decoration-hover;
+		}
+	}
+
+	[class*="icon-"] {
+		font-size: 0.9em;
+		text-decoration: none;
+	}
+
+	.glyphicon {
+		font-size: 0.8em;
+		top: 0;
+		vertical-align: middle;
+	}
+}
+
+.label-lg {
+	font-size: $label-font-size-lg;
+	padding-bottom: $label-padding-bottom-lg;
+	padding-left: $label-padding-left-lg;
+	padding-right: $label-padding-right-lg;
+	padding-top: $label-padding-top-lg;
+
+	@if (variable-exists(label-font-size-lg-desktop)) {
+		@include media-breakpoint-up(md) {
+			font-size: $label-font-size-lg-desktop;
+		}
+	}
+}
+
+.label-sm {
+	font-size: $label-font-size-sm;
+	padding-bottom: $label-padding-bottom-sm;
+	padding-left: $label-padding-left-sm;
+	padding-right: $label-padding-right-sm;
+	padding-top: $label-padding-top-sm;
+
+	@if (variable-exists(label-font-size-sm-desktop)) {
+		@include media-breakpoint-up(md) {
+			font-size: $label-font-size-sm-desktop;
+		}
+	}
+}
+
+// Lexicon Icons in Labels
+
+.label .lexicon-icon {
+	height: $label-lexicon-icon-height;
+	margin-left: 2px;
+	width: $label-lexicon-icon-width;
+}
+
+.label-lg .lexicon-icon {
+	height: $label-lexicon-icon-height-lg;
+	margin-left: 4px;
+	width: $label-lexicon-icon-width-lg;
+}
+
+.label-sm .lexicon-icon {
+	height: $label-lexicon-icon-height-sm;
+	width: $label-lexicon-icon-width-sm;
+}
+
+// Skin
+
+.label-danger {
+	border-color: $label-danger-border-color;
+	color: $label-danger-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-danger-bg-hover;
+			border-color: $label-danger-border-color-hover;
+			color: $label-danger-color-hover;
+		}
+	}
+
+	a {
+		color: $label-danger-color;
+
+		&:focus,
+		&:hover {
+			color: $label-danger-color-hover;
+		}
+	}
+}
+
+.label-default {
+	border-color: $label-secondary-border-color;
+	color: $label-secondary-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-secondary-bg-hover;
+			border-color: $label-secondary-border-color-hover;
+			color: $label-secondary-color-hover;
+		}
+	}
+
+	a {
+		color: $label-secondary-color;
+
+		&:focus,
+		&:hover {
+			color: $label-secondary-color-hover;
+		}
+	}
+}
+
+.label-info {
+	border-color: $label-info-border-color;
+	color: $label-info-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-info-bg-hover;
+			border-color: $label-info-border-color-hover;
+			color: $label-info-color-hover;
+		}
+	}
+
+	a {
+		color: $label-info-color;
+
+		&:focus,
+		&:hover {
+			color: $label-info-color-hover;
+		}
+	}
+}
+
+.label-primary {
+	border-color: $label-primary-border-color;
+	color: $label-primary-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-primary-bg-hover;
+			border-color: $label-primary-border-color-hover;
+			color: $label-primary-color-hover;
+		}
+	}
+
+	a {
+		color: $label-primary-color;
+
+		&:focus,
+		&:hover {
+			color: $label-primary-color-hover;
+		}
+	}
+}
+
+.label-success {
+	border-color: $label-success-border-color;
+	color: $label-success-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-success-bg-hover;
+			border-color: $label-success-border-color-hover;
+			color: $label-success-color-hover;
+		}
+	}
+
+	a {
+		color: $label-success-color;
+
+		&:focus,
+		&:hover {
+			color: $label-success-color-hover;
+		}
+	}
+}
+
+.label-warning {
+	border-color: $label-warning-border-color;
+	color: $label-warning-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $label-warning-bg-hover;
+			border-color: $label-warning-border-color-hover;
+			color: $label-warning-color-hover;
+		}
+	}
+
+	a {
+		color: $label-warning-color;
+
+		&:focus,
+		&:hover {
+			color: $label-warning-color-hover;
+		}
+	}
+}

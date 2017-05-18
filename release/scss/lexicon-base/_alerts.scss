@@ -1,0 +1,145 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.alert {
+	@if ($alert-border-width != 1px) {
+		border-width: $alert-border-width;
+	}
+
+	font-size: $alert-font-size;
+
+	.close {
+		opacity: $alert-close-opacity;
+		padding-bottom: $alert-close-padding-bottom;
+		padding-left: $alert-close-padding-left;
+		padding-right: $alert-close-padding-right;
+		padding-top: $alert-close-padding-top;
+		right: $alert-close-position-right;
+		top: $alert-close-position-top;
+	}
+
+	.lead {
+		font-size: $alert-lead-font-size;
+		font-weight: $alert-lead-font-weight;
+		margin-right: $alert-lead-margin-right;
+	}
+}
+
+.alert-link {
+	text-decoration: $alert-link-decoration;
+
+	&:focus,
+	&:hover {
+		text-decoration: $alert-link-hover-decoration;
+	}
+}
+
+.alert-danger {
+	.close {
+		color: $alert-danger-close-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-danger-close-hover-color;
+		}
+	}
+
+	.alert-link {
+		color: $alert-danger-link-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-danger-link-hover-color;
+		}
+	}
+
+	.lead {
+		color: $alert-danger-lead-color;
+	}
+}
+
+.alert-info {
+	.close {
+		color: $alert-info-close-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-info-close-hover-color;
+		}
+	}
+
+	.alert-link {
+		color: $alert-info-link-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-info-link-hover-color;
+		}
+	}
+
+	.lead {
+		color: $alert-info-lead-color;
+	}
+}
+
+.alert-success {
+	.close {
+		color: $alert-success-close-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-success-close-hover-color;
+		}
+	}
+
+	.alert-link {
+		color: $alert-success-link-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-success-link-hover-color;
+		}
+	}
+
+	.lead {
+		color: $alert-success-lead-color;
+	}
+}
+
+.alert-warning {
+	.close {
+		color: $alert-warning-close-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-warning-close-hover-color;
+		}
+	}
+
+	.alert-link {
+		color: $alert-warning-link-color;
+
+		&:focus,
+		&:hover {
+			color: $alert-warning-link-hover-color;
+		}
+	}
+
+	.lead {
+		color: $alert-warning-lead-color;
+	}
+}
+
+// Alert Notifications
+
+.alert-notification {
+	width: 100%;
+
+	@include media-breakpoint-up(md) {
+		max-width: $alert-notification-max-width;
+	}
+}

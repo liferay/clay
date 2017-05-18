@@ -1,0 +1,153 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$atlas-theme: true !default;
+
+$enable-mobile-desktop-sizes: true !default;
+
+$font-size-base: 0.875rem !default; // 14px
+$font-size-lg: 1.125rem !default; // 18px
+$font-size-sm: 0.75rem !default; // 12px
+
+$font-size-base-desktop: 1rem !default; // 16px
+$font-size-lg-desktop: 1.25rem !default; // 20px
+$font-size-sm-desktop: 0.875rem !default; // 14px
+
+$font-size-h1: 1.75rem !default; // 28px
+$font-size-h2: 1.5rem !default; // 24px
+$font-size-h3: 1.3125rem !default; // 21px
+$font-size-h4: 1rem !default; // 16px
+$font-size-h5: 0.875rem !default; // 14px
+$font-size-h6: 0.6875rem !default; // 11px
+
+$font-size-h1-desktop: 1.625rem !default; // 26px
+$font-size-h2-desktop: 1.375rem !default; // 22px
+$font-size-h3-desktop: 1.1875rem !default; // 19px
+$font-size-h4-desktop: 1rem !default; // 16px
+$font-size-h5-desktop: 0.875rem !default; // 14px
+$font-size-h6-desktop: 0.8125rem !default; // 13px
+
+$line-height-base: 1.5 !default;
+
+$headings-line-height: 1.1 !default;
+
+$grid-gutter-width-base: 30px !default;
+
+// Skin
+
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$border-radius: 0.25rem !default; // 4px
+$border-radius-lg: 0.375rem !default; // 6px
+$border-radius-sm: 0.1875rem !default; // 3px
+
+$body-bg: #FFF !default;
+
+$gray-dark: #292B2C !default;
+$gray: #464A4C !default;
+$gray-light: #636C72 !default;
+$gray-lighter: #ECEEEF !default;
+$gray-lightest: #F7F7F9 !default;
+
+$brand-primary: #65B6F0 !default;
+$brand-primary-active: darken($brand-primary, 12%) !default;
+$brand-primary-hover: darken($brand-primary, 8%) !default;
+
+$brand-secondary: #869CAD !default;
+$brand-secondary-active: darken($brand-secondary, 12%) !default;
+$brand-secondary-hover: darken($brand-secondary, 8%) !default;
+
+$brand-success: #76BD4A !default;
+$brand-success-active: darken($brand-success, 12%) !default;
+$brand-success-hover: darken($brand-success, 8%) !default;
+
+$brand-info: #1E5EC8 !default;
+$brand-info-active: darken($brand-info, 12%) !default;
+$brand-info-hover: darken($brand-info, 8%) !default;
+
+$brand-warning: #F5984C !default;
+$brand-warning-active: darken($brand-warning, 12%) !default;
+$brand-warning-hover: darken($brand-warning, 8%) !default;
+
+$brand-danger: #C67 !default;
+$brand-danger-active: darken($brand-danger, 12%) !default;
+$brand-danger-hover: darken($brand-danger, 8%) !default;
+
+$link-color: $brand-primary !default;
+
+$body-color: #29353D !default;
+$text-muted: lighten($body-color, 55%) !default;
+
+// Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg: $brand-primary !default;
+// Global color for active items (e.g., navs or dropdowns).
+$component-active-color: #FFF !default;
+
+$link-hover-color: $brand-primary-hover !default;
+
+// States for Form and alert
+
+$state-primary-text: $brand-primary !default;
+$state-primary-bg: lighten($state-primary-text, 12%) !default;
+$state-primary-border-color: $state-primary-text !default;
+
+$state-secondary-text: $brand-secondary !default;
+$state-secondary-bg: lighten($state-secondary-text, 34%) !default;
+$state-secondary-border-color: $state-secondary-text !default;
+
+$state-success-text: $brand-success !default;
+$state-success-bg: lighten($state-success-text, 34%) !default;
+$state-success-border-color: $state-success-text !default;
+
+$state-info-text: $brand-info !default;
+$state-info-bg: lighten($state-info-text, 34%) !default;
+$state-info-border-color: $state-info-text !default;
+
+$state-warning-text: $brand-warning !default;
+$state-warning-bg: #F8F4D5 !default;
+$state-warning-border-color: $state-warning-text !default;
+
+$state-danger-text: $brand-danger !default;
+$state-danger-bg: lighten($state-danger-text, 34%) !default;
+$state-danger-border-color: $state-danger-text !default;
+
+// Inverse Colors
+
+$inverse-bg: #1F282E !default;
+$inverse-border: darken($inverse-bg, 10%) !default;
+$inverse-color: #869CAD !default;
+
+$inverse-active-bg: #3A4D5A !default;
+$inverse-active-border: darken($inverse-active-bg, 1%) !default;
+$inverse-active-color: #FFF !default;
+
+$inverse-disabled-color: #394956 !default;
+
+$inverse-hover-bg: #1C252C !default;
+$inverse-hover-border: darken($inverse-hover-bg, 1%) !default;
+$inverse-hover-color: $inverse-color !default;
+
+$inverse-header-bg: #1B2228 !default;
+$inverse-header-border: darken($inverse-header-bg, 1%) !default;
+$inverse-header-color: $inverse-color !default;
+
+$inverse-link-color: #FFF !default;
+$inverse-link-hover-color: $inverse-link-color !default;
+
+// Box Shadow
+// Defines global box-shadows
+// Deprecate THIS 2.0.0
+// $box-shadow-default-x: 0 !default; // Atlas
+// $box-shadow-default-y: 0 !default; // Atlas
+// $box-shadow-default-blur: 3px !default; // Atlas
+// $box-shadow-default-spread: 1px !default; // Atlas
+// $box-shadow-default-bg: rgba(0, 0, 0, 0.2) !default; // Atlas
+// $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default; // Atlas
+
+$close-text-shadow: none !default;

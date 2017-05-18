@@ -1,0 +1,83 @@
+/**
+* Clay 2.0.0-alpha.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$modal-inner-padding-x: 24px !default;
+$modal-inner-padding-y: 16px !default;
+
+$modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x !default;
+
+$modal-title-line-height: 36px !default;
+$modal-title-padding: 12px !default;
+
+$modal-footer-height: 72px !default;
+$modal-footer-height-desktop: $modal-footer-height !default;
+
+$modal-header-height: 61px !default;
+$modal-header-height-desktop: $modal-header-height !default;
+
+// Skin
+
+$modal-backdrop-opacity: 0.15 !default;
+
+$modal-content-xs-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
+$modal-content-sm-up-box-shadow: null !default;
+
+$modal-content-border-color: transparent !default;
+
+$modal-header-bg: #29353D !default;
+$modal-header-border-color: #E4E6E8 !default;
+$modal-header-color: #FFF !default;
+
+$modal-header-close-color: #FFF !default;
+$modal-header-close-icon-opacity: 1 !default;
+$modal-header-close-lexicon-icon-opacity: 1 !default;
+$modal-header-close-opacity-modifier: 1 !default;
+
+$modal-body-bg: #F5F8F8 !default;
+$modal-body-color: $body-color !default;
+
+$modal-footer-bg: $modal-header-bg !default;
+$modal-footer-border-color: transparent !default;
+$modal-footer-box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15) !default;
+$modal-footer-color: $modal-header-color !default;
+
+$modal-header-bg-desktop: #FCFEFF !default;
+$modal-header-close-color-desktop: $brand-secondary !default;
+$modal-header-color-desktop: $body-color !default;
+
+$modal-footer-bg-desktop: $modal-header-bg-desktop !default;
+$modal-footer-color-desktop: $modal-header-color-desktop !default;
+
+// Modal Inverse
+
+$modal-inverse-body-bg: #111314 !default;
+$modal-inverse-body-color: #A7A7A7 !default;
+
+$modal-inverse-content-border-color: $modal-content-border-color !default;
+
+$modal-inverse-header-bg: $modal-header-bg !default;
+$modal-inverse-header-border-color: #1C252C !default;
+$modal-inverse-header-close-color: $modal-header-close-color !default;
+$modal-inverse-header-color: $modal-header-color !default;
+
+$modal-inverse-footer-bg: $modal-inverse-header-bg !default;
+$modal-inverse-footer-border-color: $modal-inverse-header-border-color !default;
+$modal-inverse-footer-color: $modal-inverse-header-color !default;
+
+$modal-inverse-link-color: $brand-primary !default;
+$modal-inverse-link-hover-color: $modal-inverse-link-color !default;
+
+$modal-inverse-header-bg-desktop: #FCFEFF !default;
+$modal-inverse-header-border-color-desktop: $modal-header-border-color !default;
+$modal-inverse-header-close-color-desktop: $modal-header-close-color-desktop !default;
+$modal-inverse-header-color-desktop: $body-color !default;
+
+$modal-inverse-footer-bg-desktop: $modal-inverse-header-bg-desktop !default;
+$modal-inverse-footer-border-color-desktop: $modal-inverse-header-border-color-desktop !default;
+$modal-inverse-footer-color-desktop: $modal-inverse-header-color-desktop !default;
