@@ -1,3 +1,11 @@
+### v2.0.0-alpha.0 - May 18, 2017
+* Breaking: Lots of changes/additions to class names and Sass variable names (to be documented in more detail).
+* Breaking: Use flexbox instead of floats.
+* Breaking: Convert units from `px` to `rem`.
+* Breaking: Convert Alerts, Buttons, Breadcrumbs, Dropdowns, Form Elements, Input Groups, Form Validation, Navbar, Management Bar, Modals, Navs, Nav Tabs, Pagination, Popovers, Tooltips to Bootstrap 4.
+* Breaking: Dropping IE9 support.
+* Breaking: Update from Bootstrap 3 to Bootstrap 4 [commit 33715a7](https://github.com/twbs/bootstrap/tree/33715a73d2eae3865cb4c1e0a13d1da4b6aeb278).
+
 ### v1.0.19 - April 3, 2017
 * New: Added Lexicon SVG Icons `add-role.svg` and `remove-role.svg`
 
