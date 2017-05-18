@@ -221,7 +221,7 @@ module.exports = function(gulp, plugins, _, config) {
 					'!build/css/main.css{,.map}'
 				]
 			)
-			.pipe(gulp.dest('temp/lexicon-ux/build'));
+			.pipe(gulp.dest('temp/clay/build'));
 		}
 	);
 
@@ -239,7 +239,7 @@ module.exports = function(gulp, plugins, _, config) {
 		'release:npm-index',
 		function(done) {
 			return gulp.src(['./index.js', './{README,CHANGELOG}.md'])
-				.pipe(gulp.dest('temp/lexicon-ux'));
+				.pipe(gulp.dest('temp/clay'));
 		}
 	);
 
@@ -248,16 +248,16 @@ module.exports = function(gulp, plugins, _, config) {
 		function() {
 			var version = packageJSONUtil.getVersion();
 
-			var lexiconPkg = packageJSONUtil.generate('lexicon-ux', version);
+			var lexiconPkg = packageJSONUtil.generate('clay', version);
 
-			fs.writeFileSync(path.join(TEMP_PATH, 'lexicon-ux', 'package.json'), lexiconPkg);
+			fs.writeFileSync(path.join(TEMP_PATH, 'clay', 'package.json'), lexiconPkg);
 		}
 	);
 
 	gulp.task(
 		'release:npm-publish',
 		function(done) {
-			var lexiconPath = path.join(TEMP_PATH, 'lexicon-ux');
+			var lexiconPath = path.join(TEMP_PATH, 'clay');
 
 			cmdPromise.resolve()
 				.npm('publish', lexiconPath)
@@ -278,7 +278,7 @@ module.exports = function(gulp, plugins, _, config) {
 					'!src/scss/highlightjs{,/**/*}'
 				]
 			)
-			.pipe(gulp.dest('temp/lexicon-ux/src'));
+			.pipe(gulp.dest('temp/clay/src'));
 		}
 	);
 };
