@@ -1,30 +1,5 @@
-.modal-dialog {
-	@include media-breakpoint-down(sm) {
-		bottom: 0;
-		left: 0;
-		margin: 0;
-		overflow: hidden;
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-}
-
-.modal-dialog,
-.modal-sm {
-	@include media-breakpoint-down(sm) {
-		max-width: none;
-	}
-}
-
 .modal-content {
 	overflow: auto;
-
-	@include media-breakpoint-down(sm) {
-		border-radius: 0;
-		border-width: 0;
-		height: 100%;
-	}
 }
 
 .modal-header {
@@ -41,15 +16,6 @@
 .modal-body {
 	background-color: $modal-body-bg;
 	color: $modal-body-color;
-
-	@include media-breakpoint-down(sm) {
-		bottom: $modal-footer-height;
-		left: 0;
-		overflow: auto;
-		position: absolute;
-		right: 0;
-		top: $modal-header-height;
-	}
 
 	&.inline-scroller {
 		-webkit-overflow-scrolling: touch;
@@ -77,13 +43,6 @@
 	clear: both;
 	color: $modal-footer-color;
 	text-align: left;
-
-	@include media-breakpoint-down(sm) {
-		bottom: 0;
-		left: 0;
-		position: absolute;
-		right: 0;
-	}
 
 	@include media-breakpoint-up(md) {
 		background-color: $modal-footer-bg-desktop;
@@ -320,6 +279,48 @@ button.modal-primary-action-button {
 
 		@include media-breakpoint-up(md) {
 			padding: $modal-inner-padding;
+		}
+	}
+}
+
+// Modal Responsive Full Screen
+
+.modal-responsive-full-screen {
+	@include media-breakpoint-down(sm) {
+		&.modal-dialog {
+			bottom: 0;
+			margin: 0;
+			overflow: hidden;
+			top: 0;
+		}
+
+		&.modal-dialog,
+		.modal-body,
+		.modal-footer {
+			left: 0;
+			position: absolute;
+			right: 0;
+		}
+
+		&.modal-dialog,
+		&.modal-sm {
+			max-width: none;
+		}
+
+		.modal-body {
+			bottom: $modal-footer-height;
+			overflow: auto;
+			top: $modal-header-height;
+		}
+
+		.modal-content {
+			border-radius: 0;
+			border-width: 0;
+			height: 100%;
+		}
+
+		.modal-footer {
+			bottom: 0;
 		}
 	}
 }
