@@ -38,7 +38,7 @@ var tasks = require('require-dir')('./tasks');
 
 liferayGulpTasks(gulp, {
 	artifactSrc: ['**/release/**/*', '!node_modules/', '!node_modules/**'],
-	artifactName: 'lexicon'
+	artifactName: 'clay'
 });
 
 _.invoke(tasks, 'call', tasks, gulp, plugins, _, config);
