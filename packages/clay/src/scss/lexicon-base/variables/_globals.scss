@@ -1,6 +1,20 @@
 $enable-mobile-desktop-sizes: true !default;
 $mobile-desktop-breakpoint: md !default;
 
+$font-size-h1: null !default;
+$font-size-h2: null !default;
+$font-size-h3: null !default;
+$font-size-h4: null !default;
+$font-size-h5: null !default;
+$font-size-h6: null !default;
+
+$font-size-h1-desktop: null !default;
+$font-size-h2-desktop: null !default;
+$font-size-h3-desktop: null !default;
+$font-size-h4-desktop: null !default;
+$font-size-h5-desktop: null !default;
+$font-size-h6-desktop: null !default;
+
 $font-size-base-desktop: $font-size-base !default;
 $font-size-lg-desktop: $font-size-lg !default;
 
