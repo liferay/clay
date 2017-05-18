@@ -36,6 +36,14 @@ $navbar-toggler-height: null !default;
 $navbar-toggler-margin-x: null !default;
 $navbar-toggler-margin-y: null !default;
 
+$navbar-toggler-link-font-size: $font-size-base !default; // 16px
+$navbar-toggler-link-height: auto !default;
+$navbar-toggler-link-line-height: $line-height-base !default; // 1.5
+$navbar-toggler-link-padding-x: 0 !default;
+$navbar-toggler-link-padding-y: $navbar-link-padding-y !default;
+
+$navbar-toggler-text-max-width: 180px !default;
+
 $navbar-toggler-page-name-font-size: $font-size-base !default;
 $navbar-toggler-page-name-height: ($navbar-height - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width) !default;
 $navbar-toggler-page-name-margin-x: null !default;
