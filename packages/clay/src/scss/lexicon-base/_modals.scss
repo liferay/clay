@@ -7,9 +7,11 @@
 	border-color: $modal-header-border-color;
 	color: $modal-header-color;
 
-	@include media-breakpoint-up(md) {
-		background-color: $modal-header-bg-desktop;
-		color: $modal-header-color-desktop;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			background-color: $modal-header-bg-desktop;
+			color: $modal-header-color-desktop;
+		}
 	}
 }
 
@@ -45,9 +47,14 @@
 	text-align: left;
 
 	@include media-breakpoint-up(md) {
-		background-color: $modal-footer-bg-desktop;
-		color: $modal-footer-color-desktop;
 		position: relative;
+	}
+
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			background-color: $modal-footer-bg-desktop;
+			color: $modal-footer-color-desktop;
+		}
 	}
 }
 
@@ -70,48 +77,60 @@
 	h1.modal-title {
 		font-size: $font-size-h1;
 
-		@include media-breakpoint-up(md) {
-			font-size: $font-size-h1-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				font-size: $font-size-h1-desktop;
+			}
 		}
 	}
 
 	h2.modal-title {
 		font-size: $font-size-h2;
 
-		@include media-breakpoint-up(md) {
-			font-size: $font-size-h2-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				font-size: $font-size-h2-desktop;
+			}
 		}
 	}
 
 	h3.modal-title {
 		font-size: $font-size-h3;
 
-		@include media-breakpoint-up(md) {
-			font-size: $font-size-h3-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				font-size: $font-size-h3-desktop;
+			}
 		}
 	}
 
 	h4.modal-title {
 		font-size: $font-size-h4;
 
-		@include media-breakpoint-up(md) {
-			font-size: $font-size-h4-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				font-size: $font-size-h4-desktop;
+			}
 		}
 	}
 
 	h5.modal-title {
 		font-size: $font-size-h5;
 
-		@include media-breakpoint-up(md) {
-			font-size: $font-size-h5-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				font-size: $font-size-h5-desktop;
+			}
 		}
 	}
 
 	h6.modal-title {
 		font-size: $font-size-h6;
 
-		@include media-breakpoint-up(md) {
-			font-size: $font-size-h6-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				font-size: $font-size-h6-desktop;
+			}
 		}
 	}
 }
@@ -150,8 +169,10 @@ button.modal-primary-action-button {
 			width: $modal-title-line-height;
 		}
 
-		@include media-breakpoint-up(md) {
-			color: $modal-header-close-color-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				color: $modal-header-close-color-desktop;
+			}
 		}
 	}
 
@@ -182,8 +203,10 @@ button.modal-primary-action-button {
 			box-shadow: none;
 			color: $modal-header-close-color;
 
-			@include media-breakpoint-up(md) {
-				color: $modal-header-close-color-desktop;
+			@if ($enable-mobile-desktop-sizes) {
+				@include media-breakpoint-up($mobile-desktop-breakpoint) {
+					color: $modal-header-close-color-desktop;
+				}
 			}
 		}
 	}
@@ -256,9 +279,11 @@ button.modal-primary-action-button {
 		right: 0;
 		top: $modal-header-height;
 
-		@include media-breakpoint-up(md) {
-			bottom: $modal-footer-height-desktop;
-			top: $modal-header-height-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				bottom: $modal-footer-height-desktop;
+				top: $modal-header-height-desktop;
+			}
 		}
 	}
 
@@ -341,18 +366,22 @@ button.modal-primary-action-button {
 		border-color: $modal-inverse-header-border-color;
 		color: $modal-inverse-header-color;
 
-		@include media-breakpoint-up(md) {
-			background-color: $modal-inverse-header-bg-desktop;
-			border-color: $modal-inverse-header-border-color-desktop;
-			color: $modal-inverse-header-color-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				background-color: $modal-inverse-header-bg-desktop;
+				border-color: $modal-inverse-header-border-color-desktop;
+				color: $modal-inverse-header-color-desktop;
+			}
 		}
 
 		.close,
 		.modal-primary-action-button {
 			color: $modal-inverse-header-close-color;
 
-			@include media-breakpoint-up(md) {
-				color: $modal-inverse-header-close-color-desktop;
+			@if ($enable-mobile-desktop-sizes) {
+				@include media-breakpoint-up($mobile-desktop-breakpoint) {
+					color: $modal-inverse-header-close-color-desktop;
+				}
 			}
 		}
 	}
@@ -367,10 +396,12 @@ button.modal-primary-action-button {
 		border-color: $modal-inverse-footer-border-color;
 		color: $modal-inverse-footer-color;
 
-		@include media-breakpoint-up(md) {
-			background-color: $modal-inverse-footer-bg-desktop;
-			border-color: $modal-inverse-footer-border-color-desktop;
-			color: $modal-inverse-footer-color-desktop;
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				background-color: $modal-inverse-footer-bg-desktop;
+				border-color: $modal-inverse-footer-border-color-desktop;
+				color: $modal-inverse-footer-color-desktop;
+			}
 		}
 	}
 }
