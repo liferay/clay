@@ -1,3 +1,52 @@
+// Applies desktop sizes for navbar components inside `navbar-expand` and
+// `navbar-expand-*` if `$enable-mobile-desktop-sizes` is `true`
+
+@mixin navbar-expand-desktop() {
+	.navbar-brand {
+		@if not ($navbar-brand-font-size-desktop == $navbar-brand-font-size) {
+			font-size: $navbar-brand-font-size-desktop;
+		}
+
+		@if not ($navbar-brand-padding-y-desktop == $navbar-brand-padding-y) {
+			padding-bottom: $navbar-brand-padding-y-desktop;
+			padding-top: $navbar-brand-padding-y-desktop;
+		}
+
+		@if not ($navbar-brand-padding-x-desktop == $navbar-brand-padding-x) {
+			padding-left: $navbar-brand-padding-x-desktop;
+			padding-right: $navbar-brand-padding-x-desktop;
+		}
+	}
+
+	.navbar-nav .nav-btn {
+		@if not ($navbar-link-padding-x-desktop == $navbar-link-padding-x) {
+			margin-left: $navbar-link-padding-x-desktop;
+			margin-right: $navbar-link-padding-x-desktop;
+		}
+	}
+
+	.navbar-form,
+	.navbar-nav .nav-item > .form-check {
+		@if not ($navbar-link-padding-x-desktop == 0.5rem) {
+			padding-left: $navbar-link-padding-x-desktop;
+			padding-right: $navbar-link-padding-x-desktop;
+		}
+	}
+
+	.navbar-nav .nav-link,
+	.navbar-nav .navbar-text {
+		@if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
+			padding-bottom: $navbar-link-padding-y-desktop;
+			padding-top: $navbar-link-padding-y-desktop;
+		}
+
+		@if not ($navbar-link-padding-x-desktop == 0.5rem) {
+			padding-left: $navbar-link-padding-x-desktop;
+			padding-right: $navbar-link-padding-x-desktop;
+		}
+	}
+}
+
 // Styles the `.navbar-overlay-*-down` and `.navbar-overlay-up` components to
 // fill the full width and height of the Navbar.
 
