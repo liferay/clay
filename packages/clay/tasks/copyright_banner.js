@@ -5,7 +5,7 @@ module.exports = {
 	},
 	tpl: [
 		'/**',
-		'* Lexicon <%= version %>',
+		'* Clay <%= version %>',
 		'*',
 		'* Copyright <%= year %>, Liferay, Inc.',
 		'* All rights reserved.',

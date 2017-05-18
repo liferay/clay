@@ -247,19 +247,19 @@ module.exports = function(gulp, plugins, _, config) {
 		function() {
 			var version = packageJSONUtil.getVersion();
 
-			var lexiconPkg = packageJSONUtil.generate('clay', version);
+			var clayPkg = packageJSONUtil.generate('clay', version);
 
-			fs.writeFileSync(path.join(TEMP_PATH, 'clay', 'package.json'), lexiconPkg);
+			fs.writeFileSync(path.join(TEMP_PATH, 'clay', 'package.json'), clayPkg);
 		}
 	);
 
 	gulp.task(
 		'release:npm-publish',
 		function(done) {
-			var lexiconPath = path.join(TEMP_PATH, 'clay');
+			var clayPath = path.join(TEMP_PATH, 'clay');
 
 			cmdPromise.resolve()
-				.npm('publish', lexiconPath)
+				.npm('publish', clayPath)
 				.then(function() {
 					done();
 				});
