@@ -20,7 +20,6 @@ releases in your project.
 - [Changelog](#changelog)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-# EXPERIMENTAL BRANCH DO NOT USE
 
 ## About
 Clay is Liferay's web implementation of the Lexicon Design Language. It is built with HTML, CSS, and Javascript with [Bootstrap](http://getbootstrap.com) as a foundation.
