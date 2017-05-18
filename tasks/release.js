@@ -37,7 +37,7 @@ module.exports = function(gulp, plugins, _, config) {
 	var currentVersion = require('../package.json').version;
 
 	var releaseType = (function() {
-		var types = ['major', 'minor', 'patch'];
+		var types = ['major', 'minor', 'patch', 'premajor', 'prerelease'];
 
 		var type = _.find(
 			types,
@@ -53,7 +53,20 @@ module.exports = function(gulp, plugins, _, config) {
 		return type;
 	}());
 
-	var bumpedVersion = semver.inc(currentVersion, releaseType);
+	var prereleaseIdentifier = (function() {
+		var types = ['alpha', 'beta'];
+
+		var type = _.find(
+			types,
+			function(item, index) {
+				return argv[item];
+			}
+		);
+
+		return type;
+	}());
+
+	var bumpedVersion = semver.inc(currentVersion, releaseType, prereleaseIdentifier);
 
 	gulp.task(
 		'release:clean',
