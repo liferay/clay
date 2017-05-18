@@ -204,7 +204,6 @@ module.exports = function(gulp, plugins, _, config) {
 				.then(function(remote){
 					return cmdPromise.resolve().git('push', remote, '--tags', 'master', 'develop');
 				})
-				.npm('run', 'deploy')
 				.then(function() {
 					done();
 				});

@@ -14,8 +14,7 @@
     }
   },
   "scripts": {
-    "test": "exit 0",
-    "deploy": "cd ./build && git init . && git add . && git commit -m 'Deploy'; git push 'git@github.com:liferay/clay.git' master:gh-pages --force && rm -rf .git"
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
