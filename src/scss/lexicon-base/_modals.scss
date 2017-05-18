@@ -62,75 +62,62 @@
 
 .modal-title {
 	display: block;
+	font-size: $modal-title-font-size;
+	font-weight: $modal-title-font-weight;
 	margin-left: auto;
 	margin-right: auto;
-
-	@if (variable-exists(atlas-theme)) {
-		font-size: 19px;
-		font-weight: normal;
-	}
 
 	@include text-truncate;
 }
 
-@if (variable-exists(atlas-theme)) {
-	h1.modal-title {
-		font-size: $font-size-h1;
+h1.modal-title {
+	font-size: $font-size-h1;
+}
 
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				font-size: $font-size-h1-desktop;
-			}
+h2.modal-title {
+	font-size: $font-size-h2;
+}
+
+h3.modal-title {
+	font-size: $font-size-h3;
+}
+
+h4.modal-title {
+	font-size: $font-size-h4;
+}
+
+h5.modal-title {
+	font-size: $font-size-h5;
+}
+
+h6.modal-title {
+	font-size: $font-size-h6;
+}
+
+@if ($enable-mobile-desktop-sizes) {
+	@include media-breakpoint-up($mobile-desktop-breakpoint) {
+		h1.modal-title {
+			font-size: $font-size-h1-desktop;
 		}
-	}
 
-	h2.modal-title {
-		font-size: $font-size-h2;
-
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				font-size: $font-size-h2-desktop;
-			}
+		h2.modal-title {
+			font-size: $font-size-h2-desktop;
 		}
-	}
 
-	h3.modal-title {
-		font-size: $font-size-h3;
-
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				font-size: $font-size-h3-desktop;
-			}
+		h3.modal-title {
+			font-size: $font-size-h3-desktop;
 		}
-	}
 
-	h4.modal-title {
-		font-size: $font-size-h4;
-
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				font-size: $font-size-h4-desktop;
-			}
+		h4.modal-title {
+			font-size: $font-size-h4-desktop;
 		}
-	}
 
-	h5.modal-title {
-		font-size: $font-size-h5;
-
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				font-size: $font-size-h5-desktop;
-			}
+		h5.modal-title {
+			font-size: $font-size-h5-desktop;
 		}
-	}
 
-	h6.modal-title {
-		font-size: $font-size-h6;
-
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				font-size: $font-size-h6-desktop;
-			}
+		h6.modal-title {
+			font-size: $font-size-h6-desktop;
 		}
 	}
 }
@@ -160,14 +147,11 @@ button.modal-primary-action-button {
 		background-image: none;
 		box-shadow: none;
 		color: $modal-header-close-color;
+		height: $modal-title-line-height;
+		line-height: $modal-title-line-height;
 		margin-top: -1px;
 		opacity: 1;
-
-		@if (variable-exists(atlas-theme)) {
-			height: $modal-title-line-height;
-			line-height: $modal-title-line-height;
-			width: $modal-title-line-height;
-		}
+		width: $modal-title-line-height;
 
 		@if ($enable-mobile-desktop-sizes) {
 			@include media-breakpoint-up($mobile-desktop-breakpoint) {
