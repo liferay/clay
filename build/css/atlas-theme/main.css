@@ -13414,6 +13414,13 @@ th .truncate-text {
   }
 }
 
+@media (max-width: 767px) {
+  .modal-dialog,
+  .modal-sm {
+    max-width: none;
+  }
+}
+
 .modal-content {
   overflow: auto;
 }
@@ -13430,7 +13437,6 @@ th .truncate-text {
   background-color: #29353D;
   border-color: #E4E6E8;
   color: #FFF;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -13498,9 +13504,10 @@ th .truncate-text {
 
 .modal-title {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 19px;
   font-weight: normal;
-  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -13668,7 +13675,10 @@ button.modal-primary-action-button {
   position: absolute;
   right: 0;
   top: 0;
-  width: auto;
+}
+
+.modal-full-screen.modal-dialog {
+  max-width: none;
 }
 
 @media (min-width: 768px) {
