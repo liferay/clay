@@ -224,15 +224,15 @@ button.modal-primary-action-button {
 	right: 0;
 	top: 0;
 
-	&.modal-dialog {
-		max-width: none;
-	}
-
 	@include media-breakpoint-up(md) {
 		bottom: 45px;
 		left: 45px;
 		right: 45px;
 		top: 45px;
+	}
+
+	&.modal-dialog {
+		max-width: none;
 	}
 
 	.modal-content {
@@ -272,14 +272,35 @@ button.modal-primary-action-button {
 	}
 
 	.modal-footer {
+		background-color: $modal-full-screen-footer-bg;
 		bottom: 0;
+		color: $modal-full-screen-footer-color;
 		left: 0;
 		position: absolute;
 		right: 0;
 		top: auto;
 
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				background-color: $modal-full-screen-footer-bg-desktop;
+				color: $modal-full-screen-footer-color-desktop;
+			}
+		}
+
 		@include media-breakpoint-up(md) {
 			padding: $modal-inner-padding;
+		}
+	}
+
+	.modal-header {
+		background-color: $modal-full-screen-header-bg;
+		color: $modal-full-screen-header-color;
+
+		@if ($enable-mobile-desktop-sizes) {
+			@include media-breakpoint-up($mobile-desktop-breakpoint) {
+				background-color: $modal-full-screen-header-bg-desktop;
+				color: $modal-full-screen-header-color-desktop;
+			}
 		}
 	}
 }
@@ -329,7 +350,14 @@ button.modal-primary-action-button {
 		}
 
 		.modal-footer {
+			background-color: $modal-full-screen-footer-bg;
 			bottom: 0;
+			color: $modal-full-screen-footer-color;
+		}
+
+		.modal-header {
+			background-color: $modal-full-screen-header-bg;
+			color: $modal-full-screen-header-color;
 		}
 	}
 }
