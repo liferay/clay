@@ -24,9 +24,9 @@ $modal-content-sm-up-box-shadow: null !default;
 
 $modal-content-border-color: transparent !default;
 
-$modal-header-bg: #29353D !default;
+$modal-header-bg: null !default;
 $modal-header-border-color: #E4E6E8 !default;
-$modal-header-color: #FFF !default;
+$modal-header-color: null !default;
 
 $modal-header-close-color: #FFF !default;
 $modal-header-close-icon-opacity: 1 !default;
@@ -75,3 +75,11 @@ $modal-inverse-header-color-desktop: $body-color !default;
 $modal-inverse-footer-bg-desktop: $modal-inverse-header-bg-desktop !default;
 $modal-inverse-footer-border-color-desktop: $modal-inverse-header-border-color-desktop !default;
 $modal-inverse-footer-color-desktop: $modal-inverse-header-color-desktop !default;
+
+// Modal Full Screen
+
+$modal-full-screen-header-bg: #29353D !default;
+$modal-full-screen-header-color: #FFF !default;
+
+$modal-full-screen-header-bg-desktop: #FCFEFF !default;
+$modal-full-screen-header-color-desktop: $body-color !default;
