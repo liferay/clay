@@ -14,11 +14,11 @@ $panel-footer-bg: #F5F8FA !default;
 
 $panel-box-shadow: $list-group-box-shadow !default;
 
-$panel-blank-heading-link-color: $text-color !default;
+$panel-blank-heading-link-color: $body-color !default;
 $panel-blank-heading-link-open-color: $brand-primary !default;
 
 $panel-default-border: $brand-primary !default;
 $panel-default-heading-bg: #F5F8FA !default;
-$panel-default-text: $brand-default !default;
+$panel-default-text: $brand-secondary !default;
 
 $panel-primary-border: darken($brand-primary, 25%) !default;
