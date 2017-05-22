@@ -3,22 +3,22 @@ $panel-border-left-width: 0 !default;
 $panel-border-right-width: 0 !default;
 $panel-border-top-width: 0 !default;
 
+$panel-border-radius: 0 !default;
+$panel-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) !default;
+
+// Panel Header
+
+$panel-header-border-bottom-width: 2px !default;
+
+// Panel Footer
+
+$panel-footer-bg: #F5F8FA !default;
 $panel-footer-border-top-width: 0 !default;
 
-$panel-heading-border-bottom-width: 2px !default;
+// Panel Variants
 
-$panel-group-panel-spacer: 0 !default;
+$panel-primary-border-color: darken($brand-primary, 25%) !default;
 
-$panel-border-radius: 0 !default;
-$panel-footer-bg: #F5F8FA !default;
-
-$panel-box-shadow: $list-group-box-shadow !default;
-
-$panel-blank-heading-link-color: $body-color !default;
-$panel-blank-heading-link-open-color: $brand-primary !default;
-
-$panel-default-border: $brand-primary !default;
-$panel-default-heading-bg: #F5F8FA !default;
-$panel-default-text: $brand-secondary !default;
-
-$panel-primary-border: darken($brand-primary, 25%) !default;
+$panel-secondary-border-color: $brand-primary !default;
+$panel-secondary-header-bg: #F5F8FA !default;
+$panel-secondary-color: $brand-secondary !default;
