@@ -8852,7 +8852,7 @@ a.collapse-icon {
 .collapse-icon .collapse-icon-open {
   position: absolute;
   right: 0.9375rem;
-  top: 0.625rem;
+  top: 0.75rem;
 }
 
 .collapse-icon .collapse-icon-closed [class^="icon-"],
@@ -11494,8 +11494,19 @@ button.list-group-heading {
 }
 
 .panel-header-link {
+  color: inherit;
   display: block;
   padding: 0.75rem 1.25rem;
+  text-decoration: none;
+}
+
+.panel-header-link:hover, .panel-header-link:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.panel-header-link .collapse-icon {
+  padding-right: 2.28125rem;
 }
 
 .panel-body {
@@ -11512,21 +11523,7 @@ button.list-group-heading {
 }
 
 .panel-group .panel {
-  margin-bottom: 0;
-}
-
-.panel-group .panel:first-child {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.panel-group .panel:last-child {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.panel-group .panel:not(:first-child):not(:last-child) {
-  border-radius: 0;
+  margin-bottom: 1px;
 }
 
 .panel-group .panel-header {
@@ -11536,6 +11533,11 @@ button.list-group-heading {
 
 .panel-group .panel-header + .panel-collapse > .panel-body {
   border-top: 2px solid transparent;
+}
+
+.card .panel-group,
+.card-horizontal .panel-group {
+  margin-bottom: 1rem;
 }
 
 .panel-danger {
