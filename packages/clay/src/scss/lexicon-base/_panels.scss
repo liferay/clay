@@ -16,11 +16,12 @@
 	border-bottom: $panel-header-border-bottom-width solid transparent;
 	padding: $panel-header-padding-y $panel-header-padding-x;
 	position: relative;
-}
 
-.panel-header-link {
-	display: block;
-	padding: $panel-header-padding-y $panel-header-padding-x;
+	.panel-header-link {
+		color: inherit;
+		display: block;
+		padding: $panel-header-padding-y $panel-header-padding-x;
+	}
 }
 
 .panel-body {
