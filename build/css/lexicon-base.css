@@ -8595,7 +8595,7 @@ a.collapse-icon {
 .collapse-icon .collapse-icon-open {
   position: absolute;
   right: 0.9375rem;
-  top: 0.625rem;
+  top: 0.75rem;
 }
 
 .collapse-icon .collapse-icon-closed [class^="icon-"],
@@ -10667,8 +10667,17 @@ button.list-group-heading {
 }
 
 .panel-header-link {
+  color: inherit;
   display: block;
   padding: 0.75rem 1.25rem;
+}
+
+.panel-header-link:hover, .panel-header-link:focus {
+  color: inherit;
+}
+
+.panel-header-link .collapse-icon {
+  padding-right: 2.28125rem;
 }
 
 .panel-body {
@@ -10713,6 +10722,32 @@ button.list-group-heading {
 
 .panel-group .panel-header + .panel-collapse > .panel-body {
   border-top: 1px solid transparent;
+}
+
+.card .panel,
+.card-horizontal .panel {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.card .panel-heading,
+.card .panel-footer,
+.card-horizontal .panel-heading,
+.card-horizontal .panel-footer {
+  border-radius: 0;
+}
+
+.card .panel-group,
+.card-horizontal .panel-group {
+  margin-bottom: 1rem;
+}
+
+.card .panel:first-child,
+.card .panel-group:first-child,
+.card-horizontal .panel:first-child,
+.card-horizontal .panel-group:first-child {
+  margin-top: 1rem;
 }
 
 .panel-danger {
