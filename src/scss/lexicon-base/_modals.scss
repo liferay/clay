@@ -34,9 +34,7 @@
 		box-shadow: $modal-footer-box-shadow;
 	}
 
-	clear: both;
 	color: $modal-footer-color;
-	text-align: left;
 
 	@include media-breakpoint-up(md) {
 		position: relative;
