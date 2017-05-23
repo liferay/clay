@@ -220,6 +220,7 @@ button.modal-primary-action-button {
 	bottom: 0;
 	left: 0;
 	margin: 0;
+	max-width: none;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -229,10 +230,6 @@ button.modal-primary-action-button {
 		left: 45px;
 		right: 45px;
 		top: 45px;
-	}
-
-	&.modal-dialog {
-		max-width: none;
 	}
 
 	.modal-content {
@@ -287,20 +284,13 @@ button.modal-primary-action-button {
 
 .modal-full-screen-sm-down {
 	@include media-breakpoint-down(sm) {
-		&.modal-dialog {
-			bottom: 0;
-			left: 0;
-			margin: 0;
-			overflow: hidden;
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-
-		&.modal-dialog,
-		&.modal-sm {
-			max-width: none;
-		}
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		max-width: none;
+		position: absolute;
+		right: 0;
+		top: 0;
 
 		.modal-body {
 			overflow: auto;
