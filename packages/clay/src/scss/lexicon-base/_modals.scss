@@ -124,11 +124,8 @@ button.modal-primary-action-button {
 		background-image: none;
 		box-shadow: none;
 		color: $modal-header-close-color;
-		height: $modal-title-line-height;
-		line-height: $modal-title-line-height;
 		margin-top: -1px;
 		opacity: 1;
-		width: $modal-title-line-height;
 
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
 			color: $modal-header-close-color-desktop;
