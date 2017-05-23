@@ -1,31 +1,25 @@
 .dropdown-header {
 	font-size: $dropdown-header-font-size;
+	overflow: hidden;
 
 	@if ($dropdown-item-padding-y != 3px) {
 		padding-bottom: $dropdown-item-padding-y;
 		padding-top: $dropdown-item-padding-y;
 	}
 
-	@if (variable-exists(atlas-theme)) {
-		overflow: hidden;
-
-		@include media-breakpoint-up(md) { // min-width: 768px
-			font-size: $dropdown-header-font-size-desktop;
-		}
+	@include media-breakpoint-up(md) { // min-width: 768px
+		font-size: $dropdown-header-font-size-desktop;
 	}
 }
 
 .dropdown-item {
+	overflow: hidden;
 	white-space: normal;
 	word-wrap: break-word;
 
 	@if ($dropdown-item-padding-y != 3px) {
 		padding-bottom: $dropdown-item-padding-y;
 		padding-top: $dropdown-item-padding-y;
-	}
-
-	@if (variable-exists(atlas-theme)) {
-		overflow: hidden;
 	}
 
 	label,
@@ -57,12 +51,9 @@
 	padding-top: $dropdown-padding-top;
 
 	@include media-breakpoint-up(md) {
+		font-size: $dropdown-font-size-desktop;
 		max-height: $dropdown-max-height-desktop;
-
-		@if (variable-exists(atlas-theme)) {
-			font-size: $dropdown-font-size-desktop;
-			max-width: $dropdown-max-width-desktop;
-		}
+		max-width: $dropdown-max-width-desktop;
 	}
 }
 
