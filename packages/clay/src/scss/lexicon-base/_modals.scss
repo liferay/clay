@@ -30,9 +30,7 @@
 	background-color: $modal-footer-bg;
 	border-color: $modal-footer-border-color;
 
-	@if (variable-exists(modal-footer-box-shadow)) {
-		box-shadow: $modal-footer-box-shadow;
-	}
+	@include box-shadow($modal-footer-box-shadow);
 
 	color: $modal-footer-color;
 
