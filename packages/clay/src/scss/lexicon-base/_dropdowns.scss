@@ -78,7 +78,7 @@
 
 .dropdown-menu {
 	.inline-scroller {
-		> .active > a {
+		.active {
 			&,
 			&:focus,
 			&:hover {
@@ -87,7 +87,7 @@
 			}
 		}
 
-		> .disabled > a {
+		.disabled {
 			&,
 			&:hover,
 			&:focus {
