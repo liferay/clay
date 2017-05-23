@@ -105,7 +105,6 @@ h6.modal-title {
 	float: left;
 	font-size: ($font-size-base * 1.5);
 	font-weight: $close-font-weight;
-	line-height: 1;
 	text-shadow: $close-text-shadow;
 }
 
@@ -126,6 +125,8 @@ button.modal-primary-action-button {
 		color: $modal-header-close-color;
 		margin-top: -1px;
 		opacity: 1;
+
+		@include monospace(32px);
 
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
 			color: $modal-header-close-color-desktop;
