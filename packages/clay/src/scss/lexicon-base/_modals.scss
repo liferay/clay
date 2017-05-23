@@ -237,12 +237,15 @@ button.modal-primary-action-button {
 
 	.modal-content {
 		border-color: $modal-content-border-color;
-		border-radius: 0;
+
+		@include border-radius(0);
+
 		border-width: 0;
 		height: 100%;
 
 		@include media-breakpoint-up(md) {
-			border-radius: 6px;
+			@include border-radius(6px);
+
 			border-width: 1px;
 		}
 	}
@@ -304,7 +307,8 @@ button.modal-primary-action-button {
 		}
 
 		.modal-content {
-			border-radius: 0;
+			@include border-radius(0);
+
 			border-width: 0;
 			height: 100%;
 		}
