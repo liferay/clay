@@ -39,8 +39,8 @@
 	display: block;
 	font-size: $modal-title-font-size;
 	font-weight: $modal-title-font-weight;
-	margin-left: auto;
-	margin-right: auto;
+	flex-grow: 1;
+	text-align: $modal-title-text-align;
 
 	@include text-truncate;
 }
