@@ -282,7 +282,7 @@ button.modal-primary-action-button {
 
 // Modal Responsive Full Screen
 
-.modal-responsive-full-screen {
+.modal-full-screen-sm-down {
 	@include media-breakpoint-down(sm) {
 		&.modal-dialog {
 			bottom: 0;
