@@ -1,16 +1,9 @@
 .card,
 .card-horizontal {
-	background-color: $card-bg;
-	border-color: $card-border-color;
 	border-style: $card-border-style;
-	border-width: $card-border-width;
 
 	@if (variable-exists(card-box-shadow)) {
 		box-shadow: $card-box-shadow;
-	}
-
-	@if ($card-border-radius > 0) {
-		border-radius: $card-border-radius;
 	}
 
 	margin-bottom: $card-margin-bottom;
