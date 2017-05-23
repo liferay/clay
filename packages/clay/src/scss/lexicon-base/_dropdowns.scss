@@ -2,13 +2,16 @@
 	font-size: $dropdown-header-font-size;
 	overflow: hidden;
 
+	@include media-breakpoint-up(md) { // min-width: 768px
+		font-size: $dropdown-header-font-size-desktop;
+	}
+}
+
+.dropdown-header,
+.dropdown-item {
 	@if ($dropdown-item-padding-y != 3px) {
 		padding-bottom: $dropdown-item-padding-y;
 		padding-top: $dropdown-item-padding-y;
-	}
-
-	@include media-breakpoint-up(md) { // min-width: 768px
-		font-size: $dropdown-header-font-size-desktop;
 	}
 }
 
@@ -16,11 +19,6 @@
 	overflow: hidden;
 	white-space: normal;
 	word-wrap: break-word;
-
-	@if ($dropdown-item-padding-y != 3px) {
-		padding-bottom: $dropdown-item-padding-y;
-		padding-top: $dropdown-item-padding-y;
-	}
 
 	label,
 	.form-control-label,
