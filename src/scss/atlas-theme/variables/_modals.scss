@@ -18,11 +18,11 @@ $modal-content-sm-up-box-shadow: null !default;
 
 $modal-content-border-color: transparent !default;
 
-$modal-header-bg: null !default;
+$modal-header-bg: #FCFEFF !default;
 $modal-header-border-color: #E4E6E8 !default;
-$modal-header-color: null !default;
+$modal-header-color: $body-color !default;
 
-$modal-header-close-color: #FFF !default;
+$modal-header-close-color: $brand-secondary !default;
 $modal-header-close-icon-opacity: 1 !default;
 $modal-header-close-lexicon-icon-opacity: 1 !default;
 $modal-header-close-opacity-modifier: 1 !default;
@@ -34,13 +34,6 @@ $modal-footer-bg: $modal-header-bg !default;
 $modal-footer-border-color: transparent !default;
 $modal-footer-box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15) !default;
 $modal-footer-color: $modal-header-color !default;
-
-$modal-header-bg-desktop: #FCFEFF !default;
-$modal-header-close-color-desktop: $brand-secondary !default;
-$modal-header-color-desktop: $body-color !default;
-
-$modal-footer-bg-desktop: $modal-header-bg-desktop !default;
-$modal-footer-color-desktop: $modal-header-color-desktop !default;
 
 // Modal Inverse
 
@@ -60,15 +53,6 @@ $modal-inverse-footer-color: $modal-inverse-header-color !default;
 
 $modal-inverse-link-color: $brand-primary !default;
 $modal-inverse-link-hover-color: $modal-inverse-link-color !default;
-
-$modal-inverse-header-bg-desktop: #FCFEFF !default;
-$modal-inverse-header-border-color-desktop: $modal-header-border-color !default;
-$modal-inverse-header-close-color-desktop: $modal-header-close-color-desktop !default;
-$modal-inverse-header-color-desktop: $body-color !default;
-
-$modal-inverse-footer-bg-desktop: $modal-inverse-header-bg-desktop !default;
-$modal-inverse-footer-border-color-desktop: $modal-inverse-header-border-color-desktop !default;
-$modal-inverse-footer-color-desktop: $modal-inverse-header-color-desktop !default;
 
 // Modal Full Screen
 

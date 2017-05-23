@@ -1,13 +1,12 @@
+.modal-content {
+	overflow: hidden;
+}
+
 .modal-header {
 	background-color: $modal-header-bg;
 	border-color: $modal-header-border-color;
 	color: $modal-header-color;
 	flex-shrink: 0;
-
-	@include media-breakpoint-up($mobile-desktop-breakpoint) {
-		background-color: $modal-header-bg-desktop;
-		color: $modal-header-color-desktop;
-	}
 }
 
 .modal-body {
@@ -28,11 +27,6 @@
 
 	color: $modal-footer-color;
 	flex-shrink: 0;
-
-	@include media-breakpoint-up($mobile-desktop-breakpoint) {
-		background-color: $modal-footer-bg-desktop;
-		color: $modal-footer-color-desktop;
-	}
 }
 
 // Modal Title
@@ -127,10 +121,6 @@ button.modal-primary-action-button {
 		opacity: 1;
 
 		@include monospace(32px);
-
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			color: $modal-header-close-color-desktop;
-		}
 	}
 
 	.close,
@@ -159,10 +149,6 @@ button.modal-primary-action-button {
 			border-color: transparent;
 			box-shadow: none;
 			color: $modal-header-close-color;
-
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				color: $modal-header-close-color-desktop;
-			}
 		}
 	}
 }
@@ -306,19 +292,9 @@ button.modal-primary-action-button {
 		border-color: $modal-inverse-header-border-color;
 		color: $modal-inverse-header-color;
 
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			background-color: $modal-inverse-header-bg-desktop;
-			border-color: $modal-inverse-header-border-color-desktop;
-			color: $modal-inverse-header-color-desktop;
-		}
-
 		.close,
 		.modal-primary-action-button {
 			color: $modal-inverse-header-close-color;
-
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				color: $modal-inverse-header-close-color-desktop;
-			}
 		}
 	}
 
@@ -331,11 +307,5 @@ button.modal-primary-action-button {
 		background-color: $modal-inverse-footer-bg;
 		border-color: $modal-inverse-footer-border-color;
 		color: $modal-inverse-footer-color;
-
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			background-color: $modal-inverse-footer-bg-desktop;
-			border-color: $modal-inverse-footer-border-color-desktop;
-			color: $modal-inverse-footer-color-desktop;
-		}
 	}
 }

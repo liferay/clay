@@ -10,22 +10,14 @@ $modal-body-color: null !default;
 $modal-header-bg: null !default;
 $modal-header-color: null !default;
 
-$modal-header-bg-desktop: null !default;
-
 $modal-header-close-color: $body-color !default;
 $modal-header-close-icon-opacity: 0.2 !default;
 $modal-header-close-lexicon-icon-opacity: 0.3 !default;
 $modal-header-close-opacity-modifier: 2.66667 !default;
 
-$modal-header-close-color-desktop: null !default;
-$modal-header-color-desktop: null !default;
-
 $modal-footer-bg: null !default;
 $modal-footer-box-shadow: null !default;
 $modal-footer-color: null !default;
-
-$modal-footer-bg-desktop: null !default;
-$modal-footer-color-desktop: null !default;
 
 // Modal Inverse
 
@@ -47,15 +39,6 @@ $modal-inverse-footer-color: $modal-inverse-header-color !default;
 
 $modal-inverse-link-color: $navbar-inverse-color !default;
 $modal-inverse-link-hover-color: $navbar-inverse-hover-color !default;
-
-$modal-inverse-header-bg-desktop: null !default;
-$modal-inverse-header-border-color-desktop: null !default;
-$modal-inverse-header-close-color-desktop: null !default;
-$modal-inverse-header-color-desktop: null !default;
-
-$modal-inverse-footer-bg-desktop: null !default;
-$modal-inverse-footer-border-color-desktop: null !default;
-$modal-inverse-footer-color-desktop: null !default;
 
 // Modal Full Screen
 
