@@ -2,6 +2,7 @@
 	background-color: $modal-header-bg;
 	border-color: $modal-header-border-color;
 	color: $modal-header-color;
+	flex-shrink: 0;
 
 	@include media-breakpoint-up($mobile-desktop-breakpoint) {
 		background-color: $modal-header-bg-desktop;
@@ -26,6 +27,7 @@
 	@include box-shadow($modal-footer-box-shadow);
 
 	color: $modal-footer-color;
+	flex-shrink: 0;
 
 	@include media-breakpoint-up($mobile-desktop-breakpoint) {
 		background-color: $modal-footer-bg-desktop;
