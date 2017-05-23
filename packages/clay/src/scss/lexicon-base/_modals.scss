@@ -248,37 +248,12 @@ button.modal-primary-action-button {
 	}
 
 	.modal-body {
-		bottom: $modal-footer-height;
-		left: 0;
 		overflow: auto;
-		position: absolute;
-		right: 0;
-		top: $modal-header-height;
-
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				bottom: $modal-footer-height-desktop;
-				top: $modal-header-height-desktop;
-			}
-		}
-	}
-
-	.modal-body-no-footer {
-		bottom: 0;
-	}
-
-	.modal-body-no-header {
-		top: 0;
 	}
 
 	.modal-footer {
 		background-color: $modal-full-screen-footer-bg;
-		bottom: 0;
 		color: $modal-full-screen-footer-color;
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: auto;
 
 		@if ($enable-mobile-desktop-sizes) {
 			@include media-breakpoint-up($mobile-desktop-breakpoint) {
@@ -311,17 +286,12 @@ button.modal-primary-action-button {
 	@include media-breakpoint-down(sm) {
 		&.modal-dialog {
 			bottom: 0;
+			left: 0;
 			margin: 0;
 			overflow: hidden;
-			top: 0;
-		}
-
-		&.modal-dialog,
-		.modal-body,
-		.modal-footer {
-			left: 0;
 			position: absolute;
 			right: 0;
+			top: 0;
 		}
 
 		&.modal-dialog,
@@ -330,17 +300,7 @@ button.modal-primary-action-button {
 		}
 
 		.modal-body {
-			bottom: $modal-footer-height;
 			overflow: auto;
-			top: $modal-header-height;
-		}
-
-		.modal-body-no-footer {
-			bottom: 0;
-		}
-
-		.modal-body-no-header {
-			top: 0;
 		}
 
 		.modal-content {
@@ -351,7 +311,6 @@ button.modal-primary-action-button {
 
 		.modal-footer {
 			background-color: $modal-full-screen-footer-bg;
-			bottom: 0;
 			color: $modal-full-screen-footer-color;
 		}
 
