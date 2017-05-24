@@ -2,8 +2,10 @@
 	font-size: $dropdown-header-font-size;
 	overflow: hidden;
 
-	@include media-breakpoint-up(md) { // min-width: 768px
-		font-size: $dropdown-header-font-size-desktop;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			font-size: $dropdown-header-font-size-desktop;
+		}
 	}
 }
 
@@ -48,10 +50,12 @@
 	padding-right: $dropdown-padding-right;
 	padding-top: $dropdown-padding-top;
 
-	@include media-breakpoint-up(md) {
-		font-size: $dropdown-font-size-desktop;
-		max-height: $dropdown-max-height-desktop;
-		max-width: $dropdown-max-width-desktop;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			font-size: $dropdown-font-size-desktop;
+			max-height: $dropdown-max-height-desktop;
+			max-width: $dropdown-max-width-desktop;
+		}
 	}
 }
 
