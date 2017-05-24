@@ -11,10 +11,10 @@
 
 .progress-lg {
 	border-radius: $progress-bar-lg-border-radius;
-	height: $progress-bar-lg-height;
 
 	.progress-bar {
 		font-size: $progress-bar-lg-font-size;
+		height: $progress-bar-lg-height;
 		line-height: $progress-bar-lg-height;
 	}
 }
