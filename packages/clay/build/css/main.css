@@ -354,21 +354,21 @@ body.fixed {
   }
 }
 
-.uxgl-dropdown-display .dropdown-menu {
+.clay-site-dropdown-display .dropdown-menu {
   display: block;
   position: relative;
   top: auto;
 }
 
-.uxgl-dropdown-display .dropdown-wide-container {
+.clay-site-dropdown-display .dropdown-wide-container {
   float: left;
 }
 
-.uxgl-dropdown-display .dropdown-wide-container .dropdown-menu {
+.clay-site-dropdown-display .dropdown-wide-container .dropdown-menu {
   display: flex;
 }
 
-.uxgl-dropdown-display .mega-menu .dropdown-menu {
+.clay-site-dropdown-display .mega-menu .dropdown-menu {
   float: left;
   max-width: 100%;
 }
