@@ -12355,19 +12355,31 @@ th .truncate-text {
 }
 
 .dropdown-header {
+  overflow: hidden;
+}
+
+.dropdown-header,
+.dropdown-item {
   padding-bottom: 0.25rem;
   padding-top: 0.25rem;
 }
 
 .dropdown-item {
+  overflow: hidden;
   white-space: normal;
   word-wrap: break-word;
 }
 
 .dropdown-item.active label,
-.dropdown-item.active .form-control-label,
-.dropdown-item.active .form-check-label {
+.dropdown-item.active .form-check-label,
+.dropdown-item.active .form-control-label {
   color: #fff;
+}
+
+.dropdown-item.disabled label,
+.dropdown-item.disabled .form-check-label,
+.dropdown-item.disabled .form-control-label {
+  color: #636c72;
 }
 
 .dropdown-item .form-check {
@@ -12390,11 +12402,6 @@ th .truncate-text {
   }
 }
 
-.dropdown-menu > li > a {
-  padding-bottom: 0.25rem;
-  padding-top: 0.25rem;
-}
-
 .dropdown-toggle:after {
   content: normal;
 }
@@ -12406,19 +12413,6 @@ th .truncate-text {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   padding: 0;
-}
-
-.dropdown-menu .inline-scroller > .active > a, .dropdown-menu .inline-scroller > .active > a:focus, .dropdown-menu .inline-scroller > .active > a:hover {
-  background-color: #0275d8;
-  color: #fff;
-}
-
-.dropdown-menu .inline-scroller > .disabled > a, .dropdown-menu .inline-scroller > .disabled > a:hover, .dropdown-menu .inline-scroller > .disabled > a:focus {
-  background-color: transparent;
-  background-image: none;
-  color: #636c72;
-  cursor: not-allowed;
-  text-decoration: none;
 }
 
 .dropdown-menu-center {
