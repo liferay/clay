@@ -22,10 +22,20 @@
 	white-space: normal;
 	word-wrap: break-word;
 
-	label,
-	.form-control-label,
-	.form-check-label {
-		color: $dropdown-link-active-color;
+	&.active {
+		label,
+		.form-check-label,
+		.form-control-label {
+			color: $dropdown-link-active-color;
+		}
+	}
+
+	&.disabled {
+		label,
+		.form-check-label,
+		.form-control-label {
+			color: $dropdown-link-disabled-color;
+		}
 	}
 
 	.form-check {
@@ -78,31 +88,6 @@
 	-webkit-overflow-scrolling: touch;
 
 	padding: 0;
-}
-
-.dropdown-menu {
-	.inline-scroller {
-		.active {
-			&,
-			&:focus,
-			&:hover {
-				background-color: $dropdown-link-active-bg;
-				color: $dropdown-link-active-color;
-			}
-		}
-
-		.disabled {
-			&,
-			&:hover,
-			&:focus {
-				background-color: transparent;
-				background-image: none;
-				color: $dropdown-link-disabled-color;
-				cursor: not-allowed;
-				text-decoration: none;
-			}
-		}
-	}
 }
 
 // Dropdown menu positions
