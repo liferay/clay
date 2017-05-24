@@ -1,4 +1,8 @@
 .modal-content {
+	@if not ($modal-content-border-radius == $border-radius-lg) {
+		@include border-radius($modal-content-border-radius);
+	}
+
 	overflow: hidden;
 }
 
@@ -190,7 +194,7 @@ button.modal-primary-action-button {
 	right: 0;
 	top: 0;
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up($mobile-desktop-breakpoint) {
 		bottom: 45px;
 		left: 45px;
 		right: 45px;
@@ -205,10 +209,10 @@ button.modal-primary-action-button {
 		border-width: 0;
 		height: 100%;
 
-		@include media-breakpoint-up(md) {
-			@include border-radius(6px);
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@include border-radius($modal-content-border-radius);
 
-			border-width: 1px;
+			border-width: $modal-content-border-width;
 		}
 	}
 
