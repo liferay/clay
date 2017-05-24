@@ -221,36 +221,8 @@ button.modal-primary-action-button {
 	}
 
 	.modal-footer {
-		background-color: $modal-full-screen-footer-bg;
-		border-color: $modal-full-screen-footer-border-color;
-		color: $modal-full-screen-footer-color;
-
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			background-color: $modal-full-screen-footer-bg-desktop;
-			border-color: $modal-full-screen-footer-border-color-desktop;
-			color: $modal-full-screen-footer-color-desktop;
 			padding: $modal-inner-padding;
-		}
-	}
-
-	.modal-header {
-		background-color: $modal-full-screen-header-bg;
-		border-color: $modal-full-screen-header-border-color;
-		color: $modal-full-screen-header-color;
-
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			background-color: $modal-full-screen-header-bg-desktop;
-			border-color: $modal-full-screen-header-border-color-desktop;
-			color: $modal-full-screen-header-color-desktop;
-		}
-
-		.close,
-		.modal-primary-action-button {
-			color: $modal-full-screen-header-close-color;
-
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				color: $modal-full-screen-header-close-color-desktop;
-			}
 		}
 	}
 }
@@ -276,23 +248,6 @@ button.modal-primary-action-button {
 
 			border-width: 0;
 			height: 100%;
-		}
-
-		.modal-footer {
-			background-color: $modal-full-screen-footer-bg;
-			border-color: $modal-full-screen-footer-border-color;
-			color: $modal-full-screen-footer-color;
-		}
-
-		.modal-header {
-			background-color: $modal-full-screen-header-bg;
-			border-color: $modal-full-screen-header-border-color;
-			color: $modal-full-screen-header-color;
-
-			.close,
-			.modal-primary-action-button {
-				color: $modal-full-screen-header-close-color;
-			}
 		}
 	}
 }
