@@ -12780,6 +12780,74 @@ button.modal-primary-action-button {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.modal-danger .modal-header {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+
+.modal-danger .modal-header .close,
+.modal-danger .modal-header .modal-primary-action-button {
+  color: #a94442;
+}
+
+.modal-danger .modal-footer {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+
+.modal-info .modal-header {
+  background-color: #d9edf7;
+  border-color: #bcdff1;
+  color: #31708f;
+}
+
+.modal-info .modal-header .close,
+.modal-info .modal-header .modal-primary-action-button {
+  color: #31708f;
+}
+
+.modal-info .modal-footer {
+  background-color: #d9edf7;
+  border-color: #bcdff1;
+  color: #31708f;
+}
+
+.modal-success .modal-header {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+
+.modal-success .modal-header .close,
+.modal-success .modal-header .modal-primary-action-button {
+  color: #3c763d;
+}
+
+.modal-success .modal-footer {
+  background-color: #dff0d8;
+  border-color: #d0e9c6;
+  color: #3c763d;
+}
+
+.modal-warning .modal-header {
+  background-color: #fcf8e3;
+  border-color: #faf2cc;
+  color: #8a6d3b;
+}
+
+.modal-warning .modal-header .close,
+.modal-warning .modal-header .modal-primary-action-button {
+  color: #8a6d3b;
+}
+
+.modal-warning .modal-footer {
+  background-color: #fcf8e3;
+  border-color: #faf2cc;
+  color: #8a6d3b;
+}
+
 .nameplate {
   display: table;
   width: 100%;
