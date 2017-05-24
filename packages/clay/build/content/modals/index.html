@@ -222,8 +222,8 @@
 	<div class="col-md-12">
 		<h3 id="small-modal"><a class="heading-anchor" href="#small-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Small Modal</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>300px wide modal window.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>300px wide modal window, expands full width of screen at 575px and below.</p>
 		</blockquote>
 
 		<button class="btn btn-info" data-target="#lexSmallModal" data-toggle="modal">Small Modal</button>
@@ -264,8 +264,8 @@
 	<div class="col-md-12">
 		<h3 id="default-modal"><a class="heading-anchor" href="#default-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Default Modal</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>600px wide modal window.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>500px wide modal window, expands full width of screen at 575px and below.</p>
 		</blockquote>
 
 		<button class="btn btn-info" data-target="#lexDefaultModal" data-toggle="modal">Default Modal</button>
@@ -306,8 +306,10 @@
 	<div class="col-md-12">
 		<h3 id="large-modal"><a class="heading-anchor" href="#large-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Large Modal</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>900px wide modal in window sizes greater than 992px. 600px wide modal in window sizes between 768px and 992px.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>800px wide modal in window sizes greater than 992px.</p>
+			<p>500px wide modal in window sizes between 576px and 991px</p>
+			<p>Full width of screen at 575px and below.</p>
 		</blockquote>
 
 		<button class="btn btn-info" data-target="#lexLargeModal" data-toggle="modal">Large Modal</button>
@@ -347,15 +349,78 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="full-screen-modal"><a class="heading-anchor" href="#full-screen-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Full Screen Modal</h3>
+		<h3 id="inline-scroller"><a class="heading-anchor" href="#inline-scroller"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Inline Scroller</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>A modal that stretches to fit the browser window with 45px padding on every side.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.</p>
 		</blockquote>
 
-		<div class="alert alert-warning">
-			<p>The add button must be duplicated in the header and hidden in screen sizes greater than or equal to 768px if we want to preserve the tab order in mobile.</p>
+		<button class="btn btn-info" data-target="#claySmallModalInlineScroller" data-toggle="modal">Small Modal Inline Scroller</button>
+		<div aria-labelledby="claySmallModalInlineScrollerLabel" class="fade modal" id="claySmallModalInlineScroller" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="../../images/icons/icons.svg#check">
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="../../images/icons/icons.svg#times">
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body inline-scroller">
+						<h4>Modal Body</h4>
+						<div>
+							<p>
+								<a href="#1">Crema coffee</a> a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+
+							<p>
+								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
+							</p>
+
+							<p>
+								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
+							</p>
+
+							<p>
+								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
+							</p>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
+</div>
+
+<div class="row row-spacing">
+	<div class="col-md-12">
+		<h3 id="full-screen-modal"><a class="heading-anchor" href="#full-screen-modal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Full Screen Modal</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>A modal that stretches to fit the browser window with 45px spacing on every side, expands to fill the screen at screen sizes 767px and below.</p>
+		</blockquote>
 
 		<button class="btn btn-info" data-target="#lexFullScreenModal" data-toggle="modal">Full Screen Modal</button>
 		<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="lexFullScreenModal" role="dialog" tabindex="-1">
@@ -496,13 +561,13 @@
 	<div class="col-md-12">
 		<h3 id="modal-full-screen-sm-down"><a class="heading-anchor" href="#modal-full-screen-sm-down"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Full Screen Sm Down</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Add <code class="code">modal-full-screen-sm-down</code> to any <code class="code">modal-dialog</code> to stretch to fit the browser window at screen widths 767px and below.</p>
 		</blockquote>
 
 		<button class="btn btn-info" data-target="#lexModalFullScreenSmDown" data-toggle="modal">Modal Full Screen Sm Down</button>
 		<div aria-labelledby="lexModalFullScreenSmDownLabel" class="fade modal" id="lexModalFullScreenSmDown" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen-sm-down">
+			<div class="modal-dialog modal-full-screen-sm-down modal-inverse">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
@@ -558,275 +623,9 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="modal-body-no-footer"><a class="heading-anchor" href="#modal-body-no-footer"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Body No Footer</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>modal-body-no-footer</code> is a <code>modal-body</code> helper class that removes the reserved space for modal-footer. Add it to modal-body when no modal-footer is present.</p>
-		</blockquote>
-
-		<button class="btn btn-info" data-target="#lexFullScreenModal01" data-toggle="modal">Full Screen Modal</button>
-
-		<div aria-labelledby="lexFullScreenModal01Label" class="fade modal" id="lexFullScreenModal01" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</button>
-
-						<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
-
-						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="../../images/icons/icons.svg#times">
-							</svg>
-						</button>
-					</div>
-
-					<div class="modal-body modal-body-no-footer">
-						<h4>Modal Body</h4>
-						<div>
-							<p>
-								<a href="#1">Crema coffee a turkish</a> decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="modal-body-no-header"><a class="heading-anchor" href="#modal-body-no-header"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Body No Header</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>modal-body-no-header</code> is a <code>modal-body</code> helper class that removes the reserved space for modal-header. Add it to modal-body when no modal-header is present.</p>
-		</blockquote>
-
-		<button class="btn btn-info" data-target="#lexFullScreenModal02" data-toggle="modal">Full Screen Modal</button>
-
-		<div aria-labelledby="lexFullScreenModal02Label" class="fade modal" id="lexFullScreenModal02" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen">
-				<div class="modal-content">
-					<div class="modal-body modal-body-no-header">
-						<h4>Modal Body</h4>
-						<div>
-							<p>
-								<a href="#1">Crema coffee a turkish</a> decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-						<div>
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-
-							<p>
-								Crema coffee a turkish decaffeinated espresso dripper cortado lungo con panna. Coffee, roast cup blue mountain beans single origin eu shop grounds caffeine a robusta. Sweet macchiato spoon, mug foam ut est ristretto.
-							</p>
-
-							<p>
-								Irish coffee, at as cultivar robusta fair trade. Variety, caramelization, sweet, steamed, breve sit, whipped spoon at in caffeine. So latte, half and half, instant caf&#xE9; au lait whipped extra at percolator.
-							</p>
-
-							<p>
-								Skinny extraction, viennese arabica aromatic robust kopi-luwak. Carajillo chicory dark espresso qui iced sugar. To go, at caf&#xE9; au lait chicory, qui, fair trade irish, beans seasonal extraction cappuccino kopi-luwak.
-							</p>
-						</div>
-					</div>
-
-					<div class="modal-footer">
-						<button class="btn btn-primary" type="button">Add</button>
-
-						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Cancel</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
 		<h3 id="modal-body-iframe"><a class="heading-anchor" href="#modal-body-iframe"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Body Iframe</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p><code>modal-body-iframe</code> is a <code>modal-body</code> helper class that sizes and styles an iframe nested inside modal-body. Add it to modal-body when you want the iframe to be the same width and height as modal-body.</p>
 		</blockquote>
 
@@ -834,7 +633,7 @@
 
 		<button class="btn btn-info" data-target="#lexFullScreenModalIframe" data-toggle="modal">Full Screen Modal Iframe</button>
 		<div aria-labelledby="lexFullScreenModalIframeLabel" class="fade modal" id="lexFullScreenModalIframe" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen modal-inverse">
+			<div class="modal-dialog modal-full-screen">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
@@ -868,18 +667,6 @@
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3 id="inline-scroller"><a class="heading-anchor" href="#inline-scroller"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Inline Scroller</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>inline-scroller</code> is a helper class that sizes modal-body to a fixed height and scrolls any overflowing content. Add it to modal-body when you want modal-body to be a fixed height. It defaults to height 125px.</p>
-		</blockquote>
-
-		<div class="alert alert-warning">If using modal-fullscreen the class inline-scroller shouldn&apos;t be added to modal-body.</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
 		<h3 id="modal-inverse"><a class="heading-anchor" href="#modal-inverse"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Inverse</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
@@ -887,90 +674,6 @@
 		</blockquote>
 	</div>
 </div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="modal-browser-bugs"><a class="heading-anchor" href="#modal-browser-bugs"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Modal Browser Bugs</h3>
-
-		<blockquote class="blockquote-sm blockquote-warning">
-			<p>iOS Safari doesn&apos;t respect <code>overflow: hidden</code> on the body element. See <a href="https://bugs.webkit.org/show_bug.cgi?id=153852">https://bugs.webkit.org/show_bug.cgi?id=153852</a>.</p>
-
-			<p>In iOS Safari, body content under the modal will scroll when the beginning or end of scrollable content inside a modal is reached. Use the position fixed workaround by adding <code>position: fixed;</code> to the <code>modal-open</code> class. The body content will be scrolled to the top as a side effect.</p>
-
-			<pre><code>@media (max-width: 767px) {
-    .modal-open {
-        position: fixed;
-    }
-}</code></pre>
-
-		<p>The jQuery work around:</p>
-
-		<pre><code>(function($) {
-	var winScrollPos;
-	var $doc = $(document);
-	var $body = $(&apos;body&apos;);
-	var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) &amp;&amp; !window.MSStream;
-
-	$doc.on(&apos;hidden.bs.modal&apos;, function(e) {
-		if (iOS &amp;&amp; !(winScrollPos === 0)) {
-				window.scrollTo(0, winScrollPos);
-
-				$body.css({
-					position: &apos;&apos;,
-					top: &apos;&apos;
-				});
-			}
-	});
-
-	$doc.on(&apos;show.bs.modal&apos;, function(e) {
-		if (iOS) {
-			winScrollPos = window.scrollY;
-
-			if (!(winScrollPos === 0)) {
-				$body.css({
-					position: &apos;fixed&apos;,
-					top: -winScrollPos
-				});
-			}
-		}
-	});
-})(jQuery);</code></pre>
-		</blockquote>
-	</div>
-</div>
-
-<script>
-	(function($) {
-		var winScrollPos;
-		var $doc = $(document);
-		var $body = $('body');
-		var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-		$doc.on('hidden.bs.modal', function(e) {
-			if (iOS && !(winScrollPos === 0)) {
-					window.scrollTo(0, winScrollPos);
-
-					$body.css({
-						position: '',
-						top: ''
-					});
-				}
-		});
-
-		$doc.on('show.bs.modal', function(e) {
-			if (iOS) {
-				winScrollPos = window.scrollY;
-
-				if (!(winScrollPos === 0)) {
-					$body.css({
-						position: 'fixed',
-						top: -winScrollPos
-					});
-				}
-			}
-		});
-	})(jQuery);
-</script>
 	</div>
 
 		</section>
