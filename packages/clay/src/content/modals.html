@@ -55,7 +55,7 @@ section: Components
 
 		<button class="btn btn-info" data-target="#lexDefaultModal" data-toggle="modal">Default Modal</button>
 		<div aria-labelledby="lexDefaultModalLabel" class="fade modal" id="lexDefaultModal" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-inverse">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
@@ -352,7 +352,7 @@ section: Components
 
 		<button class="btn btn-info" data-target="#lexModalFullScreenSmDown" data-toggle="modal">Modal Full Screen Sm Down</button>
 		<div aria-labelledby="lexModalFullScreenSmDownLabel" class="fade modal" id="lexModalFullScreenSmDown" role="dialog" tabindex="-1">
-			<div class="modal-dialog modal-full-screen-sm-down modal-inverse">
+			<div class="modal-dialog modal-full-screen-sm-down">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
@@ -452,10 +452,166 @@ section: Components
 
 <div class="row row-spacing">
 	<div class="col-md-12">
-		<h3>Modal Inverse</h3>
+		<h3>Modal Variants</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p><code>modal-inverse</code> is a helper class that styles a modal with inverted colors, add it to modal-dialog.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p><code class="code">modal-inverse</code>, <code class="code">modal-danger</code>, <code class="code">modal-info</code>, <code class="code">modal-success</code>, or <code class="code">modal-warning</code> are helper classes that style a modal based on that state, add it to modal-dialog.</p>
 		</blockquote>
+
+		<button class="btn btn-secondary" data-target="#clayModalInverse" data-toggle="modal">Modal Inverse</button>
+		<div aria-labelledby="clayModalInverseLabel" class="fade modal" id="clayModalInverse" role="dialog" tabindex="-1">
+			<div class="modal-dialog modal-full-screen-sm-down modal-inverse">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-danger" data-target="#clayModalDanger" data-toggle="modal">Modal Danger</button>
+		<div aria-labelledby="clayModalDangerLabel" class="fade modal" id="clayModalDanger" role="dialog" tabindex="-1">
+			<div class="modal-danger modal-dialog modal-full-screen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-info" data-target="#clayModalInfo" data-toggle="modal">Modal Info</button>
+		<div aria-labelledby="clayModalInfoLabel" class="fade modal" id="clayModalInfo" role="dialog" tabindex="-1">
+			<div class="modal-info modal-dialog modal-full-screen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-success" data-target="#clayModalSuccess" data-toggle="modal">Modal Success</button>
+		<div aria-labelledby="clayModalSuccessLabel" class="fade modal" id="clayModalSuccess" role="dialog" tabindex="-1">
+			<div class="modal-success modal-dialog modal-full-screen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-warning" data-target="#clayModalWarning" data-toggle="modal">Modal Warning</button>
+		<div aria-labelledby="clayModalWarningLabel" class="fade modal" id="clayModalWarning" role="dialog" tabindex="-1">
+			<div class="modal-warning modal-dialog modal-full-screen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+							</svg>
+						</button>
+
+						<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
+
+						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+								<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+							</svg>
+						</button>
+					</div>
+
+					<div class="modal-body">
+						<h4>Modal Body</h4>
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn btn-primary" type="button">Primary</button>
+						<button class="btn btn-link close-modal" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
