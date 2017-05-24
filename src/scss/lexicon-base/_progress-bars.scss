@@ -9,16 +9,6 @@
 	line-height: $progress-bar-height;
 }
 
-.progress-xs {
-	border-radius: $progress-bar-xs-border-radius;
-	height: $progress-bar-xs-height;
-
-	.progress-bar {
-		font-size: $progress-bar-xs-font-size;
-		line-height: $progress-bar-xs-height;
-	}
-}
-
 .progress-lg {
 	border-radius: $progress-bar-lg-border-radius;
 	height: $progress-bar-lg-height;
@@ -26,16 +16,6 @@
 	.progress-bar {
 		font-size: $progress-bar-lg-font-size;
 		line-height: $progress-bar-lg-height;
-	}
-}
-
-.progress-xl {
-	border-radius: $progress-bar-xl-border-radius;
-	height: $progress-bar-xl-height;
-
-	.progress-bar {
-		font-size: $progress-bar-xl-font-size;
-		line-height: $progress-bar-xl-height;
 	}
 }
 
