@@ -53,3 +53,17 @@ $modal-inverse-footer-color: $modal-inverse-header-color !default;
 
 $modal-inverse-link-color: $brand-primary !default;
 $modal-inverse-link-hover-color: $modal-inverse-link-color !default;
+
+// Modal Danger
+
+$modal-danger-header-bg: $brand-danger !default;
+$modal-danger-header-border-color: $brand-danger !default;
+$modal-danger-header-color: #FFF !default;
+
+$modal-danger-header-close-color: #FFF !default;
+
+$modal-danger-body-bg: #FFF !default;
+
+$modal-danger-footer-bg: #FFF !default;
+$modal-danger-footer-border-color: transparent !default;
+$modal-danger-footer-color: $body-color !default;
