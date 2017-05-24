@@ -53,23 +53,3 @@ $modal-inverse-footer-color: $modal-inverse-header-color !default;
 
 $modal-inverse-link-color: $brand-primary !default;
 $modal-inverse-link-hover-color: $modal-inverse-link-color !default;
-
-// Modal Full Screen
-
-$modal-full-screen-header-bg: #29353D !default;
-$modal-full-screen-header-border-color: #1C252C !default;
-$modal-full-screen-header-color: #FFF !default;
-$modal-full-screen-header-close-color: #FFF !default;
-
-$modal-full-screen-footer-bg: $modal-full-screen-header-bg !default;
-$modal-full-screen-footer-border-color: $modal-full-screen-header-border-color !default;
-$modal-full-screen-footer-color: $modal-full-screen-header-color !default;
-
-$modal-full-screen-header-bg-desktop: #FCFEFF !default;
-$modal-full-screen-header-border-color-desktop: #E4E6E8 !default;
-$modal-full-screen-header-color-desktop: $body-color !default;
-$modal-full-screen-header-close-color-desktop: $brand-secondary !default;
-
-$modal-full-screen-footer-bg-desktop: $modal-full-screen-header-bg-desktop !default
-$modal-full-screen-footer-border-color-desktop: $modal-full-screen-header-border-color-desktop !default;
-$modal-full-screen-footer-color-desktop: $modal-full-screen-header-color-desktop !default;
