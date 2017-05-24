@@ -12559,18 +12559,12 @@ th .truncate-text {
 }
 
 .modal-content {
-  overflow: auto;
+  overflow: hidden;
 }
 
 .modal-header {
-  background-color: transparent;
   border-color: #eceeef;
-  color: #292b2c;
-}
-
-.modal-body {
-  background-color: transparent;
-  color: #292b2c;
+  flex-shrink: 0;
 }
 
 .modal-body.inline-scroller {
@@ -12580,21 +12574,12 @@ th .truncate-text {
 }
 
 .modal-footer {
-  background-color: transparent;
-  border-color: #eceeef;
-  color: #292b2c;
-}
-
-@media (min-width: 768px) {
-  .modal-footer {
-    position: relative;
-  }
+  flex-shrink: 0;
 }
 
 .modal-title {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -12628,7 +12613,6 @@ h6.modal-title {
   float: left;
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: 1;
   text-shadow: 0 1px 0 #fff;
 }
 
@@ -12646,11 +12630,11 @@ button.modal-primary-action-button {
   background-image: none;
   box-shadow: none;
   color: #292b2c;
-  height: 1.5;
-  line-height: 1.5;
   margin-top: -1px;
   opacity: 1;
-  width: 1.5;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
 }
 
 .modal-header .close > span,
@@ -12733,7 +12717,7 @@ button.modal-primary-action-button {
 
 @media (min-width: 768px) {
   .modal-full-screen .modal-content {
-    border-radius: 6px;
+    border-radius: 0.3rem;
     border-width: 1px;
   }
 }
@@ -12779,7 +12763,6 @@ button.modal-primary-action-button {
 }
 
 .modal-inverse .modal-header {
-  background-color: transparent;
   border-color: transparent;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -12790,12 +12773,10 @@ button.modal-primary-action-button {
 }
 
 .modal-inverse .modal-body {
-  background-color: transparent;
   color: rgba(255, 255, 255, 0.5);
 }
 
 .modal-inverse .modal-footer {
-  background-color: transparent;
   border-color: transparent;
   color: rgba(255, 255, 255, 0.5);
 }
