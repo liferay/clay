@@ -41,3 +41,18 @@ $modal-inverse-footer-color: $modal-inverse-header-color !default;
 
 $modal-inverse-link-color: $navbar-inverse-color !default;
 $modal-inverse-link-hover-color: $navbar-inverse-hover-color !default;
+
+// Modal Danger
+
+$modal-danger-header-bg: $state-danger-bg !default;
+$modal-danger-header-border-color: $state-danger-border-color !default;
+$modal-danger-header-color: $state-danger-text !default;
+
+$modal-danger-header-close-color: $state-danger-text !default;
+
+$modal-danger-body-bg: null !default;
+$modal-danger-body-color: null !default;
+
+$modal-danger-footer-bg: $state-danger-bg !default;
+$modal-danger-footer-border-color: $state-danger-border-color !default;
+$modal-danger-footer-color: $state-danger-text !default;
