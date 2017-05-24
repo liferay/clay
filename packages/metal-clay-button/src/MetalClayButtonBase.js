@@ -31,7 +31,7 @@ MetalClayButtonBase.STATE = {
 	 * The href attribute value of the link.
 	 * @instance
 	 * @memberof MetalClayButtonBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	href: {
@@ -42,7 +42,7 @@ MetalClayButtonBase.STATE = {
 	 * The label of the button or link content.
 	 * @instance
 	 * @memberof MetalClayButtonBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	label: {
@@ -53,7 +53,7 @@ MetalClayButtonBase.STATE = {
 	 * The name attribute value of the element.
 	 * @instance
 	 * @memberof MetalClayButtonBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	name: {
@@ -64,7 +64,7 @@ MetalClayButtonBase.STATE = {
 	 * The type attribute value of the element.
 	 * @instance
 	 * @memberof MetalClayButtonBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	type: {
@@ -75,7 +75,7 @@ MetalClayButtonBase.STATE = {
 	 * The value attribute value of the element.
 	 * @instance
 	 * @memberof MetalClayButtonBase
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	value: {

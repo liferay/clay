@@ -48,7 +48,7 @@ MetalClayButton.STATE = {
 	 * `elementClasses`, `spritemap`, `symbol`.
 	 * @instance
 	 * @memberof MetalClayButton
-	 * @type {?Object}
+	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
 	icon: {
@@ -60,7 +60,7 @@ MetalClayButton.STATE = {
 	 * button size.
 	 * @instance
 	 * @memberof MetalClayButton
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	size: {
@@ -71,7 +71,7 @@ MetalClayButton.STATE = {
 	 * The css class that colors the button.
 	 * @instance
 	 * @memberof MetalClayButton
-	 * @type {?string}
+	 * @type {?string|undefined}
 	 * @default undefined
 	 */
 	style: {
