@@ -8,7 +8,12 @@
 	{@param? block: bool}
 	{@param? disabled: bool}
 	{@param? href: string}
-	{@param? icon: ?}
+	{@param? icon: [
+		alignment: string,
+		elementClasses: string,
+		spritemap: string,
+		symbol: string
+	]}
 	{@param? label: html}
 	{@param? name: string}
 	{@param? size: string}
@@ -38,7 +43,12 @@
  * Renders element content
  */
 {template .content}
-	{@param? icon: ?}
+	{@param? icon: [
+		alignment: string,
+		elementClasses: string,
+		spritemap: string,
+		symbol: string
+	]}
 	{@param? label: html}
 
 	{let $iconAlignment: $icon and $icon.alignment ? $icon.alignment : 'left' /}
@@ -62,7 +72,12 @@
  * Renders icon element
  */
 {template .icon}
-	{@param icon: ?}
+	{@param? icon: [
+		alignment: string,
+		elementClasses: string,
+		spritemap: string,
+		symbol: string
+	]}
 
 	{call MetalClayIcon.render}
 		{param elementClasses: $icon.elementClasses /}
