@@ -13,17 +13,8 @@ $multi-step-progress-bar-divider-height: 1px !default;
 
 $multi-step-progress-bar-fixed-width: 100px !default;
 
-<<<<<<< HEAD
-$progress-box-shadow: null !default;
-=======
-$multi-step-progress-bar-complete-margin-left: 15px !default;
-$multi-step-progress-bar-complete-icon-position-left: -14px !default;
-
-$multi-step-progress-bar-collapse-padding-top: 20px !default;
->>>>>>> d01ed44... Update: Progress Bar Lexicon Base removed `$progress-box-shadow` already defined by BS4
-
 $progress-bar-box-shadow: null !default;
 
-$progress-bar-lg-border-radius: $border-radius !default;
-$progress-bar-lg-font-size: 14px !default;
-$progress-bar-lg-height: 32px !default;
+$progress-lg-border-radius: $border-radius !default;
+$progress-lg-font-size: 0.875rem !default;
+$progress-lg-height: 2rem !default;

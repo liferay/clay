@@ -7,12 +7,13 @@
 }
 
 .progress-lg {
-	@include border-radius($progress-bar-lg-border-radius);
+	@include border-radius($progress-lg-border-radius);
+
+	font-size: $progress-lg-font-size;
 
 	.progress-bar {
-		font-size: $progress-bar-lg-font-size;
-		height: $progress-bar-lg-height;
-		line-height: $progress-bar-lg-height;
+		height: $progress-lg-height;
+		line-height: $progress-lg-height;
 	}
 }
 
