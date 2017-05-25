@@ -4,8 +4,6 @@
 
 .progress-bar {
 	@include box-shadow($progress-bar-box-shadow);
-
-	font-size: $progress-bar-font-size;
 }
 
 .progress-lg {
