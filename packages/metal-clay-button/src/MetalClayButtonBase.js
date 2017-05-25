@@ -1,7 +1,7 @@
 'use strict';
 
 import Component from 'metal-component';
-import { validators } from 'metal-state';
+import { Config } from 'metal-state';
 
 /**
  * Metal Clay Button Base component.
@@ -22,10 +22,7 @@ MetalClayButtonBase.STATE = {
 	 * @type {boolean}
 	 * @default false
 	 */
-	disabled: {
-		validator: validators.bool,
-		value: false
-	},
+	disabled: Config.bool().value(false),
 
 	/**
 	 * The href attribute value of the link.
@@ -34,9 +31,7 @@ MetalClayButtonBase.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	href: {
-		validator: validators.string
-	},
+	href: Config.string(),
 
 	/**
 	 * The label of the button or link content.
@@ -45,9 +40,7 @@ MetalClayButtonBase.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	label: {
-		validator: validators.string
-	},
+	label: Config.string(),
 
 	/**
 	 * The name attribute value of the element.
@@ -56,9 +49,7 @@ MetalClayButtonBase.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	name: {
-		validator: validators.string
-	},
+	name: Config.string(),
 
 	/**
 	 * The type attribute value of the element.
@@ -67,9 +58,7 @@ MetalClayButtonBase.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	type: {
-		validator: validators.string
-	},
+	type: Config.string(),
 
 	/**
 	 * The value attribute value of the element.
@@ -78,9 +67,7 @@ MetalClayButtonBase.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	value: {
-		validator: validators.string
-	}
+	value: Config.string()
 };
 
 export default MetalClayButtonBase;

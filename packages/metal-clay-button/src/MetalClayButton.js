@@ -2,7 +2,7 @@
 
 import MetalClayButtonBase from './MetalClayButtonBase';
 import Soy from 'metal-soy';
-import { validators } from 'metal-state';
+import { Config } from 'metal-state';
 
 import 'metal-clay-icon';
 
@@ -27,9 +27,7 @@ MetalClayButton.STATE = {
 	 * @type {string}
 	 * @default ''
 	 */
-	ariaLabel: {
-		validator: validators.string
-	},
+	ariaLabel: Config.string(),
 
 	/**
 	 * Renders the button as a block element.
@@ -38,10 +36,7 @@ MetalClayButton.STATE = {
 	 * @type {boolean}
 	 * @default false
 	 */
-	block: {
-		validator: validators.bool,
-		value: false
-	},
+	block: Config.bool().value(false),
 
 	/**
 	 * Render MetalClayIcon in the MetalClayButton element, available options are
@@ -51,9 +46,7 @@ MetalClayButton.STATE = {
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
-	icon: {
-		validator: validators.object
-	},
+	icon: Config.object(),
 
 	/**
 	 * The name that will make the CSS class name that will represent the
@@ -63,9 +56,7 @@ MetalClayButton.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	size: {
-		validator: validators.string
-	},
+	size: Config.string(),
 
 	/**
 	 * The css class that colors the button.
@@ -74,9 +65,7 @@ MetalClayButton.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	style: {
-		validator: validators.string,
-	}
+	style: Config.string()
 };
 
 Soy.register(MetalClayButton, templates);
