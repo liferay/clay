@@ -8,7 +8,12 @@
 	{@param? elementClasses: string}
 	{@param? href: string}
 	{@param? html: html}
-	{@param? icon: ?}
+	{@param? icon: [
+		alignment: string,
+		elementClasses: string,
+		spritemap: string,
+		symbol: string
+	]}
 	{@param? id: string}
 	{@param? label: html}
 	{@param? target: string}
@@ -56,7 +61,12 @@
  * This renders a Metal Clay Icon.
  */
 {template .icon}
-	{@param icon: ?}
+	{@param? icon: [
+		alignment: string,
+		elementClasses: string,
+		spritemap: string,
+		symbol: string
+	]}
 
 	{call MetalClayIcon.render data="all"}
 		{param elementClasses: $icon.elementClasses /}
