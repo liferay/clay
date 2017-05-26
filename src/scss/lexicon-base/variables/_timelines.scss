@@ -1,13 +1,13 @@
-$timeline-border: #DDD !default;
+$timeline-border-color: #DDD !default;
 $timeline-border-width: 2px !default;
 
 $timeline-border-modifier: ceil($timeline-border-width / 2);
 
 $timeline-icon-active-bg: $component-active-bg !default;
-$timeline-icon-active-border: $timeline-icon-active-bg !default;
+$timeline-icon-active-border-color: $timeline-icon-active-bg !default;
 
 $timeline-icon-bg: $body-bg !default;
-$timeline-icon-border: $timeline-border !default;
+$timeline-icon-border-color: $timeline-border-color !default;
 $timeline-icon-border-radius: 50% !default;
 $timeline-icon-border-width: 2px !default;
 $timeline-icon-size: 10px !default;
