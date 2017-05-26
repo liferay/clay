@@ -1,4 +1,5 @@
 .progress {
+	// will be redundant with https://github.com/twbs/bootstrap/commit/2a833d559a51da21355360a56e29f1fb19c080dc
 	@include box-shadow($progress-box-shadow);
 
 	flex-grow: 1;
