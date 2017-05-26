@@ -1,5 +1,7 @@
 .progress {
 	@include box-shadow($progress-box-shadow);
+
+	flex-grow: 1;
 }
 
 .progress-bar {
@@ -14,6 +16,53 @@
 	.progress-bar {
 		height: $progress-lg-height;
 		line-height: $progress-lg-height;
+	}
+}
+
+// Progress Bar Add-on
+
+.progress-addon {
+	font-size: $progress-addon-font-size;
+	padding-bottom: $progress-addon-padding-y;
+	padding-left: $progress-addon-padding-x;
+	padding-right: $progress-addon-padding-x;
+	padding-top: $progress-addon-padding-y;
+	text-align: center;
+}
+
+.progress-group {
+	align-items: center;
+	display: flex;
+
+	.progress-icon {
+		color: $progress-icon-color;
+	}
+}
+
+.progress-group-danger .progress-icon {
+	color: $progress-icon-danger-color;
+}
+
+.progress-group-info .progress-icon {
+	color: $progress-icon-info-color;
+}
+
+.progress-group-success .progress-icon {
+	color: $progress-icon-success-color;
+}
+
+.progress-group-warning .progress-icon {
+	color: $progress-icon-warning-color;
+}
+
+.progress-group-vertical {
+	display: block;
+
+	.progress-addon {
+		padding-bottom: $progress-vertical-addon-padding-y;
+		padding-left: $progress-vertical-addon-padding-x;
+		padding-right: $progress-vertical-addon-padding-x;
+		padding-top: $progress-vertical-addon-padding-y;
 	}
 }
 
