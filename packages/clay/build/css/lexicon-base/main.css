@@ -8537,12 +8537,27 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   max-width: 1280px;
   padding-left: 15px;
   padding-right: 15px;
+  width: 100%;
 }
 
-.container-fluid-1280::after {
-  display: block;
-  clear: both;
-  content: "";
+.container-fluid-max-sm {
+  max-width: 540px;
+}
+
+.container-fluid-max-md {
+  max-width: 720px;
+}
+
+.container-fluid-max-lg {
+  max-width: 960px;
+}
+
+.container-fluid-max-xl {
+  max-width: 1140px;
+}
+
+.container-fluid-max-xxl {
+  max-width: 1280px;
 }
 
 .lexicon-icon {

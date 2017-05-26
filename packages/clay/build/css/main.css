@@ -444,6 +444,31 @@ body.fixed {
   margin-bottom: 15px;
 }
 
+.clay-site-grid-width,
+.clay-site-grid-width .clay-site-grid-width-sm,
+.clay-site-grid-width .clay-site-grid-width-md,
+.clay-site-grid-width .clay-site-grid-width-lg,
+.clay-site-grid-width .clay-site-grid-width-xl,
+.clay-site-grid-width .clay-site-grid-width-xxl {
+  display: none;
+}
+
+.clay-site-container-fluid-switcher .btn {
+  margin-bottom: 0.5rem;
+}
+
+.container-fluid .clay-site-grid-width {
+  display: block;
+}
+
+.container-fluid-max-sm .clay-site-grid-width-sm,
+.container-fluid-max-md .clay-site-grid-width-md,
+.container-fluid-max-lg .clay-site-grid-width-lg,
+.container-fluid-max-xl .clay-site-grid-width-xl,
+.container-fluid-max-xxl .clay-site-grid-width-xxl {
+  display: inline;
+}
+
 @media (min-width: 321px) {
   .font-awesome-icons-list li {
     float: left;
