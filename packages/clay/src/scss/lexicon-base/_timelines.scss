@@ -11,7 +11,7 @@
 
 .timeline-icon {
 	background-color: $timeline-icon-bg;
-	border: $timeline-icon-border-width solid $timeline-icon-border;
+	border: $timeline-icon-border-width solid $timeline-icon-border-color;
 	border-radius: $timeline-icon-border-radius;
 	display: block;
 
@@ -29,7 +29,7 @@
 	position: relative;
 
 	&:before {
-		background-color: $timeline-border;
+		background-color: $timeline-border-color;
 		bottom: 0;
 		content: '';
 		display: block;
@@ -42,7 +42,7 @@
 	&.active {
 		.timeline-icon {
 			background-color: $timeline-icon-active-bg;
-			border-color: $timeline-icon-active-border;
+			border-color: $timeline-icon-active-border-color;
 		}
 	}
 
