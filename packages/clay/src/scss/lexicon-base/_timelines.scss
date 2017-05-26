@@ -1,5 +1,5 @@
 .timeline {
-	@extend .list-unstyled;
+	@include list-unstyled;
 
 	padding-left: $timeline-outer-spacing;
 
