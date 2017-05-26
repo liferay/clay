@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Cards (Flexbox)</title>
+	<title>Lexicon - Grid</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
@@ -84,7 +84,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
+<li class="active"><a class="nav-title" href="../../content/grid">Grid</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/header">Header Toolbar</a>
 </li>
@@ -176,7 +176,7 @@
 <li class=""><span class="nav-title">Experimental</span>
 <div class="">
 <ul class="nav flex-column main-nav-section">
-<li class="active"><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
+<li class=""><a class="nav-title" href="../../content/experimental-cards">Cards (Flexbox)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/experimental-simple-flexbox-grid">Simple Flexbox Grid</a>
 </li>
@@ -214,247 +214,47 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title" id="beginContent" tabindex="-1">
-			Cards (Flexbox)
+			Grid
 
 			
 		</h1>
 
 		
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="vertical-card"><a class="heading-anchor" href="#vertical-card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Card</h3>
+		<div class="alert alert-warning clay-site-grid-width">
+			<span class="clay-site-grid-width-sm">container-fluid-max-sm: 540px</span>
+			<span class="clay-site-grid-width-md">container-fluid-max-md: 720px</span>
+			<span class="clay-site-grid-width-lg">container-fluid-max-lg: 960px</span>
+			<span class="clay-site-grid-width-xl">container-fluid-max-xl: 1140px</span>
+			<span class="clay-site-grid-width-xxl">container-fluid-max-xxl: 1280px</span>
+		</div>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Combine <a href="../cards">Cards</a> and <a href="../experimental-simple-flexbox-grid">Simple Flexbox Grid</a> to build cards with CSS Flexible Box.</p>
+		<h3 id="container-fluid"><a class="heading-anchor" href="#container-fluid"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Container Fluid</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Use classes <code class="code">container-fluid-max-sm</code>, <code class="code">container-fluid-max-md</code>, <code class="code">container-fluid-max-lg</code>, <code class="code">container-fluid-max-xl</code>, and <code class="code">container-fluid-max-xxl</code> in conjunction with <code class="code">container-fluid</code> to create containers that expand to 100% width, but don&apos;t expand beyond a set width e.g 1280px.</p>
 		</blockquote>
 
-		<style>
-			#uxglVerticalCard1 {
-				width: 300px;
-			}
-		</style>
-
-		<div class="card" id="uxglVerticalCard1">
-			<div class="figure">
-				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
-				<div class="figcaption-bottom figcaption-lg monospace">10 Most Delicious Space Foods</div>
-			</div>
-			<div class="card-section flex-container">
-				<div class="flex-item-expand">
-					<p class="text-default">Number 1</p>
-					<h4>Mystery Meal</h4>
-					<p>Because you like to live life on the edge of space.</p>
-				</div>
-
-				<div class="">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#1">Download</a></li>
-							<li><a href="#1">Edit</a></li>
-							<li><a href="#1">Move</a></li>
-							<li><a href="#1">Checkout</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Move to Recycle Bin</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+		<div class="clay-site-container-fluid-switcher">
+			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-sm main-nav-container" type="button">container-fluid-max-sm (540px)</button>
+			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-md main-nav-container" type="button">container-fluid-max-md (720px)</button>
+			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-lg main-nav-container" type="button">container-fluid-max-lg (960px)</button>
+			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-xl main-nav-container" type="button">container-fluid-max-xl (1140px)</button>
+			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-xxl main-nav-container" type="button">container-fluid-max-xxl (1280px)</button>
+			<button class="btn btn-info" data-container-classes="container main-nav-container" type="button">reset</button>
 		</div>
 	</div>
 </div>
 
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="horizontal-card"><a class="heading-anchor" href="#horizontal-card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Horizontal Card</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add class <code>flex-container</code> to the card element, to the card-section, and tweak a few styles to change the orientation of the card.</p>
-		</blockquote>
-
-<p><pre><code>&lt;style&gt;
-    #uxglHorizontalCard1 {
-        max-width: 300px;
-    }
-
-    #uxglHorizontalCard1 .figure {
-        border-radius: 4px 4px 0 0;
-        overflow: hidden;
-    }
-
-    #uxglHorizontalCard1.flex-container {
-        max-width: none;
-    }
-
-    #uxglHorizontalCard1.flex-container .figure {
-        border-radius: 4px 0 0 4px;
-       width: 150px;
-    }
-&lt;/style&gt;</code></pre></p>
-
-		<p><a class="btn btn-default" href="#1" id="uxglHorizontalCard1Toggler">Toggle Class: flex-container</a></p>
-
-		<script>
-			$('#uxglHorizontalCard1Toggler').on('click', function(event) {
-				event.preventDefault();
-
-				$('#uxglHorizontalCard1').toggleClass('flex-container');
-			});
-		</script>
-
-		<style>
-			#uxglHorizontalCard1 {
-				max-width: 300px;
-			}
-
-			#uxglHorizontalCard1 .figure {
-				border-radius: 4px 4px 0 0;
-				overflow: hidden;
-			}
-
-			#uxglHorizontalCard1.flex-container {
-				max-width: none;
-			}
-
-			#uxglHorizontalCard1.flex-container .figure {
-				border-radius: 4px 0 0 4px;
-				width: 150px;
-			}
-		</style>
-
-		<div class="card flex-container" id="uxglHorizontalCard1">
-			<div class="figure">
-				<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
-				<div class="figcaption-bottom figcaption-lg monospace">10 Most Delicious Space Foods</div>
-			</div>
-			<div class="card-section flex-item-expand flex-container">
-				<div class="flex-item-expand flex-item-center">
-					<p class="text-default">Number 1</p>
-					<h4>Mystery Meal</h4>
-					<p>Because you like to live life on the edge of space.</p>
-				</div>
-
-				<div class="">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#1">Download</a></li>
-							<li><a href="#1">Edit</a></li>
-							<li><a href="#1">Move</a></li>
-							<li><a href="#1">Checkout</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Move to Recycle Bin</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="checkable-cards"><a class="heading-anchor" href="#checkable-cards"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Checkable Cards</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Wrap cards with:
-			<pre><code>&lt;div class=&quot;checkbox&quot;&gt;
-    &lt;label&gt;
-        &lt;input type=&quot;checkbox&quot; /&gt;
-        ... Card Markup Here ...
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre> to create a checkable card.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-xs-6">
-		<div class="checkbox checkbox-card checkbox-middle-left">
-			<label>
-				<input type="checkbox">
-				<div class="card flex-container" style="padding-bottom:10px;padding-top:10px;">
-					<div class="flex-item-center">
-						<svg class="icon-monospaced lexicon-icon">
-							<use xlink:href="../../images/icons/icons.svg#folder">
-						</svg>
-					</div>
-					<div class="card-section flex-item-expand flex-item-center">
-						<h4 class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
-					</div>
-
-					<div class="flex-item-top">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
-									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-								</svg>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</label>
-		</div>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<div style="max-width: 300px;">
-			<div class="checkbox checkbox-card checkbox-top-left">
-				<label>
-					<input type="checkbox">
-					<div class="card" id="uxglVerticalCard2">
-						<div class="figure" style="overflow:hidden;border-radius: 4px 4px 0 0;">
-							<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_dock.jpg">
-							<span class="sticker sticker-warning sticker-bottom">PNG</span>
-						</div>
-						<div class="card-section flex-item-expand flex-container">
-							<div class="flex-item-expand">
-								<p class="truncate-text">Number 1</p>
-								<h4 class="truncate-text">Mystery Meal</h4>
-								<p class="truncate-text">Because you like to live life on the edge of space.</p>
-							</div>
-
-							<div class="">
-								<div class="dropdown" style="margin-right: -10px;">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-										<svg class="icon-monospaced lexicon-icon">
-											<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-										</svg>
-									</a>
-									<ul class="dropdown-menu dropdown-menu-right">
-										<li><a href="#1">Download</a></li>
-										<li><a href="#1">Edit</a></li>
-										<li><a href="#1">Move</a></li>
-										<li><a href="#1">Checkout</a></li>
-										<li><a href="#1">Permissions</a></li>
-										<li><a href="#1">Move to Recycle Bin</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</label>
-			</div>
-		</div>
-	</div>
-</div>
+<script>
+	$('.clay-site-container-fluid-switcher .btn').on('click', function(event) {
+		var container = $('.main-nav-container');
+		var data = $(this).data('container-classes');
+		container.attr('class', '');
+		container.addClass(data);
+	});
+</script>
 	</div>
 
 		</section>
