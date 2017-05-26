@@ -18,3 +18,16 @@ $progress-bar-box-shadow: null !default;
 $progress-lg-border-radius: $border-radius !default;
 $progress-lg-font-size: 0.875rem !default;
 $progress-lg-height: 2rem !default;
+
+$progress-addon-font-size: null !default;
+
+$progress-addon-padding-x: 1rem !default;
+$progress-addon-padding-y: null !default;
+$progress-vertical-addon-padding-x: null !default;
+$progress-vertical-addon-padding-y: null !default;
+
+$progress-icon-color: $brand-primary !default;
+$progress-icon-danger-color: $brand-danger !default;
+$progress-icon-info-color: $brand-info !default;
+$progress-icon-success-color: $brand-success !default;
+$progress-icon-warning-color: $brand-warning !default;
