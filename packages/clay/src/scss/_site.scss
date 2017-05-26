@@ -708,7 +708,15 @@ $site-lexicon-icon-color: #5AF;
 
 .clay-site-progress-bar-page {
 	.progress {
-		margin-bottom: 1em;
+		margin-bottom: 15px;
+	}
+
+	.progress-group {
+		margin-bottom: 15px;
+
+		.progress {
+			margin-bottom: 0;
+		}
 	}
 }
 
