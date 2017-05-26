@@ -300,6 +300,14 @@
 
 	border-style: solid;
 	border-width: $navbar-border-width;
+
+	.container {
+		@include media-breakpoint-down(nth(map-keys($grid-breakpoints), 1)) {
+			margin-left: 0;
+			margin-right: 0;
+			width: 100%;
+		}
+	}
 }
 
 .navbar-nav {
@@ -495,6 +503,17 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 
+	.container,
+	.container-fluid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.navbar-nav {
+		flex-wrap: wrap;
+	}
+
 	@include media-breakpoint-up(md) {
 		.navbar-d-breakpoint-block {
 			display: block !important;
@@ -510,6 +529,12 @@
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
 		&#{$infix} {
+			.container,
+			.container-fluid {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
 			.nav-item {
 				align-items: center;
 				display: flex;
@@ -577,12 +602,29 @@
 			}
 
 			@include media-breakpoint-up($next) {
+				@if ($infix == '') {
+					.container,
+					.container-fluid {
+						@include media-breakpoint-up(md) {
+							padding-left: $grid-gutter-width-base / 2;
+							padding-right: $grid-gutter-width-base / 2;
+						}
+					}
+				}
+
 				.navbar-form {
 					padding-left: $navbar-link-padding-x;
 					padding-right: $navbar-link-padding-x;
 				}
 
 				@if not ($infix == '') {
+					.container,
+					.container-fluid {
+						flex-wrap: nowrap;
+						padding-left: $grid-gutter-width-base / 2;
+						padding-right: $grid-gutter-width-base / 2;
+					}
+
 					.navbar-collapse {
 						flex-grow: 1;
 						flex-wrap: wrap;
