@@ -382,3 +382,69 @@ section: Components
 
 	</div>
 </div>
+
+<div class="clay-site-progress-bar-page row row-spacing">
+	<div class="col-md-12">
+		<h3>Progress Bar Add-ons</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Include an add-on to the progress bar by wrapping <code class="code">progress</code> in a <code class="code">progress-group</code>class and place the add-on in a <code class="code">div</code> with the <code class="code">progress-addon</code> class.</p>
+		</blockquote>
+
+		<div class="progress-group">
+			<div class="progress">
+				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+			</div>
+
+			<div class="progress-addon">60%</div>
+		</div>
+
+		<div class="progress-group progress-group-success">
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="bg-success progress-bar" role="progressbar" style="width: 100%;"></div>
+			</div>
+
+			<div class="progress-addon">
+				<svg class="lexicon-icon lexicon-icon-check-circle progress-icon">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle" />
+				</svg>
+			</div>
+		</div>
+
+		<div class="progress-group progress-group-info">
+			<div class="progress-addon">
+				<svg class="lexicon-icon lexicon-icon-check-circle progress-icon">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle" />
+				</svg>
+			</div>
+
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="bg-info progress-bar" role="progressbar" style="width: 100%;"></div>
+			</div>
+		</div>
+
+		<div class="progress-group progress-group-vertical progress-group-warning">
+			<div class="progress-addon">
+				<svg class="lexicon-icon lexicon-icon-check-circle progress-icon">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle" />
+				</svg>
+			</div>
+
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="bg-warning progress-bar" role="progressbar" style="width: 100%;"></div>
+			</div>
+		</div>
+
+		<div class="progress-group progress-group-danger progress-group-vertical">
+			<div class="progress">
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="bg-danger progress-bar" role="progressbar" style="width: 100%;"></div>
+			</div>
+
+			<div class="progress-addon">
+				<svg class="lexicon-icon lexicon-icon-check-circle progress-icon">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#check-circle" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
