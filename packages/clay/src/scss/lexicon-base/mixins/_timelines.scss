@@ -8,13 +8,13 @@
 	}
 
 	.panel {
-		.timeline-increment-icon {
+		.timeline-increment {
 			margin-left: auto;
 			margin-right: -$card-border-width;
 		}
 	}
 
-	.timeline-increment-icon {
+	.timeline-increment {
 		left: auto;
 		right: -($timeline-inner-spacing + $timeline-border-modifier);
 		-ms-transform: translate(50%, -50%);
@@ -40,7 +40,7 @@
 			.timeline-item.timeline-item-reverse {
 				padding-right: $inner-spacing;
 
-				.timeline-increment-icon {
+				.timeline-increment {
 					right: -($inner-spacing + $timeline-border-modifier);
 				}
 
@@ -57,7 +57,7 @@
 		@include media-breakpoint-up(md) {
 			padding-right: $inner-spacing;
 
-			.timeline-increment-icon {
+			.timeline-increment {
 				right: -($inner-spacing + $timeline-border-modifier);
 			}
 
@@ -74,7 +74,7 @@
 		.timeline-item {
 			padding-right: $inner-spacing;
 
-			.timeline-increment-icon {
+			.timeline-increment {
 				right: -($inner-spacing + $timeline-border-modifier);
 			}
 		}
@@ -89,7 +89,7 @@
 				padding-left: 0;
 				padding-right: $inner-spacing;
 
-				.timeline-increment-icon {
+				.timeline-increment {
 					left: auto;
 					right: -($inner-spacing + $timeline-border-modifier);
 				}
@@ -102,7 +102,7 @@
 		padding-left: $inner-spacing;
 		padding-top: $item-vertical-padding;
 
-		.timeline-increment-icon {
+		.timeline-increment {
 			left: -($inner-spacing - $timeline-border-modifier);
 		}
 	}
