@@ -52,12 +52,12 @@
 	}
 
 	.panel {
-		.timeline-increment-icon {
+		.timeline-increment {
 			margin-left: -$card-border-width;
 		}
 	}
 
-	.timeline-increment-icon {
+	.timeline-increment {
 		left: -($timeline-inner-spacing - $timeline-border-modifier);
 		position: absolute;
 		top: 50%;
