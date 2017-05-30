@@ -57,7 +57,6 @@
 	position: relative;
 	vertical-align: middle;
 	width: auto;
-	word-break: break-all \9; // IE 8, 9
 	word-wrap: break-word;
 }
 
@@ -122,30 +121,12 @@
 	.card-col-field {
 		vertical-align: top;
 	}
-
-	.clamp-container {
-		top: 0;
-	}
-
-	.clamp-horizontal .clamp-container {
-		-ms-transform: none;
-		transform: none;
-	}
 }
 
 .card-row-valign-bottom {
 	.card-col-content,
 	.card-col-field {
 		vertical-align: bottom;
-	}
-
-	.clamp-container {
-		bottom: 0;
-	}
-
-	.clamp-horizontal .clamp-container {
-		-ms-transform: none;
-		transform: none;
 	}
 }
 
