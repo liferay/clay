@@ -64,8 +64,12 @@
 
 // _component-animations.scss
 
-.collapse.in[aria-expanded="true"] {
-  @extend .collapse.show;
+.collapse.in {
+  display: block;
+}
+
+.collapse.in.show {
+  display: none;
 }
 
 // _dropdowns.scss
