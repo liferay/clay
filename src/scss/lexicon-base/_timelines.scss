@@ -29,6 +29,11 @@
 	z-index: 1;
 }
 
+.timeline-increment-text {
+	display: block;
+	max-width: $timeline-inner-spacing + $timeline-outer-spacing;
+}
+
 .timeline-item-label {
 	color: $timeline-item-label-color;
 }
@@ -145,5 +150,9 @@
 }
 
 .timeline-spacing-xl {
-	@include timeline-spacing(25px, 50px, 15px);
+	@include timeline-spacing($timeline-outer-spacing-xl, $timeline-inner-spacing-xl, $timeline-item-padding-y-xl);
+
+	.timeline-increment-text {
+		max-width: $timeline-inner-spacing-xl + $timeline-outer-spacing-xl;
+	}
 }
