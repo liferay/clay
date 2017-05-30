@@ -483,7 +483,7 @@ mark,
   background-color: #fcf8e3;
 }
 
-.list-unstyled, .timeline {
+.list-unstyled {
   padding-left: 0;
   list-style: none;
 }
@@ -10793,12 +10793,12 @@ button.list-group-heading {
   margin-bottom: 0;
 }
 
-.panel-group .panel:first-child {
+.panel-group .panel:first-child:not(:last-child) {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.panel-group .panel:last-child {
+.panel-group .panel:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -13088,7 +13088,9 @@ button.modal-primary-action-button {
 }
 
 .timeline {
-  padding-left: 20px;
+  padding-left: 0;
+  list-style: none;
+  padding-left: 25px;
 }
 
 .timeline .panel,
@@ -13106,13 +13108,29 @@ button.modal-primary-action-button {
   width: 10px;
 }
 
-.timeline-increment-label {
+.timeline-increment {
+  background-color: #fff;
+  left: -39px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.timeline-increment-text {
+  display: block;
+  max-width: 65px;
+}
+
+.timeline-item-label {
   color: #292b2c;
 }
 
 .timeline-item {
   padding-bottom: 5px;
-  padding-left: 35px;
+  padding-left: 40px;
   padding-top: 5px;
   position: relative;
 }
@@ -13138,27 +13156,18 @@ button.modal-primary-action-button {
   position: relative;
 }
 
-.timeline-item .panel .timeline-increment-icon {
+.timeline-item .panel .timeline-increment {
   margin-left: -1px;
-}
-
-.timeline-item .timeline-increment-icon {
-  left: -34px;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 1;
 }
 
 .timeline-right {
   padding-left: 0;
-  padding-right: 20px;
+  padding-right: 25px;
 }
 
 .timeline-right .timeline-item {
   padding-left: 0;
-  padding-right: 35px;
+  padding-right: 40px;
 }
 
 .timeline-right .timeline-item:before {
@@ -13166,14 +13175,14 @@ button.modal-primary-action-button {
   right: -2px;
 }
 
-.timeline-right .timeline-item .panel .timeline-increment-icon {
+.timeline-right .timeline-item .panel .timeline-increment {
   margin-left: auto;
   margin-right: -1px;
 }
 
-.timeline-right .timeline-item .timeline-increment-icon {
+.timeline-right .timeline-item .timeline-increment {
   left: auto;
-  right: -36px;
+  right: -41px;
   -ms-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
 }
@@ -13181,23 +13190,23 @@ button.modal-primary-action-button {
 @media (max-width: 575px) {
   .timeline-right-xs-only {
     padding-left: 0;
-    padding-right: 20px;
+    padding-right: 25px;
   }
   .timeline-right-xs-only .timeline-item {
     padding-left: 0;
-    padding-right: 35px;
+    padding-right: 40px;
   }
   .timeline-right-xs-only .timeline-item:before {
     left: auto;
     right: -2px;
   }
-  .timeline-right-xs-only .timeline-item .panel .timeline-increment-icon {
+  .timeline-right-xs-only .timeline-item .panel .timeline-increment {
     margin-left: auto;
     margin-right: -1px;
   }
-  .timeline-right-xs-only .timeline-item .timeline-increment-icon {
+  .timeline-right-xs-only .timeline-item .timeline-increment {
     left: auto;
-    right: -36px;
+    right: -41px;
     -ms-transform: translate(50%, -50%);
     transform: translate(50%, -50%);
   }
@@ -13211,9 +13220,9 @@ button.modal-primary-action-button {
     margin-left: 50%;
     width: 50%;
   }
-  .timeline-center .timeline-item .timeline-increment-label {
+  .timeline-center .timeline-item .timeline-item-label {
     left: -100%;
-    margin-left: -70px;
+    margin-left: -80px;
     position: absolute;
     text-align: right;
     top: 50%;
@@ -13223,26 +13232,26 @@ button.modal-primary-action-button {
   }
   .timeline-center .timeline-item.timeline-item-reverse {
     padding-left: 0;
-    padding-right: 35px;
+    padding-right: 40px;
     margin-left: 0;
   }
   .timeline-center .timeline-item.timeline-item-reverse:before {
     left: auto;
     right: -2px;
   }
-  .timeline-center .timeline-item.timeline-item-reverse .panel .timeline-increment-icon {
+  .timeline-center .timeline-item.timeline-item-reverse .panel .timeline-increment {
     margin-left: auto;
     margin-right: -1px;
   }
-  .timeline-center .timeline-item.timeline-item-reverse .timeline-increment-icon {
+  .timeline-center .timeline-item.timeline-item-reverse .timeline-increment {
     left: auto;
-    right: -36px;
+    right: -41px;
     -ms-transform: translate(50%, -50%);
     transform: translate(50%, -50%);
   }
-  .timeline-center .timeline-item.timeline-item-reverse .timeline-increment-label {
+  .timeline-center .timeline-item.timeline-item-reverse .timeline-item-label {
     margin-left: auto;
-    margin-right: -70px;
+    margin-right: -80px;
     right: -100%;
     text-align: left;
   }
@@ -13252,7 +13261,7 @@ button.modal-primary-action-button {
   .timeline-even .timeline-item:nth-of-type(even),
   .timeline-odd .timeline-item:nth-of-type(odd) {
     padding-left: 0;
-    padding-right: 35px;
+    padding-right: 40px;
     margin-left: 0;
   }
   .timeline-even .timeline-item:nth-of-type(even):before,
@@ -13260,22 +13269,22 @@ button.modal-primary-action-button {
     left: auto;
     right: -2px;
   }
-  .timeline-even .timeline-item:nth-of-type(even) .panel .timeline-increment-icon,
-  .timeline-odd .timeline-item:nth-of-type(odd) .panel .timeline-increment-icon {
+  .timeline-even .timeline-item:nth-of-type(even) .panel .timeline-increment,
+  .timeline-odd .timeline-item:nth-of-type(odd) .panel .timeline-increment {
     margin-left: auto;
     margin-right: -1px;
   }
-  .timeline-even .timeline-item:nth-of-type(even) .timeline-increment-icon,
-  .timeline-odd .timeline-item:nth-of-type(odd) .timeline-increment-icon {
+  .timeline-even .timeline-item:nth-of-type(even) .timeline-increment,
+  .timeline-odd .timeline-item:nth-of-type(odd) .timeline-increment {
     left: auto;
-    right: -36px;
+    right: -41px;
     -ms-transform: translate(50%, -50%);
     transform: translate(50%, -50%);
   }
-  .timeline-even .timeline-item:nth-of-type(even) .timeline-increment-label,
-  .timeline-odd .timeline-item:nth-of-type(odd) .timeline-increment-label {
+  .timeline-even .timeline-item:nth-of-type(even) .timeline-item-label,
+  .timeline-odd .timeline-item:nth-of-type(odd) .timeline-item-label {
     margin-left: auto;
-    margin-right: -70px;
+    margin-right: -80px;
     right: -100%;
     text-align: left;
   }
@@ -13289,16 +13298,16 @@ button.modal-primary-action-button {
   .timeline-spacing-xl.timeline-center {
     padding-left: 0;
   }
-  .timeline-spacing-xl.timeline-center .timeline-item .timeline-increment-label {
+  .timeline-spacing-xl.timeline-center .timeline-item .timeline-item-label {
     margin-left: -100px;
   }
   .timeline-spacing-xl.timeline-center .timeline-item.timeline-item-reverse {
     padding-right: 50px;
   }
-  .timeline-spacing-xl.timeline-center .timeline-item.timeline-item-reverse .timeline-increment-icon {
+  .timeline-spacing-xl.timeline-center .timeline-item.timeline-item-reverse .timeline-increment {
     right: -51px;
   }
-  .timeline-spacing-xl.timeline-center .timeline-item.timeline-item-reverse .timeline-increment-label {
+  .timeline-spacing-xl.timeline-center .timeline-item.timeline-item-reverse .timeline-item-label {
     margin-left: auto;
     margin-right: -100px;
   }
@@ -13309,12 +13318,12 @@ button.modal-primary-action-button {
   .timeline-spacing-xl.timeline-odd .timeline-item:nth-of-type(odd) {
     padding-right: 50px;
   }
-  .timeline-spacing-xl.timeline-even .timeline-item:nth-of-type(even) .timeline-increment-icon,
-  .timeline-spacing-xl.timeline-odd .timeline-item:nth-of-type(odd) .timeline-increment-icon {
+  .timeline-spacing-xl.timeline-even .timeline-item:nth-of-type(even) .timeline-increment,
+  .timeline-spacing-xl.timeline-odd .timeline-item:nth-of-type(odd) .timeline-increment {
     right: -51px;
   }
-  .timeline-spacing-xl.timeline-even .timeline-item:nth-of-type(even) .timeline-increment-label,
-  .timeline-spacing-xl.timeline-odd .timeline-item:nth-of-type(odd) .timeline-increment-label {
+  .timeline-spacing-xl.timeline-even .timeline-item:nth-of-type(even) .timeline-item-label,
+  .timeline-spacing-xl.timeline-odd .timeline-item:nth-of-type(odd) .timeline-item-label {
     margin-left: auto;
     margin-right: -100px;
   }
@@ -13328,7 +13337,7 @@ button.modal-primary-action-button {
   padding-right: 50px;
 }
 
-.timeline-spacing-xl.timeline-right .timeline-item .timeline-increment-icon {
+.timeline-spacing-xl.timeline-right .timeline-item .timeline-increment {
   right: -51px;
 }
 
@@ -13341,7 +13350,7 @@ button.modal-primary-action-button {
     padding-left: 0;
     padding-right: 50px;
   }
-  .timeline-spacing-xl.timeline-right-xs-only .timeline-item .timeline-increment-icon {
+  .timeline-spacing-xl.timeline-right-xs-only .timeline-item .timeline-increment {
     left: auto;
     right: -51px;
   }
@@ -13353,8 +13362,12 @@ button.modal-primary-action-button {
   padding-top: 15px;
 }
 
-.timeline-spacing-xl .timeline-item .timeline-increment-icon {
+.timeline-spacing-xl .timeline-item .timeline-increment {
   left: -49px;
+}
+
+.timeline-spacing-xl .timeline-increment-text {
+  max-width: 75px;
 }
 
 .toolbar,
