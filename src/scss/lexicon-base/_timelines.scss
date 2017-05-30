@@ -18,6 +18,17 @@
 	@include monospace($timeline-icon-size);
 }
 
+.timeline-increment {
+	background-color: $timeline-increment-bg;
+	left: -($timeline-inner-spacing - $timeline-border-modifier);
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
 .timeline-increment-label {
 	color: $timeline-increment-label-color;
 }
@@ -55,15 +66,6 @@
 		.timeline-increment {
 			margin-left: -$card-border-width;
 		}
-	}
-
-	.timeline-increment {
-		left: -($timeline-inner-spacing - $timeline-border-modifier);
-		position: absolute;
-		top: 50%;
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-		z-index: 1;
 	}
 }
 
