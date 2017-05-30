@@ -294,7 +294,7 @@ body.fixed {
 
 // Cards Page
 
-.uxgl-vertical-card {
+.clay-site-vertical-card {
 	.card-header, .card-footer {
 		background: #EEE;
 		padding-bottom: 5px;
@@ -307,7 +307,7 @@ body.fixed {
 	}
 }
 
-.uxgl-horizontal-card {
+.clay-site-horizontal-card {
 	.card-row {
 		height: 100px;
 
@@ -320,12 +320,6 @@ body.fixed {
 			}
 		}
 	}
-}
-
-.uxgl-card-section .card {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 300px;
 }
 
 // Control Menu Page
