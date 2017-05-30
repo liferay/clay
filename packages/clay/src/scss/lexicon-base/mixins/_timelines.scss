@@ -32,7 +32,7 @@
 			padding-left: 0;
 
 			.timeline-item {
-				.timeline-increment-label {
+				.timeline-item-label {
 					margin-left: -($inner-spacing * 2);
 				}
 			}
@@ -44,7 +44,7 @@
 					right: -($inner-spacing + $timeline-border-modifier);
 				}
 
-				.timeline-increment-label {
+				.timeline-item-label {
 					margin-left: auto;
 					margin-right: -($inner-spacing * 2);
 				}
@@ -61,7 +61,7 @@
 				right: -($inner-spacing + $timeline-border-modifier);
 			}
 
-			.timeline-increment-label {
+			.timeline-item-label {
 				margin-left: auto;
 				margin-right: -($inner-spacing * 2);
 			}
