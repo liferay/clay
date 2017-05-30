@@ -22,7 +22,7 @@
 	}
 }
 
-@mixin timeline-spacing($outer-spacing, $inner-spacing, $item-vertical-padding: 10px) {
+@mixin timeline-spacing($outer-spacing, $inner-spacing, $item-padding-y: 10px) {
 	&.timeline {
 		padding-left: $outer-spacing;
 	}
@@ -98,9 +98,9 @@
 	}
 
 	.timeline-item {
-		padding-bottom: $item-vertical-padding;
+		padding-bottom: $item-padding-y;
 		padding-left: $inner-spacing;
-		padding-top: $item-vertical-padding;
+		padding-top: $item-padding-y;
 
 		.timeline-increment {
 			left: -($inner-spacing - $timeline-border-modifier);
