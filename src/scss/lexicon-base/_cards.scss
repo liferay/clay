@@ -35,10 +35,11 @@
 
 .card-divider {
 	background-color: $card-divider-bg;
-	border-width: 0;
 	height: $card-divider-height;
-	margin-bottom: 10px;
-	margin-top: 10px;
+	margin-bottom: $card-divider-spacer-y;
+	margin-left: $card-divider-spacer-x;
+	margin-right: $card-divider-spacer-x;
+	margin-top: $card-divider-spacer-y;
 }
 
 // Will need to revisit if https://github.com/twbs/bootstrap/pull/22722 doesn't make it
