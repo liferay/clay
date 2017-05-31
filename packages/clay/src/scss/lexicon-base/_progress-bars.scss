@@ -9,6 +9,10 @@
 	@include box-shadow($progress-bar-box-shadow);
 }
 
+.progress-icon {
+	color: $progress-icon-color;
+}
+
 .progress-lg {
 	@include border-radius($progress-lg-border-radius);
 
@@ -25,10 +29,6 @@
 .progress-group {
 	align-items: center;
 	display: flex;
-
-	.progress-icon {
-		color: $progress-icon-color;
-	}
 }
 
 .progress-group-addon {
@@ -60,19 +60,19 @@
 }
 
 .progress-group-danger .progress-icon {
-	color: $progress-icon-danger-color;
+	color: $progress-danger-icon-color;
 }
 
 .progress-group-info .progress-icon {
-	color: $progress-icon-info-color;
+	color: $progress-info-icon-color;
 }
 
 .progress-group-success .progress-icon {
-	color: $progress-icon-success-color;
+	color: $progress-success-icon-color;
 }
 
 .progress-group-warning .progress-icon {
-	color: $progress-icon-warning-color;
+	color: $progress-warning-icon-color;
 }
 
 // Multi Step Progress Bar
