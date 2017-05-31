@@ -9,10 +9,6 @@
 	@include box-shadow($progress-bar-box-shadow);
 }
 
-.progress-icon {
-	color: $progress-icon-color;
-}
-
 .progress-lg {
 	@include border-radius($progress-lg-border-radius);
 
@@ -59,20 +55,50 @@
 	}
 }
 
-.progress-group-danger .progress-icon {
-	color: $progress-danger-icon-color;
+// Progress States
+
+.progress-group-feedback {
+	color: $progress-group-feedback-color;
 }
 
-.progress-group-info .progress-icon {
-	color: $progress-info-icon-color;
+.has-danger {
+	.progress-bar {
+		background-color: $progress-bar-danger-bg;
+	}
+
+	.progress-group-feedback {
+		color: $progress-group-feedback-danger-color;
+	}
 }
 
-.progress-group-success .progress-icon {
-	color: $progress-success-icon-color;
+.has-info {
+	.progress-bar {
+		background-color: $progress-bar-info-bg;
+	}
+
+	.progress-group-feedback {
+		color: $progress-group-feedback-info-color;
+	}
 }
 
-.progress-group-warning .progress-icon {
-	color: $progress-warning-icon-color;
+.has-success {
+	.progress-bar {
+		background-color: $progress-bar-success-bg;
+	}
+
+	.progress-group-feedback {
+		color: $progress-group-feedback-success-color;
+	}
+}
+
+.has-warning {
+	.progress-bar {
+		background-color: $progress-bar-warning-bg;
+	}
+
+	.progress-group-feedback {
+		color: $progress-group-feedback-warning-color;
+	}
 }
 
 // Multi Step Progress Bar
