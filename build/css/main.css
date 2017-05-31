@@ -632,7 +632,15 @@ body.fixed {
 }
 
 .clay-site-progress-bar-page .progress {
-  margin-bottom: 1em;
+  margin-bottom: 15px;
+}
+
+.clay-site-progress-bar-page .progress-group {
+  margin-bottom: 15px;
+}
+
+.clay-site-progress-bar-page .progress-group .progress {
+  margin-bottom: 0;
 }
 
 #verticalAlignTableListDemo {

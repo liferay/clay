@@ -10973,6 +10973,14 @@ button.list-group-heading {
   border-bottom-left-radius: calc(0.3rem - 1px);
 }
 
+.progress {
+  flex-grow: 1;
+}
+
+.progress-icon {
+  color: #0275d8;
+}
+
 .progress-lg {
   border-radius: 0.25rem;
   font-size: 0.875rem;
@@ -10981,6 +10989,50 @@ button.list-group-heading {
 .progress-lg .progress-bar {
   height: 2rem;
   line-height: 2rem;
+}
+
+.progress-group {
+  align-items: center;
+  display: flex;
+}
+
+.progress-group-addon {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+.progress-group-addon:first-child {
+  padding-left: 0;
+}
+
+.progress-group-addon:last-child {
+  padding-right: 0;
+}
+
+.progress-group-stacked {
+  display: block;
+}
+
+.progress-group-stacked .progress-group-addon {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.progress-group-danger .progress-icon {
+  color: #d9534f;
+}
+
+.progress-group-info .progress-icon {
+  color: #5bc0de;
+}
+
+.progress-group-success .progress-icon {
+  color: #5cb85c;
+}
+
+.progress-group-warning .progress-icon {
+  color: #f0ad4e;
 }
 
 .multi-step-progress-bar {
