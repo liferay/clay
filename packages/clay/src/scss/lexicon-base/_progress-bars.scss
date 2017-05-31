@@ -3,6 +3,7 @@
 	@include box-shadow($progress-box-shadow);
 
 	flex-grow: 1;
+	min-width: $progress-min-width;
 }
 
 .progress-bar {
@@ -25,6 +26,7 @@
 .progress-group {
 	align-items: center;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .progress-group-addon {
