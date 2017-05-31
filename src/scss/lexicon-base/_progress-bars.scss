@@ -20,16 +20,7 @@
 	}
 }
 
-// Progress Bar Add-on
-
-.progress-addon {
-	font-size: $progress-addon-font-size;
-	padding-bottom: $progress-addon-padding-y;
-	padding-left: $progress-addon-padding-x;
-	padding-right: $progress-addon-padding-x;
-	padding-top: $progress-addon-padding-y;
-	text-align: center;
-}
+// Progress Group
 
 .progress-group {
 	align-items: center;
@@ -37,6 +28,34 @@
 
 	.progress-icon {
 		color: $progress-icon-color;
+	}
+}
+
+.progress-group-addon {
+	font-size: $progress-group-addon-font-size;
+	padding-bottom: $progress-group-addon-padding-y;
+	padding-left: $progress-group-addon-padding-x;
+	padding-right: $progress-group-addon-padding-x;
+	padding-top: $progress-group-addon-padding-y;
+	text-align: center;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.progress-group-stacked {
+	display: block;
+
+	.progress-group-addon {
+		padding-bottom: $progress-group-stacked-addon-padding-y;
+		padding-left: $progress-group-stacked-addon-padding-x;
+		padding-right: $progress-group-stacked-addon-padding-x;
+		padding-top: $progress-group-stacked-addon-padding-y;
 	}
 }
 
@@ -54,17 +73,6 @@
 
 .progress-group-warning .progress-icon {
 	color: $progress-icon-warning-color;
-}
-
-.progress-group-stacked {
-	display: block;
-
-	.progress-addon {
-		padding-bottom: $progress-group-stacked-addon-padding-y;
-		padding-left: $progress-group-stacked-addon-padding-x;
-		padding-right: $progress-group-stacked-addon-padding-x;
-		padding-top: $progress-group-stacked-addon-padding-y;
-	}
 }
 
 // Multi Step Progress Bar
