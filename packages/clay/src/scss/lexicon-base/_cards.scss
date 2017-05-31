@@ -2,9 +2,7 @@
 .card-horizontal {
 	border-style: $card-border-style;
 
-	@if (variable-exists(card-box-shadow)) {
-		box-shadow: $card-box-shadow;
-	}
+	@include box-shadow($card-box-shadow);
 
 	margin-bottom: $card-margin-bottom;
 	position: relative;
