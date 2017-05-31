@@ -1,4 +1,8 @@
+$card-divider-bg: $card-border-color !default;
 $card-divider-height: 1px !default;
+$card-divider-spacer-x: null !default;
+$card-divider-spacer-y: 10px !default;
+
 $card-gutter-width: 15px !default;
 $card-margin-bottom: 1.25rem !default;
 
@@ -18,5 +22,3 @@ $card-link-color: null !default;
 $card-circle-border-radius: 20px !default;
 $card-rounded-border-radius: 4px !default;
 $card-square-border-radius: 0 !default;
-
-$card-divider-bg: $card-border-color !default;
