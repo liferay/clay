@@ -1,3 +1,38 @@
+$progress-bar-box-shadow: null !default;
+
+// Progress Sizes
+
+$progress-lg-border-radius: $border-radius !default;
+$progress-lg-font-size: 0.875rem !default;
+$progress-lg-height: 2rem !default;
+
+// Progress Group
+
+$progress-group-addon-font-size: null !default;
+$progress-group-addon-padding-x: 1rem !default;
+$progress-group-addon-padding-y: null !default;
+
+$progress-group-stacked-addon-padding-x: 0 !default;
+$progress-group-stacked-addon-padding-y: null !default;
+
+// Progress States
+
+$progress-group-feedback-color: $brand-primary !default;
+
+$progress-bar-danger-bg: $brand-danger !default;
+$progress-group-feedback-danger-color: $brand-danger !default;
+
+$progress-bar-info-bg: $brand-info !default;
+$progress-group-feedback-info-color: $brand-info !default;
+
+$progress-bar-success-bg: $brand-success !default;
+$progress-group-feedback-success-color: $brand-success !default;
+
+$progress-bar-warning-bg: $brand-warning !default;
+$progress-group-feedback-warning-color: $brand-warning !default;
+
+// Multi Step Progress
+
 $multi-step-progress-bar-active-icon: "\f111" !default;
 $multi-step-progress-bar-complete-icon: "\f00c" !default;
 $multi-step-progress-bar-icon: "\f10c" !default;
@@ -12,22 +47,3 @@ $multi-step-progress-bar-complete-icon-color: $brand-primary !default;
 $multi-step-progress-bar-divider-height: 1px !default;
 
 $multi-step-progress-bar-fixed-width: 100px !default;
-
-$progress-bar-box-shadow: null !default;
-
-$progress-lg-border-radius: $border-radius !default;
-$progress-lg-font-size: 0.875rem !default;
-$progress-lg-height: 2rem !default;
-
-$progress-group-addon-font-size: null !default;
-$progress-group-addon-padding-x: 1rem !default;
-$progress-group-addon-padding-y: null !default;
-
-$progress-group-stacked-addon-padding-x: 0 !default;
-$progress-group-stacked-addon-padding-y: null !default;
-
-$progress-icon-color: $brand-primary !default;
-$progress-danger-icon-color: $brand-danger !default;
-$progress-info-icon-color: $brand-info !default;
-$progress-success-icon-color: $brand-success !default;
-$progress-warning-icon-color: $brand-warning !default;
