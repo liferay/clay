@@ -56,14 +56,14 @@
 	color: $progress-icon-warning-color;
 }
 
-.progress-group-vertical {
+.progress-group-stacked {
 	display: block;
 
 	.progress-addon {
-		padding-bottom: $progress-vertical-addon-padding-y;
-		padding-left: $progress-vertical-addon-padding-x;
-		padding-right: $progress-vertical-addon-padding-x;
-		padding-top: $progress-vertical-addon-padding-y;
+		padding-bottom: $progress-group-stacked-addon-padding-y;
+		padding-left: $progress-group-stacked-addon-padding-x;
+		padding-right: $progress-group-stacked-addon-padding-x;
+		padding-top: $progress-group-stacked-addon-padding-y;
 	}
 }
 
