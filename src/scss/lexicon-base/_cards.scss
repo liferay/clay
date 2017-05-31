@@ -7,12 +7,6 @@
 	margin-bottom: $card-margin-bottom;
 	position: relative;
 
-	@if (variable-exists(card-link-color)) {
-		a {
-			color: $card-link-color;
-		}
-	}
-
 	@if ($card-border-radius > 0) {
 		.card-col-content,
 		.card-col-field {
@@ -45,6 +39,12 @@
 .card-block {
 	padding: $card-gutter-width;
 	word-wrap: break-word;
+}
+
+// Will need to revisit if https://github.com/twbs/bootstrap/pull/22722 doesn't make it
+
+.card-link {
+	color: $card-link-color;
 }
 
 // Card Simple Grid
