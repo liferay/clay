@@ -1,10 +1,12 @@
+$progress-min-width: 6.25rem !default; // 100px
+
 $progress-bar-box-shadow: null !default;
 
 // Progress Sizes
 
 $progress-lg-border-radius: $border-radius !default;
 $progress-lg-font-size: $font-size-lg !default;
-$progress-lg-height: 2rem !default;
+$progress-lg-height: $progress-height * 2 !default;
 
 // Progress Group
 
