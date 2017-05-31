@@ -29,10 +29,7 @@
 
 .progress-group-addon {
 	font-size: $progress-group-addon-font-size;
-	padding-bottom: $progress-group-addon-padding-y;
-	padding-left: $progress-group-addon-padding-x;
-	padding-right: $progress-group-addon-padding-x;
-	padding-top: $progress-group-addon-padding-y;
+	margin-right: $progress-group-addon-spacer-x;
 	text-align: center;
 
 	&:first-child {
@@ -44,14 +41,17 @@
 	}
 }
 
+.progress ~ .progress-group-addon {
+	margin-left: $progress-group-addon-spacer-x;
+	margin-right: 0;
+}
+
 .progress-group-stacked {
 	display: block;
 
 	.progress-group-addon {
-		padding-bottom: $progress-group-stacked-addon-padding-y;
-		padding-left: $progress-group-stacked-addon-padding-x;
-		padding-right: $progress-group-stacked-addon-padding-x;
-		padding-top: $progress-group-stacked-addon-padding-y;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
