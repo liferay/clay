@@ -11783,13 +11783,9 @@ button.list-group-heading {
   flex-grow: 1;
 }
 
-.progress-icon {
-  color: #65B6F0;
-}
-
 .progress-lg {
   border-radius: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
 }
 
 .progress-lg .progress-bar {
@@ -11803,8 +11799,7 @@ button.list-group-heading {
 }
 
 .progress-group-addon {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-right: 1rem;
   text-align: center;
 }
 
@@ -11816,28 +11811,53 @@ button.list-group-heading {
   padding-right: 0;
 }
 
+.progress ~ .progress-group-addon {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
 .progress-group-stacked {
   display: block;
 }
 
 .progress-group-stacked .progress-group-addon {
-  padding-left: 0;
-  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.progress-group-danger .progress-icon {
+.progress-group-feedback {
+  color: #65B6F0;
+}
+
+.has-danger .progress-bar {
+  background-color: #C67;
+}
+
+.has-danger .progress-group-feedback {
   color: #C67;
 }
 
-.progress-group-info .progress-icon {
+.has-info .progress-bar {
+  background-color: #1E5EC8;
+}
+
+.has-info .progress-group-feedback {
   color: #1E5EC8;
 }
 
-.progress-group-success .progress-icon {
+.has-success .progress-bar {
+  background-color: #76BD4A;
+}
+
+.has-success .progress-group-feedback {
   color: #76BD4A;
 }
 
-.progress-group-warning .progress-icon {
+.has-warning .progress-bar {
+  background-color: #F5984C;
+}
+
+.has-warning .progress-group-feedback {
   color: #F5984C;
 }
 
