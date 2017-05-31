@@ -22,14 +22,6 @@
 		}
 	}
 
-	.divider {
-		background-color: $card-divider-bg;
-		border-width: 0;
-		height: $card-divider-height;
-		margin-bottom: 10px;
-		margin-top: 10px;
-	}
-
 	.figure {
 		margin-bottom: 0;
 		overflow: visible;
@@ -39,6 +31,14 @@
 .card-block {
 	padding: $card-gutter-width;
 	word-wrap: break-word;
+}
+
+.card-divider {
+	background-color: $card-divider-bg;
+	border-width: 0;
+	height: $card-divider-height;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 // Will need to revisit if https://github.com/twbs/bootstrap/pull/22722 doesn't make it
@@ -79,7 +79,7 @@
 			padding-right: 0;
 		}
 
-		.divider {
+		.card-divider {
 			margin-left: 0;
 			margin-right: 0;
 		}
@@ -88,7 +88,7 @@
 	.card-col-gutters {
 		padding: 0 10px;
 
-		.divider {
+		.card-divider {
 			margin-left: -10px;
 			margin-right: -10px;
 		}
