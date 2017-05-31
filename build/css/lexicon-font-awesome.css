@@ -10975,6 +10975,7 @@ button.list-group-heading {
 
 .progress {
   flex-grow: 1;
+  min-width: 6.25rem;
 }
 
 .progress-lg {
@@ -10990,6 +10991,7 @@ button.list-group-heading {
 .progress-group {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .progress-group-addon {

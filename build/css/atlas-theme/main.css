@@ -4344,7 +4344,7 @@ a.badge:focus, a.badge:hover {
 
 @keyframes progress-bar-stripes {
   from {
-    background-position: 1rem 0;
+    background-position: 0.5rem 0;
   }
   to {
     background-position: 0 0;
@@ -4354,16 +4354,16 @@ a.badge:focus, a.badge:hover {
 .progress {
   display: flex;
   overflow: hidden;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 0.5625rem;
+  line-height: 0.5rem;
   text-align: center;
   background-color: #ECEEEF;
-  border-radius: 0.25rem;
+  border-radius: 100px;
 }
 
 .progress-bar {
-  height: 1rem;
-  line-height: 1rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
   color: #fff;
   background-color: #65B6F0;
   transition: width 0.6s ease;
@@ -4371,7 +4371,7 @@ a.badge:focus, a.badge:hover {
 
 .progress-bar-striped {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 1rem 1rem;
+  background-size: 0.5rem 0.5rem;
 }
 
 .progress-bar-animated {
@@ -11780,21 +11780,23 @@ button.list-group-heading {
 
 .progress {
   flex-grow: 1;
+  min-width: 6.25rem;
 }
 
 .progress-lg {
-  border-radius: 0.25rem;
+  border-radius: 100px;
   font-size: 1.125rem;
 }
 
 .progress-lg .progress-bar {
-  height: 2rem;
-  line-height: 2rem;
+  height: 1rem;
+  line-height: 1rem;
 }
 
 .progress-group {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .progress-group-addon {
