@@ -101,21 +101,34 @@
 	}
 }
 
-// Card Row Vertical Alignment
+// Card Row Content Alignment
 
-// .card-row-valign-top {
-// 	.card-col-content,
-// 	.card-col-field {
-// 		vertical-align: top;
-// 	}
-// }
+.card-col-content,
+.card-col-field {
+	.align-bottom & {
+		vertical-align: bottom;
+	}
 
-// .card-row-valign-bottom {
-// 	.card-col-content,
-// 	.card-col-field {
-// 		vertical-align: bottom;
-// 	}
-// }
+	.align-middle & {
+		vertical-align: middle;
+	}
+
+	.align-top & {
+		vertical-align: top;
+	}
+
+	.text-center & {
+		text-align: center;
+	}
+
+	.text-left & {
+		text-align: left;
+	}
+
+	.text-right & {
+		text-align: right;
+	}
+}
 
 // Card Border Helpers
 
