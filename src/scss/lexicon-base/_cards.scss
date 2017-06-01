@@ -6,6 +6,8 @@
 
 	margin-bottom: $card-margin-bottom;
 	position: relative;
+	// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22740 is merged
+	word-wrap: break-word;
 
 	// @if ($card-border-radius > 0) {
 	// 	.card-col-content,
@@ -25,7 +27,6 @@
 
 .card-block {
 	padding: $card-gutter-width;
-	word-wrap: break-word;
 }
 
 .card-divider {
@@ -59,11 +60,6 @@
 	min-width: 100px;
 	padding-left: 8px;
 	padding-right: 8px;
-	word-wrap: break-word;
-}
-
-.card-flex-col-field {
-	word-wrap: break-word;
 }
 
 // Card Simple Grid
@@ -76,7 +72,6 @@
 	position: relative;
 	vertical-align: middle;
 	width: auto;
-	word-wrap: break-word;
 }
 
 .card-col-field {
@@ -104,13 +99,8 @@
 .card-row-layout-fixed {
 	table-layout: fixed;
 
-	.card-col-content {
-		word-wrap: break-word;
-	}
-
 	.card-col-field {
 		width: auto;
-		word-wrap: break-word;
 	}
 }
 
