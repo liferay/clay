@@ -7,20 +7,20 @@
 	margin-bottom: $card-margin-bottom;
 	position: relative;
 
-	@if ($card-border-radius > 0) {
-		.card-col-content,
-		.card-col-field {
-			&:first-child {
-				border-bottom-left-radius: $card-border-radius;
-				border-top-left-radius: $card-border-radius;
-			}
+	// @if ($card-border-radius > 0) {
+	// 	.card-col-content,
+	// 	.card-col-field {
+	// 		&:first-child {
+	// 			border-bottom-left-radius: $card-border-radius;
+	// 			border-top-left-radius: $card-border-radius;
+	// 		}
 
-			&:last-child {
-				border-bottom-right-radius: $card-border-radius;
-				border-top-right-radius: $card-border-radius;
-			}
-		}
-	}
+	// 		&:last-child {
+	// 			border-bottom-right-radius: $card-border-radius;
+	// 			border-top-right-radius: $card-border-radius;
+	// 		}
+	// 	}
+	// }
 }
 
 .card-block {
@@ -43,7 +43,32 @@
 	color: $card-link-color;
 }
 
+// Card Simple Flexbox Grid
+// Pros: fits with BS4 flexbox pattern
+// 		 easier to make columns wrap
+// Cons: hard to make all columns equal height without setting fixed height on container
+
+.card-flex-row {
+	align-items: center;
+	display: flex;
+	width: 100%;
+}
+
+.card-flex-col-content {
+	flex-grow: 1;
+	min-width: 100px;
+	padding-left: 8px;
+	padding-right: 8px;
+	word-wrap: break-word;
+}
+
+.card-flex-col-field {
+	word-wrap: break-word;
+}
+
 // Card Simple Grid
+// Pros: easy to make columns equal height
+// Cons: Can't make columns wrap
 
 .card-col-content {
 	display: table-cell;
@@ -110,78 +135,78 @@
 
 // Card Row Vertical Alignment
 
-.card-row-valign-top {
-	.card-col-content,
-	.card-col-field {
-		vertical-align: top;
-	}
-}
+// .card-row-valign-top {
+// 	.card-col-content,
+// 	.card-col-field {
+// 		vertical-align: top;
+// 	}
+// }
 
-.card-row-valign-bottom {
-	.card-col-content,
-	.card-col-field {
-		vertical-align: bottom;
-	}
-}
+// .card-row-valign-bottom {
+// 	.card-col-content,
+// 	.card-col-field {
+// 		vertical-align: bottom;
+// 	}
+// }
 
 // Card Border Helpers
 
-@if not ($card-border-radius == $card-circle-border-radius) {
-	.card-circle {
-		border-radius: $card-circle-border-radius;
+// @if not ($card-border-radius == $card-circle-border-radius) {
+// 	.card-circle {
+// 		border-radius: $card-circle-border-radius;
 
-		.card-col-content,
-		.card-col-field {
-			&:first-child {
-				border-bottom-left-radius: $card-circle-border-radius;
-				border-top-left-radius: $card-circle-border-radius;
-			}
+// 		.card-col-content,
+// 		.card-col-field {
+// 			&:first-child {
+// 				border-bottom-left-radius: $card-circle-border-radius;
+// 				border-top-left-radius: $card-circle-border-radius;
+// 			}
 
-			&:last-child {
-				border-bottom-right-radius: $card-circle-border-radius;
-				border-top-right-radius: $card-circle-border-radius;
-			}
-		}
-	}
-}
+// 			&:last-child {
+// 				border-bottom-right-radius: $card-circle-border-radius;
+// 				border-top-right-radius: $card-circle-border-radius;
+// 			}
+// 		}
+// 	}
+// }
 
-@if not ($card-border-radius == $card-rounded-border-radius) {
-	.card-rounded {
-		border-radius: $card-rounded-border-radius;
+// @if not ($card-border-radius == $card-rounded-border-radius) {
+// 	.card-rounded {
+// 		border-radius: $card-rounded-border-radius;
 
-		.card-col-content,
-		.card-col-field {
-			&:first-child {
-				border-bottom-left-radius: $card-rounded-border-radius;
-				border-top-left-radius: $card-rounded-border-radius;
-			}
+// 		.card-col-content,
+// 		.card-col-field {
+// 			&:first-child {
+// 				border-bottom-left-radius: $card-rounded-border-radius;
+// 				border-top-left-radius: $card-rounded-border-radius;
+// 			}
 
-			&:last-child {
-				border-bottom-right-radius: $card-rounded-border-radius;
-				border-top-right-radius: $card-rounded-border-radius;
-			}
-		}
-	}
-}
+// 			&:last-child {
+// 				border-bottom-right-radius: $card-rounded-border-radius;
+// 				border-top-right-radius: $card-rounded-border-radius;
+// 			}
+// 		}
+// 	}
+// }
 
-@if not ($card-border-radius == $card-square-border-radius) {
-	.card-square {
-		border-radius: $card-square-border-radius;
+// @if not ($card-border-radius == $card-square-border-radius) {
+// 	.card-square {
+// 		border-radius: $card-square-border-radius;
 
-		.card-col-content,
-		.card-col-field {
-			&:first-child {
-				border-bottom-left-radius: $card-square-border-radius;
-				border-top-left-radius: $card-square-border-radius;
-			}
+// 		.card-col-content,
+// 		.card-col-field {
+// 			&:first-child {
+// 				border-bottom-left-radius: $card-square-border-radius;
+// 				border-top-left-radius: $card-square-border-radius;
+// 			}
 
-			&:last-child {
-				border-bottom-right-radius: $card-square-border-radius;
-				border-top-right-radius: $card-square-border-radius;
-			}
-		}
-	}
-}
+// 			&:last-child {
+// 				border-bottom-right-radius: $card-square-border-radius;
+// 				border-top-right-radius: $card-square-border-radius;
+// 			}
+// 		}
+// 	}
+// }
 
 // Checkbox and Radio Cards
 
