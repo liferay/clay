@@ -77,19 +77,20 @@
 	width: 1%;
 }
 
+.card-col-gutters {
+	padding-left: 10px;
+	padding-right: 10px;
+
+	.card-divider {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+
 .card-row {
 	display: table;
 	height: 100%;
 	width: 100%;
-
-	.card-col-gutters {
-		padding: 0 10px;
-
-		.card-divider {
-			margin-left: -10px;
-			margin-right: -10px;
-		}
-	}
 }
 
 .card-row-layout-fixed {
