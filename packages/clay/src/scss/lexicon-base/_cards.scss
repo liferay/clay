@@ -91,21 +91,6 @@
 	height: 100%;
 	width: 100%;
 
-	&.card-row-padded .card-col-gutters {
-		&:first-child {
-			padding-left: 0;
-		}
-
-		&:last-child {
-			padding-right: 0;
-		}
-
-		.card-divider {
-			margin-left: 0;
-			margin-right: 0;
-		}
-	}
-
 	.card-col-gutters {
 		padding: 0 10px;
 
@@ -127,10 +112,6 @@
 		width: auto;
 		word-wrap: break-word;
 	}
-}
-
-.card-row-padded {
-	padding: $card-gutter-width;
 }
 
 // Card Row Vertical Alignment
@@ -233,7 +214,7 @@
 .form-check-middle-left,
 .form-check-top-left {
 	.card-horizontal {
-		> .card-row {
+		> .card-block {
 			padding-left: $checkbox-left-card-padding;
 		}
 	}
@@ -243,7 +224,7 @@
 .form-check-middle-right,
 .form-check-top-right {
 	.card-horizontal {
-		> .card-row {
+		> .card-block {
 			padding-right: $checkbox-right-card-padding;
 		}
 	}
