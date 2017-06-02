@@ -274,34 +274,28 @@ body.fixed {
   width: 100px;
 }
 
-.uxgl-vertical-card .card-header, .uxgl-vertical-card .card-footer {
+.clay-site-vertical-card .card-header, .clay-site-vertical-card .card-footer {
   background: #EEE;
   padding-bottom: 5px;
   padding-top: 5px;
 }
 
-.uxgl-vertical-card .card-section {
+.clay-site-vertical-card .card-section {
   padding-bottom: 20px;
   padding-top: 20px;
 }
 
-.uxgl-horizontal-card .card-row {
+.clay-site-horizontal-card .card-row {
   height: 100px;
 }
 
-.uxgl-horizontal-card .card-row [class*="card-col"] {
+.clay-site-horizontal-card .card-row [class*="card-col"] {
   text-align: center;
 }
 
-.uxgl-horizontal-card .card-row [class*="card-col"]:nth-child(odd) {
+.clay-site-horizontal-card .card-row [class*="card-col"]:nth-child(odd) {
   background-color: #f7f7f7;
   color: #7c7c85;
-}
-
-.uxgl-card-section .card {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 300px;
 }
 
 #controlMenuPage .control-menu {
