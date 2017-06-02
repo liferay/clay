@@ -17,3 +17,7 @@ $card-box-shadow: null !default;
 
 // Will need to revisit if https://github.com/twbs/bootstrap/pull/22722 doesn't make it
 $card-link-color: null !default;
+
+$card-rounded-inner-border-radius: if($card-border-width > 0, calc(#{$rounded-border-radius} - #{$card-border-width}), $rounded-border-radius) !default;
+$card-rounded-0-inner-border-radius: if($rounded-0-border-radius > $card-border-width, calc(#{$rounded-0-border-radius} - #{$card-border-width}), 0) !default;
+$card-rounded-circle-inner-border-radius: if($card-border-width > 0, calc(#{$rounded-circle-border-radius} - #{$card-border-width}), $rounded-circle-border-radius) !default;
