@@ -12,7 +12,7 @@ section: Components
 		</blockquote>
 
 		<div class="card" style="max-width: 300px;">
-			<div class="crop-img crop-img-bottom crop-img-center" style="height: 150px;">
+			<div class="card-item-first crop-img crop-img-bottom crop-img-center" style="height: 150px;">
 				<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
 			</div>
 			<div class="user-icon user-icon-danger user-icon-xxl" style="border: 4px solid #FFF; line-height:120px; margin: -64px auto 0; position: relative;"><span>JB</span></div>
@@ -195,7 +195,7 @@ section: Components
 			<div class="card-block">
 				<div class="card-row">
 					<div class="card-col-field">
-						<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 121px;">
+						<img alt="thumbnail" class="card-item-first" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 121px;">
 					</div>
 
 					<div class="card-col-content card-col-gutters">
@@ -222,7 +222,7 @@ section: Components
 			<div class="card-block">
 				<div class="card-row">
 					<div class="card-col-field">
-						<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
+						<img alt="thumbnail" class="card-item-first" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
 					</div>
 
 					<div class="card-col-content card-col-gutters">
@@ -374,7 +374,7 @@ section: Components
 		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code> or use Bootstrap 4's helper classes <code>align-bottom</code>, <code>align-middle</code>, <code>align-top</code>, <code>text-left</code>, <code>text-center</code>, or <code>text-right</code>.</p>
 
-			<p>You can also use Bootstrap 4's helper classes above on the <code>card-row</code> to align content in all columns inside the row.</p>
+			<p>You can also use the Bootstrap 4's helper classes above on the <code>card-row</code> to align content in all columns inside the row.</p>
 		</blockquote>
 	</div>
 
@@ -410,7 +410,7 @@ section: Components
 		<div class="card card-horizontal">
 			<div class="card-row">
 				<div class="card-col-field">
-					<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 150px;">
+					<img alt="thumbnail" class="card-item-first" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 150px;">
 				</div>
 
 				<div class="card-col-content card-col-gutters">
@@ -428,12 +428,12 @@ section: Components
 		<h3>Card Helper Classes</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Use classes <code>card-rounded</code>, <code>card-circle</code>, or <code>card-square</code> on the card to quickly shape the borders.</p>
+			<p>Use classes <code>rounded</code>, <code>rounded-circle</code>, or <code>rounded-0</code> on the card to quickly shape the borders.</p>
 		</blockquote>
 	</div>
 
 	<div class="clay-site-horizontal-card col-md-4">
-		<div class="card card-horizontal card-rounded">
+		<div class="card card-horizontal rounded">
 			<div class="card-row">
 				<div class="card-col-field">card-col-field</div>
 				<div class="card-col-field">card-col-field</div>
@@ -442,16 +442,18 @@ section: Components
 	</div>
 
 	<div class="clay-site-horizontal-card col-md-4">
-		<div class="card card-circle card-horizontal">
+		<div class="card card-horizontal rounded-circle">
 			<div class="card-row">
-				<div class="card-col-field">card-col-field</div>
+				<div class="card-col-field">
+					<img alt="thumbnail" class="card-item-first" src="{{rootPath}}/images/thumbnail_placeholder.gif">
+				</div>
 				<div class="card-col-field">card-col-field</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="clay-site-horizontal-card col-md-4">
-		<div class="card card-horizontal card-square">
+		<div class="card card-horizontal rounded-0">
 			<div class="card-row">
 				<div class="card-col-field">card-col-field</div>
 				<div class="card-col-field">card-col-field</div>
@@ -461,17 +463,13 @@ section: Components
 
 	<div class="col-md-12">
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			We didn't add <code>overflow: hidden</code> to the <code>card</code> class because it prevents nested dropdowns, popups, and tooltips from fully displaying. You can work around this by adding <code>border-radius</code> to the image or <code>overflow: hidden</code> to the card.
+			<p>Use classes <code>card-item-first</code> and <code>card-item-last</code> on elements that appear at the beginning or ending of your card. It styles the border-radius to match the card's border-radius. These classes work similar to Bootstrap 4's <code>.card-img-top</code> and <code>.card-img-bottom</code> but also covers left and right.</p>
 		</blockquote>
-
-		<div class="alert alert-warning">
-			When using card border helper classes with images as the first or last item, add the css property <span class="text-danger">overflow: hidden</span> to the card or <span class="text-danger">border-radius</span> to the image.
-		</div>
 	</div>
 
 	<div class="col-md-4 col-6">
 		<div class="card card-rounded" style="overflow: hidden;">
-			<div class="aspect-ratio aspect-ratio-16-to-9">
+			<div class="aspect-ratio aspect-ratio-16-to-9 card-item-first">
 				<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
 			</div>
 
@@ -486,13 +484,13 @@ section: Components
 	<div class="col-md-6 col-sm-12 col-12">
 		<div class="card card-horizontal card-rounded">
 			<div class="align-top card-row">
-				<div class="card-col-field">
-					<img src="../../images/thumbnail_dock.jpg" style="border-radius: 4px 0 0 4px;width: 150px;" />
-				</div>
 				<div class="card-col-content card-col-gutters">
 					<h4 class="card-title">Space Program</h4>
 					<div class="card-divider"></div>
 					<p class="card-text">Because you live life on the edge of space.</p>
+				</div>
+				<div class="card-col-field">
+					<img class="card-item-first" src="../../images/thumbnail_dock.jpg" style="width: 150px;" />
 				</div>
 			</div>
 		</div>
@@ -545,7 +543,7 @@ section: Components
 				<input class="form-check-input" type="checkbox">
 			</label>
 			<div class="card">
-				<div class="aspect-ratio">
+				<div class="aspect-ratio card-item-first">
 					<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 					<span class="sticker sticker-bottom sticker-warning">PNG</span>
 				</div>
@@ -639,7 +637,7 @@ section: Components
 			<label class="form-check-label">
 				<input class="form-check-input" type="checkbox">
 				<div class="card">
-					<div class="aspect-ratio">
+					<div class="aspect-ratio card-item-first">
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
@@ -734,7 +732,7 @@ section: Components
 				<input class="form-check-input" name="cardRadios1" type="radio" value="cardOption1">
 			</label>
 			<div class="card">
-				<div class="aspect-ratio">
+				<div class="aspect-ratio card-item-first">
 					<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 					<span class="sticker sticker-bottom sticker-warning">PNG</span>
 				</div>
@@ -828,7 +826,7 @@ section: Components
 			<label class="form-check-label">
 				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption1">
 				<div class="card">
-					<div class="aspect-ratio">
+					<div class="aspect-ratio card-item-first">
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
