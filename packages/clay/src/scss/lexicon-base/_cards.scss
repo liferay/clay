@@ -129,53 +129,120 @@
 	}
 }
 
-// Card Border Helpers
+// Card Helpers
 
-.card-col-content,
-.card-col-field {
-	&:first-child {
-		.rounded & {
-			border-bottom-left-radius: calc(#{$rounded-border-radius} - #{$card-border-width});
-			border-top-left-radius: calc(#{$rounded-border-radius} - #{$card-border-width});
-		}
+.card-item-first {
+	@include border-top-radius($card-border-radius-inner);
 
-		.rounded-0 & {
-			@if ($rounded-0-border-radius > $card-border-width) {
-				border-bottom-left-radius: calc(#{$rounded-0-border-radius} - #{$card-border-width});
-				border-top-left-radius: calc(#{$rounded-0-border-radius} - #{$card-border-width});
-			}
-			@else {
-				border-bottom-left-radius: 0;
-				border-top-left-radius: 0;
-			}
-		}
+	width: 100%;
+}
 
-		.rounded-circle & {
-			border-bottom-left-radius: calc(#{$rounded-circle-border-radius} - #{$card-border-width});
-			border-top-left-radius: calc(#{$rounded-circle-border-radius} - #{$card-border-width});
+[class*='card-col-']:first-child .card-item-first {
+	@include border-radius($card-border-radius-inner 0 0 $card-border-radius-inner);
+}
+
+.card-item-last {
+	@include border-bottom-radius($card-border-radius-inner);
+
+	width: 100%;
+}
+
+[class*='card-col-']:last-child .card-item-first {
+	@include border-radius(0 $card-border-radius-inner $card-border-radius-inner 0);
+}
+
+.rounded {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $card-rounded-inner-border-radius;
+		border-top-right-radius: $card-rounded-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $card-rounded-inner-border-radius;
+		border-bottom-right-radius: $card-rounded-inner-border-radius;
+	}
+
+	[class*='card-col-']:first-child  {
+		border-bottom-left-radius: $card-rounded-inner-border-radius;
+		border-top-left-radius: $card-rounded-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $card-rounded-inner-border-radius 0 0 $card-rounded-inner-border-radius;
 		}
 	}
 
-	&:last-child {
-		.rounded & {
-			border-bottom-right-radius: calc(#{$rounded-border-radius} - #{$card-border-width});
-			border-top-right-radius: calc(#{$rounded-border-radius} - #{$card-border-width});
-		}
+	[class*='card-col-']:last-child {
+		border-bottom-right-radius: $card-rounded-inner-border-radius;
+		border-top-right-radius: $card-rounded-inner-border-radius;
 
-		.rounded-0 & {
-			@if ($rounded-0-border-radius > $card-border-width) {
-				border-bottom-right-radius: calc(#{$rounded-0-border-radius} - #{$card-border-width});
-				border-top-right-radius: calc(#{$rounded-0-border-radius} - #{$card-border-width});
-			}
-			@else {
-				border-bottom-right-radius: 0;
-				border-top-right-radius: 0;
-			}
+		.card-item-last {
+			border-radius: 0 $card-rounded-inner-border-radius $card-rounded-inner-border-radius 0;
 		}
+	}
+}
 
-		.rounded-circle & {
-			border-bottom-right-radius: calc(#{$rounded-circle-border-radius} - #{$card-border-width});
-			border-top-right-radius: calc(#{$rounded-circle-border-radius} - #{$card-border-width});
+.rounded-0 {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $card-rounded-0-inner-border-radius;
+		border-top-right-radius: $card-rounded-0-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $card-rounded-0-inner-border-radius;
+		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
+	}
+
+	[class*='card-col-']:first-child {
+		border-bottom-left-radius: $card-rounded-0-inner-border-radius;
+		border-top-left-radius: $card-rounded-0-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $card-rounded-0-inner-border-radius 0 0 $card-rounded-0-inner-border-radius;
+		}
+	}
+
+	[class*='card-col-']:last-child {
+		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
+		border-top-right-radius: $card-rounded-0-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $card-rounded-0-inner-border-radius $card-rounded-0-inner-border-radius 0;
+		}
+	}
+}
+
+.rounded-circle {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $card-rounded-circle-inner-border-radius;
+		border-top-right-radius: $card-rounded-circle-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $card-rounded-circle-inner-border-radius;
+		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
+	}
+
+	[class*='card-col-']:first-child {
+		border-bottom-left-radius: $card-rounded-circle-inner-border-radius;
+		border-top-left-radius: $card-rounded-circle-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $card-rounded-circle-inner-border-radius 0 0 $card-rounded-circle-inner-border-radius;
+		}
+	}
+
+	[class*='card-col-']:last-child {
+		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
+		border-top-right-radius: $card-rounded-circle-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $card-rounded-circle-inner-border-radius $card-rounded-circle-inner-border-radius 0;
 		}
 	}
 }
