@@ -9,20 +9,19 @@
 	// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22740 is merged
 	word-wrap: break-word;
 
-	// @if ($card-border-radius > 0) {
-	// 	.card-col-content,
-	// 	.card-col-field {
-	// 		&:first-child {
-	// 			border-bottom-left-radius: $card-border-radius;
-	// 			border-top-left-radius: $card-border-radius;
-	// 		}
+	@if ($card-border-radius > 0) {
+		.card-col-content,
+		.card-col-field {
+			// Will be renamed to $card-inner-border-radius once https://github.com/twbs/bootstrap/pull/22741 is merged
+			&:first-child {
+				@include border-left-radius($card-border-radius-inner);
+			}
 
-	// 		&:last-child {
-	// 			border-bottom-right-radius: $card-border-radius;
-	// 			border-top-right-radius: $card-border-radius;
-	// 		}
-	// 	}
-	// }
+			&:last-child {
+				@include border-right-radius($card-border-radius-inner);
+			}
+		}
+	}
 }
 
 .card-divider {
@@ -132,62 +131,54 @@
 
 // Card Border Helpers
 
-// @if not ($card-border-radius == $card-circle-border-radius) {
-// 	.card-circle {
-// 		border-radius: $card-circle-border-radius;
+.card-col-content,
+.card-col-field {
+	&:first-child {
+		.rounded & {
+			border-bottom-left-radius: calc(#{$rounded-border-radius} - #{$card-border-width});
+			border-top-left-radius: calc(#{$rounded-border-radius} - #{$card-border-width});
+		}
 
-// 		.card-col-content,
-// 		.card-col-field {
-// 			&:first-child {
-// 				border-bottom-left-radius: $card-circle-border-radius;
-// 				border-top-left-radius: $card-circle-border-radius;
-// 			}
+		.rounded-0 & {
+			@if ($rounded-0-border-radius > $card-border-width) {
+				border-bottom-left-radius: calc(#{$rounded-0-border-radius} - #{$card-border-width});
+				border-top-left-radius: calc(#{$rounded-0-border-radius} - #{$card-border-width});
+			}
+			@else {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
 
-// 			&:last-child {
-// 				border-bottom-right-radius: $card-circle-border-radius;
-// 				border-top-right-radius: $card-circle-border-radius;
-// 			}
-// 		}
-// 	}
-// }
+		.rounded-circle & {
+			border-bottom-left-radius: calc(#{$rounded-circle-border-radius} - #{$card-border-width});
+			border-top-left-radius: calc(#{$rounded-circle-border-radius} - #{$card-border-width});
+		}
+	}
 
-// @if not ($card-border-radius == $card-rounded-border-radius) {
-// 	.card-rounded {
-// 		border-radius: $card-rounded-border-radius;
+	&:last-child {
+		.rounded & {
+			border-bottom-right-radius: calc(#{$rounded-border-radius} - #{$card-border-width});
+			border-top-right-radius: calc(#{$rounded-border-radius} - #{$card-border-width});
+		}
 
-// 		.card-col-content,
-// 		.card-col-field {
-// 			&:first-child {
-// 				border-bottom-left-radius: $card-rounded-border-radius;
-// 				border-top-left-radius: $card-rounded-border-radius;
-// 			}
+		.rounded-0 & {
+			@if ($rounded-0-border-radius > $card-border-width) {
+				border-bottom-right-radius: calc(#{$rounded-0-border-radius} - #{$card-border-width});
+				border-top-right-radius: calc(#{$rounded-0-border-radius} - #{$card-border-width});
+			}
+			@else {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+		}
 
-// 			&:last-child {
-// 				border-bottom-right-radius: $card-rounded-border-radius;
-// 				border-top-right-radius: $card-rounded-border-radius;
-// 			}
-// 		}
-// 	}
-// }
-
-// @if not ($card-border-radius == $card-square-border-radius) {
-// 	.card-square {
-// 		border-radius: $card-square-border-radius;
-
-// 		.card-col-content,
-// 		.card-col-field {
-// 			&:first-child {
-// 				border-bottom-left-radius: $card-square-border-radius;
-// 				border-top-left-radius: $card-square-border-radius;
-// 			}
-
-// 			&:last-child {
-// 				border-bottom-right-radius: $card-square-border-radius;
-// 				border-top-right-radius: $card-square-border-radius;
-// 			}
-// 		}
-// 	}
-// }
+		.rounded-circle & {
+			border-bottom-right-radius: calc(#{$rounded-circle-border-radius} - #{$card-border-width});
+			border-top-right-radius: calc(#{$rounded-circle-border-radius} - #{$card-border-width});
+		}
+	}
+}
 
 // Checkbox and Radio Cards
 
