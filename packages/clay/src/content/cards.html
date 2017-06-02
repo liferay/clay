@@ -17,119 +17,191 @@ section: Components
 			</div>
 			<div class="user-icon user-icon-danger user-icon-xxl" style="border: 4px solid #FFF; line-height:120px; margin: -64px auto 0; position: relative;"><span>JB</span></div>
 			<div class="card-block" style="text-align: center;">
-				<h3 style="margin:0;">Joe Bloggs</h4>
-				<h5 class="text-default" style="margin-top:0;">Administrator</h5>
-				<p>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</p>
+				<h3 class="card-title">Joe Bloggs</h3>
+				<h5 class="card-subtitle">Administrator</h5>
+				<div class="card-divider"></div>
+				<p>ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReally<a class="card-link" href="#1">TryingToCover</a>AllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</p>
 			</div>
 		</div>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3>Horizontal Card with Simple Grid</h3>
-
-		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Use <code>card-row</code> with <code>card-col-content</code> and <code>card-col-field</code> to create a number of custom horizontal cards. <code>card-col-content</code> fills the remaining space when used in conjunction with <code>card-col-field</code>. <code>card-col-field</code> will only be as wide as the content inside.
-		</blockquote>
-	</div>
-
 	<div class="col-md-6">
-		<div class="card card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-				</div>
-				<div class="card-col-content card-col-gutters">
-					<span>This text will fill the remaining space.</span>
+		<div class="card">
+			<div class="card-block">
+				<div class="card-flex-row">
+					<div class="card-flex-col-field">
+						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-flex-col-content card-col-gutters">
+						<span>This text will fill the remaining space.</span>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3>Horizontal Cards with Fixed Width Content</h3>
-
-		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Set a fixed width on the content inside <code>card-col-field</code>.</p>
-		</blockquote>
-	</div>
-
 	<div class="col-md-6">
-		<div class="card card-horizontal">
-			<div class="card-row">
-				<div class="card-col-field">
-					<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 150px;">
-				</div>
-
-				<div class="card-col-content card-col-gutters">
-					<h4>So ristretto cappuccino</h4>
-
-					<p>Wings eu, pumpkin spice robusta.</p>
+		<div class="card">
+			<div class="card-block">
+				<div class="card-flex-row">
+					<div class="card-flex-col-field">
+						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-flex-col-content card-col-gutters">
+						<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					</div>
+					<div class="card-flex-col-field">
+						<div class="dropdown">
+							<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="col-md-6">
-		<div class="card card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 121px;">
-				</div>
-
-				<div class="card-col-content card-col-gutters">
-					<h4>So ristretto cappuccino</h4>
-
-					<p>Wings eu, pumpkin spice robusta.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card card-horizontal">
-			<div class="card-row">
-				<div class="card-col-content card-col-gutters">
-					<h4>So ristretto cappuccino</h4>
-
-					<p>Wings eu, pumpkin spice robusta.</p>
-				</div>
-				<div class="card-col-field">
-					<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 150px;">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-content card-col-gutters">
-					<h4>So ristretto cappuccino</h4>
-
-					<p>Wings eu, pumpkin spice robusta.</p>
-				</div>
-				<div class="card-col-field">
-					<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 121px;">
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div class="col-md-8">
+		<div class="card">
+			<div class="card-block">
+				<div class="card-flex-row">
+					<div class="card-flex-col-field">
+						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-flex-col-content card-col-gutters">
+						<span>Really super insanely just incredibly long and totally not possible word. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+					</div>
+					<div class="card-flex-col-field">
+						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Horizontal Card with card-col-*</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Use <code>card-row</code> with <code>card-col-content</code> and <code>card-col-field</code> to create a number of custom horizontal cards. <code>card-col-content</code> fills the remaining space when used in conjunction with <code>card-col-field</code>. <code>card-col-field</code> will only be as wide as the content inside.</p>
+		</blockquote>
+
+			<pre><code class="html">```<div class="card-row">
+    <div class="card-col-field"></div>
+    <div class="card-col-content"></div>
+</div>```</code></pre>
+
+	</div>
+
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-block">
+				<div class="card-row">
+					<div class="card-col-field" style="background-color:aliceblue;">
+						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-col-content card-col-gutters" style="background-color:antiquewhite;">
+						<span>This text will fill the remaining space.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Two <code class="code">.card-col-field</code>'s no <code class="code">.card-col-content</code>.</p>
+		</blockquote>
+
+			<pre><code class="html">```<div class="card-row">
+    <div class="card-col-field"></div>
+    <div class="card-col-field"></div>
+</div>```</code></pre>
+
+	</div>
+
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-block">
+				<div class="card-row">
+					<div class="card-col-field" style="background-color:aliceblue;">
+						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-col-field" style="background-color:antiquewhite;">
+						<span>This text will fill the remaining space.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Two <code class="code">.card-col-content</code>'s no <code class="code">.card-col-field</code>.</p>
+		</blockquote>
+
+			<pre><code class="html">```<div class="card-row">
+    <div class="card-col-content"></div>
+    <div class="card-col-content"></div>
+</div>```</code></pre>
+
+	</div>
+
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-block">
+				<div class="card-row">
+					<div class="card-col-content" style="background-color:aliceblue;">
+						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+					</div>
+					<div class="card-col-content" style="background-color:antiquewhite;">
+						<span>This text will fill the remaining space.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Padded Horizontal Cards</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Nest <code class="code">card-row</code> in <code class="code">card-block</code> on to add some spacing around a horizontal card.</p>
+		</blockquote>
+
+			<pre><code class="html">```<div class="card-block">
+    <div class="card-row"></div>
+</div>```</code></pre>
+
+	</div>
+
+	<div class="col-md-6">
 		<div class="card card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-				</div>
-				<div class="card-col-content card-col-gutters">
-					<span>Really super insanely just incredibly long and totally not possible word. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-				</div>
-				<div class="card-col-field">
-					<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+			<div class="card-block">
+				<div class="card-row">
+					<div class="card-col-field">
+						<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 121px;">
+					</div>
+
+					<div class="card-col-content card-col-gutters">
+						<h4 class="card-title">So ristretto cappuccino</h4>
+						<p class="card-text">Wings eu, pumpkin spice robusta.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -147,157 +219,171 @@ section: Components
 
 	<div class="col-md-6">
 		<div class="card card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
-				</div>
+			<div class="card-block">
+				<div class="card-row">
+					<div class="card-col-field">
+						<img alt="thumbnail" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
+					</div>
 
-				<div class="card-col-content card-col-gutters">
-					<h4>So ristretto cappuccino</h4>
-					<p class="truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					<div class="card-col-content card-col-gutters">
+						<h4 class="card-title">So ristretto cappuccino</h4>
+						<p class="card-text truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<ul class="list-unstyled" style="clear:both;">
-		<li class="col-md-6">
-			<div class="card card-horizontal">
-				<div class="card-row card-row-padded">
-					<div class="card-col-field">
-						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-					</div>
-					<div class="card-col-content card-col-gutters">
-						<h4 class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
-					</div>
-					<div class="card-col-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Download</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-								<a class="dropdown-item" href="#1">Permissions</a>
-								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+	<div class="col-md-12">
+		<ul class="list-unstyled row">
+			<li class="col-md-6">
+				<div class="card card-horizontal">
+					<div class="card-block">
+						<div class="card-row">
+							<div class="card-col-field">
+								<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+							</div>
+							<div class="card-col-content card-col-gutters">
+								<h4 class="card-title truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
+							</div>
+							<div class="card-col-field">
+								<div class="dropdown">
+									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</li>
+			</li>
 
-		<li class="col-md-6">
-			<div class="card card-horizontal">
-				<div class="card-row card-row-padded">
-					<div class="card-col-field">
-						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-					</div>
-					<div class="card-col-content card-col-gutters">
-						<h4 title="Folder 01">Folder 01</h4>
-					</div>
-					<div class="card-col-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Download</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-								<a class="dropdown-item" href="#1">Permissions</a>
-								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+			<li class="col-md-6">
+				<div class="card card-horizontal">
+					<div class="card-block">
+						<div class="card-row">
+							<div class="card-col-field">
+								<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+							</div>
+							<div class="card-col-content card-col-gutters">
+								<h4 class="card-title" title="Folder 01">Folder 01</h4>
+							</div>
+							<div class="card-col-field">
+								<div class="dropdown">
+									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</li>
+			</li>
 
-		<li class="col-md-6">
-			<div class="card card-horizontal">
-				<div class="card-row card-row-padded">
-					<div class="card-col-field">
-						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-					</div>
-					<div class="card-col-content card-col-gutters">
-						<h4 title="Folder 02">Folder 02</h4>
-					</div>
-					<div class="card-col-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Download</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-								<a class="dropdown-item" href="#1">Permissions</a>
-								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+			<li class="col-md-6">
+				<div class="card card-horizontal">
+					<div class="card-block">
+						<div class="card-row">
+							<div class="card-col-field">
+								<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+							</div>
+							<div class="card-col-content card-col-gutters">
+								<h4 class="card-title" title="Folder 02">Folder 02</h4>
+							</div>
+							<div class="card-col-field">
+								<div class="dropdown">
+									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</li>
+			</li>
 
-		<li class="col-md-6">
-			<div class="card card-horizontal">
-				<div class="card-row card-row-padded">
-					<div class="card-col-field">
-						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-					</div>
-					<div class="card-col-content card-col-gutters">
-						<h4 title="Folder 03">Folder 03</h4>
-					</div>
-					<div class="card-col-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Download</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-								<a class="dropdown-item" href="#1">Permissions</a>
-								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+			<li class="col-md-6">
+				<div class="card card-horizontal">
+					<div class="card-block">
+						<div class="card-row">
+							<div class="card-col-field">
+								<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+							</div>
+							<div class="card-col-content card-col-gutters">
+								<h4 class="card-title" title="Folder 03">Folder 03</h4>
+							</div>
+							<div class="card-col-field">
+								<div class="dropdown">
+									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</li>
-	</ul>
+			</li>
+		</ul>
+	</div>
 </div>
 
 <div class="clay-site-horizontal-card clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Card Row Vertical Alignment Helpers</h3>
+		<h3>Card Row Content Alignment Helpers</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code> or use the helper classes <code>card-row-valign-bottom</code>and <code>card-row-valign-top</code> on the <code>card-row</code> to vertically align all columns inside the row.</p>
+			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code> or use Bootstrap 4's helper classes <code>align-bottom</code>, <code>align-middle</code>, <code>align-top</code>, <code>text-left</code>, <code>text-center</code>, or <code>text-right</code>.</p>
+
+			<p>You can also use Bootstrap 4's helper classes above on the <code>card-row</code> to align content in all columns inside the row.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
 		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="card-col-field" style="vertical-align: top;">top</div>
+				<div class="align-top card-col-field">top</div>
 				<div class="card-col-field">middle</div>
-				<div class="card-col-field" style="vertical-align: bottom;">bottom</div>
+				<div class="align-bottom card-col-field">bottom</div>
 			</div>
 		</div>
 	</div>
@@ -305,9 +391,9 @@ section: Components
 	<div class="col-md-6">
 		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="card-col-field" style="text-align:left;">left</div>
+				<div class="card-col-field text-left">left</div>
 				<div class="card-col-field">center</div>
-				<div class="card-col-field" style="text-align:right;">right</div>
+				<div class="card-col-field text-right">right</div>
 			</div>
 		</div>
 	</div>
@@ -328,30 +414,9 @@ section: Components
 				</div>
 
 				<div class="card-col-content card-col-gutters">
-					<h4>So ristretto cappuccino</h4>
+					<h4 class="card-title">So ristretto cappuccino</h4>
 
-					<p>Wings eu, pumpkin spice robusta.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-12">
-		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Use <code>card-row-padded</code> on <code>card-row</code> to add some spacing around a horizontal card.</p>
-		</blockquote>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card card-horizontal">
-			<div class="card-row card-row-padded">
-				<div class="card-col-field">
-					<img alt="thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 121px;">
-				</div>
-
-				<div class="card-col-content card-col-gutters">
-					<h4>So ristretto cappuccino</h4>
-					<p>Wings eu, pumpkin spice robusta.</p>
+					<p class="card-text">Wings eu, pumpkin spice robusta.</p>
 				</div>
 			</div>
 		</div>
@@ -410,26 +475,24 @@ section: Components
 				<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
 			</div>
 
-			<div class="card-row card-row-padded card-row-valign-top">
-				<div class="card-col-content" style="height: 125px; text-align: center;">
-					<h3 style="margin:0;">Joe Bloggs</h3>
-					<h5 class="text-default" style="margin-top:0;">Administrator</h5>
-					<p>Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
-				</div>
+			<div class="card-block" style="text-align:center;">
+				<h3 class="card-title">Joe Bloggs</h3>
+				<h5 class="card-subtitle">Administrator</h5>
+				<p class="card-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
 			</div>
 		</div>
 	</div>
 
 	<div class="col-md-6 col-sm-12 col-12">
 		<div class="card card-horizontal card-rounded">
-			<div class="card-row card-row-valign-top">
+			<div class="align-top card-row">
 				<div class="card-col-field">
 					<img src="../../images/thumbnail_dock.jpg" style="border-radius: 4px 0 0 4px;width: 150px;" />
 				</div>
 				<div class="card-col-content card-col-gutters">
-					<h4>Space Program</h4>
-					<div class="divider"></div>
-					<p>Because you live life on the edge of space.</p>
+					<h4 class="card-title">Space Program</h4>
+					<div class="card-divider"></div>
+					<p class="card-text">Because you live life on the edge of space.</p>
 				</div>
 			</div>
 		</div>
@@ -441,7 +504,7 @@ section: Components
 		<h3>Card Dividers</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Use <code>```<div class="divider"></div>```</code> to create a horizontal division between content inside a card.</p>
+			<p>Use <code>```<div class="card-divider"></div>```</code> to create a horizontal division between content inside a card.</p>
 		</blockquote>
 	</div>
 
@@ -452,9 +515,9 @@ section: Components
 					card-col-field
 				</div>
 				<div class="card-col-field card-col-gutters">
-					<h4>Title</h4>
-					<div class="divider"></div>
-					<p>card-col-field</p>
+					<h4 class="card-title">Title</h4>
+					<div class="card-divider"></div>
+					<p class="card-text">card-col-field</p>
 				</div>
 			</div>
 		</div>
@@ -486,27 +549,29 @@ section: Components
 					<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 					<span class="sticker sticker-bottom sticker-warning">PNG</span>
 				</div>
-				<div class="card-row card-row-padded card-row-valign-top">
-					<div class="card-col-content">
-						<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-						<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-						<span class="truncate-text">Approved</span>
-					</div>
+				<div class="card-block">
+					<div class="align-top card-row">
+						<div class="card-col-content">
+							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+							<span class="truncate-text">Approved</span>
+						</div>
 
-					<div class="card-col-field">
-						<div class="dropdown" style="margin-right: -8px;">
-							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Download</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-								<a class="dropdown-item" href="#1">Permissions</a>
-								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+						<div class="card-col-field">
+							<div class="dropdown" style="margin-right: -8px;">
+								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Download</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+									<a class="dropdown-item" href="#1">Permissions</a>
+									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -521,27 +586,29 @@ section: Components
 				<input class="form-check-input" type="checkbox" value="">
 			</label>
 			<div class="card card-horizontal">
-				<div class="card-row card-row-padded">
-					<div class="card-col-field">
-						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-					</div>
-					<div class="card-col-content card-col-gutters">
-						<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-					</div>
-					<div class="card-col-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Download</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-								<a class="dropdown-item" href="#1">Permissions</a>
-								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+				<div class="card-block">
+					<div class="card-row">
+						<div class="card-col-field">
+							<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+						</div>
+						<div class="card-col-content card-col-gutters">
+							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+						</div>
+						<div class="card-col-field">
+							<div class="dropdown">
+								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Download</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+									<a class="dropdown-item" href="#1">Permissions</a>
+									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -576,27 +643,29 @@ section: Components
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
-					<div class="card-row card-row-padded card-row-valign-top">
-						<div class="card-col-content">
-							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-							<span class="truncate-text">Approved</span>
-						</div>
+					<div class="card-block">
+						<div class="align-top card-row">
+							<div class="card-col-content">
+								<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+								<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+								<span class="truncate-text">Approved</span>
+							</div>
 
-						<div class="card-col-field">
-							<div class="dropdown" style="margin-right: -8px;">
-								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							<div class="card-col-field">
+								<div class="dropdown" style="margin-right: -8px;">
+									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -611,27 +680,29 @@ section: Components
 			<label class="form-check-label">
 				<input class="form-check-input" type="checkbox" value="">
 				<div class="card card-horizontal">
-					<div class="card-row card-row-padded">
-						<div class="card-col-field">
-							<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-						</div>
-						<div class="card-col-content card-col-gutters">
-							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-						</div>
-						<div class="card-col-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+					<div class="card-block">
+						<div class="card-row">
+							<div class="card-col-field">
+								<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+							</div>
+							<div class="card-col-content card-col-gutters">
+								<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+							</div>
+							<div class="card-col-field">
+								<div class="dropdown">
+									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -667,27 +738,29 @@ section: Components
 					<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 					<span class="sticker sticker-bottom sticker-warning">PNG</span>
 				</div>
-				<div class="card-row card-row-padded card-row-valign-top">
-					<div class="card-col-content">
-						<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-						<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-						<span class="truncate-text">Approved</span>
-					</div>
+				<div class="card-block">
+					<div class="align-top card-row">
+						<div class="card-col-content">
+							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+							<span class="truncate-text">Approved</span>
+						</div>
 
-					<div class="card-col-field">
-						<div class="dropdown" style="margin-right: -8px;">
-							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Download</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-								<a class="dropdown-item" href="#1">Permissions</a>
-								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+						<div class="card-col-field">
+							<div class="dropdown" style="margin-right: -8px;">
+								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Download</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+									<a class="dropdown-item" href="#1">Permissions</a>
+									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -702,27 +775,29 @@ section: Components
 				<input class="form-check-input" name="cardRadios1" type="radio" value="cardOption2">
 			</label>
 			<div class="card card-horizontal">
-				<div class="card-row card-row-padded">
-					<div class="card-col-field">
-						<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-					</div>
-					<div class="card-col-content card-col-gutters">
-						<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-					</div>
-					<div class="card-col-field">
-						<div class="dropdown">
-							<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-								</svg>
-							</a>
-							<div class="dropdown-menu dropdown-menu-right">
-								<a class="dropdown-item" href="#1">Download</a>
-								<a class="dropdown-item" href="#1">Edit</a>
-								<a class="dropdown-item" href="#1">Move</a>
-								<a class="dropdown-item" href="#1">Checkout</a>
-								<a class="dropdown-item" href="#1">Permissions</a>
-								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+				<div class="card-block">
+					<div class="card-row">
+						<div class="card-col-field">
+							<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+						</div>
+						<div class="card-col-content card-col-gutters">
+							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+						</div>
+						<div class="card-col-field">
+							<div class="dropdown">
+								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+									</svg>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Download</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+									<a class="dropdown-item" href="#1">Permissions</a>
+									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -757,27 +832,29 @@ section: Components
 						<img alt="thumbnail" src="../../images/thumbnail_coffee.jpg">
 						<span class="sticker sticker-bottom sticker-warning">PNG</span>
 					</div>
-					<div class="card-row card-row-padded card-row-valign-top">
-						<div class="card-col-content">
-							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
-							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
-							<span class="truncate-text">Approved</span>
-						</div>
+					<div class="card-block">
+						<div class="align-top card-row">
+							<div class="card-col-content">
+								<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
+								<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
+								<span class="truncate-text">Approved</span>
+							</div>
 
-						<div class="card-col-field">
-							<div class="dropdown" style="margin-right: -8px;">
-								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							<div class="card-col-field">
+								<div class="dropdown" style="margin-right: -8px;">
+									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -792,27 +869,29 @@ section: Components
 			<label class="form-check-label">
 				<input class="form-check-input" name="cardRadios" type="radio" value="cardOption2">
 				<div class="card card-horizontal">
-					<div class="card-row card-row-padded">
-						<div class="card-col-field">
-							<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
-						</div>
-						<div class="card-col-content card-col-gutters">
-							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-						</div>
-						<div class="card-col-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+					<div class="card-block">
+						<div class="card-row">
+							<div class="card-col-field">
+								<span class="icon-folder-close-alt sticker sticker-default sticker-static sticker-lg"></span>
+							</div>
+							<div class="card-col-content card-col-gutters">
+								<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+							</div>
+							<div class="card-col-field">
+								<div class="dropdown">
+									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="#1">Download</a>
+										<a class="dropdown-item" href="#1">Edit</a>
+										<a class="dropdown-item" href="#1">Move</a>
+										<a class="dropdown-item" href="#1">Checkout</a>
+										<a class="dropdown-item" href="#1">Permissions</a>
+										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+									</div>
 								</div>
 							</div>
 						</div>
