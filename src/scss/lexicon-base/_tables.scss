@@ -17,10 +17,6 @@ th {
 		}
 	}
 
-	thead .clamp-container {
-		bottom: $table-cell-padding;
-	}
-
 	th {
 		font-size: $table-header-font-size;
 		font-weight: $table-header-font-weight;
@@ -32,25 +28,12 @@ th {
 		th {
 			&:first-child {
 				padding-left: $table-cell-gutters;
-
-				.clamp-container {
-					left: $table-cell-gutters;
-				}
 			}
 
 			&:last-child {
 				padding-right: $table-cell-gutters;
-
-				.clamp-container {
-					right: $table-cell-gutters;
-				}
 			}
 		}
-	}
-
-	.clamp-container {
-		-ms-transform: none;
-		transform: none;
 	}
 }
 
@@ -141,17 +124,6 @@ th {
 			display: block;
 		}
 	}
-
-	thead .clamp-container {
-		-ms-transform: none;
-		transform: none;
-	}
-
-	&.table-valign-middle thead .clamp-container,
-	.clamp-container {
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-	}
 }
 
 @if (variable-exists(atlas-theme)) {
@@ -203,13 +175,6 @@ th {
 	> tfoot > tr > td {
 		vertical-align: bottom;
 	}
-
-	.clamp-container {
-		bottom: $table-cell-padding;
-
-		-ms-transform: none;
-		transform: none;
-	}
 }
 
 .table-valign-middle {
@@ -217,17 +182,6 @@ th {
 	> tbody > tr > td,
 	> tfoot > tr > td {
 		vertical-align: middle;
-	}
-
-	thead .clamp-container {
-		bottom: auto;
-	}
-
-	.clamp-container {
-		top: auto;
-
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
 	}
 }
 
@@ -237,15 +191,6 @@ th {
 	> tfoot > tr > td {
 		vertical-align: top;
 	}
-
-	thead .clamp-container {
-		bottom: auto;
-	}
-
-	.clamp-container {
-		-ms-transform: none;
-		transform: none;
-	}
 }
 
 // Tbody Vertical Align
@@ -254,36 +199,17 @@ th {
 	> tbody > tr > td {
 		vertical-align: bottom;
 	}
-
-	tbody .clamp-container {
-		bottom: $table-cell-padding;
-
-		-ms-transform: none;
-		transform: none;
-	}
 }
 
 .tbody-valign-middle {
 	> tbody > tr > td {
 		vertical-align: middle;
 	}
-
-	tbody .clamp-container {
-		top: auto;
-
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-	}
 }
 
 .tbody-valign-top {
 	> tbody > tr > td {
 		vertical-align: top;
-	}
-
-	tbody .clamp-container {
-		-ms-transform: none;
-		transform: none;
 	}
 }
 
@@ -296,11 +222,6 @@ th {
 			vertical-align: bottom;
 		}
 	}
-
-	thead .clamp-container {
-		-ms-transform: none;
-		transform: none;
-	}
 }
 
 .thead-valign-middle {
@@ -310,13 +231,6 @@ th {
 			vertical-align: middle;
 		}
 	}
-
-	thead .clamp-container {
-		bottom: auto;
-
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-	}
 }
 
 .thead-valign-top {
@@ -325,12 +239,5 @@ th {
 		> th {
 			vertical-align: top;
 		}
-	}
-
-	thead .clamp-container {
-		bottom: auto;
-
-		-ms-transform: none;
-		transform: none;
 	}
 }
