@@ -21,7 +21,7 @@
 			{$label or ''}
 		</a>
 	{else}
-		<button {call .attributes data="all" /}>
+		<button {call .attributes data="all" /} aria-pressed="false">
 			{call .icon data="all" /}
 			{$label or ''}
 		</button>
