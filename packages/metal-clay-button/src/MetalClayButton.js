@@ -34,6 +34,17 @@ class MetalClayButton extends MetalClayButtonBase {
  */
 MetalClayButton.STATE = {
 	/**
+	 * Adds an aria description for the link.
+	 * @instance
+	 * @memberof MetalClayButton
+	 * @type {string}
+	 * @default ''
+	 */
+	aria_description: {
+		validator: validators.string
+	},
+
+	/**
 	 * Renders the button as a block element.
 	 * @instance
 	 * @memberof MetalClayButton

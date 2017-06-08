@@ -5,6 +5,7 @@ import MetalClayButton from '../src/MetalClayButton';
 const FIXTURE_DIR = 'test/fixture/';
 
 const DEFAULT_BUTTON = __html__[FIXTURE_DIR + 'testDefaultMetalClayButton.html'].trim();
+const DEFAULT_BUTTON_WITH_ARIA_DESCRIPTION = __html__[FIXTURE_DIR + 'testMetalClayButtonWithAriaDescription.html'].trim();
 const DEFAULT_BUTTON_WITH_LABEL = __html__[FIXTURE_DIR + 'testMetalClayButtonWithLabel.html'].trim();
 const DEFAULT_BUTTON_WITH_NAME = __html__[FIXTURE_DIR + 'testMetalClayButtonWithName.html'].trim();
 const DISABLED_BUTTON = __html__[FIXTURE_DIR + 'testDisabledMetalClayButton.html'].trim();
@@ -76,5 +77,15 @@ describe('MetalClayButton', function() {
 
 		sample.element.click();
 		assert.strictEqual(sample.element.getAttribute('aria-pressed'), 'false');
+	});
+
+	it('should render a link with aria_description attribute', function() {
+		sample = new MetalClayButton({
+			aria_description: 'My Description',
+			href: 'http://liferay.com',
+			label: 'Visit Liferay.com'
+		});
+
+		assert.strictEqual(sample.element.outerHTML, DEFAULT_BUTTON_WITH_ARIA_DESCRIPTION);
 	});
 });

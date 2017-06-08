@@ -4,6 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
+	{@param? aria_description: string}
 	{@param? block: bool}
 	{@param? disabled: bool}
 	{@param? href: string}
@@ -15,8 +16,9 @@
 	{@param? type: string}
 	{@param? value: string}
 
+
 	{if $href}
-		<a href="{$href}" {call .attributes data="all" /}>
+		<a href="{$href}" {call .attributes data="all" /} aria-label="{$aria_description}">
 			{call .icon data="all" /}
 			{$label or ''}
 		</a>
