@@ -65,4 +65,16 @@ describe('MetalClayButton', function() {
 
 		assert.strictEqual(sample.element.outerHTML, DEFAULT_BUTTON_WITH_NAME);
 	});
+
+	it('should have an aria-pressed attribute', function() {
+		sample = new MetalClayButton({
+			name: 'myButton'
+		});
+
+		sample.element.click();
+		assert.strictEqual(sample.element.getAttribute('aria-pressed'), 'true');
+
+		sample.element.click();
+		assert.strictEqual(sample.element.getAttribute('aria-pressed'), 'false');
+	});
 });
