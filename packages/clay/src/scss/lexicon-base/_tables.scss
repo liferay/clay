@@ -123,12 +123,30 @@ th {
 
 // Chrome rendering issue with responsive-tables and td position relative
 
-.table-striped tbody tr:nth-of-type(odd) td {
-	background-color: $table-bg-accent;
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: transparent;
+
+	td {
+		@if ($table-bg-accent == rgba($black,.05)) {
+			background-color: #F2F2F2;
+		}
+		@else {
+			background-color: $table-bg-accent;
+		}
+	}
 }
 
-.table-hover tbody tr:hover td {
-	background-color: $table-bg-hover;
+.table-hover tbody tr:hover {
+	background-color: transparent;
+
+	td {
+		@if ($table-bg-hover == rgba($black,.075)) {
+			background-color: #ECECEC;
+		}
+		@else {
+			background-color: $table-bg-hover;
+		}
+	}
 }
 
 // Table Helpers
