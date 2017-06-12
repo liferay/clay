@@ -9,16 +9,14 @@ th {
 		height: $table-header-min-height;
 	}
 
-	tr {
-		td,
-		th {
-			&:first-child {
-				padding-left: $table-cell-gutters;
-			}
+	td,
+	th {
+		&:first-child {
+			padding-left: $table-cell-gutters;
+		}
 
-			&:last-child {
-				padding-right: $table-cell-gutters;
-			}
+		&:last-child {
+			padding-right: $table-cell-gutters;
 		}
 	}
 
@@ -80,32 +78,35 @@ th {
 		}
 	}
 
-	> thead > tr > td,
-	> thead > tr > th {
-		background-color: $table-list-header-bg;
-		border-bottom-width: $table-list-header-border-bottom-width;
-		font-size: $table-list-header-font-size;
-		font-weight: $table-list-header-font-weight;
-		height: $table-list-header-min-height;
-		vertical-align: $table-list-header-vertical-alignment;
+	thead {
+		td,
+		th {
+			background-color: $table-list-header-bg;
+			border-bottom-width: $table-list-header-border-bottom-width;
+			font-size: $table-list-header-font-size;
+			font-weight: $table-list-header-font-weight;
+			height: $table-list-header-min-height;
+			vertical-align: $table-list-header-vertical-alignment;
+		}
 	}
 
-	> tbody > tr {
+	tbody tr {
 		height: $table-list-row-height;
 	}
 
-	> tbody > tr > td,
-	> tbody > tr > th,
-	> tfoot > tr > td,
-	> tfoot > tr > th {
-		// Chrome rendering issue with responsive-tables and td position relative
-		background-color: $table-list-body-row-bg;
-		border-top-width: 0;
-		vertical-align: middle;
+	tbody,
+	tfoot {
+		td,
+		th {
+			// Chrome rendering issue with responsive-tables and td position relative
+			background-color: $table-list-body-row-bg;
+			border-top-width: 0;
+			vertical-align: middle;
+		}
 	}
 
-	> tbody,
-	> tfoot {
+	tbody,
+	tfoot {
 		td {
 			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
 		}
@@ -120,29 +121,22 @@ th {
 	}
 }
 
-@if (variable-exists(atlas-theme)) {
-	// Chrome rendering issue with responsive-tables and td position relative
+// Chrome rendering issue with responsive-tables and td position relative
 
-	.table-striped > tbody > tr:nth-of-type(odd) > td {
-		background-color: $table-bg-accent;
-	}
+.table-striped tbody tr:nth-of-type(odd) td {
+	background-color: $table-bg-accent;
+}
 
-	.table-hover > tbody > tr:hover > td {
-		background-color: $table-bg-hover;
-	}
+.table-hover tbody tr:hover td {
+	background-color: $table-bg-hover;
 }
 
 // Table Helpers
 
 .table-autofit {
-	> thead,
-	> tbody {
-		> tr {
-			> th,
-			> td {
-				width: 1%;
-			}
-		}
+	td,
+	th {
+		width: 1%;
 	}
 
 	.table-cell-content {
@@ -150,16 +144,9 @@ th {
 	}
 }
 
-.table-heading-nowrap > thead > tr {
-	> th,
-	> td {
-		white-space: nowrap;
-	}
-}
-
-.table-overflow,
-.table-responsive {
-	.table-heading-nowrap > thead > tr > .table-cell-content {
+.table-heading-nowrap thead {
+	td,
+	th {
 		white-space: nowrap;
 	}
 }
@@ -167,45 +154,54 @@ th {
 // Table Vertical Align
 
 .table-valign-bottom {
-	> thead > tr > th,
-	> tbody > tr > td,
-	> tfoot > tr > td {
-		vertical-align: bottom;
+	tbody,
+	tfoot,
+	thead {
+		td,
+		th {
+			vertical-align: bottom;
+		}
 	}
 }
 
 .table-valign-middle {
-	> thead > tr > th,
-	> tbody > tr > td,
-	> tfoot > tr > td {
-		vertical-align: middle;
+	tbody,
+	tfoot,
+	thead {
+		td,
+		th {
+			vertical-align: middle;
+		}
 	}
 }
 
 .table-valign-top {
-	> thead > tr > th,
-	> tbody > tr > td,
-	> tfoot > tr > td {
-		vertical-align: top;
+	tbody,
+	tfoot,
+	thead {
+		td,
+		th {
+			vertical-align: top;
+		}
 	}
 }
 
 // Tbody Vertical Align
 
 .tbody-valign-bottom {
-	> tbody > tr > td {
+	tbody td {
 		vertical-align: bottom;
 	}
 }
 
 .tbody-valign-middle {
-	> tbody > tr > td {
+	tbody td {
 		vertical-align: middle;
 	}
 }
 
 .tbody-valign-top {
-	> tbody > tr > td {
+	tbody td {
 		vertical-align: top;
 	}
 }
@@ -213,27 +209,27 @@ th {
 // Thead Vertical Align
 
 .thead-valign-bottom {
-	> thead > tr {
-		> td,
-		> th {
+	thead {
+		td,
+		th {
 			vertical-align: bottom;
 		}
 	}
 }
 
 .thead-valign-middle {
-	> thead > tr {
-		> td,
-		> th {
+	thead {
+		td,
+		th {
 			vertical-align: middle;
 		}
 	}
 }
 
 .thead-valign-top {
-	> thead > tr {
-		> td,
-		> th {
+	thead {
+		td,
+		th {
 			vertical-align: top;
 		}
 	}
