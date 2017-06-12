@@ -3,20 +3,6 @@ th {
 }
 
 .table {
-	> thead,
-	> tbody,
-	> tfoot {
-		tr td {
-			&:first-child {
-				> .checkbox,
-				> input[type="checkbox"] {
-					margin-bottom: 0;
-					margin-top: 0;
-				}
-			}
-		}
-	}
-
 	th {
 		font-size: $table-header-font-size;
 		font-weight: $table-header-font-weight;
@@ -34,6 +20,10 @@ th {
 				padding-right: $table-cell-gutters;
 			}
 		}
+	}
+
+	.form-check {
+		margin-bottom: 0;
 	}
 }
 
@@ -126,15 +116,6 @@ th {
 
 		> tr.active td {
 			box-shadow: inset 0 #{-$table-list-row-active-border-bottom-width} $table-list-row-active-border-color;
-		}
-	}
-
-	.checkbox,
-	.radio {
-		float: left;
-
-		label {
-			display: block;
 		}
 	}
 }
