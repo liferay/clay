@@ -26,7 +26,7 @@ body {
 		font-size: $h1-font-size;
 
 		@include media-breakpoint-up(md) {
-			font-size: $font-size-h1-desktop;
+			font-size: $h1-font-size-desktop;
 		}
 	}
 
@@ -35,7 +35,7 @@ body {
 		font-size: $h2-font-size;
 
 		@include media-breakpoint-up(md) {
-			font-size: $font-size-h2-desktop;
+			font-size: $h2-font-size-desktop;
 		}
 	}
 
@@ -44,7 +44,7 @@ body {
 		font-size: $h3-font-size;
 
 		@include media-breakpoint-up(md) {
-			font-size: $font-size-h3-desktop;
+			font-size: $h3-font-size-desktop;
 		}
 	}
 
@@ -53,7 +53,7 @@ body {
 		font-size: $h4-font-size;
 
 		@include media-breakpoint-up(md) {
-			font-size: $font-size-h4-desktop;
+			font-size: $h4-font-size-desktop;
 		}
 	}
 
@@ -62,7 +62,7 @@ body {
 		font-size: $h5-font-size;
 
 		@include media-breakpoint-up(md) {
-			font-size: $font-size-h5-desktop;
+			font-size: $h5-font-size-desktop;
 		}
 	}
 
@@ -71,7 +71,7 @@ body {
 		font-size: $h6-font-size;
 
 		@include media-breakpoint-up(md) {
-			font-size: $font-size-h6-desktop;
+			font-size: $h6-font-size-desktop;
 		}
 	}
 }

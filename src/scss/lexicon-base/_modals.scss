@@ -72,27 +72,27 @@ h6.modal-title {
 @if ($enable-mobile-desktop-sizes) {
 	@include media-breakpoint-up($mobile-desktop-breakpoint) {
 		h1.modal-title {
-			font-size: $font-size-h1-desktop;
+			font-size: $h1-font-size-desktop;
 		}
 
 		h2.modal-title {
-			font-size: $font-size-h2-desktop;
+			font-size: $h2-font-size-desktop;
 		}
 
 		h3.modal-title {
-			font-size: $font-size-h3-desktop;
+			font-size: $h3-font-size-desktop;
 		}
 
 		h4.modal-title {
-			font-size: $font-size-h4-desktop;
+			font-size: $h4-font-size-desktop;
 		}
 
 		h5.modal-title {
-			font-size: $font-size-h5-desktop;
+			font-size: $h5-font-size-desktop;
 		}
 
 		h6.modal-title {
-			font-size: $font-size-h6-desktop;
+			font-size: $h6-font-size-desktop;
 		}
 	}
 }
