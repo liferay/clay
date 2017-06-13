@@ -98,7 +98,7 @@ input.toggle-card {
 	}
 
 	&:focus ~ .toggle-card-container {
-		box-shadow: 0 0 3px 2px rgba(red($input-border-color-focus), green($input-border-color-focus), blue($input-border-color-focus), 0.6);
+		box-shadow: 0 0 3px 2px rgba(red($input-focus-border-color), green($input-focus-border-color), blue($input-focus-border-color), 0.6);
 	}
 
 	&[disabled] ~ .toggle-card-container {

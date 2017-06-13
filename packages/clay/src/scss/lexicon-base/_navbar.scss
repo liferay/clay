@@ -247,7 +247,7 @@
 		}
 
 		&.focus:after {
-			background-color: $input-border-color-focus;
+			background-color: $input-focus-border-color;
 
 			@include media-breakpoint-up(md) {
 				height: $navbar-active-border-bottom-width;
@@ -267,7 +267,7 @@
 
 			&.focus:after {
 				@include media-breakpoint-up(md) {
-					background-color: $input-border-color-focus;
+					background-color: $input-focus-border-color;
 				}
 			}
 		}
@@ -280,7 +280,7 @@
 			padding-right: 12px;
 
 			&:focus {
-				color: $input-border-color-focus;
+				color: $input-focus-border-color;
 			}
 		}
 
