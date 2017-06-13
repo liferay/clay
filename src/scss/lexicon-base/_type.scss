@@ -41,7 +41,7 @@ body {
 
 	h3,
 	.h3 {
-		font-size: $font-size-h3;
+		font-size: $h3-font-size;
 
 		@include media-breakpoint-up(md) {
 			font-size: $font-size-h3-desktop;
