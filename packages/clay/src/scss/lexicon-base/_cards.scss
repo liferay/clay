@@ -6,8 +6,6 @@
 
 	margin-bottom: $card-margin-bottom;
 	position: relative;
-	// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22740 is merged
-	word-wrap: break-word;
 
 	@if ($card-border-radius > 0) {
 		.card-col-content,
