@@ -23,7 +23,7 @@ body {
 @if (variable-exists(atlas-theme)) {
 	h1,
 	.h1 {
-		font-size: $font-size-h1;
+		font-size: $h1-font-size;
 
 		@include media-breakpoint-up(md) {
 			font-size: $font-size-h1-desktop;
