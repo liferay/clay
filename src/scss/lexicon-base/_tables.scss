@@ -127,11 +127,11 @@ th {
 	background-color: transparent;
 
 	td {
-		@if ($table-bg-accent == rgba($black,.05)) {
+		@if ($table-accent-bg == rgba($black,.05)) {
 			background-color: #F2F2F2;
 		}
 		@else {
-			background-color: $table-bg-accent;
+			background-color: $table-accent-bg;
 		}
 	}
 }
