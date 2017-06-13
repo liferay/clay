@@ -23,14 +23,14 @@ section: Example Pages
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#1">Download</a></li>
-									<li><a href="#1">Edit</a></li>
-									<li><a href="#1">Move</a></li>
-									<li><a href="#1">Checkout</a></li>
-									<li><a href="#1">Permissions</a></li>
-									<li><a href="#1">Move to Recycle Bin</a></li>
-								</ul>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Download</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+									<a class="dropdown-item" href="#1">Permissions</a>
+									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+								</div>
 							</li>
 							<li>
 								<a class="sidenav-close" href="#1">
@@ -147,190 +147,127 @@ section: Example Pages
 			</div>
 
 			<div class="sidenav-content">
-				<header class="header-toolbar header-toolbar-default">
-					<div class="container-fluid-1280">
-						<div class="toolbar-group">
-							<div class="toolbar-group-content">
-								<a class="sidenav-toggler" href="#blogActionsSidenav" id="blogActionsToggler">
-									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+				<nav class="navbar navbar-expand navbar-inverse navbar-inverse-bg">
+					<div class="container-fluid container-fluid-max-xxl">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link sidenav-toggler" href="#blogActionsSidenav" id="blogActionsToggler">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#bars" />
 									</svg>
 								</a>
-							</div>
-						</div>
-
-						<div class="toolbar-group-right">
-							<div class="toolbar-group-content">
-								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-										<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-											<use xlink:href="{{rootPath}}/images/icons/icons.svg#cog" />
-										</svg>
-									</a>
-									<ul class="dropdown-menu dropdown-menu-right">
-										<li><a href="#1">Export</a></li>
-										<li><a href="#1">Import</a></li>
-										<li><a href="#1">Configuration</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<div class="text-center toolbar-group-expand-text">
-							<span>Blogs</span>
-						</div>
-					</div>
-				</header>
-
-				<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
-					<div class="container-fluid-1280">
-						<ul class="nav navbar-nav">
-							<li><a href="#1">All Posts</a></li>
+							</li>
 						</ul>
-
-						<form class="basic-search input-group">
-							<div class="input-group-input">
-								<div class="basic-search-slider">
-									<button class="basic-search-close btn btn-default" type="button">
-										<svg aria-hidden="true" class="lexicon-icon">
-											<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
-										</svg>
-									</button>
-									<input class="form-control" placeholder=" Search..." type="text">
-								</div>
-							</div>
-							<div class="input-group-btn">
-								<button class="btn btn-default" type="submit">
-									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<span class="navbar-text">Blogs</span>
+							</li>
+						</ul>
+						<ul class="navbar-nav">
+							<li class="dropdown nav-item">
+								<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#cog" />
 									</svg>
-								</button>
-							</div>
-						</form>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Export</a>
+									<a class="dropdown-item" href="#1">Import</a>
+									<a class="dropdown-item" href="#1">Configuration</a>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</nav>
 
-				<div class="management-bar management-bar-default">
-					<div class="container-fluid-1280">
-						<div class="management-bar-header">
-							<div class="checkbox">
-								<label>
-									<input class="check-all" type="checkbox" value="">
-								</label>
-							</div>
-
-							<a class="collapsed management-bar-toggle management-bar-toggle-link" data-toggle="collapse" href="#mgmtBarCollapse0">
-								<span class="management-bar-item-title">Label</span>
-								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
-								</svg>
-							</span></a>
+				<nav class="navbar navbar-expand navbar-light navbar-light-bg">
+					<div class="container-fluid container-fluid-max-xxl">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<div class="form-check">
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" value="">
+									</label>
+								</div>
+							</li>
+							<li class="dropdown nav-item">
+								<a class="nav-link navbar-d-breakpoint-none" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#magic" />
+									</svg>
+								</a>
+								<a aria-expanded="false" class="navbar-d-breakpoint-block dropdown-toggle nav-link" data-toggle="dropdown" href="#1" role="button">
+									Filter and Order
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+									</svg>
+								</a>
+								<div class="dropdown-menu" role="menu">
+									<a class="dropdown-item" href="#1">Action</a>
+									<a class="dropdown-item" href="#1">Another action</a>
+									<a class="dropdown-item" href="#1">Something else here</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#1">Separated link</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#1">One more separated link</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#import-export" />
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+							<form role="search">
+								<div class="input-group input-group-inset">
+									<div class="input-group-input">
+										<input class="form-control" placeholder="Search for..." type="text">
+									</div>
+									<span class="input-group-inset-item">
+										<button class="btn btn-link clay-site-close-overlay-sm-down navbar-d-breakpoint-none" type="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+											</svg>
+										</button>
+										<button class="btn btn-link navbar-d-breakpoint-block" type="button">
+											<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+												<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+											</svg>
+										</button>
+									</span>
+								</div>
+							</form>
 						</div>
-
-						<div class="management-bar-header-right">
-							<a class="btn btn-default" href="#">
-								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#cards2" />
-								</svg>
-							</a>
-							<a class="btn btn-default" href="#">
-								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#list" />
-								</svg>
-							</a>
-							<a class="btn btn-default hidden-xs" href="#">
-								<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-									<use xlink:href="{{rootPath}}/images/icons/icons.svg#table2" />
-								</svg>
-							</a>
-						</div>
-
-						<div class="collapse management-bar-collapse" id="mgmtBarCollapse0">
-							<ul class="management-bar-nav nav">
-								<li class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-										<span class="management-bar-item-title">Status: Approved, Draft, Pending, Expired</span>
-										<svg aria-hidden="true" class="lexicon-icon">
-											<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
-										</svg>
-									</a>
-									<ul class="dropdown-menu">
-										<li>
-											<form>
-												<div class="active checkbox">
-													<label>
-														<input checked="" type="checkbox" value=""> Approved
-													</label>
-												</div>
-												<div class="active checkbox">
-													<label>
-														<input checked="" type="checkbox" value=""> Draft
-													</label>
-												</div>
-												<div class="active checkbox">
-													<label>
-														<input checked="" type="checkbox" value=""> Pending
-													</label>
-												</div>
-												<div class="active checkbox">
-													<label>
-														<input checked="" type="checkbox" value=""> Expired
-													</label>
-												</div>
-												<div class="checkbox">
-													<label>
-														<input type="checkbox" value=""> Scheduled
-													</label>
-												</div>
-												<div class="checkbox">
-													<label>
-														<input type="checkbox" value=""> Rejected
-													</label>
-												</div>
-											</form>
-										</li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-										<span class="management-bar-item-title">Recent</span>
-										<svg aria-hidden="true" class="lexicon-icon">
-											<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
-										</svg>
-									</a>
-									<ul class="dropdown-menu">
-										<li><a href="#1">All</a></li>
-										<li class="active"><a href="#1">Recent</a></li>
-										<li><a href="#1">Mine</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-										<span class="management-bar-item-title">Order By: Modified Date</span>
-										<svg aria-hidden="true" class="lexicon-icon">
-											<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
-										</svg>
-									</a>
-									<ul class="dropdown-menu">
-										<li><a href="#1">Name</a></li>
-										<li><a href="#1">Create Date</a></li>
-										<li class="active"><a href="#1">Modified Date</a></li>
-										<li><a href="#1">Downloads</a></li>
-										<li><a href="#1">Size</a></li>
-									</ul>
-								</li>
-								<li>
-									<a class="btn btn-default hidden-xs" href="#1"><span class="icon-caret-up icon-monospaced"></span></a>
-								</li>
-								<li>
-									<a class="btn btn-default hidden-xs" href="#1"><span class="icon-caret-down icon-monospaced"></span></a>
-								</li>
-							</ul>
-						</div>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="clay-site-open-overlay-sm-down nav-link navbar-d-breakpoint-none" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+									</svg>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link navbar-d-breakpoint-block" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#view" />
+									</svg>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link navbar-d-breakpoint-block" href="#1">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#table" />
+									</svg>
+								</a>
+							</li>
+						</ul>
 					</div>
-				</div>
+				</nav>
 
-				<div class="container-fluid-1280">
+				<div class="container-fluid container-fluid-max-xxl">
 					<button class="btn btn-info" data-target="#imageSelectorModal" data-toggle="modal">Select / Change Items</button>
 					<div aria-labelledby="lexLargeModalLabel" class="fade modal" id="imageSelectorModal" role="dialog" tabindex="-1">
 						<div class="modal-dialog modal-full-screen">
@@ -422,8 +359,8 @@ section: Example Pages
 															<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
 														</svg>
 													</a>
-													<ul class="dropdown-menu">
-														<li>
+													<div class="dropdown-menu">
+														<div class="dropdown-item">
 															<form>
 																<div class="active checkbox">
 																	<label>
@@ -456,8 +393,8 @@ section: Example Pages
 																	</label>
 																</div>
 															</form>
-														</li>
-													</ul>
+														</div>
+													</div>
 												</li>
 												<li class="dropdown">
 													<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -466,11 +403,11 @@ section: Example Pages
 															<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
 														</svg>
 													</a>
-													<ul class="dropdown-menu">
-														<li><a href="#1">All</a></li>
-														<li class="active"><a href="#1">Recent</a></li>
-														<li><a href="#1">Mine</a></li>
-													</ul>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#1">All</a>
+														<a class="active dropdown-item" href="#1">Recent</a>
+														<a class="dropdown-item" href="#1">Mine</a>
+													</div>
 												</li>
 												<li class="dropdown">
 													<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -479,13 +416,13 @@ section: Example Pages
 															<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
 														</svg>
 													</a>
-													<ul class="dropdown-menu">
-														<li><a href="#1">Name</a></li>
-														<li><a href="#1">Create Date</a></li>
-														<li class="active"><a href="#1">Modified Date</a></li>
-														<li><a href="#1">Downloads</a></li>
-														<li><a href="#1">Size</a></li>
-													</ul>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#1">Name</a>
+														<a class="dropdown-item" href="#1">Create Date</a>
+														<a class="active dropdown-item" href="#1">Modified Date</a>
+														<a class="dropdown-item" href="#1">Downloads</a>
+														<a class="dropdown-item" href="#1">Size</a>
+													</div>
 												</li>
 												<li>
 													<a class="btn btn-default hidden-xs" href="#1"><span class="icon-caret-up icon-monospaced"></span></a>
@@ -683,17 +620,17 @@ section: Example Pages
 																<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 															</svg>
 														</a>
-														<ul class="dropdown-menu dropdown-menu-left-side">
-															<li class="dropdown-header">Dropdown Header</li>
-															<li><a href="#">Action 1</a></li>
-															<li><a href="#">Action 2</a></li>
-															<li><a href="#">Action 3</a></li>
-															<li><a href="#">Action 4</a></li>
-															<li><a href="#">Action 5</a></li>
-															<li><a href="#">Action 6</a></li>
-															<li><a href="#">Action 7</a></li>
-															<li><a href="#">Action 8</a></li>
-														</ul>
+														<div class="dropdown-menu dropdown-menu-left-side">
+															<div class="dropdown-header">Dropdown Header</div>
+															<a class="dropdown-item" href="#1">Action 1</a>
+															<a class="dropdown-item" href="#1">Action 2</a>
+															<a class="dropdown-item" href="#1">Action 3</a>
+															<a class="dropdown-item" href="#1">Action 4</a>
+															<a class="dropdown-item" href="#1">Action 5</a>
+															<a class="dropdown-item" href="#1">Action 6</a>
+															<a class="dropdown-item" href="#1">Action 7</a>
+															<a class="dropdown-item" href="#1">Action 8</a>
+														</div>
 													</div>
 												</div>
 											</li>
@@ -730,17 +667,17 @@ section: Example Pages
 																<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 															</svg>
 														</a>
-														<ul class="dropdown-menu dropdown-menu-left-side">
-															<li class="dropdown-header">Dropdown Header</li>
-															<li><a href="#">Action 1</a></li>
-															<li><a href="#">Action 2</a></li>
-															<li><a href="#">Action 3</a></li>
-															<li><a href="#">Action 4</a></li>
-															<li><a href="#">Action 5</a></li>
-															<li><a href="#">Action 6</a></li>
-															<li><a href="#">Action 7</a></li>
-															<li><a href="#">Action 8</a></li>
-														</ul>
+														<div class="dropdown-menu dropdown-menu-left-side">
+															<div class="dropdown-header">Dropdown Header</div>
+															<a class="dropdown-item" href="#1">Action 1</a>
+															<a class="dropdown-item" href="#1">Action 2</a>
+															<a class="dropdown-item" href="#1">Action 3</a>
+															<a class="dropdown-item" href="#1">Action 4</a>
+															<a class="dropdown-item" href="#1">Action 5</a>
+															<a class="dropdown-item" href="#1">Action 6</a>
+															<a class="dropdown-item" href="#1">Action 7</a>
+															<a class="dropdown-item" href="#1">Action 8</a>
+														</div>
 													</div>
 												</div>
 											</li>
@@ -777,17 +714,17 @@ section: Example Pages
 																<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 															</svg>
 														</a>
-														<ul class="dropdown-menu dropdown-menu-left-side">
-															<li class="dropdown-header">Dropdown Header</li>
-															<li><a href="#">Action 1</a></li>
-															<li><a href="#">Action 2</a></li>
-															<li><a href="#">Action 3</a></li>
-															<li><a href="#">Action 4</a></li>
-															<li><a href="#">Action 5</a></li>
-															<li><a href="#">Action 6</a></li>
-															<li><a href="#">Action 7</a></li>
-															<li><a href="#">Action 8</a></li>
-														</ul>
+														<div class="dropdown-menu dropdown-menu-left-side">
+															<div class="dropdown-header">Dropdown Header</div>
+															<a class="dropdown-item" href="#1">Action 1</a>
+															<a class="dropdown-item" href="#1">Action 2</a>
+															<a class="dropdown-item" href="#1">Action 3</a>
+															<a class="dropdown-item" href="#1">Action 4</a>
+															<a class="dropdown-item" href="#1">Action 5</a>
+															<a class="dropdown-item" href="#1">Action 6</a>
+															<a class="dropdown-item" href="#1">Action 7</a>
+															<a class="dropdown-item" href="#1">Action 8</a>
+														</div>
 													</div>
 												</div>
 											</li>
@@ -824,17 +761,17 @@ section: Example Pages
 																<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 															</svg>
 														</a>
-														<ul class="dropdown-menu dropdown-menu-left-side">
-															<li class="dropdown-header">Dropdown Header</li>
-															<li><a href="#">Action 1</a></li>
-															<li><a href="#">Action 2</a></li>
-															<li><a href="#">Action 3</a></li>
-															<li><a href="#">Action 4</a></li>
-															<li><a href="#">Action 5</a></li>
-															<li><a href="#">Action 6</a></li>
-															<li><a href="#">Action 7</a></li>
-															<li><a href="#">Action 8</a></li>
-														</ul>
+														<div class="dropdown-menu dropdown-menu-left-side">
+															<div class="dropdown-header">Dropdown Header</div>
+															<a class="dropdown-item" href="#1">Action 1</a>
+															<a class="dropdown-item" href="#1">Action 2</a>
+															<a class="dropdown-item" href="#1">Action 3</a>
+															<a class="dropdown-item" href="#1">Action 4</a>
+															<a class="dropdown-item" href="#1">Action 5</a>
+															<a class="dropdown-item" href="#1">Action 6</a>
+															<a class="dropdown-item" href="#1">Action 7</a>
+															<a class="dropdown-item" href="#1">Action 8</a>
+														</div>
 													</div>
 												</div>
 											</li>
@@ -852,244 +789,259 @@ section: Example Pages
 					</div>
 				</div>
 
-				<ul class="container-fluid-1280 detailed-list-view tabular-list-group">
-					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="detailed-list-view-icon">
-								<div class="user-icon user-icon-default user-icon-lg">
-									<span>AC</span>
+				<div class="container-fluid container-fluid-max-xxl">
+					<ul class="detailed-list-view tabular-list-group">
+						<li class="list-group-item">
+							<div class="list-group-item-field">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">
+									</label>
 								</div>
 							</div>
-						</div>
 
-						<div class="list-group-item-content">
-							<h5 class="text-default">Alberto Calvo, modified 2 hours ago</h5>
-							<h4><a href="#1">7 UX Trends of 2015: Get Ready for Big Changes</a></h4>
-							<h5 class="text-default">
-								<span>Approved</span>
-							</h5>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<ul class="dropdown-menu dropdown-menu-left-side">
-									<li class="dropdown-header">Dropdown Header</li>
-									<li><a href="#">Action 1</a></li>
-									<li><a href="#">Action 2</a></li>
-									<li><a href="#">Action 3</a></li>
-									<li><a href="#">Action 4</a></li>
-									<li><a href="#">Action 5</a></li>
-									<li><a href="#">Action 6</a></li>
-									<li><a href="#">Action 7</a></li>
-									<li><a href="#">Action 8</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-
-					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="detailed-list-view-icon">
-								<div class="user-icon user-icon-lg">
-									<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+							<div class="list-group-item-field">
+								<div class="detailed-list-view-icon">
+									<div class="user-icon user-icon-default user-icon-lg">
+										<span>AC</span>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="list-group-item-content">
-							<h5 class="text-default">Cristina Pineiro, modified 2 hours ago</h5>
-							<h4><a href="#1">30 Brilliant Mobile Navigation Menu Design Concepts</a></h4>
-							<h5 class="text-default">
-								<span>Approved</span>
-							</h5>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<ul class="dropdown-menu dropdown-menu-left-side">
-									<li class="dropdown-header">Dropdown Header</li>
-									<li><a href="#">Action 1</a></li>
-									<li><a href="#">Action 2</a></li>
-									<li><a href="#">Action 3</a></li>
-									<li><a href="#">Action 4</a></li>
-									<li><a href="#">Action 5</a></li>
-									<li><a href="#">Action 6</a></li>
-									<li><a href="#">Action 7</a></li>
-									<li><a href="#">Action 8</a></li>
-								</ul>
+							<div class="list-group-item-content">
+								<h5 class="text-default">Alberto Calvo, modified 2 hours ago</h5>
+								<h4><a href="#1">7 UX Trends of 2015: Get Ready for Big Changes</a></h4>
+								<h5 class="text-default">
+									<span>Approved</span>
+								</h5>
 							</div>
-						</div>
-					</li>
 
-					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="detailed-list-view-icon">
-								<div class="user-icon user-icon-lg user-icon-warning">
-									<span>SB</span>
+							<div class="list-group-item-field">
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-left-side">
+										<div class="dropdown-header">Dropdown Header</div>
+										<a class="dropdown-item" href="#1">Action 1</a>
+										<a class="dropdown-item" href="#1">Action 2</a>
+										<a class="dropdown-item" href="#1">Action 3</a>
+										<a class="dropdown-item" href="#1">Action 4</a>
+										<a class="dropdown-item" href="#1">Action 5</a>
+										<a class="dropdown-item" href="#1">Action 6</a>
+										<a class="dropdown-item" href="#1">Action 7</a>
+										<a class="dropdown-item" href="#1">Action 8</a>
+									</div>
 								</div>
 							</div>
-						</div>
+						</li>
 
-						<div class="list-group-item-content">
-							<h5 class="text-default">Susan Brown, modified 3 hours ago</h5>
-							<h4><a href="#1">Getting Up to Speed</a></h4>
-							<h5 class="text-default">
-								<span>Approved</span>
-							</h5>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<ul class="dropdown-menu dropdown-menu-left-side">
-									<li class="dropdown-header">Dropdown Header</li>
-									<li><a href="#">Action 1</a></li>
-									<li><a href="#">Action 2</a></li>
-									<li><a href="#">Action 3</a></li>
-									<li><a href="#">Action 4</a></li>
-									<li><a href="#">Action 5</a></li>
-									<li><a href="#">Action 6</a></li>
-									<li><a href="#">Action 7</a></li>
-									<li><a href="#">Action 8</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-
-					<li class="list-group-item">
-						<div class="list-group-item-field">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="detailed-list-view-icon">
-								<div class="user-icon user-icon-lg">
-									<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
+						<li class="list-group-item">
+							<div class="list-group-item-field">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">
+									</label>
 								</div>
 							</div>
-						</div>
 
-						<div class="list-group-item-content">
-							<h5 class="text-default">Sergio Ruiz, modified 9 hours ago</h5>
-							<h4><a href="#1">Introducing FS3</a></h4>
-							<h5 class="text-default">
-								<span>Approved</span>
-							</h5>
-						</div>
-
-						<div class="list-group-item-field">
-							<div class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
-										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<ul class="dropdown-menu dropdown-menu-left-side">
-									<li class="dropdown-header">Dropdown Header</li>
-									<li><a href="#">Action 1</a></li>
-									<li><a href="#">Action 2</a></li>
-									<li><a href="#">Action 3</a></li>
-									<li><a href="#">Action 4</a></li>
-									<li><a href="#">Action 5</a></li>
-									<li><a href="#">Action 6</a></li>
-									<li><a href="#">Action 7</a></li>
-									<li><a href="#">Action 8</a></li>
-								</ul>
+							<div class="list-group-item-field">
+								<div class="detailed-list-view-icon">
+									<div class="user-icon user-icon-lg">
+										<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
+									</div>
+								</div>
 							</div>
-						</div>
-					</li>
-				</ul>
 
-				<div class="container-fluid-1280 pagination-bar">
+							<div class="list-group-item-content">
+								<h5 class="text-default">Cristina Pineiro, modified 2 hours ago</h5>
+								<h4><a href="#1">30 Brilliant Mobile Navigation Menu Design Concepts</a></h4>
+								<h5 class="text-default">
+									<span>Approved</span>
+								</h5>
+							</div>
+
+							<div class="list-group-item-field">
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-left-side">
+										<div class="dropdown-header">Dropdown Header</div>
+										<a class="dropdown-item" href="#1">Action 1</a>
+										<a class="dropdown-item" href="#1">Action 2</a>
+										<a class="dropdown-item" href="#1">Action 3</a>
+										<a class="dropdown-item" href="#1">Action 4</a>
+										<a class="dropdown-item" href="#1">Action 5</a>
+										<a class="dropdown-item" href="#1">Action 6</a>
+										<a class="dropdown-item" href="#1">Action 7</a>
+										<a class="dropdown-item" href="#1">Action 8</a>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-group-item">
+							<div class="list-group-item-field">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">
+									</label>
+								</div>
+							</div>
+
+							<div class="list-group-item-field">
+								<div class="detailed-list-view-icon">
+									<div class="user-icon user-icon-lg user-icon-warning">
+										<span>SB</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="list-group-item-content">
+								<h5 class="text-default">Susan Brown, modified 3 hours ago</h5>
+								<h4><a href="#1">Getting Up to Speed</a></h4>
+								<h5 class="text-default">
+									<span>Approved</span>
+								</h5>
+							</div>
+
+							<div class="list-group-item-field">
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-left-side">
+										<div class="dropdown-header">Dropdown Header</div>
+										<a class="dropdown-item" href="#1">Action 1</a>
+										<a class="dropdown-item" href="#1">Action 2</a>
+										<a class="dropdown-item" href="#1">Action 3</a>
+										<a class="dropdown-item" href="#1">Action 4</a>
+										<a class="dropdown-item" href="#1">Action 5</a>
+										<a class="dropdown-item" href="#1">Action 6</a>
+										<a class="dropdown-item" href="#1">Action 7</a>
+										<a class="dropdown-item" href="#1">Action 8</a>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-group-item">
+							<div class="list-group-item-field">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">
+									</label>
+								</div>
+							</div>
+
+							<div class="list-group-item-field">
+								<div class="detailed-list-view-icon">
+									<div class="user-icon user-icon-lg">
+										<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
+									</div>
+								</div>
+							</div>
+
+							<div class="list-group-item-content">
+								<h5 class="text-default">Sergio Ruiz, modified 9 hours ago</h5>
+								<h4><a href="#1">Introducing FS3</a></h4>
+								<h5 class="text-default">
+									<span>Approved</span>
+								</h5>
+							</div>
+
+							<div class="list-group-item-field">
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+										<svg aria-hidden="true" class="icon-monospaced lexicon-icon">
+											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
+										</svg>
+									</a>
+									<div class="dropdown-menu dropdown-menu-left-side">
+										<div class="dropdown-header">Dropdown Header</div>
+										<a class="dropdown-item" href="#1">Action 1</a>
+										<a class="dropdown-item" href="#1">Action 2</a>
+										<a class="dropdown-item" href="#1">Action 3</a>
+										<a class="dropdown-item" href="#1">Action 4</a>
+										<a class="dropdown-item" href="#1">Action 5</a>
+										<a class="dropdown-item" href="#1">Action 6</a>
+										<a class="dropdown-item" href="#1">Action 7</a>
+										<a class="dropdown-item" href="#1">Action 8</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="container-fluid container-fluid-max-xxl pagination-bar">
 					<div class="dropdown pagination-items-per-page">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							10 entries
-							<svg aria-hidden="true" class="lexicon-icon">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-double-l" />
 							</svg>
 						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#1">5</a></li>
-							<li><a href="#1">10</a></li>
-							<li><a href="#1">20</a></li>
-							<li><a href="#1">30</a></li>
-							<li><a href="#1">50</a></li>
-						</ul>
+						<div class="dropdown-menu dropdown-menu-top">
+							<a class="dropdown-item" href="#1">5</a>
+							<a class="dropdown-item" href="#1">10</a>
+							<a class="dropdown-item" href="#1">20</a>
+							<a class="dropdown-item" href="#1">30</a>
+							<a class="dropdown-item" href="#1">50</a>
+						</div>
 					</div>
 
 					<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
 
 					<ul class="pagination">
-						<li class="disabled"><a href="#1"><span class="icon-caret-left"></span></a></li>
-						<li class="active"><a href="#1">1</a></li>
-						<li><a href="#1">2</a></li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">...</a>
+						<li class="disabled page-item">
+							<a class="page-link" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-left" />
+								</svg>
+								<span class="sr-only">Previous</span>
+							</a>
+						</li>
+						<li class="active page-item"><a class="page-link" href="#1">1</a></li>
+						<li class="page-item"><a class="page-link" href="#1">2</a></li>
+						<li class="dropdown page-item">
+							<a class="dropdown-toggle page-link" data-toggle="dropdown" href="#1">...</a>
 							<div class="dropdown-menu dropdown-menu-top-center">
-								<ul class="inline-scroller link-list">
-									<li><a href="#1">3</a></li>
-									<li><a href="#1">4</a></li>
-									<li><a href="#1">5</a></li>
-									<li><a href="#1">6</a></li>
-									<li><a href="#1">7</a></li>
-									<li><a href="#1">8</a></li>
-									<li><a href="#1">9</a></li>
-									<li><a href="#1">10</a></li>
-									<li><a href="#1">11</a></li>
-									<li><a href="#1">12</a></li>
-									<li><a href="#1">13</a></li>
-									<li><a href="#1">14</a></li>
-									<li><a href="#1">15</a></li>
-								</ul>
+								<div class="inline-scroller">
+									<a class="dropdown-item" href="#1">3</a>
+									<a class="dropdown-item" href="#1">4</a>
+									<a class="dropdown-item" href="#1">5</a>
+									<a class="dropdown-item" href="#1">6</a>
+									<a class="dropdown-item" href="#1">7</a>
+									<a class="dropdown-item" href="#1">8</a>
+									<a class="dropdown-item" href="#1">9</a>
+									<a class="dropdown-item" href="#1">10</a>
+									<a class="dropdown-item" href="#1">11</a>
+									<a class="dropdown-item" href="#1">12</a>
+									<a class="dropdown-item" href="#1">13</a>
+									<a class="dropdown-item" href="#1">14</a>
+									<a class="dropdown-item" href="#1">15</a>
+								</div>
 							</div>
 						</li>
-						<li><a href="#1">16</a></li>
-						<li><a href="#1"><span class="icon-caret-right"></span></a></li>
+						<li class="page-item"><a class="page-link" href="#1">16</a></li>
+						<li class="page-item">
+							<a class="page-link" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#angle-right" />
+								</svg>
+								<span class="sr-only">Next</span>
+							</a>
+						</li>
 					</ul>
 				</div>
-
 			</div>
 		</div>
 	</div>
