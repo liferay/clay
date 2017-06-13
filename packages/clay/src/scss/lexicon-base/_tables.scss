@@ -140,11 +140,11 @@ th {
 	background-color: transparent;
 
 	td {
-		@if ($table-bg-hover == rgba($black,.075)) {
+		@if ($table-hover-bg == rgba($black,.075)) {
 			background-color: #ECECEC;
 		}
 		@else {
-			background-color: $table-bg-hover;
+			background-color: $table-hover-bg;
 		}
 	}
 }
