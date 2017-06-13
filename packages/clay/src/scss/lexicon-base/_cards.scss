@@ -12,13 +12,12 @@
 	@if ($card-border-radius > 0) {
 		.card-col-content,
 		.card-col-field {
-			// Will be renamed to $card-inner-border-radius once https://github.com/twbs/bootstrap/pull/22741 is merged
 			&:first-child {
-				@include border-left-radius($card-border-radius-inner);
+				@include border-left-radius($card-inner-border-radius);
 			}
 
 			&:last-child {
-				@include border-right-radius($card-border-radius-inner);
+				@include border-right-radius($card-inner-border-radius);
 			}
 		}
 	}
@@ -132,23 +131,23 @@
 // Card Helpers
 
 .card-item-first {
-	@include border-top-radius($card-border-radius-inner);
+	@include border-top-radius($card-inner-border-radius);
 
 	width: 100%;
 }
 
 [class*='card-col-']:first-child .card-item-first {
-	@include border-radius($card-border-radius-inner 0 0 $card-border-radius-inner);
+	@include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
 }
 
 .card-item-last {
-	@include border-bottom-radius($card-border-radius-inner);
+	@include border-bottom-radius($card-inner-border-radius);
 
 	width: 100%;
 }
 
 [class*='card-col-']:last-child .card-item-first {
-	@include border-radius(0 $card-border-radius-inner $card-border-radius-inner 0);
+	@include border-radius(0 $card-inner-border-radius $card-inner-border-radius 0);
 }
 
 .rounded {
