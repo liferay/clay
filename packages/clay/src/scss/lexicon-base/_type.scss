@@ -68,7 +68,7 @@ body {
 
 	h6,
 	.h6 {
-		font-size: $font-size-h6;
+		font-size: $h6-font-size;
 
 		@include media-breakpoint-up(md) {
 			font-size: $font-size-h6-desktop;
