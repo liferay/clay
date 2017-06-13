@@ -53,13 +53,13 @@ $input-color: $body-color !default;
 $input-color-focus: $brand-primary !default;
 
 $input-border-color: $brand-secondary !default;
-$input-border-color-focus: $input-color-focus !default;
+$input-focus-border-color: $input-color-focus !default;
 
 $input-box-shadow: none !default;
 $input-box-shadow-focus: none !default;
 
 $input-color-placeholder: darken(#E4E9EC, 12%) !default;
-$input-color-placeholder-focus: $input-border-color-focus !default;
+$input-color-placeholder-focus: $input-focus-border-color !default;
 
 $input-border-color-disabled: #CFD7DE !default;
 $input-color-disabled: $input-border-color !default;
@@ -111,7 +111,7 @@ $input-select-padding-right: 1.125rem !default; // 18px
 $input-select-padding-top: 0 !default;
 
 $input-select-icon-color: $input-border-color !default;
-$input-select-icon-color-focus: $input-border-color-focus !default;
+$input-select-icon-color-focus: $input-focus-border-color !default;
 
 $input-select-icon: lx-icon(caret-double-l, $input-select-icon-color) !default;
 $input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-color-focus) !default;

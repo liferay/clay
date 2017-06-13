@@ -76,7 +76,7 @@ $collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active
 $collapse-basic-search-transparent-light-input-placeholder-color: null !default;
 $collapse-basic-search-transparent-light-input-placeholder-focus-color: null !default;
 
-$collapse-basic-search-transparent-light-focus-highlight: $input-border-color-focus !default;
+$collapse-basic-search-transparent-light-focus-highlight: $input-focus-border-color !default;
 
 // Navbar Inverse
 
@@ -101,4 +101,4 @@ $collapse-basic-search-transparent-inverse-input-focus-color: $navbar-inverse-ac
 $collapse-basic-search-transparent-inverse-input-placeholder-color: null !default;
 $collapse-basic-search-transparent-inverse-input-placeholder-focus-color: null !default;
 
-$collapse-basic-search-transparent-inverse-focus-highlight: $input-border-color-focus !default;
+$collapse-basic-search-transparent-inverse-focus-highlight: $input-focus-border-color !default;
