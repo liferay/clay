@@ -50,7 +50,7 @@ body {
 
 	h4,
 	.h4 {
-		font-size: $font-size-h4;
+		font-size: $h4-font-size;
 
 		@include media-breakpoint-up(md) {
 			font-size: $font-size-h4-desktop;
