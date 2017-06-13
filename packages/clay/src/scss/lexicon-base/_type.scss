@@ -59,7 +59,7 @@ body {
 
 	h5,
 	.h5 {
-		font-size: $font-size-h5;
+		font-size: $h5-font-size;
 
 		@include media-breakpoint-up(md) {
 			font-size: $font-size-h5-desktop;
