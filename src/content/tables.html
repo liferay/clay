@@ -7,24 +7,27 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Table List</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>A table styled like a list. The active state can be invoked by adding class <code>active</code> to the <code>```<tr></tr>```</code> element. It is recommended that table-list's columns containing information of lesser importance be hidden in smaller screen sizes with <a href="http://getbootstrap.com/css/#responsive-utilities">Responsive Utilities</a> due to space constraints.</p>
-			<p>Class <code>table-bordered</code> not compatible with <code>table-list</code>.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>A table styled like a list. The active state can be invoked by adding class <code>active</code> to the <code>```<tr></tr>```</code> element.</p>
 		</blockquote>
 
-		<table class="table table-autofit table-list">
+		<div class="alert alert-warning">
+			Class <code>table-bordered</code> not compatible with <code>table-list</code>.
+		</div>
+
+		<table class="table table-autofit table-list table-responsive-lg">
 			<thead>
 				<tr>
 					<th></th>
-					<th class="hidden-sm hidden-xs">ID</th>
+					<th>ID</th>
 					<th class="table-cell-content">
 						<span class="truncate-text" title="Description">Title</span>
 					</th>
-					<th class="hidden-sm hidden-xs">Status</th>
-					<th class="hidden-sm hidden-xs">Modified Date</th>
-					<th class="hidden-sm hidden-xs">Display Date</th>
+					<th>Status</th>
+					<th>Modified Date</th>
+					<th>Display Date</th>
 					<th>Author</th>
-					<th class="hidden-sm hidden-xs">Type</th>
+					<th>Type</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -32,21 +35,21 @@ section: Elements
 			<tbody>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="hidden-sm hidden-xs">21146</td>
+					<td>21146</td>
 					<td class="table-cell-content">
 						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
-					<td class="hidden-sm hidden-xs">--</td>
-					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs">--</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
 					<td>Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>Folder</td>
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -54,36 +57,36 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr class="active">
 					<td>
-						<div class="checkbox">
-							<label>
-								<input checked type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input checked class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="hidden-sm hidden-xs">
+					<td>
 						21148
 					</td>
 					<td class="table-cell-content">
 						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</td>
-					<td class="hidden-sm hidden-xs">--</td>
-					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs">--</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
 					<td>Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>Folder</td>
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -91,34 +94,34 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="hidden-sm hidden-xs">21149</td>
+					<td>21149</td>
 					<td class="table-cell-content">
 						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 					</td>
-					<td class="hidden-sm hidden-xs">--</td>
-					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs">--</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
 					<td>Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>Folder</td>
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -126,34 +129,34 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="hidden-sm hidden-xs">21150</td>
+					<td>21150</td>
 					<td class="table-cell-content">
 						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 					</td>
-					<td class="hidden-sm hidden-xs">--</td>
-					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs">--</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
 					<td>Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>Folder</td>
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -161,14 +164,14 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
@@ -181,7 +184,7 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Table List Striped</h3>
 
-		<table class="table table-autofit table-list table-striped">
+		<table class="table table-autofit table-list table-responsive-sm table-striped">
 			<thead>
 				<tr>
 					<th></th>
@@ -198,9 +201,9 @@ section: Elements
 			<tbody>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
@@ -217,22 +220,22 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
@@ -249,22 +252,22 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
@@ -281,22 +284,22 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
@@ -313,14 +316,14 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
@@ -333,7 +336,7 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Table List Hover</h3>
 
-		<table class="table table-autofit table-hover table-list">
+		<table class="table table-autofit table-hover table-list table-responsive-sm">
 			<thead>
 				<tr>
 					<th></th>
@@ -350,9 +353,9 @@ section: Elements
 			<tbody>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
@@ -369,22 +372,22 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr class="active">
 					<td>
-						<div class="checkbox">
-							<label>
-								<input checked type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input checked class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
@@ -401,22 +404,22 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
@@ -433,22 +436,22 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
@@ -465,14 +468,14 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
@@ -485,93 +488,89 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Table Helpers</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p><code>table-autofit</code> constrains table columns to be only as wide as its content, but must be used with <code>table-cell-content</code>. <code>table-cell-content</code> will fill the remaining space.</p>
 		</blockquote>
 
-		<div class="table-responsive">
-			<table class="table table-autofit">
-				<thead>
-					<tr>
-						<th></th>
-						<th>ID</th>
-						<th class="table-cell-content">
-							<span class="truncate-text" title="Description">Title</span>
-						</th>
-						<th>Status</th>
-						<th>Modified Date</th>
-						<th>Display Date</th>
-						<th>Author</th>
-						<th>Type</th>
-					</tr>
-				</thead>
+		<table class="table table-autofit table-responsive">
+			<thead>
+				<tr>
+					<th></th>
+					<th>ID</th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Title</span>
+					</th>
+					<th>Status</th>
+					<th>Modified Date</th>
+					<th>Display Date</th>
+					<th>Author</th>
+					<th>Type</th>
+				</tr>
+			</thead>
 
-				<tbody>
-					<tr>
-						<td>
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</td>
-						<td>21146</td>
-						<td class="table-cell-content">
-							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-						</td>
-						<td>--</td>
-						<td>2 Hours Ago</td>
-						<td>--</td>
-						<td>Stanley Nelson</td>
-						<td>Folder</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+			<tbody>
+				<tr>
+					<td>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+				</tr>
+			</tbody>
+		</table>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p><code>table-heading-nowrap</code> keeps headings on one line.</p>
 		</blockquote>
 
-		<div class="table-responsive">
-			<table class="table table-autofit table-heading-nowrap">
-				<thead>
-					<tr>
-						<th></th>
-						<th>ID</th>
-						<th class="table-cell-content">
-							<span class="truncate-text" title="Description">Title</span>
-						</th>
-						<th>Status</th>
-						<th>Modified Date</th>
-						<th>Display Date</th>
-						<th>Author</th>
-						<th>Type</th>
-					</tr>
-				</thead>
+		<table class="table table-autofit table-heading-nowrap table-responsive">
+			<thead>
+				<tr>
+					<th></th>
+					<th>ID</th>
+					<th class="table-cell-content">
+						<span class="truncate-text" title="Description">Title</span>
+					</th>
+					<th>Status</th>
+					<th>Modified Date</th>
+					<th>Display Date</th>
+					<th>Author</th>
+					<th>Type</th>
+				</tr>
+			</thead>
 
-				<tbody>
-					<tr>
-						<td>
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">
-								</label>
-							</div>
-						</td>
-						<td>21146</td>
-						<td class="table-cell-content">
-							<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
-						</td>
-						<td>--</td>
-						<td>2 Hours Ago</td>
-						<td>--</td>
-						<td>Stanley Nelson</td>
-						<td>Folder</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+			<tbody>
+				<tr>
+					<td>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
+							</label>
+						</div>
+					</td>
+					<td>21146</td>
+					<td class="table-cell-content">
+						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+					</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
+					<td>Stanley Nelson</td>
+					<td>Folder</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>
 
@@ -579,7 +578,7 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Vertical Alignment</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>We have added some classes to help vertically align contents inside a table. The classes <code>table-valign-bottom</code>, <code>table-valign-middle</code>, and <code>table-valign-top</code> on <code>```<table>```</code> will vertically align table cell contents on the bottom, middle, and top, respectively.</p>
 
 			<p>The classes <code>thead-valign-bottom</code>, <code>thead-valign-middle</code>, and <code>thead-valign-top</code> on <code>```<table>```</code> will vertically align the contents inside the table head.</p>
@@ -605,19 +604,19 @@ section: Elements
 			<a class="btn btn-default table-vertical-align-button" href="#" id="theadValignTop">thead-valign-top</a>
 		</div>
 
-		<table class="table table-autofit table-heading-nowrap table-list" id="verticalAlignTableListDemo">
+		<table class="table table-autofit table-heading-nowrap table-list table-responsive-xl" id="verticalAlignTableListDemo">
 			<thead>
 				<tr>
 					<th></th>
-					<th class="hidden-sm hidden-xs">ID</th>
+					<th>ID</th>
 					<th class="table-cell-content">
 						<span class="truncate-text" title="Description">Title</span>
 					</th>
-					<th class="hidden-sm hidden-xs">Status</th>
-					<th class="hidden-sm hidden-xs">Modified Date</th>
-					<th class="hidden-sm hidden-xs">Display Date</th>
+					<th>Status</th>
+					<th>Modified Date</th>
+					<th>Display Date</th>
 					<th>Author</th>
-					<th class="hidden-sm hidden-xs">Type</th>
+					<th>Type</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -625,21 +624,21 @@ section: Elements
 			<tbody>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="hidden-sm hidden-xs">21146</td>
+					<td>21146</td>
 					<td class="table-cell-content">
 						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
-					<td class="hidden-sm hidden-xs">--</td>
-					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs">--</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
 					<td>Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>Folder</td>
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -647,36 +646,36 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr class="active">
 					<td>
-						<div class="checkbox">
-							<label>
-								<input checked type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input checked class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="hidden-sm hidden-xs">
+					<td>
 						21148
 					</td>
 					<td class="table-cell-content">
 						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</td>
-					<td class="hidden-sm hidden-xs">--</td>
-					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs">--</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
 					<td>Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>Folder</td>
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -684,34 +683,34 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="hidden-sm hidden-xs">21149</td>
+					<td>21149</td>
 					<td class="table-cell-content">
 						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 					</td>
-					<td class="hidden-sm hidden-xs">--</td>
-					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs">--</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
 					<td>Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>Folder</td>
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -719,34 +718,34 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox" value="">
 							</label>
 						</div>
 					</td>
-					<td class="hidden-sm hidden-xs">21150</td>
+					<td>21150</td>
 					<td class="table-cell-content">
 						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
 					</td>
-					<td class="hidden-sm hidden-xs">--</td>
-					<td class="hidden-sm hidden-xs">2 Hours Ago</td>
-					<td class="hidden-sm hidden-xs">--</td>
+					<td>--</td>
+					<td>2 Hours Ago</td>
+					<td>--</td>
 					<td>Stanley Nelson</td>
-					<td class="hidden-sm hidden-xs">Folder</td>
+					<td>Folder</td>
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
@@ -754,14 +753,14 @@ section: Elements
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-left-side">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-left-side">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</td>
 				</tr>
@@ -775,87 +774,73 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Default Table</h3>
 
-		<div class="table-responsive">
-			<table class="table">
-				<thead>
-					<tr>
-						<th>Country</th>
-						<th>Purchasing Power Parity</th>
-						<th>Official Exchange Rate</th>
-						<th>Real Growth Rate</th>
-						<th>Household Consumption</th>
-						<th>Government Consumption</th>
-						<th>Fixed Capital Investment</th>
-						<th>Inventories Investment</th>
-						<th>Exports</th>
-						<th>Imports</th>
-					</tr>
-				</thead>
+		<table class="table table-responsive">
+			<thead>
+				<tr>
+					<th>Country</th>
+					<th>Purchasing Power Parity</th>
+					<th>Official Exchange Rate</th>
+					<th>Real Growth Rate</th>
+					<th>Household Consumption</th>
+					<th>Government Consumption</th>
+					<th>Fixed Capital Investment</th>
+					<th>Inventories Investment</th>
+					<th>Exports</th>
+					<th>Imports</th>
+				</tr>
+			</thead>
 
-				<tbody>
-					<tr>
-						<td><a href="#1">Afganistan</a></td>
-						<td>$45.3 billion</td>
-						<td>$20.65 billion</td>
-						<td>3.1%</td>
-						<td>96.5%</td>
-						<td>23.3%</td>
-						<td>25.4%</td>
-						<td>0%</td>
-						<td>18.1%</td>
-						<td>-63.4%</td>
-					</tr>
-					<tr>
-						<td><a href="#1">Brazil</a></td>
-						<td>$2.416 trillion</td>
-						<td>$2.19 trillion</td>
-						<td>2.3%</td>
-						<td>62.5%</td>
-						<td>21.7%</td>
-						<td>18.3%</td>
-						<td>0%</td>
-						<td>12.4%</td>
-						<td>-14.9%</td>
-					</tr>
-					<tr>
-						<td><a href="#1">Congo, Democratic Republic of the</a></td>
-						<td>$29.39 billion</td>
-						<td>$18.56 billion</td>
-						<td>6.2%</td>
-						<td>65.9%</td>
-						<td>12.5%</td>
-						<td>27.9%</td>
-						<td>1%</td>
-						<td>49.9%</td>
-						<td>-56.3%</td>
-					</tr>
-					<tr>
-						<td><a href="#1">Spain</a></td>
-						<td>$1.389 trillion</td>
-						<td>$1.356 trillion</td>
-						<td>-1.3%</td>
-						<td>59%</td>
-						<td>19.9%</td>
-						<td>18.4%</td>
-						<td>0.4%</td>
-						<td>32.8%</td>
-						<td>-30.4%</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">```<div class="table-responsive">
-    <table class="table">
-        ...
-    </table>
-</div>```</code></pre>
-</div>
-
+			<tbody>
+				<tr>
+					<td><a href="#1">Afganistan</a></td>
+					<td>$45.3 billion</td>
+					<td>$20.65 billion</td>
+					<td>3.1%</td>
+					<td>96.5%</td>
+					<td>23.3%</td>
+					<td>25.4%</td>
+					<td>0%</td>
+					<td>18.1%</td>
+					<td>-63.4%</td>
+				</tr>
+				<tr>
+					<td><a href="#1">Brazil</a></td>
+					<td>$2.416 trillion</td>
+					<td>$2.19 trillion</td>
+					<td>2.3%</td>
+					<td>62.5%</td>
+					<td>21.7%</td>
+					<td>18.3%</td>
+					<td>0%</td>
+					<td>12.4%</td>
+					<td>-14.9%</td>
+				</tr>
+				<tr>
+					<td><a href="#1">Congo, Democratic Republic of the</a></td>
+					<td>$29.39 billion</td>
+					<td>$18.56 billion</td>
+					<td>6.2%</td>
+					<td>65.9%</td>
+					<td>12.5%</td>
+					<td>27.9%</td>
+					<td>1%</td>
+					<td>49.9%</td>
+					<td>-56.3%</td>
+				</tr>
+				<tr>
+					<td><a href="#1">Spain</a></td>
+					<td>$1.389 trillion</td>
+					<td>$1.356 trillion</td>
+					<td>-1.3%</td>
+					<td>59%</td>
+					<td>19.9%</td>
+					<td>18.4%</td>
+					<td>0.4%</td>
+					<td>32.8%</td>
+					<td>-30.4%</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>
 
@@ -863,87 +848,73 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Table Striped</h3>
 
-		<div class="table-responsive">
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th>Country</th>
-						<th>Purchasing Power Parity</th>
-						<th>Official Exchange Rate</th>
-						<th>Real Growth Rate</th>
-						<th>Household Consumption</th>
-						<th>Government Consumption</th>
-						<th>Fixed Capital Investment</th>
-						<th>Inventories Investment</th>
-						<th>Exports</th>
-						<th>Imports</th>
-					</tr>
-				</thead>
+		<table class="table table-responsive table-striped">
+			<thead>
+				<tr>
+					<th>Country</th>
+					<th>Purchasing Power Parity</th>
+					<th>Official Exchange Rate</th>
+					<th>Real Growth Rate</th>
+					<th>Household Consumption</th>
+					<th>Government Consumption</th>
+					<th>Fixed Capital Investment</th>
+					<th>Inventories Investment</th>
+					<th>Exports</th>
+					<th>Imports</th>
+				</tr>
+			</thead>
 
-				<tbody>
-					<tr>
-						<td><a href="#1">Afganistan</a></td>
-						<td>$45.3 billion</td>
-						<td>$20.65 billion</td>
-						<td>3.1%</td>
-						<td>96.5%</td>
-						<td>23.3%</td>
-						<td>25.4%</td>
-						<td>0%</td>
-						<td>18.1%</td>
-						<td>-63.4%</td>
-					</tr>
-					<tr>
-						<td><a href="#1">Brazil</a></td>
-						<td>$2.416 trillion</td>
-						<td>$2.19 trillion</td>
-						<td>2.3%</td>
-						<td>62.5%</td>
-						<td>21.7%</td>
-						<td>18.3%</td>
-						<td>0%</td>
-						<td>12.4%</td>
-						<td>-14.9%</td>
-					</tr>
-					<tr>
-						<td><a href="#1">Congo, Democratic Republic of the</a></td>
-						<td>$29.39 billion</td>
-						<td>$18.56 billion</td>
-						<td>6.2%</td>
-						<td>65.9%</td>
-						<td>12.5%</td>
-						<td>27.9%</td>
-						<td>1%</td>
-						<td>49.9%</td>
-						<td>-56.3%</td>
-					</tr>
-					<tr>
-						<td><a href="#1">Spain</a></td>
-						<td>$1.389 trillion</td>
-						<td>$1.356 trillion</td>
-						<td>-1.3%</td>
-						<td>59%</td>
-						<td>19.9%</td>
-						<td>18.4%</td>
-						<td>0.4%</td>
-						<td>32.8%</td>
-						<td>-30.4%</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">```<div class="table-responsive">
-    <table class="table table-striped">
-        ...
-    </table>
-</div>```</code></pre>
-</div>
-
+			<tbody>
+				<tr>
+					<td><a href="#1">Afganistan</a></td>
+					<td>$45.3 billion</td>
+					<td>$20.65 billion</td>
+					<td>3.1%</td>
+					<td>96.5%</td>
+					<td>23.3%</td>
+					<td>25.4%</td>
+					<td>0%</td>
+					<td>18.1%</td>
+					<td>-63.4%</td>
+				</tr>
+				<tr>
+					<td><a href="#1">Brazil</a></td>
+					<td>$2.416 trillion</td>
+					<td>$2.19 trillion</td>
+					<td>2.3%</td>
+					<td>62.5%</td>
+					<td>21.7%</td>
+					<td>18.3%</td>
+					<td>0%</td>
+					<td>12.4%</td>
+					<td>-14.9%</td>
+				</tr>
+				<tr>
+					<td><a href="#1">Congo, Democratic Republic of the</a></td>
+					<td>$29.39 billion</td>
+					<td>$18.56 billion</td>
+					<td>6.2%</td>
+					<td>65.9%</td>
+					<td>12.5%</td>
+					<td>27.9%</td>
+					<td>1%</td>
+					<td>49.9%</td>
+					<td>-56.3%</td>
+				</tr>
+				<tr>
+					<td><a href="#1">Spain</a></td>
+					<td>$1.389 trillion</td>
+					<td>$1.356 trillion</td>
+					<td>-1.3%</td>
+					<td>59%</td>
+					<td>19.9%</td>
+					<td>18.4%</td>
+					<td>0.4%</td>
+					<td>32.8%</td>
+					<td>-30.4%</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>
 
@@ -951,87 +922,73 @@ section: Elements
 	<div class="col-md-12">
 		<h3>Table Bordered</h3>
 
-		<div class="table-responsive">
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>Country</th>
-						<th>Purchasing Power Parity</th>
-						<th>Official Exchange Rate</th>
-						<th>Real Growth Rate</th>
-						<th>Household Consumption</th>
-						<th>Government Consumption</th>
-						<th>Fixed Capital Investment</th>
-						<th>Inventories Investment</th>
-						<th>Exports</th>
-						<th>Imports</th>
-					</tr>
-				</thead>
+		<table class="table table-bordered table-responsive">
+			<thead>
+				<tr>
+					<th>Country</th>
+					<th>Purchasing Power Parity</th>
+					<th>Official Exchange Rate</th>
+					<th>Real Growth Rate</th>
+					<th>Household Consumption</th>
+					<th>Government Consumption</th>
+					<th>Fixed Capital Investment</th>
+					<th>Inventories Investment</th>
+					<th>Exports</th>
+					<th>Imports</th>
+				</tr>
+			</thead>
 
-				<tbody>
-					<tr>
-						<td><a href="#1">Afganistan</a></td>
-						<td>$45.3 billion</td>
-						<td>$20.65 billion</td>
-						<td>3.1%</td>
-						<td>96.5%</td>
-						<td>23.3%</td>
-						<td>25.4%</td>
-						<td>0%</td>
-						<td>18.1%</td>
-						<td>-63.4%</td>
-					</tr>
-					<tr>
-						<td><a href="#1">Albania</a></td>
-						<td>$28.34 billion</td>
-						<td>$12.8 billion</td>
-						<td>3.1%</td>
-						<td>87.6%</td>
-						<td>8.4%</td>
-						<td>25%</td>
-						<td>-2.6%</td>
-						<td>36%</td>
-						<td>-54.4%</td>
-					</tr>
-					<tr>
-						<td><a href="#1">Brazil</a></td>
-						<td>$2.416 trillion</td>
-						<td>$2.19 trillion</td>
-						<td>2.3%</td>
-						<td>62.5%</td>
-						<td>21.7%</td>
-						<td>18.3%</td>
-						<td>0%</td>
-						<td>12.4%</td>
-						<td>-14.9%</td>
-					</tr>
-					<tr>
-						<td><a href="#1">Spain</a></td>
-						<td>$1.389 trillion</td>
-						<td>$1.356 trillion</td>
-						<td>-1.3%</td>
-						<td>59%</td>
-						<td>19.9%</td>
-						<td>18.4%</td>
-						<td>0.4%</td>
-						<td>32.8%</td>
-						<td>-30.4%</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code class="html">```<div class="table-responsive">
-    <table class="table table-bordered">
-        ...
-    </table>
-</div>```</code></pre>
-</div>
-
+			<tbody>
+				<tr>
+					<td><a href="#1">Afganistan</a></td>
+					<td>$45.3 billion</td>
+					<td>$20.65 billion</td>
+					<td>3.1%</td>
+					<td>96.5%</td>
+					<td>23.3%</td>
+					<td>25.4%</td>
+					<td>0%</td>
+					<td>18.1%</td>
+					<td>-63.4%</td>
+				</tr>
+				<tr>
+					<td><a href="#1">Albania</a></td>
+					<td>$28.34 billion</td>
+					<td>$12.8 billion</td>
+					<td>3.1%</td>
+					<td>87.6%</td>
+					<td>8.4%</td>
+					<td>25%</td>
+					<td>-2.6%</td>
+					<td>36%</td>
+					<td>-54.4%</td>
+				</tr>
+				<tr>
+					<td><a href="#1">Brazil</a></td>
+					<td>$2.416 trillion</td>
+					<td>$2.19 trillion</td>
+					<td>2.3%</td>
+					<td>62.5%</td>
+					<td>21.7%</td>
+					<td>18.3%</td>
+					<td>0%</td>
+					<td>12.4%</td>
+					<td>-14.9%</td>
+				</tr>
+				<tr>
+					<td><a href="#1">Spain</a></td>
+					<td>$1.389 trillion</td>
+					<td>$1.356 trillion</td>
+					<td>-1.3%</td>
+					<td>59%</td>
+					<td>19.9%</td>
+					<td>18.4%</td>
+					<td>0.4%</td>
+					<td>32.8%</td>
+					<td>-30.4%</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>
 
@@ -1108,18 +1065,6 @@ section: Elements
 				</tbody>
 			</table>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">```<div class="table-responsive">
-    <table class="table table-bordered table-hover">
-        ...
-    </table>
-</div>```</code></pre>
-</div>
-
 	</div>
 </div>
 
