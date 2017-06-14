@@ -370,9 +370,6 @@
 					instance._loadUrl(sidenav, url);
 				}
 
-				var desktopFixedPush = instance._getSimpleSidenavType() === 'desktop-fixed-push';
-				var mobileFixedPush = instance._getSimpleSidenavType() === 'mobile-fixed-push';
-
 				sidenav.trigger({
 					toggler: $(instance.togglerSelector),
 					type: 'openStart.lexicon.sidenav'
@@ -388,12 +385,9 @@
 					});
 				});
 
+				content.addClass('sidenav-transition').addClass(openClass).removeClass(closedClass);
 				sidenav.addClass('sidenav-transition');
 				toggler.addClass('sidenav-transition');
-
-				if (desktopFixedPush || mobileFixedPush) {
-					content.addClass('sidenav-transition').addClass(openClass).removeClass(closedClass);
-				}
 
 				sidenav.addClass(openClass).removeClass(closedClass);
 				toggler.addClass('active').addClass(openClass);

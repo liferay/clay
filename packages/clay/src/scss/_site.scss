@@ -953,8 +953,11 @@ body {
 }
 
 body.open {
-	left: 320px;
 	overflow: hidden;
+
+	@media (min-width: 768px) {
+		left: 320px;
+	}
 }
 
 body.sidenav-transition {
