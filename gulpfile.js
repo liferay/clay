@@ -18,7 +18,7 @@ var BOOTSTRAP_VAR_FILE = path.join('src','scss', 'bootstrap', '_variables.scss')
 
 var BOOTSTRAP_VAR_DIR = path.dirname(BOOTSTRAP_VAR_FILE);
 
-var TETHER_JS_FILE = path.join('src', 'js', 'tether.js');
+var POPPER_JS_FILE = path.join('src', 'js', 'popper.js');
 
 var config = {
 	AUTOPREFIXER: {
@@ -31,7 +31,7 @@ var config = {
 	BOOTSTRAP_VAR_FILE: BOOTSTRAP_VAR_FILE,
 	BOOTSTRAP_VAR_DIR: BOOTSTRAP_VAR_DIR,
 	SRC_GLOB: 'src/**/*',
-	TETHER_JS_FILE: TETHER_JS_FILE
+	POPPER_JS_FILE: POPPER_JS_FILE
 };
 
 var tasks = require('require-dir')('./tasks');
