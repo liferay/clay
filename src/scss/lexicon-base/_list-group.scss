@@ -204,7 +204,6 @@ button.list-group-heading {
 	text-align: center;
 	vertical-align: $tabular-list-group-vertical-alignment;
 	width: 1%;
-	word-break: break-all \9; // IE9
 	word-wrap: break-word;
 
 	> .checkbox,
@@ -221,21 +220,7 @@ button.list-group-heading {
 	padding: $table-cell-padding;
 	position: relative;
 	vertical-align: $tabular-list-group-vertical-alignment;
-	word-break: break-all \9; // IE9
 	word-wrap: break-word;
-
-	&.clamp-horizontal {
-		.clamp-container {
-			-ms-transform: none;
-			transform: none;
-		}
-	}
-
-	&.clamp-all {
-		.clamp-container {
-			padding-top: 1em;
-		}
-	}
 
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0.5em 0;
@@ -320,16 +305,6 @@ button.list-group-heading {
 				}
 			}
 		}
-	}
-
-	.clamp-container .truncate-text {
-		white-space: nowrap \9; // IE9
-		word-break: normal \9; // IE9
-	}
-
-	.truncate-text {
-		white-space: normal \9; // IE9
-		word-break: break-all \9; // IE9
 	}
 }
 
