@@ -1,12 +1,14 @@
 module.exports = function(gulp, plugins, _, config) {
 	var fs = require('fs');
 
-	var TETHER_JS = fs.readFileSync(config.TETHER_JS_FILE, 'utf8') + '\n\n';
+	var POPPER_JS = fs.readFileSync(config.POPPER_JS_FILE, 'utf8') + '\n\n';
 
 	var patchBootstrap = function(text, regex) {
 		return function(content) {
 			if (content.indexOf(text) === -1) {
 				if (typeof(regex) === 'string') {
+					text = text.replace(/\$\$/g, '$$$$$$$$');
+
 					return content.replace(regex, text + regex);
 				}
 				else {
@@ -36,7 +38,7 @@ module.exports = function(gulp, plugins, _, config) {
 
 	gulp.task('build:patch-bootstrap', function(cb) {
 		var bootstrapJsFile = gulp.src(config.BOOTSTRAP_JS_FILE)
-			.pipe(plugins.change(patchBootstrap(TETHER_JS, '/*!\n')))
+			.pipe(plugins.change(patchBootstrap(POPPER_JS, '/*!\n')))
 			.pipe(gulp.dest(config.BOOTSTRAP_JS_DIR));
 
 		return bootstrapJsFile;
@@ -44,7 +46,7 @@ module.exports = function(gulp, plugins, _, config) {
 
 	gulp.task('build:clean-bootstrap-patch', function(cb) {
 		var bootstrapJsFile = gulp.src(config.BOOTSTRAP_JS_FILE)
-			.pipe(plugins.change(cleanBootstrapPatch(TETHER_JS)))
+			.pipe(plugins.change(cleanBootstrapPatch(POPPER_JS)))
 			.pipe(gulp.dest(config.BOOTSTRAP_JS_DIR));
 
 		return bootstrapJsFile;
