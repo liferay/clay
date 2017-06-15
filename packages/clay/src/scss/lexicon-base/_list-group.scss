@@ -17,78 +17,6 @@
 	}
 }
 
-.list-group-heading {
-	background-color: $list-group-header-bg;
-	border-color: $list-group-border-color;
-	border-style: solid;
-	border-width: $list-group-border-width;
-	color: $list-group-header-color;
-	display: block;
-	font-weight: $list-group-header-font-weight;
-	margin-bottom: -1px;
-	overflow: hidden;
-	padding: 10px 15px;
-	position: relative;
-	word-wrap: break-word;
-
-	@if (variable-exists(atlas-theme)) {
-		margin-bottom: 0;
-
-		&:after {
-			background-color: $list-group-header-open-border-color;
-			bottom: 0;
-			content: '';
-			display: block;
-			height: $list-group-header-open-border-width;
-			left: 0;
-			position: absolute;
-			right: 0;
-		}
-
-		&:after:focus {
-			z-index: -1;
-		}
-
-		&.collapsed {
-			font-weight: 300;
-
-			&:after {
-				background-color: $list-group-header-close-border-color;
-				height: $list-group-header-close-border-width;
-			}
-		}
-	}
-
-	&:focus {
-		background-color: $list-group-header-bg;
-		color: $list-group-header-hover-color;
-		text-decoration: none;
-		z-index: 1;
-	}
-
-	&:hover {
-		background-color: $list-group-header-bg;
-		color: $list-group-header-hover-color;
-		text-decoration: none;
-	}
-
-	&:first-child {
-		border-top-left-radius: $list-group-border-radius;
-		border-top-right-radius: $list-group-border-radius;
-	}
-
-	&:last-child {
-		border-bottom-left-radius: $list-group-border-radius;
-		border-bottom-right-radius: $list-group-border-radius;
-		margin-bottom: 0;
-	}
-}
-
-button.list-group-heading {
-	text-align: left;
-	width: 100%;
-}
-
 .list-group-item {
 	@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-focus-color, $list-group-item-dropdown-toggle-hover-color);
 
@@ -141,57 +69,6 @@ button.list-group-heading {
 		.tabular-list-group {
 			margin-bottom: 0;
 		}
-	}
-
-	.list-group-heading {
-		margin-top: -1px;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&.collapsed {
-			&:nth-last-child(2) {
-				border-bottom-left-radius: $list-group-border-radius;
-				border-bottom-right-radius: $list-group-border-radius;
-			}
-		}
-	}
-}
-
-@if (variable-exists(atlas-theme)) {
-	// Last list-group-heading shouldn't have bottom border
-
-	.list-group {
-		.list-group-heading {
-			margin-top: 0;
-
-			&.collapsed:nth-last-child(2):after {
-				background-color: transparent;
-			}
-		}
-
-		.list-group-item {
-			&:first-child {
-				border-top-width: 0;
-			}
-
-			&:last-child {
-				border-bottom-width: 0;
-			}
-		}
-	}
-
-	// Remove top border on first list-group-item after list-group-heading
-
-	.list-group-heading + .list-group-item,
-	.list-group-heading + .collapse .list-group-item:first-child,
-	.list-group-heading + .collapse .list-group-item:first-child .list-group-item-content,
-	.list-group-heading + .collapse .list-group-item:first-child .list-group-item-field,
-	.list-group-heading + .collapsing .list-group-item:first-child,
-	.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-content,
-	.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-field {
-		border-top-width: 0;
 	}
 }
 
