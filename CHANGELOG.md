@@ -1,3 +1,7 @@
+### v1.0.20 - June 14, 2017
+* Fix: side-navigation.js Simple Sidenav should add open class to data-content in mobile
+* Update: `.aspect-ratio-center.aspect-ratio-middle` should center and vertically align
+
 ### v1.0.19 - April 3, 2017
 * New: Added Lexicon SVG Icons `add-role.svg` and `remove-role.svg`
 
