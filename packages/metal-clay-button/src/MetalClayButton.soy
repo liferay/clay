@@ -18,7 +18,7 @@
 
 
 	{if $href}
-		<a href="{$href}" {call .attributes data="all" /} aria-label="{$ariaLabel}">
+		<a href="{$href}" {call .attributes data="all" /}>
 			{call .icon data="all" /}
 			{$label or ''}
 		</a>
@@ -46,6 +46,7 @@
  * Renders html attributes for button element
  */
 {template .attributes kind="attributes"}
+	{@param? ariaLabel: string}
 	{@param? block: bool}
 	{@param? disabled: bool}
 	{@param? name: string}
@@ -59,6 +60,10 @@
 	{let $styleClass: $style ? ' btn-' + $style : ' btn-default' /}
 
 	class="btn{$blockClass}{$styleClass}{$sizeClass}"
+
+  {if $ariaLabel}
+    aria-label="{$ariaLabel}"
+  {/if}
 
 	{if $disabled}
 		disabled
