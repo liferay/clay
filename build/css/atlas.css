@@ -8168,6 +8168,11 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   top: 0;
 }
 
+.aspect-ratio-center.aspect-ratio-middle img {
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .aspect-ratio-3-to-2 {
   padding-bottom: 66.66666667%;
 }
