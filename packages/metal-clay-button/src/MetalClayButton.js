@@ -2,7 +2,7 @@
 
 import MetalClayButtonBase from './MetalClayButtonBase';
 import Soy from 'metal-soy';
-import {validators} from 'metal-state';
+import { validators } from 'metal-state';
 
 import 'metal-clay-icon';
 

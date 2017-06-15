@@ -1,7 +1,7 @@
 'use strict';
 
 import Component from 'metal-component';
-import {validators} from 'metal-state';
+import { validators } from 'metal-state';
 
 /**
  * Metal Clay Button Base component.
