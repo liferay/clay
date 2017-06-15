@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.19
+* Lexicon 1.0.20
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -7877,6 +7877,11 @@ button.close {
 .aspect-ratio-top img {
   bottom: auto;
   top: 0;
+}
+
+.aspect-ratio-center.aspect-ratio-middle img {
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .aspect-ratio-3-to-2 {
