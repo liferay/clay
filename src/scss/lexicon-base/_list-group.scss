@@ -38,40 +38,6 @@
 	}
 }
 
-// Collapsible List Group
-
-.list-group {
-	.collapse,
-	.collapsing {
-		&:last-child {
-			border-bottom-left-radius: $list-group-border-radius;
-			border-bottom-right-radius: $list-group-border-radius;
-			overflow: hidden;
-
-			.list-group-item:last-child {
-				border-bottom-left-radius: $list-group-border-radius;
-				border-bottom-right-radius: $list-group-border-radius;
-			}
-		}
-
-		.list-group-item {
-			&:first-child {
-				border-top-left-radius: 0;
-				border-top-right-radius: 0;
-			}
-
-			&:last-child {
-				border-bottom-left-radius: 0;
-				border-bottom-right-radius: 0;
-			}
-		}
-
-		.tabular-list-group {
-			margin-bottom: 0;
-		}
-	}
-}
-
 // Tabular List Group
 
 .list-group-item-field {
