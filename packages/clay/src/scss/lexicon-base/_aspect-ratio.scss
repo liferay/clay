@@ -42,6 +42,11 @@
 	top: 0;
 }
 
+.aspect-ratio-center.aspect-ratio-middle img {
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
 .aspect-ratio-3-to-2 {
 	@include aspect-ratio(3, 2);
 }
