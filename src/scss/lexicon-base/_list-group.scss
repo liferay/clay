@@ -1,7 +1,4 @@
-.list-group {
-	@include box-shadow($list-group-box-shadow);
-}
-
+.list-group,
 .tabular-list-group {
 	@include box-shadow($list-group-box-shadow);
 }
@@ -97,12 +94,10 @@
 			}
 		}
 
-		// Chrome rendering issue with responsive-tables and td position relative
-
 		&.active {
 			.list-group-item-content,
 			.list-group-item-field {
-				background-color: $list-group-active-bg;
+				background-color: $list-group-active-bg; // Chrome rendering issue with responsive-tables and td position relative
 			}
 		}
 	}
