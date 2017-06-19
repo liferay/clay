@@ -1,30 +1,115 @@
-.list-group,
-.tabular-list-group {
+// @mixin list-group-item-stacked($screen-size-down: xl) {
+// 	@if (type-of($screen-size-down) != number) {
+// 		@include media-breakpoint-down($screen-size-down) {
+// 			flex-direction: column;
+// 			padding-bottom: $list-group-item-padding-y / 2;
+// 			padding-top: $list-group-item-padding-y / 2;
+
+// 			.flex-col,
+// 			.flex-expand {
+// 				padding-bottom: $list-group-item-padding-y / 2;
+// 				padding-top: $list-group-item-padding-y / 2;
+// 			}
+// 		}
+// 	}
+// 	@else {
+// 		@media (max-width: $screen-size-down) {
+// 			flex-direction: column;
+// 			padding-bottom: $list-group-item-padding-y / 2;
+// 			padding-top: $list-group-item-padding-y / 2;
+
+// 			.flex-col,
+// 			.flex-expand {
+// 				padding-bottom: $list-group-item-padding-y / 2;
+// 				padding-top: $list-group-item-padding-y / 2;
+// 			}
+// 		}
+// 	}
+// }
+
+// .list-group-stacked .list-group-item-flex,
+// .list-group-item-flex-stacked {
+// 	@include list-group-item-stacked(319px);
+// }
+
+.list-group {
 	@include box-shadow($list-group-box-shadow);
+
+	// Nested list groups shouldn't have box shadows
+
+	.list-group {
+		@if ($list-group-box-shadow != null) {
+			@include box-shadow(none);
+		}
+	}
 }
 
-// Nested list groups shouldn't have box shadows
+.list-group-bordered {
+	.list-group-item-flex {
+		padding: 0;
 
-.list-group .list-group,
-.list-group .tabular-list-group,
-.tabular-list-group .list-group,
-.tabular-list-group .tabular-list-group {
-	@if ($list-group-box-shadow != null) {
-		@include box-shadow(none);
+		&.active {
+			.flex-col,
+			.flex-col-expand {
+				border-color: $list-group-active-border-color;
+			}
+		}
+	}
+
+	.flex-col,
+	.flex-col-expand {
+		border-left: $list-group-border-width solid $list-group-border-color;
+		border-right: $list-group-border-width solid $list-group-border-color;
+		margin-left: -$list-group-border-width;
+		padding: $list-group-item-padding-y $list-group-item-padding-x;
+
+		&:first-child,
+		&:last-child {
+			border-left-width: 0;
+			border-right-width: 0;
+			margin-left: 0;
+		}
+	}
+}
+
+.list-group-unstyled {
+	@include box-shadow(none);
+
+	.list-group-item {
+		background-color: transparent;
+		border-color: transparent;
+	}
+}
+
+.list-group-item-header {
+	background-color: $list-group-bg;
+	border: $list-group-border-width solid $list-group-border-color;
+	display: block;
+	margin-bottom: -$list-group-border-width;
+	padding: $list-group-item-padding-y $list-group-item-padding-x;
+
+	&:first-child {
+		@include border-top-radius($list-group-border-radius);
+	}
+
+	&:last-child {
+		@include border-bottom-radius($list-group-border-radius);
+
+		margin-bottom: 0;
 	}
 }
 
 .list-group-item {
 	@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-focus-color, $list-group-item-dropdown-toggle-hover-color);
 
-	@if (variable-exists(atlas-theme)) {
-		border-left-width: 0;
-		border-right-width: 0;
+	// @if (variable-exists(atlas-theme)) {
+	// 	border-left-width: 0;
+	// 	border-right-width: 0;
 
-		&:focus {
-			z-index: 1;
-		}
-	}
+	// 	&:focus {
+	// 		z-index: 1;
+	// 	}
+	// }
 
 	&.active {
 		@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-focus-color, $list-group-item-active-dropdown-toggle-hover-color);
@@ -35,221 +120,19 @@
 	}
 }
 
-// Tabular List Group
+.list-group-item-flex {
+	// Center content here by adding justify-content: center on .flex-col and .flex-col-expand
+	display: flex;
+	padding-left: $list-group-item-padding-x / 2;
+	padding-right: $list-group-item-padding-x / 2;
 
-.list-group-item-field {
-	display: table-cell;
-	padding: $table-cell-padding;
-	position: relative;
-	text-align: center;
-	vertical-align: $tabular-list-group-vertical-alignment;
-	width: 1%;
-	word-wrap: break-word;
-
-	> .checkbox,
-	> .radio {
-		margin-bottom: 0;
-		margin-top: 0;
+	.flex-col,
+	.flex-col-expand {
+		padding-left: $list-group-item-padding-x / 2;
+		padding-right: $list-group-item-padding-x / 2;
 	}
 }
 
-.list-group-item-content {
-	display: table-cell;
-	max-width: 100px;
-	min-width: 100px;
-	padding: $table-cell-padding;
-	position: relative;
-	vertical-align: $tabular-list-group-vertical-alignment;
-	word-wrap: break-word;
-
-	h1, h2, h3, h4, h5, h6 {
-		margin: 0.5em 0;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
-
-.tabular-list-group {
-	display: table;
-	margin-bottom: 20px;
-	padding: 0;
-	width: 100%;
-
-	.list-group-item {
-		background-color: transparent; // Chrome rendering issue with responsive-tables and td position relative
-		display: table-row;
-		height: $tabular-list-group-item-height;
-		padding: 0;
-
-		&:first-child {
-			.list-group-item-content,
-			.list-group-item-field {
-				border-top-width: $tabular-list-group-border-width;
-			}
-		}
-
-		&.active {
-			.list-group-item-content,
-			.list-group-item-field {
-				background-color: $list-group-active-bg; // Chrome rendering issue with responsive-tables and td position relative
-			}
-		}
-	}
-
-	.list-group-item-content,
-	.list-group-item-field {
-		background-color: $list-group-bg; // Chrome rendering issue with responsive-tables and td position relative
-		border: $tabular-list-group-border-width solid $list-group-border-color;
-		border-left-width: 0;
-		border-right-width: 0;
-		border-top-width: 0;
-
-		&:first-child {
-			border-left-width: $tabular-list-group-border-width;
-			padding-left: 15px;
-		}
-
-		&:last-child {
-			border-right-width: $tabular-list-group-border-width;
-			padding-right: 15px;
-		}
-	}
-
-	@if (variable-exists(atlas-theme)) {
-		.list-group-item-content a {
-			color: $list-group-link-color;
-
-			&:hover,
-			&:focus {
-				color: $list-group-link-hover-color;
-			}
-		}
-
-		.list-group-item.active {
-			.list-group-item-content,
-			.list-group-item-field {
-				$tabular-list-group-active-bottom-v-shadow: $tabular-list-group-border-width - $tabular-list-group-active-border-bottom-width;
-
-				border-bottom-color: $list-group-active-border-color;
-
-				@if ($tabular-list-group-active-bottom-v-shadow < 0) {
-					@include box-shadow(inset 0 #{$tabular-list-group-active-bottom-v-shadow} 0 $list-group-active-border-color);
-				}
-			}
-		}
-	}
-}
-
-.tabular-list-group.no-borders {
-	.list-group-item {
-		&:first-child {
-			.list-group-item-content,
-			.list-group-item-field {
-				border-top-width: 0;
-			}
-		}
-	}
-
-	@if (variable-exists(atlas-theme)) {
-		.list-group-item.active {
-			.list-group-item-content,
-			.list-group-item-field {
-				@if ($tabular-list-group-active-border-bottom-width > 0) {
-					@include box-shadow(inset 0 -#{$tabular-list-group-active-border-bottom-width} 0 $list-group-active-border-color);
-				}
-			}
-		}
-	}
-
-	.list-group-item-content,
-	.list-group-item-field {
-		border-width: 0;
-	}
-}
-
-.tabular-list-group.full-borders {
-	.list-group-item-content,
-	.list-group-item-field {
-		&,
-		&:last-child {
-			border-right-width: $tabular-list-group-border-width;
-		}
-
-		&:first-child {
-			border-left-width: $tabular-list-group-border-width;
-		}
-	}
-}
-
-// Remove left and right borders on tabular list group due to box shadows
-
-@if (variable-exists(atlas-theme)) {
-	.tabular-list-group {
-		.list-group-item-content,
-		.list-group-item-field {
-			&:first-child {
-				border-left-width: 0;
-			}
-
-			&:last-child {
-				border-right-width: 0;
-			}
-		}
-	}
-}
-
-// min width 992px
-
-@include media-breakpoint-up(lg) {
-	.tabular-list-group {
-		.list-group-item-content,
-		.list-group-item-field {
-			padding: 1em 0.8em;
-		}
-	}
-}
-
-@media (max-width: 279px) {
-	.tabular-list-group {
-		display: block;
-
-		.list-group-item {
-			display: block;
-			height: auto;
-		}
-
-		.list-group-item-content,
-		.list-group-item-field {
-			display: block;
-			width: 100%;
-		}
-	}
-}
-
-// Tabular List Group Unstyled
-
-.tabular-list-group-unstyled {
-	list-style: none;
-	padding-left: 0;
-
-	.list-group-item {
-		background-color: transparent;
-		border-width: 0;
-		display: table;
-		margin-bottom: 20px;
-		padding: 0;
-		width: 100%;
-	}
-
-	.list-group-item-content,
-	.list-group-item-field {
-		padding: 0;
-		vertical-align: top;
-	}
+.list-group-item-action:focus {
+	z-index: 1;
 }
