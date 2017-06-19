@@ -22,6 +22,6 @@ module.exports = {
       filename: './build/globals/button.js',
   },
   plugins: [
-    new webpack.optimize.DedupePlugin()
+    new webpack.optimize.ModuleConcatenationPlugin()
   ]
 };
