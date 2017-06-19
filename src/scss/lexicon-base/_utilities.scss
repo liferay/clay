@@ -1,0 +1,21 @@
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-height: 0;
+	padding-left: $table-cell-padding;
+	padding-right: $table-cell-padding;
+}
+
+.flex-col-expand {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: flex-start;
+	max-width: 100%;
+	min-height: 0;
+	min-width: 100px;
+	padding-left: $table-cell-padding;
+	padding-right: $table-cell-padding;
+	word-wrap: break-word;
+}
