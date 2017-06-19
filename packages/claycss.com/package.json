@@ -1,0 +1,19 @@
+{
+  "name": "clay-site",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liferay/clay-site"
+  },
+  "dependencies": {
+    "bourbon": "^4.3.3",
+    "lexicon-ux": "^1.0.15",
+    "source-sans-pro": "^2.0.10"
+  },
+  "devDependencies": {
+    "electric-quartz-components": "alpha",
+    "metal-toggler": "^2.0.0",
+    "run-sequence": "^1.2.2"
+  }
+}

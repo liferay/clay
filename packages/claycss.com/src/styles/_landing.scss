@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+}
+
+.landing {
+	min-height: 100vh;
+
+	header, section {
+		padding: 80px 0;
+
+		p {
+			margin: 40px 0;
+		}
+
+		em {
+			font-weight: bold;
+		}
+	}
+
+	.section-inverted {
+		background-color: $brand-dark;
+		color: #FFF;
+	}
+
+	.section-lighten {
+		background-color: $brand-lighten;
+	}
+
+	.footer {
+		margin-top: 0;
+		padding: 47px 20px;
+	}
+
+	.clay-logo {
+		margin: 40px 0 60px;
+		display: flex;
+
+		img {
+			max-width: 160px;
+			max-height: 186px;
+		}
+
+		.logo-title {
+			padding: 0 28px;
+		}
+
+		h1 {
+			font-size: 80px;
+			line-height: 0.7;
+			margin: 50px 0 0;
+		}
+	}
+}

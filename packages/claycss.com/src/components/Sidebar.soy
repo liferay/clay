@@ -1,0 +1,43 @@
+{namespace Sidebar}
+
+/**
+ * @param section
+ * @param site
+ */
+{template .render}
+	<nav class="navbar navbar-inverse navbar-lexicon-site navbar-fixed">
+		<div class="navbar-header navbar-header-left-xs">
+			<a class="navbar-brand" href="/">
+				<span>{$site.title}</span>
+				<small>by Liferay</small>
+			</a>
+		</div>
+
+		<button aria-controls="bs-navbar" aria-expanded="false" class="collapsed sidebar-toggler navbar-toggle btn-link" type="button">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="sr-only">Toggle navigation</span>
+		</button>
+	</nav>
+
+	<nav class="sidenav-fixed sidenav-menu-slider sidebar-toggler-content">
+		<div class="sidebar sidebar-inverse sidebar-lexicon-site sidenav-menu">
+			<div class="sidebar-header">
+				<div class="sidebar-search">
+					{call ElectricSearchAutocomplete.render}
+						{param maxResults: 5 /}
+						{param path: '/docs/' /}
+						{param placeholder: 'Search' /}
+					{/call}
+				</div>
+			</div>
+
+			<div class="sidebar-body">
+				{call MainNavigation.render}
+					{param section: $section /}
+				{/call}
+			</div>
+		</div>
+	</nav>
+{/template}

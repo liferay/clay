@@ -1,0 +1,110 @@
+.content .sidebar-offset {
+	p {
+		line-height: $base-size * 0.75;
+		margin-bottom: 20px;
+	}
+
+	img {
+		margin-bottom: $base-size * 0.75;
+		margin-top: 12px;
+		max-width: 100%;
+	}
+
+	table img {
+		margin-bottom: 8px;
+		margin-top: 4px;
+	}
+
+	ul {
+		margin-bottom: $base-size * 0.75;
+
+		li {
+			line-height: $base-size * 0.75;
+		}
+	}
+
+	h1 {
+		font-size: 26px;
+		line-height: $base-size;
+	}
+
+	h2 {
+		font-size: 23px;
+		line-height: $base-size;
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	h1, h2, h3 {
+		font-weight: bold;
+		margin-bottom: $base-size / 2;
+		margin-top: $base-size * 1.5;
+	}
+
+	h4 {
+		font-size: $base-size / 2;
+		font-weight: bold;
+		line-height: $base-size * 0.75;
+		margin-bottom: 12px;
+		margin-top: 0;
+	}
+
+	h5 {
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 20px;
+		margin-bottom: 8px;
+		text-transform: uppercase;
+	}
+
+	header {
+		margin: 0;
+
+		.container-fluid > h1 {
+			margin: 0;
+		}
+	}
+
+	.home {
+		background-color: $content-header-bg;
+		margin: 0;
+
+		h1 {
+			color: $brand-dark;
+			font-size: $base-size * 1.5;
+			font-weight: 300;
+			line-height: $base-size * 2;
+			margin: $base-size 0;
+
+			@media (min-width: $grid-float-breakpoint) {
+				font-size: $base-size * 2;
+				margin: 0 0 0 $base-size * 3.3;
+			}
+		}
+
+		img {
+			@media (min-width: $grid-float-breakpoint) {
+				max-width: 400px;
+				padding: $base-size * 3 0 0;
+			}
+		}
+	}
+}
+
+.Home body {
+	background-color: $content-header-bg;
+}
+
+.News {
+	.content .sidebar-offset h3 {
+		margin-top: 0;
+	}
+
+	h5 {
+		color: $brand-dark-text;
+		margin-top: 48px;
+	}
+}

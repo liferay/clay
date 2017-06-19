@@ -1,0 +1,61 @@
+{namespace MainNavigation}
+
+/**
+ * @param section
+ * @param? currentDepth
+ * @param? depth
+ */
+{template .render}
+	{let $localCurrentDepth: $currentDepth ?: 0 /}
+
+	{if $section.children}
+		<ul class="nav nav-nested nav-pills nav-stacked">
+			{foreach $childId in $section.childIds}
+				{let $page: $section.children[$childId] /}
+
+				{if not $page.hidden}
+					<li class="{$page.active ? 'active' : ''} {$page.children ? 'nav-heading' : ''}">
+						{call .anchor data="all"}
+							{param page: $page /}
+						{/call}
+
+						{if not $depth or $localCurrentDepth + 1 < $depth}
+							{call MainNavigation.render}
+								{param currentDepth: $localCurrentDepth + 1 /}
+								{param depth: $depth /}
+								{param section: $page /}
+							{/call}
+						{/if}
+					</li>
+				{/if}
+			{/foreach}
+		</ul>
+	{/if}
+{/template}
+
+/**
+ * @param page
+ */
+{template .anchor}
+	{if $page.icon}
+		<svg class="lexicon-icon icon-monospaced">
+			<use xlink:href="/images/icons/lexicon-site-icons.svg#{$page.icon}" />
+		</svg>
+	{/if}
+
+	{if not $page.children}
+		<a href="{$page.url}">
+	{else}
+		<a data-onclick="handleCollapseClick_" href="javascript:;">
+	{/if}
+
+		<span>{$page.title}</span>
+
+		{if $page.children}
+			<svg class="collapse-toggle lexicon-icon icon-monospaced">
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			</svg>
+		{/if}
+	</a>
+
+{/template}

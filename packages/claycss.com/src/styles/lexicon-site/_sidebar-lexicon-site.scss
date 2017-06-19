@@ -1,0 +1,134 @@
+.sidebar-lexicon-site {
+	background-color: $brand-dark;
+
+	a, .nav .lexicon-icon {
+		color: $brand-dark-text;
+	}
+
+	.sidebar-header {
+		padding: $base-size * 0.75  $base-size * 0.75 12px;
+
+		@media (max-width: $grid-float-breakpoint - 1px) {
+			padding: 16px;
+		}
+	}
+
+	.sidebar-body {
+		padding-top: 0;
+
+		@media (max-width: $grid-float-breakpoint - 1px) {
+			padding: 0 16px 16px;
+		}
+	}
+
+	.input-group {
+		width: 100%;
+
+		.input-group-addon {
+			@include position(absolute, 4px 16px null null);
+
+			background-color: transparent;
+			border-color: transparent;
+			color: $brand-darker-text;
+			z-index: 9;
+		}
+
+		> input.form-control {
+			background-color: $brand-darker;
+			border-radius: 4px;
+			color: $brand-darker-text;
+			padding-right: $base-size * 1.5;
+
+			@include placeholder($brand-darker-text);
+
+			&:active, &:focus {
+				@include placeholder($brand-darker-text);
+
+				background-color: #FFF;
+				color: $brand-darker-text;
+			}
+		}
+	}
+
+	.nav-nested {
+		margin-top: 2px;
+
+		& > li:not(.active) > ul {
+			display: none;
+		}
+	}
+
+	.nav-pills {
+		& > li > {
+			a {
+				background-color: transparent;
+				color: #FFF;
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 22px;
+				margin-left: $base-size * 1.5;
+				min-height: $base-size * 1.25;
+				padding-left: $base-size / 2;
+			}
+
+			& ul > li > ul > li > a, .nav .nav > li > a {
+				margin-left: $base-size * 2;
+				padding-left: $base-size / 2;
+			}
+
+			.icon-monospaced.lexicon-icon {
+				float: left;
+				height: 40px;
+				padding: 2px;
+			}
+		}
+
+		& > li > ul > li.active > a, & > li > ul > li.active > a:hover, & > li > ul > li.active > a:focus {
+			background-color: $brand-dark-active;
+			color: #FFF;
+			font-weight: normal;
+		}
+
+		& > li > a:hover, & > li > ul > li:hover > a, & > li > a:focus {
+			background-color: $brand-dark-hover;
+		}
+
+		& li > ul > li > a {
+			color: $brand-dark-text;
+			font-weight: normal;
+		}
+
+		& > li.nav-heading > a, & > li > ul > li.nav-heading > a {
+			&, &:focus {
+				background-color: transparent;
+			}
+
+			&:hover {
+				background-color: $brand-dark-hover;
+			}
+		}
+
+		& li {
+			> a > .collapse-toggle {
+				display: inline-block;
+				margin: 0;
+				min-height: auto;
+				padding: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+
+				height: 40px;
+				padding: 12px;
+				width: 40px;
+
+				@include transform(rotate(-90deg));
+				@include transition(all 0.2s $ease-in-out-back);
+			}
+
+			&.active > a > .collapse-toggle {
+				@include transform(rotate(0));
+			}
+		}
+	}
+}

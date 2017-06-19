@@ -1,0 +1,18 @@
+table {
+	@extend .table;
+
+	margin-bottom: 24px;
+
+	& > tbody > tr > td, & > thead > tr > th {
+		border-bottom: 1px solid $brand-border-color;
+		line-height: $base-size * 0, 75;
+		padding: $base-size / 2;
+	}
+
+	thead th {
+		border-bottom: 2px solid $brand-border-color;
+		font-size: $base-size / 2;
+		font-weight: 600;
+		vertical-align: bottom;
+	}
+}

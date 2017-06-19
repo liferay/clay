@@ -1,0 +1,117 @@
+---
+title: "Clay"
+description: "This is Clay. A web implementation of the Lexicon Experience Language; built by Liferay."
+---
+
+{namespace pageIndex}
+
+/**
+ *
+ */
+{template .render}
+	{call main.render data="all"}
+		{param content kind="html"}
+			{call .header data="all" /}
+		{/param}
+		{param elementClasses: 'landing' /}
+	{/call}
+{/template}
+
+/**
+ *
+ */
+{template .header}
+	<header class="header home">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+					{call .logo data="all" /}
+
+					<div class="lead">
+						A web implementation of the:
+					</div>
+					<div>
+						<a class="btn btn-landing" href="http://lexicon-site.wedeploy.io/">
+							<img class="logo" src="/images/lexicon_logo.png" /> Lexicon Experience Language
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+					<p>This site will serve as the future destination for all things Clay. From tutorials, to docs, to release updates. Stay tuned as we finalize the content, so you can get up and running with Clay in your web application.</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="section-lighten">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+					<h1>So Clay is the new Lexicon?</h1>
+
+					<div class="row">
+						<p class="col-md-6">Not exactly. There's always been a distinction between the experience language <em>Lexicon Experience Language</em>, and the web implementation <em>Lexicon</em>.</p>
+
+						<p class="col-md-6">As you can see, naming them like this didn't help with the distinction. So Lexicon, the web implementation, has been renamed to Clay.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+					<h1>Contributing</h1>
+
+					<p>If you would like to contribute to the project, view the source or file an issue, please visit the</p>
+					<a class="btn btn-landing" href="https://github.com/liferay/clay">
+						<img class="logo" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" /> GitHub repo
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{call .footer data="all" /}
+{/template}
+
+/**
+ *
+ */
+{template .logo}
+	<div class="clay-logo">
+		<img src="/images/clay_logo.png" />
+
+		<div class="logo-title">
+			<h1>Clay</h1>
+
+			<span class="logo-subtitle">by Liferay</span>
+		</div>
+	</div>
+{/template}
+
+/**
+ *
+ */
+{template .footer}
+	<div class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-7">
+					<img class="logo" src="/images/liferayLogo.png">
+
+					<div class="clearfix hidden-lg hidden-md"></div>
+
+					<span>Brought to you by <a href="http://www.liferay.com" target="_blank">Liferay, Inc.</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+{/template}

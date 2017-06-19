@@ -1,0 +1,55 @@
+{namespace main}
+
+/**
+ * @param content
+ * @param? elementClasses
+ */
+{template .render}
+	<div class="{$elementClasses ?: 'main'}">
+		<main class="content">
+			{$content}
+		</main>
+	</div>
+{/template}
+
+/**
+ * @param site
+ */
+{template .topbar}
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		{call .logo data="all" /}
+	</nav>
+{/template}
+
+/**
+ * @param site
+ */
+{template .logo}
+	<div class="navbar-header navbar-header-left-xs">
+		<a class="navbar-brand" href="/">{$site.title}</a>
+	</div>
+{/template}
+
+/**
+ * @param site
+ */
+{template .menu}
+	<div class="navbar-header navbar-header-right">
+		<button aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbarCollapseSite" data-toggle="collapse" type="button">
+			<svg class="lexicon-icon">
+				<use xlink:href="/vendor/lexicon/icons.svg#bars" />
+			</svg>
+		</button>
+	</div>
+
+	<div aria-expanded="false" class="navbar-collapse collapse" id="navbarCollapseSite">
+		{call ElectricNavigation.render}
+			{param depth: 1 /}
+			{param elementClasses: 'nav navbar-nav navbar-right' /}
+			{param linkClasses: '' /}
+			{param listItemClasses: '' /}
+			{param section: $site.index /}
+		{/call}
+	</div>
+{/template}

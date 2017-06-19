@@ -1,0 +1,56 @@
+.footer {
+	background-color: $brand-darker;
+	color: $brand-dark-text;
+	margin-top: $base-size * 3;
+	min-height: $base-size * 4;
+	padding: $base-size / 2 0;
+
+	@media (max-width: $screen-md) {
+		text-align: center;
+	}
+
+	@media (min-width: $screen-md) {
+		padding: 47px 0;
+	}
+
+	.text-right-lg {
+		@media (min-width: $screen-md) {
+			text-align: right;
+		}
+	}
+
+	a {
+		color: #FFF;
+	}
+
+	span {
+		line-height: $base-size;
+	}
+
+	span a {
+		font-weight: 600;
+	}
+
+	.sticker {
+		background-color: $brand-dark;
+		margin: $base-size / 2 $base-size / 3;
+
+		@media (min-width: $screen-md) {
+			margin: 0 0 0 $base-size / 1.33;
+		}
+	}
+
+	.sticker:hover {
+		color: $brand-dark-text;
+	}
+
+	.row img.logo {
+		margin: $base-size / 2 $base-size / 3;
+		max-height: $base-size;
+		padding: 0;
+
+		@media (min-width: $screen-md) {
+			margin: 0 $base-size / 2 0 0;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.navbar-fixed {
+	@include position(fixed, 0 0 null 0);
+
+	z-index: 11;
+
+	@media (min-width: $grid-float-breakpoint) {
+		width: $sidebar-width - 100px;
+	}
+
+	@media (min-width: $screen-sm) {
+		width: $sidebar-width;
+	}
+}
