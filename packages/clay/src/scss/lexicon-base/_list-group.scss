@@ -94,11 +94,13 @@
 		}
 	}
 
-	.list-group-link {
-		color: $link-color;
+	@if ($list-group-link-color) {
+		.list-group-link {
+			color: $link-color;
 
-		@include hover-focus {
-			color: $link-hover-color;
+			@include hover-focus {
+				color: $link-hover-color;
+			}
 		}
 	}
 }
