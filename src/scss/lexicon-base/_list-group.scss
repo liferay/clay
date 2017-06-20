@@ -91,6 +91,14 @@
 			}
 		}
 	}
+
+	.list-group-link {
+		color: $link-color;
+
+		@include hover-focus {
+			color: $link-hover-color;
+		}
+	}
 }
 
 .list-group-item {
@@ -138,6 +146,20 @@
 
 .list-group-item-action:focus {
 	z-index: 1;
+}
+
+.list-group-item {
+	.dropdown.show .dropdown-toggle {
+		color: $list-group-dropdown-toggle-active-color;
+	}
+
+	.dropdown-toggle {
+		color: $list-group-dropdown-toggle-color;
+
+		@include hover-focus {
+			color: $list-group-dropdown-toggle-hover-color;
+		}
+	}
 }
 
 .list-group-link {
