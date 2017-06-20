@@ -78,29 +78,23 @@
 	.list-group-item {
 		background-color: transparent;
 		border-color: transparent;
-	}
-}
 
-.list-group-item-header {
-	background-color: $list-group-bg;
-	border: $list-group-border-width solid $list-group-border-color;
-	display: block;
-	margin-bottom: -$list-group-border-width;
-	padding: $list-group-item-padding-y $list-group-item-padding-x;
+		&.active {
+			color: $body-color;
 
-	&:first-child {
-		@include border-top-radius($list-group-border-radius);
-	}
+			+ .list-group-item {
+				border-top-color: transparent;
+			}
 
-	&:last-child {
-		@include border-bottom-radius($list-group-border-radius);
-
-		margin-bottom: 0;
+			.list-group-link {
+				color: $link-color;
+			}
+		}
 	}
 }
 
 .list-group-item {
-	@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-focus-color, $list-group-item-dropdown-toggle-hover-color);
+	// @include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-focus-color, $list-group-item-dropdown-toggle-hover-color);
 
 	// @if (variable-exists(atlas-theme)) {
 	// 	border-left-width: 0;
@@ -112,12 +106,37 @@
 	// }
 
 	&.active {
-		@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-focus-color, $list-group-item-active-dropdown-toggle-hover-color);
+		z-index: auto;
+		// @include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-focus-color, $list-group-item-active-dropdown-toggle-hover-color);
 
-		.list-group-item-content a {
-			color: $list-group-active-color;
+		// .list-group-item-content a {
+		// 	color: $list-group-active-color;
+		// }
+
+		+ .list-group-item {
+			border-top-color: $list-group-active-border-color;
+		}
+
+		.list-group-link {
+			color: $list-group-link-active-color;
 		}
 	}
+}
+
+.list-group-item-danger.active + .list-group-item {
+	border-top-color: $state-danger-text;
+}
+
+.list-group-item-info.active + .list-group-item {
+	border-top-color: $state-info-text;
+}
+
+.list-group-item-success.active + .list-group-item {
+	border-top-color: $state-success-text;
+}
+
+.list-group-item-warning.active + .list-group-item {
+	border-top-color: $state-warning-text;
 }
 
 .list-group-item-flex {
@@ -135,4 +154,12 @@
 
 .list-group-item-action:focus {
 	z-index: 1;
+}
+
+.list-group-link {
+	color: $list-group-link-color;
+
+	@include hover-focus {
+		color: $list-group-link-hover-color;
+	}
 }
