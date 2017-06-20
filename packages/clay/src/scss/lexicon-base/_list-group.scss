@@ -34,6 +34,8 @@
 
 .list-group {
 	@include box-shadow($list-group-box-shadow);
+	// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22874 goes in
+	color: $list-group-color;
 
 	// Nested list groups shouldn't have box shadows
 
