@@ -94,24 +94,8 @@
 }
 
 .list-group-item {
-	// @include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-focus-color, $list-group-item-dropdown-toggle-hover-color);
-
-	// @if (variable-exists(atlas-theme)) {
-	// 	border-left-width: 0;
-	// 	border-right-width: 0;
-
-	// 	&:focus {
-	// 		z-index: 1;
-	// 	}
-	// }
-
 	&.active {
 		z-index: auto;
-		// @include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-focus-color, $list-group-item-active-dropdown-toggle-hover-color);
-
-		// .list-group-item-content a {
-		// 	color: $list-group-active-color;
-		// }
 
 		+ .list-group-item {
 			border-top-color: $list-group-active-border-color;
