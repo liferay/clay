@@ -6,6 +6,10 @@ $tabular-list-group-vertical-alignment: middle !default;
 
 $list-group-box-shadow: null !default;
 
+$list-group-link-color: null !default;
+$list-group-link-hover-color: null !default;
+$list-group-link-active-color: $white !default;
+
 $list-group-item-dropdown-toggle-color: null !default;
 $list-group-item-dropdown-toggle-focus-color: null !default;
 $list-group-item-dropdown-toggle-hover-color: $list-group-item-dropdown-toggle-focus-color !default;
