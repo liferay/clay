@@ -7,9 +7,11 @@
 	white-space: normal;
 	word-wrap: break-word;
 
-	@if (variable-exists(badge-desktop-font-size)) {
-		@include media-breakpoint-up(md) {
-			font-size: $badge-desktop-font-size;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if (variable-exists(badge-desktop-font-size)) {
+				font-size: $badge-desktop-font-size;
+			}
 		}
 	}
 
@@ -32,9 +34,11 @@
 	padding-right: $badge-lg-padding-right;
 	padding-top: $badge-lg-padding-top;
 
-	@if (variable-exists(badge-lg-desktop-font-size)) {
-		@include media-breakpoint-up(md) {
-			font-size: $badge-lg-desktop-font-size;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if (variable-exists(badge-lg-desktop-font-size)) {
+				font-size: $badge-lg-desktop-font-size;
+			}
 		}
 	}
 }
@@ -46,9 +50,11 @@
 	padding-right: $badge-sm-padding-right;
 	padding-top: $badge-sm-padding-top;
 
-	@if (variable-exists(badge-sm-desktop-font-size)) {
-		@include media-breakpoint-up(md) {
-			font-size: $badge-sm-desktop-font-size;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if (variable-exists(badge-sm-desktop-font-size)) {
+				font-size: $badge-sm-desktop-font-size;
+			}
 		}
 	}
 }
