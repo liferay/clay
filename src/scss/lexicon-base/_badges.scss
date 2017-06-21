@@ -1,5 +1,4 @@
 .badge {
-	border-radius: 100px;
 	border-style: $badge-border-style;
 	border-width: $badge-border-width;
 	margin-bottom: 2px;
@@ -23,17 +22,6 @@
 			color: $badge-link-hover-color;
 			text-decoration: $badge-link-hover-text-decoration;
 		}
-	}
-
-	[class*="icon-"] {
-		font-size: 0.9em;
-		text-decoration: none;
-	}
-
-	.glyphicon {
-		font-size: 0.8em;
-		top: 0;
-		vertical-align: middle;
 	}
 }
 
