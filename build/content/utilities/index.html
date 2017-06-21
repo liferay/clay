@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Breadcrumbs</title>
+	<title>Lexicon - Utilities</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
@@ -116,7 +116,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
+<li class="active"><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
 </ul>
 </div>
@@ -136,7 +136,7 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
-<li class="active"><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/figures">Figures</a>
 </li>
@@ -214,100 +214,92 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title" id="beginContent" tabindex="-1">
-			Breadcrumbs
+			Utilities
 
 			
 		</h1>
 
 		
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.</p>
+		<h3 id="flex-col-and-flex-col-expand"><a class="heading-anchor" href="#flex-col-and-flex-col-expand"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Flex Col and Flex Col Expand</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>An addition to Bootstrap 4&apos;s flexbox utility to help make content expand to fill remaining space or create equally spaced content. <code>.d-flex</code>, <code>.flex-col</code>, and <code>.flex-col-expand</code>.</p>
 		</blockquote>
 
-		<ol class="breadcrumb">
-			<li class="breadcrumb-item">
-				<a href="#" title="Home">Home</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#" title="Components">Components</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#" title="Page">Page</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
-			</li>
-			<li class="active breadcrumb-item">
-				<span title="Active">Active</span>
-			</li>
-		</ol>
-	</div>
-</div>
+		<div class="alert alert-warning">
+			Flex Col and Flex Col Expand shouldn&apos;t be used for laying out site pages, rather it&apos;s most useful for small chunks of content inside other components e.g. cards or list-groups.
+		</div>
 
-<div class="lx-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="horizontal-breadcrumbs"><a class="heading-anchor" href="#horizontal-breadcrumbs"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Horizontal Breadcrumbs</h3>
+		<div class="clay-site-row-spacer d-flex">
+			<div class="flex-col">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input class="form-check-input" type="checkbox" value="">
+					</label>
+				</div>
+			</div>
+			<div class="flex-col-expand">
+				<h6 class="truncate-text">Alberto Calvo, modified 2 hours ago.</h6>
+				<h4 class="truncate-text"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+			</div>
+			<div class="flex-col">
+				<div class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+						<svg class="icon-monospaced lexicon-icon">
+							<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+						</svg>
+					</a>
+					<div class="dropdown-menu">
+						<div class="dropdown-header">Dropdown Header</div>
+						<a class="dropdown-item" href="#1">Action 1</a>
+						<a class="dropdown-item" href="#1">Action 2</a>
+						<a class="dropdown-item" href="#1">Action 3</a>
+						<a class="dropdown-item" href="#1">Action 4</a>
+						<a class="dropdown-item" href="#1">Action 5</a>
+						<a class="dropdown-item" href="#1">Action 6</a>
+						<a class="dropdown-item" href="#1">Action 7</a>
+						<a class="dropdown-item" href="#1">Action 8</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add class <code>breadcrumb-horizontal</code> to breadcrumb to style breadcrumbs horizontally. This skin has the option to use svg icons.</p>
-		</blockquote>
-
-		<ol class="breadcrumb breadcrumb-horizontal">
-			<li class="breadcrumb-item">
-				<a href="#" title="Home">Home</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#" title="Components">Components</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#" title="Page">Page</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
-			</li>
-			<li class="active breadcrumb-item">
-				<span title="Active">Active</span>
-			</li>
-		</ol>
-	</div>
-</div>
-
-<div class="lx-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="vertical-breadcrumbs"><a class="heading-anchor" href="#vertical-breadcrumbs"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Breadcrumbs</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add class <code>breadcrumb-vertical</code> to breadcrumb to stack it vertically.</p>
-		</blockquote>
-
-		<ol class="breadcrumb breadcrumb-vertical">
-			<li class="breadcrumb-item">
-				<a href="#" title="Home">Home</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#" title="Components">Components</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#" title="Page">Page</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
-			</li>
-			<li class="active breadcrumb-item">
-				<span>Active</span>
-			</li>
-		</ol>
+		<div class="d-flex">
+			<div class="flex-col-expand" style="background-color: aliceblue;">
+				<h6 class="truncate-text">Alberto Calvo, modified 2 hours ago.</h6>
+				<h4 class="truncate-text"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+			</div>
+			<div class="flex-col-expand" style="background-color: antiquewhite;">
+				<h6 class="truncate-text">Alberto Calvo, modified 2 hours ago.</h6>
+				<h4><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+			</div>
+			<div class="flex-col-expand" style="background-color: aqua;">
+				<h6 class="truncate-text">Alberto Calvo, modified 2 hours ago.</h6>
+				<h4 class="truncate-text"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+			</div>
+			<div class="flex-col" style="background-color: aquamarine;">
+				<div class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+						<svg class="icon-monospaced lexicon-icon">
+							<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+						</svg>
+					</a>
+					<div class="dropdown-menu">
+						<div class="dropdown-header">Dropdown Header</div>
+						<a class="dropdown-item" href="#1">Action 1</a>
+						<a class="dropdown-item" href="#1">Action 2</a>
+						<a class="dropdown-item" href="#1">Action 3</a>
+						<a class="dropdown-item" href="#1">Action 4</a>
+						<a class="dropdown-item" href="#1">Action 5</a>
+						<a class="dropdown-item" href="#1">Action 6</a>
+						<a class="dropdown-item" href="#1">Action 7</a>
+						<a class="dropdown-item" href="#1">Action 8</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 	</div>
