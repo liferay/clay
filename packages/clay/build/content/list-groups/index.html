@@ -116,6 +116,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/user-icons">User Icons</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
+</li>
 </ul>
 </div>
 </li>
@@ -218,27 +220,19 @@
 		</h1>
 
 		
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="tabular-list-group"><a class="heading-anchor" href="#tabular-list-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Tabular List Group</h3>
+		<h3 id="list-group-item-flex"><a class="heading-anchor" href="#list-group-item-flex"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group Item Flex</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Align content inside a list-group like a table with <code>.tabular-list-group</code>.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Align content inside <code>.list-group-item</code> with flexbox with <code>.list-group-item-flex</code>.</p>
 
-			<p><code>.list-group-item</code> behaves as a table row.</p>
-
-			<p>Use a combination of <code>.list-group-item-field</code> and <code>.list-group-item-content</code> to control the size of each cell. <code>.list-group-item-field</code> has width: 1% and will expand only as wide as its content as long as <code>.list-group-item-content</code> is present as a sibling.</p>
-
-			<p><code>.list-group-item-content</code> will expand to fill the remaining space.</p>
+			<p>Use a combination of <code>.flex-col</code> and <code>.flex-col-expand</code> to control the size of each cell.</p>
 		</blockquote>
 
-		<div class="alert alert-warning">
-			In IE9 the class <code>truncate-text</code> is unsupported in <code>tabular-list-groups</code> and will break to a new line.
-		</div>
-
-		<ul class="tabular-list-group">
-			<li class="list-group-item">
-				<div class="list-group-item-field">
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col">
 					<div class="checkbox">
 						<label>
 							<input type="checkbox">
@@ -246,7 +240,7 @@
 					</div>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="sticker sticker-default sticker-lg sticker-static">
 						<svg class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="../../images/icons/icons.svg#folder">
@@ -254,36 +248,36 @@
 					</div>
 				</div>
 
-				<div class="list-group-item-content">
+				<div class="flex-col-expand">
 					<h6 class="truncate-text">Alberto Calvo, modified 2 hours ago.</h6>
-					<h4 class="truncate-text"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+					<h4 class="truncate-text"><a class="list-group-link" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
 					<h6 class="truncate-text">Approved</h6>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
+						<div class="dropdown-menu dropdown-menu-left-side">
+							<div class="dropdown-header">Dropdown Header</div>
+							<a class="dropdown-item" href="#1">Action 1</a>
+							<a class="dropdown-item" href="#1">Action 2</a>
+							<a class="dropdown-item" href="#1">Action 3</a>
+							<a class="dropdown-item" href="#1">Action 4</a>
+							<a class="dropdown-item" href="#1">Action 5</a>
+							<a class="dropdown-item" href="#1">Action 6</a>
+							<a class="dropdown-item" href="#1">Action 7</a>
+							<a class="dropdown-item" href="#1">Action 8</a>
+						</div>
 					</div>
 				</div>
 			</li>
 
-			<li class="list-group-item">
-				<div class="list-group-item-field">
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col">
 					<div class="checkbox">
 						<label>
 							<input type="checkbox">
@@ -291,7 +285,7 @@
 					</div>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="sticker sticker-default sticker-lg sticker-static">
 						<svg class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="../../images/icons/icons.svg#folder">
@@ -299,152 +293,51 @@
 					</div>
 				</div>
 
-				<div class="list-group-item-content">
+				<div class="flex-col-expand">
 					<h5>Bookmarks</h5>
-					<h4><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a></h4>
+					<h4><a class="list-group-link" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a></h4>
 					<h6>
 						<span>5 Folders</span>
 						<span>4 Entries</span>
 					</h6>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
+						<div class="dropdown-menu dropdown-menu-left-side">
+							<div class="dropdown-header">Dropdown Header</div>
+							<a class="dropdown-item" href="#1">Action 1</a>
+							<a class="dropdown-item" href="#1">Action 2</a>
+							<a class="dropdown-item" href="#1">Action 3</a>
+							<a class="dropdown-item" href="#1">Action 4</a>
+							<a class="dropdown-item" href="#1">Action 5</a>
+							<a class="dropdown-item" href="#1">Action 6</a>
+							<a class="dropdown-item" href="#1">Action 7</a>
+							<a class="dropdown-item" href="#1">Action 8</a>
+						</div>
 					</div>
 				</div>
 			</li>
 		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code>&lt;ul class=&quot;tabular-list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;div class=&quot;checkbox&quot;&gt;
-                &lt;label&gt;
-                    &lt;input type=&quot;checkbox&quot; /&gt;
-                &lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;div class=&quot;sticker sticker-default sticker-lg sticker-static&quot;&gt;
-                &lt;svg class=&quot;lexicon-icon lexicon-icon-folder&quot;&gt;
-                    &lt;use xlink:href=&quot;../../images/icons/icons.svg#folder&quot; /&gt;
-                &lt;/svg&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-content&quot;&gt;
-            &lt;h6 class=&quot;truncate-text&quot;&gt;Alberto Calvo, modified 2 hours ago.&lt;/h6&gt;
-            &lt;h4 class=&quot;truncate-text&quot;&gt;&lt;a href=&quot;#1&quot;&gt;ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual&lt;/a&gt;&lt;/h4&gt;
-            &lt;h6 class=&quot;truncate-text&quot;&gt;Approved&lt;/h6&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;div class=&quot;dropdown&quot;&gt;
-                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
-                    &lt;svg class=&quot;icon-monospaced lexicon-icon&quot;&gt;
-                        &lt;use xlink:href=&quot;../../images/icons/icons.svg#ellipsis-v&quot; /&gt;
-                    &lt;/svg&gt;
-                &lt;/a&gt;
-                &lt;ul class=&quot;dropdown-menu dropdown-menu-left-side&quot;&gt;
-                    &lt;li class=&quot;dropdown-header&quot;&gt;Dropdown Header&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 1&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 2&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 3&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 4&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 5&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 6&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 7&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 8&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-
-    &lt;li class=&quot;list-group-item&quot;&gt;
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;div class=&quot;checkbox&quot;&gt;
-                &lt;label&gt;
-                    &lt;input type=&quot;checkbox&quot; /&gt;
-                &lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;div class=&quot;sticker sticker-default sticker-lg sticker-static&quot;&gt;
-                &lt;svg class=&quot;lexicon-icon lexicon-icon-folder&quot;&gt;
-                    &lt;use xlink:href=&quot;../../images/icons/icons.svg#folder&quot; /&gt;
-                &lt;/svg&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-content&quot;&gt;
-            &lt;h5&gt;Bookmarks&lt;/h5&gt;
-            &lt;h4&gt;&lt;a href=&quot;#1&quot;&gt;ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.&lt;/a&gt;&lt;/h4&gt;
-            &lt;h6&gt;
-                &lt;span&gt;5 Folders&lt;/span&gt;
-                &lt;span&gt;4 Entries&lt;/span&gt;
-            &lt;/h6&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;list-group-item-field&quot;&gt;
-            &lt;div class=&quot;dropdown&quot;&gt;
-                &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#1&quot;&gt;
-                    &lt;svg class=&quot;icon-monospaced lexicon-icon&quot;&gt;
-                        &lt;use xlink:href=&quot;../../images/icons/icons.svg#ellipsis-v&quot; /&gt;
-                    &lt;/svg&gt;
-                &lt;/a&gt;
-                &lt;ul class=&quot;dropdown-menu dropdown-menu-left-side&quot;&gt;
-                    &lt;li class=&quot;dropdown-header&quot;&gt;Dropdown Header&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 1&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 2&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 3&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 4&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 5&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 6&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 7&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action 8&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="tabular-list-group-no-borders"><a class="heading-anchor" href="#tabular-list-group-no-borders"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Tabular List Group No Borders</h3>
+		<h3 id="list-group-bordered"><a class="heading-anchor" href="#list-group-bordered"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group Bordered</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Tabular List Group rows are bordered by default. You can remove borders by adding <code>.no-borders</code> to <code>.tabular-list-group</code>.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Use <code>.list-group-bordered</code> on <code>.list-group</code> to style <code>.list-group-item-flex</code> like a table.</p>
 		</blockquote>
 
-		<ul class="no-borders tabular-list-group">
-			<li class="list-group-item">
-				<div class="list-group-item-field">
+		<ul class="list-group list-group-bordered">
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col">
 					<div class="checkbox">
 						<label>
 							<input type="checkbox">
@@ -452,7 +345,7 @@
 					</div>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="sticker sticker-default sticker-lg sticker-static">
 						<svg class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="../../images/icons/icons.svg#folder">
@@ -460,7 +353,7 @@
 					</div>
 				</div>
 
-				<div class="list-group-item-content">
+				<div class="flex-col-expand">
 					<h5>Larry Bird the best power forward in Celtic&apos;s history.</h5>
 					<h6>Monica Bellucci</h6>
 					<h6>
@@ -469,30 +362,30 @@
 					</h6>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
+						<div class="dropdown-menu dropdown-menu-left-side">
+							<div class="dropdown-header">Dropdown Header</div>
+							<a class="dropdown-item" href="#1">Action 1</a>
+							<a class="dropdown-item" href="#1">Action 2</a>
+							<a class="dropdown-item" href="#1">Action 3</a>
+							<a class="dropdown-item" href="#1">Action 4</a>
+							<a class="dropdown-item" href="#1">Action 5</a>
+							<a class="dropdown-item" href="#1">Action 6</a>
+							<a class="dropdown-item" href="#1">Action 7</a>
+							<a class="dropdown-item" href="#1">Action 8</a>
+						</div>
 					</div>
 				</div>
 			</li>
 
-			<li class="list-group-item">
-				<div class="list-group-item-field">
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col">
 					<div class="checkbox">
 						<label>
 							<input type="checkbox">
@@ -500,7 +393,7 @@
 					</div>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="sticker sticker-default sticker-lg sticker-static">
 						<svg class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="../../images/icons/icons.svg#folder">
@@ -508,7 +401,7 @@
 					</div>
 				</div>
 
-				<div class="list-group-item-content">
+				<div class="flex-col-expand">
 					<h5>Karl Malone the best power forward in Jazz history.</h5>
 					<h6>Monica Bellucci</h6>
 					<h6>
@@ -517,223 +410,103 @@
 					</h6>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
+						<div class="dropdown-menu dropdown-menu-left-side">
+							<div class="dropdown-header">Dropdown Header</div>
+							<a class="dropdown-item" href="#1">Action 1</a>
+							<a class="dropdown-item" href="#1">Action 2</a>
+							<a class="dropdown-item" href="#1">Action 3</a>
+							<a class="dropdown-item" href="#1">Action 4</a>
+							<a class="dropdown-item" href="#1">Action 5</a>
+							<a class="dropdown-item" href="#1">Action 6</a>
+							<a class="dropdown-item" href="#1">Action 7</a>
+							<a class="dropdown-item" href="#1">Action 8</a>
+						</div>
 					</div>
 				</div>
 			</li>
 		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;ul class=&quot;no-borders tabular-list-group&quot;&gt;...&lt;/ul&gt;</code></pre>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="tabular-list-group-full-borders"><a class="heading-anchor" href="#tabular-list-group-full-borders"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Tabular List Group Full Borders</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Similarly, you can add borders around each cell with <code>.full-borders</code>.</p>
-		</blockquote>
-
-		<ul class="full-borders tabular-list-group">
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="sticker sticker-default sticker-lg sticker-static">
-						<svg class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="../../images/icons/icons.svg#folder">
-						</svg>
-					</div>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Larry Bird the best power forward in Celtic&apos;s history.</h5>
-					<h6>Monica Bellucci</h6>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="sticker sticker-default sticker-lg sticker-static">
-						<svg class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="../../images/icons/icons.svg#folder">
-						</svg>
-					</div>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Karl Malone the best power forward in Jazz history.</h5>
-					<h6>Monica Bellucci</h6>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code class="html">&lt;ul class=&quot;full-borders tabular-list-group&quot;&gt;...&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="tabular-list-group-unstyled"><a class="heading-anchor" href="#tabular-list-group-unstyled"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Tabular List Group Unstyled</h3>
+		<h3 id="list-group-unstyled"><a class="heading-anchor" href="#list-group-unstyled"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group Unstyled</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>A less opinionated and simplified version of <code>tabular-list-group</code> to help layout small bits of content inside other components such as sidebar. The component <code>tabular-list-group-unstyled</code> doesn&apos;t split into columns; to make tabular-list-group-unstyled split into columns, add <code>display: table;</code> to the class <code>tabular-list-group-unstyled</code> and <code>display: table-row;</code> to <code>list-group-item</code>.</p>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Use <code>.list-group-unstyled</code> on <code>.list-group</code> to remove default styles.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<ul class="tabular-list-group-unstyled">
-			<li class="list-group-item">
-				<div class="list-group-item-content">
+		<ul class="list-group list-group-unstyled">
+			<li class="list-group-item">List Item 1</li>
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col-expand">
 					<div class="h5">Larry Bird the best power forward in Celtic&apos;s history.</div>
-					<div class="h6"><a href="#1">Monica Bellucci</a></div>
+					<div class="h6"><a class="list-group-link" href="#1">Monica Bellucci</a></div>
 					<div class="h6">
 						<span>5 Folders</span>
 						<span>4 Entries</span>
 					</div>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
+						<div class="dropdown-menu dropdown-menu-left-side">
+							<div class="dropdown-header">Dropdown Header</div>
+							<a class="dropdown-item" href="#1">Action 1</a>
+							<a class="dropdown-item" href="#1">Action 2</a>
+							<a class="dropdown-item" href="#1">Action 3</a>
+							<a class="dropdown-item" href="#1">Action 4</a>
+							<a class="dropdown-item" href="#1">Action 5</a>
+							<a class="dropdown-item" href="#1">Action 6</a>
+							<a class="dropdown-item" href="#1">Action 7</a>
+							<a class="dropdown-item" href="#1">Action 8</a>
+						</div>
 					</div>
 				</div>
 			</li>
 
-			<li class="list-group-item">
-				<div class="list-group-item-content">
+			<li class="list-group-item list-group-item-flex">
+				<div class="flex-col-expand">
 					<div class="h5">Karl Malone the best power forward in Jazz history.</div>
-					<div class="h6"><a href="#1">Monica Bellucci</a></div>
+					<div class="h6"><a class="list-group-link" href="#1">Monica Bellucci</a></div>
 					<div class="h6">
 						<span>5 Folders</span>
 						<span>4 Entries</span>
 					</div>
 				</div>
 
-				<div class="list-group-item-field">
+				<div class="flex-col">
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
 								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 							</svg>
 						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
+						<div class="dropdown-menu dropdown-menu-left-side">
+							<div class="dropdown-header">Dropdown Header</div>
+							<a class="dropdown-item" href="#1">Action 1</a>
+							<a class="dropdown-item" href="#1">Action 2</a>
+							<a class="dropdown-item" href="#1">Action 3</a>
+							<a class="dropdown-item" href="#1">Action 4</a>
+							<a class="dropdown-item" href="#1">Action 5</a>
+							<a class="dropdown-item" href="#1">Action 6</a>
+							<a class="dropdown-item" href="#1">Action 7</a>
+							<a class="dropdown-item" href="#1">Action 8</a>
+						</div>
 					</div>
 				</div>
 			</li>
@@ -741,64 +514,163 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="list-group-with-headings"><a class="heading-anchor" href="#list-group-with-headings"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group with Headings</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Nest <code>.list-group.list-group-flush</code> inside <code>.panel-group</code> and <code>.panel</code>.</p>
+		</blockquote>
+
+		<div class="panel-group">
+			<div class="panel panel-secondary">
+				<div class="panel-header">
+					<div class="panel-title">
+						<a class="panel-header-link" href="#1">Panel Title</a>
+					</div>
+				</div>
+
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">List Item 1</li>
+					<li class="list-group-item">List Item 2</li>
+					<li class="list-group-item">List Item 3</li>
+					<li class="list-group-item">List Item 4</li>
+				</ul>
+			</div>
+
+			<div class="panel panel-secondary">
+				<div class="panel-header">
+					<div class="panel-title">
+						<a class="panel-header-link" href="#1">Panel Title</a>
+					</div>
+				</div>
+
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item list-group-item-flex">
+						<div class="flex-col">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox">
+								</label>
+							</div>
+						</div>
+
+						<div class="flex-col">
+							<div class="sticker sticker-default sticker-lg sticker-static">
+								<svg class="lexicon-icon lexicon-icon-folder">
+									<use xlink:href="../../images/icons/icons.svg#folder">
+								</svg>
+							</div>
+						</div>
+
+						<div class="flex-col-expand">
+							<h6 class="truncate-text">Alberto Calvo, modified 2 hours ago.</h6>
+							<h4 class="truncate-text"><a class="list-group-link" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
+							<h6 class="truncate-text">Approved</h6>
+						</div>
+
+						<div class="flex-col">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+									<svg class="icon-monospaced lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<div class="dropdown-menu dropdown-menu-left-side">
+									<div class="dropdown-header">Dropdown Header</div>
+									<a class="dropdown-item" href="#1">Action 1</a>
+									<a class="dropdown-item" href="#1">Action 2</a>
+									<a class="dropdown-item" href="#1">Action 3</a>
+									<a class="dropdown-item" href="#1">Action 4</a>
+									<a class="dropdown-item" href="#1">Action 5</a>
+									<a class="dropdown-item" href="#1">Action 6</a>
+									<a class="dropdown-item" href="#1">Action 7</a>
+									<a class="dropdown-item" href="#1">Action 8</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="list-group-item list-group-item-flex">
+						<div class="flex-col">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox">
+								</label>
+							</div>
+						</div>
+
+						<div class="flex-col">
+							<div class="sticker sticker-default sticker-lg sticker-static">
+								<svg class="lexicon-icon lexicon-icon-folder">
+									<use xlink:href="../../images/icons/icons.svg#folder">
+								</svg>
+							</div>
+						</div>
+
+						<div class="flex-col-expand">
+							<h5>Bookmarks</h5>
+							<h4><a class="list-group-link" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a></h4>
+							<h6>
+								<span>5 Folders</span>
+								<span>4 Entries</span>
+							</h6>
+						</div>
+
+						<div class="flex-col">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
+									<svg class="icon-monospaced lexicon-icon">
+										<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+									</svg>
+								</a>
+								<div class="dropdown-menu dropdown-menu-left-side">
+									<div class="dropdown-header">Dropdown Header</div>
+									<a class="dropdown-item" href="#1">Action 1</a>
+									<a class="dropdown-item" href="#1">Action 2</a>
+									<a class="dropdown-item" href="#1">Action 3</a>
+									<a class="dropdown-item" href="#1">Action 4</a>
+									<a class="dropdown-item" href="#1">Action 5</a>
+									<a class="dropdown-item" href="#1">Action 6</a>
+									<a class="dropdown-item" href="#1">Action 7</a>
+									<a class="dropdown-item" href="#1">Action 8</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="list-group"><a class="heading-anchor" href="#list-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.list-group</code> or <code>.linked-list-group</code> to quickly assemble a list of elements such as a checklist, vertical navigation, or a news feed.</p>
-
-			<p>To create collapsible list groups with multiple headings see <a href="../extending-list-groups">Extending List Groups</a>.</p>
-		</blockquote>
-
 		<ul class="list-group">
-			<li class="list-group-heading">List Heading</li>
 			<li class="list-group-item">List Item 1</li>
 			<li class="list-group-item">List Item 2</li>
 			<li class="list-group-item">List Item 3</li>
 			<li class="list-group-item">List Item 4</li>
 		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item&quot;&gt;...&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="linked-list-groups"><a class="heading-anchor" href="#linked-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Linked List Groups</h3>
+		<h3 id="list-group-with-links-and-buttons"><a class="heading-anchor" href="#list-group-with-links-and-buttons"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group with Links and Buttons</h3>
 
 		<div class="list-group">
-			<div class="list-group-heading">List Group Heading</div>
-			<a class="list-group-item" href="#">List Item 1</a>
-			<a class="list-group-item" href="#">List Item 2</a>
-			<a class="list-group-item" href="#">List Item 3</a>
-			<a class="list-group-item" href="#">List Item 4</a>
+			<a class="list-group-item list-group-item-action" href="#1">List Item 1</a>
+			<a class="list-group-item list-group-item-action" href="#1">List Item 2</a>
+			<button class="list-group-item list-group-item-action">List Item 3</button>
+			<a class="list-group-item list-group-item-action" href="#1">List Item 4</a>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse5">
-	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
-    &lt;a class=&quot;list-group-item&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="contextual-list-group"><a class="heading-anchor" href="#contextual-list-group"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Contextual List Group</h3>
 
@@ -808,699 +680,43 @@
 			<li class="list-group-item list-group-item-warning">List Item 3 - Warning</li>
 			<li class="list-group-item list-group-item-danger">List Item 4 - Danger</li>
 		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse6">
-	<pre><code class="html">&lt;ul class=&quot;list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item list-group-item-success&quot;&gt;...&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="linked-contextual-list-groups"><a class="heading-anchor" href="#linked-contextual-list-groups"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Linked Contextual List Groups</h3>
 
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="list-group">
-					<a class="list-group-item list-group-item-success" href="#">List Item 1 - Success</a>
-					<a class="list-group-item list-group-item-info" href="#">List Item 2 - Info</a>
-					<a class="list-group-item list-group-item-warning" href="#">List Item 3 - Warning</a>
-					<a class="list-group-item list-group-item-danger" href="#">List Item 4 - Danger</a>
+					<a class="list-group-item list-group-item-action list-group-item-success" href="#1">List Item 1 - Success</a>
+					<a class="list-group-item list-group-item-action list-group-item-info" href="#1">List Item 2 - Info</a>
+					<a class="list-group-item list-group-item-action list-group-item-warning" href="#1">List Item 3 - Warning</a>
+					<a class="list-group-item list-group-item-action list-group-item-danger" href="#1">List Item 4 - Danger</a>
 				</div>
 			</div>
 
 			<div class="col-sm-6">
 				<div class="list-group">
-					<a class="active list-group-item list-group-item-success" href="#">List Item 1 - Active Success</a>
-					<a class="active list-group-item list-group-item-info" href="#">List Item 2 - Active Info</a>
-					<a class="active list-group-item list-group-item-warning" href="#">List Item 3 - Active Warning</a>
-					<a class="active list-group-item list-group-item-danger" href="#">List Item 4 - Active Danger</a>
+					<a class="active list-group-item list-group-item-action list-group-item-success" href="#1">List Item 1 - Active Success</a>
+					<a class="active list-group-item list-group-item-action list-group-item-info" href="#1">List Item 2 - Active Info</a>
+					<a class="active list-group-item list-group-item-action list-group-item-warning" href="#1">List Item 3 - Active Warning</a>
+					<a class="active list-group-item list-group-item-action list-group-item-danger" href="#1">List Item 4 - Active Danger</a>
 				</div>
 			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse7">
-	<pre><code class="html">&lt;div class=&quot;list-group&quot;&gt;
-    &lt;a class=&quot;active list-group-item list-group-item-success&quot; href=&quot;#&quot;&gt;...&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="tabular-list-group-item-states"><a class="heading-anchor" href="#tabular-list-group-item-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Tabular List Group Item States</h3>
-
-		<div class="alert alert-warning">Deprecated Tabular List Group Item States as of v1.0.9 and will be removed in v2.0.0.</div>
-
-		<ul class="tabular-list-group">
-			<li class="list-group-item list-group-item-success">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="../../images/icons/icons.svg#folder">
-					</svg>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Larry Bird the best power forward in Celtic&apos;s history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Approved</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-warning">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="../../images/icons/icons.svg#folder">
-					</svg>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Karl Malone the best power forward in Jazz history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Pending</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-info">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="../../images/icons/icons.svg#folder">
-					</svg>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Dennis Rodman the best power forward in Bulls history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Draft</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-default">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="../../images/icons/icons.svg#folder">
-					</svg>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>LeBron James the best power forward in Heat history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Expired</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-primary">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="../../images/icons/icons.svg#folder">
-					</svg>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Tim Duncan the best power forward in Spurs&apos; history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Scheduled</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-
-			<li class="list-group-item list-group-item-danger">
-				<div class="list-group-item-field">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox">
-						</label>
-					</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="../../images/icons/icons.svg#folder">
-					</svg>
-				</div>
-
-				<div class="list-group-item-content">
-					<h5>Kevin Garnett the best power forward in Pistons&apos; history.</h5>
-					<h6>Monica Bellucci</h6>
-					<div class="status">Rejected</div>
-				</div>
-
-				<div class="list-group-item-field">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-							</svg>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-left-side">
-							<li class="dropdown-header">Dropdown Header</li>
-							<li><a href="#">Action 1</a></li>
-							<li><a href="#">Action 2</a></li>
-							<li><a href="#">Action 3</a></li>
-							<li><a href="#">Action 4</a></li>
-							<li><a href="#">Action 5</a></li>
-							<li><a href="#">Action 6</a></li>
-							<li><a href="#">Action 7</a></li>
-							<li><a href="#">Action 8</a></li>
-						</ul>
-					</div>
-				</div>
-			</li>
-		</ul>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a></div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code class="html">&lt;ul class=&quot;tabular-list-group&quot;&gt;
-    &lt;li class=&quot;list-group-item list-group-item-success&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-warning&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-info&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-default&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-primary&quot;&gt;...&lt;/li&gt;
-    &lt;li class=&quot;list-group-item list-group-item-danger&quot;&gt;...&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-</div>
-
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="list-group-card"><a class="heading-anchor" href="#list-group-card"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>List Group Card</h3>
-
-		<div class="alert alert-warning">Deprecated <code>list-group-card</code> as of v1.0.9 and will be removed in v2.0.0.</div>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add class <code>list-group-card</code> to <code>list-group</code> then put a <a href="../extending-cards/#checkbox-inside-horizontal-card">checkbox-card</a> in a <code>list-group-item</code>.</p>
-		</blockquote>
-
-		<ul class="list-group list-group-card">
-			<li class="list-group-heading">List Heading</li>
-			<li class="list-group-item">
-				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
-					<label>
-						<input type="checkbox" value="">
-						<div class="card card-horizontal">
-							<div class="card-row card-row-padded">
-								<div class="card-col-field">
-									<div class="list-group-card-icon">
-										<div class="user-icon user-icon-default">
-											<span>AC</span>
-										</div>
-									</div>
-								</div>
-								<div class="card-col-content card-col-gutters">
-									<h5 class="text-default" title="Alberto Calvo, modified 2 hours ago">Alberto Calvo, modified 2 hours ago</h5>
-									<h4 title="7 UX Trends of 2015: Get Ready for Big Changes"><a href="#1">7 UX Trends of 2015: Get Ready for Big Changes</a></h4>
-									<h5 class="text-default" title="Approved">Approved</h5>
-								</div>
-								<div class="card-col-field">
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-											</svg>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#1">Download</a></li>
-											<li><a href="#1">Edit</a></li>
-											<li><a href="#1">Move</a></li>
-											<li><a href="#1">Checkout</a></li>
-											<li><a href="#1">Permissions</a></li>
-											<li><a href="#1">Move to Recycle Bin</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</label>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
-					<label>
-						<input type="checkbox" value="">
-						<div class="card card-horizontal">
-							<div class="card-row card-row-padded">
-								<div class="card-col-field">
-									<div class="list-group-card-icon">
-										<div class="user-icon">
-											<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
-										</div>
-									</div>
-								</div>
-								<div class="card-col-content card-col-gutters">
-									<h5 class="text-default" title="Cristina Pineiro, modified 2 hours ago">Cristina Pineiro, modified 2 hours ago</h5>
-									<h4 title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
-									<h5 class="text-default" title="Approved">Approved</h5>
-								</div>
-								<div class="card-col-field">
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-											</svg>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#1">Download</a></li>
-											<li><a href="#1">Edit</a></li>
-											<li><a href="#1">Move</a></li>
-											<li><a href="#1">Checkout</a></li>
-											<li><a href="#1">Permissions</a></li>
-											<li><a href="#1">Move to Recycle Bin</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</label>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
-					<label>
-						<input type="checkbox" value="">
-						<div class="card card-horizontal">
-							<div class="card-row card-row-padded">
-								<div class="card-col-field">
-									<div class="list-group-card-icon">
-										<div class="user-icon user-icon-warning">
-											<span>SB</span>
-										</div>
-									</div>
-								</div>
-								<div class="card-col-content card-col-gutters">
-									<h5 class="text-default" title="Susan Brown, modified 3 hours ago">Susan Brown, modified 3 hours ago</h5>
-									<h4 title="Getting Up to Speed"><a href="#1">Getting Up to Speed</a></h4>
-									<h5 class="text-default" title="Approved">Approved</h5>
-								</div>
-								<div class="card-col-field">
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-											</svg>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#1">Download</a></li>
-											<li><a href="#1">Edit</a></li>
-											<li><a href="#1">Move</a></li>
-											<li><a href="#1">Checkout</a></li>
-											<li><a href="#1">Permissions</a></li>
-											<li><a href="#1">Move to Recycle Bin</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</label>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
-					<label>
-						<input type="checkbox" value="">
-						<div class="card card-horizontal">
-							<div class="card-row card-row-padded">
-								<div class="card-col-field">
-									<div class="list-group-card-icon">
-										<div class="user-icon">
-											<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
-										</div>
-									</div>
-								</div>
-								<div class="card-col-content card-col-gutters">
-									<h5 class="text-default" title="Sergio Ruiz, modified 9 hours ago">Sergio Ruiz, modified 9 hours ago</h5>
-									<h4 title="Introducing FS3"><a href="#1">Introducing FS3</a></h4>
-									<h5 class="text-default" title="Approved">Approved</h5>
-								</div>
-								<div class="card-col-field">
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-											</svg>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#1">Download</a></li>
-											<li><a href="#1">Edit</a></li>
-											<li><a href="#1">Move</a></li>
-											<li><a href="#1">Checkout</a></li>
-											<li><a href="#1">Permissions</a></li>
-											<li><a href="#1">Move to Recycle Bin</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</label>
-				</div>
-			</li>
-		</ul>
-	</div>
-</div>
-
-<div class="row row-spacing">
-	<div class="col-md-12">
-		<h3 id="hide-checkboxes-in-mobile"><a class="heading-anchor" href="#hide-checkboxes-in-mobile"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Hide Checkboxes in Mobile</h3>
-
-		<div class="alert alert-warning">Deprecated <code>list-group-card-checkbox-hidden-xs</code> as of v1.0.9 and will be removed in v2.0.0.</div>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Add class <code>list-group-card-checkbox-hidden-xs</code> to <code>list-group-card</code> to hide <code>input[type=&quot;checkbox&quot;]</code> in mobile, then wrap your icon or user-icon with <code>list-group-card-icon</code> to toggle the check icon.</p>
-
-			<p>The check icon can be customized through the variable <code>$list-group-card-checkbox-hidden-icon</code>.</p>
-		</blockquote>
-
-		<ul class="list-group list-group-card list-group-card-checkbox-hidden-xs">
-			<li class="list-group-heading">List Heading</li>
-			<li class="list-group-item">
-				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
-					<label>
-						<input type="checkbox" value="">
-						<div class="card card-horizontal">
-							<div class="card-row card-row-padded">
-								<div class="card-col-field">
-									<div class="list-group-card-icon">
-										<div class="user-icon user-icon-default">
-											<span>AC</span>
-										</div>
-									</div>
-								</div>
-								<div class="card-col-content card-col-gutters">
-									<h5 class="text-default" title="Alberto Calvo, modified 2 hours ago">Alberto Calvo, modified 2 hours ago</h5>
-									<h4 title="7 UX Trends of 2015: Get Ready for Big Changes"><a href="#1">7 UX Trends of 2015: Get Ready for Big Changes</a></h4>
-									<h5 class="text-default" title="Approved">Approved</h5>
-								</div>
-								<div class="card-col-field">
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-											</svg>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#1">Download</a></li>
-											<li><a href="#1">Edit</a></li>
-											<li><a href="#1">Move</a></li>
-											<li><a href="#1">Checkout</a></li>
-											<li><a href="#1">Permissions</a></li>
-											<li><a href="#1">Move to Recycle Bin</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</label>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
-					<label>
-						<input type="checkbox" value="">
-						<div class="card card-horizontal">
-							<div class="card-row card-row-padded">
-								<div class="card-col-field">
-									<div class="list-group-card-icon">
-										<div class="user-icon">
-											<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coffee.jpg">
-										</div>
-									</div>
-								</div>
-								<div class="card-col-content card-col-gutters">
-									<h5 class="text-default" title="Cristina Pineiro, modified 2 hours ago">Cristina Pineiro, modified 2 hours ago</h5>
-									<h4 title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual"><a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
-									<h5 class="text-default" title="Approved">Approved</h5>
-								</div>
-								<div class="card-col-field">
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-											</svg>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#1">Download</a></li>
-											<li><a href="#1">Edit</a></li>
-											<li><a href="#1">Move</a></li>
-											<li><a href="#1">Checkout</a></li>
-											<li><a href="#1">Permissions</a></li>
-											<li><a href="#1">Move to Recycle Bin</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</label>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
-					<label>
-						<input type="checkbox" value="">
-						<div class="card card-horizontal">
-							<div class="card-row card-row-padded">
-								<div class="card-col-field">
-									<div class="list-group-card-icon">
-										<div class="user-icon user-icon-warning">
-											<span>SB</span>
-										</div>
-									</div>
-								</div>
-								<div class="card-col-content card-col-gutters">
-									<h5 class="text-default" title="Susan Brown, modified 3 hours ago">Susan Brown, modified 3 hours ago</h5>
-									<h4 title="Getting Up to Speed"><a href="#1">Getting Up to Speed</a></h4>
-									<h5 class="text-default" title="Approved">Approved</h5>
-								</div>
-								<div class="card-col-field">
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-											</svg>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#1">Download</a></li>
-											<li><a href="#1">Edit</a></li>
-											<li><a href="#1">Move</a></li>
-											<li><a href="#1">Checkout</a></li>
-											<li><a href="#1">Permissions</a></li>
-											<li><a href="#1">Move to Recycle Bin</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</label>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="checkbox checkbox-card checkbox-default checkbox-top-left">
-					<label>
-						<input type="checkbox" value="">
-						<div class="card card-horizontal">
-							<div class="card-row card-row-padded">
-								<div class="card-col-field">
-									<div class="list-group-card-icon">
-										<div class="user-icon">
-											<img alt="thumbnail" class="img-responsive" src="../../images/thumbnail_coyote.jpg">
-										</div>
-									</div>
-								</div>
-								<div class="card-col-content card-col-gutters">
-									<h5 class="text-default" title="Sergio Ruiz, modified 9 hours ago">Sergio Ruiz, modified 9 hours ago</h5>
-									<h4 title="Introducing FS3"><a href="#1">Introducing FS3</a></h4>
-									<h5 class="text-default" title="Approved">Approved</h5>
-								</div>
-								<div class="card-col-field">
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-											<svg class="icon-monospaced lexicon-icon">
-												<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
-											</svg>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#1">Download</a></li>
-											<li><a href="#1">Edit</a></li>
-											<li><a href="#1">Move</a></li>
-											<li><a href="#1">Checkout</a></li>
-											<li><a href="#1">Permissions</a></li>
-											<li><a href="#1">Move to Recycle Bin</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</label>
-				</div>
-			</li>
-		</ul>
 	</div>
 </div>
 
 <script>
-	$('.tabular-list-group .list-group-item input[type="checkbox"]').on(
+	$('.list-group .list-group-item input[type="checkbox"]').on(
 		'click',
 		function(event) {
 			$(this).closest('.list-group-item').toggleClass('active');
 		}
 	);
-</script></div></div>
+</script>
 	</div>
 
 		</section>
