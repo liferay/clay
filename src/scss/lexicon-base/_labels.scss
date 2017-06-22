@@ -86,9 +86,9 @@
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-danger-bg-hover;
-			border-color: $label-danger-border-color-hover;
-			color: $label-danger-color-hover;
+			background-color: $label-danger-hover-bg;
+			border-color: $label-danger-hover-border-color;
+			color: $label-danger-hover-color;
 		}
 	}
 
@@ -97,7 +97,7 @@
 
 		&:focus,
 		&:hover {
-			color: $label-danger-color-hover;
+			color: $label-danger-hover-color;
 		}
 	}
 }
