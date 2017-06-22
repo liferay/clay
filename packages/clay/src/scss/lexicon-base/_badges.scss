@@ -75,13 +75,13 @@
 
 .badge-danger {
 	background-color: $badge-danger-bg;
-	border-color: $badge-danger-border;
+	border-color: $badge-danger-border-color;
 	color: $badge-danger-color;
 
 	&[href] {
 		@include hover-focus {
 			background-color: $badge-danger-hover-bg;
-			border-color: $badge-danger-hover-border;
+			border-color: $badge-danger-hover-border-color;
 			color: $badge-danger-hover-color;
 		}
 	}
