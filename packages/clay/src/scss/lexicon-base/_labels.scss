@@ -24,8 +24,7 @@
 		display: inline-block;
 		text-decoration: $label-link-text-decoration;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $label-link-hover-color;
 			text-decoration: $label-link-hover-text-decoration;
 		}
@@ -84,8 +83,7 @@
 	color: $label-danger-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $label-danger-hover-bg;
 			border-color: $label-danger-hover-border-color;
 			color: $label-danger-hover-color;
@@ -95,8 +93,7 @@
 	a {
 		color: $label-danger-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $label-danger-hover-color;
 		}
 	}
@@ -107,8 +104,7 @@
 	color: $label-secondary-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $label-secondary-hover-bg;
 			border-color: $label-secondary-hover-border-color;
 			color: $label-secondary-hover-color;
@@ -118,8 +114,7 @@
 	a {
 		color: $label-secondary-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $label-secondary-hover-color;
 		}
 	}
@@ -130,8 +125,7 @@
 	color: $label-info-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $label-info-hover-bg;
 			border-color: $label-info-hover-border-color;
 			color: $label-info-hover-color;
@@ -141,8 +135,7 @@
 	a {
 		color: $label-info-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $label-info-hover-color;
 		}
 	}
@@ -153,8 +146,7 @@
 	color: $label-primary-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $label-primary-hover-bg;
 			border-color: $label-primary-hover-border-color;
 			color: $label-primary-hover-color;
@@ -164,8 +156,7 @@
 	a {
 		color: $label-primary-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $label-primary-hover-color;
 		}
 	}
@@ -176,8 +167,7 @@
 	color: $label-success-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $label-success-hover-bg;
 			border-color: $label-success-hover-border-color;
 			color: $label-success-hover-color;
@@ -187,8 +177,7 @@
 	a {
 		color: $label-success-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $label-success-hover-color;
 		}
 	}
@@ -199,8 +188,7 @@
 	color: $label-warning-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $label-warning-hover-bg;
 			border-color: $label-warning-hover-border-color;
 			color: $label-warning-hover-color;
@@ -210,8 +198,7 @@
 	a {
 		color: $label-warning-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $label-warning-hover-color;
 		}
 	}
