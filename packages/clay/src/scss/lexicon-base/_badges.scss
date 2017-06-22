@@ -19,8 +19,7 @@
 		color: $badge-color;
 		text-decoration: $badge-link-text-decoration;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $badge-link-hover-color;
 			text-decoration: $badge-link-hover-text-decoration;
 		}
@@ -86,8 +85,7 @@
 	color: $badge-danger-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $badge-danger-hover-bg;
 			border-color: $badge-danger-hover-border;
 			color: $badge-danger-hover-color;
@@ -97,8 +95,7 @@
 	a {
 		color: $badge-danger-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $badge-danger-hover-color;
 		}
 	}
@@ -110,8 +107,7 @@
 	color: $badge-default-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $badge-default-hover-bg;
 			border-color: $badge-default-hover-border;
 			color: $badge-default-hover-color;
@@ -121,8 +117,7 @@
 	a {
 		color: $badge-default-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $badge-default-hover-color;
 		}
 	}
@@ -134,8 +129,7 @@
 	color: $badge-info-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $badge-info-hover-bg;
 			border-color: $badge-info-hover-border;
 			color: $badge-info-hover-color;
@@ -145,8 +139,7 @@
 	a {
 		color: $badge-info-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $badge-info-hover-color;
 		}
 	}
@@ -158,8 +151,7 @@
 	color: $badge-primary-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $badge-primary-hover-bg;
 			border-color: $badge-primary-hover-border;
 			color: $badge-primary-hover-color;
@@ -169,8 +161,7 @@
 	a {
 		color: $badge-primary-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $badge-primary-hover-color;
 		}
 	}
@@ -182,8 +173,7 @@
 	color: $badge-success-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $badge-success-hover-bg;
 			border-color: $badge-success-hover-border;
 			color: $badge-success-hover-color;
@@ -193,8 +183,7 @@
 	a {
 		color: $badge-success-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $badge-success-hover-color;
 		}
 	}
@@ -206,8 +195,7 @@
 	color: $badge-warning-color;
 
 	&[href] {
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			background-color: $badge-warning-hover-bg;
 			border-color: $badge-warning-hover-border;
 			color: $badge-warning-hover-color;
@@ -217,8 +205,7 @@
 	a {
 		color: $badge-warning-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $badge-warning-hover-color;
 		}
 	}
