@@ -58,10 +58,7 @@
 
 .label-sm {
 	font-size: $label-font-size-sm;
-	padding-bottom: $label-padding-bottom-sm;
-	padding-left: $label-padding-left-sm;
-	padding-right: $label-padding-right-sm;
-	padding-top: $label-padding-top-sm;
+	padding: $label-padding-y-sm $label-padding-x-sm;
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
