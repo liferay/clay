@@ -40,7 +40,7 @@
 }
 
 .badge-sm {
-	font-size: $badge-sm-font-size;
+	font-size: $badge-font-size-sm;
 	padding-bottom: $badge-sm-padding-bottom;
 	padding-left: $badge-sm-padding-left;
 	padding-right: $badge-sm-padding-right;
@@ -49,7 +49,7 @@
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
 			@if (variable-exists(badge-sm-desktop-font-size)) {
-				font-size: $badge-sm-desktop-font-size;
+				font-size: $badge-font-size-sm-desktop;
 			}
 		}
 	}
