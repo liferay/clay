@@ -9,8 +9,8 @@
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if (variable-exists(badge-desktop-font-size)) {
-				font-size: $badge-desktop-font-size;
+			@if (variable-exists(badge-font-size-desktop)) {
+				font-size: $badge-font-size-desktop;
 			}
 		}
 	}
