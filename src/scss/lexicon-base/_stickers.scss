@@ -82,13 +82,13 @@
 // Sticker Sizes
 
 .sticker-sm {
-	font-size: $sticker-sm-font-size;
+	font-size: $sticker-font-size-sm;
 
-	@include monospace($sticker-sm-monospaced-size);
+	@include monospace($sticker-monospaced-size-sm);
 
 	.lexicon-icon {
-		height: $sticker-sm-font-size;
-		width: $sticker-sm-font-size;
+		height: $sticker-font-size-sm;
+		width: $sticker-font-size-sm;
 	}
 }
 
