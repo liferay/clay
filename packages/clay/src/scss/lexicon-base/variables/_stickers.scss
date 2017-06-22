@@ -19,12 +19,12 @@ $sticker-monospaced-size-sm: ceil($sticker-monospaced-size * 0.6875) !default; /
 
 $sticker-danger-bg: $label-danger-bg !default;
 $sticker-danger-color: null !default;
-$sticker-default-bg: $label-secondary-bg !default;
-$sticker-default-color: null !default;
 $sticker-info-bg: $label-info-bg !default;
 $sticker-info-color: null !default;
 $sticker-primary-bg: $label-primary-bg !default;
 $sticker-primary-color: null !default;
+$sticker-secondary-bg: $label-secondary-bg !default;
+$sticker-secondary-color: null !default;
 $sticker-success-bg: $label-success-bg !default;
 $sticker-success-color: null !default;
 $sticker-warning-bg: $label-warning-bg !default;
