@@ -1,18 +1,12 @@
+$label-color: null !default;
+$label-link-hover-color: #FFF !default;
 
-$label-primary-bg: $brand-primary !default;
-$label-success-bg: $brand-success !default;
-$label-info-bg: $brand-info !default;
-$label-warning-bg: $brand-warning !default;
-$label-danger-bg: $brand-danger !default;
-$label-color: #fff !default;
-$label-link-hover-color: #fff !default;
-
-$label-font-size: 12px !default;
+$label-font-size: 75% !default;
 $label-font-weight: bold !default;
 $label-lexicon-icon-height: 9px !default;
 $label-lexicon-icon-width: $label-lexicon-icon-height !default;
-$label-padding-x: 7px !default;
-$label-padding-y: 3px !default;
+$label-padding-x: 0.4375rem !default; // 7px
+$label-padding-y: 0.1875rem !default; // 3px
 
 $label-link-text-decoration: underline !default;
 $label-link-hover-text-decoration: none !default;
@@ -24,47 +18,54 @@ $label-padding-x-lg: 12px !default;
 $label-padding-y-lg: 6px !default;
 
 $label-font-size-sm: 9px !default;
-$label-lexicon-icon-height-sm: 5px !default;
+$label-lexicon-icon-height-sm: 7px !default;
 $label-lexicon-icon-width-sm: $label-lexicon-icon-height-sm !default;
 $label-padding-x-sm: 7px !default;
 $label-padding-y-sm: 2px !default;
 
-$label-border-style: null !default;
-$label-border-width: null !default;
+$label-border-color: $body-color !default;
+$label-border-radius: $border-radius !default;
+$label-border-style: solid !default;
+$label-border-width: 1px !default;
 
+$label-danger-bg: null !default;
 $label-danger-hover-bg: null !default;
-$label-danger-border-color: null !default;
-$label-danger-hover-border-color: null !default;
-$label-danger-color: null !default;
-$label-danger-hover-color: null !default;
+$label-danger-border-color: $brand-danger !default;
+$label-danger-hover-border-color: darken($label-danger-border-color, 10%) !default;
+$label-danger-color: $brand-danger !default;
+$label-danger-hover-color: darken($label-danger-color, 10%) !default;
 
-$label-secondary-bg: $gray-light !default;
+$label-secondary-bg: null !default;
 $label-secondary-hover-bg: null !default;
-$label-secondary-border-color: null !default;
-$label-secondary-hover-border-color: null !default;
-$label-secondary-color: null !default;
-$label-secondary-hover-color: null !default;
+$label-secondary-border-color: $gray-light !default;
+$label-secondary-hover-border-color: darken($label-secondary-border-color, 10%) !default;
+$label-secondary-color: $gray-light !default;
+$label-secondary-hover-color: darken($label-secondary-color, 10%) !default;
 
+$label-info-bg: null !default;
 $label-info-hover-bg: null !default;
-$label-info-border-color: null !default;
-$label-info-hover-border-color: null !default;
-$label-info-color: null !default;
-$label-info-hover-color: null !default;
+$label-info-border-color: $brand-info !default;
+$label-info-hover-border-color: darken($label-info-border-color, 10%) !default;
+$label-info-color: $brand-info !default;
+$label-info-hover-color: darken($label-info-color, 10%) !default;
 
+$label-primary-bg: null !default;
 $label-primary-hover-bg: null !default;
-$label-primary-border-color: null !default;
-$label-primary-hover-border-color: null !default;
-$label-primary-color: null !default;
-$label-primary-hover-color: null !default;
+$label-primary-border-color: $brand-primary !default;
+$label-primary-hover-border-color: darken($label-primary-border-color, 10%) !default;
+$label-primary-color: $brand-primary !default;
+$label-primary-hover-color: darken($label-primary-color, 10%) !default;
 
+$label-success-bg: null !default;
 $label-success-hover-bg: null !default;
-$label-success-border-color: null !default;
-$label-success-hover-border-color: null !default;
-$label-success-color: null !default;
-$label-success-hover-color: null !default;
+$label-success-border-color: $brand-success !default;
+$label-success-hover-border-color: darken($label-success-border-color, 10%) !default;
+$label-success-color: $brand-success !default;
+$label-success-hover-color: darken($label-success-color, 10%) !default;
 
+$label-warning-bg: null !default;
 $label-warning-hover-bg: null !default;
-$label-warning-border-color: null !default;
-$label-warning-hover-border-color: null !default;
-$label-warning-color: null !default;
-$label-warning-hover-color: null !default;
+$label-warning-border-color: $brand-warning !default;
+$label-warning-hover-border-color: darken($label-warning-border-color, 10%) !default;
+$label-warning-color: $brand-warning !default;
+$label-warning-hover-color: darken($label-warning-color, 10%) !default;
