@@ -7,10 +7,7 @@
 	margin-bottom: 2px;
 	margin-top: 2px;
 	max-width: 100%;
-	padding-bottom: $label-padding-bottom;
-	padding-left: $label-padding-left;
-	padding-right: $label-padding-right;
-	padding-top: $label-padding-top;
+	padding: $label-padding-y $label-padding-x;
 	white-space: normal;
 	word-wrap: break-word;
 
