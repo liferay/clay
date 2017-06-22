@@ -6,10 +6,8 @@ $badge-padding-y: 9px !default;
 
 $badge-lg-desktop-font-size: $font-size-lg !default; // 20px
 $badge-lg-font-size: $font-size-lg / 1.166667 !default;
-$badge-lg-padding-bottom: 14px !default; // 14px
-$badge-lg-padding-left: 20px !default; // 20px
-$badge-lg-padding-right: 20px !default; // 20px
-$badge-lg-padding-top: 14px !default; // 14px
+$badge-padding-x-lg: 20px !default;
+$badge-padding-y-lg: 14px !default;
 
 $badge-sm-desktop-font-size: $font-size-sm !default;
 $badge-sm-font-size: $font-size-sm / 1.166667 !default;

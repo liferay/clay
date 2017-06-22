@@ -28,10 +28,7 @@
 
 .badge-lg {
 	font-size: $badge-lg-font-size;
-	padding-bottom: $badge-lg-padding-bottom;
-	padding-left: $badge-lg-padding-left;
-	padding-right: $badge-lg-padding-right;
-	padding-top: $badge-lg-padding-top;
+	padding: $badge-padding-y-lg $badge-padding-x-lg;
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
