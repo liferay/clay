@@ -1,5 +1,6 @@
 .sticker {
-	border-radius: $sticker-border-radius;
+	@include border-radius($sticker-border-radius);
+
 	color: $sticker-color;
 	display: inline-block;
 	font-size: $sticker-font-size;
