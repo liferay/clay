@@ -141,13 +141,13 @@
 
 .badge-primary {
 	background-color: $badge-primary-bg;
-	border-color: $badge-primary-border;
+	border-color: $badge-primary-border-color;
 	color: $badge-primary-color;
 
 	&[href] {
 		@include hover-focus {
 			background-color: $badge-primary-hover-bg;
-			border-color: $badge-primary-hover-border;
+			border-color: $badge-primary-hover-border-color;
 			color: $badge-primary-hover-color;
 		}
 	}
