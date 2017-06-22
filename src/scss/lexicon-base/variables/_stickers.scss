@@ -1,4 +1,4 @@
-$sticker-border-radius: null !default;
+$sticker-border-radius: $border-radius !default;
 $sticker-color: $label-color !default;
 $sticker-font-size: $label-font-size !default;
 $sticker-gutter-width: $grid-gutter-width-base / 2 !default;
