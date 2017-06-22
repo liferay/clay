@@ -45,10 +45,7 @@
 
 .label-lg {
 	font-size: $label-font-size-lg;
-	padding-bottom: $label-padding-bottom-lg;
-	padding-left: $label-padding-left-lg;
-	padding-right: $label-padding-right-lg;
-	padding-top: $label-padding-top-lg;
+	padding: $label-padding-y-lg $label-padding-x-lg;
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
