@@ -163,13 +163,13 @@
 
 .badge-success {
 	background-color: $badge-success-bg;
-	border-color: $badge-success-border;
+	border-color: $badge-success-border-color;
 	color: $badge-success-color;
 
 	&[href] {
 		@include hover-focus {
 			background-color: $badge-success-hover-bg;
-			border-color: $badge-success-hover-border;
+			border-color: $badge-success-hover-border-color;
 			color: $badge-success-hover-color;
 		}
 	}
