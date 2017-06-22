@@ -1,6 +1,9 @@
 .label {
+	border-color: $label-border-color;
+	border-radius: $label-border-radius;
 	border-style: $label-border-style;
 	border-width: $label-border-width;
+	color: $label-color;
 	display: inline-block;
 	font-size: $label-font-size;
 	font-weight: $label-font-weight;
@@ -29,6 +32,10 @@
 			text-decoration: $label-link-hover-text-decoration;
 		}
 	}
+}
+
+a.label {
+	text-decoration: none;
 }
 
 .label-lg {
@@ -79,6 +86,7 @@
 // Skin
 
 .label-danger {
+	background-color: $label-danger-bg;
 	border-color: $label-danger-border-color;
 	color: $label-danger-color;
 
@@ -122,6 +130,7 @@
 }
 
 .label-info {
+	background-color: $label-info-bg;
 	border-color: $label-info-border-color;
 	color: $label-info-color;
 
@@ -143,6 +152,7 @@
 }
 
 .label-primary {
+	background-color: $label-primary-bg;
 	border-color: $label-primary-border-color;
 	color: $label-primary-color;
 
@@ -164,6 +174,7 @@
 }
 
 .label-success {
+	background-color: $label-success-bg;
 	border-color: $label-success-border-color;
 	color: $label-success-color;
 
@@ -185,6 +196,7 @@
 }
 
 .label-warning {
+	background-color: $label-warning-bg;
 	border-color: $label-warning-border-color;
 	color: $label-warning-color;
 
