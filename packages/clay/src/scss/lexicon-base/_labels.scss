@@ -201,9 +201,9 @@
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-warning-bg-hover;
-			border-color: $label-warning-border-color-hover;
-			color: $label-warning-color-hover;
+			background-color: $label-warning-hover-bg;
+			border-color: $label-warning-hover-border-color;
+			color: $label-warning-hover-color;
 		}
 	}
 
@@ -212,7 +212,7 @@
 
 		&:focus,
 		&:hover {
-			color: $label-warning-color-hover;
+			color: $label-warning-hover-color;
 		}
 	}
 }
