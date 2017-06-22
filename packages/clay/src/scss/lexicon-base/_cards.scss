@@ -267,7 +267,7 @@
 .form-check-middle-left,
 .form-check-top-left {
 	.card-horizontal {
-		> .card-block {
+		> .card-body {
 			padding-left: $checkbox-left-card-padding;
 		}
 	}
@@ -277,7 +277,7 @@
 .form-check-middle-right,
 .form-check-top-right {
 	.card-horizontal {
-		> .card-block {
+		> .card-body {
 			padding-right: $checkbox-right-card-padding;
 		}
 	}
