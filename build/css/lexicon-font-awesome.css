@@ -8056,28 +8056,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   visibility: hidden !important;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 0;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.flex-col-expand {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: flex-start;
-  max-width: 100%;
-  min-height: 0;
-  min-width: 100px;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  word-wrap: break-word;
-}
-
 .alert-notification {
   width: 100%;
 }
@@ -8164,15 +8142,9 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 .badge {
-  border-radius: 100px;
-  font-size: 75%;
   margin-bottom: 2px;
   margin-top: 2px;
   max-width: 100%;
-  padding-bottom: 3px;
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 3px;
   white-space: normal;
   word-wrap: break-word;
 }
@@ -8187,31 +8159,14 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   text-decoration: none;
 }
 
-.badge [class*="icon-"] {
-  font-size: 0.9em;
-  text-decoration: none;
-}
-
-.badge .glyphicon {
-  font-size: 0.8em;
-  top: 0;
-  vertical-align: middle;
-}
-
 .badge-lg {
   font-size: 16px;
-  padding-bottom: 6px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
+  padding: 6px 12px;
 }
 
 .badge-sm {
   font-size: 9px;
-  padding-bottom: 2px;
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 2px;
+  padding: 2px 7px;
 }
 
 .badge .lexicon-icon {
@@ -8313,18 +8268,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   float: none;
   padding-left: 0;
   padding-right: 0;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.rounded-circle {
-  border-radius: 5000px;
-}
-
-.rounded-0 {
-  border-radius: 0;
 }
 
 .btn-primary:disabled, .btn-primary.disabled {
@@ -9326,56 +9269,43 @@ fieldset[disabled] label .form-control {
 }
 
 .label {
+  border-color: #292b2c;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
   display: inline-block;
-  font-size: 12px;
+  font-size: 75%;
   font-weight: bold;
   margin-bottom: 2px;
   margin-top: 2px;
   max-width: 100%;
-  padding-bottom: 3px;
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 3px;
+  padding: 0.1875rem 0.4375rem;
   white-space: normal;
   word-wrap: break-word;
 }
 
 .label a {
-  color: #fff;
   display: inline-block;
   text-decoration: underline;
 }
 
 .label a:focus, .label a:hover {
-  color: #fff;
+  color: #FFF;
   text-decoration: none;
 }
 
-.label [class*="icon-"] {
-  font-size: 0.9em;
+a.label {
   text-decoration: none;
-}
-
-.label .glyphicon {
-  font-size: 0.8em;
-  top: 0;
-  vertical-align: middle;
 }
 
 .label-lg {
   font-size: 16px;
-  padding-bottom: 6px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
+  padding: 6px 12px;
 }
 
 .label-sm {
   font-size: 9px;
-  padding-bottom: 2px;
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 2px;
+  padding: 2px 7px;
 }
 
 .label .lexicon-icon {
@@ -9391,8 +9321,116 @@ fieldset[disabled] label .form-control {
 }
 
 .label-sm .lexicon-icon {
-  height: 5px;
-  width: 5px;
+  height: 7px;
+  width: 7px;
+}
+
+.label-danger {
+  border-color: #d9534f;
+  color: #d9534f;
+}
+
+.label-danger[href]:focus, .label-danger[href]:hover {
+  border-color: #a02622;
+  color: #a02622;
+}
+
+.label-danger a {
+  color: #d9534f;
+}
+
+.label-danger a:focus, .label-danger a:hover {
+  color: #a02622;
+}
+
+.label-info {
+  border-color: #5bc0de;
+  color: #5bc0de;
+}
+
+.label-info[href]:focus, .label-info[href]:hover {
+  border-color: #2390b0;
+  color: #2390b0;
+}
+
+.label-info a {
+  color: #5bc0de;
+}
+
+.label-info a:focus, .label-info a:hover {
+  color: #2390b0;
+}
+
+.label-primary {
+  border-color: #0275d8;
+  color: #0275d8;
+}
+
+.label-primary[href]:focus, .label-primary[href]:hover {
+  border-color: #013e73;
+  color: #013e73;
+}
+
+.label-primary a {
+  color: #0275d8;
+}
+
+.label-primary a:focus, .label-primary a:hover {
+  color: #013e73;
+}
+
+.label-secondary {
+  border-color: #636c72;
+  color: #636c72;
+}
+
+.label-secondary[href]:focus, .label-secondary[href]:hover {
+  border-color: #34383b;
+  color: #34383b;
+}
+
+.label-secondary a {
+  color: #636c72;
+}
+
+.label-secondary a:focus, .label-secondary a:hover {
+  color: #34383b;
+}
+
+.label-success {
+  border-color: #5cb85c;
+  color: #5cb85c;
+}
+
+.label-success[href]:focus, .label-success[href]:hover {
+  border-color: #357935;
+  color: #357935;
+}
+
+.label-success a {
+  color: #5cb85c;
+}
+
+.label-success a:focus, .label-success a:hover {
+  color: #357935;
+}
+
+.label-warning {
+  border-color: #f0ad4e;
+  color: #f0ad4e;
+}
+
+.label-warning[href]:focus, .label-warning[href]:hover {
+  border-color: #c77c11;
+  color: #c77c11;
+}
+
+.label-warning a {
+  color: #f0ad4e;
+}
+
+.label-warning a:focus, .label-warning a:hover {
+  color: #c77c11;
 }
 
 .list-group {
@@ -11557,17 +11595,14 @@ fieldset[disabled] label .form-control {
 }
 
 .sticker {
-  color: #fff;
+  border-radius: 0.25rem;
   display: inline-block;
-  font-size: 12px;
-  left: 15px;
+  font-size: 75%;
   height: 2rem;
   line-height: 2rem;
   width: 2rem;
   padding: 0;
-  position: absolute;
   text-align: center;
-  top: 15px;
 }
 
 .sticker-static {
@@ -11576,6 +11611,8 @@ fieldset[disabled] label .form-control {
 
 .sticker-bottom-left {
   bottom: 15px;
+  left: 15px;
+  position: absolute;
   right: auto;
   top: auto;
 }
@@ -11583,23 +11620,22 @@ fieldset[disabled] label .form-control {
 .sticker-bottom-right {
   bottom: 15px;
   left: auto;
+  position: absolute;
   right: 15px;
   top: auto;
+}
+
+.sticker-top-left {
+  left: 15px;
+  position: absolute;
+  top: 15px;
 }
 
 .sticker-top-right {
   left: auto;
+  position: absolute;
   right: 15px;
-}
-
-.sticker-bottom {
-  bottom: 15px;
-  top: auto;
-}
-
-.sticker-right {
-  left: auto;
-  right: 15px;
+  top: 15px;
 }
 
 .sticker-outside {
@@ -11624,21 +11660,11 @@ fieldset[disabled] label .form-control {
   right: -15px;
 }
 
-.sticker-outside.sticker-bottom {
-  bottom: -15px;
-  top: auto;
-}
-
-.sticker-outside.sticker-right {
-  left: auto;
-  right: -15px;
-}
-
 .sticker-sm {
   font-size: 9px;
-  height: 2rem;
-  line-height: 2rem;
-  width: 2rem;
+  height: 1.375rem;
+  line-height: 1.375rem;
+  width: 1.375rem;
 }
 
 .sticker-sm .lexicon-icon {
@@ -11648,9 +11674,9 @@ fieldset[disabled] label .form-control {
 
 .sticker-lg {
   font-size: 16px;
-  height: 3rem;
-  line-height: 3rem;
-  width: 3rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  width: 2.75rem;
 }
 
 .sticker-lg .lexicon-icon {
@@ -11658,40 +11684,34 @@ fieldset[disabled] label .form-control {
   width: 16px;
 }
 
-.sticker-circle {
-  border-radius: 100px;
-}
-
-.sticker-rounded {
-  border-radius: 4px;
-}
-
-.sticker-square {
-  border-radius: 0;
-}
-
 .sticker-danger {
   background-color: #d9534f;
-}
-
-.sticker-default {
-  background-color: #636c72;
+  color: #FFF;
 }
 
 .sticker-info {
   background-color: #5bc0de;
+  color: #FFF;
 }
 
 .sticker-primary {
   background-color: #0275d8;
+  color: #FFF;
+}
+
+.sticker-secondary {
+  background-color: #636c72;
+  color: #FFF;
 }
 
 .sticker-success {
   background-color: #5cb85c;
+  color: #FFF;
 }
 
 .sticker-warning {
   background-color: #f0ad4e;
+  color: #FFF;
 }
 
 th {
@@ -13125,37 +13145,12 @@ button.modal-primary-action-button {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nameplate-label-primary {
-  background-color: #0275d8;
-  color: #fff;
-}
-
 .nameplate-label-primary a {
   color: #23527C;
 }
 
 .nameplate-label-primary a:focus, .nameplate-label-primary a:hover {
   color: #122b40;
-}
-
-.nameplate-label-success {
-  background-color: #5cb85c;
-  color: #fff;
-}
-
-.nameplate-label-info {
-  background-color: #5bc0de;
-  color: #fff;
-}
-
-.nameplate-label-warning {
-  background-color: #f0ad4e;
-  color: #fff;
-}
-
-.nameplate-label-danger {
-  background-color: #d9534f;
-  color: #fff;
 }
 
 .nameplate-label-danger a {
@@ -13558,6 +13553,40 @@ button.modal-primary-action-button {
     clear: both;
     float: left;
   }
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-circle {
+  border-radius: 5000px;
+}
+
+.rounded-0 {
+  border-radius: 0;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.flex-col-expand {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 100px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  word-wrap: break-word;
 }
 
 .loading-icon, .loading-animation,
