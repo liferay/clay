@@ -109,9 +109,9 @@
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-secondary-bg-hover;
-			border-color: $label-secondary-border-color-hover;
-			color: $label-secondary-color-hover;
+			background-color: $label-secondary-hover-bg;
+			border-color: $label-secondary-hover-border-color;
+			color: $label-secondary-hover-color;
 		}
 	}
 
@@ -120,7 +120,7 @@
 
 		&:focus,
 		&:hover {
-			color: $label-secondary-color-hover;
+			color: $label-secondary-hover-color;
 		}
 	}
 }
