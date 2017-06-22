@@ -155,9 +155,9 @@
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-primary-bg-hover;
-			border-color: $label-primary-border-color-hover;
-			color: $label-primary-color-hover;
+			background-color: $label-primary-hover-bg;
+			border-color: $label-primary-hover-border-color;
+			color: $label-primary-hover-color;
 		}
 	}
 
@@ -166,7 +166,7 @@
 
 		&:focus,
 		&:hover {
-			color: $label-primary-color-hover;
+			color: $label-primary-hover-color;
 		}
 	}
 }
