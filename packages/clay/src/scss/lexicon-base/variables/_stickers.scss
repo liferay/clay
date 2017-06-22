@@ -12,8 +12,8 @@ $sticker-monospaced-size: $icon-monospaced-size !default; // 32px
 $sticker-font-size-lg: $label-font-size-lg !default;
 $sticker-monospaced-size-lg: ceil($sticker-monospaced-size * 1.375) !default; // 44px
 
-$sticker-sm-font-size: $label-font-size-sm !default;
-$sticker-sm-monospaced-size: ceil($sticker-monospaced-size * 0.6875) !default; // 22px
+$sticker-font-size-sm: $label-font-size-sm !default;
+$sticker-monospaced-size-sm: ceil($sticker-monospaced-size * 0.6875) !default; // 22px
 
 // Skin
 
