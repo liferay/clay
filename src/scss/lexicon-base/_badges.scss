@@ -27,13 +27,13 @@
 }
 
 .badge-lg {
-	font-size: $badge-lg-font-size;
+	font-size: $badge-font-size-lg;
 	padding: $badge-padding-y-lg $badge-padding-x-lg;
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if (variable-exists(badge-lg-desktop-font-size)) {
-				font-size: $badge-lg-desktop-font-size;
+			@if (variable-exists(badge-font-size-lg-desktop)) {
+				font-size: $badge-font-size-lg-desktop;
 			}
 		}
 	}
