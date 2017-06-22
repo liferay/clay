@@ -18,7 +18,4 @@ $badge-padding-y-sm: 4px !default;
 
 $badge-default-bg: #E7F1F9 !default;
 $badge-default-color: $brand-primary !default;
-
-// Deprecated `$badge-default-link-color` as of v1.0.16 and will be removed in v2.0.0
 $badge-default-hover-color: $badge-default-color !default;
-$badge-default-link-color: $badge-default-color !default;

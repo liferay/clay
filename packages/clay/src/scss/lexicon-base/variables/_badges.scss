@@ -1,10 +1,11 @@
+$badge-border-style: null !default;
+$badge-border-width: null !default;
+
 $badge-lexicon-icon-height: 9px !default; // 9px
 $badge-lexicon-icon-width: $badge-lexicon-icon-height !default; // 9px
 
 $badge-link-text-decoration: underline !default;
-
 $badge-link-hover-text-decoration: none !default;
-
 
 $badge-font-size-lg: 16px !default;
 $badge-lexicon-icon-height-lg: 13px !default;
@@ -18,9 +19,6 @@ $badge-lexicon-icon-width-sm: $badge-lexicon-icon-height-sm !default; // 5px
 $badge-padding-x-sm: 7px !default;
 $badge-padding-y-sm: 2px !default;
 
-$badge-border-style: null !default;
-$badge-border-width: null !default;
-
 $badge-danger-bg: $brand-danger !default;
 $badge-danger-border: null !default;
 $badge-danger-color: null !default;
@@ -30,10 +28,8 @@ $badge-danger-hover-color: null !default;
 
 $badge-default-bg: null !default;
 $badge-default-border: null !default;
-// Deprecated `$badge-default-link-color` as of v1.0.16 and will be removed in v2.0.0
-$badge-default-link-color: null !default;
 
-$badge-default-color: $badge-default-link-color !default;
+$badge-default-color: null !default;
 $badge-default-hover-bg: null !default;
 $badge-default-hover-border: null !default;
 $badge-default-hover-color: null !default;
