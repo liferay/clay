@@ -1,10 +1,7 @@
-@import "utilities";
-
 @import "alerts";
 @import "aspect-ratio";
 @import "badges";
 @import "breadcrumbs";
-@import "borders";
 @import "button-groups";
 @import "buttons";
 @import "cards";
@@ -42,5 +39,8 @@
 @import "timelines";
 @import "toolbars";
 // @import "nav-tabs-scroll";
+
+@import "borders";
+@import "utilities";
 
 @import "loaders";
