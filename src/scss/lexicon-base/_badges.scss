@@ -41,10 +41,7 @@
 
 .badge-sm {
 	font-size: $badge-font-size-sm;
-	padding-bottom: $badge-sm-padding-bottom;
-	padding-left: $badge-sm-padding-left;
-	padding-right: $badge-sm-padding-right;
-	padding-top: $badge-sm-padding-top;
+	padding: $badge-padding-y-sm $badge-padding-x-sm;
 
 	@if ($enable-mobile-desktop-sizes) {
 		@include media-breakpoint-up($mobile-desktop-breakpoint) {
