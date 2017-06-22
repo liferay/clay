@@ -178,9 +178,9 @@
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-success-bg-hover;
-			border-color: $label-success-border-color-hover;
-			color: $label-success-color-hover;
+			background-color: $label-success-hover-bg;
+			border-color: $label-success-hover-border-color;
+			color: $label-success-hover-color;
 		}
 	}
 
@@ -189,7 +189,7 @@
 
 		&:focus,
 		&:hover {
-			color: $label-success-color-hover;
+			color: $label-success-hover-color;
 		}
 	}
 }
