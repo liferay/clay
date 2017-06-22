@@ -4,6 +4,7 @@
 	color: $sticker-color;
 	display: inline-block;
 	font-size: $sticker-font-size;
+	font-weight: $sticker-font-weight;
 
 	@include monospace($sticker-monospaced-size);
 
