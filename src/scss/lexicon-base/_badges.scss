@@ -185,13 +185,13 @@
 
 .badge-warning {
 	background-color: $badge-warning-bg;
-	border-color: $badge-warning-border;
+	border-color: $badge-warning-border-color;
 	color: $badge-warning-color;
 
 	&[href] {
 		@include hover-focus {
 			background-color: $badge-warning-hover-bg;
-			border-color: $badge-warning-hover-border;
+			border-color: $badge-warning-hover-border-color;
 			color: $badge-warning-hover-color;
 		}
 	}
