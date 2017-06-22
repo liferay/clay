@@ -3,13 +3,9 @@ title: Badges, Labels and Stickers
 section: Components
 ---
 
-<div class="row row-spacing" id="badges">
+<div class="clay-site-row-spacer row" id="badges">
 	<div class="col-md-12">
 		<h3>Badges</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Badges help highlight important information such as notifications or new and unread messages. Badges have circular borders by default, for rounded borders, See <a href="#labels">labels</a>.</p>
-		</blockquote>
 
 		<span class="badge badge-default">Default</span>
 		<span class="badge badge-primary">Primary</span>
@@ -17,23 +13,36 @@ section: Components
 		<span class="badge badge-info">Info</span>
 		<span class="badge badge-warning">Warning</span>
 		<span class="badge badge-danger">Danger</span>
-
-<div class="uxgl-toggle-code" style="margin-top:15px;">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">```<span class="badge badge-default">Default</span>
-<span class="badge badge-primary">Primary</span>
-<span class="badge badge-success">Success</span>
-<span class="badge badge-info">Info</span>
-<span class="badge badge-warning">Warning</span>
-<span class="badge badge-danger">Danger</span>```</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Badges as Anchor Tag</h3>
+
+		<a class="badge badge-default" href="#1">Default</a>
+		<a class="badge badge-primary" href="#1">Primary</a>
+		<a class="badge badge-success" href="#1">Success</a>
+		<a class="badge badge-info" href="#1">Info</a>
+		<a class="badge badge-warning" href="#1">Warning</a>
+		<a class="badge badge-danger" href="#1">Danger</a>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Badge Pill</h3>
+
+		<span class="badge badge-default badge-pill">Default</span>
+		<span class="badge badge-pill badge-primary">Primary</span>
+		<span class="badge badge-pill badge-success">Success</span>
+		<span class="badge badge-info badge-pill">Info</span>
+		<span class="badge badge-pill badge-warning">Warning</span>
+		<span class="badge badge-danger badge-pill">Danger</span>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Badge Sizes</h3>
 
@@ -41,7 +50,6 @@ section: Components
 			<p>Use <code>badge-sm</code> and <code>badge-lg</code> to change the badge size.</p>
 		</blockquote>
 
-		<h5>Normal</h5>
 		<div>
 			<span class="badge badge-default badge-sm">Small Badge</span>
 			<span class="badge badge-primary">Default Badge</span>
@@ -68,7 +76,7 @@ section: Components
 			<h5>Lexicon Icons</h5>
 			<span class="badge badge-default badge-sm">
 				Small Badge
-				<a href="#1">
+				<a class="badge-link" href="#1">
 					<svg class="lexicon-icon">
 						<use xlink:href="../../images/icons/icons.svg#times"></use>
 					</svg>
@@ -76,7 +84,7 @@ section: Components
 			</span>
 			<span class="badge badge-primary">
 				Default Badge
-				<a href="#1">
+				<a class="badge-link" href="#1">
 					<svg class="lexicon-icon">
 						<use xlink:href="../../images/icons/icons.svg#times"></use>
 					</svg>
@@ -84,7 +92,7 @@ section: Components
 			</span>
 			<span class="badge badge-lg badge-success">
 				Large Badge
-				<a href="#1">
+				<a class="badge-link" href="#1">
 					<svg class="lexicon-icon">
 						<use xlink:href="../../images/icons/icons.svg#times"></use>
 					</svg>
@@ -124,60 +132,6 @@ section: Components
 </span>```</pre>
 </div>
 
-		<div>
-			<h5>Glyphicons or Font Awesome</h5>
-			<span class="badge badge-default badge-sm">
-				Small Badge
-				<a href="#1">
-					<span class="icon-remove"></span>
-				</a>
-			</span>
-			<span class="badge badge-primary">
-				Default Badge
-				<a href="#1">
-					<span class="glyphicon glyphicon-remove"></span>
-				</a>
-			</span>
-			<span class="badge badge-lg badge-success">
-				Large Badge
-				<a href="#1">
-					<span class="icon-remove"></span>
-				</a>
-			</span>
-		</div>
-
-<div class="uxgl-toggle-code" style="margin-top:15px;">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse01"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse01">
-	<pre><code class="html">```<span class="badge badge-default badge-sm">
-    Small Badge
-    <a class="icon-monospaced" href="#1">
-        <svg class="lexicon-icon">
-            <use xlink:href="../../images/icons/icons.svg#times"></use>
-        </svg>
-    </a>
-</span>
-
-<span class="badge badge-primary">
-    Default Badge
-    <a class="icon-monospaced" href="#1">
-        <svg class="lexicon-icon">
-            <use xlink:href="../../images/icons/icons.svg#times"></use>
-        </svg>
-    </a>
-</span>
-
-<span class="badge badge-lg badge-success">
-    Large Badge
-    <a class="icon-monospaced" href="#1">
-        <svg class="lexicon-icon">
-            <use xlink:href="../../images/icons/icons.svg#times"></use>
-        </svg>
-    </a>
-</span>```</code></pre>
-</div>
-
 	</div>
 </div>
 
@@ -192,13 +146,13 @@ section: Components
 
 	<div class="col-md-4">
 		<h5>Badges inside Nav Pills</h5>
-		<ul class="nav nav-circle nav-pills nav-stacked">
-			<li><a href="#1">Inbox <span class="badge badge-default badge-sm">32</span></a></li>
-			<li><a href="#1">Sent <span class="badge badge-primary badge-sm">2</span></a></li>
-			<li><a href="#1">Drafts <span class="badge badge-sm badge-success">53</span></a></li>
-			<li class="active"><a href="#1">Spam <span class="badge badge-info badge-sm">12</span></a></li>
-			<li><a href="#1">Starred <span class="badge badge-sm badge-warning">1</span></a></li>
-			<li><a href="#1">Important <span class="badge badge-danger badge-sm">12</span></a></li>
+		<ul class="flex-column nav nav-pills">
+			<li class="nav-item"><a class="nav-link" href="#1">Inbox <span class="badge badge-default badge-sm">32</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Sent <span class="badge badge-primary badge-sm">2</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Drafts <span class="badge badge-sm badge-success">53</span></a></li>
+			<li class="nav-item"><a class="active nav-link" href="#1">Spam <span class="badge badge-info badge-sm">12</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Starred <span class="badge badge-sm badge-warning">1</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Important <span class="badge badge-danger badge-sm">12</span></a></li>
 		</ul>
 	</div>
 </div>
