@@ -4,14 +4,11 @@
 	color: $sticker-color;
 	display: inline-block;
 	font-size: $sticker-font-size;
-	left: $sticker-gutter-width;
 
 	@include monospace($sticker-monospaced-size);
 
 	padding: 0;
-	position: absolute;
 	text-align: center;
-	top: $sticker-gutter-width;
 }
 
 .sticker-static {
@@ -22,6 +19,8 @@
 
 .sticker-bottom-left {
 	bottom: $sticker-gutter-width;
+	left: $sticker-gutter-width;
+	position: absolute;
 	right: auto;
 	top: auto;
 }
@@ -29,23 +28,22 @@
 .sticker-bottom-right {
 	bottom: $sticker-gutter-width;
 	left: auto;
+	position: absolute;
 	right: $sticker-gutter-width;
 	top: auto;
+}
+
+.sticker-top-left {
+	left: $sticker-gutter-width;
+	position: absolute;
+	top: $sticker-gutter-width;
 }
 
 .sticker-top-right {
 	left: auto;
+	position: absolute;
 	right: $sticker-gutter-width;
-}
-
-.sticker-bottom {
-	bottom: $sticker-gutter-width;
-	top: auto;
-}
-
-.sticker-right {
-	left: auto;
-	right: $sticker-gutter-width;
+	top: $sticker-gutter-width;
 }
 
 .sticker-outside {
@@ -65,16 +63,6 @@
 	}
 
 	&.sticker-top-right {
-		left: auto;
-		right: -$sticker-gutter-width;
-	}
-
-	&.sticker-bottom {
-		bottom: -$sticker-gutter-width;
-		top: auto;
-	}
-
-	&.sticker-right {
 		left: auto;
 		right: -$sticker-gutter-width;
 	}
