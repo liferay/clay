@@ -1,31 +1,26 @@
 $sticker-border-radius: null !default;
-
-$sticker-circle-border-radius: 100px !default;
-$sticker-rounded-border-radius: 4px !default;
-$sticker-square-border-radius: 0 !default;
-
 $sticker-color: $label-color !default;
 $sticker-font-size: $label-font-size !default;
 $sticker-gutter-width: $grid-gutter-width-base / 2 !default;
-$sticker-monospaced-size: $icon-monospaced-size !default; // 32px
+$sticker-monospaced-size: 2rem !default; // 32px
 
 $sticker-font-size-lg: $label-font-size-lg !default;
-$sticker-monospaced-size-lg: ceil($sticker-monospaced-size * 1.375) !default; // 44px
+$sticker-monospaced-size-lg: $sticker-monospaced-size * 1.375 !default; // 44px
 
 $sticker-font-size-sm: $label-font-size-sm !default;
-$sticker-monospaced-size-sm: ceil($sticker-monospaced-size * 0.6875) !default; // 22px
+$sticker-monospaced-size-sm: $sticker-monospaced-size * 0.6875 !default; // 22px
 
 // Skin
 
-$sticker-danger-bg: $label-danger-bg !default;
-$sticker-danger-color: null !default;
-$sticker-info-bg: $label-info-bg !default;
-$sticker-info-color: null !default;
-$sticker-primary-bg: $label-primary-bg !default;
-$sticker-primary-color: null !default;
-$sticker-secondary-bg: $label-secondary-bg !default;
-$sticker-secondary-color: null !default;
-$sticker-success-bg: $label-success-bg !default;
-$sticker-success-color: null !default;
-$sticker-warning-bg: $label-warning-bg !default;
-$sticker-warning-color: null !default;
+$sticker-danger-bg: $brand-danger !default;
+$sticker-danger-color: #FFF !default;
+$sticker-info-bg: $brand-info !default;
+$sticker-info-color: #FFF !default;
+$sticker-primary-bg: $brand-primary !default;
+$sticker-primary-color: #FFF !default;
+$sticker-secondary-bg: $gray-light !default;
+$sticker-secondary-color: #FFF !default;
+$sticker-success-bg: $brand-success !default;
+$sticker-success-color: #FFF !default;
+$sticker-warning-bg: $brand-warning !default;
+$sticker-warning-color: #FFF !default;

@@ -105,24 +105,6 @@
 
 // Sticker Skins
 
-.sticker-circle {
-	@if ($sticker-border-radius != $sticker-circle-border-radius) {
-		border-radius: $sticker-circle-border-radius;
-	}
-}
-
-.sticker-rounded {
-	@if ($sticker-border-radius != $sticker-rounded-border-radius) {
-		border-radius: $sticker-rounded-border-radius;
-	}
-}
-
-.sticker-square {
-	@if ($sticker-border-radius != null or $sticker-border-radius != $sticker-square-border-radius) {
-		border-radius: $sticker-square-border-radius;
-	}
-}
-
 .sticker-danger {
 	background-color: $sticker-danger-bg;
 	color: $sticker-danger-color;
