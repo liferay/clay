@@ -93,13 +93,13 @@
 }
 
 .sticker-lg {
-	font-size: $sticker-lg-font-size;
+	font-size: $sticker-font-size-lg;
 
-	@include monospace($sticker-lg-monospaced-size);
+	@include monospace($sticker-monospaced-size-lg);
 
 	.lexicon-icon {
-		height: $sticker-lg-font-size;
-		width: $sticker-lg-font-size;
+		height: $sticker-font-size-lg;
+		width: $sticker-font-size-lg;
 	}
 }
 
