@@ -128,11 +128,6 @@
 	color: $sticker-danger-color;
 }
 
-.sticker-default {
-	background-color: $sticker-secondary-bg;
-	color: $sticker-secondary-color;
-}
-
 .sticker-info {
 	background-color: $sticker-info-bg;
 	color: $sticker-info-color;
@@ -141,6 +136,11 @@
 .sticker-primary {
 	background-color: $sticker-primary-bg;
 	color: $sticker-primary-color;
+}
+
+.sticker-secondary {
+	background-color: $sticker-secondary-bg;
+	color: $sticker-secondary-color;
 }
 
 .sticker-success {
