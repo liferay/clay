@@ -97,13 +97,13 @@
 
 .badge-default {
 	background-color: $badge-default-bg;
-	border-color: $badge-default-border;
+	border-color: $badge-default-border-color;
 	color: $badge-default-color;
 
 	&[href] {
 		@include hover-focus {
 			background-color: $badge-default-hover-bg;
-			border-color: $badge-default-hover-border;
+			border-color: $badge-default-hover-border-color;
 			color: $badge-default-hover-color;
 		}
 	}
