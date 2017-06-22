@@ -119,13 +119,13 @@
 
 .badge-info {
 	background-color: $badge-info-bg;
-	border-color: $badge-info-border;
+	border-color: $badge-info-border-color;
 	color: $badge-info-color;
 
 	&[href] {
 		@include hover-focus {
 			background-color: $badge-info-hover-bg;
-			border-color: $badge-info-hover-border;
+			border-color: $badge-info-hover-border-color;
 			color: $badge-info-hover-color;
 		}
 	}
