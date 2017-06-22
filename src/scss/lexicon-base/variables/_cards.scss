@@ -15,7 +15,6 @@ $checkbox-position: 15px !default;
 $card-border-style: solid !default;
 $card-box-shadow: null !default;
 
-// Will need to revisit if https://github.com/twbs/bootstrap/pull/22722 doesn't make it
 $card-link-color: null !default;
 
 $card-rounded-inner-border-radius: if($card-border-width > 0, calc(#{$rounded-border-radius} - #{$card-border-width}), $rounded-border-radius) !default;
