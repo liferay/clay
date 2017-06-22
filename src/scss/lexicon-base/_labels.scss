@@ -132,9 +132,9 @@
 	&[href] {
 		&:focus,
 		&:hover {
-			background-color: $label-info-bg-hover;
-			border-color: $label-info-border-color-hover;
-			color: $label-info-color-hover;
+			background-color: $label-info-hover-bg;
+			border-color: $label-info-hover-border-color;
+			color: $label-info-hover-color;
 		}
 	}
 
@@ -143,7 +143,7 @@
 
 		&:focus,
 		&:hover {
-			color: $label-info-color-hover;
+			color: $label-info-hover-color;
 		}
 	}
 }
