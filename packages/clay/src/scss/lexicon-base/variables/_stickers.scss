@@ -9,8 +9,8 @@ $sticker-font-size: $label-font-size !default;
 $sticker-gutter-width: $grid-gutter-width-base / 2 !default;
 $sticker-monospaced-size: $icon-monospaced-size !default; // 32px
 
-$sticker-lg-font-size: $label-font-size-lg !default;
-$sticker-lg-monospaced-size: ceil($sticker-monospaced-size * 1.375) !default; // 44px
+$sticker-font-size-lg: $label-font-size-lg !default;
+$sticker-monospaced-size-lg: ceil($sticker-monospaced-size * 1.375) !default; // 44px
 
 $sticker-sm-font-size: $label-font-size-sm !default;
 $sticker-sm-monospaced-size: ceil($sticker-monospaced-size * 0.6875) !default; // 22px
