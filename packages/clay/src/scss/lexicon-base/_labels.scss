@@ -14,9 +14,11 @@
 	white-space: normal;
 	word-wrap: break-word;
 
-	@if (variable-exists(label-font-size-desktop)) {
-		@include media-breakpoint-up(md) {
-			font-size: $label-font-size-desktop;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if (variable-exists(label-font-size-desktop)) {
+				font-size: $label-font-size-desktop;
+			}
 		}
 	}
 
@@ -51,9 +53,11 @@
 	padding-right: $label-padding-right-lg;
 	padding-top: $label-padding-top-lg;
 
-	@if (variable-exists(label-font-size-lg-desktop)) {
-		@include media-breakpoint-up(md) {
-			font-size: $label-font-size-lg-desktop;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if (variable-exists(label-font-size-lg-desktop)) {
+				font-size: $label-font-size-lg-desktop;
+			}
 		}
 	}
 }
@@ -65,9 +69,11 @@
 	padding-right: $label-padding-right-sm;
 	padding-top: $label-padding-top-sm;
 
-	@if (variable-exists(label-font-size-sm-desktop)) {
-		@include media-breakpoint-up(md) {
-			font-size: $label-font-size-sm-desktop;
+	@if ($enable-mobile-desktop-sizes) {
+		@include media-breakpoint-up($mobile-desktop-breakpoint) {
+			@if (variable-exists(label-font-size-sm-desktop)) {
+				font-size: $label-font-size-sm-desktop;
+			}
 		}
 	}
 }
