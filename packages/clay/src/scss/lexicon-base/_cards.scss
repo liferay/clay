@@ -8,8 +8,7 @@
 	position: relative;
 
 	@if ($card-border-radius > 0) {
-		.card-col-content,
-		.card-col-field {
+		.flex-col {
 			&:first-child {
 				@include border-left-radius($card-inner-border-radius);
 			}
@@ -34,44 +33,22 @@
 	color: $card-link-color;
 }
 
-// Card Simple Flexbox Grid
-// Pros: fits with BS4 flexbox pattern
-// 		 easier to make columns wrap
-// Cons: hard to make all columns equal height without setting fixed height on container
-
-.card-flex-row {
-	align-items: center;
+.card-row {
 	display: flex;
 	width: 100%;
+
+	.flex-col {
+		justify-content: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.flex-col-expand {
+		min-width: 50px;
+	}
 }
 
-.card-flex-col-content {
-	flex-grow: 1;
-	min-width: 100px;
-	padding-left: 8px;
-	padding-right: 8px;
-}
-
-// Card Simple Grid
-// Pros: easy to make columns equal height
-// Cons: Can't make columns wrap
-
-.card-col-content {
-	display: table-cell;
-	max-width: 10px;
-	position: relative;
-	vertical-align: middle;
-	width: auto;
-}
-
-.card-col-field {
-	display: table-cell;
-	position: relative;
-	vertical-align: middle;
-	width: 1%;
-}
-
-.card-col-gutters {
+.card-row .flex-col-gutters {
 	padding-left: 10px;
 	padding-right: 10px;
 
@@ -81,34 +58,19 @@
 	}
 }
 
-.card-row {
-	display: table;
-	height: 100%;
-	width: 100%;
-}
-
-.card-row-layout-fixed {
-	table-layout: fixed;
-
-	.card-col-field {
-		width: auto;
-	}
-}
-
 // Card Row Content Alignment
 
-.card-col-content,
-.card-col-field {
-	.align-bottom & {
-		vertical-align: bottom;
+.flex-col {
+	.justify-content-center & {
+		justify-content: center;
 	}
 
-	.align-middle & {
-		vertical-align: middle;
+	.justify-content-start & {
+		justify-content: flex-start;
 	}
 
-	.align-top & {
-		vertical-align: top;
+	.justify-content-end & {
+		justify-content: flex-end;
 	}
 
 	.text-center & {
@@ -132,7 +94,7 @@
 	width: 100%;
 }
 
-[class*='card-col-']:first-child .card-item-first {
+.flex-col:first-child .card-item-first {
 	@include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
 }
 
@@ -142,7 +104,7 @@
 	width: 100%;
 }
 
-[class*='card-col-']:last-child .card-item-first {
+.flex-col:last-child .card-item-last {
 	@include border-radius(0 $card-inner-border-radius $card-inner-border-radius 0);
 }
 
@@ -159,7 +121,7 @@
 		border-bottom-right-radius: $card-rounded-inner-border-radius;
 	}
 
-	[class*='card-col-']:first-child  {
+	.flex-col:first-child {
 		border-bottom-left-radius: $card-rounded-inner-border-radius;
 		border-top-left-radius: $card-rounded-inner-border-radius;
 
@@ -168,7 +130,7 @@
 		}
 	}
 
-	[class*='card-col-']:last-child {
+	.flex-col:last-child{
 		border-bottom-right-radius: $card-rounded-inner-border-radius;
 		border-top-right-radius: $card-rounded-inner-border-radius;
 
@@ -191,7 +153,7 @@
 		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
 	}
 
-	[class*='card-col-']:first-child {
+	.flex-col:first-child {
 		border-bottom-left-radius: $card-rounded-0-inner-border-radius;
 		border-top-left-radius: $card-rounded-0-inner-border-radius;
 
@@ -200,7 +162,7 @@
 		}
 	}
 
-	[class*='card-col-']:last-child {
+	.flex-col:last-child {
 		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
 		border-top-right-radius: $card-rounded-0-inner-border-radius;
 
@@ -223,7 +185,7 @@
 		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
 	}
 
-	[class*='card-col-']:first-child {
+	.flex-col:first-child {
 		border-bottom-left-radius: $card-rounded-circle-inner-border-radius;
 		border-top-left-radius: $card-rounded-circle-inner-border-radius;
 
@@ -232,7 +194,7 @@
 		}
 	}
 
-	[class*='card-col-']:last-child {
+	.flex-col:last-child {
 		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
 		border-top-right-radius: $card-rounded-circle-inner-border-radius;
 
