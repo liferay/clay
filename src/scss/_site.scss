@@ -310,7 +310,7 @@ body.fixed {
 	.card-row {
 		height: 100px;
 
-		[class*="card-col"] {
+		.flex-col {
 			text-align: center;
 
 			&:nth-child(odd) {

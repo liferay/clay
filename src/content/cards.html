@@ -30,11 +30,11 @@ section: Components
 	<div class="col-md-6">
 		<div class="card">
 			<div class="card-body">
-				<div class="card-flex-row">
-					<div class="card-flex-col-field">
+				<div class="card-row">
+					<div class="flex-col">
 						<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 					</div>
-					<div class="card-flex-col-content card-col-gutters">
+					<div class="flex-col flex-col-expand flex-col-gutters">
 						<span>This text will fill the remaining space.</span>
 					</div>
 				</div>
@@ -44,14 +44,14 @@ section: Components
 	<div class="col-md-6">
 		<div class="card">
 			<div class="card-body">
-				<div class="card-flex-row">
-					<div class="card-flex-col-field">
+				<div class="card-row">
+					<div class="flex-col">
 						<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 					</div>
-					<div class="card-flex-col-content card-col-gutters">
+					<div class="flex-col flex-col-expand flex-col-gutters">
 						<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 					</div>
-					<div class="card-flex-col-field">
+					<div class="flex-col">
 						<div class="dropdown">
 							<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
@@ -75,14 +75,14 @@ section: Components
 	<div class="col-md-8">
 		<div class="card">
 			<div class="card-body">
-				<div class="card-flex-row">
-					<div class="card-flex-col-field">
+				<div class="card-row">
+					<div class="flex-col">
 						<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 					</div>
-					<div class="card-flex-col-content card-col-gutters">
+					<div class="flex-col flex-col-expand flex-col-gutters">
 						<span>Really super insanely just incredibly long and totally not possible word. ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 					</div>
-					<div class="card-flex-col-field">
+					<div class="flex-col">
 						<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 					</div>
 				</div>
@@ -93,28 +93,27 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Horizontal Card with card-col-*</h3>
-
+		<h3>Horizontal Card with flex-col-*</h3>
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Use <code>card-row</code> with <code>card-col-content</code> and <code>card-col-field</code> to create a number of custom horizontal cards. <code>card-col-content</code> fills the remaining space when used in conjunction with <code>card-col-field</code>. <code>card-col-field</code> will only be as wide as the content inside.</p>
-		</blockquote>
+			<p>Use <code>card-row</code> with <code>flex-col-expand</code> and <code>flex-col</code> to create a number of custom horizontal cards. <code>flex-col-expand</code> fills the remaining space and <code>flex-col</code> is only as wide as its content inside.</p>
 
 			<pre><code class="html">```<div class="card-row">
-    <div class="card-col-field"></div>
-    <div class="card-col-content"></div>
+    <div class="flex-col"></div>
+    <div class="flex-col flex-col-expand"></div>
 </div>```</code></pre>
 
+		</blockquote>
 	</div>
 
 	<div class="col-md-6">
 		<div class="card">
 			<div class="card-body">
 				<div class="card-row">
-					<div class="card-col-field" style="background-color:aliceblue;">
+					<div class="flex-col" style="background-color:aliceblue;">
 						<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 					</div>
-					<div class="card-col-content card-col-gutters" style="background-color:antiquewhite;">
-						<span>This text will fill the remaining space.</span>
+					<div class="flex-col flex-col-expand flex-col-gutters" style="background-color:antiquewhite;">
+						<span>Fills remaining space.</span>
 					</div>
 				</div>
 			</div>
@@ -123,25 +122,24 @@ section: Components
 
 	<div class="col-md-12">
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Two <code class="code">.card-col-field</code>'s no <code class="code">.card-col-content</code>.</p>
-		</blockquote>
-
+			<p>Two <code class="code">.flex-col</code>'s no <code class="code">.flex-col-expand</code>.</p>
 			<pre><code class="html">```<div class="card-row">
-    <div class="card-col-field"></div>
-    <div class="card-col-field"></div>
+    <div class="flex-col"></div>
+    <div class="flex-col"></div>
 </div>```</code></pre>
 
+		</blockquote>
 	</div>
 
 	<div class="col-md-6">
 		<div class="card">
 			<div class="card-body">
 				<div class="card-row">
-					<div class="card-col-field" style="background-color:aliceblue;">
+					<div class="flex-col" style="background-color:aliceblue;">
 						<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 					</div>
-					<div class="card-col-field" style="background-color:antiquewhite;">
-						<span>This text will fill the remaining space.</span>
+					<div class="flex-col flex-col-gutters" style="background-color:antiquewhite;">
+						<span>Only as wide as this text.</span>
 					</div>
 				</div>
 			</div>
@@ -150,13 +148,13 @@ section: Components
 
 	<div class="col-md-12">
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Two <code class="code">.card-col-content</code>'s no <code class="code">.card-col-field</code>.</p>
-		</blockquote>
-
+			<p>Two <code class="code">.flex-col-expand</code>'s no <code class="code">.flex-col</code>.</p>
 			<pre><code class="html">```<div class="card-row">
-    <div class="card-col-content"></div>
-    <div class="card-col-content"></div>
+    <div class="flex-col flex-col-expand"></div>
+    <div class="flex-col flex-col-expand"></div>
 </div>```</code></pre>
+
+		</blockquote>
 
 	</div>
 
@@ -164,16 +162,17 @@ section: Components
 		<div class="card">
 			<div class="card-body">
 				<div class="card-row">
-					<div class="card-col-content" style="background-color:aliceblue;">
+					<div class="flex-col flex-col-expand" style="background-color:aliceblue;">
 						<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 					</div>
-					<div class="card-col-content" style="background-color:antiquewhite;">
-						<span>This text will fill the remaining space.</span>
+					<div class="flex-col flex-col-expand flex-col-gutters" style="background-color:antiquewhite;">
+						<span>This will split the space in half.</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 </div>
 
 <div class="clay-site-row-spacer row">
@@ -182,23 +181,23 @@ section: Components
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Nest <code class="code">card-row</code> in <code class="code">card-body</code> on to add some spacing around a horizontal card.</p>
-		</blockquote>
 
 			<pre><code class="html">```<div class="card-body">
     <div class="card-row"></div>
 </div>```</code></pre>
 
+		</blockquote>
 	</div>
 
 	<div class="col-md-6">
 		<div class="card card-horizontal">
 			<div class="card-body">
 				<div class="card-row">
-					<div class="card-col-field">
+					<div class="flex-col">
 						<img alt="thumbnail" class="card-item-first" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 121px;">
 					</div>
 
-					<div class="card-col-content card-col-gutters">
+					<div class="flex-col flex-col-expand flex-col-gutters">
 						<h4 class="card-title">So ristretto cappuccino</h4>
 						<p class="card-text">Wings eu, pumpkin spice robusta.</p>
 					</div>
@@ -221,11 +220,11 @@ section: Components
 		<div class="card card-horizontal">
 			<div class="card-body">
 				<div class="card-row">
-					<div class="card-col-field">
+					<div class="flex-col">
 						<img alt="thumbnail" class="card-item-first" src="../../images/thumbnail_placeholder.gif" style="width: 150px;">
 					</div>
 
-					<div class="card-col-content card-col-gutters">
+					<div class="flex-col flex-col-expand flex-col-gutters">
 						<h4 class="card-title">So ristretto cappuccino</h4>
 						<p class="card-text truncate-text">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</p>
 					</div>
@@ -240,13 +239,13 @@ section: Components
 				<div class="card card-horizontal">
 					<div class="card-body">
 						<div class="card-row">
-							<div class="card-col-field">
+							<div class="flex-col">
 								<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 							</div>
-							<div class="card-col-content card-col-gutters">
+							<div class="flex-col flex-col-expand flex-col-gutters">
 								<h4 class="card-title truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</h4>
 							</div>
-							<div class="card-col-field">
+							<div class="flex-col">
 								<div class="dropdown">
 									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon">
@@ -272,13 +271,13 @@ section: Components
 				<div class="card card-horizontal">
 					<div class="card-body">
 						<div class="card-row">
-							<div class="card-col-field">
+							<div class="flex-col">
 								<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 							</div>
-							<div class="card-col-content card-col-gutters">
+							<div class="flex-col flex-col-expand flex-col-gutters">
 								<h4 class="card-title" title="Folder 01">Folder 01</h4>
 							</div>
-							<div class="card-col-field">
+							<div class="flex-col">
 								<div class="dropdown">
 									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon">
@@ -304,13 +303,13 @@ section: Components
 				<div class="card card-horizontal">
 					<div class="card-body">
 						<div class="card-row">
-							<div class="card-col-field">
+							<div class="flex-col">
 								<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 							</div>
-							<div class="card-col-content card-col-gutters">
+							<div class="flex-col flex-col-expand flex-col-gutters">
 								<h4 class="card-title" title="Folder 02">Folder 02</h4>
 							</div>
-							<div class="card-col-field">
+							<div class="flex-col">
 								<div class="dropdown">
 									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon">
@@ -336,13 +335,13 @@ section: Components
 				<div class="card card-horizontal">
 					<div class="card-body">
 						<div class="card-row">
-							<div class="card-col-field">
+							<div class="flex-col">
 								<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 							</div>
-							<div class="card-col-content card-col-gutters">
+							<div class="flex-col flex-col-expand flex-col-gutters">
 								<h4 class="card-title" title="Folder 03">Folder 03</h4>
 							</div>
-							<div class="card-col-field">
+							<div class="flex-col">
 								<div class="dropdown">
 									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon">
@@ -372,18 +371,20 @@ section: Components
 		<h3>Card Row Content Alignment Helpers</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Vertically align content by setting the css property <code>vertical-align</code> on the card-col and align content horizontally by using <code>text-align</code> or use Bootstrap 4's helper classes <code>align-bottom</code>, <code>align-middle</code>, <code>align-top</code>, <code>text-left</code>, <code>text-center</code>, or <code>text-right</code>.</p>
+			<p>Vertically align content by setting <code>justify-content</code> to <code>flex-start</code>, <code>center</code>, or <code>flex-end</code> on <code>flex-col</code>.</p>
 
-			<p>You can also use the Bootstrap 4's helper classes above on the <code>card-row</code> to align content in all columns inside the row.</p>
+			<p>Horizontally align content by setting <code>text-align</code> to <code>left</code>, <code>center</code>, or <code>right</code> on <code>flex-col</code>.</p>
+
+			<p>You can also use the Bootstrap 4's helper classes <code>justify-content-start</code>, <code>justify-content-center</code>, or <code>justify-content-end</code> on <code>card-row</code> to align content in all columns inside the row.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
 		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="align-top card-col-field">top</div>
-				<div class="card-col-field">middle</div>
-				<div class="align-bottom card-col-field">bottom</div>
+				<div class="justify-content-start flex-col flex-col-expand">top</div>
+				<div class="flex-col flex-col-expand">middle</div>
+				<div class="justify-content-end flex-col flex-col-expand">bottom</div>
 			</div>
 		</div>
 	</div>
@@ -391,9 +392,9 @@ section: Components
 	<div class="col-md-6">
 		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="card-col-field text-left">left</div>
-				<div class="card-col-field">center</div>
-				<div class="card-col-field text-right">right</div>
+				<div class="flex-col flex-col-expand text-left">left</div>
+				<div class="flex-col flex-col-expand">center</div>
+				<div class="flex-col flex-col-expand text-right">right</div>
 			</div>
 		</div>
 	</div>
@@ -402,18 +403,18 @@ section: Components
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Add gutters to a specific card card column by using the class <code>card-col-gutters</code>.</p>
+			<p>Add gutters to a specific card card column by using the class <code>flex-col-gutters</code>.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
 		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="card-col-field">
+				<div class="flex-col">
 					<img alt="thumbnail" class="card-item-first" src="{{rootPath}}/images/thumbnail_placeholder.gif" style="width: 150px;">
 				</div>
 
-				<div class="card-col-content card-col-gutters">
+				<div class="flex-col flex-col-expand flex-col-gutters">
 					<h4 class="card-title">So ristretto cappuccino</h4>
 
 					<p class="card-text">Wings eu, pumpkin spice robusta.</p>
@@ -435,8 +436,8 @@ section: Components
 	<div class="clay-site-horizontal-card col-md-4">
 		<div class="card card-horizontal rounded">
 			<div class="card-row">
-				<div class="card-col-field">card-col-field</div>
-				<div class="card-col-field">card-col-field</div>
+				<div class="flex-col flex-col-expand">flex-col-expand</div>
+				<div class="flex-col flex-col-expand">flex-col-expand</div>
 			</div>
 		</div>
 	</div>
@@ -444,10 +445,10 @@ section: Components
 	<div class="clay-site-horizontal-card col-md-4">
 		<div class="card card-horizontal rounded-circle">
 			<div class="card-row">
-				<div class="card-col-field">
+				<div class="flex-col flex-col-expand" style="overflow:hidden;">
 					<img alt="thumbnail" class="card-item-first" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 				</div>
-				<div class="card-col-field">card-col-field</div>
+				<div class="flex-col flex-col-expand">flex-col-expand</div>
 			</div>
 		</div>
 	</div>
@@ -455,8 +456,8 @@ section: Components
 	<div class="clay-site-horizontal-card col-md-4">
 		<div class="card card-horizontal rounded-0">
 			<div class="card-row">
-				<div class="card-col-field">card-col-field</div>
-				<div class="card-col-field">card-col-field</div>
+				<div class="flex-col flex-col-expand">flex-col-expand</div>
+				<div class="flex-col flex-col-expand">flex-col-expand</div>
 			</div>
 		</div>
 	</div>
@@ -484,13 +485,13 @@ section: Components
 	<div class="col-md-6 col-sm-12 col-12">
 		<div class="card card-horizontal card-rounded">
 			<div class="align-top card-row">
-				<div class="card-col-content card-col-gutters">
+				<div class="flex-col flex-col-expand flex-col-gutters">
 					<h4 class="card-title">Space Program</h4>
 					<div class="card-divider"></div>
 					<p class="card-text">Because you live life on the edge of space.</p>
 				</div>
-				<div class="card-col-field">
-					<img class="card-item-first" src="../../images/thumbnail_dock.jpg" style="width: 150px;" />
+				<div class="flex-col">
+					<img class="card-item-last" src="../../images/thumbnail_dock.jpg" style="width: 150px;" />
 				</div>
 			</div>
 		</div>
@@ -509,13 +510,13 @@ section: Components
 	<div class="clay-site-horizontal-card col-md-6">
 		<div class="card card-horizontal">
 			<div class="card-row">
-				<div class="card-col-field">
-					card-col-field
+				<div class="flex-col flex-col-expand">
+					flex-col-expand
 				</div>
-				<div class="card-col-field card-col-gutters">
+				<div class="flex-col flex-col-expand">
 					<h4 class="card-title">Title</h4>
 					<div class="card-divider"></div>
-					<p class="card-text">card-col-field</p>
+					<p class="card-text">flex-col-expand</p>
 				</div>
 			</div>
 		</div>
@@ -549,14 +550,14 @@ section: Components
 				</div>
 				<div class="card-body">
 					<div class="align-top card-row">
-						<div class="card-col-content">
+						<div class="flex-col flex-col-expand">
 							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
 							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
 							<span class="truncate-text">Approved</span>
 						</div>
 
-						<div class="card-col-field">
-							<div class="dropdown" style="margin-right: -8px;">
+						<div class="flex-col">
+							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
@@ -586,13 +587,13 @@ section: Components
 			<div class="card card-horizontal">
 				<div class="card-body">
 					<div class="card-row">
-						<div class="card-col-field">
+						<div class="flex-col">
 							<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 						</div>
-						<div class="card-col-content card-col-gutters">
+						<div class="flex-col flex-col-expand flex-col-gutters">
 							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 						</div>
-						<div class="card-col-field">
+						<div class="flex-col">
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
@@ -643,14 +644,14 @@ section: Components
 					</div>
 					<div class="card-body">
 						<div class="align-top card-row">
-							<div class="card-col-content">
+							<div class="flex-col flex-col-expand">
 								<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
 								<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
 								<span class="truncate-text">Approved</span>
 							</div>
 
-							<div class="card-col-field">
-								<div class="dropdown" style="margin-right: -8px;">
+							<div class="flex-col">
+								<div class="dropdown">
 									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
@@ -680,13 +681,13 @@ section: Components
 				<div class="card card-horizontal">
 					<div class="card-body">
 						<div class="card-row">
-							<div class="card-col-field">
+							<div class="flex-col">
 								<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 							</div>
-							<div class="card-col-content card-col-gutters">
+							<div class="flex-col flex-col-expand flex-col-gutters">
 								<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 							</div>
-							<div class="card-col-field">
+							<div class="flex-col">
 								<div class="dropdown">
 									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon">
@@ -738,14 +739,14 @@ section: Components
 				</div>
 				<div class="card-body">
 					<div class="align-top card-row">
-						<div class="card-col-content">
+						<div class="flex-col flex-col-expand">
 							<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
 							<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
 							<span class="truncate-text">Approved</span>
 						</div>
 
-						<div class="card-col-field">
-							<div class="dropdown" style="margin-right: -8px;">
+						<div class="flex-col">
+							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
@@ -775,13 +776,13 @@ section: Components
 			<div class="card card-horizontal">
 				<div class="card-body">
 					<div class="card-row">
-						<div class="card-col-field">
+						<div class="flex-col">
 							<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 						</div>
-						<div class="card-col-content card-col-gutters">
+						<div class="flex-col flex-col-expand flex-col-gutters">
 							<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 						</div>
-						<div class="card-col-field">
+						<div class="flex-col">
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
@@ -832,14 +833,14 @@ section: Components
 					</div>
 					<div class="card-body">
 						<div class="align-top card-row">
-							<div class="card-col-content">
+							<div class="flex-col flex-col-expand">
 								<span class="truncate-text">Aldcott Gage George Polwarth-Kitchener</span>
 								<span class="truncate-text" title="thumbnail_dock.jpg">thumbnail_dock.jpg</span>
 								<span class="truncate-text">Approved</span>
 							</div>
 
-							<div class="card-col-field">
-								<div class="dropdown" style="margin-right: -8px;">
+							<div class="flex-col">
+								<div class="dropdown">
 									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon">
 											<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
@@ -869,13 +870,13 @@ section: Components
 				<div class="card card-horizontal">
 					<div class="card-body">
 						<div class="card-row">
-							<div class="card-col-field">
+							<div class="flex-col">
 								<span class="icon-folder-close-alt sticker sticker-secondary sticker-lg"></span>
 							</div>
-							<div class="card-col-content card-col-gutters">
+							<div class="flex-col flex-col-expand flex-col-gutters">
 								<span class="truncate-text" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 							</div>
-							<div class="card-col-field">
+							<div class="flex-col">
 								<div class="dropdown">
 									<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 										<svg aria-hidden="true" class="lexicon-icon">
