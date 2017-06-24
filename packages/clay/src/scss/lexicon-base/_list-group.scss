@@ -5,8 +5,7 @@
 // 			padding-bottom: $list-group-item-padding-y / 2;
 // 			padding-top: $list-group-item-padding-y / 2;
 
-// 			.flex-col,
-// 			.flex-expand {
+// 			.flex-col {
 // 				padding-bottom: $list-group-item-padding-y / 2;
 // 				padding-top: $list-group-item-padding-y / 2;
 // 			}
@@ -18,8 +17,7 @@
 // 			padding-bottom: $list-group-item-padding-y / 2;
 // 			padding-top: $list-group-item-padding-y / 2;
 
-// 			.flex-col,
-// 			.flex-expand {
+// 			.flex-col {
 // 				padding-bottom: $list-group-item-padding-y / 2;
 // 				padding-top: $list-group-item-padding-y / 2;
 // 			}
@@ -51,15 +49,13 @@
 		padding: 0;
 
 		&.active {
-			.flex-col,
-			.flex-col-expand {
+			.flex-col {
 				border-color: $list-group-active-border-color;
 			}
 		}
 	}
 
-	.flex-col,
-	.flex-col-expand {
+	.flex-col {
 		border-left: $list-group-border-width solid $list-group-border-color;
 		border-right: $list-group-border-width solid $list-group-border-color;
 		margin-left: -$list-group-border-width;
@@ -141,8 +137,7 @@
 	padding-left: $list-group-item-padding-x / 2;
 	padding-right: $list-group-item-padding-x / 2;
 
-	.flex-col,
-	.flex-col-expand {
+	.flex-col {
 		padding-left: $list-group-item-padding-x / 2;
 		padding-right: $list-group-item-padding-x / 2;
 	}
