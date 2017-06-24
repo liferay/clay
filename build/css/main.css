@@ -288,11 +288,11 @@ body.fixed {
   height: 100px;
 }
 
-.clay-site-horizontal-card .card-row [class*="card-col"] {
+.clay-site-horizontal-card .card-row .flex-col {
   text-align: center;
 }
 
-.clay-site-horizontal-card .card-row [class*="card-col"]:nth-child(odd) {
+.clay-site-horizontal-card .card-row .flex-col:nth-child(odd) {
   background-color: #f7f7f7;
   color: #7c7c85;
 }
