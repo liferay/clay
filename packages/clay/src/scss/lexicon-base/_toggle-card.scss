@@ -13,7 +13,7 @@
 	color: $toggle-card-text-color;
 	display: table;
 	height: $toggle-card-height;
-	padding: $toggle-card-padding-vertical $toggle-card-padding-horizontal;
+	padding: $toggle-card-padding-y $toggle-card-padding-x;
 	text-align: center;
 	width: $toggle-card-width;
 }
@@ -43,10 +43,10 @@
 }
 
 .toggle-card-label {
-	height: $toggle-card-height - $toggle-card-icon-height - ($toggle-card-border-width * 2) - $toggle-card-padding-vertical;
+	height: $toggle-card-height - $toggle-card-icon-height - ($toggle-card-border-width * 2) - $toggle-card-padding-y;
 	line-height: 16px;
 	overflow: hidden;
-	padding-top: $toggle-card-padding-vertical;
+	padding-top: $toggle-card-padding-y;
 }
 
 input.toggle-card {
@@ -80,10 +80,10 @@ input.toggle-card {
 		background-color: $toggle-card-on-bg;
 		border: $toggle-card-on-border-width solid $toggle-card-on-border;
 		color: $toggle-card-on-text-color;
-		padding-bottom: $toggle-card-padding-vertical - abs($toggle-card-border-width - $toggle-card-on-border-width);
-		padding-left: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
-		padding-right: $toggle-card-padding-horizontal - abs($toggle-card-border-width - $toggle-card-on-border-width);
-		padding-top: $toggle-card-padding-vertical - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-bottom: $toggle-card-padding-y - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-left: $toggle-card-padding-x - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-right: $toggle-card-padding-x - abs($toggle-card-border-width - $toggle-card-on-border-width);
+		padding-top: $toggle-card-padding-y - abs($toggle-card-border-width - $toggle-card-on-border-width);
 
 		.toggle-card-off {
 			display: none;
