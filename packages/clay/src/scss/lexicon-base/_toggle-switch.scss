@@ -24,7 +24,7 @@ input.toggle-switch {
 		cursor: pointer;
 		display: block;
 		float: left;
-		font-size: 1.2rem;
+		font-size: 0.75rem;
 		height: $toggle-switch-bar-height;
 		line-height: $toggle-switch-bar-height;
 		position: relative;
@@ -173,7 +173,7 @@ input.toggle-switch {
 .toggle-switch-text {
 	clear: both;
 	display: block;
-	font-size: 1.25rem;
+	font-size: 0.75rem;
 }
 
 .toggle-switch-text-left {
