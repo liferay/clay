@@ -1,14 +1,14 @@
 @import "variables/globals";
 
 @import "variables/alerts";
+@import "variables/badges";
 @import "variables/breadcrumbs";
 @import "variables/buttons";
 @import "variables/cards";
 @import "variables/dropdowns";
 @import "variables/forms";
 @import "variables/icons";
-@import "variables/labels"; // dropped
-@import "variables/badges"; // Badges inherit from Labels
+@import "variables/labels";
 @import "variables/list-group";
 @import "variables/modals";
 @import "variables/nameplates";

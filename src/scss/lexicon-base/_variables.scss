@@ -1,6 +1,7 @@
 @import "variables/globals";
 
 @import "variables/alerts";
+@import "variables/badges";
 @import "variables/breadcrumbs";
 @import "variables/buttons";
 @import "variables/cards";
@@ -8,7 +9,6 @@
 @import "variables/forms";
 @import "variables/icons";
 @import "variables/labels";
-@import "variables/badges"; // Inherits from Labels
 @import "variables/management-bar";
 @import "variables/modals";
 @import "variables/list-group";
