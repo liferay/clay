@@ -7,7 +7,7 @@
 
 .toggle-card-container {
 	background-color: $toggle-card-bg;
-	border: $toggle-card-border-width solid $toggle-card-border;
+	border: $toggle-card-border-width solid $toggle-card-border-color;
 	border-radius: $toggle-card-border-radius;
 	box-shadow: $toggle-card-box-shadow;
 	color: $toggle-card-text-color;
@@ -68,7 +68,7 @@ input.toggle-card {
 
 		.toggle-card-icon {
 			background-color: $toggle-card-icon-bg;
-			border: $toggle-card-icon-border solid $toggle-card-icon-border-width;
+			border: $toggle-card-icon-border-width solid $toggle-card-icon-border-color;
 
 			[class*="icon-"] {
 				line-height: $toggle-card-icon-height - ($toggle-card-icon-border-width * 2);
@@ -78,7 +78,7 @@ input.toggle-card {
 
 	&:checked ~ .toggle-card-container {
 		background-color: $toggle-card-on-bg;
-		border: $toggle-card-on-border-width solid $toggle-card-on-border;
+		border: $toggle-card-on-border-width solid $toggle-card-on-border-color;
 		color: $toggle-card-on-text-color;
 		padding-bottom: $toggle-card-padding-y - abs($toggle-card-border-width - $toggle-card-on-border-width);
 		padding-left: $toggle-card-padding-x - abs($toggle-card-border-width - $toggle-card-on-border-width);
@@ -95,7 +95,7 @@ input.toggle-card {
 
 		.toggle-card-icon {
 			background-color: $toggle-card-on-icon-bg;
-			border: $toggle-card-on-icon-border-width solid $toggle-card-on-icon-border;
+			border: $toggle-card-on-icon-border-width solid $toggle-card-on-icon-border-color;
 
 			[class*="icon-"] {
 				line-height: $toggle-card-icon-height - ($toggle-card-on-icon-border-width * 2);
