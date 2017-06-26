@@ -10,7 +10,7 @@
 	border: $toggle-card-border-width solid $toggle-card-border-color;
 	border-radius: $toggle-card-border-radius;
 	box-shadow: $toggle-card-box-shadow;
-	color: $toggle-card-text-color;
+	color: $toggle-card-color;
 	display: table;
 	height: $toggle-card-height;
 	padding: $toggle-card-padding-y $toggle-card-padding-x;
@@ -79,7 +79,7 @@ input.toggle-card {
 	&:checked ~ .toggle-card-container {
 		background-color: $toggle-card-on-bg;
 		border: $toggle-card-on-border-width solid $toggle-card-on-border-color;
-		color: $toggle-card-on-text-color;
+		color: $toggle-card-on-color;
 		padding-bottom: $toggle-card-padding-y - abs($toggle-card-border-width - $toggle-card-on-border-width);
 		padding-left: $toggle-card-padding-x - abs($toggle-card-border-width - $toggle-card-on-border-width);
 		padding-right: $toggle-card-padding-x - abs($toggle-card-border-width - $toggle-card-on-border-width);
