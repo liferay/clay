@@ -9739,50 +9739,6 @@ fieldset[disabled] .form-control::placeholder, .form-control[disabled]::placehol
   background-image: none \9;
 }
 
-.figure {
-  display: block;
-  margin-bottom: 1.25rem;
-  overflow: hidden;
-  position: relative;
-}
-
-.figcaption {
-  background-color: #000;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #FFF;
-  font-weight: 300;
-  padding: 10px 15px 10px 15px;
-}
-
-.figcaption-bottom {
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-}
-
-.figcaption-full {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.figcaption-middle {
-  left: 0;
-  padding: 10px 15px 10px 15px;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 100%;
-}
-
-.figcaption-top {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
 .label {
   border-color: #29353D;
   border-radius: 0.25rem;
