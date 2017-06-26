@@ -6,7 +6,6 @@ $toggle-card-padding-x: 12px !default;
 $toggle-card-padding-y: 12px !default;
 
 $toggle-card-border-radius: 4px !default;
-
 $toggle-card-box-shadow: none !default;
 
 $toggle-card-icon-border-radius: 30px !default;
@@ -16,18 +15,18 @@ $toggle-card-icon-width: 32px !default;
 
 // Toggle Card Off Styles
 $toggle-card-bg: $input-bg !default;
-$toggle-card-border: $input-border-color !default;
+$toggle-card-border-color: $input-border-color !default;
 $toggle-card-border-width: 1px !default;
 $toggle-card-icon-bg: transparent !default;
-$toggle-card-icon-border: #869CAD !default;
+$toggle-card-icon-border-color: #869CAD !default;
 $toggle-card-icon-border-width: 0 !default;
 $toggle-card-text-color: $body-color !default;
 
 // Toggle Card On Styles
 $toggle-card-on-bg: $body-bg !default;
-$toggle-card-on-border: $brand-primary !default;
+$toggle-card-on-border-color: $brand-primary !default;
 $toggle-card-on-border-width: 1px !default;
 $toggle-card-on-icon-bg: transparent !default;
-$toggle-card-on-icon-border: $toggle-card-on-border !default;
+$toggle-card-on-icon-border-color: $toggle-card-on-border-color !default;
 $toggle-card-on-icon-border-width: 0 !default;
 $toggle-card-on-text-color: $brand-primary !default;
