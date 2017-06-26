@@ -3,15 +3,11 @@ title: Toggles
 section: Components
 ---
 
-<div class="row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<div class="alert alert-warning">For customizing toggles, see <a href="../extending-toggles/">extending-toggles</a>.</div>
 
 		<h3>Toggle Switch</h3>
-
-		<blockquote class="blockquote-sm blockquote-success">
-			<p>Browser must support <code>:checked</code> pseudo class on checkbox element. For older browsers set css on <code>input.toggle-switch</code> to <code>position: static</code> and hide the <code>.toggle-switch-bar</code> element to display a regular checkbox.</p>
-		</blockquote>
 
 		<form action="#" method="get">
 			<div class="form-group">
@@ -22,32 +18,16 @@ section: Components
 						<span class="toggle-switch-handle"></span>
 					</span>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code>```<div class="form-group">
-    <label>
-        <input class="toggle-switch" type="checkbox">
-
-        <span aria-hidden="true" class="toggle-switch-bar">
-            <span class="toggle-switch-handle"></span>
-        </span>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
 		</form>
 	</div>
 </div>
 
-<div class="row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Toggle Switch with Data Attributes</h3>
 
-		<blockquote class="blockquote-sm blockquote-success" style="margin-top:15px;">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Use data attributes <code>data-label-on=""</code> and <code>data-label-off=""</code> on <code>```<span class="toggle-switch-handle"></span>```</code> to display specific text when the switch is on and off.</p>
 		</blockquote>
 
@@ -62,32 +42,8 @@ section: Components
 						</span>
 					</span>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code>```<div class="form-group">
-    <label>
-        <input class="toggle-switch" type="checkbox">
-        <span class="toggle-switch-label">Toggle Switch with data-label-on</span>
-
-        <span aria-hidden="true" class="toggle-switch-bar">
-            <span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
-            </span>
-        </span>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
-		</form>
-	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-12">
-		<form action="#" method="get">
 			<div class="form-group">
 				<label>
 					<input class="toggle-switch" type="checkbox">
@@ -98,34 +54,16 @@ section: Components
 						</span>
 					</span>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse2"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse2">
-	<pre><code>```<div class="form-group">
-    <label>
-        <input class="toggle-switch" type="checkbox">
-        <span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
-
-        <span aria-hidden="true" class="toggle-switch-bar">
-            <span class="toggle-switch-handle" data-label-off="Switch is off." data-label-on="Switch is on.">
-            </span>
-        </span>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
 		</form>
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Toggle Switch Text</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Add additional text with class <code>toggle-switch-text</code>.</p>
 		</blockquote>
 
@@ -209,11 +147,11 @@ section: Components
 	</div>
 </div>
 
-<div class="row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Toggle Switches with Icons</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Add an icon to the switch for the on position with <code>```<span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"></span>```</code>.</p>
 
 			<p>Add an icon to the switch for the off position with <code>```<span class="button-icon button-icon-off icon-volume-off toggle-switch-icon"></span>```</code>.</p>
@@ -228,8 +166,16 @@ section: Components
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle" data-label-off="" data-label-on="">
-							<span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"></span>
-							<span class="button-icon button-icon-off icon-volume-off toggle-switch-icon"></span>
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-unlock">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#unlock" />
+								</svg>
+							</span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-lock">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#lock" />
+								</svg>
+							</span>
 						</span>
 					</span>
 				</label>
@@ -241,9 +187,17 @@ section: Components
 					<span class="toggle-switch-label">Toggle Switch with data-label-on</span>
 
 					<span aria-hidden="true" class="toggle-switch-bar">
-						<span class="toggle-switch-handle" data-label-off="" data-label-on="ON">
-							<span class="button-icon button-icon-on icon-volume-up toggle-switch-icon"></span>
-							<span class="button-icon button-icon-off icon-volume-off toggle-switch-icon"></span>
+						<span class="toggle-switch-handle" data-label-off="" data-label-on="LIVE">
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-live">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#live" />
+								</svg>
+							</span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-staging">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#staging" />
+								</svg>
+							</span>
 						</span>
 					</span>
 				</label>
@@ -255,42 +209,30 @@ section: Components
 					<span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
 
 					<span aria-hidden="true" class="toggle-switch-bar">
-						<span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
-							<span class="button-icon button-icon-on icon-pencil toggle-switch-icon"></span>
-							<span class="button-icon button-icon-off icon-lock toggle-switch-icon"></span>
+						<span class="toggle-switch-handle" data-label-off="Product Menu Closed" data-label-on="Product Menu Open">
+							<span class="button-icon button-icon-on toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-product-menu-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-open" />
+								</svg>
+							</span>
+							<span class="button-icon button-icon-off toggle-switch-icon">
+								<svg class="lexicon-icon lexicon-icon-product-menu-closed">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#product-menu-closed" />
+								</svg>
+							</span>
 						</span>
 					</span>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse3"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse3">
-	<pre><code>```<div class="form-group">
-    <label>
-        <input class="toggle-switch" type="checkbox">
-        <span class="toggle-switch-label">Toggle Switch with data-label on and data-label-off</span>
-
-        <span aria-hidden="true" class="toggle-switch-bar">
-            <span class="toggle-switch-handle" data-label-off="Locked" data-label-on="Edit">
-                <span class="button-icon button-icon-on icon-pencil toggle-switch-icon"></span>
-                <span class="button-icon button-icon-off icon-lock toggle-switch-icon"></span>
-            </span>
-        </span>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
 		</form>
 	</div>
 </div>
 
-<div class="row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Toggle Switches with Icons (Alternate)</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Add an icon to the switch for the on position with <code>```<span class="icon-ok toggle-switch-icon toggle-switch-icon-on"></span>```</code>.</p>
 
 			<p>Add an icon to the switch for the off position with <code>```<span class="icon-remove toggle-switch-icon toggle-switch-icon-off"></span>```</code>.</p>
@@ -305,40 +247,29 @@ section: Components
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle">
-							<span class="icon-ok toggle-switch-icon toggle-switch-icon-on"></span>
-							<span class="icon-remove toggle-switch-icon toggle-switch-icon-off"></span>
+							<span class="toggle-switch-icon toggle-switch-icon-on">
+								<svg class="lexicon-icon lexicon-icon-check">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+								</svg>
+							</span>
+							<span class="toggle-switch-icon toggle-switch-icon-off">
+								<svg class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+								</svg>
+							</span>
 						</span>
 					</span>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse4"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse4">
-	<pre><code>```<div class="form-group">
-    <label>
-        <input class="toggle-switch" type="checkbox">
-
-        <span aria-hidden="true" class="toggle-switch-bar">
-            <span class="toggle-switch-handle">
-                <span class="icon-ok toggle-switch-icon toggle-switch-icon-on"></span>
-                <span class="icon-remove toggle-switch-icon toggle-switch-icon-off"></span>
-            </span>
-        </span>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
 		</form>
 	</div>
 </div>
 
-<div class="row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Disabled Toggle Switches</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Disable a toggle-switch by adding the attribute <code>disabled="disabled"</code> to <code>```<input type="checkbox">```</code>.</p>
 		</blockquote>
 
@@ -349,40 +280,29 @@ section: Components
 
 					<span aria-hidden="true" class="toggle-switch-bar">
 						<span class="toggle-switch-handle">
-							<span class="icon-ok toggle-switch-icon toggle-switch-icon-on"></span>
-							<span class="icon-remove toggle-switch-icon toggle-switch-icon-off"></span>
+							<span class="toggle-switch-icon toggle-switch-icon-on">
+								<svg class="lexicon-icon lexicon-icon-check">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+								</svg>
+							</span>
+							<span class="toggle-switch-icon toggle-switch-icon-off">
+								<svg class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#times" />
+								</svg>
+							</span>
 						</span>
 					</span>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse5"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse5">
-	<pre><code>```<div class="form-group">
-    <label>
-        <input class="toggle-switch" disabled type="checkbox">
-
-        <span aria-hidden="true" class="toggle-switch-bar">
-            <span class="toggle-switch-handle">
-                <span class="icon-ok toggle-switch-icon toggle-switch-icon-on"></span>
-                <span class="icon-remove toggle-switch-icon toggle-switch-icon-off"></span>
-            </span>
-        </span>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
 		</form>
 	</div>
 </div>
 
-<div class="row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="toggleCard">Toggle Card</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>A checkbox styled like a card.</p>
 		</blockquote>
 
@@ -393,7 +313,9 @@ section: Components
 					<div class="toggle-card-container">
 						<div class="toggle-card-cell">
 							<div class="toggle-card-icon">
-								<span class="icon-ok"></span>
+								<svg class="lexicon-icon lexicon-icon-check">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+								</svg>
 							</div>
 							<div class="toggle-card-label">
 								<span>Regular Label</span>
@@ -401,28 +323,6 @@ section: Components
 						</div>
 					</div>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse6"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse6">
-	<pre><code>```<div class="form-group">
-    <label>
-        <input class="toggle-card" type="checkbox" value="">
-        <div class="toggle-card-container">
-            <div class="toggle-card-cell">
-                <div class="toggle-card-icon">
-                    <span class="icon-ok"></span>
-                </div>
-                <div class="toggle-card-label">
-                    <span>Regular Label</span>
-                </div>
-            </div>
-        </div>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
 
 			<div class="form-group">
@@ -431,8 +331,16 @@ section: Components
 					<div class="toggle-card-container">
 						<div class="toggle-card-cell">
 							<div class="toggle-card-icon">
-								<span class="icon-lock toggle-card-off"></span>
-								<span class="icon-ok toggle-card-on"></span>
+								<span class="toggle-card-off">
+									<svg class="lexicon-icon lexicon-icon-lock">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#lock" />
+									</svg>
+								</span>
+								<span class="toggle-card-on">
+									<svg class="lexicon-icon lexicon-icon-check">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+									</svg>
+								</span>
 							</div>
 							<div class="toggle-card-label">
 								<span>Regular Label</span>
@@ -440,29 +348,6 @@ section: Components
 						</div>
 					</div>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse7"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse7">
-	<pre><code>```<div class="form-group">
-    <label>
-        <input class="toggle-card" type="checkbox" value="">
-        <div class="toggle-card-container">
-            <div class="toggle-card-cell">
-                <div class="toggle-card-icon">
-                    <span class="icon-lock toggle-card-off"></span>
-                    <span class="icon-ok toggle-card-on"></span>
-                </div>
-                <div class="toggle-card-label">
-                    <span>Regular Label</span>
-                </div>
-            </div>
-        </div>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
 			<div class="form-group">
 				<label>
@@ -470,8 +355,16 @@ section: Components
 					<div class="toggle-card-container">
 						<div class="toggle-card-cell">
 							<div class="toggle-card-icon">
-								<span class="icon-lock toggle-card-off"></span>
-								<span class="icon-ok toggle-card-on"></span>
+								<span class="toggle-card-off">
+									<svg class="lexicon-icon lexicon-icon-lock">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#lock" />
+									</svg>
+								</span>
+								<span class="toggle-card-on">
+									<svg class="lexicon-icon lexicon-icon-check">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+									</svg>
+								</span>
 							</div>
 							<div class="toggle-card-label">
 								<span class="toggle-card-off">labelOff</span>
@@ -480,40 +373,16 @@ section: Components
 						</div>
 					</div>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse8"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse8">
-	<pre><code class="html">```<div class="form-group">
-    <label>
-        <input class="toggle-card" type="checkbox" value="">
-        <div class="toggle-card-container">
-            <div class="toggle-card-cell">
-                <div class="toggle-card-icon">
-                    <span class="icon-lock toggle-card-off"></span>
-                    <span class="icon-ok toggle-card-on"></span>
-                </div>
-                <div class="toggle-card-label">
-                    <span class="toggle-card-off">labelOff</span>
-                    <span class="toggle-card-on">labelOn</span>
-                </div>
-            </div>
-        </div>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
 		</form>
 	</div>
 </div>
 
-<div class="row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Disabled Toggle Cards</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>Disable a toggle-card by adding the attribute <code>disabled="disabled"</code> to <code>```<input class="toggle-card" type="checkbox">```</code>.</p>
 		</blockquote>
 
@@ -524,8 +393,16 @@ section: Components
 					<div class="toggle-card-container">
 						<div class="toggle-card-cell">
 							<div class="toggle-card-icon">
-								<span class="icon-lock toggle-card-off"></span>
-								<span class="icon-ok toggle-card-on"></span>
+								<span class="toggle-card-off">
+									<svg class="lexicon-icon lexicon-icon-lock">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#lock" />
+									</svg>
+								</span>
+								<span class="toggle-card-on">
+									<svg class="lexicon-icon lexicon-icon-check">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+									</svg>
+								</span>
 							</div>
 							<div class="toggle-card-label">
 								<span class="toggle-card-off">labelOff</span>
@@ -534,30 +411,6 @@ section: Components
 						</div>
 					</div>
 				</label>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse9"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse9">
-	<pre><code class="html">```<div class="form-group">
-    <label>
-        <input class="toggle-card" disabled type="checkbox" value="">
-        <div class="toggle-card-container">
-            <div class="toggle-card-cell">
-                <div class="toggle-card-icon">
-                    <span class="icon-lock toggle-card-off"></span>
-                    <span class="icon-ok toggle-card-on"></span>
-                </div>
-                <div class="toggle-card-label">
-                    <span class="toggle-card-off">labelOff</span>
-                    <span class="toggle-card-on">labelOn</span>
-                </div>
-            </div>
-        </div>
-    </label>
-</div>```</code></pre>
-</div>
-
 			</div>
 		</form>
 	</div>
