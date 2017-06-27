@@ -1,4 +1,4 @@
-$toggle-switch-transition: all 100ms ease-in !default;
+$toggle-switch-transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in !default;
 
 // must all be same units--start
 $toggle-switch-bar-padding: 0 !default; // space between button and bar, can be negative value
