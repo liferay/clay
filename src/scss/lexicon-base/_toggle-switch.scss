@@ -1,3 +1,7 @@
+.toggle-switch {
+	cursor: pointer;
+}
+
 .toggle-switch-bar {
 	.toggle-switch-handle {
 		display: block;
@@ -19,7 +23,7 @@
 	}
 }
 
-input.toggle-switch {
+.toggle-switch-check {
 	font-size: 62.5%;
 	opacity: 0;
 	position: absolute;
@@ -209,7 +213,7 @@ input.toggle-switch {
 			}
 		}
 
-		input.toggle-switch {
+		.toggle-switch-check {
 			&:empty ~ .toggle-switch-bar {
 				height: $toggle-switch-bar-desktop-height;
 				line-height: $toggle-switch-bar-desktop-height;
