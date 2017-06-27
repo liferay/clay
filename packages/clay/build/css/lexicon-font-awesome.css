@@ -11844,10 +11844,10 @@ th {
 }
 
 .toggle-card-check {
-  -webkit-user-select: none;
   float: left;
   line-height: normal;
   position: relative;
+  user-select: none;
 }
 
 .toggle-card-container {
@@ -11868,7 +11868,8 @@ th {
   font-size: 16px;
   height: 32px;
   justify-content: center;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 32px;
 }
 
@@ -11932,13 +11933,13 @@ th {
   border: 0 solid #0275d8;
 }
 
-.toggle-card-check:focus ~ .toggle-card-container {
-  box-shadow: 0 0 3px 2px rgba(92, 179, 253, 0.6);
-}
-
 .toggle-card-check[disabled] ~ .toggle-card-container {
   cursor: not-allowed;
   opacity: 0.4;
+}
+
+.toggle-switch {
+  cursor: pointer;
 }
 
 .toggle-switch-bar .toggle-switch-handle {
@@ -11960,13 +11961,13 @@ th {
   font-size: 12px;
 }
 
-input.toggle-switch {
+.toggle-switch-check {
   font-size: 62.5%;
   opacity: 0;
   position: absolute;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar {
+.toggle-switch-check:empty ~ .toggle-switch-bar {
   cursor: pointer;
   display: block;
   float: left;
@@ -11979,7 +11980,7 @@ input.toggle-switch:empty ~ .toggle-switch-bar {
   user-select: none;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar:after {
+.toggle-switch-check:empty ~ .toggle-switch-bar:after {
   background-color: #fff;
   border-color: rgba(0, 0, 0, 0.15);
   border-radius: 3px 0 0 3px;
@@ -11992,11 +11993,11 @@ input.toggle-switch:empty ~ .toggle-switch-bar:after {
   left: 0;
   position: absolute;
   top: 0;
-  transition: all 100ms ease-in;
+  transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
   width: 25px;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar:before {
+.toggle-switch-check:empty ~ .toggle-switch-bar:before {
   background-color: #eceeef;
   border-color: rgba(0, 0, 0, 0.15);
   border-radius: 3px;
@@ -12008,22 +12009,22 @@ input.toggle-switch:empty ~ .toggle-switch-bar:before {
   left: 0;
   position: absolute;
   top: 0;
-  transition: all 100ms ease-in;
+  transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
   width: 50px;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:after {
+.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-handle:after {
   content: attr(data-label-off);
   margin-left: 56px;
-  transition: all 100ms ease-in;
+  transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
   white-space: nowrap;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
-  transition: all 100ms ease-in;
+.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-handle:before {
+  transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon {
+.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon {
   color: #464a4c;
   left: 0;
   line-height: 25px;
@@ -12031,29 +12032,29 @@ input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon {
   text-align: center;
   text-indent: 0;
   top: 0;
-  transition: all 100ms ease-in;
+  transition: background-color 100ms ease-in, border-color 100ms ease-in, color 100ms ease-in, left 100ms ease-in, right 100ms ease-in;
   width: 25px;
   z-index: 1;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-on {
+.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-on {
   left: 0;
   opacity: 0;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
+.toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
   left: 25px;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar .button-icon {
+.toggle-switch-check:empty ~ .toggle-switch-bar .button-icon {
   color: #464a4c;
 }
 
-input.toggle-switch:empty ~ .toggle-switch-bar .button-icon-on {
+.toggle-switch-check:empty ~ .toggle-switch-bar .button-icon-on {
   opacity: 0;
 }
 
-input.toggle-switch:checked ~ .toggle-switch-bar:after {
+.toggle-switch-check:checked ~ .toggle-switch-bar:after {
   background-color: #FFF;
   border-color: #0275d8;
   border-radius: 0 3px 3px 0;
@@ -12062,7 +12063,7 @@ input.toggle-switch:checked ~ .toggle-switch-bar:after {
   left: 25px;
 }
 
-input.toggle-switch:checked ~ .toggle-switch-bar:before {
+.toggle-switch-check:checked ~ .toggle-switch-bar:before {
   background-color: #0275d8;
   border-color: #0275d8;
   border-radius: 3px;
@@ -12070,36 +12071,32 @@ input.toggle-switch:checked ~ .toggle-switch-bar:before {
   border-width: 1px;
 }
 
-input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-handle:after {
+.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-handle:after {
   content: attr(data-label-on);
 }
 
-input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon {
+.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon {
   color: #FFF;
 }
 
-input.toggle-switch:checked ~ .toggle-switch-bar .button-icon {
+.toggle-switch-check:checked ~ .toggle-switch-bar .button-icon {
   color: #0275d8;
   left: 25px;
 }
 
-input.toggle-switch:checked ~ .toggle-switch-bar .button-icon-on,
-input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
+.toggle-switch-check:checked ~ .toggle-switch-bar .button-icon-on,
+.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
   opacity: 1;
 }
 
-input.toggle-switch:checked ~ .toggle-switch-bar .button-icon-off,
-input.toggle-switch:checked ~ .toggle-switch-bar .toggle-switch-icon-off {
+.toggle-switch-check:checked ~ .toggle-switch-bar .button-icon-off,
+.toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-off {
   opacity: 0;
 }
 
-input.toggle-switch:disabled ~ .toggle-switch-bar, input.toggle-switch.disabled ~ .toggle-switch-bar {
+.toggle-switch-check:disabled ~ .toggle-switch-bar, .toggle-switch-check.disabled ~ .toggle-switch-bar {
   cursor: not-allowed;
   opacity: 0.4;
-}
-
-input.toggle-switch:focus ~ .toggle-switch-bar:before {
-  box-shadow: 0 0 3px 2px #66AFE6;
 }
 
 .toggle-switch-label {
