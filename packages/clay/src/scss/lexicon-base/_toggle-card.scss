@@ -1,15 +1,17 @@
 .toggle-card-check {
-	-webkit-user-select: none;
 	float: left;
 	line-height: normal;
 	position: relative;
+	user-select: none;
 }
 
 .toggle-card-container {
 	background-color: $toggle-card-bg;
 	border: $toggle-card-border-width solid $toggle-card-border-color;
-	border-radius: $toggle-card-border-radius;
-	box-shadow: $toggle-card-box-shadow;
+
+	@include border-radius($toggle-card-border-radius);
+	@include box-shadow($toggle-card-box-shadow);
+
 	color: $toggle-card-color;
 	height: $toggle-card-height;
 	padding: $toggle-card-padding-y $toggle-card-padding-x;
@@ -20,11 +22,14 @@
 .toggle-card-icon {
 	align-items: center;
 	display: flex;
-	border-radius: $toggle-card-icon-border-radius;
+
+	@include border-radius($toggle-card-icon-border-radius);
+
 	font-size: $toggle-card-icon-font-size;
 	height: $toggle-card-icon-height;
 	justify-content: center;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	width: $toggle-card-icon-width;
 
 	.lexicon-icon {
@@ -90,7 +95,7 @@
 	}
 
 	&:focus ~ .toggle-card-container {
-		box-shadow: 0 0 3px 2px rgba(red($input-focus-border-color), green($input-focus-border-color), blue($input-focus-border-color), 0.6);
+		@include box-shadow(0 0 3px 2px rgba(red($input-focus-border-color), green($input-focus-border-color), blue($input-focus-border-color), 0.6));
 	}
 
 	&[disabled] ~ .toggle-card-container {
