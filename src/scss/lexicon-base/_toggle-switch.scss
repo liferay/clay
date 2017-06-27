@@ -201,74 +201,74 @@
 	@include media-breakpoint-up(md) {
 		.toggle-switch-bar {
 			.toggle-switch-handle {
-				min-width: $toggle-switch-bar-desktop-width;
+				min-width: $toggle-switch-bar-width-desktop;
 			}
 
 			.toggle-switch-icon {
-				font-size: $toggle-switch-bar-desktop-font-size;
+				font-size: $toggle-switch-bar-font-size-desktop;
 			}
 
 			.button-icon {
-				font-size: $toggle-switch-button-desktop-font-size;
+				font-size: $toggle-switch-button-font-size-desktop;
 			}
 		}
 
 		.toggle-switch-check {
 			&:empty ~ .toggle-switch-bar {
-				height: $toggle-switch-bar-desktop-height;
-				line-height: $toggle-switch-bar-desktop-height;
+				height: $toggle-switch-bar-height-desktop;
+				line-height: $toggle-switch-bar-height-desktop;
 				text-indent: 0;
 
 				&:after {
-					bottom: $toggle-switch-bar-desktop-padding;
-					height: $toggle-switch-button-desktop-width;
-					left: $toggle-switch-bar-desktop-padding;
-					top: $toggle-switch-bar-desktop-padding;
-					width: $toggle-switch-button-desktop-width;
+					bottom: $toggle-switch-bar-padding-desktop;
+					height: $toggle-switch-button-width-desktop;
+					left: $toggle-switch-bar-padding-desktop;
+					top: $toggle-switch-bar-padding-desktop;
+					width: $toggle-switch-button-width-desktop;
 				}
 
 				&:before {
-					width: $toggle-switch-bar-desktop-width;
+					width: $toggle-switch-bar-width-desktop;
 				}
 
 				.toggle-switch-handle:after {
-					margin-left: set-data-label-text-position($toggle-switch-bar-desktop-width, $toggle-switch-bar-desktop-padding) + 6px;
+					margin-left: set-data-label-text-position($toggle-switch-bar-width-desktop, $toggle-switch-bar-padding-desktop) + 6px;
 				}
 
 				.toggle-switch-icon {
-					left: $toggle-switch-bar-desktop-padding;
-					line-height: $toggle-switch-button-desktop-width;
-					top: $toggle-switch-bar-desktop-padding;
-					width: $toggle-switch-button-desktop-width;
+					left: $toggle-switch-bar-padding-desktop;
+					line-height: $toggle-switch-button-width-desktop;
+					top: $toggle-switch-bar-padding-desktop;
+					width: $toggle-switch-button-width-desktop;
 				}
 
 				.toggle-switch-icon-on {
-					left: $toggle-switch-bar-desktop-padding;
+					left: $toggle-switch-bar-padding-desktop;
 				}
 
 				.toggle-switch-icon-off {
-					left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+					left: $toggle-switch-bar-width-desktop - $toggle-switch-bar-padding-desktop - $toggle-switch-button-width-desktop;
 				}
 			}
 
 			&:checked ~ .toggle-switch-bar {
 				&:after {
-					left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+					left: $toggle-switch-bar-width-desktop - $toggle-switch-bar-padding-desktop - $toggle-switch-button-width-desktop;
 				}
 
 				.toggle-switch-handle:after {
-					margin-left: set-data-label-text-position($toggle-switch-bar-desktop-width, $toggle-switch-bar-desktop-padding) + 6px;
+					margin-left: set-data-label-text-position($toggle-switch-bar-width-desktop, $toggle-switch-bar-padding-desktop) + 6px;
 				}
 
 				.button-icon {
-					left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+					left: $toggle-switch-bar-width-desktop - $toggle-switch-bar-padding-desktop - $toggle-switch-button-width-desktop;
 				}
 			}
 		}
 
 		.toggle-switch-text-left,
 		.toggle-switch-text-right {
-			line-height: $toggle-switch-bar-desktop-height;
+			line-height: $toggle-switch-bar-height-desktop;
 		}
 	}
 }
