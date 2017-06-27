@@ -1,3 +1,7 @@
+### v1.0.21 - June 27, 2017
+* New: Add Estonia and Thai flags
+* Site: Remove unused images
+
 ### v1.0.20 - June 14, 2017
 * Fix: side-navigation.js Simple Sidenav should add open class to data-content in mobile
 * Update: `.aspect-ratio-center.aspect-ratio-middle` should center and vertically align
