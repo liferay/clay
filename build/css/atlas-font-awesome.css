@@ -12685,7 +12685,7 @@ th {
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 }
 
-.toggle-card {
+.toggle-card-check {
   -webkit-user-select: none;
   float: left;
   line-height: normal;
@@ -12698,39 +12698,40 @@ th {
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   color: #869CAD;
-  display: table;
   height: 104px;
   padding: 12px 12px;
   text-align: center;
   width: 92px;
 }
 
-.toggle-card-cell {
-  display: table-cell;
-  text-align: center;
-  word-break: break-word;
-}
-
 .toggle-card-icon {
+  align-items: center;
+  display: flex;
   border-radius: 30px;
   font-size: 24px;
   height: 32px;
+  justify-content: center;
   margin: 0 auto;
   width: 32px;
 }
 
-.toggle-card-icon [class*="icon-"] {
-  display: block;
+.toggle-card-icon .lexicon-icon {
+  margin-top: 0;
 }
 
 .toggle-card-label {
-  height: 58px;
+  height: 46px;
   line-height: 16px;
   overflow: hidden;
   padding-top: 12px;
 }
 
-input.toggle-card {
+.toggle-card .toggle-check {
+  height: auto;
+  width: auto;
+}
+
+.toggle-card-check {
   height: 104px;
   margin: 0;
   opacity: 0;
@@ -12738,25 +12739,20 @@ input.toggle-card {
   width: 92px;
 }
 
-.toggle-card input.toggle-card {
-  height: auto;
-  width: auto;
+.toggle-card-check:empty ~ .toggle-card-container .toggle-card-off {
+  display: block;
 }
 
-input.toggle-card:empty ~ .toggle-card-container .toggle-card-on {
+.toggle-card-check:empty ~ .toggle-card-container .toggle-card-on {
   display: none;
 }
 
-input.toggle-card:empty ~ .toggle-card-container .toggle-card-icon {
+.toggle-card-check:empty ~ .toggle-card-container .toggle-card-icon {
   background-color: transparent;
-  border: #869CAD solid 0;
+  border: 0 solid #869CAD;
 }
 
-input.toggle-card:empty ~ .toggle-card-container .toggle-card-icon [class*="icon-"] {
-  line-height: 32px;
-}
-
-input.toggle-card:checked ~ .toggle-card-container {
+.toggle-card-check:checked ~ .toggle-card-container {
   background-color: #FFF;
   border: 2px solid #65B6F0;
   color: #65B6F0;
@@ -12766,28 +12762,24 @@ input.toggle-card:checked ~ .toggle-card-container {
   padding-top: 11px;
 }
 
-input.toggle-card:checked ~ .toggle-card-container .toggle-card-off {
+.toggle-card-check:checked ~ .toggle-card-container .toggle-card-off {
   display: none;
 }
 
-input.toggle-card:checked ~ .toggle-card-container .toggle-card-on {
+.toggle-card-check:checked ~ .toggle-card-container .toggle-card-on {
   display: block;
 }
 
-input.toggle-card:checked ~ .toggle-card-container .toggle-card-icon {
+.toggle-card-check:checked ~ .toggle-card-container .toggle-card-icon {
   background-color: transparent;
   border: 0 solid #65B6F0;
 }
 
-input.toggle-card:checked ~ .toggle-card-container .toggle-card-icon [class*="icon-"] {
-  line-height: 32px;
-}
-
-input.toggle-card:focus ~ .toggle-card-container {
+.toggle-card-check:focus ~ .toggle-card-container {
   box-shadow: 0 0 3px 2px rgba(101, 182, 240, 0.6);
 }
 
-input.toggle-card[disabled] ~ .toggle-card-container {
+.toggle-card-check[disabled] ~ .toggle-card-container {
   cursor: not-allowed;
   opacity: 0.4;
 }
@@ -12800,11 +12792,15 @@ input.toggle-card[disabled] ~ .toggle-card-container {
 }
 
 .toggle-switch-bar .toggle-switch-icon {
-  font-size: 12px;
+  font-size: 0.625rem;
+}
+
+.toggle-switch-bar .toggle-switch-icon .lexicon-icon {
+  margin-top: -0.2em;
 }
 
 .toggle-switch-bar .button-icon {
-  font-size: 12px;
+  font-size: 0.625rem;
 }
 
 input.toggle-switch {
@@ -12817,7 +12813,7 @@ input.toggle-switch:empty ~ .toggle-switch-bar {
   cursor: pointer;
   display: block;
   float: left;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   height: 24px;
   line-height: 24px;
   position: relative;
@@ -12957,7 +12953,7 @@ input.toggle-switch:focus ~ .toggle-switch-bar:before {
 .toggle-switch-text {
   clear: both;
   display: block;
-  font-size: 1.25rem;
+  font-size: 0.75rem;
 }
 
 .toggle-switch-text-left {
@@ -12978,10 +12974,10 @@ input.toggle-switch:focus ~ .toggle-switch-bar:before {
     min-width: 60px;
   }
   .toggle-switch-bar .toggle-switch-icon {
-    font-size: 16px;
+    font-size: 0.75rem;
   }
   .toggle-switch-bar .button-icon {
-    font-size: 16px;
+    font-size: 0.75rem;
   }
   input.toggle-switch:empty ~ .toggle-switch-bar {
     height: 32px;
