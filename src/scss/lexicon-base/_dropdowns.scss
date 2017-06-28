@@ -70,6 +70,7 @@
 }
 
 .dropdown-toggle {
+	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/22926 is merged
 	@if ($enable-dropdown-caret == false) {
 		&:after {
 			content: normal;
