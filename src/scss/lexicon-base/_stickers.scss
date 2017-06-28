@@ -8,7 +8,20 @@
 
 	@include monospace($sticker-monospaced-size);
 
+	overflow: hidden;
+	position: relative;
 	text-align: center;
+
+	img {
+		vertical-align: top;
+	}
+}
+
+.sticker-overlay {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 // Sticker Positions
@@ -85,6 +98,28 @@
 	.lexicon-icon {
 		height: $sticker-font-size-lg;
 		width: $sticker-font-size-lg;
+	}
+}
+
+.sticker-xl {
+	font-size: $sticker-font-size-xl;
+
+	@include monospace($sticker-monospaced-size-xl);
+
+	.lexicon-icon {
+		height: $sticker-font-size-xl;
+		width: $sticker-font-size-xl;
+	}
+}
+
+.sticker-xxl {
+	font-size: $sticker-font-size-xxl;
+
+	@include monospace($sticker-monospaced-size-xxl);
+
+	.lexicon-icon {
+		height: $sticker-font-size-xxl;
+		width: $sticker-font-size-xxl;
 	}
 }
 
