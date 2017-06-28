@@ -193,23 +193,23 @@
 // Skins
 
 .sidebar-default {
-	background-color: $sidebar-default-bg;
-	border-left: 1px solid $sidebar-default-border;
-	color: $sidebar-default-color;
+	background-color: $sidebar-light-bg;
+	border-left: 1px solid $sidebar-light-border-color;
+	color: $sidebar-light-color;
 
 	.sidebar-header {
 		.sidebar-title {
-			color: $sidebar-default-header-title-color;
+			color: $sidebar-light-header-title-color;
 		}
 
 		a.sidebar-title,
 		.sidebar-title a {
-			color: $sidebar-default-header-title-color;
+			color: $sidebar-light-header-title-color;
 			text-decoration: none;
 
 			&:hover,
 			&:focus {
-				color: $sidebar-default-header-title-hover-color;
+				color: $sidebar-light-header-title-hover-color;
 			}
 		}
 	}
@@ -222,17 +222,17 @@
 	.sidebar-actions > li > span > a,
 	.sidebar-actions > li .dropdown-toggle,
 	.sidebar-header-actions > li a {
-		color: $sidebar-default-header-actions-link-color;
+		color: $sidebar-light-header-actions-link-color;
 		text-decoration: none;
 
 		&:focus,
 		&:hover {
-			color: $sidebar-default-header-actions-link-hover-color;
+			color: $sidebar-light-header-actions-link-hover-color;
 		}
 	}
 
 	.sidebar-panel {
-		background-color: $sidebar-default-panel-bg;
+		background-color: $sidebar-light-panel-bg;
 	}
 }
 
