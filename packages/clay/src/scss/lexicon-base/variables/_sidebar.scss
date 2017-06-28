@@ -21,7 +21,7 @@ $sidebar-light-header-title-color: #777 !default;
 $sidebar-light-header-title-hover-color: #333 !default;
 
 $sidebar-inverse-bg: #222 !default;
-$sidebar-inverse-border: darken($sidebar-inverse-bg, 10%) !default;
+$sidebar-inverse-border-color: darken($sidebar-inverse-bg, 10%) !default;
 $sidebar-inverse-color: lighten($gray-light, 15%) !default;
 $sidebar-inverse-panel-bg: darken($sidebar-inverse-bg, 10%) !default;
 
