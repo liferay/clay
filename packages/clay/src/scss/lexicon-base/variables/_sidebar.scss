@@ -10,15 +10,15 @@ $sidebar-navbar-gutter-right: lx-sidebar-navbar-gutter($sidebar-padding-right) !
 
 // Skin
 
-$sidebar-default-bg: darken($body-bg, 3%) !default;
-$sidebar-default-border: darken($sidebar-default-bg, 6.5%) !default;
-$sidebar-default-color: #777 !default;
-$sidebar-default-panel-bg: darken($sidebar-default-bg, 6.5%) !default;
+$sidebar-light-bg: darken($body-bg, 3%) !default;
+$sidebar-light-border-color: darken($sidebar-light-bg, 6.5%) !default;
+$sidebar-light-color: #777 !default;
+$sidebar-light-panel-bg: darken($sidebar-light-bg, 6.5%) !default;
 
-$sidebar-default-header-actions-link-color: #777 !default;
-$sidebar-default-header-actions-link-hover-color: #333 !default;
-$sidebar-default-header-title-color: #777 !default;
-$sidebar-default-header-title-hover-color: #333 !default;
+$sidebar-light-header-actions-link-color: #777 !default;
+$sidebar-light-header-actions-link-hover-color: #333 !default;
+$sidebar-light-header-title-color: #777 !default;
+$sidebar-light-header-title-hover-color: #333 !default;
 
 $sidebar-inverse-bg: #222 !default;
 $sidebar-inverse-border: darken($sidebar-inverse-bg, 10%) !default;
