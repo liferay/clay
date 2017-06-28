@@ -70,37 +70,6 @@
 	}
 }
 
-.list-group-unstyled {
-	@include box-shadow(none);
-
-	.list-group-item {
-		background-color: transparent;
-		border-color: transparent;
-
-		&.active {
-			color: $body-color;
-
-			+ .list-group-item {
-				border-top-color: transparent;
-			}
-
-			.list-group-link {
-				color: $link-color;
-			}
-		}
-	}
-
-	@if ($list-group-link-color) {
-		.list-group-link {
-			color: $link-color;
-
-			@include hover-focus {
-				color: $link-hover-color;
-			}
-		}
-	}
-}
-
 .list-group-item {
 	&.active {
 		z-index: auto;
@@ -166,5 +135,46 @@
 
 	@include hover-focus {
 		color: $list-group-link-hover-color;
+	}
+}
+
+// List Group Unstyled
+
+.list-group-unstyled {
+	@include box-shadow(none);
+	color: inherit;
+
+	.flex-col {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.list-group-item {
+		background-color: transparent;
+		border-color: transparent;
+		padding-left: 0;
+		padding-right: 0;
+
+		&.active {
+			color: $body-color;
+
+			+ .list-group-item {
+				border-top-color: transparent;
+			}
+
+			.list-group-link {
+				color: $link-color;
+			}
+		}
+	}
+
+	@if ($list-group-link-color) {
+		.list-group-link {
+			color: $link-color;
+
+			@include hover-focus {
+				color: $link-hover-color;
+			}
+		}
 	}
 }
