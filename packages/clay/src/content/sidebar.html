@@ -7,7 +7,7 @@ section: Components
 	<p>Documentation for the Sidebar CSS component, for the Sidenav javascript component see <a href="../sidenav">Sidenav</a>.</p>
 </blockquote>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Sidebar</h3>
 
@@ -31,7 +31,7 @@ section: Components
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Sidebar Fixed</h3>
 
@@ -41,7 +41,7 @@ section: Components
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Sidebar Default</h3>
 
@@ -68,14 +68,14 @@ section: Components
 									<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#1">Download</a></li>
-								<li><a href="#1">Edit</a></li>
-								<li><a href="#1">Move</a></li>
-								<li><a href="#1">Checkout</a></li>
-								<li><a href="#1">Permissions</a></li>
-								<li><a href="#1">Move to Recycle Bin</a></li>
-							</ul>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
 						</div>
 					</li>
 					<li>
@@ -94,15 +94,15 @@ section: Components
 				<h6 class="sidebar-caption">Users are allowed to <a href="#1">request</a> membership. The request is accepted automatically.</h6>
 			</div>
 
-			<nav class="collapse-basic-search navbar navbar-default navbar-no-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active dropdown">
-						<a aria-expanded="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Details</a></li>
-							<li><a href="#">Versions</a></li>
-							<li><a href="#">Comments (17)</a></li>
-						</ul>
+			<nav class="collapse-basic-search navbar navbar-expand navbar-light navbar-light-bg">
+				<ul class="navbar-nav">
+					<li class="dropdown nav-item">
+						<a aria-expanded="true" class="active dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" href="#1">Details</a>
+							<a class="dropdown-item" href="#1">Versions</a>
+							<a class="dropdown-item" href="#1">Comments (17)</a>
+						</div>
 					</li>
 				</ul>
 			</nav>
@@ -113,50 +113,50 @@ section: Components
 					<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 				</div>
 
-				<ul class="sidebar-block tabular-list-group-unstyled">
-					<li class="list-group-item">
-						<div class="list-group-item-content">
+				<ul class="list-group list-group-unstyled sidebar-block">
+					<li class="list-group-item list-group-item-flex">
+						<div class="flex-col flex-col-expand">
 							<div class="h4 sidebar-title">Version 1.1</div>
 							<div class="h6 sidebar-caption">By <a href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
 						</div>
-						<div class="list-group-item-field">
+						<div class="flex-col">
 							<div class="dropdown">
 								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#1">Download</a></li>
-									<li><a href="#1">Edit</a></li>
-									<li><a href="#1">Move</a></li>
-									<li><a href="#1">Checkout</a></li>
-									<li><a href="#1">Permissions</a></li>
-									<li><a href="#1">Move to Recycle Bin</a></li>
-								</ul>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Download</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+									<a class="dropdown-item" href="#1">Permissions</a>
+									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+								</div>
 							</div>
 						</div>
 					</li>
-					<li class="list-group-item">
-						<div class="list-group-item-content">
+					<li class="list-group-item list-group-item-flex">
+						<div class="flex-col flex-col-expand">
 							<h4 class="sidebar-title">Version 1.0</h4>
 							<h6 class="sidebar-caption">By <a href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
 						</div>
-						<div class="list-group-item-field">
+						<div class="flex-col">
 							<div class="dropdown">
 								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#1">Download</a></li>
-									<li><a href="#1">Edit</a></li>
-									<li><a href="#1">Move</a></li>
-									<li><a href="#1">Checkout</a></li>
-									<li><a href="#1">Permissions</a></li>
-									<li><a href="#1">Move to Recycle Bin</a></li>
-								</ul>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Download</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+									<a class="dropdown-item" href="#1">Permissions</a>
+									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -201,7 +201,7 @@ section: Components
 					</span>
 
 					<div style="margin-bottom: 20px;margin-top:20px;">
-						<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
+						<a class="btn btn-secondary btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
 					</div>
 				</div>
 			</div>
@@ -209,7 +209,7 @@ section: Components
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Sidebar Inverse</h3>
 
@@ -234,14 +234,14 @@ section: Components
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#1">Download</a></li>
-							<li><a href="#1">Edit</a></li>
-							<li><a href="#1">Move</a></li>
-							<li><a href="#1">Checkout</a></li>
-							<li><a href="#1">Permissions</a></li>
-							<li><a href="#1">Move to Recycle Bin</a></li>
-						</ul>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#1">Download</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">Move</a>
+							<a class="dropdown-item" href="#1">Checkout</a>
+							<a class="dropdown-item" href="#1">Permissions</a>
+							<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+						</div>
 					</li>
 					<li>
 						<a href="#1">
@@ -258,15 +258,15 @@ section: Components
 
 				<h6 class="sidebar-caption">Users are allowed to <a href="#1">request</a> membership. The request is accepted automatically.</h6>
 			</div>
-			<nav class="collapse-basic-search navbar navbar-inverse navbar-no-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active dropdown">
-						<a aria-expanded="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Details</a></li>
-							<li><a href="#">Versions</a></li>
-							<li><a href="#">Comments (17)</a></li>
-						</ul>
+			<nav class="collapse-basic-search navbar navbar-expand navbar-inverse navbar-inverse-bg">
+				<ul class="navbar-nav">
+					<li class="dropdown nav-item">
+						<a aria-expanded="true" class="active dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">Details <span class="caret"></span></a>
+						<div class="dropdown-menu" role="menu">
+							<a class="dropdown-item" href="#1">Details</a>
+							<a class="dropdown-item" href="#1">Versions</a>
+							<a class="dropdown-item" href="#1">Comments (17)</a>
+						</div>
 					</li>
 				</ul>
 			</nav>
@@ -277,50 +277,50 @@ section: Components
 					<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 				</div>
 
-				<ul class="sidebar-block tabular-list-group-unstyled">
-					<li class="list-group-item">
-						<div class="list-group-item-content">
+				<ul class="list-group list-group-unstyled sidebar-block">
+					<li class="list-group-item list-group-item-flex">
+						<div class="flex-col flex-col-expand">
 							<div class="h4 sidebar-title">Version 1.1</div>
 							<div class="h6 sidebar-caption">By <a href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
 						</div>
-						<div class="list-group-item-field">
+						<div class="flex-col">
 							<div class="dropdown">
 								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#1">Download</a></li>
-									<li><a href="#1">Edit</a></li>
-									<li><a href="#1">Move</a></li>
-									<li><a href="#1">Checkout</a></li>
-									<li><a href="#1">Permissions</a></li>
-									<li><a href="#1">Move to Recycle Bin</a></li>
-								</ul>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Download</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+									<a class="dropdown-item" href="#1">Permissions</a>
+									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+								</div>
 							</div>
 						</div>
 					</li>
-					<li class="list-group-item">
-						<div class="list-group-item-content">
+					<li class="list-group-item list-group-item-flex">
+						<div class="flex-col flex-col-expand">
 							<h4 class="sidebar-title">Version 1.0</h4>
 							<h6 class="sidebar-caption">By <a href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
 						</div>
-						<div class="list-group-item-field">
+						<div class="flex-col">
 							<div class="dropdown">
 								<a class="dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
 										<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#1">Download</a></li>
-									<li><a href="#1">Edit</a></li>
-									<li><a href="#1">Move</a></li>
-									<li><a href="#1">Checkout</a></li>
-									<li><a href="#1">Permissions</a></li>
-									<li><a href="#1">Move to Recycle Bin</a></li>
-								</ul>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#1">Download</a>
+									<a class="dropdown-item" href="#1">Edit</a>
+									<a class="dropdown-item" href="#1">Move</a>
+									<a class="dropdown-item" href="#1">Checkout</a>
+									<a class="dropdown-item" href="#1">Permissions</a>
+									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -365,7 +365,7 @@ section: Components
 					</span>
 
 					<div style="margin-bottom: 20px;margin-top:20px;">
-						<a class="btn btn-default btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
+						<a class="btn btn-secondary btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
 					</div>
 				</div>
 			</div>
