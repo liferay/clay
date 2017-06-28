@@ -645,7 +645,11 @@
 				}
 
 				.navbar-nav .nav-link {
-					&.active:after { // same
+					&.active:after {
+						// Will need to be revisted if https://github.com/twbs/bootstrap/pull/22926 is merged
+						border-width: 0; // Undo BS4 .dropdown-toggle caret styles
+						margin-left: 0;	 // Undo BS4 .dropdown-toggle caret styles
+
 						background-color: $navbar-active-highlight;
 						bottom: -$navbar-border-bottom-width - $navbar-padding-y;
 
