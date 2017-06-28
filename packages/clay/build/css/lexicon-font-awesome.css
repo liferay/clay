@@ -11515,11 +11515,20 @@ a.label {
   height: 2rem;
   line-height: 2rem;
   width: 2rem;
+  overflow: hidden;
+  position: relative;
   text-align: center;
 }
 
-.sticker-static {
-  position: static;
+.sticker img {
+  vertical-align: top;
+}
+
+.sticker-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .sticker-bottom-left {
@@ -11595,6 +11604,30 @@ a.label {
 .sticker-lg .lexicon-icon {
   height: 16px;
   width: 16px;
+}
+
+.sticker-xl {
+  font-size: 20.8px;
+  height: 3.78125rem;
+  line-height: 3.78125rem;
+  width: 3.78125rem;
+}
+
+.sticker-xl .lexicon-icon {
+  height: 20.8px;
+  width: 20.8px;
+}
+
+.sticker-xxl {
+  font-size: 27.04px;
+  height: 5.19921875rem;
+  line-height: 5.19921875rem;
+  width: 5.19921875rem;
+}
+
+.sticker-xxl .lexicon-icon {
+  height: 27.04px;
+  width: 27.04px;
 }
 
 .sticker-danger {
@@ -12298,136 +12331,6 @@ th .truncate-text {
 
 .blockquote-warning footer, .blockquote-warning small, .blockquote-warning .small {
   color: #f0ad4e;
-}
-
-.user-icon {
-  border-radius: 500px;
-  font-size: 1rem;
-  height: 34px;
-  line-height: 34px;
-  width: 34px;
-  overflow: hidden;
-  text-align: center;
-}
-
-.user-icon-xs {
-  font-size: 8px;
-  height: 16px;
-  line-height: 16px;
-  width: 16px;
-}
-
-@media (min-width: 768px) {
-  .user-icon-xs {
-    font-size: 8px;
-    height: 22px;
-    line-height: 22px;
-    width: 22px;
-  }
-}
-
-.user-icon-sm {
-  font-size: 9px;
-  height: 22px;
-  line-height: 22px;
-  width: 22px;
-}
-
-@media (min-width: 768px) {
-  .user-icon-sm {
-    font-size: 0.875rem;
-    height: 30px;
-    line-height: 30px;
-    width: 30px;
-  }
-}
-
-.user-icon-lg {
-  font-size: 13px;
-  height: 34px;
-  line-height: 34px;
-  width: 34px;
-}
-
-@media (min-width: 768px) {
-  .user-icon-lg {
-    font-size: 1.25rem;
-    height: 45px;
-    line-height: 45px;
-    width: 45px;
-  }
-}
-
-.user-icon-xl {
-  font-size: 22px;
-  height: 48px;
-  line-height: 48px;
-  width: 48px;
-}
-
-@media (min-width: 768px) {
-  .user-icon-xl {
-    font-size: 30px;
-    height: 64px;
-    line-height: 64px;
-    width: 64px;
-  }
-}
-
-.user-icon-xxl {
-  font-size: 37px;
-  height: 96px;
-  line-height: 96px;
-  width: 96px;
-}
-
-@media (min-width: 768px) {
-  .user-icon-xxl {
-    font-size: 50px;
-    height: 128px;
-    line-height: 128px;
-    width: 128px;
-  }
-}
-
-.user-icon-default {
-  background-color: #636c72;
-  color: #FFF;
-}
-
-.user-icon-primary {
-  background-color: #0275d8;
-  color: #FFF;
-}
-
-.user-icon-info {
-  background-color: #5bc0de;
-  color: #FFF;
-}
-
-.user-icon-success {
-  background-color: #5cb85c;
-  color: #FFF;
-}
-
-.user-icon-warning {
-  background-color: #f0ad4e;
-  color: #FFF;
-}
-
-.user-icon-danger {
-  background-color: #d9534f;
-  color: #FFF;
-}
-
-.user-icon-rounded.user-icon,
-.user-icon-rounded .user-icon {
-  border-radius: 0.25rem;
-}
-
-.user-icon-square.user-icon,
-.user-icon-square .user-icon {
-  border-radius: 0;
 }
 
 .dropdown-header {
