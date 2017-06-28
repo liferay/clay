@@ -5,11 +5,17 @@ $sticker-font-weight: null !default;
 $sticker-gutter-width: $grid-gutter-width-base / 2 !default;
 $sticker-monospaced-size: 2rem !default; // 32px
 
+$sticker-font-size-sm: $label-font-size-sm !default;
+$sticker-monospaced-size-sm: $sticker-monospaced-size * 0.6875 !default; // 22px
+
 $sticker-font-size-lg: $label-font-size-lg !default;
 $sticker-monospaced-size-lg: $sticker-monospaced-size * 1.375 !default; // 44px
 
-$sticker-font-size-sm: $label-font-size-sm !default;
-$sticker-monospaced-size-sm: $sticker-monospaced-size * 0.6875 !default; // 22px
+$sticker-font-size-xl: $sticker-font-size-lg * 1.3 !default;
+$sticker-monospaced-size-xl: $sticker-monospaced-size-lg * 1.375 !default; // 60px
+
+$sticker-font-size-xxl: $sticker-font-size-xl * 1.3 !default; // 27px
+$sticker-monospaced-size-xxl: $sticker-monospaced-size-xl * 1.375 !default; // 83px
 
 // Skin
 
