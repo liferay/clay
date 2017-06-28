@@ -192,9 +192,7 @@
 
 // Skins
 
-.sidebar-default {
-	background-color: $sidebar-light-bg;
-	border-left: 1px solid $sidebar-light-border-color;
+.sidebar-light {
 	color: $sidebar-light-color;
 
 	.sidebar-header {
@@ -207,8 +205,7 @@
 			color: $sidebar-light-header-title-color;
 			text-decoration: none;
 
-			&:hover,
-			&:focus {
+			@include hover-focus {
 				color: $sidebar-light-header-title-hover-color;
 			}
 		}
@@ -216,7 +213,6 @@
 
 	// Deprecated `.sidebar-header-actions > li a` in favor of
 	// `.sidebar-actions > li a` as of v1.0.12 and will be removed in v2.0.0.
-
 	a.sidenav-close,
 	.sidebar-actions > li > a,
 	.sidebar-actions > li > span > a,
@@ -225,11 +221,15 @@
 		color: $sidebar-light-header-actions-link-color;
 		text-decoration: none;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $sidebar-light-header-actions-link-hover-color;
 		}
 	}
+}
+
+.sidebar-light-bg {
+	background-color: $sidebar-light-bg;
+	border-left: 1px solid $sidebar-light-border-color;
 
 	.sidebar-panel {
 		background-color: $sidebar-light-panel-bg;
@@ -237,8 +237,6 @@
 }
 
 .sidebar-inverse {
-	background-color: $sidebar-inverse-bg;
-	border-color: $sidebar-inverse-border-color;
 	color: $sidebar-inverse-color;
 
 	.sidebar-header {
@@ -251,8 +249,7 @@
 			color: $sidebar-inverse-header-title-color;
 			text-decoration: none;
 
-			&:hover,
-			&:focus {
+			@include hover-focus {
 				color: $sidebar-inverse-header-title-hover-color;
 			}
 		}
@@ -269,28 +266,17 @@
 		color: $sidebar-inverse-header-actions-link-color;
 		text-decoration: none;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $sidebar-inverse-header-actions-link-hover-color;
 		}
 	}
+}
+
+.sidebar-inverse-bg {
+	background-color: $sidebar-inverse-bg;
+	border-color: $sidebar-inverse-border-color;
 
 	.sidebar-panel {
 		background-color: $sidebar-inverse-panel-bg;
-	}
-
-	@if (variable-exists(atlas-theme)) {
-		input {
-			&::placeholder {
-				color: $brand-secondary;
-			}
-		}
-
-		.form-control {
-			background-color: $sidebar-inverse-input-bg;
-			border-width: 0;
-			color: $brand-secondary;
-			padding: 8px 12px;
-		}
 	}
 }
