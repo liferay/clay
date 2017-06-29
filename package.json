@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist --nohoist=clay",
     "build": "lerna run build",
+    "lerna": "lerna bootstrap --hoist --nohoist=babel-* --nohoist=clay --nohoist=metal --nohoist=metal-component --nohoist=metal-dom --nohoist=metal-events --nohoist=metal-state --nohoist=metal-tools-*",
     "start": "http-server . -p 4000",
     "test": "lerna run test"
   },
   "devDependencies": {
     "http-server": "^0.9.0",
-    "lerna": "2.0.0-beta.37"
+    "lerna": "^2.0.0-rc.5"
   }
 }

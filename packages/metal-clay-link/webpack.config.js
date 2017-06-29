@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/MetalClayButton.js',
+  entry: './src/MetalClayLink.js',
   module: {
     rules: [{
         test: /\.js$/,
@@ -19,7 +19,7 @@ module.exports = {
   output: {
       library: 'metal',
       libraryTarget: 'this',
-      filename: './build/globals/metal-clay-button.js',
+      filename: './build/globals/metal-clay-link.js',
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()

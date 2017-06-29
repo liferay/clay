@@ -90,4 +90,5 @@ MetalClayLink.STATE = {
 
 Soy.register(MetalClayLink, templates);
 
+export { MetalClayLink };
 export default MetalClayLink;

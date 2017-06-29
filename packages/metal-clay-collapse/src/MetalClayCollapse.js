@@ -311,4 +311,5 @@ MetalClayCollapse.STATE = {
 	}
 };
 
+export { MetalClayCollapse };
 export default MetalClayCollapse;

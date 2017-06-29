@@ -70,5 +70,5 @@ MetalClayButton.STATE = {
 
 Soy.register(MetalClayButton, templates);
 
+export { MetalClayButton };
 export default MetalClayButton;
-export {MetalClayButton};

@@ -44,4 +44,5 @@ MetalClayIcon.STATE = {
 
 Soy.register(MetalClayIcon, templates);
 
+export { MetalClayIcon };
 export default MetalClayIcon;

@@ -25,9 +25,11 @@
     "metal"
   ],
   "dependencies": {
+    "metal": "^2.13.2",
     "metal-clay-icon": "^0.0.0",
-    "metal-soy": "^2.0.0",
-    "metal-tools-soy": "^4.2.1"
+    "metal-component": "^2.13.2",
+    "metal-soy": "^2.13.2",
+    "metal-state": "^2.13.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -38,6 +40,7 @@
     "clay": "liferay/clay#develop",
     "karma-html2js-preprocessor": "^1.0.0",
     "metal-karma-config": "^2.1.1",
+    "metal-tools-soy": "^4.2.1",
     "webpack": "^3.0.0"
   }
 }
