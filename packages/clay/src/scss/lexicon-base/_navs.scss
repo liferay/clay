@@ -11,6 +11,27 @@
 	}
 }
 
+.nav-link-monospaced {
+	align-items: center;
+	color: $nav-link-color;
+	display: flex;
+	justify-content: center;
+
+	@include monospace($nav-link-monospaced-size);
+
+	&:focus {
+		z-index: 1;
+	}
+
+	@include hover-focus {
+		color: $nav-link-hover-color;
+	}
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}
+
 // Nav Nested
 
 .nav-nested {
