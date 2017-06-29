@@ -1,7 +1,9 @@
 {
   "scripts": {
+    "bootstrap": "lerna bootstrap --hoist --nohoist=clay",
+    "build": "lerna run build",
     "start": "http-server . -p 4000",
-    "lerna": "lerna bootstrap --hoist --nohoist=clay"
+    "test": "lerna run test"
   },
   "devDependencies": {
     "http-server": "^0.9.0",

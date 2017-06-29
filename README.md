@@ -2,18 +2,18 @@
 
 ## Setup
 
-1. Install NodeJS >= [v0.12.0](http://nodejs.org/dist/v0.12.0/), if you don't have it yet.
+1. Install NodeJS >= [v6.11.0](http://nodejs.org/dist/v6.11.0/), if you don't have it yet.
 
 2. Install lerna global dependency:
 
   ```
-  [sudo] npm install -g lerna@2.0.0-beta.37
+  [sudo] npm install -g 2.0.0-rc.5
   ```
 
-3. Run lerna to install local dependencies and link packages together:
+3. Run the bootstrap script to install local dependencies and link packages together:
 
   ```
-  lerna bootstrap
+  npm run bootstrap
   ```
 
 4. Install local dependencies
@@ -25,7 +25,7 @@
 5. Build all packages
 
   ```
-  lerna run build
+  npm run build
   ```
 
 6. Start a local server on port 4000
@@ -37,5 +37,5 @@
 7. Run tests:
 
   ```
-  lerna run test
+  npm run test
   ```
