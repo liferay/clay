@@ -93,6 +93,15 @@
 	margin-left: $nav-nested-margins-margin-horizontal;
 }
 
+.nav-nested,
+.nav-nested-margins {
+	> .active > a,
+	.nav > .active > a {
+		background-color: $nav-nested-link-active-bg;
+		color: $nav-nested-link-active-color;
+	}
+}
+
 // Nav Pills
 
 .nav-pills {
