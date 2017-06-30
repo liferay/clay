@@ -1,21 +1,25 @@
-// Skin
+// Sidebar Light
 
 $sidebar-light-bg: #F5F8FA !default;
 $sidebar-light-border-color: #DFE0E3 !default;
 $sidebar-light-color: $brand-secondary !default;
 $sidebar-light-panel-bg: #DFE6EB !default;
 
-$sidebar-light-header-actions-link-color: $brand-secondary !default;
-$sidebar-light-header-actions-link-hover-color: $sidebar-light-header-actions-link-color !default;
+$sidebar-light-actions-link-color: $brand-secondary !default;
+$sidebar-light-actions-link-hover-color: $sidebar-light-actions-link-color !default;
+
 $sidebar-light-header-title-color: $body-color !default;
 $sidebar-light-header-title-hover-color: $body-color !default;
+
+// Sidebar Inverse
 
 $sidebar-inverse-bg: $inverse-bg !default;
 $sidebar-inverse-border-color: $inverse-border !default;
 $sidebar-inverse-color: $inverse-color !default;
 $sidebar-inverse-panel-bg: $inverse-header-bg !default;
 
-$sidebar-inverse-header-actions-link-color: $sidebar-inverse-color !default;
-$sidebar-inverse-header-actions-link-hover-color: $sidebar-inverse-header-actions-link-color !default;
+$sidebar-inverse-actions-link-color: $sidebar-inverse-color !default;
+$sidebar-inverse-actions-link-hover-color: $sidebar-inverse-actions-link-color !default;
+
 $sidebar-inverse-header-title-color: #FFF !default;
 $sidebar-inverse-header-title-hover-color: $sidebar-inverse-header-title-color !default;
