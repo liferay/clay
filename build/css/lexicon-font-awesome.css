@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* Lexicon 1.0.21
+* Lexicon 1.0.22
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -9244,6 +9244,7 @@ button.list-group-heading {
   display: block;
   padding: 10px 15px;
   position: relative;
+  word-wrap: break-word;
 }
 
 .nav > li > a:focus {
@@ -9424,6 +9425,13 @@ button.list-group-heading {
 
 .nav-nested-margins > li .nav > li {
   margin-left: 15px;
+}
+
+.nav-nested > .active > a,
+.nav-nested .nav > .active > a,
+.nav-nested-margins > .active > a,
+.nav-nested-margins .nav > .active > a {
+  color: #23527c;
 }
 
 .nav-pills a[aria-expanded="true"], .nav-pills a[aria-expanded="true"]:hover, .nav-pills a[aria-expanded="true"]:focus {
