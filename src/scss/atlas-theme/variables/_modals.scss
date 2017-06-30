@@ -22,7 +22,7 @@ $modal-header-bg: #FCFEFF !default;
 $modal-header-border-color: #E4E6E8 !default;
 $modal-header-color: $body-color !default;
 
-$modal-header-close-color: $brand-secondary !default;
+$modal-header-close-color: map-get($theme-colors, secondary) !default;
 $modal-header-close-icon-opacity: 1 !default;
 $modal-header-close-lexicon-icon-opacity: 1 !default;
 $modal-header-close-opacity-modifier: 1 !default;
@@ -51,13 +51,13 @@ $modal-inverse-footer-bg: $modal-inverse-header-bg !default;
 $modal-inverse-footer-border-color: $modal-inverse-header-border-color !default;
 $modal-inverse-footer-color: $modal-inverse-header-color !default;
 
-$modal-inverse-link-color: $brand-primary !default;
+$modal-inverse-link-color: map-get($theme-colors, primary) !default;
 $modal-inverse-link-hover-color: $modal-inverse-link-color !default;
 
 // Modal Danger
 
-$modal-danger-header-bg: $brand-danger !default;
-$modal-danger-header-border-color: $brand-danger !default;
+$modal-danger-header-bg: map-get($theme-colors, danger) !default;
+$modal-danger-header-border-color: map-get($theme-colors, danger) !default;
 $modal-danger-header-color: #FFF !default;
 
 $modal-danger-header-close-color: #FFF !default;
@@ -70,8 +70,8 @@ $modal-danger-footer-color: $body-color !default;
 
 // Modal Info
 
-$modal-info-header-bg: $brand-info !default;
-$modal-info-header-border-color: $brand-info !default;
+$modal-info-header-bg: map-get($theme-colors, info) !default;
+$modal-info-header-border-color: map-get($theme-colors, info) !default;
 $modal-info-header-color: #FFF !default;
 
 $modal-info-header-close-color: #FFF !default;
@@ -84,8 +84,8 @@ $modal-info-footer-color: $body-color !default;
 
 // Modal Success
 
-$modal-success-header-bg: $brand-success !default;
-$modal-success-header-border-color: $brand-success !default;
+$modal-success-header-bg: map-get($theme-colors, success) !default;
+$modal-success-header-border-color: map-get($theme-colors, success) !default;
 $modal-success-header-color: #FFF !default;
 
 $modal-success-header-close-color: #FFF !default;
@@ -98,8 +98,8 @@ $modal-success-footer-color: $body-color !default;
 
 // Modal Warning
 
-$modal-warning-header-bg: $brand-warning !default;
-$modal-warning-header-border-color: $brand-warning !default;
+$modal-warning-header-bg: map-get($theme-colors, warning) !default;
+$modal-warning-header-border-color: map-get($theme-colors, warning) !default;
 $modal-warning-header-color: #FFF !default;
 
 $modal-warning-header-close-color: #FFF !default;

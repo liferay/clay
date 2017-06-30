@@ -85,19 +85,19 @@
 }
 
 .list-group-item-danger.active + .list-group-item {
-	border-top-color: $state-danger-text;
+	border-top-color: theme-color-level(danger, 6);
 }
 
 .list-group-item-info.active + .list-group-item {
-	border-top-color: $state-info-text;
+	border-top-color: theme-color-level(info, 6);
 }
 
 .list-group-item-success.active + .list-group-item {
-	border-top-color: $state-success-text;
+	border-top-color: theme-color-level(success, 6);
 }
 
 .list-group-item-warning.active + .list-group-item {
-	border-top-color: $state-warning-text;
+	border-top-color: theme-color-level(warning, 6);
 }
 
 .list-group-item-flex {

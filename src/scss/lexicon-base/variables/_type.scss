@@ -11,9 +11,9 @@ $blockquote-lg-font-size: $blockquote-font-size * 1.5 !default;
 
 // Skin
 
-$blockquote-danger-color: $brand-danger !default;
-$blockquote-default-color: $brand-secondary !default;
-$blockquote-info-color: $brand-info !default;
-$blockquote-primary-color: $brand-primary !default;
-$blockquote-success-color: $brand-success !default;
-$blockquote-warning-color: $brand-warning !default;
+$blockquote-danger-color: map-get($theme-colors, danger) !default;
+$blockquote-default-color: map-get($theme-colors, secondary) !default;
+$blockquote-info-color: map-get($theme-colors, info) !default;
+$blockquote-primary-color: map-get($theme-colors, primary) !default;
+$blockquote-success-color: map-get($theme-colors, success) !default;
+$blockquote-warning-color: map-get($theme-colors, warning) !default;

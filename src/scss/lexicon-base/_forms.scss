@@ -256,7 +256,7 @@ fieldset[disabled] label {
 		> .form-control-label {
 			// TODO: Use different selector hard to override
 			&:not(:last-child) {
-				margin-right: $grid-gutter-width-base / 2;
+				margin-right: $grid-gutter-width / 2;
 			}
 		}
 
@@ -266,7 +266,7 @@ fieldset[disabled] label {
 			// TODO: Use different selector hard to override
 			&:not(:last-child) {
 				margin-bottom: 0;
-				margin-right: $grid-gutter-width-base / 2;
+				margin-right: $grid-gutter-width / 2;
 			}
 		}
 	}

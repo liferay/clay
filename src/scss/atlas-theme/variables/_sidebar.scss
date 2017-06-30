@@ -2,10 +2,10 @@
 
 $sidebar-light-bg: #F5F8FA !default;
 $sidebar-light-border-color: #DFE0E3 !default;
-$sidebar-light-color: $brand-secondary !default;
+$sidebar-light-color: map-get($theme-colors, secondary) !default;
 $sidebar-light-panel-bg: #DFE6EB !default;
 
-$sidebar-light-actions-link-color: $brand-secondary !default;
+$sidebar-light-actions-link-color: map-get($theme-colors, secondary) !default;
 $sidebar-light-actions-link-hover-color: $sidebar-light-actions-link-color !default;
 
 $sidebar-light-header-title-color: $body-color !default;

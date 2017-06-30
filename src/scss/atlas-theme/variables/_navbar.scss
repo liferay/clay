@@ -42,9 +42,9 @@ $navbar-light-disabled-bg: transparent !default;
 
 $navbar-light-border-color: #E3E6E8 !default;
 
-$navbar-light-color: $brand-secondary !default;
-$navbar-light-hover-color: $brand-secondary !default;
-$navbar-light-active-color: $brand-secondary !default;
+$navbar-light-color: map-get($theme-colors, secondary) !default;
+$navbar-light-hover-color: map-get($theme-colors, secondary) !default;
+$navbar-light-active-color: map-get($theme-colors, secondary) !default;
 $navbar-light-disabled-color: #CACDD2 !default;
 
 $navbar-light-brand-bg: transparent !default;
@@ -52,7 +52,7 @@ $navbar-light-brand-hover-bg: transparent !default;
 $navbar-light-brand-color: $navbar-light-color !default;
 $navbar-light-brand-hover-color: $navbar-light-hover-color !default;
 
-$navbar-light-active-highlight: $brand-primary !default;
+$navbar-light-active-highlight: map-get($theme-colors, primary) !default;
 
 $navbar-light-toggler-border-color: $navbar-light-border-color !default;
 
@@ -62,21 +62,21 @@ $collapse-basic-search-transparent-light-focus-highlight: $navbar-light-active-h
 
 // Navbar Inverse
 
-$navbar-inverse-bg: $brand-secondary !default;
+$navbar-dark-bg: map-get($theme-colors, secondary) !default;
 
-$navbar-inverse-color: #FFF !default;
-$navbar-inverse-hover-color: $navbar-inverse-color !default;
-$navbar-inverse-active-color: $navbar-inverse-color !default;
-$navbar-inverse-disabled-color: #CACDD2 !default;
+$navbar-dark-color: #FFF !default;
+$navbar-dark-hover-color: $navbar-dark-color !default;
+$navbar-dark-active-color: $navbar-dark-color !default;
+$navbar-dark-disabled-color: #CACDD2 !default;
 
-$navbar-inverse-brand-color: $navbar-inverse-color !default;
-$navbar-inverse-brand-hover-color: $navbar-inverse-brand-color !default;
+$navbar-dark-brand-color: $navbar-dark-color !default;
+$navbar-dark-brand-hover-color: $navbar-dark-brand-color !default;
 
-$navbar-inverse-active-highlight: #2B4259 !default;
+$navbar-dark-active-highlight: #2B4259 !default;
 
-$navbar-inverse-toggler-border-color: #FFF !default;
+$navbar-dark-toggler-border-color: #FFF !default;
 
-$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-inverse-active-highlight !default;
-$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-inverse-active-highlight !default;
-$collapse-basic-search-transparent-inverse-input-placeholder-focus-color: $navbar-inverse-active-highlight !default;
-$collapse-basic-search-transparent-inverse-focus-highlight: $navbar-inverse-active-highlight !default;
+$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-dark-active-highlight !default;
+$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-dark-active-highlight !default;
+$collapse-basic-search-transparent-inverse-input-placeholder-focus-color: $navbar-dark-active-highlight !default;
+$collapse-basic-search-transparent-inverse-focus-highlight: $navbar-dark-active-highlight !default;

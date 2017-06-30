@@ -105,10 +105,10 @@ body {
 
 // Contextual backgrounds
 
-@include bg-variant('.bg-default', $state-secondary-bg);
+@include bg-variant('.bg-default', map-get($theme-colors, secondary));
 
 @if (variable-exists(atlas-theme)) {
-	@include bg-variant('.bg-primary', $state-primary-bg);
+	@include bg-variant('.bg-primary', map-get($theme-colors, primary));
 }
 
 // Contextual Text
@@ -120,10 +120,10 @@ a.text-muted {
 	}
 }
 
-@include text-emphasis-variant('.text-default', $state-secondary-text);
+@include text-emphasis-variant('.text-default', map-get($theme-colors, secondary));
 
 @if (variable-exists(atlas-theme)) {
-	@include text-emphasis-variant('.text-primary', $state-primary-text);
+	@include text-emphasis-variant('.text-primary', map-get($theme-colors, primary));
 }
 
 // Marked Text

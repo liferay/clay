@@ -2,7 +2,7 @@ $sticker-border-radius: $border-radius !default;
 $sticker-color: $label-color !default;
 $sticker-font-size: $label-font-size !default;
 $sticker-font-weight: null !default;
-$sticker-gutter-width: $grid-gutter-width-base / 2 !default;
+$sticker-gutter-width: $grid-gutter-width / 2 !default;
 $sticker-monospaced-size: 2rem !default; // 32px
 
 $sticker-font-size-sm: $label-font-size-sm !default;
@@ -19,15 +19,15 @@ $sticker-monospaced-size-xxl: $sticker-monospaced-size-xl * 1.375 !default; // 8
 
 // Skin
 
-$sticker-danger-bg: $brand-danger !default;
+$sticker-danger-bg: map-get($theme-colors, danger) !default;
 $sticker-danger-color: #FFF !default;
-$sticker-info-bg: $brand-info !default;
+$sticker-info-bg: map-get($theme-colors, info) !default;
 $sticker-info-color: #FFF !default;
-$sticker-primary-bg: $brand-primary !default;
+$sticker-primary-bg: map-get($theme-colors, primary) !default;
 $sticker-primary-color: #FFF !default;
-$sticker-secondary-bg: $gray-light !default;
+$sticker-secondary-bg: $gray-400 !default;
 $sticker-secondary-color: #FFF !default;
-$sticker-success-bg: $brand-success !default;
+$sticker-success-bg: map-get($theme-colors, success) !default;
 $sticker-success-color: #FFF !default;
-$sticker-warning-bg: $brand-warning !default;
+$sticker-warning-bg: map-get($theme-colors, warning) !default;
 $sticker-warning-color: #FFF !default;

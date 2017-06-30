@@ -2,10 +2,10 @@ $toggle-card-bg: $body-bg !default;
 $toggle-card-border-color: #DCE0E3 !default;
 $toggle-card-border-radius: 2px !default;
 $toggle-card-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15) !default;
-$toggle-card-color: $brand-secondary !default;
+$toggle-card-color: map-get($theme-colors, secondary) !default;
 
 $toggle-card-icon-bg: transparent !default;
-$toggle-card-icon-border-color: $brand-secondary !default;
+$toggle-card-icon-border-color: map-get($theme-colors, secondary) !default;
 $toggle-card-icon-font-size: 24px !default;
 
 // Toggle Card On Styles

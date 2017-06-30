@@ -32,19 +32,19 @@ $pagination-link-border-radius-sm: 3px !default;
 
 $pagination-bg: transparent !default;
 $pagination-border-color: $pagination-bg !default;
-$pagination-color: $brand-secondary !default;
+$pagination-color: map-get($theme-colors, secondary) !default;
 
 $pagination-hover-bg: transparent !default;
 $pagination-hover-border-color: $pagination-hover-bg !default;
 $pagination-hover-color: $pagination-color !default;
 
-$pagination-active-bg: lighten($brand-secondary, 30%) !default;
-$pagination-active-border-color: $brand-secondary !default;
-$pagination-active-color: $brand-secondary !default;
+$pagination-active-bg: lighten(map-get($theme-colors, secondary), 30%) !default;
+$pagination-active-border-color: map-get($theme-colors, secondary) !default;
+$pagination-active-color: map-get($theme-colors, secondary) !default;
 
 $pagination-disabled-bg: transparent !default;
 $pagination-disabled-border-color: $pagination-disabled-bg !default;
-$pagination-disabled-color: $brand-secondary !default;
+$pagination-disabled-color: map-get($theme-colors, secondary) !default;
 $pagination-disabled-opacity: 0.5 !default;
 
 $pagination-items-per-page-color: $pagination-color !default;

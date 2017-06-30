@@ -572,8 +572,8 @@
 						}
 
 						&.navbar-inverse-bg .navbar-collapse {
-							background-color: $navbar-inverse-bg;
-							border-color: $navbar-inverse-border-color;
+							background-color: $navbar-dark-bg;
+							border-color: $navbar-dark-border-color;
 						}
 
 						&.navbar-light-bg .navbar-collapse {
@@ -606,8 +606,8 @@
 					.container,
 					.container-fluid {
 						@include media-breakpoint-up(md) {
-							padding-left: $grid-gutter-width-base / 2;
-							padding-right: $grid-gutter-width-base / 2;
+							padding-left: $grid-gutter-width / 2;
+							padding-right: $grid-gutter-width / 2;
 						}
 					}
 				}
@@ -621,8 +621,8 @@
 					.container,
 					.container-fluid {
 						flex-wrap: nowrap;
-						padding-left: $grid-gutter-width-base / 2;
-						padding-right: $grid-gutter-width-base / 2;
+						padding-left: $grid-gutter-width / 2;
+						padding-right: $grid-gutter-width / 2;
 					}
 
 					.navbar-collapse {
@@ -667,9 +667,9 @@
 				}
 
 				&.navbar-inverse-bg .navbar-nav .nav-link.active:after {
-					background-color: $navbar-inverse-active-highlight;
+					background-color: $navbar-dark-active-highlight;
 
-					@if not ($navbar-inverse-active-highlight == transparent) {
+					@if not ($navbar-dark-active-highlight == transparent) {
 						content: '';
 					}
 				}
@@ -824,27 +824,27 @@
 	}
 
 	.navbar-brand {
-		@if not ($navbar-inverse-brand-color == $navbar-inverse-active-color) {
-			color: $navbar-inverse-brand-color;
+		@if not ($navbar-dark-brand-color == $navbar-dark-active-color) {
+			color: $navbar-dark-brand-color;
 		}
 
 		@include hover-focus {
-			@if not ($navbar-inverse-brand-hover-color == $navbar-inverse-active-color) {
-				color: $navbar-inverse-brand-hover-color;
+			@if not ($navbar-dark-brand-hover-color == $navbar-dark-active-color) {
+				color: $navbar-dark-brand-hover-color;
 			}
 		}
 	}
 
 	.navbar-toggler-link {
 		&[aria-expanded="true"] {
-			color: $navbar-inverse-active-color;
+			color: $navbar-dark-active-color;
 		}
 	}
 }
 
 .navbar-inverse-bg {
-	background-color: $navbar-inverse-bg;
-	border-color: $navbar-inverse-border-color;
+	background-color: $navbar-dark-bg;
+	border-color: $navbar-dark-border-color;
 
 	&.collapse-basic-search-transparent .basic-search {
 		&.focus:after {
@@ -853,41 +853,41 @@
 	}
 
 	.basic-search.open {
-		background-color: $navbar-inverse-bg;
-		border-color: $navbar-inverse-border-color;
+		background-color: $navbar-dark-bg;
+		border-color: $navbar-dark-border-color;
 	}
 
 	.navbar-brand {
-		background-color: $navbar-inverse-brand-bg;
+		background-color: $navbar-dark-brand-bg;
 
 		@include hover-focus {
-			background-color: $navbar-inverse-brand-hover-bg;
+			background-color: $navbar-dark-brand-hover-bg;
 		}
 	}
 
 	.nav-link {
 		@include hover-focus {
-			background-color: $navbar-inverse-hover-bg;
+			background-color: $navbar-dark-hover-bg;
 		}
 
 		&.active,
 		&[aria-expanded="true"] {
-			background-color: $navbar-inverse-active-bg;
+			background-color: $navbar-dark-active-bg;
 		}
 
 		&.disabled {
-			background-color: $navbar-inverse-disabled-bg;
+			background-color: $navbar-dark-disabled-bg;
 		}
 	}
 
 	.navbar-overlay {
-		background-color: $navbar-inverse-bg;
+		background-color: $navbar-dark-bg;
 	}
 
 	.navbar-toggler-link:after {
-		background-color: $navbar-inverse-active-highlight;
+		background-color: $navbar-dark-active-highlight;
 
-		@if not ($navbar-inverse-active-highlight == transparent) {
+		@if not ($navbar-dark-active-highlight == transparent) {
 			content: '';
 		}
 	}

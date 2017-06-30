@@ -23,8 +23,8 @@ $h6-font-size-desktop: null !default;
 $font-size-base-desktop: $font-size-base !default;
 $font-size-lg-desktop: $font-size-lg !default;
 
-$brand-secondary: $gray-lightest !default; // #F7F7F9
+$brand-secondary: $gray-100 !default; // #F7F7F9
 
-$state-secondary-bg: $gray-lightest !default; // #F7F7F9
+$state-secondary-bg: $gray-100 !default; // #F7F7F9
 $state-secondary-border-color: darken($state-secondary-bg, 5%) !default; // #E8E8EE
-$state-secondary-text: $gray-dark !default; // #292B2C
+$state-secondary-text: $gray-900 !default; // #292B2C

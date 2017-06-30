@@ -8,4 +8,4 @@ $progress-lg-border-radius: 100px !default;
 
 $multi-step-progress-bar-divider-height: 2px !default;
 $multi-step-progress-bar-color: #CAD3DB !default;
-$multi-step-progress-bar-complete-color: $brand-secondary !default;
+$multi-step-progress-bar-complete-color: map-get($theme-colors, secondary) !default;
