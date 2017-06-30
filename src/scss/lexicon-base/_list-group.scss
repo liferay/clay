@@ -152,8 +152,7 @@
 	.list-group-item {
 		background-color: transparent;
 		border-color: transparent;
-		padding-left: 0;
-		padding-right: 0;
+		padding: 0;
 
 		&.active {
 			color: $body-color;
