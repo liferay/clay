@@ -11,6 +11,7 @@
 	display: block;
 	padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
 	position: relative;
+	word-wrap: break-word;
 }
 
 .nav > li > a:focus {
