@@ -80,24 +80,24 @@ $collapse-basic-search-transparent-light-focus-highlight: $input-focus-border-co
 
 // Navbar Inverse
 
-$navbar-inverse-bg: $gray-dark !default;
-$navbar-inverse-border-color: transparent !default;
+$navbar-dark-bg: map-get($colors, gray-dark) !default;
+$navbar-dark-border-color: transparent !default;
 
-$navbar-inverse-active-bg: null !default;
-$navbar-inverse-hover-bg: null !default;
-$navbar-inverse-disabled-bg: null !default;
+$navbar-dark-active-bg: null !default;
+$navbar-dark-hover-bg: null !default;
+$navbar-dark-disabled-bg: null !default;
 
-$navbar-inverse-active-highlight: transparent !default;
+$navbar-dark-active-highlight: transparent !default;
 
-$navbar-inverse-brand-bg: null !default;
-$navbar-inverse-brand-hover-bg: null !default;
-$navbar-inverse-brand-color: null !default;
-$navbar-inverse-brand-hover-color: null !default;
+$navbar-dark-brand-bg: null !default;
+$navbar-dark-brand-hover-bg: null !default;
+$navbar-dark-brand-color: null !default;
+$navbar-dark-brand-hover-color: null !default;
 
-$collapse-basic-search-transparent-inverse-btn-color: $navbar-inverse-color !default;
-$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-inverse-active-color !default;
-$collapse-basic-search-transparent-inverse-input-color: $navbar-inverse-color !default;
-$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-inverse-active-color !default;
+$collapse-basic-search-transparent-inverse-btn-color: $navbar-dark-color !default;
+$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-dark-active-color !default;
+$collapse-basic-search-transparent-inverse-input-color: $navbar-dark-color !default;
+$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-dark-active-color !default;
 $collapse-basic-search-transparent-inverse-input-placeholder-color: null !default;
 $collapse-basic-search-transparent-inverse-input-placeholder-focus-color: null !default;
 

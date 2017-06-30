@@ -40,27 +40,27 @@ $panel-group-panel-margin-bottom: 0 !default;
 
 // Panel Variants
 
-$panel-danger-border-color: $state-danger-border-color !default;
+$panel-danger-border-color: theme-color-level(danger, -9) !default;
 $panel-danger-color: null !default;
-$panel-danger-header-bg: $state-danger-bg !default;
+$panel-danger-header-bg: theme-color-level(danger, -10) !default;
 $panel-danger-header-border-color: $panel-danger-border-color !default;
-$panel-danger-header-color: $state-danger-text !default;
+$panel-danger-header-color:  theme-color-level(danger, 6) !default;
 $panel-danger-footer-bg: $panel-danger-header-bg !default;
 $panel-danger-footer-border-color: $panel-danger-border-color !default;
 $panel-danger-footer-color: $panel-danger-header-color !default;
 
-$panel-info-border-color: $state-info-border-color !default;
+$panel-info-border-color: theme-color-level(info, -9) !default;
 $panel-info-color: null !default;
-$panel-info-header-bg: $state-info-bg !default;
+$panel-info-header-bg: theme-color-level(info, -10) !default;
 $panel-info-header-border-color: $panel-info-border-color !default;
-$panel-info-header-color: $state-info-text !default;
+$panel-info-header-color: theme-color-level(info, -9) !default;
 $panel-info-footer-bg: $panel-info-header-bg !default;
 $panel-info-footer-border-color: $panel-info-header-border-color !default;
 $panel-info-footer-color: $panel-info-header-color !default;
 
-$panel-primary-border-color: $brand-primary !default;
+$panel-primary-border-color: map-get($theme-colors, primary) !default;
 $panel-primary-color: null !default;
-$panel-primary-header-bg: $brand-primary !default;
+$panel-primary-header-bg: map-get($theme-colors, primary) !default;
 $panel-primary-header-border-color: $panel-primary-border-color !default;
 $panel-primary-header-color: #FFF !default;
 $panel-primary-footer-bg: $panel-primary-header-bg !default;
@@ -69,27 +69,27 @@ $panel-primary-footer-color: $panel-primary-header-color !default;
 
 $panel-secondary-border-color: rgba($black, 0.125) !default;
 $panel-secondary-color: null !default;
-$panel-secondary-header-bg: $gray-lightest !default;
+$panel-secondary-header-bg: $gray-100 !default;
 $panel-secondary-header-border-color: $panel-secondary-border-color !default;
 $panel-secondary-header-color: null !default;
 $panel-secondary-footer-bg: $panel-secondary-header-bg !default;
 $panel-secondary-footer-border-color: $panel-secondary-border-color !default;
 $panel-secondary-footer-color: null !default;
 
-$panel-success-border-color: $state-success-border-color !default;
+$panel-success-border-color: theme-color-level(success, -9) !default;
 $panel-success-color: null !default;
-$panel-success-header-bg: $state-success-bg !default;
+$panel-success-header-bg: theme-color-level(success, -10) !default;
 $panel-success-header-border-color: $panel-success-border-color !default;
-$panel-success-header-color: $state-success-text !default;
+$panel-success-header-color: theme-color-level(success, 6) !default;
 $panel-success-footer-bg: $panel-success-header-bg !default;
 $panel-success-footer-border-color: $panel-success-header-border-color !default;
 $panel-success-footer-color: $panel-success-header-color !default;
 
-$panel-warning-border-color: $state-warning-border-color !default;
+$panel-warning-border-color: theme-color-level(warning, -9) !default;
 $panel-warning-color: null !default;
-$panel-warning-header-bg: $state-warning-bg !default;
+$panel-warning-header-bg: theme-color-level(warning, -10) !default;
 $panel-warning-header-border-color: $panel-warning-border-color !default;
-$panel-warning-header-color: $state-warning-text !default;
+$panel-warning-header-color: theme-color-level(warning, 6) !default;
 $panel-warning-footer-bg: $panel-warning-header-bg !default;
 $panel-warning-footer-border-color: $panel-warning-header-border-color !default;
 $panel-warning-footer-color: $panel-warning-header-color !default;

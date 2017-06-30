@@ -40,7 +40,7 @@ $btn-border-radius-lg: $border-radius !default;
 $btn-transition: background 0.2s ease-in-out, border 0.2s ease-in-out, box-shadow 0.2s ease-in-out !default;
 
 $btn-primary-color: #FFF !default;
-$btn-primary-bg: $brand-primary !default;
+$btn-primary-bg: map-get($theme-colors, primary) !default;
 $btn-primary-border-color: $btn-primary-bg !default;
 $btn-primary-hover-color: $btn-primary-color !default;
 $btn-primary-hover-bg: darken($btn-primary-bg, 8%) !default;
@@ -50,19 +50,19 @@ $btn-primary-active-color: $btn-primary-color !default;
 $btn-primary-active-bg: darken($btn-primary-hover-bg, 12%) !default;
 $btn-primary-hover-border-color: $btn-primary-active-bg !default;
 
-$btn-secondary-color: $brand-secondary !default;
+$btn-secondary-color: map-get($theme-colors, secondary) !default;
 $btn-secondary-bg: #FFF !default;
-$btn-secondary-border-color: $brand-secondary !default;
+$btn-secondary-border-color: map-get($theme-colors, secondary) !default;
 $btn-secondary-hover-color: $btn-secondary-color !default;
 $btn-secondary-hover-bg: $btn-secondary-bg !default;
-$btn-secondary-hover-border-color: $brand-primary !default;
+$btn-secondary-hover-border-color: map-get($theme-colors, primary) !default;
 $btn-secondary-focus-box-shadow: 0 0 0 2px rgba($btn-secondary-hover-border-color, 0.5) !default;
 $btn-secondary-active-color: $btn-secondary-color !default;
 $btn-secondary-active-bg: $btn-secondary-bg !default;
 $btn-secondary-active-border-color: darken($btn-secondary-hover-border-color, 8%) !default;
 
 $btn-success-color: #FFF !default;
-$btn-success-bg: $brand-success !default;
+$btn-success-bg: map-get($theme-colors, success) !default;
 $btn-success-border-color: $btn-success-bg !default;
 $btn-success-hover-color: $btn-success-color !default;
 $btn-success-hover-bg: darken($btn-success-bg, 8%) !default;
@@ -73,7 +73,7 @@ $btn-success-active-bg: darken($btn-success-hover-bg, 12%) !default;
 $btn-success-active-border-color: $btn-success-active-bg !default;
 
 $btn-info-color: #FFF !default;
-$btn-info-bg: $brand-info !default;
+$btn-info-bg: map-get($theme-colors, info) !default;
 $btn-info-border-color: $btn-info-bg !default;
 $btn-info-hover-color: $btn-info-color !default;
 $btn-info-hover-bg: darken($btn-info-bg, 8%) !default;
@@ -84,7 +84,7 @@ $btn-info-active-bg: darken($btn-info-hover-bg, 12%) !default;
 $btn-info-active-border-color: $btn-info-active-bg !default;
 
 $btn-warning-color: #FFF !default;
-$btn-warning-bg: $brand-warning !default;
+$btn-warning-bg: map-get($theme-colors, warning) !default;
 $btn-warning-border-color: $btn-warning-bg !default;
 $btn-warning-hover-color: $btn-warning-color !default;
 $btn-warning-hover-bg: darken($btn-warning-bg, 8%) !default;
@@ -95,7 +95,7 @@ $btn-warning-active-bg: darken($btn-warning-hover-bg, 12%) !default;
 $btn-warning-active-border-color: $btn-warning-active-bg !default;
 
 $btn-danger-color: #FFF !default;
-$btn-danger-bg: $brand-danger !default;
+$btn-danger-bg: map-get($theme-colors, danger) !default;
 $btn-danger-border-color: $btn-danger-bg !default;
 $btn-danger-hover-color: $btn-danger-color !default;
 $btn-danger-hover-bg: darken($btn-danger-bg, 8%) !default;

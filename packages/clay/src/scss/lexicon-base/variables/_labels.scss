@@ -31,42 +31,42 @@ $label-border-width: 1px !default;
 
 $label-danger-bg: null !default;
 $label-danger-hover-bg: null !default;
-$label-danger-border-color: $brand-danger !default;
+$label-danger-border-color: map-get($theme-colors, danger) !default;
 $label-danger-hover-border-color: darken($label-danger-border-color, 20%) !default;
-$label-danger-color: $brand-danger !default;
+$label-danger-color: map-get($theme-colors, danger) !default;
 $label-danger-hover-color: darken($label-danger-color, 20%) !default;
 
 $label-secondary-bg: null !default;
 $label-secondary-hover-bg: null !default;
-$label-secondary-border-color: $gray-light !default;
+$label-secondary-border-color: $gray-400 !default;
 $label-secondary-hover-border-color: darken($label-secondary-border-color, 20%) !default;
-$label-secondary-color: $gray-light !default;
+$label-secondary-color: $gray-400 !default;
 $label-secondary-hover-color: darken($label-secondary-color, 20%) !default;
 
 $label-info-bg: null !default;
 $label-info-hover-bg: null !default;
-$label-info-border-color: $brand-info !default;
+$label-info-border-color: map-get($theme-colors, info) !default;
 $label-info-hover-border-color: darken($label-info-border-color, 20%) !default;
-$label-info-color: $brand-info !default;
+$label-info-color: map-get($theme-colors, info) !default;
 $label-info-hover-color: darken($label-info-color, 20%) !default;
 
 $label-primary-bg: null !default;
 $label-primary-hover-bg: null !default;
-$label-primary-border-color: $brand-primary !default;
+$label-primary-border-color: map-get($theme-colors, primary) !default;
 $label-primary-hover-border-color: darken($label-primary-border-color, 20%) !default;
-$label-primary-color: $brand-primary !default;
+$label-primary-color: map-get($theme-colors, primary) !default;
 $label-primary-hover-color: darken($label-primary-color, 20%) !default;
 
 $label-success-bg: null !default;
 $label-success-hover-bg: null !default;
-$label-success-border-color: $brand-success !default;
+$label-success-border-color: map-get($theme-colors, success) !default;
 $label-success-hover-border-color: darken($label-success-border-color, 20%) !default;
-$label-success-color: $brand-success !default;
+$label-success-color: map-get($theme-colors, success) !default;
 $label-success-hover-color: darken($label-success-color, 20%) !default;
 
 $label-warning-bg: null !default;
 $label-warning-hover-bg: null !default;
-$label-warning-border-color: $brand-warning !default;
+$label-warning-border-color: map-get($theme-colors, warning) !default;
 $label-warning-hover-border-color: darken($label-warning-border-color, 20%) !default;
-$label-warning-color: $brand-warning !default;
+$label-warning-color: map-get($theme-colors, warning) !default;
 $label-warning-hover-color: darken($label-warning-color, 20%) !default;

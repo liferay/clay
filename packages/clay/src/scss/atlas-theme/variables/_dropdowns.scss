@@ -29,13 +29,13 @@ $dropdown-border-color: transparentize(#DCE0E3, 0.5) !default;
 
 $dropdown-divider-bg: $dropdown-border-color !default;
 
-$dropdown-link-color: $brand-secondary !default;
+$dropdown-link-color: map-get($theme-colors, secondary) !default;
 
 $dropdown-link-hover-bg: #F7FAFA !default;
-$dropdown-link-hover-color: $brand-secondary !default;
+$dropdown-link-hover-color: map-get($theme-colors, secondary) !default;
 
 $dropdown-link-active-bg: $dropdown-link-hover-bg !default;
-$dropdown-link-active-color: $brand-primary !default;
+$dropdown-link-active-color: map-get($theme-colors, primary) !default;
 
 $dropdown-link-disabled-color: #CACDD2 !default;
 

@@ -87,21 +87,21 @@
 @if (variable-exists(atlas-theme)) {
 	.has-success {
 		select.form-control:not([multiple]):not([size]) {
-			background-image: lx-icon(caret-double-l, $state-success-border-color);
+			background-image: lx-icon(caret-double-l, theme-color-level(success, -9));
 			background-image: none \9;
 		}
 	}
 
 	.has-warning {
 		select.form-control:not([multiple]):not([size]) {
-			background-image: lx-icon(caret-double-l, $state-warning-border-color);
+			background-image: lx-icon(caret-double-l, theme-color-level(warning, -9));
 			background-image: none \9;
 		}
 	}
 
 	.has-danger {
 		select.form-control:not([multiple]):not([size]) {
-			background-image: lx-icon(caret-double-l, $state-danger-border-color);
+			background-image: lx-icon(caret-double-l, theme-color-level(danger, -9));
 			background-image: none \9;
 		}
 	}

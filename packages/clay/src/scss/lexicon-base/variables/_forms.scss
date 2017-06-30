@@ -35,7 +35,7 @@ $input-label-margin-bottom: null !default;
 
 $input-label-font-size-desktop: null !default;
 
-$input-label-reference-mark-color: $brand-warning !default;
+$input-label-reference-mark-color: map-get($theme-colors, warning) !default;
 $input-label-reference-mark-spacer: null !default;
 $input-label-reference-mark-vertical-alignment: top !default;
 

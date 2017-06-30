@@ -15,19 +15,19 @@ $progress-group-addon-spacer-x: 1rem !default;
 
 // Progress States
 
-$progress-group-feedback-color: $brand-primary !default;
+$progress-group-feedback-color: map-get($theme-colors, primary) !default;
 
-$progress-bar-danger-bg: $brand-danger !default;
-$progress-group-feedback-danger-color: $brand-danger !default;
+$progress-bar-danger-bg: map-get($theme-colors, danger) !default;
+$progress-group-feedback-danger-color: map-get($theme-colors, danger) !default;
 
-$progress-bar-info-bg: $brand-info !default;
-$progress-group-feedback-info-color: $brand-info !default;
+$progress-bar-info-bg: map-get($theme-colors, info) !default;
+$progress-group-feedback-info-color: map-get($theme-colors, info) !default;
 
-$progress-bar-success-bg: $brand-success !default;
-$progress-group-feedback-success-color: $brand-success !default;
+$progress-bar-success-bg: map-get($theme-colors, success) !default;
+$progress-group-feedback-success-color: map-get($theme-colors, success) !default;
 
-$progress-bar-warning-bg: $brand-warning !default;
-$progress-group-feedback-warning-color: $brand-warning !default;
+$progress-bar-warning-bg: map-get($theme-colors, warning) !default;
+$progress-group-feedback-warning-color: map-get($theme-colors, warning) !default;
 
 // Multi Step Progress
 
@@ -37,10 +37,10 @@ $multi-step-progress-bar-icon: "\f10c" !default;
 
 $multi-step-progress-bar-color: #BBB !default;
 
-$multi-step-progress-bar-active-color: $brand-primary !default;
+$multi-step-progress-bar-active-color: map-get($theme-colors, primary) !default;
 
-$multi-step-progress-bar-complete-color: $gray !default;
-$multi-step-progress-bar-complete-icon-color: $brand-primary !default;
+$multi-step-progress-bar-complete-color: map-get($colors, gray) !default;
+$multi-step-progress-bar-complete-icon-color: map-get($theme-colors, primary) !default;
 
 $multi-step-progress-bar-divider-height: 1px !default;
 

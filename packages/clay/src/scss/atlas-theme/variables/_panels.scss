@@ -21,8 +21,8 @@ $panel-group-panel-margin-bottom: 1px !default;
 
 // Panel Variants
 
-$panel-primary-border-color: darken($brand-primary, 25%) !default;
+$panel-primary-border-color: darken(map-get($theme-colors, primary), 25%) !default;
 
-$panel-secondary-border-color: $brand-primary !default;
+$panel-secondary-border-color: map-get($theme-colors, primary) !default;
 $panel-secondary-header-bg: #F5F8FA !default;
-$panel-secondary-color: $brand-secondary !default;
+$panel-secondary-color: map-get($theme-colors, secondary) !default;

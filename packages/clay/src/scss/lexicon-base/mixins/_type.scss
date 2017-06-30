@@ -26,7 +26,7 @@
 // @param $bg-color - Color of the highlight
 // @param $color - Colors the text
 
-@mixin highlight-text($bg-color: $state-warning-bg, $color: $body-color) {
+@mixin highlight-text($bg-color: theme-color-level(warning, -10), $color: $body-color) {
 	background-color: $bg-color;
 	box-decoration-break: clone;
 	box-shadow: -0.25em 0 0 $bg-color;
