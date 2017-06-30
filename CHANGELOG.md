@@ -1,3 +1,9 @@
+### v1.0.22 - June 29, 2017
+* New: Nav Nested added `$nav-nested-link-active-bg`, `$nav-nested-link-active-color` and active states
+* Update: Nav added `word-break: wrap-word;` to nav-links
+* Update: Estonia and Thai flag sizing
+* Site: Navs demo added active states to Nested Nav
+
 ### v1.0.21 - June 27, 2017
 * New: Add Estonia and Thai flags
 * Site: Remove unused images
