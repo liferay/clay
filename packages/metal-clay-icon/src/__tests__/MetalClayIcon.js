@@ -1,7 +1,7 @@
 'use strict';
 
 import dom from 'metal-dom';
-import MetalClayIcon from '../src/MetalClayIcon';
+import MetalClayIcon from '../MetalClayIcon';
 
 const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
 
@@ -22,7 +22,7 @@ describe('MetalClayIcon', function() {
 			}
 		);
 
-		assert.strictEqual(clayIcon.element.outerHTML, __html__['test/fixture/testDefaultMetalClayIcon.html'].trim());
+		expect(clayIcon).toMatchSnapshot();
 	});
 
 	it('should append elementClasses to the outer element', function() {
@@ -34,7 +34,7 @@ describe('MetalClayIcon', function() {
 			}
 		);
 
-		assert(dom.hasClass(clayIcon.element, 'icon-monospaced'));
+		expect(dom.hasClass(clayIcon.element, 'icon-monospaced')).toBeTruthy();
 	});
 
 	it('should not output any markup if symbol is undefined', function() {
@@ -44,7 +44,7 @@ describe('MetalClayIcon', function() {
 			}
 		);
 
-		assert.equal(clayIcon.element, null);
+		expect(clayIcon.element).toBeNull();
 	});
 
 	it('should not output any markup if spritemap is undefined', function() {
@@ -54,7 +54,7 @@ describe('MetalClayIcon', function() {
 			}
 		);
 
-		assert.equal(clayIcon.element, null);
+		expect(clayIcon.element).toBeNull();
 	});
 
 	it('should output markup for Glyphicons.', function() {
@@ -64,7 +64,7 @@ describe('MetalClayIcon', function() {
 			}
 		);
 
-		assert.strictEqual(clayIcon.element.outerHTML, __html__['test/fixture/testGlyphiconsMetalClayIcon.html'].trim());
+		expect(clayIcon).toMatchSnapshot();
 	});
 
 	it('should output markup for Clay Font Awesome Icons.', function() {
@@ -74,6 +74,6 @@ describe('MetalClayIcon', function() {
 			}
 		);
 
-		assert.strictEqual(clayIcon.element.outerHTML, __html__['test/fixture/testClayFaMetalClayIcon.html'].trim());
+		expect(clayIcon).toMatchSnapshot();
 	});
 });

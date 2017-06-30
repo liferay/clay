@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
@@ -23,5 +24,12 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()
-  ]
+  ],
+  resolve: {
+      alias: {
+          'incremental-dom': path.resolve('./node_modules/incremental-dom'),
+          'metal-incremental-dom': path.resolve('./node_modules/metal-incremental-dom'),
+          'metal-soy-bundle': path.resolve('./node_modules/metal-soy-bundle')
+      }
+  }
 };

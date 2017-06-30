@@ -1,7 +1,7 @@
 'use strict';
 
 import dom from 'metal-dom';
-import MetalClayLink from '../src/MetalClayLink';
+import MetalClayLink from '../MetalClayLink';
 
 let component;
 
@@ -17,7 +17,7 @@ describe('MetalClayLink', function() {
 			elementClasses: 'my-test-class'
 		});
 
-		assert.ok(dom.hasClass(component.element, 'my-test-class'));
+		expect(dom.hasClass(component.element, 'my-test-class')).toBeTruthy();
 	});
 
 	it('should apply the download attribute to the anchor tag', () => {
@@ -25,7 +25,7 @@ describe('MetalClayLink', function() {
 			download: 'http://www.example.com'
 		});
 
-		assert.strictEqual(component.element.getAttribute('download'), 'http://www.example.com');
+		expect(component.element.getAttribute('download')).toEqual('http://www.example.com');
 	});
 
 	it('should apply an id to the anchor tag', () => {
@@ -33,7 +33,7 @@ describe('MetalClayLink', function() {
 			id: 'myUniqueId'
 		});
 
-		assert.strictEqual(component.element.getAttribute('id'), 'myUniqueId');
+		expect(component.element.getAttribute('id')).toEqual('myUniqueId');
 	});
 
 	it('should apply an href to the anchor tag', () => {
@@ -41,7 +41,7 @@ describe('MetalClayLink', function() {
 			href: 'http://www.example.com'
 		});
 
-		assert.strictEqual(component.element.getAttribute('href'), 'http://www.example.com');
+		expect(component.element.getAttribute('href')).toEqual('http://www.example.com');
 	});
 
 	it('should apply the target attribute to the anchor tag', () => {
@@ -49,7 +49,7 @@ describe('MetalClayLink', function() {
 			target: 'http://www.example.com'
 		});
 
-		assert.strictEqual(component.element.getAttribute('target'), 'http://www.example.com');
+		expect(component.element.getAttribute('target')).toEqual('http://www.example.com');
 	});
 
 	it('should should be able to render straight html', () => {
@@ -57,7 +57,7 @@ describe('MetalClayLink', function() {
 			html: '<a aria-label="my-aria-label" href="#1" target="_blank">Html</a>'
 		});
 
-		assert.strictEqual(component.element.outerHTML, __html__['test/fixture/testDefaultMetalClayLink.html'].trim());
+		expect(component).toMatchSnapshot();
 	});
 
 	it('should render the correct markup with icon on the right', () => {
@@ -71,7 +71,7 @@ describe('MetalClayLink', function() {
 			label: '<span>My Other Link Label</span>'
 		});
 
-		assert.strictEqual(component.element.outerHTML, __html__['test/fixture/testDefaultMetalClayLinkIconRight.html'].trim());
+		expect(component).toMatchSnapshot();
 	});
 
 	it('should render the correct markup with icon on the left', () => {
@@ -85,6 +85,6 @@ describe('MetalClayLink', function() {
 			label: 'My Link Label'
 		});
 
-		assert.strictEqual(component.element.outerHTML, __html__['test/fixture/testDefaultMetalClayLinkIconLeft.html'].trim());
+		expect(component).toMatchSnapshot();
 	});
 });

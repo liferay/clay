@@ -1,7 +1,7 @@
 'use strict';
 
 import Component from 'metal-component';
-import MetalClayIcon from 'metal-clay-icon';
+import 'metal-clay-icon';
 import Soy from 'metal-soy';
 import { Config } from 'metal-state';
 

@@ -4,7 +4,7 @@ import anim from 'metal-anim';
 import { async } from 'metal';
 import core from 'metal';
 import dom from 'metal-dom';
-import MetalClayCollapse from '../src/MetalClayCollapse';
+import MetalClayCollapse from '../MetalClayCollapse';
 
 let component;
 
@@ -21,17 +21,17 @@ describe('MetalClayCollapse', () => {
 	});
 
 	function checkClosedClasses(component) {
-		assert.ok(!dom.hasClass(component.content, 'in'));
-		assert.ok(!dom.hasClass(component.content, 'collapsing'));
-		assert.ok(dom.hasClass(component.content, 'collapse'));
-		assert.ok(component.content.getAttribute('aria-expanded') === 'false');
+		expect(!dom.hasClass(component.content, 'in')).toBeTruthy();
+		expect(!dom.hasClass(component.content, 'collapsing')).toBeTruthy();
+		expect(dom.hasClass(component.content, 'collapse')).toBeTruthy();
+		expect(component.content.getAttribute('aria-expanded') === 'false').toBeTruthy();
 	}
 
 	function checkOpenClasses(component) {
-		assert.ok(!dom.hasClass(component.content, 'collapsing'));
-		assert.ok(dom.hasClass(component.content, 'collapse'));
-		assert.ok(dom.hasClass(component.content, 'in'));
-		assert.ok(component.content.getAttribute('aria-expanded') === 'true');
+		expect(!dom.hasClass(component.content, 'collapsing')).toBeTruthy();
+		expect(dom.hasClass(component.content, 'collapse')).toBeTruthy();
+		expect(dom.hasClass(component.content, 'in')).toBeTruthy();
+		expect(component.content.getAttribute('aria-expanded') === 'true').toBeTruthy();
 	}
 
 	describe('Content State', () => {
@@ -41,7 +41,7 @@ describe('MetalClayCollapse', () => {
 				headers: '[aria-controls="collapseExample1"]'
 			});
 
-			assert.ok(core.isElement(component.content));
+			expect(core.isElement(component.content)).toBeTruthy();
 		});
 
 		it('should accept a selector as value and convert it to an element', () => {
@@ -50,7 +50,7 @@ describe('MetalClayCollapse', () => {
 				headers: '[aria-controls="collapseExample1"]'
 			});
 
-			assert.ok(core.isElement(component.content));
+			expect(core.isElement(component.content)).toBeTruthy();
 		});
 
 		it('should close when calling close()', () => {
@@ -109,7 +109,7 @@ describe('MetalClayCollapse', () => {
 				headers: document.querySelector('[aria-controls="collapseExample1"]')
 			});
 
-			assert.ok(core.isElement(component.headers));
+			expect(core.isElement(component.headers)).toBeTruthy();
 		});
 
 		it('should accept a selector as value', () => {
@@ -118,7 +118,7 @@ describe('MetalClayCollapse', () => {
 				headers: '[aria-controls="collapseExample1"]'
 			});
 
-			assert.ok(core.isString(component.headers));
+			expect(core.isString(component.headers)).toBeTruthy();
 		});
 
 		it('should accept an array of selectors and elements as a value', () => {
@@ -127,7 +127,7 @@ describe('MetalClayCollapse', () => {
 				headers: ['[aria-controls="collapseExample1"]', document.querySelector('#toggle2')]
 			});
 
-			assert.ok(Array.isArray(component.headers));
+			expect(Array.isArray(component.headers)).toBeTruthy();
 		});
 	});
 });
