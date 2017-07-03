@@ -21,6 +21,20 @@ $alert-lead-margin-right: 16px !default;
 $alert-link-decoration: underline !default;
 $alert-link-hover-decoration: none !default;
 
+$alert-primary-bg: #65B6F0 !default;
+$alert-primary-border-color: darken($alert-primary-bg, 12%) !default;
+$alert-primary-color: #FFF !default;
+$alert-primary-close-color: darken($alert-primary-color, 6%) !default;
+$alert-primary-lead-color: darken($alert-primary-color, 6%) !default;
+$alert-primary-link-color: $alert-primary-lead-color !default;
+
+$alert-secondary-bg: #F5F8FA !default;
+$alert-secondary-border-color: darken($alert-secondary-bg, 12%) !default;
+$alert-secondary-color: #869CAD !default;
+$alert-secondary-close-color: darken($alert-secondary-color, 6%) !default;
+$alert-secondary-lead-color: darken($alert-secondary-color, 6%) !default;
+$alert-secondary-link-color: $alert-secondary-lead-color !default;
+
 $alert-danger-bg: #F1D1D8 !default;
 $alert-danger-border-color: darken($alert-danger-bg, 12%) !default;
 $alert-danger-color: #D77C8A !default;
@@ -48,3 +62,17 @@ $alert-warning-color: #D6B679 !default;
 $alert-warning-close-color: darken($alert-warning-color, 6%) !default;
 $alert-warning-lead-color: darken($alert-warning-color, 6%) !default;
 $alert-warning-link-color: $alert-warning-lead-color !default;
+
+$alert-light-bg: #FCFEFF !default;
+$alert-light-border-color: darken($alert-light-bg, 12%) !default;
+$alert-light-color: #869CAD !default;
+$alert-light-close-color: darken($alert-light-color, 6%) !default;
+$alert-light-lead-color: darken($alert-light-color, 6%) !default;
+$alert-light-link-color: $alert-light-lead-color !default;
+
+$alert-dark-bg: #869CAD !default;
+$alert-dark-border-color: darken($alert-dark-bg, 12%) !default;
+$alert-dark-color: #FFF !default;
+$alert-dark-close-color: darken($alert-dark-color, 6%) !default;
+$alert-dark-lead-color: darken($alert-dark-color, 6%) !default;
+$alert-dark-link-color: $alert-dark-lead-color !default;
