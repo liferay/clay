@@ -22,25 +22,29 @@ $alert-link-decoration: underline !default;
 $alert-link-hover-decoration: none !default;
 
 $alert-danger-bg: #F1D1D8 !default;
-$alert-danger-text: #D77C8A !default;
-$alert-danger-border-color: lighten($alert-danger-text, 12%) !default;
-$alert-danger-close-color: darken($alert-danger-text, 6%) !default;
-$alert-danger-lead-color: darken($alert-danger-text, 6%) !default;
+$alert-danger-border-color: darken($alert-danger-bg, 12%) !default;
+$alert-danger-color: #D77C8A !default;
+$alert-danger-close-color: darken($alert-danger-color, 6%) !default;
+$alert-danger-lead-color: darken($alert-danger-color, 6%) !default;
+$alert-danger-link-color: $alert-danger-lead-color !default;
 
 $alert-info-bg: #E7F1F9 !default;
-$alert-info-text: #86BADA !default;
-$alert-info-border-color: lighten($alert-info-text, 12%) !default;
-$alert-info-close-color: darken($alert-info-text, 6%) !default;
-$alert-info-lead-color: darken($alert-info-text, 6%) !default;
+$alert-info-border-color: darken($alert-info-bg, 12%) !default;
+$alert-info-color: #86BADA !default;
+$alert-info-close-color: darken($alert-info-color, 6%) !default;
+$alert-info-lead-color: darken($alert-info-color, 6%) !default;
+$alert-info-link-color: $alert-info-lead-color !default;
 
 $alert-success-bg: #DDF3D5 !default;
-$alert-success-text: #97C783 !default;
-$alert-success-border-color: lighten($alert-success-text, 12%) !default;
-$alert-success-close-color: darken($alert-success-text, 6%) !default;
-$alert-success-lead-color: darken($alert-success-text, 6%) !default;
+$alert-success-border-color: darken($alert-success-bg, 12%) !default;
+$alert-success-color: #97C783 !default;
+$alert-success-close-color: darken($alert-success-color, 6%) !default;
+$alert-success-lead-color: darken($alert-success-color, 6%) !default;
+$alert-success-link-color: $alert-success-lead-color !default;
 
 $alert-warning-bg: #F8F4D5 !default;
-$alert-warning-text: #D6B679 !default;
-$alert-warning-border-color: lighten($alert-warning-text, 12%) !default;
-$alert-warning-close-color: darken($alert-warning-text, 6%) !default;
-$alert-warning-lead-color: darken($alert-warning-text, 6%) !default;
+$alert-warning-border-color: darken($alert-warning-bg, 12%) !default;
+$alert-warning-color: #D6B679 !default;
+$alert-warning-close-color: darken($alert-warning-color, 6%) !default;
+$alert-warning-lead-color: darken($alert-warning-color, 6%) !default;
+$alert-warning-link-color: $alert-warning-lead-color !default;
