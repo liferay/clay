@@ -53,13 +53,6 @@ $gray-500: #464A4C !default;
 // $gray-800: #343a40 !default;
 $gray-900: #292B2C !default;
 
-// BS4 changed to gray scale
-// $gray-dark: #292B2C !default;
-// $gray: #464A4C !default;
-// $gray-light: #636C72 !default;
-// $gray-lighter: #ECEEEF !default;
-// $gray-lightest: #F7F7F9 !default;
-
 $theme-colors: (
   primary: #65B6F0,
   secondary: #869CAD,
@@ -71,30 +64,6 @@ $theme-colors: (
   dark: #869CAD
 ) !default;
 
-// $brand-primary: #65B6F0 !default;
-$brand-primary-active: darken(map-get($theme-colors, primary), 12%) !default;
-$brand-primary-hover: darken(map-get($theme-colors, primary), 8%) !default;
-
-// $brand-secondary: #869CAD !default;
-$brand-secondary-active: darken(map-get($theme-colors, secondary), 12%) !default;
-$brand-secondary-hover: darken(map-get($theme-colors, secondary), 8%) !default;
-
-// $brand-success: #76BD4A !default;
-$brand-success-active: darken(map-get($theme-colors, success), 12%) !default;
-$brand-success-hover: darken(map-get($theme-colors, success), 8%) !default;
-
-// $brand-info: #1E5EC8 !default;
-$brand-info-active: darken(map-get($theme-colors, info), 12%) !default;
-$brand-info-hover: darken(map-get($theme-colors, info), 8%) !default;
-
-// $brand-warning: #F5984C !default;
-$brand-warning-active: darken(map-get($theme-colors, warning), 12%) !default;
-$brand-warning-hover: darken(map-get($theme-colors, warning), 8%) !default;
-
-// $brand-danger: #C67 !default;
-$brand-danger-active: darken(map-get($theme-colors, danger), 12%) !default;
-$brand-danger-hover: darken(map-get($theme-colors, danger), 8%) !default;
-
 $link-color: map-get($theme-colors, primary) !default;
 
 $body-color: #29353D !default;
@@ -105,33 +74,7 @@ $component-active-bg: map-get($theme-colors, primary) !default;
 // Global color for active items (e.g., navs or dropdowns).
 $component-active-color: #FFF !default;
 
-$link-hover-color: $brand-primary-hover !default;
-
-// States for Form and alert
-
-$state-primary-text: map-get($theme-colors, primary) !default;
-$state-primary-bg: lighten($state-primary-text, 12%) !default;
-$state-primary-border-color: $state-primary-text !default;
-
-$state-secondary-text: map-get($theme-colors, secondary) !default;
-$state-secondary-bg: lighten($state-secondary-text, 34%) !default;
-$state-secondary-border-color: $state-secondary-text !default;
-
-$state-success-text: map-get($theme-colors, success) !default;
-$state-success-bg: lighten($state-success-text, 34%) !default;
-$state-success-border-color: $state-success-text !default;
-
-$state-info-text: map-get($theme-colors, info) !default;
-$state-info-bg: lighten($state-info-text, 34%) !default;
-$state-info-border-color: $state-info-text !default;
-
-$state-warning-text: map-get($theme-colors, warning) !default;
-$state-warning-bg: #F8F4D5 !default;
-$state-warning-border-color: $state-warning-text !default;
-
-$state-danger-text: map-get($theme-colors, danger) !default;
-$state-danger-bg: lighten($state-danger-text, 34%) !default;
-$state-danger-border-color: $state-danger-text !default;
+$link-hover-color: darken(map-get($theme-colors, primary), 8%) !default;
 
 // Inverse Colors
 
