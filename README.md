@@ -13,28 +13,22 @@
 3. Run the bootstrap script to install local dependencies and link packages together:
 
   ```
-  npm run bootstrap
+  npm run lerna
   ```
 
-4. Install local dependencies
-
-  ```
-  npm install
-  ```
-
-5. Build all packages
+4. Build all packages
 
   ```
   npm run build
   ```
 
-6. Start a local server on port 4000
+5. Start a local server on port 4000
 
   ```
   npm run start
   ```
 
-7. Run tests:
+6. Run tests:
 
   ```
   npm run test
