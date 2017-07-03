@@ -7815,7 +7815,53 @@ a.text-dark:focus, a.text-dark:hover {
   text-decoration: none;
 }
 
+.alert-primary {
+  background-color: #65B6F0;
+  border-color: #2d9ceb;
+  color: #FFF;
+}
+
+.alert-primary .close {
+  color: #FFF;
+}
+
+.alert-primary .alert-link {
+  color: #FFF;
+}
+
+.alert-primary .lead {
+  color: #FFF;
+}
+
+.alert-secondary {
+  background-color: #F5F8FA;
+  border-color: #ccdbe6;
+  color: #869CAD;
+}
+
+.alert-secondary .close {
+  color: #748da1;
+}
+
+.alert-secondary .alert-link {
+  color: #748da1;
+}
+
+.alert-secondary .lead {
+  color: #748da1;
+}
+
+.alert-danger {
+  background-color: #F1D1D8;
+  border-color: #e3a2b0;
+  color: #D77C8A;
+}
+
 .alert-danger .close {
+  color: #d06575;
+}
+
+.alert-danger .alert-link {
   color: #d06575;
 }
 
@@ -7823,7 +7869,17 @@ a.text-dark:focus, a.text-dark:hover {
   color: #d06575;
 }
 
+.alert-info {
+  background-color: #E7F1F9;
+  border-color: #b6d4ed;
+  color: #86BADA;
+}
+
 .alert-info .close {
+  color: #6fadd3;
+}
+
+.alert-info .alert-link {
   color: #6fadd3;
 }
 
@@ -7831,7 +7887,17 @@ a.text-dark:focus, a.text-dark:hover {
   color: #6fadd3;
 }
 
+.alert-success {
+  background-color: #DDF3D5;
+  border-color: #b6e5a5;
+  color: #97C783;
+}
+
 .alert-success .close {
+  color: #85bd6e;
+}
+
+.alert-success .alert-link {
   color: #85bd6e;
 }
 
@@ -7839,12 +7905,58 @@ a.text-dark:focus, a.text-dark:hover {
   color: #85bd6e;
 }
 
+.alert-warning {
+  background-color: #F8F4D5;
+  border-color: #efe6a1;
+  color: #D6B679;
+}
+
 .alert-warning .close {
+  color: #cfa962;
+}
+
+.alert-warning .alert-link {
   color: #cfa962;
 }
 
 .alert-warning .lead {
   color: #cfa962;
+}
+
+.alert-light {
+  background-color: #FCFEFF;
+  border-color: #E3E6E8;
+  color: #869CAD;
+}
+
+.alert-light .close {
+  color: #748da1;
+}
+
+.alert-light .alert-link {
+  color: #748da1;
+}
+
+.alert-light .lead {
+  color: #748da1;
+}
+
+.alert-dark {
+  background-color: #869CAD;
+  border-color: #637e93;
+  color: #FFF;
+}
+
+.alert-dark .close {
+  color: #f0f0f0;
+}
+
+.alert-dark .alert-link {
+  color: #f0f0f0;
+}
+
+.alert-dark .lead {
+  color: #f0f0f0;
 }
 
 .alert-notification {

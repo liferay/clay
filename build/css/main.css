@@ -172,12 +172,8 @@ section.row {
   margin-top: -17px;
 }
 
-.uxgl-alerts .alert {
+.clay-site-alerts .alert {
   margin-bottom: 5px;
-}
-
-.uxgl-alerts .uxgl-toggle-code ~ .alert {
-  margin-top: 10px;
 }
 
 @media (min-width: 768px) {
