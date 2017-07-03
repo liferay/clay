@@ -33,9 +33,14 @@ fieldset[disabled] .btn {
 }
 
 .btn-primary {
+	background-color: $btn-primary-bg;
+	border-color: $btn-primary-border-color;
+	color: $btn-primary-color;
+
 	&:hover {
 		background-color: $btn-primary-hover-bg;
 		border-color: $btn-primary-hover-border-color;
+		color: $btn-primary-hover-color;
 	}
 
 	&:focus,
@@ -43,6 +48,7 @@ fieldset[disabled] .btn {
 		background-color: $btn-primary-hover-bg;
 		border-color: $btn-primary-hover-border-color;
 		box-shadow: $btn-primary-focus-box-shadow;
+		color: $btn-primary-hover-color;
 	}
 
 	&:active,
@@ -50,6 +56,7 @@ fieldset[disabled] .btn {
 	.show > &.dropdown-toggle {
 		background-color: $btn-primary-active-bg;
 		border-color: $btn-primary-active-border-color;
+		color: $btn-primary-active-color;
 	}
 
 	&:disabled,
@@ -61,9 +68,14 @@ fieldset[disabled] .btn {
 }
 
 .btn-secondary {
+	background-color: $btn-secondary-bg;
+	border-color: $btn-secondary-border-color;
+	color: $btn-secondary-color;
+
 	&:hover {
 		background-color: $btn-secondary-hover-bg;
 		border-color: $btn-secondary-hover-border-color;
+		color: $btn-secondary-hover-color;
 	}
 
 	&:focus,
@@ -71,6 +83,7 @@ fieldset[disabled] .btn {
 		background-color: $btn-secondary-hover-bg;
 		border-color: $btn-secondary-hover-border-color;
 		box-shadow: $btn-secondary-focus-box-shadow;
+		color: $btn-secondary-hover-color;
 	}
 
 	&:active,
@@ -78,6 +91,7 @@ fieldset[disabled] .btn {
 	.show > &.dropdown-toggle {
 		background-color: $btn-secondary-active-bg;
 		border-color: $btn-secondary-active-border-color;
+		color: $btn-secondary-active-color;
 	}
 
 	&:disabled,
@@ -89,9 +103,14 @@ fieldset[disabled] .btn {
 }
 
 .btn-success {
+	background-color: $btn-success-bg;
+	border-color: $btn-success-border-color;
+	color: $btn-success-color;
+
 	&:hover {
 		background-color: $btn-success-hover-bg;
 		border-color: $btn-success-hover-border-color;
+		color: $btn-success-hover-color;
 	}
 
 	&:focus,
@@ -99,6 +118,7 @@ fieldset[disabled] .btn {
 		background-color: $btn-success-hover-bg;
 		border-color: $btn-success-hover-border-color;
 		box-shadow: $btn-success-focus-box-shadow;
+		color: $btn-success-hover-color;
 	}
 
 	&:active,
@@ -106,6 +126,7 @@ fieldset[disabled] .btn {
 	.show > &.dropdown-toggle {
 		background-color: $btn-success-active-bg;
 		border-color: $btn-success-active-border-color;
+		color: $btn-success-active-color;
 	}
 
 	&:disabled,
@@ -117,9 +138,14 @@ fieldset[disabled] .btn {
 }
 
 .btn-info {
+	background-color: $btn-info-bg;
+	border-color: $btn-info-border-color;
+	color: $btn-info-color;
+
 	&:hover {
 		background-color: $btn-info-hover-bg;
 		border-color: $btn-info-hover-border-color;
+		color: $btn-info-hover-color;
 	}
 
 	&:focus,
@@ -127,6 +153,7 @@ fieldset[disabled] .btn {
 		background-color: $btn-info-hover-bg;
 		border-color: $btn-info-hover-border-color;
 		box-shadow: $btn-info-focus-box-shadow;
+		color: $btn-info-hover-color;
 	}
 
 	&:active,
@@ -134,6 +161,7 @@ fieldset[disabled] .btn {
 	.show > &.dropdown-toggle {
 		background-color: $btn-info-active-bg;
 		border-color: $btn-info-active-border-color;
+		color: $btn-info-active-color;
 	}
 
 	&:disabled,
@@ -145,9 +173,14 @@ fieldset[disabled] .btn {
 }
 
 .btn-warning {
+	background-color: $btn-warning-bg;
+	border-color: $btn-warning-border-color;
+	color: $btn-warning-color;
+
 	&:hover {
 		background-color: $btn-warning-hover-bg;
 		border-color: $btn-warning-hover-border-color;
+		color: $btn-warning-hover-color;
 	}
 
 	&:focus,
@@ -155,6 +188,7 @@ fieldset[disabled] .btn {
 		background-color: $btn-warning-hover-bg;
 		border-color: $btn-warning-hover-border-color;
 		box-shadow: $btn-warning-focus-box-shadow;
+		color: $btn-warning-hover-color;
 	}
 
 	&:active,
@@ -162,6 +196,7 @@ fieldset[disabled] .btn {
 	.show > &.dropdown-toggle {
 		background-color: $btn-warning-active-bg;
 		border-color: $btn-warning-active-border-color;
+		color: $btn-warning-active-color;
 	}
 
 	&:disabled,
@@ -173,9 +208,14 @@ fieldset[disabled] .btn {
 }
 
 .btn-danger {
+	background-color: $btn-danger-bg;
+	border-color: $btn-danger-border-color;
+	color: $btn-danger-color;
+
 	&:hover {
 		background-color: $btn-danger-hover-bg;
 		border-color: $btn-danger-hover-border-color;
+		color: $btn-danger-hover-color;
 	}
 
 	&:focus,
@@ -183,6 +223,7 @@ fieldset[disabled] .btn {
 		background-color: $btn-danger-hover-bg;
 		border-color: $btn-danger-hover-border-color;
 		box-shadow: $btn-danger-focus-box-shadow;
+		color: $btn-danger-hover-color;
 	}
 
 	&:active,
@@ -190,6 +231,7 @@ fieldset[disabled] .btn {
 	.show > &.dropdown-toggle {
 		background-color: $btn-danger-active-bg;
 		border-color: $btn-danger-active-border-color;
+		color: $btn-danger-active-color;
 	}
 
 	&:disabled,
