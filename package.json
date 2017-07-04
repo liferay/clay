@@ -1,17 +1,22 @@
 {
   "scripts": {
     "build": "lerna run build",
+    "format": "prettier --use-tabs true --tab-width 4 --single-quote --write packages/metal-*/src/*.js packages/metal-*/src/**/*.js",
     "lerna": "lerna bootstrap && npm install",
+    "precommit": "lint-staged",
     "start": "http-server . -p 4000",
     "test": "jest"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
     "http-server": "^0.9.0",
+    "husky": "^0.14.2",
     "jest": "^20.0.4",
     "lerna": "^2.0.0-rc.5",
+    "lint-staged": "^4.0.0",
     "metal-jest-serializer": "^1.0.1",
-    "metal-lerna-jest-resolver": "^1.0.0"
+    "metal-lerna-jest-resolver": "^1.0.0",
+    "prettier": "^1.5.2"
   },
   "jest": {
     "resolver": "metal-lerna-jest-resolver",
@@ -20,6 +25,12 @@
     ],
     "transformIgnorePatterns": [
       "<rootDir>.*(node_modules)(?!.*metal.*).*$"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --use-tabs true --tab-width 4 --single-quote --write",
+      "git add"
     ]
   }
 }
