@@ -27,7 +27,7 @@
       "metal-jest-serializer"
     ],
     "transformIgnorePatterns": [
-      "<rootDir>.*(node_modules)(?!.*metal.*).*$"
+      "<rootDir>.*(node_modules)(?!.*clay.*).*$"
     ]
   },
   "lint-staged": {
