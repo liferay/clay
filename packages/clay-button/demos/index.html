@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Button</title>
+
+	<link rel="stylesheet" href="../node_modules/clay/build/css/atlas-font-awesome.css">
+	<link rel="stylesheet" href="../build/button.css">
+
+	<style>
+		.my-personal-class {
+			border-style: dotted;
+		}
+	</style>
+
+	<script src="../build/globals/clay-button.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Button</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Button States</h1>
+			<div id="states-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Desabled Button</h1>
+			<div id="disabled-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Button Sizes</h1>
+			<div id="sizes-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Block Button</h1>
+			<div id="block-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Listening Events</h1>
+			<div id="events-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Extending Style</h1>
+			<div id="extending-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Button with icons</h1>
+			<div id="icons-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		/*
+		 * Button States.
+		 * Once state is a reserved key for STATE, we are using style instead.
+		 */
+		new metal.ClayButton(
+			{
+				label: 'Default Button'
+			},
+			'#states-block'
+		);
+
+		new metal.ClayButton(
+			{
+				style: 'secondary',
+				label: 'Secondary Button'
+			},
+			'#states-block'
+		);
+
+		new metal.ClayButton(
+			{
+				style: 'info',
+				label: 'Info Button'
+			},
+			'#states-block'
+		);
+
+		new metal.ClayButton(
+			{
+				style: 'success',
+				label: 'Success Button'
+			},
+			'#states-block'
+		);
+
+		new metal.ClayButton(
+			{
+				style: 'warning',
+				label: 'Warning Button'
+			},
+			'#states-block'
+		);
+
+		new metal.ClayButton(
+			{
+				style: 'danger',
+				label: 'Danger Button'
+			},
+			'#states-block'
+		);
+
+		new metal.ClayButton(
+			{
+				ariaLabel: 'My Description',
+				href: "#",
+				style: 'link',
+				label: 'Link Button'
+			},
+			'#states-block'
+		);
+
+		/*
+		 * Disabed button.
+		 */
+		new metal.ClayButton(
+			{
+				disabled: true,
+				label: 'Disabled Button'
+			},
+			'#disabled-block'
+		);
+
+		/*
+		 * Button sizes.
+		 */
+		new metal.ClayButton(
+			{
+				label: 'Large Button',
+				size: 'lg'
+			},
+			'#sizes-block'
+		);
+
+		new metal.ClayButton(
+			{
+				label: 'Small Button',
+				size: 'sm'
+			},
+			'#sizes-block'
+		);
+
+		new metal.ClayButton(
+			{
+				label: 'Extra Small Button',
+				size: 'xs'
+			},
+			'#sizes-block'
+		);
+
+		/*
+		 * Listening to events.
+		 */
+		new metal.ClayButton(
+			{
+				label: 'Listening Click'
+			},
+			'#events-block'
+		)
+		.on('click', function(e) {
+			alert('click');
+		});
+
+		/*
+		 * Block button.
+		 */
+		new metal.ClayButton(
+			{
+				block: true,
+				label: 'Block Button'
+			},
+			'#block-block'
+		);
+
+		/*
+		 * Extending button style.
+		 */
+		new metal.ClayButton(
+			{
+				label: 'Default Button',
+				elementClasses: 'my-personal-class'
+			},
+			'#extending-block'
+		);
+
+		/*
+		 * Button with Icons.
+		 */
+		new metal.ClayButton(
+			{
+				label: 'Default Icon Position',
+				icon: {
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'plus'
+				}
+			},
+			'#icons-block'
+		);
+
+		new metal.ClayButton(
+			{
+				label: 'Icon positioned at right',
+				icon: {
+					alignment: 'right',
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'plus'
+				}
+			},
+			'#icons-block'
+		);
+	</script>
+</body>
+</html>

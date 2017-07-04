@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayIcon should generate markup for icon \`add-cell\` 1`] = `
+<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+  <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
+</svg>
+`;
+
+exports[`ClayIcon should output markup for Clay Font Awesome Icons. 1`] = `<span aria-hidden="true" class="clay-fa icon-plus"></span>`;
+
+exports[`ClayIcon should output markup for Glyphicons. 1`] = `<span aria-hidden="true" class="glyphicon glyphicon-plus"></span>`;

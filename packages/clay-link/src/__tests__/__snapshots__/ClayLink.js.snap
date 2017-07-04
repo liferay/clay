@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayLink should render the correct markup with icon on the left 1`] = `
+<a href="#1">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
+  </svg>My Link Label</a>
+`;
+
+exports[`ClayLink should render the correct markup with icon on the right 1`] = `
+<a href="#1">
+  <span>My Other Link Label</span>
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-cell">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#add-cell"></use>
+  </svg>
+</a>
+`;
+
+exports[`ClayLink should should be able to render straight html 1`] = `<a aria-label="my-aria-label" href="#1" target="_blank">Html</a>`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayButton should generate the default markup 1`] = `<button class="btn btn-primary"></button>`;
+
+exports[`ClayButton should render a button with label 1`] = `<button class="btn btn-primary">Label</button>`;
+
+exports[`ClayButton should render a button with label 2`] = `<button class="btn btn-primary" name="myButton"></button>`;
+
+exports[`ClayButton should render a disabled button 1`] = `<button class="btn btn-primary" disabled=""></button>`;
+
+exports[`ClayButton should render a link with ariaLabel attribute 1`] = `<a href="http://liferay.com" class="btn btn-primary" aria-label="My Description">Visit Liferay.com</a>`;
+
+exports[`ClayButton should render a submit button 1`] = `<button class="btn btn-primary" type="submit"></button>`;
+
+exports[`ClayButton should render a success button 1`] = `<button class="btn btn-success"></button>`;

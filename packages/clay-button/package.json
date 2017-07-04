@@ -1,0 +1,42 @@
+{
+  "name": "clay-button",
+  "version": "0.0.0",
+  "description": "Metal Clay Button component.",
+  "license": "BSD",
+  "repository": "metal/metal-clay-components",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/ClayButton.js",
+  "jsnext:main": "src/ClayButton.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "metalsoy && webpack"
+  },
+  "keywords": [
+    "clay",
+    "metal"
+  ],
+  "dependencies": {
+    "clay-icon": "^0.0.0",
+    "metal": "^2.13.2",
+    "metal-component": "^2.13.2",
+    "metal-soy": "^2.13.2",
+    "metal-state": "^2.13.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-node-env-inline": "^0.1.1",
+    "babel-preset-es2015": "^6.14.0",
+    "clay": "liferay/clay#develop",
+    "metal-tools-soy": "^4.2.1",
+    "webpack": "^3.0.0"
+  }
+}
