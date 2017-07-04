@@ -64,7 +64,7 @@ MetalClayButton.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	style: Config.string()
+	style: Config.string(),
 };
 
 Soy.register(MetalClayButton, templates);

@@ -66,7 +66,7 @@ MetalClayButtonBase.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	value: Config.string()
+	value: Config.string(),
 };
 
 export default MetalClayButtonBase;

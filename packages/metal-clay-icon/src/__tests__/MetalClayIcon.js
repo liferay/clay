@@ -17,7 +17,7 @@ describe('MetalClayIcon', function() {
 	it('should generate markup for icon `add-cell`', function() {
 		clayIcon = new MetalClayIcon({
 			spritemap: spritemap,
-			symbol: 'add-cell'
+			symbol: 'add-cell',
 		});
 
 		expect(clayIcon).toMatchSnapshot();
@@ -27,7 +27,7 @@ describe('MetalClayIcon', function() {
 		clayIcon = new MetalClayIcon({
 			elementClasses: 'icon-monospaced',
 			spritemap: spritemap,
-			symbol: 'add-cell'
+			symbol: 'add-cell',
 		});
 
 		expect(dom.hasClass(clayIcon.element, 'icon-monospaced')).toBeTruthy();
@@ -35,7 +35,7 @@ describe('MetalClayIcon', function() {
 
 	it('should not output any markup if symbol is undefined', function() {
 		clayIcon = new MetalClayIcon({
-			spritemap: spritemap
+			spritemap: spritemap,
 		});
 
 		expect(clayIcon.element).toBeNull();
@@ -43,7 +43,7 @@ describe('MetalClayIcon', function() {
 
 	it('should not output any markup if spritemap is undefined', function() {
 		clayIcon = new MetalClayIcon({
-			symbol: 'add-cell'
+			symbol: 'add-cell',
 		});
 
 		expect(clayIcon.element).toBeNull();
@@ -51,7 +51,7 @@ describe('MetalClayIcon', function() {
 
 	it('should output markup for Glyphicons.', function() {
 		clayIcon = new MetalClayIcon({
-			elementClasses: 'glyphicon glyphicon-plus'
+			elementClasses: 'glyphicon glyphicon-plus',
 		});
 
 		expect(clayIcon).toMatchSnapshot();
@@ -59,7 +59,7 @@ describe('MetalClayIcon', function() {
 
 	it('should output markup for Clay Font Awesome Icons.', function() {
 		clayIcon = new MetalClayIcon({
-			elementClasses: 'clay-fa icon-plus'
+			elementClasses: 'clay-fa icon-plus',
 		});
 
 		expect(clayIcon).toMatchSnapshot();

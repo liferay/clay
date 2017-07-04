@@ -1,7 +1,6 @@
 'use strict';
 
 import Component from 'metal-component';
-import core from 'metal';
 import Soy from 'metal-soy';
 import { validators } from 'metal-state';
 
@@ -26,7 +25,7 @@ MetalClayIcon.STATE = {
 	 * @default undefined
 	 */
 	spritemap: {
-		validator: validators.string
+		validator: validators.string,
 	},
 
 	/**
@@ -37,8 +36,8 @@ MetalClayIcon.STATE = {
 	 * @default undefined
 	 */
 	symbol: {
-		validator: validators.string
-	}
+		validator: validators.string,
+	},
 };
 
 Soy.register(MetalClayIcon, templates);

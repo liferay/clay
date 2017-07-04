@@ -44,7 +44,7 @@ MetalClayLink.STATE = {
 	 * @default undefined
 	 */
 	html: {
-		isHtml: true
+		isHtml: true,
 	},
 
 	/**
@@ -74,7 +74,7 @@ MetalClayLink.STATE = {
 	 * @default undefined
 	 */
 	label: {
-		isHtml: true
+		isHtml: true,
 	},
 
 	/**
@@ -84,7 +84,7 @@ MetalClayLink.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	target: Config.string()
+	target: Config.string(),
 };
 
 Soy.register(MetalClayLink, templates);

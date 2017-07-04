@@ -1,14 +1,17 @@
 {
   "scripts": {
     "build": "lerna run build",
-    "format": "prettier --use-tabs true --tab-width 4 --single-quote --write packages/metal-*/src/*.js packages/metal-*/src/**/*.js",
+    "format": "prettier --use-tabs true --tab-width 4 --single-quote --trailing-comma all --write packages/metal-*/src/*.js packages/metal-*/src/**/*.js",
     "lerna": "lerna bootstrap && npm install",
+    "lint": "eslint packages/metal-*/src/*.js packages/metal-*/src/**/*.js",
     "precommit": "lint-staged",
     "start": "http-server . -p 4000",
     "test": "jest"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
+    "eslint": "^4.1.1",
+    "eslint-config-liferay": "^1.0.2",
     "http-server": "^0.9.0",
     "husky": "^0.14.2",
     "jest": "^20.0.4",
@@ -29,7 +32,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --use-tabs true --tab-width 4 --single-quote --write",
+      "prettier --use-tabs true --tab-width 4 --single-quote --trailing-comma all --write",
+      "eslint",
       "git add"
     ]
   }

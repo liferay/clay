@@ -19,7 +19,7 @@ describe('MetalClayButton', function() {
 
 	it('should render a submit button', function() {
 		button = new MetalClayButton({
-			type: 'submit'
+			type: 'submit',
 		});
 
 		expect(button).toMatchSnapshot();
@@ -27,7 +27,7 @@ describe('MetalClayButton', function() {
 
 	it('should render a disabled button', function() {
 		button = new MetalClayButton({
-			disabled: true
+			disabled: true,
 		});
 
 		expect(button).toMatchSnapshot();
@@ -35,7 +35,7 @@ describe('MetalClayButton', function() {
 
 	it('should render a success button', function() {
 		button = new MetalClayButton({
-			style: 'success'
+			style: 'success',
 		});
 
 		expect(button).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe('MetalClayButton', function() {
 
 	it('should render a button with label', function() {
 		button = new MetalClayButton({
-			label: 'Label'
+			label: 'Label',
 		});
 
 		expect(button).toMatchSnapshot();
@@ -51,7 +51,7 @@ describe('MetalClayButton', function() {
 
 	it('should render a button with label', function() {
 		button = new MetalClayButton({
-			name: 'myButton'
+			name: 'myButton',
 		});
 
 		expect(button).toMatchSnapshot();
@@ -61,7 +61,7 @@ describe('MetalClayButton', function() {
 		button = new MetalClayButton({
 			ariaLabel: 'My Description',
 			href: 'http://liferay.com',
-			label: 'Visit Liferay.com'
+			label: 'Visit Liferay.com',
 		});
 
 		expect(button).toMatchSnapshot();

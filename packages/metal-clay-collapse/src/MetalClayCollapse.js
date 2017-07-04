@@ -1,10 +1,9 @@
 'use strict';
 
+import State, { validators } from 'metal-state';
 import anim from 'metal-anim';
-import core from 'metal';
 import dom from 'metal-dom';
 import { EventHandler } from 'metal-events';
-import State, { validators } from 'metal-state';
 
 const KEY_CODE_ENTER = 13;
 
@@ -90,7 +89,7 @@ class MetalClayCollapse extends State {
 	attachHeaderListeners_(header) {
 		this.eventHandler_.add(
 			dom.on(header, 'click', this.handleClick_.bind(this)),
-			dom.on(header, 'keydown', this.handleKeydown_.bind(this))
+			dom.on(header, 'keydown', this.handleKeydown_.bind(this)),
 		);
 	}
 
@@ -112,6 +111,8 @@ class MetalClayCollapse extends State {
 	 * Checks to see if browser supports CSS3 Transitions and returns the name
 	 * of the transitionend event; returns false if it's not supported
 	 * @protected
+	 * @return {string|boolean} The name of the transitionend event or false 
+	 * if not supported
 	 */
 	getTransitionEndEvent_() {
 		let el = document.createElement('metalClayTransitionEnd');
@@ -120,7 +121,7 @@ class MetalClayCollapse extends State {
 			transition: 'transitionend',
 			WebkitTransition: 'webkitTransitionEnd',
 			MozTransition: 'transitionend',
-			OTransition: 'oTransitionEnd otransitionend'
+			OTransition: 'oTransitionEnd otransitionend',
 		};
 
 		for (let name in transitionEndEvents) {
@@ -247,7 +248,7 @@ class MetalClayCollapse extends State {
 
 		content.setAttribute(
 			'style',
-			`height: ${content.firstElementChild.offsetHeight}px;`
+			`height: ${content.firstElementChild.offsetHeight}px;`,
 		);
 	}
 }
@@ -264,7 +265,7 @@ MetalClayCollapse.STATE = {
 	 */
 	closedClasses: {
 		validator: validators.string,
-		value: 'collapse'
+		value: 'collapse',
 	},
 
 	/**
@@ -274,7 +275,7 @@ MetalClayCollapse.STATE = {
 	 */
 	collapsed: {
 		validator: validators.bool,
-		value: true
+		value: true,
 	},
 
 	/**
@@ -283,7 +284,7 @@ MetalClayCollapse.STATE = {
 	 */
 	content: {
 		setter: dom.toElement,
-		validator: validators.oneOfType([validators.string, validators.object])
+		validator: validators.oneOfType([validators.string, validators.object]),
 	},
 
 	/**
@@ -297,8 +298,8 @@ MetalClayCollapse.STATE = {
 		validator: validators.oneOfType([
 			validators.string,
 			validators.array,
-			validators.object
-		])
+			validators.object,
+		]),
 	},
 
 	/**
@@ -307,7 +308,7 @@ MetalClayCollapse.STATE = {
 	 */
 	openClasses: {
 		validator: validators.string,
-		value: 'collapse in'
+		value: 'collapse in',
 	},
 
 	/**
@@ -316,8 +317,8 @@ MetalClayCollapse.STATE = {
 	 */
 	transitionClasses: {
 		validator: validators.string,
-		value: 'collapsing'
-	}
+		value: 'collapsing',
+	},
 };
 
 export { MetalClayCollapse };
