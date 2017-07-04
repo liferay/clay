@@ -1,17 +1,16 @@
 'use strict';
 
-import ClayButtonBase from './ClayButtonBase';
+import 'clay-icon';
+import Component from 'metal-component';
 import Soy from 'metal-soy';
 import { Config } from 'metal-state';
-
-import 'clay-icon';
 
 import templates from './ClayButton.soy.js';
 
 /**
  * Metal Clay Button component.
  */
-class ClayButton extends ClayButtonBase {}
+class ClayButton extends Component {}
 
 /**
  * State definition.
@@ -38,6 +37,24 @@ ClayButton.STATE = {
 	block: Config.bool().value(false),
 
 	/**
+	 * The button disabled attribute.
+	 * @instance
+	 * @memberof ButtonBase
+	 * @type {boolean}
+	 * @default false
+	 */
+	disabled: Config.bool().value(false),
+
+	/**
+	 * The href attribute value of the link.
+	 * @instance
+	 * @memberof ButtonBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	href: Config.string(),
+
+	/**
 	 * Render ClayIcon in the ClayButton element, available options are
 	 * `elementClasses`, `spritemap`, `symbol`.
 	 * @instance
@@ -46,6 +63,24 @@ ClayButton.STATE = {
 	 * @default undefined
 	 */
 	icon: Config.object(),
+
+	/**
+	 * The label of the button or link content.
+	 * @instance
+	 * @memberof ButtonBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	label: Config.string(),
+
+	/**
+	 * The name attribute value of the element.
+	 * @instance
+	 * @memberof ButtonBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	name: Config.string(),
 
 	/**
 	 * The name that will make the CSS class name that will represent the
@@ -65,6 +100,24 @@ ClayButton.STATE = {
 	 * @default undefined
 	 */
 	style: Config.string(),
+
+	/**
+	 * The type attribute value of the element.
+	 * @instance
+	 * @memberof ButtonBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	type: Config.string(),
+
+	/**
+	 * The value attribute value of the element.
+	 * @instance
+	 * @memberof ButtonBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	value: Config.string(),
 };
 
 Soy.register(ClayButton, templates);
