@@ -10,8 +10,7 @@ import templates from './MetalClayLink.soy.js';
 /**
  * Implementation of the Metal Clay Link.
  */
-class MetalClayLink extends Component {
-}
+class MetalClayLink extends Component {}
 
 /**
  * State definition.

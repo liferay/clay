@@ -16,22 +16,30 @@ describe('MetalClayCollapse', () => {
 	});
 
 	beforeEach(() => {
-		dom.enterDocument('<button aria-controls="collapseExample1" class="btn btn-primary">Read more &raquo;</button><button aria-controls="collapseExample3" aria-expanded="false" class="btn btn-warning" id="toggle2">Toggle2</button>');
-		dom.enterDocument('<div class="collapse in" id="collapseExample1"><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea qui sint distinctio recusandae quo ut eaque provident eius eos commodi natus labore culpa modi soluta quia repudiandae nulla ex. Reiciendis cupiditate quis voluptatum atque veniam assumenda itaque perferendis eos voluptatem dolores aut eum. Ut voluptatum amet earum delectus totam unde!</div></div>');
+		dom.enterDocument(
+			'<button aria-controls="collapseExample1" class="btn btn-primary">Read more &raquo;</button><button aria-controls="collapseExample3" aria-expanded="false" class="btn btn-warning" id="toggle2">Toggle2</button>'
+		);
+		dom.enterDocument(
+			'<div class="collapse in" id="collapseExample1"><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea qui sint distinctio recusandae quo ut eaque provident eius eos commodi natus labore culpa modi soluta quia repudiandae nulla ex. Reiciendis cupiditate quis voluptatum atque veniam assumenda itaque perferendis eos voluptatem dolores aut eum. Ut voluptatum amet earum delectus totam unde!</div></div>'
+		);
 	});
 
 	function checkClosedClasses(component) {
 		expect(!dom.hasClass(component.content, 'in')).toBeTruthy();
 		expect(!dom.hasClass(component.content, 'collapsing')).toBeTruthy();
 		expect(dom.hasClass(component.content, 'collapse')).toBeTruthy();
-		expect(component.content.getAttribute('aria-expanded') === 'false').toBeTruthy();
+		expect(
+			component.content.getAttribute('aria-expanded') === 'false'
+		).toBeTruthy();
 	}
 
 	function checkOpenClasses(component) {
 		expect(!dom.hasClass(component.content, 'collapsing')).toBeTruthy();
 		expect(dom.hasClass(component.content, 'collapse')).toBeTruthy();
 		expect(dom.hasClass(component.content, 'in')).toBeTruthy();
-		expect(component.content.getAttribute('aria-expanded') === 'true').toBeTruthy();
+		expect(
+			component.content.getAttribute('aria-expanded') === 'true'
+		).toBeTruthy();
 	}
 
 	describe('Content State', () => {
@@ -57,7 +65,7 @@ describe('MetalClayCollapse', () => {
 			component = new MetalClayCollapse({
 				collapsed: false,
 				content: '#collapseExample1',
-				headers: '[aria-controls="collapseExample1"]',
+				headers: '[aria-controls="collapseExample1"]'
 			});
 
 			component.close_();
@@ -68,7 +76,7 @@ describe('MetalClayCollapse', () => {
 		it('should open when calling open()', () => {
 			component = new MetalClayCollapse({
 				content: '#collapseExample1',
-				headers: '[aria-controls="collapseExample1"]',
+				headers: '[aria-controls="collapseExample1"]'
 			});
 
 			component.open_();
@@ -106,7 +114,9 @@ describe('MetalClayCollapse', () => {
 		it('should accept an element as a value', () => {
 			component = new MetalClayCollapse({
 				content: '#collapseExample1',
-				headers: document.querySelector('[aria-controls="collapseExample1"]')
+				headers: document.querySelector(
+					'[aria-controls="collapseExample1"]'
+				)
 			});
 
 			expect(core.isElement(component.headers)).toBeTruthy();
@@ -124,7 +134,10 @@ describe('MetalClayCollapse', () => {
 		it('should accept an array of selectors and elements as a value', () => {
 			component = new MetalClayCollapse({
 				content: '#collapseExample1',
-				headers: ['[aria-controls="collapseExample1"]', document.querySelector('#toggle2')]
+				headers: [
+					'[aria-controls="collapseExample1"]',
+					document.querySelector('#toggle2')
+				]
 			});
 
 			expect(Array.isArray(component.headers)).toBeTruthy();

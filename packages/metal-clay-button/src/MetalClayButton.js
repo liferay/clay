@@ -11,8 +11,7 @@ import templates from './MetalClayButton.soy.js';
 /**
  * Metal Clay Button component.
  */
-class MetalClayButton extends MetalClayButtonBase {
-}
+class MetalClayButton extends MetalClayButtonBase {}
 
 /**
  * State definition.

@@ -3,15 +3,14 @@
 import Component from 'metal-component';
 import core from 'metal';
 import Soy from 'metal-soy';
-import {validators} from 'metal-state';
+import { validators } from 'metal-state';
 
 import templates from './MetalClayIcon.soy.js';
 
 /**
  * Implementation of the Metal Clay Icon.
  */
-class MetalClayIcon extends Component {
-}
+class MetalClayIcon extends Component {}
 
 /**
  * State definition.

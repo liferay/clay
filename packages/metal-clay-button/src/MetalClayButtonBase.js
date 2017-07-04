@@ -6,8 +6,7 @@ import { Config } from 'metal-state';
 /**
  * Metal Clay Button Base component.
  */
-class MetalClayButtonBase extends Component {
-}
+class MetalClayButtonBase extends Component {}
 
 /**
  * State definition.

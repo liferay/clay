@@ -4,7 +4,7 @@ import anim from 'metal-anim';
 import core from 'metal';
 import dom from 'metal-dom';
 import { EventHandler } from 'metal-events';
-import State, {validators} from 'metal-state';
+import State, { validators } from 'metal-state';
 
 const KEY_CODE_ENTER = 13;
 
@@ -50,7 +50,7 @@ class MetalClayCollapse extends State {
 	 * @protected
 	 */
 	animateClose_() {
-		const {content, openClasses, transitionClasses} = this;
+		const { content, openClasses, transitionClasses } = this;
 
 		content.transitionType = 0;
 
@@ -70,7 +70,7 @@ class MetalClayCollapse extends State {
 	 * @protected
 	 */
 	animateOpen_() {
-		const {closedClasses, content, transitionClasses} = this;
+		const { closedClasses, content, transitionClasses } = this;
 
 		content.transitionType = 1;
 
@@ -100,7 +100,7 @@ class MetalClayCollapse extends State {
 	 * @protected
 	 */
 	close_() {
-		const {closedClasses, content, openClasses, transitionClasses} = this;
+		const { closedClasses, content, openClasses, transitionClasses } = this;
 
 		dom.removeClasses(content, `${openClasses} ${transitionClasses}`);
 		dom.addClasses(content, closedClasses);
@@ -163,7 +163,10 @@ class MetalClayCollapse extends State {
 	 * @protected
 	 */
 	handleKeydown_(event) {
-		if (event.keyCode === KEY_CODE_ENTER || event.keyCode === KEY_CODE_SPACE) {
+		if (
+			event.keyCode === KEY_CODE_ENTER ||
+			event.keyCode === KEY_CODE_SPACE
+		) {
 			this.toggle();
 			event.preventDefault();
 		}
@@ -184,7 +187,7 @@ class MetalClayCollapse extends State {
 	 * @protected
 	 */
 	open_() {
-		const {content, openClasses, transitionClasses} = this;
+		const { content, openClasses, transitionClasses } = this;
 
 		dom.addClasses(content, openClasses);
 		dom.removeClasses(content, transitionClasses);
@@ -210,7 +213,7 @@ class MetalClayCollapse extends State {
 	 * @protected
 	 */
 	syncHeaderListeners_() {
-		const {headers} = this;
+		const { headers } = this;
 
 		this.eventHandler_.removeAllListeners();
 
@@ -218,8 +221,7 @@ class MetalClayCollapse extends State {
 			headers.forEach(header => {
 				this.attachHeaderListeners_(header);
 			});
-		}
-		else {
+		} else {
 			this.attachHeaderListeners_(headers);
 		}
 	}
@@ -229,7 +231,7 @@ class MetalClayCollapse extends State {
 	 * @public
 	 */
 	toggle() {
-		const {collapsed, content, transitionEnd} = this;
+		const { collapsed, content, transitionEnd } = this;
 
 		dom.once(content, transitionEnd, this.handleTransitionEnd_.bind(this));
 
@@ -241,9 +243,12 @@ class MetalClayCollapse extends State {
 	 * @protected
 	 */
 	updateContentHeight_() {
-		const {content} = this;
+		const { content } = this;
 
-		content.setAttribute('style', `height: ${content.firstElementChild.offsetHeight}px;`);
+		content.setAttribute(
+			'style',
+			`height: ${content.firstElementChild.offsetHeight}px;`
+		);
 	}
 }
 
@@ -278,7 +283,7 @@ MetalClayCollapse.STATE = {
 	 */
 	content: {
 		setter: dom.toElement,
-		validator: validators.oneOfType([validators.string,  validators.object])
+		validator: validators.oneOfType([validators.string, validators.object])
 	},
 
 	/**
@@ -289,7 +294,11 @@ MetalClayCollapse.STATE = {
 	 * @type {!(string|Array<string>|Element)}
 	 */
 	headers: {
-		validator: validators.oneOfType([validators.string, validators.array, validators.object])
+		validator: validators.oneOfType([
+			validators.string,
+			validators.array,
+			validators.object
+		])
 	},
 
 	/**

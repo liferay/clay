@@ -25,7 +25,9 @@ describe('MetalClayLink', function() {
 			download: 'http://www.example.com'
 		});
 
-		expect(component.element.getAttribute('download')).toEqual('http://www.example.com');
+		expect(component.element.getAttribute('download')).toEqual(
+			'http://www.example.com'
+		);
 	});
 
 	it('should apply an id to the anchor tag', () => {
@@ -41,7 +43,9 @@ describe('MetalClayLink', function() {
 			href: 'http://www.example.com'
 		});
 
-		expect(component.element.getAttribute('href')).toEqual('http://www.example.com');
+		expect(component.element.getAttribute('href')).toEqual(
+			'http://www.example.com'
+		);
 	});
 
 	it('should apply the target attribute to the anchor tag', () => {
@@ -49,12 +53,15 @@ describe('MetalClayLink', function() {
 			target: 'http://www.example.com'
 		});
 
-		expect(component.element.getAttribute('target')).toEqual('http://www.example.com');
+		expect(component.element.getAttribute('target')).toEqual(
+			'http://www.example.com'
+		);
 	});
 
 	it('should should be able to render straight html', () => {
 		component = new MetalClayLink({
-			html: '<a aria-label="my-aria-label" href="#1" target="_blank">Html</a>'
+			html:
+				'<a aria-label="my-aria-label" href="#1" target="_blank">Html</a>'
 		});
 
 		expect(component).toMatchSnapshot();
@@ -65,7 +72,8 @@ describe('MetalClayLink', function() {
 			href: '#1',
 			icon: {
 				alignment: 'right',
-				spritemap: '../node_modules/lexicon-ux/build/images/icons/icons.svg',
+				spritemap:
+					'../node_modules/lexicon-ux/build/images/icons/icons.svg',
 				symbol: 'add-cell'
 			},
 			label: '<span>My Other Link Label</span>'
@@ -79,7 +87,8 @@ describe('MetalClayLink', function() {
 			href: '#1',
 			icon: {
 				alignment: 'left',
-				spritemap: '../node_modules/lexicon-ux/build/images/icons/icons.svg',
+				spritemap:
+					'../node_modules/lexicon-ux/build/images/icons/icons.svg',
 				symbol: 'add-cell'
 			},
 			label: 'My Link Label'

@@ -15,64 +15,52 @@ describe('MetalClayIcon', function() {
 	});
 
 	it('should generate markup for icon `add-cell`', function() {
-		clayIcon = new MetalClayIcon(
-			{
-				spritemap: spritemap,
-				symbol: 'add-cell'
-			}
-		);
+		clayIcon = new MetalClayIcon({
+			spritemap: spritemap,
+			symbol: 'add-cell'
+		});
 
 		expect(clayIcon).toMatchSnapshot();
 	});
 
 	it('should append elementClasses to the outer element', function() {
-		clayIcon = new MetalClayIcon(
-			{
-				elementClasses: 'icon-monospaced',
-				spritemap: spritemap,
-				symbol: 'add-cell'
-			}
-		);
+		clayIcon = new MetalClayIcon({
+			elementClasses: 'icon-monospaced',
+			spritemap: spritemap,
+			symbol: 'add-cell'
+		});
 
 		expect(dom.hasClass(clayIcon.element, 'icon-monospaced')).toBeTruthy();
 	});
 
 	it('should not output any markup if symbol is undefined', function() {
-		clayIcon = new MetalClayIcon(
-			{
-				spritemap: spritemap
-			}
-		);
+		clayIcon = new MetalClayIcon({
+			spritemap: spritemap
+		});
 
 		expect(clayIcon.element).toBeNull();
 	});
 
 	it('should not output any markup if spritemap is undefined', function() {
-		clayIcon = new MetalClayIcon(
-			{
-				symbol: 'add-cell'
-			}
-		);
+		clayIcon = new MetalClayIcon({
+			symbol: 'add-cell'
+		});
 
 		expect(clayIcon.element).toBeNull();
 	});
 
 	it('should output markup for Glyphicons.', function() {
-		clayIcon = new MetalClayIcon(
-			{
-				elementClasses: 'glyphicon glyphicon-plus'
-			}
-		);
+		clayIcon = new MetalClayIcon({
+			elementClasses: 'glyphicon glyphicon-plus'
+		});
 
 		expect(clayIcon).toMatchSnapshot();
 	});
 
 	it('should output markup for Clay Font Awesome Icons.', function() {
-		clayIcon = new MetalClayIcon(
-			{
-				elementClasses: 'clay-fa icon-plus'
-			}
-		);
+		clayIcon = new MetalClayIcon({
+			elementClasses: 'clay-fa icon-plus'
+		});
 
 		expect(clayIcon).toMatchSnapshot();
 	});
