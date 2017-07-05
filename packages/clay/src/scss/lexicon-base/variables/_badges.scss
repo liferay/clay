@@ -20,7 +20,7 @@ $badge-lexicon-icon-width-sm: $badge-lexicon-icon-height-sm !default; // 5px
 $badge-padding-x-sm: 7px !default;
 $badge-padding-y-sm: 2px !default;
 
-$badge-danger-bg: map-get($theme-colors, danger) !default;
+$badge-danger-bg: null !default;
 $badge-danger-border-color: null !default;
 $badge-danger-color: null !default;
 $badge-danger-hover-bg: null !default;
@@ -34,28 +34,28 @@ $badge-secondary-hover-bg: null !default;
 $badge-secondary-hover-border-color: null !default;
 $badge-secondary-hover-color: null !default;
 
-$badge-info-bg: map-get($theme-colors, info) !default;
+$badge-info-bg: null !default;
 $badge-info-border-color: null !default;
 $badge-info-color: null !default;
 $badge-info-hover-bg: null !default;
 $badge-info-hover-border-color: null !default;
 $badge-info-hover-color: null !default;
 
-$badge-primary-bg: map-get($theme-colors, primary) !default;
+$badge-primary-bg: null !default;
 $badge-primary-border-color: null !default;
 $badge-primary-color: null !default;
 $badge-primary-hover-bg: null !default;
 $badge-primary-hover-border-color: null !default;
 $badge-primary-hover-color: null !default;
 
-$badge-success-bg: map-get($theme-colors, success) !default;
+$badge-success-bg: null !default;
 $badge-success-border-color: null !default;
 $badge-success-color: null !default;
 $badge-success-hover-bg: null !default;
 $badge-success-hover-border-color: null !default;
 $badge-success-hover-color: null !default;
 
-$badge-warning-bg: map-get($theme-colors, warning) !default;
+$badge-warning-bg: null !default;
 $badge-warning-border-color: null !default;
 $badge-warning-color: null !default;
 $badge-warning-hover-bg: null !default;
