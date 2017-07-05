@@ -8,7 +8,7 @@
 	font-size: $sticker-font-size;
 	font-weight: $sticker-font-weight;
 
-	@include monospace($sticker-monospaced-size);
+	@include monospace($sticker-size);
 
 	overflow: hidden;
 	position: relative;
@@ -84,7 +84,7 @@
 .sticker-sm {
 	font-size: $sticker-font-size-sm;
 
-	@include monospace($sticker-monospaced-size-sm);
+	@include monospace($sticker-size-sm);
 
 	.lexicon-icon {
 		height: $sticker-font-size-sm;
@@ -95,7 +95,7 @@
 .sticker-lg {
 	font-size: $sticker-font-size-lg;
 
-	@include monospace($sticker-monospaced-size-lg);
+	@include monospace($sticker-size-lg);
 
 	.lexicon-icon {
 		height: $sticker-font-size-lg;
@@ -106,7 +106,7 @@
 .sticker-xl {
 	font-size: $sticker-font-size-xl;
 
-	@include monospace($sticker-monospaced-size-xl);
+	@include monospace($sticker-size-xl);
 
 	.lexicon-icon {
 		height: $sticker-font-size-xl;
@@ -117,7 +117,7 @@
 .sticker-xxl {
 	font-size: $sticker-font-size-xxl;
 
-	@include monospace($sticker-monospaced-size-xxl);
+	@include monospace($sticker-size-xxl);
 
 	.lexicon-icon {
 		height: $sticker-font-size-xxl;
