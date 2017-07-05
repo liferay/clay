@@ -84,136 +84,28 @@ a.label {
 	width: $label-lexicon-icon-width-sm;
 }
 
-// Skin
+// Label Variants
 
-.label-danger {
-	background-color: $label-danger-bg;
-	border-color: $label-danger-border-color;
-	color: $label-danger-color;
+@each $color, $value in $label-palette {
+	.label-#{$color} {
+		background-color: nth($value, 1);
+		border-color: nth($value, 3);
+		color: nth($value, 5);
 
-	&[href] {
-		@include hover-focus {
-			background-color: $label-danger-hover-bg;
-			border-color: $label-danger-hover-border-color;
-			color: $label-danger-hover-color;
+		&[href] {
+			@include hover-focus {
+				background-color: nth($value, 2);
+				border-color: nth($value, 4);
+				color: nth($value, 6);
+			}
 		}
-	}
 
-	a {
-		color: $label-danger-color;
+		a {
+			color: nth($value, 7);
 
-		@include hover-focus {
-			color: $label-danger-hover-color;
-		}
-	}
-}
-
-.label-info {
-	background-color: $label-info-bg;
-	border-color: $label-info-border-color;
-	color: $label-info-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $label-info-hover-bg;
-			border-color: $label-info-hover-border-color;
-			color: $label-info-hover-color;
-		}
-	}
-
-	a {
-		color: $label-info-color;
-
-		@include hover-focus {
-			color: $label-info-hover-color;
-		}
-	}
-}
-
-.label-primary {
-	background-color: $label-primary-bg;
-	border-color: $label-primary-border-color;
-	color: $label-primary-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $label-primary-hover-bg;
-			border-color: $label-primary-hover-border-color;
-			color: $label-primary-hover-color;
-		}
-	}
-
-	a {
-		color: $label-primary-color;
-
-		@include hover-focus {
-			color: $label-primary-hover-color;
-		}
-	}
-}
-
-.label-secondary {
-	background-color: $label-secondary-bg;
-	border-color: $label-secondary-border-color;
-	color: $label-secondary-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $label-secondary-hover-bg;
-			border-color: $label-secondary-hover-border-color;
-			color: $label-secondary-hover-color;
-		}
-	}
-
-	a {
-		color: $label-secondary-color;
-
-		@include hover-focus {
-			color: $label-secondary-hover-color;
-		}
-	}
-}
-
-.label-success {
-	background-color: $label-success-bg;
-	border-color: $label-success-border-color;
-	color: $label-success-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $label-success-hover-bg;
-			border-color: $label-success-hover-border-color;
-			color: $label-success-hover-color;
-		}
-	}
-
-	a {
-		color: $label-success-color;
-
-		@include hover-focus {
-			color: $label-success-hover-color;
-		}
-	}
-}
-
-.label-warning {
-	background-color: $label-warning-bg;
-	border-color: $label-warning-border-color;
-	color: $label-warning-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $label-warning-hover-bg;
-			border-color: $label-warning-hover-border-color;
-			color: $label-warning-hover-color;
-		}
-	}
-
-	a {
-		color: $label-warning-color;
-
-		@include hover-focus {
-			color: $label-warning-hover-color;
+			@include hover-focus {
+				color: nth($value, 8);
+			}
 		}
 	}
 }
