@@ -20,60 +20,159 @@ $badge-lexicon-icon-width-sm: $badge-lexicon-icon-height-sm !default; // 5px
 $badge-padding-x-sm: 7px !default;
 $badge-padding-y-sm: 2px !default;
 
-// Badge Variant
+// Badge Variants
 
 $badge-primary-bg: null !default;
-$badge-primary-border-color: null !default;
-$badge-primary-color: null !default;
 $badge-primary-hover-bg: null !default;
+$badge-primary-border-color: null !default;
 $badge-primary-hover-border-color: null !default;
+$badge-primary-color: null !default;
 $badge-primary-hover-color: null !default;
+$badge-primary-link-color: null !default;
+$badge-primary-link-hover-color: null !default;
 
 $badge-secondary-bg: null !default;
-$badge-secondary-border-color: null !default;
-$badge-secondary-color: null !default;
 $badge-secondary-hover-bg: null !default;
+$badge-secondary-border-color: null !default;
 $badge-secondary-hover-border-color: null !default;
+$badge-secondary-color: null !default;
 $badge-secondary-hover-color: null !default;
+$badge-secondary-link-color: null !default;
+$badge-secondary-link-hover-color: null !default;
 
 $badge-success-bg: null !default;
-$badge-success-border-color: null !default;
-$badge-success-color: null !default;
 $badge-success-hover-bg: null !default;
+$badge-success-border-color: null !default;
 $badge-success-hover-border-color: null !default;
+$badge-success-color: null !default;
 $badge-success-hover-color: null !default;
+$badge-success-link-color: null !default;
+$badge-success-link-hover-color: null !default;
 
 $badge-info-bg: null !default;
-$badge-info-border-color: null !default;
-$badge-info-color: null !default;
 $badge-info-hover-bg: null !default;
+$badge-info-border-color: null !default;
 $badge-info-hover-border-color: null !default;
+$badge-info-color: null !default;
 $badge-info-hover-color: null !default;
+$badge-info-link-color: null !default;
+$badge-info-link-hover-color: null !default;
 
 $badge-warning-bg: null !default;
-$badge-warning-border-color: null !default;
-$badge-warning-color: null !default;
 $badge-warning-hover-bg: null !default;
+$badge-warning-border-color: null !default;
 $badge-warning-hover-border-color: null !default;
+$badge-warning-color: null !default;
 $badge-warning-hover-color: null !default;
+$badge-warning-link-color: null !default;
+$badge-warning-link-hover-color: null !default;
 
 $badge-danger-bg: null !default;
-$badge-danger-border-color: null !default;
-$badge-danger-color: null !default;
 $badge-danger-hover-bg: null !default;
+$badge-danger-border-color: null !default;
 $badge-danger-hover-border-color: null !default;
+$badge-danger-color: null !default;
 $badge-danger-hover-color: null !default;
+$badge-danger-link-color: null !default;
+$badge-danger-link-hover-color: null !default;
 
 $badge-light-bg: null !default;
-$badge-light-border-color: null !default;
-$badge-light-color: null !default;
 $badge-light-hover-bg: null !default;
+$badge-light-border-color: null !default;
 $badge-light-hover-border-color: null !default;
+$badge-light-color: null !default;
 $badge-light-hover-color: null !default;
+$badge-light-link-color: null !default;
+$badge-light-link-hover-color: null !default;
 
 $badge-dark-bg: null !default;
-$badge-dark-border-color: null !default;
-$badge-dark-color: null !default;
 $badge-dark-hover-bg: null !default;
+$badge-dark-border-color: null !default;
 $badge-dark-hover-border-color: null !default;
+$badge-dark-color: null !default;
 $badge-dark-hover-color: null !default;
+$badge-dark-link-color: null !default;
+$badge-dark-link-hover-color: null !default;
+
+$badge-palette: (
+	primary: (
+		$badge-primary-bg,
+		$badge-primary-hover-bg,
+		$badge-primary-border-color,
+		$badge-primary-hover-border-color,
+		$badge-primary-color,
+		$badge-primary-hover-color,
+		$badge-primary-link-color,
+		$badge-primary-link-hover-color
+	),
+	secondary: (
+		$badge-secondary-bg,
+		$badge-secondary-hover-bg,
+		$badge-secondary-border-color,
+		$badge-secondary-hover-border-color,
+		$badge-secondary-color,
+		$badge-secondary-hover-color,
+		$badge-secondary-link-color,
+		$badge-secondary-link-hover-color
+	),
+	success: (
+		$badge-success-bg,
+		$badge-success-hover-bg,
+		$badge-success-border-color,
+		$badge-success-hover-border-color,
+		$badge-success-color,
+		$badge-success-hover-color,
+		$badge-success-link-color,
+		$badge-success-link-hover-color
+	),
+	info: (
+		$badge-info-bg,
+		$badge-info-hover-bg,
+		$badge-info-border-color,
+		$badge-info-hover-border-color,
+		$badge-info-color,
+		$badge-info-hover-color,
+		$badge-info-link-color,
+		$badge-info-link-hover-color
+	),
+	warning: (
+		$badge-warning-bg,
+		$badge-warning-hover-bg,
+		$badge-warning-border-color,
+		$badge-warning-hover-border-color,
+		$badge-warning-color,
+		$badge-warning-hover-color,
+		$badge-warning-link-color,
+		$badge-warning-link-hover-color
+	),
+	danger: (
+		$badge-danger-bg,
+		$badge-danger-hover-bg,
+		$badge-danger-border-color,
+		$badge-danger-hover-border-color,
+		$badge-danger-color,
+		$badge-danger-hover-color,
+		$badge-danger-link-color,
+		$badge-danger-link-hover-color
+	),
+	light: (
+		$badge-light-bg,
+		$badge-light-hover-bg,
+		$badge-light-border-color,
+		$badge-light-hover-border-color,
+		$badge-light-color,
+		$badge-light-hover-color,
+		$badge-light-link-color,
+		$badge-light-link-hover-color
+	),
+	dark: (
+		$badge-dark-bg,
+		$badge-dark-hover-bg,
+		$badge-dark-border-color,
+		$badge-dark-hover-border-color,
+		$badge-dark-color,
+		$badge-dark-hover-color,
+		$badge-dark-link-color,
+		$badge-dark-link-hover-color
+	)
+) !default;
