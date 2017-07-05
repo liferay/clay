@@ -71,26 +71,26 @@
 	width: $badge-lexicon-icon-width-sm;
 }
 
-// Skins
+// Badge Variants
 
-.badge-danger {
-	background-color: $badge-danger-bg;
-	border-color: $badge-danger-border-color;
-	color: $badge-danger-color;
+.badge-primary {
+	background-color: $badge-primary-bg;
+	border-color: $badge-primary-border-color;
+	color: $badge-primary-color;
 
 	&[href] {
 		@include hover-focus {
-			background-color: $badge-danger-hover-bg;
-			border-color: $badge-danger-hover-border-color;
-			color: $badge-danger-hover-color;
+			background-color: $badge-primary-hover-bg;
+			border-color: $badge-primary-hover-border-color;
+			color: $badge-primary-hover-color;
 		}
 	}
 
 	a {
-		color: $badge-danger-color;
+		color: $badge-primary-color;
 
 		@include hover-focus {
-			color: $badge-danger-hover-color;
+			color: $badge-primary-hover-color;
 		}
 	}
 }
@@ -117,50 +117,6 @@
 	}
 }
 
-.badge-info {
-	background-color: $badge-info-bg;
-	border-color: $badge-info-border-color;
-	color: $badge-info-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-info-hover-bg;
-			border-color: $badge-info-hover-border-color;
-			color: $badge-info-hover-color;
-		}
-	}
-
-	a {
-		color: $badge-info-color;
-
-		@include hover-focus {
-			color: $badge-info-hover-color;
-		}
-	}
-}
-
-.badge-primary {
-	background-color: $badge-primary-bg;
-	border-color: $badge-primary-border-color;
-	color: $badge-primary-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-primary-hover-bg;
-			border-color: $badge-primary-hover-border-color;
-			color: $badge-primary-hover-color;
-		}
-	}
-
-	a {
-		color: $badge-primary-color;
-
-		@include hover-focus {
-			color: $badge-primary-hover-color;
-		}
-	}
-}
-
 .badge-success {
 	background-color: $badge-success-bg;
 	border-color: $badge-success-border-color;
@@ -183,6 +139,28 @@
 	}
 }
 
+.badge-info {
+	background-color: $badge-info-bg;
+	border-color: $badge-info-border-color;
+	color: $badge-info-color;
+
+	&[href] {
+		@include hover-focus {
+			background-color: $badge-info-hover-bg;
+			border-color: $badge-info-hover-border-color;
+			color: $badge-info-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-info-color;
+
+		@include hover-focus {
+			color: $badge-info-hover-color;
+		}
+	}
+}
+
 .badge-warning {
 	background-color: $badge-warning-bg;
 	border-color: $badge-warning-border-color;
@@ -201,6 +179,72 @@
 
 		@include hover-focus {
 			color: $badge-warning-hover-color;
+		}
+	}
+}
+
+.badge-danger {
+	background-color: $badge-danger-bg;
+	border-color: $badge-danger-border-color;
+	color: $badge-danger-color;
+
+	&[href] {
+		@include hover-focus {
+			background-color: $badge-danger-hover-bg;
+			border-color: $badge-danger-hover-border-color;
+			color: $badge-danger-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-danger-color;
+
+		@include hover-focus {
+			color: $badge-danger-hover-color;
+		}
+	}
+}
+
+.badge-light {
+	background-color: $badge-light-bg;
+	border-color: $badge-light-border-color;
+	color: $badge-light-color;
+
+	&[href] {
+		@include hover-focus {
+			background-color: $badge-light-hover-bg;
+			border-color: $badge-light-hover-border-color;
+			color: $badge-light-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-light-color;
+
+		@include hover-focus {
+			color: $badge-light-hover-color;
+		}
+	}
+}
+
+.badge-dark {
+	background-color: $badge-dark-bg;
+	border-color: $badge-dark-border-color;
+	color: $badge-dark-color;
+
+	&[href] {
+		@include hover-focus {
+			background-color: $badge-dark-hover-bg;
+			border-color: $badge-dark-hover-border-color;
+			color: $badge-dark-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-dark-color;
+
+		@include hover-focus {
+			color: $badge-dark-hover-color;
 		}
 	}
 }
