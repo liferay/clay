@@ -45,3 +45,13 @@ $badge-danger-bg: map-get($theme-colors, danger) !default;
 $badge-danger-hover-bg: $badge-danger-bg !default;
 $badge-danger-color: #FFF !default;
 $badge-danger-hover-color: $badge-danger-color !default;
+
+$badge-light-bg: map-get($theme-colors, light) !default;
+$badge-light-hover-bg: $badge-light-bg !default;
+$badge-light-color: #869CAD !default;
+$badge-light-hover-color: $badge-light-color !default;
+
+$badge-dark-bg: map-get($theme-colors, dark) !default;
+$badge-dark-hover-bg: $badge-dark-bg !default;
+$badge-dark-color: #FFF !default;
+$badge-dark-hover-color: $badge-dark-color !default;
