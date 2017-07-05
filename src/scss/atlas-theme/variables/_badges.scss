@@ -16,6 +16,6 @@ $badge-padding-y-sm: 4px !default;
 
 // Skin
 
-$badge-default-bg: #E7F1F9 !default;
-$badge-default-color: map-get($theme-colors, primary) !default;
-$badge-default-hover-color: $badge-default-color !default;
+$badge-secondary-bg: #E7F1F9 !default;
+$badge-secondary-color: map-get($theme-colors, primary) !default;
+$badge-secondary-hover-color: $badge-secondary-color !default;

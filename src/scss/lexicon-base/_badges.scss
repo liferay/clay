@@ -95,24 +95,24 @@
 	}
 }
 
-.badge-default {
-	background-color: $badge-default-bg;
-	border-color: $badge-default-border-color;
-	color: $badge-default-color;
+.badge-secondary {
+	background-color: $badge-secondary-bg;
+	border-color: $badge-secondary-border-color;
+	color: $badge-secondary-color;
 
 	&[href] {
 		@include hover-focus {
-			background-color: $badge-default-hover-bg;
-			border-color: $badge-default-hover-border-color;
-			color: $badge-default-hover-color;
+			background-color: $badge-secondary-hover-bg;
+			border-color: $badge-secondary-hover-border-color;
+			color: $badge-secondary-hover-color;
 		}
 	}
 
 	a {
-		color: $badge-default-color;
+		color: $badge-secondary-color;
 
 		@include hover-focus {
-			color: $badge-default-hover-color;
+			color: $badge-secondary-hover-color;
 		}
 	}
 }

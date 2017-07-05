@@ -27,12 +27,12 @@ $badge-danger-hover-bg: null !default;
 $badge-danger-hover-border-color: null !default;
 $badge-danger-hover-color: null !default;
 
-$badge-default-bg: null !default;
-$badge-default-border-color: null !default;
-$badge-default-color: null !default;
-$badge-default-hover-bg: null !default;
-$badge-default-hover-border-color: null !default;
-$badge-default-hover-color: null !default;
+$badge-secondary-bg: null !default;
+$badge-secondary-border-color: null !default;
+$badge-secondary-color: null !default;
+$badge-secondary-hover-bg: null !default;
+$badge-secondary-hover-border-color: null !default;
+$badge-secondary-hover-color: null !default;
 
 $badge-info-bg: map-get($theme-colors, info) !default;
 $badge-info-border-color: null !default;
