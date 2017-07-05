@@ -123,34 +123,12 @@
 	}
 }
 
-// Sticker Skins
+// Sticker Variants
 
-.sticker-danger {
-	background-color: $sticker-danger-bg;
-	color: $sticker-danger-color;
-}
-
-.sticker-info {
-	background-color: $sticker-info-bg;
-	color: $sticker-info-color;
-}
-
-.sticker-primary {
-	background-color: $sticker-primary-bg;
-	color: $sticker-primary-color;
-}
-
-.sticker-secondary {
-	background-color: $sticker-secondary-bg;
-	color: $sticker-secondary-color;
-}
-
-.sticker-success {
-	background-color: $sticker-success-bg;
-	color: $sticker-success-color;
-}
-
-.sticker-warning {
-	background-color: $sticker-warning-bg;
-	color: $sticker-warning-color;
+@each $color, $value in $sticker-palette {
+	.sticker-#{$color} {
+		background-color: nth($value, 1);
+		border-color: nth($value, 2);
+		color: nth($value, 3);
+	}
 }

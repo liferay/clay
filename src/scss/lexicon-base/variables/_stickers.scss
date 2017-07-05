@@ -17,17 +17,79 @@ $sticker-monospaced-size-xl: $sticker-monospaced-size-lg * 1.375 !default; // 60
 $sticker-font-size-xxl: $sticker-font-size-xl * 1.3 !default; // 27px
 $sticker-monospaced-size-xxl: $sticker-monospaced-size-xl * 1.375 !default; // 83px
 
-// Skin
+// Sticker Variants
+
+$sticker-primary-bg: map-get($theme-colors, primary) !default;
+$sticker-primary-border-color: null !default;
+$sticker-primary-color: $white !default;
+
+$sticker-secondary-bg: map-get($theme-colors, secondary) !default;
+$sticker-secondary-border-color: null !default;
+$sticker-secondary-color: $white !default;
+
+$sticker-info-bg: map-get($theme-colors, info) !default;
+$sticker-info-border-color: null !default;
+$sticker-info-color: $white !default;
+
+$sticker-success-bg: map-get($theme-colors, success) !default;
+$sticker-success-border-color: null !default;
+$sticker-success-color: $white !default;
+
+$sticker-warning-bg: map-get($theme-colors, warning) !default;
+$sticker-warning-border-color: null !default;
+$sticker-warning-color: $white !default;
 
 $sticker-danger-bg: map-get($theme-colors, danger) !default;
-$sticker-danger-color: #FFF !default;
-$sticker-info-bg: map-get($theme-colors, info) !default;
-$sticker-info-color: #FFF !default;
-$sticker-primary-bg: map-get($theme-colors, primary) !default;
-$sticker-primary-color: #FFF !default;
-$sticker-secondary-bg: $gray-400 !default;
-$sticker-secondary-color: #FFF !default;
-$sticker-success-bg: map-get($theme-colors, success) !default;
-$sticker-success-color: #FFF !default;
-$sticker-warning-bg: map-get($theme-colors, warning) !default;
-$sticker-warning-color: #FFF !default;
+$sticker-danger-border-color: null !default;
+$sticker-danger-color: $white !default;
+
+$sticker-light-bg: map-get($theme-colors, light) !default;
+$sticker-light-border-color: null !default;
+$sticker-light-color: #111 !default;
+
+$sticker-dark-bg: map-get($theme-colors, dark) !default;
+$sticker-dark-border-color: null !default;
+$sticker-dark-color: $white !default;
+
+$sticker-palette: (
+	primary: (
+		$sticker-primary-bg,
+		$sticker-primary-border-color,
+		$sticker-primary-color
+	),
+	secondary: (
+		$sticker-secondary-bg,
+		$sticker-secondary-border-color,
+		$sticker-secondary-color
+	),
+	success: (
+		$sticker-success-bg,
+		$sticker-success-border-color,
+		$sticker-success-color
+	),
+	info: (
+		$sticker-info-bg,
+		$sticker-info-border-color,
+		$sticker-info-color
+	),
+	warning: (
+		$sticker-warning-bg,
+		$sticker-warning-border-color,
+		$sticker-warning-color
+	),
+	danger: (
+		$sticker-danger-bg,
+		$sticker-danger-border-color,
+		$sticker-danger-color
+	),
+	light: (
+		$sticker-light-bg,
+		$sticker-light-border-color,
+		$sticker-light-color
+	),
+	dark: (
+		$sticker-dark-bg,
+		$sticker-dark-border-color,
+		$sticker-dark-color
+	)
+) !default;
