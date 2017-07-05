@@ -73,178 +73,26 @@
 
 // Badge Variants
 
-.badge-primary {
-	background-color: $badge-primary-bg;
-	border-color: $badge-primary-border-color;
-	color: $badge-primary-color;
+@each $color, $value in $badge-palette {
+	.badge-#{$color} {
+		background-color: nth($value, 1);
+		border-color: nth($value, 3);
+		color: nth($value, 5);
 
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-primary-hover-bg;
-			border-color: $badge-primary-hover-border-color;
-			color: $badge-primary-hover-color;
+		&[href] {
+			@include hover-focus {
+				background-color: nth($value, 2);
+				border-color: nth($value, 4);
+				color: nth($value, 6);
+			}
 		}
-	}
 
-	a {
-		color: $badge-primary-color;
+		a {
+			color: nth($value, 7);
 
-		@include hover-focus {
-			color: $badge-primary-hover-color;
-		}
-	}
-}
-
-.badge-secondary {
-	background-color: $badge-secondary-bg;
-	border-color: $badge-secondary-border-color;
-	color: $badge-secondary-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-secondary-hover-bg;
-			border-color: $badge-secondary-hover-border-color;
-			color: $badge-secondary-hover-color;
-		}
-	}
-
-	a {
-		color: $badge-secondary-color;
-
-		@include hover-focus {
-			color: $badge-secondary-hover-color;
-		}
-	}
-}
-
-.badge-success {
-	background-color: $badge-success-bg;
-	border-color: $badge-success-border-color;
-	color: $badge-success-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-success-hover-bg;
-			border-color: $badge-success-hover-border-color;
-			color: $badge-success-hover-color;
-		}
-	}
-
-	a {
-		color: $badge-success-color;
-
-		@include hover-focus {
-			color: $badge-success-hover-color;
-		}
-	}
-}
-
-.badge-info {
-	background-color: $badge-info-bg;
-	border-color: $badge-info-border-color;
-	color: $badge-info-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-info-hover-bg;
-			border-color: $badge-info-hover-border-color;
-			color: $badge-info-hover-color;
-		}
-	}
-
-	a {
-		color: $badge-info-color;
-
-		@include hover-focus {
-			color: $badge-info-hover-color;
-		}
-	}
-}
-
-.badge-warning {
-	background-color: $badge-warning-bg;
-	border-color: $badge-warning-border-color;
-	color: $badge-warning-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-warning-hover-bg;
-			border-color: $badge-warning-hover-border-color;
-			color: $badge-warning-hover-color;
-		}
-	}
-
-	a {
-		color: $badge-warning-color;
-
-		@include hover-focus {
-			color: $badge-warning-hover-color;
-		}
-	}
-}
-
-.badge-danger {
-	background-color: $badge-danger-bg;
-	border-color: $badge-danger-border-color;
-	color: $badge-danger-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-danger-hover-bg;
-			border-color: $badge-danger-hover-border-color;
-			color: $badge-danger-hover-color;
-		}
-	}
-
-	a {
-		color: $badge-danger-color;
-
-		@include hover-focus {
-			color: $badge-danger-hover-color;
-		}
-	}
-}
-
-.badge-light {
-	background-color: $badge-light-bg;
-	border-color: $badge-light-border-color;
-	color: $badge-light-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-light-hover-bg;
-			border-color: $badge-light-hover-border-color;
-			color: $badge-light-hover-color;
-		}
-	}
-
-	a {
-		color: $badge-light-color;
-
-		@include hover-focus {
-			color: $badge-light-hover-color;
-		}
-	}
-}
-
-.badge-dark {
-	background-color: $badge-dark-bg;
-	border-color: $badge-dark-border-color;
-	color: $badge-dark-color;
-
-	&[href] {
-		@include hover-focus {
-			background-color: $badge-dark-hover-bg;
-			border-color: $badge-dark-hover-border-color;
-			color: $badge-dark-hover-color;
-		}
-	}
-
-	a {
-		color: $badge-dark-color;
-
-		@include hover-focus {
-			color: $badge-dark-hover-color;
+			@include hover-focus {
+				color: nth($value, 8);
+			}
 		}
 	}
 }

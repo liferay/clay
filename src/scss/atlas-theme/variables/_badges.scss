@@ -25,6 +25,7 @@ $badge-secondary-bg: #E7F1F9 !default;
 $badge-secondary-hover-bg: $badge-secondary-bg !default;
 $badge-secondary-color: map-get($theme-colors, primary) !default;
 $badge-secondary-hover-color: $badge-secondary-color !default;
+$badge-secondary-link-color: $badge-secondary-color !default;
 
 $badge-success-bg: map-get($theme-colors, success) !default;
 $badge-success-hover-bg: $badge-success-bg !default;
@@ -50,6 +51,7 @@ $badge-light-bg: map-get($theme-colors, light) !default;
 $badge-light-hover-bg: $badge-light-bg !default;
 $badge-light-color: #869CAD !default;
 $badge-light-hover-color: $badge-light-color !default;
+$badge-light-link-color: $badge-light-color !default;
 
 $badge-dark-bg: map-get($theme-colors, dark) !default;
 $badge-dark-hover-bg: $badge-dark-bg !default;
