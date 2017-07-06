@@ -7865,26 +7865,6 @@ a.text-dark:focus, a.text-dark:hover {
   width: 5px;
 }
 
-.badge-danger {
-  background-color: #dc3545;
-}
-
-.badge-info {
-  background-color: #17a2b8;
-}
-
-.badge-primary {
-  background-color: #007bff;
-}
-
-.badge-success {
-  background-color: #28a745;
-}
-
-.badge-warning {
-  background-color: #ffc107;
-}
-
 .breadcrumb-item {
   max-width: 150px;
   overflow: hidden;
@@ -8883,42 +8863,6 @@ a.label {
   width: 7px;
 }
 
-.label-danger {
-  border-color: #dc3545;
-  color: #dc3545;
-}
-
-.label-danger[href]:focus, .label-danger[href]:hover {
-  border-color: #921925;
-  color: #921925;
-}
-
-.label-danger a {
-  color: #dc3545;
-}
-
-.label-danger a:focus, .label-danger a:hover {
-  color: #921925;
-}
-
-.label-info {
-  border-color: #17a2b8;
-  color: #17a2b8;
-}
-
-.label-info[href]:focus, .label-info[href]:hover {
-  border-color: #0c525d;
-  color: #0c525d;
-}
-
-.label-info a {
-  color: #17a2b8;
-}
-
-.label-info a:focus, .label-info a:hover {
-  color: #0c525d;
-}
-
 .label-primary {
   border-color: #007bff;
   color: #007bff;
@@ -8938,21 +8882,21 @@ a.label {
 }
 
 .label-secondary {
-  border-color: #ced4da;
-  color: #ced4da;
+  border-color: #868e96;
+  color: #868e96;
 }
 
 .label-secondary[href]:focus, .label-secondary[href]:hover {
-  border-color: #94a1ae;
-  color: #94a1ae;
+  border-color: #555b61;
+  color: #555b61;
 }
 
 .label-secondary a {
-  color: #ced4da;
+  color: #868e96;
 }
 
 .label-secondary a:focus, .label-secondary a:hover {
-  color: #94a1ae;
+  color: #555b61;
 }
 
 .label-success {
@@ -8973,6 +8917,24 @@ a.label {
   color: #145523;
 }
 
+.label-info {
+  border-color: #17a2b8;
+  color: #17a2b8;
+}
+
+.label-info[href]:focus, .label-info[href]:hover {
+  border-color: #0c525d;
+  color: #0c525d;
+}
+
+.label-info a {
+  color: #17a2b8;
+}
+
+.label-info a:focus, .label-info a:hover {
+  color: #0c525d;
+}
+
 .label-warning {
   border-color: #ffc107;
   color: #ffc107;
@@ -8989,6 +8951,60 @@ a.label {
 
 .label-warning a:focus, .label-warning a:hover {
   color: #a07800;
+}
+
+.label-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.label-danger[href]:focus, .label-danger[href]:hover {
+  border-color: #921925;
+  color: #921925;
+}
+
+.label-danger a {
+  color: #dc3545;
+}
+
+.label-danger a:focus, .label-danger a:hover {
+  color: #921925;
+}
+
+.label-dark {
+  border-color: #343a40;
+  color: #343a40;
+}
+
+.label-dark[href]:focus, .label-dark[href]:hover {
+  border-color: #060708;
+  color: #060708;
+}
+
+.label-dark a {
+  color: #343a40;
+}
+
+.label-dark a:focus, .label-dark a:hover {
+  color: #060708;
+}
+
+.label-light {
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+}
+
+.label-light[href]:focus, .label-light[href]:hover {
+  border-color: #bdc6d0;
+  color: #bdc6d0;
+}
+
+.label-light a {
+  color: #f8f9fa;
+}
+
+.label-light a:focus, .label-light a:hover {
+  color: #bdc6d0;
 }
 
 .list-group-bordered .list-group-item-flex {
@@ -11232,34 +11248,44 @@ a.label {
   width: 27.04px;
 }
 
-.sticker-danger {
-  background-color: #dc3545;
-  color: #FFF;
-}
-
-.sticker-info {
-  background-color: #17a2b8;
-  color: #FFF;
-}
-
 .sticker-primary {
   background-color: #007bff;
-  color: #FFF;
+  color: #fff;
 }
 
 .sticker-secondary {
-  background-color: #ced4da;
-  color: #FFF;
+  background-color: #868e96;
+  color: #fff;
 }
 
 .sticker-success {
   background-color: #28a745;
-  color: #FFF;
+  color: #fff;
+}
+
+.sticker-info {
+  background-color: #17a2b8;
+  color: #fff;
 }
 
 .sticker-warning {
   background-color: #ffc107;
-  color: #FFF;
+  color: #fff;
+}
+
+.sticker-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.sticker-light {
+  background-color: #f8f9fa;
+  color: #111;
+}
+
+.sticker-dark {
+  background-color: #343a40;
+  color: #fff;
 }
 
 th {
