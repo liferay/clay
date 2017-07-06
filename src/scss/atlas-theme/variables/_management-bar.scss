@@ -13,7 +13,7 @@ $management-bar-margin-bottom: 0 !default;
 $management-bar-btn-padding-vertical: ($management-bar-height - $icon-monospaced-size - $management-bar-border-bottom-width - $management-bar-border-top-width - ($input-btn-border-width * 2)) / 2 !default;
 
 $management-bar-desktop-height: $navbar-height-desktop !default;
-$management-bar-desktop-link-line-height: floor($font-size-base-desktop * $line-height-base) !default;
+$management-bar-desktop-link-line-height: floor($font-size-base-mobile * $line-height-base) !default;
 $management-bar-desktop-padding-horizontal: $navbar-link-padding-x !default;
 $management-bar-desktop-padding-vertical: (($management-bar-desktop-height - $management-bar-desktop-link-line-height - $management-bar-border-bottom-width - $management-bar-border-top-width) / 2) !default;
 

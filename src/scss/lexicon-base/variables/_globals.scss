@@ -16,12 +16,12 @@ $rounded-border-radius: $border-radius !default;
 $rounded-circle-border-radius: 5000px !default;
 $rounded-0-border-radius: 0 !default;
 
-$h1-font-size-desktop: null !default;
-$h2-font-size-desktop: null !default;
-$h3-font-size-desktop: null !default;
-$h4-font-size-desktop: null !default;
-$h5-font-size-desktop: null !default;
-$h6-font-size-desktop: null !default;
+$font-size-base-mobile: $font-size-base !default;
+$font-size-lg-mobile: $font-size-lg !default;
 
-$font-size-base-desktop: $font-size-base !default;
-$font-size-lg-desktop: $font-size-lg !default;
+$h1-font-size-mobile: null !default;
+$h2-font-size-mobile: null !default;
+$h3-font-size-mobile: null !default;
+$h4-font-size-mobile: null !default;
+$h5-font-size-mobile: null !default;
+$h6-font-size-mobile: null !default;

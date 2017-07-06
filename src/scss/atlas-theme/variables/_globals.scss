@@ -3,29 +3,26 @@
 $atlas-theme: true !default;
 
 $enable-shadows: true !default;
-$enable-mobile-desktop-sizes: true !default;
 
-$font-size-base: 0.875rem !default; // 14px
-$font-size-lg: 1.125rem !default; // 18px
-$font-size-sm: 0.75rem !default; // 12px
+$font-size-base: 1rem !default; // 16px
+$font-size-base-mobile: 0.875rem !default; // 14px
+$font-size-lg: 1.25rem !default; // 20px
+$font-size-lg-mobile: 1.125rem !default; // 18px
+$font-size-sm: 0.875rem !default; // 14px
+$font-size-sm-mobile: 0.75rem !default; // 12px
 
-$font-size-base-desktop: 1rem !default; // 16px
-$font-size-lg-desktop: 1.25rem !default; // 20px
-$font-size-sm-desktop: 0.875rem !default; // 14px
-
-$h1-font-size: 1.75rem !default; // 28px
-$h2-font-size: 1.5rem !default; // 24px
-$h3-font-size: 1.3125rem !default; // 21px
+$h1-font-size: 1.625rem !default; // 26px
+$h1-font-size-mobile: 1.75rem !default; // 28px
+$h2-font-size: 1.375rem !default; // 22px
+$h2-font-size-mobile: 1.5rem !default; // 24px
+$h3-font-size: 1.1875rem !default; // 19px
+$h3-font-size-mobile: 1.3125rem !default; // 21px
 $h4-font-size: 1rem !default; // 16px
+$h4-font-size-mobile: 1rem !default; // 16px
 $h5-font-size: 0.875rem !default; // 14px
-$h6-font-size: 0.6875rem !default; // 11px
-
-$h1-font-size-desktop: 1.625rem !default; // 26px
-$h2-font-size-desktop: 1.375rem !default; // 22px
-$h3-font-size-desktop: 1.1875rem !default; // 19px
-$h4-font-size-desktop: 1rem !default; // 16px
-$h5-font-size-desktop: 0.875rem !default; // 14px
-$h6-font-size-desktop: 0.8125rem !default; // 13px
+$h5-font-size-mobile: 0.875rem !default; // 14px
+$h6-font-size: 0.8125rem !default; // 13px
+$h6-font-size-mobile: 0.6875rem !default; // 11px
 
 $line-height-base: 1.5 !default;
 
