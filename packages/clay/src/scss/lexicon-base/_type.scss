@@ -3,10 +3,8 @@ body {
 	-ms-overflow-style: scrollbar;
 	-webkit-font-smoothing: antialiased;
 
-	@if (variable-exists(atlas-theme)) {
-		@include media-breakpoint-up(md) {
-			font-size: $font-size-base-desktop;
-		}
+	@include scale-component {
+		font-size: $font-size-base-mobile;
 	}
 }
 
@@ -20,59 +18,57 @@ body {
 
 // Headings
 
-@if (variable-exists(atlas-theme)) {
-	h1,
-	.h1 {
-		font-size: $h1-font-size;
+h1,
+.h1 {
+	font-size: $h1-font-size;
 
-		@include media-breakpoint-up(md) {
-			font-size: $h1-font-size-desktop;
-		}
+	@include scale-component {
+		font-size: $h1-font-size-mobile;
 	}
+}
 
-	h2,
-	.h2 {
-		font-size: $h2-font-size;
+h2,
+.h2 {
+	font-size: $h2-font-size;
 
-		@include media-breakpoint-up(md) {
-			font-size: $h2-font-size-desktop;
-		}
+	@include scale-component {
+		font-size: $h2-font-size-mobile;
 	}
+}
 
-	h3,
-	.h3 {
-		font-size: $h3-font-size;
+h3,
+.h3 {
+	font-size: $h3-font-size;
 
-		@include media-breakpoint-up(md) {
-			font-size: $h3-font-size-desktop;
-		}
+	@include scale-component {
+		font-size: $h3-font-size-mobile;
 	}
+}
 
-	h4,
-	.h4 {
-		font-size: $h4-font-size;
+h4,
+.h4 {
+	font-size: $h4-font-size;
 
-		@include media-breakpoint-up(md) {
-			font-size: $h4-font-size-desktop;
-		}
+	@include scale-component {
+		font-size: $h4-font-size-mobile;
 	}
+}
 
-	h5,
-	.h5 {
-		font-size: $h5-font-size;
+h5,
+.h5 {
+	font-size: $h5-font-size;
 
-		@include media-breakpoint-up(md) {
-			font-size: $h5-font-size-desktop;
-		}
+	@include scale-component {
+		font-size: $h5-font-size-mobile;
 	}
+}
 
-	h6,
-	.h6 {
-		font-size: $h6-font-size;
+h6,
+.h6 {
+	font-size: $h6-font-size;
 
-		@include media-breakpoint-up(md) {
-			font-size: $h6-font-size-desktop;
-		}
+	@include scale-component {
+		font-size: $h6-font-size-mobile;
 	}
 }
 
