@@ -35,14 +35,14 @@ $alert-secondary-lead-color: null !default;
 $alert-secondary-link-color: null !default;
 $alert-secondary-link-hover-color: null !default;
 
-$alert-danger-bg: null !default;
-$alert-danger-border-color: null !default;
-$alert-danger-color: null !default;
-$alert-danger-close-color: null !default;
-$alert-danger-close-hover-color: null !default;
-$alert-danger-lead-color: null !default;
-$alert-danger-link-color: null !default;
-$alert-danger-link-hover-color: null !default;
+$alert-success-bg: null !default;
+$alert-success-border-color: null !default;
+$alert-success-color: null !default;
+$alert-success-close-color: null !default;
+$alert-success-close-hover-color: null !default;
+$alert-success-lead-color: null !default;
+$alert-success-link-color: null !default;
+$alert-success-link-hover-color: null !default;
 
 $alert-info-bg: null !default;
 $alert-info-border-color: null !default;
@@ -53,15 +53,6 @@ $alert-info-lead-color: null !default;
 $alert-info-link-color: null !default;
 $alert-info-link-hover-color: null !default;
 
-$alert-success-bg: null !default;
-$alert-success-border-color: null !default;
-$alert-success-color: null !default;
-$alert-success-close-color: null !default;
-$alert-success-close-hover-color: null !default;
-$alert-success-lead-color: null !default;
-$alert-success-link-color: null !default;
-$alert-success-link-hover-color: null !default;
-
 $alert-warning-bg: null !default;
 $alert-warning-border-color: null !default;
 $alert-warning-color: null !default;
@@ -70,6 +61,15 @@ $alert-warning-close-hover-color: null !default;
 $alert-warning-lead-color: null !default;
 $alert-warning-link-color: null !default;
 $alert-warning-link-hover-color: null !default;
+
+$alert-danger-bg: null !default;
+$alert-danger-border-color: null !default;
+$alert-danger-color: null !default;
+$alert-danger-close-color: null !default;
+$alert-danger-close-hover-color: null !default;
+$alert-danger-lead-color: null !default;
+$alert-danger-link-color: null !default;
+$alert-danger-link-hover-color: null !default;
 
 $alert-light-bg: null !default;
 $alert-light-border-color: null !default;
@@ -88,3 +88,86 @@ $alert-dark-close-hover-color: null !default;
 $alert-dark-lead-color: null !default;
 $alert-dark-link-color: null !default;
 $alert-dark-link-hover-color: null !default;
+
+$alert-palette: (
+	primary: (
+		$alert-primary-bg,
+		$alert-primary-border-color,
+		$alert-primary-color,
+		$alert-primary-close-color,
+		$alert-primary-close-hover-color,
+		$alert-primary-lead-color,
+		$alert-primary-link-color,
+		$alert-primary-link-hover-color
+	),
+	secondary: (
+		$alert-secondary-bg,
+		$alert-secondary-border-color,
+		$alert-secondary-color,
+		$alert-secondary-close-color,
+		$alert-secondary-close-hover-color,
+		$alert-secondary-lead-color,
+		$alert-secondary-link-color,
+		$alert-secondary-link-hover-color
+	),
+	success: (
+		$alert-success-bg,
+		$alert-success-border-color,
+		$alert-success-color,
+		$alert-success-close-color,
+		$alert-success-close-hover-color,
+		$alert-success-lead-color,
+		$alert-success-link-color,
+		$alert-success-link-hover-color
+	),
+	info: (
+		$alert-info-bg,
+		$alert-info-border-color,
+		$alert-info-color,
+		$alert-info-close-color,
+		$alert-info-close-hover-color,
+		$alert-info-lead-color,
+		$alert-info-link-color,
+		$alert-info-link-hover-color
+	),
+	warning: (
+		$alert-warning-bg,
+		$alert-warning-border-color,
+		$alert-warning-color,
+		$alert-warning-close-color,
+		$alert-warning-close-hover-color,
+		$alert-warning-lead-color,
+		$alert-warning-link-color,
+		$alert-warning-link-hover-color
+	),
+	danger: (
+		$alert-danger-bg,
+		$alert-danger-border-color,
+		$alert-danger-color,
+		$alert-danger-close-color,
+		$alert-danger-close-hover-color,
+		$alert-danger-lead-color,
+		$alert-danger-link-color,
+		$alert-danger-link-hover-color
+	),
+	light: (
+		$alert-light-bg,
+		$alert-light-border-color,
+		$alert-light-color,
+		$alert-light-close-color,
+		$alert-light-close-hover-color,
+		$alert-light-lead-color,
+		$alert-light-link-color,
+		$alert-light-link-hover-color
+	),
+	dark: (
+		$alert-dark-bg,
+		$alert-dark-border-color,
+		$alert-dark-color,
+		$alert-dark-close-color,
+		$alert-dark-close-hover-color,
+		$alert-dark-lead-color,
+		$alert-dark-link-color,
+		$alert-dark-link-hover-color
+	),
+) !default;
