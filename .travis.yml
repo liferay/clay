@@ -1,0 +1,13 @@
+before_install:
+  - nvm install 8
+  - npm install -g lerna@2.0.0-rc.5
+
+install:
+  - npm run lerna
+
+jdk:
+  - oraclejdk8
+
+language: java
+
+script: npm test
