@@ -7,7 +7,6 @@ $btn-font-weight: 500 !default;
 
 $input-btn-border-width: 0.125rem !default; // 2px
 
-$input-btn-font-size: 1rem !default; // 16px
 $input-btn-font-size-mobile: 0.875rem !default; // 14px
 $input-btn-padding-x: 0.875rem !default; // 14px
 $input-btn-padding-x-mobile: 1.5rem !default; // 24px
@@ -34,7 +33,8 @@ $btn-action-size: 4rem !default; // 64px
 $btn-action-size-mobile: 3.25rem !default; // 52px
 
 $btn-border-radius-lg: $border-radius !default;
-
+$btn-box-shadow: none !default;
+$btn-active-box-shadow: none !default;
 $btn-transition: background 0.2s ease-in-out, border 0.2s ease-in-out, box-shadow 0.2s ease-in-out !default;
 
 $btn-primary-color: #FFF !default;
