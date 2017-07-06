@@ -25,233 +25,8 @@
 .alert-link {
 	text-decoration: $alert-link-decoration;
 
-	&:focus,
-	&:hover {
+	@include hover-focus {
 		text-decoration: $alert-link-hover-decoration;
-	}
-}
-
-.alert-primary {
-	background-color: $alert-primary-bg;
-	border-color: $alert-primary-border-color;
-	color: $alert-primary-color;
-
-	.close {
-		color: $alert-primary-close-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-primary-close-hover-color;
-		}
-	}
-
-	.alert-link {
-		color: $alert-primary-link-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-primary-link-hover-color;
-		}
-	}
-
-	.lead {
-		color: $alert-primary-lead-color;
-	}
-}
-
-.alert-secondary {
-	background-color: $alert-secondary-bg;
-	border-color: $alert-secondary-border-color;
-	color: $alert-secondary-color;
-
-	.close {
-		color: $alert-secondary-close-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-secondary-close-hover-color;
-		}
-	}
-
-	.alert-link {
-		color: $alert-secondary-link-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-secondary-link-hover-color;
-		}
-	}
-
-	.lead {
-		color: $alert-secondary-lead-color;
-	}
-}
-
-.alert-danger {
-	background-color: $alert-danger-bg;
-	border-color: $alert-danger-border-color;
-	color: $alert-danger-color;
-
-	.close {
-		color: $alert-danger-close-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-danger-close-hover-color;
-		}
-	}
-
-	.alert-link {
-		color: $alert-danger-link-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-danger-link-hover-color;
-		}
-	}
-
-	.lead {
-		color: $alert-danger-lead-color;
-	}
-}
-
-.alert-info {
-	background-color: $alert-info-bg;
-	border-color: $alert-info-border-color;
-	color: $alert-info-color;
-
-	.close {
-		color: $alert-info-close-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-info-close-hover-color;
-		}
-	}
-
-	.alert-link {
-		color: $alert-info-link-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-info-link-hover-color;
-		}
-	}
-
-	.lead {
-		color: $alert-info-lead-color;
-	}
-}
-
-.alert-success {
-	background-color: $alert-success-bg;
-	border-color: $alert-success-border-color;
-	color: $alert-success-color;
-
-	.close {
-		color: $alert-success-close-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-success-close-hover-color;
-		}
-	}
-
-	.alert-link {
-		color: $alert-success-link-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-success-link-hover-color;
-		}
-	}
-
-	.lead {
-		color: $alert-success-lead-color;
-	}
-}
-
-.alert-warning {
-	background-color: $alert-warning-bg;
-	border-color: $alert-warning-border-color;
-	color: $alert-warning-color;
-
-	.close {
-		color: $alert-warning-close-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-warning-close-hover-color;
-		}
-	}
-
-	.alert-link {
-		color: $alert-warning-link-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-warning-link-hover-color;
-		}
-	}
-
-	.lead {
-		color: $alert-warning-lead-color;
-	}
-}
-
-.alert-light {
-	background-color: $alert-light-bg;
-	border-color: $alert-light-border-color;
-	color: $alert-light-color;
-
-	.close {
-		color: $alert-light-close-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-light-close-hover-color;
-		}
-	}
-
-	.alert-link {
-		color: $alert-light-link-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-light-link-hover-color;
-		}
-	}
-
-	.lead {
-		color: $alert-light-lead-color;
-	}
-}
-
-.alert-dark {
-	background-color: $alert-dark-bg;
-	border-color: $alert-dark-border-color;
-	color: $alert-dark-color;
-
-	.close {
-		color: $alert-dark-close-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-dark-close-hover-color;
-		}
-	}
-
-	.alert-link {
-		color: $alert-dark-link-color;
-
-		&:focus,
-		&:hover {
-			color: $alert-dark-link-hover-color;
-		}
-	}
-
-	.lead {
-		color: $alert-dark-lead-color;
 	}
 }
 
@@ -262,5 +37,35 @@
 
 	@include media-breakpoint-up(md) {
 		max-width: $alert-notification-max-width;
+	}
+}
+
+// Alert Variants
+
+@each $color, $value in $alert-palette {
+	.alert-#{$color} {
+		background-color: nth($value, 1);
+		border-color: nth($value, 2);
+		color: nth($value, 3);
+
+		.close {
+			color: nth($value, 4);
+
+			@include hover-focus {
+				color: nth($value, 5);
+			}
+		}
+
+		.alert-link {
+			color: nth($value, 7);
+
+			@include hover-focus {
+				color: nth($value, 8);
+			}
+		}
+
+		.lead {
+			color: nth($value, 6);
+		}
 	}
 }
