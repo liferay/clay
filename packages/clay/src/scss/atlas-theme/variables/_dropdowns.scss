@@ -1,13 +1,13 @@
 // Structure
 
-$dropdown-font-size: $font-size-base !default;
-$dropdown-font-size-desktop: $font-size-base-mobile !default;
+$dropdown-font-size: $font-size-base !default; // 16px
+$dropdown-font-size-mobile: $font-size-base-mobile !default; // 14px
 
 $dropdown-item-padding-x: 20px !default;
 $dropdown-item-padding-y: 8px !default;
 
-$dropdown-header-font-size: $font-size-sm !default;
-$dropdown-header-font-size-desktop: $font-size-sm-mobile !default;
+$dropdown-header-font-size: $font-size-sm !default; // 14px
+$dropdown-header-font-size-mobile: $font-size-sm-mobile !default; // 12px
 
 $dropdown-padding-bottom: 6px !default;
 $dropdown-padding-left: 0 !default;
@@ -17,8 +17,8 @@ $dropdown-padding-top: 6px !default;
 $dropdown-min-height: 40px !default;
 $dropdown-min-width: 200px !default;
 
-$dropdown-max-width: 230px !default;
-$dropdown-max-width-desktop: 300px !default;
+$dropdown-max-width: 300px !default;
+$dropdown-max-width-mobile: 230px !default;
 
 // Skin
 
