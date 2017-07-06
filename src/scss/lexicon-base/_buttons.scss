@@ -1,28 +1,36 @@
-@if ($enable-mobile-desktop-sizes) {
-	@include media-breakpoint-up($mobile-desktop-breakpoint) {
-		.btn {
-			font-size: $input-btn-font-size-desktop;
-			padding-bottom: $input-btn-padding-y-desktop;
-			padding-left: $input-btn-padding-x-desktop;
-			padding-right: $input-btn-padding-x-desktop;
-			padding-top: $input-btn-padding-y-desktop;
-		}
+.btn {
+	font-size: $input-btn-font-size;
 
-		.btn-lg {
-			font-size: $input-btn-font-size-lg-desktop;
-			padding-bottom: $input-btn-padding-y-lg-desktop;
-			padding-left: $input-btn-padding-x-lg-desktop;
-			padding-right: $input-btn-padding-x-lg-desktop;
-			padding-top: $input-btn-padding-y-lg-desktop;
-		}
+	@include scale-component {
+		font-size: $input-btn-font-size-mobile;
+		padding-bottom: $input-btn-padding-y-mobile;
+		padding-left: $input-btn-padding-x-mobile;
+		padding-right: $input-btn-padding-x-mobile;
+		padding-top: $input-btn-padding-y-mobile;
+	}
+}
 
-		.btn-sm {
-			font-size: $input-btn-font-size-sm-desktop;
-			padding-bottom: $input-btn-padding-y-sm-desktop;
-			padding-left: $input-btn-padding-x-sm-desktop;
-			padding-right: $input-btn-padding-x-sm-desktop;
-			padding-top: $input-btn-padding-y-sm-desktop;
-		}
+.btn-lg {
+	font-size: $input-btn-font-size-lg;
+
+	@include scale-component {
+		font-size: $input-btn-font-size-lg-mobile;
+		padding-bottom: $input-btn-padding-y-lg-mobile;
+		padding-left: $input-btn-padding-x-lg-mobile;
+		padding-right: $input-btn-padding-x-lg-mobile;
+		padding-top: $input-btn-padding-y-lg-mobile;
+	}
+}
+
+.btn-sm {
+	font-size: $input-btn-font-size-sm;
+
+	@include scale-component {
+		font-size: $input-btn-font-size-sm-mobile;
+		padding-bottom: $input-btn-padding-y-sm-mobile;
+		padding-left: $input-btn-padding-x-sm-mobile;
+		padding-right: $input-btn-padding-x-sm-mobile;
+		padding-top: $input-btn-padding-y-sm-mobile;
 	}
 }
 
@@ -256,11 +264,9 @@ fieldset[disabled] .btn {
 	position: relative;
 	width: $btn-action-size;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			height: $btn-action-size-desktop;
-			width: $btn-action-size-desktop;
-		}
+	@include scale-component {
+		height: $btn-action-size-mobile;
+		width: $btn-action-size-mobile;
 	}
 }
 

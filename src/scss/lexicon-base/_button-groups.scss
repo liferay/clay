@@ -1,20 +1,11 @@
 @if (variable-exists(atlas-theme)) {
-	.btn-group {
-		.btn + .btn,
-		.btn + .btn-group,
-		.btn-group + .btn,
-		.btn-group + .btn-group {
-			margin-left: -$input-btn-border-width;
-		}
-	}
-
 	.btn-group > .btn + .dropdown-toggle {
 		padding-left: $input-btn-padding-x / 3;
 		padding-right: $input-btn-padding-x / 3;
 
-		@include media-breakpoint-up(md) {
-			padding-left: $input-btn-padding-x-desktop / 3;
-			padding-right: $input-btn-padding-x-desktop / 3;
+		@include scale-component {
+			padding-left: $input-btn-padding-x-mobile / 3;
+			padding-right: $input-btn-padding-x-mobile / 3;
 		}
 	}
 
@@ -22,28 +13,9 @@
 		padding-left: $input-btn-padding-x-lg / 3;
 		padding-right: $input-btn-padding-x-lg / 3;
 
-		@include media-breakpoint-up(md) {
-			padding-left: $input-btn-padding-x-lg-desktop / 3;
-			padding-right: $input-btn-padding-x-lg-desktop / 3;
-		}
-	}
-
-	.btn-group.open .dropdown-toggle {
-		box-shadow: none;
-	}
-
-	.btn-group-vertical {
-		> .btn + .btn,
-		> .btn + .btn-group,
-		> .btn-group + .btn,
-		> .btn-group + .btn-group {
-			margin-top: -$input-btn-border-width;
-		}
-	}
-
-	.btn-group-vertical > .btn {
-		&:first-child:not(:last-child) {
-			border-top-right-radius: $btn-border-radius;
+		@include scale-component {
+			padding-left: $input-btn-padding-x-lg-mobile / 3;
+			padding-right: $input-btn-padding-x-lg-mobile / 3;
 		}
 	}
 }
