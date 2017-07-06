@@ -1,24 +1,27 @@
 // When changing variables that affect the btn's height, make sure to match the
 // corresponding input-height with the button height.
 
-$input-btn-font-size-desktop: null !default;
-$input-btn-padding-x-desktop: null !default;
-$input-btn-padding-y-desktop: null !default;
+$input-btn-font-size: null !default;
+$input-btn-font-size-mobile: null !default;
+$input-btn-padding-x-mobile: null !default;
+$input-btn-padding-y-mobile: null !default;
 
-$input-btn-font-size-lg-desktop: null !default;
-$input-btn-padding-x-lg-desktop: null !default;
-$input-btn-padding-y-lg-desktop: null !default;
+$input-btn-font-size-lg: null !default;
+$input-btn-font-size-lg-mobile: null !default;
+$input-btn-padding-x-lg-mobile: null !default;
+$input-btn-padding-y-lg-mobile: null !default;
 
-$input-btn-font-size-sm-desktop: null !default;
-$input-btn-padding-x-sm-desktop: null !default;
-$input-btn-padding-y-sm-desktop: null !default;
+$input-btn-font-size-sm: null !default;
+$input-btn-font-size-sm-mobile: null !default;
+$input-btn-padding-x-sm-mobile: null !default;
+$input-btn-padding-y-sm-mobile: null !default;
 
 // End variables that affect btn height
 
 $btn-action-border-radius: null !default;
 $btn-action-dropdown-spacer: 5px !default;
 $btn-action-size: 34px !default;
-$btn-action-size-desktop: null !default;
+$btn-action-size-mobile: null !default;
 
 $btn-disabled-opacity: null !default;
 

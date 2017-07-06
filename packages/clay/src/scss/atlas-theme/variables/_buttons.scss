@@ -7,33 +7,31 @@ $btn-font-weight: 500 !default;
 
 $input-btn-border-width: 0.125rem !default; // 2px
 
-$input-btn-font-size: 0.875rem !default; // 14px
-$input-btn-padding-x: 1.5rem !default; // 24px
-$input-btn-padding-y: 0.59375rem !default; // 9.5px
-$input-btn-font-size-desktop: 1rem !default; // 16px
-$input-btn-padding-x-desktop: 0.875rem !default; // 14px
-$input-btn-padding-y-desktop: 0.5rem !default; // 8px
+$input-btn-font-size: 1rem !default; // 16px
+$input-btn-font-size-mobile: 0.875rem !default; // 14px
+$input-btn-padding-x: 0.875rem !default; // 14px
+$input-btn-padding-x-mobile: 1.5rem !default; // 24px
+$input-btn-padding-y: 0.5rem !default; // 8px
+$input-btn-padding-y-mobile: 0.59375rem !default; // 9.5px
 
 $input-btn-font-size-lg: 1rem !default; // 16px
-$input-btn-padding-x-lg: 2.25rem !default; // 36px
-$input-btn-padding-y-lg: 0.53125rem !default; // 8.5px
-$input-btn-font-size-lg-desktop: $input-btn-font-size-lg !default;
-$input-btn-padding-x-lg-desktop: 3rem !default; // 48px
-$input-btn-padding-y-lg-desktop: 0.625rem !default; // 12px
+$input-btn-padding-x-lg: 3rem !default; // 48px
+$input-btn-padding-x-lg-mobile: 2.25rem !default; // 36px
+$input-btn-padding-y-lg: 0.625rem !default; // 12px
+$input-btn-padding-y-lg-mobile: 0.53125rem !default; // 8.5px
 
 $input-btn-font-size-sm: 0.8125rem !default; // 13px
-$input-btn-padding-x-sm: 0.8125rem !default; // 13px
-$input-btn-padding-y-sm: 0.3125rem !default; // 5px
-$input-btn-font-size-sm-desktop: $input-btn-font-size-sm !default;
-$input-btn-padding-x-sm-desktop: 1rem !default; // 16px
-$input-btn-padding-y-sm-desktop: 0.28125rem !default; // 4.5px
+$input-btn-padding-x-sm: 1rem !default; // 16px
+$input-btn-padding-x-sm-mobile: 0.8125rem !default; // 13px
+$input-btn-padding-y-sm: 0.28125rem !default; // 4.5px
+$input-btn-padding-y-sm-mobile: 0.3125rem !default; // 5px
 
 // End variables that affect btn height
 
 $btn-disabled-opacity: 0.5 !default;
 
-$btn-action-size: 3.25rem !default; // 52px
-$btn-action-size-desktop: 4rem !default; // 64px
+$btn-action-size: 4rem !default; // 64px
+$btn-action-size-mobile: 3.25rem !default; // 52px
 
 $btn-border-radius-lg: $border-radius !default;
 
