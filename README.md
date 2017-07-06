@@ -9,7 +9,7 @@
 2. Install lerna global dependency:
 
   ```
-  [sudo] npm install -g 2.0.0-rc.5
+  [sudo] npm install -g lerna
   ```
 
 3. Run the bootstrap script to install local dependencies and link packages together:
