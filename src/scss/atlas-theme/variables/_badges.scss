@@ -1,16 +1,16 @@
-$badge-font-size: $font-size-base / 1.166667 !default;
-$badge-font-size-desktop: $font-size-base !default; // 16px
+$badge-font-size: 0.875rem !default; // 14px
+$badge-font-size-mobile: 0.75rem !default; // 12px
 $badge-font-weight: 500 !default;
 $badge-padding-x: 12px !default;
 $badge-padding-y: 9px !default;
 
-$badge-font-size-lg: $font-size-lg / 1.166667 !default;
-$badge-font-size-lg-desktop: $font-size-lg !default;
+$badge-font-size-lg: 1.125rem !default; // 18px
+$badge-font-size-lg-mobile: 1rem !default; // 16px
 $badge-padding-x-lg: 20px !default;
 $badge-padding-y-lg: 14px !default;
 
-$badge-font-size-sm: $font-size-sm / 1.166667 !default;
-$badge-font-size-sm-desktop: $font-size-sm !default;
+$badge-font-size-sm: 0.75rem !default; // 12px
+$badge-font-size-sm-mobile: 0.6875rem !default; // 11px
 $badge-padding-x-sm: 10px !default;
 $badge-padding-y-sm: 4px !default;
 

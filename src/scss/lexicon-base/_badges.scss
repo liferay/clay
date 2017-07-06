@@ -7,12 +7,8 @@
 	white-space: normal;
 	word-wrap: break-word;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if (variable-exists(badge-font-size-desktop)) {
-				font-size: $badge-font-size-desktop;
-			}
-		}
+	@include scale-component {
+		font-size: $badge-font-size-mobile;
 	}
 
 	a {
@@ -30,12 +26,8 @@
 	font-size: $badge-font-size-lg;
 	padding: $badge-padding-y-lg $badge-padding-x-lg;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if (variable-exists(badge-font-size-lg-desktop)) {
-				font-size: $badge-font-size-lg-desktop;
-			}
-		}
+	@include scale-component {
+		font-size: $badge-font-size-lg-mobile;
 	}
 }
 
@@ -43,12 +35,8 @@
 	font-size: $badge-font-size-sm;
 	padding: $badge-padding-y-sm $badge-padding-x-sm;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if (variable-exists(badge-sm-desktop-font-size)) {
-				font-size: $badge-font-size-sm-desktop;
-			}
-		}
+	@include scale-component {
+		font-size: $badge-font-size-sm-mobile;
 	}
 }
 
