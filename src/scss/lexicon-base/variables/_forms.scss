@@ -6,14 +6,14 @@ $input-border-width: $input-border-top-width $input-border-right-width $input-bo
 
 $input-color-placeholder-focus: null !default;
 $input-font-size: null !default;
-$input-font-size-desktop: null !default;
+$input-font-size-mobile: null !default;
 $input-font-size-lg: null !default;
-$input-font-size-lg-desktop: null !default;
+$input-font-size-lg-mobile: null !default;
 $input-font-size-sm: null !default;
-$input-font-size-sm-desktop: null !default;
-$input-height-desktop: null !default;
-$input-height-lg-desktop: null !default;
-$input-height-sm-desktop: null !default;
+$input-font-size-sm-mobile: null !default;
+$input-height-mobile: null !default;
+$input-height-lg-mobile: null !default;
+$input-height-sm-mobile: null !default;
 $input-padding-x: $input-btn-padding-x !default;
 $input-padding-y: $input-btn-padding-y !default;
 
@@ -30,10 +30,9 @@ $input-opacity-disabled: null !default;
 $input-label-color: null !default;
 $input-label-color-focus: null !default;
 $input-label-font-size: null !default;
+$input-label-font-size-mobile: null !default;
 $input-label-font-weight: null !default;
 $input-label-margin-bottom: null !default;
-
-$input-label-font-size-desktop: null !default;
 
 $input-label-reference-mark-color: map-get($theme-colors, warning) !default;
 $input-label-reference-mark-spacer: null !default;

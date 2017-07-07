@@ -2,13 +2,10 @@
 
 $input-font-size: 1rem !default; // 16px
 
-$input-font-size-desktop: 1rem !default; // 16px
-
-$input-label-font-size: 0.75rem !default; // 12px
+$input-label-font-size: 0.875rem !default; // 14px
+$input-label-font-size-mobile: 0.75rem !default; // 12px
 $input-label-font-weight: 500 !default;
 $input-label-margin-bottom: 0.125rem !default; // 2px
-
-$input-label-font-size-desktop: 0.875rem !default; // 14px
 
 $input-label-reference-mark-spacer: 0.3125rem !default; // 5px
 $input-label-reference-mark-vertical-alignment: baseline !default;
@@ -30,10 +27,6 @@ $input-font-size-sm: 0.8125rem !default; // 13px
 $input-height: 2.5rem !default; // 40px
 $input-height-lg: 3rem !default; // 48px
 $input-height-sm: 2rem !default; // 32px
-
-$input-height-desktop: 2.5rem !default; // 40px
-$input-height-lg-desktop: 3rem !default; // 48px
-$input-height-sm-desktop: 2rem !default; // 32px
 
 $form-control-feedback-font-size: 0.875rem !default; // 14px
 $form-text-font-size: 0.875rem !default; // 14px
