@@ -184,11 +184,9 @@
 		line-height: $input-height;
 		width: 30px;
 
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				height: $input-height-desktop;
-				line-height: $input-height-desktop;
-			}
+		@include scale-component {
+			height: $input-height-mobile;
+			line-height: $input-height-mobile;
 		}
 	}
 }
@@ -273,11 +271,9 @@
 				line-height: $input-height-lg;
 				width: 40px;
 
-				@if ($enable-mobile-desktop-sizes) {
-					@include media-breakpoint-up($mobile-desktop-breakpoint) {
-						height: $input-height-lg-desktop;
-						line-height: $input-height-lg-desktop;
-					}
+				@include scale-component {
+					height: $input-height-lg-mobile;
+					line-height: $input-height-lg-mobile;
 				}
 			}
 		}
@@ -325,11 +321,9 @@
 				height: $input-height-sm;
 				line-height: $input-height-sm;
 
-				@if ($enable-mobile-desktop-sizes) {
-					@include media-breakpoint-up($mobile-desktop-breakpoint) {
-						height: $input-height-sm-desktop;
-						line-height: $input-height-sm-desktop;
-					}
+				@include scale-component {
+					height: $input-height-sm-mobile;
+					line-height: $input-height-sm-mobile;
 				}
 			}
 		}

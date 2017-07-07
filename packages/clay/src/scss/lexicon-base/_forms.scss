@@ -21,12 +21,8 @@ label,
 	max-width: 100%;
 	word-wrap: break-word;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if not ($input-label-font-size-desktop == $input-label-font-size) {
-				font-size: $input-label-font-size-desktop;
-			}
-		}
+	@include scale-component {
+		font-size: $input-label-font-size-mobile;
 	}
 
 	&.focus {
@@ -62,16 +58,9 @@ label,
 		padding-right: $input-padding-x;
 	}
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if not ($input-font-size-desktop == $input-font-size) {
-				font-size: $input-font-size-desktop;
-			}
-
-			@if not ($input-height-desktop == $input-height) {
-				height: $input-height-desktop;
-			}
-		}
+	@include scale-component {
+		font-size: $input-font-size-mobile;
+		height: $input-height-mobile;
 	}
 
 	&:focus {
@@ -188,12 +177,8 @@ fieldset[disabled] label {
 	font-size: $input-font-size-lg;
 	height: $input-height-lg;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if not ($input-height-lg-desktop == $input-height-lg) {
-				height: $input-height-lg-desktop;
-			}
-		}
+	@include scale-component {
+		height: $input-height-lg-mobile;
 	}
 }
 
@@ -201,12 +186,8 @@ fieldset[disabled] label {
 	font-size: $input-font-size-sm;
 	height: $input-height-sm;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if not ($input-height-sm-desktop == $input-height-sm) {
-				height: $input-height-sm-desktop;
-			}
-		}
+	@include scale-component {
+		height: $input-height-sm-mobile;
 	}
 }
 
