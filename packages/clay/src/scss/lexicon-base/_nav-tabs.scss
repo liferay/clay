@@ -47,11 +47,9 @@
 		padding-bottom: $nav-tabs-default-padding-y;
 		padding-top: $nav-tabs-default-padding-y;
 
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				padding-bottom: $nav-tabs-default-padding-y-desktop;
-				padding-top: $nav-tabs-default-padding-y-desktop;
-			}
+		@include scale-component {
+			padding-bottom: $nav-tabs-default-padding-y-mobile;
+			padding-top: $nav-tabs-default-padding-y-mobile;
 		}
 	}
 
@@ -72,10 +70,8 @@
 		padding-bottom: 0;
 		padding-top: 0;
 
-		@if ($enable-mobile-desktop-sizes) {
-			@include media-breakpoint-up($mobile-desktop-breakpoint) {
-				line-height: $nav-tabs-default-line-height-desktop;
-			}
+		@include scale-component {
+			line-height: $nav-tabs-default-line-height-mobile;
 		}
 
 		&:hover {

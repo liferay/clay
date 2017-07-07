@@ -1,14 +1,13 @@
 // Structure
 
-$nav-tabs-default-height: 48px !default;
-$nav-tabs-default-line-height: 24px !default;
+$nav-tabs-default-height: 60px !default; // 60px
+$nav-tabs-default-height-mobile: 48px !default; // 48px
+$nav-tabs-default-line-height: 28px !default; // 28px
+$nav-tabs-default-line-height-mobile: 24px !default; // 24px
 $nav-tabs-default-padding-x: 0 !default;
+$nav-tabs-default-padding-x-mobile: 0 !default;
 $nav-tabs-default-padding-y: ($nav-tabs-default-height - $nav-tabs-default-line-height) / 2 !default;
-
-$nav-tabs-default-height-desktop: 60px !default;
-$nav-tabs-default-line-height-desktop: 28px !default;
-$nav-tabs-default-padding-x-desktop: 0 !default;
-$nav-tabs-default-padding-y-desktop: ($nav-tabs-default-height-desktop - $nav-tabs-default-line-height-desktop) / 2 !default;
+$nav-tabs-default-padding-y-mobile: ($nav-tabs-default-height-mobile - $nav-tabs-default-line-height-mobile) / 2 !default;
 
 // Skin
 
