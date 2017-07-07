@@ -3,7 +3,7 @@
 // @param $toggle-switch-padding - Space between button and bar
 
 @function set-data-label-text-position($toggle-switch-width, $toggle-switch-padding) {
-	@if $toggle-switch-padding < 0 {
+	@if ($toggle-switch-padding < 0) {
 		@return $toggle-switch-width + abs($toggle-switch-padding);
 	}
 
