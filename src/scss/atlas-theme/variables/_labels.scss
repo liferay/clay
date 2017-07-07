@@ -1,5 +1,5 @@
-$label-font-size: $font-size-base / 1.166667 !default; // 18px
-$label-font-size-desktop: $font-size-base !default;
+$label-font-size: 0.875rem !default; // 14px
+$label-font-size-mobile: 0.75rem !default; // 12px
 $label-font-weight: 500 !default;
 $label-lexicon-icon-height: 10px !default;
 $label-lexicon-icon-width: $label-lexicon-icon-height !default;
@@ -7,15 +7,15 @@ $label-padding-x: 12px !default;
 $label-padding-y: 9px !default;
 $label-text-transform: uppercase !default;
 
-$label-font-size-lg: $font-size-lg / 1.166667 !default;
-$label-font-size-lg-desktop: $font-size-lg !default;
+$label-font-size-lg: 1.125rem !default; // 18px
+$label-font-size-lg-mobile: 1rem !default; // 16px
 $label-lexicon-icon-height-lg: 14px !default;
 $label-lexicon-icon-width-lg: $label-lexicon-icon-height-lg !default;
 $label-padding-x-lg: 20px !default;
 $label-padding-y-lg: 14px !default;
 
-$label-font-size-sm: $font-size-sm / 1.166667 !default;
-$label-font-size-sm-desktop: $font-size-sm !default;
+$label-font-size-sm: 0.75rem !default; // 12px
+$label-font-size-sm-mobile: 0.6875rem !default; // 11px
 $label-lexicon-icon-height-sm: 7px !default;
 $label-lexicon-icon-width-sm: $label-lexicon-icon-height-sm !default;
 $label-padding-x-sm: 10px !default;

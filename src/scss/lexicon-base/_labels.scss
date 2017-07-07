@@ -7,6 +7,7 @@
 	display: inline-block;
 	font-size: $label-font-size;
 	font-weight: $label-font-weight;
+	line-height: 1;
 	margin-bottom: 2px;
 	margin-top: 2px;
 	max-width: 100%;
@@ -15,12 +16,8 @@
 	white-space: normal;
 	word-wrap: break-word;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if (variable-exists(label-font-size-desktop)) {
-				font-size: $label-font-size-desktop;
-			}
-		}
+	@include scale-component {
+		font-size: $label-font-size-mobile;
 	}
 
 	a {
@@ -43,12 +40,8 @@ a.label {
 	font-size: $label-font-size-lg;
 	padding: $label-padding-y-lg $label-padding-x-lg;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if (variable-exists(label-font-size-lg-desktop)) {
-				font-size: $label-font-size-lg-desktop;
-			}
-		}
+	@include scale-component {
+		font-size: $label-font-size-lg-mobile;
 	}
 }
 
@@ -56,12 +49,8 @@ a.label {
 	font-size: $label-font-size-sm;
 	padding: $label-padding-y-sm $label-padding-x-sm;
 
-	@if ($enable-mobile-desktop-sizes) {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@if (variable-exists(label-font-size-sm-desktop)) {
-				font-size: $label-font-size-sm-desktop;
-			}
-		}
+	@include scale-component {
+		font-size: $label-font-size-sm-mobile;
 	}
 }
 
