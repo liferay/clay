@@ -2,6 +2,7 @@ $label-color: null !default;
 $label-link-hover-color: #FFF !default;
 
 $label-font-size: 75% !default;
+$label-font-size-mobile: null !default;
 $label-font-weight: bold !default;
 $label-lexicon-icon-height: 9px !default;
 $label-lexicon-icon-width: $label-lexicon-icon-height !default;
@@ -13,12 +14,14 @@ $label-link-text-decoration: underline !default;
 $label-link-hover-text-decoration: none !default;
 
 $label-font-size-lg: 16px !default;
+$label-font-size-lg-mobile: null !default;
 $label-lexicon-icon-height-lg: 13px !default;
 $label-lexicon-icon-width-lg: $label-lexicon-icon-height-lg !default;
 $label-padding-x-lg: 12px !default;
 $label-padding-y-lg: 6px !default;
 
 $label-font-size-sm: 9px !default;
+$label-font-size-sm-mobile: null !default;
 $label-lexicon-icon-height-sm: 7px !default;
 $label-lexicon-icon-width-sm: $label-lexicon-icon-height-sm !default;
 $label-padding-x-sm: 7px !default;
