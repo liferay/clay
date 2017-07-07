@@ -2,10 +2,14 @@ $toggle-switch-transition: background-color 100ms ease-in, border-color 100ms ea
 
 // must all be same units--start
 $toggle-switch-bar-padding: 0 !default; // space between button and bar, can be negative value
+$toggle-switch-bar-padding-mobile: $toggle-switch-bar-padding !default;
 $toggle-switch-button-width: 25px !default;
+$toggle-switch-button-width-mobile: $toggle-switch-button-width !default;
 
 $toggle-switch-bar-height: ($toggle-switch-bar-padding * 2) + $toggle-switch-button-width !default;
+$toggle-switch-bar-height-mobile: $toggle-switch-bar-height !default;
 $toggle-switch-bar-width: 50px !default; // width of switch bar
+$toggle-switch-bar-width-mobile: $toggle-switch-bar-width !default;
 // must all be same units--end
 
 $toggle-switch-bar-bg: $input-group-addon-bg !default;
@@ -14,6 +18,7 @@ $toggle-switch-bar-border-radius: 3px !default;
 $toggle-switch-bar-border-width: 1px !default;
 $toggle-switch-bar-focus-box-shadow: 0 0 3px 2px #66AFE6 !default;
 $toggle-switch-bar-font-size: 12px !default;
+$toggle-switch-bar-font-size-mobile: $toggle-switch-bar-font-size !default;
 $toggle-switch-bar-icon-color: $input-color !default;
 
 $toggle-switch-button-bg: $input-bg !default;
@@ -21,6 +26,7 @@ $toggle-switch-button-border-color: $input-group-addon-border-color !default;
 $toggle-switch-button-border-radius: 3px 0 0 3px !default;
 $toggle-switch-button-border-width: 1px !default;
 $toggle-switch-button-font-size: $toggle-switch-bar-font-size !default;
+$toggle-switch-button-font-size-mobile: $toggle-switch-button-font-size !default; // null
 $toggle-switch-button-icon-color: $input-color !default;
 
 // Toggle Switch On
