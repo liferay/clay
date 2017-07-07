@@ -182,44 +182,38 @@ button.modal-primary-action-button {
 // Modal Full Screen
 
 .modal-full-screen {
-	bottom: 0;
-	left: 0;
+	bottom: 45px;
+	left: 45px;
 	margin: 0;
 	max-width: none;
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: 45px;
+	top: 45px;
 
-	@include media-breakpoint-up($mobile-desktop-breakpoint) {
-		bottom: 45px;
-		left: 45px;
-		right: 45px;
-		top: 45px;
+	@include scale-component {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
 	}
 
 	.modal-content {
 		border-color: $modal-content-border-color;
 
-		@include border-radius(0);
+		@include border-radius($modal-content-border-radius);
 
-		border-width: 0;
+		border-width: $modal-content-border-width;
 		height: 100%;
 
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			@include border-radius($modal-content-border-radius);
+		@include scale-component {
+			@include border-radius(0);
 
-			border-width: $modal-content-border-width;
+			border-width: 0;
 		}
 	}
 
 	.modal-body {
 		overflow: auto;
-	}
-
-	.modal-footer {
-		@include media-breakpoint-up($mobile-desktop-breakpoint) {
-			padding: $modal-inner-padding;
-		}
 	}
 }
 
