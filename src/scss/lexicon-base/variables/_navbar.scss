@@ -1,5 +1,5 @@
 $navbar-height: 3.5rem !default; // 56px
-$navbar-height-desktop: $navbar-height !default; // 56px
+$navbar-height-mobile: $navbar-height !default; // 56px
 
 $navbar-border-radius: null !default;
 
@@ -11,22 +11,22 @@ $navbar-border-width: $navbar-border-top-width $navbar-border-right-width $navba
 
 $zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
 
-// Used for computing $navbar-link-padding-y and $navbar-link-padding-y-desktop
+// Used for computing $navbar-link-padding-y and $navbar-link-padding-y-mobile
 $navbar-link-content-height: $font-size-base * $line-height-base !default;
-$navbar-link-content-height-desktop: $font-size-base-mobile * $line-height-base !default;
+$navbar-link-content-height-mobile: $font-size-base-mobile * $line-height-base !default;
 
 $navbar-link-padding-x: 0.5rem !default;
+$navbar-link-padding-x-mobile: $navbar-link-padding-x !default;
 $navbar-link-padding-y: ($navbar-height - ($navbar-padding-y * 2) - $navbar-link-content-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
-$navbar-link-padding-x-desktop: $navbar-link-padding-x !default;
-$navbar-link-padding-y-desktop: ($navbar-height-desktop - ($navbar-padding-y * 2) - $navbar-link-content-height-desktop - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
+$navbar-link-padding-y-mobile: ($navbar-height-mobile - ($navbar-padding-y * 2) - $navbar-link-content-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
 
 $navbar-active-highlight: transparent !default;
 $navbar-active-border-bottom-width: 0.125rem !default; // 2px
 
-$navbar-brand-font-size-desktop: $font-size-lg-mobile !default;
+$navbar-brand-font-size-mobile: $font-size-lg-mobile !default;
 $navbar-brand-padding-x: null !default;
-$navbar-brand-padding-x-desktop: null !default;
-$navbar-brand-padding-y-desktop: ($navbar-height-desktop - ($navbar-padding-y * 2) - ($navbar-brand-font-size-desktop * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
+$navbar-brand-padding-x-mobile: null !default;
+$navbar-brand-padding-y-mobile: ($navbar-height-mobile - ($navbar-padding-y * 2) - ($navbar-brand-font-size-mobile * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
 
 $navbar-nav-item-dropdown-margin-top: null !default;
 
@@ -37,6 +37,7 @@ $navbar-toggler-margin-x: null !default;
 $navbar-toggler-margin-y: null !default;
 
 $navbar-toggler-link-font-size: $font-size-base !default; // 16px
+$navbar-toggler-link-font-size-mobile: null !default;
 $navbar-toggler-link-height: auto !default;
 $navbar-toggler-link-line-height: $line-height-base !default; // 1.5
 $navbar-toggler-link-padding-x: 0 !default;
