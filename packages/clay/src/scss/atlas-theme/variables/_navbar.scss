@@ -1,7 +1,7 @@
 // Structure
 
-$navbar-height: 3rem !default; // 48px
-$navbar-height-desktop: 3.75rem !default; // 60px
+$navbar-height: 3.75rem !default; // 60px
+$navbar-height-mobile: 3rem !default; // 48px
 
 $navbar-border-bottom-width: 0.0625rem !default; // 1px
 $navbar-border-left-width: 0 !default;
@@ -12,12 +12,13 @@ $navbar-padding-x: 0 !default;
 $navbar-padding-y: 0 !default;
 
 $navbar-link-padding-x: 0.9375rem !default; // 15px
-$navbar-link-padding-x-desktop: $navbar-link-padding-x !default;
+$navbar-link-padding-x-mobile: $navbar-link-padding-x !default;
 
 $navbar-brand-font-size: $font-size-lg !default;
 $navbar-brand-padding-x: $navbar-link-padding-x !default;
+$navbar-brand-padding-x-mobile: $navbar-brand-padding-x !default;
 $navbar-brand-padding-y: ($navbar-height - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
-$navbar-brand-padding-x-desktop: $navbar-brand-padding-x !default;
+$navbar-brand-padding-y-mobile: ($navbar-height-mobile - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
 
 $navbar-nav-item-dropdown-margin-top: 0 !default;
 

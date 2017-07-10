@@ -186,8 +186,8 @@
 			align-items: center;
 			margin-left: auto;
 
-			@include media-breakpoint-down(sm) {
-				height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+			@include scale-component {
+				height: $navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width;
 			}
 		}
 
@@ -227,7 +227,7 @@
 
 	.basic-search {
 		@include media-breakpoint-up(md) {
-			height: $navbar-height-desktop - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width;
+			height: $navbar-height - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width;
 		}
 
 		&:after {
@@ -315,6 +315,10 @@
 
 	.nav-link {
 		padding: $navbar-link-padding-y $navbar-link-padding-x;
+
+		@include scale-component {
+			padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
+		}
 	}
 }
 
@@ -342,6 +346,12 @@
 	position: relative;
 	z-index: 1;
 
+	@include scale-component {
+		font-size: 0.875rem;
+		padding-bottom: $navbar-link-padding-y-mobile;
+		padding-top: $navbar-link-padding-y-mobile;
+	}
+
 	&:after {
 		background-color: $navbar-active-highlight;
 		bottom: -$navbar-border-bottom-width - $navbar-padding-y;
@@ -356,6 +366,15 @@
 		position: absolute;
 		right: $navbar-toggler-link-padding-x;
 		width: auto;
+
+		@include scale-component {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&:focus {
+		outline: none;
 	}
 
 	.lexicon-icon {
@@ -394,6 +413,13 @@
 .navbar-brand {
 	padding-left: $navbar-brand-padding-x;
 	padding-right: $navbar-brand-padding-x;
+
+	@include scale-component {
+		padding-bottom: $navbar-brand-padding-y-mobile;
+		padding-left: $navbar-brand-padding-x-mobile;
+		padding-right: $navbar-brand-padding-x-mobile;
+		padding-top: $navbar-brand-padding-y-mobile;
+	}
 }
 
 // Navbar Form
@@ -405,6 +431,11 @@
 	@if not ($navbar-link-padding-x == 0.5rem) {
 		padding-left: $navbar-link-padding-x;
 		padding-right: $navbar-link-padding-x;
+	}
+
+	@include scale-component {
+		padding-left: $navbar-link-padding-x-mobile;
+		padding-right: $navbar-link-padding-x-mobile;
 	}
 }
 
@@ -418,6 +449,16 @@
 	}
 }
 
+.navbar-nav .nav-btn {
+	margin-left: $navbar-link-padding-x;
+	margin-right: $navbar-link-padding-x;
+
+	// @include scale-component {
+	// 	margin-left: $navbar-link-padding-x-mobile;
+	// 	margin-right: $navbar-link-padding-x-mobile;
+	// }
+}
+
 .navbar-nav .nav-item > .form-check {
 	align-items: center;
 	display: flex;
@@ -425,6 +466,11 @@
 	margin: 0;
 	padding-left: $navbar-link-padding-x;
 	padding-right: $navbar-link-padding-x;
+
+	@include scale-component {
+		padding-left: $navbar-link-padding-x-mobile;
+		padding-right: $navbar-link-padding-x-mobile;
+	}
 
 	.form-check-input {
 		margin-left: 0;
@@ -485,10 +531,22 @@
 	}
 
 	white-space: nowrap;
+
+	@include scale-component {
+		@if not ($navbar-link-padding-y-mobile == $nav-link-padding-y) {
+			padding-bottom: $navbar-link-padding-y-mobile;
+			padding-top: $navbar-link-padding-y-mobile;
+		}
+
+		@if not ($navbar-link-padding-x-mobile == 0.5rem) {
+			padding-left: $navbar-link-padding-x-mobile;
+			padding-right: $navbar-link-padding-x-mobile;
+		}
+	}
 }
 
 .navbar-nav .navbar-text {
-	padding: $navbar-link-padding-y $navbar-link-padding-x;
+	padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
 }
 
 .navbar-nav .nav-item {
@@ -540,10 +598,10 @@
 				display: flex;
 			}
 
-			.navbar-nav .nav-btn {
-				margin-left: $navbar-link-padding-x;
-				margin-right: $navbar-link-padding-x;
-			}
+			// .navbar-nav .nav-btn {
+			// 	margin-left: $navbar-link-padding-x;
+			// 	margin-right: $navbar-link-padding-x;
+			// }
 
 			@if not ($infix == '') {
 				@include media-breakpoint-down($breakpoint) {
@@ -597,6 +655,11 @@
 								padding-right: 0;
 							}
 						}
+					}
+
+					.navbar-nav .nav-btn {
+						margin-left: $navbar-link-padding-x-mobile;
+						margin-right: $navbar-link-padding-x-mobile;
 					}
 				}
 			}
@@ -659,9 +722,9 @@
 
 						display: block;
 						height: $navbar-active-border-bottom-width;
-						left: $navbar-link-padding-x-desktop;
+						left: $navbar-link-padding-x;
 						position: absolute;
-						right: $navbar-link-padding-x-desktop;
+						right: $navbar-link-padding-x;
 						width: auto;
 					}
 				}
@@ -689,6 +752,10 @@
 						}
 					}
 					@else {
+						@include navbar-expand-desktop;
+					}
+
+					@if not ($infix == '') {
 						@include navbar-expand-desktop;
 					}
 				}
