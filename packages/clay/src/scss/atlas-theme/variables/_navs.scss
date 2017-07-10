@@ -7,6 +7,7 @@ $nav-link-padding-y: 0.625rem !default; // 10px
 
 $nav-link-color: #2B4259 !default;
 $nav-link-hover-color: inherit !default;
+$nav-link-active-color: map-get($theme-colors, primary) !default;
 
 $nav-link-hover-bg: transparent !default;
 
