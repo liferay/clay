@@ -411,6 +411,7 @@
 // Navbar Brand
 
 .navbar-brand {
+	color: $navbar-brand-color;
 	padding-left: $navbar-brand-padding-x;
 	padding-right: $navbar-brand-padding-x;
 
@@ -419,6 +420,10 @@
 		padding-left: $navbar-brand-padding-x-mobile;
 		padding-right: $navbar-brand-padding-x-mobile;
 		padding-top: $navbar-brand-padding-y-mobile;
+	}
+
+	@include hover-focus {
+		color: $navbar-brand-hover-color;
 	}
 }
 

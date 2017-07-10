@@ -14,6 +14,8 @@ $navbar-padding-y: 0 !default;
 $navbar-link-padding-x: 0.9375rem !default; // 15px
 $navbar-link-padding-x-mobile: $navbar-link-padding-x !default;
 
+$navbar-brand-color: $nav-link-color !default;
+$navbar-brand-hover-color: $nav-link-hover-color !default;
 $navbar-brand-font-size: $font-size-lg !default;
 $navbar-brand-padding-x: $navbar-link-padding-x !default;
 $navbar-brand-padding-x-mobile: $navbar-brand-padding-x !default;
@@ -34,7 +36,7 @@ $navbar-toggler-link-margin-x: 0 !default;
 $navbar-border-radius: 0 !default;
 $navbar-collapse-absolute-box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.7) !default;
 
-// Navbar Default
+// Navbar Light
 
 $navbar-light-bg: #FCFEFF !default;
 $navbar-light-hover-bg: transparent !default;
@@ -61,7 +63,7 @@ $collapse-basic-search-transparent-light-btn-focus-color: $navbar-light-active-h
 $collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active-highlight !default;
 $collapse-basic-search-transparent-light-focus-highlight: $navbar-light-active-highlight !default;
 
-// Navbar Inverse
+// Navbar Dark
 
 $navbar-dark-bg: map-get($theme-colors, secondary) !default;
 
