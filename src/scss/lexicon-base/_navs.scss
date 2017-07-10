@@ -9,6 +9,10 @@
 	@include hover-focus {
 		color: $nav-link-hover-color;
 	}
+
+	&.active {
+		color: $nav-link-active-color;
+	}
 }
 
 .nav-link-monospaced {
