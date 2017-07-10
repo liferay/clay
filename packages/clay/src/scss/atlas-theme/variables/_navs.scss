@@ -1,18 +1,12 @@
-// Structure
-
-$nav-link-padding-x: 1rem !default; // 16px
-$nav-link-padding-y: 0.625rem !default; // 10px
-
-// Skin
-
 $nav-link-color: #2B4259 !default;
 $nav-link-hover-color: inherit !default;
 $nav-link-active-color: map-get($theme-colors, primary) !default;
+$nav-link-disabled-color: #C5CDD0 !default;
 
 $nav-link-hover-bg: transparent !default;
 
-$nav-disabled-link-color: #C5CDD0 !default;
-$nav-disabled-link-hover-color: $nav-disabled-link-color !default;
+$nav-link-padding-x: 1rem !default; // 16px
+$nav-link-padding-y: 0.625rem !default; // 10px
 
 $nav-collapse-icon-closed: "\f0da" !default;
 $nav-collapse-icon-open: "\f0d7" !default;
