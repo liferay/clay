@@ -23,6 +23,8 @@ $navbar-link-padding-y-mobile: ($navbar-height-mobile - ($navbar-padding-y * 2) 
 $navbar-active-highlight: transparent !default;
 $navbar-active-border-bottom-width: 0.125rem !default; // 2px
 
+$navbar-brand-color: null !default;
+$navbar-brand-hover-color: null !default;
 $navbar-brand-font-size-mobile: $font-size-lg-mobile !default;
 $navbar-brand-padding-x: null !default;
 $navbar-brand-padding-x-mobile: null !default;
@@ -79,7 +81,7 @@ $collapse-basic-search-transparent-light-input-placeholder-focus-color: null !de
 
 $collapse-basic-search-transparent-light-focus-highlight: $input-focus-border-color !default;
 
-// Navbar Inverse
+// Navbar Dark
 
 $navbar-dark-bg: map-get($colors, gray-dark) !default;
 $navbar-dark-border-color: transparent !default;
