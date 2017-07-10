@@ -452,6 +452,18 @@
 		display: flex;
 		width: 100%;
 	}
+
+	.form-inline {
+		align-items: flex-end;
+		flex: 1;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.form-control {
+		flex: 1;
+		width: 100%;
+	}
 }
 
 .navbar-nav .nav-btn {
