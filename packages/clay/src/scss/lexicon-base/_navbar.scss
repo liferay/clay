@@ -68,7 +68,7 @@
 	left: 0;
 	position: relative;
 
-	@include scale-component {
+	@include media-breakpoint-down($scaling-breakpoint) {
 		left: 101%;
 	}
 
@@ -78,7 +78,7 @@
 		display: none;
 		z-index: $zindex-basic-search-close;
 
-		@include scale-component {
+		@include media-breakpoint-down($scaling-breakpoint) {
 			display: inline-block;
 		}
 	}
@@ -92,7 +92,7 @@
 	.basic-search {
 		position: relative;
 
-		@include scale-component {
+		@include media-breakpoint-down($scaling-breakpoint) {
 			border-color: transparent;
 
 			@include border-radius($navbar-border-radius);
@@ -127,14 +127,14 @@
 
 		&.basic-search-transition .input-group-btn .btn:first-child,
 		&.open .input-group-btn .btn:first-child {
-			@include scale-component {
+			@include media-breakpoint-down($scaling-breakpoint) {
 				border-bottom-left-radius: 0;
 				border-top-left-radius: 0;
 			}
 		}
 
 		.input-group-btn .btn:first-child {
-			@include scale-component {
+			@include media-breakpoint-down($scaling-breakpoint) {
 				border-bottom-left-radius: $btn-border-radius;
 				border-top-left-radius: $btn-border-radius;
 			}
@@ -144,7 +144,7 @@
 			overflow: visible;
 			visibility: visible;
 
-			@include scale-component {
+			@include media-breakpoint-down($scaling-breakpoint) {
 				overflow: hidden;
 				visibility: hidden;
 			}
@@ -156,7 +156,7 @@
 	flex-wrap: wrap;
 
 	&.navbar .basic-search {
-		@include scale-component {
+		@include media-breakpoint-down($scaling-breakpoint) {
 			margin-left: 0;
 			margin-right: 0;
 			padding-left: $navbar-link-padding-x;
@@ -171,7 +171,7 @@
 	.basic-search {
 		max-width: 220px;
 
-		@include scale-component {
+		@include media-breakpoint-down($scaling-breakpoint) {
 			max-width: none;
 		}
 
@@ -183,8 +183,13 @@
 			align-items: center;
 			margin-left: auto;
 
-			@include scale-component {
-				height: $navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width;
+			@include media-breakpoint-down($scaling-breakpoint) {
+				@if ($enable-scaling-components) {
+					height: $navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width;
+				}
+				@else {
+					height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+				}
 			}
 		}
 
@@ -205,7 +210,7 @@
 	.navbar-collapse {
 		flex-basis: auto;
 
-		@include scale-component {
+		@include media-breakpoint-down($scaling-breakpoint) {
 			flex-basis: 100%;
 		}
 	}
@@ -218,16 +223,16 @@
 
 .collapse-basic-search-transparent {
 	&.navbar .basic-search {
-		@include scale-component {
+		@include media-breakpoint-down($scaling-breakpoint) {
 			padding-left: 0;
 			padding-right: 0;
 		}
 	}
 
 	.basic-search {
-		height: $navbar-height - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width;
+		height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2);
 
-		@include scale-component {
+		@include media-breakpoint-down($scaling-breakpoint) {
 			height: auto;
 		}
 
@@ -242,7 +247,7 @@
 			right: 0;
 			z-index: $zindex-basic-search-close;
 
-			@include scale-component {
+			@include media-breakpoint-down($scaling-breakpoint) {
 				bottom: -$navbar-border-bottom-width;
 			}
 		}
@@ -350,7 +355,7 @@
 	z-index: 1;
 
 	@include scale-component {
-		font-size: 0.875rem;
+		font-size: $navbar-toggler-link-font-size-mobile;
 		padding-bottom: $navbar-link-padding-y-mobile;
 		padding-top: $navbar-link-padding-y-mobile;
 	}
