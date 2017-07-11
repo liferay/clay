@@ -309,6 +309,14 @@
 	border-style: solid;
 	border-width: $navbar-border-width;
 
+	@if not ($navbar-font-size == $font-size-base) {
+		font-size: $navbar-font-size;
+	}
+
+	@include scale-component {
+		font-size: $navbar-font-size-mobile;
+	}
+
 	.container {
 		@include media-breakpoint-down(nth(map-keys($grid-breakpoints), 1)) {
 			margin-left: 0;
