@@ -10,7 +10,7 @@ $navbar-padding-x: 0 !default;
 $navbar-padding-y: 0 !default;
 
 $navbar-link-padding-x: 0.9375rem !default; // 15px
-$navbar-link-padding-x-mobile: $navbar-link-padding-x !default; // 15px
+$navbar-link-padding-x-mobile: 0.875rem !default; // 15px
 
 $navbar-brand-color: $nav-link-color !default;
 $navbar-brand-hover-color: $nav-link-hover-color !default;
@@ -27,7 +27,6 @@ $navbar-toggler-margin-x: $navbar-link-padding-x !default; // 15px
 $navbar-toggler-padding-x: 0.625rem !default; // 15px
 $navbar-toggler-padding-y: 0 !default;
 
-$navbar-toggler-link-font-size-mobile: 0.875rem !default; // 14px
 $navbar-toggler-link-margin-x: 0 !default;
 
 $navbar-collapse-absolute-box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.7) !default;
