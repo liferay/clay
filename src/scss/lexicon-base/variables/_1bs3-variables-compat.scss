@@ -1,0 +1,236 @@
+// Map Bootstrap 4 Variables to Bootstrap 3 equivalent
+
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+
+$font-size-large: $font-size-lg !default;
+$font-size-small: $font-size-sm !default;
+
+$line-height-computed: $font-size-base * $line-height-base !default;
+$line-height-large: $line-height-lg !default;
+$line-height-small: $line-height-sm !default;
+
+$border-radius-base: $border-radius !default;
+$border-radius-large: $border-radius-lg !default;
+$border-radius-small: $border-radius-sm !default;
+
+$padding-base-horizontal: $input-padding-x !default;
+$padding-base-vertical: $input-padding-y !default;
+
+$padding-large-horizontal: $input-padding-x-lg !default;
+$padding-large-vertical: $input-padding-y-lg !default;
+
+$padding-small-horizontal: $input-padding-x-sm !default;
+$padding-small-vertical: $input-padding-y-sm !default;
+
+$padding-xs-vertical: 1px !default;
+$padding-xs-horizontal: 5px !default;
+
+$text-color: $body-color !default;
+
+$zindex-navbar:            1000 !default;
+$zindex-navbar-fixed: $zindex-fixed !default;
+
+// Grid
+
+$screen-xs: map-get($grid-breakpoints, sm) !default; // 576px
+$screen-xs-min: $screen-xs !default;
+$screen-phone: $screen-xs-min !default;
+
+$screen-sm: map-get($grid-breakpoints, md) !default; // 768px
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
+
+$screen-md: map-get($grid-breakpoints, lg) !default; // 992px
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
+
+$screen-lg: map-get($grid-breakpoints, xl) !default; // 1200px
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
+
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+$grid-float-breakpoint: $screen-sm-min !default; // 768px
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default; // 767px
+
+$grid-gutter-width: $grid-gutter-width-base !default; // 30px
+
+// Alerts
+
+$alert-padding: $alert-padding-y $alert-padding-x !default;
+
+// Breadcrumbs
+
+$breadcrumb-color: $breadcrumb-divider-color !default;
+$breadcrumb-separator: $breadcrumb-divider !default;
+
+// Buttons
+
+$btn-border-radius-base: $btn-border-radius !default;
+$btn-border-radius-large: $btn-border-radius-lg !default;
+$btn-border-radius-small: $btn-border-radius-sm !default;
+
+$btn-padding-horizontal: $input-btn-padding-x !default;
+$btn-padding-vertical: $input-btn-padding-y !default;
+
+$btn-default-color: $btn-secondary-color !default;
+$btn-default-bg: $btn-secondary-bg !default;
+$btn-default-border: $btn-secondary-border !default;
+
+// Dropdowns
+
+$caret-width-base: $caret-width !default;
+$dropdown-border: $dropdown-border-color !default;
+$dropdown-fallback-border: #CCC !default;
+$dropdown-link-padding: 3px $dropdown-item-padding-x !default;
+
+// Forms
+
+$input-height-base: $input-height !default;
+$input-height-large: $input-height-lg !default;
+$input-height-small: $input-height-sm !default;
+
+$input-border: $input-border-color !default;
+$input-border-focus: $input-border-color-focus !default;
+
+// Labels
+
+$label-default-bg: $gray-light !default;
+$label-primary-bg: $brand-primary !default;
+$label-success-bg: $brand-success !default;
+$label-info-bg: $brand-info !default;
+$label-warning-bg: $brand-warning !default;
+$label-danger-bg: $brand-danger !default;
+
+$label-color: $badge-color !default;
+$label-link-hover-color: #FFF !default;
+
+// List Groups
+
+$list-group-border: $list-group-border-color !default;
+
+$list-group-link-heading-color: #333 !default;
+
+// Pagination
+
+$pagination-border: $pagination-border-color !default;
+
+// Panels
+// Removed in Bootstrap 4
+
+$panel-bg: #FFF !default;
+$panel-body-padding: 15px !default;
+$panel-heading-padding: 10px 15px !default;
+$panel-footer-padding: $panel-heading-padding !default;
+$panel-border-radius: $border-radius-base !default;
+
+$panel-inner-border: #DDD !default;
+$panel-footer-bg: #F5F5F5 !default;
+
+$panel-default-text: $gray-dark !default;
+$panel-default-border: #DDD !default;
+$panel-default-heading-bg: #F5F5F5 !default;
+
+$panel-primary-text: #FFF !default;
+$panel-primary-border: $brand-primary !default;
+$panel-primary-heading-bg: $brand-primary !default;
+
+$panel-success-text: $state-success-text !default;
+$panel-success-border: $state-success-border !default;
+$panel-success-heading-bg: $state-success-bg !default;
+
+$panel-info-text: $state-info-text !default;
+$panel-info-border: $state-info-border !default;
+$panel-info-heading-bg: $state-info-bg !default;
+
+$panel-warning-text: $state-warning-text !default;
+$panel-warning-border: $state-warning-border !default;
+$panel-warning-heading-bg: $state-warning-bg !default;
+
+$panel-danger-text:  $state-danger-text !default;
+$panel-danger-border: $state-danger-border !default;
+$panel-danger-heading-bg: $state-danger-bg !default;
+
+// Progress Bar
+
+$progress-bar-danger-bg:      $brand-danger !default;
+$progress-bar-info-bg:        $brand-info !default;
+$progress-bar-success-bg:     $brand-success !default;
+$progress-bar-warning-bg:     $brand-warning !default;
+
+// Navs
+
+$nav-pills-active-link-hover-bg: $nav-pills-active-link-bg !default;
+$nav-pills-active-link-hover-color: $nav-pills-active-link-color !default;
+
+// Navbar
+
+$navbar-border-radius:             $border-radius !default;
+
+$navbar-height: 50px !default; // 50px
+$navbar-margin-bottom:             $line-height-computed !default;
+
+$navbar-padding-horizontal: $navbar-padding-x !default;
+$navbar-padding-vertical: $navbar-padding-y !default;
+
+$navbar-default-color:             $navbar-light-color !default;
+$navbar-default-bg:                darken($body-bg, 3%) !default;
+$navbar-default-border:            $navbar-default-bg !default;
+
+$navbar-default-link-color:                $navbar-light-color !default;
+$navbar-default-link-hover-color:          $navbar-light-hover-color !default;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         $navbar-light-active-color !default;
+$navbar-default-link-active-bg:            transparent !default;
+$navbar-default-link-disabled-color:       $navbar-light-disabled-color !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+
+$navbar-default-toggle-hover-bg:           #ddd !default;
+$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-border-color:       #ddd !default;
+
+$navbar-inverse-color:                      $navbar-inverse-color !default;
+$navbar-inverse-bg:                         $brand-inverse !default;
+$navbar-inverse-border:                     $navbar-inverse-bg !default;
+
+$navbar-inverse-link-color:                 $navbar-inverse-color !default;
+$navbar-inverse-link-hover-color:           $navbar-inverse-hover-color !default;
+$navbar-inverse-link-hover-bg:              transparent !default;
+$navbar-inverse-link-active-color:          $navbar-inverse-active-color !default;
+$navbar-inverse-link-active-bg:             transparent !default;
+$navbar-inverse-link-disabled-color:        $navbar-inverse-disabled-color !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
+
+$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:          #fff !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
+
+$navbar-inverse-toggle-hover-bg:            #333 !default;
+$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
+$navbar-inverse-toggle-border-color:        #333 !default;
+
+// Nav Tabs
+
+$nav-tabs-active-link-hover-bg:             $body-bg !default;
+$nav-tabs-active-link-hover-border-color:   #ddd !default;
+$nav-tabs-active-link-hover-color:          $gray !default;
+
+// Pager
+// Removed in Bootstrap 4
+
+$pager-bg:                             $pagination-bg !default;
+$pager-border:                         $pagination-border-color !default;
+$pager-border-radius:                  15px !default;
+
+$pager-hover-bg:                       $pagination-hover-bg !default;
+
+$pager-active-bg:                      $pagination-active-bg !default;
+$pager-active-color:                   $pagination-active-color !default;
+
+$pager-disabled-color:                 $pagination-disabled-color !default;

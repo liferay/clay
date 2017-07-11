@@ -1,0 +1,1230 @@
+// _alerts.scss
+
+@if (variable-exists(atlas-theme)) {
+  .alert-mismissable,
+  .alert-dismissible {
+    .close {
+      padding: 0 $alert-padding-x;
+    }
+  }
+}
+
+// _breadcrumbs.scss
+
+.breadcrumb > li {
+  float: left;
+
+  &.active {
+    color: $breadcrumb-active-color;
+  }
+}
+
+.breadcrumb > li + li::before {
+  display: inline-block; // Suppress underlining of the separator in modern browsers
+  padding-right: $breadcrumb-item-padding;
+  padding-left: $breadcrumb-item-padding;
+  color: $breadcrumb-divider-color;
+  content: "#{$breadcrumb-divider}";
+}
+
+.breadcrumb > li + li:hover::before {
+  text-decoration: underline;
+}
+
+.breadcrumb > li + li:hover::before {
+  text-decoration: none;
+}
+
+// _buttons.scss
+
+.btn-default {
+  @extend .btn-secondary;
+}
+
+.btn-default {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+}
+
+// Removed .btn-xs in BS4
+.btn-xs {
+	@include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+
+// _button-groups.scss
+
+.btn-group.dropdown {
+  display: inline-flex;
+}
+
+// _cards.scss
+
+.card {
+  display: block; // FF doesn't display cards properly
+}
+
+// _component-animations.scss
+
+.collapse.in {
+  display: block;
+}
+
+.collapse.in.show {
+  display: none;
+}
+
+// _dropdowns.scss
+// Moved .caret to .dropdown-toggle:after in BS4
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top:   $caret-width-base dashed;
+  border-top:   $caret-width-base solid \9; // IE8
+  border-right: $caret-width-base solid transparent;
+  border-left:  $caret-width-base solid transparent;
+}
+
+.dropdown-menu {
+  border: 1px solid $dropdown-border;
+}
+
+// Moved .dropdown-menu > li > a to .dropdown-item in BS4
+.dropdown-menu > li > a {
+  @extend .dropdown-item;
+}
+
+.dropdown-toggle:after {
+  border-width: 0;
+  content: normal;
+}
+
+.dropup .dropdown-toggle:after {
+  border-width: 0;
+  content: normal;
+}
+
+.open > .dropdown-menu {
+  display: block;
+}
+
+// _figures.scss
+
+.figure {
+  display: block;
+}
+
+// _forms.scss
+
+label {
+  max-width: 100%;
+}
+
+.control-label {
+  @extend .form-control-label;
+}
+
+.checkbox,
+.radio {
+  @extend .form-check;
+
+  > label {
+    min-height: 20px;
+
+    @extend .form-check-label;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    @extend .form-check-input;
+
+    &:only-child {
+      position: absolute;
+    }
+  }
+}
+
+.form-control {
+  border-color: $input-border;
+}
+
+@if (variable-exists(atlas-theme)) {
+  .input-group-lg > .form-control {
+    @extend .input-lg;
+  }
+
+  .input-group-sm > .form-control {
+    @extend .input-sm;
+  }
+}
+
+.form-horizontal > .form-group {
+  @extend .row;
+}
+
+.input-lg {
+  @extend .form-control-lg;
+}
+
+.input-sm {
+  @extend .form-control-sm;
+}
+
+fieldset {
+  width: 100%;
+}
+
+// _form-validation.scss
+
+.help-block {
+  display: block; // account for any element using help-block
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: lighten($text-color, 25%); // lighten the text some for contrast
+}
+
+.has-error {
+  @extend .has-danger;
+}
+
+.has-feedback {
+  position: relative;
+
+  label,
+  .form-control {
+    + .form-control-feedback {
+      position: absolute;
+      top: ($line-height-computed + 5); // Height of the `label` and its margin
+      right: 0;
+      z-index: 2; // Ensure icon is above input groups
+      display: block;
+      width: $input-height-base;
+      height: $input-height-base;
+      line-height: $input-height-base;
+      text-align: center;
+      pointer-events: none;
+      margin-top: 0;
+    }
+
+    &.sr-only ~ .form-control-feedback {
+       top: 0;
+    }
+  }
+}
+
+// _basic-search.scss
+
+.basic-search.input-group {
+  display: table;
+  width: auto;
+}
+
+.basic-search .input-group-input .form-control {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.basic-search .input-group-btn {
+  display: table-cell;
+  width: 1%;
+}
+
+.basic-search-transition {
+  .basic-search-slider {
+    transition: all 0.5s ease;
+  }
+}
+
+div.collapse-basic-search .basic-search .form-control {
+  padding-left: 57px;
+
+  @media (min-width: $grid-float-breakpoint) {
+    padding-left: 5px;
+  }
+}
+
+// _grid.scss
+
+// Renamed .col-xs-* to .col-*
+@for $i from 1 through $grid-columns {
+  .col-xs-#{$i} {
+    @extend .col-#{$i};
+  }
+}
+
+// Image
+// Renamed .img-responsive to .img-fluid
+.img-responsive {
+	@include img-fluid;
+}
+
+// Renamed .img-circle to .rounded-circle
+.img-circle {
+  @extend .rounded-circle;
+}
+
+// Renamed .img-rounded to .rounded
+.img-rounded {
+  @extend .rounded;
+}
+
+// _input-groups.scss
+
+.input-group {
+  display: table;
+  width: auto;
+
+  .input-group-addon,
+  .input-group-btn {
+    display: table-cell;
+    width: 1%;
+  }
+
+  .form-control {
+    display: table-cell;
+    width: 100%;
+  }
+}
+
+
+
+.input-group-default {
+  .input-group-addon {
+    display: table-cell;
+    width: 1%;
+  }
+}
+
+// _labels.scss
+// Removed in Bootstrap 4
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: $label-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+
+  // [converter] extracted a& to a.label
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Add hover effects, but only for links
+a.label {
+  &:hover,
+  &:focus {
+    color: $label-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.label-default {
+  @include label-variant($label-default-bg);
+}
+
+.label-primary {
+  @include label-variant($label-primary-bg);
+}
+
+.label-success {
+  @include label-variant($label-success-bg);
+}
+
+.label-info {
+  @include label-variant($label-info-bg);
+}
+
+.label-warning {
+  @include label-variant($label-warning-bg);
+}
+
+.label-danger {
+  @include label-variant($label-danger-bg);
+}
+
+// _modals.scss
+
+.modal-header {
+  display: block;
+}
+
+// _navs.scss
+
+.nav {
+  flex-direction: column;
+
+  > li {
+    position: relative;
+  }
+
+  > li > a {
+    display: block;
+    padding: $nav-link-padding-y $nav-link-padding-x;
+
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  .disabled > a {
+    color: $nav-disabled-link-color;
+  }
+}
+
+.nav-justified {
+  flex-direction: row;
+
+  > li {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.nav-stacked {
+  @extend .flex-column;
+}
+
+.nav.nav-pills {
+  flex-direction: row;
+}
+
+.nav-pills > li > a {
+  @include border-radius($nav-pills-border-radius);
+}
+
+.nav-pills > li.active > a {
+  background-color: $nav-pills-active-link-hover-bg;
+  color: $nav-pills-active-link-hover-color;
+}
+
+// _management-bar.scss
+
+.management-bar-nav {
+  display: block;
+
+  > li {
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  .dropdown-menu {
+    @include media-breakpoint-down(sm) {
+      background-color: transparent;
+      border-width: 0;
+      box-shadow: none;
+      max-width: none;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+// _navbars.scss
+
+.navbar-toggle {
+  background-color: transparent;
+  background-image: none;
+  border-radius: $border-radius-base;
+  border: 1px solid transparent;
+  float: right;
+  margin-bottom: (($navbar-height - 34px) / 2);
+  margin-right: $navbar-padding-horizontal;
+  margin-top: (($navbar-height - 34px) / 2);
+  padding: 9px 10px;
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+  }
+  .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+}
+
+#navigation.site-navigation, // liferay portal specific
+.bs3-navbar,
+.navbar-default,
+.navbar-inverse {
+  border: 1px solid transparent;
+
+  @include clearfix;
+
+  display: block;
+  margin-bottom: $navbar-margin-bottom;
+  min-height: $navbar-height;
+  padding: 0;
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    border-radius: $navbar-border-radius;
+  }
+
+  .navbar-collapse {
+    flex-basis: auto;
+    padding-right: $navbar-padding-horizontal;
+    padding-left: $navbar-padding-horizontal;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  .navbar-nav {
+    display: block;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    > li {
+      @include media-breakpoint-up(md) {
+        float: left;
+      }
+    }
+  }
+
+  .navbar-brand {
+    float: left;
+    font-size: $font-size-large;
+    padding-left: $navbar-padding-horizontal;
+    padding-right: $navbar-padding-horizontal;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: $navbar-padding-vertical;
+      padding-top: $navbar-padding-vertical;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    > img {
+      display: block;
+    }
+  }
+
+  .navbar-form {
+    margin-left: -$navbar-padding-horizontal;
+    margin-right: -$navbar-padding-horizontal;
+
+    .form-group {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 5px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.navbar-default {
+  background-color: $navbar-default-bg;
+  border-color: $navbar-default-border;
+}
+
+.navbar-inverse {
+  background-color: $navbar-inverse-bg;
+  border-color: $navbar-inverse-border;
+}
+
+.navbar-form {
+  .form-group {
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+  }
+}
+
+.navbar-header {
+  @include clearfix;
+
+  @include media-breakpoint-up(md) {
+    float: left;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .navbar-left {
+    float: left !important;
+  }
+
+  .navbar-right {
+    float: right !important;
+
+    ~ .navbar-right {
+      margin-right: 0;
+    }
+  }
+}
+
+// _nav-tabs.scss
+
+.nav-tabs {
+  flex-direction: row;
+}
+
+.nav-tabs > li {
+  margin-bottom: -$nav-tabs-border-width;
+
+  > a {
+    border: $nav-tabs-border-width solid transparent;
+
+    @include border-top-radius($border-radius);
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+    }
+  }
+}
+
+.nav-tabs > li > a.active,
+.nav-tabs > .active > a {
+  background-color: $nav-tabs-active-link-bg;
+  border-color: $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color $nav-tabs-active-link-bg;
+  color: $nav-tabs-active-link-hover-color;
+
+  @include hover-focus {
+    border-color: $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color $nav-tabs-active-link-bg;
+  }
+}
+
+// _pager.scss
+// Removed in Bootstrap 4
+
+.pager {
+  padding-left: 0;
+  margin: $line-height-computed 0;
+  list-style: none;
+  text-align: center;
+  @include clearfix;
+  li {
+    display: inline;
+    > a,
+    > span {
+      display: inline-block;
+      padding: 5px 14px;
+      background-color: $pager-bg;
+      border: 1px solid $pager-border;
+      border-radius: $pager-border-radius;
+    }
+
+    > a:hover,
+    > a:focus {
+      text-decoration: none;
+      background-color: $pager-hover-bg;
+    }
+  }
+
+  .next {
+    > a,
+    > span {
+      float: right;
+    }
+  }
+
+  .previous {
+    > a,
+    > span {
+      float: left;
+    }
+  }
+
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      color: $pager-disabled-color;
+      background-color: $pager-bg;
+      cursor: $cursor-disabled;
+    }
+  }
+}
+
+// _pagination.scss
+
+.pagination > li {
+  display: inline; // Remove list-style and block-level defaults
+
+  &:first-child > a {
+    margin-left: 0;
+    @include border-left-radius($border-radius);
+  }
+
+  &:last-child > a {
+    @include border-right-radius($border-radius);
+  }
+
+  &.active > a {
+    @include plain-hover-focus {
+      z-index: 2;
+      color: $pagination-active-color;
+      cursor: default;
+      background-color: $pagination-active-bg;
+      border-color: $pagination-active-border;
+    }
+  }
+
+  &.disabled > a {
+    @include plain-hover-focus {
+      color: $pagination-disabled-color;
+      pointer-events: none;
+      cursor: $cursor-disabled;
+      background-color: $pagination-disabled-bg;
+      border-color: $pagination-disabled-border;
+    }
+  }
+}
+
+.pagination > li > a {
+  position: relative;
+  float: left; // Collapse white-space
+  padding: $pagination-padding-y $pagination-padding-x;
+  margin-left: -1px;
+  line-height: $pagination-line-height;
+  color: $pagination-color;
+  background-color: $pagination-bg;
+  border: $pagination-border-width solid $pagination-border-color;
+
+  @include hover-focus {
+    color: $pagination-hover-color;
+    text-decoration: none;
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border;
+  }
+}
+
+// _panels.scss
+// Removed in Bootstrap 4
+
+// Base class
+.panel {
+  margin-bottom: $line-height-computed;
+  background-color: $panel-bg;
+  border: 1px solid transparent;
+  border-radius: $panel-border-radius;
+  @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+}
+
+// Panel contents
+.panel-body {
+  padding: $panel-body-padding;
+
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+  }
+}
+
+// Optional heading
+.panel-heading {
+  padding: $panel-heading-padding;
+  border-bottom: 1px solid transparent;
+  @include border-top-radius(($panel-border-radius - 1));
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: ceil(($font-size-base * 1.125));
+  color: inherit;
+
+  > a,
+  > small,
+  > .small,
+  > small > a,
+  > .small > a {
+    color: inherit;
+  }
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+  padding: $panel-footer-padding;
+  background-color: $panel-footer-bg;
+  border-top: 1px solid $panel-inner-border;
+  @include border-bottom-radius(($panel-border-radius - 1));
+}
+
+
+// List groups in panels
+//
+// By default, space out list group content from panel headings to account for
+// any kind of custom content between the two.
+
+.panel {
+  > .list-group,
+  > .panel-collapse > .list-group {
+    margin-bottom: 0;
+
+    .list-group-item {
+      border-width: 1px 0;
+      border-radius: 0;
+    }
+
+    // Add border top radius for first one
+    &:first-child {
+      .list-group-item:first-child {
+        border-top: 0;
+        @include border-top-radius(($panel-border-radius - 1));
+      }
+    }
+
+    // Add border bottom radius for last one
+    &:last-child {
+      .list-group-item:last-child {
+        border-bottom: 0;
+        @include border-bottom-radius(($panel-border-radius - 1));
+      }
+    }
+  }
+  > .panel-heading + .panel-collapse > .list-group {
+    .list-group-item:first-child {
+      @include border-top-radius(0);
+    }
+  }
+}
+// Collapse space between when there's no additional content.
+.panel-heading + .list-group {
+  .list-group-item:first-child {
+    border-top-width: 0;
+  }
+}
+.list-group + .panel-footer {
+  border-top-width: 0;
+}
+
+// Tables in panels
+//
+// Place a non-bordered `.table` within a panel (not within a `.panel-body`) and
+// watch it go full width.
+
+.panel {
+  > .table,
+  > .table-responsive > .table,
+  > .panel-collapse > .table {
+    margin-bottom: 0;
+
+    caption {
+      padding-left: $panel-body-padding;
+      padding-right: $panel-body-padding;
+    }
+  }
+  // Add border top radius for first one
+  > .table:first-child,
+  > .table-responsive:first-child > .table:first-child {
+    @include border-top-radius(($panel-border-radius - 1));
+
+    > thead:first-child,
+    > tbody:first-child {
+      > tr:first-child {
+        border-top-left-radius: ($panel-border-radius - 1);
+        border-top-right-radius: ($panel-border-radius - 1);
+
+        td:first-child,
+        th:first-child {
+          border-top-left-radius: ($panel-border-radius - 1);
+        }
+        td:last-child,
+        th:last-child {
+          border-top-right-radius: ($panel-border-radius - 1);
+        }
+      }
+    }
+  }
+  // Add border bottom radius for last one
+  > .table:last-child,
+  > .table-responsive:last-child > .table:last-child {
+    @include border-bottom-radius(($panel-border-radius - 1));
+
+    > tbody:last-child,
+    > tfoot:last-child {
+      > tr:last-child {
+        border-bottom-left-radius: ($panel-border-radius - 1);
+        border-bottom-right-radius: ($panel-border-radius - 1);
+
+        td:first-child,
+        th:first-child {
+          border-bottom-left-radius: ($panel-border-radius - 1);
+        }
+        td:last-child,
+        th:last-child {
+          border-bottom-right-radius: ($panel-border-radius - 1);
+        }
+      }
+    }
+  }
+  > .panel-body + .table,
+  > .panel-body + .table-responsive,
+  > .table + .panel-body,
+  > .table-responsive + .panel-body {
+    border-top: 1px solid $table-border-color;
+  }
+  > .table > tbody:first-child > tr:first-child th,
+  > .table > tbody:first-child > tr:first-child td {
+    border-top: 0;
+  }
+  > .table-bordered,
+  > .table-responsive > .table-bordered {
+    border: 0;
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th:first-child,
+        > td:first-child {
+          border-left: 0;
+        }
+        > th:last-child,
+        > td:last-child {
+          border-right: 0;
+        }
+      }
+    }
+    > thead,
+    > tbody {
+      > tr:first-child {
+        > td,
+        > th {
+          border-bottom: 0;
+        }
+      }
+    }
+    > tbody,
+    > tfoot {
+      > tr:last-child {
+        > td,
+        > th {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+  > .table-responsive {
+    border: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+// Collapsable panels (aka, accordion)
+//
+// Wrap a series of panels in `.panel-group` to turn them into an accordion with
+// the help of our collapse JavaScript plugin.
+
+.panel-group {
+  margin-bottom: $line-height-computed;
+
+  // Tighten up margin so it's only between panels
+  .panel {
+    margin-bottom: 0;
+    border-radius: $panel-border-radius;
+
+    + .panel {
+      margin-top: 5px;
+    }
+  }
+
+  .panel-heading {
+    border-bottom: 0;
+
+    + .panel-collapse > .panel-body,
+    + .panel-collapse > .list-group {
+      border-top: 1px solid $panel-inner-border;
+    }
+  }
+
+  .panel-footer {
+    border-top: 0;
+    + .panel-collapse .panel-body {
+      border-bottom: 1px solid $panel-inner-border;
+    }
+  }
+}
+
+.panel-default {
+  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+}
+.panel-primary {
+  @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
+}
+.panel-success {
+  @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
+}
+.panel-info {
+  @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
+}
+.panel-warning {
+  @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
+}
+.panel-danger {
+  @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
+}
+
+// _progress-bars.scss
+
+.progress-bar.active {
+  @extend .progress-bar-animated;
+}
+
+.progress-bar {
+  .progress-xs & {
+    height: $progress-bar-xs-height;
+  }
+
+  .progress-lg & {
+    height: $progress-bar-lg-height;
+  }
+
+  .progress-xl & {
+    height: $progress-bar-xl-height;
+  }
+}
+
+.progress-bar-danger {
+  background-color: $brand-danger;
+}
+
+.progress-bar-info {
+  background-color: $brand-info;
+}
+
+.progress-bar-success {
+  background-color: $brand-success;
+}
+
+.progress-bar-warning {
+  background-color: $brand-warning;
+}
+
+// _responsive-utilities.scss
+
+@include responsive-invisibility('.visible-xs');
+@include responsive-invisibility('.visible-sm');
+@include responsive-invisibility('.visible-md');
+@include responsive-invisibility('.visible-lg');
+
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+  display: none !important;
+}
+@media (max-width: $screen-xs-max) {
+  @include responsive-visibility('.visible-xs');
+}
+.visible-xs-block {
+  @media (max-width: $screen-xs-max) {
+    display: block !important;
+  }
+}
+.visible-xs-inline {
+  @media (max-width: $screen-xs-max) {
+    display: inline !important;
+  }
+}
+.visible-xs-inline-block {
+  @media (max-width: $screen-xs-max) {
+    display: inline-block !important;
+  }
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  @include responsive-visibility('.visible-sm');
+}
+
+.visible-sm-block {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    display: block !important;
+  }
+}
+.visible-sm-inline {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    display: inline !important;
+  }
+}
+.visible-sm-inline-block {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    display: inline-block !important;
+  }
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  @include responsive-visibility('.visible-md');
+}
+.visible-md-block {
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    display: block !important;
+  }
+}
+.visible-md-inline {
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    display: inline !important;
+  }
+}
+.visible-md-inline-block {
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    display: inline-block !important;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  @include responsive-visibility('.visible-lg');
+}
+.visible-lg-block {
+  @media (min-width: $screen-lg-min) {
+    display: block !important;
+  }
+}
+.visible-lg-inline {
+  @media (min-width: $screen-lg-min) {
+    display: inline !important;
+  }
+}
+.visible-lg-inline-block {
+  @media (min-width: $screen-lg-min) {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  @include responsive-invisibility('.hidden-xs');
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  @include responsive-invisibility('.hidden-sm');
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  @include responsive-invisibility('.hidden-md');
+}
+
+@media (min-width: $screen-lg-min) {
+  @include responsive-invisibility('.hidden-lg');
+}
+
+// _tables.scss
+
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr {
+  &.active > th,
+  &.active > td,
+  th.active,
+  td.active {
+   background-color: $table-bg-active;
+  }
+
+  &.success > th,
+  &.success > td,
+  th.success,
+  td.success {
+   background-color: $state-success-bg;
+  }
+
+  &.info > th,
+  &.info > td,
+  th.info,
+  td.info {
+   background-color: $state-info-bg;
+  }
+
+  &.warning > th,
+  &.warning > td,
+  th.warning,
+  td.warning {
+   background-color: $state-warning-bg;
+  }
+
+  &.danger > th,
+  &.danger > td,
+  th.danger,
+  td.danger {
+   background-color: $state-danger-bg;
+  }
+}
+
+// _user-icons.scss
+
+.user-icon img {
+  vertical-align: baseline;
+}
+
+// _utilities.scss
+
+.hide {
+  @extend .d-none;
+}
+
+.pull-left {
+  @extend .float-left;
+}
+
+.pull-right {
+  @extend .float-right;
+}
+
+// _liferay.scss
+
+#navigationCollapse {
+  padding-right: $navbar-padding-horizontal;
+  padding-left: $navbar-padding-horizontal;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+#banner .row:first-child {
+  display: block;
+}
+
+.product-menu .panel-group .panel-heading + .panel-collapse.show {
+  border-bottom: 2px solid #65B6F0;
+}
