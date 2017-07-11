@@ -117,14 +117,6 @@
 			}
 		}
 
-		// &.open .basic-search-close {
-		// 	display: none;
-
-		// 	@include scale-component {
-		// 		display: inline-block;
-		// 	}
-		// }
-
 		&.basic-search-transition .input-group-btn .btn:first-child,
 		&.open .input-group-btn .btn:first-child {
 			@include media-breakpoint-down($scaling-breakpoint) {
@@ -256,28 +248,6 @@
 			background-color: $input-focus-border-color;
 			height: $navbar-active-border-bottom-width;
 			margin-top: -$navbar-active-border-bottom-width;
-
-			// @include media-breakpoint-up(md) {
-			// 	height: $navbar-active-border-bottom-width;
-			// 	margin-top: -$navbar-active-border-bottom-width;
-			// }
-		}
-
-		&.open {
-			&:after {
-				// height: $navbar-active-border-bottom-width;
-				// margin-top: -$navbar-active-border-bottom-width;
-
-				// @include media-breakpoint-up(md) {
-				// 	background-color: transparent;
-				// }
-			}
-
-			// &.focus:after {
-			// 	@include media-breakpoint-up(md) {
-			// 		background-color: $input-focus-border-color;
-			// 	}
-			// }
 		}
 
 		.btn {
@@ -744,7 +714,7 @@
 					&.active:after {
 						// Will need to be revisted if https://github.com/twbs/bootstrap/pull/22926 is merged
 						border-width: 0; // Undo BS4 .dropdown-toggle caret styles
-						margin-left: 0;	 // Undo BS4 .dropdown-toggle caret styles
+						margin-left: 0; // Undo BS4 .dropdown-toggle caret styles
 
 						background-color: $navbar-active-highlight;
 						bottom: -$navbar-border-bottom-width - $navbar-padding-y;
@@ -800,10 +770,8 @@
 
 				.navbar-nav .nav-link,
 				.navbar-nav .navbar-text {
-					// @if not ($navbar-link-padding-y-desktop == $nav-link-padding-y) {
-						padding-bottom: $navbar-link-padding-y;
-						padding-top: $navbar-link-padding-y;
-					// }
+					padding-bottom: $navbar-link-padding-y;
+					padding-top: $navbar-link-padding-y;
 
 					@if not ($navbar-link-padding-x == 0.5rem) {
 						padding-left: $navbar-link-padding-x;
