@@ -1,8 +1,5 @@
-$enable-mobile-desktop-sizes: true !default; // Deprecated use $enable-scaling-components
-$mobile-desktop-breakpoint: md !default; // Deprecated use $scaling-breakpoint
-
-$enable-scaling-components: true !default;
-$scaling-breakpoint: sm !default;
+$enable-scaling-components: false !default;
+$scaling-breakpoint-down: sm !default;
 
 $container-fluid-max-widths: (
 	sm: 540px,
