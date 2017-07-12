@@ -41,14 +41,14 @@
   @extend .btn-secondary;
 }
 
-.btn-default {
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
-}
+// .btn-default {
+//   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+// }
 
 // Removed .btn-xs in BS4
-.btn-xs {
-	@include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
-}
+// .btn-xs {
+// 	@include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+// }
 
 // _button-groups.scss
 
@@ -80,14 +80,14 @@
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top:   $caret-width-base dashed;
-  border-top:   $caret-width-base solid \9; // IE8
-  border-right: $caret-width-base solid transparent;
-  border-left:  $caret-width-base solid transparent;
+  border-top:   $caret-width dashed;
+  border-top:   $caret-width solid \9; // IE8
+  border-right: $caret-width solid transparent;
+  border-left:  $caret-width solid transparent;
 }
 
 .dropdown-menu {
-  border: 1px solid $dropdown-border;
+  border: 1px solid $dropdown-border-color;
 }
 
 // Moved .dropdown-menu > li > a to .dropdown-item in BS4
@@ -146,7 +146,7 @@ label {
 }
 
 .form-control {
-  border-color: $input-border;
+  border-color: $input-border-color;
 }
 
 @if (variable-exists(atlas-theme)) {
@@ -181,7 +181,7 @@ fieldset {
   display: block; // account for any element using help-block
   margin-top: 5px;
   margin-bottom: 10px;
-  color: lighten($text-color, 25%); // lighten the text some for contrast
+  color: lighten($body-color, 25%); // lighten the text some for contrast
 }
 
 .has-error {
@@ -195,13 +195,13 @@ fieldset {
   .form-control {
     + .form-control-feedback {
       position: absolute;
-      top: ($line-height-computed + 5); // Height of the `label` and its margin
+      top: ($line-height-base + 5); // Height of the `label` and its margin
       right: 0;
       z-index: 2; // Ensure icon is above input groups
       display: block;
-      width: $input-height-base;
-      height: $input-height-base;
-      line-height: $input-height-base;
+      width: $input-height;
+      height: $input-height;
+      line-height: $input-height;
       text-align: center;
       pointer-events: none;
       margin-top: 0;
@@ -239,9 +239,9 @@ fieldset {
 div.collapse-basic-search .basic-search .form-control {
   padding-left: 57px;
 
-  @media (min-width: $grid-float-breakpoint) {
-    padding-left: 5px;
-  }
+  // @media (min-width: $grid-float-breakpoint) {
+  //   padding-left: 5px;
+  // }
 }
 
 // _grid.scss
@@ -299,68 +299,68 @@ div.collapse-basic-search .basic-search .form-control {
 // _labels.scss
 // Removed in Bootstrap 4
 
-.label {
-  display: inline;
-  padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  color: $label-color;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
+// .label {
+//   display: inline;
+//   padding: .2em .6em .3em;
+//   font-size: 75%;
+//   font-weight: bold;
+//   line-height: 1;
+//   //color: $label-color;
+//   text-align: center;
+//   white-space: nowrap;
+//   vertical-align: baseline;
+//   border-radius: .25em;
 
-  // [converter] extracted a& to a.label
+//   // [converter] extracted a& to a.label
 
-  // Empty labels collapse automatically (not available in IE8)
-  &:empty {
-    display: none;
-  }
+//   // Empty labels collapse automatically (not available in IE8)
+//   &:empty {
+//     display: none;
+//   }
 
-  // Quick fix for labels in buttons
-  .btn & {
-    position: relative;
-    top: -1px;
-  }
-}
+//   // Quick fix for labels in buttons
+//   .btn & {
+//     position: relative;
+//     top: -1px;
+//   }
+// }
 
-// Add hover effects, but only for links
-a.label {
-  &:hover,
-  &:focus {
-    color: $label-link-hover-color;
-    text-decoration: none;
-    cursor: pointer;
-  }
-}
+// // Add hover effects, but only for links
+// a.label {
+//   &:hover,
+//   &:focus {
+//     //color: $label-link-hover-color;
+//     text-decoration: none;
+//     cursor: pointer;
+//   }
+// }
 
-// Colors
+// // Colors
 // Contextual variations (linked labels get darker on :hover)
 
-.label-default {
-  @include label-variant($label-default-bg);
-}
+// .label-default {
+//   @include label-variant(map-get($grays, 200));
+// }
 
-.label-primary {
-  @include label-variant($label-primary-bg);
-}
+// .label-primary {
+//   @include label-variant(map-get($theme-colors, primary));
+// }
 
-.label-success {
-  @include label-variant($label-success-bg);
-}
+// .label-success {
+//   @include label-variant(map-get($theme-colors, success));
+// }
 
-.label-info {
-  @include label-variant($label-info-bg);
-}
+// .label-info {
+//   @include label-variant(map-get($theme-colors, info));
+// }
 
-.label-warning {
-  @include label-variant($label-warning-bg);
-}
+// .label-warning {
+//   @include label-variant(map-get($theme-colors, warning));
+// }
 
-.label-danger {
-  @include label-variant($label-danger-bg);
-}
+// .label-danger {
+//   @include label-variant(map-get($theme-colors, danger));
+// }
 
 // _modals.scss
 
@@ -387,7 +387,7 @@ a.label {
   }
 
   .disabled > a {
-    color: $nav-disabled-link-color;
+    color: $nav-link-disabled-color;
   }
 }
 
@@ -413,8 +413,8 @@ a.label {
 }
 
 .nav-pills > li.active > a {
-  background-color: $nav-pills-active-link-hover-bg;
-  color: $nav-pills-active-link-hover-color;
+  background-color: $nav-pills-link-active-bg;
+  color: $nav-pills-link-active-color;
 }
 
 // _management-bar.scss
@@ -445,12 +445,14 @@ a.label {
 .navbar-toggle {
   background-color: transparent;
   background-image: none;
-  border-radius: $border-radius-base;
+  border-radius: $border-radius;
   border: 1px solid transparent;
   float: right;
-  margin-bottom: (($navbar-height - 34px) / 2);
-  margin-right: $navbar-padding-horizontal;
-  margin-top: (($navbar-height - 34px) / 2);
+  // TODO: can't mix rem and px
+  //margin-bottom: (($navbar-height - 34px) / 2);
+  margin-right: $navbar-padding-x;
+  // TODO: can't mix rem and px
+  //margin-top: (($navbar-height - 34px) / 2);
   padding: 9px 10px;
   position: relative;
 
@@ -482,19 +484,19 @@ a.label {
   @include clearfix;
 
   display: block;
-  margin-bottom: $navbar-margin-bottom;
-  min-height: $navbar-height;
+  // margin-bottom: $navbar-margin-bottom;
+  // min-height: $navbar-height;
   padding: 0;
   position: relative;
 
   @include media-breakpoint-up(md) {
-    border-radius: $navbar-border-radius;
+    //border-radius: $navbar-border-radius;
   }
 
   .navbar-collapse {
     flex-basis: auto;
-    padding-right: $navbar-padding-horizontal;
-    padding-left: $navbar-padding-horizontal;
+    padding-right: $navbar-padding-x;
+    padding-left: $navbar-padding-x;
 
     @include media-breakpoint-up(md) {
       display: block;
@@ -515,13 +517,13 @@ a.label {
 
   .navbar-brand {
     float: left;
-    font-size: $font-size-large;
-    padding-left: $navbar-padding-horizontal;
-    padding-right: $navbar-padding-horizontal;
+    font-size: $font-size-lg;
+    padding-left: $navbar-padding-x;
+    padding-right: $navbar-padding-x;
 
     @include media-breakpoint-down(sm) {
-      padding-bottom: $navbar-padding-vertical;
-      padding-top: $navbar-padding-vertical;
+      padding-bottom: $navbar-padding-y;
+      padding-top: $navbar-padding-y;
     }
 
     &:hover,
@@ -535,8 +537,8 @@ a.label {
   }
 
   .navbar-form {
-    margin-left: -$navbar-padding-horizontal;
-    margin-right: -$navbar-padding-horizontal;
+    margin-left: -$navbar-padding-x;
+    margin-right: -$navbar-padding-x;
 
     .form-group {
       @include media-breakpoint-down(sm) {
@@ -551,13 +553,13 @@ a.label {
 }
 
 .navbar-default {
-  background-color: $navbar-default-bg;
-  border-color: $navbar-default-border;
+  // background-color: $navbar-default-bg;
+  // border-color: $navbar-default-border;
 }
 
 .navbar-inverse {
-  background-color: $navbar-inverse-bg;
-  border-color: $navbar-inverse-border;
+  // background-color: $navbar-inverse-bg;
+  // border-color: $navbar-inverse-border;
 }
 
 .navbar-form {
@@ -614,12 +616,12 @@ a.label {
 
 .nav-tabs > li > a.active,
 .nav-tabs > .active > a {
-  background-color: $nav-tabs-active-link-bg;
-  border-color: $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color $nav-tabs-active-link-bg;
-  color: $nav-tabs-active-link-hover-color;
+  background-color: $nav-tabs-link-active-bg;
+  border-color: $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color $nav-tabs-link-active-bg;
+  color: $nav-tabs-link-active-color;
 
   @include hover-focus {
-    border-color: $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color $nav-tabs-active-link-bg;
+    border-color: $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color $nav-tabs-link-active-bg;
   }
 }
 
@@ -628,7 +630,7 @@ a.label {
 
 .pager {
   padding-left: 0;
-  margin: $line-height-computed 0;
+  margin: $line-height-base 0;
   list-style: none;
   text-align: center;
   @include clearfix;
@@ -671,7 +673,7 @@ a.label {
     > span {
       color: $pager-disabled-color;
       background-color: $pager-bg;
-      cursor: $cursor-disabled;
+      cursor: not-allowed;
     }
   }
 }
@@ -696,7 +698,7 @@ a.label {
       color: $pagination-active-color;
       cursor: default;
       background-color: $pagination-active-bg;
-      border-color: $pagination-active-border;
+      border-color: $pagination-active-border-color;
     }
   }
 
@@ -704,9 +706,9 @@ a.label {
     @include plain-hover-focus {
       color: $pagination-disabled-color;
       pointer-events: none;
-      cursor: $cursor-disabled;
+      cursor: not-allowed;
       background-color: $pagination-disabled-bg;
-      border-color: $pagination-disabled-border;
+      border-color: $pagination-disabled-border-color;
     }
   }
 }
@@ -725,282 +727,282 @@ a.label {
     color: $pagination-hover-color;
     text-decoration: none;
     background-color: $pagination-hover-bg;
-    border-color: $pagination-hover-border;
+    border-color: $pagination-hover-border-color;
   }
 }
 
-// _panels.scss
-// Removed in Bootstrap 4
+// // _panels.scss
+// // Removed in Bootstrap 4
 
-// Base class
-.panel {
-  margin-bottom: $line-height-computed;
-  background-color: $panel-bg;
-  border: 1px solid transparent;
-  border-radius: $panel-border-radius;
-  @include box-shadow(0 1px 1px rgba(0,0,0,.05));
-}
+// // Base class
+// .panel {
+//   margin-bottom: $line-height-base;
+//   background-color: $panel-bg;
+//   border: 1px solid transparent;
+//   border-radius: $panel-border-radius;
+//   @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+// }
 
-// Panel contents
-.panel-body {
-  padding: $panel-body-padding;
+// // Panel contents
+// .panel-body {
+//   padding: $panel-body-padding-x;
 
-  &:after,
-  &:before {
-    content: '';
-    display: table;
-  }
-}
+//   &:after,
+//   &:before {
+//     content: '';
+//     display: table;
+//   }
+// }
 
-// Optional heading
-.panel-heading {
-  padding: $panel-heading-padding;
-  border-bottom: 1px solid transparent;
-  @include border-top-radius(($panel-border-radius - 1));
+// // Optional heading
+// .panel-heading {
+//   padding: $panel-header-padding-x;
+//   border-bottom: 1px solid transparent;
+//   @include border-top-radius(($panel-border-radius - 1));
 
-  > .dropdown .dropdown-toggle {
-    color: inherit;
-  }
-}
+//   > .dropdown .dropdown-toggle {
+//     color: inherit;
+//   }
+// }
 
-// Within heading, strip any `h*` tag of its default margins for spacing.
-.panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: ceil(($font-size-base * 1.125));
-  color: inherit;
+// // Within heading, strip any `h*` tag of its default margins for spacing.
+// .panel-title {
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   font-size: ceil(($font-size-base * 1.125));
+//   color: inherit;
 
-  > a,
-  > small,
-  > .small,
-  > small > a,
-  > .small > a {
-    color: inherit;
-  }
-}
+//   > a,
+//   > small,
+//   > .small,
+//   > small > a,
+//   > .small > a {
+//     color: inherit;
+//   }
+// }
 
-// Optional footer (stays gray in every modifier class)
-.panel-footer {
-  padding: $panel-footer-padding;
-  background-color: $panel-footer-bg;
-  border-top: 1px solid $panel-inner-border;
-  @include border-bottom-radius(($panel-border-radius - 1));
-}
-
-
-// List groups in panels
-//
-// By default, space out list group content from panel headings to account for
-// any kind of custom content between the two.
-
-.panel {
-  > .list-group,
-  > .panel-collapse > .list-group {
-    margin-bottom: 0;
-
-    .list-group-item {
-      border-width: 1px 0;
-      border-radius: 0;
-    }
-
-    // Add border top radius for first one
-    &:first-child {
-      .list-group-item:first-child {
-        border-top: 0;
-        @include border-top-radius(($panel-border-radius - 1));
-      }
-    }
-
-    // Add border bottom radius for last one
-    &:last-child {
-      .list-group-item:last-child {
-        border-bottom: 0;
-        @include border-bottom-radius(($panel-border-radius - 1));
-      }
-    }
-  }
-  > .panel-heading + .panel-collapse > .list-group {
-    .list-group-item:first-child {
-      @include border-top-radius(0);
-    }
-  }
-}
-// Collapse space between when there's no additional content.
-.panel-heading + .list-group {
-  .list-group-item:first-child {
-    border-top-width: 0;
-  }
-}
-.list-group + .panel-footer {
-  border-top-width: 0;
-}
-
-// Tables in panels
-//
-// Place a non-bordered `.table` within a panel (not within a `.panel-body`) and
-// watch it go full width.
-
-.panel {
-  > .table,
-  > .table-responsive > .table,
-  > .panel-collapse > .table {
-    margin-bottom: 0;
-
-    caption {
-      padding-left: $panel-body-padding;
-      padding-right: $panel-body-padding;
-    }
-  }
-  // Add border top radius for first one
-  > .table:first-child,
-  > .table-responsive:first-child > .table:first-child {
-    @include border-top-radius(($panel-border-radius - 1));
-
-    > thead:first-child,
-    > tbody:first-child {
-      > tr:first-child {
-        border-top-left-radius: ($panel-border-radius - 1);
-        border-top-right-radius: ($panel-border-radius - 1);
-
-        td:first-child,
-        th:first-child {
-          border-top-left-radius: ($panel-border-radius - 1);
-        }
-        td:last-child,
-        th:last-child {
-          border-top-right-radius: ($panel-border-radius - 1);
-        }
-      }
-    }
-  }
-  // Add border bottom radius for last one
-  > .table:last-child,
-  > .table-responsive:last-child > .table:last-child {
-    @include border-bottom-radius(($panel-border-radius - 1));
-
-    > tbody:last-child,
-    > tfoot:last-child {
-      > tr:last-child {
-        border-bottom-left-radius: ($panel-border-radius - 1);
-        border-bottom-right-radius: ($panel-border-radius - 1);
-
-        td:first-child,
-        th:first-child {
-          border-bottom-left-radius: ($panel-border-radius - 1);
-        }
-        td:last-child,
-        th:last-child {
-          border-bottom-right-radius: ($panel-border-radius - 1);
-        }
-      }
-    }
-  }
-  > .panel-body + .table,
-  > .panel-body + .table-responsive,
-  > .table + .panel-body,
-  > .table-responsive + .panel-body {
-    border-top: 1px solid $table-border-color;
-  }
-  > .table > tbody:first-child > tr:first-child th,
-  > .table > tbody:first-child > tr:first-child td {
-    border-top: 0;
-  }
-  > .table-bordered,
-  > .table-responsive > .table-bordered {
-    border: 0;
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr {
-        > th:first-child,
-        > td:first-child {
-          border-left: 0;
-        }
-        > th:last-child,
-        > td:last-child {
-          border-right: 0;
-        }
-      }
-    }
-    > thead,
-    > tbody {
-      > tr:first-child {
-        > td,
-        > th {
-          border-bottom: 0;
-        }
-      }
-    }
-    > tbody,
-    > tfoot {
-      > tr:last-child {
-        > td,
-        > th {
-          border-bottom: 0;
-        }
-      }
-    }
-  }
-  > .table-responsive {
-    border: 0;
-    margin-bottom: 0;
-  }
-}
+// // Optional footer (stays gray in every modifier class)
+// .panel-footer {
+//   padding: $panel-footer-padding-x;
+//   background-color: $panel-footer-bg;
+//   border-top: 1px solid $panel-inner-border;
+//   @include border-bottom-radius(($panel-border-radius - 1));
+// }
 
 
-// Collapsable panels (aka, accordion)
-//
-// Wrap a series of panels in `.panel-group` to turn them into an accordion with
-// the help of our collapse JavaScript plugin.
+// // List groups in panels
+// //
+// // By default, space out list group content from panel headings to account for
+// // any kind of custom content between the two.
 
-.panel-group {
-  margin-bottom: $line-height-computed;
+// .panel {
+//   > .list-group,
+//   > .panel-collapse > .list-group {
+//     margin-bottom: 0;
 
-  // Tighten up margin so it's only between panels
-  .panel {
-    margin-bottom: 0;
-    border-radius: $panel-border-radius;
+//     .list-group-item {
+//       border-width: 1px 0;
+//       border-radius: 0;
+//     }
 
-    + .panel {
-      margin-top: 5px;
-    }
-  }
+//     // Add border top radius for first one
+//     &:first-child {
+//       .list-group-item:first-child {
+//         border-top: 0;
+//         @include border-top-radius(($panel-border-radius - 1));
+//       }
+//     }
 
-  .panel-heading {
-    border-bottom: 0;
+//     // Add border bottom radius for last one
+//     &:last-child {
+//       .list-group-item:last-child {
+//         border-bottom: 0;
+//         @include border-bottom-radius(($panel-border-radius - 1));
+//       }
+//     }
+//   }
+//   > .panel-heading + .panel-collapse > .list-group {
+//     .list-group-item:first-child {
+//       @include border-top-radius(0);
+//     }
+//   }
+// }
+// // Collapse space between when there's no additional content.
+// .panel-heading + .list-group {
+//   .list-group-item:first-child {
+//     border-top-width: 0;
+//   }
+// }
+// .list-group + .panel-footer {
+//   border-top-width: 0;
+// }
 
-    + .panel-collapse > .panel-body,
-    + .panel-collapse > .list-group {
-      border-top: 1px solid $panel-inner-border;
-    }
-  }
+// // Tables in panels
+// //
+// // Place a non-bordered `.table` within a panel (not within a `.panel-body`) and
+// // watch it go full width.
 
-  .panel-footer {
-    border-top: 0;
-    + .panel-collapse .panel-body {
-      border-bottom: 1px solid $panel-inner-border;
-    }
-  }
-}
+// .panel {
+//   > .table,
+//   > .table-responsive > .table,
+//   > .panel-collapse > .table {
+//     margin-bottom: 0;
 
-.panel-default {
-  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
-}
-.panel-primary {
-  @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
-}
-.panel-success {
-  @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
-}
-.panel-info {
-  @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
-}
-.panel-warning {
-  @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
-}
-.panel-danger {
-  @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
-}
+//     caption {
+//       padding-left: $panel-body-padding-x;
+//       padding-right: $panel-body-padding-x;
+//     }
+//   }
+//   // Add border top radius for first one
+//   > .table:first-child,
+//   > .table-responsive:first-child > .table:first-child {
+//     @include border-top-radius(($panel-border-radius - 1));
+
+//     > thead:first-child,
+//     > tbody:first-child {
+//       > tr:first-child {
+//         border-top-left-radius: ($panel-border-radius - 1);
+//         border-top-right-radius: ($panel-border-radius - 1);
+
+//         td:first-child,
+//         th:first-child {
+//           border-top-left-radius: ($panel-border-radius - 1);
+//         }
+//         td:last-child,
+//         th:last-child {
+//           border-top-right-radius: ($panel-border-radius - 1);
+//         }
+//       }
+//     }
+//   }
+//   // Add border bottom radius for last one
+//   > .table:last-child,
+//   > .table-responsive:last-child > .table:last-child {
+//     @include border-bottom-radius(($panel-border-radius - 1));
+
+//     > tbody:last-child,
+//     > tfoot:last-child {
+//       > tr:last-child {
+//         border-bottom-left-radius: ($panel-border-radius - 1);
+//         border-bottom-right-radius: ($panel-border-radius - 1);
+
+//         td:first-child,
+//         th:first-child {
+//           border-bottom-left-radius: ($panel-border-radius - 1);
+//         }
+//         td:last-child,
+//         th:last-child {
+//           border-bottom-right-radius: ($panel-border-radius - 1);
+//         }
+//       }
+//     }
+//   }
+//   > .panel-body + .table,
+//   > .panel-body + .table-responsive,
+//   > .table + .panel-body,
+//   > .table-responsive + .panel-body {
+//     border-top: 1px solid $table-border-color;
+//   }
+//   > .table > tbody:first-child > tr:first-child th,
+//   > .table > tbody:first-child > tr:first-child td {
+//     border-top: 0;
+//   }
+//   > .table-bordered,
+//   > .table-responsive > .table-bordered {
+//     border: 0;
+//     > thead,
+//     > tbody,
+//     > tfoot {
+//       > tr {
+//         > th:first-child,
+//         > td:first-child {
+//           border-left: 0;
+//         }
+//         > th:last-child,
+//         > td:last-child {
+//           border-right: 0;
+//         }
+//       }
+//     }
+//     > thead,
+//     > tbody {
+//       > tr:first-child {
+//         > td,
+//         > th {
+//           border-bottom: 0;
+//         }
+//       }
+//     }
+//     > tbody,
+//     > tfoot {
+//       > tr:last-child {
+//         > td,
+//         > th {
+//           border-bottom: 0;
+//         }
+//       }
+//     }
+//   }
+//   > .table-responsive {
+//     border: 0;
+//     margin-bottom: 0;
+//   }
+// }
+
+
+// // Collapsable panels (aka, accordion)
+// //
+// // Wrap a series of panels in `.panel-group` to turn them into an accordion with
+// // the help of our collapse JavaScript plugin.
+
+// .panel-group {
+//   margin-bottom: $line-height-base;
+
+//   // Tighten up margin so it's only between panels
+//   .panel {
+//     margin-bottom: 0;
+//     border-radius: $panel-border-radius;
+
+//     + .panel {
+//       margin-top: 5px;
+//     }
+//   }
+
+//   .panel-heading {
+//     border-bottom: 0;
+
+//     + .panel-collapse > .panel-body,
+//     + .panel-collapse > .list-group {
+//       border-top: 1px solid $panel-inner-border;
+//     }
+//   }
+
+//   .panel-footer {
+//     border-top: 0;
+//     + .panel-collapse .panel-body {
+//       border-bottom: 1px solid $panel-inner-border;
+//     }
+//   }
+// }
+
+// .panel-default {
+//   @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+// }
+// .panel-primary {
+//   @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
+// }
+// .panel-success {
+//   @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
+// }
+// .panel-info {
+//   @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
+// }
+// .panel-warning {
+//   @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
+// }
+// .panel-danger {
+//   @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
+// }
 
 // _progress-bars.scss
 
@@ -1014,7 +1016,7 @@ a.label {
   }
 
   .progress-lg & {
-    height: $progress-bar-lg-height;
+    height: $progress-lg-height;
   }
 
   .progress-xl & {
@@ -1023,19 +1025,19 @@ a.label {
 }
 
 .progress-bar-danger {
-  background-color: $brand-danger;
+  background-color: $progress-bar-danger-bg;
 }
 
 .progress-bar-info {
-  background-color: $brand-info;
+  background-color: $progress-bar-info-bg;
 }
 
 .progress-bar-success {
-  background-color: $brand-success;
+  background-color: $progress-bar-success-bg;
 }
 
 .progress-bar-warning {
-  background-color: $brand-warning;
+  background-color: $progress-bar-warning-bg;
 }
 
 // _responsive-utilities.scss
@@ -1158,35 +1160,35 @@ a.label {
   &.active > td,
   th.active,
   td.active {
-   background-color: $table-bg-active;
+   background-color: $table-active-bg;
   }
 
   &.success > th,
   &.success > td,
   th.success,
   td.success {
-   background-color: $state-success-bg;
+   background-color: map-get($theme-colors, success);
   }
 
   &.info > th,
   &.info > td,
   th.info,
   td.info {
-   background-color: $state-info-bg;
+   background-color: map-get($theme-colors, info);
   }
 
   &.warning > th,
   &.warning > td,
   th.warning,
   td.warning {
-   background-color: $state-warning-bg;
+   background-color: map-get($theme-colors, warning);
   }
 
   &.danger > th,
   &.danger > td,
   th.danger,
   td.danger {
-   background-color: $state-danger-bg;
+   background-color: map-get($theme-colors, danger);
   }
 }
 
@@ -1213,8 +1215,8 @@ a.label {
 // _liferay.scss
 
 #navigationCollapse {
-  padding-right: $navbar-padding-horizontal;
-  padding-left: $navbar-padding-horizontal;
+  padding-right: $navbar-padding-x;
+  padding-left: $navbar-padding-x;
 
   @include media-breakpoint-up(md) {
     display: block;
