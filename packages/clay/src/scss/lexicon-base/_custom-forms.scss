@@ -1,0 +1,16 @@
+.custom-select {
+	// Remove once autoprefixer is applied
+	-webkit-appearance: none;
+}
+
+.form-file {
+	position: relative;
+}
+
+.form-file-input {
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
