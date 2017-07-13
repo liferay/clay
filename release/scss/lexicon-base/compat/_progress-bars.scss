@@ -1,0 +1,40 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.progress-bar.active {
+	@extend .progress-bar-animated;
+}
+
+.progress-bar {
+	.progress-xs & {
+		height: $progress-bar-xs-height;
+	}
+
+	.progress-lg & {
+		height: $progress-lg-height;
+	}
+
+	.progress-xl & {
+		height: $progress-bar-xl-height;
+	}
+}
+
+.progress-bar-danger {
+	background-color: $progress-bar-danger-bg;
+}
+
+.progress-bar-info {
+	background-color: $progress-bar-info-bg;
+}
+
+.progress-bar-success {
+	background-color: $progress-bar-success-bg;
+}
+
+.progress-bar-warning {
+	background-color: $progress-bar-warning-bg;
+}

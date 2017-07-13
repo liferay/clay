@@ -1,0 +1,18 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.hide {
+	@extend .d-none;
+}
+
+.pull-left {
+	@extend .float-left;
+}
+
+.pull-right {
+	@extend .float-right;
+}

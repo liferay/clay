@@ -1,0 +1,18 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.rounded {
+	border-radius: $rounded-border-radius;
+}
+
+.rounded-circle {
+	border-radius: $rounded-circle-border-radius;
+}
+
+.rounded-0 {
+	border-radius: $rounded-0-border-radius;
+}

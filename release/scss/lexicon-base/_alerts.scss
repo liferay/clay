@@ -1,0 +1,78 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.alert {
+	@if ($alert-border-width != 1px) {
+		border-width: $alert-border-width;
+	}
+
+	font-size: $alert-font-size;
+
+	.close {
+		opacity: $alert-close-opacity;
+		padding-bottom: $alert-close-padding-bottom;
+		padding-left: $alert-close-padding-left;
+		padding-right: $alert-close-padding-right;
+		padding-top: $alert-close-padding-top;
+		right: $alert-close-position-right;
+		top: $alert-close-position-top;
+	}
+
+	.lead {
+		font-size: $alert-lead-font-size;
+		font-weight: $alert-lead-font-weight;
+		margin-right: $alert-lead-margin-right;
+	}
+}
+
+.alert-link {
+	text-decoration: $alert-link-decoration;
+
+	@include hover-focus {
+		text-decoration: $alert-link-hover-decoration;
+	}
+}
+
+// Alert Notifications
+
+.alert-notification {
+	width: 100%;
+
+	@include media-breakpoint-up(md) {
+		max-width: $alert-notification-max-width;
+	}
+}
+
+// Alert Variants
+
+@each $color, $value in $alert-palette {
+	.alert-#{$color} {
+		background-color: nth($value, 1);
+		border-color: nth($value, 2);
+		color: nth($value, 3);
+
+		.close {
+			color: nth($value, 4);
+
+			@include hover-focus {
+				color: nth($value, 5);
+			}
+		}
+
+		.alert-link {
+			color: nth($value, 7);
+
+			@include hover-focus {
+				color: nth($value, 8);
+			}
+		}
+
+		.lead {
+			color: nth($value, 6);
+		}
+	}
+}

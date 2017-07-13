@@ -1,0 +1,901 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Navbar Dropdowns
+// TODO: Fix dropdowns in mobile, waiting for BS4 update
+
+// @if (variable-exists(atlas-theme)) {
+// 	.navbar-nav {
+// 		@include media-breakpoint-down(sm) {
+// 			.dropdown-menu {
+// 				max-width: none;
+// 			}
+
+// 			.open .dropdown-menu {
+// 				padding: 0;
+
+// 				> li > a,
+// 				.dropdown-header {
+// 					padding: $navbar-padding-y $navbar-padding-x;
+// 				}
+
+// 				.inline-scroller,
+// 				.linked-list {
+// 					li a {
+// 						padding: $navbar-padding-y $navbar-padding-x;
+
+// 						&:focus,
+// 						&:hover {
+// 							color: $navbar-light-active-color;
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// Basic Search
+
+.basic-search {
+	&.open {
+		z-index: 10;
+	}
+
+	.input-group-input {
+		.basic-search-slider .form-control {
+			border-bottom-right-radius: 0;
+			border-top-right-radius: 0;
+		}
+
+		.form-control {
+			border-bottom-left-radius: $input-border-radius;
+			border-top-left-radius: $input-border-radius;
+		}
+	}
+}
+
+.basic-search-transition {
+	&:after {
+		transition: all 0.1s ease;
+	}
+
+	.basic-search-slider {
+		transition: left 0.5s ease, right 0.5s ease;
+	}
+}
+
+// Collapse Basic Search
+
+.basic-search-slider {
+	left: 101%;
+	position: relative;
+
+	@include media-breakpoint-up(md) {
+		left: 0;
+	}
+
+	.basic-search-close {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+		z-index: $zindex-basic-search-close;
+
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+
+	.basic-search.open & {
+		left: 0;
+	}
+}
+
+.collapse-basic-search {
+	.basic-search {
+		@include media-breakpoint-down(sm) {
+			border-color: transparent;
+
+			@include border-radius($navbar-border-radius);
+
+			border-style: solid;
+			border-width: $navbar-border-top-width $navbar-border-right-width $navbar-border-bottom-width $navbar-border-left-width;
+			left: -$navbar-border-left-width;
+			margin: 0;
+			position: absolute;
+			right: -$navbar-border-right-width;
+			top: -$navbar-border-top-width;
+
+			&.open {
+				background-color: $body-bg;
+			}
+		}
+
+		@include media-breakpoint-up(md) {
+			position: relative;
+		}
+
+		&.basic-search-transition,
+		&.open {
+			.input-group-input {
+				visibility: visible;
+			}
+		}
+
+		&.open .basic-search-close {
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+
+		&.basic-search-transition .input-group-btn .btn:first-child,
+		&.open .input-group-btn .btn:first-child {
+			@include media-breakpoint-down(sm) {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
+
+		.input-group-btn .btn:first-child {
+			@include media-breakpoint-down(sm) {
+				border-bottom-left-radius: $btn-border-radius;
+				border-top-left-radius: $btn-border-radius;
+			}
+		}
+
+		.input-group-input {
+			overflow: hidden;
+			visibility: hidden;
+
+			@include media-breakpoint-up(md) {
+				overflow: visible;
+				visibility: visible;
+			}
+
+			.form-control {
+				@include media-breakpoint-up(md) {
+					left: auto;
+				}
+			}
+		}
+	}
+}
+
+.collapse-basic-search {
+	flex-wrap: wrap;
+
+	&.navbar .basic-search {
+		@include media-breakpoint-down(sm) {
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: $navbar-link-padding-x;
+			padding-right: $navbar-link-padding-x;
+
+			> form {
+				width: 100%;
+			}
+		}
+	}
+
+	.basic-search {
+		@include media-breakpoint-up(md) {
+			max-width: 220px;
+
+			&.navbar-form-autofit {
+				max-width: none;
+			}
+		}
+
+		.input-group {
+			align-items: center;
+			margin-left: auto;
+
+			@include media-breakpoint-down(sm) {
+				height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+			}
+		}
+
+		.input-group-input {
+			flex: 1;
+		}
+	}
+
+	.basic-search-slider {
+		display: flex;
+		flex: 1;
+
+		.form-control {
+			margin-left: -1px;
+		}
+	}
+
+	.navbar-collapse {
+		@include media-breakpoint-up(md) {
+			flex-basis: auto;
+		}
+	}
+
+	.nav-link,
+	.navbar-toggler {
+		z-index: 1;
+	}
+}
+
+.collapse-basic-search-transparent {
+	&.navbar .basic-search {
+		@include media-breakpoint-down(sm) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.basic-search {
+		@include media-breakpoint-up(md) {
+			height: $navbar-height-desktop - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width;
+		}
+
+		&:after {
+			bottom: -$navbar-border-bottom-width;
+			content: '';
+			display: block;
+			height: 0;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			right: 0;
+			z-index: $zindex-basic-search-close;
+
+			@include media-breakpoint-up(md) {
+				bottom: -$navbar-border-bottom-width - $navbar-padding-y;
+			}
+		}
+
+		&.focus:after {
+			background-color: $input-focus-border-color;
+
+			@include media-breakpoint-up(md) {
+				height: $navbar-active-border-bottom-width;
+				margin-top: -$navbar-active-border-bottom-width;
+			}
+		}
+
+		&.open {
+			&:after {
+				height: $navbar-active-border-bottom-width;
+				margin-top: -$navbar-active-border-bottom-width;
+
+				@include media-breakpoint-up(md) {
+					background-color: transparent;
+				}
+			}
+
+			&.focus:after {
+				@include media-breakpoint-up(md) {
+					background-color: $input-focus-border-color;
+				}
+			}
+		}
+
+		.btn {
+			background-color: transparent;
+			border-color: transparent;
+			box-shadow: none;
+			padding-left: 12px;
+			padding-right: 12px;
+
+			&:focus {
+				color: $input-focus-border-color;
+			}
+		}
+
+		.form-control {
+			background-color: transparent;
+			border-color: transparent;
+		}
+	}
+}
+
+// Navbar
+
+.navbar {
+	border-color: transparent;
+
+	@include border-radius($navbar-border-radius);
+
+	border-style: solid;
+	border-width: $navbar-border-width;
+
+	.container {
+		@include media-breakpoint-down(nth(map-keys($grid-breakpoints), 1)) {
+			margin-left: 0;
+			margin-right: 0;
+			width: 100%;
+		}
+	}
+}
+
+.navbar-nav {
+	flex-direction: row;
+
+	.nav-link {
+		padding: $navbar-link-padding-y $navbar-link-padding-x;
+	}
+}
+
+// Navbar Toggler
+
+.navbar-toggler {
+	height: $navbar-toggler-height;
+	margin-bottom: $navbar-toggler-margin-y;
+	margin-left: $navbar-toggler-margin-x;
+	margin-right: $navbar-toggler-margin-x;
+	margin-top: $navbar-toggler-margin-y;
+}
+
+.navbar-toggler-link {
+	align-items: center;
+	display: flex;
+	border-width: 0;
+	height: $navbar-toggler-link-height;
+	font-size: $navbar-toggler-link-font-size;
+	line-height: $navbar-toggler-link-line-height;
+	padding-bottom: $navbar-toggler-link-padding-y;
+	padding-left: $navbar-toggler-link-padding-x;
+	padding-right: $navbar-toggler-link-padding-x;
+	padding-top: $navbar-toggler-link-padding-y;
+	position: relative;
+	z-index: 1;
+
+	&:after {
+		background-color: $navbar-active-highlight;
+		bottom: -$navbar-border-bottom-width - $navbar-padding-y;
+
+		@if not ($navbar-active-highlight == transparent) {
+			content: '';
+		}
+
+		display: block;
+		height: $navbar-active-border-bottom-width;
+		left: $navbar-toggler-link-padding-x;
+		position: absolute;
+		right: $navbar-toggler-link-padding-x;
+		width: auto;
+	}
+
+	.lexicon-icon {
+		margin-right: 3px;
+		margin-top: 0;
+	}
+}
+
+.nav-item .navbar-toggler-link {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: $navbar-link-padding-x;
+	padding-right: $navbar-link-padding-x;
+
+	&:after {
+		left: $navbar-link-padding-x;
+		right: $navbar-link-padding-x;
+	}
+}
+
+.navbar-toggler-text {
+	display: inline-block;
+	max-width: $navbar-toggler-text-max-width;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	+ .lexicon-icon {
+		margin-left: 5px;
+		margin-right: -5px;
+	}
+}
+
+// Navbar Brand
+
+.navbar-brand {
+	padding-left: $navbar-brand-padding-x;
+	padding-right: $navbar-brand-padding-x;
+}
+
+// Navbar Form
+
+.navbar-form {
+	align-items: center;
+	display: flex;
+
+	@if not ($navbar-link-padding-x == 0.5rem) {
+		padding-left: $navbar-link-padding-x;
+		padding-right: $navbar-link-padding-x;
+	}
+}
+
+.navbar-form-autofit {
+	flex-basis: 100px;
+	flex-grow: 1;
+
+	form {
+		display: flex;
+		width: 100%;
+	}
+}
+
+.navbar-nav .nav-item > .form-check {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding-left: $navbar-link-padding-x;
+	padding-right: $navbar-link-padding-x;
+
+	.form-check-input {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	.form-check-label {
+		display: flex;
+		padding-left: 0;
+	}
+}
+
+// Navbar Overlay
+
+.navbar-overlay {
+	background-color: $body-bg;
+}
+
+// Styles for `.navbar-overlay-xs-down`, `.navbar-overlay-sm-down`,
+// `.navbar-overlay-md-down`, `.navbar-overlay-lg-down`, `.navbar-overlay-up`
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$index: index(map-keys($grid-breakpoints), $breakpoint);
+	$length: length(map-keys($grid-breakpoints));
+	$infix: '.navbar-overlay-#{$breakpoint}-down';
+
+	@if ($index == $length) {
+		$infix: '.navbar-overlay-up';
+	}
+
+	#{$infix} {
+		@include media-breakpoint-down($breakpoint) {
+			@include navbar-overlay;
+		}
+	}
+}
+
+// Navbar Display Utilities
+
+.navbar-d-breakpoint-block {
+	display: none !important;
+}
+
+// Navbar Item Spacing
+// Override BS4 `.navbar-expand .navbar-nav .nav-link` should have padding if
+// not inside .navbar-collapse
+
+.navbar-expand .navbar-nav .nav-link,
+.navbar-nav .nav-link {
+	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
+		padding-bottom: $navbar-link-padding-y;
+		padding-top: $navbar-link-padding-y;
+	}
+
+	@if not ($navbar-link-padding-x == 0.5rem) {
+		padding-left: $navbar-link-padding-x;
+		padding-right: $navbar-link-padding-x;
+	}
+
+	white-space: nowrap;
+}
+
+.navbar-nav .navbar-text {
+	padding: $navbar-link-padding-y $navbar-link-padding-x;
+}
+
+.navbar-nav .nav-item {
+	.dropdown-menu {
+		margin-top: $navbar-nav-item-dropdown-margin-top;
+	}
+}
+
+// Navbar Expand
+
+.navbar-expand {
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.container,
+	.container-fluid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.navbar-nav {
+		flex-wrap: wrap;
+	}
+
+	@include media-breakpoint-up(md) {
+		.navbar-d-breakpoint-block {
+			display: block !important;
+		}
+
+		.navbar-d-breakpoint-none {
+			display: none !important;
+		}
+	}
+
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} {
+			.container,
+			.container-fluid {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.nav-item {
+				align-items: center;
+				display: flex;
+			}
+
+			.navbar-nav .nav-btn {
+				margin-left: $navbar-link-padding-x;
+				margin-right: $navbar-link-padding-x;
+			}
+
+			@if not ($infix == '') {
+				@include media-breakpoint-down($breakpoint) {
+					&.navbar-collapse-absolute {
+						.navbar-collapse {
+							background-color: $dropdown-bg;
+							border-color: transparent;
+							border-style: solid;
+							border-width: 0 $navbar-border-right-width $navbar-border-bottom-width $navbar-border-left-width;
+							box-shadow: $navbar-collapse-absolute-box-shadow;
+							left: -$navbar-border-left-width;
+
+							@if ($navbar-border-bottom-width > 0) {
+								margin-top: $navbar-border-bottom-width;
+							}
+
+							@if not ($navbar-padding-x == 0) {
+								padding-left: $navbar-padding-x;
+								padding-right: $navbar-padding-x;
+							}
+
+							position: absolute;
+							right: -$navbar-border-right-width;
+							top: 100%;
+							z-index: $zindex-dropdown;
+						}
+
+						&.navbar-inverse-bg .navbar-collapse {
+							background-color: $navbar-dark-bg;
+							border-color: $navbar-dark-border-color;
+						}
+
+						&.navbar-light-bg .navbar-collapse {
+							background-color: $navbar-light-bg;
+							border-color: $navbar-light-border-color;
+						}
+					}
+
+					.navbar-collapse {
+						.navbar-nav {
+							flex-direction: column;
+						}
+
+						.nav-item {
+							display: block;
+						}
+
+						.nav-link {
+							@if ($navbar-link-padding-x == 0.5rem) {
+								padding-left: 0;
+								padding-right: 0;
+							}
+						}
+					}
+				}
+			}
+
+			@include media-breakpoint-up($next) {
+				@if ($infix == '') {
+					.container,
+					.container-fluid {
+						@include media-breakpoint-up(md) {
+							padding-left: $grid-gutter-width / 2;
+							padding-right: $grid-gutter-width / 2;
+						}
+					}
+				}
+
+				.navbar-form {
+					padding-left: $navbar-link-padding-x;
+					padding-right: $navbar-link-padding-x;
+				}
+
+				@if not ($infix == '') {
+					.container,
+					.container-fluid {
+						flex-wrap: nowrap;
+						padding-left: $grid-gutter-width / 2;
+						padding-right: $grid-gutter-width / 2;
+					}
+
+					.navbar-collapse {
+						flex-grow: 1;
+						flex-wrap: wrap;
+						justify-content: space-between;
+
+						.navbar-nav {
+							flex-wrap: wrap;
+						}
+					}
+
+					.navbar-d-breakpoint-block {
+						display: block !important;
+					}
+
+					.navbar-d-breakpoint-none {
+						display: none !important;
+					}
+				}
+
+				.navbar-nav .nav-link {
+					&.active:after {
+						// Will need to be revisted if https://github.com/twbs/bootstrap/pull/22926 is merged
+						border-width: 0; // Undo BS4 .dropdown-toggle caret styles
+						margin-left: 0;	 // Undo BS4 .dropdown-toggle caret styles
+
+						background-color: $navbar-active-highlight;
+						bottom: -$navbar-border-bottom-width - $navbar-padding-y;
+
+						@if not ($navbar-active-highlight == transparent) {
+							content: '';
+						}
+
+						display: block;
+						height: $navbar-active-border-bottom-width;
+						left: $navbar-link-padding-x-desktop;
+						position: absolute;
+						right: $navbar-link-padding-x-desktop;
+						width: auto;
+					}
+				}
+
+				&.navbar-inverse-bg .navbar-nav .nav-link.active:after {
+					background-color: $navbar-dark-active-highlight;
+
+					@if not ($navbar-dark-active-highlight == transparent) {
+						content: '';
+					}
+				}
+
+				&.navbar-light-bg .navbar-nav .nav-link.active:after {
+					background-color: $navbar-light-active-highlight;
+
+					@if not ($navbar-light-active-highlight == transparent) {
+						content: '';
+					}
+				}
+
+				@if ($enable-mobile-desktop-sizes) {
+					@if ($infix == '') {
+						@include media-breakpoint-up($mobile-desktop-breakpoint) {
+							@include navbar-expand-desktop;
+						}
+					}
+					@else {
+						@include navbar-expand-desktop;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Skin
+
+.navbar-light {
+	&.collapse-basic-search-transparent .basic-search {
+		.btn {
+			color: $collapse-basic-search-transparent-light-btn-color;
+
+			&:focus {
+				color: $collapse-basic-search-transparent-light-btn-focus-color;
+			}
+		}
+
+		.form-control {
+			color: $collapse-basic-search-transparent-light-input-color;
+
+			&::placeholder {
+				color: $collapse-basic-search-transparent-light-input-placeholder-color;
+			}
+
+			&::placeholder:focus {
+				color: $collapse-basic-search-transparent-light-input-placeholder-focus-color;
+			}
+
+			&:focus {
+				color: $collapse-basic-search-transparent-light-input-focus-color;
+			}
+		}
+	}
+
+	.navbar-brand {
+		@if not ($navbar-light-brand-color == $navbar-light-active-color) {
+			color: $navbar-light-brand-color;
+		}
+
+		@include hover-focus {
+			@if not ($navbar-light-brand-hover-color == $navbar-light-active-color) {
+				color: $navbar-light-brand-hover-color;
+			}
+		}
+	}
+
+	.navbar-toggler-link {
+		&[aria-expanded="true"] {
+			color: $navbar-light-active-color;
+		}
+	}
+}
+
+.navbar-light-bg {
+	background-color: $navbar-light-bg;
+	border-color: $navbar-light-border-color;
+
+	&.collapse-basic-search-transparent .basic-search {
+		&.focus:after {
+			background-color: $collapse-basic-search-transparent-light-focus-highlight;
+		}
+	}
+
+	.basic-search.open {
+		background-color: $navbar-light-bg;
+		border-color: $navbar-light-border-color;
+	}
+
+	.navbar-brand {
+		background-color: $navbar-light-brand-bg;
+
+		@include hover-focus {
+			background-color: $navbar-light-brand-hover-bg;
+		}
+	}
+
+	.nav-link {
+		@include hover-focus {
+			background-color: $navbar-light-hover-bg;
+		}
+
+		&.active,
+		&[aria-expanded="true"] {
+			background-color: $navbar-light-active-bg;
+		}
+
+		&.disabled {
+			background-color: $navbar-light-disabled-bg;
+		}
+	}
+
+	.navbar-overlay {
+		background-color: $navbar-light-bg;
+	}
+
+	.navbar-toggler-link:after {
+		background-color: $navbar-light-active-highlight;
+
+		@if not ($navbar-light-active-highlight == transparent) {
+			content: '';
+		}
+	}
+}
+
+.navbar-inverse {
+	&.collapse-basic-search-transparent .basic-search {
+		.btn {
+			color: $collapse-basic-search-transparent-inverse-btn-color;
+
+			&:focus {
+				color: $collapse-basic-search-transparent-inverse-btn-focus-color;
+			}
+		}
+
+		.form-control {
+			color: $collapse-basic-search-transparent-inverse-input-color;
+
+			&::placeholder {
+				color: $collapse-basic-search-transparent-inverse-input-placeholder-color;
+			}
+
+			&:focus::placeholder {
+				color: $collapse-basic-search-transparent-inverse-input-placeholder-focus-color;
+			}
+
+			&:focus {
+				color: $collapse-basic-search-transparent-inverse-input-focus-color;
+			}
+		}
+	}
+
+	.navbar-brand {
+		@if not ($navbar-dark-brand-color == $navbar-dark-active-color) {
+			color: $navbar-dark-brand-color;
+		}
+
+		@include hover-focus {
+			@if not ($navbar-dark-brand-hover-color == $navbar-dark-active-color) {
+				color: $navbar-dark-brand-hover-color;
+			}
+		}
+	}
+
+	.navbar-toggler-link {
+		&[aria-expanded="true"] {
+			color: $navbar-dark-active-color;
+		}
+	}
+}
+
+.navbar-inverse-bg {
+	background-color: $navbar-dark-bg;
+	border-color: $navbar-dark-border-color;
+
+	&.collapse-basic-search-transparent .basic-search {
+		&.focus:after {
+			background-color: $collapse-basic-search-transparent-inverse-focus-highlight;
+		}
+	}
+
+	.basic-search.open {
+		background-color: $navbar-dark-bg;
+		border-color: $navbar-dark-border-color;
+	}
+
+	.navbar-brand {
+		background-color: $navbar-dark-brand-bg;
+
+		@include hover-focus {
+			background-color: $navbar-dark-brand-hover-bg;
+		}
+	}
+
+	.nav-link {
+		@include hover-focus {
+			background-color: $navbar-dark-hover-bg;
+		}
+
+		&.active,
+		&[aria-expanded="true"] {
+			background-color: $navbar-dark-active-bg;
+		}
+
+		&.disabled {
+			background-color: $navbar-dark-disabled-bg;
+		}
+	}
+
+	.navbar-overlay {
+		background-color: $navbar-dark-bg;
+	}
+
+	.navbar-toggler-link:after {
+		background-color: $navbar-dark-active-highlight;
+
+		@if not ($navbar-dark-active-highlight == transparent) {
+			content: '';
+		}
+	}
+}

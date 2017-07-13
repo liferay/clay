@@ -1,0 +1,54 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$progress-min-width: 6.25rem !default; // 100px
+
+$progress-bar-box-shadow: null !default;
+
+// Progress Sizes
+
+$progress-lg-border-radius: $border-radius !default;
+$progress-lg-font-size: $font-size-lg !default;
+$progress-lg-height: $progress-height * 2 !default;
+
+// Progress Group
+
+$progress-group-addon-font-size: null !default;
+$progress-group-addon-spacer-x: 1rem !default;
+
+// Progress States
+
+$progress-group-feedback-color: map-get($theme-colors, primary) !default;
+
+$progress-bar-danger-bg: map-get($theme-colors, danger) !default;
+$progress-group-feedback-danger-color: map-get($theme-colors, danger) !default;
+
+$progress-bar-info-bg: map-get($theme-colors, info) !default;
+$progress-group-feedback-info-color: map-get($theme-colors, info) !default;
+
+$progress-bar-success-bg: map-get($theme-colors, success) !default;
+$progress-group-feedback-success-color: map-get($theme-colors, success) !default;
+
+$progress-bar-warning-bg: map-get($theme-colors, warning) !default;
+$progress-group-feedback-warning-color: map-get($theme-colors, warning) !default;
+
+// Multi Step Progress
+
+$multi-step-progress-bar-active-icon: "\f111" !default;
+$multi-step-progress-bar-complete-icon: "\f00c" !default;
+$multi-step-progress-bar-icon: "\f10c" !default;
+
+$multi-step-progress-bar-color: #BBB !default;
+
+$multi-step-progress-bar-active-color: map-get($theme-colors, primary) !default;
+
+$multi-step-progress-bar-complete-color: map-get($colors, gray) !default;
+$multi-step-progress-bar-complete-icon-color: map-get($theme-colors, primary) !default;
+
+$multi-step-progress-bar-divider-height: 1px !default;
+
+$multi-step-progress-bar-fixed-width: 100px !default;

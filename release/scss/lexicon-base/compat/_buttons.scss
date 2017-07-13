@@ -1,0 +1,19 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.btn-default {
+	@extend .btn-secondary;
+}
+
+// .btn-default {
+//   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+// }
+
+// Removed .btn-xs in BS4
+// .btn-xs {
+//  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+// }

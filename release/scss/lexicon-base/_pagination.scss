@@ -1,0 +1,128 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.pagination {
+	// Will be fixed by https://github.com/twbs/bootstrap/pull/22541
+	flex-wrap: wrap;
+}
+
+.pagination-bar {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1rem;
+
+	.pagination {
+		margin-bottom: 0;
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+}
+
+.page-link {
+	border-radius: $pagination-link-border-radius;
+	// Will be fixed by https://github.com/twbs/bootstrap/pull/22536
+	margin-left: -$pagination-border-width;
+}
+
+.page-item {
+	&:first-child,
+	&:last-child {
+		.page-link {
+			border-radius: $pagination-link-border-radius;
+		}
+	}
+
+	&.disabled .page-link {
+		opacity: $pagination-disabled-opacity;
+	}
+}
+
+.pagination-items-per-page {
+	background-color: $pagination-items-per-page-bg;
+	border-color: $pagination-items-per-page-border;
+	border-radius: $pagination-link-border-radius;
+	border-style: solid;
+	border-width: $pagination-border-width;
+	line-height: $pagination-line-height;
+
+	a {
+		color: $pagination-items-per-page-color;
+		display: block;
+		padding: $pagination-padding-y $pagination-padding-x;
+		text-decoration: none;
+	}
+
+	+ .pagination-results {
+		margin-left: auto;
+		margin-right: 0;
+
+		@include media-breakpoint-up(md) {
+			margin-left: 0;
+			margin-right: auto;
+		}
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+	}
+}
+
+.page-item .dropdown-menu,
+.pagination-items-per-page .dropdown-menu {
+	margin-bottom: $pagination-dropdown-menu-spacer-y;
+	margin-top: $pagination-dropdown-menu-spacer-y;
+}
+
+.pagination-results {
+	border-color: transparent;
+	border-style: solid;
+	border-width: $pagination-border-width;
+	color: $pagination-results-color;
+	line-height: $pagination-line-height;
+	margin-right: auto;
+	padding: $pagination-padding-y $pagination-padding-x;
+}
+
+// Pagination Sizes
+
+.pagination-sm {
+	.pagination-items-per-page {
+		border-radius: $pagination-link-border-radius-sm;
+	}
+
+	.pagination-items-per-page a,
+	.pagination-results {
+		font-size: $pagination-font-size-sm;
+		line-height: $pagination-line-height-sm;
+		padding: $pagination-padding-y-sm $pagination-padding-x;
+	}
+
+	.page-link {
+		font-size: $pagination-font-size-sm;
+		line-height: $pagination-line-height-sm;
+	}
+}
+
+.pagination-lg {
+	.pagination-items-per-page {
+		border-radius: $pagination-link-border-radius-lg;
+	}
+
+	.pagination-items-per-page a,
+	.pagination-results {
+		font-size: $pagination-font-size-lg;
+		line-height: $pagination-line-height-lg;
+		padding: $pagination-padding-y-lg $pagination-padding-x;
+	}
+
+	.page-link {
+		font-size: $pagination-font-size-lg;
+		line-height: $pagination-line-height-lg;
+	}
+}

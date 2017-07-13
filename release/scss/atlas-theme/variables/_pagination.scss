@@ -1,0 +1,59 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$pagination-item-height: 32px !default;
+
+$pagination-border-width: 0 !default;
+
+$pagination-padding-x: 10px !default;
+$pagination-padding-y: 0 !default;
+
+$pagination-line-height: $pagination-item-height - ($pagination-border-width * 2) !default;
+
+$pagination-dropdown-menu-spacer-y: 10px !default;
+
+$pagination-font-size-sm: 12px !default;
+$pagination-item-height-sm: 24px !default;
+$pagination-line-height-sm: $pagination-item-height-sm - ($pagination-border-width * 2) !default;
+
+$pagination-padding-y-sm: 0 !default;
+
+$pagination-font-size-lg: 18px !default;
+$pagination-item-height-lg: 44px !default;
+$pagination-line-height-lg: $pagination-item-height-lg - ($pagination-border-width * 2) !default;
+
+$pagination-padding-x-lg: 16px !default;
+$pagination-padding-y-lg: 0 !default;
+
+// Skin
+
+$pagination-link-border-radius: 4px !default;
+$pagination-link-border-radius-lg: 5px !default;
+$pagination-link-border-radius-sm: 3px !default;
+
+$pagination-bg: transparent !default;
+$pagination-border-color: $pagination-bg !default;
+$pagination-color: map-get($theme-colors, secondary) !default;
+
+$pagination-hover-bg: transparent !default;
+$pagination-hover-border-color: $pagination-hover-bg !default;
+$pagination-hover-color: $pagination-color !default;
+
+$pagination-active-bg: lighten(map-get($theme-colors, secondary), 30%) !default;
+$pagination-active-border-color: map-get($theme-colors, secondary) !default;
+$pagination-active-color: map-get($theme-colors, secondary) !default;
+
+$pagination-disabled-bg: transparent !default;
+$pagination-disabled-border-color: $pagination-disabled-bg !default;
+$pagination-disabled-color: map-get($theme-colors, secondary) !default;
+$pagination-disabled-opacity: 0.5 !default;
+
+$pagination-items-per-page-color: $pagination-color !default;
+
+$pagination-results-color: $pagination-color !default;

@@ -1,0 +1,30 @@
+/**
+* Clay 2.0.0
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.popover {
+	@if not ($popover-border-radius == $border-radius-lg) {
+		@include border-radius($popover-border-radius);
+	}
+}
+
+.popover-title {
+	border-color: $popover-title-border-color;
+
+	@if not ($popover-title-offset-border-width == calc(#{$border-radius-lg} - #{$popover-border-width})) {
+		@include border-top-radius($popover-title-offset-border-width);
+	}
+
+	@if not ($popover-title-font-size == $font-size-base) {
+		font-size: $popover-title-font-size;
+	}
+
+	margin: $popover-title-margin-y $popover-title-margin-x;
+}
+
+.popover-content {
+	@include border-bottom-radius($popover-title-offset-border-width);
+}
