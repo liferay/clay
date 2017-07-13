@@ -13,4 +13,43 @@
 	position: absolute;
 	width: 100%;
 	z-index: 10;
+
+	&:focus {
+		+ .btn-primary {
+			@extend .btn-primary.focus;
+		}
+
+		+ .btn-secondary {
+			@extend .btn-secondary.focus;
+		}
+
+		+ .btn-success {
+			@extend .btn-success.focus;
+		}
+
+		+ .btn-warning {
+			@extend .btn-warning.focus;
+		}
+
+		+ .btn-danger {
+			@extend .btn-danger.focus;
+		}
+
+		+ .btn-light {
+			@extend .btn-light.focus;
+		}
+
+		+ .btn-dark {
+			@extend .btn-dark.focus;
+		}
+
+		+ .input-group {
+			border-radius: 1px;
+			box-shadow: 0 0 0 0.075rem #fff, $btn-focus-box-shadow;
+		}
+	}
+}
+
+.custom-file-input:focus + .custom-file-control {
+	border-radius: 1px;
 }
