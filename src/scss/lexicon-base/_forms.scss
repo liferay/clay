@@ -86,41 +86,41 @@ label,
 	height: auto;
 }
 
-@if (variable-exists(atlas-theme)) {
-	select.form-control:not([multiple]):not([size]) {
-		-moz-appearance: none;
-		-webkit-appearance: none;
+// @if (variable-exists(atlas-theme)) {
+// 	select.form-control:not([multiple]):not([size]) {
+// 		-moz-appearance: none;
+// 		-webkit-appearance: none;
 
-		&::-ms-expand {
-			display: none;
-		}
+// 		&::-ms-expand {
+// 			display: none;
+// 		}
 
-		background-color: $input-select-bg;
-		background-image: $input-select-icon;
-		background-image: none \9;
-		background-position: $input-select-bg-position;
-		background-repeat: no-repeat;
-		background-size: $input-select-bg-size;
-		padding-bottom: $input-select-padding-bottom;
-		padding-top: $input-select-padding-top;
+// 		background-color: $input-select-bg;
+// 		background-image: $input-select-icon;
+// 		background-image: none \9;
+// 		background-position: $input-select-bg-position;
+// 		background-repeat: no-repeat;
+// 		background-size: $input-select-bg-size;
+// 		padding-bottom: $input-select-padding-bottom;
+// 		padding-top: $input-select-padding-top;
 
-		@if ($input-select-padding-left != null) {
-			padding-left: $input-select-padding-left;
-			padding-left: 0 \9;
-		}
+// 		@if ($input-select-padding-left != null) {
+// 			padding-left: $input-select-padding-left;
+// 			padding-left: 0 \9;
+// 		}
 
-		@if ($input-select-padding-right != null) {
-			padding-right: $input-select-padding-right;
-			padding-right: 0 \9;
-		}
+// 		@if ($input-select-padding-right != null) {
+// 			padding-right: $input-select-padding-right;
+// 			padding-right: 0 \9;
+// 		}
 
-		&:focus {
-			background-color: $input-select-bg-focus;
-			background-image: $input-select-icon-focus;
-			background-image: none \9;
-		}
-	}
-}
+// 		&:focus {
+// 			background-color: $input-select-bg-focus;
+// 			background-image: $input-select-icon-focus;
+// 			background-image: none \9;
+// 		}
+// 	}
+// }
 
 // Textarea
 
@@ -243,6 +243,7 @@ fieldset[disabled] label {
 
 		> .btn,
 		> .form-control,
+		> .form-file,
 		> .form-inline-group {
 			// TODO: Use different selector hard to override
 			&:not(:last-child) {

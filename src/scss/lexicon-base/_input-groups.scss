@@ -30,6 +30,14 @@
 	&:last-child > .btn {
 		margin-left: -$input-btn-border-width;
 	}
+
+	&:not(:first-child) > .form-file .btn {
+		@include border-left-radius(0);
+	}
+
+	&:not(:last-child) > .form-file .btn {
+		@include border-right-radius(0);
+	}
 }
 
 // Input Group Addon
