@@ -28,3 +28,25 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 
 $progress-bar-xs-height: 8px !default;
 $progress-bar-xl-height: 52px !default;
+
+// List groups
+
+$list-group-border:             #ddd !default;
+$list-group-border-radius:      $border-radius-base !default;
+
+$list-group-hover-bg:           #f5f5f5 !default;
+
+$list-group-link-heading-color: #333 !default;
+
+$list-group-border-width: 1px !default;
+$list-group-header-font-weight: 500 !default;
+
+$list-group-header-bg: $list-group-hover-bg !default;
+$list-group-header-color: $list-group-link-heading-color !default;
+$list-group-header-hover-color: $list-group-header-color !default;
+
+$list-group-header-open-border-color: map-get($theme-colors, primary) !default;
+$list-group-header-open-border-width: 2px !default;
+
+$list-group-header-close-border-color: $list-group-border !default;
+$list-group-header-close-border-width: 1px !default;
