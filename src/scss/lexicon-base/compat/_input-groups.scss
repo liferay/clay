@@ -1,0 +1,24 @@
+.input-group {
+	display: table;
+	width: auto;
+
+	.input-group-addon,
+	.input-group-btn {
+		display: table-cell;
+		width: 1%;
+	}
+
+	.form-control {
+		display: table-cell;
+		width: 100%;
+	}
+}
+
+
+
+.input-group-default {
+	.input-group-addon {
+		display: table-cell;
+		width: 1%;
+	}
+}

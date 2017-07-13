@@ -1,0 +1,22 @@
+// Renamed .col-xs-* to .col-*
+@for $i from 1 through $grid-columns {
+	.col-xs-#{$i} {
+		@extend .col-#{$i};
+	}
+}
+
+// Image
+// Renamed .img-responsive to .img-fluid
+.img-responsive {
+	@include img-fluid;
+}
+
+// Renamed .img-circle to .rounded-circle
+.img-circle {
+	@extend .rounded-circle;
+}
+
+// Renamed .img-rounded to .rounded
+.img-rounded {
+	@extend .rounded;
+}

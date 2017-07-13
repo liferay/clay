@@ -1,0 +1,16 @@
+#navigationCollapse {
+	padding-right: $navbar-padding-x;
+	padding-left: $navbar-padding-x;
+
+	@include media-breakpoint-up(md) {
+		display: block;
+	}
+}
+
+#banner .row:first-child {
+	display: block;
+}
+
+.product-menu .panel-group .panel-heading + .panel-collapse.show {
+	border-bottom: 2px solid #65B6F0;
+}

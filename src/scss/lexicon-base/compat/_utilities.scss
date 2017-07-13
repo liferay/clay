@@ -1,0 +1,11 @@
+.hide {
+	@extend .d-none;
+}
+
+.pull-left {
+	@extend .float-left;
+}
+
+.pull-right {
+	@extend .float-right;
+}

@@ -1,0 +1,8 @@
+@if (variable-exists(atlas-theme)) {
+	.alert-mismissable,
+	.alert-dismissible {
+		.close {
+			padding: 0 $alert-padding-x;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.basic-search.input-group {
+	display: table;
+	width: auto;
+}
+
+.basic-search .input-group-input .form-control {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.basic-search .input-group-btn {
+	display: table-cell;
+	width: 1%;
+}
+
+.basic-search-transition {
+	.basic-search-slider {
+		transition: all 0.5s ease;
+	}
+}
+
+div.collapse-basic-search .basic-search .form-control {
+	padding-left: 57px;
+
+	// @media (min-width: $grid-float-breakpoint) {
+	//	 padding-left: 5px;
+	// }
+}

@@ -1,0 +1,57 @@
+label {
+	max-width: 100%;
+}
+
+.control-label {
+	@extend .form-control-label;
+}
+
+.checkbox,
+.radio {
+	@extend .form-check;
+
+	> label {
+		min-height: 20px;
+
+		@extend .form-check-label;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		@extend .form-check-input;
+
+		&:only-child {
+			position: absolute;
+		}
+	}
+}
+
+.form-control {
+	border-color: $input-border-color;
+}
+
+@if (variable-exists(atlas-theme)) {
+	.input-group-lg > .form-control {
+		@extend .input-lg;
+	}
+
+	.input-group-sm > .form-control {
+		@extend .input-sm;
+	}
+}
+
+.form-horizontal > .form-group {
+	@extend .row;
+}
+
+.input-lg {
+	@extend .form-control-lg;
+}
+
+.input-sm {
+	@extend .form-control-sm;
+}
+
+fieldset {
+	width: 100%;
+}

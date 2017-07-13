@@ -447,3 +447,24 @@
 		}
 	}
 }
+
+.management-bar-nav {
+  display: block;
+
+  > li {
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  .dropdown-menu {
+    @include media-breakpoint-down(sm) {
+      background-color: transparent;
+      border-width: 0;
+      box-shadow: none;
+      max-width: none;
+      position: relative;
+      width: 100%;
+    }
+  }
+}

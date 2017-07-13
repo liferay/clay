@@ -1,0 +1,35 @@
+// Moved .caret to .dropdown-toggle:after in BS4
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top:   $caret-width dashed;
+	border-top:   $caret-width solid \9; // IE8
+	border-right: $caret-width solid transparent;
+	border-left:  $caret-width solid transparent;
+}
+
+.dropdown-menu {
+	border: 1px solid $dropdown-border-color;
+}
+
+// Moved .dropdown-menu > li > a to .dropdown-item in BS4
+.dropdown-menu > li > a {
+	@extend .dropdown-item;
+}
+
+.dropdown-toggle:after {
+	border-width: 0;
+	content: normal;
+}
+
+.dropup .dropdown-toggle:after {
+	border-width: 0;
+	content: normal;
+}
+
+.open > .dropdown-menu {
+	display: block;
+}

@@ -1,0 +1,38 @@
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr {
+	&.active > th,
+	&.active > td,
+	th.active,
+	td.active {
+		background-color: $table-active-bg;
+	}
+
+	&.success > th,
+	&.success > td,
+	th.success,
+	td.success {
+		background-color: map-get($theme-colors, success);
+	}
+
+	&.info > th,
+	&.info > td,
+	th.info,
+	td.info {
+		background-color: map-get($theme-colors, info);
+	}
+
+	&.warning > th,
+	&.warning > td,
+	th.warning,
+	td.warning {
+		background-color: map-get($theme-colors, warning);
+	}
+
+	&.danger > th,
+	&.danger > td,
+	th.danger,
+	td.danger {
+		background-color: map-get($theme-colors, danger);
+	}
+}

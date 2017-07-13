@@ -1,0 +1,46 @@
+.nav {
+	flex-direction: column;
+
+	> li {
+		position: relative;
+	}
+
+	> li > a {
+		display: block;
+		padding: $nav-link-padding-y $nav-link-padding-x;
+
+		@include hover-focus {
+			text-decoration: none;
+		}
+	}
+
+	.disabled > a {
+		color: $nav-link-disabled-color;
+	}
+}
+
+.nav-justified {
+	flex-direction: row;
+
+	> li {
+		flex: 1;
+		text-align: center;
+	}
+}
+
+.nav-stacked {
+	@extend .flex-column;
+}
+
+.nav.nav-pills {
+	flex-direction: row;
+}
+
+.nav-pills > li > a {
+	@include border-radius($nav-pills-border-radius);
+}
+
+.nav-pills > li.active > a {
+	background-color: $nav-pills-link-active-bg;
+	color: $nav-pills-link-active-color;
+}

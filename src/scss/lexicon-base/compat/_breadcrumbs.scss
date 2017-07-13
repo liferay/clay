@@ -1,0 +1,23 @@
+.breadcrumb > li {
+	float: left;
+
+	&.active {
+		color: $breadcrumb-active-color;
+	}
+}
+
+.breadcrumb > li + li::before {
+	display: inline-block; // Suppress underlining of the separator in modern browsers
+	padding-right: $breadcrumb-item-padding;
+	padding-left: $breadcrumb-item-padding;
+	color: $breadcrumb-divider-color;
+	content: "#{$breadcrumb-divider}";
+}
+
+.breadcrumb > li + li:hover::before {
+	text-decoration: underline;
+}
+
+.breadcrumb > li + li:hover::before {
+	text-decoration: none;
+}
