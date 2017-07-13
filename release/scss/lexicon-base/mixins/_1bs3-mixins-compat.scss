@@ -402,3 +402,10 @@
       -ms-user-select: $select; // IE10+
           user-select: $select;
 }
+
+// User icons
+
+@mixin color-user-icon($bg-color: #999, $color: #FFF) {
+  background-color: $bg-color;
+  color: $color;
+}

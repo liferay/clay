@@ -8,3 +8,7 @@
 .card {
 	display: block; // FF doesn't display cards properly
 }
+
+.card-horizontal {
+	@extend .card;
+}
