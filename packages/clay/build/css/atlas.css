@@ -2837,21 +2837,21 @@ tbody.collapse.show {
 }
 
 .custom-control-input:focus ~ .custom-control-indicator {
-  box-shadow: 0 0 0 2px rgba(64, 164, 236, 0.5);
+  box-shadow: 0 0 0 1px #FFF, 0 0 0 2px rgba(64, 164, 236, 0.5);
 }
 
 .custom-control-input:active ~ .custom-control-indicator {
   color: #fff;
-  background-color: white;
+  background-color: #65B6F0;
   box-shadow: none;
 }
 
 .custom-control-input:disabled ~ .custom-control-indicator {
-  background-color: #ECEEEF;
+  background-color: #f3f4f4;
 }
 
 .custom-control-input:disabled ~ .custom-control-description {
-  color: #868e96;
+  color: #b4c1cc;
 }
 
 .custom-control-indicator {
@@ -2863,11 +2863,11 @@ tbody.collapse.show {
   height: 1.25rem;
   pointer-events: none;
   user-select: none;
-  background-color: #ddd;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
-  box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 .custom-checkbox .custom-control-indicator {
@@ -9545,6 +9545,74 @@ fieldset[disabled] .form-control::placeholder, .form-control[disabled]::placehol
 
 .custom-file-input:focus + .custom-file-control {
   border-radius: 1px;
+}
+
+.custom-control-indicator {
+  border-color: #BCC1C5;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 1.25rem;
+  top: 0;
+}
+
+.custom-control-description {
+  line-height: 1.25rem;
+}
+
+.custom-control-input {
+  height: 1.25rem;
+  left: 0;
+  top: 0;
+  width: 1.25rem;
+}
+
+.custom-control-input:active ~ .custom-control-indicator {
+  border-color: #65B6F0;
+}
+
+.custom-control-input:checked ~ .custom-control-indicator {
+  border-color: #65B6F0;
+}
+
+.custom-control-input:disabled ~ .custom-control-indicator {
+  background-color: #f3f4f4;
+  border-color: #e5e7e8;
+}
+
+.custom-control-input:disabled:checked ~ .custom-control-indicator {
+  background-color: #abd7f7;
+  border-color: #abd7f7;
+}
+
+.custom-control .custom-control-input:focus ~ .custom-control-indicator {
+  box-shadow: 0 0 0 1px #FFF, 0 0 0 2px rgba(64, 164, 236, 0.5);
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
+  background-size: 0.6em;
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
+  background-color: #65B6F0;
+  background-size: 0.5em;
+  border-color: #65B6F0;
+}
+
+.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-indicator {
+  background-color: #abd7f7;
+  border-color: #abd7f7;
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-indicator {
+  background-size: 0.6em;
+}
+
+.custom-radio .custom-control-input:disabled ~ .custom-control-indicator {
+  border-color: #f3f4f4;
+}
+
+.custom-radio .custom-control-input:disabled:checked ~ .custom-control-indicator {
+  border-color: #abd7f7;
 }
 
 .has-success label,

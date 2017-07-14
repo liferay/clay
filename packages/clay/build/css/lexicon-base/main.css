@@ -8838,6 +8838,30 @@ fieldset[disabled] label .form-control {
   border-radius: 1px;
 }
 
+.custom-control-indicator {
+  font-size: 1rem;
+  top: 0;
+}
+
+.custom-control-input {
+  height: 1rem;
+  left: 0;
+  top: 0;
+  width: 1rem;
+}
+
+.custom-control-input:disabled ~ .custom-control-indicator {
+  background-color: #e9ecef;
+}
+
+.custom-control .custom-control-input:focus ~ .custom-control-indicator {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 3px #007bff;
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
+  background-color: #007bff;
+}
+
 .form-control-feedback {
   font-weight: 500;
 }
