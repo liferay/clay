@@ -70,3 +70,7 @@
 		top: $base-size * 3;
 	}
 }
+
+.nav-stacked {
+	flex-direction: column;
+}

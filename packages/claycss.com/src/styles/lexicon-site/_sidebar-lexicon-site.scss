@@ -39,10 +39,10 @@
 			color: $brand-darker-text;
 			padding-right: $base-size * 1.5;
 
-			@include placeholder($brand-darker-text);
+			//@include placeholder($brand-darker-text);
 
 			&:active, &:focus {
-				@include placeholder($brand-darker-text);
+				//@include placeholder($brand-darker-text);
 
 				background-color: #FFF;
 				color: $brand-darker-text;

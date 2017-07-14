@@ -1,14 +1,14 @@
 'use strict';
 
-const lexicon = require('lexicon-ux');
 const path = require('path');
+const clay = require('clay');
 
-var lexiconJSPath = path.join(lexicon.srcDir, 'js');
+var clayJSPath = path.join(clay.srcDir, 'js');
 
 module.exports = {
 	metalComponents: ['electric-quartz-components'],
 	sassOptions: {
-		includePaths: ['node_modules', lexicon.includePaths]
+		includePaths: ['node_modules', clay.includePaths]
 	},
 	vendorSrc: [
 		{
@@ -16,17 +16,17 @@ module.exports = {
 			src: 'node_modules/source-sans-pro/**'
 		},
 		{
-			dest: 'dist/vendor/lexicon',
-			src: path.join(lexicon.buildDir, 'images', 'icons', '*')
+			dest: 'dist/vendor/clay',
+			src: path.join(clay.buildDir, 'images', 'icons', '*')
 		},
 		{
 			src: [
-				path.join(lexiconJSPath, 'svg4everybody.js'),
-				path.join(lexiconJSPath, 'bootstrap.js')
+				path.join(clayJSPath, 'svg4everybody.js'),
+				path.join(clayJSPath, 'bootstrap.js')
 			]
 		},
 		{
-			src: path.join(lexiconJSPath, 'svg4everybody.js')
+			src: path.join(clayJSPath, 'svg4everybody.js')
 		}
 	]
 };
