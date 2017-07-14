@@ -1,3 +1,36 @@
-$custom-control-indicator-size: 1.25rem !default;
-$custom-control-indicator-focus-box-shadow: 0 0 0 2px rgba(64, 164, 236, 0.5) !default;
+$custom-control-indicator-size: 1.25rem !default; // 20px
+$custom-control-indicator-bg: transparent !default;
+$custom-control-indicator-border-color: #BCC1C5 !default;
+$custom-control-indicator-border-style: solid !default;
+$custom-control-indicator-border-width: 2px !default;
+$custom-control-indicator-box-shadow: none !default;
+
+$custom-control-indicator-active-bg: #65B6F0 !default;
+$custom-control-indicator-active-border-color: $custom-control-indicator-active-bg !default;
+$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 2px rgba(64, 164, 236, 0.5) !default;
+$custom-control-indicator-checked-border-color: $custom-control-indicator-active-bg !default;
+$custom-control-indicator-indeterminate-border-color: $custom-control-indicator-active-bg !default;
+$custom-control-indicator-disabled-bg: lighten($custom-control-indicator-border-color, 20%) !default;
+$custom-control-indicator-disabled-border-color: lighten($custom-control-indicator-border-color, 15%) !default;
+$custom-control-indicator-disabled-checked-bg: lighten($custom-control-indicator-active-bg, 15%) !default;
+$custom-control-indicator-disabled-checked-border-color: lighten($custom-control-indicator-checked-border-color, 15%) !default;
+
+// Custom Control Description
+
+$custom-control-description-line-height: $custom-control-indicator-size !default; // 20px
+$custom-control-description-disabled-color: lighten($input-label-color, 15%) !default;
+
+// Custom Checkbox
+
 $custom-checkbox-icon-checked: lx-icon(check, #FFF) !default;
+$custom-checkbox-indicator-icon-checked-bg-size: 0.6em !default; // 12px
+$custom-checkbox-indicator-icon-indeterminate-bg-size: 0.5em !default; // 10px
+
+$custom-checkbox-indeterminate-bg: $custom-control-indicator-active-bg !default;
+
+// Custom Radio
+
+$custom-radio-indicator-icon-checked-bg-size: 0.6em !default; // 12px
+
+$custom-radio-indicator-disabled-border-color: $custom-control-indicator-disabled-bg !default;
+$custom-radio-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-border-color !default;
