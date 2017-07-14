@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Toggle Card</title>
+	<title>Lexicon - Form Elements (Custom)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
@@ -82,7 +82,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+<li class="active"><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
@@ -124,7 +124,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
 </li>
-<li class="active"><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
+<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
@@ -202,7 +202,7 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title" id="beginContent" tabindex="-1">
-			Toggle Card
+			Form Elements (Custom)
 
 			
 		</h1>
@@ -210,195 +210,220 @@
 		
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="toggle-card-with-checkbox"><a class="heading-anchor" href="#toggle-card-with-checkbox"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Toggle Card with Checkbox</h3>
+		<h3 id="custom-select"><a class="heading-anchor" href="#custom-select"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Select</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Checkboxes styled like a card.</p>
-		</blockquote>
-
-		<form action="#" class="row" method="get">
-			<div style="padding-left:15px;padding-right:15px;">
-				<label class="toggle-card">
-					<input class="toggle-card-check" type="checkbox" value="">
-					<div class="toggle-card-container">
-						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</div>
-						<div class="toggle-card-label">
-							<span>Regular Label</span>
-						</div>
-					</div>
-				</label>
-			</div>
-
-			<div style="padding-left:15px;padding-right:15px;">
-				<label class="toggle-card">
-					<input class="toggle-card-check" type="checkbox" value="">
-					<div class="toggle-card-container">
-						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
-								<use xlink:href="../../images/icons/icons.svg#lock">
-							</svg>
-
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</div>
-						<div class="toggle-card-label">
-							<span>Regular Label</span>
-						</div>
-					</div>
-				</label>
-			</div>
-
-			<div style="padding-left:15px;padding-right:15px;">
-				<label class="toggle-card">
-					<input class="toggle-card-check" type="checkbox" value="">
-					<div class="toggle-card-container">
-						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
-								<use xlink:href="../../images/icons/icons.svg#lock">
-							</svg>
-
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</div>
-						<div class="toggle-card-label">
-							<span class="toggle-card-off">labelOff</span>
-							<span class="toggle-card-on">labelOn</span>
-						</div>
-					</div>
-				</label>
-			</div>
-		</form>
+		<select class="custom-select">
+			<option selected>Open this select menu</option>
+			<option value="1">One</option>
+			<option value="2">Two</option>
+			<option value="3">Three</option>
+		</select>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="toggle-card-with-radio"><a class="heading-anchor" href="#toggle-card-with-radio"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Toggle Card with Radio</h3>
+		<h3 id="form-file"><a class="heading-anchor" href="#form-file"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form File</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Radio Buttons styled like a card.</p>
+			<p>Nest <code>&lt;input class=&quot;form-file-input&quot; type=&quot;file&quot;&gt;</code> inside <code>form-file</code> to create a variety of custom file inputs. The element with the <code>form-file</code> class should wrap whatever element you want to trigger the operating system&apos;s file browser.</p>
 		</blockquote>
 
-		<form action="#" class="row" method="get">
-			<div style="padding-left:15px;padding-right:15px;">
-				<label class="toggle-card">
-					<input class="toggle-card-check" id="toggleCardRadioOption1" name="toggleCardRadio1" type="radio" value="option1">
-					<div class="toggle-card-container">
-						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</div>
-						<div class="toggle-card-label">
-							<span>Regular Label</span>
-						</div>
+		<div class="alert alert-warning">
+			Form File needs custom javascript to change the input value to the file selected.
+		</div>
+
+		<div class="form-group">
+			<label class="form-control-label" for="customFile1">Attach File</label>
+			<div class="input-group">
+				<input class="form-control" id="customFileText1" placeholder="Choose file..." readonly type="text">
+				<div class="input-group-btn">
+					<div class="form-file">
+						<input class="form-file-input" data-clay-site-content="#customFileText1" data-clay-site-toggle="file" id="customFile1" type="file">
+						<button class="btn btn-secondary" tabindex="-1">Browse</button>
 					</div>
-				</label>
+				</div>
 			</div>
+		</div>
 
-			<div style="padding-left:15px;padding-right:15px;">
-				<label class="toggle-card">
-					<input class="toggle-card-check" id="toggleCardRadioOption2" name="toggleCardRadio1" type="radio" value="option2">
-					<div class="toggle-card-container">
-						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
-								<use xlink:href="../../images/icons/icons.svg#lock">
-							</svg>
-
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</div>
-						<div class="toggle-card-label">
-							<span>Regular Label</span>
-						</div>
+		<div class="form-group">
+			<label class="form-control-label" for="customFile2">Attach File</label>
+			<div class="input-group input-group-inset">
+				<div class="input-group-input">
+					<input class="form-control" id="customFileText2" placeholder="Choose file..." readonly type="text" style="padding-right: 92px;">
+				</div>
+				<span class="input-group-inset-item">
+					<div class="form-file">
+						<input class="form-file-input" data-clay-site-content="#customFileText2" data-clay-site-toggle="file" id="customFile2" type="file">
+						<button class="btn btn-secondary" tabindex="-1">Browse</button>
 					</div>
-				</label>
+				</span>
 			</div>
+		</div>
 
-			<div style="padding-left:15px;padding-right:15px;">
-				<label class="toggle-card">
-					<input class="toggle-card-check" id="toggleCardRadioOption3" name="toggleCardRadio1" type="radio" value="option3">
-					<div class="toggle-card-container">
-						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
-								<use xlink:href="../../images/icons/icons.svg#lock">
-							</svg>
-
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</div>
-						<div class="toggle-card-label">
-							<span class="toggle-card-off">labelOff</span>
-							<span class="toggle-card-on">labelOn</span>
-						</div>
-					</div>
-				</label>
+		<div class="form-group">
+			<label class="form-control-label" for="customFile3">Attach File</label>
+			<div class="form-file">
+				<input class="form-file-input" data-clay-site-content="#customFileText3" data-clay-site-toggle="file" id="customFile3" type="file">
+				<div class="input-group">
+					<span class="input-group-addon" id="inputGroupAddon02">Browse</span>
+					<input aria-describedby="inputGroupAddon02" class="form-control" id="customFileText3" placeholder="Choose file..." tabindex="-1" type="text">
+				</div>
 			</div>
-		</form>
+		</div>
+
+		<div class="form-group">
+			<div class="form-inline">
+				<label class="form-control-label" for="customFile4">Attach File</label>
+				<div class="form-file">
+					<input class="form-file-input" data-clay-site-content="#customFileText4" data-clay-site-toggle="file" id="customFile4" type="file">
+					<button class="btn btn-primary" tabindex="-1">Browse</button>
+				</div>
+				<input class="form-control" id="customFileText4" placeholder="Choose File..." readonly type="text">
+			</div>
+		</div>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="disabled-toggle-cards"><a class="heading-anchor" href="#disabled-toggle-cards"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Disabled Toggle Cards</h3>
+		<h3 id="custom-file"><a class="heading-anchor" href="#custom-file"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom File</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Disable a toggle-card by adding the attribute <code>disabled=&quot;disabled&quot;</code> to <code>&lt;input class=&quot;toggle-card-check&quot; type=&quot;checkbox&quot;&gt;</code>.</p>
-		</blockquote>
+		<div class="alert alert-warning">
+			To get <code>custom-file-control</code> styles to display, you&apos;ll need to add <code>lang=&quot;en&quot;</code> to the html element or set the Content-Language HTTP header.
+		</div>
 
-		<form action="#" class="row" method="get">
-			<div style="padding-left:15px;padding-right:15px;">
-				<label class="toggle-card">
-					<input class="toggle-card-check" disabled type="checkbox" value="">
-					<div class="toggle-card-container">
-						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
-								<use xlink:href="../../images/icons/icons.svg#lock">
-							</svg>
-
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</div>
-						<div class="toggle-card-label">
-							<span class="toggle-card-off">labelOff</span>
-							<span class="toggle-card-on">labelOn</span>
-						</div>
-					</div>
-				</label>
-			</div>
-
-			<div style="padding-left:15px;padding-right:15px;">
-				<label class="toggle-card">
-					<input class="toggle-card-check" disabled type="radio" value="">
-					<div class="toggle-card-container">
-						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
-								<use xlink:href="../../images/icons/icons.svg#lock">
-							</svg>
-
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
-								<use xlink:href="../../images/icons/icons.svg#check">
-							</svg>
-						</div>
-						<div class="toggle-card-label">
-							<span class="toggle-card-off">labelOff</span>
-							<span class="toggle-card-on">labelOn</span>
-						</div>
-					</div>
-				</label>
-			</div>
-		</form>
+		<label class="custom-file">
+			<input type="file" id="file2" class="custom-file-input">
+			<span class="custom-file-control"></span>
+		</label>
 	</div>
 </div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="custom-checkbox"><a class="heading-anchor" href="#custom-checkbox"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Checkbox</h3>
+
+		<div>
+			<label class="custom-control custom-checkbox">
+				<input class="custom-control-input" type="checkbox">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Unchecked</span>
+			</label>
+
+			<label class="custom-control custom-checkbox">
+				<input checked class="custom-control-input" type="checkbox">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Checked</span>
+			</label>
+
+			<label class="custom-control custom-checkbox">
+				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Indeterminate</span>
+			</label>
+		</div>
+
+		<div>
+			<label class="custom-control custom-checkbox">
+				<input class="custom-control-input" disabled type="checkbox">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Unchecked Disabled</span>
+			</label>
+
+			<label class="custom-control custom-checkbox">
+				<input checked class="custom-control-input" disabled type="checkbox">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Checked Disabled</span>
+			</label>
+
+			<label class="custom-control custom-checkbox">
+				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" disabled type="checkbox">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Indeterminate Disabled</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="custom-radio"><a class="heading-anchor" href="#custom-radio"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Radio</h3>
+
+		<label class="custom-control custom-radio">
+			<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
+			<span class="custom-control-indicator"></span>
+			<span class="custom-control-description">Toggle this custom radio</span>
+		</label>
+
+		<label class="custom-control custom-radio">
+			<input class="custom-control-input" id="radio2" name="radio" type="radio">
+			<span class="custom-control-indicator"></span>
+			<span class="custom-control-description">Or toggle this other custom radio</span>
+		</label>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="validation-states"><a class="heading-anchor" href="#validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Validation States</h3>
+
+		<div class="form-group has-success">
+			<label class="custom-control custom-checkbox">
+				<input type="checkbox" class="custom-control-input">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Check this custom checkbox</span>
+			</label>
+		</div>
+
+		<div class="form-group has-warning">
+			<label class="custom-control custom-checkbox">
+				<input type="checkbox" class="custom-control-input">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Check this custom checkbox</span>
+			</label>
+		</div>
+
+		<div class="form-group has-danger">
+			<label class="custom-control custom-checkbox">
+				<input type="checkbox" class="custom-control-input">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Check this custom checkbox</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="custom-controls-stacked"><a class="heading-anchor" href="#custom-controls-stacked"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Controls Stacked</h3>
+
+		<div class="custom-controls-stacked">
+			<label class="custom-control custom-radio">
+				<input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Toggle this custom radio</span>
+			</label>
+			<label class="custom-control custom-radio">
+				<input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
+				<span class="custom-control-indicator"></span>
+				<span class="custom-control-description">Or toggle this other custom radio</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('.clay-site-custom-checkbox-indeterminate').prop('indeterminate', true);
+
+	$('[data-clay-site-toggle="file"]').on('change', function(event) {
+		var path = $(this).val();
+		var name = path.substring(path.lastIndexOf("\\") + 1, path.length);
+		var input = $(this).data('clay-site-content');
+
+		$(input).val(name);
+	});
+</script>
 	</div>
 
 		</section>
