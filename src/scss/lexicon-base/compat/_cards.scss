@@ -6,7 +6,7 @@
 	@extend .card;
 }
 
-.card-row-padded {
+.card-row.card-row-padded {
 	display: table;
 	height: 100%;
 	padding: 15px;
