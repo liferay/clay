@@ -472,3 +472,12 @@
 .management-bar-header .form-inline input[type="checkbox"] {
 	margin-left: -1.25rem;
 }
+
+@if (variable-exists(atlas-theme)) {
+	@include media-breakpoint-up(md) {
+		.management-bar-nav > li > .dropdown-toggle {
+			padding-bottom: 18.5px;
+			padding-top: 18.5px;
+		}
+	}
+}
