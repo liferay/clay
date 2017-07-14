@@ -277,8 +277,8 @@
 
 			@if (variable-exists(atlas-theme)) {
 				@include media-breakpoint-up(md) {
-					padding-bottom: 18.5px;
-					padding-top: 18.5px;
+					padding-bottom: 18.5px !important;
+					padding-top: 18.5px !important;
 				}
 			}
 		}
@@ -449,22 +449,26 @@
 }
 
 .management-bar-nav {
-  display: block;
+	display: block;
 
-  > li {
-    @include media-breakpoint-down(sm) {
-      display: block;
-    }
-  }
+	> li {
+		@include media-breakpoint-down(sm) {
+			display: block;
+		}
+	}
 
-  .dropdown-menu {
-    @include media-breakpoint-down(sm) {
-      background-color: transparent;
-      border-width: 0;
-      box-shadow: none;
-      max-width: none;
-      position: relative;
-      width: 100%;
-    }
-  }
+	.dropdown-menu {
+		@include media-breakpoint-down(sm) {
+			background-color: transparent;
+			border-width: 0;
+			box-shadow: none;
+			max-width: none;
+			position: relative;
+			width: 100%;
+		}
+	}
+}
+
+.management-bar-header .form-inline input[type="checkbox"] {
+	margin-left: -1.25rem;
 }
