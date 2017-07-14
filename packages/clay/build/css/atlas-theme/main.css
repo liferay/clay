@@ -9406,6 +9406,24 @@ label .reference-mark,
   height: auto;
 }
 
+select.form-control:not([multiple]):not([size]) {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: lx-icon(caret-double-l, #869CAD);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 18px auto;
+  padding-right: 18px;
+}
+
+select.form-control:not([multiple]):not([size])::-ms-expand {
+  display: none;
+}
+
+select.form-control:not([multiple]):not([size]):focus {
+  background-image: lx-icon(caret-double-l, #65B6F0);
+}
+
 textarea.form-control {
   height: 150px;
 }
