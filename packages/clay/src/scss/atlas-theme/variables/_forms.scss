@@ -93,15 +93,9 @@ $input-warning-label-color: $input-label-color !default;
 
 // Select Element
 
-$input-select-bg: null !default;
-$input-select-bg-focus: null !default;
-
 $input-select-bg-position: right center !default;
 $input-select-bg-size: 18px auto !default;
-$input-select-padding-bottom: 0 !default;
-$input-select-padding-left: null !default;
-$input-select-padding-right: 1.125rem !default; // 18px
-$input-select-padding-top: 0 !default;
+$input-select-padding-right: 18px !default;
 
 $input-select-icon-color: $input-border-color !default;
 $input-select-icon-color-focus: $input-focus-border-color !default;

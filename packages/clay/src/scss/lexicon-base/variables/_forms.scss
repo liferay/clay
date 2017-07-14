@@ -86,6 +86,26 @@ $input-warning-color-focus: null !default;
 $input-warning-checkbox-label-color: null !default;
 $input-warning-label-color: null !default;
 
+// Select Element
+
+$input-select-bg: null !default;
+$input-select-bg-focus: null !default;
+
+$input-select-bg-position: right $input-btn-padding-x center !default;
+$input-select-bg-size: $custom-select-bg-size !default;
+$input-select-padding-bottom: null !default;
+$input-select-padding-left: null !default;
+$input-select-padding-right: $custom-select-indicator-padding + $input-btn-padding-x !default;
+$input-select-padding-top: null !default;
+
+$input-select-icon-color: $input-color !default;
+$input-select-icon-color-focus: null !default;
+
+$input-select-icon: $custom-select-indicator !default;
+$input-select-icon-focus: null !default;
+
+// Form Feedback
+
 $form-control-feedback-font-size: null !default;
 $form-text-font-size: null !default;
 
