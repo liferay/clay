@@ -296,16 +296,17 @@
 	}
 }
 
-.navbar-nav {
-	flex-direction: row;
+.navbar-text-truncate {
+	display: inline-block;
+	max-width: 100%;
 
-	.nav-link {
-		padding: $navbar-link-padding-y $navbar-link-padding-x;
+	@include text-truncate;
 
-		@include scale-component {
-			padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
-		}
-	}
+	vertical-align: bottom;
+}
+
+.dropdown-toggle .navbar-text-truncate {
+	max-width: calc(100% - #{$navbar-text-truncate-spacer-right});
 }
 
 // Navbar Toggler
@@ -366,21 +367,7 @@
 	}
 
 	.lexicon-icon {
-		margin-right: 3px;
 		margin-top: 0;
-	}
-}
-
-.navbar-toggler-text {
-	display: inline-block;
-	max-width: $navbar-toggler-text-max-width;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-
-	+ .lexicon-icon {
-		margin-left: 5px;
-		margin-right: -5px;
 	}
 }
 
@@ -511,6 +498,24 @@
 // Override BS4 `.navbar-expand .navbar-nav .nav-link` should have padding if
 // not inside .navbar-collapse
 
+.navbar-nav {
+	flex-direction: row;
+
+	.nav-item {
+		.dropdown-menu {
+			margin-top: $navbar-nav-item-dropdown-margin-top;
+		}
+	}
+
+	.navbar-text {
+		padding: $navbar-link-padding-y $navbar-link-padding-x;
+
+		@include scale-component {
+			padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
+		}
+	}
+}
+
 .navbar-expand .navbar-nav .nav-link,
 .navbar-nav .nav-link {
 	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
@@ -535,20 +540,6 @@
 			padding-left: $navbar-link-padding-x-mobile;
 			padding-right: $navbar-link-padding-x-mobile;
 		}
-	}
-}
-
-.navbar-nav .navbar-text {
-	padding: $navbar-link-padding-y $navbar-link-padding-x;
-
-	@include scale-component {
-		padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
-	}
-}
-
-.navbar-nav .nav-item {
-	.dropdown-menu {
-		margin-top: $navbar-nav-item-dropdown-margin-top;
 	}
 }
 
@@ -632,7 +623,18 @@
 						}
 					}
 
+					.navbar-brand {
+						margin-right: 0;
+						max-width: calc(100% - 72px);
+					}
+
+					.navbar-toggler-link {
+						max-width: calc(100% - 180px);
+					}
+
 					.navbar-collapse {
+						width: 100%;
+
 						.navbar-nav {
 							flex-direction: column;
 						}
@@ -665,6 +667,14 @@
 				.navbar-form {
 					padding-left: $navbar-link-padding-x;
 					padding-right: $navbar-link-padding-x;
+				}
+
+				.navbar-text-truncate {
+					max-width: $navbar-text-truncate-max-width;
+				}
+
+				.dropdown-toggle .navbar-text-truncate {
+					max-width: $navbar-text-truncate-max-width - $navbar-text-truncate-spacer-right;
 				}
 
 				@if not ($infix == '') {
