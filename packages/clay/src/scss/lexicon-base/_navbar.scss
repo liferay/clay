@@ -333,6 +333,11 @@
 	margin-left: $navbar-toggler-margin-x;
 	margin-right: $navbar-toggler-margin-x;
 	margin-top: $navbar-toggler-margin-y;
+
+	@include scale-component {
+		margin-left: $navbar-toggler-margin-x-mobile;
+		margin-right: $navbar-toggler-margin-x-mobile;
+	}
 }
 
 .navbar-toggler-link {
