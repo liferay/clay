@@ -72,20 +72,21 @@
 // Collapse Basic Search
 
 .basic-search-slider {
-	left: 101%;
+	left: 0;
 	position: relative;
 
-	@include media-breakpoint-up(md) {
-		left: 0;
+	@include media-breakpoint-down($scaling-breakpoint-down) {
+		left: 101%;
 	}
 
 	.basic-search-close {
 		border-bottom-right-radius: 0;
 		border-top-right-radius: 0;
+		display: none;
 		z-index: $zindex-basic-search-close;
 
-		@include media-breakpoint-up(md) {
-			display: none;
+		@include media-breakpoint-down($scaling-breakpoint-down) {
+			display: inline-block;
 		}
 	}
 
@@ -96,7 +97,9 @@
 
 .collapse-basic-search {
 	.basic-search {
-		@include media-breakpoint-down(sm) {
+		position: relative;
+
+		@include media-breakpoint-down($scaling-breakpoint-down) {
 			border-color: transparent;
 
 			@include border-radius($navbar-border-radius);
@@ -114,10 +117,6 @@
 			}
 		}
 
-		@include media-breakpoint-up(md) {
-			position: relative;
-		}
-
 		&.basic-search-transition,
 		&.open {
 			.input-group-input {
@@ -125,40 +124,28 @@
 			}
 		}
 
-		&.open .basic-search-close {
-			@include media-breakpoint-up(md) {
-				display: none;
-			}
-		}
-
 		&.basic-search-transition .input-group-btn .btn:first-child,
 		&.open .input-group-btn .btn:first-child {
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down($scaling-breakpoint-down) {
 				border-bottom-left-radius: 0;
 				border-top-left-radius: 0;
 			}
 		}
 
 		.input-group-btn .btn:first-child {
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down($scaling-breakpoint-down) {
 				border-bottom-left-radius: $btn-border-radius;
 				border-top-left-radius: $btn-border-radius;
 			}
 		}
 
 		.input-group-input {
-			overflow: hidden;
-			visibility: hidden;
+			overflow: visible;
+			visibility: visible;
 
-			@include media-breakpoint-up(md) {
-				overflow: visible;
-				visibility: visible;
-			}
-
-			.form-control {
-				@include media-breakpoint-up(md) {
-					left: auto;
-				}
+			@include media-breakpoint-down($scaling-breakpoint-down) {
+				overflow: hidden;
+				visibility: hidden;
 			}
 		}
 	}
@@ -168,7 +155,7 @@
 	flex-wrap: wrap;
 
 	&.navbar .basic-search {
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down($scaling-breakpoint-down) {
 			margin-left: 0;
 			margin-right: 0;
 			padding-left: $navbar-link-padding-x;
@@ -181,20 +168,27 @@
 	}
 
 	.basic-search {
-		@include media-breakpoint-up(md) {
-			max-width: 220px;
+		max-width: 220px;
 
-			&.navbar-form-autofit {
-				max-width: none;
-			}
+		@include media-breakpoint-down($scaling-breakpoint-down) {
+			max-width: none;
+		}
+
+		&.navbar-form-autofit {
+			max-width: none;
 		}
 
 		.input-group {
 			align-items: center;
 			margin-left: auto;
 
-			@include media-breakpoint-down(sm) {
-				height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+			@include media-breakpoint-down($scaling-breakpoint-down) {
+				@if ($enable-scaling-components) {
+					height: $navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width;
+				}
+				@else {
+					height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width;
+				}
 			}
 		}
 
@@ -213,8 +207,10 @@
 	}
 
 	.navbar-collapse {
-		@include media-breakpoint-up(md) {
-			flex-basis: auto;
+		flex-basis: auto;
+
+		@include media-breakpoint-down($scaling-breakpoint-down) {
+			flex-basis: 100%;
 		}
 	}
 
@@ -226,19 +222,21 @@
 
 .collapse-basic-search-transparent {
 	&.navbar .basic-search {
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down($scaling-breakpoint-down) {
 			padding-left: 0;
 			padding-right: 0;
 		}
 	}
 
 	.basic-search {
-		@include media-breakpoint-up(md) {
-			height: $navbar-height-desktop - ($navbar-padding-y * 2) - $navbar-border-bottom-width - $navbar-border-top-width;
+		height: $navbar-height - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2);
+
+		@include media-breakpoint-down($scaling-breakpoint-down) {
+			height: auto;
 		}
 
 		&:after {
-			bottom: -$navbar-border-bottom-width;
+			bottom: -$navbar-border-bottom-width - $navbar-padding-y;
 			content: '';
 			display: block;
 			height: 0;
@@ -248,35 +246,15 @@
 			right: 0;
 			z-index: $zindex-basic-search-close;
 
-			@include media-breakpoint-up(md) {
-				bottom: -$navbar-border-bottom-width - $navbar-padding-y;
+			@include media-breakpoint-down($scaling-breakpoint-down) {
+				bottom: -$navbar-border-bottom-width;
 			}
 		}
 
 		&.focus:after {
 			background-color: $input-focus-border-color;
-
-			@include media-breakpoint-up(md) {
-				height: $navbar-active-border-bottom-width;
-				margin-top: -$navbar-active-border-bottom-width;
-			}
-		}
-
-		&.open {
-			&:after {
-				height: $navbar-active-border-bottom-width;
-				margin-top: -$navbar-active-border-bottom-width;
-
-				@include media-breakpoint-up(md) {
-					background-color: transparent;
-				}
-			}
-
-			&.focus:after {
-				@include media-breakpoint-up(md) {
-					background-color: $input-focus-border-color;
-				}
-			}
+			height: $navbar-active-border-bottom-width;
+			margin-top: -$navbar-active-border-bottom-width;
 		}
 
 		.btn {
@@ -308,6 +286,14 @@
 	border-style: solid;
 	border-width: $navbar-border-width;
 
+	@if not ($navbar-font-size == $font-size-base) {
+		font-size: $navbar-font-size;
+	}
+
+	@include scale-component {
+		font-size: $navbar-font-size-mobile;
+	}
+
 	.container {
 		@include media-breakpoint-down(nth(map-keys($grid-breakpoints), 1)) {
 			margin-left: 0;
@@ -322,6 +308,10 @@
 
 	.nav-link {
 		padding: $navbar-link-padding-y $navbar-link-padding-x;
+
+		@include scale-component {
+			padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
+		}
 	}
 }
 
@@ -342,12 +332,20 @@
 	height: $navbar-toggler-link-height;
 	font-size: $navbar-toggler-link-font-size;
 	line-height: $navbar-toggler-link-line-height;
+	margin-left: 0;
+	margin-right: 0;
 	padding-bottom: $navbar-toggler-link-padding-y;
 	padding-left: $navbar-toggler-link-padding-x;
 	padding-right: $navbar-toggler-link-padding-x;
 	padding-top: $navbar-toggler-link-padding-y;
 	position: relative;
 	z-index: 1;
+
+	@include scale-component {
+		font-size: $navbar-toggler-link-font-size-mobile;
+		padding-bottom: $navbar-toggler-link-padding-y-mobile;
+		padding-top: $navbar-toggler-link-padding-y-mobile;
+	}
 
 	&:after {
 		background-color: $navbar-active-highlight;
@@ -363,23 +361,20 @@
 		position: absolute;
 		right: $navbar-toggler-link-padding-x;
 		width: auto;
+
+		@include scale-component {
+			left: $navbar-toggler-link-padding-x-mobile;
+			right: $navbar-toggler-link-padding-x-mobile;
+		}
+	}
+
+	&:focus {
+		outline: none;
 	}
 
 	.lexicon-icon {
 		margin-right: 3px;
 		margin-top: 0;
-	}
-}
-
-.nav-item .navbar-toggler-link {
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: $navbar-link-padding-x;
-	padding-right: $navbar-link-padding-x;
-
-	&:after {
-		left: $navbar-link-padding-x;
-		right: $navbar-link-padding-x;
 	}
 }
 
@@ -399,8 +394,20 @@
 // Navbar Brand
 
 .navbar-brand {
+	color: $navbar-brand-color;
 	padding-left: $navbar-brand-padding-x;
 	padding-right: $navbar-brand-padding-x;
+
+	@include scale-component {
+		padding-bottom: $navbar-brand-padding-y-mobile;
+		padding-left: $navbar-brand-padding-x-mobile;
+		padding-right: $navbar-brand-padding-x-mobile;
+		padding-top: $navbar-brand-padding-y-mobile;
+	}
+
+	@include hover-focus {
+		color: $navbar-brand-hover-color;
+	}
 }
 
 // Navbar Form
@@ -413,6 +420,11 @@
 		padding-left: $navbar-link-padding-x;
 		padding-right: $navbar-link-padding-x;
 	}
+
+	@include scale-component {
+		padding-left: $navbar-link-padding-x-mobile;
+		padding-right: $navbar-link-padding-x-mobile;
+	}
 }
 
 .navbar-form-autofit {
@@ -423,6 +435,28 @@
 		display: flex;
 		width: 100%;
 	}
+
+	.form-inline {
+		align-items: flex-end;
+		flex: 1;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.form-control {
+		flex: 1;
+		width: 100%;
+	}
+}
+
+.navbar-nav .nav-btn {
+	margin-left: $navbar-link-padding-x;
+	margin-right: $navbar-link-padding-x;
+
+	@include scale-component {
+		margin-left: $navbar-link-padding-x-mobile;
+		margin-right: $navbar-link-padding-x-mobile;
+	}
 }
 
 .navbar-nav .nav-item > .form-check {
@@ -432,6 +466,11 @@
 	margin: 0;
 	padding-left: $navbar-link-padding-x;
 	padding-right: $navbar-link-padding-x;
+
+	@include scale-component {
+		padding-left: $navbar-link-padding-x-mobile;
+		padding-right: $navbar-link-padding-x-mobile;
+	}
 
 	.form-check-input {
 		margin-left: 0;
@@ -492,10 +531,26 @@
 	}
 
 	white-space: nowrap;
+
+	@include scale-component {
+		@if not ($navbar-link-padding-y-mobile == $nav-link-padding-y) {
+			padding-bottom: $navbar-link-padding-y-mobile;
+			padding-top: $navbar-link-padding-y-mobile;
+		}
+
+		@if not ($navbar-link-padding-x-mobile == 0.5rem) {
+			padding-left: $navbar-link-padding-x-mobile;
+			padding-right: $navbar-link-padding-x-mobile;
+		}
+	}
 }
 
 .navbar-nav .navbar-text {
 	padding: $navbar-link-padding-y $navbar-link-padding-x;
+
+	@include scale-component {
+		padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
+	}
 }
 
 .navbar-nav .nav-item {
@@ -547,11 +602,6 @@
 				display: flex;
 			}
 
-			.navbar-nav .nav-btn {
-				margin-left: $navbar-link-padding-x;
-				margin-right: $navbar-link-padding-x;
-			}
-
 			@if not ($infix == '') {
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
@@ -578,7 +628,7 @@
 							z-index: $zindex-dropdown;
 						}
 
-						&.navbar-inverse-bg .navbar-collapse {
+						&.navbar-dark-bg .navbar-collapse {
 							background-color: $navbar-dark-bg;
 							border-color: $navbar-dark-border-color;
 						}
@@ -655,7 +705,7 @@
 					&.active:after {
 						// Will need to be revisted if https://github.com/twbs/bootstrap/pull/22926 is merged
 						border-width: 0; // Undo BS4 .dropdown-toggle caret styles
-						margin-left: 0;	 // Undo BS4 .dropdown-toggle caret styles
+						margin-left: 0; // Undo BS4 .dropdown-toggle caret styles
 
 						background-color: $navbar-active-highlight;
 						bottom: -$navbar-border-bottom-width - $navbar-padding-y;
@@ -666,14 +716,14 @@
 
 						display: block;
 						height: $navbar-active-border-bottom-width;
-						left: $navbar-link-padding-x-desktop;
+						left: $navbar-link-padding-x;
 						position: absolute;
-						right: $navbar-link-padding-x-desktop;
+						right: $navbar-link-padding-x;
 						width: auto;
 					}
 				}
 
-				&.navbar-inverse-bg .navbar-nav .nav-link.active:after {
+				&.navbar-dark-bg .navbar-nav .nav-link.active:after {
 					background-color: $navbar-dark-active-highlight;
 
 					@if not ($navbar-dark-active-highlight == transparent) {
@@ -688,23 +738,12 @@
 						content: '';
 					}
 				}
-
-				@if ($enable-mobile-desktop-sizes) {
-					@if ($infix == '') {
-						@include media-breakpoint-up($mobile-desktop-breakpoint) {
-							@include navbar-expand-desktop;
-						}
-					}
-					@else {
-						@include navbar-expand-desktop;
-					}
-				}
 			}
 		}
 	}
 }
 
-// Skin
+// Navbar Light
 
 .navbar-light {
 	&.collapse-basic-search-transparent .basic-search {
@@ -803,7 +842,9 @@
 	}
 }
 
-.navbar-inverse {
+// Navbar Dark
+
+.navbar-dark {
 	&.collapse-basic-search-transparent .basic-search {
 		.btn {
 			color: $collapse-basic-search-transparent-inverse-btn-color;
@@ -849,7 +890,7 @@
 	}
 }
 
-.navbar-inverse-bg {
+.navbar-dark-bg {
 	background-color: $navbar-dark-bg;
 	border-color: $navbar-dark-border-color;
 

@@ -5,10 +5,8 @@
 * All rights reserved.
 * MIT license
 */
-// Structure
-
-$navbar-height: 3rem !default; // 48px
-$navbar-height-desktop: 3.75rem !default; // 60px
+$navbar-height: 3.75rem !default; // 60px
+$navbar-height-mobile: 3rem !default; // 48px
 
 $navbar-border-bottom-width: 0.0625rem !default; // 1px
 $navbar-border-left-width: 0 !default;
@@ -19,12 +17,15 @@ $navbar-padding-x: 0 !default;
 $navbar-padding-y: 0 !default;
 
 $navbar-link-padding-x: 0.9375rem !default; // 15px
-$navbar-link-padding-x-desktop: $navbar-link-padding-x !default;
+$navbar-link-padding-x-mobile: 0.875rem !default; // 15px
 
+$navbar-brand-color: $nav-link-color !default;
+$navbar-brand-hover-color: $nav-link-hover-color !default;
 $navbar-brand-font-size: $font-size-lg !default;
 $navbar-brand-padding-x: $navbar-link-padding-x !default;
-$navbar-brand-padding-y: ($navbar-height - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base) - $navbar-border-bottom-width - $navbar-border-top-width) / 2 !default;
-$navbar-brand-padding-x-desktop: $navbar-brand-padding-x !default;
+$navbar-brand-padding-x-mobile: $navbar-brand-padding-x !default;
+$navbar-brand-padding-y: ($navbar-height - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base)) / 2 !default;
+$navbar-brand-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base)) / 2 !default;
 
 $navbar-nav-item-dropdown-margin-top: 0 !default;
 
@@ -35,12 +36,9 @@ $navbar-toggler-padding-y: 0 !default;
 
 $navbar-toggler-link-margin-x: 0 !default;
 
-// Skin
-
-$navbar-border-radius: 0 !default;
 $navbar-collapse-absolute-box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.7) !default;
 
-// Navbar Default
+// Navbar Light
 
 $navbar-light-bg: #FCFEFF !default;
 $navbar-light-hover-bg: transparent !default;
@@ -67,7 +65,7 @@ $collapse-basic-search-transparent-light-btn-focus-color: $navbar-light-active-h
 $collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active-highlight !default;
 $collapse-basic-search-transparent-light-focus-highlight: $navbar-light-active-highlight !default;
 
-// Navbar Inverse
+// Navbar Dark
 
 $navbar-dark-bg: map-get($theme-colors, secondary) !default;
 

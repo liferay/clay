@@ -6235,4 +6235,4 @@ var Popover = function ($) {
 }(jQuery);
 
 
-})()
+})();

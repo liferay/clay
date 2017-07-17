@@ -5,8 +5,6 @@
 * All rights reserved.
 * MIT license
 */
-@import "1bs3-components-compat";
-
 @import "alerts";
 @import "aspect-ratio";
 @import "badges";
@@ -19,6 +17,7 @@
 @import "icons";
 @import "input-groups";
 @import "forms";
+@import "custom-forms";
 @import "form-validation";
 @import "labels";
 @import "list-group";
@@ -49,3 +48,5 @@
 @import "utilities";
 
 @import "loaders";
+
+@import "1bs3-components-compat";

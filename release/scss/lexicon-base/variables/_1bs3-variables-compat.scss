@@ -7,6 +7,9 @@
 */
 // Map Bootstrap 4 Variables to Bootstrap 3 equivalent
 
+@import "./icons";
+@import "./management-bar";
+
 // Grid
 
 $screen-xs-min:              map-get($grid-breakpoints, sm) !default;
