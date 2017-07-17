@@ -26,6 +26,10 @@ module.exports = {
 			]
 		},
 		{
+			dest: 'dist/vendor/jquery',
+			src: 'node_modules/jquery/dist/jquery.min.js'
+		},
+		{
 			src: path.join(clayJSPath, 'svg4everybody.js')
 		}
 	]
