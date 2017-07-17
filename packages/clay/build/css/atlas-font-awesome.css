@@ -10471,18 +10471,33 @@ a.label {
   }
 }
 
-.navbar-nav {
-  flex-direction: row;
+.navbar .btn-link {
+  color: #2B4259;
 }
 
-.navbar-nav .nav-link {
-  padding: 1.09375rem 0.9375rem;
+.navbar .btn-link:focus, .navbar .btn-link:hover {
+  color: inherit;
 }
 
-@media (max-width: 767px) {
-  .navbar-nav .nav-link {
-    padding: 0.8125rem 0.875rem;
-  }
+.navbar .btn-link.disabled {
+  color: #C5CDD0;
+}
+
+.navbar .btn-link.active {
+  color: #65B6F0;
+}
+
+.navbar-text-truncate {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.dropdown-toggle .navbar-text-truncate {
+  max-width: calc(100% - 20px);
 }
 
 .navbar-toggler {
@@ -10532,21 +10547,7 @@ a.label {
 }
 
 .navbar-toggler-link .lexicon-icon {
-  margin-right: 3px;
   margin-top: 0;
-}
-
-.navbar-toggler-text {
-  display: inline-block;
-  max-width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.navbar-toggler-text + .lexicon-icon {
-  margin-left: 5px;
-  margin-right: -5px;
 }
 
 .navbar-brand {
@@ -10744,6 +10745,24 @@ a.label {
   display: none !important;
 }
 
+.navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+  margin-top: 0;
+}
+
+.navbar-nav .navbar-text {
+  padding: 1.09375rem 0.9375rem;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .navbar-text {
+    padding: 0.8125rem 0.875rem;
+  }
+}
+
 .navbar-expand .navbar-nav .nav-link,
 .navbar-nav .nav-link {
   padding-bottom: 1.09375rem;
@@ -10761,20 +10780,6 @@ a.label {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
   }
-}
-
-.navbar-nav .navbar-text {
-  padding: 1.09375rem 0.9375rem;
-}
-
-@media (max-width: 767px) {
-  .navbar-nav .navbar-text {
-    padding: 0.8125rem 0.875rem;
-  }
-}
-
-.navbar-nav .nav-item .dropdown-menu {
-  margin-top: 0;
 }
 
 .navbar-expand {
@@ -10835,6 +10840,16 @@ a.label {
     background-color: #FCFEFF;
     border-color: #E3E6E8;
   }
+  .navbar-expand-sm .navbar-brand {
+    margin-right: 0;
+    max-width: calc(100% - 72px);
+  }
+  .navbar-expand-sm .navbar-toggler-link {
+    max-width: calc(100% - 180px);
+  }
+  .navbar-expand-sm .navbar-collapse {
+    width: 100%;
+  }
   .navbar-expand-sm .navbar-collapse .navbar-nav {
     flex-direction: column;
   }
@@ -10847,6 +10862,12 @@ a.label {
   .navbar-expand-sm .navbar-form {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+  }
+  .navbar-expand-sm .navbar-text-truncate {
+    max-width: 140px;
+  }
+  .navbar-expand-sm .dropdown-toggle .navbar-text-truncate {
+    max-width: 120px;
   }
   .navbar-expand-sm .container,
   .navbar-expand-sm .container-fluid {
@@ -10923,6 +10944,16 @@ a.label {
     background-color: #FCFEFF;
     border-color: #E3E6E8;
   }
+  .navbar-expand-md .navbar-brand {
+    margin-right: 0;
+    max-width: calc(100% - 72px);
+  }
+  .navbar-expand-md .navbar-toggler-link {
+    max-width: calc(100% - 180px);
+  }
+  .navbar-expand-md .navbar-collapse {
+    width: 100%;
+  }
   .navbar-expand-md .navbar-collapse .navbar-nav {
     flex-direction: column;
   }
@@ -10935,6 +10966,12 @@ a.label {
   .navbar-expand-md .navbar-form {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+  }
+  .navbar-expand-md .navbar-text-truncate {
+    max-width: 140px;
+  }
+  .navbar-expand-md .dropdown-toggle .navbar-text-truncate {
+    max-width: 120px;
   }
   .navbar-expand-md .container,
   .navbar-expand-md .container-fluid {
@@ -11011,6 +11048,16 @@ a.label {
     background-color: #FCFEFF;
     border-color: #E3E6E8;
   }
+  .navbar-expand-lg .navbar-brand {
+    margin-right: 0;
+    max-width: calc(100% - 72px);
+  }
+  .navbar-expand-lg .navbar-toggler-link {
+    max-width: calc(100% - 180px);
+  }
+  .navbar-expand-lg .navbar-collapse {
+    width: 100%;
+  }
   .navbar-expand-lg .navbar-collapse .navbar-nav {
     flex-direction: column;
   }
@@ -11023,6 +11070,12 @@ a.label {
   .navbar-expand-lg .navbar-form {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+  }
+  .navbar-expand-lg .navbar-text-truncate {
+    max-width: 140px;
+  }
+  .navbar-expand-lg .dropdown-toggle .navbar-text-truncate {
+    max-width: 120px;
   }
   .navbar-expand-lg .container,
   .navbar-expand-lg .container-fluid {
@@ -11099,6 +11152,16 @@ a.label {
     background-color: #FCFEFF;
     border-color: #E3E6E8;
   }
+  .navbar-expand-xl .navbar-brand {
+    margin-right: 0;
+    max-width: calc(100% - 72px);
+  }
+  .navbar-expand-xl .navbar-toggler-link {
+    max-width: calc(100% - 180px);
+  }
+  .navbar-expand-xl .navbar-collapse {
+    width: 100%;
+  }
   .navbar-expand-xl .navbar-collapse .navbar-nav {
     flex-direction: column;
   }
@@ -11111,6 +11174,12 @@ a.label {
   .navbar-expand-xl .navbar-form {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+  }
+  .navbar-expand-xl .navbar-text-truncate {
+    max-width: 140px;
+  }
+  .navbar-expand-xl .dropdown-toggle .navbar-text-truncate {
+    max-width: 120px;
   }
   .navbar-expand-xl .container,
   .navbar-expand-xl .container-fluid {
@@ -11178,6 +11247,14 @@ a.label {
   padding-right: 0.9375rem;
 }
 
+.navbar-expand .navbar-text-truncate {
+  max-width: 140px;
+}
+
+.navbar-expand .dropdown-toggle .navbar-text-truncate {
+  max-width: 120px;
+}
+
 .navbar-expand .navbar-nav .nav-link.active:after {
   border-width: 0;
   margin-left: 0;
@@ -11215,6 +11292,18 @@ a.label {
 
 .navbar-light.collapse-basic-search-transparent .basic-search .form-control:focus {
   color: #65B6F0;
+}
+
+.navbar-light .btn-link {
+  color: #869CAD;
+}
+
+.navbar-light .btn-link:focus, .navbar-light .btn-link:hover {
+  color: #869CAD;
+}
+
+.navbar-light .btn-link.disabled {
+  color: #CACDD2;
 }
 
 .navbar-light .navbar-toggler-link[aria-expanded="true"] {
@@ -11282,6 +11371,18 @@ a.label {
 
 .navbar-dark.collapse-basic-search-transparent .basic-search .form-control:focus {
   color: #2B4259;
+}
+
+.navbar-dark .btn-link {
+  color: #FFF;
+}
+
+.navbar-dark .btn-link:focus, .navbar-dark .btn-link:hover {
+  color: #FFF;
+}
+
+.navbar-dark .btn-link.disabled {
+  color: #CACDD2;
 }
 
 .navbar-dark .navbar-toggler-link[aria-expanded="true"] {
@@ -11392,22 +11493,6 @@ a.label {
 
 .nav-tabs-default .nav-item.show .nav-link {
   border-left-color: #D8D8D8;
-}
-
-.management-bar-item-title {
-  display: inline-block;
-  float: left;
-  margin-right: 5px;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-@media (min-width: 768px) {
-  .management-bar-item-title {
-    max-width: 180px;
-  }
 }
 
 .pagination {
