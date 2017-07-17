@@ -31,6 +31,9 @@ $navbar-brand-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-w
 
 $navbar-nav-item-dropdown-margin-top: null !default;
 
+$navbar-text-truncate-spacer-right: 20px !default;
+$navbar-text-truncate-max-width: 140px !default;
+
 $zindex-navbar-overlay: $zindex-dropdown - 1 !default; // 999
 
 // Navbar Toggler
@@ -49,8 +52,6 @@ $navbar-toggler-link-padding-x: 0.5rem !default;
 $navbar-toggler-link-padding-x-mobile: null !default;
 $navbar-toggler-link-padding-y: ($navbar-height - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-toggler-link-font-size * $navbar-toggler-link-line-height)) / 2 !default;
 $navbar-toggler-link-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-toggler-link-font-size-mobile * $navbar-toggler-link-line-height)) / 2 !default;
-
-$navbar-toggler-text-max-width: 180px !default;
 
 $navbar-collapse-absolute-box-shadow: null !default;
 
