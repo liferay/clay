@@ -9,18 +9,24 @@ module.exports = function(gulp, plugins, _, config) {
 				if (typeof(regex) === 'string') {
 					text = text.replace(/\$\$/g, '$$$$$$$$');
 
-					return content.replace(regex, text + regex);
+					content = content.replace(regex, text + regex);
 				}
 				else {
-					return content += text;
+					content = content += text;
 				}
 			}
+
+			content += ';';
+
+			return content;
 		};
 	};
 
 	var cleanBootstrapPatch = function(text) {
 		return function(content) {
-			return content.replace(text, '');
+			content = content.replace(text, '');
+
+			return content.slice(0, content.length - 1);
 		};
 	};
 
