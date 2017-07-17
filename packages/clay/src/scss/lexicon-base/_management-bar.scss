@@ -142,18 +142,18 @@
 // 	}
 // }
 
-.management-bar-item-title {
-	display: inline-block;
-	float: left;
-	margin-right: 5px;
-	max-width: 100%;
+// .management-bar-item-title {
+// 	display: inline-block;
+// 	float: left;
+// 	margin-right: 5px;
+// 	max-width: 100%;
 
-	@include text-truncate;
+// 	@include text-truncate;
 
-	@include media-breakpoint-up(md) {
-		max-width: 180px;
-	}
-}
+// 	@include media-breakpoint-up(md) {
+// 		max-width: 180px;
+// 	}
+// }
 
 // .management-bar-toggle {
 // 	background-color: transparent;
