@@ -312,7 +312,6 @@
 @if (variable-exists(atlas-theme)) {
 	.navbar {
 		border-width: $navbar-border-width;
-		margin-bottom: 0;
 		min-height: $navbar-height;
 
 		@media (min-width: $grid-float-breakpoint) {

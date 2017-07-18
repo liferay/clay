@@ -7,6 +7,7 @@ $navbar-border-top-width: 0 !default;
 
 $navbar-height: 48px !default;
 $navbar-link-line-height: 24px !default;
+$navbar-margin-bottom: 0 !default;
 $navbar-padding-horizontal: 15px !default;
 $navbar-padding-vertical: (($navbar-height - $navbar-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 
