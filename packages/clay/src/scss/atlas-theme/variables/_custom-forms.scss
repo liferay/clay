@@ -22,11 +22,11 @@ $custom-control-description-disabled-color: lighten($input-label-color, 15%) !de
 
 // Custom Checkbox
 
-$custom-checkbox-icon-checked: lx-icon(check, #FFF) !default;
+$custom-checkbox-indicator-icon-checked: lx-icon(check, #FFF) !default;
 $custom-checkbox-indicator-icon-checked-bg-size: 0.6em !default; // 12px
 $custom-checkbox-indicator-icon-indeterminate-bg-size: 0.5em !default; // 10px
 
-$custom-checkbox-indeterminate-bg: $custom-control-indicator-active-bg !default;
+$custom-checkbox-indicator-indeterminate-bg: $custom-control-indicator-active-bg !default;
 
 // Custom Radio
 
