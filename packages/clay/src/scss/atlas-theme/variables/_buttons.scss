@@ -1,5 +1,3 @@
-// Structure
-
 // When changing variables that affect the btn's height, make sure to match the
 // corresponding input-height with the button height.
 
@@ -36,6 +34,8 @@ $btn-border-radius-lg: $border-radius !default;
 $btn-box-shadow: none !default;
 $btn-active-box-shadow: none !default;
 $btn-transition: background 0.2s ease-in-out, border 0.2s ease-in-out, box-shadow 0.2s ease-in-out !default;
+
+// Button Variants
 
 $btn-primary-color: #FFF !default;
 $btn-primary-bg: map-get($theme-colors, primary) !default;

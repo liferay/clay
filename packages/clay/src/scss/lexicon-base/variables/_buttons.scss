@@ -28,6 +28,10 @@ $btn-disabled-opacity: null !default;
 $btn-fixed-spacer-x: 20px !default;
 $btn-fixed-spacer-y: $btn-fixed-spacer-x !default;
 
+$zindex-btn-action: 950 !default;
+
+// Button Variants
+
 $btn-primary-bg: null !default;
 $btn-primary-border-color: null !default;
 $btn-primary-color: null !default;
@@ -94,4 +98,113 @@ $btn-danger-active-color: null !default;
 $btn-danger-active-bg: null !default;
 $btn-danger-active-border-color: null !default;
 
-$zindex-btn-action: 950 !default;
+$btn-palette: (
+	primary: (
+		bg: $btn-primary-bg,
+		border-color: $btn-primary-border-color,
+		color: $btn-primary-color,
+		hover-bg: $btn-primary-hover-bg,
+		hover-border-color: $btn-primary-hover-border-color,
+		hover-color: $btn-primary-hover-color,
+		focus-bg: $btn-primary-hover-bg,
+		focus-border-color: $btn-primary-hover-border-color,
+		focus-box-shadow: $btn-primary-focus-box-shadow,
+		focus-color: $btn-primary-hover-color,
+		disabled-bg: $btn-primary-bg,
+		disabled-border-color: $btn-primary-border-color,
+		disabled-color: $btn-primary-color,
+		active-bg: $btn-primary-active-bg,
+		active-border-color: $btn-primary-active-border-color,
+		active-color: $btn-primary-active-color
+	),
+	secondary: (
+		bg: $btn-secondary-bg,
+		border-color: $btn-secondary-border-color,
+		color: $btn-secondary-color,
+		hover-bg: $btn-secondary-hover-bg,
+		hover-border-color: $btn-secondary-hover-border-color,
+		hover-color: $btn-secondary-hover-color,
+		focus-bg: $btn-secondary-hover-bg,
+		focus-border-color: $btn-secondary-hover-border-color,
+		focus-box-shadow: $btn-secondary-focus-box-shadow,
+		focus-color: $btn-secondary-hover-color,
+		disabled-bg: $btn-secondary-bg,
+		disabled-border-color: $btn-secondary-border-color,
+		disabled-color: $btn-secondary-color,
+		active-bg: $btn-secondary-active-bg,
+		active-border-color: $btn-secondary-active-border-color,
+		active-color: $btn-secondary-active-color
+	),
+	success: (
+		bg: $btn-success-bg,
+		border-color: $btn-success-border-color,
+		color: $btn-success-color,
+		hover-bg: $btn-success-hover-bg,
+		hover-border-color: $btn-success-hover-border-color,
+		hover-color: $btn-success-hover-color,
+		focus-bg: $btn-success-hover-bg,
+		focus-border-color: $btn-success-hover-border-color,
+		focus-box-shadow: $btn-success-focus-box-shadow,
+		focus-color: $btn-success-hover-color,
+		disabled-bg: $btn-success-bg,
+		disabled-border-color: $btn-success-border-color,
+		disabled-color: $btn-success-color,
+		active-bg: $btn-success-active-bg,
+		active-border-color: $btn-success-active-border-color,
+		active-color: $btn-success-active-color
+	),
+	info: (
+		bg: $btn-info-bg,
+		border-color: $btn-info-border-color,
+		color: $btn-info-color,
+		hover-bg: $btn-info-hover-bg,
+		hover-border-color: $btn-info-hover-border-color,
+		hover-color: $btn-info-hover-color,
+		focus-bg: $btn-info-hover-bg,
+		focus-border-color: $btn-info-hover-border-color,
+		focus-box-shadow: $btn-info-focus-box-shadow,
+		focus-color: $btn-info-hover-color,
+		disabled-bg: $btn-info-bg,
+		disabled-border-color: $btn-info-border-color,
+		disabled-color: $btn-info-color,
+		active-bg: $btn-info-active-bg,
+		active-border-color: $btn-info-active-border-color,
+		active-color: $btn-info-active-color
+	),
+	warning: (
+		bg: $btn-warning-bg,
+		border-color: $btn-warning-border-color,
+		color: $btn-warning-color,
+		hover-bg: $btn-warning-hover-bg,
+		hover-border-color: $btn-warning-hover-border-color,
+		hover-color: $btn-warning-hover-color,
+		focus-bg: $btn-warning-hover-bg,
+		focus-border-color: $btn-warning-hover-border-color,
+		focus-box-shadow: $btn-warning-focus-box-shadow,
+		focus-color: $btn-warning-hover-color,
+		disabled-bg: $btn-warning-bg,
+		disabled-border-color: $btn-warning-border-color,
+		disabled-color: $btn-warning-color,
+		active-bg: $btn-warning-active-bg,
+		active-border-color: $btn-warning-active-border-color,
+		active-color: $btn-warning-active-color
+	),
+	danger: (
+		bg: $btn-danger-bg,
+		border-color: $btn-danger-border-color,
+		color: $btn-danger-color,
+		hover-bg: $btn-danger-hover-bg,
+		hover-border-color: $btn-danger-hover-border-color,
+		hover-color: $btn-danger-hover-color,
+		focus-bg: $btn-danger-hover-bg,
+		focus-border-color: $btn-danger-hover-border-color,
+		focus-box-shadow: $btn-danger-focus-box-shadow,
+		focus-color: $btn-danger-hover-color,
+		disabled-bg: $btn-danger-bg,
+		disabled-border-color: $btn-danger-border-color,
+		disabled-color: $btn-danger-color,
+		active-bg: $btn-danger-active-bg,
+		active-border-color: $btn-danger-active-border-color,
+		active-color: $btn-danger-active-color
+	)
+) !default;
