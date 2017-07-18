@@ -1,4 +1,18 @@
 .sidebar-default {
-    @extend .sidebar-light;
-    @extend .sidebar-light-bg;
+	@extend .sidebar-light;
+	@extend .sidebar-light-bg;
+}
+
+.sidebar-actions,
+.sidebar-header-actions {
+	float: right;
+
+	@include list-unstyled;
+
+	margin-bottom: 0;
+	margin-right: -9px;
+
+	> li {
+		display: inline-block;
+	}
 }
