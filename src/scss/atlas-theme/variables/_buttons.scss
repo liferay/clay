@@ -103,4 +103,18 @@ $btn-danger-active-color: $btn-danger-color !default;
 $btn-danger-active-bg: darken($btn-danger-hover-bg, 12%) !default;
 $btn-danger-active-border-color: $btn-danger-active-bg !default;
 
+$btn-light-color: map-get($theme-colors, secondary) !default;
+$btn-light-bg: #FFF !default;
+$btn-light-hover-color: $btn-light-color !default;
+$btn-light-hover-bg: #FCFEFF !default;
+$btn-light-hover-border-color: $btn-light-hover-bg !default;
+$btn-light-focus-box-shadow: 0 0 0 2px rgba($btn-light-hover-bg, 0.5) !default;
+$btn-light-active-bg: darken($btn-light-hover-bg, 6%) !default;
+$btn-light-active-border-color: $btn-light-active-bg !default;
+
+$btn-dark-color: #FFF !default;
+$btn-dark-hover-color: $btn-dark-color !default;
+$btn-dark-hover-bg: darken(map-get($theme-colors, dark), 8%) !default;
+$btn-dark-focus-box-shadow: 0 0 0 2px rgba($btn-dark-hover-bg, 0.5) !default;
+
 $btn-link-disabled-color: $link-color !default;

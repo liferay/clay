@@ -98,6 +98,28 @@ $btn-danger-active-color: null !default;
 $btn-danger-active-bg: null !default;
 $btn-danger-active-border-color: null !default;
 
+$btn-light-bg: null !default;
+$btn-light-border-color: null !default;
+$btn-light-color: null !default;
+$btn-light-hover-color: null !default;
+$btn-light-hover-bg: null !default;
+$btn-light-hover-border-color: null !default;
+$btn-light-focus-box-shadow: null !default;
+$btn-light-active-color: null !default;
+$btn-light-active-bg: null !default;
+$btn-light-active-border-color: null !default;
+
+$btn-dark-bg: null !default;
+$btn-dark-border-color: null !default;
+$btn-dark-color: null !default;
+$btn-dark-hover-color: null !default;
+$btn-dark-hover-bg: null !default;
+$btn-dark-hover-border-color: null !default;
+$btn-dark-focus-box-shadow: null !default;
+$btn-dark-active-color: null !default;
+$btn-dark-active-bg: null !default;
+$btn-dark-active-border-color: null !default;
+
 $btn-palette: (
 	primary: (
 		bg: $btn-primary-bg,
@@ -206,5 +228,41 @@ $btn-palette: (
 		active-bg: $btn-danger-active-bg,
 		active-border-color: $btn-danger-active-border-color,
 		active-color: $btn-danger-active-color
+	),
+	light: (
+		bg: $btn-light-bg,
+		border-color: $btn-light-border-color,
+		color: $btn-light-color,
+		hover-bg: $btn-light-hover-bg,
+		hover-border-color: $btn-light-hover-border-color,
+		hover-color: $btn-light-hover-color,
+		focus-bg: $btn-light-hover-bg,
+		focus-border-color: $btn-light-hover-border-color,
+		focus-box-shadow: $btn-light-focus-box-shadow,
+		focus-color: $btn-light-hover-color,
+		disabled-bg: $btn-light-bg,
+		disabled-border-color: $btn-light-border-color,
+		disabled-color: $btn-light-color,
+		active-bg: $btn-light-active-bg,
+		active-border-color: $btn-light-active-border-color,
+		active-color: $btn-light-active-color
+	),
+	dark: (
+		bg: $btn-dark-bg,
+		border-color: $btn-dark-border-color,
+		color: $btn-dark-color,
+		hover-bg: $btn-dark-hover-bg,
+		hover-border-color: $btn-dark-hover-border-color,
+		hover-color: $btn-dark-hover-color,
+		focus-bg: $btn-dark-hover-bg,
+		focus-border-color: $btn-dark-hover-border-color,
+		focus-box-shadow: $btn-dark-focus-box-shadow,
+		focus-color: $btn-dark-hover-color,
+		disabled-bg: $btn-dark-bg,
+		disabled-border-color: $btn-dark-border-color,
+		disabled-color: $btn-dark-color,
+		active-bg: $btn-dark-active-bg,
+		active-border-color: $btn-dark-active-border-color,
+		active-color: $btn-dark-active-color
 	)
 ) !default;
