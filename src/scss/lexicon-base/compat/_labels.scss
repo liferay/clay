@@ -60,3 +60,7 @@
 // .label-danger {
 //   @include label-variant(map-get($theme-colors, danger));
 // }
+
+.label {
+    text-transform: inherit;
+}

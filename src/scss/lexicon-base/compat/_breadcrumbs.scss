@@ -1,5 +1,6 @@
 .breadcrumb > li {
 	float: left;
+	text-transform: uppercase;
 
 	&.active {
 		color: $breadcrumb-active-color;
