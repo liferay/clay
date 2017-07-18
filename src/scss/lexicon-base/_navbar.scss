@@ -359,6 +359,8 @@
 	@include scale-component {
 		font-size: $navbar-toggler-link-font-size-mobile;
 		padding-bottom: $navbar-toggler-link-padding-y-mobile;
+		padding-left: $navbar-toggler-link-padding-x-mobile;
+		padding-right: $navbar-toggler-link-padding-x-mobile;
 		padding-top: $navbar-toggler-link-padding-y-mobile;
 	}
 
@@ -537,33 +539,6 @@
 	}
 }
 
-.navbar-expand .navbar-nav .nav-link,
-.navbar-nav .nav-link {
-	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
-		padding-bottom: $navbar-link-padding-y;
-		padding-top: $navbar-link-padding-y;
-	}
-
-	@if not ($navbar-link-padding-x == 0.5rem) {
-		padding-left: $navbar-link-padding-x;
-		padding-right: $navbar-link-padding-x;
-	}
-
-	white-space: nowrap;
-
-	@include scale-component {
-		@if not ($navbar-link-padding-y-mobile == $nav-link-padding-y) {
-			padding-bottom: $navbar-link-padding-y-mobile;
-			padding-top: $navbar-link-padding-y-mobile;
-		}
-
-		@if not ($navbar-link-padding-x-mobile == 0.5rem) {
-			padding-left: $navbar-link-padding-x-mobile;
-			padding-right: $navbar-link-padding-x-mobile;
-		}
-	}
-}
-
 // Navbar Expand
 
 .navbar-expand {
@@ -595,19 +570,13 @@
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
-		&#{$infix} {
-			.container,
-			.container-fluid {
-				padding-left: 0;
-				padding-right: 0;
-			}
-
+		&#{$infix} { // .navbar-expand, sm, md, lg, xl
 			.nav-item {
 				align-items: center;
 				display: flex;
 			}
 
-			@if not ($infix == '') {
+			@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
@@ -653,6 +622,16 @@
 						max-width: calc(100% - 180px);
 					}
 
+					.navbar-nav .nav-link {
+						padding-bottom: $nav-link-padding-y;
+						padding-top: $nav-link-padding-y;
+
+						@if not ($navbar-link-padding-x == 0.5rem) {
+							padding-left: $navbar-link-padding-x;
+							padding-right: $navbar-link-padding-x;
+						}
+					}
+
 					.navbar-collapse {
 						width: 100%;
 
@@ -663,28 +642,11 @@
 						.nav-item {
 							display: block;
 						}
-
-						.nav-link {
-							@if ($navbar-link-padding-x == 0.5rem) {
-								padding-left: 0;
-								padding-right: 0;
-							}
-						}
 					}
 				}
 			}
 
 			@include media-breakpoint-up($next) {
-				@if ($infix == '') {
-					.container,
-					.container-fluid {
-						@include media-breakpoint-up(md) {
-							padding-left: $grid-gutter-width / 2;
-							padding-right: $grid-gutter-width / 2;
-						}
-					}
-				}
-
 				.navbar-form {
 					padding-left: $navbar-link-padding-x;
 					padding-right: $navbar-link-padding-x;
@@ -698,14 +660,7 @@
 					max-width: $navbar-text-truncate-max-width - $navbar-text-truncate-spacer-right;
 				}
 
-				@if not ($infix == '') {
-					.container,
-					.container-fluid {
-						flex-wrap: nowrap;
-						padding-left: $grid-gutter-width / 2;
-						padding-right: $grid-gutter-width / 2;
-					}
-
+				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
 					.navbar-collapse {
 						flex-grow: 1;
 						flex-wrap: wrap;
@@ -726,6 +681,16 @@
 				}
 
 				.navbar-nav .nav-link {
+					@if not ($navbar-link-padding-y == $nav-link-padding-y) {
+						padding-bottom: $navbar-link-padding-y;
+						padding-top: $navbar-link-padding-y;
+					}
+
+					@if not ($navbar-link-padding-x == 0.5rem) {
+						padding-left: $navbar-link-padding-x;
+						padding-right: $navbar-link-padding-x;
+					}
+
 					&.active:after {
 						// Will need to be revisted if https://github.com/twbs/bootstrap/pull/22926 is merged
 						border-width: 0; // Undo BS4 .dropdown-toggle caret styles
@@ -760,6 +725,20 @@
 
 					@if not ($navbar-light-active-highlight == transparent) {
 						content: '';
+					}
+				}
+			}
+
+			.navbar-nav .nav-link {
+				@include scale-component {
+					@if not ($navbar-link-padding-y-mobile == $nav-link-padding-y) {
+						padding-bottom: $navbar-link-padding-y-mobile;
+						padding-top: $navbar-link-padding-y-mobile;
+					}
+
+					@if not ($navbar-link-padding-x-mobile == 0.5rem) {
+						padding-left: $navbar-link-padding-x-mobile;
+						padding-right: $navbar-link-padding-x-mobile;
 					}
 				}
 			}
