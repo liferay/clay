@@ -106,7 +106,7 @@
 		}
 
 		&:indeterminate ~ .custom-control-indicator {
-			background-color: $custom-checkbox-indeterminate-bg;
+			background-color: $custom-checkbox-indicator-indeterminate-bg;
 			background-size: $custom-checkbox-indicator-icon-indeterminate-bg-size;
 			border-color: $custom-control-indicator-indeterminate-border-color;
 		}
