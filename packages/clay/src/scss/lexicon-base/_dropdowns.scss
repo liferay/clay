@@ -69,7 +69,9 @@
 	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/22926 is merged
 	@if ($enable-dropdown-caret == false) {
 		&:after {
+			border-width: 0;
 			content: normal;
+			margin-left: 0;
 		}
 	}
 }
