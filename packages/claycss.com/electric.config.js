@@ -21,6 +21,7 @@ module.exports = {
 		},
 		{
 			src: [
+				path.join(clayJSPath, 'popper.js'),
 				path.join(clayJSPath, 'svg4everybody.js'),
 				path.join(clayJSPath, 'bootstrap.js')
 			]
