@@ -16,7 +16,7 @@ $navbar-desktop-link-line-height: 28px !default;
 $navbar-desktop-padding-horizontal: (($grid-gutter-width / 2)) !default;
 $navbar-desktop-padding-vertical: (($navbar-desktop-height - $navbar-desktop-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
 
-$navbar-link-active-bottom-border-width: 2px !default;
+$navbar-link-active-bottom-border-width: $navbar-border-bottom-width + 1px !default;
 
 $navbar-default-border-bottom-width: $navbar-border-bottom-width !default;
 $navbar-default-border-left-width: $navbar-border-left-width !default;
