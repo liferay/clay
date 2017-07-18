@@ -8327,6 +8327,56 @@ fieldset[disabled] .btn {
   opacity: 0.5;
 }
 
+.btn-action {
+  z-index: 950;
+}
+
+.btn-action,
+.btn-action .btn {
+  height: 4rem;
+  padding: 0;
+  position: relative;
+  width: 4rem;
+}
+
+@media (max-width: 767px) {
+  .btn-action,
+  .btn-action .btn {
+    height: 3.25rem;
+    width: 3.25rem;
+  }
+}
+
+.btn-action .lexicon-icon {
+  display: block;
+  height: 100%;
+  margin: auto;
+}
+
+.btn-bottom-left {
+  bottom: 20px;
+  left: 20px;
+  position: fixed;
+}
+
+.btn-bottom-right {
+  bottom: 20px;
+  position: fixed;
+  right: 20px;
+}
+
+.btn-top-left {
+  left: 20px;
+  position: fixed;
+  top: 20px;
+}
+
+.btn-top-right {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
 .btn-primary {
   background-color: #65B6F0;
   border-color: #65B6F0;
@@ -8518,54 +8568,52 @@ fieldset[disabled] .btn {
   color: #FFF;
 }
 
-.btn-action {
-  z-index: 950;
+.btn-light {
+  background-color: #FFF;
+  color: #869CAD;
 }
 
-.btn-action,
-.btn-action .btn {
-  height: 4rem;
-  padding: 0;
-  position: relative;
-  width: 4rem;
+.btn-light:hover {
+  background-color: #FCFEFF;
+  border-color: #FCFEFF;
+  color: #869CAD;
 }
 
-@media (max-width: 767px) {
-  .btn-action,
-  .btn-action .btn {
-    height: 3.25rem;
-    width: 3.25rem;
-  }
+.btn-light:focus, .btn-light.focus, .form-file-input:focus + .btn-light {
+  background-color: #FCFEFF;
+  border-color: #FCFEFF;
+  box-shadow: 0 0 0 2px rgba(252, 254, 255, 0.5);
+  color: #869CAD;
 }
 
-.btn-action .lexicon-icon {
-  display: block;
-  height: 100%;
-  margin: auto;
+.btn-light:active, .btn-light.active,
+.show > .btn-light.dropdown-toggle {
+  background-color: #ddf4ff;
+  border-color: #ddf4ff;
 }
 
-.btn-bottom-left {
-  bottom: 20px;
-  left: 20px;
-  position: fixed;
+.btn-light:disabled, .btn-light.disabled {
+  background-color: #FFF;
+  color: #869CAD;
 }
 
-.btn-bottom-right {
-  bottom: 20px;
-  position: fixed;
-  right: 20px;
+.btn-dark {
+  color: #FFF;
 }
 
-.btn-top-left {
-  left: 20px;
-  position: fixed;
-  top: 20px;
+.btn-dark:hover {
+  background-color: #6e889d;
+  color: #FFF;
 }
 
-.btn-top-right {
-  position: fixed;
-  right: 20px;
-  top: 20px;
+.btn-dark:focus, .btn-dark.focus, .form-file-input:focus + .btn-dark {
+  background-color: #6e889d;
+  box-shadow: 0 0 0 2px rgba(110, 136, 157, 0.5);
+  color: #FFF;
+}
+
+.btn-dark:disabled, .btn-dark.disabled {
+  color: #FFF;
 }
 
 .card,
