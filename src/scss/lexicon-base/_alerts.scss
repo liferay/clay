@@ -44,28 +44,28 @@
 
 @each $color, $value in $alert-palette {
 	.alert-#{$color} {
-		background-color: nth($value, 1);
-		border-color: nth($value, 2);
-		color: nth($value, 3);
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
 
 		.close {
-			color: nth($value, 4);
+			color: map-get($value, close-color);
 
 			@include hover-focus {
-				color: nth($value, 5);
+				color: map-get($value, close-hover-color);
 			}
 		}
 
 		.alert-link {
-			color: nth($value, 7);
+			color: map-get($value, link-color);
 
 			@include hover-focus {
-				color: nth($value, 8);
+				color: map-get($value, link-hover-color);
 			}
 		}
 
 		.lead {
-			color: nth($value, 6);
+			color: map-get($value, lead-color);
 		}
 	}
 }

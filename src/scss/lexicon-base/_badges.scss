@@ -63,23 +63,23 @@
 
 @each $color, $value in $badge-palette {
 	.badge-#{$color} {
-		background-color: nth($value, 1);
-		border-color: nth($value, 3);
-		color: nth($value, 5);
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
 
 		&[href] {
 			@include hover-focus {
-				background-color: nth($value, 2);
-				border-color: nth($value, 4);
-				color: nth($value, 6);
+				background-color: map-get($value, hover-bg);
+				border-color: map-get($value, hover-border-color);
+				color: map-get($value, hover-color);
 			}
 		}
 
 		a {
-			color: nth($value, 7);
+			color: map-get($value, link-color);
 
 			@include hover-focus {
-				color: nth($value, 8);
+				color: map-get($value, link-hover-color);
 			}
 		}
 	}

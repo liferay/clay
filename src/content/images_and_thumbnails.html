@@ -3,41 +3,33 @@ title: Images, Thumbnails, and Aspect Ratios
 section: Components
 ---
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Responsive Image</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use <code>.img-fluid</code> to make an image shrink with its container.</p>
+			<p>Use <code>.img-fluid</code> to make an image fit with its container.</p>
 		</blockquote>
 
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-6 col-sm-3">
 				<img alt="responsive image" class="img-fluid" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code class="html">```<img alt="..." class="img-fluid" src="...">```</code></pre>
-</div>
-
+			<div class="col-3 col-sm-2">
+				<img alt="responsive image" class="img-fluid" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row" id="imageShapes">
+<div class="clay-site-row-spacer row" id="imageShapes">
 	<div class="col-md-12">
 		<h3>Image Shapes</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Use <code>.rounded</code>, <code>.rounded-circle</code>, or <code>.img-thumbnail</code> on <code>```<img>```</code> to quickly style the borders.</p>
+
+			<p><code>.rounded-0</code> will remove the <code>border-radius</code> styles.</p>
 		</blockquote>
 
 		<div class="row">
@@ -53,25 +45,10 @@ section: Components
 				<img alt="responsive thumbnail image" class="img-fluid img-thumbnail" src="{{rootPath}}/images/thumbnail_placeholder.gif">
 			</div>
 		</div>
-
-		<div class="row">
-			<div class="col-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">```<img alt="..." class="img-rounded" src="...">
-<img alt="..." class="img-circle" src="...">
-<img alt="..." class="img-thumbnail" src="...">```</code></pre>
-</div>
-
-			</div>
-		</div>
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Image Aspect Ratios</h3>
 
@@ -83,7 +60,7 @@ section: Components
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Horizontal Aspect Ratio</h3>
 
@@ -125,7 +102,7 @@ section: Components
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Vertical Aspect Ratio</h3>
 
@@ -164,47 +141,10 @@ section: Components
 				</div>
 			</div>
 		</div>
-
-		<div class="row">
-			<div class="col-12">
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse00002"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse00002">
-	<pre><code class="html">```<div class="col-3">
-    <div class="aspect-ratio aspect-ratio-vertical">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-    </div>
-</div>
-<div class="col-3">
-    <div class="aspect-ratio aspect-ratio-vertical aspect-ratio-3-to-2">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-    </div>
-</div>
-<div class="col-3">
-    <div class="aspect-ratio aspect-ratio-vertical aspect-ratio-4-to-3">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-    </div>
-</div>
-<div class="col-3">
-    <div class="aspect-ratio aspect-ratio-vertical aspect-ratio-8-to-5">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-    </div>
-</div>
-<div class="col-3">
-    <div class="aspect-ratio aspect-ratio-vertical aspect-ratio-16-to-9">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-    </div>
-</div>```</code></pre>
-</div>
-
-			</div>
-		</div>
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Horizontal 1:1 Aspect Ratio with Varying Image Sizes</h3>
 
@@ -228,7 +168,7 @@ section: Components
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Images inside <code>aspect-ratio</code> are aligned bottom by default. Use class <code>aspect-ratio-top</code> or <code>aspect-ratio-middle</code> to align top or vertically center, respectively.</p>
@@ -254,7 +194,7 @@ section: Components
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Vertical 1:1 Aspect Ratio with Varying Image Sizes</h3>
 
@@ -278,7 +218,7 @@ section: Components
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>Images inside <code>aspect-ratio-vertical</code> are aligned left by default. Use class <code>aspect-ratio-right</code> or <code>aspect-ratio-center</code> to align right or horizontally center, respectively.</p>
@@ -304,7 +244,7 @@ section: Components
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row" id="cropImage">
+<div class="clay-site-row-spacer row" id="cropImage">
 	<div class="col-md-12">
 		<h3>Crop Img</h3>
 
@@ -318,7 +258,7 @@ section: Components
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Horizontal Crop Img Alignment</h3>
 
@@ -351,7 +291,7 @@ section: Components
 	</div>
 </div>
 
-<div class="lx-site-row-spacer row">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Vertical Crop Img Alignment</h3>
 

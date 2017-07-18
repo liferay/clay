@@ -294,18 +294,35 @@
 			width: 100%;
 		}
 	}
-}
 
-.navbar-nav {
-	flex-direction: row;
+	.btn-link {
+		color: $nav-link-color;
 
-	.nav-link {
-		padding: $navbar-link-padding-y $navbar-link-padding-x;
+		@include hover-focus {
+			color: $nav-link-hover-color;
+		}
 
-		@include scale-component {
-			padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
+		&.disabled {
+			color: $nav-link-disabled-color;
+		}
+
+		&.active {
+			color: $nav-link-active-color;
 		}
 	}
+}
+
+.navbar-text-truncate {
+	display: inline-block;
+	max-width: 100%;
+
+	@include text-truncate;
+
+	vertical-align: bottom;
+}
+
+.dropdown-toggle .navbar-text-truncate {
+	max-width: calc(100% - #{$navbar-text-truncate-spacer-right});
 }
 
 // Navbar Toggler
@@ -316,6 +333,11 @@
 	margin-left: $navbar-toggler-margin-x;
 	margin-right: $navbar-toggler-margin-x;
 	margin-top: $navbar-toggler-margin-y;
+
+	@include scale-component {
+		margin-left: $navbar-toggler-margin-x-mobile;
+		margin-right: $navbar-toggler-margin-x-mobile;
+	}
 }
 
 .navbar-toggler-link {
@@ -337,6 +359,8 @@
 	@include scale-component {
 		font-size: $navbar-toggler-link-font-size-mobile;
 		padding-bottom: $navbar-toggler-link-padding-y-mobile;
+		padding-left: $navbar-toggler-link-padding-x-mobile;
+		padding-right: $navbar-toggler-link-padding-x-mobile;
 		padding-top: $navbar-toggler-link-padding-y-mobile;
 	}
 
@@ -366,21 +390,7 @@
 	}
 
 	.lexicon-icon {
-		margin-right: 3px;
 		margin-top: 0;
-	}
-}
-
-.navbar-toggler-text {
-	display: inline-block;
-	max-width: $navbar-toggler-text-max-width;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-
-	+ .lexicon-icon {
-		margin-left: 5px;
-		margin-right: -5px;
 	}
 }
 
@@ -388,10 +398,12 @@
 
 .navbar-brand {
 	color: $navbar-brand-color;
+	margin-right: $navbar-brand-margin-right;
 	padding-left: $navbar-brand-padding-x;
 	padding-right: $navbar-brand-padding-x;
 
 	@include scale-component {
+		margin-right: $navbar-brand-margin-right-mobile;
 		padding-bottom: $navbar-brand-padding-y-mobile;
 		padding-left: $navbar-brand-padding-x-mobile;
 		padding-right: $navbar-brand-padding-x-mobile;
@@ -511,44 +523,21 @@
 // Override BS4 `.navbar-expand .navbar-nav .nav-link` should have padding if
 // not inside .navbar-collapse
 
-.navbar-expand .navbar-nav .nav-link,
-.navbar-nav .nav-link {
-	@if not ($navbar-link-padding-y == $nav-link-padding-y) {
-		padding-bottom: $navbar-link-padding-y;
-		padding-top: $navbar-link-padding-y;
-	}
+.navbar-nav {
+	flex-direction: row;
 
-	@if not ($navbar-link-padding-x == 0.5rem) {
-		padding-left: $navbar-link-padding-x;
-		padding-right: $navbar-link-padding-x;
-	}
-
-	white-space: nowrap;
-
-	@include scale-component {
-		@if not ($navbar-link-padding-y-mobile == $nav-link-padding-y) {
-			padding-bottom: $navbar-link-padding-y-mobile;
-			padding-top: $navbar-link-padding-y-mobile;
-		}
-
-		@if not ($navbar-link-padding-x-mobile == 0.5rem) {
-			padding-left: $navbar-link-padding-x-mobile;
-			padding-right: $navbar-link-padding-x-mobile;
+	.nav-item {
+		.dropdown-menu {
+			margin-top: $navbar-nav-item-dropdown-margin-top;
 		}
 	}
-}
 
-.navbar-nav .navbar-text {
-	padding: $navbar-link-padding-y $navbar-link-padding-x;
+	.navbar-text {
+		padding: $navbar-link-padding-y $navbar-link-padding-x;
 
-	@include scale-component {
-		padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
-	}
-}
-
-.navbar-nav .nav-item {
-	.dropdown-menu {
-		margin-top: $navbar-nav-item-dropdown-margin-top;
+		@include scale-component {
+			padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
+		}
 	}
 }
 
@@ -583,19 +572,13 @@
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
-		&#{$infix} {
-			.container,
-			.container-fluid {
-				padding-left: 0;
-				padding-right: 0;
-			}
-
+		&#{$infix} { // .navbar-expand, sm, md, lg, xl
 			.nav-item {
 				align-items: center;
 				display: flex;
 			}
 
-			@if not ($infix == '') {
+			@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
@@ -632,7 +615,25 @@
 						}
 					}
 
+					.navbar-brand {
+						margin-right: 0;
+						max-width: calc(100% - 72px);
+					}
+
+					.navbar-toggler-link {
+						max-width: calc(100% - 180px);
+					}
+
+					.navbar-nav .nav-link {
+						padding-bottom: $nav-link-padding-y;
+						padding-top: $nav-link-padding-y;
+						padding-left: $navbar-link-padding-x;
+						padding-right: $navbar-link-padding-x;
+					}
+
 					.navbar-collapse {
+						width: 100%;
+
 						.navbar-nav {
 							flex-direction: column;
 						}
@@ -640,41 +641,25 @@
 						.nav-item {
 							display: block;
 						}
-
-						.nav-link {
-							@if ($navbar-link-padding-x == 0.5rem) {
-								padding-left: 0;
-								padding-right: 0;
-							}
-						}
 					}
 				}
 			}
 
 			@include media-breakpoint-up($next) {
-				@if ($infix == '') {
-					.container,
-					.container-fluid {
-						@include media-breakpoint-up(md) {
-							padding-left: $grid-gutter-width / 2;
-							padding-right: $grid-gutter-width / 2;
-						}
-					}
-				}
-
 				.navbar-form {
 					padding-left: $navbar-link-padding-x;
 					padding-right: $navbar-link-padding-x;
 				}
 
-				@if not ($infix == '') {
-					.container,
-					.container-fluid {
-						flex-wrap: nowrap;
-						padding-left: $grid-gutter-width / 2;
-						padding-right: $grid-gutter-width / 2;
-					}
+				.navbar-text-truncate {
+					max-width: $navbar-text-truncate-max-width;
+				}
 
+				.dropdown-toggle .navbar-text-truncate {
+					max-width: $navbar-text-truncate-max-width - $navbar-text-truncate-spacer-right;
+				}
+
+				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
 					.navbar-collapse {
 						flex-grow: 1;
 						flex-wrap: wrap;
@@ -695,11 +680,17 @@
 				}
 
 				.navbar-nav .nav-link {
-					&.active:after {
-						// Will need to be revisted if https://github.com/twbs/bootstrap/pull/22926 is merged
-						border-width: 0; // Undo BS4 .dropdown-toggle caret styles
-						margin-left: 0; // Undo BS4 .dropdown-toggle caret styles
+					@if not ($navbar-link-padding-y == $nav-link-padding-y) {
+						padding-bottom: $navbar-link-padding-y;
+						padding-top: $navbar-link-padding-y;
+					}
 
+					@if not ($navbar-link-padding-x == 0.5rem) {
+						padding-left: $navbar-link-padding-x;
+						padding-right: $navbar-link-padding-x;
+					}
+
+					&.active:after {
 						background-color: $navbar-active-highlight;
 						bottom: -$navbar-border-bottom-width - $navbar-padding-y;
 
@@ -729,6 +720,20 @@
 
 					@if not ($navbar-light-active-highlight == transparent) {
 						content: '';
+					}
+				}
+			}
+
+			.navbar-nav .nav-link {
+				@include scale-component {
+					@if not ($navbar-link-padding-y-mobile == $nav-link-padding-y) {
+						padding-bottom: $navbar-link-padding-y-mobile;
+						padding-top: $navbar-link-padding-y-mobile;
+					}
+
+					@if not ($navbar-link-padding-x-mobile == 0.5rem) {
+						padding-left: $navbar-link-padding-x-mobile;
+						padding-right: $navbar-link-padding-x-mobile;
 					}
 				}
 			}
@@ -762,6 +767,18 @@
 			&:focus {
 				color: $collapse-basic-search-transparent-light-input-focus-color;
 			}
+		}
+	}
+
+	.btn-link {
+		color: $navbar-light-color;
+
+		@include hover-focus {
+			color: $navbar-light-hover-color;
+		}
+
+		&.disabled {
+			color: $navbar-light-disabled-color;
 		}
 	}
 
@@ -861,6 +878,18 @@
 			&:focus {
 				color: $collapse-basic-search-transparent-inverse-input-focus-color;
 			}
+		}
+	}
+
+	.btn-link {
+		color: $navbar-dark-color;
+
+		@include hover-focus {
+			color: $navbar-dark-hover-color;
+		}
+
+		&.disabled {
+			color: $navbar-dark-disabled-color;
 		}
 	}
 

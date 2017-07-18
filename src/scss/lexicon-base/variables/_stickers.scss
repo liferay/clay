@@ -55,43 +55,43 @@ $sticker-dark-color: $white !default;
 
 $sticker-palette: (
 	primary: (
-		$sticker-primary-bg,
-		$sticker-primary-border-color,
-		$sticker-primary-color
+		bg: $sticker-primary-bg,
+		border-color: $sticker-primary-border-color,
+		color: $sticker-primary-color
 	),
 	secondary: (
-		$sticker-secondary-bg,
-		$sticker-secondary-border-color,
-		$sticker-secondary-color
+		bg: $sticker-secondary-bg,
+		border-color: $sticker-secondary-border-color,
+		color: $sticker-secondary-color
 	),
 	success: (
-		$sticker-success-bg,
-		$sticker-success-border-color,
-		$sticker-success-color
+		bg: $sticker-success-bg,
+		border-color: $sticker-success-border-color,
+		color: $sticker-success-color
 	),
 	info: (
-		$sticker-info-bg,
-		$sticker-info-border-color,
-		$sticker-info-color
+		bg: $sticker-info-bg,
+		border-color: $sticker-info-border-color,
+		color: $sticker-info-color
 	),
 	warning: (
-		$sticker-warning-bg,
-		$sticker-warning-border-color,
-		$sticker-warning-color
+		bg: $sticker-warning-bg,
+		border-color: $sticker-warning-border-color,
+		color: $sticker-warning-color
 	),
 	danger: (
-		$sticker-danger-bg,
-		$sticker-danger-border-color,
-		$sticker-danger-color
+		bg: $sticker-danger-bg,
+		border-color: $sticker-danger-border-color,
+		color: $sticker-danger-color
 	),
 	light: (
-		$sticker-light-bg,
-		$sticker-light-border-color,
-		$sticker-light-color
+		bg: $sticker-light-bg,
+		border-color: $sticker-light-border-color,
+		color: $sticker-light-color
 	),
 	dark: (
-		$sticker-dark-bg,
-		$sticker-dark-border-color,
-		$sticker-dark-color
+		bg: $sticker-dark-bg,
+		border-color: $sticker-dark-border-color,
+		color: $sticker-dark-color
 	)
 ) !default;

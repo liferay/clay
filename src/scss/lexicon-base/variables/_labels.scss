@@ -108,83 +108,83 @@ $label-dark-link-hover-color: $label-dark-hover-color !default;
 
 $label-palette: (
 	primary: (
-		$label-primary-bg,
-		$label-primary-hover-bg,
-		$label-primary-border-color,
-		$label-primary-hover-border-color,
-		$label-primary-color,
-		$label-primary-hover-color,
-		$label-primary-link-color,
-		$label-primary-link-hover-color
+		bg: $label-primary-bg,
+		hover-bg: $label-primary-hover-bg,
+		border-color: $label-primary-border-color,
+		hover-border-color: $label-primary-hover-border-color,
+		color: $label-primary-color,
+		hover-color: $label-primary-hover-color,
+		link-color: $label-primary-link-color,
+		link-hover-color: $label-primary-link-hover-color
 	),
 	secondary: (
-		$label-secondary-bg,
-		$label-secondary-hover-bg,
-		$label-secondary-border-color,
-		$label-secondary-hover-border-color,
-		$label-secondary-color,
-		$label-secondary-hover-color,
-		$label-secondary-link-color,
-		$label-secondary-link-hover-color
+		bg: $label-secondary-bg,
+		hover-bg: $label-secondary-hover-bg,
+		border-color: $label-secondary-border-color,
+		hover-border-color: $label-secondary-hover-border-color,
+		color: $label-secondary-color,
+		hover-color: $label-secondary-hover-color,
+		link-color: $label-secondary-link-color,
+		link-hover-color: $label-secondary-link-hover-color
 	),
 	success: (
-		$label-success-bg,
-		$label-success-hover-bg,
-		$label-success-border-color,
-		$label-success-hover-border-color,
-		$label-success-color,
-		$label-success-hover-color,
-		$label-success-link-color,
-		$label-success-link-hover-color
+		bg: $label-success-bg,
+		hover-bg: $label-success-hover-bg,
+		border-color: $label-success-border-color,
+		hover-border-color: $label-success-hover-border-color,
+		color: $label-success-color,
+		hover-color: $label-success-hover-color,
+		link-color: $label-success-link-color,
+		link-hover-color: $label-success-link-hover-color
 	),
 	info: (
-		$label-info-bg,
-		$label-info-hover-bg,
-		$label-info-border-color,
-		$label-info-hover-border-color,
-		$label-info-color,
-		$label-info-hover-color,
-		$label-info-link-color,
-		$label-info-link-hover-color
+		bg: $label-info-bg,
+		hover-bg: $label-info-hover-bg,
+		border-color: $label-info-border-color,
+		hover-border-color: $label-info-hover-border-color,
+		color: $label-info-color,
+		hover-color: $label-info-hover-color,
+		link-color: $label-info-link-color,
+		link-hover-color: $label-info-link-hover-color
 	),
 	warning: (
-		$label-warning-bg,
-		$label-warning-hover-bg,
-		$label-warning-border-color,
-		$label-warning-hover-border-color,
-		$label-warning-color,
-		$label-warning-hover-color,
-		$label-warning-link-color,
-		$label-warning-link-hover-color
+		bg: $label-warning-bg,
+		hover-bg: $label-warning-hover-bg,
+		border-color: $label-warning-border-color,
+		hover-border-color: $label-warning-hover-border-color,
+		color: $label-warning-color,
+		hover-color: $label-warning-hover-color,
+		link-color: $label-warning-link-color,
+		link-hover-color: $label-warning-link-hover-color
 	),
 	danger: (
-		$label-danger-bg,
-		$label-danger-hover-bg,
-		$label-danger-border-color,
-		$label-danger-hover-border-color,
-		$label-danger-color,
-		$label-danger-hover-color,
-		$label-danger-link-color,
-		$label-danger-link-hover-color
+		bg: $label-danger-bg,
+		hover-bg: $label-danger-hover-bg,
+		border-color: $label-danger-border-color,
+		hover-border-color: $label-danger-hover-border-color,
+		color: $label-danger-color,
+		hover-color: $label-danger-hover-color,
+		link-color: $label-danger-link-color,
+		link-hover-color: $label-danger-link-hover-color
 	),
 	dark: (
-		$label-dark-bg,
-		$label-dark-hover-bg,
-		$label-dark-border-color,
-		$label-dark-hover-border-color,
-		$label-dark-color,
-		$label-dark-hover-color,
-		$label-dark-link-color,
-		$label-dark-link-hover-color
+		bg: $label-dark-bg,
+		hover-bg: $label-dark-hover-bg,
+		border-color: $label-dark-border-color,
+		hover-border-color: $label-dark-hover-border-color,
+		color: $label-dark-color,
+		hover-color: $label-dark-hover-color,
+		link-color: $label-dark-link-color,
+		link-hover-color: $label-dark-link-hover-color
 	),
 	light: (
-		$label-light-bg,
-		$label-light-hover-bg,
-		$label-light-border-color,
-		$label-light-hover-border-color,
-		$label-light-color,
-		$label-light-hover-color,
-		$label-light-link-color,
-		$label-light-link-hover-color
+		bg: $label-light-bg,
+		hover-bg: $label-light-hover-bg,
+		border-color: $label-light-border-color,
+		hover-border-color: $label-light-hover-border-color,
+		color: $label-light-color,
+		hover-color: $label-light-hover-color,
+		link-color: $label-light-link-color,
+		link-hover-color: $label-light-link-hover-color
 	)
 ) !default;
