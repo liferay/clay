@@ -40,216 +40,6 @@ fieldset[disabled] .btn {
 	opacity: $btn-disabled-opacity;
 }
 
-.btn-primary {
-	background-color: $btn-primary-bg;
-	border-color: $btn-primary-border-color;
-	color: $btn-primary-color;
-
-	&:hover {
-		background-color: $btn-primary-hover-bg;
-		border-color: $btn-primary-hover-border-color;
-		color: $btn-primary-hover-color;
-	}
-
-	&:focus,
-	&.focus {
-		background-color: $btn-primary-hover-bg;
-		border-color: $btn-primary-hover-border-color;
-		box-shadow: $btn-primary-focus-box-shadow;
-		color: $btn-primary-hover-color;
-	}
-
-	&:active,
-	&.active,
-	.show > &.dropdown-toggle {
-		background-color: $btn-primary-active-bg;
-		border-color: $btn-primary-active-border-color;
-		color: $btn-primary-active-color;
-	}
-
-	&:disabled,
-	&.disabled {
-		background-color: $btn-primary-bg;
-		border-color: $btn-primary-border-color;
-		color: $btn-primary-color;
-	}
-}
-
-.btn-secondary {
-	background-color: $btn-secondary-bg;
-	border-color: $btn-secondary-border-color;
-	color: $btn-secondary-color;
-
-	&:hover {
-		background-color: $btn-secondary-hover-bg;
-		border-color: $btn-secondary-hover-border-color;
-		color: $btn-secondary-hover-color;
-	}
-
-	&:focus,
-	&.focus {
-		background-color: $btn-secondary-hover-bg;
-		border-color: $btn-secondary-hover-border-color;
-		box-shadow: $btn-secondary-focus-box-shadow;
-		color: $btn-secondary-hover-color;
-	}
-
-	&:active,
-	&.active,
-	.show > &.dropdown-toggle {
-		background-color: $btn-secondary-active-bg;
-		border-color: $btn-secondary-active-border-color;
-		color: $btn-secondary-active-color;
-	}
-
-	&:disabled,
-	&.disabled {
-		background-color: $btn-secondary-bg;
-		border-color: $btn-secondary-border-color;
-		color: $btn-secondary-color;
-	}
-}
-
-.btn-success {
-	background-color: $btn-success-bg;
-	border-color: $btn-success-border-color;
-	color: $btn-success-color;
-
-	&:hover {
-		background-color: $btn-success-hover-bg;
-		border-color: $btn-success-hover-border-color;
-		color: $btn-success-hover-color;
-	}
-
-	&:focus,
-	&.focus {
-		background-color: $btn-success-hover-bg;
-		border-color: $btn-success-hover-border-color;
-		box-shadow: $btn-success-focus-box-shadow;
-		color: $btn-success-hover-color;
-	}
-
-	&:active,
-	&.active,
-	.show > &.dropdown-toggle {
-		background-color: $btn-success-active-bg;
-		border-color: $btn-success-active-border-color;
-		color: $btn-success-active-color;
-	}
-
-	&:disabled,
-	&.disabled {
-		background-color: $btn-success-bg;
-		border-color: $btn-success-border-color;
-		color: $btn-success-color;
-	}
-}
-
-.btn-info {
-	background-color: $btn-info-bg;
-	border-color: $btn-info-border-color;
-	color: $btn-info-color;
-
-	&:hover {
-		background-color: $btn-info-hover-bg;
-		border-color: $btn-info-hover-border-color;
-		color: $btn-info-hover-color;
-	}
-
-	&:focus,
-	&.focus {
-		background-color: $btn-info-hover-bg;
-		border-color: $btn-info-hover-border-color;
-		box-shadow: $btn-info-focus-box-shadow;
-		color: $btn-info-hover-color;
-	}
-
-	&:active,
-	&.active,
-	.show > &.dropdown-toggle {
-		background-color: $btn-info-active-bg;
-		border-color: $btn-info-active-border-color;
-		color: $btn-info-active-color;
-	}
-
-	&:disabled,
-	&.disabled {
-		background-color: $btn-info-bg;
-		border-color: $btn-info-border-color;
-		color: $btn-info-color;
-	}
-}
-
-.btn-warning {
-	background-color: $btn-warning-bg;
-	border-color: $btn-warning-border-color;
-	color: $btn-warning-color;
-
-	&:hover {
-		background-color: $btn-warning-hover-bg;
-		border-color: $btn-warning-hover-border-color;
-		color: $btn-warning-hover-color;
-	}
-
-	&:focus,
-	&.focus {
-		background-color: $btn-warning-hover-bg;
-		border-color: $btn-warning-hover-border-color;
-		box-shadow: $btn-warning-focus-box-shadow;
-		color: $btn-warning-hover-color;
-	}
-
-	&:active,
-	&.active,
-	.show > &.dropdown-toggle {
-		background-color: $btn-warning-active-bg;
-		border-color: $btn-warning-active-border-color;
-		color: $btn-warning-active-color;
-	}
-
-	&:disabled,
-	&.disabled {
-		background-color: $btn-warning-bg;
-		border-color: $btn-warning-border-color;
-		color: $btn-warning-color;
-	}
-}
-
-.btn-danger {
-	background-color: $btn-danger-bg;
-	border-color: $btn-danger-border-color;
-	color: $btn-danger-color;
-
-	&:hover {
-		background-color: $btn-danger-hover-bg;
-		border-color: $btn-danger-hover-border-color;
-		color: $btn-danger-hover-color;
-	}
-
-	&:focus,
-	&.focus {
-		background-color: $btn-danger-hover-bg;
-		border-color: $btn-danger-hover-border-color;
-		box-shadow: $btn-danger-focus-box-shadow;
-		color: $btn-danger-hover-color;
-	}
-
-	&:active,
-	&.active,
-	.show > &.dropdown-toggle {
-		background-color: $btn-danger-active-bg;
-		border-color: $btn-danger-active-border-color;
-		color: $btn-danger-active-color;
-	}
-
-	&:disabled,
-	&.disabled {
-		background-color: $btn-danger-bg;
-		border-color: $btn-danger-border-color;
-		color: $btn-danger-color;
-	}
-}
-
 // Action Buttons
 
 .btn-action {
@@ -298,4 +88,43 @@ fieldset[disabled] .btn {
 	position: fixed;
 	right: $btn-fixed-spacer-x;
 	top: $btn-fixed-spacer-y;
+}
+
+// Button Variants
+
+@each $color, $value in $btn-palette {
+	.btn-#{$color} {
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
+
+		&:hover {
+			background-color: map-get($value, hover-bg);
+			border-color: map-get($value, hover-border-color);
+			color: map-get($value, hover-color);
+		}
+
+		&:focus,
+		&.focus {
+			background-color: map-get($value, focus-bg);
+			border-color: map-get($value, focus-border-color);
+			box-shadow: map-get($value, focus-box-shadow);
+			color: map-get($value, focus-color);
+		}
+
+		&:active,
+		&.active,
+		.show > &.dropdown-toggle {
+			background-color: map-get($value, active-bg);
+			border-color: map-get($value, active-border-color);
+			color: map-get($value, active-color);
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: map-get($value, disabled-bg);
+			border-color: map-get($value, disabled-border-color);
+			color: map-get($value, disabled-color);
+		}
+	}
 }
