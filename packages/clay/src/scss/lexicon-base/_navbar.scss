@@ -398,10 +398,12 @@
 
 .navbar-brand {
 	color: $navbar-brand-color;
+	margin-right: $navbar-brand-margin-right;
 	padding-left: $navbar-brand-padding-x;
 	padding-right: $navbar-brand-padding-x;
 
 	@include scale-component {
+		margin-right: $navbar-brand-margin-right-mobile;
 		padding-bottom: $navbar-brand-padding-y-mobile;
 		padding-left: $navbar-brand-padding-x-mobile;
 		padding-right: $navbar-brand-padding-x-mobile;
@@ -625,11 +627,8 @@
 					.navbar-nav .nav-link {
 						padding-bottom: $nav-link-padding-y;
 						padding-top: $nav-link-padding-y;
-
-						@if not ($navbar-link-padding-x == 0.5rem) {
-							padding-left: $navbar-link-padding-x;
-							padding-right: $navbar-link-padding-x;
-						}
+						padding-left: $navbar-link-padding-x;
+						padding-right: $navbar-link-padding-x;
 					}
 
 					.navbar-collapse {

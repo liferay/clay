@@ -25,13 +25,15 @@ $navbar-active-border-bottom-width: 0.125rem !default; // 2px
 $navbar-brand-color: null !default;
 $navbar-brand-hover-color: null !default;
 $navbar-brand-font-size-mobile: $font-size-lg-mobile !default;
-$navbar-brand-padding-x: null !default;
-$navbar-brand-padding-x-mobile: null !default;
+$navbar-brand-margin-right: 0.5rem !default;
+$navbar-brand-margin-right-mobile: 0 !default;
+$navbar-brand-padding-x: $navbar-link-padding-x !default;
+$navbar-brand-padding-x-mobile: $navbar-link-padding-x-mobile !default;
 $navbar-brand-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-brand-font-size-mobile * $line-height-base)) / 2 !default;
 
 $navbar-nav-item-dropdown-margin-top: null !default;
 
-$navbar-text-truncate-spacer-right: 20px !default;
+$navbar-text-truncate-spacer-right: 25px !default;
 $navbar-text-truncate-max-width: 140px !default;
 
 $zindex-navbar-overlay: $zindex-dropdown - 1 !default; // 999
