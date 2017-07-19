@@ -13,7 +13,7 @@ $progress-height-lg: $progress-height * 2 !default;
 $progress-group-addon-font-size: null !default;
 $progress-group-addon-spacer-x: 1rem !default;
 
-// Progress States
+// Progress Variants
 
 $progress-group-feedback-color: map-get($theme-colors, primary) !default;
 
@@ -28,6 +28,25 @@ $progress-group-feedback-success-color: map-get($theme-colors, success) !default
 
 $progress-bar-warning-bg: map-get($theme-colors, warning) !default;
 $progress-group-feedback-warning-color: map-get($theme-colors, warning) !default;
+
+$progress-palette: (
+	success: (
+		bar-bg: $progress-bar-success-bg,
+		group-feedback-color: $progress-group-feedback-success-color
+	),
+	info: (
+		bar-bg: $progress-bar-info-bg,
+		group-feedback-color: $progress-group-feedback-info-color
+	),
+	warning: (
+		bar-bg: $progress-bar-warning-bg,
+		group-feedback-color: $progress-group-feedback-warning-color
+	),
+	danger: (
+		bar-bg: $progress-bar-danger-bg,
+		group-feedback-color: $progress-group-feedback-danger-color
+	)
+) !default;
 
 // Multi Step Progress
 

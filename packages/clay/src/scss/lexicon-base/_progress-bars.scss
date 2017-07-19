@@ -45,6 +45,10 @@
 	margin-right: 0;
 }
 
+.progress-group-feedback {
+	color: $progress-group-feedback-color;
+}
+
 .progress-group-stacked {
 	display: block;
 
@@ -54,49 +58,17 @@
 	}
 }
 
-// Progress States
+// Progress Variants
 
-.progress-group-feedback {
-	color: $progress-group-feedback-color;
-}
+@each $color, $value in $progress-palette {
+	.progress-#{$color} {
+		.progress-bar {
+			background-color: map-get($value, bar-bg);
+		}
 
-.has-danger {
-	.progress-bar {
-		background-color: $progress-bar-danger-bg;
-	}
-
-	.progress-group-feedback {
-		color: $progress-group-feedback-danger-color;
-	}
-}
-
-.has-info {
-	.progress-bar {
-		background-color: $progress-bar-info-bg;
-	}
-
-	.progress-group-feedback {
-		color: $progress-group-feedback-info-color;
-	}
-}
-
-.has-success {
-	.progress-bar {
-		background-color: $progress-bar-success-bg;
-	}
-
-	.progress-group-feedback {
-		color: $progress-group-feedback-success-color;
-	}
-}
-
-.has-warning {
-	.progress-bar {
-		background-color: $progress-bar-warning-bg;
-	}
-
-	.progress-group-feedback {
-		color: $progress-group-feedback-warning-color;
+		.progress-group-feedback {
+			color: map-get($value, group-feedback-color);
+		}
 	}
 }
 
