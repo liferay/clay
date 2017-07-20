@@ -15,7 +15,7 @@ weight: 100
 	</a>
 	<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-0a" data-toggle="collapse" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
-			<use xlink:href="/vendor/clay/icons.svg#bars" />
+			<use xlink:href="/vendor/lexicon/icons.svg#bars" />
 		</svg>
 	</button>
 	<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-0a">
@@ -29,7 +29,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -61,7 +61,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -82,7 +82,7 @@ weight: 100
 	</a>
 	<button aria-expanded="false" class="collapsed navbar-toggler" data-target="#navbar-collapse-0b" data-toggle="collapse" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
-			<use xlink:href="/vendor/clay/icons.svg#bars" />
+			<use xlink:href="/vendor/lexicon/icons.svg#bars" />
 		</svg>
 	</button>
 	<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-0b">
@@ -96,7 +96,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -128,7 +128,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -161,7 +161,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -193,7 +193,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -216,7 +216,7 @@ weight: 100
 
 	<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-0a" data-toggle="collapse" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
-			<use xlink:href="/vendor/clay/icons.svg#bars" />
+			<use xlink:href="/vendor/lexicon/icons.svg#bars" />
 		</svg>
 	</button>
 
@@ -231,7 +231,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -263,7 +263,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -295,7 +295,7 @@ weight: 100
 	</a>
 	<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-2a" data-toggle="collapse" type="button">
 		<svg aria-hidden="true" class="lexicon-icon">
-			<use xlink:href="/vendor/clay/icons.svg#bars" />
+			<use xlink:href="/vendor/lexicon/icons.svg#bars" />
 		</svg>
 	</button>
 	<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-2a">
@@ -315,7 +315,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">DropdownReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -336,7 +336,7 @@ weight: 100
 					<div class="dropdown-wide input-group-btn">
 						<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+								<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 							</svg>
 						</button>
 						<div class="dropdown-menu">
@@ -348,7 +348,7 @@ weight: 100
 						</div>
 						<button class="btn btn-secondary" type="submit">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#search" />
+								<use xlink:href="/vendor/lexicon/icons.svg#search" />
 							</svg>
 						</button>
 					</div>
@@ -365,7 +365,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
@@ -386,7 +386,7 @@ weight: 100
 	</a>
 	<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-2b" data-toggle="collapse" type="button">
 		<svg aria-hidden="true" class="lexicon-icon">
-			<use xlink:href="/vendor/clay/icons.svg#bars" />
+			<use xlink:href="/vendor/lexicon/icons.svg#bars" />
 		</svg>
 	</button>
 	<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-2b">
@@ -405,7 +405,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
@@ -426,7 +426,7 @@ weight: 100
 					<div class="dropdown-wide input-group-btn">
 						<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+								<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 							</svg>
 						</button>
 						<ul class="dropdown-menu">
@@ -438,7 +438,7 @@ weight: 100
 						</ul>
 						<button class="btn btn-secondary" type="submit">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#search" />
+								<use xlink:href="/vendor/lexicon/icons.svg#search" />
 							</svg>
 						</button>
 					</div>
@@ -455,7 +455,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
@@ -476,7 +476,7 @@ weight: 100
 	</a>
 	<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-2c" data-toggle="collapse" type="button">
 		<svg aria-hidden="true" class="lexicon-icon">
-			<use xlink:href="/vendor/clay/icons.svg#bars" />
+			<use xlink:href="/vendor/lexicon/icons.svg#bars" />
 		</svg>
 	</button>
 	<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-2c">
@@ -495,7 +495,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
@@ -516,7 +516,7 @@ weight: 100
 					<div class="dropdown-wide input-group-btn">
 						<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+								<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 							</svg>
 						</button>
 						<div class="dropdown-menu">
@@ -528,7 +528,7 @@ weight: 100
 						</div>
 						<button class="btn btn-secondary" type="submit">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#search" />
+								<use xlink:href="/vendor/lexicon/icons.svg#search" />
 							</svg>
 						</button>
 					</div>
@@ -545,7 +545,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
@@ -568,7 +568,7 @@ weight: 100
 
 	<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-target="#navbar-collapse-2a" data-toggle="collapse" type="button">
 		<svg aria-hidden="true" class="lexicon-icon">
-			<use xlink:href="/vendor/clay/icons.svg#bars" />
+			<use xlink:href="/vendor/lexicon/icons.svg#bars" />
 		</svg>
 	</button>
 
@@ -589,7 +589,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">DropdownReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -611,7 +611,7 @@ weight: 100
 					<div class="dropdown-wide input-group-btn">
 						<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+								<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 							</svg>
 						</button>
 						<div class="dropdown-menu">
@@ -624,7 +624,7 @@ weight: 100
 
 						<button class="btn btn-secondary" type="submit">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#search" />
+								<use xlink:href="/vendor/lexicon/icons.svg#search" />
 							</svg>
 						</button>
 					</div>
@@ -641,7 +641,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
@@ -669,7 +669,7 @@ weight: 100
 	<button aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navbar-collapse-d-001" data-toggle="collapse" type="button">
 		<span class="navbar-text-truncate">Message Boards</span>
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="collapse navbar-collapse" id="navbar-collapse-d-001">
@@ -683,7 +683,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="dropdownMenu" class="dropdown-menu">
@@ -716,7 +716,7 @@ weight: 100
 					<div class="basic-search-slider">
 						<button class="basic-search-close btn btn-secondary" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#times" />
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 						<input class="form-control" name="search" placeholder=" Search..." type="text" />
@@ -725,7 +725,7 @@ weight: 100
 				<div class="dropdown-wide input-group-btn">
 					<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</button>
 					<div class="dropdown-menu">
@@ -737,7 +737,7 @@ weight: 100
 					</div>
 					<button class="btn btn-secondary" type="submit">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#search" />
+							<use xlink:href="/vendor/lexicon/icons.svg#search" />
 						</svg>
 					</button>
 				</div>
@@ -750,7 +750,7 @@ weight: 100
 	<button aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navbar-collapse-001" data-toggle="collapse" type="button">
 		<span class="navbar-text-truncate">Message Boards</span>
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="collapse navbar-collapse" id="navbar-collapse-001">
@@ -764,7 +764,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="dropdownMenu" class="dropdown-menu">
@@ -797,7 +797,7 @@ weight: 100
 					<div class="basic-search-slider">
 						<button class="basic-search-close btn btn-secondary" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#times" />
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 						<input class="form-control" name="search" placeholder=" Search..." type="text" />
@@ -806,7 +806,7 @@ weight: 100
 				<div class="dropdown-wide input-group-btn">
 					<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</button>
 					<div class="dropdown-menu">
@@ -818,7 +818,7 @@ weight: 100
 					</div>
 					<button class="btn btn-secondary" type="submit">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#search" />
+							<use xlink:href="/vendor/lexicon/icons.svg#search" />
 						</svg>
 					</button>
 				</div>
@@ -831,7 +831,7 @@ weight: 100
 	<button aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navbar-collapse-001a" data-toggle="collapse" type="button">
 		<span class="navbar-text-truncate">Message Boards</span>
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 	<div class="collapse navbar-collapse" id="navbar-collapse-001a">
@@ -845,7 +845,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="dropdownMenu" class="dropdown-menu">
@@ -878,7 +878,7 @@ weight: 100
 					<div class="basic-search-slider">
 						<button class="basic-search-close btn btn-secondary" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#times" />
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 						<input class="form-control" name="search" placeholder=" Search..." type="text" />
@@ -887,7 +887,7 @@ weight: 100
 				<div class="input-group-btn">
 					<button class="btn btn-secondary" type="submit">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#search" />
+							<use xlink:href="/vendor/lexicon/icons.svg#search" />
 						</svg>
 					</button>
 				</div>
@@ -901,7 +901,7 @@ weight: 100
 	<button aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#navbar-collapse-d-001" data-toggle="collapse" type="button">
 		<span class="navbar-text-truncate">Message Boards</span>
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-			<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+			<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 		</svg>
 	</button>
 
@@ -916,7 +916,7 @@ weight: 100
 				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					<span class="navbar-text-truncate">Dropdown</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="dropdownMenu" class="dropdown-menu">
@@ -951,7 +951,7 @@ weight: 100
 					<div class="basic-search-slider">
 						<button class="basic-search-close btn btn-secondary" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#times" />
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 						<input class="form-control" name="search" placeholder=" Search..." type="text" />
@@ -961,7 +961,7 @@ weight: 100
 				<div class="dropdown-wide input-group-btn">
 					<button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary" data-toggle="dropdown" type="button">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</button>
 					<div class="dropdown-menu">
@@ -974,7 +974,7 @@ weight: 100
 
 					<button class="btn btn-secondary" type="submit">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#search" />
+							<use xlink:href="/vendor/lexicon/icons.svg#search" />
 						</svg>
 					</button>
 				</div>
@@ -1003,7 +1003,7 @@ weight: 100
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 				<span class="navbar-text-truncate">Blogs</span>
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div aria-labelledby="dropdownMenu" class="dropdown-menu">
@@ -1025,7 +1025,7 @@ weight: 100
 					<div class="basic-search-slider">
 						<button class="basic-search-close btn btn-secondary" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#times" />
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 						<input class="form-control" placeholder=" Search..." type="text" />
@@ -1034,7 +1034,7 @@ weight: 100
 				<div class="input-group-btn">
 					<button class="btn btn-secondary" type="submit">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#search" />
+							<use xlink:href="/vendor/lexicon/icons.svg#search" />
 						</svg>
 					</button>
 				</div>
@@ -1054,7 +1054,7 @@ weight: 100
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 				<span class="navbar-text-truncate">Blogs</span>
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div aria-labelledby="dropdownMenu" class="dropdown-menu">
@@ -1076,7 +1076,7 @@ weight: 100
 					<div class="basic-search-slider">
 						<button class="basic-search-close btn btn-secondary" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#times" />
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 						<input class="form-control" placeholder=" Search..." type="text" />
@@ -1085,7 +1085,7 @@ weight: 100
 				<div class="input-group-btn">
 					<button class="btn btn-secondary" type="submit">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#search" />
+							<use xlink:href="/vendor/lexicon/icons.svg#search" />
 						</svg>
 					</button>
 				</div>
@@ -1105,7 +1105,7 @@ weight: 100
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 				<span class="navbar-text-truncate">Blogs</span>
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div aria-labelledby="dropdownMenu" class="dropdown-menu">
@@ -1127,7 +1127,7 @@ weight: 100
 					<div class="basic-search-slider">
 						<button class="basic-search-close btn btn-secondary" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#times" />
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 						<input class="form-control" placeholder=" Search..." type="text" />
@@ -1136,7 +1136,7 @@ weight: 100
 				<div class="input-group-btn">
 					<button class="btn btn-secondary" type="submit">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#search" />
+							<use xlink:href="/vendor/lexicon/icons.svg#search" />
 						</svg>
 					</button>
 				</div>
@@ -1157,7 +1157,7 @@ weight: 100
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 				<span class="navbar-text-truncate">Blogs</span>
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div aria-labelledby="dropdownMenu" class="dropdown-menu">
@@ -1179,7 +1179,7 @@ weight: 100
 					<div class="basic-search-slider">
 						<button class="basic-search-close btn btn-secondary" type="button">
 							<svg class="lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#times" />
+								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 						<input class="form-control" placeholder=" Search..." type="text" />
@@ -1188,7 +1188,7 @@ weight: 100
 				<div class="input-group-btn">
 					<button class="btn btn-secondary" type="submit">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#search" />
+							<use xlink:href="/vendor/lexicon/icons.svg#search" />
 						</svg>
 					</button>
 				</div>

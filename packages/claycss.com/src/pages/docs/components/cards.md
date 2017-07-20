@@ -53,7 +53,7 @@ weight: 100
                     <div class="dropdown">
                         <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                             <svg aria-hidden="true" class="lexicon-icon">
-                                <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                             </svg>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -132,7 +132,7 @@ weight: 100
                     <div class="dropdown">
                         <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                             <svg aria-hidden="true" class="lexicon-icon">
-                                <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                             </svg>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -387,7 +387,7 @@ weight: 100
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -418,7 +418,7 @@ weight: 100
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -449,7 +449,7 @@ weight: 100
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -480,7 +480,7 @@ weight: 100
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -534,7 +534,7 @@ weight: 100
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -566,7 +566,7 @@ weight: 100
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -598,7 +598,7 @@ weight: 100
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -630,7 +630,7 @@ weight: 100
 							<div class="dropdown">
 								<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 									<svg aria-hidden="true" class="lexicon-icon">
-										<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 									</svg>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
@@ -946,7 +946,7 @@ weight: 100
 						<div class="dropdown">
 							<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -983,7 +983,7 @@ weight: 100
 						<div class="dropdown">
 							<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -1025,7 +1025,7 @@ weight: 100
 						<div class="dropdown">
 							<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -1062,7 +1062,7 @@ weight: 100
 						<div class="dropdown">
 							<a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon">
-									<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -1119,7 +1119,7 @@ weight: 100
                             <div class="dropdown">
                                 <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                     <svg aria-hidden="true" class="lexicon-icon">
-                                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                     </svg>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1156,7 +1156,7 @@ weight: 100
                             <div class="dropdown">
                                 <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                     <svg aria-hidden="true" class="lexicon-icon">
-                                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                     </svg>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1198,7 +1198,7 @@ weight: 100
                             <div class="dropdown">
                                 <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                     <svg aria-hidden="true" class="lexicon-icon">
-                                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                     </svg>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1235,7 +1235,7 @@ weight: 100
                             <div class="dropdown">
                                 <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                     <svg aria-hidden="true" class="lexicon-icon">
-                                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                     </svg>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1294,7 +1294,7 @@ weight: 100
                         <div class="dropdown">
                             <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                 <svg aria-hidden="true" class="lexicon-icon">
-                                    <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                    <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                 </svg>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
@@ -1331,7 +1331,7 @@ weight: 100
                         <div class="dropdown">
                             <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                 <svg aria-hidden="true" class="lexicon-icon">
-                                    <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                    <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                 </svg>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
@@ -1373,7 +1373,7 @@ weight: 100
                         <div class="dropdown">
                             <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                 <svg aria-hidden="true" class="lexicon-icon">
-                                    <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                    <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                 </svg>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
@@ -1410,7 +1410,7 @@ weight: 100
                         <div class="dropdown">
                             <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                 <svg aria-hidden="true" class="lexicon-icon">
-                                    <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                    <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                 </svg>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
@@ -1467,7 +1467,7 @@ weight: 100
                             <div class="dropdown">
                                 <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                     <svg aria-hidden="true" class="lexicon-icon">
-                                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                     </svg>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1504,7 +1504,7 @@ weight: 100
                             <div class="dropdown">
                                 <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                     <svg aria-hidden="true" class="lexicon-icon">
-                                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                     </svg>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1546,7 +1546,7 @@ weight: 100
                             <div class="dropdown">
                                 <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                     <svg aria-hidden="true" class="lexicon-icon">
-                                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                     </svg>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1583,7 +1583,7 @@ weight: 100
                             <div class="dropdown">
                                 <a class="card-link dropdown-toggle icon-monospaced" data-toggle="dropdown" href="#1">
                                     <svg aria-hidden="true" class="lexicon-icon">
-                                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                                     </svg>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">

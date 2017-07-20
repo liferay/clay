@@ -285,12 +285,12 @@ weight: 100
 					ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -309,12 +309,12 @@ weight: 100
 					Collapsible Group Item #2 (Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.)
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -333,12 +333,12 @@ weight: 100
 					Collapsible Group Item #3
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -357,12 +357,12 @@ weight: 100
 					Collapsible Group Item #4
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -381,12 +381,12 @@ weight: 100
 					Collapsible Group Item #5
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -405,12 +405,12 @@ weight: 100
 					Collapsible Group Item #6
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -434,13 +434,13 @@ weight: 100
 
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -460,13 +460,13 @@ weight: 100
 
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -486,13 +486,13 @@ weight: 100
 
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -512,13 +512,13 @@ weight: 100
 
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -538,13 +538,13 @@ weight: 100
 
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>
@@ -564,13 +564,13 @@ weight: 100
 
 					<span class="collapse-icon-closed">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 
 					<span class="collapse-icon-open">
 						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
 				</a>

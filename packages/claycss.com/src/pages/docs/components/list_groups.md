@@ -25,7 +25,7 @@ weight: 100
 		<div class="flex-col">
 			<div class="sticker sticker-default sticker-lg sticker-static">
 				<svg class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/clay/icons.svg#folder" />
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
@@ -38,7 +38,7 @@ weight: 100
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-left-side">
@@ -66,7 +66,7 @@ weight: 100
 		<div class="flex-col">
 			<div class="sticker sticker-default sticker-lg sticker-static">
 				<svg class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/clay/icons.svg#folder" />
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
@@ -82,7 +82,7 @@ weight: 100
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-left-side">
@@ -115,7 +115,7 @@ weight: 100
 		<div class="flex-col">
 			<div class="sticker sticker-default sticker-lg sticker-static">
 				<svg class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/clay/icons.svg#folder" />
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
@@ -130,7 +130,7 @@ weight: 100
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-left-side">
@@ -160,7 +160,7 @@ weight: 100
 		<div class="flex-col">
 			<div class="sticker sticker-default sticker-lg sticker-static">
 				<svg class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/clay/icons.svg#folder" />
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
@@ -178,7 +178,7 @@ weight: 100
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-left-side">
@@ -218,7 +218,7 @@ weight: 100
 		<div class="flex-col">
 			<div class="sticker sticker-default sticker-lg sticker-static">
 				<svg class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/clay/icons.svg#folder" />
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
@@ -234,7 +234,7 @@ weight: 100
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-left-side">
@@ -262,7 +262,7 @@ weight: 100
 		<div class="flex-col">
 			<div class="sticker sticker-default sticker-lg sticker-static">
 				<svg class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/clay/icons.svg#folder" />
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
@@ -278,7 +278,7 @@ weight: 100
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-left-side">
@@ -311,7 +311,7 @@ weight: 100
 		<div class="flex-col">
 			<div class="sticker sticker-default sticker-lg sticker-static">
 				<svg class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/clay/icons.svg#folder" />
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
@@ -329,7 +329,7 @@ weight: 100
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-left-side">
@@ -359,7 +359,7 @@ weight: 100
 		<div class="flex-col">
 			<div class="sticker sticker-default sticker-lg sticker-static">
 				<svg class="lexicon-icon lexicon-icon-folder">
-					<use xlink:href="/vendor/clay/icons.svg#folder" />
+					<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 				</svg>
 			</div>
 		</div>
@@ -377,7 +377,7 @@ weight: 100
 			<div class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 					<svg class="icon-monospaced lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 					</svg>
 				</a>
 				<div class="dropdown-menu dropdown-menu-left-side">
@@ -420,7 +420,7 @@ weight: 100
             <div class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
                     <svg class="icon-monospaced lexicon-icon">
-                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                     </svg>
                 </a>
                 <div class="dropdown-menu dropdown-menu-left-side">
@@ -450,7 +450,7 @@ weight: 100
             <div class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
                     <svg class="icon-monospaced lexicon-icon">
-                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                     </svg>
                 </a>
                 <div class="dropdown-menu dropdown-menu-left-side">
@@ -486,7 +486,7 @@ weight: 100
             <div class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
                     <svg class="icon-monospaced lexicon-icon">
-                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                     </svg>
                 </a>
                 <div class="dropdown-menu dropdown-menu-left-side">
@@ -518,7 +518,7 @@ weight: 100
             <div class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#1">
                     <svg class="icon-monospaced lexicon-icon">
-                        <use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+                        <use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
                     </svg>
                 </a>
                 <div class="dropdown-menu dropdown-menu-left-side">
@@ -578,7 +578,7 @@ weight: 100
 				<div class="flex-col">
 					<div class="sticker sticker-default sticker-lg sticker-static">
 						<svg class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="/vendor/clay/icons.svg#folder" />
+							<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 						</svg>
 					</div>
 				</div>
@@ -591,7 +591,7 @@ weight: 100
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-left-side">
@@ -619,7 +619,7 @@ weight: 100
 				<div class="flex-col">
 					<div class="sticker sticker-default sticker-lg sticker-static">
 						<svg class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="/vendor/clay/icons.svg#folder" />
+							<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 						</svg>
 					</div>
 				</div>
@@ -635,7 +635,7 @@ weight: 100
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-left-side">
@@ -693,7 +693,7 @@ weight: 100
 				<div class="flex-col">
 					<div class="sticker sticker-default sticker-lg sticker-static">
 						<svg class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="/vendor/clay/icons.svg#folder" />
+							<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 						</svg>
 					</div>
 				</div>
@@ -708,7 +708,7 @@ weight: 100
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-left-side">
@@ -738,7 +738,7 @@ weight: 100
 				<div class="flex-col">
 					<div class="sticker sticker-default sticker-lg sticker-static">
 						<svg class="lexicon-icon lexicon-icon-folder">
-							<use xlink:href="/vendor/clay/icons.svg#folder" />
+							<use xlink:href="/vendor/lexicon/icons.svg#folder" />
 						</svg>
 					</div>
 				</div>
@@ -756,7 +756,7 @@ weight: 100
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 							<svg class="icon-monospaced lexicon-icon">
-								<use xlink:href="/vendor/clay/icons.svg#ellipsis-v" />
+								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu dropdown-menu-left-side">

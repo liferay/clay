@@ -223,12 +223,12 @@ weight: 100
 				Basic Information
 				<span class="collapse-icon-closed">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -241,12 +241,12 @@ weight: 100
 							Documents and Media
 							<span class="collapse-icon-closed">
 								<svg class="lexicon-icon">
-									<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+									<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg class="lexicon-icon">
-									<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+									<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 								</svg>
 							</span>
 						</a>
@@ -268,12 +268,12 @@ weight: 100
 				SEO
 				<span class="collapse-icon-closed">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -289,12 +289,12 @@ weight: 100
 				Advanced
 				<span class="collapse-icon-closed">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -318,12 +318,12 @@ weight: 100
 				Basic Information
 				<span class="collapse-icon-closed">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -336,12 +336,12 @@ weight: 100
 							Documents and Media
 							<span class="collapse-icon-closed">
 								<svg class="lexicon-icon">
-									<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+									<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 								</svg>
 							</span>
 							<span class="collapse-icon-open">
 								<svg class="lexicon-icon">
-									<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+									<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 								</svg>
 							</span>
 						</a>
@@ -363,12 +363,12 @@ weight: 100
 				SEO
 				<span class="collapse-icon-closed">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -384,12 +384,12 @@ weight: 100
 				Advanced
 				<span class="collapse-icon-closed">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 					</svg>
 				</span>
 				<span class="collapse-icon-open">
 					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/clay/icons.svg#angle-down" />
+						<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 					</svg>
 				</span>
 			</a>
@@ -422,7 +422,7 @@ weight: 100
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="dropdown-menu">
@@ -445,7 +445,7 @@ weight: 100
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 
@@ -477,7 +477,7 @@ weight: 100
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 		<div class="dropdown-menu">
@@ -500,7 +500,7 @@ weight: 100
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 
@@ -536,7 +536,7 @@ weight: 100
 			<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 				Configuration
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 				</svg>
 			</a>
 			<div class="dropdown-menu">
@@ -565,7 +565,7 @@ weight: 100
 		<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 			Configuration
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-				<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
 		</a>
 

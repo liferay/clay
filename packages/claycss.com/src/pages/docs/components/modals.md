@@ -18,13 +18,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -47,7 +47,7 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 
@@ -55,7 +55,7 @@ weight: 100
 
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -88,13 +88,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -117,7 +117,7 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 
@@ -125,7 +125,7 @@ weight: 100
 
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -160,13 +160,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="lexLargeModalLabel">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -190,7 +190,7 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 
@@ -198,7 +198,7 @@ weight: 100
 
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -232,13 +232,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="claySmallModalInlineScrollerLabel">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -281,7 +281,7 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 
@@ -289,7 +289,7 @@ weight: 100
 
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -347,13 +347,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title">Add Picture to Documents and Media Library in Liferay Seven</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -456,7 +456,7 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 
@@ -464,7 +464,7 @@ weight: 100
 
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -598,13 +598,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -644,7 +644,7 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 
@@ -652,7 +652,7 @@ weight: 100
 
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -709,13 +709,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="lexFullScreenModalIframeLabel">Add Picture to Documents and Media Library in Liferay Seven</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -740,7 +740,7 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 
@@ -748,7 +748,7 @@ weight: 100
 
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -781,13 +781,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -808,13 +808,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -835,13 +835,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -862,13 +862,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -889,13 +889,13 @@ weight: 100
 			<div class="modal-header">
 				<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="vendor/clay/icons.svg#check" />
+						<use xlink:href="vendor/lexicon/icons.svg#check" />
 					</svg>
 				</button>
 				<h4 class="modal-title" id="lexSmallModalLabel">Modal Title</h4>
 				<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="vendor/clay/icons.svg#times" />
+						<use xlink:href="vendor/lexicon/icons.svg#times" />
 					</svg>
 				</button>
 			</div>
@@ -918,7 +918,7 @@ weight: 100
 					<div class="modal-header">
 						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="vendor/clay/icons.svg#check" />
+								<use xlink:href="vendor/lexicon/icons.svg#check" />
 							</svg>
 						</button>
 
@@ -926,7 +926,7 @@ weight: 100
 
 						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="vendor/clay/icons.svg#times" />
+								<use xlink:href="vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -949,7 +949,7 @@ weight: 100
 					<div class="modal-header">
 						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="vendor/clay/icons.svg#check" />
+								<use xlink:href="vendor/lexicon/icons.svg#check" />
 							</svg>
 						</button>
 
@@ -957,7 +957,7 @@ weight: 100
 
 						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="vendor/clay/icons.svg#times" />
+								<use xlink:href="vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -980,7 +980,7 @@ weight: 100
 					<div class="modal-header">
 						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="vendor/clay/icons.svg#check" />
+								<use xlink:href="vendor/lexicon/icons.svg#check" />
 							</svg>
 						</button>
 
@@ -988,7 +988,7 @@ weight: 100
 
 						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="vendor/clay/icons.svg#times" />
+								<use xlink:href="vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -1011,7 +1011,7 @@ weight: 100
 					<div class="modal-header">
 						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="vendor/clay/icons.svg#check" />
+								<use xlink:href="vendor/lexicon/icons.svg#check" />
 							</svg>
 						</button>
 
@@ -1019,7 +1019,7 @@ weight: 100
 
 						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="vendor/clay/icons.svg#times" />
+								<use xlink:href="vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 					</div>
@@ -1042,7 +1042,7 @@ weight: 100
 					<div class="modal-header">
 						<button class="btn btn-secondary d-md-none modal-primary-action-button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-								<use xlink:href="vendor/clay/icons.svg#check" />
+								<use xlink:href="vendor/lexicon/icons.svg#check" />
 							</svg>
 						</button>
 
@@ -1050,7 +1050,7 @@ weight: 100
 
 						<button aria-labelledby="Close" class="btn btn-secondary close" data-dismiss="modal" role="button" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="vendor/clay/icons.svg#times" />
+								<use xlink:href="vendor/lexicon/icons.svg#times" />
 							</svg>
 						</button>
 					</div>

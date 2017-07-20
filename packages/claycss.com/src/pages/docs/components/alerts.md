@@ -88,7 +88,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-primary" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Primary</strong> This is a <a href="#1" class="alert-link">primary alert</a>.
@@ -96,7 +96,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-secondary" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Secondary</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
@@ -104,7 +104,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-success" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Success</strong> You just read the alert message successfully.
@@ -112,7 +112,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-info" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Info</strong> This alert needs your attention.
@@ -120,7 +120,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-warning" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Warning</strong> This alert is a warning message.
@@ -129,7 +129,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-danger" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Danger</strong> Something is not right.
@@ -138,7 +138,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-light" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Light</strong> This is a <a href="#1" class="alert-link">light alert</a>.
@@ -147,7 +147,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-dark" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Dark</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
@@ -157,7 +157,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-primary" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Primary</strong> This is a <a href="#1" class="alert-link">primary alert</a>.
@@ -166,7 +166,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-secondary" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Secondary</strong> This is a <a href="#1" class="alert-link">secondary alert</a>.
@@ -175,7 +175,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-success" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Success</strong> You just read the alert message successfully.
@@ -184,7 +184,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-info" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Info</strong> This alert needs your attention.
@@ -193,7 +193,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-warning" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Warning</strong> This alert is a warning message.
@@ -202,7 +202,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-danger" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Danger</strong> Something is not right.
@@ -211,7 +211,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-light" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Light</strong> This is a <a href="#1" class="alert-link">light alert</a>.
@@ -220,7 +220,7 @@ Use `.alert-link` to style a link inside your alert.
 <div class="alert alert-dismissible alert-dark" role="alert">
 	<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-			<use xlink:href="/images/icons/icons.svg#times" />
+			<use xlink:href="/vendor/lexicon/icons.svg#times" />
 		</svg>
 	</button>
 	<strong class="lead">Dark</strong> This is a <a href="#1" class="alert-link">dark alert</a>.
@@ -239,7 +239,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-primary" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Meeting Rescheduled:</strong>
@@ -252,7 +252,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-secondary" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Meeting Rescheduled:</strong>
@@ -265,7 +265,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-success" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Meeting Rescheduled:</strong>
@@ -278,7 +278,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-info" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Meeting Rescheduled:</strong>
@@ -291,7 +291,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-warning" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Warning:</strong>
@@ -303,7 +303,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-danger" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Danger:</strong>
@@ -315,7 +315,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-light" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Light:</strong>
@@ -327,7 +327,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-dark" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Dark:</strong>
@@ -340,7 +340,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-primary" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Meeting Rescheduled:</strong>
@@ -353,7 +353,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-secondary" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Meeting Rescheduled:</strong>
@@ -366,7 +366,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-success" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Meeting Rescheduled:</strong>
@@ -379,7 +379,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-info" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Meeting Rescheduled:</strong>
@@ -392,7 +392,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-warning" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Warning:</strong>
@@ -404,7 +404,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-danger" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Danger:</strong>
@@ -416,7 +416,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-light" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Light:</strong>
@@ -428,7 +428,7 @@ Use `.alert-link` to style a link inside your alert.
 	<div class="alert alert-dismissible alert-notification alert-dark" role="alert">
 		<button aria-label="Close" class="close" data-dismiss="alert" type="button">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-				<use xlink:href="/images/icons/icons.svg#times" />
+				<use xlink:href="/vendor/lexicon/icons.svg#times" />
 			</svg>
 		</button>
 		<strong class="lead">Dark:</strong>

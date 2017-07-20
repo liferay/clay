@@ -505,7 +505,7 @@ weight: 100
 				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					Dropdown
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -573,7 +573,7 @@ weight: 100
 				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					Dropdown Wide
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu">
@@ -616,7 +616,7 @@ weight: 100
 				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					Dropdown Full
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu">
@@ -668,7 +668,7 @@ weight: 100
 				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					Dropdown
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="dropdownMenu" class="dropdown-menu dropdown-menu-right">
@@ -725,7 +725,7 @@ $('input[type="checkbox"]').change(
 				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					Dropdown
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
@@ -794,7 +794,7 @@ $('input[type="checkbox"]').change(
 				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					Dropdown Wide
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu">
@@ -838,7 +838,7 @@ $('input[type="checkbox"]').change(
 				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					Dropdown Full
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu">
@@ -892,7 +892,7 @@ $('input[type="checkbox"]').change(
 				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
 					Dropdown
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/clay/icons.svg#caret-bottom" />
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div aria-labelledby="dropdownMenu" class="dropdown-menu dropdown-menu-right">

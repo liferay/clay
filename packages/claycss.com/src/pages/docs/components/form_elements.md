@@ -16,7 +16,7 @@ weight: 100
 		Default text input
 		<span class="reference-mark">
 			<svg class="lexicon-icon">
-				<use xlink:href="/vendor/clay/icons.svg#asterisk" />
+				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
 		</span>
 	</label>
@@ -39,7 +39,7 @@ weight: 100
 		Default text input
 		<span class="reference-mark">
 			<svg class="lexicon-icon">
-				<use xlink:href="/vendor/clay/icons.svg#asterisk" />
+				<use xlink:href="/vendor/lexicon/icons.svg#asterisk" />
 			</svg>
 		</span>
 	</label>

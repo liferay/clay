@@ -109,7 +109,7 @@ weight: 100
     Small Badge
     <a class="badge-link" href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -117,7 +117,7 @@ weight: 100
     Normal Badge
     <a class="badge-link" href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -125,7 +125,7 @@ weight: 100
     Large Badge
     <a class="badge-link" href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -135,7 +135,7 @@ weight: 100
     Small Badge
     <a class="badge-link" href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -143,7 +143,7 @@ weight: 100
     Normal Badge
     <a class="badge-link" href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -151,7 +151,7 @@ weight: 100
     Large Badge
     <a class="badge-link" href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -241,7 +241,7 @@ weight: 100
     Small Label
     <a href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -249,7 +249,7 @@ weight: 100
     Normal Label
     <a href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -257,7 +257,7 @@ weight: 100
     Large Label
     <a href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -267,7 +267,7 @@ weight: 100
     Small Label
     <a href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -275,7 +275,7 @@ weight: 100
     Normal Label
     <a href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -283,7 +283,7 @@ weight: 100
     Large Label
     <a href="#1">
         <svg class="lexicon-icon">
-            <use xlink:href="/vendor/clay/icons.svg#times"></use>
+            <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
     </a>
 </span>
@@ -406,70 +406,70 @@ weight: 100
 ```
 <span class="sticker sticker-secondary sticker-sm">
     <svg class="lexicon-icon lexicon-icon-folder">
-        <use xlink:href="/vendor/clay/icons.svg#folder" />
+        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
     </svg>
 </span>
 <span class="sticker sticker-danger">
     <svg class="lexicon-icon lexicon-icon-folder">
-        <use xlink:href="/vendor/clay/icons.svg#folder" />
+        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
     </svg>
 </span>
 <span class="sticker sticker-info sticker-lg">
     <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
     <span class="sticker-overlay">
         <svg class="lexicon-icon lexicon-icon-folder">
-            <use xlink:href="/vendor/clay/icons.svg#folder" />
+            <use xlink:href="/vendor/lexicon/icons.svg#folder" />
         </svg>
     </span>
 </span>
 <span class="sticker sticker-primary">
     <svg class="lexicon-icon lexicon-icon-format">
-        <use xlink:href="/vendor/clay/icons.svg#format" />
+        <use xlink:href="/vendor/lexicon/icons.svg#format" />
     </svg>
 </span>
 <span class="sticker sticker-success">
     <svg class="lexicon-icon lexicon-icon-home">
-        <use xlink:href="/vendor/clay/icons.svg#home" />
+        <use xlink:href="/vendor/lexicon/icons.svg#home" />
     </svg>
 </span>
 <span class="sticker sticker-warning">
     <svg class="lexicon-icon lexicon-icon-picture">
-        <use xlink:href="/vendor/clay/icons.svg#picture" />
+        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
     </svg>
 </span>
 
 ```xml
 <span class="sticker sticker-secondary sticker-sm">
     <svg class="lexicon-icon lexicon-icon-folder">
-        <use xlink:href="/vendor/clay/icons.svg#folder" />
+        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
     </svg>
 </span>
 <span class="sticker sticker-danger">
     <svg class="lexicon-icon lexicon-icon-folder">
-        <use xlink:href="/vendor/clay/icons.svg#folder" />
+        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
     </svg>
 </span>
 <span class="sticker sticker-info sticker-lg">
     <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
     <span class="sticker-overlay">
         <svg class="lexicon-icon lexicon-icon-folder">
-            <use xlink:href="/vendor/clay/icons.svg#folder" />
+            <use xlink:href="/vendor/lexicon/icons.svg#folder" />
         </svg>
     </span>
 </span>
 <span class="sticker sticker-primary">
     <svg class="lexicon-icon lexicon-icon-format">
-        <use xlink:href="/vendor/clay/icons.svg#format" />
+        <use xlink:href="/vendor/lexicon/icons.svg#format" />
     </svg>
 </span>
 <span class="sticker sticker-success">
     <svg class="lexicon-icon lexicon-icon-home">
-        <use xlink:href="/vendor/clay/icons.svg#home" />
+        <use xlink:href="/vendor/lexicon/icons.svg#home" />
     </svg>
 </span>
 <span class="sticker sticker-warning">
     <svg class="lexicon-icon lexicon-icon-picture">
-        <use xlink:href="/vendor/clay/icons.svg#picture" />
+        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
     </svg>
 </span>
 ```

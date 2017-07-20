@@ -15,7 +15,7 @@ weight: 100
 	<li class="disabled page-item">
 		<a class="page-link" href="#1">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-				<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+				<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 			</svg>
 			<span class="sr-only">Previous</span>
 		</a>
@@ -58,7 +58,7 @@ weight: 100
 	<li class="page-item">
 		<a class="page-link" href="#1">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-				<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+				<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 			</svg>
 			<span class="sr-only">Next</span>
 		</a>
@@ -70,7 +70,7 @@ weight: 100
 	<li class="disabled page-item">
 		<a class="page-link" href="#1">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-				<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+				<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 			</svg>
 			<span class="sr-only">Previous</span>
 		</a>
@@ -113,7 +113,7 @@ weight: 100
 	<li class="page-item">
 		<a class="page-link" href="#1">
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-				<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+				<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 			</svg>
 			<span class="sr-only">Next</span>
 		</a>
@@ -134,7 +134,7 @@ weight: 100
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/clay/icons.svg#caret-double-l" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -150,7 +150,7 @@ weight: 100
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -181,7 +181,7 @@ weight: 100
 		<li class="page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>
@@ -195,7 +195,7 @@ weight: 100
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/clay/icons.svg#caret-double-l" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -213,7 +213,7 @@ weight: 100
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -244,7 +244,7 @@ weight: 100
 		<li class="page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>
@@ -268,7 +268,7 @@ weight: 100
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/clay/icons.svg#caret-double-l" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -284,7 +284,7 @@ weight: 100
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -315,7 +315,7 @@ weight: 100
 		<li class="page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>
@@ -329,7 +329,7 @@ weight: 100
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/clay/icons.svg#caret-double-l" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -347,7 +347,7 @@ weight: 100
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -378,7 +378,7 @@ weight: 100
 		<li class="page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>
@@ -394,7 +394,7 @@ weight: 100
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/clay/icons.svg#caret-double-l" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -410,7 +410,7 @@ weight: 100
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -441,7 +441,7 @@ weight: 100
 		<li class="page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>
@@ -455,7 +455,7 @@ weight: 100
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/clay/icons.svg#caret-double-l" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -473,7 +473,7 @@ weight: 100
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -504,7 +504,7 @@ weight: 100
 		<li class="page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>
@@ -520,7 +520,7 @@ weight: 100
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/clay/icons.svg#caret-double-l" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -536,7 +536,7 @@ weight: 100
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -567,7 +567,7 @@ weight: 100
 		<li class="page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>
@@ -581,7 +581,7 @@ weight: 100
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
 			10 entries
 			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-double-l">
-				<use xlink:href="/vendor/clay/icons.svg#caret-double-l" />
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
 			</svg>
 		</a>
 		<div class="dropdown-menu dropdown-menu-top">
@@ -599,7 +599,7 @@ weight: 100
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
-					<use xlink:href="/vendor/clay/icons.svg#angle-left" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-left" />
 				</svg>
 				<span class="sr-only">Previous</span>
 			</a>
@@ -630,7 +630,7 @@ weight: 100
 		<li class="page-item">
 			<a class="page-link" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
-					<use xlink:href="/vendor/clay/icons.svg#angle-right" />
+					<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 				</svg>
 				<span class="sr-only">Next</span>
 			</a>
