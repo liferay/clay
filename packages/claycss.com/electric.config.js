@@ -21,14 +21,9 @@ module.exports = {
 		},
 		{
 			src: [
-				path.join(clayJSPath, 'popper.js'),
 				path.join(clayJSPath, 'svg4everybody.js'),
 				path.join(clayJSPath, 'bootstrap.js')
 			]
-		},
-		{
-			dest: 'dist/vendor/jquery',
-			src: 'node_modules/jquery/dist/jquery.min.js'
 		},
 		{
 			src: path.join(clayJSPath, 'svg4everybody.js')
