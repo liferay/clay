@@ -102,6 +102,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
@@ -208,7 +210,7 @@
 		</h1>
 
 		
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>A jQuery plugin that creates a slideout navigation on the right or left, for the sidebar css component see <a href="../sidebar">Sidebar</a>.</p>
@@ -259,7 +261,7 @@
 	</div>
 </div>
 
-<div class="row row-spacing sidenav-demo-container">
+<div class="clay-site-row-spacer row sidenav-demo-container">
 	<div class="col-md-12">
 		<blockquote class="blockquote-sm blockquote-success">
 			<p>To create a sidenav relative to other elements inside your page, you must follow the markup structure shown above and pass the sidenav-container element to the plugin with the <code>href</code> attribute or the <code>data-target</code> attribute on the toggler. The <code>container</code> option also allows you to pass the container via javascript if <code>href</code> or <code>data-target</code> can&apos;t be used. The options above are optional.</p>
@@ -287,36 +289,10 @@
 				<div class="col-md-12">... Your Main Content ...</div>
 			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-  <a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-<pre><code class="html">&lt;button class=&quot;btn btn-default sidenav-toggler&quot; data-target=&quot;#mySidenavContainerId&quot;&gt;
-    Sidenav Toggler
-&lt;/button&gt;
-
-&lt;div class=&quot;sidenav-container&quot; id=&quot;mySidenavContainerId&quot;&gt;
-    &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
-        &lt;div class=&quot;sidenav-menu&quot;&gt;
-            &lt;div class=&quot;col-md-12&quot;&gt;... Your Side Nav Content ...&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sidenav-content&quot;&gt;
-        &lt;div class=&quot;col-md-12&quot;&gt;... Your Main Content ...&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-    $(&apos;.sidenav-toggler&apos;).sideNavigation();
-&lt;/script&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing sidenav-demo-container">
+<div class="clay-site-row-spacer row sidenav-demo-container">
 	<div class="col-md-12">
 		<button class="active btn btn-default open sidenav-toggler1" style="margin-bottom:5px;">
 			Sidenav Toggler 1
@@ -336,39 +312,10 @@
 				<div class="col-md-12">... Your Main Content ...</div>
 			</div>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code class="html">&lt;button class=&quot;btn btn-default sidenav-toggler1&quot;&gt;
-    Sidenav Toggler 1
-&lt;/button&gt;
-
-&lt;div class=&quot;sidenav-container&quot; id=&quot;mySidenavContainerId1&quot;&gt;
-    &lt;div class=&quot;sidenav-menu-slider&quot;&gt;
-        &lt;div class=&quot;sidenav-menu&quot;&gt;
-            &lt;div class=&quot;col-md-12&quot;&gt;... Your Side Nav Content ...&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;sidenav-content&quot;&gt;
-        &lt;div class=&quot;col-md-12&quot;&gt;... Your Main Content ...&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-    $(&apos;.sidenav-toggler1&apos;).sideNavigation({
-        container: &apos;#mySidenavContainerId1&apos;,
-        position: &apos;right&apos;
-    });
-&lt;/script&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="side-navigation-data-api"><a class="heading-anchor" href="#side-navigation-data-api"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Side Navigation Data API</h3>
 
@@ -513,7 +460,7 @@
 	</div>
 </div>
 
-<div class="row row-spacing">
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="lazy-loading-side-navigation-content"><a class="heading-anchor" href="#lazy-loading-side-navigation-content"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Lazy Loading Side Navigation Content</h3>
 		<blockquote class="blockquote-sm blockquote-success">
@@ -625,7 +572,7 @@
 	</div>
 </div>
 
-<div class="row row-spacing side-navigation-events">
+<div class="clay-site-row-spacer row side-navigation-events">
 	<div class="col-md-12">
 		<h3 id="events"><a class="heading-anchor" href="#events"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Events</h3>
 
@@ -666,7 +613,7 @@ $(document).on(&apos;closed.lexicon.sidenav&apos;, function(event) {
 	</div>
 </div>
 
-<div class="row row-spacing side-navigation-methods">
+<div class="clay-site-row-spacer row side-navigation-methods">
 	<div class="col-md-12">
 		<h3 id="methods"><a class="heading-anchor" href="#methods"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Methods</h3>
 

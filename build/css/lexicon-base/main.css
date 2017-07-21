@@ -10400,6 +10400,217 @@ a.label {
   border-left-color: #ddd;
 }
 
+.multi-step-nav {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  position: relative;
+}
+
+.multi-step-indicator-label-bottom .multi-step-item {
+  padding-bottom: 2.625rem;
+}
+
+.multi-step-indicator-label-bottom .multi-step-indicator-label {
+  top: 2rem;
+}
+
+.multi-step-indicator-label-top .multi-step-item {
+  padding-top: 1.75rem;
+}
+
+.multi-step-indicator-label-top .multi-step-indicator-label {
+  bottom: 2rem;
+}
+
+.multi-step-title-center .multi-step-title {
+  margin-left: 1rem;
+  max-width: 100px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-overflow: ellipsis;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  width: auto;
+}
+
+.multi-step-item {
+  margin-bottom: 10px;
+  padding-bottom: 0.875rem;
+  position: relative;
+}
+
+.multi-step-item.complete .multi-step-icon {
+  background-color: #868e96;
+  background-image: lx-icon(check, #FFF);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  color: #FFF;
+}
+
+.multi-step-item.complete .multi-step-icon[data-multi-step-icon]:before {
+  content: normal;
+}
+
+.multi-step-item.complete .multi-step-divider {
+  background-color: #868e96;
+}
+
+.multi-step-item.active .multi-step-icon {
+  background-color: #007bff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  color: #fff;
+}
+
+.multi-step-item.active .multi-step-divider {
+  background-color: #e9ecef;
+}
+
+.multi-step-item-contract {
+  flex-grow: 0;
+}
+
+.multi-step-item-contract .multi-step-divider {
+  width: 0;
+}
+
+.multi-step-title {
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.multi-step-item-expand {
+  flex-grow: 1;
+  width: 75px;
+}
+
+.multi-step-divider {
+  background-color: #e9ecef;
+  height: 0.25rem;
+  margin-top: -1.125rem;
+  position: relative;
+  z-index: -1;
+}
+
+.multi-step-indicator {
+  background-color: #fff;
+  position: relative;
+  width: 2rem;
+}
+
+.multi-step-indicator .multi-step-indicator-label {
+  font-size: 1rem;
+  left: 50%;
+  max-width: 100px;
+  position: absolute;
+  transform: translateX(-50%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multi-step-icon {
+  align-items: center;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+}
+
+.multi-step-icon[data-multi-step-icon]:before {
+  content: attr(data-multi-step-icon);
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  width: 2rem;
+}
+
+.multi-step-icon .lexicon-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.multi-step-icon .multi-step-link {
+  color: inherit;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  width: 2rem;
+}
+
+.multi-step-item-fixed-width.multi-step-item,
+.multi-step-item-fixed-width .multi-step-item-expand {
+  flex-grow: 0;
+  width: 150px;
+}
+
+@media (max-width: 767px) {
+  .multi-step-nav-collapse-sm {
+    flex-wrap: nowrap;
+  }
+  .multi-step-nav-collapse-sm.multi-step-indicator-label-top .multi-step-indicator-label {
+    bottom: auto;
+    top: 0;
+  }
+  .multi-step-nav-collapse-sm.multi-step-indicator-label-bottom .multi-step-indicator-label {
+    bottom: 0;
+    top: auto;
+  }
+  .multi-step-nav-collapse-sm.multi-step-title-center .multi-step-title {
+    margin-left: 0;
+    max-width: none;
+    transform: none;
+  }
+  .multi-step-nav-collapse-sm .active.multi-step-item {
+    position: static;
+  }
+  .multi-step-nav-collapse-sm .active .multi-step-title {
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+  }
+  .multi-step-nav-collapse-sm .active .multi-step-title + .multi-step-indicator {
+    margin-top: calc(1rem * 1.5);
+  }
+  .multi-step-nav-collapse-sm .active .multi-step-indicator {
+    position: static;
+  }
+  .multi-step-nav-collapse-sm .active .multi-step-indicator-label {
+    display: block;
+    left: 0;
+    max-width: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transform: none;
+    width: auto;
+  }
+  .multi-step-nav-collapse-sm .multi-step-item {
+    margin-bottom: 0;
+    min-width: 2rem;
+  }
+  .multi-step-nav-collapse-sm .multi-step-title {
+    display: none;
+  }
+  .multi-step-nav-collapse-sm .multi-step-indicator-label {
+    display: none;
+  }
+}
+
 .pagination {
   flex-wrap: wrap;
 }
@@ -10755,6 +10966,10 @@ a.label {
   margin-right: 0;
 }
 
+.progress-group-feedback {
+  color: #007bff;
+}
+
 .progress-group-stacked {
   display: block;
 }
@@ -10764,40 +10979,36 @@ a.label {
   margin-right: 0;
 }
 
-.progress-group-feedback {
-  color: #007bff;
-}
-
-.has-danger .progress-bar {
-  background-color: #dc3545;
-}
-
-.has-danger .progress-group-feedback {
-  color: #dc3545;
-}
-
-.has-info .progress-bar {
-  background-color: #17a2b8;
-}
-
-.has-info .progress-group-feedback {
-  color: #17a2b8;
-}
-
-.has-success .progress-bar {
+.progress-success .progress-bar {
   background-color: #28a745;
 }
 
-.has-success .progress-group-feedback {
+.progress-success .progress-group-feedback {
   color: #28a745;
 }
 
-.has-warning .progress-bar {
+.progress-info .progress-bar {
+  background-color: #17a2b8;
+}
+
+.progress-info .progress-group-feedback {
+  color: #17a2b8;
+}
+
+.progress-warning .progress-bar {
   background-color: #ffc107;
 }
 
-.has-warning .progress-group-feedback {
+.progress-warning .progress-group-feedback {
   color: #ffc107;
+}
+
+.progress-danger .progress-bar {
+  background-color: #dc3545;
+}
+
+.progress-danger .progress-group-feedback {
+  color: #dc3545;
 }
 
 .multi-step-progress-bar {

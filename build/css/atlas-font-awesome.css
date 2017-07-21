@@ -11563,6 +11563,217 @@ a.label {
   border-left-color: #D8D8D8;
 }
 
+.multi-step-nav {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  position: relative;
+}
+
+.multi-step-indicator-label-bottom .multi-step-item {
+  padding-bottom: 2.625rem;
+}
+
+.multi-step-indicator-label-bottom .multi-step-indicator-label {
+  top: 2rem;
+}
+
+.multi-step-indicator-label-top .multi-step-item {
+  padding-top: 1.75rem;
+}
+
+.multi-step-indicator-label-top .multi-step-indicator-label {
+  bottom: 2rem;
+}
+
+.multi-step-title-center .multi-step-title {
+  margin-left: 1rem;
+  max-width: 100px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-overflow: ellipsis;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  width: auto;
+}
+
+.multi-step-item {
+  margin-bottom: 10px;
+  padding-bottom: 0.875rem;
+  position: relative;
+}
+
+.multi-step-item.complete .multi-step-icon {
+  background-color: #869CAD;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M502.091%2060.993c-9.909-9.91-25.962-9.91-35.843%200L129.26%20397.981%2045.752%20314.53c-9.881-9.909-25.962-9.909-35.843%200-9.909%209.909-9.909%2025.962%200%2035.843l98.257%2098.257c2.608%202.608%205.679%204.433%208.924%205.679%204.028%202.464%208.403%204.115%2012.952%204.115%206.49%200%2012.981-2.464%2017.936-7.418L502.09%2096.865c9.909-9.909%209.909-25.962%200-35.871v-.001z'%20fill='%23FFF'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  color: #FFF;
+}
+
+.multi-step-item.complete .multi-step-icon[data-multi-step-icon]:before {
+  content: normal;
+}
+
+.multi-step-item.complete .multi-step-divider {
+  background-color: #869CAD;
+}
+
+.multi-step-item.active .multi-step-icon {
+  background-color: #65B6F0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  color: #FFF;
+}
+
+.multi-step-item.active .multi-step-divider {
+  background-color: #ECEEEF;
+}
+
+.multi-step-item-contract {
+  flex-grow: 0;
+}
+
+.multi-step-item-contract .multi-step-divider {
+  width: 0;
+}
+
+.multi-step-title {
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.multi-step-item-expand {
+  flex-grow: 1;
+  width: 75px;
+}
+
+.multi-step-divider {
+  background-color: #ECEEEF;
+  height: 0.25rem;
+  margin-top: -1.125rem;
+  position: relative;
+  z-index: -1;
+}
+
+.multi-step-indicator {
+  background-color: #FFF;
+  position: relative;
+  width: 2rem;
+}
+
+.multi-step-indicator .multi-step-indicator-label {
+  font-size: 1rem;
+  left: 50%;
+  max-width: 100px;
+  position: absolute;
+  transform: translateX(-50%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multi-step-icon {
+  align-items: center;
+  background-color: #ECEEEF;
+  border-radius: 100px;
+  color: #6B6C7D;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+}
+
+.multi-step-icon[data-multi-step-icon]:before {
+  content: attr(data-multi-step-icon);
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  width: 2rem;
+}
+
+.multi-step-icon .lexicon-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.multi-step-icon .multi-step-link {
+  color: inherit;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  width: 2rem;
+}
+
+.multi-step-item-fixed-width.multi-step-item,
+.multi-step-item-fixed-width .multi-step-item-expand {
+  flex-grow: 0;
+  width: 150px;
+}
+
+@media (max-width: 767px) {
+  .multi-step-nav-collapse-sm {
+    flex-wrap: nowrap;
+  }
+  .multi-step-nav-collapse-sm.multi-step-indicator-label-top .multi-step-indicator-label {
+    bottom: auto;
+    top: 0;
+  }
+  .multi-step-nav-collapse-sm.multi-step-indicator-label-bottom .multi-step-indicator-label {
+    bottom: 0;
+    top: auto;
+  }
+  .multi-step-nav-collapse-sm.multi-step-title-center .multi-step-title {
+    margin-left: 0;
+    max-width: none;
+    transform: none;
+  }
+  .multi-step-nav-collapse-sm .active.multi-step-item {
+    position: static;
+  }
+  .multi-step-nav-collapse-sm .active .multi-step-title {
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+  }
+  .multi-step-nav-collapse-sm .active .multi-step-title + .multi-step-indicator {
+    margin-top: calc(1rem * 1.5);
+  }
+  .multi-step-nav-collapse-sm .active .multi-step-indicator {
+    position: static;
+  }
+  .multi-step-nav-collapse-sm .active .multi-step-indicator-label {
+    display: block;
+    left: 0;
+    max-width: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transform: none;
+    width: auto;
+  }
+  .multi-step-nav-collapse-sm .multi-step-item {
+    margin-bottom: 0;
+    min-width: 2rem;
+  }
+  .multi-step-nav-collapse-sm .multi-step-title {
+    display: none;
+  }
+  .multi-step-nav-collapse-sm .multi-step-indicator-label {
+    display: none;
+  }
+}
+
 .pagination {
   flex-wrap: wrap;
 }
@@ -11885,7 +12096,6 @@ a.label {
 }
 
 .progress {
-  box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
   flex-grow: 1;
   min-width: 6.25rem;
 }
@@ -11911,6 +12121,7 @@ a.label {
 }
 
 .progress-group-addon {
+  font-weight: 500;
   margin-right: 1rem;
   text-align: center;
 }
@@ -11928,6 +12139,10 @@ a.label {
   margin-right: 0;
 }
 
+.progress-group-feedback {
+  color: #65B6F0;
+}
+
 .progress-group-stacked {
   display: block;
 }
@@ -11937,40 +12152,36 @@ a.label {
   margin-right: 0;
 }
 
-.progress-group-feedback {
-  color: #65B6F0;
-}
-
-.has-danger .progress-bar {
-  background-color: #C67;
-}
-
-.has-danger .progress-group-feedback {
-  color: #C67;
-}
-
-.has-info .progress-bar {
-  background-color: #1E5EC8;
-}
-
-.has-info .progress-group-feedback {
-  color: #1E5EC8;
-}
-
-.has-success .progress-bar {
+.progress-success .progress-bar {
   background-color: #76BD4A;
 }
 
-.has-success .progress-group-feedback {
+.progress-success .progress-group-feedback {
   color: #76BD4A;
 }
 
-.has-warning .progress-bar {
+.progress-info .progress-bar {
+  background-color: #1E5EC8;
+}
+
+.progress-info .progress-group-feedback {
+  color: #1E5EC8;
+}
+
+.progress-warning .progress-bar {
   background-color: #F5984C;
 }
 
-.has-warning .progress-group-feedback {
+.progress-warning .progress-group-feedback {
   color: #F5984C;
+}
+
+.progress-danger .progress-bar {
+  background-color: #C67;
+}
+
+.progress-danger .progress-group-feedback {
+  color: #C67;
 }
 
 .multi-step-progress-bar {

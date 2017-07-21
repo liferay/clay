@@ -102,6 +102,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
@@ -400,15 +402,39 @@
 
 <div class="clay-site-progress-bar-page clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="progress-states"><a class="heading-anchor" href="#progress-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress States</h3>
+		<h3 id="progress-variants"><a class="heading-anchor" href="#progress-variants"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress Variants</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Add <code class="code">has-danger</code>, <code class="code">has-info</code>, <code class="code">has-success</code>, or <code class="code">has-warning</code> to <code class="code">progress-group</code> or <code class="code">progress</code> to provide visual feedback for different progress states. Color a block of text or icon by wrapping it with <code class="code">progress-group-feedback</code>.</p>
+			<p>Add <code>progress-danger</code>, <code>progress-info</code>, <code>progress-success</code>, or <code>progress-warning</code> to <code>progress-group</code> or <code>progress</code> to provide visual feedback for different progress states. Color a block of text or icon by wrapping it with <code>progress-group-feedback</code>.</p>
 		</blockquote>
 
 		<div class="alert alert-warning">
-			Using the state classes will set the <code class="code">background-color</code> on <code class="code">progress-bar</code>, no need to use Bootstrap 4 background utility classes.
+			Using the variant classes will set the <code>background-color</code> on <code>progress-bar</code>, no need to use Bootstrap 4 background utility classes.
 		</div>
+
+		<h6>Progress</h6>
+
+		<div class="progress">
+			<div aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 25%;">25%</div>
+		</div>
+
+		<div class="progress progress-success">
+			<div aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%;">25%</div>
+		</div>
+
+		<div class="progress progress-info">
+			<div aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+		</div>
+
+		<div class="progress progress-warning">
+			<div aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 75%;">75%</div>
+		</div>
+
+		<div class="progress progress-danger">
+			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;">100%</div>
+		</div>
+
+		<h6>Progress Group</h6>
 
 		<div class="progress-group">
 			<div class="progress">
@@ -417,9 +443,9 @@
 			<div class="progress-group-addon">60%</div>
 		</div>
 
-		<div class="has-success progress-group">
+		<div class="progress-group progress-success">
 			<div class="progress">
-				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;"></div>
 			</div>
 			<div class="progress-group-addon">
 				<div class="progress-group-feedback">
@@ -430,7 +456,7 @@
 			</div>
 		</div>
 
-		<div class="has-info progress-group">
+		<div class="progress-group progress-info">
 			<div class="progress">
 				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
 			</div>
@@ -443,9 +469,9 @@
 			</div>
 		</div>
 
-		<div class="has-warning progress-group">
+		<div class="progress-group progress-warning">
 			<div class="progress">
-				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
+				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 100%;"></div>
 			</div>
 			<div class="progress-group-addon">
 				<div class="progress-group-feedback">
@@ -456,7 +482,7 @@
 			</div>
 		</div>
 
-		<div class="has-danger progress-group">
+		<div class="progress-danger progress-group">
 			<div class="progress">
 				<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;"></div>
 			</div>
@@ -473,154 +499,11 @@
 
 <div class="clay-site-progress-bar-page clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="progress-sizes"><a class="heading-anchor" href="#progress-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress Sizes</h3>
-
-		<h6>Default</h6>
-		<div class="progress">
-			<div aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 25%;">25%</div>
-		</div>
-
-		<div class="progress-group">
-			<div class="progress">
-				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
-			</div>
-			<div class="progress-group-addon">60%</div>
-		</div>
-
-		<h6>Large</h6>
-		<div class="progress progress-lg">
-			<div aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 45%;">45%</div>
-		</div>
-
-		<div class="progress-group progress-lg">
-			<div class="progress">
-				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
-			</div>
-			<div class="progress-group-addon">60%</div>
-		</div>
-	</div>
-</div>
-
-<div class="clay-site-progress-bar-page clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="progress"><a class="heading-anchor" href="#progress"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress</h3>
-
-		<div class="progress">
-			<div aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 2%;">
-				<span class="sr-only">2% Complete</span>
-			</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;">
-				<span class="sr-only">60% Complete</span>
-			</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;">
-				<span class="sr-only">100% Complete</span>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="clay-site-progress-bar-page clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="progress-with-label"><a class="heading-anchor" href="#progress-with-label"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress with Label</h3>
-
-		<div class="progress">
-			<div aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 2%;">2%</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 100%;">100%</div>
-		</div>
-	</div>
-</div>
-
-<div class="clay-site-progress-bar-page clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="progress-with-bootstrap-4-background-utility"><a class="heading-anchor" href="#progress-with-bootstrap-4-background-utility"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress with Bootstrap 4 Background Utility</h3>
-
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="bg-success progress-bar" role="progressbar" style="width: 60%;">60% (Success)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="bg-info progress-bar" role="progressbar" style="width: 100%;">100% (Info)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="bg-warning progress-bar" role="progressbar" style="width: 40%;">40% (Warning)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="bg-danger progress-bar" role="progressbar" style="width: 80%;">80% (Danger)</div>
-		</div>
-	</div>
-</div>
-
-<div class="clay-site-progress-bar-page clay-site-row-spacer row">
-	<div class="col-md-12">
-
-		<h3 id="striped-progress"><a class="heading-anchor" href="#striped-progress"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Striped Progress</h3>
-
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="bg-success progress-bar progress-bar-striped" role="progressbar" style="width: 60%;">60% (Success)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="bg-info progress-bar progress-bar-striped" role="progressbar" style="width: 100%;">100% (Info)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="bg-warning progress-bar progress-bar-striped" role="progressbar" style="width: 40%;">40% (Warning)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="bg-danger progress-bar progress-bar-striped" role="progressbar" style="width: 80%;">80% (Danger)</div>
-		</div>
-	</div>
-</div>
-
-<div class="clay-site-progress-bar-page clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="animated-progress"><a class="heading-anchor" href="#animated-progress"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Animated Progress</h3>
-
-		<div class="progress">
-			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="bg-success progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 60%;">60% (Success)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="bg-info progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 100%;">100% (Info)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="bg-warning progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 40%;">40% (Warning)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="bg-danger progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 80%;">80% (Danger)</div>
-		</div>
-
-		<div class="progress">
-			<div aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 20%;">20% (Default)</div>
-		</div>
-	</div>
-</div>
-
-<div class="clay-site-progress-bar-page clay-site-row-spacer row">
-	<div class="col-md-12">
 		<h3 id="multiple-progress-bars"><a class="heading-anchor" href="#multiple-progress-bars"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Multiple Progress Bars</h3>
+
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>If you need multiple progress bars, use Bootstrap 4&apos;s background utilities, <code>bg-primary</code>, <code>bg-success</code>, <code>bg-info</code>, <code>bg-warning</code>, and <code>bg-danger</code> on <code>progress-bar</code>.</p>
+		</blockquote>
 
 		<div class="progress">
 			<div class="bg-success progress-bar progress-bar-striped" style="width: 25%">25%</div>
@@ -651,6 +534,58 @@
 			<div class="bg-success progress-bar progress-bar-striped" style="width: 10%">10%</div>
 			<div class="bg-danger progress-bar progress-bar-animated progress-bar-striped" style="width: 10%">10%</div>
 			<div class="progress-bar progress-bar-animated progress-bar-striped" style="width: 10%">10%</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-progress-bar-page clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="progress-sizes"><a class="heading-anchor" href="#progress-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress Sizes</h3>
+
+		<h6>Normal</h6>
+		<div class="progress">
+			<div aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 25%;">25%</div>
+		</div>
+
+		<div class="progress-group">
+			<div class="progress">
+				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+			</div>
+			<div class="progress-group-addon">60%</div>
+		</div>
+
+		<h6>Large</h6>
+		<div class="progress progress-lg">
+			<div aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 45%;">45%</div>
+		</div>
+
+		<div class="progress-group progress-lg">
+			<div class="progress">
+				<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+			</div>
+			<div class="progress-group-addon">60%</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-progress-bar-page clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="progress-with-bootstrap-4-background-utility"><a class="heading-anchor" href="#progress-with-bootstrap-4-background-utility"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Progress with Bootstrap 4 Background Utility</h3>
+
+		<div class="progress">
+			<div aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" class="bg-success progress-bar" role="progressbar" style="width: 60%;">60% (Success)</div>
+		</div>
+
+		<div class="progress">
+			<div aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" class="bg-info progress-bar" role="progressbar" style="width: 100%;">100% (Info)</div>
+		</div>
+
+		<div class="progress">
+			<div aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="bg-warning progress-bar" role="progressbar" style="width: 40%;">40% (Warning)</div>
+		</div>
+
+		<div class="progress">
+			<div aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" class="bg-danger progress-bar" role="progressbar" style="width: 80%;">80% (Danger)</div>
 		</div>
 	</div>
 </div>
