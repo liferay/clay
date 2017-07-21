@@ -15,7 +15,8 @@
 	}
 
 	.multi-step-indicator-label {
-		bottom: 0;
+		// TODO: Don't do so much maths
+		top: $multi-step-icon-size;
 	}
 }
 
@@ -26,7 +27,22 @@
 	}
 
 	.multi-step-indicator-label {
-		top: 0;
+		// TODO: Don't do so much maths
+		bottom: $multi-step-icon-size;
+	}
+}
+
+.multi-step-title-center {
+	.multi-step-title {
+		margin-left: $multi-step-icon-size / 2;
+		max-width: $multi-step-title-max-width;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		text-overflow: ellipsis;
+		transform: translateX(-50%);
+		white-space: nowrap;
+		width: auto;
 	}
 }
 
@@ -93,7 +109,7 @@
 
 .multi-step-title {
 	line-height: normal;
-	margin-bottom: 10px;
+	margin-bottom: $multi-step-title-margin-bottom;
 }
 
 .multi-step-item-expand {
@@ -111,21 +127,18 @@
 
 .multi-step-indicator {
 	background-color: $multi-step-indicator-bg;
-	// display: flex;
-	// justify-content: center;
+	position: relative;
 	width: $multi-step-indicator-width;
 
 	.multi-step-indicator-label {
-		display: flex;
 		font-size: $multi-step-indicator-label-font-size;
 		font-weight: $multi-step-indicator-label-font-weight;
-		justify-content: center;
-		// max-width: $multi-step-indicator-label-max-width;
+		left: 50%;
+		max-width: $multi-step-indicator-label-max-width;
 		position: absolute;
-		white-space: nowrap;
-		width: $multi-step-icon-size;
+		transform: translateX(-50%);
 
-		// @include text-truncate;
+		@include text-truncate;
 	}
 }
 
@@ -174,6 +187,28 @@
 	@include media-breakpoint-down(sm) {
 		flex-wrap: nowrap;
 
+		&.multi-step-indicator-label-top {
+			.multi-step-indicator-label {
+				bottom: auto;
+				top: 0;
+			}
+		}
+
+		&.multi-step-indicator-label-bottom {
+			.multi-step-indicator-label {
+				bottom: 0;
+				top: auto;
+			}
+		}
+
+		&.multi-step-title-center {
+			.multi-step-title {
+				margin-left: 0;
+				max-width: none;
+				transform: none;
+			}
+		}
+
 		.active {
 			&.multi-step-item {
 				position: static;
@@ -192,18 +227,24 @@
 				}
 			}
 
+			.multi-step-indicator {
+				position: static;
+			}
+
 			.multi-step-indicator-label {
 				display: block;
 				left: 0;
-				// max-width: none;
+				max-width: none;
 				position: absolute;
 				right: 0;
 				text-align: center;
+				transform: none;
 				width: auto;
 			}
 		}
 
 		.multi-step-item {
+			margin-bottom: 0;
 			min-width: $multi-step-icon-size;
 		}
 
