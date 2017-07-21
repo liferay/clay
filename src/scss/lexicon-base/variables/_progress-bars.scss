@@ -48,20 +48,3 @@ $progress-palette: (
 		group-feedback-color: $progress-group-feedback-danger-color
 	)
 ) !default;
-
-// Multi Step Progress
-
-$multi-step-progress-bar-active-icon: "\f111" !default;
-$multi-step-progress-bar-complete-icon: "\f00c" !default;
-$multi-step-progress-bar-icon: "\f10c" !default;
-
-$multi-step-progress-bar-color: #BBB !default;
-
-$multi-step-progress-bar-active-color: map-get($theme-colors, primary) !default;
-
-$multi-step-progress-bar-complete-color: map-get($colors, gray) !default;
-$multi-step-progress-bar-complete-icon-color: map-get($theme-colors, primary) !default;
-
-$multi-step-progress-bar-divider-height: 1px !default;
-
-$multi-step-progress-bar-fixed-width: 100px !default;
