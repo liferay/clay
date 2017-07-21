@@ -1,3 +1,8 @@
+### v1.0.23 - July 21, 2017
+* New: Lexicon Icons envelope-open and envelope-closed
+* Update: Navbar `$navbar-link-active-bottom-border-width` should be based on `$navbar-border-bottom-width`
+* Update: Atlas Navbar use variable `$navbar-margin-bottom` instead of hard coding value
+
 ### v1.0.22 - June 29, 2017
 * New: Nav Nested added `$nav-nested-link-active-bg`, `$nav-nested-link-active-color` and active states
 * Update: Nav added `word-break: wrap-word;` to nav-links
