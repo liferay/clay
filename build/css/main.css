@@ -627,6 +627,16 @@ body.fixed {
   z-index: 1;
 }
 
+.clay-site-popover-display .bs-popover-bottom .arrow,
+.clay-site-popover-display .bs-popover-top .arrow {
+  left: 50%;
+}
+
+.clay-site-popover-display .bs-popover-left .arrow,
+.clay-site-popover-display .bs-popover-right .arrow {
+  top: 50%;
+}
+
 .clay-site-progress-bar-page .progress {
   margin-bottom: 15px;
 }
@@ -653,6 +663,16 @@ body.fixed {
   margin: 10px 20px;
   position: relative;
   z-index: 1;
+}
+
+.clay-site-tooltip-display .bs-tooltip-bottom .arrow,
+.clay-site-tooltip-display .bs-tooltip-top .arrow {
+  left: 50%;
+}
+
+.clay-site-tooltip-display .bs-tooltip-left .arrow,
+.clay-site-tooltip-display .bs-tooltip-right .arrow {
+  top: 50%;
 }
 
 .side-navigation-data-api-buttons {
