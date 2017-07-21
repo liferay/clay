@@ -1,0 +1,39 @@
+$multi-step-nav-margin-bottom: 15px !default;
+$multi-step-nav-padding-x: 15px !default;
+$multi-step-nav-padding-y: 0 !default;
+
+$multi-step-icon-bg: $gray-200 !default;
+$multi-step-icon-color: rgba($black, 0.5) !default;
+$multi-step-icon-border-radius: $border-radius !default;
+$multi-step-icon-font-size: $font-size-base !default;
+$multi-step-icon-size: 2rem !default;
+
+$multi-step-divider-bg: $gray-200 !default;
+$multi-step-divider-height: 0.25rem !default;
+$multi-step-divider-margin-top: ($multi-step-divider-height / 2) + ($multi-step-icon-size / 2) !default;
+$multi-step-divider-spacer-x: 00 !default;
+
+$multi-step-indicator-bg: $body-bg !default;
+$multi-step-indicator-width: $multi-step-icon-size + ($multi-step-divider-spacer-x * 2) !default;
+
+$multi-step-indicator-label-font-size: $font-size-base !default;
+$multi-step-indicator-label-font-weight: null !default;
+$multi-step-indicator-label-max-width: 150px !default;
+
+$multi-step-item-margin-bottom: 10px !default;
+$multi-step-item-width: 75px !default;
+$multi-step-item-fixed-width: 150px !default;
+
+$multi-step-icon-complete-color: #FFF !default;
+$multi-step-icon-complete-bg: map-get($theme-colors, secondary) !default;
+$multi-step-icon-complete-bg-image: lx-icon(check, $multi-step-icon-complete-color) !default;
+$multi-step-icon-complete-bg-position: center !default;
+$multi-step-icon-complete-bg-size: $multi-step-icon-font-size !default;
+$multi-step-divider-complete-bg: $multi-step-icon-complete-bg !default;
+
+$multi-step-icon-active-color: $component-active-color !default;
+$multi-step-icon-active-bg: $component-active-bg !default;
+$multi-step-icon-active-bg-image: null !default;
+$multi-step-icon-active-bg-position: center !default;
+$multi-step-icon-active-bg-size: $multi-step-icon-font-size !default;
+$multi-step-divider-active-bg: $multi-step-divider-bg !default;
