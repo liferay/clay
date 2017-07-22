@@ -10919,10 +10919,11 @@ a.label {
   color: #856404;
 }
 
-.popover-title {
+.popover.bs-popover-bottom .arrow::after, .popover.bs-popover-auto[x-placement^="bottom"] .arrow::after {
+  border-bottom-color: #f7f7f7;
 }
 
-.popover-content {
+.popover-body {
   border-bottom-right-radius: calc(0.3rem - 1px);
   border-bottom-left-radius: calc(0.3rem - 1px);
 }
