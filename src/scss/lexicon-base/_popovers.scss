@@ -2,22 +2,49 @@
 	@if not ($popover-border-radius == $border-radius-lg) {
 		@include border-radius($popover-border-radius);
 	}
-}
 
-.popover-title {
-	border-color: $popover-title-border-color;
-
-	@if not ($popover-title-offset-border-width == calc(#{$border-radius-lg} - #{$popover-border-width})) {
-		@include border-top-radius($popover-title-offset-border-width);
+	&.bs-popover-bottom {
+		.arrow::after {
+			border-bottom-color: $popover-bottom-arrow-color;
+		}
 	}
 
-	@if not ($popover-title-font-size == $font-size-base) {
-		font-size: $popover-title-font-size;
+	&.bs-popover-left {
+		.arrow::after {
+			border-left-color: $popover-left-arrow-color;
+		}
 	}
 
-	margin: $popover-title-margin-y $popover-title-margin-x;
+	&.bs-popover-right {
+		.arrow::after {
+			border-right-color: $popover-right-arrow-color;
+		}
+	}
+
+	&.bs-popover-top {
+		.arrow::after {
+			border-top-color: $popover-top-arrow-color;
+		}
+	}
 }
 
-.popover-content {
-	@include border-bottom-radius($popover-title-offset-border-width);
+.popover-header {
+	border-color: $popover-header-border-color;
+
+	@if not ($popover-offset-border-width == calc(#{$border-radius-lg} - #{$popover-border-width})) {
+		@include border-top-radius($popover-offset-border-width);
+	}
+
+	@if not ($popover-header-font-size == $font-size-base) {
+		font-size: $popover-header-font-size;
+	}
+
+	margin-bottom: $popover-header-margin-y;
+	margin-left: $popover-header-margin-x;
+	margin-right: $popover-header-margin-x;
+	margin-top: $popover-header-margin-y;
+}
+
+.popover-body {
+	@include border-bottom-radius($popover-offset-border-width);
 }
