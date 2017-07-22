@@ -1,6 +1,12 @@
 $popover-border-radius: $border-radius-lg !default;
-$popover-title-border-color: null !default;
-$popover-title-font-size: $font-size-base !default;
-$popover-title-offset-border-width: calc(#{$popover-border-radius} - #{$popover-border-width}) !default;
-$popover-title-margin-x: null !default;
-$popover-title-margin-y: null !default;
+$popover-header-border-color: null !default;
+$popover-header-font-size: $font-size-base !default;
+$popover-header-margin-x: null !default;
+$popover-header-margin-y: null !default;
+
+$popover-bottom-arrow-color: $popover-header-bg !default;
+$popover-left-arrow-color: null !default;
+$popover-right-arrow-color: null !default;
+$popover-top-arrow-color: null !default;
+
+$popover-offset-border-width: calc(#{$popover-border-radius} - #{$popover-border-width}) !default;
