@@ -9,6 +9,8 @@ $nav-link-padding-y: 0.625rem !default; // 10px
 $nav-collapse-icon-closed: "\f0da" !default;
 $nav-collapse-icon-open: "\f0d7" !default;
 
+// Nav Nested
+
 $nav-nested-spacer-x: 0.75rem !default; // 12px
 
 // Nav Pills
@@ -23,6 +25,7 @@ $nav-pills-active-link-color: #FFF !default;
 $nav-tabs-border-color: #D8D8D8 !default;
 $nav-tabs-link-hover-border-color: transparent !default;
 
-$nav-tabs-active-link-color: map-get($theme-colors, primary) !default;
+$nav-tabs-link-active-color: map-get($theme-colors, primary) !default;
 
-$nav-tabs-justified-link-border-color: $nav-tabs-border-color !default;
+$nav-tabs-link-show-color: inherit !default;
+$nav-tabs-link-show-border-color: transparent transparent $nav-tabs-border-color transparent !default;

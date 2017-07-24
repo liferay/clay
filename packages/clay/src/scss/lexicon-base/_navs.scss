@@ -72,10 +72,8 @@
 
 .nav-tabs {
 	.nav-item.show .nav-link {
-		@if (variable-exists(atlas-theme)) {
-			border-color: transparent transparent $nav-tabs-border-color transparent;
-			color: inherit;
-		}
+		border-color: $nav-tabs-link-show-border-color;
+		color: $nav-tabs-link-show-color;
 	}
 
 	.nav-link {
