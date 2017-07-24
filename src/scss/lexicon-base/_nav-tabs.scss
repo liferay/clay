@@ -1,31 +1,4 @@
 .nav-tabs {
-	.nav-item[class*='col-'] {
-		padding-left: 0;
-		padding-right: 0;
-		text-align: center;
-
-		&:first-child {
-			> .dropdown-menu {
-				margin-left: 0;
-			}
-		}
-
-		&:last-child {
-			float: right;
-		}
-
-		.nav-link {
-			margin-left: 2px;
-			margin-right: 0;
-
-			@include text-truncate;
-		}
-
-		> .dropdown-menu {
-			margin-left: 2px;
-		}
-	}
-
 	.nav-item.show .nav-link {
 		@if (variable-exists(atlas-theme)) {
 			border-color: transparent transparent $nav-tabs-border-color transparent;
