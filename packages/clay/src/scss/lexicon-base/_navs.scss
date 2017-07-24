@@ -40,6 +40,24 @@
 	}
 }
 
+.nav-item[class*='col-'] {
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+}
+
+.nav-text-truncate {
+	display: inline-block;
+	margin-bottom: -6px;
+	max-width: 100%;
+
+	@include text-truncate;
+}
+
+.dropdown-toggle .nav-text-truncate {
+	max-width: calc(100% - 20px);
+}
+
 // Nav Nested
 
 .nav-nested {
