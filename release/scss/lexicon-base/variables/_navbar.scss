@@ -1,0 +1,116 @@
+/**
+* Clay 2.0.0-alpha.2
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$navbar-height: 3.5rem !default; // 56px
+$navbar-height-mobile: $navbar-height !default; // 56px
+
+$navbar-border-bottom-width: 0 !default;
+$navbar-border-left-width: 0 !default;
+$navbar-border-right-width: 0 !default;
+$navbar-border-top-width: 0 !default;
+$navbar-border-width: $navbar-border-top-width $navbar-border-right-width $navbar-border-bottom-width $navbar-border-left-width !default;
+
+$navbar-border-radius: null !default;
+
+$navbar-font-size: $font-size-base !default;
+$navbar-font-size-mobile: $font-size-base-mobile !default;
+
+$zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
+
+$navbar-link-padding-x: 0.5rem !default;
+$navbar-link-padding-x-mobile: $navbar-link-padding-x !default;
+$navbar-link-padding-y: ($navbar-height - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-font-size * $line-height-base)) / 2 !default;
+$navbar-link-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-font-size-mobile * $line-height-base)) / 2 !default;
+
+$navbar-active-highlight: transparent !default;
+$navbar-active-border-bottom-width: 0.125rem !default; // 2px
+
+$navbar-brand-color: null !default;
+$navbar-brand-hover-color: null !default;
+$navbar-brand-font-size-mobile: $font-size-lg-mobile !default;
+$navbar-brand-margin-right: 0.5rem !default;
+$navbar-brand-margin-right-mobile: 0 !default;
+$navbar-brand-padding-x: $navbar-link-padding-x !default;
+$navbar-brand-padding-x-mobile: $navbar-link-padding-x-mobile !default;
+$navbar-brand-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-brand-font-size-mobile * $line-height-base)) / 2 !default;
+
+$navbar-nav-item-dropdown-margin-top: null !default;
+
+$navbar-text-truncate-spacer-right: 25px !default;
+$navbar-text-truncate-max-width: 140px !default;
+
+$zindex-navbar-overlay: $zindex-dropdown - 1 !default; // 999
+
+// Navbar Toggler
+
+$navbar-toggler-height: null !default;
+$navbar-toggler-margin-x: null !default;
+$navbar-toggler-margin-x-mobile: null !default;
+$navbar-toggler-margin-y: null !default;
+
+// Navbar Toggler Link
+
+$navbar-toggler-link-font-size: $font-size-base !default; // 16px
+$navbar-toggler-link-font-size-mobile: $font-size-base-mobile !default;
+$navbar-toggler-link-height: auto !default;
+$navbar-toggler-link-line-height: $line-height-base !default; // 1.5
+$navbar-toggler-link-padding-x: 0.5rem !default;
+$navbar-toggler-link-padding-x-mobile: null !default;
+$navbar-toggler-link-padding-y: ($navbar-height - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-toggler-link-font-size * $navbar-toggler-link-line-height)) / 2 !default;
+$navbar-toggler-link-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-toggler-link-font-size-mobile * $navbar-toggler-link-line-height)) / 2 !default;
+
+$navbar-collapse-absolute-box-shadow: null !default;
+
+// Navbar Light
+
+$navbar-light-bg: #F7F7F7 !default;
+$navbar-light-border-color: transparent !default;
+
+$navbar-light-active-bg: null !default;
+$navbar-light-hover-bg: null !default;
+$navbar-light-disabled-bg: null !default;
+
+$navbar-light-active-highlight: transparent !default;
+
+$navbar-light-brand-bg: null !default;
+$navbar-light-brand-hover-bg: null !default;
+$navbar-light-brand-color: null !default;
+$navbar-light-brand-hover-color: null !default;
+
+$collapse-basic-search-transparent-light-btn-color: $navbar-light-color !default;
+$collapse-basic-search-transparent-light-btn-focus-color: $navbar-light-active-color !default;
+$collapse-basic-search-transparent-light-input-color: $navbar-light-color !default;
+$collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active-color !default;
+$collapse-basic-search-transparent-light-input-placeholder-color: null !default;
+$collapse-basic-search-transparent-light-input-placeholder-focus-color: null !default;
+
+$collapse-basic-search-transparent-light-focus-highlight: $input-focus-border-color !default;
+
+// Navbar Dark
+
+$navbar-dark-bg: map-get($colors, gray-dark) !default;
+$navbar-dark-border-color: transparent !default;
+
+$navbar-dark-active-bg: null !default;
+$navbar-dark-hover-bg: null !default;
+$navbar-dark-disabled-bg: null !default;
+
+$navbar-dark-active-highlight: transparent !default;
+
+$navbar-dark-brand-bg: null !default;
+$navbar-dark-brand-hover-bg: null !default;
+$navbar-dark-brand-color: null !default;
+$navbar-dark-brand-hover-color: null !default;
+
+$collapse-basic-search-transparent-inverse-btn-color: $navbar-dark-color !default;
+$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-dark-active-color !default;
+$collapse-basic-search-transparent-inverse-input-color: $navbar-dark-color !default;
+$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-dark-active-color !default;
+$collapse-basic-search-transparent-inverse-input-placeholder-color: null !default;
+$collapse-basic-search-transparent-inverse-input-placeholder-focus-color: null !default;
+
+$collapse-basic-search-transparent-inverse-focus-highlight: $input-focus-border-color !default;

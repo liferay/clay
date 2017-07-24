@@ -1,0 +1,121 @@
+/**
+* Clay 2.0.0-alpha.2
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$input-border-bottom-width: 0.0625rem !default;
+$input-border-left-width: 0.0625rem !default;
+$input-border-right-width: 0.0625rem !default;
+$input-border-top-width: 0.0625rem !default;
+$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
+
+$input-color-placeholder-focus: null !default;
+$input-font-size: null !default;
+$input-font-size-mobile: null !default;
+$input-font-size-lg: null !default;
+$input-font-size-lg-mobile: null !default;
+$input-font-size-sm: null !default;
+$input-font-size-sm-mobile: null !default;
+$input-height-mobile: null !default;
+$input-height-lg-mobile: null !default;
+$input-height-sm-mobile: null !default;
+$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: $input-btn-padding-y !default;
+
+$input-group-constrain-line-height: $input-height - $input-border-top-width - $input-border-bottom-width !default;
+
+$input-group-constrain-line-height-lg: $input-height-lg - $input-border-top-width - $input-border-bottom-width !default;
+$input-group-constrain-line-height-sm: $input-height-sm - $input-border-top-width - $input-border-bottom-width !default;
+
+$input-border-color-disabled: null !default;
+$input-color-disabled: null !default;
+$input-color-placeholder-disabled: null !default;
+$input-opacity-disabled: null !default;
+
+$input-label-color: null !default;
+$input-label-color-focus: null !default;
+$input-label-font-size: null !default;
+$input-label-font-size-mobile: null !default;
+$input-label-font-weight: null !default;
+$input-label-margin-bottom: null !default;
+
+$input-label-reference-mark-color: map-get($theme-colors, warning) !default;
+$input-label-reference-mark-spacer: null !default;
+$input-label-reference-mark-vertical-alignment: top !default;
+
+$input-readonly-bg: null !default;
+$input-readonly-border-color: null !default;
+$input-readonly-color: null !default;
+$input-readonly-cursor: null !default;
+
+$input-textarea-height: 150px !default;
+
+$input-group-addon-border-radius: null !default;
+$input-group-addon-border-radius-lg: null !default;
+$input-group-addon-border-radius-sm: null !default;
+$input-group-addon-color: null !default;
+
+$input-danger-bg: null !default;
+$input-danger-bg-focus: null !default;
+$input-danger-border-color: null !default;
+$input-danger-border-color-focus: null !default;
+$input-danger-box-shadow: null !default;
+$input-danger-box-shadow-focus: null !default;
+$input-danger-color: null !default;
+$input-danger-color-focus: null !default;
+
+$input-danger-checkbox-label-color: null !default;
+$input-danger-label-color: null !default;
+
+$input-success-bg: null !default;
+$input-success-bg-focus: null !default;
+$input-success-border-color: null !default;
+$input-success-border-color-focus: null !default;
+$input-success-box-shadow: null !default;
+$input-success-box-shadow-focus: null !default;
+$input-success-color: null !default;
+$input-success-color-focus: null !default;
+
+$input-success-checkbox-label-color: null !default;
+$input-success-label-color: null !default;
+
+$input-warning-bg: null !default;
+$input-warning-bg-focus: null !default;
+$input-warning-border-color: null !default;
+$input-warning-border-color-focus: null !default;
+$input-warning-box-shadow: null !default;
+$input-warning-box-shadow-focus: null !default;
+$input-warning-color: null !default;
+$input-warning-color-focus: null !default;
+
+$input-warning-checkbox-label-color: null !default;
+$input-warning-label-color: null !default;
+
+// Select Element
+
+$input-select-bg: null !default;
+$input-select-bg-focus: null !default;
+
+$input-select-bg-position: right $input-btn-padding-x center !default;
+$input-select-bg-size: $custom-select-bg-size !default;
+$input-select-padding-bottom: null !default;
+$input-select-padding-left: null !default;
+$input-select-padding-right: $custom-select-indicator-padding + $input-btn-padding-x !default;
+$input-select-padding-top: null !default;
+
+$input-select-icon-color: $input-color !default;
+$input-select-icon-color-focus: null !default;
+
+$input-select-icon: $custom-select-indicator !default;
+$input-select-icon-focus: null !default;
+
+// Form Feedback
+
+$form-control-feedback-font-size: null !default;
+$form-text-font-size: null !default;
+
+$zindex-input-group-hover: 3 !default;
+
+$zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4

@@ -1,0 +1,28 @@
+/**
+* Clay 2.0.0-alpha.2
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@if (variable-exists(atlas-theme)) {
+	.btn-group > .btn + .dropdown-toggle {
+		padding-left: $input-btn-padding-x / 3;
+		padding-right: $input-btn-padding-x / 3;
+
+		@include scale-component {
+			padding-left: $input-btn-padding-x-mobile / 3;
+			padding-right: $input-btn-padding-x-mobile / 3;
+		}
+	}
+
+	.btn-group > .btn-lg + .dropdown-toggle {
+		padding-left: $input-btn-padding-x-lg / 3;
+		padding-right: $input-btn-padding-x-lg / 3;
+
+		@include scale-component {
+			padding-left: $input-btn-padding-x-lg-mobile / 3;
+			padding-right: $input-btn-padding-x-lg-mobile / 3;
+		}
+	}
+}

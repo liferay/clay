@@ -1,0 +1,36 @@
+/**
+* Clay 2.0.0-alpha.2
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$timeline-border-color: #DDD !default;
+$timeline-border-width: 2px !default;
+
+$timeline-border-modifier: ceil($timeline-border-width / 2);
+
+$timeline-icon-active-bg: $component-active-bg !default;
+$timeline-icon-active-border-color: $timeline-icon-active-bg !default;
+
+$timeline-icon-bg: $body-bg !default;
+$timeline-icon-border-color: $timeline-border-color !default;
+$timeline-icon-border-radius: 50% !default;
+$timeline-icon-border-width: 2px !default;
+$timeline-icon-size: 10px !default;
+
+$timeline-increment-bg: $body-bg !default;
+
+$timeline-item-label-color: $body-color !default;
+
+// Sizes
+
+$timeline-inner-spacing: 40px !default;
+$timeline-outer-spacing: 25px !default;
+
+$timeline-item-padding-bottom: 5px !default;
+$timeline-item-padding-top: 5px !default;
+
+$timeline-inner-spacing-xl: 50px !default;
+$timeline-outer-spacing-xl: 25px !default;
+$timeline-item-padding-y-xl: 15px !default;
