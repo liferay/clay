@@ -11,7 +11,18 @@ $nav-collapse-icon-open: "\f0d7" !default;
 
 $nav-nested-spacer-x: 0.75rem !default; // 12px
 
+// Nav Pills
+
 $nav-pills-border-radius: 5px !default;
 
 $nav-pills-active-link-bg: map-get($theme-colors, secondary) !default;
 $nav-pills-active-link-color: #FFF !default;
+
+// Nav Tabs
+
+$nav-tabs-border-color: #D8D8D8 !default;
+$nav-tabs-link-hover-border-color: transparent !default;
+
+$nav-tabs-active-link-color: map-get($theme-colors, primary) !default;
+
+$nav-tabs-justified-link-border-color: $nav-tabs-border-color !default;

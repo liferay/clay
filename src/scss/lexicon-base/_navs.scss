@@ -55,7 +55,7 @@
 }
 
 .dropdown-toggle .nav-text-truncate {
-	max-width: calc(100% - 20px);
+	max-width: calc(100% - 24px);
 }
 
 // Nav Nested
@@ -66,4 +66,19 @@
 
 .nav-nested-margins > li .nav > li {
 	margin-left: $nav-nested-margins-spacer-x;
+}
+
+// Nav Tabs
+
+.nav-tabs {
+	.nav-item.show .nav-link {
+		@if (variable-exists(atlas-theme)) {
+			border-color: transparent transparent $nav-tabs-border-color transparent;
+			color: inherit;
+		}
+	}
+
+	.nav-link {
+		white-space: nowrap;
+	}
 }
