@@ -1,3 +1,8 @@
+### v2.0.0-alpha.1 - July 24, 2017
+* Breaking: Lots of changes/additions to class names and Sass variable names (to be documented in more detail).
+* Breaking: Replaced Tether.js with Popper.js
+* Breaking: Update to Bootstrap 4 a362d62
+
 ### v2.0.0-alpha.0 - May 18, 2017
 * Breaking: Lots of changes/additions to class names and Sass variable names (to be documented in more detail).
 * Breaking: Use flexbox instead of floats.
