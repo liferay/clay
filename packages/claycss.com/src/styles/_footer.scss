@@ -46,7 +46,7 @@
 
 	.row img.logo {
 		margin: $base-size / 2 $base-size / 3;
-		max-height: $base-size;
+		max-height: $base-size * 1.333334;
 		padding: 0;
 
 		@media (min-width: $screen-md) {
