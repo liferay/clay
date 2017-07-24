@@ -1,0 +1,107 @@
+/**
+* Clay 2.0.0-alpha.1
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.label {
+	border-color: $label-border-color;
+	border-radius: $label-border-radius;
+	border-style: $label-border-style;
+	border-width: $label-border-width;
+	color: $label-color;
+	display: inline-block;
+	font-size: $label-font-size;
+	font-weight: $label-font-weight;
+	line-height: 1;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	max-width: 100%;
+	padding: $label-padding-y $label-padding-x;
+	text-transform: $label-text-transform;
+	white-space: normal;
+	word-wrap: break-word;
+
+	@include scale-component {
+		font-size: $label-font-size-mobile;
+	}
+
+	a {
+		color: $label-color;
+		display: inline-block;
+		text-decoration: $label-link-text-decoration;
+
+		@include hover-focus {
+			color: $label-link-hover-color;
+			text-decoration: $label-link-hover-text-decoration;
+		}
+	}
+}
+
+a.label {
+	text-decoration: none;
+}
+
+.label-lg {
+	font-size: $label-font-size-lg;
+	padding: $label-padding-y-lg $label-padding-x-lg;
+
+	@include scale-component {
+		font-size: $label-font-size-lg-mobile;
+	}
+}
+
+.label-sm {
+	font-size: $label-font-size-sm;
+	padding: $label-padding-y-sm $label-padding-x-sm;
+
+	@include scale-component {
+		font-size: $label-font-size-sm-mobile;
+	}
+}
+
+// Lexicon Icons in Labels
+
+.label .lexicon-icon {
+	height: $label-lexicon-icon-height;
+	margin-left: 2px;
+	width: $label-lexicon-icon-width;
+}
+
+.label-lg .lexicon-icon {
+	height: $label-lexicon-icon-height-lg;
+	margin-left: 4px;
+	width: $label-lexicon-icon-width-lg;
+}
+
+.label-sm .lexicon-icon {
+	height: $label-lexicon-icon-height-sm;
+	width: $label-lexicon-icon-width-sm;
+}
+
+// Label Variants
+
+@each $color, $value in $label-palette {
+	.label-#{$color} {
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
+
+		&[href] {
+			@include hover-focus {
+				background-color: map-get($value, hover-bg);
+				border-color: map-get($value, hover-border-color);
+				color: map-get($value, hover-color);
+			}
+		}
+
+		a {
+			color: map-get($value, link-color);
+
+			@include hover-focus {
+				color: map-get($value, link-hover-color);
+			}
+		}
+	}
+}

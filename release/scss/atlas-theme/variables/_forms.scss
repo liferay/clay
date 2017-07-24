@@ -1,0 +1,125 @@
+/**
+* Clay 2.0.0-alpha.1
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$input-font-size: 1rem !default; // 16px
+
+$input-label-font-size: 0.875rem !default; // 14px
+$input-label-font-size-mobile: 0.75rem !default; // 12px
+$input-label-font-weight: 500 !default;
+$input-label-margin-bottom: 0.125rem !default; // 2px
+
+$input-label-reference-mark-spacer: 0.3125rem !default; // 5px
+$input-label-reference-mark-vertical-alignment: baseline !default;
+
+$input-border-bottom-width: 0.125rem !default; // 2px
+$input-border-left-width: 0 !default;
+$input-border-right-width: 0 !default;
+$input-border-top-width: 0 !default;
+
+$input-padding-x: 0.25rem !default; // 4px
+$input-padding-y: 0.375rem !default; // 6px
+
+$input-font-size-base: 1rem !default; // 16px
+$input-font-size-lg: 1.125rem !default; // 18px
+$input-font-size-sm: 0.8125rem !default; // 13px
+
+// When changing input, make sure to match the corresponding
+// btn settings to the input height.
+$input-height: 2.5rem !default; // 40px
+$input-height-lg: 3rem !default; // 48px
+$input-height-sm: 2rem !default; // 32px
+
+$form-control-feedback-font-size: 0.875rem !default; // 14px
+$form-text-font-size: 0.875rem !default; // 14px
+
+$form-group-margin-bottom: 1.25rem !default; // 20px
+
+// Skin
+
+$input-border-radius: 0 !default;
+$input-border-radius-lg: $input-border-radius !default;
+$input-border-radius-sm: $input-border-radius !default;
+
+$input-bg: transparent !default;
+$input-bg-disabled: $input-bg !default;
+
+$input-color: $body-color !default;
+$input-color-focus: map-get($theme-colors, primary) !default;
+
+$input-border-color: map-get($theme-colors, secondary) !default;
+$input-focus-border-color: $input-color-focus !default;
+
+$input-box-shadow: none !default;
+$input-box-shadow-focus: none !default;
+
+$input-color-placeholder: darken(#E4E9EC, 12%) !default;
+$input-color-placeholder-focus: $input-focus-border-color !default;
+
+$input-border-color-disabled: #CFD7DE !default;
+$input-color-disabled: $input-border-color !default;
+$input-color-placeholder-disabled: $input-color-placeholder !default;
+$input-opacity-disabled: 0.5 !default;
+
+$input-label-color: map-get($theme-colors, secondary) !default;
+$input-label-color-focus: $input-color-focus !default;
+
+$input-readonly-bg: #FAFAFA !default;
+$input-readonly-border-color: $input-border-color !default;
+$input-readonly-color: darken($input-color-placeholder, 12%) !default;
+$input-readonly-cursor: default !default;
+
+$input-danger-border-color: theme-color-level(danger, -9) !default;
+$input-danger-box-shadow: none !default;
+$input-danger-box-shadow-focus: none !default;
+$input-danger-color: $input-color !default;
+
+$input-danger-checkbox-label-color: theme-color-level(danger, 6) !default;
+$input-danger-label-color: $input-label-color !default;
+
+$input-success-border-color: theme-color-level(success, -9) !default;
+$input-success-box-shadow: none !default;
+$input-success-box-shadow-focus: none !default;
+$input-success-color: $input-color !default;
+
+$input-success-checkbox-label-color: theme-color-level(success, 6) !default;
+$input-success-label-color: $input-label-color !default;
+
+$input-warning-border-color: theme-color-level(warning, -9) !default;
+$input-warning-box-shadow: none !default;
+$input-warning-box-shadow-focus: none !default;
+$input-warning-color: $input-color !default;
+
+$input-warning-checkbox-label-color: theme-color-level(warning, 6) !default;
+$input-warning-label-color: $input-label-color !default;
+
+// Select Element
+
+$input-select-bg-position: right center !default;
+$input-select-bg-size: 18px auto !default;
+$input-select-padding-right: 18px !default;
+
+$input-select-icon-color: $input-border-color !default;
+$input-select-icon-color-focus: $input-focus-border-color !default;
+
+$input-select-icon: lx-icon(caret-double-l, $input-select-icon-color) !default;
+$input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-color-focus) !default;
+
+// Legend
+
+$legend-border-color: #B0B4BB !default;
+
+// Input Groups
+
+$input-group-addon-bg: map-get($theme-colors, secondary) !default;
+$input-group-addon-border-color: $input-group-addon-bg !default;
+$input-group-addon-color: #FFF !default;
+
+$input-group-secondary-addon-border-color: #DDD !default;
+$input-group-secondary-addon-color: #BBB !default;
+$input-group-secondary-addon-content-border-bottom-width: $input-btn-border-width !default;

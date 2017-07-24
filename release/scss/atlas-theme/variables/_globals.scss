@@ -1,0 +1,117 @@
+/**
+* Clay 2.0.0-alpha.1
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$atlas-theme: true !default;
+
+$enable-scaling-components: true !default;
+$enable-shadows: true !default;
+
+$font-size-base: 1rem !default; // 16px
+$font-size-base-mobile: 0.875rem !default; // 14px
+$font-size-lg: 1.25rem !default; // 20px
+$font-size-lg-mobile: 1.125rem !default; // 18px
+$font-size-sm: 0.875rem !default; // 14px
+$font-size-sm-mobile: 0.75rem !default; // 12px
+
+$h1-font-size: 1.625rem !default; // 26px
+$h1-font-size-mobile: 1.75rem !default; // 28px
+$h2-font-size: 1.375rem !default; // 22px
+$h2-font-size-mobile: 1.5rem !default; // 24px
+$h3-font-size: 1.1875rem !default; // 19px
+$h3-font-size-mobile: 1.3125rem !default; // 21px
+$h4-font-size: 1rem !default; // 16px
+$h4-font-size-mobile: 1rem !default; // 16px
+$h5-font-size: 0.875rem !default; // 14px
+$h5-font-size-mobile: 0.875rem !default; // 14px
+$h6-font-size: 0.8125rem !default; // 13px
+$h6-font-size-mobile: 0.6875rem !default; // 11px
+
+$line-height-base: 1.5 !default;
+
+$headings-line-height: 1.1 !default;
+
+$grid-gutter-width: 30px !default;
+
+// Skin
+
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$border-radius: 0.25rem !default; // 4px
+$border-radius-lg: 0.375rem !default; // 6px
+$border-radius-sm: 0.1875rem !default; // 3px
+
+$body-bg: #FFF !default;
+
+$gray-100: #F7F7F9 !default;
+$gray-200: #ECEEEF !default;
+// $gray-300: #dee2e6 !default;
+$gray-400: #636C72 !default;
+$gray-500: #464A4C !default;
+// $gray-600: #868e96 !default;
+// $gray-700: #495057 !default;
+// $gray-800: #343a40 !default;
+$gray-900: #292B2C !default;
+
+$theme-colors: (
+  primary: #65B6F0,
+  secondary: #869CAD,
+  success: #76BD4A,
+  info: #1E5EC8,
+  warning: #F5984C,
+  danger: #C67,
+  light: #FCFEFF,
+  dark: #869CAD
+) !default;
+
+$link-color: map-get($theme-colors, primary) !default;
+
+$body-color: #29353D !default;
+$text-muted: lighten($body-color, 55%) !default;
+
+// Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg: map-get($theme-colors, primary) !default;
+// Global color for active items (e.g., navs or dropdowns).
+$component-active-color: #FFF !default;
+
+$link-hover-color: darken(map-get($theme-colors, primary), 8%) !default;
+
+// Inverse Colors
+
+$inverse-bg: #1F282E !default;
+$inverse-border: darken($inverse-bg, 10%) !default;
+$inverse-color: #869CAD !default;
+
+$inverse-active-bg: #3A4D5A !default;
+$inverse-active-border: darken($inverse-active-bg, 1%) !default;
+$inverse-active-color: #FFF !default;
+
+$inverse-disabled-color: #394956 !default;
+
+$inverse-hover-bg: #1C252C !default;
+$inverse-hover-border: darken($inverse-hover-bg, 1%) !default;
+$inverse-hover-color: $inverse-color !default;
+
+$inverse-header-bg: #1B2228 !default;
+$inverse-header-border: darken($inverse-header-bg, 1%) !default;
+$inverse-header-color: $inverse-color !default;
+
+$inverse-link-color: #FFF !default;
+$inverse-link-hover-color: $inverse-link-color !default;
+
+// Box Shadow
+// Defines global box-shadows
+// Deprecate THIS 2.0.0
+// $box-shadow-default-x: 0 !default; // Atlas
+// $box-shadow-default-y: 0 !default; // Atlas
+// $box-shadow-default-blur: 3px !default; // Atlas
+// $box-shadow-default-spread: 1px !default; // Atlas
+// $box-shadow-default-bg: rgba(0, 0, 0, 0.2) !default; // Atlas
+// $box-shadow-default: $box-shadow-default-x $box-shadow-default-y $box-shadow-default-blur $box-shadow-default-spread $box-shadow-default-bg !default; // Atlas
+
+$close-text-shadow: none !default;

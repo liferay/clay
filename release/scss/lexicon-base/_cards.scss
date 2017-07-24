@@ -1,0 +1,303 @@
+/**
+* Clay 2.0.0-alpha.1
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.card,
+.card-horizontal {
+	border-style: $card-border-style;
+
+	@include box-shadow($card-box-shadow);
+
+	margin-bottom: $card-margin-bottom;
+	position: relative;
+
+	@if ($card-border-radius > 0) {
+		.flex-col {
+			&:first-child {
+				@include border-left-radius($card-inner-border-radius);
+			}
+
+			&:last-child {
+				@include border-right-radius($card-inner-border-radius);
+			}
+		}
+	}
+}
+
+.card-divider {
+	background-color: $card-divider-bg;
+	height: $card-divider-height;
+	margin-bottom: $card-divider-spacer-y;
+	margin-left: $card-divider-spacer-x;
+	margin-right: $card-divider-spacer-x;
+	margin-top: $card-divider-spacer-y;
+}
+
+.card-link {
+	color: $card-link-color;
+}
+
+.card-row {
+	display: flex;
+	width: 100%;
+
+	.flex-col {
+		justify-content: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.flex-col-expand {
+		min-width: 50px;
+	}
+}
+
+.card-row .flex-col-gutters {
+	padding-left: 10px;
+	padding-right: 10px;
+
+	.card-divider {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+
+// Card Row Content Alignment
+
+.flex-col {
+	.justify-content-center & {
+		justify-content: center;
+	}
+
+	.justify-content-start & {
+		justify-content: flex-start;
+	}
+
+	.justify-content-end & {
+		justify-content: flex-end;
+	}
+
+	.text-center & {
+		text-align: center;
+	}
+
+	.text-left & {
+		text-align: left;
+	}
+
+	.text-right & {
+		text-align: right;
+	}
+}
+
+// Card Helpers
+
+.card-item-first {
+	@include border-top-radius($card-inner-border-radius);
+
+	width: 100%;
+}
+
+.flex-col:first-child .card-item-first {
+	@include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
+}
+
+.card-item-last {
+	@include border-bottom-radius($card-inner-border-radius);
+
+	width: 100%;
+}
+
+.flex-col:last-child .card-item-last {
+	@include border-radius(0 $card-inner-border-radius $card-inner-border-radius 0);
+}
+
+.rounded {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $card-rounded-inner-border-radius;
+		border-top-right-radius: $card-rounded-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $card-rounded-inner-border-radius;
+		border-bottom-right-radius: $card-rounded-inner-border-radius;
+	}
+
+	.flex-col:first-child {
+		border-bottom-left-radius: $card-rounded-inner-border-radius;
+		border-top-left-radius: $card-rounded-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $card-rounded-inner-border-radius 0 0 $card-rounded-inner-border-radius;
+		}
+	}
+
+	.flex-col:last-child{
+		border-bottom-right-radius: $card-rounded-inner-border-radius;
+		border-top-right-radius: $card-rounded-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $card-rounded-inner-border-radius $card-rounded-inner-border-radius 0;
+		}
+	}
+}
+
+.rounded-0 {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $card-rounded-0-inner-border-radius;
+		border-top-right-radius: $card-rounded-0-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $card-rounded-0-inner-border-radius;
+		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
+	}
+
+	.flex-col:first-child {
+		border-bottom-left-radius: $card-rounded-0-inner-border-radius;
+		border-top-left-radius: $card-rounded-0-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $card-rounded-0-inner-border-radius 0 0 $card-rounded-0-inner-border-radius;
+		}
+	}
+
+	.flex-col:last-child {
+		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
+		border-top-right-radius: $card-rounded-0-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $card-rounded-0-inner-border-radius $card-rounded-0-inner-border-radius 0;
+		}
+	}
+}
+
+.rounded-circle {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $card-rounded-circle-inner-border-radius;
+		border-top-right-radius: $card-rounded-circle-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $card-rounded-circle-inner-border-radius;
+		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
+	}
+
+	.flex-col:first-child {
+		border-bottom-left-radius: $card-rounded-circle-inner-border-radius;
+		border-top-left-radius: $card-rounded-circle-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $card-rounded-circle-inner-border-radius 0 0 $card-rounded-circle-inner-border-radius;
+		}
+	}
+
+	.flex-col:last-child {
+		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
+		border-top-right-radius: $card-rounded-circle-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $card-rounded-circle-inner-border-radius $card-rounded-circle-inner-border-radius 0;
+		}
+	}
+}
+
+// Checkbox and Radio Cards
+
+.form-check-card {
+	margin-bottom: 0;
+	margin-top: 0;
+
+	.form-check-input {
+		margin-left: 0;
+		margin-top: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.form-check-label {
+		color: $body-color;
+		cursor: pointer;
+		display: inline;
+		padding-left: 0;
+	}
+}
+
+.form-check-bottom-left,
+.form-check-middle-left,
+.form-check-top-left {
+	.card-horizontal {
+		> .card-body {
+			padding-left: $checkbox-left-card-padding;
+		}
+	}
+}
+
+.form-check-bottom-right,
+.form-check-middle-right,
+.form-check-top-right {
+	.card-horizontal {
+		> .card-body {
+			padding-right: $checkbox-right-card-padding;
+		}
+	}
+}
+
+.form-check-bottom-left .form-check-input {
+	bottom: $checkbox-position;
+	left: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
+}
+
+.form-check-bottom-right .form-check-input {
+	bottom: $checkbox-position;
+	right: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
+}
+
+.form-check-middle-left .form-check-input {
+	left: $checkbox-position;
+	margin-top: 0;
+	top: 50%;
+
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.form-check-middle-right .form-check-input {
+	margin-top: 0;
+	right: $checkbox-position;
+	top: 50%;
+
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.form-check-top-left .form-check-input {
+	left: $checkbox-position;
+	top: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
+}
+
+.form-check-top-right .form-check-input {
+	right: $checkbox-position;
+	top: $checkbox-position;
+
+	-ms-transform: none;
+	transform: none;
+}

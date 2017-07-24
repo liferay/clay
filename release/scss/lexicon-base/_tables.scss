@@ -1,0 +1,261 @@
+/**
+* Clay 2.0.0-alpha.1
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+th {
+	height: 20px;
+}
+
+.table {
+	th {
+		font-size: $table-header-font-size;
+		font-weight: $table-header-font-weight;
+		height: $table-header-min-height;
+	}
+
+	td,
+	th {
+		&:first-child {
+			padding-left: $table-cell-gutters;
+		}
+
+		&:last-child {
+			padding-right: $table-cell-gutters;
+		}
+	}
+
+	.form-check {
+		margin-bottom: 0;
+	}
+}
+
+.table-cell-content {
+	display: table-cell;
+	max-width: 100px;
+	min-width: 100px;
+	position: relative;
+	width: auto;
+	word-wrap: break-word;
+}
+
+.table-cell-field {
+	display: table-cell;
+	width: 1%;
+}
+
+// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22804 is merged
+
+.table-responsive {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} {
+			@include media-breakpoint-down($breakpoint) {
+				display: block;
+				width: 100%;
+				overflow-x: auto;
+
+				-ms-overflow-style: -ms-autohiding-scrollbar;
+				-webkit-overflow-scrolling: touch;
+
+				&.table-bordered {
+					border: 0;
+				}
+			}
+		}
+	}
+}
+
+// Table List Skin
+
+.table-list {
+	color: $table-list-color;
+	font-size: $table-list-font-size;
+
+	a {
+		color: $table-list-link-color;
+
+		&:focus,
+		&:hover {
+			color: $table-list-link-color-hover;
+		}
+	}
+
+	thead {
+		td,
+		th {
+			background-color: $table-list-header-bg;
+			border-bottom-width: $table-list-header-border-bottom-width;
+			font-size: $table-list-header-font-size;
+			font-weight: $table-list-header-font-weight;
+			height: $table-list-header-min-height;
+			vertical-align: $table-list-header-vertical-alignment;
+		}
+	}
+
+	tbody tr {
+		height: $table-list-row-height;
+	}
+
+	tbody,
+	tfoot {
+		td,
+		th {
+			// Chrome rendering issue with responsive-tables and td position relative
+			background-color: $table-list-body-row-bg;
+			border-top-width: 0;
+			vertical-align: middle;
+		}
+	}
+
+	tbody,
+	tfoot {
+		td {
+			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
+		}
+
+		> tr:hover td {
+			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
+		}
+
+		> tr.active td {
+			box-shadow: inset 0 #{-$table-list-row-active-border-bottom-width} $table-list-row-active-border-color;
+		}
+	}
+}
+
+// Chrome rendering issue with responsive-tables and td position relative
+
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: transparent;
+
+	td {
+		@if ($table-accent-bg == rgba($black,.05)) {
+			background-color: #F2F2F2;
+		}
+		@else {
+			background-color: $table-accent-bg;
+		}
+	}
+}
+
+.table-hover tbody tr:hover {
+	background-color: transparent;
+
+	td {
+		@if ($table-hover-bg == rgba($black,.075)) {
+			background-color: #ECECEC;
+		}
+		@else {
+			background-color: $table-hover-bg;
+		}
+	}
+}
+
+// Table Helpers
+
+.table-autofit {
+	td,
+	th {
+		width: 1%;
+	}
+
+	.table-cell-content {
+		width: auto;
+	}
+}
+
+.table-heading-nowrap thead {
+	td,
+	th {
+		white-space: nowrap;
+	}
+}
+
+// Table Vertical Align
+
+.table-valign-bottom {
+	tbody,
+	tfoot,
+	thead {
+		td,
+		th {
+			vertical-align: bottom;
+		}
+	}
+}
+
+.table-valign-middle {
+	tbody,
+	tfoot,
+	thead {
+		td,
+		th {
+			vertical-align: middle;
+		}
+	}
+}
+
+.table-valign-top {
+	tbody,
+	tfoot,
+	thead {
+		td,
+		th {
+			vertical-align: top;
+		}
+	}
+}
+
+// Tbody Vertical Align
+
+.tbody-valign-bottom {
+	tbody td {
+		vertical-align: bottom;
+	}
+}
+
+.tbody-valign-middle {
+	tbody td {
+		vertical-align: middle;
+	}
+}
+
+.tbody-valign-top {
+	tbody td {
+		vertical-align: top;
+	}
+}
+
+// Thead Vertical Align
+
+.thead-valign-bottom {
+	thead {
+		td,
+		th {
+			vertical-align: bottom;
+		}
+	}
+}
+
+.thead-valign-middle {
+	thead {
+		td,
+		th {
+			vertical-align: middle;
+		}
+	}
+}
+
+.thead-valign-top {
+	thead {
+		td,
+		th {
+			vertical-align: top;
+		}
+	}
+}

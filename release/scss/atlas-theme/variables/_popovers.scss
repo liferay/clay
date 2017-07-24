@@ -1,0 +1,27 @@
+/**
+* Clay 2.0.0-alpha.1
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$popover-border-color: #AEB7BD !default;
+$popover-border-radius: $border-radius !default; // 4px
+$popover-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
+
+$popover-arrow-width: 8px !default;
+$popover-max-width: 276px !default;
+
+$popover-inner-padding: 0 !default;
+
+$popover-header-bg: #FFF !default;
+$popover-header-border-color: $popover-border-color !default;
+$popover-header-color: $body-color !default;
+$popover-header-font-size: 16px !default;
+$popover-header-margin-x: 16px !default;
+$popover-header-margin-y: 0 !default;
+$popover-header-padding-x: 0 !default;
+$popover-header-padding-y: 16px !default;
+
+$popover-body-padding-x: 16px !default;
+$popover-body-padding-y: 16px !default;

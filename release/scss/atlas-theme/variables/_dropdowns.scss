@@ -1,0 +1,49 @@
+/**
+* Clay 2.0.0-alpha.1
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$dropdown-font-size: $font-size-base !default; // 16px
+$dropdown-font-size-mobile: $font-size-base-mobile !default; // 14px
+
+$dropdown-item-padding-x: 20px !default;
+$dropdown-item-padding-y: 8px !default;
+
+$dropdown-header-font-size: $font-size-sm !default; // 14px
+$dropdown-header-font-size-mobile: $font-size-sm-mobile !default; // 12px
+
+$dropdown-padding-bottom: 6px !default;
+$dropdown-padding-left: 0 !default;
+$dropdown-padding-right: 0 !default;
+$dropdown-padding-top: 6px !default;
+
+$dropdown-min-height: 40px !default;
+$dropdown-min-width: 200px !default;
+
+$dropdown-max-width: 300px !default;
+$dropdown-max-width-mobile: 230px !default;
+
+// Skin
+
+$dropdown-bg: #FFF !default;
+$dropdown-box-shadow: 0 1px 1px 0 transparentize(#000, 0.7) !default;
+
+$dropdown-border-color: transparentize(#DCE0E3, 0.5) !default;
+
+$dropdown-divider-bg: $dropdown-border-color !default;
+
+$dropdown-link-color: map-get($theme-colors, secondary) !default;
+
+$dropdown-link-hover-bg: #F7FAFA !default;
+$dropdown-link-hover-color: map-get($theme-colors, secondary) !default;
+
+$dropdown-link-active-bg: $dropdown-link-hover-bg !default;
+$dropdown-link-active-color: map-get($theme-colors, primary) !default;
+
+$dropdown-link-disabled-color: #CACDD2 !default;
+
+$dropdown-header-color: #B0B4BB !default;
