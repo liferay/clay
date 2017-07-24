@@ -1,6 +1,7 @@
 .btn-landing {
 	@include button-variant($btn-landing-color, $btn-landing-bg, $btn-landing-border);
 
+	background-color: $btn-landing-bg;
 	border: $btn-landing-border-width solid $btn-landing-border;
 	border-radius: $btn-landing-border-radius;
 	color: $btn-landing-color;

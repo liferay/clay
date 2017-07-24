@@ -3,6 +3,7 @@ body {
 }
 
 .landing {
+	font-size: 1.25rem;
 	min-height: 100vh;
 
 	header, section {
@@ -32,12 +33,12 @@ body {
 	}
 
 	.clay-logo {
-		margin: 40px 0 60px;
 		display: flex;
+		margin: 40px 0 60px;
 
 		img {
-			max-width: 160px;
 			max-height: 186px;
+			max-width: 160px;
 		}
 
 		.logo-title {

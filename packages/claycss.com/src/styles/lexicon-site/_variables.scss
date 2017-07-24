@@ -61,14 +61,14 @@ $font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, 
 // Landing button
 
 $btn-landing-bg: #FFF;
+$btn-landing-border: #CCC;
 $btn-landing-border-radius: 8px;
 $btn-landing-border-width: 1px !default;
-$btn-landing-border: #CCC;
 $btn-landing-color: $text-color;
 $btn-landing-hover-border: $brand-primary !default;
 $btn-landing-hover-color: $btn-landing-color !default;
 
-$btn-landing-font-size: $base-size / 1.6;
+$btn-landing-font-size: $base-size / 1.2;
 $btn-landing-padding: 18px 24px;
 
 // Breakpoints

@@ -23,7 +23,8 @@
 @import "../vendor/source-sans-pro/source-sans-pro.css";
 
 .lead {
-	// color: $brand-dark-active;
-	// font-size: $base-size * 1.5;
-	// font-weight: 400;
+	color: $brand-dark-active;
+	font-size: $base-size * 2;
+	font-weight: 400;
+	margin-bottom: 2rem;
 }
