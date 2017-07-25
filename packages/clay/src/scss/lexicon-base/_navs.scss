@@ -68,6 +68,65 @@
 	margin-left: $nav-nested-margins-spacer-x;
 }
 
+// Nav Underline
+
+@each $value in $nav-underline-link-highlight-palette {
+	$index: index($nav-underline-link-highlight-palette, $value);
+
+	.nav-underline .nav-item:nth-of-type(#{$index}n + 0) {
+		.nav-link::after {
+			background-color: nth($nav-underline-link-highlight-palette, $index);
+		}
+	}
+}
+
+.nav-underline {
+	.nav-link {
+		color: $nav-underline-link-color;
+
+		@include hover-focus {
+			color: $nav-underline-link-hover-color;
+		}
+
+		&:after {
+			bottom: $nav-underline-link-highlight-bottom;
+			content: $nav-underline-link-highlight-content;
+			display: block;
+			height: $nav-underline-link-highlight-height;
+			position: absolute;
+			left: $nav-underline-link-highlight-left;
+			right: $nav-underline-link-highlight-right;
+			top: $nav-underline-link-highlight-top;
+		}
+	}
+
+	.nav-item .nav-link.active:after {
+		background-color: $nav-underline-link-active-highlight;
+	}
+
+	.nav-link.active {
+		color: $nav-underline-link-active-color;
+
+		&:after {
+			@if not ($nav-underline-link-active-content == $nav-underline-link-highlight-content) {
+				content: $nav-underline-link-active-content;
+			}
+
+			@if not ($nav-underline-link-active-highlight-height == $nav-underline-link-highlight-height) {
+				height: $nav-underline-link-active-highlight-height;
+			}
+		}
+	}
+
+	.nav-item .nav-link.disabled:after {
+		background-color: $nav-underline-link-disabled-highlight;
+	}
+
+	.nav-link.disabled {
+		color: $nav-underline-link-disabled-color;
+	}
+}
+
 // Nav Tabs
 
 .nav-tabs {

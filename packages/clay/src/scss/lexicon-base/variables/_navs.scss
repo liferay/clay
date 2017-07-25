@@ -9,6 +9,27 @@ $nav-link-monospaced-size: $icon-monospaced-size !default;
 $nav-nested-margins-spacer-x: $nav-link-padding-x !default;
 $nav-nested-spacer-x: $nav-link-padding-x !default;
 
+// Nav Underline
+
+$nav-underline-link-highlight-palette: null !default
+
+$nav-underline-link-color: null !default;
+$nav-underline-link-hover-color: null !default;
+$nav-underline-link-highlight-content: null !default;
+$nav-underline-link-highlight-height: null !default;
+$nav-underline-link-highlight-bottom: 0 !default;
+$nav-underline-link-highlight-left: 0 !default;
+$nav-underline-link-highlight-right: 0 !default;
+$nav-underline-link-highlight-top: null !default;
+
+$nav-underline-link-disabled-color: null !default;
+$nav-underline-link-disabled-highlight: null !default;
+
+$nav-underline-link-active-color: null !default;
+$nav-underline-link-active-highlight: map-get($theme-colors, primary) !default;
+$nav-underline-link-active-content: '' !default;
+$nav-underline-link-active-highlight-height: 2px !default;
+
 // Nav Tabs
 
 $nav-tabs-link-show-color: null !default;
