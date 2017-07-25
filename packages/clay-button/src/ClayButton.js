@@ -22,8 +22,8 @@ ClayButton.STATE = {
 	 * Aria label attribute for the link element.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {string}
-	 * @default ''
+	 * @type {?string|undefined}
+	 * @default undefined
 	 */
 	ariaLabel: Config.string(),
 
@@ -31,7 +31,7 @@ ClayButton.STATE = {
 	 * Renders the button as a block element.
 	 * @instance
 	 * @memberof ClayButton
-	 * @type {boolean}
+	 * @type {?boolean}
 	 * @default false
 	 */
 	block: Config.bool().value(false),

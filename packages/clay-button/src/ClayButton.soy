@@ -20,8 +20,20 @@
 	{@param? type: string}
 	{@param? value: string}
 
+	{let $attributes kind="attributes"}
+		{call .attributes}
+			{param ariaLabel: $ariaLabel /}
+			{param block: $block /}
+			{param disabled: $disabled /}
+			{param name: $name /}
+			{param size: $size /}
+			{param style: $style /}
+			{param type: $type /}
+			{param value: $value /}
+		{/call}
+	{/let}
 
-	<button {call .attributes data="all" /}>
+	<button {$attributes}>
 		{call .content}
 			{param icon: $icon /}
 			{param label: $label /}
@@ -99,7 +111,7 @@
 		{/if}
 		{if $style}
 			{sp}btn-{$style}
-			{else}
+		{else}
 			{sp}btn-primary
 		{/if}
 	{/let}
