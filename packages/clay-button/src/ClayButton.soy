@@ -9,7 +9,6 @@
 	{@param? disabled: bool}
 	{@param? icon: [
 		alignment: string,
-		elementClasses: string,
 		spritemap: string,
 		symbol: string
 	]}
@@ -35,7 +34,6 @@
 {template .content}
 	{@param? icon: [
 		alignment: string,
-		elementClasses: string,
 		spritemap: string,
 		symbol: string
 	]}
@@ -64,13 +62,11 @@
 {template .icon}
 	{@param? icon: [
 		alignment: string,
-		elementClasses: string,
 		spritemap: string,
 		symbol: string
 	]}
 
 	{call ClayIcon.render}
-		{param elementClasses: $icon.elementClasses /}
 		{param spritemap: $icon.spritemap /}
 		{param symbol: $icon.symbol /}
 	{/call}

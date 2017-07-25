@@ -47,7 +47,7 @@ ClayButton.STATE = {
 
 	/**
 	 * Render ClayIcon in the ClayButton element, available options are
-	 * `elementClasses`, `spritemap`, `symbol`.
+	 * `spritemap`, `symbol`.
 	 * @instance
 	 * @memberof ClayButton
 	 * @type {?Object|undefined}
