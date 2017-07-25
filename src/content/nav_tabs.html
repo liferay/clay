@@ -94,22 +94,28 @@ section: Components
 		<h3>Nav Tabs Grid</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Use bootstrap's grid inside list items in nav-tabs. It doesn't collapse in mobile.</p>
+			<p>Use bootstrap's grid inside list items in nav-tabs.</p>
 		</blockquote>
 
 		<ul class="nav nav-tabs" role="tablist">
-			<li class="col-3 nav-item" role="presentation">
-				<a aria-controls="fields" class="active nav-link" data-toggle="tab" href="#fields03" role="tab">Fields</a>
+			<li class="col-6 col-sm-3 nav-item" role="presentation">
+				<a aria-controls="fields" class="active nav-link" data-toggle="tab" href="#fields03" role="tab">
+					<span class="nav-text-truncate">Fields</span>
+				</a>
 			</li>
-			<li class="col-3 nav-item" role="presentation">
-				<a aria-controls="settings" class="nav-link" data-toggle="tab" href="#settings03" role="tab">Settings</a>
+			<li class="col-6 col-sm-3 nav-item" role="presentation">
+				<a aria-controls="settings" class="nav-link" data-toggle="tab" href="#settings03" role="tab">
+					<span class="nav-text-truncate">Settings</span>
+				</a>
 			</li>
-			<li class="col-3 nav-item" role="presentation">
-				<a class="disabled nav-link" href="#documents">Documents</a>
+			<li class="col-6 col-sm-3 nav-item" role="presentation">
+				<a class="disabled nav-link" href="#documents">
+					<span class="nav-text-truncate">Documents</span>
+				</a>
 			</li>
-			<li class="col-3 dropdown nav-item" role="presentation">
+			<li class="col-6 col-sm-3 dropdown nav-item" role="presentation">
 				<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#configuration">
-					Configuration
+					<span class="nav-text-truncate">Configuration</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
 					</svg>
