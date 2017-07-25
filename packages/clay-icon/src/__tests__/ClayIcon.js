@@ -23,45 +23,23 @@ describe('ClayIcon', function() {
 		expect(clayIcon).toMatchSnapshot();
 	});
 
-	it('should append elementClasses to the outer element', function() {
+	it('should not append monospaced class to the icon element', function() {
 		clayIcon = new ClayIcon({
-			elementClasses: 'icon-monospaced',
+			monospaced: false,
+			spritemap: spritemap,
+			symbol: 'add-cell',
+		});
+
+		expect(dom.hasClass(clayIcon.element, 'icon-monospaced')).toBeFalsy();
+	});
+
+	it('should append monospaced class to the icon element', function() {
+		clayIcon = new ClayIcon({
+			monospaced: true,
 			spritemap: spritemap,
 			symbol: 'add-cell',
 		});
 
 		expect(dom.hasClass(clayIcon.element, 'icon-monospaced')).toBeTruthy();
-	});
-
-	it('should not output any markup if symbol is undefined', function() {
-		clayIcon = new ClayIcon({
-			spritemap: spritemap,
-		});
-
-		expect(clayIcon.element).toBeNull();
-	});
-
-	it('should not output any markup if spritemap is undefined', function() {
-		clayIcon = new ClayIcon({
-			symbol: 'add-cell',
-		});
-
-		expect(clayIcon.element).toBeNull();
-	});
-
-	it('should output markup for Glyphicons.', function() {
-		clayIcon = new ClayIcon({
-			elementClasses: 'glyphicon glyphicon-plus',
-		});
-
-		expect(clayIcon).toMatchSnapshot();
-	});
-
-	it('should output markup for Clay Font Awesome Icons.', function() {
-		clayIcon = new ClayIcon({
-			elementClasses: 'clay-fa icon-plus',
-		});
-
-		expect(clayIcon).toMatchSnapshot();
 	});
 });

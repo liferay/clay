@@ -18,31 +18,31 @@ class ClayIcon extends Component {}
  */
 ClayIcon.STATE = {
 	/**
-	 * CSS classes to be applied to the element.
+	 * Flag to indicate if the icon should be monospaced.
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string}
-	 * @default undefined
+	 * @type {?bool}
+	 * @default false
 	 */
-	elementClasses: Config.string(),
+	monospaced: Config.bool().value(false),
 
 	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string}
+	 * @type {!string}
 	 * @default undefined
 	 */
-	spritemap: Config.string(),
+	spritemap: Config.string().required(),
 
 	/**
 	 * The name of the Clay SVG Icon e.g. `plus`.
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string}
+	 * @type {!string}
 	 * @default undefined
 	 */
-	symbol: Config.string(),
+	symbol: Config.string().required(),
 };
 
 Soy.register(ClayIcon, templates);
