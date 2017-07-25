@@ -164,6 +164,16 @@ fieldset[disabled] label {
 	font-size: $input-font-size-lg;
 	height: $input-height-lg;
 
+	@if not ($input-padding-y-lg == $input-btn-padding-y-lg) {
+		padding-bottom: $input-padding-y-lg;
+		padding-top: $input-padding-y-lg;
+	}
+
+	@if not ($input-padding-x-lg == $input-btn-padding-x-lg) {
+		padding-left: $input-padding-x-lg;
+		padding-right: $input-padding-x-lg;
+	}
+
 	@include scale-component {
 		height: $input-height-lg-mobile;
 	}
@@ -172,6 +182,16 @@ fieldset[disabled] label {
 .form-control-sm {
 	font-size: $input-font-size-sm;
 	height: $input-height-sm;
+
+	@if not ($input-padding-y-sm == $input-btn-padding-y-sm) {
+		padding-bottom: $input-padding-y-sm;
+		padding-top: $input-padding-y-sm;
+	}
+
+	@if not ($input-padding-x-sm == $input-btn-padding-x-sm) {
+		padding-left: $input-padding-x-sm;
+		padding-right: $input-padding-x-sm;
+	}
 
 	@include scale-component {
 		height: $input-height-sm-mobile;

@@ -1,24 +1,29 @@
+$input-border-top-width: 0.0625rem !default;
+$input-border-right-width: 0.0625rem !default;
 $input-border-bottom-width: 0.0625rem !default;
 $input-border-left-width: 0.0625rem !default;
-$input-border-right-width: 0.0625rem !default;
-$input-border-top-width: 0.0625rem !default;
 $input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
 
 $input-color-placeholder-focus: null !default;
 $input-font-size: null !default;
 $input-font-size-mobile: null !default;
-$input-font-size-lg: null !default;
-$input-font-size-lg-mobile: null !default;
-$input-font-size-sm: null !default;
-$input-font-size-sm-mobile: null !default;
 $input-height-mobile: null !default;
-$input-height-lg-mobile: null !default;
-$input-height-sm-mobile: null !default;
 $input-padding-x: $input-btn-padding-x !default;
 $input-padding-y: $input-btn-padding-y !default;
 
-$input-group-constrain-line-height: $input-height - $input-border-top-width - $input-border-bottom-width !default;
+$input-font-size-lg: null !default;
+$input-font-size-lg-mobile: null !default;
+$input-height-lg-mobile: null !default;
+$input-padding-x-lg: $input-btn-padding-x-lg !default;
+$input-padding-y-lg: $input-btn-padding-y-lg !default;
 
+$input-font-size-sm: null !default;
+$input-font-size-sm-mobile: null !default;
+$input-height-sm-mobile: null !default;
+$input-padding-x-sm: $input-btn-padding-x-sm !default;
+$input-padding-y-sm: $input-btn-padding-y-sm !default;
+
+$input-group-constrain-line-height: $input-height - $input-border-top-width - $input-border-bottom-width !default;
 $input-group-constrain-line-height-lg: $input-height-lg - $input-border-top-width - $input-border-bottom-width !default;
 $input-group-constrain-line-height-sm: $input-height-sm - $input-border-top-width - $input-border-bottom-width !default;
 
