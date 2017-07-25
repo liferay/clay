@@ -57,26 +57,6 @@
 .input-group-addon {
 	border-width: $input-border-width;
 	color: $input-group-addon-color;
-
-	@if (variable-exists(atlas-theme)) {
-		input[type="checkbox"],
-		input[type="radio"] {
-			display: block;
-		}
-	}
-}
-
-@if (variable-exists(atlas-theme)) {
-	.input-group .form-control {
-		padding-right: 10px;
-	}
-
-	.input-group-addon,
-	.input-group-btn {
-		+ .form-control {
-			padding-left: 10px;
-		}
-	}
 }
 
 // Input Group Input
@@ -243,6 +223,11 @@
 
 .input-group-lg {
 	> .input-group-addon {
+		padding-bottom: $input-group-addon-padding-y-lg;
+		padding-left: $input-group-addon-padding-x-lg;
+		padding-right: $input-group-addon-padding-x-lg;
+		padding-top: $input-group-addon-padding-y-lg;
+
 		&:first-child {
 			border-bottom-left-radius: $input-group-addon-border-radius-lg;
 			border-top-left-radius: $input-group-addon-border-radius-lg;
@@ -258,6 +243,20 @@
 		height: auto;
 		line-height: $input-height-lg - $input-border-bottom-width - $input-border-top-width;
 		padding: 0 0 $input-border-bottom-width 0;
+	}
+
+	> .input-group-btn > .btn {
+		padding-bottom: $input-btn-padding-y-lg;
+		padding-left: $input-btn-padding-x-lg;
+		padding-right: $input-btn-padding-x-lg;
+		padding-top: $input-btn-padding-y-lg;
+
+		@include scale-component {
+			padding-bottom: $input-btn-padding-y-lg-mobile;
+			padding-left: $input-btn-padding-x-lg-mobile;
+			padding-right: $input-btn-padding-x-lg-mobile;
+			padding-top: $input-btn-padding-y-lg-mobile;
+		}
 	}
 
 	@if (variable-exists(atlas-theme)) {
@@ -294,6 +293,11 @@
 
 .input-group-sm {
 	> .input-group-addon {
+		padding-bottom: $input-group-addon-padding-y-sm;
+		padding-left: $input-group-addon-padding-x-sm;
+		padding-right: $input-group-addon-padding-x-sm;
+		padding-top: $input-group-addon-padding-y-sm;
+
 		&:first-child {
 			border-bottom-left-radius: $input-group-addon-border-radius-sm;
 			border-top-left-radius: $input-group-addon-border-radius-sm;
@@ -309,6 +313,20 @@
 		height: auto;
 		line-height: $input-height-sm - $input-border-bottom-width - $input-border-top-width;
 		padding: 0 0 $input-border-bottom-width 0;
+	}
+
+	> .input-group-btn > .btn {
+		padding-bottom: $input-btn-padding-y-sm;
+		padding-left: $input-btn-padding-x-sm;
+		padding-right: $input-btn-padding-x-sm;
+		padding-top: $input-btn-padding-y-sm;
+
+		@include scale-component {
+			padding-bottom: $input-btn-padding-y-sm-mobile;
+			padding-left: $input-btn-padding-x-sm-mobile;
+			padding-right: $input-btn-padding-x-sm-mobile;
+			padding-top: $input-btn-padding-y-sm-mobile;
+		}
 	}
 
 	@if (variable-exists(atlas-theme)) {
