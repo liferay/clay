@@ -46,14 +46,18 @@ ClayButton.STATE = {
 	disabled: Config.bool().value(false),
 
 	/**
-	 * Render ClayIcon in the ClayButton element, available options are
-	 * `spritemap`, `symbol`.
+	 * Render ClayIcon in the ClayButton element.
 	 * @instance
 	 * @memberof ClayButton
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
-	icon: Config.object(),
+	icon: Config.shapeOf({
+		alignment: Config.oneOf(['left', 'right']),
+		monospaced: Config.bool(),
+		spritemap: Config.string().required(),
+		symbol: Config.string().required(),
+	}),
 
 	/**
 	 * The label of the button content.
