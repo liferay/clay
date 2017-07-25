@@ -74,19 +74,19 @@
 .input-group-constrain {
 	border-bottom-width: 0;
 	line-height: $input-height - $input-border-bottom-width - $input-border-top-width;
-	max-width: 150px;
+	max-width: 300px;
 	overflow-x: auto;
 	overflow-y: hidden;
 	padding: 0 0 $input-border-bottom-width 0;
 
-	@include media-breakpoint-up(md) {
-		max-width: 300px;
+	@include scale-component {
+		max-width: 150px;
 	}
 }
 
 .input-group-constrain-text {
-	padding-left: $input-btn-padding-x;
-	padding-right: $input-btn-padding-x;
+	padding-left: $input-padding-x;
+	padding-right: $input-padding-x;
 }
 
 // Input Group Insert
