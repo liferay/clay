@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Loading Indicators</title>
+	<title>Lexicon - Nav Pills</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
@@ -96,7 +96,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
-<li class="active"><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
 </li>
@@ -106,7 +106,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/nav">Nav</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
+<li class="active"><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
@@ -206,7 +206,7 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title" id="beginContent" tabindex="-1">
-			Loading Indicators
+			Nav Pills
 
 			
 		</h1>
@@ -214,115 +214,151 @@
 		
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3 id="nav-pills"><a class="heading-anchor" href="#nav-pills"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Pills</h3>
+
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>CSS only loading indicators</p>
+			<p>Add <code>.nav-pills</code> to <code>.nav</code> to add background colors and border styles.</p>
 		</blockquote>
+
+		<ul class="nav nav-pills">
+			<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents</a></li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
+			</li>
+		</ul>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="dotted-spinner"><a class="heading-anchor" href="#dotted-spinner"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Dotted Spinner</h3>
-	</div>
+		<h3 id="nav-pills-justified"><a class="heading-anchor" href="#nav-pills-justified"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Pills Justified</h3>
 
-	<div class="col-md-3">
-		<div class="loading-icon loading-icon-sm"></div>
-	</div>
-	<div class="col-md-3">
-		<div class="loading-icon"></div>
-	</div>
-	<div class="col-md-3">
-		<div class="loading-icon loading-icon-md"></div>
-	</div>
-	<div class="col-md-3">
-		<div class="loading-icon loading-icon-lg"></div>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Add <code>.nav-justified</code> to make nav-pills equal width relative to its parent container.</p>
+		</blockquote>
+
+		<ul class="nav nav-justified nav-pills">
+			<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents</a></li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
+			</li>
+		</ul>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="linear-spinner"><a class="heading-anchor" href="#linear-spinner"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Linear Spinner</h3>
+		<h3 id="vertical-nav-pills"><a class="heading-anchor" href="#vertical-nav-pills"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Nav Pills</h3>
 	</div>
 
-	<div class="col-md-3">
-		<div class="loading-icon linear loading-icon-sm"></div>
-	</div>
-	<div class="col-md-3">
-		<div class="loading-icon linear"></div>
-	</div>
-	<div class="col-md-3">
-		<div class="loading-icon linear loading-icon-md"></div>
-	</div>
-	<div class="col-md-3">
-		<div class="loading-icon linear loading-icon-lg"></div>
+	<div class="col-md-4">
+		<ul class="flex-column nav nav-pills">
+			<li class="nav-item"><a class="active nav-link" href="#1">Fields</a></li>
+			<li class="nav-item">
+				<a class="nav-link" href="#1">
+					<span class="badge pull-right">2</span>
+					Fields with Badge
+				</a>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="#1">Settings</a></li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Setup</a>
+					<a class="dropdown-item" href="#1">Supported Clients</a>
+					<a class="dropdown-item" href="#1">Permissions</a>
+					<a class="dropdown-item" href="#1">Sharing</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Scope</a>
+				</div>
+			</li>
+		</ul>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="button-with-dotted-spinner"><a class="heading-anchor" href="#button-with-dotted-spinner"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Button with Dotted Spinner</h3>
-
-		<button class="btn btn-primary loading" type="button">
-			<span class="loading-icon"></span>Loading
-		</button>
-		<button class="btn btn-secondary loading" type="button">
-			<span class="loading-icon"></span>Loading
-		</button>
-		<button class="btn btn-success loading" type="button">
-			<span class="loading-icon"></span>Loading
-		</button>
-		<button class="btn btn-info loading" type="button">
-			<span class="loading-icon"></span>Loading
-		</button>
-		<button class="btn btn-warning loading" type="button">
-			<span class="loading-icon"></span>Loading
-		</button>
-		<button class="btn btn-danger loading" type="button">
-			<span class="loading-icon"></span>Loading
-		</button>
-		<button class="btn btn-light loading" type="button">
-			<span class="loading-icon"></span>Loading
-		</button>
-		<button class="btn btn-dark loading" type="button">
-			<span class="loading-icon"></span>Loading
-		</button>
-		<button class="btn btn-link loading" type="button">
-			<span class="loading-icon"></span>Loading
-		</button>
+		<h3 id="vertical-nested-nav-pills"><a class="heading-anchor" href="#vertical-nested-nav-pills"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Vertical Nested Nav Pills</h3>
 	</div>
-</div>
 
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="button-with-linear-spinner"><a class="heading-anchor" href="#button-with-linear-spinner"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Button with Linear Spinner</h3>
-
-		<button class="btn btn-primary loading" type="button">
-			<span class="loading-icon linear"></span>Loading
-		</button>
-		<button class="btn btn-secondary loading" type="button">
-			<span class="loading-icon linear"></span>Loading
-		</button>
-		<button class="btn btn-success loading" type="button">
-			<span class="loading-icon linear"></span>Loading
-		</button>
-		<button class="btn btn-info loading" type="button">
-			<span class="loading-icon linear"></span>Loading
-		</button>
-		<button class="btn btn-warning loading" type="button">
-			<span class="loading-icon linear"></span>Loading
-		</button>
-		<button class="btn btn-danger loading" type="button">
-			<span class="loading-icon linear"></span>Loading
-		</button>
-		<button class="btn btn-light loading" type="button">
-			<span class="loading-icon linear"></span>Loading
-		</button>
-		<button class="btn btn-dark loading" type="button">
-			<span class="loading-icon linear"></span>Loading
-		</button>
-		<button class="btn btn-link loading" type="button">
-			<span class="loading-icon linear"></span>Loading
-		</button>
+	<div class="col-md-4">
+		<ul class="flex-column nav nav-nested nav-pills">
+			<li class="nav-item">
+				<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navPillsCollapse01">
+					Basic Information
+					<span class="collapse-icon-closed">
+						<span class="icon-caret-right"></span>
+					</span>
+					<span class="collapse-icon-open">
+						<span class="icon-caret-down"></span>
+					</span>
+				</a>
+				<div class="collapse show" id="navPillsCollapse01">
+					<ul class="flex-column nav">
+						<li class="nav-item"><a class="nav-link" href="#">Details</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Catagorization</a></li>
+						<li class="nav-item">
+							<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navPillsCollapse02">
+								Documents and Media
+								<span class="collapse-icon-closed">
+									<span class="icon-caret-right"></span>
+								</span>
+								<span class="collapse-icon-open">
+									<span class="icon-caret-down"></span>
+								</span>
+							</a>
+							<div class="collapse" id="navPillsCollapse02">
+								<ul class="flex-column nav">
+									<li class="nav-item"><a class="nav-link" href="#">Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Catagorization</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Documents and Media</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Site Template</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Site Template</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
 	</div>
 </div>
 	</div>

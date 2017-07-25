@@ -9205,6 +9205,25 @@ a.label {
   margin-top: 0;
 }
 
+.nav-item[class*='col-'] {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.nav-text-truncate {
+  display: inline-block;
+  margin-bottom: -6px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-toggle .nav-text-truncate {
+  max-width: calc(100% - 24px);
+}
+
 .nav-nested .nav > li > a {
   padding-left: 2rem;
 }
@@ -9327,6 +9346,27 @@ a.label {
 
 .nav-nested-margins > li .nav > li {
   margin-left: 1rem;
+}
+
+.nav-underline .nav-link:after {
+  bottom: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.nav-underline .nav-item .nav-link.active:after {
+  background-color: #007bff;
+}
+
+.nav-underline .nav-link.active:after {
+  content: "";
+  height: 2px;
+}
+
+.nav-tabs .nav-link {
+  white-space: nowrap;
 }
 
 .basic-search.open {
@@ -10339,65 +10379,6 @@ a.label {
 
 .navbar-dark-bg .navbar-toggler-link:after {
   background-color: transparent;
-}
-
-.nav-tabs .nav-item[class*='col-'] {
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
-}
-
-.nav-tabs .nav-item[class*='col-']:first-child > .dropdown-menu {
-  margin-left: 0;
-}
-
-.nav-tabs .nav-item[class*='col-']:last-child {
-  float: right;
-}
-
-.nav-tabs .nav-item[class*='col-'] .nav-link {
-  margin-left: 2px;
-  margin-right: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.nav-tabs .nav-item[class*='col-'] > .dropdown-menu {
-  margin-left: 2px;
-}
-
-.nav-tabs .nav-link {
-  white-space: nowrap;
-}
-
-.nav-tabs-default {
-  border-bottom-color: transparent;
-}
-
-.nav-tabs-default .nav-item:first-child .nav-link, .nav-tabs-default .nav-item:first-child .nav-link:focus, .nav-tabs-default .nav-item:first-child .nav-link:hover {
-  border-left-color: transparent;
-}
-
-.nav-tabs-default .nav-link {
-  border-left-color: #ddd;
-  border-radius: 0;
-  border-width: 0 0 0 1px;
-  margin-right: 0;
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.nav-tabs-default .nav-link:hover {
-  border-color: transparent transparent transparent #ddd;
-}
-
-.nav-tabs-default .nav-link.disabled {
-  border-color: transparent transparent transparent #ddd;
-}
-
-.nav-tabs-default .nav-item.show .nav-link {
-  border-left-color: #ddd;
 }
 
 .multi-step-nav {
