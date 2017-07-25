@@ -85,7 +85,7 @@ ClayButton.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	size: Config.string(),
+	size: Config.oneOf(['sm']),
 
 	/**
 	 * The css class that colors the button.
