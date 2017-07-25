@@ -9224,6 +9224,10 @@ a.label {
   max-width: calc(100% - 24px);
 }
 
+.nav-nested {
+  flex-direction: column;
+}
+
 .nav-nested .nav > li > a {
   padding-left: 2rem;
 }
@@ -9342,6 +9346,10 @@ a.label {
 
 .nav-nested .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav .nav > li > .nav-equal-height-heading {
   padding-left: 15rem;
+}
+
+.nav-nested-margins {
+  flex-direction: column;
 }
 
 .nav-nested-margins > li .nav > li {
@@ -12798,117 +12806,6 @@ button.modal-primary-action-button {
 
 .timeline-spacing-xl .timeline-increment-text {
   max-width: 75px;
-}
-
-.toolbar {
-  margin-bottom: 10px;
-}
-
-.toolbar::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-
-.toolbar .dropdown {
-  display: block;
-  position: static;
-}
-
-.toolbar .dropdown-menu {
-  margin-top: 0;
-  top: 34px \9;
-}
-
-.toolbar .dropdown-toggle {
-  display: block;
-}
-
-.toolbar-group {
-  float: left;
-}
-
-.toolbar-group-right {
-  float: right;
-}
-
-.toolbar-group-expand .input-group {
-  width: 100%;
-}
-
-.toolbar-group-expand .toolbar-group-content:only-child {
-  width: 1%;
-}
-
-.toolbar-group-expand .toolbar-group-content {
-  max-width: 100px;
-  min-width: 100px;
-}
-
-.toolbar-group-expand .toolbar-group-content .truncate-text {
-  left: 8px \9;
-  position: absolute \9;
-  right: 8px \9;
-  -ms-transform: translateY(-50%);
-}
-
-.toolbar-group,
-.toolbar-group-right,
-.toolbar-group-expand {
-  display: table;
-  height: 34px;
-}
-
-.toolbar-group-expand-text {
-  line-height: 34px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.toolbar-group-content {
-  display: table-cell;
-  padding-left: 8px;
-  padding-right: 8px;
-  position: relative;
-  vertical-align: middle;
-}
-
-.toolbar-group-field {
-  display: table-cell;
-  padding-left: 8px;
-  padding-right: 8px;
-  position: relative;
-  vertical-align: middle;
-  width: 1%;
-}
-
-@media (max-width: 575px) {
-  .tbg-xs-newline {
-    clear: both;
-    float: left;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .tbg-sm-newline {
-    clear: both;
-    float: left;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .tbg-md-newline {
-    clear: both;
-    float: left;
-  }
-}
-
-@media (min-width: 1200px) {
-  .tbg-lg-newline {
-    clear: both;
-    float: left;
-  }
 }
 
 .rounded {
