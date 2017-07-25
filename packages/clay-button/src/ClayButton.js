@@ -46,15 +46,6 @@ ClayButton.STATE = {
 	disabled: Config.bool().value(false),
 
 	/**
-	 * The href attribute value of the link.
-	 * @instance
-	 * @memberof ButtonBase
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
-	href: Config.string(),
-
-	/**
 	 * Render ClayIcon in the ClayButton element, available options are
 	 * `elementClasses`, `spritemap`, `symbol`.
 	 * @instance
@@ -65,7 +56,7 @@ ClayButton.STATE = {
 	icon: Config.object(),
 
 	/**
-	 * The label of the button or link content.
+	 * The label of the button content.
 	 * @instance
 	 * @memberof ButtonBase
 	 * @type {?string|undefined}

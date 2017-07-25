@@ -7,7 +7,6 @@
 	{@param? ariaLabel: string}
 	{@param? block: bool}
 	{@param? disabled: bool}
-	{@param? href: string}
 	{@param? icon: [
 		alignment: string,
 		elementClasses: string,
@@ -22,21 +21,12 @@
 	{@param? value: string}
 
 
-	{if $href}
-		<a href="{$href}" {call .attributes data="all" /}>
-			{call .content}
-				{param icon: $icon /}
-				{param label: $label /}
-			{/call}
-		</a>
-	{else}
-		<button {call .attributes data="all" /}>
-			{call .content}
-				{param icon: $icon /}
-				{param label: $label /}
-			{/call}
-		</button>
-	{/if}
+	<button {call .attributes data="all" /}>
+		{call .content}
+			{param icon: $icon /}
+			{param label: $label /}
+		{/call}
+	</button>
 {/template}
 
 /**
