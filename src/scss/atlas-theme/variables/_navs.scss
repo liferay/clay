@@ -13,6 +13,11 @@ $nav-collapse-icon-open: "\f0d7" !default;
 
 $nav-nested-spacer-x: 0.75rem !default; // 12px
 
+// Nav Underline
+
+$nav-underline-link-color: map-get($theme-colors, secondary) !default;
+$nav-underline-link-disabled-color: $nav-link-disabled-color !default;
+
 // Nav Pills
 
 $nav-pills-border-radius: 5px !default;
