@@ -8,8 +8,17 @@
 	{@param? spritemap: string}
 	{@param? symbol: string}
 
+
 	{if isNonnull($symbol) and isNonnull($spritemap)}
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-{$symbol}{$elementClasses ? '  ' + $elementClasses : ''}">
+		{let $classes kind="text"}
+			lexicon-icon
+			{sp}lexicon-icon-{$symbol}
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		{/let}
+
+		<svg aria-hidden="true" class="{$classes}">
 			<use xlink:href="{$spritemap}#{$symbol}" />
 		</svg>
 	{elseif $elementClasses}

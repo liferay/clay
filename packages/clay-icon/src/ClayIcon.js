@@ -2,7 +2,7 @@
 
 import Component from 'metal-component';
 import Soy from 'metal-soy';
-import { validators } from 'metal-state';
+import { Config } from 'metal-state';
 
 import templates from './ClayIcon.soy.js';
 
@@ -18,15 +18,22 @@ class ClayIcon extends Component {}
  */
 ClayIcon.STATE = {
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayIcon
+	 * @type {?string}
+	 * @default undefined
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayIcon
 	 * @type {?string}
 	 * @default undefined
 	 */
-	spritemap: {
-		validator: validators.string,
-	},
+	spritemap: Config.string(),
 
 	/**
 	 * The name of the Clay SVG Icon e.g. `plus`.
@@ -35,9 +42,7 @@ ClayIcon.STATE = {
 	 * @type {?string}
 	 * @default undefined
 	 */
-	symbol: {
-		validator: validators.string,
-	},
+	symbol: Config.string(),
 };
 
 Soy.register(ClayIcon, templates);
