@@ -92,9 +92,11 @@ ClayButton.STATE = {
 	 * @instance
 	 * @memberof ClayButton
 	 * @type {?string|undefined}
-	 * @default undefined
+	 * @default primary
 	 */
-	style: Config.string(),
+	style: Config.oneOf(['borderless', 'link', 'primary', 'secondary']).value(
+		'primary',
+	),
 
 	/**
 	 * The type attribute value of the element.
