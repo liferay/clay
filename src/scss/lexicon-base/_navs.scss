@@ -61,11 +61,17 @@
 // Nav Nested
 
 .nav-nested {
+	flex-direction: column;
+
 	@include make-nav-nested($nav-nested-spacer-x);
 }
 
-.nav-nested-margins > li .nav > li {
-	margin-left: $nav-nested-margins-spacer-x;
+.nav-nested-margins {
+	flex-direction: column;
+
+	> li .nav > li {
+		margin-left: $nav-nested-margins-spacer-x;
+	}
 }
 
 // Nav Underline
