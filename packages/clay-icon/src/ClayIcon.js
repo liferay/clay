@@ -18,6 +18,15 @@ class ClayIcon extends Component {}
  */
 ClayIcon.STATE = {
 	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?string|undefined}
+	 * default undefined
+	 */
+	id: Config.string(),
+
+	/**
 	 * Flag to indicate if the icon should be monospaced.
 	 * @instance
 	 * @memberof ClayIcon

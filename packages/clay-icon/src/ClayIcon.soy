@@ -6,17 +6,23 @@
 {template .render}
 	{@param spritemap: string}
 	{@param symbol: string}
+	{@param? id: string}
 	{@param? monospaced: bool}
 
-	{let $classes kind="text"}
-		lexicon-icon
-		{sp}lexicon-icon-{$symbol}
-		{if $monospaced}
-			{sp}icon-monospaced
+	{let $attributes kind="attributes"}
+		aria-hidden="true"
+		class="lexicon-icon
+			{sp}lexicon-icon-{$symbol}
+			{if $monospaced}
+				{sp}icon-monospaced
+			{/if}
+		"
+		{if $id}
+			id="{$id}"
 		{/if}
 	{/let}
 
-	<svg aria-hidden="true" class="{$classes}">
+	<svg {$attributes}>
 		<use xlink:href="{$spritemap}#{$symbol}" />
 	</svg>
 {/template}
