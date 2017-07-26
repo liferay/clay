@@ -10,28 +10,119 @@
 		a { margin-right: 15px; }
 	</style>
 </head>
-<body>
-	<h1>Metal Clay Link</h1>
-	<script>
-		new metal.MetalClayLink({
-			href: '#1',
-			icon: {
-				alignment: 'left',
-				spritemap: '../node_modules/clay/build/images/icons/icons.svg',
-				symbol: 'add-cell'
-			},
-			label: 'My Link Label'
-		});
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Link</h1>
+	</div>
 
-		new metal.ClayLink({
-			href: '#1',
-			icon: {
-				alignment: 'right',
-				spritemap: '../node_modules/clay/build/images/icons/icons.svg',
-				symbol: 'add-cell'
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Link Styles</h1>
+			<div id="link-styles"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Link with icons</h1>
+			<div id="link-icons"></div>
+		</div>
+	</div>
+
+	<script>
+		new metal.ClayLink(
+			{
+				href: '#1',
+				label: 'Default'
 			},
-			label: '<span>My Other Link Label</span>'
-		});
+			'#link-styles'
+		);
+
+		new metal.ClayLink(
+			{
+				href: '#1',
+				label: 'Secondary',
+				style: 'secondary'
+			},
+			'#link-styles'
+		);
+
+		new metal.ClayLink(
+			{
+				buttonStyle: 'primary',
+				href: '#1',
+				label: 'Button Primary',
+			},
+			'#link-styles'
+		);
+
+		new metal.ClayLink(
+			{
+				buttonStyle: 'secondary',
+				href: '#1',
+				label: 'Button Secondary',
+			},
+			'#link-styles'
+		);
+
+		new metal.ClayLink(
+			{
+				buttonStyle: 'borderless',
+				href: '#1',
+				label: 'Button Borderless',
+			},
+			'#link-styles'
+		);
+
+		new metal.ClayLink(
+			{
+				buttonStyle: 'link',
+				href: '#1',
+				label: 'Button Link',
+			},
+			'#link-styles'
+		);
+
+		new metal.ClayLink(
+			{
+				href: '#1',
+				icon: {
+					monospaced: true,
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'add-cell'
+				},
+				label: '<span>My Other Link Label</span>'
+			},
+			'#link-icons'
+		);
+
+		new metal.ClayLink(
+			{
+				href: '#1',
+				icon: {
+					alignment: 'right',
+					monospaced: true,
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'add-cell'
+				},
+				label: '<span>My Other Link Label</span>'
+			},
+			'#link-icons'
+		);
+
+		new metal.ClayLink(
+			{
+				ariaLabel: 'My Link',
+				href: '#1',
+				icon: {
+					alignment: 'right',
+					monospaced: true,
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'add-cell'
+				}
+			},
+			'#link-icons'
+		);
 	</script>
 </body>
 </html>
