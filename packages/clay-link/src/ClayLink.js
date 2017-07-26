@@ -37,14 +37,18 @@ ClayLink.STATE = {
 	href: Config.string(),
 
 	/**
-	 * Render MetalClayIcon in the link, available options are `alignment`,
-	 * `elementClasses`, `spritemap`, `symbol`.
+	 * Render ClayIcon in the ClayLink element.
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
-	icon: Config.object(),
+	icon: Config.shapeOf({
+		alignment: Config.oneOf(['left', 'right']),
+		monospaced: Config.bool(),
+		spritemap: Config.string().required(),
+		symbol: Config.string().required(),
+	}),
 
 	/**
 	 * Id to be applied to the anchor tag.
@@ -62,9 +66,7 @@ ClayLink.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	label: {
-		isHtml: true,
-	},
+	label: Config.any(),
 
 	/**
 	 * Sets the HTML attribute target on the anchor tag.

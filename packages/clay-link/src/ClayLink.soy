@@ -36,19 +36,23 @@
 
 	<a {$attributes}>
 		{if $icon and $icon.alignment == 'left'}
-			{call .icon data="all" /}
+			{call .icon }
+				{param icon: $icon /}
+			{/call}
 		{/if}
 
 		{$label}
 
 		{if $icon and not $icon.alignment or $icon and $icon.alignment == 'right'}
-			{call .icon data="all" /}
+			{call .icon }
+				{param icon: $icon /}
+			{/call}
 		{/if}
 	</a>
 {/template}
 
 /**
- * This renders a Metal Clay Icon.
+ * This renders a Clay Icon.
  */
 {template .icon}
 	{@param? icon: [
@@ -58,7 +62,7 @@
 		symbol: string
 	]}
 
-	{call ClayIcon.render data="all"}
+	{call ClayIcon.render}
 		{param monospaced: $icon.monospaced /}
 		{param spritemap: $icon.spritemap /}
 		{param symbol: $icon.symbol /}
