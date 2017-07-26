@@ -13,7 +13,10 @@
     "source-sans-pro": "^2.0.10"
   },
   "devDependencies": {
-    "electric-quartz-components": "alpha",
+		"countries-list": "^2.0.0",
+		"electric-quartz-components": "alpha",
+		"languages": "^0.1.3",
+		"lodash": "^4.17.4",
     "metal-toggler": "^2.0.0",
     "run-sequence": "^1.2.2"
   }

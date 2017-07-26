@@ -73,4 +73,34 @@
 	.content .sidebar-offset {
 		padding-top: 80px;
 	}
+<<<<<<< HEAD:src/styles/clay-site/_content-clay-site.scss
+=======
+
+	h5 {
+		color: $brand-dark-text;
+		margin-top: 48px;
+	}
+}
+
+.lexicon-icon-list {
+	&:after {
+		clear: both;
+		content: ".";
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+
+	li span {
+		margin-left: 4px;
+	}
+}
+
+@media (min-width: $screen-xs) {
+	.lexicon-icon-list li {
+		float: left;
+		padding: 5px;
+		width: 33%;
+	}
+>>>>>>> Adds ICONS-LEXICON component and generates code.:src/styles/lexicon-site/_content-lexicon-site.scss
 }
