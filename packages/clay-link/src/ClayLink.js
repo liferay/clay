@@ -28,6 +28,16 @@ ClayLink.STATE = {
 	ariaLabel: Config.string(),
 
 	/**
+	 * The css class to act as a button. If this is defined `style` param is
+	 * ignored.
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	buttonStyle: Config.oneOf(['borderless', 'link', 'primary', 'secondary']),
+
+	/**
 	 * Sets the download attribute on the anchor tag.
 	 * @instance
 	 * @memberof ClayLink
@@ -76,6 +86,15 @@ ClayLink.STATE = {
 	 * @default undefined
 	 */
 	label: Config.any(),
+
+	/**
+	 * The css class that colors the button.
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	style: Config.oneOf(['secondary']),
 
 	/**
 	 * Sets the HTML attribute target on the anchor tag.
