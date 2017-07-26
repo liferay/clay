@@ -117,18 +117,6 @@
 	padding-right: $input-group-addon-padding-x;
 }
 
-// Input Group Insert
-
-.input-group-insert {
-	border-left-width: 0;
-	border-right-width: 0;
-
-	> .btn {
-		border-radius: 0;
-		margin-right: -($input-btn-border-width);
-	}
-}
-
 // Input Group Light
 
 .input-group-light {
