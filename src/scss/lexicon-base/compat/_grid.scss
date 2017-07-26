@@ -5,6 +5,10 @@
 	}
 }
 
+.container-fluid-1280 {
+	@include clearfix;
+}
+
 // Image
 // Renamed .img-responsive to .img-fluid
 .img-responsive {
