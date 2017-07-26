@@ -57,6 +57,10 @@
 .input-group-addon {
 	border-width: $input-border-width;
 	color: $input-group-addon-color;
+	padding-bottom: $input-group-addon-padding-y;
+	padding-left: $input-group-addon-padding-x;
+	padding-right: $input-group-addon-padding-x;
+	padding-top: $input-group-addon-padding-y;
 }
 
 // Input Group Input
@@ -101,42 +105,32 @@
 	}
 }
 
-// Input Group Default
+// Input Group Light
 
-.input-group-default {
-	.form-control {
-		&:not(:first-child),
-		&:not(:last-child),
-		&:not(:first-child):not(:last-child) {
-			@include border-radius($input-border-radius);
+.input-group-light {
+	@if ($input-group-light-addon-border-width == 0) {
+		.form-control {
+			&:not(:first-child),
+			&:not(:last-child),
+			&:not(:first-child):not(:last-child) {
+				@include border-radius($input-border-radius);
+			}
 		}
-	}
 
-	&.input-group-lg .form-control:not(:first-child):not(:last-child) {
-		@include border-radius($input-border-radius-lg);
-	}
+		&.input-group-lg .form-control:not(:first-child):not(:last-child) {
+			@include border-radius($input-border-radius-lg);
+		}
 
-	&.input-group-sm .form-control:not(:first-child):not(:last-child) {
-		@include border-radius($input-border-radius-lg);
+		&.input-group-sm .form-control:not(:first-child):not(:last-child) {
+			@include border-radius($input-border-radius-lg);
+		}
 	}
 
 	.input-group-addon {
-		background-color: transparent;
-		border-width: 0;
-		padding: 0 10px;
-
-		@if (variable-exists(atlas-theme)) {
-			color: $input-group-secondary-addon-color;
-			position: relative;
-		}
-
-		&:first-child .input-group-addon-content {
-			margin-left: -10px;
-		}
-
-		&:last-child .input-group-addon-content {
-			margin-right: -10px;
-		}
+		background-color: $input-group-light-addon-bg;
+		border-color: $input-group-light-addon-border-color;
+		border-width: $input-group-light-addon-border-width;
+		color: $input-group-light-addon-color;
 	}
 
 	.input-group-btn-inset {
@@ -160,22 +154,6 @@
 
 	.help-icon {
 		@include monospace(28px);
-	}
-}
-
-.input-group-addon-content {
-	display: inline-block;
-
-	@if (variable-exists(atlas-theme)) {
-		border-bottom: $input-group-secondary-addon-content-border-bottom-width solid $input-group-secondary-addon-border-color;
-		height: $input-height;
-		line-height: $input-height;
-		width: 30px;
-
-		@include scale-component {
-			height: $input-height-mobile;
-			line-height: $input-height-mobile;
-		}
 	}
 }
 
@@ -271,19 +249,6 @@
 				border-top-right-radius: $btn-border-radius-lg;
 			}
 		}
-
-		&.input-group-default {
-			.input-group-addon-content {
-				height: $input-height-lg;
-				line-height: $input-height-lg;
-				width: 40px;
-
-				@include scale-component {
-					height: $input-height-lg-mobile;
-					line-height: $input-height-lg-mobile;
-				}
-			}
-		}
 	}
 
 	.help-icon {
@@ -339,18 +304,6 @@
 			&:last-child > .btn:last-child {
 				border-bottom-right-radius: $btn-border-radius-sm;
 				border-top-right-radius: $btn-border-radius-sm;
-			}
-		}
-
-		&.input-group-default {
-			.input-group-addon-content {
-				height: $input-height-sm;
-				line-height: $input-height-sm;
-
-				@include scale-component {
-					height: $input-height-sm-mobile;
-					line-height: $input-height-sm-mobile;
-				}
 			}
 		}
 	}
