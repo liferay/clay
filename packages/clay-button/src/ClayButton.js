@@ -19,7 +19,7 @@ class ClayButton extends Component {}
  */
 ClayButton.STATE = {
 	/**
-	 * Aria label attribute for the link element.
+	 * Aria label attribute for the button element.
 	 * @instance
 	 * @memberof ClayButton
 	 * @type {?string|undefined}
@@ -40,7 +40,7 @@ ClayButton.STATE = {
 	 * The button disabled attribute.
 	 * @instance
 	 * @memberof ButtonBase
-	 * @type {boolean}
+	 * @type {?boolean}
 	 * @default false
 	 */
 	disabled: Config.bool().value(false),
