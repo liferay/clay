@@ -166,8 +166,6 @@
 // TODO: Don't use fixed values
 
 .input-group-inset {
-	align-items: center;
-
 	.form-control {
 		padding-right: 45px;
 	}
@@ -178,12 +176,30 @@
 }
 
 .input-group-inset-item {
-	left: 3px;
+	left: ($input-height-inner - ($input-height-inner * 0.75)) / 2;
 	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 	z-index: 5;
 
+	@if ($input-height-inner-mobile) {
+		@include scale-component {
+			left: ($input-height-inner-mobile - ($input-height-inner-mobile * 0.75)) / 2;
+		}
+	}
+
 	.btn {
-		padding: ($input-btn-padding-y - 0.3125rem) ($input-btn-padding-x - 0.1875rem);
+		height: $input-height-inner * 0.75;
+		padding-bottom: 0;
+		padding-top: 0;
+		padding-left: ($input-btn-padding-x - 0.1875rem);
+		padding-right: ($input-btn-padding-x - 0.1875rem);
+
+		@if ($input-height-inner-mobile) {
+			@include scale-component {
+				height: $input-height-inner-mobile * 0.75;
+			}
+		}
 	}
 
 	.btn-link {
@@ -198,8 +214,13 @@
 
 .input-group-input + .input-group-inset-item {
 	left: auto;
-	position: absolute;
-	right: 3px;
+	right: ($input-height-inner - ($input-height-inner * 0.75)) / 2;
+
+	@if ($input-height-inner-mobile) {
+		@include scale-component {
+			right: ($input-height-inner-mobile - ($input-height-inner-mobile * 0.75)) / 2;
+		}
+	}
 }
 
 // Input Group Sizes
