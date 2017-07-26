@@ -4,6 +4,7 @@
  * This renders an anchor element.
  */
 {template .render}
+	{@param? ariaLabel: string}
 	{@param? download: string}
 	{@param? href: string}
 	{@param? icon: [
@@ -17,6 +18,10 @@
 	{@param? target: string}
 
 	{let $attributes kind="attributes"}
+		{if $ariaLabel}
+			aria-label="{$ariaLabel}"
+		{/if}
+
 		{if $download}
 			download="{$download}"
 		{/if}

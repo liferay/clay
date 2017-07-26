@@ -19,6 +19,15 @@ class ClayLink extends Component {}
  */
 ClayLink.STATE = {
 	/**
+	 * Aria label attribute for the anchor element.
+	 * @instance
+	 * @memberof ClayLink
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	ariaLabel: Config.string(),
+
+	/**
 	 * Sets the download attribute on the anchor tag.
 	 * @instance
 	 * @memberof ClayLink
