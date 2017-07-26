@@ -5,11 +5,10 @@
  */
 {template .render}
 	{@param? download: string}
-	{@param? elementClasses: string}
 	{@param? href: string}
 	{@param? icon: [
 		alignment: string,
-		elementClasses: string,
+		monospaced: bool,
 		spritemap: string,
 		symbol: string
 	]}
@@ -18,10 +17,6 @@
 	{@param? target: string}
 
 	{let $attributes kind="attributes"}
-		{if $elementClasses}
-			class="{$elementClasses}"
-		{/if}
-
 		{if $download}
 			download="{$download}"
 		{/if}
@@ -58,13 +53,13 @@
 {template .icon}
 	{@param? icon: [
 		alignment: string,
-		elementClasses: string,
+		monospaced: bool,
 		spritemap: string,
 		symbol: string
 	]}
 
 	{call ClayIcon.render data="all"}
-		{param elementClasses: $icon.elementClasses /}
+		{param monospaced: $icon.monospaced /}
 		{param spritemap: $icon.spritemap /}
 		{param symbol: $icon.symbol /}
 	{/call}
