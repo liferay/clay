@@ -48,7 +48,9 @@
 	{/let}
 
 	<a {$attributes}>
-		{if $icon and $icon.alignment == 'left'}
+		{let $iconAlignment: $icon and $icon.alignment ? $icon.alignment : 'left' /}
+
+		{if $icon and $iconAlignment == 'left'}
 			{call .icon }
 				{param icon: $icon /}
 			{/call}
@@ -56,7 +58,7 @@
 
 		{$label}
 
-		{if $icon and not $icon.alignment or $icon and $icon.alignment == 'right'}
+		{if $icon and $iconAlignment == 'right'}
 			{call .icon }
 				{param icon: $icon /}
 			{/call}
