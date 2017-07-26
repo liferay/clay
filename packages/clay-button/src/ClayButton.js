@@ -105,7 +105,7 @@ ClayButton.STATE = {
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	type: Config.string(),
+	type: Config.oneOf(['button', 'reset', 'submit']),
 
 	/**
 	 * The value attribute value of the element.
