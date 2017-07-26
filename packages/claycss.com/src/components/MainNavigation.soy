@@ -14,7 +14,7 @@
 				{let $page: $section.children[$childId] /}
 
 				{if not $page.hidden}
-					<li class="{$page.active ? 'active' : ''} {$page.children ? 'nav-heading' : ''}">
+					<li class="{$page.active ? 'active ' : ''}{$page.children ? 'nav-heading' : ''}">
 						{call .anchor data="all"}
 							{param page: $page /}
 						{/call}
@@ -38,21 +38,21 @@
  */
 {template .anchor}
 	{if $page.icon}
-		<svg class="lexicon-icon icon-monospaced">
+		<svg class="clay-icon icon-monospaced">
 			<use xlink:href="/images/icons/lexicon-site-icons.svg#{$page.icon}" />
 		</svg>
 	{/if}
 
 	{if not $page.children}
-		<a href="{$page.url}">
+		<a class="align-middle" href="{$page.url}">
 	{else}
-		<a data-onclick="handleCollapseClick_" href="javascript:;">
+		<a class="align-middle" data-onclick="handleCollapseClick_" href="javascript:;">
 	{/if}
 
 		<span>{$page.title}</span>
 
 		{if $page.children}
-			<svg class="collapse-toggle lexicon-icon icon-monospaced">
+			<svg class="collapse-toggle clay-icon icon-monospaced">
 				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 			</svg>
 		{/if}

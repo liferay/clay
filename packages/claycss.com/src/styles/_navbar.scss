@@ -3,10 +3,6 @@
 
 	z-index: 11;
 
-	@media (min-width: $grid-float-breakpoint) {
-		width: $sidebar-width - 100px;
-	}
-
 	@media (min-width: $screen-sm) {
 		width: $sidebar-width;
 	}

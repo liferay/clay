@@ -1,8 +1,4 @@
 .sidebar-offset {
-	@media (min-width: $grid-float-breakpoint) {
-		margin-left: $sidebar-width - 100px;
-	}
-
 	@media (min-width: $screen-sm) {
 		margin-left: $sidebar-width;
 	}
@@ -42,11 +38,11 @@
 .sidenav-fixed.sidenav-menu-slider {
 	visibility: visible;
 
-	&.open {
+	&.toggler-expanded {
 		width: 100%;
 	}
 
-	&, &.open {
+	&, &.toggler-expanded {
 		@media (max-width: $grid-float-breakpoint - 1px) {
 			@include transition(all 0.3s $ease-out-quint);
 		}
@@ -64,10 +60,10 @@
 .sidenav-fixed.sidenav-menu-slider .sidenav-menu {
 	bottom: 0;
 	height: initial;
-	top: $base-size * 2;
+	top: $base-size * 2.666667;
 
 	@media (min-width: $grid-float-breakpoint) {
-		top: $base-size * 3;
+		top: $base-size * 5.333333;
 	}
 }
 

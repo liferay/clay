@@ -1,6 +1,6 @@
 @import "../../node_modules/bourbon/app/assets/stylesheets/bourbon";
 
-@import "lexicon-site/variables";
+@import "clay-site/variables";
 
 @import "atlas";
 
@@ -13,18 +13,11 @@
 @import "sidebar";
 @import "landing";
 
-@import "lexicon-site/content-lexicon-site";
-@import "lexicon-site/navbar-lexicon-site";
-@import "lexicon-site/sidebar-lexicon-site";
-@import "lexicon-site/table-lexicon-site";
+@import "clay-site/content-clay-site";
+@import "clay-site/navbar-clay-site";
+@import "clay-site/sidebar-clay-site";
+@import "clay-site/table-clay-site";
 
 // Font
 
 @import "../vendor/source-sans-pro/source-sans-pro.css";
-
-.lead {
-	color: $brand-dark-active;
-	font-size: $base-size * 2;
-	font-weight: 400;
-	margin-bottom: 2rem;
-}

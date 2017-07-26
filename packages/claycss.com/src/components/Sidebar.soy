@@ -5,24 +5,24 @@
  * @param site
  */
 {template .render}
-	<nav class="navbar navbar-inverse navbar-lexicon-site navbar-fixed">
+	<nav class="navbar navbar-clay-site navbar-fixed navbar-inverse navbar-expand-md">
 		<div class="navbar-header navbar-header-left-xs">
 			<a class="navbar-brand" href="/">
-				<span>{$site.title}</span>
+				<img class="logo" src="/images/clay_logo_w.png" alt="{$site.title}" />
+				<span class="title">{$site.title} </span>
 				<small>by Liferay</small>
 			</a>
 		</div>
 
-		<button aria-controls="bs-navbar" aria-expanded="false" class="collapsed sidebar-toggler navbar-toggle btn-link" type="button">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="sr-only">Toggle navigation</span>
+		<button aria-expanded="false" aria-label="Toggle navigation" class="ml-auto mr-3 sidebar-toggler" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+				<use xlink:href="/vendor/lexicon/icons.svg#bars" />
+			</svg>
 		</button>
 	</nav>
 
-	<nav class="sidenav-fixed sidenav-menu-slider sidebar-toggler-content">
-		<div class="sidebar sidebar-inverse sidebar-lexicon-site sidenav-menu">
+	<nav class="sidebar-toggler-content sidenav-fixed sidenav-menu-slider" id="clay-sidebar">
+		<div class="sidebar sidebar-clay-site sidebar-inverse sidenav-menu">
 			<div class="sidebar-header">
 				<div class="sidebar-search">
 					{call ElectricSearchAutocomplete.render}

@@ -1,8 +1,33 @@
-.sidebar-lexicon-site {
+.sidebar-clay-site {
 	background-color: $brand-dark;
+	border-right: 0.5rem solid transparent;
+	min-width: 370px;
 
-	a, .nav .lexicon-icon {
-		color: $brand-dark-text;
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 8px;
+	}
+
+	&::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track {
+		background: transparent;
+		border-radius: 4px;
+		color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $brand-dark;
+		box-shadow: inset 0 -2px, inset 0 -3px, inset 0 2px, inset 0 3px;
+		color: $brand-dark;
+	}
+
+	.sidebar-toggler-content:hover & {
+		&::-webkit-scrollbar-thumb {
+			background: rgba($brand-secondary, 0.4);
+		}
+	}
+
+	a, .nav .clay-icon {
+		color: $brand-secondary;
 	}
 
 	.sidebar-header {
@@ -25,27 +50,33 @@
 		width: 100%;
 
 		.input-group-addon {
-			@include position(absolute, 4px 16px null null);
+			@include position(absolute, 6px 16px null null);
 
 			background-color: transparent;
 			border-color: transparent;
-			color: $brand-darker-text;
+			color: $brand-secondary;
 			z-index: 9;
 		}
 
 		> input.form-control {
 			background-color: $brand-darker;
 			border-radius: 4px;
-			color: $brand-darker-text;
+			border-width: 0;
+			color: $brand-dark;
+			padding-left: 0.875rem;
 			padding-right: $base-size * 1.5;
 
-			//@include placeholder($brand-darker-text);
+			@include placeholder {
+				color: $brand-secondary;
+			};
 
 			&:active, &:focus {
-				//@include placeholder($brand-darker-text);
+				@include placeholder {
+					color: $brand-dark-active;
+				}
 
 				background-color: #FFF;
-				color: $brand-darker-text;
+				color: $brand-dark;
 			}
 		}
 	}
@@ -59,16 +90,35 @@
 	}
 
 	.nav-pills {
+		.nav-heading {
+			display: block;
+		}
+
 		& > li > {
 			a {
 				background-color: transparent;
 				color: #FFF;
-				font-size: 16px;
+				display: block;
+				font-size: 1rem;
 				font-weight: 600;
-				line-height: 22px;
-				margin-left: $base-size * 1.5;
-				min-height: $base-size * 1.25;
-				padding-left: $base-size / 2;
+				line-height: $base-size / 1.375;
+				min-height: $base-size * 1.675;
+				padding: 0.55rem 1rem;
+				position: relative;
+
+				span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				.clay-icon {
+					display: inline-block;
+					fill: currentColor;
+					height: 16px;
+					transform: translateZ(0);
+					vertical-align: middle;
+					width: 16px;
+				}
 			}
 
 			& ul > li > ul > li > a, .nav .nav > li > a {
@@ -76,25 +126,27 @@
 				padding-left: $base-size / 2;
 			}
 
-			.icon-monospaced.lexicon-icon {
+			.icon-monospaced.clay-icon {
 				float: left;
 				height: 40px;
 				padding: 2px;
 			}
 		}
 
+
 		& > li > ul > li.active > a, & > li > ul > li.active > a:hover, & > li > ul > li.active > a:focus {
-			background-color: $brand-dark-active;
+			background-color: $brand-dark-lighter;
 			color: #FFF;
 			font-weight: normal;
 		}
 
 		& > li > a:hover, & > li > ul > li:hover > a, & > li > a:focus {
-			background-color: $brand-dark-hover;
+			background-color: $brand-dark-lighter;
+			text-decoration: none;
 		}
 
 		& li > ul > li > a {
-			color: $brand-dark-text;
+			color: $brand-secondary;
 			font-weight: normal;
 		}
 
@@ -104,22 +156,21 @@
 			}
 
 			&:hover {
-				background-color: $brand-dark-hover;
+				background-color: $brand-dark-lighter;
 			}
 		}
 
 		& li {
 			> a > .collapse-toggle {
+				color: #FFF;
 				display: inline-block;
+				height: 40px;
 				margin: 0;
 				min-height: auto;
-				padding: 0;
+				padding: 12px;
 				position: absolute;
 				right: 0;
 				top: 0;
-
-				height: 40px;
-				padding: 12px;
 				width: 40px;
 
 				@include transform(rotate(-90deg));
@@ -130,5 +181,16 @@
 				@include transform(rotate(0));
 			}
 		}
+	}
+}
+
+.sidebar-toggler {
+	color: #FFF;
+	display: none;
+}
+
+@media (max-width: $screen-sm - 1) {
+	.sidebar-toggler {
+		display: block;
 	}
 }

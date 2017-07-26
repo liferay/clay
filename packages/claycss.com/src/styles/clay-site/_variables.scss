@@ -1,0 +1,51 @@
+$output-bourbon-deprecation-warnings: false;
+
+$content-max-width: 960px;
+
+$sidebar-width: 376px;
+
+$base-size: 1.5rem;
+
+// Color
+$brand-dark: #B3472D;
+
+$brand-dark-active: #B16D50;
+$brand-dark-hover: #C7A47A;
+$brand-dark-text: #E0B5AB;
+$brand-darker: darken($brand-dark, 15%);
+$brand-darker-text: $brand-darker;
+$brand-dark-lighter: lighten($brand-dark, 5%);
+$brand-light-text: #C7A47A;
+$brand-lighten: #FBF8F5;
+
+$brand-border-color: #E1E2E8;
+$content-header-bg: #F1F3F5;
+
+$brand-default: #B3472D !default; // Atlas
+
+$brand-primary: #B16D50 !default;
+$brand-secondary: $brand-dark-text;
+
+$text-color: #000 !default;
+
+
+// Landing button
+
+$btn-landing-bg: #FFF;
+$btn-landing-border: #CCC;
+$btn-landing-border-radius: 8px;
+$btn-landing-border-width: 1px !default;
+$btn-landing-color: $text-color;
+$btn-landing-hover-border: $brand-primary !default;
+$btn-landing-hover-color: $btn-landing-color !default;
+
+$btn-landing-font-size: $base-size / 1.2;
+$btn-landing-padding: 18px 24px;
+
+// Breakpoints
+
+$screen-xs: 768px;
+$screen-sm: 900px;
+$screen-md: 900px;
+
+$grid-float-breakpoint: $screen-sm;

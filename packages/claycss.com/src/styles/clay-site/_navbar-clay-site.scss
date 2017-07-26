@@ -1,0 +1,28 @@
+.navbar-clay-site {
+	background-color: $brand-dark;
+	border-color: $brand-dark;
+	padding: 0.25rem 0;
+
+	.navbar-brand {
+		color: #FFF;
+		font-size: 1.5rem;
+		font-weight: 700;
+
+		small {
+			font-size: 0.875rem;
+		}
+	}
+
+	.logo {
+		display: inline-block;
+		height: 2.5rem;
+		margin-right: 0.5rem;
+		padding-bottom: 0.1875rem;
+	}
+}
+
+@media (min-width: $screen-sm) {
+	.navbar-clay-site {
+		padding: 32px 0 27px 12px;
+	}
+}

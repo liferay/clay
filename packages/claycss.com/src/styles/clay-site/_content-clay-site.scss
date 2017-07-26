@@ -67,44 +67,10 @@
 			margin: 0;
 		}
 	}
-
-	.home {
-		background-color: $content-header-bg;
-		margin: 0;
-
-		h1 {
-			color: $brand-dark;
-			font-size: $base-size * 1.5;
-			font-weight: 300;
-			line-height: $base-size * 2;
-			margin: $base-size 0;
-
-			@media (min-width: $grid-float-breakpoint) {
-				font-size: $base-size * 2;
-				margin: 0 0 0 $base-size * 3.3;
-			}
-		}
-
-		img {
-			@media (min-width: $grid-float-breakpoint) {
-				max-width: 400px;
-				padding: $base-size * 3 0 0;
-			}
-		}
-	}
 }
 
-.Home body {
-	background-color: $content-header-bg;
-}
-
-.News {
-	.content .sidebar-offset h3 {
-		margin-top: 0;
-	}
-
-	h5 {
-		color: $brand-dark-text;
-		margin-top: 48px;
+@media (max-width: $screen-sm - 1) {
+	.content .sidebar-offset {
+		padding-top: 80px;
 	}
 }
