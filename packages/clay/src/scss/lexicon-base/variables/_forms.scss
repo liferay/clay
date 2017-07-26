@@ -23,10 +23,6 @@ $input-height-sm-mobile: null !default;
 $input-padding-x-sm: $input-btn-padding-x-sm !default;
 $input-padding-y-sm: $input-btn-padding-y-sm !default;
 
-$input-group-constrain-line-height: $input-height - $input-border-top-width - $input-border-bottom-width !default;
-$input-group-constrain-line-height-lg: $input-height-lg - $input-border-top-width - $input-border-bottom-width !default;
-$input-group-constrain-line-height-sm: $input-height-sm - $input-border-top-width - $input-border-bottom-width !default;
-
 $input-border-color-disabled: null !default;
 $input-color-disabled: null !default;
 $input-color-placeholder-disabled: null !default;
