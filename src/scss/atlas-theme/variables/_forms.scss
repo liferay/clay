@@ -108,10 +108,10 @@ $input-select-bg-size: 18px auto !default;
 $input-select-padding-right: 18px !default;
 
 $input-select-icon-color: $input-border-color !default;
-$input-select-icon-color-focus: $input-focus-border-color !default;
+$input-select-icon-focus-color: $input-focus-border-color !default;
 
 $input-select-icon: lx-icon(caret-double-l, $input-select-icon-color) !default;
-$input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-color-focus) !default;
+$input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-focus-color) !default;
 
 // Legend
 

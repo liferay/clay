@@ -104,7 +104,7 @@ select.form-control:not([multiple]):not([size]) {
 	padding-top: $input-select-padding-top;
 
 	&:focus {
-		background-color: $input-select-bg-focus;
+		background-color: $input-select-focus-bg;
 		background-image: $input-select-icon-focus;
 	}
 }
