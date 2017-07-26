@@ -50,16 +50,7 @@ $input-readonly-cursor: null !default;
 
 $input-textarea-height: 150px !default;
 
-$input-group-addon-border-radius: null !default;
-$input-group-addon-border-radius-lg: null !default;
-$input-group-addon-border-radius-sm: null !default;
-$input-group-addon-color: null !default;
-$input-group-addon-padding-x: null !default;
-$input-group-addon-padding-y: 0 !default;
-$input-group-addon-padding-x-lg: null !default;
-$input-group-addon-padding-y-lg: 0 !default;
-$input-group-addon-padding-x-sm: null !default;
-$input-group-addon-padding-y-sm: null !default;
+// Input Variants
 
 $input-danger-bg: null !default;
 $input-danger-bg-focus: null !default;
@@ -120,6 +111,25 @@ $input-select-icon-focus: null !default;
 $form-control-feedback-font-size: null !default;
 $form-text-font-size: null !default;
 
-$zindex-input-group-hover: 3 !default;
+// Input Group
 
+$input-group-addon-border-radius: null !default;
+$input-group-addon-color: null !default;
+$input-group-addon-padding-x: null !default;
+$input-group-addon-padding-y: 0 !default;
+
+$input-group-addon-border-radius-lg: null !default;
+$input-group-addon-padding-x-lg: null !default;
+$input-group-addon-padding-y-lg: 0 !default;
+
+$input-group-addon-border-radius-sm: null !default;
+$input-group-addon-padding-x-sm: null !default;
+$input-group-addon-padding-y-sm: null !default;
+
+$input-group-light-addon-bg: transparent !default;
+$input-group-light-addon-border-color: null !default;
+$input-group-light-addon-border-width: 0 !default;
+$input-group-light-addon-color: null !default;
+
+$zindex-input-group-hover: 3 !default;
 $zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4
