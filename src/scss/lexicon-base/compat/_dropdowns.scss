@@ -30,6 +30,7 @@
 	content: normal;
 }
 
+.dropdown.open > .dropdown-menu,
 .overlay-content .open > .dropdown-menu {
 	display: block;
 }
