@@ -24,7 +24,7 @@ releases in your project.
 ## About
 Clay is Liferay's web implementation of the Lexicon Design Language. It is built with HTML, CSS, and Javascript with [Bootstrap](http://getbootstrap.com) as a foundation.
 
-You can view the various components on [the Clay site](https://liferay.github.io/clay).
+You can view the various components on [the Clay site](http://claycss.com).
 
 <!-- TODO: provide link to Lexicon site for documentation on design patterns -->
 

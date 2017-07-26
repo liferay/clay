@@ -1,7 +1,4 @@
 .progress {
-	// will be redundant with https://github.com/twbs/bootstrap/commit/2a833d559a51da21355360a56e29f1fb19c080dc
-	@include box-shadow($progress-box-shadow);
-
 	flex-grow: 1;
 	min-width: $progress-min-width;
 }
@@ -11,13 +8,13 @@
 }
 
 .progress-lg {
-	@include border-radius($progress-lg-border-radius);
+	@include border-radius($progress-border-radius-lg);
 
-	font-size: $progress-lg-font-size;
+	font-size: $progress-font-size-lg;
 
 	.progress-bar {
-		height: $progress-lg-height;
-		line-height: $progress-lg-height;
+		height: $progress-height-lg;
+		line-height: $progress-height-lg;
 	}
 }
 
@@ -31,6 +28,7 @@
 
 .progress-group-addon {
 	font-size: $progress-group-addon-font-size;
+	font-weight: $progress-group-addon-font-weight;
 	margin-right: $progress-group-addon-spacer-x;
 	text-align: center;
 
@@ -48,6 +46,10 @@
 	margin-right: 0;
 }
 
+.progress-group-feedback {
+	color: $progress-group-feedback-color;
+}
+
 .progress-group-stacked {
 	display: block;
 
@@ -57,192 +59,16 @@
 	}
 }
 
-// Progress States
+// Progress Variants
 
-.progress-group-feedback {
-	color: $progress-group-feedback-color;
-}
-
-.has-danger {
-	.progress-bar {
-		background-color: $progress-bar-danger-bg;
-	}
-
-	.progress-group-feedback {
-		color: $progress-group-feedback-danger-color;
-	}
-}
-
-.has-info {
-	.progress-bar {
-		background-color: $progress-bar-info-bg;
-	}
-
-	.progress-group-feedback {
-		color: $progress-group-feedback-info-color;
-	}
-}
-
-.has-success {
-	.progress-bar {
-		background-color: $progress-bar-success-bg;
-	}
-
-	.progress-group-feedback {
-		color: $progress-group-feedback-success-color;
-	}
-}
-
-.has-warning {
-	.progress-bar {
-		background-color: $progress-bar-warning-bg;
-	}
-
-	.progress-group-feedback {
-		color: $progress-group-feedback-warning-color;
-	}
-}
-
-// Multi Step Progress Bar
-
-.multi-step-progress-bar {
-	display: table;
-	list-style: none;
-	margin-bottom: 0;
-	padding-left: 0;
-	position: relative;
-	width: 100%;
-
-	> li {
-		color: $multi-step-progress-bar-color;
-		display: table-cell;
-		vertical-align: bottom;
-		width: 1%;
-	}
-
-	> .active {
-		color: $multi-step-progress-bar-active-color;
-
-		.divider {
-			background-color: $multi-step-progress-bar-active-color;
-			color: $multi-step-progress-bar-active-color;
-
-			&:after {
-				content: $multi-step-progress-bar-active-icon;
-			}
-		}
-	}
-
-	> .complete {
-		color: $multi-step-progress-bar-complete-color;
-
-		.divider {
-			background-color: $multi-step-progress-bar-complete-color;
-			color: $multi-step-progress-bar-complete-icon-color;
-
-			@if (variable-exists(atlas-theme)) {
-				margin-left: 18px;
-			}
-			@else {
-				margin-left: 15px;
-			}
-
-			&:after {
-				content: $multi-step-progress-bar-complete-icon;
-
-				@if (variable-exists(atlas-theme)) {
-					left: -16px;
-				}
-				@else {
-					left: -14px;
-				}
-			}
-		}
-	}
-
-	.divider {
-		background-color: $multi-step-progress-bar-color;
-		color: $multi-step-progress-bar-color;
-		height: $multi-step-progress-bar-divider-height;
-
-		@if (variable-exists(atlas-theme)) {
-			margin: 20px 0 20px 12px;
-		}
-		@else {
-			margin: 10px 0 10px 12px;
+@each $color, $value in $progress-palette {
+	.progress-#{$color} {
+		.progress-bar {
+			background-color: map-get($value, bar-bg);
 		}
 
-		position: relative;
-
-		&:after {
-			content: $multi-step-progress-bar-icon;
-			display: block;
-			font-family: 'fontawesome-alloy';
-			left: -12px;
-			position: absolute;
-			top: 50%;
-
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
+		.progress-group-feedback {
+			color: map-get($value, group-feedback-color);
 		}
-	}
-
-	.progress-bar-step,
-	.progress-bar-title {
-		@if (variable-exists(atlas-theme)) {
-			font-weight: 500;
-		}
-
-		margin-right: 10px;
-	}
-}
-
-.multi-step-progress-bar-collapse {
-	@include media-breakpoint-down(sm) {
-		padding-top: 20px;
-	}
-
-	> li {
-		@include media-breakpoint-down(sm) {
-			width: auto;
-		}
-
-		&:last-child {
-			@include media-breakpoint-down(sm) {
-				width: 1%;
-			}
-
-			.divider {
-				@include media-breakpoint-down(sm) {
-					width: 0;
-				}
-			}
-		}
-	}
-
-	> .active {
-		.progress-bar-title {
-			@include media-breakpoint-down(sm) {
-				display: block;
-				left: 0;
-				position: absolute;
-				right: 0;
-				text-align: center;
-				top: 0;
-			}
-		}
-	}
-
-	.progress-bar-title {
-		@include media-breakpoint-down(sm) {
-			display: none;
-		}
-	}
-}
-
-.multi-step-progress-bar-fixed {
-	> li {
-		display: inline-block;
-		width: $multi-step-progress-bar-fixed-width;
 	}
 }

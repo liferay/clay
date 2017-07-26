@@ -1,25 +1,20 @@
-// Structure
+$popover-border-color: #AEB7BD !default;
+$popover-border-radius: $border-radius !default; // 4px
+$popover-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 
 $popover-arrow-width: 8px !default;
 $popover-max-width: 276px !default;
 
 $popover-inner-padding: 0 !default;
 
-$popover-title-font-size: 16px !default;
-$popover-title-margin-x: 16px !default;
-$popover-title-margin-y: 0 !default;
-$popover-title-padding-x: 0 !default;
-$popover-title-padding-y: 16px !default;
+$popover-header-bg: #FFF !default;
+$popover-header-border-color: $popover-border-color !default;
+$popover-header-color: $body-color !default;
+$popover-header-font-size: 16px !default;
+$popover-header-margin-x: 16px !default;
+$popover-header-margin-y: 0 !default;
+$popover-header-padding-x: 0 !default;
+$popover-header-padding-y: 16px !default;
 
-$popover-content-padding-x: 16px !default;
-$popover-content-padding-y: 16px !default;
-
-// Skin
-
-$popover-border-color: #AEB7BD !default;
-$popover-border-radius: $border-radius !default; // 4px
-$popover-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
-
-$popover-title-bg: #FFF !default;
-$popover-title-border-color: $popover-border-color !default;
-$popover-title-color: $body-color !default;
+$popover-body-padding-x: 16px !default;
+$popover-body-padding-y: 16px !default;

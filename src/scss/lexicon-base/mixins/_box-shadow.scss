@@ -1,0 +1,7 @@
+@mixin box-shadow($shadow...) {
+	@if ($enable-shadows) {
+		@if ($shadow != null) {
+			box-shadow: $shadow;
+		}
+	}
+}

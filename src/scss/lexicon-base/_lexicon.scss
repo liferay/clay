@@ -16,8 +16,8 @@
 @import "list-group";
 @import "navs";
 @import "navbar";
-@import "nav-tabs";
 @import "management-bar"; // Management-bar styles should win over nav styles
+@import "multi-step-nav";
 // @import "pager"; // dropped
 @import "pagination";
 @import "panels";
@@ -36,7 +36,6 @@
 @import "modals";
 @import "timelines";
 @import "toolbars";
-// @import "nav-tabs-scroll";
 
 @import "borders";
 @import "utilities";
