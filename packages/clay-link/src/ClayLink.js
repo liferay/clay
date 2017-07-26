@@ -82,7 +82,7 @@ ClayLink.STATE = {
 	 * Sets the text or HTML to be rendered inside the anchor tag.
 	 * @instance
 	 * @memberof ClayLink
-	 * @type {?string|undefined}
+	 * @type {?html|string|undefined}
 	 * @default undefined
 	 */
 	label: Config.any(),
