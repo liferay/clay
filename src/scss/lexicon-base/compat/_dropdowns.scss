@@ -34,3 +34,7 @@
 .overlay-content .open > .dropdown-menu {
 	display: block;
 }
+
+.dropdown > .dropdown-menu {
+	position: absolute;
+}
