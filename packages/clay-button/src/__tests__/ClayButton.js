@@ -33,9 +33,9 @@ describe('ClayButton', function() {
 		expect(button).toMatchSnapshot();
 	});
 
-	it('should render a success button', function() {
+	it('should render a secondary button', function() {
 		button = new ClayButton({
-			style: 'success',
+			style: 'secondary',
 		});
 
 		expect(button).toMatchSnapshot();
@@ -49,7 +49,7 @@ describe('ClayButton', function() {
 		expect(button).toMatchSnapshot();
 	});
 
-	it('should render a button with label', function() {
+	it('should render a button with name', function() {
 		button = new ClayButton({
 			name: 'myButton',
 		});
@@ -57,11 +57,65 @@ describe('ClayButton', function() {
 		expect(button).toMatchSnapshot();
 	});
 
-	it('should render a link with ariaLabel attribute', function() {
+	it('should render a button with label and ariaLabel', function() {
 		button = new ClayButton({
 			ariaLabel: 'My Description',
-			href: 'http://liferay.com',
 			label: 'Visit Liferay.com',
+		});
+
+		expect(button).toMatchSnapshot();
+	});
+
+	it('should render a small button', function() {
+		button = new ClayButton({
+			size: 'sm',
+		});
+
+		expect(button).toMatchSnapshot();
+	});
+
+	it('should render a block button', function() {
+		button = new ClayButton({
+			block: true,
+		});
+
+		expect(button).toMatchSnapshot();
+	});
+
+	it('should render a button with icon', function() {
+		button = new ClayButton({
+			icon: {
+				monospaced: true,
+				spritemap: 'icons.svg',
+				symbol: 'plus',
+			},
+		});
+
+		expect(button).toMatchSnapshot();
+	});
+
+	it('should render a button with icon and label', function() {
+		button = new ClayButton({
+			icon: {
+				monospaced: true,
+				spritemap: 'icons.svg',
+				symbol: 'plus',
+			},
+			label: 'Label',
+		});
+
+		expect(button).toMatchSnapshot();
+	});
+
+	it('should render a button with label and icon', function() {
+		button = new ClayButton({
+			icon: {
+				alignment: 'right',
+				monospaced: true,
+				spritemap: 'icons.svg',
+				symbol: 'plus',
+			},
+			label: 'Label',
 		});
 
 		expect(button).toMatchSnapshot();
