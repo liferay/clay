@@ -72,10 +72,10 @@ ClayButton.STATE = {
 	 * The label of the button content.
 	 * @instance
 	 * @memberof ButtonBase
-	 * @type {?string|undefined}
+	 * @type {?html|string|undefined}
 	 * @default undefined
 	 */
-	label: Config.string(),
+	label: Config.any(),
 
 	/**
 	 * The name attribute value of the element.
