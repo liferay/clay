@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClaySticker should generate the default markup 1`] = `<span class="sticker sticker-primary"></span>`;
+
+exports[`ClaySticker should render a \`danger color\` sticker 1`] = `<span class="sticker sticker-danger"></span>`;
+
+exports[`ClaySticker should render a \`dark color\` sticker 1`] = `<span class="sticker sticker-dark"></span>`;
+
+exports[`ClaySticker should render a \`info color\` sticker 1`] = `<span class="sticker sticker-info"></span>`;
+
+exports[`ClaySticker should render a \`light color\` sticker 1`] = `<span class="sticker sticker-light"></span>`;
+
+exports[`ClaySticker should render a \`primary color\` sticker 1`] = `<span class="sticker sticker-primary"></span>`;
+
+exports[`ClaySticker should render a \`secondary color\` sticker 1`] = `<span class="sticker sticker-secondary"></span>`;
+
+exports[`ClaySticker should render a \`success color\` sticker 1`] = `<span class="sticker sticker-success"></span>`;
+
+exports[`ClaySticker should render a \`warning color\` sticker 1`] = `<span class="sticker sticker-warning"></span>`;
+
+exports[`ClaySticker should render a bottom left positioned sticker 1`] = `<span class="sticker sticker-primary sticker-bottom-left"></span>`;
+
+exports[`ClaySticker should render a bottom right positioned sticker 1`] = `<span class="sticker sticker-primary sticker-bottom-right"></span>`;
+
+exports[`ClaySticker should render a circle sticker 1`] = `<span class="sticker sticker-primary rounded-circle"></span>`;
+
+exports[`ClaySticker should render a extra large sticker 1`] = `<span class="sticker sticker-primary sticker-xl"></span>`;
+
+exports[`ClaySticker should render a large sticker 1`] = `<span class="sticker sticker-primary sticker-lg"></span>`;
+
+exports[`ClaySticker should render a small sticker 1`] = `<span class="sticker sticker-primary sticker-sm"></span>`;
+
+exports[`ClaySticker should render a sticker with icon 1`] = `
+<span class="sticker sticker-primary">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus icon-monospaced">
+    <use xlink:href="icons.svg#plus"></use>
+  </svg>
+</span>
+`;
+
+exports[`ClaySticker should render a sticker with id 1`] = `<span class="sticker sticker-primary" id="mySticker"></span>`;
+
+exports[`ClaySticker should render a sticker with label 1`] = `
+<span class="sticker sticker-primary">
+  <span>Doc E. Brown</span>
+</span>
+`;
+
+exports[`ClaySticker should render a top left positioned sticker 1`] = `<span class="sticker sticker-primary sticker-top-left"></span>`;
+
+exports[`ClaySticker should render a top right positioned sticker 1`] = `<span class="sticker sticker-primary sticker-top-right"></span>`;
+
+exports[`ClaySticker should render an outside bottom left positioned sticker 1`] = `<span class="sticker sticker-primary sticker-outside sticker-bottom-left"></span>`;
+
+exports[`ClaySticker should render an outside bottom right positioned sticker 1`] = `<span class="sticker sticker-primary sticker-outside sticker-bottom-right"></span>`;
+
+exports[`ClaySticker should render an outside top left positioned sticker 1`] = `<span class="sticker sticker-primary sticker-outside sticker-top-left"></span>`;
+
+exports[`ClaySticker should render an outside top right positioned sticker 1`] = `<span class="sticker sticker-primary sticker-outside sticker-top-right"></span>`;

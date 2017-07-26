@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Metal Clay Sticker</title>
+
+	<link rel="stylesheet" href="../node_modules/clay/build/css/atlas-font-awesome.css">
+
+	<style>
+		.my-personal-container {
+			position: relative;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-sticker.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Sticker</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Sticker Shapes</h1>
+			<div id="shapes-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Sticker Sizes</h1>
+			<div id="sizes-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Sticker Styles</h1>
+			<div id="styles-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Sticker with icons</h1>
+			<div id="icons-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col-md-12">
+			<h4>Sticker Positions</h1>
+		</div>
+
+		<div class="col-md-3">
+			<div id="positions-block-1" class="aspect-ratio">
+				<img alt="thumbnail" src="thumbnail_hot_air_ballon.jpg">
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div id="positions-block-2" class="aspect-ratio">
+				<img alt="thumbnail" src="thumbnail_hot_air_ballon.jpg">
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div id="positions-block-3" class="aspect-ratio">
+				<img alt="thumbnail" src="thumbnail_hot_air_ballon.jpg">
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div id="positions-block-4" class="aspect-ratio">
+				<img alt="thumbnail" src="thumbnail_hot_air_ballon.jpg">
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col-md-12">
+			<h4>Sticker Positions Outside</h1>
+		</div>
+
+		<div class="col-md-3">
+			<button class="btn btn-primary" id="outside-block-1" style="position: relative;">Email</button>
+		</div>
+
+		<div class="col-md-3">
+			<button class="btn btn-primary" id="outside-block-2" style="position: relative;">Email</button>
+		</div>
+
+		<div class="col-md-3">
+			<button class="btn btn-primary" id="outside-block-3" style="position: relative;">Email</button>
+		</div>
+
+		<div class="col-md-3">
+			<button class="btn btn-primary" id="outside-block-4" style="position: relative;">Email</button>
+		</div>
+	</div>
+
+	<script>
+		new metal.ClaySticker(
+			{
+				label: 'DB',
+				shape: 'rounded',
+				static: true
+			},
+			'#shapes-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'MM',
+				shape: 'circle',
+				static: true
+			},
+			'#shapes-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'BT',
+				size: 'sm',
+				static: true
+			},
+			'#sizes-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'JP',
+				size: 'lg',
+				static: true
+			},
+			'#sizes-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'LM',
+				size: 'xl',
+				static: true
+			},
+			'#sizes-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'CC',
+				style: 'danger',
+				static: true
+			},
+			'#styles-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'BT',
+				style: 'dark',
+				static: true
+			},
+			'#styles-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'LC',
+				style: 'info',
+				static: true
+			},
+			'#styles-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'CB',
+				style: 'light',
+				static: true
+			},
+			'#styles-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'MP',
+				style: 'primary',
+				static: true
+			},
+			'#styles-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'EB',
+				style: 'secondary',
+				static: true
+			},
+			'#styles-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'LM',
+				style: 'success',
+				static: true
+			},
+			'#styles-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				icon: {
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'add-cell'
+				},
+				size: 'sm',
+				static: true
+			},
+			'#icons-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				icon: {
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'add-cell'
+				},
+				static: true
+			},
+			'#icons-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				icon: {
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'add-cell'
+				},
+				size: 'lg',
+				static: true
+			},
+			'#icons-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				icon: {
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'add-cell'
+				},
+				size: 'xl',
+				static: true
+			},
+			'#icons-block'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'GM',
+				position: 'top-left'
+			},
+			'#positions-block-1'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'MS',
+				position: 'bottom-left'
+			},
+			'#positions-block-2'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'GW',
+				position: 'top-right'
+			},
+			'#positions-block-3'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'PP',
+				position: 'bottom-right'
+			},
+			'#positions-block-4'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'GM',
+				outside: true,
+				position: 'bottom-left',
+				style: 'danger'
+			},
+			'#outside-block-1'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'MS',
+				outside: true,
+				position: 'top-left',
+				style: 'danger'
+			},
+			'#outside-block-2'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'GW',
+				outside: true,
+				position: 'top-right',
+				style: 'danger'
+			},
+			'#outside-block-3'
+		);
+
+		new metal.ClaySticker(
+			{
+				label: 'PP',
+				outside: true,
+				position: 'bottom-right',
+				style: 'danger'
+			},
+			'#outside-block-4'
+		);
+	</script>
+</body>
+</html>

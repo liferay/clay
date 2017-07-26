@@ -1,0 +1,56 @@
+{namespace ClaySticker}
+
+/**
+ * This renders a sticker.
+ */
+{template .render}
+	{@param? icon: [
+		monospaced: bool,
+		spritemap: string,
+		symbol: string
+	]}
+	{@param? id: string}
+	{@param? label: html|string}
+	{@param? outside: bool}
+	{@param? position: string}
+	{@param? shape: string}
+	{@param? size: string}
+	{@param? style: string}
+
+	{let $attributes kind="attributes"}
+		class="sticker
+			{sp}sticker-{$style ?: 'default'}
+
+			{if $position}
+				{if $outside}
+					{sp}sticker-outside
+				{/if}
+				{sp}sticker-{$position}
+			{/if}
+
+			{if $shape == 'circle'}
+				{sp}rounded-circle
+			{/if}
+
+			{if $size}
+				{sp}sticker-{$size}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<span {$attributes}>
+		{if $icon}
+			{call ClayIcon.render}
+				{param monospaced: $icon.monospaced /}
+				{param spritemap: $icon.spritemap /}
+				{param symbol: $icon.symbol /}
+			{/call}
+		{elseif $label}
+			{$label}
+		{/if}
+	</span>
+{/template}
