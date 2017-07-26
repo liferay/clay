@@ -6,7 +6,7 @@
 }
 
 .has-error {
-	@extend .has-danger;
+	@extend .is-invalid;
 }
 
 .has-feedback {
