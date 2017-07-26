@@ -1,90 +1,146 @@
 'use strict';
 
-import dom from 'metal-dom';
 import ClayLink from '../ClayLink';
 
-let component;
+let link;
 
 describe('ClayLink', function() {
 	afterEach(() => {
-		if (component) {
-			component.dispose();
+		if (link) {
+			link.dispose();
 		}
 	});
 
-	it('should apply classes to the anchor tag', () => {
-		component = new ClayLink({
-			elementClasses: 'my-test-class',
-		});
+	it('should generate the default markup', () => {
+		link = new ClayLink();
 
-		expect(dom.hasClass(component.element, 'my-test-class')).toBeTruthy();
+		expect(link).toMatchSnapshot();
 	});
 
-	it('should apply the download attribute to the anchor tag', () => {
-		component = new ClayLink({
-			download: 'http://www.example.com',
+	it('should render a link with a label', () => {
+		link = new ClayLink({
+			label: 'My Link',
 		});
 
-		expect(component.element.getAttribute('download')).toEqual(
-			'http://www.example.com',
-		);
+		expect(link).toMatchSnapshot();
 	});
 
-	it('should apply an id to the anchor tag', () => {
-		component = new ClayLink({
-			id: 'myUniqueId',
+	it('should render a link with aria label', () => {
+		link = new ClayLink({
+			ariaLabel: 'My Link',
 		});
 
-		expect(component.element.getAttribute('id')).toEqual('myUniqueId');
+		expect(link).toMatchSnapshot();
 	});
 
-	it('should apply an href to the anchor tag', () => {
-		component = new ClayLink({
-			href: 'http://www.example.com',
+	it('should render a link with href', () => {
+		link = new ClayLink({
+			href: 'http://www.liferay.com',
 		});
 
-		expect(component.element.getAttribute('href')).toEqual(
-			'http://www.example.com',
-		);
+		expect(link).toMatchSnapshot();
 	});
 
-	it('should apply the target attribute to the anchor tag', () => {
-		component = new ClayLink({
-			target: 'http://www.example.com',
+	it('should render a link with id', () => {
+		link = new ClayLink({
+			id: 'myLink',
 		});
 
-		expect(component.element.getAttribute('target')).toEqual(
-			'http://www.example.com',
-		);
+		expect(link).toMatchSnapshot();
 	});
 
-	it('should render the correct markup with icon on the right', () => {
-		component = new ClayLink({
-			href: '#1',
+	it('should render a link with target', () => {
+		link = new ClayLink({
+			target: '_blank',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a downloadable link', () => {
+		link = new ClayLink({
+			download: 'downloadLink',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with icon', () => {
+		link = new ClayLink({
+			icon: {
+				monospaced: true,
+				spritemap: 'icons.svg',
+				symbol: 'plus',
+			},
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with icon and label', () => {
+		link = new ClayLink({
+			icon: {
+				monospaced: true,
+				spritemap: 'icons.svg',
+				symbol: 'plus',
+			},
+			label: 'My Link',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with label and icon', () => {
+		link = new ClayLink({
 			icon: {
 				alignment: 'right',
-				spritemap:
-					'../node_modules/lexicon-ux/build/images/icons/icons.svg',
-				symbol: 'add-cell',
+				monospaced: true,
+				spritemap: 'icons.svg',
+				symbol: 'plus',
 			},
-			label: '<span>My Other Link Label</span>',
+			label: 'My Link',
 		});
 
-		expect(component).toMatchSnapshot();
+		expect(link).toMatchSnapshot();
 	});
 
-	it('should render the correct markup with icon on the left', () => {
-		component = new ClayLink({
-			href: '#1',
-			icon: {
-				alignment: 'left',
-				spritemap:
-					'../node_modules/lexicon-ux/build/images/icons/icons.svg',
-				symbol: 'add-cell',
-			},
-			label: 'My Link Label',
+	it('should render a link with secondary style', () => {
+		link = new ClayLink({
+			style: 'secondary',
 		});
 
-		expect(component).toMatchSnapshot();
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with button primary style', () => {
+		link = new ClayLink({
+			buttonStyle: 'primary',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with button secondary style', () => {
+		link = new ClayLink({
+			buttonStyle: 'secondary',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with button borderless style', () => {
+		link = new ClayLink({
+			buttonStyle: 'borderless',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
+	it('should render a link with button link style', () => {
+		link = new ClayLink({
+			buttonStyle: 'link',
+		});
+
+		expect(link).toMatchSnapshot();
 	});
 });
