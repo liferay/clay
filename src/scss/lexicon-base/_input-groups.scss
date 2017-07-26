@@ -13,6 +13,16 @@
 }
 
 .input-group-btn {
+	> .btn {
+		height: $input-height;
+		padding-bottom: 0;
+		padding-top: 0;
+
+		@include scale-component {
+			height: $input-height-mobile;
+		}
+	}
+
 	> .btn + .btn {
 		margin-left: 0;
 	}
@@ -65,6 +75,10 @@
 		padding-left: $input-group-addon-padding-x;
 		padding-right: $input-group-addon-padding-x;
 	}
+
+	@include scale-component {
+		height: $input-height-mobile;
+	}
 }
 
 // Input Group Input
@@ -90,6 +104,7 @@
 	padding-right: 0;
 
 	@include scale-component {
+		line-height: $input-height-inner-mobile;
 		max-width: 150px;
 	}
 }
@@ -215,6 +230,10 @@
 		line-height: $input-height-inner-lg;
 		padding-left: 0;
 		padding-right: 0;
+
+		@include scale-component {
+			line-height: $input-height-inner-lg-mobile;
+		}
 	}
 
 	.input-group-constrain-text {
@@ -223,16 +242,18 @@
 	}
 
 	> .input-group-btn > .btn {
-		padding-bottom: $input-btn-padding-y-lg;
+		height: $input-height-lg;
+		padding-bottom: 0;
 		padding-left: $input-btn-padding-x-lg;
 		padding-right: $input-btn-padding-x-lg;
-		padding-top: $input-btn-padding-y-lg;
+		padding-top: 0;
 
 		@include scale-component {
-			padding-bottom: $input-btn-padding-y-lg-mobile;
+			height: $input-height-lg-mobile;
+			padding-bottom: 0;
 			padding-left: $input-btn-padding-x-lg-mobile;
 			padding-right: $input-btn-padding-x-lg-mobile;
-			padding-top: $input-btn-padding-y-lg-mobile;
+			padding-top: 0;
 		}
 	}
 
@@ -279,6 +300,10 @@
 		line-height: $input-height-inner-sm;
 		padding-left: 0;
 		padding-right: 0;
+
+		@include scale-component {
+			line-height: $input-height-inner-sm-mobile;
+		}
 	}
 
 	.input-group-constrain-text {
@@ -287,16 +312,18 @@
 	}
 
 	> .input-group-btn > .btn {
-		padding-bottom: $input-btn-padding-y-sm;
+		height: $input-height-sm;
+		padding-bottom: 0;
 		padding-left: $input-btn-padding-x-sm;
 		padding-right: $input-btn-padding-x-sm;
-		padding-top: $input-btn-padding-y-sm;
+		padding-top: 0;
 
 		@include scale-component {
-			padding-bottom: $input-btn-padding-y-sm-mobile;
+			height: $input-height-sm-mobile;
+			padding-bottom: 0;
 			padding-left: $input-btn-padding-x-sm-mobile;
 			padding-right: $input-btn-padding-x-sm-mobile;
-			padding-top: $input-btn-padding-y-sm-mobile;
+			padding-top: 0;
 		}
 	}
 
