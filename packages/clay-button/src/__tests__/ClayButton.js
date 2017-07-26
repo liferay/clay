@@ -120,4 +120,12 @@ describe('ClayButton', function() {
 
 		expect(button).toMatchSnapshot();
 	});
+
+	it('should render a button with id', function() {
+		button = new ClayButton({
+			id: 'myButton',
+		});
+
+		expect(button).toMatchSnapshot();
+	});
 });

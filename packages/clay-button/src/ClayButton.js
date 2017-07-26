@@ -60,6 +60,15 @@ ClayButton.STATE = {
 	}),
 
 	/**
+	 * Id to be applied to the element.
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?string|undefined}
+	 * default undefined
+	 */
+	id: Config.string(),
+
+	/**
 	 * The label of the button content.
 	 * @instance
 	 * @memberof ButtonBase

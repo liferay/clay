@@ -13,6 +13,7 @@
 		spritemap: string,
 		symbol: string
 	]}
+	{@param? id: string}
 	{@param? label: html}
 	{@param? name: string}
 	{@param? size: string}
@@ -25,6 +26,7 @@
 			{param ariaLabel: $ariaLabel /}
 			{param block: $block /}
 			{param disabled: $disabled /}
+			{param id: $id /}
 			{param name: $name /}
 			{param size: $size /}
 			{param style: $style /}
@@ -95,6 +97,7 @@
 	{@param? ariaLabel: string}
 	{@param? block: bool}
 	{@param? disabled: bool}
+	{@param? id: string}
 	{@param? name: string}
 	{@param? size: string}
 	{@param? style: string}
@@ -124,6 +127,10 @@
 
 	{if $disabled}
 		disabled
+	{/if}
+
+	{if $id}
+		id="{$id}"
 	{/if}
 
 	{if $name}

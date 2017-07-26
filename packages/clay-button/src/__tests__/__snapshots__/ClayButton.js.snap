@@ -19,6 +19,8 @@ exports[`ClayButton should render a button with icon and label 1`] = `
   </svg>Label</button>
 `;
 
+exports[`ClayButton should render a button with id 1`] = `<button class="btn btn-primary" id="myButton"></button>`;
+
 exports[`ClayButton should render a button with label 1`] = `<button class="btn btn-primary">Label</button>`;
 
 exports[`ClayButton should render a button with label and ariaLabel 1`] = `<button class="btn btn-primary" aria-label="My Description">Visit Liferay.com</button>`;
