@@ -30,9 +30,13 @@ $input-font-size-sm: 0.8125rem !default; // 13px
 
 // When changing input, make sure to match the corresponding
 // btn settings to the input height.
+$input-height-border: $input-border-bottom-width + $input-border-top-width !default;
 $input-height: 2.5rem !default; // 40px
+$input-height-inner: $input-height - $input-height-border !default;
 $input-height-lg: 3rem !default; // 48px
+$input-height-inner-lg: $input-height-lg - $input-height-border !default;
 $input-height-sm: 2rem !default; // 32px
+$input-height-inner-sm: $input-height-sm - $input-height-border !default;
 
 $form-control-feedback-font-size: 0.875rem !default; // 14px
 $form-text-font-size: 0.875rem !default; // 14px
@@ -118,6 +122,7 @@ $legend-border-color: #B0B4BB !default;
 $input-group-addon-bg: map-get($theme-colors, secondary) !default;
 $input-group-addon-border-color: $input-group-addon-bg !default;
 $input-group-addon-color: #FFF !default;
+$input-group-addon-padding-x: 0.875rem !default;
 $input-group-addon-padding-x-lg: 1.25rem !default;
 $input-group-addon-padding-x-sm: 0.5rem !default;
 

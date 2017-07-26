@@ -115,16 +115,16 @@ $form-text-font-size: null !default;
 
 $input-group-addon-border-radius: null !default;
 $input-group-addon-color: null !default;
-$input-group-addon-padding-x: null !default;
+$input-group-addon-padding-x: $input-padding-x !default;
 $input-group-addon-padding-y: 0 !default;
 
 $input-group-addon-border-radius-lg: null !default;
-$input-group-addon-padding-x-lg: null !default;
+$input-group-addon-padding-x-lg: $input-padding-x-lg !default;
 $input-group-addon-padding-y-lg: 0 !default;
 
 $input-group-addon-border-radius-sm: null !default;
-$input-group-addon-padding-x-sm: null !default;
-$input-group-addon-padding-y-sm: null !default;
+$input-group-addon-padding-x-sm: $input-padding-x-sm !default;
+$input-group-addon-padding-y-sm: 0 !default;
 
 $input-group-light-addon-bg: transparent !default;
 $input-group-light-addon-border-color: null !default;
