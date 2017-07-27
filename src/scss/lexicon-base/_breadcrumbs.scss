@@ -1,21 +1,21 @@
 .breadcrumb-item {
 	font-size: $breadcrumb-font-size;
 	font-weight: $breadcrumb-font-weight;
-	max-width: 150px;
+	max-width: 300px;
 
 	@include text-truncate;
 
 	text-transform: $breadcrumb-text-transform;
 
-	@include media-breakpoint-up(md) {
-		max-width: 300px;
+	@include scale-component {
+		max-width: 150px;
 	}
 
 	&.active {
 		font-weight: $breadcrumb-active-font-weight;
 	}
 
-	a {
+	> a {
 		color: $breadcrumb-link-color;
 		text-decoration: $breadcrumb-link-text-decoration;
 
@@ -23,6 +23,19 @@
 		&:hover {
 			color: $breadcrumb-link-hover-color;
 			text-decoration: $breadcrumb-link-hover-text-decoration;
+		}
+
+		> .text-truncate {
+			display: inline-block;
+			max-width: calc(300px - 20px);
+
+			@include text-truncate;
+
+			vertical-align: bottom;
+
+			@include scale-component {
+				max-width: calc(150px - 20px);
+			}
 		}
 	}
 
