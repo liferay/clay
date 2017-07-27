@@ -17,8 +17,8 @@ $breadcrumb-border-radius: null !default;
 $breadcrumb-link-color: null !default;
 $breadcrumb-link-hover-color: null !default;
 
-$breadcrumb-link-hover-text-decoration: null !default;
-$breadcrumb-link-text-decoration: null !default;
+$breadcrumb-link-text-decoration: $link-decoration !default;
+$breadcrumb-link-hover-text-decoration: $link-hover-decoration !default;
 
 $breadcrumb-text-truncate-icon-spacer-x: 1.25rem !default; // 20px
 $breadcrumb-text-truncate-max-width: 18.75rem - $breadcrumb-text-truncate-icon-spacer-x !default; // 300px
