@@ -349,7 +349,8 @@ section: Components
 		<h3>Input Group Inset</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Add class <code class="code">input-group-inset</code> to <code class="code">input-group</code> to place a button or other stuff inside the input.</p>
+			<p>Add class <code>input-group-inset</code> to <code>input-group</code> to place a button or other stuff inside the input.</p>
+			<p><code>input-group-inset</code> gets aligned right by default, add <code>input-group-inset-left</code> to <code>input-group</code> to align inset content on the left. This helps keep the tab order logical so the input is always focused first and not the button.</p>
 		</blockquote>
 
 		<div class="alert alert-warning">
@@ -379,7 +380,10 @@ section: Components
 				</div>
 
 				<div class="form-group">
-					<div class="input-group input-group-inset">
+					<div class="input-group input-group-inset input-group-inset-left">
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Search..." type="text">
+						</div>
 						<span class="input-group-inset-item">
 							<button class="btn btn-link" type="button">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
@@ -387,9 +391,6 @@ section: Components
 								</svg>
 							</button>
 						</span>
-						<div class="input-group-input">
-							<input class="form-control" placeholder="Search..." type="text">
-						</div>
 					</div>
 				</div>
 			</div>
@@ -405,13 +406,13 @@ section: Components
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="input-group input-group-inset">
-						<span class="input-group-inset-item">
-							<button class="btn btn-secondary" type="button">Submit</button>
-						</span>
+					<div class="input-group input-group-inset input-group-inset-left">
 						<div class="input-group-input">
 							<input class="form-control" placeholder="Enter Email..." type="email" style="padding-left: 92px;" />
 						</div>
+						<span class="input-group-inset-item">
+							<button class="btn btn-secondary" type="button">Submit</button>
+						</span>
 					</div>
 				</div>
 			</div>
