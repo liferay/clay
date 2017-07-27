@@ -9,11 +9,24 @@
 
 	> a {
 		color: $breadcrumb-link-color;
+
+		@if not ($breadcrumb-link-text-decoration == $link-decoration) {
+			text-decoration: $breadcrumb-link-text-decoration;
+		}
+
+		@include hover-focus {
+			color: $breadcrumb-link-hover-color;
+
+			@if not ($breadcrumb-link-hover-text-decoration == $link-hover-decoration) {
+				text-decoration: $breadcrumb-link-hover-text-decoration;
+			}
+		}
+	}
+
+	a > .breadcrumb-text-truncate {
 		text-decoration: $breadcrumb-link-text-decoration;
 
-		&:focus,
-		&:hover {
-			color: $breadcrumb-link-hover-color;
+		@include hover-focus {
 			text-decoration: $breadcrumb-link-hover-text-decoration;
 		}
 	}
@@ -31,12 +44,12 @@
 		}
 	}
 
-	&.dropdown {
-		overflow: visible;
-	}
-
 	.dropdown-toggle {
 		text-decoration: none;
+
+		@include hover-focus {
+			text-decoration: none;
+		}
 	}
 
 	+ .breadcrumb-item:before {
