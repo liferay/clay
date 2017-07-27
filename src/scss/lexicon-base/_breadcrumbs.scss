@@ -1,10 +1,18 @@
+.breadcrumb {
+	border-radius: $breadcrumb-border-radius;
+}
+
 .breadcrumb-item {
 	font-size: $breadcrumb-font-size;
 	font-weight: $breadcrumb-font-weight;
-	text-transform: $breadcrumb-text-transform;
 
 	&.active {
 		font-weight: $breadcrumb-active-font-weight;
+	}
+
+	> a,
+	> span {
+		text-transform: $breadcrumb-text-transform;
 	}
 
 	> a {
@@ -20,27 +28,6 @@
 			@if not ($breadcrumb-link-hover-text-decoration == $link-hover-decoration) {
 				text-decoration: $breadcrumb-link-hover-text-decoration;
 			}
-		}
-	}
-
-	a > .breadcrumb-text-truncate {
-		text-decoration: $breadcrumb-link-text-decoration;
-
-		@include hover-focus {
-			text-decoration: $breadcrumb-link-hover-text-decoration;
-		}
-	}
-
-	.breadcrumb-text-truncate {
-		display: inline-block;
-		max-width: $breadcrumb-text-truncate-max-width;
-
-		@include text-truncate;
-
-		vertical-align: bottom;
-
-		@include scale-component {
-			max-width: $breadcrumb-text-truncate-max-width-mobile;
 		}
 	}
 
@@ -62,8 +49,25 @@
 	}
 }
 
-.breadcrumb {
-	border-radius: $breadcrumb-border-radius;
+.breadcrumb-text-truncate {
+	display: inline-block;
+	max-width: $breadcrumb-text-truncate-max-width;
+
+	@include text-truncate;
+
+	vertical-align: bottom;
+
+	@include scale-component {
+		max-width: $breadcrumb-text-truncate-max-width-mobile;
+	}
+}
+
+a > .breadcrumb-text-truncate {
+	text-decoration: $breadcrumb-link-text-decoration;
+
+	@include hover-focus {
+		text-decoration: $breadcrumb-link-hover-text-decoration;
+	}
 }
 
 .breadcrumb-horizontal {
