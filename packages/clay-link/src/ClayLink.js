@@ -74,7 +74,7 @@ ClayLink.STATE = {
 	 * @instance
 	 * @memberof ClayLink
 	 * @type {?string|undefined}
-	 * default undefined
+	 * @default undefined
 	 */
 	id: Config.string(),
 
