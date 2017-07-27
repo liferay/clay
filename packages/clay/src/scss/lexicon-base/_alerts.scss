@@ -1,4 +1,6 @@
 .alert {
+	border-style: $alert-border-style;
+
 	@if ($alert-border-width != 1px) {
 		border-width: $alert-border-width;
 	}
