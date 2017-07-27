@@ -1,15 +1,7 @@
 .breadcrumb-item {
 	font-size: $breadcrumb-font-size;
 	font-weight: $breadcrumb-font-weight;
-	max-width: $breadcrumb-item-max-width;
-
-	@include text-truncate;
-
 	text-transform: $breadcrumb-text-transform;
-
-	@include scale-component {
-		max-width: $breadcrumb-item-max-width-mobile;
-	}
 
 	&.active {
 		font-weight: $breadcrumb-active-font-weight;
@@ -24,18 +16,18 @@
 			color: $breadcrumb-link-hover-color;
 			text-decoration: $breadcrumb-link-hover-text-decoration;
 		}
+	}
 
-		> .text-truncate {
-			display: inline-block;
-			max-width: calc(#{$breadcrumb-item-max-width} - 20px);
+	.breadcrumb-text-truncate {
+		display: inline-block;
+		max-width: $breadcrumb-text-truncate-max-width;
 
-			@include text-truncate;
+		@include text-truncate;
 
-			vertical-align: bottom;
+		vertical-align: bottom;
 
-			@include scale-component {
-				max-width: calc(#{$breadcrumb-item-max-width-mobile} - 20px);
-			}
+		@include scale-component {
+			max-width: $breadcrumb-text-truncate-max-width-mobile;
 		}
 	}
 
@@ -92,7 +84,6 @@
 	.breadcrumb-item {
 		display: block;
 		float: none;
-		max-width: none;
 	}
 
 	.breadcrumb-item:before,
@@ -102,5 +93,9 @@
 		float: none;
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	.breadcrumb-text-truncate {
+		max-width: calc(100% - #{$breadcrumb-text-truncate-icon-spacer-x});
 	}
 }

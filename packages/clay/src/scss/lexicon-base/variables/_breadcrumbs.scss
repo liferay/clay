@@ -20,6 +20,6 @@ $breadcrumb-link-hover-color: null !default;
 $breadcrumb-link-hover-text-decoration: null !default;
 $breadcrumb-link-text-decoration: null !default;
 
-$breadcrumb-text-truncate-max-width: 18.75rem !default; // 300px
-$breadcrumb-text-truncate-max-width-mobile: 9.375rem !default; // 150px
 $breadcrumb-text-truncate-icon-spacer-x: 1.25rem !default; // 20px
+$breadcrumb-text-truncate-max-width: 18.75rem - $breadcrumb-text-truncate-icon-spacer-x !default; // 300px
+$breadcrumb-text-truncate-max-width-mobile: 9.375rem - $breadcrumb-text-truncate-icon-spacer-x !default; // 150px
