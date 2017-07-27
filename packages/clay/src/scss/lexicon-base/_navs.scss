@@ -62,12 +62,14 @@
 
 .nav-nested {
 	flex-direction: column;
+	flex-wrap: nowrap;
 
 	@include make-nav-nested($nav-nested-spacer-x);
 }
 
 .nav-nested-margins {
 	flex-direction: column;
+	flex-wrap: nowrap;
 
 	> li .nav > li {
 		margin-left: $nav-nested-margins-spacer-x;
