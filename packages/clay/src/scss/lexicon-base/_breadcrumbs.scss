@@ -26,6 +26,14 @@
 		}
 	}
 
+	&.dropdown {
+		overflow: visible;
+	}
+
+	.dropdown-toggle {
+		text-decoration: none;
+	}
+
 	+ .breadcrumb-item:before {
 		content: $breadcrumb-divider;
 		float: left;
