@@ -97,7 +97,7 @@
 	border-bottom-width: 0;
 	height: auto;
 	line-height: $input-height-inner;
-	max-width: 300px;
+	max-width: $input-group-constrain-max-width;
 	overflow-x: auto;
 	overflow-y: hidden;
 	padding-left: 0;
@@ -105,7 +105,7 @@
 
 	@include scale-component {
 		line-height: $input-height-inner-mobile;
-		max-width: 150px;
+		max-width: $input-group-constrain-max-width-mobile;
 	}
 }
 
