@@ -2,7 +2,7 @@
   "scripts": {
     "build": "lerna run build",
     "format": "prettier --use-tabs true --tab-width 4 --single-quote --trailing-comma all --write packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
-    "lerna": "lerna bootstrap && npm install",
+    "lerna": "lerna bootstrap -- --no-optional && npm install --no-optional",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "precommit": "lint-staged",
     "start": "http-server . -p 4000",
