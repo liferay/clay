@@ -212,28 +212,39 @@
 		
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote blockquote-sm blockquote-success">
 			<p>A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.</p>
+			<p>Use <code>&lt;span class=&quot;breadcrumb-text-truncate&quot;&gt;&lt;/span&gt;</code> inside breadcrumb links to truncate text based on a max-width.</p>
 		</blockquote>
 
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
-				<a href="#" title="Home">Home</a>
+				<a href="#1" title="Home">
+					<span class="breadcrumb-text-truncate">Home</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#" title="Components">Components</a>
+				<a href="#1" title="Components">
+					<span class="breadcrumb-text-truncate">Components</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
+				<a href="#1" title="Breadcrumbs and Paginations">
+					<span class="breadcrumb-text-truncate">Breadcrumbs and Paginations</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#" title="Page">Page</a>
+				<a href="#1" title="Page">
+					<span class="breadcrumb-text-truncate">Page</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
+					<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</a>
 			</li>
 			<li class="active breadcrumb-item">
-				<span title="Active">Active</span>
+				<span class="breadcrumb-text-truncate" title="Active">Active</span>
 			</li>
 		</ol>
 	</div>
@@ -249,24 +260,95 @@
 
 		<ol class="breadcrumb breadcrumb-horizontal">
 			<li class="breadcrumb-item">
-				<a href="#" title="Home">Home</a>
+				<a href="#1" title="Home">
+					<span class="breadcrumb-text-truncate">Home</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#" title="Components">Components</a>
+				<a href="#1" title="Components">
+					<span class="breadcrumb-text-truncate">Components</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
+				<a href="#1" title="Breadcrumbs and Paginations">
+					<span class="breadcrumb-text-truncate">Breadcrumbs and Paginations</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#" title="Page">Page</a>
+				<a href="#1" title="Page">
+					<span class="breadcrumb-text-truncate">Page</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
+					<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</a>
 			</li>
 			<li class="active breadcrumb-item">
-				<span title="Active">Active</span>
+				<span class="breadcrumb-text-truncate" title="Active">Active</span>
 			</li>
 		</ol>
+
+		<ol class="breadcrumb breadcrumb-horizontal">
+			<li class="breadcrumb-item dropdown">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+						<use xlink:href="../../images/icons/icons.svg#ellipsis-h">
+					</svg>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Home</a>
+					<a class="dropdown-item" href="#1">Components</a>
+					<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
+				</div>
+			</li>
+			<li class="breadcrumb-item">
+				<a href="#1" title="Page">
+					<span class="breadcrumb-text-truncate">Page</span>
+				</a>
+			</li>
+			<li class="breadcrumb-item">
+				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
+					<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</a>
+			</li>
+			<li class="active breadcrumb-item">
+				<span class="breadcrumb-text-truncate" title="Active">Active</span>
+			</li>
+		</ol>
+
+		<ol class="breadcrumb breadcrumb-horizontal">
+			<li class="breadcrumb-item dropdown">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" title="Dropdown">
+					<span class="breadcrumb-text-truncate">Dropdown</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Home</a>
+					<a class="dropdown-item" href="#1">Components</a>
+					<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
+				</div>
+			</li>
+			<li class="breadcrumb-item">
+				<a href="#1" title="Page">
+					<span class="breadcrumb-text-truncate">Page</span>
+				</a>
+			</li>
+			<li class="breadcrumb-item">
+				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
+					<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</a>
+			</li>
+			<li class="active breadcrumb-item">
+				<span class="breadcrumb-text-truncate" title="Active">Active</span>
+			</li>
+		</ol>
+
 	</div>
 </div>
 
@@ -280,22 +362,32 @@
 
 		<ol class="breadcrumb breadcrumb-vertical">
 			<li class="breadcrumb-item">
-				<a href="#" title="Home">Home</a>
+				<a href="#1" title="Home">
+					<span class="breadcrumb-text-truncate">Home</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#" title="Components">Components</a>
+				<a href="#1" title="Components">
+					<span class="breadcrumb-text-truncate">Components</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#" title="Breadcrumbs and Paginations">Breadcrumbs and Paginations</a>
+				<a href="#1" title="Breadcrumbs and Paginations">
+					<span class="breadcrumb-text-truncate">Breadcrumbs and Paginations</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#" title="Page">Page</a>
+				<a href="#1" title="Page">
+					<span class="breadcrumb-text-truncate">Page</span>
+				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+				<a href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
+					<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
+				</a>
 			</li>
 			<li class="active breadcrumb-item">
-				<span>Active</span>
+				<span class="breadcrumb-text-truncate" title="Active">Active</span>
 			</li>
 		</ol>
 	</div>

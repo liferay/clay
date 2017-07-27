@@ -7729,6 +7729,10 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important;
 }
 
+.alert {
+  border-style: solid;
+}
+
 .alert-notification {
   width: 100%;
 }
@@ -7858,17 +7862,12 @@ a.text-dark:focus, a.text-dark:hover {
   width: 5px;
 }
 
-.breadcrumb-item {
-  max-width: 150px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.breadcrumb-item .dropdown-toggle {
+  text-decoration: none;
 }
 
-@media (min-width: 768px) {
-  .breadcrumb-item {
-    max-width: 300px;
-  }
+.breadcrumb-item .dropdown-toggle:focus, .breadcrumb-item .dropdown-toggle:hover {
+  text-decoration: none;
 }
 
 .breadcrumb-item + .breadcrumb-item:before {
@@ -7876,6 +7875,23 @@ a.text-dark:focus, a.text-dark:hover {
   float: left;
   padding-left: 0.4em;
   padding-right: 0.4em;
+}
+
+.breadcrumb-text-truncate {
+  display: inline-block;
+  max-width: 17.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+a > .breadcrumb-text-truncate {
+  text-decoration: none;
+}
+
+a > .breadcrumb-text-truncate:focus, a > .breadcrumb-text-truncate:hover {
+  text-decoration: underline;
 }
 
 .breadcrumb-horizontal .breadcrumb-item {
@@ -7906,7 +7922,6 @@ a.text-dark:focus, a.text-dark:hover {
 .breadcrumb-vertical .breadcrumb-item {
   display: block;
   float: none;
-  max-width: none;
 }
 
 .breadcrumb-vertical .breadcrumb-item:before,
@@ -7916,6 +7931,10 @@ a.text-dark:focus, a.text-dark:hover {
   float: none;
   padding-left: 0;
   padding-right: 0;
+}
+
+.breadcrumb-vertical .breadcrumb-text-truncate {
+  max-width: calc(100% - 1.25rem);
 }
 
 .btn-action {
@@ -9229,6 +9248,7 @@ a.label {
 
 .nav-nested {
   flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .nav-nested .nav > li > a {
@@ -9353,6 +9373,7 @@ a.label {
 
 .nav-nested-margins {
   flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .nav-nested-margins > li .nav > li {
