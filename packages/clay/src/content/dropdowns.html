@@ -5,16 +5,163 @@ section: Components
 
 <div class="clay-site-row-spacer row clay-site-dropdown-display">
 	<div class="col-md-12">
-		<h3>Default</h3>
+		<div class="clay-site-dropdown-menu-container">
+			<div class="dropdown-menu">
+				<div class="dropdown-header">Order by:</div>
+				<a class="active dropdown-item" href="#">Author</a>
+				<a class="disabled dropdown-item" href="#">Title Entry</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Date</a>
+				<a class="dropdown-item" href="#">Description</a>
+				<a class="dropdown-item" href="#">Status</a>
+			</div>
+		</div>
 
-		<div class="dropdown-menu">
-			<div class="dropdown-header">Order by:</div>
-			<a class="active dropdown-item" href="#">Author</a>
-			<a class="disabled dropdown-item" href="#">Title Entry</a>
-			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="#">Date</a>
-			<a class="dropdown-item" href="#">Description</a>
-			<a class="dropdown-item" href="#">Status</a>
+		<div class="clay-site-dropdown-menu-container">
+			<div class="dropdown-menu">
+				<form>
+					<div class="dropdown-section">
+						<div class="input-group input-group-inset">
+							<div class="input-group-input">
+								<input class="form-control" placeholder="Search for..." type="text">
+							</div>
+							<span class="input-group-inset-item">
+								<button class="btn btn-link" type="button">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+										<use xlink:href="{{rootPath}}/images/icons/icons.svg#search" />
+									</svg>
+								</button>
+							</span>
+						</div>
+					</div>
+					<div class="dropdown-header">Filter by:</div>
+					<div class="active dropdown-item">
+						<label class="custom-control custom-checkbox">
+							<input checked class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Selected Option</span>
+						</label>
+					</div>
+					<div class="dropdown-item">
+						<label class="custom-control custom-checkbox">
+							<input class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Normal Option</span>
+						</label>
+					</div>
+					<div class="disabled dropdown-item">
+						<label class="custom-control custom-checkbox">
+							<input disabled class="custom-control-input" type="checkbox">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Disabled Option</span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="clay-site-dropdown-menu-container">
+			<div class="dropdown-menu">
+				<form>
+					<div class="dropdown-header">Order by:</div>
+					<div class="active dropdown-item">
+						<label class="custom-control custom-radio">
+							<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Selected Option</span>
+						</label>
+					</div>
+					<div class="dropdown-item">
+						<label class="custom-control custom-radio">
+							<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Normal Option</span>
+						</label>
+					</div>
+					<div class="disabled dropdown-item">
+						<label class="custom-control custom-radio">
+							<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
+							<span class="custom-control-indicator"></span>
+							<span class="custom-control-description">Disabled Option</span>
+						</label>
+					</div>
+					<div class="dropdown-section">
+						<button class="btn btn-block btn-primary" type="submit">Done</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="clay-site-dropdown-menu-container">
+			<div class="dropdown-menu">
+				<a class="active dropdown-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+					</svg>
+					Step 01
+				</a>
+				<a class="disabled dropdown-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+					</svg>
+					Step 02
+				</a>
+				<a class="dropdown-item" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+					</svg>
+					Step 03
+				</a>
+				<a class="dropdown-item" href="#1">Step 04</a>
+				<a class="dropdown-item" href="#1">Step 05</a>
+			</div>
+		</div>
+
+		<div class="clay-site-dropdown-menu-container">
+			<div class="dropdown-menu">
+				<a class="active dropdown-item" href="#1">
+					Step 01
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+					</svg>
+				</a>
+				<a class="disabled dropdown-item" href="#1">
+					Step 02
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+					</svg>
+				</a>
+				<a class="dropdown-item" href="#1">
+					Step 03
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#check" />
+					</svg>
+				</a>
+				<a class="dropdown-item" href="#1">Step 04</a>
+				<a class="dropdown-item" href="#1">Step 05</a>
+			</div>
+		</div>
+
+		<div class="clay-site-dropdown-menu-container">
+			<div class="dropdown-menu">
+				<div class="alert alert-info" role="alert">
+					You can customize this menu or see all you have by pressing "more".
+				</div>
+				<div class="dropdown-header">Folder</div>
+				<div class="dropdown-divider"></div>
+				<div class="dropdown-header">Favorites</div>
+				<div class="inline-scroller">
+					<a class="dropdown-item" href="#1">D Structure</a>
+					<a class="dropdown-item" href="#1">F Structure</a>
+					<a class="disabled dropdown-item" href="#1">H Structure</a>
+					<a class="dropdown-item" href="#1">J Structure</a>
+					<a class="dropdown-item" href="#1">L Structure</a>
+				</div>
+				<div class="dropdown-section">Showing 7 of 203 Structures</div>
+				<div class="dropdown-section">
+					<button class="btn btn-block btn-secondary">More</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -100,6 +247,31 @@ section: Components
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row clay-site-dropdown-display">
+	<div class="col-md-12">
+		<h3>Dropdown Menu Horizontal</h3>
+
+		<div class="dropdown-menu dropdown-menu-horizontal">
+			<div class="dropdown-header">Order by:</div>
+			<a class="active dropdown-item" href="#1">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+				</svg>
+			</a>
+			<a class="disabled dropdown-item" href="#1">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+				</svg>
+			</a>
+			<a class="dropdown-item" href="#1">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+				</svg>
+			</a>
 		</div>
 	</div>
 </div>
