@@ -7,14 +7,6 @@
 	}
 }
 
-.dropdown-header,
-.dropdown-item {
-	@if ($dropdown-item-padding-y != 3px) {
-		padding-bottom: $dropdown-item-padding-y;
-		padding-top: $dropdown-item-padding-y;
-	}
-}
-
 .dropdown-item {
 	overflow: hidden;
 	white-space: normal;
