@@ -76,6 +76,38 @@
 	}
 }
 
+// Dropdown Menu Horizontal
+
+.dropdown-menu-horizontal {
+	max-width: none;
+	padding-bottom: 0;
+	padding-top: 0;
+
+	&.show {
+		display: flex;
+	}
+
+	.dropdown-divider {
+		border-left: 1px solid $dropdown-divider-bg;
+		height: auto;
+		margin: 0;
+	}
+
+	.dropdown-item {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		width: auto;
+	}
+
+	.dropdown-header {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		overflow: visible;
+	}
+}
+
 // Dropdown Positions
 
 .dropdown-menu-left-side {
