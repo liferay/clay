@@ -13506,12 +13506,6 @@ th .truncate-text {
   }
 }
 
-.dropdown-header,
-.dropdown-item {
-  padding-bottom: 8px;
-  padding-top: 8px;
-}
-
 .dropdown-item {
   overflow: hidden;
   white-space: normal;
@@ -13539,6 +13533,12 @@ th .truncate-text {
   margin-right: 6px;
 }
 
+.dropdown-section {
+  color: #B0B4BB;
+  font-size: 0.8em;
+  padding: 8px 20px;
+}
+
 .dropdown-menu {
   font-size: 1rem;
   max-height: 320px;
@@ -13563,6 +13563,84 @@ th .truncate-text {
   border-width: 0;
   content: normal;
   margin-left: 0;
+}
+
+.dropdown-menu-horizontal {
+  max-width: none;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.dropdown-menu-horizontal.show {
+  display: flex;
+}
+
+.dropdown-menu-horizontal .dropdown-divider {
+  border-left: 1px solid rgba(220, 224, 227, 0.5);
+  height: auto;
+  margin: 0;
+}
+
+.dropdown-menu-horizontal .dropdown-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.dropdown-menu-horizontal .dropdown-header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.dropdown-menu-left-side {
+  bottom: auto !important;
+  left: auto !important;
+  right: 100% !important;
+  top: 0 !important;
+  transform: none !important;
+}
+
+.dropdown-menu-left-side-bottom {
+  bottom: 0 !important;
+  left: auto !important;
+  right: 100% !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+.dropdown-menu-left-side-middle {
+  bottom: auto !important;
+  left: auto !important;
+  right: 100% !important;
+  top: 50% !important;
+  transform: translate(0, -50%) !important;
+}
+
+.dropdown-menu-right-side {
+  bottom: auto !important;
+  left: 100% !important;
+  right: auto !important;
+  top: 0 !important;
+  transform: none !important;
+}
+
+.dropdown-menu-right-side-bottom {
+  bottom: 0 !important;
+  left: 100% !important;
+  right: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+.dropdown-menu-right-side-middle {
+  bottom: auto !important;
+  left: 100% !important;
+  right: auto !important;
+  top: 50% !important;
+  transform: translate(0, -50%) !important;
 }
 
 .inline-scroller {
