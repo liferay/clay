@@ -38,6 +38,12 @@
 	}
 }
 
+.dropdown-section {
+	color: $dropdown-section-color;
+	font-size: $dropdown-section-font-size;
+	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+}
+
 .dropdown-menu {
 	border-style: $dropdown-border-style;
 	font-size: $dropdown-font-size;
