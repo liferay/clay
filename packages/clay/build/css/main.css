@@ -350,10 +350,21 @@ body.fixed {
   }
 }
 
+.clay-site-dropdown-display .clay-site-dropdown-menu-container {
+  float: left;
+  margin-right: 15px;
+  min-height: 285px;
+}
+
 .clay-site-dropdown-display .dropdown-menu {
   display: block;
-  position: relative;
+  position: static;
   top: auto;
+  z-index: 0;
+}
+
+.clay-site-dropdown-display .dropdown-menu-horizontal {
+  display: flex;
 }
 
 .clay-site-dropdown-display .dropdown-wide-container {
