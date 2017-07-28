@@ -385,10 +385,21 @@ body.fixed {
 // Dropdowns Page
 
 .clay-site-dropdown-display {
+	.clay-site-dropdown-menu-container {
+		float: left;
+		margin-right: 15px;
+		min-height: 285px;
+	}
+
 	.dropdown-menu {
 		display: block;
-		position: relative;
+		position: static;
 		top: auto;
+		z-index: 0;
+	}
+
+	.dropdown-menu-horizontal {
+		display: flex;
 	}
 
 	.dropdown-wide-container {
