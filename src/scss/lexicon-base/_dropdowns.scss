@@ -100,6 +100,18 @@
 		font-size: $dropdown-font-size-mobile;
 	}
 
+	.alert {
+		&:first-child {
+			margin-bottom: ($spacer / 2);
+			margin-top: -$dropdown-padding-y;
+		}
+
+		&:last-child {
+			margin-bottom: -$dropdown-padding-y;
+			margin-top: ($spacer / 2);
+		}
+	}
+
 	.inline-scroller {
 		max-height: $dropdown-inline-scroller-max-height;
 
