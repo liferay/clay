@@ -179,19 +179,6 @@
 	transform: translate(0 , -50%) !important;
 }
 
-// Dropdown inline-scroller
-
-.inline-scroller {
-	height: $inline-scroller-height;
-	list-style: none;
-	margin: 0;
-	overflow: auto;
-
-	-webkit-overflow-scrolling: touch;
-
-	padding: 0;
-}
-
 // Dropdown wide / full
 
 %dropdown-full-wide-dropdown-menu {

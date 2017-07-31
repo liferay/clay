@@ -11,3 +11,16 @@
 	width: 100%;
 	word-wrap: break-word;
 }
+
+// Inline Scroller
+
+.inline-scroller {
+	height: $inline-scroller-height;
+	list-style: none;
+	margin: 0;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	padding: 0;
+}
