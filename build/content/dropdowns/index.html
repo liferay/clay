@@ -214,7 +214,7 @@
 	<div class="col-md-12">
 		<div class="clay-site-dropdown-menu-container">
 			<div class="dropdown-menu">
-				<div class="dropdown-header">Order by:</div>
+				<div class="dropdown-sub-header">Order by</div>
 				<a class="active dropdown-item" href="#">Author</a>
 				<a class="disabled dropdown-item" href="#">Title Entry</a>
 				<div class="dropdown-divider"></div>
@@ -241,7 +241,7 @@
 							</span>
 						</div>
 					</div>
-					<div class="dropdown-header">Filter by:</div>
+					<div class="dropdown-sub-header">Filter by</div>
 					<div class="active dropdown-item">
 						<label class="custom-control custom-checkbox">
 							<input checked class="custom-control-input" type="checkbox">
@@ -270,7 +270,7 @@
 		<div class="clay-site-dropdown-menu-container">
 			<div class="dropdown-menu">
 				<form>
-					<div class="dropdown-header">Order by:</div>
+					<div class="dropdown-sub-header">Order by</div>
 					<div class="active dropdown-item">
 						<label class="custom-control custom-radio">
 							<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
@@ -298,77 +298,83 @@
 				</form>
 			</div>
 		</div>
+	</div>
+</div>
 
-		<div class="clay-site-dropdown-menu-container">
-			<div class="dropdown-menu">
-				<a class="active dropdown-item" href="#1">
+<div class="clay-site-row-spacer row clay-site-dropdown-display">
+	<div class="col-md-12">
+		<h3 id="dropdown-menu-with-indicators"><a class="heading-anchor" href="#dropdown-menu-with-indicators"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Dropdown Menu with Indicators</h3>
+	</div>
+
+	<div class="col-md-6">
+		<h6>dropdown-menu-indicator-start</h6>
+		<div class="dropdown-menu dropdown-menu-indicator-start">
+			<div class="dropdown-header">Dropdown Header</div>
+			<div class="dropdown-divider"></div>
+			<div class="dropdown-sub-header">Dropdown Sub Header</div>
+			<a class="dropdown-item" href="#1">
+				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 						<use xlink:href="../../images/icons/icons.svg#check">
 					</svg>
-					Step 01
-				</a>
-				<a class="disabled dropdown-item" href="#1">
+				</div>
+				Ticket Buyer Information
+			</a>
+			<a class="dropdown-item" href="#1">
+				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 						<use xlink:href="../../images/icons/icons.svg#check">
 					</svg>
-					Step 02
-				</a>
-				<a class="dropdown-item" href="#1">
+				</div>
+				Attendee Information
+			</a>
+			<a class="dropdown-item" href="#1">
+				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 						<use xlink:href="../../images/icons/icons.svg#check">
 					</svg>
-					Step 03
-				</a>
-				<a class="dropdown-item" href="#1">Step 04</a>
-				<a class="dropdown-item" href="#1">Step 05</a>
-			</div>
+				</div>
+				Seat Assignment
+			</a>
+			<a class="active dropdown-item" href="#1">Dinner Preference</a>
+			<a class="dropdown-item" href="#1">Submit Payment</a>
+			<div class="dropdown-caption">Dropdown Caption</div>
 		</div>
+	</div>
 
-		<div class="clay-site-dropdown-menu-container">
-			<div class="dropdown-menu">
-				<a class="active dropdown-item" href="#1">
-					Step 01
+	<div class="col-md-6">
+		<h6>dropdown-menu-indicator-end</h6>
+		<div class="dropdown-menu dropdown-menu-indicator-end">
+			<div class="dropdown-header">Folder</div>
+			<div class="dropdown-divider"></div>
+			<div class="dropdown-sub-header">Order By</div>
+			<a class="active dropdown-item" href="#1">
+				Step 01
+				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 						<use xlink:href="../../images/icons/icons.svg#check">
 					</svg>
-				</a>
-				<a class="disabled dropdown-item" href="#1">
-					Step 02
+				</div>
+			</a>
+			<a class="disabled dropdown-item" href="#1">
+				Step 02
+				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 						<use xlink:href="../../images/icons/icons.svg#check">
 					</svg>
-				</a>
-				<a class="dropdown-item" href="#1">
-					Step 03
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
-						<use xlink:href="../../images/icons/icons.svg#check">
+				</div>
+			</a>
+			<a class="dropdown-item" href="#1">
+				Step 03
+				<div class="dropdown-item-indicator">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-				</a>
-				<a class="dropdown-item" href="#1">Step 04</a>
-				<a class="dropdown-item" href="#1">Step 05</a>
-			</div>
-		</div>
-
-		<div class="clay-site-dropdown-menu-container">
-			<div class="dropdown-menu">
-				<div class="alert alert-info" role="alert">
-					You can customize this menu or see all you have by pressing &quot;more&quot;.
 				</div>
-				<div class="dropdown-header">Folder</div>
-				<div class="dropdown-divider"></div>
-				<div class="dropdown-header">Favorites</div>
-				<div class="inline-scroller">
-					<a class="dropdown-item" href="#1">D Structure</a>
-					<a class="dropdown-item" href="#1">F Structure</a>
-					<a class="disabled dropdown-item" href="#1">H Structure</a>
-					<a class="dropdown-item" href="#1">J Structure</a>
-					<a class="dropdown-item" href="#1">L Structure</a>
-				</div>
-				<div class="dropdown-section">Showing 7 of 203 Structures</div>
-				<div class="dropdown-section">
-					<button class="btn btn-block btn-secondary">More</button>
-				</div>
-			</div>
+			</a>
+			<a class="dropdown-item" href="#1">Step 04</a>
+			<a class="dropdown-item" href="#1">Step 05</a>
+			<div class="dropdown-caption">Showing 190,722 of 192,842 Things</div>
 		</div>
 	</div>
 </div>
@@ -378,9 +384,11 @@
 		<h3 id="scrolling-content"><a class="heading-anchor" href="#scrolling-content"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Scrolling Content</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Nest <code class="code">&lt;div class=&quot;inline-scroller&quot;&gt;&lt;/div&gt;</code> inside a <code class="code">.dropdown-menu</code> list item to create a scrollable dropdown. The default height is 125px.</p>
+			<p>Nest <code class="code">&lt;div class=&quot;inline-scroller&quot;&gt;&lt;/div&gt;</code> inside a <code class="code">.dropdown-menu</code> list item to create a scrollable dropdown. The maximum height is 200px on screen sizes 768px and above, on screen sizes 767px and below the overflow is handled by <code>.dropdown-menu</code>.</p>
 		</blockquote>
+	</div>
 
+	<div class="col-md-6">
 		<ul class="dropdown-menu">
 			<div class="dropdown-header">Dropdown Header</div>
 			<div class="inline-scroller">
@@ -406,6 +414,35 @@
 			<a class="dropdown-item" href="#">Scope</a>
 		</ul>
 	</div>
+
+	<div class="col-md-6">
+		<div class="dropdown-menu">
+			<div class="alert alert-fluid alert-info" role="alert">
+				You can customize this menu or see all you have by pressing &quot;more&quot;.
+			</div>
+			<div class="dropdown-header">Folder</div>
+			<div class="dropdown-divider"></div>
+			<div class="dropdown-sub-header">Favorites</div>
+			<div class="inline-scroller">
+				<a class="dropdown-item" href="#1">D Structure</a>
+				<a class="dropdown-item" href="#1">F Structure</a>
+				<a class="disabled dropdown-item" href="#1">H Structure</a>
+				<a class="dropdown-item" href="#1">J Structure</a>
+				<a class="dropdown-item" href="#1">L Structure</a>
+				<a class="dropdown-item" href="#1">M Structure</a>
+				<a class="dropdown-item" href="#1">P Structure</a>
+				<a class="dropdown-item" href="#1">Q Structure</a>
+				<a class="dropdown-item" href="#1">R Structure</a>
+				<a class="dropdown-item" href="#1">S Structure</a>
+				<a class="dropdown-item" href="#1">T Structure</a>
+				<a class="dropdown-item" href="#1">U Structure</a>
+			</div>
+			<div class="dropdown-caption">Showing 7 of 203 Structures</div>
+			<div class="dropdown-section">
+				<button class="btn btn-block btn-secondary">More</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="clay-site-row-spacer row clay-site-dropdown-display">
@@ -420,11 +457,11 @@
 			<div class="dropdown-menu">
 				<div class="row">
 					<div class="col-sm-4">
-						<div class="dropdown-header">By Resource</div>
+						<div class="dropdown-sub-header">By Resource</div>
 						<a class="dropdown-item" href="#1">Support Home</a>
 						<a class="disabled dropdown-item" href="#1">Disabled Link</a>
 						<a class="dropdown-item" href="#1">Chat or Call</a>
-						<div class="dropdown-header">By Product</div>
+						<div class="dropdown-sub-header">By Product</div>
 						<a class="active dropdown-item" href="#1">Developing for the Platform</a>
 						<a class="dropdown-item" href="#1">Mastering Fundamentals</a>
 						<a class="dropdown-item" href="#1">Styling with Themes</a>
@@ -432,13 +469,13 @@
 					</div>
 
 					<div class="col-sm-4">
-						<div class="dropdown-header">Popular Picks</div>
+						<div class="dropdown-sub-header">Popular Picks</div>
 						<a class="dropdown-item" href="#1">Error Messages</a>
 						<a class="dropdown-item" href="#1">Updates: Service Packs &amp; Fixes</a>
 						<a class="dropdown-item" href="#1">Install, Upgrade, &amp; Activate</a>
 						<a class="dropdown-item" href="#1">Regular Drivers</a>
 						<a class="dropdown-item" href="#1">Hardware Drivers</a>
-						<div class="dropdown-header">Security</div>
+						<div class="dropdown-sub-header">Security</div>
 						<a class="dropdown-item" href="#1">Security Home</a>
 						<a class="dropdown-item" href="#1">Security Essentials</a>
 						<a class="dropdown-item" href="#1">Protecting Your Data</a>
@@ -446,7 +483,7 @@
 					</div>
 
 					<div class="col-sm-4">
-						<div class="dropdown-header">By Audience</div>
+						<div class="dropdown-sub-header">By Audience</div>
 						<a class="dropdown-item" href="#1">For Home Users</a>
 						<a class="dropdown-item" href="#1">For Small Business</a>
 						<a class="dropdown-item" href="#1">For IT Professionals</a>
@@ -463,7 +500,7 @@
 		<h3 id="dropdown-menu-horizontal"><a class="heading-anchor" href="#dropdown-menu-horizontal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Dropdown Menu Horizontal</h3>
 
 		<div class="dropdown-menu dropdown-menu-horizontal">
-			<div class="dropdown-header">Order by:</div>
+			<div class="dropdown-sub-header">Order by</div>
 			<a class="active dropdown-item" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 					<use xlink:href="../../images/icons/icons.svg#trash">
@@ -492,7 +529,10 @@
 		</blockquote>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Default <span class="icon-caret-down"></span></button>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+				Default
+				<span class="icon-caret-down"></span>
+			</button>
 			<div class="dropdown-menu">
 				<div class="dropdown-header">Dropdown Header</div>
 				<a class="dropdown-item" href="#">Action</a>
@@ -503,7 +543,10 @@
 		</div>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Right <span class="icon-caret-down"></span></button>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+				Right
+				<span class="icon-caret-down"></span>
+			</button>
 			<div class="dropdown-menu dropdown-menu-right">
 				<div class="dropdown-header">Dropdown Header</div>
 				<a class="dropdown-item" href="#">Action</a>
@@ -514,7 +557,10 @@
 		</div>
 
 		<div class="dropdown" style="display: inline-block;">
-			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">Top <span class="icon-caret-up"></span></button>
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" type="button">
+				Top
+				<span class="icon-caret-up"></span>
+			</button>
 			<div class="dropdown-menu dropdown-menu-top">
 				<div class="dropdown-header">Dropdown Header</div>
 				<a class="dropdown-item" href="#">Action</a>
@@ -687,7 +733,7 @@
 						</a>
 						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
 							<form>
-								<div class="dropdown-item">
+								<div class="dropdown-section">
 									<select class="form-control">
 										<option>1</option>
 										<option>2</option>
@@ -696,7 +742,7 @@
 										<option>5</option>
 									</select>
 								</div>
-								<div class="dropdown-item">
+								<div class="dropdown-section">
 									<label for="exampleInputEmail3">Email address</label>
 									<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
 								</div>
@@ -897,6 +943,11 @@
 			$(this).closest('.dropdown-item').toggleClass('active', this.checked);
 		}
 	);
+
+	$('input[type="radio"]').change(function(event) {
+		$(this).closest('.dropdown-menu').find('.dropdown-item').removeClass('active');
+		$(this).closest('.dropdown-item').toggleClass('active', this.checked);
+	});
 </script>
 	</div>
 
