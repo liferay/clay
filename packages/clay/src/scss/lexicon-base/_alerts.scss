@@ -32,6 +32,12 @@
 	}
 }
 
+.alert-fluid {
+	@include border-radius(0);
+
+	border-width: $alert-fluid-border-width;
+}
+
 // Alert Notifications
 
 .alert-notification {
