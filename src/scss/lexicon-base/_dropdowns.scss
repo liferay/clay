@@ -1,6 +1,7 @@
 .dropdown-header {
 	font-size: $dropdown-header-font-size;
-	overflow: hidden;
+	white-space: normal;
+	word-wrap: break-word;
 
 	@if not ($dropdown-header-padding-y == $dropdown-padding-y) {
 		padding-bottom: $dropdown-header-padding-y;
@@ -23,6 +24,8 @@
 	font-weight: $dropdown-sub-header-font-weight;
 	padding: $dropdown-header-padding-y $dropdown-header-padding-x;
 	text-transform: $dropdown-sub-header-text-transform;
+	white-space: normal;
+	word-wrap: break-word;
 }
 
 .dropdown-caption {
@@ -30,10 +33,13 @@
 	font-size: $dropdown-caption-font-size;
 	font-weight: $dropdown-caption-font-weight;
 	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+	white-space: normal;
+	word-wrap: break-word;
 }
 
 .dropdown-item {
 	overflow: hidden;
+	position: relative;
 	white-space: normal;
 	word-wrap: break-word;
 
@@ -146,7 +152,38 @@
 	}
 }
 
-// Dropdown Positions
+// Dropdown Menu with Indicators
+
+.dropdown-menu-indicator-start {
+	.dropdown-item-indicator {
+		height: $dropdown-item-indicator-size;
+		left: $dropdown-item-padding-x;
+		position: absolute;
+		top: $dropdown-item-padding-y;
+		width: $dropdown-item-indicator-size;
+	}
+
+	.dropdown-header,
+	.dropdown-sub-header,
+	.dropdown-caption,
+	.dropdown-item {
+		padding-left: $dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x;
+	}
+}
+
+.dropdown-menu-indicator-end {
+	.dropdown-item-indicator {
+		position: absolute;
+		right: $dropdown-item-padding-x;
+		top: $dropdown-item-padding-y;
+	}
+
+	.dropdown-item {
+		padding-right: $dropdown-item-padding-x + $dropdown-item-indicator-size + $dropdown-item-indicator-spacer-x;
+	}
+}
+
+// Dropdown Menu Positions
 
 .dropdown-menu-top {
 	bottom: 100% !important;
