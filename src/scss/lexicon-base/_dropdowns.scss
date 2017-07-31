@@ -2,6 +2,16 @@
 	font-size: $dropdown-header-font-size;
 	overflow: hidden;
 
+	@if not ($dropdown-header-padding-y == $dropdown-padding-y) {
+		padding-bottom: $dropdown-header-padding-y;
+		padding-top: $dropdown-header-padding-y;
+	}
+
+	@if not ($dropdown-header-padding-x == $dropdown-item-padding-x) {
+		padding-left: $dropdown-header-padding-x;
+		padding-right: $dropdown-header-padding-x;
+	}
+
 	@include scale-component {
 		font-size: $dropdown-header-font-size-mobile;
 	}
@@ -11,7 +21,7 @@
 	color: $dropdown-sub-header-color;
 	font-size: $dropdown-sub-header-font-size;
 	font-weight: $dropdown-sub-header-font-weight;
-	padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+	padding: $dropdown-header-padding-y $dropdown-header-padding-x;
 	text-transform: $dropdown-sub-header-text-transform;
 }
 
