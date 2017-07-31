@@ -17,6 +17,15 @@ $dropdown-font-size-mobile: null !default;
 $dropdown-header-font-size: null !default;
 $dropdown-header-font-size-mobile: null !default;
 
+$dropdown-sub-header-color: $dropdown-header-color !default;
+$dropdown-sub-header-font-size: 0.75rem !default; // 12px
+$dropdown-sub-header-font-weight: 500 !default;
+$dropdown-sub-header-text-transform: uppercase !default;
+
+$dropdown-caption-color: $dropdown-header-color !default;
+$dropdown-caption-font-size: 0.875rem !default; // 14px
+$dropdown-caption-font-weight: null !default;
+
 $dropdown-max-height: 320px !default;
 $dropdown-max-height-mobile: 295px !default;
 $dropdown-min-height: null !default;
