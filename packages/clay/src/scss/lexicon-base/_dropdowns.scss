@@ -61,6 +61,12 @@
 		float: left;
 		margin-right: 6px;
 	}
+
+	.custom-control {
+		margin-bottom: 0;
+		margin-right: 0;
+		min-height: $custom-control-indicator-size;
+	}
 }
 
 .dropdown-section {
