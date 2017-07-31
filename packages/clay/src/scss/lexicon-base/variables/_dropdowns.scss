@@ -28,9 +28,12 @@ $dropdown-caption-color: $dropdown-header-color !default;
 $dropdown-caption-font-size: 0.875rem !default; // 14px
 $dropdown-caption-font-weight: null !default;
 
-$dropdown-max-height: 320px !default;
+$dropdown-max-height: 500px !default;
 $dropdown-max-height-mobile: 295px !default;
 $dropdown-min-height: null !default;
 
-$dropdown-max-width: null !default;
-$dropdown-max-width-mobile: null !default;
+$dropdown-max-width: 260px !default;
+$dropdown-max-width-mobile: 230px !default;
+
+$dropdown-inline-scroller-max-height: 200px !default;
+$dropdown-inline-scroller-max-height-mobile: none !default;
