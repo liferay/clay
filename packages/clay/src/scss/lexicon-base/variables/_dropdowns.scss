@@ -16,6 +16,8 @@ $dropdown-font-size-mobile: null !default;
 
 $dropdown-header-font-size: null !default;
 $dropdown-header-font-size-mobile: null !default;
+$dropdown-header-padding-x: $dropdown-item-padding-x !default;
+$dropdown-header-padding-y: $dropdown-padding-y !default;
 
 $dropdown-sub-header-color: $dropdown-header-color !default;
 $dropdown-sub-header-font-size: 0.75rem !default; // 12px
