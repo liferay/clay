@@ -15,9 +15,9 @@
 // Inline Scroller
 
 .inline-scroller {
-	height: $inline-scroller-height;
 	list-style: none;
 	margin: 0;
+	max-height: $inline-scroller-max-height;
 	overflow: auto;
 
 	-webkit-overflow-scrolling: touch;
