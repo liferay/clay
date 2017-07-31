@@ -79,10 +79,21 @@
 	padding-right: $dropdown-padding-right;
 	padding-top: $dropdown-padding-top;
 
-	@include scale-component {
-		font-size: $dropdown-font-size-mobile;
+	@include media-breakpoint-down(md) {
 		max-height: $dropdown-max-height-mobile;
 		max-width: $dropdown-max-width-mobile;
+	}
+
+	@include scale-component {
+		font-size: $dropdown-font-size-mobile;
+	}
+
+	.inline-scroller {
+		max-height: $dropdown-inline-scroller-max-height;
+
+		@include media-breakpoint-down(md) {
+			max-height: $dropdown-inline-scroller-max-height-mobile;
+		}
 	}
 }
 
