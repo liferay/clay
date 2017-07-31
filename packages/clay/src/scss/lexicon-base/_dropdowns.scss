@@ -87,17 +87,6 @@
 	min-height: $dropdown-min-height;
 	overflow: auto;
 
-	@if not ($dropdown-padding-bottom == $dropdown-padding-y) {
-		padding-bottom: $dropdown-padding-bottom;
-	}
-
-	padding-left: $dropdown-padding-left;
-	padding-right: $dropdown-padding-right;
-
-	@if not ($dropdown-padding-top == $dropdown-padding-y) {
-		padding-top: $dropdown-padding-top;
-	}
-
 	@include media-breakpoint-down(md) {
 		max-height: $dropdown-max-height-mobile;
 		max-width: $dropdown-max-width-mobile;
