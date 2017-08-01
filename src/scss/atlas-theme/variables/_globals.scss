@@ -1,9 +1,21 @@
-// Structure
-
 $atlas-theme: true !default;
 
 $enable-scaling-components: true !default;
 $enable-shadows: true !default;
+
+$container-max-widths: (
+	sm: 540px,
+	md: 800px,
+	lg: 960px,
+	xl: 1280px
+) !default;
+
+$container-fluid-max-widths: (
+	sm: 540px,
+	md: 800px,
+	lg: 960px,
+	xl: 1280px
+) !default;
 
 $font-size-base: 1rem !default; // 16px
 $font-size-base-mobile: 0.875rem !default; // 14px
