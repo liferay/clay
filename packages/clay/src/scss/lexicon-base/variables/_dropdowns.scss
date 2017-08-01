@@ -37,6 +37,12 @@ $dropdown-inline-scroller-max-height-mobile: none !default;
 $dropdown-item-indicator-size: 1rem !default;
 $dropdown-item-indicator-spacer-x: 1rem !default;
 
+// Dropdown Horizontal
+
+$dropdown-horizontal-min-height: 50px !default;
+
+// Alert inside Dropdowns
+
 $dropdown-alert-font-size: null !default;
 $dropdown-alert-line-height: normal !default;
 $dropdown-alert-margin: ($spacer / 2) !default;

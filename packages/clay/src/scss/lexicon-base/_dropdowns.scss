@@ -149,6 +149,7 @@
 .dropdown-menu-horizontal {
 	margin-top: 0;
 	max-width: none;
+	min-height: $dropdown-horizontal-min-height;
 	padding-bottom: 0;
 	padding-top: 0;
 
