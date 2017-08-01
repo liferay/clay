@@ -14,6 +14,11 @@
 
 .panel-header {
 	border-bottom: $panel-header-border-bottom-width solid transparent;
+
+	@if not ($panel-header-offset-border-radius == 0) {
+		@include border-top-radius($panel-header-offset-border-radius);
+	}
+
 	padding: $panel-header-padding-y $panel-header-padding-x;
 	position: relative;
 }
@@ -41,6 +46,10 @@
 }
 
 .panel-footer {
+	@if not ($panel-footer-offset-border-radius == 0) {
+		@include border-bottom-radius($panel-footer-offset-border-radius);
+	}
+
 	border-top: $panel-footer-border-top-width solid transparent;
 	padding: $panel-footer-padding-y $panel-footer-padding-x;
 }
@@ -58,17 +67,17 @@
 
 		@if ($panel-group-panel-margin-bottom <= 0) {
 			&:first-child:not(:last-child) {
-				border-bottom-left-radius: 0;
-				border-bottom-right-radius: 0;
+				@include border-bottom-radius(0);
 			}
 
 			&:last-child:not(:first-child) {
-				border-top-left-radius: 0;
-				border-top-right-radius: 0;
+				@include border-top-radius(0);
+
+				overflow: hidden;
 			}
 
 			&:not(:first-child):not(:last-child) {
-				border-radius: 0;
+				@include border-radius(0);
 			}
 		}
 	}
@@ -76,6 +85,12 @@
 	.panel:not(:first-child) {
 		@if ($panel-border-bottom-width > 0) {
 			margin-top: -$panel-border-bottom-width;
+		}
+
+		.panel-header {
+			@if ($panel-group-panel-margin-bottom <= 0) {
+				@include border-top-radius(0);
+			}
 		}
 	}
 
