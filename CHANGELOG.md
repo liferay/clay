@@ -1,3 +1,54 @@
+### v2.0.0-alpha.3 - July 31, 2017
+* Breaking: Dropdown removed `$dropdown-padding-bottom`, `$dropdown-padding-left`, `$dropdown-padding-right`, `$dropdown-padding-top`
+* Breaking: Rename `$inline-scroller-height` to `$inline-scroller-max-height`
+* Breaking: Revert `$dropdown-section-color` and `$dropdown-section-font-size` sometimes we don't want `.dropdown-section` styles to bleed into components nested inside
+* Breaking: Breadcrumb move truncating text to `.breadcrumb-text-truncate`
+* Breaking: Input Group Inset added `.input-group-inset-left` to align inset content on the left
+* Breaking: Input Group removed `.input-group-insert` multiple addons and buttons are supported now
+* Breaking: Forms renamed `$input-select-icon-color-focus` to `$input-select-icon-focus-color` and reverted `-select-focus-bg` to `$input-select-focus-bg` to follow BS4 naming pattern
+* Breaking: Input Group removed `$input-group-constrain-line-height`, `$input-group-constrain-line-height-lg`, `$input-group-constrain-line-height-sm`
+* Breaking: Input Groups should size with `$input-height`
+* Breaking: Rename `.input-group-default` to `.input-group-light` and remove `.input-group-addon-content`
+* Breaking: Removed Toolbar component
+* Breaking: Consolidate Nav Tabs with Nav
+* Breaking: Move BS4 grid in nav-tabs styles to Nav component and added `.nav-text-truncate`
+* Breaking: Nav Tabs removed `.nav-tabs-scroll`
+* Breaking: Nav Tabs removed `.nav-tabs-default`
+* New: Dropdown added `$dropdown-alert-font-size`, `$dropdown-alert-line-height`, `$dropdown-alert-margin`, `$dropdown-alert-padding-x`, `$dropdown-alert-padding-y` and more spacing issues with alerts in dropdowns
+* New: Alert added `.alert-fluid` and option to customize `$alert-fluid-border-width`
+* New: Dropdown added `.dropdown-menu-indicator-start`, `.dropdown-menu-indicator-end`, `.dropdown-item-indicator`, and added options to configure `$dropdown-item-indicator-size`, `$dropdown-item-indicator-spacer-x`
+* New: Dropdown added option to configure `$dropdown-inline-scroller-max-height`, `$dropdown-inline-scroller-max-height-mobile` and update dropdown sizes so it fits in mobile
+* New: Dropdown added option to configure `$dropdown-header-padding-x`, `$dropdown-header-padding-y`
+* New: Dropdown added `.dropdown-sub-header`, `.dropdown-caption`, and options to customize `$dropdown-sub-header-color`, `$dropdown-sub-header-font-size`, `$dropdown-sub-header-font-weight`, `$dropdown-sub-header-text-transform`, `$dropdown-caption-color`, `$dropdown-caption-font-size`, `$dropdown-caption-font-weight`
+* New: Dropdown added `$dropdown-section-color`, `$dropdown-section-font-size`
+* New: Breadcrumb added option to configure `$breadcrumb-text-truncate-icon-spacer-x`
+* New: Breadcrumb added option to configure `$breadcrumb-text-truncate-max-width`, `$breadcrumb-text-truncate-max-width-mobile`
+* New: Alert added `$alert-border-style` and split up border properties to allow for more granular control of styles through variables
+* New: Input Group Constrain added option to configure `$input-group-constrain-max-width`, `$input-group-constrain-max-width-mobile`
+* New: Forms added option to configure `$input-height-inner-mobile`, `$input-height-inner-lg-mobile`, `$input-height-inner-sm-mobile` and `.input-group` items should size with `$input-height`'s
+* New: Input Group added option to configure `$input-group-addon-padding-*-*` and fix Input Group Sizing styles caused by BS4's use of extend
+* New: Forms added option to configure `$input-padding-x-lg`, `$input-padding-y-lg`, `$input-padding-x-sm`, `$input-padding-y-sm`
+* New: Lexicon Icons envelope-open and envelope-closed
+* New: Added component `.nav-underline`
+* New: Nav Tabs added option to configure `$nav-tabs-link-show-color`, `$nav-tabs-link-show-border-color`, removed `$nav-tabs-justified-link-border-color`, and renamed `$nav-tabs-active-link-color` to `$nav-tabs-link-active-color`
+* Update: Atlas dropdown widths
+* Update: Dropdown adjust spacing for alerts in dropdowns
+* Update: Custom Control line-height should also apply to Lexicon Base
+* Update: Dropdown `.custom-control`'s in `.dropdown-item` should be properly spaced
+* Update: Dropdown re-add `.dropdown-menu-top`, `.dropdown-menu-top-right`, `.dropdown-menu-top-center`, and `.dropdown-menu-center` positional classes
+* Update: Move `.inline-scroller` to utilties and create _utilities.scss variable file
+* Update: Dropdown removed `$dropdown-item-padding-y` from Lexicon Base was added by BS4, removed `$dropdown-link-padding` doesn't exist in BS4
+* Update: [Fixes #344](https://github.com/liferay/clay/issues/344) Dropdown re-add dropdown menu positions (not compatible with popper.js positioning)
+* Update: Breadcrumb text-transform shouldn't bleed into dropdowns
+* Update: Breadcrumb text-decoration should work with BS4 global variable
+* Update: Breadcrumb add support for `.text-truncate` inside `.breadcrumb-item > a`
+* Update: Breadcrumb add dropdown support inside `.breadcrumb-item`
+* Update: Nav Nested shouldn't wrap if nav is longer than container
+* Update: Input Group Inset values should be more dynamic
+* Update: Input Group convert to scale component mixin and `.input-group-addon-constrain` should use `$input-padding-x`
+* Update: Nav Nested should be `flex-direction: column` by default
+* Update: Nav Underline adjust left and right positions to match other component highlights
+
 ### v2.0.0-alpha.2 - July 24, 2017
 * Messed up alpha.1 release
 
