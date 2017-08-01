@@ -1,0 +1,66 @@
+/**
+* Clay 2.0.0-alpha.3
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$badge-font-size: 0.875rem !default; // 14px
+$badge-font-size-mobile: 0.75rem !default; // 12px
+$badge-font-weight: 500 !default;
+$badge-padding-x: 12px !default;
+$badge-padding-y: 9px !default;
+
+$badge-font-size-lg: 1.125rem !default; // 18px
+$badge-font-size-lg-mobile: 1rem !default; // 16px
+$badge-padding-x-lg: 20px !default;
+$badge-padding-y-lg: 14px !default;
+
+$badge-font-size-sm: 0.75rem !default; // 12px
+$badge-font-size-sm-mobile: 0.6875rem !default; // 11px
+$badge-padding-x-sm: 10px !default;
+$badge-padding-y-sm: 4px !default;
+
+// Badge Variants
+
+$badge-primary-bg: map-get($theme-colors, primary) !default;
+$badge-primary-hover-bg: $badge-primary-bg !default;
+$badge-primary-color: #FFF !default;
+$badge-primary-hover-color: $badge-primary-color !default;
+
+$badge-secondary-bg: #E7F1F9 !default;
+$badge-secondary-hover-bg: $badge-secondary-bg !default;
+$badge-secondary-color: map-get($theme-colors, primary) !default;
+$badge-secondary-hover-color: $badge-secondary-color !default;
+$badge-secondary-link-color: $badge-secondary-color !default;
+
+$badge-success-bg: map-get($theme-colors, success) !default;
+$badge-success-hover-bg: $badge-success-bg !default;
+$badge-success-color: #FFF !default;
+$badge-success-hover-color: $badge-success-color !default;
+
+$badge-info-bg: map-get($theme-colors, info) !default;
+$badge-info-hover-bg: $badge-info-bg !default;
+$badge-info-color: #FFF !default;
+$badge-info-hover-color: $badge-info-color !default;
+
+$badge-warning-bg: map-get($theme-colors, warning) !default;
+$badge-warning-hover-bg: $badge-warning-bg !default;
+$badge-warning-color: #FFF !default;
+$badge-warning-hover-color: $badge-warning-color !default;
+
+$badge-danger-bg: map-get($theme-colors, danger) !default;
+$badge-danger-hover-bg: $badge-danger-bg !default;
+$badge-danger-color: #FFF !default;
+$badge-danger-hover-color: $badge-danger-color !default;
+
+$badge-light-bg: map-get($theme-colors, light) !default;
+$badge-light-hover-bg: $badge-light-bg !default;
+$badge-light-color: #869CAD !default;
+$badge-light-hover-color: $badge-light-color !default;
+$badge-light-link-color: $badge-light-color !default;
+
+$badge-dark-bg: map-get($theme-colors, dark) !default;
+$badge-dark-hover-bg: $badge-dark-bg !default;
+$badge-dark-color: #FFF !default;
+$badge-dark-hover-color: $badge-dark-color !default;

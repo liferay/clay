@@ -1,0 +1,33 @@
+/**
+* Clay 2.0.0-alpha.3
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-height: 0;
+}
+
+.flex-col-expand {
+	flex-grow: 1;
+	min-width: 50px;
+	width: 100%;
+	word-wrap: break-word;
+}
+
+// Inline Scroller
+
+.inline-scroller {
+	list-style: none;
+	margin: 0;
+	max-height: $inline-scroller-max-height;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	padding: 0;
+}

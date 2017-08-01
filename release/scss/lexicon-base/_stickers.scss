@@ -1,0 +1,143 @@
+/**
+* Clay 2.0.0-alpha.3
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sticker {
+	@include border-radius($sticker-border-radius);
+
+	border-style: $sticker-border-style;
+	border-width: $sticker-border-width;
+	color: $sticker-color;
+	display: inline-block;
+	font-size: $sticker-font-size;
+	font-weight: $sticker-font-weight;
+
+	@include monospace($sticker-size);
+
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+
+	img {
+		vertical-align: top;
+	}
+}
+
+.sticker-overlay {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+// Sticker Positions
+
+.sticker-bottom-left {
+	bottom: $sticker-gutter-width;
+	left: $sticker-gutter-width;
+	position: absolute;
+	right: auto;
+	top: auto;
+}
+
+.sticker-bottom-right {
+	bottom: $sticker-gutter-width;
+	left: auto;
+	position: absolute;
+	right: $sticker-gutter-width;
+	top: auto;
+}
+
+.sticker-top-left {
+	left: $sticker-gutter-width;
+	position: absolute;
+	top: $sticker-gutter-width;
+}
+
+.sticker-top-right {
+	left: auto;
+	position: absolute;
+	right: $sticker-gutter-width;
+	top: $sticker-gutter-width;
+}
+
+.sticker-outside {
+	left: -$sticker-gutter-width;
+	top: -$sticker-gutter-width;
+
+	&.sticker-bottom-left {
+		bottom: -$sticker-gutter-width;
+		top: auto;
+	}
+
+	&.sticker-bottom-right {
+		bottom: -$sticker-gutter-width;
+		left: auto;
+		right: -$sticker-gutter-width;
+		top: auto;
+	}
+
+	&.sticker-top-right {
+		left: auto;
+		right: -$sticker-gutter-width;
+	}
+}
+
+// Sticker Sizes
+
+.sticker-sm {
+	font-size: $sticker-font-size-sm;
+
+	@include monospace($sticker-size-sm);
+
+	.lexicon-icon {
+		height: $sticker-font-size-sm;
+		width: $sticker-font-size-sm;
+	}
+}
+
+.sticker-lg {
+	font-size: $sticker-font-size-lg;
+
+	@include monospace($sticker-size-lg);
+
+	.lexicon-icon {
+		height: $sticker-font-size-lg;
+		width: $sticker-font-size-lg;
+	}
+}
+
+.sticker-xl {
+	font-size: $sticker-font-size-xl;
+
+	@include monospace($sticker-size-xl);
+
+	.lexicon-icon {
+		height: $sticker-font-size-xl;
+		width: $sticker-font-size-xl;
+	}
+}
+
+.sticker-xxl {
+	font-size: $sticker-font-size-xxl;
+
+	@include monospace($sticker-size-xxl);
+
+	.lexicon-icon {
+		height: $sticker-font-size-xxl;
+		width: $sticker-font-size-xxl;
+	}
+}
+
+// Sticker Variants
+
+@each $color, $value in $sticker-palette {
+	.sticker-#{$color} {
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
+	}
+}
