@@ -530,6 +530,20 @@ body.fixed {
 	display: inline;
 }
 
+@each $breakpoint, $value in $container-fluid-max-widths {
+	.container-fluid-max-#{$breakpoint} .clay-site-grid-width-#{$breakpoint} {
+		&:after {
+			content: ' #{$value}';
+		}
+	}
+
+	[data-container-classes="container-fluid container-fluid-max-#{$breakpoint} main-nav-container"] {
+		&:after {
+			content: ' (#{$value})';
+		}
+	}
+}
+
 // Icons (Font Awesome Page)
 
 @media (min-width: 321px) {
