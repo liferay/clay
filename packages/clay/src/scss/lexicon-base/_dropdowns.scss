@@ -18,12 +18,12 @@
 	}
 }
 
-.dropdown-sub-header {
-	color: $dropdown-sub-header-color;
-	font-size: $dropdown-sub-header-font-size;
-	font-weight: $dropdown-sub-header-font-weight;
+.dropdown-subheader {
+	color: $dropdown-subheader-color;
+	font-size: $dropdown-subheader-font-size;
+	font-weight: $dropdown-subheader-font-weight;
 	padding: $dropdown-header-padding-y $dropdown-header-padding-x;
-	text-transform: $dropdown-sub-header-text-transform;
+	text-transform: $dropdown-subheader-text-transform;
 	white-space: normal;
 	word-wrap: break-word;
 }
