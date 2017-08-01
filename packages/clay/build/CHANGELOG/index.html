@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.2</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.3</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -209,7 +209,59 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-alpha-2-july-24-2017"><a class="heading-anchor" href="#v2-0-0-alpha-2-july-24-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.2 - July 24, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-alpha-3-july-31-2017"><a class="heading-anchor" href="#v2-0-0-alpha-3-july-31-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.3 - July 31, 2017</h3>
+<ul>
+<li>Breaking: Dropdown removed <code>$dropdown-padding-bottom</code>, <code>$dropdown-padding-left</code>, <code>$dropdown-padding-right</code>, <code>$dropdown-padding-top</code></li>
+<li>Breaking: Rename <code>$inline-scroller-height</code> to <code>$inline-scroller-max-height</code></li>
+<li>Breaking: Revert <code>$dropdown-section-color</code> and <code>$dropdown-section-font-size</code> sometimes we don&#x2019;t want <code>.dropdown-section</code> styles to bleed into components nested inside</li>
+<li>Breaking: Breadcrumb move truncating text to <code>.breadcrumb-text-truncate</code></li>
+<li>Breaking: Input Group Inset added <code>.input-group-inset-left</code> to align inset content on the left</li>
+<li>Breaking: Input Group removed <code>.input-group-insert</code> multiple addons and buttons are supported now</li>
+<li>Breaking: Forms renamed <code>$input-select-icon-color-focus</code> to <code>$input-select-icon-focus-color</code> and reverted <code>-select-focus-bg</code> to <code>$input-select-focus-bg</code> to follow BS4 naming pattern</li>
+<li>Breaking: Input Group removed <code>$input-group-constrain-line-height</code>, <code>$input-group-constrain-line-height-lg</code>, <code>$input-group-constrain-line-height-sm</code></li>
+<li>Breaking: Input Groups should size with <code>$input-height</code></li>
+<li>Breaking: Rename <code>.input-group-default</code> to <code>.input-group-light</code> and remove <code>.input-group-addon-content</code></li>
+<li>Breaking: Removed Toolbar component</li>
+<li>Breaking: Consolidate Nav Tabs with Nav</li>
+<li>Breaking: Move BS4 grid in nav-tabs styles to Nav component and added <code>.nav-text-truncate</code></li>
+<li>Breaking: Nav Tabs removed <code>.nav-tabs-scroll</code></li>
+<li>Breaking: Nav Tabs removed <code>.nav-tabs-default</code></li>
+<li>New: Dropdown added <code>$dropdown-alert-font-size</code>, <code>$dropdown-alert-line-height</code>, <code>$dropdown-alert-margin</code>, <code>$dropdown-alert-padding-x</code>, <code>$dropdown-alert-padding-y</code> and more spacing issues with alerts in dropdowns</li>
+<li>New: Alert added <code>.alert-fluid</code> and option to customize <code>$alert-fluid-border-width</code></li>
+<li>New: Dropdown added <code>.dropdown-menu-indicator-start</code>, <code>.dropdown-menu-indicator-end</code>, <code>.dropdown-item-indicator</code>, and added options to configure <code>$dropdown-item-indicator-size</code>, <code>$dropdown-item-indicator-spacer-x</code></li>
+<li>New: Dropdown added option to configure <code>$dropdown-inline-scroller-max-height</code>, <code>$dropdown-inline-scroller-max-height-mobile</code> and update dropdown sizes so it fits in mobile</li>
+<li>New: Dropdown added option to configure <code>$dropdown-header-padding-x</code>, <code>$dropdown-header-padding-y</code></li>
+<li>New: Dropdown added <code>.dropdown-sub-header</code>, <code>.dropdown-caption</code>, and options to customize <code>$dropdown-sub-header-color</code>, <code>$dropdown-sub-header-font-size</code>, <code>$dropdown-sub-header-font-weight</code>, <code>$dropdown-sub-header-text-transform</code>, <code>$dropdown-caption-color</code>, <code>$dropdown-caption-font-size</code>, <code>$dropdown-caption-font-weight</code></li>
+<li>New: Dropdown added <code>$dropdown-section-color</code>, <code>$dropdown-section-font-size</code></li>
+<li>New: Breadcrumb added option to configure <code>$breadcrumb-text-truncate-icon-spacer-x</code></li>
+<li>New: Breadcrumb added option to configure <code>$breadcrumb-text-truncate-max-width</code>, <code>$breadcrumb-text-truncate-max-width-mobile</code></li>
+<li>New: Alert added <code>$alert-border-style</code> and split up border properties to allow for more granular control of styles through variables</li>
+<li>New: Input Group Constrain added option to configure <code>$input-group-constrain-max-width</code>, <code>$input-group-constrain-max-width-mobile</code></li>
+<li>New: Forms added option to configure <code>$input-height-inner-mobile</code>, <code>$input-height-inner-lg-mobile</code>, <code>$input-height-inner-sm-mobile</code> and <code>.input-group</code> items should size with <code>$input-height</code>&#x2018;s</li>
+<li>New: Input Group added option to configure <code>$input-group-addon-padding-*-*</code> and fix Input Group Sizing styles caused by BS4&#x2019;s use of extend</li>
+<li>New: Forms added option to configure <code>$input-padding-x-lg</code>, <code>$input-padding-y-lg</code>, <code>$input-padding-x-sm</code>, <code>$input-padding-y-sm</code></li>
+<li>New: Lexicon Icons envelope-open and envelope-closed</li>
+<li>New: Added component <code>.nav-underline</code></li>
+<li>New: Nav Tabs added option to configure <code>$nav-tabs-link-show-color</code>, <code>$nav-tabs-link-show-border-color</code>, removed <code>$nav-tabs-justified-link-border-color</code>, and renamed <code>$nav-tabs-active-link-color</code> to <code>$nav-tabs-link-active-color</code></li>
+<li>Update: Atlas dropdown widths</li>
+<li>Update: Dropdown adjust spacing for alerts in dropdowns</li>
+<li>Update: Custom Control line-height should also apply to Lexicon Base</li>
+<li>Update: Dropdown <code>.custom-control</code>&#x2018;s in <code>.dropdown-item</code> should be properly spaced</li>
+<li>Update: Dropdown re-add <code>.dropdown-menu-top</code>, <code>.dropdown-menu-top-right</code>, <code>.dropdown-menu-top-center</code>, and <code>.dropdown-menu-center</code> positional classes</li>
+<li>Update: Move <code>.inline-scroller</code> to utilties and create _utilities.scss variable file</li>
+<li>Update: Dropdown removed <code>$dropdown-item-padding-y</code> from Lexicon Base was added by BS4, removed <code>$dropdown-link-padding</code> doesn&#x2019;t exist in BS4</li>
+<li>Update: <a href="https://github.com/liferay/clay/issues/344">Fixes #344</a> Dropdown re-add dropdown menu positions (not compatible with popper.js positioning)</li>
+<li>Update: Breadcrumb text-transform shouldn&#x2019;t bleed into dropdowns</li>
+<li>Update: Breadcrumb text-decoration should work with BS4 global variable</li>
+<li>Update: Breadcrumb add support for <code>.text-truncate</code> inside <code>.breadcrumb-item &gt; a</code></li>
+<li>Update: Breadcrumb add dropdown support inside <code>.breadcrumb-item</code></li>
+<li>Update: Nav Nested shouldn&#x2019;t wrap if nav is longer than container</li>
+<li>Update: Input Group Inset values should be more dynamic</li>
+<li>Update: Input Group convert to scale component mixin and <code>.input-group-addon-constrain</code> should use <code>$input-padding-x</code></li>
+<li>Update: Nav Nested should be <code>flex-direction: column</code> by default</li>
+<li>Update: Nav Underline adjust left and right positions to match other component highlights</li>
+</ul>
+<h3 id="v2-0-0-alpha-2-july-24-2017"><a class="heading-anchor" href="#v2-0-0-alpha-2-july-24-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.2 - July 24, 2017</h3>
 <ul>
 <li>Messed up alpha.1 release</li>
 </ul>
