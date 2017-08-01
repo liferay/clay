@@ -1,41 +1,9 @@
-// @mixin list-group-item-stacked($screen-size-down: xl) {
-// 	@if (type-of($screen-size-down) != number) {
-// 		@include media-breakpoint-down($screen-size-down) {
-// 			flex-direction: column;
-// 			padding-bottom: $list-group-item-padding-y / 2;
-// 			padding-top: $list-group-item-padding-y / 2;
-
-// 			.flex-col {
-// 				padding-bottom: $list-group-item-padding-y / 2;
-// 				padding-top: $list-group-item-padding-y / 2;
-// 			}
-// 		}
-// 	}
-// 	@else {
-// 		@media (max-width: $screen-size-down) {
-// 			flex-direction: column;
-// 			padding-bottom: $list-group-item-padding-y / 2;
-// 			padding-top: $list-group-item-padding-y / 2;
-
-// 			.flex-col {
-// 				padding-bottom: $list-group-item-padding-y / 2;
-// 				padding-top: $list-group-item-padding-y / 2;
-// 			}
-// 		}
-// 	}
-// }
-
-// .list-group-stacked .list-group-item-flex,
-// .list-group-item-flex-stacked {
-// 	@include list-group-item-stacked(319px);
-// }
+// TODO: List Group Item Flex Stacked Screen Size Down
 
 .list-group {
 	@include box-shadow($list-group-box-shadow);
-	// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22874 goes in
-	color: $list-group-color;
 
-	// Nested list groups shouldn't have box shadows
+	color: $list-group-color;
 
 	.list-group {
 		@if ($list-group-box-shadow != null) {
@@ -142,6 +110,7 @@
 
 .list-group-unstyled {
 	@include box-shadow(none);
+
 	color: inherit;
 
 	.flex-col {
