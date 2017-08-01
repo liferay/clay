@@ -26,3 +26,19 @@ $panel-primary-border-color: darken(map-get($theme-colors, primary), 25%) !defau
 $panel-secondary-border-color: map-get($theme-colors, primary) !default;
 $panel-secondary-header-bg: #F5F8FA !default;
 $panel-secondary-color: map-get($theme-colors, secondary) !default;
+
+$panel-info-header-bg: lighten(map-get($theme-colors, info), 34%) !default;
+$panel-info-header-border-color: map-get($theme-colors, info) !default;
+$panel-info-header-color: #FFF !default;
+
+$panel-success-header-bg: lighten(map-get($theme-colors, success), 34%) !default;
+$panel-success-header-border-color: map-get($theme-colors, success) !default;
+$panel-success-header-color: map-get($theme-colors, success) !default;
+
+$panel-warning-header-bg: lighten(map-get($theme-colors, warning), 34%) !default;
+$panel-warning-header-border-color: map-get($theme-colors, warning) !default;
+$panel-warning-header-color: map-get($theme-colors, warning) !default;
+
+$panel-danger-header-bg: lighten(map-get($theme-colors, danger), 34%) !default;
+$panel-danger-header-border-color: map-get($theme-colors, danger) !default;
+$panel-danger-header-color: map-get($theme-colors, danger) !default;
