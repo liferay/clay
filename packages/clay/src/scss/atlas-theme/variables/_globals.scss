@@ -51,8 +51,6 @@ $border-radius: 0.25rem !default; // 4px
 $border-radius-lg: 0.375rem !default; // 6px
 $border-radius-sm: 0.1875rem !default; // 3px
 
-$body-bg: #FFF !default;
-
 $gray-100: #F7F7F9 !default;
 $gray-200: #ECEEEF !default;
 // $gray-300: #dee2e6 !default;
@@ -64,19 +62,20 @@ $gray-500: #464A4C !default;
 $gray-900: #292B2C !default;
 
 $theme-colors: (
-  primary: #65B6F0,
-  secondary: #869CAD,
-  success: #76BD4A,
-  info: #1E5EC8,
-  warning: #F5984C,
-  danger: #C67,
-  light: #FCFEFF,
-  dark: #869CAD
+  primary: #1865FB,
+  secondary: #A7A9BB,
+  success: #2D7C3F,
+  info: #315CA9,
+  warning: #B75115,
+  danger: #D71921,
+  light: #F1F2F5,
+  dark: #31323F
 ) !default;
 
 $link-color: map-get($theme-colors, primary) !default;
 
-$body-color: #29353D !default;
+$body-bg: #F1F2F5 !default;
+$body-color: #272833 !default;
 $text-muted: lighten($body-color, 55%) !default;
 
 // Global background color for active items (e.g., navs or dropdowns).
