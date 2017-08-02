@@ -621,7 +621,7 @@ pre code {
 
 @media (min-width: 768px) {
   .container {
-    width: 720px;
+    width: 800px;
     max-width: 100%;
   }
 }
@@ -635,7 +635,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
+    width: 1280px;
     max-width: 100%;
   }
 }
@@ -8948,7 +8948,7 @@ fieldset[disabled] .btn {
 }
 
 .container-fluid-max-md {
-  max-width: 720px;
+  max-width: 800px;
 }
 
 .container-fluid-max-lg {
@@ -8956,10 +8956,6 @@ fieldset[disabled] .btn {
 }
 
 .container-fluid-max-xl {
-  max-width: 1140px;
-}
-
-.container-fluid-max-xxl {
   max-width: 1280px;
 }
 
@@ -10049,6 +10045,26 @@ a.label {
   margin-left: 0;
 }
 
+.list-group-header {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e1e7eb;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -1px;
+  padding: 0.75rem 1.25rem;
+}
+
+.list-group-header:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.list-group-header:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .list-group-item.active {
   z-index: auto;
 }
@@ -10114,6 +10130,7 @@ a.label {
   padding-right: 0;
 }
 
+.list-group-unstyled .list-group-header,
 .list-group-unstyled .list-group-item {
   background-color: transparent;
   border-color: transparent;
@@ -11982,19 +11999,19 @@ a.label {
 }
 
 .panel-danger .panel-header {
-  background-color: #f5e0e4;
-  border-color: #f1d4d9;
-  color: #6a353e;
+  background-color: #f7e8eb;
+  border-color: #C67;
+  color: #C67;
 }
 
 .panel-group .panel-danger .panel-header + .panel-collapse > .panel-body {
-  border-color: #f1d4d9;
+  border-color: #C67;
 }
 
 .panel-danger .panel-footer {
-  background-color: #f5e0e4;
+  background-color: #f7e8eb;
   border-color: #f1d4d9;
-  color: #6a353e;
+  color: #C67;
 }
 
 .panel-info {
@@ -12003,19 +12020,19 @@ a.label {
 }
 
 .panel-info .panel-header {
-  background-color: #d2dff4;
-  border-color: #c0d2f0;
-  color: #c0d2f0;
+  background-color: #a2c0f1;
+  border-color: #1E5EC8;
+  color: #FFF;
 }
 
 .panel-group .panel-info .panel-header + .panel-collapse > .panel-body {
-  border-color: #c0d2f0;
+  border-color: #1E5EC8;
 }
 
 .panel-info .panel-footer {
-  background-color: #d2dff4;
-  border-color: #c0d2f0;
-  color: #c0d2f0;
+  background-color: #a2c0f1;
+  border-color: #1E5EC8;
+  color: #FFF;
 }
 
 .panel-primary {
@@ -12065,19 +12082,19 @@ a.label {
 }
 
 .panel-success .panel-header {
-  background-color: #e4f2db;
-  border-color: #d9edcc;
-  color: #3d6226;
+  background-color: #d6ebc9;
+  border-color: #76BD4A;
+  color: #76BD4A;
 }
 
 .panel-group .panel-success .panel-header + .panel-collapse > .panel-body {
-  border-color: #d9edcc;
+  border-color: #76BD4A;
 }
 
 .panel-success .panel-footer {
-  background-color: #e4f2db;
-  border-color: #d9edcc;
-  color: #3d6226;
+  background-color: #d6ebc9;
+  border-color: #76BD4A;
+  color: #76BD4A;
 }
 
 .panel-warning {
@@ -12086,19 +12103,19 @@ a.label {
 }
 
 .panel-warning .panel-header {
-  background-color: #fdeadb;
-  border-color: #fce2cd;
-  color: #7f4f28;
+  background-color: #fef6f0;
+  border-color: #F5984C;
+  color: #F5984C;
 }
 
 .panel-group .panel-warning .panel-header + .panel-collapse > .panel-body {
-  border-color: #fce2cd;
+  border-color: #F5984C;
 }
 
 .panel-warning .panel-footer {
-  background-color: #fdeadb;
-  border-color: #fce2cd;
-  color: #7f4f28;
+  background-color: #fef6f0;
+  border-color: #F5984C;
+  color: #F5984C;
 }
 
 .popover {
@@ -12335,41 +12352,41 @@ a.label {
   background-color: #DFE6EB;
 }
 
-.sidebar-inverse {
+.sidebar-dark {
   color: #869CAD;
 }
 
-.sidebar-inverse .sidebar-header .sidebar-title {
+.sidebar-dark .sidebar-header .sidebar-title {
   color: #FFF;
 }
 
-.sidebar-inverse .sidebar-header .sidebar-title.sidebar-link,
-.sidebar-inverse .sidebar-header .sidebar-title .sidebar-link {
+.sidebar-dark .sidebar-header .sidebar-title.sidebar-link,
+.sidebar-dark .sidebar-header .sidebar-title .sidebar-link {
   color: #FFF;
   text-decoration: none;
 }
 
-.sidebar-inverse .sidebar-header .sidebar-title.sidebar-link:focus, .sidebar-inverse .sidebar-header .sidebar-title.sidebar-link:hover,
-.sidebar-inverse .sidebar-header .sidebar-title .sidebar-link:focus,
-.sidebar-inverse .sidebar-header .sidebar-title .sidebar-link:hover {
+.sidebar-dark .sidebar-header .sidebar-title.sidebar-link:focus, .sidebar-dark .sidebar-header .sidebar-title.sidebar-link:hover,
+.sidebar-dark .sidebar-header .sidebar-title .sidebar-link:focus,
+.sidebar-dark .sidebar-header .sidebar-title .sidebar-link:hover {
   color: #FFF;
 }
 
-.sidebar-inverse .sidebar-actions .sidebar-link {
+.sidebar-dark .sidebar-actions .sidebar-link {
   color: #869CAD;
   text-decoration: none;
 }
 
-.sidebar-inverse .sidebar-actions .sidebar-link:focus, .sidebar-inverse .sidebar-actions .sidebar-link:hover {
+.sidebar-dark .sidebar-actions .sidebar-link:focus, .sidebar-dark .sidebar-actions .sidebar-link:hover {
   color: #869CAD;
 }
 
-.sidebar-inverse-bg {
+.sidebar-dark-bg {
   background-color: #1F282E;
   border-color: #0a0e10;
 }
 
-.sidebar-inverse-bg .sidebar-panel {
+.sidebar-dark-bg .sidebar-panel {
   background-color: #1B2228;
 }
 
@@ -13513,7 +13530,7 @@ th .truncate-text {
   }
 }
 
-.dropdown-sub-header {
+.dropdown-subheader {
   color: #B0B4BB;
   font-size: 0.75rem;
   font-weight: 500;
@@ -13634,7 +13651,9 @@ th .truncate-text {
 }
 
 .dropdown-menu-horizontal {
+  margin-top: 0;
   max-width: none;
+  min-height: 50px;
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -13656,7 +13675,8 @@ th .truncate-text {
   width: auto;
 }
 
-.dropdown-menu-horizontal .dropdown-header {
+.dropdown-menu-horizontal .dropdown-header,
+.dropdown-menu-horizontal .dropdown-subheader {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -13672,7 +13692,7 @@ th .truncate-text {
 }
 
 .dropdown-menu-indicator-start .dropdown-header,
-.dropdown-menu-indicator-start .dropdown-sub-header,
+.dropdown-menu-indicator-start .dropdown-subheader,
 .dropdown-menu-indicator-start .dropdown-caption,
 .dropdown-menu-indicator-start .dropdown-item {
   padding-left: 3.25rem;
