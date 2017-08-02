@@ -9,6 +9,7 @@
 
 	.close {
 		opacity: $alert-close-opacity;
+		margin-left: $alert-close-margin-left;
 		padding-bottom: $alert-close-padding-bottom;
 		padding-left: $alert-close-padding-left;
 		padding-right: $alert-close-padding-right;
