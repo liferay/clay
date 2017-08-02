@@ -142,7 +142,7 @@
 }
 
 .sidebar-inverse {
-	color: $sidebar-inverse-color;
+	color: $sidebar-dark-color;
 
 	.sidebar-link {
 		color: $sidebar-dark-link-color;
@@ -154,35 +154,35 @@
 
 	.sidebar-header {
 		.sidebar-title {
-			color: $sidebar-inverse-header-title-color;
+			color: $sidebar-dark-header-title-color;
 		}
 
 		.sidebar-title.sidebar-link,
 		.sidebar-title .sidebar-link {
-			color: $sidebar-inverse-header-title-color;
+			color: $sidebar-dark-header-title-color;
 			text-decoration: none;
 
 			@include hover-focus {
-				color: $sidebar-inverse-header-title-hover-color;
+				color: $sidebar-dark-header-title-hover-color;
 			}
 		}
 	}
 
 	.sidebar-actions .sidebar-link {
-		color: $sidebar-inverse-actions-link-color;
+		color: $sidebar-dark-actions-link-color;
 		text-decoration: none;
 
 		@include hover-focus {
-			color: $sidebar-inverse-actions-link-hover-color;
+			color: $sidebar-dark-actions-link-hover-color;
 		}
 	}
 }
 
 .sidebar-inverse-bg {
-	background-color: $sidebar-inverse-bg;
-	border-color: $sidebar-inverse-border-color;
+	background-color: $sidebar-dark-bg;
+	border-color: $sidebar-dark-border-color;
 
 	.sidebar-panel {
-		background-color: $sidebar-inverse-panel-bg;
+		background-color: $sidebar-dark-panel-bg;
 	}
 }
