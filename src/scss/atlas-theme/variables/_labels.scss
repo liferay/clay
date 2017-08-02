@@ -1,64 +1,64 @@
-$label-font-size: 0.875rem !default; // 14px
-$label-font-size-mobile: 0.75rem !default; // 12px
+$label-border-radius: 0.125rem !default; // 2px
+$label-font-size: 0.75rem !default; // 12px
 $label-font-weight: 500 !default;
-$label-lexicon-icon-height: 10px !default;
+$label-lexicon-icon-height: 0.9em !default;
 $label-lexicon-icon-width: $label-lexicon-icon-height !default;
-$label-padding-x: 12px !default;
-$label-padding-y: 9px !default;
+$label-padding-x: 0.625rem !default; // 10px
+$label-padding-y: 0.3125rem !default; // 5px
 $label-text-transform: uppercase !default;
 
-$label-font-size-lg: 1.125rem !default; // 18px
-$label-font-size-lg-mobile: 1rem !default; // 16px
-$label-lexicon-icon-height-lg: 14px !default;
-$label-lexicon-icon-width-lg: $label-lexicon-icon-height-lg !default;
-$label-padding-x-lg: 20px !default;
-$label-padding-y-lg: 14px !default;
+$label-anchor-hover-text-decoration: underline !default;
 
-$label-font-size-sm: 0.75rem !default; // 12px
-$label-font-size-sm-mobile: 0.6875rem !default; // 11px
-$label-lexicon-icon-height-sm: 7px !default;
+$label-font-size-lg: 0.875rem !default; // 14px
+$label-lexicon-icon-height-lg: 1em !default;
+$label-lexicon-icon-width-lg: $label-lexicon-icon-height-lg !default;
+$label-padding-x-lg: 0.75rem !default; // 12px
+$label-padding-y-lg: 0.5rem !default; // 8px
+
+$label-font-size-sm: 0.625rem !default; // 10px
+$label-lexicon-icon-height-sm: 0.75em !default;
 $label-lexicon-icon-width-sm: $label-lexicon-icon-height-sm !default;
-$label-padding-x-sm: 10px !default;
-$label-padding-y-sm: 4px !default;
+$label-padding-x-sm: 0.375rem !default; // 6px
+$label-padding-y-sm: 0.125rem !default; // 2px
 
 // Label Variants
 
-$label-primary-border-color: map-get($theme-colors, primary) !default;
-$label-primary-hover-border-color: $label-primary-border-color !default;
 $label-primary-color: map-get($theme-colors, primary) !default;
+$label-primary-border-color: lighten($label-primary-color, 20%) !default;
+$label-primary-hover-border-color: $label-primary-border-color !default;
 $label-primary-hover-color: $label-primary-color !default;
 
-$label-secondary-border-color: map-get($theme-colors, secondary) !default;
+$label-secondary-color: lighten($body-color, 28%) !default;
+$label-secondary-border-color: lighten($label-secondary-color, 20%) !default;
 $label-secondary-hover-border-color: $label-secondary-border-color !default;
-$label-secondary-color: map-get($theme-colors, secondary) !default;
 $label-secondary-hover-color: $label-secondary-color !default;
 
-$label-success-border-color: map-get($theme-colors, success) !default;
-$label-success-hover-border-color: $label-success-border-color !default;
 $label-success-color: map-get($theme-colors, success) !default;
+$label-success-border-color: lighten($label-success-color, 20%) !default;
+$label-success-hover-border-color: $label-success-border-color !default;
 $label-success-hover-color: $label-success-color !default;
 
-$label-info-border-color: map-get($theme-colors, info) !default;
-$label-info-hover-border-color: $label-info-border-color !default;
 $label-info-color: map-get($theme-colors, info) !default;
+$label-info-border-color: lighten($label-info-color, 20%) !default;
+$label-info-hover-border-color: $label-info-border-color !default;
 $label-info-hover-color: $label-info-color !default;
 
-$label-warning-border-color: map-get($theme-colors, warning) !default;
-$label-warning-hover-border-color: $label-warning-border-color !default;
 $label-warning-color: map-get($theme-colors, warning) !default;
+$label-warning-border-color: lighten($label-warning-color, 20%) !default;
+$label-warning-hover-border-color: $label-warning-border-color !default;
 $label-warning-hover-color: $label-warning-color !default;
 
-$label-danger-border-color: map-get($theme-colors, danger) !default;
-$label-danger-hover-border-color: $label-danger-border-color !default;
 $label-danger-color: map-get($theme-colors, danger) !default;
+$label-danger-border-color: lighten($label-danger-color, 20%) !default;
+$label-danger-hover-border-color: $label-danger-border-color !default;
 $label-danger-hover-color: $label-danger-color !default;
 
-$label-light-border-color: map-get($theme-colors, dark) !default;
+$label-light-color: map-get($theme-colors, light) !default;
+$label-light-border-color: $label-light-color !default;
 $label-light-hover-border-color: $label-light-border-color !default;
-$label-light-color: map-get($theme-colors, dark) !default;
 $label-light-hover-color: $label-light-color !default;
 
-$label-dark-border-color: map-get($theme-colors, dark) !default;
-$label-dark-hover-border-color: $label-dark-border-color !default;
 $label-dark-color: map-get($theme-colors, dark) !default;
+$label-dark-border-color: lighten($label-dark-color, 20%) !default;
+$label-dark-hover-border-color: $label-dark-border-color !default;
 $label-dark-hover-color: $label-dark-color !default;
