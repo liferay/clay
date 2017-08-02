@@ -1,0 +1,64 @@
+{namespace ClayProgressBar}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param? id: string}
+	{@param? maxValue: int}
+	{@param? minValue: int}
+	{@param? spritemap: string}
+	{@param? status: string}
+	{@param? value: int}
+
+	{let $max: $maxValue ?: 100 /}
+	{let $min: $minValue ?: 0 /}
+	{let $succeed: $status == 'complete' or $value == $max /}
+	{let $warning: $status == 'warning' /}
+
+	{let $currentValue: $value ?: $succeed ? 100 : 0 /}
+
+	{let $progressGroupAttributes kind="attributes"}
+		class="progress-group
+			{if $succeed}
+				{sp}progress-success
+			{elseif $warning}
+				{sp}progress-warning
+			{else}
+				{sp}progress-info
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<div {$progressGroupAttributes}>
+	    <div class="progress">
+			{let $barAttributes kind="attributes"}
+				aria-valuemax="{$max}"
+				aria-valuemin="{$min}"
+				aria-valuenow="{$currentValue}"
+				class="progress-bar"
+				role="progressbar"
+				style="width: {$currentValue}%;"
+			{/let}
+
+	        <div {$barAttributes}></div>
+	    </div>
+
+	    <div class="progress-group-addon">
+			{if $succeed and $spritemap}
+				<div class="progress-group-feedback">
+					{call ClayIcon.render}
+						{param spritemap: $spritemap /}
+						{param symbol: 'check-circle' /}
+					{/call}
+				</div>
+			{elseif isNonnull($currentValue)}
+				{$currentValue}%
+			{/if}
+		</div>
+	</div>
+{/template}
