@@ -13,10 +13,10 @@ $sidebar-light-header-title-hover-color: $body-color !default;
 
 // Sidebar Inverse
 
-$sidebar-dark-bg: $inverse-bg !default;
-$sidebar-dark-border-color: $inverse-border !default;
-$sidebar-dark-color: $inverse-color !default;
-$sidebar-dark-panel-bg: $inverse-header-bg !default;
+$sidebar-dark-bg: #1F282E !default;
+$sidebar-dark-border-color: darken($sidebar-dark-bg, 10%) !default;
+$sidebar-dark-color: map-get($theme-colors, dark) !default;
+$sidebar-dark-panel-bg: #1B2228 !default;
 
 $sidebar-dark-actions-link-color: $sidebar-dark-color !default;
 $sidebar-dark-actions-link-hover-color: $sidebar-dark-actions-link-color !default;
