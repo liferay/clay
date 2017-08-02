@@ -20,7 +20,11 @@
 	.lead {
 		font-size: $alert-lead-font-size;
 		font-weight: $alert-lead-font-weight;
-		margin-right: $alert-lead-margin-right;
+		margin-right: $alert-lead-spacer-x;
+	}
+
+	.lexicon-icon + .lead {
+		margin-left: $alert-lead-spacer-x;
 	}
 }
 
