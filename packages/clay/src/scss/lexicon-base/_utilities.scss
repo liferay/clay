@@ -1,3 +1,19 @@
+// Rounded
+
+.rounded {
+	border-radius: $rounded-border-radius;
+}
+
+.rounded-circle {
+	border-radius: $rounded-circle-border-radius;
+}
+
+.rounded-0 {
+	border-radius: $rounded-0-border-radius;
+}
+
+// Flex Col
+
 .flex-col {
 	display: flex;
 	flex-direction: column;
