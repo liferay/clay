@@ -86,29 +86,6 @@ $component-active-color: #FFF !default;
 
 $link-hover-color: darken(map-get($theme-colors, primary), 8%) !default;
 
-// Inverse Colors
-
-$inverse-bg: #1F282E !default;
-$inverse-border: darken($inverse-bg, 10%) !default;
-$inverse-color: #869CAD !default;
-
-$inverse-active-bg: #3A4D5A !default;
-$inverse-active-border: darken($inverse-active-bg, 1%) !default;
-$inverse-active-color: #FFF !default;
-
-$inverse-disabled-color: #394956 !default;
-
-$inverse-hover-bg: #1C252C !default;
-$inverse-hover-border: darken($inverse-hover-bg, 1%) !default;
-$inverse-hover-color: $inverse-color !default;
-
-$inverse-header-bg: #1B2228 !default;
-$inverse-header-border: darken($inverse-header-bg, 1%) !default;
-$inverse-header-color: $inverse-color !default;
-
-$inverse-link-color: #FFF !default;
-$inverse-link-hover-color: $inverse-link-color !default;
-
 // Box Shadow
 // Defines global box-shadows
 // Deprecate THIS 2.0.0
