@@ -1,28 +1,40 @@
 .sticker {
+	align-items: center;
+
 	@include border-radius($sticker-border-radius);
 
 	border-style: $sticker-border-style;
 	border-width: $sticker-border-width;
 	color: $sticker-color;
-	display: inline-block;
+	display: inline-flex;
 	font-size: $sticker-font-size;
 	font-weight: $sticker-font-weight;
+	justify-content: center;
 
 	@include monospace($sticker-size);
 
-	overflow: hidden;
 	position: relative;
-	text-align: center;
+	vertical-align: middle;
 
 	img {
 		vertical-align: top;
 	}
+
+	.img-fluid {
+		@include border-radius($sticker-border-radius);
+	}
 }
 
 .sticker-overlay {
-	display: block;
+	align-items: center;
+
+	@include border-radius($sticker-border-radius);
+
+	display: flex;
+	justify-content: center;
 	position: absolute;
 	top: 0;
+	height: 100%;
 	width: 100%;
 }
 
