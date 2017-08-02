@@ -33,7 +33,11 @@
 }
 
 a.label {
-	text-decoration: none;
+	text-decoration: $label-anchor-text-decoration;
+
+	@include hover-focus {
+		text-decoration: $label-anchor-hover-text-decoration;
+	}
 }
 
 .label-lg {
