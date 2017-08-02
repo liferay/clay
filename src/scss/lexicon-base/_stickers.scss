@@ -23,6 +23,18 @@
 	.img-fluid {
 		@include border-radius($sticker-border-radius);
 	}
+
+	&.rounded .img-fluid {
+		border-radius: $rounded-border-radius;
+	}
+
+	&.rounded-circle .img-fluid {
+		border-radius: $rounded-circle-border-radius;
+	}
+
+	&.rounded-0 .img-fluid {
+		border-radius: 0;
+	}
 }
 
 .sticker-overlay {
