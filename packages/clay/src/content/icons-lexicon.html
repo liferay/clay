@@ -7,7 +7,7 @@ section: Components
 	<p>Lexicon icons do not use the same format as Font Awesome or Bootstrap's Glyphicons.</p>
 </div>
 <p>We use SVG elements that link to an SVG sprite, like so:</p>
-<p><pre><code>```<svg class="lexicon-icon">
+<p><pre><code>```<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-column">
     <use xlink:href="path/to/icons.svg#add-column" />
 </svg>
 ```</code></pre></p>
@@ -79,13 +79,13 @@ section: Components
 	Font icons, while fairly simple, also suffer some drawbacks, mainly with sub-pixel aliasing that cause the quality to not be as high as we would like.
 	Also SVG allows for multi-color icons, for example:
 	<span class="lexicon-icon-examples">
-		<svg class="lexicon-icon lexicon-icon-asterisk">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
 			<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 		</svg>
-		<svg class="lexicon-icon lexicon-icon-logout">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-logout">
 			<use xlink:href="{{rootPath}}/images/icons/icons.svg#logout" />
 		</svg>
-		<svg class="lexicon-icon lexicon-icon-exclamation-full">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 			<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
 		</svg>
 	</span>
