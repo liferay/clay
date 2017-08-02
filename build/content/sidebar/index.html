@@ -30,29 +30,29 @@
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -393,7 +393,7 @@
 
 				<div class="sidebar-section">
 					<span>Tags: </span>
-					<span class="badge badge-default badge-sm">
+					<span class="badge badge-secondary badge-sm">
 						History
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -401,7 +401,7 @@
 							</svg>
 						</a>
 					</span>
-					<span class="badge badge-default badge-sm">
+					<span class="badge badge-secondary badge-sm">
 						Flat
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -409,7 +409,7 @@
 							</svg>
 						</a>
 					</span>
-					<span class="badge badge-default badge-sm">
+					<span class="badge badge-secondary badge-sm">
 						Default
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -429,14 +429,14 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="sidebar-inverse"><a class="heading-anchor" href="#sidebar-inverse"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sidebar Inverse</h3>
+		<h3 id="sidebar-dark"><a class="heading-anchor" href="#sidebar-dark"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sidebar Dark</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Add class <code>sidebar-inverse sidebar-inverse-bg</code> to <code>sidebar</code> to apply a darker theme.</p>
+			<p>Add class <code>sidebar-dark sidebar-dark-bg</code> to <code>sidebar</code> to apply a darker theme.</p>
 		</blockquote>
 	</div>
 	<div class="col-md-6">
-		<div class="sidebar sidebar-inverse sidebar-inverse-bg">
+		<div class="sidebar sidebar-dark sidebar-dark-bg">
 			<div class="sidebar-header">
 				<div class="sidebar-section-d-flex">
 					<div class="flex-col flex-col-expand">
@@ -483,7 +483,7 @@
 				</div>
 			</div>
 
-			<nav class="navbar navbar-expand navbar-inverse navbar-inverse-bg">
+			<nav class="navbar navbar-expand navbar-dark navbar-dark-bg">
 				<ul class="navbar-nav">
 					<li class="dropdown nav-item">
 						<a aria-expanded="true" class="active dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
@@ -581,7 +581,7 @@
 
 				<div class="sidebar-section">
 					<span>Tags: </span>
-					<span class="badge badge-default badge-sm">
+					<span class="badge badge-secondary badge-sm">
 						History
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -589,7 +589,7 @@
 							</svg>
 						</a>
 					</span>
-					<span class="badge badge-default badge-sm">
+					<span class="badge badge-secondary badge-sm">
 						Flat
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
@@ -597,7 +597,7 @@
 							</svg>
 						</a>
 					</span>
-					<span class="badge badge-default badge-sm">
+					<span class="badge badge-secondary badge-sm">
 						Default
 						<a href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">

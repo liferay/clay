@@ -30,29 +30,29 @@
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -214,7 +214,7 @@
 	<div class="col-md-12">
 		<div class="clay-site-dropdown-menu-container">
 			<div class="dropdown-menu">
-				<div class="dropdown-sub-header">Order by</div>
+				<div class="dropdown-subheader">Order by</div>
 				<a class="active dropdown-item" href="#">Author</a>
 				<a class="disabled dropdown-item" href="#">Title Entry</a>
 				<div class="dropdown-divider"></div>
@@ -241,7 +241,7 @@
 							</span>
 						</div>
 					</div>
-					<div class="dropdown-sub-header">Filter by</div>
+					<div class="dropdown-subheader">Filter by</div>
 					<div class="active dropdown-item">
 						<label class="custom-control custom-checkbox">
 							<input checked class="custom-control-input" type="checkbox">
@@ -270,7 +270,7 @@
 		<div class="clay-site-dropdown-menu-container">
 			<div class="dropdown-menu">
 				<form>
-					<div class="dropdown-sub-header">Order by</div>
+					<div class="dropdown-subheader">Order by</div>
 					<div class="active dropdown-item">
 						<label class="custom-control custom-radio">
 							<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
@@ -311,7 +311,7 @@
 		<div class="dropdown-menu dropdown-menu-indicator-start">
 			<div class="dropdown-header">Dropdown Header</div>
 			<div class="dropdown-divider"></div>
-			<div class="dropdown-sub-header">Dropdown Sub Header</div>
+			<div class="dropdown-subheader">Dropdown Sub Header</div>
 			<a class="dropdown-item" href="#1">
 				<div class="dropdown-item-indicator">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
@@ -347,7 +347,7 @@
 		<div class="dropdown-menu dropdown-menu-indicator-end">
 			<div class="dropdown-header">Folder</div>
 			<div class="dropdown-divider"></div>
-			<div class="dropdown-sub-header">Order By</div>
+			<div class="dropdown-subheader">Order By</div>
 			<a class="active dropdown-item" href="#1">
 				Step 01
 				<div class="dropdown-item-indicator">
@@ -422,7 +422,7 @@
 			</div>
 			<div class="dropdown-header">Folder</div>
 			<div class="dropdown-divider"></div>
-			<div class="dropdown-sub-header">Favorites</div>
+			<div class="dropdown-subheader">Favorites</div>
 			<div class="inline-scroller">
 				<a class="dropdown-item" href="#1">D Structure</a>
 				<a class="dropdown-item" href="#1">F Structure</a>
@@ -457,11 +457,11 @@
 			<div class="dropdown-menu">
 				<div class="row">
 					<div class="col-sm-4">
-						<div class="dropdown-sub-header">By Resource</div>
+						<div class="dropdown-subheader">By Resource</div>
 						<a class="dropdown-item" href="#1">Support Home</a>
 						<a class="disabled dropdown-item" href="#1">Disabled Link</a>
 						<a class="dropdown-item" href="#1">Chat or Call</a>
-						<div class="dropdown-sub-header">By Product</div>
+						<div class="dropdown-subheader">By Product</div>
 						<a class="active dropdown-item" href="#1">Developing for the Platform</a>
 						<a class="dropdown-item" href="#1">Mastering Fundamentals</a>
 						<a class="dropdown-item" href="#1">Styling with Themes</a>
@@ -469,13 +469,13 @@
 					</div>
 
 					<div class="col-sm-4">
-						<div class="dropdown-sub-header">Popular Picks</div>
+						<div class="dropdown-subheader">Popular Picks</div>
 						<a class="dropdown-item" href="#1">Error Messages</a>
 						<a class="dropdown-item" href="#1">Updates: Service Packs &amp; Fixes</a>
 						<a class="dropdown-item" href="#1">Install, Upgrade, &amp; Activate</a>
 						<a class="dropdown-item" href="#1">Regular Drivers</a>
 						<a class="dropdown-item" href="#1">Hardware Drivers</a>
-						<div class="dropdown-sub-header">Security</div>
+						<div class="dropdown-subheader">Security</div>
 						<a class="dropdown-item" href="#1">Security Home</a>
 						<a class="dropdown-item" href="#1">Security Essentials</a>
 						<a class="dropdown-item" href="#1">Protecting Your Data</a>
@@ -483,7 +483,7 @@
 					</div>
 
 					<div class="col-sm-4">
-						<div class="dropdown-sub-header">By Audience</div>
+						<div class="dropdown-subheader">By Audience</div>
 						<a class="dropdown-item" href="#1">For Home Users</a>
 						<a class="dropdown-item" href="#1">For Small Business</a>
 						<a class="dropdown-item" href="#1">For IT Professionals</a>
@@ -500,7 +500,7 @@
 		<h3 id="dropdown-menu-horizontal"><a class="heading-anchor" href="#dropdown-menu-horizontal"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Dropdown Menu Horizontal</h3>
 
 		<div class="dropdown-menu dropdown-menu-horizontal">
-			<div class="dropdown-sub-header">Order by</div>
+			<div class="dropdown-subheader">Order by</div>
 			<a class="active dropdown-item" href="#1">
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
 					<use xlink:href="../../images/icons/icons.svg#trash">

@@ -30,29 +30,29 @@
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -213,25 +213,23 @@
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<div class="alert alert-warning clay-site-grid-width">
-			<span class="clay-site-grid-width-sm">container-fluid-max-sm: 540px</span>
-			<span class="clay-site-grid-width-md">container-fluid-max-md: 720px</span>
-			<span class="clay-site-grid-width-lg">container-fluid-max-lg: 960px</span>
-			<span class="clay-site-grid-width-xl">container-fluid-max-xl: 1140px</span>
-			<span class="clay-site-grid-width-xxl">container-fluid-max-xxl: 1280px</span>
+			<span class="clay-site-grid-width-sm">container-fluid-max-sm: </span>
+			<span class="clay-site-grid-width-md">container-fluid-max-md: </span>
+			<span class="clay-site-grid-width-lg">container-fluid-max-lg: </span>
+			<span class="clay-site-grid-width-xl">container-fluid-max-xl: </span>
 		</div>
 
 		<h3 id="container-fluid"><a class="heading-anchor" href="#container-fluid"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Container Fluid</h3>
 
 		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Use classes <code class="code">container-fluid-max-sm</code>, <code class="code">container-fluid-max-md</code>, <code class="code">container-fluid-max-lg</code>, <code class="code">container-fluid-max-xl</code>, and <code class="code">container-fluid-max-xxl</code> in conjunction with <code class="code">container-fluid</code> to create containers that expand to 100% width, but don&apos;t expand beyond a set width e.g 1280px.</p>
+			<p>Use classes <code class="code">container-fluid-max-sm</code>, <code class="code">container-fluid-max-md</code>, <code class="code">container-fluid-max-lg</code>, and <code class="code">container-fluid-max-xl</code> with <code class="code">container-fluid</code> to create fluid containers that doesn&apos;t expand beyond a set width e.g 1280px.</p>
 		</blockquote>
 
 		<div class="clay-site-container-fluid-switcher">
-			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-sm main-nav-container" type="button">container-fluid-max-sm (540px)</button>
-			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-md main-nav-container" type="button">container-fluid-max-md (720px)</button>
-			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-lg main-nav-container" type="button">container-fluid-max-lg (960px)</button>
-			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-xl main-nav-container" type="button">container-fluid-max-xl (1140px)</button>
-			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-xxl main-nav-container" type="button">container-fluid-max-xxl (1280px)</button>
+			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-sm main-nav-container" type="button">container-fluid-max-sm</button>
+			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-md main-nav-container" type="button">container-fluid-max-md</button>
+			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-lg main-nav-container" type="button">container-fluid-max-lg</button>
+			<button class="btn btn-info" data-container-classes="container-fluid container-fluid-max-xl main-nav-container" type="button">container-fluid-max-xl</button>
 			<button class="btn btn-info" data-container-classes="container main-nav-container" type="button">reset</button>
 		</div>
 	</div>
