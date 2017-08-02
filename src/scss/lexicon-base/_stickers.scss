@@ -41,53 +41,89 @@
 // Sticker Positions
 
 .sticker-bottom-left {
-	bottom: $sticker-gutter-width;
-	left: $sticker-gutter-width;
+	bottom: $sticker-inside-offset;
+	left: $sticker-inside-offset;
 	position: absolute;
 	right: auto;
 	top: auto;
 }
 
 .sticker-bottom-right {
-	bottom: $sticker-gutter-width;
+	bottom: $sticker-inside-offset;
 	left: auto;
 	position: absolute;
-	right: $sticker-gutter-width;
+	right: $sticker-inside-offset;
 	top: auto;
 }
 
 .sticker-top-left {
-	left: $sticker-gutter-width;
+	left: $sticker-inside-offset;
 	position: absolute;
-	top: $sticker-gutter-width;
+	top: $sticker-inside-offset;
 }
 
 .sticker-top-right {
 	left: auto;
 	position: absolute;
-	right: $sticker-gutter-width;
-	top: $sticker-gutter-width;
+	right: $sticker-inside-offset;
+	top: $sticker-inside-offset;
 }
 
 .sticker-outside {
-	left: -$sticker-gutter-width;
-	top: -$sticker-gutter-width;
+	left: $sticker-outside-offset;
+	top: $sticker-outside-offset;
+
+	&.sticker-sm {
+		left: $sticker-outside-offset-sm;
+		top: $sticker-outside-offset-sm;
+	}
+
+	&.sticker-lg {
+		left: $sticker-outside-offset-lg;
+		top: $sticker-outside-offset-lg;
+	}
 
 	&.sticker-bottom-left {
-		bottom: -$sticker-gutter-width;
+		bottom: $sticker-outside-offset;
 		top: auto;
+
+		&.sticker-sm {
+			bottom: $sticker-outside-offset-sm;
+		}
+
+		&.sticker-lg {
+			bottom: $sticker-outside-offset-lg;
+		}
 	}
 
 	&.sticker-bottom-right {
-		bottom: -$sticker-gutter-width;
+		bottom: $sticker-outside-offset;
 		left: auto;
-		right: -$sticker-gutter-width;
+		right: $sticker-outside-offset;
 		top: auto;
+
+		&.sticker-sm {
+			bottom: $sticker-outside-offset-sm;
+			right: $sticker-outside-offset-sm;
+		}
+
+		&.sticker-lg {
+			bottom: $sticker-outside-offset-lg;
+			right: $sticker-outside-offset-lg;
+		}
 	}
 
 	&.sticker-top-right {
 		left: auto;
-		right: -$sticker-gutter-width;
+		right: $sticker-outside-offset;
+
+		&.sticker-sm {
+			right: $sticker-outside-offset-sm;
+		}
+
+		&.sticker-lg {
+			right: $sticker-outside-offset-lg;
+		}
 	}
 }
 

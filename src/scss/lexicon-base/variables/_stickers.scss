@@ -4,7 +4,6 @@ $sticker-border-width: null !default;
 $sticker-color: $label-color !default;
 $sticker-font-size: $label-font-size !default;
 $sticker-font-weight: null !default;
-$sticker-gutter-width: $grid-gutter-width / 2 !default;
 $sticker-size: 2rem !default; // 32px
 
 $sticker-font-size-sm: $label-font-size-sm !default;
@@ -18,6 +17,13 @@ $sticker-size-xl: $sticker-size-lg * 1.375 !default; // 60px
 
 $sticker-font-size-xxl: $sticker-font-size-xl * 1.3 !default; // 27px
 $sticker-size-xxl: $sticker-size-xl * 1.375 !default; // 83px
+
+// Sticker Positions
+
+$sticker-inside-offset: $grid-gutter-width / 2 !default;
+$sticker-outside-offset: -($sticker-size / 2) !default;
+$sticker-outside-offset-sm: -($sticker-size-sm / 2) !default;
+$sticker-outside-offset-lg: -($sticker-size-lg / 2) !default;
 
 // Sticker Variants
 
