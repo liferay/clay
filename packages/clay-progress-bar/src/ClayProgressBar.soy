@@ -35,7 +35,7 @@
 	{/let}
 
 	<div {$progressGroupAttributes}>
-	    <div class="progress">
+		<div class="progress">
 			{let $barAttributes kind="attributes"}
 				aria-valuemax="{$max}"
 				aria-valuemin="{$min}"
@@ -45,10 +45,10 @@
 				style="width: {$currentValue}%;"
 			{/let}
 
-	        <div {$barAttributes}></div>
-	    </div>
+			<div {$barAttributes}></div>
+		</div>
 
-	    <div class="progress-group-addon">
+		<div class="progress-group-addon">
 			{if $succeed and $spritemap}
 				<div class="progress-group-feedback">
 					{call ClayIcon.render}
