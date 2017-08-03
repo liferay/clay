@@ -18,6 +18,11 @@ $btn-box-shadow: none !default;
 $btn-active-box-shadow: none !default;
 $btn-transition: background 0.2s ease-in-out, border 0.2s ease-in-out, box-shadow 0.2s ease-in-out !default;
 
+// Button Monospaced
+
+$btn-monospaced-size: 2.5rem !default; // 40px
+$btn-monospaced-size-sm: 2rem !default; // 32px
+
 // Button Variants
 
 $btn-primary-color: #FFF !default;
