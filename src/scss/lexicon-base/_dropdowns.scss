@@ -43,7 +43,10 @@
 	white-space: normal;
 	word-wrap: break-word;
 
-	&.active {
+	&.active,
+	&:active {
+		font-weight: $dropdown-link-active-font-weight;
+
 		label,
 		.form-check-label,
 		.form-control-label {
@@ -51,7 +54,8 @@
 		}
 	}
 
-	&.disabled {
+	&.disabled,
+	&:disabled {
 		label,
 		.form-check-label,
 		.form-control-label {
