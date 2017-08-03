@@ -37,6 +37,11 @@ $btn-action-fixed-spacer-y: $btn-action-fixed-spacer-x !default;
 
 $zindex-btn-action: 950 !default;
 
+// Button Toolbar
+
+$btn-toolbar-spacer-x: 0.5rem !default; // 8px
+$btn-toolbar-spacer-y: 0.125rem !default; // 2px
+
 // Button Variants
 
 $btn-primary-bg: null !default;
