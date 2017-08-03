@@ -1,8 +1,11 @@
+$sticker-font-size: 0.75rem !default; // 12px
 $sticker-font-weight: bold !default;
+
+$sticker-font-size-lg: 0.875rem !default; // 14px
 
 // Sticker Variants
 
-$sticker-secondary-bg: #E7F1F9 !default;
-$sticker-secondary-color: #65B6F0 !default;
+$sticker-secondary-color: $body-color !default;
+$sticker-secondary-bg: lighten(map-get($theme-colors, secondary), 22%) !default;
 
-$sticker-light-color: #869CAD !default;
+$sticker-light-color: $body-color !default;
