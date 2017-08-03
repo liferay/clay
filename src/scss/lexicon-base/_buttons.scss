@@ -89,41 +89,34 @@ fieldset[disabled] .btn {
 // Action Buttons
 
 .btn-action {
-	z-index: $zindex-btn-action;
-}
-
-.btn-action,
-.btn-action .btn {
-	border-radius: $btn-action-border-radius;
-	padding: 0;
+	display: inline-block;
 	position: relative;
+	z-index: $zindex-btn-action;
+
+	.btn {
+		border-radius: $btn-action-border-radius;
+	}
 }
 
-.btn-action .lexicon-icon {
-	display: block;
-	height: 100%;
-	margin: auto;
-}
-
-.btn-bottom-left {
+.btn-action-bottom-left {
 	bottom: $btn-fixed-spacer-y;
 	left: $btn-fixed-spacer-x;
 	position: fixed;
 }
 
-.btn-bottom-right {
+.btn-action-bottom-right {
 	bottom: $btn-fixed-spacer-y;
 	position: fixed;
 	right: $btn-fixed-spacer-x;
 }
 
-.btn-top-left {
+.btn-action-top-left {
 	left: $btn-fixed-spacer-x;
 	position: fixed;
 	top: $btn-fixed-spacer-y;
 }
 
-.btn-top-right {
+.btn-action-top-right {
 	position: fixed;
 	right: $btn-fixed-spacer-x;
 	top: $btn-fixed-spacer-y;
