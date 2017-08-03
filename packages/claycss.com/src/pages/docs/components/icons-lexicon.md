@@ -104,3 +104,45 @@ Note that the ID after the # symbol is the ID of the icon to use, so if you want
 </p>
 
 </article>
+
+<article id="5">
+
+### Monospaced
+
+> Add class `icon-monospaced` on an icon to make each icon occupy the same amount of horizontal and vertical space.
+
+<div>
+	<span class="icon-monospaced icon-glass"></span>
+	<span class="icon-monospaced icon-music"></span>
+	<span class="icon-monospaced icon-search"></span>
+	<span class="icon-monospaced icon-ok"></span>
+	<span class="icon-monospaced icon-zoom-in"></span>
+	<span class="icon-monospaced icon-envelope"></span>
+	<span class="icon-monospaced icon-heart"></span>
+</div>
+
+```xml
+<span class="icon-monospaced icon-glass"></span>
+<span class="icon-monospaced icon-music"></span>
+<span class="icon-monospaced icon-search"></span>
+<span class="icon-monospaced icon-ok"></span>
+<span class="icon-monospaced icon-zoom-in"></span>
+<span class="icon-monospaced icon-envelope"></span>
+<span class="icon-monospaced icon-heart"></span>
+```
+
+</article>
+
+<article id="6">
+
+### Help
+
+> Icon with a circular border, use for creating helpful tooltips for your users.
+
+<a class="help-icon help-icon-default icon-question" href="#1" data-toggle="popover"></a>
+
+```xml
+<a class="help-icon help-icon-default icon-question" href="#1" data-toggle="popover"></a>
+```
+
+</article>
