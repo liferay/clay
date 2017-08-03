@@ -22,7 +22,7 @@ $badge-primary-hover-bg: $badge-primary-bg !default;
 $badge-primary-hover-color: $badge-primary-color !default;
 
 $badge-secondary-color: $body-color !default;
-$badge-secondary-bg: lighten(map-get($theme-colors, secondary), 22%) !default;
+$badge-secondary-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
 $badge-secondary-hover-bg: $badge-secondary-bg !default;
 $badge-secondary-hover-color: $badge-secondary-color !default;
 $badge-secondary-link-color: $badge-secondary-color !default;
