@@ -1,29 +1,15 @@
-// When changing variables that affect the btn's height, make sure to match the
-// corresponding input-height with the button height.
-
 $btn-font-weight: 500 !default;
 
-$input-btn-border-width: 0.0625rem !default; // 1px
-
-$btn-font-size-mobile: 1rem !default; // 16px
 $input-btn-padding-x: 0.875rem !default; // 14px
 $input-btn-padding-y: 0.5625rem !default; // 9px
-$input-btn-padding-x-mobile: 0.875rem !default; // 14px
-$input-btn-padding-y-mobile: 0.5625rem !default; // 9px
 
 $btn-font-size-lg: 1.25rem !default; // 20px
 $input-btn-padding-x-lg: 1.25rem !default; // 20px
-$input-btn-padding-x-lg-mobile: 1.25rem !default; // 20px
 $input-btn-padding-y-lg: 0.5rem !default; // 8px
-$input-btn-padding-y-lg-mobile: 0.5rem !default; // 8px
 
 $btn-font-size-sm: 0.875rem !default; // 14px
 $input-btn-padding-x-sm: 1rem !default; // 16px
-$input-btn-padding-x-sm-mobile: 0.8125rem !default; // 13px
 $input-btn-padding-y-sm: 0.28125rem !default; // 4.5px
-$input-btn-padding-y-sm-mobile: 0.3125rem !default; // 5px
-
-// End variables that affect btn height
 
 $btn-disabled-opacity: 0.26 !default;
 
