@@ -95,15 +95,8 @@ fieldset[disabled] .btn {
 .btn-action,
 .btn-action .btn {
 	border-radius: $btn-action-border-radius;
-	height: $btn-action-size;
 	padding: 0;
 	position: relative;
-	width: $btn-action-size;
-
-	@include scale-component {
-		height: $btn-action-size-mobile;
-		width: $btn-action-size-mobile;
-	}
 }
 
 .btn-action .lexicon-icon {
