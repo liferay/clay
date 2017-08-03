@@ -40,6 +40,52 @@ fieldset[disabled] .btn {
 	opacity: $btn-disabled-opacity;
 }
 
+// Button Monospaced
+
+.btn-monospaced {
+	height: $btn-monospaced-size;
+	overflow: hidden;
+	padding: 0;
+	white-space: normal;
+	width: $btn-monospaced-size;
+	word-wrap: break-word;
+
+	@include scale-component {
+		height: $btn-monospaced-size-mobile;
+		width: $btn-monospaced-size-mobile;
+	}
+
+	&.btn-xl {
+		height: $btn-monospaced-size-xl;
+		width: $btn-monospaced-size-xl;
+
+		@include scale-component {
+			height: $btn-monospaced-size-xl-mobile;
+			width: $btn-monospaced-size-xl-mobile;
+		}
+	}
+
+	&.btn-lg {
+		height: $btn-monospaced-size-lg;
+		width: $btn-monospaced-size-lg;
+
+		@include scale-component {
+			height: $btn-monospaced-size-lg-mobile;
+			width: $btn-monospaced-size-lg-mobile;
+		}
+	}
+
+	&.btn-sm {
+		height: $btn-monospaced-size-sm;
+		width: $btn-monospaced-size-sm;
+
+		@include scale-component {
+			height: $btn-monospaced-size-sm-mobile;
+			width: $btn-monospaced-size-sm-mobile;
+		}
+	}
+}
+
 // Action Buttons
 
 .btn-action {
