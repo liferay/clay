@@ -1,3 +1,15 @@
+.btn-toolbar {
+	.btn-group,
+	.input-group {
+		margin-bottom: $btn-toolbar-spacer-y;
+		margin-top: $btn-toolbar-spacer-y;
+
+		&:not(:last-child) {
+			margin-right: $btn-toolbar-spacer-x;
+		}
+	}
+}
+
 .btn-group-lg {
 	.btn-group > .btn {
 		@extend .btn-lg;
