@@ -7733,6 +7733,14 @@ a.text-dark:focus, a.text-dark:hover {
   border-style: solid;
 }
 
+.alert .lead {
+  margin-right: 0.3125rem;
+}
+
+.alert .lexicon-icon + .lead {
+  margin-left: 0.3125rem;
+}
+
 .alert-fluid {
   border-radius: 0;
   border-width: 0 0 1px 0;
@@ -11340,25 +11348,46 @@ a.label {
 }
 
 .sticker {
+  align-items: center;
   border-radius: 0.25rem;
-  display: inline-block;
-  font-size: 75%;
+  display: inline-flex;
+  font-size: 0.875rem;
+  justify-content: center;
   height: 2rem;
   line-height: 2rem;
   width: 2rem;
-  overflow: hidden;
   position: relative;
-  text-align: center;
+  vertical-align: middle;
 }
 
 .sticker img {
   vertical-align: top;
 }
 
+.sticker .img-fluid {
+  border-radius: 0.25rem;
+}
+
+.sticker.rounded .img-fluid {
+  border-radius: 0.25rem;
+}
+
+.sticker.rounded-circle .img-fluid {
+  border-radius: 5000px;
+}
+
+.sticker.rounded-0 .img-fluid {
+  border-radius: 0;
+}
+
 .sticker-overlay {
-  display: block;
+  align-items: center;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
   position: absolute;
   top: 0;
+  height: 100%;
   width: 100%;
 }
 
@@ -11392,73 +11421,109 @@ a.label {
 }
 
 .sticker-outside {
-  left: -15px;
-  top: -15px;
+  left: -1rem;
+  top: -1rem;
+}
+
+.sticker-outside.sticker-sm {
+  left: -0.75rem;
+  top: -0.75rem;
+}
+
+.sticker-outside.sticker-lg {
+  left: -1.375rem;
+  top: -1.375rem;
 }
 
 .sticker-outside.sticker-bottom-left {
-  bottom: -15px;
+  bottom: -1rem;
   top: auto;
 }
 
+.sticker-outside.sticker-bottom-left.sticker-sm {
+  bottom: -0.75rem;
+}
+
+.sticker-outside.sticker-bottom-left.sticker-lg {
+  bottom: -1.375rem;
+}
+
 .sticker-outside.sticker-bottom-right {
-  bottom: -15px;
+  bottom: -1rem;
   left: auto;
-  right: -15px;
+  right: -1rem;
   top: auto;
+}
+
+.sticker-outside.sticker-bottom-right.sticker-sm {
+  bottom: -0.75rem;
+  right: -0.75rem;
+}
+
+.sticker-outside.sticker-bottom-right.sticker-lg {
+  bottom: -1.375rem;
+  right: -1.375rem;
 }
 
 .sticker-outside.sticker-top-right {
   left: auto;
-  right: -15px;
+  right: -1rem;
+}
+
+.sticker-outside.sticker-top-right.sticker-sm {
+  right: -0.75rem;
+}
+
+.sticker-outside.sticker-top-right.sticker-lg {
+  right: -1.375rem;
 }
 
 .sticker-sm {
-  font-size: 9px;
-  height: 1.375rem;
-  line-height: 1.375rem;
-  width: 1.375rem;
+  font-size: 0.625rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  width: 1.5rem;
 }
 
 .sticker-sm .lexicon-icon {
-  height: 9px;
-  width: 9px;
+  height: 0.625rem;
+  width: 0.625rem;
 }
 
 .sticker-lg {
-  font-size: 16px;
+  font-size: 1rem;
   height: 2.75rem;
   line-height: 2.75rem;
   width: 2.75rem;
 }
 
 .sticker-lg .lexicon-icon {
-  height: 16px;
-  width: 16px;
+  height: 1rem;
+  width: 1rem;
 }
 
 .sticker-xl {
-  font-size: 20.8px;
+  font-size: 1.3rem;
   height: 3.78125rem;
   line-height: 3.78125rem;
   width: 3.78125rem;
 }
 
 .sticker-xl .lexicon-icon {
-  height: 20.8px;
-  width: 20.8px;
+  height: 1.3rem;
+  width: 1.3rem;
 }
 
 .sticker-xxl {
-  font-size: 27.04px;
+  font-size: 1.69rem;
   height: 5.19921875rem;
   line-height: 5.19921875rem;
   width: 5.19921875rem;
 }
 
 .sticker-xxl .lexicon-icon {
-  height: 27.04px;
-  width: 27.04px;
+  height: 1.69rem;
+  width: 1.69rem;
 }
 
 .sticker-primary {
