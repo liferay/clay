@@ -92,27 +92,27 @@ fieldset[disabled] .btn {
 }
 
 .btn-action-bottom-left {
-	bottom: $btn-fixed-spacer-y;
-	left: $btn-fixed-spacer-x;
+	bottom: $btn-action-fixed-spacer-y;
+	left: $btn-action-fixed-spacer-x;
 	position: fixed;
 }
 
 .btn-action-bottom-right {
-	bottom: $btn-fixed-spacer-y;
+	bottom: $btn-action-fixed-spacer-y;
 	position: fixed;
-	right: $btn-fixed-spacer-x;
+	right: $btn-action-fixed-spacer-x;
 }
 
 .btn-action-top-left {
-	left: $btn-fixed-spacer-x;
+	left: $btn-action-fixed-spacer-x;
 	position: fixed;
-	top: $btn-fixed-spacer-y;
+	top: $btn-action-fixed-spacer-y;
 }
 
 .btn-action-top-right {
 	position: fixed;
-	right: $btn-fixed-spacer-x;
-	top: $btn-fixed-spacer-y;
+	right: $btn-action-fixed-spacer-x;
+	top: $btn-action-fixed-spacer-y;
 }
 
 // Button Variants
