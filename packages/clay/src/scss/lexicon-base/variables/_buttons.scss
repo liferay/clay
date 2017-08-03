@@ -13,12 +13,26 @@ $btn-font-size-sm-mobile: null !default;
 $input-btn-padding-x-sm-mobile: null !default;
 $input-btn-padding-y-sm-mobile: null !default;
 
+$btn-disabled-opacity: null !default;
+
+// Button Monospaced
+
+$btn-monospaced-size: 2.375rem !default; // 38px
+$btn-monospaced-size-xl: 4rem !default; // 64px
+$btn-monospaced-size-lg: 3rem !default; // 48px
+$btn-monospaced-size-sm: 1.9375rem !default; // 31px
+
+$btn-monospaced-size-mobile: null !default;
+$btn-monospaced-size-xl-mobile: null !default;
+$btn-monospaced-size-lg-mobile: null !default;
+$btn-monospaced-size-sm-mobile: null !default;
+
+// Button Action
+
 $btn-action-border-radius: null !default;
 $btn-action-dropdown-spacer: 5px !default;
 $btn-action-size: 34px !default;
 $btn-action-size-mobile: null !default;
-
-$btn-disabled-opacity: null !default;
 
 $btn-fixed-spacer-x: 20px !default;
 $btn-fixed-spacer-y: $btn-fixed-spacer-x !default;
