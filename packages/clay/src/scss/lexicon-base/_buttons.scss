@@ -1,8 +1,8 @@
 .btn {
-	font-size: $input-btn-font-size;
+	font-size: $btn-font-size;
 
 	@include scale-component {
-		font-size: $input-btn-font-size-mobile;
+		font-size: $btn-font-size-mobile;
 		padding-bottom: $input-btn-padding-y-mobile;
 		padding-left: $input-btn-padding-x-mobile;
 		padding-right: $input-btn-padding-x-mobile;
@@ -11,10 +11,10 @@
 }
 
 .btn-lg {
-	font-size: $input-btn-font-size-lg;
+	font-size: $btn-font-size-lg;
 
 	@include scale-component {
-		font-size: $input-btn-font-size-lg-mobile;
+		font-size: $btn-font-size-lg-mobile;
 		padding-bottom: $input-btn-padding-y-lg-mobile;
 		padding-left: $input-btn-padding-x-lg-mobile;
 		padding-right: $input-btn-padding-x-lg-mobile;
@@ -23,10 +23,10 @@
 }
 
 .btn-sm {
-	font-size: $input-btn-font-size-sm;
+	font-size: $btn-font-size-sm;
 
 	@include scale-component {
-		font-size: $input-btn-font-size-sm-mobile;
+		font-size: $btn-font-size-sm-mobile;
 		padding-bottom: $input-btn-padding-y-sm-mobile;
 		padding-left: $input-btn-padding-x-sm-mobile;
 		padding-right: $input-btn-padding-x-sm-mobile;
