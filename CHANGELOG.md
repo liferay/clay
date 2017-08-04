@@ -1,3 +1,8 @@
+### v1.0.24 - August 4, 2017
+* New: Lexicon Icons autosize, custom-size, order-arrow, and pages-tree
+* Update: Deprecate `$brand-*-*`, `$state-*-*`, `$inverse-*-*`, and `$box-shadow-default-*` will be removed in V2
+* Site: Add aria-hidden="true" to all icons
+
 ### v1.0.23 - July 21, 2017
 * New: Lexicon Icons envelope-open and envelope-closed
 * Update: Navbar `$navbar-link-active-bottom-border-width` should be based on `$navbar-border-bottom-width`
