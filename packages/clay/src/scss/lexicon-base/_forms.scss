@@ -111,6 +111,10 @@ select.form-control:not([multiple]):not([size]) {
 		background-color: $input-select-focus-bg;
 		background-image: $input-select-icon-focus;
 	}
+
+	&:disabled {
+		background-image: $input-select-icon-disabled;
+	}
 }
 
 // Textarea
