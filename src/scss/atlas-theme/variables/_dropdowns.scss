@@ -1,38 +1,27 @@
-// Structure
+$dropdown-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
+$dropdown-border-width: 0 !default;
+$dropdown-box-shadow: 0 1px 10px -3px transparentize(#000, 0.7) !default;
 
 $dropdown-font-size: $font-size-base !default; // 16px
 $dropdown-font-size-mobile: $font-size-base-mobile !default; // 14px
+$dropdown-padding-y: 0.375rem !default; // 6px
+$dropdown-min-height: 40px !default;
+$dropdown-min-width: 240px !default;
+$dropdown-max-width: 240px !default;
 
 $dropdown-item-padding-x: 1.25rem !default; // 20px
 $dropdown-item-padding-y: 0.5rem !default; // 8px
 
+$dropdown-header-color: map-get($theme-colors, secondary) !default;
 $dropdown-header-font-size: $font-size-sm !default; // 14px
 $dropdown-header-font-size-mobile: $font-size-sm-mobile !default; // 12px
 
-$dropdown-padding-y: 0.375rem !default; // 6px
-
-$dropdown-min-height: 40px !default;
-
-$dropdown-min-width: 240px !default;
-$dropdown-max-width: 240px !default;
-
-// Skin
-
-$dropdown-bg: #FFF !default;
-$dropdown-box-shadow: 0 1px 1px 0 transparentize(#000, 0.7) !default;
-
-$dropdown-border-color: transparentize(#DCE0E3, 0.5) !default;
+$dropdown-link-color: map-get($theme-colors, secondary) !default;
+$dropdown-link-hover-color: $body-color !default;
+$dropdown-link-hover-bg: lighten(map-get($theme-colors, primary), 44%) !default;
+$dropdown-link-active-color: $dropdown-link-hover-color !default;
+$dropdown-link-active-bg: $dropdown-link-hover-bg !default;
+$dropdown-link-active-font-weight: 500 !default;
+$dropdown-link-disabled-color: lighten($body-color, 52%) !default;
 
 $dropdown-divider-bg: $dropdown-border-color !default;
-
-$dropdown-link-color: map-get($theme-colors, secondary) !default;
-
-$dropdown-link-hover-bg: #F7FAFA !default;
-$dropdown-link-hover-color: map-get($theme-colors, secondary) !default;
-
-$dropdown-link-active-bg: $dropdown-link-hover-bg !default;
-$dropdown-link-active-color: map-get($theme-colors, primary) !default;
-
-$dropdown-link-disabled-color: #CACDD2 !default;
-
-$dropdown-header-color: #B0B4BB !default;
