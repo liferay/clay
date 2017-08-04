@@ -41,25 +41,21 @@ $input-color: $body-color !default;
 $input-bg: $body-bg !default;
 $input-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
 $input-box-shadow: none !default;
-$input-color-placeholder: darken(#E4E9EC, 12%) !default;
+$input-color-placeholder: map-get($theme-colors, secondary) !default;
+$input-label-color: $body-color !default;
 
-$input-focus-color: map-get($theme-colors, primary) !default;
-$input-focus-border-color: $input-focus-color !default;
+$input-focus-bg: lighten(map-get($theme-colors, primary), 44%) !default;
+$input-focus-border-color: lighten(map-get($theme-colors, primary), 21%) !default;
 $input-focus-box-shadow: none !default;
-$input-placeholder-focus-color: $input-focus-border-color !default;
 
+$input-disabled-color: $text-muted !default;
 $input-disabled-bg: $input-bg !default;
-$input-disabled-border-color: #CFD7DE !default;
-$input-disabled-color: $input-border-color !default;
-$input-disabled-opacity: 0.5 !default;
-$input-placeholder-disabled-color: $input-color-placeholder !default;
+$input-disabled-border-color: $input-bg !default;
+$input-label-disabled-color: $text-muted !default;
 
-$input-label-color: map-get($theme-colors, secondary) !default;
-$input-label-focus-color: $input-focus-color !default;
-
+$input-readonly-color: darken($input-color-placeholder, 12%) !default;
 $input-readonly-bg: #FAFAFA !default;
 $input-readonly-border-color: $input-border-color !default;
-$input-readonly-color: darken($input-color-placeholder, 12%) !default;
 $input-readonly-cursor: default !default;
 
 $input-danger-border-color: theme-color-level(danger, -9) !default;
@@ -88,15 +84,18 @@ $input-warning-label-color: $input-label-color !default;
 
 // Select Element
 
-$input-select-bg-position: right center !default;
-$input-select-bg-size: 18px auto !default;
-$input-select-padding-right: 18px !default;
+$input-select-bg-position: right 8px center !default;
+$input-select-bg-size: 24px auto !default;
+$input-select-padding-right: 32px !default;
 
-$input-select-icon-color: $input-border-color !default;
-$input-select-icon-focus-color: $input-focus-border-color !default;
-
+$input-select-icon-color: map-get($theme-colors, secondary) !default;
 $input-select-icon: lx-icon(caret-double-l, $input-select-icon-color) !default;
+
+$input-select-icon-focus-color: $input-select-icon-color !default;
 $input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-focus-color) !default;
+
+$input-select-icon-disabled-color: $text-muted !default;
+$input-select-icon-disabled: lx-icon(caret-double-l, $input-select-icon-disabled-color) !default;
 
 // Legend
 
@@ -104,9 +103,9 @@ $legend-border-color: #B0B4BB !default;
 
 // Input Groups
 
-$input-group-addon-bg: map-get($theme-colors, secondary) !default;
+$input-group-addon-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
 $input-group-addon-border-color: $input-group-addon-bg !default;
-$input-group-addon-color: #FFF !default;
+$input-group-addon-color: map-get($theme-colors, secondary) !default;
 $input-group-addon-padding-x: 0.875rem !default;
 $input-group-addon-padding-x-lg: 1.25rem !default;
 $input-group-addon-padding-x-sm: 0.5rem !default;

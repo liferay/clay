@@ -46,14 +46,14 @@ $gray-200: #ECEEEF !default;
 $gray-400: #636C72 !default;
 
 $theme-colors: (
-  primary: #1865FB,
-  secondary: #6B6C7E,
-  success: #2D7C3F,
-  info: #315CA9,
-  warning: #B75115,
-  danger: #D71921,
-  light: #F1F2F5,
-  dark: #31323F
+	primary: #1865FB,
+	secondary: #6B6C7E,
+	success: #2D7C3F,
+	info: #315CA9,
+	warning: #B75115,
+	danger: #D71921,
+	light: #F1F2F5,
+	dark: #31323F
 ) !default;
 
 $border-radius: 0.25rem !default; // 4px
@@ -62,7 +62,7 @@ $border-radius-sm: 0.1875rem !default; // 3px
 
 $body-bg: #F1F2F5 !default;
 $body-color: #272833 !default;
-$text-muted: lighten($body-color, 55%) !default;
+$text-muted: lighten(map-get($theme-colors, secondary), 24%) !default;
 
 $component-active-bg: map-get($theme-colors, primary) !default;
 $component-active-color: #FFF !default;
