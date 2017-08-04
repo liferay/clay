@@ -39,27 +39,11 @@ $h6-font-size-mobile: 0.6875rem !default; // 11px
 
 $line-height-base: 1.5 !default;
 
-$headings-line-height: 1.1 !default;
-
-$grid-gutter-width: 30px !default;
-
-// Skin
-
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-$border-radius: 0.25rem !default; // 4px
-$border-radius-lg: 0.375rem !default; // 6px
-$border-radius-sm: 0.1875rem !default; // 3px
-
-$gray-100: #F7F7F9 !default;
+// Will be safe to remove once Atlas Help Icon is done
 $gray-200: #ECEEEF !default;
-// $gray-300: #dee2e6 !default;
 $gray-400: #636C72 !default;
-$gray-500: #464A4C !default;
-// $gray-600: #868e96 !default;
-// $gray-700: #495057 !default;
-// $gray-800: #343a40 !default;
-$gray-900: #292B2C !default;
 
 $theme-colors: (
   primary: #1865FB,
@@ -72,7 +56,9 @@ $theme-colors: (
   dark: #31323F
 ) !default;
 
-$link-color: map-get($theme-colors, primary) !default;
+$border-radius: 0.25rem !default; // 4px
+$border-radius-lg: 0.375rem !default; // 6px
+$border-radius-sm: 0.1875rem !default; // 3px
 
 $body-bg: #F1F2F5 !default;
 $body-color: #272833 !default;
@@ -81,6 +67,7 @@ $text-muted: lighten($body-color, 55%) !default;
 $component-active-bg: map-get($theme-colors, primary) !default;
 $component-active-color: #FFF !default;
 
+$link-color: map-get($theme-colors, primary) !default;
 $link-hover-color: darken(map-get($theme-colors, primary), 8%) !default;
 
 $close-text-shadow: none !default;
