@@ -26,7 +26,7 @@ label,
 	}
 
 	&.focus {
-		color: $input-label-color-focus;
+		color: $input-label-focus-color;
 	}
 
 	.lexicon-icon {
@@ -69,7 +69,7 @@ label,
 
 	&:focus {
 		&::placeholder {
-			color: $input-color-placeholder-focus;
+			color: $input-placeholder-focus-color;
 		}
 	}
 
@@ -124,7 +124,7 @@ textarea.form-control {
 fieldset[disabled] label,
 label.disabled,
 .form-control-label.disabled {
-	opacity: $input-opacity-disabled;
+	opacity: $input-disabled-opacity;
 }
 
 fieldset[disabled] label {
@@ -137,19 +137,19 @@ fieldset[disabled] label {
 .form-control {
 	fieldset[disabled] &,
 	&[disabled] {
-		border-color: $input-border-color-disabled;
-		color: $input-color-disabled;
-		opacity: $input-opacity-disabled;
+		border-color: $input-disabled-border-color;
+		color: $input-disabled-color;
+		opacity: $input-disabled-opacity;
 
 		&::placeholder {
-			color: $input-color-placeholder-disabled;
+			color: $input-placeholder-disabled-color;
 		}
 	}
 }
 
 .form-control[disabled] > option {
 	@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
-		color: $input-color-disabled;
+		color: $input-disabled-color;
 	}
 }
 

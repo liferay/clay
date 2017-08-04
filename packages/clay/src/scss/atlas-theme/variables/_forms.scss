@@ -43,19 +43,19 @@ $input-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
 $input-box-shadow: none !default;
 $input-color-placeholder: darken(#E4E9EC, 12%) !default;
 
-$input-color-focus: map-get($theme-colors, primary) !default;
-$input-focus-border-color: $input-color-focus !default;
-$input-box-shadow-focus: none !default;
-$input-color-placeholder-focus: $input-focus-border-color !default;
+$input-focus-color: map-get($theme-colors, primary) !default;
+$input-focus-border-color: $input-focus-color !default;
+$input-focus-box-shadow: none !default;
+$input-placeholder-focus-color: $input-focus-border-color !default;
 
-$input-bg-disabled: $input-bg !default;
-$input-border-color-disabled: #CFD7DE !default;
-$input-color-disabled: $input-border-color !default;
-$input-color-placeholder-disabled: $input-color-placeholder !default;
-$input-opacity-disabled: 0.5 !default;
+$input-disabled-bg: $input-bg !default;
+$input-disabled-border-color: #CFD7DE !default;
+$input-disabled-color: $input-border-color !default;
+$input-disabled-opacity: 0.5 !default;
+$input-placeholder-disabled-color: $input-color-placeholder !default;
 
 $input-label-color: map-get($theme-colors, secondary) !default;
-$input-label-color-focus: $input-color-focus !default;
+$input-label-focus-color: $input-focus-color !default;
 
 $input-readonly-bg: #FAFAFA !default;
 $input-readonly-border-color: $input-border-color !default;
@@ -64,7 +64,7 @@ $input-readonly-cursor: default !default;
 
 $input-danger-border-color: theme-color-level(danger, -9) !default;
 $input-danger-box-shadow: none !default;
-$input-danger-box-shadow-focus: none !default;
+$input-danger-focus-box-shadow: none !default;
 $input-danger-color: $input-color !default;
 
 $input-danger-checkbox-label-color: theme-color-level(danger, 6) !default;
@@ -72,7 +72,7 @@ $input-danger-label-color: $input-label-color !default;
 
 $input-success-border-color: theme-color-level(success, -9) !default;
 $input-success-box-shadow: none !default;
-$input-success-box-shadow-focus: none !default;
+$input-success-focus-box-shadow: none !default;
 $input-success-color: $input-color !default;
 
 $input-success-checkbox-label-color: theme-color-level(success, 6) !default;
@@ -80,7 +80,7 @@ $input-success-label-color: $input-label-color !default;
 
 $input-warning-border-color: theme-color-level(warning, -9) !default;
 $input-warning-box-shadow: none !default;
-$input-warning-box-shadow-focus: none !default;
+$input-warning-focus-box-shadow: none !default;
 $input-warning-color: $input-color !default;
 
 $input-warning-checkbox-label-color: theme-color-level(warning, 6) !default;
