@@ -102,10 +102,13 @@ $input-select-padding-right: $custom-select-indicator-padding + $input-btn-paddi
 $input-select-padding-top: null !default;
 
 $input-select-icon-color: $input-color !default;
-$input-select-icon-focus-color: null !default;
-
 $input-select-icon: $custom-select-indicator !default;
+
+$input-select-icon-focus-color: null !default;
 $input-select-icon-focus: null !default;
+
+$input-select-icon-disabled-color: null !default;
+$input-select-icon-disabled: null !default;
 
 // Form Feedback
 
