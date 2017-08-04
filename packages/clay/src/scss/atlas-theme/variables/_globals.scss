@@ -78,9 +78,7 @@ $body-bg: #F1F2F5 !default;
 $body-color: #272833 !default;
 $text-muted: lighten($body-color, 55%) !default;
 
-// Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg: map-get($theme-colors, primary) !default;
-// Global color for active items (e.g., navs or dropdowns).
 $component-active-color: #FFF !default;
 
 $link-hover-color: darken(map-get($theme-colors, primary), 8%) !default;
