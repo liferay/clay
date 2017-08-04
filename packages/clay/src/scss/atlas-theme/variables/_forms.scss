@@ -1,22 +1,20 @@
 // Structure
 
-$input-font-size: 1rem !default; // 16px
-
 $input-label-font-size: 0.875rem !default; // 14px
 $input-label-font-size-mobile: 0.75rem !default; // 12px
 $input-label-font-weight: 500 !default;
 $input-label-margin-bottom: 0.125rem !default; // 2px
 
 $input-label-reference-mark-spacer: 0.3125rem !default; // 5px
-$input-label-reference-mark-vertical-alignment: baseline !default;
+$input-label-reference-mark-vertical-alignment: top !default;
 
-$input-border-bottom-width: 0.125rem !default; // 2px
-$input-border-left-width: 0 !default;
-$input-border-right-width: 0 !default;
-$input-border-top-width: 0 !default;
+$input-border-bottom-width: 0.0625rem !default; // 1px
+$input-border-left-width: 0.0625rem !default; // 1px
+$input-border-right-width: 0.0625rem !default; // 1px
+$input-border-top-width: 0.0625rem !default; // 1px
 
-$input-padding-x: 0.25rem !default; // 4px
-$input-padding-y: 0.375rem !default; // 6px
+$input-padding-x: 1rem !default; // 16px
+$input-padding-y: 0.5rem !default; // 8px
 
 $input-padding-x-lg: $input-padding-x !default;
 $input-padding-y-lg: $input-padding-y !default;
@@ -24,12 +22,6 @@ $input-padding-y-lg: $input-padding-y !default;
 $input-padding-x-sm: $input-padding-x !default;
 $input-padding-y-sm: $input-padding-y !default;
 
-$input-font-size-base: 1rem !default; // 16px
-$input-font-size-lg: 1.125rem !default; // 18px
-$input-font-size-sm: 0.8125rem !default; // 13px
-
-// When changing input, make sure to match the corresponding
-// btn settings to the input height.
 $input-height-border: $input-border-bottom-width + $input-border-top-width !default;
 $input-height: 2.5rem !default; // 40px
 $input-height-inner: $input-height - $input-height-border !default;
@@ -45,25 +37,18 @@ $form-group-margin-bottom: 1.25rem !default; // 20px
 
 // Skin
 
-$input-border-radius: 0 !default;
-$input-border-radius-lg: $input-border-radius !default;
-$input-border-radius-sm: $input-border-radius !default;
-
-$input-bg: transparent !default;
-$input-bg-disabled: $input-bg !default;
-
 $input-color: $body-color !default;
-$input-color-focus: map-get($theme-colors, primary) !default;
-
-$input-border-color: map-get($theme-colors, secondary) !default;
-$input-focus-border-color: $input-color-focus !default;
-
+$input-bg: $body-bg !default;
+$input-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
 $input-box-shadow: none !default;
-$input-box-shadow-focus: none !default;
-
 $input-color-placeholder: darken(#E4E9EC, 12%) !default;
+
+$input-color-focus: map-get($theme-colors, primary) !default;
+$input-focus-border-color: $input-color-focus !default;
+$input-box-shadow-focus: none !default;
 $input-color-placeholder-focus: $input-focus-border-color !default;
 
+$input-bg-disabled: $input-bg !default;
 $input-border-color-disabled: #CFD7DE !default;
 $input-color-disabled: $input-border-color !default;
 $input-color-placeholder-disabled: $input-color-placeholder !default;
