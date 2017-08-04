@@ -32,7 +32,7 @@ $alert-primary-lead-color: $alert-primary-color !default;
 $alert-primary-link-color: $link-color !default;
 
 $alert-secondary-color: map-get($theme-colors, secondary) !default;
-$alert-secondary-bg: lighten($alert-secondary-color, 31%) !default;
+$alert-secondary-bg: lighten($alert-secondary-color, 46%) !default;
 $alert-secondary-border-color: lighten($alert-secondary-color, 14%) !default;
 $alert-secondary-close-color: $alert-secondary-color !default;
 $alert-secondary-lead-color: $alert-secondary-color !default;
