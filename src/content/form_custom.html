@@ -3,6 +3,13 @@ title: Form Elements (Custom)
 section: Components
 ---
 
+<style>
+	.clay-site-row-spacer {
+		background-color: #FFF;
+		padding-top: 1rem;
+	}
+</style>
+
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Custom Select</h3>
@@ -31,7 +38,7 @@ section: Components
 		<div class="form-group">
 			<label class="form-control-label" for="customFile1">Attach File</label>
 			<div class="input-group">
-				<input class="form-control" id="customFileText1" placeholder="Choose file..." readonly type="text">
+				<input class="form-control" id="customFileText1" placeholder="Choose file..." readonly tabindex="-1" type="text">
 				<div class="input-group-btn">
 					<div class="form-file">
 						<input class="form-file-input" data-clay-site-content="#customFileText1" data-clay-site-toggle="file" id="customFile1" type="file">
@@ -45,7 +52,7 @@ section: Components
 			<label class="form-control-label" for="customFile2">Attach File</label>
 			<div class="input-group input-group-inset">
 				<div class="input-group-input">
-					<input class="form-control" id="customFileText2" placeholder="Choose file..." readonly type="text" style="padding-right: 92px;">
+					<input class="form-control" id="customFileText2" placeholder="Choose file..." readonly tabindex="-1" type="text" style="padding-right: 92px;">
 				</div>
 				<span class="input-group-inset-item">
 					<div class="form-file">
@@ -74,7 +81,7 @@ section: Components
 					<input class="form-file-input" data-clay-site-content="#customFileText4" data-clay-site-toggle="file" id="customFile4" type="file">
 					<button class="btn btn-primary" tabindex="-1">Browse</button>
 				</div>
-				<input class="form-control" id="customFileText4" placeholder="Choose File..." readonly type="text">
+				<input class="form-control" id="customFileText4" placeholder="Choose File..." readonly tabindex="-1" type="text">
 			</div>
 		</div>
 	</div>
