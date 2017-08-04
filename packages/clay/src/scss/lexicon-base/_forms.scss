@@ -124,6 +124,7 @@ textarea.form-control {
 fieldset[disabled] label,
 label.disabled,
 .form-control-label.disabled {
+	color: $input-label-disabled-color;
 	opacity: $input-disabled-opacity;
 }
 
@@ -150,6 +151,12 @@ fieldset[disabled] label {
 .form-control[disabled] > option {
 	@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
 		color: $input-disabled-color;
+	}
+}
+
+.form-check.disabled .form-check-label {
+	@if not ($input-label-disabled-color == $text-muted) {
+		color: $input-label-disabled-color;
 	}
 }
 
