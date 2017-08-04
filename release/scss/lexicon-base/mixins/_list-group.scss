@@ -1,0 +1,29 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Deprecated
+// `color-tabular-list-group-item($color, $active-bg: $list-group-active-bg)` as
+// of v1.0.9 and will be removed in v2.0.0.
+
+@mixin color-tabular-list-group-item($color, $active-bg: $list-group-active-bg) {
+	background-color: transparent;
+	border-left: 5px solid $color;
+
+	&,
+	&:focus,
+	&:hover {
+		color: $color;
+	}
+
+	&.active {
+		background-color: $active-bg;
+	}
+
+	.status {
+		color: $color;
+	}
+}

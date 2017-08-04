@@ -1,0 +1,16 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$enable-ie9-compatibility: false !default;
+
+// Deprecated `$brand-*-*` as of v1.0.24 and will be removed in v2.0.0
+$brand-default: #777 !default;
+
+// Deprecated `$state-*-*` as of v1.0.24 and will be removed in v2.0.0
+$state-default-bg: $brand-default !default;
+$state-default-border: darken(adjust-hue($state-default-bg, -10), 5%) !default;
+$state-default-text: $gray-dark !default;

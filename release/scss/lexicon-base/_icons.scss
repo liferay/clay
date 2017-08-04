@@ -1,0 +1,227 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.lexicon-icon {
+	display: inline-block;
+	fill: currentColor;
+	height: $lexicon-icon-size;
+	transform: translateZ(0);
+	vertical-align: middle;
+	width: $lexicon-icon-size;
+}
+
+.lexicon-icon-sm {
+	height: $lexicon-icon-sm-size;
+	width: $lexicon-icon-sm-size;
+}
+
+.lexicon-icon-md {
+	height: $lexicon-icon-md-size;
+	width: $lexicon-icon-md-size;
+}
+
+.lexicon-icon-lg {
+	height: $lexicon-icon-lg-size;
+	width: $lexicon-icon-lg-size;
+}
+
+%scale-lexicon-icon {
+	height: 1em;
+	margin-top: -0.13em;
+	width: 1em;
+}
+
+.scale-lexicon-icon.lexicon-icon,
+.scale-lexicon-icon .lexicon-icon {
+	@extend %scale-lexicon-icon;
+}
+
+// Collapse Icon
+
+a.collapse-icon {
+	padding-left: $collapse-icon-padding-left;
+	padding-right: $collapse-icon-padding-right;
+}
+
+.collapse-icon-closed,
+.collapse-icon-open {
+	[class^="icon-"],
+	[class*=" icon-"],
+	.lexicon-icon {
+		display: block;
+	}
+}
+
+.collapse-icon {
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		bottom: $collapse-icon-position-bottom;
+		left: $collapse-icon-position-left;
+		position: absolute;
+		right: $collapse-icon-position-right;
+		top: $collapse-icon-position-top;
+
+		[class^="icon-"],
+		[class*=" icon-"] {
+			margin-top: calc(((1em * #{$line-height-base}) - 1em) / 2);
+		}
+
+		.lexicon-icon {
+			margin-top: calc(((1em * #{$line-height-base}) - #{$lexicon-icon-size}) / 2);
+		}
+	}
+
+	.collapse-icon-closed {
+		display: none;
+	}
+
+	.collapse-icon-open {
+		display: inline-block;
+	}
+}
+
+.collapsed {
+	.collapse-icon-closed {
+		display: inline-block;
+	}
+
+	.collapse-icon-open {
+		display: none;
+	}
+}
+
+.collapse-icon-middle {
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		margin-top: 0;
+		top: 50%;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+// Icon Monospaced
+
+a .icon-monospaced,
+.icon-monospaced {
+	display: inline-block;
+
+	@include monospace($icon-monospaced-size);
+
+	text-align: center;
+	vertical-align: middle;
+}
+
+.icon-monospaced {
+	&.btn {
+		line-height: $icon-monospaced-size;
+		padding: 0;
+
+		&:before {
+			position: relative;
+			top: -$btn-border-width;
+		}
+	}
+
+	&.btn-xs,
+	&.icon-xs {
+		@include monospace(20px);
+	}
+
+	&.btn-sm,
+	&.icon-sm {
+		@include monospace(26px);
+	}
+
+	&.btn-lg,
+	&.icon-lg {
+		@include monospace(40px);
+	}
+}
+
+.icon-monospaced {
+	&.icon-large {
+		@include monospace(26px);
+	}
+
+	&.icon-2x {
+		@include monospace(40px);
+	}
+
+	&.icon-3x {
+		@include monospace(48px);
+	}
+
+	&.icon-4x {
+		@include monospace(75px);
+	}
+
+	&.icon-5x {
+		@include monospace(100px);
+	}
+}
+
+// Glyphicon Icon Monospaced
+
+.icon-monospaced {
+	.glyphicon {
+		display: inline-block;
+
+		@include monospace($icon-monospaced-size);
+
+		text-align: center;
+	}
+}
+
+// Lexicon Icon Monospaced
+
+.icon-monospaced {
+	&.lexicon-icon {
+		padding: lx-icon-padding($icon-monospaced-size, $lexicon-icon-size);
+	}
+
+	.lexicon-icon {
+		display: block;
+
+		@include monospace($icon-monospaced-size);
+
+		padding: lx-icon-padding($icon-monospaced-size, $lexicon-icon-size);
+	}
+}
+
+// Help Icon
+
+.help-icon {
+	border-radius: 100px;
+	display: inline-block;
+
+	@include monospace($icon-monospaced-size);
+
+	text-align: center;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&.icon-monospaced {
+		vertical-align: baseline;
+	}
+}
+
+// Skins
+
+.help-icon-default {
+	background-color: $help-icon-default-bg;
+	color: $help-icon-default-color;
+
+	&:focus,
+	&:hover {
+		color: $help-icon-default-hover-color;
+	}
+}

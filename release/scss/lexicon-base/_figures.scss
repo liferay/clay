@@ -1,0 +1,87 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.figure {
+	margin-bottom: $figure-margin-bottom;
+	overflow: hidden;
+	position: relative;
+}
+
+.figcaption {
+	@include color-figcaption($figcaption-bg, $figcaption-bg-alpha, $figcaption-color);
+
+	font-weight: $figcaption-font-weight;
+	padding: $figcaption-padding;
+}
+
+.figcaption-bottom {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.figcaption-full {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.figcaption-middle {
+	left: 0;
+	padding: $figcaption-padding;
+	position: absolute;
+	top: 50%;
+
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+.figcaption-top {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.figure-circle {
+	border-radius: $figure-circle-border-radius;
+}
+
+.figure-rounded {
+	border-radius: $figure-rounded-border-radius;
+}
+
+.figure-square {
+	border-radius: $figure-square-border-radius;
+}
+
+.figcaption-danger {
+	@include color-figcaption($figcaption-danger-bg, $figcaption-danger-bg-alpha, $figcaption-danger-color);
+}
+
+@if (variable-exists(atlas-theme)) {
+	.figcaption-default {
+		@include color-figcaption($figcaption-default-bg, $figcaption-default-bg-alpha, $figcaption-default-color);
+	}
+}
+
+.figcaption-info {
+	@include color-figcaption($figcaption-info-bg, $figcaption-info-bg-alpha, $figcaption-info-color);
+}
+
+.figcaption-primary {
+	@include color-figcaption($figcaption-primary-bg, $figcaption-primary-bg-alpha, $figcaption-primary-color);
+}
+
+.figcaption-success {
+	@include color-figcaption($figcaption-success-bg, $figcaption-success-bg-alpha, $figcaption-success-color);
+}
+
+.figcaption-warning {
+	@include color-figcaption($figcaption-warning-bg, $figcaption-warning-bg-alpha, $figcaption-warning-color);
+}

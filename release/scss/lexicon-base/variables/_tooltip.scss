@@ -1,0 +1,10 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Deprecated `$tooltip-inner-max-width` as of v1.0.11 and will be removed in v2.0.0
+// use `$tooltip-max-width` instead
+$tooltip-inner-max-width: $tooltip-max-width !default;

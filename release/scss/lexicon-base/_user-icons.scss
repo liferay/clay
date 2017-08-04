@@ -1,0 +1,148 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.user-icon {
+	border-radius: $user-icon-border-radius;
+
+	font-size: $user-icon-font-size;
+
+	@if (variable-exists(user-icon-font-weight)) {
+		font-weight: $user-icon-font-weight;
+	}
+
+	@include monospace($user-icon-size);
+
+	overflow: hidden;
+	text-align: center;
+
+	@media (min-width: $grid-float-breakpoint) {
+		@if (variable-exists(user-icon-desktop-font-size)) {
+			font-size: $user-icon-desktop-font-size;
+		}
+
+		@if (variable-exists(user-icon-desktop-size)) {
+			@include monospace($user-icon-desktop-size);
+		}
+	}
+}
+
+// User Icon Sizes
+
+.user-icon-xs {
+	font-size: $user-icon-xs-font-size;
+
+	@include monospace($user-icon-xs-size);
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $user-icon-xs-desktop-font-size;
+
+		@include monospace($user-icon-xs-desktop-size);
+	}
+}
+
+.user-icon-sm {
+	font-size: $user-icon-sm-font-size;
+
+	@include monospace($user-icon-sm-size);
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $user-icon-sm-desktop-font-size;
+
+		@include monospace($user-icon-sm-desktop-size);
+	}
+}
+
+.user-icon-lg {
+	font-size: $user-icon-lg-font-size;
+
+	@include monospace($user-icon-lg-size);
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $user-icon-lg-desktop-font-size;
+
+		@include monospace($user-icon-lg-desktop-size);
+	}
+}
+
+.user-icon-xl {
+	font-size: $user-icon-xl-font-size;
+
+	@include monospace($user-icon-xl-size);
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $user-icon-xl-desktop-font-size;
+
+		@include monospace($user-icon-xl-desktop-size);
+	}
+}
+
+.user-icon-xxl {
+	font-size: $user-icon-xxl-font-size;
+
+	@include monospace($user-icon-xxl-size);
+
+	@media (min-width: $grid-float-breakpoint) {
+		font-size: $user-icon-xxl-desktop-font-size;
+
+		@include monospace($user-icon-xxl-desktop-size);
+	}
+}
+
+// User Icon States
+
+.user-icon-default {
+	@include color-user-icon($user-icon-default-bg);
+}
+
+.user-icon-primary {
+	@include color-user-icon($user-icon-primary-bg);
+}
+
+.user-icon-info {
+	@include color-user-icon($user-icon-info-bg);
+}
+
+.user-icon-success {
+	@include color-user-icon($user-icon-success-bg);
+}
+
+.user-icon-warning {
+	@include color-user-icon($user-icon-warning-bg);
+}
+
+.user-icon-danger {
+	@include color-user-icon($user-icon-danger-bg);
+}
+
+// User Icon Helpers
+
+.user-icon-circle {
+	&.user-icon,
+	.user-icon {
+		@if not ($user-icon-border-radius == $user-icon-circle-border-radius) {
+			border-radius: $user-icon-circle-border-radius;
+		}
+	}
+}
+
+.user-icon-rounded {
+	&.user-icon,
+	.user-icon {
+		@if not ($user-icon-border-radius == $user-icon-rounded-border-radius) {
+			border-radius: $user-icon-rounded-border-radius;
+		}
+	}
+}
+
+.user-icon-square {
+	&.user-icon,
+	.user-icon {
+		@if not ($user-icon-border-radius == $user-icon-square-border-radius) {
+			border-radius: $user-icon-square-border-radius;
+		}
+	}
+}

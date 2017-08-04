@@ -1,0 +1,129 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@keyframes slideIn {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes dropHeader {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes removeBorder {
+	0% {
+		border-bottom-color: #D8D8D8;
+	}
+
+	100% {
+		border-bottom-color: transparent;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0.25;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: $grid-float-breakpoint-max) {
+	.nav-tabs-scrollbar {
+		$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+
+		$anim-key-frames: dropHeader 0.5s $ease-out-quint, removeBorder 0.75s $ease-out-quint;
+
+		animation: $anim-key-frames;
+		animation-delay: 0s, 0.45s;
+		min-height: 54px;
+
+		-webkit-overflow-scrolling: touch;
+		overflow-x: scroll;
+
+		> .nav.nav-tabs,
+		> .nav.nav-pills {
+			animation: slideIn 0.5s $ease-out-quint;
+			animation-delay: 0.4s;
+			animation-fill-mode: both;
+			animation-iteration-count: 1;
+			white-space: nowrap;
+
+			> li {
+				animation: fadeIn 0.5s ease-in;
+				animation-delay: 0.5s;
+				animation-fill-mode: both;
+				display: inline-block;
+				float: none;
+			}
+		}
+	}
+}
+
+.nav-tabs-scroll {
+	position: relative;
+
+	> .dropdown-menu {
+		left: 0;
+		max-width: none;
+		right: 0;
+		top: auto;
+
+		&.open {
+			display: block;
+
+			@media (min-width: $grid-float-breakpoint) {
+				display: none;
+			}
+		}
+	}
+
+	.open > .dropdown-menu {
+		display: none;
+
+		@media (min-width: $grid-float-breakpoint) {
+			display: block;
+		}
+	}
+}
+
+.nav-tabs-scrollbar {
+	.nav {
+		float: left;
+
+		@media (min-width: $grid-float-breakpoint) {
+			float: none;
+		}
+	}
+}
+
+@media (max-width: $grid-float-breakpoint-max) {
+	.nav-tabs-scroll .nav-tabs-default {
+		> li {
+			&:first-child > a {
+				margin-left: 0;
+			}
+
+			> a {
+				margin-left: -4px;
+			}
+		}
+	}
+}

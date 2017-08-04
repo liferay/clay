@@ -1,0 +1,84 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+/* FONT AWESOME CORE
+ * -------------------------- */
+
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: (4em/3);
+}
+
+.icons-ul {
+  margin-left: $icons-li-width;
+  list-style-type: none;
+
+  > li { position: relative; }
+
+  .icon-li {
+    position: absolute;
+    left: -$icons-li-width;
+    width: $icons-li-width;
+    text-align: center;
+    line-height: inherit;
+  }
+}
+
+.icon-muted { color: $icon-muted; }
+.icon-light { color: $icon-light; }
+.icon-dark { color: $icon-dark; }
+
+// Icon Borders
+// -------------------------
+
+.icon-border {
+  border: solid 1px $border-color;
+  padding: .2em .25em .15em;
+  @include border-radius(3px);
+}
+
+// Icon Sizes
+// -------------------------
+
+.icon-2x {
+  font-size: 2em;
+  &.icon-border {
+    border-width: 2px;
+    @include border-radius(4px);
+  }
+}
+.icon-3x {
+  font-size: 3em;
+  &.icon-border {
+    border-width: 3px;
+    @include border-radius(5px);
+  }
+}
+.icon-4x {
+  font-size: 4em;
+  &.icon-border {
+    border-width: 4px;
+    @include border-radius(6px);
+  }
+}
+
+.icon-5x {
+  font-size: 5em;
+  &.icon-border {
+    border-width: 5px;
+    @include border-radius(7px);
+  }
+}
+
+
+// Floats & Margins
+// -------------------------
+
+// Quick floats
+.pull-right { float: right; }
+.pull-left { float: left; }

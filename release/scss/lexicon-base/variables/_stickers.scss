@@ -1,0 +1,38 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$sticker-border-radius: null !default;
+
+$sticker-circle-border-radius: 100px !default;
+$sticker-rounded-border-radius: 4px !default;
+$sticker-square-border-radius: 0 !default;
+
+$sticker-color: $label-color !default;
+$sticker-font-size: $label-font-size !default;
+$sticker-gutter-width: $grid-gutter-width / 2 !default;
+$sticker-monospaced-size: $icon-monospaced-size !default; // 32px
+
+$sticker-lg-font-size: $label-lg-font-size !default;
+$sticker-lg-monospaced-size: ceil($sticker-monospaced-size * 1.375) !default; // 44px
+
+$sticker-sm-font-size: $label-sm-font-size !default;
+$sticker-sm-monospaced-size: ceil($sticker-monospaced-size * 0.6875) !default; // 22px
+
+// Skin
+
+$sticker-danger-bg: $label-danger-bg !default;
+$sticker-danger-color: null !default;
+$sticker-default-bg: $label-default-bg !default;
+$sticker-default-color: null !default;
+$sticker-info-bg: $label-info-bg !default;
+$sticker-info-color: null !default;
+$sticker-primary-bg: $label-primary-bg !default;
+$sticker-primary-color: null !default;
+$sticker-success-bg: $label-success-bg !default;
+$sticker-success-color: null !default;
+$sticker-warning-bg: $label-warning-bg !default;
+$sticker-warning-color: null !default;

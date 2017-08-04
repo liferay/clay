@@ -1,0 +1,203 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.pagination-bar {
+	@include clearfix();
+
+	.pagination {
+		width: 100%;
+
+		@media (min-width: $grid-float-breakpoint) {
+			float: right;
+			margin: 0;
+			width: auto;
+		}
+	}
+}
+
+.pagination {
+	> li {
+		> a,
+		> span {
+			border: $pagination-border-width solid $pagination-border;
+			margin-left: -$pagination-border-width;
+			padding: $pagination-item-padding;
+
+			@if (variable-exists(atlas-theme)) {
+				border: $pagination-border-width solid $pagination-border;
+				border-radius: $pagination-border-radius;
+				display: inline-block;
+				float: none;
+				line-height: $pagination-line-height;
+			}
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		> li {
+			&:first-child,
+			&:last-child {
+				> a,
+				> span {
+					border-radius: $pagination-border-radius;
+				}
+			}
+		}
+
+		> .disabled {
+			> a,
+			> span {
+				&,
+				&:focus,
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+
+		> .dropdown,
+		> .ellipsis {
+			> a,
+			> span {
+				border-width: 0;
+
+				&:focus,
+				&:hover {
+					background-color: $pagination-ellipsis-hover-bg;
+					color: $pagination-ellipsis-hover-color;
+				}
+			}
+		}
+
+		.dropdown-menu-top-center {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.pagination-items-per-page {
+	background-color: $pagination-items-per-page-bg;
+	border-color: $pagination-items-per-page-border;
+	border-radius: $pagination-border-radius;
+	border-style: solid;
+	border-width: $pagination-border-width;
+	float: left;
+	line-height: $pagination-line-height;
+
+	[class*="icon-"] {
+		margin-left: 10px;
+	}
+
+	a {
+		color: $pagination-items-per-page-color;
+		display: block;
+		padding: $pagination-item-padding;
+		text-decoration: none;
+	}
+}
+
+.pagination-results {
+	border: $pagination-border-width solid transparent;
+	color: $pagination-results-color;
+	float: right;
+	line-height: $pagination-line-height;
+	padding-bottom: $pagination-item-padding-bottom;
+	padding-top: $pagination-item-padding-top;
+
+	@media (min-width: $grid-float-breakpoint) {
+		float: left;
+		margin-left: 25px;
+	}
+}
+
+// Pagination Sizes
+
+.pagination-sm {
+	.pagination-items-per-page {
+		border-radius: $pagination-sm-border-radius;
+	}
+
+	.pagination-items-per-page a,
+	.pagination-results {
+		font-size: $pagination-sm-font-size;
+		line-height: $pagination-sm-line-height;
+		padding: $pagination-sm-item-padding;
+	}
+
+	.pagination {
+		a {
+			font-size: $pagination-sm-font-size;
+		}
+
+		> li {
+			> a,
+			> span {
+				line-height: $pagination-sm-line-height;
+				padding: $pagination-sm-item-padding;
+			}
+
+			&:first-child {
+				> a,
+				> span {
+					border-bottom-left-radius: $pagination-sm-border-radius;
+					border-top-left-radius: $pagination-sm-border-radius;
+				}
+			}
+
+			&:last-child {
+				> a,
+				> span {
+					border-bottom-right-radius: $pagination-sm-border-radius;
+					border-top-right-radius: $pagination-sm-border-radius;
+				}
+			}
+		}
+	}
+}
+
+.pagination-lg {
+	.pagination-items-per-page {
+		border-radius: $pagination-lg-border-radius;
+	}
+
+	.pagination-items-per-page a,
+	.pagination-results {
+		font-size: $pagination-lg-font-size;
+		line-height: $pagination-lg-line-height;
+		padding: $pagination-lg-item-padding;
+	}
+
+	.pagination {
+		> li a {
+			font-size: $pagination-lg-font-size;
+		}
+
+		> li {
+			> a,
+			> span {
+				line-height: $pagination-lg-line-height;
+				padding: $pagination-lg-item-padding;
+			}
+
+			&:first-child {
+				> a,
+				> span {
+					border-bottom-left-radius: $pagination-lg-border-radius;
+					border-top-left-radius: $pagination-lg-border-radius;
+				}
+			}
+
+			&:last-child {
+				> a,
+				> span {
+					border-bottom-right-radius: $pagination-lg-border-radius;
+					border-top-right-radius: $pagination-lg-border-radius;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$modal-footer-height: 64px !default;
+
+$modal-desktop-footer-height: $modal-footer-height !default;
+
+$modal-header-height: 56px !default;
+
+$modal-desktop-header-height: $modal-header-height !default;
+
+// Skin
+
+$modal-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !default;
+
+$modal-body-bg: transparent !default;
+$modal-body-color: $text-color !default;
+
+$modal-header-bg: transparent !default;
+$modal-header-color: $text-color !default;
+
+$modal-header-close-color: $text-color !default;
+$modal-header-close-icon-opacity: 0.2 !default;
+$modal-header-close-lexicon-icon-opacity: 0.3 !default;
+$modal-header-close-opacity-modifier: 2.66667 !default;
+
+$modal-footer-bg: $modal-header-bg !default;
+$modal-footer-color: $modal-header-color !default;
+
+$modal-inverse-body-bg: $modal-body-bg !default;
+$modal-inverse-body-color: $navbar-inverse-color !default;
+
+$modal-inverse-content-bg: $navbar-inverse-bg !default;
+$modal-inverse-content-border-color: $navbar-inverse-border !default;
+
+$modal-inverse-header-bg: $modal-header-bg !default;
+$modal-inverse-header-border-color: $navbar-inverse-border !default;
+$modal-inverse-header-color: $navbar-inverse-color !default;
+
+$modal-inverse-header-close-color: $navbar-inverse-color !default;
+
+$modal-inverse-footer-bg: $modal-inverse-header-bg !default;
+$modal-inverse-footer-border-color: $modal-inverse-header-border-color !default;
+$modal-inverse-footer-color: $modal-inverse-header-color !default;
+
+$modal-inverse-link-color: $navbar-inverse-link-color !default;
+$modal-inverse-link-hover-color: $navbar-inverse-link-hover-color !default;

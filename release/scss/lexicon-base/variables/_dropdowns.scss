@@ -1,0 +1,34 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$dropdown-border-style: null !default;
+$dropdown-border-width: 1px !default;
+$dropdown-padding-bottom: null !default;
+$dropdown-padding-left: null !default;
+$dropdown-padding-right: null !default;
+$dropdown-padding-top: null !default;
+
+$dropdown-checkbox-label-spacer: 40px !default;
+$dropdown-radio-label-spacer: $dropdown-checkbox-label-spacer !default;
+
+$dropdown-link-padding: 3px 20px !default;
+
+$dropdown-wide-width: 500px !default;
+
+$dropdown-font-size: null !default;
+$dropdown-header-font-size: $font-size-small !default;
+
+$dropdown-menu-desktop-max-height: 320px !default;
+$dropdown-menu-max-height: 295px !default;
+$dropdown-menu-min-height: null !default;
+
+$dropdown-menu-max-width: null !default;
+$dropdown-menu-min-width: null !default;
+
+// Skin
+
+$dropdown-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175) !default;

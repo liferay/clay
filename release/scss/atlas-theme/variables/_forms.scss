@@ -1,0 +1,143 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$input-font-size: 16px !default;
+
+$input-desktop-font-size: 16px !default;
+
+$input-help-block-font-size: 14px !default;
+
+$input-label-font-size: 12px !default;
+$input-label-font-weight: 500 !default;
+$input-label-margin-bottom: 2px !default;
+
+$input-label-desktop-font-size: 14px !default;
+
+$input-label-reference-mark-spacer: 5px !default;
+$input-label-reference-mark-vertical-alignment: baseline !default;
+
+$input-border-bottom-width: 2px !default;
+$input-border-left-width: 0 !default;
+$input-border-right-width: 0 !default;
+$input-border-top-width: 0 !default;
+
+$input-padding-horizontal: 4px !default;
+$input-padding-vertical: 6px !default;
+
+$input-font-size-base: 16px !default;
+$input-font-size-large: 18px !default;
+$input-font-size-small: 13px !default;
+
+// When changing input, make sure to match the corresponding
+// btn settings to the input height.
+$input-height-base: 40px !default;
+$input-height-large: 48px !default;
+$input-height-small: 32px !default;
+
+$input-mobile-height-base: 40px !default;
+$input-mobile-height-large: 48px !default;
+$input-mobile-height-small: 32px !default;
+
+$form-group-margin-bottom: 20px !default;
+
+// Skin
+
+$input-border-radius: 0 !default;
+$input-border-radius-large: $input-border-radius !default;
+$input-border-radius-small: $input-border-radius !default;
+
+$input-bg: transparent !default;
+$input-bg-disabled: $input-bg !default;
+
+$input-color: $text-color !default;
+$input-color-focus: $brand-primary !default;
+
+$input-border: $brand-default !default;
+$input-border-focus: $input-color-focus !default;
+
+$input-box-shadow: none !default;
+$input-box-shadow-focus: none !default;
+
+$input-color-placeholder: darken(#E4E9EC, 12%) !default;
+$input-color-placeholder-focus: $input-border-focus !default;
+
+$input-border-disabled: #CFD7DE !default;
+$input-color-disabled: $input-border !default;
+$input-color-placeholder-disabled: $input-color-placeholder !default;
+$input-opacity-disabled: 0.5 !default;
+
+$input-label-color: $brand-default !default;
+$input-label-focus-color: $input-color-focus !default;
+
+$input-readonly-bg: #FAFAFA !default;
+$input-readonly-border: $input-border !default;
+$input-readonly-color: darken($input-color-placeholder, 12%) !default;
+$input-readonly-cursor: default !default;
+
+$input-danger-border: $state-danger-border !default;
+$input-danger-box-shadow: none !default;
+$input-danger-box-shadow-focus: none !default;
+$input-danger-color: $input-color !default;
+
+$input-danger-checkbox-label-color: $state-danger-text !default;
+$input-danger-label-color: $input-label-color !default;
+
+$input-success-border: $state-success-border !default;
+$input-success-box-shadow: none !default;
+$input-success-box-shadow-focus: none !default;
+$input-success-color: $input-color !default;
+
+$input-success-checkbox-label-color: $state-success-text !default;
+$input-success-label-color: $input-label-color !default;
+
+$input-warning-border: $state-warning-border !default;
+$input-warning-box-shadow: none !default;
+$input-warning-box-shadow-focus: none !default;
+$input-warning-color: $input-color !default;
+
+$input-warning-checkbox-label-color: $state-warning-text !default;
+$input-warning-label-color: $input-label-color !default;
+
+// Select Element
+
+$input-select-bg: null !default;
+$input-select-focus-bg: null !default;
+
+$input-select-bg-position: right center !default;
+$input-select-bg-size: 18px auto !default;
+$input-select-padding-bottom: 0 !default;
+$input-select-padding-left: null !default;
+$input-select-padding-right: 18px !default;
+$input-select-padding-top: 0 !default;
+
+$input-select-icon-color: $input-border !default;
+$input-select-icon-focus-color: $input-border-focus !default;
+
+$input-select-icon: lx-icon(caret-double-l, $input-select-icon-color) !default;
+$input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-focus-color) !default;
+
+// Legend
+
+$legend-border-color: #B0B4BB !default;
+
+// Input Groups
+
+$input-group-addon-bg: $brand-default !default;
+$input-group-addon-border-color: $input-group-addon-bg !default;
+$input-group-addon-color: #FFF !default;
+
+$input-group-default-addon-border-color: #DDD !default;
+$input-group-default-addon-color: #BBB !default;
+$input-group-default-addon-content-border-bottom-width: $btn-border-width !default;
+
+// Input States
+
+$input-danger: $brand-danger !default;
+$input-success: $brand-success !default;
+$input-warning: $brand-warning !default;

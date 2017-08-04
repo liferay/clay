@@ -1,0 +1,258 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Loading Animation
+
+.loading-icon,
+.loadingmask-message .loadingmask-message-content {
+	animation: loading-icon 1.7s infinite ease;
+	border-radius: 50%;
+	display: block;
+	font-size: 16px;
+	height: 1em;
+	margin: 1em auto;
+	position: relative;
+	width: 1em;
+
+	&:after,
+	&:before {
+		border-radius: 50%;
+		content: '';
+		display: block;
+		font-size: inherit;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+@keyframes loading-icon {
+	0% {
+		@include trailing-shadow(0, -0.83em, $loading-icon-color);
+
+		transform: rotate(0);
+	}
+
+	2%, 96% {
+		@include trailing-shadow(0, -0.83em);
+	}
+
+	10% {
+		@include trailing-shadow(
+			(0, -0.087em, -0.173em, -0.256em, -0.338em),
+			(-0.83em, -0.825em, -0.812em, -0.789em, -0.758em)
+		);
+	}
+
+	25% {
+		@include trailing-shadow(
+			(0, -0.338em, -0.555em, -0.671em, -0.719em),
+			(-0.83em, -0.758em, -0.617em, -0.488em, -0.415em)
+		);
+	}
+
+	40% {
+		@include trailing-shadow(
+			(0, -0.377em, -0.645em, -0.775em, -0.82em),
+			(-0.83em, -0.74em, -0.522em, -0.297em, -0.13em),
+			adjust-hue($loading-icon-color, 330)
+		);
+	}
+
+	60% {
+		@include trailing-shadow(
+			(0, -0.087em, -0.173em, -0.256em, -0.297em),
+			(-0.83em, -0.825em, -0.812em, -0.789em, -0.775em)
+		);
+	}
+
+	100% {
+		@include trailing-shadow(0, -0.83em);
+
+		transform: rotate(360deg);
+	}
+}
+
+// Linear Spinner
+
+.loading-icon.linear {
+	&, &:before, &:after {
+		border-radius: 50%;
+		box-shadow: none;
+	}
+
+	& {
+		animation: none;
+		height: 1em;
+		margin: 0 auto;
+		position: relative;
+		transform: translateZ(0);
+		width: 1em;
+	}
+
+	&:before, &:after {
+		animation: 2s ease-out infinite both;
+		border: 0.15em solid transparent;
+		border-left-color: $loading-icon-linear-color;
+		border-radius: 50%;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transform: rotate(270deg);
+		transform-origin: 50%;
+		width: 100%;
+	}
+
+	&:before {
+		animation-name: loading-icon-linear;
+	}
+
+	&:after {
+		animation-name: loading-icon-spin;
+	}
+}
+
+@keyframes loading-icon-linear {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	10.99% {
+		border-bottom-color: transparent;
+	}
+
+	11% {
+		border-bottom-color: $loading-icon-linear-color;
+	}
+
+	66% {
+		border-bottom-color: $loading-icon-linear-color;
+	}
+
+	66.6% {
+		border-bottom-color: transparent;
+	}
+
+	66.6%, 100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loading-icon-linear {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	10.99% {
+		border-bottom-color: transparent;
+	}
+
+	11% {
+		border-bottom-color: $loading-icon-linear-color;
+	}
+
+	66% {
+		border-bottom-color: $loading-icon-linear-color;
+	}
+
+	66.6% {
+		border-bottom-color: transparent;
+	}
+
+	66.6%, 100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loading-icon-spin {
+	0%, 22% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+// Variations
+
+a.btn,
+button {
+	> .loading-icon {
+		// This is specifically in a less specific selector
+		// to allow the size to be set via the
+		// `loading-icon-{size}` classes
+		& {
+			font-size: 1em;
+			margin-right: 0.8em;
+			margin-top: 0;
+		}
+
+		&.linear {
+			margin-right: 0.2em;
+			margin-top: -0.2em;
+		}
+
+		&, &.linear {
+			display: none;
+			margin-bottom: 0;
+			vertical-align: middle;
+		}
+	}
+
+	&.loading {
+		> .loading-icon {
+			&, &.linear {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.loading-icon {
+	&.loading-icon-xs {
+		font-size: 8px;
+	}
+
+	&.loading-icon-sm {
+		font-size: 10px;
+	}
+
+	&.loading-icon-md {
+		font-size: 32px;
+	}
+
+	&.loading-icon-lg {
+		font-size: 64px;
+	}
+}
+
+// Backwards compatability
+
+.loading-animation {
+	@extend .loading-icon;
+
+	&.loading-animation-xs {
+		@extend .loading-icon-xs;
+	}
+
+	&.loading-animation-sm {
+		@extend .loading-icon-sm;
+	}
+
+	&.loading-animation-md {
+		@extend .loading-icon-md;
+	}
+
+	&.loading-animation-lg {
+		@extend .loading-icon-lg;
+	}
+}

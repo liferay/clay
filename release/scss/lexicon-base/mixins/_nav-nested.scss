@@ -1,0 +1,28 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Indents each nested navigation by $indent (15px default)
+// @param $indent - amount to indent in pixels
+// @param $nest-level - number of levels to iterate
+// @param $nav-class - class name of nav element
+// @param $i - start value
+
+@mixin make-nav-nested($indent: 15px, $nest-level: 15, $nav-class: ".nav", $i: 1) {
+	@for $i from (1) through $nest-level {
+		#{$nav-class} > li {
+			> a {
+				padding-left: $indent * ($i + 1);
+			}
+
+			> .nav-equal-height-heading {
+				padding-left: $indent * $i;
+			}
+		}
+
+		$nav-class: "#{$nav-class} .nav";
+	}
+}

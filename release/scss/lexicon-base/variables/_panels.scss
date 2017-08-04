@@ -1,0 +1,51 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$panel-border-bottom-width: 1px !default;
+$panel-border-left-width: 1px !default;
+$panel-border-right-width: 1px !default;
+$panel-border-top-width: 1px !default;
+$panel-border-width: $panel-border-top-width $panel-border-right-width $panel-border-bottom-width $panel-border-left-width !default;
+
+$panel-footer-border-top-width: 1px !default;
+
+$panel-heading-border-bottom-width: 1px !default;
+
+$panel-title-font-size: 1em !default;
+$panel-title-font-weight: 500 !default;
+
+$panel-group-panel-spacer: null !default;
+
+$panel-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) !default;
+
+$panel-blank-border: transparent !default;
+$panel-blank-heading-bg: transparent !default;
+$panel-blank-text: $text-color !default;
+
+$panel-danger-footer-bg: $panel-danger-heading-bg !default;
+$panel-danger-footer-border: $panel-danger-border !default;
+$panel-danger-footer-text: $panel-danger-text !default;
+
+$panel-default-footer-bg: $panel-default-heading-bg !default;
+$panel-default-footer-border: $panel-default-border !default;
+$panel-default-footer-text: $panel-default-text !default;
+
+$panel-info-footer-bg: $panel-info-heading-bg !default;
+$panel-info-footer-border: $panel-info-border !default;
+$panel-info-footer-text: $panel-info-text !default;
+
+$panel-primary-footer-bg: $panel-primary-heading-bg !default;
+$panel-primary-footer-border: $panel-primary-border !default;
+$panel-primary-footer-text: $panel-primary-text !default;
+
+$panel-success-footer-bg: $panel-success-heading-bg !default;
+$panel-success-footer-border: $panel-success-border !default;
+$panel-success-footer-text: $panel-success-text !default;
+
+$panel-warning-footer-bg: $panel-warning-heading-bg !default;
+$panel-warning-footer-border: $panel-warning-border !default;
+$panel-warning-footer-text: $panel-warning-text !default;

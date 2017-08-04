@@ -1,0 +1,47 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Toggle Card Settings
+$toggle-card-height: 104px !default; // Shared
+$toggle-card-width: 92px !default; // Shared
+
+$toggle-card-padding-horizontal: 12px !default; // Shared
+$toggle-card-padding-vertical: 12px !default; // Shared
+
+$toggle-card-icon-font-size: 24px !default; // Shared
+$toggle-card-icon-height: 32px !default; // Shared
+$toggle-card-icon-width: 32px !default; // Shared
+
+// toggle-card-off Card Styles
+$toggle-card-border-width: 1px !default; // Shared
+$toggle-card-icon-border-width: 0 !default; // Shared
+
+// toggle-card-on Card Styles
+$toggle-card-on-border-width: 2px !default; // Shared
+$toggle-card-on-icon-border-width: 0 !default; // Shared
+
+// Skin
+
+$toggle-card-border-radius: 2px !default; // Shared
+
+$toggle-card-icon-border-radius: 30px !default; // Shared
+
+$toggle-card-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15) !default; // Shared
+
+// toggle-card-off Card Styles
+$toggle-card-bg: $body-bg !default; // Shared
+$toggle-card-border: #DCE0E3 !default; // Shared
+$toggle-card-icon-bg: transparent !default; // Shared
+$toggle-card-icon-border: #869CAD !default; // Shared
+$toggle-card-text-color: #869CAD !default; // Shared
+
+// toggle-card-on Card Styles
+$toggle-card-on-bg: $body-bg !default; // Shared
+$toggle-card-on-border: #65B6F0 !default; // Shared
+$toggle-card-on-icon-bg: transparent !default; // Shared
+$toggle-card-on-icon-border: #65B6F0 !default; // Shared
+$toggle-card-on-text-color: #65B6F0 !default; // Shared

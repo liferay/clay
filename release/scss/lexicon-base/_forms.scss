@@ -1,0 +1,268 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+input[type="checkbox"],
+input[type="radio"] {
+	cursor: pointer;
+}
+
+fieldset {
+	word-wrap: break-word;
+
+	@-moz-document url-prefix() { // FF Fieldset workaround
+		display: table-cell;
+	}
+}
+
+label,
+.control-label {
+	color: $input-label-color;
+	font-size: $input-label-font-size;
+	font-weight: $input-label-font-weight;
+	margin-bottom: $input-label-margin-bottom;
+
+	@if (variable-exists(input-label-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $input-label-desktop-font-size;
+		}
+	}
+
+	&.focus {
+		color: $input-label-focus-color;
+	}
+
+	.lexicon-icon {
+		@extend %scale-lexicon-icon;
+	}
+
+	.reference-mark {
+		@if ($input-label-reference-mark-spacer > 0) {
+			margin-left: $input-label-reference-mark-spacer;
+			margin-right: $input-label-reference-mark-spacer;
+		}
+
+		vertical-align: $input-label-reference-mark-vertical-alignment;
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	select.form-control {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+
+		background-color: $input-select-bg;
+		background-image: $input-select-icon;
+		background-image: none \9;
+		background-position: $input-select-bg-position;
+		background-repeat: no-repeat;
+		background-size: $input-select-bg-size;
+		padding-bottom: $input-select-padding-bottom;
+		padding-top: $input-select-padding-top;
+
+		@if ($input-select-padding-left != null) {
+			padding-left: $input-select-padding-left;
+			padding-left: 0 \9;
+		}
+
+		@if ($input-select-padding-right != null) {
+			padding-right: $input-select-padding-right;
+			padding-right: 0 \9;
+		}
+
+		&:focus {
+			background-color: $input-select-focus-bg;
+			background-image: $input-select-icon-focus;
+			background-image: none \9;
+		}
+
+		&::-ms-expand {
+			display: none;
+		}
+	}
+}
+
+.form-control {
+	border-width: $input-border-width;
+	box-shadow: $input-box-shadow;
+	font-size: $input-font-size;
+	padding: $input-padding-vertical $input-padding-horizontal;
+
+	@if (variable-exists(atlas-theme)) {
+		height: $input-mobile-height-base;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $input-desktop-font-size;
+			height: $input-height-base;
+		}
+	}
+
+	&:focus {
+		background-color: $input-bg-focus;
+		box-shadow: $input-box-shadow-focus;
+		color: $input-color-focus;
+
+		@include placeholder($input-color-placeholder-focus);
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		&::-ms-clear,
+		&::-ms-reveal {
+			display: none;
+			height: 0;
+			width: 0;
+		}
+	}
+}
+
+textarea.form-control {
+	height: $input-textarea-height;
+}
+
+// Disabled State
+
+fieldset[disabled] label,
+label.disabled,
+.control-label.disabled {
+	opacity: $input-opacity-disabled;
+}
+
+fieldset[disabled] label {
+	.form-control {
+		font-weight: normal;
+		opacity: 1;
+	}
+}
+
+.form-control {
+	fieldset[disabled] &,
+	&[disabled] {
+		border-color: $input-border-disabled;
+		color: $input-color-disabled;
+		opacity: $input-opacity-disabled;
+
+		@include placeholder($input-color-placeholder-disabled);
+	}
+}
+
+.form-control[disabled] > option {
+	@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
+		color: $input-color-disabled;
+	}
+}
+
+// Readonly State
+
+.form-control[readonly] {
+	background-color: $input-readonly-bg;
+	border-color: $input-readonly-border;
+	color: $input-readonly-color;
+	cursor: $input-readonly-cursor;
+}
+
+@if (variable-exists(atlas-theme)) {
+	// Input Sizes
+
+	.form-control {
+		&.input-lg {
+			font-size: $input-font-size-large;
+			height: $input-mobile-height-large;
+
+			@media (min-width: $grid-float-breakpoint) {
+				height: $input-height-large;
+			}
+		}
+
+		&.input-sm {
+			font-size: $input-font-size-small;
+			height: $input-mobile-height-small;
+
+			@media (min-width: $grid-float-breakpoint) {
+				height: $input-height-small;
+			}
+		}
+	}
+
+	// Checkbox and Radio Styles
+
+	.checkbox,
+	.radio {
+		label {
+			font-weight: $input-label-font-weight;
+			padding-left: 25px;
+
+			@media (-webkit-min-device-pixel-ratio: 0) {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	.checkbox input[type="checkbox"],
+	.checkbox-inline input[type="checkbox"] {
+		height: 20px;
+		margin-left: -25px;
+		margin-top: 0;
+		top: 50%;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 20px;
+
+		@media (-webkit-min-device-pixel-ratio: 0) {
+			height: 14px;
+			margin-left: -20px;
+			width: 14px;
+		}
+	}
+
+	.radio input[type="radio"],
+	.radio-inline input[type="radio"] {
+		height: 20px;
+		margin-left: -25px;
+		margin-top: 0;
+		top: 50%;
+
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 20px;
+
+		@media (-webkit-min-device-pixel-ratio: 0) {
+			height: 15px;
+			margin-left: -20px;
+			width: 14px;
+		}
+	}
+
+	.checkbox-card,
+	.radio-card {
+		label {
+			padding-left: 0;
+		}
+	}
+
+	.checkbox-card input[type="checkbox"],
+	.radio-card input[type="radio"] {
+		margin-left: 0;
+	}
+
+	// Form Control Feedback
+
+	.form-control-feedback {
+		@include monospace($input-mobile-height-base);
+
+		@media (min-width: $grid-float-breakpoint) {
+			@include monospace($input-height-base);
+		}
+	}
+}
+
+.help-block {
+	font-size: $input-help-block-font-size;
+}
+
+.form-control-feedback .lexicon-icon {
+	margin-top: -3px;
+}

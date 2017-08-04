@@ -1,0 +1,84 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.tooltip-inner {
+	@if (variable-exists(atlas-theme)) {
+		border-radius: $tooltip-border-radius;
+		box-shadow: $tooltip-box-shadow;
+		padding: $tooltip-padding-vertical $tooltip-padding-horizontal;
+	}
+
+	word-wrap: break-word;
+}
+
+@if (variable-exists(atlas-theme)) {
+	.tooltip {
+		font-size: $tooltip-font-size;
+	}
+
+	@if ($tooltip-box-shadow-blur == 0) {
+		.tooltip-arrow:before {
+			border-color: transparent;
+			border-style: solid;
+			height: 0;
+			position: absolute;
+			width: 0;
+			z-index: -1;
+		}
+	}
+
+	// Tooltip box shadows
+	// Arrow shadows only appear when $tooltip-box-shadow-blur == 0
+
+	.tooltip {
+		@if ($tooltip-box-shadow-blur == 0) {
+			@if ($tooltip-box-shadow-y > 0) {
+				&.top .tooltip-arrow:before {
+					border-top-color: $tooltip-box-shadow-bg;
+					border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
+					bottom: -$tooltip-box-shadow-y - $tooltip-box-shadow-spread;
+					content: '';
+					left: 50%;
+					margin-left: -$tooltip-arrow-width + $tooltip-box-shadow-x;
+				}
+			}
+
+			@if ($tooltip-box-shadow-x < 0) {
+				&.right .tooltip-arrow:before {
+					border-right-color: $tooltip-box-shadow-bg;
+					border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
+					content: '';
+					left: $tooltip-box-shadow-x - $tooltip-box-shadow-spread;
+					margin-top: -$tooltip-arrow-width + $tooltip-box-shadow-y;
+					top: 50%;
+				}
+			}
+
+			@if ($tooltip-box-shadow-x > 0) {
+				&.left .tooltip-arrow:before {
+					border-left-color: $tooltip-box-shadow-bg;
+					border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
+					content: '';
+					margin-top: -$tooltip-arrow-width + $tooltip-box-shadow-y;
+					right: -$tooltip-box-shadow-x - $tooltip-box-shadow-spread;
+					top: 50%;
+				}
+			}
+
+			@if ($tooltip-box-shadow-y < 0) {
+				&.bottom .tooltip-arrow:before {
+					border-bottom-color: $tooltip-box-shadow-bg;
+					border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
+					content: '';
+					left: 50%;
+					margin-left: -$tooltip-arrow-width + $tooltip-box-shadow-x;
+					top: $tooltip-box-shadow-y - $tooltip-box-shadow-spread;
+				}
+			}
+		}
+	}
+}

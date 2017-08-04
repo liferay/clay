@@ -1,0 +1,30 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$timeline-border: $panel-inner-border !default;
+$timeline-border-width: 2px !default;
+
+$timeline-border-modifier: ceil($timeline-border-width / 2);
+
+$timeline-icon-active-bg: $component-active-bg !default;
+$timeline-icon-active-border: $timeline-icon-active-bg !default;
+
+$timeline-icon-bg: $body-bg !default;
+$timeline-icon-border: $timeline-border !default;
+$timeline-icon-border-radius: 50% !default;
+$timeline-icon-border-width: 2px !default;
+$timeline-icon-size: 10px !default;
+
+$timeline-increment-label-color: $text-color !default;
+
+// Sizes
+
+$timeline-inner-spacing: 35px !default;
+$timeline-outer-spacing: 20px !default;
+
+$timeline-item-padding-bottom: 5px !default;
+$timeline-item-padding-top: 5px !default;

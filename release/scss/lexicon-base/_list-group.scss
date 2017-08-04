@@ -1,0 +1,449 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.list-group {
+	box-shadow: $list-group-box-shadow;
+}
+
+.tabular-list-group {
+	box-shadow: $list-group-box-shadow;
+}
+
+// Nested list groups shouldn't have box shadows
+
+.list-group .list-group,
+.list-group .tabular-list-group,
+.tabular-list-group .list-group,
+.tabular-list-group .tabular-list-group {
+	@if ($list-group-box-shadow != null) {
+		box-shadow: none;
+	}
+}
+
+.list-group-heading {
+	background-color: $list-group-header-bg;
+	border-color: $list-group-border;
+	border-style: solid;
+	border-width: $list-group-border-width;
+	color: $list-group-header-color;
+	display: block;
+	font-weight: $list-group-header-font-weight;
+	margin-bottom: -1px;
+	overflow: hidden;
+	padding: 10px 15px;
+	position: relative;
+	word-wrap: break-word;
+
+	@if (variable-exists(atlas-theme)) {
+		margin-bottom: 0;
+
+		&:after {
+			background-color: $list-group-header-open-border-color;
+			bottom: 0;
+			content: '';
+			display: block;
+			height: $list-group-header-open-border-width;
+			left: 0;
+			position: absolute;
+			right: 0;
+		}
+
+		&:after:focus {
+			z-index: -1;
+		}
+
+		&.collapsed {
+			font-weight: 300;
+
+			&:after {
+				background-color: $list-group-header-close-border-color;
+				height: $list-group-header-close-border-width;
+			}
+		}
+	}
+
+	&:focus {
+		background-color: $list-group-header-bg;
+		color: $list-group-header-hover-color;
+		text-decoration: none;
+		z-index: 1;
+	}
+
+	&:hover {
+		background-color: $list-group-header-bg;
+		color: $list-group-header-hover-color;
+		text-decoration: none;
+	}
+
+	&:first-child {
+		border-top-left-radius: $list-group-border-radius;
+		border-top-right-radius: $list-group-border-radius;
+	}
+
+	&:last-child {
+		border-bottom-left-radius: $list-group-border-radius;
+		border-bottom-right-radius: $list-group-border-radius;
+		margin-bottom: 0;
+	}
+}
+
+button.list-group-heading {
+	text-align: left;
+	width: 100%;
+}
+
+.list-group-item {
+	@include color-dropdown-toggle-link($list-group-item-dropdown-toggle-color, $list-group-item-dropdown-toggle-focus-color, $list-group-item-dropdown-toggle-hover-color);
+
+	@if (variable-exists(atlas-theme)) {
+		border-left-width: 0;
+		border-right-width: 0;
+
+		&:focus {
+			z-index: 1;
+		}
+	}
+
+	&.active {
+		@include color-dropdown-toggle-link($list-group-item-active-dropdown-toggle-color, $list-group-item-active-dropdown-toggle-focus-color, $list-group-item-active-dropdown-toggle-hover-color);
+
+		.list-group-item-content a {
+			color: $list-group-active-color;
+		}
+	}
+}
+
+// Collapsible List Group
+
+.list-group {
+	.collapse,
+	.collapsing {
+		&:last-child {
+			border-bottom-left-radius: $list-group-border-radius;
+			border-bottom-right-radius: $list-group-border-radius;
+			overflow: hidden;
+
+			.list-group-item:last-child {
+				border-bottom-left-radius: $list-group-border-radius;
+				border-bottom-right-radius: $list-group-border-radius;
+			}
+		}
+
+		.list-group-item {
+			&:first-child {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			&:last-child {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		.tabular-list-group {
+			margin-bottom: 0;
+		}
+	}
+
+	.list-group-heading {
+		margin-top: -1px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&.collapsed {
+			&:nth-last-child(2) {
+				border-bottom-left-radius: $list-group-border-radius;
+				border-bottom-right-radius: $list-group-border-radius;
+			}
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	// Last list-group-heading shouldn't have bottom border
+
+	.list-group {
+		.list-group-heading {
+			margin-top: 0;
+
+			&.collapsed:nth-last-child(2):after {
+				background-color: transparent;
+			}
+		}
+
+		.list-group-item {
+			&:first-child {
+				border-top-width: 0;
+			}
+
+			&:last-child {
+				border-bottom-width: 0;
+			}
+		}
+	}
+
+	// Remove top border on first list-group-item after list-group-heading
+
+	.list-group-heading + .list-group-item,
+	.list-group-heading + .collapse .list-group-item:first-child,
+	.list-group-heading + .collapse .list-group-item:first-child .list-group-item-content,
+	.list-group-heading + .collapse .list-group-item:first-child .list-group-item-field,
+	.list-group-heading + .collapsing .list-group-item:first-child,
+	.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-content,
+	.list-group-heading + .collapsing .list-group-item:first-child .list-group-item-field {
+		border-top-width: 0;
+	}
+}
+
+// Tabular List Group
+
+.list-group-item-field {
+	display: table-cell;
+	padding: $table-cell-padding;
+	position: relative;
+	text-align: center;
+	vertical-align: $tabular-list-group-vertical-alignment;
+	width: 1%;
+	word-break: break-all \9; // IE9
+	word-wrap: break-word;
+
+	> .checkbox,
+	> .radio {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+}
+
+.list-group-item-content {
+	display: table-cell;
+	max-width: 100px;
+	min-width: 100px;
+	padding: $table-cell-padding;
+	position: relative;
+	vertical-align: $tabular-list-group-vertical-alignment;
+	word-break: break-all \9; // IE9
+	word-wrap: break-word;
+
+	&.clamp-horizontal {
+		.clamp-container {
+			-ms-transform: none;
+			transform: none;
+		}
+	}
+
+	&.clamp-all {
+		.clamp-container {
+			padding-top: 1em;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0.5em 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.tabular-list-group {
+	display: table;
+	margin-bottom: 20px;
+	padding: 0;
+	width: 100%;
+
+	.list-group-item {
+		background-color: transparent; // Chrome rendering issue with responsive-tables and td position relative
+		display: table-row;
+		height: $tabular-list-group-item-height;
+		padding: 0;
+
+		&:first-child {
+			.list-group-item-content,
+			.list-group-item-field {
+				border-top-width: $tabular-list-group-border-width;
+			}
+		}
+
+		// Chrome rendering issue with responsive-tables and td position relative
+
+		&.active {
+			.list-group-item-content,
+			.list-group-item-field {
+				background-color: $list-group-active-bg;
+			}
+		}
+	}
+
+	.list-group-item-content,
+	.list-group-item-field {
+		background-color: $list-group-bg; // Chrome rendering issue with responsive-tables and td position relative
+		border: $tabular-list-group-border-width solid $list-group-border;
+		border-left-width: 0;
+		border-right-width: 0;
+		border-top-width: 0;
+
+		&:first-child {
+			border-left-width: $tabular-list-group-border-width;
+			padding-left: 15px;
+		}
+
+		&:last-child {
+			border-right-width: $tabular-list-group-border-width;
+			padding-right: 15px;
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.list-group-item-content a {
+			color: $list-group-link-color;
+
+			&:hover,
+			&:focus {
+				color: $list-group-link-hover-color;
+			}
+		}
+
+		.list-group-item.active {
+			.list-group-item-content,
+			.list-group-item-field {
+				$tabular-list-group-active-bottom-v-shadow: $tabular-list-group-border-width - $tabular-list-group-active-border-bottom-width;
+
+				border-bottom-color: $list-group-active-border;
+
+				@if ($tabular-list-group-active-bottom-v-shadow < 0) {
+					box-shadow: inset 0 #{$tabular-list-group-active-bottom-v-shadow} 0 $list-group-active-border;
+				}
+			}
+		}
+	}
+
+	.clamp-container .truncate-text {
+		white-space: nowrap \9; // IE9
+		word-break: normal \9; // IE9
+	}
+
+	.truncate-text {
+		white-space: normal \9; // IE9
+		word-break: break-all \9; // IE9
+	}
+}
+
+.tabular-list-group.no-borders {
+	.list-group-item {
+		&:first-child {
+			.list-group-item-content,
+			.list-group-item-field {
+				border-top-width: 0;
+			}
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.list-group-item.active {
+			.list-group-item-content,
+			.list-group-item-field {
+				@if ($tabular-list-group-active-border-bottom-width > 0) {
+					box-shadow: inset 0 -#{$tabular-list-group-active-border-bottom-width} 0 $list-group-active-border;
+				}
+			}
+		}
+	}
+
+	.list-group-item-content,
+	.list-group-item-field {
+		border-width: 0;
+	}
+}
+
+.tabular-list-group.full-borders {
+	.list-group-item-content,
+	.list-group-item-field {
+		&,
+		&:last-child {
+			border-right-width: $tabular-list-group-border-width;
+		}
+
+		&:first-child {
+			border-left-width: $tabular-list-group-border-width;
+		}
+	}
+}
+
+// Remove left and right borders on tabular list group due to box shadows
+
+@if (variable-exists(atlas-theme)) {
+	.tabular-list-group {
+		.list-group-item-content,
+		.list-group-item-field {
+			&:first-child {
+				border-left-width: 0;
+			}
+
+			&:last-child {
+				border-right-width: 0;
+			}
+		}
+	}
+}
+
+// min width 992px
+
+@media (min-width: $screen-md-min) {
+	.tabular-list-group {
+		.list-group-item-content,
+		.list-group-item-field {
+			padding: 1em 0.8em;
+		}
+	}
+}
+
+@media (max-width: 279px) {
+	.tabular-list-group {
+		display: block;
+
+		.list-group-item {
+			display: block;
+			height: auto;
+		}
+
+		.list-group-item-content,
+		.list-group-item-field {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+// Tabular List Group Unstyled
+
+.tabular-list-group-unstyled {
+	list-style: none;
+	padding-left: 0;
+
+	.list-group-item {
+		background-color: transparent;
+		border-width: 0;
+		display: table;
+		margin-bottom: 20px;
+		padding: 0;
+		width: 100%;
+	}
+
+	.list-group-item-content,
+	.list-group-item-field {
+		padding: 0;
+		vertical-align: top;
+	}
+}

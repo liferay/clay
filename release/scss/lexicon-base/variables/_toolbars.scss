@@ -1,0 +1,31 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$toolbar-group-height: 34px !default;
+
+// Deprecated `$toolbar-group-padding-horizontal` as of v1.0.11 and will be removed in v2.0.0
+$toolbar-group-padding-horizontal: floor(($grid-gutter-width / 2)) !default;
+
+$header-toolbar-height: $navbar-height !default;
+$header-toolbar-margin-bottom: $line-height-computed !default;
+
+// Deprecated `$header-toolbar-padding-horizontal` as of v1.0.11 and will be removed in v2.0.0
+$header-toolbar-padding-horizontal: floor(($grid-gutter-width / 2)) !default;
+
+$header-toolbar-default-border-width: 1px !default;
+
+// Skin
+
+$header-toolbar-border-radius: $navbar-border-radius !default;
+
+$header-toolbar-default-bg: $navbar-default-bg !default;
+$header-toolbar-default-border: $navbar-default-border !default;
+$header-toolbar-default-color: $navbar-default-color !default;
+
+$header-toolbar-default-link-color: $navbar-default-link-color !default;
+$header-toolbar-default-link-hover-bg: $navbar-default-link-hover-bg !default;
+$header-toolbar-default-link-hover-color: $navbar-default-link-hover-color !default;

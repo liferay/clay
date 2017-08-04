@@ -1,0 +1,167 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.panel {
+	border-width: $panel-border-width;
+	box-shadow: $panel-box-shadow;
+}
+
+.panel-footer {
+	background-color: transparent;
+	border-color: transparent;
+	border-top-width: $panel-footer-border-top-width;
+}
+
+.panel-heading {
+	border-bottom-width: $panel-heading-border-bottom-width;
+}
+
+.panel-title {
+	font-size: $panel-title-font-size;
+	font-weight: $panel-title-font-weight;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	@if (variable-exists(atlas-theme)) {
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.panel-group {
+	.panel-heading {
+		padding: 0;
+
+		.collapse-icon {
+			padding-left: $collapse-icon-padding-left;
+			padding-right: $collapse-icon-padding-right;
+		}
+
+		@if (variable-exists(atlas-theme)) {
+			+ .panel-collapse > .panel-body {
+				border-top-width: $panel-heading-border-bottom-width;
+			}
+		}
+	}
+
+	.panel-title {
+		> a,
+		> span {
+			display: block;
+			padding: $panel-heading-padding;
+			position: relative;
+		}
+	}
+
+	.panel + .panel {
+		margin-top: $panel-group-panel-spacer;
+	}
+}
+
+.card,
+.card-horizontal {
+	.panel {
+		@if ($panel-border-radius > 0) {
+			border-radius: 0;
+		}
+
+		@if ($panel-border-left-width > 0) {
+			border-left-width: 0;
+		}
+
+		@if ($panel-border-right-width > 0) {
+			border-right-width: 0;
+		}
+	}
+
+	.panel-heading,
+	.panel-footer {
+		@if ($panel-border-radius > 0) {
+			border-radius: 0;
+		}
+	}
+
+	.panel:first-child,
+	.panel-group:first-child {
+		@if ($card-border-width > 0) {
+			margin-top: $line-height-computed;
+		}
+	}
+}
+
+// Skins
+
+.panel-blank {
+	box-shadow: none;
+
+	@include panel-variant($panel-blank-border, $panel-blank-text, $panel-blank-heading-bg, $panel-blank-border);
+
+	> .panel-footer {
+		background-color: $panel-blank-heading-bg;
+		border-color: $panel-blank-border;
+		color: $panel-blank-text;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		> .panel-heading {
+			a {
+				color: $panel-blank-heading-link-open-color;
+
+				&.collapsed {
+					color: $panel-blank-heading-link-color;
+				}
+			}
+		}
+	}
+}
+
+.panel-group .panel-blank .panel-heading {
+	+ .panel-collapse > .panel-body {
+		border-top-color: $panel-blank-border;
+	}
+}
+
+.panel-default {
+	> .panel-footer {
+		background-color: $panel-default-footer-bg;
+		border-color: $panel-default-footer-border;
+		color: $panel-default-footer-text;
+	}
+}
+
+.panel-primary {
+	> .panel-footer {
+		background-color: $panel-primary-footer-bg;
+		border-color: $panel-primary-footer-border;
+		color: $panel-primary-footer-text;
+	}
+}
+
+.panel-success {
+	> .panel-footer {
+		background-color: $panel-success-footer-bg;
+		border-color: $panel-success-footer-border;
+		color: $panel-success-footer-text;
+	}
+}
+
+.panel-warning {
+	> .panel-footer {
+		background-color: $panel-warning-footer-bg;
+		border-color: $panel-warning-footer-border;
+		color: $panel-warning-footer-text;
+	}
+}
+
+.panel-danger {
+	> .panel-footer {
+		background-color: $panel-danger-footer-bg;
+		border-color: $panel-danger-footer-border;
+		color: $panel-danger-footer-text;
+	}
+}

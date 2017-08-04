@@ -1,0 +1,39 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Helper for setting the color of an input placeholder
+// @param $element - CSS Selector
+// @param $color - Placeholder Color
+
+@mixin color-placeholder($element, $color: $input-color-placeholder) {
+	@warn "Lexicon's `color-placeholder($element, $color: $input-color-placeholder)` mixin is deprecated as of v1.0.9 and will be removed in v2.0.0. Please use `placeholder($color: $input-color-placeholder)` instead.";
+
+	#{$element}::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	#{$element}:-moz-placeholder {
+		color: $color;
+	}
+
+	#{$element}::-moz-placeholder {
+		color: $color;
+	}
+
+	#{$element}:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+// Sets select element icon
+// @param $color - Icon Color
+
+@mixin select-box-icon($color) {
+	@warn "Lexicon's `select-box-icon($color)` mixin is deprecated as of v1.0.10 and will be removed in v2.0.0. Please use `background-image: lx-icon($name, $color)` instead.";
+
+	background-image: lx-icon(caret-double-l, $color);
+}

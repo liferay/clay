@@ -1,0 +1,27 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Sets background color and text color
+// @param $bg-color - User icon background color
+// @param $color - User icon color
+
+@mixin color-user-icon($bg-color: #999, $color: #FFF) {
+	background-color: $bg-color;
+	color: $color;
+}
+
+// Size user icon
+// @param $size - User icon size
+
+// Deprecated as of v1.0.6 (will be removed in v2.0.0)
+// This duplicates the `monospace()` mixin.
+
+@mixin size-user-icon($size: 32px) {
+	@warn "Lexicon's `size-user-icon($size)` mixin is deprecated as of v1.0.6 and will be removed in v2.0.0. Please use `monospace($size)` instead.";
+
+	@include monospace($size);
+}

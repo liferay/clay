@@ -1,0 +1,163 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.flex-container {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	flex-flow: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.flex-container-stacked {
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.flex-row-vertical {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.flex-item-expand {
+	-ms-flex: 1;
+	flex: 1;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	min-width: 0;
+}
+
+.flex-item-full {
+	-ms-flex: 1 100%;
+	flex: 1 100%;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	+ .flex-item-expand {
+		-ms-flex-preferred-size: auto;
+		flex-basis: auto;
+	}
+}
+
+.flex-item-bottom {
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+}
+
+.flex-item-center {
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+
+.flex-item-top {
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+}
+
+// Stacking Flex Container
+
+.flex-container-stacked-xxs {
+	@media (max-width: 479px) {
+		@include stack-flex-container;
+	}
+}
+
+.flex-container-stacked-xs {
+	@media (max-width: $screen-xs-max) {
+		@include stack-flex-container;
+	}
+}
+
+.flex-container-stacked-sm {
+	@media (max-width: $screen-sm-max) {
+		@include stack-flex-container;
+	}
+}
+
+.flex-container-stacked-md {
+	@media (max-width: $screen-md-max) {
+		@include stack-flex-container;
+	}
+}
+
+.flex-container-stacked-lg {
+	@media (min-width: $screen-lg-min) {
+		@include stack-flex-container;
+	}
+}
+
+.flex-container-stacked-xs-only {
+	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+		@include stack-flex-container;
+	}
+}
+
+.flex-container-stacked-sm-only {
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		@include stack-flex-container;
+	}
+}
+
+.flex-container-stacked-md-only {
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		@include stack-flex-container;
+	}
+}
+
+// Flex Item Break
+
+.flex-item-break-xxs {
+	@media (max-width: 479px) {
+		@include break-flex-item;
+	}
+}
+
+.flex-item-break-xs {
+	@media (max-width: $screen-xs-max) {
+		@include break-flex-item;
+	}
+}
+
+.flex-item-break-sm {
+	@media (max-width: $screen-sm-max) {
+		@include break-flex-item;
+	}
+}
+
+.flex-item-break-md {
+	@media (max-width: $screen-md-max) {
+		@include break-flex-item;
+	}
+}
+
+.flex-item-break-lg {
+	@media (min-width: $screen-lg) {
+		@include break-flex-item;
+	}
+}
+
+.flex-item-break-xs-only {
+	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+		@include break-flex-item;
+	}
+}
+
+.flex-item-break-sm-only {
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		@include break-flex-item;
+	}
+}
+
+.flex-item-break-md-only {
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		@include break-flex-item;
+	}
+}

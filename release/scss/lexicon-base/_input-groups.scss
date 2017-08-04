@@ -1,0 +1,287 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.input-group .form-control:focus {
+	z-index: $zindex-input-group-focus;
+}
+
+// Input Group Btn
+
+.input-group-btn .btn:hover {
+	z-index: $zindex-input-group-hover;
+}
+
+.input-group-btn .btn:focus {
+	z-index: $zindex-input-group-focus;
+}
+
+.input-group-btn {
+	> .btn + .btn {
+		margin-left: 0;
+	}
+
+	&:first-child {
+		text-align: right;
+
+		> .btn {
+			@if ($btn-border-width > 1) {
+				margin-right: -($btn-border-width);
+			}
+		}
+	}
+
+	&:last-child > .btn {
+		margin-left: -$btn-border-width;
+	}
+}
+
+// Input Group Addon
+
+.input-group .input-group-addon {
+	&:first-child {
+		border-bottom-left-radius: $input-group-addon-border-radius;
+		border-top-left-radius: $input-group-addon-border-radius;
+	}
+
+	&:last-child {
+		border-bottom-right-radius: $input-group-addon-border-radius;
+		border-top-right-radius: $input-group-addon-border-radius;
+	}
+}
+
+.input-group-addon {
+	border-width: $input-border-width;
+	color: $input-group-addon-color;
+
+	@if (variable-exists(atlas-theme)) {
+		input[type="checkbox"],
+		input[type="radio"] {
+			display: block;
+		}
+	}
+}
+
+@if (variable-exists(atlas-theme)) {
+	.input-group .form-control {
+		padding-right: 10px;
+	}
+
+	.input-group-addon,
+	.input-group-btn {
+		+ .form-control {
+			padding-left: 10px;
+		}
+	}
+}
+
+// Input Group Input
+
+.input-group-input {
+	display: table-cell;
+
+	.form-control {
+		display: block;
+	}
+}
+
+// Input Group Constrain
+
+.input-group-constrain {
+	max-width: 150px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-right: $btn-border-width;
+
+	@media (min-width: $grid-float-breakpoint) {
+		max-width: 300px;
+	}
+}
+
+.input-group-addon .input-group-constrain {
+	border-bottom-width: 0;
+	display: block;
+	line-height: $input-group-constrain-line-height;
+	margin-bottom: -$padding-base-vertical - $input-border-bottom-width;
+	margin-left: -$padding-base-horizontal;
+	margin-right: -$padding-base-horizontal;
+	margin-top: -$padding-base-vertical;
+
+	@if ($input-border-bottom-width > 0) {
+		padding-bottom: $input-border-bottom-width;
+	}
+
+	padding-left: $padding-base-horizontal;
+	padding-right: $padding-base-horizontal;
+}
+
+// Input Group Insert
+
+.input-group-insert {
+	border-left-width: 0;
+	border-right-width: 0;
+
+	> .btn {
+		border-radius: 0;
+		margin-right: -($btn-border-width);
+	}
+}
+
+// Input Group Default
+
+.input-group-default {
+	display: table;
+
+	.input-group-addon {
+		background-color: transparent;
+		border-width: 0;
+		padding: 0 10px;
+
+		@if (variable-exists(atlas-theme)) {
+			color: $input-group-default-addon-color;
+			position: relative;
+		}
+
+		&:first-child .input-group-addon-content {
+			margin-left: -10px;
+		}
+
+		&:last-child .input-group-addon-content {
+			margin-right: -10px;
+		}
+	}
+
+	.help-icon {
+		@include monospace(28px);
+	}
+}
+
+.input-group-addon-content {
+	display: inline-block;
+
+	@if (variable-exists(atlas-theme)) {
+		border-bottom: $input-group-default-addon-content-border-bottom-width solid $input-group-default-addon-border-color;
+		height: $input-mobile-height-base;
+		line-height: $input-mobile-height-base;
+		width: 30px;
+
+		@media (min-width: $grid-float-breakpoint) {
+			height: $input-height-base;
+			line-height: $input-height-base;
+		}
+	}
+}
+
+// Input Group Sizes
+
+.input-group-lg {
+	> .input-group-addon {
+		&:first-child {
+			border-bottom-left-radius: $input-group-addon-border-radius-large;
+			border-top-left-radius: $input-group-addon-border-radius-large;
+		}
+
+		&:last-child {
+			border-bottom-right-radius: $input-group-addon-border-radius-large;
+			border-top-right-radius: $input-group-addon-border-radius-large;
+		}
+	}
+
+	.input-group-constrain {
+		line-height: $input-group-constrain-lg-line-height;
+		margin-bottom: -$padding-large-vertical - $input-border-bottom-width;
+		margin-left: -$padding-large-horizontal;
+		margin-right: -$padding-large-horizontal;
+		margin-top: -$padding-large-vertical;
+
+		@if ($input-border-bottom-width > 0) {
+			padding-bottom: $input-border-bottom-width;
+		}
+
+		padding-left: $padding-large-horizontal;
+		padding-right: $padding-large-horizontal;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		> .input-group-btn {
+			&:first-child > .btn:first-child {
+				border-bottom-left-radius: $btn-border-radius-large;
+				border-top-left-radius: $btn-border-radius-large;
+			}
+
+			&:last-child > .btn:last-child {
+				border-bottom-right-radius: $btn-border-radius-large;
+				border-top-right-radius: $btn-border-radius-large;
+			}
+		}
+
+		&.input-group-default {
+			.input-group-addon-content {
+				height: $input-height-large;
+				line-height: $input-height-large;
+				width: 40px;
+			}
+		}
+	}
+
+	.help-icon {
+		@include monospace(35px);
+	}
+}
+
+.input-group-sm {
+	> .input-group-addon {
+		&:first-child {
+			border-bottom-left-radius: $input-group-addon-border-radius-small;
+			border-top-left-radius: $input-group-addon-border-radius-small;
+		}
+
+		&:last-child {
+			border-bottom-right-radius: $input-group-addon-border-radius-small;
+			border-top-right-radius: $input-group-addon-border-radius-small;
+		}
+	}
+
+	.input-group-constrain {
+		line-height: $input-group-constrain-sm-line-height;
+		margin-bottom: -$padding-small-vertical - $input-border-bottom-width;
+		margin-left: -$padding-small-horizontal;
+		margin-right: -$padding-small-horizontal;
+		margin-top: -$padding-small-vertical;
+
+		@if ($input-border-bottom-width > 0) {
+			padding-bottom: $input-border-bottom-width;
+		}
+
+		padding-left: $padding-small-horizontal;
+		padding-right: $padding-small-horizontal;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		> .input-group-btn {
+			&:first-child > .btn:first-child {
+				border-bottom-left-radius: $btn-border-radius-small;
+				border-top-left-radius: $btn-border-radius-small;
+			}
+
+			&:last-child > .btn:last-child {
+				border-bottom-right-radius: $btn-border-radius-small;
+				border-top-right-radius: $btn-border-radius-small;
+			}
+		}
+
+		&.input-group-default {
+			.input-group-addon-content {
+				height: $input-height-small;
+				line-height: $input-height-small;
+			}
+		}
+	}
+
+	.help-icon {
+		@include monospace(20px);
+	}
+}

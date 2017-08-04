@@ -1,0 +1,35 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$tooltip-font-size: 14px !default;
+
+// Deprecated `$tooltip-inner-max-width` as of v1.0.11 and will be removed in v2.0.0
+// use `$tooltip-max-width` instead
+$tooltip-inner-max-width: 230px !default;
+$tooltip-max-width: $tooltip-inner-max-width !default;
+
+$tooltip-padding-horizontal: 24px !default;
+$tooltip-padding-vertical: 8px !default;
+
+// Skin
+
+$tooltip-border-radius: $border-radius-base !default;
+
+$tooltip-box-shadow-x: $box-shadow-default-x !default; // 0
+$tooltip-box-shadow-y: $box-shadow-default-y !default; // 0
+
+$tooltip-box-shadow-blur: $box-shadow-default-blur !default; // 3px
+$tooltip-box-shadow-spread: $box-shadow-default-spread !default; // 1px
+
+$tooltip-box-shadow-bg: $box-shadow-default-bg !default; // rgba(0, 0, 0, 0.2)
+
+$tooltip-box-shadow: $tooltip-box-shadow-x $tooltip-box-shadow-y $tooltip-box-shadow-blur $tooltip-box-shadow-spread $tooltip-box-shadow-bg !default;
+
+$tooltip-bg: #0E191D !default;
+$tooltip-opacity: 1 !default;

@@ -1,0 +1,222 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-ms-overflow-style: scrollbar;
+	-webkit-font-smoothing: antialiased;
+
+	@if (variable-exists(atlas-theme)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-base;
+		}
+	}
+}
+
+.monospace {
+	font-family: $font-family-monospace;
+}
+
+.sans-serif {
+	font-family: $font-family-sans-serif;
+}
+
+.serif {
+	font-family: $font-family-serif;
+}
+
+// Headings
+
+@if (variable-exists(atlas-theme)) {
+	h1,
+	.h1 {
+		font-size: $font-size-h1;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h1;
+		}
+	}
+
+	h2,
+	.h2 {
+		font-size: $font-size-h2;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h2;
+		}
+	}
+
+	h3,
+	.h3 {
+		font-size: $font-size-h3;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h3;
+		}
+	}
+
+	h4,
+	.h4 {
+		font-size: $font-size-h4;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h4;
+		}
+	}
+
+	h5,
+	.h5 {
+		font-size: $font-size-h5;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h5;
+		}
+	}
+
+	h6,
+	.h6 {
+		font-size: $font-size-h6;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h6;
+		}
+	}
+}
+
+// Reference Mark
+
+.reference-mark {
+	display: inline-block;
+	font-size: $reference-mark-font-size;
+	position: relative;
+	vertical-align: top;
+
+	&.lexicon-icon {
+		font-size: 1em;
+		height: $reference-mark-font-size;
+		width: $reference-mark-font-size;
+	}
+
+	.lexicon-icon {
+		display: block;
+		height: 1em;
+		position: relative;
+		width: 1em;
+	}
+
+	.glyphicon,
+	[class^="icon-"] {
+		display: block;
+	}
+}
+
+// Contextual backgrounds
+
+@include bg-variant('.bg-default', $state-default-bg);
+
+@if (variable-exists(atlas-theme)) {
+	@include bg-variant('.bg-primary', $state-primary-bg);
+}
+
+// Contextual Text
+
+a.text-muted {
+	&:hover,
+	&:focus {
+		color: darken($text-muted, 10%);
+	}
+}
+
+@include text-emphasis-variant('.text-default', $state-default-text);
+
+@if (variable-exists(atlas-theme)) {
+	@include text-emphasis-variant('.text-primary', $state-primary-text);
+}
+
+// Marked Text
+
+mark,
+.mark {
+	@include highlight-text();
+}
+
+// Truncate Text
+
+td,
+th {
+	.truncate-text {
+		white-space: normal \9; // IE 8, 9
+	}
+}
+
+.truncate-text {
+	display: block;
+
+	@include text-overflow;
+
+	word-break: normal \9; // IE 8, 9
+	word-wrap: normal;
+}
+
+// Blockquote Variations
+
+.blockquote-xs {
+	border-left-width: $blockquote-xs-border-width;
+	font-size: $blockquote-xs-font-size;
+	padding: ($line-height-computed / 2) ($line-height-computed * 0.7);
+
+	&.blockquote-reverse {
+		border-left-width: 0;
+		border-right-width: $blockquote-xs-border-width;
+	}
+}
+
+.blockquote-sm {
+	border-left-width: $blockquote-sm-border-width;
+	font-size: $blockquote-sm-font-size;
+	padding: ($line-height-computed / 2) ($line-height-computed * 0.8);
+
+	&.blockquote-reverse {
+		border-left-width: 0;
+		border-right-width: $blockquote-sm-border-width;
+	}
+}
+
+.blockquote-lg {
+	border-left-width: $blockquote-lg-border-width;
+	font-size: $blockquote-lg-font-size;
+	padding: ($line-height-computed / 2) ($line-height-computed * 1.5);
+
+	&.blockquote-reverse {
+		border-left-width: 0;
+		border-right-width: $blockquote-lg-border-width;
+	}
+}
+
+.blockquote-danger {
+	@include color-blockquote ($blockquote-danger-color);
+}
+
+.blockquote-default {
+	@include color-blockquote ($blockquote-default-color);
+}
+
+.blockquote-info {
+	@include color-blockquote ($blockquote-info-color);
+}
+
+.blockquote-primary {
+	@include color-blockquote ($blockquote-primary-color);
+}
+
+.blockquote-success {
+	@include color-blockquote ($blockquote-success-color);
+}
+
+.blockquote-warning {
+	@include color-blockquote ($blockquote-warning-color);
+}

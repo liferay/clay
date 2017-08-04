@@ -1,0 +1,272 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.toggle-switch-bar {
+	.toggle-switch-handle {
+		display: block;
+		float: left;
+		min-width: $toggle-switch-bar-width;
+		text-transform: uppercase;
+	}
+
+	.toggle-switch-icon {
+		font-size: $toggle-switch-bar-font-size;
+	}
+
+	.button-icon {
+		font-size: $toggle-switch-button-font-size;
+	}
+}
+
+input.toggle-switch {
+	font-size: 62.5%;
+	opacity: 0;
+	position: absolute;
+
+	&:empty ~ .toggle-switch-bar {
+		cursor: pointer;
+		display: block;
+		float: left;
+		font-size: 1.2rem;
+		height: $toggle-switch-bar-height;
+		line-height: $toggle-switch-bar-height;
+		position: relative;
+		text-indent: 0;
+
+		@include user-select(none);
+
+		&:after {
+			background-color: $toggle-switch-button-bg;
+			border-color: $toggle-switch-button-border-color;
+			border-radius: $toggle-switch-button-border-radius;
+			border-style: solid;
+			border-width: $toggle-switch-button-border-width;
+			bottom: $toggle-switch-bar-padding;
+			content: '';
+			display: block;
+			height: $toggle-switch-button-width;
+			left: $toggle-switch-bar-padding;
+			position: absolute;
+			top: $toggle-switch-bar-padding;
+			transition: $toggle-switch-transition;
+			width: $toggle-switch-button-width;
+		}
+
+		&:before {
+			background-color: $toggle-switch-bar-bg;
+			border-color: $toggle-switch-bar-border-color;
+			border-radius: $toggle-switch-bar-border-radius;
+			border-style: solid;
+			border-width: $toggle-switch-bar-border-width;
+			bottom: 0;
+			content: ' ';
+			display: block;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: $toggle-switch-transition;
+			width: $toggle-switch-bar-width;
+		}
+
+		.toggle-switch-handle {
+			&:after {
+				content: attr(data-label-off);
+				margin-left: set-data-label-text-position($toggle-switch-bar-width, $toggle-switch-bar-padding) + 6px;
+				transition: $toggle-switch-transition;
+				white-space: nowrap;
+			}
+
+			&:before {
+				transition: $toggle-switch-transition;
+			}
+		}
+
+		.toggle-switch-icon {
+			color: $toggle-switch-bar-icon-color;
+			left: $toggle-switch-bar-padding;
+			line-height: $toggle-switch-button-width;
+			position: absolute;
+			text-align: center;
+			text-indent: 0;
+			top: $toggle-switch-bar-padding;
+			transition: $toggle-switch-transition;
+			width: $toggle-switch-button-width;
+			z-index: 1;
+		}
+
+		.toggle-switch-icon-on {
+			left: $toggle-switch-bar-padding;
+			opacity: 0;
+		}
+
+		.toggle-switch-icon-off {
+			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
+		}
+
+		.button-icon {
+			color: $toggle-switch-button-icon-color;
+		}
+
+		.button-icon-on {
+			opacity: 0;
+		}
+	}
+
+	&:checked ~ .toggle-switch-bar {
+		&:after {
+			background-color: $toggle-switch-button-on-bg;
+			border-color: $toggle-switch-button-on-border-color;
+			border-radius: $toggle-switch-button-on-border-radius;
+			border-style: solid;
+			border-width: $toggle-switch-button-border-width;
+			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
+		}
+
+		&:before {
+			background-color: $toggle-switch-bar-on-bg;
+			border-color: $toggle-switch-bar-on-border-color;
+			border-radius: $toggle-switch-bar-border-radius;
+			border-style: solid;
+			border-width: $toggle-switch-bar-border-width;
+		}
+
+		.toggle-switch-handle:after {
+			content: attr(data-label-on);
+		}
+
+		.toggle-switch-icon {
+			color: $toggle-switch-bar-on-icon-color;
+		}
+
+		.button-icon {
+			color: $toggle-switch-button-on-icon-color;
+			left: $toggle-switch-bar-width - $toggle-switch-bar-padding - $toggle-switch-button-width;
+		}
+
+		.button-icon-on,
+		.toggle-switch-icon-on {
+			opacity: 1;
+		}
+
+		.button-icon-off,
+		.toggle-switch-icon-off {
+			opacity: 0;
+		}
+	}
+
+	&:disabled,
+	&.disabled {
+		~ .toggle-switch-bar {
+			cursor: not-allowed;
+			opacity: 0.4;
+		}
+	}
+
+	&:focus ~ .toggle-switch-bar:before {
+		box-shadow: $toggle-switch-bar-focus-box-shadow;
+	}
+}
+
+.toggle-switch-label {
+	display: block;
+	margin-bottom: 2px;
+}
+
+.toggle-switch-text {
+	clear: both;
+	display: block;
+	font-size: 1.25rem;
+}
+
+.toggle-switch-text-left {
+	float: left;
+	line-height: $toggle-switch-bar-height;
+	margin-right: 7px;
+}
+
+.toggle-switch-text-right {
+	clear: none;
+	float: left;
+	line-height: $toggle-switch-bar-height;
+	margin-left: 7px;
+}
+
+@if (variable-exists(atlas-theme)) {
+	@media (min-width: $grid-float-breakpoint) {
+		.toggle-switch-bar {
+			.toggle-switch-handle {
+				min-width: $toggle-switch-bar-desktop-width;
+			}
+
+			.toggle-switch-icon {
+				font-size: $toggle-switch-bar-desktop-font-size;
+			}
+
+			.button-icon {
+				font-size: $toggle-switch-button-desktop-font-size;
+			}
+		}
+
+		input.toggle-switch {
+			&:empty ~ .toggle-switch-bar {
+				height: $toggle-switch-bar-desktop-height;
+				line-height: $toggle-switch-bar-desktop-height;
+				text-indent: 0;
+
+				&:after {
+					bottom: $toggle-switch-bar-desktop-padding;
+					height: $toggle-switch-button-desktop-width;
+					left: $toggle-switch-bar-desktop-padding;
+					top: $toggle-switch-bar-desktop-padding;
+					width: $toggle-switch-button-desktop-width;
+				}
+
+				&:before {
+					width: $toggle-switch-bar-desktop-width;
+				}
+
+				.toggle-switch-handle:after {
+					margin-left: set-data-label-text-position($toggle-switch-bar-desktop-width, $toggle-switch-bar-desktop-padding) + 6px;
+				}
+
+				.toggle-switch-icon {
+					left: $toggle-switch-bar-desktop-padding;
+					line-height: $toggle-switch-button-desktop-width;
+					top: $toggle-switch-bar-desktop-padding;
+					width: $toggle-switch-button-desktop-width;
+				}
+
+				.toggle-switch-icon-on {
+					left: $toggle-switch-bar-desktop-padding;
+				}
+
+				.toggle-switch-icon-off {
+					left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+				}
+			}
+
+			&:checked ~ .toggle-switch-bar {
+				&:after {
+					left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+				}
+
+				.toggle-switch-handle:after {
+					margin-left: set-data-label-text-position($toggle-switch-bar-desktop-width, $toggle-switch-bar-desktop-padding) + 6px;
+				}
+
+				.button-icon {
+					left: $toggle-switch-bar-desktop-width - $toggle-switch-bar-desktop-padding - $toggle-switch-button-desktop-width;
+				}
+			}
+		}
+
+		.toggle-switch-text-left,
+		.toggle-switch-text-right {
+			line-height: $toggle-switch-bar-desktop-height;
+		}
+	}
+}

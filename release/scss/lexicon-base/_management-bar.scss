@@ -1,0 +1,461 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.management-bar {
+	border-color: transparent;
+	border-style: solid;
+	border-width: $management-bar-border-width;
+
+	@include clearfix;
+
+	margin-bottom: $management-bar-margin-bottom;
+	min-height: $management-bar-height;
+	position: relative;
+
+	@media (min-width: $grid-float-breakpoint) {
+		border-radius: $navbar-border-radius;
+	}
+
+	.checkbox,
+	.radio {
+		margin-bottom: 0;
+		margin-top: 0;
+
+		label {
+			display: block;
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.btn-link {
+			color: $nav-link-color;
+		}
+	}
+}
+
+.management-bar .management-bar-nav > li > .btn,
+.management-bar .management-bar-nav > .dropdown > .btn,
+.management-bar-header > .btn,
+.management-bar-header-right > .btn,
+.management-bar-header > .dropdown,
+.management-bar-header-right > .dropdown {
+	margin: $management-bar-btn-padding-vertical 0 $management-bar-btn-padding-vertical $management-bar-btn-padding-horizontal;
+	padding: 0;
+
+	@if (variable-exists(atlas-theme)) {
+		@media (min-width: $grid-float-breakpoint) {
+			margin: $management-bar-desktop-btn-padding-vertical 0 $management-bar-desktop-btn-padding-vertical $management-bar-desktop-btn-padding-horizontal;
+		}
+	}
+}
+
+.management-bar-header > .dropdown,
+.management-bar-header-right > .dropdown {
+	float: left;
+
+	> a {
+		padding: 0;
+	}
+}
+
+// management bar headers
+
+.container,
+.container-fluid {
+	> .management-bar-header,
+	> .management-bar-collapse {
+		margin-left: -$management-bar-padding-horizontal;
+		margin-right: -$management-bar-padding-horizontal;
+
+		@media (min-width: $grid-float-breakpoint) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+.container-fluid-1280 .management-bar-header-right {
+	margin-right: 0;
+}
+
+.management-bar-header > .checkbox,
+.management-bar-header > .radio,
+.management-bar-header-right > .checkbox,
+.management-bar-header-right > .radio,
+.management-bar-nav > li > .checkbox,
+.management-bar-nav > li > .radio {
+	float: left;
+	padding-bottom: (($management-bar-height - 20 - $management-bar-border-bottom-width - $management-bar-border-top-width) / 2);
+	padding-left: $management-bar-padding-horizontal;
+	padding-right: 0;
+	padding-top: (($management-bar-height - 20 - $management-bar-border-bottom-width - $management-bar-border-top-width) / 2);
+
+	@if (variable-exists(atlas-theme)) {
+		@media (min-width: $grid-float-breakpoint) {
+			padding-bottom: (($management-bar-desktop-height - 20 - $management-bar-border-bottom-width - $management-bar-border-top-width) / 2);
+			padding-top: (($management-bar-desktop-height - 20 - $management-bar-border-bottom-width - $management-bar-border-top-width) / 2);
+		}
+	}
+}
+
+.management-bar-header {
+	@include clearfix;
+
+	float: left;
+}
+
+.management-bar-header-right {
+	float: right;
+	margin-right: $management-bar-padding-horizontal;
+
+	> a,
+	> span {
+		display: block;
+		float: left;
+		padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+
+		@if (variable-exists(atlas-theme)) {
+			@media (min-width: $grid-float-breakpoint) {
+				padding-bottom: $management-bar-desktop-padding-vertical;
+				padding-top: $management-bar-desktop-padding-vertical;
+			}
+		}
+	}
+}
+
+.management-bar-header-item {
+	float: left;
+	height: $management-bar-height;
+	padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	> img {
+		display: block;
+	}
+
+	.management-bar > .container &,
+	.management-bar > .container-fluid & {
+		@media (min-width: $grid-float-breakpoint) {
+			margin-left: -$management-bar-padding-horizontal;
+		}
+	}
+}
+
+.management-bar-item-title {
+	display: inline-block;
+	float: left;
+	margin-right: 5px;
+	max-width: 100%;
+
+	@include text-overflow();
+
+	@media (min-width: $grid-float-breakpoint) {
+		max-width: 180px;
+	}
+}
+
+.management-bar-toggle {
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: $border-radius-base;
+	float: right;
+	margin-right: $management-bar-padding-horizontal;
+
+	@include navbar-vertical-align($management-bar-toggle-height);
+
+	padding: 9px 10px;
+	position: relative;
+
+	@media (min-width: $grid-float-breakpoint) {
+		display: none;
+	}
+
+	&:focus {
+		outline: 0;
+
+		@include tab-focus;
+	}
+}
+
+.management-bar-toggle-link {
+	border-radius: 0;
+	border-width: 0;
+
+	&.management-bar-toggle {
+		margin: 0;
+		padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+	}
+
+	&:focus,
+	&:hover {
+		background-color: $nav-link-hover-bg;
+		text-decoration: none;
+	}
+}
+
+.management-bar-toggle-left {
+	float: left;
+	margin: floor(($navbar-height - $input-height-base) / 2) $navbar-padding-horizontal;
+	padding: $padding-base-vertical 10px;
+}
+
+// management bar collapse
+
+.management-bar-collapse {
+	-webkit-overflow-scrolling: touch;
+	border-top: 1px solid transparent;
+
+	@include clearfix;
+
+	overflow-x: visible;
+	padding-left: $management-bar-padding-horizontal;
+	padding-right: $management-bar-padding-horizontal;
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		background-color: $management-bar-collapse-bg;
+		border-color: $management-bar-collapse-border;
+		border-style: solid;
+		border-width: $management-bar-border-width;
+
+		@if (variable-exists(atlas-theme)) {
+			border-width: 1px 0;
+			box-shadow: $management-bar-collapse-absolute-box-shadow;
+		}
+
+		clear: both;
+		left: -$management-bar-border-left-width;
+		position: absolute;
+		right: -$management-bar-border-right-width;
+		top: 100%;
+		z-index: 1001;
+	}
+
+	@media (min-width: $grid-float-breakpoint) {
+		border-top-width: 0;
+		box-shadow: none;
+		clear: none;
+		float: left;
+		margin-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+		position: static;
+		width: auto;
+	}
+
+	&.collapse {
+		@media (min-width: $grid-float-breakpoint) {
+			display: block !important;
+			height: auto !important;
+			overflow: visible !important;
+			padding-bottom: 0;
+		}
+	}
+
+	&.in {
+		overflow-y: auto;
+
+		@media (min-width: $grid-float-breakpoint) {
+			overflow-y: visible;
+		}
+	}
+}
+
+.management-bar-nav {
+	margin: ($management-bar-padding-vertical / 2) (-$management-bar-padding-horizontal);
+
+	@media (min-width: $grid-float-breakpoint) {
+		float: left;
+		margin: 0;
+	}
+
+	> li {
+		@media (min-width: $grid-float-breakpoint) {
+			float: left;
+		}
+
+		> a,
+		> span {
+			display: block;
+			padding: $management-bar-padding-vertical $management-bar-padding-horizontal;
+
+			@if (variable-exists(atlas-theme)) {
+				@media (min-width: $grid-float-breakpoint) {
+					padding-bottom: $management-bar-desktop-padding-vertical;
+					padding-top: $management-bar-desktop-padding-vertical;
+				}
+			}
+		}
+
+		> .dropdown-menu {
+			@include border-top-radius(0);
+
+			margin-top: $management-bar-dropdown-menu-margin-top;
+		}
+	}
+
+	.open .dropdown-menu {
+		@media (max-width: $grid-float-breakpoint-max) {
+			background-color: transparent;
+			border-width: 0;
+			box-shadow: none;
+			float: none;
+			margin-top: 0;
+			max-width: none;
+			position: static;
+			width: auto;
+		}
+
+		> li > a,
+		.dropdown-header {
+			@media (max-width: $grid-float-breakpoint-max) {
+				padding: 5px 15px 5px 25px;
+			}
+		}
+
+		> li > a {
+			&:hover,
+			&:focus {
+				@media (max-width: $grid-float-breakpoint-max) {
+					background-image: none;
+				}
+			}
+		}
+	}
+}
+
+.management-bar-no-collapse {
+	.management-bar-nav {
+		float: left;
+		margin: 0;
+
+		> li {
+			float: left;
+			margin-left: -1px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		.dropdown-menu {
+			background-color: $dropdown-bg;
+			border-color: $dropdown-border;
+			border-style: $dropdown-border-style;
+			border-width: $dropdown-border-width;
+			box-shadow: $dropdown-box-shadow;
+			position: absolute;
+		}
+	}
+
+	.management-bar-nav-right {
+		float: right;
+		margin-right: $management-bar-padding-horizontal;
+	}
+}
+
+.management-bar-no-collapse .container-fluid-1280 {
+	.management-bar-nav-right {
+		margin-right: 0;
+	}
+}
+
+// Management Bar Skins
+
+.management-bar-default {
+	.management-bar-collapse {
+		border-color: $management-bar-default-border;
+
+		@media (max-width: $grid-float-breakpoint-max) {
+			background-color: $management-bar-default-collapse-bg;
+			border-color: $management-bar-default-collapse-border;
+		}
+	}
+
+	.management-bar-toggle-left {
+		color: $management-bar-default-link-active-color;
+	}
+}
+
+.management-bar-default {
+	background-color: $management-bar-default-bg;
+	border-color: $management-bar-default-border;
+	box-shadow: $management-bar-default-box-shadow;
+
+	a,
+	.management-bar-text,
+	.management-bar-nav > li > a,
+	.management-bar-nav > .dropdown > a {
+		color: $management-bar-default-link-color;
+	}
+
+	.management-bar-nav {
+		> li > a:hover,
+		> .dropdown > a:hover {
+			background-color: $management-bar-default-link-hover-bg;
+			color: $management-bar-default-link-hover-color;
+		}
+
+		> li > a:focus,
+		> .dropdown > a:focus,
+		.open > a,
+		.open > a:focus,
+		.open > a:hover {
+			background-color: $management-bar-default-link-active-bg;
+			color: $management-bar-default-link-active-color;
+		}
+
+		> .disabled > a {
+			&,
+			&:focus,
+			&:hover {
+				background-color: $management-bar-default-link-disabled-bg;
+				color: $management-bar-default-link-disabled-color;
+			}
+		}
+	}
+}
+
+// Management Bar Default Btn Default
+
+.management-bar-default {
+	.btn-default,
+	.nav > li > .btn-default {
+		background-color: $management-bar-default-btn-default-bg;
+		border-color: $management-bar-default-btn-default-border;
+		color: $management-bar-default-btn-default-color;
+
+		&:focus,
+		&:hover {
+			background-color: $management-bar-default-btn-default-hover-bg;
+			border-color: $management-bar-default-btn-default-hover-border;
+			color: $management-bar-default-btn-default-hover-color;
+		}
+
+		&:active,
+		&.active {
+			background-color: $management-bar-default-btn-default-active-bg;
+			border-color: $management-bar-default-btn-default-active-border;
+			color: $management-bar-default-btn-default-active-color;
+		}
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		.dropdown.open .btn-default {
+			&,
+			&:focus {
+				background-color: $management-bar-default-btn-default-active-bg;
+				border-color: $management-bar-default-btn-default-active-border;
+				color: $management-bar-default-btn-default-active-color;
+			}
+		}
+	}
+}

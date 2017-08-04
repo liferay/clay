@@ -1,0 +1,41 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$navbar-border-bottom-width: 1px !default;
+$navbar-border-left-width: 1px !default;
+$navbar-border-right-width: 1px !default;
+$navbar-border-top-width: 1px !default;
+$navbar-border-width: $navbar-border-top-width $navbar-border-right-width $navbar-border-bottom-width $navbar-border-left-width !default;
+
+$navbar-form-padding-horizontal: $navbar-padding-horizontal !default;
+$navbar-form-padding-vertical: (($navbar-height - $input-height-base - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
+
+$navbar-toggle-icon-bar-color: $link-color !default;
+
+$navbar-toggle-height: 32px !default;
+
+$zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
+
+// Skin
+
+$navbar-default-collapsible-search-btn-default-bg: null !default;
+$navbar-default-collapsible-search-btn-default-border: null !default;
+$navbar-default-collapsible-search-btn-default-color: null !default;
+
+$navbar-default-collapsible-search-input-bg: null !default;
+$navbar-default-collapsible-search-input-border: null !default;
+$navbar-default-collapsible-search-input-color: null !default;
+$navbar-default-collapsible-search-input-placeholder-color: null !default;
+
+$navbar-inverse-collapsible-search-btn-default-bg: null !default;
+$navbar-inverse-collapsible-search-btn-default-border: null !default;
+$navbar-inverse-collapsible-search-btn-default-color: null !default;
+
+$navbar-inverse-collapsible-search-input-bg: null !default;
+$navbar-inverse-collapsible-search-input-border: null !default;
+$navbar-inverse-collapsible-search-input-color: null !default;
+$navbar-inverse-collapsible-search-input-placeholder-color: null !default;

@@ -1,0 +1,121 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$navbar-border-bottom-width: 1px !default;
+$navbar-border-left-width: 0 !default;
+$navbar-border-right-width: 0 !default;
+$navbar-border-top-width: 0 !default;
+
+$navbar-height: 48px !default;
+$navbar-link-line-height: 24px !default;
+$navbar-margin-bottom: 0 !default;
+$navbar-padding-horizontal: 15px !default;
+$navbar-padding-vertical: (($navbar-height - $navbar-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
+
+$navbar-desktop-height: 60px !default;
+$navbar-desktop-link-line-height: 28px !default;
+$navbar-desktop-padding-horizontal: (($grid-gutter-width / 2)) !default;
+$navbar-desktop-padding-vertical: (($navbar-desktop-height - $navbar-desktop-link-line-height - $navbar-border-bottom-width - $navbar-border-top-width) / 2) !default;
+
+$navbar-link-active-bottom-border-width: $navbar-border-bottom-width + 1px !default;
+
+$navbar-default-border-bottom-width: $navbar-border-bottom-width !default;
+$navbar-default-border-left-width: $navbar-border-left-width !default;
+$navbar-default-border-right-width: $navbar-border-right-width !default;
+$navbar-default-border-top-width: $navbar-border-top-width !default;
+$navbar-default-border-width: $navbar-default-border-top-width $navbar-default-border-right-width $navbar-default-border-bottom-width $navbar-default-border-left-width !default;
+
+$navbar-default-height: $navbar-height !default;
+
+$navbar-default-desktop-height: $navbar-desktop-height !default;
+
+$navbar-default-padding-horizontal: $navbar-padding-horizontal !default;
+$navbar-default-padding-vertical: ($navbar-default-height - $navbar-link-line-height - $navbar-default-border-bottom-width - $navbar-default-border-top-width) / 2 !default;
+
+$navbar-default-desktop-padding-horizontal: $navbar-default-padding-horizontal !default;
+$navbar-default-desktop-padding-vertical: ($navbar-default-desktop-height - $navbar-desktop-link-line-height - $navbar-default-border-bottom-width - $navbar-default-border-top-width) / 2 !default;
+
+// Skin
+
+$navbar-border-radius: 0 !default;
+$navbar-collapse-absolute-box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.7) !default;
+
+$navbar-link-active-highlight: transparent !default;
+
+$navbar-toggle-icon-bar-color: $nav-link-color !default;
+$navbar-toggle-icon-bar-width: 16px !default;
+
+// Navbar Default
+
+$navbar-default-bg: #FCFEFF !default;
+$navbar-default-border: #E3E6E8 !default;
+$navbar-default-color: $brand-default !default;
+
+$navbar-default-link-color: $brand-default !default;
+$navbar-default-link-hover-bg: transparent !default;
+$navbar-default-link-hover-color: $brand-default !default;
+
+$navbar-default-link-active-bg: transparent !default;
+$navbar-default-link-active-color: $brand-default !default;
+$navbar-default-link-active-highlight: $brand-primary !default;
+
+$navbar-default-link-disabled-bg: transparent !default;
+$navbar-default-link-disabled-color: #CACDD2 !default;
+
+$navbar-default-brand-hover-bg: transparent !default;
+
+$navbar-default-brand-color: $navbar-default-link-color !default;
+$navbar-default-brand-hover-color: $navbar-default-link-hover-color !default;
+
+$navbar-default-collapsible-search-btn-default-bg: $navbar-default-bg !default;
+$navbar-default-collapsible-search-input-bg: $navbar-default-bg !default;
+
+$navbar-default-collapsible-search-highlight: null !default;
+
+$navbar-default-collapsible-search-focus-highlight: null !default;
+
+$navbar-default-link-open-bg: $brand-primary !default;
+$navbar-default-link-open-color: #FFF !default;
+
+$navbar-default-toggle-border-color: $navbar-default-border !default;
+$navbar-default-toggle-hover-bg: transparent !default;
+$navbar-default-toggle-icon-bar-bg: $navbar-default-link-active-color !default;
+
+// Navbar Inverse
+
+$navbar-inverse-bg: $brand-default !default;
+$navbar-inverse-border: $brand-default !default;
+$navbar-inverse-color: #FFF !default;
+
+$navbar-inverse-link-color: #FFF !default;
+$navbar-inverse-link-hover-color: $navbar-inverse-link-color !default;
+
+$navbar-inverse-link-active-bg: transparent !default;
+$navbar-inverse-link-active-color: $navbar-inverse-link-color !default;
+$navbar-inverse-link-active-highlight: $brand-primary !default;
+
+$navbar-inverse-link-disabled-color: #CACDD2 !default;
+
+$navbar-inverse-brand-color: $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color: $navbar-inverse-brand-color !default;
+
+$navbar-inverse-collapsible-search-btn-default-bg: $navbar-inverse-bg !default;
+$navbar-inverse-collapsible-search-btn-default-color: $navbar-inverse-color !default;
+$navbar-inverse-collapsible-search-input-bg: $navbar-inverse-bg !default;
+
+$navbar-inverse-collapsible-search-highlight: null !default;
+
+$navbar-inverse-collapsible-search-focus-highlight: null !default;
+
+$navbar-inverse-link-open-bg: $brand-primary !default;
+$navbar-inverse-link-open-color: #FFF !default;
+
+$navbar-inverse-toggle-border-color: $navbar-inverse-border !default;
+$navbar-inverse-toggle-hover-bg: transparent !default;
+$navbar-inverse-toggle-icon-bar-bg: #FFF !default;

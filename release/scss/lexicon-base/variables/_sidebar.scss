@@ -1,0 +1,38 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$sidebar-padding-bottom: 24px !default;
+$sidebar-padding-left: 24px !default;
+$sidebar-padding-right: 24px !default;
+$sidebar-padding-top: 24px !default;
+
+$sidebar-padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left !default;
+
+$sidebar-navbar-gutter-left: lx-sidebar-navbar-gutter($sidebar-padding-left) !default;
+$sidebar-navbar-gutter-right: lx-sidebar-navbar-gutter($sidebar-padding-right) !default;
+
+// Skin
+
+$sidebar-default-bg: $navbar-default-bg !default;
+$sidebar-default-border: $navbar-default-border !default;
+$sidebar-default-color: $navbar-default-color !default;
+$sidebar-default-panel-bg: $navbar-default-link-active-bg !default;
+
+$sidebar-default-header-actions-link-color: $navbar-default-link-color !default;
+$sidebar-default-header-actions-link-hover-color: $navbar-default-link-hover-color !default;
+$sidebar-default-header-title-color: $navbar-default-link-color !default;
+$sidebar-default-header-title-hover-color: $navbar-default-link-hover-color !default;
+
+$sidebar-inverse-bg: $navbar-inverse-bg !default;
+$sidebar-inverse-border: $navbar-inverse-border !default;
+$sidebar-inverse-color: $navbar-inverse-color !default;
+$sidebar-inverse-panel-bg: $navbar-inverse-link-active-bg !default;
+
+$sidebar-inverse-header-actions-link-color: $navbar-inverse-link-color !default;
+$sidebar-inverse-header-actions-link-hover-color: $navbar-inverse-link-hover-color !default;
+$sidebar-inverse-header-title-color: $navbar-inverse-link-color !default;
+$sidebar-inverse-header-title-hover-color: $navbar-inverse-link-hover-color !default;

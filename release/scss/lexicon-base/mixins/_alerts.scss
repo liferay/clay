@@ -1,0 +1,16 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin color-alert-text($color, $bold-color) {
+	color: $color;
+
+	.alert-link,
+	.close,
+	.lead {
+		color: $bold-color;
+	}
+}

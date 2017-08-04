@@ -1,0 +1,134 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.container-fluid-1280.sidenav-container {
+	padding-left: floor(($grid-gutter-width / 2));
+	padding-right: floor(($grid-gutter-width / 2));
+}
+
+.sidenav-container {
+	position: relative;
+
+	> .sidenav-menu-slider {
+		visibility: hidden;
+		width: 0;
+	}
+
+	> .sidenav-content {
+		left: 0;
+	}
+}
+
+.sidenav-container.open {
+	> .sidenav-menu-slider {
+		visibility: visible;
+	}
+}
+
+.sidenav-content {
+	padding-left: 0;
+	padding-right: 0;
+	position: relative;
+
+	@media (min-width: $grid-float-breakpoint) {
+		@include clearfix;
+
+		position: static;
+	}
+}
+
+.sidenav-menu {
+	height: 100%;
+	position: relative;
+}
+
+.sidenav-menu-slider {
+	overflow: hidden;
+	position: absolute;
+	width: $sidenav-width;
+	z-index: 10;
+}
+
+.sidenav-fixed > .sidenav-menu-slider {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: $zindex-sidenav;
+}
+
+.sidenav-right {
+	> .sidenav-content {
+		left: auto;
+		right: 0;
+	}
+
+	> .sidenav-menu-slider {
+		left: auto;
+		right: 0;
+
+		.sidenav-menu {
+			right: 0;
+		}
+	}
+}
+
+.sidenav-js-fouc > .sidenav-menu-slider {
+	opacity: 0;
+	visibility: hidden;
+}
+
+// JS API Transition
+
+.sidenav-transition {
+	.sidenav-content,
+	.sidenav-menu,
+	.sidenav-menu-slider {
+		transition: $sidenav-transition;
+	}
+}
+
+// Simple Sidenav Transition
+
+.sidenav-transition {
+	transition: $sidenav-transition;
+}
+
+// Simple Sidenav
+
+.sidenav-fixed.sidenav-menu-slider {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	top: 0;
+	visibility: hidden;
+	width: 0;
+
+	&.open {
+		visibility: visible;
+		width: $sidenav-width;
+	}
+
+	.sidenav-menu {
+		position: absolute;
+	}
+}
+
+.sidenav-menu-slider {
+	.sidenav-menu {
+		width: $sidenav-width;
+	}
+
+	&.sidenav-right {
+		left: auto;
+		right: 0;
+
+		.sidenav-menu {
+			right: 0;
+		}
+	}
+}

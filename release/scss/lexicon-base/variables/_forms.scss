@@ -1,0 +1,94 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$input-border-bottom-width: 1px !default;
+$input-border-left-width: 1px !default;
+$input-border-right-width: 1px !default;
+$input-border-top-width: 1px !default;
+$input-border-width: $input-border-top-width $input-border-right-width $input-border-bottom-width $input-border-left-width !default;
+
+$input-bg-focus: null !default;
+$input-box-shadow: null !default;
+$input-box-shadow-focus: null !default;
+$input-color-focus: null !default;
+$input-color-placeholder-focus: null !default;
+$input-font-size: null !default;
+$input-padding-horizontal: null !default;
+$input-padding-vertical: null !default;
+
+$input-group-constrain-line-height: $input-height-base - $input-border-top-width - $input-border-bottom-width !default;
+
+$input-group-constrain-lg-line-height: $input-height-large - $input-border-top-width - $input-border-bottom-width !default;
+$input-group-constrain-sm-line-height: $input-height-small - $input-border-top-width - $input-border-bottom-width !default;
+
+$input-border-disabled: null !default;
+$input-color-disabled: null !default;
+$input-color-placeholder-disabled: null !default;
+$input-opacity-disabled: null !default;
+
+$input-label-color: null !default;
+$input-label-focus-color: null !default;
+$input-label-font-size: null !default;
+$input-label-font-weight: null !default;
+$input-label-margin-bottom: null !default;
+
+$input-label-reference-mark-spacer: 0 !default;
+$input-label-reference-mark-vertical-alignment: top !default;
+
+$input-help-block-font-size: null !default;
+
+$input-readonly-bg: null !default;
+$input-readonly-border: null !default;
+$input-readonly-color: null !default;
+$input-readonly-cursor: null !default;
+
+$input-textarea-height: null !default;
+
+$input-group-addon-border-radius: null !default;
+$input-group-addon-border-radius-large: null !default;
+$input-group-addon-border-radius-small: null !default;
+$input-group-addon-color: null !default;
+
+$input-danger-bg: null !default;
+$input-danger-bg-focus: null !default;
+$input-danger-border: null !default;
+$input-danger-border-focus: null !default;
+$input-danger-box-shadow: null !default;
+$input-danger-box-shadow-focus: null !default;
+$input-danger-color: null !default;
+$input-danger-color-focus: null !default;
+
+$input-danger-checkbox-label-color: null !default;
+$input-danger-label-color: null !default;
+
+$input-success-bg: null !default;
+$input-success-bg-focus: null !default;
+$input-success-border: null !default;
+$input-success-border-focus: null !default;
+$input-success-box-shadow: null !default;
+$input-success-box-shadow-focus: null !default;
+$input-success-color: null !default;
+$input-success-color-focus: null !default;
+
+$input-success-checkbox-label-color: null !default;
+$input-success-label-color: null !default;
+
+$input-warning-bg: null !default;
+$input-warning-bg-focus: null !default;
+$input-warning-border: null !default;
+$input-warning-border-focus: null !default;
+$input-warning-box-shadow: null !default;
+$input-warning-box-shadow-focus: null !default;
+$input-warning-color: null !default;
+$input-warning-color-focus: null !default;
+
+$input-warning-checkbox-label-color: null !default;
+$input-warning-label-color: null !default;
+
+$zindex-input-group-hover: 3 !default;
+
+$zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4

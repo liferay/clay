@@ -1,0 +1,390 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.modal-dialog {
+	@media (max-width: $grid-float-breakpoint-max) {
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+.modal-content {
+	box-shadow: $modal-box-shadow;
+	overflow: auto;
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		border-radius: 0;
+		border-width: 0;
+		box-shadow: none;
+		height: 100%;
+	}
+}
+
+.modal-header {
+	background-color: $modal-header-bg;
+	border-color: $modal-header-border-color;
+	color: $modal-header-color;
+
+	@if (variable-exists(atlas-theme)) {
+		text-align: center;
+
+		@media (min-width: $grid-float-breakpoint) {
+			background-color: $modal-desktop-header-bg;
+			color: $modal-desktop-header-color;
+		}
+	}
+}
+
+.modal-body {
+	background-color: $modal-body-bg;
+	color: $modal-body-color;
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		bottom: $modal-footer-height;
+		left: 0;
+		overflow: auto;
+		position: absolute;
+		right: 0;
+		top: $modal-header-height;
+	}
+
+	&.inline-scroller {
+		-webkit-overflow-scrolling: touch;
+		overflow: auto;
+		padding: $modal-inner-padding;
+	}
+}
+
+.modal-body-no-header {
+	top: 0;
+}
+
+.modal-body-no-footer {
+	bottom: 0;
+}
+
+.modal-footer {
+	background-color: $modal-footer-bg;
+	border-color: $modal-footer-border-color;
+
+	@if (variable-exists(modal-footer-box-shadow)) {
+		box-shadow: $modal-footer-box-shadow;
+	}
+
+	clear: both;
+	color: $modal-footer-color;
+	text-align: left;
+
+	@media (max-width: $grid-float-breakpoint-max) {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+	}
+
+	@if (variable-exists(atlas-theme)) {
+		@media (min-width: $grid-float-breakpoint) {
+			background-color: $modal-desktop-footer-bg;
+			color: $modal-desktop-footer-color;
+			position: relative;
+		}
+	}
+}
+
+// Modal Title
+
+.modal-title {
+	display: block;
+
+	@if (variable-exists(atlas-theme)) {
+		font-size: 19px;
+		font-weight: normal;
+	}
+
+	text-align: center;
+
+	@include text-overflow;
+}
+
+@if (variable-exists(atlas-theme)) {
+	h1.modal-title {
+		font-size: $font-size-h1;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h1;
+		}
+	}
+
+	h2.modal-title {
+		font-size: $font-size-h2;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h2;
+		}
+	}
+
+	h3.modal-title {
+		font-size: $font-size-h3;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h3;
+		}
+	}
+
+	h4.modal-title {
+		font-size: $font-size-h4;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h4;
+		}
+	}
+
+	h5.modal-title {
+		font-size: $font-size-h5;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h5;
+		}
+	}
+
+	h6.modal-title {
+		font-size: $font-size-h6;
+
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $font-size-desktop-h6;
+		}
+	}
+}
+
+// Modal Buttons
+
+.modal-primary-action-button {
+	float: left;
+	font-size: ($font-size-base * 1.5);
+	font-weight: $close-font-weight;
+	line-height: 1;
+	text-shadow: $close-text-shadow;
+}
+
+button.modal-primary-action-button {
+	-webkit-appearance: none;
+	background: transparent;
+	border-width: 0;
+	cursor: pointer;
+	padding: 0;
+}
+
+.modal-header {
+	.close,
+	.modal-primary-action-button {
+		background-color: transparent;
+		background-image: none;
+		box-shadow: none;
+		color: $modal-header-close-color;
+		margin-top: -1px;
+		opacity: 1;
+
+		@if (variable-exists(atlas-theme)) {
+			height: $modal-title-line-height;
+			line-height: $modal-title-line-height;
+			width: $modal-title-line-height;
+		}
+
+		@media (min-width: $grid-float-breakpoint) {
+			@if (variable-exists(atlas-theme)) {
+				color: $modal-desktop-header-close-color;
+			}
+		}
+	}
+
+	.close,
+	.modal-primary-action-button {
+		> span {
+			opacity: $modal-header-close-icon-opacity;
+		}
+
+		.lexicon-icon {
+			opacity: $modal-header-close-lexicon-icon-opacity;
+		}
+
+		&:focus,
+		&:hover {
+			> span {
+				opacity: $modal-header-close-icon-opacity * $modal-header-close-opacity-modifier;
+			}
+
+			.lexicon-icon {
+				opacity: $modal-header-close-lexicon-icon-opacity * $modal-header-close-opacity-modifier;
+			}
+		}
+
+		&:active {
+			background-color: transparent;
+			border-color: transparent;
+			box-shadow: none;
+			color: $modal-header-close-color;
+
+			@media (min-width: $grid-float-breakpoint) {
+				@if (variable-exists(atlas-theme)) {
+					color: $modal-desktop-header-close-color;
+				}
+			}
+		}
+	}
+}
+
+// Modal Iframe
+
+.modal-iframe {
+	iframe {
+		border-width: 0;
+		float: left;
+		height: 300px;
+		width: 100%;
+	}
+
+	.modal-body {
+		padding: 0;
+	}
+}
+
+.modal-body-iframe {
+	padding: 0;
+
+	iframe {
+		border-width: 0;
+		float: left;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+// Modal Full Screen
+
+.modal-full-screen {
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: auto;
+
+	@media (min-width: $grid-float-breakpoint) {
+		bottom: 45px;
+		left: 45px;
+		right: 45px;
+		top: 45px;
+	}
+
+	.modal-content {
+		border-color: $modal-content-border-color;
+		border-radius: 0;
+		border-width: 0;
+		height: 100%;
+
+		@media (min-width: $grid-float-breakpoint) {
+			border-radius: 6px;
+			border-width: 1px;
+		}
+	}
+
+	.modal-body {
+		bottom: $modal-footer-height;
+		left: 0;
+		overflow: auto;
+		position: absolute;
+		right: 0;
+		top: $modal-header-height;
+
+		@media (min-width: $grid-float-breakpoint) {
+			bottom: $modal-desktop-footer-height;
+			top: $modal-desktop-header-height;
+		}
+	}
+
+	.modal-body-no-footer {
+		bottom: 0;
+	}
+
+	.modal-body-no-header {
+		top: 0;
+	}
+
+	.modal-footer {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: auto;
+
+		@media (min-width: $grid-float-breakpoint) {
+			padding: $modal-inner-padding;
+		}
+	}
+}
+
+.modal-inverse {
+	a,
+	.btn-link {
+		color: $modal-inverse-link-color;
+	}
+
+	.modal-content {
+		background-color: $modal-inverse-content-bg;
+		border-color: $modal-inverse-content-border-color;
+	}
+
+	.modal-header {
+		background-color: $modal-inverse-header-bg;
+		border-color: $modal-inverse-header-border-color;
+		color: $modal-inverse-header-color;
+
+		@if (variable-exists(atlas-theme)) {
+			@media (min-width: $grid-float-breakpoint) {
+				background-color: $modal-inverse-desktop-header-bg;
+				border-color: $modal-inverse-desktop-header-border-color;
+				color: $modal-inverse-desktop-header-color;
+			}
+		}
+
+		.close,
+		.modal-primary-action-button {
+			color: $modal-inverse-header-close-color;
+
+			@if (variable-exists(atlas-theme)) {
+				@media screen and (min-width: $grid-float-breakpoint) {
+					color: $modal-inverse-desktop-header-close-color;
+				}
+			}
+		}
+	}
+
+	.modal-body {
+		background-color: $modal-inverse-body-bg;
+		color: $modal-inverse-body-color;
+	}
+
+	.modal-footer {
+		background-color: $modal-inverse-footer-bg;
+		border-color: $modal-inverse-footer-border-color;
+		color: $modal-inverse-footer-color;
+
+		@if (variable-exists(atlas-theme)) {
+			@media (min-width: $grid-float-breakpoint) {
+				background-color: $modal-inverse-desktop-footer-bg;
+				border-color: $modal-inverse-desktop-footer-border-color;
+				color: $modal-inverse-desktop-footer-color;
+			}
+		}
+	}
+}

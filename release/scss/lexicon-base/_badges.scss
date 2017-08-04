@@ -1,0 +1,243 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.badge {
+	border-radius: 100px;
+	border-style: $badge-border-style;
+	border-width: $badge-border-width;
+	font-size: $badge-font-size;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	max-width: 100%;
+	padding-bottom: $badge-padding-bottom;
+	padding-left: $badge-padding-left;
+	padding-right: $badge-padding-right;
+	padding-top: $badge-padding-top;
+	white-space: normal;
+	word-wrap: break-word;
+
+	@if (variable-exists(badge-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $badge-desktop-font-size;
+		}
+	}
+
+	a {
+		color: $badge-color;
+		text-decoration: $badge-link-text-decoration;
+
+		&:focus,
+		&:hover {
+			color: $badge-link-hover-color;
+			text-decoration: $badge-link-hover-text-decoration;
+		}
+	}
+
+	[class*="icon-"] {
+		font-size: 0.9em;
+		text-decoration: none;
+	}
+
+	.glyphicon {
+		font-size: 0.8em;
+		top: 0;
+		vertical-align: middle;
+	}
+}
+
+.badge-lg {
+	font-size: $badge-lg-font-size;
+	padding-bottom: $badge-lg-padding-bottom;
+	padding-left: $badge-lg-padding-left;
+	padding-right: $badge-lg-padding-right;
+	padding-top: $badge-lg-padding-top;
+
+	@if (variable-exists(badge-lg-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $badge-lg-desktop-font-size;
+		}
+	}
+}
+
+.badge-sm {
+	font-size: $badge-sm-font-size;
+	padding-bottom: $badge-sm-padding-bottom;
+	padding-left: $badge-sm-padding-left;
+	padding-right: $badge-sm-padding-right;
+	padding-top: $badge-sm-padding-top;
+
+	@if (variable-exists(badge-sm-desktop-font-size)) {
+		@media (min-width: $grid-float-breakpoint) {
+			font-size: $badge-sm-desktop-font-size;
+		}
+	}
+}
+
+// Lexicon Icons in Badges
+
+.badge .lexicon-icon {
+	height: $badge-lexicon-icon-height;
+	margin-left: 2px;
+	width: $badge-lexicon-icon-width;
+}
+
+.badge-lg .lexicon-icon {
+	height: $badge-lg-lexicon-icon-height;
+	margin-left: 4px;
+	width: $badge-lg-lexicon-icon-width;
+}
+
+.badge-sm .lexicon-icon {
+	height: $badge-sm-lexicon-icon-height;
+	width: $badge-sm-lexicon-icon-width;
+}
+
+// Skins
+
+.badge-danger {
+	background-color: $badge-danger-bg;
+	border-color: $badge-danger-border;
+	color: $badge-danger-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $badge-danger-hover-bg;
+			border-color: $badge-danger-hover-border;
+			color: $badge-danger-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-danger-color;
+
+		&:focus,
+		&:hover {
+			color: $badge-danger-hover-color;
+		}
+	}
+}
+
+.badge-default {
+	background-color: $badge-default-bg;
+	border-color: $badge-default-border;
+	color: $badge-default-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $badge-default-hover-bg;
+			border-color: $badge-default-hover-border;
+			color: $badge-default-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-default-color;
+
+		&:focus,
+		&:hover {
+			color: $badge-default-hover-color;
+		}
+	}
+}
+
+.badge-info {
+	background-color: $badge-info-bg;
+	border-color: $badge-info-border;
+	color: $badge-info-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $badge-info-hover-bg;
+			border-color: $badge-info-hover-border;
+			color: $badge-info-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-info-color;
+
+		&:focus,
+		&:hover {
+			color: $badge-info-hover-color;
+		}
+	}
+}
+
+.badge-primary {
+	background-color: $badge-primary-bg;
+	border-color: $badge-primary-border;
+	color: $badge-primary-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $badge-primary-hover-bg;
+			border-color: $badge-primary-hover-border;
+			color: $badge-primary-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-primary-color;
+
+		&:focus,
+		&:hover {
+			color: $badge-primary-hover-color;
+		}
+	}
+}
+
+.badge-success {
+	background-color: $badge-success-bg;
+	border-color: $badge-success-border;
+	color: $badge-success-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $badge-success-hover-bg;
+			border-color: $badge-success-hover-border;
+			color: $badge-success-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-success-color;
+
+		&:focus,
+		&:hover {
+			color: $badge-success-hover-color;
+		}
+	}
+}
+
+.badge-warning {
+	background-color: $badge-warning-bg;
+	border-color: $badge-warning-border;
+	color: $badge-warning-color;
+
+	&[href] {
+		&:focus,
+		&:hover {
+			background-color: $badge-warning-hover-bg;
+			border-color: $badge-warning-hover-border;
+			color: $badge-warning-hover-color;
+		}
+	}
+
+	a {
+		color: $badge-warning-color;
+
+		&:focus,
+		&:hover {
+			color: $badge-warning-hover-color;
+		}
+	}
+}

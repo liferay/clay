@@ -1,0 +1,99 @@
+/**
+* Lexicon 1.0.24
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.breadcrumb {
+	border-radius: $breadcrumb-border-radius;
+
+	&:after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+
+	a {
+		color: $breadcrumb-link-color;
+		text-decoration: $breadcrumb-link-text-decoration;
+
+		&:focus,
+		&:hover {
+			color: $breadcrumb-link-hover-color;
+			text-decoration: $breadcrumb-link-hover-text-decoration;
+		}
+	}
+
+	> li {
+		float: left;
+		font-size: $breadcrumb-font-size;
+		font-weight: $breadcrumb-font-weight;
+		max-width: 150px;
+
+		@include text-overflow;
+
+		text-transform: $breadcrumb-text-transform;
+
+		@media (min-width: $grid-float-breakpoint) {
+			max-width: 300px;
+		}
+
+		+ li:before {
+			content: $breadcrumb-separator;
+			float: left;
+			font-family: $breadcrumb-separator-font-family;
+			font-weight: $breadcrumb-separator-font-weight;
+			padding-left: 0.4em;
+			padding-right: 0.4em;
+		}
+	}
+
+	> .active {
+		font-weight: $breadcrumb-active-font-weight;
+	}
+}
+
+.breadcrumb-horizontal {
+	> li {
+		margin-right: 0.5em;
+		position: relative;
+
+		+ li {
+			padding-left: 1em;
+		}
+
+		+ li:before {
+			background-image: $breadcrumb-separator-svg-icon;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			content: '';
+			display: block;
+			float: left;
+			height: $breadcrumb-separator-svg-icon-height;
+			left: 0;
+			margin-top: -$breadcrumb-separator-svg-icon-height / 2;
+			padding: 0;
+			position: absolute;
+			top: 50%;
+			width: $breadcrumb-separator-svg-icon-width;
+		}
+	}
+}
+
+.breadcrumb-vertical {
+	> li {
+		display: block;
+		float: none;
+		max-width: none;
+	}
+
+	> li:before,
+	> li + li:before {
+		color: $breadcrumb-color;
+		content: $breadcrumb-vertical-separator;
+		float: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
