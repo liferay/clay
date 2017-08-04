@@ -45,7 +45,11 @@ label,
 
 .form-control {
 	border-width: $input-border-width;
-	font-size: $input-font-size;
+
+	@if not ($input-font-size == $font-size-base) {
+		font-size: $input-font-size;
+	}
+
 	height: $input-height;
 
 	@if not ($input-padding-y == $input-btn-padding-y) {
@@ -161,7 +165,10 @@ fieldset[disabled] label {
 // Input Sizes
 
 .form-control-lg {
-	font-size: $input-font-size-lg;
+	@if not ($input-font-size-lg == $font-size-lg) {
+		font-size: $input-font-size-lg;
+	}
+
 	height: $input-height-lg;
 
 	@if not ($input-padding-y-lg == $input-btn-padding-y-lg) {
@@ -180,7 +187,10 @@ fieldset[disabled] label {
 }
 
 .form-control-sm {
-	font-size: $input-font-size-sm;
+	@if not ($input-font-size-sm == $font-size-sm) {
+		font-size: $input-font-size-sm;
+	}
+
 	height: $input-height-sm;
 
 	@if not ($input-padding-y-sm == $input-btn-padding-y-sm) {
