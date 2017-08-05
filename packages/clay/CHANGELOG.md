@@ -1,3 +1,55 @@
+### v2.0.0-alpha.4 - August 4, 2017
+* Breaking: Forms rename `$input-color-placeholder-focus`, `$input-border-color-disabled`, `$input-bg-disabled`, `$input-color-disabled`, `$input-color-placeholder-disabled`, `$input-opacity-disabled`, `$input-label-color-focus`, `$input-color-focus`, `$input-box-shadow-focus`, `$input-danger-bg-focus`, `$input-danger-border-color-focus`, `$input-danger-box-shadow-focus`, `$input-danger-color-focus`, `$input-success-bg-focus`, `$input-success-border-color-focus`, `$input-success-box-shadow-focus`, `$input-success-color-focus`, `$input-warning-bg-focus`, `$input-warning-border-color-focus`, `$input-warning-box-shadow-focus`, `$input-warning-color-focus` to `$input-placeholder-focus-color`, `$input-disabled-border-color`, `$input-disabled-bg`, `$input-disabled-color`, `$input-placeholder-disabled-color`, `$input-disabled-opacity`, `$input-label-focus-color`, `$input-focus-color`, `$input-focus-box-shadow`, `$input-danger-focus-bg`, `$input-danger-focus-border-color`, `$input-danger-focus-box-shadow`, `$input-danger-focus-color`, `$input-success-focus-bg`, `$input-success-focus-border-color`, `$input-success-focus-box-shadow`, `$input-success-focus-color`, `$input-warning-focus-bg`, `$input-warning-focus-border-color`, `$input-warning-focus-box-shadow`, `$input-warning-focus-color`
+* Breaking: Button Group remove old split button dropdown styles and `.btn-monospaced` inside `.btn-group-sm` and `.btn-group-lg` should have no padding
+* Breaking: Button Action rename `$btn-fixed-spacer-x`, `$btn-fixed-spacer-y` to `$btn-action-fixed-spacer-x`, `$btn-action-fixed-spacer-y`
+* Breaking: Button Action restructure css and renamed  `.btn-bottom-left`, `.btn-bottom-right`, `.btn-top-left`, `.btn-top-right` to `.btn-action-bottom-left`, `.btn-action-bottom-right`, `.btn-action-top-left`, `.btn-action-top-right` respectively
+* Breaking: Button Action removed `$btn-action-size`, `$btn-action-size-mobile` use `.btn-monospaced` instead
+* Breaking: Button rename `$input-btn-font-size-*` to `$btn-font-size-*`
+* Breaking: Alert rename `$alert-lead-margin-right` to `$alert-lead-spacer-x` and add spacing between lexicon-icon's and leads
+* Breaking: Move `.rounded` border radius utilities to _utilities.scss
+* Breaking: Sticker renamed `$sticker-gutter-width` to `$sticker-inside-offset`, added `$sticker-outside-offset`, `$sticker-outside-offset-sm`, `$sticker-outside-offset-lg`, and sticker sizes should be positioned better with `.sticker-outside`
+* Breaking: Atlas globals removed `$box-shadow-default-*`
+* Breaking: Remove global `$inverse-*` variables
+* Breaking: Sidebar rename `.sidebar-inverse`, `.sidebar-inverse-bg` to `.sidebar-dark`, `.sidebar-dark-bg`
+* Breaking: Sidebar rename `$sidebar-inverse-*-*` to `$sidebar-dark-*-*`
+* Breaking: Dropdown rename `$dropdown-sub-header-*` to `$dropdown-subheader-*` and rename `.dropdown-sub-header` to `.dropdown-subheader` to keep inline with BS4 naming
+* New: Form Select Element added `$input-select-icon-disabled-color`, `$input-select-icon-disabled`
+* New: Form Label added option to configure `$input-label-disabled-color`
+* New: Lexicon Icons autosize, custom-size, order-arrow, and pages-tree
+* New: Dropdown added `$dropdown-link-active-font-weight`
+* New: Button Toolbar added `$btn-toolbar-spacer-x`, `$btn-toolbar-spacer-y`
+* New: Button added `.btn-monospaced` and options to configure `$btn-monospaced-size`, `$btn-monospaced-size-xl`, `$btn-monospaced-size-lg`, `$btn-monospaced-size-sm`, `$btn-monospaced-size-mobile`, `$btn-monospaced-size-xl-mobile`, `$btn-monospaced-size-lg-mobile`, `$btn-monospaced-size-sm-mobile`
+* New: Label added `$label-anchor-text-decoration`, `$label-anchor-hover-text-decoration`
+* New: Alert added `$alert-close-margin-left`
+* New: List Group rename `.list-group-heading` to `.list-group-header` and add `.list-group-subtitle`
+* New: List Group re-add `$list-group-header-bg`, `$list-group-header-color`, `$list-group-header-font-weight` and add `$list-group-header-font-size`, `$list-group-header-padding-x`, `$list-group-header-padding-y`, `$list-group-header-text-transform`, `$list-group-subtitle-color`, `$list-group-subtitle-font-size`, `$list-group-subtitle-font-weight`, `$list-group-subtitle-text-transform`
+* New: Dropdown added `$dropdown-horizontal-min-height`
+* New: Panel added `$panel-header-offset-border-radius`, `$panel-footer-offset-border-radius` to handle bleeding panel-header backgrounds over border
+* Fix: Form Inline Autofit form-control overflowing in FF
+* Update: Atlas Toggle Switch colors to Clay V2
+* Update: Atlas Custom Forms to Clay V2 styles
+* Update: Form styles to Clay V2
+* Update: Forms don't output input font-sizes if global `$font-size-*` is the same as `$input-font-size-*`
+* Update: Atlas Dropdown to Clay V2 styles
+* Update: `.btn-group-lg` and `.btn-group-sm` styles should apply to nested `.btn-groups`
+* Update: Button colors and sizes to Clay V2
+* Update: Sticker sizes and colors to Clay V2
+* Update: Atlas Label styles to match Clay V2
+* Update: Atlas Badge to Clay V2 styles
+* Update: Fixes(#356) More Atlas Alert to Clay V2 color updates
+* Update: Atlas global theme colors to Clay V2 colors
+* Update: Sticker with border radius utilities should apply to `.img-fluid`
+* Update: Sticker font-size shouldn't inherit from Label component
+* Update: Sticker use flexbox to center content, remove overflow: hidden, and add border-radius to `.img-fluid` inside `.sticker`
+* Update: Timelines Atlas variables shouldn't rely on `$inverse-*` variables
+* Update: Sidebar Atlas variables shouldn't rely on `$inverse-*` variables
+* Update: Dropdown `.dropdown-subheader`'s should be vertically centered in `.dropdown-menu-horizontal`
+* Update: List Group removed commented code
+* Update: Atlas md and xl breakpoints for `.container` and `.container-fluid-max-*` to 800px and 1280px respectively
+* Update: Dropdown Horizontal shouldn't have margin top
+* Update: Lexicon Base Panel change info header color
+* Update: Atlas Panels color to make it look like V1
+
 ### v2.0.0-alpha.3 - July 31, 2017
 * Breaking: Dropdown removed `$dropdown-padding-bottom`, `$dropdown-padding-left`, `$dropdown-padding-right`, `$dropdown-padding-top`
 * Breaking: Rename `$inline-scroller-height` to `$inline-scroller-max-height`
