@@ -1,0 +1,48 @@
+/**
+* Clay 2.0.0-alpha.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$sidebar-link-color: null !default;
+$sidebar-link-hover-color: null !default;
+
+$sidebar-padding-bottom: 24px !default; // 24px
+$sidebar-padding-left: 24px !default; // 24px
+$sidebar-padding-right: 24px !default; // 24px
+$sidebar-padding-top: 24px !default; // 24px
+
+$sidebar-padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left !default;
+
+// Sidebar Light
+
+$sidebar-light-bg: darken($body-bg, 3%) !default;
+$sidebar-light-border-color: darken($sidebar-light-bg, 6.5%) !default;
+$sidebar-light-color: #777 !default;
+$sidebar-light-panel-bg: darken($sidebar-light-bg, 6.5%) !default;
+
+$sidebar-light-actions-link-color: #777 !default;
+$sidebar-light-actions-link-hover-color: #333 !default;
+
+$sidebar-light-header-title-color: #777 !default;
+$sidebar-light-header-title-hover-color: #333 !default;
+
+$sidebar-light-link-color: null !default;
+$sidebar-light-link-hover-color: null !default;
+
+// Sidebar Inverse
+
+$sidebar-dark-bg: #222 !default;
+$sidebar-dark-border-color: darken($sidebar-dark-bg, 10%) !default;
+$sidebar-dark-color: lighten($gray-400, 15%) !default;
+$sidebar-dark-panel-bg: darken($sidebar-dark-bg, 10%) !default;
+
+$sidebar-dark-actions-link-color: lighten($gray-400, 15%) !default;
+$sidebar-dark-actions-link-hover-color: #fff !default;
+
+$sidebar-dark-header-title-color: lighten($gray-400, 15%) !default;
+$sidebar-dark-header-title-hover-color: #fff !default;
+
+$sidebar-dark-link-color: null !default;
+$sidebar-dark-link-hover-color: null !default;

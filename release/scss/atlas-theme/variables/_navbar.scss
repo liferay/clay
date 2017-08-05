@@ -1,0 +1,89 @@
+/**
+* Clay 2.0.0-alpha.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$navbar-height: 3.75rem !default; // 60px
+$navbar-height-mobile: 3rem !default; // 48px
+
+$navbar-border-bottom-width: 0.0625rem !default; // 1px
+$navbar-border-left-width: 0 !default;
+$navbar-border-right-width: 0 !default;
+$navbar-border-top-width: 0 !default;
+
+$navbar-padding-x: 0 !default;
+$navbar-padding-y: 0 !default;
+
+$navbar-link-padding-x: 0.9375rem !default; // 15px
+$navbar-link-padding-x-mobile: 0.875rem !default; // 14px
+
+$navbar-brand-color: $nav-link-color !default;
+$navbar-brand-hover-color: $nav-link-hover-color !default;
+$navbar-brand-font-size: $font-size-lg !default;
+$navbar-brand-padding-x: $navbar-link-padding-x !default; // 15px
+$navbar-brand-padding-x-mobile: $navbar-link-padding-x-mobile !default; // 14px
+$navbar-brand-padding-y: ($navbar-height - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base)) / 2 !default;
+$navbar-brand-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-brand-font-size * $line-height-base)) / 2 !default;
+
+$navbar-nav-item-dropdown-margin-top: 0 !default;
+
+$navbar-toggler-height: 2rem !default; // 32px
+$navbar-toggler-margin-x: $navbar-link-padding-x !default; // 15px
+$navbar-toggler-margin-x-mobile: $navbar-link-padding-x-mobile !default; // 14px
+$navbar-toggler-padding-x: 0.625rem !default; // 15px
+$navbar-toggler-padding-y: 0 !default;
+
+$navbar-toggler-link-margin-x: 0 !default;
+$navbar-toggler-link-padding-x-mobile: $navbar-link-padding-x-mobile !default; // 14px
+
+$navbar-collapse-absolute-box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.7) !default;
+
+// Navbar Light
+
+$navbar-light-bg: #FCFEFF !default;
+$navbar-light-hover-bg: transparent !default;
+$navbar-light-active-bg: transparent !default;
+$navbar-light-disabled-bg: transparent !default;
+
+$navbar-light-border-color: #E3E6E8 !default;
+
+$navbar-light-color: map-get($theme-colors, secondary) !default;
+$navbar-light-hover-color: map-get($theme-colors, secondary) !default;
+$navbar-light-active-color: map-get($theme-colors, secondary) !default;
+$navbar-light-disabled-color: #CACDD2 !default;
+
+$navbar-light-brand-bg: transparent !default;
+$navbar-light-brand-hover-bg: transparent !default;
+$navbar-light-brand-color: $navbar-light-color !default;
+$navbar-light-brand-hover-color: $navbar-light-hover-color !default;
+
+$navbar-light-active-highlight: map-get($theme-colors, primary) !default;
+
+$navbar-light-toggler-border-color: $navbar-light-border-color !default;
+
+$collapse-basic-search-transparent-light-btn-focus-color: $navbar-light-active-highlight !default;
+$collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active-highlight !default;
+$collapse-basic-search-transparent-light-focus-highlight: $navbar-light-active-highlight !default;
+
+// Navbar Dark
+
+$navbar-dark-bg: map-get($theme-colors, secondary) !default;
+
+$navbar-dark-color: #FFF !default;
+$navbar-dark-hover-color: $navbar-dark-color !default;
+$navbar-dark-active-color: $navbar-dark-color !default;
+$navbar-dark-disabled-color: #CACDD2 !default;
+
+$navbar-dark-brand-color: $navbar-dark-color !default;
+$navbar-dark-brand-hover-color: $navbar-dark-brand-color !default;
+
+$navbar-dark-active-highlight: #2B4259 !default;
+
+$navbar-dark-toggler-border-color: #FFF !default;
+
+$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-dark-active-highlight !default;
+$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-dark-active-highlight !default;
+$collapse-basic-search-transparent-inverse-input-placeholder-focus-color: $navbar-dark-active-highlight !default;
+$collapse-basic-search-transparent-inverse-focus-highlight: $navbar-dark-active-highlight !default;

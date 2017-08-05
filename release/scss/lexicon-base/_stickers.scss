@@ -1,0 +1,203 @@
+/**
+* Clay 2.0.0-alpha.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sticker {
+	align-items: center;
+
+	@include border-radius($sticker-border-radius);
+
+	border-style: $sticker-border-style;
+	border-width: $sticker-border-width;
+	color: $sticker-color;
+	display: inline-flex;
+	font-size: $sticker-font-size;
+	font-weight: $sticker-font-weight;
+	justify-content: center;
+
+	@include monospace($sticker-size);
+
+	position: relative;
+	vertical-align: middle;
+
+	img {
+		vertical-align: top;
+	}
+
+	.img-fluid {
+		@include border-radius($sticker-border-radius);
+	}
+
+	&.rounded .img-fluid {
+		border-radius: $rounded-border-radius;
+	}
+
+	&.rounded-circle .img-fluid {
+		border-radius: $rounded-circle-border-radius;
+	}
+
+	&.rounded-0 .img-fluid {
+		border-radius: 0;
+	}
+}
+
+.sticker-overlay {
+	align-items: center;
+
+	@include border-radius($sticker-border-radius);
+
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+// Sticker Positions
+
+.sticker-bottom-left {
+	bottom: $sticker-inside-offset;
+	left: $sticker-inside-offset;
+	position: absolute;
+	right: auto;
+	top: auto;
+}
+
+.sticker-bottom-right {
+	bottom: $sticker-inside-offset;
+	left: auto;
+	position: absolute;
+	right: $sticker-inside-offset;
+	top: auto;
+}
+
+.sticker-top-left {
+	left: $sticker-inside-offset;
+	position: absolute;
+	top: $sticker-inside-offset;
+}
+
+.sticker-top-right {
+	left: auto;
+	position: absolute;
+	right: $sticker-inside-offset;
+	top: $sticker-inside-offset;
+}
+
+.sticker-outside {
+	left: $sticker-outside-offset;
+	top: $sticker-outside-offset;
+
+	&.sticker-sm {
+		left: $sticker-outside-offset-sm;
+		top: $sticker-outside-offset-sm;
+	}
+
+	&.sticker-lg {
+		left: $sticker-outside-offset-lg;
+		top: $sticker-outside-offset-lg;
+	}
+
+	&.sticker-bottom-left {
+		bottom: $sticker-outside-offset;
+		top: auto;
+
+		&.sticker-sm {
+			bottom: $sticker-outside-offset-sm;
+		}
+
+		&.sticker-lg {
+			bottom: $sticker-outside-offset-lg;
+		}
+	}
+
+	&.sticker-bottom-right {
+		bottom: $sticker-outside-offset;
+		left: auto;
+		right: $sticker-outside-offset;
+		top: auto;
+
+		&.sticker-sm {
+			bottom: $sticker-outside-offset-sm;
+			right: $sticker-outside-offset-sm;
+		}
+
+		&.sticker-lg {
+			bottom: $sticker-outside-offset-lg;
+			right: $sticker-outside-offset-lg;
+		}
+	}
+
+	&.sticker-top-right {
+		left: auto;
+		right: $sticker-outside-offset;
+
+		&.sticker-sm {
+			right: $sticker-outside-offset-sm;
+		}
+
+		&.sticker-lg {
+			right: $sticker-outside-offset-lg;
+		}
+	}
+}
+
+// Sticker Sizes
+
+.sticker-sm {
+	font-size: $sticker-font-size-sm;
+
+	@include monospace($sticker-size-sm);
+
+	.lexicon-icon {
+		height: $sticker-font-size-sm;
+		width: $sticker-font-size-sm;
+	}
+}
+
+.sticker-lg {
+	font-size: $sticker-font-size-lg;
+
+	@include monospace($sticker-size-lg);
+
+	.lexicon-icon {
+		height: $sticker-font-size-lg;
+		width: $sticker-font-size-lg;
+	}
+}
+
+.sticker-xl {
+	font-size: $sticker-font-size-xl;
+
+	@include monospace($sticker-size-xl);
+
+	.lexicon-icon {
+		height: $sticker-font-size-xl;
+		width: $sticker-font-size-xl;
+	}
+}
+
+.sticker-xxl {
+	font-size: $sticker-font-size-xxl;
+
+	@include monospace($sticker-size-xxl);
+
+	.lexicon-icon {
+		height: $sticker-font-size-xxl;
+		width: $sticker-font-size-xxl;
+	}
+}
+
+// Sticker Variants
+
+@each $color, $value in $sticker-palette {
+	.sticker-#{$color} {
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
+	}
+}

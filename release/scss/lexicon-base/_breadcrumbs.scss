@@ -1,0 +1,125 @@
+/**
+* Clay 2.0.0-alpha.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.breadcrumb {
+	border-radius: $breadcrumb-border-radius;
+}
+
+.breadcrumb-item {
+	font-size: $breadcrumb-font-size;
+	font-weight: $breadcrumb-font-weight;
+
+	&.active {
+		font-weight: $breadcrumb-active-font-weight;
+	}
+
+	> a,
+	> span {
+		text-transform: $breadcrumb-text-transform;
+	}
+
+	> a {
+		color: $breadcrumb-link-color;
+
+		@if not ($breadcrumb-link-text-decoration == $link-decoration) {
+			text-decoration: $breadcrumb-link-text-decoration;
+		}
+
+		@include hover-focus {
+			color: $breadcrumb-link-hover-color;
+
+			@if not ($breadcrumb-link-hover-text-decoration == $link-hover-decoration) {
+				text-decoration: $breadcrumb-link-hover-text-decoration;
+			}
+		}
+	}
+
+	.dropdown-toggle {
+		text-decoration: none;
+
+		@include hover-focus {
+			text-decoration: none;
+		}
+	}
+
+	+ .breadcrumb-item:before {
+		content: $breadcrumb-divider;
+		float: left;
+		font-family: $breadcrumb-divider-font-family;
+		font-weight: $breadcrumb-divider-font-weight;
+		padding-left: 0.4em;
+		padding-right: 0.4em;
+	}
+}
+
+.breadcrumb-text-truncate {
+	display: inline-block;
+	max-width: $breadcrumb-text-truncate-max-width;
+
+	@include text-truncate;
+
+	vertical-align: bottom;
+
+	@include scale-component {
+		max-width: $breadcrumb-text-truncate-max-width-mobile;
+	}
+}
+
+a > .breadcrumb-text-truncate {
+	text-decoration: $breadcrumb-link-text-decoration;
+
+	@include hover-focus {
+		text-decoration: $breadcrumb-link-hover-text-decoration;
+	}
+}
+
+.breadcrumb-horizontal {
+	.breadcrumb-item {
+		margin-right: 0.5em;
+		position: relative;
+
+		+ .breadcrumb-item {
+			padding-left: 1em;
+		}
+
+		+ .breadcrumb-item:before {
+			background-image: $breadcrumb-divider-svg-icon;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			content: '';
+			display: block;
+			float: left;
+			height: $breadcrumb-divider-svg-icon-height;
+			left: 0;
+			margin-top: -$breadcrumb-divider-svg-icon-height / 2;
+			padding: 0;
+			position: absolute;
+			top: 50%;
+			width: $breadcrumb-divider-svg-icon-width;
+		}
+	}
+}
+
+.breadcrumb-vertical {
+	.breadcrumb-item {
+		display: block;
+		float: none;
+	}
+
+	.breadcrumb-item:before,
+	.breadcrumb-item + .breadcrumb-item:before {
+		color: $breadcrumb-divider-color;
+		content: $breadcrumb-vertical-divider;
+		float: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.breadcrumb-text-truncate {
+		max-width: calc(100% - #{$breadcrumb-text-truncate-icon-spacer-x});
+	}
+}

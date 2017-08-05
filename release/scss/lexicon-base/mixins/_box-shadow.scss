@@ -1,0 +1,14 @@
+/**
+* Clay 2.0.0-alpha.4
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin box-shadow($shadow...) {
+	@if ($enable-shadows) {
+		@if ($shadow != null) {
+			box-shadow: $shadow;
+		}
+	}
+}
