@@ -8481,6 +8481,7 @@ fieldset[disabled] label .form-control {
   }
   .form-inline-autofit .form-control {
     flex: 1;
+    min-width: 10px;
     width: 100%;
   }
   .form-inline-autofit > label,
