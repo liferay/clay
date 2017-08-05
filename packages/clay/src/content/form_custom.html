@@ -14,12 +14,32 @@ section: Components
 	<div class="col-md-12">
 		<h3>Custom Select</h3>
 
+		<div class="alert alert-warning">
+			It's recommended to use <code>select.form-control</code> instead. This is only here for documentation purposes.
+		</div>
+
 		<select class="custom-select">
 			<option selected="">Open this select menu</option>
 			<option value="1">One</option>
 			<option value="2">Two</option>
 			<option value="3">Three</option>
 		</select>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Custom File</h3>
+
+		<div class="alert alert-warning">
+			It's recommended to use <code>.form-file</code> instead. This is here only for documentation purposes.
+			To get <code>custom-file-control</code> styles to display, you'll need to add <code>lang="en"</code> to the html element or set the Content-Language HTTP header.
+		</div>
+
+		<label class="custom-file">
+			<input type="file" id="file2" class="custom-file-input">
+			<span class="custom-file-control"></span>
+		</label>
 	</div>
 </div>
 
@@ -84,21 +104,6 @@ section: Components
 				<input class="form-control" id="customFileText4" placeholder="Choose File..." readonly tabindex="-1" type="text">
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3>Custom File</h3>
-
-		<div class="alert alert-warning">
-			To get <code>custom-file-control</code> styles to display, you'll need to add <code>lang="en"</code> to the html element or set the Content-Language HTTP header.
-		</div>
-
-		<label class="custom-file">
-			<input type="file" id="file2" class="custom-file-input">
-			<span class="custom-file-control"></span>
-		</label>
 	</div>
 </div>
 
