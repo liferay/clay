@@ -1,23 +1,23 @@
-$custom-control-indicator-size: 1.25rem !default; // 20px
+$custom-control-indicator-size: 1.0625rem !default; // 17px
 $custom-control-indicator-bg: transparent !default;
-$custom-control-indicator-border-color: #BCC1C5 !default;
+$custom-control-indicator-border-color: lighten(map-get($theme-colors, secondary), 37%) !default;
 $custom-control-indicator-border-style: solid !default;
-$custom-control-indicator-border-width: 2px !default;
+$custom-control-indicator-border-width: 0.0625rem !default; // 1px
 $custom-control-indicator-box-shadow: none !default;
 
-$custom-control-indicator-active-bg: #65B6F0 !default;
+$custom-control-indicator-active-bg: map-get($theme-colors, primary) !default;
 $custom-control-indicator-active-border-color: $custom-control-indicator-active-bg !default;
-$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 2px rgba(64, 164, 236, 0.5) !default;
+$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 2px lighten(map-get($theme-colors, primary), 21%) !default;
 $custom-control-indicator-checked-border-color: $custom-control-indicator-active-bg !default;
 $custom-control-indicator-indeterminate-border-color: $custom-control-indicator-active-bg !default;
-$custom-control-indicator-disabled-bg: lighten($custom-control-indicator-border-color, 20%) !default;
-$custom-control-indicator-disabled-border-color: lighten($custom-control-indicator-border-color, 15%) !default;
-$custom-control-indicator-disabled-checked-bg: lighten($custom-control-indicator-active-bg, 15%) !default;
-$custom-control-indicator-disabled-checked-border-color: lighten($custom-control-indicator-checked-border-color, 15%) !default;
+$custom-control-indicator-disabled-bg: $input-disabled-bg !default;
+$custom-control-indicator-disabled-border-color: $input-disabled-border-color !default;
+$custom-control-indicator-disabled-checked-bg: lighten($custom-control-indicator-active-bg, 31%) !default;
+$custom-control-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-bg !default;
 
 // Custom Control Description
 
-$custom-control-description-disabled-color: lighten($input-label-color, 15%) !default;
+$custom-control-description-disabled-color: $input-label-disabled-color !default;
 
 // Custom Checkbox
 
@@ -29,7 +29,7 @@ $custom-checkbox-indicator-indeterminate-bg: $custom-control-indicator-active-bg
 
 // Custom Radio
 
-$custom-radio-indicator-icon-checked-bg-size: 0.6em !default; // 12px
+$custom-radio-indicator-icon-checked-bg-size: 0.7em !default; // 11.2px
 
 $custom-radio-indicator-disabled-border-color: $custom-control-indicator-disabled-bg !default;
 $custom-radio-indicator-disabled-checked-border-color: $custom-control-indicator-disabled-checked-border-color !default;
