@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.3</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -211,7 +211,60 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-alpha-3-july-31-2017"><a class="heading-anchor" href="#v2-0-0-alpha-3-july-31-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.3 - July 31, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-alpha-4-august-4-2017"><a class="heading-anchor" href="#v2-0-0-alpha-4-august-4-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.4 - August 4, 2017</h3>
+<ul>
+<li>Breaking: Forms rename <code>$input-color-placeholder-focus</code>, <code>$input-border-color-disabled</code>, <code>$input-bg-disabled</code>, <code>$input-color-disabled</code>, <code>$input-color-placeholder-disabled</code>, <code>$input-opacity-disabled</code>, <code>$input-label-color-focus</code>, <code>$input-color-focus</code>, <code>$input-box-shadow-focus</code>, <code>$input-danger-bg-focus</code>, <code>$input-danger-border-color-focus</code>, <code>$input-danger-box-shadow-focus</code>, <code>$input-danger-color-focus</code>, <code>$input-success-bg-focus</code>, <code>$input-success-border-color-focus</code>, <code>$input-success-box-shadow-focus</code>, <code>$input-success-color-focus</code>, <code>$input-warning-bg-focus</code>, <code>$input-warning-border-color-focus</code>, <code>$input-warning-box-shadow-focus</code>, <code>$input-warning-color-focus</code> to <code>$input-placeholder-focus-color</code>, <code>$input-disabled-border-color</code>, <code>$input-disabled-bg</code>, <code>$input-disabled-color</code>, <code>$input-placeholder-disabled-color</code>, <code>$input-disabled-opacity</code>, <code>$input-label-focus-color</code>, <code>$input-focus-color</code>, <code>$input-focus-box-shadow</code>, <code>$input-danger-focus-bg</code>, <code>$input-danger-focus-border-color</code>, <code>$input-danger-focus-box-shadow</code>, <code>$input-danger-focus-color</code>, <code>$input-success-focus-bg</code>, <code>$input-success-focus-border-color</code>, <code>$input-success-focus-box-shadow</code>, <code>$input-success-focus-color</code>, <code>$input-warning-focus-bg</code>, <code>$input-warning-focus-border-color</code>, <code>$input-warning-focus-box-shadow</code>, <code>$input-warning-focus-color</code></li>
+<li>Breaking: Button Group remove old split button dropdown styles and <code>.btn-monospaced</code> inside <code>.btn-group-sm</code> and <code>.btn-group-lg</code> should have no padding</li>
+<li>Breaking: Button Action rename <code>$btn-fixed-spacer-x</code>, <code>$btn-fixed-spacer-y</code> to <code>$btn-action-fixed-spacer-x</code>, <code>$btn-action-fixed-spacer-y</code></li>
+<li>Breaking: Button Action restructure css and renamed  <code>.btn-bottom-left</code>, <code>.btn-bottom-right</code>, <code>.btn-top-left</code>, <code>.btn-top-right</code> to <code>.btn-action-bottom-left</code>, <code>.btn-action-bottom-right</code>, <code>.btn-action-top-left</code>, <code>.btn-action-top-right</code> respectively</li>
+<li>Breaking: Button Action removed <code>$btn-action-size</code>, <code>$btn-action-size-mobile</code> use <code>.btn-monospaced</code> instead</li>
+<li>Breaking: Button rename <code>$input-btn-font-size-*</code> to <code>$btn-font-size-*</code></li>
+<li>Breaking: Alert rename <code>$alert-lead-margin-right</code> to <code>$alert-lead-spacer-x</code> and add spacing between lexicon-icon&#x2019;s and leads</li>
+<li>Breaking: Move <code>.rounded</code> border radius utilities to _utilities.scss</li>
+<li>Breaking: Sticker renamed <code>$sticker-gutter-width</code> to <code>$sticker-inside-offset</code>, added <code>$sticker-outside-offset</code>, <code>$sticker-outside-offset-sm</code>, <code>$sticker-outside-offset-lg</code>, and sticker sizes should be positioned better with <code>.sticker-outside</code></li>
+<li>Breaking: Atlas globals removed <code>$box-shadow-default-*</code></li>
+<li>Breaking: Remove global <code>$inverse-*</code> variables</li>
+<li>Breaking: Sidebar rename <code>.sidebar-inverse</code>, <code>.sidebar-inverse-bg</code> to <code>.sidebar-dark</code>, <code>.sidebar-dark-bg</code></li>
+<li>Breaking: Sidebar rename <code>$sidebar-inverse-*-*</code> to <code>$sidebar-dark-*-*</code></li>
+<li>Breaking: Dropdown rename <code>$dropdown-sub-header-*</code> to <code>$dropdown-subheader-*</code> and rename <code>.dropdown-sub-header</code> to <code>.dropdown-subheader</code> to keep inline with BS4 naming</li>
+<li>New: Form Select Element added <code>$input-select-icon-disabled-color</code>, <code>$input-select-icon-disabled</code></li>
+<li>New: Form Label added option to configure <code>$input-label-disabled-color</code></li>
+<li>New: Lexicon Icons autosize, custom-size, order-arrow, and pages-tree</li>
+<li>New: Dropdown added <code>$dropdown-link-active-font-weight</code></li>
+<li>New: Button Toolbar added <code>$btn-toolbar-spacer-x</code>, <code>$btn-toolbar-spacer-y</code></li>
+<li>New: Button added <code>.btn-monospaced</code> and options to configure <code>$btn-monospaced-size</code>, <code>$btn-monospaced-size-xl</code>, <code>$btn-monospaced-size-lg</code>, <code>$btn-monospaced-size-sm</code>, <code>$btn-monospaced-size-mobile</code>, <code>$btn-monospaced-size-xl-mobile</code>, <code>$btn-monospaced-size-lg-mobile</code>, <code>$btn-monospaced-size-sm-mobile</code></li>
+<li>New: Label added <code>$label-anchor-text-decoration</code>, <code>$label-anchor-hover-text-decoration</code></li>
+<li>New: Alert added <code>$alert-close-margin-left</code></li>
+<li>New: List Group rename <code>.list-group-heading</code> to <code>.list-group-header</code> and add <code>.list-group-subtitle</code></li>
+<li>New: List Group re-add <code>$list-group-header-bg</code>, <code>$list-group-header-color</code>, <code>$list-group-header-font-weight</code> and add <code>$list-group-header-font-size</code>, <code>$list-group-header-padding-x</code>, <code>$list-group-header-padding-y</code>, <code>$list-group-header-text-transform</code>, <code>$list-group-subtitle-color</code>, <code>$list-group-subtitle-font-size</code>, <code>$list-group-subtitle-font-weight</code>, <code>$list-group-subtitle-text-transform</code></li>
+<li>New: Dropdown added <code>$dropdown-horizontal-min-height</code></li>
+<li>New: Panel added <code>$panel-header-offset-border-radius</code>, <code>$panel-footer-offset-border-radius</code> to handle bleeding panel-header backgrounds over border</li>
+<li>Fix: Form Inline Autofit form-control overflowing in FF</li>
+<li>Update: Atlas Toggle Switch colors to Clay V2</li>
+<li>Update: Atlas Custom Forms to Clay V2 styles</li>
+<li>Update: Form styles to Clay V2</li>
+<li>Update: Forms don&#x2019;t output input font-sizes if global <code>$font-size-*</code> is the same as <code>$input-font-size-*</code></li>
+<li>Update: Atlas Dropdown to Clay V2 styles</li>
+<li>Update: <code>.btn-group-lg</code> and <code>.btn-group-sm</code> styles should apply to nested <code>.btn-groups</code></li>
+<li>Update: Button colors and sizes to Clay V2</li>
+<li>Update: Sticker sizes and colors to Clay V2</li>
+<li>Update: Atlas Label styles to match Clay V2</li>
+<li>Update: Atlas Badge to Clay V2 styles</li>
+<li>Update: Fixes(#356) More Atlas Alert to Clay V2 color updates</li>
+<li>Update: Atlas global theme colors to Clay V2 colors</li>
+<li>Update: Sticker with border radius utilities should apply to <code>.img-fluid</code></li>
+<li>Update: Sticker font-size shouldn&#x2019;t inherit from Label component</li>
+<li>Update: Sticker use flexbox to center content, remove overflow: hidden, and add border-radius to <code>.img-fluid</code> inside <code>.sticker</code></li>
+<li>Update: Timelines Atlas variables shouldn&#x2019;t rely on <code>$inverse-*</code> variables</li>
+<li>Update: Sidebar Atlas variables shouldn&#x2019;t rely on <code>$inverse-*</code> variables</li>
+<li>Update: Dropdown <code>.dropdown-subheader</code>&#x2018;s should be vertically centered in <code>.dropdown-menu-horizontal</code></li>
+<li>Update: List Group removed commented code</li>
+<li>Update: Atlas md and xl breakpoints for <code>.container</code> and <code>.container-fluid-max-*</code> to 800px and 1280px respectively</li>
+<li>Update: Dropdown Horizontal shouldn&#x2019;t have margin top</li>
+<li>Update: Lexicon Base Panel change info header color</li>
+<li>Update: Atlas Panels color to make it look like V1</li>
+</ul>
+<h3 id="v2-0-0-alpha-3-july-31-2017"><a class="heading-anchor" href="#v2-0-0-alpha-3-july-31-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.3 - July 31, 2017</h3>
 <ul>
 <li>Breaking: Dropdown removed <code>$dropdown-padding-bottom</code>, <code>$dropdown-padding-left</code>, <code>$dropdown-padding-right</code>, <code>$dropdown-padding-top</code></li>
 <li>Breaking: Rename <code>$inline-scroller-height</code> to <code>$inline-scroller-max-height</code></li>
