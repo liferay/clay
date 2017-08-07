@@ -53,9 +53,8 @@ $input-disabled-bg: $input-bg !default;
 $input-disabled-border-color: $input-bg !default;
 $input-label-disabled-color: $text-muted !default;
 
-$input-readonly-color: darken($input-color-placeholder, 12%) !default;
-$input-readonly-bg: #FAFAFA !default;
-$input-readonly-border-color: $input-border-color !default;
+$input-readonly-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
+$input-readonly-border-color: $input-readonly-bg !default;
 $input-readonly-cursor: default !default;
 
 $input-danger-border-color: theme-color-level(danger, -9) !default;
