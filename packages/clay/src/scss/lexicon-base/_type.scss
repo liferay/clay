@@ -106,24 +106,9 @@ mark,
 	@include highlight-text();
 }
 
-// Truncate Text
-
-td,
-th {
-	.truncate-text {
-		white-space: normal \9; // IE 8, 9
-	}
-}
-
 // Will be safe to remove once https://github.com/twbs/bootstrap/pull/22739 is merged
-
-.truncate-text {
+.text-truncate {
 	display: block;
-
-	@include text-truncate;
-
-	word-break: normal \9; // IE 8, 9
-	word-wrap: normal;
 }
 
 // Blockquote Variations
