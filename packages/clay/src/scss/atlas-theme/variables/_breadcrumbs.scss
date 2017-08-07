@@ -1,7 +1,5 @@
 $breadcrumb-bg: transparent !default;
 $breadcrumb-font-size: 0.875rem !default; // 14px
-$breadcrumb-font-weight: 400 !default;
-$breadcrumb-text-transform: none !default;
 
 $breadcrumb-link-color: lighten(map-get($theme-colors, secondary), 7%) !default;
 
