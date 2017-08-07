@@ -99,29 +99,6 @@ h6,
 	}
 }
 
-// Contextual backgrounds
-
-@include bg-variant('.bg-default', map-get($theme-colors, secondary));
-
-@if (variable-exists(atlas-theme)) {
-	@include bg-variant('.bg-primary', map-get($theme-colors, primary));
-}
-
-// Contextual Text
-
-a.text-muted {
-	&:hover,
-	&:focus {
-		color: darken($text-muted, 10%);
-	}
-}
-
-@include text-emphasis-variant('.text-default', map-get($theme-colors, secondary));
-
-@if (variable-exists(atlas-theme)) {
-	@include text-emphasis-variant('.text-primary', map-get($theme-colors, primary));
-}
-
 // Marked Text
 
 mark,
