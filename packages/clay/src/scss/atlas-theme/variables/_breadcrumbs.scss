@@ -1,10 +1,12 @@
 $breadcrumb-bg: transparent !default;
-$breadcrumb-font-size: 0.75rem !default; // 12px
-$breadcrumb-font-weight: 500 !default;
-$breadcrumb-text-transform: uppercase !default;
+$breadcrumb-font-size: 0.875rem !default; // 14px
+$breadcrumb-font-weight: 400 !default;
+$breadcrumb-text-transform: none !default;
 
-$breadcrumb-active-color: #C1CBD1 !default;
+$breadcrumb-link-color: lighten(map-get($theme-colors, secondary), 7%) !default;
 
-$breadcrumb-link-color: #4A5E6A !default;
+$breadcrumb-active-color: $body-color !default;
 
-$breadcrumb-divider-color: #D4DADF !default;
+
+$breadcrumb-divider-color: $breadcrumb-link-color !default;
+$breadcrumb-divider-svg-icon-height: 0.6em !default;
