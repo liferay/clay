@@ -96,10 +96,6 @@ $input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-focus-color
 $input-select-icon-disabled-color: $text-muted !default;
 $input-select-icon-disabled: lx-icon(caret-double-l, $input-select-icon-disabled-color) !default;
 
-// Legend
-
-$legend-border-color: #B0B4BB !default;
-
 // Input Groups
 
 $input-group-addon-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
