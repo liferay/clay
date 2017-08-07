@@ -117,10 +117,10 @@
 	padding-right: $input-group-addon-padding-x;
 }
 
-// Input Group Light
+// Input Group Transparent
 
-.input-group-light {
-	@if ($input-group-light-addon-border-width == 0) {
+.input-group-transparent {
+	@if ($input-group-transparent-addon-border-width == 0) {
 		.form-control {
 			&:not(:first-child),
 			&:not(:last-child),
@@ -139,10 +139,10 @@
 	}
 
 	.input-group-addon {
-		background-color: $input-group-light-addon-bg;
-		border-color: $input-group-light-addon-border-color;
-		border-width: $input-group-light-addon-border-width;
-		color: $input-group-light-addon-color;
+		background-color: $input-group-transparent-addon-bg;
+		border-color: $input-group-transparent-addon-border-color;
+		border-width: $input-group-transparent-addon-border-width;
+		color: $input-group-transparent-addon-color;
 	}
 
 	.help-icon {

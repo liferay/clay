@@ -133,10 +133,10 @@ $input-group-addon-padding-y-sm: 0 !default;
 $input-group-constrain-max-width: 300px !default;
 $input-group-constrain-max-width-mobile: 150px !default;
 
-$input-group-light-addon-bg: transparent !default;
-$input-group-light-addon-border-color: null !default;
-$input-group-light-addon-border-width: 0 !default;
-$input-group-light-addon-color: null !default;
+$input-group-transparent-addon-bg: transparent !default;
+$input-group-transparent-addon-border-color: null !default;
+$input-group-transparent-addon-border-width: 0 !default;
+$input-group-transparent-addon-color: null !default;
 
 $zindex-input-group-hover: 3 !default;
 $zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4
