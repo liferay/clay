@@ -1,25 +1,28 @@
-$breadcrumb-divider-color: $breadcrumb-active-color !default;
-$breadcrumb-divider-font-family: null !default;
-$breadcrumb-divider-font-weight: null !default;
-$breadcrumb-divider-svg-icon: lx-icon(angle-right, $breadcrumb-divider-color) !default;
-$breadcrumb-divider-svg-icon-height: 0.75em !default;
-$breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;
-
-$breadcrumb-vertical-divider: normal !default;
-
-$breadcrumb-active-font-weight: null !default;
-
+$breadcrumb-border-radius: null !default;
 $breadcrumb-font-size: null !default;
 $breadcrumb-font-weight: null !default;
 $breadcrumb-text-transform: null !default;
 
-$breadcrumb-border-radius: null !default;
-$breadcrumb-link-color: null !default;
-$breadcrumb-link-hover-color: null !default;
-
-$breadcrumb-link-text-decoration: $link-decoration !default;
-$breadcrumb-link-hover-text-decoration: $link-hover-decoration !default;
+$breadcrumb-active-font-weight: null !default;
 
 $breadcrumb-text-truncate-icon-spacer-x: 1.25rem !default; // 20px
 $breadcrumb-text-truncate-max-width: 18.75rem - $breadcrumb-text-truncate-icon-spacer-x !default; // 300px
 $breadcrumb-text-truncate-max-width-mobile: 9.375rem - $breadcrumb-text-truncate-icon-spacer-x !default; // 150px
+
+$breadcrumb-link-color: null !default;
+$breadcrumb-link-text-decoration: $link-decoration !default;
+
+$breadcrumb-link-hover-color: null !default;
+$breadcrumb-link-hover-text-decoration: $link-hover-decoration !default;
+
+$breadcrumb-divider-color: $breadcrumb-active-color !default;
+$breadcrumb-divider-font-family: null !default;
+$breadcrumb-divider-font-weight: null !default;
+
+$breadcrumb-divider-svg-icon: lx-icon(angle-right, $breadcrumb-divider-color) !default;
+$breadcrumb-divider-svg-icon-height: 0.75em !default;
+$breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;
+
+// Breadcrumb Vertical
+
+$breadcrumb-vertical-divider: normal !default;
