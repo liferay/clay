@@ -98,23 +98,48 @@ a > .breadcrumb-text-truncate {
 	}
 }
 
-.breadcrumb-vertical {
+.breadcrumb-stacked {
 	.breadcrumb-item {
 		display: block;
 		float: none;
+		margin-right: 0;
 
-		+ .breadcrumb-item {
+		@if not ($breadcrumb-stacked-divider-svg-icon) or ($breadcrumb-stacked-divider-svg-icon == none) {
 			padding-left: 0;
+		}
+		@else {
+			padding-left: calc(#{$breadcrumb-stacked-divider-svg-icon-width} + #{$breadcrumb-stacked-divider-spacer-x});
 		}
 	}
 
 	.breadcrumb-item:before,
 	.breadcrumb-item + .breadcrumb-item:before {
-		color: $breadcrumb-divider-color;
-		content: '#{$breadcrumb-vertical-divider}';
-		float: none;
-		padding-left: 0;
-		padding-right: 0;
+		@if not ($breadcrumb-stacked-divider-svg-icon) or ($breadcrumb-stacked-divider-svg-icon == none) {
+			background-image: none;
+			color: $breadcrumb-stacked-divider-color;
+			content: $breadcrumb-stacked-divider;
+			display: block;
+			float: left;
+			margin-right: 5px;
+			margin-top: 0;
+			position: static;
+			width: auto;
+		}
+		@else {
+			background-image: $breadcrumb-stacked-divider-svg-icon;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			content: '';
+			display: block;
+			float: left;
+			height: $breadcrumb-stacked-divider-svg-icon-height;
+			left: 0;
+			margin-top: -$breadcrumb-stacked-divider-svg-icon-height / 2;
+			padding: 0;
+			position: absolute;
+			top: 50%;
+			width: $breadcrumb-stacked-divider-svg-icon-width;
+		}
 	}
 
 	.breadcrumb-text-truncate {
