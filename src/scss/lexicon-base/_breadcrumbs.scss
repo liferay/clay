@@ -6,13 +6,13 @@
 	font-size: $breadcrumb-font-size;
 	font-weight: $breadcrumb-font-weight;
 
-	&.active {
-		font-weight: $breadcrumb-active-font-weight;
+	@if ($breadcrumb-divider-svg-icon) {
+		margin-right: 0.5em;
+		position: relative;
 	}
 
-	> a,
-	> span {
-		text-transform: $breadcrumb-text-transform;
+	&.active {
+		font-weight: $breadcrumb-active-font-weight;
 	}
 
 	> a {
@@ -21,6 +21,8 @@
 		@if not ($breadcrumb-link-text-decoration == $link-decoration) {
 			text-decoration: $breadcrumb-link-text-decoration;
 		}
+
+		text-transform: $breadcrumb-text-transform;
 
 		@include hover-focus {
 			color: $breadcrumb-link-hover-color;
@@ -31,21 +33,47 @@
 		}
 	}
 
+	> span {
+		text-transform: $breadcrumb-text-transform;
+	}
+
+	+ .breadcrumb-item {
+		@if ($breadcrumb-divider-svg-icon) {
+			padding-left: 1em;
+		}
+
+		&::before {
+			float: left;
+
+			@if ($breadcrumb-divider-svg-icon) {
+				background-image: $breadcrumb-divider-svg-icon;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				content: '';
+				display: block;
+				height: $breadcrumb-divider-svg-icon-height;
+				left: 0;
+				margin-top: -$breadcrumb-divider-svg-icon-height / 2;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				width: $breadcrumb-divider-svg-icon-width;
+			}
+			@else {
+				font-family: $breadcrumb-divider-font-family;
+				font-weight: $breadcrumb-divider-font-weight;
+				padding-left: 0.4em;
+				padding-right: 0.4em;
+			}
+		}
+	}
+
 	.dropdown-toggle {
 		text-decoration: none;
 
 		@include hover-focus {
 			text-decoration: none;
 		}
-	}
-
-	+ .breadcrumb-item:before {
-		content: $breadcrumb-divider;
-		float: left;
-		font-family: $breadcrumb-divider-font-family;
-		font-weight: $breadcrumb-divider-font-weight;
-		padding-left: 0.4em;
-		padding-right: 0.4em;
 	}
 }
 
@@ -70,43 +98,20 @@ a > .breadcrumb-text-truncate {
 	}
 }
 
-.breadcrumb-horizontal {
-	.breadcrumb-item {
-		margin-right: 0.5em;
-		position: relative;
-
-		+ .breadcrumb-item {
-			padding-left: 1em;
-		}
-
-		+ .breadcrumb-item:before {
-			background-image: $breadcrumb-divider-svg-icon;
-			background-repeat: no-repeat;
-			background-size: 100%;
-			content: '';
-			display: block;
-			float: left;
-			height: $breadcrumb-divider-svg-icon-height;
-			left: 0;
-			margin-top: -$breadcrumb-divider-svg-icon-height / 2;
-			padding: 0;
-			position: absolute;
-			top: 50%;
-			width: $breadcrumb-divider-svg-icon-width;
-		}
-	}
-}
-
 .breadcrumb-vertical {
 	.breadcrumb-item {
 		display: block;
 		float: none;
+
+		+ .breadcrumb-item {
+			padding-left: 0;
+		}
 	}
 
 	.breadcrumb-item:before,
 	.breadcrumb-item + .breadcrumb-item:before {
 		color: $breadcrumb-divider-color;
-		content: $breadcrumb-vertical-divider;
+		content: '#{$breadcrumb-vertical-divider}';
 		float: none;
 		padding-left: 0;
 		padding-right: 0;
