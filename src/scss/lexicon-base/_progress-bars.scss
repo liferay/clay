@@ -4,7 +4,9 @@
 }
 
 .progress-bar {
-	@include box-shadow($progress-bar-box-shadow);
+	@if ($progress-bar-box-shadow) {
+		@include box-shadow($progress-bar-box-shadow);
+	}
 }
 
 .progress-lg {
