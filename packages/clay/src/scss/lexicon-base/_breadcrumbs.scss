@@ -16,6 +16,7 @@
 	}
 
 	> a {
+		display: block;
 		color: $breadcrumb-link-color;
 
 		@if not ($breadcrumb-link-text-decoration == $link-decoration) {
@@ -30,6 +31,21 @@
 			@if not ($breadcrumb-link-hover-text-decoration == $link-hover-decoration) {
 				text-decoration: $breadcrumb-link-hover-text-decoration;
 			}
+		}
+	}
+
+	> .btn-link {
+		border-width: 0;
+		color: $breadcrumb-link-color;
+		font-size: inherit;
+		font-weight: inherit;
+		max-width: 100%;
+		padding: 0;
+		text-align: left;
+		text-transform: $breadcrumb-text-transform;
+
+		@include hover-focus {
+			color: $breadcrumb-link-hover-color;
 		}
 	}
 
@@ -90,11 +106,14 @@
 	}
 }
 
-a > .breadcrumb-text-truncate {
-	text-decoration: $breadcrumb-link-text-decoration;
+a,
+.btn-link {
+	> .breadcrumb-text-truncate {
+		text-decoration: $breadcrumb-link-text-decoration;
 
-	@include hover-focus {
-		text-decoration: $breadcrumb-link-hover-text-decoration;
+		@include hover-focus {
+			text-decoration: $breadcrumb-link-hover-text-decoration;
+		}
 	}
 }
 
@@ -109,6 +128,10 @@ a > .breadcrumb-text-truncate {
 		}
 		@else {
 			padding-left: calc(#{$breadcrumb-stacked-divider-svg-icon-width} + #{$breadcrumb-stacked-divider-spacer-x});
+		}
+
+		> a {
+			display: inline;
 		}
 	}
 
@@ -143,6 +166,7 @@ a > .breadcrumb-text-truncate {
 	}
 
 	.breadcrumb-text-truncate {
+		margin-right: 1px;
 		max-width: calc(100% - #{$breadcrumb-text-truncate-icon-spacer-x});
 	}
 }
