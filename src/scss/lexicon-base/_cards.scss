@@ -306,8 +306,6 @@ button.card-link {
 		bottom: $checkbox-position;
 		left: $checkbox-position;
 		top: auto;
-
-		-ms-transform: none;
 		transform: none;
 	}
 }
@@ -320,8 +318,6 @@ button.card-link {
 		left: auto;
 		right: $checkbox-position;
 		top: auto;
-
-		-ms-transform: none;
 		transform: none;
 	}
 }
@@ -333,8 +329,6 @@ button.card-link {
 		left: $checkbox-position;
 		margin-top: 0;
 		top: 50%;
-
-		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
 }
@@ -347,8 +341,6 @@ button.card-link {
 		margin-top: 0;
 		right: $checkbox-position;
 		top: 50%;
-
-		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
 }
@@ -359,8 +351,6 @@ button.card-link {
 	.form-check-input {
 		left: $checkbox-position;
 		top: $checkbox-position;
-
-		-ms-transform: none;
 		transform: none;
 	}
 }
@@ -372,8 +362,6 @@ button.card-link {
 		left: auto;
 		right: $checkbox-position;
 		top: $checkbox-position;
-
-		-ms-transform: none;
 		transform: none;
 	}
 }
