@@ -35,13 +35,10 @@
 	}
 
 	> .btn-link {
-		border-width: 0;
 		color: $breadcrumb-link-color;
-		font-size: inherit;
-		font-weight: inherit;
-		max-width: 100%;
-		padding: 0;
-		text-align: left;
+
+		@include component-btn-link;
+
 		text-transform: $breadcrumb-text-transform;
 
 		@include hover-focus {
