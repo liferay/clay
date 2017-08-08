@@ -105,5 +105,12 @@ $input-group-addon-padding-x: 0.875rem !default;
 $input-group-addon-padding-x-lg: 1.25rem !default;
 $input-group-addon-padding-x-sm: 0.5rem !default;
 
-$input-group-light-addon-border-color: #DDD !default;
-$input-group-light-addon-color: #BBB !default;
+// Input Group Secondary
+
+$input-group-secondary-addon-bg: #FFF !default;
+$input-group-secondary-addon-border-color: lighten($btn-secondary-color, 37%) !default;
+
+// Input Group Transparent
+
+$input-group-transparent-addon-border-color: #DDD !default;
+$input-group-transparent-addon-color: #BBB !default;
