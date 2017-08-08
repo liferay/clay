@@ -246,6 +246,18 @@ button.card-link {
 	margin-bottom: 0;
 	margin-top: 0;
 
+	.custom-control {
+		display: inline;
+		margin-right: 0;
+		padding-left: 0;
+		position: static;
+	}
+
+	.custom-control-input,
+	.custom-control-indicator {
+		z-index: 1;
+	}
+
 	.form-check-input {
 		margin-left: 0;
 		margin-top: 0;
@@ -253,16 +265,17 @@ button.card-link {
 		z-index: 1;
 	}
 
-	.form-check-input:checked ~ .card,
-	&.active .card {
-		box-shadow: $form-check-card-checked-box-shadow;
-	}
-
 	.form-check-label {
 		color: $body-color;
 		cursor: pointer;
 		display: inline;
 		padding-left: 0;
+	}
+
+	&.active .card,
+	.custom-control-input:checked ~ .card,
+	.form-check-input:checked ~ .card {
+		box-shadow: $form-check-card-checked-box-shadow;
 	}
 }
 
@@ -286,52 +299,81 @@ button.card-link {
 	}
 }
 
-.form-check-bottom-left .form-check-input {
-	bottom: $checkbox-position;
-	left: $checkbox-position;
+.form-check-bottom-left {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		bottom: $checkbox-position;
+		left: $checkbox-position;
+		top: auto;
 
-	-ms-transform: none;
-	transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
 }
 
-.form-check-bottom-right .form-check-input {
-	bottom: $checkbox-position;
-	right: $checkbox-position;
+.form-check-bottom-right {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		bottom: $checkbox-position;
+		left: auto;
+		right: $checkbox-position;
+		top: auto;
 
-	-ms-transform: none;
-	transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
 }
 
-.form-check-middle-left .form-check-input {
-	left: $checkbox-position;
-	margin-top: 0;
-	top: 50%;
+.form-check-middle-left {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: $checkbox-position;
+		margin-top: 0;
+		top: 50%;
 
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
 }
 
-.form-check-middle-right .form-check-input {
-	margin-top: 0;
-	right: $checkbox-position;
-	top: 50%;
+.form-check-middle-right {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: auto;
+		margin-top: 0;
+		right: $checkbox-position;
+		top: 50%;
 
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
 }
 
-.form-check-top-left .form-check-input {
-	left: $checkbox-position;
-	top: $checkbox-position;
+.form-check-top-left {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: $checkbox-position;
+		top: $checkbox-position;
 
-	-ms-transform: none;
-	transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
 }
 
-.form-check-top-right .form-check-input {
-	right: $checkbox-position;
-	top: $checkbox-position;
+.form-check-top-right {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: auto;
+		right: $checkbox-position;
+		top: $checkbox-position;
 
-	-ms-transform: none;
-	transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
 }
