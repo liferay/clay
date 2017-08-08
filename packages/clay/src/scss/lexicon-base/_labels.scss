@@ -30,6 +30,14 @@
 			text-decoration: $label-link-hover-text-decoration;
 		}
 	}
+
+	.close {
+		color: inherit;
+		float: none;
+		font-size: inherit;
+		margin-left: 2px;
+		opacity: 1;
+	}
 }
 
 a.label {
@@ -62,14 +70,18 @@ a.label {
 
 .label .lexicon-icon {
 	height: $label-lexicon-icon-height;
-	margin-left: 2px;
 	width: $label-lexicon-icon-width;
 }
 
-.label-lg .lexicon-icon {
-	height: $label-lexicon-icon-height-lg;
-	margin-left: 4px;
-	width: $label-lexicon-icon-width-lg;
+.label-lg {
+	.close {
+		margin-left: 0.25rem;
+	}
+
+	.lexicon-icon {
+		height: $label-lexicon-icon-height-lg;
+		width: $label-lexicon-icon-width-lg;
+	}
 }
 
 .label-sm .lexicon-icon {

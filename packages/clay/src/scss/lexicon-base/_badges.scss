@@ -20,6 +20,14 @@
 			text-decoration: $badge-link-hover-text-decoration;
 		}
 	}
+
+	.close {
+		color: inherit;
+		float: none;
+		font-size: inherit;
+		margin-left: 2px;
+		opacity: 1;
+	}
 }
 
 .badge-lg {
@@ -44,14 +52,18 @@
 
 .badge .lexicon-icon {
 	height: $badge-lexicon-icon-height;
-	margin-left: 2px;
 	width: $badge-lexicon-icon-width;
 }
 
-.badge-lg .lexicon-icon {
-	height: $badge-lexicon-icon-height-lg;
-	margin-left: 4px;
-	width: $badge-lexicon-icon-width-lg;
+.badge-lg {
+	.close {
+		margin-left: 0.25rem;
+	}
+
+	.lexicon-icon {
+		height: $badge-lexicon-icon-height-lg;
+		width: $badge-lexicon-icon-width-lg;
+	}
 }
 
 .badge-sm .lexicon-icon {
