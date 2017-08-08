@@ -47,7 +47,16 @@ fieldset[disabled] .btn {
 
 	&:focus {
 		box-shadow: $btn-focus-box-shadow;
+		text-decoration: $link-decoration;
 	}
+
+	@include hover {
+		text-decoration: $link-hover-decoration;
+	}
+}
+
+.show > .btn-link.dropdown-toggle {
+	box-shadow: none;
 }
 
 // Button Monospaced
