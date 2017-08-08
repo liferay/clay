@@ -253,6 +253,11 @@ button.card-link {
 		z-index: 1;
 	}
 
+	.form-check-input:checked ~ .card,
+	&.active .card {
+		box-shadow: $form-check-card-checked-box-shadow;
+	}
+
 	.form-check-label {
 		color: $body-color;
 		cursor: pointer;
