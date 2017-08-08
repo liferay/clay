@@ -31,6 +31,10 @@
 
 .card-link {
 	color: $card-link-color;
+
+	@include hover-focus {
+		color: $card-link-hover-color;
+	}
 }
 
 .card-row {
