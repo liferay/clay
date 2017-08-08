@@ -5,13 +5,7 @@ $alert-padding-y: 1.125rem !default; // 18px
 $alert-border-width: 0.0625rem !default;
 
 $alert-close-opacity: 1 !default;
-$alert-close-margin-left: $alert-padding-x !default; // 18px
-$alert-close-padding-bottom: 0 !default;
-$alert-close-padding-left: 0 !default;
-$alert-close-padding-right: 0 !default;
-$alert-close-padding-top: 0 !default;
-$alert-close-position-right: 0 !default;
-$alert-close-position-top: 0 !default;
+$alert-close-position-top: -0.125rem !default; // -2px
 
 $alert-font-size: 0.875rem !default; // 14px
 

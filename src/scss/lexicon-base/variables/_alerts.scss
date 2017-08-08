@@ -1,13 +1,13 @@
 $alert-border-style: solid !default;
 
 $alert-close-opacity: null !default;
-$alert-close-margin-left: null !default;
-$alert-close-padding-bottom: null !default;
-$alert-close-padding-left: null !default;
-$alert-close-padding-right: null !default;
-$alert-close-padding-top: null !default;
-$alert-close-position-right: null !default;
-$alert-close-position-top: null !default;
+$alert-close-margin-left: $alert-padding-x !default; // 20px
+$alert-close-padding-bottom: 0 !default;
+$alert-close-padding-left: 0 !default;
+$alert-close-padding-right: 0 !default;
+$alert-close-padding-top: 0 !default;
+$alert-close-position-right: 0 !default;
+$alert-close-position-top: 0.1875rem !default;
 
 $alert-font-size: null !default;
 
