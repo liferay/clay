@@ -18,6 +18,19 @@
 			}
 		}
 	}
+
+	.btn-link {
+		color: $card-link-color;
+
+		@include component-btn-link;
+
+		text-decoration: $card-link-text-decoration;
+
+		@include hover-focus {
+			color: $card-link-hover-color;
+			text-decoration: $card-link-hover-text-decoration;
+		}
+	}
 }
 
 .card-divider {
@@ -31,10 +44,22 @@
 
 .card-link {
 	color: $card-link-color;
+	text-decoration: $card-link-text-decoration;
 
 	@include hover-focus {
 		color: $card-link-hover-color;
+		text-decoration: $card-link-hover-text-decoration;
 	}
+}
+
+.show > button.card-link {
+	outline: none;
+}
+
+button.card-link {
+	background-color: transparent;
+
+	@include component-btn-link;
 }
 
 .card-row {
