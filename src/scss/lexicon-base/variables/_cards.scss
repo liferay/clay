@@ -15,10 +15,10 @@ $checkbox-position: 15px !default;
 $card-border-style: solid !default;
 $card-box-shadow: null !default;
 
-$card-link-color: null !default;
+$card-link-color: $link-color !default;
 $card-link-text-decoration: null !default;
-$card-link-hover-color: null !default;
-$card-link-hover-text-decoration: null !default;
+$card-link-hover-color: $link-hover-color !default;
+$card-link-hover-text-decoration: none !default;
 
 $card-rounded-inner-border-radius: if($card-border-width > 0, calc(#{$rounded-border-radius} - #{$card-border-width}), $rounded-border-radius) !default;
 $card-rounded-0-inner-border-radius: if($rounded-0-border-radius > $card-border-width, calc(#{$rounded-0-border-radius} - #{$card-border-width}), 0) !default;
