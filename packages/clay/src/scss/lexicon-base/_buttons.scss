@@ -40,6 +40,16 @@ fieldset[disabled] .btn {
 	opacity: $btn-disabled-opacity;
 }
 
+// Button Link
+
+.btn-link {
+	@include border-radius(1px);
+
+	&:focus {
+		box-shadow: $btn-focus-box-shadow;
+	}
+}
+
 // Button Monospaced
 
 .btn-monospaced {
