@@ -117,6 +117,26 @@
 	padding-right: $input-group-addon-padding-x;
 }
 
+// Input Group Secondary
+
+.input-group-secondary {
+	.input-group-addon {
+		background-color: $input-group-secondary-addon-bg;
+		border-color: $input-group-secondary-addon-border-color;
+		border-style: solid;
+		border-width: $input-group-secondary-addon-border-width;
+		margin-right: -$input-border-left-width;
+	}
+
+	.form-control + .input-group-addon:not(:first-child) {
+		border-left-color: $input-group-secondary-addon-border-color;
+		border-left-style: solid;
+		border-left-width: $input-group-secondary-addon-border-width;
+		margin-left: -$input-border-right-width;
+		margin-right: 0;
+	}
+}
+
 // Input Group Transparent
 
 .input-group-transparent {

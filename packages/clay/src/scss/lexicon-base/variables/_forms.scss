@@ -133,6 +133,14 @@ $input-group-addon-padding-y-sm: 0 !default;
 $input-group-constrain-max-width: 300px !default;
 $input-group-constrain-max-width-mobile: 150px !default;
 
+// Input Group Secondary
+
+$input-group-secondary-addon-bg: map-get($theme-colors, secondary) !default;
+$input-group-secondary-addon-border-color: map-get($theme-colors, secondary) !default;
+$input-group-secondary-addon-border-width: 0.0625rem !default; // 1px
+
+// Input Group Transparent
+
 $input-group-transparent-addon-bg: transparent !default;
 $input-group-transparent-addon-border-color: null !default;
 $input-group-transparent-addon-border-width: 0 !default;
