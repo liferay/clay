@@ -4,8 +4,6 @@ $card-box-shadow: 0 1px 10px -4px rgba(0, 0, 0, 0.6) !default;
 
 $card-inner-border-radius: if($card-border-width > 0, calc(#{$card-border-radius} - #{$card-border-width}), $card-border-radius) !default;
 
-$card-subtitle-color: map-get($theme-colors, secondary) !default;
-
 $card-link-color: map-get($theme-colors, secondary) !default;
 $card-link-hover-color: $card-link-color !default;
 

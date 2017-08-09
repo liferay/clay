@@ -3,16 +3,16 @@ $card-box-shadow: null !default;
 $card-margin-bottom: 1.25rem !default;
 
 $card-title-color: null !default;
-$card-title-font-size: null !default;
-$card-title-font-weight: null !default;
-$card-title-margin-bottom: null !default;
+$card-title-font-size: 1rem !default; // 16px
+$card-title-font-weight: 500 !default;
+$card-title-margin-bottom: 0.5rem !default; // 8px
 $card-title-margin-top: null !default;
 
-$card-subtitle-color: null !default;
-$card-subtitle-font-size: null !default;
-$card-subtitle-font-weight: null !default;
-$card-subtitle-margin-bottom: null !default;
-$card-subtitle-margin-top: null !default;
+$card-subtitle-color: map-get($theme-colors, secondary) !default;
+$card-subtitle-font-size: 0.875rem !default; // 14px
+$card-subtitle-font-weight: 400 !default;
+$card-subtitle-margin-bottom: 0.5rem !default; // 8px
+$card-subtitle-margin-top: -$card-title-margin-bottom !default; // -8px
 
 $card-link-color: $link-color !default;
 $card-link-text-decoration: null !default;
