@@ -412,4 +412,8 @@ button.card-link {
 	.dropdown-action {
 		margin-right: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size));
 	}
+
+	.sticker {
+		@extend #{$card-type-directory-sticker-size};
+	}
 }
