@@ -378,7 +378,7 @@ button.card-link {
 		align-items: flex-start;
 	}
 
-	.dropdown {
+	.dropdown-action {
 		margin-right: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size));
 		margin-top: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size) / 2);
 	}
@@ -389,7 +389,7 @@ button.card-link {
 		margin-bottom: 0;
 	}
 
-	.dropdown {
+	.dropdown-action {
 		margin-right: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size));
 	}
 }
