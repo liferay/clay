@@ -4,6 +4,7 @@
 
 	@include box-shadow($card-box-shadow);
 
+	display: block;
 	margin-bottom: $card-margin-bottom;
 	position: relative;
 
@@ -243,8 +244,12 @@ button.card-link {
 // Checkbox and Radio Cards
 
 .form-check-card {
-	margin-bottom: 0;
+	margin-bottom: $card-margin-bottom;
 	margin-top: 0;
+
+	.card {
+		margin-bottom: 0;
+	}
 
 	.custom-control {
 		display: inline;
@@ -363,5 +368,28 @@ button.card-link {
 		right: $checkbox-position;
 		top: $checkbox-position;
 		transform: none;
+	}
+}
+
+// Card Variants
+
+.card-type-asset {
+	.card-row {
+		align-items: flex-start;
+	}
+
+	.dropdown {
+		margin-right: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size));
+		margin-top: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size) / 2);
+	}
+}
+
+.card-type-directory {
+	.card-title {
+		margin-bottom: 0;
+	}
+
+	.dropdown {
+		margin-right: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size));
 	}
 }
