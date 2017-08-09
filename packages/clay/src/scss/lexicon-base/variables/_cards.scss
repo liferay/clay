@@ -1,9 +1,20 @@
+$card-border-style: solid !default;
+$card-box-shadow: null !default;
+$card-margin-bottom: 1.25rem !default;
+
+$card-link-color: $link-color !default;
+$card-link-text-decoration: null !default;
+$card-link-hover-color: $link-hover-color !default;
+$card-link-hover-text-decoration: none !default;
+
 $card-divider-bg: $card-border-color !default;
 $card-divider-height: 1px !default;
 $card-divider-spacer-x: null !default;
 $card-divider-spacer-y: 10px !default;
 
-$card-margin-bottom: 1.25rem !default;
+$card-rounded-inner-border-radius: if($card-border-width > 0, calc(#{$rounded-border-radius} - #{$card-border-width}), $rounded-border-radius) !default;
+$card-rounded-0-inner-border-radius: if($rounded-0-border-radius > $card-border-width, calc(#{$rounded-0-border-radius} - #{$card-border-width}), 0) !default;
+$card-rounded-circle-inner-border-radius: if($card-border-width > 0, calc(#{$rounded-circle-border-radius} - #{$card-border-width}), $rounded-circle-border-radius) !default;
 
 $checkbox-left-card-padding: 40px !default;
 $checkbox-right-card-padding: $checkbox-left-card-padding !default;
@@ -11,17 +22,3 @@ $checkbox-right-card-padding: $checkbox-left-card-padding !default;
 $checkbox-position: 15px !default;
 
 $form-check-card-checked-box-shadow: $btn-focus-box-shadow !default;
-
-// Skin
-
-$card-border-style: solid !default;
-$card-box-shadow: null !default;
-
-$card-link-color: $link-color !default;
-$card-link-text-decoration: null !default;
-$card-link-hover-color: $link-hover-color !default;
-$card-link-hover-text-decoration: none !default;
-
-$card-rounded-inner-border-radius: if($card-border-width > 0, calc(#{$rounded-border-radius} - #{$card-border-width}), $rounded-border-radius) !default;
-$card-rounded-0-inner-border-radius: if($rounded-0-border-radius > $card-border-width, calc(#{$rounded-0-border-radius} - #{$card-border-width}), 0) !default;
-$card-rounded-circle-inner-border-radius: if($card-border-width > 0, calc(#{$rounded-circle-border-radius} - #{$card-border-width}), $rounded-circle-border-radius) !default;
