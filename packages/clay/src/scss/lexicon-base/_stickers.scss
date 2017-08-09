@@ -85,27 +85,9 @@
 	left: $sticker-outside-offset;
 	top: $sticker-outside-offset;
 
-	&.sticker-sm {
-		left: $sticker-outside-offset-sm;
-		top: $sticker-outside-offset-sm;
-	}
-
-	&.sticker-lg {
-		left: $sticker-outside-offset-lg;
-		top: $sticker-outside-offset-lg;
-	}
-
 	&.sticker-bottom-left {
 		bottom: $sticker-outside-offset;
 		top: auto;
-
-		&.sticker-sm {
-			bottom: $sticker-outside-offset-sm;
-		}
-
-		&.sticker-lg {
-			bottom: $sticker-outside-offset-lg;
-		}
 	}
 
 	&.sticker-bottom-right {
@@ -113,35 +95,17 @@
 		left: auto;
 		right: $sticker-outside-offset;
 		top: auto;
-
-		&.sticker-sm {
-			bottom: $sticker-outside-offset-sm;
-			right: $sticker-outside-offset-sm;
-		}
-
-		&.sticker-lg {
-			bottom: $sticker-outside-offset-lg;
-			right: $sticker-outside-offset-lg;
-		}
 	}
 
 	&.sticker-top-right {
 		left: auto;
 		right: $sticker-outside-offset;
-
-		&.sticker-sm {
-			right: $sticker-outside-offset-sm;
-		}
-
-		&.sticker-lg {
-			right: $sticker-outside-offset-lg;
-		}
 	}
 }
 
 // Sticker Sizes
 
-.sticker-sm {
+%sticker-sm {
 	font-size: $sticker-font-size-sm;
 
 	@include monospace($sticker-size-sm);
@@ -150,9 +114,35 @@
 		height: $sticker-font-size-sm;
 		width: $sticker-font-size-sm;
 	}
+
+	&.sticker-outside {
+		left: $sticker-outside-offset-sm;
+		top: $sticker-outside-offset-sm;
+
+		&.sticker-bottom-left {
+			bottom: $sticker-outside-offset-sm;
+			top: auto;
+		}
+
+		&.sticker-bottom-right {
+			bottom: $sticker-outside-offset-sm;
+			left: auto;
+			right: $sticker-outside-offset-sm;
+			top: auto;
+		}
+
+		&.sticker-top-right {
+			left: auto;
+			right: $sticker-outside-offset-sm;
+		}
+	}
 }
 
-.sticker-lg {
+.sticker-sm {
+	@extend %sticker-sm;
+}
+
+%sticker-lg {
 	font-size: $sticker-font-size-lg;
 
 	@include monospace($sticker-size-lg);
@@ -161,9 +151,35 @@
 		height: $sticker-font-size-lg;
 		width: $sticker-font-size-lg;
 	}
+
+	&.sticker-outside {
+		left: $sticker-outside-offset-lg;
+		top: $sticker-outside-offset-lg;
+
+		&.sticker-bottom-left {
+			bottom: $sticker-outside-offset-lg;
+			top: auto;
+		}
+
+		&.sticker-bottom-right {
+			bottom: $sticker-outside-offset-lg;
+			left: auto;
+			right: $sticker-outside-offset-lg;
+			top: auto;
+		}
+
+		&.sticker-top-right {
+			left: auto;
+			right: $sticker-outside-offset-lg;
+		}
+	}
 }
 
-.sticker-xl {
+.sticker-lg {
+	@extend %sticker-lg;
+}
+
+%sticker-xl {
 	font-size: $sticker-font-size-xl;
 
 	@include monospace($sticker-size-xl);
@@ -174,7 +190,11 @@
 	}
 }
 
-.sticker-xxl {
+.sticker-xl {
+	@extend %sticker-xl;
+}
+
+%sticker-xxl {
 	font-size: $sticker-font-size-xxl;
 
 	@include monospace($sticker-size-xxl);
@@ -183,6 +203,10 @@
 		height: $sticker-font-size-xxl;
 		width: $sticker-font-size-xxl;
 	}
+}
+
+.sticker-xxl {
+	@extend %sticker-xxl;
 }
 
 // Sticker Variants
