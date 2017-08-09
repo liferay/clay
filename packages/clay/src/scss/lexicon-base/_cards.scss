@@ -35,6 +35,14 @@
 	}
 }
 
+.card-subtitle {
+	color: $card-subtitle-color;
+	font-size: $card-subtitle-font-size;
+	font-weight: $card-subtitle-font-weight;
+	margin-bottom: $card-subtitle-margin-bottom;
+	margin-top: $card-subtitle-margin-top;
+}
+
 .card-divider {
 	background-color: $card-divider-bg;
 	height: $card-divider-height;
