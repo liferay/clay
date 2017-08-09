@@ -28,34 +28,21 @@
 		margin-left: 2px;
 		opacity: 1;
 	}
+
+	.lexicon-icon {
+		height: $badge-lexicon-icon-height;
+		width: $badge-lexicon-icon-width;
+	}
 }
 
-.badge-lg {
+%badge-lg {
 	font-size: $badge-font-size-lg;
 	padding: $badge-padding-y-lg $badge-padding-x-lg;
 
 	@include scale-component {
 		font-size: $badge-font-size-lg-mobile;
 	}
-}
 
-.badge-sm {
-	font-size: $badge-font-size-sm;
-	padding: $badge-padding-y-sm $badge-padding-x-sm;
-
-	@include scale-component {
-		font-size: $badge-font-size-sm-mobile;
-	}
-}
-
-// Lexicon Icons in Badges
-
-.badge .lexicon-icon {
-	height: $badge-lexicon-icon-height;
-	width: $badge-lexicon-icon-width;
-}
-
-.badge-lg {
 	.close {
 		margin-left: 0.25rem;
 	}
@@ -66,9 +53,26 @@
 	}
 }
 
-.badge-sm .lexicon-icon {
-	height: $badge-lexicon-icon-height-sm;
-	width: $badge-lexicon-icon-width-sm;
+.badge-lg {
+	@extend %badge-lg;
+}
+
+%badge-sm {
+	font-size: $badge-font-size-sm;
+	padding: $badge-padding-y-sm $badge-padding-x-sm;
+
+	@include scale-component {
+		font-size: $badge-font-size-sm-mobile;
+	}
+
+	.lexicon-icon {
+		height: $badge-lexicon-icon-height-sm;
+		width: $badge-lexicon-icon-width-sm;
+	}
+}
+
+.badge-sm {
+	@extend %badge-sm;
 }
 
 // Badge Variants

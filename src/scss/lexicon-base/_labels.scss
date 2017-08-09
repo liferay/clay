@@ -38,6 +38,11 @@
 		margin-left: 2px;
 		opacity: 1;
 	}
+
+	.lexicon-icon {
+		height: $label-lexicon-icon-height;
+		width: $label-lexicon-icon-width;
+	}
 }
 
 a.label {
@@ -48,32 +53,14 @@ a.label {
 	}
 }
 
-.label-lg {
+%label-lg {
 	font-size: $label-font-size-lg;
 	padding: $label-padding-y-lg $label-padding-x-lg;
 
 	@include scale-component {
 		font-size: $label-font-size-lg-mobile;
 	}
-}
 
-.label-sm {
-	font-size: $label-font-size-sm;
-	padding: $label-padding-y-sm $label-padding-x-sm;
-
-	@include scale-component {
-		font-size: $label-font-size-sm-mobile;
-	}
-}
-
-// Lexicon Icons in Labels
-
-.label .lexicon-icon {
-	height: $label-lexicon-icon-height;
-	width: $label-lexicon-icon-width;
-}
-
-.label-lg {
 	.close {
 		margin-left: 0.25rem;
 	}
@@ -84,9 +71,26 @@ a.label {
 	}
 }
 
-.label-sm .lexicon-icon {
-	height: $label-lexicon-icon-height-sm;
-	width: $label-lexicon-icon-width-sm;
+.label-lg {
+	@extend %label-lg;
+}
+
+%label-sm {
+	font-size: $label-font-size-sm;
+	padding: $label-padding-y-sm $label-padding-x-sm;
+
+	@include scale-component {
+		font-size: $label-font-size-sm-mobile;
+	}
+
+	.lexicon-icon {
+		height: $label-lexicon-icon-height-sm;
+		width: $label-lexicon-icon-width-sm;
+	}
+}
+
+.label-sm {
+	@extend %label-sm;
 }
 
 // Label Variants
