@@ -1,5 +1,5 @@
 $custom-control-indicator-size: 1.0625rem !default; // 17px
-$custom-control-indicator-bg: transparent !default;
+$custom-control-indicator-bg: #FFF !default;
 $custom-control-indicator-border-color: lighten(map-get($theme-colors, secondary), 37%) !default;
 $custom-control-indicator-border-style: solid !default;
 $custom-control-indicator-border-width: 0.0625rem !default; // 1px
