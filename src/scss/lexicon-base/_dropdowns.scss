@@ -171,8 +171,8 @@
 
 	> button.dropdown-toggle {
 		background-color: transparent;
-		border-width: 0;
-		padding: 0;
+
+		@include component-btn-link;
 	}
 
 	&.show button.dropdown-toggle {
