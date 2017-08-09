@@ -398,6 +398,10 @@ button.card-link {
 		margin-right: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size));
 		margin-top: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size) / 2);
 	}
+
+	.label {
+		@extend #{$card-type-asset-label-size};
+	}
 }
 
 .card-type-directory {

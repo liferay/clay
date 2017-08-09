@@ -10,3 +10,5 @@ $card-link-hover-color: $card-link-color !default;
 $checkbox-left-card-padding: 50px !default;
 
 $form-check-card-checked-box-shadow: 0 0 0 2px lighten(map-get($theme-colors, primary), 22%) !default;
+
+$card-type-asset-label-size: '%label-sm !optional' !default;
