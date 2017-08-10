@@ -1,0 +1,200 @@
+---
+title: Images (Aspect Ratios)
+section: Components
+---
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Image Aspect Ratios</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Sometimes you can't control the size of an image, define a specific size for your images with aspect-ratios. The base class <code>aspect-ratio</code> maintains a 1 to 1 ratio relative to its container's width, add class <code>aspect-ratio-vertical</code> to maintain a 1 to 1 ratio relative to its container's height.</p>
+
+			<p>Use <code>aspect-ratio-3-to-2</code>, <code>aspect-ratio-4-to-3</code>, <code>aspect-ratio-8-to-5</code>, or <code>aspect-ratio-16-to-9</code> to maintain the specific ratio relative to its container or create your own by setting <code>padding-bottom</code> to the ratio you want e.g. 2 to 1 <code>.aspect-ratio-2-to-1 { padding-bottom: 50% }</code>.</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Horizontal Aspect Ratio</h3>
+
+		<div class="row">
+			<div class="col-3">
+				<p>1:1</p>
+				<div class="aspect-ratio">
+					<img alt="thumbnail" class="aspect-ratio-item img-fluid" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<p>3:2</p>
+				<div class="aspect-ratio aspect-ratio-3-to-2">
+					<img alt="thumbnail" class="aspect-ratio-item img-fluid" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<p>4:3</p>
+				<div class="aspect-ratio aspect-ratio-4-to-3">
+					<img alt="thumbnail" class="aspect-ratio-item img-fluid" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<p>8:5</p>
+				<div class="aspect-ratio aspect-ratio-8-to-5">
+					<img alt="thumbnail" class="aspect-ratio-item img-fluid" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-3">
+				<p>16:9</p>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item img-fluid" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Vertical Aspect Ratio</h3>
+
+		<div class="row">
+			<div class="col-3">
+				<p>1:1</p>
+				<div class="aspect-ratio aspect-ratio-vertical">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<p>3:2</p>
+				<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-3-to-2">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<p>4:3</p>
+				<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-4-to-3">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<p>8:5</p>
+				<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-8-to-5">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-3">
+				<p>16:9</p>
+				<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Horizontal 1:1 Aspect Ratio with Varying Image Sizes</h3>
+
+		<div class="row">
+			<div class="col-4">
+				<div class="aspect-ratio">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="aspect-ratio">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_graph1.png">
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="aspect-ratio">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_graph2.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Images inside <code>aspect-ratio</code> are aligned bottom by default. Use class <code>aspect-ratio-top</code> or <code>aspect-ratio-middle</code> to align top or vertically center, respectively.</p>
+		</blockquote>
+
+		<div class="row">
+			<div class="col-4">
+				<div class="aspect-ratio">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_graph1.png">
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="aspect-ratio aspect-ratio-top">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_graph1.png">
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="aspect-ratio aspect-ratio-middle">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_graph2.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Vertical 1:1 Aspect Ratio with Varying Image Sizes</h3>
+
+		<div class="row">
+			<div class="col-4">
+				<div class="aspect-ratio aspect-ratio-vertical">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="aspect-ratio aspect-ratio-vertical">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/switch_components.png">
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="aspect-ratio aspect-ratio-vertical">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/thumbnail_graph2.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Images inside <code>aspect-ratio-vertical</code> are aligned left by default. Use class <code>aspect-ratio-right</code> or <code>aspect-ratio-center</code> to align right or horizontally center, respectively.</p>
+		</blockquote>
+
+		<div class="row">
+			<div class="col-4">
+				<div class="aspect-ratio aspect-ratio-vertical">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/switch_components.png">
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-right ">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/switch_components.png">
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="aspect-ratio aspect-ratio-vertical aspect-ratio-center">
+					<img alt="thumbnail" class="aspect-ratio-item" src="{{rootPath}}/images/switch_components.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
