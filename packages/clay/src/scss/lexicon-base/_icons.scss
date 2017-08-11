@@ -8,18 +8,15 @@
 }
 
 .lexicon-icon-sm {
-	height: $lexicon-icon-sm-size;
-	width: $lexicon-icon-sm-size;
-}
-
-.lexicon-icon-md {
-	height: $lexicon-icon-md-size;
-	width: $lexicon-icon-md-size;
+	font-size: $lexicon-icon-sm-font-size;
 }
 
 .lexicon-icon-lg {
-	height: $lexicon-icon-lg-size;
-	width: $lexicon-icon-lg-size;
+	font-size: $lexicon-icon-lg-font-size;
+}
+
+.lexicon-icon-xl {
+	font-size: $lexicon-icon-xl-font-size;
 }
 
 %scale-lexicon-icon {
