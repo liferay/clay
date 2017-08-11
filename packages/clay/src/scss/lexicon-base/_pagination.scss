@@ -1,5 +1,4 @@
 .pagination {
-	// Will be fixed by https://github.com/twbs/bootstrap/pull/22541
 	flex-wrap: wrap;
 }
 
@@ -19,8 +18,6 @@
 
 .page-link {
 	border-radius: $pagination-link-border-radius;
-	// Will be fixed by https://github.com/twbs/bootstrap/pull/22536
-	margin-left: -$pagination-border-width;
 }
 
 .page-item {
