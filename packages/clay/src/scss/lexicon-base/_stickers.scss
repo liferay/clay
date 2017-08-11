@@ -1,19 +1,17 @@
 .sticker {
-	align-items: center;
-
 	@include border-radius($sticker-border-radius);
 
 	border-style: $sticker-border-style;
 	border-width: $sticker-border-width;
 	color: $sticker-color;
-	display: inline-flex;
+	display: inline-block;
 	font-size: $sticker-font-size;
 	font-weight: $sticker-font-weight;
-	justify-content: center;
 
 	@include monospace($sticker-size);
 
 	position: relative;
+	text-align: center;
 	vertical-align: middle;
 
 	img {
@@ -42,12 +40,13 @@
 
 	@include border-radius($sticker-border-radius);
 
+	bottom: 0;
 	display: flex;
 	justify-content: center;
+	left: 0;
 	position: absolute;
+	right: 0;
 	top: 0;
-	height: 100%;
-	width: 100%;
 }
 
 // Sticker Positions
@@ -110,11 +109,6 @@
 
 	@include monospace($sticker-size-sm);
 
-	.lexicon-icon {
-		height: $sticker-font-size-sm;
-		width: $sticker-font-size-sm;
-	}
-
 	&.sticker-outside {
 		left: $sticker-outside-offset-sm;
 		top: $sticker-outside-offset-sm;
@@ -147,11 +141,6 @@
 
 	@include monospace($sticker-size-lg);
 
-	.lexicon-icon {
-		height: $sticker-font-size-lg;
-		width: $sticker-font-size-lg;
-	}
-
 	&.sticker-outside {
 		left: $sticker-outside-offset-lg;
 		top: $sticker-outside-offset-lg;
@@ -183,11 +172,6 @@
 	font-size: $sticker-font-size-xl;
 
 	@include monospace($sticker-size-xl);
-
-	.lexicon-icon {
-		height: $sticker-font-size-xl;
-		width: $sticker-font-size-xl;
-	}
 }
 
 .sticker-xl {
@@ -198,11 +182,6 @@
 	font-size: $sticker-font-size-xxl;
 
 	@include monospace($sticker-size-xxl);
-
-	.lexicon-icon {
-		height: $sticker-font-size-xxl;
-		width: $sticker-font-size-xxl;
-	}
 }
 
 .sticker-xxl {
