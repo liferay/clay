@@ -29,10 +29,6 @@ label,
 		color: $input-label-focus-color;
 	}
 
-	.lexicon-icon {
-		@extend %scale-lexicon-icon;
-	}
-
 	.reference-mark {
 		color: $input-label-reference-mark-color;
 		margin-left: $input-label-reference-mark-spacer;
