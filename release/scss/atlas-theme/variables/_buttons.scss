@@ -1,0 +1,115 @@
+/**
+* Clay 2.0.0-alpha.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$btn-font-weight: 500 !default;
+
+$input-btn-padding-x: 0.875rem !default; // 14px
+$input-btn-padding-y: 0.5625rem !default; // 9px
+
+$btn-font-size-lg: 1.25rem !default; // 20px
+$input-btn-padding-x-lg: 1.25rem !default; // 20px
+$input-btn-padding-y-lg: 0.5rem !default; // 8px
+
+$btn-font-size-sm: 0.875rem !default; // 14px
+$input-btn-padding-x-sm: 1rem !default; // 16px
+$input-btn-padding-y-sm: 0.28125rem !default; // 4.5px
+
+$btn-disabled-opacity: 0.26 !default;
+
+$btn-border-radius-lg: $border-radius !default;
+$btn-box-shadow: none !default;
+$btn-active-box-shadow: none !default;
+$btn-transition: background 0.2s ease-in-out, border 0.2s ease-in-out, box-shadow 0.2s ease-in-out !default;
+
+// Button Monospaced
+
+$btn-monospaced-size: 2.5rem !default; // 40px
+$btn-monospaced-size-sm: 2rem !default; // 32px
+
+// Button Variants
+
+$btn-primary-color: #FFF !default;
+$btn-primary-bg: map-get($theme-colors, primary) !default;
+$btn-primary-border-color: $btn-primary-bg !default;
+$btn-primary-hover-color: $btn-primary-color !default;
+$btn-primary-hover-bg: darken($btn-primary-bg, 11%) !default;
+$btn-primary-hover-border-color: $btn-primary-hover-bg !default;
+$btn-primary-focus-box-shadow: 0 0 0 2px rgba($btn-primary-hover-border-color, 0.5) !default;
+$btn-primary-active-color: $btn-primary-color !default;
+$btn-primary-active-bg: $btn-primary-hover-bg !default;
+$btn-primary-hover-border-color: $btn-primary-active-bg !default;
+
+$btn-secondary-color: map-get($theme-colors, secondary) !default;
+$btn-secondary-bg: #FFF !default;
+$btn-secondary-border-color: lighten($btn-secondary-color, 37%) !default;
+$btn-secondary-hover-color: $body-color !default;
+$btn-secondary-hover-bg: lighten($btn-secondary-color, 50%) !default;
+$btn-secondary-hover-border-color: $btn-secondary-border-color !default;
+$btn-secondary-focus-box-shadow: 0 0 0 2px rgba($btn-secondary-hover-border-color, 0.5) !default;
+$btn-secondary-active-color: $btn-secondary-hover-color !default;
+$btn-secondary-active-bg: $btn-secondary-hover-bg !default;
+$btn-secondary-active-border-color: $btn-secondary-hover-border-color !default;
+
+$btn-success-color: #FFF !default;
+$btn-success-bg: map-get($theme-colors, success) !default;
+$btn-success-border-color: $btn-success-bg !default;
+$btn-success-hover-color: $btn-success-color !default;
+$btn-success-hover-bg: darken($btn-success-bg, 8%) !default;
+$btn-success-hover-border-color: $btn-success-hover-bg !default;
+$btn-success-focus-box-shadow: 0 0 0 2px rgba($btn-success-hover-border-color, 0.5) !default;
+$btn-success-active-color: $btn-success-color !default;
+$btn-success-active-bg: darken($btn-success-hover-bg, 12%) !default;
+$btn-success-active-border-color: $btn-success-active-bg !default;
+
+$btn-info-color: #FFF !default;
+$btn-info-bg: map-get($theme-colors, info) !default;
+$btn-info-border-color: $btn-info-bg !default;
+$btn-info-hover-color: $btn-info-color !default;
+$btn-info-hover-bg: darken($btn-info-bg, 8%) !default;
+$btn-info-hover-border-color: $btn-info-hover-bg !default;
+$btn-info-focus-box-shadow: 0 0 0 2px rgba($btn-info-hover-border-color, 0.5) !default;
+$btn-info-active-color: $btn-info-color !default;
+$btn-info-active-bg: darken($btn-info-hover-bg, 12%) !default;
+$btn-info-active-border-color: $btn-info-active-bg !default;
+
+$btn-warning-color: #FFF !default;
+$btn-warning-bg: map-get($theme-colors, warning) !default;
+$btn-warning-border-color: $btn-warning-bg !default;
+$btn-warning-hover-color: $btn-warning-color !default;
+$btn-warning-hover-bg: darken($btn-warning-bg, 8%) !default;
+$btn-warning-hover-border-color: $btn-warning-hover-bg !default;
+$btn-warning-focus-box-shadow: 0 0 0 2px rgba($btn-warning-hover-border-color, 0.5) !default;
+$btn-warning-active-color: $btn-warning-color !default;
+$btn-warning-active-bg: darken($btn-warning-hover-bg, 12%) !default;
+$btn-warning-active-border-color: $btn-warning-active-bg !default;
+
+$btn-danger-color: #FFF !default;
+$btn-danger-bg: map-get($theme-colors, danger) !default;
+$btn-danger-border-color: $btn-danger-bg !default;
+$btn-danger-hover-color: $btn-danger-color !default;
+$btn-danger-hover-bg: darken($btn-danger-bg, 8%) !default;
+$btn-danger-hover-border-color: $btn-danger-hover-bg !default;
+$btn-danger-focus-box-shadow: 0 0 0 2px rgba($btn-danger-hover-border-color, 0.5) !default;
+$btn-danger-active-color: $btn-danger-color !default;
+$btn-danger-active-bg: darken($btn-danger-hover-bg, 12%) !default;
+$btn-danger-active-border-color: $btn-danger-active-bg !default;
+
+$btn-light-color: map-get($theme-colors, secondary) !default;
+$btn-light-bg: #FFF !default;
+$btn-light-hover-color: $btn-light-color !default;
+$btn-light-hover-bg: #FCFEFF !default;
+$btn-light-hover-border-color: $btn-light-hover-bg !default;
+$btn-light-focus-box-shadow: 0 0 0 2px rgba($btn-light-hover-bg, 0.5) !default;
+$btn-light-active-bg: darken($btn-light-hover-bg, 6%) !default;
+$btn-light-active-border-color: $btn-light-active-bg !default;
+
+$btn-dark-color: #FFF !default;
+$btn-dark-hover-color: $btn-dark-color !default;
+$btn-dark-hover-bg: darken(map-get($theme-colors, dark), 8%) !default;
+$btn-dark-focus-box-shadow: 0 0 0 2px rgba($btn-dark-hover-bg, 0.5) !default;
+
+$btn-link-disabled-color: $link-color !default;

@@ -1,0 +1,57 @@
+/**
+* Clay 2.0.0-alpha.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$progress-min-width: 6.25rem !default; // 100px
+
+$progress-bar-box-shadow: null !default;
+
+// Progress Sizes
+
+$progress-border-radius-lg: $border-radius !default;
+$progress-font-size-lg: $font-size-lg !default;
+$progress-height-lg: $progress-height * 2 !default;
+
+// Progress Group
+
+$progress-group-addon-font-size: null !default;
+$progress-group-addon-font-weight: null !default;
+$progress-group-addon-spacer-x: 1rem !default;
+
+// Progress Variants
+
+$progress-group-feedback-color: map-get($theme-colors, primary) !default;
+
+$progress-bar-danger-bg: map-get($theme-colors, danger) !default;
+$progress-group-feedback-danger-color: map-get($theme-colors, danger) !default;
+
+$progress-bar-info-bg: map-get($theme-colors, info) !default;
+$progress-group-feedback-info-color: map-get($theme-colors, info) !default;
+
+$progress-bar-success-bg: map-get($theme-colors, success) !default;
+$progress-group-feedback-success-color: map-get($theme-colors, success) !default;
+
+$progress-bar-warning-bg: map-get($theme-colors, warning) !default;
+$progress-group-feedback-warning-color: map-get($theme-colors, warning) !default;
+
+$progress-palette: (
+	success: (
+		bar-bg: $progress-bar-success-bg,
+		group-feedback-color: $progress-group-feedback-success-color
+	),
+	info: (
+		bar-bg: $progress-bar-info-bg,
+		group-feedback-color: $progress-group-feedback-info-color
+	),
+	warning: (
+		bar-bg: $progress-bar-warning-bg,
+		group-feedback-color: $progress-group-feedback-warning-color
+	),
+	danger: (
+		bar-bg: $progress-bar-danger-bg,
+		group-feedback-color: $progress-group-feedback-danger-color
+	)
+) !default;

@@ -1,0 +1,17 @@
+/**
+* Clay 2.0.0-alpha.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$breadcrumb-bg: transparent !default;
+$breadcrumb-font-size: 0.875rem !default; // 14px
+
+$breadcrumb-link-color: lighten(map-get($theme-colors, secondary), 7%) !default;
+
+$breadcrumb-active-color: $body-color !default;
+
+
+$breadcrumb-divider-color: $breadcrumb-link-color !default;
+$breadcrumb-divider-svg-icon-height: 0.6em !default;

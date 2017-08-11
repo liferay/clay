@@ -1,0 +1,388 @@
+/**
+* Clay 2.0.0-alpha.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.modal-content {
+	@if not ($modal-content-border-radius == $border-radius-lg) {
+		@include border-radius($modal-content-border-radius);
+	}
+
+	overflow: hidden;
+}
+
+.modal-header {
+	background-color: $modal-header-bg;
+	border-color: $modal-header-border-color;
+	color: $modal-header-color;
+	flex-shrink: 0;
+}
+
+.modal-body {
+	background-color: $modal-body-bg;
+	color: $modal-body-color;
+
+	&.inline-scroller {
+		-webkit-overflow-scrolling: touch;
+		overflow: auto;
+		padding: $modal-inner-padding;
+	}
+}
+
+.modal-footer {
+	background-color: $modal-footer-bg;
+
+	@include box-shadow($modal-footer-box-shadow);
+
+	color: $modal-footer-color;
+	flex-shrink: 0;
+}
+
+// Modal Title
+
+.modal-title {
+	display: block;
+	font-size: $modal-title-font-size;
+	font-weight: $modal-title-font-weight;
+	flex-grow: 1;
+	text-align: $modal-title-text-align;
+
+	@include text-truncate;
+}
+
+h1.modal-title {
+	font-size: $h1-font-size;
+
+	@include scale-component {
+		font-size: $h1-font-size-mobile;
+	}
+}
+
+h2.modal-title {
+	font-size: $h2-font-size;
+
+	@include scale-component {
+		font-size: $h2-font-size-mobile;
+	}
+}
+
+h3.modal-title {
+	font-size: $h3-font-size;
+
+	@include scale-component {
+		font-size: $h3-font-size-mobile;
+	}
+}
+
+h4.modal-title {
+	font-size: $h4-font-size;
+
+	@include scale-component {
+		font-size: $h4-font-size-mobile;
+	}
+}
+
+h5.modal-title {
+	font-size: $h5-font-size;
+
+	@include scale-component {
+		font-size: $h5-font-size-mobile;
+	}
+}
+
+h6.modal-title {
+	font-size: $h6-font-size;
+
+	@include scale-component {
+		font-size: $h6-font-size-mobile;
+	}
+}
+
+// Modal Buttons
+
+.modal-primary-action-button {
+	float: left;
+	font-size: ($font-size-base * 1.5);
+	font-weight: $close-font-weight;
+	text-shadow: $close-text-shadow;
+}
+
+button.modal-primary-action-button {
+	-webkit-appearance: none;
+	background: transparent;
+	border-width: 0;
+	cursor: pointer;
+	padding: 0;
+}
+
+.modal-header {
+	.close,
+	.modal-primary-action-button {
+		background-color: transparent;
+		background-image: none;
+		box-shadow: none;
+		color: $modal-header-close-color;
+		margin-top: -1px;
+		opacity: 1;
+
+		@include monospace(32px);
+	}
+
+	.close,
+	.modal-primary-action-button {
+		> span {
+			opacity: $modal-header-close-icon-opacity;
+		}
+
+		.lexicon-icon {
+			opacity: $modal-header-close-lexicon-icon-opacity;
+		}
+
+		&:focus,
+		&:hover {
+			> span {
+				opacity: $modal-header-close-icon-opacity * $modal-header-close-opacity-modifier;
+			}
+
+			.lexicon-icon {
+				opacity: $modal-header-close-lexicon-icon-opacity * $modal-header-close-opacity-modifier;
+			}
+		}
+
+		&:active {
+			background-color: transparent;
+			border-color: transparent;
+			box-shadow: none;
+			color: $modal-header-close-color;
+		}
+	}
+}
+
+// Modal Iframe
+
+.modal-iframe {
+	iframe {
+		border-width: 0;
+		float: left;
+		height: 300px;
+		width: 100%;
+	}
+
+	.modal-body {
+		padding: 0;
+	}
+}
+
+.modal-body-iframe {
+	padding: 0;
+
+	iframe {
+		border-width: 0;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+	}
+}
+
+// Modal Full Screen
+
+.modal-full-screen {
+	bottom: 45px;
+	left: 45px;
+	margin: 0;
+	max-width: none;
+	position: absolute;
+	right: 45px;
+	top: 45px;
+
+	@include scale-component {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+
+	.modal-content {
+		border-color: $modal-content-border-color;
+
+		@include border-radius($modal-content-border-radius);
+
+		border-width: $modal-content-border-width;
+		height: 100%;
+
+		@include scale-component {
+			@include border-radius(0);
+
+			border-width: 0;
+		}
+	}
+
+	.modal-body {
+		overflow: auto;
+	}
+}
+
+// Modal Responsive Full Screen
+
+.modal-full-screen-sm-down {
+	@include media-breakpoint-down(sm) {
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		max-width: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		.modal-body {
+			overflow: auto;
+		}
+
+		.modal-content {
+			@include border-radius(0);
+
+			border-width: 0;
+			height: 100%;
+		}
+	}
+}
+
+.modal-inverse {
+	a,
+	.btn-link {
+		color: $modal-inverse-link-color;
+	}
+
+	.modal-content {
+		background-color: $modal-inverse-content-bg;
+		border-color: $modal-inverse-content-border-color;
+	}
+
+	.modal-header {
+		background-color: $modal-inverse-header-bg;
+		border-color: $modal-inverse-header-border-color;
+		color: $modal-inverse-header-color;
+
+		.close,
+		.modal-primary-action-button {
+			color: $modal-inverse-header-close-color;
+		}
+	}
+
+	.modal-body {
+		background-color: $modal-inverse-body-bg;
+		color: $modal-inverse-body-color;
+	}
+
+	.modal-footer {
+		background-color: $modal-inverse-footer-bg;
+		border-color: $modal-inverse-footer-border-color;
+		color: $modal-inverse-footer-color;
+	}
+}
+
+// Modal Danger
+
+.modal-danger {
+	.modal-header {
+		background-color: $modal-danger-header-bg;
+		border-color: $modal-danger-header-border-color;
+		color: $modal-danger-header-color;
+
+		.close,
+		.modal-primary-action-button {
+			color: $modal-danger-header-close-color;
+		}
+	}
+
+	.modal-body {
+		background-color: $modal-danger-body-bg;
+		color: $modal-danger-body-color;
+	}
+
+	.modal-footer {
+		background-color: $modal-danger-footer-bg;
+		border-color: $modal-danger-footer-border-color;
+		color: $modal-danger-footer-color;
+	}
+}
+
+// Modal Info
+
+.modal-info {
+	.modal-header {
+		background-color: $modal-info-header-bg;
+		border-color: $modal-info-header-border-color;
+		color: $modal-info-header-color;
+
+		.close,
+		.modal-primary-action-button {
+			color: $modal-info-header-close-color;
+		}
+	}
+
+	.modal-body {
+		background-color: $modal-info-body-bg;
+		color: $modal-info-body-color;
+	}
+
+	.modal-footer {
+		background-color: $modal-info-footer-bg;
+		border-color: $modal-info-footer-border-color;
+		color: $modal-info-footer-color;
+	}
+}
+
+// Modal Success
+
+.modal-success {
+	.modal-header {
+		background-color: $modal-success-header-bg;
+		border-color: $modal-success-header-border-color;
+		color: $modal-success-header-color;
+
+		.close,
+		.modal-primary-action-button {
+			color: $modal-success-header-close-color;
+		}
+	}
+
+	.modal-body {
+		background-color: $modal-success-body-bg;
+		color: $modal-success-body-color;
+	}
+
+	.modal-footer {
+		background-color: $modal-success-footer-bg;
+		border-color: $modal-success-footer-border-color;
+		color: $modal-success-footer-color;
+	}
+}
+
+// Modal Warning
+
+.modal-warning {
+	.modal-header {
+		background-color: $modal-warning-header-bg;
+		border-color: $modal-warning-header-border-color;
+		color: $modal-warning-header-color;
+
+		.close,
+		.modal-primary-action-button {
+			color: $modal-warning-header-close-color;
+		}
+	}
+
+	.modal-body {
+		background-color: $modal-warning-body-bg;
+		color: $modal-warning-body-color;
+	}
+
+	.modal-footer {
+		background-color: $modal-warning-footer-bg;
+		border-color: $modal-warning-footer-border-color;
+		color: $modal-warning-footer-color;
+	}
+}

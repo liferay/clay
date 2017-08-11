@@ -1,0 +1,20 @@
+/**
+* Clay 2.0.0-alpha.5
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.tooltip {
+	@if not ($tooltip-font-size == $font-size-sm) {
+		font-size: $tooltip-font-size;
+	}
+}
+
+.tooltip-inner {
+	@if not ($tooltip-border-radius == $border-radius) {
+		@include border-radius($tooltip-border-radius);
+	}
+
+	@include box-shadow($tooltip-box-shadow);
+}
