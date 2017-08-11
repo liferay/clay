@@ -26,7 +26,7 @@
 }
 
 @function lx-icon-padding($monospaced-size, $icon-size) {
-	@return ($monospaced-size - $icon-size) / 2;
+	@return calc((#{$monospaced-size} - #{$icon-size}) / 2);
 }
 
 @function calcLexiconIconPadding($monospaced-size, $icon-size) {
