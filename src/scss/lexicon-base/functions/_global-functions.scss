@@ -29,12 +29,6 @@
 	@return calc((#{$monospaced-size} - #{$icon-size}) / 2);
 }
 
-@function calcLexiconIconPadding($monospaced-size, $icon-size) {
-	@warn "Lexicon's `calcLexiconIconPadding($monospaced-size, $icon-size)` mixin is deprecated as of v1.0.7 and will be removed in v2.0.0. Please use `lx-icon-padding($monospaced-size, $icon-size)` instead.";
-
-	@return lx-icon-padding($monospaced-size, $icon-size);
-}
-
 // Converts a pixel value to rem based on the `$base` font size. If the return
 // value will be used inside a Sass arithmetic operation don't set `$add-unit`
 // to true
