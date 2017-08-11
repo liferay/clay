@@ -28,8 +28,6 @@ a.collapse-icon {
 
 .collapse-icon-closed,
 .collapse-icon-open {
-	[class^="icon-"],
-	[class*=" icon-"],
 	.lexicon-icon {
 		display: block;
 	}
@@ -43,11 +41,6 @@ a.collapse-icon {
 		position: absolute;
 		right: $collapse-icon-position-right;
 		top: $collapse-icon-position-top;
-
-		[class^="icon-"],
-		[class*=" icon-"] {
-			margin-top: calc(((1em * #{$line-height-base}) - 1em) / 2);
-		}
 
 		.lexicon-icon {
 			margin-top: calc(((1em * #{$line-height-base}) - #{$lexicon-icon-size}) / 2);
@@ -142,18 +135,6 @@ a .icon-monospaced,
 
 	&.icon-5x {
 		@include monospace(100px);
-	}
-}
-
-// Glyphicon Icon Monospaced
-
-.icon-monospaced {
-	.glyphicon {
-		display: inline-block;
-
-		@include monospace($icon-monospaced-size);
-
-		text-align: center;
 	}
 }
 
