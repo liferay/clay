@@ -6,130 +6,69 @@
 	@include aspect-ratio;
 }
 
-// Aspect Ratio Helper Placeholders
-
-%aspect-ratio-item {
+.aspect-ratio-item {
 	position: absolute;
 	word-wrap: break-word;
 }
 
-%aspect-ratio-item-fluid {
-	max-width: 100%;
+.aspect-ratio-item-fluid {
 	position: absolute;
 	word-wrap: break-word;
 }
 
-%aspect-ratio-item-vertical-fluid {
+.aspect-ratio-item-vertical-fluid {
 	max-height: 100%;
 	position: absolute;
 	word-wrap: break-word;
 }
 
-%aspect-ratio-item-right {
+.aspect-ratio-item-right {
 	right: 0;
 }
 
-%aspect-ratio-item-bottom {
+.aspect-ratio-item-bottom {
 	bottom: 0;
 }
 
-%aspect-ratio-item-center {
+.aspect-ratio-item-center {
 	left: 50%;
 	transform: translateX(-50%);
 }
 
-%aspect-ratio-item-middle {
+.aspect-ratio-item-middle {
 	top: 50%;
 	transform: translateY(-50%);
 }
 
-%aspect-ratio-item-center-middle {
+.aspect-ratio-item-center.aspect-ratio-item-middle {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
 
-%aspect-ratio-3-to-2 {
+.aspect-ratio-3-to-2 {
 	@include aspect-ratio(3, 2);
 }
 
-%aspect-ratio-4-to-3 {
+.aspect-ratio-4-to-3 {
 	@include aspect-ratio(4, 3);
 }
 
-%aspect-ratio-8-to-5 {
+.aspect-ratio-8-to-5 {
 	@include aspect-ratio(8, 5);
 }
 
-%aspect-ratio-16-to-9 {
+.aspect-ratio-16-to-9 {
 	@include aspect-ratio(16, 9);
 }
 
-%aspect-ratio-bg-cover {
+.aspect-ratio-bg-cover {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-%aspect-ratio-bg-center {
+.aspect-ratio-bg-center {
 	background-position: center;
 	background-repeat: no-repeat;
-}
-
-// Aspect Ratio Helpers
-
-.aspect-ratio-item {
-	@extend %aspect-ratio-item;
-}
-
-.aspect-ratio-item-fluid {
-	@extend %aspect-ratio-item-fluid;
-}
-
-.aspect-ratio-item-vertical-fluid {
-	@extend %aspect-ratio-item-vertical-fluid;
-}
-
-.aspect-ratio-item-right {
-	@extend %aspect-ratio-item-right;
-}
-
-.aspect-ratio-item-bottom {
-	@extend %aspect-ratio-item-bottom;
-}
-
-.aspect-ratio-item-center {
-	@extend %aspect-ratio-item-center;
-}
-
-.aspect-ratio-item-middle {
-	@extend %aspect-ratio-item-middle;
-}
-
-.aspect-ratio-item-center.aspect-ratio-item-middle {
-	@extend %aspect-ratio-item-center-middle;
-}
-
-.aspect-ratio-3-to-2 {
-	@extend %aspect-ratio-3-to-2;
-}
-
-.aspect-ratio-4-to-3 {
-	@extend %aspect-ratio-4-to-3;
-}
-
-.aspect-ratio-8-to-5 {
-	@extend %aspect-ratio-8-to-5;
-}
-
-.aspect-ratio-16-to-9 {
-	@extend %aspect-ratio-16-to-9;
-}
-
-.aspect-ratio-bg-cover {
-	@extend %aspect-ratio-bg-cover;
-}
-
-.aspect-ratio-bg-center {
-	@extend %aspect-ratio-bg-center;
 }
