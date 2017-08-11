@@ -12,6 +12,7 @@
 }
 
 .aspect-ratio-item-fluid {
+	max-width: 100%;
 	position: absolute;
 	word-wrap: break-word;
 }
@@ -22,28 +23,36 @@
 	word-wrap: break-word;
 }
 
-.aspect-ratio-item-right {
-	right: 0;
+.aspect-ratio-item-top-center {
+	@include clay-position(top-center);
 }
 
-.aspect-ratio-item-bottom {
-	bottom: 0;
+.aspect-ratio-item-top-right {
+	@include clay-position(top-right);
 }
 
-.aspect-ratio-item-center {
-	left: 50%;
-	transform: translateX(-50%);
+.aspect-ratio-item-right-middle {
+	@include clay-position(right-middle);
 }
 
-.aspect-ratio-item-middle {
-	top: 50%;
-	transform: translateY(-50%);
+.aspect-ratio-item-bottom-right {
+	@include clay-position(bottom-right);
 }
 
-.aspect-ratio-item-center.aspect-ratio-item-middle {
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+.aspect-ratio-item-bottom-center {
+	@include clay-position(bottom-center);
+}
+
+.aspect-ratio-item-bottom-left {
+	@include clay-position(bottom-left);
+}
+
+.aspect-ratio-item-left-middle {
+	@include clay-position(left-middle);
+}
+
+.aspect-ratio-item-center-middle {
+	@include clay-position(center-middle);
 }
 
 .aspect-ratio-3-to-2 {
