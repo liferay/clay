@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Form Elements (Custom)</title>
+	<title>Lexicon - Images (Aspect Ratios)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../scss/highlightjs/github.css" />
@@ -84,7 +84,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
 </li>
-<li class="active"><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
 </li>
@@ -94,7 +94,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
+<li class="active"><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
@@ -208,111 +208,65 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title" id="beginContent" tabindex="-1">
-			Form Elements (Custom)
+			Images (Aspect Ratios)
 
 			
 		</h1>
 
 		
 <style>
-	.clay-site-row-spacer {
-		background-color: #FFF;
-		padding-top: 1rem;
-	}
+	.aspect-ratio { background-color: #DDD; }
 </style>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="custom-select"><a class="heading-anchor" href="#custom-select"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Select</h3>
+		<h3 id="image-aspect-ratios"><a class="heading-anchor" href="#image-aspect-ratios"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Image Aspect Ratios</h3>
 
-		<div class="alert alert-warning">
-			It&apos;s recommended to use <code>select.form-control</code> instead. This is only here for documentation purposes.
-		</div>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>Sometimes you can&apos;t control the size of an image, constrain your images with aspect-ratios. The base class <code>aspect-ratio</code> maintains a 1 to 1 ratio relative to its container&apos;s width.</p>
 
-		<select class="custom-select">
-			<option selected>Open this select menu</option>
-			<option value="1">One</option>
-			<option value="2">Two</option>
-			<option value="3">Three</option>
-		</select>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="custom-file"><a class="heading-anchor" href="#custom-file"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom File</h3>
-
-		<div class="alert alert-warning">
-			It&apos;s recommended to use <code>.form-file</code> instead. This is here only for documentation purposes.
-			To get <code>custom-file-control</code> styles to display, you&apos;ll need to add <code>lang=&quot;en&quot;</code> to the html element or set the Content-Language HTTP header.
-		</div>
-
-		<label class="custom-file">
-			<input type="file" id="file2" class="custom-file-input">
-			<span class="custom-file-control"></span>
-		</label>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="form-file"><a class="heading-anchor" href="#form-file"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Form File</h3>
-
-		<blockquote class="blockquote blockquote-sm blockquote-success">
-			<p>Nest <code>&lt;input class=&quot;form-file-input&quot; type=&quot;file&quot;&gt;</code> inside <code>form-file</code> to create a variety of custom file inputs. The element with the <code>form-file</code> class should wrap whatever element you want to trigger the operating system&apos;s file browser.</p>
+			<p>Use <code>aspect-ratio-3-to-2</code>, <code>aspect-ratio-4-to-3</code>, <code>aspect-ratio-8-to-5</code>, or <code>aspect-ratio-16-to-9</code> to maintain the specific ratio relative to its container or create your own by setting <code>padding-bottom</code> to the ratio you want e.g. 2 to 1 <code>.aspect-ratio-2-to-1 { padding-bottom: 50% }</code>.</p>
 		</blockquote>
+	</div>
+</div>
 
-		<div class="alert alert-warning">
-			Form File needs custom javascript to change the input value to the file selected.
-		</div>
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="aspect-ratio-item-fluid"><a class="heading-anchor" href="#aspect-ratio-item-fluid"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Aspect Ratio Item Fluid</h3>
 
-		<div class="form-group">
-			<label class="form-control-label" for="customFile1">Attach File</label>
-			<div class="input-group">
-				<input class="form-control" id="customFileText1" placeholder="Choose file..." readonly tabindex="-1" type="text">
-				<div class="input-group-btn">
-					<div class="form-file">
-						<input class="form-file-input" data-clay-site-content="#customFileText1" data-clay-site-toggle="file" id="customFile1" type="file">
-						<button class="btn btn-secondary" tabindex="-1">Browse</button>
-					</div>
+		<h6>Original Image</h6>
+		<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg" style="max-width:300px;width:100%;">
+
+		<div class="row">
+			<div class="col-3">
+				<h6>1:1</h6>
+				<div class="aspect-ratio">
+					<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 				</div>
 			</div>
-		</div>
-
-		<div class="form-group">
-			<label class="form-control-label" for="customFile2">Attach File</label>
-			<div class="input-group input-group-inset">
-				<div class="input-group-input">
-					<input class="form-control" id="customFileText2" placeholder="Choose file..." readonly tabindex="-1" type="text" style="padding-right: 92px;">
-				</div>
-				<span class="input-group-inset-item">
-					<div class="form-file">
-						<input class="form-file-input" data-clay-site-content="#customFileText2" data-clay-site-toggle="file" id="customFile2" type="file">
-						<button class="btn btn-secondary" tabindex="-1">Browse</button>
-					</div>
-				</span>
-			</div>
-		</div>
-
-		<div class="form-group">
-			<label class="form-control-label" for="customFile3">Attach File</label>
-			<div class="form-file">
-				<input class="form-file-input" data-clay-site-content="#customFileText3" data-clay-site-toggle="file" id="customFile3" type="file">
-				<div class="input-group">
-					<span class="input-group-addon" id="inputGroupAddon02">Browse</span>
-					<input aria-describedby="inputGroupAddon02" class="form-control" id="customFileText3" placeholder="Choose file..." tabindex="-1" type="text">
+			<div class="col-3">
+				<h6>3:2</h6>
+				<div class="aspect-ratio aspect-ratio-3-to-2">
+					<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 				</div>
 			</div>
-		</div>
-
-		<div class="form-group">
-			<div class="form-inline">
-				<label class="form-control-label" for="customFile4">Attach File</label>
-				<div class="form-file">
-					<input class="form-file-input" data-clay-site-content="#customFileText4" data-clay-site-toggle="file" id="customFile4" type="file">
-					<button class="btn btn-primary" tabindex="-1">Browse</button>
+			<div class="col-3">
+				<h6>4:3</h6>
+				<div class="aspect-ratio aspect-ratio-4-to-3">
+					<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 				</div>
-				<input class="form-control" id="customFileText4" placeholder="Choose File..." readonly tabindex="-1" type="text">
+			</div>
+			<div class="col-3">
+				<h6>8:5</h6>
+				<div class="aspect-ratio aspect-ratio-8-to-5">
+					<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>16:9</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -320,128 +274,168 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="custom-checkbox"><a class="heading-anchor" href="#custom-checkbox"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Checkbox</h3>
+		<h3 id="aspect-ratio-item-vertical-fluid"><a class="heading-anchor" href="#aspect-ratio-item-vertical-fluid"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Aspect Ratio Item Vertical Fluid</h3>
 
-		<div>
-			<label class="custom-control custom-checkbox">
-				<input class="custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Unchecked</span>
-			</label>
-
-			<label class="custom-control custom-checkbox">
-				<input checked class="custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Checked</span>
-			</label>
-
-			<label class="custom-control custom-checkbox">
-				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Indeterminate</span>
-			</label>
-		</div>
-
-		<div>
-			<label class="custom-control custom-checkbox">
-				<input class="custom-control-input" disabled type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Unchecked Disabled</span>
-			</label>
-
-			<label class="custom-control custom-checkbox">
-				<input checked class="custom-control-input" disabled type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Checked Disabled</span>
-			</label>
-
-			<label class="custom-control custom-checkbox">
-				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" disabled type="checkbox">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Indeterminate Disabled</span>
-			</label>
+		<div class="row">
+			<div class="col-3">
+				<h6>1:1</h6>
+				<div class="aspect-ratio">
+					<img alt="thumbnail" class="aspect-ratio-item-vertical-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>3:2</h6>
+				<div class="aspect-ratio aspect-ratio-3-to-2">
+					<img alt="thumbnail" class="aspect-ratio-item-vertical-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>4:3</h6>
+				<div class="aspect-ratio aspect-ratio-4-to-3">
+					<img alt="thumbnail" class="aspect-ratio-item-vertical-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>8:5</h6>
+				<div class="aspect-ratio aspect-ratio-8-to-5">
+					<img alt="thumbnail" class=" aspect-ratio-item-vertical-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>16:9</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class=" aspect-ratio-item-vertical-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="custom-radio"><a class="heading-anchor" href="#custom-radio"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Radio</h3>
+		<h3 id="aspect-ratio-item"><a class="heading-anchor" href="#aspect-ratio-item"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Aspect Ratio Item</h3>
 
-		<label class="custom-control custom-radio">
-			<input checked class="custom-control-input" id="radio1" name="radio" type="radio">
-			<span class="custom-control-indicator"></span>
-			<span class="custom-control-description">Toggle this custom radio</span>
-		</label>
-
-		<label class="custom-control custom-radio">
-			<input class="custom-control-input" id="radio2" name="radio" type="radio">
-			<span class="custom-control-indicator"></span>
-			<span class="custom-control-description">Or toggle this other custom radio</span>
-		</label>
+		<blockquote>
+			<p>Use <code>aspect-ratio-item</code> if you want to keep the content&apos;s original size and crop the visible area.</p>
+		</blockquote>
 	</div>
-</div>
 
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3 id="validation-states"><a class="heading-anchor" href="#validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Validation States</h3>
-
-		<div class="form-group has-success">
-			<label class="custom-control custom-checkbox">
-				<input type="checkbox" class="custom-control-input">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Check this custom checkbox</span>
-			</label>
-		</div>
-
-		<div class="form-group has-warning">
-			<label class="custom-control custom-checkbox">
-				<input type="checkbox" class="custom-control-input">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Check this custom checkbox</span>
-			</label>
-		</div>
-
-		<div class="form-group has-danger">
-			<label class="custom-control custom-checkbox">
-				<input type="checkbox" class="custom-control-input">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Check this custom checkbox</span>
-			</label>
+	<div class="col-3">
+		<div class="aspect-ratio aspect-ratio-16-to-9">
+			<img alt="thumbnail" class=" aspect-ratio-item aspect-ratio-item-center aspect-ratio-item-middle" src="../../images/thumbnail_hot_air_ballon.jpg">
 		</div>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="custom-controls-stacked"><a class="heading-anchor" href="#custom-controls-stacked"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Controls Stacked</h3>
+		<h3 id="aspect-ratio-item-helper-classes"><a class="heading-anchor" href="#aspect-ratio-item-helper-classes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Aspect Ratio Item Helper Classes</h3>
 
-		<div class="custom-controls-stacked">
-			<label class="custom-control custom-radio">
-				<input id="radioStacked3" disabled name="radio-stacked" type="radio" class="custom-control-input">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Toggle this custom radio</span>
-			</label>
-			<label class="custom-control custom-radio">
-				<input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Or toggle this other custom radio</span>
-			</label>
+		<div class="row">
+			<div class="col-3">
+				<h6>aspect-ratio-item-center-middle</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="../../images/liferay_logo_tagline.png">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>aspect-ratio-item-fluid</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/liferay_logo_tagline.png">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>aspect-ratio-item-top-center</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-top-center aspect-ratio-item-fluid" src="../../images/liferay_logo_tagline.png">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>aspect-ratio-item-top-right</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-fluid aspect-ratio-item-top-right" src="../../images/liferay_logo_tagline.png">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>aspect-ratio-item-right-middle</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-fluid aspect-ratio-item-right-middle" src="../../images/liferay_logo_tagline.png">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>aspect-ratio-item-bottom-right</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-bottom-right aspect-ratio-item-fluid" src="../../images/liferay_logo_tagline.png">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>aspect-ratio-item-bottom-center</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-bottom-center aspect-ratio-item-fluid" src="../../images/liferay_logo_tagline.png">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>aspect-ratio-item-bottom-left</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-bottom-left aspect-ratio-item-fluid" src="../../images/liferay_logo_tagline.png">
+				</div>
+			</div>
+			<div class="col-3">
+				<h6>aspect-ratio-item-left-middle</h6>
+				<div class="aspect-ratio aspect-ratio-16-to-9">
+					<img alt="thumbnail" class="aspect-ratio-item-left-middle aspect-ratio-item-fluid" src="../../images/liferay_logo_tagline.png">
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
-<script>
-	$('.clay-site-custom-checkbox-indeterminate').prop('indeterminate', true);
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="aspect-ratio-background-images"><a class="heading-anchor" href="#aspect-ratio-background-images"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Aspect Ratio Background Images</h3>
+	</div>
 
-	$('[data-clay-site-toggle="file"]').on('change', function(event) {
-		var path = $(this).val();
-		var name = path.substring(path.lastIndexOf("\\") + 1, path.length);
-		var input = $(this).data('clay-site-content');
+	<div class="col-3">
+		<h6>aspect-ratio-bg-cover</h6>
+		<div class="aspect-ratio aspect-ratio-16-to-9 aspect-ratio-bg-cover" style="background-image: url(../../images/thumbnail_hot_air_ballon.jpg);">
+		</div>
+	</div>
+	<div class="col-3">
+		<h6>aspect-ratio-bg-center</h6>
+		<div class="aspect-ratio aspect-ratio-16-to-9 aspect-ratio-bg-center" style="background-image: url(../../images/liferay_logo_tagline.png);">
+		</div>
+	</div>
+</div>
 
-		$(input).val(name);
-	});
-</script>
+<div class="clay-site-row-spacer row">
+	<div class="col-12">
+		<h3>Aspect Ratio with Other Things</h3>
+	</div>
+
+	<div class="col-4">
+		<div class="aspect-ratio aspect-ratio-16-to-9">
+			<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+					<use xlink:href="../../images/icons/icons.svg#folder">
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="col-4">
+		<div class="aspect-ratio aspect-ratio-16-to-9">
+			<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+				Some ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossible Text?
+			</div>
+		</div>
+	</div>
+	<div class="col-4">
+		<div class="aspect-ratio aspect-ratio-16-to-9">
+			<div class="aspect-ratio-item-center-middle aspect-ratio-item-fluid">
+				<span class="rounded-circle sticker sticker-danger">133</span>
+			</div>
+		</div>
+	</div>
+</div>
 	</div>
 
 		</section>
