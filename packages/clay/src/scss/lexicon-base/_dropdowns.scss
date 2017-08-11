@@ -251,9 +251,8 @@
 .dropdown-menu-top {
 	bottom: 100% !important;
 	left: 0 !important;
-	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/23187 is merged
 	margin-top: 0;
-	margin-bottom: $dropdown-margin-top;
+	margin-bottom: $dropdown-spacer;
 	right: auto !important;
 	top: auto !important;
 	transform: none !important;
@@ -262,9 +261,8 @@
 .dropdown-menu-top-right {
 	bottom: 100% !important;
 	left: auto !important;
-	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/23187 is merged
 	margin-top: 0;
-	margin-bottom: $dropdown-margin-top;
+	margin-bottom: $dropdown-spacer;
 	right: 0 !important;
 	top: auto !important;
 	transform: none !important;
@@ -273,9 +271,8 @@
 .dropdown-menu-top-center {
 	bottom: 100% !important;
 	left: 50% !important;
-	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/23187 is merged
 	margin-top: 0;
-	margin-bottom: $dropdown-margin-top;
+	margin-bottom: $dropdown-spacer;
 	right: auto !important;
 	top: auto !important;
 	transform: translateX(-50%) !important;
@@ -292,8 +289,7 @@
 .dropdown-menu-left-side {
 	bottom: auto !important;
 	left: auto !important;
-	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/23187 is merged
-	margin-right: $dropdown-margin-top;
+	margin-right: $dropdown-spacer;
 	margin-top: 0;
 	right: 100% !important;
 	top: 0 !important;
@@ -303,8 +299,7 @@
 .dropdown-menu-left-side-bottom {
 	bottom: 0 !important;
 	left: auto !important;
-	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/23187 is merged
-	margin-right: $dropdown-margin-top;
+	margin-right: $dropdown-spacer;
 	margin-top: 0;
 	right: 100% !important;
 	top: auto !important;
@@ -314,8 +309,7 @@
 .dropdown-menu-left-side-middle {
 	bottom: auto !important;
 	left: auto !important;
-	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/23187 is merged
-	margin-right: $dropdown-margin-top;
+	margin-right: $dropdown-spacer;
 	margin-top: 0;
 	right: 100% !important;
 	top: 50% !important;
@@ -325,8 +319,7 @@
 .dropdown-menu-right-side {
 	bottom: auto !important;
 	left: 100% !important;
-	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/23187 is merged
-	margin-left: $dropdown-margin-top;
+	margin-left: $dropdown-spacer;
 	margin-top: 0;
 	right: auto !important;
 	top: 0 !important;
@@ -336,8 +329,7 @@
 .dropdown-menu-right-side-bottom {
 	bottom: 0 !important;
 	left: 100% !important;
-	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/23187 is merged
-	margin-left: $dropdown-margin-top;
+	margin-left: $dropdown-spacer;
 	margin-top: 0;
 	right: auto !important;
 	top: auto !important;
@@ -347,8 +339,7 @@
 .dropdown-menu-right-side-middle {
 	bottom: auto !important;
 	left: 100% !important;
-	// Will need to be revisted if https://github.com/twbs/bootstrap/pull/23187 is merged
-	margin-left: $dropdown-margin-top;
+	margin-left: $dropdown-spacer;
 	margin-top: 0;
 	right: auto !important;
 	top: 50% !important;
