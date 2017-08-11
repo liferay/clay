@@ -1,5 +1,7 @@
 $alert-border-style: solid !default;
 
+$alert-close-font-size: 1rem !default; // 16px
+$alert-close-line-height: $line-height-base; // 1.5
 $alert-close-opacity: null !default;
 $alert-close-margin-left: $alert-padding-x !default; // 20px
 $alert-close-padding-bottom: 0 !default;

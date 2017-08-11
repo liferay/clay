@@ -8,6 +8,8 @@
 	font-size: $alert-font-size;
 
 	.close {
+		font-size: $alert-close-font-size;
+		line-height: $alert-close-line-height;
 		opacity: $alert-close-opacity;
 		margin-left: $alert-close-margin-left;
 		padding-bottom: $alert-close-padding-bottom;
