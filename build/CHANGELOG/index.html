@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.4</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.5</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -213,7 +213,87 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-alpha-4-august-4-2017"><a class="heading-anchor" href="#v2-0-0-alpha-4-august-4-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.4 - August 4, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-alpha-5-august-11-2017"><a class="heading-anchor" href="#v2-0-0-alpha-5-august-11-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.5 - August 11, 2017</h3>
+<ul>
+<li>New: Alert added <code>$alert-close-font-size</code>, <code>$alert-close-line-height</code> and <code>.alert .close</code> should be properly aligned after icon size update</li>
+<li>New: Create mixin clay-position to handle positioning items</li>
+<li>New: Added background mixin bg-checkered($fg-color, $bg-color)</li>
+<li>New: Card added <code>$card-type-directory-sticker-size</code></li>
+<li>New: Card added <code>$card-type-asset-label-size</code></li>
+<li>New: Card added <code>$card-title-color</code>, <code>$card-title-font-size</code>, <code>$card-title-font-weight</code>, <code>$card-title-margin-bottom</code>, <code>$card-title-margin-top</code></li>
+<li>New: Card added <code>$card-subtitle-color</code>, <code>$card-subtitle-font-size</code>, <code>$card-subtitle-font-weight</code>, <code>$card-subtitle-margin-bottom</code>, <code>$card-subtitle-margin-top</code></li>
+<li>New: Card added <code>.card-type-asset</code> and <code>.card-type-directory</code> variants</li>
+<li>New: Dropdown added <code>$dropdown-action-toggle-color</code>, <code>$dropdown-action-toggle-hover-color</code>, and added component <code>.dropdown-action</code></li>
+<li>New: Card added <code>$form-check-card-checked-box-shadow</code></li>
+<li>New: Card added <code>$card-link-text-decoration</code> and <code>$card-link-hover-text-decoration</code></li>
+<li>New: Card added <code>$card-link-hover-color</code></li>
+<li>New: Input Group added skin <code>.input-group-secondary</code> and added <code>$input-group-secondary-addon-bg</code>, <code>$input-group-secondary-addon-border-* color</code>, <code>$input-group-secondary-addon-border-width</code></li>
+<li>Breaking: BS4 renamed <code>$dropdown-margin-top</code> to <code>$dropdown-spacer</code></li>
+<li>Breaking: Update Bootstrap 4 to beta</li>
+<li>Breaking: Remove selectors that reference glyphicon and font awesome</li>
+<li>Breaking: Icons remove %scale-lexicon-icon</li>
+<li>Breaking: Icons renamed <code>$lexicon-icon-lg-size</code>, <code>$lexicon-icon-md-size</code>, <code>$lexicon-icon-sm-size</code> to <code>$lexicon-icon-xl-font-size</code>, <code>$lexicon-icon-lg-font-size</code>, <code>$lexicon-icon-sm-font-size</code> respectively and renamed <code>.lexicon-icon-md</code>, <code>.lexicon-icon-lg</code> to <code>.lexicon-icon-lg</code>, <code>.lexicon-icon-xl</code> respectively</li>
+<li>Breaking: Remove deprecated function calcLexiconIconPadding</li>
+<li>Breaking: Removed component Crop Img use Aspect Ratio instead</li>
+<li>Breaking: Rename _utilities.scss to _position.scss</li>
+<li>Breaking: Aspect Ratio Item positioning should only use 1 class name and use clay-position mixin</li>
+<li>Breaking: Move _global-functions.scss to lexicon-base/functions</li>
+<li>Breaking: Aspect Ratio moved <code>.aspect-ratio-* img</code> styles to <code>.aspect-ratio-item-*</code></li>
+<li>Breaking: Input Group rename <code>$input-group-light-addon-bg</code>, <code>$input-group-light-addon-border-color</code>, <code>$input-group-light-addon-border-width</code>, <code>$input-group-light-addon-color</code> to <code>$input-group-transparent-addon-bg</code>, <code>$input-group-transparent-addon-border-color</code>, <code>$input-* group-transparent-addon-border-width</code>, <code>$input-group-transparent-addon-color</code> and rename <code>.input-group-light</code> to <code>.input-group-transparent</code></li>
+<li>Breaking: Type rename <code>.truncate-text</code> to <code>.text-truncate</code>, was added by BS4</li>
+<li>Breaking: Management Bar remove files, use Navbar instead</li>
+<li>Breaking: Breadcrumb renamed <code>.breadcrumb-vertical</code> to <code>.breadcrumb-stacked</code>, renamed <code>$breadcrumb-vertical-divider</code> to <code>$breadcrumb-stacked-divider</code>, and added <code>$breadcrumb-stacked-divider-color</code>, <code>$breadcrumb-stacked-divider-svg-icon</code>, <code>$breadcrumb-stacked-divider-svg-icon-height</code>, <code>$breadcrumb-stacked-divider-svg-icon-width</code>, <code>$breadcrumb-stacked-divider-spacer-x</code></li>
+<li>Breaking: Breadcrumb moved svg icon support to <code>.breadcrumb</code> and removed <code>.breadcrumb-horizontal</code></li>
+<li>Breaking: Removed <code>$legend-border-color</code> no longer used in BS4</li>
+<li>Update: Remove work arounds fixed by BS4 beta</li>
+<li>Update: Sticker don&#x2019;t use inline-flex and don&#x2019;t need <code>.lexicon-icon</code> styles they scale with font size now</li>
+<li>Update: Clay SVG Icons should scale with font-size</li>
+<li>Update: Utilities added <code>.bg-checkered</code></li>
+<li>Update: Aspect Ratio revert placeholders Sass extend too fragile</li>
+<li>Update: Card reverted <code>$card-type-directory-sticker-size</code> and <code>$card-type-asset-label-size</code> extending is too fragile</li>
+<li>Update: atlas-variables.scss and lexicon-base-variables.scss should also import Bootstrap and Lexicon Base mixins</li>
+<li>Update: atlas-variables.scss and lexicon-base-variables.scss should import Lexicon Base Variables</li>
+<li>Update: Aspect Ratio %aspect-ratio-center-middle should actually center content</li>
+<li>Update: Atlas Sticker Lg font size</li>
+<li>Update: Stickers move size styles to placeholder for extending</li>
+<li>Update: Badges and Labels move size styles to placeholder so they are easier to extend</li>
+<li>Update: Atlas Custom Control Indicator background-color should be white</li>
+<li>Update: Card adjust <code>.card-title</code> and <code>.card-subtitle</code> spacing and sizing</li>
+<li>Update: Card to Clay V2 styles and reorganize Base card variables</li>
+<li>Update: Dropdown Action button.dropdown-toggle should use component-btn-link mixin</li>
+<li>Update: Card added variants <code>.card-type-asset</code>, <code>.card-type-directory</code>, and moved margin bottom to <code>.form-check-card</code> from <code>.card</code></li>
+<li>Update: Card remove -ms- browser prefix on transform, will be covered when autoprefixer is applied</li>
+<li>Update: Form Check Card should also support custom checkbox and radios</li>
+<li>Update: Base set Card Link colors</li>
+<li>Update: (Fixes #355) Progress Bar styles to Clay V2 and BS4 box-shadow mixin doesn&#x2019;t support null values</li>
+<li>Update: Badges and Labels demos with button.close</li>
+<li>Update: Badges and Labels use <code>button.close</code> for dismissible ones</li>
+<li>Update: Alert Close positions</li>
+<li>Update: Added mixin <code>component-btn-link</code> for resetting <code>.btn-link</code> styles in components</li>
+<li>Update: Button Link style as close as possible to normal link</li>
+<li>Update: Breadcrumb add support <code>.btn-link</code></li>
+<li>Update: Button Link re-add focus and border-radius styles removed by BS4</li>
+<li>Update: Type removed <code>.text-*</code> and <code>bg-*</code> variant styles, covered by BS4</li>
+<li>Update: Breadcrumb don&#x2019;t need to define text-transform and font-weight for Clay V2 styles</li>
+<li>Update: Breadcrumb styles to Clay V2</li>
+<li>Update: Atlas Form readonly input colors to Clay V2</li>
+<li>Misc: Build and Release tasks should look in lexicon-base/functions when building SVG icons</li>
+<li>Site: Remove references to <code>.scale-lexicon-icon</code></li>
+<li>Site: Crop Img deleted component</li>
+<li>Site: Card update aspect-ratios to new classes and add card types</li>
+<li>Site: Aspect Ratio demos to use new positional classes</li>
+<li>Site: Aspect Ratio update examples and docs with new classes</li>
+<li>Site: Separate Crop Img and Aspect Ratio from Images and Thumbnails</li>
+<li>Site: Card update with new card types</li>
+<li>Site: Dropdown add demo of <code>.dropdown-action</code> and update aria attributes</li>
+<li>Site: Utilities add documentation on how to display inline/float elements inside <code>.flex-col</code></li>
+<li>Site: Breadcrumb add examples with <code>.btn-link</code></li>
+<li>Site: Input Group add <code>.input-group-secondary</code> example and group input group size content together</li>
+<li>Site: Input Group rename <code>.input-group-light</code> to <code>.input-group-transparent</code></li>
+<li>Site: Replace all instances of <code>truncate-text</code> with <code>text-truncate</code></li>
+<li>Site: Breadcrumb remove <code>.breadcrumb-horizontal</code> and rename <code>.breadcrumb-vertical</code> to <code>.breadcrumb-stacked</code></li>
+</ul>
+<h3 id="v2-0-0-alpha-4-august-4-2017"><a class="heading-anchor" href="#v2-0-0-alpha-4-august-4-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.4 - August 4, 2017</h3>
 <ul>
 <li>Breaking: Forms rename <code>$input-color-placeholder-focus</code>, <code>$input-border-color-disabled</code>, <code>$input-bg-disabled</code>, <code>$input-color-disabled</code>, <code>$input-color-placeholder-disabled</code>, <code>$input-opacity-disabled</code>, <code>$input-label-color-focus</code>, <code>$input-color-focus</code>, <code>$input-box-shadow-focus</code>, <code>$input-danger-bg-focus</code>, <code>$input-danger-border-color-focus</code>, <code>$input-danger-box-shadow-focus</code>, <code>$input-danger-color-focus</code>, <code>$input-success-bg-focus</code>, <code>$input-success-border-color-focus</code>, <code>$input-success-box-shadow-focus</code>, <code>$input-success-color-focus</code>, <code>$input-warning-bg-focus</code>, <code>$input-warning-border-color-focus</code>, <code>$input-warning-box-shadow-focus</code>, <code>$input-warning-color-focus</code> to <code>$input-placeholder-focus-color</code>, <code>$input-disabled-border-color</code>, <code>$input-disabled-bg</code>, <code>$input-disabled-color</code>, <code>$input-placeholder-disabled-color</code>, <code>$input-disabled-opacity</code>, <code>$input-label-focus-color</code>, <code>$input-focus-color</code>, <code>$input-focus-box-shadow</code>, <code>$input-danger-focus-bg</code>, <code>$input-danger-focus-border-color</code>, <code>$input-danger-focus-box-shadow</code>, <code>$input-danger-focus-color</code>, <code>$input-success-focus-bg</code>, <code>$input-success-focus-border-color</code>, <code>$input-success-focus-box-shadow</code>, <code>$input-success-focus-color</code>, <code>$input-warning-focus-bg</code>, <code>$input-warning-focus-border-color</code>, <code>$input-warning-focus-box-shadow</code>, <code>$input-warning-focus-color</code></li>
 <li>Breaking: Button Group remove old split button dropdown styles and <code>.btn-monospaced</code> inside <code>.btn-group-sm</code> and <code>.btn-group-lg</code> should have no padding</li>
