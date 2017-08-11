@@ -1,24 +1,23 @@
 /**
-* Clay 2.0.0-alpha.4
+* Clay 2.0.0-alpha.5
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
 * MIT license
 */
-html {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 @-ms-viewport {
@@ -31,11 +30,12 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   color: #212529;
+  text-align: left;
   background-color: #fff;
 }
 
@@ -207,7 +207,7 @@ caption {
 }
 
 th {
-  text-align: left;
+  text-align: inherit;
 }
 
 label {
