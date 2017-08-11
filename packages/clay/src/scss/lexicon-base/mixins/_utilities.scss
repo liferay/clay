@@ -1,0 +1,73 @@
+// Absolutely positions an item relative to its container (9 places)
+// @param $point - 'top-left', 'top-center', 'top-right', 'right-middle',
+// 'bottom-right', 'bottom-center', 'bottom-left', 'left-middle',
+// 'center-middle'
+// @param $position - 'absolute', 'fixed'
+// @param $rule-flag - specify a CSS flag for your rule e.g. !important
+
+@mixin clay-position($point: top-left, $position: absolute, $rule-flag: '') {
+	@if not ($rule-flag == '') {
+		$rule-flag: ' #{$rule-flag}';
+	}
+
+	position: #{$position}#{$rule-flag};
+
+	@if ($point == top-center) {
+		bottom: auto#{$rule-flag};
+		left: 50%#{$rule-flag};
+		right: auto#{$rule-flag};
+		top: 0#{$rule-flag};
+		transform: translateX(-50%)#{$rule-flag};
+	}
+	@else if ($point == top-right) {
+		bottom: auto#{$rule-flag};
+		left: auto#{$rule-flag};
+		right: 0#{$rule-flag};
+		top: 0#{$rule-flag};
+	}
+	@else if ($point == right-middle) {
+		bottom: auto#{$rule-flag};
+		left: auto#{$rule-flag};
+		right: 0#{$rule-flag};
+		top: 50%#{$rule-flag};
+		transform: translateY(-50%)#{$rule-flag};
+	}
+	@else if ($point == bottom-right) {
+		bottom: 0#{$rule-flag};
+		left: auto#{$rule-flag};
+		right: 0#{$rule-flag};
+		top: auto#{$rule-flag};
+	}
+	@else if ($point == bottom-center) {
+		bottom: 0#{$rule-flag};
+		left: 50%#{$rule-flag};
+		right: auto#{$rule-flag};
+		transform: translateX(-50%)#{$rule-flag};
+	}
+	@else if ($point == bottom-left) {
+		bottom: 0#{$rule-flag};
+		left: 0#{$rule-flag};
+		right: auto#{$rule-flag};
+		top: auto#{$rule-flag};
+	}
+	@else if ($point == left-middle) {
+		bottom: auto#{$rule-flag};
+		left: 0#{$rule-flag};
+		right: auto#{$rule-flag};
+		top: 50%#{$rule-flag};
+		transform: translateY(-50%)#{$rule-flag};
+	}
+	@else if ($point == center-middle) {
+		bottom: auto#{$rule-flag};
+		left: 50%#{$rule-flag};
+		right: auto#{$rule-flag};
+		top: 50%#{$rule-flag};
+		transform: translate(-50%, -50%)#{$rule-flag};
+	}
+	@else {
+		bottom: auto#{$rule-flag};
+		left: 0#{$rule-flag};
+		right: auto#{$rule-flag};
+		top: 0#{$rule-flag};
+	}
+}
