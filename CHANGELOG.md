@@ -1,3 +1,82 @@
+### v2.0.0-alpha.5 - August 11, 2017
+* New: Alert added `$alert-close-font-size`, `$alert-close-line-height` and `.alert .close` should be properly aligned after icon size update
+* New: Create mixin clay-position to handle positioning items
+* New: Added background mixin bg-checkered($fg-color, $bg-color)
+* New: Card added `$card-type-directory-sticker-size`
+* New: Card added `$card-type-asset-label-size`
+* New: Card added `$card-title-color`, `$card-title-font-size`, `$card-title-font-weight`, `$card-title-margin-bottom`, `$card-title-margin-top`
+* New: Card added `$card-subtitle-color`, `$card-subtitle-font-size`, `$card-subtitle-font-weight`, `$card-subtitle-margin-bottom`, `$card-subtitle-margin-top`
+* New: Card added `.card-type-asset` and `.card-type-directory` variants
+* New: Dropdown added `$dropdown-action-toggle-color`, `$dropdown-action-toggle-hover-color`, and added component `.dropdown-action`
+* New: Card added `$form-check-card-checked-box-shadow`
+* New: Card added `$card-link-text-decoration` and `$card-link-hover-text-decoration`
+* New: Card added `$card-link-hover-color`
+* New: Input Group added skin `.input-group-secondary` and added `$input-group-secondary-addon-bg`, `$input-group-secondary-addon-border-* color`, `$input-group-secondary-addon-border-width`
+* Breaking: BS4 renamed `$dropdown-margin-top` to `$dropdown-spacer`
+* Breaking: Update Bootstrap 4 to beta
+* Breaking: Remove selectors that reference glyphicon and font awesome
+* Breaking: Icons remove %scale-lexicon-icon
+* Breaking: Icons renamed `$lexicon-icon-lg-size`, `$lexicon-icon-md-size`, `$lexicon-icon-sm-size` to `$lexicon-icon-xl-font-size`, `$lexicon-icon-lg-font-size`, `$lexicon-icon-sm-font-size` respectively and renamed `.lexicon-icon-md`, `.lexicon-icon-lg` to `.lexicon-icon-lg`, `.lexicon-icon-xl` respectively
+* Breaking: Remove deprecated function calcLexiconIconPadding
+* Breaking: Removed component Crop Img use Aspect Ratio instead
+* Breaking: Rename _utilities.scss to _position.scss
+* Breaking: Aspect Ratio Item positioning should only use 1 class name and use clay-position mixin
+* Breaking: Move _global-functions.scss to lexicon-base/functions
+* Breaking: Aspect Ratio moved `.aspect-ratio-* img` styles to `.aspect-ratio-item-*`
+* Breaking: Input Group rename `$input-group-light-addon-bg`, `$input-group-light-addon-border-color`, `$input-group-light-addon-border-width`, `$input-group-light-addon-color` to `$input-group-transparent-addon-bg`, `$input-group-transparent-addon-border-color`, `$input-* group-transparent-addon-border-width`, `$input-group-transparent-addon-color` and rename `.input-group-light` to `.input-group-transparent`
+* Breaking: Type rename `.truncate-text` to `.text-truncate`, was added by BS4
+* Breaking: Management Bar remove files, use Navbar instead
+* Breaking: Breadcrumb renamed `.breadcrumb-vertical` to `.breadcrumb-stacked`, renamed `$breadcrumb-vertical-divider` to `$breadcrumb-stacked-divider`, and added `$breadcrumb-stacked-divider-color`, `$breadcrumb-stacked-divider-svg-icon`, `$breadcrumb-stacked-divider-svg-icon-height`, `$breadcrumb-stacked-divider-svg-icon-width`, `$breadcrumb-stacked-divider-spacer-x`
+* Breaking: Breadcrumb moved svg icon support to `.breadcrumb` and removed `.breadcrumb-horizontal`
+* Breaking: Removed `$legend-border-color` no longer used in BS4
+* Update: Remove work arounds fixed by BS4 beta
+* Update: Sticker don't use inline-flex and don't need `.lexicon-icon` styles they scale with font size now
+* Update: Clay SVG Icons should scale with font-size
+* Update: Utilities added `.bg-checkered`
+* Update: Aspect Ratio revert placeholders Sass extend too fragile
+* Update: Card reverted `$card-type-directory-sticker-size` and `$card-type-asset-label-size` extending is too fragile
+* Update: atlas-variables.scss and lexicon-base-variables.scss should also import Bootstrap and Lexicon Base mixins
+* Update: atlas-variables.scss and lexicon-base-variables.scss should import Lexicon Base Variables
+* Update: Aspect Ratio %aspect-ratio-center-middle should actually center content
+* Update: Atlas Sticker Lg font size
+* Update: Stickers move size styles to placeholder for extending
+* Update: Badges and Labels move size styles to placeholder so they are easier to extend
+* Update: Atlas Custom Control Indicator background-color should be white
+* Update: Card adjust `.card-title` and `.card-subtitle` spacing and sizing
+* Update: Card to Clay V2 styles and reorganize Base card variables
+* Update: Dropdown Action button.dropdown-toggle should use component-btn-link mixin
+* Update: Card added variants `.card-type-asset`, `.card-type-directory`, and moved margin bottom to `.form-check-card` from `.card`
+* Update: Card remove -ms- browser prefix on transform, will be covered when autoprefixer is applied
+* Update: Form Check Card should also support custom checkbox and radios
+* Update: Base set Card Link colors
+* Update: (Fixes #355) Progress Bar styles to Clay V2 and BS4 box-shadow mixin doesn't support null values
+* Update: Badges and Labels demos with button.close
+* Update: Badges and Labels use `button.close` for dismissible ones
+* Update: Alert Close positions
+* Update: Added mixin `component-btn-link` for resetting `.btn-link` styles in components
+* Update: Button Link style as close as possible to normal link
+* Update: Breadcrumb add support `.btn-link`
+* Update: Button Link re-add focus and border-radius styles removed by BS4
+* Update: Type removed `.text-*` and `bg-*` variant styles, covered by BS4
+* Update: Breadcrumb don't need to define text-transform and font-weight for Clay V2 styles
+* Update: Breadcrumb styles to Clay V2
+* Update: Atlas Form readonly input colors to Clay V2
+* Misc: Build and Release tasks should look in lexicon-base/functions when building SVG icons
+* Site: Remove references to `.scale-lexicon-icon`
+* Site: Crop Img deleted component
+* Site: Card update aspect-ratios to new classes and add card types
+* Site: Aspect Ratio demos to use new positional classes
+* Site: Aspect Ratio update examples and docs with new classes
+* Site: Separate Crop Img and Aspect Ratio from Images and Thumbnails
+* Site: Card update with new card types
+* Site: Dropdown add demo of `.dropdown-action` and update aria attributes
+* Site: Utilities add documentation on how to display inline/float elements inside `.flex-col`
+* Site: Breadcrumb add examples with `.btn-link`
+* Site: Input Group add `.input-group-secondary` example and group input group size content together
+* Site: Input Group rename `.input-group-light` to `.input-group-transparent`
+* Site: Replace all instances of `truncate-text` with `text-truncate`
+* Site: Breadcrumb remove `.breadcrumb-horizontal` and rename `.breadcrumb-vertical` to `.breadcrumb-stacked`
+
 ### v2.0.0-alpha.4 - August 4, 2017
 * Breaking: Forms rename `$input-color-placeholder-focus`, `$input-border-color-disabled`, `$input-bg-disabled`, `$input-color-disabled`, `$input-color-placeholder-disabled`, `$input-opacity-disabled`, `$input-label-color-focus`, `$input-color-focus`, `$input-box-shadow-focus`, `$input-danger-bg-focus`, `$input-danger-border-color-focus`, `$input-danger-box-shadow-focus`, `$input-danger-color-focus`, `$input-success-bg-focus`, `$input-success-border-color-focus`, `$input-success-box-shadow-focus`, `$input-success-color-focus`, `$input-warning-bg-focus`, `$input-warning-border-color-focus`, `$input-warning-box-shadow-focus`, `$input-warning-color-focus` to `$input-placeholder-focus-color`, `$input-disabled-border-color`, `$input-disabled-bg`, `$input-disabled-color`, `$input-placeholder-disabled-color`, `$input-disabled-opacity`, `$input-label-focus-color`, `$input-focus-color`, `$input-focus-box-shadow`, `$input-danger-focus-bg`, `$input-danger-focus-border-color`, `$input-danger-focus-box-shadow`, `$input-danger-focus-color`, `$input-success-focus-bg`, `$input-success-focus-border-color`, `$input-success-focus-box-shadow`, `$input-success-focus-color`, `$input-warning-focus-bg`, `$input-warning-focus-border-color`, `$input-warning-focus-box-shadow`, `$input-warning-focus-color`
 * Breaking: Button Group remove old split button dropdown styles and `.btn-monospaced` inside `.btn-group-sm` and `.btn-group-lg` should have no padding
