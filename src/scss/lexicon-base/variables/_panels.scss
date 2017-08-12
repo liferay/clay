@@ -13,7 +13,7 @@ $panel-margin-bottom: $spacer !default;
 // Panel Header
 
 $panel-header-border-bottom-width: 1px !default;
-$panel-header-offset-border-radius: calc(#{$panel-border-radius} - #{$panel-border-top-width}) !default;
+$panel-header-offset-border-radius: if($panel-border-top-width > 0, calc(#{$panel-border-radius} - #{$panel-border-top-width}), $panel-border-radius) !default;
 $panel-header-padding-x: 1.25rem !default;
 $panel-header-padding-y: 0.75rem !default;
 
@@ -27,7 +27,7 @@ $panel-body-padding-y: 0.75rem !default;
 // Panel Footer
 
 $panel-footer-border-top-width: 1px !default;
-$panel-footer-offset-border-radius: calc(#{$panel-border-radius} - #{$panel-border-bottom-width}) !default;
+$panel-footer-offset-border-radius: if($panel-border-bottom-width > 0, calc(#{$panel-border-radius} - #{$panel-border-bottom-width}), $panel-border-radius) !default;
 $panel-footer-padding-x: $panel-header-padding-x !default;
 $panel-footer-padding-y: $panel-header-padding-y !default;
 
