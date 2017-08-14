@@ -21,27 +21,6 @@ $modal-footer-bg: null !default;
 $modal-footer-box-shadow: null !default;
 $modal-footer-color: null !default;
 
-// Modal Inverse
-
-$modal-inverse-body-bg: null !default;
-$modal-inverse-body-color: $navbar-dark-color !default;
-
-$modal-inverse-content-bg: map-get($theme-colors, dark) !default;
-$modal-inverse-content-border-color: transparent !default;
-
-$modal-inverse-header-bg: null !default;
-$modal-inverse-header-border-color: transparent !default;
-$modal-inverse-header-color: $navbar-dark-color !default;
-
-$modal-inverse-header-close-color: $navbar-dark-color !default;
-
-$modal-inverse-footer-bg: null !default;
-$modal-inverse-footer-border-color: $modal-inverse-header-border-color !default;
-$modal-inverse-footer-color: $modal-inverse-header-color !default;
-
-$modal-inverse-link-color: $navbar-dark-color !default;
-$modal-inverse-link-hover-color: $navbar-dark-hover-color !default;
-
 // Modal Danger
 
 $modal-danger-header-bg: theme-color-level(danger, -10) !default;
@@ -101,3 +80,50 @@ $modal-warning-body-color: null !default;
 $modal-warning-footer-bg: theme-color-level(warning, -10) !default;
 $modal-warning-footer-border-color: theme-color-level(warning, -9) !default;
 $modal-warning-footer-color: theme-color-level(warning, 6) !default;
+
+$modal-palette: (
+	success: (
+		header-bg: $modal-success-header-bg,
+		header-border-color: $modal-success-header-border-color,
+		header-color: $modal-success-header-color,
+		header-close-color: $modal-success-header-close-color,
+		body-bg: $modal-success-body-bg,
+		body-color: $modal-success-body-color,
+		footer-bg: $modal-success-footer-bg,
+		footer-border-color: $modal-success-footer-border-color,
+		footer-color: $modal-success-footer-color
+	),
+	info: (
+		header-bg: $modal-info-header-bg,
+		header-border-color: $modal-info-header-border-color,
+		header-color: $modal-info-header-color,
+		header-close-color: $modal-info-header-close-color,
+		body-bg: $modal-info-body-bg,
+		body-color: $modal-info-body-color,
+		footer-bg: $modal-info-footer-bg,
+		footer-border-color: $modal-info-footer-border-color,
+		footer-color: $modal-info-footer-color
+	),
+	warning: (
+		header-bg: $modal-warning-header-bg,
+		header-border-color: $modal-warning-header-border-color,
+		header-color: $modal-warning-header-color,
+		header-close-color: $modal-warning-header-close-color,
+		body-bg: $modal-warning-body-bg,
+		body-color: $modal-warning-body-color,
+		footer-bg: $modal-warning-footer-bg,
+		footer-border-color: $modal-warning-footer-border-color,
+		footer-color: $modal-warning-footer-color
+	),
+	danger: (
+		header-bg: $modal-danger-header-bg,
+		header-border-color: $modal-danger-header-border-color,
+		header-color: $modal-danger-header-color,
+		header-close-color: $modal-danger-header-close-color,
+		body-bg: $modal-danger-body-bg,
+		body-color: $modal-danger-body-color,
+		footer-bg: $modal-danger-footer-bg,
+		footer-border-color: $modal-danger-footer-border-color,
+		footer-color: $modal-danger-footer-color
+	)
+) !default;

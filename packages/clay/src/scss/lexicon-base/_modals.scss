@@ -242,140 +242,28 @@ button.modal-primary-action-button {
 	}
 }
 
-.modal-inverse {
-	a,
-	.btn-link {
-		color: $modal-inverse-link-color;
-	}
+@each $color, $value in $modal-palette {
+	.modal-#{$color} {
+		.modal-header {
+			background-color: map-get($value, header-bg);
+			border-color: map-get($value, header-border-color);
+			color: map-get($value, header-color);
 
-	.modal-content {
-		background-color: $modal-inverse-content-bg;
-		border-color: $modal-inverse-content-border-color;
-	}
-
-	.modal-header {
-		background-color: $modal-inverse-header-bg;
-		border-color: $modal-inverse-header-border-color;
-		color: $modal-inverse-header-color;
-
-		.close,
-		.modal-primary-action-button {
-			color: $modal-inverse-header-close-color;
+			.close,
+			.modal-primary-action-button {
+				color: map-get($value, header-close-color);
+			}
 		}
-	}
 
-	.modal-body {
-		background-color: $modal-inverse-body-bg;
-		color: $modal-inverse-body-color;
-	}
-
-	.modal-footer {
-		background-color: $modal-inverse-footer-bg;
-		border-color: $modal-inverse-footer-border-color;
-		color: $modal-inverse-footer-color;
-	}
-}
-
-// Modal Danger
-
-.modal-danger {
-	.modal-header {
-		background-color: $modal-danger-header-bg;
-		border-color: $modal-danger-header-border-color;
-		color: $modal-danger-header-color;
-
-		.close,
-		.modal-primary-action-button {
-			color: $modal-danger-header-close-color;
+		.modal-body {
+			background-color: map-get($value, body-bg);
+			color: map-get($value, body-color);
 		}
-	}
 
-	.modal-body {
-		background-color: $modal-danger-body-bg;
-		color: $modal-danger-body-color;
-	}
-
-	.modal-footer {
-		background-color: $modal-danger-footer-bg;
-		border-color: $modal-danger-footer-border-color;
-		color: $modal-danger-footer-color;
-	}
-}
-
-// Modal Info
-
-.modal-info {
-	.modal-header {
-		background-color: $modal-info-header-bg;
-		border-color: $modal-info-header-border-color;
-		color: $modal-info-header-color;
-
-		.close,
-		.modal-primary-action-button {
-			color: $modal-info-header-close-color;
+		.modal-footer {
+			background-color: map-get($value, footer-bg);
+			border-color: map-get($value, footer-border-color);
+			color: map-get($value, footer-border-color);
 		}
-	}
-
-	.modal-body {
-		background-color: $modal-info-body-bg;
-		color: $modal-info-body-color;
-	}
-
-	.modal-footer {
-		background-color: $modal-info-footer-bg;
-		border-color: $modal-info-footer-border-color;
-		color: $modal-info-footer-color;
-	}
-}
-
-// Modal Success
-
-.modal-success {
-	.modal-header {
-		background-color: $modal-success-header-bg;
-		border-color: $modal-success-header-border-color;
-		color: $modal-success-header-color;
-
-		.close,
-		.modal-primary-action-button {
-			color: $modal-success-header-close-color;
-		}
-	}
-
-	.modal-body {
-		background-color: $modal-success-body-bg;
-		color: $modal-success-body-color;
-	}
-
-	.modal-footer {
-		background-color: $modal-success-footer-bg;
-		border-color: $modal-success-footer-border-color;
-		color: $modal-success-footer-color;
-	}
-}
-
-// Modal Warning
-
-.modal-warning {
-	.modal-header {
-		background-color: $modal-warning-header-bg;
-		border-color: $modal-warning-header-border-color;
-		color: $modal-warning-header-color;
-
-		.close,
-		.modal-primary-action-button {
-			color: $modal-warning-header-close-color;
-		}
-	}
-
-	.modal-body {
-		background-color: $modal-warning-body-bg;
-		color: $modal-warning-body-color;
-	}
-
-	.modal-footer {
-		background-color: $modal-warning-footer-bg;
-		border-color: $modal-warning-footer-border-color;
-		color: $modal-warning-footer-color;
 	}
 }
