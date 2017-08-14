@@ -59,6 +59,21 @@ fieldset[disabled] .btn {
 	box-shadow: none;
 }
 
+// Button Unstyled
+
+.btn-unstyled {
+	background-color: transparent;
+
+	@include border-radius(1px);
+	@include component-btn-link;
+
+	vertical-align: baseline;
+}
+
+.show > .btn-unstyled.dropdown-toggle {
+	box-shadow: none;
+}
+
 // Button Monospaced
 
 .btn-monospaced {
