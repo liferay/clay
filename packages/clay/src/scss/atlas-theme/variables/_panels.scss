@@ -3,19 +3,21 @@ $panel-border-left-width: 0 !default;
 $panel-border-right-width: 0 !default;
 $panel-border-top-width: 0 !default;
 
-$panel-border-radius: 0 !default;
-$panel-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) !default;
+$panel-box-shadow: 0 1px lighten(map-get($theme-colors, secondary), 46%) !default;
 
 // Panel Header
 
-$panel-header-border-bottom-width: 2px !default;
+$panel-header-border-bottom-width: 0 !default;
 $panel-header-link-text-decoration: none !default;
-$panel-header-offset-border-radius: 0 !default;
 
 // Panel Footer
 
 $panel-footer-border-top-width: 0 !default;
-$panel-footer-offset-border-radius: 0 !default;
+
+// Panel Title
+
+$panel-title-font-size: 0.875rem !default;
+$panel-title-text-transform: uppercase !default;
 
 // Panel Group
 
@@ -23,24 +25,26 @@ $panel-group-panel-margin-bottom: 1px !default;
 
 // Panel Variants
 
-$panel-primary-border-color: darken(map-get($theme-colors, primary), 25%) !default;
+$panel-primary-header-color: map-get($theme-colors, primary) !default;
+$panel-primary-header-bg: lighten($panel-primary-header-color, 44%) !default;
+$panel-primary-header-border-color: lighten($panel-primary-header-color, 22%) !default;
 
-$panel-secondary-border-color: map-get($theme-colors, primary) !default;
-$panel-secondary-header-bg: #F5F8FA !default;
 $panel-secondary-color: map-get($theme-colors, secondary) !default;
+$panel-secondary-header-bg: #FFF !default;
+$panel-secondary-header-border-color: lighten($panel-secondary-color, 46%) !default;
 
-$panel-info-header-bg: lighten(map-get($theme-colors, info), 34%) !default;
-$panel-info-header-border-color: map-get($theme-colors, info) !default;
-$panel-info-header-color: #FFF !default;
+$panel-info-header-color: map-get($theme-colors, info) !default;
+$panel-info-header-bg: lighten($panel-info-header-color, 53%) !default;
+$panel-info-header-border-color: lighten($panel-info-header-color, 28%) !default;
 
-$panel-success-header-bg: lighten(map-get($theme-colors, success), 34%) !default;
-$panel-success-header-border-color: map-get($theme-colors, success) !default;
 $panel-success-header-color: map-get($theme-colors, success) !default;
+$panel-success-header-bg: lighten($panel-success-header-color, 63%) !default;
+$panel-success-header-border-color: lighten($panel-success-header-color, 25%) !default;
 
-$panel-warning-header-bg: lighten(map-get($theme-colors, warning), 34%) !default;
-$panel-warning-header-border-color: map-get($theme-colors, warning) !default;
 $panel-warning-header-color: map-get($theme-colors, warning) !default;
+$panel-warning-header-bg: lighten($panel-warning-header-color, 57%) !default;
+$panel-warning-header-border-color: lighten($panel-warning-header-color, 24%) !default;
 
-$panel-danger-header-bg: lighten(map-get($theme-colors, danger), 34%) !default;
-$panel-danger-header-border-color: map-get($theme-colors, danger) !default;
 $panel-danger-header-color: map-get($theme-colors, danger) !default;
+$panel-danger-header-bg: lighten($panel-danger-header-color, 49.5%) !default;
+$panel-danger-header-border-color: lighten($panel-danger-header-color, 28%) !default;
