@@ -60,6 +60,19 @@
 	text-transform: $panel-title-text-transform;
 }
 
+.panel {
+	.collapse-icon-closed,
+	.collapse-icon-open {
+		font-size: $panel-collapse-icon-font-size;
+
+		.lexicon-icon {
+			@if ($panel-title-font-size) {
+				margin-top: calc(((#{$panel-title-font-size} * #{$line-height-base}) - 1em) / 2);
+			}
+		}
+	}
+}
+
 // Panel Group
 
 .panel-group {
