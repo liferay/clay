@@ -57,11 +57,16 @@
 .panel-title {
 	font-size: $panel-title-font-size;
 	font-weight: $panel-title-font-weight;
+	text-transform: $panel-title-text-transform;
 }
 
 // Panel Group
 
 .panel-group {
+	background-color: $panel-bg;
+
+	@include border-radius($panel-border-radius);
+
 	.panel {
 		margin-bottom: $panel-group-panel-margin-bottom;
 
