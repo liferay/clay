@@ -117,14 +117,12 @@ button.modal-primary-action-button {
 		background-image: none;
 		box-shadow: none;
 		color: $modal-header-close-color;
+		font-size: $modal-header-close-font-size;
 		margin-top: -1px;
 		opacity: 1;
 
 		@include monospace(32px);
-	}
 
-	.close,
-	.modal-primary-action-button {
 		> span {
 			opacity: $modal-header-close-icon-opacity;
 		}
@@ -241,6 +239,8 @@ button.modal-primary-action-button {
 		}
 	}
 }
+
+// Modal Variants
 
 @each $color, $value in $modal-palette {
 	.modal-#{$color} {
