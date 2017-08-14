@@ -9,15 +9,13 @@
 	}
 }
 
-.progress-lg {
+.progress-lg,
+.progress-lg > .progress {
 	@include border-radius($progress-border-radius-lg);
 
 	font-size: $progress-font-size-lg;
-
-	.progress-bar {
-		height: $progress-height-lg;
-		line-height: $progress-height-lg;
-	}
+	height: $progress-height-lg;
+	line-height: $progress-height-lg;
 }
 
 // Progress Group
