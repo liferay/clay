@@ -5,12 +5,11 @@
 	border-width: $sticker-border-width;
 	color: $sticker-color;
 	display: inline-block;
-	font-size: $sticker-font-size;
 	font-weight: $sticker-font-weight;
-
-	@include monospace($sticker-size);
-
 	position: relative;
+
+	@include sticker;
+
 	text-align: center;
 	vertical-align: middle;
 
@@ -104,10 +103,8 @@
 
 // Sticker Sizes
 
-%sticker-sm {
-	font-size: $sticker-font-size-sm;
-
-	@include monospace($sticker-size-sm);
+.sticker-sm {
+	@include sticker-sm;
 
 	&.sticker-outside {
 		left: $sticker-outside-offset-sm;
@@ -132,14 +129,8 @@
 	}
 }
 
-.sticker-sm {
-	@extend %sticker-sm;
-}
-
-%sticker-lg {
-	font-size: $sticker-font-size-lg;
-
-	@include monospace($sticker-size-lg);
+.sticker-lg {
+	@include sticker-lg;
 
 	&.sticker-outside {
 		left: $sticker-outside-offset-lg;
@@ -164,28 +155,12 @@
 	}
 }
 
-.sticker-lg {
-	@extend %sticker-lg;
-}
-
-%sticker-xl {
-	font-size: $sticker-font-size-xl;
-
-	@include monospace($sticker-size-xl);
-}
-
 .sticker-xl {
-	@extend %sticker-xl;
-}
-
-%sticker-xxl {
-	font-size: $sticker-font-size-xxl;
-
-	@include monospace($sticker-size-xxl);
+	@include sticker-xl;
 }
 
 .sticker-xxl {
-	@extend %sticker-xxl;
+	@include sticker-xxl;
 }
 
 // Sticker Variants
