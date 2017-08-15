@@ -155,27 +155,26 @@
 		color: $dropdown-action-toggle-color;
 		display: block;
 
+		@include monospace($icon-monospaced-size);
+
+		text-align: center;
+
 		@include hover-focus {
 			color: $dropdown-action-toggle-hover-color;
-		}
-
-		.lexicon-icon {
-			display: block;
-			margin-top: 0;
-
-			@include monospace($icon-monospaced-size);
-
-			padding: lx-icon-padding($icon-monospaced-size, $lexicon-icon-size);
 		}
 	}
 
 	> button.dropdown-toggle {
 		background-color: transparent;
-
-		@include component-btn-link;
+		border-width: 0;
+		cursor: pointer;
+		font-size: inherit;
+		font-weight: inherit;
+		max-width: 100%;
+		padding: 0;
 	}
 
-	&.show button.dropdown-toggle {
+	&.show > button.dropdown-toggle {
 		outline: none;
 	}
 }
