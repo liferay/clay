@@ -45,54 +45,6 @@
 	@include text-truncate;
 }
 
-h1.modal-title {
-	font-size: $h1-font-size;
-
-	@include scale-component {
-		font-size: $h1-font-size-mobile;
-	}
-}
-
-h2.modal-title {
-	font-size: $h2-font-size;
-
-	@include scale-component {
-		font-size: $h2-font-size-mobile;
-	}
-}
-
-h3.modal-title {
-	font-size: $h3-font-size;
-
-	@include scale-component {
-		font-size: $h3-font-size-mobile;
-	}
-}
-
-h4.modal-title {
-	font-size: $h4-font-size;
-
-	@include scale-component {
-		font-size: $h4-font-size-mobile;
-	}
-}
-
-h5.modal-title {
-	font-size: $h5-font-size;
-
-	@include scale-component {
-		font-size: $h5-font-size-mobile;
-	}
-}
-
-h6.modal-title {
-	font-size: $h6-font-size;
-
-	@include scale-component {
-		font-size: $h6-font-size-mobile;
-	}
-}
-
 // Modal Buttons
 
 .modal {
