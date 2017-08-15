@@ -11,6 +11,13 @@
 	border-color: $modal-header-border-color;
 	color: $modal-header-color;
 	flex-shrink: 0;
+	height: $modal-header-height;
+	padding-bottom: 0;
+	padding-top: 0;
+
+	@include scale-component {
+		height: $modal-header-height-mobile;
+	}
 }
 
 .modal-body {
@@ -31,6 +38,13 @@
 
 	color: $modal-footer-color;
 	flex-shrink: 0;
+	height: $modal-footer-height;
+	padding-bottom: 0;
+	padding-top: 0;
+
+	@include scale-component {
+		height: $modal-footer-height-mobile;
+	}
 }
 
 // Modal Title
@@ -52,6 +66,7 @@
 	.close {
 		color: $modal-btn-monospaced-color;
 		font-size: $modal-btn-monospaced-font-size;
+		min-width: $modal-btn-monospaced-size;
 
 		@include monospace($modal-btn-monospaced-size);
 
