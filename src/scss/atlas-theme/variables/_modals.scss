@@ -1,34 +1,22 @@
-$modal-backdrop-opacity: 0.15 !default;
+$modal-backdrop-bg: map-get($theme-colors, secondary) !default;
+$modal-backdrop-opacity: 1 !default;
 
-$modal-content-xs-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
-$modal-content-sm-up-box-shadow: null !default;
+$modal-content-box-shadow-xs: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
 $modal-content-border-color: transparent !default;
 
 $modal-inner-padding-x: 24px !default;
 $modal-inner-padding-y: 16px !default;
 $modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x !default;
 
-$modal-header-bg: #FFF !default;
-$modal-header-border-color: #E4E6E8 !default;
-$modal-header-color: $body-color !default;
-$modal-header-close-color: $modal-header-color !default;
-$modal-header-close-font-size: 0.75rem !default; // 12px
-$modal-header-close-icon-opacity: 1 !default;
-$modal-header-close-lexicon-icon-opacity: 1 !default;
-$modal-header-close-opacity-modifier: 1 !default;
+$modal-header-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
 $modal-header-padding: $modal-inner-padding !default;
 
-$modal-body-bg: #FFF !default;
-$modal-body-color: $body-color !default;
+$modal-title-font-size: 1.25rem !default; // 20px
 
-$modal-footer-bg: $modal-header-bg !default;
-$modal-footer-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
-$modal-footer-box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.15) !default;
-$modal-footer-color: $modal-header-color !default;
-
-$modal-title-font-size: 19px !default;
-$modal-title-font-weight: 500 !default;
-// $modal-title-text-align: center !default;
+$modal-btn-monospaced-color: $body-color !default;
+$modal-btn-monospaced-font-size: 0.875rem !default; // 14px
+$modal-btn-monospaced-opacity: 1 !default;
+$modal-btn-monospaced-hover-opacity: 1 !default;
 
 // Modal Info
 
