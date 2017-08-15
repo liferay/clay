@@ -2,6 +2,8 @@ $modal-content-border-radius: $border-radius-lg !default;
 
 $modal-header-bg: null !default;
 $modal-header-color: null !default;
+$modal-header-height: 4rem !default; // 64px
+$modal-header-height-mobile: null !default;
 
 $modal-body-bg: null !default;
 $modal-body-color: null !default;
@@ -9,6 +11,8 @@ $modal-body-color: null !default;
 $modal-footer-bg: null !default;
 $modal-footer-box-shadow: null !default;
 $modal-footer-color: null !default;
+$modal-footer-height: 4.5rem !default; // 72px
+$modal-footer-height-mobile: null !default;
 
 $modal-title-font-size: 1.25rem !default;
 $modal-title-font-weight: 500 !default;
