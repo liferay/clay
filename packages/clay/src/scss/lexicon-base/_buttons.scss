@@ -113,6 +113,12 @@ fieldset[disabled] .btn {
 			@include monospace($btn-monospaced-size-sm-mobile);
 		}
 	}
+
+	.lexicon-icon {
+		display: block;
+		height: 100%;
+		margin: auto;
+	}
 }
 
 // Action Buttons
