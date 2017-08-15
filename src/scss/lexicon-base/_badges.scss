@@ -1,15 +1,14 @@
 .badge {
 	border-style: $badge-border-style;
 	border-width: $badge-border-width;
+
+	@include badge;
+
 	margin-bottom: 2px;
 	margin-top: 2px;
 	max-width: 100%;
 	white-space: normal;
 	word-wrap: break-word;
-
-	@include scale-component {
-		font-size: $badge-font-size-mobile;
-	}
 
 	a {
 		color: $badge-color;
@@ -28,51 +27,14 @@
 		margin-left: 2px;
 		opacity: 1;
 	}
-
-	.lexicon-icon {
-		height: $badge-lexicon-icon-height;
-		width: $badge-lexicon-icon-width;
-	}
-}
-
-%badge-lg {
-	font-size: $badge-font-size-lg;
-	padding: $badge-padding-y-lg $badge-padding-x-lg;
-
-	@include scale-component {
-		font-size: $badge-font-size-lg-mobile;
-	}
-
-	.close {
-		margin-left: 0.25rem;
-	}
-
-	.lexicon-icon {
-		height: $badge-lexicon-icon-height-lg;
-		width: $badge-lexicon-icon-width-lg;
-	}
 }
 
 .badge-lg {
-	@extend %badge-lg;
-}
-
-%badge-sm {
-	font-size: $badge-font-size-sm;
-	padding: $badge-padding-y-sm $badge-padding-x-sm;
-
-	@include scale-component {
-		font-size: $badge-font-size-sm-mobile;
-	}
-
-	.lexicon-icon {
-		height: $badge-lexicon-icon-height-sm;
-		width: $badge-lexicon-icon-width-sm;
-	}
+	@include badge-lg;
 }
 
 .badge-sm {
-	@extend %badge-sm;
+	@include badge-sm;
 }
 
 // Badge Variants
