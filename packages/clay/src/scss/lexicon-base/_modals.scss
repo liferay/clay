@@ -57,6 +57,10 @@
 	text-align: $modal-title-text-align;
 
 	@include text-truncate;
+
+	@include scale-component {
+		font-size: $modal-title-font-size-mobile;
+	}
 }
 
 // Modal Buttons
