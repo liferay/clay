@@ -67,6 +67,7 @@ fieldset[disabled] .btn {
 	@include border-radius(1px);
 	@include component-btn-link;
 
+	line-height: inherit;
 	vertical-align: baseline;
 }
 
