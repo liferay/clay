@@ -2,11 +2,6 @@ $modal-content-border-radius: $border-radius-lg !default;
 
 $modal-header-bg: null !default;
 $modal-header-color: null !default;
-$modal-header-close-color: $body-color !default;
-$modal-header-close-font-size: 1rem !default;
-$modal-header-close-icon-opacity: 0.2 !default;
-$modal-header-close-lexicon-icon-opacity: 0.3 !default;
-$modal-header-close-opacity-modifier: 2.66667 !default;
 
 $modal-body-bg: null !default;
 $modal-body-color: null !default;
@@ -18,6 +13,13 @@ $modal-footer-color: null !default;
 $modal-title-font-size: null !default;
 $modal-title-font-weight: null !default;
 $modal-title-text-align: null !default;
+
+$modal-btn-monospaced-size: 2rem !default;
+$modal-btn-monospaced-color: #000 !default;
+$modal-btn-monospaced-font-size: 1rem !default;
+$modal-btn-monospaced-opacity: 0.5 !default;
+$modal-btn-monospaced-hover-opacity: 0.75 !default;
+$modal-btn-monospaced-spacer-x: 0.3125rem !default; // 5px
 
 // Modal Info
 

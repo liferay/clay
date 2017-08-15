@@ -95,43 +95,41 @@ h6.modal-title {
 
 // Modal Buttons
 
-.modal-header {
+.modal {
+	.btn-monospaced,
 	.close {
-		background-color: transparent;
-		background-image: none;
-		box-shadow: none;
-		color: $modal-header-close-color;
-		font-size: $modal-header-close-font-size;
-		margin-top: -1px;
-		opacity: 1;
+		color: $modal-btn-monospaced-color;
+		font-size: $modal-btn-monospaced-font-size;
 
-		@include monospace(32px);
+		@include monospace($modal-btn-monospaced-size);
 
-		> span {
-			opacity: $modal-header-close-icon-opacity;
+		opacity: $modal-btn-monospaced-opacity;
+
+		@include hover-focus {
+			opacity: $modal-btn-monospaced-hover-opacity;
 		}
 
-		.lexicon-icon {
-			opacity: $modal-header-close-lexicon-icon-opacity;
+		&:first-child {
+			margin-left: -$modal-btn-monospaced-spacer-x;
 		}
 
-		&:focus,
-		&:hover {
-			> span {
-				opacity: $modal-header-close-icon-opacity * $modal-header-close-opacity-modifier;
-			}
-
-			.lexicon-icon {
-				opacity: $modal-header-close-lexicon-icon-opacity * $modal-header-close-opacity-modifier;
-			}
+		&:last-child {
+			margin-right: -$modal-btn-monospaced-spacer-x;
 		}
+	}
+}
 
-		&:active {
-			background-color: transparent;
-			border-color: transparent;
-			box-shadow: none;
-			color: $modal-header-close-color;
-		}
+.btn-monospaced,
+.close {
+	+ .modal-title {
+		margin-left: $modal-btn-monospaced-spacer-x;
+	}
+}
+
+.modal-title {
+	+ .btn-monospaced,
+	+ .close {
+		margin-left: $modal-btn-monospaced-spacer-x;
 	}
 }
 
@@ -228,14 +226,15 @@ h6.modal-title {
 
 @each $color, $value in $modal-palette {
 	.modal-#{$color} {
+		.btn-monospaced,
+		.close {
+			color: map-get($value, header-close-color);
+		}
+
 		.modal-header {
 			background-color: map-get($value, header-bg);
 			border-color: map-get($value, header-border-color);
 			color: map-get($value, header-color);
-
-			.close {
-				color: map-get($value, header-close-color);
-			}
 		}
 
 		.modal-body {
