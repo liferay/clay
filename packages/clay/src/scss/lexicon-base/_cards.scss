@@ -264,6 +264,7 @@ button.card-link {
 	margin-top: 0;
 
 	.card {
+		font-size: $font-size-base;
 		margin-bottom: 0;
 	}
 
@@ -288,7 +289,6 @@ button.card-link {
 
 	.form-check-label {
 		color: $body-color;
-		cursor: pointer;
 		display: inline;
 		padding-left: 0;
 	}
@@ -297,6 +297,23 @@ button.card-link {
 	.custom-control-input:checked ~ .card,
 	.form-check-input:checked ~ .card {
 		box-shadow: $form-check-card-checked-box-shadow;
+	}
+}
+
+.form-check-card {
+	@include hover {
+		.card {
+			box-shadow: $form-check-card-checked-box-shadow;
+		}
+	}
+}
+
+.custom-control-input,
+.form-check-input {
+	@include hover {
+		~ .card {
+			box-shadow: $form-check-card-checked-box-shadow;
+		}
 	}
 }
 
@@ -390,13 +407,47 @@ button.card-link {
 // Card Variants
 
 .card-type-asset {
+	.aspect-ratio {
+		border-bottom: 1px solid lighten(map-get($theme-colors, secondary), 46%);
+
+		@include aspect-ratio(16, 9);
+	}
+
+	.aspect-ratio-item-fluid {
+		color: lighten(map-get($theme-colors, secondary), 37%);
+		font-size: 64px;
+
+		.sticker {
+			display: block;
+
+			@include border-radius(100px);
+			@include sticker-xxl;
+
+			.lexicon-icon {
+				font-size: 64px;
+			}
+		}
+	}
+
+	.bg-checkered .aspect-ratio-item-fluid {
+		color: $body-color;
+	}
+
 	.card-row {
 		align-items: flex-start;
 	}
 
+	.card-subtitle {
+		margin-bottom: 0;
+	}
+
 	.dropdown-action {
-		margin-right: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size));
-		margin-top: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size) / 2);
+		margin-right: -8px;
+		margin-top: -3px;
+	}
+
+	.label {
+		@include label-sm;
 	}
 }
 
@@ -406,6 +457,10 @@ button.card-link {
 	}
 
 	.dropdown-action {
-		margin-right: -(lx-icon-padding($icon-monospaced-size, $lexicon-icon-size));
+		margin-right: -8px;
+	}
+
+	.sticker {
+		font-size: 18px;
 	}
 }
