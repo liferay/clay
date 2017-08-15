@@ -2,6 +2,33 @@
 	border-radius: $breadcrumb-border-radius;
 }
 
+.breadcrumb-link {
+	display: block;
+	color: $breadcrumb-link-color;
+
+	@if not ($breadcrumb-link-text-decoration == $link-decoration) {
+		text-decoration: $breadcrumb-link-text-decoration;
+	}
+
+	text-transform: $breadcrumb-text-transform;
+
+	@include hover-focus {
+		color: $breadcrumb-link-hover-color;
+
+		@if not ($breadcrumb-link-hover-text-decoration == $link-hover-decoration) {
+			text-decoration: $breadcrumb-link-hover-text-decoration;
+		}
+	}
+
+	> .breadcrumb-text-truncate {
+		text-decoration: $breadcrumb-link-text-decoration;
+
+		@include hover-focus {
+			text-decoration: $breadcrumb-link-hover-text-decoration;
+		}
+	}
+}
+
 .breadcrumb-item {
 	font-size: $breadcrumb-font-size;
 	font-weight: $breadcrumb-font-weight;
@@ -13,37 +40,6 @@
 
 	&.active {
 		font-weight: $breadcrumb-active-font-weight;
-	}
-
-	> a {
-		display: block;
-		color: $breadcrumb-link-color;
-
-		@if not ($breadcrumb-link-text-decoration == $link-decoration) {
-			text-decoration: $breadcrumb-link-text-decoration;
-		}
-
-		text-transform: $breadcrumb-text-transform;
-
-		@include hover-focus {
-			color: $breadcrumb-link-hover-color;
-
-			@if not ($breadcrumb-link-hover-text-decoration == $link-hover-decoration) {
-				text-decoration: $breadcrumb-link-hover-text-decoration;
-			}
-		}
-	}
-
-	> .btn-link {
-		color: $breadcrumb-link-color;
-
-		@include component-btn-link;
-
-		text-transform: $breadcrumb-text-transform;
-
-		@include hover-focus {
-			color: $breadcrumb-link-hover-color;
-		}
 	}
 
 	> span {
@@ -103,17 +99,6 @@
 	}
 }
 
-a,
-.btn-link {
-	> .breadcrumb-text-truncate {
-		text-decoration: $breadcrumb-link-text-decoration;
-
-		@include hover-focus {
-			text-decoration: $breadcrumb-link-hover-text-decoration;
-		}
-	}
-}
-
 .breadcrumb-stacked {
 	.breadcrumb-item {
 		display: block;
@@ -125,10 +110,6 @@ a,
 		}
 		@else {
 			padding-left: calc(#{$breadcrumb-stacked-divider-svg-icon-width} + #{$breadcrumb-stacked-divider-spacer-x});
-		}
-
-		> a {
-			display: inline;
 		}
 	}
 
@@ -160,6 +141,10 @@ a,
 			top: 50%;
 			width: $breadcrumb-stacked-divider-svg-icon-width;
 		}
+	}
+
+	.breadcrumb-link {
+		display: inline;
 	}
 
 	.breadcrumb-text-truncate {
