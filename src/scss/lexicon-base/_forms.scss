@@ -12,8 +12,7 @@ fieldset {
 	}
 }
 
-label,
-.form-control-label {
+label {
 	color: $input-label-color;
 	font-size: $input-label-font-size;
 	font-weight: $input-label-font-weight;
@@ -122,8 +121,7 @@ textarea.form-control {
 // Disabled State
 
 fieldset[disabled] label,
-label.disabled,
-.form-control-label.disabled {
+label.disabled {
 	color: $input-label-disabled-color;
 	opacity: $input-disabled-opacity;
 }
@@ -246,7 +244,6 @@ fieldset[disabled] label {
 	> label,
 	> .btn,
 	> .form-control,
-	> .form-control-label,
 	> .form-inline-group,
 	> .input-group {
 		@include media-breakpoint-down(xs) {
@@ -257,8 +254,7 @@ fieldset[disabled] label {
 
 @include media-breakpoint-up(sm) {
 	.form-inline {
-		> label,
-		> .form-control-label {
+		> label {
 			// TODO: Use different selector hard to override
 			&:not(:last-child) {
 				margin-right: $grid-gutter-width / 2;
@@ -288,16 +284,14 @@ fieldset[disabled] label {
 			width: 100%;
 		}
 
-		> label,
-		> .form-control-label {
+		> label {
 			display: inline-block;
 			margin-bottom: ($input-height - ($font-size-base * $line-height-base)) / 2;
 		}
 	}
 
 	.form-inline-group {
-		label,
-		.form-control-label {
+		label {
 			display: inline-block;
 		}
 	}
