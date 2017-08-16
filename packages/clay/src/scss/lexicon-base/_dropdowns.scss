@@ -47,8 +47,7 @@
 		font-weight: $dropdown-link-active-font-weight;
 
 		label,
-		.form-check-label,
-		.form-control-label {
+		.form-check-label {
 			color: $dropdown-link-active-color;
 		}
 	}
@@ -56,8 +55,7 @@
 	&.disabled,
 	&:disabled {
 		label,
-		.form-check-label,
-		.form-control-label {
+		.form-check-label {
 			color: $dropdown-link-disabled-color;
 		}
 	}
