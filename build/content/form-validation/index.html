@@ -225,45 +225,156 @@
 	<div class="col-md-12">
 		<h3 id="input-validation-states"><a class="heading-anchor" href="#input-validation-states"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Input Validation States</h3>
 
+		<form class="was-validated">
+			<div class="form-group form-inline form-inline-autofit">
+				<div class="form-inline-group">
+					<label>
+						First Name
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+							<use xlink:href="../../images/icons/icons.svg#asterisk">
+						</svg>
+					</label>
+					<input class="form-control" placeholder="First Name" required type="text" value="Space">
+					<div class="invalid-feedback">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+							<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+						</svg>
+						Please enter first name.
+					</div>
+				</div>
+				<div class="form-inline-group">
+					<label>
+						Last Name
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+							<use xlink:href="../../images/icons/icons.svg#asterisk">
+						</svg>
+					</label>
+					<input class="form-control" placeholder="Last Name" required type="text" value="Program">
+					<div class="invalid-feedback">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+							<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+						</svg>
+						Please enter last name.
+					</div>
+				</div>
+			</div>
+			<div class="form-group form-inline form-inline-autofit">
+				<div class="form-inline-group">
+					<label>
+						City
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+							<use xlink:href="../../images/icons/icons.svg#asterisk">
+						</svg>
+					</label>
+					<input class="form-control" placeholder="City" required type="text">
+					<div class="invalid-feedback">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+							<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+						</svg>
+						Please enter city.
+					</div>
+				</div>
+				<div class="form-inline-group">
+					<label>
+						State
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+							<use xlink:href="../../images/icons/icons.svg#asterisk">
+						</svg>
+					</label>
+					<input class="form-control" placeholder="State" required type="text">
+					<div class="invalid-feedback">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+							<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+						</svg>
+						Please enter state.
+					</div>
+				</div>
+				<div class="form-inline-group">
+					<label>
+						Zip Code
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+							<use xlink:href="../../images/icons/icons.svg#asterisk">
+						</svg>
+					</label>
+					<input class="form-control" placeholder="Zip" required type="text">
+					<div class="invalid-feedback">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+							<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+						</svg>
+						Please enter zip code.
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<form class="was-validated">
+			<label for="formPassword">
+				Password
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+					<use xlink:href="../../images/icons/icons.svg#asterisk">
+				</svg>
+			</label>
+			<input class="form-control" id="formPassword" placeholder="Password" required type="password">
+			<div class="invalid-feedback">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+					<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+				</svg>
+				Use atleast 6 characters.
+			</div>
+			<div class="invalid-help-text">
+				Use uppercase letter and a number?
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="input-validation-states-1"><a class="heading-anchor" href="#input-validation-states-1"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Input Validation States</h3>
+
 		<div class="form-group has-success">
-			<label class="form-control-label" for="inputSuccess1">
-				Input with success
+			<label for="inputSuccess1">
+				has-success
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="../../images/icons/icons.svg#asterisk">
 				</svg>
 			</label>
 			<input class="form-control" id="successInput1" type="text">
-			<div class="form-control-feedback">This input is a success!</div>
+			<div class="form-feedback">
+				<div class="form-feedback-item">This input is a success!</div>
+				<div class="form-feedback-indicator">This input is a success!</div>
+				<div class="form-text">Some helper text.</div>
+			</div>
 		</div>
 
 		<div class="form-group has-warning">
-			<label class="form-control-label" for="inputWarning1">
-				Input with warning
-
-				<span class="icon-asterisk reference-mark"></span>
+			<label for="inputWarning1">
+				has-warning
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+					<use xlink:href="../../images/icons/icons.svg#asterisk">
+				</svg>
 			</label>
 			<input class="form-control" id="inputWarning1" type="text">
-			<div class="form-control-feedback">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
-					<use xlink:href="../../images/icons/icons.svg#check-circle">
-				</svg>
-				Warning this input is a warning!
-			</div>
-			<div class="form-text">
-				Use an uppercase letter and a number
+			<div class="form-feedback">
+				<div class="form-feedback-item">Warning: this input is a warning!</div>
+				<div class="form-feedback-indicator">Warning: this input is a warning!</div>
+				<div class="form-text">Some helper text.</div>
 			</div>
 		</div>
 
-		<div class="form-group has-danger">
-			<label class="form-control-label" for="inputError1">
-				Input with error
-				<span class="reference-mark">
-					<span class="glyphicon glyphicon-asterisk"></span>
-				</span>
+		<div class="form-group has-error">
+			<label for="inputError1">
+				has-error
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+					<use xlink:href="../../images/icons/icons.svg#asterisk">
+				</svg>
 			</label>
 			<input class="form-control" id="inputError1" type="text">
-			<div class="form-control-feedback">This input is invalid!</div>
-			<div class="form-text">Use an uppercase letter and a number</div>
+			<div class="form-feedback">
+				<div class="form-feedback-item">This input is invalid!</div>
+				<div class="form-feedback-indicator">This input is invalid!</div>
+				<div class="form-text">Use an uppercase letter and a number</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -279,6 +390,9 @@
 				<label class="form-check-label">
 					<input class="form-check-input" id="checkboxSuccess1" type="checkbox" value="option1">
 					Checkbox with success
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
 				</label>
 			</div>
 		</div>
@@ -288,15 +402,21 @@
 				<label class="form-check-label">
 					<input class="form-check-input" id="checkboxWarning1" type="checkbox" value="option2">
 					Checkbox with warning
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
 				</label>
 			</div>
 		</div>
 
-		<div class="has-danger">
+		<div class="has-error">
 			<div class="form-check">
 				<label class="form-check-label">
 					<input class="form-check-input" id="checkboxError1" type="checkbox" value="option3">
 					Checkbox with error
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
 				</label>
 			</div>
 		</div>
@@ -321,7 +441,7 @@
 			</div>
 		</div>
 
-		<div class="has-danger">
+		<div class="has-error">
 			<div class="form-check">
 				<label class="form-check-label">
 					<input class="form-check-input" id="radioError1" type="radio" value="option3">
@@ -338,7 +458,12 @@
 
 		<div class="has-success">
 			<div class="form-group">
-				<label class="form-control-label">Select Box with Success</label>
+				<label>
+					Select Box with Success
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
+				</label>
 				<select class="form-control">
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -350,7 +475,12 @@
 
 		<div class="has-warning">
 			<div class="form-group">
-				<label class="form-control-label">Select Box with Warning</label>
+				<label>
+					Select Box with Warning
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
+				</label>
 				<select class="form-control">
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -360,9 +490,14 @@
 			</div>
 		</div>
 
-		<div class="has-danger">
+		<div class="has-error">
 			<div class="form-group">
-				<label class="form-control-label">Select Box with Error</label>
+				<label>
+					Select Box with Error
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
+				</label>
 				<select class="form-control">
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -380,7 +515,12 @@
 
 		<div class="has-success">
 			<div class="form-group">
-				<label class="form-control-label">Multiple Select Box with Success</label>
+				<label>
+					Multiple Select Box with Success
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
+				</label>
 				<select class="form-control" multiple>
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -392,7 +532,12 @@
 
 		<div class="has-warning">
 			<div class="form-group">
-				<label class="form-control-label">Multiple Select Box with Warning</label>
+				<label>
+					Multiple Select Box with Warning
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
+				</label>
 				<select class="form-control" multiple>
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -402,9 +547,14 @@
 			</div>
 		</div>
 
-		<div class="has-danger">
+		<div class="has-error">
 			<div class="form-group">
-				<label class="form-control-label">Multiple Select Box with Error</label>
+				<label>
+					Multiple Select Box with Error
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+						<use xlink:href="../../images/icons/icons.svg#asterisk">
+					</svg>
+				</label>
 				<select class="form-control" multiple>
 					<option>Sample 1</option>
 					<option>Sample 2</option>
@@ -422,42 +572,42 @@
 
 		<div class="has-success">
 			<div class="form-group">
-				<label class="form-control-label">Text Input (Read Only) with Success</label>
+				<label>Text Input (Read Only) with Success</label>
 				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 			</div>
 		</div>
 
 		<div class="has-warning">
 			<div class="form-group">
-				<label class="form-control-label">Text Input (Read Only) with Warning</label>
+				<label>Text Input (Read Only) with Warning</label>
 				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 			</div>
 		</div>
 
-		<div class="has-danger">
+		<div class="has-error">
 			<div class="form-group">
-				<label class="form-control-label">Text Input (Read Only) with Error</label>
+				<label>Text Input (Read Only) with Error</label>
 				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 			</div>
 		</div>
 
 		<div class="has-success">
 			<div class="form-group">
-				<label class="form-control-label">Textarea (Read Only) with Success</label>
+				<label>Textarea (Read Only) with Success</label>
 				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 			</div>
 		</div>
 
 		<div class="has-warning">
 			<div class="form-group">
-				<label class="form-control-label">Textarea (Read Only) with Warning</label>
+				<label>Textarea (Read Only) with Warning</label>
 				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 			</div>
 		</div>
 
-		<div class="has-danger">
+		<div class="has-error">
 			<div class="form-group">
-				<label class="form-control-label">Textarea (Read Only) with Error</label>
+				<label>Textarea (Read Only) with Error</label>
 				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 			</div>
 		</div>
@@ -469,7 +619,8 @@
 		<h3 id="inputs-with-feedback-icons"><a class="heading-anchor" href="#inputs-with-feedback-icons"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Inputs with Feedback Icons</h3>
 
 		<div class="form-group">
-			<label class="form-control-label" for="inputSuccess2">Label
+			<label for="inputSuccess2">
+				Label
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="../../images/icons/icons.svg#asterisk">
 				</svg>
@@ -478,7 +629,7 @@
 		</div>
 
 		<div class="form-group has-success">
-			<label class="form-control-label" for="inputSuccess2">
+			<label for="inputSuccess2">
 				Success Label
 				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 					<use xlink:href="../../images/icons/icons.svg#asterisk">
@@ -488,12 +639,22 @@
 		</div>
 
 		<div class="form-group has-warning">
-			<label class="form-control-label" for="inputWarning2">Warning Label</label>
+			<label for="inputWarning2">
+				Warning Label
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+					<use xlink:href="../../images/icons/icons.svg#asterisk">
+				</svg>
+			</label>
 			<input aria-describedby="inputWarning2Status" class="form-control form-control-warning" id="inputWarning2" type="text">
 		</div>
 
-		<div class="form-group has-danger">
-			<label class="form-control-label" for="inputError2">Error Label</label>
+		<div class="form-group has-error">
+			<label for="inputError2">
+				Error Label
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
+					<use xlink:href="../../images/icons/icons.svg#asterisk">
+				</svg>
+			</label>
 			<input aria-describedby="inputError2Status" class="form-control form-control-danger" id="inputError2" type="text">
 		</div>
 	</div>

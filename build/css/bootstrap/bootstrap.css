@@ -602,11 +602,11 @@ pre code {
 }
 
 .container {
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-  width: 100%;
 }
 
 @media (min-width: 576px) {
@@ -639,7 +639,6 @@ pre code {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-  width: 100%;
 }
 
 .row {
@@ -1584,14 +1583,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .form-check-inline {
   display: inline-block;
+  margin-right: 0.75rem;
 }
 
 .form-check-inline .form-check-label {
   vertical-align: middle;
-}
-
-.form-check-inline + .form-check-inline {
-  margin-left: 0.75rem;
 }
 
 .invalid-feedback {
@@ -1628,14 +1624,14 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
-.was-validated .form-control:valid ~ .invalid-feedback,
-.was-validated .form-control:valid ~ .invalid-tooltip, .form-control.is-valid ~ .invalid-feedback,
-.form-control.is-valid ~ .invalid-tooltip, .was-validated
-.custom-select:valid ~ .invalid-feedback,
+.was-validated .form-control:valid ~ .valid-feedback,
+.was-validated .form-control:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback,
+.form-control.is-valid ~ .valid-tooltip, .was-validated
+.custom-select:valid ~ .valid-feedback,
 .was-validated
-.custom-select:valid ~ .invalid-tooltip,
-.custom-select.is-valid ~ .invalid-feedback,
-.custom-select.is-valid ~ .invalid-tooltip {
+.custom-select:valid ~ .valid-tooltip,
+.custom-select.is-valid ~ .valid-feedback,
+.custom-select.is-valid ~ .valid-tooltip {
   display: block;
 }
 
@@ -2226,7 +2222,7 @@ fieldset[disabled] a.btn {
 }
 
 .btn-outline-light:hover {
-  color: #fff;
+  color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -2242,7 +2238,7 @@ fieldset[disabled] a.btn {
 
 .btn-outline-light:active, .btn-outline-light.active,
 .show > .btn-outline-light.dropdown-toggle {
-  color: #fff;
+  color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -2279,34 +2275,24 @@ fieldset[disabled] a.btn {
 .btn-link {
   font-weight: normal;
   color: #007bff;
+  background-color: transparent;
   border-radius: 0;
 }
 
-.btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled {
+.btn-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
   background-color: transparent;
+  border-color: transparent;
 }
 
-.btn-link, .btn-link:focus, .btn-link:active {
+.btn-link:focus, .btn-link.focus {
   border-color: transparent;
   box-shadow: none;
 }
 
-.btn-link:hover {
-  border-color: transparent;
-}
-
-.btn-link:focus, .btn-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
-  background-color: transparent;
-}
-
-.btn-link:disabled {
+.btn-link:disabled, .btn-link.disabled {
   color: #868e96;
-}
-
-.btn-link:disabled:focus, .btn-link:disabled:hover {
-  text-decoration: none;
 }
 
 .btn-lg, .btn-group-lg > .btn {
@@ -2486,7 +2472,6 @@ tbody.collapse.show {
 .btn-group-vertical > .btn {
   position: relative;
   flex: 0 1 auto;
-  margin-bottom: 0;
 }
 
 .btn-group > .btn:hover,
@@ -2580,7 +2565,6 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical {
-  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -2603,12 +2587,12 @@ tbody.collapse.show {
   border-radius: 0;
 }
 
-.btn-group-vertical > .btn:first-child:not(:last-child) {
+.btn-group-vertical:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn:last-child:not(:first-child) {
+.btn-group-vertical:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -2640,6 +2624,7 @@ tbody.collapse.show {
 .input-group {
   position: relative;
   display: flex;
+  align-items: center;
   width: 100%;
 }
 
@@ -2655,13 +2640,6 @@ tbody.collapse.show {
   z-index: 3;
 }
 
-.input-group-addon,
-.input-group-btn,
-.input-group .form-control {
-  display: flex;
-  align-items: center;
-}
-
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child) {
@@ -2671,7 +2649,6 @@ tbody.collapse.show {
 .input-group-addon,
 .input-group-btn {
   white-space: nowrap;
-  vertical-align: middle;
 }
 
 .input-group-addon {
@@ -3525,9 +3502,17 @@ tbody.collapse.show {
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
+.card-deck {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-deck .card {
+  margin-bottom: 15px;
+}
+
 @media (min-width: 576px) {
   .card-deck {
-    display: flex;
     flex-flow: row wrap;
     margin-right: -15px;
     margin-left: -15px;
@@ -3537,19 +3522,29 @@ tbody.collapse.show {
     flex: 1 0 0%;
     flex-direction: column;
     margin-right: 15px;
+    margin-bottom: 0;
     margin-left: 15px;
   }
 }
 
+.card-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-group .card {
+  margin-bottom: 15px;
+}
+
 @media (min-width: 576px) {
   .card-group {
-    display: flex;
     flex-flow: row wrap;
   }
   .card-group .card {
     flex: 1 0 0%;
   }
   .card-group .card + .card {
+    margin-bottom: 0;
     margin-left: 0;
     border-left: 0;
   }
