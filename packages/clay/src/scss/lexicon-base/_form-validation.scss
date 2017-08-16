@@ -1,8 +1,41 @@
+.was-validated .form-control:valid,
+.was-validated .form-control.is-valid {
+	background-color: $input-success-bg;
+	border-color: $input-success-border-color;
+	box-shadow: $input-success-box-shadow;
+	color: $input-success-color;
+
+	&:focus {
+		background-color: $input-success-focus-bg;
+		border-color: $input-success-focus-border-color;
+		box-shadow: $input-success-focus-box-shadow;
+		color: $input-success-focus-color;
+	}
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-control.is-invalid {
+	background-color: $input-danger-bg;
+	border-color: $input-danger-border-color;
+	box-shadow: $input-danger-box-shadow;
+	color: $input-danger-color;
+
+	&:focus {
+		background-color: $input-danger-focus-bg;
+		border-color: $input-danger-focus-border-color;
+		box-shadow: $input-danger-focus-box-shadow;
+		color: $input-danger-focus-color;
+	}
+}
+
+// -----
+
 .has-success {
 	label {
 		color: $input-success-label-color;
 	}
 
+	.custom-control-description,
 	.form-check-label {
 		color: $input-success-checkbox-label-color;
 	}
@@ -20,6 +53,18 @@
 			color: $input-success-focus-color;
 		}
 	}
+
+	.form-feedback {
+		color: $form-feedback-valid-color;
+	}
+
+	.form-feedback-indicator {
+		background-image: lx-icon(check-circle, $form-feedback-valid-color);
+		background-position: left 2px center;
+		background-repeat: no-repeat;
+		background-size: 1em;
+		padding-left: 1.5em;
+	}
 }
 
 .has-warning {
@@ -27,6 +72,7 @@
 		color: $input-warning-label-color;
 	}
 
+	.custom-control-description,
 	.form-check-label {
 		color: $input-warning-checkbox-label-color;
 	}
@@ -44,13 +90,26 @@
 			color: $input-warning-focus-color;
 		}
 	}
+
+	.form-feedback {
+		color: $form-feedback-warning-color;
+	}
+
+	.form-feedback-indicator {
+		background-image: lx-icon(info-circle, $form-feedback-warning-color);
+		background-position: left 2px center;
+		background-repeat: no-repeat;
+		background-size: 1em;
+		padding-left: 1.5em;
+	}
 }
 
-.has-danger {
+.has-error {
 	label {
 		color: $input-danger-label-color;
 	}
 
+	.custom-control-description,
 	.form-check-label {
 		color: $input-danger-checkbox-label-color;
 	}
@@ -67,6 +126,18 @@
 			box-shadow: $input-danger-focus-box-shadow;
 			color: $input-danger-focus-color;
 		}
+	}
+
+	.form-feedback {
+		color: $form-feedback-invalid-color
+	}
+
+	.form-feedback-indicator {
+		background-image: lx-icon(exclamation-full, $form-feedback-invalid-color);
+		background-position: left 2px center;
+		background-repeat: no-repeat;
+		background-size: 1em;
+		padding-left: 1.5em;
 	}
 }
 

@@ -53,40 +53,42 @@ $input-textarea-height: 150px !default;
 
 // Input Variants
 
+$form-feedback-warning-color: map-get($theme-colors, warning) !default;
+
 $input-danger-bg: null !default;
 $input-danger-focus-bg: null !default;
-$input-danger-border-color: null !default;
+$input-danger-border-color: $form-feedback-invalid-color !default;
 $input-danger-focus-border-color: null !default;
 $input-danger-box-shadow: null !default;
-$input-danger-focus-box-shadow: null !default;
+$input-danger-focus-box-shadow: 0 0 0 0.2rem rgba($form-feedback-invalid-color, 0.25) !default;
 $input-danger-color: null !default;
 $input-danger-focus-color: null !default;
 
-$input-danger-checkbox-label-color: null !default;
+$input-danger-checkbox-label-color: $form-feedback-invalid-color !default;
 $input-danger-label-color: null !default;
 
 $input-success-bg: null !default;
 $input-success-focus-bg: null !default;
-$input-success-border-color: null !default;
+$input-success-border-color: $form-feedback-valid-color !default;
 $input-success-focus-border-color: null !default;
 $input-success-box-shadow: null !default;
-$input-success-focus-box-shadow: null !default;
+$input-success-focus-box-shadow: 0 0 0 0.2rem rgba($form-feedback-valid-color, 0.25) !default;
 $input-success-color: null !default;
 $input-success-focus-color: null !default;
 
-$input-success-checkbox-label-color: null !default;
+$input-success-checkbox-label-color: $form-feedback-valid-color !default;
 $input-success-label-color: null !default;
 
 $input-warning-bg: null !default;
 $input-warning-focus-bg: null !default;
-$input-warning-border-color: null !default;
+$input-warning-border-color: $form-feedback-warning-color !default;
 $input-warning-focus-border-color: null !default;
 $input-warning-box-shadow: null !default;
-$input-warning-focus-box-shadow: null !default;
+$input-warning-focus-box-shadow: 0 0 0 0.2rem rgba($form-feedback-warning-color, 0.25) !default;
 $input-warning-color: null !default;
 $input-warning-focus-color: null !default;
 
-$input-warning-checkbox-label-color: null !default;
+$input-warning-checkbox-label-color: $form-feedback-warning-color !default;
 $input-warning-label-color: null !default;
 
 // Select Element
