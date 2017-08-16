@@ -1,5 +1,9 @@
-.input-group .form-control:focus {
-	z-index: $zindex-input-group-focus;
+.input-group {
+	align-items: flex-start;
+
+	.form-control:focus {
+		z-index: $zindex-input-group-focus;
+	}
 }
 
 // Input Group Btn
@@ -65,8 +69,10 @@
 }
 
 .input-group-addon {
+	align-items: center;
 	border-width: $input-border-width;
 	color: $input-group-addon-color;
+	display: flex;
 	height: $input-height;
 	padding-bottom: $input-group-addon-padding-y;
 	padding-top: $input-group-addon-padding-y;
