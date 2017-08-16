@@ -57,29 +57,26 @@ $input-readonly-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
 $input-readonly-border-color: $input-readonly-bg !default;
 $input-readonly-cursor: default !default;
 
-$input-danger-border-color: theme-color-level(danger, -9) !default;
+$input-danger-bg: lighten(map-get($theme-colors, danger), 49.5%) !default;
+$input-danger-border-color: lighten(map-get($theme-colors, danger), 28%) !default;
 $input-danger-box-shadow: none !default;
 $input-danger-focus-box-shadow: none !default;
 $input-danger-color: $input-color !default;
+$input-danger-checkbox-label-color: map-get($theme-colors, danger) !default;
 
-$input-danger-checkbox-label-color: theme-color-level(danger, 6) !default;
-$input-danger-label-color: $input-label-color !default;
-
-$input-success-border-color: theme-color-level(success, -9) !default;
+$input-success-bg: lighten(map-get($theme-colors, success), 63%) !default;
+$input-success-border-color: lighten(map-get($theme-colors, success), 25%) !default;
 $input-success-box-shadow: none !default;
 $input-success-focus-box-shadow: none !default;
 $input-success-color: $input-color !default;
+$input-success-checkbox-label-color: map-get($theme-colors, success) !default;
 
-$input-success-checkbox-label-color: theme-color-level(success, 6) !default;
-$input-success-label-color: $input-label-color !default;
-
-$input-warning-border-color: theme-color-level(warning, -9) !default;
+$input-warning-bg: lighten(map-get($theme-colors, warning), 57%) !default;
+$input-warning-border-color: lighten(map-get($theme-colors, warning), 24%) !default;
 $input-warning-box-shadow: none !default;
 $input-warning-focus-box-shadow: none !default;
 $input-warning-color: $input-color !default;
-
-$input-warning-checkbox-label-color: theme-color-level(warning, 6) !default;
-$input-warning-label-color: $input-label-color !default;
+$input-warning-checkbox-label-color: map-get($theme-colors, warning) !default;
 
 // Select Element
 
