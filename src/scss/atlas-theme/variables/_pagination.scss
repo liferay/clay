@@ -38,9 +38,9 @@ $pagination-hover-bg: transparent !default;
 $pagination-hover-border-color: $pagination-hover-bg !default;
 $pagination-hover-color: $pagination-color !default;
 
-$pagination-active-bg: lighten(map-get($theme-colors, secondary), 30%) !default;
-$pagination-active-border-color: map-get($theme-colors, secondary) !default;
-$pagination-active-color: map-get($theme-colors, secondary) !default;
+$pagination-active-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
+$pagination-active-border-color: $pagination-active-bg !default;
+$pagination-active-color: $body-color !default;
 
 $pagination-disabled-bg: transparent !default;
 $pagination-disabled-border-color: $pagination-disabled-bg !default;
