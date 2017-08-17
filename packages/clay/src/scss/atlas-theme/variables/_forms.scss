@@ -31,7 +31,10 @@ $input-height-sm: 2rem !default; // 32px
 $input-height-inner-sm: $input-height-sm - $input-height-border !default;
 
 $form-feedback-font-size: 0.875rem !default; // 14px
-$form-text-font-size: 0.875rem !default; // 14px
+$form-feedback-font-weight: 500 !default;
+
+$form-text-color: map-get($theme-colors, secondary) !default;
+$form-text-font-weight: 400 !default;
 
 $form-group-margin-bottom: 1.25rem !default; // 20px
 
