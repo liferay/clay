@@ -26,6 +26,10 @@
 			border-top-color: $popover-top-arrow-color;
 		}
 	}
+
+	.inline-scroller {
+		max-height: $popover-inline-scroller-max-height;
+	}
 }
 
 .popover-header {

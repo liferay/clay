@@ -1,20 +1,23 @@
-$popover-border-color: #AEB7BD !default;
+$popover-border-color: transparent !default;
 $popover-border-radius: $border-radius !default; // 4px
-$popover-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2) !default;
+$popover-box-shadow: 0 1px 15px -2px rgba(0, 0, 0, 0.2) !default;
+$popover-max-width: 14.5rem !default; // 232px
+$popover-inline-scroller-max-height: 14.875rem !default; // 238px
 
-$popover-arrow-width: 8px !default;
-$popover-max-width: 276px !default;
+$popover-arrow-outer-color: transparent !default;
+$popover-arrow-width: 5px !default;
 
 $popover-inner-padding: 0 !default;
 
 $popover-header-bg: #FFF !default;
-$popover-header-border-color: $popover-border-color !default;
+$popover-header-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
 $popover-header-color: $body-color !default;
-$popover-header-font-size: 16px !default;
-$popover-header-margin-x: 16px !default;
+$popover-header-font-size: 0.875rem !default; // 14px
+$popover-header-margin-x: 1rem !default; // 16px
 $popover-header-margin-y: 0 !default;
 $popover-header-padding-x: 0 !default;
-$popover-header-padding-y: 16px !default;
+$popover-header-padding-y: 0.75rem !default; // 12px
 
-$popover-body-padding-x: 16px !default;
-$popover-body-padding-y: 16px !default;
+$popover-body-color: map-get($theme-colors, secondary) !default;
+$popover-body-padding-x: 1rem !default; // 16px
+$popover-body-padding-y: 0.75rem !default; // 12px
