@@ -122,6 +122,19 @@ textarea.form-control {
 	height: $input-textarea-height;
 }
 
+// Checkbox and Radio
+
+.form-check-label {
+	display: inline;
+	position: relative;
+}
+
+.form-check-input {
+	margin-top: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 // Disabled State
 
 fieldset[disabled] label,
