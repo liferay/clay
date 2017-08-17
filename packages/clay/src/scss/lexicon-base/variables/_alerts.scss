@@ -100,7 +100,9 @@ $alert-dark-lead-color: null !default;
 $alert-dark-link-color: null !default;
 $alert-dark-link-hover-color: null !default;
 
-$alert-palette: (
+$alert-palette: () !default;
+
+$alert-palette: map-merge((
 	primary: (
 		bg: $alert-primary-bg,
 		border-color: $alert-primary-border-color,
@@ -181,4 +183,4 @@ $alert-palette: (
 		link-color: $alert-dark-link-color,
 		link-hover-color: $alert-dark-link-hover-color
 	),
-) !default;
+), $alert-palette);
