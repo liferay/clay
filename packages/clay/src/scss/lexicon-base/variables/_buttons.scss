@@ -132,7 +132,8 @@ $btn-dark-active-color: null !default;
 $btn-dark-active-bg: null !default;
 $btn-dark-active-border-color: null !default;
 
-$btn-palette: (
+$btn-palette: () !default;
+$btn-palette: map-merge((
 	primary: (
 		bg: $btn-primary-bg,
 		border-color: $btn-primary-border-color,
@@ -277,4 +278,4 @@ $btn-palette: (
 		active-border-color: $btn-dark-active-border-color,
 		active-color: $btn-dark-active-color
 	)
-) !default;
+), $btn-palette);

@@ -59,7 +59,8 @@ $sticker-dark-bg: map-get($theme-colors, dark) !default;
 $sticker-dark-border-color: null !default;
 $sticker-dark-color: $white !default;
 
-$sticker-palette: (
+$sticker-palette: () !default;
+$sticker-palette: map-merge((
 	primary: (
 		bg: $sticker-primary-bg,
 		border-color: $sticker-primary-border-color,
@@ -100,4 +101,4 @@ $sticker-palette: (
 		border-color: $sticker-dark-border-color,
 		color: $sticker-dark-color
 	)
-) !default;
+), $sticker-palette);
