@@ -36,6 +36,10 @@ label {
 	}
 }
 
+.form-group {
+	position: relative;
+}
+
 // Inputs
 
 .form-control {
@@ -234,6 +238,7 @@ fieldset[disabled] label {
 
 	.form-inline-group {
 		flex: 1;
+		position: relative;
 		width: 100%;
 	}
 
