@@ -1,3 +1,16 @@
+// Form Feedback
+
+.form-feedback {
+	font-size: $form-feedback-font-size;
+	font-weight: 500;
+}
+
+.form-text {
+	font-size: $form-text-font-size;
+}
+
+// HTML 5 Form Validator
+
 .was-validated .form-control:valid,
 .was-validated .form-control.is-valid {
 	background-color: $input-success-bg;
@@ -28,7 +41,7 @@
 	}
 }
 
-// -----
+// Non HTML5 Form Validator
 
 .has-success {
 	label {
@@ -139,17 +152,6 @@
 		background-size: 1em;
 		padding-left: 1.5em;
 	}
-}
-
-// Form Control Feedback
-
-.form-control-feedback {
-	font-size: $form-control-feedback-font-size;
-	font-weight: 500;
-}
-
-.form-text {
-	font-size: $form-text-font-size;
 }
 
 @if (variable-exists(atlas-theme)) {
