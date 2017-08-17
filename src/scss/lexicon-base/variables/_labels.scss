@@ -109,7 +109,8 @@ $label-dark-hover-color: darken($label-dark-color, 20%) !default;
 $label-dark-link-color: $label-dark-color !default;
 $label-dark-link-hover-color: $label-dark-hover-color !default;
 
-$label-palette: (
+$label-palette: () !default;
+$label-palette: map-merge((
 	primary: (
 		bg: $label-primary-bg,
 		hover-bg: $label-primary-hover-bg,
@@ -190,4 +191,4 @@ $label-palette: (
 		link-color: $label-light-link-color,
 		link-hover-color: $label-light-link-hover-color
 	)
-) !default;
+), $label-palette);

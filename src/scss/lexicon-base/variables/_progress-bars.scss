@@ -30,7 +30,8 @@ $progress-group-feedback-success-color: map-get($theme-colors, success) !default
 $progress-bar-warning-bg: map-get($theme-colors, warning) !default;
 $progress-group-feedback-warning-color: map-get($theme-colors, warning) !default;
 
-$progress-palette: (
+$progress-palette: () !default;
+$progress-palette: map-merge((
 	success: (
 		bar-bg: $progress-bar-success-bg,
 		group-feedback-color: $progress-group-feedback-success-color
@@ -47,4 +48,4 @@ $progress-palette: (
 		bar-bg: $progress-bar-danger-bg,
 		group-feedback-color: $progress-group-feedback-danger-color
 	)
-) !default;
+), $progress-palette);

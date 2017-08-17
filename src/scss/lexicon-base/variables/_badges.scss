@@ -98,7 +98,9 @@ $badge-dark-hover-color: null !default;
 $badge-dark-link-color: null !default;
 $badge-dark-link-hover-color: null !default;
 
-$badge-palette: (
+$badge-palette: () !default;
+
+$badge-palette: map-merge((
 	primary: (
 		bg: $badge-primary-bg,
 		hover-bg: $badge-primary-hover-bg,
@@ -179,4 +181,4 @@ $badge-palette: (
 		link-color: $badge-dark-link-color,
 		link-hover-color: $badge-dark-link-hover-color
 	)
-) !default;
+), $badge-palette);
