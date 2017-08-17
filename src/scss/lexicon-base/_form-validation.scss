@@ -2,11 +2,13 @@
 
 .form-feedback {
 	font-size: $form-feedback-font-size;
-	font-weight: 500;
+	font-weight: $form-feedback-font-weight;
 }
 
 .form-text {
+	color: $form-text-color;
 	font-size: $form-text-font-size;
+	font-weight: $form-text-font-weight;
 }
 
 // HTML 5 Form Validator
@@ -43,39 +45,43 @@
 
 // Non HTML5 Form Validator
 
-.has-success {
+.has-error {
 	label {
-		color: $input-success-label-color;
+		color: $input-danger-label-color;
 	}
 
 	.custom-control-description,
 	.form-check-label {
-		color: $input-success-checkbox-label-color;
+		color: $input-danger-checkbox-label-color;
 	}
 
 	.form-control {
-		background-color: $input-success-bg;
-		border-color: $input-success-border-color;
-		box-shadow: $input-success-box-shadow;
-		color: $input-success-color;
+		background-color: $input-danger-bg;
+		border-color: $input-danger-border-color;
+		box-shadow: $input-danger-box-shadow;
+		color: $input-danger-color;
 
 		&:focus {
-			background-color: $input-success-focus-bg;
-			border-color: $input-success-focus-border-color;
-			box-shadow: $input-success-focus-box-shadow;
-			color: $input-success-focus-color;
+			background-color: $input-danger-focus-bg;
+			border-color: $input-danger-focus-border-color;
+			box-shadow: $input-danger-focus-box-shadow;
+			color: $input-danger-focus-color;
 		}
 	}
 
+	&.form-text,
+	&.form-feedback-item,
 	.form-feedback {
-		color: $form-feedback-valid-color;
+		color: $form-feedback-invalid-color;
 	}
 
+	&.form-feedback-indicator,
 	.form-feedback-indicator {
-		background-image: lx-icon(check-circle, $form-feedback-valid-color);
+		background-image: lx-icon(exclamation-full, $form-feedback-invalid-color);
 		background-position: left 2px center;
 		background-repeat: no-repeat;
 		background-size: 1em;
+		color: $form-feedback-invalid-color;
 		padding-left: 1.5em;
 	}
 }
@@ -104,52 +110,60 @@
 		}
 	}
 
+	&.form-text,
+	&.form-feedback-item,
 	.form-feedback {
 		color: $form-feedback-warning-color;
 	}
 
+	&.form-feedback-indicator,
 	.form-feedback-indicator {
 		background-image: lx-icon(info-circle, $form-feedback-warning-color);
 		background-position: left 2px center;
 		background-repeat: no-repeat;
 		background-size: 1em;
+		color: $form-feedback-warning-color;
 		padding-left: 1.5em;
 	}
 }
 
-.has-error {
+.has-success {
 	label {
-		color: $input-danger-label-color;
+		color: $input-success-label-color;
 	}
 
 	.custom-control-description,
 	.form-check-label {
-		color: $input-danger-checkbox-label-color;
+		color: $input-success-checkbox-label-color;
 	}
 
 	.form-control {
-		background-color: $input-danger-bg;
-		border-color: $input-danger-border-color;
-		box-shadow: $input-danger-box-shadow;
-		color: $input-danger-color;
+		background-color: $input-success-bg;
+		border-color: $input-success-border-color;
+		box-shadow: $input-success-box-shadow;
+		color: $input-success-color;
 
 		&:focus {
-			background-color: $input-danger-focus-bg;
-			border-color: $input-danger-focus-border-color;
-			box-shadow: $input-danger-focus-box-shadow;
-			color: $input-danger-focus-color;
+			background-color: $input-success-focus-bg;
+			border-color: $input-success-focus-border-color;
+			box-shadow: $input-success-focus-box-shadow;
+			color: $input-success-focus-color;
 		}
 	}
 
+	&.form-text,
+	&.form-feedback-item,
 	.form-feedback {
-		color: $form-feedback-invalid-color
+		color: $form-feedback-valid-color;
 	}
 
+	&.form-feedback-indicator,
 	.form-feedback-indicator {
-		background-image: lx-icon(exclamation-full, $form-feedback-invalid-color);
+		background-image: lx-icon(check-circle, $form-feedback-valid-color);
 		background-position: left 2px center;
 		background-repeat: no-repeat;
 		background-size: 1em;
+		color: $form-feedback-valid-color;
 		padding-left: 1.5em;
 	}
 }
