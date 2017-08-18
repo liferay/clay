@@ -73,44 +73,69 @@
 	text-transform: $list-group-header-title-text-transform;
 }
 
-// List Group Item
+// List Group Title
 
 .list-group-title {
+	color: $list-group-title-color;
 	font-size: $list-group-title-font-size;
 	font-weight: $list-group-title-font-weight;
 	line-height: normal;
 	margin-bottom: $list-group-title-margin-bottom;
+}
 
-	&, a {
-		color: $list-group-title-color;
-		text-decoration: $list-group-title-text-decoration;
+a.list-group-title,
+.list-group-title a {
+	color: $list-group-title-color;
+	text-decoration: $list-group-title-text-decoration;
 
-		@include hover-focus {
-			color: $list-group-title-hover-color;
-			text-decoration: $list-group-title-hover-text-decoration;
-		}
+	@include hover-focus {
+		color: $list-group-title-hover-color;
+		text-decoration: $list-group-title-hover-text-decoration;
 	}
 }
 
+// List Group Subtitle
+
 .list-group-subtitle {
+	color: $list-group-subtitle-color;
 	font-size: $list-group-subtitle-font-size;
 	font-weight: $list-group-subtitle-font-weight;
 	margin-bottom: $list-group-subtitle-margin-bottom;
+}
 
-	&, a {
-		color: $list-group-subtitle-color;
-		text-decoration: $list-group-subtitle-text-decoration;
+a.list-group-subtitle,
+.list-group-subtitle a {
+	color: $list-group-subtitle-color;
+	text-decoration: $list-group-subtitle-text-decoration;
 
-		@include hover-focus {
-			color: $list-group-subtitle-hover-color;
-			text-decoration: $list-group-subtitle-text-decoration;
-		}
+	@include hover-focus {
+		color: $list-group-subtitle-hover-color;
+		text-decoration: $list-group-subtitle-hover-text-decoration;
 	}
 }
+
+// List Group Item
 
 .list-group-item {
 	&.active {
 		z-index: auto;
+
+		.dropdown-action .dropdown-toggle,
+		.list-group-link {
+			color: $list-group-active-color;
+		}
+
+		.list-group-title,
+		a.list-group-title,
+		.list-group-title a {
+			color: $list-group-title-active-color;
+		}
+
+		.list-group-subtitle,
+		a.list-group-subtitle,
+		.list-group-subtitle a {
+			color: $list-group-subtitle-active-color;
+		}
 
 		+ .list-group-item {
 			border-top-color: $list-group-active-border-color;
@@ -145,6 +170,7 @@
 	padding-right: $list-group-item-padding-x / 2;
 
 	.flex-col {
+		justify-content: center;
 		padding-left: $list-group-item-padding-x / 2;
 		padding-right: $list-group-item-padding-x / 2;
 	}
