@@ -291,6 +291,7 @@ button.card-link {
 		color: $body-color;
 		display: inline;
 		padding-left: 0;
+		position: static;
 	}
 
 	&.active .card,
