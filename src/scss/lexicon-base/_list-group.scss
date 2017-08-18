@@ -43,14 +43,10 @@
 	align-items: center;
 	background-color: $list-group-header-bg;
 	border: $list-group-border-width solid $list-group-border-color;
-	color: $list-group-header-color;
 	display: flex;
-	font-size: $list-group-header-font-size;
-	font-weight: $list-group-header-font-weight;
 	justify-content: space-between;
 	margin-bottom: -$list-group-border-width;
 	padding: $list-group-header-padding-y $list-group-header-padding-x;
-	text-transform: $list-group-header-text-transform;
 
 	&:first-child {
 		@include border-top-radius($list-group-border-radius);
@@ -59,6 +55,13 @@
 	&:last-child {
 		@include border-bottom-radius($list-group-border-radius);
 	}
+}
+
+.list-group-header-title {
+	color: $list-group-header-title-color;
+	font-size: $list-group-header-title-font-size;
+	font-weight: $list-group-header-title-font-weight;
+	text-transform: $list-group-header-title-text-transform;
 }
 
 // List Group Item
