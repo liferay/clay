@@ -1,3 +1,69 @@
+### v2.0.0-alpha.6 - August 17, 2017
+* New: Popover added option to configure `$popover-inline-scroller-max-height` and update Atlas Popover styles to V2
+* New: Popover added option to configure `$popover-header-font-weight`
+* New: Form Validation added option to configure `$form-feedback-font-weight`, `$form-text-color`, `$form-text-font-weight`, update `.form-text` styles
+* New: Custom Checkbox and Radio added option to configure `$custom-control-indicator-active-checked-bg`, `$custom-control-indicator-active-checked-border-color`
+* New: Modal added option to configure `$modal-title-font-size-mobile`
+* New: Button added `.btn-unstyled` for "semantic" markup
+* New: Modal added option to configure `$modal-header-close-font-size`
+* New: Panel add option to configure `$panel-collapse-icon-font-size`
+* New: Panel added `$panel-title-text-transform`, add background-color and border-radius styles to `.panel-group`
+* Breaking: Form Validation rename `.form-control-feedback` to `.form-feedback`, rename `$form-control-feedback-font-size` to `$form-feedback-font-size`, and reorganize selectors
+* Breaking: Update Bootstrap 4 to 7b873fa0
+* Breaking: Remove all references to `.form-control-label` was removed by BS4 use `label` instead
+* Breaking: Modal removed `h1`-`h6` font overrides, use classes `.h1`-`.h6` if heading font sizes are really needed
+* Breaking: Modal removed `$modal-header-close-opacity-modifier` and renamed `$modal-header-close-color`, `$modal-header-close-font-size`, `$modal-header-close-icon-opacity`, `$modal-header-close-lexicon-icon-opacity` to `$modal-btn-monospaced-color`, `$modal-btn-monospaced-font-size`, `$modal-btn-monospaced-opacity` respectively
+* Breaking: Modal removed `.modal-primary-action-button`
+* Breaking: Modal removed `.modal-inverse` and convert modal variant colors to Sass map `$modal-palette`
+* Update: Fix misaligned `.form-check-input` from 1bb5440
+* Update: Atlas Tooltip to Clay V2 styles
+* Update: Atlas Pagination active colors
+* Update: Form properly align `.form-check-input` after BS4 beta update
+* Update: Form Validation `.invalid-feedback` and `.valid-feedback` fonts should match `.form-feedback`
+* Update: Form `.form-group` and `.form-inline-group` shoud be `position: relative` for better positioning of content inside
+* Update: Alert, Badge, Button, Label, Progress, Sticker to use BS4 map-merge pattern for color palettes
+* Update: Alert use BS4 map-merge pattern for `$alert-palette`
+* Update: Form Validation set Atlas colors, re-add `.has-success`, `.has-warning`, `.has-error`, and added `.form-feedback`, `.form-feedback-item`, `.form-feedback-indicator`
+* Update: Form Inline Autofit should always be aligned flex-start
+* Update: Form Check Card added hover states and more style updates to card-type-asset / card-type-directory
+* Update: Button Monospaced Lexicon Icon's should be centered
+* Update: Sticker Lexicon Icon's should be centered
+* Update: Lexicon Icon offset vertical spacing for inline block
+* Update: Sticker move sticker sizes to mixins for easier overrides
+* Update: Badge move badge sizes to mixins for easier overrides
+* Update: Label move label sizes to mixins for easier overrides
+* Update: Badges padding-y for all badge sizes
+* Update: Sticker adjust font sizes for `.sticker-lg` and above
+* Update: Dropdown simplify `.dropdown-action` styles
+* Update: Button mixin `component-btn-link` with `cursor: pointer`
+* Update: Breadcrumb added `.breadcrumb-link` for easier styling, use `breadcrumb-link btn btn-unstyled` to style buttons like links in breadcrumb
+* Update: Btn Unstyled should inherit line-height
+* Update: Modal re-add `$modal-header-height`, `$modal-header-height-mobile`, `$modal-footer-height`, `$modal-footer-height-mobile`
+* Update: Atlas Modal clean up some un-needed variables and update sizing and colors
+* Update: Button Monospaced should center content
+* Update: Atlas Modal to Clay V2 colors
+* Update: Modal use BS4 map-merge pattern for `$modal-palette` and reorganize variables
+* Update: Progress Bar Lg should be proper height after BS4 beta update
+* Update: Atlas Panel styles to Clay V2
+* Update: Panel Group middle panels shouldn't have border-radius and headers and footers should have border-radius when border is 0
+* Site: Popover added `.inline-scroller` to demos for overflowing content
+* Site: Grid add link to BS4 grid documentation
+* Site: Input Group change input-group-inset demo to use `.btn-unstyled` instead of `.btn-link`
+* Site: Form Custom removed validation examples, they are under Form Validation
+* Site: Forms update `.form-check-inline` markup
+* Site: Form Validation add more examples HTML5 and non HTML5
+* Site: Form Validation change `.has-danger` to `.has-error` and added `.form-feedback-*` to examples
+* Site: Remove all references to `.form-control-label`
+* Site: Form Validation add BS4 pattern
+* Site: Card update card-type-asset and card-type-directory examples
+* Site: Badge add examples with numbers
+* Site: Dropdown Action to use `.btn-unstyled`
+* Site: Breadcrumb add `.breadcrumb-link` and `.btn-unstyled` to examples
+* Site: Alert added example of `.btn-unstyled`
+* Site: Button added demo of `.btn-unstyled`
+* Site: Modal update markup to new `.btn-monospaced`, remove btn classes from `.close`
+* Site: Modal change markup to fit Clay V2
+
 ### v2.0.0-alpha.5 - August 11, 2017
 * New: Alert added `$alert-close-font-size`, `$alert-close-line-height` and `.alert .close` should be properly aligned after icon size update
 * New: Create mixin clay-position to handle positioning items
