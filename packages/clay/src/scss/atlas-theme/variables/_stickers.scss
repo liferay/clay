@@ -3,7 +3,7 @@ $sticker-font-weight: bold !default;
 
 // Sticker Variants
 
-$sticker-secondary-color: $body-color !default;
-$sticker-secondary-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
+$sticker-secondary-color: #FFF !default;
+$sticker-secondary-bg: map-get($theme-colors, secondary) !default;
 
 $sticker-light-color: $body-color !default;
