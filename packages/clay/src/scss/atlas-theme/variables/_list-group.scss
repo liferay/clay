@@ -11,11 +11,12 @@ $list-group-active-color: $body-color !default;
 
 $list-group-action-active-bg: $list-group-active-bg !default;
 
-$list-group-header-color: map-get($theme-colors, secondary) !default;
-$list-group-header-font-size: 0.75rem !default; // 12px
-$list-group-header-font-weight: 500 !default;
 $list-group-header-padding-y: 0.3125rem !default; // 5px
-$list-group-header-text-transform: uppercase !default;
+
+$list-group-header-title-color: map-get($theme-colors, secondary) !default;
+$list-group-header-title-font-size: 0.75rem !default; // 12px
+$list-group-header-title-font-weight: 500 !default;
+$list-group-header-title-text-transform: uppercase !default;
 
 $list-group-subtitle-font-size: 0.875rem !default; // 14px
 $list-group-subtitle-font-weight: 300 !default;
