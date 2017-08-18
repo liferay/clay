@@ -69,8 +69,7 @@
 	line-height: normal;
 	margin-bottom: $list-group-title-margin-bottom;
 
-	&,
-	a {
+	&, a {
 		color: $list-group-title-color;
 		text-decoration: $list-group-title-text-decoration;
 
@@ -82,10 +81,19 @@
 }
 
 .list-group-subtitle {
-	color: $list-group-subtitle-color;
 	font-size: $list-group-subtitle-font-size;
 	font-weight: $list-group-subtitle-font-weight;
 	margin-bottom: $list-group-subtitle-margin-bottom;
+
+	&, a {
+		color: $list-group-subtitle-color;
+		text-decoration: $list-group-subtitle-text-decoration;
+
+		@include hover-focus {
+			color: $list-group-subtitle-hover-color;
+			text-decoration: $list-group-subtitle-text-decoration;
+		}
+	}
 }
 
 .list-group-item {
