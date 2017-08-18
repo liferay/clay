@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-alpha.5
+* Clay 2.0.0-alpha.6
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -8175,6 +8175,7 @@ button.card-link {
   color: #212529;
   display: inline;
   padding-left: 0;
+  position: static;
 }
 
 .form-check-card.active .card,
@@ -8372,6 +8373,10 @@ label .reference-mark {
   vertical-align: top;
 }
 
+.form-group {
+  position: relative;
+}
+
 .form-control {
   border-width: 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
   height: calc(2.25rem + 2px);
@@ -8406,6 +8411,17 @@ textarea.form-control {
   height: 150px;
 }
 
+.form-check-label {
+  display: inline;
+  position: relative;
+}
+
+.form-check-input {
+  margin-top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 fieldset[disabled] label .form-control {
   font-weight: normal;
   opacity: 1;
@@ -8436,6 +8452,7 @@ fieldset[disabled] label .form-control {
 
 .form-inline-autofit .form-inline-group {
   flex: 1;
+  position: relative;
   width: 100%;
 }
 
@@ -8463,6 +8480,9 @@ fieldset[disabled] label .form-control {
   .form-inline > .form-inline-group:not(:last-child) {
     margin-bottom: 0;
     margin-right: 15px;
+  }
+  .form-inline .form-check-input {
+    transform: none;
   }
   .form-inline-autofit {
     flex: 1;
@@ -8537,6 +8557,17 @@ fieldset[disabled] label .form-control {
   background-color: #007bff;
 }
 
+.invalid-feedback,
+.valid-feedback,
+.form-feedback {
+  font-size: 0.875rem;
+}
+
+.form-text {
+  color: #868e96;
+  font-size: 0.875rem;
+}
+
 .was-validated .form-control:valid,
 .was-validated .form-control.is-valid {
   border-color: #28a745;
@@ -8557,28 +8588,31 @@ fieldset[disabled] label .form-control {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
-.has-success .custom-control-description,
-.has-success .form-check-label {
-  color: #28a745;
+.has-error .custom-control-description,
+.has-error .form-check-label {
+  color: #dc3545;
 }
 
-.has-success .form-control {
-  border-color: #28a745;
+.has-error .form-control {
+  border-color: #dc3545;
 }
 
-.has-success .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+.has-error .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
-.has-success .form-feedback {
-  color: #28a745;
+.has-error.form-text, .has-error.form-feedback-item,
+.has-error .form-feedback {
+  color: #dc3545;
 }
 
-.has-success .form-feedback-indicator {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M254.2%20304.9c49.9-58.2%20134-156.4%20169.5-197.8%205.9-6.8%2014.6-11.2%2024.3-11.2%2017.7%200%2032%2014.3%2032%2032%200%208-2.9%2015.2-7.7%2020.8-41.7%2048.6-150.3%20175.4-192%20224-5.9%206.8-14.6%2011.2-24.3%2011.2-8.8%200-16.8-3.6-22.6-9.4l-96-96c-5.8-5.8-9.4-13.8-9.4-22.6%200-17.7%2014.3-32%2032-32%208.8%200%2016.8%203.6%2022.6%209.4l71.6%2071.6zm253.1-97.8c-18.3%2021.4-39.5%2046.1-60.6%2070.6C435.9%20373.6%20354.7%20448%20256%20448c-106%200-192-86-192-192S150%2064%20256%2064c35.5%200%2068.7%209.6%2097.2%2026.4%2015.1-17.6%2029.5-34.4%2042.1-49.2C355.3%2015.2%20307.4%200%20256%200%20114.6%200%200%20114.6%200%20256s114.6%20256%20256%20256%20256-114.6%20256-256c0-16.7-1.6-33-4.7-48.9z'%20fill='%2328a745'/%3E%3C/svg%3E");
+.has-error.form-feedback-indicator,
+.has-error .form-feedback-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M256%200C114.6%200%200%20114.6%200%20256s114.6%20256%20256%20256%20256-114.6%20256-256S397.4%200%20256%200zm0%20384c-17.7%200-32-14.3-32-32s14.3-32%2032-32%2032%2014.3%2032%2032-14.3%2032-32%2032zm16-96h-32l-16-160h64l-16%20160z'%20fill='%23dc3545'/%3E%3C/svg%3E");
   background-position: left 2px center;
   background-repeat: no-repeat;
   background-size: 1em;
+  color: #dc3545;
   padding-left: 1.5em;
 }
 
@@ -8595,45 +8629,47 @@ fieldset[disabled] label .form-control {
   box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
 }
 
+.has-warning.form-text, .has-warning.form-feedback-item,
 .has-warning .form-feedback {
   color: #ffc107;
 }
 
+.has-warning.form-feedback-indicator,
 .has-warning .form-feedback-indicator {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M437%2075C388.7%2026.6%20324.4%200%20256%200S123.3%2026.6%2075%2075C26.6%20123.3%200%20187.6%200%20256s26.6%20132.7%2075%20181c48.4%2048.4%20112.6%2075%20181%2075s132.7-26.6%20181-75c48.4-48.4%2075-112.6%2075-181s-26.6-132.7-75-181zM288%20384c0%2017.7-14.3%2032-32%2032s-32-14.3-32-32V224c0-17.7%2014.3-32%2032-32s32%2014.3%2032%2032v160zm-32-224c-17.7%200-32-14.3-32-32s14.3-32%2032-32%2032%2014.3%2032%2032-14.3%2032-32%2032z'%20fill='%23ffc107'/%3E%3C/svg%3E");
   background-position: left 2px center;
   background-repeat: no-repeat;
   background-size: 1em;
+  color: #ffc107;
   padding-left: 1.5em;
 }
 
-.has-error .custom-control-description,
-.has-error .form-check-label {
-  color: #dc3545;
+.has-success .custom-control-description,
+.has-success .form-check-label {
+  color: #28a745;
 }
 
-.has-error .form-control {
-  border-color: #dc3545;
+.has-success .form-control {
+  border-color: #28a745;
 }
 
-.has-error .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+.has-success .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
-.has-error .form-feedback {
-  color: #dc3545;
+.has-success.form-text, .has-success.form-feedback-item,
+.has-success .form-feedback {
+  color: #28a745;
 }
 
-.has-error .form-feedback-indicator {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M256%200C114.6%200%200%20114.6%200%20256s114.6%20256%20256%20256%20256-114.6%20256-256S397.4%200%20256%200zm0%20384c-17.7%200-32-14.3-32-32s14.3-32%2032-32%2032%2014.3%2032%2032-14.3%2032-32%2032zm16-96h-32l-16-160h64l-16%20160z'%20fill='%23dc3545'/%3E%3C/svg%3E");
+.has-success.form-feedback-indicator,
+.has-success .form-feedback-indicator {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M254.2%20304.9c49.9-58.2%20134-156.4%20169.5-197.8%205.9-6.8%2014.6-11.2%2024.3-11.2%2017.7%200%2032%2014.3%2032%2032%200%208-2.9%2015.2-7.7%2020.8-41.7%2048.6-150.3%20175.4-192%20224-5.9%206.8-14.6%2011.2-24.3%2011.2-8.8%200-16.8-3.6-22.6-9.4l-96-96c-5.8-5.8-9.4-13.8-9.4-22.6%200-17.7%2014.3-32%2032-32%208.8%200%2016.8%203.6%2022.6%209.4l71.6%2071.6zm253.1-97.8c-18.3%2021.4-39.5%2046.1-60.6%2070.6C435.9%20373.6%20354.7%20448%20256%20448c-106%200-192-86-192-192S150%2064%20256%2064c35.5%200%2068.7%209.6%2097.2%2026.4%2015.1-17.6%2029.5-34.4%2042.1-49.2C355.3%2015.2%20307.4%200%20256%200%20114.6%200%200%20114.6%200%20256s114.6%20256%20256%20256%20256-114.6%20256-256c0-16.7-1.6-33-4.7-48.9z'%20fill='%2328a745'/%3E%3C/svg%3E");
   background-position: left 2px center;
   background-repeat: no-repeat;
   background-size: 1em;
+  color: #28a745;
   padding-left: 1.5em;
-}
-
-.form-control-feedback {
-  font-weight: 500;
 }
 
 .lexicon-icon {
@@ -11106,6 +11142,14 @@ a.label {
 
 .popover.bs-popover-bottom .arrow::after, .popover.bs-popover-auto[x-placement^="bottom"] .arrow::after {
   border-bottom-color: #f7f7f7;
+}
+
+.popover .inline-scroller {
+  max-height: 14.75rem;
+}
+
+.popover-header {
+  font-weight: 500;
 }
 
 .popover-body {
