@@ -9,19 +9,21 @@ $list-group-header-padding-x: $list-group-item-padding-x !default;
 $list-group-header-padding-y: $list-group-item-padding-y !default;
 $list-group-header-text-transform: null !default;
 
-$list-group-subtitle-color: null !default;
-$list-group-subtitle-font-size: null !default;
-$list-group-subtitle-font-weight: null !default;
-$list-group-subtitle-margin-bottom: 0.25rem !default; // 4px
-
 $list-group-title-color: null !default;
 $list-group-title-font-size: 1.25rem !default; // 20px
 $list-group-title-font-weight: null !default;
 $list-group-title-margin-bottom: 0.25rem !default; // 4px
 $list-group-title-text-decoration: null !default;
-
 $list-group-title-hover-color: null !default;
 $list-group-title-hover-text-decoration: null !default;
+
+$list-group-subtitle-color: null !default;
+$list-group-subtitle-font-size: null !default;
+$list-group-subtitle-font-weight: null !default;
+$list-group-subtitle-margin-bottom: 0.25rem !default; // 4px
+$list-group-subtitle-text-decoration: null !default;
+$list-group-subtitle-hover-color: null !default;
+$list-group-subtitle-hover-text-decoration: null !default;
 
 $list-group-link-color: null !default;
 $list-group-link-hover-color: null !default;
