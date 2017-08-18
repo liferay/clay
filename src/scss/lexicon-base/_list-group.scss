@@ -9,6 +9,14 @@
 			@include box-shadow(none);
 		}
 	}
+
+	.label {
+		@include label-sm;
+	}
+
+	.sticker {
+		@include sticker-lg;
+	}
 }
 
 .list-group-bordered {
