@@ -1,0 +1,474 @@
+/**
+* Clay 2.0.0-alpha.6
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.card,
+.card-horizontal {
+	border-style: $card-border-style;
+
+	@include box-shadow($card-box-shadow);
+
+	display: block;
+	margin-bottom: $card-margin-bottom;
+	position: relative;
+
+	@if ($card-border-radius > 0) {
+		.flex-col {
+			&:first-child {
+				@include border-left-radius($card-inner-border-radius);
+			}
+
+			&:last-child {
+				@include border-right-radius($card-inner-border-radius);
+			}
+		}
+	}
+
+	.btn-link {
+		color: $card-link-color;
+
+		@include component-btn-link;
+
+		line-height: normal;
+		text-decoration: $card-link-text-decoration;
+
+		@include hover-focus {
+			color: $card-link-hover-color;
+			text-decoration: $card-link-hover-text-decoration;
+		}
+	}
+}
+
+.card-title {
+	color: $card-title-color;
+	font-size: $card-title-font-size;
+	font-weight: $card-title-font-weight;
+	margin-bottom: $card-title-margin-bottom;
+	margin-top: $card-title-margin-top;
+}
+
+.card-subtitle {
+	color: $card-subtitle-color;
+	font-size: $card-subtitle-font-size;
+	font-weight: $card-subtitle-font-weight;
+	margin-bottom: $card-subtitle-margin-bottom;
+	margin-top: $card-subtitle-margin-top;
+}
+
+.card-divider {
+	background-color: $card-divider-bg;
+	height: $card-divider-height;
+	margin-bottom: $card-divider-spacer-y;
+	margin-left: $card-divider-spacer-x;
+	margin-right: $card-divider-spacer-x;
+	margin-top: $card-divider-spacer-y;
+}
+
+.card-link {
+	color: $card-link-color;
+	text-decoration: $card-link-text-decoration;
+
+	@include hover-focus {
+		color: $card-link-hover-color;
+		text-decoration: $card-link-hover-text-decoration;
+	}
+
+	+ .card-link {
+		margin-left: 0;
+	}
+}
+
+.show > button.card-link {
+	outline: none;
+}
+
+button.card-link {
+	background-color: transparent;
+
+	@include component-btn-link;
+
+	line-height: normal;
+}
+
+.card-row {
+	display: flex;
+	width: 100%;
+
+	.flex-col {
+		justify-content: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.flex-col-expand {
+		min-width: 50px;
+	}
+}
+
+.card-row .flex-col-gutters {
+	padding-left: 10px;
+	padding-right: 10px;
+
+	.card-divider {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+
+// Card Row Content Alignment
+
+.flex-col {
+	.justify-content-center & {
+		justify-content: center;
+	}
+
+	.justify-content-start & {
+		justify-content: flex-start;
+	}
+
+	.justify-content-end & {
+		justify-content: flex-end;
+	}
+
+	.text-center & {
+		text-align: center;
+	}
+
+	.text-left & {
+		text-align: left;
+	}
+
+	.text-right & {
+		text-align: right;
+	}
+}
+
+// Card Helpers
+
+.card-item-first {
+	@include border-top-radius($card-inner-border-radius);
+
+	width: 100%;
+}
+
+.flex-col:first-child .card-item-first {
+	@include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
+}
+
+.card-item-last {
+	@include border-bottom-radius($card-inner-border-radius);
+
+	width: 100%;
+}
+
+.flex-col:last-child .card-item-last {
+	@include border-radius(0 $card-inner-border-radius $card-inner-border-radius 0);
+}
+
+.rounded {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $card-rounded-inner-border-radius;
+		border-top-right-radius: $card-rounded-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $card-rounded-inner-border-radius;
+		border-bottom-right-radius: $card-rounded-inner-border-radius;
+	}
+
+	.flex-col:first-child {
+		border-bottom-left-radius: $card-rounded-inner-border-radius;
+		border-top-left-radius: $card-rounded-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $card-rounded-inner-border-radius 0 0 $card-rounded-inner-border-radius;
+		}
+	}
+
+	.flex-col:last-child{
+		border-bottom-right-radius: $card-rounded-inner-border-radius;
+		border-top-right-radius: $card-rounded-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $card-rounded-inner-border-radius $card-rounded-inner-border-radius 0;
+		}
+	}
+}
+
+.rounded-0 {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $card-rounded-0-inner-border-radius;
+		border-top-right-radius: $card-rounded-0-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $card-rounded-0-inner-border-radius;
+		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
+	}
+
+	.flex-col:first-child {
+		border-bottom-left-radius: $card-rounded-0-inner-border-radius;
+		border-top-left-radius: $card-rounded-0-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $card-rounded-0-inner-border-radius 0 0 $card-rounded-0-inner-border-radius;
+		}
+	}
+
+	.flex-col:last-child {
+		border-bottom-right-radius: $card-rounded-0-inner-border-radius;
+		border-top-right-radius: $card-rounded-0-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $card-rounded-0-inner-border-radius $card-rounded-0-inner-border-radius 0;
+		}
+	}
+}
+
+.rounded-circle {
+	.card-header,
+	.card-item-first {
+		border-top-left-radius: $card-rounded-circle-inner-border-radius;
+		border-top-right-radius: $card-rounded-circle-inner-border-radius;
+	}
+
+	.card-footer,
+	.card-item-last {
+		border-bottom-left-radius: $card-rounded-circle-inner-border-radius;
+		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
+	}
+
+	.flex-col:first-child {
+		border-bottom-left-radius: $card-rounded-circle-inner-border-radius;
+		border-top-left-radius: $card-rounded-circle-inner-border-radius;
+
+		.card-item-first {
+			border-radius: $card-rounded-circle-inner-border-radius 0 0 $card-rounded-circle-inner-border-radius;
+		}
+	}
+
+	.flex-col:last-child {
+		border-bottom-right-radius: $card-rounded-circle-inner-border-radius;
+		border-top-right-radius: $card-rounded-circle-inner-border-radius;
+
+		.card-item-last {
+			border-radius: 0 $card-rounded-circle-inner-border-radius $card-rounded-circle-inner-border-radius 0;
+		}
+	}
+}
+
+// Checkbox and Radio Cards
+
+.form-check-card {
+	margin-bottom: $card-margin-bottom;
+	margin-top: 0;
+
+	.card {
+		font-size: $font-size-base;
+		margin-bottom: 0;
+	}
+
+	.custom-control {
+		display: inline;
+		margin-right: 0;
+		padding-left: 0;
+		position: static;
+	}
+
+	.custom-control-input,
+	.custom-control-indicator {
+		z-index: 1;
+	}
+
+	.form-check-input {
+		margin-left: 0;
+		margin-top: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.form-check-label {
+		color: $body-color;
+		display: inline;
+		padding-left: 0;
+		position: static;
+	}
+
+	&.active .card,
+	.custom-control-input:checked ~ .card,
+	.form-check-input:checked ~ .card {
+		box-shadow: $form-check-card-checked-box-shadow;
+	}
+}
+
+.form-check-card {
+	@include hover {
+		.card {
+			box-shadow: $form-check-card-checked-box-shadow;
+		}
+	}
+}
+
+.custom-control-input,
+.form-check-input {
+	@include hover {
+		~ .card {
+			box-shadow: $form-check-card-checked-box-shadow;
+		}
+	}
+}
+
+.form-check-bottom-left,
+.form-check-middle-left,
+.form-check-top-left {
+	.card-horizontal {
+		> .card-body {
+			padding-left: $checkbox-left-card-padding;
+		}
+	}
+}
+
+.form-check-bottom-right,
+.form-check-middle-right,
+.form-check-top-right {
+	.card-horizontal {
+		> .card-body {
+			padding-right: $checkbox-right-card-padding;
+		}
+	}
+}
+
+.form-check-bottom-left {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		bottom: $checkbox-position;
+		left: $checkbox-position;
+		top: auto;
+		transform: none;
+	}
+}
+
+.form-check-bottom-right {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		bottom: $checkbox-position;
+		left: auto;
+		right: $checkbox-position;
+		top: auto;
+		transform: none;
+	}
+}
+
+.form-check-middle-left {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: $checkbox-position;
+		margin-top: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.form-check-middle-right {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: auto;
+		margin-top: 0;
+		right: $checkbox-position;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.form-check-top-left {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: $checkbox-position;
+		top: $checkbox-position;
+		transform: none;
+	}
+}
+
+.form-check-top-right {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: auto;
+		right: $checkbox-position;
+		top: $checkbox-position;
+		transform: none;
+	}
+}
+
+// Card Variants
+
+.card-type-asset {
+	.aspect-ratio {
+		border-bottom: 1px solid lighten(map-get($theme-colors, secondary), 46%);
+
+		@include aspect-ratio(16, 9);
+	}
+
+	.aspect-ratio-item-fluid {
+		color: lighten(map-get($theme-colors, secondary), 37%);
+		font-size: 64px;
+
+		.sticker {
+			display: block;
+
+			@include border-radius(100px);
+			@include sticker-xxl;
+
+			.lexicon-icon {
+				font-size: 64px;
+			}
+		}
+	}
+
+	.bg-checkered .aspect-ratio-item-fluid {
+		color: $body-color;
+	}
+
+	.card-row {
+		align-items: flex-start;
+	}
+
+	.card-subtitle {
+		margin-bottom: 0;
+	}
+
+	.dropdown-action {
+		margin-right: -8px;
+		margin-top: -3px;
+	}
+
+	.label {
+		@include label-sm;
+	}
+}
+
+.card-type-directory {
+	.card-title {
+		margin-bottom: 0;
+	}
+
+	.dropdown-action {
+		margin-right: -8px;
+	}
+
+	.sticker {
+		font-size: 18px;
+	}
+}

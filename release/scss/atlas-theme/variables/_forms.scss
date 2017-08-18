@@ -1,0 +1,123 @@
+/**
+* Clay 2.0.0-alpha.6
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Structure
+
+$input-label-font-size: 0.875rem !default; // 14px
+$input-label-font-size-mobile: 0.75rem !default; // 12px
+$input-label-font-weight: 500 !default;
+$input-label-margin-bottom: 0.125rem !default; // 2px
+
+$input-label-reference-mark-spacer: 0.3125rem !default; // 5px
+$input-label-reference-mark-vertical-alignment: top !default;
+
+$input-border-bottom-width: 0.0625rem !default; // 1px
+$input-border-left-width: 0.0625rem !default; // 1px
+$input-border-right-width: 0.0625rem !default; // 1px
+$input-border-top-width: 0.0625rem !default; // 1px
+
+$input-padding-x: 1rem !default; // 16px
+$input-padding-y: 0.5rem !default; // 8px
+
+$input-padding-x-lg: $input-padding-x !default;
+$input-padding-y-lg: $input-padding-y !default;
+
+$input-padding-x-sm: $input-padding-x !default;
+$input-padding-y-sm: $input-padding-y !default;
+
+$input-height-border: $input-border-bottom-width + $input-border-top-width !default;
+$input-height: 2.5rem !default; // 40px
+$input-height-inner: $input-height - $input-height-border !default;
+$input-height-lg: 3rem !default; // 48px
+$input-height-inner-lg: $input-height-lg - $input-height-border !default;
+$input-height-sm: 2rem !default; // 32px
+$input-height-inner-sm: $input-height-sm - $input-height-border !default;
+
+$form-feedback-font-size: 0.875rem !default; // 14px
+$form-feedback-font-weight: 500 !default;
+
+$form-text-color: map-get($theme-colors, secondary) !default;
+$form-text-font-weight: 400 !default;
+
+$form-group-margin-bottom: 1.25rem !default; // 20px
+
+// Skin
+
+$input-color: $body-color !default;
+$input-bg: $body-bg !default;
+$input-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
+$input-box-shadow: none !default;
+$input-color-placeholder: map-get($theme-colors, secondary) !default;
+$input-label-color: $body-color !default;
+
+$input-focus-bg: lighten(map-get($theme-colors, primary), 44%) !default;
+$input-focus-border-color: lighten(map-get($theme-colors, primary), 21%) !default;
+$input-focus-box-shadow: none !default;
+
+$input-disabled-color: $text-muted !default;
+$input-disabled-bg: $input-bg !default;
+$input-disabled-border-color: $input-bg !default;
+$input-label-disabled-color: $text-muted !default;
+
+$input-readonly-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
+$input-readonly-border-color: $input-readonly-bg !default;
+$input-readonly-cursor: default !default;
+
+$input-danger-bg: lighten(map-get($theme-colors, danger), 49.5%) !default;
+$input-danger-border-color: lighten(map-get($theme-colors, danger), 28%) !default;
+$input-danger-box-shadow: none !default;
+$input-danger-focus-box-shadow: none !default;
+$input-danger-color: $input-color !default;
+$input-danger-checkbox-label-color: map-get($theme-colors, danger) !default;
+
+$input-success-bg: lighten(map-get($theme-colors, success), 63%) !default;
+$input-success-border-color: lighten(map-get($theme-colors, success), 25%) !default;
+$input-success-box-shadow: none !default;
+$input-success-focus-box-shadow: none !default;
+$input-success-color: $input-color !default;
+$input-success-checkbox-label-color: map-get($theme-colors, success) !default;
+
+$input-warning-bg: lighten(map-get($theme-colors, warning), 57%) !default;
+$input-warning-border-color: lighten(map-get($theme-colors, warning), 24%) !default;
+$input-warning-box-shadow: none !default;
+$input-warning-focus-box-shadow: none !default;
+$input-warning-color: $input-color !default;
+$input-warning-checkbox-label-color: map-get($theme-colors, warning) !default;
+
+// Select Element
+
+$input-select-bg-position: right 8px center !default;
+$input-select-bg-size: 24px auto !default;
+$input-select-padding-right: 32px !default;
+
+$input-select-icon-color: map-get($theme-colors, secondary) !default;
+$input-select-icon: lx-icon(caret-double-l, $input-select-icon-color) !default;
+
+$input-select-icon-focus-color: $input-select-icon-color !default;
+$input-select-icon-focus: lx-icon(caret-double-l, $input-select-icon-focus-color) !default;
+
+$input-select-icon-disabled-color: $text-muted !default;
+$input-select-icon-disabled: lx-icon(caret-double-l, $input-select-icon-disabled-color) !default;
+
+// Input Groups
+
+$input-group-addon-bg: lighten(map-get($theme-colors, secondary), 46%) !default;
+$input-group-addon-border-color: $input-group-addon-bg !default;
+$input-group-addon-color: map-get($theme-colors, secondary) !default;
+$input-group-addon-padding-x: 0.875rem !default;
+$input-group-addon-padding-x-lg: 1.25rem !default;
+$input-group-addon-padding-x-sm: 0.5rem !default;
+
+// Input Group Secondary
+
+$input-group-secondary-addon-bg: #FFF !default;
+$input-group-secondary-addon-border-color: lighten($btn-secondary-color, 37%) !default;
+
+// Input Group Transparent
+
+$input-group-transparent-addon-border-color: #DDD !default;
+$input-group-transparent-addon-color: #BBB !default;

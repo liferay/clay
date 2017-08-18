@@ -1,0 +1,37 @@
+/**
+* Clay 2.0.0-alpha.6
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@import "variables/globals";
+
+@import "variables/alerts";
+@import "variables/badges";
+@import "variables/breadcrumbs";
+@import "variables/buttons";
+@import "variables/cards";
+@import "variables/dropdowns";
+@import "variables/forms";
+@import "variables/custom-forms";
+@import "variables/icons";
+@import "variables/labels";
+@import "variables/list-group";
+@import "variables/modals";
+@import "variables/navs";
+@import "variables/navbar";
+@import "variables/multi-step-nav";
+@import "variables/pagination";
+// @import "variables/pager"; // dropped Pager inherits from Pagination
+@import "variables/panels";
+@import "variables/popovers";
+@import "variables/progress-bars";
+@import "variables/stickers";
+@import "variables/sidebar";
+@import "variables/tables";
+@import "variables/timelines";
+@import "variables/toggle-card";
+@import "variables/toggle-switch";
+@import "variables/tooltip";
+@import "variables/utilities";

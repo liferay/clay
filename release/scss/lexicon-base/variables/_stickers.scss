@@ -1,0 +1,111 @@
+/**
+* Clay 2.0.0-alpha.6
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$sticker-border-radius: $border-radius !default;
+$sticker-border-style: null !default;
+$sticker-border-width: null !default;
+$sticker-color: $label-color !default;
+$sticker-font-size: 0.875rem !default; // 14px
+$sticker-font-weight: null !default;
+$sticker-size: 2rem !default; // 32px
+
+$sticker-font-size-sm: 0.625rem !default; // 10px
+$sticker-size-sm: $sticker-size * 0.75 !default; // 24px
+
+$sticker-font-size-lg: 1.125rem !default; // 18px
+$sticker-size-lg: $sticker-size * 1.375 !default; // 44px
+
+$sticker-font-size-xl: $sticker-font-size-lg * 1.3 !default; // 23.4
+$sticker-size-xl: $sticker-size-lg * 1.375 !default; // 60px
+
+$sticker-font-size-xxl: $sticker-font-size-xl * 1.3 !default; // 30.42px
+$sticker-size-xxl: $sticker-size-xl * 1.375 !default; // 83px
+
+// Sticker Positions
+
+$sticker-inside-offset: $grid-gutter-width / 2 !default;
+$sticker-outside-offset: -($sticker-size / 2) !default;
+$sticker-outside-offset-sm: -($sticker-size-sm / 2) !default;
+$sticker-outside-offset-lg: -($sticker-size-lg / 2) !default;
+
+// Sticker Variants
+
+$sticker-primary-bg: map-get($theme-colors, primary) !default;
+$sticker-primary-border-color: null !default;
+$sticker-primary-color: $white !default;
+
+$sticker-secondary-bg: map-get($theme-colors, secondary) !default;
+$sticker-secondary-border-color: null !default;
+$sticker-secondary-color: $white !default;
+
+$sticker-info-bg: map-get($theme-colors, info) !default;
+$sticker-info-border-color: null !default;
+$sticker-info-color: $white !default;
+
+$sticker-success-bg: map-get($theme-colors, success) !default;
+$sticker-success-border-color: null !default;
+$sticker-success-color: $white !default;
+
+$sticker-warning-bg: map-get($theme-colors, warning) !default;
+$sticker-warning-border-color: null !default;
+$sticker-warning-color: $white !default;
+
+$sticker-danger-bg: map-get($theme-colors, danger) !default;
+$sticker-danger-border-color: null !default;
+$sticker-danger-color: $white !default;
+
+$sticker-light-bg: map-get($theme-colors, light) !default;
+$sticker-light-border-color: null !default;
+$sticker-light-color: #111 !default;
+
+$sticker-dark-bg: map-get($theme-colors, dark) !default;
+$sticker-dark-border-color: null !default;
+$sticker-dark-color: $white !default;
+
+$sticker-palette: () !default;
+$sticker-palette: map-merge((
+	primary: (
+		bg: $sticker-primary-bg,
+		border-color: $sticker-primary-border-color,
+		color: $sticker-primary-color
+	),
+	secondary: (
+		bg: $sticker-secondary-bg,
+		border-color: $sticker-secondary-border-color,
+		color: $sticker-secondary-color
+	),
+	success: (
+		bg: $sticker-success-bg,
+		border-color: $sticker-success-border-color,
+		color: $sticker-success-color
+	),
+	info: (
+		bg: $sticker-info-bg,
+		border-color: $sticker-info-border-color,
+		color: $sticker-info-color
+	),
+	warning: (
+		bg: $sticker-warning-bg,
+		border-color: $sticker-warning-border-color,
+		color: $sticker-warning-color
+	),
+	danger: (
+		bg: $sticker-danger-bg,
+		border-color: $sticker-danger-border-color,
+		color: $sticker-danger-color
+	),
+	light: (
+		bg: $sticker-light-bg,
+		border-color: $sticker-light-border-color,
+		color: $sticker-light-color
+	),
+	dark: (
+		bg: $sticker-dark-bg,
+		border-color: $sticker-dark-border-color,
+		color: $sticker-dark-color
+	)
+), $sticker-palette);
