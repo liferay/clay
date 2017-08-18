@@ -289,6 +289,10 @@ fieldset[disabled] label {
 				margin-right: $grid-gutter-width / 2;
 			}
 		}
+
+		.form-check-input {
+			transform: none;
+		}
 	}
 
 	.form-inline-autofit {
