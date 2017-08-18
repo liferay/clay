@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.5</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
@@ -213,7 +213,74 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-alpha-5-august-11-2017"><a class="heading-anchor" href="#v2-0-0-alpha-5-august-11-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.5 - August 11, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-alpha-6-august-17-2017"><a class="heading-anchor" href="#v2-0-0-alpha-6-august-17-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.6 - August 17, 2017</h3>
+<ul>
+<li>New: Popover added option to configure <code>$popover-inline-scroller-max-height</code> and update Atlas Popover styles to V2</li>
+<li>New: Popover added option to configure <code>$popover-header-font-weight</code></li>
+<li>New: Form Validation added option to configure <code>$form-feedback-font-weight</code>, <code>$form-text-color</code>, <code>$form-text-font-weight</code>, update <code>.form-text</code> styles</li>
+<li>New: Custom Checkbox and Radio added option to configure <code>$custom-control-indicator-active-checked-bg</code>, <code>$custom-control-indicator-active-checked-border-color</code></li>
+<li>New: Modal added option to configure <code>$modal-title-font-size-mobile</code></li>
+<li>New: Button added <code>.btn-unstyled</code> for &#x201C;semantic&#x201D; markup</li>
+<li>New: Modal added option to configure <code>$modal-header-close-font-size</code></li>
+<li>New: Panel add option to configure <code>$panel-collapse-icon-font-size</code></li>
+<li>New: Panel added <code>$panel-title-text-transform</code>, add background-color and border-radius styles to <code>.panel-group</code></li>
+<li>Breaking: Form Validation rename <code>.form-control-feedback</code> to <code>.form-feedback</code>, rename <code>$form-control-feedback-font-size</code> to <code>$form-feedback-font-size</code>, and reorganize selectors</li>
+<li>Breaking: Update Bootstrap 4 to 7b873fa0</li>
+<li>Breaking: Remove all references to <code>.form-control-label</code> was removed by BS4 use <code>label</code> instead</li>
+<li>Breaking: Modal removed <code>h1</code>-<code>h6</code> font overrides, use classes <code>.h1</code>-<code>.h6</code> if heading font sizes are really needed</li>
+<li>Breaking: Modal removed <code>$modal-header-close-opacity-modifier</code> and renamed <code>$modal-header-close-color</code>, <code>$modal-header-close-font-size</code>, <code>$modal-header-close-icon-opacity</code>, <code>$modal-header-close-lexicon-icon-opacity</code> to <code>$modal-btn-monospaced-color</code>, <code>$modal-btn-monospaced-font-size</code>, <code>$modal-btn-monospaced-opacity</code> respectively</li>
+<li>Breaking: Modal removed <code>.modal-primary-action-button</code></li>
+<li>Breaking: Modal removed <code>.modal-inverse</code> and convert modal variant colors to Sass map <code>$modal-palette</code></li>
+<li>Update: Fix misaligned <code>.form-check-input</code> from 1bb5440</li>
+<li>Update: Atlas Tooltip to Clay V2 styles</li>
+<li>Update: Atlas Pagination active colors</li>
+<li>Update: Form properly align <code>.form-check-input</code> after BS4 beta update</li>
+<li>Update: Form Validation <code>.invalid-feedback</code> and <code>.valid-feedback</code> fonts should match <code>.form-feedback</code></li>
+<li>Update: Form <code>.form-group</code> and <code>.form-inline-group</code> shoud be <code>position: relative</code> for better positioning of content inside</li>
+<li>Update: Alert, Badge, Button, Label, Progress, Sticker to use BS4 map-merge pattern for color palettes</li>
+<li>Update: Alert use BS4 map-merge pattern for <code>$alert-palette</code></li>
+<li>Update: Form Validation set Atlas colors, re-add <code>.has-success</code>, <code>.has-warning</code>, <code>.has-error</code>, and added <code>.form-feedback</code>, <code>.form-feedback-item</code>, <code>.form-feedback-indicator</code></li>
+<li>Update: Form Inline Autofit should always be aligned flex-start</li>
+<li>Update: Form Check Card added hover states and more style updates to card-type-asset / card-type-directory</li>
+<li>Update: Button Monospaced Lexicon Icon&#x2019;s should be centered</li>
+<li>Update: Sticker Lexicon Icon&#x2019;s should be centered</li>
+<li>Update: Lexicon Icon offset vertical spacing for inline block</li>
+<li>Update: Sticker move sticker sizes to mixins for easier overrides</li>
+<li>Update: Badge move badge sizes to mixins for easier overrides</li>
+<li>Update: Label move label sizes to mixins for easier overrides</li>
+<li>Update: Badges padding-y for all badge sizes</li>
+<li>Update: Sticker adjust font sizes for <code>.sticker-lg</code> and above</li>
+<li>Update: Dropdown simplify <code>.dropdown-action</code> styles</li>
+<li>Update: Button mixin <code>component-btn-link</code> with <code>cursor: pointer</code></li>
+<li>Update: Breadcrumb added <code>.breadcrumb-link</code> for easier styling, use <code>breadcrumb-link btn btn-unstyled</code> to style buttons like links in breadcrumb</li>
+<li>Update: Btn Unstyled should inherit line-height</li>
+<li>Update: Modal re-add <code>$modal-header-height</code>, <code>$modal-header-height-mobile</code>, <code>$modal-footer-height</code>, <code>$modal-footer-height-mobile</code></li>
+<li>Update: Atlas Modal clean up some un-needed variables and update sizing and colors</li>
+<li>Update: Button Monospaced should center content</li>
+<li>Update: Atlas Modal to Clay V2 colors</li>
+<li>Update: Modal use BS4 map-merge pattern for <code>$modal-palette</code> and reorganize variables</li>
+<li>Update: Progress Bar Lg should be proper height after BS4 beta update</li>
+<li>Update: Atlas Panel styles to Clay V2</li>
+<li>Update: Panel Group middle panels shouldn&#x2019;t have border-radius and headers and footers should have border-radius when border is 0</li>
+<li>Site: Popover added <code>.inline-scroller</code> to demos for overflowing content</li>
+<li>Site: Grid add link to BS4 grid documentation</li>
+<li>Site: Input Group change input-group-inset demo to use <code>.btn-unstyled</code> instead of <code>.btn-link</code></li>
+<li>Site: Form Custom removed validation examples, they are under Form Validation</li>
+<li>Site: Forms update <code>.form-check-inline</code> markup</li>
+<li>Site: Form Validation add more examples HTML5 and non HTML5</li>
+<li>Site: Form Validation change <code>.has-danger</code> to <code>.has-error</code> and added <code>.form-feedback-*</code> to examples</li>
+<li>Site: Remove all references to <code>.form-control-label</code></li>
+<li>Site: Form Validation add BS4 pattern</li>
+<li>Site: Card update card-type-asset and card-type-directory examples</li>
+<li>Site: Badge add examples with numbers</li>
+<li>Site: Dropdown Action to use <code>.btn-unstyled</code></li>
+<li>Site: Breadcrumb add <code>.breadcrumb-link</code> and <code>.btn-unstyled</code> to examples</li>
+<li>Site: Alert added example of <code>.btn-unstyled</code></li>
+<li>Site: Button added demo of <code>.btn-unstyled</code></li>
+<li>Site: Modal update markup to new <code>.btn-monospaced</code>, remove btn classes from <code>.close</code></li>
+<li>Site: Modal change markup to fit Clay V2</li>
+</ul>
+<h3 id="v2-0-0-alpha-5-august-11-2017"><a class="heading-anchor" href="#v2-0-0-alpha-5-august-11-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.5 - August 11, 2017</h3>
 <ul>
 <li>New: Alert added <code>$alert-close-font-size</code>, <code>$alert-close-line-height</code> and <code>.alert .close</code> should be properly aligned after icon size update</li>
 <li>New: Create mixin clay-position to handle positioning items</li>
