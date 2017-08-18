@@ -1,11 +1,24 @@
-$list-group-border-radius: 0 !default;
+$list-group-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
+// $list-group-border-radius: 0 !default;
+// $list-group-border-width: 0 !default;
+// $list-group-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) !default;
 
-$list-group-border-color: lighten(map-get($theme-colors, secondary), 30%) !default;
-$list-group-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) !default;
+$list-group-hover-bg: lighten(map-get($theme-colors, primary), 44%) !default;
 
-$list-group-active-bg: #FCFEFF !default;
+$list-group-active-bg: lighten(map-get($theme-colors, primary), 44%) !default;
 $list-group-active-border-color: $list-group-border-color !default;
 $list-group-active-color: $body-color !default;
+
+$list-group-action-active-bg: $list-group-active-bg !default;
+
+$list-group-header-color: map-get($theme-colors, secondary) !default;
+$list-group-header-font-size: 0.75rem !default; // 12px
+$list-group-header-font-weight: 500 !default;
+$list-group-header-padding-y: 0.3125rem !default; // 5px
+$list-group-header-text-transform: uppercase !default;
+
+$list-group-subtitle-font-size: 0.875rem !default; // 14px
+$list-group-subtitle-font-weight: 300 !default;
 
 $list-group-link-color: $body-color !default;
 $list-group-link-hover-color: $list-group-link-color !default;
