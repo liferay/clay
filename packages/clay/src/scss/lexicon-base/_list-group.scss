@@ -1,6 +1,5 @@
-// TODO: List Group Item Flex Stacked Screen Size Down
-
 .list-group {
+	@include border-radius($list-group-border-radius);
 	@include box-shadow($list-group-box-shadow);
 
 	color: $list-group-color;
@@ -38,6 +37,8 @@
 	}
 }
 
+// List Group Header
+
 .list-group-header {
 	align-items: center;
 	background-color: $list-group-header-bg;
@@ -60,10 +61,31 @@
 	}
 }
 
+// List Group Item
+
+.list-group-title {
+	font-size: $list-group-title-font-size;
+	font-weight: $list-group-title-font-weight;
+	line-height: normal;
+	margin-bottom: $list-group-title-margin-bottom;
+
+	&,
+	a {
+		color: $list-group-title-color;
+		text-decoration: $list-group-title-text-decoration;
+
+		@include hover-focus {
+			color: $list-group-title-hover-color;
+			text-decoration: $list-group-title-hover-text-decoration;
+		}
+	}
+}
+
 .list-group-subtitle {
 	color: $list-group-subtitle-color;
 	font-size: $list-group-subtitle-font-size;
 	font-weight: $list-group-subtitle-font-weight;
+	margin-bottom: $list-group-subtitle-margin-bottom;
 	text-transform: $list-group-subtitle-text-transform;
 }
 
@@ -126,6 +148,8 @@
 		}
 	}
 }
+
+// List Group Link
 
 .list-group-link {
 	color: $list-group-link-color;
