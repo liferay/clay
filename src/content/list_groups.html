@@ -13,6 +13,10 @@ section: Components
 			<p>Use a combination of <code>.flex-col</code> and <code>.flex-col.flex-col-expand</code> to control the size of each cell.</p>
 		</blockquote>
 
+		<div class="alert alert-warning">
+			Direct descendants of <code>flex-col</code> become block level elements by default, see <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">https://www.w3.org/TR/css-flexbox-1/#flex-items</a>. If you want to display content using <code>floats</code>, <code>inline</code>, or <code>inline-block</code> wrap the content with a block level element such as a div.
+		</div>
+
 		<ul class="list-group">
 			<li class="list-group-item list-group-item-flex">
 				<div class="flex-col">
@@ -24,7 +28,7 @@ section: Components
 				</div>
 
 				<div class="flex-col">
-					<div class="sticker sticker-secondary sticker-lg sticker-static">
+					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
@@ -32,28 +36,43 @@ section: Components
 				</div>
 
 				<div class="flex-col flex-col-expand">
-					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-					<h4 class="text-truncate"><a class="list-group-link" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
-					<h6 class="text-truncate">Approved</h6>
+					<span class="list-group-title">Span List Group Title</span>
+					<a class="list-group-title" href="#1">Anchor List Group Title</a>
+					<h4 class="list-group-title text-truncate">
+						<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+					</h4>
+					<span class="list-group-subtitle">Span List Group Subtitle</span>
+					<a class="list-group-subtitle" href="#1">Anchor List Group Subtitle</a>
+					<p class="list-group-subtitle text-truncate"><a href="#1">Alberto Calvo</a>, modified 2 hours ago.</p>
+					<a class="list-group-link" href="#1">List Group Link</a>
+					<div>
+						<span class="label label-success">Approved</span>
+					</div>
 				</div>
 
 				<div class="flex-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<div class="dropdown-header">Dropdown Header</div>
-							<a class="dropdown-item" href="#1">Action 1</a>
-							<a class="dropdown-item" href="#1">Action 2</a>
-							<a class="dropdown-item" href="#1">Action 3</a>
-							<a class="dropdown-item" href="#1">Action 4</a>
-							<a class="dropdown-item" href="#1">Action 5</a>
-							<a class="dropdown-item" href="#1">Action 6</a>
-							<a class="dropdown-item" href="#1">Action 7</a>
-							<a class="dropdown-item" href="#1">Action 8</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle">
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -69,7 +88,7 @@ section: Components
 				</div>
 
 				<div class="flex-col">
-					<div class="sticker sticker-secondary sticker-lg sticker-static">
+					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
@@ -77,31 +96,38 @@ section: Components
 				</div>
 
 				<div class="flex-col flex-col-expand">
-					<h5>Bookmarks</h5>
-					<h4><a class="list-group-link" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a></h4>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
+					<h4 class="list-group-title">
+						<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a>
+					</h4>
+					<p class="list-group-subtitle">Bookmarks</p>
+					<div>
+						<span class="label label-danger">Rejected</span>
+					</div>
 				</div>
 
 				<div class="flex-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<div class="dropdown-header">Dropdown Header</div>
-							<a class="dropdown-item" href="#1">Action 1</a>
-							<a class="dropdown-item" href="#1">Action 2</a>
-							<a class="dropdown-item" href="#1">Action 3</a>
-							<a class="dropdown-item" href="#1">Action 4</a>
-							<a class="dropdown-item" href="#1">Action 5</a>
-							<a class="dropdown-item" href="#1">Action 6</a>
-							<a class="dropdown-item" href="#1">Action 7</a>
-							<a class="dropdown-item" href="#1">Action 8</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle">
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -129,7 +155,7 @@ section: Components
 				</div>
 
 				<div class="flex-col">
-					<div class="sticker sticker-secondary sticker-lg sticker-static">
+					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
@@ -137,31 +163,38 @@ section: Components
 				</div>
 
 				<div class="flex-col flex-col-expand">
-					<h5>Larry Bird the best power forward in Celtic's history.</h5>
-					<h6>Monica Bellucci</h6>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
+					<h4 class="list-group-title truncate-text">
+						<a href="#1">Account Example One</a>
+					</h4>
+					<p class="list-group-subtitle truncate-text">Second Level Text</p>
+					<div>
+						<span class="label label-success">Approved</span>
+					</div>
 				</div>
 
 				<div class="flex-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<div class="dropdown-header">Dropdown Header</div>
-							<a class="dropdown-item" href="#1">Action 1</a>
-							<a class="dropdown-item" href="#1">Action 2</a>
-							<a class="dropdown-item" href="#1">Action 3</a>
-							<a class="dropdown-item" href="#1">Action 4</a>
-							<a class="dropdown-item" href="#1">Action 5</a>
-							<a class="dropdown-item" href="#1">Action 6</a>
-							<a class="dropdown-item" href="#1">Action 7</a>
-							<a class="dropdown-item" href="#1">Action 8</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle">
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -177,7 +210,7 @@ section: Components
 				</div>
 
 				<div class="flex-col">
-					<div class="sticker sticker-secondary sticker-lg sticker-static">
+					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
@@ -185,31 +218,38 @@ section: Components
 				</div>
 
 				<div class="flex-col flex-col-expand">
-					<h5>Karl Malone the best power forward in Jazz history.</h5>
-					<h6>Monica Bellucci</h6>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
+					<h4 class="list-group-title">
+						<a href="#1">Account Example Two</a>
+					</h4>
+					<p class="list-group-subtitle">Second Level Text</p>
+					<div>
+						<span class="label label-success">Approved</span>
+					</div>
 				</div>
 
 				<div class="flex-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<div class="dropdown-header">Dropdown Header</div>
-							<a class="dropdown-item" href="#1">Action 1</a>
-							<a class="dropdown-item" href="#1">Action 2</a>
-							<a class="dropdown-item" href="#1">Action 3</a>
-							<a class="dropdown-item" href="#1">Action 4</a>
-							<a class="dropdown-item" href="#1">Action 5</a>
-							<a class="dropdown-item" href="#1">Action 6</a>
-							<a class="dropdown-item" href="#1">Action 7</a>
-							<a class="dropdown-item" href="#1">Action 8</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle">
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -224,16 +264,14 @@ section: Components
 
 		<ul class="list-group">
 			<li class="list-group-header">
-				List Group Header 1
-				<span class="list-group-subtitle">4 Items</span>
+				<h3 class="list-group-header-title">List Group Header 1</h3>
 			</li>
 			<li class="list-group-item">List Item 1</li>
 			<li class="list-group-item">List Item 2</li>
 			<li class="list-group-item">List Item 3</li>
 			<li class="list-group-item">List Item 4</li>
 			<li class="list-group-header">
-				List Group Header 2
-				<span class="list-group-subtitle">2 Items</span>
+				<h3 class="list-group-header-title">List Group Header 2</h3>
 			</li>
 			<li class="list-group-item list-group-item-flex">
 				<div class="flex-col">
@@ -245,7 +283,7 @@ section: Components
 				</div>
 
 				<div class="flex-col">
-					<div class="sticker sticker-secondary sticker-lg sticker-static">
+					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
@@ -253,28 +291,38 @@ section: Components
 				</div>
 
 				<div class="flex-col flex-col-expand">
-					<h6 class="text-truncate">Alberto Calvo, modified 2 hours ago.</h6>
-					<h4 class="text-truncate"><a class="list-group-link" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a></h4>
-					<h6 class="text-truncate">Approved</h6>
+					<h4 class="list-group-title text-truncate">
+						<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+					</h4>
+					<p class="list-group-subtitle text-truncate">Second Level Text</p>
+					<div>
+						<span class="label label-success">Approved</span>
+					</div>
 				</div>
 
 				<div class="flex-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<div class="dropdown-header">Dropdown Header</div>
-							<a class="dropdown-item" href="#1">Action 1</a>
-							<a class="dropdown-item" href="#1">Action 2</a>
-							<a class="dropdown-item" href="#1">Action 3</a>
-							<a class="dropdown-item" href="#1">Action 4</a>
-							<a class="dropdown-item" href="#1">Action 5</a>
-							<a class="dropdown-item" href="#1">Action 6</a>
-							<a class="dropdown-item" href="#1">Action 7</a>
-							<a class="dropdown-item" href="#1">Action 8</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle">
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -290,7 +338,7 @@ section: Components
 				</div>
 
 				<div class="flex-col">
-					<div class="sticker sticker-secondary sticker-lg sticker-static">
+					<div class="sticker sticker-secondary">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#folder" />
 						</svg>
@@ -298,31 +346,38 @@ section: Components
 				</div>
 
 				<div class="flex-col flex-col-expand">
-					<h5>Bookmarks</h5>
-					<h4><a class="list-group-link" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a></h4>
-					<h6>
-						<span>5 Folders</span>
-						<span>4 Entries</span>
-					</h6>
+					<h4 class="list-group-title">
+						<a href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual.</a>
+					</h4>
+					<p class="list-group-subtitle">Second Level Text</p>
+					<div>
+						<span class="label label-success">Approved</span>
+					</div>
 				</div>
 
 				<div class="flex-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<div class="dropdown-header">Dropdown Header</div>
-							<a class="dropdown-item" href="#1">Action 1</a>
-							<a class="dropdown-item" href="#1">Action 2</a>
-							<a class="dropdown-item" href="#1">Action 3</a>
-							<a class="dropdown-item" href="#1">Action 4</a>
-							<a class="dropdown-item" href="#1">Action 5</a>
-							<a class="dropdown-item" href="#1">Action 6</a>
-							<a class="dropdown-item" href="#1">Action 7</a>
-							<a class="dropdown-item" href="#1">Action 8</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle">
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -342,7 +397,9 @@ section: Components
 
 	<div class="col-md-6">
 		<ul class="list-group list-group-unstyled">
-			<li class="list-group-header">List Group Header 1</li>
+			<li class="list-group-header">
+				<h3 class="list-group-header-title">List Group Header 1</h3>
+			</li>
 			<li class="list-group-item">List Item 1</li>
 			<li class="list-group-item list-group-item-flex">
 				<div class="flex-col flex-col-expand">
@@ -355,27 +412,35 @@ section: Components
 				</div>
 
 				<div class="flex-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<div class="dropdown-header">Dropdown Header</div>
-							<a class="dropdown-item" href="#1">Action 1</a>
-							<a class="dropdown-item" href="#1">Action 2</a>
-							<a class="dropdown-item" href="#1">Action 3</a>
-							<a class="dropdown-item" href="#1">Action 4</a>
-							<a class="dropdown-item" href="#1">Action 5</a>
-							<a class="dropdown-item" href="#1">Action 6</a>
-							<a class="dropdown-item" href="#1">Action 7</a>
-							<a class="dropdown-item" href="#1">Action 8</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle">
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
 			</li>
-			<li class="list-group-header">List Group Header 2</li>
+			<li class="list-group-header">
+				<h3 class="list-group-header-title">List Group Header 2</h3>
+			</li>
 			<li class="list-group-item list-group-item-flex">
 				<div class="flex-col flex-col-expand">
 					<div class="h5">Karl Malone the best power forward in Jazz history.</div>
@@ -387,39 +452,32 @@ section: Components
 				</div>
 
 				<div class="flex-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="{{rootPath}}/images/icons/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
-						<div class="dropdown-menu dropdown-menu-left-side">
-							<div class="dropdown-header">Dropdown Header</div>
-							<a class="dropdown-item" href="#1">Action 1</a>
-							<a class="dropdown-item" href="#1">Action 2</a>
-							<a class="dropdown-item" href="#1">Action 3</a>
-							<a class="dropdown-item" href="#1">Action 4</a>
-							<a class="dropdown-item" href="#1">Action 5</a>
-							<a class="dropdown-item" href="#1">Action 6</a>
-							<a class="dropdown-item" href="#1">Action 7</a>
-							<a class="dropdown-item" href="#1">Action 8</a>
+						<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle">
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#trash" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#download" />
+								</svg>
+							</a>
+							<a class="dropdown-item" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+									<use xlink:href="{{rootPath}}/images/icons/icons.svg#info-circle-open" />
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
 			</li>
-		</ul>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3>List Group</h3>
-
-		<ul class="list-group">
-			<li class="list-group-item">List Item 1</li>
-			<li class="list-group-item">List Item 2</li>
-			<li class="list-group-item">List Item 3</li>
-			<li class="list-group-item">List Item 4</li>
 		</ul>
 	</div>
 </div>
