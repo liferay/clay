@@ -180,20 +180,6 @@ a.list-group-subtitle,
 	z-index: 1;
 }
 
-.list-group-item {
-	.dropdown.show .dropdown-toggle {
-		color: $list-group-dropdown-toggle-active-color;
-	}
-
-	.dropdown-toggle {
-		color: $list-group-dropdown-toggle-color;
-
-		@include hover-focus {
-			color: $list-group-dropdown-toggle-hover-color;
-		}
-	}
-}
-
 // List Group Link
 
 .list-group-link {
