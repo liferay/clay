@@ -12,28 +12,29 @@ $toggle-switch-bar-width: 60px !default; // width of switch bar
 $toggle-switch-bar-width-mobile: 44px !default; // width of switch bar
 // must all be same units--end
 
-$toggle-switch-bar-bg: #FFF !default;
-$toggle-switch-bar-border-color: #D1D6D9 !default;
+$toggle-switch-bar-bg: lighten(map-get($theme-colors, secondary), 24%) !default;
+$toggle-switch-bar-border-color: $toggle-switch-bar-bg !default;
 $toggle-switch-bar-border-radius: 20px !default;
-$toggle-switch-bar-border-width: 2px !default;
+$toggle-switch-bar-border-width: 1px !default;
 $toggle-switch-bar-font-size: 0.75rem !default; // 12px
 $toggle-switch-bar-font-size-mobile: 0.625rem !default; // 10px
-$toggle-switch-bar-icon-color: #869CAD !default;
+$toggle-switch-bar-icon-color: #FFF !default;
+$toggle-switch-bar-focus-box-shadow: $custom-control-indicator-focus-box-shadow !default;
 
-$toggle-switch-button-bg: #869CAD !default;
-$toggle-switch-button-border-color: #869CAD !default;
+$toggle-switch-button-bg: #FFF !default;
+$toggle-switch-button-border-color: $toggle-switch-button-bg !default;
 $toggle-switch-button-border-radius: 50% !default;
 $toggle-switch-button-border-width: 1px !default;
 $toggle-switch-button-font-size: $toggle-switch-bar-font-size !default; // 12px
 $toggle-switch-button-font-size-mobile: $toggle-switch-bar-font-size-mobile !default; // 10px
-$toggle-switch-button-icon-color: #FFF !default;
+$toggle-switch-button-icon-color: $body-color !default;
 
 // Toggle Switch On
-$toggle-switch-bar-on-bg: #65B6F0 !default;
-$toggle-switch-bar-on-border-color: #60A7D8 !default;
+$toggle-switch-bar-on-bg: map-get($theme-colors, primary) !default;
+$toggle-switch-bar-on-border-color: $toggle-switch-bar-on-bg !default;
 $toggle-switch-bar-on-icon-color: #FFF !default;
 
 $toggle-switch-button-on-bg: #FFF !default;
 $toggle-switch-button-on-border-color: #FFF !default;
 $toggle-switch-button-on-border-radius: $toggle-switch-button-border-radius !default;
-$toggle-switch-button-on-icon-color: $toggle-switch-bar-on-bg !default;
+$toggle-switch-button-on-icon-color: $body-color !default;

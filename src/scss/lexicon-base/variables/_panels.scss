@@ -13,6 +13,7 @@ $panel-margin-bottom: $spacer !default;
 // Panel Header
 
 $panel-header-border-bottom-width: 1px !default;
+$panel-header-offset-border-radius: if($panel-border-top-width > 0, calc(#{$panel-border-radius} - #{$panel-border-top-width}), $panel-border-radius) !default;
 $panel-header-padding-x: 1.25rem !default;
 $panel-header-padding-y: 0.75rem !default;
 
@@ -26,6 +27,7 @@ $panel-body-padding-y: 0.75rem !default;
 // Panel Footer
 
 $panel-footer-border-top-width: 1px !default;
+$panel-footer-offset-border-radius: if($panel-border-bottom-width > 0, calc(#{$panel-border-radius} - #{$panel-border-bottom-width}), $panel-border-radius) !default;
 $panel-footer-padding-x: $panel-header-padding-x !default;
 $panel-footer-padding-y: $panel-header-padding-y !default;
 
@@ -33,6 +35,11 @@ $panel-footer-padding-y: $panel-header-padding-y !default;
 
 $panel-title-font-size: null !default;
 $panel-title-font-weight: 500 !default;
+$panel-title-text-transform: null !default
+
+// Panel Collapse Icon
+
+$panel-collapse-icon-font-size: 0.875rem !default; // 14px
 
 // Panel Group
 
@@ -44,7 +51,7 @@ $panel-danger-border-color: theme-color-level(danger, -9) !default;
 $panel-danger-color: null !default;
 $panel-danger-header-bg: theme-color-level(danger, -10) !default;
 $panel-danger-header-border-color: $panel-danger-border-color !default;
-$panel-danger-header-color:  theme-color-level(danger, 6) !default;
+$panel-danger-header-color: theme-color-level(danger, 6) !default;
 $panel-danger-footer-bg: $panel-danger-header-bg !default;
 $panel-danger-footer-border-color: $panel-danger-border-color !default;
 $panel-danger-footer-color: $panel-danger-header-color !default;
@@ -53,7 +60,7 @@ $panel-info-border-color: theme-color-level(info, -9) !default;
 $panel-info-color: null !default;
 $panel-info-header-bg: theme-color-level(info, -10) !default;
 $panel-info-header-border-color: $panel-info-border-color !default;
-$panel-info-header-color: theme-color-level(info, -9) !default;
+$panel-info-header-color: theme-color-level(info, 6) !default;
 $panel-info-footer-bg: $panel-info-header-bg !default;
 $panel-info-footer-border-color: $panel-info-header-border-color !default;
 $panel-info-footer-color: $panel-info-header-color !default;

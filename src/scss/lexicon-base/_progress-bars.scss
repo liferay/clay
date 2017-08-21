@@ -4,18 +4,18 @@
 }
 
 .progress-bar {
-	@include box-shadow($progress-bar-box-shadow);
+	@if ($progress-bar-box-shadow) {
+		@include box-shadow($progress-bar-box-shadow);
+	}
 }
 
-.progress-lg {
+.progress-lg,
+.progress-lg > .progress {
 	@include border-radius($progress-border-radius-lg);
 
 	font-size: $progress-font-size-lg;
-
-	.progress-bar {
-		height: $progress-height-lg;
-		line-height: $progress-height-lg;
-	}
+	height: $progress-height-lg;
+	line-height: $progress-height-lg;
 }
 
 // Progress Group

@@ -78,6 +78,11 @@
 		border-color: $custom-control-indicator-active-border-color;
 	}
 
+	&:active:checked ~ .custom-control-indicator {
+		background-color: $custom-control-indicator-active-checked-bg;
+		border-color: $custom-control-indicator-active-checked-border-color;
+	}
+
 	&:checked ~ .custom-control-indicator {
 		border-color: $custom-control-indicator-checked-border-color;
 	}
@@ -85,6 +90,7 @@
 	&:disabled ~ .custom-control-indicator {
 		background-color: $custom-control-indicator-disabled-bg;
 		border-color: $custom-control-indicator-disabled-border-color;
+		box-shadow: none;
 	}
 
 	&:disabled:checked ~ .custom-control-indicator {

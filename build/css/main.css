@@ -1,5 +1,5 @@
 /**
-* Clay 2.0.0-alpha.2
+* Clay 2.0.0-alpha.6
 *
 * Copyright 2017, Liferay, Inc.
 * All rights reserved.
@@ -350,10 +350,21 @@ body.fixed {
   }
 }
 
+.clay-site-dropdown-display .clay-site-dropdown-menu-container {
+  float: left;
+  margin-right: 15px;
+  min-height: 285px;
+}
+
 .clay-site-dropdown-display .dropdown-menu {
   display: block;
-  position: relative;
+  position: static;
   top: auto;
+  z-index: 0;
+}
+
+.clay-site-dropdown-display .dropdown-menu-horizontal {
+  display: flex;
 }
 
 .clay-site-dropdown-display .dropdown-wide-container {
@@ -463,6 +474,38 @@ body.fixed {
 .container-fluid-max-xl .clay-site-grid-width-xl,
 .container-fluid-max-xxl .clay-site-grid-width-xxl {
   display: inline;
+}
+
+.container-fluid-max-sm .clay-site-grid-width-sm:after {
+  content: " 540px";
+}
+
+[data-container-classes="container-fluid container-fluid-max-sm main-nav-container"]:after {
+  content: " (540px)";
+}
+
+.container-fluid-max-md .clay-site-grid-width-md:after {
+  content: " 800px";
+}
+
+[data-container-classes="container-fluid container-fluid-max-md main-nav-container"]:after {
+  content: " (800px)";
+}
+
+.container-fluid-max-lg .clay-site-grid-width-lg:after {
+  content: " 960px";
+}
+
+[data-container-classes="container-fluid container-fluid-max-lg main-nav-container"]:after {
+  content: " (960px)";
+}
+
+.container-fluid-max-xl .clay-site-grid-width-xl:after {
+  content: " 1280px";
+}
+
+[data-container-classes="container-fluid container-fluid-max-xl main-nav-container"]:after {
+  content: " (1280px)";
 }
 
 @media (min-width: 321px) {

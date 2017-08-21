@@ -3,9 +3,20 @@ title: Form Elements (Custom)
 section: Components
 ---
 
+<style>
+	.clay-site-row-spacer {
+		background-color: #FFF;
+		padding-top: 1rem;
+	}
+</style>
+
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Custom Select</h3>
+
+		<div class="alert alert-warning">
+			It's recommended to use <code>select.form-control</code> instead. This is only here for documentation purposes.
+		</div>
 
 		<select class="custom-select">
 			<option selected="">Open this select menu</option>
@@ -13,6 +24,22 @@ section: Components
 			<option value="2">Two</option>
 			<option value="3">Three</option>
 		</select>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Custom File</h3>
+
+		<div class="alert alert-warning">
+			It's recommended to use <code>.form-file</code> instead. This is here only for documentation purposes.
+			To get <code>custom-file-control</code> styles to display, you'll need to add <code>lang="en"</code> to the html element or set the Content-Language HTTP header.
+		</div>
+
+		<label class="custom-file">
+			<input type="file" id="file2" class="custom-file-input">
+			<span class="custom-file-control"></span>
+		</label>
 	</div>
 </div>
 
@@ -29,9 +56,9 @@ section: Components
 		</div>
 
 		<div class="form-group">
-			<label class="form-control-label" for="customFile1">Attach File</label>
+			<label for="customFile1">Attach File</label>
 			<div class="input-group">
-				<input class="form-control" id="customFileText1" placeholder="Choose file..." readonly type="text">
+				<input class="form-control" id="customFileText1" placeholder="Choose file..." readonly tabindex="-1" type="text">
 				<div class="input-group-btn">
 					<div class="form-file">
 						<input class="form-file-input" data-clay-site-content="#customFileText1" data-clay-site-toggle="file" id="customFile1" type="file">
@@ -42,10 +69,10 @@ section: Components
 		</div>
 
 		<div class="form-group">
-			<label class="form-control-label" for="customFile2">Attach File</label>
+			<label for="customFile2">Attach File</label>
 			<div class="input-group input-group-inset">
 				<div class="input-group-input">
-					<input class="form-control" id="customFileText2" placeholder="Choose file..." readonly type="text" style="padding-right: 92px;">
+					<input class="form-control" id="customFileText2" placeholder="Choose file..." readonly tabindex="-1" type="text" style="padding-right: 92px;">
 				</div>
 				<span class="input-group-inset-item">
 					<div class="form-file">
@@ -57,7 +84,7 @@ section: Components
 		</div>
 
 		<div class="form-group">
-			<label class="form-control-label" for="customFile3">Attach File</label>
+			<label for="customFile3">Attach File</label>
 			<div class="form-file">
 				<input class="form-file-input" data-clay-site-content="#customFileText3" data-clay-site-toggle="file" id="customFile3" type="file">
 				<div class="input-group">
@@ -69,29 +96,14 @@ section: Components
 
 		<div class="form-group">
 			<div class="form-inline">
-				<label class="form-control-label" for="customFile4">Attach File</label>
+				<label for="customFile4">Attach File</label>
 				<div class="form-file">
 					<input class="form-file-input" data-clay-site-content="#customFileText4" data-clay-site-toggle="file" id="customFile4" type="file">
 					<button class="btn btn-primary" tabindex="-1">Browse</button>
 				</div>
-				<input class="form-control" id="customFileText4" placeholder="Choose File..." readonly type="text">
+				<input class="form-control" id="customFileText4" placeholder="Choose File..." readonly tabindex="-1" type="text">
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3>Custom File</h3>
-
-		<div class="alert alert-warning">
-			To get <code>custom-file-control</code> styles to display, you'll need to add <code>lang="en"</code> to the html element or set the Content-Language HTTP header.
-		</div>
-
-		<label class="custom-file">
-			<input type="file" id="file2" class="custom-file-input">
-			<span class="custom-file-control"></span>
-		</label>
 	</div>
 </div>
 
@@ -156,36 +168,6 @@ section: Components
 			<span class="custom-control-indicator"></span>
 			<span class="custom-control-description">Or toggle this other custom radio</span>
 		</label>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<h3>Validation States</h3>
-
-		<div class="form-group has-success">
-			<label class="custom-control custom-checkbox">
-				<input type="checkbox" class="custom-control-input">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Check this custom checkbox</span>
-			</label>
-		</div>
-
-		<div class="form-group has-warning">
-			<label class="custom-control custom-checkbox">
-				<input type="checkbox" class="custom-control-input">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Check this custom checkbox</span>
-			</label>
-		</div>
-
-		<div class="form-group has-danger">
-			<label class="custom-control custom-checkbox">
-				<input type="checkbox" class="custom-control-input">
-				<span class="custom-control-indicator"></span>
-				<span class="custom-control-description">Check this custom checkbox</span>
-			</label>
-		</div>
 	</div>
 </div>
 

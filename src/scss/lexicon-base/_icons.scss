@@ -3,35 +3,20 @@
 	fill: currentColor;
 	height: $lexicon-icon-size;
 	margin-top: -3px;
-	transform: translateZ(0);
 	vertical-align: middle;
 	width: $lexicon-icon-size;
 }
 
 .lexicon-icon-sm {
-	height: $lexicon-icon-sm-size;
-	width: $lexicon-icon-sm-size;
-}
-
-.lexicon-icon-md {
-	height: $lexicon-icon-md-size;
-	width: $lexicon-icon-md-size;
+	font-size: $lexicon-icon-sm-font-size;
 }
 
 .lexicon-icon-lg {
-	height: $lexicon-icon-lg-size;
-	width: $lexicon-icon-lg-size;
+	font-size: $lexicon-icon-lg-font-size;
 }
 
-%scale-lexicon-icon {
-	height: 1em;
-	margin-top: -0.13em;
-	width: 1em;
-}
-
-.scale-lexicon-icon.lexicon-icon,
-.scale-lexicon-icon .lexicon-icon {
-	@extend %scale-lexicon-icon;
+.lexicon-icon-xl {
+	font-size: $lexicon-icon-xl-font-size;
 }
 
 // Collapse Icon
@@ -43,8 +28,6 @@ a.collapse-icon {
 
 .collapse-icon-closed,
 .collapse-icon-open {
-	[class^="icon-"],
-	[class*=" icon-"],
 	.lexicon-icon {
 		display: block;
 	}
@@ -58,11 +41,6 @@ a.collapse-icon {
 		position: absolute;
 		right: $collapse-icon-position-right;
 		top: $collapse-icon-position-top;
-
-		[class^="icon-"],
-		[class*=" icon-"] {
-			margin-top: calc(((1em * #{$line-height-base}) - 1em) / 2);
-		}
 
 		.lexicon-icon {
 			margin-top: calc(((1em * #{$line-height-base}) - #{$lexicon-icon-size}) / 2);
@@ -157,18 +135,6 @@ a .icon-monospaced,
 
 	&.icon-5x {
 		@include monospace(100px);
-	}
-}
-
-// Glyphicon Icon Monospaced
-
-.icon-monospaced {
-	.glyphicon {
-		display: inline-block;
-
-		@include monospace($icon-monospaced-size);
-
-		text-align: center;
 	}
 }
 

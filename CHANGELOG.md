@@ -1,3 +1,251 @@
+### v2.0.0-alpha.6 - August 17, 2017
+* New: Popover added option to configure `$popover-inline-scroller-max-height` and update Atlas Popover styles to V2
+* New: Popover added option to configure `$popover-header-font-weight`
+* New: Form Validation added option to configure `$form-feedback-font-weight`, `$form-text-color`, `$form-text-font-weight`, update `.form-text` styles
+* New: Custom Checkbox and Radio added option to configure `$custom-control-indicator-active-checked-bg`, `$custom-control-indicator-active-checked-border-color`
+* New: Modal added option to configure `$modal-title-font-size-mobile`
+* New: Button added `.btn-unstyled` for "semantic" markup
+* New: Modal added option to configure `$modal-header-close-font-size`
+* New: Panel add option to configure `$panel-collapse-icon-font-size`
+* New: Panel added `$panel-title-text-transform`, add background-color and border-radius styles to `.panel-group`
+* Breaking: Form Validation rename `.form-control-feedback` to `.form-feedback`, rename `$form-control-feedback-font-size` to `$form-feedback-font-size`, and reorganize selectors
+* Breaking: Update Bootstrap 4 to 7b873fa0
+* Breaking: Remove all references to `.form-control-label` was removed by BS4 use `label` instead
+* Breaking: Modal removed `h1`-`h6` font overrides, use classes `.h1`-`.h6` if heading font sizes are really needed
+* Breaking: Modal removed `$modal-header-close-opacity-modifier` and renamed `$modal-header-close-color`, `$modal-header-close-font-size`, `$modal-header-close-icon-opacity`, `$modal-header-close-lexicon-icon-opacity` to `$modal-btn-monospaced-color`, `$modal-btn-monospaced-font-size`, `$modal-btn-monospaced-opacity` respectively
+* Breaking: Modal removed `.modal-primary-action-button`
+* Breaking: Modal removed `.modal-inverse` and convert modal variant colors to Sass map `$modal-palette`
+* Update: Fix misaligned `.form-check-input` from 1bb5440
+* Update: Atlas Tooltip to Clay V2 styles
+* Update: Atlas Pagination active colors
+* Update: Form properly align `.form-check-input` after BS4 beta update
+* Update: Form Validation `.invalid-feedback` and `.valid-feedback` fonts should match `.form-feedback`
+* Update: Form `.form-group` and `.form-inline-group` shoud be `position: relative` for better positioning of content inside
+* Update: Alert, Badge, Button, Label, Progress, Sticker to use BS4 map-merge pattern for color palettes
+* Update: Alert use BS4 map-merge pattern for `$alert-palette`
+* Update: Form Validation set Atlas colors, re-add `.has-success`, `.has-warning`, `.has-error`, and added `.form-feedback`, `.form-feedback-item`, `.form-feedback-indicator`
+* Update: Form Inline Autofit should always be aligned flex-start
+* Update: Form Check Card added hover states and more style updates to card-type-asset / card-type-directory
+* Update: Button Monospaced Lexicon Icon's should be centered
+* Update: Sticker Lexicon Icon's should be centered
+* Update: Lexicon Icon offset vertical spacing for inline block
+* Update: Sticker move sticker sizes to mixins for easier overrides
+* Update: Badge move badge sizes to mixins for easier overrides
+* Update: Label move label sizes to mixins for easier overrides
+* Update: Badges padding-y for all badge sizes
+* Update: Sticker adjust font sizes for `.sticker-lg` and above
+* Update: Dropdown simplify `.dropdown-action` styles
+* Update: Button mixin `component-btn-link` with `cursor: pointer`
+* Update: Breadcrumb added `.breadcrumb-link` for easier styling, use `breadcrumb-link btn btn-unstyled` to style buttons like links in breadcrumb
+* Update: Btn Unstyled should inherit line-height
+* Update: Modal re-add `$modal-header-height`, `$modal-header-height-mobile`, `$modal-footer-height`, `$modal-footer-height-mobile`
+* Update: Atlas Modal clean up some un-needed variables and update sizing and colors
+* Update: Button Monospaced should center content
+* Update: Atlas Modal to Clay V2 colors
+* Update: Modal use BS4 map-merge pattern for `$modal-palette` and reorganize variables
+* Update: Progress Bar Lg should be proper height after BS4 beta update
+* Update: Atlas Panel styles to Clay V2
+* Update: Panel Group middle panels shouldn't have border-radius and headers and footers should have border-radius when border is 0
+* Site: Popover added `.inline-scroller` to demos for overflowing content
+* Site: Grid add link to BS4 grid documentation
+* Site: Input Group change input-group-inset demo to use `.btn-unstyled` instead of `.btn-link`
+* Site: Form Custom removed validation examples, they are under Form Validation
+* Site: Forms update `.form-check-inline` markup
+* Site: Form Validation add more examples HTML5 and non HTML5
+* Site: Form Validation change `.has-danger` to `.has-error` and added `.form-feedback-*` to examples
+* Site: Remove all references to `.form-control-label`
+* Site: Form Validation add BS4 pattern
+* Site: Card update card-type-asset and card-type-directory examples
+* Site: Badge add examples with numbers
+* Site: Dropdown Action to use `.btn-unstyled`
+* Site: Breadcrumb add `.breadcrumb-link` and `.btn-unstyled` to examples
+* Site: Alert added example of `.btn-unstyled`
+* Site: Button added demo of `.btn-unstyled`
+* Site: Modal update markup to new `.btn-monospaced`, remove btn classes from `.close`
+* Site: Modal change markup to fit Clay V2
+
+### v2.0.0-alpha.5 - August 11, 2017
+* New: Alert added `$alert-close-font-size`, `$alert-close-line-height` and `.alert .close` should be properly aligned after icon size update
+* New: Create mixin clay-position to handle positioning items
+* New: Added background mixin bg-checkered($fg-color, $bg-color)
+* New: Card added `$card-type-directory-sticker-size`
+* New: Card added `$card-type-asset-label-size`
+* New: Card added `$card-title-color`, `$card-title-font-size`, `$card-title-font-weight`, `$card-title-margin-bottom`, `$card-title-margin-top`
+* New: Card added `$card-subtitle-color`, `$card-subtitle-font-size`, `$card-subtitle-font-weight`, `$card-subtitle-margin-bottom`, `$card-subtitle-margin-top`
+* New: Card added `.card-type-asset` and `.card-type-directory` variants
+* New: Dropdown added `$dropdown-action-toggle-color`, `$dropdown-action-toggle-hover-color`, and added component `.dropdown-action`
+* New: Card added `$form-check-card-checked-box-shadow`
+* New: Card added `$card-link-text-decoration` and `$card-link-hover-text-decoration`
+* New: Card added `$card-link-hover-color`
+* New: Input Group added skin `.input-group-secondary` and added `$input-group-secondary-addon-bg`, `$input-group-secondary-addon-border-* color`, `$input-group-secondary-addon-border-width`
+* Breaking: BS4 renamed `$dropdown-margin-top` to `$dropdown-spacer`
+* Breaking: Update Bootstrap 4 to beta
+* Breaking: Remove selectors that reference glyphicon and font awesome
+* Breaking: Icons remove %scale-lexicon-icon
+* Breaking: Icons renamed `$lexicon-icon-lg-size`, `$lexicon-icon-md-size`, `$lexicon-icon-sm-size` to `$lexicon-icon-xl-font-size`, `$lexicon-icon-lg-font-size`, `$lexicon-icon-sm-font-size` respectively and renamed `.lexicon-icon-md`, `.lexicon-icon-lg` to `.lexicon-icon-lg`, `.lexicon-icon-xl` respectively
+* Breaking: Remove deprecated function calcLexiconIconPadding
+* Breaking: Removed component Crop Img use Aspect Ratio instead
+* Breaking: Rename _utilities.scss to _position.scss
+* Breaking: Aspect Ratio Item positioning should only use 1 class name and use clay-position mixin
+* Breaking: Move _global-functions.scss to lexicon-base/functions
+* Breaking: Aspect Ratio moved `.aspect-ratio-* img` styles to `.aspect-ratio-item-*`
+* Breaking: Input Group rename `$input-group-light-addon-bg`, `$input-group-light-addon-border-color`, `$input-group-light-addon-border-width`, `$input-group-light-addon-color` to `$input-group-transparent-addon-bg`, `$input-group-transparent-addon-border-color`, `$input-* group-transparent-addon-border-width`, `$input-group-transparent-addon-color` and rename `.input-group-light` to `.input-group-transparent`
+* Breaking: Type rename `.truncate-text` to `.text-truncate`, was added by BS4
+* Breaking: Management Bar remove files, use Navbar instead
+* Breaking: Breadcrumb renamed `.breadcrumb-vertical` to `.breadcrumb-stacked`, renamed `$breadcrumb-vertical-divider` to `$breadcrumb-stacked-divider`, and added `$breadcrumb-stacked-divider-color`, `$breadcrumb-stacked-divider-svg-icon`, `$breadcrumb-stacked-divider-svg-icon-height`, `$breadcrumb-stacked-divider-svg-icon-width`, `$breadcrumb-stacked-divider-spacer-x`
+* Breaking: Breadcrumb moved svg icon support to `.breadcrumb` and removed `.breadcrumb-horizontal`
+* Breaking: Removed `$legend-border-color` no longer used in BS4
+* Update: Remove work arounds fixed by BS4 beta
+* Update: Sticker don't use inline-flex and don't need `.lexicon-icon` styles they scale with font size now
+* Update: Clay SVG Icons should scale with font-size
+* Update: Utilities added `.bg-checkered`
+* Update: Aspect Ratio revert placeholders Sass extend too fragile
+* Update: Card reverted `$card-type-directory-sticker-size` and `$card-type-asset-label-size` extending is too fragile
+* Update: atlas-variables.scss and lexicon-base-variables.scss should also import Bootstrap and Lexicon Base mixins
+* Update: atlas-variables.scss and lexicon-base-variables.scss should import Lexicon Base Variables
+* Update: Aspect Ratio %aspect-ratio-center-middle should actually center content
+* Update: Atlas Sticker Lg font size
+* Update: Stickers move size styles to placeholder for extending
+* Update: Badges and Labels move size styles to placeholder so they are easier to extend
+* Update: Atlas Custom Control Indicator background-color should be white
+* Update: Card adjust `.card-title` and `.card-subtitle` spacing and sizing
+* Update: Card to Clay V2 styles and reorganize Base card variables
+* Update: Dropdown Action button.dropdown-toggle should use component-btn-link mixin
+* Update: Card added variants `.card-type-asset`, `.card-type-directory`, and moved margin bottom to `.form-check-card` from `.card`
+* Update: Card remove -ms- browser prefix on transform, will be covered when autoprefixer is applied
+* Update: Form Check Card should also support custom checkbox and radios
+* Update: Base set Card Link colors
+* Update: (Fixes #355) Progress Bar styles to Clay V2 and BS4 box-shadow mixin doesn't support null values
+* Update: Badges and Labels demos with button.close
+* Update: Badges and Labels use `button.close` for dismissible ones
+* Update: Alert Close positions
+* Update: Added mixin `component-btn-link` for resetting `.btn-link` styles in components
+* Update: Button Link style as close as possible to normal link
+* Update: Breadcrumb add support `.btn-link`
+* Update: Button Link re-add focus and border-radius styles removed by BS4
+* Update: Type removed `.text-*` and `bg-*` variant styles, covered by BS4
+* Update: Breadcrumb don't need to define text-transform and font-weight for Clay V2 styles
+* Update: Breadcrumb styles to Clay V2
+* Update: Atlas Form readonly input colors to Clay V2
+* Misc: Build and Release tasks should look in lexicon-base/functions when building SVG icons
+* Site: Remove references to `.scale-lexicon-icon`
+* Site: Crop Img deleted component
+* Site: Card update aspect-ratios to new classes and add card types
+* Site: Aspect Ratio demos to use new positional classes
+* Site: Aspect Ratio update examples and docs with new classes
+* Site: Separate Crop Img and Aspect Ratio from Images and Thumbnails
+* Site: Card update with new card types
+* Site: Dropdown add demo of `.dropdown-action` and update aria attributes
+* Site: Utilities add documentation on how to display inline/float elements inside `.flex-col`
+* Site: Breadcrumb add examples with `.btn-link`
+* Site: Input Group add `.input-group-secondary` example and group input group size content together
+* Site: Input Group rename `.input-group-light` to `.input-group-transparent`
+* Site: Replace all instances of `truncate-text` with `text-truncate`
+* Site: Breadcrumb remove `.breadcrumb-horizontal` and rename `.breadcrumb-vertical` to `.breadcrumb-stacked`
+
+### v2.0.0-alpha.4 - August 4, 2017
+* Breaking: Forms rename `$input-color-placeholder-focus`, `$input-border-color-disabled`, `$input-bg-disabled`, `$input-color-disabled`, `$input-color-placeholder-disabled`, `$input-opacity-disabled`, `$input-label-color-focus`, `$input-color-focus`, `$input-box-shadow-focus`, `$input-danger-bg-focus`, `$input-danger-border-color-focus`, `$input-danger-box-shadow-focus`, `$input-danger-color-focus`, `$input-success-bg-focus`, `$input-success-border-color-focus`, `$input-success-box-shadow-focus`, `$input-success-color-focus`, `$input-warning-bg-focus`, `$input-warning-border-color-focus`, `$input-warning-box-shadow-focus`, `$input-warning-color-focus` to `$input-placeholder-focus-color`, `$input-disabled-border-color`, `$input-disabled-bg`, `$input-disabled-color`, `$input-placeholder-disabled-color`, `$input-disabled-opacity`, `$input-label-focus-color`, `$input-focus-color`, `$input-focus-box-shadow`, `$input-danger-focus-bg`, `$input-danger-focus-border-color`, `$input-danger-focus-box-shadow`, `$input-danger-focus-color`, `$input-success-focus-bg`, `$input-success-focus-border-color`, `$input-success-focus-box-shadow`, `$input-success-focus-color`, `$input-warning-focus-bg`, `$input-warning-focus-border-color`, `$input-warning-focus-box-shadow`, `$input-warning-focus-color`
+* Breaking: Button Group remove old split button dropdown styles and `.btn-monospaced` inside `.btn-group-sm` and `.btn-group-lg` should have no padding
+* Breaking: Button Action rename `$btn-fixed-spacer-x`, `$btn-fixed-spacer-y` to `$btn-action-fixed-spacer-x`, `$btn-action-fixed-spacer-y`
+* Breaking: Button Action restructure css and renamed  `.btn-bottom-left`, `.btn-bottom-right`, `.btn-top-left`, `.btn-top-right` to `.btn-action-bottom-left`, `.btn-action-bottom-right`, `.btn-action-top-left`, `.btn-action-top-right` respectively
+* Breaking: Button Action removed `$btn-action-size`, `$btn-action-size-mobile` use `.btn-monospaced` instead
+* Breaking: Button rename `$input-btn-font-size-*` to `$btn-font-size-*`
+* Breaking: Alert rename `$alert-lead-margin-right` to `$alert-lead-spacer-x` and add spacing between lexicon-icon's and leads
+* Breaking: Move `.rounded` border radius utilities to _utilities.scss
+* Breaking: Sticker renamed `$sticker-gutter-width` to `$sticker-inside-offset`, added `$sticker-outside-offset`, `$sticker-outside-offset-sm`, `$sticker-outside-offset-lg`, and sticker sizes should be positioned better with `.sticker-outside`
+* Breaking: Atlas globals removed `$box-shadow-default-*`
+* Breaking: Remove global `$inverse-*` variables
+* Breaking: Sidebar rename `.sidebar-inverse`, `.sidebar-inverse-bg` to `.sidebar-dark`, `.sidebar-dark-bg`
+* Breaking: Sidebar rename `$sidebar-inverse-*-*` to `$sidebar-dark-*-*`
+* Breaking: Dropdown rename `$dropdown-sub-header-*` to `$dropdown-subheader-*` and rename `.dropdown-sub-header` to `.dropdown-subheader` to keep inline with BS4 naming
+* New: Form Select Element added `$input-select-icon-disabled-color`, `$input-select-icon-disabled`
+* New: Form Label added option to configure `$input-label-disabled-color`
+* New: Lexicon Icons autosize, custom-size, order-arrow, and pages-tree
+* New: Dropdown added `$dropdown-link-active-font-weight`
+* New: Button Toolbar added `$btn-toolbar-spacer-x`, `$btn-toolbar-spacer-y`
+* New: Button added `.btn-monospaced` and options to configure `$btn-monospaced-size`, `$btn-monospaced-size-xl`, `$btn-monospaced-size-lg`, `$btn-monospaced-size-sm`, `$btn-monospaced-size-mobile`, `$btn-monospaced-size-xl-mobile`, `$btn-monospaced-size-lg-mobile`, `$btn-monospaced-size-sm-mobile`
+* New: Label added `$label-anchor-text-decoration`, `$label-anchor-hover-text-decoration`
+* New: Alert added `$alert-close-margin-left`
+* New: List Group rename `.list-group-heading` to `.list-group-header` and add `.list-group-subtitle`
+* New: List Group re-add `$list-group-header-bg`, `$list-group-header-color`, `$list-group-header-font-weight` and add `$list-group-header-font-size`, `$list-group-header-padding-x`, `$list-group-header-padding-y`, `$list-group-header-text-transform`, `$list-group-subtitle-color`, `$list-group-subtitle-font-size`, `$list-group-subtitle-font-weight`, `$list-group-subtitle-text-transform`
+* New: Dropdown added `$dropdown-horizontal-min-height`
+* New: Panel added `$panel-header-offset-border-radius`, `$panel-footer-offset-border-radius` to handle bleeding panel-header backgrounds over border
+* Fix: Form Inline Autofit form-control overflowing in FF
+* Update: Atlas Toggle Switch colors to Clay V2
+* Update: Atlas Custom Forms to Clay V2 styles
+* Update: Form styles to Clay V2
+* Update: Forms don't output input font-sizes if global `$font-size-*` is the same as `$input-font-size-*`
+* Update: Atlas Dropdown to Clay V2 styles
+* Update: `.btn-group-lg` and `.btn-group-sm` styles should apply to nested `.btn-groups`
+* Update: Button colors and sizes to Clay V2
+* Update: Sticker sizes and colors to Clay V2
+* Update: Atlas Label styles to match Clay V2
+* Update: Atlas Badge to Clay V2 styles
+* Update: Fixes(#356) More Atlas Alert to Clay V2 color updates
+* Update: Atlas global theme colors to Clay V2 colors
+* Update: Sticker with border radius utilities should apply to `.img-fluid`
+* Update: Sticker font-size shouldn't inherit from Label component
+* Update: Sticker use flexbox to center content, remove overflow: hidden, and add border-radius to `.img-fluid` inside `.sticker`
+* Update: Timelines Atlas variables shouldn't rely on `$inverse-*` variables
+* Update: Sidebar Atlas variables shouldn't rely on `$inverse-*` variables
+* Update: Dropdown `.dropdown-subheader`'s should be vertically centered in `.dropdown-menu-horizontal`
+* Update: List Group removed commented code
+* Update: Atlas md and xl breakpoints for `.container` and `.container-fluid-max-*` to 800px and 1280px respectively
+* Update: Dropdown Horizontal shouldn't have margin top
+* Update: Lexicon Base Panel change info header color
+* Update: Atlas Panels color to make it look like V1
+
+### v2.0.0-alpha.3 - July 31, 2017
+* Breaking: Dropdown removed `$dropdown-padding-bottom`, `$dropdown-padding-left`, `$dropdown-padding-right`, `$dropdown-padding-top`
+* Breaking: Rename `$inline-scroller-height` to `$inline-scroller-max-height`
+* Breaking: Revert `$dropdown-section-color` and `$dropdown-section-font-size` sometimes we don't want `.dropdown-section` styles to bleed into components nested inside
+* Breaking: Breadcrumb move truncating text to `.breadcrumb-text-truncate`
+* Breaking: Input Group Inset added `.input-group-inset-left` to align inset content on the left
+* Breaking: Input Group removed `.input-group-insert` multiple addons and buttons are supported now
+* Breaking: Forms renamed `$input-select-icon-color-focus` to `$input-select-icon-focus-color` and reverted `-select-focus-bg` to `$input-select-focus-bg` to follow BS4 naming pattern
+* Breaking: Input Group removed `$input-group-constrain-line-height`, `$input-group-constrain-line-height-lg`, `$input-group-constrain-line-height-sm`
+* Breaking: Input Groups should size with `$input-height`
+* Breaking: Rename `.input-group-default` to `.input-group-light` and remove `.input-group-addon-content`
+* Breaking: Removed Toolbar component
+* Breaking: Consolidate Nav Tabs with Nav
+* Breaking: Move BS4 grid in nav-tabs styles to Nav component and added `.nav-text-truncate`
+* Breaking: Nav Tabs removed `.nav-tabs-scroll`
+* Breaking: Nav Tabs removed `.nav-tabs-default`
+* New: Dropdown added `$dropdown-alert-font-size`, `$dropdown-alert-line-height`, `$dropdown-alert-margin`, `$dropdown-alert-padding-x`, `$dropdown-alert-padding-y` and more spacing issues with alerts in dropdowns
+* New: Alert added `.alert-fluid` and option to customize `$alert-fluid-border-width`
+* New: Dropdown added `.dropdown-menu-indicator-start`, `.dropdown-menu-indicator-end`, `.dropdown-item-indicator`, and added options to configure `$dropdown-item-indicator-size`, `$dropdown-item-indicator-spacer-x`
+* New: Dropdown added option to configure `$dropdown-inline-scroller-max-height`, `$dropdown-inline-scroller-max-height-mobile` and update dropdown sizes so it fits in mobile
+* New: Dropdown added option to configure `$dropdown-header-padding-x`, `$dropdown-header-padding-y`
+* New: Dropdown added `.dropdown-sub-header`, `.dropdown-caption`, and options to customize `$dropdown-sub-header-color`, `$dropdown-sub-header-font-size`, `$dropdown-sub-header-font-weight`, `$dropdown-sub-header-text-transform`, `$dropdown-caption-color`, `$dropdown-caption-font-size`, `$dropdown-caption-font-weight`
+* New: Dropdown added `$dropdown-section-color`, `$dropdown-section-font-size`
+* New: Breadcrumb added option to configure `$breadcrumb-text-truncate-icon-spacer-x`
+* New: Breadcrumb added option to configure `$breadcrumb-text-truncate-max-width`, `$breadcrumb-text-truncate-max-width-mobile`
+* New: Alert added `$alert-border-style` and split up border properties to allow for more granular control of styles through variables
+* New: Input Group Constrain added option to configure `$input-group-constrain-max-width`, `$input-group-constrain-max-width-mobile`
+* New: Forms added option to configure `$input-height-inner-mobile`, `$input-height-inner-lg-mobile`, `$input-height-inner-sm-mobile` and `.input-group` items should size with `$input-height`'s
+* New: Input Group added option to configure `$input-group-addon-padding-*-*` and fix Input Group Sizing styles caused by BS4's use of extend
+* New: Forms added option to configure `$input-padding-x-lg`, `$input-padding-y-lg`, `$input-padding-x-sm`, `$input-padding-y-sm`
+* New: Lexicon Icons envelope-open and envelope-closed
+* New: Added component `.nav-underline`
+* New: Nav Tabs added option to configure `$nav-tabs-link-show-color`, `$nav-tabs-link-show-border-color`, removed `$nav-tabs-justified-link-border-color`, and renamed `$nav-tabs-active-link-color` to `$nav-tabs-link-active-color`
+* Update: Atlas dropdown widths
+* Update: Dropdown adjust spacing for alerts in dropdowns
+* Update: Custom Control line-height should also apply to Lexicon Base
+* Update: Dropdown `.custom-control`'s in `.dropdown-item` should be properly spaced
+* Update: Dropdown re-add `.dropdown-menu-top`, `.dropdown-menu-top-right`, `.dropdown-menu-top-center`, and `.dropdown-menu-center` positional classes
+* Update: Move `.inline-scroller` to utilties and create _utilities.scss variable file
+* Update: Dropdown removed `$dropdown-item-padding-y` from Lexicon Base was added by BS4, removed `$dropdown-link-padding` doesn't exist in BS4
+* Update: [Fixes #344](https://github.com/liferay/clay/issues/344) Dropdown re-add dropdown menu positions (not compatible with popper.js positioning)
+* Update: Breadcrumb text-transform shouldn't bleed into dropdowns
+* Update: Breadcrumb text-decoration should work with BS4 global variable
+* Update: Breadcrumb add support for `.text-truncate` inside `.breadcrumb-item > a`
+* Update: Breadcrumb add dropdown support inside `.breadcrumb-item`
+* Update: Nav Nested shouldn't wrap if nav is longer than container
+* Update: Input Group Inset values should be more dynamic
+* Update: Input Group convert to scale component mixin and `.input-group-addon-constrain` should use `$input-padding-x`
+* Update: Nav Nested should be `flex-direction: column` by default
+* Update: Nav Underline adjust left and right positions to match other component highlights
+
 ### v2.0.0-alpha.2 - July 24, 2017
 * Messed up alpha.1 release
 

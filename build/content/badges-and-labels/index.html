@@ -26,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.2</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -74,6 +74,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/cards">Cards</a>
@@ -92,7 +94,9 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+<li class=""><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -131,8 +135,6 @@
 <li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
@@ -216,6 +218,19 @@
 	<div class="col-md-12">
 		<h3 id="badges"><a class="heading-anchor" href="#badges"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badges</h3>
 
+		<span class="badge badge-primary">8</span>
+		<span class="badge badge-secondary">87</span>
+		<span class="badge badge-success">999K</span>
+		<span class="badge badge-info">91</span>
+		<span class="badge badge-warning">21</span>
+		<span class="badge badge-danger">130</span>
+		<div class="clay-site-light-container">
+			<span class="badge badge-light">130</span>
+		</div>
+		<span class="badge badge-dark">130</span>
+	</div>
+
+	<div class="col-md-12">
 		<span class="badge badge-primary">Primary</span>
 		<span class="badge badge-secondary">Secondary</span>
 		<span class="badge badge-success">Success</span>
@@ -250,6 +265,19 @@
 	<div class="col-md-12">
 		<h3 id="badge-pill"><a class="heading-anchor" href="#badge-pill"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badge Pill</h3>
 
+		<span class="badge badge-pill badge-primary">8</span>
+		<span class="badge badge-pill badge-secondary">87</span>
+		<span class="badge badge-pill badge-success">999K</span>
+		<span class="badge badge-info badge-pill">91</span>
+		<span class="badge badge-pill badge-warning">21</span>
+		<span class="badge badge-danger badge-pill">130</span>
+		<div class="clay-site-light-container">
+			<span class="badge badge-light badge-pill">130</span>
+		</div>
+		<span class="badge badge-dark badge-pill">130</span>
+	</div>
+
+	<div class="col-md-12">
 		<span class="badge badge-pill badge-primary">Primary</span>
 		<span class="badge badge-pill badge-secondary">Secondary</span>
 		<span class="badge badge-pill badge-success">Success</span>
@@ -285,28 +313,28 @@
 
 		<div>
 			<span class="badge badge-primary badge-sm">
-				Small Badge
-				<a class="badge-link" href="#1">
-					<svg class="lexicon-icon">
+				<a href="#1">Small Badge</a>
+				<button aria-label="Close" class="close" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-				</a>
+				</button>
 			</span>
 			<span class="badge badge-secondary">
-				Normal Badge
-				<a class="badge-link" href="#1">
-					<svg class="lexicon-icon">
+				<a href="#1">Normal Badge</a>
+				<button aria-label="Close" class="close" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-				</a>
+				</button>
 			</span>
 			<span class="badge badge-lg badge-success">
-				Large Badge
-				<a class="badge-link" href="#1">
-					<svg class="lexicon-icon">
+				<a href="#1">Large Badge</a>
+				<button aria-label="Close" class="close" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-				</a>
+				</button>
 			</span>
 		</div>
 	</div>
@@ -384,28 +412,28 @@
 
 		<div>
 			<span class="label label-primary label-sm">
-				Small Label
-				<a href="#1">
-					<svg class="lexicon-icon">
+				<a href="#1">Small Label</a>
+				<button aria-label="Close" class="close" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-				</a>
+				</button>
 			</span>
 			<span class="label label-secondary">
-				Normal Label
-				<a href="#1">
-					<svg class="lexicon-icon">
+				<a href="#1">Normal Label</a>
+				<button aria-label="Close" class="close" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-				</a>
+				</button>
 			</span>
 			<span class="label label-lg label-success">
-				Large Label
-				<a href="#1">
-					<svg class="lexicon-icon">
+				<a href="#1">Large Label</a>
+				<button aria-label="Close" class="close" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="../../images/icons/icons.svg#times">
 					</svg>
-				</a>
+				</button>
 			</span>
 		</div>
 	</div>
@@ -443,28 +471,28 @@
 
 	<div class="col-md-3 col-6">
 		<div class="aspect-ratio">
-			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 			<span class="sticker sticker-danger sticker-top-left">PDF</span>
 		</div>
 	</div>
 
 	<div class="col-md-3 col-6">
 		<div class="aspect-ratio">
-			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 			<span class="sticker sticker-bottom-left sticker-danger">PDF</span>
 		</div>
 	</div>
 
 	<div class="col-md-3 col-6">
 		<div class="aspect-ratio">
-			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 			<span class="sticker sticker-danger sticker-top-right">PDF</span>
 		</div>
 	</div>
 
 	<div class="col-md-3 col-6">
 		<div class="aspect-ratio">
-			<img alt="thumbnail" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<img alt="thumbnail" class="aspect-ratio-item-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 			<span class="sticker sticker-bottom-right sticker-danger">PDF</span>
 		</div>
 	</div>
@@ -483,44 +511,68 @@
 		<span class="sticker sticker-lg sticker-success">133</span>
 		<span class="sticker sticker-xl sticker-info">133</span>
 		<span class="sticker sticker-xxl sticker-warning">133</span>
+		<span class="sticker sticker-xxl sticker-warning">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+				<use xlink:href="../../images/icons/icons.svg#magic">
+			</svg>
+		</span>
+		<span class="sticker sticker-xl sticker-info">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use xlink:href="../../images/icons/icons.svg#picture">
+			</svg>
+		</span>
+		<span class="sticker sticker-lg sticker-success">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-home">
+				<use xlink:href="../../images/icons/icons.svg#home">
+			</svg>
+		</span>
+		<span class="sticker sticker-secondary">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
+				<use xlink:href="../../images/icons/icons.svg#format">
+			</svg>
+		</span>
+		<span class="sticker sticker-primary sticker-sm">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+				<use xlink:href="../../images/icons/icons.svg#folder">
+			</svg>
+		</span>
 	</div>
 </div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<span class="sticker sticker-secondary sticker-sm">
-			<svg class="lexicon-icon lexicon-icon-folder">
-				<use xlink:href="../../images/icons/icons.svg#folder">
-			</svg>
+		<h3 id="sticker-overlay"><a class="heading-anchor" href="#sticker-overlay"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sticker Overlay</h3>
+		<blockquote class="blockquote blockquote-sm blockquote-success">
+			<p>Overlay content over stickers by nesting <code>sticker-overlay</code> inside <code>sticker</code>.</p>
+		</blockquote>
+
+		<span class="sticker sticker-primary sticker-sm">
+			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_dock.jpg">
+			<span class="sticker-overlay">JB</span>
 		</span>
-		<span class="sticker sticker-danger">
-			<svg class="lexicon-icon lexicon-icon-folder">
-				<use xlink:href="../../images/icons/icons.svg#folder">
-			</svg>
+		<span class="sticker sticker-primary">
+			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coyote.jpg">
+			<span class="sticker-overlay">TT</span>
 		</span>
-		<span class="sticker sticker-info sticker-lg">
+		<span class="sticker sticker-primary sticker-lg">
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
+			<span class="sticker-overlay">SP</span>
+		</span>
+		<span class="sticker sticker-primary sticker-xl">
+			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coffee.jpg">
 			<span class="sticker-overlay">
-				<svg class="lexicon-icon lexicon-icon-folder">
+				TT
+			</span>
+		</span>
+		<span class="sticker sticker-primary sticker-xxl">
+			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_typewriter.jpg">
+			<span class="sticker-overlay">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
 					<use xlink:href="../../images/icons/icons.svg#folder">
 				</svg>
 			</span>
 		</span>
-		<span class="sticker sticker-primary">
-			<svg class="lexicon-icon lexicon-icon-format">
-				<use xlink:href="../../images/icons/icons.svg#format">
-			</svg>
-		</span>
-		<span class="sticker sticker-success">
-			<svg class="lexicon-icon lexicon-icon-home">
-				<use xlink:href="../../images/icons/icons.svg#home">
-			</svg>
-		</span>
-		<span class="sticker sticker-warning">
-			<svg class="lexicon-icon lexicon-icon-picture">
-				<use xlink:href="../../images/icons/icons.svg#picture">
-			</svg>
-		</span>
+
 	</div>
 </div>
 
@@ -563,20 +615,74 @@
 </div>
 
 <div class="clay-site-row-spacer row">
+	<div class="col-md-3 col-6">
+		<span class="sticker sticker-dark">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use xlink:href="../../images/icons/icons.svg#picture">
+			</svg>
+			<span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-top-left">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-sun">
+					<use xlink:href="../../images/icons/icons.svg#sun">
+				</svg>
+			</span>
+		</span>
+	</div>
+
+	<div class="col-md-3 col-6">
+		<span class="sticker sticker-info">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use xlink:href="../../images/icons/icons.svg#picture">
+			</svg>
+			<span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-bottom-left">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+					<use xlink:href="../../images/icons/icons.svg#magic">
+				</svg>
+			</span>
+		</span>
+	</div>
+
+	<div class="col-md-3 col-6">
+		<span class="sticker sticker-danger">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use xlink:href="../../images/icons/icons.svg#picture">
+			</svg>
+			<span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-top-right">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-transform">
+					<use xlink:href="../../images/icons/icons.svg#transform">
+				</svg>
+			</span>
+		</span>
+	</div>
+
+	<div class="col-md-3 col-6">
+		<span class="sticker sticker-success">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+				<use xlink:href="../../images/icons/icons.svg#picture">
+			</svg>
+			<span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-bottom-right">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-undo">
+					<use xlink:href="../../images/icons/icons.svg#undo">
+				</svg>
+			</span>
+		</span>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="stickers-as-avatars-user-icon-replacement"><a class="heading-anchor" href="#stickers-as-avatars-user-icon-replacement"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Stickers as Avatars (User Icon Replacement)</h3>
 	</div>
 	<div class="col-md-6">
-		<span class="rounded-circle sticker sticker-secondary sticker-sm">
+		<span class="rounded-circle sticker sticker-primary sticker-sm">
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_dock.jpg">
 		</span>
-		<span class="rounded-circle sticker sticker-secondary">
+		<span class="rounded-circle sticker sticker-primary">
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coyote.jpg">
 		</span>
-		<span class="rounded-circle sticker sticker-secondary sticker-lg">
+		<span class="rounded-circle sticker sticker-primary sticker-lg">
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_hot_air_ballon.jpg">
 		</span>
-		<span class="rounded-circle sticker sticker-secondary sticker-xl">
+		<span class="rounded-circle sticker sticker-primary sticker-xl">
 			<img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_coffee.jpg">
 			<span class="sticker-overlay">
 				TT

@@ -14,7 +14,6 @@
 @import "variables/modals";
 @import "variables/navs";
 @import "variables/navbar";
-// @import "variables/management-bar"; // Management Bar inherits from Navbar
 @import "variables/multi-step-nav";
 @import "variables/pagination";
 // @import "variables/pager"; // dropped Pager inherits from Pagination
@@ -27,5 +26,5 @@
 @import "variables/timelines";
 @import "variables/toggle-card";
 @import "variables/toggle-switch";
-@import "variables/toolbars";
 @import "variables/tooltip";
+@import "variables/utilities";

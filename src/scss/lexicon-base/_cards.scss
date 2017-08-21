@@ -4,6 +4,7 @@
 
 	@include box-shadow($card-box-shadow);
 
+	display: block;
 	margin-bottom: $card-margin-bottom;
 	position: relative;
 
@@ -18,6 +19,36 @@
 			}
 		}
 	}
+
+	.btn-link {
+		color: $card-link-color;
+
+		@include component-btn-link;
+
+		line-height: normal;
+		text-decoration: $card-link-text-decoration;
+
+		@include hover-focus {
+			color: $card-link-hover-color;
+			text-decoration: $card-link-hover-text-decoration;
+		}
+	}
+}
+
+.card-title {
+	color: $card-title-color;
+	font-size: $card-title-font-size;
+	font-weight: $card-title-font-weight;
+	margin-bottom: $card-title-margin-bottom;
+	margin-top: $card-title-margin-top;
+}
+
+.card-subtitle {
+	color: $card-subtitle-color;
+	font-size: $card-subtitle-font-size;
+	font-weight: $card-subtitle-font-weight;
+	margin-bottom: $card-subtitle-margin-bottom;
+	margin-top: $card-subtitle-margin-top;
 }
 
 .card-divider {
@@ -31,6 +62,28 @@
 
 .card-link {
 	color: $card-link-color;
+	text-decoration: $card-link-text-decoration;
+
+	@include hover-focus {
+		color: $card-link-hover-color;
+		text-decoration: $card-link-hover-text-decoration;
+	}
+
+	+ .card-link {
+		margin-left: 0;
+	}
+}
+
+.show > button.card-link {
+	outline: none;
+}
+
+button.card-link {
+	background-color: transparent;
+
+	@include component-btn-link;
+
+	line-height: normal;
 }
 
 .card-row {
@@ -207,8 +260,25 @@
 // Checkbox and Radio Cards
 
 .form-check-card {
-	margin-bottom: 0;
+	margin-bottom: $card-margin-bottom;
 	margin-top: 0;
+
+	.card {
+		font-size: $font-size-base;
+		margin-bottom: 0;
+	}
+
+	.custom-control {
+		display: inline;
+		margin-right: 0;
+		padding-left: 0;
+		position: static;
+	}
+
+	.custom-control-input,
+	.custom-control-indicator {
+		z-index: 1;
+	}
 
 	.form-check-input {
 		margin-left: 0;
@@ -219,9 +289,32 @@
 
 	.form-check-label {
 		color: $body-color;
-		cursor: pointer;
 		display: inline;
 		padding-left: 0;
+		position: static;
+	}
+
+	&.active .card,
+	.custom-control-input:checked ~ .card,
+	.form-check-input:checked ~ .card {
+		box-shadow: $form-check-card-checked-box-shadow;
+	}
+}
+
+.form-check-card {
+	@include hover {
+		.card {
+			box-shadow: $form-check-card-checked-box-shadow;
+		}
+	}
+}
+
+.custom-control-input,
+.form-check-input {
+	@include hover {
+		~ .card {
+			box-shadow: $form-check-card-checked-box-shadow;
+		}
 	}
 }
 
@@ -245,52 +338,130 @@
 	}
 }
 
-.form-check-bottom-left .form-check-input {
-	bottom: $checkbox-position;
-	left: $checkbox-position;
-
-	-ms-transform: none;
-	transform: none;
+.form-check-bottom-left {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		bottom: $checkbox-position;
+		left: $checkbox-position;
+		top: auto;
+		transform: none;
+	}
 }
 
-.form-check-bottom-right .form-check-input {
-	bottom: $checkbox-position;
-	right: $checkbox-position;
-
-	-ms-transform: none;
-	transform: none;
+.form-check-bottom-right {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		bottom: $checkbox-position;
+		left: auto;
+		right: $checkbox-position;
+		top: auto;
+		transform: none;
+	}
 }
 
-.form-check-middle-left .form-check-input {
-	left: $checkbox-position;
-	margin-top: 0;
-	top: 50%;
-
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+.form-check-middle-left {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: $checkbox-position;
+		margin-top: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 
-.form-check-middle-right .form-check-input {
-	margin-top: 0;
-	right: $checkbox-position;
-	top: 50%;
-
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+.form-check-middle-right {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: auto;
+		margin-top: 0;
+		right: $checkbox-position;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 
-.form-check-top-left .form-check-input {
-	left: $checkbox-position;
-	top: $checkbox-position;
-
-	-ms-transform: none;
-	transform: none;
+.form-check-top-left {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: $checkbox-position;
+		top: $checkbox-position;
+		transform: none;
+	}
 }
 
-.form-check-top-right .form-check-input {
-	right: $checkbox-position;
-	top: $checkbox-position;
+.form-check-top-right {
+	.custom-control-input,
+	.custom-control-indicator,
+	.form-check-input {
+		left: auto;
+		right: $checkbox-position;
+		top: $checkbox-position;
+		transform: none;
+	}
+}
 
-	-ms-transform: none;
-	transform: none;
+// Card Variants
+
+.card-type-asset {
+	.aspect-ratio {
+		border-bottom: 1px solid lighten(map-get($theme-colors, secondary), 46%);
+
+		@include aspect-ratio(16, 9);
+	}
+
+	.aspect-ratio-item-fluid {
+		color: lighten(map-get($theme-colors, secondary), 37%);
+		font-size: 64px;
+
+		.sticker {
+			display: block;
+
+			@include border-radius(100px);
+			@include sticker-xxl;
+
+			.lexicon-icon {
+				font-size: 64px;
+			}
+		}
+	}
+
+	.bg-checkered .aspect-ratio-item-fluid {
+		color: $body-color;
+	}
+
+	.card-row {
+		align-items: flex-start;
+	}
+
+	.card-subtitle {
+		margin-bottom: 0;
+	}
+
+	.dropdown-action {
+		margin-right: -8px;
+		margin-top: -3px;
+	}
+
+	.label {
+		@include label-sm;
+	}
+}
+
+.card-type-directory {
+	.card-title {
+		margin-bottom: 0;
+	}
+
+	.dropdown-action {
+		margin-right: -8px;
+	}
+
+	.sticker {
+		font-size: 18px;
+	}
 }

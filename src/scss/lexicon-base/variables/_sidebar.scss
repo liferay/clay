@@ -26,16 +26,16 @@ $sidebar-light-link-hover-color: null !default;
 
 // Sidebar Inverse
 
-$sidebar-inverse-bg: #222 !default;
-$sidebar-inverse-border-color: darken($sidebar-inverse-bg, 10%) !default;
-$sidebar-inverse-color: lighten($gray-400, 15%) !default;
-$sidebar-inverse-panel-bg: darken($sidebar-inverse-bg, 10%) !default;
+$sidebar-dark-bg: #222 !default;
+$sidebar-dark-border-color: darken($sidebar-dark-bg, 10%) !default;
+$sidebar-dark-color: lighten($gray-400, 15%) !default;
+$sidebar-dark-panel-bg: darken($sidebar-dark-bg, 10%) !default;
 
-$sidebar-inverse-actions-link-color: lighten($gray-400, 15%) !default;
-$sidebar-inverse-actions-link-hover-color: #fff !default;
+$sidebar-dark-actions-link-color: lighten($gray-400, 15%) !default;
+$sidebar-dark-actions-link-hover-color: #fff !default;
 
-$sidebar-inverse-header-title-color: lighten($gray-400, 15%) !default;
-$sidebar-inverse-header-title-hover-color: #fff !default;
+$sidebar-dark-header-title-color: lighten($gray-400, 15%) !default;
+$sidebar-dark-header-title-hover-color: #fff !default;
 
 $sidebar-dark-link-color: null !default;
 $sidebar-dark-link-hover-color: null !default;

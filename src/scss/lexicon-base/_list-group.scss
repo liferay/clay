@@ -1,41 +1,9 @@
-// @mixin list-group-item-stacked($screen-size-down: xl) {
-// 	@if (type-of($screen-size-down) != number) {
-// 		@include media-breakpoint-down($screen-size-down) {
-// 			flex-direction: column;
-// 			padding-bottom: $list-group-item-padding-y / 2;
-// 			padding-top: $list-group-item-padding-y / 2;
-
-// 			.flex-col {
-// 				padding-bottom: $list-group-item-padding-y / 2;
-// 				padding-top: $list-group-item-padding-y / 2;
-// 			}
-// 		}
-// 	}
-// 	@else {
-// 		@media (max-width: $screen-size-down) {
-// 			flex-direction: column;
-// 			padding-bottom: $list-group-item-padding-y / 2;
-// 			padding-top: $list-group-item-padding-y / 2;
-
-// 			.flex-col {
-// 				padding-bottom: $list-group-item-padding-y / 2;
-// 				padding-top: $list-group-item-padding-y / 2;
-// 			}
-// 		}
-// 	}
-// }
-
-// .list-group-stacked .list-group-item-flex,
-// .list-group-item-flex-stacked {
-// 	@include list-group-item-stacked(319px);
-// }
+// TODO: List Group Item Flex Stacked Screen Size Down
 
 .list-group {
 	@include box-shadow($list-group-box-shadow);
-	// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22874 goes in
-	color: $list-group-color;
 
-	// Nested list groups shouldn't have box shadows
+	color: $list-group-color;
 
 	.list-group {
 		@if ($list-group-box-shadow != null) {
@@ -68,6 +36,35 @@
 			margin-left: 0;
 		}
 	}
+}
+
+.list-group-header {
+	align-items: center;
+	background-color: $list-group-header-bg;
+	border: $list-group-border-width solid $list-group-border-color;
+	color: $list-group-header-color;
+	display: flex;
+	font-size: $list-group-header-font-size;
+	font-weight: $list-group-header-font-weight;
+	justify-content: space-between;
+	margin-bottom: -$list-group-border-width;
+	padding: $list-group-header-padding-y $list-group-header-padding-x;
+	text-transform: $list-group-header-text-transform;
+
+	&:first-child {
+		@include border-top-radius($list-group-border-radius);
+	}
+
+	&:last-child {
+		@include border-bottom-radius($list-group-border-radius);
+	}
+}
+
+.list-group-subtitle {
+	color: $list-group-subtitle-color;
+	font-size: $list-group-subtitle-font-size;
+	font-weight: $list-group-subtitle-font-weight;
+	text-transform: $list-group-subtitle-text-transform;
 }
 
 .list-group-item {
@@ -142,6 +139,7 @@
 
 .list-group-unstyled {
 	@include box-shadow(none);
+
 	color: inherit;
 
 	.flex-col {
@@ -149,11 +147,14 @@
 		padding-right: 0;
 	}
 
+	.list-group-header,
 	.list-group-item {
 		background-color: transparent;
 		border-color: transparent;
 		padding: 0;
+	}
 
+	.list-group-item {
 		&.active {
 			color: $body-color;
 

@@ -4,47 +4,55 @@
 	position: relative;
 
 	@include aspect-ratio;
-
-	img {
-		bottom: 0;
-		left: 0;
-		position: absolute;
-		width: 100%;
-	}
 }
 
-.aspect-ratio.aspect-ratio-vertical img {
-	height: 100%;
-	width: auto;
+.aspect-ratio-item {
+	position: absolute;
+	word-wrap: break-word;
 }
 
-.aspect-ratio-center img {
-	left: 50%;
-	right: auto;
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
+.aspect-ratio-item-fluid {
+	max-width: 100%;
+	position: absolute;
+	word-wrap: break-word;
 }
 
-.aspect-ratio-middle img {
-	bottom: auto;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+.aspect-ratio-item-vertical-fluid {
+	max-height: 100%;
+	position: absolute;
+	word-wrap: break-word;
 }
 
-.aspect-ratio-right img {
-	left: auto;
-	right: 0;
+.aspect-ratio-item-top-center {
+	@include clay-position(top-center);
 }
 
-.aspect-ratio-top img {
-	bottom: auto;
-	top: 0;
+.aspect-ratio-item-top-right {
+	@include clay-position(top-right);
 }
 
-.aspect-ratio-center.aspect-ratio-middle img {
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+.aspect-ratio-item-right-middle {
+	@include clay-position(right-middle);
+}
+
+.aspect-ratio-item-bottom-right {
+	@include clay-position(bottom-right);
+}
+
+.aspect-ratio-item-bottom-center {
+	@include clay-position(bottom-center);
+}
+
+.aspect-ratio-item-bottom-left {
+	@include clay-position(bottom-left);
+}
+
+.aspect-ratio-item-left-middle {
+	@include clay-position(left-middle);
+}
+
+.aspect-ratio-item-center-middle {
+	@include clay-position(center-middle);
 }
 
 .aspect-ratio-3-to-2 {

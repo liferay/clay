@@ -5,20 +5,17 @@
 	border-width: $label-border-width;
 	color: $label-color;
 	display: inline-block;
-	font-size: $label-font-size;
 	font-weight: $label-font-weight;
+
+	@include label;
+
 	line-height: 1;
 	margin-bottom: 2px;
 	margin-top: 2px;
 	max-width: 100%;
-	padding: $label-padding-y $label-padding-x;
 	text-transform: $label-text-transform;
 	white-space: normal;
 	word-wrap: break-word;
-
-	@include scale-component {
-		font-size: $label-font-size-mobile;
-	}
 
 	a {
 		color: $label-color;
@@ -30,47 +27,30 @@
 			text-decoration: $label-link-hover-text-decoration;
 		}
 	}
+
+	.close {
+		color: inherit;
+		float: none;
+		font-size: inherit;
+		margin-left: 2px;
+		opacity: 1;
+	}
 }
 
 a.label {
-	text-decoration: none;
+	text-decoration: $label-anchor-text-decoration;
+
+	@include hover-focus {
+		text-decoration: $label-anchor-hover-text-decoration;
+	}
 }
 
 .label-lg {
-	font-size: $label-font-size-lg;
-	padding: $label-padding-y-lg $label-padding-x-lg;
-
-	@include scale-component {
-		font-size: $label-font-size-lg-mobile;
-	}
+	@include label-lg;
 }
 
 .label-sm {
-	font-size: $label-font-size-sm;
-	padding: $label-padding-y-sm $label-padding-x-sm;
-
-	@include scale-component {
-		font-size: $label-font-size-sm-mobile;
-	}
-}
-
-// Lexicon Icons in Labels
-
-.label .lexicon-icon {
-	height: $label-lexicon-icon-height;
-	margin-left: 2px;
-	width: $label-lexicon-icon-width;
-}
-
-.label-lg .lexicon-icon {
-	height: $label-lexicon-icon-height-lg;
-	margin-left: 4px;
-	width: $label-lexicon-icon-width-lg;
-}
-
-.label-sm .lexicon-icon {
-	height: $label-lexicon-icon-height-sm;
-	width: $label-lexicon-icon-width-sm;
+	@include label-sm;
 }
 
 // Label Variants

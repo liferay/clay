@@ -26,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.2</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -74,6 +74,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/cards">Cards</a>
@@ -92,7 +94,9 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+<li class=""><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -131,8 +135,6 @@
 <li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
@@ -258,14 +260,15 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="nested-vertical-nav"><a class="heading-anchor" href="#nested-vertical-nav"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nested Vertical Nav</h3>
+		<h3 id="nav-nested"><a class="heading-anchor" href="#nav-nested"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Nested</h3>
 		<blockquote class="blockquote-sm blockquote-success">
-			<p>Nested navigation, also collapsible (requires <a href="http://getbootstrap.com/javascript/#collapse">Bootstrap Collapse Plugin</a>). Add class nav-nested to the outermost nav to indent each nested nav.</p>
+			<p>Add class <code>nav-nested</code> to the outermost nav to use padding to indent each nested nav.</p>
+			<p>Also collapsible when used with <a href="http://getbootstrap.com/javascript/#collapse">Bootstrap Collapse Plugin</a>.</p>
 		</blockquote>
 	</div>
 
 	<div class="col-md-6">
-		<ul class="flex-column nav nav-nested">
+		<ul class="nav nav-nested">
 			<li class="nav-item">
 				<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse01">
 					Basic Information
@@ -345,7 +348,7 @@
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3 id="nested-vertical-nav-margins"><a class="heading-anchor" href="#nested-vertical-nav-margins"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nested Vertical Nav (Margins)</h3>
+		<h3 id="nav-nested-margins"><a class="heading-anchor" href="#nav-nested-margins"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Nested Margins</h3>
 
 		<blockquote class="blockquote-sm blockquote-success">
 			<p><code>nav-nested-margins</code> uses margins instead of padding to indent.</p>
@@ -353,17 +356,17 @@
 	</div>
 
 	<div class="col-md-6">
-		<ul class="flex-column nav nav-nested-margins">
+		<ul class="nav nav-nested-margins">
 			<li class="nav-item">
 				<a aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#navCollapse001">
 					Basic Information
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="../../images/icons/icons.svg#angle-right">
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="../../images/icons/icons.svg#angle-down">
 						</svg>
 					</span>
@@ -376,12 +379,12 @@
 							<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse002">
 								Documents and Media
 								<span class="collapse-icon-closed">
-									<svg class="lexicon-icon">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 										<use xlink:href="../../images/icons/icons.svg#angle-right">
 									</svg>
 								</span>
 								<span class="collapse-icon-open">
-									<svg class="lexicon-icon">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 										<use xlink:href="../../images/icons/icons.svg#angle-down">
 									</svg>
 								</span>
@@ -403,12 +406,12 @@
 				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse003">
 					SEO
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="../../images/icons/icons.svg#angle-right">
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="../../images/icons/icons.svg#angle-down">
 						</svg>
 					</span>
@@ -424,12 +427,12 @@
 				<a class="collapsed collapse-icon nav-link" data-toggle="collapse" href="#navCollapse004">
 					Advanced
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="../../images/icons/icons.svg#angle-right">
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="../../images/icons/icons.svg#angle-down">
 						</svg>
 					</span>

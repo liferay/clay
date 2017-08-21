@@ -5,124 +5,168 @@
 	border-width: $sticker-border-width;
 	color: $sticker-color;
 	display: inline-block;
-	font-size: $sticker-font-size;
 	font-weight: $sticker-font-weight;
-
-	@include monospace($sticker-size);
-
-	overflow: hidden;
 	position: relative;
+
+	@include sticker;
+
 	text-align: center;
+	vertical-align: middle;
+
+	.lexicon-icon {
+		display: block;
+		height: 100%;
+		margin: auto;
+	}
 
 	img {
 		vertical-align: top;
 	}
+
+	.img-fluid {
+		@include border-radius($sticker-border-radius);
+	}
+
+	&.rounded .img-fluid {
+		border-radius: $rounded-border-radius;
+	}
+
+	&.rounded-circle .img-fluid {
+		border-radius: $rounded-circle-border-radius;
+	}
+
+	&.rounded-0 .img-fluid {
+		border-radius: 0;
+	}
 }
 
 .sticker-overlay {
-	display: block;
+	align-items: center;
+
+	@include border-radius($sticker-border-radius);
+
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
 	position: absolute;
+	right: 0;
 	top: 0;
-	width: 100%;
 }
 
 // Sticker Positions
 
 .sticker-bottom-left {
-	bottom: $sticker-gutter-width;
-	left: $sticker-gutter-width;
+	bottom: $sticker-inside-offset;
+	left: $sticker-inside-offset;
 	position: absolute;
 	right: auto;
 	top: auto;
 }
 
 .sticker-bottom-right {
-	bottom: $sticker-gutter-width;
+	bottom: $sticker-inside-offset;
 	left: auto;
 	position: absolute;
-	right: $sticker-gutter-width;
+	right: $sticker-inside-offset;
 	top: auto;
 }
 
 .sticker-top-left {
-	left: $sticker-gutter-width;
+	left: $sticker-inside-offset;
 	position: absolute;
-	top: $sticker-gutter-width;
+	top: $sticker-inside-offset;
 }
 
 .sticker-top-right {
 	left: auto;
 	position: absolute;
-	right: $sticker-gutter-width;
-	top: $sticker-gutter-width;
+	right: $sticker-inside-offset;
+	top: $sticker-inside-offset;
 }
 
 .sticker-outside {
-	left: -$sticker-gutter-width;
-	top: -$sticker-gutter-width;
+	left: $sticker-outside-offset;
+	top: $sticker-outside-offset;
 
 	&.sticker-bottom-left {
-		bottom: -$sticker-gutter-width;
+		bottom: $sticker-outside-offset;
 		top: auto;
 	}
 
 	&.sticker-bottom-right {
-		bottom: -$sticker-gutter-width;
+		bottom: $sticker-outside-offset;
 		left: auto;
-		right: -$sticker-gutter-width;
+		right: $sticker-outside-offset;
 		top: auto;
 	}
 
 	&.sticker-top-right {
 		left: auto;
-		right: -$sticker-gutter-width;
+		right: $sticker-outside-offset;
 	}
 }
 
 // Sticker Sizes
 
 .sticker-sm {
-	font-size: $sticker-font-size-sm;
+	@include sticker-sm;
 
-	@include monospace($sticker-size-sm);
+	&.sticker-outside {
+		left: $sticker-outside-offset-sm;
+		top: $sticker-outside-offset-sm;
 
-	.lexicon-icon {
-		height: $sticker-font-size-sm;
-		width: $sticker-font-size-sm;
+		&.sticker-bottom-left {
+			bottom: $sticker-outside-offset-sm;
+			top: auto;
+		}
+
+		&.sticker-bottom-right {
+			bottom: $sticker-outside-offset-sm;
+			left: auto;
+			right: $sticker-outside-offset-sm;
+			top: auto;
+		}
+
+		&.sticker-top-right {
+			left: auto;
+			right: $sticker-outside-offset-sm;
+		}
 	}
 }
 
 .sticker-lg {
-	font-size: $sticker-font-size-lg;
+	@include sticker-lg;
 
-	@include monospace($sticker-size-lg);
+	&.sticker-outside {
+		left: $sticker-outside-offset-lg;
+		top: $sticker-outside-offset-lg;
 
-	.lexicon-icon {
-		height: $sticker-font-size-lg;
-		width: $sticker-font-size-lg;
+		&.sticker-bottom-left {
+			bottom: $sticker-outside-offset-lg;
+			top: auto;
+		}
+
+		&.sticker-bottom-right {
+			bottom: $sticker-outside-offset-lg;
+			left: auto;
+			right: $sticker-outside-offset-lg;
+			top: auto;
+		}
+
+		&.sticker-top-right {
+			left: auto;
+			right: $sticker-outside-offset-lg;
+		}
 	}
 }
 
 .sticker-xl {
-	font-size: $sticker-font-size-xl;
-
-	@include monospace($sticker-size-xl);
-
-	.lexicon-icon {
-		height: $sticker-font-size-xl;
-		width: $sticker-font-size-xl;
-	}
+	@include sticker-xl;
 }
 
 .sticker-xxl {
-	font-size: $sticker-font-size-xxl;
-
-	@include monospace($sticker-size-xxl);
-
-	.lexicon-icon {
-		height: $sticker-font-size-xxl;
-		width: $sticker-font-size-xxl;
-	}
+	@include sticker-xxl;
 }
 
 // Sticker Variants

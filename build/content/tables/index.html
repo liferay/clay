@@ -26,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.2</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -74,6 +74,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/cards">Cards</a>
@@ -92,7 +94,9 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+<li class=""><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -131,8 +135,6 @@
 <li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
@@ -230,7 +232,7 @@
 					<th></th>
 					<th>ID</th>
 					<th class="table-cell-content">
-						<span class="truncate-text" title="Description">Title</span>
+						<span class="text-truncate" title="Description">Title</span>
 					</th>
 					<th>Status</th>
 					<th>Modified Date</th>
@@ -252,7 +254,7 @@
 					</td>
 					<td>21146</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -262,7 +264,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -289,7 +291,7 @@
 						21148
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+						<span class="text-truncate" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -299,7 +301,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -324,7 +326,7 @@
 					</td>
 					<td>21149</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						<span class="text-truncate" title="Cultivar extra">Cultivar extra</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -334,7 +336,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -359,7 +361,7 @@
 					</td>
 					<td>21150</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						<span class="text-truncate" title="Cultivar extra">Cultivar extra</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -369,7 +371,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -398,7 +400,7 @@
 				<tr>
 					<th></th>
 					<th class="table-cell-content">
-						<span class="truncate-text" title="Description">Description</span>
+						<span class="text-truncate" title="Description">Description</span>
 					</th>
 					<th>Format</th>
 					<th>Label</th>
@@ -417,7 +419,7 @@
 						</div>
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
@@ -425,7 +427,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -449,7 +451,7 @@
 						</div>
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+						<span class="text-truncate" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
 					</td>
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
@@ -457,7 +459,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -481,7 +483,7 @@
 						</div>
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+						<span class="text-truncate" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</td>
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
@@ -489,7 +491,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -513,7 +515,7 @@
 						</div>
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						<span class="text-truncate" title="Cultivar extra">Cultivar extra</span>
 					</td>
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
@@ -521,7 +523,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -550,7 +552,7 @@
 				<tr>
 					<th></th>
 					<th class="table-cell-content">
-						<span class="truncate-text" title="Description">Description</span>
+						<span class="text-truncate" title="Description">Description</span>
 					</th>
 					<th>Format</th>
 					<th>Label</th>
@@ -569,7 +571,7 @@
 						</div>
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
@@ -577,7 +579,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -601,7 +603,7 @@
 						</div>
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+						<span class="text-truncate" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
 					</td>
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
@@ -609,7 +611,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -633,7 +635,7 @@
 						</div>
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+						<span class="text-truncate" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</td>
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
@@ -641,7 +643,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -665,7 +667,7 @@
 						</div>
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						<span class="text-truncate" title="Cultivar extra">Cultivar extra</span>
 					</td>
 					<td><a href="#1">jpg</a></td>
 					<td><a href="#1">jpg</a></td>
@@ -673,7 +675,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -707,7 +709,7 @@
 					<th></th>
 					<th>ID</th>
 					<th class="table-cell-content">
-						<span class="truncate-text" title="Description">Title</span>
+						<span class="text-truncate" title="Description">Title</span>
 					</th>
 					<th>Status</th>
 					<th>Modified Date</th>
@@ -728,7 +730,7 @@
 					</td>
 					<td>21146</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -749,7 +751,7 @@
 					<th></th>
 					<th>ID</th>
 					<th class="table-cell-content">
-						<span class="truncate-text" title="Description">Title</span>
+						<span class="text-truncate" title="Description">Title</span>
 					</th>
 					<th>Status</th>
 					<th>Modified Date</th>
@@ -770,7 +772,7 @@
 					</td>
 					<td>21146</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -819,7 +821,7 @@
 					<th></th>
 					<th>ID</th>
 					<th class="table-cell-content">
-						<span class="truncate-text" title="Description">Title</span>
+						<span class="text-truncate" title="Description">Title</span>
 					</th>
 					<th>Status</th>
 					<th>Modified Date</th>
@@ -841,7 +843,7 @@
 					</td>
 					<td>21146</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+						<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -851,7 +853,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -878,7 +880,7 @@
 						21148
 					</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Frappuccino medium americano">Frappuccino medium americano</span>
+						<span class="text-truncate" title="Frappuccino medium americano">Frappuccino medium americano</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -888,7 +890,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -913,7 +915,7 @@
 					</td>
 					<td>21149</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						<span class="text-truncate" title="Cultivar extra">Cultivar extra</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -923,7 +925,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>
@@ -948,7 +950,7 @@
 					</td>
 					<td>21150</td>
 					<td class="table-cell-content">
-						<span class="truncate-text" title="Cultivar extra">Cultivar extra</span>
+						<span class="text-truncate" title="Cultivar extra">Cultivar extra</span>
 					</td>
 					<td>--</td>
 					<td>2 Hours Ago</td>
@@ -958,7 +960,7 @@
 					<td>
 						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#1">
-								<svg class="icon-monospaced lexicon-icon">
+								<svg aria-hidden="true" class="icon-monospaced lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
 								</svg>
 							</a>

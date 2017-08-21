@@ -1,8 +1,8 @@
 .btn {
-	font-size: $input-btn-font-size;
+	font-size: $btn-font-size;
 
 	@include scale-component {
-		font-size: $input-btn-font-size-mobile;
+		font-size: $btn-font-size-mobile;
 		padding-bottom: $input-btn-padding-y-mobile;
 		padding-left: $input-btn-padding-x-mobile;
 		padding-right: $input-btn-padding-x-mobile;
@@ -11,10 +11,10 @@
 }
 
 .btn-lg {
-	font-size: $input-btn-font-size-lg;
+	font-size: $btn-font-size-lg;
 
 	@include scale-component {
-		font-size: $input-btn-font-size-lg-mobile;
+		font-size: $btn-font-size-lg-mobile;
 		padding-bottom: $input-btn-padding-y-lg-mobile;
 		padding-left: $input-btn-padding-x-lg-mobile;
 		padding-right: $input-btn-padding-x-lg-mobile;
@@ -23,10 +23,10 @@
 }
 
 .btn-sm {
-	font-size: $input-btn-font-size-sm;
+	font-size: $btn-font-size-sm;
 
 	@include scale-component {
-		font-size: $input-btn-font-size-sm-mobile;
+		font-size: $btn-font-size-sm-mobile;
 		padding-bottom: $input-btn-padding-y-sm-mobile;
 		padding-left: $input-btn-padding-x-sm-mobile;
 		padding-right: $input-btn-padding-x-sm-mobile;
@@ -40,54 +40,121 @@ fieldset[disabled] .btn {
 	opacity: $btn-disabled-opacity;
 }
 
-// Action Buttons
+// Button Link
 
-.btn-action {
-	z-index: $zindex-btn-action;
-}
+.btn-link {
+	@include border-radius(1px);
 
-.btn-action,
-.btn-action .btn {
-	border-radius: $btn-action-border-radius;
-	height: $btn-action-size;
-	padding: 0;
-	position: relative;
-	width: $btn-action-size;
+	&:focus {
+		box-shadow: $btn-focus-box-shadow;
+		text-decoration: $link-decoration;
+	}
 
-	@include scale-component {
-		height: $btn-action-size-mobile;
-		width: $btn-action-size-mobile;
+	@include hover {
+		text-decoration: $link-hover-decoration;
 	}
 }
 
-.btn-action .lexicon-icon {
-	display: block;
-	height: 100%;
-	margin: auto;
+.show > .btn-link.dropdown-toggle {
+	box-shadow: none;
 }
 
-.btn-bottom-left {
-	bottom: $btn-fixed-spacer-y;
-	left: $btn-fixed-spacer-x;
+// Button Unstyled
+
+.btn-unstyled {
+	background-color: transparent;
+
+	@include border-radius(1px);
+	@include component-btn-link;
+
+	line-height: inherit;
+	vertical-align: baseline;
+}
+
+.show > .btn-unstyled.dropdown-toggle {
+	box-shadow: none;
+}
+
+// Button Monospaced
+
+.btn-monospaced {
+	@include monospace($btn-monospaced-size);
+
+	overflow: hidden;
+	padding: 0;
+	text-align: center;
+	white-space: normal;
+	word-wrap: break-word;
+
+	@include scale-component {
+		@include monospace($btn-monospaced-size-mobile);
+	}
+
+	&.btn-xl {
+		@include monospace($btn-monospaced-size-xl);
+
+		@include scale-component {
+			@include monospace($btn-monospaced-size-xl-mobile);
+		}
+	}
+
+	&.btn-lg {
+		@include monospace($btn-monospaced-size-lg);
+
+		@include scale-component {
+			@include monospace($btn-monospaced-size-lg-mobile);
+		}
+	}
+
+	&.btn-sm {
+		@include monospace($btn-monospaced-size-sm);
+
+		@include scale-component {
+			@include monospace($btn-monospaced-size-sm-mobile);
+		}
+	}
+
+	.lexicon-icon {
+		display: block;
+		height: 100%;
+		margin: auto;
+	}
+}
+
+// Action Buttons
+
+.btn-action {
+	display: inline-block;
+	position: relative;
+	z-index: $zindex-btn-action;
+
+	.btn {
+		border-radius: $btn-action-border-radius;
+	}
+}
+
+.btn-action-bottom-left {
+	bottom: $btn-action-fixed-spacer-y;
+	left: $btn-action-fixed-spacer-x;
 	position: fixed;
 }
 
-.btn-bottom-right {
-	bottom: $btn-fixed-spacer-y;
+.btn-action-bottom-right {
+	bottom: $btn-action-fixed-spacer-y;
 	position: fixed;
-	right: $btn-fixed-spacer-x;
+	right: $btn-action-fixed-spacer-x;
 }
 
-.btn-top-left {
-	left: $btn-fixed-spacer-x;
+.btn-action-top-left {
+	left: $btn-action-fixed-spacer-x;
 	position: fixed;
-	top: $btn-fixed-spacer-y;
+	top: $btn-action-fixed-spacer-y;
 }
 
-.btn-top-right {
+.btn-action-top-right {
 	position: fixed;
-	right: $btn-fixed-spacer-x;
-	top: $btn-fixed-spacer-y;
+	right: $btn-action-fixed-spacer-x;
+	top: $btn-action-fixed-spacer-y;
 }
 
 // Button Variants

@@ -92,34 +92,6 @@ h6,
 		position: relative;
 		width: 1em;
 	}
-
-	.glyphicon,
-	[class^="icon-"] {
-		display: block;
-	}
-}
-
-// Contextual backgrounds
-
-@include bg-variant('.bg-default', map-get($theme-colors, secondary));
-
-@if (variable-exists(atlas-theme)) {
-	@include bg-variant('.bg-primary', map-get($theme-colors, primary));
-}
-
-// Contextual Text
-
-a.text-muted {
-	&:hover,
-	&:focus {
-		color: darken($text-muted, 10%);
-	}
-}
-
-@include text-emphasis-variant('.text-default', map-get($theme-colors, secondary));
-
-@if (variable-exists(atlas-theme)) {
-	@include text-emphasis-variant('.text-primary', map-get($theme-colors, primary));
 }
 
 // Marked Text
@@ -129,24 +101,9 @@ mark,
 	@include highlight-text();
 }
 
-// Truncate Text
-
-td,
-th {
-	.truncate-text {
-		white-space: normal \9; // IE 8, 9
-	}
-}
-
 // Will be safe to remove once https://github.com/twbs/bootstrap/pull/22739 is merged
-
-.truncate-text {
+.text-truncate {
 	display: block;
-
-	@include text-truncate;
-
-	word-break: normal \9; // IE 8, 9
-	word-wrap: normal;
 }
 
 // Blockquote Variations

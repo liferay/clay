@@ -26,33 +26,33 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.2</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
-	<ul class="dropdown-menu dropdown-menu-right">
-		<li class="dropdown-header">Site Settings</li>
-		<li>
-			<form>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleAtlas" type="checkbox">
-						Show Atlas Theme
-					</label>
-				</div>
-				<div class="form-group">
-					<label>
-						<input checked="checked" id="toggleSiteCss" type="checkbox">
-						Show Site CSS
-					</label>
-				</div>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Atlas Theme</span>
+				</label>
+			</div>
+			<div class="dropdown-item">
+				<label class="custom-control custom-checkbox">
+					<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+					<span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Show Site CSS</span>
+				</label>
+			</div>
 
-				<div class="form-group">
-					<button class="btn btn-default btn-block" id="resetSiteConfig">Reset Settings</button>
-				</div>
-			</form>
-		</li>
-	</ul>
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
 </div>
 			</div>
 		</header>
@@ -74,6 +74,8 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/cards">Cards</a>
@@ -92,7 +94,9 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images, Thumbnails, and Aspect Ratios</a>
+<li class=""><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
 </li>
@@ -131,8 +135,6 @@
 <li class="active"><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toolbars">Toolbars</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
 </li>
@@ -226,7 +228,7 @@
 					<input class="toggle-card-check" type="checkbox" value="">
 					<div class="toggle-card-container">
 						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-check">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</div>
@@ -242,11 +244,11 @@
 					<input class="toggle-card-check" type="checkbox" value="">
 					<div class="toggle-card-container">
 						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock toggle-card-off">
 								<use xlink:href="../../images/icons/icons.svg#lock">
 							</svg>
 
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check toggle-card-on">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</div>
@@ -262,11 +264,11 @@
 					<input class="toggle-card-check" type="checkbox" value="">
 					<div class="toggle-card-container">
 						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock toggle-card-off">
 								<use xlink:href="../../images/icons/icons.svg#lock">
 							</svg>
 
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check toggle-card-on">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</div>
@@ -295,7 +297,7 @@
 					<input class="toggle-card-check" id="toggleCardRadioOption1" name="toggleCardRadio1" type="radio" value="option1">
 					<div class="toggle-card-container">
 						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-check">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</div>
@@ -311,11 +313,11 @@
 					<input class="toggle-card-check" id="toggleCardRadioOption2" name="toggleCardRadio1" type="radio" value="option2">
 					<div class="toggle-card-container">
 						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock toggle-card-off">
 								<use xlink:href="../../images/icons/icons.svg#lock">
 							</svg>
 
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check toggle-card-on">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</div>
@@ -331,11 +333,11 @@
 					<input class="toggle-card-check" id="toggleCardRadioOption3" name="toggleCardRadio1" type="radio" value="option3">
 					<div class="toggle-card-container">
 						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock toggle-card-off">
 								<use xlink:href="../../images/icons/icons.svg#lock">
 							</svg>
 
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check toggle-card-on">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</div>
@@ -364,11 +366,11 @@
 					<input class="toggle-card-check" disabled type="checkbox" value="">
 					<div class="toggle-card-container">
 						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock toggle-card-off">
 								<use xlink:href="../../images/icons/icons.svg#lock">
 							</svg>
 
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check toggle-card-on">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</div>
@@ -385,11 +387,11 @@
 					<input class="toggle-card-check" disabled type="radio" value="">
 					<div class="toggle-card-container">
 						<div class="toggle-card-icon">
-							<svg class="lexicon-icon lexicon-icon-lock toggle-card-off">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-lock toggle-card-off">
 								<use xlink:href="../../images/icons/icons.svg#lock">
 							</svg>
 
-							<svg class="lexicon-icon lexicon-icon-check toggle-card-on">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-check toggle-card-on">
 								<use xlink:href="../../images/icons/icons.svg#check">
 							</svg>
 						</div>

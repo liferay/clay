@@ -385,10 +385,21 @@ body.fixed {
 // Dropdowns Page
 
 .clay-site-dropdown-display {
+	.clay-site-dropdown-menu-container {
+		float: left;
+		margin-right: 15px;
+		min-height: 285px;
+	}
+
 	.dropdown-menu {
 		display: block;
-		position: relative;
+		position: static;
 		top: auto;
+		z-index: 0;
+	}
+
+	.dropdown-menu-horizontal {
+		display: flex;
 	}
 
 	.dropdown-wide-container {
@@ -517,6 +528,20 @@ body.fixed {
 .container-fluid-max-xl .clay-site-grid-width-xl,
 .container-fluid-max-xxl .clay-site-grid-width-xxl {
 	display: inline;
+}
+
+@each $breakpoint, $value in $container-fluid-max-widths {
+	.container-fluid-max-#{$breakpoint} .clay-site-grid-width-#{$breakpoint} {
+		&:after {
+			content: ' #{$value}';
+		}
+	}
+
+	[data-container-classes="container-fluid container-fluid-max-#{$breakpoint} main-nav-container"] {
+		&:after {
+			content: ' (#{$value})';
+		}
+	}
 }
 
 // Icons (Font Awesome Page)

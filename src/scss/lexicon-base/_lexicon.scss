@@ -5,18 +5,16 @@
 @import "button-groups";
 @import "buttons";
 @import "cards";
-@import "crop-image";
 @import "grid";
-@import "icons";
-@import "input-groups";
 @import "forms";
 @import "custom-forms";
 @import "form-validation";
+@import "icons";
+@import "input-groups";
 @import "labels";
 @import "list-group";
 @import "navs";
 @import "navbar";
-@import "management-bar"; // Management-bar styles should win over nav styles
 @import "multi-step-nav";
 // @import "pager"; // dropped
 @import "pagination";
@@ -35,9 +33,7 @@
 @import "dropdowns";
 @import "modals";
 @import "timelines";
-@import "toolbars";
 
-@import "borders";
 @import "utilities";
 
 @import "loaders";

@@ -1,34 +1,46 @@
-// When changing variables that affect the btn's height, make sure to match the
-// corresponding input-height with the button height.
-
-$input-btn-font-size: null !default;
-$input-btn-font-size-mobile: null !default;
+$btn-font-size: null !default;
+$btn-font-size-mobile: null !default;
 $input-btn-padding-x-mobile: null !default;
 $input-btn-padding-y-mobile: null !default;
 
-$input-btn-font-size-lg: null !default;
-$input-btn-font-size-lg-mobile: null !default;
+$btn-font-size-lg: null !default;
+$btn-font-size-lg-mobile: null !default;
 $input-btn-padding-x-lg-mobile: null !default;
 $input-btn-padding-y-lg-mobile: null !default;
 
-$input-btn-font-size-sm: null !default;
-$input-btn-font-size-sm-mobile: null !default;
+$btn-font-size-sm: null !default;
+$btn-font-size-sm-mobile: null !default;
 $input-btn-padding-x-sm-mobile: null !default;
 $input-btn-padding-y-sm-mobile: null !default;
 
-// End variables that affect btn height
+$btn-disabled-opacity: null !default;
+
+// Button Monospaced
+
+$btn-monospaced-size: 2.375rem !default; // 38px
+$btn-monospaced-size-xl: 4rem !default; // 64px
+$btn-monospaced-size-lg: 3rem !default; // 48px
+$btn-monospaced-size-sm: 1.9375rem !default; // 31px
+
+$btn-monospaced-size-mobile: null !default;
+$btn-monospaced-size-xl-mobile: null !default;
+$btn-monospaced-size-lg-mobile: null !default;
+$btn-monospaced-size-sm-mobile: null !default;
+
+// Button Action
 
 $btn-action-border-radius: null !default;
 $btn-action-dropdown-spacer: 5px !default;
-$btn-action-size: 34px !default;
-$btn-action-size-mobile: null !default;
 
-$btn-disabled-opacity: null !default;
-
-$btn-fixed-spacer-x: 20px !default;
-$btn-fixed-spacer-y: $btn-fixed-spacer-x !default;
+$btn-action-fixed-spacer-x: 20px !default;
+$btn-action-fixed-spacer-y: $btn-action-fixed-spacer-x !default;
 
 $zindex-btn-action: 950 !default;
+
+// Button Toolbar
+
+$btn-toolbar-spacer-x: 0.5rem !default; // 8px
+$btn-toolbar-spacer-y: 0.125rem !default; // 2px
 
 // Button Variants
 
@@ -120,7 +132,8 @@ $btn-dark-active-color: null !default;
 $btn-dark-active-bg: null !default;
 $btn-dark-active-border-color: null !default;
 
-$btn-palette: (
+$btn-palette: () !default;
+$btn-palette: map-merge((
 	primary: (
 		bg: $btn-primary-bg,
 		border-color: $btn-primary-border-color,
@@ -265,4 +278,4 @@ $btn-palette: (
 		active-border-color: $btn-dark-active-border-color,
 		active-color: $btn-dark-active-color
 	)
-) !default;
+), $btn-palette);
