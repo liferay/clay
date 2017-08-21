@@ -108,15 +108,19 @@ th {
 	tbody,
 	tfoot {
 		td {
-			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
+			box-shadow: $table-list-row-box-shadow;
 		}
 
-		> tr:hover td {
-			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
+		> tr {
+			@include hover {
+				td {
+					box-shadow: $table-list-row-hover-box-shadow;
+				}
+			}
 		}
 
 		> tr.active td {
-			box-shadow: inset 0 #{-$table-list-row-active-border-bottom-width} $table-list-row-active-border-color;
+			box-shadow: $table-list-row-active-box-shadow;
 		}
 	}
 }
