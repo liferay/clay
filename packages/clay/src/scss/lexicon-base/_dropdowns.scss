@@ -145,6 +145,8 @@
 	}
 }
 
+// Dropdown Action
+
 .dropdown-action {
 	display: inline-block;
 	vertical-align: middle;
@@ -174,6 +176,20 @@
 
 	&.show > button.dropdown-toggle {
 		outline: none;
+	}
+}
+
+.show-dropdown-action-on-active {
+	.active {
+		.dropdown-action {
+			.dropdown-menu {
+				display: block;
+			}
+
+			.dropdown-menu-horizontal {
+				display: flex;
+			}
+		}
 	}
 }
 
