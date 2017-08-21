@@ -43,6 +43,11 @@ $dropdown-item-indicator-spacer-x: 1rem !default;
 
 $dropdown-horizontal-min-height: 50px !default;
 
+// Dropdown Unstyled
+
+$dropdown-unstyled-link-color: $link-color !default;
+$dropdown-unstyled-link-hover-color: $link-hover-color !default;
+
 // Dropdown Action
 
 $dropdown-action-toggle-color: $link-color !default;
