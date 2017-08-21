@@ -229,6 +229,24 @@
 	}
 }
 
+// Dropdown Menu Unstyled
+
+.dropdown-menu-unstyled {
+	@include border-radius(0);
+	@include box-shadow(none);
+
+	border-color: transparent;
+
+	.dropdown-item {
+		color: $dropdown-unstyled-link-color;
+
+		@include hover-focus {
+			background-color: transparent;
+			color: $dropdown-unstyled-link-hover-color;
+		}
+	}
+}
+
 // Dropdown Menu with Indicators
 
 .dropdown-menu-indicator-start {
