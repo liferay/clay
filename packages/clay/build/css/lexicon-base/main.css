@@ -9130,6 +9130,7 @@ a.label {
 }
 
 .label-primary {
+  background-color: #FFF;
   border-color: #007bff;
   color: #007bff;
 }
@@ -9148,6 +9149,7 @@ a.label {
 }
 
 .label-secondary {
+  background-color: #FFF;
   border-color: #868e96;
   color: #868e96;
 }
@@ -9166,6 +9168,7 @@ a.label {
 }
 
 .label-success {
+  background-color: #FFF;
   border-color: #28a745;
   color: #28a745;
 }
@@ -9184,6 +9187,7 @@ a.label {
 }
 
 .label-info {
+  background-color: #FFF;
   border-color: #17a2b8;
   color: #17a2b8;
 }
@@ -9202,6 +9206,7 @@ a.label {
 }
 
 .label-warning {
+  background-color: #FFF;
   border-color: #ffc107;
   color: #ffc107;
 }
@@ -9220,6 +9225,7 @@ a.label {
 }
 
 .label-danger {
+  background-color: #FFF;
   border-color: #dc3545;
   color: #dc3545;
 }
@@ -9238,6 +9244,7 @@ a.label {
 }
 
 .label-dark {
+  background-color: #FFF;
   border-color: #343a40;
   color: #343a40;
 }
@@ -9271,6 +9278,38 @@ a.label {
 
 .label-light a:focus, .label-light a:hover {
   color: #bdc6d0;
+}
+
+.list-group {
+  border-radius: 0.25rem;
+}
+
+.list-group .dropdown-action {
+  position: static;
+}
+
+.list-group .dropdown-action .dropdown-menu-horizontal {
+  bottom: 0 !important;
+  margin-right: -3px;
+  top: 0 !important;
+  transform: none !important;
+}
+
+.list-group .label {
+  font-size: 9px;
+  padding: 2px 7px;
+}
+
+.list-group .label .lexicon-icon {
+  height: 7px;
+  width: 7px;
+}
+
+.list-group .sticker {
+  font-size: 1.125rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  width: 2.75rem;
 }
 
 .list-group-bordered .list-group-item-flex {
@@ -9314,32 +9353,53 @@ a.label {
   border-bottom-left-radius: 0.25rem;
 }
 
+.list-group-header-title {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.list-group-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0.25rem;
+}
+
+.list-group-subtitle {
+  margin-bottom: 0.25rem;
+}
+
+.show-dropdown-action-on-active .list-group-item.active .dropdown-action .dropdown-menu {
+  background-color: #007bff;
+}
+
+.show-dropdown-action-on-active .list-group-item.active .dropdown-action .dropdown-item {
+  color: #fff;
+}
+
 .list-group-item.active {
   z-index: auto;
 }
 
-.list-group-item.active + .list-group-item {
-  border-top-color: #007bff;
-}
-
+.list-group-item.active .dropdown-action .dropdown-toggle,
 .list-group-item.active .list-group-link {
   color: #fff;
 }
 
-.list-group-item-danger.active + .list-group-item {
-  border-top-color: #721c24;
+.list-group-item.active .list-group-title,
+.list-group-item.active a.list-group-title,
+.list-group-item.active .list-group-title a {
+  color: #fff;
 }
 
-.list-group-item-info.active + .list-group-item {
-  border-top-color: #0c5460;
+.list-group-item.active .list-group-subtitle,
+.list-group-item.active a.list-group-subtitle,
+.list-group-item.active .list-group-subtitle a {
+  color: #fff;
 }
 
-.list-group-item-success.active + .list-group-item {
-  border-top-color: #155724;
-}
-
-.list-group-item-warning.active + .list-group-item {
-  border-top-color: #856404;
+.list-group-item.active .list-group-link {
+  color: #fff;
 }
 
 .list-group-item-flex {
@@ -9349,6 +9409,7 @@ a.label {
 }
 
 .list-group-item-flex .flex-col {
+  justify-content: center;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
 }
@@ -12545,10 +12606,19 @@ mark:before,
   outline: none;
 }
 
+.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu {
+  display: block;
+}
+
+.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu-horizontal {
+  display: flex;
+}
+
 .dropdown-menu-horizontal {
   margin-top: 0;
   max-width: none;
   min-height: 50px;
+  min-width: 0;
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -12576,6 +12646,20 @@ mark:before,
   display: flex;
   justify-content: center;
   overflow: visible;
+}
+
+.dropdown-menu-unstyled {
+  border-radius: 0;
+  border-color: transparent;
+}
+
+.dropdown-menu-unstyled .dropdown-item {
+  color: #007bff;
+}
+
+.dropdown-menu-unstyled .dropdown-item:focus, .dropdown-menu-unstyled .dropdown-item:hover {
+  background-color: transparent;
+  color: #0056b3;
 }
 
 .dropdown-menu-indicator-start .dropdown-item-indicator {
@@ -13265,6 +13349,7 @@ mark:before,
   flex-direction: column;
   justify-content: flex-start;
   min-height: 0;
+  position: relative;
 }
 
 .flex-col-expand {
