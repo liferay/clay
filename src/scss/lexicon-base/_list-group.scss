@@ -137,30 +137,10 @@ a.list-group-subtitle,
 			color: $list-group-subtitle-active-color;
 		}
 
-		+ .list-group-item {
-			border-top-color: $list-group-active-border-color;
-		}
-
 		.list-group-link {
 			color: $list-group-link-active-color;
 		}
 	}
-}
-
-.list-group-item-danger.active + .list-group-item {
-	border-top-color: theme-color-level(danger, 6);
-}
-
-.list-group-item-info.active + .list-group-item {
-	border-top-color: theme-color-level(info, 6);
-}
-
-.list-group-item-success.active + .list-group-item {
-	border-top-color: theme-color-level(success, 6);
-}
-
-.list-group-item-warning.active + .list-group-item {
-	border-top-color: theme-color-level(warning, 6);
 }
 
 .list-group-item-flex {
