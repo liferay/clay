@@ -4,6 +4,17 @@
 
 	color: $list-group-color;
 
+	.dropdown-action {
+		position: static;
+
+		.dropdown-menu-horizontal {
+			bottom: 0 !important;
+			margin-right: -3px;
+			top: 0 !important;
+			transform: none !important;
+		}
+	}
+
 	.list-group {
 		@if ($list-group-box-shadow != null) {
 			@include box-shadow(none);
@@ -115,6 +126,20 @@ a.list-group-subtitle,
 }
 
 // List Group Item
+
+.show-dropdown-action-on-active {
+	.list-group-item.active {
+		.dropdown-action {
+			.dropdown-menu {
+				background-color: $list-group-active-bg;
+			}
+
+			.dropdown-item {
+				color: $list-group-active-color;
+			}
+		}
+	}
+}
 
 .list-group-item {
 	&.active {
