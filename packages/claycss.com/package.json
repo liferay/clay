@@ -8,7 +8,7 @@
   },
   "scripts": {
     "config": "gulp config",
-    "watch": "concurrent \"gulp watch\" \"el run\""
+    "watch": "concurrent --kill-others \"gulp watch\" \"el run\""
   },
   "dependencies": {
     "bourbon": "^4.3.3",
