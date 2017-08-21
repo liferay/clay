@@ -1,11 +1,25 @@
 'use strict';
 
-const path = require('path');
 const clay = require('clay');
+const gulp = require('gulp');
+const path = require('path');
+
+require('gulp-storage')(gulp);
+
+gulp.storage.create('claycss', 'claycss.json');
 
 const generateIconData = require('./lib/icons');
 
 var clayJSPath = path.join(clay.srcDir, 'js');
+
+const clayPath = gulp.storage.get('clayPath');
+let clayIncludePaths = clay.includePaths;
+
+if (clayPath) {
+	clayIncludePaths = path.join(path.join(process.cwd(), clayPath, 'src/scss'));
+
+	console.log('Warning! using ' + clayIncludePaths + ' to compile sass.\nDelete claycss.json to reset.');
+}
 
 module.exports = {
 	frontMatterHook: function(data) {
@@ -13,7 +27,7 @@ module.exports = {
 	},
 	metalComponents: ['electric-quartz-components'],
 	sassOptions: {
-		includePaths: ['node_modules', clay.includePaths]
+		includePaths: ['node_modules', clayIncludePaths]
 	},
 	vendorSrc: [
 		{

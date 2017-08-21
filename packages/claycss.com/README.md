@@ -35,3 +35,29 @@ electric run
 ```
 electric deploy
 ```
+
+## Clay Development
+
+As this site contains all documentation for Clay, npm scripts have been added to
+speed up development for the
+[https://github.com/liferay/clay](https://github.com/liferay/clay) repo.
+
+### Setting up the watch task
+
+```
+npm run config
+```
+
+This will open a prompt that will ask you for the path to your clone of the
+liferay/clay repo.
+
+```
+npm run watch
+```
+
+This will startup Electric's `electric run` command, as well as a custom watch
+task that will rebuild everything in `src/styles` when changes are made to your
+clone of liferay/clay.
+
+If you want to rebuild the site without pointing to your clone of liferay/clay,
+simple delete the `claycss.json` file that was generated in the project root.
