@@ -50,11 +50,12 @@
 		width: 100%;
 
 		.input-group-addon {
-			@include position(absolute, 6px 16px null null);
-
 			background-color: transparent;
 			border-color: transparent;
 			color: $brand-secondary;
+			position: absolute;
+			right: 2px;
+			top: 1px;
 			z-index: 9;
 		}
 
@@ -66,17 +67,35 @@
 			padding-left: 0.875rem;
 			padding-right: $base-size * 1.5;
 
-			@include placeholder {
+			&::-moz-placeholder {
 				color: $brand-secondary;
-			};
+				opacity: 1;
+			}
+
+			&:-ms-input-placeholder {
+				color: $brand-secondary;
+			}
+
+			&::-webkit-input-placeholder {
+				color: $brand-secondary;
+			}
 
 			&:active, &:focus {
-				@include placeholder {
+				background-color: #FFF;
+				color: $brand-dark;
+
+				&::-moz-placeholder {
+					color: $brand-dark-active;
+					opacity: 1;
+				}
+
+				&:-ms-input-placeholder {
 					color: $brand-dark-active;
 				}
 
-				background-color: #FFF;
-				color: $brand-dark;
+				&::-webkit-input-placeholder {
+					color: $brand-dark-active;
+				}
 			}
 		}
 	}
@@ -171,14 +190,13 @@
 				position: absolute;
 				right: 0;
 				top: 0;
+				transform: rotate(-90deg);
+				transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 				width: 40px;
-
-				@include transform(rotate(-90deg));
-				@include transition(all 0.2s $ease-in-out-back);
 			}
 
 			&.active > a > .collapse-toggle {
-				@include transform(rotate(0));
+				transform: rotate(0);
 			}
 		}
 	}

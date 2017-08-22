@@ -1,6 +1,8 @@
 .navbar-fixed {
-	@include position(fixed, 0 0 null 0);
-
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
 	z-index: 11;
 
 	@media (min-width: $screen-sm) {
