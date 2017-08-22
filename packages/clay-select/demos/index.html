@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Select</title>
+
+	<link rel="stylesheet" href="../node_modules/clay/build/css/atlas-font-awesome.css">
+
+	<style>
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-select.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Select</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="default-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="inline-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="preselected-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="disabled-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="multiple-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<div id="inline-multiple-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		new metal.ClaySelect(
+			{
+				label: 'Default Select',
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				]
+			},
+			'#default-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				inline: true,
+				label: 'Inline Select',
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				]
+			},
+			'#inline-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				label: 'Select with preselected option',
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						selected: true,
+						value: '2'
+					}
+				]
+			},
+			'#preselected-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				disabled: true,
+				label: 'Disabled Select',
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						selected: true,
+						value: '2'
+					}
+				]
+			},
+			'#disabled-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				label: 'Multiple Select',
+				multiple: true,
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				]
+			},
+			'#multiple-block'
+		);
+
+		new metal.ClaySelect(
+			{
+				inline: true,
+				label: 'Inline Multiple Select',
+				multiple: true,
+				options: [
+					{
+						label: 'Option 1',
+						value: '1'
+					},
+					{
+						label: 'Option 2',
+						value: '2'
+					}
+				]
+			},
+			'#inline-multiple-block'
+		);
+	</script>
+</body>
+</html>

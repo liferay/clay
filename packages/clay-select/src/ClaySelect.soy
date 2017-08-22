@@ -1,0 +1,73 @@
+{namespace ClaySelect}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param options: list<?>}
+	{@param? disabled: bool}
+	{@param? id: string}
+	{@param? inline: bool}
+	{@param? label: string}
+	{@param? multiple: bool}
+	{@param? name: string}
+
+	<div class="form-group" id="{$id}">
+		{if $label}
+			<label>{$label}</label>
+		{/if}
+
+		{let $select kind="html"}
+			{call .select}
+				{param disabled: $disabled /}
+				{param multiple: $multiple /}
+				{param name: $name /}
+				{param options: $options /}
+			{/call}
+		{/let}
+
+		{if $inline}
+			<div class="form-inline">
+				{$select}
+			</div>
+		{else}
+			{$select}
+		{/if}
+	</div>
+{/template}
+
+/**
+ * This renders the select tag.
+ */
+{template .select}
+	{@param options: list<?>}
+	{@param? disabled: bool}
+	{@param? multiple: bool}
+	{@param? name: string}
+
+	{let $selectAttributes kind="attributes"}
+		class="form-control"
+		{if $disabled}
+			disabled="disabled"
+		{/if}
+		{if $multiple}
+			multiple="multiple"
+		{/if}
+		{if $name}
+			name="{$name}"
+		{/if}
+	{/let}
+
+	<select {$selectAttributes}>
+		{foreach $option in $options}
+			{let $optionAttributes kind="attributes"}
+				{if $option.selected}
+					selected="selected"
+				{/if}
+				value="{$option.value}"
+			{/let}
+
+			<option {$optionAttributes}>{$option.label}</option>
+		{/foreach}
+	</select>
+{/template}

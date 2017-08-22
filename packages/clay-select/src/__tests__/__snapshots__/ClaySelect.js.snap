@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClaySelect should generate a disabled select element 1`] = `
+<div class="form-group">
+  <select class="form-control" disabled="disabled">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
+</div>
+`;
+
+exports[`ClaySelect should generate a multiple select element 1`] = `
+<div class="form-group">
+  <select class="form-control" multiple="multiple">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
+</div>
+`;
+
+exports[`ClaySelect should generate a select element 1`] = `
+<div class="form-group">
+  <select class="form-control">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
+</div>
+`;
+
+exports[`ClaySelect should generate a select element with id 1`] = `
+<div class="form-group" id="myselectid">
+  <select class="form-control">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
+</div>
+`;
+
+exports[`ClaySelect should generate a select element with label 1`] = `
+<div class="form-group">
+  <label>My Select</label>
+  <select class="form-control">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
+</div>
+`;
+
+exports[`ClaySelect should generate a select element with name 1`] = `
+<div class="form-group">
+  <select class="form-control" name="myselectname">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
+</div>
+`;
+
+exports[`ClaySelect should generate a select element with preselected option 1`] = `
+<div class="form-group">
+  <select class="form-control">
+    <option value="1">Option 1</option>
+    <option selected="selected" value="2">Option 2</option>
+  </select>
+</div>
+`;
+
+exports[`ClaySelect should generate an inline multiple select element 1`] = `
+<div class="form-group">
+  <div class="form-inline">
+    <select class="form-control" multiple="multiple">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`ClaySelect should generate an inline select element 1`] = `
+<div class="form-group">
+  <div class="form-inline">
+    <select class="form-control">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`ClaySelect should generate an inline select element with label 1`] = `
+<div class="form-group">
+  <label>My Select</label>
+  <div class="form-inline">
+    <select class="form-control">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+  </div>
+</div>
+`;
