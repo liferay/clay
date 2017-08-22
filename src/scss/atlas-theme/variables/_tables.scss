@@ -1,10 +1,9 @@
 $table-accent-bg: darken(#FCFEFF, 2%) !default;
 $table-hover-bg: #FCFEFF !default;
 
-// Deprecated `$table-header-color` as of v1.0.17 and will be removed in v2.0.0
-$table-header-color: map-get($theme-colors, secondary) !default;
-$table-header-font-size: 14px !default;
-$table-header-font-weight: 500 !default;
+$table-head-color: map-get($theme-colors, secondary) !default;
+$table-head-font-size: 14px !default;
+$table-head-font-weight: 500 !default;
 
 $table-list-body-row-bg: #FFF !default;
 
@@ -12,5 +11,5 @@ $table-list-row-active-border-bottom-width: 2px !default;
 $table-list-row-active-border-color: map-get($theme-colors, primary) !default;
 $table-list-row-height: 72px !default;
 
-$table-list-color: $table-header-color !default;
+$table-list-color: $table-head-color !default;
 $table-list-link-color: map-get($theme-colors, secondary) !default;
