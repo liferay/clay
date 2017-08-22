@@ -82,12 +82,12 @@ th {
 	thead {
 		td,
 		th {
-			background-color: $table-list-header-bg;
-			border-bottom-width: $table-list-header-border-bottom-width;
-			font-size: $table-list-header-font-size;
-			font-weight: $table-list-header-font-weight;
-			height: $table-list-header-min-height;
-			vertical-align: $table-list-header-vertical-alignment;
+			background-color: $table-list-head-bg;
+			border-bottom-width: $table-list-head-border-bottom-width;
+			font-size: $table-list-head-font-size;
+			font-weight: $table-list-head-font-weight;
+			height: $table-list-head-height;
+			vertical-align: $table-list-head-vertical-alignment;
 		}
 	}
 
