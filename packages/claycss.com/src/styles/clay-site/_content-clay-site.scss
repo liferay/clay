@@ -1,3 +1,19 @@
+.clay-site-dropdown-menu-container {
+	display: inline-block;
+	margin-right: 15px;
+	overflow: hidden;
+	vertical-align: top;
+
+	.dropdown-menu {
+		display: block;
+		position: static;
+	}
+
+	.dropdown-menu-horizontal {
+		display: flex;
+	}
+}
+
 .lexicon-icon-list {
 	&:after {
 		clear: both;
