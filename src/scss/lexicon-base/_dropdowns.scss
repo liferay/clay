@@ -180,7 +180,8 @@
 }
 
 .show-dropdown-action-on-active {
-	.active {
+	.active,
+	.table-active {
 		.dropdown-action {
 			.dropdown-menu {
 				display: block;
