@@ -9,24 +9,24 @@ weight: 100
 
 ### Badges
 
-<span class="badge badge-primary">Primary</span>
-<span class="badge badge-secondary">Secondary</span>
-<span class="badge badge-success">Success</span>
-<span class="badge badge-info">Info</span>
-<span class="badge badge-warning">Warning</span>
-<span class="badge badge-danger">Danger</span>
-<span class="badge badge-light">Light</span>
-<span class="badge badge-dark">Dark</span>
+<span class="badge badge-primary">8</span>
+<span class="badge badge-secondary">87</span>
+<span class="badge badge-success">999K</span>
+<span class="badge badge-info">91</span>
+<span class="badge badge-warning">21</span>
+<span class="badge badge-danger">130</span>
+<span class="badge badge-light">130</span>
+<span class="badge badge-dark">130</span>
 
 ```xml
-<span class="badge badge-primary">Primary</span>
-<span class="badge badge-secondary">Secondary</span>
-<span class="badge badge-success">Success</span>
-<span class="badge badge-info">Info</span>
-<span class="badge badge-warning">Warning</span>
-<span class="badge badge-danger">Danger</span>
-<span class="badge badge-light">Light</span>
-<span class="badge badge-dark">Dark</span>
+<span class="badge badge-primary">8</span>
+<span class="badge badge-secondary">87</span>
+<span class="badge badge-success">999K</span>
+<span class="badge badge-info">91</span>
+<span class="badge badge-warning">21</span>
+<span class="badge badge-danger">130</span>
+<span class="badge badge-light">130</span>
+<span class="badge badge-dark">130</span>
 ```
 
 </article>
@@ -61,24 +61,24 @@ weight: 100
 
 ### Badge Pill
 
-<span class="badge badge-pill badge-primary">Primary</span>
-<span class="badge badge-pill badge-secondary">Secondary</span>
-<span class="badge badge-pill badge-success">Success</span>
-<span class="badge badge-info badge-pill">Info</span>
-<span class="badge badge-pill badge-warning">Warning</span>
-<span class="badge badge-danger badge-pill">Danger</span>
-<span class="badge badge-light badge-pill">Light</span>
-<span class="badge badge-dark badge-pill">Dark</span>
+<span class="badge badge-pill badge-primary">8</span>
+<span class="badge badge-pill badge-secondary">87</span>
+<span class="badge badge-pill badge-success">999K</span>
+<span class="badge badge-info badge-pill">91</span>
+<span class="badge badge-pill badge-warning">21</span>
+<span class="badge badge-danger badge-pill">130</span>
+<span class="badge badge-light badge-pill">130</span>
+<span class="badge badge-dark badge-pill">130</span>
 
 ```xml
-<span class="badge badge-pill badge-primary">Primary</span>
-<span class="badge badge-pill badge-secondary">Secondary</span>
-<span class="badge badge-pill badge-success">Success</span>
-<span class="badge badge-info badge-pill">Info</span>
-<span class="badge badge-pill badge-warning">Warning</span>
-<span class="badge badge-danger badge-pill">Danger</span>
-<span class="badge badge-light badge-pill">Light</span>
-<span class="badge badge-dark badge-pill">Dark</span>
+<span class="badge badge-pill badge-primary">8</span>
+<span class="badge badge-pill badge-secondary">87</span>
+<span class="badge badge-pill badge-success">999K</span>
+<span class="badge badge-info badge-pill">91</span>
+<span class="badge badge-pill badge-warning">21</span>
+<span class="badge badge-danger badge-pill">130</span>
+<span class="badge badge-light badge-pill">130</span>
+<span class="badge badge-dark badge-pill">130</span>
 ```
 
 </article>
@@ -106,54 +106,54 @@ weight: 100
 ### Badges with Links
 
 <span class="badge badge-primary badge-sm">
-    Small Badge
-    <a class="badge-link" href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Small Badge</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 <span class="badge badge-secondary">
-    Normal Badge
-    <a class="badge-link" href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Normal Badge</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 <span class="badge badge-lg badge-success">
-    Large Badge
-    <a class="badge-link" href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Large Badge</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 
 ```xml
 <span class="badge badge-primary badge-sm">
-    Small Badge
-    <a class="badge-link" href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Small Badge</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 <span class="badge badge-secondary">
-    Normal Badge
-    <a class="badge-link" href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Normal Badge</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 <span class="badge badge-lg badge-success">
-    Large Badge
-    <a class="badge-link" href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Large Badge</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 ```
 
@@ -161,30 +161,26 @@ weight: 100
 
 <article id="6">
 
-### Badge Examples
+### Labels
 
-<ul class="flex-column nav nav-pills">
-    <li class="nav-item"><a class="nav-link" href="#1">Inbox <span class="badge badge-primary badge-sm">32</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Sent <span class="badge badge-secondary badge-sm">2</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Drafts <span class="badge badge-sm badge-success">53</span></a></li>
-    <li class="nav-item"><a class="active nav-link" href="#1">Spam <span class="badge badge-info badge-sm">12</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Starred <span class="badge badge-sm badge-warning">1</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Important <span class="badge badge-danger badge-sm">12</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">All Mail <span class="badge badge-light badge-sm">1</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Trash <span class="badge badge-dark badge-sm">12</span></a></li>
-</ul>
+<span class="label label-primary">Primary</span>
+<span class="label label-secondary">Secondary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+<span class="label label-light">Light</span>
+<span class="label label-dark">Dark</span>
 
 ```xml
-<ul class="flex-column nav nav-pills">
-    <li class="nav-item"><a class="nav-link" href="#1">Inbox <span class="badge badge-primary badge-sm">32</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Sent <span class="badge badge-secondary badge-sm">2</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Drafts <span class="badge badge-sm badge-success">53</span></a></li>
-    <li class="nav-item"><a class="active nav-link" href="#1">Spam <span class="badge badge-info badge-sm">12</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Starred <span class="badge badge-sm badge-warning">1</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Important <span class="badge badge-danger badge-sm">12</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">All Mail <span class="badge badge-light badge-sm">1</span></a></li>
-    <li class="nav-item"><a class="nav-link" href="#1">Trash <span class="badge badge-dark badge-sm">12</span></a></li>
-</ul>
+<span class="label label-primary">Primary</span>
+<span class="label label-secondary">Secondary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+<span class="label label-light">Light</span>
+<span class="label label-dark">Dark</span>
 ```
 
 </article>
@@ -238,54 +234,54 @@ weight: 100
 ### Label with Links
 
 <span class="label label-primary label-sm">
-    Small Label
-    <a href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Small Label</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 <span class="label label-secondary">
-    Normal Label
-    <a href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Normal Label</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 <span class="label label-lg label-success">
-    Large Label
-    <a href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Large Label</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 
 ```xml
 <span class="label label-primary label-sm">
-    Small Label
-    <a href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Small Label</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 <span class="label label-secondary">
-    Normal Label
-    <a href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Normal Label</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 <span class="label label-lg label-success">
-    Large Label
-    <a href="#1">
-        <svg class="lexicon-icon">
+    <a href="#1">Large Label</a>
+    <button aria-label="Close" class="close" type="button">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
             <use xlink:href="/vendor/lexicon/icons.svg#times"></use>
         </svg>
-    </a>
+    </button>
 </span>
 ```
 
@@ -325,61 +321,49 @@ weight: 100
 
 > Place them anywhere relative to your container using positional sticker classes `sticker-top-left`, `sticker-bottom-left`, `sticker-top-right`, and `sticker-bottom-right`.
 
-<div class="col-md-3 col-6">
-    <div class="aspect-ratio">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-        <span class="sticker sticker-danger sticker-top-left">PDF</span>
+<div class="row">
+    <div class="col-md-3 col-6">
+        <div class="aspect-ratio">
+            <img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+            <span class="sticker sticker-danger sticker-top-left">PDF</span>
+        </div>
     </div>
-</div>
-
-<div class="col-md-3 col-6">
-    <div class="aspect-ratio">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-        <span class="sticker sticker-bottom-left sticker-danger">PDF</span>
+    <div class="col-md-3 col-6">
+        <div class="aspect-ratio">
+            <img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+            <span class="sticker sticker-bottom-left sticker-danger">PDF</span>
+        </div>
     </div>
-</div>
-
-<div class="col-md-3 col-6">
-    <div class="aspect-ratio">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-        <span class="sticker sticker-danger sticker-top-right">PDF</span>
+    <div class="col-md-3 col-6">
+        <div class="aspect-ratio">
+            <img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+            <span class="sticker sticker-danger sticker-top-right">PDF</span>
+        </div>
     </div>
-</div>
-
-<div class="col-md-3 col-6">
-    <div class="aspect-ratio">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-        <span class="sticker sticker-bottom-right sticker-danger">PDF</span>
+    <div class="col-md-3 col-6">
+        <div class="aspect-ratio">
+            <img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+            <span class="sticker sticker-bottom-right sticker-danger">PDF</span>
+        </div>
     </div>
 </div>
 
 ```xml
-<div class="col-md-3 col-6">
-    <div class="aspect-ratio">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-        <span class="sticker sticker-danger sticker-top-left">PDF</span>
-    </div>
+<div class="aspect-ratio">
+    <img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+    <span class="sticker sticker-danger sticker-top-left">PDF</span>
 </div>
-
-<div class="col-md-3 col-6">
-    <div class="aspect-ratio">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-        <span class="sticker sticker-bottom-left sticker-danger">PDF</span>
-    </div>
+<div class="aspect-ratio">
+    <img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+    <span class="sticker sticker-bottom-left sticker-danger">PDF</span>
 </div>
-
-<div class="col-md-3 col-6">
-    <div class="aspect-ratio">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-        <span class="sticker sticker-danger sticker-top-right">PDF</span>
-    </div>
+<div class="aspect-ratio">
+    <img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+    <span class="sticker sticker-danger sticker-top-right">PDF</span>
 </div>
-
-<div class="col-md-3 col-6">
-    <div class="aspect-ratio">
-        <img alt="thumbnail" src="/images/thumbnail_hot_air_ballon.jpg">
-        <span class="sticker sticker-bottom-right sticker-danger">PDF</span>
-    </div>
+<div class="aspect-ratio">
+    <img alt="thumbnail" class="aspect-ratio-item-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+    <span class="sticker sticker-bottom-right sticker-danger">PDF</span>
 </div>
 ```
 
@@ -404,72 +388,57 @@ weight: 100
 <span class="sticker sticker-xl sticker-info">133</span>
 <span class="sticker sticker-xxl sticker-warning">133</span>
 ```
-<span class="sticker sticker-secondary sticker-sm">
-    <svg class="lexicon-icon lexicon-icon-folder">
-        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
+
+<span class="sticker sticker-xxl sticker-warning">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+        <use xlink:href="/vendor/lexicon/icons.svg#magic" />
     </svg>
 </span>
-<span class="sticker sticker-danger">
-    <svg class="lexicon-icon lexicon-icon-folder">
-        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
+<span class="sticker sticker-xl sticker-info">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
     </svg>
 </span>
-<span class="sticker sticker-info sticker-lg">
-    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-    <span class="sticker-overlay">
-        <svg class="lexicon-icon lexicon-icon-folder">
-            <use xlink:href="/vendor/lexicon/icons.svg#folder" />
-        </svg>
-    </span>
-</span>
-<span class="sticker sticker-primary">
-    <svg class="lexicon-icon lexicon-icon-format">
-        <use xlink:href="/vendor/lexicon/icons.svg#format" />
-    </svg>
-</span>
-<span class="sticker sticker-success">
-    <svg class="lexicon-icon lexicon-icon-home">
+<span class="sticker sticker-lg sticker-success">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-home">
         <use xlink:href="/vendor/lexicon/icons.svg#home" />
     </svg>
 </span>
-<span class="sticker sticker-warning">
-    <svg class="lexicon-icon lexicon-icon-picture">
-        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+<span class="sticker sticker-secondary">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
+        <use xlink:href="/vendor/lexicon/icons.svg#format" />
+    </svg>
+</span>
+<span class="sticker sticker-primary sticker-sm">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
     </svg>
 </span>
 
 ```xml
-<span class="sticker sticker-secondary sticker-sm">
-    <svg class="lexicon-icon lexicon-icon-folder">
-        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
+<span class="sticker sticker-xxl sticker-warning">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+        <use xlink:href="/vendor/lexicon/icons.svg#magic" />
     </svg>
 </span>
-<span class="sticker sticker-danger">
-    <svg class="lexicon-icon lexicon-icon-folder">
-        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
+<span class="sticker sticker-xl sticker-info">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
     </svg>
 </span>
-<span class="sticker sticker-info sticker-lg">
-    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-    <span class="sticker-overlay">
-        <svg class="lexicon-icon lexicon-icon-folder">
-            <use xlink:href="/vendor/lexicon/icons.svg#folder" />
-        </svg>
-    </span>
-</span>
-<span class="sticker sticker-primary">
-    <svg class="lexicon-icon lexicon-icon-format">
-        <use xlink:href="/vendor/lexicon/icons.svg#format" />
-    </svg>
-</span>
-<span class="sticker sticker-success">
-    <svg class="lexicon-icon lexicon-icon-home">
+<span class="sticker sticker-lg sticker-success">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-home">
         <use xlink:href="/vendor/lexicon/icons.svg#home" />
     </svg>
 </span>
-<span class="sticker sticker-warning">
-    <svg class="lexicon-icon lexicon-icon-picture">
-        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+<span class="sticker sticker-secondary">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-format">
+        <use xlink:href="/vendor/lexicon/icons.svg#format" />
+    </svg>
+</span>
+<span class="sticker sticker-primary sticker-sm">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+        <use xlink:href="/vendor/lexicon/icons.svg#folder" />
     </svg>
 </span>
 ```
@@ -478,66 +447,183 @@ weight: 100
 
 <article id="13">
 
+### Sticker Overlay
+
+> Overlay content over stickers by nesting `sticker-overlay` inside `sticker`.
+
+<span class="sticker sticker-primary sticker-sm">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
+    <span class="sticker-overlay">JB</span>
+</span>
+<span class="sticker sticker-primary">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coyote.jpg">
+    <span class="sticker-overlay">TT</span>
+</span>
+<span class="sticker sticker-primary sticker-lg">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+    <span class="sticker-overlay">SP</span>
+</span>
+<span class="sticker sticker-primary sticker-xl">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+    <span class="sticker-overlay">
+        TT
+    </span>
+</span>
+<span class="sticker sticker-primary sticker-xxl">
+    <img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_typewriter.jpg">
+    <span class="sticker-overlay">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+            <use xlink:href="/vendor/lexicon/icons.svg#folder" />
+        </svg>
+    </span>
+</span>
+
+</article>
+
+<article id="14">
+
 ### Sticker Outside
 
 > Add class `sticker-outside` in conjunction with sticker positions to position the sticker on the outside corners.
 
-<div class="col-md-3 col-6">
-    <button class="btn btn-primary" style="position:relative;">
-        Email
-        <span class="rounded-circle sticker sticker-danger sticker-outside sticker-top-left">133</span>
-    </button>
-</div>
-
-<div class="col-md-3 col-6">
-    <button class="btn btn-primary" style="position:relative;">
-        Email
-        <span class="rounded-circle sticker sticker-bottom-left sticker-danger sticker-outside">133</span>
-    </button>
-</div>
-
-<div class="col-md-3 col-6">
-    <button class="btn btn-primary" style="position:relative;">
-        Email
-        <span class="rounded-circle sticker sticker-danger sticker-outside sticker-top-right">133</span>
-    </button>
-</div>
-
-<div class="col-md-3 col-6">
-    <button class="btn btn-primary" style="position:relative;">
-        Email
-        <span class="rounded-circle sticker sticker-bottom-right sticker-danger sticker-outside">133</span>
-    </button>
+<div class="row">
+    <div class="col-md-3 col-6">
+        <button class="btn btn-primary" style="position:relative;">
+            Email
+            <span class="rounded-circle sticker sticker-danger sticker-outside sticker-top-left">133</span>
+        </button>
+    </div>
+    <div class="col-md-3 col-6">
+        <button class="btn btn-primary" style="position:relative;">
+            Email
+            <span class="rounded-circle sticker sticker-bottom-left sticker-danger sticker-outside">133</span>
+        </button>
+    </div>
+    <div class="col-md-3 col-6">
+        <button class="btn btn-primary" style="position:relative;">
+            Email
+            <span class="rounded-circle sticker sticker-danger sticker-outside sticker-top-right">133</span>
+        </button>
+    </div>
+    <div class="col-md-3 col-6">
+        <button class="btn btn-primary" style="position:relative;">
+            Email
+            <span class="rounded-circle sticker sticker-bottom-right sticker-danger sticker-outside">133</span>
+        </button>
+    </div>
 </div>
 
 ```xml
-<div class="col-md-3 col-6">
-    <button class="btn btn-primary" style="position:relative;">
-        Email
-        <span class="rounded-circle sticker sticker-danger sticker-outside sticker-top-left">133</span>
-    </button>
+<button class="btn btn-primary" style="position:relative;">
+    Email
+    <span class="rounded-circle sticker sticker-danger sticker-outside sticker-top-left">133</span>
+</button>
+<button class="btn btn-primary" style="position:relative;">
+    Email
+    <span class="rounded-circle sticker sticker-bottom-left sticker-danger sticker-outside">133</span>
+</button>
+<button class="btn btn-primary" style="position:relative;">
+    Email
+    <span class="rounded-circle sticker sticker-danger sticker-outside sticker-top-right">133</span>
+</button>
+<button class="btn btn-primary" style="position:relative;">
+    Email
+    <span class="rounded-circle sticker sticker-bottom-right sticker-danger sticker-outside">133</span>
+</button>
+```
+
+<div class="row">
+    <div class="col-md-3 col-6">
+        <span class="sticker sticker-dark">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+                <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+            </svg>
+            <span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-top-left">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-sun">
+                    <use xlink:href="/vendor/lexicon/icons.svg#sun" />
+                </svg>
+            </span>
+        </span>
+    </div>
+    <div class="col-md-3 col-6">
+        <span class="sticker sticker-info">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+                <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+            </svg>
+            <span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-bottom-left">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+                    <use xlink:href="/vendor/lexicon/icons.svg#magic" />
+                </svg>
+            </span>
+        </span>
+    </div>
+    <div class="col-md-3 col-6">
+        <span class="sticker sticker-danger">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+                <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+            </svg>
+            <span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-top-right">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-transform">
+                    <use xlink:href="/vendor/lexicon/icons.svg#transform" />
+                </svg>
+            </span>
+        </span>
+    </div>
+    <div class="col-md-3 col-6">
+        <span class="sticker sticker-success">
+            <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+                <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+            </svg>
+            <span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-bottom-right">
+                <svg aria-hidden="true" class="lexicon-icon lexicon-icon-undo">
+                    <use xlink:href="/vendor/lexicon/icons.svg#undo" />
+                </svg>
+            </span>
+        </span>
+    </div>
 </div>
 
-<div class="col-md-3 col-6">
-    <button class="btn btn-primary" style="position:relative;">
-        Email
-        <span class="rounded-circle sticker sticker-bottom-left sticker-danger sticker-outside">133</span>
-    </button>
-</div>
-
-<div class="col-md-3 col-6">
-    <button class="btn btn-primary" style="position:relative;">
-        Email
-        <span class="rounded-circle sticker sticker-danger sticker-outside sticker-top-right">133</span>
-    </button>
-</div>
-
-<div class="col-md-3 col-6">
-    <button class="btn btn-primary" style="position:relative;">
-        Email
-        <span class="rounded-circle sticker sticker-bottom-right sticker-danger sticker-outside">133</span>
-    </button>
-</div>
+```xml
+<span class="sticker sticker-dark">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+    </svg>
+    <span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-top-left">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-sun">
+            <use xlink:href="/vendor/lexicon/icons.svg#sun" />
+        </svg>
+    </span>
+</span>
+<span class="sticker sticker-info">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+    </svg>
+    <span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-bottom-left">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+            <use xlink:href="/vendor/lexicon/icons.svg#magic" />
+        </svg>
+    </span>
+</span>
+<span class="sticker sticker-danger">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+    </svg>
+    <span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-top-right">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-transform">
+            <use xlink:href="/vendor/lexicon/icons.svg#transform" />
+        </svg>
+    </span>
+</span>
+<span class="sticker sticker-success">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-picture">
+        <use xlink:href="/vendor/lexicon/icons.svg#picture" />
+    </svg>
+    <span class="sticker sticker-info sticker-sm rounded-circle sticker-outside sticker-bottom-right">
+        <svg aria-hidden="true" class="lexicon-icon lexicon-icon-undo">
+            <use xlink:href="/vendor/lexicon/icons.svg#undo" />
+        </svg>
+    </span>
+</span>
 ```
 
 </article>
@@ -546,82 +632,58 @@ weight: 100
 
 ### Stickers as Avatars (User Icon Replacement)
 
-<div class="col-md-6">
-    <span class="rounded-circle sticker sticker-secondary sticker-sm">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
-    </span>
-    <span class="rounded-circle sticker sticker-secondary">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coyote.jpg">
-    </span>
-    <span class="rounded-circle sticker sticker-secondary sticker-lg">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-    </span>
-    <span class="rounded-circle sticker sticker-secondary sticker-xl">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
-        <span class="sticker-overlay">
-            TT
-        </span>
-    </span>
-    <span class="rounded-circle sticker sticker-secondary sticker-xxl">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_typewriter.jpg">
-    </span>
-</div>
-<div class="col-md-6">
-    <span class="rounded-circle sticker sticker-secondary sticker-sm">
-        JB
-    </span>
-    <span class="rounded-circle sticker sticker-danger">
+<span class="rounded-circle sticker sticker-primary sticker-sm">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
+</span>
+<span class="rounded-circle sticker sticker-primary">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coyote.jpg">
+</span>
+<span class="rounded-circle sticker sticker-primary sticker-lg">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+</span>
+<span class="rounded-circle sticker sticker-primary sticker-xl">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+    <span class="sticker-overlay">
         TT
     </span>
-    <span class="rounded-circle sticker sticker-info sticker-lg">
-        SP
-    </span>
-    <span class="rounded-circle sticker sticker-primary sticker-xl">
-        WW
-    </span>
-    <span class="rounded-circle sticker sticker-success sticker-xxl">
-        TT
-    </span>
-</div>
+</span>
+<span class="rounded-circle sticker sticker-secondary sticker-xxl">
+    <img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_typewriter.jpg">
+</span>
 
 ```xml
-<div class="col-md-6">
-    <span class="rounded-circle sticker sticker-secondary sticker-sm">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
-    </span>
-    <span class="rounded-circle sticker sticker-secondary">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coyote.jpg">
-    </span>
-    <span class="rounded-circle sticker sticker-secondary sticker-lg">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
-    </span>
-    <span class="rounded-circle sticker sticker-secondary sticker-xl">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
-        <span class="sticker-overlay">
-            TT
-        </span>
-    </span>
-    <span class="rounded-circle sticker sticker-secondary sticker-xxl">
-        <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_typewriter.jpg">
-    </span>
-</div>
-<div class="col-md-6">
-    <span class="rounded-circle sticker sticker-secondary sticker-sm">
-        JB
-    </span>
-    <span class="rounded-circle sticker sticker-danger">
+<span class="rounded-circle sticker sticker-primary sticker-sm">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_dock.jpg">
+</span>
+<span class="rounded-circle sticker sticker-primary">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coyote.jpg">
+</span>
+<span class="rounded-circle sticker sticker-primary sticker-lg">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_hot_air_ballon.jpg">
+</span>
+<span class="rounded-circle sticker sticker-primary sticker-xl">
+    <img alt="thumbnail" class="img-fluid" src="/images/thumbnail_coffee.jpg">
+    <span class="sticker-overlay">
         TT
     </span>
-    <span class="rounded-circle sticker sticker-info sticker-lg">
-        SP
-    </span>
-    <span class="rounded-circle sticker sticker-primary sticker-xl">
-        WW
-    </span>
-    <span class="rounded-circle sticker sticker-success sticker-xxl">
-        TT
-    </span>
-</div>
+</span>
+<span class="rounded-circle sticker sticker-secondary sticker-xxl">
+    <img alt="thumbnail" class="img-fluid" src="../../images/thumbnail_typewriter.jpg">
+</span>
+```
+
+<span class="rounded-circle sticker sticker-secondary sticker-sm">JB</span>
+<span class="rounded-circle sticker sticker-danger">TT</span>
+<span class="rounded-circle sticker sticker-info sticker-lg">SP</span>
+<span class="rounded-circle sticker sticker-primary sticker-xl">WW</span>
+<span class="rounded-circle sticker sticker-success sticker-xxl">TT</span>
+
+```xml
+<span class="rounded-circle sticker sticker-secondary sticker-sm">JB</span>
+<span class="rounded-circle sticker sticker-danger">TT</span>
+<span class="rounded-circle sticker sticker-info sticker-lg">SP</span>
+<span class="rounded-circle sticker sticker-primary sticker-xl">WW</span>
+<span class="rounded-circle sticker sticker-success sticker-xxl">TT</span>
 ```
 
 </article>
