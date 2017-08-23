@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="panels">
 
 > Panels help separate your content.
 
@@ -47,7 +47,8 @@ weight: 100
 
 </article>
 
-<article id="2">
+
+<article id="panel-states">
 
 ### Panel States
 
@@ -152,7 +153,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="accordions-with-panels-and-collapse-plugin">
 
 ### Accordions with Panels and Collapse Plugin
 
@@ -252,7 +253,8 @@ weight: 100
 
 </article>
 
-<article id="4">
+
+<article id="accordions-with-open-and-close-icon">
 
 ### Accordions with Open and Close Icon
 

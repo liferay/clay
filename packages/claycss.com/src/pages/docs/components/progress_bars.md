@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="progress-groups">
 
 ### Progress Groups
 
@@ -82,7 +82,7 @@ weight: 100
 </article>
 
 
-<article id="2">
+<article id="progress-group-stacked">
 
 ### Progress Group Stacked
 
@@ -117,7 +117,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="progress-variants">
 
 ### Progress Variants
 
@@ -296,7 +296,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="multiple-progress-bars">
 
 ### Multiple Progress Bars
 
@@ -369,7 +369,7 @@ weight: 100
 </article>
 
 
-<article id="5">
+<article id="progress-sizes">
 
 ### Progress Sizes
 
@@ -428,7 +428,7 @@ weight: 100
 </article>
 
 
-<article id="6">
+<article id="progress-with-bootstrap-4-background-utility">
 
 ### Progress with Bootstrap 4 Background Utility
 

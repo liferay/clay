@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="base-nav">
 
 ### Base Nav
 
@@ -30,7 +30,7 @@ weight: 100
 </article>
 
 
-<article id="2">
+<article id="vertical-nav">
 
 ### Vertical Nav
 
@@ -61,7 +61,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="nav-underline">
 
 ### Nav Underline
 
@@ -86,7 +86,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="nav-nested">
 
 ### Nav Nested
 
@@ -287,7 +287,7 @@ weight: 100
 </article>
 
 
-<article id="5">
+<article id="nav-nested-margins">
 
 ### Nav Nested Margins
 

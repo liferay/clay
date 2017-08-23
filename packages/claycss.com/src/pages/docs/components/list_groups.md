@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="list-group-item-flex">
 
 ### List Group Item Flex
 
@@ -233,7 +233,8 @@ weight: 100
 
 </article>
 
-<article id="2">
+
+<article id="list-group-bordered">
 
 ### List Group Bordered
 
@@ -453,7 +454,8 @@ weight: 100
 
 </article>
 
-<article id="3">
+
+<article id="list-group-header">
 
 ### List Group Header
 
@@ -691,7 +693,8 @@ weight: 100
 
 </article>
 
-<article id="4">
+
+<article id="list-group-unstyled">
 
 ### List Group Unstyled
 
@@ -865,7 +868,8 @@ weight: 100
 
 </article>
 
-<article id="5">
+
+<article id="list-group-with-links-and-buttons">
 
 ### List Group with Links and Buttons
 
@@ -887,7 +891,8 @@ weight: 100
 
 </article>
 
-<article id="6">
+
+<article id="contextual-list-group">
 
 ### Contextual List Group
 
@@ -915,7 +920,8 @@ weight: 100
 
 </article>
 
-<article id="7">
+
+<article id="linked-contextual-list-groups">
 
 ### Linked Contextual List Groups
 
@@ -966,13 +972,18 @@ weight: 100
 </div>
 ```
 
+</article>
+
+
 <script>
 {literal}
-var onClick = function(node) {
-    console.log('clicked');
-    $(node).closest('.list-group-item').toggleClass('active');
-};
+$(function() {
+	$('.list-group .list-group-item input[type="checkbox"]').on(
+		'click',
+		function(event) {
+			$(this).closest('.list-group-item').toggleClass('active');
+		}
+	);
+});
 {/literal}
 </script>
-
-</article>
