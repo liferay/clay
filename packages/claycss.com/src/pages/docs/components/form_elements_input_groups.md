@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="input-group-addon">
 
 ### Input Group Addon
 
@@ -52,7 +52,7 @@ weight: 100
 </article>
 
 
-<article id="2">
+<article id="input-group-addon-constrain">
 
 ### Input Group Addon Constrain
 
@@ -109,7 +109,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="input-group-buttons">
 
 ### Input Group Buttons
 
@@ -307,7 +307,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="input-group-secondary">
 
 ### Input Group Secondary
 
@@ -381,7 +381,7 @@ weight: 100
 </article>
 
 
-<article id="5">
+<article id="input-group-transparent">
 
 ### Input Group Transparent
 
@@ -434,7 +434,7 @@ weight: 100
 </article>
 
 
-<article id="6">
+<article id="input-group-sizes">
 
 ### Input Group Sizes
 
@@ -542,7 +542,7 @@ weight: 100
 </article>
 
 
-<article id="7">
+<article id="input-group-inset">
 
 ### Input Group Inset
 
@@ -681,14 +681,14 @@ weight: 100
 <script>
 {literal}
 $(function() {
-    $('[data-toggle="popover"]').popover(
-        {
-            container: 'body',
-            content: 'Some help text for your input.',
-            placement: 'left',
-            trigger: 'hover'
-        }
-    );
+	$('[data-toggle="popover"]').popover(
+		{
+			container: 'body',
+			content: 'Some help text for your input.',
+			placement: 'left',
+			trigger: 'hover'
+		}
+	);
 });
 {/literal}
 </script>
