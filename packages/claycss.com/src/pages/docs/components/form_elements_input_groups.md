@@ -109,7 +109,7 @@ weight: 100
 </article>
 
 
-<article id="">
+<article id="3">
 
 ### Input Group Buttons
 
@@ -307,7 +307,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="4">
 
 ### Input Group Secondary
 
@@ -381,7 +381,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="5">
 
 ### Input Group Transparent
 
@@ -434,7 +434,7 @@ weight: 100
 </article>
 
 
-<article id="">
+<article id="6">
 
 ### Input Group Sizes
 
