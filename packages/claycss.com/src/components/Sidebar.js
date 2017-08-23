@@ -15,6 +15,18 @@ class Sidebar extends Component {
 			header: '.sidebar-toggler'
 		});
 	}
+
+	handleThemeChange_(event) {
+		const linkTag = document.getElementById('mainCssLink');
+
+		let href = '/styles/main.css';
+
+		if (!event.target.checked) {
+			href = '/styles/base.css';
+		}
+
+		linkTag.setAttribute('href', href);
+	}
 };
 
 Soy.register(Sidebar, templates);

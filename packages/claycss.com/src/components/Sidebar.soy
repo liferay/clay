@@ -34,6 +34,15 @@
 			</div>
 
 			<div class="sidebar-body">
+				<div class="style-toggler">
+					<div class="form-check">
+						<label class="form-check-label">
+							<input checked class="form-check-input" data-onchange="handleThemeChange_" type="checkbox" value="" />
+							<span class="form-check-description">Show Atlas Theme</span>
+						</label>
+					</div>
+				</div>
+
 				{call MainNavigation.render}
 					{param section: $section /}
 				{/call}
