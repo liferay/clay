@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="dropdown-action">
 
 ### Dropdown Action
 
@@ -79,7 +79,8 @@ weight: 100
 
 </article>
 
-<article id="2">
+
+<article id="dropdown-menu">
 
 ### Dropdown Menu
 
@@ -183,7 +184,8 @@ weight: 100
 
 </article>
 
-<article id="3">
+
+<article id="dropdown-menu-indicator-start">
 
 ### Dropdown Menu Indicator Start
 
@@ -331,7 +333,8 @@ weight: 100
 
 </article>
 
-<article id="4">
+
+<article id="scrolling-content">
 
 ### Scrolling Content
 
@@ -422,7 +425,8 @@ weight: 100
 
 </article>
 
-<article id="5">
+
+<article id="dropdown-wide-full">
 
 ### Dropdown Wide / Full
 
@@ -510,7 +514,8 @@ weight: 100
 
 </article>
 
-<article id="6">
+
+<article id="dropdown-menu-horizontal">
 
 ### Dropdown Menu Horizontal
 
@@ -557,7 +562,9 @@ weight: 100
 ```
 
 </article>
-<article id="7">
+
+
+<article id="dropdown-alignment">
 
 ### Dropdown Alignment
 
@@ -780,7 +787,8 @@ weight: 100
 
 </article>
 
-<article id="8">
+
+<article id="dropdowns-in-navbar">
 
 ### Dropdowns in Navbar
 
@@ -986,12 +994,4 @@ weight: 100
 	</div>
 </nav>
 
-</article>
-<article id="9">
-</article>
-<article id="10">
-</article>
-<article id="11">
-</article>
-<article id="12">
 </article>
