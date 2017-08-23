@@ -138,7 +138,7 @@ weight: 100
 			<span class="custom-control-description">Indeterminate</span>
 		</label>
 	</div>
-	<div>
+	<div class="form-group">
 		<label class="custom-control custom-checkbox">
 			<input class="custom-control-input" disabled type="checkbox">
 			<span class="custom-control-indicator"></span>
