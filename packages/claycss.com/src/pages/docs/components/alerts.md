@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="alerts-with-embedded-links">
 
 ### Alerts with Embedded Links
 
@@ -122,7 +122,8 @@ weight: 100
 
 </article>
 
-<article id="2">
+
+<article id="dismissible-alerts">
 
 ### Dismissible Alerts
 
@@ -315,7 +316,8 @@ weight: 100
 
 </article>
 
-<article id="3">
+
+<article id="alert-fluid">
 
 ### Alert Fluid
 
@@ -380,7 +382,8 @@ weight: 100
 
 </article>
 
-<article id="4">
+
+<article id="alert-notification">
 
 ### Alert Notification
 
