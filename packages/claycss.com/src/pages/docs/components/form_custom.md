@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="form-file">
 
 ### Form File
 
@@ -116,7 +116,7 @@ weight: 100
 </article>
 
 
-<article id="2">
+<article id="custom-checkbox">
 
 ### Custom Checkbox
 
@@ -198,7 +198,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="custom-radio">
 
 ### Custom Radio
 
@@ -232,7 +232,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="custom-controls-stacked">
 
 ### Custom Controls Stacked
 
@@ -269,7 +269,7 @@ weight: 100
 </article>
 
 
-<article id="5">
+<article id="custom-select">
 
 ### Custom Select
 
@@ -298,7 +298,7 @@ weight: 100
 </article>
 
 
-<article id="6">
+<article id="custom-file">
 
 ### Custom File
 
