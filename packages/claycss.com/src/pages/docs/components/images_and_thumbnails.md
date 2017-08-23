@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="responsive-image">
 
 ### Responsive Image
 
@@ -28,7 +28,7 @@ weight: 100
 
 </article>
 
-<article id="2">
+<article id="image-shapes">
 
 ### Image Shapes
 
