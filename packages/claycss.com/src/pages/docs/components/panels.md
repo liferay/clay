@@ -53,121 +53,104 @@ weight: 100
 
 > Different colors for different states.
 
-<div class="col-md-4">
-	<div class="panel">
-		<div class="panel-header">panel</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
+<div class="row">
+	<div class="col-md-4">
+		<div class="panel">
+			<div class="panel-header">panel</div>
+			<div class="panel-body">body</div>
+			<div class="panel-footer">footer</div>
+		</div>
 	</div>
-</div>
-
-<div class="col-md-4">
-	<div class="panel panel-primary">
-		<div class="panel-header">panel-primary</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
+	<div class="col-md-4">
+		<div class="panel panel-primary">
+			<div class="panel-header">panel-primary</div>
+			<div class="panel-body">body</div>
+			<div class="panel-footer">footer</div>
+		</div>
 	</div>
-</div>
-
-<div class="col-md-4">
-	<div class="panel panel-info">
-		<div class="panel-header">panel-info</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
+	<div class="col-md-4">
+		<div class="panel panel-info">
+			<div class="panel-header">panel-info</div>
+			<div class="panel-body">body</div>
+			<div class="panel-footer">footer</div>
+		</div>
 	</div>
-</div>
-
-<div class="col-md-4">
-	<div class="panel panel-secondary">
-		<div class="panel-header">panel-secondary</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
+	<div class="col-md-4">
+		<div class="panel panel-secondary">
+			<div class="panel-header">panel-secondary</div>
+			<div class="panel-body">body</div>
+			<div class="panel-footer">footer</div>
+		</div>
 	</div>
-</div>
-
-<div class="col-md-4">
-	<div class="panel panel-success">
-		<div class="panel-header">panel-success</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
+	<div class="col-md-4">
+		<div class="panel panel-success">
+			<div class="panel-header">panel-success</div>
+			<div class="panel-body">body</div>
+			<div class="panel-footer">footer</div>
+		</div>
 	</div>
-</div>
-
-<div class="col-md-4">
-	<div class="panel panel-warning">
-		<div class="panel-header">panel-warning</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
+	<div class="col-md-4">
+		<div class="panel panel-warning">
+			<div class="panel-header">panel-warning</div>
+			<div class="panel-body">body</div>
+			<div class="panel-footer">footer</div>
+		</div>
 	</div>
-</div>
-
-<div class="col-md-4">
-	<div class="panel panel-danger">
-		<div class="panel-header">panel-danger</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
+	<div class="col-md-4">
+		<div class="panel panel-danger">
+			<div class="panel-header">panel-danger</div>
+			<div class="panel-body">body</div>
+			<div class="panel-footer">footer</div>
+		</div>
 	</div>
 </div>
 
 ```xml
-<div class="col-md-4">
-	<div class="panel">
-		<div class="panel-header">panel</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
-	</div>
+<div class="panel">
+	<div class="panel-header">panel</div>
+	<div class="panel-body">body</div>
+	<div class="panel-footer">footer</div>
 </div>
 
-<div class="col-md-4">
-	<div class="panel panel-primary">
-		<div class="panel-header">panel-primary</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
-	</div>
+<div class="panel panel-primary">
+	<div class="panel-header">panel-primary</div>
+	<div class="panel-body">body</div>
+	<div class="panel-footer">footer</div>
 </div>
 
-<div class="col-md-4">
-	<div class="panel panel-info">
-		<div class="panel-header">panel-info</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
-	</div>
+<div class="panel panel-info">
+	<div class="panel-header">panel-info</div>
+	<div class="panel-body">body</div>
+	<div class="panel-footer">footer</div>
 </div>
 
-<div class="col-md-4">
-	<div class="panel panel-secondary">
-		<div class="panel-header">panel-secondary</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
-	</div>
+<div class="panel panel-secondary">
+	<div class="panel-header">panel-secondary</div>
+	<div class="panel-body">body</div>
+	<div class="panel-footer">footer</div>
 </div>
 
-<div class="col-md-4">
-	<div class="panel panel-success">
-		<div class="panel-header">panel-success</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
-	</div>
+<div class="panel panel-success">
+	<div class="panel-header">panel-success</div>
+	<div class="panel-body">body</div>
+	<div class="panel-footer">footer</div>
 </div>
 
-<div class="col-md-4">
-	<div class="panel panel-warning">
-		<div class="panel-header">panel-warning</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
-	</div>
+<div class="panel panel-warning">
+	<div class="panel-header">panel-warning</div>
+	<div class="panel-body">body</div>
+	<div class="panel-footer">footer</div>
 </div>
 
-<div class="col-md-4">
-	<div class="panel panel-danger">
-		<div class="panel-header">panel-danger</div>
-		<div class="panel-body">body</div>
-		<div class="panel-footer">footer</div>
-	</div>
+<div class="panel panel-danger">
+	<div class="panel-header">panel-danger</div>
+	<div class="panel-body">body</div>
+	<div class="panel-footer">footer</div>
 </div>
 ```
 
 </article>
+
 
 <article id="3">
 
@@ -284,12 +267,12 @@ weight: 100
 				<a aria-controls="collapseTwo" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseTwo" role="button">
 					ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -308,12 +291,12 @@ weight: 100
 				<a aria-controls="accordion03CollapseOne" aria-expanded="true" class="collapse-icon collapse-icon-middle panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseOne" role="button">
 					Collapsible Group Item #2 (Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.)
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -332,12 +315,12 @@ weight: 100
 				<a aria-controls="collapseThree" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseThree" role="button">
 					Collapsible Group Item #3
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -356,12 +339,12 @@ weight: 100
 				<a aria-controls="accordion03CollapseFour" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFour" role="button">
 					Collapsible Group Item #4
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -380,12 +363,12 @@ weight: 100
 				<a aria-controls="accordion03CollapseFive" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFive" role="button">
 					Collapsible Group Item #5
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -404,12 +387,12 @@ weight: 100
 				<a aria-controls="accordion03CollapseSix" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseSix" role="button">
 					Collapsible Group Item #6
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -431,15 +414,13 @@ weight: 100
 			<div class="panel-title">
 				<a aria-controls="collapseTwo" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseTwo" role="button">
 					ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual
-
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
-
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -457,15 +438,13 @@ weight: 100
 			<div class="panel-title">
 				<a aria-controls="accordion03CollapseOne" aria-expanded="true" class="collapse-icon collapse-icon-middle panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseOne" role="button">
 					Collapsible Group Item #2 (Flavour to go strong steamed mazagran trifecta decaffeinated percolator crema, aged americano rich chicory frappuccino foam white.)
-
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
-
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -483,15 +462,13 @@ weight: 100
 			<div class="panel-title">
 				<a aria-controls="collapseThree" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-parent="#accordion03" data-toggle="collapse" href="#accordion03CollapseThree" role="button">
 					Collapsible Group Item #3
-
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
-
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -509,15 +486,13 @@ weight: 100
 			<div class="panel-title">
 				<a aria-controls="accordion03CollapseFour" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFour" role="button">
 					Collapsible Group Item #4
-
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
-
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -535,15 +510,13 @@ weight: 100
 			<div class="panel-title">
 				<a aria-controls="accordion03CollapseFive" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseFive" role="button">
 					Collapsible Group Item #5
-
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
-
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
@@ -561,15 +534,13 @@ weight: 100
 			<div class="panel-title">
 				<a aria-controls="accordion03CollapseSix" aria-expanded="false" class="collapse-icon collapsed panel-header-link" data-toggle="collapse" data-parent="#accordion03" href="#accordion03CollapseSix" role="button">
 					Collapsible Group Item #6
-
 					<span class="collapse-icon-closed">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-right">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-right" />
 						</svg>
 					</span>
-
 					<span class="collapse-icon-open">
-						<svg class="lexicon-icon">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-down">
 							<use xlink:href="/vendor/lexicon/icons.svg#angle-down" />
 						</svg>
 					</span>
