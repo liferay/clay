@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="basic-form-elements">
 
 ### Basic Form Elements
 
@@ -58,7 +58,7 @@ weight: 100
 </article>
 
 
-<article id="2">
+<article id="checkboxes">
 
 ### Checkboxes
 
@@ -136,7 +136,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="radio">
 
 ### Radio
 
@@ -208,7 +208,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="select-element">
 
 ### Select Element
 
@@ -262,7 +262,7 @@ weight: 100
 </article>
 
 
-<article id="5">
+<article id="file-upload">
 
 ### File Upload
 
@@ -279,7 +279,7 @@ weight: 100
 </article>
 
 
-<article id="6">
+<article id="disabled-inputs">
 
 ### Disabled Inputs
 
@@ -356,7 +356,7 @@ weight: 100
 </article>
 
 
-<article id="7">
+<article id="disabled-fieldset">
 
 ### Disabled Fieldset
 
@@ -417,7 +417,7 @@ weight: 100
 </article>
 
 
-<article id="8">
+<article id="read-only-states">
 
 ### Read Only States
 
@@ -443,7 +443,7 @@ weight: 100
 </article>
 
 
-<article id="9">
+<article id="form-element-sizes">
 
 ### Form Element Sizes
 
@@ -476,7 +476,7 @@ weight: 100
 </article>
 
 
-<article id="10">
+<article id="form-group">
 
 ### Form Group
 
@@ -521,7 +521,7 @@ weight: 100
 </article>
 
 
-<article id="11">
+<article id="form-inline">
 
 ### Form Inline
 
@@ -544,7 +544,7 @@ weight: 100
 </article>
 
 
-<article id="12">
+<article id="form-inline-autofit">
 
 ### Form Inline Autofit
 
@@ -626,7 +626,7 @@ weight: 100
 </article>
 
 
-<article id="12">
+<article id="form-inline-autofit-2-columns">
 
 ### Form Inline Autofit 2 Columns
 
