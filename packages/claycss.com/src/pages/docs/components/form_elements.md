@@ -80,25 +80,23 @@ weight: 100
 			<span class="form-check-description">Disabled Check Box</span>
 		</label>
 	</div>
-	<div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
-				<span class="form-check-description">1</span>
-			</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
-				<span class="form-check-description">2</span>
-			</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
-				<span class="form-check-description">3</span>
-			</label>
-		</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
+			<span class="form-check-description">1</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
+			<span class="form-check-description">2</span>
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineCheckbox3" type="checkbox" value="option3">
+			<span class="form-check-description">3</span>
+		</label>
 	</div>
 </div>
 
@@ -137,6 +135,7 @@ weight: 100
 
 </article>
 
+
 <article id="3">
 
 ### Radio
@@ -159,22 +158,20 @@ weight: 100
 			<span class="form-check-description">Disabled Radio Button</span>
 		</label>
 	</div>
-	<div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
-			</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
-			</label>
-		</div>
-		<div class="form-check form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
-			</label>
-		</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions1" type="radio" value="option1"> 1
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions1" type="radio" value="option2"> 2
+		</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-check-label">
+			<input class="form-check-input" id="inlineRadio3" name="inlineRadioOptions1" type="radio" value="option3"> 3
+		</label>
 	</div>
 </div>
 
@@ -209,6 +206,7 @@ weight: 100
 ```
 
 </article>
+
 
 <article id="4">
 
@@ -247,6 +245,7 @@ weight: 100
 	<option>Sample 3</option>
 	<option>Sample 4</option>
 </select>
+
 <label for="multipleSelectOptionsSelectElement">Select Element with Multiple Select Options</label>
 <select class="form-control" id="multipleSelectOptionsSelectElement" multiple>
 	<option>Sample 1</option>
@@ -262,12 +261,13 @@ weight: 100
 
 </article>
 
+
 <article id="5">
 
 ### File Upload
 
 <div class="clay-site-form-container">
-	<label class="sr-only">FILE UPLOAD</label>
+	<label class="sr-only" for="inputFile">FILE UPLOAD</label>
 	<input id="inputFile" type="file">
 </div>
 
@@ -307,7 +307,7 @@ weight: 100
 			<option>Sample 4</option>
 		</select>
 	</div>
-	<div>
+	<div class="form-group">
 		<label class="disabled" for="disabledSelectElementMulti">Select Element with Multiple Select Options</label>
 		<select class="form-control" disabled id="disabledSelectElementMulti" multiple>
 			<option>Sample 1</option>
@@ -481,28 +481,6 @@ weight: 100
 ### Form Group
 
 <div class="clay-site-form-container">
-	<form>
-		<div class="form-group">
-			<label for="firstNameInput">First Name</label>
-			<input class="form-control" id="firstNameInput" placeholder="First Name" type="text">
-		</div>
-		<div class="form-group">
-			<label for="lastNameInput">Last Name</label>
-			<input class="form-control" id="lastNameInput" placeholder="Last Name" type="text">
-		</div>
-		<div class="form-group">
-			<label for="address1Input">Address 1</label>
-			<input class="form-control" id="address1Input" placeholder="Address 1" type="text">
-		</div>
-		<div class="form-group">
-			<label for="address2Input">Address 2</label>
-			<input class="form-control" id="address2Input" placeholder="Address 2" type="text">
-		</div>
-	</form>
-</div>
-
-```xml
-<form>
 	<div class="form-group">
 		<label for="firstNameInput">First Name</label>
 		<input class="form-control" id="firstNameInput" placeholder="First Name" type="text">
@@ -519,7 +497,25 @@ weight: 100
 		<label for="address2Input">Address 2</label>
 		<input class="form-control" id="address2Input" placeholder="Address 2" type="text">
 	</div>
-</form>
+</div>
+
+```xml
+<div class="form-group">
+	<label for="firstNameInput">First Name</label>
+	<input class="form-control" id="firstNameInput" placeholder="First Name" type="text">
+</div>
+<div class="form-group">
+	<label for="lastNameInput">Last Name</label>
+	<input class="form-control" id="lastNameInput" placeholder="Last Name" type="text">
+</div>
+<div class="form-group">
+	<label for="address1Input">Address 1</label>
+	<input class="form-control" id="address1Input" placeholder="Address 1" type="text">
+</div>
+<div class="form-group">
+	<label for="address2Input">Address 2</label>
+	<input class="form-control" id="address2Input" placeholder="Address 2" type="text">
+</div>
 ```
 
 </article>
@@ -530,23 +526,19 @@ weight: 100
 ### Form Inline
 
 <div class="clay-site-form-container">
-	<form>
-		<div class="form-inline">
-			<label for="formInlineInput">Form Inline</label>
-			<input class="form-control" id="formInlineInput" type="text">
-			<button class="btn btn-primary" type="submit">Submit</button>
-		</div>
-	</form>
-</div>
-
-```xml
-<form>
 	<div class="form-inline">
 		<label for="formInlineInput">Form Inline</label>
 		<input class="form-control" id="formInlineInput" type="text">
 		<button class="btn btn-primary" type="submit">Submit</button>
 	</div>
-</form>
+</div>
+
+```xml
+<div class="form-inline">
+	<label for="formInlineInput">Form Inline</label>
+	<input class="form-control" id="formInlineInput" type="text">
+	<button class="btn btn-primary" type="submit">Submit</button>
+</div>
 ```
 
 </article>
@@ -559,61 +551,59 @@ weight: 100
 > Equally spaced form inputs. To set a fixed width use `flex-grow: 0; flex-basis: 200px;` on `.form-inline-group` or any direct descendant of `.form-inline-autofit`.
 
 <div class="clay-site-form-container">
-	<form>
-		<div class="form-group form-inline form-inline-autofit">
-			<div class="form-inline-group">
-				<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
-				<input class="form-control" id="formInlineAutofitTextInput1" type="text">
-			</div>
-			<div class="form-inline-group">
-				<label for="formInlineAutofitSelectElement1">Select Element</label>
-				<select class="form-control" id="formInlineAutofitSelectElement1">
-					<option>Option 1</option>
-					<option>Option 2</option>
-					<option>Option 3</option>
-				</select>
-			</div>
+	<div class="form-group form-inline form-inline-autofit">
+		<div class="form-inline-group">
+			<label for="formInlineAutofitTextInput1">Form Inline Autofit</label>
+			<input class="form-control" id="formInlineAutofitTextInput1" type="text">
 		</div>
-		<div class="form-group form-inline form-inline-autofit">
-			<div class="form-inline-group">
-				<label for="formInlineAutofitTextInput2">First Name</label>
-				<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
-			</div>
-			<div class="form-inline-group">
-				<label for="formInlineAutofitLastName">Last Name</label>
-				<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text">
-			</div>
+		<div class="form-inline-group">
+			<label for="formInlineAutofitSelectElement1">Select Element</label>
+			<select class="form-control" id="formInlineAutofitSelectElement1">
+				<option>Option 1</option>
+				<option>Option 2</option>
+				<option>Option 3</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group form-inline form-inline-autofit">
+		<div class="form-inline-group">
+			<label for="formInlineAutofitTextInput2">First Name</label>
+			<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
+		</div>
+		<div class="form-inline-group">
+			<label for="formInlineAutofitLastName">Last Name</label>
+			<input class="form-control" id="formInlineAutofitLastName" placeholder="Last Name" type="text">
+		</div>
+		<div class="input-group">
+			<div class="input-group-addon">$</div>
+			<input class="form-control" id="exampleInputAmount" placeholder="Amount">
+			<div class="input-group-addon">.00</div>
+		</div>
+	</div>
+	<div class="form-group form-inline form-inline-autofit">
+		<label for="formInlineAutofitCity">City</label>
+		<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
+		<select class="form-control">
+			<option>AL</option>
+			<option>CA</option>
+			<option>FL</option>
+			<option>HI</option>
+			<option>NV</option>
+			<option>WA</option>
+		</select>
+		<input class="form-control" placeholder="Zip" type="text">
+		<div class="form-inline-group">
+			<label for="formInlineAutofitDonation">Donation</label>
 			<div class="input-group">
 				<div class="input-group-addon">$</div>
-				<input class="form-control" id="exampleInputAmount" placeholder="Amount">
+				<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
 				<div class="input-group-addon">.00</div>
 			</div>
 		</div>
-		<div class="form-group form-inline form-inline-autofit">
-			<label for="formInlineAutofitCity">City</label>
-			<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
-			<select class="form-control">
-				<option>AL</option>
-				<option>CA</option>
-				<option>FL</option>
-				<option>HI</option>
-				<option>NV</option>
-				<option>WA</option>
-			</select>
-			<input class="form-control" placeholder="Zip" type="text">
-			<div class="form-inline-group">
-				<label for="formInlineAutofitDonation">Donation</label>
-				<div class="input-group">
-					<div class="input-group-addon">$</div>
-					<input class="form-control" id="formInlineAutofitDonation" placeholder="Amount">
-					<div class="input-group-addon">.00</div>
-				</div>
-			</div>
-		</div>
-		<button class="btn btn-primary" type="submit">Submit</button>
-		&nbsp;
-		<a class="btn btn-danger" href="#1">Clear</a>
-	</form>
+	</div>
+	<button class="btn btn-primary" type="submit">Submit</button>
+	&nbsp;
+	<a class="btn btn-danger" href="#1">Clear</a>
 </div>
 
 ```xml
@@ -656,9 +646,9 @@ weight: 100
 	<form class="my-custom-form">
 		<div class="form-group form-inline form-inline-autofit">
 			<label>Name</label>
-			<input class="form-control" placeholder="First" type="text">
-			<input class="form-control" placeholder="Middle" type="text">
-			<input class="form-control" placeholder="Last" type="text">
+			<input aria-label="First Name" class="form-control" placeholder="First" type="text">
+			<input aria-label="Middle Name" class="form-control" placeholder="Middle" type="text">
+			<input aria-label="Last Name" class="form-control" placeholder="Last" type="text">
 		</div>
 		<div class="form-group form-inline form-inline-autofit">
 			<label for="formInlineAutofitCustomAddress1">Address 1</label>
