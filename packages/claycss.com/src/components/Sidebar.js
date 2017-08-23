@@ -3,6 +3,7 @@
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import Toggler from 'metal-toggler';
+import { Storage, LocalStorageMechanism } from 'metal-storage';
 
 import templates from './Sidebar.soy';
 
@@ -14,18 +15,49 @@ class Sidebar extends Component {
 			content: '.sidebar-toggler-content',
 			header: '.sidebar-toggler'
 		});
+
+		this.createStorage_();
+
+		this.setAtlasFromStorage_();
 	}
 
-	handleThemeChange_(event) {
+	createStorage_() {
+		this.mechanism = new LocalStorageMechanism();
+
+		this.storage = new Storage(this.mechanism);
+	}
+
+	handleThemeChange_({target}) {
+		this.storage.set('atlas', target.checked);
+
+		this.atlas = target.checked;
+	}
+
+	setAtlas_(value) {
 		const linkTag = document.getElementById('mainCssLink');
 
 		let href = '/styles/main.css';
 
-		if (!event.target.checked) {
+		if (!value) {
 			href = '/styles/base.css';
 		}
 
-		linkTag.setAttribute('href', href);
+		if (linkTag.getAttribute('href') !== href) {
+			linkTag.setAttribute('href', href);
+		}
+
+		return value;
+	}
+
+	setAtlasFromStorage_() {
+		this.atlas = this.storage.get('atlas');
+	}
+};
+
+Sidebar.STATE = {
+	atlas: {
+		value: true,
+		setter: 'setAtlas_'
 	}
 };
 
