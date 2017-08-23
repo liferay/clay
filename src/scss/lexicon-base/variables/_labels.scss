@@ -37,7 +37,7 @@ $label-border-width: 1px !default;
 
 // Label Variants
 
-$label-primary-bg: null !default;
+$label-primary-bg: #FFF !default;
 $label-primary-hover-bg: null !default;
 $label-primary-border-color: map-get($theme-colors, primary) !default;
 $label-primary-hover-border-color: darken($label-primary-border-color, 20%) !default;
@@ -46,7 +46,7 @@ $label-primary-hover-color: darken($label-primary-color, 20%) !default;
 $label-primary-link-color: $label-primary-color !default;
 $label-primary-link-hover-color: $label-primary-hover-color !default;
 
-$label-secondary-bg: null !default;
+$label-secondary-bg: #FFF !default;
 $label-secondary-hover-bg: null !default;
 $label-secondary-border-color: map-get($theme-colors, secondary) !default;
 $label-secondary-hover-border-color: darken($label-secondary-border-color, 20%) !default;
@@ -55,7 +55,7 @@ $label-secondary-hover-color: darken($label-secondary-color, 20%) !default;
 $label-secondary-link-color: $label-secondary-color !default;
 $label-secondary-link-hover-color: $label-secondary-hover-color !default;
 
-$label-success-bg: null !default;
+$label-success-bg: #FFF !default;
 $label-success-hover-bg: null !default;
 $label-success-border-color: map-get($theme-colors, success) !default;
 $label-success-hover-border-color: darken($label-success-border-color, 20%) !default;
@@ -64,7 +64,7 @@ $label-success-hover-color: darken($label-success-color, 20%) !default;
 $label-success-link-color: $label-success-color !default;
 $label-success-link-hover-color: $label-success-hover-color !default;
 
-$label-info-bg: null !default;
+$label-info-bg: #FFF !default;
 $label-info-hover-bg: null !default;
 $label-info-border-color: map-get($theme-colors, info) !default;
 $label-info-hover-border-color: darken($label-info-border-color, 20%) !default;
@@ -73,7 +73,7 @@ $label-info-hover-color: darken($label-info-color, 20%) !default;
 $label-info-link-color: $label-info-color !default;
 $label-info-link-hover-color: $label-info-hover-color !default;
 
-$label-warning-bg: null !default;
+$label-warning-bg: #FFF !default;
 $label-warning-hover-bg: null !default;
 $label-warning-border-color: map-get($theme-colors, warning) !default;
 $label-warning-hover-border-color: darken($label-warning-border-color, 20%) !default;
@@ -82,7 +82,7 @@ $label-warning-hover-color: darken($label-warning-color, 20%) !default;
 $label-warning-link-color: $label-warning-color !default;
 $label-warning-link-hover-color: $label-warning-hover-color !default;
 
-$label-danger-bg: null !default;
+$label-danger-bg: #FFF !default;
 $label-danger-hover-bg: null !default;
 $label-danger-border-color: map-get($theme-colors, danger) !default;
 $label-danger-hover-border-color: darken($label-danger-border-color, 20%) !default;
@@ -100,7 +100,7 @@ $label-light-hover-color: darken($label-light-color, 20%) !default;
 $label-light-link-color: $label-light-color !default;
 $label-light-link-hover-color: $label-light-hover-color !default;
 
-$label-dark-bg: null !default;
+$label-dark-bg: #FFF !default;
 $label-dark-hover-bg: null !default;
 $label-dark-border-color: map-get($theme-colors, dark) !default;
 $label-dark-hover-border-color: darken($label-dark-border-color, 20%) !default;
