@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="button-group">
 
 ### Button Group
 
@@ -25,7 +25,8 @@ weight: 100
 
 </article>
 
-<article id="2">
+
+<article id="split-button-dropdowns">
 
 ### Split Button Dropdowns
 
@@ -191,7 +192,8 @@ weight: 100
 
 </article>
 
-<article id="3">
+
+<article id="split-button-dropups">
 
 ### Split Button Dropups
 
@@ -261,7 +263,8 @@ weight: 100
 
 </article>
 
-<article id="4">
+
+<article id="vertical-button-group">
 
 ### Vertical Button Group
 
@@ -351,7 +354,8 @@ weight: 100
 
 </article>
 
-<article id="5">
+
+<article id="button-toolbar">
 
 ### Button Toolbar
 
@@ -401,7 +405,8 @@ weight: 100
 
 </article>
 
-<article id="6">
+
+<article id="button-group-sizes">
 
 ### Button Group Sizes
 
