@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="lexicon-icons">
 
 ### Lexicon Icons
 
@@ -17,7 +17,7 @@ weight: 100
 
 ```xml
 <svg class="lexicon-icon">
-    <use xlink:href="path/to/icons.svg#add-column" />
+	<use xlink:href="path/to/icons.svg#add-column" />
 </svg>
 ```
 
@@ -39,7 +39,7 @@ weight: 100
 </article>
 
 
-<article id="2">
+<article id="language-flags">
 
 ### Language Flags
 
@@ -64,7 +64,8 @@ weight: 100
 
 </article>
 
-<article id="3">
+
+<article id="svg-icons-as-background-images">
 
 ### SVG Icons as Background Images
 
@@ -82,7 +83,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="svg-url">
 
 ### Svg-url()
 
@@ -97,7 +98,7 @@ weight: 100
 </article>
 
 
-<article id="5">
+<article id="why-do-we-use-svg">
 
 ### Why do we use SVG?
 
