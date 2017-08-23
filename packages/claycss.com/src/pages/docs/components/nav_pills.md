@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="nav-pills">
 
 ### Nav Pills
 
@@ -60,7 +60,7 @@ weight: 100
 </article>
 
 
-<article id="2">
+<article id="nav-pills-justified">
 
 ### Nav Pills Justified
 
@@ -115,7 +115,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="vertical-nav-pills">
 
 ### Vertical Nav Pills
 
@@ -182,7 +182,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="vertical-nested-nav-pills">
 
 ### Vertical Nested Nav Pills
 
@@ -288,16 +288,4 @@ weight: 100
 </ul>
 ```
 
-</article>
-
-
-<article id="5">
-</article>
-
-
-<article id="">
-</article>
-
-
-<article id="">
 </article>
