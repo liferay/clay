@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="input-validation-states-html5">
 
 ### Input Validation States (HTML5)
 
@@ -185,7 +185,7 @@ weight: 100
 </article>
 
 
-<article id="2">
+<article id="input-validation-states-non-html5">
 
 ### Input Validation States (Non HTML5)
 
@@ -268,7 +268,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="custom-checkbox-and-radio-validation-states">
 
 ### Custom Checkbox and Radio Validation States
 
@@ -364,7 +364,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="checkbox-and-radio-validation-states">
 
 ### Checkbox and Radio Validation States
 
@@ -460,7 +460,7 @@ weight: 100
 </article>
 
 
-<article id="">
+<article id="select-element-validation-states">
 
 ### Select Element Validation States
 
@@ -537,7 +537,7 @@ weight: 100
 </article>
 
 
-<article id="">
+<article id="multiple-select-element-validation-states">
 
 ### Multiple Select Element Validation States
 
@@ -614,7 +614,7 @@ weight: 100
 </article>
 
 
-<article id="">
+<article id="readonly-validation-states">
 
 ### Readonly Validation States
 
@@ -673,16 +673,4 @@ weight: 100
 </div>
 ```
 
-</article>
-
-
-<article id="">
-</article>
-
-
-<article id="">
-</article>
-
-
-<article id="">
 </article>
