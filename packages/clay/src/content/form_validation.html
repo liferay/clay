@@ -25,13 +25,13 @@ section: Components
 		<form class="was-validated">
 			<div class="form-group form-inline form-inline-autofit">
 				<div class="form-inline-group">
-					<label>
+					<label for="formValidationFirstName">
 						First Name
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 						</svg>
 					</label>
-					<input class="form-control" placeholder="First Name" required type="text" value="Space">
+					<input class="form-control" id="formValidationFirstName" placeholder="First Name" required type="text" value="Space">
 					<div class="invalid-feedback">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
@@ -40,13 +40,13 @@ section: Components
 					</div>
 				</div>
 				<div class="form-inline-group">
-					<label>
+					<label for="formValidationLastName">
 						Last Name
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 						</svg>
 					</label>
-					<input class="form-control" placeholder="Last Name" required type="text" value="Program">
+					<input class="form-control" id="formValidationLastName" placeholder="Last Name" required type="text" value="Program">
 					<div class="invalid-feedback">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
@@ -57,13 +57,13 @@ section: Components
 			</div>
 			<div class="form-group form-inline form-inline-autofit">
 				<div class="form-inline-group">
-					<label>
+					<label for="formValidationCity">
 						City
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 						</svg>
 					</label>
-					<input class="form-control" placeholder="City" required type="text">
+					<input class="form-control" id="formValidationCity" placeholder="City" required type="text">
 					<div class="invalid-feedback">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
@@ -72,13 +72,13 @@ section: Components
 					</div>
 				</div>
 				<div class="form-inline-group">
-					<label>
+					<label for="formValidationState">
 						State
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 						</svg>
 					</label>
-					<input class="form-control" placeholder="State" required type="text">
+					<input class="form-control" id="formValidationState" placeholder="State" required type="text">
 					<div class="invalid-feedback">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
@@ -87,13 +87,13 @@ section: Components
 					</div>
 				</div>
 				<div class="form-inline-group">
-					<label>
+					<label for="formValidationZipCode">
 						Zip Code
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 						</svg>
 					</label>
-					<input class="form-control" placeholder="Zip" required type="text">
+					<input class="form-control" id="formValidationZipCode" placeholder="Zip" required type="text">
 					<div class="invalid-feedback">
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 							<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
@@ -102,17 +102,14 @@ section: Components
 					</div>
 				</div>
 			</div>
-		</form>
-
-		<form class="was-validated">
 			<div class="form-group">
-				<label for="formPassword">
+				<label for="formValidationPassword">
 					Password
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 					</svg>
 				</label>
-				<input class="form-control" id="formPassword" minlength="6" placeholder="Password" required type="password">
+				<input class="form-control" id="formValidationPassword" minlength="6" placeholder="Password" required type="password">
 				<div class="invalid-feedback">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#exclamation-full" />
@@ -190,7 +187,6 @@ section: Components
 				<div class="form-text">This is form-text.</div>
 			</div>
 		</div>
-
 		<div class="form-group has-success">
 			<label for="inputSuccess1">
 				has-success
@@ -205,7 +201,6 @@ section: Components
 				<div class="form-text">This is form-text.</div>
 			</div>
 		</div>
-
 		<div class="form-group has-warning">
 			<label for="inputWarning1">
 				has-warning
@@ -220,7 +215,6 @@ section: Components
 				<div class="form-text">This is form-text.</div>
 			</div>
 		</div>
-
 		<div class="form-group has-error">
 			<label for="inputError1">
 				has-error
@@ -256,7 +250,6 @@ section: Components
 				</span>
 			</label>
 		</div>
-
 		<div class="has-warning">
 			<label class="custom-control custom-checkbox">
 				<input class="custom-control-input" type="checkbox">
@@ -269,7 +262,6 @@ section: Components
 				</span>
 			</label>
 		</div>
-
 		<div class="has-error">
 			<label class="custom-control custom-checkbox">
 				<input class="clay-site-custom-checkbox-indeterminate custom-control-input" type="checkbox">
@@ -283,7 +275,6 @@ section: Components
 			</label>
 		</div>
 	</div>
-
 	<div class="col-md-6">
 		<div class="has-success">
 			<label class="custom-control custom-radio">
@@ -326,7 +317,6 @@ section: Components
 				</label>
 			</div>
 		</div>
-
 		<div class="has-warning">
 			<div class="form-check">
 				<label class="form-check-label">
@@ -338,7 +328,6 @@ section: Components
 				</label>
 			</div>
 		</div>
-
 		<div class="has-error">
 			<div class="form-check">
 				<label class="form-check-label">
@@ -351,7 +340,6 @@ section: Components
 			</div>
 		</div>
 	</div>
-
 	<div class="col-md-6">
 		<div class="has-success">
 			<div class="form-check">
@@ -361,7 +349,6 @@ section: Components
 				</label>
 			</div>
 		</div>
-
 		<div class="has-warning">
 			<div class="form-check">
 				<label class="form-check-label">
@@ -370,7 +357,6 @@ section: Components
 				</label>
 			</div>
 		</div>
-
 		<div class="has-error">
 			<div class="form-check">
 				<label class="form-check-label">
@@ -384,17 +370,17 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Select Box Validation States</h3>
+		<h3>Select Element Validation States</h3>
 
 		<div class="has-success">
 			<div class="form-group">
-				<label>
-					Select Box with Success
+				<label for="selectElementSuccess">
+					Select Element with Success
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 					</svg>
 				</label>
-				<select class="form-control">
+				<select class="form-control" id="selectElementSuccess">
 					<option>Sample 1</option>
 					<option>Sample 2</option>
 					<option>Sample 3</option>
@@ -402,16 +388,15 @@ section: Components
 				</select>
 			</div>
 		</div>
-
 		<div class="has-warning">
 			<div class="form-group">
-				<label>
+				<label for="selectElementWarning">
 					Select Box with Warning
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 					</svg>
 				</label>
-				<select class="form-control">
+				<select class="form-control" id="selectElementWarning">
 					<option>Sample 1</option>
 					<option>Sample 2</option>
 					<option>Sample 3</option>
@@ -419,16 +404,15 @@ section: Components
 				</select>
 			</div>
 		</div>
-
 		<div class="has-error">
 			<div class="form-group">
-				<label>
+				<label for="selectElementError">
 					Select Box with Error
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 					</svg>
 				</label>
-				<select class="form-control">
+				<select class="form-control" id="selectElementError">
 					<option>Sample 1</option>
 					<option>Sample 2</option>
 					<option>Sample 3</option>
@@ -441,17 +425,17 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Multiple Select Box Validation States</h3>
+		<h3>Multiple Select Element Validation States</h3>
 
 		<div class="has-success">
 			<div class="form-group">
-				<label>
-					Multiple Select Box with Success
+				<label for="multipleSelectElementSuccess">
+					Multiple Select Element with Success
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 					</svg>
 				</label>
-				<select class="form-control" multiple>
+				<select class="form-control" id="multipleSelectElementSuccess" multiple>
 					<option>Sample 1</option>
 					<option>Sample 2</option>
 					<option>Sample 3</option>
@@ -459,16 +443,15 @@ section: Components
 				</select>
 			</div>
 		</div>
-
 		<div class="has-warning">
 			<div class="form-group">
-				<label>
-					Multiple Select Box with Warning
+				<label for="multipleSelectElementWarning">
+					Multiple Select Element with Warning
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 					</svg>
 				</label>
-				<select class="form-control" multiple>
+				<select class="form-control" id="multipleSelectElementWarning" multiple>
 					<option>Sample 1</option>
 					<option>Sample 2</option>
 					<option>Sample 3</option>
@@ -476,16 +459,15 @@ section: Components
 				</select>
 			</div>
 		</div>
-
 		<div class="has-error">
 			<div class="form-group">
-				<label>
-					Multiple Select Box with Error
+				<label for="multipleSelectElementError">
+					Multiple Select Element with Error
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk reference-mark">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#asterisk" />
 					</svg>
 				</label>
-				<select class="form-control" multiple>
+				<select class="form-control" id="multipleSelectElementError" multiple>
 					<option>Sample 1</option>
 					<option>Sample 2</option>
 					<option>Sample 3</option>
@@ -502,43 +484,38 @@ section: Components
 
 		<div class="has-success">
 			<div class="form-group">
-				<label>Text Input (Read Only) with Success</label>
-				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+				<label for="readonlySuccess">Text Input (Read Only) with Success</label>
+				<input class="form-control" id="readonlySuccess" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 			</div>
 		</div>
-
 		<div class="has-warning">
 			<div class="form-group">
-				<label>Text Input (Read Only) with Warning</label>
-				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+				<label for="readonlyWarning">Text Input (Read Only) with Warning</label>
+				<input class="form-control" id="readonlyWarning" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 			</div>
 		</div>
-
 		<div class="has-error">
 			<div class="form-group">
-				<label>Text Input (Read Only) with Error</label>
-				<input class="form-control" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
+				<label for="readonlyError">Text Input (Read Only) with Error</label>
+				<input class="form-control" id="readonlyError" placeholder="Placeholder" readonly type="text" value="Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java.">
 			</div>
 		</div>
-
 		<div class="has-success">
 			<div class="form-group">
-				<label>Textarea (Read Only) with Success</label>
-				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
+				<label for="readonlyTextareaSuccess">Textarea (Read Only) with Success</label>
+				<textarea class="form-control" id="readonlyTextareaSuccess" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 			</div>
 		</div>
-
 		<div class="has-warning">
 			<div class="form-group">
-				<label>Textarea (Read Only) with Warning</label>
-				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
+				<label for="readonlyTextareaWarning">Textarea (Read Only) with Warning</label>
+				<textarea class="form-control" id="readonlyTextareaWarning" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 			</div>
 		</div>
-
 		<div class="has-error">
 			<div class="form-group">
-				<label>Textarea (Read Only) with Error</label>
-				<textarea class="form-control" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
+				<label for="readonlyTextareaError">Textarea (Read Only) with Error</label>
+				<textarea class="form-control" id="readonlyTextareaError" placeholder="Placeholder" readonly>Plunger pot, extra siphon latte, as americano aromatic roast cultivar cup cup frappuccino. To go, strong, half and half foam single origin, cultivar affogato black grounds shop ut plunger pot. Con panna aroma, pumpkin spice to go, wings, aromatic single shot, aged single shot to go extraction java. Percolator americano at cultivar grinder est java percolator plunger pot shop con panna.</textarea>
 			</div>
 		</div>
 	</div>
