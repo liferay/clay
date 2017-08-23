@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="image-aspect-ratios">
 
 ### Image Aspect Ratios
 
@@ -16,7 +16,7 @@ weight: 100
 </article>
 
 
-<article id="2">
+<article id="aspect-ratio-item-fluid">
 
 ### Aspect Ratio Item Fluid
 
@@ -82,7 +82,7 @@ weight: 100
 </article>
 
 
-<article id="3">
+<article id="aspect-ratio-item-vertical-fluid">
 
 ### Aspect Ratio Item Vertical Fluid
 
@@ -144,7 +144,7 @@ weight: 100
 </article>
 
 
-<article id="4">
+<article id="aspect-ratio-item">
 
 ### Aspect Ratio Item
 
@@ -167,7 +167,7 @@ weight: 100
 </article>
 
 
-<article id="5">
+<article id="aspect-ratio-item-helper-classes">
 
 ### Aspect Ratio Item Helper Classes
 
@@ -265,7 +265,7 @@ weight: 100
 </article>
 
 
-<article id="6">
+<article id="aspect-ratio-background-images">
 
 ### Aspect Ratio Background Images
 
@@ -293,7 +293,7 @@ weight: 100
 </article>
 
 
-<article id="7">
+<article id="aspect-ratio-with-other-things">
 
 ### Aspect Ratio with Other Things
 
