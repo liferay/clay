@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="button">
 
 ### Button
 
@@ -124,7 +124,8 @@ weight: 100
 
 </article>
 
-<article id="2">
+
+<article id="button-outline">
 
 ### Button Outline
 
@@ -227,7 +228,8 @@ weight: 100
 
 </article>
 
-<article id="3">
+
+<article id="button-monospaced">
 
 ### Button Monospaced
 
@@ -255,7 +257,8 @@ weight: 100
 
 </article>
 
-<article id="4">
+
+<article id="action-button">
 
 ### Action Button
 
@@ -343,7 +346,8 @@ weight: 100
 
 </article>
 
-<article id="5">
+
+<article id="button-dropdown">
 
 ### Button Dropdown
 
@@ -405,7 +409,8 @@ weight: 100
 
 </article>
 
-<article id="6">
+
+<article id="sizes">
 
 ### Sizes
 
