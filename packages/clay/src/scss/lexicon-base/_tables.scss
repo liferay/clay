@@ -107,8 +107,13 @@ th {
 
 	tbody,
 	tfoot {
+		th {
+			position: relative;
+		}
+
 		td {
 			box-shadow: $table-list-row-box-shadow;
+			position: relative;
 		}
 
 		> tr {
@@ -121,6 +126,39 @@ th {
 
 		> tr.active td {
 			box-shadow: $table-list-row-active-box-shadow;
+		}
+	}
+
+	.dropdown-action {
+		position: static;
+
+		.dropdown-menu-horizontal {
+			bottom: $table-list-row-border-bottom-width !important;
+			margin-right: -3px;
+			padding-top: $table-list-row-border-bottom-width;
+			top: 0 !important;
+			transform: none !important;
+		}
+	}
+
+	.table-active {
+		.dropdown-action .dropdown-menu-horizontal {
+			background-color: $table-list-active-bg;
+		}
+	}
+}
+
+.table-list.table-striped {
+	tbody tr:nth-of-type(odd) {
+		&,
+		.dropdown-action .dropdown-menu-horizontal {
+			background-color: $table-list-accent-bg;
+		}
+
+		&.table-active {
+			.dropdown-action .dropdown-menu-horizontal {
+				background-color: $table-list-active-bg;
+			}
 		}
 	}
 }
@@ -141,15 +179,16 @@ th {
 		@include hover {
 			background-color: $table-list-active-bg;
 
+			> th,
 			> td,
-			> th {
+			.dropdown-action .dropdown-menu-horizontal {
 				background-color: $table-list-active-bg;
 			}
 		}
 	}
 }
 
-.table-active {
+.table-list .table-active {
 	&,
 	> th,
 	> td {
