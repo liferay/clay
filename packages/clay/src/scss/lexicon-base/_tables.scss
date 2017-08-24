@@ -185,21 +185,6 @@ th {
 		}
 	}
 
-	tbody,
-	tfoot {
-		> tr {
-			@include hover {
-				td {
-					box-shadow: $table-list-row-hover-box-shadow;
-				}
-			}
-		}
-
-		> tr.active td {
-			box-shadow: $table-list-row-active-box-shadow;
-		}
-	}
-
 	.dropdown-action {
 		position: static;
 
