@@ -1188,23 +1188,23 @@ pre code {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
-  background-color: transparent;
+  background-color: #FFF;
 }
 
 .table th,
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #ECEEEF;
+  border-top: 1px solid #e8e8ec;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #ECEEEF;
+  border-bottom: 2px solid #e8e8ec;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #ECEEEF;
+  border-top: 2px solid #e8e8ec;
 }
 
 .table .table {
@@ -1217,12 +1217,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #ECEEEF;
+  border: 1px solid #e8e8ec;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #ECEEEF;
+  border: 1px solid #e8e8ec;
 }
 
 .table-bordered thead th,
@@ -1231,11 +1231,11 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: #f2fbff;
+  background-color: #f9f9fa;
 }
 
 .table-hover tbody tr:hover {
-  background-color: #FCFEFF;
+  background-color: #f5f8ff;
 }
 
 .table-primary,
@@ -1361,16 +1361,16 @@ pre code {
 .table-active,
 .table-active > th,
 .table-active > td {
-  background-color: #FCFEFF;
+  background-color: #f5f8ff;
 }
 
 .table-hover .table-active:hover {
-  background-color: #e3f6ff;
+  background-color: #dce7fe;
 }
 
 .table-hover .table-active:hover > td,
 .table-hover .table-active:hover > th {
-  background-color: #e3f6ff;
+  background-color: #dce7fe;
 }
 
 .thead-inverse th {
@@ -1379,7 +1379,7 @@ pre code {
 }
 
 .thead-default th {
-  color: #495057;
+  color: #6B6C7E;
   background-color: #ECEEEF;
 }
 
@@ -12798,7 +12798,8 @@ th {
 }
 
 .table th {
-  font-size: 14px;
+  color: #6B6C7E;
+  font-size: 0.875rem;
   font-weight: 500;
   height: 36px;
 }
@@ -12896,60 +12897,157 @@ th {
 }
 
 .table-list {
-  color: #6B6C7E;
+  background-color: #FFF;
+  border-radius: 6px;
+  color: #272833;
+  margin-bottom: 1.0625rem;
+}
+
+.table-list thead:first-child tr:first-child th:first-child,
+.table-list thead:first-child tr:first-child td:first-child,
+.table-list tbody:first-child tr:first-child th:first-child,
+.table-list tbody:first-child tr:first-child td:first-child,
+.table-list tfoot:first-child tr:first-child th:first-child,
+.table-list tfoot:first-child tr:first-child td:first-child {
+  border-top-left-radius: 6px;
+}
+
+.table-list thead:first-child tr:first-child th:last-child,
+.table-list thead:first-child tr:first-child td:last-child,
+.table-list tbody:first-child tr:first-child th:last-child,
+.table-list tbody:first-child tr:first-child td:last-child,
+.table-list tfoot:first-child tr:first-child th:last-child,
+.table-list tfoot:first-child tr:first-child td:last-child {
+  border-top-right-radius: 6px;
+}
+
+.table-list thead:last-child tr:last-child th:first-child,
+.table-list thead:last-child tr:last-child td:first-child,
+.table-list tbody:last-child tr:last-child th:first-child,
+.table-list tbody:last-child tr:last-child td:first-child,
+.table-list tfoot:last-child tr:last-child th:first-child,
+.table-list tfoot:last-child tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+.table-list thead:last-child tr:last-child th:last-child,
+.table-list thead:last-child tr:last-child td:last-child,
+.table-list tbody:last-child tr:last-child th:last-child,
+.table-list tbody:last-child tr:last-child td:last-child,
+.table-list tfoot:last-child tr:last-child th:last-child,
+.table-list tfoot:last-child tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
 }
 
 .table-list a {
   color: #6B6C7E;
 }
 
-.table-list thead td,
-.table-list thead th {
-  border-bottom-width: 0;
+.table-list th,
+.table-list td {
+  box-shadow: inset 0 0.0625rem #e8e8ec, 0 0.0625rem #e8e8ec;
+  padding-top: 0.8125rem;
+  position: relative;
 }
 
-.table-list tbody tr {
-  height: 72px;
+.table-list th:first-child,
+.table-list td:first-child {
+  box-shadow: inset 0 0.0625rem #e8e8ec, 0 0.0625rem #e8e8ec, inset 0.0625rem 0 #e8e8ec;
+  padding-left: 0.8125rem;
+  padding-top: 0.8125rem;
+}
+
+.table-list th:last-child,
+.table-list td:last-child {
+  box-shadow: inset 0 0.0625rem #e8e8ec, inset -0.0625rem 0 #e8e8ec, 0 0.0625rem #e8e8ec;
+  padding-right: 0.8125rem;
+  padding-top: 0.8125rem;
+}
+
+.table-list th:only-child,
+.table-list td:only-child {
+  box-shadow: inset 0 0.0625rem #e8e8ec, inset -0.0625rem 0 #e8e8ec, 0 0.0625rem #e8e8ec, inset 0.0625rem 0 #e8e8ec;
+  padding-left: 0.8125rem;
+  padding-right: 0.8125rem;
+  padding-top: 0.8125rem;
+}
+
+.table-list thead td,
+.table-list thead th {
+  border-width: 0;
+  font-weight: 400;
 }
 
 .table-list tbody td,
 .table-list tbody th,
 .table-list tfoot td,
 .table-list tfoot th {
-  background-color: #FFF;
-  border-top-width: 0;
+  border-width: 0;
   vertical-align: middle;
 }
 
-.table-list tbody td,
-.table-list tfoot td {
-  box-shadow: inset 0 -1px #ECEEEF;
+.table-list .dropdown-action {
+  position: static;
 }
 
-.table-list tbody > tr:hover td,
-.table-list tfoot > tr:hover td {
-  box-shadow: inset 0 -1px #ECEEEF;
+.table-list .dropdown-action .dropdown-menu-horizontal {
+  bottom: 0 !important;
+  margin-right: -3px;
+  top: 0.0625rem !important;
+  transform: none !important;
 }
 
-.table-list tbody > tr.active td,
-.table-list tfoot > tr.active td {
-  box-shadow: inset 0 -2px #1865FB;
+.table-list .table-active .dropdown-action .dropdown-menu-horizontal {
+  background-color: #f5f8ff;
 }
 
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: transparent;
+.table-list.table-bordered {
+  border-width: 0;
 }
 
-.table-striped tbody tr:nth-of-type(odd) td {
-  background-color: #f2fbff;
+.table-list.table-bordered th,
+.table-list.table-bordered td {
+  box-shadow: inset 0 0.0625rem #e8e8ec, inset -0.0625rem 0 #e8e8ec, 0 0.0625rem #e8e8ec, -0.03125rem 0.03125rem 0 0.03125rem #e8e8ec;
+  padding-right: 0.8125rem;
+  padding-top: 0.8125rem;
 }
 
-.table-hover tbody tr:hover {
-  background-color: transparent;
+.table-list.table-bordered th:first-child,
+.table-list.table-bordered td:first-child {
+  box-shadow: inset 0 0.0625rem #e8e8ec, inset -0.0625rem 0 #e8e8ec, 0 0.0625rem #e8e8ec, inset 0.0625rem 0 #e8e8ec;
+  padding-left: 0.8125rem;
+  padding-right: 0.8125rem;
+  padding-top: 0.8125rem;
 }
 
-.table-hover tbody tr:hover td {
-  background-color: #FCFEFF;
+.table-list.table-striped tbody tr:nth-of-type(odd),
+.table-list.table-striped tbody tr:nth-of-type(odd) .dropdown-action .dropdown-menu-horizontal {
+  background-color: #f9f9fa;
+}
+
+.table-list.table-striped tbody tr:nth-of-type(odd).table-active .dropdown-action .dropdown-menu-horizontal {
+  background-color: #f5f8ff;
+}
+
+.table-list.table-hover tbody tr:hover,
+.table-list.table-hover tbody tr:hover .dropdown-action .dropdown-menu-horizontal {
+  background-color: #f5f8ff;
+}
+
+.table-list.table-hover .table-active:hover {
+  background-color: #f5f8ff;
+}
+
+.table-list.table-hover .table-active:hover > th,
+.table-list.table-hover .table-active:hover > td,
+.table-list.table-hover .table-active:hover .dropdown-action .dropdown-menu-horizontal {
+  background-color: #f5f8ff;
+}
+
+.table-list .table-active,
+.table-list .table-active > th,
+.table-list .table-active > td {
+  background-color: #f5f8ff;
 }
 
 .table-autofit td,
@@ -12964,6 +13062,16 @@ th {
 .table-heading-nowrap thead td,
 .table-heading-nowrap thead th {
   white-space: nowrap;
+}
+
+.table .table-divider td,
+.table .table-divider th {
+  background-color: #FFF;
+  color: #6B6C7E;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  text-transform: uppercase;
 }
 
 .table-valign-bottom tbody td,
@@ -13755,11 +13863,13 @@ mark:before,
   outline: none;
 }
 
-.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu {
+.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu,
+.show-dropdown-action-on-active .table-active .dropdown-action .dropdown-menu {
   display: block;
 }
 
-.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu-horizontal {
+.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu-horizontal,
+.show-dropdown-action-on-active .table-active .dropdown-action .dropdown-menu-horizontal {
   display: flex;
 }
 
@@ -13799,8 +13909,8 @@ mark:before,
 
 .dropdown-menu-unstyled {
   border-radius: 0;
+  border-width: 0;
   box-shadow: none;
-  border-color: transparent;
 }
 
 .dropdown-menu-unstyled .dropdown-item:focus, .dropdown-menu-unstyled .dropdown-item:hover {
@@ -13840,6 +13950,7 @@ mark:before,
   right: auto !important;
   top: auto !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-top-right {
@@ -13850,6 +13961,7 @@ mark:before,
   right: 0 !important;
   top: auto !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-top-center {
@@ -13860,6 +13972,7 @@ mark:before,
   right: auto !important;
   top: auto !important;
   transform: translateX(-50%) !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-center {
@@ -13868,6 +13981,7 @@ mark:before,
   right: auto !important;
   top: 100% !important;
   transform: translateX(-50%) !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-left-side {
@@ -13878,6 +13992,7 @@ mark:before,
   right: 100% !important;
   top: 0 !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-left-side-bottom {
@@ -13888,6 +14003,7 @@ mark:before,
   right: 100% !important;
   top: auto !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-left-side-middle {
@@ -13898,6 +14014,7 @@ mark:before,
   right: 100% !important;
   top: 50% !important;
   transform: translate(0, -50%) !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-right-side {
@@ -13908,6 +14025,7 @@ mark:before,
   right: auto !important;
   top: 0 !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-right-side-bottom {
@@ -13918,6 +14036,7 @@ mark:before,
   right: auto !important;
   top: auto !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-right-side-middle {
@@ -13928,6 +14047,7 @@ mark:before,
   right: auto !important;
   top: 50% !important;
   transform: translate(0, -50%) !important;
+  will-change: auto !important;
 }
 
 .dropdown-full .dropdown-menu,

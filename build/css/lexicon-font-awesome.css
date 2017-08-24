@@ -11796,6 +11796,7 @@ th {
 }
 
 .table th {
+  color: #495057;
   height: 36px;
 }
 
@@ -11891,52 +11892,152 @@ th {
   border: 0;
 }
 
-.table-list thead td,
-.table-list thead th {
-  border-bottom-width: 0;
+.table-list {
+  background-color: #FFF;
+  border-radius: 6px;
+  margin-bottom: 1.0625rem;
 }
 
-.table-list tbody tr {
-  height: 55px;
+.table-list thead:first-child tr:first-child th:first-child,
+.table-list thead:first-child tr:first-child td:first-child,
+.table-list tbody:first-child tr:first-child th:first-child,
+.table-list tbody:first-child tr:first-child td:first-child,
+.table-list tfoot:first-child tr:first-child th:first-child,
+.table-list tfoot:first-child tr:first-child td:first-child {
+  border-top-left-radius: 6px;
+}
+
+.table-list thead:first-child tr:first-child th:last-child,
+.table-list thead:first-child tr:first-child td:last-child,
+.table-list tbody:first-child tr:first-child th:last-child,
+.table-list tbody:first-child tr:first-child td:last-child,
+.table-list tfoot:first-child tr:first-child th:last-child,
+.table-list tfoot:first-child tr:first-child td:last-child {
+  border-top-right-radius: 6px;
+}
+
+.table-list thead:last-child tr:last-child th:first-child,
+.table-list thead:last-child tr:last-child td:first-child,
+.table-list tbody:last-child tr:last-child th:first-child,
+.table-list tbody:last-child tr:last-child td:first-child,
+.table-list tfoot:last-child tr:last-child th:first-child,
+.table-list tfoot:last-child tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+.table-list thead:last-child tr:last-child th:last-child,
+.table-list thead:last-child tr:last-child td:last-child,
+.table-list tbody:last-child tr:last-child th:last-child,
+.table-list tbody:last-child tr:last-child td:last-child,
+.table-list tfoot:last-child tr:last-child th:last-child,
+.table-list tfoot:last-child tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+
+.table-list th,
+.table-list td {
+  box-shadow: inset 0 0.0625rem #e9ecef, 0 0.0625rem #e9ecef;
+  padding-top: 0.8125rem;
+  position: relative;
+}
+
+.table-list th:first-child,
+.table-list td:first-child {
+  box-shadow: inset 0 0.0625rem #e9ecef, 0 0.0625rem #e9ecef, inset 0.0625rem 0 #e9ecef;
+  padding-left: 0.8125rem;
+  padding-top: 0.8125rem;
+}
+
+.table-list th:last-child,
+.table-list td:last-child {
+  box-shadow: inset 0 0.0625rem #e9ecef, inset -0.0625rem 0 #e9ecef, 0 0.0625rem #e9ecef;
+  padding-right: 0.8125rem;
+  padding-top: 0.8125rem;
+}
+
+.table-list th:only-child,
+.table-list td:only-child {
+  box-shadow: inset 0 0.0625rem #e9ecef, inset -0.0625rem 0 #e9ecef, 0 0.0625rem #e9ecef, inset 0.0625rem 0 #e9ecef;
+  padding-left: 0.8125rem;
+  padding-right: 0.8125rem;
+  padding-top: 0.8125rem;
+}
+
+.table-list thead td,
+.table-list thead th {
+  border-width: 0;
 }
 
 .table-list tbody td,
 .table-list tbody th,
 .table-list tfoot td,
 .table-list tfoot th {
-  border-top-width: 0;
+  border-width: 0;
   vertical-align: middle;
 }
 
-.table-list tbody td,
-.table-list tfoot td {
-  box-shadow: inset 0 -1px #e9ecef;
+.table-list .dropdown-action {
+  position: static;
 }
 
-.table-list tbody > tr:hover td,
-.table-list tfoot > tr:hover td {
-  box-shadow: inset 0 -1px #e9ecef;
+.table-list .dropdown-action .dropdown-menu-horizontal {
+  bottom: 0 !important;
+  margin-right: -3px;
+  top: 0.0625rem !important;
+  transform: none !important;
 }
 
-.table-list tbody > tr.active td,
-.table-list tfoot > tr.active td {
-  box-shadow: inset 0 -1px #e9ecef;
+.table-list .table-active .dropdown-action .dropdown-menu-horizontal {
+  background-color: #DADADA;
 }
 
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: transparent;
+.table-list.table-bordered {
+  border-width: 0;
 }
 
-.table-striped tbody tr:nth-of-type(odd) td {
+.table-list.table-bordered th,
+.table-list.table-bordered td {
+  box-shadow: inset 0 0.0625rem #e9ecef, inset -0.0625rem 0 #e9ecef, 0 0.0625rem #e9ecef, -0.03125rem 0.03125rem 0 0.03125rem #e9ecef;
+  padding-right: 0.8125rem;
+  padding-top: 0.8125rem;
+}
+
+.table-list.table-bordered th:first-child,
+.table-list.table-bordered td:first-child {
+  box-shadow: inset 0 0.0625rem #e9ecef, inset -0.0625rem 0 #e9ecef, 0 0.0625rem #e9ecef, inset 0.0625rem 0 #e9ecef;
+  padding-left: 0.8125rem;
+  padding-right: 0.8125rem;
+  padding-top: 0.8125rem;
+}
+
+.table-list.table-striped tbody tr:nth-of-type(odd),
+.table-list.table-striped tbody tr:nth-of-type(odd) .dropdown-action .dropdown-menu-horizontal {
   background-color: #F2F2F2;
 }
 
-.table-hover tbody tr:hover {
-  background-color: transparent;
+.table-list.table-striped tbody tr:nth-of-type(odd).table-active .dropdown-action .dropdown-menu-horizontal {
+  background-color: #DADADA;
 }
 
-.table-hover tbody tr:hover td {
+.table-list.table-hover tbody tr:hover,
+.table-list.table-hover tbody tr:hover .dropdown-action .dropdown-menu-horizontal {
   background-color: #ECECEC;
+}
+
+.table-list.table-hover .table-active:hover {
+  background-color: #DADADA;
+}
+
+.table-list.table-hover .table-active:hover > th,
+.table-list.table-hover .table-active:hover > td,
+.table-list.table-hover .table-active:hover .dropdown-action .dropdown-menu-horizontal {
+  background-color: #DADADA;
+}
+
+.table-list .table-active,
+.table-list .table-active > th,
+.table-list .table-active > td {
+  background-color: #DADADA;
 }
 
 .table-autofit td,
@@ -11951,6 +12052,12 @@ th {
 .table-heading-nowrap thead td,
 .table-heading-nowrap thead th {
   white-space: nowrap;
+}
+
+.table .table-divider td,
+.table .table-divider th {
+  background-color: #FFF;
+  padding: 0.75rem;
 }
 
 .table-valign-bottom tbody td,
@@ -12607,11 +12714,13 @@ mark:before,
   outline: none;
 }
 
-.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu {
+.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu,
+.show-dropdown-action-on-active .table-active .dropdown-action .dropdown-menu {
   display: block;
 }
 
-.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu-horizontal {
+.show-dropdown-action-on-active .active .dropdown-action .dropdown-menu-horizontal,
+.show-dropdown-action-on-active .table-active .dropdown-action .dropdown-menu-horizontal {
   display: flex;
 }
 
@@ -12651,7 +12760,7 @@ mark:before,
 
 .dropdown-menu-unstyled {
   border-radius: 0;
-  border-color: transparent;
+  border-width: 0;
 }
 
 .dropdown-menu-unstyled .dropdown-item {
@@ -12696,6 +12805,7 @@ mark:before,
   right: auto !important;
   top: auto !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-top-right {
@@ -12706,6 +12816,7 @@ mark:before,
   right: 0 !important;
   top: auto !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-top-center {
@@ -12716,6 +12827,7 @@ mark:before,
   right: auto !important;
   top: auto !important;
   transform: translateX(-50%) !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-center {
@@ -12724,6 +12836,7 @@ mark:before,
   right: auto !important;
   top: 100% !important;
   transform: translateX(-50%) !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-left-side {
@@ -12734,6 +12847,7 @@ mark:before,
   right: 100% !important;
   top: 0 !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-left-side-bottom {
@@ -12744,6 +12858,7 @@ mark:before,
   right: 100% !important;
   top: auto !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-left-side-middle {
@@ -12754,6 +12869,7 @@ mark:before,
   right: 100% !important;
   top: 50% !important;
   transform: translate(0, -50%) !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-right-side {
@@ -12764,6 +12880,7 @@ mark:before,
   right: auto !important;
   top: 0 !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-right-side-bottom {
@@ -12774,6 +12891,7 @@ mark:before,
   right: auto !important;
   top: auto !important;
   transform: none !important;
+  will-change: auto !important;
 }
 
 .dropdown-menu-right-side-middle {
@@ -12784,6 +12902,7 @@ mark:before,
   right: auto !important;
   top: 50% !important;
   transform: translate(0, -50%) !important;
+  will-change: auto !important;
 }
 
 .dropdown-full .dropdown-menu,
