@@ -7,18 +7,16 @@ $table-head-height: 36px !default;
 // Table List
 
 $table-list-bg: #FFF !default;
+$table-list-color: null !default;
 $table-list-accent-bg: #F2F2F2 !default;
 $table-list-hover-bg: #ECECEC !default;
 $table-list-active-bg: #DADADA !default;
 
-$table-list-border-color: #E9ECEF !default;
+$table-list-border-color: $table-border-color !default;
 $table-list-border-width: 0.0625rem !default; // 1px
 $table-list-border-radius: 6px !default;
-
-$table-list-row-height: 55px !default;
-
-$table-list-color: null !default;
 $table-list-font-size: null !default;
+
 $table-list-link-color: null !default;
 $table-list-link-color-hover: null !default;
 
