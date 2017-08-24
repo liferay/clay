@@ -120,8 +120,7 @@ th {
 	a {
 		color: $table-list-link-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $table-list-link-color-hover;
 		}
 	}
@@ -288,6 +287,16 @@ th {
 	td,
 	th {
 		white-space: nowrap;
+	}
+}
+
+.table .table-divider {
+	td,
+	th {
+		font-size: $table-divider-font-size;
+		font-weight: $table-divider-font-weight;
+		padding: $table-divider-padding;
+		text-transform: $table-divider-text-transform;
 	}
 }
 
