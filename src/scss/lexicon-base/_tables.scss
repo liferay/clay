@@ -293,6 +293,7 @@ th {
 .table .table-divider {
 	td,
 	th {
+		color: $table-divider-color;
 		font-size: $table-divider-font-size;
 		font-weight: $table-divider-font-weight;
 		padding: $table-divider-padding;
