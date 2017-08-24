@@ -234,9 +234,10 @@
 
 .dropdown-menu-unstyled {
 	@include border-radius(0);
-	@include box-shadow(none);
 
-	border-color: transparent;
+	border-width: 0;
+
+	@include box-shadow(none);
 
 	.dropdown-item {
 		color: $dropdown-unstyled-link-color;
