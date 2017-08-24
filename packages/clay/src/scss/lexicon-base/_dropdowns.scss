@@ -290,6 +290,7 @@
 	right: auto !important;
 	top: auto !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-top-right {
@@ -300,6 +301,7 @@
 	right: 0 !important;
 	top: auto !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-top-center {
@@ -310,6 +312,7 @@
 	right: auto !important;
 	top: auto !important;
 	transform: translateX(-50%) !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-center {
@@ -318,6 +321,7 @@
 	right: auto !important;
 	top: 100% !important;
 	transform: translateX(-50%) !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-left-side {
@@ -328,6 +332,7 @@
 	right: 100% !important;
 	top: 0 !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-left-side-bottom {
@@ -338,6 +343,7 @@
 	right: 100% !important;
 	top: auto !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-left-side-middle {
@@ -348,6 +354,7 @@
 	right: 100% !important;
 	top: 50% !important;
 	transform: translate(0 , -50%) !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-right-side {
@@ -358,6 +365,7 @@
 	right: auto !important;
 	top: 0 !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-right-side-bottom {
@@ -368,6 +376,7 @@
 	right: auto !important;
 	top: auto !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-right-side-middle {
@@ -378,6 +387,7 @@
 	right: auto !important;
 	top: 50% !important;
 	transform: translate(0 , -50%) !important;
+	will-change: auto !important;
 }
 
 // Dropdown wide / full
