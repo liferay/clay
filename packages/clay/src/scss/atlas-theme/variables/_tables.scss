@@ -1,11 +1,26 @@
-$table-accent-bg: darken(#FCFEFF, 2%) !default;
-$table-hover-bg: #FCFEFF !default;
+$table-bg: #FFF !default;
+$table-accent-bg: lighten(map-get($theme-colors, secondary), 52%) !default;
+$table-hover-bg: lighten(map-get($theme-colors, primary), 44%) !default;
+$table-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
 
 $table-head-color: map-get($theme-colors, secondary) !default;
-$table-head-font-size: 14px !default;
+$table-head-font-size: 0.875rem !default; // 14px
 $table-head-font-weight: 500 !default;
 
-$table-list-body-row-bg: #FFF !default;
+$table-divider-color: map-get($theme-colors, secondary) !default;
+$table-divider-font-size: 0.75rem !default; // 12px
+$table-divider-font-weight: 500 !default;
+$table-divider-padding: 0.5rem 0.75rem !default;
+$table-divider-text-transform: uppercase !default;
 
-$table-list-color: $table-head-color !default;
+// Table List
+
+$table-list-accent-bg: lighten(map-get($theme-colors, secondary), 52%) !default;
+$table-list-hover-bg: $table-hover-bg !default;
+$table-list-active-bg: $table-list-hover-bg !default;
+$table-list-border-color: lighten(map-get($theme-colors, secondary), 46%) !default;
+$table-list-color: $body-color !default;
+
 $table-list-link-color: map-get($theme-colors, secondary) !default;
+
+$table-list-head-font-weight: 400 !default;
