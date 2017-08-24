@@ -67,6 +67,7 @@ th {
 // Table List Skin
 
 .table-list {
+	background-color: $table-list-bg;
 	color: $table-list-color;
 	font-size: $table-list-font-size;
 
@@ -99,8 +100,6 @@ th {
 	tfoot {
 		td,
 		th {
-			// Chrome rendering issue with responsive-tables and td position relative
-			background-color: $table-list-body-row-bg;
 			border-top-width: 0;
 			vertical-align: middle;
 		}
@@ -126,31 +125,35 @@ th {
 	}
 }
 
-// Chrome rendering issue with responsive-tables and td position relative
-
-.table-striped tbody tr:nth-of-type(odd) {
-	background-color: transparent;
-
-	td {
-		@if ($table-accent-bg == rgba($black,.05)) {
-			background-color: #F2F2F2;
-		}
-		@else {
-			background-color: $table-accent-bg;
+.table-list.table-hover {
+	tbody tr {
+		@include hover {
+			&,
+			.dropdown-action .dropdown-menu-horizontal {
+				background-color: $table-list-hover-bg;
+			}
 		}
 	}
 }
 
-.table-hover tbody tr:hover {
-	background-color: transparent;
+.table-list.table-hover {
+	.table-active {
+		@include hover {
+			background-color: $table-list-active-bg;
 
-	td {
-		@if ($table-hover-bg == rgba($black,.075)) {
-			background-color: #ECECEC;
+			> td,
+			> th {
+				background-color: $table-list-active-bg;
+			}
 		}
-		@else {
-			background-color: $table-hover-bg;
-		}
+	}
+}
+
+.table-active {
+	&,
+	> th,
+	> td {
+		background-color: $table-list-active-bg;
 	}
 }
 
