@@ -68,8 +68,55 @@ th {
 
 .table-list {
 	background-color: $table-list-bg;
+
+	@include border-radius($table-list-border-radius);
+
 	color: $table-list-color;
 	font-size: $table-list-font-size;
+	position: relative;
+	top: $table-list-border-width;
+
+	thead,
+	tbody,
+	tfoot {
+		&:first-child {
+			tr:first-child {
+				th,
+				td {
+					&:first-child {
+						@if $enable-rounded {
+							border-top-left-radius: $table-list-border-radius;
+						}
+					}
+
+					&:last-child {
+						@if $enable-rounded {
+							border-top-right-radius: $table-list-border-radius;
+						}
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			tr:last-child {
+				th,
+				td {
+					&:first-child {
+						@if $enable-rounded {
+							border-bottom-left-radius: $table-list-border-radius;
+						}
+					}
+
+					&:last-child {
+						@if $enable-rounded {
+							border-bottom-right-radius: $table-list-border-radius;
+						}
+					}
+				}
+			}
+		}
+	}
 
 	a {
 		color: $table-list-link-color;
@@ -80,10 +127,33 @@ th {
 		}
 	}
 
+	th,
+	td {
+		box-shadow: 0 #{-$table-list-border-width} $table-list-border-color, // top
+					inset 0 #{-$table-list-border-width} $table-list-border-color; // bottom
+		padding-bottom: $table-list-border-width + $table-cell-padding;
+		position: relative;
+
+		&:first-child {
+			box-shadow: 0 #{-$table-list-border-width} $table-list-border-color, // top
+						inset 0 #{-$table-list-border-width} $table-list-border-color, // bottom
+						inset #{$table-list-border-width} 0 $table-list-border-color; // left
+			padding-left: $table-list-border-width + $table-cell-padding;
+		}
+
+		&:last-child {
+			box-shadow: 0 #{-$table-list-border-width} $table-list-border-color, // top
+						inset #{-$table-list-border-width} 0 $table-list-border-color, // right
+						inset 0 #{-$table-list-border-width} $table-list-border-color; // bottom
+			padding-right: $table-list-border-width + $table-cell-padding;
+		}
+	}
+
 	thead {
 		td,
 		th {
 			background-color: $table-list-head-bg;
+			border-width: 0;
 			font-size: $table-list-head-font-size;
 			font-weight: $table-list-head-font-weight;
 			height: $table-list-head-height;
@@ -99,22 +169,13 @@ th {
 	tfoot {
 		td,
 		th {
-			border-top-width: 0;
+			border-width: 0;
 			vertical-align: middle;
 		}
 	}
 
 	tbody,
 	tfoot {
-		th {
-			position: relative;
-		}
-
-		td {
-			box-shadow: $table-list-row-box-shadow;
-			position: relative;
-		}
-
 		> tr {
 			@include hover {
 				td {
@@ -132,9 +193,9 @@ th {
 		position: static;
 
 		.dropdown-menu-horizontal {
-			bottom: $table-list-row-border-bottom-width !important;
+			bottom: $table-list-border-width !important;
 			margin-right: -3px;
-			padding-top: $table-list-row-border-bottom-width;
+			padding-top: 4px;
 			top: 0 !important;
 			transform: none !important;
 		}
@@ -143,6 +204,30 @@ th {
 	.table-active {
 		.dropdown-action .dropdown-menu-horizontal {
 			background-color: $table-list-active-bg;
+		}
+	}
+}
+
+.table-list.table-bordered {
+	border-width: 0;
+
+	th,
+	td {
+		box-shadow: 0 #{-$table-list-border-width} #{$table-list-border-color}, // top
+					inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
+					inset 0 #{-$table-list-border-width} #{$table-list-border-color}, // bottom
+					#{-$table-list-border-width / 2} #{-$table-list-border-width / 2} 0 #{$table-list-border-width / 2} #{$table-list-border-color}; // left
+		padding-bottom: $table-list-border-width + $table-cell-padding;
+		padding-right: $table-list-border-width + $table-cell-padding;
+
+		&:first-child {
+			box-shadow: 0 #{-$table-list-border-width} #{$table-list-border-color}, // top
+						inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
+						inset 0 #{-$table-list-border-width} #{$table-list-border-color}, // bottom
+						inset #{$table-list-border-width} 0 #{$table-list-border-color}; // left
+			padding-bottom: $table-list-border-width + $table-cell-padding;
+			padding-left: $table-list-border-width + $table-cell-padding;
+			padding-right: $table-list-border-width + $table-cell-padding;
 		}
 	}
 }

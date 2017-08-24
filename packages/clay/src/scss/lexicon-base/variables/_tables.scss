@@ -11,13 +11,17 @@ $table-list-accent-bg: #F2F2F2 !default;
 $table-list-hover-bg: #ECECEC !default;
 $table-list-active-bg: #DADADA !default;
 
+$table-list-border-color: #E9ECEF !default;
+$table-list-border-width: 0.0625rem !default; // 1px
+$table-list-border-radius: 6px !default;
+
 $table-list-row-active-border-bottom-width: 1px !default;
 $table-list-row-active-border-color: $table-border-color !default;
 $table-list-row-border-bottom-width: 1px !default;
 $table-list-row-border-color: $table-border-color !default;
 
 // Used for borders
-$table-list-row-box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color !default;
+$table-list-row-box-shadow: inset 0 #{-$table-list-border-width} $table-list-border-color !default;
 $table-list-row-hover-box-shadow: null !default;
 $table-list-row-active-box-shadow: null !default;
 
