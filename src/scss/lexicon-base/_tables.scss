@@ -73,8 +73,7 @@ th {
 
 	color: $table-list-color;
 	font-size: $table-list-font-size;
-	position: relative;
-	top: $table-list-border-width;
+	margin-bottom: $spacer + $table-list-border-width;
 
 	thead,
 	tbody,
@@ -129,23 +128,25 @@ th {
 
 	th,
 	td {
-		box-shadow: 0 #{-$table-list-border-width} $table-list-border-color, // top
-					inset 0 #{-$table-list-border-width} $table-list-border-color; // bottom
-		padding-bottom: $table-list-border-width + $table-cell-padding;
+		box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+					0 #{$table-list-border-width} $table-list-border-color; // bottom
+		padding-top: $table-list-border-width + $table-cell-padding;
 		position: relative;
 
 		&:first-child {
-			box-shadow: 0 #{-$table-list-border-width} $table-list-border-color, // top
-						inset 0 #{-$table-list-border-width} $table-list-border-color, // bottom
+			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+						0 #{$table-list-border-width} $table-list-border-color, // bottom
 						inset #{$table-list-border-width} 0 $table-list-border-color; // left
 			padding-left: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
 		}
 
 		&:last-child {
-			box-shadow: 0 #{-$table-list-border-width} $table-list-border-color, // top
+			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
 						inset #{-$table-list-border-width} 0 $table-list-border-color, // right
-						inset 0 #{-$table-list-border-width} $table-list-border-color; // bottom
+						0 #{$table-list-border-width} $table-list-border-color; // bottom
 			padding-right: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
 		}
 	}
 
@@ -193,10 +194,9 @@ th {
 		position: static;
 
 		.dropdown-menu-horizontal {
-			bottom: $table-list-border-width !important;
+			bottom: 0 !important;
 			margin-right: -3px;
-			padding-top: 4px;
-			top: 0 !important;
+			top: $table-list-border-width !important;
 			transform: none !important;
 		}
 	}
@@ -213,21 +213,21 @@ th {
 
 	th,
 	td {
-		box-shadow: 0 #{-$table-list-border-width} #{$table-list-border-color}, // top
+		box-shadow: inset 0 #{$table-list-border-width} #{$table-list-border-color}, // top
 					inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
-					inset 0 #{-$table-list-border-width} #{$table-list-border-color}, // bottom
-					#{-$table-list-border-width / 2} #{-$table-list-border-width / 2} 0 #{$table-list-border-width / 2} #{$table-list-border-color}; // left
-		padding-bottom: $table-list-border-width + $table-cell-padding;
+					0 #{$table-list-border-width} #{$table-list-border-color}, // bottom
+					#{-$table-list-border-width / 2} #{$table-list-border-width / 2} 0 #{$table-list-border-width / 2} #{$table-list-border-color}; // left
 		padding-right: $table-list-border-width + $table-cell-padding;
+		padding-top: $table-list-border-width + $table-cell-padding;
 
 		&:first-child {
-			box-shadow: 0 #{-$table-list-border-width} #{$table-list-border-color}, // top
+			box-shadow: inset 0 #{$table-list-border-width} #{$table-list-border-color}, // top
 						inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
-						inset 0 #{-$table-list-border-width} #{$table-list-border-color}, // bottom
+						0 #{$table-list-border-width} #{$table-list-border-color}, // bottom
 						inset #{$table-list-border-width} 0 #{$table-list-border-color}; // left
-			padding-bottom: $table-list-border-width + $table-cell-padding;
 			padding-left: $table-list-border-width + $table-cell-padding;
 			padding-right: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
 		}
 	}
 }
