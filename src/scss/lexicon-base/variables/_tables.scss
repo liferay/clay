@@ -6,6 +6,11 @@ $table-head-height: 36px !default;
 
 // Table List
 
+$table-list-bg: #FFF !default;
+$table-list-accent-bg: #F2F2F2 !default;
+$table-list-hover-bg: #ECECEC !default;
+$table-list-active-bg: #DADADA !default;
+
 $table-list-row-active-border-bottom-width: 1px !default;
 $table-list-row-active-border-color: $table-border-color !default;
 $table-list-row-border-bottom-width: 1px !default;
@@ -18,7 +23,6 @@ $table-list-row-active-box-shadow: null !default;
 
 $table-list-row-height: 55px !default;
 
-$table-list-body-row-bg: null !default;
 $table-list-color: null !default;
 $table-list-font-size: null !default;
 $table-list-link-color: null !default;
