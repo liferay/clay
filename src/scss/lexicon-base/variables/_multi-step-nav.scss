@@ -10,8 +10,8 @@ $multi-step-icon-size: 2rem !default;
 
 $multi-step-divider-bg: $gray-200 !default;
 $multi-step-divider-height: 0.25rem !default;
-$multi-step-divider-margin-top: ($multi-step-divider-height / 2) + ($multi-step-icon-size / 2) !default;
 $multi-step-divider-spacer-x: 0 !default;
+$multi-step-divider-top: ($multi-step-divider-height / 2) + ($multi-step-icon-size / 2) !default;
 
 $multi-step-indicator-width: $multi-step-icon-size + ($multi-step-divider-spacer-x * 2) !default;
 
@@ -19,7 +19,8 @@ $multi-step-indicator-label-font-size: $font-size-base !default;
 $multi-step-indicator-label-font-weight: null !default;
 $multi-step-indicator-label-max-width: 100px !default;
 
-$multi-step-title-margin-bottom: 10px !default;
+$multi-step-title-font-size: $font-size-base !default;
+$multi-step-title-margin-bottom: 0.625rem !default; // 10px
 $multi-step-title-max-width: 100px !default;
 
 $multi-step-item-margin-bottom: 10px !default;
