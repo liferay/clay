@@ -27,15 +27,6 @@ ClaySelect.STATE = {
 	id: Config.string(),
 
 	/**
-	 * Flag to indicate if the select element should be placed inline.
-	 * @instance
-	 * @memberof ClaySelect
-	 * @type {?bool|undefined}
-	 * @default undefined
-	 */
-	inline: Config.bool(),
-
-	/**
 	 * Label of the select element.
 	 * @instance
 	 * @memberof ClaySelect
@@ -76,6 +67,18 @@ ClaySelect.STATE = {
 			value: Config.string().required(),
 		}),
 	),
+
+	/**
+	 * Type of the select wrapper element.
+	 * In order to make inline-group work properly you may place it inside
+	 * a .form-inline.form-inline-autofit container.
+	 * container.
+	 * @instance
+	 * @memberof ClaySelect
+	 * @type {?string|undefined}
+	 * @default group
+	 */
+	wrapperType: Config.oneOf(['inline-group', 'group']).value('group'),
 };
 
 Soy.register(ClaySelect, templates);

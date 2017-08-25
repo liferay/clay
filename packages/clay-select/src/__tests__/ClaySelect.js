@@ -82,27 +82,8 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate an inline select element', function() {
+	it('should generate an inline group select element', function() {
 		select = new ClaySelect({
-			inline: true,
-			options: [
-				{
-					label: 'Option 1',
-					value: '1',
-				},
-				{
-					label: 'Option 2',
-					value: '2',
-				},
-			],
-		});
-
-		expect(select).toMatchSnapshot();
-	});
-
-	it('should generate an inline select element with label', function() {
-		select = new ClaySelect({
-			inline: true,
 			label: 'My Select',
 			options: [
 				{
@@ -114,6 +95,7 @@ describe('ClaySelect', function() {
 					value: '2',
 				},
 			],
+			wrapperType: 'inline-group',
 		});
 
 		expect(select).toMatchSnapshot();
@@ -173,9 +155,8 @@ describe('ClaySelect', function() {
 		expect(select).toMatchSnapshot();
 	});
 
-	it('should generate an inline multiple select element', function() {
+	it('should generate an inline group multiple select element', function() {
 		select = new ClaySelect({
-			inline: true,
 			multiple: true,
 			options: [
 				{
@@ -187,6 +168,7 @@ describe('ClaySelect', function() {
 					value: '2',
 				},
 			],
+			wrapperType: 'inline-group',
 		});
 
 		expect(select).toMatchSnapshot();

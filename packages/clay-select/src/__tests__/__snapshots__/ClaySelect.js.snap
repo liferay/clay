@@ -64,36 +64,21 @@ exports[`ClaySelect should generate a select element with preselected option 1`]
 </div>
 `;
 
-exports[`ClaySelect should generate an inline multiple select element 1`] = `
-<div class="form-group">
-  <div class="form-inline">
-    <select class="form-control" multiple="multiple">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-    </select>
-  </div>
+exports[`ClaySelect should generate an inline group multiple select element 1`] = `
+<div class="form-inline-group">
+  <select class="form-control" multiple="multiple">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
 </div>
 `;
 
-exports[`ClaySelect should generate an inline select element 1`] = `
-<div class="form-group">
-  <div class="form-inline">
-    <select class="form-control">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-    </select>
-  </div>
-</div>
-`;
-
-exports[`ClaySelect should generate an inline select element with label 1`] = `
-<div class="form-group">
+exports[`ClaySelect should generate an inline group select element 1`] = `
+<div class="form-inline-group">
   <label>My Select</label>
-  <div class="form-inline">
-    <select class="form-control">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-    </select>
-  </div>
+  <select class="form-control">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
 </div>
 `;

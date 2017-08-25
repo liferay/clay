@@ -7,32 +7,30 @@
 	{@param options: list<?>}
 	{@param? disabled: bool}
 	{@param? id: string}
-	{@param? inline: bool}
 	{@param? label: string}
 	{@param? multiple: bool}
 	{@param? name: string}
+	{@param? wrapperType: string}
 
-	<div class="form-group" id="{$id}">
+	{let $classes kind="text"}
+		{if $wrapperType}
+			form-{$wrapperType}
+		{else}
+			form-group
+		{/if}
+	{/let}
+
+	<div class="{$classes}" id="{$id}">
 		{if $label}
 			<label>{$label}</label>
 		{/if}
 
-		{let $select kind="html"}
-			{call .select}
-				{param disabled: $disabled /}
-				{param multiple: $multiple /}
-				{param name: $name /}
-				{param options: $options /}
-			{/call}
-		{/let}
-
-		{if $inline}
-			<div class="form-inline">
-				{$select}
-			</div>
-		{else}
-			{$select}
-		{/if}
+		{call .select}
+			{param disabled: $disabled /}
+			{param multiple: $multiple /}
+			{param name: $name /}
+			{param options: $options /}
+		{/call}
 	</div>
 {/template}
 
