@@ -11,7 +11,7 @@
 .multi-step-indicator-label-bottom {
 	.multi-step-item {
 		// TODO: Don't do so much maths
-		padding-bottom: ($multi-step-icon-size / 2) + ($multi-step-divider-height / 2) + ($multi-step-indicator-label-font-size * $line-height-base);
+		padding-bottom: $multi-step-indicator-label-font-size * $line-height-base;
 	}
 
 	.multi-step-indicator-label {
@@ -23,12 +23,12 @@
 .multi-step-indicator-label-top {
 	.multi-step-item {
 		// TODO: Don't do so much maths
-		padding-top: $multi-step-divider-height + ($multi-step-indicator-label-font-size * $line-height-base);
+		padding-top: $multi-step-indicator-label-font-size * $line-height-base;
 	}
 
 	.multi-step-indicator-label {
 		// TODO: Don't do so much maths
-		bottom: $multi-step-icon-size;
+		bottom: $multi-step-icon-size + $multi-step-divider-height;
 	}
 }
 
@@ -49,7 +49,7 @@
 .multi-step-item {
 	margin-bottom: $multi-step-item-margin-bottom;
 	// TODO: Don't do so much maths
-	padding-bottom: ($multi-step-icon-size / 2) - ($multi-step-divider-height / 2);
+	// padding-bottom: ($multi-step-icon-size / 2);
 	position: relative;
 
 	&.complete {
@@ -108,8 +108,10 @@
 }
 
 .multi-step-title {
+	font-size: $multi-step-title-font-size;
 	line-height: normal;
 	margin-bottom: $multi-step-title-margin-bottom;
+	word-wrap: break-word;
 }
 
 .multi-step-item-expand {
@@ -120,8 +122,10 @@
 .multi-step-divider {
 	background-color: $multi-step-divider-bg;
 	height: $multi-step-divider-height;
+	margin-left: $multi-step-icon-size;
+	margin-top: -$multi-step-divider-height;
 	position: relative;
-	top: $multi-step-divider-margin-top;
+	top: $multi-step-divider-top;
 }
 
 .multi-step-indicator {
@@ -244,6 +248,7 @@
 		.multi-step-item {
 			margin-bottom: 0;
 			min-width: $multi-step-icon-size;
+			padding-top: $multi-step-title-font-size + $multi-step-title-margin-bottom + ($multi-step-divider-height / 2);
 		}
 
 		.multi-step-title {
