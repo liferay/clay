@@ -16,6 +16,8 @@ exports[`ClayLink should render a link with button primary style 1`] = `<a class
 
 exports[`ClayLink should render a link with button secondary style 1`] = `<a class="btn btn-secondary"></a>`;
 
+exports[`ClayLink should render a link with custom classes 1`] = `<a class=" my-custom-class"></a>`;
+
 exports[`ClayLink should render a link with href 1`] = `<a href="http://www.liferay.com"></a>`;
 
 exports[`ClayLink should render a link with icon 1`] = `
