@@ -40,30 +40,6 @@ th {
 	width: 1%;
 }
 
-// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22804 is merged
-
-.table-responsive {
-	@each $breakpoint in map-keys($grid-breakpoints) {
-		$next: breakpoint-next($breakpoint, $grid-breakpoints);
-		$infix: breakpoint-infix($next, $grid-breakpoints);
-
-		&#{$infix} {
-			@include media-breakpoint-down($breakpoint) {
-				display: block;
-				width: 100%;
-				overflow-x: auto;
-
-				-ms-overflow-style: -ms-autohiding-scrollbar;
-				-webkit-overflow-scrolling: touch;
-
-				&.table-bordered {
-					border: 0;
-				}
-			}
-		}
-	}
-}
-
 // Table List Skin
 
 .table-list {
