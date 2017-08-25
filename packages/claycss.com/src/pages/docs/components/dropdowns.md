@@ -34,9 +34,9 @@ weight: 100
 		</svg>
 	</button>
 	<div aria-labelledby="dropdownAction2" class="dropdown-menu">
-		<a class="dropdown-item" href="#1">Download</a>
-		<a class="dropdown-item" href="#1">Edit</a>
-		<a class="dropdown-item" href="#1">Move</a>
+		<button class="dropdown-item" type="button">Button</button>
+		<button class="btn btn-link dropdown-item" type="button">Btn Link</button>
+		<button class="btn btn-unstyled dropdown-item" type="button">Btn Unstyled</button>
 		<a class="dropdown-item" href="#1">Checkout</a>
 		<a class="dropdown-item" href="#1">Permissions</a>
 		<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
