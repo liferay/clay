@@ -6,6 +6,7 @@
 	<title>Demo: Metal Charts</title>
 
 	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../node_modules/billboard.js/dist/billboard.css">
 
 	<script src="../build/globals/metal-charts.js"></script>
 </head>
@@ -13,7 +14,60 @@
 	<h1>Metal Charts</h1>
 
 	<script type="text/javascript">
-		new metal.MetalCharts();
+		var columns = [
+			['data1', 30, 200, 100, 400, 150, 250],
+			['data2', 50, 20, 10, 40, 15, 25]
+		];
+
+		var chart = new metal.MetalChart({
+			columns: columns,
+			regions: [
+				{
+					axis: 'x',
+					class: 'region-1-4',
+					end: 4,
+					start: 0
+				}
+			],
+			zoom: {
+				enabled: true
+			}
+		});
+
+		chart.on('pointClick', function(d, element) {
+			console.log(d);
+			console.log(element);
+		});
+
+		setTimeout(function () {
+			var columns = [
+				['data1', 230, 190, 300, 500, 300, 400],
+				['data2', 50, 20, 10, 40, 15, 25]
+			];
+
+			chart.columns = columns;
+		}, 1000);
+
+		setTimeout(function () {
+			var columns = [
+				['data1', 230, 190, 300, 500, 300, 400],
+				['data2', 50, 20, 10, 40, 15, 25],
+				['data3', 130, 150, 200, 300, 200, 100]
+			];
+
+			chart.columns = columns;
+		}, 1500);
+
+		setTimeout(function () {
+			var columns = [
+				['data2', 50, 20, 10, 40, 15, 25],
+				['data3', 130, 150, 200, 300, 200, 100]
+			];
+
+			chart.columns = columns;
+		}, 2000);
+
+		window.chart = chart;
 	</script>
 </body>
 </html>
