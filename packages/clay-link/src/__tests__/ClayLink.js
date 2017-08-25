@@ -49,6 +49,14 @@ describe('ClayLink', function() {
 		expect(link).toMatchSnapshot();
 	});
 
+	it('should render a link with custom classes', () => {
+		link = new ClayLink({
+			elementClasses: 'my-custom-class',
+		});
+
+		expect(link).toMatchSnapshot();
+	});
+
 	it('should render a link with target', () => {
 		link = new ClayLink({
 			target: '_blank',

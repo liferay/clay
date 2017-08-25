@@ -47,6 +47,15 @@ ClayLink.STATE = {
 	download: Config.string(),
 
 	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayLink
+	 * @type {?string|undefined}
+	 * @default false
+	 */
+	elementClasses: Config.string(),
+
+	/**
 	 * Sets the HTML attribute href on the anchor tag.
 	 * @instance
 	 * @memberof ClayLink

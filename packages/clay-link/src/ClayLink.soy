@@ -7,6 +7,7 @@
 	{@param? ariaLabel: string}
 	{@param? buttonStyle: string}
 	{@param? download: string}
+	{@param? elementClasses: string}
 	{@param? href: string}
 	{@param? icon: [
 		alignment: string,
@@ -24,10 +25,20 @@
 			aria-label="{$ariaLabel}"
 		{/if}
 
-		{if $buttonStyle}
-			class="btn btn-{$buttonStyle}"
-		{elseif $style}
-			class="link-{$style}"
+		{let $classes kind="text"}
+			{if $buttonStyle}
+				btn btn-{$buttonStyle}
+			{elseif $style}
+				link-{$style}
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		{/let}
+
+		{if $classes}
+			class="{$classes}"
 		{/if}
 
 		{if $download}

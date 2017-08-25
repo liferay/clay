@@ -7,6 +7,7 @@
 	{@param? ariaLabel: string}
 	{@param? block: bool}
 	{@param? disabled: bool}
+	{@param? elementClasses: string}
 	{@param? icon: [
 		alignment: string,
 		monospaced: bool,
@@ -26,6 +27,7 @@
 			{param ariaLabel: $ariaLabel /}
 			{param block: $block /}
 			{param disabled: $disabled /}
+			{param elementClasses: $elementClasses /}
 			{param id: $id /}
 			{param name: $name /}
 			{param size: $size /}
@@ -97,6 +99,7 @@
 	{@param? ariaLabel: string}
 	{@param? block: bool}
 	{@param? disabled: bool}
+	{@param? elementClasses: string}
 	{@param? id: string}
 	{@param? name: string}
 	{@param? size: string}
@@ -108,6 +111,9 @@
 		btn
 		{if $block}
 			{sp}btn-block
+		{/if}
+		{if $elementClasses}
+			{sp}{$elementClasses}
 		{/if}
 		{if $size}
 			{sp}btn-{$size}

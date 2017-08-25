@@ -128,4 +128,12 @@ describe('ClayButton', function() {
 
 		expect(button).toMatchSnapshot();
 	});
+
+	it('should render a button with custom classes', function() {
+		button = new ClayButton({
+			elementClasses: 'my-custom-class',
+		});
+
+		expect(button).toMatchSnapshot();
+	});
 });

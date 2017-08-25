@@ -39,11 +39,20 @@ ClayButton.STATE = {
 	/**
 	 * The button disabled attribute.
 	 * @instance
-	 * @memberof ButtonBase
+	 * @memberof ClayButton
 	 * @type {?boolean}
 	 * @default false
 	 */
 	disabled: Config.bool().value(false),
+
+	/**
+	 * CSS classes to be applied to the element.
+	 * @instance
+	 * @memberof ClayButton
+	 * @type {?string|undefined}
+	 * @default false
+	 */
+	elementClasses: Config.string(),
 
 	/**
 	 * Render ClayIcon in the ClayButton element.
@@ -71,7 +80,7 @@ ClayButton.STATE = {
 	/**
 	 * The label of the button content.
 	 * @instance
-	 * @memberof ButtonBase
+	 * @memberof ClayButton
 	 * @type {?html|string|undefined}
 	 * @default undefined
 	 */
@@ -80,7 +89,7 @@ ClayButton.STATE = {
 	/**
 	 * The name attribute value of the element.
 	 * @instance
-	 * @memberof ButtonBase
+	 * @memberof ClayButton
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -110,7 +119,7 @@ ClayButton.STATE = {
 	/**
 	 * The type attribute value of the element.
 	 * @instance
-	 * @memberof ButtonBase
+	 * @memberof ClayButton
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
@@ -119,7 +128,7 @@ ClayButton.STATE = {
 	/**
 	 * The value attribute value of the element.
 	 * @instance
-	 * @memberof ButtonBase
+	 * @memberof ClayButton
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
