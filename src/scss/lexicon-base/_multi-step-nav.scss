@@ -120,13 +120,11 @@
 .multi-step-divider {
 	background-color: $multi-step-divider-bg;
 	height: $multi-step-divider-height;
-	margin-top: -$multi-step-divider-margin-top;
 	position: relative;
-	z-index: -1;
+	top: $multi-step-divider-margin-top;
 }
 
 .multi-step-indicator {
-	background-color: $multi-step-indicator-bg;
 	position: relative;
 	width: $multi-step-indicator-width;
 
