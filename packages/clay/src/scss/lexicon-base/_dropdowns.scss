@@ -60,6 +60,21 @@
 		}
 	}
 
+	&.btn-link {
+		line-height: $line-height-base;
+		transition: none;
+
+		@include hover-focus {
+			text-decoration: none;
+		}
+	}
+
+	&.btn-unstyled {
+		font-weight: $font-weight-normal;
+		padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+		transition: none;
+	}
+
 	.form-check {
 		margin-bottom: 0;
 	}
