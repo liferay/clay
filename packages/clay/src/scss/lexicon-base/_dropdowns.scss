@@ -58,6 +58,11 @@
 		.form-check-label {
 			color: $dropdown-link-disabled-color;
 		}
+
+		&.btn-link,
+		&.btn-unstyled {
+			opacity: 1;
+		}
 	}
 
 	&.btn-link {
