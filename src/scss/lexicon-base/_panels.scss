@@ -102,6 +102,7 @@
 			.panel-header {
 				&.collapsed {
 					@include border-radius($panel-border-radius);
+					@include transition(border-radius 1s ease);
 				}
 			}
 		}
