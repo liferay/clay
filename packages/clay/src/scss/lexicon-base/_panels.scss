@@ -19,6 +19,7 @@
 		@include border-top-radius($panel-header-offset-border-radius);
 	}
 
+	line-height: normal;
 	padding: $panel-header-padding-y $panel-header-padding-x;
 	position: relative;
 }
@@ -96,6 +97,14 @@
 		&:not(:first-child):not(:last-child) {
 			@include border-radius(0);
 		}
+
+		&:only-child {
+			.panel-header {
+				&.collapsed {
+					@include border-radius($panel-border-radius);
+				}
+			}
+		}
 	}
 
 	.panel:not(:first-child) {
@@ -110,7 +119,6 @@
 
 	.panel-header {
 		border-bottom: 0;
-		padding: 0;
 
 		+ .panel-collapse > .panel-body {
 			border-top: $panel-header-border-bottom-width solid transparent;
