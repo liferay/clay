@@ -21,7 +21,7 @@ $toggle-card-icon-width: 32px !default;
 
 // Toggle Card On Styles
 
-$toggle-card-on-bg: $body-bg !default;
+$toggle-card-on-bg: $toggle-card-bg !default;
 $toggle-card-on-border-color: map-get($theme-colors, primary) !default;
 $toggle-card-on-border-width: 1px !default;
 $toggle-card-on-color: map-get($theme-colors, primary) !default;
