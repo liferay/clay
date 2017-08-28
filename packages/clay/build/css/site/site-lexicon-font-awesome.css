@@ -5,7 +5,7 @@
 * All rights reserved.
 * MIT license
 */
-@import url("font-awesome.css");
+@import url("site-font-awesome.css");
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -11288,6 +11288,7 @@ a.label {
 
 .panel-group .panel:only-child .panel-header.collapsed {
   border-radius: 0.25rem;
+  transition: border-radius 1s ease;
 }
 
 .panel-group .panel:not(:first-child) {
@@ -13882,4 +13883,4 @@ button.loading > .linear.loading-animation {
   font-size: 64px;
 }
 
-/*# sourceMappingURL=lexicon-font-awesome.css.map */
+/*# sourceMappingURL=site-lexicon-font-awesome.css.map */

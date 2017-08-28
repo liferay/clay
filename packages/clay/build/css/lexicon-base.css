@@ -11287,6 +11287,7 @@ a.label {
 
 .panel-group .panel:only-child .panel-header.collapsed {
   border-radius: 0.25rem;
+  transition: border-radius 1s ease;
 }
 
 .panel-group .panel:not(:first-child) {
