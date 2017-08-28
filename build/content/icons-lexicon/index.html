@@ -214,275 +214,289 @@
 		</h1>
 
 		
-<div class="alert alert-info" style="margin-top: 20px;">
-	<p>Lexicon icons do not use the same format as Font Awesome or Bootstrap&apos;s Glyphicons.</p>
-</div>
-<p>We use SVG elements that link to an SVG sprite, like so:</p>
-<p><pre><code>&lt;svg aria-hidden=&quot;true&quot; class=&quot;lexicon-icon lexicon-icon-add-column&quot;&gt;
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="lexicon-icons"><a class="heading-anchor" href="#lexicon-icons"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Lexicon Icons</h3>
+
+		<div class="alert alert-info">
+			Lexicon icons do not use the same format as Font Awesome or Bootstrap&apos;s Glyphicons.
+		</div>
+
+		<blockquote class="blockquote blockquote-success blockquote-sm">
+			<p>We use SVG elements that link to an SVG sprite, like so:</p>
+
+			<p><pre><code>&lt;svg aria-hidden=&quot;true&quot; class=&quot;lexicon-icon lexicon-icon-add-column&quot;&gt;
     &lt;use xlink:href=&quot;path/to/icons.svg#add-column&quot; /&gt;
-&lt;/svg&gt;
-</code></pre></p>
-<p>Note that the ID after the # symbol is the ID of the icon to use, so if you wanted to use plus icon, you would do change the <code>href</code> to <code>path/to/icons.svg#plus</code>.<br>
-<a href="#lexicon-icon-explanation">Why do we use SVG?</a>
-</p>
+&lt;/svg&gt;</code></pre></p>
 
-<ul class="clearfix lexicon-icon-list list-unstyled">
-<!-- inject:svg -->
-<li><svg class="lexicon-icon lexicon-icon-add-cell"><use xlink:href="../../images/icons/icons.svg#add-cell"></svg> <span>add-cell</span></li>
-<li><svg class="lexicon-icon lexicon-icon-add-column"><use xlink:href="../../images/icons/icons.svg#add-column"></svg> <span>add-column</span></li>
-<li><svg class="lexicon-icon lexicon-icon-add-role"><use xlink:href="../../images/icons/icons.svg#add-role"></svg> <span>add-role</span></li>
-<li><svg class="lexicon-icon lexicon-icon-add-row"><use xlink:href="../../images/icons/icons.svg#add-row"></svg> <span>add-row</span></li>
-<li><svg class="lexicon-icon lexicon-icon-adjust"><use xlink:href="../../images/icons/icons.svg#adjust"></svg> <span>adjust</span></li>
-<li><svg class="lexicon-icon lexicon-icon-align-center"><use xlink:href="../../images/icons/icons.svg#align-center"></svg> <span>align-center</span></li>
-<li><svg class="lexicon-icon lexicon-icon-align-justify"><use xlink:href="../../images/icons/icons.svg#align-justify"></svg> <span>align-justify</span></li>
-<li><svg class="lexicon-icon lexicon-icon-align-left"><use xlink:href="../../images/icons/icons.svg#align-left"></svg> <span>align-left</span></li>
-<li><svg class="lexicon-icon lexicon-icon-align-right"><use xlink:href="../../images/icons/icons.svg#align-right"></svg> <span>align-right</span></li>
-<li><svg class="lexicon-icon lexicon-icon-angle-down"><use xlink:href="../../images/icons/icons.svg#angle-down"></svg> <span>angle-down</span></li>
-<li><svg class="lexicon-icon lexicon-icon-angle-left"><use xlink:href="../../images/icons/icons.svg#angle-left"></svg> <span>angle-left</span></li>
-<li><svg class="lexicon-icon lexicon-icon-angle-right"><use xlink:href="../../images/icons/icons.svg#angle-right"></svg> <span>angle-right</span></li>
-<li><svg class="lexicon-icon lexicon-icon-angle-up"><use xlink:href="../../images/icons/icons.svg#angle-up"></svg> <span>angle-up</span></li>
-<li><svg class="lexicon-icon lexicon-icon-archive"><use xlink:href="../../images/icons/icons.svg#archive"></svg> <span>archive</span></li>
-<li><svg class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="../../images/icons/icons.svg#asterisk"></svg> <span>asterisk</span></li>
-<li><svg class="lexicon-icon lexicon-icon-audio"><use xlink:href="../../images/icons/icons.svg#audio"></svg> <span>audio</span></li>
-<li><svg class="lexicon-icon lexicon-icon-autosize"><use xlink:href="../../images/icons/icons.svg#autosize"></svg> <span>autosize</span></li>
-<li><svg class="lexicon-icon lexicon-icon-bars"><use xlink:href="../../images/icons/icons.svg#bars"></svg> <span>bars</span></li>
-<li><svg class="lexicon-icon lexicon-icon-blogs"><use xlink:href="../../images/icons/icons.svg#blogs"></svg> <span>blogs</span></li>
-<li><svg class="lexicon-icon lexicon-icon-bold"><use xlink:href="../../images/icons/icons.svg#bold"></svg> <span>bold</span></li>
-<li><svg class="lexicon-icon lexicon-icon-bookmarks"><use xlink:href="../../images/icons/icons.svg#bookmarks"></svg> <span>bookmarks</span></li>
-<li><svg class="lexicon-icon lexicon-icon-calendar"><use xlink:href="../../images/icons/icons.svg#calendar"></svg> <span>calendar</span></li>
-<li><svg class="lexicon-icon lexicon-icon-camera"><use xlink:href="../../images/icons/icons.svg#camera"></svg> <span>camera</span></li>
-<li><svg class="lexicon-icon lexicon-icon-cards"><use xlink:href="../../images/icons/icons.svg#cards"></svg> <span>cards</span></li>
-<li><svg class="lexicon-icon lexicon-icon-cards2"><use xlink:href="../../images/icons/icons.svg#cards2"></svg> <span>cards2</span></li>
-<li><svg class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="../../images/icons/icons.svg#caret-bottom"></svg> <span>caret-bottom</span></li>
-<li><svg class="lexicon-icon lexicon-icon-caret-double-l"><use xlink:href="../../images/icons/icons.svg#caret-double-l"></svg> <span>caret-double-l</span></li>
-<li><svg class="lexicon-icon lexicon-icon-caret-double"><use xlink:href="../../images/icons/icons.svg#caret-double"></svg> <span>caret-double</span></li>
-<li><svg class="lexicon-icon lexicon-icon-caret-top"><use xlink:href="../../images/icons/icons.svg#caret-top"></svg> <span>caret-top</span></li>
-<li><svg class="lexicon-icon lexicon-icon-categories"><use xlink:href="../../images/icons/icons.svg#categories"></svg> <span>categories</span></li>
-<li><svg class="lexicon-icon lexicon-icon-chain-broken"><use xlink:href="../../images/icons/icons.svg#chain-broken"></svg> <span>chain-broken</span></li>
-<li><svg class="lexicon-icon lexicon-icon-change"><use xlink:href="../../images/icons/icons.svg#change"></svg> <span>change</span></li>
-<li><svg class="lexicon-icon lexicon-icon-check-circle"><use xlink:href="../../images/icons/icons.svg#check-circle"></svg> <span>check-circle</span></li>
-<li><svg class="lexicon-icon lexicon-icon-check"><use xlink:href="../../images/icons/icons.svg#check"></svg> <span>check</span></li>
-<li><svg class="lexicon-icon lexicon-icon-code"><use xlink:href="../../images/icons/icons.svg#code"></svg> <span>code</span></li>
-<li><svg class="lexicon-icon lexicon-icon-cog"><use xlink:href="../../images/icons/icons.svg#cog"></svg> <span>cog</span></li>
-<li><svg class="lexicon-icon lexicon-icon-columns"><use xlink:href="../../images/icons/icons.svg#columns"></svg> <span>columns</span></li>
-<li><svg class="lexicon-icon lexicon-icon-comments"><use xlink:href="../../images/icons/icons.svg#comments"></svg> <span>comments</span></li>
-<li><svg class="lexicon-icon lexicon-icon-compress"><use xlink:href="../../images/icons/icons.svg#compress"></svg> <span>compress</span></li>
-<li><svg class="lexicon-icon lexicon-icon-control-panel"><use xlink:href="../../images/icons/icons.svg#control-panel"></svg> <span>control-panel</span></li>
-<li><svg class="lexicon-icon lexicon-icon-custom-size"><use xlink:href="../../images/icons/icons.svg#custom-size"></svg> <span>custom-size</span></li>
-<li><svg class="lexicon-icon lexicon-icon-cut"><use xlink:href="../../images/icons/icons.svg#cut"></svg> <span>cut</span></li>
-<li><svg class="lexicon-icon lexicon-icon-date"><use xlink:href="../../images/icons/icons.svg#date"></svg> <span>date</span></li>
-<li><svg class="lexicon-icon lexicon-icon-desktop"><use xlink:href="../../images/icons/icons.svg#desktop"></svg> <span>desktop</span></li>
-<li><svg class="lexicon-icon lexicon-icon-documents-and-media"><use xlink:href="../../images/icons/icons.svg#documents-and-media"></svg> <span>documents-and-media</span></li>
-<li><svg class="lexicon-icon lexicon-icon-download"><use xlink:href="../../images/icons/icons.svg#download"></svg> <span>download</span></li>
-<li><svg class="lexicon-icon lexicon-icon-dynamic-data-list"><use xlink:href="../../images/icons/icons.svg#dynamic-data-list"></svg> <span>dynamic-data-list</span></li>
-<li><svg class="lexicon-icon lexicon-icon-edit-layout"><use xlink:href="../../images/icons/icons.svg#edit-layout"></svg> <span>edit-layout</span></li>
-<li><svg class="lexicon-icon lexicon-icon-effects"><use xlink:href="../../images/icons/icons.svg#effects"></svg> <span>effects</span></li>
-<li><svg class="lexicon-icon lexicon-icon-ellipsis-h"><use xlink:href="../../images/icons/icons.svg#ellipsis-h"></svg> <span>ellipsis-h</span></li>
-<li><svg class="lexicon-icon lexicon-icon-ellipsis-v"><use xlink:href="../../images/icons/icons.svg#ellipsis-v"></svg> <span>ellipsis-v</span></li>
-<li><svg class="lexicon-icon lexicon-icon-embed"><use xlink:href="../../images/icons/icons.svg#embed"></svg> <span>embed</span></li>
-<li><svg class="lexicon-icon lexicon-icon-envelope-closed"><use xlink:href="../../images/icons/icons.svg#envelope-closed"></svg> <span>envelope-closed</span></li>
-<li><svg class="lexicon-icon lexicon-icon-envelope-open"><use xlink:href="../../images/icons/icons.svg#envelope-open"></svg> <span>envelope-open</span></li>
-<li><svg class="lexicon-icon lexicon-icon-exclamation-circle"><use xlink:href="../../images/icons/icons.svg#exclamation-circle"></svg> <span>exclamation-circle</span></li>
-<li><svg class="lexicon-icon lexicon-icon-exclamation-full"><use xlink:href="../../images/icons/icons.svg#exclamation-full"></svg> <span>exclamation-full</span></li>
-<li><svg class="lexicon-icon lexicon-icon-expand"><use xlink:href="../../images/icons/icons.svg#expand"></svg> <span>expand</span></li>
-<li><svg class="lexicon-icon lexicon-icon-flag-empty"><use xlink:href="../../images/icons/icons.svg#flag-empty"></svg> <span>flag-empty</span></li>
-<li><svg class="lexicon-icon lexicon-icon-flag-full"><use xlink:href="../../images/icons/icons.svg#flag-full"></svg> <span>flag-full</span></li>
-<li><svg class="lexicon-icon lexicon-icon-folder"><use xlink:href="../../images/icons/icons.svg#folder"></svg> <span>folder</span></li>
-<li><svg class="lexicon-icon lexicon-icon-format"><use xlink:href="../../images/icons/icons.svg#format"></svg> <span>format</span></li>
-<li><svg class="lexicon-icon lexicon-icon-forms"><use xlink:href="../../images/icons/icons.svg#forms"></svg> <span>forms</span></li>
-<li><svg class="lexicon-icon lexicon-icon-full-size"><use xlink:href="../../images/icons/icons.svg#full-size"></svg> <span>full-size</span></li>
-<li><svg class="lexicon-icon lexicon-icon-geolocation"><use xlink:href="../../images/icons/icons.svg#geolocation"></svg> <span>geolocation</span></li>
-<li><svg class="lexicon-icon lexicon-icon-grid"><use xlink:href="../../images/icons/icons.svg#grid"></svg> <span>grid</span></li>
-<li><svg class="lexicon-icon lexicon-icon-h1"><use xlink:href="../../images/icons/icons.svg#h1"></svg> <span>h1</span></li>
-<li><svg class="lexicon-icon lexicon-icon-h2"><use xlink:href="../../images/icons/icons.svg#h2"></svg> <span>h2</span></li>
-<li><svg class="lexicon-icon lexicon-icon-heart"><use xlink:href="../../images/icons/icons.svg#heart"></svg> <span>heart</span></li>
-<li><svg class="lexicon-icon lexicon-icon-hidden"><use xlink:href="../../images/icons/icons.svg#hidden"></svg> <span>hidden</span></li>
-<li><svg class="lexicon-icon lexicon-icon-home"><use xlink:href="../../images/icons/icons.svg#home"></svg> <span>home</span></li>
-<li><svg class="lexicon-icon lexicon-icon-horizontal-scroll"><use xlink:href="../../images/icons/icons.svg#horizontal-scroll"></svg> <span>horizontal-scroll</span></li>
-<li><svg class="lexicon-icon lexicon-icon-hr"><use xlink:href="../../images/icons/icons.svg#hr"></svg> <span>hr</span></li>
-<li><svg class="lexicon-icon lexicon-icon-import-export"><use xlink:href="../../images/icons/icons.svg#import-export"></svg> <span>import-export</span></li>
-<li><svg class="lexicon-icon lexicon-icon-indent-less"><use xlink:href="../../images/icons/icons.svg#indent-less"></svg> <span>indent-less</span></li>
-<li><svg class="lexicon-icon lexicon-icon-indent-more"><use xlink:href="../../images/icons/icons.svg#indent-more"></svg> <span>indent-more</span></li>
-<li><svg class="lexicon-icon lexicon-icon-info-circle-open"><use xlink:href="../../images/icons/icons.svg#info-circle-open"></svg> <span>info-circle-open</span></li>
-<li><svg class="lexicon-icon lexicon-icon-info-circle"><use xlink:href="../../images/icons/icons.svg#info-circle"></svg> <span>info-circle</span></li>
-<li><svg class="lexicon-icon lexicon-icon-info-panel-closed"><use xlink:href="../../images/icons/icons.svg#info-panel-closed"></svg> <span>info-panel-closed</span></li>
-<li><svg class="lexicon-icon lexicon-icon-info-panel-open"><use xlink:href="../../images/icons/icons.svg#info-panel-open"></svg> <span>info-panel-open</span></li>
-<li><svg class="lexicon-icon lexicon-icon-information-live"><use xlink:href="../../images/icons/icons.svg#information-live"></svg> <span>information-live</span></li>
-<li><svg class="lexicon-icon lexicon-icon-italic"><use xlink:href="../../images/icons/icons.svg#italic"></svg> <span>italic</span></li>
-<li><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg> <span>link</span></li>
-<li><svg class="lexicon-icon lexicon-icon-list-ol"><use xlink:href="../../images/icons/icons.svg#list-ol"></svg> <span>list-ol</span></li>
-<li><svg class="lexicon-icon lexicon-icon-list-ul"><use xlink:href="../../images/icons/icons.svg#list-ul"></svg> <span>list-ul</span></li>
-<li><svg class="lexicon-icon lexicon-icon-list"><use xlink:href="../../images/icons/icons.svg#list"></svg> <span>list</span></li>
-<li><svg class="lexicon-icon lexicon-icon-live"><use xlink:href="../../images/icons/icons.svg#live"></svg> <span>live</span></li>
-<li><svg class="lexicon-icon lexicon-icon-lock"><use xlink:href="../../images/icons/icons.svg#lock"></svg> <span>lock</span></li>
-<li><svg class="lexicon-icon lexicon-icon-logout"><use xlink:href="../../images/icons/icons.svg#logout"></svg> <span>logout</span></li>
-<li><svg class="lexicon-icon lexicon-icon-magic"><use xlink:href="../../images/icons/icons.svg#magic"></svg> <span>magic</span></li>
-<li><svg class="lexicon-icon lexicon-icon-mark-as-answer"><use xlink:href="../../images/icons/icons.svg#mark-as-answer"></svg> <span>mark-as-answer</span></li>
-<li><svg class="lexicon-icon lexicon-icon-mark-as-question"><use xlink:href="../../images/icons/icons.svg#mark-as-question"></svg> <span>mark-as-question</span></li>
-<li><svg class="lexicon-icon lexicon-icon-message-boards"><use xlink:href="../../images/icons/icons.svg#message-boards"></svg> <span>message-boards</span></li>
-<li><svg class="lexicon-icon lexicon-icon-mobile-device-rules"><use xlink:href="../../images/icons/icons.svg#mobile-device-rules"></svg> <span>mobile-device-rules</span></li>
-<li><svg class="lexicon-icon lexicon-icon-mobile-landscape"><use xlink:href="../../images/icons/icons.svg#mobile-landscape"></svg> <span>mobile-landscape</span></li>
-<li><svg class="lexicon-icon lexicon-icon-mobile-portrait"><use xlink:href="../../images/icons/icons.svg#mobile-portrait"></svg> <span>mobile-portrait</span></li>
-<li><svg class="lexicon-icon lexicon-icon-moon"><use xlink:href="../../images/icons/icons.svg#moon"></svg> <span>moon</span></li>
-<li><svg class="lexicon-icon lexicon-icon-move"><use xlink:href="../../images/icons/icons.svg#move"></svg> <span>move</span></li>
-<li><svg class="lexicon-icon lexicon-icon-myspace"><use xlink:href="../../images/icons/icons.svg#myspace"></svg> <span>myspace</span></li>
-<li><svg class="lexicon-icon lexicon-icon-order-arrow"><use xlink:href="../../images/icons/icons.svg#order-arrow"></svg> <span>order-arrow</span></li>
-<li><svg class="lexicon-icon lexicon-icon-organizations"><use xlink:href="../../images/icons/icons.svg#organizations"></svg> <span>organizations</span></li>
-<li><svg class="lexicon-icon lexicon-icon-page-template"><use xlink:href="../../images/icons/icons.svg#page-template"></svg> <span>page-template</span></li>
-<li><svg class="lexicon-icon lexicon-icon-page"><use xlink:href="../../images/icons/icons.svg#page"></svg> <span>page</span></li>
-<li><svg class="lexicon-icon lexicon-icon-pages-tree"><use xlink:href="../../images/icons/icons.svg#pages-tree"></svg> <span>pages-tree</span></li>
-<li><svg class="lexicon-icon lexicon-icon-paperclip"><use xlink:href="../../images/icons/icons.svg#paperclip"></svg> <span>paperclip</span></li>
-<li><svg class="lexicon-icon lexicon-icon-paragraph"><use xlink:href="../../images/icons/icons.svg#paragraph"></svg> <span>paragraph</span></li>
-<li><svg class="lexicon-icon lexicon-icon-password-policies"><use xlink:href="../../images/icons/icons.svg#password-policies"></svg> <span>password-policies</span></li>
-<li><svg class="lexicon-icon lexicon-icon-paste"><use xlink:href="../../images/icons/icons.svg#paste"></svg> <span>paste</span></li>
-<li><svg class="lexicon-icon lexicon-icon-pause"><use xlink:href="../../images/icons/icons.svg#pause"></svg> <span>pause</span></li>
-<li><svg class="lexicon-icon lexicon-icon-pencil"><use xlink:href="../../images/icons/icons.svg#pencil"></svg> <span>pencil</span></li>
-<li><svg class="lexicon-icon lexicon-icon-phone"><use xlink:href="../../images/icons/icons.svg#phone"></svg> <span>phone</span></li>
-<li><svg class="lexicon-icon lexicon-icon-picture"><use xlink:href="../../images/icons/icons.svg#picture"></svg> <span>picture</span></li>
-<li><svg class="lexicon-icon lexicon-icon-play"><use xlink:href="../../images/icons/icons.svg#play"></svg> <span>play</span></li>
-<li><svg class="lexicon-icon lexicon-icon-plus"><use xlink:href="../../images/icons/icons.svg#plus"></svg> <span>plus</span></li>
-<li><svg class="lexicon-icon lexicon-icon-polls"><use xlink:href="../../images/icons/icons.svg#polls"></svg> <span>polls</span></li>
-<li><svg class="lexicon-icon lexicon-icon-print"><use xlink:href="../../images/icons/icons.svg#print"></svg> <span>print</span></li>
-<li><svg class="lexicon-icon lexicon-icon-product-menu-closed"><use xlink:href="../../images/icons/icons.svg#product-menu-closed"></svg> <span>product-menu-closed</span></li>
-<li><svg class="lexicon-icon lexicon-icon-product-menu-open"><use xlink:href="../../images/icons/icons.svg#product-menu-open"></svg> <span>product-menu-open</span></li>
-<li><svg class="lexicon-icon lexicon-icon-product-menu"><use xlink:href="../../images/icons/icons.svg#product-menu"></svg> <span>product-menu</span></li>
-<li><svg class="lexicon-icon lexicon-icon-question-circle-full"><use xlink:href="../../images/icons/icons.svg#question-circle-full"></svg> <span>question-circle-full</span></li>
-<li><svg class="lexicon-icon lexicon-icon-question-circle"><use xlink:href="../../images/icons/icons.svg#question-circle"></svg> <span>question-circle</span></li>
-<li><svg class="lexicon-icon lexicon-icon-quote-left"><use xlink:href="../../images/icons/icons.svg#quote-left"></svg> <span>quote-left</span></li>
-<li><svg class="lexicon-icon lexicon-icon-quote-right"><use xlink:href="../../images/icons/icons.svg#quote-right"></svg> <span>quote-right</span></li>
-<li><svg class="lexicon-icon lexicon-icon-radio-button"><use xlink:href="../../images/icons/icons.svg#radio-button"></svg> <span>radio-button</span></li>
-<li><svg class="lexicon-icon lexicon-icon-redo"><use xlink:href="../../images/icons/icons.svg#redo"></svg> <span>redo</span></li>
-<li><svg class="lexicon-icon lexicon-icon-reload"><use xlink:href="../../images/icons/icons.svg#reload"></svg> <span>reload</span></li>
-<li><svg class="lexicon-icon lexicon-icon-remove-role"><use xlink:href="../../images/icons/icons.svg#remove-role"></svg> <span>remove-role</span></li>
-<li><svg class="lexicon-icon lexicon-icon-remove-style"><use xlink:href="../../images/icons/icons.svg#remove-style"></svg> <span>remove-style</span></li>
-<li><svg class="lexicon-icon lexicon-icon-reply"><use xlink:href="../../images/icons/icons.svg#reply"></svg> <span>reply</span></li>
-<li><svg class="lexicon-icon lexicon-icon-repository"><use xlink:href="../../images/icons/icons.svg#repository"></svg> <span>repository</span></li>
-<li><svg class="lexicon-icon lexicon-icon-restore"><use xlink:href="../../images/icons/icons.svg#restore"></svg> <span>restore</span></li>
-<li><svg class="lexicon-icon lexicon-icon-rss-svg"><use xlink:href="../../images/icons/icons.svg#rss-svg"></svg> <span>rss-svg</span></li>
-<li><svg class="lexicon-icon lexicon-icon-search"><use xlink:href="../../images/icons/icons.svg#search"></svg> <span>search</span></li>
-<li><svg class="lexicon-icon lexicon-icon-select-from-list"><use xlink:href="../../images/icons/icons.svg#select-from-list"></svg> <span>select-from-list</span></li>
-<li><svg class="lexicon-icon lexicon-icon-share-alt"><use xlink:href="../../images/icons/icons.svg#share-alt"></svg> <span>share-alt</span></li>
-<li><svg class="lexicon-icon lexicon-icon-share"><use xlink:href="../../images/icons/icons.svg#share"></svg> <span>share</span></li>
-<li><svg class="lexicon-icon lexicon-icon-shortcut"><use xlink:href="../../images/icons/icons.svg#shortcut"></svg> <span>shortcut</span></li>
-<li><svg class="lexicon-icon lexicon-icon-simulation-menu-closed"><use xlink:href="../../images/icons/icons.svg#simulation-menu-closed"></svg> <span>simulation-menu-closed</span></li>
-<li><svg class="lexicon-icon lexicon-icon-simulation-menu-open"><use xlink:href="../../images/icons/icons.svg#simulation-menu-open"></svg> <span>simulation-menu-open</span></li>
-<li><svg class="lexicon-icon lexicon-icon-simulation-menu"><use xlink:href="../../images/icons/icons.svg#simulation-menu"></svg> <span>simulation-menu</span></li>
-<li><svg class="lexicon-icon lexicon-icon-site-template"><use xlink:href="../../images/icons/icons.svg#site-template"></svg> <span>site-template</span></li>
-<li><svg class="lexicon-icon lexicon-icon-sites"><use xlink:href="../../images/icons/icons.svg#sites"></svg> <span>sites</span></li>
-<li><svg class="lexicon-icon lexicon-icon-staging"><use xlink:href="../../images/icons/icons.svg#staging"></svg> <span>staging</span></li>
-<li><svg class="lexicon-icon lexicon-icon-star-half"><use xlink:href="../../images/icons/icons.svg#star-half"></svg> <span>star-half</span></li>
-<li><svg class="lexicon-icon lexicon-icon-star-o"><use xlink:href="../../images/icons/icons.svg#star-o"></svg> <span>star-o</span></li>
-<li><svg class="lexicon-icon lexicon-icon-star"><use xlink:href="../../images/icons/icons.svg#star"></svg> <span>star</span></li>
-<li><svg class="lexicon-icon lexicon-icon-strikethrough"><use xlink:href="../../images/icons/icons.svg#strikethrough"></svg> <span>strikethrough</span></li>
-<li><svg class="lexicon-icon lexicon-icon-subscript"><use xlink:href="../../images/icons/icons.svg#subscript"></svg> <span>subscript</span></li>
-<li><svg class="lexicon-icon lexicon-icon-suitcase"><use xlink:href="../../images/icons/icons.svg#suitcase"></svg> <span>suitcase</span></li>
-<li><svg class="lexicon-icon lexicon-icon-sun"><use xlink:href="../../images/icons/icons.svg#sun"></svg> <span>sun</span></li>
-<li><svg class="lexicon-icon lexicon-icon-superscript"><use xlink:href="../../images/icons/icons.svg#superscript"></svg> <span>superscript</span></li>
-<li><svg class="lexicon-icon lexicon-icon-table"><use xlink:href="../../images/icons/icons.svg#table"></svg> <span>table</span></li>
-<li><svg class="lexicon-icon lexicon-icon-table2"><use xlink:href="../../images/icons/icons.svg#table2"></svg> <span>table2</span></li>
-<li><svg class="lexicon-icon lexicon-icon-tablet-landscape"><use xlink:href="../../images/icons/icons.svg#tablet-landscape"></svg> <span>tablet-landscape</span></li>
-<li><svg class="lexicon-icon lexicon-icon-tablet-portrait"><use xlink:href="../../images/icons/icons.svg#tablet-portrait"></svg> <span>tablet-portrait</span></li>
-<li><svg class="lexicon-icon lexicon-icon-tag"><use xlink:href="../../images/icons/icons.svg#tag"></svg> <span>tag</span></li>
-<li><svg class="lexicon-icon lexicon-icon-text-editor"><use xlink:href="../../images/icons/icons.svg#text-editor"></svg> <span>text-editor</span></li>
-<li><svg class="lexicon-icon lexicon-icon-text"><use xlink:href="../../images/icons/icons.svg#text"></svg> <span>text</span></li>
-<li><svg class="lexicon-icon lexicon-icon-thumbs-down"><use xlink:href="../../images/icons/icons.svg#thumbs-down"></svg> <span>thumbs-down</span></li>
-<li><svg class="lexicon-icon lexicon-icon-thumbs-up"><use xlink:href="../../images/icons/icons.svg#thumbs-up"></svg> <span>thumbs-up</span></li>
-<li><svg class="lexicon-icon lexicon-icon-time"><use xlink:href="../../images/icons/icons.svg#time"></svg> <span>time</span></li>
-<li><svg class="lexicon-icon lexicon-icon-times-circle"><use xlink:href="../../images/icons/icons.svg#times-circle"></svg> <span>times-circle</span></li>
-<li><svg class="lexicon-icon lexicon-icon-times"><use xlink:href="../../images/icons/icons.svg#times"></svg> <span>times</span></li>
-<li><svg class="lexicon-icon lexicon-icon-transform"><use xlink:href="../../images/icons/icons.svg#transform"></svg> <span>transform</span></li>
-<li><svg class="lexicon-icon lexicon-icon-trash"><use xlink:href="../../images/icons/icons.svg#trash"></svg> <span>trash</span></li>
-<li><svg class="lexicon-icon lexicon-icon-twitter"><use xlink:href="../../images/icons/icons.svg#twitter"></svg> <span>twitter</span></li>
-<li><svg class="lexicon-icon lexicon-icon-underline"><use xlink:href="../../images/icons/icons.svg#underline"></svg> <span>underline</span></li>
-<li><svg class="lexicon-icon lexicon-icon-undo"><use xlink:href="../../images/icons/icons.svg#undo"></svg> <span>undo</span></li>
-<li><svg class="lexicon-icon lexicon-icon-unlock"><use xlink:href="../../images/icons/icons.svg#unlock"></svg> <span>unlock</span></li>
-<li><svg class="lexicon-icon lexicon-icon-user"><use xlink:href="../../images/icons/icons.svg#user"></svg> <span>user</span></li>
-<li><svg class="lexicon-icon lexicon-icon-users"><use xlink:href="../../images/icons/icons.svg#users"></svg> <span>users</span></li>
-<li><svg class="lexicon-icon lexicon-icon-vertical-scroll"><use xlink:href="../../images/icons/icons.svg#vertical-scroll"></svg> <span>vertical-scroll</span></li>
-<li><svg class="lexicon-icon lexicon-icon-view"><use xlink:href="../../images/icons/icons.svg#view"></svg> <span>view</span></li>
-<li><svg class="lexicon-icon lexicon-icon-vocabulary"><use xlink:href="../../images/icons/icons.svg#vocabulary"></svg> <span>vocabulary</span></li>
-<li><svg class="lexicon-icon lexicon-icon-web-content"><use xlink:href="../../images/icons/icons.svg#web-content"></svg> <span>web-content</span></li>
-<li><svg class="lexicon-icon lexicon-icon-wiki-page"><use xlink:href="../../images/icons/icons.svg#wiki-page"></svg> <span>wiki-page</span></li>
-<li><svg class="lexicon-icon lexicon-icon-wiki"><use xlink:href="../../images/icons/icons.svg#wiki"></svg> <span>wiki</span></li>
-<li><svg class="lexicon-icon lexicon-icon-workflow"><use xlink:href="../../images/icons/icons.svg#workflow"></svg> <span>workflow</span></li>
-<!-- endinject -->
-</ul>
+			<p>Note that the ID after the # symbol is the ID of the icon to use, so if you wanted to use plus icon, you would do change the <code>href</code> to <code>path/to/icons.svg#plus</code>.</p>
+			<p><a href="#lexicon-icon-explanation">Why do we use SVG?</a></p>
+		</blockquote>
 
-<h4 style="margin-top: 20px">Language Flags</h4>
-
-<blockquote class="blockquote-sm blockquote-success">
-	<p>
-		People tend to have pretty strong opinions on whether flags should be used as a visual cue for indicating a language, mainly because in many parts of the world, the flag may have cultural and geographic meanings that we might not be aware of, or the flag itself isn&apos;t fully accurate to the dialects spoken in that region.<br>
-		While we understand that reasoning, we&apos;ve found that the times they are actually needed (when a user is not familiar with the currently displayed language) somewhat eliminates using other mechanisms, such as the name of the language (since the current language could be in an entirely different character set). Given this, there is often at least some familiarity with the identity of a country that speaks a shared language.<br>
-		Or, to paraphrase Winston Churchill, &quot;Using flags is the worst system for indicating language, except for all others&quot;. :)
-	</p>
-</blockquote>
-<blockquote class="blockquote-sm blockquote-success">
-	<p>
-		To use the flags below, follow the same process as above, but the name of the icon is the locale and country code indicated in parenthesis (e.g. to use the Japanese icon, you would use <code>ja-jp</code>)
-	</p>
-</blockquote>
-<ul class="clearfix lexicon-icon-list list-unstyled">
-<!-- inject:flags:svg -->
-<li><svg class="lexicon-icon lexicon-icon-ar-sa"><use xlink:href="../../images/icons/icons.svg#ar-sa"></svg> <span>Arabic (Saudi Arabia) (ar-sa)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-bg-bg"><use xlink:href="../../images/icons/icons.svg#bg-bg"></svg> <span>Bulgarian (Bulgaria) (bg-bg)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-ca-ad"><use xlink:href="../../images/icons/icons.svg#ca-ad"></svg> <span>Catalan (Andorra) (ca-ad)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-ca-es"><use xlink:href="../../images/icons/icons.svg#ca-es"></svg> <span>Catalan (Spain) (ca-es)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-cs-cz"><use xlink:href="../../images/icons/icons.svg#cs-cz"></svg> <span>Czech (Czech Republic) (cs-cz)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-da-dk"><use xlink:href="../../images/icons/icons.svg#da-dk"></svg> <span>Danish (Denmark) (da-dk)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-de-de"><use xlink:href="../../images/icons/icons.svg#de-de"></svg> <span>German (Germany) (de-de)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-el-gr"><use xlink:href="../../images/icons/icons.svg#el-gr"></svg> <span>Greek (Greece) (el-gr)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-en-au"><use xlink:href="../../images/icons/icons.svg#en-au"></svg> <span>English (Australia) (en-au)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-en-gb"><use xlink:href="../../images/icons/icons.svg#en-gb"></svg> <span>English (United Kingdom) (en-gb)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-en-us"><use xlink:href="../../images/icons/icons.svg#en-us"></svg> <span>English (United States) (en-us)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-es-es"><use xlink:href="../../images/icons/icons.svg#es-es"></svg> <span>Spanish (Spain) (es-es)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-et-ee"><use xlink:href="../../images/icons/icons.svg#et-ee"></svg> <span>Estonian (Estonia) (et-ee)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-eu-es"><use xlink:href="../../images/icons/icons.svg#eu-es"></svg> <span>Basque (Spain) (eu-es)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-fa-ir"><use xlink:href="../../images/icons/icons.svg#fa-ir"></svg> <span>Farsi (Iran) (fa-ir)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-fi-fi"><use xlink:href="../../images/icons/icons.svg#fi-fi"></svg> <span>Finnish (Finland) (fi-fi)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-fr-ca"><use xlink:href="../../images/icons/icons.svg#fr-ca"></svg> <span>French (Canada) (fr-ca)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-fr-fr"><use xlink:href="../../images/icons/icons.svg#fr-fr"></svg> <span>French (France) (fr-fr)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-gl-es"><use xlink:href="../../images/icons/icons.svg#gl-es"></svg> <span>Galician (Spain) (gl-es)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-hi-in"><use xlink:href="../../images/icons/icons.svg#hi-in"></svg> <span>Hindi (India) (hi-in)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-hr-hr"><use xlink:href="../../images/icons/icons.svg#hr-hr"></svg> <span>Croatian (Croatia) (hr-hr)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-hu-hu"><use xlink:href="../../images/icons/icons.svg#hu-hu"></svg> <span>Hungarian (Hungary) (hu-hu)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-in-id"><use xlink:href="../../images/icons/icons.svg#in-id"></svg> <span>Indonesian (Indonesia) (in-id)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-it-it"><use xlink:href="../../images/icons/icons.svg#it-it"></svg> <span>Italian (Italy) (it-it)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-iw-il"><use xlink:href="../../images/icons/icons.svg#iw-il"></svg> <span>Hebrew (Israel) (iw-il)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-ja-jp"><use xlink:href="../../images/icons/icons.svg#ja-jp"></svg> <span>Japanese (Japan) (ja-jp)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-ko-kr"><use xlink:href="../../images/icons/icons.svg#ko-kr"></svg> <span>Korean (South Korea) (ko-kr)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-lo-la"><use xlink:href="../../images/icons/icons.svg#lo-la"></svg> <span>Lao (Laos) (lo-la)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-lt-lt"><use xlink:href="../../images/icons/icons.svg#lt-lt"></svg> <span>Lithuanian (Lithuania) (lt-lt)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-nb-no"><use xlink:href="../../images/icons/icons.svg#nb-no"></svg> <span>Norwegian Bokm&#xE5;l (Norway) (nb-no)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-nl-be"><use xlink:href="../../images/icons/icons.svg#nl-be"></svg> <span>Dutch (Belgium) (nl-be)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-nl-nl"><use xlink:href="../../images/icons/icons.svg#nl-nl"></svg> <span>Dutch (Netherlands) (nl-nl)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-pl-pl"><use xlink:href="../../images/icons/icons.svg#pl-pl"></svg> <span>Polish (Poland) (pl-pl)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-pt-br"><use xlink:href="../../images/icons/icons.svg#pt-br"></svg> <span>Portuguese (Brazil) (pt-br)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-pt-pt"><use xlink:href="../../images/icons/icons.svg#pt-pt"></svg> <span>Portuguese (Portugal) (pt-pt)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-ro-ro"><use xlink:href="../../images/icons/icons.svg#ro-ro"></svg> <span>Romanian (Romania) (ro-ro)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-ru-ru"><use xlink:href="../../images/icons/icons.svg#ru-ru"></svg> <span>Russian (Russia) (ru-ru)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-sk-sk"><use xlink:href="../../images/icons/icons.svg#sk-sk"></svg> <span>Slovak (Slovakia) (sk-sk)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-sl-si"><use xlink:href="../../images/icons/icons.svg#sl-si"></svg> <span>Slovenian (Slovenia) (sl-si)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-sr-rs-latin"><use xlink:href="../../images/icons/icons.svg#sr-rs-latin"></svg> <span>Serbian (Latin,Serbia) (sr-rs-latin)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-sr-rs"><use xlink:href="../../images/icons/icons.svg#sr-rs"></svg> <span>Serbian (Serbia) (sr-rs)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-sv-se"><use xlink:href="../../images/icons/icons.svg#sv-se"></svg> <span>Swedish (Sweden) (sv-se)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-th-th"><use xlink:href="../../images/icons/icons.svg#th-th"></svg> <span>Thai (Thailand) (th-th)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-tr-tr"><use xlink:href="../../images/icons/icons.svg#tr-tr"></svg> <span>Turkish (Turkey) (tr-tr)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-uk-ua"><use xlink:href="../../images/icons/icons.svg#uk-ua"></svg> <span>Ukrainian (Ukraine) (uk-ua)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-vi-vn"><use xlink:href="../../images/icons/icons.svg#vi-vn"></svg> <span>Vietnamese (Vietnam) (vi-vn)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-zh-cn"><use xlink:href="../../images/icons/icons.svg#zh-cn"></svg> <span>Chinese (China) (zh-cn)</span></li>
-<li><svg class="lexicon-icon lexicon-icon-zh-tw"><use xlink:href="../../images/icons/icons.svg#zh-tw"></svg> <span>Chinese (Taiwan) (zh-tw)</span></li>
-<!-- endinject -->
-</ul>
-
-<h3>SVG Icons as Background Images</h3>
-
-<blockquote class="blockquote-sm blockquote-success">
-	<p>We have created a Sass function to turn Lexicon SVG icon&apos;s into data uri schemes, which enables you to include them as a background-image on an HTML element. The Sass function <code>lx-icon(icon-name, color)</code> takes the name of a Lexicon SVG Icon and color takes a color. The Sass rule set <code>.site-add-cell { background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; }</code> will place the SVG icon add-cell as a background-image on any element with class site-add-cell.</p>
-</blockquote>
+		<ul class="clearfix lexicon-icon-list list-unstyled">
+		<!-- inject:svg -->
+		<li><svg class="lexicon-icon lexicon-icon-add-cell"><use xlink:href="../../images/icons/icons.svg#add-cell"></svg> <span>add-cell</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-add-column"><use xlink:href="../../images/icons/icons.svg#add-column"></svg> <span>add-column</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-add-role"><use xlink:href="../../images/icons/icons.svg#add-role"></svg> <span>add-role</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-add-row"><use xlink:href="../../images/icons/icons.svg#add-row"></svg> <span>add-row</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-adjust"><use xlink:href="../../images/icons/icons.svg#adjust"></svg> <span>adjust</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-align-center"><use xlink:href="../../images/icons/icons.svg#align-center"></svg> <span>align-center</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-align-justify"><use xlink:href="../../images/icons/icons.svg#align-justify"></svg> <span>align-justify</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-align-left"><use xlink:href="../../images/icons/icons.svg#align-left"></svg> <span>align-left</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-align-right"><use xlink:href="../../images/icons/icons.svg#align-right"></svg> <span>align-right</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-angle-down"><use xlink:href="../../images/icons/icons.svg#angle-down"></svg> <span>angle-down</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-angle-left"><use xlink:href="../../images/icons/icons.svg#angle-left"></svg> <span>angle-left</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-angle-right"><use xlink:href="../../images/icons/icons.svg#angle-right"></svg> <span>angle-right</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-angle-up"><use xlink:href="../../images/icons/icons.svg#angle-up"></svg> <span>angle-up</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-archive"><use xlink:href="../../images/icons/icons.svg#archive"></svg> <span>archive</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-asterisk"><use xlink:href="../../images/icons/icons.svg#asterisk"></svg> <span>asterisk</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-audio"><use xlink:href="../../images/icons/icons.svg#audio"></svg> <span>audio</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-autosize"><use xlink:href="../../images/icons/icons.svg#autosize"></svg> <span>autosize</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-bars"><use xlink:href="../../images/icons/icons.svg#bars"></svg> <span>bars</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-blogs"><use xlink:href="../../images/icons/icons.svg#blogs"></svg> <span>blogs</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-bold"><use xlink:href="../../images/icons/icons.svg#bold"></svg> <span>bold</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-bookmarks"><use xlink:href="../../images/icons/icons.svg#bookmarks"></svg> <span>bookmarks</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-calendar"><use xlink:href="../../images/icons/icons.svg#calendar"></svg> <span>calendar</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-camera"><use xlink:href="../../images/icons/icons.svg#camera"></svg> <span>camera</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-cards"><use xlink:href="../../images/icons/icons.svg#cards"></svg> <span>cards</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-cards2"><use xlink:href="../../images/icons/icons.svg#cards2"></svg> <span>cards2</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-caret-bottom"><use xlink:href="../../images/icons/icons.svg#caret-bottom"></svg> <span>caret-bottom</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-caret-double-l"><use xlink:href="../../images/icons/icons.svg#caret-double-l"></svg> <span>caret-double-l</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-caret-double"><use xlink:href="../../images/icons/icons.svg#caret-double"></svg> <span>caret-double</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-caret-top"><use xlink:href="../../images/icons/icons.svg#caret-top"></svg> <span>caret-top</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-categories"><use xlink:href="../../images/icons/icons.svg#categories"></svg> <span>categories</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-chain-broken"><use xlink:href="../../images/icons/icons.svg#chain-broken"></svg> <span>chain-broken</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-change"><use xlink:href="../../images/icons/icons.svg#change"></svg> <span>change</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-check-circle"><use xlink:href="../../images/icons/icons.svg#check-circle"></svg> <span>check-circle</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-check"><use xlink:href="../../images/icons/icons.svg#check"></svg> <span>check</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-code"><use xlink:href="../../images/icons/icons.svg#code"></svg> <span>code</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-cog"><use xlink:href="../../images/icons/icons.svg#cog"></svg> <span>cog</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-columns"><use xlink:href="../../images/icons/icons.svg#columns"></svg> <span>columns</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-comments"><use xlink:href="../../images/icons/icons.svg#comments"></svg> <span>comments</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-compress"><use xlink:href="../../images/icons/icons.svg#compress"></svg> <span>compress</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-control-panel"><use xlink:href="../../images/icons/icons.svg#control-panel"></svg> <span>control-panel</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-custom-size"><use xlink:href="../../images/icons/icons.svg#custom-size"></svg> <span>custom-size</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-cut"><use xlink:href="../../images/icons/icons.svg#cut"></svg> <span>cut</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-date"><use xlink:href="../../images/icons/icons.svg#date"></svg> <span>date</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-desktop"><use xlink:href="../../images/icons/icons.svg#desktop"></svg> <span>desktop</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-documents-and-media"><use xlink:href="../../images/icons/icons.svg#documents-and-media"></svg> <span>documents-and-media</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-download"><use xlink:href="../../images/icons/icons.svg#download"></svg> <span>download</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-dynamic-data-list"><use xlink:href="../../images/icons/icons.svg#dynamic-data-list"></svg> <span>dynamic-data-list</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-edit-layout"><use xlink:href="../../images/icons/icons.svg#edit-layout"></svg> <span>edit-layout</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-effects"><use xlink:href="../../images/icons/icons.svg#effects"></svg> <span>effects</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-ellipsis-h"><use xlink:href="../../images/icons/icons.svg#ellipsis-h"></svg> <span>ellipsis-h</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-ellipsis-v"><use xlink:href="../../images/icons/icons.svg#ellipsis-v"></svg> <span>ellipsis-v</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-embed"><use xlink:href="../../images/icons/icons.svg#embed"></svg> <span>embed</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-envelope-closed"><use xlink:href="../../images/icons/icons.svg#envelope-closed"></svg> <span>envelope-closed</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-envelope-open"><use xlink:href="../../images/icons/icons.svg#envelope-open"></svg> <span>envelope-open</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-exclamation-circle"><use xlink:href="../../images/icons/icons.svg#exclamation-circle"></svg> <span>exclamation-circle</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-exclamation-full"><use xlink:href="../../images/icons/icons.svg#exclamation-full"></svg> <span>exclamation-full</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-expand"><use xlink:href="../../images/icons/icons.svg#expand"></svg> <span>expand</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-flag-empty"><use xlink:href="../../images/icons/icons.svg#flag-empty"></svg> <span>flag-empty</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-flag-full"><use xlink:href="../../images/icons/icons.svg#flag-full"></svg> <span>flag-full</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-folder"><use xlink:href="../../images/icons/icons.svg#folder"></svg> <span>folder</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-format"><use xlink:href="../../images/icons/icons.svg#format"></svg> <span>format</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-forms"><use xlink:href="../../images/icons/icons.svg#forms"></svg> <span>forms</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-full-size"><use xlink:href="../../images/icons/icons.svg#full-size"></svg> <span>full-size</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-geolocation"><use xlink:href="../../images/icons/icons.svg#geolocation"></svg> <span>geolocation</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-grid"><use xlink:href="../../images/icons/icons.svg#grid"></svg> <span>grid</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-h1"><use xlink:href="../../images/icons/icons.svg#h1"></svg> <span>h1</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-h2"><use xlink:href="../../images/icons/icons.svg#h2"></svg> <span>h2</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-heart"><use xlink:href="../../images/icons/icons.svg#heart"></svg> <span>heart</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-hidden"><use xlink:href="../../images/icons/icons.svg#hidden"></svg> <span>hidden</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-home"><use xlink:href="../../images/icons/icons.svg#home"></svg> <span>home</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-horizontal-scroll"><use xlink:href="../../images/icons/icons.svg#horizontal-scroll"></svg> <span>horizontal-scroll</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-hr"><use xlink:href="../../images/icons/icons.svg#hr"></svg> <span>hr</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-import-export"><use xlink:href="../../images/icons/icons.svg#import-export"></svg> <span>import-export</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-indent-less"><use xlink:href="../../images/icons/icons.svg#indent-less"></svg> <span>indent-less</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-indent-more"><use xlink:href="../../images/icons/icons.svg#indent-more"></svg> <span>indent-more</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-info-circle-open"><use xlink:href="../../images/icons/icons.svg#info-circle-open"></svg> <span>info-circle-open</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-info-circle"><use xlink:href="../../images/icons/icons.svg#info-circle"></svg> <span>info-circle</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-info-panel-closed"><use xlink:href="../../images/icons/icons.svg#info-panel-closed"></svg> <span>info-panel-closed</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-info-panel-open"><use xlink:href="../../images/icons/icons.svg#info-panel-open"></svg> <span>info-panel-open</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-information-live"><use xlink:href="../../images/icons/icons.svg#information-live"></svg> <span>information-live</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-italic"><use xlink:href="../../images/icons/icons.svg#italic"></svg> <span>italic</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg> <span>link</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-list-ol"><use xlink:href="../../images/icons/icons.svg#list-ol"></svg> <span>list-ol</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-list-ul"><use xlink:href="../../images/icons/icons.svg#list-ul"></svg> <span>list-ul</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-list"><use xlink:href="../../images/icons/icons.svg#list"></svg> <span>list</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-live"><use xlink:href="../../images/icons/icons.svg#live"></svg> <span>live</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-lock"><use xlink:href="../../images/icons/icons.svg#lock"></svg> <span>lock</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-logout"><use xlink:href="../../images/icons/icons.svg#logout"></svg> <span>logout</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-magic"><use xlink:href="../../images/icons/icons.svg#magic"></svg> <span>magic</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-mark-as-answer"><use xlink:href="../../images/icons/icons.svg#mark-as-answer"></svg> <span>mark-as-answer</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-mark-as-question"><use xlink:href="../../images/icons/icons.svg#mark-as-question"></svg> <span>mark-as-question</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-message-boards"><use xlink:href="../../images/icons/icons.svg#message-boards"></svg> <span>message-boards</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-mobile-device-rules"><use xlink:href="../../images/icons/icons.svg#mobile-device-rules"></svg> <span>mobile-device-rules</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-mobile-landscape"><use xlink:href="../../images/icons/icons.svg#mobile-landscape"></svg> <span>mobile-landscape</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-mobile-portrait"><use xlink:href="../../images/icons/icons.svg#mobile-portrait"></svg> <span>mobile-portrait</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-moon"><use xlink:href="../../images/icons/icons.svg#moon"></svg> <span>moon</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-move"><use xlink:href="../../images/icons/icons.svg#move"></svg> <span>move</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-myspace"><use xlink:href="../../images/icons/icons.svg#myspace"></svg> <span>myspace</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-order-arrow"><use xlink:href="../../images/icons/icons.svg#order-arrow"></svg> <span>order-arrow</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-organizations"><use xlink:href="../../images/icons/icons.svg#organizations"></svg> <span>organizations</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-page-template"><use xlink:href="../../images/icons/icons.svg#page-template"></svg> <span>page-template</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-page"><use xlink:href="../../images/icons/icons.svg#page"></svg> <span>page</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-pages-tree"><use xlink:href="../../images/icons/icons.svg#pages-tree"></svg> <span>pages-tree</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-paperclip"><use xlink:href="../../images/icons/icons.svg#paperclip"></svg> <span>paperclip</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-paragraph"><use xlink:href="../../images/icons/icons.svg#paragraph"></svg> <span>paragraph</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-password-policies"><use xlink:href="../../images/icons/icons.svg#password-policies"></svg> <span>password-policies</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-paste"><use xlink:href="../../images/icons/icons.svg#paste"></svg> <span>paste</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-pause"><use xlink:href="../../images/icons/icons.svg#pause"></svg> <span>pause</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-pencil"><use xlink:href="../../images/icons/icons.svg#pencil"></svg> <span>pencil</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-phone"><use xlink:href="../../images/icons/icons.svg#phone"></svg> <span>phone</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-picture"><use xlink:href="../../images/icons/icons.svg#picture"></svg> <span>picture</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-play"><use xlink:href="../../images/icons/icons.svg#play"></svg> <span>play</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-plus"><use xlink:href="../../images/icons/icons.svg#plus"></svg> <span>plus</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-polls"><use xlink:href="../../images/icons/icons.svg#polls"></svg> <span>polls</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-print"><use xlink:href="../../images/icons/icons.svg#print"></svg> <span>print</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-product-menu-closed"><use xlink:href="../../images/icons/icons.svg#product-menu-closed"></svg> <span>product-menu-closed</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-product-menu-open"><use xlink:href="../../images/icons/icons.svg#product-menu-open"></svg> <span>product-menu-open</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-product-menu"><use xlink:href="../../images/icons/icons.svg#product-menu"></svg> <span>product-menu</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-question-circle-full"><use xlink:href="../../images/icons/icons.svg#question-circle-full"></svg> <span>question-circle-full</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-question-circle"><use xlink:href="../../images/icons/icons.svg#question-circle"></svg> <span>question-circle</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-quote-left"><use xlink:href="../../images/icons/icons.svg#quote-left"></svg> <span>quote-left</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-quote-right"><use xlink:href="../../images/icons/icons.svg#quote-right"></svg> <span>quote-right</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-radio-button"><use xlink:href="../../images/icons/icons.svg#radio-button"></svg> <span>radio-button</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-redo"><use xlink:href="../../images/icons/icons.svg#redo"></svg> <span>redo</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-reload"><use xlink:href="../../images/icons/icons.svg#reload"></svg> <span>reload</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-remove-role"><use xlink:href="../../images/icons/icons.svg#remove-role"></svg> <span>remove-role</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-remove-style"><use xlink:href="../../images/icons/icons.svg#remove-style"></svg> <span>remove-style</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-reply"><use xlink:href="../../images/icons/icons.svg#reply"></svg> <span>reply</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-repository"><use xlink:href="../../images/icons/icons.svg#repository"></svg> <span>repository</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-restore"><use xlink:href="../../images/icons/icons.svg#restore"></svg> <span>restore</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-rss-svg"><use xlink:href="../../images/icons/icons.svg#rss-svg"></svg> <span>rss-svg</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-search"><use xlink:href="../../images/icons/icons.svg#search"></svg> <span>search</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-select-from-list"><use xlink:href="../../images/icons/icons.svg#select-from-list"></svg> <span>select-from-list</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-share-alt"><use xlink:href="../../images/icons/icons.svg#share-alt"></svg> <span>share-alt</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-share"><use xlink:href="../../images/icons/icons.svg#share"></svg> <span>share</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-shortcut"><use xlink:href="../../images/icons/icons.svg#shortcut"></svg> <span>shortcut</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-simulation-menu-closed"><use xlink:href="../../images/icons/icons.svg#simulation-menu-closed"></svg> <span>simulation-menu-closed</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-simulation-menu-open"><use xlink:href="../../images/icons/icons.svg#simulation-menu-open"></svg> <span>simulation-menu-open</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-simulation-menu"><use xlink:href="../../images/icons/icons.svg#simulation-menu"></svg> <span>simulation-menu</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-site-template"><use xlink:href="../../images/icons/icons.svg#site-template"></svg> <span>site-template</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-sites"><use xlink:href="../../images/icons/icons.svg#sites"></svg> <span>sites</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-staging"><use xlink:href="../../images/icons/icons.svg#staging"></svg> <span>staging</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-star-half"><use xlink:href="../../images/icons/icons.svg#star-half"></svg> <span>star-half</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-star-o"><use xlink:href="../../images/icons/icons.svg#star-o"></svg> <span>star-o</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-star"><use xlink:href="../../images/icons/icons.svg#star"></svg> <span>star</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-strikethrough"><use xlink:href="../../images/icons/icons.svg#strikethrough"></svg> <span>strikethrough</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-subscript"><use xlink:href="../../images/icons/icons.svg#subscript"></svg> <span>subscript</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-suitcase"><use xlink:href="../../images/icons/icons.svg#suitcase"></svg> <span>suitcase</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-sun"><use xlink:href="../../images/icons/icons.svg#sun"></svg> <span>sun</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-superscript"><use xlink:href="../../images/icons/icons.svg#superscript"></svg> <span>superscript</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-table"><use xlink:href="../../images/icons/icons.svg#table"></svg> <span>table</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-table2"><use xlink:href="../../images/icons/icons.svg#table2"></svg> <span>table2</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-tablet-landscape"><use xlink:href="../../images/icons/icons.svg#tablet-landscape"></svg> <span>tablet-landscape</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-tablet-portrait"><use xlink:href="../../images/icons/icons.svg#tablet-portrait"></svg> <span>tablet-portrait</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-tag"><use xlink:href="../../images/icons/icons.svg#tag"></svg> <span>tag</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-text-editor"><use xlink:href="../../images/icons/icons.svg#text-editor"></svg> <span>text-editor</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-text"><use xlink:href="../../images/icons/icons.svg#text"></svg> <span>text</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-thumbs-down"><use xlink:href="../../images/icons/icons.svg#thumbs-down"></svg> <span>thumbs-down</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-thumbs-up"><use xlink:href="../../images/icons/icons.svg#thumbs-up"></svg> <span>thumbs-up</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-time"><use xlink:href="../../images/icons/icons.svg#time"></svg> <span>time</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-times-circle"><use xlink:href="../../images/icons/icons.svg#times-circle"></svg> <span>times-circle</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-times"><use xlink:href="../../images/icons/icons.svg#times"></svg> <span>times</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-transform"><use xlink:href="../../images/icons/icons.svg#transform"></svg> <span>transform</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-trash"><use xlink:href="../../images/icons/icons.svg#trash"></svg> <span>trash</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-twitter"><use xlink:href="../../images/icons/icons.svg#twitter"></svg> <span>twitter</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-underline"><use xlink:href="../../images/icons/icons.svg#underline"></svg> <span>underline</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-undo"><use xlink:href="../../images/icons/icons.svg#undo"></svg> <span>undo</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-unlock"><use xlink:href="../../images/icons/icons.svg#unlock"></svg> <span>unlock</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-user"><use xlink:href="../../images/icons/icons.svg#user"></svg> <span>user</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-users"><use xlink:href="../../images/icons/icons.svg#users"></svg> <span>users</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-vertical-scroll"><use xlink:href="../../images/icons/icons.svg#vertical-scroll"></svg> <span>vertical-scroll</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-view"><use xlink:href="../../images/icons/icons.svg#view"></svg> <span>view</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-vocabulary"><use xlink:href="../../images/icons/icons.svg#vocabulary"></svg> <span>vocabulary</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-web-content"><use xlink:href="../../images/icons/icons.svg#web-content"></svg> <span>web-content</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-wiki-page"><use xlink:href="../../images/icons/icons.svg#wiki-page"></svg> <span>wiki-page</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-wiki"><use xlink:href="../../images/icons/icons.svg#wiki"></svg> <span>wiki</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-workflow"><use xlink:href="../../images/icons/icons.svg#workflow"></svg> <span>workflow</span></li>
+		<!-- endinject -->
+		</ul>
+	</div>
+</div>
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3 id="language-flags"><a class="heading-anchor" href="#language-flags"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Language Flags</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>
+				People tend to have pretty strong opinions on whether flags should be used as a visual cue for indicating a language, mainly because in many parts of the world, the flag may have cultural and geographic meanings that we might not be aware of, or the flag itself isn&apos;t fully accurate to the dialects spoken in that region.<br>
+				While we understand that reasoning, we&apos;ve found that the times they are actually needed (when a user is not familiar with the currently displayed language) somewhat eliminates using other mechanisms, such as the name of the language (since the current language could be in an entirely different character set). Given this, there is often at least some familiarity with the identity of a country that speaks a shared language.<br>
+				Or, to paraphrase Winston Churchill, &quot;Using flags is the worst system for indicating language, except for all others&quot;. :)
+			</p>
+		</blockquote>
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>
+				To use the flags below, follow the same process as above, but the name of the icon is the locale and country code indicated in parenthesis (e.g. to use the Japanese icon, you would use <code>ja-jp</code>)
+			</p>
+		</blockquote>
+
+		<ul class="clearfix lexicon-icon-list list-unstyled">
+		<!-- inject:flags:svg -->
+		<li><svg class="lexicon-icon lexicon-icon-ar-sa"><use xlink:href="../../images/icons/icons.svg#ar-sa"></svg> <span>Arabic (Saudi Arabia) (ar-sa)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-bg-bg"><use xlink:href="../../images/icons/icons.svg#bg-bg"></svg> <span>Bulgarian (Bulgaria) (bg-bg)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-ca-ad"><use xlink:href="../../images/icons/icons.svg#ca-ad"></svg> <span>Catalan (Andorra) (ca-ad)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-ca-es"><use xlink:href="../../images/icons/icons.svg#ca-es"></svg> <span>Catalan (Spain) (ca-es)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-cs-cz"><use xlink:href="../../images/icons/icons.svg#cs-cz"></svg> <span>Czech (Czech Republic) (cs-cz)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-da-dk"><use xlink:href="../../images/icons/icons.svg#da-dk"></svg> <span>Danish (Denmark) (da-dk)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-de-de"><use xlink:href="../../images/icons/icons.svg#de-de"></svg> <span>German (Germany) (de-de)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-el-gr"><use xlink:href="../../images/icons/icons.svg#el-gr"></svg> <span>Greek (Greece) (el-gr)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-en-au"><use xlink:href="../../images/icons/icons.svg#en-au"></svg> <span>English (Australia) (en-au)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-en-gb"><use xlink:href="../../images/icons/icons.svg#en-gb"></svg> <span>English (United Kingdom) (en-gb)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-en-us"><use xlink:href="../../images/icons/icons.svg#en-us"></svg> <span>English (United States) (en-us)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-es-es"><use xlink:href="../../images/icons/icons.svg#es-es"></svg> <span>Spanish (Spain) (es-es)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-et-ee"><use xlink:href="../../images/icons/icons.svg#et-ee"></svg> <span>Estonian (Estonia) (et-ee)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-eu-es"><use xlink:href="../../images/icons/icons.svg#eu-es"></svg> <span>Basque (Spain) (eu-es)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-fa-ir"><use xlink:href="../../images/icons/icons.svg#fa-ir"></svg> <span>Farsi (Iran) (fa-ir)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-fi-fi"><use xlink:href="../../images/icons/icons.svg#fi-fi"></svg> <span>Finnish (Finland) (fi-fi)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-fr-ca"><use xlink:href="../../images/icons/icons.svg#fr-ca"></svg> <span>French (Canada) (fr-ca)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-fr-fr"><use xlink:href="../../images/icons/icons.svg#fr-fr"></svg> <span>French (France) (fr-fr)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-gl-es"><use xlink:href="../../images/icons/icons.svg#gl-es"></svg> <span>Galician (Spain) (gl-es)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-hi-in"><use xlink:href="../../images/icons/icons.svg#hi-in"></svg> <span>Hindi (India) (hi-in)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-hr-hr"><use xlink:href="../../images/icons/icons.svg#hr-hr"></svg> <span>Croatian (Croatia) (hr-hr)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-hu-hu"><use xlink:href="../../images/icons/icons.svg#hu-hu"></svg> <span>Hungarian (Hungary) (hu-hu)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-in-id"><use xlink:href="../../images/icons/icons.svg#in-id"></svg> <span>Indonesian (Indonesia) (in-id)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-it-it"><use xlink:href="../../images/icons/icons.svg#it-it"></svg> <span>Italian (Italy) (it-it)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-iw-il"><use xlink:href="../../images/icons/icons.svg#iw-il"></svg> <span>Hebrew (Israel) (iw-il)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-ja-jp"><use xlink:href="../../images/icons/icons.svg#ja-jp"></svg> <span>Japanese (Japan) (ja-jp)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-ko-kr"><use xlink:href="../../images/icons/icons.svg#ko-kr"></svg> <span>Korean (South Korea) (ko-kr)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-lo-la"><use xlink:href="../../images/icons/icons.svg#lo-la"></svg> <span>Lao (Laos) (lo-la)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-lt-lt"><use xlink:href="../../images/icons/icons.svg#lt-lt"></svg> <span>Lithuanian (Lithuania) (lt-lt)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-nb-no"><use xlink:href="../../images/icons/icons.svg#nb-no"></svg> <span>Norwegian Bokm&#xE5;l (Norway) (nb-no)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-nl-be"><use xlink:href="../../images/icons/icons.svg#nl-be"></svg> <span>Dutch (Belgium) (nl-be)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-nl-nl"><use xlink:href="../../images/icons/icons.svg#nl-nl"></svg> <span>Dutch (Netherlands) (nl-nl)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-pl-pl"><use xlink:href="../../images/icons/icons.svg#pl-pl"></svg> <span>Polish (Poland) (pl-pl)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-pt-br"><use xlink:href="../../images/icons/icons.svg#pt-br"></svg> <span>Portuguese (Brazil) (pt-br)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-pt-pt"><use xlink:href="../../images/icons/icons.svg#pt-pt"></svg> <span>Portuguese (Portugal) (pt-pt)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-ro-ro"><use xlink:href="../../images/icons/icons.svg#ro-ro"></svg> <span>Romanian (Romania) (ro-ro)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-ru-ru"><use xlink:href="../../images/icons/icons.svg#ru-ru"></svg> <span>Russian (Russia) (ru-ru)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-sk-sk"><use xlink:href="../../images/icons/icons.svg#sk-sk"></svg> <span>Slovak (Slovakia) (sk-sk)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-sl-si"><use xlink:href="../../images/icons/icons.svg#sl-si"></svg> <span>Slovenian (Slovenia) (sl-si)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-sr-rs-latin"><use xlink:href="../../images/icons/icons.svg#sr-rs-latin"></svg> <span>Serbian (Latin,Serbia) (sr-rs-latin)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-sr-rs"><use xlink:href="../../images/icons/icons.svg#sr-rs"></svg> <span>Serbian (Serbia) (sr-rs)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-sv-se"><use xlink:href="../../images/icons/icons.svg#sv-se"></svg> <span>Swedish (Sweden) (sv-se)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-th-th"><use xlink:href="../../images/icons/icons.svg#th-th"></svg> <span>Thai (Thailand) (th-th)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-tr-tr"><use xlink:href="../../images/icons/icons.svg#tr-tr"></svg> <span>Turkish (Turkey) (tr-tr)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-uk-ua"><use xlink:href="../../images/icons/icons.svg#uk-ua"></svg> <span>Ukrainian (Ukraine) (uk-ua)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-vi-vn"><use xlink:href="../../images/icons/icons.svg#vi-vn"></svg> <span>Vietnamese (Vietnam) (vi-vn)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-zh-cn"><use xlink:href="../../images/icons/icons.svg#zh-cn"></svg> <span>Chinese (China) (zh-cn)</span></li>
+		<li><svg class="lexicon-icon lexicon-icon-zh-tw"><use xlink:href="../../images/icons/icons.svg#zh-tw"></svg> <span>Chinese (Taiwan) (zh-tw)</span></li>
+		<!-- endinject -->
+		</ul>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="svg-icons-as-background-images"><a class="heading-anchor" href="#svg-icons-as-background-images"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>SVG Icons as Background Images</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>We have created a Sass function to turn Lexicon SVG icon&apos;s into data uri schemes, which enables you to include them as a background-image on an HTML element. The Sass function <code>lx-icon(icon-name, color)</code> takes the name of a Lexicon SVG Icon and color takes a color. The Sass rule set <code>.site-add-cell { background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; }</code> will place the SVG icon add-cell as a background-image on any element with class site-add-cell.</p>
+		</blockquote>
+
 		<span class="site-add-cell site-svg-bg">add-cell</span>
 		<span class="site-add-column site-svg-bg">add-column</span>
 		<span class="site-add-row site-svg-bg">add-row</span>
@@ -494,38 +508,43 @@
 	</div>
 </div>
 
-<blockquote class="blockquote-sm blockquote-success">
-	<p>You can turn your custom SVG into a data uri using the Sass function <code>svg-url($svg)</code> where <code>$svg</code> is the code for your inline SVG. The function returns <code>url(your_svg_as_data_uri)</code>.</p>
-</blockquote>
-
-<div class="alert alert-info">
-	When using <code>svg-url()</code>, wrap your inline SVG code with single quotes if your SVG&apos;s attributes are delimited with double quotes.
-</div>
-
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
+		<h3 id="svg-url"><a class="heading-anchor" href="#svg-url"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Svg-url()</h3>
+
+		<blockquote class="blockquote-sm blockquote-success">
+			<p>You can turn your custom SVG into a data uri using the Sass function <code>svg-url($svg)</code> where <code>$svg</code> is the code for your inline SVG. The function returns <code>url(your_svg_as_data_uri)</code>.</p>
+		</blockquote>
+
+		<div class="alert alert-info">
+			When using <code>svg-url()</code>, wrap your inline SVG code with single quotes if your SVG&apos;s attributes are delimited with double quotes.
+		</div>
+
 		<span class="site-linux-tux site-svg-bg">Linux Tux</span>
 	</div>
 </div>
 
-
-<h2>Why do we use SVG?</h2>
-<p id="lexicon-icon-explanation">
-	SVG gives us and you a greater amount of freedom in styling the icons, as well as a higher level of fidelity and clarity in the icons.
-	Font icons, while fairly simple, also suffer some drawbacks, mainly with sub-pixel aliasing that cause the quality to not be as high as we would like.
-	Also SVG allows for multi-color icons, for example:
-	<span class="lexicon-icon-examples">
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
-			<use xlink:href="../../images/icons/icons.svg#asterisk">
-		</svg>
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-logout">
-			<use xlink:href="../../images/icons/icons.svg#logout">
-		</svg>
-		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
-			<use xlink:href="../../images/icons/icons.svg#exclamation-full">
-		</svg>
-	</span>
-</p>
+<div class="row">
+	<div class="col-md-12">
+		<h3 id="why-do-we-use-svg"><a class="heading-anchor" href="#why-do-we-use-svg"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Why do we use SVG?</h3>
+		<p id="lexicon-icon-explanation">
+			SVG gives us and you a greater amount of freedom in styling the icons, as well as a higher level of fidelity and clarity in the icons.
+			Font icons, while fairly simple, also suffer some drawbacks, mainly with sub-pixel aliasing that cause the quality to not be as high as we would like.
+			Also SVG allows for multi-color icons, for example:
+		</p>
+		<div class="lexicon-icon-examples">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-asterisk">
+				<use xlink:href="../../images/icons/icons.svg#asterisk">
+			</svg>
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-logout">
+				<use xlink:href="../../images/icons/icons.svg#logout">
+			</svg>
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+				<use xlink:href="../../images/icons/icons.svg#exclamation-full">
+			</svg>
+		</div>
+	</div>
+</div>
 	</div>
 
 		</section>

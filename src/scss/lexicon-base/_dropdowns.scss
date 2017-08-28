@@ -58,6 +58,26 @@
 		.form-check-label {
 			color: $dropdown-link-disabled-color;
 		}
+
+		&.btn-link,
+		&.btn-unstyled {
+			opacity: 1;
+		}
+	}
+
+	&.btn-link {
+		line-height: $line-height-base;
+		transition: none;
+
+		@include hover-focus {
+			text-decoration: none;
+		}
+	}
+
+	&.btn-unstyled {
+		font-weight: $font-weight-normal;
+		padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+		transition: none;
 	}
 
 	.form-check {
@@ -180,7 +200,8 @@
 }
 
 .show-dropdown-action-on-active {
-	.active {
+	.active,
+	.table-active {
 		.dropdown-action {
 			.dropdown-menu {
 				display: block;
@@ -233,9 +254,10 @@
 
 .dropdown-menu-unstyled {
 	@include border-radius(0);
-	@include box-shadow(none);
 
-	border-color: transparent;
+	border-width: 0;
+
+	@include box-shadow(none);
 
 	.dropdown-item {
 		color: $dropdown-unstyled-link-color;
@@ -288,6 +310,7 @@
 	right: auto !important;
 	top: auto !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-top-right {
@@ -298,6 +321,7 @@
 	right: 0 !important;
 	top: auto !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-top-center {
@@ -308,6 +332,7 @@
 	right: auto !important;
 	top: auto !important;
 	transform: translateX(-50%) !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-center {
@@ -316,6 +341,7 @@
 	right: auto !important;
 	top: 100% !important;
 	transform: translateX(-50%) !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-left-side {
@@ -326,6 +352,7 @@
 	right: 100% !important;
 	top: 0 !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-left-side-bottom {
@@ -336,6 +363,7 @@
 	right: 100% !important;
 	top: auto !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-left-side-middle {
@@ -346,6 +374,7 @@
 	right: 100% !important;
 	top: 50% !important;
 	transform: translate(0 , -50%) !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-right-side {
@@ -356,6 +385,7 @@
 	right: auto !important;
 	top: 0 !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-right-side-bottom {
@@ -366,6 +396,7 @@
 	right: auto !important;
 	top: auto !important;
 	transform: none !important;
+	will-change: auto !important;
 }
 
 .dropdown-menu-right-side-middle {
@@ -376,6 +407,7 @@
 	right: auto !important;
 	top: 50% !important;
 	transform: translate(0 , -50%) !important;
+	will-change: auto !important;
 }
 
 // Dropdown wide / full

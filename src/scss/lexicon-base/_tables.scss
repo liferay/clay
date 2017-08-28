@@ -4,9 +4,10 @@ th {
 
 .table {
 	th {
-		font-size: $table-header-font-size;
-		font-weight: $table-header-font-weight;
-		height: $table-header-min-height;
+		color: $table-head-color;
+		font-size: $table-head-font-size;
+		font-weight: $table-head-font-weight;
+		height: $table-head-height;
 	}
 
 	td,
@@ -39,113 +40,209 @@ th {
 	width: 1%;
 }
 
-// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22804 is merged
+// Table List Skin
 
-.table-responsive {
-	@each $breakpoint in map-keys($grid-breakpoints) {
-		$next: breakpoint-next($breakpoint, $grid-breakpoints);
-		$infix: breakpoint-infix($next, $grid-breakpoints);
+.table-list {
+	background-color: $table-list-bg;
 
-		&#{$infix} {
-			@include media-breakpoint-down($breakpoint) {
-				display: block;
-				width: 100%;
-				overflow-x: auto;
+	@include border-radius($table-list-border-radius);
 
-				-ms-overflow-style: -ms-autohiding-scrollbar;
-				-webkit-overflow-scrolling: touch;
+	color: $table-list-color;
+	font-size: $table-list-font-size;
+	margin-bottom: $spacer + $table-list-border-width;
 
-				&.table-bordered {
-					border: 0;
+	thead,
+	tbody,
+	tfoot {
+		&:first-child {
+			tr:first-child {
+				th,
+				td {
+					&:first-child {
+						@if $enable-rounded {
+							border-top-left-radius: $table-list-border-radius;
+						}
+					}
+
+					&:last-child {
+						@if $enable-rounded {
+							border-top-right-radius: $table-list-border-radius;
+						}
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			tr:last-child {
+				th,
+				td {
+					&:first-child {
+						@if $enable-rounded {
+							border-bottom-left-radius: $table-list-border-radius;
+						}
+					}
+
+					&:last-child {
+						@if $enable-rounded {
+							border-bottom-right-radius: $table-list-border-radius;
+						}
+					}
 				}
 			}
 		}
 	}
-}
-
-// Table List Skin
-
-.table-list {
-	color: $table-list-color;
-	font-size: $table-list-font-size;
 
 	a {
 		color: $table-list-link-color;
 
-		&:focus,
-		&:hover {
+		@include hover-focus {
 			color: $table-list-link-color-hover;
+		}
+	}
+
+	th,
+	td {
+		box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+					0 #{$table-list-border-width} $table-list-border-color; // bottom
+		padding-top: $table-list-border-width + $table-cell-padding;
+		position: relative;
+
+		&:first-child {
+			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+						0 #{$table-list-border-width} $table-list-border-color, // bottom
+						inset #{$table-list-border-width} 0 $table-list-border-color; // left
+			padding-left: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
+		}
+
+		&:last-child {
+			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+						inset #{-$table-list-border-width} 0 $table-list-border-color, // right
+						0 #{$table-list-border-width} $table-list-border-color; // bottom
+			padding-right: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
+		}
+
+		&:only-child {
+			box-shadow: inset 0 #{$table-list-border-width} $table-list-border-color, // top
+						inset #{-$table-list-border-width} 0 $table-list-border-color, // right
+						0 #{$table-list-border-width} $table-list-border-color, // bottom
+						inset #{$table-list-border-width} 0 $table-list-border-color; // left
+			padding-left: $table-list-border-width + $table-cell-padding;
+			padding-right: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
 		}
 	}
 
 	thead {
 		td,
 		th {
-			background-color: $table-list-header-bg;
-			border-bottom-width: $table-list-header-border-bottom-width;
-			font-size: $table-list-header-font-size;
-			font-weight: $table-list-header-font-weight;
-			height: $table-list-header-min-height;
-			vertical-align: $table-list-header-vertical-alignment;
+			background-color: $table-list-head-bg;
+			border-width: 0;
+			font-size: $table-list-head-font-size;
+			font-weight: $table-list-head-font-weight;
+			height: $table-list-head-height;
+			vertical-align: $table-list-head-vertical-alignment;
 		}
-	}
-
-	tbody tr {
-		height: $table-list-row-height;
 	}
 
 	tbody,
 	tfoot {
 		td,
 		th {
-			// Chrome rendering issue with responsive-tables and td position relative
-			background-color: $table-list-body-row-bg;
-			border-top-width: 0;
+			border-width: 0;
 			vertical-align: middle;
 		}
 	}
 
-	tbody,
-	tfoot {
-		td {
-			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
-		}
+	.dropdown-action {
+		position: static;
 
-		> tr:hover td {
-			box-shadow: inset 0 #{-$table-list-row-border-bottom-width} $table-list-row-border-color;
+		.dropdown-menu-horizontal {
+			bottom: 0 !important;
+			margin-right: -3px;
+			top: $table-list-border-width !important;
+			transform: none !important;
 		}
+	}
 
-		> tr.active td {
-			box-shadow: inset 0 #{-$table-list-row-active-border-bottom-width} $table-list-row-active-border-color;
+	.table-active {
+		.dropdown-action .dropdown-menu-horizontal {
+			background-color: $table-list-active-bg;
 		}
 	}
 }
 
-// Chrome rendering issue with responsive-tables and td position relative
+.table-list.table-bordered {
+	border-width: 0;
 
-.table-striped tbody tr:nth-of-type(odd) {
-	background-color: transparent;
-
+	th,
 	td {
-		@if ($table-accent-bg == rgba($black,.05)) {
-			background-color: #F2F2F2;
-		}
-		@else {
-			background-color: $table-accent-bg;
+		box-shadow: inset 0 #{$table-list-border-width} #{$table-list-border-color}, // top
+					inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
+					0 #{$table-list-border-width} #{$table-list-border-color}, // bottom
+					#{-$table-list-border-width / 2} #{$table-list-border-width / 2} 0 #{$table-list-border-width / 2} #{$table-list-border-color}; // left
+		padding-right: $table-list-border-width + $table-cell-padding;
+		padding-top: $table-list-border-width + $table-cell-padding;
+
+		&:first-child {
+			box-shadow: inset 0 #{$table-list-border-width} #{$table-list-border-color}, // top
+						inset #{-$table-list-border-width} 0 #{$table-list-border-color}, // right
+						0 #{$table-list-border-width} #{$table-list-border-color}, // bottom
+						inset #{$table-list-border-width} 0 #{$table-list-border-color}; // left
+			padding-left: $table-list-border-width + $table-cell-padding;
+			padding-right: $table-list-border-width + $table-cell-padding;
+			padding-top: $table-list-border-width + $table-cell-padding;
 		}
 	}
 }
 
-.table-hover tbody tr:hover {
-	background-color: transparent;
+.table-list.table-striped {
+	tbody tr:nth-of-type(odd) {
+		&,
+		.dropdown-action .dropdown-menu-horizontal {
+			background-color: $table-list-accent-bg;
+		}
 
-	td {
-		@if ($table-hover-bg == rgba($black,.075)) {
-			background-color: #ECECEC;
+		&.table-active {
+			.dropdown-action .dropdown-menu-horizontal {
+				background-color: $table-list-active-bg;
+			}
 		}
-		@else {
-			background-color: $table-hover-bg;
+	}
+}
+
+.table-list.table-hover {
+	tbody tr {
+		@include hover {
+			&,
+			.dropdown-action .dropdown-menu-horizontal {
+				background-color: $table-list-hover-bg;
+			}
 		}
+	}
+}
+
+.table-list.table-hover {
+	.table-active {
+		@include hover {
+			background-color: $table-list-active-bg;
+
+			> th,
+			> td,
+			.dropdown-action .dropdown-menu-horizontal {
+				background-color: $table-list-active-bg;
+			}
+		}
+	}
+}
+
+.table-list .table-active {
+	&,
+	> th,
+	> td {
+		background-color: $table-list-active-bg;
 	}
 }
 
@@ -166,6 +263,18 @@ th {
 	td,
 	th {
 		white-space: nowrap;
+	}
+}
+
+.table .table-divider {
+	td,
+	th {
+		background-color: $table-divider-bg;
+		color: $table-divider-color;
+		font-size: $table-divider-font-size;
+		font-weight: $table-divider-font-weight;
+		padding: $table-divider-padding;
+		text-transform: $table-divider-text-transform;
 	}
 }
 

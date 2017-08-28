@@ -1,27 +1,34 @@
 $table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
 
-$table-header-font-size: null !default;
-$table-header-font-weight: null !default;
-$table-header-min-height: 36px !default;
+$table-head-font-size: null !default;
+$table-head-font-weight: null !default;
+$table-head-height: 36px !default;
 
-$table-list-content-height: 50px !default;
+$table-divider-bg: #FFF !default;
+$table-divider-color: null !default;
+$table-divider-font-weight: null !default;
+$table-divider-font-size: null !default;
+$table-divider-padding: $table-cell-padding !default;
+$table-divider-text-transform: null !default;
 
-$table-list-row-active-border-bottom-width: 1px !default;
-$table-list-row-active-border-color: $table-border-color !default;
-$table-list-row-border-bottom-width: 1px !default;
-$table-list-row-border-color: $table-border-color !default;
+// Table List
 
-$table-list-row-height: 55px !default;
-
-$table-list-body-row-bg: null !default;
+$table-list-bg: #FFF !default;
 $table-list-color: null !default;
+$table-list-accent-bg: #F2F2F2 !default;
+$table-list-hover-bg: #ECECEC !default;
+$table-list-active-bg: #DADADA !default;
+
+$table-list-border-color: $table-border-color !default;
+$table-list-border-width: 0.0625rem !default; // 1px
+$table-list-border-radius: 6px !default;
 $table-list-font-size: null !default;
+
 $table-list-link-color: null !default;
 $table-list-link-color-hover: null !default;
 
-$table-list-header-bg: null !default;
-$table-list-header-border-bottom-width: 0 !default;
-$table-list-header-font-size: null !default;
-$table-list-header-font-weight: null !default;
-$table-list-header-min-height: null !default;
-$table-list-header-vertical-alignment: null !default;
+$table-list-head-bg: null !default;
+$table-list-head-font-size: null !default;
+$table-list-head-font-weight: null !default;
+$table-list-head-height: null !default;
+$table-list-head-vertical-alignment: null !default;

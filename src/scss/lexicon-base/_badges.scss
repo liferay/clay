@@ -11,7 +11,7 @@
 	word-wrap: break-word;
 
 	a {
-		color: $badge-color;
+		color: $badge-link-color;
 		text-decoration: $badge-link-text-decoration;
 
 		@include hover-focus {
