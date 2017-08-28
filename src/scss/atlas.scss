@@ -1,7 +1,15 @@
 // INSERT CUSTOM VARS
 
-@import "lexicon-base/functions/global-functions";
+@import "functions/_global-functions";
 
-@import "atlas-theme/main";
+@import "atlas/_variables";
+
+@import "bootstrap";
+
+@import "_variables";
+
+@import "_mixins";
+
+@import "_components";
 
 // INSERT CUSTOM EXTENSIONS
