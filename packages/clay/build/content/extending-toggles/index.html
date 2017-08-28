@@ -28,7 +28,11 @@
 				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.6</span></h4>
 
 				<div class="dropdown" id="siteConfig">
-	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+			<use xlink:href="../../images/icons/icons.svg#cog"></use>
+		</svg>
+	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<div class="dropdown-header">Site Settings</div>
 		<form>
@@ -155,36 +159,12 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-</ul>
-</div>
-</li>
-<li class=""><span class="nav-title">Example Pages</span>
-<div class="">
-<ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
-</li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
-</li>
 <li class="active"><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
@@ -328,98 +308,6 @@
 				</span>
 			</label>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code>&lt;style&gt;
-    #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-        background-color: transparent;
-        background-image: url(../../images/switch_button.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        border-width: 0;
-        bottom: 0;
-        height: auto;
-        left: 2px;
-        top: 1px;
-        width: 22px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-          background-color: transparent;
-          background-image: url(../../images/switch_base.png);
-          background-repeat: no-repeat;
-          background-size: 100%;
-          border-radius: 20px;
-          border-width: 0;
-          width: 51px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-        background-image: url(../../images/switch_off_icon.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 15px;
-        left: 28px;
-        top: 4px;
-        width: 15px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-        left: 26px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-        background-image: url(../../images/switch_on_icon.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 17px;
-        left: 5px;
-        top: 4px;
-        width: 17px;
-    }
-
-    @media (min-width: 768px) {
-        #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-            width: 30px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-            width: 68px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-            left: 40px;
-            top: 8px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-            left: 35px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-            left: 12px;
-            top: 8px;
-        }
-    }
-&lt;/style&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;
-      &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
-
-      &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
-          &lt;span class=&quot;toggle-switch-handle&quot;&gt;
-              &lt;span class=&quot;toggle-switch-icon toggle-switch-icon-on&quot;&gt;&lt;/span&gt;
-              &lt;span class=&quot;toggle-switch-icon toggle-switch-icon-off&quot;&gt;&lt;/span&gt;
-          &lt;/span&gt;
-      &lt;/span&gt;
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
@@ -503,63 +391,6 @@
 				</span>
 			</label>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code>&lt;style&gt;
-    /* Toggle Switch Off Button */
-    .ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-        background-color: #FFF;
-        border-width: 0;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-        height: 27px;
-        left: 2px;
-        top: 2px;
-        width: 27px;
-    }
-
-    /* Toggle Switch On Button */
-    .ios-toggle-switch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-        border-width: 0;
-        left: 31px;
-    }
-
-    /* Toggle Switch Off Bar */
-    .ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-        background-color: #FEFEFE;
-        border: 1px solid #E6E6E6;
-    }
-
-    /* Toggle Switch On Bar */
-    .ios-toggle-switch .toggle-switch-check:checked ~ .toggle-switch-bar:before {
-        background-color: #4BD863;
-        border-color: #4BD863;
-    }
-
-    /* Toggle Switch On Bar Icon */
-    .ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-        color: #B5B5B5;
-        font-size: 15px;
-        line-height: 19px;
-    }
-&lt;/style&gt;
-
-&lt;div class=&quot;form-group ios-toggle-switch&quot;&gt;
-    &lt;label&gt;
-        &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
-
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
-            &lt;span class=&quot;toggle-switch-handle&quot;&gt;
-                &lt;span class=&quot;toggle-switch-icon toggle-switch-icon-on&quot;&gt;|&lt;/span&gt;
-                &lt;span class=&quot;icon-circle-blank toggle-switch-icon toggle-switch-icon-off&quot;&gt;&lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 	</div>
