@@ -39,7 +39,7 @@ class Sidebar extends Component {
 		let href = '/styles/main.css';
 
 		if (!value) {
-			href = '/styles/base.css';
+			href = '/styles/clay_base.css';
 		}
 
 		if (linkTag.getAttribute('href') !== href) {
