@@ -1,0 +1,90 @@
+/**
+* Clay 2.0.0-alpha.7
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.aspect-ratio {
+	display: block;
+	overflow: hidden;
+	position: relative;
+
+	@include aspect-ratio;
+}
+
+.aspect-ratio-item {
+	position: absolute;
+	word-wrap: break-word;
+}
+
+.aspect-ratio-item-fluid {
+	max-width: 100%;
+	position: absolute;
+	word-wrap: break-word;
+}
+
+.aspect-ratio-item-vertical-fluid {
+	max-height: 100%;
+	position: absolute;
+	word-wrap: break-word;
+}
+
+.aspect-ratio-item-top-center {
+	@include clay-position(top-center);
+}
+
+.aspect-ratio-item-top-right {
+	@include clay-position(top-right);
+}
+
+.aspect-ratio-item-right-middle {
+	@include clay-position(right-middle);
+}
+
+.aspect-ratio-item-bottom-right {
+	@include clay-position(bottom-right);
+}
+
+.aspect-ratio-item-bottom-center {
+	@include clay-position(bottom-center);
+}
+
+.aspect-ratio-item-bottom-left {
+	@include clay-position(bottom-left);
+}
+
+.aspect-ratio-item-left-middle {
+	@include clay-position(left-middle);
+}
+
+.aspect-ratio-item-center-middle {
+	@include clay-position(center-middle);
+}
+
+.aspect-ratio-3-to-2 {
+	@include aspect-ratio(3, 2);
+}
+
+.aspect-ratio-4-to-3 {
+	@include aspect-ratio(4, 3);
+}
+
+.aspect-ratio-8-to-5 {
+	@include aspect-ratio(8, 5);
+}
+
+.aspect-ratio-16-to-9 {
+	@include aspect-ratio(16, 9);
+}
+
+.aspect-ratio-bg-cover {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.aspect-ratio-bg-center {
+	background-position: center;
+	background-repeat: no-repeat;
+}

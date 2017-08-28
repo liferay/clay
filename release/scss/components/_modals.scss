@@ -1,0 +1,229 @@
+/**
+* Clay 2.0.0-alpha.7
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.modal-content {
+	@if not ($modal-content-border-radius == $border-radius-lg) {
+		@include border-radius($modal-content-border-radius);
+	}
+
+	overflow: hidden;
+}
+
+.modal-header {
+	background-color: $modal-header-bg;
+	border-color: $modal-header-border-color;
+	color: $modal-header-color;
+	flex-shrink: 0;
+	height: $modal-header-height;
+	padding-bottom: 0;
+	padding-top: 0;
+
+	@include scale-component {
+		height: $modal-header-height-mobile;
+	}
+}
+
+.modal-body {
+	background-color: $modal-body-bg;
+	color: $modal-body-color;
+
+	&.inline-scroller {
+		-webkit-overflow-scrolling: touch;
+		overflow: auto;
+		padding: $modal-inner-padding;
+	}
+}
+
+.modal-footer {
+	background-color: $modal-footer-bg;
+
+	@include box-shadow($modal-footer-box-shadow);
+
+	color: $modal-footer-color;
+	flex-shrink: 0;
+	height: $modal-footer-height;
+	padding-bottom: 0;
+	padding-top: 0;
+
+	@include scale-component {
+		height: $modal-footer-height-mobile;
+	}
+}
+
+// Modal Title
+
+.modal-title {
+	display: block;
+	font-size: $modal-title-font-size;
+	font-weight: $modal-title-font-weight;
+	flex-grow: 1;
+	text-align: $modal-title-text-align;
+
+	@include text-truncate;
+
+	@include scale-component {
+		font-size: $modal-title-font-size-mobile;
+	}
+}
+
+// Modal Buttons
+
+.modal {
+	.btn-monospaced,
+	.close {
+		color: $modal-btn-monospaced-color;
+		font-size: $modal-btn-monospaced-font-size;
+		min-width: $modal-btn-monospaced-size;
+
+		@include monospace($modal-btn-monospaced-size);
+
+		opacity: $modal-btn-monospaced-opacity;
+
+		@include hover-focus {
+			opacity: $modal-btn-monospaced-hover-opacity;
+		}
+
+		&:first-child {
+			margin-left: -$modal-btn-monospaced-spacer-x;
+		}
+
+		&:last-child {
+			margin-right: -$modal-btn-monospaced-spacer-x;
+		}
+	}
+}
+
+.btn-monospaced,
+.close {
+	+ .modal-title {
+		margin-left: $modal-btn-monospaced-spacer-x;
+	}
+}
+
+.modal-title {
+	+ .btn-monospaced,
+	+ .close {
+		margin-left: $modal-btn-monospaced-spacer-x;
+	}
+}
+
+// Modal Iframe
+
+.modal-iframe {
+	iframe {
+		border-width: 0;
+		float: left;
+		height: 300px;
+		width: 100%;
+	}
+
+	.modal-body {
+		padding: 0;
+	}
+}
+
+.modal-body-iframe {
+	padding: 0;
+
+	iframe {
+		border-width: 0;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+	}
+}
+
+// Modal Full Screen
+
+.modal-full-screen {
+	bottom: 45px;
+	left: 45px;
+	margin: 0;
+	max-width: none;
+	position: absolute;
+	right: 45px;
+	top: 45px;
+
+	@include scale-component {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+
+	.modal-content {
+		border-color: $modal-content-border-color;
+
+		@include border-radius($modal-content-border-radius);
+
+		border-width: $modal-content-border-width;
+		height: 100%;
+
+		@include scale-component {
+			@include border-radius(0);
+
+			border-width: 0;
+		}
+	}
+
+	.modal-body {
+		overflow: auto;
+	}
+}
+
+// Modal Responsive Full Screen
+
+.modal-full-screen-sm-down {
+	@include media-breakpoint-down(sm) {
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		max-width: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		.modal-body {
+			overflow: auto;
+		}
+
+		.modal-content {
+			@include border-radius(0);
+
+			border-width: 0;
+			height: 100%;
+		}
+	}
+}
+
+// Modal Variants
+
+@each $color, $value in $modal-palette {
+	.modal-#{$color} {
+		.btn-monospaced,
+		.close {
+			color: map-get($value, header-close-color);
+		}
+
+		.modal-header {
+			background-color: map-get($value, header-bg);
+			border-color: map-get($value, header-border-color);
+			color: map-get($value, header-color);
+		}
+
+		.modal-body {
+			background-color: map-get($value, body-bg);
+			color: map-get($value, body-color);
+		}
+
+		.modal-footer {
+			background-color: map-get($value, footer-bg);
+			border-color: map-get($value, footer-border-color);
+			color: map-get($value, footer-border-color);
+		}
+	}
+}

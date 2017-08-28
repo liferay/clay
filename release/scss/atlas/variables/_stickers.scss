@@ -1,0 +1,16 @@
+/**
+* Clay 2.0.0-alpha.7
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$sticker-font-size: 0.75rem !default; // 12px
+$sticker-font-weight: bold !default;
+
+// Sticker Variants
+
+$sticker-secondary-color: #FFF !default;
+$sticker-secondary-bg: map-get($theme-colors, secondary) !default;
+
+$sticker-light-color: $body-color !default;

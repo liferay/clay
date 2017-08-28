@@ -1,0 +1,36 @@
+/**
+* Clay 2.0.0-alpha.7
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+@mixin sticker {
+	font-size: $sticker-font-size;
+
+	@include monospace($sticker-size);
+}
+
+@mixin sticker-sm {
+	font-size: $sticker-font-size-sm;
+
+	@include monospace($sticker-size-sm);
+}
+
+@mixin sticker-lg {
+	font-size: $sticker-font-size-lg;
+
+	@include monospace($sticker-size-lg);
+}
+
+@mixin sticker-xl {
+	font-size: $sticker-font-size-xl;
+
+	@include monospace($sticker-size-xl);
+}
+
+@mixin sticker-xxl {
+	font-size: $sticker-font-size-xxl;
+
+	@include monospace($sticker-size-xxl);
+}

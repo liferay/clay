@@ -1,0 +1,87 @@
+/**
+* Clay 2.0.0-alpha.7
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.label {
+	border-color: $label-border-color;
+	border-radius: $label-border-radius;
+	border-style: $label-border-style;
+	border-width: $label-border-width;
+	color: $label-color;
+	display: inline-block;
+	font-weight: $label-font-weight;
+
+	@include label;
+
+	line-height: 1;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	max-width: 100%;
+	text-transform: $label-text-transform;
+	white-space: normal;
+	word-wrap: break-word;
+
+	a {
+		color: $label-color;
+		display: inline-block;
+		text-decoration: $label-link-text-decoration;
+
+		@include hover-focus {
+			color: $label-link-hover-color;
+			text-decoration: $label-link-hover-text-decoration;
+		}
+	}
+
+	.close {
+		color: inherit;
+		float: none;
+		font-size: inherit;
+		margin-left: 2px;
+		opacity: 1;
+	}
+}
+
+a.label {
+	text-decoration: $label-anchor-text-decoration;
+
+	@include hover-focus {
+		text-decoration: $label-anchor-hover-text-decoration;
+	}
+}
+
+.label-lg {
+	@include label-lg;
+}
+
+.label-sm {
+	@include label-sm;
+}
+
+// Label Variants
+
+@each $color, $value in $label-palette {
+	.label-#{$color} {
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
+
+		&[href] {
+			@include hover-focus {
+				background-color: map-get($value, hover-bg);
+				border-color: map-get($value, hover-border-color);
+				color: map-get($value, hover-color);
+			}
+		}
+
+		a {
+			color: map-get($value, link-color);
+
+			@include hover-focus {
+				color: map-get($value, link-hover-color);
+			}
+		}
+	}
+}

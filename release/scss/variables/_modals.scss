@@ -1,0 +1,130 @@
+/**
+* Clay 2.0.0-alpha.7
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$modal-content-border-radius: $border-radius-lg !default;
+
+$modal-header-bg: null !default;
+$modal-header-color: null !default;
+$modal-header-height: 4rem !default; // 64px
+$modal-header-height-mobile: null !default;
+
+$modal-body-bg: null !default;
+$modal-body-color: null !default;
+
+$modal-footer-bg: null !default;
+$modal-footer-box-shadow: null !default;
+$modal-footer-color: null !default;
+$modal-footer-height: 4.5rem !default; // 72px
+$modal-footer-height-mobile: null !default;
+
+$modal-title-font-size: 1.25rem !default;
+$modal-title-font-weight: 500 !default;
+$modal-title-text-align: null !default;
+$modal-title-font-size-mobile: null !default;
+
+$modal-btn-monospaced-size: 2rem !default;
+$modal-btn-monospaced-color: #000 !default;
+$modal-btn-monospaced-font-size: 1rem !default;
+$modal-btn-monospaced-opacity: 0.5 !default;
+$modal-btn-monospaced-hover-opacity: 0.75 !default;
+$modal-btn-monospaced-spacer-x: 0.3125rem !default; // 5px
+
+// Modal Info
+
+$modal-info-header-bg: theme-color-level(info, -10) !default;
+$modal-info-header-border-color: theme-color-level(info, -9) !default;
+$modal-info-header-color: theme-color-level(info, 6) !default;
+$modal-info-header-close-color: theme-color-level(info, 6) !default;
+$modal-info-body-bg: null !default;
+$modal-info-body-color: null !default;
+$modal-info-footer-bg: theme-color-level(info, -10) !default;
+$modal-info-footer-border-color: theme-color-level(info, -9) !default;
+$modal-info-footer-color: theme-color-level(info, 6) !default;
+
+// Modal Success
+
+$modal-success-header-bg: theme-color-level(success, -10) !default;
+$modal-success-header-border-color: theme-color-level(success, -9) !default;
+$modal-success-header-color: theme-color-level(success, 6) !default;
+$modal-success-header-close-color: theme-color-level(success, 6) !default;
+$modal-success-body-bg: null !default;
+$modal-success-body-color: null !default;
+$modal-success-footer-bg: theme-color-level(success, -10) !default;
+$modal-success-footer-border-color: theme-color-level(success, -9) !default;
+$modal-success-footer-color: theme-color-level(success, 6) !default;
+
+// Modal Warning
+
+$modal-warning-header-bg: theme-color-level(warning, -10) !default;
+$modal-warning-header-border-color: theme-color-level(warning, -9) !default;
+$modal-warning-header-color: theme-color-level(warning, 6) !default;
+$modal-warning-header-close-color: theme-color-level(warning, 6) !default;
+$modal-warning-body-bg: null !default;
+$modal-warning-body-color: null !default;
+$modal-warning-footer-bg: theme-color-level(warning, -10) !default;
+$modal-warning-footer-border-color: theme-color-level(warning, -9) !default;
+$modal-warning-footer-color: theme-color-level(warning, 6) !default;
+
+// Modal Danger
+
+$modal-danger-header-bg: theme-color-level(danger, -10) !default;
+$modal-danger-header-border-color: theme-color-level(danger, -9) !default;
+$modal-danger-header-color: theme-color-level(danger, 6) !default;
+$modal-danger-header-close-color: theme-color-level(danger, 6) !default;
+$modal-danger-body-bg: null !default;
+$modal-danger-body-color: null !default;
+$modal-danger-footer-bg: theme-color-level(danger, -10) !default;
+$modal-danger-footer-border-color: theme-color-level(danger, -9) !default;
+$modal-danger-footer-color: theme-color-level(danger, 6) !default;
+
+$modal-palette: () !default;
+$modal-palette: map-merge((
+	success: (
+		header-bg: $modal-success-header-bg,
+		header-border-color: $modal-success-header-border-color,
+		header-color: $modal-success-header-color,
+		header-close-color: $modal-success-header-close-color,
+		body-bg: $modal-success-body-bg,
+		body-color: $modal-success-body-color,
+		footer-bg: $modal-success-footer-bg,
+		footer-border-color: $modal-success-footer-border-color,
+		footer-color: $modal-success-footer-color
+	),
+	info: (
+		header-bg: $modal-info-header-bg,
+		header-border-color: $modal-info-header-border-color,
+		header-color: $modal-info-header-color,
+		header-close-color: $modal-info-header-close-color,
+		body-bg: $modal-info-body-bg,
+		body-color: $modal-info-body-color,
+		footer-bg: $modal-info-footer-bg,
+		footer-border-color: $modal-info-footer-border-color,
+		footer-color: $modal-info-footer-color
+	),
+	warning: (
+		header-bg: $modal-warning-header-bg,
+		header-border-color: $modal-warning-header-border-color,
+		header-color: $modal-warning-header-color,
+		header-close-color: $modal-warning-header-close-color,
+		body-bg: $modal-warning-body-bg,
+		body-color: $modal-warning-body-color,
+		footer-bg: $modal-warning-footer-bg,
+		footer-border-color: $modal-warning-footer-border-color,
+		footer-color: $modal-warning-footer-color
+	),
+	danger: (
+		header-bg: $modal-danger-header-bg,
+		header-border-color: $modal-danger-header-border-color,
+		header-color: $modal-danger-header-color,
+		header-close-color: $modal-danger-header-close-color,
+		body-bg: $modal-danger-body-bg,
+		body-color: $modal-danger-body-color,
+		footer-bg: $modal-danger-footer-bg,
+		footer-border-color: $modal-danger-footer-border-color,
+		footer-color: $modal-danger-footer-color
+	)
+), $modal-palette);
