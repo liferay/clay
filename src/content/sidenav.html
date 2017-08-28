@@ -11,7 +11,7 @@ section: Components (JS)
 
 		<h5>Syntax with Options:</h5>
 
-<pre><code class="html">```<head>
+<pre><code>```<head>
     <script src="side-navigation.js"></script>
 </head>
 
@@ -318,7 +318,7 @@ section: Components (JS)
 			When configuring your sidenav, you can specify the url using either a string or a configuration object that will be passed to <code>$.ajax</code> (though make sure the config object contains the url property).
 		</blockquote>
 
-		<pre><code class="html">```<div class="sidenav-container">
+		<pre><code>```<div class="sidenav-container">
     <a class="btn btn-default sidenav-toggler" href="">
         <span class="glyphicon glyphicon-align-justify"></span> Toggle
     </a>
@@ -389,7 +389,7 @@ section: Components (JS)
 			<p>Fires when the side navigation is fully closed.</p>
 		</blockquote>
 
-		<pre><code class="hljs">```// Listen directly on the side navigation element
+		<pre><code>```// Listen directly on the side navigation element
 
 $(SIDENAV).on('closed.lexicon.sidenav', function(event) {
     var sidenav = $(event.target);
