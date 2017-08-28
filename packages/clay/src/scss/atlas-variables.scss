@@ -1,14 +1,14 @@
 // INSERT CUSTOM BASE VARS
 
-@import "functions/global-functions";
+@import "functions/_global-functions";
 
-@import "atlas/variables";
+@import "atlas/_variables";
 
-@import "bootstrap/functions";
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
+@import "bootstrap/_functions";
+@import "bootstrap/_variables";
+@import "bootstrap/_mixins";
 
-@import "variables";
-@import "mixins";
+@import "_variables";
+@import "_mixins";
 
 // INSERT CUSTOM VARS
