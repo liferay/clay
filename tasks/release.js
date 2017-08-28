@@ -101,8 +101,8 @@ module.exports = function(gulp, plugins, _, config) {
 			return gulp.src([
 				'src/fonts/**/*',
 				'src/images/icons/*',
-				'src/scss/+(atlas|bootstrap|lexicon-base)/**/*',
-				'src/scss/+(atlas|atlas-variables|bootstrap|lexicon-base|lexicon-base-variables).scss',
+				'src/scss/+(atlas|bootstrap|components|functions|mixins|variables)/**/*',
+				'src/scss/+(_components|_mixins|_variables|atlas-variables|atlas|base-variables|base|bootstrap).scss',
 				'src/js/{,bootstrap/}*.js'
 				], {base: './src'})
 			.pipe(assetFilter)
