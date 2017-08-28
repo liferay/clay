@@ -34,8 +34,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'fontawesome-alloy';
-  src: url("../fonts/alloy-font-awesome/font/fontawesome-alloy.eot");
-  src: url("../fonts/alloy-font-awesome/font/fontawesome-alloy.eot?#iefix") format("embedded-opentype"), url("../fonts/alloy-font-awesome/font/fontawesome-alloy.woff") format("woff"), url("../fonts/alloy-font-awesome/font/fontawesome-alloy.ttf") format("truetype"), url("../fonts/alloy-font-awesome/font/fontawesome-alloy.svg#fontawesome-alloy") format("svg");
+  src: url("../../fonts/alloy-font-awesome/font/fontawesome-alloy.eot");
+  src: url("../../fonts/alloy-font-awesome/font/fontawesome-alloy.eot?#iefix") format("embedded-opentype"), url("../../fonts/alloy-font-awesome/font/fontawesome-alloy.woff") format("woff"), url("../../fonts/alloy-font-awesome/font/fontawesome-alloy.ttf") format("truetype"), url("../../fonts/alloy-font-awesome/font/fontawesome-alloy.svg#fontawesome-alloy") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1951,4 +1951,4 @@ a .icon-caret-bottom-right, a .icon-glass, a .icon-music, a .icon-search, a .ico
   content: "\f155";
 }
 
-/*# sourceMappingURL=font-awesome.css.map */
+/*# sourceMappingURL=site-font-awesome.css.map */

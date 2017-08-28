@@ -12281,6 +12281,7 @@ a.list-group-subtitle,
 
 .panel-group .panel:only-child .panel-header.collapsed {
   border-radius: 0.25rem;
+  transition: border-radius 1s ease;
 }
 
 .panel-group .panel:not(:first-child) .panel-header {
@@ -13325,8 +13326,8 @@ th {
 }
 
 .toggle-card-container {
-  background-color: #F1F2F5;
-  border: 1px solid #DCE0E3;
+  background-color: #FFF;
+  border: 1px solid #cfd0d6;
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   color: #6B6C7E;
@@ -13386,7 +13387,7 @@ th {
 }
 
 .toggle-card-check:checked ~ .toggle-card-container {
-  background-color: #F1F2F5;
+  background-color: #FFF;
   border: 2px solid #1865FB;
   color: #1865FB;
   padding-bottom: 11px;
@@ -14558,7 +14559,7 @@ mark:before,
 
 .timeline-icon {
   background-color: #F1F2F5;
-  border: 2px solid #DDD;
+  border: 2px solid #6B6C7E;
   border-radius: 50%;
   display: block;
   height: 10px;

@@ -6,9 +6,9 @@
 * MIT license
 */
  (function($) {
-	var REGEX_LINK = /(atlas|lexicon)(-font-awesome)?\.css$/;
-	var REGEX_LEXICON_LINK = /(lexicon)(-font-awesome)?\.css$/;
-	var REGEX_ATLAS_LINK = /(atlas)(-font-awesome)?\.css$/;
+	var REGEX_LINK = /(site-atlas|site-lexicon)(-font-awesome)?\.css$/;
+	var REGEX_LEXICON_LINK = /(site-lexicon)(-font-awesome)?\.css$/;
+	var REGEX_ATLAS_LINK = /(site-atlas)(-font-awesome)?\.css$/;
 
 	var getLexiconLink = function () {
 		return $('link[href]').filter(function(i, n) {
@@ -17,7 +17,7 @@
 	};
 
 	var getLexiconSiteLink = function () {
-		return $('link[href$="main.css"]');
+		return $('link[href$="site-main.css"]');
 	};
 
 	var toggleLexiconLink = function() {
@@ -28,7 +28,7 @@
 		if (REGEX_LINK.test(href)) {
 			href = href.replace(REGEX_LINK, function(str, m, suffix) {
 				console.log(arguments);
-				return (m === 'lexicon' ? 'atlas' : 'lexicon') + (suffix ? suffix : '') + '.css';
+				return (m === 'site-lexicon' ? 'site-atlas' : 'site-lexicon') + (suffix ? suffix : '') + '.css';
 			});
 
 			lexiconLink.prop('href', href);
