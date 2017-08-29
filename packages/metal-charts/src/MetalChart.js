@@ -40,6 +40,7 @@ class MetalChart extends Component {
 			area,
 			axis,
 			bindto: this.element,
+			color: this.color,
 			data,
 			regions: this.regions,
 			resize: this.resizeAuto,
@@ -218,6 +219,22 @@ MetalChart.STATE = {
 	 * @default {}
 	 */
 	classes: Config.object(),
+
+	/**
+	 * Sets color patterns and color threshhold.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?object|undefined}
+	 * @default undefined
+	 */
+	color: Config.shapeOf({
+		patterns: Config.array(),
+		threshold: Config.shapeOf({
+			max: Config.array(),
+			unit: Config.string(),
+			value: Config.array()
+		})
+	}),
 
 	/**
 	 * Sets billboard's data.color config.
