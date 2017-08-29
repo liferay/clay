@@ -22,6 +22,11 @@ class MetalChart extends Component {
 		this.on('typeChanged', this.handleTypeChanged_.bind(this));
 	}
 
+	/**
+	 * Constructs `axis` billboard config property.
+	 * @return {Object}
+	 * @protected
+	 */
 	constructAxisConfig_() {
 		return {
 			rotated: this.axisRotated,
@@ -31,6 +36,11 @@ class MetalChart extends Component {
 		}
 	}
 
+	/**
+	 * Constructs config object for `bb.generate` method.
+	 * @return {Object}
+	 * @protected
+	 */
 	constructChartConfig_() {
 		const axis = this.constructAxisConfig_();
 		const data = this.constructDataConfig_();
@@ -98,6 +108,11 @@ class MetalChart extends Component {
 		return config;
 	}
 
+	/**
+	 * Constructs `data` billboard config property.
+	 * @return {Object}
+	 * @protected
+	 */
 	constructDataConfig_() {
 		const config = {
 			axes: this.axes,
@@ -155,6 +170,11 @@ class MetalChart extends Component {
 		return config;
 	}
 
+	/**
+	 * Constructs `zoom` billboard config property.
+	 * @return {Object}
+	 * @protected
+	 */
 	constructZoomConfig_() {
 		const {config = {}} = this;
 
@@ -180,10 +200,18 @@ class MetalChart extends Component {
 		return config;
 	}
 
+	/**
+	 * Emits event based on arguments array.
+	 * @protected
+	 */
 	emitChartEvent_() {
 		this.emit.apply(this, arguments);
 	}
 
+	/**
+	 * Maps `columns` state to chart via `bb.load` method.
+	 * @protected
+	 */
 	handleColumnsChanged_({newVal, prevVal}) {
 		const data = {
 			columns: newVal
@@ -198,14 +226,26 @@ class MetalChart extends Component {
 		this.bbChart.load(data);
 	}
 
+	/**
+	 * Maps `regions` state to chart via `bb.regions` method.
+	 * @protected
+	 */
 	handleRegionsChanged_({newVal}) {
 		this.bbChart.regions(newVal);
 	}
 
+	/**
+	 * Maps `size` state to chart via `bb.resize` method.
+	 * @protected
+	 */
 	handleSizeChanged_({newVal}) {
 		this.bbChart.resize(newVal);
 	}
 
+	/**
+	 * Maps `type` state to chart via `bb.transform` method.
+	 * @protected
+	 */
 	handleTypeChanged_({newVal}) {
 		this.bbChart.transform(newVal);
 	}
