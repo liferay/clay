@@ -22,13 +22,3 @@ $breadcrumb-divider-font-weight: null !default;
 $breadcrumb-divider-svg-icon: lx-icon(angle-right, $breadcrumb-divider-color) !default;
 $breadcrumb-divider-svg-icon-height: 0.75em !default;
 $breadcrumb-divider-svg-icon-width: $breadcrumb-divider-svg-icon-height !default;
-
-// Breadcrumb Vertical
-
-$breadcrumb-stacked-divider-color: $breadcrumb-divider-color !default;
-$breadcrumb-stacked-divider: normal !default;
-
-$breadcrumb-stacked-divider-svg-icon: null !default;
-$breadcrumb-stacked-divider-svg-icon-height: 0.5em !default;
-$breadcrumb-stacked-divider-svg-icon-width: $breadcrumb-stacked-divider-svg-icon-height !default;
-$breadcrumb-stacked-divider-spacer-x: 0.25em !default;
