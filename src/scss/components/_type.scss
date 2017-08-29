@@ -64,6 +64,19 @@ h6,
 	}
 }
 
+.section-header {
+	border-color: $section-header-border-color;
+	border-style: $section-header-border-style;
+	border-width: $section-header-border-width;
+	color: $section-header-color;
+	font-size: $section-header-font-size;
+	font-weight: $section-header-font-weight;
+	line-height: $section-header-line-height;
+	margin-bottom: $section-header-margin-bottom;
+	padding: $section-header-padding;
+	text-transform: $section-header-text-transform;
+}
+
 // Reference Mark
 
 .reference-mark {
@@ -92,6 +105,8 @@ mark,
 .mark {
 	@include highlight-text();
 }
+
+// Text Truncate
 
 .text-truncate {
 	display: block;
