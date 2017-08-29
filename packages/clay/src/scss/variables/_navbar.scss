@@ -60,7 +60,7 @@ $navbar-collapse-absolute-box-shadow: null !default;
 
 // Navbar Light
 
-$navbar-light-bg: #F7F7F7 !default;
+$navbar-light-bg: map-get($theme-colors, light) !default;
 $navbar-light-border-color: transparent !default;
 
 $navbar-light-active-bg: null !default;
@@ -85,7 +85,7 @@ $collapse-basic-search-transparent-light-focus-highlight: $input-focus-border-co
 
 // Navbar Dark
 
-$navbar-dark-bg: map-get($colors, gray-dark) !default;
+$navbar-dark-bg: map-get($theme-colors, dark) !default;
 $navbar-dark-border-color: transparent !default;
 
 $navbar-dark-active-bg: null !default;
