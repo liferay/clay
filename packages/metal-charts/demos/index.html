@@ -134,6 +134,41 @@
 			]
 		};
 
+		var dummyPercentData = {
+			columns_1: [
+				['data1', 37.5],
+				['data2', 62.5]
+			],
+			columns_2: [
+				['data1', 22.9],
+				['data2', 77.1]
+			],
+			columns_3: [
+				['data1', 84],
+				['data2', 13],
+				['data3', 3]
+			],
+			columns_4: [
+				['data2', 50],
+				['data3', 50]
+			]
+		};
+
+		var dummyGaugeData = {
+			columns_1: [
+				['data1', 37.5]
+			],
+			columns_2: [
+				['data1', 22.9]
+			],
+			columns_3: [
+				['data1', 100]
+			],
+			columns_4: [
+				['data2', 50]
+			]
+		};
+
 		createChart('line');
 
 		createChart('spline');
@@ -150,17 +185,17 @@
 
 		createChart('scatter');
 
-		createChart('pie');
+		createChart('pie', dummyPercentData);
 
-		createChart('donut');
+		createChart('donut', dummyPercentData);
 
-		createChart('gauge');
+		createChart('gauge', dummyGaugeData);
 
-		function createChart(type) {
+		function createChart(type, data) {
 			var element = document.getElementById(type);
 
 			var chart = new metal.MetalChart({
-				columns: dummyData.columns_1,
+				columns: data ? data.columns_1 : dummyData.columns_1,
 				type: type
 			}, element);
 
@@ -180,7 +215,7 @@
 			var dataSelect = chartControls.querySelector('.data');
 
 			dataSelect.addEventListener('change', function(event) {
-				chart.columns = dummyData[dataSelect.value];
+				chart.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
 			});
 
 			element.parentNode.appendChild(chartControls);
