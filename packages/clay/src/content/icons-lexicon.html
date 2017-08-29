@@ -7,7 +7,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Lexicon Icons</h3>
 
-		<blockquote class="blockquote blockquote-success blockquote-sm">
+		<blockquote class="blockquote">
 			<p>We use SVG elements that link to an SVG sprite, like so:</p>
 
 			<p><pre><code>```<svg aria-hidden="true" class="lexicon-icon lexicon-icon-add-column">
@@ -29,14 +29,14 @@ section: Components
 	<div class="col-md-12">
 		<h3>Language Flags</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>
 				People tend to have pretty strong opinions on whether flags should be used as a visual cue for indicating a language, mainly because in many parts of the world, the flag may have cultural and geographic meanings that we might not be aware of, or the flag itself isn't fully accurate to the dialects spoken in that region.<br />
 				While we understand that reasoning, we've found that the times they are actually needed (when a user is not familiar with the currently displayed language) somewhat eliminates using other mechanisms, such as the name of the language (since the current language could be in an entirely different character set). Given this, there is often at least some familiarity with the identity of a country that speaks a shared language.<br />
 				Or, to paraphrase Winston Churchill, "Using flags is the worst system for indicating language, except for all others". :)
 			</p>
 		</blockquote>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>
 				To use the flags below, follow the same process as above, but the name of the icon is the locale and country code indicated in parenthesis (e.g. to use the Japanese icon, you would use <code>ja-jp</code>)
 			</p>
@@ -53,7 +53,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>SVG Icons as Background Images</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>We have created a Sass function to turn Lexicon SVG icon's into data uri schemes, which enables you to include them as a background-image on an HTML element. The Sass function <code>lx-icon(icon-name, color)</code> takes the name of a Lexicon SVG Icon and color takes a color. The Sass rule set <code>.site-add-cell { background-image: lx-icon(add-cell, #5AF); background-size: contain; display: inline-block; height: 20px; width: 20px; }</code> will place the SVG icon add-cell as a background-image on any element with class site-add-cell.</p>
 		</blockquote>
 
@@ -72,7 +72,7 @@ section: Components
 	<div class="col-md-12">
 		<h3>Svg-url()</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>You can turn your custom SVG into a data uri using the Sass function <code>svg-url($svg)</code> where <code>$svg</code> is the code for your inline SVG. The function returns <code>url(your_svg_as_data_uri)</code>.</p>
 		</blockquote>
 
