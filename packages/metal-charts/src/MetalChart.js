@@ -125,6 +125,101 @@ MetalChart.STATE = {
 	}),
 
 	/**
+	 * Sets billboard's data.axes config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Object|undefined}
+	 * @default {}
+	 */
+	axes: Config.object(),
+
+	/**
+	 * Sets billboard's data.classes config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Object|undefined}
+	 * @default {}
+	 */
+	classes: Config.object(),
+
+	/**
+	 * Sets billboard's data.color config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Function|undefined}
+	 * @default undefined
+	 */
+	color: Config.func(),
+
+	/**
+	 * Sets label for when no data is loaded.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?String|undefined}
+	 * @default ""
+	 */
+	emptyLabelText: Config.string().setter(value => {
+		return {
+			empty: {
+				label: {
+					text: value
+				}
+			}
+		}
+	}),
+
+	/**
+	 * Sets billboard's data.groups config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Array|undefined}
+	 * @default []
+	 */
+	groups: Config.array(),
+
+	/**
+	 * Sets billboard's data.hide config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Array|bool|undefined}
+	 * @default []
+	 */
+	hide: Config.array().bool().value(false),
+
+	/**
+	 * Sets billboard's data.json config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Array|bool|undefined}
+	 * @default []
+	 */
+	json: Config.array(),
+
+	/**
+	 * Sets billboard's data.keys config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Array|undefined}
+	 * @default []
+	 */
+	keys: Config.array().setter(value => {
+		return {
+			value
+		}
+	}),
+
+	/**
+	 * Switches the x and y axis.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Object|undefined}
+	 * @default undefined
+	 */
+	axis: Config.shapeOf({
+		rotated: Config.bool()
+	}),
+
+	/**
 	 * Styling and behavior of x axis.
 	 * @instance
 	 * @memberof MetalChart
@@ -339,6 +434,28 @@ MetalChart.STATE = {
 	}),
 
 	/**
+	 * Sets billboard's data.labels config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?boolean|function|undefined}
+	 * @default {}
+	 */
+	labels: Config.bool().func().setter(value => {
+		if (typeof value === 'boolean') {
+			return {
+				labels: value
+			}
+		}
+		else {
+			return {
+				labels: {
+					format: value
+				}
+			}
+		}
+	}),
+
+	/**
 	 * legend TODO.
 	 * @instance
 	 * @memberof MetalChart
@@ -348,14 +465,41 @@ MetalChart.STATE = {
 	legend: Config.shapeOf({
 		show: Config.bool(),
 		hide: Config.bool(),
-		position: Config.oneOf(['bottom', 'right', 'inset']),
+		position: Config.oneOf(['bottom', 'inset', 'right']),
 		inset: Config.shapeOf({
-			anchor: Config.oneOf(['top-left', 'top-right', 'bottom-left', 'bottom-right']),
+			anchor: Config.oneOf(['bottom-left', 'bottom-right', 'top-left', 'top-right']),
+			step: Config.number(),
 			x: Config.number(),
-			y: Config.number(),
-			step: Config.number()
+			y: Config.number()
 		})
 	}),
+
+	/**
+	 * Sets billboard's data.mimeType config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	mimeType: Config.string(),
+
+	/**
+	 * Sets billboard's data.names config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?object|undefined}
+	 * @default {}
+	 */
+	names: Config.object(),
+
+	/**
+	 * Sets billboard's data.order config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?string|undefined}
+	 * @default "desc"
+	 */
+	order: Config.string().value('desc'),
 
 	/**
 	 * Sets padding on chart.
@@ -433,6 +577,31 @@ MetalChart.STATE = {
 	 */
 	resize: Config.shapeOf({
 		auto: Config.bool()
+	}),
+
+	/**
+	 * Load data from a multidimensional array. Sets billboard's `data.rows`
+	 * config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?array|undefined}
+	 * @default undefined
+	 */
+	rows: Config.array(),
+
+	/**
+	 * Sets billboard's `data.selection` config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?object|undefined}
+	 * @default undefined
+	 */
+	selection: Config.shapeOf({
+		draggable: Config.bool(),
+		enabled: Config.bool(),
+		grouped: Config.bool(),
+		isselectable: Config.func(),
+		multiple: Config.bool()
 	}),
 
 	/**
@@ -555,6 +724,24 @@ MetalChart.STATE = {
 	]).value('line'),
 
 	/**
+	 * The variety of chart that will be rendered by column.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?string|undefined}
+	 * @default {}
+	 */
+	types: Config.object(),
+
+	/**
+	 * Load a CSV or JSON file from a URL.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	url: Config.string(),
+
+	/**
 	 * Configuration for bb chart zoom capabilities.
 	 * @instance
 	 * @memberof MetalChart
@@ -571,5 +758,5 @@ MetalChart.STATE = {
 	})
 };
 
-export { MetalChart };
+export { bb, d3, MetalChart };
 export default MetalChart;
