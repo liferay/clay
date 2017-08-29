@@ -837,10 +837,7 @@ MetalChart.STATE = {
 	zoom: Config.shapeOf({
 		enabled: Config.bool().value(true),
 		rescale: Config.bool().value(false),
-		extent: Config.array(),
-		onzoom: Config.func(),
-		onzoomstart: Config.func(),
-		onzoomend: Config.func()
+		extent: Config.array()
 	})
 };
 
