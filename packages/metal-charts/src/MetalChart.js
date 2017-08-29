@@ -42,6 +42,7 @@ class MetalChart extends Component {
 			bindto: this.element,
 			color: this.color,
 			data,
+			line: this.line,
 			padding: this.padding,
 			pie: this.pie,
 			point: this.point,
@@ -555,6 +556,20 @@ MetalChart.STATE = {
 			step: Config.number(),
 			x: Config.number(),
 			y: Config.number()
+		})
+	}),
+
+	/**
+	 * Display settings for chart lines.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?object|undefined}
+	 * @default undefined
+	 */
+	line: Config.shapeOf({
+		connectNull: Config.bool(),
+		step: Config.shapeOf({
+			type: Config.oneOf(['step', 'step-after', 'step-before'])
 		})
 	}),
 
