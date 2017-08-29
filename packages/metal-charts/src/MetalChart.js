@@ -36,7 +36,7 @@ class MetalChart extends Component {
 		const data = this.constructDataConfig_();
 		const zoom = this.constructZoomConfig_();
 
-		return {
+		const config = {
 			area,
 			axis,
 			bindto: this.element,
@@ -56,7 +56,46 @@ class MetalChart extends Component {
 			tooltip: this.tooltip,
 			transition: this.transitionDuration,
 			zoom: this.zoom
-		}
+		};
+
+		/**
+		 * Chart init event.
+		 * @event chartInit
+		 * @memberof MetalChart
+		 */
+		config.oninit = this.emitChartEvent_.bind(this, 'chartInit');
+		/**
+		 * Chart mouse out event.
+		 * @event chartMouseout
+		 * @memberof MetalChart
+		 */
+		config.onout = this.emitChartEvent_.bind(this, 'chartMouseout');
+		/**
+		 * Chart mouse over event.
+		 * @event chartMouseover
+		 * @memberof MetalChart
+		 */
+		config.onover = this.emitChartEvent_.bind(this, 'chartMouseover');
+		/**
+		 * Chart rendered event.
+		 * @event chartRendered
+		 * @memberof MetalChart
+		 */
+		config.onrendered = this.emitChartEvent_.bind(this, 'chartRendered');
+		/**
+		 * Chart resize event.
+		 * @event chartResize
+		 * @memberof MetalChart
+		 */
+		config.onresize = this.emitChartEvent_.bind(this, 'chartResize');
+		/**
+		 * Chart resized event.
+		 * @event chartResized
+		 * @memberof MetalChart
+		 */
+		config.onresized = this.emitChartEvent_.bind(this, 'chartResized');
+
+		return config;
 	}
 
 	constructDataConfig_() {
