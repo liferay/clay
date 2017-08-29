@@ -9893,8 +9893,16 @@ a.label {
   height: 2px;
 }
 
+.nav-tabs .nav-link.active {
+  border-color: #ddd;
+}
+
 .nav-tabs .nav-link {
   white-space: nowrap;
+}
+
+.nav-tabs + .tab-content .tab-pane.active:first-child {
+  border-top-left-radius: 0;
 }
 
 .basic-search.open {
