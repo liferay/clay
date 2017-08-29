@@ -1,2 +1,11 @@
 $multi-step-icon-color: #6B6C7D !default;
 $multi-step-icon-border-radius: 100px !default;
+
+// Multi Step Bar
+
+$multi-step-bar-bg: #FFF !default;
+$multi-step-bar-border-radius: !default;
+$multi-step-bar-color: map-get($theme-colors, secondary) !default;
+$multi-step-bar-font-size: 0.875rem !default; // 14px
+$multi-step-bar-height: 2.125rem !default; // 34px
+$multi-step-bar-padding: 0 1.5rem !default;

@@ -10,24 +10,20 @@
 
 .multi-step-indicator-label-bottom {
 	.multi-step-item {
-		// TODO: Don't do so much maths
 		padding-bottom: $multi-step-indicator-label-font-size * $line-height-base;
 	}
 
 	.multi-step-indicator-label {
-		// TODO: Don't do so much maths
 		top: $multi-step-icon-size;
 	}
 }
 
 .multi-step-indicator-label-top {
 	.multi-step-item {
-		// TODO: Don't do so much maths
 		padding-top: $multi-step-indicator-label-font-size * $line-height-base;
 	}
 
 	.multi-step-indicator-label {
-		// TODO: Don't do so much maths
 		bottom: $multi-step-icon-size + $multi-step-divider-height;
 	}
 }
@@ -48,8 +44,6 @@
 
 .multi-step-item {
 	margin-bottom: $multi-step-item-margin-bottom;
-	// TODO: Don't do so much maths
-	// padding-bottom: ($multi-step-icon-size / 2);
 	position: relative;
 
 	&.complete {
@@ -258,5 +252,26 @@
 		.multi-step-indicator-label {
 			display: none;
 		}
+	}
+}
+
+// Multi Step Bar
+
+.multi-step-bar {
+	align-items: center;
+	background-color: $multi-step-bar-bg;
+
+	@include border-radius($multi-step-bar-border-radius);
+
+	color: $multi-step-bar-color;
+	display: flex;
+	font-size: $multi-step-bar-font-size;
+	height: $multi-step-bar-height;
+	justify-content: space-between;
+	margin-bottom: $multi-step-bar-margin-bottom;
+	padding: $multi-step-bar-padding;
+
+	> li {
+		display: block;
 	}
 }

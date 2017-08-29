@@ -40,3 +40,13 @@ $multi-step-icon-active-bg-image: null !default;
 $multi-step-icon-active-bg-position: center !default;
 $multi-step-icon-active-bg-size: $multi-step-icon-font-size !default;
 $multi-step-divider-active-bg: $multi-step-divider-bg !default;
+
+// Multi Step Bar
+
+$multi-step-bar-bg: map-get($theme-colors, light) !default;
+$multi-step-bar-border-radius: $border-radius !default; // 4px
+$multi-step-bar-color: null !default;
+$multi-step-bar-font-size: null !default;
+$multi-step-bar-height: 2.375rem !default; // 38px
+$multi-step-bar-margin-bottom: null !default;
+$multi-step-bar-padding: 0 1rem !default;
