@@ -191,7 +191,7 @@
 		
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>A jQuery plugin that creates a slideout navigation on the right or left, for the sidebar css component see <a href="../sidebar">Sidebar</a>.</p>
 		</blockquote>
 
@@ -242,7 +242,7 @@
 
 <div class="clay-site-row-spacer row sidenav-demo-container">
 	<div class="col-md-12">
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>To create a sidenav relative to other elements inside your page, you must follow the markup structure shown above and pass the sidenav-container element to the plugin with the <code>href</code> attribute or the <code>data-target</code> attribute on the toggler. The <code>container</code> option also allows you to pass the container via javascript if <code>href</code> or <code>data-target</code> can&apos;t be used. The options above are optional.</p>
 		</blockquote>
 
@@ -298,7 +298,7 @@
 	<div class="col-md-12">
 		<h3 id="side-navigation-data-api"><a class="heading-anchor" href="#side-navigation-data-api"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Side Navigation Data API</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>The Side Navigation data api was added for situations where there is limited control over the markup structure. The only markup needed is a toggler and a panel to hide and show. These items can be included anywhere on the page.</p>
 
 			<p>The minimum amount of attributes required is <code>data-toggle=&quot;sidenav&quot;</code> and <code>href=&quot;#target&quot;</code> or <code>data-target=&quot;#target&quot;</code>. This will open and close a fixed position sidenav provided the markup below. The width of the <code>sidenav-slider</code>, <code>sidenav-menu</code>, and position of the sidenav must be set through css. When using <code>fixed-push</code>, padding must also be set via css on open to push the content over.</p>
@@ -356,7 +356,7 @@
 			</div>
 		</div>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>The data api allows for fixed-push style sidenavs with the attributes <code>data-content</code>, <code>data-type</code>, and <code>data-type-mobile</code>. <code>Data-content</code> is the id of the content to be pushed over when the nav is open. <code>Data-type</code> and <code>data-type-mobile</code> give the option to specify the style of sidenav in desktop and mobile, respectively. The values can be <code>fixed</code> or <code>fixed-push</code> and defaults to fixed.</p>
 
 			<p>The open class name can be customized through the attribute <code>data-open-class</code> and will be added to toggler and content on open. </p>
@@ -442,12 +442,12 @@
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="lazy-loading-side-navigation-content"><a class="heading-anchor" href="#lazy-loading-side-navigation-content"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Lazy Loading Side Navigation Content</h3>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>You can load content into the sidebar of the Side Navigation in one of two ways. At the very minimum, the only two things you need are a URL and that the sidebar has a child element with the <code>sidebar-body</code> class. Data fetched from the URL will be appended to the <code>sidebar-body</code> element.</p>
 		</blockquote>
 
 		<h4>Using the Data API</h4>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Use attribute <code>data-url</code> on the toggle to load content into <code>.sidenav-body</code> when the side navigation is opened.</p>
 		</blockquote>
 
@@ -500,7 +500,7 @@
 		</div>
 
 		<h4>Using the Options API</h4>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			When configuring your sidenav, you can specify the url using either a string or a configuration object that will be passed to <code>$.ajax</code> (though make sure the config object contains the url property).
 		</blockquote>
 
@@ -542,7 +542,7 @@
 &lt;/script&gt;</code></pre>
 
 		<h4>Lazy Loading Events and State</h4>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>When using the <code>url</code> or <code>data-url</code> options, the plugin will fire an event when the content is loaded <code>urlLoaded.lexicon.sidenav</code>.</p>
 			<p>Also, while the content is being loaded, an element <code>.sidebar-loading</code> containing a loading animation will be added to the <code>.sidebar-body</code> element. The <code>.sidebar-loading</code> element will be removed when the content is done loading.</p>
 			<p>The loading animation defaults to <a href="../../content/loaders/#dotted-spinner">dotted spinner</a> but can be customized through <code>loadingIndicatorTPL</code> in the options API or <code>data-loading-indicator-tpl</code> in the data API.</p>
@@ -556,22 +556,22 @@
 		<h3 id="events"><a class="heading-anchor" href="#events"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Events</h3>
 
 		<p><code>openStart.lexicon.sidenav</code></p>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Fires when the side navigation begins to open.</p>
 		</blockquote>
 
 		<p><code>open.lexicon.sidenav</code></p>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Fires when the side navigation is fully opened.</p>
 		</blockquote>
 
 		<p><code>closedStart.lexicon.sidenav</code></p>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Fires when the side navigation begins to close.</p>
 		</blockquote>
 
 		<p><code>closed.lexicon.sidenav</code></p>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Fires when the side navigation is fully closed.</p>
 		</blockquote>
 
@@ -597,37 +597,37 @@ $(document).on(&apos;closed.lexicon.sidenav&apos;, function(event) {
 		<h3 id="methods"><a class="heading-anchor" href="#methods"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Methods</h3>
 
 		<h4><code>.sideNavigation(&apos;toggle&apos;)</code></h4>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown or hidden.</b></p>
 		</blockquote>
 		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;toggle&apos;)</code></pre></p>
 
 		<h4><code>.sideNavigation(&apos;show&apos;)</code></h4>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Manually shows the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been shown.</b></p>
 		</blockquote>
 		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;show&apos;)</code></pre></p>
 
 		<h4><code>.sideNavigation(&apos;hide&apos;)</code></h4>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Manually toggles the sidenav. <b>Be aware that this method will return to the caller before the sidenav has been hidden.</b></p>
 		</blockquote>
 		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;hide&apos;)</code></pre></p>
 
 		<h4><code>.sideNavigation(&apos;destroy&apos;)</code></h4>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Destroys the Side Navigation instance for the items in the jQuery collection, and removes any attached event handlers and any associated data added by the plugin.</p>
 		</blockquote>
 		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;destroy&apos;)</code></pre></p>
 
 		<h4><code>.sideNavigation(&apos;instance&apos;)</code></h4>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Returns the Side Navigation instance for the first item in the jQuery collection (similar to how any other jQuery getter method works). If the plugin hasn&apos;t been initialized, it will return null.</p>
 		</blockquote>
 		<p><pre><code>$(&apos;#myTogglerId&apos;).sideNavigation(&apos;instance&apos;)</code></pre></p>
 
 		<h4><code>.sideNavigation(&apos;visible&apos;)</code></h4>
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Returns the visible state of the sidenav.</p>
 			<p>If the sidenav is in the middle of transitioning, this will report what the visible state <b>will be after</b> the transition is finished. This allows you to call it in any state and accurately get the state of the sidenav.</p>
 		</blockquote>
