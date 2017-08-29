@@ -18,6 +18,7 @@ class MetalChart extends Component {
 
 		this.on('columnsChanged', this.handleColumnsChanged_.bind(this));
 		this.on('regionsChanged', this.handleRegionsChanged_.bind(this));
+		this.on('sizeChanged', this.handleSizeChanged_.bind(this));
 		this.on('typeChanged', this.handleTypeChanged_.bind(this));
 	}
 
@@ -34,20 +35,22 @@ class MetalChart extends Component {
 	constructChartConfig_() {
 		const {area, element, regions} = this;
 
-		const data = this.constructDataConfig_();
 		const axis = this.constructAxisConfig_();
+		const data = this.constructDataConfig_();
+		const zoom = this.constructZoomConfig_();
 
 		return {
 			area,
 			axis,
 			bindto: element,
 			data,
-			regions
+			regions,
+			zoom
 		}
 	}
 
 	constructDataConfig_() {
-		return {
+		const data = {
 			axes: this.axes,
 			classes: this.classes,
 			color: this.color,
@@ -61,36 +64,6 @@ class MetalChart extends Component {
 			labels: this.labels,
 			mimeType: this.mimeType,
 			names: this.names,
-			/**
-			 * Point click event.
-			 * @event pointClick
-			 * @memberof MetalChart
-			 */
-			onclick: this.emitChartEvent_.bind(this, 'pointClick'),
-			/**
-			 * Point mouse out event.
-			 * @event pointMouseout
-			 * @memberof MetalChart
-			 */
-			onout: this.emitChartEvent_.bind(this, 'pointMouseout'),
-			/**
-			 * Point mouse over event.
-			 * @event pointMouseoever
-			 * @memberof MetalChart
-			 */
-			onover: this.emitChartEvent_.bind(this, 'pointMouseover'),
-			/**
-			 * Data select event.
-			 * @event dataSelect
-			 * @memberof MetalChart
-			 */
-			onselect: this.emitChartEvent_.bind(this, 'dataSelect'),
-			/**
-			 * Data unselected event.
-			 * @event dataUnselected
-			 * @memberof MetalChart
-			 */
-			onunselected: this.emitChartEvent_.bind(this, 'dataUnselected'),
 			order: this.order,
 			rows: this.rows,
 			selection: this.selection,
@@ -98,6 +71,64 @@ class MetalChart extends Component {
 			types: this.types,
 			url: this.url
 		}
+
+		/**
+		 * Point click event.
+		 * @event pointClick
+		 * @memberof MetalChart
+		 */
+		data.onclick = this.emitChartEvent_.bind(this, 'pointClick');
+		/**
+		 * Point mouse out event.
+		 * @event pointMouseout
+		 * @memberof MetalChart
+		 */
+		data.onout = this.emitChartEvent_.bind(this, 'pointMouseout');
+		/**
+		 * Point mouse over event.
+		 * @event pointMouseoever
+		 * @memberof MetalChart
+		 */
+		data.onover = this.emitChartEvent_.bind(this, 'pointMouseover');
+		/**
+		 * Data select event.
+		 * @event dataSelect
+		 * @memberof MetalChart
+		 */
+		data.onselect = this.emitChartEvent_.bind(this, 'dataSelect');
+		/**
+		 * Data unselected event.
+		 * @event dataUnselected
+		 * @memberof MetalChart
+		 */
+		data.onunselected = this.emitChartEvent_.bind(this, 'dataUnselected');
+
+		return data;
+	}
+
+	constructZoomConfig_() {
+		const {zoom = {}} = this;
+
+		/**
+		 * Zoom event.
+		 * @event zoom
+		 * @memberof MetalChart
+		 */
+		zoom.onzoom = this.emitChartEvent_.bind(this, 'zoom');
+		/**
+		 * Zoom end event.
+		 * @event zoomEnd
+		 * @memberof MetalChart
+		 */
+		zoom.onzoomend = this.emitChartEvent_.bind(this, 'zoomEnd');
+		/**
+		 * Zoom start event.
+		 * @event zoomStart
+		 * @memberof MetalChart
+		 */
+		zoom.onzoomstart = this.emitChartEvent_.bind(this, 'zoomStart');
+
+		return zoom;
 	}
 
 	emitChartEvent_(type) {
@@ -120,6 +151,10 @@ class MetalChart extends Component {
 
 	handleRegionsChanged_({newVal}) {
 		this.bbChart.regions(newVal);
+	}
+
+	handleSizeChanged_({newVal}) {
+		this.bbChart.resize(newVal);
 	}
 
 	handleTypeChanged_({newVal}) {
