@@ -99,7 +99,7 @@ class MetalChart extends Component {
 	}
 
 	constructDataConfig_() {
-		const data = {
+		const config = {
 			axes: this.axes,
 			classes: this.classes,
 			color: this.colorFormatter,
@@ -126,61 +126,61 @@ class MetalChart extends Component {
 		 * @event pointClick
 		 * @memberof MetalChart
 		 */
-		data.onclick = this.emitChartEvent_.bind(this, 'pointClick');
+		config.onclick = this.emitChartEvent_.bind(this, 'pointClick');
 		/**
 		 * Point mouse out event.
 		 * @event pointMouseout
 		 * @memberof MetalChart
 		 */
-		data.onout = this.emitChartEvent_.bind(this, 'pointMouseout');
+		config.onout = this.emitChartEvent_.bind(this, 'pointMouseout');
 		/**
 		 * Point mouse over event.
 		 * @event pointMouseoever
 		 * @memberof MetalChart
 		 */
-		data.onover = this.emitChartEvent_.bind(this, 'pointMouseover');
+		config.onover = this.emitChartEvent_.bind(this, 'pointMouseover');
 		/**
 		 * Data select event.
 		 * @event dataSelect
 		 * @memberof MetalChart
 		 */
-		data.onselect = this.emitChartEvent_.bind(this, 'dataSelect');
+		config.onselect = this.emitChartEvent_.bind(this, 'dataSelect');
 		/**
 		 * Data unselected event.
 		 * @event dataUnselected
 		 * @memberof MetalChart
 		 */
-		data.onunselected = this.emitChartEvent_.bind(this, 'dataUnselected');
+		config.onunselected = this.emitChartEvent_.bind(this, 'dataUnselected');
 
-		return data;
+		return config;
 	}
 
 	constructZoomConfig_() {
-		const {zoom = {}} = this;
+		const {config = {}} = this;
 
 		/**
 		 * Zoom event.
 		 * @event zoom
 		 * @memberof MetalChart
 		 */
-		zoom.onzoom = this.emitChartEvent_.bind(this, 'zoom');
+		config.onzoom = this.emitChartEvent_.bind(this, 'zoom');
 		/**
 		 * Zoom end event.
 		 * @event zoomEnd
 		 * @memberof MetalChart
 		 */
-		zoom.onzoomend = this.emitChartEvent_.bind(this, 'zoomEnd');
+		config.onzoomend = this.emitChartEvent_.bind(this, 'zoomEnd');
 		/**
 		 * Zoom start event.
 		 * @event zoomStart
 		 * @memberof MetalChart
 		 */
-		zoom.onzoomstart = this.emitChartEvent_.bind(this, 'zoomStart');
+		config.onzoomstart = this.emitChartEvent_.bind(this, 'zoomStart');
 
-		return zoom;
+		return config;
 	}
 
-	emitChartEvent_(type) {
+	emitChartEvent_() {
 		this.emit.apply(this, arguments);
 	}
 
