@@ -171,6 +171,18 @@
 	}
 }
 
+.multi-step-link.btn-link {
+	border-width: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+button.multi-step-link {
+	background-color: transparent;
+	border-width: 0;
+	padding: 0;
+}
+
 .multi-step-item-fixed-width {
 	&.multi-step-item,
 	.multi-step-item-expand {
