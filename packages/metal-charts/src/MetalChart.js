@@ -23,13 +23,11 @@ class MetalChart extends Component {
 	}
 
 	constructAxisConfig_() {
-		const {axisX, axisY2, axisY} = this;
-
 		return {
-			rotated: axisRotated,
-			x: axisX,
-			y2: axisY2,
-			y: axisY
+			rotated: this.axisRotated,
+			x: this.axisX,
+			y2: this.axisY2,
+			y: this.axisY
 		}
 	}
 
