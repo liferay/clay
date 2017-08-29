@@ -1,0 +1,92 @@
+.toggle-card-check {
+	float: left;
+	line-height: normal;
+	position: relative;
+	user-select: none;
+}
+
+.toggle-card-container {
+	background-color: transparent;
+	border: 1px solid $gray-600;
+
+	@include border-radius(4px);
+	@include box-shadow(null);
+
+	color: $body-color;
+	height: 104px;
+	padding: 12px;
+	text-align: center;
+	width: 92px;
+}
+
+.toggle-card-icon {
+	align-items: center;
+	display: flex;
+
+	@include border-radius(4px);
+
+	font-size: 16px;
+	height: 32px;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 32px;
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}
+
+.toggle-card-label {
+	height: 58px;
+	line-height: 16px;
+	overflow: hidden;
+	padding-top: 12px;
+}
+
+.toggle-card .toggle-check {
+	height: auto;
+	width: auto;
+}
+
+.toggle-card-check {
+	height: 104px;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	width: 92px;
+
+	&:empty ~ .toggle-card-container {
+		.toggle-card-off {
+			display: block;
+		}
+
+		.toggle-card-on {
+			display: none;
+		}
+
+		.toggle-card-icon {
+			background-color: transparent;
+		}
+	}
+
+	&:checked ~ .toggle-card-container {
+		background-color: $body-bg;
+		border: 1px solid $link-color;
+		color: $link-color;
+		padding: 12px;
+
+		.toggle-card-off {
+			display: none;
+		}
+
+		.toggle-card-on {
+			display: block;
+		}
+	}
+
+	&[disabled] ~ .toggle-card-container {
+		cursor: not-allowed;
+		opacity: 0.4;
+	}
+}
