@@ -510,7 +510,8 @@ MetalChart.STATE = {
 		hide: Config.bool(),
 		position: Config.oneOf(['bottom', 'inset', 'right']),
 		inset: Config.shapeOf({
-			anchor: Config.oneOf(['bottom-left', 'bottom-right', 'top-left', 'top-right']),
+			anchor: Config.oneOf(['bottom-left', 'bottom-right', 'top-left',
+				'top-right']),
 			step: Config.number(),
 			x: Config.number(),
 			y: Config.number()
