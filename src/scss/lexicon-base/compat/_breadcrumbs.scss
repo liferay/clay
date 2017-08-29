@@ -22,3 +22,20 @@
 .breadcrumb > li + li:hover::before {
 	text-decoration: none;
 }
+
+.breadcrumb-vertical {
+	.breadcrumb-item {
+		display: block;
+		float: none;
+		max-width: none;
+	}
+
+	.breadcrumb-item:before,
+	.breadcrumb-item + .breadcrumb-item:before {
+		color: $gray-600;
+		content: normal;
+		float: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
