@@ -42,10 +42,17 @@ class MetalChart extends Component {
 			bindto: this.element,
 			color: this.color,
 			data,
+			padding: this.padding,
+			pie: this.pie,
+			point: this.point,
 			regions: this.regions,
 			resize: this.resizeAuto,
+			size: this.size,
 			spline: this.splineInterpolationType,
+			subchart: this.subchart,
 			svg: this.svgClassname,
+			title: this.title,
+			tooltip: this.tooltip,
 			transition: this.transitionDuration,
 			zoom: this.zoom
 		}
