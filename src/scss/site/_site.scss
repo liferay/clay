@@ -14,11 +14,6 @@ section.row {
 	margin-bottom: 45px;
 }
 
-.box-copy > h4 {
-	margin-bottom: 15px;
-	margin-top: 20px;
-}
-
 .page-title {
 	display: inline-block;
 	font-weight: bold;
@@ -29,9 +24,7 @@ section.row {
 	}
 }
 
-.clay-site-row-spacer,
-.lx-site-row-spacer,
-.row-spacing {
+.clay-site-row-spacer {
 	margin-bottom: 20px;
 }
 
@@ -142,27 +135,6 @@ section.row {
 	width: 100%;
 }
 
-.lx-site-toggle-code,
-.uxgl-toggle-code {
-	clear: both;
-	padding-bottom: 5px;
-
-	+ .collapse,
-	+ .collapsing {
-		pre {
-			margin-bottom: 0;
-		}
-	}
-}
-
-.lx-site-has-prev-margin-sm {
-	margin-top: -7px;
-}
-
-.lx-site-has-prev-margin {
-	margin-top: -17px;
-}
-
 .clay-site-light-container {
 	background-color: #000;
 	display: inline-block;
@@ -185,115 +157,13 @@ section.row {
 }
 
 #alertNotifications {
-	.lexicon-site-display-container {
+	.clay-site-display-container {
 		@include media-breakpoint-up(md) { // min-width 768px
 			float: left;
 			margin-right: 15px;
 			min-height: 250px;
 		}
 	}
-}
-
-// Best Practices Page
-
-#bestPractices tr th {
-	padding-top: 20px;
-}
-
-// Blog Actions Page
-
-body.fixed {
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-}
-
-#blogActions {
-	[data-target="#imageSelectorModal"] {
-		margin-bottom: 15px;
-		margin-top: 15px;
-	}
-
-	.management-bar {
-		margin-bottom: 0;
-	}
-
-	.tabular-list-group .list-group-item .list-group-item-content:first-child,
-	.tabular-list-group .list-group-item .list-group-item-field:first-child {
-		@include media-breakpoint-down(sm) { // min-width 767px
-			display: none;
-		}
-	}
-}
-
-.uxgl-fullscreen-fixed {
-	background-color: #F5F8FA;
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 10;
-}
-
-.uxgl-fullscreen-fixed.row {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.uxgl-fullscreen-fixed.row > .col-md-12 {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-// Blog Appearance Page
-
-#blogAppearance {
-}
-
-.blog-appearance-current-theme {
-	background-color: #FFF;
-	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-	min-height: 400px;
-	width: 100%;
-}
-
-.blog-appearance-current-theme-heading {
-	border-bottom: 1px solid #DDD;
-	margin-bottom: 15px;
-	padding: 15px 0 10px;
-
-	h4 {
-		float: left;
-		line-height: 26px;
-		margin: 0;
-	}
-
-	.help-icon {
-		float: right;
-	}
-}
-
-.blog-appearance-left-column {
-	img {
-		margin-bottom: 15px;
-	}
-}
-
-.blog-appearance-right-column {
-	h4 {
-		margin-top: 31px;
-	}
-}
-
-// Buttons Page
-
-.lx-site-btn-action-column {
-	float: left;
-	width: 100px;
 }
 
 // Cards Page
@@ -323,64 +193,6 @@ body.fixed {
 				color: #7c7c85;
 			}
 		}
-	}
-}
-
-// Control Menu Page
-
-#controlMenuPage .control-menu {
-	position: relative;
-}
-
-// Documents and Media Example Page
-
-#documentsAndMediaExample {
-	.card-horizontal {
-		.card-col-field {
-			text-align: center;
-		}
-
-		.icon-folder-close-alt {
-			background-color: #F1F5FA;
-			font-size: 28px;
-			height: 60px;
-			line-height: 60px;
-			width: 60px;
-		}
-	}
-}
-
-#documentsAndMediaRightSidenav {
-	background-color: #F5F8FA;
-
-	.breadcrumb {
-		margin-bottom: 15px;
-		margin-top: 10px;
-	}
-
-	.card,
-	.card-horizontal {
-		background-color: #FFF;
-	}
-
-	> .sidenav-content {
-		padding-top: 1px;
-	}
-
-	.pagination-bar {
-		clear: both;
-	}
-}
-
-@include media-breakpoint-up(md) { // min-width 768px
-	#documentsAndMediaSidenav .container-fluid-1280.sidenav-container {
-		padding-left: 15px;
-	}
-}
-
-@media (min-width: 1300px) {
-	#documentsAndMediaSidenav.closed .container-fluid-1280.sidenav-container {
-		padding-right: 15px;
 	}
 }
 
@@ -415,91 +227,6 @@ body.fixed {
 	.mega-menu .dropdown-menu {
 		float: left;
 		max-width: 100%;
-	}
-}
-
-// Figures Page
-
-.uxgl-figures .figure {
-	max-width: 300px;
-}
-
-// Extending Cards Page
-
-.card-background-image-demo .aspect-ratio {
-	background-color: #000;
-}
-
-.usage-section {
-	p {
-		line-height: 1.6667em;
-		margin-bottom: 1.6667em;
-	}
-}
-
-.usage-heading {
-	margin-bottom: 1em;
-	margin-top: 0.25em;
-}
-
-.extend-cards-page {
-	.card {
-		max-width: 300px;
-	}
-
-	.card-label {
-		background: rgb(120, 171, 240);
-		color: #FFF;
-		display: block;
-		float: left;
-		font-size: 10px;
-		font-weight: 200;
-		margin-bottom: 15px;
-		margin-left: 10px;
-		padding: 2px 10px;
-		text-transform: uppercase;
-	}
-
-	.card-section table {
-		font-weight: 200;
-		margin: 15px 0;
-		width: 100%;
-
-		td {
-			padding: 10px;
-			text-align: right;
-
-			&:first-child {
-				text-align: left;
-			}
-		}
-	}
-
-	.control-panel {
-		.card-header {
-			background-color: #F8F8F8;
-			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
-			padding: 0;
-		}
-
-		.card-row {
-			background-color: #F8F8F8;
-			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
-			width: 100%;
-		}
-
-		.card-column {
-			padding: 10px 15px;
-		}
-	}
-}
-
-// Extending Nameplates Page
-
-.uxgl-extending-nameplates {
-	.profile-header {
-		float: left;
-		margin-bottom: 15px;
 	}
 }
 
@@ -546,27 +273,17 @@ body.fixed {
 	}
 }
 
-// Icons (Font Awesome Page)
-
-@media (min-width: 321px) {
-	.font-awesome-icons-list li {
-		float: left;
-		width: 50%;
-	}
+.modal-open .main-nav-open {
+	-webkit-overflow-scrolling: auto;
 }
 
-@include media-breakpoint-up(md) { // min-width 768px
-	.font-awesome-icons-list li, .lexicon-icon-list li {
-		float: left;
-		padding: 5px;
-		width: 33%;
-	}
+// Navbars Page
 
-	.glyphicons-list li {
-		float: left;
-		width: 50%;
-	}
+#navbarsPage ~ .row .navbar {
+	margin-bottom: 10px;
 }
+
+// Icons (Lexicon Page)
 
 .lexicon-icon-examples {
 	display: block;
@@ -636,35 +353,6 @@ body.fixed {
 		}
 	}
 }
-
-.modal-open .main-nav-open {
-	-webkit-overflow-scrolling: auto;
-}
-
-// Nameplates Page
-
-.uxgl-nameplates-page {
-	.col-md-2 {
-		text-align: center;
-
-		p {
-			font-size: 12px;
-		}
-	}
-
-	.user-icon {
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-// Navbars Page
-
-#navbarsPage ~ .row .navbar {
-	margin-bottom: 10px;
-}
-
-// Icons (Lexicon Page)
 
 $site-lexicon-icon-color: #5AF;
 
@@ -1133,23 +821,6 @@ body.sidenav-transition {
 	.uxgl-switches .form-group {
 		width: 115px;
 	}
-}
-
-// Toolbars
-
-.uxgl-toggle-code {
-	.btn {
-		border-radius: 2px;
-		padding: 0 5px;
-	}
-}
-
-.uxgl-newline-demo blockquote {
-	margin-top: 40px;
-}
-
-.uxgl-newline-demo h3:first-child + blockquote {
-	margin-top: 0;
 }
 
 // Assorted Examples Page
