@@ -219,97 +219,6 @@ MetalChart.STATE = {
 	axes: Config.object(),
 
 	/**
-	 * Sets billboard's data.classes config.
-	 * @instance
-	 * @memberof MetalChart
-	 * @type {?Object|undefined}
-	 * @default {}
-	 */
-	classes: Config.object(),
-
-	/**
-	 * Sets color patterns and color threshhold.
-	 * @instance
-	 * @memberof MetalChart
-	 * @type {?object|undefined}
-	 * @default undefined
-	 */
-	color: Config.shapeOf({
-		patterns: Config.array(),
-		threshold: Config.shapeOf({
-			max: Config.array(),
-			unit: Config.string(),
-			value: Config.array()
-		})
-	}),
-
-	/**
-	 * Sets billboard's data.color config.
-	 * @instance
-	 * @memberof MetalChart
-	 * @type {?Function|undefined}
-	 * @default undefined
-	 */
-	colorFormatter: Config.func(),
-
-	/**
-	 * Sets label for when no data is loaded.
-	 * @instance
-	 * @memberof MetalChart
-	 * @type {?String|undefined}
-	 * @default ""
-	 */
-	emptyLabelText: Config.string().setter(value => {
-		return {
-			empty: {
-				label: {
-					text: value
-				}
-			}
-		}
-	}),
-
-	/**
-	 * Sets billboard's data.groups config.
-	 * @instance
-	 * @memberof MetalChart
-	 * @type {?Array|undefined}
-	 * @default []
-	 */
-	groups: Config.array(),
-
-	/**
-	 * Sets billboard's data.hide config.
-	 * @instance
-	 * @memberof MetalChart
-	 * @type {?Array|bool|undefined}
-	 * @default []
-	 */
-	hide: Config.array().bool().value(false),
-
-	/**
-	 * Sets billboard's data.json config.
-	 * @instance
-	 * @memberof MetalChart
-	 * @type {?Array|bool|undefined}
-	 * @default []
-	 */
-	json: Config.array(),
-
-	/**
-	 * Sets billboard's data.keys config.
-	 * @instance
-	 * @memberof MetalChart
-	 * @type {?Array|undefined}
-	 * @default []
-	 */
-	keys: Config.array().setter(value => {
-		return {
-			value
-		}
-	}),
-
-	/**
 	 * Switches the x and y axis.
 	 * @instance
 	 * @memberof MetalChart
@@ -416,6 +325,15 @@ MetalChart.STATE = {
 	}),
 
 	/**
+	 * Sets billboard's data.classes config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Object|undefined}
+	 * @default {}
+	 */
+	classes: Config.object(),
+
+	/**
 	 * Defines a custom color pattern for chart.
 	 * @instance
 	 * @memberof MetalChart
@@ -430,6 +348,15 @@ MetalChart.STATE = {
 			max: Config.number()
 		})
 	}),
+
+	/**
+	 * Sets billboard's data.color config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Function|undefined}
+	 * @default undefined
+	 */
+	colorFormatter: Config.func(),
 
 	/**
 	 * Data that will be rendered to the chart.
@@ -458,6 +385,23 @@ MetalChart.STATE = {
 		width: Config.number(),
 		title: Config.string(),
 		padAngle: Config.number()
+	}),
+
+	/**
+	 * Sets label for when no data is loaded.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?String|undefined}
+	 * @default ""
+	 */
+	emptyLabelText: Config.string().setter(value => {
+		return {
+			empty: {
+				label: {
+					text: value
+				}
+			}
+		}
 	}),
 
 	/**
@@ -517,6 +461,24 @@ MetalChart.STATE = {
 	}),
 
 	/**
+	 * Sets billboard's data.groups config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Array|undefined}
+	 * @default []
+	 */
+	groups: Config.array(),
+
+	/**
+	 * Sets billboard's data.hide config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Array|bool|undefined}
+	 * @default []
+	 */
+	hide: Config.array().bool().value(false),
+
+	/**
 	 * intersection TODO.
 	 * @instance
 	 * @memberof MetalChart
@@ -530,6 +492,28 @@ MetalChart.STATE = {
 			mouse: Config.bool(),
 			touch: Config.bool()
 		})
+	}),
+
+	/**
+	 * Sets billboard's data.json config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Array|bool|undefined}
+	 * @default []
+	 */
+	json: Config.array(),
+
+	/**
+	 * Sets billboard's data.keys config.
+	 * @instance
+	 * @memberof MetalChart
+	 * @type {?Array|undefined}
+	 * @default []
+	 */
+	keys: Config.array().setter(value => {
+		return {
+			value
+		}
 	}),
 
 	/**
