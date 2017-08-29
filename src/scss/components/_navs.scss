@@ -150,4 +150,18 @@
 	.nav-link {
 		white-space: nowrap;
 	}
+
+	+ .tab-content {
+		.tab-pane {
+			background-color: $nav-tabs-tab-pane-bg;
+
+			@include border-radius($nav-tabs-tab-pane-border-radius);
+
+			padding: $nav-tabs-tab-pane-padding;
+
+			&.active:first-child {
+				border-top-left-radius: 0;
+			}
+		}
+	}
 }
