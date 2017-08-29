@@ -26,6 +26,7 @@ class MetalChart extends Component {
 		const {axisX, axisY2, axisY} = this;
 
 		return {
+			rotated: axisRotated,
 			x: axisX,
 			y2: axisY2,
 			y: axisY
@@ -33,8 +34,6 @@ class MetalChart extends Component {
 	}
 
 	constructChartConfig_() {
-		const {area, element, regions} = this;
-
 		const axis = this.constructAxisConfig_();
 		const data = this.constructDataConfig_();
 		const zoom = this.constructZoomConfig_();
@@ -42,10 +41,14 @@ class MetalChart extends Component {
 		return {
 			area,
 			axis,
-			bindto: element,
+			bindto: this.element,
 			data,
-			regions,
-			zoom
+			regions: this.regions,
+			resize: this.resizeAuto,
+			spline: this.splineInterpolationType,
+			svg: this.svgClassname,
+			transition: this.transitionDuration,
+			zoom: this.zoom
 		}
 	}
 
@@ -53,7 +56,7 @@ class MetalChart extends Component {
 		const data = {
 			axes: this.axes,
 			classes: this.classes,
-			color: this.color,
+			color: this.colorFormatter,
 			colors: this.colors,
 			columns: this.columns,
 			empty: this.emptyLabelText,
@@ -225,7 +228,7 @@ MetalChart.STATE = {
 	 * @type {?Function|undefined}
 	 * @default undefined
 	 */
-	color: Config.func(),
+	colorFormatter: Config.func(),
 
 	/**
 	 * Sets label for when no data is loaded.
@@ -291,9 +294,7 @@ MetalChart.STATE = {
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
-	axis: Config.shapeOf({
-		rotated: Config.bool()
-	}),
+	axisRotated: Config.bool(),
 
 	/**
 	 * Styling and behavior of x axis.
@@ -649,11 +650,13 @@ MetalChart.STATE = {
 	 * Determines if chart auto resizes when viewport size changes.
 	 * @instance
 	 * @memberof MetalChart
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?boolean|undefined}
+	 * @default undefined
 	 */
-	resize: Config.shapeOf({
-		auto: Config.bool()
+	resizeAuto: Config.bool().setter(value => {
+		return {
+			auto: value
+		}
 	}),
 
 	/**
@@ -697,13 +700,15 @@ MetalChart.STATE = {
 	 * Determines interpolation type of spline charts.
 	 * @instance
 	 * @memberof MetalChart
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?string|undefined}
+	 * @default undefined
 	 */
-	spline: Config.shapeOf({
-		interpolation: Config.shapeOf({
-			type: Config.string()
-		})
+	splineInterpolationType: Config.string().setter(value => {
+		return {
+			interpolation: {
+				type: value
+			}
+		}
 	}),
 
 	/**
@@ -725,11 +730,13 @@ MetalChart.STATE = {
 	 * Customizes classname for svg element.
 	 * @instance
 	 * @memberof MetalChart
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?string|undefined}
+	 * @default undefined
 	 */
-	svg: Config.shapeOf({
-		classname: Config.string()
+	svgClassname: Config.string().setter(value => {
+		return {
+			classname: value
+		}
 	}),
 
 	/**
@@ -772,11 +779,13 @@ MetalChart.STATE = {
 	 * Sets duration of transitions.
 	 * @instance
 	 * @memberof MetalChart
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?number|undefined}
+	 * @default undefined
 	 */
-	transition: Config.shapeOf({
-		duration: Config.number()
+	transitionDuration: Config.number().setter(value => {
+		return {
+			duration: value
+		}
 	}),
 
 	/**
