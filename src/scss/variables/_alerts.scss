@@ -1,7 +1,7 @@
 $alert-border-style: solid !default;
 
 $alert-close-font-size: 1rem !default; // 16px
-$alert-close-line-height: $line-height-base; // 1.5
+$alert-close-line-height: $line-height-base !default; // 1.5
 $alert-close-opacity: null !default;
 $alert-close-margin-left: $alert-padding-x !default; // 20px
 $alert-close-padding-bottom: 0 !default;
@@ -57,7 +57,7 @@ $alert-success-link-hover-color: null !default;
 
 $alert-info-bg: null !default;
 $alert-info-border-color: null !default;
-$alert-info-color: null !default
+$alert-info-color: null !default;
 $alert-info-close-color: null !default;
 $alert-info-close-hover-color: null !default;
 $alert-info-lead-color: null !default;
