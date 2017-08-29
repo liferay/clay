@@ -27,10 +27,17 @@ $nav-pills-active-link-color: #FFF !default;
 
 // Nav Tabs
 
-$nav-tabs-border-color: #D8D8D8 !default;
+$nav-tabs-border-color: transparent !default;
+
 $nav-tabs-link-hover-border-color: transparent !default;
 
-$nav-tabs-link-active-color: map-get($theme-colors, primary) !default;
+$nav-tabs-link-active-color: $body-color !default;
+$nav-tabs-link-active-bg: #FFF !default;
 
+$nav-tabs-link-active-border-color: transparent transparent $body-bg !default;
 $nav-tabs-link-show-color: inherit !default;
 $nav-tabs-link-show-border-color: transparent transparent $nav-tabs-border-color transparent !default;
+
+$nav-tabs-tab-pane-bg: #FFF !default;
+$nav-tabs-tab-pane-border-radius: 4px !default;
+$nav-tabs-tab-pane-padding: 2rem !default;
