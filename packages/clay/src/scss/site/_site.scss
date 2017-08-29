@@ -481,6 +481,32 @@ $site-lexicon-icon-color: #5AF;
 	}
 }
 
+// Typography Page
+
+.clay-site-sans-serif {
+	font-family: $font-family-sans-serif;
+
+	&:after {
+		content: '#{$font-family-sans-serif}';
+	}
+}
+
+.clay-site-serif {
+	font-family: $font-family-serif;
+
+	&:after {
+		content: '#{$font-family-serif}';
+	}
+}
+
+.clay-site-monospace {
+	font-family: $font-family-monospace;
+
+	&:after {
+		content: '#{$font-family-monospace}';
+	}
+}
+
 // Site Main Nav
 
 .side-navigation-data-api-buttons {
