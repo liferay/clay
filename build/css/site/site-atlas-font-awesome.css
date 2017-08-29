@@ -3244,7 +3244,7 @@ tbody.collapse.show {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #D8D8D8;
+  border-bottom: 1px solid transparent;
 }
 
 .nav-tabs .nav-item {
@@ -3258,7 +3258,7 @@ tbody.collapse.show {
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-  border-color: transparent transparent #D8D8D8;
+  border-color: transparent transparent transparent;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -3269,9 +3269,9 @@ tbody.collapse.show {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #1865FB;
-  background-color: #F1F2F5;
-  border-color: #ddd #ddd #F1F2F5;
+  color: #272833;
+  background-color: #FFF;
+  border-color: transparent transparent #F1F2F5 transparent transparent #F1F2F5 #FFF;
 }
 
 .nav-tabs .dropdown-menu {
@@ -10640,13 +10640,27 @@ a.list-group-subtitle,
   color: #C5CDD0;
 }
 
+.nav-tabs .nav-link.active {
+  border-color: transparent transparent #F1F2F5;
+}
+
 .nav-tabs .nav-item.show .nav-link {
-  border-color: transparent transparent #D8D8D8 transparent;
+  border-color: transparent transparent transparent transparent;
   color: inherit;
 }
 
 .nav-tabs .nav-link {
   white-space: nowrap;
+}
+
+.nav-tabs + .tab-content .tab-pane {
+  background-color: #FFF;
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.nav-tabs + .tab-content .tab-pane.active:first-child {
+  border-top-left-radius: 0;
 }
 
 .basic-search.open {
