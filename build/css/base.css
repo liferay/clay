@@ -8181,10 +8181,6 @@ a.text-dark:focus, a.text-dark:hover {
   text-decoration: none;
 }
 
-.show > button.card-link {
-  outline: none;
-}
-
 button.card-link {
   background-color: transparent;
   border-width: 0;
@@ -11038,6 +11034,18 @@ a.label {
   width: 2rem;
 }
 
+.multi-step-link.btn-link {
+  border-width: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+button.multi-step-link {
+  background-color: transparent;
+  border-width: 0;
+  padding: 0;
+}
+
 .multi-step-item-fixed-width.multi-step-item,
 .multi-step-item-fixed-width .multi-step-item-expand {
   flex-grow: 0;
@@ -11099,6 +11107,20 @@ a.label {
   .multi-step-nav-collapse-sm .multi-step-indicator-label {
     display: none;
   }
+}
+
+.multi-step-bar {
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+  display: flex;
+  height: 2.375rem;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.multi-step-bar > li {
+  display: block;
 }
 
 .pagination {
@@ -12470,14 +12492,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.monospace {
-  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.sans-serif {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 h1,
 .h1 {
   font-size: 2.5rem;
@@ -12506,6 +12520,17 @@ h5,
 h6,
 .h6 {
   font-size: 1rem;
+}
+
+.section-header {
+  border-color: #868e96;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  color: #868e96;
+  font-size: 0.75rem;
+  line-height: 2.5;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 
 .reference-mark {
@@ -12556,84 +12581,6 @@ mark:before,
 
 .text-truncate {
   display: block;
-}
-
-.blockquote-xs {
-  border-left-width: 1px;
-  font-size: 0.875rem;
-}
-
-.blockquote-xs.blockquote-reverse {
-  border-left-width: 0;
-  border-right-width: 1px;
-}
-
-.blockquote-sm {
-  border-left-width: 3px;
-  font-size: 1rem;
-}
-
-.blockquote-sm.blockquote-reverse {
-  border-left-width: 0;
-  border-right-width: 3px;
-}
-
-.blockquote-lg {
-  border-left-width: 8px;
-  font-size: 1.875rem;
-}
-
-.blockquote-lg.blockquote-reverse {
-  border-left-width: 0;
-  border-right-width: 8px;
-}
-
-.blockquote-danger {
-  border-color: #dc3545;
-}
-
-.blockquote-danger footer, .blockquote-danger small, .blockquote-danger .small {
-  color: #dc3545;
-}
-
-.blockquote-default {
-  border-color: #868e96;
-}
-
-.blockquote-default footer, .blockquote-default small, .blockquote-default .small {
-  color: #868e96;
-}
-
-.blockquote-info {
-  border-color: #17a2b8;
-}
-
-.blockquote-info footer, .blockquote-info small, .blockquote-info .small {
-  color: #17a2b8;
-}
-
-.blockquote-primary {
-  border-color: #007bff;
-}
-
-.blockquote-primary footer, .blockquote-primary small, .blockquote-primary .small {
-  color: #007bff;
-}
-
-.blockquote-success {
-  border-color: #28a745;
-}
-
-.blockquote-success footer, .blockquote-success small, .blockquote-success .small {
-  color: #28a745;
-}
-
-.blockquote-warning {
-  border-color: #ffc107;
-}
-
-.blockquote-warning footer, .blockquote-warning small, .blockquote-warning .small {
-  color: #ffc107;
 }
 
 .dropdown-header {
@@ -12799,7 +12746,7 @@ mark:before,
   padding: 0;
 }
 
-.dropdown-action.show > button.dropdown-toggle {
+.show > button.dropdown-toggle {
   outline: none;
 }
 
