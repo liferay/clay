@@ -93,63 +93,6 @@ mark,
 	@include highlight-text();
 }
 
-// Will be safe to remove once https://github.com/twbs/bootstrap/pull/22739 is merged
 .text-truncate {
 	display: block;
-}
-
-// Blockquote Variations
-
-.blockquote-xs {
-	border-left-width: $blockquote-xs-border-width;
-	font-size: $blockquote-xs-font-size;
-
-	&.blockquote-reverse {
-		border-left-width: 0;
-		border-right-width: $blockquote-xs-border-width;
-	}
-}
-
-.blockquote-sm {
-	border-left-width: $blockquote-sm-border-width;
-	font-size: $blockquote-sm-font-size;
-
-	&.blockquote-reverse {
-		border-left-width: 0;
-		border-right-width: $blockquote-sm-border-width;
-	}
-}
-
-.blockquote-lg {
-	border-left-width: $blockquote-lg-border-width;
-	font-size: $blockquote-lg-font-size;
-
-	&.blockquote-reverse {
-		border-left-width: 0;
-		border-right-width: $blockquote-lg-border-width;
-	}
-}
-
-.blockquote-danger {
-	@include color-blockquote ($blockquote-danger-color);
-}
-
-.blockquote-default {
-	@include color-blockquote ($blockquote-default-color);
-}
-
-.blockquote-info {
-	@include color-blockquote ($blockquote-info-color);
-}
-
-.blockquote-primary {
-	@include color-blockquote ($blockquote-primary-color);
-}
-
-.blockquote-success {
-	@include color-blockquote ($blockquote-success-color);
-}
-
-.blockquote-warning {
-	@include color-blockquote ($blockquote-warning-color);
 }

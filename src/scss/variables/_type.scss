@@ -1,19 +1,1 @@
 $reference-mark-font-size: 0.76em !default;
-
-$blockquote-xs-border-width: 1px !default;
-$blockquote-xs-font-size: $blockquote-font-size * 0.7 !default;
-
-$blockquote-sm-border-width: 3px !default;
-$blockquote-sm-font-size: $blockquote-font-size * 0.8 !default;
-
-$blockquote-lg-border-width: 8px !default;
-$blockquote-lg-font-size: $blockquote-font-size * 1.5 !default;
-
-// Skin
-
-$blockquote-danger-color: map-get($theme-colors, danger) !default;
-$blockquote-default-color: map-get($theme-colors, secondary) !default;
-$blockquote-info-color: map-get($theme-colors, info) !default;
-$blockquote-primary-color: map-get($theme-colors, primary) !default;
-$blockquote-success-color: map-get($theme-colors, success) !default;
-$blockquote-warning-color: map-get($theme-colors, warning) !default;
