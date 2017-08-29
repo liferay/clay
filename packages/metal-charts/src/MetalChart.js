@@ -135,12 +135,12 @@ class MetalChart extends Component {
 		this.emit.apply(this, arguments);
 	}
 
-	handleColumnsChanged_({newVal}) {
+	handleColumnsChanged_({newVal, prevVal}) {
 		const data = {
 			columns: newVal
 		};
 
-		const removedIds = this.resolveRemovedColumns_(newVal);
+		const removedIds = this.resolveRemovedColumns_(newVal, prevVal);
 
 		if (removedIds.length) {
 			data.unload = removedIds;
@@ -166,12 +166,10 @@ class MetalChart extends Component {
 	 * @static
 	 * @type {!Object}
 	 */
-	resolveRemovedColumns_(newColumns) {
-		const {columns} = this;
-
+	resolveRemovedColumns_(newColumns, prevColumns) {
 		const ids = newColumns.map(column => column[0]);
 
-		return columns.reduce((removedIds, column) => {
+		return prevColumns.reduce((removedIds, column) => {
 			const id = column[0];
 
 			if (ids.indexOf(id) === -1) {
