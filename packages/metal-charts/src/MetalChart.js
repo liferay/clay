@@ -38,22 +38,65 @@ class MetalChart extends Component {
 		const axis = this.constructAxisConfig_();
 
 		return {
-			area: area,
+			area,
+			axis,
 			bindto: element,
 			data,
-			regions: regions
+			regions
 		}
 	}
 
 	constructDataConfig_() {
 		return {
+			axes: this.axes,
+			classes: this.classes,
+			color: this.color,
+			colors: this.colors,
 			columns: this.columns,
+			empty: this.emptyLabelText,
+			groups: this.groups,
+			hide: this.hide,
+			json: this.json,
+			keys: this.keys,
+			labels: this.labels,
+			mimeType: this.mimeType,
+			names: this.names,
+			/**
+			 * Point click event.
+			 * @event pointClick
+			 * @memberof MetalChart
+			 */
 			onclick: this.emitChartEvent_.bind(this, 'pointClick'),
+			/**
+			 * Point mouse out event.
+			 * @event pointMouseout
+			 * @memberof MetalChart
+			 */
 			onout: this.emitChartEvent_.bind(this, 'pointMouseout'),
+			/**
+			 * Point mouse over event.
+			 * @event pointMouseoever
+			 * @memberof MetalChart
+			 */
 			onover: this.emitChartEvent_.bind(this, 'pointMouseover'),
+			/**
+			 * Data select event.
+			 * @event dataSelect
+			 * @memberof MetalChart
+			 */
 			onselect: this.emitChartEvent_.bind(this, 'dataSelect'),
+			/**
+			 * Data unselected event.
+			 * @event dataUnselected
+			 * @memberof MetalChart
+			 */
 			onunselected: this.emitChartEvent_.bind(this, 'dataUnselected'),
-			type: this.type
+			order: this.order,
+			rows: this.rows,
+			selection: this.selection,
+			type: this.type,
+			types: this.types,
+			url: this.url
 		}
 	}
 
