@@ -138,6 +138,10 @@
 // Nav Tabs
 
 .nav-tabs {
+	.nav-link.active {
+		border-color: $nav-tabs-link-active-border-color;
+	}
+
 	.nav-item.show .nav-link {
 		border-color: $nav-tabs-link-show-border-color;
 		color: $nav-tabs-link-show-color;
