@@ -9,7 +9,7 @@
     "npm": ">=3.0.0"
   },
   "main": "lib/ClayButton.js",
-  "jsnext:main": "src/ClayButton.js",
+  "esnext:main": "src/ClayButton.js",
   "files": [
     "lib",
     "src",

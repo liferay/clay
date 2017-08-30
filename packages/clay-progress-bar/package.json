@@ -9,7 +9,7 @@
     "npm": ">=3.0.0"
   },
   "main": "lib/ClayProgressBar.js",
-  "jsnext:main": "src/ClayProgressBar.js",
+  "esnext:main": "src/ClayProgressBar.js",
   "files": [
     "lib",
     "src",

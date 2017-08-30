@@ -8,8 +8,8 @@
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "src/ClayIcon.js",
-  "jsnext:main": "src/ClayIcon.js",
+  "main": "lib/ClayIcon.js",
+  "esnext:main": "src/ClayIcon.js",
   "files": [
     "lib",
     "src",

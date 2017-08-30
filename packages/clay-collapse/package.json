@@ -9,7 +9,7 @@
     "npm": ">=3.0.0"
   },
   "main": "lib/ClayCollapse.js",
-  "jsnext:main": "src/ClayCollapse.js",
+  "esnext:main": "src/ClayCollapse.js",
   "files": [
     "lib",
     "src",

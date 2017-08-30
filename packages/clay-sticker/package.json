@@ -9,7 +9,7 @@
     "npm": ">=3.0.0"
   },
   "main": "lib/ClaySticker.js",
-  "jsnext:main": "src/ClaySticker.js",
+  "esnext:main": "src/ClaySticker.js",
   "files": [
     "lib",
     "src",
