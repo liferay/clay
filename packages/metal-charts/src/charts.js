@@ -12,6 +12,6 @@ import StepChart from './StepChart';
 
 import ChartJSX from './jsx/ChartJSX';
 
-export {BarChart, DonutChart, GaugeChart, LineChart, Chart, PieChart,
+export {BarChart, DonutChart, GaugeChart, LineChart, Chart, ChartJSX, PieChart,
 	ScatterChart, SplineChart, StepChart};
 export default Chart;
