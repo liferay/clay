@@ -465,9 +465,6 @@
 }
 
 .navbar-nav .nav-item > .form-check {
-	align-items: center;
-	display: flex;
-	justify-content: center;
 	margin: 0;
 	padding-left: $navbar-link-padding-x;
 	padding-right: $navbar-link-padding-x;
@@ -475,16 +472,6 @@
 	@include scale-component {
 		padding-left: $navbar-link-padding-x-mobile;
 		padding-right: $navbar-link-padding-x-mobile;
-	}
-
-	.form-check-input {
-		margin-left: 0;
-		margin-top: 0;
-	}
-
-	.form-check-label {
-		display: flex;
-		padding-left: 0;
 	}
 }
 
