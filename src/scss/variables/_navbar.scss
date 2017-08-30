@@ -1,4 +1,4 @@
-$enable-scaling-navbar: false !default;
+$enable-scaling-navbar: $enable-scaling-components !default;
 
 $navbar-height: 3.5rem !default; // 56px
 $navbar-height-mobile: $navbar-height !default; // 56px
