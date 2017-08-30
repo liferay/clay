@@ -10,8 +10,6 @@ import SplineChart from './SplineChart';
 import StepChart from './StepChart';
 import MetalChart from './MetalChart';
 
-import MetalChartJSX from './jsx/MetalChartJSX';
-
-export {BarChart, DonutChart, GaugeChart, LineChart, MetalChart,
-	MetalChartJSX, PieChart, ScatterChart, SplineChart, StepChart};
+export {BarChart, DonutChart, GaugeChart, LineChart, MetalChart, PieChart,
+	ScatterChart, SplineChart, StepChart};
 export default MetalChart;
