@@ -9,7 +9,7 @@
     "npm": ">=3.0.0"
   },
   "main": "lib/ClaySelect.js",
-  "jsnext:main": "src/ClaySelect.js",
+  "esnext:main": "src/ClaySelect.js",
   "files": [
     "lib",
     "src",

@@ -9,7 +9,7 @@
     "npm": ">=3.0.0"
   },
   "main": "lib/ClayLink.js",
-  "jsnext:main": "src/ClayLink.js",
+  "esnext:main": "src/ClayLink.js",
   "files": [
     "lib",
     "src",
