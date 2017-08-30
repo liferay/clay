@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-	entry: './src/MetalChart.js',
+	entry: './src/charts.js',
 	module: {
 		rules: [{
 			test: /\.js$/,
