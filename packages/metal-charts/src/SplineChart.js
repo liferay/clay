@@ -1,5 +1,7 @@
 'use strict';
 
+import {Config} from 'metal-state';
+
 import Chart from './Chart';
 
 /**
@@ -9,7 +11,23 @@ class SplineChart extends Chart {
 }
 
 SplineChart.STATE = {
-	type: Chart.STATE.type.value('spline')
+	/**
+	 * The variety of chart that will be rendered.
+	 * @instance
+	 * @memberof SplineChart
+	 * @type {?string|undefined}
+	 * @default spline
+	 */
+	type: Config.oneOf([
+		'area',
+		'area-spline',
+		'area-step',
+		'bar',
+		'line',
+		'scatter',
+		'spline',
+		'step',
+	]).value('spline')
 };
 
 export {SplineChart};

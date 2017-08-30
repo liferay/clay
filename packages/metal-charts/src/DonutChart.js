@@ -1,5 +1,7 @@
 'use strict';
 
+import {Config} from 'metal-state';
+
 import Chart from './Chart';
 
 /**
@@ -9,7 +11,17 @@ class DonutChart extends Chart {
 }
 
 DonutChart.STATE = {
-	type: Chart.STATE.type.value('donut')
+	/**
+	 * The variety of chart that will be rendered.
+	 * @instance
+	 * @memberof DonutChart
+	 * @type {?string|undefined}
+	 * @default donut
+	 */
+	type: Config.oneOf([
+		'donut',
+		'pie'
+	]).value('donut')
 };
 
 export {DonutChart};

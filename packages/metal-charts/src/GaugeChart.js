@@ -1,5 +1,7 @@
 'use strict';
 
+import {Config} from 'metal-state';
+
 import Chart from './Chart';
 
 /**
@@ -9,7 +11,16 @@ class GaugeChart extends Chart {
 }
 
 GaugeChart.STATE = {
-	type: Chart.STATE.type.value('gauge')
+	/**
+	 * The variety of chart that will be rendered.
+	 * @instance
+	 * @memberof GaugeChart
+	 * @type {?string|undefined}
+	 * @default gauge
+	 */
+	type: Config.oneOf([
+		'gauge'
+	]).value('gauge')
 };
 
 export {GaugeChart};

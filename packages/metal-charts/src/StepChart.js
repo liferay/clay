@@ -1,5 +1,7 @@
 'use strict';
 
+import {Config} from 'metal-state';
+
 import Chart from './Chart';
 
 /**
@@ -9,7 +11,23 @@ class StepChart extends Chart {
 }
 
 StepChart.STATE = {
-	type: Chart.STATE.type.value('step')
+	/**
+	 * The variety of chart that will be rendered.
+	 * @instance
+	 * @memberof StepChart
+	 * @type {?string|undefined}
+	 * @default step
+	 */
+	type: Config.oneOf([
+		'area',
+		'area-spline',
+		'area-step',
+		'bar',
+		'line',
+		'scatter',
+		'spline',
+		'step',
+	]).value('step')
 };
 
 export {StepChart};
