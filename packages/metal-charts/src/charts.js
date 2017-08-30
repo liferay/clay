@@ -1,6 +1,7 @@
 'use strict';
 
 import BarChart from './BarChart';
+import Chart from './Chart';
 import DonutChart from './DonutChart';
 import GaugeChart from './GaugeChart';
 import LineChart from './LineChart';
@@ -8,8 +9,9 @@ import PieChart from './PieChart';
 import ScatterChart from './ScatterChart';
 import SplineChart from './SplineChart';
 import StepChart from './StepChart';
-import MetalChart from './MetalChart';
 
-export {BarChart, DonutChart, GaugeChart, LineChart, MetalChart, PieChart,
+import ChartJSX from './jsx/ChartJSX';
+
+export {BarChart, DonutChart, GaugeChart, LineChart, Chart, PieChart,
 	ScatterChart, SplineChart, StepChart};
-export default MetalChart;
+export default Chart;
