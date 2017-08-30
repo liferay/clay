@@ -1,11 +1,11 @@
 'use strict';
 
-import MetalChart from './MetalChart';
+import Chart from './Chart';
 
 /**
  * Step Chart component.
  */
-class StepChart extends MetalChart {
+class StepChart extends Chart {
 }
 
 export {StepChart};

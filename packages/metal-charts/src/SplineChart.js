@@ -1,11 +1,11 @@
 'use strict';
 
-import MetalChart from './MetalChart';
+import Chart from './Chart';
 
 /**
  * Spline Chart component.
  */
-class SplineChart extends MetalChart {
+class SplineChart extends Chart {
 }
 
 export {SplineChart};
