@@ -28,11 +28,13 @@ class MetalChart extends Component {
 	 * @protected
 	 */
 	constructAxisConfig_() {
+		const state = this.getStateObj_();
+
 		return {
-			rotated: this.axisRotated,
-			x: this.axisX,
-			y2: this.axisY2,
-			y: this.axisY
+			rotated: state.axisRotated,
+			x: state.axisX,
+			y2: state.axisY2,
+			y: state.axisY
 		}
 	}
 
@@ -42,6 +44,8 @@ class MetalChart extends Component {
 	 * @protected
 	 */
 	constructChartConfig_() {
+		const state = this.getStateObj_();
+
 		const axis = this.constructAxisConfig_();
 		const data = this.constructDataConfig_();
 		const zoom = this.constructZoomConfig_();
@@ -49,23 +53,23 @@ class MetalChart extends Component {
 		const config = {
 			area,
 			axis,
-			bindto: this.element,
-			color: this.color,
+			bindto: state.element,
+			color: state.color,
 			data,
-			line: this.line,
-			padding: this.padding,
-			pie: this.pie,
-			point: this.point,
-			regions: this.regions,
-			resize: this.resizeAuto,
-			size: this.size,
-			spline: this.splineInterpolationType,
-			subchart: this.subchart,
-			svg: this.svgClassname,
-			title: this.title,
-			tooltip: this.tooltip,
-			transition: this.transitionDuration,
-			zoom: this.zoom
+			line: state.line,
+			padding: state.padding,
+			pie: state.pie,
+			point: state.point,
+			regions: state.regions,
+			resize: state.resizeAuto,
+			size: state.size,
+			spline: state.splineInterpolationType,
+			subchart: state.subchart,
+			svg: state.svgClassname,
+			title: state.title,
+			tooltip: state.tooltip,
+			transition: state.transitionDuration,
+			zoom: state.zoom
 		};
 
 		/**
@@ -114,26 +118,28 @@ class MetalChart extends Component {
 	 * @protected
 	 */
 	constructDataConfig_() {
+		const state = this.getStateObj_();
+
 		const config = {
-			axes: this.axes,
-			classes: this.classes,
-			color: this.colorFormatter,
-			colors: this.colors,
-			columns: this.columns,
-			empty: this.emptyLabelText,
-			groups: this.groups,
-			hide: this.hide,
-			json: this.json,
-			keys: this.keys,
-			labels: this.labels,
-			mimeType: this.mimeType,
-			names: this.names,
-			order: this.order,
-			rows: this.rows,
-			selection: this.selection,
-			type: this.type,
-			types: this.types,
-			url: this.url
+			axes: state.axes,
+			classes: state.classes,
+			color: state.colorFormatter,
+			colors: state.colors,
+			columns: state.columns,
+			empty: state.emptyLabelText,
+			groups: state.groups,
+			hide: state.hide,
+			json: state.json,
+			keys: state.keys,
+			labels: state.labels,
+			mimeType: state.mimeType,
+			names: state.names,
+			order: state.order,
+			rows: state.rows,
+			selection: state.selection,
+			type: state.type,
+			types: state.types,
+			url: state.url
 		}
 
 		/**
@@ -176,7 +182,11 @@ class MetalChart extends Component {
 	 * @protected
 	 */
 	constructZoomConfig_() {
-		const {config = {}} = this;
+		const state = this.getStateObj_();
+
+		const zoom = state.zoom;
+
+		const config = zoom || {};
 
 		/**
 		 * Zoom event.
@@ -198,6 +208,15 @@ class MetalChart extends Component {
 		config.onzoomstart = this.emitChartEvent_.bind(this, 'zoomStart');
 
 		return config;
+	}
+
+	/**
+	 * Retrieves state object, used to allow JSX implementation.
+	 * @return {Object}
+	 * @protected
+	 */
+	getStateObj_() {
+		return this;
 	}
 
 	/**
