@@ -8,5 +8,9 @@ import Chart from './Chart';
 class ScatterChart extends Chart {
 }
 
+ScatterChart.STATE = {
+	type: Chart.STATE.type.value('scatter')
+};
+
 export {ScatterChart};
 export default ScatterChart;

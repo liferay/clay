@@ -8,5 +8,9 @@ import Chart from './Chart';
 class SplineChart extends Chart {
 }
 
+SplineChart.STATE = {
+	type: Chart.STATE.type.value('spline')
+};
+
 export {SplineChart};
 export default SplineChart;

@@ -8,5 +8,9 @@ import Chart from './Chart';
 class DonutChart extends Chart {
 }
 
+DonutChart.STATE = {
+	type: Chart.STATE.type.value('donut')
+};
+
 export {DonutChart};
 export default DonutChart;

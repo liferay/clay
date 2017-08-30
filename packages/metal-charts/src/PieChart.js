@@ -8,5 +8,9 @@ import Chart from './Chart';
 class PieChart extends Chart {
 }
 
+PieChart.STATE = {
+	type: Chart.STATE.type.value('pie')
+};
+
 export {PieChart};
 export default PieChart;

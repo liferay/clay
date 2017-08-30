@@ -8,5 +8,9 @@ import Chart from './Chart';
 class BarChart extends Chart {
 }
 
+BarChart.STATE = {
+	type: Chart.STATE.type.value('bar')
+};
+
 export {BarChart};
 export default BarChart;
