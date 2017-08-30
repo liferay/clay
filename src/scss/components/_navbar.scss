@@ -176,7 +176,7 @@
 			margin-left: auto;
 
 			@include media-breakpoint-down($scaling-breakpoint-down) {
-				@if ($enable-scaling-components) {
+				@if ($enable-scaling-navbar) {
 					height: $navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width;
 				}
 				@else {
@@ -278,12 +278,9 @@
 
 	border-style: solid;
 	border-width: $navbar-border-width;
+	font-size: $navbar-font-size;
 
-	@if not ($navbar-font-size == $font-size-base) {
-		font-size: $navbar-font-size;
-	}
-
-	@include scale-component {
+	@include scale-component($enable-scaling-navbar) {
 		font-size: $navbar-font-size-mobile;
 	}
 
@@ -334,7 +331,7 @@
 	margin-right: $navbar-toggler-margin-x;
 	margin-top: $navbar-toggler-margin-y;
 
-	@include scale-component {
+	@include scale-component($enable-scaling-navbar) {
 		margin-left: $navbar-toggler-margin-x-mobile;
 		margin-right: $navbar-toggler-margin-x-mobile;
 	}
@@ -356,7 +353,7 @@
 	position: relative;
 	z-index: 1;
 
-	@include scale-component {
+	@include scale-component($enable-scaling-navbar) {
 		font-size: $navbar-toggler-link-font-size-mobile;
 		padding-bottom: $navbar-toggler-link-padding-y-mobile;
 		padding-left: $navbar-toggler-link-padding-x-mobile;
@@ -379,7 +376,7 @@
 		right: $navbar-toggler-link-padding-x;
 		width: auto;
 
-		@include scale-component {
+		@include scale-component($enable-scaling-navbar) {
 			left: $navbar-toggler-link-padding-x-mobile;
 			right: $navbar-toggler-link-padding-x-mobile;
 		}
@@ -402,7 +399,7 @@
 	padding-left: $navbar-brand-padding-x;
 	padding-right: $navbar-brand-padding-x;
 
-	@include scale-component {
+	@include scale-component($enable-scaling-navbar) {
 		margin-right: $navbar-brand-margin-right-mobile;
 		padding-bottom: $navbar-brand-padding-y-mobile;
 		padding-left: $navbar-brand-padding-x-mobile;
@@ -426,7 +423,7 @@
 		padding-right: $navbar-link-padding-x;
 	}
 
-	@include scale-component {
+	@include scale-component($enable-scaling-navbar) {
 		padding-left: $navbar-link-padding-x-mobile;
 		padding-right: $navbar-link-padding-x-mobile;
 	}
@@ -458,7 +455,7 @@
 	margin-left: $navbar-link-padding-x;
 	margin-right: $navbar-link-padding-x;
 
-	@include scale-component {
+	@include scale-component($enable-scaling-navbar) {
 		margin-left: $navbar-link-padding-x-mobile;
 		margin-right: $navbar-link-padding-x-mobile;
 	}
@@ -469,7 +466,7 @@
 	padding-left: $navbar-link-padding-x;
 	padding-right: $navbar-link-padding-x;
 
-	@include scale-component {
+	@include scale-component($enable-scaling-navbar) {
 		padding-left: $navbar-link-padding-x-mobile;
 		padding-right: $navbar-link-padding-x-mobile;
 	}
@@ -522,7 +519,7 @@
 	.navbar-text {
 		padding: $navbar-link-padding-y $navbar-link-padding-x;
 
-		@include scale-component {
+		@include scale-component($enable-scaling-navbar) {
 			padding: $navbar-link-padding-y-mobile $navbar-link-padding-x-mobile;
 		}
 	}
@@ -712,7 +709,7 @@
 			}
 
 			.navbar-nav .nav-link {
-				@include scale-component {
+				@include scale-component($enable-scaling-navbar) {
 					@if not ($navbar-link-padding-y-mobile == $nav-link-padding-y) {
 						padding-bottom: $navbar-link-padding-y-mobile;
 						padding-top: $navbar-link-padding-y-mobile;
