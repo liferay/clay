@@ -1,5 +1,5 @@
-@mixin scale-component() {
-	@if ($enable-scaling-components) {
+@mixin scale-component($scale: $enable-scaling-components) {
+	@if ($scale) {
 		@include media-breakpoint-down($scaling-breakpoint-down) {
 			@content
 		}
