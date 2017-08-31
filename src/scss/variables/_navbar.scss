@@ -1,64 +1,29 @@
 $enable-scaling-navbar: $enable-scaling-components !default;
 
-$navbar-height: 3.5rem !default; // 56px
-$navbar-height-mobile: $navbar-height !default; // 56px
-
-$navbar-border-bottom-width: 0 !default;
-$navbar-border-left-width: 0 !default;
-$navbar-border-right-width: 0 !default;
-$navbar-border-top-width: 0 !default;
-$navbar-border-width: $navbar-border-top-width $navbar-border-right-width $navbar-border-bottom-width $navbar-border-left-width !default;
+$navbar-size: () !default;
+$navbar-size: map-merge((
+	scaling-navbar: $enable-scaling-navbar,
+	height: 3.5rem // 48px
+), $navbar-size);
 
 $navbar-border-radius: null !default;
 
-$navbar-font-size: $font-size-base !default;
-$navbar-font-size-mobile: $font-size-base-mobile !default;
-
-$zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
-
-$navbar-link-padding-x: 0.5rem !default;
-$navbar-link-padding-x-mobile: $navbar-link-padding-x !default;
-$navbar-link-padding-y: ($navbar-height - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-font-size * $line-height-base)) / 2 !default;
-$navbar-link-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-font-size-mobile * $line-height-base)) / 2 !default;
-
 $navbar-active-highlight: transparent !default;
-$navbar-active-border-bottom-width: 0.125rem !default; // 2px
-
-$navbar-brand-color: null !default;
-$navbar-brand-hover-color: null !default;
-$navbar-brand-font-size-mobile: $font-size-lg-mobile !default;
-$navbar-brand-margin-right: 0.5rem !default;
-$navbar-brand-margin-right-mobile: 0 !default;
-$navbar-brand-padding-x: $navbar-link-padding-x !default;
-$navbar-brand-padding-x-mobile: $navbar-link-padding-x-mobile !default;
-$navbar-brand-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-brand-font-size-mobile * $line-height-base)) / 2 !default;
-
-$navbar-nav-item-dropdown-margin-top: null !default;
 
 $navbar-text-truncate-spacer-right: 25px !default;
 $navbar-text-truncate-max-width: 140px !default;
 
+$zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
 $zindex-navbar-overlay: $zindex-dropdown - 1 !default; // 999
 
-// Navbar Toggler
-
-$navbar-toggler-height: null !default;
-$navbar-toggler-margin-x: null !default;
-$navbar-toggler-margin-x-mobile: null !default;
-$navbar-toggler-margin-y: null !default;
-
-// Navbar Toggler Link
-
-$navbar-toggler-link-font-size: $font-size-base !default; // 16px
-$navbar-toggler-link-font-size-mobile: $font-size-base-mobile !default;
-$navbar-toggler-link-height: auto !default;
-$navbar-toggler-link-line-height: $line-height-base !default; // 1.5
-$navbar-toggler-link-padding-x: 0.5rem !default;
-$navbar-toggler-link-padding-x-mobile: null !default;
-$navbar-toggler-link-padding-y: ($navbar-height - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-toggler-link-font-size * $navbar-toggler-link-line-height)) / 2 !default;
-$navbar-toggler-link-padding-y-mobile: ($navbar-height-mobile - $navbar-border-bottom-width - $navbar-border-top-width - ($navbar-padding-y * 2) - ($navbar-toggler-link-font-size-mobile * $navbar-toggler-link-line-height)) / 2 !default;
+// Navbar Collapse
 
 $navbar-collapse-absolute-box-shadow: null !default;
+
+// Navbar Brand
+
+$navbar-brand-color: null !default;
+$navbar-brand-hover-color: null !default;
 
 // Navbar Light
 
