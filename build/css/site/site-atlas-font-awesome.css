@@ -8388,36 +8388,6 @@ fieldset[disabled] .btn {
   margin: auto;
 }
 
-.btn-action {
-  display: inline-block;
-  position: relative;
-  z-index: 950;
-}
-
-.btn-action-bottom-left {
-  bottom: 20px;
-  left: 20px;
-  position: fixed;
-}
-
-.btn-action-bottom-right {
-  bottom: 20px;
-  position: fixed;
-  right: 20px;
-}
-
-.btn-action-top-left {
-  left: 20px;
-  position: fixed;
-  top: 20px;
-}
-
-.btn-action-top-right {
-  position: fixed;
-  right: 20px;
-  top: 20px;
-}
-
 .btn-primary {
   background-color: #1865FB;
   border-color: #1865FB;
