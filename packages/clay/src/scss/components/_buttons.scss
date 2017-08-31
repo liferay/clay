@@ -121,42 +121,6 @@ fieldset[disabled] .btn {
 	}
 }
 
-// Action Buttons
-
-.btn-action {
-	display: inline-block;
-	position: relative;
-	z-index: $zindex-btn-action;
-
-	.btn {
-		border-radius: $btn-action-border-radius;
-	}
-}
-
-.btn-action-bottom-left {
-	bottom: $btn-action-fixed-spacer-y;
-	left: $btn-action-fixed-spacer-x;
-	position: fixed;
-}
-
-.btn-action-bottom-right {
-	bottom: $btn-action-fixed-spacer-y;
-	position: fixed;
-	right: $btn-action-fixed-spacer-x;
-}
-
-.btn-action-top-left {
-	left: $btn-action-fixed-spacer-x;
-	position: fixed;
-	top: $btn-action-fixed-spacer-y;
-}
-
-.btn-action-top-right {
-	position: fixed;
-	right: $btn-action-fixed-spacer-x;
-	top: $btn-action-fixed-spacer-y;
-}
-
 // Button Variants
 
 @each $color, $value in $btn-palette {
