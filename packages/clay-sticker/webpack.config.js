@@ -26,7 +26,7 @@ module.exports = {
 	},
 	plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
 	resolve: {
-		mainFields: ['esnext:main', 'main'],
+		mainFields: ['esnext:main', 'main', 'jsnext:main'],
 		alias: {
 			'incremental-dom': path.resolve('./node_modules/incremental-dom'),
 			'metal-incremental-dom': path.resolve(
