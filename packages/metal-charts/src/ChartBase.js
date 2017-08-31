@@ -7,8 +7,8 @@ import {bb, d3} from 'billboard.js';
 /**
  * Base Chart component.
  */
-class ChartBase extends Component {
-	attached() {
+const ChartBase = {
+	attached: function() {
 		const config = this.constructChartConfig_();
 
 		this.bbChart = bb.generate(config);
@@ -17,14 +17,14 @@ class ChartBase extends Component {
 		this.on('regionsChanged', this.handleRegionsChanged_.bind(this));
 		this.on('sizeChanged', this.handleSizeChanged_.bind(this));
 		this.on('typeChanged', this.handleTypeChanged_.bind(this));
-	}
+	},
 
 	/**
 	 * Constructs `axis` billboard config property.
 	 * @return {Object}
 	 * @protected
 	 */
-	constructAxisConfig_() {
+	constructAxisConfig_: function() {
 		const state = this.getStateObj_();
 
 		return {
@@ -33,14 +33,14 @@ class ChartBase extends Component {
 			y2: state.axisY2,
 			y: state.axisY
 		}
-	}
+	},
 
 	/**
 	 * Constructs config object for `bb.generate` method.
 	 * @return {Object}
 	 * @protected
 	 */
-	constructChartConfig_() {
+	constructChartConfig_: function() {
 		const state = this.getStateObj_();
 
 		const axis = this.constructAxisConfig_();
@@ -48,7 +48,7 @@ class ChartBase extends Component {
 		const zoom = this.constructZoomConfig_();
 
 		const config = {
-			area,
+			area: state.area,
 			axis,
 			bindto: this.element,
 			color: state.color,
@@ -107,14 +107,14 @@ class ChartBase extends Component {
 		config.onresized = this.emitChartEvent_.bind(this, 'chartResized');
 
 		return config;
-	}
+	},
 
 	/**
 	 * Constructs `data` billboard config property.
 	 * @return {Object}
 	 * @protected
 	 */
-	constructDataConfig_() {
+	constructDataConfig_: function() {
 		const state = this.getStateObj_();
 
 		const config = {
@@ -171,14 +171,14 @@ class ChartBase extends Component {
 		config.onunselected = this.emitChartEvent_.bind(this, 'dataUnselected');
 
 		return config;
-	}
+	},
 
 	/**
 	 * Constructs `zoom` billboard config property.
 	 * @return {Object}
 	 * @protected
 	 */
-	constructZoomConfig_() {
+	constructZoomConfig_: function() {
 		const state = this.getStateObj_();
 
 		const zoom = state.zoom;
@@ -205,30 +205,30 @@ class ChartBase extends Component {
 		config.onzoomstart = this.emitChartEvent_.bind(this, 'zoomStart');
 
 		return config;
-	}
+	},
 
 	/**
 	 * Retrieves state object, used to allow JSX implementation.
 	 * @return {Object}
 	 * @protected
 	 */
-	getStateObj_() {
+	getStateObj_: function() {
 		return this;
-	}
+	},
 
 	/**
 	 * Emits event based on arguments array.
 	 * @protected
 	 */
-	emitChartEvent_() {
+	emitChartEvent_: function() {
 		this.emit.apply(this, arguments);
-	}
+	},
 
 	/**
 	 * Maps `columns` state to chart via `bb.load` method.
 	 * @protected
 	 */
-	handleColumnsChanged_({newVal, prevVal}) {
+	handleColumnsChanged_: function({newVal, prevVal}) {
 		const data = {
 			columns: newVal
 		};
@@ -240,38 +240,38 @@ class ChartBase extends Component {
 		}
 
 		this.bbChart.load(data);
-	}
+	},
 
 	/**
 	 * Maps `regions` state to chart via `bb.regions` method.
 	 * @protected
 	 */
-	handleRegionsChanged_({newVal}) {
+	handleRegionsChanged_: function({newVal}) {
 		this.bbChart.regions(newVal);
-	}
+	},
 
 	/**
 	 * Maps `size` state to chart via `bb.resize` method.
 	 * @protected
 	 */
-	handleSizeChanged_({newVal}) {
+	handleSizeChanged_: function({newVal}) {
 		this.bbChart.resize(newVal);
-	}
+	},
 
 	/**
 	 * Maps `type` state to chart via `bb.transform` method.
 	 * @protected
 	 */
-	handleTypeChanged_({newVal}) {
+	handleTypeChanged_: function({newVal}) {
 		this.bbChart.transform(newVal);
-	}
+	},
 
 	/**
 	 * Determines which ids should be passed to the unload property.
 	 * @static
 	 * @type {!Object}
 	 */
-	resolveRemovedColumns_(newColumns, prevColumns) {
+	resolveRemovedColumns_: function(newColumns, prevColumns) {
 		const ids = newColumns.map(column => column[0]);
 
 		return prevColumns.reduce((removedIds, column) => {
