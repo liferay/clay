@@ -330,6 +330,7 @@
 // Navbar Display Utilities
 
 .navbar-d-breakpoint-block,
+.navbar-d-breakpoint-inline-block,
 .navbar-d-breakpoint-flex {
 	display: none !important;
 }
@@ -362,6 +363,10 @@
 	@include media-breakpoint-up(md) {
 		.navbar-d-breakpoint-block {
 			display: block !important;
+		}
+
+		.navbar-d-breakpoint-inline-block {
+			display: inline-block !important;
 		}
 
 		.navbar-d-breakpoint-flex {
