@@ -9,9 +9,8 @@ import PieChart from './PieChart';
 import ScatterChart from './ScatterChart';
 import SplineChart from './SplineChart';
 import StepChart from './StepChart';
+import {bb, d3} from './ChartBase';
 
-import ChartJSX from './jsx/ChartJSX';
-
-export {BarChart, DonutChart, GaugeChart, LineChart, Chart, ChartJSX, PieChart,
+export {BarChart, bb, Chart, d3, DonutChart, GaugeChart, LineChart, PieChart,
 	ScatterChart, SplineChart, StepChart};
 export default Chart;
