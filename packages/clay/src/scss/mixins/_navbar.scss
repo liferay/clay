@@ -185,6 +185,7 @@
 	}
 
 	.navbar-nav .nav-item > .form-check {
+		margin: 0;
 		padding-left: $link-padding-x;
 		padding-right: $link-padding-x;
 
@@ -193,6 +194,10 @@
 			padding-right: $link-padding-x-mobile;
 		}
 	}
+
+	// Navbar Item Spacing
+	// Override BS4 `.navbar-expand .navbar-nav .nav-link` should have padding if
+	// not inside .navbar-collapse
 
 	.navbar-nav {
 		.nav-item {
