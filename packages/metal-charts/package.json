@@ -17,8 +17,7 @@
   ],
   "scripts": {
     "build": "npm run soy && webpack",
-    "compile": "babel --presets metal -d lib/ src/",
-    "postinstall": "npm run build",
+    "compile": "babel -d lib/ src/",
     "prepublish": "npm run soy && npm run compile",
     "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy",
     "start": "http-server . -p 4000",
@@ -29,13 +28,15 @@
   ],
   "babel": {
     "presets": [
-      "metal"
+      "metal-jsx",
+      "es2015"
     ]
   },
   "dependencies": {
     "billboard.js": "^1.0.1",
     "bootstrap": "^3.3.6",
     "d3": "^4.10.0",
+    "metal-jsx": "^2.13.2",
     "metal-soy": "^2.0.0"
   },
   "devDependencies": {
@@ -44,12 +45,13 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-node-env-inline": "^0.1.1",
     "babel-preset-metal": "^4.0.0",
+    "babel-preset-metal-jsx": "^0.1.1",
     "css-loader": "^0.28.4",
     "http-server": "^0.9.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
-    "metal-lerna-jest-resolver": "^1.0.0",
     "metal-jest-serializer": "^1.0.1",
+    "metal-lerna-jest-resolver": "^1.0.0",
     "metal-tools-soy": "^4.2.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
