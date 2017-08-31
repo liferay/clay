@@ -1,27 +1,20 @@
 'use strict';
 
-import {ComponentRenderer} from 'metal-component';
+import {JSXComponent} from 'metal-jsx';
 
 import ChartBase from '../ChartBase';
 
 /**
- * Renderer for charts rendered from JSX components.
+ * Metal Chart component for use with JSX.
  */
-class ChartRenderer extends ComponentRenderer.constructor {
-	render(component) {
-		component.element = document.createElement('div');
-		component.element.className = 'metal-chart';
-		component.informRendered();
+class ChartJSX extends JSXComponent {
+	render() {
+		return <div class="metal-chart"></div>;
 	}
 }
 
-/**
- * Metal Chart component for use with JSX.
- */
-class ChartJSX extends ChartBase {
-}
-
-ChartJSX.RENDERER = new ChartRenderer();
+Object.assign(ChartJSX.prototype, ChartBase);
+ChartJSX.PROPS = ChartBase.STATE;
 
 export {ChartJSX};
 export default ChartJSX;
