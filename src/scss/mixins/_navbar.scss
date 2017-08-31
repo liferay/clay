@@ -20,3 +20,316 @@
 		display: flex;
 	}
 }
+
+// Sizes Navbar Desktop and Mobile based on height, font-size, and padding
+// @param $map - Sass map that contain Navbar properties to modify
+
+@mixin navbar-size($map) {
+	$scaling-navbar: setter(map-get($map, scaling-navbar), false);
+	$height: setter(map-get($map, height), 3.5rem);
+	$border-bottom-width: setter(map-get($map, border-bottom-width), 0);
+	$border-left-width: setter(map-get($map, border-left-width), 0);
+	$border-right-width: setter(map-get($map, border-right-width), 0);
+	$border-top-width: setter(map-get($map, border-top-width), 0);
+	$font-size: setter(map-get($map, font-size), $font-size-base);
+	$padding-x: setter(map-get($map, padding-x), $navbar-padding-x);
+	$padding-y: setter(map-get($map, padding-y), $navbar-padding-y);
+	$link-padding-x: setter(map-get($map, link-padding-x), 0.5rem);
+	$link-padding-y: ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size * $line-height-base)) / 2;
+	$toggler-height: map-get($map, toggler-height);
+	$toggler-margin-x: map-get($map, toggler-margin-x);
+	$toggler-margin-y: map-get($map, toggler-margin-y);
+	$toggler-link-font-size: setter(map-get($map, toggler-link-font-size), $font-size-base);
+	$toggler-link-height: setter(map-get($map, toggler-link-height), auto);
+	$toggler-link-line-height: setter(map-get($map, toggler-link-line-height), $line-height-base);
+	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), 0.5rem);
+	$toggler-link-padding-y: ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
+	$brand-margin-right: setter(map-get($map, brand-margin-right), 0.5rem);
+	$brand-padding-x: setter(map-get($map, brand-padding-x), 0.5rem);
+	$active-border-bottom-width: setter(map-get($map, active-border-bottom-width), 0.125rem);
+	$nav-item-dropdown-margin-top: map-get($map, nav-item-dropdown-margin-top);
+
+	$height-mobile: setter(map-get($map, height-mobile), 3.5rem);
+	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size-base-mobile);
+	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), 0.5rem);
+	$link-padding-y-mobile: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2;
+	$brand-font-size-mobile: setter(map-get($map, brand-font-size-mobile), $font-size-lg-mobile);
+	$brand-margin-right-mobile: setter(map-get($map, brand-margin-right-mobile), 0);
+	$brand-padding-x-mobile: setter(map-get($map, brand-padding-x-mobile), 0.5rem);
+	$brand-padding-y-mobile: (($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($brand-font-size-mobile * $line-height-base)) / 2);
+	$toggler-margin-x-mobile: map-get($map, toggler-margin-x-mobile);
+	$toggler-link-font-size-mobile: setter(map-get($map, toggler-link-font-size-mobile), $font-size-base-mobile);
+	$toggler-link-padding-x-mobile: map-get($map, toggler-link-padding-x-mobile);
+	$toggler-link-padding-y-mobile: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size-mobile * $toggler-link-line-height)) / 2;
+
+	border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
+	font-size: $font-size;
+	padding: $padding-y $padding-x;
+
+	@include scale-component($scaling-navbar) {
+		font-size: $font-size-mobile;
+	}
+
+	&.collapse-basic-search {
+		.basic-search {
+			@include media-breakpoint-down($scaling-breakpoint-down) {
+				border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
+				left: -$border-left-width;
+				right: -$border-right-width;
+				top: -$border-top-width;
+			}
+		}
+	}
+
+	&.collapse-basic-search {
+		&.navbar .basic-search {
+			@include media-breakpoint-down($scaling-breakpoint-down) {
+				padding-left: $link-padding-x;
+				padding-right: $link-padding-x;
+			}
+		}
+
+		.basic-search {
+			.input-group {
+				@include media-breakpoint-down($scaling-breakpoint-down) {
+					@if ($scaling-navbar) {
+						height: $height-mobile - $border-bottom-width - $border-top-width;
+					}
+					@else {
+						height: $height - $border-bottom-width - $border-top-width;
+					}
+				}
+			}
+		}
+	}
+
+	.navbar-toggler {
+		height: $toggler-height;
+		margin-bottom: $toggler-margin-y;
+		margin-left: $toggler-margin-x;
+		margin-right: $toggler-margin-x;
+		margin-top: $toggler-margin-y;
+
+		@include scale-component($scaling-navbar) {
+			margin-left: $toggler-margin-x-mobile;
+			margin-right: $toggler-margin-x-mobile;
+		}
+	}
+
+	.navbar-toggler-link {
+		height: $toggler-link-height;
+		font-size: $toggler-link-font-size;
+		line-height: $toggler-link-line-height;
+		padding-bottom: $toggler-link-padding-y;
+		padding-left: $toggler-link-padding-x;
+		padding-right: $toggler-link-padding-x;
+		padding-top: $toggler-link-padding-y;
+
+		@include scale-component($scaling-navbar) {
+			font-size: $toggler-link-font-size-mobile;
+			padding-bottom: $toggler-link-padding-y-mobile;
+			padding-left: $toggler-link-padding-x-mobile;
+			padding-right: $toggler-link-padding-x-mobile;
+			padding-top: $toggler-link-padding-y-mobile;
+		}
+	}
+
+	.navbar-brand {
+		margin-right: $brand-margin-right;
+		padding: 0 $brand-padding-x;
+
+		@include scale-component($scaling-navbar) {
+			font-size: $brand-font-size-mobile;
+			margin-right: $brand-margin-right-mobile;
+			padding-bottom: $brand-padding-y-mobile;
+			padding-left: $brand-padding-x-mobile;
+			padding-right: $brand-padding-x-mobile;
+			padding-top: $brand-padding-y-mobile;
+		}
+	}
+
+	.navbar-form {
+		@if not ($link-padding-x == 0.5rem) {
+			padding-left: $link-padding-x;
+			padding-right: $link-padding-x;
+		}
+
+		@include scale-component($scaling-navbar) {
+			padding-left: $link-padding-x-mobile;
+			padding-right: $link-padding-x-mobile;
+		}
+
+		.btn,
+		.form-control {
+			@if (($height - $border-bottom-width - $border-top-width - ($padding-y * 2)) < ($input-height-inner + $border-bottom-width + $border-top-width)) {
+				height: auto;
+				padding-bottom: $link-padding-y;
+				padding-top: $link-padding-y;
+			}
+		}
+	}
+
+	.navbar-nav .nav-btn {
+		margin-left: $link-padding-x;
+		margin-right: $link-padding-x;
+
+		@if (($height - $border-bottom-width - $border-top-width - ($padding-y * 2)) < ($input-height-inner + $border-bottom-width + $border-top-width)) {
+			padding-bottom: $link-padding-y;
+			padding-top: $link-padding-y;
+		}
+
+		@include scale-component($scaling-navbar) {
+			margin-left: $link-padding-x-mobile;
+			margin-right: $link-padding-x-mobile;
+		}
+	}
+
+	.navbar-nav .nav-item > .form-check {
+		padding-left: $link-padding-x;
+		padding-right: $link-padding-x;
+
+		@include scale-component($scaling-navbar) {
+			padding-left: $link-padding-x-mobile;
+			padding-right: $link-padding-x-mobile;
+		}
+	}
+
+	.navbar-nav {
+		.nav-item {
+			.dropdown-menu {
+				margin-top: $nav-item-dropdown-margin-top;
+			}
+		}
+
+		.navbar-text {
+			padding: $link-padding-y $link-padding-x;
+
+			@include scale-component($scaling-navbar) {
+				padding: $link-padding-y-mobile $link-padding-x-mobile;
+			}
+		}
+	}
+
+	// Navbar Expand
+
+	&.navbar-expand {
+		@each $breakpoint in map-keys($grid-breakpoints) {
+			$next: breakpoint-next($breakpoint, $grid-breakpoints);
+			$infix: breakpoint-infix($next, $grid-breakpoints);
+
+			&#{$infix} { // .navbar-expand, sm, md, lg, xl
+				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
+					@include media-breakpoint-down($breakpoint) {
+						&.navbar-collapse-absolute {
+							.navbar-collapse {
+								border-width: 0 $border-right-width $border-bottom-width $border-left-width;
+								left: -$border-left-width;
+
+								@if ($border-bottom-width > 0) {
+									margin-top: $border-bottom-width;
+								}
+
+								@if not ($padding-x == 0) {
+									padding-left: $padding-x;
+									padding-right: $padding-x;
+								}
+
+								right: -$border-right-width;
+							}
+						}
+
+						.navbar-nav .nav-link {
+							padding-bottom: $nav-link-padding-y;
+							padding-left: $link-padding-x;
+							padding-right: $link-padding-x;
+							padding-top: $nav-link-padding-y;
+						}
+					}
+				}
+
+				@include media-breakpoint-up($next) {
+					.navbar-form {
+						padding-left: $link-padding-x;
+						padding-right: $link-padding-x;
+					}
+
+					.navbar-nav .nav-link {
+						@if not ($link-padding-y == $nav-link-padding-y) {
+							padding-bottom: $link-padding-y;
+							padding-top: $link-padding-y;
+						}
+
+						@if not ($link-padding-x == 0.5rem) {
+							padding-left: $link-padding-x;
+							padding-right: $link-padding-x;
+						}
+
+						@include scale-component($scaling-navbar) {
+							@if not ($link-padding-y-mobile == $nav-link-padding-y) {
+								padding-bottom: $link-padding-y-mobile;
+								padding-top: $link-padding-y-mobile;
+							}
+
+							@if not ($link-padding-x-mobile == 0.5rem) {
+								padding-left: $link-padding-x-mobile;
+								padding-right: $link-padding-x-mobile;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.navbar-highlight.collapse-basic-search-transparent {
+		.basic-search {
+			&:after {
+				bottom: -$border-bottom-width - $padding-y;
+				height: 0;
+				left: 0;
+				right: 0;
+			}
+
+			&.focus:after {
+				height: $active-border-bottom-width;
+				margin-top: -$active-border-bottom-width;
+			}
+		}
+	}
+
+	&.navbar-highlight {
+		.navbar-toggler-link {
+			&:after {
+				bottom: -$border-bottom-width - $padding-y;
+				height: $active-border-bottom-width;
+				left: $toggler-link-padding-x;
+				right: $toggler-link-padding-x;
+
+				@include scale-component($scaling-navbar) {
+					left: $toggler-link-padding-x-mobile;
+					right: $toggler-link-padding-x-mobile;
+				}
+			}
+		}
+	}
+
+	&.navbar-highlight.navbar-expand {
+		@each $breakpoint in map-keys($grid-breakpoints) {
+			$next: breakpoint-next($breakpoint, $grid-breakpoints);
+			$infix: breakpoint-infix($next, $grid-breakpoints);
+
+			&#{$infix} { // .navbar-expand, sm, md, lg, xl
+				@include media-breakpoint-up($next) {
+					.navbar-nav .nav-link {
+						&.active:after {
+							bottom: -$border-bottom-width - $padding-y;
+							height: $active-border-bottom-width;
+							left: $link-padding-x;
+							right: $link-padding-x;
+						}
+					}
+				}
+			}
+		}
+	}
+}
