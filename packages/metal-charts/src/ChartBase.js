@@ -284,13 +284,11 @@ const ChartBase = {
 	 * Maps `columns` state to chart via `bb.load` method.
 	 * @protected
 	 */
-	handleColumnsChanged_: function({newVal, prevVal}) {
-		newVal = this.createColumnsArray_(newVal);
-		prevVal = this.createColumnsArray_(prevVal);
+	handleColumnsChanged_: function({prevVal}) {
+		const data = this.constructDataConfig_();
 
-		const data = {
-			columns: newVal
-		};
+		const newVal = data.columns;
+		prevVal = this.createColumnsArray_(prevVal);
 
 		const removedIds = this.resolveRemovedColumns_(newVal, prevVal);
 
