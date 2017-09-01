@@ -6,6 +6,7 @@ import Chart from './Chart';
 
 /**
  * Bar Chart component.
+ * @augments Chart
  */
 class BarChart extends Chart {
 }

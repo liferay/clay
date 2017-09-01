@@ -18,6 +18,9 @@ const PROP_NAME_MAP = {
  * Base Chart component.
  */
 const ChartBase = {
+	/**
+	 * @inheritDoc
+	 */
 	attached: function() {
 		const config = this.constructChartConfig_();
 

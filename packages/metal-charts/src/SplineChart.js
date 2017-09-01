@@ -6,6 +6,7 @@ import Chart from './Chart';
 
 /**
  * Spline Chart component.
+ * @augments Chart
  */
 class SplineChart extends Chart {
 }

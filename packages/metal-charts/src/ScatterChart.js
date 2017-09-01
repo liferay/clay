@@ -6,6 +6,7 @@ import Chart from './Chart';
 
 /**
  * Scatter Chart component.
+ * @augments Chart
  */
 class ScatterChart extends Chart {
 }

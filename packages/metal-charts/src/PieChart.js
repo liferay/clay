@@ -6,6 +6,7 @@ import Chart from './Chart';
 
 /**
  * Pie Chart component.
+ * @augments Chart
  */
 class PieChart extends Chart {
 }

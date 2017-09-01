@@ -6,6 +6,7 @@ import Chart from './Chart';
 
 /**
  * Line Chart component.
+ * @augments Chart
  */
 class LineChart extends Chart {
 }

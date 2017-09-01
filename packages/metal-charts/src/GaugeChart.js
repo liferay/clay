@@ -6,6 +6,7 @@ import Chart from './Chart';
 
 /**
  * Guage Chart component.
+ * @augments Chart
  */
 class GaugeChart extends Chart {
 }

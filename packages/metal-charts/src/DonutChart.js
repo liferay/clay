@@ -6,6 +6,7 @@ import Chart from './Chart';
 
 /**
  * Donut Chart component.
+ * @augments Chart
  */
 class DonutChart extends Chart {
 }

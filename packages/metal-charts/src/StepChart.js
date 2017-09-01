@@ -6,6 +6,7 @@ import Chart from './Chart';
 
 /**
  * Step Chart component.
+ * @augments Chart
  */
 class StepChart extends Chart {
 }
