@@ -4,6 +4,16 @@ import Component from 'metal-component';
 import {Config} from 'metal-state';
 import {bb, d3} from 'billboard.js';
 
+const PROP_NAME_MAP = {
+	axis: 'axes',
+	class: 'classes',
+	color: 'colors',
+	name: 'names',
+	regions: 'regions',
+	type: 'types',
+	xs: 'xs'
+};
+
 /**
  * Base Chart component.
  */
@@ -110,6 +120,39 @@ const ChartBase = {
 	},
 
 	/**
+	 * Constructs various `data` billboard properties from columns state.
+	 * @return {Object}
+	 * @protected
+	 */
+	constructColumnsConfig_: function() {
+		const {columns} = this.getStateObj_();
+
+		const config = {
+			columns: this.createColumnsArray_(columns)
+		};
+
+		for (let i = 0; i < columns.length; i++) {
+			const column = columns[i];
+
+			const {id} = column;
+
+			const keys = Object.keys(column);
+
+			for (let j = 0; j < keys.length; j++) {
+				const key = keys[j];
+
+				if (key !== 'data' && key !== 'id') {
+					config[PROP_NAME_MAP[key]] = config[PROP_NAME_MAP[key]] || {};
+
+					config[PROP_NAME_MAP[key]][id] = column[key];
+				}
+			}
+		}
+
+		return config;
+	},
+
+	/**
 	 * Constructs `data` billboard config property.
 	 * @return {Object}
 	 * @protected
@@ -118,11 +161,7 @@ const ChartBase = {
 		const state = this.getStateObj_();
 
 		const config = {
-			axes: state.axes,
-			classes: state.classes,
 			color: state.colorFormatter,
-			colors: state.colors,
-			columns: state.columns,
 			empty: state.emptyLabelText,
 			groups: state.groups,
 			hide: state.hide,
@@ -130,14 +169,16 @@ const ChartBase = {
 			keys: state.keys,
 			labels: state.labels,
 			mimeType: state.mimeType,
-			names: state.names,
 			order: state.order,
 			rows: state.rows,
 			selection: state.selection,
 			type: state.type,
-			types: state.types,
 			url: state.url
-		}
+		};
+
+		const columnsConfig = this.constructColumnsConfig_();
+
+		Object.assign(config, columnsConfig);
 
 		/**
 		 * Point click event.
@@ -208,6 +249,18 @@ const ChartBase = {
 	},
 
 	/**
+	 * Converts `columns` state into consumable array for billboard.js
+	 * @param {Array} columns
+	 * @return {Array}
+	 * @protected
+	 */
+	createColumnsArray_: function(columns) {
+		return columns.map(({data, id}) => {
+			return [id].concat(data);
+		});
+	},
+
+	/**
 	 * Retrieves state object, used to allow JSX implementation.
 	 * @return {Object}
 	 * @protected
@@ -229,6 +282,9 @@ const ChartBase = {
 	 * @protected
 	 */
 	handleColumnsChanged_: function({newVal, prevVal}) {
+		newVal = this.createColumnsArray_(newVal);
+		prevVal = this.createColumnsArray_(prevVal);
+
 		const data = {
 			columns: newVal
 		};
@@ -303,15 +359,6 @@ ChartBase.STATE = {
 		above: Config.bool().value(false),
 		zerobased: Config.bool().value(true),
 	}),
-
-	/**
-	 * Sets billboard's data.axes config.
-	 * @instance
-	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default {}
-	 */
-	axes: Config.object(),
 
 	/**
 	 * Switches the x and y axis.
@@ -420,15 +467,6 @@ ChartBase.STATE = {
 	}),
 
 	/**
-	 * Sets billboard's data.classes config.
-	 * @instance
-	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default {}
-	 */
-	classes: Config.object(),
-
-	/**
 	 * Defines a custom color pattern for chart.
 	 * @instance
 	 * @memberof ChartBase
@@ -460,7 +498,17 @@ ChartBase.STATE = {
 	 * @type {?Array|undefined}
 	 * @default []
 	 */
-	columns: Config.array().value([]),
+	columns: Config.shapeOf({
+		axis: Config.string(),
+		class: Config.string(),
+		color: Config.string(),
+		data: Config.array().required(),
+		id: Config.required().string(),
+		name: Config.string(),
+		regions: Config.array(),
+		type: Config.string(),
+		xs: Config.string()
+	}),
 
 	/**
 	 * Configuration options for donut chart.
@@ -675,15 +723,6 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	mimeType: Config.string(),
-
-	/**
-	 * Sets billboard's data.names config.
-	 * @instance
-	 * @memberof ChartBase
-	 * @type {?object|undefined}
-	 * @default {}
-	 */
-	names: Config.object(),
 
 	/**
 	 * Sets billboard's data.order config.
@@ -923,15 +962,6 @@ ChartBase.STATE = {
 		'spline',
 		'step',
 	]).value('line'),
-
-	/**
-	 * The variety of chart that will be rendered by column.
-	 * @instance
-	 * @memberof ChartBase
-	 * @type {?string|undefined}
-	 * @default {}
-	 */
-	types: Config.object(),
 
 	/**
 	 * Load a CSV or JSON file from a URL.
