@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.7</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -187,7 +187,51 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-alpha-7-august-28-2017"><a class="heading-anchor" href="#v2-0-0-alpha-7-august-28-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.7 - August 28, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-alpha-8-september-1-2017"><a class="heading-anchor" href="#v2-0-0-alpha-8-september-1-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.8 - September 1, 2017</h3>
+<ul>
+<li>New: Global Functions added <code>setter($var, $val)</code> for setting default sass variable values</li>
+<li>New: Added <code>.multi-step-bar</code> and options to configure <code>$multi-step-bar-bg</code>, <code>$multi-step-bar-border-radius</code>, <code>$multi-step-bar-color</code>, <code>$multi-step-bar-font-size</code>, <code>$multi-step-bar-height</code>, <code>$multi-step-bar-margin-bottom</code>, <code>$multi-step-bar-padding</code></li>
+<li>New: Globals readd <code>$font-family-serif</code> from BS3</li>
+<li>New: Typography added <code>.section-header</code> and option to configure <code>$section-header-border-color</code>, <code>$section-header-border-style</code>, <code>$section-header-border-width</code>, <code>$section-header-color</code>, <code>$section-header-font-size</code>, <code>$section-header-font-weight</code>, <code>$section-header-line-height</code>, <code>$section-header-margin-bottom</code>, <code>$section-header-padding</code>, <code>$section-header-text-transform</code></li>
+<li>New: Nav Tabs added option to configure <code>$nav-tabs-tab-pane-bg</code>, <code>$nav-tabs-tab-pane-border-radius</code>, <code>$nav-tabs-tab-pane-padding</code></li>
+<li>Breaking: Update Bootstrap 4 to e0c95f8, Bootstrap requires jQuery3</li>
+<li>Breaking: (Fixes #365) btn-action is definitely dropped</li>
+<li>Breaking: Navbar move <code>$navbar-height</code>, <code>$navbar-border-bottom-width</code>, <code>$navbar-border-left-width</code>, <code>$navbar-border-right-width</code>, <code>$navbar-border-top-width</code>, <code>$navbar-border-width</code>, <code>$navbar-font-size</code>, <code>$navbar-link-padding-x</code>, <code>$navbar-link-padding-y</code>, <code>$navbar-active-border-bottom-width</code>, <code>$navbar-toggler-height</code>, <code>$navbar-toggler-margin-x</code>, <code>$navbar-toggler-margin-y</code>, <code>$navbar-toggler-link-font-size</code>, <code>$navbar-toggler-link-height</code>, <code>$navbar-toggler-link-line-height</code>, <code>$navbar-toggler-link-padding-x</code>, <code>$navbar-toggler-link-padding-y</code>, <code>$navbar-brand-margin-right</code>, <code>$navbar-brand-padding-x</code>, <code>$navbar-height-mobile</code>, <code>$navbar-font-size-mobile</code>, <code>$navbar-link-padding-x-mobile</code>, <code>$navbar-link-padding-y-mobile</code>, <code>$navbar-brand-font-size-mobile</code>, <code>$navbar-brand-margin-right-mobile</code>, <code>$navbar-brand-padding-x-mobile</code>, <code>$navbar-brand-padding-y-mobile</code>, <code>$navbar-toggler-margin-x-mobile</code>, <code>$navbar-toggler-link-font-size-mobile</code>, <code>$navbar-toggler-link-padding-x-mobile</code>, <code>$navbar-toggler-link-padding-y-mobile</code>, <code>$navbar-nav-item-dropdown-margin-top</code>, to <code>$navbar-size</code> Sass map</li>
+<li>Breaking: Typography removed Blockquote Variants</li>
+<li>Breaking: Typography removed <code>.monospace</code> and <code>.sans-serif</code> helper classes</li>
+<li>Breaking: (Fixes #361) Toggle card is definitely dropped</li>
+<li>Breaking: Breadcrumb vertical/stacked is definitely dropped</li>
+<li>Update: Popper.js to 1.12.3</li>
+<li>Update: Navbar added helper class <code>.navbar-d-breakpoint-inline-block</code></li>
+<li>Update: Atlas Navbar Sizes</li>
+<li>Update: Navbar Size mixin brand-padding-x should inherit from link-padding-x</li>
+<li>Update: Navbar moved sizing to navbar-size mixin</li>
+<li>Update: Create <code>navbar-size($map)</code> mixin to help size navbars</li>
+<li>Update: Nav Underline <code>.active.dropdown-toggle.nav-link</code> should be highlighted</li>
+<li>Update: <code>$enable-scaling-navbar</code> should inherit value from <code>$enable-scaling-components</code></li>
+<li>Update: Navbar always set font size and added <code>$enable-scaling-navbar</code></li>
+<li>Update: Scaling components mixin to accept boolean value</li>
+<li>Update: Navbar fix <code>.form-check</code> inside navbar</li>
+<li>Update: Clay Base Navbar light and dark bg colors</li>
+<li>Update: Dropdown dropdown-toggle should remove focus styles on <code>button</code> element when shown</li>
+<li>Update: Multi Step Nav add buttons as link support</li>
+<li>Update: Atlas Nav Tabs colors to Lexicon 2 first pass</li>
+<li>Update: <code>.nav-tabs .nav-link.active</code> border-color should be more customizable</li>
+<li>Fix: Panels variables missing semicolon</li>
+<li>Fix: Navs variables missing semicolon</li>
+<li>Fix: Alerts missing semicolon and default flag</li>
+<li>Site: Change jQuery version to 3.2.1, Bootstrap 4 requires jQuery 3</li>
+<li>Site: Recover menu-icon functionality, Add margin-top to page title</li>
+<li>Site: Navbar docs mention new <code>.navbar-d-breakpoint-{inline-block|flex}</code> and <code>.navbar-d-breakpoint-down-none</code></li>
+<li>Site: Update Management Bar content to Clay 2</li>
+<li>Site: Multi Step Nav add examples of buttons as links</li>
+<li>Site: Typography display different font styles</li>
+<li>Site: Add examples of <code>.section-header</code></li>
+<li>Site: Use BS4 blockquotes</li>
+<li>Site: Clean up unused styles from removed pages</li>
+<li>Site: Typography update markup to Clay 2</li>
+</ul>
+<h3 id="v2-0-0-alpha-7-august-28-2017"><a class="heading-anchor" href="#v2-0-0-alpha-7-august-28-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.7 - August 28, 2017</h3>
 <ul>
 <li>New: Badges added <code>$badge-link-color</code> because <code>$badge-color</code> was removed from BS4</li>
 <li>New: Table added <code>$table-divider-bg</code></li>
