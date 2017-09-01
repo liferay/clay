@@ -1,0 +1,63 @@
+/**
+* Clay 2.0.0-alpha.8
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.popover {
+	@if not ($popover-border-radius == $border-radius-lg) {
+		@include border-radius($popover-border-radius);
+	}
+
+	&.bs-popover-bottom {
+		.arrow::after {
+			border-bottom-color: $popover-bottom-arrow-color;
+		}
+	}
+
+	&.bs-popover-left {
+		.arrow::after {
+			border-left-color: $popover-left-arrow-color;
+		}
+	}
+
+	&.bs-popover-right {
+		.arrow::after {
+			border-right-color: $popover-right-arrow-color;
+		}
+	}
+
+	&.bs-popover-top {
+		.arrow::after {
+			border-top-color: $popover-top-arrow-color;
+		}
+	}
+
+	.inline-scroller {
+		max-height: $popover-inline-scroller-max-height;
+	}
+}
+
+.popover-header {
+	border-color: $popover-header-border-color;
+
+	@if not ($popover-offset-border-width == calc(#{$border-radius-lg} - #{$popover-border-width})) {
+		@include border-top-radius($popover-offset-border-width);
+	}
+
+	@if not ($popover-header-font-size == $font-size-base) {
+		font-size: $popover-header-font-size;
+	}
+
+	font-weight: $popover-header-font-weight;
+
+	margin-bottom: $popover-header-margin-y;
+	margin-left: $popover-header-margin-x;
+	margin-right: $popover-header-margin-x;
+	margin-top: $popover-header-margin-y;
+}
+
+.popover-body {
+	@include border-bottom-radius($popover-offset-border-width);
+}

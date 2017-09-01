@@ -1,0 +1,296 @@
+/**
+* Clay 2.0.0-alpha.8
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.multi-step-nav {
+	align-items: flex-end;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin-bottom: $multi-step-nav-margin-bottom;
+	padding: $multi-step-nav-padding-y $multi-step-nav-padding-x;
+	position: relative;
+}
+
+.multi-step-indicator-label-bottom {
+	.multi-step-item {
+		padding-bottom: $multi-step-indicator-label-font-size * $line-height-base;
+	}
+
+	.multi-step-indicator-label {
+		top: $multi-step-icon-size;
+	}
+}
+
+.multi-step-indicator-label-top {
+	.multi-step-item {
+		padding-top: $multi-step-indicator-label-font-size * $line-height-base;
+	}
+
+	.multi-step-indicator-label {
+		bottom: $multi-step-icon-size + $multi-step-divider-height;
+	}
+}
+
+.multi-step-title-center {
+	.multi-step-title {
+		margin-left: $multi-step-icon-size / 2;
+		max-width: $multi-step-title-max-width;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		text-overflow: ellipsis;
+		transform: translateX(-50%);
+		white-space: nowrap;
+		width: auto;
+	}
+}
+
+.multi-step-item {
+	margin-bottom: $multi-step-item-margin-bottom;
+	position: relative;
+
+	&.complete {
+		.multi-step-icon {
+			background-color: $multi-step-icon-complete-bg;
+			background-image: $multi-step-icon-complete-bg-image;
+			background-position: $multi-step-icon-complete-bg-position;
+			background-repeat: no-repeat;
+			background-size: $multi-step-icon-complete-bg-size;
+			color: $multi-step-icon-complete-color;
+
+			@if ($multi-step-icon-complete-bg-image) {
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+			}
+		}
+
+		.multi-step-divider {
+			background-color: $multi-step-divider-complete-bg;
+		}
+	}
+
+	&.active {
+		.multi-step-icon {
+			background-color: $multi-step-icon-active-bg;
+			background-image: $multi-step-icon-active-bg-image;
+			background-position: $multi-step-icon-active-bg-position;
+			background-repeat: no-repeat;
+			background-size: $multi-step-icon-active-bg-size;
+			color: $multi-step-icon-active-color;
+
+			@if ($multi-step-icon-active-bg-image) {
+				&[data-multi-step-icon] {
+					&:before {
+						content: normal;
+					}
+				}
+			}
+		}
+
+		.multi-step-divider {
+			background-color: $multi-step-divider-active-bg;
+		}
+	}
+}
+
+.multi-step-item-contract {
+	flex-grow: 0;
+
+	.multi-step-divider {
+		width: 0;
+	}
+}
+
+.multi-step-title {
+	font-size: $multi-step-title-font-size;
+	line-height: normal;
+	margin-bottom: $multi-step-title-margin-bottom;
+	word-wrap: break-word;
+}
+
+.multi-step-item-expand {
+	flex-grow: 1;
+	width: $multi-step-item-width;
+}
+
+.multi-step-divider {
+	background-color: $multi-step-divider-bg;
+	height: $multi-step-divider-height;
+	margin-left: $multi-step-icon-size;
+	margin-top: -$multi-step-divider-height;
+	position: relative;
+	top: $multi-step-divider-top;
+}
+
+.multi-step-indicator {
+	position: relative;
+	width: $multi-step-indicator-width;
+
+	.multi-step-indicator-label {
+		font-size: $multi-step-indicator-label-font-size;
+		font-weight: $multi-step-indicator-label-font-weight;
+		left: 50%;
+		max-width: $multi-step-indicator-label-max-width;
+		position: absolute;
+		transform: translateX(-50%);
+
+		@include text-truncate;
+	}
+}
+
+.multi-step-icon {
+	align-items: center;
+	background-color: $multi-step-icon-bg;
+	border-radius: $multi-step-icon-border-radius;
+	color: $multi-step-icon-color;
+	display: flex;
+	font-size: $multi-step-icon-font-size;
+	justify-content: center;
+	height: $multi-step-icon-size;
+	width: $multi-step-icon-size;
+
+	&[data-multi-step-icon]:before {
+		content: attr(data-multi-step-icon);
+		height: $multi-step-icon-size;
+		line-height: $multi-step-icon-size;
+		text-align: center;
+		width: $multi-step-icon-size;
+	}
+
+	.lexicon-icon {
+		height: $multi-step-icon-font-size;
+		width: $multi-step-icon-font-size;
+	}
+
+	.multi-step-link {
+		color: inherit;
+		height: $multi-step-icon-size;
+		line-height: $multi-step-icon-size;
+		text-align: center;
+		width: $multi-step-icon-size;
+	}
+}
+
+.multi-step-link.btn-link {
+	border-width: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+button.multi-step-link {
+	background-color: transparent;
+	border-width: 0;
+	padding: 0;
+}
+
+.multi-step-item-fixed-width {
+	&.multi-step-item,
+	.multi-step-item-expand {
+		flex-grow: 0;
+		width: $multi-step-item-fixed-width;
+	}
+}
+
+.multi-step-nav-collapse-sm {
+	@include media-breakpoint-down(sm) {
+		flex-wrap: nowrap;
+
+		&.multi-step-indicator-label-top {
+			.multi-step-indicator-label {
+				bottom: auto;
+				top: 0;
+			}
+		}
+
+		&.multi-step-indicator-label-bottom {
+			.multi-step-indicator-label {
+				bottom: 0;
+				top: auto;
+			}
+		}
+
+		&.multi-step-title-center {
+			.multi-step-title {
+				margin-left: 0;
+				max-width: none;
+				transform: none;
+			}
+		}
+
+		.active {
+			&.multi-step-item {
+				position: static;
+			}
+
+			.multi-step-title {
+				display: block;
+				left: 0;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				top: 0;
+
+				+ .multi-step-indicator {
+					margin-top: calc(1rem * #{$line-height-base});
+				}
+			}
+
+			.multi-step-indicator {
+				position: static;
+			}
+
+			.multi-step-indicator-label {
+				display: block;
+				left: 0;
+				max-width: none;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				transform: none;
+				width: auto;
+			}
+		}
+
+		.multi-step-item {
+			margin-bottom: 0;
+			min-width: $multi-step-icon-size;
+			padding-top: $multi-step-title-font-size + $multi-step-title-margin-bottom + ($multi-step-divider-height / 2);
+		}
+
+		.multi-step-title {
+			display: none;
+		}
+
+		.multi-step-indicator-label {
+			display: none;
+		}
+	}
+}
+
+// Multi Step Bar
+
+.multi-step-bar {
+	align-items: center;
+	background-color: $multi-step-bar-bg;
+
+	@include border-radius($multi-step-bar-border-radius);
+
+	color: $multi-step-bar-color;
+	display: flex;
+	font-size: $multi-step-bar-font-size;
+	height: $multi-step-bar-height;
+	justify-content: space-between;
+	margin-bottom: $multi-step-bar-margin-bottom;
+	padding: $multi-step-bar-padding;
+
+	> li {
+		display: block;
+	}
+}

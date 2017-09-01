@@ -1,0 +1,327 @@
+/**
+* Clay 2.0.0-alpha.8
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+input[type="checkbox"],
+input[type="radio"] {
+	cursor: pointer;
+	font-size: 16px;
+}
+
+fieldset {
+	word-wrap: break-word;
+
+	@-moz-document url-prefix() { // FF Fieldset workaround
+		display: table-cell;
+	}
+}
+
+label {
+	color: $input-label-color;
+	font-size: $input-label-font-size;
+	font-weight: $input-label-font-weight;
+	margin-bottom: $input-label-margin-bottom;
+	max-width: 100%;
+	word-wrap: break-word;
+
+	@include scale-component {
+		font-size: $input-label-font-size-mobile;
+	}
+
+	&.focus {
+		color: $input-label-focus-color;
+	}
+
+	.reference-mark {
+		color: $input-label-reference-mark-color;
+		margin-left: $input-label-reference-mark-spacer;
+		margin-right: $input-label-reference-mark-spacer;
+		vertical-align: $input-label-reference-mark-vertical-alignment;
+	}
+}
+
+.form-group {
+	position: relative;
+}
+
+// Inputs
+
+.form-control {
+	border-width: $input-border-width;
+
+	@if not ($input-font-size == $font-size-base) {
+		font-size: $input-font-size;
+	}
+
+	height: $input-height;
+
+	@if not ($input-padding-y == $input-btn-padding-y) {
+		padding-bottom: $input-padding-y;
+		padding-top: $input-padding-y;
+	}
+
+	@if not ($input-padding-x == $input-btn-padding-x) {
+		padding-left: $input-padding-x;
+		padding-right: $input-padding-x;
+	}
+
+	@include scale-component {
+		font-size: $input-font-size-mobile;
+		height: $input-height-mobile;
+	}
+
+	&:focus {
+		&::placeholder {
+			color: $input-placeholder-focus-color;
+		}
+	}
+
+	&::-ms-clear,
+	&::-ms-reveal {
+		display: none;
+		height: 0;
+		width: 0;
+	}
+}
+
+// Select
+
+.form-control[multiple],
+.form-control[size] {
+	height: auto;
+}
+
+// Will need to be revisted if action is taken on https://github.com/twbs/bootstrap/issues/23058
+select.form-control:not([multiple]):not([size]) {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	background-color: $input-select-bg;
+	background-image: $input-select-icon;
+	background-position: $input-select-bg-position;
+	background-repeat: no-repeat;
+	background-size: $input-select-bg-size;
+	padding-bottom: $input-select-padding-bottom;
+	padding-left: $input-select-padding-left;
+	padding-right: $input-select-padding-right;
+	padding-top: $input-select-padding-top;
+
+	&:focus {
+		background-color: $input-select-focus-bg;
+		background-image: $input-select-icon-focus;
+	}
+
+	&:disabled {
+		background-image: $input-select-icon-disabled;
+	}
+}
+
+// Textarea
+
+textarea.form-control {
+	height: $input-textarea-height;
+}
+
+// Checkbox and Radio
+
+.form-check-label {
+	display: inline;
+	position: relative;
+}
+
+.form-check-input {
+	margin-top: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Disabled State
+
+fieldset[disabled] label,
+label.disabled {
+	color: $input-label-disabled-color;
+	opacity: $input-disabled-opacity;
+}
+
+fieldset[disabled] label {
+	.form-control {
+		font-weight: normal;
+		opacity: 1;
+	}
+}
+
+.form-control {
+	fieldset[disabled] &,
+	&[disabled] {
+		border-color: $input-disabled-border-color;
+		color: $input-disabled-color;
+		opacity: $input-disabled-opacity;
+
+		&::placeholder {
+			color: $input-placeholder-disabled-color;
+		}
+	}
+}
+
+.form-control[disabled] > option {
+	@media (-webkit-min-device-pixel-ratio: 0) { // Webkit only
+		color: $input-disabled-color;
+	}
+}
+
+.form-check.disabled .form-check-label {
+	@if not ($input-label-disabled-color == $text-muted) {
+		color: $input-label-disabled-color;
+	}
+}
+
+// Readonly State
+
+.form-control[readonly] {
+	background-color: $input-readonly-bg;
+	border-color: $input-readonly-border-color;
+	color: $input-readonly-color;
+	cursor: $input-readonly-cursor;
+}
+
+// Input Sizes
+
+.form-control-lg {
+	@if not ($input-font-size-lg == $font-size-lg) {
+		font-size: $input-font-size-lg;
+	}
+
+	height: $input-height-lg;
+
+	@if not ($input-padding-y-lg == $input-btn-padding-y-lg) {
+		padding-bottom: $input-padding-y-lg;
+		padding-top: $input-padding-y-lg;
+	}
+
+	@if not ($input-padding-x-lg == $input-btn-padding-x-lg) {
+		padding-left: $input-padding-x-lg;
+		padding-right: $input-padding-x-lg;
+	}
+
+	@include scale-component {
+		height: $input-height-lg-mobile;
+	}
+}
+
+.form-control-sm {
+	@if not ($input-font-size-sm == $font-size-sm) {
+		font-size: $input-font-size-sm;
+	}
+
+	height: $input-height-sm;
+
+	@if not ($input-padding-y-sm == $input-btn-padding-y-sm) {
+		padding-bottom: $input-padding-y-sm;
+		padding-top: $input-padding-y-sm;
+	}
+
+	@if not ($input-padding-x-sm == $input-btn-padding-x-sm) {
+		padding-left: $input-padding-x-sm;
+		padding-right: $input-padding-x-sm;
+	}
+
+	@include scale-component {
+		height: $input-height-sm-mobile;
+	}
+}
+
+// Form Inline
+// TODO: Create form-inline-autofit screen sizes?
+// TODO: Create width classes to set widths of inputs in form-inline-autofit?
+
+.form-inline {
+	> .btn,
+	> .form-control,
+	> .form-inline-group {
+		// TODO: Use different selector hard to override
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.form-inline-autofit {
+	align-items: flex-start;
+	flex-direction: column;
+
+	.form-inline-group {
+		flex: 1;
+		position: relative;
+		width: 100%;
+	}
+
+	.input-group {
+		flex: 1;
+	}
+
+	> label,
+	> .btn,
+	> .form-control,
+	> .form-inline-group,
+	> .input-group {
+		@include media-breakpoint-down(xs) {
+			flex-basis: auto !important;
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.form-inline {
+		> label {
+			// TODO: Use different selector hard to override
+			&:not(:last-child) {
+				margin-right: $grid-gutter-width / 2;
+			}
+		}
+
+		> .btn,
+		> .form-control,
+		> .form-file,
+		> .form-inline-group {
+			// TODO: Use different selector hard to override
+			&:not(:last-child) {
+				margin-bottom: 0;
+				margin-right: $grid-gutter-width / 2;
+			}
+		}
+
+		.form-check-input {
+			transform: none;
+		}
+	}
+
+	.form-inline-autofit {
+		flex: 1;
+		flex-direction: row;
+		width: 100%;
+
+		.form-control {
+			flex: 1;
+			min-width: 10px;
+			width: 100%;
+		}
+
+		> label {
+			display: inline-block;
+			margin-bottom: ($input-height - ($font-size-base * $line-height-base)) / 2;
+		}
+	}
+
+	.form-inline-group {
+		label {
+			display: inline-block;
+		}
+	}
+}

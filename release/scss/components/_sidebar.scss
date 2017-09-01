@@ -1,0 +1,195 @@
+/**
+* Clay 2.0.0-alpha.8
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sidebar {
+	height: 100%;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+}
+
+.sidebar-header {
+	@include clearfix;
+
+	margin: 0;
+	padding: $sidebar-padding;
+	word-wrap: break-word;
+}
+
+.sidebar-body {
+	font-size: 14px;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	padding: $sidebar-padding;
+
+	dt {
+		padding-top: 0.1px;
+	}
+
+	dd.sidebar-caption {
+		margin-bottom: 20px;
+		margin-top: 3px;
+	}
+
+	> .sidebar-section {
+		margin-bottom: 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.sidebar-footer {
+	padding: $sidebar-padding;
+}
+
+.sidebar-actions {
+	flex-wrap: nowrap;
+}
+
+.sidebar-section {
+	position: relative;
+	word-wrap: break-word;
+}
+
+.sidebar-section-d-flex {
+	display: flex;
+
+	.flex-col {
+		justify-content: center;
+		min-height: 40px;
+	}
+}
+
+.sidebar-panel {
+	height: 155px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+}
+
+.sidebar-title {
+	display: block;
+	font-weight: $headings-font-weight;
+	margin-bottom: 0;
+}
+
+.sidebar-link {
+	color: $sidebar-link-color;
+
+	@include hover-focus {
+		color: $sidebar-link-hover-color;
+	}
+}
+
+// Sidebar Navbars
+
+.sidebar {
+	.navbar {
+		border-left-width: 0;
+		border-right-width: 0;
+
+		@include border-radius(0);
+	}
+}
+
+// Skins
+
+.sidebar-light {
+	color: $sidebar-light-color;
+
+	.sidebar-link {
+		color: $sidebar-light-link-color;
+
+		@include hover-focus {
+			color: $sidebar-light-link-hover-color;
+		}
+	}
+
+	.sidebar-header {
+		.sidebar-title {
+			color: $sidebar-light-header-title-color;
+		}
+
+		.sidebar-title.sidebar-link,
+		.sidebar-title .sidebar-link {
+			color: $sidebar-light-header-title-color;
+			text-decoration: none;
+
+			@include hover-focus {
+				color: $sidebar-light-header-title-hover-color;
+			}
+		}
+	}
+
+	.sidebar-actions .sidebar-link {
+		color: $sidebar-light-actions-link-color;
+		text-decoration: none;
+
+		@include hover-focus {
+			color: $sidebar-light-actions-link-hover-color;
+		}
+	}
+}
+
+.sidebar-light-bg {
+	background-color: $sidebar-light-bg;
+	border-left: 1px solid $sidebar-light-border-color;
+
+	.sidebar-panel {
+		background-color: $sidebar-light-panel-bg;
+	}
+}
+
+.sidebar-dark {
+	color: $sidebar-dark-color;
+
+	.sidebar-link {
+		color: $sidebar-dark-link-color;
+
+		@include hover-focus {
+			color: $sidebar-dark-link-hover-color;
+		}
+	}
+
+	.sidebar-header {
+		.sidebar-title {
+			color: $sidebar-dark-header-title-color;
+		}
+
+		.sidebar-title.sidebar-link,
+		.sidebar-title .sidebar-link {
+			color: $sidebar-dark-header-title-color;
+			text-decoration: none;
+
+			@include hover-focus {
+				color: $sidebar-dark-header-title-hover-color;
+			}
+		}
+	}
+
+	.sidebar-actions .sidebar-link {
+		color: $sidebar-dark-actions-link-color;
+		text-decoration: none;
+
+		@include hover-focus {
+			color: $sidebar-dark-actions-link-hover-color;
+		}
+	}
+}
+
+.sidebar-dark-bg {
+	background-color: $sidebar-dark-bg;
+	border-color: $sidebar-dark-border-color;
+
+	.sidebar-panel {
+		background-color: $sidebar-dark-panel-bg;
+	}
+}

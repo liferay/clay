@@ -1,0 +1,71 @@
+/**
+* Clay 2.0.0-alpha.8
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.badge {
+	border-style: $badge-border-style;
+	border-width: $badge-border-width;
+
+	@include badge;
+
+	margin-bottom: 2px;
+	margin-top: 2px;
+	max-width: 100%;
+	white-space: normal;
+	word-wrap: break-word;
+
+	a {
+		color: $badge-link-color;
+		text-decoration: $badge-link-text-decoration;
+
+		@include hover-focus {
+			color: $badge-link-hover-color;
+			text-decoration: $badge-link-hover-text-decoration;
+		}
+	}
+
+	.close {
+		color: inherit;
+		float: none;
+		font-size: inherit;
+		margin-left: 2px;
+		opacity: 1;
+	}
+}
+
+.badge-lg {
+	@include badge-lg;
+}
+
+.badge-sm {
+	@include badge-sm;
+}
+
+// Badge Variants
+
+@each $color, $value in $badge-palette {
+	.badge-#{$color} {
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
+
+		&[href] {
+			@include hover-focus {
+				background-color: map-get($value, hover-bg);
+				border-color: map-get($value, hover-border-color);
+				color: map-get($value, hover-color);
+			}
+		}
+
+		a {
+			color: map-get($value, link-color);
+
+			@include hover-focus {
+				color: map-get($value, link-hover-color);
+			}
+		}
+	}
+}

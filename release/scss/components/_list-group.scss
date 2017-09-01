@@ -1,0 +1,247 @@
+/**
+* Clay 2.0.0-alpha.8
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.list-group {
+	@include border-radius($list-group-border-radius);
+	@include box-shadow($list-group-box-shadow);
+
+	color: $list-group-color;
+
+	.dropdown-action {
+		position: static;
+
+		.dropdown-menu-horizontal {
+			bottom: 0 !important;
+			margin-right: -3px;
+			top: 0 !important;
+			transform: none !important;
+		}
+	}
+
+	.list-group {
+		@if ($list-group-box-shadow != null) {
+			@include box-shadow(none);
+		}
+	}
+
+	.label {
+		@include label-sm;
+	}
+
+	.sticker {
+		@include sticker-lg;
+	}
+}
+
+.list-group-bordered {
+	.list-group-item-flex {
+		padding: 0;
+
+		&.active {
+			.flex-col {
+				border-color: $list-group-active-border-color;
+			}
+		}
+	}
+
+	.flex-col {
+		border-left: $list-group-border-width solid $list-group-border-color;
+		border-right: $list-group-border-width solid $list-group-border-color;
+		margin-left: -$list-group-border-width;
+		padding: $list-group-item-padding-y $list-group-item-padding-x;
+
+		&:first-child,
+		&:last-child {
+			border-left-width: 0;
+			border-right-width: 0;
+			margin-left: 0;
+		}
+	}
+}
+
+// List Group Header
+
+.list-group-header {
+	align-items: center;
+	background-color: $list-group-header-bg;
+	border: $list-group-border-width solid $list-group-border-color;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: -$list-group-border-width;
+	padding: $list-group-header-padding-y $list-group-header-padding-x;
+
+	&:first-child {
+		@include border-top-radius($list-group-border-radius);
+	}
+
+	&:last-child {
+		@include border-bottom-radius($list-group-border-radius);
+	}
+}
+
+.list-group-header-title {
+	color: $list-group-header-title-color;
+	font-size: $list-group-header-title-font-size;
+	font-weight: $list-group-header-title-font-weight;
+	margin-bottom: $list-group-header-title-margin-bottom;
+	text-transform: $list-group-header-title-text-transform;
+}
+
+// List Group Title
+
+.list-group-title {
+	color: $list-group-title-color;
+	font-size: $list-group-title-font-size;
+	font-weight: $list-group-title-font-weight;
+	line-height: normal;
+	margin-bottom: $list-group-title-margin-bottom;
+}
+
+a.list-group-title,
+.list-group-title a {
+	color: $list-group-title-color;
+	text-decoration: $list-group-title-text-decoration;
+
+	@include hover-focus {
+		color: $list-group-title-hover-color;
+		text-decoration: $list-group-title-hover-text-decoration;
+	}
+}
+
+// List Group Subtitle
+
+.list-group-subtitle {
+	color: $list-group-subtitle-color;
+	font-size: $list-group-subtitle-font-size;
+	font-weight: $list-group-subtitle-font-weight;
+	margin-bottom: $list-group-subtitle-margin-bottom;
+}
+
+a.list-group-subtitle,
+.list-group-subtitle a {
+	color: $list-group-subtitle-color;
+	text-decoration: $list-group-subtitle-text-decoration;
+
+	@include hover-focus {
+		color: $list-group-subtitle-hover-color;
+		text-decoration: $list-group-subtitle-hover-text-decoration;
+	}
+}
+
+// List Group Item
+
+.show-dropdown-action-on-active {
+	.list-group-item.active {
+		.dropdown-action {
+			.dropdown-menu {
+				background-color: $list-group-active-bg;
+			}
+
+			.dropdown-item {
+				color: $list-group-active-color;
+			}
+		}
+	}
+}
+
+.list-group-item {
+	&.active {
+		z-index: auto;
+
+		.dropdown-action .dropdown-toggle,
+		.list-group-link {
+			color: $list-group-active-color;
+		}
+
+		.list-group-title,
+		a.list-group-title,
+		.list-group-title a {
+			color: $list-group-title-active-color;
+		}
+
+		.list-group-subtitle,
+		a.list-group-subtitle,
+		.list-group-subtitle a {
+			color: $list-group-subtitle-active-color;
+		}
+
+		.list-group-link {
+			color: $list-group-link-active-color;
+		}
+	}
+}
+
+.list-group-item-flex {
+	// Center content here by adding justify-content: center on .flex-col and .flex-col-expand
+	display: flex;
+	padding-left: $list-group-item-padding-x / 2;
+	padding-right: $list-group-item-padding-x / 2;
+
+	.flex-col {
+		justify-content: center;
+		padding-left: $list-group-item-padding-x / 2;
+		padding-right: $list-group-item-padding-x / 2;
+	}
+}
+
+.list-group-item-action:focus {
+	z-index: 1;
+}
+
+// List Group Link
+
+.list-group-link {
+	color: $list-group-link-color;
+
+	@include hover-focus {
+		color: $list-group-link-hover-color;
+	}
+}
+
+// List Group Unstyled
+
+.list-group-unstyled {
+	@include box-shadow(none);
+
+	color: inherit;
+
+	.flex-col {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.list-group-header,
+	.list-group-item {
+		background-color: transparent;
+		border-color: transparent;
+		padding: 0;
+	}
+
+	.list-group-item {
+		&.active {
+			color: $body-color;
+
+			+ .list-group-item {
+				border-top-color: transparent;
+			}
+
+			.list-group-link {
+				color: $link-color;
+			}
+		}
+	}
+
+	@if ($list-group-link-color) {
+		.list-group-link {
+			color: $link-color;
+
+			@include hover-focus {
+				color: $link-hover-color;
+			}
+		}
+	}
+}

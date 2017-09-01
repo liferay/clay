@@ -1,0 +1,120 @@
+/**
+* Clay 2.0.0-alpha.8
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-ms-overflow-style: scrollbar;
+	-webkit-font-smoothing: antialiased;
+
+	@include scale-component {
+		font-size: $font-size-base-mobile;
+	}
+}
+
+// Headings
+
+h1,
+.h1 {
+	font-size: $h1-font-size;
+
+	@include scale-component {
+		font-size: $h1-font-size-mobile;
+	}
+}
+
+h2,
+.h2 {
+	font-size: $h2-font-size;
+
+	@include scale-component {
+		font-size: $h2-font-size-mobile;
+	}
+}
+
+h3,
+.h3 {
+	font-size: $h3-font-size;
+
+	@include scale-component {
+		font-size: $h3-font-size-mobile;
+	}
+}
+
+h4,
+.h4 {
+	font-size: $h4-font-size;
+
+	@include scale-component {
+		font-size: $h4-font-size-mobile;
+	}
+}
+
+h5,
+.h5 {
+	font-size: $h5-font-size;
+
+	@include scale-component {
+		font-size: $h5-font-size-mobile;
+	}
+}
+
+h6,
+.h6 {
+	font-size: $h6-font-size;
+
+	@include scale-component {
+		font-size: $h6-font-size-mobile;
+	}
+}
+
+.section-header {
+	border-color: $section-header-border-color;
+	border-style: $section-header-border-style;
+	border-width: $section-header-border-width;
+	color: $section-header-color;
+	font-size: $section-header-font-size;
+	font-weight: $section-header-font-weight;
+	line-height: $section-header-line-height;
+	margin-bottom: $section-header-margin-bottom;
+	padding: $section-header-padding;
+	text-transform: $section-header-text-transform;
+}
+
+// Reference Mark
+
+.reference-mark {
+	display: inline-block;
+	font-size: $reference-mark-font-size;
+	position: relative;
+	vertical-align: top;
+
+	&.lexicon-icon {
+		font-size: 1em;
+		height: $reference-mark-font-size;
+		width: $reference-mark-font-size;
+	}
+
+	.lexicon-icon {
+		display: block;
+		height: 1em;
+		position: relative;
+		width: 1em;
+	}
+}
+
+// Marked Text
+
+mark,
+.mark {
+	@include highlight-text();
+}
+
+// Text Truncate
+
+.text-truncate {
+	display: block;
+}

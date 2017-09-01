@@ -1,0 +1,150 @@
+/**
+* Clay 2.0.0-alpha.8
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.custom-select {
+	// Remove once autoprefixer is applied
+	-webkit-appearance: none;
+}
+
+.form-file {
+	position: relative;
+}
+
+.form-file-input {
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+
+	&:focus {
+		+ .btn-primary {
+			@extend .btn-primary.focus;
+		}
+
+		+ .btn-secondary {
+			@extend .btn-secondary.focus;
+		}
+
+		+ .btn-success {
+			@extend .btn-success.focus;
+		}
+
+		+ .btn-warning {
+			@extend .btn-warning.focus;
+		}
+
+		+ .btn-danger {
+			@extend .btn-danger.focus;
+		}
+
+		+ .btn-light {
+			@extend .btn-light.focus;
+		}
+
+		+ .btn-dark {
+			@extend .btn-dark.focus;
+		}
+
+		+ .input-group {
+			border-radius: 1px;
+			box-shadow: 0 0 0 0.075rem #fff, $btn-focus-box-shadow;
+		}
+	}
+}
+
+.custom-file-input:focus + .custom-file-control {
+	border-radius: 1px;
+}
+
+// Custom Checkbox and Radio
+
+.custom-control-indicator {
+	border-color: $custom-control-indicator-border-color;
+	border-style: $custom-control-indicator-border-style;
+	border-width: $custom-control-indicator-border-width;
+	font-size: $custom-control-indicator-size;
+	top: 0;
+}
+
+.custom-control-description {
+	line-height: $custom-control-description-line-height;
+}
+
+.custom-control-input {
+	height: $custom-control-indicator-size;
+	left: 0;
+	top: 0;
+	width: $custom-control-indicator-size;
+
+	&:active ~ .custom-control-indicator {
+		border-color: $custom-control-indicator-active-border-color;
+	}
+
+	&:active:checked ~ .custom-control-indicator {
+		background-color: $custom-control-indicator-active-checked-bg;
+		border-color: $custom-control-indicator-active-checked-border-color;
+	}
+
+	&:checked ~ .custom-control-indicator {
+		border-color: $custom-control-indicator-checked-border-color;
+	}
+
+	&:disabled ~ .custom-control-indicator {
+		background-color: $custom-control-indicator-disabled-bg;
+		border-color: $custom-control-indicator-disabled-border-color;
+		box-shadow: none;
+	}
+
+	&:disabled:checked ~ .custom-control-indicator {
+		background-color: $custom-control-indicator-disabled-checked-bg;
+		border-color: $custom-control-indicator-disabled-checked-border-color;
+	}
+}
+
+.custom-control .custom-control-input:focus ~ .custom-control-indicator {
+	box-shadow: $custom-control-indicator-focus-box-shadow;
+}
+
+// Custom Checkbox
+
+.custom-checkbox {
+	.custom-control-input {
+		&:checked ~ .custom-control-indicator {
+			background-size: $custom-checkbox-indicator-icon-checked-bg-size;
+		}
+
+		&:indeterminate ~ .custom-control-indicator {
+			background-color: $custom-checkbox-indicator-indeterminate-bg;
+			background-size: $custom-checkbox-indicator-icon-indeterminate-bg-size;
+			border-color: $custom-control-indicator-indeterminate-border-color;
+		}
+
+		&:disabled:indeterminate ~ .custom-control-indicator {
+			background-color: $custom-control-indicator-disabled-checked-bg;
+			border-color: $custom-control-indicator-disabled-checked-border-color;
+		}
+	}
+}
+
+// Custom Radio
+
+.custom-radio {
+	.custom-control-input {
+		&:checked ~ .custom-control-indicator {
+			background-size: $custom-radio-indicator-icon-checked-bg-size;
+		}
+
+		&:disabled ~ .custom-control-indicator {
+			border-color: $custom-radio-indicator-disabled-border-color;
+		}
+
+		&:disabled:checked ~ .custom-control-indicator {
+			border-color: $custom-radio-indicator-disabled-checked-border-color;
+		}
+	}
+}

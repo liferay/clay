@@ -1,0 +1,386 @@
+/**
+* Clay 2.0.0-alpha.8
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.input-group {
+	align-items: flex-start;
+
+	.form-control:focus {
+		z-index: $zindex-input-group-focus;
+	}
+}
+
+// Input Group Btn
+
+.input-group-btn .btn:hover {
+	z-index: $zindex-input-group-hover;
+}
+
+.input-group-btn .btn:focus {
+	z-index: $zindex-input-group-focus;
+}
+
+.input-group-btn {
+	> .btn {
+		height: $input-height;
+		padding-bottom: 0;
+		padding-top: 0;
+
+		@include scale-component {
+			height: $input-height-mobile;
+		}
+	}
+
+	> .btn + .btn {
+		margin-left: 0;
+	}
+
+	&:first-child {
+		text-align: right;
+
+		> .btn {
+			@if ($input-btn-border-width > 1) {
+				margin-right: -($input-btn-border-width);
+			}
+		}
+	}
+
+	&:last-child > .btn {
+		margin-left: -$input-btn-border-width;
+	}
+
+	&:not(:first-child) > .form-file .btn {
+		@include border-left-radius(0);
+	}
+
+	&:not(:last-child) > .form-file .btn {
+		@include border-right-radius(0);
+	}
+}
+
+// Input Group Addon
+
+.input-group .input-group-addon {
+	&:first-child {
+		border-bottom-left-radius: $input-group-addon-border-radius;
+		border-top-left-radius: $input-group-addon-border-radius;
+	}
+
+	&:last-child {
+		border-bottom-right-radius: $input-group-addon-border-radius;
+		border-top-right-radius: $input-group-addon-border-radius;
+	}
+}
+
+.input-group-addon {
+	align-items: center;
+	border-width: $input-border-width;
+	color: $input-group-addon-color;
+	display: flex;
+	height: $input-height;
+	padding-bottom: $input-group-addon-padding-y;
+	padding-top: $input-group-addon-padding-y;
+
+	@if not ($input-group-addon-padding-x == $input-btn-padding-x) {
+		padding-left: $input-group-addon-padding-x;
+		padding-right: $input-group-addon-padding-x;
+	}
+
+	@include scale-component {
+		height: $input-height-mobile;
+	}
+}
+
+// Input Group Input
+
+.input-group-input {
+	display: flex;
+
+	.form-control {
+		display: block;
+	}
+}
+
+// Input Group Constrain
+
+.input-group-constrain {
+	border-bottom-width: 0;
+	height: auto;
+	line-height: $input-height-inner;
+	max-width: $input-group-constrain-max-width;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-left: 0;
+	padding-right: 0;
+
+	@include scale-component {
+		line-height: $input-height-inner-mobile;
+		max-width: $input-group-constrain-max-width-mobile;
+	}
+}
+
+.input-group-constrain-text {
+	border-bottom-color: $input-border-color;
+	border-bottom-style: solid;
+	border-bottom-width: $input-border-bottom-width;
+	padding-left: $input-group-addon-padding-x;
+	padding-right: $input-group-addon-padding-x;
+}
+
+// Input Group Secondary
+
+.input-group-secondary {
+	.input-group-addon {
+		background-color: $input-group-secondary-addon-bg;
+		border-color: $input-group-secondary-addon-border-color;
+		border-style: solid;
+		border-width: $input-group-secondary-addon-border-width;
+		margin-right: -$input-border-left-width;
+	}
+
+	.form-control + .input-group-addon:not(:first-child) {
+		border-left-color: $input-group-secondary-addon-border-color;
+		border-left-style: solid;
+		border-left-width: $input-group-secondary-addon-border-width;
+		margin-left: -$input-border-right-width;
+		margin-right: 0;
+	}
+}
+
+// Input Group Transparent
+
+.input-group-transparent {
+	@if ($input-group-transparent-addon-border-width == 0) {
+		.form-control {
+			&:not(:first-child),
+			&:not(:last-child),
+			&:not(:first-child):not(:last-child) {
+				@include border-radius($input-border-radius);
+			}
+		}
+
+		&.input-group-lg .form-control:not(:first-child):not(:last-child) {
+			@include border-radius($input-border-radius-lg);
+		}
+
+		&.input-group-sm .form-control:not(:first-child):not(:last-child) {
+			@include border-radius($input-border-radius-lg);
+		}
+	}
+
+	.input-group-addon {
+		background-color: $input-group-transparent-addon-bg;
+		border-color: $input-group-transparent-addon-border-color;
+		border-width: $input-group-transparent-addon-border-width;
+		color: $input-group-transparent-addon-color;
+	}
+
+	.help-icon {
+		@include monospace(28px);
+	}
+}
+
+// Input Group Inset
+// TODO: Don't use fixed values
+// TODO: Work with scaling inputs
+
+.input-group-inset {
+	.form-control {
+		padding-right: 45px;
+	}
+
+	.input-group-input {
+		width: 100%;
+	}
+}
+
+.input-group-inset-left {
+	.form-control {
+		padding-left: 45px;
+		padding-right: $input-padding-x;
+	}
+
+	.input-group-inset-item {
+		left: ($input-height-inner - ($input-height-inner * 0.75)) / 2;
+		right: auto;
+
+		@if ($input-height-inner-mobile) {
+			@include scale-component {
+				left: ($input-height-inner-mobile - ($input-height-inner-mobile * 0.75)) / 2;
+			}
+		}
+	}
+}
+
+.input-group-inset-item {
+	right: ($input-height-inner - ($input-height-inner * 0.75)) / 2;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 5;
+
+	@if ($input-height-inner-mobile) {
+		@include scale-component {
+			left: ($input-height-inner-mobile - ($input-height-inner-mobile * 0.75)) / 2;
+		}
+	}
+
+	.btn {
+		height: $input-height-inner * 0.75;
+		padding-bottom: 0;
+		padding-top: 0;
+		padding-left: ($input-btn-padding-x - 0.1875rem);
+		padding-right: ($input-btn-padding-x - 0.1875rem);
+
+		@if ($input-height-inner-mobile) {
+			@include scale-component {
+				height: $input-height-inner-mobile * 0.75;
+			}
+		}
+	}
+}
+
+// Input Group Sizes
+
+.input-group-lg {
+	> .input-group-addon {
+		padding-bottom: $input-group-addon-padding-y-lg;
+		padding-top: $input-group-addon-padding-y-lg;
+
+		@if not ($input-group-addon-padding-x-lg == $input-btn-padding-x-lg) {
+			padding-left: $input-group-addon-padding-x-lg;
+			padding-right: $input-group-addon-padding-x-lg;
+		}
+
+		&:first-child {
+			border-bottom-left-radius: $input-group-addon-border-radius-lg;
+			border-top-left-radius: $input-group-addon-border-radius-lg;
+		}
+
+		&:last-child {
+			border-bottom-right-radius: $input-group-addon-border-radius-lg;
+			border-top-right-radius: $input-group-addon-border-radius-lg;
+		}
+	}
+
+	.input-group-constrain {
+		height: auto;
+		line-height: $input-height-inner-lg;
+		padding-left: 0;
+		padding-right: 0;
+
+		@include scale-component {
+			line-height: $input-height-inner-lg-mobile;
+		}
+	}
+
+	.input-group-constrain-text {
+		padding-left: $input-group-addon-padding-x-lg;
+		padding-right: $input-group-addon-padding-x-lg;
+	}
+
+	> .input-group-btn > .btn {
+		height: $input-height-lg;
+		padding-bottom: 0;
+		padding-left: $input-btn-padding-x-lg;
+		padding-right: $input-btn-padding-x-lg;
+		padding-top: 0;
+
+		@include scale-component {
+			height: $input-height-lg-mobile;
+			padding-bottom: 0;
+			padding-left: $input-btn-padding-x-lg-mobile;
+			padding-right: $input-btn-padding-x-lg-mobile;
+			padding-top: 0;
+		}
+	}
+
+	@if not ($btn-border-radius-lg == $input-border-radius-lg) {
+		> .input-group-btn {
+			&:first-child > .btn:first-child {
+				@include border-left-radius($btn-border-radius-lg);
+			}
+
+			&:last-child > .btn:last-child {
+				@include border-right-radius($btn-border-radius-lg);
+			}
+		}
+	}
+
+	.help-icon {
+		@include monospace(35px);
+	}
+}
+
+.input-group-sm {
+	> .input-group-addon {
+		padding-bottom: $input-group-addon-padding-y-sm;
+		padding-top: $input-group-addon-padding-y-sm;
+
+		@if not ($input-group-addon-padding-x-sm == $input-btn-padding-x-sm) {
+			padding-left: $input-group-addon-padding-x-sm;
+			padding-right: $input-group-addon-padding-x-sm;
+		}
+
+		&:first-child {
+			border-bottom-left-radius: $input-group-addon-border-radius-sm;
+			border-top-left-radius: $input-group-addon-border-radius-sm;
+		}
+
+		&:last-child {
+			border-bottom-right-radius: $input-group-addon-border-radius-sm;
+			border-top-right-radius: $input-group-addon-border-radius-sm;
+		}
+	}
+
+	.input-group-constrain {
+		height: auto;
+		line-height: $input-height-inner-sm;
+		padding-left: 0;
+		padding-right: 0;
+
+		@include scale-component {
+			line-height: $input-height-inner-sm-mobile;
+		}
+	}
+
+	.input-group-constrain-text {
+		padding-left: $input-group-addon-padding-x-sm;
+		padding-right: $input-group-addon-padding-x-sm;
+	}
+
+	> .input-group-btn > .btn {
+		height: $input-height-sm;
+		padding-bottom: 0;
+		padding-left: $input-btn-padding-x-sm;
+		padding-right: $input-btn-padding-x-sm;
+		padding-top: 0;
+
+		@include scale-component {
+			height: $input-height-sm-mobile;
+			padding-bottom: 0;
+			padding-left: $input-btn-padding-x-sm-mobile;
+			padding-right: $input-btn-padding-x-sm-mobile;
+			padding-top: 0;
+		}
+	}
+
+	@if not ($btn-border-radius-sm == $input-border-radius-sm) {
+		> .input-group-btn {
+			&:first-child > .btn:first-child {
+				@include border-left-radius($btn-border-radius-sm);
+			}
+
+			&:last-child > .btn:last-child {
+				@include border-right-radius($btn-border-radius-sm);
+			}
+		}
+	}
+
+	.help-icon {
+		@include monospace(20px);
+	}
+}
