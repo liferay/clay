@@ -11,6 +11,10 @@ class ChartJSX extends JSXComponent {
 	render() {
 		return <div class="metal-chart"></div>;
 	}
+
+	shouldUpdate() {
+		return false;
+	}
 }
 
 Object.assign(ChartJSX.prototype, ChartBase);
