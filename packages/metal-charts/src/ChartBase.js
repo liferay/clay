@@ -4,6 +4,8 @@ import Component from 'metal-component';
 import {Config} from 'metal-state';
 import {bb, d3} from 'billboard.js';
 
+import types from './utils/types';
+
 const PROP_NAME_MAP = {
 	axis: 'axes',
 	class: 'classes',
@@ -502,7 +504,7 @@ ChartBase.STATE = {
 	 * @type {?Array|undefined}
 	 * @default []
 	 */
-	columns: Config.shapeOf({
+	columns: Config.arrayOf(Config.shapeOf({
 		axis: Config.string(),
 		class: Config.string(),
 		color: Config.string(),
@@ -510,9 +512,9 @@ ChartBase.STATE = {
 		id: Config.required().string(),
 		name: Config.string(),
 		regions: Config.array(),
-		type: Config.string(),
+		type: Config.oneOf(types.allTypes),
 		xs: Config.string()
-	}),
+	})),
 
 	/**
 	 * Configuration options for donut chart.
@@ -953,19 +955,7 @@ ChartBase.STATE = {
 	 * @type {?string|undefined}
 	 * @default line
 	 */
-	type: Config.oneOf([
-		'area',
-		'area-spline',
-		'area-step',
-		'bar',
-		'donut',
-		'gauge',
-		'line',
-		'pie',
-		'scatter',
-		'spline',
-		'step',
-	]).value('line'),
+	type: Config.oneOf(types.allTypes).value('line'),
 
 	/**
 	 * Load a CSV or JSON file from a URL.
