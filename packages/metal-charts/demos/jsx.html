@@ -315,13 +315,13 @@
 			typeSelect.value = type;
 
 			typeSelect.addEventListener('change', function(event) {
-				chart.type = typeSelect.value;
+				chart.props.type = typeSelect.value;
 			});
 
 			var dataSelect = chartControls.querySelector('.data');
 
 			dataSelect.addEventListener('change', function(event) {
-				chart.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
+				chart.props.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
 			});
 
 			element.parentNode.appendChild(chartControls);
