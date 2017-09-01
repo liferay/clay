@@ -237,66 +237,64 @@
 			]
 		};
 
-		var lineChart = new metal.Chart({
+		var lineChart = new metal.LineChart({
 			columns: dummyData.columns_1
 		}, '#line');
 		createChartControls(lineChart, 'line');
 
-		var splineChart = new metal.Chart({
-			columns: dummyData.columns_1,
-			type: 'spline'
+		var splineChart = new metal.SplineChart({
+			columns: dummyData.columns_1
 		}, '#spline');
 		createChartControls(splineChart, 'spline');
 
-		var stepChart = new metal.Chart({
-			columns: dummyData.columns_1,
-			type: 'step'
+		var stepChart = new metal.StepChart({
+			columns: dummyData.columns_1
 		}, '#step');
 		createChartControls(stepChart, 'step');
 
-		var areaChart = new metal.Chart({
+		var areaChart = new metal.LineChart({
 			columns: dummyData.columns_1,
 			type: 'area'
 		}, '#area');
 		createChartControls(areaChart, 'area');
 
-		var areaSplineChart = new metal.Chart({
+		var areaSplineChart = new metal.SplineChart({
 			columns: dummyData.columns_1,
 			type: 'area-spline'
 		}, '#area-spline');
 		createChartControls(areaSplineChart, 'area-spline');
 
-		var areaStepChart = new metal.Chart({
+		var areaStepChart = new metal.StepChart({
 			columns: dummyData.columns_1,
 			type: 'area-step'
 		}, '#area-step');
 		createChartControls(areaStepChart, 'area-step');
 
-		var barChart = new metal.Chart({
+		var barChart = new metal.BarChart({
 			columns: dummyData.columns_1,
 			type: 'bar'
 		}, '#bar');
 		createChartControls(barChart, 'bar');
 
-		var scatterChart = new metal.Chart({
+		var scatterChart = new metal.ScatterChart({
 			columns: dummyData.columns_1,
 			type: 'scatter'
 		}, '#scatter');
 		createChartControls(scatterChart, 'scatter');
 
-		var pieChart = new metal.Chart({
+		var pieChart = new metal.PieChart({
 			columns: dummyPercentData.columns_1,
 			type: 'pie'
 		}, '#pie');
 		createChartControls(pieChart, 'pie', dummyPercentData);
 
-		var donutChart = new metal.Chart({
+		var donutChart = new metal.DonutChart({
 			columns: dummyPercentData.columns_1,
 			type: 'donut'
 		}, '#donut');
 		createChartControls(donutChart, 'donut', dummyPercentData);
 
-		var gaugeChart = new metal.Chart({
+		var gaugeChart = new metal.GaugeChart({
 			columns: dummyGaugeData.columns_1,
 			type: 'gauge'
 		}, '#gauge');
