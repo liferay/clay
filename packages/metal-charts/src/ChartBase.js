@@ -157,10 +157,11 @@ const ChartBase = {
 
 	/**
 	 * Constructs `data` billboard config property.
+	 * @param {boolean} attachListeners
 	 * @return {Object}
 	 * @protected
 	 */
-	constructDataConfig_: function() {
+	constructDataConfig_: function(attachListeners=true) {
 		const state = this.getStateObj_();
 
 		const config = {
@@ -183,36 +184,38 @@ const ChartBase = {
 
 		Object.assign(config, columnsConfig);
 
-		/**
-		 * Point click event.
-		 * @event pointClick
-		 * @memberof ChartBase
-		 */
-		config.onclick = this.emitChartEvent_.bind(this, 'pointClick');
-		/**
-		 * Point mouse out event.
-		 * @event pointMouseout
-		 * @memberof ChartBase
-		 */
-		config.onout = this.emitChartEvent_.bind(this, 'pointMouseout');
-		/**
-		 * Point mouse over event.
-		 * @event pointMouseoever
-		 * @memberof ChartBase
-		 */
-		config.onover = this.emitChartEvent_.bind(this, 'pointMouseover');
-		/**
-		 * Data select event.
-		 * @event dataSelect
-		 * @memberof ChartBase
-		 */
-		config.onselect = this.emitChartEvent_.bind(this, 'dataSelect');
-		/**
-		 * Data unselected event.
-		 * @event dataUnselected
-		 * @memberof ChartBase
-		 */
-		config.onunselected = this.emitChartEvent_.bind(this, 'dataUnselected');
+		if (attachListeners) {
+			/**
+			 * Point click event.
+			 * @event pointClick
+			 * @memberof ChartBase
+			 */
+			config.onclick = this.emitChartEvent_.bind(this, 'pointClick');
+			/**
+			 * Point mouse out event.
+			 * @event pointMouseout
+			 * @memberof ChartBase
+			 */
+			config.onout = this.emitChartEvent_.bind(this, 'pointMouseout');
+			/**
+			 * Point mouse over event.
+			 * @event pointMouseoever
+			 * @memberof ChartBase
+			 */
+			config.onover = this.emitChartEvent_.bind(this, 'pointMouseover');
+			/**
+			 * Data select event.
+			 * @event dataSelect
+			 * @memberof ChartBase
+			 */
+			config.onselect = this.emitChartEvent_.bind(this, 'dataSelect');
+			/**
+			 * Data unselected event.
+			 * @event dataUnselected
+			 * @memberof ChartBase
+			 */
+			config.onunselected = this.emitChartEvent_.bind(this, 'dataUnselected');
+		}
 
 		return config;
 	},
@@ -285,7 +288,7 @@ const ChartBase = {
 	 * @protected
 	 */
 	handleColumnsChanged_: function({prevVal}) {
-		const data = this.constructDataConfig_();
+		const data = this.constructDataConfig_(false);
 
 		const newVal = data.columns;
 		prevVal = this.createColumnsArray_(prevVal);
