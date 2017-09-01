@@ -2,6 +2,7 @@
 
 import {Config} from 'metal-state';
 
+import {LineChart as LineChartBase} from '../LineChart';
 import Chart from './Chart';
 
 /**
@@ -11,25 +12,7 @@ import Chart from './Chart';
 class LineChart extends Chart {
 }
 
-LineChart.PROPS = {
-	/**
-	 * The variety of chart that will be rendered.
-	 * @instance
-	 * @memberof LineChart
-	 * @type {?string|undefined}
-	 * @default line
-	 */
-	type: Config.oneOf([
-		'area',
-		'area-spline',
-		'area-step',
-		'bar',
-		'line',
-		'scatter',
-		'spline',
-		'step',
-	]).value('line')
-};
+LineChart.PROPS = LineChartBase.STATE;
 
 export {LineChart};
 export default LineChart;

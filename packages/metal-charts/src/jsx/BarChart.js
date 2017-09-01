@@ -2,6 +2,7 @@
 
 import {Config} from 'metal-state';
 
+import {BarChart as BarChartBase} from '../BarChart';
 import Chart from './Chart';
 
 /**
@@ -11,25 +12,7 @@ import Chart from './Chart';
 class BarChart extends Chart {
 }
 
-BarChart.PROPS = {
-	/**
-	 * The variety of chart that will be rendered.
-	 * @instance
-	 * @memberof BarChart
-	 * @type {?string|undefined}
-	 * @default bar
-	 */
-	type: Config.oneOf([
-		'area',
-		'area-spline',
-		'area-step',
-		'bar',
-		'line',
-		'scatter',
-		'spline',
-		'step',
-	]).value('bar'),
-};
+BarChart.PROPS = BarChartBase.STATE;
 
 export {BarChart};
 export default BarChart;

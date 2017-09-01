@@ -2,6 +2,7 @@
 
 import {Config} from 'metal-state';
 
+import {DonutChart as DonutChartBase} from '../DonutChart';
 import Chart from './Chart';
 
 /**
@@ -11,19 +12,7 @@ import Chart from './Chart';
 class DonutChart extends Chart {
 }
 
-DonutChart.PROPS = {
-	/**
-	 * The variety of chart that will be rendered.
-	 * @instance
-	 * @memberof DonutChart
-	 * @type {?string|undefined}
-	 * @default donut
-	 */
-	type: Config.oneOf([
-		'donut',
-		'pie'
-	]).value('donut')
-};
+DonutChart.PROPS = DonutChartBase.STATE;
 
 export {DonutChart};
 export default DonutChart;

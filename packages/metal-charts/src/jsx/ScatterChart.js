@@ -2,6 +2,7 @@
 
 import {Config} from 'metal-state';
 
+import {ScatterChart as ScatterChartBase} from '../ScatterChart';
 import Chart from './Chart';
 
 /**
@@ -11,25 +12,7 @@ import Chart from './Chart';
 class ScatterChart extends Chart {
 }
 
-ScatterChart.PROPS = {
-	/**
-	 * The variety of chart that will be rendered.
-	 * @instance
-	 * @memberof ScatterChart
-	 * @type {?string|undefined}
-	 * @default scatter
-	 */
-	type: Config.oneOf([
-		'area',
-		'area-spline',
-		'area-step',
-		'bar',
-		'line',
-		'scatter',
-		'spline',
-		'step',
-	]).value('scatter')
-};
+ScatterChart.PROPS = ScatterChartBase.STATE;
 
 export {ScatterChart};
 export default ScatterChart;

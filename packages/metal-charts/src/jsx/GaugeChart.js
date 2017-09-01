@@ -2,6 +2,7 @@
 
 import {Config} from 'metal-state';
 
+import {GaugeChart as GaugeChartBase} from '../GaugeChart';
 import Chart from './Chart';
 
 /**
@@ -11,18 +12,7 @@ import Chart from './Chart';
 class GaugeChart extends Chart {
 }
 
-GaugeChart.PROPS = {
-	/**
-	 * The variety of chart that will be rendered.
-	 * @instance
-	 * @memberof GaugeChart
-	 * @type {?string|undefined}
-	 * @default gauge
-	 */
-	type: Config.oneOf([
-		'gauge'
-	]).value('gauge')
-};
+GaugeChart.PROPS = GaugeChartBase.STATE;
 
 export {GaugeChart};
 export default GaugeChart;

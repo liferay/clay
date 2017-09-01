@@ -2,6 +2,7 @@
 
 import {Config} from 'metal-state';
 
+import {StepChart as StepChartBase} from '../StepChart';
 import Chart from './Chart';
 
 /**
@@ -11,25 +12,7 @@ import Chart from './Chart';
 class StepChart extends Chart {
 }
 
-StepChart.PROPS = {
-	/**
-	 * The variety of chart that will be rendered.
-	 * @instance
-	 * @memberof StepChart
-	 * @type {?string|undefined}
-	 * @default step
-	 */
-	type: Config.oneOf([
-		'area',
-		'area-spline',
-		'area-step',
-		'bar',
-		'line',
-		'scatter',
-		'spline',
-		'step',
-	]).value('step')
-};
+StepChart.PROPS = StepChartBase.STATE;
 
 export {StepChart};
 export default StepChart;
