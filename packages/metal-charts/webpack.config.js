@@ -1,7 +1,10 @@
 const webpack = require('webpack');
 
 module.exports = {
-	entry: './src/charts.js',
+	entry: {
+		charts: './src/charts.js',
+		'charts-jsx': './src/jsx/charts.js'
+	},
 	module: {
 		rules: [{
 			test: /\.js$/,
@@ -28,7 +31,7 @@ module.exports = {
 	output: {
 		library: 'metal',
 		libraryTarget: 'this',
-		filename: './build/globals/metal-charts.js'
+		filename: './build/globals/metal-[name].js'
 	},
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin()

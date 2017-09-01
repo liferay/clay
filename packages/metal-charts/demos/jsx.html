@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Metal Charts</title>
+
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../node_modules/billboard.js/dist/billboard.css">
+
+	<script src="../build/globals/metal-charts-jsx.js"></script>
+
+	<style>
+		body {
+			margin: 20px 40px;
+			background-color: #eee;
+		}
+
+		h2 {
+			margin: 12px;
+		}
+
+		.metal-chart-example {
+			background-color: #FFF;
+			padding: 10px;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Metal Charts</h1>
+
+	<p>See <a href="https://naver.github.io/billboard.js/demo/">billboard.js</a> for more examples.</p>
+
+	<div class="metal-chart-example">
+		<h2>Line</h2>
+		<div id="line"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Spline</h2>
+		<div id="spline"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Step</h2>
+		<div id="step"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Area</h2>
+		<div id="area"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Area-spline</h2>
+		<div id="area-spline"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Area-step</h2>
+		<div id="area-step"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Bar</h2>
+		<div id="bar"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Scatter</h2>
+		<div id="scatter"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Pie</h2>
+		<div id="pie"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Donut</h2>
+		<div id="donut"></div>
+	</div>
+
+	<div class="metal-chart-example">
+		<h2>Gauge</h2>
+		<div id="gauge"></div>
+	</div>
+
+	<div id="controls" style="display: none;">
+		<label>
+			Change type:
+			<select class="type">
+				<option>line</option>
+				<option>spline</option>
+				<option>step</option>
+				<option>area</option>
+				<option>area-spline</option>
+				<option>area-step</option>
+				<option>bar</option>
+				<option>scatter</option>
+				<option>pie</option>
+				<option>donut</option>
+				<option>gauge</option>
+			</select>
+		</label>
+		<label>
+			Change data:
+			<select class="data">
+				<option>columns_1</option>
+				<option>columns_2</option>
+				<option>columns_3</option>
+				<option>columns_4</option>
+			</select>
+		</label>
+	</div>
+
+	<script type="text/javascript">
+		var dummyData = {
+			columns_1: [
+				{
+					id: 'data1',
+					data: [30, 200, 100, 400, 150, 250],
+				},
+				{
+					id: 'data2',
+					data: [50, 20, 10, 40, 15, 25],
+				}
+			],
+			columns_2: [
+				{
+					id: 'data1',
+					data: [230, 190, 300, 500, 300, 400],
+				},
+				{
+					id: 'data2',
+					data: [50, 20, 10, 40, 15, 25],
+				}
+			],
+			columns_3: [
+				{
+					id: 'data1',
+					data: [230, 190, 300, 500, 300, 400],
+				},
+				{
+					id: 'data2',
+					data: [50, 20, 10, 40, 15, 25],
+				},
+				{
+					id: 'data2',
+					data: [130, 150, 200, 300, 200, 100],
+				}
+			],
+			columns_4: [
+				{
+					id: 'data1',
+					data: [50, 20, 10, 40, 15, 25],
+				},
+				{
+					id: 'data2',
+					data: [130, 150, 200, 300, 200, 100],
+				}
+			]
+		};
+
+		var dummyPercentData = {
+			columns_1: [
+				{
+					id: 'data1',
+					data: [37.5]
+				},
+				{
+					id: 'data2',
+					data: [62.5]
+				}
+			],
+			columns_2: [
+				{
+					id: 'data1',
+					data: [22.9]
+				},
+				{
+					id: 'data2',
+					data: [77.1]
+				}
+			],
+			columns_3: [
+				{
+					id: 'data1',
+					data: [84]
+				},
+				{
+					id: 'data2',
+					data: [13]
+				},
+				{
+					id: 'data3',
+					data: [3]
+				}
+			],
+			columns_4: [
+				{
+					id: 'data1',
+					data: [50]
+				},
+				{
+					id: 'data2',
+					data: [50]
+				}
+			]
+		};
+
+		var dummyGaugeData = {
+			columns_1: [
+				{
+					id: 'data1',
+					data: [37.5]
+				}
+			],
+			columns_2: [
+				{
+					id: 'data1',
+					data: [22.9]
+				}
+			],
+			columns_3: [
+				{
+					id: 'data1',
+					data: [100]
+				}
+			],
+			columns_4: [
+				{
+					id: 'data2',
+					data: [37.5]
+				}
+			]
+		};
+
+		var lineChart = new metal.Chart({
+			columns: dummyData.columns_1
+		}, '#line');
+		createChartControls(lineChart, 'line');
+
+		var splineChart = new metal.Chart({
+			columns: dummyData.columns_1,
+			type: 'spline'
+		}, '#spline');
+		createChartControls(splineChart, 'spline');
+
+		var stepChart = new metal.Chart({
+			columns: dummyData.columns_1,
+			type: 'step'
+		}, '#step');
+		createChartControls(stepChart, 'step');
+
+		var areaChart = new metal.Chart({
+			columns: dummyData.columns_1,
+			type: 'area'
+		}, '#area');
+		createChartControls(areaChart, 'area');
+
+		var areaSplineChart = new metal.Chart({
+			columns: dummyData.columns_1,
+			type: 'area-spline'
+		}, '#area-spline');
+		createChartControls(areaSplineChart, 'area-spline');
+
+		var areaStepChart = new metal.Chart({
+			columns: dummyData.columns_1,
+			type: 'area-step'
+		}, '#area-step');
+		createChartControls(areaStepChart, 'area-step');
+
+		var barChart = new metal.Chart({
+			columns: dummyData.columns_1,
+			type: 'bar'
+		}, '#bar');
+		createChartControls(barChart, 'bar');
+
+		var scatterChart = new metal.Chart({
+			columns: dummyData.columns_1,
+			type: 'scatter'
+		}, '#scatter');
+		createChartControls(scatterChart, 'scatter');
+
+		var pieChart = new metal.Chart({
+			columns: dummyPercentData.columns_1,
+			type: 'pie'
+		}, '#pie');
+		createChartControls(pieChart, 'pie', dummyPercentData);
+
+		var donutChart = new metal.Chart({
+			columns: dummyPercentData.columns_1,
+			type: 'donut'
+		}, '#donut');
+		createChartControls(donutChart, 'donut', dummyPercentData);
+
+		var gaugeChart = new metal.Chart({
+			columns: dummyGaugeData.columns_1,
+			type: 'gauge'
+		}, '#gauge');
+		createChartControls(gaugeChart, 'gauge', dummyGaugeData);
+
+		function createChartControls(chart, type, data) {
+			var element = document.getElementById(type);
+
+			var controlsTemplate = document.getElementById('controls');
+
+			var chartControls = document.createElement('div');
+			chartControls.innerHTML = controlsTemplate.innerHTML;
+
+			var typeSelect = chartControls.querySelector('.type');
+
+			typeSelect.value = type;
+
+			typeSelect.addEventListener('change', function(event) {
+				chart.type = typeSelect.value;
+			});
+
+			var dataSelect = chartControls.querySelector('.data');
+
+			dataSelect.addEventListener('change', function(event) {
+				chart.columns = data ? data[dataSelect.value] : dummyData[dataSelect.value];
+			});
+
+			element.parentNode.appendChild(chartControls);
+		}
+	</script>
+</body>
+</html>
