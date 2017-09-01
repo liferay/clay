@@ -1,3 +1,46 @@
+### v2.0.0-alpha.8 - September 1, 2017
+* New: Global Functions added `setter($var, $val)` for setting default sass variable values
+* New: Added `.multi-step-bar` and options to configure `$multi-step-bar-bg`, `$multi-step-bar-border-radius`, `$multi-step-bar-color`, `$multi-step-bar-font-size`, `$multi-step-bar-height`, `$multi-step-bar-margin-bottom`, `$multi-step-bar-padding`
+* New: Globals readd `$font-family-serif` from BS3
+* New: Typography added `.section-header` and option to configure `$section-header-border-color`, `$section-header-border-style`, `$section-header-border-width`, `$section-header-color`, `$section-header-font-size`, `$section-header-font-weight`, `$section-header-line-height`, `$section-header-margin-bottom`, `$section-header-padding`, `$section-header-text-transform`
+* New: Nav Tabs added option to configure `$nav-tabs-tab-pane-bg`, `$nav-tabs-tab-pane-border-radius`, `$nav-tabs-tab-pane-padding`
+* Breaking: Update Bootstrap 4 to e0c95f8, Bootstrap requires jQuery3
+* Breaking: (Fixes #365) btn-action is definitely dropped
+* Breaking: Navbar move `$navbar-height`, `$navbar-border-bottom-width`, `$navbar-border-left-width`, `$navbar-border-right-width`, `$navbar-border-top-width`, `$navbar-border-width`, `$navbar-font-size`, `$navbar-link-padding-x`, `$navbar-link-padding-y`, `$navbar-active-border-bottom-width`, `$navbar-toggler-height`, `$navbar-toggler-margin-x`, `$navbar-toggler-margin-y`, `$navbar-toggler-link-font-size`, `$navbar-toggler-link-height`, `$navbar-toggler-link-line-height`, `$navbar-toggler-link-padding-x`, `$navbar-toggler-link-padding-y`, `$navbar-brand-margin-right`, `$navbar-brand-padding-x`, `$navbar-height-mobile`, `$navbar-font-size-mobile`, `$navbar-link-padding-x-mobile`, `$navbar-link-padding-y-mobile`, `$navbar-brand-font-size-mobile`, `$navbar-brand-margin-right-mobile`, `$navbar-brand-padding-x-mobile`, `$navbar-brand-padding-y-mobile`, `$navbar-toggler-margin-x-mobile`, `$navbar-toggler-link-font-size-mobile`, `$navbar-toggler-link-padding-x-mobile`, `$navbar-toggler-link-padding-y-mobile`, `$navbar-nav-item-dropdown-margin-top`, to `$navbar-size` Sass map
+* Breaking: Typography removed Blockquote Variants
+* Breaking: Typography removed `.monospace` and `.sans-serif` helper classes
+* Breaking: (Fixes #361) Toggle card is definitely dropped
+* Breaking: Breadcrumb vertical/stacked is definitely dropped
+* Update: Popper.js to 1.12.3
+* Update: Navbar added helper class `.navbar-d-breakpoint-inline-block`
+* Update: Atlas Navbar Sizes
+* Update: Navbar Size mixin brand-padding-x should inherit from link-padding-x
+* Update: Navbar moved sizing to navbar-size mixin
+* Update: Create `navbar-size($map)` mixin to help size navbars
+* Update: Nav Underline `.active.dropdown-toggle.nav-link` should be highlighted
+* Update: `$enable-scaling-navbar` should inherit value from `$enable-scaling-components`
+* Update: Navbar always set font size and added `$enable-scaling-navbar`
+* Update: Scaling components mixin to accept boolean value
+* Update: Navbar fix `.form-check` inside navbar
+* Update: Clay Base Navbar light and dark bg colors
+* Update: Dropdown dropdown-toggle should remove focus styles on `button` element when shown
+* Update: Multi Step Nav add buttons as link support
+* Update: Atlas Nav Tabs colors to Lexicon 2 first pass
+* Update: `.nav-tabs .nav-link.active` border-color should be more customizable
+* Fix: Panels variables missing semicolon
+* Fix: Navs variables missing semicolon
+* Fix: Alerts missing semicolon and default flag
+* Site: Change jQuery version to 3.2.1, Bootstrap 4 requires jQuery 3
+* Site: Recover menu-icon functionality, Add margin-top to page title
+* Site: Navbar docs mention new `.navbar-d-breakpoint-{inline-block|flex}` and `.navbar-d-breakpoint-down-none`
+* Site: Update Management Bar content to Clay 2
+* Site: Multi Step Nav add examples of buttons as links
+* Site: Typography display different font styles
+* Site: Add examples of `.section-header`
+* Site: Use BS4 blockquotes
+* Site: Clean up unused styles from removed pages
+* Site: Typography update markup to Clay 2
+
 ### v2.0.0-alpha.7 - August 28, 2017
 * New: Badges added `$badge-link-color` because `$badge-color` was removed from BS4
 * New: Table added `$table-divider-bg`
