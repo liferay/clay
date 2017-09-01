@@ -16,5 +16,9 @@ class ChartJSX extends JSXComponent {
 Object.assign(ChartJSX.prototype, ChartBase);
 ChartJSX.PROPS = ChartBase.STATE;
 
+ChartJSX.prototype.getStateObj_ = function() {
+	return this.props;
+};
+
 export {ChartJSX};
 export default ChartJSX;
