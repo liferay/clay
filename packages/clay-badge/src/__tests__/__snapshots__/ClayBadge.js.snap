@@ -6,6 +6,8 @@ exports[`ClayBadge should render a \`danger color\` badge 1`] = `<span class="ba
 
 exports[`ClayBadge should render a \`dark color\` badge 1`] = `<span class="badge badge-pill badge-dark"></span>`;
 
+exports[`ClayBadge should render a \`default color\` badge 1`] = `<span class="badge badge-pill badge-primary"></span>`;
+
 exports[`ClayBadge should render a \`info color\` badge 1`] = `<span class="badge badge-pill badge-info"></span>`;
 
 exports[`ClayBadge should render a \`light color\` badge 1`] = `<span class="badge badge-pill badge-light"></span>`;

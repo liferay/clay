@@ -212,13 +212,9 @@
 		new metal.ClayBadge(
 			{
 				label: 'Primary',
-				closeable: {
-					monospaced: false,
-					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
-					symbol: 'times'
-				},
+				closeable: true,
+				spritemap: '../node_modules/clay/build/images/icons/icons.svg',
 				size: 'sm',
-				href: "#primary",
 				events: {
 					click: {
 						selector: '.close',
@@ -232,11 +228,8 @@
 		new metal.ClayBadge(
 			{
 				label: 'Secondary',
-				closeable: {
-					monospaced: false,
-					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
-					symbol: 'times'
-				},
+				closeable: true,
+				spritemap: '../node_modules/clay/build/images/icons/icons.svg',
 				style: 'secondary',
 				events: {
 					click: {

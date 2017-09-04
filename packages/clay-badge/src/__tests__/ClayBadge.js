@@ -60,12 +60,15 @@ describe('ClayBadge', function() {
 	it('should render a badge with closeable', () => {
 		badge = new ClayBadge({
 			label: 'Badge',
-			closeable: {
-				monospaced: false,
-				spritemap: 'icons.svg',
-				symbol: 'times',
-			},
+			closeable: true,
+			spritemap: 'icons.svg',
 		});
+
+		expect(badge).toMatchSnapshot();
+	});
+
+	it('should render a `default color` badge', () => {
+		badge = new ClayBadge();
 
 		expect(badge).toMatchSnapshot();
 	});

@@ -20,17 +20,13 @@ class ClayBadge extends Component {}
  */
 ClayBadge.STATE = {
 	/**
-	 * Render Button with ClayIcon in the ClayBadge element.
+	 * True or false to activate the close button.
 	 * @instance
 	 * @memberof ClayBadge
 	 * @type {?bool|undefined}
 	 * @default undefined
 	 */
-	closeable: Config.shapeOf({
-		monospaced: Config.bool(),
-		spritemap: Config.string().required(),
-		symbol: Config.string().required(),
-	}),
+	closeable: Config.bool(),
 
 	/**
 	 * HREF in all badge.
@@ -67,6 +63,15 @@ ClayBadge.STATE = {
 	 * default undefined
 	 */
 	size: Config.oneOf(['sm', 'lg']),
+
+	/**
+	 * The path to the SVG spritemap file containing the icons.
+	 * @instance
+	 * @memberof ClayBadge
+	 * @type {!string}
+	 * @default undefined
+	 */
+	spritemap: Config.string(),
 
 	/**
 	 * Badge style color.
