@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: ClayBadge</title>
+
+	<link rel="stylesheet" href="../node_modules/clay/build/css/atlas.css">
+
+	<script src="../build/globals/clay-badge.js"></script>
+</head>
+<body class="container">
+	<h1 class="page-title">
+			Badges
+	</h1>
+	
+	<div class="clay-site-row-spacer row">
+		<div class="col-md-12">
+			<h3 id="badges"><a class="heading-anchor" href="#badges"></a>Badges</h3>
+			
+			<div id="styles-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col-md-12">
+			<h3 id="badges-as-anchor-tag"><a class="heading-anchor" href="#badges-as-anchor-tag"></a>Badges as Anchor tag</h3>
+			
+			<div id="anchor-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col-md-12">
+			<h3 id="badge-sizes"><a class="heading-anchor" href="#badge-sizes"></a>Badges Sizes</h3>
+			
+			<div id="sizes-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col-md-12">
+			<h3 id="badge-with-event-click"><a class="heading-anchor" href="#badge-with-event-click"></a>Badge with event click</h3>
+			
+			<div id="event-block"></div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		new metal.ClayBadge(
+			{
+				label: '8',
+				style: 'primary'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '87',
+				style: 'secondary'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '999K',
+				style: 'success'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '91',
+				style: 'info'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '21',
+				style: 'warning'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '130',
+				style: 'danger'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '130',
+				style: 'light'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: '130',
+				style: 'dark'
+			},
+			'#styles-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Primary',
+				style: 'primary',
+				href: '#1'
+			},
+			'#anchor-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Secondary',
+				style: 'secondary',
+				href: '#1'
+			},
+			'#anchor-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Success',
+				style: 'success',
+				href: '#1'
+			},
+			'#anchor-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Info',
+				style: 'info',
+				href: '#1'
+			},
+			'#anchor-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Warning',
+				style: 'warning',
+				href: '#1'
+			},
+			'#anchor-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Danger',
+				style: 'danger',
+				href: '#1'
+			},
+			'#anchor-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Light',
+				style: 'light',
+				href: '#1'
+			},
+			'#anchor-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Dark',
+				style: 'dark',
+				href: '#1'
+			},
+			'#anchor-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Small Badge',
+				style: 'primary',
+				size: 'sm'
+			},
+			'#sizes-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Normal Badge',
+				style: 'secondary'
+			},
+			'#sizes-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Large Badge',
+				style: 'success',
+				size: 'lg'
+			},
+			'#sizes-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Primary',
+				closeable: {
+					monospaced: false,
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'times'
+				},
+				size: 'sm',
+				href: "#primary",
+				events: {
+					click: {
+						selector: '.close',
+						fn: handleClickIcon
+					}
+				}
+			},
+			'#event-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Secondary',
+				closeable: {
+					monospaced: false,
+					spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+					symbol: 'times'
+				},
+				style: 'secondary',
+				events: {
+					click: {
+						selector: '.close',
+						fn: handleClickIcon
+					}
+				}
+			},
+			'#event-block'
+		);
+
+		new metal.ClayBadge(
+			{
+				label: 'Success',
+				style: 'success',
+				size: 'lg',
+				events: {
+					click: handleClick
+				}
+			},
+			'#event-block'
+		);
+
+		function handleClick(event) {
+			console.log(event);
+		}
+
+		function handleClickIcon(event) {
+			event.stopPropagation();
+
+			this.visible = false;
+		}
+	</script>
+</body>
+</html>

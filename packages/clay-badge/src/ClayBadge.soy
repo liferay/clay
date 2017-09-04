@@ -1,0 +1,91 @@
+{namespace ClayBadge}
+
+/**
+ * This renders a badge.
+ */
+{template .render}
+	{@param? closeable: [
+		monospaced: bool,
+		spritemap: string,
+		symbol: string
+	]}
+	{@param? href: string}
+	{@param? id: string}
+	{@param? label: html|string}
+	{@param? size: string}
+	{@param? style: string}
+
+	{let $classes kind="text"}
+		badge badge-pill
+		{sp}badge-{$style ?: 'default'}
+
+		{if $size}
+			{sp}badge-{$size}
+		{/if}
+	{/let}
+
+	{let $attributes kind="attributes"}
+		class="{$classes}"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	{if $href}
+		{call ClayLink.render}
+			{param href: $href /}
+			{param label: $label /}
+			{param id: $id /}
+			{param elementClasses: $classes /}
+		{/call}
+	{else}
+		<span {$attributes}>
+			{call .content}
+				{param closeable: $closeable /}
+				{param label: $label /}
+			{/call}
+		</span>
+	{/if}
+
+{/template}
+
+/**
+ * Renders icon content
+ */
+{template .content}
+	{@param? closeable: [
+		monospaced: bool,
+		spritemap: string,
+		symbol: string
+	]}
+	{@param? label: html|string}
+
+	{$label ? $label : ''}
+
+	{if $closeable}
+		<button aria-label="Close" class="close" type="button">
+			{call .icon}
+				{param icon: $closeable /}
+			{/call}
+		</button>
+	{/if}
+{/template}
+
+
+/**
+ * Renders icon element
+ */
+{template .icon}
+	{@param? icon: [
+		monospaced: bool,
+		spritemap: string,
+		symbol: string
+	]}
+
+	{call ClayIcon.render}
+		{param monospaced: $icon.monospaced /}
+		{param spritemap: $icon.spritemap /}
+		{param symbol: $icon.symbol /}
+	{/call}
+{/template}

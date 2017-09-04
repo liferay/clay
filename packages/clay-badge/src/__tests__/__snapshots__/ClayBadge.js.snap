@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayBadge should generate the default markup 1`] = `<span class="badge badge-pill badge-primary"></span>`;
+
+exports[`ClayBadge should render a \`danger color\` badge 1`] = `<span class="badge badge-pill badge-danger"></span>`;
+
+exports[`ClayBadge should render a \`dark color\` badge 1`] = `<span class="badge badge-pill badge-dark"></span>`;
+
+exports[`ClayBadge should render a \`info color\` badge 1`] = `<span class="badge badge-pill badge-info"></span>`;
+
+exports[`ClayBadge should render a \`light color\` badge 1`] = `<span class="badge badge-pill badge-light"></span>`;
+
+exports[`ClayBadge should render a \`primary color\` badge 1`] = `<span class="badge badge-pill badge-primary"></span>`;
+
+exports[`ClayBadge should render a \`secondary color\` badge 1`] = `<span class="badge badge-pill badge-secondary"></span>`;
+
+exports[`ClayBadge should render a \`success color\` badge 1`] = `<span class="badge badge-pill badge-success"></span>`;
+
+exports[`ClayBadge should render a \`warning color\` badge 1`] = `<span class="badge badge-pill badge-warning"></span>`;
+
+exports[`ClayBadge should render a badge with closeable 1`] = `
+<span class="badge badge-pill badge-primary">Badge
+  <button aria-label="Close" class="close" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+      <use xlink:href="icons.svg#times"></use>
+    </svg>
+  </button>
+</span>
+`;
+
+exports[`ClayBadge should render a badge with href 1`] = `<a class=" badge badge-pill badge-primary" href="#1"></a>`;
+
+exports[`ClayBadge should render a badge with id 1`] = `<span class="badge badge-pill badge-primary" id="myBadge"></span>`;
+
+exports[`ClayBadge should render a badge with label 1`] = `<span class="badge badge-pill badge-primary">Primary</span>`;
+
+exports[`ClayBadge should render a large badge 1`] = `<span class="badge badge-pill badge-primary badge-lg"></span>`;
+
+exports[`ClayBadge should render a small badge 1`] = `<span class="badge badge-pill badge-primary badge-sm"></span>`;
