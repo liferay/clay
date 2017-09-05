@@ -237,6 +237,7 @@
 }
 
 .input-group-inset-item {
+	color: $input-group-inset-item-color;
 	right: ($input-height-inner - ($input-height-inner * 0.75)) / 2;
 	position: absolute;
 	top: 50%;
@@ -261,6 +262,10 @@
 				height: $input-height-inner-mobile * 0.75;
 			}
 		}
+	}
+
+	.btn-unstyled {
+		color: inherit;
 	}
 }
 
