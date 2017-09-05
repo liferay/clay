@@ -112,5 +112,4 @@ $input-group-secondary-addon-border-color: lighten($btn-secondary-color, 37%) !d
 
 // Input Group Transparent
 
-$input-group-transparent-addon-border-color: #DDD !default;
-$input-group-transparent-addon-color: #BBB !default;
+$input-group-transparent-addon-color: map-get($theme-colors, secondary) !default;

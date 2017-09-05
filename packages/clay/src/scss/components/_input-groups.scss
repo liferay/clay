@@ -164,6 +164,30 @@
 		}
 	}
 
+	.btn-unstyled {
+		border-width: 0;
+		color: $input-group-transparent-addon-color;
+		font-size: setter($btn-font-size, 1rem);
+		padding-left: $input-btn-padding-x;
+		padding-right: $input-btn-padding-x;
+	}
+
+	.input-group-btn {
+		.btn,
+		&:not(:last-child) > .btn:not(:first-child),
+		&:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle) {
+			@include border-radius($btn-border-radius);
+		}
+
+		&:last-child > .btn {
+			margin-left: $input-btn-border-width;
+		}
+
+		&:not(:last-child) > .btn {
+			margin-right: $input-btn-border-width;
+		}
+	}
+
 	.input-group-addon {
 		background-color: $input-group-transparent-addon-bg;
 		border-color: $input-group-transparent-addon-border-color;
