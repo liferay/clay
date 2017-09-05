@@ -79,6 +79,8 @@
 // Nav Tabs
 
 .nav-tabs {
+	font-size: $nav-tabs-font-size;
+
 	.nav-link.active {
 		border-color: $nav-tabs-link-active-border-color;
 	}
@@ -139,6 +141,8 @@
 }
 
 .nav-underline {
+	font-size: $nav-underline-font-size;
+
 	.nav-link {
 		color: $nav-underline-link-color;
 		padding: $nav-underline-link-padding-y $nav-underline-link-padding-x;
