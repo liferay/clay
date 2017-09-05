@@ -90,6 +90,7 @@
 
 	.nav-link {
 		color: $nav-tabs-link-color;
+		padding: $nav-tabs-link-padding-y $nav-tabs-link-padding-x;
 		white-space: nowrap;
 	}
 
@@ -140,6 +141,7 @@
 .nav-underline {
 	.nav-link {
 		color: $nav-underline-link-color;
+		padding: $nav-underline-link-padding-y $nav-underline-link-padding-x;
 
 		@include hover-focus {
 			color: $nav-underline-link-hover-color;
