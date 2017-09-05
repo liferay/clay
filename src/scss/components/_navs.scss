@@ -134,6 +134,24 @@
 	.nav-link.disabled {
 		color: $nav-underline-link-disabled-color;
 	}
+
+	.dropdown-item[data-toggle="tab"] {
+		.dropdown-item-indicator {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			display: block;
+			height: 100%;
+			top: 0;
+			width: 1em;
+		}
+	}
+
+	.active.dropdown-item[data-toggle="tab"] {
+		.dropdown-item-indicator {
+			background-image: lx-icon(check, $dropdown-link-active-color);
+		}
+	}
 }
 
 // Nav Tabs

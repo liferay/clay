@@ -1,4 +1,4 @@
-$nav-link-color: #2B4259 !default;
+$nav-link-color: $body-color !default;
 $nav-link-hover-color: inherit !default;
 $nav-link-active-color: map-get($theme-colors, primary) !default;
 $nav-link-disabled-color: #C5CDD0 !default;
@@ -16,7 +16,14 @@ $nav-nested-spacer-x: 0.75rem !default; // 12px
 // Nav Underline
 
 $nav-underline-link-color: map-get($theme-colors, secondary) !default;
+
+$nav-underline-link-highlight-left: 0 !default;
+$nav-underline-link-highlight-right: 0 !default;
+
 $nav-underline-link-disabled-color: $nav-link-disabled-color !default;
+
+$nav-underline-link-active-color: $body-color !default;
+$nav-underline-link-active-highlight: lighten(map-get($theme-colors, primary), 22%) !default;
 
 // Nav Pills
 
@@ -35,7 +42,7 @@ $nav-tabs-link-active-color: $body-color !default;
 $nav-tabs-link-active-bg: #FFF !default;
 
 $nav-tabs-link-active-border-color: transparent transparent $body-bg !default;
-$nav-tabs-link-show-color: inherit !default;
+$nav-tabs-link-show-color: $nav-tabs-link-active-color !default;
 $nav-tabs-link-show-border-color: transparent transparent $nav-tabs-border-color transparent !default;
 
 $nav-tabs-tab-pane-bg: #FFF !default;
