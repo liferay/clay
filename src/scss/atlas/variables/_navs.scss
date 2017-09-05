@@ -35,6 +35,7 @@ $nav-pills-active-link-color: #FFF !default;
 // Nav Tabs
 
 $nav-tabs-border-color: transparent !default;
+$nav-tabs-link-color: map-get($theme-colors, secondary) !default;
 
 $nav-tabs-link-hover-border-color: transparent !default;
 
