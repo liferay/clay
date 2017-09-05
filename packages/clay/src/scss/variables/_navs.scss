@@ -18,8 +18,8 @@ $nav-underline-link-hover-color: null !default;
 $nav-underline-link-highlight-content: null !default;
 $nav-underline-link-highlight-height: null !default;
 $nav-underline-link-highlight-bottom: 0 !default;
-$nav-underline-link-highlight-left: $nav-link-padding-x !default;
-$nav-underline-link-highlight-right: $nav-link-padding-x !default;
+$nav-underline-link-highlight-left: $nav-link-padding-x / 2 !default;
+$nav-underline-link-highlight-right: $nav-link-padding-x / 2 !default;
 $nav-underline-link-highlight-top: null !default;
 
 $nav-underline-link-disabled-color: null !default;
