@@ -28,6 +28,11 @@ label {
 		color: $input-label-focus-color;
 	}
 
+	+ .form-text {
+		margin-bottom: $input-label-margin-bottom;
+		margin-top: 0;
+	}
+
 	.reference-mark {
 		color: $input-label-reference-mark-color;
 		margin-left: $input-label-reference-mark-spacer;
