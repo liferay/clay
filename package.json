@@ -3,7 +3,7 @@
     "build": "lerna run build",
     "format": "prettier --use-tabs true --tab-width 4 --single-quote --trailing-comma all --write packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "lerna": "lerna bootstrap -- --no-optional && npm install --no-optional",
-    "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
+    "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
     "mcritic": "mcritic packages/",
     "precommit": "lint-staged",
     "start": "http-server . -p 4000",
