@@ -512,7 +512,7 @@ ChartBase.STATE = {
 		id: Config.required().string(),
 		name: Config.string(),
 		regions: Config.array(),
-		type: Config.oneOf(types.allTypes),
+		type: Config.oneOf(types.all),
 		xs: Config.string()
 	})),
 
