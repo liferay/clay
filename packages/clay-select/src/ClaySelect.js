@@ -66,7 +66,7 @@ ClaySelect.STATE = {
 	 * Options of the select element.
 	 * @instance
 	 * @memberof ClaySelect
-	 * @type {?array|undefined}
+	 * @type {!array}
 	 * @default undefined
 	 */
 	options: Config.arrayOf(
@@ -75,7 +75,7 @@ ClaySelect.STATE = {
 			selected: Config.bool(),
 			value: Config.string().required(),
 		}),
-	),
+	).required(),
 
 	/**
 	 * Type of the select wrapper element.
