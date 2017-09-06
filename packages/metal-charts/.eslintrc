@@ -1,11 +1,20 @@
 {
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
-  },
-  "rules": {
-  	"camelcase":"off",
-  	"object-curly-spacing": "off"
-  }
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jest": true,
+		"node": true
+	},
+	"extends": "liferay",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"camelcase": "off",
+		"object-curly-spacing": "off",
+		"prefer-rest-params": "off",
+		"prefer-spread": "off"
+	}
 }
