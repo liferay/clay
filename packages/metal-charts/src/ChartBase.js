@@ -955,7 +955,7 @@ ChartBase.STATE = {
 	 * @type {?string|undefined}
 	 * @default line
 	 */
-	type: Config.oneOf(types.allTypes).value('line'),
+	type: Config.oneOf(types.all).value('line'),
 
 	/**
 	 * Load a CSV or JSON file from a URL.
