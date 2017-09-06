@@ -382,7 +382,7 @@ ChartBase.STATE = {
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
-	axisX: {
+	axisX: Config.shapeOf({
 		categories: Config.array(),
 		extent: Config.array(),
 		height: Config.number(),
@@ -407,7 +407,7 @@ ChartBase.STATE = {
 			width: Config.number()
 		}),
 		type: Config.oneOf(['category', 'indexed', 'timeseries'])
-	},
+	}),
 
 	/**
 	 * Styling and behavior of y2 axis.
@@ -441,7 +441,7 @@ ChartBase.STATE = {
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
-	axisY: {
+	axisY: Config.shapeOf({
 		center: Config.number(),
 		default: Config.array(),
 		format: Config.func(),
@@ -458,7 +458,7 @@ ChartBase.STATE = {
 			values: Config.array(),
 		}),
 		type: Config.oneOf(['category', 'indexed', 'timeseries'])
-	},
+	}),
 
 	/**
 	 * Styling and behavior of bars.
@@ -502,7 +502,7 @@ ChartBase.STATE = {
 	 * @instance
 	 * @memberof ChartBase
 	 * @type {?Array|undefined}
-	 * @default []
+	 * @default undefined
 	 */
 	columns: Config.arrayOf(Config.shapeOf({
 		axis: Config.string(),
@@ -540,17 +540,17 @@ ChartBase.STATE = {
 	 * Sets label for when no data is loaded.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?String|undefined}
-	 * @default ""
+	 * @type {?string|undefined}
+	 * @default undefined
 	 */
 	emptyLabelText: Config.string().setter(value => {
-		return {
+		return value ? {
 			empty: {
 				label: {
 					text: value
 				}
 			}
-		}
+		} : value;
 	}),
 
 	/**
@@ -614,7 +614,7 @@ ChartBase.STATE = {
 	 * @instance
 	 * @memberof ChartBase
 	 * @type {?Array|undefined}
-	 * @default []
+	 * @default undefined
 	 */
 	groups: Config.array(),
 
@@ -622,16 +622,16 @@ ChartBase.STATE = {
 	 * Sets billboard's data.hide config.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Array|bool|undefined}
-	 * @default []
+	 * @type {?Array|boolean|undefined}
+	 * @default false
 	 */
 	hide: Config.array().bool().value(false),
 
 	/**
-	 * intersection TODO.
+	 * Intersection display options.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
+	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
 	intersection: Config.shapeOf({
@@ -647,8 +647,8 @@ ChartBase.STATE = {
 	 * Sets billboard's data.json config.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Array|bool|undefined}
-	 * @default []
+	 * @type {?Array|boolean|undefined}
+	 * @default undefined
 	 */
 	json: Config.array(),
 
@@ -657,12 +657,12 @@ ChartBase.STATE = {
 	 * @instance
 	 * @memberof ChartBase
 	 * @type {?Array|undefined}
-	 * @default []
+	 * @default undefined
 	 */
 	keys: Config.array().setter(value => {
-		return {
+		return value ? {
 			value
-		}
+		} : value;
 	}),
 
 	/**
@@ -670,10 +670,13 @@ ChartBase.STATE = {
 	 * @instance
 	 * @memberof ChartBase
 	 * @type {?boolean|function|undefined}
-	 * @default {}
+	 * @default undefined
 	 */
 	labels: Config.bool().func().setter(value => {
-		if (typeof value === 'boolean') {
+		if (!value) {
+			return value;
+		}
+		else if (typeof value === 'boolean') {
 			return {
 				labels: value
 			}
@@ -688,14 +691,13 @@ ChartBase.STATE = {
 	}),
 
 	/**
-	 * legend TODO.
+	 * Legend display options.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
+	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
 	legend: Config.shapeOf({
-		show: Config.bool(),
 		hide: Config.bool(),
 		position: Config.oneOf(['bottom', 'inset', 'right']),
 		inset: Config.shapeOf({
@@ -704,14 +706,15 @@ ChartBase.STATE = {
 			step: Config.number(),
 			x: Config.number(),
 			y: Config.number()
-		})
+		}),
+		show: Config.bool()
 	}),
 
 	/**
 	 * Display settings for chart lines.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
+	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
 	line: Config.shapeOf({
@@ -743,7 +746,7 @@ ChartBase.STATE = {
 	 * Sets padding on chart.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
+	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
 	padding: Config.shapeOf({
@@ -796,8 +799,8 @@ ChartBase.STATE = {
 	 * Creates custom regions on chart that can be styled.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?Object|undefined}
+	 * @default undefined
 	 */
 	regions: Config.shapeOf({
 		class: Config.string(),
@@ -814,9 +817,9 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	resizeAuto: Config.bool().setter(value => {
-		return {
+		return value ? {
 			auto: value
-		}
+		} : value;
 	}),
 
 	/**
@@ -833,7 +836,7 @@ ChartBase.STATE = {
 	 * Sets billboard's `data.selection` config.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
+	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
 	selection: Config.shapeOf({
@@ -848,8 +851,8 @@ ChartBase.STATE = {
 	 * Sets size of chart.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?Object|undefined}
+	 * @default undefined
 	 */
 	size: Config.shapeOf({
 		height: Config.number(),
@@ -864,19 +867,19 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	splineInterpolationType: Config.string().setter(value => {
-		return {
+		return value ? {
 			interpolation: {
 				type: value
 			}
-		}
+		} : value;
 	}),
 
 	/**
 	 * Config options for subcharts.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?Object|undefined}
+	 * @default undefined
 	 */
 	subchart: Config.shapeOf({
 		show: Config.bool(),
@@ -894,17 +897,17 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	svgClassname: Config.string().setter(value => {
-		return {
+		return value ? {
 			classname: value
-		}
+		} : value;
 	}),
 
 	/**
 	 * Display options for title element.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?Object|undefined}
+	 * @default undefined
 	 */
 	title: Config.shapeOf({
 		text: Config.string(),
@@ -921,8 +924,8 @@ ChartBase.STATE = {
 	 * Display options for tooltip.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?Object|undefined}
+	 * @default undefined
 	 */
 	tooltip: Config.shapeOf({
 		show: Config.bool(),
@@ -943,9 +946,9 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	transitionDuration: Config.number().setter(value => {
-		return {
+		return value ? {
 			duration: value
-		}
+		} : value;
 	}),
 
 	/**
@@ -970,8 +973,8 @@ ChartBase.STATE = {
 	 * Configuration for bb chart zoom capabilities.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?object|undefined}
-	 * @default {}
+	 * @type {?Object|undefined}
+	 * @default undefined
 	 */
 	zoom: Config.shapeOf({
 		enabled: Config.bool().value(true),
