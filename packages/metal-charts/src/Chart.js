@@ -10,8 +10,7 @@ import templates from './Chart.soy.js';
  * Metal Chart component.
  * @augments Component
  */
-class Chart extends Component {
-}
+class Chart extends Component {}
 
 Object.assign(Chart.prototype, ChartBase);
 Chart.STATE = ChartBase.STATE;

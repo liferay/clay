@@ -1,6 +1,6 @@
 'use strict';
 
-import {Config} from 'metal-state';
+import { Config } from 'metal-state';
 
 import Chart from './Chart';
 import types from './utils/types';
@@ -9,8 +9,7 @@ import types from './utils/types';
  * Guage Chart component.
  * @augments Chart
  */
-class GaugeChart extends Chart {
-}
+class GaugeChart extends Chart {}
 
 GaugeChart.STATE = {
 	/**
@@ -20,17 +19,19 @@ GaugeChart.STATE = {
 	 * @type {?Array|undefined}
 	 * @default []
 	 */
-	columns: Config.arrayOf(Config.shapeOf({
-		axis: Config.string(),
-		class: Config.string(),
-		color: Config.string(),
-		data: Config.array().required(),
-		id: Config.required().string(),
-		name: Config.string(),
-		regions: Config.array(),
-		type: Config.oneOf(types.gauge),
-		xs: Config.string()
-	})),
+	columns: Config.arrayOf(
+		Config.shapeOf({
+			axis: Config.string(),
+			class: Config.string(),
+			color: Config.string(),
+			data: Config.array().required(),
+			id: Config.required().string(),
+			name: Config.string(),
+			regions: Config.array(),
+			type: Config.oneOf(types.gauge),
+			xs: Config.string(),
+		}),
+	),
 
 	/**
 	 * The variety of chart that will be rendered.
@@ -39,8 +40,8 @@ GaugeChart.STATE = {
 	 * @type {?string|undefined}
 	 * @default gauge
 	 */
-	type: Config.oneOf(types.gauge).value('gauge')
+	type: Config.oneOf(types.gauge).value('gauge'),
 };
 
-export {GaugeChart};
+export { GaugeChart };
 export default GaugeChart;

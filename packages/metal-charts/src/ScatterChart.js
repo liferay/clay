@@ -1,6 +1,6 @@
 'use strict';
 
-import {Config} from 'metal-state';
+import { Config } from 'metal-state';
 
 import Chart from './Chart';
 import types from './utils/types';
@@ -9,8 +9,7 @@ import types from './utils/types';
  * Scatter Chart component.
  * @augments Chart
  */
-class ScatterChart extends Chart {
-}
+class ScatterChart extends Chart {}
 
 ScatterChart.STATE = {
 	/**
@@ -20,17 +19,19 @@ ScatterChart.STATE = {
 	 * @type {?Array|undefined}
 	 * @default []
 	 */
-	columns: Config.arrayOf(Config.shapeOf({
-		axis: Config.string(),
-		class: Config.string(),
-		color: Config.string(),
-		data: Config.array().required(),
-		id: Config.required().string(),
-		name: Config.string(),
-		regions: Config.array(),
-		type: Config.oneOf(types.point),
-		xs: Config.string()
-	})),
+	columns: Config.arrayOf(
+		Config.shapeOf({
+			axis: Config.string(),
+			class: Config.string(),
+			color: Config.string(),
+			data: Config.array().required(),
+			id: Config.required().string(),
+			name: Config.string(),
+			regions: Config.array(),
+			type: Config.oneOf(types.point),
+			xs: Config.string(),
+		}),
+	),
 
 	/**
 	 * The variety of chart that will be rendered.
@@ -39,8 +40,8 @@ ScatterChart.STATE = {
 	 * @type {?string|undefined}
 	 * @default scatter
 	 */
-	type: Config.oneOf(types.point).value('scatter')
+	type: Config.oneOf(types.point).value('scatter'),
 };
 
-export {ScatterChart};
+export { ScatterChart };
 export default ScatterChart;

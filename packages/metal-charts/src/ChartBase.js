@@ -1,8 +1,8 @@
 'use strict';
 
 import Component from 'metal-component';
-import {Config} from 'metal-state';
-import {bb, d3} from 'billboard.js';
+import { Config } from 'metal-state';
+import { bb, d3 } from 'billboard.js';
 
 import types from './utils/types';
 
@@ -13,7 +13,7 @@ const PROP_NAME_MAP = {
 	name: 'names',
 	regions: 'regions',
 	type: 'types',
-	xs: 'xs'
+	xs: 'xs',
 };
 
 /**
@@ -46,8 +46,8 @@ const ChartBase = {
 			rotated: state.axisRotated,
 			x: state.axisX,
 			y2: state.axisY2,
-			y: state.axisY
-		}
+			y: state.axisY,
+		};
 	},
 
 	/**
@@ -81,7 +81,7 @@ const ChartBase = {
 			title: state.title,
 			tooltip: state.tooltip,
 			transition: state.transitionDuration,
-			zoom: state.zoom
+			zoom: state.zoom,
 		};
 
 		/**
@@ -130,16 +130,16 @@ const ChartBase = {
 	 * @protected
 	 */
 	constructColumnsConfig_: function() {
-		const {columns} = this.getStateObj_();
+		const { columns } = this.getStateObj_();
 
 		const config = {
-			columns: this.createColumnsArray_(columns)
+			columns: this.createColumnsArray_(columns),
 		};
 
 		for (let i = 0; i < columns.length; i++) {
 			const column = columns[i];
 
-			const {id} = column;
+			const { id } = column;
 
 			const keys = Object.keys(column);
 
@@ -147,7 +147,8 @@ const ChartBase = {
 				const key = keys[j];
 
 				if (key !== 'data' && key !== 'id') {
-					config[PROP_NAME_MAP[key]] = config[PROP_NAME_MAP[key]] || {};
+					config[PROP_NAME_MAP[key]] =
+						config[PROP_NAME_MAP[key]] || {};
 
 					config[PROP_NAME_MAP[key]][id] = column[key];
 				}
@@ -163,7 +164,7 @@ const ChartBase = {
 	 * @return {Object}
 	 * @protected
 	 */
-	constructDataConfig_: function(attachListeners=true) {
+	constructDataConfig_: function(attachListeners = true) {
 		const state = this.getStateObj_();
 
 		const config = {
@@ -179,7 +180,7 @@ const ChartBase = {
 			rows: state.rows,
 			selection: state.selection,
 			type: state.type,
-			url: state.url
+			url: state.url,
 		};
 
 		const columnsConfig = this.constructColumnsConfig_();
@@ -216,7 +217,10 @@ const ChartBase = {
 			 * @event dataUnselected
 			 * @memberof ChartBase
 			 */
-			config.onunselected = this.emitChartEvent_.bind(this, 'dataUnselected');
+			config.onunselected = this.emitChartEvent_.bind(
+				this,
+				'dataUnselected',
+			);
 		}
 
 		return config;
@@ -263,7 +267,7 @@ const ChartBase = {
 	 * @protected
 	 */
 	createColumnsArray_: function(columns) {
-		return columns.map(({data, id}) => {
+		return columns.map(({ data, id }) => {
 			return [id].concat(data);
 		});
 	},
@@ -289,7 +293,7 @@ const ChartBase = {
 	 * Maps `columns` state to chart via `bb.load` method.
 	 * @protected
 	 */
-	handleColumnsChanged_: function({prevVal}) {
+	handleColumnsChanged_: function({ prevVal }) {
 		const data = this.constructDataConfig_(false);
 
 		const newVal = data.columns;
@@ -308,7 +312,7 @@ const ChartBase = {
 	 * Maps `regions` state to chart via `bb.regions` method.
 	 * @protected
 	 */
-	handleRegionsChanged_: function({newVal}) {
+	handleRegionsChanged_: function({ newVal }) {
 		this.bbChart.regions(newVal);
 	},
 
@@ -316,7 +320,7 @@ const ChartBase = {
 	 * Maps `size` state to chart via `bb.resize` method.
 	 * @protected
 	 */
-	handleSizeChanged_: function({newVal}) {
+	handleSizeChanged_: function({ newVal }) {
 		this.bbChart.resize(newVal);
 	},
 
@@ -324,7 +328,7 @@ const ChartBase = {
 	 * Maps `type` state to chart via `bb.transform` method.
 	 * @protected
 	 */
-	handleTypeChanged_: function({newVal}) {
+	handleTypeChanged_: function({ newVal }) {
 		this.bbChart.transform(newVal);
 	},
 
@@ -345,8 +349,8 @@ const ChartBase = {
 
 			return removedIds;
 		}, []);
-	}
-}
+	},
+};
 
 /**
  * State definition.
@@ -396,7 +400,7 @@ ChartBase.STATE = {
 			centered: Config.bool(),
 			count: Config.number(),
 			culling: Config.bool().shapeOf({
-				max: Config.number()
+				max: Config.number(),
 			}),
 			fit: Config.bool(),
 			format: Config.func(),
@@ -404,9 +408,9 @@ ChartBase.STATE = {
 			outer: Config.bool(),
 			rotate: Config.number(),
 			values: Config.array(),
-			width: Config.number()
+			width: Config.number(),
 		}),
-		type: Config.oneOf(['category', 'indexed', 'timeseries'])
+		type: Config.oneOf(['category', 'indexed', 'timeseries']),
 	}),
 
 	/**
@@ -430,8 +434,8 @@ ChartBase.STATE = {
 			count: Config.number(),
 			format: Config.func(),
 			outer: Config.bool(),
-			values: Config.array()
-		})
+			values: Config.array(),
+		}),
 	}),
 
 	/**
@@ -457,7 +461,7 @@ ChartBase.STATE = {
 			outer: Config.bool(),
 			values: Config.array(),
 		}),
-		type: Config.oneOf(['category', 'indexed', 'timeseries'])
+		type: Config.oneOf(['category', 'indexed', 'timeseries']),
 	}),
 
 	/**
@@ -469,7 +473,7 @@ ChartBase.STATE = {
 	 */
 	bar: Config.shapeOf({
 		width: Config.number(),
-		zerobased: Config.bool()
+		zerobased: Config.bool(),
 	}),
 
 	/**
@@ -484,8 +488,8 @@ ChartBase.STATE = {
 		threshhold: Config.shapeOf({
 			unit: Config.string(),
 			value: Config.array(),
-			max: Config.number()
-		})
+			max: Config.number(),
+		}),
 	}),
 
 	/**
@@ -504,17 +508,19 @@ ChartBase.STATE = {
 	 * @type {?Array|undefined}
 	 * @default undefined
 	 */
-	columns: Config.arrayOf(Config.shapeOf({
-		axis: Config.string(),
-		class: Config.string(),
-		color: Config.string(),
-		data: Config.array().required(),
-		id: Config.required().string(),
-		name: Config.string(),
-		regions: Config.array(),
-		type: Config.oneOf(types.all),
-		xs: Config.string()
-	})),
+	columns: Config.arrayOf(
+		Config.shapeOf({
+			axis: Config.string(),
+			class: Config.string(),
+			color: Config.string(),
+			data: Config.array().required(),
+			id: Config.required().string(),
+			name: Config.string(),
+			regions: Config.array(),
+			type: Config.oneOf(types.all),
+			xs: Config.string(),
+		}),
+	),
 
 	/**
 	 * Configuration options for donut chart.
@@ -533,7 +539,7 @@ ChartBase.STATE = {
 		expand: Config.bool(),
 		width: Config.number(),
 		title: Config.string(),
-		padAngle: Config.number()
+		padAngle: Config.number(),
 	}),
 
 	/**
@@ -544,13 +550,15 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	emptyLabelText: Config.string().setter(value => {
-		return value ? {
-			empty: {
-				label: {
-					text: value
+		return value
+			? {
+					empty: {
+						label: {
+							text: value,
+						},
+					},
 				}
-			}
-		} : value;
+			: value;
 	}),
 
 	/**
@@ -571,7 +579,7 @@ ChartBase.STATE = {
 		max: Config.number(),
 		startingAngle: Config.number(),
 		units: Config.string(),
-		width: Config.number()
+		width: Config.number(),
 	}),
 
 	/**
@@ -581,12 +589,13 @@ ChartBase.STATE = {
 	 * @type {?Object|undefined}
 	 * @default undefined
 	 */
-	grid: Config.shapeOf({ // Cross reference this with source code, have a feeling this info is wrong
+	grid: Config.shapeOf({
+		// Cross reference this with source code, have a feeling this info is wrong
 		focus: Config.shapeOf({
 			show: Config.bool(),
 		}),
 		lines: Config.shapeOf({
-			front: Config.bool()
+			front: Config.bool(),
 		}),
 		x: Config.shapeOf({
 			show: Config.bool(),
@@ -594,8 +603,8 @@ ChartBase.STATE = {
 				class: Config.string(),
 				position: Config.oneOf(['start', 'middle', 'end']),
 				text: Config.string(),
-				value: Config.string()
-			})
+				value: Config.string(),
+			}),
 		}),
 		y: Config.shapeOf({
 			show: Config.bool(),
@@ -603,10 +612,10 @@ ChartBase.STATE = {
 				class: Config.string(),
 				position: Config.oneOf(['start', 'middle', 'end']),
 				text: Config.string(),
-				value: Config.string()
-			})
+				value: Config.string(),
+			}),
 		}),
-		ticks: Config.number()
+		ticks: Config.number(),
 	}),
 
 	/**
@@ -625,7 +634,9 @@ ChartBase.STATE = {
 	 * @type {?Array|boolean|undefined}
 	 * @default false
 	 */
-	hide: Config.array().bool().value(false),
+	hide: Config.array()
+		.bool()
+		.value(false),
 
 	/**
 	 * Intersection display options.
@@ -639,8 +650,8 @@ ChartBase.STATE = {
 		brighten: Config.bool(),
 		inputType: Config.shapeOf({
 			mouse: Config.bool(),
-			touch: Config.bool()
-		})
+			touch: Config.bool(),
+		}),
 	}),
 
 	/**
@@ -660,9 +671,11 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	keys: Config.array().setter(value => {
-		return value ? {
-			value
-		} : value;
+		return value
+			? {
+					value,
+				}
+			: value;
 	}),
 
 	/**
@@ -672,23 +685,23 @@ ChartBase.STATE = {
 	 * @type {?boolean|function|undefined}
 	 * @default undefined
 	 */
-	labels: Config.bool().func().setter(value => {
-		if (!value) {
-			return value;
-		}
-		else if (typeof value === 'boolean') {
-			return {
-				labels: value
+	labels: Config.bool()
+		.func()
+		.setter(value => {
+			if (!value) {
+				return value;
+			} else if (typeof value === 'boolean') {
+				return {
+					labels: value,
+				};
+			} else {
+				return {
+					labels: {
+						format: value,
+					},
+				};
 			}
-		}
-		else {
-			return {
-				labels: {
-					format: value
-				}
-			}
-		}
-	}),
+		}),
 
 	/**
 	 * Legend display options.
@@ -701,13 +714,17 @@ ChartBase.STATE = {
 		hide: Config.bool(),
 		position: Config.oneOf(['bottom', 'inset', 'right']),
 		inset: Config.shapeOf({
-			anchor: Config.oneOf(['bottom-left', 'bottom-right', 'top-left',
-				'top-right']),
+			anchor: Config.oneOf([
+				'bottom-left',
+				'bottom-right',
+				'top-left',
+				'top-right',
+			]),
 			step: Config.number(),
 			x: Config.number(),
-			y: Config.number()
+			y: Config.number(),
 		}),
-		show: Config.bool()
+		show: Config.bool(),
 	}),
 
 	/**
@@ -720,8 +737,8 @@ ChartBase.STATE = {
 	line: Config.shapeOf({
 		connectNull: Config.bool(),
 		step: Config.shapeOf({
-			type: Config.oneOf(['step', 'step-after', 'step-before'])
-		})
+			type: Config.oneOf(['step', 'step-after', 'step-before']),
+		}),
 	}),
 
 	/**
@@ -753,7 +770,7 @@ ChartBase.STATE = {
 		bottom: Config.number(),
 		left: Config.number(),
 		right: Config.number(),
-		top: Config.number()
+		top: Config.number(),
 	}),
 
 	/**
@@ -768,10 +785,10 @@ ChartBase.STATE = {
 			show: Config.bool(),
 			format: Config.func(),
 			threshhold: Config.number(),
-			ratio: Config.func().number()
+			ratio: Config.func().number(),
 		}),
 		expand: Config.bool(),
-		padAngle: Config.number()
+		padAngle: Config.number(),
 	}),
 
 	/**
@@ -787,12 +804,12 @@ ChartBase.STATE = {
 		focus: Config.shapeOf({
 			expand: Config.shapeOf({
 				enabled: Config.bool(),
-				r: Config.bool()
+				r: Config.bool(),
 			}),
 			select: Config.shapeOf({
-				r: Config.number()
-			})
-		})
+				r: Config.number(),
+			}),
+		}),
 	}),
 
 	/**
@@ -817,9 +834,11 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	resizeAuto: Config.bool().setter(value => {
-		return value ? {
-			auto: value
-		} : value;
+		return value
+			? {
+					auto: value,
+				}
+			: value;
 	}),
 
 	/**
@@ -844,7 +863,7 @@ ChartBase.STATE = {
 		enabled: Config.bool(),
 		grouped: Config.bool(),
 		isselectable: Config.func(),
-		multiple: Config.bool()
+		multiple: Config.bool(),
 	}),
 
 	/**
@@ -856,7 +875,7 @@ ChartBase.STATE = {
 	 */
 	size: Config.shapeOf({
 		height: Config.number(),
-		width: Config.number()
+		width: Config.number(),
 	}),
 
 	/**
@@ -867,11 +886,13 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	splineInterpolationType: Config.string().setter(value => {
-		return value ? {
-			interpolation: {
-				type: value
-			}
-		} : value;
+		return value
+			? {
+					interpolation: {
+						type: value,
+					},
+				}
+			: value;
 	}),
 
 	/**
@@ -884,9 +905,9 @@ ChartBase.STATE = {
 	subchart: Config.shapeOf({
 		show: Config.bool(),
 		size: Config.shapeOf({
-			height: Config.number()
+			height: Config.number(),
 		}),
-		onbrush: Config.func()
+		onbrush: Config.func(),
 	}),
 
 	/**
@@ -897,9 +918,11 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	svgClassname: Config.string().setter(value => {
-		return value ? {
-			classname: value
-		} : value;
+		return value
+			? {
+					classname: value,
+				}
+			: value;
 	}),
 
 	/**
@@ -915,9 +938,9 @@ ChartBase.STATE = {
 			bottom: Config.number(),
 			left: Config.number(),
 			right: Config.number(),
-			top: Config.number()
+			top: Config.number(),
 		}),
-		position: Config.string()
+		position: Config.string(),
 	}),
 
 	/**
@@ -933,9 +956,9 @@ ChartBase.STATE = {
 		format: Config.shapeOf({
 			name: Config.func(),
 			title: Config.func(),
-			value: Config.func()
+			value: Config.func(),
 		}),
-		contents: Config.func()
+		contents: Config.func(),
 	}),
 
 	/**
@@ -946,9 +969,11 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	transitionDuration: Config.number().setter(value => {
-		return value ? {
-			duration: value
-		} : value;
+		return value
+			? {
+					duration: value,
+				}
+			: value;
 	}),
 
 	/**
@@ -979,8 +1004,8 @@ ChartBase.STATE = {
 	zoom: Config.shapeOf({
 		enabled: Config.bool().value(true),
 		rescale: Config.bool().value(false),
-		extent: Config.array()
-	})
+		extent: Config.array(),
+	}),
 };
 
 export { bb, d3, ChartBase };

@@ -1,6 +1,6 @@
 'use strict';
 
-import {Config} from 'metal-state';
+import { Config } from 'metal-state';
 
 import Chart from './Chart';
 import types from './utils/types';
@@ -9,8 +9,7 @@ import types from './utils/types';
  * Donut Chart component.
  * @augments Chart
  */
-class DonutChart extends Chart {
-}
+class DonutChart extends Chart {}
 
 DonutChart.STATE = {
 	/**
@@ -20,17 +19,19 @@ DonutChart.STATE = {
 	 * @type {?Array|undefined}
 	 * @default []
 	 */
-	columns: Config.arrayOf(Config.shapeOf({
-		axis: Config.string(),
-		class: Config.string(),
-		color: Config.string(),
-		data: Config.array().required(),
-		id: Config.required().string(),
-		name: Config.string(),
-		regions: Config.array(),
-		type: Config.oneOf(types.percentage),
-		xs: Config.string()
-	})),
+	columns: Config.arrayOf(
+		Config.shapeOf({
+			axis: Config.string(),
+			class: Config.string(),
+			color: Config.string(),
+			data: Config.array().required(),
+			id: Config.required().string(),
+			name: Config.string(),
+			regions: Config.array(),
+			type: Config.oneOf(types.percentage),
+			xs: Config.string(),
+		}),
+	),
 
 	/**
 	 * The variety of chart that will be rendered.
@@ -39,8 +40,8 @@ DonutChart.STATE = {
 	 * @type {?string|undefined}
 	 * @default donut
 	 */
-	type: Config.oneOf(types.percentage).value('donut')
+	type: Config.oneOf(types.percentage).value('donut'),
 };
 
-export {DonutChart};
+export { DonutChart };
 export default DonutChart;
