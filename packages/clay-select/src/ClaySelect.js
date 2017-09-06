@@ -18,6 +18,15 @@ class ClaySelect extends Component {}
  */
 ClaySelect.STATE = {
 	/**
+	 * The select disabled attribute.
+	 * @instance
+	 * @memberof ClaySelect
+	 * @type {?boolean}
+	 * @default false
+	 */
+	disabled: Config.bool().value(false),
+
+	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClaySelect
