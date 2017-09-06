@@ -74,3 +74,20 @@ $collapse-basic-search-transparent-inverse-input-placeholder-color: null !defaul
 $collapse-basic-search-transparent-inverse-input-placeholder-focus-color: null !default;
 
 $collapse-basic-search-transparent-inverse-focus-highlight: $input-focus-border-color !default;
+
+// Navbar Primary
+
+$navbar-primary-bg: lighten(map-get($theme-colors, primary), 44%) !default;
+$navbar-primary-border-color: map-get($theme-colors, primary) !default;
+
+$navbar-primary-active-bg: null !default;
+$navbar-primary-hover-bg: null !default;
+
+$navbar-primary-disabled-bg: null !default;
+
+$navbar-primary-active-highlight: transparent !default;
+
+$navbar-primary-brand-bg: null !default;
+$navbar-primary-brand-hover-bg: null !default;
+$navbar-primary-brand-color: null !default;
+$navbar-primary-brand-hover-color: null !default;

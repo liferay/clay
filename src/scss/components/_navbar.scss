@@ -782,3 +782,37 @@
 		background-color: $navbar-dark-bg;
 	}
 }
+
+// Navbar Primary
+
+.navbar-primary-bg {
+	background-color: $navbar-primary-bg;
+	border-color: $navbar-primary-border-color;
+
+	.navbar-brand {
+		background-color: $navbar-primary-brand-bg;
+
+		@include hover-focus {
+			background-color: $navbar-primary-brand-hover-bg;
+		}
+	}
+
+	.nav-link {
+		@include hover-focus {
+			background-color: $navbar-primary-hover-bg;
+		}
+
+		&.active,
+		&[aria-expanded="true"] {
+			background-color: $navbar-primary-active-bg;
+		}
+
+		&.disabled {
+			background-color: $navbar-primary-disabled-bg;
+		}
+	}
+
+	.navbar-overlay {
+		background-color: $navbar-primary-bg;
+	}
+}
