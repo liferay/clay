@@ -105,6 +105,7 @@
 			left: $nav-underline-link-highlight-left;
 			right: $nav-underline-link-highlight-right;
 			top: $nav-underline-link-highlight-top;
+			width: auto;
 		}
 	}
 
@@ -138,6 +139,10 @@
 // Nav Tabs
 
 .nav-tabs {
+	.nav-link.active {
+		border-color: $nav-tabs-link-active-border-color;
+	}
+
 	.nav-item.show .nav-link {
 		border-color: $nav-tabs-link-show-border-color;
 		color: $nav-tabs-link-show-color;
@@ -145,5 +150,19 @@
 
 	.nav-link {
 		white-space: nowrap;
+	}
+
+	+ .tab-content {
+		.tab-pane {
+			background-color: $nav-tabs-tab-pane-bg;
+
+			@include border-radius($nav-tabs-tab-pane-border-radius);
+
+			padding: $nav-tabs-tab-pane-padding;
+
+			&.active:first-child {
+				border-top-left-radius: 0;
+			}
+		}
 	}
 }

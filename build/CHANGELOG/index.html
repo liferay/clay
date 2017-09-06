@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../css/site/site-main.css" />
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="../js/bootstrap.js"></script>
 	<script src="../js/collapsible-search.js"></script>
 	<script src="../js/side-navigation.js"></script>
@@ -18,17 +18,20 @@
 			<div class="container">
 				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
 
-				<button type="button" class="animated-toggle navbar-toggle">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+				<button type="button" class="animated-toggle btn btn-primary d-md-none navbar-toggle navbar-toggler mt-2 hidden-sm-up">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+						<use xlink:href="../images/icons/icons.svg#bars" />
+					</svg>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.6</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
-	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+			<use xlink:href="../images/icons/icons.svg#cog"></use>
+		</svg>
+	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<div class="dropdown-header">Site Settings</div>
 		<form>
@@ -101,8 +104,6 @@
 </li>
 <li class=""><a class="nav-title" href="../content/loaders">Loading Indicators</a>
 </li>
-<li class=""><a class="nav-title" href="../content/management-bar">Management Bar</a>
-</li>
 <li class=""><a class="nav-title" href="../content/modals">Modals</a>
 </li>
 <li class=""><a class="nav-title" href="../content/multi-step-nav">Multi Step Nav</a>
@@ -113,9 +114,9 @@
 </li>
 <li class=""><a class="nav-title" href="../content/nav-tabs">Nav Tabs</a>
 </li>
-<li class=""><a class="nav-title" href="../content/navbar">Navbars</a>
+<li class=""><a class="nav-title" href="../content/navbar">Navbar</a>
 </li>
-<li class=""><a class="nav-title" href="../content/pagers">Pager</a>
+<li class=""><a class="nav-title" href="../content/management-bar">Navbar (Management Bar)</a>
 </li>
 <li class=""><a class="nav-title" href="../content/paginations">Pagination</a>
 </li>
@@ -130,8 +131,6 @@
 <li class=""><a class="nav-title" href="../content/tables">Tables</a>
 </li>
 <li class=""><a class="nav-title" href="../content/timelines">Timelines</a>
-</li>
-<li class=""><a class="nav-title" href="../content/toggle-card">Toggle Card</a>
 </li>
 <li class=""><a class="nav-title" href="../content/toggle-switch">Toggle Switch</a>
 </li>
@@ -155,36 +154,12 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../content/typography">Typography</a>
 </li>
-<li class=""><a class="nav-title" href="../content/icons">Icons</a>
-</li>
-<li class=""><a class="nav-title" href="../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-</ul>
-</div>
-</li>
-<li class=""><span class="nav-title">Example Pages</span>
-<div class="">
-<ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../content/blogs-action">Blog - Actions</a>
-</li>
-<li class=""><a class="nav-title" href="../content/blogs-appearance">Blog - Appearance</a>
-</li>
-<li class=""><a class="nav-title" href="../content/documents-and-media">Documents and Media</a>
-</li>
-<li class=""><a class="nav-title" href="../content/form-examples">Form Examples</a>
-</li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../content/extending-best-practices">Best Practices</a>
-</li>
-<li class=""><a class="nav-title" href="../content/extending-cards">Extending Cards</a>
-</li>
-<li class=""><a class="nav-title" href="../content/extending-list-groups">Extending List Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
@@ -206,13 +181,153 @@
 </nav>
 
 	<div class="" id="mainContent">
-		<h1 class="page-title" id="beginContent" tabindex="-1">
+		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
 			CHANGELOG
 
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-alpha-6-august-17-2017"><a class="heading-anchor" href="#v2-0-0-alpha-6-august-17-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.6 - August 17, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-alpha-8-september-1-2017"><a class="heading-anchor" href="#v2-0-0-alpha-8-september-1-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.8 - September 1, 2017</h3>
+<ul>
+<li>New: Global Functions added <code>setter($var, $val)</code> for setting default sass variable values</li>
+<li>New: Added <code>.multi-step-bar</code> and options to configure <code>$multi-step-bar-bg</code>, <code>$multi-step-bar-border-radius</code>, <code>$multi-step-bar-color</code>, <code>$multi-step-bar-font-size</code>, <code>$multi-step-bar-height</code>, <code>$multi-step-bar-margin-bottom</code>, <code>$multi-step-bar-padding</code></li>
+<li>New: Globals readd <code>$font-family-serif</code> from BS3</li>
+<li>New: Typography added <code>.section-header</code> and option to configure <code>$section-header-border-color</code>, <code>$section-header-border-style</code>, <code>$section-header-border-width</code>, <code>$section-header-color</code>, <code>$section-header-font-size</code>, <code>$section-header-font-weight</code>, <code>$section-header-line-height</code>, <code>$section-header-margin-bottom</code>, <code>$section-header-padding</code>, <code>$section-header-text-transform</code></li>
+<li>New: Nav Tabs added option to configure <code>$nav-tabs-tab-pane-bg</code>, <code>$nav-tabs-tab-pane-border-radius</code>, <code>$nav-tabs-tab-pane-padding</code></li>
+<li>Breaking: Update Bootstrap 4 to e0c95f8, Bootstrap requires jQuery3</li>
+<li>Breaking: (Fixes #365) btn-action is definitely dropped</li>
+<li>Breaking: Navbar move <code>$navbar-height</code>, <code>$navbar-border-bottom-width</code>, <code>$navbar-border-left-width</code>, <code>$navbar-border-right-width</code>, <code>$navbar-border-top-width</code>, <code>$navbar-border-width</code>, <code>$navbar-font-size</code>, <code>$navbar-link-padding-x</code>, <code>$navbar-link-padding-y</code>, <code>$navbar-active-border-bottom-width</code>, <code>$navbar-toggler-height</code>, <code>$navbar-toggler-margin-x</code>, <code>$navbar-toggler-margin-y</code>, <code>$navbar-toggler-link-font-size</code>, <code>$navbar-toggler-link-height</code>, <code>$navbar-toggler-link-line-height</code>, <code>$navbar-toggler-link-padding-x</code>, <code>$navbar-toggler-link-padding-y</code>, <code>$navbar-brand-margin-right</code>, <code>$navbar-brand-padding-x</code>, <code>$navbar-height-mobile</code>, <code>$navbar-font-size-mobile</code>, <code>$navbar-link-padding-x-mobile</code>, <code>$navbar-link-padding-y-mobile</code>, <code>$navbar-brand-font-size-mobile</code>, <code>$navbar-brand-margin-right-mobile</code>, <code>$navbar-brand-padding-x-mobile</code>, <code>$navbar-brand-padding-y-mobile</code>, <code>$navbar-toggler-margin-x-mobile</code>, <code>$navbar-toggler-link-font-size-mobile</code>, <code>$navbar-toggler-link-padding-x-mobile</code>, <code>$navbar-toggler-link-padding-y-mobile</code>, <code>$navbar-nav-item-dropdown-margin-top</code>, to <code>$navbar-size</code> Sass map</li>
+<li>Breaking: Typography removed Blockquote Variants</li>
+<li>Breaking: Typography removed <code>.monospace</code> and <code>.sans-serif</code> helper classes</li>
+<li>Breaking: (Fixes #361) Toggle card is definitely dropped</li>
+<li>Breaking: Breadcrumb vertical/stacked is definitely dropped</li>
+<li>Update: Popper.js to 1.12.3</li>
+<li>Update: Navbar added helper class <code>.navbar-d-breakpoint-inline-block</code></li>
+<li>Update: Atlas Navbar Sizes</li>
+<li>Update: Navbar Size mixin brand-padding-x should inherit from link-padding-x</li>
+<li>Update: Navbar moved sizing to navbar-size mixin</li>
+<li>Update: Create <code>navbar-size($map)</code> mixin to help size navbars</li>
+<li>Update: Nav Underline <code>.active.dropdown-toggle.nav-link</code> should be highlighted</li>
+<li>Update: <code>$enable-scaling-navbar</code> should inherit value from <code>$enable-scaling-components</code></li>
+<li>Update: Navbar always set font size and added <code>$enable-scaling-navbar</code></li>
+<li>Update: Scaling components mixin to accept boolean value</li>
+<li>Update: Navbar fix <code>.form-check</code> inside navbar</li>
+<li>Update: Clay Base Navbar light and dark bg colors</li>
+<li>Update: Dropdown dropdown-toggle should remove focus styles on <code>button</code> element when shown</li>
+<li>Update: Multi Step Nav add buttons as link support</li>
+<li>Update: Atlas Nav Tabs colors to Lexicon 2 first pass</li>
+<li>Update: <code>.nav-tabs .nav-link.active</code> border-color should be more customizable</li>
+<li>Fix: Panels variables missing semicolon</li>
+<li>Fix: Navs variables missing semicolon</li>
+<li>Fix: Alerts missing semicolon and default flag</li>
+<li>Site: Change jQuery version to 3.2.1, Bootstrap 4 requires jQuery 3</li>
+<li>Site: Recover menu-icon functionality, Add margin-top to page title</li>
+<li>Site: Navbar docs mention new <code>.navbar-d-breakpoint-{inline-block|flex}</code> and <code>.navbar-d-breakpoint-down-none</code></li>
+<li>Site: Update Management Bar content to Clay 2</li>
+<li>Site: Multi Step Nav add examples of buttons as links</li>
+<li>Site: Typography display different font styles</li>
+<li>Site: Add examples of <code>.section-header</code></li>
+<li>Site: Use BS4 blockquotes</li>
+<li>Site: Clean up unused styles from removed pages</li>
+<li>Site: Typography update markup to Clay 2</li>
+</ul>
+<h3 id="v2-0-0-alpha-7-august-28-2017"><a class="heading-anchor" href="#v2-0-0-alpha-7-august-28-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.7 - August 28, 2017</h3>
+<ul>
+<li>New: Badges added <code>$badge-link-color</code> because <code>$badge-color</code> was removed from BS4</li>
+<li>New: Table added <code>$table-divider-bg</code></li>
+<li>New: Table added <code>$table-divider-color</code></li>
+<li>New: Table added <code>.table-divider</code> and option to configure <code>$table-divider-font-weight</code>, <code>$table-divider-font-size</code>, <code>$table-divider-padding</code>, <code>$table-divider-text-transform</code></li>
+<li>New: Table List added <code>$table-list-border-color</code>, <code>$table-list-border-width</code>, <code>$table-list-border-radius</code> and added borders to <code>.table-list</code></li>
+<li>New: Table List added <code>$table-list-bg</code>, <code>$table-list-accent-bg</code>, <code>$table-list-hover-bg</code>, <code>$table-list-active-bg</code>, removed styles related to Chrome rendering issue with responsive-tables (bug is fixed)</li>
+<li>New: Table List added option to configure borders on <code>.table-list</code> through  <code>$table-list-row-box-shadow</code>, <code>$table-list-row-hover-box-shadow</code>, <code>$table-list-row-active-box-shadow</code></li>
+<li>New: Dropdown added <code>.dropdown-menu-unstyled</code>, and added option to configure <code>$dropdown-unstyled-link-color</code>, <code>$dropdown-unstyled-link-hover-color</code></li>
+<li>New: Dropdown Action added <code>.show-dropdown-action-on-active</code> to display dropdown-menu&#x2019;s when a component item is selected</li>
+<li>New: List Group added <code>$list-group-subtitle-active-color</code>, <code>$list-group-title-active-color</code> and vertically center <code>.list-group-item</code></li>
+<li>New: List Group added <code>$list-group-header-title-margin-bottom</code> and set <code>$list-group-header-title-font-size</code> to 1rem</li>
+<li>New: List Group added option to configure <code>$list-group-subtitle-text-decoration</code>, <code>$list-group-subtitle-hover-color</code>, <code>$list-group-subtitle-hover-text-decoration</code></li>
+<li>New: List Group added option to configure <code>$list-group-subtitle-margin-bottom</code>$list-group-title-color<code>,</code>$list-group-title-font-size<code>,</code>$list-group-title-font-weight<code>,</code>$list-group-title-margin-bottom<code>,</code>$list-group-title-line-height<code>,</code>$list-group-title-text-decoration<code>,</code>$list-group-title-hover-color<code>,</code>$list-group-title-hover-text-decoration`</li>
+<li>Breaking: Remove Font Awesome</li>
+<li>Breaking: Rename <code>lexicon-base-variables.scss</code>, <code>lexicon-base.scss</code> to <code>base-variables.scss</code>, <code>base.scss</code> respectively</li>
+<li>Breaking: Rename _lexicon.scss to _components.scss</li>
+<li>Breaking: Removed main.scss from Base and import files individually</li>
+<li>Breaking: Move Base components to components directory</li>
+<li>Breaking: Atlas remove /atlas/main.scss, use only one main.scss file</li>
+<li>Breaking: Remove _mixins.scss from Atlas, this file is unused</li>
+<li>Breaking: Move Lexicon Base to root scss directory</li>
+<li>Breaking: Rename Atlas Theme to Atlas</li>
+<li>Breaking: Multi Step Nav renamed <code>$multi-step-divider-margin-top</code> to <code>$multi-step-divider-top</code>, added <code>$multi-step-title-font-size</code>, and fix multi step nav positions broken by last commit</li>
+<li>Breaking: Multi Step Nav removed <code>$multi-step-indicator-bg</code> and fix bug where the divider is hidden under a postion relative parent</li>
+<li>Breaking: Update Bootstrap 4 to 4571ab0</li>
+<li>Breaking: Table removed <code>$table-list-row-height</code></li>
+<li>Breaking: Table removed <code>$table-list-row-active-border-bottom-width</code>, <code>$table-list-row-active-border-color</code>, <code>$table-list-row-border-bottom-width</code>, <code>$table-list-row-border-color</code>, <code>$table-list-row-box-shadow</code>, <code>$table-list-row-hover-box-shadow</code>, <code>$table-list-row-active-box-shadow</code></li>
+<li>Breaking: Table removed <code>$table-list-head-border-bottom-width</code></li>
+<li>Breaking: Table renamed <code>$table-list-header-bg</code>, <code>$table-list-header-border-bottom-width</code>, <code>$table-list-header-font-size</code>, <code>$table-list-header-font-weight</code>, <code>$table-list-header-min-height</code>, <code>$table-list-header-vertical-alignment</code>, to <code>$table-list-head-bg</code>, <code>$table-list-head-border-bottom-width</code>, <code>$table-list-head-font-size</code>, <code>$table-list-head-font-weight</code>, <code>$table-list-head-height</code>, <code>$table-list-head-vertical-alignment</code></li>
+<li>Breaking: Table renamed <code>$table-header-color</code>, <code>$table-header-font-size</code>, <code>$table-header-font-weight</code>, <code>$table-header-min-height</code> to <code>$table-head-color</code>, <code>$table-head-font-size</code>, <code>$table-head-font-weight</code>, <code>$table-head-height</code></li>
+<li>Breaking: Table remove unused variable <code>$table-list-content-height</code></li>
+<li>Breaking: List Group remove some list-group-item.active variant overwrites</li>
+<li>Breaking: List Group removed <code>$list-group-dropdown-toggle-color</code>, <code>$list-group-dropdown-toggle-hover-color</code>, <code>$list-group-dropdown-toggle-active-color</code> handled by <code>.dropdown-action</code></li>
+<li>Breaking: List Group rename <code>$list-group-header-color</code>, <code>$list-group-header-font-size</code>, <code>$list-group-header-font-weight</code>, <code>$list-group-header-text-transform</code> to <code>$list-group-header-title-color</code>, <code>$list-group-header-title-font-size</code>, <code>$list-group-header-title-font-weight</code>, <code>$list-group-header-title-text-transform</code> and add <code>.list-group-header-title</code></li>
+<li>Breaking: List Group removed option to configure <code>$list-group-subtitle-text-transform</code> and start updating Atlas List Group styles to Clay V2</li>
+<li>Update: Prefix Sass partial imports with an underscore to make it easier to understand which file it&#x2019;s importing</li>
+<li>Update: Toggle Card colors to use Clay V2 colors</li>
+<li>Update: Timeline Icon border color to match Clay V2 colors</li>
+<li>Update: Panel single collapsed panel header shouldn&#x2019;t have rounded bottom borders while collapsing</li>
+<li>Update: Panel single collapsed <code>.panel-header</code> in <code>.panel-group</code> should have rounded corners</li>
+<li>Update: Dropdown Item disabled <code>.btn-link</code> and <code>.btn-unstyled</code> should have opacity 1</li>
+<li>Update: Dropdown Item add support for <code>.btn-link</code> and <code>.btn-unstyled</code></li>
+<li>Update: Cards scope <code>.btn-link</code> styles to <code>.card-link</code></li>
+<li>Update: Tables remove generating responsive table sizes, added by BS4</li>
+<li>Update: Atlas Table styles to Clay V2</li>
+<li>Update: Table List single th or td should have borders</li>
+<li>Update: Table List tweak borders</li>
+<li>Update: Table List added styles for <code>.dropdown-action .dropdown-menu-horizontal</code></li>
+<li>Update: Dropdown Positions reset will-change property</li>
+<li>Update: Dropdown Unstyled should have no borders</li>
+<li>Update: Add <code>.table-active</code> to <code>.show-dropdown-action-on-active</code></li>
+<li>Update: List Group style <code>.dropdown-action .dropdown-horizontal</code> normal and active states</li>
+<li>Update: Utilities add positon relative to <code>.flex-col</code></li>
+<li>Update: Dropdown Horizontal shouldn&#x2019;t have a min-width</li>
+<li>Update: Lexicon Base Labels should have white background</li>
+<li>Update: List Group set Sticker size to lg and Label size to sm</li>
+<li>Update: Sticker Secondary colors to white and #6B6C7E</li>
+<li>Misc: Update release task to build proper files after file restructuring</li>
+<li>Site: Remove old docs pages Blogs Action, Blogs Appearance, Documents and Media, Best Practices, Extending Cards, Extending List Groups, Form Examples</li>
+<li>Site: Remove documentation relating to Font Awesome</li>
+<li>Site: Site Config replace FA icon with SVG</li>
+<li>Site: Remove Font Awesome imports</li>
+<li>Site: Use atlas-variables import instead of invididually importing</li>
+<li>Site: Use base.scss and base-variables.scss</li>
+<li>Site: Renamed _lexicon.scss to _components.scss</li>
+<li>Site: Import Base files individually</li>
+<li>Site: Use one main.scss file</li>
+<li>Site: Change paths for Lexicon Base Files</li>
+<li>Site: Move Site related scss into site directory</li>
+<li>Site: Demos use .. instead of relative path</li>
+<li>Site: Prefix site related css with <code>site-</code></li>
+<li>Site: Remove code hljs code highlighting</li>
+<li>Site: Toggle Switch wrap examples in <code>.clay-site-form-container</code></li>
+<li>Site: Toggle Card wrap examples in <code>.clay-site-form-container</code></li>
+<li>Site: Panels and Timelines update accordion heading markup</li>
+<li>Site: Form Elements use <code>.clay-site-form-container</code> to display form elements</li>
+<li>Site: Dropdown include some examples of <code>.dropdown-item</code> with <code>button</code>, <code>.btn-link</code>, and <code>.btn-unstyled</code></li>
+<li>Site: Multi Step Nav reordered <code>.multi-step-divider</code> and  added <code>.clay-site-form-container</code> for displaying form related compnents</li>
+<li>Site: Popover / Tooltips swap order and remove extra spacing</li>
+<li>Site: Table move table-responsive to table element and remove some spacing</li>
+<li>Site: Tables to Clay 2 markup</li>
+<li>Site: Nav Tabs update aria attributes</li>
+<li>Site: Panel clean up markup</li>
+<li>Site: Update Nav to use SVG Icons</li>
+<li>Site: Update Nav pills aria attributes and icons to svg</li>
+<li>Site: Lexicon Icons update layout markup to match other pages</li>
+<li>Site: Form Validation added for attribute on labels</li>
+<li>Site: Form Elements keep markup consistent with claycss.com</li>
+<li>Site: Form Custom keep markup consistent with claycss.com</li>
+<li>Site: Form Input Groups keep markup consistent with claycss.com</li>
+<li>Site: List Group update markup with <code>.show-dropdown-action-on-active</code> and <code>.dropdown-menu-unstyled</code></li>
+<li>Site: Test Assorted remove <code>.header-toolbar</code> and <code>.nav</code> examples and add <code>.list-group</code></li>
+<li>Site: List Group update markup to follow Clay V2 pattern</li>
+</ul>
+<h3 id="v2-0-0-alpha-6-august-17-2017"><a class="heading-anchor" href="#v2-0-0-alpha-6-august-17-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.6 - August 17, 2017</h3>
 <ul>
 <li>New: Popover added option to configure <code>$popover-inline-scroller-max-height</code> and update Atlas Popover styles to V2</li>
 <li>New: Popover added option to configure <code>$popover-header-font-weight</code></li>

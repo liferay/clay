@@ -11,7 +11,7 @@ $nav-nested-spacer-x: $nav-link-padding-x !default;
 
 // Nav Underline
 
-$nav-underline-link-highlight-palette: null !default
+$nav-underline-link-highlight-palette: null !default;
 
 $nav-underline-link-color: null !default;
 $nav-underline-link-hover-color: null !default;
@@ -34,3 +34,7 @@ $nav-underline-link-active-highlight-height: 2px !default;
 
 $nav-tabs-link-show-color: null !default;
 $nav-tabs-link-show-border-color: null !default;
+
+$nav-tabs-tab-pane-bg: null !default;
+$nav-tabs-tab-pane-border-radius: null !default;
+$nav-tabs-tab-pane-padding: null !default;

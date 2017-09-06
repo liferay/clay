@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="../../js/bootstrap.js"></script>
 	<script src="../../js/collapsible-search.js"></script>
 	<script src="../../js/side-navigation.js"></script>
@@ -18,17 +18,20 @@
 			<div class="container">
 				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
 
-				<button type="button" class="animated-toggle navbar-toggle">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+				<button type="button" class="animated-toggle btn btn-primary d-md-none navbar-toggle navbar-toggler mt-2 hidden-sm-up">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+						<use xlink:href="../../images/icons/icons.svg#bars" />
+					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.6</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
-	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+			<use xlink:href="../../images/icons/icons.svg#cog"></use>
+		</svg>
+	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<div class="dropdown-header">Site Settings</div>
 		<form>
@@ -101,8 +104,6 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
@@ -113,9 +114,9 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbar</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+<li class=""><a class="nav-title" href="../../content/management-bar">Navbar (Management Bar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -130,8 +131,6 @@
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
@@ -155,36 +154,12 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-</ul>
-</div>
-</li>
-<li class=""><span class="nav-title">Example Pages</span>
-<div class="">
-<ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
-</li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
-</li>
 <li class="active"><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
@@ -206,7 +181,7 @@
 </nav>
 
 	<div class="" id="mainContent">
-		<h1 class="page-title" id="beginContent" tabindex="-1">
+		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
 			Extending Toggles
 
 			
@@ -222,7 +197,7 @@
 
 		<h3 class="usage-heading" id="custom-toggle-switch-using-images"><a class="heading-anchor" href="#custom-toggle-switch-using-images"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Custom Toggle Switch using Images</h3>
 
-		<blockquote class="blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Customize:</p>
 			<p>the <strong>toggle-switch button in the off</strong> position with <code>.toggle-switch-check:empty ~ .toggle-switch-bar:after {}</code>.</p>
 
@@ -328,98 +303,6 @@
 				</span>
 			</label>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse0"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse0">
-	<pre><code>&lt;style&gt;
-    #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-        background-color: transparent;
-        background-image: url(../../images/switch_button.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        border-width: 0;
-        bottom: 0;
-        height: auto;
-        left: 2px;
-        top: 1px;
-        width: 22px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-          background-color: transparent;
-          background-image: url(../../images/switch_base.png);
-          background-repeat: no-repeat;
-          background-size: 100%;
-          border-radius: 20px;
-          border-width: 0;
-          width: 51px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-        background-image: url(../../images/switch_off_icon.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 15px;
-        left: 28px;
-        top: 4px;
-        width: 15px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-        left: 26px;
-    }
-
-    #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-        background-image: url(../../images/switch_on_icon.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        height: 17px;
-        left: 5px;
-        top: 4px;
-        width: 17px;
-    }
-
-    @media (min-width: 768px) {
-        #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-            width: 30px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-            width: 68px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-            left: 40px;
-            top: 8px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-            left: 35px;
-        }
-
-        #demoToggleSwitch .toggle-switch-check:checked ~ .toggle-switch-bar .toggle-switch-icon-on {
-            left: 12px;
-            top: 8px;
-        }
-    }
-&lt;/style&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;
-      &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
-
-      &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
-          &lt;span class=&quot;toggle-switch-handle&quot;&gt;
-              &lt;span class=&quot;toggle-switch-icon toggle-switch-icon-on&quot;&gt;&lt;/span&gt;
-              &lt;span class=&quot;toggle-switch-icon toggle-switch-icon-off&quot;&gt;&lt;/span&gt;
-          &lt;/span&gt;
-      &lt;/span&gt;
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 
@@ -503,63 +386,6 @@
 				</span>
 			</label>
 		</div>
-
-<div class="uxgl-toggle-code">
-	<a class="btn btn-warning btn-xs" data-toggle="collapse" href="#codeCollapse1"><span class="icon-caret-down"></span></a>
-</div>
-<div class="collapse" id="codeCollapse1">
-	<pre><code>&lt;style&gt;
-    /* Toggle Switch Off Button */
-    .ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar:after {
-        background-color: #FFF;
-        border-width: 0;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-        height: 27px;
-        left: 2px;
-        top: 2px;
-        width: 27px;
-    }
-
-    /* Toggle Switch On Button */
-    .ios-toggle-switch .toggle-switch-check:checked ~ .toggle-switch-bar:after {
-        border-width: 0;
-        left: 31px;
-    }
-
-    /* Toggle Switch Off Bar */
-    .ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar:before {
-        background-color: #FEFEFE;
-        border: 1px solid #E6E6E6;
-    }
-
-    /* Toggle Switch On Bar */
-    .ios-toggle-switch .toggle-switch-check:checked ~ .toggle-switch-bar:before {
-        background-color: #4BD863;
-        border-color: #4BD863;
-    }
-
-    /* Toggle Switch On Bar Icon */
-    .ios-toggle-switch .toggle-switch-check:empty ~ .toggle-switch-bar .toggle-switch-icon-off {
-        color: #B5B5B5;
-        font-size: 15px;
-        line-height: 19px;
-    }
-&lt;/style&gt;
-
-&lt;div class=&quot;form-group ios-toggle-switch&quot;&gt;
-    &lt;label&gt;
-        &lt;input class=&quot;toggle-switch&quot; type=&quot;checkbox&quot;&gt;
-
-        &lt;span aria-hidden=&quot;true&quot; class=&quot;toggle-switch-bar&quot;&gt;
-            &lt;span class=&quot;toggle-switch-handle&quot;&gt;
-                &lt;span class=&quot;toggle-switch-icon toggle-switch-icon-on&quot;&gt;|&lt;/span&gt;
-                &lt;span class=&quot;icon-circle-blank toggle-switch-icon toggle-switch-icon-off&quot;&gt;&lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/label&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
 	</div>
 </div>
 	</div>

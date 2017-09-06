@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="<%= rootPath %>/css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="<%= rootPath %>/css/site/site-main.css" />
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="<%= rootPath %>/js/bootstrap.js"></script>
 	<script src="<%= rootPath %>/js/collapsible-search.js"></script>
 	<script src="<%= rootPath %>/js/side-navigation.js"></script>
@@ -18,11 +18,10 @@
 			<div class="container">
 				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
 
-				<button type="button" class="animated-toggle navbar-toggle">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+				<button type="button" class="animated-toggle btn btn-primary d-md-none navbar-toggle navbar-toggler mt-2 hidden-sm-up">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+						<use xlink:href="<%= rootPath %>/images/icons/icons.svg#bars" />
+					</svg>
 				</button>
 
 				<h4 class="title"><a href="<%= rootPath %>">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v<%= version %></span></h4>

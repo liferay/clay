@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="../../js/bootstrap.js"></script>
 	<script src="../../js/collapsible-search.js"></script>
 	<script src="../../js/side-navigation.js"></script>
@@ -18,17 +18,20 @@
 			<div class="container">
 				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
 
-				<button type="button" class="animated-toggle navbar-toggle">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+				<button type="button" class="animated-toggle btn btn-primary d-md-none navbar-toggle navbar-toggler mt-2 hidden-sm-up">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+						<use xlink:href="../../images/icons/icons.svg#bars" />
+					</svg>
 				</button>
 
-				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.6</span></h4>
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.8</span></h4>
 
 				<div class="dropdown" id="siteConfig">
-	<button class="btn btn-primary btn-sm" data-toggle="dropdown"><i class="icon-cog"></i></button>
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+			<use xlink:href="../../images/icons/icons.svg#cog"></use>
+		</svg>
+	</button>
 	<div class="dropdown-menu dropdown-menu-right">
 		<div class="dropdown-header">Site Settings</div>
 		<form>
@@ -101,8 +104,6 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/management-bar">Management Bar</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/modals">Modals</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
@@ -113,9 +114,9 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/navbar">Navbars</a>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbar</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/pagers">Pager</a>
+<li class=""><a class="nav-title" href="../../content/management-bar">Navbar (Management Bar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -130,8 +131,6 @@
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/toggle-card">Toggle Card</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
 </li>
@@ -155,36 +154,12 @@
 <ul class="nav flex-column main-nav-section">
 <li class=""><a class="nav-title" href="../../content/typography">Typography</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/icons">Icons</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/icons-font-awesome">Icons (Font Awesome)</a>
-</li>
-</ul>
-</div>
-</li>
-<li class=""><span class="nav-title">Example Pages</span>
-<div class="">
-<ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/blogs-action">Blog - Actions</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/blogs-appearance">Blog - Appearance</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/documents-and-media">Documents and Media</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/form-examples">Form Examples</a>
-</li>
 </ul>
 </div>
 </li>
 <li class=""><span class="nav-title">Extending Components</span>
 <div class="">
 <ul class="nav flex-column main-nav-section">
-<li class=""><a class="nav-title" href="../../content/extending-best-practices">Best Practices</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/extending-cards">Extending Cards</a>
-</li>
-<li class=""><a class="nav-title" href="../../content/extending-list-groups">Extending List Groups</a>
-</li>
 <li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
 </li>
 </ul>
@@ -206,7 +181,7 @@
 </nav>
 
 	<div class="" id="mainContent">
-		<h1 class="page-title" id="beginContent" tabindex="-1">
+		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
 			Badges, Labels and Stickers
 
 			
@@ -294,7 +269,7 @@
 	<div class="col-md-12">
 		<h3 id="badge-sizes"><a class="heading-anchor" href="#badge-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Badge Sizes</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Use <code>badge-sm</code> and <code>badge-lg</code> to change the badge size.</p>
 		</blockquote>
 
@@ -395,7 +370,7 @@
 	<div class="col-md-12">
 		<h3 id="label-sizes"><a class="heading-anchor" href="#label-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Label Sizes</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Use <code>label-sm</code> and <code>label-lg</code> to change the label size.</p>
 		</blockquote>
 
@@ -442,7 +417,7 @@
 	<div class="col-md-12">
 		<h3 id="sticker"><a class="heading-anchor" href="#sticker"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sticker</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Stickers are monospaced badges/labels.</p>
 		</blockquote>
 
@@ -463,7 +438,7 @@
 	<div class="col-md-12">
 		<h3 id="positional-stickers"><a class="heading-anchor" href="#positional-stickers"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Positional Stickers</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Place them anywhere relative to your container using positional sticker classes <code>sticker-top-left</code>, <code>sticker-bottom-left</code>, <code>sticker-top-right</code>, and <code>sticker-bottom-right</code>.</p>
 		</blockquote>
 	</div>
@@ -501,7 +476,7 @@
 	<div class="col-md-12">
 		<h3 id="sticker-sizes"><a class="heading-anchor" href="#sticker-sizes"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sticker Sizes</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Stickers come in 3 different sizes, small, regular and large. Create your own custom size by changing the <code>width</code>, <code>height</code>, <code>line-height</code>, and <code>font-size</code>. You can also use the sass monospace mixin to change the width and height e.g. <code>@include monospace(30px);</code>.</p>
 		</blockquote>
 
@@ -541,7 +516,7 @@
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3 id="sticker-overlay"><a class="heading-anchor" href="#sticker-overlay"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sticker Overlay</h3>
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Overlay content over stickers by nesting <code>sticker-overlay</code> inside <code>sticker</code>.</p>
 		</blockquote>
 
@@ -579,7 +554,7 @@
 	<div class="col-md-12">
 		<h3 id="sticker-outside"><a class="heading-anchor" href="#sticker-outside"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Sticker Outside</h3>
 
-		<blockquote class="blockquote blockquote-sm blockquote-success">
+		<blockquote class="blockquote">
 			<p>Add class <code>sticker-outside</code> in conjunction with sticker positions to position the sticker on the outside corners.</p>
 		</blockquote>
 	</div>
