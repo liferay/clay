@@ -18,7 +18,7 @@
   "scripts": {
     "build": "npm run soy && webpack",
     "compile": "babel -d lib/ src/",
-    "format": "prettier --use-tabs true --tab-width 4 --single-quote --trailing-comma all --write src/**/*.js",
+    "format": "prettier --use-tabs true --tab-width 4 --single-quote --trailing-comma all --write src/*.js src/**/*.js",
     "prepublish": "npm run soy && npm run compile",
     "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy",
     "start": "http-server . -p 4000",
