@@ -12,14 +12,56 @@ describe('ClayBadge', function() {
 	});
 
 	it('should generate the default markup', () => {
-		badge = new ClayBadge();
+		badge = new ClayBadge({
+			label: 0,
+		});
 
 		expect(badge).toMatchSnapshot();
 	});
 
 	it('should render a badge with label', () => {
 		badge = new ClayBadge({
-			label: 'Primary',
+			label: 2300,
+		});
+
+		expect(badge).toMatchSnapshot();
+	});
+
+	it('should return abbreviations of the numbers', () => {
+		badge = new ClayBadge({
+			label: 1900,
+		});
+
+		expect(badge.label).toBe('1K');
+	});
+
+	it('should render a badge with prefix `K`', () => {
+		badge = new ClayBadge({
+			label: 1244,
+		});
+
+		expect(badge).toMatchSnapshot();
+	});
+
+	it('should render a badge with prefix `M`', () => {
+		badge = new ClayBadge({
+			label: 13244244,
+		});
+
+		expect(badge).toMatchSnapshot();
+	});
+
+	it('should render a badge with prefix `B`', () => {
+		badge = new ClayBadge({
+			label: 10232244244,
+		});
+
+		expect(badge).toMatchSnapshot();
+	});
+
+	it('should render a badge with prefix `T`', () => {
+		badge = new ClayBadge({
+			label: 2411232244244,
 		});
 
 		expect(badge).toMatchSnapshot();
@@ -27,54 +69,24 @@ describe('ClayBadge', function() {
 
 	it('should render a badge with id', () => {
 		badge = new ClayBadge({
+			label: 0,
 			id: 'myBadge',
 		});
 
 		expect(badge).toMatchSnapshot();
 	});
 
-	it('should render a badge with href', () => {
-		badge = new ClayBadge({
-			href: '#1',
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
-
-	it('should render a small badge', () => {
-		badge = new ClayBadge({
-			size: 'sm',
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
-
-	it('should render a large badge', () => {
-		badge = new ClayBadge({
-			size: 'lg',
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
-
-	it('should render a badge with closeable', () => {
-		badge = new ClayBadge({
-			label: 'Badge',
-			closeable: true,
-			spritemap: 'icons.svg',
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
-
 	it('should render a `default color` badge', () => {
-		badge = new ClayBadge();
+		badge = new ClayBadge({
+			label: 0,
+		});
 
 		expect(badge).toMatchSnapshot();
 	});
 
 	it('should render a `primary color` badge', () => {
 		badge = new ClayBadge({
+			label: 0,
 			style: 'primary',
 		});
 
@@ -83,6 +95,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `secondary color` badge', () => {
 		badge = new ClayBadge({
+			label: 0,
 			style: 'secondary',
 		});
 
@@ -91,6 +104,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `success color` badge', () => {
 		badge = new ClayBadge({
+			label: 0,
 			style: 'success',
 		});
 
@@ -99,6 +113,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `info color` badge', () => {
 		badge = new ClayBadge({
+			label: 0,
 			style: 'info',
 		});
 
@@ -107,6 +122,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `warning color` badge', () => {
 		badge = new ClayBadge({
+			label: 0,
 			style: 'warning',
 		});
 
@@ -115,6 +131,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `danger color` badge', () => {
 		badge = new ClayBadge({
+			label: 0,
 			style: 'danger',
 		});
 
@@ -123,6 +140,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `light color` badge', () => {
 		badge = new ClayBadge({
+			label: 0,
 			style: 'light',
 		});
 
@@ -131,6 +149,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `dark color` badge', () => {
 		badge = new ClayBadge({
+			label: 0,
 			style: 'dark',
 		});
 
