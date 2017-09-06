@@ -4,6 +4,7 @@
     "format": "prettier --use-tabs true --tab-width 4 --single-quote --trailing-comma all --write packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "lerna": "lerna bootstrap -- --no-optional && npm install --no-optional",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
+    "mcritic": "mcritic packages/",
     "precommit": "lint-staged",
     "start": "http-server . -p 4000",
     "test": "lerna run soy && jest"
@@ -19,6 +20,7 @@
     "lerna": "^2.0.0-rc.5",
     "lint-staged": "^4.0.0",
     "metal-jest-serializer": "^1.0.1",
+    "metal-soy-critic": "^2.3.0",
     "prettier": "^1.5.2"
   },
   "jest": {
