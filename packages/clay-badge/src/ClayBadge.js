@@ -1,7 +1,5 @@
 'use strict';
 
-import 'clay-icon';
-import 'clay-link';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import { Config } from 'metal-state';
@@ -20,24 +18,6 @@ class ClayBadge extends Component {}
  */
 ClayBadge.STATE = {
 	/**
-	 * True or false to activate the close button.
-	 * @instance
-	 * @memberof ClayBadge
-	 * @type {?bool|undefined}
-	 * @default undefined
-	 */
-	closeable: Config.bool(),
-
-	/**
-	 * HREF in all badge.
-	 * @instance
-	 * @memberof ClayBadge
-	 * @type {?string|undefined}
-	 * default undefined
-	 */
-	href: Config.string(),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayBadge
@@ -50,28 +30,10 @@ ClayBadge.STATE = {
 	 * The label of the badge element.
 	 * @instance
 	 * @memberof ClayBadge
-	 * @type {?string|html|undefined}
+	 * @type {number}
 	 * default undefined
 	 */
-	label: Config.any(),
-
-	/**
-	 * The size of the badge element.
-	 * @instance
-	 * @memberof ClayBadge
-	 * @type {?string|undefined}
-	 * default undefined
-	 */
-	size: Config.oneOf(['sm', 'lg']),
-
-	/**
-	 * The path to the SVG spritemap file containing the icons.
-	 * @instance
-	 * @memberof ClayBadge
-	 * @type {!string}
-	 * @default undefined
-	 */
-	spritemap: Config.string(),
+	label: Config.number().required(),
 
 	/**
 	 * Badge style color.

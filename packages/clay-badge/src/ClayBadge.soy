@@ -4,66 +4,17 @@
  * This renders a badge.
  */
 {template .render}
-	{@param? closeable: bool}
-	{@param? href: string}
 	{@param? id: string}
-	{@param? label: html|string}
-	{@param? size: string}
-	{@param? spritemap: string}
+	{@param label: number|string}
 	{@param? style: string}
 
 	{let $classes kind="text"}
 		badge badge-pill
 		{sp}badge-{$style ?: 'default'}
-
-		{if $size}
-			{sp}badge-{$size}
-		{/if}
 	{/let}
 
-	{let $attributes kind="attributes"}
-		class="{$classes}"
+	<span class="{$classes}" id="{$id}">
+		{$label}
+	</span>
 
-		{if $id}
-			id="{$id}"
-		{/if}
-	{/let}
-
-	{if $href}
-		{call ClayLink.render}
-			{param elementClasses: $classes /}
-			{param href: $href /}
-			{param id: $id /}
-			{param label: $label /}
-		{/call}
-	{else}
-		<span {$attributes}>
-			{call .content}
-				{param closeable: $closeable /}
-				{param label: $label /}
-				{param spritemap: $spritemap /}
-			{/call}
-		</span>
-	{/if}
-
-{/template}
-
-/**
- * Renders icon content
- */
-{template .content}
-	{@param? closeable: bool}
-	{@param? label: html|string}
-	{@param? spritemap: string}
-
-	{$label ? $label : ''}
-
-	{if $closeable and $spritemap}
-		<button aria-label="Close" class="close" type="button">
-			{call ClayIcon.render}
-				{param spritemap: $spritemap /}
-				{param symbol: 'times' /}
-			{/call}
-		</button>
-	{/if}
 {/template}
