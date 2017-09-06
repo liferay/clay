@@ -1,6 +1,6 @@
 'use strict';
 
-import {bb} from 'billboard.js';
+import { bb } from 'billboard.js';
 
 import PieChart from '../PieChart';
 
@@ -20,7 +20,7 @@ afterAll(() => {
 describe('PieChart', function() {
 	it('should be pass correct type to billboard.js', () => {
 		new PieChart({
-			columns: []
+			columns: [],
 		});
 
 		const config = bb.generate.mock.calls[0][0];

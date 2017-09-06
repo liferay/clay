@@ -1,18 +1,17 @@
 'use strict';
 
-import {Config} from 'metal-state';
+import { Config } from 'metal-state';
 
-import {GaugeChart as GaugeChartBase} from '../GaugeChart';
+import { GaugeChart as GaugeChartBase } from '../GaugeChart';
 import Chart from './Chart';
 
 /**
  * Guage Chart component.
  * @augments Chart
  */
-class GaugeChart extends Chart {
-}
+class GaugeChart extends Chart {}
 
 GaugeChart.PROPS = GaugeChartBase.STATE;
 
-export {GaugeChart};
+export { GaugeChart };
 export default GaugeChart;

@@ -1,6 +1,6 @@
 'use strict';
 
-import {bb} from 'billboard.js';
+import { bb } from 'billboard.js';
 
 import BarChart from '../BarChart';
 
@@ -20,7 +20,7 @@ afterAll(() => {
 describe('BarChart', function() {
 	it('should be pass correct type to billboard.js', () => {
 		new BarChart({
-			columns: []
+			columns: [],
 		});
 
 		const config = bb.generate.mock.calls[0][0];

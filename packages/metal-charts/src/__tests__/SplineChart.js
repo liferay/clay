@@ -1,6 +1,6 @@
 'use strict';
 
-import {bb} from 'billboard.js';
+import { bb } from 'billboard.js';
 
 import SplineChart from '../SplineChart';
 
@@ -20,7 +20,7 @@ afterAll(() => {
 describe('SplineChart', function() {
 	it('should be pass correct type to billboard.js', () => {
 		new SplineChart({
-			columns: []
+			columns: [],
 		});
 
 		const config = bb.generate.mock.calls[0][0];

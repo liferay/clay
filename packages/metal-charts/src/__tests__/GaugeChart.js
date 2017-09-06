@@ -1,6 +1,6 @@
 'use strict';
 
-import {bb} from 'billboard.js';
+import { bb } from 'billboard.js';
 
 import GaugeChart from '../GaugeChart';
 
@@ -20,7 +20,7 @@ afterAll(() => {
 describe('GaugeChart', function() {
 	it('should be pass correct type to billboard.js', () => {
 		new GaugeChart({
-			columns: []
+			columns: [],
 		});
 
 		const config = bb.generate.mock.calls[0][0];

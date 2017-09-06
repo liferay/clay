@@ -1,6 +1,6 @@
 'use strict';
 
-import {bb} from 'billboard.js';
+import { bb } from 'billboard.js';
 
 import Chart from '../Chart';
 
@@ -20,7 +20,7 @@ afterAll(() => {
 describe('Chart', function() {
 	it('should be pass correctly formatted configuration options to billboard.js', () => {
 		new Chart({
-			columns: []
+			columns: [],
 		});
 
 		const config = JSON.stringify(bb.generate.mock.calls[0][0]);
@@ -38,13 +38,15 @@ describe('Chart', function() {
 					data: [1, 2, 3],
 					id: 'data1',
 					name: 'Data 1',
-					regions: [{
-						end: 2,
-						start: 1,
-						style: 'dashed'
-					}],
+					regions: [
+						{
+							end: 2,
+							start: 1,
+							style: 'dashed',
+						},
+					],
 					type: 'line',
-					xs: 'x1'
+					xs: 'x1',
 				},
 				{
 					axis: 'y2',
@@ -53,15 +55,17 @@ describe('Chart', function() {
 					data: [1, 2, 3],
 					id: 'data2',
 					name: 'Data 2',
-					regions: [{
-						end: 3,
-						start: 2,
-						style: 'dashed'
-					}],
+					regions: [
+						{
+							end: 3,
+							start: 2,
+							style: 'dashed',
+						},
+					],
 					type: 'spline',
-					xs: 'x2'
-				}
-			]
+					xs: 'x2',
+				},
+			],
 		});
 
 		const config = JSON.stringify(bb.generate.mock.calls[0][0]);
@@ -73,12 +77,12 @@ describe('Chart', function() {
 		const transformMock = jest.fn();
 
 		bb.generate.mockReturnValue({
-			transform: transformMock
+			transform: transformMock,
 		});
 
 		const chart = new Chart({
 			columns: [],
-			type: 'line'
+			type: 'line',
 		});
 
 		chart.type = 'spline';
@@ -90,23 +94,23 @@ describe('Chart', function() {
 		const loadMock = jest.fn();
 
 		bb.generate.mockReturnValue({
-			load: loadMock
+			load: loadMock,
 		});
 
 		const chart = new Chart({
 			columns: [
 				{
 					id: 'data1',
-					data: [1, 2, 3]
-				}
-			]
+					data: [1, 2, 3],
+				},
+			],
 		});
 
 		chart.columns = [
 			{
 				id: 'data1',
-				data: [1, 2, 3, 4]
-			}
+				data: [1, 2, 3, 4],
+			},
 		];
 
 		const config = JSON.stringify(loadMock.mock.calls[0][0]);
@@ -118,23 +122,23 @@ describe('Chart', function() {
 		const loadMock = jest.fn();
 
 		bb.generate.mockReturnValue({
-			load: loadMock
+			load: loadMock,
 		});
 
 		const chart = new Chart({
 			columns: [
 				{
 					id: 'data1',
-					data: [1, 2, 3]
-				}
-			]
+					data: [1, 2, 3],
+				},
+			],
 		});
 
 		chart.columns = [
 			{
 				id: 'data2',
-				data: [1, 2, 3]
-			}
+				data: [1, 2, 3],
+			},
 		];
 
 		const config = JSON.stringify(loadMock.mock.calls[0][0]);
