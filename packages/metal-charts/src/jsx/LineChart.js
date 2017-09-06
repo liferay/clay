@@ -1,7 +1,5 @@
 'use strict';
 
-import { Config } from 'metal-state';
-
 import { LineChart as LineChartBase } from '../LineChart';
 import Chart from './Chart';
 

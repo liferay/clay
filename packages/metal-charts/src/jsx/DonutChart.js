@@ -1,7 +1,5 @@
 'use strict';
 
-import { Config } from 'metal-state';
-
 import { DonutChart as DonutChartBase } from '../DonutChart';
 import Chart from './Chart';
 

@@ -1,7 +1,5 @@
 'use strict';
 
-import { Config } from 'metal-state';
-
 import { StepChart as StepChartBase } from '../StepChart';
 import Chart from './Chart';
 

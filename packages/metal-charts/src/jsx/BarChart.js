@@ -1,7 +1,5 @@
 'use strict';
 
-import { Config } from 'metal-state';
-
 import { BarChart as BarChartBase } from '../BarChart';
 import Chart from './Chart';
 

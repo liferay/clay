@@ -1,7 +1,5 @@
 'use strict';
 
-import { Config } from 'metal-state';
-
 import { GaugeChart as GaugeChartBase } from '../GaugeChart';
 import Chart from './Chart';
 

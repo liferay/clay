@@ -1,7 +1,5 @@
 'use strict';
 
-import { Config } from 'metal-state';
-
 import { SplineChart as SplineChartBase } from '../SplineChart';
 import Chart from './Chart';
 

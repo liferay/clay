@@ -1,7 +1,5 @@
 'use strict';
 
-import { Config } from 'metal-state';
-
 import { PieChart as PieChartBase } from '../PieChart';
 import Chart from './Chart';
 

@@ -1,6 +1,5 @@
 'use strict';
 
-import Component from 'metal-component';
 import { Config } from 'metal-state';
 import { bb, d3 } from 'billboard.js';
 
@@ -81,7 +80,7 @@ const ChartBase = {
 			title: state.title,
 			tooltip: state.tooltip,
 			transition: state.transitionDuration,
-			zoom: state.zoom,
+			zoom,
 		};
 
 		/**
@@ -335,7 +334,9 @@ const ChartBase = {
 	/**
 	 * Determines which ids should be passed to the unload property.
 	 * @static
-	 * @type {!Object}
+	 * @param {Array} newColumns
+	 * @param {Array} prevColumns
+	 * @return {Array}
 	 */
 	resolveRemovedColumns_: function(newColumns, prevColumns) {
 		const ids = newColumns.map(column => column[0]);
