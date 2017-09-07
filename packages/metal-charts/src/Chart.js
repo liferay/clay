@@ -8,7 +8,8 @@ import templates from './Chart.soy.js';
 
 /**
  * Metal Chart component.
- * @augments Component
+ * @extends Component
+ * @extends ChartBase
  */
 class Chart extends Component {}
 

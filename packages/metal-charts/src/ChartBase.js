@@ -16,7 +16,9 @@ const PROP_NAME_MAP = {
 };
 
 /**
- * Base Chart component.
+ * Chart Base prototype.
+ *
+ * @mixin
  */
 const ChartBase = {
 	/**

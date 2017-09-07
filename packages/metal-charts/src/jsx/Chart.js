@@ -6,8 +6,8 @@ import ChartBase from '../ChartBase';
 
 /**
  * Metal Chart component for use with JSX.
- * @augments ChartBase
- * @augments JSXComponent
+ * @extends JSXComponent
+ * @extends ChartBase
  */
 class ChartJSX extends JSXComponent {
 	/**
