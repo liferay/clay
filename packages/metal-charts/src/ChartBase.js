@@ -30,6 +30,7 @@ const ChartBase = {
 		this.bbChart = bb.generate(config);
 
 		this.on('columnsChanged', this.handleColumnsChanged_.bind(this));
+		this.on('groupsChanged', this.handleGroupsChanged_.bind(this));
 		this.on('regionsChanged', this.handleRegionsChanged_.bind(this));
 		this.on('sizeChanged', this.handleSizeChanged_.bind(this));
 		this.on('typeChanged', this.handleTypeChanged_.bind(this));
@@ -323,6 +324,14 @@ const ChartBase = {
 		}
 
 		this.bbChart.load(data);
+	},
+
+	/**
+	 * Maps `groups` state to chart via `bb.groups` method.
+	 * @protected
+	 */
+	handleGroupsChanged_: function({ newVal }) {
+		this.bbChart.groups(newVal);
 	},
 
 	/**
