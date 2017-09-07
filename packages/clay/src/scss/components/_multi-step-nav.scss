@@ -266,24 +266,3 @@ button.multi-step-link {
 		}
 	}
 }
-
-// Multi Step Bar
-
-.multi-step-bar {
-	align-items: center;
-	background-color: $multi-step-bar-bg;
-
-	@include border-radius($multi-step-bar-border-radius);
-
-	color: $multi-step-bar-color;
-	display: flex;
-	font-size: $multi-step-bar-font-size;
-	height: $multi-step-bar-height;
-	justify-content: space-between;
-	margin-bottom: $multi-step-bar-margin-bottom;
-	padding: $multi-step-bar-padding;
-
-	> li {
-		display: block;
-	}
-}
