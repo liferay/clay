@@ -1,8 +1,10 @@
 'use strict';
 
 import { Config } from 'metal-state';
+import Soy from 'metal-soy';
 
 import Chart from './Chart';
+import templates from './ScatterChart.soy.js';
 import types from './utils/types';
 
 /**
@@ -43,6 +45,8 @@ ScatterChart.STATE = {
 	 */
 	type: Config.oneOf(types.point).value('scatter'),
 };
+
+Soy.register(ScatterChart, templates);
 
 export { ScatterChart };
 export default ScatterChart;

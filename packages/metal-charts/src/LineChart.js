@@ -1,8 +1,10 @@
 'use strict';
 
 import { Config } from 'metal-state';
+import Soy from 'metal-soy';
 
 import Chart from './Chart';
+import templates from './LineChart.soy.js';
 import types from './utils/types';
 
 /**
@@ -43,6 +45,8 @@ LineChart.STATE = {
 	 */
 	type: Config.oneOf(types.point).value('line'),
 };
+
+Soy.register(LineChart, templates);
 
 export { LineChart };
 export default LineChart;

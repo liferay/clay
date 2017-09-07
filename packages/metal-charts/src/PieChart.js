@@ -1,8 +1,10 @@
 'use strict';
 
 import { Config } from 'metal-state';
+import Soy from 'metal-soy';
 
 import Chart from './Chart';
+import templates from './PieChart.soy.js';
 import types from './utils/types';
 
 /**
@@ -43,6 +45,8 @@ PieChart.STATE = {
 	 */
 	type: Config.oneOf(types.percentage).value('pie'),
 };
+
+Soy.register(PieChart, templates);
 
 export { PieChart };
 export default PieChart;
