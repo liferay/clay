@@ -12,7 +12,7 @@ const PROP_NAME_MAP = {
 	name: 'names',
 	regions: 'regions',
 	type: 'types',
-	xs: 'xs',
+	x: 'xs',
 };
 
 /**
@@ -529,7 +529,7 @@ ChartBase.STATE = {
 	 */
 	columns: Config.arrayOf(
 		Config.shapeOf({
-			axis: Config.string(),
+			axis: Config.oneOf(['y', 'y2']),
 			class: Config.string(),
 			color: Config.string(),
 			data: Config.array().required(),
@@ -538,7 +538,7 @@ ChartBase.STATE = {
 			name: Config.string(),
 			regions: Config.array(),
 			type: Config.oneOf(types.all),
-			xs: Config.string(),
+			x: Config.string(),
 		}),
 	),
 
@@ -1047,15 +1047,6 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	xSort: Config.bool(),
-
-	/**
-	 * Sets billboard's data.xs config.
-	 * @instance
-	 * @memberof ChartBase
-	 * @type {?Object|undefined}
-	 * @default undefined
-	 */
-	xs: Config.object(),
 
 	/**
 	 * Configuration for bb chart zoom capabilities.

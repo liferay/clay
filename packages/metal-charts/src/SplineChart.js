@@ -21,7 +21,7 @@ SplineChart.STATE = {
 	 */
 	columns: Config.arrayOf(
 		Config.shapeOf({
-			axis: Config.string(),
+			axis: Config.oneOf(['y', 'y2']),
 			class: Config.string(),
 			color: Config.string(),
 			data: Config.array().required(),
@@ -30,7 +30,7 @@ SplineChart.STATE = {
 			name: Config.string(),
 			regions: Config.array(),
 			type: Config.oneOf(types.point),
-			xs: Config.string(),
+			x: Config.string(),
 		}),
 	),
 
