@@ -13,7 +13,6 @@ $navbar-active-highlight: transparent !default;
 $navbar-text-truncate-spacer-right: 25px !default;
 $navbar-text-truncate-max-width: 140px !default;
 
-$zindex-basic-search-close: $zindex-input-group-focus + 1 !default; // 5
 $zindex-navbar-overlay: $zindex-dropdown - 1 !default; // 999
 
 // Navbar Collapse
