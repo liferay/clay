@@ -38,10 +38,6 @@ $navbar-light-active-highlight: map-get($theme-colors, primary) !default;
 
 $navbar-light-toggler-border-color: $navbar-light-border-color !default;
 
-$collapse-basic-search-transparent-light-btn-focus-color: $navbar-light-active-highlight !default;
-$collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active-highlight !default;
-$collapse-basic-search-transparent-light-focus-highlight: $navbar-light-active-highlight !default;
-
 // Navbar Dark
 
 $navbar-dark-bg: map-get($theme-colors, secondary) !default;
@@ -57,8 +53,3 @@ $navbar-dark-brand-hover-color: $navbar-dark-brand-color !default;
 $navbar-dark-active-highlight: #2B4259 !default;
 
 $navbar-dark-toggler-border-color: #FFF !default;
-
-$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-dark-active-highlight !default;
-$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-dark-active-highlight !default;
-$collapse-basic-search-transparent-inverse-input-placeholder-focus-color: $navbar-dark-active-highlight !default;
-$collapse-basic-search-transparent-inverse-focus-highlight: $navbar-dark-active-highlight !default;
