@@ -8,8 +8,8 @@
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/MetalCharts.js",
-  "jsnext:main": "src/MetalCharts.js",
+  "main": "lib/charts.js",
+  "jsnext:main": "src/charts.js",
   "files": [
     "lib",
     "src",
