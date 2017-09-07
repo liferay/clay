@@ -70,39 +70,6 @@
 		font-size: $font-size-mobile;
 	}
 
-	&.collapse-basic-search {
-		.basic-search {
-			@include media-breakpoint-down($scaling-breakpoint-down) {
-				border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
-				left: -$border-left-width;
-				right: -$border-right-width;
-				top: -$border-top-width;
-			}
-		}
-	}
-
-	&.collapse-basic-search {
-		&.navbar .basic-search {
-			@include media-breakpoint-down($scaling-breakpoint-down) {
-				padding-left: $link-padding-x;
-				padding-right: $link-padding-x;
-			}
-		}
-
-		.basic-search {
-			.input-group {
-				@include media-breakpoint-down($scaling-breakpoint-down) {
-					@if ($scaling-navbar) {
-						height: $height-mobile - $border-bottom-width - $border-top-width;
-					}
-					@else {
-						height: $height - $border-bottom-width - $border-top-width;
-					}
-				}
-			}
-		}
-	}
-
 	.navbar-toggler {
 		height: $toggler-height;
 		margin-bottom: $toggler-margin-y;

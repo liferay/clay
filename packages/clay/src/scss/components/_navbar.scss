@@ -1,165 +1,3 @@
-// Basic Search
-
-.basic-search {
-	&.open {
-		z-index: 10;
-	}
-
-	.input-group-input {
-		.basic-search-slider .form-control {
-			border-bottom-right-radius: 0;
-			border-top-right-radius: 0;
-		}
-
-		.form-control {
-			border-bottom-left-radius: $input-border-radius;
-			border-top-left-radius: $input-border-radius;
-		}
-	}
-}
-
-.basic-search-transition {
-	.basic-search-slider {
-		transition: left 0.5s ease, right 0.5s ease;
-	}
-}
-
-// Collapse Basic Search
-
-.basic-search-slider {
-	left: 0;
-	position: relative;
-
-	@include media-breakpoint-down($scaling-breakpoint-down) {
-		left: 101%;
-	}
-
-	.basic-search-close {
-		border-bottom-right-radius: 0;
-		border-top-right-radius: 0;
-		display: none;
-		z-index: $zindex-basic-search-close;
-
-		@include media-breakpoint-down($scaling-breakpoint-down) {
-			display: inline-block;
-		}
-	}
-
-	.basic-search.open & {
-		left: 0;
-	}
-}
-
-.collapse-basic-search {
-	.basic-search {
-		position: relative;
-
-		@include media-breakpoint-down($scaling-breakpoint-down) {
-			border-color: transparent;
-
-			@include border-radius($navbar-border-radius);
-
-			border-style: solid;
-			margin: 0;
-			position: absolute;
-
-			&.open {
-				background-color: $body-bg;
-			}
-		}
-
-		&.basic-search-transition,
-		&.open {
-			.input-group-input {
-				visibility: visible;
-			}
-		}
-
-		&.basic-search-transition .input-group-btn .btn:first-child,
-		&.open .input-group-btn .btn:first-child {
-			@include media-breakpoint-down($scaling-breakpoint-down) {
-				border-bottom-left-radius: 0;
-				border-top-left-radius: 0;
-			}
-		}
-
-		.input-group-btn .btn:first-child {
-			@include media-breakpoint-down($scaling-breakpoint-down) {
-				border-bottom-left-radius: $btn-border-radius;
-				border-top-left-radius: $btn-border-radius;
-			}
-		}
-
-		.input-group-input {
-			overflow: visible;
-			visibility: visible;
-
-			@include media-breakpoint-down($scaling-breakpoint-down) {
-				overflow: hidden;
-				visibility: hidden;
-			}
-		}
-	}
-}
-
-.collapse-basic-search {
-	flex-wrap: wrap;
-
-	&.navbar .basic-search {
-		@include media-breakpoint-down($scaling-breakpoint-down) {
-			margin-left: 0;
-			margin-right: 0;
-
-			> form {
-				width: 100%;
-			}
-		}
-	}
-
-	.basic-search {
-		max-width: 220px;
-
-		@include media-breakpoint-down($scaling-breakpoint-down) {
-			max-width: none;
-		}
-
-		&.navbar-form-autofit {
-			max-width: none;
-		}
-
-		.input-group {
-			align-items: center;
-			margin-left: auto;
-		}
-
-		.input-group-input {
-			flex: 1;
-		}
-	}
-
-	.basic-search-slider {
-		display: flex;
-		flex: 1;
-
-		.form-control {
-			margin-left: -1px;
-		}
-	}
-
-	.navbar-collapse {
-		flex-basis: auto;
-
-		@include media-breakpoint-down($scaling-breakpoint-down) {
-			flex-basis: 100%;
-		}
-	}
-
-	.nav-link,
-	.navbar-toggler {
-		z-index: 1;
-	}
-}
-
 // Navbar
 
 .navbar {
@@ -447,12 +285,6 @@
 // Navbar Highlight
 
 .navbar-highlight {
-	.basic-search-transition:after {
-		transition: all 0.1s ease;
-	}
-}
-
-.navbar-highlight {
 	.navbar-toggler-link {
 		&:after {
 			background-color: $navbar-active-highlight;
@@ -567,11 +399,6 @@
 	background-color: $navbar-light-bg;
 	border-color: $navbar-light-border-color;
 
-	.basic-search.open {
-		background-color: $navbar-light-bg;
-		border-color: $navbar-light-border-color;
-	}
-
 	.navbar-brand {
 		background-color: $navbar-light-brand-bg;
 
@@ -637,11 +464,6 @@
 .navbar-dark-bg {
 	background-color: $navbar-dark-bg;
 	border-color: $navbar-dark-border-color;
-
-	.basic-search.open {
-		background-color: $navbar-dark-bg;
-		border-color: $navbar-dark-border-color;
-	}
 
 	.navbar-brand {
 		background-color: $navbar-dark-brand-bg;
