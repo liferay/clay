@@ -34,6 +34,7 @@ const ChartBase = {
 		this.on('regionsChanged', this.handleRegionsChanged_.bind(this));
 		this.on('sizeChanged', this.handleSizeChanged_.bind(this));
 		this.on('typeChanged', this.handleTypeChanged_.bind(this));
+		this.on('xChanged', this.handleXChanged_.bind(this));
 	},
 
 	/**
@@ -299,6 +300,18 @@ const ChartBase = {
 	},
 
 	/**
+	 * Gets column by column id.
+	 * @param {string} id column id
+	 * @return {?Object}
+	 * @protected
+	 */
+	getColumn_: function(id) {
+		return this.columns.find(column => {
+			return column.id === id;
+		});
+	},
+
+	/**
 	 * Retrieves state object, used to allow JSX implementation.
 	 * @return {Object}
 	 * @protected
@@ -356,6 +369,18 @@ const ChartBase = {
 	 */
 	handleTypeChanged_: function({ newVal }) {
 		this.bbChart.transform(newVal);
+	},
+
+	/**
+	 * Maps `x` state to chart via `bb.x` method.
+	 * @protected
+	 */
+	handleXChanged_: function({ newVal }) {
+		const { bbChart } = this;
+
+		const column = this.getColumn_(newVal);
+
+		this.bbChart.x(column.data);
 	},
 
 	/**
