@@ -274,20 +274,20 @@ const ChartBase = {
 	},
 
 	/**
+	 * Emits event based on arguments array.
+	 * @protected
+	 */
+	emitChartEvent_: function() {
+		this.emit.apply(this, arguments);
+	},
+
+	/**
 	 * Retrieves state object, used to allow JSX implementation.
 	 * @return {Object}
 	 * @protected
 	 */
 	getStateObj_: function() {
 		return this;
-	},
-
-	/**
-	 * Emits event based on arguments array.
-	 * @protected
-	 */
-	emitChartEvent_: function() {
-		this.emit.apply(this, arguments);
 	},
 
 	/**
