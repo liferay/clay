@@ -47,7 +47,7 @@ describe('Chart', function() {
 						},
 					],
 					type: 'line',
-					xs: 'x1',
+					x: 'x1',
 				},
 				{
 					axis: 'y2',
@@ -65,7 +65,7 @@ describe('Chart', function() {
 						},
 					],
 					type: 'spline',
-					xs: 'x2',
+					x: 'x2',
 				},
 			],
 		});
