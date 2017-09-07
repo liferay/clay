@@ -7,9 +7,17 @@ exports.LineChart = undefined;
 
 var _metalState = require('metal-state');
 
+var _metalSoy = require('metal-soy');
+
+var _metalSoy2 = _interopRequireDefault(_metalSoy);
+
 var _Chart2 = require('./Chart');
 
 var _Chart3 = _interopRequireDefault(_Chart2);
+
+var _LineChartSoy = require('./LineChart.soy.js');
+
+var _LineChartSoy2 = _interopRequireDefault(_LineChartSoy);
 
 var _types = require('./utils/types');
 
@@ -69,6 +77,8 @@ LineChart.STATE = {
   */
 	type: _metalState.Config.oneOf(_types2.default.point).value('line')
 };
+
+_metalSoy2.default.register(LineChart, _LineChartSoy2.default);
 
 exports.LineChart = LineChart;
 exports.default = LineChart;

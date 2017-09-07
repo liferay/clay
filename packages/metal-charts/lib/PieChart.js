@@ -7,9 +7,17 @@ exports.PieChart = undefined;
 
 var _metalState = require('metal-state');
 
+var _metalSoy = require('metal-soy');
+
+var _metalSoy2 = _interopRequireDefault(_metalSoy);
+
 var _Chart2 = require('./Chart');
 
 var _Chart3 = _interopRequireDefault(_Chart2);
+
+var _PieChartSoy = require('./PieChart.soy.js');
+
+var _PieChartSoy2 = _interopRequireDefault(_PieChartSoy);
 
 var _types = require('./utils/types');
 
@@ -69,6 +77,8 @@ PieChart.STATE = {
   */
 	type: _metalState.Config.oneOf(_types2.default.percentage).value('pie')
 };
+
+_metalSoy2.default.register(PieChart, _PieChartSoy2.default);
 
 exports.PieChart = PieChart;
 exports.default = PieChart;

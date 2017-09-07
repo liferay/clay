@@ -7,9 +7,17 @@ exports.StepChart = undefined;
 
 var _metalState = require('metal-state');
 
+var _metalSoy = require('metal-soy');
+
+var _metalSoy2 = _interopRequireDefault(_metalSoy);
+
 var _Chart2 = require('./Chart');
 
 var _Chart3 = _interopRequireDefault(_Chart2);
+
+var _StepChartSoy = require('./StepChart.soy.js');
+
+var _StepChartSoy2 = _interopRequireDefault(_StepChartSoy);
 
 var _types = require('./utils/types');
 
@@ -69,6 +77,8 @@ StepChart.STATE = {
   */
 	type: _metalState.Config.oneOf(_types2.default.point).value('step')
 };
+
+_metalSoy2.default.register(StepChart, _StepChartSoy2.default);
 
 exports.StepChart = StepChart;
 exports.default = StepChart;

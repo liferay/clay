@@ -7,9 +7,17 @@ exports.BarChart = undefined;
 
 var _metalState = require('metal-state');
 
+var _metalSoy = require('metal-soy');
+
+var _metalSoy2 = _interopRequireDefault(_metalSoy);
+
 var _Chart2 = require('./Chart');
 
 var _Chart3 = _interopRequireDefault(_Chart2);
+
+var _BarChartSoy = require('./BarChart.soy.js');
+
+var _BarChartSoy2 = _interopRequireDefault(_BarChartSoy);
 
 var _types = require('./utils/types');
 
@@ -69,6 +77,8 @@ BarChart.STATE = {
   */
 	type: _metalState.Config.oneOf(_types2.default.point).value('bar')
 };
+
+_metalSoy2.default.register(BarChart, _BarChartSoy2.default);
 
 exports.BarChart = BarChart;
 exports.default = BarChart;

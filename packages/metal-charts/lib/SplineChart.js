@@ -7,9 +7,17 @@ exports.SplineChart = undefined;
 
 var _metalState = require('metal-state');
 
+var _metalSoy = require('metal-soy');
+
+var _metalSoy2 = _interopRequireDefault(_metalSoy);
+
 var _Chart2 = require('./Chart');
 
 var _Chart3 = _interopRequireDefault(_Chart2);
+
+var _SplineChartSoy = require('./SplineChart.soy.js');
+
+var _SplineChartSoy2 = _interopRequireDefault(_SplineChartSoy);
 
 var _types = require('./utils/types');
 
@@ -69,6 +77,8 @@ SplineChart.STATE = {
   */
 	type: _metalState.Config.oneOf(_types2.default.point).value('spline')
 };
+
+_metalSoy2.default.register(SplineChart, _SplineChartSoy2.default);
 
 exports.SplineChart = SplineChart;
 exports.default = SplineChart;

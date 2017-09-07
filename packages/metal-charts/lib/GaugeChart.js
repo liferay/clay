@@ -7,9 +7,17 @@ exports.GaugeChart = undefined;
 
 var _metalState = require('metal-state');
 
+var _metalSoy = require('metal-soy');
+
+var _metalSoy2 = _interopRequireDefault(_metalSoy);
+
 var _Chart2 = require('./Chart');
 
 var _Chart3 = _interopRequireDefault(_Chart2);
+
+var _GaugeChartSoy = require('./GaugeChart.soy.js');
+
+var _GaugeChartSoy2 = _interopRequireDefault(_GaugeChartSoy);
 
 var _types = require('./utils/types');
 
@@ -69,6 +77,8 @@ GaugeChart.STATE = {
   */
 	type: _metalState.Config.oneOf(_types2.default.gauge).value('gauge')
 };
+
+_metalSoy2.default.register(GaugeChart, _GaugeChartSoy2.default);
 
 exports.GaugeChart = GaugeChart;
 exports.default = GaugeChart;

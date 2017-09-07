@@ -7,9 +7,17 @@ exports.DonutChart = undefined;
 
 var _metalState = require('metal-state');
 
+var _metalSoy = require('metal-soy');
+
+var _metalSoy2 = _interopRequireDefault(_metalSoy);
+
 var _Chart2 = require('./Chart');
 
 var _Chart3 = _interopRequireDefault(_Chart2);
+
+var _DonutChartSoy = require('./DonutChart.soy.js');
+
+var _DonutChartSoy2 = _interopRequireDefault(_DonutChartSoy);
 
 var _types = require('./utils/types');
 
@@ -69,6 +77,8 @@ DonutChart.STATE = {
   */
 	type: _metalState.Config.oneOf(_types2.default.percentage).value('donut')
 };
+
+_metalSoy2.default.register(DonutChart, _DonutChartSoy2.default);
 
 exports.DonutChart = DonutChart;
 exports.default = DonutChart;

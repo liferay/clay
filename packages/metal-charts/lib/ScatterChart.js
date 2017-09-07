@@ -7,9 +7,17 @@ exports.ScatterChart = undefined;
 
 var _metalState = require('metal-state');
 
+var _metalSoy = require('metal-soy');
+
+var _metalSoy2 = _interopRequireDefault(_metalSoy);
+
 var _Chart2 = require('./Chart');
 
 var _Chart3 = _interopRequireDefault(_Chart2);
+
+var _ScatterChartSoy = require('./ScatterChart.soy.js');
+
+var _ScatterChartSoy2 = _interopRequireDefault(_ScatterChartSoy);
 
 var _types = require('./utils/types');
 
@@ -69,6 +77,8 @@ ScatterChart.STATE = {
   */
 	type: _metalState.Config.oneOf(_types2.default.point).value('scatter')
 };
+
+_metalSoy2.default.register(ScatterChart, _ScatterChartSoy2.default);
 
 exports.ScatterChart = ScatterChart;
 exports.default = ScatterChart;
