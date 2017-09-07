@@ -25,6 +25,7 @@ PieChart.STATE = {
 			class: Config.string(),
 			color: Config.string(),
 			data: Config.array().required(),
+			hide: Config.bool(),
 			id: Config.required().string(),
 			name: Config.string(),
 			regions: Config.array(),

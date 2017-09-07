@@ -147,7 +147,18 @@ const ChartBase = {
 			for (let j = 0; j < keys.length; j++) {
 				const key = keys[j];
 
-				if (key !== 'data' && key !== 'id') {
+				if (key === 'data' || key === 'id') {
+					continue;
+				}
+
+				if (key === 'hide') {
+					config.hide = config.hide || [];
+
+					if (column.hide) {
+						config.hide.push(column.id);
+					}
+				}
+				else {
 					config[PROP_NAME_MAP[key]] =
 						config[PROP_NAME_MAP[key]] || {};
 
@@ -517,6 +528,7 @@ ChartBase.STATE = {
 			class: Config.string(),
 			color: Config.string(),
 			data: Config.array().required(),
+			hide: Config.bool(),
 			id: Config.required().string(),
 			name: Config.string(),
 			regions: Config.array(),
@@ -631,15 +643,13 @@ ChartBase.STATE = {
 	groups: Config.array(),
 
 	/**
-	 * Sets billboard's data.hide config.
+	 * If set to true hides all data.
 	 * @instance
 	 * @memberof ChartBase
-	 * @type {?Array|boolean|undefined}
+	 * @type {boolean|undefined}
 	 * @default false
 	 */
-	hide: Config.array()
-		.bool()
-		.value(false),
+	hide: Config.bool().value(false),
 
 	/**
 	 * Intersection display options.

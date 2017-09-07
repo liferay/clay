@@ -36,6 +36,7 @@ describe('Chart', function() {
 					class: 'data1',
 					color: 'red',
 					data: [1, 2, 3],
+					hide: true,
 					id: 'data1',
 					name: 'Data 1',
 					regions: [
@@ -53,6 +54,7 @@ describe('Chart', function() {
 					class: 'data2',
 					color: 'blue',
 					data: [1, 2, 3],
+					hide: false,
 					id: 'data2',
 					name: 'Data 2',
 					regions: [

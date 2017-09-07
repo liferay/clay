@@ -26,6 +26,7 @@ BarChart.STATE = {
 			color: Config.string(),
 			data: Config.array().required(),
 			id: Config.required().string(),
+			hide: Config.bool(),
 			name: Config.string(),
 			regions: Config.array(),
 			type: Config.oneOf(types.point),
