@@ -337,6 +337,10 @@ const ChartBase = {
 		}
 
 		this.bbChart.load(data);
+
+		if (data.xs) {
+			this.bbChart.xs(this.mapXSValues_(data.xs));
+		}
 	},
 
 	/**
@@ -381,6 +385,24 @@ const ChartBase = {
 		const column = this.getColumn_(newVal);
 
 		this.bbChart.x(column.data);
+	},
+
+	/**
+	 * Maps xs value to data points.
+	 * @param {Object} xs
+	 * @return {Object}
+	 * @protected
+	 */
+	mapXSValues_: function(xs) {
+		return Object.keys(xs).reduce((xsValues, key) => {
+			const value = xs[key];
+
+			const xColumn = this.getColumn_(value);
+
+			xsValues[key] = xColumn.data;
+
+			return xsValues;
+		}, {});
 	},
 
 	/**
