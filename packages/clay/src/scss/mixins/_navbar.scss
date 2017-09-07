@@ -286,22 +286,6 @@
 		}
 	}
 
-	&.navbar-highlight.collapse-basic-search-transparent {
-		.basic-search {
-			&:after {
-				bottom: -$border-bottom-width - $padding-y;
-				height: 0;
-				left: 0;
-				right: 0;
-			}
-
-			&.focus:after {
-				height: $active-border-bottom-width;
-				margin-top: -$active-border-bottom-width;
-			}
-		}
-	}
-
 	&.navbar-highlight {
 		.navbar-toggler-link {
 			&:after {

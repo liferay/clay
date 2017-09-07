@@ -160,38 +160,6 @@
 	}
 }
 
-.collapse-basic-search-transparent {
-	&.navbar .basic-search {
-		@include media-breakpoint-down($scaling-breakpoint-down) {
-			padding-left: 0;
-			padding-right: 0;
-		}
-	}
-
-	.basic-search {
-		@include media-breakpoint-down($scaling-breakpoint-down) {
-			height: auto;
-		}
-
-		.btn {
-			background-color: transparent;
-			border-color: transparent;
-			box-shadow: none;
-			padding-left: 12px;
-			padding-right: 12px;
-
-			&:focus {
-				color: $input-focus-border-color;
-			}
-		}
-
-		.form-control {
-			background-color: transparent;
-			border-color: transparent;
-		}
-	}
-}
-
 // Navbar
 
 .navbar {
@@ -484,22 +452,6 @@
 	}
 }
 
-.navbar-highlight.collapse-basic-search-transparent {
-	.basic-search {
-		&:after {
-			content: '';
-			display: block;
-			overflow: hidden;
-			position: absolute;
-			z-index: $zindex-basic-search-close;
-		}
-
-		&.focus:after {
-			background-color: $input-focus-border-color;
-		}
-	}
-}
-
 .navbar-highlight {
 	.navbar-toggler-link {
 		&:after {
@@ -558,12 +510,6 @@
 }
 
 .navbar-highlight.navbar-light-bg {
-	&.collapse-basic-search-transparent .basic-search {
-		&.focus:after {
-			background-color: $collapse-basic-search-transparent-light-focus-highlight;
-		}
-	}
-
 	.navbar-toggler-link:after {
 		background-color: $navbar-light-active-highlight;
 
@@ -574,12 +520,6 @@
 }
 
 .navbar-highlight.navbar-dark-bg {
-	&.collapse-basic-search-transparent .basic-search {
-		&.focus:after {
-			background-color: $collapse-basic-search-transparent-inverse-focus-highlight;
-		}
-	}
-
 	.navbar-toggler-link:after {
 		background-color: $navbar-dark-active-highlight;
 
@@ -592,32 +532,6 @@
 // Navbar Light
 
 .navbar-light {
-	&.collapse-basic-search-transparent .basic-search {
-		.btn {
-			color: $collapse-basic-search-transparent-light-btn-color;
-
-			&:focus {
-				color: $collapse-basic-search-transparent-light-btn-focus-color;
-			}
-		}
-
-		.form-control {
-			color: $collapse-basic-search-transparent-light-input-color;
-
-			&::placeholder {
-				color: $collapse-basic-search-transparent-light-input-placeholder-color;
-			}
-
-			&::placeholder:focus {
-				color: $collapse-basic-search-transparent-light-input-placeholder-focus-color;
-			}
-
-			&:focus {
-				color: $collapse-basic-search-transparent-light-input-focus-color;
-			}
-		}
-	}
-
 	.btn-link {
 		color: $navbar-light-color;
 
@@ -689,32 +603,6 @@
 // Navbar Dark
 
 .navbar-dark {
-	&.collapse-basic-search-transparent .basic-search {
-		.btn {
-			color: $collapse-basic-search-transparent-inverse-btn-color;
-
-			&:focus {
-				color: $collapse-basic-search-transparent-inverse-btn-focus-color;
-			}
-		}
-
-		.form-control {
-			color: $collapse-basic-search-transparent-inverse-input-color;
-
-			&::placeholder {
-				color: $collapse-basic-search-transparent-inverse-input-placeholder-color;
-			}
-
-			&:focus::placeholder {
-				color: $collapse-basic-search-transparent-inverse-input-placeholder-focus-color;
-			}
-
-			&:focus {
-				color: $collapse-basic-search-transparent-inverse-input-focus-color;
-			}
-		}
-	}
-
 	.btn-link {
 		color: $navbar-dark-color;
 
