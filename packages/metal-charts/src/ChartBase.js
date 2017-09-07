@@ -193,6 +193,11 @@ const ChartBase = {
 			selection: state.selection,
 			type: state.type,
 			url: state.url,
+			x: state.x,
+			xFormat: state.xFormat,
+			xLocaltime: state.xLocaltime,
+			xSort: state.xSort,
+			xs: state.xs,
 		};
 
 		const columnsConfig = this.constructColumnsConfig_();
@@ -1006,6 +1011,51 @@ ChartBase.STATE = {
 	 * @default undefined
 	 */
 	url: Config.string(),
+
+	/**
+	 * Sets billboard's data.x config.
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	x: Config.string(),
+
+	/**
+	 * Sets billboard's data.xFormat config.
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?string|undefined}
+	 * @default undefined
+	 */
+	xFormat: Config.string(),
+
+	/**
+	 * Sets billboard's data.xLocaltime config.
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {boolean|undefined}
+	 * @default undefined
+	 */
+	xLocaltime: Config.bool(),
+
+	/**
+	 * Sets billboard's data.xSort config.
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?Object|undefined}
+	 * @default undefined
+	 */
+	xSort: Config.bool(),
+
+	/**
+	 * Sets billboard's data.xs config.
+	 * @instance
+	 * @memberof ChartBase
+	 * @type {?Object|undefined}
+	 * @default undefined
+	 */
+	xs: Config.object(),
 
 	/**
 	 * Configuration for bb chart zoom capabilities.
