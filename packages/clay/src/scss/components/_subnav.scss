@@ -1,0 +1,104 @@
+.subnav {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: $subnav-font-size;
+	justify-content: space-between;
+	margin-bottom: $subnav-margin-bottom;
+	padding-bottom: $subnav-padding-y;
+	padding-left: $subnav-padding-x;
+	padding-right: $subnav-padding-x;
+	padding-top: $subnav-padding-y;
+
+	.container,
+	.container-fluid {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.subnav-nav {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+
+	> li {
+		display: flex;
+	}
+}
+
+.subnav-title {
+	font-size: $subnav-title-font-size;
+	font-weight: $subnav-title-font-weight;
+	text-transform: $subnav-title-text-transform;
+}
+
+.subnav-link {
+	color: $subnav-link-color;
+	text-decoration: $subnav-link-text-decoration;
+
+	@include hover {
+		color: $subnav-link-hover-color;
+		text-decoration: $subnav-link-hover-text-decoration;
+	}
+}
+
+button.subnav-link {
+	background-color: transparent;
+	border-width: 0;
+	cursor: pointer;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: normal;
+	max-width: 100%;
+	padding: 0;
+	text-align: left;
+	text-transform: inherit;
+	vertical-align: baseline;
+}
+
+button.subnav-item,
+.subnav-item {
+	line-height: $subnav-item-line-height;
+	padding-bottom: $subnav-item-padding-y;
+	padding-left: $subnav-item-padding-x;
+	padding-right: $subnav-item-padding-x;
+	padding-top: $subnav-item-padding-y;
+}
+
+.subnav-item.subnav-link {
+	text-decoration: $subnav-item-link-text-decoration;
+
+	@include hover-focus {
+		text-decoration: $subnav-item-link-hover-text-decoration;
+	}
+}
+
+// Subnav Variants
+
+@each $color, $value in $subnav-palette {
+	.subnav-#{$color} {
+		background-color: map-get($value, bg);
+		color: map-get($value, color);
+
+		.subnav-link {
+			color: map-get($value, link-color);
+
+			@include hover-focus {
+				color: map-get($value, link-hover-color);
+			}
+		}
+
+		.subnav-item.subnav-link {
+			color: map-get($value, item-link-color);
+
+			@include hover-focus {
+				color: map-get($value, item-link-hover-color);
+			}
+		}
+	}
+}

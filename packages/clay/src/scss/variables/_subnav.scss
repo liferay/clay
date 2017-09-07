@@ -1,0 +1,83 @@
+$subnav-font-size: 0.875rem !default;
+$subnav-margin-bottom: $spacer !default;
+$subnav-padding-x: null !default;
+$subnav-padding-y: null !default;
+
+$subnav-title-font-size: 0.75rem !default;
+$subnav-title-font-weight: 500 !default;
+$subnav-title-text-transform: uppercase !default;
+
+$subnav-link-color: $link-color !default;
+$subnav-link-text-decoration: $link-decoration !default;
+$subnav-link-hover-color: $link-hover-color !default;
+$subnav-link-hover-text-decoration: $link-hover-decoration !default;
+
+$subnav-item-link-text-decoration: none !default;
+$subnav-item-link-hover-text-decoration: none !default;
+
+$subnav-item-line-height: 2rem !default;
+$subnav-item-padding-x: 0.5rem !default;
+$subnav-item-padding-y: 0 !default;
+
+// Subnav Light
+
+$subnav-light-color: $navbar-light-color !default;
+$subnav-light-bg: $navbar-light-bg !default;
+
+$subnav-light-link-color: null !default;
+$subnav-light-link-hover-color: null !default;
+
+$subnav-light-item-link-color: $subnav-light-color !default;
+$subnav-light-item-link-hover-color: rgba(0, 0, 0, 0.7) !default;
+
+// Subnav Dark
+
+$subnav-dark-color: $navbar-dark-color !default;
+$subnav-dark-bg: $navbar-dark-bg !default;
+
+$subnav-dark-link-color: null !default;
+$subnav-dark-link-hover-color: null !default;
+
+$subnav-dark-item-link-color: $subnav-dark-color !default;
+$subnav-dark-item-link-hover-color: rgba(255, 255, 255, 0.75) !default;
+
+// Subnav Primary
+
+$subnav-primary-color: rgba(255, 255, 255, 0.5) !default;
+$subnav-primary-bg: map-get($theme-colors, primary) !default;
+
+$subnav-primary-link-color: #FFF !default;
+$subnav-primary-link-hover-color: rgba(255, 255, 255, 0.75) !default;
+
+$subnav-primary-item-link-color: $subnav-primary-color !default;
+$subnav-primary-item-link-hover-color: rgba(255, 255, 255, 0.75) !default;
+
+// Subnav Palette
+
+$subnav-palette: () !default;
+$subnav-palette: map-merge((
+	primary: (
+		color: $subnav-primary-color,
+		bg: $subnav-primary-bg,
+		link-color: $subnav-primary-link-color,
+		link-hover-color: $subnav-primary-link-hover-color,
+		item-link-color: $subnav-primary-item-link-color,
+		item-link-hover-color: $subnav-primary-item-link-hover-color
+	),
+	light: (
+		color: $subnav-light-color,
+		bg: $subnav-light-bg,
+		link-color: $subnav-light-link-color,
+		link-hover-color: $subnav-light-link-hover-color,
+		item-link-color: $subnav-light-item-link-color,
+		item-link-hover-color: $subnav-light-item-link-hover-color
+	),
+	dark: (
+		color: $subnav-dark-color,
+		bg: $subnav-dark-bg,
+		link-color: $subnav-dark-link-color,
+		link-hover-color: $subnav-dark-link-hover-color,
+		item-link-color: $subnav-dark-item-link-color,
+		item-link-hover-color: $subnav-dark-item-link-hover-color
+	)
+), $subnav-palette);
