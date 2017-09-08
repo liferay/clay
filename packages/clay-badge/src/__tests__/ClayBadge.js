@@ -27,46 +27,6 @@ describe('ClayBadge', function() {
 		expect(badge).toMatchSnapshot();
 	});
 
-	it('should return abbreviations of the numbers', () => {
-		badge = new ClayBadge({
-			label: 1900,
-		});
-
-		expect(badge.label).toBe('1K');
-	});
-
-	it('should render a badge with prefix `K`', () => {
-		badge = new ClayBadge({
-			label: 1244,
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
-
-	it('should render a badge with prefix `M`', () => {
-		badge = new ClayBadge({
-			label: 13244244,
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
-
-	it('should render a badge with prefix `B`', () => {
-		badge = new ClayBadge({
-			label: 10232244244,
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
-
-	it('should render a badge with prefix `T`', () => {
-		badge = new ClayBadge({
-			label: 2411232244244,
-		});
-
-		expect(badge).toMatchSnapshot();
-	});
-
 	it('should render a badge with id', () => {
 		badge = new ClayBadge({
 			label: 0,

@@ -22,12 +22,4 @@ exports[`ClayBadge should render a \`warning color\` badge 1`] = `<span class="b
 
 exports[`ClayBadge should render a badge with id 1`] = `<span class="badge badge-pill badge-primary" id="myBadge">0</span>`;
 
-exports[`ClayBadge should render a badge with label 1`] = `<span class="badge badge-pill badge-primary">2K</span>`;
-
-exports[`ClayBadge should render a badge with prefix \`B\` 1`] = `<span class="badge badge-pill badge-primary">10B</span>`;
-
-exports[`ClayBadge should render a badge with prefix \`K\` 1`] = `<span class="badge badge-pill badge-primary">1K</span>`;
-
-exports[`ClayBadge should render a badge with prefix \`M\` 1`] = `<span class="badge badge-pill badge-primary">13M</span>`;
-
-exports[`ClayBadge should render a badge with prefix \`T\` 1`] = `<span class="badge badge-pill badge-primary">2T</span>`;
+exports[`ClayBadge should render a badge with label 1`] = `<span class="badge badge-pill badge-primary">2300</span>`;
