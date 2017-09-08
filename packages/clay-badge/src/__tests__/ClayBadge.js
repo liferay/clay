@@ -13,7 +13,7 @@ describe('ClayBadge', function() {
 
 	it('should generate the default markup', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 		});
 
 		expect(badge).toMatchSnapshot();
@@ -21,7 +21,7 @@ describe('ClayBadge', function() {
 
 	it('should render a badge with label', () => {
 		badge = new ClayBadge({
-			label: 2300,
+			label: 'Bar',
 		});
 
 		expect(badge).toMatchSnapshot();
@@ -29,7 +29,7 @@ describe('ClayBadge', function() {
 
 	it('should render a badge with id', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 			id: 'myBadge',
 		});
 
@@ -38,7 +38,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `default color` badge', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 		});
 
 		expect(badge).toMatchSnapshot();
@@ -46,7 +46,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `primary color` badge', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 			style: 'primary',
 		});
 
@@ -55,7 +55,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `secondary color` badge', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 			style: 'secondary',
 		});
 
@@ -64,7 +64,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `success color` badge', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 			style: 'success',
 		});
 
@@ -73,7 +73,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `info color` badge', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 			style: 'info',
 		});
 
@@ -82,7 +82,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `warning color` badge', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 			style: 'warning',
 		});
 
@@ -91,7 +91,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `danger color` badge', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 			style: 'danger',
 		});
 
@@ -100,7 +100,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `light color` badge', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 			style: 'light',
 		});
 
@@ -109,7 +109,7 @@ describe('ClayBadge', function() {
 
 	it('should render a `dark color` badge', () => {
 		badge = new ClayBadge({
-			label: 0,
+			label: 'Foo',
 			style: 'dark',
 		});
 
