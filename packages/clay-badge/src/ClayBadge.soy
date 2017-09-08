@@ -4,8 +4,8 @@
  * This renders a badge.
  */
 {template .render}
-	{@param? id: string}
 	{@param label: string}
+	{@param? id: string}
 	{@param? style: string}
 
 	{let $classes kind="text"}
@@ -16,5 +16,4 @@
 	<span class="{$classes}" id="{$id}">
 		{$label}
 	</span>
-
 {/template}

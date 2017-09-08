@@ -30,7 +30,7 @@ ClayBadge.STATE = {
 	 * The label of the badge element.
 	 * @instance
 	 * @memberof ClayBadge
-	 * @type {string}
+	 * @type {!string}
 	 * default undefined
 	 */
 	label: Config.string().required(),
@@ -39,18 +39,18 @@ ClayBadge.STATE = {
 	 * Badge style color.
 	 * @instance
 	 * @memberof ClayBadge
-	 * @type {?string|undefined}
-	 * default undefined
+	 * @type {?string}
+	 * default primary
 	 */
 	style: Config.oneOf([
+		'danger',
+		'dark',
+		'info',
+		'light',
 		'primary',
 		'secondary',
 		'success',
-		'info',
 		'warning',
-		'danger',
-		'light',
-		'dark',
 	]).value('primary'),
 };
 
