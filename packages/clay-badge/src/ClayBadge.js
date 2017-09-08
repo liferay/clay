@@ -30,10 +30,10 @@ ClayBadge.STATE = {
 	 * The label of the badge element.
 	 * @instance
 	 * @memberof ClayBadge
-	 * @type {number|string}
+	 * @type {string}
 	 * default undefined
 	 */
-	label: Config.any().required(),
+	label: Config.string().required(),
 
 	/**
 	 * Badge style color.

@@ -5,12 +5,12 @@
  */
 {template .render}
 	{@param? id: string}
-	{@param label: number|string}
+	{@param label: string}
 	{@param? style: string}
 
 	{let $classes kind="text"}
 		badge badge-pill
-		{sp}badge-{$style}
+		{sp}badge-{$style ?: 'primary'}
 	{/let}
 
 	<span class="{$classes}" id="{$id}">
