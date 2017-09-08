@@ -1,0 +1,12 @@
+before_install:
+  - nvm install 8
+
+install:
+  - npm install
+
+jdk:
+  - oraclejdk8
+
+language: java
+
+script: npm test
