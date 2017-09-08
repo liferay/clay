@@ -19,13 +19,17 @@ afterAll(() => {
 
 describe('Chart', function() {
 	it('should be pass correctly formatted configuration options to billboard.js', () => {
-		new Chart({
+		const chart = new Chart({
 			columns: [],
 		});
 
-		const config = JSON.stringify(bb.generate.mock.calls[0][0]);
+		const config = bb.generate.mock.calls[0][0];
 
-		expect(config).toMatchSnapshot();
+		expect(config.bindto).toBe(chart.element);
+
+		delete config.bindto;
+
+		expect(JSON.stringify(config)).toMatchSnapshot();
 	});
 
 	it('should format columns array into billboard.js compatible data', () => {
@@ -70,9 +74,11 @@ describe('Chart', function() {
 			],
 		});
 
-		const config = JSON.stringify(bb.generate.mock.calls[0][0]);
+		const config = bb.generate.mock.calls[0][0];
 
-		expect(config).toMatchSnapshot();
+		delete config.bindto;
+
+		expect(JSON.stringify(config)).toMatchSnapshot();
 	});
 
 	it('should transform chart new type is passed', () => {
