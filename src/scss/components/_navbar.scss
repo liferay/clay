@@ -135,9 +135,9 @@
 
 // Navbar Display Utilities
 
-.navbar-d-breakpoint-block,
-.navbar-d-breakpoint-inline-block,
-.navbar-d-breakpoint-flex {
+.navbar-breakpoint-d-block,
+.navbar-breakpoint-d-inline-block,
+.navbar-breakpoint-d-flex {
 	display: none !important;
 }
 
@@ -167,19 +167,19 @@
 	}
 
 	@include media-breakpoint-up(md) {
-		.navbar-d-breakpoint-block {
+		.navbar-breakpoint-d-block {
 			display: block !important;
 		}
 
-		.navbar-d-breakpoint-inline-block {
+		.navbar-breakpoint-d-inline-block {
 			display: inline-block !important;
 		}
 
-		.navbar-d-breakpoint-flex {
+		.navbar-breakpoint-d-flex {
 			display: flex !important;
 		}
 
-		.navbar-d-breakpoint-none {
+		.navbar-breakpoint-d-none {
 			display: none !important;
 		}
 	}
@@ -239,7 +239,19 @@
 						}
 					}
 
-					.navbar-d-breakpoint-down-none {
+					.navbar-breakpoint-down-d-block {
+						display: block !important;
+					}
+
+					.navbar-breakpoint-down-d-inline-block {
+						display: inline-block !important;
+					}
+
+					.navbar-breakpoint-down-d-flex {
+						display: flex !important;
+					}
+
+					.navbar-breakpoint-down-d-none {
 						display: none !important;
 					}
 				}
@@ -265,15 +277,19 @@
 						}
 					}
 
-					.navbar-d-breakpoint-block {
+					.navbar-breakpoint-d-block {
 						display: block !important;
 					}
 
-					.navbar-d-breakpoint-flex {
+					.navbar-breakpoint-d-inline-block {
+						display: inline-block !important;
+					}
+
+					.navbar-breakpoint-d-flex {
 						display: flex !important;
 					}
 
-					.navbar-d-breakpoint-none {
+					.navbar-breakpoint-d-none {
 						display: none !important;
 					}
 				}
