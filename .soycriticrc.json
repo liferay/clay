@@ -1,4 +1,7 @@
 {
   "callToImportRegex": "(\\S+)",
-  "callToImportReplace": "{$1|param}"
+  "callToImportReplace": "{$1|param}",
+  "implicitParams": {
+    "Clay*": ["elementClasses", "visible"]
+  }
 }

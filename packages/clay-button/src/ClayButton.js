@@ -46,15 +46,6 @@ ClayButton.STATE = {
 	disabled: Config.bool().value(false),
 
 	/**
-	 * CSS classes to be applied to the element.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * @default false
-	 */
-	elementClasses: Config.string(),
-
-	/**
 	 * Render ClayIcon in the ClayButton element.
 	 * @instance
 	 * @memberof ClayButton
