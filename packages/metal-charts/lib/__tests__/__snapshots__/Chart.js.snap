@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Chart should be pass correctly formatted configuration options to billboard.js 1`] = `"{\\"axis\\":{},\\"bindto\\":{},\\"data\\":{\\"hide\\":false,\\"order\\":\\"desc\\",\\"type\\":\\"line\\",\\"columns\\":[]},\\"zoom\\":{}}"`;
-
-exports[`Chart should format columns array into billboard.js compatible data 1`] = `"{\\"axis\\":{},\\"bindto\\":{},\\"data\\":{\\"hide\\":[\\"data1\\"],\\"order\\":\\"desc\\",\\"type\\":\\"line\\",\\"xs\\":{\\"data1\\":\\"x1\\",\\"data2\\":\\"x2\\"},\\"columns\\":[[\\"data1\\",1,2,3],[\\"data2\\",1,2,3]],\\"axes\\":{\\"data1\\":\\"y\\",\\"data2\\":\\"y2\\"},\\"classes\\":{\\"data1\\":\\"data1\\",\\"data2\\":\\"data2\\"},\\"colors\\":{\\"data1\\":\\"red\\",\\"data2\\":\\"blue\\"},\\"names\\":{\\"data1\\":\\"Data 1\\",\\"data2\\":\\"Data 2\\"},\\"regions\\":{\\"data1\\":[{\\"end\\":2,\\"start\\":1,\\"style\\":\\"dashed\\"}],\\"data2\\":[{\\"end\\":3,\\"start\\":2,\\"style\\":\\"dashed\\"}]},\\"types\\":{\\"data1\\":\\"line\\",\\"data2\\":\\"spline\\"}},\\"zoom\\":{}}"`;
-
-exports[`Chart should rerender chart when new columns are passed 1`] = `"{\\"hide\\":false,\\"order\\":\\"desc\\",\\"type\\":\\"line\\",\\"columns\\":[[\\"data1\\",1,2,3,4]]}"`;
-
-exports[`Chart should unload removed columns when new columns are passed 1`] = `"{\\"hide\\":false,\\"order\\":\\"desc\\",\\"type\\":\\"line\\",\\"columns\\":[[\\"data2\\",1,2,3]],\\"unload\\":[\\"data1\\"]}"`;

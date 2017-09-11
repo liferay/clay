@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "build": "npm run soy && webpack",
-    "compile": "babel -d lib/ src/",
+    "compile": "babel -d lib/ src/ --ignore src/__tests__",
     "format": "prettier --use-tabs true --tab-width 4 --single-quote --trailing-comma all --write src/*.js src/**/*.js",
     "lint": "eslint src/*.js src/**/*.js",
     "prepublish": "npm run soy && npm run compile",
