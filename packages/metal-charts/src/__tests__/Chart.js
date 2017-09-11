@@ -27,7 +27,7 @@ describe('Chart', function() {
 
 		expect(config.bindto).toBe(chart.element);
 
-		delete config.bindto;
+		config.bindto = undefined;
 
 		expect(JSON.stringify(config)).toMatchSnapshot();
 	});
@@ -76,7 +76,7 @@ describe('Chart', function() {
 
 		const config = bb.generate.mock.calls[0][0];
 
-		delete config.bindto;
+		config.bindto = undefined;
 
 		expect(JSON.stringify(config)).toMatchSnapshot();
 	});
