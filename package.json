@@ -1,6 +1,7 @@
 {
   "scripts": {
     "build": "lerna run build",
+    "ci": "prettier packages/clay-*/src/*.js --list-different && npm run lint && npm run test",
     "format": "prettier --write packages/clay-*/src/*.js",
     "lerna": "lerna bootstrap -- --no-optional && npm install --no-optional",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
