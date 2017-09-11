@@ -84,6 +84,12 @@
 .navbar-form {
 	align-items: center;
 	display: flex;
+
+	.form-inline {
+		.form-control {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .navbar-form-autofit {
