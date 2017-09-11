@@ -159,8 +159,7 @@ const ChartBase = {
 					if (column.hide) {
 						config.hide.push(column.id);
 					}
-				}
-				else {
+				} else {
 					config[PROP_NAME_MAP[key]] =
 						config[PROP_NAME_MAP[key]] || {};
 
