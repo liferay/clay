@@ -1,0 +1,67 @@
+{namespace ClayNavbar}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param? inverted: bool}
+	{@param? pages: list<?>}
+
+	{let $attributes kind="attributes"}
+		class="navbar navbar-expand-md
+			{if $inverted}
+				{sp}navbar-dark navbar-dark-bg
+			{/if}
+		"
+	{/let}
+
+	<nav {$attributes}>
+		<div aria-expanded="false" class="collapse navbar-collapse" id="navbar-collapse-0a">
+			{call .navmenu}
+				{param pages: $pages /}
+			{/call}
+		</div>
+	</nav>
+{/template}
+
+{template .navitem}
+	{@param? active: bool}
+	{@param? title: string}
+	{@param? url: string}
+
+	{let $attributes kind="attributes"}
+        {if $active}
+            aria-label="Current"
+        {/if}
+
+		class="nav-link
+			{if $active}
+				{sp}active
+			{/if}
+		"
+
+		href="{$url}"
+	{/let}
+
+	<li class="nav-item">
+		<a {$attributes}>
+			<span class="navbar-text-truncate">{$title}</span>
+		</a>
+	</li>
+{/template}
+
+{template .navmenu}
+	{@param? pages: list<?>}
+
+	{if $pages}
+		<ul class="navbar-nav">
+			{foreach $page in $pages}
+				{call .navitem}
+					{param active: $page.active /}
+					{param title: $page.title /}
+					{param url: $page.url /}
+				{/call}
+			{/foreach}
+		</ul>
+	{/if}	
+{/template}

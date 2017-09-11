@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Navbar</title>
+
+	<link rel="stylesheet" href="../node_modules/clay/build/css/atlas.css">
+
+	<script src="../build/globals/clay-navbar.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Navbar</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Navbar</h1>
+			<div id="normal-navbar-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Inverted Navbar</h1>
+			<div id="inverted-navbar-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		/*
+		 * Normal Navbar
+		 */
+		var pages = [
+			{ active: true, title: 'Page 1', url: '#1'},
+			{ title: 'Page 2', url: '#2'},
+			{ title: 'Page 3', url: '#3'},
+			{ title: 'Page 4', url: '#4'}
+		];
+
+		new metal.ClayNavbar(
+			{
+				pages: pages
+			},
+			'#normal-navbar-block'
+		);
+
+		/*
+		 * Inverted Navbar
+		 */
+		 new metal.ClayNavbar(
+			{
+				inverted: true,
+				pages: pages
+			},
+			'#inverted-navbar-block'
+		);
+
+	</script>
+</body>
+</html>
