@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Clay Label</title>
+
+	<link rel="stylesheet" href="../node_modules/clay/build/css/atlas.css">
+
+	<script src="../build/globals/clay-label.js"></script>
+</head>
+<body class="container">
+	<h1 class="page-title">
+			Label
+	</h1>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col-md-12">
+			<h3 id="label"><a class="heading-anchor" href="#label"></a>Label styles</h3>
+			
+			<div id="style-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col-md-12">
+			<h3 id="label-size"><a class="heading-anchor" href="#label-size"></a>Label sizes</h3>
+			
+			<div id="size-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col-md-12">
+			<h3 id="label-removable"><a class="heading-anchor" href="#label-removable"></a>Label removable</h3>
+			
+			<div id="removable-block"></div>
+		</div>
+	</div>
+
+	<div class="clay-site-row-spacer row">
+		<div class="col-md-12">
+			<h3 id="label-link"><a class="heading-anchor" href="#label-link"></a>Label with link</h3>
+			
+			<div id="link-block"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		new metal.ClayLabel(
+			{
+				label: 'Label text'
+			},
+			'#style-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Status',
+				style: 'info'
+			},
+			'#style-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Pending',
+				style: 'warning'
+			},
+			'#style-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Rejected',
+				style: 'danger'
+			},
+			'#style-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Approved',
+				style: 'success'
+			},
+			'#style-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Label text',
+				small: true
+			},
+			'#size-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Label text'
+			},
+			'#size-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Label text',
+				small: true,
+				closeable: true,
+				spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+				events: {
+ 					click: {
+ 						selector: '.close',
+ 						fn: handleClick
+ 					}
+ 				}
+			},
+			'#removable-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Label text',
+				closeable: true,
+				spritemap: '../node_modules/clay/build/images/icons/icons.svg',
+				events: {
+ 					click: {
+ 						selector: '.close',
+ 						fn: handleClick
+ 					}
+ 				}
+			},
+			'#removable-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Label text',
+				small: true,
+				href: '#1'
+			},
+			'#link-block'
+		);
+
+		new metal.ClayLabel(
+			{
+				label: 'Label text',
+				href: '#1'
+			},
+			'#link-block'
+		);
+
+		function handleClick(event) {
+			event.stopPropagation();
+ 
+ 			this.visible = false;
+		}
+	</script>
+</body>
+</html>

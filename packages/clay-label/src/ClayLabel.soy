@@ -1,0 +1,60 @@
+{namespace ClayLabel}
+
+/**
+ * This renders a label.
+ */
+{template .render}
+	{@param? closeable: bool}
+	{@param? href: string}
+	{@param? id: string}
+	{@param? label: string}
+	{@param? small: bool}
+	{@param? spritemap: string}
+	{@param? style: string}
+
+	{let $classes kind="text"}
+		label
+		{sp}label-{$style ?: 'secondary'}
+
+		{if $small}
+			{sp}label-sm
+		{/if}
+	{/let}
+
+	<span class="{$classes}" id="{$id}">
+		{call .content}
+			{param closeable: $closeable /}
+			{param href: $href /}
+			{param label: $label /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</span>
+{/template}
+
+/**
+ * Render icon and label content.
+ */
+{template .content}
+	{@param? closeable: bool}
+	{@param? href: string}
+	{@param? label: string}
+	{@param? spritemap: string}
+
+	{if $href}
+		{call ClayLink.render}
+			{param href: $href /}
+			{param label: $label /}
+		{/call}
+	{else}
+		{$label}
+	{/if}
+
+	{if $closeable and $spritemap}
+		<button aria-label="Close" class="close" type="button">
+			{call ClayIcon.render}
+				{param spritemap: $spritemap /}
+				{param symbol: 'times' /}
+			{/call}
+		</button>
+	{/if}
+{/template}

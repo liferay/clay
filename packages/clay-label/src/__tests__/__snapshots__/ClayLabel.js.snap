@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayLabel shound generate the default markup 1`] = `<span class="label label-secondary"></span>`;
+
+exports[`ClayLabel shound render a \`danger color\` label 1`] = `<span class="label label-danger"></span>`;
+
+exports[`ClayLabel shound render a \`default color\` label 1`] = `<span class="label label-secondary"></span>`;
+
+exports[`ClayLabel shound render a \`info color\` label 1`] = `<span class="label label-info"></span>`;
+
+exports[`ClayLabel shound render a \`success color\` label 1`] = `<span class="label label-success"></span>`;
+
+exports[`ClayLabel shound render a \`warning color\` label 1`] = `<span class="label label-warning"></span>`;
+
+exports[`ClayLabel shound render a label with id 1`] = `<span class="label label-secondary" id="Foo"></span>`;
+
+exports[`ClayLabel shound render a label with label 1`] = `<span class="label label-secondary">Foo</span>`;
+
+exports[`ClayLabel shound render a label with link 1`] = `
+<span class="label label-secondary">
+  <a class="link-secondary" href="#1">Foo</a>
+</span>
+`;
+
+exports[`ClayLabel shound render a label with removable 1`] = `
+<span class="label label-secondary">Foo
+  <button aria-label="Close" class="close" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+      <use xlink:href="icons.svg#times"></use>
+    </svg>
+  </button>
+</span>
+`;
+
+exports[`ClayLabel shound render a small label 1`] = `<span class="label label-secondary label-sm"></span>`;
