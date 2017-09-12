@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayNavbar should render a navbar with more than one element 1`] = `
+<nav class="navbar navbar-expand-md">
+  <div aria-expanded="false" class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#1">
+          <span class="navbar-text-truncate">Page 1</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#2">
+          <span class="navbar-text-truncate">Page 2</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`ClayNavbar should render a navbar with one active element 1`] = `
+<nav class="navbar navbar-expand-md">
+  <div aria-expanded="false" class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a aria-label="Current" class="nav-link active" href="#1">
+          <span class="navbar-text-truncate">Page 1</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`ClayNavbar should render a navbar with one element 1`] = `
+<nav class="navbar navbar-expand-md">
+  <div aria-expanded="false" class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#1">
+          <span class="navbar-text-truncate">Page 1</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`ClayNavbar should render an inverted colored navbar with one element 1`] = `
+<nav class="navbar navbar-expand-md navbar-dark navbar-dark-bg">
+  <div aria-expanded="false" class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#1">
+          <span class="navbar-text-truncate">Page 1</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

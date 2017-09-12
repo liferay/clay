@@ -11,20 +11,6 @@ describe('ClayNavbar', function() {
 		}
 	});
 
-	it('should generate the default markup', function() {
-		navbar = new ClayNavbar();
-
-		expect(navbar).toMatchSnapshot();
-	});
-
-	it('should render an inverted colored navbar', function() {
-		navbar = new ClayNavbar({
-			inverted: true,
-		});
-
-		expect(navbar).toMatchSnapshot();
-	});
-
 	it('should render a navbar with one element', function() {
 		navbar = new ClayNavbar({
 			pages: [{ title: 'Page 1', url: '#1' }],
@@ -59,5 +45,27 @@ describe('ClayNavbar', function() {
 		});
 
 		expect(navbar).toMatchSnapshot();
+	});
+
+	it('should fail when no pages are passed', function() {
+		expect(() => {
+			navbar = new ClayNavbar();
+		}).toThrow();
+	});
+
+	it('should fail when no title is passed on each page', function() {
+		expect(() => {
+			navbar = new ClayNavbar({
+				pages: [{ url: '#1' }],
+			});
+		}).toThrow();
+	});
+
+	it('should fail when no url is passed on each page', function() {
+		expect(() => {
+			navbar = new ClayNavbar({
+				pages: [{ title: 'Page 1' }],
+			});
+		}).toThrow();
 	});
 });
