@@ -1,5 +1,3 @@
-'use strict';
-
 import 'clay-icon';
 import 'clay-link';
 import Component from 'metal-component';
@@ -56,13 +54,13 @@ ClayLabel.STATE = {
 	label: Config.string(),
 
 	/**
- 	 * Label size small.
+ 	 * The size of the label element.
  	 * @instance
  	 * @memberof ClayLabel
- 	 * @type {?bool}
- 	 * @default false
+ 	 * @type {?string|undefined}
+ 	 * @default undefined
  	 */
-	small: Config.bool().value(false),
+	size: Config.oneOf(['sm']),
 
 	/**
  	 * The path to the SVG spritemap file containing the icons.

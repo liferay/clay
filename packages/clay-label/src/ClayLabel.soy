@@ -8,7 +8,7 @@
 	{@param? href: string}
 	{@param? id: string}
 	{@param? label: string}
-	{@param? small: bool}
+	{@param? size: string}
 	{@param? spritemap: string}
 	{@param? style: string}
 
@@ -16,8 +16,8 @@
 		label
 		{sp}label-{$style ?: 'secondary'}
 
-		{if $small}
-			{sp}label-sm
+		{if $size}
+			{sp}label-{$size}
 		{/if}
 	{/let}
 
