@@ -25,20 +25,21 @@ ClayNavbar.STATE = {
 	 * @default false
 	 */
 	inverted: Config.bool().value(false),
+
 	/**
-	 * The pages attribute.
+	 * List of pages to show in the Navbar.
 	 * @instance
 	 * @memberof ClayNavbar
-	 * @type {?Array|undefined}
+	 * @type {!Array}
 	 * @default undefined
 	 */
 	pages: Config.arrayOf(
 		Config.shapeOf({
 			active: Config.bool(),
-			title: Config.string(),
-			url: Config.string(),
+			title: Config.string().required(),
+			url: Config.string().required(),
 		}),
-	),
+	).required(),
 };
 
 Soy.register(ClayNavbar, templates);
