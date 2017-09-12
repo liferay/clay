@@ -1,5 +1,3 @@
-'use strict';
-
 import ClayIcon from '../ClayIcon';
 
 const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';

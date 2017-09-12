@@ -1,5 +1,3 @@
-'use strict';
-
 import State, { validators } from 'metal-state';
 import anim from 'metal-anim';
 import dom from 'metal-dom';

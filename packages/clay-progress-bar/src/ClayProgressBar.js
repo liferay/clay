@@ -1,5 +1,3 @@
-'use strict';
-
 import 'clay-icon';
 import Component from 'metal-component';
 import Soy from 'metal-soy';

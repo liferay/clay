@@ -1,5 +1,3 @@
-'use strict';
-
 import ClayButton from '../ClayButton';
 
 let button;

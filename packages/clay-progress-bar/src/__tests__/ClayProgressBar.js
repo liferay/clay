@@ -1,5 +1,3 @@
-'use strict';
-
 import ClayProgressBar from '../ClayProgressBar';
 
 let progressBar;

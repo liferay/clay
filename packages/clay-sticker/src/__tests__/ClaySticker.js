@@ -1,5 +1,3 @@
-'use strict';
-
 import ClaySticker from '../ClaySticker';
 
 let sticker;

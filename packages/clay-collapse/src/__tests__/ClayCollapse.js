@@ -1,7 +1,5 @@
 /* eslint-disable max-len, require-jsdoc */
 
-'use strict';
-
 import core from 'metal';
 import dom from 'metal-dom';
 

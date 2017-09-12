@@ -1,5 +1,3 @@
-'use strict';
-
 import ClayBadge from '../ClayBadge';
 
 let badge;

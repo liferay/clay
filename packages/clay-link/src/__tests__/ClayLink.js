@@ -1,5 +1,3 @@
-'use strict';
-
 import ClayLink from '../ClayLink';
 
 let link;
