@@ -35,23 +35,26 @@
 	{@param? active: bool}
 
 	<li class="nav-item">
-		{let $linkAttributes kind="attributes"}
-			{if $active}
-				aria-label="Current"
-			{/if}
+		{call ClayLink.render}
+			{param ariaLabel kind="text"}
+				{if $active}
+					Current
+				{/if}
+			{/param}
 
-			class="nav-link
+			{param elementClasses kind="text"}
+				nav-link
 				{if $active}
 					{sp}active
 				{/if}
-			"
+			{/param}
 
-			href="{$url}"
-		{/let}
+			{param href: $url /}
+			{param label kind="html"}
+				<span class="navbar-text-truncate">{$title}</span>
+			{/param}
 
-		<a {$linkAttributes}>
-			<span class="navbar-text-truncate">{$title}</span>
-		</a>
+		{/call}
 	</li>
 {/template}
 

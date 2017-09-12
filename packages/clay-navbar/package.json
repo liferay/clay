@@ -18,13 +18,14 @@
   ],
   "scripts": {
     "build": "npm run soy && webpack",
-    "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy"
+    "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy node_modules/clay*/src/**/*.soy node_modules/clay*/node_modules/clay*/src/**/*.soy"
   },
   "keywords": [
     "clay",
     "metal"
   ],
   "dependencies": {
+    "clay-link": "^0.0.0",
     "metal": "^2.13.2",
     "metal-component": "^2.13.2",
     "metal-soy": "^2.13.2",

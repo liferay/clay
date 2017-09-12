@@ -1,5 +1,6 @@
 'use strict';
 
+import 'clay-link';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
 import { Config } from 'metal-state';
