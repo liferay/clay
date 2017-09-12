@@ -4,13 +4,11 @@ module.exports = {
 		year: (new Date()).getFullYear()
 	},
 	tpl: [
-		'/**',
-		'* Clay <%= version %>',
-		'*',
-		'* Copyright <%= year %>, Liferay, Inc.',
-		'* All rights reserved.',
-		'* MIT license',
-		'*/',
+		'// Clay <%= version %>',
+		'//',
+		'// Copyright <%= year %>, Liferay, Inc.',
+		'// All rights reserved.',
+		'// MIT license',
 		''
 	].join('\n')
 };
