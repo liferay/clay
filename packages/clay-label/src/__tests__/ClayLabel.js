@@ -35,7 +35,7 @@ describe('ClayLabel', function() {
 
 	it('shound render a small label', () => {
 		label = new ClayLabel({
-			small: true,
+			size: 'sm',
 		});
 
 		expect(label).toMatchSnapshot();
