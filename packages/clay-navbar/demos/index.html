@@ -32,7 +32,7 @@
 		/*
 		 * Normal Navbar
 		 */
-		var pages = [
+		var items = [
 			{ active: true, title: 'Page 1', url: '#1'},
 			{ title: 'Page 2', url: '#2'},
 			{ title: 'Page 3', url: '#3'},
@@ -41,7 +41,7 @@
 
 		new metal.ClayNavbar(
 			{
-				pages: pages
+				items: items
 			},
 			'#normal-navbar-block'
 		);
@@ -52,7 +52,7 @@
 		 new metal.ClayNavbar(
 			{
 				inverted: true,
-				pages: pages
+				items: items
 			},
 			'#inverted-navbar-block'
 		);

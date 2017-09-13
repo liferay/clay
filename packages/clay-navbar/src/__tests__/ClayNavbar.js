@@ -13,7 +13,7 @@ describe('ClayNavbar', function() {
 
 	it('should render a navbar with one element', function() {
 		navbar = new ClayNavbar({
-			pages: [{ title: 'Page 1', url: '#1' }],
+			items: [{ title: 'Page 1', url: '#1' }],
 		});
 
 		expect(navbar).toMatchSnapshot();
@@ -22,7 +22,7 @@ describe('ClayNavbar', function() {
 	it('should render an inverted colored navbar with one element', function() {
 		navbar = new ClayNavbar({
 			inverted: true,
-			pages: [{ title: 'Page 1', url: '#1' }],
+			items: [{ title: 'Page 1', url: '#1' }],
 		});
 
 		expect(navbar).toMatchSnapshot();
@@ -30,7 +30,7 @@ describe('ClayNavbar', function() {
 
 	it('should render a navbar with one active element', function() {
 		navbar = new ClayNavbar({
-			pages: [{ active: true, title: 'Page 1', url: '#1' }],
+			items: [{ active: true, title: 'Page 1', url: '#1' }],
 		});
 
 		expect(navbar).toMatchSnapshot();
@@ -38,7 +38,7 @@ describe('ClayNavbar', function() {
 
 	it('should render a navbar with more than one element', function() {
 		navbar = new ClayNavbar({
-			pages: [
+			items: [
 				{ title: 'Page 1', url: '#1' },
 				{ title: 'Page 2', url: '#2' },
 			],
@@ -47,7 +47,7 @@ describe('ClayNavbar', function() {
 		expect(navbar).toMatchSnapshot();
 	});
 
-	it('should fail when no pages are passed', function() {
+	it('should fail when no items are passed', function() {
 		expect(() => {
 			navbar = new ClayNavbar();
 		}).toThrow();
@@ -56,7 +56,7 @@ describe('ClayNavbar', function() {
 	it('should fail when no title is passed on each page', function() {
 		expect(() => {
 			navbar = new ClayNavbar({
-				pages: [{ url: '#1' }],
+				items: [{ url: '#1' }],
 			});
 		}).toThrow();
 	});
@@ -64,7 +64,7 @@ describe('ClayNavbar', function() {
 	it('should fail when no url is passed on each page', function() {
 		expect(() => {
 			navbar = new ClayNavbar({
-				pages: [{ title: 'Page 1' }],
+				items: [{ title: 'Page 1' }],
 			});
 		}).toThrow();
 	});

@@ -4,7 +4,7 @@
  * This renders the component's whole content.
  */
 {template .render}
-	{@param pages: list<[
+	{@param items: list<[
 		active: bool,
 		title: string,
 		url: string
@@ -20,9 +20,9 @@
 
 	<nav class="{$classes}">
 		<div aria-expanded="false" class="collapse navbar-collapse">
-			{if $pages}
+			{if $items}
 				{call .navmenu}
-					{param pages: $pages /}
+					{param items: $items /}
 				{/call}
 			{/if}
 		</div>
@@ -59,14 +59,14 @@
 {/template}
 
 {template .navmenu}
-	{@param pages: list<[
+	{@param items: list<[
 		active: bool,
 		title: string,
 		url: string
 	]>}
 
 	<ul class="navbar-nav">
-		{foreach $page in $pages}
+		{foreach $page in $items}
 			{call .navitem}
 				{param active: $page.active /}
 				{param title: $page.title /}

@@ -28,13 +28,13 @@ ClayNavbar.STATE = {
 	inverted: Config.bool().value(false),
 
 	/**
-	 * List of pages to show in the Navbar.
+	 * List of items to show in the Navbar.
 	 * @instance
 	 * @memberof ClayNavbar
 	 * @type {!Array}
 	 * @default undefined
 	 */
-	pages: Config.arrayOf(
+	items: Config.arrayOf(
 		Config.shapeOf({
 			active: Config.bool(),
 			title: Config.string().required(),
