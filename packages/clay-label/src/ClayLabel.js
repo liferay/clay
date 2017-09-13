@@ -1,4 +1,4 @@
-import 'clay-icon';
+import 'clay-button';
 import 'clay-link';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
@@ -9,7 +9,15 @@ import templates from './ClayLabel.soy.js';
 /**
  * Metal Clay Label component.
  */
-class ClayLabel extends Component {}
+class ClayLabel extends Component {
+	/**
+	 * Handle `click` button and emit event `close`.
+	 * @protected
+	 */
+	_close() {
+		this.emit('close');
+	}
+}
 
 /**
  * State definition.

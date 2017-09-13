@@ -4,6 +4,7 @@
  * This renders a label.
  */
 {template .render}
+	{@param? _close: any}
 	{@param? closeable: bool}
 	{@param? href: string}
 	{@param? id: string}
@@ -23,6 +24,7 @@
 
 	<span class="{$classes}" id="{$id}">
 		{call .content}
+			{param _close: $_close /}
 			{param closeable: $closeable /}
 			{param href: $href /}
 			{param label: $label /}
@@ -35,6 +37,7 @@
  * Render icon and label content.
  */
 {template .content}
+	{@param? _close: any}
 	{@param? closeable: bool}
 	{@param? href: string}
 	{@param? label: string}
@@ -50,11 +53,13 @@
 	{/if}
 
 	{if $closeable and $spritemap}
-		<button aria-label="Close" class="close" type="button">
-			{call ClayIcon.render}
-				{param spritemap: $spritemap /}
-				{param symbol: 'times' /}
-			{/call}
-		</button>
+		{call ClayButton.render}
+			{param ariaLabel: 'Close' /}
+			{param elementClasses: 'close' /}
+			{param events: ['click': ['selector': 'button', 'fn': $_close]] /}
+			{param icon: ['alignment': 'right', 'monospaced': false, 'spritemap': $spritemap, 'symbol': 'times'] /}
+			{param style: 'unstyled' /}
+			{param type: 'button' /}
+		{/call}
 	{/if}
 {/template}
