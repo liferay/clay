@@ -30,6 +30,7 @@ module.exports = {
 	resolve: {
 		mainFields: ['esnext:main', 'main'],
 		alias: {
+			'metal-soy': path.resolve('./node_modules/metal-soy'),
 			'incremental-dom': path.resolve('./node_modules/incremental-dom'),
 			'metal-incremental-dom': path.resolve(
 				'./node_modules/metal-incremental-dom',
