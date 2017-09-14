@@ -1404,7 +1404,7 @@ var Collapse = function () {
 
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
-    if (event.target.tagName === 'A' && !$.contains(this, event.target)) {
+    if (event.currentTarget.tagName === 'A') {
       event.preventDefault();
     }
 
@@ -2970,18 +2970,18 @@ var Tooltip = function () {
     Tooltip.prototype._getConfig = function _getConfig(config) {
       config = $.extend({}, this.constructor.Default, $(this.element).data(), config);
 
-      if (config.delay && typeof config.delay === 'number') {
+      if (typeof config.delay === 'number') {
         config.delay = {
           show: config.delay,
           hide: config.delay
         };
       }
 
-      if (config.title && typeof config.title === 'number') {
+      if (typeof config.title === 'number') {
         config.title = config.title.toString();
       }
 
-      if (config.content && typeof config.content === 'number') {
+      if (typeof config.content === 'number') {
         config.content = config.content.toString();
       }
 
