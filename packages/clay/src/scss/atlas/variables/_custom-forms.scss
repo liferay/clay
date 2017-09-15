@@ -21,6 +21,7 @@ $custom-control-indicator-disabled-checked-border-color: $custom-control-indicat
 // Custom Control Description
 
 $custom-control-description-disabled-color: $input-label-disabled-color !default;
+$custom-control-description-line-height: $custom-control-indicator-size + ($custom-control-indicator-border-width * 2) !default;
 
 // Custom Checkbox
 
