@@ -42,5 +42,8 @@
       "npm run mcritic",
       "git add"
     ]
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
