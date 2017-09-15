@@ -23,3 +23,10 @@ $h3-font-size-mobile: null !default;
 $h4-font-size-mobile: null !default;
 $h5-font-size-mobile: null !default;
 $h6-font-size-mobile: null !default;
+
+// z-index variables
+
+$zindex-input-group-hover: 3 !default;
+$zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4
+$zindex-navbar-overlay: $zindex-dropdown - 1 !default; // 999
+$zindex-sidenav: $zindex-fixed + 5 !default;
