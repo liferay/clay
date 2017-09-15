@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "build": "lerna run build",
     "ci": "prettier packages/clay-*/src/*.js --list-different && npm run lint && npm run test",
