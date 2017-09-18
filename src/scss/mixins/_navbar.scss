@@ -66,9 +66,9 @@
 	font-size: $font-size;
 	padding: $padding-y $padding-x;
 
-	@include scale-component($scaling-navbar) {
-		font-size: $font-size-mobile;
-	}
+	// @include scale-component($scaling-navbar) {
+	// 	font-size: $font-size-mobile;
+	// }
 
 	.navbar-toggler {
 		height: $toggler-height;
@@ -77,10 +77,10 @@
 		margin-right: $toggler-margin-x;
 		margin-top: $toggler-margin-y;
 
-		@include scale-component($scaling-navbar) {
-			margin-left: $toggler-margin-x-mobile;
-			margin-right: $toggler-margin-x-mobile;
-		}
+		// @include scale-component($scaling-navbar) {
+		// 	margin-left: $toggler-margin-x-mobile;
+		// 	margin-right: $toggler-margin-x-mobile;
+		// }
 	}
 
 	.navbar-toggler-link {
@@ -92,27 +92,27 @@
 		padding-right: $toggler-link-padding-x;
 		padding-top: $toggler-link-padding-y;
 
-		@include scale-component($scaling-navbar) {
-			font-size: $toggler-link-font-size-mobile;
-			padding-bottom: $toggler-link-padding-y-mobile;
-			padding-left: $toggler-link-padding-x-mobile;
-			padding-right: $toggler-link-padding-x-mobile;
-			padding-top: $toggler-link-padding-y-mobile;
-		}
+		// @include scale-component($scaling-navbar) {
+		// 	font-size: $toggler-link-font-size-mobile;
+		// 	padding-bottom: $toggler-link-padding-y-mobile;
+		// 	padding-left: $toggler-link-padding-x-mobile;
+		// 	padding-right: $toggler-link-padding-x-mobile;
+		// 	padding-top: $toggler-link-padding-y-mobile;
+		// }
 	}
 
 	.navbar-brand {
 		margin-right: $brand-margin-right;
 		padding: 0 $brand-padding-x;
 
-		@include scale-component($scaling-navbar) {
-			font-size: $brand-font-size-mobile;
-			margin-right: $brand-margin-right-mobile;
-			padding-bottom: $brand-padding-y-mobile;
-			padding-left: $brand-padding-x-mobile;
-			padding-right: $brand-padding-x-mobile;
-			padding-top: $brand-padding-y-mobile;
-		}
+		// @include scale-component($scaling-navbar) {
+		// 	font-size: $brand-font-size-mobile;
+		// 	margin-right: $brand-margin-right-mobile;
+		// 	padding-bottom: $brand-padding-y-mobile;
+		// 	padding-left: $brand-padding-x-mobile;
+		// 	padding-right: $brand-padding-x-mobile;
+		// 	padding-top: $brand-padding-y-mobile;
+		// }
 	}
 
 	.navbar-form {
@@ -121,10 +121,10 @@
 			padding-right: $link-padding-x;
 		}
 
-		@include scale-component($scaling-navbar) {
-			padding-left: $link-padding-x-mobile;
-			padding-right: $link-padding-x-mobile;
-		}
+		// @include scale-component($scaling-navbar) {
+		// 	padding-left: $link-padding-x-mobile;
+		// 	padding-right: $link-padding-x-mobile;
+		// }
 
 		.btn,
 		.form-control {
@@ -145,10 +145,10 @@
 			padding-top: $link-padding-y;
 		}
 
-		@include scale-component($scaling-navbar) {
-			margin-left: $link-padding-x-mobile;
-			margin-right: $link-padding-x-mobile;
-		}
+		// @include scale-component($scaling-navbar) {
+		// 	margin-left: $link-padding-x-mobile;
+		// 	margin-right: $link-padding-x-mobile;
+		// }
 	}
 
 	.navbar-nav .nav-item > .form-check {
@@ -156,10 +156,10 @@
 		padding-left: $link-padding-x;
 		padding-right: $link-padding-x;
 
-		@include scale-component($scaling-navbar) {
-			padding-left: $link-padding-x-mobile;
-			padding-right: $link-padding-x-mobile;
-		}
+		// @include scale-component($scaling-navbar) {
+		// 	padding-left: $link-padding-x-mobile;
+		// 	padding-right: $link-padding-x-mobile;
+		// }
 	}
 
 	.navbar-collapse .navbar-nav .nav-link {
@@ -183,9 +183,9 @@
 		.navbar-text {
 			padding: $link-padding-y $link-padding-x;
 
-			@include scale-component($scaling-navbar) {
-				padding: $link-padding-y-mobile $link-padding-x-mobile;
-			}
+			// @include scale-component($scaling-navbar) {
+			// 	padding: $link-padding-y-mobile $link-padding-x-mobile;
+			// }
 		}
 	}
 
@@ -231,17 +231,17 @@
 						padding-right: $link-padding-x;
 						padding-top: $link-padding-y;
 
-						@include scale-component($scaling-navbar) {
-							@if not ($link-padding-y-mobile == $nav-link-padding-y) {
-								padding-bottom: $link-padding-y-mobile;
-								padding-top: $link-padding-y-mobile;
-							}
+						// @include scale-component($scaling-navbar) {
+						// 	@if not ($link-padding-y-mobile == $nav-link-padding-y) {
+						// 		padding-bottom: $link-padding-y-mobile;
+						// 		padding-top: $link-padding-y-mobile;
+						// 	}
 
-							@if not ($link-padding-x-mobile == 0.5rem) {
-								padding-left: $link-padding-x-mobile;
-								padding-right: $link-padding-x-mobile;
-							}
-						}
+						// 	@if not ($link-padding-x-mobile == 0.5rem) {
+						// 		padding-left: $link-padding-x-mobile;
+						// 		padding-right: $link-padding-x-mobile;
+						// 	}
+						// }
 					}
 				}
 			}
@@ -256,10 +256,10 @@
 				left: $toggler-link-padding-x;
 				right: $toggler-link-padding-x;
 
-				@include scale-component($scaling-navbar) {
-					left: $toggler-link-padding-x-mobile;
-					right: $toggler-link-padding-x-mobile;
-				}
+				// @include scale-component($scaling-navbar) {
+				// 	left: $toggler-link-padding-x-mobile;
+				// 	right: $toggler-link-padding-x-mobile;
+				// }
 			}
 		}
 	}
