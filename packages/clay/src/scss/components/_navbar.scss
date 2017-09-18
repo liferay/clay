@@ -11,13 +11,13 @@
 
 	border-style: solid;
 
-	.container {
-		@include media-breakpoint-down(nth(map-keys($grid-breakpoints), 1)) {
-			margin-left: 0;
-			margin-right: 0;
-			width: 100%;
-		}
-	}
+	// .container {
+	// 	@include media-breakpoint-down(nth(map-keys($grid-breakpoints), 1)) {
+	// 		margin-left: 0;
+	// 		margin-right: 0;
+	// 		width: 100%;
+	// 	}
+	// }
 
 	.btn-link {
 		color: $nav-link-color;
@@ -171,23 +171,23 @@
 		flex-wrap: wrap;
 	}
 
-	@include media-breakpoint-up(md) {
-		.navbar-breakpoint-d-block {
-			display: block !important;
-		}
+	// @include media-breakpoint-up(md) {
+	// 	.navbar-breakpoint-d-block {
+	// 		display: block !important;
+	// 	}
 
-		.navbar-breakpoint-d-inline-block {
-			display: inline-block !important;
-		}
+	// 	.navbar-breakpoint-d-inline-block {
+	// 		display: inline-block !important;
+	// 	}
 
-		.navbar-breakpoint-d-flex {
-			display: flex !important;
-		}
+	// 	.navbar-breakpoint-d-flex {
+	// 		display: flex !important;
+	// 	}
 
-		.navbar-breakpoint-d-none {
-			display: none !important;
-		}
-	}
+	// 	.navbar-breakpoint-d-none {
+	// 		display: none !important;
+	// 	}
+	// }
 
 	@each $breakpoint in map-keys($grid-breakpoints) {
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
