@@ -36,9 +36,6 @@
 	$padding-y: setter(map-get($map, padding-y), $navbar-padding-y);
 	$link-padding-x: setter(map-get($map, link-padding-x), 0.5rem);
 	$link-padding-y: ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size * $line-height-base)) / 2;
-	$toggler-height: map-get($map, toggler-height);
-	$toggler-margin-x: map-get($map, toggler-margin-x);
-	$toggler-margin-y: map-get($map, toggler-margin-y);
 	$toggler-link-font-size: setter(map-get($map, toggler-link-font-size), $font-size-base);
 	$toggler-link-height: setter(map-get($map, toggler-link-height), auto);
 	$toggler-link-line-height: setter(map-get($map, toggler-link-line-height), $line-height-base);
@@ -52,7 +49,7 @@
 	$active-border-bottom-width: setter(map-get($map, active-border-bottom-width), 0.125rem);
 	$nav-item-dropdown-margin-top: map-get($map, nav-item-dropdown-margin-top);
 
-	$height-mobile: setter(map-get($map, height-mobile), 3.5rem);
+	$height-mobile: setter(map-get($map, height-mobile), $height);
 	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size-base-mobile);
 	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), 0);
 	$link-padding-y-mobile: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2;
@@ -60,10 +57,16 @@
 	$brand-margin-right-mobile: setter(map-get($map, brand-margin-right-mobile), 0);
 	$brand-padding-x-mobile: setter(map-get($map, brand-padding-x-mobile), $link-padding-x-mobile);
 	$brand-padding-y-mobile: setter(map-get($map, brand-padding-y-mobile), (($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($brand-font-size-mobile * $line-height-base)) / 2));
-	$toggler-margin-x-mobile: map-get($map, toggler-margin-x-mobile);
 	$toggler-link-font-size-mobile: setter(map-get($map, toggler-link-font-size-mobile), $font-size-base-mobile);
 	$toggler-link-padding-x-mobile: map-get($map, toggler-link-padding-x-mobile);
 	$toggler-link-padding-y-mobile: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size-mobile * $toggler-link-line-height)) / 2;
+
+	$toggler-font-size: setter(map-get($map, toggler-font-size), $navbar-toggler-font-size);
+	$toggler-height: setter(map-get($map, toggler-height), $height-mobile * 0.66667);
+	$toggler-margin-x: map-get($map, toggler-margin-x);
+	$toggler-margin-y: map-get($map, toggler-margin-y);
+	$toggler-padding-x: setter(map-get($map, toggler-padding-x), $navbar-toggler-padding-x);
+	$toggler-padding-y: setter(map-get($map, toggler-padding-y), $navbar-toggler-padding-y);
 
 	border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
 	font-size: $font-size;
@@ -74,16 +77,16 @@
 	// }
 
 	.navbar-toggler {
+		font-size: $toggler-font-size;
 		height: $toggler-height;
 		margin-bottom: $toggler-margin-y;
 		margin-left: $toggler-margin-x;
 		margin-right: $toggler-margin-x;
 		margin-top: $toggler-margin-y;
-
-		// @include scale-component($scaling-navbar) {
-		// 	margin-left: $toggler-margin-x-mobile;
-		// 	margin-right: $toggler-margin-x-mobile;
-		// }
+		padding-bottom: $toggler-padding-y;
+		padding-left: $toggler-padding-x;
+		padding-right: $toggler-padding-x;
+		padding-top: $toggler-padding-y;
 	}
 
 	.navbar-toggler-link {
