@@ -44,8 +44,11 @@
 	$toggler-link-line-height: setter(map-get($map, toggler-link-line-height), $line-height-base);
 	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), 0.5rem);
 	$toggler-link-padding-y: ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
-	$brand-margin-right: setter(map-get($map, brand-margin-right), 0.5rem);
-	$brand-padding-x: setter(map-get($map, brand-padding-x), $link-padding-x);
+	$brand-font-size: setter(map-get($map, brand-font-size), $navbar-brand-font-size);
+	$brand-max-width: setter(map-get($map, brand-max-width), calc(100% - 72px));
+	$brand-margin-right: map-get($map, brand-margin-right);
+	$brand-padding-x: map-get($map, brand-padding-x);
+	$brand-padding-y: map-get($map, brand-padding-y);
 	$active-border-bottom-width: setter(map-get($map, active-border-bottom-width), 0.125rem);
 	$nav-item-dropdown-margin-top: map-get($map, nav-item-dropdown-margin-top);
 
@@ -102,17 +105,24 @@
 	}
 
 	.navbar-brand {
-		margin-right: $brand-margin-right;
-		padding: 0 $brand-padding-x;
-
-		// @include scale-component($scaling-navbar) {
-		// 	font-size: $brand-font-size-mobile;
-		// 	margin-right: $brand-margin-right-mobile;
-		// 	padding-bottom: $brand-padding-y-mobile;
-		// 	padding-left: $brand-padding-x-mobile;
-		// 	padding-right: $brand-padding-x-mobile;
-		// 	padding-top: $brand-padding-y-mobile;
-		// }
+		@if ($scaling-navbar) {
+			font-size: $brand-font-size-mobile;
+			margin-right: $brand-margin-right-mobile;
+			max-width: $brand-max-width;
+			padding-bottom: $brand-padding-y-mobile;
+			padding-left: $brand-padding-x-mobile;
+			padding-right: $brand-padding-x-mobile;
+			padding-top: $brand-padding-y-mobile;
+		}
+		@else {
+			font-size: $brand-font-size;
+			margin-right: $brand-margin-right;
+			max-width: $brand-max-width;
+			padding-bottom: $brand-padding-y;
+			padding-left: $brand-padding-x;
+			padding-right: $brand-padding-x;
+			padding-top: $brand-padding-y;
+		}
 	}
 
 	.navbar-form {
@@ -220,6 +230,17 @@
 				}
 
 				@include media-breakpoint-up($next) {
+					.navbar-brand {
+						@if ($scaling-navbar) {
+							font-size: $brand-font-size;
+							margin-right: $brand-margin-right;
+							padding-bottom: $brand-padding-y;
+							padding-left: $brand-padding-x;
+							padding-right: $brand-padding-x;
+							padding-top: $brand-padding-y;
+						}
+					}
+
 					.navbar-form {
 						padding-left: $link-padding-x;
 						padding-right: $link-padding-x;
