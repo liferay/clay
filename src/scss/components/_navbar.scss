@@ -36,6 +36,10 @@
 	}
 }
 
+.navbar-collapse {
+	width: 100%;
+}
+
 .navbar-text-truncate {
 	display: inline-block;
 	max-width: 100%;
@@ -57,6 +61,7 @@
 	border-width: 0;
 	margin-left: 0;
 	margin-right: 0;
+	max-width: calc(100% - 180px);
 	position: relative;
 	z-index: 1;
 
@@ -73,6 +78,8 @@
 
 .navbar-brand {
 	color: $navbar-brand-color;
+	margin-right: 0;
+	max-width: calc(100% - 72px);
 
 	@include hover-focus {
 		color: $navbar-brand-hover-color;
@@ -147,14 +154,6 @@
 	display: none !important;
 }
 
-// Navbar Item Spacing
-// Override BS4 `.navbar-expand .navbar-nav .nav-link` should have padding if
-// not inside .navbar-collapse
-
-.navbar-nav {
-	flex-direction: row;
-}
-
 // Navbar Expand
 
 .navbar-expand {
@@ -224,22 +223,7 @@
 						}
 					}
 
-					.navbar-brand {
-						margin-right: 0;
-						max-width: calc(100% - 72px);
-					}
-
-					.navbar-toggler-link {
-						max-width: calc(100% - 180px);
-					}
-
 					.navbar-collapse {
-						width: 100%;
-
-						.navbar-nav {
-							flex-direction: column;
-						}
-
 						.nav-item {
 							display: block;
 						}
