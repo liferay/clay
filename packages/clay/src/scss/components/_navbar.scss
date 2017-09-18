@@ -78,8 +78,6 @@
 
 .navbar-brand {
 	color: $navbar-brand-color;
-	margin-right: 0;
-	max-width: calc(100% - 72px);
 
 	@include hover-focus {
 		color: $navbar-brand-hover-color;
