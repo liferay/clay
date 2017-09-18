@@ -6,9 +6,13 @@ $navbar-size: (
 	padding-y: 0,
 	link-padding-x: 1rem,
 	link-padding-x-mobile: 0.875rem,
-	toggler-margin-x: 0.5rem,
+	toggler-margin-x: 0.875rem,
 	nav-item-dropdown-margin-top: 0
 ) !default;
+
+$navbar-toggler-font-size: 1rem !default;
+$navbar-toggler-padding-x: 0.5rem !default;
+$navbar-toggler-padding-y: 0 !default;
 
 $navbar-brand-color: $nav-link-color !default;
 $navbar-brand-hover-color: $nav-link-hover-color !default;
