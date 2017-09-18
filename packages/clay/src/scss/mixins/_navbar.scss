@@ -51,7 +51,7 @@
 
 	$height-mobile: setter(map-get($map, height-mobile), 3.5rem);
 	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size-base-mobile);
-	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), 0.5rem);
+	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), 0);
 	$link-padding-y-mobile: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2;
 	$brand-font-size-mobile: setter(map-get($map, brand-font-size-mobile), $font-size-lg-mobile);
 	$brand-margin-right-mobile: setter(map-get($map, brand-margin-right-mobile), 0);
@@ -162,6 +162,13 @@
 		}
 	}
 
+	.navbar-collapse .navbar-nav .nav-link {
+		padding-bottom: $link-padding-y-mobile;
+		padding-left: $link-padding-x-mobile;
+		padding-right: $link-padding-x-mobile;
+		padding-top: $link-padding-y-mobile;
+	}
+
 	// Navbar Item Spacing
 	// Override BS4 `.navbar-expand .navbar-nav .nav-link` should have padding if
 	// not inside .navbar-collapse
@@ -209,13 +216,6 @@
 								right: -$border-right-width;
 							}
 						}
-
-						.navbar-nav .nav-link {
-							padding-bottom: $nav-link-padding-y;
-							padding-left: $link-padding-x;
-							padding-right: $link-padding-x;
-							padding-top: $nav-link-padding-y;
-						}
 					}
 				}
 
@@ -226,15 +226,10 @@
 					}
 
 					.navbar-nav .nav-link {
-						@if not ($link-padding-y == $nav-link-padding-y) {
-							padding-bottom: $link-padding-y;
-							padding-top: $link-padding-y;
-						}
-
-						@if not ($link-padding-x == 0.5rem) {
-							padding-left: $link-padding-x;
-							padding-right: $link-padding-x;
-						}
+						padding-bottom: $link-padding-y;
+						padding-left: $link-padding-x;
+						padding-right: $link-padding-x;
+						padding-top: $link-padding-y;
 
 						@include scale-component($scaling-navbar) {
 							@if not ($link-padding-y-mobile == $nav-link-padding-y) {
