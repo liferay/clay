@@ -197,6 +197,13 @@
 							}
 						}
 
+						.navbar-collapse {
+							.dropdown-divider {
+								margin-left: -$padding-x;
+								margin-right: -$padding-x;
+							}
+						}
+
 						.navbar-form {
 							padding-bottom: $link-padding-y-mobile;
 							padding-left: $link-padding-x-mobile;
