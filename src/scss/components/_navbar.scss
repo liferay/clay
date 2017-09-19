@@ -28,6 +28,10 @@
 	}
 }
 
+.navbar-nav {
+	flex-direction: row;
+}
+
 .navbar-collapse {
 	width: 100%;
 }
@@ -199,6 +203,10 @@
 					}
 
 					.navbar-collapse {
+						.navbar-nav {
+							flex-direction: column;
+						}
+
 						.nav-item {
 							display: block;
 						}
