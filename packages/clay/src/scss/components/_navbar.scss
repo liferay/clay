@@ -82,6 +82,10 @@
 	align-items: center;
 	display: flex;
 
+	> form {
+		width: 100%;
+	}
+
 	.form-inline {
 		.form-control {
 			margin-bottom: 0;

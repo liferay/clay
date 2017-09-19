@@ -125,15 +125,8 @@
 	}
 
 	.navbar-form {
-		@if not ($link-padding-x == 0.5rem) {
-			padding-left: $link-padding-x;
-			padding-right: $link-padding-x;
-		}
-
-		// @include scale-component($scaling-navbar) {
-		// 	padding-left: $link-padding-x-mobile;
-		// 	padding-right: $link-padding-x-mobile;
-		// }
+		padding-left: $link-padding-x-mobile;
+		padding-right: $link-padding-x-mobile;
 
 		.btn,
 		.form-control {
@@ -224,6 +217,13 @@
 
 								right: -$border-right-width;
 							}
+						}
+
+						.navbar-form {
+							padding-bottom: $link-padding-y-mobile;
+							padding-left: $link-padding-x-mobile;
+							padding-right: $link-padding-x-mobile;
+							padding-top: $link-padding-y-mobile;
 						}
 					}
 				}
