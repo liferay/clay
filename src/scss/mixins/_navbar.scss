@@ -26,6 +26,9 @@
 
 @mixin navbar-size($map) {
 	$scaling-navbar: setter(map-get($map, scaling-navbar), false);
+	$container-padding-x: setter(map-get($map, container-padding-x), 0);
+	$container-padding-x-mobile: map-get($map, container-padding-x-mobile);
+
 	$height: setter(map-get($map, height), 3.5rem);
 	$border-bottom-width: setter(map-get($map, border-bottom-width), 0);
 	$border-left-width: setter(map-get($map, border-left-width), 0);
@@ -35,7 +38,7 @@
 	$padding-x: setter(map-get($map, padding-x), $navbar-padding-x);
 	$padding-y: setter(map-get($map, padding-y), $navbar-padding-y);
 	$link-padding-x: setter(map-get($map, link-padding-x), 0.5rem);
-	$link-padding-y: ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size * $line-height-base)) / 2;
+	$link-padding-y: setter(map-get($map, link-padding-y), ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size * $line-height-base)) / 2);
 	$brand-font-size: setter(map-get($map, brand-font-size), $navbar-brand-font-size);
 	$brand-max-width: setter(map-get($map, brand-max-width), calc(100% - 72px));
 	$brand-margin-right: map-get($map, brand-margin-right);
@@ -46,8 +49,8 @@
 
 	$height-mobile: setter(map-get($map, height-mobile), $height);
 	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size-base-mobile);
-	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), 0);
-	$link-padding-y-mobile: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2;
+	$link-padding-x-mobile: map-get($map, link-padding-x-mobile);
+	$link-padding-y-mobile: setter(map-get($map, link-padding-y-mobile), ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2);
 	$brand-font-size-mobile: setter(map-get($map, brand-font-size-mobile), $font-size-lg-mobile);
 	$brand-margin-right-mobile: setter(map-get($map, brand-margin-right-mobile), 0);
 	$brand-padding-x-mobile: setter(map-get($map, brand-padding-x-mobile), $link-padding-x-mobile);
@@ -65,12 +68,18 @@
 	$toggler-link-line-height: setter(map-get($map, toggler-link-line-height), $line-height-base);
 	$toggler-link-margin-x: setter(map-get($map, toggler-link-margin-x), 0);
 	$toggler-link-margin-y: map-get($map, toggler-link-margin-y);
-	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), $link-padding-x-mobile);
+	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), 0);
 	$toggler-link-padding-y: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
 
 	border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
 	font-size: $font-size;
 	padding: $padding-y $padding-x;
+
+	> .container,
+	> .container-fluid {
+		padding-left: $container-padding-x;
+		padding-right: $container-padding-x;
+	}
 
 	.navbar-toggler {
 		font-size: $toggler-font-size;
@@ -183,6 +192,12 @@
 			&#{$infix} { // .navbar-expand, sm, md, lg, xl
 				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
 					@include media-breakpoint-down($breakpoint) {
+						> .container,
+						> .container-fluid {
+							padding-left: $container-padding-x-mobile;
+							padding-right: $container-padding-x-mobile;
+						}
+
 						&.navbar-collapse-absolute {
 							.navbar-collapse {
 								border-width: 0 $border-right-width $border-bottom-width $border-left-width;
