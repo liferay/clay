@@ -38,6 +38,10 @@
 
 .navbar-collapse {
 	width: 100%;
+
+	.navbar-nav {
+		flex-direction: column;
+	}
 }
 
 .navbar-text-truncate {
@@ -207,10 +211,6 @@
 					}
 
 					.navbar-collapse {
-						.navbar-nav {
-							flex-direction: column;
-						}
-
 						.nav-item {
 							display: block;
 						}
@@ -319,6 +319,7 @@
 						justify-content: space-between;
 
 						.navbar-nav {
+							flex-direction: row;
 							flex-wrap: wrap;
 						}
 					}
