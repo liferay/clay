@@ -190,6 +190,8 @@
 			$infix: breakpoint-infix($next, $grid-breakpoints);
 
 			&#{$infix} { // .navbar-expand, sm, md, lg, xl
+				justify-content: space-between;
+
 				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
 					@include media-breakpoint-down($breakpoint) {
 						> .container,
