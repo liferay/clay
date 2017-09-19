@@ -26,7 +26,7 @@
 
 	$height-mobile: setter(map-get($map, height-mobile), $height);
 	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size);
-	$link-padding-x-mobile: map-get($map, link-padding-x-mobile);
+	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), $link-padding-x);
 	$link-padding-y-mobile: setter(map-get($map, link-padding-y-mobile), ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2);
 	$brand-font-size-mobile: setter(map-get($map, brand-font-size-mobile), $font-size-lg-mobile);
 	$brand-margin-right-mobile: setter(map-get($map, brand-margin-right-mobile), 0);
@@ -35,17 +35,17 @@
 
 	$toggler-font-size: setter(map-get($map, toggler-font-size), $navbar-toggler-font-size);
 	$toggler-height: setter(map-get($map, toggler-height), $height-mobile * 0.66667);
-	$toggler-margin-x: setter(map-get($map, toggler-margin-x), 0.5rem);
+	$toggler-margin-x: setter(map-get($map, toggler-margin-x), $link-padding-x-mobile);
 	$toggler-margin-y: map-get($map, toggler-margin-y);
 	$toggler-padding-x: setter(map-get($map, toggler-padding-x), $navbar-toggler-padding-x);
 	$toggler-padding-y: setter(map-get($map, toggler-padding-y), $navbar-toggler-padding-y);
 
-	$toggler-link-font-size: setter(map-get($map, toggler-link-font-size), $font-size-base);
+	$toggler-link-font-size: setter(map-get($map, toggler-link-font-size), $font-size-mobile);
 	$toggler-link-height: setter(map-get($map, toggler-link-height), auto);
 	$toggler-link-line-height: setter(map-get($map, toggler-link-line-height), $line-height-base);
 	$toggler-link-margin-x: setter(map-get($map, toggler-link-margin-x), 0);
 	$toggler-link-margin-y: map-get($map, toggler-link-margin-y);
-	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), $link-padding-x);
+	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), $link-padding-x-mobile);
 	$toggler-link-padding-y: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
 
 	border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
@@ -146,10 +146,18 @@
 	}
 
 	.navbar-nav .nav-link {
-		padding-bottom: $link-padding-y;
-		padding-left: $link-padding-x;
-		padding-right: $link-padding-x;
-		padding-top: $link-padding-y;
+		@if ($scaling-navbar) {
+			padding-bottom: $link-padding-y-mobile;
+			padding-left: $link-padding-x-mobile;
+			padding-right: $link-padding-x-mobile;
+			padding-top: $link-padding-y-mobile;
+		}
+		@else {
+			padding-bottom: $link-padding-y;
+			padding-left: $link-padding-x;
+			padding-right: $link-padding-x;
+			padding-top: $link-padding-y;
+		}
 	}
 
 	// Navbar Item Spacing
