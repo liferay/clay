@@ -42,6 +42,10 @@
 	.navbar-nav {
 		flex-direction: column;
 	}
+
+	.dropdown-toggle .navbar-text-truncate {
+		max-width: calc(100% - #{$navbar-text-truncate-spacer-right});
+	}
 }
 
 .navbar-text-truncate {
@@ -51,10 +55,6 @@
 	@include text-truncate;
 
 	vertical-align: bottom;
-}
-
-.dropdown-toggle .navbar-text-truncate {
-	max-width: calc(100% - #{$navbar-text-truncate-spacer-right});
 }
 
 // Navbar Toggler
@@ -186,6 +186,10 @@
 				display: flex;
 			}
 
+			.nav-item .navbar-text-truncate {
+				max-width: $navbar-text-truncate-max-width;
+			}
+
 			@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
@@ -213,6 +217,14 @@
 					.navbar-collapse {
 						.nav-item {
 							display: block;
+						}
+
+						.navbar-text-truncate {
+							max-width: 100%;
+						}
+
+						.dropdown-toggle .navbar-text-truncate {
+							max-width: calc(100% - #{$navbar-text-truncate-spacer-right});
 						}
 
 						.dropdown-item {
@@ -304,15 +316,11 @@
 			}
 
 			@include media-breakpoint-up($next) {
-				.navbar-text-truncate {
-					max-width: $navbar-text-truncate-max-width;
-				}
-
-				.dropdown-toggle .navbar-text-truncate {
-					max-width: $navbar-text-truncate-max-width - $navbar-text-truncate-spacer-right;
-				}
-
 				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
+					.navbar-text-truncate {
+						max-width: $navbar-text-truncate-max-width;
+					}
+
 					.navbar-collapse {
 						flex-grow: 1;
 						flex-wrap: wrap;
@@ -321,6 +329,10 @@
 						.navbar-nav {
 							flex-direction: row;
 							flex-wrap: wrap;
+						}
+
+						.dropdown-toggle .navbar-text-truncate {
+							max-width: $navbar-text-truncate-max-width - $navbar-text-truncate-spacer-right;
 						}
 					}
 
