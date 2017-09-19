@@ -51,8 +51,6 @@
 	align-items: center;
 	display: flex;
 	border-width: 0;
-	margin-left: 0;
-	margin-right: 0;
 	max-width: calc(100% - 180px);
 	position: relative;
 	z-index: 1;
@@ -62,6 +60,8 @@
 	}
 
 	.lexicon-icon {
+		min-width: 1em;
+		margin-left: 3px;
 		margin-top: 0;
 	}
 }
