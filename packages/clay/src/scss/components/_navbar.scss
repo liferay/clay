@@ -401,6 +401,45 @@
 	}
 }
 
+// Navbar Overlay Styles for `.navbar-overlay-xs-down`,
+// `.navbar-overlay-sm-down`, `.navbar-overlay-md-down`,
+// `.navbar-overlay-lg-down`, `.navbar-overlay-up`
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$index: index(map-keys($grid-breakpoints), $breakpoint);
+	$length: length(map-keys($grid-breakpoints));
+	$infix: '.navbar-overlay-#{$breakpoint}-down';
+
+	@if ($index == $length) {
+		$infix: '.navbar-overlay-up';
+	}
+
+	#{$infix} {
+		@include media-breakpoint-down($breakpoint) {
+			@include border-radius($navbar-border-radius);
+
+			bottom: 0;
+			display: none;
+			justify-content: space-between;
+			left: 0;
+			margin-left: 0;
+			margin-right: 0;
+			padding-bottom: $navbar-padding-y;
+			padding-left: $navbar-padding-x;
+			padding-right: $navbar-padding-x;
+			padding-top: $navbar-padding-y;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: $zindex-navbar-overlay;
+
+			&.show {
+				display: flex;
+			}
+		}
+	}
+}
+
 // Navbar Highlight
 
 .navbar-highlight {
