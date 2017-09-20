@@ -164,11 +164,10 @@
 									margin-top: $border-bottom-width;
 								}
 
-								@if not ($padding-x == 0) {
-									padding-left: $padding-x;
-									padding-right: $padding-x;
-								}
-
+								padding-bottom: $padding-y;
+								padding-left: $padding-x;
+								padding-right: $padding-x;
+								padding-top: $padding-y;
 								right: -$border-right-width;
 							}
 						}
