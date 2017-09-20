@@ -3,7 +3,7 @@ $enable-scaling-navbar: $enable-scaling-components !default;
 $navbar-size: () !default;
 $navbar-size: map-merge((
 	scaling-navbar: $enable-scaling-navbar,
-	height: 3.5rem // 48px
+	height: 3.5rem // 56px
 ), $navbar-size);
 
 $navbar-border-radius: null !default;
@@ -31,7 +31,7 @@ $navbar-light-active-bg: null !default;
 $navbar-light-hover-bg: null !default;
 $navbar-light-disabled-bg: null !default;
 
-$navbar-light-active-highlight: transparent !default;
+$navbar-light-active-highlight: $component-active-bg !default;
 
 $navbar-light-brand-bg: null !default;
 $navbar-light-brand-hover-bg: null !default;
@@ -47,7 +47,7 @@ $navbar-dark-active-bg: null !default;
 $navbar-dark-hover-bg: null !default;
 $navbar-dark-disabled-bg: null !default;
 
-$navbar-dark-active-highlight: transparent !default;
+$navbar-dark-active-highlight: $component-active-bg !default;
 
 $navbar-dark-brand-bg: null !default;
 $navbar-dark-brand-hover-bg: null !default;
@@ -64,7 +64,7 @@ $navbar-primary-hover-bg: null !default;
 
 $navbar-primary-disabled-bg: null !default;
 
-$navbar-primary-active-highlight: transparent !default;
+$navbar-primary-active-highlight: $component-active-bg !default;
 
 $navbar-primary-brand-bg: null !default;
 $navbar-primary-brand-hover-bg: null !default;
