@@ -6,10 +6,10 @@
 
 1. Install NodeJS >= [v6.11.0](http://nodejs.org/dist/v6.11.0/), if you don't have it yet.
 
-2. Install lerna global dependency:
+2. Install lerna and yarn global dependencies:
 
   ```
-  [sudo] npm install -g lerna
+  [sudo] npm install -g lerna yarn
   ```
 
 3. Run the bootstrap script to install local dependencies and link packages together:

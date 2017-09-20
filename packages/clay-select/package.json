@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "build": "npm run soy && webpack",
-    "soy": "metalsoy --soyDeps node_modules/metal*/src/**/*.soy"
+    "soy": "metalsoy"
   },
   "keywords": [
     "clay",
