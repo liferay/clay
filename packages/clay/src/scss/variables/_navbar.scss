@@ -1,11 +1,5 @@
 $enable-scaling-navbar: $enable-scaling-components !default;
 
-$navbar-size: () !default;
-$navbar-size: map-merge((
-	scaling-navbar: $enable-scaling-navbar,
-	height: 3.5rem // 56px
-), $navbar-size);
-
 $navbar-border-radius: null !default;
 
 $navbar-active-highlight: transparent !default;

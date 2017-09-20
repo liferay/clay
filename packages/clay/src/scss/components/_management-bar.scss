@@ -1,6 +1,18 @@
+$management-bar-size: () !default;
+$management-bar-size: map-merge((
+	scaling-navbar: true,
+	height: 4rem,
+	height-mobile: 3rem,
+	border-bottom-width: 0.0625rem,
+	padding-x: 0,
+	padding-y: 0,
+	link-padding-x: 1rem,
+	link-padding-x-mobile: 0.875rem,
+	toggler-margin-x: 0.875rem,
+	active-border-bottom-width: 0.25rem,
+	nav-item-dropdown-margin-top: 0
+), $management-bar-size);
+
 .management-bar {
-	.container,
-	.container-fluid {
-		flex-wrap: wrap;
-	}
+	@include navbar-size($management-bar-size);
 }
