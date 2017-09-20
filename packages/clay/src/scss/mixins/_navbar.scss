@@ -43,6 +43,8 @@
 	$brand-margin-right-mobile: setter(map-get($map, brand-margin-right-mobile), 0);
 	$brand-padding-x-mobile: setter(map-get($map, brand-padding-x-mobile), $link-padding-x-mobile);
 	$brand-padding-y-mobile: setter(map-get($map, brand-padding-y-mobile), (($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($brand-font-size-mobile * $line-height-base)) / 2));
+	$collapse-dropdown-item-padding-x-mobile: map-get($map, collapse-dropdown-item-padding-x-mobile);
+	$collapse-dropdown-item-padding-y-mobile: map-get($map, collapse-dropdown-item-padding-y-mobile);
 
 	$toggler-font-size: setter(map-get($map, toggler-font-size), $navbar-toggler-font-size);
 	$toggler-height: setter(map-get($map, toggler-height), $height-mobile * 0.66667);
@@ -159,11 +161,7 @@
 								border-style: solid;
 								border-width: 0 $border-right-width $border-bottom-width $border-left-width;
 								left: -$border-left-width;
-
-								@if ($border-bottom-width > 0) {
-									margin-top: $border-bottom-width;
-								}
-
+								margin-top: $border-bottom-width;
 								padding-bottom: $padding-y;
 								padding-left: $padding-x;
 								padding-right: $padding-x;
@@ -173,9 +171,18 @@
 						}
 
 						.navbar-collapse {
-							.navbar-nav .dropdown-divider {
-								margin-left: -$padding-x;
-								margin-right: -$padding-x;
+							.navbar-nav {
+								.dropdown-divider {
+									margin-left: -$padding-x;
+									margin-right: -$padding-x;
+								}
+
+								.dropdown-item {
+									padding-bottom: $collapse-dropdown-item-padding-y-mobile;
+									padding-left: $collapse-dropdown-item-padding-x-mobile;
+									padding-right: $collapse-dropdown-item-padding-x-mobile;
+									padding-top: $collapse-dropdown-item-padding-y-mobile;
+								}
 							}
 						}
 
