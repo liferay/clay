@@ -104,7 +104,6 @@
 	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
 	padding: $navbar-brand-padding-y 0.5rem;
 	position: relative;
-	z-index: 1;
 
 	&:focus {
 		outline: none;
