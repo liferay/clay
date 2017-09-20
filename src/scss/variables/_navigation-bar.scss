@@ -1,0 +1,5 @@
+$navigation-bar-size: () !default;
+$navigation-bar-size: map-merge((
+	scaling-navbar: false,
+	height: 3rem
+), $navigation-bar-size);
