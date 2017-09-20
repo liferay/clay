@@ -1,0 +1,64 @@
+{namespace ClayAlert}
+
+/**
+ * This renders the component's whole content.
+ */
+{template .render}
+	{@param message: html}
+	{@param title: string}
+	{@param? _handleCloseClick: any}
+	{@param? closeable: bool}
+	{@param? icon: string}
+	{@param? spritemap: string}
+	{@param? style: string}
+	{@param? type: string}
+
+	{let $attributes kind="attributes"}
+		class="alert alert-{$style}
+		{if $closeable}
+			{sp}alert-dismissible
+		{/if}
+
+		{if $type and $type == 'toast'}
+			{sp}alert-notification
+		{/if}
+		"
+		ref="alert"
+		role="alert"
+	{/let}
+
+	<div {$attributes}>
+		{if $closeable and $spritemap}
+			{call ClayButton.render}
+				{param ariaLabel: 'Close' /}
+				{param elementClasses: 'close' /}
+				{param events: [
+					'click': $_handleCloseClick
+					]
+				/}
+				{param icon: [
+					'alignment': 'right',
+					'monospaced': false,
+					'spritemap': $spritemap,
+					'symbol': 'times'
+					]
+				/}
+				{param style: 'unstyled' /}
+				{param type: 'button' /}
+			{/call}
+		{/if}
+
+		{if $icon and $spritemap}
+			{call ClayIcon.render}
+				{param spritemap: $spritemap /}
+				{param symbol: $icon /}
+			{/call}
+		{/if}
+
+		<strong class="lead">
+			{$title}
+		</strong>
+
+		{$message}
+	</div>
+{/template}

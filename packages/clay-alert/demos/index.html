@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Alert</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<script src="../build/globals/clay-alert.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Alert</h1>
+	</div>
+
+	<br />
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Alerts</h4>
+
+			<div id="normal-alert-success"></div>
+			<div id="normal-alert-info"></div>
+			<div id="normal-alert-warning"></div>
+			<div id="normal-alert-danger"></div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dismissible Alerts</h4>
+
+			<div id="closeable-alert-success"></div>
+			<div id="closeable-alert-info"></div>
+			<div id="closeable-alert-warning"></div>
+			<div id="closeable-alert-danger"></div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Notification Alerts</h4>
+
+			<div class="d-table">
+				<div id="notification-alert-info" class="align-top card-body d-inline-block"></div>
+				<div id="notification-alert-success" class="align-top d-inline-block card-body"></div>
+				<div id="notification-alert-warning" class="align-top d-inline-block card-body"></div>
+				<div id="notification-alert-danger" class="align-top d-inline-block card-body"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		/*
+		 * Normal Alerts
+		 */
+		new metal.ClayAlert(
+			{
+				icon: 'info-circle',
+				message: 'This <a href="#">alert</a> needs your attention.',
+				title: 'Info'
+			},
+			'#normal-alert-info'
+		);
+
+		new metal.ClayAlert(
+			{
+				icon: 'check-circle',
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				title: 'Success',
+				style: 'success'
+			},
+			'#normal-alert-success'
+		);
+
+		new metal.ClayAlert(
+			{
+				icon: 'question-circle-full',
+				message: 'This alert is a <a href="#">warning message</a>.',
+				title: 'Warning',
+				style: 'warning'
+			},
+			'#normal-alert-warning'
+		);
+
+		new metal.ClayAlert(
+			{
+				icon: 'exclamation-full',
+				message: 'Something</a> is not right.',
+				title: 'Danger',
+				style: 'danger'
+			},
+			'#normal-alert-danger'
+		);
+
+		/*
+ 		* Closeable Alerts
+ 		*/
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				icon: 'info-circle',
+				message: 'This <a href="#">alert</a> needs your attention.',
+				spritemap: 'icons.svg',
+				title: 'Info',
+				events: {
+					'close': handleClick
+				}
+			},
+			'#closeable-alert-info'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				icon: 'check-circle',
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				spritemap: 'icons.svg',
+				style: 'success',
+				title: 'Success',
+				events: {
+					'close': handleClick
+				}
+			},
+			'#closeable-alert-success'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				icon: 'question-circle-full',
+				message: 'This alert is a <a href="#">warning message</a>.',
+				spritemap: 'icons.svg',
+				style: 'warning',
+				title: 'Warning',
+				events: {
+					'close': handleClick
+				}
+			},
+			'#closeable-alert-warning'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				icon: 'exclamation-full',
+				message: 'Something</a> is not right.',
+				spritemap: 'icons.svg',
+				style: 'danger',
+				title: 'Danger',
+				events: {
+					'close': handleClick
+				}
+			},
+			'#closeable-alert-danger'
+		);
+
+		/*
+ 		* Notification Alerts
+ 		*/
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				icon: 'info-circle',
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: 'icons.svg',
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+				events: {
+					'close': handleClick
+				}
+			},
+			'#notification-alert-info'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				icon: 'check-circle',
+				message: '<p>The UX Team has rescheduled to the following date: 2014 - 12 - 17.</p>\n' +
+						 '<p>Please complete the attendance form to confirm your attendance: <a href="#1">More Info</a>.</p>',
+				spritemap: 'icons.svg',
+				style: 'success',
+				title: 'Meeting Rescheduled',
+				type: 'toast',
+				events: {
+					'close': handleClick
+				}
+			},
+			'#notification-alert-success'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				icon: 'question-circle-full',
+				message: '<p>Due to inactivity, your session will expire in 00:00:56. To extend your session another 2 minutes click: <a href="#1">Extend</a>.</p>',
+				spritemap: 'icons.svg',
+				style: 'warning',
+				title: 'Warning:',
+				type: 'toast',
+				events: {
+					'close': handleClick
+				}
+			},
+			'#notification-alert-warning'
+		);
+
+		new metal.ClayAlert(
+			{
+				closeable: true,
+				icon: 'exclamation-full',
+				message: '<p>Due to inactivity, your session has expired. Please save any data you may have entered before refreshing the page. <a href="#1">Log in</a></p>',
+				spritemap: 'icons.svg',
+				style: 'danger',
+				title: 'Danger:',
+				type: 'toast',
+				events: {
+					'close': handleClick
+				}
+
+			},
+			'#notification-alert-danger'
+		);
+
+		function handleClick(event) {
+			event.target.dispose();
+		}
+	</script>
+</body>
+</html>
