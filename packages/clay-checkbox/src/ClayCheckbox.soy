@@ -1,0 +1,111 @@
+{namespace ClayCheckbox}
+
+/**
+ * This renders an icon element based on the Clay Checkbox definition.
+ */
+{template .render}
+	{@param label: html | string}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? elementClasses: string}
+	{@param? hideLabel: bool}
+	{@param? hideWrapper: bool}
+	{@param? id: string}
+	{@param? indeterminate: bool}
+	{@param? name: string}
+	{@param? value: string}
+
+	{if $hideWrapper}
+		{call .input}
+			{param checked: $indeterminate or $checked /}
+			{param disabled: $disabled /}
+			{param elementClasses: $elementClasses /}
+			{param hideLabel: $hideLabel /}
+			{param id: $id /}
+			{param label: $label /}
+			{param name: $name /}
+			{param value: $value /}
+		{/call}
+	{else}
+		{let $wrapperClasses kind="text"}
+			form-check
+			{if $disabled}
+				{sp}disabled
+			{/if}
+
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		{/let}
+
+		<div class="{$wrapperClasses}">
+			{call .input}
+				{param checked: $indeterminate or $checked /}
+				{param disabled: $disabled /}
+				{param hideLabel: $hideLabel /}
+				{param id: $id /}
+				{param label: $label /}
+				{param name: $name /}
+				{param value: $value /}
+			{/call}
+		</div>
+	{/if}
+{/template}
+
+/**
+ * This renders the checkbox input
+ **/
+{template .input}
+	{@param label: html | string}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? elementClasses: string}
+	{@param? hideLabel: bool}
+	{@param? id: string}
+	{@param? name: string}
+	{@param? value: string}
+
+	<label class="form-check-label">
+		{let $inputAttributes kind="attributes"}
+			{if $checked}
+				checked="checked"
+			{/if}
+
+			{if $disabled}
+				{sp}disabled
+			{/if}
+
+			class="form-check-input
+				{if $elementClasses}
+					{sp}{$elementClasses}
+				{/if}
+			"
+
+			{if $id}
+				id="{$id}"
+			{/if}
+
+			{if $name}
+				name="{$name}"
+			{/if}
+
+			{if $value}
+				value="{$value}"
+			{/if}
+
+			ref="input"
+			type="checkbox"
+		{/let}
+
+		<input {$inputAttributes}></input>
+
+		{let $spanClasses kind="text"}
+			form-check-description
+			{if $hideLabel}
+				{sp}sr-only
+			{/if}
+		{/let}
+
+		<span class="{$spanClasses}">{$label}</span>
+	</label>
+{/template}
