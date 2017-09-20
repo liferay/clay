@@ -1,15 +1,14 @@
 // Navbar
 
 .navbar {
-	@include navbar-size($navbar-size);
-}
-
-.navbar {
-	border-color: transparent;
-
-	@include border-radius($navbar-border-radius);
-
-	border-style: solid;
+	.container,
+	.container-fluid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 	.btn-link {
 		color: $nav-link-color;
@@ -33,6 +32,12 @@
 
 	.dropdown-menu {
 		position: absolute;
+	}
+
+	.nav-link {
+		// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 }
 
@@ -63,7 +68,10 @@
 	align-items: center;
 	display: flex;
 	border-width: 0;
-	max-width: calc(100% - 180px);
+	line-height: $line-height-base;
+	max-width: 100%;
+	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+	padding: $navbar-brand-padding-y 0.5rem;
 	position: relative;
 	z-index: 1;
 
@@ -82,6 +90,11 @@
 
 .navbar-brand {
 	color: $navbar-brand-color;
+	margin-right: 0;
+	max-width: calc(100% - 72px);
+	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 
 	@include hover-focus {
 		color: $navbar-brand-hover-color;
@@ -93,6 +106,9 @@
 .navbar-form {
 	align-items: center;
 	display: flex;
+	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 
 	> form {
 		width: 100%;
@@ -158,29 +174,13 @@
 		flex-wrap: wrap;
 	}
 
-	// @include media-breakpoint-up(md) {
-	// 	.navbar-breakpoint-d-block {
-	// 		display: block !important;
-	// 	}
-
-	// 	.navbar-breakpoint-d-inline-block {
-	// 		display: inline-block !important;
-	// 	}
-
-	// 	.navbar-breakpoint-d-flex {
-	// 		display: flex !important;
-	// 	}
-
-	// 	.navbar-breakpoint-d-none {
-	// 		display: none !important;
-	// 	}
-	// }
-
 	@each $breakpoint in map-keys($grid-breakpoints) {
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
 
 		&#{$infix} { // .navbar-expand, sm, md, lg, xl
+			justify-content: space-between;
+
 			.nav-item {
 				align-items: center;
 				display: flex;
@@ -195,10 +195,12 @@
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
 							background-color: $dropdown-bg;
-							border-color: transparent;
-							border-style: solid;
 							box-shadow: $navbar-collapse-absolute-box-shadow;
+							left: 0;
+							margin-top: -$navbar-padding-y;
+							padding: 0 $navbar-padding-x $navbar-padding-y $navbar-padding-x;
 							position: absolute;
+							right: 0;
 							top: 100%;
 							z-index: $zindex-dropdown;
 						}
@@ -226,6 +228,11 @@
 						.navbar-nav {
 							.dropdown-toggle .navbar-text-truncate {
 								max-width: calc(100% - #{$navbar-text-truncate-spacer-right});
+							}
+
+							.dropdown-divider {
+								margin-left: -$navbar-padding-x;
+								margin-right: -$navbar-padding-x;
 							}
 
 							.dropdown-item {
@@ -369,13 +376,17 @@
 	.navbar-toggler-link {
 		&:after {
 			background-color: $navbar-active-highlight;
+			bottom: -$navbar-padding-y;
 
 			@if not ($navbar-active-highlight == transparent) {
 				content: '';
 			}
 
 			display: block;
+			height: 0.1875rem;
+			left: 0.25rem;
 			position: absolute;
+			right: 0.25rem;
 			width: auto;
 		}
 	}
@@ -391,13 +402,17 @@
 				.navbar-nav .nav-link {
 					&.active:after {
 						background-color: $navbar-active-highlight;
+						bottom: -$navbar-padding-y;
 
 						@if not ($navbar-active-highlight == transparent) {
 							content: '';
 						}
 
 						display: block;
+						height: 0.1875rem;
+						left: 0.25rem;
 						position: absolute;
+						right: 0.25rem;
 						width: auto;
 					}
 				}
