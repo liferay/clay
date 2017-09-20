@@ -27,13 +27,5 @@ module.exports = {
 	plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
 	resolve: {
 		mainFields: ['esnext:main', 'main'],
-		alias: {
-			'metal-soy': path.resolve('./node_modules/metal-soy'),
-			'incremental-dom': path.resolve('./node_modules/incremental-dom'),
-			'metal-incremental-dom': path.resolve(
-				'./node_modules/metal-incremental-dom',
-			),
-			'metal-soy-bundle': path.resolve('./node_modules/metal-soy-bundle'),
-		},
 	},
 };
