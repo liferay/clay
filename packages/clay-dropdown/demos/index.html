@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo: Metal Clay Sticker</title>
+
+	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		.my-personal-container {
+			position: relative;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
+
+	<script src="../build/globals/clay-dropdown.js"></script>
+</head>
+<body class="container">
+	<div class="row row-spacing">
+		<h1>Dropdown</h1>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Actions Dropdown</h1>
+			<div id="actions-block"></div>
+		</div>
+	</div>
+
+
+	<script>
+		let prueba = new metal.ClayDropdownBase(
+			{
+				button: {
+					label: 'Done',
+					style: 'secondary',
+				},
+				caption: 'Showing 7 of 203 Structures',
+				indicatorsPosition: 'left',
+				helpText: 'You can customize this menu or see all you have by pressing "more".',
+				items: [
+					{
+						label: 'Group 1',
+						url: '#1',
+						type: 'header'
+					},
+					{
+						label: 'Element 1',
+						url: '#1'
+					},
+					{
+						disabled: true,
+						indicatorSymbol: 'check',
+						label: 'Element 2',
+						url: '#2'
+					},
+					{
+						type: 'separator'
+					},
+					{
+						active: true,
+						label: 'Element 3',
+						url: '#3'
+					},
+					{
+						label: 'Element 4',
+						url: '#4',
+						type: 'checkbox'
+					},
+					{
+						checked: true,
+						label: 'Element 5',
+						url: '#5',
+						type: 'checkbox'
+					},
+					{
+						inputName: 'radio1',
+						inputValue: '1',
+						label: 'Element 6',
+						url: '#6',
+						type: 'radio'
+					},
+					{
+						checked: true,
+						inputName: 'radio1',
+						inputValue: '2',
+						label: 'Element 7',
+						url: '#7',
+						type: 'radio'
+					},
+					{
+						indicatorSymbol: 'check',
+						label: 'Element 8',
+						url: '#8',
+					},
+					{
+						indicatorSymbol: 'check',
+						label: 'Element 9',
+						url: '#9',
+					}
+				],
+				searchable: true,
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				triggerLabel: 'Trigger'
+			},
+			'#actions-block'
+		);
+	</script>
+</body>
+</html>

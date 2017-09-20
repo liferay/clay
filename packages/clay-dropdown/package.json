@@ -1,0 +1,49 @@
+{
+  "name": "clay-dropdown",
+  "version": "0.0.0",
+  "description": "Clay Dropdown Component",
+  "license": "BSD",
+  "repository": "metal/metal-clay-components",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/all.js",
+  "esnext:main": "src/all.js",
+  "jsnext:main": "src/all.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "npm run soy && webpack",
+    "soy": "metalsoy --soyDeps '../../node_modules/clay-+(button|checkbox|icon|radio)/src/**/*.soy'"
+  },
+  "keywords": [
+    "clay",
+    "metal"
+  ],
+  "dependencies": {
+    "clay-button": "0.0.0",
+    "clay-checkbox": "0.0.0",
+    "clay-icon": "0.0.0",
+    "clay-radio": "0.0.0",
+    "metal": "^2.13.2",
+    "metal-debounce": "^2.0.0",
+    "metal-dropdown": "^3.0.0",
+    "metal-soy": "^2.13.2",
+    "metal-state": "^2.13.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-node-env-inline": "^0.1.1",
+    "babel-preset-es2015": "^6.14.0",
+    "clay": "liferay/clay#develop",
+    "metal-dom": "^2.13.2",
+    "metal-tools-soy": "^4.2.1",
+    "webpack": "^3.0.0"
+  }
+}

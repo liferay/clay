@@ -1,0 +1,341 @@
+{namespace ClayDropdownBase}
+
+/**
+ * This renders a dropdown.
+ */
+{template .render}
+	{@param items: list<?>}
+	{@param triggerLabel: any}
+	{@param? button: ?}
+	{@param? caption: string}
+	{@param? expanded: bool}
+	{@param? helpText: string}
+	{@param? indicatorsPosition: string}
+	{@param? searchable: bool}
+	{@param? spritemap: string}
+	{@param? triggerStyle: string}
+
+	{let $wrapperClasses kind="text"}
+		dropdown
+		{if $expanded}
+			{sp}show
+		{/if}
+	{/let}
+
+	<div class="{$wrapperClasses}">
+		{call .trigger}
+			{param expanded: $expanded /}
+			{param triggerLabel: $triggerLabel /}
+			{param triggerStyle: $triggerStyle /}
+		{/call}
+
+		{call .sections}
+			{param button: $button /}
+			{param caption: $caption /}
+			{param expanded: $expanded /}
+			{param helpText: $helpText /}
+			{param indicatorsPosition: $indicatorsPosition /}
+			{param items: $items /}
+			{param searchable: $searchable /}
+			{param spritemap: $spritemap /}
+		{/call}
+	</div>
+{/template}
+
+/**
+ * Renders a list of items
+ */
+{template .items}
+	{@param items: list<?>}
+	{@param? indicatorsPosition: string}
+	{@param? spritemap: string}
+
+	{foreach $item in $items}
+		{delcall ClayDropdown.item variant="$item.type"}
+			{param active: $item.active /}
+			{param checked: $item.checked /}
+			{param disabled: $item.disabled /}
+			{param indicatorSymbol: $item.indicatorSymbol /}
+			{param indicatorsPosition: $indicatorsPosition /}
+			{param inputName: $item.inputName /}
+			{param inputValue: $item.inputValue /}
+			{param label: $item.label ?: '' /}
+			{param spritemap: $spritemap /}
+			{param url: $item.url /}
+		{/delcall}
+	{/foreach}
+{/template}
+
+/**
+ * Renders a search input
+ */
+{template .search}
+	{@param spritemap: string}
+
+	<div class="dropdown-section">
+		<div class="input-group input-group-inset">
+			<div class="input-group-input">
+				<input class="form-control" data-oninput="_handleSearch" placeholder="Search for..." type="text" ref="searchInput">
+			</div>
+			
+			<span class="input-group-inset-item">
+				{call ClayButton.render}
+					{param icon: [
+						'alignment': 'left',
+						'monospaced': false,
+						'spritemap': $spritemap,
+						'symbol': 'search'
+					] /}
+					{param style: 'link' /}
+				{/call}
+			</span>
+		</div>
+	</div>
+{/template}
+
+/**
+ * Renders the dropdown sections
+ */
+{template .sections}
+	{@param items: list<?>}
+	{@param? button: ?}
+	{@param? caption: string}
+	{@param? expanded: bool}
+	{@param? helpText: string}
+	{@param? indicatorsPosition: string}
+	{@param? searchable: bool}
+	{@param? spritemap: string}
+
+	{let $listAttributes kind="attributes"}
+		aria-labelledby="id"
+		class="dropdown-menu
+			{if $indicatorsPosition == 'left'}
+				{sp}dropdown-menu-indicator-start
+			{elseif $indicatorsPosition == 'right'}
+				{sp}dropdown-menu-indicator-end
+			{/if}
+
+			{if $expanded}
+				{sp}show
+			{/if}
+		"
+	{/let}
+
+	<ul {$listAttributes}>
+		{if $helpText}
+			<div class="alert alert-fluid alert-info" role="alert">
+				{$helpText}
+			</div>
+		{/if}
+
+		{if $searchable and $spritemap}
+			{call .search}
+				{param spritemap: $spritemap /}
+			{/call}
+		{/if}
+
+		{call .items}
+			{param indicatorsPosition: $indicatorsPosition /}
+			{param items: $items /}
+			{param spritemap: $spritemap /}
+		{/call}
+
+		{if $caption}
+			<div class="dropdown-caption">{$caption}</div>
+		{/if}
+
+		{if $button}
+			<div class="dropdown-section">
+				{call ClayButton.render}
+					{param block: true /}
+					{param label: $button.label /}
+					{param style: $button.style /}
+				{/call}
+			</div>
+		{/if}
+	</ul>
+{/template}
+
+/**
+ * Renders the trigger button
+ */
+{template .trigger}
+	{@param triggerLabel: any}
+	{@param? expanded: bool}
+	{@param? triggerStyle: string}
+
+	{let $buttonAttributes kind="attributes"}
+		{if $expanded}
+			aria-expanded="true"
+		{else}
+			aria-expanded="false"
+		{/if}
+
+		aria-haspopup="true"
+		class="dropdown-toggle btn
+			{if $triggerStyle}
+				{sp}btn-{$triggerStyle}
+			{else}
+				{sp}btn-unstyled
+			{/if}
+		"
+
+		data-onclick="toggle"
+		id="id"
+	{/let}
+
+	<button {$buttonAttributes}>
+		{$triggerLabel}
+	</button>
+{/template}
+
+/**
+ * Renders list item
+ **/
+{deltemplate ClayDropdown.item}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? indicatorsPosition: string}
+	{@param? indicatorSymbol: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? spritemap: string}
+	{@param? url: string}
+
+	<li>
+		{let $iconContent kind="html"}
+			{if $indicatorSymbol and $spritemap}
+				<div class="dropdown-item-indicator">
+					{call ClayIcon.render}
+						{param spritemap: $spritemap /}
+						{param symbol: $indicatorSymbol /}
+					{/call}
+				</div>
+			{/if}
+		{/let}
+
+		{let $linkAttriubtes kind="attributes"}
+			class="dropdown-item
+				{if $active}
+					{sp}active
+				{/if}
+
+				{if $disabled}
+					{sp}disabled
+				{/if}
+			"
+			
+			{if $disabled}
+				href="javascript:;"
+			{else}
+				href="{$url}"
+			{/if}
+		{/let}
+
+		<a {$linkAttriubtes}>
+			{if $indicatorSymbol and $indicatorsPosition == 'left'}
+				{$iconContent}
+			{/if}
+
+			{$label}
+
+			{if $indicatorSymbol and $indicatorsPosition == 'right'}
+				{$iconContent}
+			{/if}
+		</a>
+	</li>
+{/deltemplate}
+
+/**
+ * Renders list item with checkbox
+ **/
+{deltemplate ClayDropdown.item variant="'checkbox'"}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? indicatorsPosition: string}
+	{@param? indicatorSymbol: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? spritemap: string}
+	{@param? url: string}
+
+	<li class="dropdown-item">
+		{call ClayCheckbox.render}
+			{param checked: $checked /}
+			{param disabled: $disabled /}
+			{param inline: true /}
+			{param label: $label /}
+			{param name: $inputName /}
+			{param value: $inputValue /}
+		{/call}
+	</li>
+{/deltemplate}
+
+/**
+ * Renders list group header item
+ **/
+{deltemplate ClayDropdown.item variant="'header'"}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? indicatorsPosition: string}
+	{@param? indicatorSymbol: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? spritemap: string}
+	{@param? url: string}
+
+	<div class="dropdown-subheader">
+		{$label}
+	</div>
+{/deltemplate}
+
+/**
+ * Renders list item with radio button
+ **/
+{deltemplate ClayDropdown.item variant="'radio'"}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? indicatorsPosition: string}
+	{@param? indicatorSymbol: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? spritemap: string}
+	{@param? url: string}
+
+	<li class="dropdown-item">
+		{call ClayRadio.render}
+			{param checked: $checked /}
+			{param disabled: $disabled /}
+			{param inline: true /}
+			{param label: $label /}
+			{param name: $inputName /}
+			{param value: $inputValue /}
+		{/call}
+	</li>
+{/deltemplate}
+
+/**
+ * Renders list separator item
+ **/
+{deltemplate ClayDropdown.item variant="'separator'"}
+	{@param label: string}
+	{@param? active: bool}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? indicatorsPosition: string}
+	{@param? indicatorSymbol: string}
+	{@param? inputName: string}
+	{@param? inputValue: string}
+	{@param? spritemap: string}
+	{@param? url: string}
+
+	<div class="dropdown-divider"></div>
+{/deltemplate}
