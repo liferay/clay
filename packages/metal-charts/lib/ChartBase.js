@@ -1129,3 +1129,4 @@ exports.bb = _billboard.bb;
 exports.d3 = _billboard.d3;
 exports.ChartBase = ChartBase;
 exports.default = ChartBase;
+//# sourceMappingURL=ChartBase.js.map

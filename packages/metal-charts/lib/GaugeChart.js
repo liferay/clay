@@ -82,3 +82,4 @@ _metalSoy2.default.register(GaugeChart, _GaugeChartSoy2.default);
 
 exports.GaugeChart = GaugeChart;
 exports.default = GaugeChart;
+//# sourceMappingURL=GaugeChart.js.map

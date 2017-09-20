@@ -81,3 +81,4 @@ exports.BarChart = BarChart;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
+//# sourceMappingURL=BarChart.soy.js.map

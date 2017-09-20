@@ -39,3 +39,4 @@ ScatterChart.PROPS = _ScatterChart.ScatterChart.STATE;
 
 exports.ScatterChart = ScatterChart;
 exports.default = ScatterChart;
+//# sourceMappingURL=ScatterChart.js.map

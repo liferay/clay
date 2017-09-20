@@ -39,3 +39,4 @@ StepChart.PROPS = _StepChart.StepChart.STATE;
 
 exports.StepChart = StepChart;
 exports.default = StepChart;
+//# sourceMappingURL=StepChart.js.map

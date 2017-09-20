@@ -53,3 +53,4 @@ _metalSoy2.default.register(Chart, _ChartSoy2.default);
 
 exports.Chart = Chart;
 exports.default = Chart;
+//# sourceMappingURL=Chart.js.map

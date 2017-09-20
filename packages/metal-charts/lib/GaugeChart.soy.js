@@ -81,3 +81,4 @@ exports.GaugeChart = GaugeChart;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
+//# sourceMappingURL=GaugeChart.soy.js.map

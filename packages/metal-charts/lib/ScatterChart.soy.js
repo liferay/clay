@@ -81,3 +81,4 @@ exports.ScatterChart = ScatterChart;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
+//# sourceMappingURL=ScatterChart.soy.js.map

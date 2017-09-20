@@ -82,3 +82,4 @@ _metalSoy2.default.register(PieChart, _PieChartSoy2.default);
 
 exports.PieChart = PieChart;
 exports.default = PieChart;
+//# sourceMappingURL=PieChart.js.map

@@ -39,3 +39,4 @@ BarChart.PROPS = _BarChart.BarChart.STATE;
 
 exports.BarChart = BarChart;
 exports.default = BarChart;
+//# sourceMappingURL=BarChart.js.map

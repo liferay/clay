@@ -39,3 +39,4 @@ PieChart.PROPS = _PieChart.PieChart.STATE;
 
 exports.PieChart = PieChart;
 exports.default = PieChart;
+//# sourceMappingURL=PieChart.js.map

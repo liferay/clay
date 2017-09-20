@@ -82,3 +82,4 @@ _metalSoy2.default.register(StepChart, _StepChartSoy2.default);
 
 exports.StepChart = StepChart;
 exports.default = StepChart;
+//# sourceMappingURL=StepChart.js.map

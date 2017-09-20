@@ -82,3 +82,4 @@ _metalSoy2.default.register(DonutChart, _DonutChartSoy2.default);
 
 exports.DonutChart = DonutChart;
 exports.default = DonutChart;
+//# sourceMappingURL=DonutChart.js.map

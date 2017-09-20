@@ -82,3 +82,4 @@ _metalSoy2.default.register(LineChart, _LineChartSoy2.default);
 
 exports.LineChart = LineChart;
 exports.default = LineChart;
+//# sourceMappingURL=LineChart.js.map

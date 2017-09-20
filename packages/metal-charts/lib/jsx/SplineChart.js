@@ -39,3 +39,4 @@ SplineChart.PROPS = _SplineChart.SplineChart.STATE;
 
 exports.SplineChart = SplineChart;
 exports.default = SplineChart;
+//# sourceMappingURL=SplineChart.js.map

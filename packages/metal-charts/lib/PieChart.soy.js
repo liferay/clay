@@ -81,3 +81,4 @@ exports.PieChart = PieChart;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
+//# sourceMappingURL=PieChart.soy.js.map

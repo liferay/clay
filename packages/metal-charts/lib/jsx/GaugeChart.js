@@ -39,3 +39,4 @@ GaugeChart.PROPS = _GaugeChart.GaugeChart.STATE;
 
 exports.GaugeChart = GaugeChart;
 exports.default = GaugeChart;
+//# sourceMappingURL=GaugeChart.js.map

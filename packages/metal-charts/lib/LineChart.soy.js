@@ -81,3 +81,4 @@ exports.LineChart = LineChart;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
+//# sourceMappingURL=LineChart.soy.js.map

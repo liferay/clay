@@ -82,3 +82,4 @@ _metalSoy2.default.register(SplineChart, _SplineChartSoy2.default);
 
 exports.SplineChart = SplineChart;
 exports.default = SplineChart;
+//# sourceMappingURL=SplineChart.js.map

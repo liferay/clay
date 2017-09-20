@@ -82,3 +82,4 @@ _metalSoy2.default.register(ScatterChart, _ScatterChartSoy2.default);
 
 exports.ScatterChart = ScatterChart;
 exports.default = ScatterChart;
+//# sourceMappingURL=ScatterChart.js.map

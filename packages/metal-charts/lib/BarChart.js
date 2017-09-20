@@ -82,3 +82,4 @@ _metalSoy2.default.register(BarChart, _BarChartSoy2.default);
 
 exports.BarChart = BarChart;
 exports.default = BarChart;
+//# sourceMappingURL=BarChart.js.map

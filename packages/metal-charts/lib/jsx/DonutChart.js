@@ -39,3 +39,4 @@ DonutChart.PROPS = _DonutChart.DonutChart.STATE;
 
 exports.DonutChart = DonutChart;
 exports.default = DonutChart;
+//# sourceMappingURL=DonutChart.js.map

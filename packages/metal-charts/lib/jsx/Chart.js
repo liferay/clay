@@ -75,3 +75,4 @@ ChartJSX.prototype.getStateObj_ = function () {
 
 exports.ChartJSX = ChartJSX;
 exports.default = ChartJSX;
+//# sourceMappingURL=Chart.js.map

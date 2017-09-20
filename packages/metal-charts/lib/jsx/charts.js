@@ -57,3 +57,4 @@ exports.ScatterChart = _ScatterChart2.default;
 exports.SplineChart = _SplineChart2.default;
 exports.StepChart = _StepChart2.default;
 exports.default = _Chart2.default;
+//# sourceMappingURL=charts.js.map

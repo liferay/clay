@@ -81,3 +81,4 @@ exports.DonutChart = DonutChart;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
+//# sourceMappingURL=DonutChart.soy.js.map
