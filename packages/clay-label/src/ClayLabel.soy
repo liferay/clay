@@ -56,12 +56,7 @@
 		{call ClayButton.render}
 			{param ariaLabel: 'Close' /}
 			{param elementClasses: 'close' /}
-			{param events: [
-				'click': [
-					'selector': 'button',
-					'fn': $_handleCloseButtonClick
-				]
-			] /}
+			{param events: [ 'click': $_handleCloseButtonClick] /}
 			{param icon: [
 				'alignment': 'right',
 				'monospaced': false,
