@@ -9,8 +9,12 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+}
 
-	.btn-link {
+.navbar-nav {
+	flex-direction: row;
+
+	.btn-unstyled {
 		color: $nav-link-color;
 
 		@include hover-focus {
@@ -25,13 +29,28 @@
 			color: $nav-link-active-color;
 		}
 	}
-}
-
-.navbar-nav {
-	flex-direction: row;
 
 	.dropdown-menu {
 		position: absolute;
+	}
+
+	.nav-btn {
+		align-items: center;
+		display: flex;
+		height: auto;
+		justify-content: center;
+		// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+		margin: 0.25rem 0.5rem;
+		min-height: 2rem;
+		min-width: 2rem;
+		padding-bottom: 0;
+		padding-top: 0;
+		text-align: center;
+		width: auto;
+
+		.lexicon-icon {
+			height: 1em;
+		}
 	}
 
 	.nav-link {
@@ -39,6 +58,18 @@
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
 	}
+}
+
+.navbar-nav .nav-item > .form-check {
+	margin: 0;
+	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.navbar-text {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 .navbar-collapse {
@@ -460,7 +491,7 @@
 // Navbar Light
 
 .navbar-light {
-	.btn-link {
+	.navbar-nav .btn-unstyled {
 		color: $navbar-light-color;
 
 		@include hover-focus {
@@ -526,7 +557,7 @@
 // Navbar Dark
 
 .navbar-dark {
-	.btn-link {
+	.navbar-nav .btn-unstyled {
 		color: $navbar-dark-color;
 
 		@include hover-focus {
