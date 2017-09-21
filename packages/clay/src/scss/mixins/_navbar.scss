@@ -128,9 +128,16 @@
 			min-width: $btn-min-width-mobile;
 		}
 
-		.nav-item > .form-check {
-			padding-left: $link-padding-x-mobile;
-			padding-right: $link-padding-x-mobile;
+		.nav-item {
+			> .custom-control {
+				margin-left: $link-padding-x-mobile;
+				margin-right: $link-padding-x-mobile;
+			}
+
+			> .form-check {
+				padding-left: $link-padding-x-mobile;
+				padding-right: $link-padding-x-mobile;
+			}
 		}
 
 		.nav-link,
@@ -244,10 +251,19 @@
 						}
 					}
 
-					.nav-item > .form-check {
-						@if ($scaling-navbar) {
-							padding-left: $link-padding-x;
-							padding-right: $link-padding-x;
+					.nav-item {
+						> .custom-control {
+							@if ($scaling-navbar) {
+								margin-left: $link-padding-x;
+								margin-right: $link-padding-x;
+							}
+						}
+
+						> .form-check {
+							@if ($scaling-navbar) {
+								padding-left: $link-padding-x;
+								padding-right: $link-padding-x;
+							}
 						}
 					}
 
