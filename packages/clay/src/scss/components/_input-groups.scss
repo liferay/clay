@@ -205,12 +205,10 @@
 }
 
 // Input Group Inset
-// TODO: Don't use fixed values
-// TODO: Work with scaling inputs
 
 .input-group-inset {
 	.form-control {
-		padding-right: 45px;
+		padding-right: 3.25rem;
 	}
 
 	.input-group-input {
@@ -220,7 +218,7 @@
 
 .input-group-inset-left {
 	.form-control {
-		padding-left: 45px;
+		padding-left: 3.25em;
 		padding-right: $input-padding-x;
 	}
 
@@ -237,11 +235,12 @@
 }
 
 .input-group-inset-item {
+	align-items: center;
 	color: $input-group-inset-item-color;
+	display: flex;
+	height: 100%;
 	right: ($input-height-inner - ($input-height-inner * 0.75)) / 2;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
 	z-index: 5;
 
 	@if ($input-height-inner-mobile) {
@@ -251,17 +250,11 @@
 	}
 
 	.btn {
-		height: $input-height-inner * 0.75;
+		height: 75%;
 		padding-bottom: 0;
 		padding-top: 0;
 		padding-left: ($input-btn-padding-x - 0.1875rem);
 		padding-right: ($input-btn-padding-x - 0.1875rem);
-
-		@if ($input-height-inner-mobile) {
-			@include scale-component {
-				height: $input-height-inner-mobile * 0.75;
-			}
-		}
 	}
 
 	.btn-unstyled {
@@ -336,6 +329,14 @@
 		}
 	}
 
+	> .input-group-input .form-control {
+		height: $input-height-lg;
+
+		@include scale-component {
+			height: $input-height-lg-mobile;
+		}
+	}
+
 	.help-icon {
 		@include monospace(35px);
 	}
@@ -403,6 +404,14 @@
 			&:last-child > .btn:last-child {
 				@include border-right-radius($btn-border-radius-sm);
 			}
+		}
+	}
+
+	> .input-group-input .form-control {
+		height: $input-height-sm;
+
+		@include scale-component {
+			height: $input-height-sm-mobile;
 		}
 	}
 
