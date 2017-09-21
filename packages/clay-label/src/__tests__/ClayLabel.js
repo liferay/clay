@@ -5,98 +5,98 @@ import ClayLabel from '../ClayLabel';
 let label;
 
 describe('ClayLabel', function() {
-	afterEach(() => {
-		if (label) {
-			label.dispose();
-		}
-	});
+  afterEach(() => {
+    if (label) {
+      label.dispose();
+    }
+  });
 
-	it('shound generate the default markup', () => {
-		label = new ClayLabel();
+  it('shound generate the default markup', () => {
+    label = new ClayLabel();
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a label with label', () => {
-		label = new ClayLabel({
-			label: 'Foo',
-		});
+  it('shound render a label with label', () => {
+    label = new ClayLabel({
+      label: 'Foo',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a label with id', () => {
-		label = new ClayLabel({
-			id: 'Foo',
-		});
+  it('shound render a label with id', () => {
+    label = new ClayLabel({
+      id: 'Foo',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a small label', () => {
-		label = new ClayLabel({
-			size: 'sm',
-		});
+  it('shound render a small label', () => {
+    label = new ClayLabel({
+      size: 'sm',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a label with removable', () => {
-		label = new ClayLabel({
-			label: 'Foo',
-			closeable: true,
-			spritemap: 'icons.svg',
-		});
+  it('shound render a label with removable', () => {
+    label = new ClayLabel({
+      label: 'Foo',
+      closeable: true,
+      spritemap: 'icons.svg',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a label with link', () => {
-		label = new ClayLabel({
-			label: 'Foo',
-			href: '#1',
-		});
+  it('shound render a label with link', () => {
+    label = new ClayLabel({
+      label: 'Foo',
+      href: '#1',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a `default color` label', () => {
-		label = new ClayLabel({
-			style: 'secondary',
-		});
+  it('shound render a `default color` label', () => {
+    label = new ClayLabel({
+      style: 'secondary',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a `info color` label', () => {
-		label = new ClayLabel({
-			style: 'info',
-		});
+  it('shound render a `info color` label', () => {
+    label = new ClayLabel({
+      style: 'info',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a `warning color` label', () => {
-		label = new ClayLabel({
-			style: 'warning',
-		});
+  it('shound render a `warning color` label', () => {
+    label = new ClayLabel({
+      style: 'warning',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a `danger color` label', () => {
-		label = new ClayLabel({
-			style: 'danger',
-		});
+  it('shound render a `danger color` label', () => {
+    label = new ClayLabel({
+      style: 'danger',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 
-	it('shound render a `success color` label', () => {
-		label = new ClayLabel({
-			style: 'success',
-		});
+  it('shound render a `success color` label', () => {
+    label = new ClayLabel({
+      style: 'success',
+    });
 
-		expect(label).toMatchSnapshot();
-	});
+    expect(label).toMatchSnapshot();
+  });
 });

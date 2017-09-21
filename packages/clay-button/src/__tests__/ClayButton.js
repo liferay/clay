@@ -3,135 +3,135 @@ import ClayButton from '../ClayButton';
 let button;
 
 describe('ClayButton', function() {
-	afterEach(() => {
-		if (button) {
-			button.dispose();
-		}
-	});
+  afterEach(() => {
+    if (button) {
+      button.dispose();
+    }
+  });
 
-	it('should generate the default markup', function() {
-		button = new ClayButton();
+  it('should generate the default markup', function() {
+    button = new ClayButton();
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a submit button', function() {
-		button = new ClayButton({
-			type: 'submit',
-		});
+  it('should render a submit button', function() {
+    button = new ClayButton({
+      type: 'submit',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a disabled button', function() {
-		button = new ClayButton({
-			disabled: true,
-		});
+  it('should render a disabled button', function() {
+    button = new ClayButton({
+      disabled: true,
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a secondary button', function() {
-		button = new ClayButton({
-			style: 'secondary',
-		});
+  it('should render a secondary button', function() {
+    button = new ClayButton({
+      style: 'secondary',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a button with label', function() {
-		button = new ClayButton({
-			label: 'Label',
-		});
+  it('should render a button with label', function() {
+    button = new ClayButton({
+      label: 'Label',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a button with name', function() {
-		button = new ClayButton({
-			name: 'myButton',
-		});
+  it('should render a button with name', function() {
+    button = new ClayButton({
+      name: 'myButton',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a button with label and ariaLabel', function() {
-		button = new ClayButton({
-			ariaLabel: 'My Description',
-			label: 'Visit Liferay.com',
-		});
+  it('should render a button with label and ariaLabel', function() {
+    button = new ClayButton({
+      ariaLabel: 'My Description',
+      label: 'Visit Liferay.com',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a small button', function() {
-		button = new ClayButton({
-			size: 'sm',
-		});
+  it('should render a small button', function() {
+    button = new ClayButton({
+      size: 'sm',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a block button', function() {
-		button = new ClayButton({
-			block: true,
-		});
+  it('should render a block button', function() {
+    button = new ClayButton({
+      block: true,
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a button with icon', function() {
-		button = new ClayButton({
-			icon: {
-				monospaced: true,
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
-		});
+  it('should render a button with icon', function() {
+    button = new ClayButton({
+      icon: {
+        monospaced: true,
+        spritemap: 'icons.svg',
+        symbol: 'plus',
+      },
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a button with icon and label', function() {
-		button = new ClayButton({
-			icon: {
-				monospaced: true,
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
-			label: 'Label',
-		});
+  it('should render a button with icon and label', function() {
+    button = new ClayButton({
+      icon: {
+        monospaced: true,
+        spritemap: 'icons.svg',
+        symbol: 'plus',
+      },
+      label: 'Label',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a button with label and icon', function() {
-		button = new ClayButton({
-			icon: {
-				alignment: 'right',
-				monospaced: true,
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
-			label: 'Label',
-		});
+  it('should render a button with label and icon', function() {
+    button = new ClayButton({
+      icon: {
+        alignment: 'right',
+        monospaced: true,
+        spritemap: 'icons.svg',
+        symbol: 'plus',
+      },
+      label: 'Label',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a button with id', function() {
-		button = new ClayButton({
-			id: 'myButton',
-		});
+  it('should render a button with id', function() {
+    button = new ClayButton({
+      id: 'myButton',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 
-	it('should render a button with custom classes', function() {
-		button = new ClayButton({
-			elementClasses: 'my-custom-class',
-		});
+  it('should render a button with custom classes', function() {
+    button = new ClayButton({
+      elementClasses: 'my-custom-class',
+    });
 
-		expect(button).toMatchSnapshot();
-	});
+    expect(button).toMatchSnapshot();
+  });
 });

@@ -3,150 +3,150 @@ import ClayLink from '../ClayLink';
 let link;
 
 describe('ClayLink', function() {
-	afterEach(() => {
-		if (link) {
-			link.dispose();
-		}
-	});
+  afterEach(() => {
+    if (link) {
+      link.dispose();
+    }
+  });
 
-	it('should generate the default markup', () => {
-		link = new ClayLink();
+  it('should generate the default markup', () => {
+    link = new ClayLink();
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with a label', () => {
-		link = new ClayLink({
-			label: 'My Link',
-		});
+  it('should render a link with a label', () => {
+    link = new ClayLink({
+      label: 'My Link',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with aria label', () => {
-		link = new ClayLink({
-			ariaLabel: 'My Link',
-		});
+  it('should render a link with aria label', () => {
+    link = new ClayLink({
+      ariaLabel: 'My Link',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with href', () => {
-		link = new ClayLink({
-			href: 'http://www.liferay.com',
-		});
+  it('should render a link with href', () => {
+    link = new ClayLink({
+      href: 'http://www.liferay.com',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with id', () => {
-		link = new ClayLink({
-			id: 'myLink',
-		});
+  it('should render a link with id', () => {
+    link = new ClayLink({
+      id: 'myLink',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with custom classes', () => {
-		link = new ClayLink({
-			elementClasses: 'my-custom-class',
-		});
+  it('should render a link with custom classes', () => {
+    link = new ClayLink({
+      elementClasses: 'my-custom-class',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with target', () => {
-		link = new ClayLink({
-			target: '_blank',
-		});
+  it('should render a link with target', () => {
+    link = new ClayLink({
+      target: '_blank',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a downloadable link', () => {
-		link = new ClayLink({
-			download: 'downloadLink',
-		});
+  it('should render a downloadable link', () => {
+    link = new ClayLink({
+      download: 'downloadLink',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with icon', () => {
-		link = new ClayLink({
-			icon: {
-				monospaced: true,
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
-		});
+  it('should render a link with icon', () => {
+    link = new ClayLink({
+      icon: {
+        monospaced: true,
+        spritemap: 'icons.svg',
+        symbol: 'plus',
+      },
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with icon and label', () => {
-		link = new ClayLink({
-			icon: {
-				monospaced: true,
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
-			label: 'My Link',
-		});
+  it('should render a link with icon and label', () => {
+    link = new ClayLink({
+      icon: {
+        monospaced: true,
+        spritemap: 'icons.svg',
+        symbol: 'plus',
+      },
+      label: 'My Link',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with label and icon', () => {
-		link = new ClayLink({
-			icon: {
-				alignment: 'right',
-				monospaced: true,
-				spritemap: 'icons.svg',
-				symbol: 'plus',
-			},
-			label: 'My Link',
-		});
+  it('should render a link with label and icon', () => {
+    link = new ClayLink({
+      icon: {
+        alignment: 'right',
+        monospaced: true,
+        spritemap: 'icons.svg',
+        symbol: 'plus',
+      },
+      label: 'My Link',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with secondary style', () => {
-		link = new ClayLink({
-			style: 'secondary',
-		});
+  it('should render a link with secondary style', () => {
+    link = new ClayLink({
+      style: 'secondary',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with button primary style', () => {
-		link = new ClayLink({
-			buttonStyle: 'primary',
-		});
+  it('should render a link with button primary style', () => {
+    link = new ClayLink({
+      buttonStyle: 'primary',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with button secondary style', () => {
-		link = new ClayLink({
-			buttonStyle: 'secondary',
-		});
+  it('should render a link with button secondary style', () => {
+    link = new ClayLink({
+      buttonStyle: 'secondary',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with button borderless style', () => {
-		link = new ClayLink({
-			buttonStyle: 'borderless',
-		});
+  it('should render a link with button borderless style', () => {
+    link = new ClayLink({
+      buttonStyle: 'borderless',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 
-	it('should render a link with button link style', () => {
-		link = new ClayLink({
-			buttonStyle: 'link',
-		});
+  it('should render a link with button link style', () => {
+    link = new ClayLink({
+      buttonStyle: 'link',
+    });
 
-		expect(link).toMatchSnapshot();
-	});
+    expect(link).toMatchSnapshot();
+  });
 });

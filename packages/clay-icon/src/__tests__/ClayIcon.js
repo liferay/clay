@@ -5,48 +5,48 @@ const spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
 let clayIcon;
 
 describe('ClayIcon', function() {
-	afterEach(() => {
-		if (clayIcon) {
-			clayIcon.dispose();
-		}
-	});
+  afterEach(() => {
+    if (clayIcon) {
+      clayIcon.dispose();
+    }
+  });
 
-	it('should generate markup for icon `add-cell`', () => {
-		clayIcon = new ClayIcon({
-			spritemap: spritemap,
-			symbol: 'add-cell',
-		});
+  it('should generate markup for icon `add-cell`', () => {
+    clayIcon = new ClayIcon({
+      spritemap: spritemap,
+      symbol: 'add-cell',
+    });
 
-		expect(clayIcon).toMatchSnapshot();
-	});
+    expect(clayIcon).toMatchSnapshot();
+  });
 
-	it('should render a monospaced `add-cell` icon', () => {
-		clayIcon = new ClayIcon({
-			monospaced: true,
-			spritemap: spritemap,
-			symbol: 'add-cell',
-		});
+  it('should render a monospaced `add-cell` icon', () => {
+    clayIcon = new ClayIcon({
+      monospaced: true,
+      spritemap: spritemap,
+      symbol: 'add-cell',
+    });
 
-		expect(clayIcon).toMatchSnapshot();
-	});
+    expect(clayIcon).toMatchSnapshot();
+  });
 
-	it('should render a not monospaced `add-cell` icon', () => {
-		clayIcon = new ClayIcon({
-			monospaced: false,
-			spritemap: spritemap,
-			symbol: 'add-cell',
-		});
+  it('should render a not monospaced `add-cell` icon', () => {
+    clayIcon = new ClayIcon({
+      monospaced: false,
+      spritemap: spritemap,
+      symbol: 'add-cell',
+    });
 
-		expect(clayIcon).toMatchSnapshot();
-	});
+    expect(clayIcon).toMatchSnapshot();
+  });
 
-	it('should render a `add-cell` icon with id', () => {
-		clayIcon = new ClayIcon({
-			id: 'myIcon',
-			spritemap: spritemap,
-			symbol: 'add-cell',
-		});
+  it('should render a `add-cell` icon with id', () => {
+    clayIcon = new ClayIcon({
+      id: 'myIcon',
+      spritemap: spritemap,
+      symbol: 'add-cell',
+    });
 
-		expect(clayIcon).toMatchSnapshot();
-	});
+    expect(clayIcon).toMatchSnapshot();
+  });
 });

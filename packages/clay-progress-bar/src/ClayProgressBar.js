@@ -1,7 +1,7 @@
 import 'clay-icon';
 import Component from 'metal-component';
 import Soy from 'metal-soy';
-import { Config } from 'metal-state';
+import {Config} from 'metal-state';
 
 import templates from './ClayProgressBar.soy.js';
 
@@ -16,43 +16,43 @@ class ClayProgressBar extends Component {}
  * @type {!Object}
  */
 ClayProgressBar.STATE = {
-	/**
+  /**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayProgressBar
 	 * @type {?string|undefined}
 	 * @default undefined
 	 */
-	id: Config.string(),
+  id: Config.string(),
 
-	/**
+  /**
 	* The maximum value of the progress bar.
 	 * @instance
 	 * @memberof ClayProgressBar
 	 * @type {?number}
 	 * @default undefined
 	 */
-	maxValue: Config.number(),
+  maxValue: Config.number(),
 
-	/**
+  /**
 	* The minimum value of the progress bar.
 	 * @instance
 	 * @memberof ClayProgressBar
 	 * @type {?number}
 	 * @default undefined
 	 */
-	minValue: Config.number(),
+  minValue: Config.number(),
 
-	/**
+  /**
 	* The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayProgressBar
 	 * @type {!string}
 	 * @default undefined
 	 */
-	spritemap: Config.string(),
+  spritemap: Config.string(),
 
-	/**
+  /**
 	 * Progress bar state. Completed state can be defined here but also is
 	 * automatically set if value is equal to maxValue.
 	 * @instance
@@ -60,19 +60,19 @@ ClayProgressBar.STATE = {
 	 * @type {?string}
 	 * @default undefined
 	 */
-	status: Config.oneOf(['complete', 'warning']),
+  status: Config.oneOf(['complete', 'warning']),
 
-	/**
+  /**
 	 * The progress value of the bar.
 	 * @instance
 	 * @memberof ClayProgressBar
 	 * @type {?number}
 	 * @default undefined
 	 */
-	value: Config.number(),
+  value: Config.number(),
 };
 
 Soy.register(ClayProgressBar, templates);
 
-export { ClayProgressBar };
+export {ClayProgressBar};
 export default ClayProgressBar;

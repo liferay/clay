@@ -1,6 +1,6 @@
 import Component from 'metal-component';
 import Soy from 'metal-soy';
-import { Config } from 'metal-state';
+import {Config} from 'metal-state';
 
 import templates from './ClayRadio.soy.js';
 
@@ -15,89 +15,89 @@ class ClayRadio extends Component {}
  * @static
  */
 ClayRadio.STATE = {
-	/**
+  /**
 	 * Flag to indicate if checkbox is checked.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
 	 * @default undefined
 	 */
-	checked: Config.bool(),
+  checked: Config.bool(),
 
-	/**
+  /**
 	 * Flag to indicate if checkbox is disabled.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
 	 * @default undefined
 	 */
-	disabled: Config.bool(),
+  disabled: Config.bool(),
 
-	/**
+  /**
 	 * CSS classes to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?string}
 	 * @default undefined
 	 */
-	elementClasses: Config.string(),
+  elementClasses: Config.string(),
 
-	/**
+  /**
 	 * Flag to indicate if label should be hide.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
 	 * @default undefined
 	 */
-	hideLabel: Config.bool(),
+  hideLabel: Config.bool(),
 
-	/**
+  /**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?string}
 	 * @default undefined
 	 */
-	id: Config.string(),
+  id: Config.string(),
 
-	/**
+  /**
 	 * Flag to indicate if input should be wrapped to be inline or not.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
 	 * @default undefined
 	 */
-	inline: Config.bool(),
+  inline: Config.bool(),
 
-	/**
+  /**
 	 * Label of the input. Required for accesibility.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {!string|html}
 	 * @default undefined
 	 */
-	label: Config.any().required(),
+  label: Config.any().required(),
 
-	/**
+  /**
 	 * Name to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?string}
 	 * @default undefined
 	 */
-	name: Config.string(),
+  name: Config.string(),
 
-	/**
+  /**
 	 * Value to be applied to the element.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?string}
 	 * @default undefined
 	 */
-	value: Config.string(),
+  value: Config.string(),
 };
 
 Soy.register(ClayRadio, templates);
 
-export { ClayRadio };
+export {ClayRadio};
 export default ClayRadio;
