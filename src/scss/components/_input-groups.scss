@@ -330,9 +330,11 @@
 	}
 
 	> .input-group-input .form-control {
+		font-size: $input-font-size-lg;
 		height: $input-height-lg;
 
 		@include scale-component {
+			font-size: $input-font-size-lg-mobile;
 			height: $input-height-lg-mobile;
 		}
 	}
@@ -408,9 +410,11 @@
 	}
 
 	> .input-group-input .form-control {
+		font-size: $input-font-size-sm;
 		height: $input-height-sm;
 
 		@include scale-component {
+			font-size: $input-font-size-sm-mobile;
 			height: $input-height-sm-mobile;
 		}
 	}
