@@ -114,9 +114,13 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
 </li>
+<li class=""><a class="nav-title" href="../../content/nav-underline">Nav Underline</a>
+</li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbar</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/management-bar">Navbar (Management Bar)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navigation-bar">Navbar (Navigation Bar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
 </li>
@@ -127,6 +131,8 @@
 <li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/tables">Tables</a>
 </li>
@@ -207,6 +213,14 @@
 				<div class="input-group">
 					<input aria-describedby="basicAddon2" aria-label="Recipient&apos;s Username" class="form-control" placeholder="Recipient&apos;s username" type="text">
 					<span class="input-group-addon" id="basicAddon2">@example.com</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Liferay</label>
+				<span class="form-text">http://www.liferay.com</span>
+				<div class="input-group">
+					<span class="input-group-addon">/</span>
+					<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text">
 				</div>
 			</div>
 			<div class="input-group">
@@ -302,7 +316,7 @@
 								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
 							</svg>
 						</button>
-						<div class="dropdown-menu">
+						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#">Action</a>
 							<a class="dropdown-item" href="#">Another action</a>
 							<a class="dropdown-item" href="#">Something else here</a>
@@ -342,7 +356,7 @@
 								<use xlink:href="../../images/icons/icons.svg#caret-bottom">
 							</svg>
 						</button>
-						<div class="dropdown-menu">
+						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#">Action</a>
 							<a class="dropdown-item" href="#">Another action</a>
 							<a class="dropdown-item" href="#">Something else here</a>
@@ -416,12 +430,12 @@
 				<div class="input-group input-group-transparent">
 					<span class="input-group-addon">$</span>
 					<input aria-label="Amount" class="form-control" id="inputGroupTransparent" placeholder="Some placeholder text..." type="text">
-					<span class="input-group-addon">
-						<a class="help-icon help-icon-default" data-toggle="popover" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle">
-								<use xlink:href="../../images/icons/icons.svg#question-circle">
+					<span class="input-group-btn">
+						<button class="btn btn-unstyled" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
 							</svg>
-						</a>
+						</button>
 					</span>
 				</div>
 			</div>
@@ -465,12 +479,12 @@
 				<div class="input-group input-group-transparent input-group-lg">
 					<span class="input-group-addon">$</span>
 					<input aria-label="Amount (to the nearest Dollar)" class="form-control" id="inputGroupTransparentLg" placeholder="Some placeholder text..." type="text">
-					<span class="input-group-addon">
-						<a class="help-icon help-icon-default" data-toggle="popover" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle">
-								<use xlink:href="../../images/icons/icons.svg#question-circle">
+					<span class="input-group-btn">
+						<button class="btn btn-unstyled" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
 							</svg>
-						</a>
+						</button>
 					</span>
 				</div>
 			</div>
@@ -482,14 +496,30 @@
 					</svg>
 				</label>
 				<div class="input-group input-group-transparent">
-					<span class="input-group-addon">$</span>
-					<input aria-label="Amount" class="form-control" id="inputGroupTransparentNormal" placeholder="Some placeholder text..." type="text">
-					<span class="input-group-addon">
-						<a class="help-icon help-icon-default" data-toggle="popover" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle">
-								<use xlink:href="../../images/icons/icons.svg#question-circle">
+					<span class="input-group-btn">
+						<button class="btn btn-primary" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
 							</svg>
-						</a>
+						</button>
+						<button class="btn btn-primary" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
+							</svg>
+						</button>
+						<button class="btn btn-primary" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
+							</svg>
+						</button>
+					</span>
+					<input aria-label="Amount" class="form-control" id="inputGroupTransparentNormal" placeholder="Some placeholder text..." type="text">
+					<span class="input-group-btn">
+						<button class="btn btn-unstyled" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
+							</svg>
+						</button>
 					</span>
 				</div>
 			</div>
@@ -503,12 +533,12 @@
 				<div class="input-group input-group-transparent input-group-sm">
 					<span class="input-group-addon">$</span>
 					<input aria-label="Amount" class="form-control" id="inputGroupTransparentSm" placeholder="Some placeholder text..." type="text">
-					<span class="input-group-addon">
-						<a class="help-icon help-icon-default" data-toggle="popover" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle">
-								<use xlink:href="../../images/icons/icons.svg#question-circle">
+					<span class="input-group-btn">
+						<button class="btn btn-unstyled" type="button">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="../../images/icons/icons.svg#trash">
 							</svg>
-						</a>
+						</button>
 					</span>
 				</div>
 			</div>
