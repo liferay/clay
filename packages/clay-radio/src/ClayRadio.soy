@@ -1,0 +1,116 @@
+{namespace ClayRadio}
+
+/**
+ * This renders an icon element based on the Clay Checkbox definition.
+ */
+{template .render}
+	{@param label: html | string}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? elementClasses: string}
+	{@param? hideLabel: bool}
+	{@param? id: string}
+	{@param? inline: bool}
+	{@param? name: string}
+	{@param? value: string}
+
+	{if $inline}
+		{call .input}
+			{param checked: $checked /}
+			{param disabled: $disabled /}
+			{param elementClasses: $elementClasses /}
+			{param hideLabel: $hideLabel /}
+			{param id: $id /}
+			{param label: $label /}
+			{param name: $name /}
+			{param value: $value /}
+		{/call}
+	{else}
+		{let $wrapperAttributes kind="attributes"}
+			class="form-check
+				{if $elementClasses}
+					{sp}{$elementClasses}
+				{/if}
+			"
+
+			{if $id}
+				id="{$id}"
+			{/if}
+		{/let}
+
+		<div {$wrapperAttributes}>
+			{call .input}
+				{param checked: $checked /}
+				{param disabled: $disabled /}
+				{param hideLabel: $hideLabel /}
+				{param label: $label /}
+				{param name: $name /}
+				{param value: $value /}
+			{/call}
+		</div>
+	{/if}
+{/template}
+
+/**
+ * This renders the checkbox input
+ **/
+{template .input}
+	{@param label: html | string}
+	{@param? checked: bool}
+	{@param? disabled: bool}
+	{@param? elementClasses: string}
+	{@param? hideLabel: bool}
+	{@param? id: string}
+	{@param? name: string}
+	{@param? value: string}
+
+	{let $labelAttributes kind="attributes"}
+		class="custom-control custom-radio
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<label {$labelAttributes}>
+		{let $inputAttributes kind="attributes"}
+			{if $checked}
+				checked="checked"
+			{/if}
+
+			{if $disabled}
+				{sp}disabled
+			{/if}
+
+			class="custom-control-input"
+
+			{if $name}
+				name="{$name}"
+			{/if}
+
+			{if $value}
+				value="{$value}"
+			{/if}
+
+			ref="input"
+			type="radio"
+		{/let}
+
+		<input {$inputAttributes}></input>
+
+		<span class="custom-control-indicator"></span>
+
+		{let $spanLabelClasses kind="text"}
+			custom-control-description
+			{if $hideLabel}
+				{sp}sr-only
+			{/if}
+		{/let}
+
+		<span class="{$spanLabelClasses}">{$label}</span>
+	</label>
+{/template}
