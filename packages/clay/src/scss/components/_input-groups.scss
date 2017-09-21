@@ -198,10 +198,6 @@
 		border-width: $input-group-transparent-addon-border-width;
 		color: $input-group-transparent-addon-color;
 	}
-
-	.help-icon {
-		@include monospace(28px);
-	}
 }
 
 // Input Group Inset
@@ -338,10 +334,6 @@
 			height: $input-height-lg-mobile;
 		}
 	}
-
-	.help-icon {
-		@include monospace(35px);
-	}
 }
 
 .input-group-sm {
@@ -417,9 +409,5 @@
 			font-size: $input-font-size-sm-mobile;
 			height: $input-height-sm-mobile;
 		}
-	}
-
-	.help-icon {
-		@include monospace(20px);
 	}
 }
