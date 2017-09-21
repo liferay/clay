@@ -169,7 +169,7 @@ a.list-group-subtitle,
 }
 
 .list-group-item-flex {
-	// Center content here by adding justify-content: center on .flex-col and .flex-col-expand
+	// Center content in this component by adding justify-content: center on .flex-col and .flex-col-expand
 	display: flex;
 	padding-left: $list-group-item-padding-x / 2;
 	padding-right: $list-group-item-padding-x / 2;
@@ -178,6 +178,13 @@ a.list-group-subtitle,
 		justify-content: center;
 		padding-left: $list-group-item-padding-x / 2;
 		padding-right: $list-group-item-padding-x / 2;
+
+		.custom-control,
+		.form-check {
+			&:only-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 
