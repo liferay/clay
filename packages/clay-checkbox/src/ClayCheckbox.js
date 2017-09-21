@@ -59,15 +59,6 @@ ClayCheckbox.STATE = {
 	hideLabel: Config.bool(),
 
 	/**
-	 * Flag to indicate if input wrapper should be hide.
-	 * @instance
-	 * @memberof ClayCheckbox
-	 * @type {?bool}
-	 * @default undefined
-	 */
-	hideWrapper: Config.bool(),
-
-	/**
 	 * Id to be applied to the element.
 	 * @instance
 	 * @memberof ClayCheckbox
@@ -84,6 +75,15 @@ ClayCheckbox.STATE = {
 	 * @default undefined
 	 */
 	indeterminate: Config.bool(),
+
+	/**
+	 * Flag to indicate if input should be wrapped to be inline or not.
+	 * @instance
+	 * @memberof ClayCheckbox
+	 * @type {?bool}
+	 * @default undefined
+	 */
+	inline: Config.bool(),
 
 	/**
 	 * Label of the input. Required for accesibility.

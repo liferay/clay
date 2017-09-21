@@ -9,13 +9,13 @@
 	{@param? disabled: bool}
 	{@param? elementClasses: string}
 	{@param? hideLabel: bool}
-	{@param? hideWrapper: bool}
 	{@param? id: string}
 	{@param? indeterminate: bool}
+	{@param? inline: bool}
 	{@param? name: string}
 	{@param? value: string}
 
-	{if $hideWrapper}
+	{if $inline}
 		{call .input}
 			{param checked: $indeterminate or $checked /}
 			{param disabled: $disabled /}
@@ -27,23 +27,23 @@
 			{param value: $value /}
 		{/call}
 	{else}
-		{let $wrapperClasses kind="text"}
-			form-check
-			{if $disabled}
-				{sp}disabled
-			{/if}
+		{let $wrapperAttributes kind="attributes"}
+			class="form-check
+				{if $elementClasses}
+					{sp}{$elementClasses}
+				{/if}
+			"
 
-			{if $elementClasses}
-				{sp}{$elementClasses}
+			{if $id}
+				id="{$id}"
 			{/if}
 		{/let}
 
-		<div class="{$wrapperClasses}">
+		<div {$wrapperAttributes}>
 			{call .input}
 				{param checked: $indeterminate or $checked /}
 				{param disabled: $disabled /}
 				{param hideLabel: $hideLabel /}
-				{param id: $id /}
 				{param label: $label /}
 				{param name: $name /}
 				{param value: $value /}
@@ -65,7 +65,19 @@
 	{@param? name: string}
 	{@param? value: string}
 
-	<label class="form-check-label">
+	{let $labelAttributes kind="attributes"}
+		class="custom-control custom-checkbox
+			{if $elementClasses}
+				{sp}{$elementClasses}
+			{/if}
+		"
+
+		{if $id}
+			id="{$id}"
+		{/if}
+	{/let}
+
+	<label {$labelAttributes}>
 		{let $inputAttributes kind="attributes"}
 			{if $checked}
 				checked="checked"
@@ -75,15 +87,7 @@
 				{sp}disabled
 			{/if}
 
-			class="form-check-input
-				{if $elementClasses}
-					{sp}{$elementClasses}
-				{/if}
-			"
-
-			{if $id}
-				id="{$id}"
-			{/if}
+			class="custom-control-input"
 
 			{if $name}
 				name="{$name}"
@@ -99,13 +103,15 @@
 
 		<input {$inputAttributes}></input>
 
-		{let $spanClasses kind="text"}
-			form-check-description
+		<span class="custom-control-indicator"></span>
+
+		{let $spanLabelClasses kind="text"}
+			custom-control-description
 			{if $hideLabel}
 				{sp}sr-only
 			{/if}
 		{/let}
 
-		<span class="{$spanClasses}">{$label}</span>
+		<span class="{$spanLabelClasses}">{$label}</span>
 	</label>
 {/template}

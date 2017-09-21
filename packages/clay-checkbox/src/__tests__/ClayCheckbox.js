@@ -53,9 +53,9 @@ describe('ClayCheckbox', function() {
 		expect(clayCheckbox).toMatchSnapshot();
 	});
 
-	it('should generate a checkbox without wrapper', () => {
+	it('should generate an inline checkbox', () => {
 		clayCheckbox = new ClayCheckbox({
-			hideWrapper: true,
+			inline: true,
 			label: 'My Checkbox',
 		});
 
@@ -71,10 +71,10 @@ describe('ClayCheckbox', function() {
 		expect(clayCheckbox).toMatchSnapshot();
 	});
 
-	it('should generate a checkbox without wrapper and with classes', () => {
+	it('should generate an inline checkbox with classes', () => {
 		clayCheckbox = new ClayCheckbox({
 			elementClasses: 'my-custom-class',
-			hideWrapper: true,
+			inline: true,
 			label: 'My Checkbox',
 		});
 
@@ -90,10 +90,10 @@ describe('ClayCheckbox', function() {
 		expect(clayCheckbox).toMatchSnapshot();
 	});
 
-	it('should generate a checkbox without wrapper and with custom id', () => {
+	it('should generate an inline checkbox with custom id', () => {
 		clayCheckbox = new ClayCheckbox({
-			hideWrapper: true,
 			id: 'myCheckbox',
+			inline: true,
 			label: 'My Checkbox',
 		});
 

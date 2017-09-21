@@ -2,102 +2,114 @@
 
 exports[`ClayCheckbox should generate a checkbox with custom classes 1`] = `
 <div class="form-check my-custom-class">
-  <label class="form-check-label">
-    <input class="form-check-input" ref="input" type="checkbox">
-    <span class="form-check-description">My Checkbox</span>
+  <label class="custom-control custom-checkbox">
+    <input class="custom-control-input" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Checkbox</span>
   </label>
 </div>
 `;
 
 exports[`ClayCheckbox should generate a checkbox with custom id 1`] = `
-<div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" id="myCheckbox" ref="input" type="checkbox">
-    <span class="form-check-description">My Checkbox</span>
+<div class="form-check" id="myCheckbox">
+  <label class="custom-control custom-checkbox">
+    <input class="custom-control-input" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Checkbox</span>
   </label>
 </div>
 `;
 
 exports[`ClayCheckbox should generate a checkbox with hidden label 1`] = `
 <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" ref="input" type="checkbox">
-    <span class="form-check-description sr-only">My Checkbox</span>
+  <label class="custom-control custom-checkbox">
+    <input class="custom-control-input" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description sr-only">My Checkbox</span>
   </label>
 </div>
 `;
 
 exports[`ClayCheckbox should generate a checkbox with name 1`] = `
 <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" name="myCheckbox" ref="input" type="checkbox">
-    <span class="form-check-description">My Checkbox</span>
+  <label class="custom-control custom-checkbox">
+    <input class="custom-control-input" name="myCheckbox" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Checkbox</span>
   </label>
 </div>
 `;
 
 exports[`ClayCheckbox should generate a checkbox with value 1`] = `
 <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" value="mycheckbox" ref="input" type="checkbox">
-    <span class="form-check-description">My Checkbox</span>
+  <label class="custom-control custom-checkbox">
+    <input class="custom-control-input" value="mycheckbox" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Checkbox</span>
   </label>
 </div>
 `;
 
-exports[`ClayCheckbox should generate a checkbox without wrapper 1`] = `
-<label class="form-check-label">
-  <input class="form-check-input" ref="input" type="checkbox">
-  <span class="form-check-description">My Checkbox</span>
-</label>
-`;
-
-exports[`ClayCheckbox should generate a checkbox without wrapper and with classes 1`] = `
-<label class="form-check-label my-custom-class">
-  <input class="form-check-input my-custom-class" ref="input" type="checkbox">
-  <span class="form-check-description">My Checkbox</span>
-</label>
-`;
-
-exports[`ClayCheckbox should generate a checkbox without wrapper and with custom id 1`] = `
-<label class="form-check-label">
-  <input class="form-check-input" id="myCheckbox" ref="input" type="checkbox">
-  <span class="form-check-description">My Checkbox</span>
-</label>
-`;
-
 exports[`ClayCheckbox should generate a checked checkbox 1`] = `
 <div class="form-check">
-  <label class="form-check-label">
-    <input checked="" class="form-check-input" ref="input" type="checkbox">
-    <span class="form-check-description">My Checkbox</span>
+  <label class="custom-control custom-checkbox">
+    <input checked="" class="custom-control-input" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Checkbox</span>
   </label>
 </div>
 `;
 
 exports[`ClayCheckbox should generate a disabled checkbox 1`] = `
-<div class="form-check disabled">
-  <label class="form-check-label">
-    <input disabled="" class="form-check-input" ref="input" type="checkbox">
-    <span class="form-check-description">My Checkbox</span>
+<div class="form-check">
+  <label class="custom-control custom-checkbox">
+    <input disabled="" class="custom-control-input" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Checkbox</span>
   </label>
 </div>
 `;
 
 exports[`ClayCheckbox should generate an indeterminate checkbox 1`] = `
 <div class="form-check">
-  <label class="form-check-label">
-    <input checked="" class="form-check-input" ref="input" type="checkbox">
-    <span class="form-check-description">My Checkbox</span>
+  <label class="custom-control custom-checkbox">
+    <input checked="" class="custom-control-input" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Checkbox</span>
   </label>
 </div>
 `;
 
+exports[`ClayCheckbox should generate an inline checkbox 1`] = `
+<label class="custom-control custom-checkbox">
+  <input class="custom-control-input" ref="input" type="checkbox">
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">My Checkbox</span>
+</label>
+`;
+
+exports[`ClayCheckbox should generate an inline checkbox with classes 1`] = `
+<label class="custom-control custom-checkbox my-custom-class">
+  <input class="custom-control-input" ref="input" type="checkbox">
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">My Checkbox</span>
+</label>
+`;
+
+exports[`ClayCheckbox should generate an inline checkbox with custom id 1`] = `
+<label class="custom-control custom-checkbox" id="myCheckbox">
+  <input class="custom-control-input" ref="input" type="checkbox">
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">My Checkbox</span>
+</label>
+`;
+
 exports[`ClayCheckbox should generate default markup 1`] = `
 <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" ref="input" type="checkbox">
-    <span class="form-check-description">My Checkbox</span>
+  <label class="custom-control custom-checkbox">
+    <input class="custom-control-input" ref="input" type="checkbox">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">My Checkbox</span>
   </label>
 </div>
 `;

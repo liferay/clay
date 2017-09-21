@@ -8,6 +8,10 @@
 	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
 
 	<style>
+		body {
+			background-color: #FFF;
+		}
+
 		.row {
 			margin-bottom: 20px;
 		}
@@ -50,8 +54,8 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>No Wrapper Checkbox</h4>
-			<div id="no-wrapper-block"></div>
+			<h4>Inline Checkbox</h4>
+			<div id="inline-block"></div>
 		</div>
 	</div>
 
@@ -96,17 +100,17 @@
 
 		new metal.ClayCheckbox(
 			{
-				hideWrapper: true,
-				label: 'No Wrapper Checkbox 1'
+				inline: true,
+				label: 'Inline Checkbox 1'
 			},
-			'#no-wrapper-block'
+			'#inline-block'
 		);
 		new metal.ClayCheckbox(
 			{
-				hideWrapper: true,
-				label: 'No Wrapper Checkbox 2'
+				inline: true,
+				label: 'Inline Checkbox 2'
 			},
-			'#no-wrapper-block'
+			'#inline-block'
 		);
 
 		new metal.ClayCheckbox(
