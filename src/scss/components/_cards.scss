@@ -267,8 +267,11 @@ button.card-link {
 	.custom-control {
 		display: inline;
 		margin-right: 0;
-		padding-left: 0;
 		position: static;
+
+		> label {
+			padding-left: 0;
+		}
 	}
 
 	.custom-control-input,
