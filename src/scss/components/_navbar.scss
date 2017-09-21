@@ -60,11 +60,20 @@
 	}
 }
 
-.navbar-nav .nav-item > .form-check {
-	margin: 0;
-	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+.navbar-nav .nav-item {
+	> .custom-control {
+		margin: 0;
+		// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+
+	> .form-check {
+		margin: 0;
+		// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
 }
 
 .navbar-text {
