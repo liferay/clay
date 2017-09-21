@@ -22,7 +22,7 @@ $navbar-light-brand-hover-bg: transparent !default;
 $navbar-light-brand-color: $navbar-light-color !default;
 $navbar-light-brand-hover-color: $navbar-light-hover-color !default;
 
-$navbar-light-active-highlight: map-get($theme-colors, primary) !default;
+$navbar-light-active-highlight: lighten(map-get($theme-colors, primary), 22%) !default;
 
 $navbar-light-toggler-border-color: $navbar-light-border-color !default;
 
@@ -38,6 +38,6 @@ $navbar-dark-disabled-color: #CACDD2 !default;
 $navbar-dark-brand-color: $navbar-dark-color !default;
 $navbar-dark-brand-hover-color: $navbar-dark-brand-color !default;
 
-$navbar-dark-active-highlight: #2B4259 !default;
+$navbar-dark-active-highlight: lighten(map-get($theme-colors, primary), 22%) !default;
 
 $navbar-dark-toggler-border-color: #FFF !default;
