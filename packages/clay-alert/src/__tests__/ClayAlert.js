@@ -110,6 +110,82 @@ describe('ClayAlert', function() {
     expect(alert._visible).toBeFalsy();
   });
 
+  it('should close automatically an alert after 5 seconds when type is "notification" and message has no links', function() {
+    jest.useFakeTimers();
+
+    alert = new ClayAlert({
+      autoClose: true,
+      closeable: true,
+      message: 'message',
+      spritemap: spritemap,
+      title: 'success',
+      type: 'notification',
+    });
+
+    expect(setTimeout.mock.calls.length).toBe(1);
+    expect(setTimeout.mock.calls[0][1]).toBe(5000);
+
+    jest.runAllTimers();
+    expect(alert._visible).toBeFalsy();
+  });
+
+  it('should close automatically an alert after 10 seconds when type is "notification" and message has links', function() {
+    jest.useFakeTimers();
+
+    alert = new ClayAlert({
+      autoClose: true,
+      closeable: true,
+      message: 'message<a href="#">Link</a>',
+      spritemap: spritemap,
+      title: 'success',
+      type: 'notification',
+    });
+
+    expect(setTimeout.mock.calls.length).toBe(1);
+    expect(setTimeout.mock.calls[0][1]).toBe(10000);
+
+    jest.runAllTimers();
+    expect(alert._visible).toBeFalsy();
+  });
+
+  it('should close automatically an alert after 5 seconds when type is "fluid" and message has no links', function() {
+    jest.useFakeTimers();
+
+    alert = new ClayAlert({
+      autoClose: true,
+      closeable: true,
+      message: 'message',
+      spritemap: spritemap,
+      title: 'success',
+      type: 'fluid',
+    });
+
+    expect(setTimeout.mock.calls.length).toBe(1);
+    expect(setTimeout.mock.calls[0][1]).toBe(5000);
+
+    jest.runAllTimers();
+    expect(alert._visible).toBeFalsy();
+  });
+
+  it('should close automatically an alert after 10 seconds when type is "fluid" and message has links', function() {
+    jest.useFakeTimers();
+
+    alert = new ClayAlert({
+      autoClose: true,
+      closeable: true,
+      message: 'message<a href="#">Link</a>',
+      spritemap: spritemap,
+      title: 'success',
+      type: 'fluid',
+    });
+
+    expect(setTimeout.mock.calls.length).toBe(1);
+    expect(setTimeout.mock.calls[0][1]).toBe(10000);
+
+    jest.runAllTimers();
+    expect(alert._visible).toBeFalsy();
+  });
+
   it('should close and destroy alert', function() {
     alert = new ClayAlert({
       closeable: true,

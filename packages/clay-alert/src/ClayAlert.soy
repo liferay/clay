@@ -9,6 +9,7 @@
 	{@param title: string}
 	{@param? _handleCloseClick: any}
 	{@param? _visible: bool}
+	{@param? autoClose: bool}
 	{@param? closeable: bool}
 	{@param? style: string}
 	{@param? type: string}
@@ -27,6 +28,11 @@
 				{sp}show
 			{/if}
 		"
+		{if $autoClose and ($type == 'fluid' or $type == 'notification') and $_visible}
+			data-onmouseover="_handleMouseOver"
+			data-onmouseout="_handleMouseOut"
+		{/if}
+
 		role="alert"
 	{/let}
 

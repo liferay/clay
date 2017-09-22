@@ -70,6 +70,17 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Auto Closeable Fluid Alerts</h4>
+
+			<div id="autocloseable-fluid-alert-success"></div>
+			<div id="autocloseable-fluid-alert-info"></div>
+			<div id="autocloseable-fluid-alert-warning"></div>
+			<div id="autocloseable-fluid-alert-danger"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Notification Alerts</h4>
 
 			<div class="d-table">
@@ -83,6 +94,7 @@
 
 	<script type="text/javascript">
 		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+	
 		/*
 		 * Normal Alerts
 		 */
@@ -267,6 +279,57 @@
 			'#fluid-alert-danger'
 		);
 
+
+		/*
+		 * AutoCloseable Fluid Alerts
+		 */
+		 new metal.ClayAlert(
+			{
+				autoClose: true,
+				message: 'This <a href="#">alert</a> needs your attention.',
+				spritemap: spritemap,
+				title: 'Info',
+				type: 'fluid',
+			},
+			'#autocloseable-fluid-alert-info'
+		);
+
+		new metal.ClayAlert(
+			{
+				autoClose: true,
+				message: 'You just read the <a href="#">alert message</a> successfully.',
+				spritemap: spritemap,
+				style: 'success',
+				title: 'Success',
+				type: 'fluid',
+			},
+			'#autocloseable-fluid-alert-success'
+		);
+
+		new metal.ClayAlert(
+			{
+				autoClose: true,
+				message: 'This alert is a <a href="#">warning message</a>.',
+				spritemap: spritemap,
+				style: 'warning',
+				title: 'Warning',
+				type: 'fluid',
+			},
+			'#autocloseable-fluid-alert-warning'
+		);
+
+		new metal.ClayAlert(
+			{
+				autoClose: true,
+				message: 'Something</a> is not right.',
+				spritemap: spritemap,
+				style: 'danger',
+				title: 'Danger',
+				type: 'fluid',
+			},
+			'#autocloseable-fluid-alert-danger'
+		);
+
 		/*
  		* Notification Alerts
  		*/
@@ -318,6 +381,7 @@
 			},
 			'#notification-alert-danger'
 		);
+
 	</script>
 </body>
 </html>
