@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClayAlert should render a closeable alert 1`] = `
+<div class="alert alert-info fade alert-dismissible show" role="alert">
+  <button class="btn close btn-unstyled" aria-label="Close" type="button">
+    <svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+      <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#times"></use>
+    </svg>
+  </button>
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+  </svg>
+  <strong class="lead">success</strong>message</div>
+`;
+
+exports[`ClayAlert should render a fluid alert 1`] = `
+<div class="alert alert-info fade alert-fluid show" role="alert">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+  </svg>
+  <strong class="lead">info</strong>message</div>
+`;
+
+exports[`ClayAlert should render a notification alert 1`] = `
+<div class="alert alert-info fade alert-notification show" role="alert">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+  </svg>
+  <strong class="lead">info</strong>message</div>
+`;
+
+exports[`ClayAlert should render an alert style "danger" 1`] = `
+<div class="alert alert-danger fade show" role="alert">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-exclamation-full">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#exclamation-full"></use>
+  </svg>
+  <strong class="lead">danger</strong>message</div>
+`;
+
+exports[`ClayAlert should render an alert style "info" 1`] = `
+<div class="alert alert-info fade show" role="alert">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+  </svg>
+  <strong class="lead">info</strong>message</div>
+`;
+
+exports[`ClayAlert should render an alert style "success" 1`] = `
+<div class="alert alert-success fade show" role="alert">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check-circle">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#check-circle"></use>
+  </svg>
+  <strong class="lead">success</strong>message</div>
+`;
+
+exports[`ClayAlert should render an alert style "warning" 1`] = `
+<div class="alert alert-warning fade show" role="alert">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle-full">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#question-circle-full"></use>
+  </svg>
+  <strong class="lead">warning</strong>message</div>
+`;
+
+exports[`ClayAlert should render default markup 1`] = `
+<div class="alert alert-info fade show" role="alert">
+  <svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle">
+    <use xlink:href="../node_modules/lexicon-ux/build/images/icons/icons.svg#info-circle"></use>
+  </svg>
+  <strong class="lead">info</strong>message</div>
+`;
