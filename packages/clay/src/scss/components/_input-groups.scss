@@ -85,6 +85,47 @@
 	@include scale-component {
 		height: $input-height-mobile;
 	}
+
+	.custom-control {
+		.custom-control-indicator {
+			display: inline-block;
+			position: static;
+			vertical-align: middle;
+
+			+ .custom-control-description {
+				margin-left: 6px;
+			}
+		}
+
+		.custom-control-description {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	.custom-control,
+	.form-check {
+		margin-bottom: 3px;
+	}
+
+	.custom-control label,
+	.form-check-label {
+		display: block;
+		padding: 0;
+	}
+
+	.form-check-input {
+		display: inline-block;
+		margin-left: 0;
+		position: static;
+		vertical-align: middle;
+
+		+ .form-check-description {
+			display: inline-block;
+			margin-left: 6px;
+			vertical-align: middle;
+		}
+	}
 }
 
 // Input Group Input
