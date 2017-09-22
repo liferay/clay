@@ -1825,7 +1825,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .form-check-input {
   position: absolute;
-  margin-top: 0.25rem;
+  margin-top: 0.41667em;
   margin-left: -1.25rem;
 }
 
@@ -8882,8 +8882,11 @@ button.card-link {
 .form-check-card .custom-control {
   display: inline;
   margin-right: 0;
-  padding-left: 0;
   position: static;
+}
+
+.form-check-card .custom-control > label {
+  padding-left: 0;
 }
 
 .form-check-card .custom-control-input,
@@ -9074,10 +9077,16 @@ button.card-link {
   max-width: 1280px;
 }
 
-input[type="checkbox"],
+input[type="checkbox"] {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+}
+
 input[type="radio"] {
   cursor: pointer;
-  font-size: 16px;
+  height: 15px;
+  width: 14px;
 }
 
 fieldset {
@@ -9172,12 +9181,6 @@ textarea.form-control {
   position: relative;
 }
 
-.form-check-input {
-  margin-top: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 fieldset[disabled] label,
 label.disabled {
   color: #abacb8;
@@ -9263,9 +9266,6 @@ fieldset[disabled] .form-control, .form-control[disabled] {
     margin-bottom: 0;
     margin-right: 15px;
   }
-  .form-inline .form-check-input {
-    transform: none;
-  }
   .form-inline-autofit {
     flex: 1;
     flex-direction: row;
@@ -9315,18 +9315,10 @@ fieldset[disabled] .form-control, .form-control[disabled] {
   border-style: solid;
   border-width: 0.0625rem;
   font-size: 1.0625rem;
-  top: 0;
 }
 
 .custom-control-description {
   line-height: 1.1875rem;
-}
-
-.custom-control-input {
-  height: 1.0625rem;
-  left: 0;
-  top: 0;
-  width: 1.0625rem;
 }
 
 .custom-control-input:active ~ .custom-control-indicator {
@@ -9382,6 +9374,36 @@ fieldset[disabled] .form-control, .form-control[disabled] {
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-indicator {
   border-color: #b3cdfe;
+}
+
+.custom-control {
+  display: block;
+  margin-bottom: 0.25rem;
+  margin-right: 0;
+  min-height: 0;
+  padding-left: 0;
+}
+
+.custom-control label {
+  display: inline;
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
+
+.custom-control-input {
+  height: 1.0625rem;
+  left: 0;
+  top: 0.21875rem;
+  width: 1.0625rem;
+  z-index: 0;
+}
+
+.custom-control-inline {
+  display: inline-block;
+}
+
+.custom-control-inline + .custom-control-inline {
+  margin-left: 1rem;
 }
 
 .invalid-feedback,
@@ -9759,6 +9781,45 @@ a .icon-monospaced,
   padding-top: 0;
 }
 
+.input-group-addon .custom-control .custom-control-indicator {
+  display: inline-block;
+  position: static;
+  vertical-align: middle;
+}
+
+.input-group-addon .custom-control .custom-control-indicator + .custom-control-description {
+  margin-left: 6px;
+}
+
+.input-group-addon .custom-control .custom-control-description {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input-group-addon .custom-control,
+.input-group-addon .form-check {
+  margin-bottom: 3px;
+}
+
+.input-group-addon .custom-control label,
+.input-group-addon .form-check-label {
+  display: block;
+  padding: 0;
+}
+
+.input-group-addon .form-check-input {
+  display: inline-block;
+  margin-left: 0;
+  position: static;
+  vertical-align: middle;
+}
+
+.input-group-addon .form-check-input + .form-check-description {
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
 .input-group-input {
   display: flex;
 }
@@ -9852,14 +9913,8 @@ a .icon-monospaced,
   color: #6B6C7E;
 }
 
-.input-group-transparent .help-icon {
-  height: 28px;
-  line-height: 28px;
-  width: 28px;
-}
-
 .input-group-inset .form-control {
-  padding-right: 45px;
+  padding-right: 3.25rem;
 }
 
 .input-group-inset .input-group-input {
@@ -9867,7 +9922,7 @@ a .icon-monospaced,
 }
 
 .input-group-inset-left .form-control {
-  padding-left: 45px;
+  padding-left: 3.25em;
   padding-right: 1rem;
 }
 
@@ -9877,16 +9932,17 @@ a .icon-monospaced,
 }
 
 .input-group-inset-item {
+  align-items: center;
   color: #6B6C7E;
+  display: flex;
+  height: 100%;
   right: 0.296875rem;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   z-index: 5;
 }
 
 .input-group-inset-item .btn {
-  height: 1.78125rem;
+  height: 75%;
   padding-bottom: 0;
   padding-top: 0;
   padding-left: 0.6875rem;
@@ -9939,10 +9995,9 @@ a .icon-monospaced,
   border-bottom-right-radius: 0.25rem;
 }
 
-.input-group-lg .help-icon {
-  height: 35px;
-  line-height: 35px;
-  width: 35px;
+.input-group-lg > .input-group-input .form-control {
+  font-size: 1.25rem;
+  height: 3rem;
 }
 
 .input-group-sm > .input-group-addon {
@@ -9979,10 +10034,9 @@ a .icon-monospaced,
   }
 }
 
-.input-group-sm .help-icon {
-  height: 20px;
-  line-height: 20px;
-  width: 20px;
+.input-group-sm > .input-group-input .form-control {
+  font-size: 0.875rem;
+  height: 2rem;
 }
 
 .label {
@@ -10341,6 +10395,11 @@ a.list-group-subtitle,
   padding-right: 0.625rem;
 }
 
+.list-group-item-flex .flex-col .custom-control:only-child,
+.list-group-item-flex .flex-col .form-check:only-child {
+  margin-bottom: 0;
+}
+
 .list-group-item-action:focus {
   z-index: 1;
 }
@@ -10437,6 +10496,11 @@ a.list-group-subtitle,
   min-width: 2rem;
 }
 
+.management-bar .navbar-nav .nav-item > .custom-control {
+  margin-left: 0.875rem;
+  margin-right: 0.875rem;
+}
+
 .management-bar .navbar-nav .nav-item > .form-check {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
@@ -10503,6 +10567,10 @@ a.list-group-subtitle,
     min-height: 2rem;
     min-width: 2rem;
   }
+  .management-bar.navbar-expand-sm .nav-item > .custom-control {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   .management-bar.navbar-expand-sm .nav-item > .form-check {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -10564,6 +10632,10 @@ a.list-group-subtitle,
     margin-top: 0.96875rem;
     min-height: 2rem;
     min-width: 2rem;
+  }
+  .management-bar.navbar-expand-md .nav-item > .custom-control {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .management-bar.navbar-expand-md .nav-item > .form-check {
     padding-left: 1rem;
@@ -10627,6 +10699,10 @@ a.list-group-subtitle,
     min-height: 2rem;
     min-width: 2rem;
   }
+  .management-bar.navbar-expand-lg .nav-item > .custom-control {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   .management-bar.navbar-expand-lg .nav-item > .form-check {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -10689,6 +10765,10 @@ a.list-group-subtitle,
     min-height: 2rem;
     min-width: 2rem;
   }
+  .management-bar.navbar-expand-xl .nav-item > .custom-control {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   .management-bar.navbar-expand-xl .nav-item > .form-check {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -10721,6 +10801,11 @@ a.list-group-subtitle,
   margin-top: 0.96875rem;
   min-height: 2rem;
   min-width: 2rem;
+}
+
+.management-bar.navbar-expand .nav-item > .custom-control {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .management-bar.navbar-expand .nav-item > .form-check {
@@ -11136,6 +11221,12 @@ a.list-group-subtitle,
 .navbar-nav .nav-link {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.navbar-nav .nav-item > .custom-control {
+  margin: 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .navbar-nav .nav-item > .form-check {
@@ -12189,6 +12280,11 @@ a.list-group-subtitle,
   margin-top: 0.5rem;
   min-height: 2rem;
   min-width: 2rem;
+}
+
+.navigation-bar .navbar-nav .nav-item > .custom-control {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .navigation-bar .navbar-nav .nav-item > .form-check {
@@ -13751,6 +13847,7 @@ th {
   padding-right: 15px;
 }
 
+.table .custom-control,
 .table .form-check {
   margin-bottom: 0;
 }
@@ -14467,11 +14564,6 @@ mark:before,
 
 .dropdown-item .form-check {
   margin-bottom: 0;
-}
-
-.dropdown-item .form-check-input {
-  float: left;
-  margin-right: 6px;
 }
 
 .dropdown-item .custom-control {
@@ -15348,15 +15440,15 @@ mark:before,
 }
 
 .rounded {
-  border-radius: 0.25rem;
+  border-radius: 0.25rem !important;
 }
 
 .rounded-circle {
-  border-radius: 5000px;
+  border-radius: 5000px !important;
 }
 
 .rounded-0 {
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 .flex-col {
