@@ -8,20 +8,19 @@
 	{@param title: string}
 	{@param? _handleCloseClick: any}
 	{@param? closeable: bool}
-	{@param? icon: string}
 	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? type: string}
 
 	{let $attributes kind="attributes"}
 		class="alert alert-{$style}
-		{if $closeable}
-			{sp}alert-dismissible
-		{/if}
+			{if $closeable}
+				{sp}alert-dismissible
+			{/if}
 
-		{if $type and $type == 'toast'}
-			{sp}alert-notification
-		{/if}
+			{if $type == 'toast'}
+				{sp}alert-notification
+			{/if}
 		"
 		ref="alert"
 		role="alert"
@@ -32,23 +31,32 @@
 			{call ClayButton.render}
 				{param ariaLabel: 'Close' /}
 				{param elementClasses: 'close' /}
-				{param events: [
-					'click': $_handleCloseClick
-					]
-				/}
+				{param events: [ 'click': $_handleCloseClick ] /}
 				{param icon: [
 					'alignment': 'right',
 					'monospaced': false,
 					'spritemap': $spritemap,
 					'symbol': 'times'
-					]
-				/}
+					] /}
 				{param style: 'unstyled' /}
 				{param type: 'button' /}
 			{/call}
 		{/if}
 
-		{if $icon and $spritemap}
+		{if $spritemap}
+			{let $icon kind="text"}
+				{switch $style}
+					{case 'danger'}
+						exclamation-full
+					{case 'success'}
+						check-circle
+					{case 'warning'}
+						question-circle-full
+					{default}
+						info-circle
+				{/switch}
+			{/let}
+
 			{call ClayIcon.render}
 				{param spritemap: $spritemap /}
 				{param symbol: $icon /}

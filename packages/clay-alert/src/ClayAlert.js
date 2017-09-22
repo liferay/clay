@@ -36,15 +36,6 @@ ClayAlert.STATE = {
   closeable: Config.bool().value(false),
 
   /**
-	 * The icon of alert
-	 * @instance
-	 * @memberof ClayAlert
-	 * @type {?string}
-	 * @default undefined
-	 */
-  icon: Config.string(),
-
-  /**
 	 * The message of alert
 	 * @instance
 	 * @memberof ClayAlert
@@ -66,7 +57,7 @@ ClayAlert.STATE = {
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?string}
-	 * @default default
+	 * @default info
 	 */
   style: Config.oneOf(['danger', 'info', 'success', 'warning']).value('info'),
 
@@ -75,7 +66,7 @@ ClayAlert.STATE = {
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?string}
-	 * @default default
+	 * @default embedded
 	 */
   type: Config.oneOf(['embedded', 'stripe', 'toast']).value('embedded'),
 
