@@ -185,34 +185,72 @@ section: Components
 
 		<div class="clay-site-form-container">
 			<div class="form-group">
+				<label for="">Custom Checkbox</label>
 				<div class="input-group input-group-secondary">
 					<span class="input-group-addon">
-						<input aria-label="Checkbox for following text input" type="checkbox">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+								<span class="custom-control-indicator"></span>
+							</label>
+						</div>
 					</span>
 					<input aria-label="Text input with checkbox" class="form-control" type="text">
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="">Custom Checkbox and Custom Control Description</label>
+				<div class="input-group input-group-secondary">
+					<span class="input-group-addon">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+								<span class="custom-control-indicator"></span>
+								<span class="custom-control-description">Custom Check Label</span>
+							</label>
+						</div>
+					</span>
+					<input aria-label="Text input with checkbox" class="form-control" type="text">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="">Form Check and Form Check Description</label>
 				<div class="input-group input-group-secondary">
 					<input aria-label="Text input with checkbox" class="form-control" type="text">
 					<span class="input-group-addon">
-						<input aria-label="Checkbox for previous text input" type="checkbox">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input aria-label="Checkbox for previous text input" class="form-check-input" type="checkbox" value="">
+								<span class="form-check-description">Form Check Label</span>
+							</label>
+						</div>
 					</span>
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="">Custom Radio</label>
 				<div class="input-group input-group-secondary">
 					<span class="input-group-addon">
-						<input aria-label="Radio button for following text input" type="radio">
+						<div class="custom-control custom-radio">
+							<label>
+								<input aria-label="Radio button for following text input" class="custom-control-input" type="radio">
+								<span class="custom-control-indicator"></span>
+							</label>
+						</div>
 					</span>
 					<input aria-label="Text input with radio button" class="form-control" type="text">
 				</div>
 			</div>
 			<div class="form-group">
+				<label for="">Form Check with Radio Button</label>
 				<div class="input-group input-group-secondary">
 					<input aria-label="Text input with radio button" class="form-control" type="text">
 					<span class="input-group-addon">
-						<input aria-label="Radio button for previous text input" type="radio">
+						<div class="form-check">
+							<label class="form-check-label">
+								<input aria-label="Radio button for previous text input" class="form-check-input" type="radio" value="">
+							</label>
+						</div>
 					</span>
 				</div>
 			</div>
