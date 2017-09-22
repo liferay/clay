@@ -133,12 +133,12 @@ ClayAlert.STATE = {
   closeable: Config.bool().value(false),
 
   /**
-	   * Flag to indicate if the alert should be destroyen when close.
-	   * @instance
-	   * @memberof ClayAlert
-	   * @type {?bool}
-	   * @default false
-	   */
+   * Flag to indicate if the alert should be destroyen when close.
+   * @instance
+   * @memberof ClayAlert
+   * @type {?bool}
+   * @default false
+   */
   destroyOnHide: Config.bool(),
 
   /**
@@ -186,12 +186,12 @@ ClayAlert.STATE = {
   title: Config.string().required(),
 
   /**
-	   * Flag to indicate the visibility of the alert
-	   * @instance
-	   * @memberof ClayAlert
-	   * @type {?bool}
-	   * @default true
-	   */
+   * Flag to indicate the visibility of the alert
+   * @instance
+   * @memberof ClayAlert
+   * @type {?bool}
+   * @default true
+   */
   _visible: Config.bool()
     .internal()
     .value(true),
