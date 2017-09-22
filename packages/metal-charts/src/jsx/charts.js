@@ -1,5 +1,8 @@
 'use strict';
 
+import AreaLineChart from './AreaLineChart';
+import AreaSplineChart from './AreaSplineChart';
+import AreaStepChart from './AreaStepChart';
 import BarChart from './BarChart';
 import Chart from './Chart';
 import DonutChart from './DonutChart';
@@ -12,6 +15,9 @@ import StepChart from './StepChart';
 import { bb, d3 } from '../ChartBase';
 
 export {
+	AreaLineChart,
+	AreaSplineChart,
+	AreaStepChart,
 	BarChart,
 	bb,
 	Chart,

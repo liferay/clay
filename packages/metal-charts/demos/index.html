@@ -52,12 +52,12 @@
 	</div>
 
 	<div class="metal-chart-example">
-		<h2>Area-spline</h2>
+		<h2>Area-Spline</h2>
 		<div id="area-spline"></div>
 	</div>
 
 	<div class="metal-chart-example">
-		<h2>Area-step</h2>
+		<h2>Area-Step</h2>
 		<div id="area-step"></div>
 	</div>
 
@@ -85,6 +85,8 @@
 		<h2>Gauge</h2>
 		<div id="gauge"></div>
 	</div>
+
+
 
 	<div id="controls" style="display: none;">
 		<label>
@@ -257,21 +259,18 @@
 		}, '#step');
 		createChartControls(stepChart, 'step');
 
-		var areaChart = new metal.Chart({
-			columns: dummyData.columns_1,
-			type: 'area'
+		var areaLineChart = new metal.AreaLineChart({
+			columns: dummyData.columns_1
 		}, '#area');
-		createChartControls(areaChart, 'area');
+		createChartControls(areaLineChart, 'area');
 
-		var areaSplineChart = new metal.Chart({
-			columns: dummyData.columns_1,
-			type: 'area-spline'
+		var areaSplineChart = new metal.AreaSplineChart({
+			columns: dummyData.columns_2
 		}, '#area-spline');
 		createChartControls(areaSplineChart, 'area-spline');
 
-		var areaStepChart = new metal.Chart({
-			columns: dummyData.columns_1,
-			type: 'area-step'
+		var areaStepChart = new metal.AreaStepChart({
+			columns: dummyData.columns_3
 		}, '#area-step');
 		createChartControls(areaStepChart, 'area-step');
 
