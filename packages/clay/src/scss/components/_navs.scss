@@ -1,3 +1,4 @@
+.nav-btn.btn-unstyled,
 .nav-link {
 	color: $nav-link-color;
 	position: relative;
@@ -19,26 +20,63 @@
 	}
 }
 
-.nav-link-monospaced {
+// Nav Btn
+
+.nav-btn {
 	align-items: center;
-	color: $nav-link-color;
 	display: flex;
 	justify-content: center;
+	line-height: $line-height-base;
+	margin: $nav-btn-margin-y $nav-btn-margin-x;
+	min-height: $nav-item-monospaced-size;
+	min-width: $nav-item-monospaced-size;
+	padding-bottom: 0;
+	padding-top: 0;
+	text-align: center;
+	width: auto;
 
-	@include monospace($nav-link-monospaced-size);
-
-	&:focus {
-		z-index: 1;
-	}
-
-	@include hover-focus {
-		color: $nav-link-hover-color;
+	&.btn-link {
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	.lexicon-icon {
 		margin-top: 0;
 	}
 }
+
+.nav-btn,
+.nav-link {
+	&.disabled {
+		opacity: 1;
+	}
+}
+
+.nav-link.btn-unstyled {
+	padding: $nav-link-padding-y $nav-link-padding-x;
+}
+
+// Nav Item Monospaced
+
+.nav-btn-monospaced {
+	padding: 0;
+}
+
+.nav-link-monospaced {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: $nav-btn-margin-y $nav-btn-margin-x;
+	min-height: $nav-item-monospaced-size;
+	min-width: $nav-item-monospaced-size;
+	padding: 0;
+
+	.lexicon-icon {
+		margin-top: 0;
+	}
+}
+
+// Nav Item
 
 .nav-item[class*='col-'] {
 	padding-left: 0;
