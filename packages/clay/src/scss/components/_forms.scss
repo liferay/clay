@@ -1,7 +1,13 @@
-input[type="checkbox"],
+input[type="checkbox"] {
+	cursor: pointer;
+	height: 14px;
+	width: 14px;
+}
+
 input[type="radio"] {
 	cursor: pointer;
-	font-size: 16px;
+	height: 15px;
+	width: 14px;
 }
 
 fieldset {
@@ -132,12 +138,6 @@ textarea.form-control {
 .form-check-label {
 	display: inline;
 	position: relative;
-}
-
-.form-check-input {
-	margin-top: 0;
-	top: 50%;
-	transform: translateY(-50%);
 }
 
 // Disabled State
@@ -293,10 +293,6 @@ fieldset[disabled] label {
 				margin-bottom: 0;
 				margin-right: $grid-gutter-width / 2;
 			}
-		}
-
-		.form-check-input {
-			transform: none;
 		}
 	}
 
