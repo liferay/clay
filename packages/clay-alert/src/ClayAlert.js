@@ -16,7 +16,11 @@ class ClayAlert extends Component {
 	 * @private
 	 */
   _handleCloseClick(event) {
-    this.emit('close');
+    this._visible = false;
+
+    if (this.destroyOnHide) {
+      this.dispose();
+    }
   }
 }
 
@@ -27,13 +31,22 @@ class ClayAlert extends Component {
  */
 ClayAlert.STATE = {
   /**
-	 * If the alert is closeable
+	 * Flag to indicate if the alert is closeable.
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?bool}
 	 * @default false
 	 */
   closeable: Config.bool().value(false),
+
+  /**
+	   * Flag to indicate if the alert should be destroyen when close.
+	   * @instance
+	   * @memberof ClayAlert
+	   * @type {?bool}
+	   * @default false
+	   */
+  destroyOnHide: Config.bool(),
 
   /**
 	 * The message of alert
@@ -47,10 +60,10 @@ ClayAlert.STATE = {
 	 * The path to the SVG spritemap file containing the icons.
 	 * @instance
 	 * @memberof ClayIcon
-	 * @type {?string}
+	 * @type {!string}
 	 * @default undefined
 	 */
-  spritemap: Config.string(),
+  spritemap: Config.string().required(),
 
   /**
 	 * The style of alert
@@ -66,17 +79,29 @@ ClayAlert.STATE = {
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {?string}
-	 * @default embedded
+	 * @default undefined
 	 */
-  type: Config.oneOf(['embedded', 'stripe', 'toast']).value('embedded'),
+  type: Config.oneOf(['fluid', 'notification']),
 
   /**
 	 * The title of alert
 	 * @instance
 	 * @memberof ClayAlert
 	 * @type {!string}
+	 * @default undefined
 	 */
   title: Config.string().required(),
+
+  /**
+	   * Flag to indicate the visibility of the alert
+	   * @instance
+	   * @memberof ClayAlert
+	   * @type {?bool}
+	   * @default true
+	   */
+  _visible: Config.bool()
+    .internal()
+    .value(true),
 };
 
 Soy.register(ClayAlert, templates);

@@ -5,29 +5,33 @@
  */
 {template .render}
 	{@param message: html}
+	{@param spritemap: string}
 	{@param title: string}
 	{@param? _handleCloseClick: any}
+	{@param? _visible: bool}
 	{@param? closeable: bool}
-	{@param? spritemap: string}
 	{@param? style: string}
 	{@param? type: string}
 
 	{let $attributes kind="attributes"}
-		class="alert alert-{$style}
+		class="alert alert-{$style} fade
 			{if $closeable}
 				{sp}alert-dismissible
 			{/if}
 
-			{if $type == 'toast'}
-				{sp}alert-notification
+			{if $type}
+				{sp}alert-{$type}
+			{/if}
+
+			{if $_visible != false}
+				{sp}show
 			{/if}
 		"
-		ref="alert"
 		role="alert"
 	{/let}
 
 	<div {$attributes}>
-		{if $closeable and $spritemap}
+		{if $closeable}
 			{call ClayButton.render}
 				{param ariaLabel: 'Close' /}
 				{param elementClasses: 'close' /}
@@ -43,25 +47,23 @@
 			{/call}
 		{/if}
 
-		{if $spritemap}
-			{let $icon kind="text"}
-				{switch $style}
-					{case 'danger'}
-						exclamation-full
-					{case 'success'}
-						check-circle
-					{case 'warning'}
-						question-circle-full
-					{default}
-						info-circle
-				{/switch}
-			{/let}
+		{let $icon kind="text"}
+			{switch $style}
+				{case 'danger'}
+					exclamation-full
+				{case 'success'}
+					check-circle
+				{case 'warning'}
+					question-circle-full
+				{default}
+					info-circle
+			{/switch}
+		{/let}
 
-			{call ClayIcon.render}
-				{param spritemap: $spritemap /}
-				{param symbol: $icon /}
-			{/call}
-		{/if}
+		{call ClayIcon.render}
+			{param spritemap: $spritemap /}
+			{param symbol: $icon /}
+		{/call}
 
 		<strong class="lead">
 			{$title}
