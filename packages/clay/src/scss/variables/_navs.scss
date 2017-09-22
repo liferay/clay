@@ -1,8 +1,11 @@
-$nav-link-color: null !default;
-$nav-link-hover-color: null !default;
+$nav-link-color: $link-color !default;
+$nav-link-hover-color: $link-hover-color !default;
 $nav-link-active-color: $gray-700 !default;
 
-$nav-link-monospaced-size: $icon-monospaced-size !default;
+$nav-item-monospaced-size: 2rem !default; // 32px
+
+$nav-btn-margin-x: $nav-link-padding-x !default;
+$nav-btn-margin-y: (($line-height-base * $font-size-base) + ($nav-link-padding-y * 2) - $nav-item-monospaced-size) / 2 !default;
 
 // Nav Nested
 
