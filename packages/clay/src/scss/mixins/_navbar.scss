@@ -19,7 +19,7 @@
 	$link-padding-y: setter(map-get($map, link-padding-y), ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size * $line-height-base)) / 2);
 	$btn-min-height: setter(map-get($map, btn-min-height), 2rem);
 	$btn-min-width: setter(map-get($map, btn-min-width), 2rem);
-	$btn-margin-x: map-get($map, btn-margin-x);
+	$btn-margin-x: setter(map-get($map, btn-margin-x), $link-padding-x);
 	$btn-margin-y: setter(map-get($map, btn-margin-y), ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - $btn-min-height) / 2);
 	$form-control-height: map-get($map, form-control-height);
 	$brand-font-size: setter(map-get($map, brand-font-size), $navbar-brand-font-size);
@@ -37,7 +37,7 @@
 	$link-padding-y-mobile: setter(map-get($map, link-padding-y-mobile), ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2);
 	$btn-min-height-mobile: setter(map-get($map, btn-min-height-mobile), $btn-min-height);
 	$btn-min-width-mobile: setter(map-get($map, btn-min-width-mobile), $btn-min-width);
-	$btn-margin-x-mobile: map-get($map, btn-margin-x-mobile);
+	$btn-margin-x-mobile: setter(map-get($map, btn-margin-x-mobile), $link-padding-x-mobile);
 	$btn-margin-y-mobile: setter(map-get($map, btn-margin-y-mobile), ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - $btn-min-height-mobile) / 2);
 	$form-control-height-mobile: map-get($map, form-control-height-mobile);
 	$brand-font-size-mobile: setter(map-get($map, brand-font-size-mobile), $font-size-lg-mobile);
@@ -61,10 +61,6 @@
 	$toggler-link-margin-y: map-get($map, toggler-link-margin-y);
 	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), $link-padding-x-mobile);
 	$toggler-link-padding-y: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
-
-	// Calculate navbar height and input btn height
-	// $clay-navbar-height: $height - $border-bottom-width - $border-top-width - ($padding-y * 2);
-	// $clay-btn-input-height: $input-height-inner + $border-bottom-width + $border-top-width;
 
 	border-color: transparent;
 
@@ -129,14 +125,10 @@
 		}
 
 		.nav-item {
-			> .custom-control {
-				margin-left: $link-padding-x-mobile;
-				margin-right: $link-padding-x-mobile;
-			}
-
+			> .custom-control,
 			> .form-check {
-				padding-left: $link-padding-x-mobile;
-				padding-right: $link-padding-x-mobile;
+				margin-left: $btn-margin-x-mobile;
+				margin-right: $btn-margin-x-mobile;
 			}
 		}
 
@@ -146,6 +138,21 @@
 			padding-left: $link-padding-x-mobile;
 			padding-right: $link-padding-x-mobile;
 			padding-top: $link-padding-y-mobile;
+		}
+
+		.nav-btn-monospaced {
+			margin-bottom: $btn-margin-y-mobile;
+			margin-left: $btn-margin-x-mobile;
+			margin-right: $btn-margin-x-mobile;
+			margin-top: $btn-margin-y-mobile;
+		}
+
+		.nav-link-monospaced {
+			margin-bottom: $btn-margin-y-mobile;
+			margin-left: $btn-margin-x-mobile;
+			margin-right: $btn-margin-x-mobile;
+			margin-top: $btn-margin-y-mobile;
+			padding: 0;
 		}
 	}
 
@@ -252,17 +259,11 @@
 					}
 
 					.nav-item {
-						> .custom-control {
-							@if ($scaling-navbar) {
-								margin-left: $link-padding-x;
-								margin-right: $link-padding-x;
-							}
-						}
-
+						> .custom-control,
 						> .form-check {
 							@if ($scaling-navbar) {
-								padding-left: $link-padding-x;
-								padding-right: $link-padding-x;
+								margin-left: $btn-margin-x;
+								margin-right: $btn-margin-x;
 							}
 						}
 					}
@@ -274,6 +275,25 @@
 							padding-left: $link-padding-x;
 							padding-right: $link-padding-x;
 							padding-top: $link-padding-y;
+						}
+					}
+
+					.nav-btn-monospaced {
+						@if ($scaling-navbar) {
+							margin-bottom: $btn-margin-y;
+							margin-left: $btn-margin-x;
+							margin-right: $btn-margin-x;
+							margin-top: $btn-margin-y;
+						}
+					}
+
+					.nav-link-monospaced {
+						@if ($scaling-navbar) {
+							margin-bottom: $btn-margin-y;
+							margin-left: $btn-margin-x;
+							margin-right: $btn-margin-x;
+							margin-top: $btn-margin-y;
+							padding: 0;
 						}
 					}
 				}
