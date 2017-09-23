@@ -9718,486 +9718,77 @@ a.label {
   color: #007bff;
 }
 
-.management-bar {
-  border-color: transparent;
-  border-style: solid;
-  border-width: 0 0 0.0625rem 0;
-  font-size: 1rem;
-  padding: 0 0;
-}
-
-.management-bar .navbar-toggler {
-  font-size: 1.25rem;
-  height: 2.00001rem;
-  margin-left: 0.875rem;
-  margin-right: 0.875rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-top: 0.25rem;
-}
-
-.management-bar .navbar-toggler-link {
-  height: auto;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-left: 0;
-  margin-right: 0;
-  padding-bottom: 0.71875rem;
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
-  padding-top: 0.71875rem;
-}
-
-.management-bar .navbar-brand {
-  font-size: 1.25rem;
-  margin-right: 0;
-  padding-bottom: 0.53125rem;
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
-  padding-top: 0.53125rem;
-}
-
-.management-bar .navbar-nav .nav-btn {
-  margin-bottom: 0.46875rem;
-  margin-top: 0.46875rem;
-  min-height: 2rem;
-  min-width: 2rem;
-}
-
-.management-bar .navbar-nav .nav-item > .custom-control {
-  margin-left: 0.875rem;
-  margin-right: 0.875rem;
-}
-
-.management-bar .navbar-nav .nav-item > .form-check {
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
-}
-
-.management-bar .navbar-nav .nav-link,
-.management-bar .navbar-nav .navbar-text {
-  padding-bottom: 0.71875rem;
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
-  padding-top: 0.71875rem;
-}
-
-.management-bar .dropdown-menu {
-  margin-top: 0;
-}
-
-@media (max-width: 575px) {
-  .management-bar.navbar-expand-sm.navbar-collapse-absolute .navbar-collapse {
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0 0 0.0625rem 0;
-    left: 0;
-    margin-top: 0.0625rem;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    right: 0;
-  }
-  .management-bar.navbar-expand-sm .navbar-collapse .navbar-nav .dropdown-divider {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .management-bar.navbar-expand-sm .navbar-form {
-    padding-bottom: 0.71875rem;
-    padding-left: 0.875rem;
-    padding-right: 0.875rem;
-    padding-top: 0.71875rem;
-  }
-  .management-bar.navbar-expand-sm .navbar-form .form-control {
-    height: 2rem;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-}
-
-@media (min-width: 576px) {
-  .management-bar.navbar-expand-sm .navbar-brand {
-    font-size: 1.25rem;
-    margin-right: 1rem;
-    padding-bottom: 1.03125rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.03125rem;
-  }
-  .management-bar.navbar-expand-sm .navbar-form {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .management-bar.navbar-expand-sm .nav-btn {
-    margin-bottom: 0.96875rem;
-    margin-top: 0.96875rem;
-    min-height: 2rem;
-    min-width: 2rem;
-  }
-  .management-bar.navbar-expand-sm .nav-item > .custom-control {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .management-bar.navbar-expand-sm .nav-item > .form-check {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .management-bar.navbar-expand-sm .nav-link,
-  .management-bar.navbar-expand-sm .navbar-text {
-    padding-bottom: 1.21875rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.21875rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .management-bar.navbar-expand-md.navbar-collapse-absolute .navbar-collapse {
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0 0 0.0625rem 0;
-    left: 0;
-    margin-top: 0.0625rem;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    right: 0;
-  }
-  .management-bar.navbar-expand-md .navbar-collapse .navbar-nav .dropdown-divider {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .management-bar.navbar-expand-md .navbar-form {
-    padding-bottom: 0.71875rem;
-    padding-left: 0.875rem;
-    padding-right: 0.875rem;
-    padding-top: 0.71875rem;
-  }
-  .management-bar.navbar-expand-md .navbar-form .form-control {
-    height: 2rem;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .management-bar.navbar-expand-md .navbar-brand {
-    font-size: 1.25rem;
-    margin-right: 1rem;
-    padding-bottom: 1.03125rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.03125rem;
-  }
-  .management-bar.navbar-expand-md .navbar-form {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .management-bar.navbar-expand-md .nav-btn {
-    margin-bottom: 0.96875rem;
-    margin-top: 0.96875rem;
-    min-height: 2rem;
-    min-width: 2rem;
-  }
-  .management-bar.navbar-expand-md .nav-item > .custom-control {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .management-bar.navbar-expand-md .nav-item > .form-check {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .management-bar.navbar-expand-md .nav-link,
-  .management-bar.navbar-expand-md .navbar-text {
-    padding-bottom: 1.21875rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.21875rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .management-bar.navbar-expand-lg.navbar-collapse-absolute .navbar-collapse {
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0 0 0.0625rem 0;
-    left: 0;
-    margin-top: 0.0625rem;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    right: 0;
-  }
-  .management-bar.navbar-expand-lg .navbar-collapse .navbar-nav .dropdown-divider {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .management-bar.navbar-expand-lg .navbar-form {
-    padding-bottom: 0.71875rem;
-    padding-left: 0.875rem;
-    padding-right: 0.875rem;
-    padding-top: 0.71875rem;
-  }
-  .management-bar.navbar-expand-lg .navbar-form .form-control {
-    height: 2rem;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .management-bar.navbar-expand-lg .navbar-brand {
-    font-size: 1.25rem;
-    margin-right: 1rem;
-    padding-bottom: 1.03125rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.03125rem;
-  }
-  .management-bar.navbar-expand-lg .navbar-form {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .management-bar.navbar-expand-lg .nav-btn {
-    margin-bottom: 0.96875rem;
-    margin-top: 0.96875rem;
-    min-height: 2rem;
-    min-width: 2rem;
-  }
-  .management-bar.navbar-expand-lg .nav-item > .custom-control {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .management-bar.navbar-expand-lg .nav-item > .form-check {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .management-bar.navbar-expand-lg .nav-link,
-  .management-bar.navbar-expand-lg .navbar-text {
-    padding-bottom: 1.21875rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.21875rem;
-  }
-}
-
-@media (max-width: 1199px) {
-  .management-bar.navbar-expand-xl.navbar-collapse-absolute .navbar-collapse {
-    border-color: transparent;
-    border-style: solid;
-    border-width: 0 0 0.0625rem 0;
-    left: 0;
-    margin-top: 0.0625rem;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    right: 0;
-  }
-  .management-bar.navbar-expand-xl .navbar-collapse .navbar-nav .dropdown-divider {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .management-bar.navbar-expand-xl .navbar-form {
-    padding-bottom: 0.71875rem;
-    padding-left: 0.875rem;
-    padding-right: 0.875rem;
-    padding-top: 0.71875rem;
-  }
-  .management-bar.navbar-expand-xl .navbar-form .form-control {
-    height: 2rem;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .management-bar.navbar-expand-xl .navbar-brand {
-    font-size: 1.25rem;
-    margin-right: 1rem;
-    padding-bottom: 1.03125rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.03125rem;
-  }
-  .management-bar.navbar-expand-xl .navbar-form {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .management-bar.navbar-expand-xl .nav-btn {
-    margin-bottom: 0.96875rem;
-    margin-top: 0.96875rem;
-    min-height: 2rem;
-    min-width: 2rem;
-  }
-  .management-bar.navbar-expand-xl .nav-item > .custom-control {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .management-bar.navbar-expand-xl .nav-item > .form-check {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .management-bar.navbar-expand-xl .nav-link,
-  .management-bar.navbar-expand-xl .navbar-text {
-    padding-bottom: 1.21875rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1.21875rem;
-  }
-}
-
-.management-bar.navbar-expand .navbar-brand {
-  font-size: 1.25rem;
-  margin-right: 1rem;
-  padding-bottom: 1.03125rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.03125rem;
-}
-
-.management-bar.navbar-expand .navbar-form {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.management-bar.navbar-expand .nav-btn {
-  margin-bottom: 0.96875rem;
-  margin-top: 0.96875rem;
-  min-height: 2rem;
-  min-width: 2rem;
-}
-
-.management-bar.navbar-expand .nav-item > .custom-control {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.management-bar.navbar-expand .nav-item > .form-check {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.management-bar.navbar-expand .nav-link,
-.management-bar.navbar-expand .navbar-text {
-  padding-bottom: 1.21875rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.21875rem;
-}
-
-@media (max-width: 575px) {
-  .management-bar .navbar-overlay-xs-down {
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .management-bar .navbar-overlay-sm-down {
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 991px) {
-  .management-bar .navbar-overlay-md-down {
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 1199px) {
-  .management-bar .navbar-overlay-lg-down {
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-  }
-}
-
-.management-bar .navbar-overlay-up {
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-}
-
-.management-bar.navbar-highlight .navbar-toggler-link:after {
-  bottom: -0.0625rem;
-  height: 0.25rem;
-}
-
-@media (min-width: 576px) {
-  .management-bar.navbar-highlight.navbar-expand-sm .navbar-nav .nav-link.active:after {
-    bottom: -0.0625rem;
-    height: 0.25rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .management-bar.navbar-highlight.navbar-expand-md .navbar-nav .nav-link.active:after {
-    bottom: -0.0625rem;
-    height: 0.25rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .management-bar.navbar-highlight.navbar-expand-lg .navbar-nav .nav-link.active:after {
-    bottom: -0.0625rem;
-    height: 0.25rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .management-bar.navbar-highlight.navbar-expand-xl .navbar-nav .nav-link.active:after {
-    bottom: -0.0625rem;
-    height: 0.25rem;
-  }
-}
-
-.management-bar.navbar-highlight.navbar-expand .navbar-nav .nav-link.active:after {
-  bottom: -0.0625rem;
-  height: 0.25rem;
-}
-
+.nav-btn.btn-unstyled,
 .nav-link {
+  color: #007bff;
   position: relative;
 }
 
+.nav-btn.btn-unstyled:focus,
 .nav-link:focus {
   z-index: 1;
 }
 
+.nav-btn.btn-unstyled:focus, .nav-btn.btn-unstyled:hover,
+.nav-link:focus,
+.nav-link:hover {
+  color: #0056b3;
+}
+
+.nav-btn.btn-unstyled.disabled,
 .nav-link.disabled {
   color: #868e96;
 }
 
+.nav-btn.btn-unstyled.active,
 .nav-link.active {
   color: #495057;
+}
+
+.nav-btn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5;
+  margin: 0.25rem 1rem;
+  min-height: 2rem;
+  min-width: 2rem;
+  padding-bottom: 0;
+  padding-top: 0;
+  text-align: center;
+  width: auto;
+}
+
+.nav-btn.btn-link {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nav-btn .lexicon-icon {
+  margin-top: 0;
+}
+
+.nav-btn.disabled,
+.nav-link.disabled {
+  opacity: 1;
+}
+
+.nav-link.btn-unstyled {
+  padding: 0.5rem 1rem;
+}
+
+.nav-btn-monospaced {
+  padding: 0;
 }
 
 .nav-link-monospaced {
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 2rem;
-  line-height: 2rem;
-  width: 2rem;
-}
-
-.nav-link-monospaced:focus {
-  z-index: 1;
+  margin: 0.25rem 1rem;
+  min-height: 2rem;
+  min-width: 2rem;
+  padding: 0;
 }
 
 .nav-link-monospaced .lexicon-icon {
@@ -10417,34 +10008,8 @@ a.label {
   flex-direction: row;
 }
 
-.navbar-nav .btn-unstyled.disabled {
-  color: #868e96;
-}
-
-.navbar-nav .btn-unstyled.active {
-  color: #495057;
-}
-
 .navbar-nav .dropdown-menu {
   position: absolute;
-}
-
-.navbar-nav .nav-btn {
-  align-items: center;
-  display: flex;
-  height: auto;
-  justify-content: center;
-  margin: 0.25rem 0.5rem;
-  min-height: 2rem;
-  min-width: 2rem;
-  padding-bottom: 0;
-  padding-top: 0;
-  text-align: center;
-  width: auto;
-}
-
-.navbar-nav .nav-btn .lexicon-icon {
-  height: 1em;
 }
 
 .navbar-nav .nav-link {
@@ -10452,16 +10017,11 @@ a.label {
   padding-right: 0.5rem;
 }
 
-.navbar-nav .nav-item > .custom-control {
-  margin: 0;
+.navbar-nav .nav-item > .custom-control,
+.navbar-nav .nav-item > .form-check {
+  margin-bottom: 0;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-}
-
-.navbar-nav .nav-item > .form-check {
-  margin: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .navbar-text {
@@ -11446,8 +11006,8 @@ a.label {
 .navigation-bar .navbar-toggler {
   font-size: 1.25rem;
   height: 2.00001rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding-bottom: 0.25rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -11461,8 +11021,8 @@ a.label {
   margin-left: 0;
   margin-right: 0;
   padding-bottom: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 0.75rem;
 }
 
@@ -11470,34 +11030,40 @@ a.label {
   font-size: 1.25rem;
   margin-right: 0;
   padding-bottom: 0.5625rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 0.5625rem;
 }
 
 .navigation-bar .navbar-nav .nav-btn {
   margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   margin-top: 0.5rem;
   min-height: 2rem;
   min-width: 2rem;
 }
 
-.navigation-bar .navbar-nav .nav-item > .custom-control {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
+.navigation-bar .navbar-nav .nav-item > .custom-control,
 .navigation-bar .navbar-nav .nav-item > .form-check {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .navigation-bar .navbar-nav .nav-link,
 .navigation-bar .navbar-nav .navbar-text {
   padding-bottom: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 0.75rem;
+}
+
+.navigation-bar .navbar-nav .nav-link-monospaced {
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0;
 }
 
 .navigation-bar .dropdown-menu {
@@ -11521,16 +11087,10 @@ a.label {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
   }
-  .navigation-bar.navbar-expand-sm .navbar-collapse .navbar-nav .dropdown-item {
-    padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.75rem;
-  }
   .navigation-bar.navbar-expand-sm .navbar-form {
     padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     padding-top: 0.75rem;
   }
   .navigation-bar.navbar-expand-sm .navbar-form .form-control {
@@ -11556,16 +11116,10 @@ a.label {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
   }
-  .navigation-bar.navbar-expand-md .navbar-collapse .navbar-nav .dropdown-item {
-    padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.75rem;
-  }
   .navigation-bar.navbar-expand-md .navbar-form {
     padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     padding-top: 0.75rem;
   }
   .navigation-bar.navbar-expand-md .navbar-form .form-control {
@@ -11591,16 +11145,10 @@ a.label {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
   }
-  .navigation-bar.navbar-expand-lg .navbar-collapse .navbar-nav .dropdown-item {
-    padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.75rem;
-  }
   .navigation-bar.navbar-expand-lg .navbar-form {
     padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     padding-top: 0.75rem;
   }
   .navigation-bar.navbar-expand-lg .navbar-form .form-control {
@@ -11626,16 +11174,10 @@ a.label {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
   }
-  .navigation-bar.navbar-expand-xl .navbar-collapse .navbar-nav .dropdown-item {
-    padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.75rem;
-  }
   .navigation-bar.navbar-expand-xl .navbar-form {
     padding-bottom: 0.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     padding-top: 0.75rem;
   }
   .navigation-bar.navbar-expand-xl .navbar-form .form-control {
@@ -11722,6 +11264,495 @@ a.label {
 
 .navigation-bar.navbar-highlight.navbar-expand .navbar-nav .nav-link.active:after {
   bottom: 0;
+  height: 0.25rem;
+}
+
+.management-bar {
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0 0 0.0625rem 0;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.management-bar .navbar-toggler {
+  font-size: 1.25rem;
+  height: 2.00001rem;
+  margin-left: 0.875rem;
+  margin-right: 0.875rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+}
+
+.management-bar .navbar-toggler-link {
+  height: auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 0.71875rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.71875rem;
+}
+
+.management-bar .navbar-brand {
+  font-size: 1.25rem;
+  margin-right: 0;
+  padding-bottom: 0.53125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.53125rem;
+}
+
+.management-bar .navbar-nav .nav-btn {
+  margin-bottom: 0.46875rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.46875rem;
+  min-height: 2rem;
+  min-width: 2rem;
+}
+
+.management-bar .navbar-nav .nav-item > .custom-control,
+.management-bar .navbar-nav .nav-item > .form-check {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.management-bar .navbar-nav .nav-link,
+.management-bar .navbar-nav .navbar-text {
+  padding-bottom: 0.71875rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.71875rem;
+}
+
+.management-bar .navbar-nav .nav-link-monospaced {
+  margin-bottom: 0.46875rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.46875rem;
+  padding: 0;
+}
+
+.management-bar .dropdown-menu {
+  margin-top: 0;
+}
+
+@media (max-width: 575px) {
+  .management-bar.navbar-expand-sm.navbar-collapse-absolute .navbar-collapse {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 0 0.0625rem 0;
+    left: 0;
+    margin-top: 0.0625rem;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+    right: 0;
+  }
+  .management-bar.navbar-expand-sm .navbar-collapse .navbar-nav .dropdown-divider {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .management-bar.navbar-expand-sm .navbar-form {
+    padding-bottom: 0.71875rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.71875rem;
+  }
+  .management-bar.navbar-expand-sm .navbar-form .form-control {
+    height: 2rem;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .management-bar.navbar-expand-sm .navbar-brand {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    padding-bottom: 1.03125rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1.03125rem;
+  }
+  .management-bar.navbar-expand-sm .navbar-form {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-sm .nav-btn {
+    margin-bottom: 0.96875rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.96875rem;
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+  .management-bar.navbar-expand-sm .nav-item > .custom-control,
+  .management-bar.navbar-expand-sm .nav-item > .form-check {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-sm .nav-link,
+  .management-bar.navbar-expand-sm .navbar-text {
+    padding-bottom: 1.21875rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1.21875rem;
+  }
+  .management-bar.navbar-expand-sm .nav-link-monospaced {
+    margin-bottom: 0.96875rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.96875rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .management-bar.navbar-expand-md.navbar-collapse-absolute .navbar-collapse {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 0 0.0625rem 0;
+    left: 0;
+    margin-top: 0.0625rem;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+    right: 0;
+  }
+  .management-bar.navbar-expand-md .navbar-collapse .navbar-nav .dropdown-divider {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .management-bar.navbar-expand-md .navbar-form {
+    padding-bottom: 0.71875rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.71875rem;
+  }
+  .management-bar.navbar-expand-md .navbar-form .form-control {
+    height: 2rem;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .management-bar.navbar-expand-md .navbar-brand {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    padding-bottom: 1.03125rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1.03125rem;
+  }
+  .management-bar.navbar-expand-md .navbar-form {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-md .nav-btn {
+    margin-bottom: 0.96875rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.96875rem;
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+  .management-bar.navbar-expand-md .nav-item > .custom-control,
+  .management-bar.navbar-expand-md .nav-item > .form-check {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-md .nav-link,
+  .management-bar.navbar-expand-md .navbar-text {
+    padding-bottom: 1.21875rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1.21875rem;
+  }
+  .management-bar.navbar-expand-md .nav-link-monospaced {
+    margin-bottom: 0.96875rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.96875rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .management-bar.navbar-expand-lg.navbar-collapse-absolute .navbar-collapse {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 0 0.0625rem 0;
+    left: 0;
+    margin-top: 0.0625rem;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+    right: 0;
+  }
+  .management-bar.navbar-expand-lg .navbar-collapse .navbar-nav .dropdown-divider {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .management-bar.navbar-expand-lg .navbar-form {
+    padding-bottom: 0.71875rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.71875rem;
+  }
+  .management-bar.navbar-expand-lg .navbar-form .form-control {
+    height: 2rem;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .management-bar.navbar-expand-lg .navbar-brand {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    padding-bottom: 1.03125rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1.03125rem;
+  }
+  .management-bar.navbar-expand-lg .navbar-form {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-lg .nav-btn {
+    margin-bottom: 0.96875rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.96875rem;
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+  .management-bar.navbar-expand-lg .nav-item > .custom-control,
+  .management-bar.navbar-expand-lg .nav-item > .form-check {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-lg .nav-link,
+  .management-bar.navbar-expand-lg .navbar-text {
+    padding-bottom: 1.21875rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1.21875rem;
+  }
+  .management-bar.navbar-expand-lg .nav-link-monospaced {
+    margin-bottom: 0.96875rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.96875rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .management-bar.navbar-expand-xl.navbar-collapse-absolute .navbar-collapse {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 0 0.0625rem 0;
+    left: 0;
+    margin-top: 0.0625rem;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+    right: 0;
+  }
+  .management-bar.navbar-expand-xl .navbar-collapse .navbar-nav .dropdown-divider {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .management-bar.navbar-expand-xl .navbar-form {
+    padding-bottom: 0.71875rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.71875rem;
+  }
+  .management-bar.navbar-expand-xl .navbar-form .form-control {
+    height: 2rem;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .management-bar.navbar-expand-xl .navbar-brand {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    padding-bottom: 1.03125rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1.03125rem;
+  }
+  .management-bar.navbar-expand-xl .navbar-form {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-xl .nav-btn {
+    margin-bottom: 0.96875rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.96875rem;
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+  .management-bar.navbar-expand-xl .nav-item > .custom-control,
+  .management-bar.navbar-expand-xl .nav-item > .form-check {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .management-bar.navbar-expand-xl .nav-link,
+  .management-bar.navbar-expand-xl .navbar-text {
+    padding-bottom: 1.21875rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1.21875rem;
+  }
+  .management-bar.navbar-expand-xl .nav-link-monospaced {
+    margin-bottom: 0.96875rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.96875rem;
+    padding: 0;
+  }
+}
+
+.management-bar.navbar-expand .navbar-brand {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+  padding-bottom: 1.03125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1.03125rem;
+}
+
+.management-bar.navbar-expand .navbar-form {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.management-bar.navbar-expand .nav-btn {
+  margin-bottom: 0.96875rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.96875rem;
+  min-height: 2rem;
+  min-width: 2rem;
+}
+
+.management-bar.navbar-expand .nav-item > .custom-control,
+.management-bar.navbar-expand .nav-item > .form-check {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.management-bar.navbar-expand .nav-link,
+.management-bar.navbar-expand .navbar-text {
+  padding-bottom: 1.21875rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1.21875rem;
+}
+
+.management-bar.navbar-expand .nav-link-monospaced {
+  margin-bottom: 0.96875rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.96875rem;
+  padding: 0;
+}
+
+@media (max-width: 575px) {
+  .management-bar .navbar-overlay-xs-down {
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .management-bar .navbar-overlay-sm-down {
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .management-bar .navbar-overlay-md-down {
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .management-bar .navbar-overlay-lg-down {
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+  }
+}
+
+.management-bar .navbar-overlay-up {
+  padding-bottom: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0;
+}
+
+.management-bar.navbar-highlight .navbar-toggler-link:after {
+  bottom: -0.0625rem;
+  height: 0.25rem;
+}
+
+@media (min-width: 576px) {
+  .management-bar.navbar-highlight.navbar-expand-sm .navbar-nav .nav-link.active:after {
+    bottom: -0.0625rem;
+    height: 0.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .management-bar.navbar-highlight.navbar-expand-md .navbar-nav .nav-link.active:after {
+    bottom: -0.0625rem;
+    height: 0.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .management-bar.navbar-highlight.navbar-expand-lg .navbar-nav .nav-link.active:after {
+    bottom: -0.0625rem;
+    height: 0.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .management-bar.navbar-highlight.navbar-expand-xl .navbar-nav .nav-link.active:after {
+    bottom: -0.0625rem;
+    height: 0.25rem;
+  }
+}
+
+.management-bar.navbar-highlight.navbar-expand .navbar-nav .nav-link.active:after {
+  bottom: -0.0625rem;
   height: 0.25rem;
 }
 
