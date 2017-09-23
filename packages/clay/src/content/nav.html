@@ -6,9 +6,9 @@ section: Components
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
 		<h3>Base Nav</h3>
+
 		<ul class="nav">
-			<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+			<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
 			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
 			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
@@ -236,6 +236,76 @@ section: Components
 						<li class="nav-item"><a class="nav-link" href="#1">Maps</a></li>
 					</ul>
 				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>How to use nav helper classes</h3>
+
+		<blockquote class="blockquote">
+			<p>Dropdown toggle with anchor: <code>dropdown-toggle nav-link</code></p>
+			<p>Dropdown toggle with button: <code>btn btn-unstyled dropdown-toggle nav-link</code></p>
+			<p>An anchor in Nav Item styled like btn: <code>btn btn-primary nav-btn nav-btn-monospaced</code></p>
+			<p>A button in Nav Item styled like nav-link: <code>btn btn-unstyled nav-link</code></p>
+			<p>A button in Nav Item: <code>btn btn-primary nav-btn</code></p>
+			<p>A monospaced anchor in Nav Item: <code>nav-link nav-link-monospaced</code></p>
+			<p>A monospaced button in Nav Item: <code>btn btn-primary nav-btn nav-btn-monospaced</code></p>
+		</blockquote>
+
+		<ul class="nav">
+			<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
+			<li class="nav-item">
+				<button class="btn btn-unstyled nav-link" type="button">Details</a>
+			</li>
+			<li class="nav-item">
+				<button class="btn btn-primary nav-btn" type="button">Details</a>
+			</li>
+			<li class="nav-item">
+				<button class="btn btn-link nav-btn" type="button">
+					Details
+				</button>
+			</li>
+			<li class="nav-item">
+				<button class="btn btn-primary nav-btn nav-btn-monospaced" type="button">De</a>
+			</li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1">Catagorization</a></li>
+			<li class="dropdown nav-item">
+				<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle nav-link" data-toggle="dropdown" type="button">
+					More
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#caret-bottom" />
+					</svg>
+				</button>
+				<div aria-labelledby="" class="dropdown-menu">
+					<a class="dropdown-item" href="#1">App Section 4</a>
+					<a class="dropdown-item" href="#1">App Section 5</a>
+					<a class="dropdown-item" href="#1">App Section 6</a>
+					<a class="dropdown-item" href="#1">App Section 7</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#cog" />
+					</svg>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="btn btn-primary nav-btn nav-btn-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#cog" />
+					</svg>
+				</a>
+			</li>
+			<li class="nav-item">
+				<button class="btn btn-unstyled nav-btn nav-btn-monospaced" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+						<use xlink:href="{{rootPath}}/images/icons/icons.svg#cog" />
+					</svg>
+				</button>
 			</li>
 		</ul>
 	</div>
