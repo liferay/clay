@@ -140,13 +140,6 @@
 			padding-top: $link-padding-y-mobile;
 		}
 
-		.nav-btn-monospaced {
-			margin-bottom: $btn-margin-y-mobile;
-			margin-left: $btn-margin-x-mobile;
-			margin-right: $btn-margin-x-mobile;
-			margin-top: $btn-margin-y-mobile;
-		}
-
 		.nav-link-monospaced {
 			margin-bottom: $btn-margin-y-mobile;
 			margin-left: $btn-margin-x-mobile;
@@ -275,15 +268,6 @@
 							padding-left: $link-padding-x;
 							padding-right: $link-padding-x;
 							padding-top: $link-padding-y;
-						}
-					}
-
-					.nav-btn-monospaced {
-						@if ($scaling-navbar) {
-							margin-bottom: $btn-margin-y;
-							margin-left: $btn-margin-x;
-							margin-right: $btn-margin-x;
-							margin-top: $btn-margin-y;
 						}
 					}
 
