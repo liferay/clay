@@ -75,6 +75,12 @@
 	margin-bottom: 0;
 }
 
+.sidebar-subtitle {
+	font-size: $sidebar-subtitle-font-size;
+	font-weight: $sidebar-subtitle-font-weight;
+	text-transform: $sidebar-subtitle-text-transform;
+}
+
 .sidebar-link {
 	color: $sidebar-link-color;
 
