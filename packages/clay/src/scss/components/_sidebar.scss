@@ -81,6 +81,12 @@
 	text-transform: $sidebar-subtitle-text-transform;
 }
 
+.sidebar-caption {
+	font-size: $sidebar-caption-font-size;
+	font-weight: $sidebar-caption-font-weight;
+	text-transform: $sidebar-caption-text-transform;
+}
+
 .sidebar-link {
 	color: $sidebar-link-color;
 
