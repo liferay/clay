@@ -119,9 +119,9 @@ ClayAlert.STATE = {
    * @instance
    * @memberof ClayAlert
    * @type {?bool}
-   * @default undefined
+   * @default false
    */
-  autoClose: Config.bool(),
+  autoClose: Config.bool().value(false),
 
   /**
 	 * Flag to indicate if the alert is closeable.
@@ -139,7 +139,7 @@ ClayAlert.STATE = {
    * @type {?bool}
    * @default false
    */
-  destroyOnHide: Config.bool(),
+  destroyOnHide: Config.bool().value(false),
 
   /**
 	 * The message of alert

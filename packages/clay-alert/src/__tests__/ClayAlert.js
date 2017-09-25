@@ -110,6 +110,7 @@ describe('ClayAlert', function() {
     expect(alert._visible).toBeFalsy();
   });
 
+  // eslint-disable-next-line
   it('should close automatically an alert after 5 seconds when type is "notification" and message has no links', function() {
     jest.useFakeTimers();
 
@@ -129,6 +130,7 @@ describe('ClayAlert', function() {
     expect(alert._visible).toBeFalsy();
   });
 
+  // eslint-disable-next-line
   it('should close automatically an alert after 10 seconds when type is "notification" and message has links', function() {
     jest.useFakeTimers();
 
@@ -148,6 +150,7 @@ describe('ClayAlert', function() {
     expect(alert._visible).toBeFalsy();
   });
 
+  // eslint-disable-next-line
   it('should close automatically an alert after 5 seconds when type is "fluid" and message has no links', function() {
     jest.useFakeTimers();
 
@@ -167,6 +170,7 @@ describe('ClayAlert', function() {
     expect(alert._visible).toBeFalsy();
   });
 
+  // eslint-disable-next-line
   it('should close automatically an alert after 10 seconds when type is "fluid" and message has links', function() {
     jest.useFakeTimers();
 
