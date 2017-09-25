@@ -55,6 +55,24 @@
 	}
 }
 
+// Sidebar List
+
+.sidebar-list-item {
+	border-color: transparent;
+	border-style: solid;
+	border-width: $sidebar-list-item-border-top-width $sidebar-list-item-border-right-width $sidebar-list-item-border-bottom-width $sidebar-list-item-border-left-width;
+	display: flex;
+	margin-bottom: -$sidebar-list-item-border-bottom-width;
+
+	.flex-col {
+		justify-content: center;
+		padding-bottom: $sidebar-list-item-flex-col-padding-y;
+		padding-left: $sidebar-list-item-flex-col-padding-x;
+		padding-right: $sidebar-list-item-flex-col-padding-x;
+		padding-top: $sidebar-list-item-flex-col-padding-y;
+	}
+}
+
 // Sidebar Panel
 
 .sidebar-panel {
@@ -151,6 +169,10 @@
 		@include hover-focus {
 			color: $sidebar-light-actions-link-hover-color;
 		}
+	}
+
+	.sidebar-list-item {
+		border-color: $sidebar-light-list-item-border-color;
 	}
 }
 
