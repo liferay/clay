@@ -6,6 +6,7 @@ import Dropdown from 'metal-dropdown';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
+import {itemsValidator} from './constants';
 import templates from './ClayDropdownBase.soy.js';
 
 /**
@@ -112,25 +113,7 @@ ClayDropdownBase.STATE = {
    * @type {!Array}
    * @default undefined
    */
-  items: Config.arrayOf(
-    Config.shapeOf({
-      active: Config.bool().value(false),
-      checked: Config.bool().value(false),
-      disabled: Config.bool().value(false),
-      indicatorSymbol: Config.string(),
-      inputName: Config.string(),
-      inputValue: Config.string(),
-      label: Config.string(),
-      type: Config.oneOf([
-        'checkbox',
-        'header',
-        'item',
-        'radio',
-        'separator',
-      ]).value('item'),
-      url: Config.string().required(),
-    })
-  ).required(),
+  items: itemsValidator.required(),
 
   /**
    * Flag to indicate if menu has a search field and search through elements

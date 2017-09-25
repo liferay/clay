@@ -222,6 +222,42 @@ describe('ClayDropdownBase', function() {
     expect(clayDropdownBase).toMatchSnapshot();
   });
 
+  it('should render a dropdown with items of type group', () => {
+    clayDropdownBase = new ClayDropdownBase({
+      items: [
+        {
+          items: [
+            {
+              label: 'Item 1',
+              url: 'item1url',
+            },
+            {
+              label: 'Item 2',
+              url: 'item2url',
+            },
+          ],
+          type: 'group',
+        },
+        {
+          items: [
+            {
+              label: 'Item 1',
+              url: 'item1url',
+            },
+            {
+              label: 'Item 2',
+              url: 'item2url',
+            },
+          ],
+          type: 'group',
+        },
+      ],
+      triggerLabel: 'Trigger',
+    });
+
+    expect(clayDropdownBase).toMatchSnapshot();
+  });
+
   it('should render a dropdown with indicators on the left', () => {
     clayDropdownBase = new ClayDropdownBase({
       indicatorsPosition: 'left',

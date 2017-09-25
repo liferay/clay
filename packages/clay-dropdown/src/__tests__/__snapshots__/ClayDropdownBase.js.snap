@@ -126,6 +126,27 @@ exports[`ClayDropdownBase should render a dropdown with items of type checkbox a
 </div>
 `;
 
+exports[`ClayDropdownBase should render a dropdown with items of type group 1`] = `
+<div class="dropdown">
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
+  <ul aria-labelledby="id" class="dropdown-menu">
+    <li>
+      <a class="dropdown-item" href="item1url">Item 1</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="item2url">Item 2</a>
+    </li>
+    <div class="dropdown-divider"></div>
+    <li>
+      <a class="dropdown-item" href="item1url">Item 1</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="item2url">Item 2</a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ClayDropdownBase should render a dropdown with items of type header 1`] = `
 <div class="dropdown">
   <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>

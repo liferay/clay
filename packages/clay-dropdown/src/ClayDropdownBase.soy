@@ -51,18 +51,32 @@
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
-		{delcall ClayDropdown.item variant="$item.type"}
-			{param active: $item.active /}
-			{param checked: $item.checked /}
-			{param disabled: $item.disabled /}
-			{param indicatorSymbol: $item.indicatorSymbol /}
-			{param indicatorsPosition: $indicatorsPosition /}
-			{param inputName: $item.inputName /}
-			{param inputValue: $item.inputValue /}
-			{param label: $item.label ?: '' /}
-			{param spritemap: $spritemap /}
-			{param url: $item.url /}
-		{/delcall}
+		{if $item.type == 'group' and $item.items}
+			{call .items}
+				{param indicatorsPosition: $indicatorsPosition /}
+				{param items: $item.items /}
+				{param spritemap: $spritemap /}
+			{/call}
+
+			{if not isLast($item)}
+				{delcall ClayDropdown.item variant="'separator'"}
+					{param label: '' /}
+				{/delcall}
+			{/if}
+		{else}
+			{delcall ClayDropdown.item variant="$item.type"}
+				{param active: $item.active /}
+				{param checked: $item.checked /}
+				{param disabled: $item.disabled /}
+				{param indicatorSymbol: $item.indicatorSymbol /}
+				{param indicatorsPosition: $indicatorsPosition /}
+				{param inputName: $item.inputName /}
+				{param inputValue: $item.inputValue /}
+				{param label: $item.label ?: '' /}
+				{param spritemap: $spritemap /}
+				{param url: $item.url /}
+			{/delcall}
+		{/if}
 	{/foreach}
 {/template}
 
