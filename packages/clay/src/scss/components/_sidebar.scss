@@ -5,6 +5,8 @@
 	-webkit-overflow-scrolling: touch;
 }
 
+// Sidebar Header
+
 .sidebar-header {
 	@include clearfix;
 
@@ -13,21 +15,14 @@
 	word-wrap: break-word;
 }
 
+// Sidebar Body
+
 .sidebar-body {
 	overflow: auto;
 
 	-webkit-overflow-scrolling: touch;
 
 	padding: $sidebar-padding;
-
-	dt {
-		padding-top: 0.1px;
-	}
-
-	dd.sidebar-caption {
-		margin-bottom: 20px;
-		margin-top: 3px;
-	}
 
 	> .sidebar-section {
 		margin-bottom: 2rem;
@@ -38,13 +33,19 @@
 	}
 }
 
+// Sidebar Footer
+
 .sidebar-footer {
 	padding: $sidebar-padding;
 }
 
+// Sidebar Actions
+
 .sidebar-actions {
 	flex-wrap: nowrap;
 }
+
+// Sidebar Section
 
 .sidebar-section {
 	position: relative;
@@ -59,6 +60,8 @@
 		min-height: 40px;
 	}
 }
+
+// Sidebar Title, Subtitle, Caption
 
 .sidebar-title {
 	display: block;
@@ -84,12 +87,14 @@
 .sidebar-dt {
 	font-size: $sidebar-dt-font-size;
 	font-weight: $sidebar-dt-font-weight;
+	margin-bottom: $sidebar-dt-margin-bottom;
 	text-transform: $sidebar-dt-text-transform;
 }
 
 .sidebar-dd {
 	font-size: $sidebar-dd-font-size;
 	font-weight: $sidebar-dd-font-weight;
+	margin-bottom: $sidebar-dd-margin-bottom;
 	text-transform: $sidebar-dd-text-transform;
 }
 
@@ -100,17 +105,6 @@
 
 	@include hover-focus {
 		color: $sidebar-link-hover-color;
-	}
-}
-
-// Sidebar Navbars
-
-.sidebar {
-	.navbar {
-		border-left-width: 0;
-		border-right-width: 0;
-
-		@include border-radius(0);
 	}
 }
 
