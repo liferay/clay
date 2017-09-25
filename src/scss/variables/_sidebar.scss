@@ -1,3 +1,5 @@
+$sidebar-panel-margin-bottom: 1rem !default;
+
 $sidebar-title-font-size: 1.5rem !default; // 24px
 $sidebar-title-font-weight: $headings-font-weight !default;
 
@@ -31,16 +33,16 @@ $sidebar-padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-b
 
 // Sidebar Light
 
-$sidebar-light-bg: darken($body-bg, 3%) !default;
+$sidebar-light-bg: $body-bg !default;
 $sidebar-light-border-color: darken($sidebar-light-bg, 6.5%) !default;
-$sidebar-light-color: #777 !default;
-$sidebar-light-panel-bg: darken($sidebar-light-bg, 6.5%) !default;
+$sidebar-light-color: $body-color !default;
+$sidebar-light-panel-bg: map-get($theme-colors, light) !default;
 
-$sidebar-light-actions-link-color: #777 !default;
-$sidebar-light-actions-link-hover-color: #333 !default;
+$sidebar-light-actions-link-color: null !default;
+$sidebar-light-actions-link-hover-color: null !default;
 
-$sidebar-light-header-title-color: #777 !default;
-$sidebar-light-header-title-hover-color: #333 !default;
+$sidebar-light-header-title-color: null !default;
+$sidebar-light-header-title-hover-color: null !default;
 
 $sidebar-light-link-color: null !default;
 $sidebar-light-link-hover-color: null !default;

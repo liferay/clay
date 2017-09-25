@@ -39,12 +39,6 @@
 	padding: $sidebar-padding;
 }
 
-// Sidebar Actions
-
-.sidebar-actions {
-	flex-wrap: nowrap;
-}
-
 // Sidebar Section
 
 .sidebar-section {
@@ -59,6 +53,19 @@
 		justify-content: center;
 		min-height: 40px;
 	}
+}
+
+// Sidebar Panel
+
+.sidebar-panel {
+	margin-bottom: $sidebar-panel-margin-bottom;
+	position: relative;
+}
+
+// Sidebar Actions
+
+.sidebar-actions {
+	flex-wrap: nowrap;
 }
 
 // Sidebar Title, Subtitle, Caption
