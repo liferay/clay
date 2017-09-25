@@ -79,6 +79,22 @@
 	text-transform: $sidebar-caption-text-transform;
 }
 
+// Sidebar Definition List (dl dt dd)
+
+.sidebar-dt {
+	font-size: $sidebar-dt-font-size;
+	font-weight: $sidebar-dt-font-weight;
+	text-transform: $sidebar-dt-text-transform;
+}
+
+.sidebar-dd {
+	font-size: $sidebar-dd-font-size;
+	font-weight: $sidebar-dd-font-weight;
+	text-transform: $sidebar-dd-text-transform;
+}
+
+// Sidebar Link
+
 .sidebar-link {
 	color: $sidebar-link-color;
 
