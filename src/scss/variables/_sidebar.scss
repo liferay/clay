@@ -1,4 +1,25 @@
+$sidebar-padding-bottom: 24px !default; // 24px
+$sidebar-padding-left: 24px !default; // 24px
+$sidebar-padding-right: 24px !default; // 24px
+$sidebar-padding-top: 24px !default; // 24px
+
+$sidebar-padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left !default;
+
+// Sidebar Panel
+
 $sidebar-panel-margin-bottom: 1rem !default;
+
+// Sidebar List
+
+$sidebar-list-item-border-bottom-width: 1px !default;
+$sidebar-list-item-border-left-width: 0 !default;
+$sidebar-list-item-border-right-width: 0 !default;
+$sidebar-list-item-border-top-width: 1px !default;
+
+$sidebar-list-item-flex-col-padding-x: 0.5rem !default;
+$sidebar-list-item-flex-col-padding-y: 1rem !default;
+
+// Sidebar Title, Subtitle, Caption
 
 $sidebar-title-font-size: 1.5rem !default; // 24px
 $sidebar-title-font-weight: $headings-font-weight !default;
@@ -11,6 +32,8 @@ $sidebar-caption-font-size: 0.875rem !default; // 14px
 $sidebar-caption-font-weight: null !default;
 $sidebar-caption-text-transform: null !default;
 
+// Sidebar Description List (dl, dt, dd)
+
 $sidebar-dt-font-size: 0.75rem !default; // 12px
 $sidebar-dt-font-weight: 500 !default;
 $sidebar-dt-margin-bottom: 0.25rem !default; // 4px
@@ -21,15 +44,10 @@ $sidebar-dd-font-weight: 500 !default;
 $sidebar-dd-margin-bottom: 0.75rem !default; // 12px
 $sidebar-dd-text-transform: null !default;
 
+// Sidebar Link
+
 $sidebar-link-color: null !default;
 $sidebar-link-hover-color: null !default;
-
-$sidebar-padding-bottom: 24px !default; // 24px
-$sidebar-padding-left: 24px !default; // 24px
-$sidebar-padding-right: 24px !default; // 24px
-$sidebar-padding-top: 24px !default; // 24px
-
-$sidebar-padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left !default;
 
 // Sidebar Light
 
@@ -47,6 +65,8 @@ $sidebar-light-header-title-hover-color: null !default;
 $sidebar-light-link-color: null !default;
 $sidebar-light-link-hover-color: null !default;
 
+$sidebar-light-list-item-border-color: $sidebar-light-border-color !default;
+
 // Sidebar Inverse
 
 $sidebar-dark-bg: #222 !default;
@@ -62,3 +82,5 @@ $sidebar-dark-header-title-hover-color: #fff !default;
 
 $sidebar-dark-link-color: null !default;
 $sidebar-dark-link-hover-color: null !default;
+
+$sidebar-dark-list-item-border-color: $sidebar-dark-border-color !default;
