@@ -27,6 +27,7 @@
 
 		{call .select}
 			{param disabled: $disabled /}
+			{param label: $label /}
 			{param multiple: $multiple /}
 			{param name: $name /}
 			{param options: $options /}
@@ -40,6 +41,7 @@
 {template .select}
 	{@param options: list<?>}
 	{@param? disabled: bool}
+	{@param? label: string}
 	{@param? multiple: bool}
 	{@param? name: string}
 
@@ -53,6 +55,9 @@
 		{/if}
 		{if $name}
 			name="{$name}"
+		{/if}
+		{if $label}
+			aria-label="{$label}"
 		{/if}
 	{/let}
 
