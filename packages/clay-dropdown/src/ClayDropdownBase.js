@@ -6,7 +6,7 @@ import Dropdown from 'metal-dropdown';
 import Soy from 'metal-soy';
 import {Config} from 'metal-state';
 
-import {itemsValidator} from './constants';
+import itemsValidator from './items_validator';
 import templates from './ClayDropdownBase.soy.js';
 
 /**

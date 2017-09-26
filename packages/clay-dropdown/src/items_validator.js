@@ -24,3 +24,4 @@ const itemsValidator = Config.arrayOf(Config.shapeOf(itemShape));
 itemShape.items = itemsValidator;
 
 export {itemsValidator};
+export default itemsValidator;
