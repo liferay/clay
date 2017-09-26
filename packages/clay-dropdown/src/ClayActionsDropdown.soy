@@ -1,0 +1,25 @@
+{namespace ClayActionsDropdown}
+
+/**
+ * This renders an actions dropdown.
+ */
+{template .render}
+	{@param items: list<?>}
+	{@param spritemap: string}
+	{@param? expanded: bool}
+
+  {let $trigger kind="html"}
+    {call ClayIcon.render}
+      {param spritemap: $spritemap /}
+      {param symbol: 'ellipsis-v' /}
+    {/call}
+  {/let}
+
+	{call ClayDropdownBase.render}
+    {param elementClasses: 'dropdown-action' /}
+    {param expanded: $expanded /}
+    {param items: $items /}
+    {param spritemap: $spritemap /}
+    {param triggerLabel: $trigger /}
+  {/call}
+{/template}

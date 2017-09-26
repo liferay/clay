@@ -1,3 +1,4 @@
+import ClayActionsDropdown from './ClayActionsDropdown';
 import ClayDropdownBase from './ClayDropdownBase';
 
-export {ClayDropdownBase};
+export {ClayActionsDropdown, ClayDropdownBase};
