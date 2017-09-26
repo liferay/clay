@@ -2,6 +2,7 @@ var path = require('path');
 var gulpsmith = require('gulpsmith');
 var gulpFrontMatter = require('gulp-front-matter');
 var basename = require('basename');
+var r2 = require('gulp-liferay-r2-css');
 
 var define = require('metalsmith-define');
 var encodeHTML = require('metalsmith-encode-html');
@@ -146,5 +147,14 @@ module.exports = function(gulp, plugins, _, config) {
 				.pipe(plugins.plumber.stop())
 				.pipe(gulp.dest('./build'));
 
+	});
+
+	gulp.task('build:rtl', function(cb) {
+		return gulp.src(['./build/css/*.css', '!./build/css/*_rtl.css'])
+			.pipe(r2())
+			.pipe(plugins.rename(function(file) {
+				file.basename += '_rtl';
+			}))
+			.pipe(gulp.dest('./build/css'));
 	});
 };
