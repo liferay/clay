@@ -132,56 +132,10 @@
 	text-transform: $sidebar-dd-text-transform;
 }
 
-// Skins
+// Sidebar Variants
 
 .sidebar-light {
-	color: $sidebar-light-color;
-
-	.sidebar-link {
-		color: $sidebar-light-link-color;
-
-		@include hover-focus {
-			color: $sidebar-light-link-hover-color;
-		}
-	}
-
-	.sidebar-header {
-		.sidebar-title {
-			color: $sidebar-light-header-title-color;
-		}
-
-		.sidebar-title.sidebar-link,
-		.sidebar-title .sidebar-link {
-			color: $sidebar-light-header-title-color;
-			text-decoration: none;
-
-			@include hover-focus {
-				color: $sidebar-light-header-title-hover-color;
-			}
-		}
-	}
-
-	.sidebar-actions .sidebar-link {
-		color: $sidebar-light-actions-link-color;
-		text-decoration: none;
-
-		@include hover-focus {
-			color: $sidebar-light-actions-link-hover-color;
-		}
-	}
-
-	.sidebar-list-item {
-		border-color: $sidebar-light-list-item-border-color;
-	}
-}
-
-.sidebar-light-bg {
-	background-color: $sidebar-light-bg;
-	border-left: 1px solid $sidebar-light-border-color;
-
-	.sidebar-panel {
-		background-color: $sidebar-light-panel-bg;
-	}
+	@include sidebar-variant($sidebar-light);
 }
 
 .sidebar-dark {
