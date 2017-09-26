@@ -37,6 +37,11 @@ class ClayDropdownBase extends Dropdown {
     } else {
       this.items = this._originalItems;
     }
+
+    this.emit('itemsFiltered', {
+      originalItems: this._originalItems,
+      filteredItems: this.items,
+    });
   }
 }
 
