@@ -48,23 +48,17 @@ $sidebar-list-item-flex-col-padding-y: 1rem !default;
 
 // Sidebar Light
 
-$sidebar-light-bg: $body-bg !default;
-$sidebar-light-border-color: darken($sidebar-light-bg, 6.5%) !default;
-$sidebar-light-color: $body-color !default;
-$sidebar-light-panel-bg: map-get($theme-colors, light) !default;
+$sidebar-light: () !default;
+$sidebar-light: map-merge((
+	bg: $body-bg,
+	border-color: darken($body-bg, 6.5%),
+	border-left-width: 1px,
+	color: $body-color,
+	list-item-border-color: darken($body-bg, 6.5%),
+	panel-bg: map-get($theme-colors, light)
+), $sidebar-light);
 
-$sidebar-light-actions-link-color: null !default;
-$sidebar-light-actions-link-hover-color: null !default;
-
-$sidebar-light-header-title-color: null !default;
-$sidebar-light-header-title-hover-color: null !default;
-
-$sidebar-light-link-color: null !default;
-$sidebar-light-link-hover-color: null !default;
-
-$sidebar-light-list-item-border-color: $sidebar-light-border-color !default;
-
-// Sidebar Inverse
+// Sidebar Dark
 
 $sidebar-dark-bg: #222 !default;
 $sidebar-dark-border-color: darken($sidebar-dark-bg, 10%) !default;
