@@ -1,0 +1,64 @@
+@mixin sidebar-variant($map) {
+	$bg: map-get($map, bg);
+	$border-color: map-get($map, border-color);
+	$border-bottom-width: setter(map-get($map, border-bottom-width), 0);
+	$border-left-width: setter(map-get($map, border-left-width), 0);
+	$border-right-width: setter(map-get($map, border-right-width), 0);
+	$border-top-width: setter(map-get($map, border-top-width), 0);
+	$color: map-get($map, color);
+	$link-color: map-get($map, link-color);
+	$link-hover-color: map-get($map, link-hover-color);
+	$header-title-color: map-get($map, header-title-color);
+	$header-title-hover-color: map-get($map, header-title-hover-color);
+	$actions-link-color: map-get($map, actions-link-color);
+	$actions-link-hover-color: map-get($map, actions-link-hover-color);
+	$list-item-border-color: map-get($map, list-item-border-color);
+	$panel-bg: map-get($map, panel-bg);
+
+	background-color: $bg;
+	border-color: $border-color;
+	border-style: solid;
+	border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
+	color: $color;
+
+	.sidebar-link {
+		color: $link-color;
+
+		@include hover-focus {
+			color: $link-hover-color;
+		}
+	}
+
+	.sidebar-header {
+		.sidebar-title {
+			color: $header-title-color;
+		}
+
+		.sidebar-title.sidebar-link,
+		.sidebar-title .sidebar-link {
+			color: $header-title-color;
+			text-decoration: none;
+
+			@include hover-focus {
+				color: $header-title-hover-color;
+			}
+		}
+	}
+
+	.sidebar-actions .sidebar-link {
+		color: $actions-link-color;
+		text-decoration: none;
+
+		@include hover-focus {
+			color: $actions-link-hover-color;
+		}
+	}
+
+	.sidebar-list-item {
+		border-color: $list-item-border-color;
+	}
+
+	.sidebar-panel {
+		background-color: $panel-bg;
+	}
+}
