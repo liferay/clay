@@ -1,0 +1,34 @@
+{namespace ClayDropdown}
+
+/**
+ * This renders a dropdown.
+ */
+{template .render}
+	{@param items: list<?>}
+	{@param spritemap: string}
+	{@param triggerLabel: any}
+	{@param? button: ?}
+	{@param? expanded: bool}
+	{@param? indicatorsPosition: string}
+	{@param? searchable: bool}
+	{@param? triggerStyle: string}
+
+  {let $trigger kind="html"}
+    {$triggerLabel}
+    {call ClayIcon.render}
+      {param spritemap: $spritemap /}
+      {param symbol: 'caret-bottom' /}
+    {/call}
+  {/let}
+
+	{call ClayDropdownBase.render}
+    {param button: $button /}
+    {param expanded: $expanded /}
+    {param indicatorsPosition: $indicatorsPosition /}
+    {param items: $items /}
+    {param searchable: $searchable /}
+    {param spritemap: $spritemap /}
+    {param triggerLabel: $trigger /}
+    {param triggerStyle: $triggerStyle /}
+  {/call}
+{/template}
