@@ -51,6 +51,7 @@ gulp.task('build', function(cb) {
 		'build:svg',
 		'build:svg:scss-icons',
 		'build:metalsmith',
+		'build:rtl',
 		'build:clean-bootstrap-patch',
 		function(err) {
 			gulp.emit('build:finished', err);
