@@ -125,16 +125,6 @@
 	text-transform: $sidebar-dd-text-transform;
 }
 
-// Sidebar Link
-
-.sidebar-link {
-	color: $sidebar-link-color;
-
-	@include hover-focus {
-		color: $sidebar-link-hover-color;
-	}
-}
-
 // Skins
 
 .sidebar-light {
