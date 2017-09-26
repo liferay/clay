@@ -421,7 +421,7 @@ button.card-link {
 			display: block;
 
 			@include border-radius(100px);
-			@include sticker-xxl;
+			@include sticker-size(xxl);
 
 			.lexicon-icon {
 				font-size: 64px;
