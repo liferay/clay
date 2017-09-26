@@ -2,7 +2,7 @@
 	border-style: $badge-border-style;
 	border-width: $badge-border-width;
 
-	@include badge;
+	@include badge-size;
 
 	margin-bottom: 2px;
 	margin-top: 2px;
@@ -30,11 +30,11 @@
 }
 
 .badge-lg {
-	@include badge-lg;
+	@include badge-size(lg);
 }
 
 .badge-sm {
-	@include badge-sm;
+	@include badge-size(sm);
 }
 
 // Badge Variants
