@@ -24,13 +24,7 @@
 
 	{let $attributes kind="attributes"}
 		{call .attributes}
-			{param ariaLabel kind="text"}
-				{if $ariaLabel}
-					{$ariaLabel}
-				{elseif $icon and not $label}
-					{$icon.symbol}
-				{/if}
-			{/param}
+			{param ariaLabel: $ariaLabel /}
 			{param block: $block /}
 			{param disabled: $disabled /}
 			{param elementClasses: $elementClasses /}
@@ -135,6 +129,10 @@
 
 	{if $ariaLabel}
 		aria-label="{$ariaLabel}"
+	{elseif $label}
+		{$label}
+	{elseif $icon}
+		{$icon.symbol}
 	{/if}
 
 	{if $disabled}

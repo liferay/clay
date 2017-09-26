@@ -47,6 +47,9 @@
 
 	{let $selectAttributes kind="attributes"}
 		class="form-control"
+		{if $label}
+			aria-label="{$label}"
+		{/if}
 		{if $disabled}
 			disabled="disabled"
 		{/if}
@@ -55,9 +58,6 @@
 		{/if}
 		{if $name}
 			name="{$name}"
-		{/if}
-		{if $label}
-			aria-label="{$label}"
 		{/if}
 	{/let}
 

@@ -3,7 +3,7 @@
 exports[`ClayRadio should generate a checked radio 1`] = `
 <div class="form-check">
   <label class="custom-control custom-radio">
-    <input checked="" class="custom-control-input" ref="input" type="radio">
+    <input checked="" class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Radio</span>
   </label>
@@ -13,7 +13,7 @@ exports[`ClayRadio should generate a checked radio 1`] = `
 exports[`ClayRadio should generate a disabled radio 1`] = `
 <div class="form-check">
   <label class="custom-control custom-radio">
-    <input disabled="" class="custom-control-input" ref="input" type="radio">
+    <input disabled="" class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Radio</span>
   </label>
@@ -23,7 +23,7 @@ exports[`ClayRadio should generate a disabled radio 1`] = `
 exports[`ClayRadio should generate a radio with custom classes 1`] = `
 <div class="form-check my-custom-class">
   <label class="custom-control custom-radio my-custom-class">
-    <input class="custom-control-input" ref="input" type="radio">
+    <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Radio</span>
   </label>
@@ -33,7 +33,7 @@ exports[`ClayRadio should generate a radio with custom classes 1`] = `
 exports[`ClayRadio should generate a radio with custom id 1`] = `
 <div class="form-check" id="myRadio">
   <label class="custom-control custom-radio" id="myRadio">
-    <input class="custom-control-input" ref="input" type="radio">
+    <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Radio</span>
   </label>
@@ -43,7 +43,7 @@ exports[`ClayRadio should generate a radio with custom id 1`] = `
 exports[`ClayRadio should generate a radio with hidden label 1`] = `
 <div class="form-check">
   <label class="custom-control custom-radio">
-    <input class="custom-control-input" ref="input" type="radio">
+    <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description sr-only">My Radio</span>
   </label>
@@ -53,7 +53,7 @@ exports[`ClayRadio should generate a radio with hidden label 1`] = `
 exports[`ClayRadio should generate a radio with name 1`] = `
 <div class="form-check">
   <label class="custom-control custom-radio">
-    <input class="custom-control-input" name="myradio" ref="input" type="radio">
+    <input class="custom-control-input" name="myradio" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Radio</span>
   </label>
@@ -63,7 +63,7 @@ exports[`ClayRadio should generate a radio with name 1`] = `
 exports[`ClayRadio should generate a radio with value 1`] = `
 <div class="form-check">
   <label class="custom-control custom-radio">
-    <input class="custom-control-input" value="myradio" ref="input" type="radio">
+    <input class="custom-control-input" value="myradio" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Radio</span>
   </label>
@@ -72,7 +72,7 @@ exports[`ClayRadio should generate a radio with value 1`] = `
 
 exports[`ClayRadio should generate an inline radio 1`] = `
 <label class="custom-control custom-radio">
-  <input class="custom-control-input" ref="input" type="radio">
+  <input class="custom-control-input" ref="input" type="radio" role="radio">
   <span class="custom-control-indicator"></span>
   <span class="custom-control-description">My Radio</span>
 </label>
@@ -80,7 +80,7 @@ exports[`ClayRadio should generate an inline radio 1`] = `
 
 exports[`ClayRadio should generate an inline radio with classes 1`] = `
 <label class="custom-control custom-radio my-custom-class">
-  <input class="custom-control-input" ref="input" type="radio">
+  <input class="custom-control-input" ref="input" type="radio" role="radio">
   <span class="custom-control-indicator"></span>
   <span class="custom-control-description">My Radio</span>
 </label>
@@ -88,7 +88,7 @@ exports[`ClayRadio should generate an inline radio with classes 1`] = `
 
 exports[`ClayRadio should generate an inline radio with custom id 1`] = `
 <label class="custom-control custom-radio" id="myRadio">
-  <input class="custom-control-input" ref="input" type="radio">
+  <input class="custom-control-input" ref="input" type="radio" role="radio">
   <span class="custom-control-indicator"></span>
   <span class="custom-control-description">My Radio</span>
 </label>
@@ -97,7 +97,7 @@ exports[`ClayRadio should generate an inline radio with custom id 1`] = `
 exports[`ClayRadio should generate default markup 1`] = `
 <div class="form-check">
   <label class="custom-control custom-radio">
-    <input class="custom-control-input" ref="input" type="radio">
+    <input class="custom-control-input" ref="input" type="radio" role="radio">
     <span class="custom-control-indicator"></span>
     <span class="custom-control-description">My Radio</span>
   </label>
