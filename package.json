@@ -3,7 +3,7 @@
   "scripts": {
     "a11y": "metal-a11y --packages ./packages -c demos/index.html",
     "build": "lerna run build",
-    "ci": "prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js --list-different && npm run lint && npm run test && npm run a11y",
+    "ci": "npm run build && prettier-eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js --list-different && npm run lint && npm run test && npm run a11y",
     "format": "prettier-eslint --write packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
