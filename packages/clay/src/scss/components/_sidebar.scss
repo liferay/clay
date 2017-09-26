@@ -57,6 +57,12 @@
 
 // Sidebar List
 
+.sidebar-list {
+	font-size: $sidebar-list-font-size;
+
+	@include list-unstyled;
+}
+
 .sidebar-list-item {
 	border-color: transparent;
 	border-style: solid;
