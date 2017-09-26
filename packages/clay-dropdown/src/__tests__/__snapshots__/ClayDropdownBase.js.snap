@@ -199,14 +199,14 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] 
   <ul aria-labelledby="id" class="dropdown-menu">
     <li class="dropdown-item">
       <label class="custom-control custom-radio">
-        <input class="custom-control-input" name="radioname" value="radio1value" ref="input" type="radio">
+        <input class="custom-control-input" name="radioname" value="radio1value" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
     </li>
     <li class="dropdown-item">
       <label class="custom-control custom-radio">
-        <input class="custom-control-input" name="radioname" value="radio2value" ref="input" type="radio">
+        <input class="custom-control-input" name="radioname" value="radio2value" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 2</span>
       </label>
@@ -221,14 +221,14 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio 2`] 
   <ul aria-labelledby="id" class="dropdown-menu">
     <li class="dropdown-item">
       <label class="custom-control custom-radio">
-        <input class="custom-control-input" ref="input" type="radio">
+        <input class="custom-control-input" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
     </li>
     <li class="dropdown-item">
       <label class="custom-control custom-radio">
-        <input class="custom-control-input" ref="input" type="radio">
+        <input class="custom-control-input" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 2</span>
       </label>
@@ -243,7 +243,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
   <ul aria-labelledby="id" class="dropdown-menu">
     <li class="dropdown-item">
       <label class="custom-control custom-radio">
-        <input checked="" class="custom-control-input" name="radio1name" value="radio1value" ref="input" type="radio">
+        <input checked="" class="custom-control-input" name="radio1name" value="radio1value" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
@@ -258,7 +258,7 @@ exports[`ClayDropdownBase should render a dropdown with items of type radio and 
   <ul aria-labelledby="id" class="dropdown-menu">
     <li class="dropdown-item">
       <label class="custom-control custom-radio">
-        <input disabled="" class="custom-control-input" name="radio1name" value="radio1value" ref="input" type="radio">
+        <input disabled="" class="custom-control-input" name="radio1name" value="radio1value" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
@@ -315,7 +315,7 @@ exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
           <input class="form-control" placeholder="Search for..." type="text" ref="searchInput">
         </div>
         <span class="input-group-inset-item">
-          <button class="btn btn-link">
+          <button class="btn btn-link" aria-label="search">
             <svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
               <use xlink:href="icons.svg#search"></use>
             </svg>

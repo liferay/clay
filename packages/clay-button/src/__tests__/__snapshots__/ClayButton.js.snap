@@ -7,7 +7,7 @@ exports[`ClayButton should render a block button 1`] = `<button class="btn btn-b
 exports[`ClayButton should render a button with custom classes 1`] = `<button class="btn my-custom-class btn-primary"></button>`;
 
 exports[`ClayButton should render a button with icon 1`] = `
-<button class="btn btn-primary">
+<button class="btn btn-primary" aria-label="plus">
   <svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus icon-monospaced">
     <use xlink:href="icons.svg#plus"></use>
   </svg>
