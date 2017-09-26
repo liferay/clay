@@ -5,14 +5,14 @@
 	-webkit-overflow-scrolling: touch;
 }
 
-// Sidebar Header
+// Sidebar Header / Footer
 
-.sidebar-header {
-	@include clearfix;
-
-	margin: 0;
-	padding: $sidebar-padding;
-	word-wrap: break-word;
+.sidebar-header,
+.sidebar-footer {
+	padding-bottom: $sidebar-padding-bottom;
+	padding-left: $sidebar-padding-left;
+	padding-right: $sidebar-padding-right;
+	padding-top: $sidebar-padding-top;
 }
 
 // Sidebar Body
@@ -22,7 +22,10 @@
 
 	-webkit-overflow-scrolling: touch;
 
-	padding: $sidebar-padding;
+	padding-bottom: $sidebar-padding-bottom;
+	padding-left: $sidebar-padding-left;
+	padding-right: $sidebar-padding-right;
+	padding-top: $sidebar-padding-top;
 
 	> .sidebar-section {
 		margin-bottom: 2rem;
@@ -31,12 +34,6 @@
 			margin-bottom: 0;
 		}
 	}
-}
-
-// Sidebar Footer
-
-.sidebar-footer {
-	padding: $sidebar-padding;
 }
 
 // Sidebar Section
