@@ -7,7 +7,7 @@
 	display: inline-block;
 	font-weight: $label-font-weight;
 
-	@include label;
+	@include label-size;
 
 	line-height: 1;
 	margin-bottom: 2px;
@@ -46,11 +46,11 @@ a.label {
 }
 
 .label-lg {
-	@include label-lg;
+	@include label-size(lg);
 }
 
 .label-sm {
-	@include label-sm;
+	@include label-size(sm);
 }
 
 // Label Variants

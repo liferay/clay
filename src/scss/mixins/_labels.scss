@@ -43,3 +43,15 @@
 		width: $label-lexicon-icon-width-lg;
 	}
 }
+
+@mixin label-size($size: '') {
+	@if ($size == sm) {
+		@include label-sm;
+	}
+	@else if ($size == lg) {
+		@include label-lg;
+	}
+	@else {
+		@include label;
+	}
+}

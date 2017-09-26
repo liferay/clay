@@ -447,7 +447,7 @@ button.card-link {
 	}
 
 	.label {
-		@include label-sm;
+		@include label-size(sm);
 	}
 }
 

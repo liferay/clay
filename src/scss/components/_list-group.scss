@@ -22,7 +22,7 @@
 	}
 
 	.label {
-		@include label-sm;
+		@include label-size(sm);
 	}
 
 	.sticker {
