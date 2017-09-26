@@ -1,15 +1,3 @@
-$navbar-size: (
-	height: 4rem,
-	height-mobile: 3rem,
-	border-bottom-width: 0.0625rem,
-	padding-x: 0,
-	padding-y: 0,
-	link-padding-x: 1rem,
-	link-padding-x-mobile: 0.875rem,
-	toggler-margin-x: 0.5rem,
-	nav-item-dropdown-margin-top: 0
-) !default;
-
 $navbar-brand-color: $nav-link-color !default;
 $navbar-brand-hover-color: $nav-link-hover-color !default;
 
@@ -34,13 +22,9 @@ $navbar-light-brand-hover-bg: transparent !default;
 $navbar-light-brand-color: $navbar-light-color !default;
 $navbar-light-brand-hover-color: $navbar-light-hover-color !default;
 
-$navbar-light-active-highlight: map-get($theme-colors, primary) !default;
+$navbar-light-active-highlight: lighten(map-get($theme-colors, primary), 22%) !default;
 
 $navbar-light-toggler-border-color: $navbar-light-border-color !default;
-
-$collapse-basic-search-transparent-light-btn-focus-color: $navbar-light-active-highlight !default;
-$collapse-basic-search-transparent-light-input-focus-color: $navbar-light-active-highlight !default;
-$collapse-basic-search-transparent-light-focus-highlight: $navbar-light-active-highlight !default;
 
 // Navbar Dark
 
@@ -54,11 +38,6 @@ $navbar-dark-disabled-color: #CACDD2 !default;
 $navbar-dark-brand-color: $navbar-dark-color !default;
 $navbar-dark-brand-hover-color: $navbar-dark-brand-color !default;
 
-$navbar-dark-active-highlight: #2B4259 !default;
+$navbar-dark-active-highlight: lighten(map-get($theme-colors, primary), 22%) !default;
 
 $navbar-dark-toggler-border-color: #FFF !default;
-
-$collapse-basic-search-transparent-inverse-btn-focus-color: $navbar-dark-active-highlight !default;
-$collapse-basic-search-transparent-inverse-input-focus-color: $navbar-dark-active-highlight !default;
-$collapse-basic-search-transparent-inverse-input-placeholder-focus-color: $navbar-dark-active-highlight !default;
-$collapse-basic-search-transparent-inverse-focus-highlight: $navbar-dark-active-highlight !default;

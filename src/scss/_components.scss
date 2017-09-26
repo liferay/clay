@@ -15,6 +15,8 @@
 @import "components/_list-group";
 @import "components/_navs";
 @import "components/_navbar";
+@import "components/_navigation-bar";
+@import "components/_management-bar"; // Should win over Navs and Navbar
 @import "components/_multi-step-nav";
 @import "components/_pagination";
 @import "components/_panels";
@@ -23,6 +25,7 @@
 @import "components/_sidebar";
 @import "components/_side-navigation";
 @import "components/_stickers";
+@import "components/_subnav";
 @import "components/_tables";
 @import "components/_tooltip";
 @import "components/_toggle-switch";

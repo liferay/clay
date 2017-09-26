@@ -1,31 +1,11 @@
-// Styles the `.navbar-overlay-*-down` and `.navbar-overlay-up` components to
-// fill the full width and height of the Navbar.
-
-@mixin navbar-overlay() {
-	@include border-radius($navbar-border-radius);
-
-	bottom: 0;
-	display: none;
-	justify-content: space-between;
-	left: 0;
-	margin-left: 0;
-	margin-right: 0;
-	padding: $navbar-padding-y $navbar-padding-x;
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: $zindex-navbar-overlay;
-
-	&.show {
-		display: flex;
-	}
-}
-
 // Sizes Navbar Desktop and Mobile based on height, font-size, and padding
 // @param $map - Sass map that contain Navbar properties to modify
 
 @mixin navbar-size($map) {
 	$scaling-navbar: setter(map-get($map, scaling-navbar), false);
+	$container-padding-x: map-get($map, container-padding-x);
+	$container-padding-x-mobile: setter(map-get($map, container-padding-x-mobile), $container-padding-x);
+
 	$height: setter(map-get($map, height), 3.5rem);
 	$border-bottom-width: setter(map-get($map, border-bottom-width), 0);
 	$border-left-width: setter(map-get($map, border-left-width), 0);
@@ -34,185 +14,143 @@
 	$font-size: setter(map-get($map, font-size), $font-size-base);
 	$padding-x: setter(map-get($map, padding-x), $navbar-padding-x);
 	$padding-y: setter(map-get($map, padding-y), $navbar-padding-y);
+	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
 	$link-padding-x: setter(map-get($map, link-padding-x), 0.5rem);
-	$link-padding-y: ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size * $line-height-base)) / 2;
-	$toggler-height: map-get($map, toggler-height);
-	$toggler-margin-x: map-get($map, toggler-margin-x);
-	$toggler-margin-y: map-get($map, toggler-margin-y);
-	$toggler-link-font-size: setter(map-get($map, toggler-link-font-size), $font-size-base);
-	$toggler-link-height: setter(map-get($map, toggler-link-height), auto);
-	$toggler-link-line-height: setter(map-get($map, toggler-link-line-height), $line-height-base);
-	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), 0.5rem);
-	$toggler-link-padding-y: ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
-	$brand-margin-right: setter(map-get($map, brand-margin-right), 0.5rem);
+	$link-padding-y: setter(map-get($map, link-padding-y), ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size * $line-height-base)) / 2);
+	$btn-min-height: setter(map-get($map, btn-min-height), 2rem);
+	$btn-min-width: setter(map-get($map, btn-min-width), 2rem);
+	$btn-margin-x: setter(map-get($map, btn-margin-x), $link-padding-x);
+	$btn-margin-y: setter(map-get($map, btn-margin-y), ($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - $btn-min-height) / 2);
+	$form-control-height: map-get($map, form-control-height);
+	$brand-font-size: setter(map-get($map, brand-font-size), $navbar-brand-font-size);
+	$brand-max-width: map-get($map, brand-max-width);
+	$brand-margin-right: setter(map-get($map, brand-margin-right), $link-padding-x);
 	$brand-padding-x: setter(map-get($map, brand-padding-x), $link-padding-x);
+	$brand-padding-y: setter(map-get($map, brand-padding-y), (($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($brand-font-size * $line-height-base)) / 2));
 	$active-border-bottom-width: setter(map-get($map, active-border-bottom-width), 0.125rem);
+	$active-border-offset-x: map-get($map, active-border-offset-x);
 	$nav-item-dropdown-margin-top: map-get($map, nav-item-dropdown-margin-top);
 
-	$height-mobile: setter(map-get($map, height-mobile), 3.5rem);
-	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size-base-mobile);
-	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), 0.5rem);
-	$link-padding-y-mobile: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2;
+	$height-mobile: setter(map-get($map, height-mobile), $height);
+	$font-size-mobile: setter(map-get($map, font-size-mobile), $font-size);
+	$link-padding-x-mobile: setter(map-get($map, link-padding-x-mobile), $link-padding-x);
+	$link-padding-y-mobile: setter(map-get($map, link-padding-y-mobile), ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($font-size-mobile * $line-height-base)) / 2);
+	$btn-min-height-mobile: setter(map-get($map, btn-min-height-mobile), $btn-min-height);
+	$btn-min-width-mobile: setter(map-get($map, btn-min-width-mobile), $btn-min-width);
+	$btn-margin-x-mobile: setter(map-get($map, btn-margin-x-mobile), $link-padding-x-mobile);
+	$btn-margin-y-mobile: setter(map-get($map, btn-margin-y-mobile), ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - $btn-min-height-mobile) / 2);
+	$form-control-height-mobile: map-get($map, form-control-height-mobile);
 	$brand-font-size-mobile: setter(map-get($map, brand-font-size-mobile), $font-size-lg-mobile);
 	$brand-margin-right-mobile: setter(map-get($map, brand-margin-right-mobile), 0);
 	$brand-padding-x-mobile: setter(map-get($map, brand-padding-x-mobile), $link-padding-x-mobile);
-	$brand-padding-y-mobile: (($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($brand-font-size-mobile * $line-height-base)) / 2);
-	$toggler-margin-x-mobile: map-get($map, toggler-margin-x-mobile);
-	$toggler-link-font-size-mobile: setter(map-get($map, toggler-link-font-size-mobile), $font-size-base-mobile);
-	$toggler-link-padding-x-mobile: map-get($map, toggler-link-padding-x-mobile);
-	$toggler-link-padding-y-mobile: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size-mobile * $toggler-link-line-height)) / 2;
+	$brand-padding-y-mobile: setter(map-get($map, brand-padding-y-mobile), (($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($brand-font-size-mobile * $line-height-base)) / 2));
+	$collapse-dropdown-item-padding-x-mobile: map-get($map, collapse-dropdown-item-padding-x-mobile);
+	$collapse-dropdown-item-padding-y-mobile: map-get($map, collapse-dropdown-item-padding-y-mobile);
 
+	$toggler-font-size: setter(map-get($map, toggler-font-size), $navbar-toggler-font-size);
+	$toggler-height: setter(map-get($map, toggler-height), $height-mobile * 0.66667);
+	$toggler-margin-x: setter(map-get($map, toggler-margin-x), $link-padding-x-mobile);
+	$toggler-margin-y: map-get($map, toggler-margin-y);
+	$toggler-padding-x: setter(map-get($map, toggler-padding-x), $navbar-toggler-padding-x);
+	$toggler-padding-y: setter(map-get($map, toggler-padding-y), $navbar-toggler-padding-y);
+
+	$toggler-link-font-size: setter(map-get($map, toggler-link-font-size), $font-size-mobile);
+	$toggler-link-height: setter(map-get($map, toggler-link-height), auto);
+	$toggler-link-line-height: setter(map-get($map, toggler-link-line-height), $line-height-base);
+	$toggler-link-margin-x: setter(map-get($map, toggler-link-margin-x), 0);
+	$toggler-link-margin-y: map-get($map, toggler-link-margin-y);
+	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), $link-padding-x-mobile);
+	$toggler-link-padding-y: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
+
+	border-color: transparent;
+
+	@include border-radius($navbar-border-radius);
+
+	border-style: solid;
 	border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
 	font-size: $font-size;
 	padding: $padding-y $padding-x;
 
-	@include scale-component($scaling-navbar) {
-		font-size: $font-size-mobile;
-	}
-
-	&.collapse-basic-search {
-		.basic-search {
-			@include media-breakpoint-down($scaling-breakpoint-down) {
-				border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
-				left: -$border-left-width;
-				right: -$border-right-width;
-				top: -$border-top-width;
-			}
-		}
-	}
-
-	&.collapse-basic-search {
-		&.navbar .basic-search {
-			@include media-breakpoint-down($scaling-breakpoint-down) {
-				padding-left: $link-padding-x;
-				padding-right: $link-padding-x;
-			}
-		}
-
-		.basic-search {
-			.input-group {
-				@include media-breakpoint-down($scaling-breakpoint-down) {
-					@if ($scaling-navbar) {
-						height: $height-mobile - $border-bottom-width - $border-top-width;
-					}
-					@else {
-						height: $height - $border-bottom-width - $border-top-width;
-					}
-				}
-			}
-		}
+	.container,
+	.container-fluid {
+		padding-left: $container-padding-x-mobile;
+		padding-right: $container-padding-x-mobile;
 	}
 
 	.navbar-toggler {
+		font-size: $toggler-font-size;
 		height: $toggler-height;
 		margin-bottom: $toggler-margin-y;
 		margin-left: $toggler-margin-x;
 		margin-right: $toggler-margin-x;
 		margin-top: $toggler-margin-y;
-
-		@include scale-component($scaling-navbar) {
-			margin-left: $toggler-margin-x-mobile;
-			margin-right: $toggler-margin-x-mobile;
-		}
+		padding-bottom: $toggler-padding-y;
+		padding-left: $toggler-padding-x;
+		padding-right: $toggler-padding-x;
+		padding-top: $toggler-padding-y;
 	}
 
 	.navbar-toggler-link {
 		height: $toggler-link-height;
 		font-size: $toggler-link-font-size;
 		line-height: $toggler-link-line-height;
+		margin-bottom: $toggler-link-margin-y;
+		margin-left: $toggler-link-margin-x;
+		margin-right: $toggler-link-margin-x;
+		margin-top: $toggler-link-margin-y;
 		padding-bottom: $toggler-link-padding-y;
 		padding-left: $toggler-link-padding-x;
 		padding-right: $toggler-link-padding-x;
 		padding-top: $toggler-link-padding-y;
-
-		@include scale-component($scaling-navbar) {
-			font-size: $toggler-link-font-size-mobile;
-			padding-bottom: $toggler-link-padding-y-mobile;
-			padding-left: $toggler-link-padding-x-mobile;
-			padding-right: $toggler-link-padding-x-mobile;
-			padding-top: $toggler-link-padding-y-mobile;
-		}
 	}
 
 	.navbar-brand {
-		margin-right: $brand-margin-right;
-		padding: 0 $brand-padding-x;
-
-		@include scale-component($scaling-navbar) {
-			font-size: $brand-font-size-mobile;
-			margin-right: $brand-margin-right-mobile;
-			padding-bottom: $brand-padding-y-mobile;
-			padding-left: $brand-padding-x-mobile;
-			padding-right: $brand-padding-x-mobile;
-			padding-top: $brand-padding-y-mobile;
-		}
+		font-size: $brand-font-size-mobile;
+		margin-right: $brand-margin-right-mobile;
+		max-width: $brand-max-width;
+		padding-bottom: $brand-padding-y-mobile;
+		padding-left: $brand-padding-x-mobile;
+		padding-right: $brand-padding-x-mobile;
+		padding-top: $brand-padding-y-mobile;
 	}
-
-	.navbar-form {
-		@if not ($link-padding-x == 0.5rem) {
-			padding-left: $link-padding-x;
-			padding-right: $link-padding-x;
-		}
-
-		@include scale-component($scaling-navbar) {
-			padding-left: $link-padding-x-mobile;
-			padding-right: $link-padding-x-mobile;
-		}
-
-		.btn,
-		.form-control {
-			@if (($height - $border-bottom-width - $border-top-width - ($padding-y * 2)) < ($input-height-inner + $border-bottom-width + $border-top-width)) {
-				height: auto;
-				padding-bottom: $link-padding-y;
-				padding-top: $link-padding-y;
-			}
-		}
-	}
-
-	.navbar-nav .nav-btn {
-		margin-left: $link-padding-x;
-		margin-right: $link-padding-x;
-
-		@if (($height - $border-bottom-width - $border-top-width - ($padding-y * 2)) < ($input-height-inner + $border-bottom-width + $border-top-width)) {
-			padding-bottom: $link-padding-y;
-			padding-top: $link-padding-y;
-		}
-
-		@include scale-component($scaling-navbar) {
-			margin-left: $link-padding-x-mobile;
-			margin-right: $link-padding-x-mobile;
-		}
-	}
-
-	.navbar-nav .nav-item > .form-check {
-		margin: 0;
-		padding-left: $link-padding-x;
-		padding-right: $link-padding-x;
-
-		@include scale-component($scaling-navbar) {
-			padding-left: $link-padding-x-mobile;
-			padding-right: $link-padding-x-mobile;
-		}
-	}
-
-	// Navbar Item Spacing
-	// Override BS4 `.navbar-expand .navbar-nav .nav-link` should have padding if
-	// not inside .navbar-collapse
 
 	.navbar-nav {
+		.nav-btn {
+			margin-bottom: $btn-margin-y-mobile;
+			margin-left: $btn-margin-x-mobile;
+			margin-right: $btn-margin-x-mobile;
+			margin-top: $btn-margin-y-mobile;
+			min-height: $btn-min-height-mobile;
+			min-width: $btn-min-width-mobile;
+		}
+
 		.nav-item {
-			.dropdown-menu {
-				margin-top: $nav-item-dropdown-margin-top;
+			> .custom-control,
+			> .form-check {
+				margin-left: $btn-margin-x-mobile;
+				margin-right: $btn-margin-x-mobile;
 			}
 		}
 
+		.nav-link,
 		.navbar-text {
-			padding: $link-padding-y $link-padding-x;
-
-			@include scale-component($scaling-navbar) {
-				padding: $link-padding-y-mobile $link-padding-x-mobile;
-			}
+			padding-bottom: $link-padding-y-mobile;
+			padding-left: $link-padding-x-mobile;
+			padding-right: $link-padding-x-mobile;
+			padding-top: $link-padding-y-mobile;
 		}
+
+		.nav-link-monospaced {
+			margin-bottom: $btn-margin-y-mobile;
+			margin-left: $btn-margin-x-mobile;
+			margin-right: $btn-margin-x-mobile;
+			margin-top: $btn-margin-y-mobile;
+			padding: 0;
+		}
+	}
+
+	.dropdown-menu {
+		margin-top: $nav-item-dropdown-margin-top;
 	}
 
 	// Navbar Expand
@@ -227,58 +165,119 @@
 					@include media-breakpoint-down($breakpoint) {
 						&.navbar-collapse-absolute {
 							.navbar-collapse {
+								border-color: transparent;
+								border-style: solid;
 								border-width: 0 $border-right-width $border-bottom-width $border-left-width;
 								left: -$border-left-width;
-
-								@if ($border-bottom-width > 0) {
-									margin-top: $border-bottom-width;
-								}
-
-								@if not ($padding-x == 0) {
-									padding-left: $padding-x;
-									padding-right: $padding-x;
-								}
-
+								margin-top: $border-bottom-width;
+								padding-bottom: $padding-y;
+								padding-left: $padding-x;
+								padding-right: $padding-x;
+								padding-top: $padding-y;
 								right: -$border-right-width;
 							}
 						}
 
-						.navbar-nav .nav-link {
-							padding-bottom: $nav-link-padding-y;
-							padding-left: $link-padding-x;
-							padding-right: $link-padding-x;
-							padding-top: $nav-link-padding-y;
+						.navbar-collapse {
+							.navbar-nav {
+								.dropdown-divider {
+									margin-left: -$padding-x;
+									margin-right: -$padding-x;
+								}
+
+								.dropdown-item {
+									padding-bottom: $collapse-dropdown-item-padding-y-mobile;
+									padding-left: $collapse-dropdown-item-padding-x-mobile;
+									padding-right: $collapse-dropdown-item-padding-x-mobile;
+									padding-top: $collapse-dropdown-item-padding-y-mobile;
+								}
+							}
+						}
+
+						.navbar-form {
+							padding-bottom: $link-padding-y-mobile;
+							padding-left: $link-padding-x-mobile;
+							padding-right: $link-padding-x-mobile;
+							padding-top: $link-padding-y-mobile;
+
+							.form-control {
+								height: $form-control-height-mobile;
+								padding-bottom: 0;
+								padding-top: 0;
+							}
 						}
 					}
 				}
 
 				@include media-breakpoint-up($next) {
-					.navbar-form {
-						padding-left: $link-padding-x;
-						padding-right: $link-padding-x;
+					.container,
+					.container-fluid {
+						@if ($scaling-navbar) {
+							padding-left: $container-padding-x;
+							padding-right: $container-padding-x;
+						}
 					}
 
-					.navbar-nav .nav-link {
-						@if not ($link-padding-y == $nav-link-padding-y) {
-							padding-bottom: $link-padding-y;
-							padding-top: $link-padding-y;
+					.navbar-brand {
+						@if ($scaling-navbar) {
+							font-size: $brand-font-size;
+							margin-right: $brand-margin-right;
+							padding-bottom: $brand-padding-y;
+							padding-left: $brand-padding-x;
+							padding-right: $brand-padding-x;
+							padding-top: $brand-padding-y;
 						}
+					}
 
-						@if not ($link-padding-x == 0.5rem) {
+					.navbar-form {
+						@if ($scaling-navbar) {
 							padding-left: $link-padding-x;
 							padding-right: $link-padding-x;
+
+							.form-control {
+								height: $form-control-height;
+							}
 						}
+					}
 
-						@include scale-component($scaling-navbar) {
-							@if not ($link-padding-y-mobile == $nav-link-padding-y) {
-								padding-bottom: $link-padding-y-mobile;
-								padding-top: $link-padding-y-mobile;
-							}
+					.nav-btn {
+						@if ($scaling-navbar) {
+							margin-bottom: $btn-margin-y;
+							margin-left: $btn-margin-x;
+							margin-right: $btn-margin-x;
+							margin-top: $btn-margin-y;
+							min-height: $btn-min-height;
+							min-width: $btn-min-width;
+						}
+					}
 
-							@if not ($link-padding-x-mobile == 0.5rem) {
-								padding-left: $link-padding-x-mobile;
-								padding-right: $link-padding-x-mobile;
+					.nav-item {
+						> .custom-control,
+						> .form-check {
+							@if ($scaling-navbar) {
+								margin-left: $btn-margin-x;
+								margin-right: $btn-margin-x;
 							}
+						}
+					}
+
+					.nav-link,
+					.navbar-text {
+						@if ($scaling-navbar) {
+							padding-bottom: $link-padding-y;
+							padding-left: $link-padding-x;
+							padding-right: $link-padding-x;
+							padding-top: $link-padding-y;
+						}
+					}
+
+					.nav-link-monospaced {
+						@if ($scaling-navbar) {
+							margin-bottom: $btn-margin-y;
+							margin-left: $btn-margin-x;
+							margin-right: $btn-margin-x;
+							margin-top: $btn-margin-y;
+							padding: 0;
 						}
 					}
 				}
@@ -286,18 +285,27 @@
 		}
 	}
 
-	&.navbar-highlight.collapse-basic-search-transparent {
-		.basic-search {
-			&:after {
-				bottom: -$border-bottom-width - $padding-y;
-				height: 0;
-				left: 0;
-				right: 0;
-			}
+	// Navbar Overlay Styles for `.navbar-overlay-xs-down`,
+	// `.navbar-overlay-sm-down`, `.navbar-overlay-md-down`,
+	// `.navbar-overlay-lg-down`, `.navbar-overlay-up`
 
-			&.focus:after {
-				height: $active-border-bottom-width;
-				margin-top: -$active-border-bottom-width;
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$index: index(map-keys($grid-breakpoints), $breakpoint);
+		$length: length(map-keys($grid-breakpoints));
+		$infix: '.navbar-overlay-#{$breakpoint}-down';
+
+		@if ($index == $length) {
+			$infix: '.navbar-overlay-up';
+		}
+
+		#{$infix} {
+			@include media-breakpoint-down($breakpoint) {
+				@include border-radius($navbar-border-radius);
+
+				padding-bottom: $padding-y;
+				padding-left: $padding-x;
+				padding-right: $padding-x;
+				padding-top: $padding-y;
 			}
 		}
 	}
@@ -307,13 +315,8 @@
 			&:after {
 				bottom: -$border-bottom-width - $padding-y;
 				height: $active-border-bottom-width;
-				left: $toggler-link-padding-x;
-				right: $toggler-link-padding-x;
-
-				@include scale-component($scaling-navbar) {
-					left: $toggler-link-padding-x-mobile;
-					right: $toggler-link-padding-x-mobile;
-				}
+				left: $active-border-offset-x;
+				right: $active-border-offset-x;
 			}
 		}
 	}
@@ -329,8 +332,8 @@
 						&.active:after {
 							bottom: -$border-bottom-width - $padding-y;
 							height: $active-border-bottom-width;
-							left: $link-padding-x;
-							right: $link-padding-x;
+							left: $active-border-offset-x;
+							right: $active-border-offset-x;
 						}
 					}
 				}

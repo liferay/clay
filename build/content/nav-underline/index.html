@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Lexicon - Nav Underline</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
+	<link rel="stylesheet" href="../../css/site/site-main.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/collapsible-search.js"></script>
+	<script src="../../js/side-navigation.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="row" id="headerTopBar">
+			<div class="container">
+				<a class="btn btn-primary" href="#beginContent" id="skipTo">Skip to Content</a>
+
+				<button type="button" class="animated-toggle btn btn-primary d-md-none navbar-toggle navbar-toggler mt-2 hidden-sm-up">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+						<use xlink:href="../../images/icons/icons.svg#bars" />
+					</svg>
+				</button>
+
+				<h4 class="title"><a href="../..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.8</span></h4>
+
+				<div class="dropdown" id="siteConfig">
+	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
+		<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+			<use xlink:href="../../images/icons/icons.svg#cog"></use>
+		</svg>
+	</button>
+	<div class="dropdown-menu dropdown-menu-right">
+		<div class="dropdown-header">Site Settings</div>
+		<form>
+			<div class="dropdown-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" id="toggleAtlas" type="checkbox">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Show Atlas</span>
+					</label>
+				</div>
+			</div>
+			<div class="dropdown-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" id="toggleSiteCss" type="checkbox">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Show Site CSS</span>
+					</label>
+				</div>
+			</div>
+
+			<div class="dropdown-section">
+				<button class="btn btn-secondary btn-block" id="resetSiteConfig">Reset Settings</button>
+			</div>
+		</form>
+	</div>
+</div>
+			</div>
+		</header>
+
+		<section class="container main-nav-container">
+			<nav class="" id="mainNav">
+	<div class="main-nav-inner">
+			
+
+		<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../">Home</a>
+</li>
+<li class=""><span class="nav-title">Components</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/alerts">Alerts</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/buttons">Buttons</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/cards">Cards</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/dropdowns">Dropdowns</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements">Form Elements</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-custom">Form Elements (Custom)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-elements-input-groups">Form Elements (Input Groups)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/form-validation">Form Elements (Validation)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/grid">Grid</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/icons-lexicon">Icons (Lexicon)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-aspect-ratio">Images (Aspect Ratios)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/images-and-thumbnails">Images and Thumbnails</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/list-groups">List Groups</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/loaders">Loading Indicators</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/modals">Modals</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/multi-step-nav">Multi Step Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav">Nav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-pills">Nav Pills</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/nav-tabs">Nav Tabs</a>
+</li>
+<li class="active"><a class="nav-title" href="../../content/nav-underline">Nav Underline</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navbar">Navbar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/management-bar">Navbar (Management Bar)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/navigation-bar">Navbar (Navigation Bar)</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/paginations">Pagination</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/panels">Panels</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/popovers">Popovers and Tooltips</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/progress-bars">Progress Bars</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidebar">Sidebar</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/subnav">Subnav</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/tables">Tables</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/timelines">Timelines</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/toggle-switch">Toggle Switch</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/utilities">Utilities</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Components (JS)</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/collapsible-search">Collapsible Search</a>
+</li>
+<li class=""><a class="nav-title" href="../../content/sidenav">Sidenav</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Elements</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/typography">Typography</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Extending Components</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/extending-toggles">Extending Toggles</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><span class="nav-title">Visual Tests</span>
+<div class="">
+<ul class="nav flex-column main-nav-section">
+<li class=""><a class="nav-title" href="../../content/test-assorted">Assorted</a>
+</li>
+</ul>
+</div>
+</li>
+<li class=""><a class="nav-title" href="../../CHANGELOG">CHANGELOG</a>
+</li>
+<li class="nav-static-link"><a class="nav-title" href="https://github.com/liferay/lexicon">GitHub</a>
+</ul>
+	</div>
+</nav>
+
+	<div class="" id="mainContent">
+		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
+			Nav Underline
+
+			
+		</h1>
+
+		
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="nav-underline"><a class="heading-anchor" href="#nav-underline"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Underline</h3>
+
+		<ul class="nav nav-underline">
+			<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+			<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
+			<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="nav-underline-as-tabs"><a class="heading-anchor" href="#nav-underline-as-tabs"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Underline as Tabs</h3>
+
+		<ul class="nav nav-underline" role="tablist">
+			<li class="nav-item">
+				<a aria-controls="navUnderlineFields" aria-expanded="true" class="active nav-link" data-toggle="tab" href="#navUnderlineFields" id="navUnderlineFieldsTab" role="tab">Fields</a>
+			</li>
+			<li class="nav-item">
+				<a aria-controls="navUnderlineSettings" class="nav-link" data-toggle="tab" href="#navUnderlineSettings" id="navUnderlineSettingsTab" role="tab">Settings</a>
+			</li>
+			<li class="nav-item">
+				<a aria-controls="navUnderlineDocuments" class="disabled nav-link" href="#navUnderlineDocuments" id="navUnderlineDocumentsTab" role="tab">Documents</a>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link" data-toggle="dropdown" href="#1">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</a>
+				<div class="dropdown-menu dropdown-menu-indicator-end">
+					<a aria-controls="navUnderlineSetup" class="dropdown-item" data-toggle="tab" href="#navUnderlineSetup" id="navUnderlineSetupTab" role="tab">
+						Setup
+						<span class="dropdown-item-indicator"></span>
+					</a>
+					<a aria-controls="navUnderlineSupportedClients" class="dropdown-item" data-toggle="tab" href="#navUnderlineSupportedClients" id="navUnderlineSupportedClientsTab" role="tab">
+						Supported Clients
+						<span class="dropdown-item-indicator"></span>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div aria-labelledby="navUnderlineFieldsTab" class="active fade show tab-pane" id="navUnderlineFields" role="tabpanel">
+				Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.
+			</div>
+			<div aria-labelledby="navUnderlineSettingsTab" class="fade tab-pane" id="navUnderlineSettings" role="tabpanel">
+				Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.
+			</div>
+			<div aria-labelledby="navUnderlineDocumentsTab" class="fade tab-pane" id="navUnderlineDocuments" role="tabpanel">
+				Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.
+			</div>
+			<div aria-labelledby="navUnderlineSetupTab" class="fade tab-pane" id="navUnderlineSetup" role="tabpanel">
+				Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.
+			</div>
+			<div aria-labelledby="navUnderlineSupportedClientsTab" class="fade tab-pane" id="navUnderlineSupportedClients" role="tabpanel">
+				At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3 id="nav-underline-as-tabs-just-for-faro"><a class="heading-anchor" href="#nav-underline-as-tabs-just-for-faro"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../../images/icons/icons.svg#link"></svg></a>Nav Underline as Tabs (just for Faro)</h3>
+
+		<ul class="nav nav-underline" role="tablist">
+			<li class="nav-item">
+				<button aria-controls="buttonNavUnderlineFields" aria-expanded="true" class="active btn btn-unstyled nav-link" data-target="#buttonNavUnderlineFields" data-toggle="tab" id="buttonNavUnderlineFieldsTab" role="tab" type="button">Fields</button>
+			</li>
+			<li class="nav-item">
+				<button aria-controls="buttonNavUnderlineSettings" class="btn btn-unstyled nav-link" data-target="#buttonNavUnderlineSettings" data-toggle="tab" id="buttonNavUnderlineSettingsTab" role="tab" type="button">Settings</button>
+			</li>
+			<li class="nav-item">
+				<button aria-controls="buttonNavUnderlineDocuments" class="btn btn-unstyled disabled nav-link" data-target="#buttonNavUnderlineDocuments" id="buttonNavUnderlineDocumentsTab" role="tab" type="button">Documents</button>
+			</li>
+			<li class="dropdown nav-item">
+				<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle nav-link" data-toggle="dropdown" type="button">
+					Configuration
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+					</svg>
+				</button>
+				<div class="dropdown-menu dropdown-menu-indicator-end">
+					<button aria-controls="buttonNavUnderlineSetup" class="dropdown-item" data-target="#buttonNavUnderlineSetup" data-toggle="tab" id="buttonNavUnderlineSetupTab" role="tab" type="button">
+						Setup
+						<span class="dropdown-item-indicator"></span>
+					</button>
+					<button aria-controls="buttonNavUnderlineSupportedClients" class="dropdown-item" data-target="#buttonNavUnderlineSupportedClients" data-toggle="tab" id="buttonNavUnderlineSupportedClientsTab" role="tab" type="button">
+						Supported Clients
+						<span class="dropdown-item-indicator"></span>
+					</button>
+				</div>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div aria-labelledby="buttonNavUnderlineFieldsTab" class="active fade show tab-pane" id="buttonNavUnderlineFields" role="tabpanel">
+				Single origin, extra id beans, eu to go, skinny americano ut aftertaste sugar. At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.
+			</div>
+			<div aria-labelledby="buttonNavUnderlineSettingsTab" class="fade tab-pane" id="buttonNavUnderlineSettings" role="tabpanel">
+				Iced, crema, coffee id kopi-luwak coffee variety. Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.
+			</div>
+			<div aria-labelledby="navUnderlineDocumentsTab" class="fade tab-pane" id="navUnderlineDocuments" role="tabpanel">
+				Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.
+			</div>
+			<div aria-labelledby="buttonNavUnderlineSetupTab" class="fade tab-pane" id="buttonNavUnderlineSetup" role="tabpanel">
+				Skinny extraction, id trifecta qui trifecta grinder. Barista robusta arabica breve ut skinny milk beans macchiato carajillo espresso. Cultivar single shot brewed, coffee steamed to go wings to go cortado. Grinder, siphon coffee acerbic espresso cinnamon crema breve.
+			</div>
+			<div aria-labelledby="buttonNavUnderlineSupportedClientsTab" class="fade tab-pane" id="buttonNavUnderlineSupportedClients" role="tabpanel">
+				At americano, viennese variety iced grounds, grinder froth and pumpkin spice aromatic. Cultivar aged lungo, grounds caf&#xE9; au lait, skinny, blue mountain, in variety sugar shop roast. Wings, blue mountain affogato organic cappuccino java plunger pot. Single shot variety pumpkin spice seasonal skinny barista carajillo robust cream.
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+
+		</section>
+	</div>
+
+	<script src="../../js/site/toggle_css.js"></script>
+	<script src="../../js/svg4everybody.js" type="text/javascript"></script>
+
+	<script>
+		svg4everybody({
+			polyfill: true
+		});
+
+		$(function() {
+			var body = $('body');
+			var headerTopBar = $('#headerTopBar');
+
+			headerTopBar.find('.navbar-toggle').on(
+				'click',
+				function(event) {
+					var $this = $(this);
+
+					var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+					var mainNavContainer = $('.main-nav-container');
+					var wrapper = $this.closest('#wrapper');
+
+					var isNavOpen = (function() {
+						if (wrapper.hasClass('main-nav-open')) {
+							return true;
+						}
+
+						return false;
+					})();
+
+					var forceReflow = function(el) {
+						el.css({
+							display: 'table'
+						});
+
+						setTimeout(function() {
+							el.css({
+								display: ''
+							});
+						}, 0);
+					};
+
+					event.preventDefault();
+
+					mainNavContainer.on(
+						transitionEnd,
+						function(event) {
+							if ($(event.target).is('#mainNav')) {
+								mainNavContainer.removeClass('main-nav-transition');
+								forceReflow($('html'));
+
+								if (isNavOpen) {
+									body.removeClass('lexicon-site-body-fixed');
+								}
+
+								$(this).off(transitionEnd);
+							}
+						}
+					);
+
+					mainNavContainer.addClass('main-nav-transition');
+
+					if (isNavOpen) {
+						wrapper.removeClass('main-nav-open');
+					}
+					else {
+						body.addClass('lexicon-site-body-fixed');
+						wrapper.addClass('main-nav-open');
+					}
+				}
+			);
+		});
+	</script>
+	</body>
+</html>

@@ -7,15 +7,15 @@
 // Rounded
 
 .rounded {
-	border-radius: $rounded-border-radius;
+	border-radius: $rounded-border-radius !important;
 }
 
 .rounded-circle {
-	border-radius: $rounded-circle-border-radius;
+	border-radius: $rounded-circle-border-radius !important;
 }
 
 .rounded-0 {
-	border-radius: $rounded-0-border-radius;
+	border-radius: $rounded-0-border-radius !important;
 }
 
 // Flex Col
