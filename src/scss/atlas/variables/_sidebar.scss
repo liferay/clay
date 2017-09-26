@@ -1,14 +1,1 @@
 // Sidebar Light
-
-// Sidebar Inverse
-
-$sidebar-dark-bg: #1F282E !default;
-$sidebar-dark-border-color: darken($sidebar-dark-bg, 10%) !default;
-$sidebar-dark-color: map-get($theme-colors, dark) !default;
-$sidebar-dark-panel-bg: #1B2228 !default;
-
-$sidebar-dark-actions-link-color: $sidebar-dark-color !default;
-$sidebar-dark-actions-link-hover-color: $sidebar-dark-actions-link-color !default;
-
-$sidebar-dark-header-title-color: #FFF !default;
-$sidebar-dark-header-title-hover-color: $sidebar-dark-header-title-color !default;

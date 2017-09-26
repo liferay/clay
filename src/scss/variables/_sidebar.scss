@@ -57,21 +57,3 @@ $sidebar-light: map-merge((
 	list-item-border-color: darken($body-bg, 6.5%),
 	panel-bg: map-get($theme-colors, light)
 ), $sidebar-light);
-
-// Sidebar Dark
-
-$sidebar-dark-bg: #222 !default;
-$sidebar-dark-border-color: darken($sidebar-dark-bg, 10%) !default;
-$sidebar-dark-color: lighten($gray-400, 15%) !default;
-$sidebar-dark-panel-bg: darken($sidebar-dark-bg, 10%) !default;
-
-$sidebar-dark-actions-link-color: lighten($gray-400, 15%) !default;
-$sidebar-dark-actions-link-hover-color: #fff !default;
-
-$sidebar-dark-header-title-color: lighten($gray-400, 15%) !default;
-$sidebar-dark-header-title-hover-color: #fff !default;
-
-$sidebar-dark-link-color: null !default;
-$sidebar-dark-link-hover-color: null !default;
-
-$sidebar-dark-list-item-border-color: $sidebar-dark-border-color !default;
