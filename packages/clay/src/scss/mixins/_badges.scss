@@ -43,3 +43,15 @@
 		width: $badge-lexicon-icon-width-lg;
 	}
 }
+
+@mixin badge-size($size: '') {
+	@if ($size == sm) {
+		@include badge-sm;
+	}
+	@else if ($size == lg) {
+		@include badge-lg;
+	}
+	@else {
+		@include badge;
+	}
+}
