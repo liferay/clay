@@ -8,7 +8,7 @@
 	font-weight: $sticker-font-weight;
 	position: relative;
 
-	@include sticker;
+	@include sticker-size;
 
 	text-align: center;
 	vertical-align: middle;
@@ -110,7 +110,7 @@
 // Sticker Sizes
 
 .sticker-sm {
-	@include sticker-sm;
+	@include sticker-size(sm);
 
 	&.sticker-outside {
 		left: $sticker-outside-offset-sm;
@@ -136,7 +136,7 @@
 }
 
 .sticker-lg {
-	@include sticker-lg;
+	@include sticker-size(lg);
 
 	&.sticker-outside {
 		left: $sticker-outside-offset-lg;
@@ -162,11 +162,11 @@
 }
 
 .sticker-xl {
-	@include sticker-xl;
+	@include sticker-size(xl);
 }
 
 .sticker-xxl {
-	@include sticker-xxl;
+	@include sticker-size(xxl);
 }
 
 // Sticker Variants

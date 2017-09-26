@@ -27,3 +27,21 @@
 
 	@include monospace($sticker-size-xxl);
 }
+
+@mixin sticker-size($size: '') {
+	@if ($size == sm) {
+		@include sticker-sm;
+	}
+	@else if ($size == lg) {
+		@include sticker-lg;
+	}
+	@else if($size == xl) {
+		@include sticker-xl;
+	}
+	@else if($size == xxl) {
+		@include sticker-xxl;
+	}
+	@else {
+		@include sticker;
+	}
+}
