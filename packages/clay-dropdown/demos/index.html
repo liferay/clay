@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
 
 	<style>
-		.my-personal-container {
-			position: relative;
+		body {
+			background-color: #FFF;
 		}
 
 		.row {
@@ -26,14 +26,28 @@
 
 	<div class="row row-spacing">
 		<div class="col">
+			<h4>Dropdown Base (all options)</h1>
+			<div id="base-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dropdown</h1>
+			<div id="dropdown-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
 			<h4>Actions Dropdown</h1>
-			<div id="actions-block"></div>
+			<div id="action-dropdown-block"></div>
 		</div>
 	</div>
 
 
 	<script>
-		let prueba = new metal.ClayDropdownBase(
+		new metal.ClayDropdownBase(
 			{
 				button: {
 					label: 'Done',
@@ -107,7 +121,145 @@
 				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
 				triggerLabel: 'Trigger'
 			},
-			'#actions-block'
+			'#base-block'
+		);
+
+		new metal.ClayDropdown(
+			{
+				items: [
+					{
+						label: 'Group 1',
+						url: '#1',
+						type: 'header'
+					},
+					{
+						label: 'Element 1',
+						url: '#1'
+					},
+					{
+						disabled: true,
+						indicatorSymbol: 'check',
+						label: 'Element 2',
+						url: '#2'
+					},
+					{
+						type: 'separator'
+					},
+					{
+						active: true,
+						label: 'Element 3',
+						url: '#3'
+					},
+					{
+						label: 'Element 4',
+						url: '#4',
+						type: 'checkbox'
+					},
+					{
+						checked: true,
+						label: 'Element 5',
+						url: '#5',
+						type: 'checkbox'
+					},
+					{
+						inputName: 'radio1',
+						inputValue: '1',
+						label: 'Element 6',
+						url: '#6',
+						type: 'radio'
+					},
+					{
+						checked: true,
+						inputName: 'radio1',
+						inputValue: '2',
+						label: 'Element 7',
+						url: '#7',
+						type: 'radio'
+					},
+					{
+						indicatorSymbol: 'check',
+						label: 'Element 8',
+						url: '#8',
+					},
+					{
+						indicatorSymbol: 'check',
+						label: 'Element 9',
+						url: '#9',
+					}
+				],
+				searchable: true,
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				triggerLabel: 'Trigger'
+			},
+			'#dropdown-block'
+		);
+		
+		/**
+		 * Actions Dropdown
+		 **/
+		new metal.ClayActionsDropdown(
+			{
+				items: [
+					{
+						label: 'Group 1',
+						type: 'header'
+					},
+					{
+						label: 'Element 1',
+						url: '#1'
+					},
+					{
+						label: 'Element 2',
+						url: '#1'
+					},
+				],
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				triggerLabel: 'Trigger'
+			},
+			'#action-dropdown-block'
+		);
+		new metal.ClayActionsDropdown(
+			{
+				items: [
+					{
+						items: [
+							{
+								label: 'Group 1',
+								type: 'header'
+							},
+							{
+								label: 'Element 1',
+								url: '#1'
+							},
+							{
+								label: 'Element 2',
+								url: '#1'
+							},
+						],
+						type: 'group'
+					},
+					{
+						items: [
+							{
+								label: 'Group 2',
+								type: 'header'
+							},
+							{
+								label: 'Element 1',
+								url: '#1'
+							},
+							{
+								label: 'Element 2',
+								url: '#1'
+							},
+						],
+						type: 'group'
+					},
+				],
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				triggerLabel: 'Trigger'
+			},
+			'#action-dropdown-block'
 		);
 	</script>
 </body>
