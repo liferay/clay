@@ -109,12 +109,6 @@
 
 // Sidebar Definition List (dl dt dd)
 
-.sidebar-dl {
-	.label {
-		@include label-size(lg);
-	}
-}
-
 .sidebar-dt {
 	font-size: $sidebar-dt-font-size;
 	font-weight: $sidebar-dt-font-weight;
