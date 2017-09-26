@@ -92,12 +92,14 @@
 	display: block;
 	font-size: $sidebar-title-font-size;
 	font-weight: $sidebar-title-font-weight;
+	line-height: normal;
 	margin-bottom: 0;
 }
 
 .sidebar-subtitle {
 	font-size: $sidebar-subtitle-font-size;
 	font-weight: $sidebar-subtitle-font-weight;
+	line-height: normal;
 	text-transform: $sidebar-subtitle-text-transform;
 }
 
