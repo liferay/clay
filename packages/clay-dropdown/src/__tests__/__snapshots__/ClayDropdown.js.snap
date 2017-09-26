@@ -70,7 +70,7 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
 
 exports[`ClayDropdown should render a searchable dropdown 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">
+  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
@@ -99,7 +99,7 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
 
 exports[`ClayDropdown should render an expanded dropdown 1`] = `
 <div class="dropdown show">
-  <button aria-expanded="true" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">
+  <button aria-expanded="true" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>

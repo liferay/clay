@@ -95,6 +95,7 @@ describe('ClayDropdown', function() {
         },
       ],
       spritemap: 'icons.svg',
+      triggerLabel: 'Trigger',
     });
 
     expect(clayDropdown).toMatchSnapshot();
@@ -110,6 +111,7 @@ describe('ClayDropdown', function() {
       ],
       searchable: true,
       spritemap: 'icons.svg',
+      triggerLabel: 'Trigger',
     });
 
     expect(clayDropdown).toMatchSnapshot();
