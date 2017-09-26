@@ -10,10 +10,14 @@
 	$link-hover-color: map-get($map, link-hover-color);
 	$header-title-color: map-get($map, header-title-color);
 	$header-title-hover-color: map-get($map, header-title-hover-color);
+	$subtitle-color: map-get($map, subtitle-color);
+	$caption-color: map-get($map, caption-color);
 	$actions-link-color: map-get($map, actions-link-color);
 	$actions-link-hover-color: map-get($map, actions-link-hover-color);
 	$list-item-border-color: map-get($map, list-item-border-color);
 	$panel-bg: map-get($map, panel-bg);
+	$dt-color: map-get($map, dt-color);
+	$dd-color: map-get($map, dd-color);
 
 	background-color: $bg;
 	border-color: $border-color;
@@ -45,6 +49,14 @@
 		}
 	}
 
+	.sidebar-subtitle {
+		color: $subtitle-color;
+	}
+
+	.sidebar-caption {
+		color: $caption-color;
+	}
+
 	.sidebar-actions .sidebar-link {
 		color: $actions-link-color;
 		text-decoration: none;
@@ -60,5 +72,13 @@
 
 	.sidebar-panel {
 		background-color: $panel-bg;
+	}
+
+	.sidebar-dt {
+		color: $dt-color;
+	}
+
+	.sidebar-dd {
+		color: $dd-color;
 	}
 }
