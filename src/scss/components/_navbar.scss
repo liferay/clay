@@ -194,7 +194,6 @@
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
-							background-color: $dropdown-bg;
 							box-shadow: $navbar-collapse-absolute-box-shadow;
 							left: 0;
 							margin-top: -$navbar-padding-y;
@@ -203,16 +202,6 @@
 							right: 0;
 							top: 100%;
 							z-index: $zindex-dropdown;
-						}
-
-						&.navbar-dark-bg .navbar-collapse {
-							background-color: $navbar-dark-bg;
-							border-color: $navbar-dark-border-color;
-						}
-
-						&.navbar-light-bg .navbar-collapse {
-							background-color: $navbar-light-bg;
-							border-color: $navbar-light-border-color;
 						}
 					}
 

@@ -410,6 +410,22 @@
 			background-color: $bg;
 		}
 
+		@each $breakpoint in map-keys($grid-breakpoints) {
+			$next: breakpoint-next($breakpoint, $grid-breakpoints);
+			$infix: breakpoint-infix($next, $grid-breakpoints);
+
+			@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
+				&.navbar-expand#{$infix} {
+					@include media-breakpoint-down($breakpoint) {
+						&.navbar-collapse-absolute .navbar-collapse {
+							background-color: $bg;
+							border-color: $border-color;
+						}
+					}
+				}
+			}
+		}
+
 		@content;
 	}
 }
