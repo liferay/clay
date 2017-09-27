@@ -7,11 +7,6 @@ $navbar-active-highlight: transparent !default;
 $navbar-text-truncate-spacer-right: 25px !default;
 $navbar-text-truncate-max-width: 140px !default;
 
-// Navbar Brand
-
-$navbar-brand-color: null !default;
-$navbar-brand-hover-color: null !default;
-
 // Navbar Light
 
 $navbar-light-bg: map-get($theme-colors, light) !default;
