@@ -3,7 +3,7 @@
 // @param $val - The default value
 
 @function setter($var, $val: false) {
-	@if ($var) {
+	@if ($var != null) {
 		@return $var;
 	}
 
