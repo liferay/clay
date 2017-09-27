@@ -89,16 +89,11 @@
 // Navbar Brand
 
 .navbar-brand {
-	color: $navbar-brand-color;
 	margin-right: 0;
 	max-width: calc(100% - 72px);
 	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
-
-	@include hover-focus {
-		color: $navbar-brand-hover-color;
-	}
 }
 
 // Navbar Form
