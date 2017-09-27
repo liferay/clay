@@ -7,7 +7,7 @@
     "format": "prettier-eslint --write packages/clay-*/src/*.js packages/clay-*/src/**/*.js",
     "lerna": "lerna bootstrap -- --no-optional --no-package-lock",
     "lint": "eslint packages/clay-*/src/*.js packages/clay-*/src/**/*.js && npm run mcritic",
-    "mcritic": "mcritic packages/ --ignore '**/{clay-dropdown,node_modules}/**'",
+    "mcritic": "mcritic packages/ --ignore '**/{generator-clay,clay-dropdown,node_modules}/**'",
     "precommit": "lint-staged",
     "start": "http-server . -p 4000",
     "test": "lerna run soy && jest && npm run a11y"
