@@ -24,7 +24,7 @@
 					</svg>
 				</button>
 
-				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.8</span></h4>
+				<h4 class="title"><a href="..">Lexicon</a> <span class="label label-primary label-sm lexicon-version">v2.0.0-alpha.9</span></h4>
 
 				<div class="dropdown" id="siteConfig">
 	<button class="btn btn-primary btn-sm" data-toggle="dropdown">
@@ -197,7 +197,157 @@
 			
 		</h1>
 
-		<div class="col-md-12"><h3 id="v2-0-0-alpha-8-september-1-2017"><a class="heading-anchor" href="#v2-0-0-alpha-8-september-1-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.8 - September 1, 2017</h3>
+		<div class="col-md-12"><h3 id="v2-0-0-alpha-9-september-27-2017"><a class="heading-anchor" href="#v2-0-0-alpha-9-september-27-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.9 September 27, 2017</h3>
+<ul>
+<li>Breaking: Sidebar removed <code>$sidebar-padding</code>, list out padding properties individually</li>
+<li>Breaking: Sidebar removed <code>$sidebar-dark-bg</code>, <code>$sidebar-dark-border-color</code>, <code>$sidebar-dark-color</code>, <code>$sidebar-dark-panel-bg</code>, <code>$sidebar-dark-actions-link-color</code>, <code>$sidebar-dark-actions-link-hover-color</code>, <code>$sidebar-dark-header-title-color</code>, <code>$sidebar-dark-header-title-hover-color</code>, <code>$sidebar-dark-link-color</code>, <code>$sidebar-dark-link-hover-color</code>, <code>$sidebar-dark-list-item-border-color</code></li>
+<li>Breaking: Sidebar removed <code>.sidebar-dark</code> and <code>.sidebar-dark-bg</code> variant</li>
+<li>Breaking: Sidebar removed <code>$sidebar-light-bg</code>, <code>$sidebar-light-border-color</code>, <code>$sidebar-light-color</code>, <code>$sidebar-light-panel-bg</code>, <code>$sidebar-light-actions-link-color</code>, <code>$sidebar-light-actions-link-hover-color</code>, <code>$sidebar-light-header-title-color</code>, <code>$sidebar-light-header-title-hover-color</code>, <code>$sidebar-light-link-color</code>, <code>$sidebar-light-link-hover-color</code>, <code>$sidebar-light-list-item-border-color</code>, use Sass map <code>$sidebar-light</code> instead</li>
+<li>Breaking: Sidebar removed <code>$sidebar-link-color</code>, <code>$sidebar-link-hover-color</code>, <code>.sidebar-link</code> colors should be handled by sidebar variants</li>
+<li>Breaking: Sidebar removed <code>.sidebar-panel</code> use aspect-ratio&#x2019;s instead</li>
+<li>Breaking: Sidebar remove font-size on <code>.sidebar-body</code> and set font weight to 500 for <code>.sidebar-subtitle</code></li>
+<li>Breaking: Sidebar rename <code>.sidebar-section-d-flex</code> to <code>.sidebar-section-flex</code> to match naming pattern used in list-group</li>
+<li>Breaking: Renamed <code>$nav-link-monospaced-size</code> to <code>$nav-item-monospaced-size</code> and added <code>$nav-btn-margin-x</code>, <code>$nav-btn-margin-y</code></li>
+<li>Breaking: Utilities add  <code>!important</code> to utility classes <code>.rounded</code>, <code>.rounded-circle</code>, <code>.rounded-0</code> to win over BS4 utils</li>
+<li>Breaking: Form Check Card to follow new <code>.custom-control</code> markup</li>
+<li>Breaking: Normalize <code>.custom-control</code> markup to match <code>.form-check</code></li>
+<li>Breaking: Input Group removed old <code>.help-icon</code> styles</li>
+<li>Breaking: Navbar removed <code>$navbar-size</code> and created a base navbar that custom navbars should extend from</li>
+<li>Breaking: Navbar removed mixin <code>navbar-overlay</code> and include it in mixin <code>navbar-size</code></li>
+<li>Breaking: Navbars shouldn&#x2019;t use scale-component mixin, should scale based on expand breakpoint</li>
+<li>Breaking: Navbar Toggler Link should scale based on navbar height</li>
+<li>Breaking: Navbar <code>.navbar-toggler</code> to size based on navbar-height</li>
+<li>Breaking: Navbar remove extra <code>.navbar .container</code> style overwrite, should be done with <code>.navbar-expand-*</code></li>
+<li>Breaking: Navbar redo <code>.navbar-brand</code> sizing to work with BS4 <code>.navbar</code> and <code>.navbar-expand</code></li>
+<li>Breaking: Navbar comment out <code>scale-component</code> mixin, should use breakpoints for resizing instead</li>
+<li>Breaking: Update Bootstrap 4 to d1b3c0c</li>
+<li>Breaking: Navbar rename <code>.navbar-d-breakpoint-*</code> to <code>.navbar-breakpoint-d-*</code></li>
+<li>Breaking: Navbar removed <code>.collapse-basic-search</code>, <code>.basic-search</code> styles</li>
+<li>Breaking: Navbar removed <code>$zindex-basic-search-close</code></li>
+<li>Breaking: Navbar removed <code>$collapse-basic-search-transparent-light-btn-color</code>, <code>$collapse-basic-search-transparent-light-btn-focus-color</code>, <code>$collapse-basic-search-transparent-light-input-color</code>, <code>$collapse-basic-search-transparent-light-input-focus-color</code>, <code>$collapse-basic-search-transparent-light-input-placeholder-color</code>, <code>$collapse-basic-search-transparent-light-input-placeholder-focus-color</code>, <code>$collapse-basic-search-transparent-light-focus-highlight</code>, <code>$collapse-basic-search-transparent-inverse-btn-color</code>, <code>$collapse-basic-search-transparent-inverse-btn-focus-color</code>, <code>$collapse-basic-search-transparent-inverse-input-color</code>, <code>$collapse-basic-search-transparent-inverse-input-focus-color</code>, <code>$collapse-basic-search-transparent-inverse-input-placeholder-color</code>, <code>$collapse-basic-search-transparent-inverse-input-placeholder-focus-color</code>, <code>$collapse-basic-search-transparent-inverse-focus-highlight</code></li>
+<li>Breaking: Navbar removed <code>.collapse-basic-search-transparent</code></li>
+<li>Breaking: Update Bootstrap 4 to d3d0658</li>
+<li>Breaking: Removed <code>.multi-step-bar</code> use <code>.subnav</code> instead</li>
+<li>Breaking: Multi Step Bar removed <code>$multi-step-bar-bg</code>, <code>$multi-step-bar-border-radius</code>, <code>$multi-step-bar-color</code>, <code>$multi-step-bar-font-size</code>, <code>$multi-step-bar-height</code>, <code>$multi-step-bar-margin-bottom</code>, <code>$multi-step-bar-padding</code></li>
+<li>New: Navbar use navbar-variant mixin for creating color variants and added Sass maps <code>$navbar-light</code>, <code>$navbar-dark</code>, <code>$navbar-primary</code> for color settings</li>
+<li>New: Navbar created <code>navbar-variant</code> mixin for creating navbar color variants</li>
+<li>New: Sidebar Variant mixin added option to configure <code>.sidebar-subtitle</code>, <code>.sidebar-caption</code>, <code>.sidebar-dt</code>, <code>.sidebar-dd</code> colors</li>
+<li>New: Sidebar added <code>sidebar-variant($map)</code> mixin</li>
+<li>New: Sidebar added option to configure <code>$sidebar-list-font-size</code></li>
+<li>New: Badge added mixin <code>badge-size($size)</code> to help set badge sizes, and updated components using badge mixins to use badge-size mixin</li>
+<li>New: Stickers added mixin <code>sticker-size($size)</code> to help set sticker sizes, and updated components using sticker mixins to use sticker-size mixin</li>
+<li>New: Labels added mixin <code>label-size($size)</code> to help set label sizes, and updated components using label mixins to use label-size mixin</li>
+<li>New: Sidebar added option to configure <code>$sidebar-list-item-border-bottom-width</code>, <code>$sidebar-list-item-border-left-width</code>, <code>$sidebar-list-item-border-right-width</code>, <code>$sidebar-list-item-border-top-width</code>, <code>$sidebar-list-item-flex-col-padding-x</code>, <code>$sidebar-list-item-flex-col-padding-y</code>, <code>$sidebar-light-list-item-border-color</code>, <code>$sidebar-dark-list-item-border-color</code> and added <code>.sidebar-list</code> and <code>.sidebar-list-item</code></li>
+<li>New: Sidebar added <code>$sidebar-panel-margin-bottom</code> and re-add <code>.sidebar-panel</code> styles</li>
+<li>New: Sidebar added option to configure <code>$sidebar-dt-margin-bottom</code>, <code>$sidebar-dd-margin-bottom</code>, remove styles for <code>.sidebar .navbar</code>, and add comments to sections</li>
+<li>New: Sidebar added option to configure <code>$sidebar-dt-font-size</code>, <code>$sidebar-dt-font-weight</code>, <code>$sidebar-dt-text-transform</code>, <code>$sidebar-dd-font-size</code>, <code>$sidebar-dd-font-weight</code>, <code>$sidebar-dd-text-transform</code></li>
+<li>New: Sidebar added option to configure <code>$sidebar-caption-font-size</code>, <code>$sidebar-caption-font-weight</code>, <code>$sidebar-caption-text-transform</code></li>
+<li>New: Sidebar added option to configure <code>$sidebar-subtitle-font-size</code>, <code>$sidebar-subtitle-font-weight</code>, <code>$sidebar-subtitle-text-transform</code></li>
+<li>New: Sidebar added option to configure <code>$sidebar-title-font-size</code>, <code>$sidebar-title-font-weight</code></li>
+<li>New: Added <code>.nav-unstyled</code></li>
+<li>New: Navigation Bar variables</li>
+<li>New: Navigation Bar component and add <code>$management-bar-size</code></li>
+<li>New: Subnav component</li>
+<li>New: Navbar added <code>.navbar-primary-bg</code> and option to configure<code>$navbar-primary-bg</code>, <code>$navbar-primary-border-color</code>, <code>$navbar-primary-active-bg</code>, <code>$navbar-primary-hover-bg</code>, <code>$navbar-primary-disabled-bg</code>, <code>$navbar-primary-active-highlight</code>, <code>$navbar-primary-brand-bg</code>, <code>$navbar-primary-brand-hover-bg</code>, <code>$navbar-primary-brand-color</code>, <code>$navbar-primary-brand-hover-color</code></li>
+<li>New: Input Group Inset add option to configure <code>$input-group-inset-item-color</code></li>
+<li>New: Nav Tabs added option to configure <code>$nav-underline-font-size</code>, <code>$nav-tabs-font-size</code></li>
+<li>New: Nav Tabs added option to configure <code>$nav-tabs-link-padding-x</code>, <code>$nav-tabs-link-padding-y</code>, <code>$nav-underline-link-padding-x</code>, <code>$nav-underline-link-padding-y</code></li>
+<li>New: Nav Tabs added option to configure <code>$nav-tabs-link-dropdown-item-indicator-width</code>, <code>$nav-tabs-link-dropdown-item-indicator-active-icon</code></li>
+<li>New: Nav Tabs added option to configure <code>$nav-tabs-link-color</code> and reorganize nav variables</li>
+<li>New: Added Nav Underline Dropdowns with indicators</li>
+<li>Update: Closes #372 Modal final opacity and bg-color</li>
+<li>Update: Closes #373 Add build:rtl task for easily checking if compiled css is parsable by r2</li>
+<li>Update: Navbar Size mixin add option to disable sizes</li>
+<li>Update: Navbar Variant mixin added option to disable styles from being output</li>
+<li>Update: Global Functions setter to work with true and false values</li>
+<li>Update: Atlas Sidebar Light colors</li>
+<li>Update: Box Shadow mixin shouldn&#x2019;t output shadow property if value is null</li>
+<li>Update: Sidebar actions should be vertically aligned to the rest of the content</li>
+<li>Update: Sidebar add <code>line-height: normal</code> to <code>.sidebar-title</code> and <code>.sidebar-subtitle</code> to prevent text being cut off with h# tags, BS4 bug</li>
+<li>Update: Sidebar don&#x2019;t use label-size mixin, use helper classes to size labels instead</li>
+<li>Update: Management Bar and Navigation Bar spacing</li>
+<li>Update: Navbar don&#x2019;t need to update <code>.nav-btn-monospaced</code> spacing already covered by <code>.nav-btn</code></li>
+<li>Update: Navbar should use same markup pattern as navs for buttons and links</li>
+<li>Update: Management Bar styles should win over nav and navbar</li>
+<li>Update: Nav add support for buttons inside nav-item</li>
+<li>Update: Input Groups support <code>.custom-control</code> and <code>.form-check</code></li>
+<li>Update: Form Check should align with first line with long labels that wrap</li>
+<li>Update: List Group with <code>.form-check</code> or <code>.custom-control</code> should be aligned properly</li>
+<li>Update: Tables with <code>.custom-control</code> should work</li>
+<li>Update: Navbar with <code>.custom-control</code> should work</li>
+<li>Update: Input Group Lg should set font-size for <code>input-group-inset</code></li>
+<li>Update: Forms set input-font-size-lg and input-font-size-sm</li>
+<li>Update: Input Group Inset should size with input-group-lg, input-group-sm</li>
+<li>Update: Tweak Navigation Bar padding</li>
+<li>Update: Navbar add option to configure active-border-offset-x</li>
+<li>Update: Atlas Navbar Highlight colors</li>
+<li>Update: Navbar mixin add option to configure dropdown-item-padding in navbar-collapse in mobile</li>
+<li>Update: Navbar dropdown-menu in navbar-collapse should have no margin or padding</li>
+<li>Update: Navbar <code>.navbar-collapse-absolute</code> should use custom navbar padding</li>
+<li>Update: Navbar Overlay should work with Base Navbar</li>
+<li>Update: Navbar mixin size form-control and clean up some code</li>
+<li>Update: Navbar mixin size <code>.nav-btn</code></li>
+<li>Update: Navbar position and size <code>.nav-btn</code></li>
+<li>Update: Base Navbar Highlight colors</li>
+<li>Update: Navbar collapse use max-width so text is truncated in FF</li>
+<li>Update: Navbar Variant dropdown-menu styles should be even more specific</li>
+<li>Update: Management Bar containers should wrap</li>
+<li>Update: Navbar clean up navbar-size mixin</li>
+<li>Update: Navbar Size mixin map desktop size variables to mobile size</li>
+<li>Update: Navbar improve spacing of <code>.navbar-brand</code> and <code>.navbar-toggle</code></li>
+<li>Update: Navbar Variants scope dropdown colors to navbar collapse</li>
+<li>Update: Navbar <code>.navbar-text-truncate</code> should work in all navbar forms</li>
+<li>Update: Navbar forgot to account for <code>.navbar-nav</code> inside <code>.navbar-collapse</code> without <code>.navbar-expand-*</code></li>
+<li>Update: Navbar only undo <code>.dropdown-menu</code> styles when inside <code>.navbar-collapse</code></li>
+<li>Update: Navbar <code>.navbar-nav</code> should have <code>flex-direction: column</code> only inside <code>.navbar-collapse</code></li>
+<li>Update: Navbar normalize containers used in <code>.navbar</code></li>
+<li>Update: <code>.navbar-expand-*</code> should <code>justify-content: space-between</code></li>
+<li>Update: Re-add Management bar component</li>
+<li>Update: Navbar added option to configure <code>$container-padding-x</code> and <code>$container-padding-x-mobile</code></li>
+<li>Update: Navbar Form spacing at all breakpoints</li>
+<li>Update: Navbar Brand should calculate padding based on navbar-height</li>
+<li>Update: Navbar properly space <code>.nav-link</code> inside <code>.navbar-collapse</code></li>
+<li>Update: Navbar move out max-width stuff for <code>.navbar-toggler-link</code> and <code>.navbar-brand</code> from <code>.navbar-expand</code></li>
+<li>Update: Fixes #357 - Consolidates z-index variables from individual components to _global variables</li>
+<li>Update: Atlas custom-control-description line-height</li>
+<li>Update: Navbar Form Inline shouldn&#x2019;t have margin-bottom at small screen sizes</li>
+<li>Update: Navbar style dropdown-menu&#x2019;s in mobile</li>
+<li>Update: Forms <code>.form-text</code> should be properly spaced when used after a <code>label</code></li>
+<li>Update: Input Group Transparent <code>.btn-link</code> should have no borders</li>
+<li>Update: Input Group Transparent add <code>.input-group-btn</code> support</li>
+<li>Update: Nav Tabs make active dropdown indicator smaller</li>
+<li>Update: Move <code>.nav-underline</code> scss under <code>.nav-tabs</code> and <code>.nav-underline</code> with show should have active styles</li>
+<li>Site: Remove classes <code>.navbar-*-bg</code> there is only one class for color variants now</li>
+<li>Site: Sidebar update markup to Clay V2 and remove <code>.sidebar-dark</code> example</li>
+<li>Site: Nav Unstyled docs</li>
+<li>Site: Nav Underline add demo of Nav Underline with Tabs using only buttons</li>
+<li>Site: Nav added all the different button and link combinations&#x2026;Faro</li>
+<li>Site: Nav Tabs add demo of tabs using only buttons</li>
+<li>Site: Management Bar and Navigation Bar to use new button and link markup for nav-items</li>
+<li>Site: Input Groups, List Groups, Management Bar, Navigation Bar, Tables demos to use Custom Controls</li>
+<li>Site: Card, Dropdown, Form Validation pages Custom Control markup to match Form Check</li>
+<li>Site: Custom Control markup to match Form Check</li>
+<li>Site: Dropdown use input-group-sm for input-group in dropdown</li>
+<li>Site: Added Navigation Bar page</li>
+<li>Site: Navbar remove Navbar Simple demo</li>
+<li>Site: Management Bar updated markup with <code>.nav-btn</code> examples</li>
+<li>Site: Management Bar update examples with container-fluid-max-xl</li>
+<li>Site: Navbars add new patterns and remove some v1 patterns</li>
+<li>Site: Navbar update docs for <code>.navbar-breakpoint-d-*</code> and <code>.navbar-breakpoint-down-d-*</code></li>
+<li>Site: Navbar remove references to <code>.collapse-basic-search</code> and <code>.basic-search</code></li>
+<li>Site: Navbar removed all references to <code>.collapse-basic-search-transparent</code></li>
+<li>Site: Multi Step Nav page point to subnav page for Multi Step Nav Simplified</li>
+<li>Site: Subnav page</li>
+<li>Site: Rename _nav_underline.html to nav_underline.html</li>
+<li>Site: Navbar fix some dropdown markup</li>
+<li>Site: Management Bar add primary demo</li>
+<li>Site: Management Bar demos update Search bar to use <code>.btn-unstyled</code></li>
+<li>Site: Input Group add example with label and form-text</li>
+<li>Site: Input Group Transparent add example with <code>.btn</code></li>
+<li>Site: Nav Tabs update demos to have dropdown-item-indicator</li>
+<li>Site: Move Nav Underline to its own page</li>
+</ul>
+<h3 id="v2-0-0-alpha-8-september-1-2017"><a class="heading-anchor" href="#v2-0-0-alpha-8-september-1-2017"><svg class="lexicon-icon lexicon-icon-link"><use xlink:href="../images/icons/icons.svg#link"></svg></a>v2.0.0-alpha.8 - September 1, 2017</h3>
 <ul>
 <li>New: Global Functions added <code>setter($var, $val)</code> for setting default sass variable values</li>
 <li>New: Added <code>.multi-step-bar</code> and options to configure <code>$multi-step-bar-bg</code>, <code>$multi-step-bar-border-radius</code>, <code>$multi-step-bar-color</code>, <code>$multi-step-bar-font-size</code>, <code>$multi-step-bar-height</code>, <code>$multi-step-bar-margin-bottom</code>, <code>$multi-step-bar-padding</code></li>
