@@ -62,11 +62,8 @@
 	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), $link-padding-x-mobile);
 	$toggler-link-padding-y: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
 
-	border-color: transparent;
-
 	@include border-radius($navbar-border-radius);
 
-	border-style: solid;
 	border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
 	font-size: $font-size;
 	padding: $padding-y $padding-x;
@@ -340,4 +337,73 @@
 			}
 		}
 	}
+}
+
+// Creates a Navbar color variant
+// @param $map - Sass map that contain Navbar Variant properties to modify
+
+@mixin navbar-variant($map) {
+	$bg: map-get($map, bg);
+	$border-color: setter(map-get($map, border-color), transparent);
+	$border-style: setter(map-get($map, border-style), solid);
+	$link-color: map-get($map, link-color);
+	$link-hover-color: map-get($map, link-hover-color);
+	$link-active-color: map-get($map, link-active-color);
+	$link-disabled-color: map-get($map, link-disabled-color);
+	$link-bg: map-get($map, link-bg);
+	$link-hover-bg: map-get($map, link-hover-bg);
+	$link-active-bg: map-get($map, link-active-bg);
+	$link-disabled-bg: map-get($map, link-disabled-bg);
+	$brand-color: map-get($map, brand-color);
+	$brand-hover-color: map-get($map, brand-hover-color);
+	$brand-bg: map-get($map, brand-bg);
+	$brand-hover-bg: map-get($map, brand-hover-bg);
+
+	background-color: $bg;
+	border-color: $border-color;
+	border-style: $border-style;
+
+	.nav-link,
+	.navbar-nav .btn-unstyled {
+		background-color: $link-bg;
+		color: $link-color;
+
+		@include hover-focus {
+			background-color: $link-hover-bg;
+			color: $link-hover-color;
+		}
+
+		&.active,
+		&[aria-expanded="true"] {
+			background-color: $link-active-bg;
+			color: $link-active-color;
+		}
+
+		&.disabled {
+			background-color: $link-disabled-bg;
+			color: $link-disabled-color;
+		}
+	}
+
+	.navbar-brand {
+		background-color: $brand-bg;
+		color: $brand-color;
+
+		@include hover-focus {
+			background-color: $brand-bg;
+			color: $brand-hover-color;
+		}
+	}
+
+	.navbar-toggler-link {
+		&[aria-expanded="true"] {
+			color: $link-active-color;
+		}
+	}
+
+	.navbar-overlay {
+		background-color: $bg;
+	}
+
+	@content;
 }
