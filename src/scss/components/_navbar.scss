@@ -194,7 +194,6 @@
 				@include media-breakpoint-down($breakpoint) {
 					&.navbar-collapse-absolute {
 						.navbar-collapse {
-							box-shadow: $navbar-collapse-absolute-box-shadow;
 							left: 0;
 							margin-top: -$navbar-padding-y;
 							padding: 0 $navbar-padding-x $navbar-padding-y $navbar-padding-x;
