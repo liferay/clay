@@ -89,7 +89,7 @@
 	<div class="dropdown-section">
 		<div class="input-group input-group-inset">
 			<div class="input-group-input">
-				<input class="form-control" data-oninput="_handleSearch" placeholder="Search for..." type="text" ref="searchInput">
+				<input aria-label="Search for..." class="form-control" data-oninput="_handleSearch" placeholder="Search for..." type="text" ref="searchInput">
 			</div>
 			
 			<span class="input-group-inset-item">
@@ -121,7 +121,6 @@
 	{@param? spritemap: string}
 
 	{let $listAttributes kind="attributes"}
-		aria-labelledby="id"
 		class="dropdown-menu
 			{if $indicatorsPosition == 'left'}
 				{sp}dropdown-menu-indicator-start
@@ -135,7 +134,7 @@
 		"
 	{/let}
 
-	<ul {$listAttributes}>
+	<div {$listAttributes}>
 		{if $helpText}
 			<div class="alert alert-fluid alert-info" role="alert">
 				{$helpText}
@@ -167,7 +166,7 @@
 				{/call}
 			</div>
 		{/if}
-	</ul>
+	</div>
 {/template}
 
 /**
@@ -186,6 +185,7 @@
 		{/if}
 
 		aria-haspopup="true"
+		aria-label="toggle"
 		class="dropdown-toggle btn
 			{if $triggerStyle}
 				{sp}btn-{$triggerStyle}
@@ -195,7 +195,6 @@
 		"
 
 		data-onclick="toggle"
-		id="id"
 	{/let}
 
 	<button {$buttonAttributes}>
@@ -218,7 +217,7 @@
 	{@param? spritemap: string}
 	{@param? url: string}
 
-	<li>
+	<div>
 		{let $iconContent kind="html"}
 			{if $indicatorSymbol and $spritemap}
 				<div class="dropdown-item-indicator">
@@ -259,7 +258,7 @@
 				{$iconContent}
 			{/if}
 		</a>
-	</li>
+	</div>
 {/deltemplate}
 
 /**
@@ -277,7 +276,7 @@
 	{@param? spritemap: string}
 	{@param? url: string}
 
-	<li class="dropdown-item">
+	<div class="dropdown-item">
 		{call ClayCheckbox.render}
 			{param checked: $checked /}
 			{param disabled: $disabled /}
@@ -286,7 +285,7 @@
 			{param name: $inputName /}
 			{param value: $inputValue /}
 		{/call}
-	</li>
+	</div>
 {/deltemplate}
 
 /**
@@ -324,7 +323,7 @@
 	{@param? spritemap: string}
 	{@param? url: string}
 
-	<li class="dropdown-item">
+	<div class="dropdown-item">
 		{call ClayRadio.render}
 			{param checked: $checked /}
 			{param disabled: $disabled /}
@@ -333,7 +332,7 @@
 			{param name: $inputName /}
 			{param value: $inputValue /}
 		{/call}
-	</li>
+	</div>
 {/deltemplate}
 
 /**

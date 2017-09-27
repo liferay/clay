@@ -2,36 +2,36 @@
 
 exports[`ClayActionsDropdown should render an expanded action dropdown 1`] = `
 <div class="dropdown show dropdown-action">
-  <button aria-expanded="true" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">
+  <button aria-expanded="true" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
       <use xlink:href="icons.svg#ellipsis-v"></use>
     </svg>
   </button>
-  <ul aria-labelledby="id" class="dropdown-menu show" style="top: 0px; left: 0px;">
-    <li>
+  <div class="dropdown-menu show" style="top: 0px; left: 0px;">
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-    <li>
+    </div>
+    <div>
       <a class="dropdown-item" href="item2url">Item 2</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayActionsDropdown should render default markdown 1`] = `
 <div class="dropdown dropdown-action">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">
     <svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
       <use xlink:href="icons.svg#ellipsis-v"></use>
     </svg>
   </button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li>
+  <div class="dropdown-menu">
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-    <li>
+    </div>
+    <div>
       <a class="dropdown-item" href="item2url">Item 2</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;

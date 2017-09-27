@@ -2,57 +2,57 @@
 
 exports[`ClayDropdownBase should render a dropdown with caption 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li>
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
+    </div>
     <div class="dropdown-caption">My caption!</div>
-  </ul>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with help text 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
     <div class="alert alert-fluid alert-info" role="alert">Help!</div>
-    <li>
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with indicators on the left 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu dropdown-menu-indicator-start">
-    <li>
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu dropdown-menu-indicator-start">
+    <div>
       <a class="dropdown-item" href="item1url">
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
             <use xlink:href="icons.svg#check"></use>
           </svg>
         </div>Item 1</a>
-    </li>
-    <li>
+    </div>
+    <div>
       <a class="dropdown-item" href="item2url">
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
             <use xlink:href="icons.svg#check"></use>
           </svg>
         </div>Item 2</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with indicators on the right 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu dropdown-menu-indicator-end">
-    <li>
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu dropdown-menu-indicator-end">
+    <div>
       <a class="dropdown-item" href="item1url">Item 1
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
@@ -60,8 +60,8 @@ exports[`ClayDropdownBase should render a dropdown with indicators on the right 
           </svg>
         </div>
       </a>
-    </li>
-    <li>
+    </div>
+    <div>
       <a class="dropdown-item" href="item2url">Item 2
         <div class="dropdown-item-indicator">
           <svg aria-hidden="true" class="lexicon-icon lexicon-icon-check">
@@ -69,250 +69,250 @@ exports[`ClayDropdownBase should render a dropdown with indicators on the right 
           </svg>
         </div>
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type checkbox 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li class="dropdown-item">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div class="dropdown-item">
       <label class="custom-control custom-checkbox">
         <input class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
-    </li>
-    <li class="dropdown-item">
+    </div>
+    <div class="dropdown-item">
       <label class="custom-control custom-checkbox">
         <input class="custom-control-input" name="checkbox2name" value="checkbox2value" ref="input" type="checkbox">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 2</span>
       </label>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type checkbox and checked 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li class="dropdown-item">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div class="dropdown-item">
       <label class="custom-control custom-checkbox">
         <input checked="" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type checkbox and disabled 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li class="dropdown-item">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div class="dropdown-item">
       <label class="custom-control custom-checkbox">
         <input disabled="" class="custom-control-input" name="checkbox1name" value="checkbox1value" ref="input" type="checkbox">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type group 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li>
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-    <li>
+    </div>
+    <div>
       <a class="dropdown-item" href="item2url">Item 2</a>
-    </li>
+    </div>
     <div class="dropdown-divider"></div>
-    <li>
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-    <li>
+    </div>
+    <div>
       <a class="dropdown-item" href="item2url">Item 2</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type header 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
     <div class="dropdown-subheader">Group 1</div>
     <div class="dropdown-subheader">Group 2</div>
-  </ul>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type item 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li>
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-    <li>
+    </div>
+    <div>
       <a class="dropdown-item" href="item2url">Item 2</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type item and active 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li>
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div>
       <a class="dropdown-item active" href="item1url">Item 1</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type item and disabled 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li>
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div>
       <a class="dropdown-item disabled" href="javascript:;">Item 1</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type radio 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li class="dropdown-item">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div class="dropdown-item">
       <label class="custom-control custom-radio">
         <input class="custom-control-input" name="radioname" value="radio1value" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
-    </li>
-    <li class="dropdown-item">
+    </div>
+    <div class="dropdown-item">
       <label class="custom-control custom-radio">
         <input class="custom-control-input" name="radioname" value="radio2value" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 2</span>
       </label>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type radio 2`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li class="dropdown-item">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div class="dropdown-item">
       <label class="custom-control custom-radio">
         <input class="custom-control-input" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
-    </li>
-    <li class="dropdown-item">
+    </div>
+    <div class="dropdown-item">
       <label class="custom-control custom-radio">
         <input class="custom-control-input" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 2</span>
       </label>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type radio and checked 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li class="dropdown-item">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div class="dropdown-item">
       <label class="custom-control custom-radio">
         <input checked="" class="custom-control-input" name="radio1name" value="radio1value" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type radio and disabled 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li class="dropdown-item">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div class="dropdown-item">
       <label class="custom-control custom-radio">
         <input disabled="" class="custom-control-input" name="radio1name" value="radio1value" ref="input" type="radio" role="radio">
         <span class="custom-control-indicator"></span>
         <span class="custom-control-description">Item 1</span>
       </label>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with items of type separator 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
     <div class="dropdown-divider"></div>
     <div class="dropdown-divider"></div>
-  </ul>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with primary button 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li>
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
+    </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-primary">Button</button>
     </div>
-  </ul>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a dropdown with secondary button 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
-    <li>
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
+    </div>
     <div class="dropdown-section">
       <button class="btn btn-block btn-secondary">Button</button>
     </div>
-  </ul>
+  </div>
 </div>
 `;
 
 exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
 <div class="dropdown">
-  <button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle btn btn-unstyled" id="id">Trigger</button>
-  <ul aria-labelledby="id" class="dropdown-menu">
+  <button aria-expanded="false" aria-haspopup="true" aria-label="toggle" class="dropdown-toggle btn btn-unstyled">Trigger</button>
+  <div class="dropdown-menu">
     <div class="dropdown-section">
       <div class="input-group input-group-inset">
         <div class="input-group-input">
-          <input class="form-control" placeholder="Search for..." type="text" ref="searchInput">
+          <input aria-label="Search for..." class="form-control" placeholder="Search for..." type="text" ref="searchInput">
         </div>
         <span class="input-group-inset-item">
           <button class="btn btn-link" aria-label="search">
@@ -323,12 +323,12 @@ exports[`ClayDropdownBase should render a searchable dropdown 1`] = `
         </span>
       </div>
     </div>
-    <li>
+    <div>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-    <li>
+    </div>
+    <div>
       <a class="dropdown-item" href="item2url">Item 2</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
