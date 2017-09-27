@@ -1,3 +1,153 @@
+### v2.0.0-alpha.9 September 27, 2017
+
+* Breaking: Sidebar removed `$sidebar-padding`, list out padding properties individually
+* Breaking: Sidebar removed `$sidebar-dark-bg`, `$sidebar-dark-border-color`, `$sidebar-dark-color`, `$sidebar-dark-panel-bg`, `$sidebar-dark-actions-link-color`, `$sidebar-dark-actions-link-hover-color`, `$sidebar-dark-header-title-color`, `$sidebar-dark-header-title-hover-color`, `$sidebar-dark-link-color`, `$sidebar-dark-link-hover-color`, `$sidebar-dark-list-item-border-color`
+* Breaking: Sidebar removed `.sidebar-dark` and `.sidebar-dark-bg` variant
+* Breaking: Sidebar removed `$sidebar-light-bg`, `$sidebar-light-border-color`, `$sidebar-light-color`, `$sidebar-light-panel-bg`, `$sidebar-light-actions-link-color`, `$sidebar-light-actions-link-hover-color`, `$sidebar-light-header-title-color`, `$sidebar-light-header-title-hover-color`, `$sidebar-light-link-color`, `$sidebar-light-link-hover-color`, `$sidebar-light-list-item-border-color`, use Sass map `$sidebar-light` instead
+* Breaking: Sidebar removed `$sidebar-link-color`, `$sidebar-link-hover-color`, `.sidebar-link` colors should be handled by sidebar variants
+* Breaking: Sidebar removed `.sidebar-panel` use aspect-ratio's instead
+* Breaking: Sidebar remove font-size on `.sidebar-body` and set font weight to 500 for `.sidebar-subtitle`
+* Breaking: Sidebar rename `.sidebar-section-d-flex` to `.sidebar-section-flex` to match naming pattern used in list-group
+* Breaking: Renamed `$nav-link-monospaced-size` to `$nav-item-monospaced-size` and added `$nav-btn-margin-x`, `$nav-btn-margin-y`
+* Breaking: Utilities add  `!important` to utility classes `.rounded`, `.rounded-circle`, `.rounded-0` to win over BS4 utils
+* Breaking: Form Check Card to follow new `.custom-control` markup
+* Breaking: Normalize `.custom-control` markup to match `.form-check`
+* Breaking: Input Group removed old `.help-icon` styles
+* Breaking: Navbar removed `$navbar-size` and created a base navbar that custom navbars should extend from
+* Breaking: Navbar removed mixin `navbar-overlay` and include it in mixin `navbar-size`
+* Breaking: Navbars shouldn't use scale-component mixin, should scale based on expand breakpoint
+* Breaking: Navbar Toggler Link should scale based on navbar height
+* Breaking: Navbar `.navbar-toggler` to size based on navbar-height
+* Breaking: Navbar remove extra `.navbar .container` style overwrite, should be done with `.navbar-expand-*`
+* Breaking: Navbar redo `.navbar-brand` sizing to work with BS4 `.navbar` and `.navbar-expand`
+* Breaking: Navbar comment out `scale-component` mixin, should use breakpoints for resizing instead
+* Breaking: Update Bootstrap 4 to d1b3c0c
+* Breaking: Navbar rename `.navbar-d-breakpoint-*` to `.navbar-breakpoint-d-*`
+* Breaking: Navbar removed `.collapse-basic-search`, `.basic-search` styles
+* Breaking: Navbar removed `$zindex-basic-search-close`
+* Breaking: Navbar removed `$collapse-basic-search-transparent-light-btn-color`, `$collapse-basic-search-transparent-light-btn-focus-color`, `$collapse-basic-search-transparent-light-input-color`, `$collapse-basic-search-transparent-light-input-focus-color`, `$collapse-basic-search-transparent-light-input-placeholder-color`, `$collapse-basic-search-transparent-light-input-placeholder-focus-color`, `$collapse-basic-search-transparent-light-focus-highlight`, `$collapse-basic-search-transparent-inverse-btn-color`, `$collapse-basic-search-transparent-inverse-btn-focus-color`, `$collapse-basic-search-transparent-inverse-input-color`, `$collapse-basic-search-transparent-inverse-input-focus-color`, `$collapse-basic-search-transparent-inverse-input-placeholder-color`, `$collapse-basic-search-transparent-inverse-input-placeholder-focus-color`, `$collapse-basic-search-transparent-inverse-focus-highlight`
+* Breaking: Navbar removed `.collapse-basic-search-transparent`
+* Breaking: Update Bootstrap 4 to d3d0658
+* Breaking: Removed `.multi-step-bar` use `.subnav` instead
+* Breaking: Multi Step Bar removed `$multi-step-bar-bg`, `$multi-step-bar-border-radius`, `$multi-step-bar-color`, `$multi-step-bar-font-size`, `$multi-step-bar-height`, `$multi-step-bar-margin-bottom`, `$multi-step-bar-padding`
+* New: Navbar use navbar-variant mixin for creating color variants and added Sass maps `$navbar-light`, `$navbar-dark`, `$navbar-primary` for color settings
+* New: Navbar created `navbar-variant` mixin for creating navbar color variants
+* New: Sidebar Variant mixin added option to configure `.sidebar-subtitle`, `.sidebar-caption`, `.sidebar-dt`, `.sidebar-dd` colors
+* New: Sidebar added `sidebar-variant($map)` mixin
+* New: Sidebar added option to configure `$sidebar-list-font-size`
+* New: Badge added mixin `badge-size($size)` to help set badge sizes, and updated components using badge mixins to use badge-size mixin
+* New: Stickers added mixin `sticker-size($size)` to help set sticker sizes, and updated components using sticker mixins to use sticker-size mixin
+* New: Labels added mixin `label-size($size)` to help set label sizes, and updated components using label mixins to use label-size mixin
+* New: Sidebar added option to configure `$sidebar-list-item-border-bottom-width`, `$sidebar-list-item-border-left-width`, `$sidebar-list-item-border-right-width`, `$sidebar-list-item-border-top-width`, `$sidebar-list-item-flex-col-padding-x`, `$sidebar-list-item-flex-col-padding-y`, `$sidebar-light-list-item-border-color`, `$sidebar-dark-list-item-border-color` and added `.sidebar-list` and `.sidebar-list-item`
+* New: Sidebar added `$sidebar-panel-margin-bottom` and re-add `.sidebar-panel` styles
+* New: Sidebar added option to configure `$sidebar-dt-margin-bottom`, `$sidebar-dd-margin-bottom`, remove styles for `.sidebar .navbar`, and add comments to sections
+* New: Sidebar added option to configure `$sidebar-dt-font-size`, `$sidebar-dt-font-weight`, `$sidebar-dt-text-transform`, `$sidebar-dd-font-size`, `$sidebar-dd-font-weight`, `$sidebar-dd-text-transform`
+* New: Sidebar added option to configure `$sidebar-caption-font-size`, `$sidebar-caption-font-weight`, `$sidebar-caption-text-transform`
+* New: Sidebar added option to configure `$sidebar-subtitle-font-size`, `$sidebar-subtitle-font-weight`, `$sidebar-subtitle-text-transform`
+* New: Sidebar added option to configure `$sidebar-title-font-size`, `$sidebar-title-font-weight`
+* New: Added `.nav-unstyled`
+* New: Navigation Bar variables
+* New: Navigation Bar component and add `$management-bar-size`
+* New: Subnav component
+* New: Navbar added `.navbar-primary-bg` and option to configure`$navbar-primary-bg`, `$navbar-primary-border-color`, `$navbar-primary-active-bg`, `$navbar-primary-hover-bg`, `$navbar-primary-disabled-bg`, `$navbar-primary-active-highlight`, `$navbar-primary-brand-bg`, `$navbar-primary-brand-hover-bg`, `$navbar-primary-brand-color`, `$navbar-primary-brand-hover-color`
+* New: Input Group Inset add option to configure `$input-group-inset-item-color`
+* New: Nav Tabs added option to configure `$nav-underline-font-size`, `$nav-tabs-font-size`
+* New: Nav Tabs added option to configure `$nav-tabs-link-padding-x`, `$nav-tabs-link-padding-y`, `$nav-underline-link-padding-x`, `$nav-underline-link-padding-y`
+* New: Nav Tabs added option to configure `$nav-tabs-link-dropdown-item-indicator-width`, `$nav-tabs-link-dropdown-item-indicator-active-icon`
+* New: Nav Tabs added option to configure `$nav-tabs-link-color` and reorganize nav variables
+* New: Added Nav Underline Dropdowns with indicators
+* Update: Closes #372 Modal final opacity and bg-color
+* Update: Closes #373 Add build:rtl task for easily checking if compiled css is parsable by r2
+* Update: Navbar Size mixin add option to disable sizes
+* Update: Navbar Variant mixin added option to disable styles from being output
+* Update: Global Functions setter to work with true and false values
+* Update: Atlas Sidebar Light colors
+* Update: Box Shadow mixin shouldn't output shadow property if value is null
+* Update: Sidebar actions should be vertically aligned to the rest of the content
+* Update: Sidebar add `line-height: normal` to `.sidebar-title` and `.sidebar-subtitle` to prevent text being cut off with h# tags, BS4 bug
+* Update: Sidebar don't use label-size mixin, use helper classes to size labels instead
+* Update: Management Bar and Navigation Bar spacing
+* Update: Navbar don't need to update `.nav-btn-monospaced` spacing already covered by `.nav-btn`
+* Update: Navbar should use same markup pattern as navs for buttons and links
+* Update: Management Bar styles should win over nav and navbar
+* Update: Nav add support for buttons inside nav-item
+* Update: Input Groups support `.custom-control` and `.form-check`
+* Update: Form Check should align with first line with long labels that wrap
+* Update: List Group with `.form-check` or `.custom-control` should be aligned properly
+* Update: Tables with `.custom-control` should work
+* Update: Navbar with `.custom-control` should work
+* Update: Input Group Lg should set font-size for `input-group-inset`
+* Update: Forms set input-font-size-lg and input-font-size-sm
+* Update: Input Group Inset should size with input-group-lg, input-group-sm
+* Update: Tweak Navigation Bar padding
+* Update: Navbar add option to configure active-border-offset-x
+* Update: Atlas Navbar Highlight colors
+* Update: Navbar mixin add option to configure dropdown-item-padding in navbar-collapse in mobile
+* Update: Navbar dropdown-menu in navbar-collapse should have no margin or padding
+* Update: Navbar `.navbar-collapse-absolute` should use custom navbar padding
+* Update: Navbar Overlay should work with Base Navbar
+* Update: Navbar mixin size form-control and clean up some code
+* Update: Navbar mixin size `.nav-btn`
+* Update: Navbar position and size `.nav-btn`
+* Update: Base Navbar Highlight colors
+* Update: Navbar collapse use max-width so text is truncated in FF
+* Update: Navbar Variant dropdown-menu styles should be even more specific
+* Update: Management Bar containers should wrap
+* Update: Navbar clean up navbar-size mixin
+* Update: Navbar Size mixin map desktop size variables to mobile size
+* Update: Navbar improve spacing of `.navbar-brand` and `.navbar-toggle`
+* Update: Navbar Variants scope dropdown colors to navbar collapse
+* Update: Navbar `.navbar-text-truncate` should work in all navbar forms
+* Update: Navbar forgot to account for `.navbar-nav` inside `.navbar-collapse` without `.navbar-expand-*`
+* Update: Navbar only undo `.dropdown-menu` styles when inside `.navbar-collapse`
+* Update: Navbar `.navbar-nav` should have `flex-direction: column` only inside `.navbar-collapse`
+* Update: Navbar normalize containers used in `.navbar`
+* Update: `.navbar-expand-*` should `justify-content: space-between`
+* Update: Re-add Management bar component
+* Update: Navbar added option to configure `$container-padding-x` and `$container-padding-x-mobile`
+* Update: Navbar Form spacing at all breakpoints
+* Update: Navbar Brand should calculate padding based on navbar-height
+* Update: Navbar properly space `.nav-link` inside `.navbar-collapse`
+* Update: Navbar move out max-width stuff for `.navbar-toggler-link` and `.navbar-brand` from `.navbar-expand`
+* Update: Fixes #357 - Consolidates z-index variables from individual components to _global variables
+* Update: Atlas custom-control-description line-height
+* Update: Navbar Form Inline shouldn't have margin-bottom at small screen sizes
+* Update: Navbar style dropdown-menu's in mobile
+* Update: Forms `.form-text` should be properly spaced when used after a `label`
+* Update: Input Group Transparent `.btn-link` should have no borders
+* Update: Input Group Transparent add `.input-group-btn` support
+* Update: Nav Tabs make active dropdown indicator smaller
+* Update: Move `.nav-underline` scss under `.nav-tabs` and `.nav-underline` with show should have active styles
+* Site: Remove classes `.navbar-*-bg` there is only one class for color variants now
+* Site: Sidebar update markup to Clay V2 and remove `.sidebar-dark` example
+* Site: Nav Unstyled docs
+* Site: Nav Underline add demo of Nav Underline with Tabs using only buttons
+* Site: Nav added all the different button and link combinations...Faro
+* Site: Nav Tabs add demo of tabs using only buttons
+* Site: Management Bar and Navigation Bar to use new button and link markup for nav-items
+* Site: Input Groups, List Groups, Management Bar, Navigation Bar, Tables demos to use Custom Controls
+* Site: Card, Dropdown, Form Validation pages Custom Control markup to match Form Check
+* Site: Custom Control markup to match Form Check
+* Site: Dropdown use input-group-sm for input-group in dropdown
+* Site: Added Navigation Bar page
+* Site: Navbar remove Navbar Simple demo
+* Site: Management Bar updated markup with `.nav-btn` examples
+* Site: Management Bar update examples with container-fluid-max-xl
+* Site: Navbars add new patterns and remove some v1 patterns
+* Site: Navbar update docs for `.navbar-breakpoint-d-*` and `.navbar-breakpoint-down-d-*`
+* Site: Navbar remove references to `.collapse-basic-search` and `.basic-search`
+* Site: Navbar removed all references to `.collapse-basic-search-transparent`
+* Site: Multi Step Nav page point to subnav page for Multi Step Nav Simplified
+* Site: Subnav page
+* Site: Rename _nav_underline.html to nav_underline.html
+* Site: Navbar fix some dropdown markup
+* Site: Management Bar add primary demo
+* Site: Management Bar demos update Search bar to use `.btn-unstyled`
+* Site: Input Group add example with label and form-text
+* Site: Input Group Transparent add example with `.btn`
+* Site: Nav Tabs update demos to have dropdown-item-indicator
+* Site: Move Nav Underline to its own page
+
 ### v2.0.0-alpha.8 - September 1, 2017
 * New: Global Functions added `setter($var, $val)` for setting default sass variable values
 * New: Added `.multi-step-bar` and options to configure `$multi-step-bar-bg`, `$multi-step-bar-border-radius`, `$multi-step-bar-color`, `$multi-step-bar-font-size`, `$multi-step-bar-height`, `$multi-step-bar-margin-bottom`, `$multi-step-bar-padding`
