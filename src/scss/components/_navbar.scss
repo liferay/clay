@@ -1,6 +1,8 @@
 // Navbar
 
 .navbar {
+	border-width: 0;
+
 	.container,
 	.container-fluid {
 		display: flex;
@@ -499,165 +501,17 @@
 // Navbar Light
 
 .navbar-light {
-	.navbar-nav .btn-unstyled {
-		color: $navbar-light-color;
-
-		@include hover-focus {
-			color: $navbar-light-hover-color;
-		}
-
-		&.disabled {
-			color: $navbar-light-disabled-color;
-		}
-	}
-
-	.navbar-brand {
-		@if not ($navbar-light-brand-color == $navbar-light-active-color) {
-			color: $navbar-light-brand-color;
-		}
-
-		@include hover-focus {
-			@if not ($navbar-light-brand-hover-color == $navbar-light-active-color) {
-				color: $navbar-light-brand-hover-color;
-			}
-		}
-	}
-
-	.navbar-toggler-link {
-		&[aria-expanded="true"] {
-			color: $navbar-light-active-color;
-		}
-	}
-}
-
-.navbar-light-bg {
-	background-color: $navbar-light-bg;
-	border-color: $navbar-light-border-color;
-
-	.navbar-brand {
-		background-color: $navbar-light-brand-bg;
-
-		@include hover-focus {
-			background-color: $navbar-light-brand-hover-bg;
-		}
-	}
-
-	.nav-link {
-		@include hover-focus {
-			background-color: $navbar-light-hover-bg;
-		}
-
-		&.active,
-		&[aria-expanded="true"] {
-			background-color: $navbar-light-active-bg;
-		}
-
-		&.disabled {
-			background-color: $navbar-light-disabled-bg;
-		}
-	}
-
-	.navbar-overlay {
-		background-color: $navbar-light-bg;
-	}
+	@include navbar-variant($navbar-light);
 }
 
 // Navbar Dark
 
 .navbar-dark {
-	.navbar-nav .btn-unstyled {
-		color: $navbar-dark-color;
-
-		@include hover-focus {
-			color: $navbar-dark-hover-color;
-		}
-
-		&.disabled {
-			color: $navbar-dark-disabled-color;
-		}
-	}
-
-	.navbar-brand {
-		@if not ($navbar-dark-brand-color == $navbar-dark-active-color) {
-			color: $navbar-dark-brand-color;
-		}
-
-		@include hover-focus {
-			@if not ($navbar-dark-brand-hover-color == $navbar-dark-active-color) {
-				color: $navbar-dark-brand-hover-color;
-			}
-		}
-	}
-
-	.navbar-toggler-link {
-		&[aria-expanded="true"] {
-			color: $navbar-dark-active-color;
-		}
-	}
-}
-
-.navbar-dark-bg {
-	background-color: $navbar-dark-bg;
-	border-color: $navbar-dark-border-color;
-
-	.navbar-brand {
-		background-color: $navbar-dark-brand-bg;
-
-		@include hover-focus {
-			background-color: $navbar-dark-brand-hover-bg;
-		}
-	}
-
-	.nav-link {
-		@include hover-focus {
-			background-color: $navbar-dark-hover-bg;
-		}
-
-		&.active,
-		&[aria-expanded="true"] {
-			background-color: $navbar-dark-active-bg;
-		}
-
-		&.disabled {
-			background-color: $navbar-dark-disabled-bg;
-		}
-	}
-
-	.navbar-overlay {
-		background-color: $navbar-dark-bg;
-	}
+	@include navbar-variant($navbar-dark);
 }
 
 // Navbar Primary
 
-.navbar-primary-bg {
-	background-color: $navbar-primary-bg;
-	border-color: $navbar-primary-border-color;
-
-	.navbar-brand {
-		background-color: $navbar-primary-brand-bg;
-
-		@include hover-focus {
-			background-color: $navbar-primary-brand-hover-bg;
-		}
-	}
-
-	.nav-link {
-		@include hover-focus {
-			background-color: $navbar-primary-hover-bg;
-		}
-
-		&.active,
-		&[aria-expanded="true"] {
-			background-color: $navbar-primary-active-bg;
-		}
-
-		&.disabled {
-			background-color: $navbar-primary-disabled-bg;
-		}
-	}
-
-	.navbar-overlay {
-		background-color: $navbar-primary-bg;
-	}
+.navbar-primary {
+	@include navbar-variant($navbar-primary);
 }
