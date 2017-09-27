@@ -1,0 +1,201 @@
+/**
+* Clay 2.0.0-alpha.9
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$label-color: null !default;
+$label-link-hover-color: #FFF !default;
+
+$label-font-size: 75% !default;
+$label-font-size-mobile: null !default;
+$label-font-weight: bold !default;
+$label-lexicon-icon-height: 9px !default;
+$label-lexicon-icon-width: $label-lexicon-icon-height !default;
+$label-padding-x: 0.4375rem !default; // 7px
+$label-padding-y: 0.1875rem !default; // 3px
+$label-text-transform: null !default;
+
+$label-anchor-text-decoration: none !default;
+$label-anchor-hover-text-decoration: null !default;
+
+$label-link-text-decoration: underline !default;
+$label-link-hover-text-decoration: none !default;
+
+$label-font-size-lg: 16px !default;
+$label-font-size-lg-mobile: null !default;
+$label-lexicon-icon-height-lg: 13px !default;
+$label-lexicon-icon-width-lg: $label-lexicon-icon-height-lg !default;
+$label-padding-x-lg: 12px !default;
+$label-padding-y-lg: 6px !default;
+
+$label-font-size-sm: 9px !default;
+$label-font-size-sm-mobile: null !default;
+$label-lexicon-icon-height-sm: 7px !default;
+$label-lexicon-icon-width-sm: $label-lexicon-icon-height-sm !default;
+$label-padding-x-sm: 7px !default;
+$label-padding-y-sm: 2px !default;
+
+$label-border-color: $body-color !default;
+$label-border-radius: $border-radius !default;
+$label-border-style: solid !default;
+$label-border-width: 1px !default;
+
+// Label Variants
+
+$label-primary-bg: #FFF !default;
+$label-primary-hover-bg: null !default;
+$label-primary-border-color: map-get($theme-colors, primary) !default;
+$label-primary-hover-border-color: darken($label-primary-border-color, 20%) !default;
+$label-primary-color: map-get($theme-colors, primary) !default;
+$label-primary-hover-color: darken($label-primary-color, 20%) !default;
+$label-primary-link-color: $label-primary-color !default;
+$label-primary-link-hover-color: $label-primary-hover-color !default;
+
+$label-secondary-bg: #FFF !default;
+$label-secondary-hover-bg: null !default;
+$label-secondary-border-color: map-get($theme-colors, secondary) !default;
+$label-secondary-hover-border-color: darken($label-secondary-border-color, 20%) !default;
+$label-secondary-color: map-get($theme-colors, secondary) !default;
+$label-secondary-hover-color: darken($label-secondary-color, 20%) !default;
+$label-secondary-link-color: $label-secondary-color !default;
+$label-secondary-link-hover-color: $label-secondary-hover-color !default;
+
+$label-success-bg: #FFF !default;
+$label-success-hover-bg: null !default;
+$label-success-border-color: map-get($theme-colors, success) !default;
+$label-success-hover-border-color: darken($label-success-border-color, 20%) !default;
+$label-success-color: map-get($theme-colors, success) !default;
+$label-success-hover-color: darken($label-success-color, 20%) !default;
+$label-success-link-color: $label-success-color !default;
+$label-success-link-hover-color: $label-success-hover-color !default;
+
+$label-info-bg: #FFF !default;
+$label-info-hover-bg: null !default;
+$label-info-border-color: map-get($theme-colors, info) !default;
+$label-info-hover-border-color: darken($label-info-border-color, 20%) !default;
+$label-info-color: map-get($theme-colors, info) !default;
+$label-info-hover-color: darken($label-info-color, 20%) !default;
+$label-info-link-color: $label-info-color !default;
+$label-info-link-hover-color: $label-info-hover-color !default;
+
+$label-warning-bg: #FFF !default;
+$label-warning-hover-bg: null !default;
+$label-warning-border-color: map-get($theme-colors, warning) !default;
+$label-warning-hover-border-color: darken($label-warning-border-color, 20%) !default;
+$label-warning-color: map-get($theme-colors, warning) !default;
+$label-warning-hover-color: darken($label-warning-color, 20%) !default;
+$label-warning-link-color: $label-warning-color !default;
+$label-warning-link-hover-color: $label-warning-hover-color !default;
+
+$label-danger-bg: #FFF !default;
+$label-danger-hover-bg: null !default;
+$label-danger-border-color: map-get($theme-colors, danger) !default;
+$label-danger-hover-border-color: darken($label-danger-border-color, 20%) !default;
+$label-danger-color: map-get($theme-colors, danger) !default;
+$label-danger-hover-color: darken($label-danger-color, 20%) !default;
+$label-danger-link-color: $label-danger-color !default;
+$label-danger-link-hover-color: $label-danger-hover-color !default;
+
+$label-light-bg: null !default;
+$label-light-hover-bg: null !default;
+$label-light-border-color: map-get($theme-colors, light) !default;
+$label-light-hover-border-color: darken($label-light-border-color, 20%) !default;
+$label-light-color: map-get($theme-colors, light) !default;
+$label-light-hover-color: darken($label-light-color, 20%) !default;
+$label-light-link-color: $label-light-color !default;
+$label-light-link-hover-color: $label-light-hover-color !default;
+
+$label-dark-bg: #FFF !default;
+$label-dark-hover-bg: null !default;
+$label-dark-border-color: map-get($theme-colors, dark) !default;
+$label-dark-hover-border-color: darken($label-dark-border-color, 20%) !default;
+$label-dark-color: map-get($theme-colors, dark) !default;
+$label-dark-hover-color: darken($label-dark-color, 20%) !default;
+$label-dark-link-color: $label-dark-color !default;
+$label-dark-link-hover-color: $label-dark-hover-color !default;
+
+$label-palette: () !default;
+$label-palette: map-merge((
+	primary: (
+		bg: $label-primary-bg,
+		hover-bg: $label-primary-hover-bg,
+		border-color: $label-primary-border-color,
+		hover-border-color: $label-primary-hover-border-color,
+		color: $label-primary-color,
+		hover-color: $label-primary-hover-color,
+		link-color: $label-primary-link-color,
+		link-hover-color: $label-primary-link-hover-color
+	),
+	secondary: (
+		bg: $label-secondary-bg,
+		hover-bg: $label-secondary-hover-bg,
+		border-color: $label-secondary-border-color,
+		hover-border-color: $label-secondary-hover-border-color,
+		color: $label-secondary-color,
+		hover-color: $label-secondary-hover-color,
+		link-color: $label-secondary-link-color,
+		link-hover-color: $label-secondary-link-hover-color
+	),
+	success: (
+		bg: $label-success-bg,
+		hover-bg: $label-success-hover-bg,
+		border-color: $label-success-border-color,
+		hover-border-color: $label-success-hover-border-color,
+		color: $label-success-color,
+		hover-color: $label-success-hover-color,
+		link-color: $label-success-link-color,
+		link-hover-color: $label-success-link-hover-color
+	),
+	info: (
+		bg: $label-info-bg,
+		hover-bg: $label-info-hover-bg,
+		border-color: $label-info-border-color,
+		hover-border-color: $label-info-hover-border-color,
+		color: $label-info-color,
+		hover-color: $label-info-hover-color,
+		link-color: $label-info-link-color,
+		link-hover-color: $label-info-link-hover-color
+	),
+	warning: (
+		bg: $label-warning-bg,
+		hover-bg: $label-warning-hover-bg,
+		border-color: $label-warning-border-color,
+		hover-border-color: $label-warning-hover-border-color,
+		color: $label-warning-color,
+		hover-color: $label-warning-hover-color,
+		link-color: $label-warning-link-color,
+		link-hover-color: $label-warning-link-hover-color
+	),
+	danger: (
+		bg: $label-danger-bg,
+		hover-bg: $label-danger-hover-bg,
+		border-color: $label-danger-border-color,
+		hover-border-color: $label-danger-hover-border-color,
+		color: $label-danger-color,
+		hover-color: $label-danger-hover-color,
+		link-color: $label-danger-link-color,
+		link-hover-color: $label-danger-link-hover-color
+	),
+	dark: (
+		bg: $label-dark-bg,
+		hover-bg: $label-dark-hover-bg,
+		border-color: $label-dark-border-color,
+		hover-border-color: $label-dark-hover-border-color,
+		color: $label-dark-color,
+		hover-color: $label-dark-hover-color,
+		link-color: $label-dark-link-color,
+		link-hover-color: $label-dark-link-hover-color
+	),
+	light: (
+		bg: $label-light-bg,
+		hover-bg: $label-light-hover-bg,
+		border-color: $label-light-border-color,
+		hover-border-color: $label-light-hover-border-color,
+		color: $label-light-color,
+		hover-color: $label-light-hover-color,
+		link-color: $label-light-link-color,
+		link-hover-color: $label-light-link-hover-color
+	)
+), $label-palette);

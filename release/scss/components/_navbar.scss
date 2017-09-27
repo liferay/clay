@@ -1,0 +1,524 @@
+/**
+* Clay 2.0.0-alpha.9
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// Navbar
+
+.navbar {
+	border-width: 0;
+
+	.container,
+	.container-fluid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.navbar-nav {
+	flex-direction: row;
+
+	.dropdown-menu {
+		position: absolute;
+	}
+
+	.nav-link {
+		// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+}
+
+.navbar-nav .nav-item {
+	> .custom-control,
+	> .form-check {
+		margin-bottom: 0;
+		// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+	}
+}
+
+.navbar-text {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.navbar-collapse {
+	max-width: 100%;
+
+	.navbar-nav {
+		flex-direction: column;
+	}
+
+	.dropdown-toggle .navbar-text-truncate {
+		max-width: calc(100% - #{$navbar-text-truncate-spacer-right});
+	}
+}
+
+.navbar-text-truncate {
+	display: inline-block;
+	max-width: 100%;
+
+	@include text-truncate;
+
+	vertical-align: bottom;
+}
+
+// Navbar Toggler
+
+.navbar-toggler-link {
+	align-items: center;
+	display: flex;
+	border-width: 0;
+	line-height: $line-height-base;
+	max-width: 100%;
+	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+	padding: $navbar-brand-padding-y 0.5rem;
+	position: relative;
+
+	&:focus {
+		outline: none;
+	}
+
+	.lexicon-icon {
+		min-width: 1em;
+		margin-left: 3px;
+		margin-top: 0;
+	}
+}
+
+// Navbar Brand
+
+.navbar-brand {
+	color: $navbar-brand-color;
+	margin-right: 0;
+	max-width: calc(100% - 72px);
+	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+
+	@include hover-focus {
+		color: $navbar-brand-hover-color;
+	}
+}
+
+// Navbar Form
+
+.navbar-form {
+	align-items: center;
+	display: flex;
+	// Will need to be changed to $navbar-link-padding-x if https://github.com/twbs/bootstrap/pull/23109 is merged
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+
+	> form {
+		width: 100%;
+	}
+
+	.form-inline {
+		.form-control {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.navbar-form-autofit {
+	flex-basis: 100px;
+	flex-grow: 1;
+
+	form {
+		display: flex;
+		width: 100%;
+	}
+
+	.form-inline {
+		align-items: flex-end;
+		flex: 1;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.form-control {
+		flex: 1;
+		width: 100%;
+	}
+}
+
+// Navbar Overlay
+
+.navbar-overlay {
+	background-color: $body-bg;
+}
+
+// Navbar Display Utilities
+
+.navbar-breakpoint-d-block,
+.navbar-breakpoint-d-inline-block,
+.navbar-breakpoint-d-flex {
+	display: none !important;
+}
+
+// Navbar Expand
+
+.navbar-expand {
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.container,
+	.container-fluid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.navbar-nav {
+		flex-wrap: wrap;
+	}
+
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} { // .navbar-expand, sm, md, lg, xl
+			justify-content: space-between;
+
+			.nav-item {
+				align-items: center;
+				display: flex;
+			}
+
+			.nav-item .navbar-text-truncate {
+				max-width: $navbar-text-truncate-max-width;
+			}
+
+			@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
+				@include media-breakpoint-down($breakpoint) {
+					&.navbar-collapse-absolute {
+						.navbar-collapse {
+							background-color: $dropdown-bg;
+							box-shadow: $navbar-collapse-absolute-box-shadow;
+							left: 0;
+							margin-top: -$navbar-padding-y;
+							padding: 0 $navbar-padding-x $navbar-padding-y $navbar-padding-x;
+							position: absolute;
+							right: 0;
+							top: 100%;
+							z-index: $zindex-dropdown;
+						}
+
+						&.navbar-dark-bg .navbar-collapse {
+							background-color: $navbar-dark-bg;
+							border-color: $navbar-dark-border-color;
+						}
+
+						&.navbar-light-bg .navbar-collapse {
+							background-color: $navbar-light-bg;
+							border-color: $navbar-light-border-color;
+						}
+					}
+
+					.navbar-collapse {
+						.nav-item {
+							display: block;
+						}
+
+						.navbar-text-truncate {
+							max-width: 100%;
+						}
+
+						.navbar-nav {
+							.dropdown-toggle .navbar-text-truncate {
+								max-width: calc(100% - #{$navbar-text-truncate-spacer-right});
+							}
+
+							.dropdown-divider {
+								margin-left: -$navbar-padding-x;
+								margin-right: -$navbar-padding-x;
+							}
+
+							.dropdown-item {
+								@include hover-focus {
+									background-color: transparent;
+								}
+
+								&.active {
+									background-color: transparent;
+								}
+							}
+
+							.dropdown-menu {
+								background-color: transparent;
+								border-width: 0;
+								box-shadow: none;
+								margin: 0;
+								max-width: none;
+								overflow: visible;
+								padding: 0;
+								position: static;
+							}
+						}
+					}
+
+					.navbar-breakpoint-down-d-block {
+						display: block !important;
+					}
+
+					.navbar-breakpoint-down-d-inline-block {
+						display: inline-block !important;
+					}
+
+					.navbar-breakpoint-down-d-flex {
+						display: flex !important;
+					}
+
+					.navbar-breakpoint-down-d-none {
+						display: none !important;
+					}
+
+					&.navbar-light {
+						.navbar-collapse .navbar-nav {
+							.dropdown-header,
+							.dropdown-item {
+								color: $navbar-light-color;
+							}
+
+							.dropdown-divider {
+								border-color: $navbar-light-color;
+							}
+
+							.dropdown-item {
+								@include hover-focus {
+									color: $navbar-light-hover-color;
+								}
+
+								&.active {
+									color: $navbar-light-active-color;
+								}
+
+								&.disabled {
+									color: $navbar-light-disabled-color;
+								}
+							}
+						}
+					}
+
+					&.navbar-dark {
+						.navbar-collapse .navbar-nav {
+							.dropdown-header,
+							.dropdown-item {
+								color: $navbar-dark-color;
+							}
+
+							.dropdown-divider {
+								border-color: $navbar-dark-color;
+							}
+
+							.dropdown-item {
+								@include hover-focus {
+									color: $navbar-dark-hover-color;
+								}
+
+								&.active {
+									color: $navbar-dark-active-color;
+								}
+
+								&.disabled {
+									color: $navbar-dark-disabled-color;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			@include media-breakpoint-up($next) {
+				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
+					.navbar-text-truncate {
+						max-width: $navbar-text-truncate-max-width;
+					}
+
+					.navbar-collapse {
+						flex-grow: 1;
+						flex-wrap: wrap;
+						justify-content: space-between;
+
+						.navbar-nav {
+							flex-direction: row;
+							flex-wrap: wrap;
+						}
+
+						.dropdown-toggle .navbar-text-truncate {
+							max-width: $navbar-text-truncate-max-width - $navbar-text-truncate-spacer-right;
+						}
+					}
+
+					.navbar-breakpoint-d-block {
+						display: block !important;
+					}
+
+					.navbar-breakpoint-d-inline-block {
+						display: inline-block !important;
+					}
+
+					.navbar-breakpoint-d-flex {
+						display: flex !important;
+					}
+
+					.navbar-breakpoint-d-none {
+						display: none !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Navbar Overlay Styles for `.navbar-overlay-xs-down`,
+// `.navbar-overlay-sm-down`, `.navbar-overlay-md-down`,
+// `.navbar-overlay-lg-down`, `.navbar-overlay-up`
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$index: index(map-keys($grid-breakpoints), $breakpoint);
+	$length: length(map-keys($grid-breakpoints));
+	$infix: '.navbar-overlay-#{$breakpoint}-down';
+
+	@if ($index == $length) {
+		$infix: '.navbar-overlay-up';
+	}
+
+	#{$infix} {
+		@include media-breakpoint-down($breakpoint) {
+			@include border-radius($navbar-border-radius);
+
+			bottom: 0;
+			display: none;
+			justify-content: space-between;
+			left: 0;
+			margin-left: 0;
+			margin-right: 0;
+			padding-bottom: $navbar-padding-y;
+			padding-left: $navbar-padding-x;
+			padding-right: $navbar-padding-x;
+			padding-top: $navbar-padding-y;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: $zindex-navbar-overlay;
+
+			&.show {
+				display: flex;
+			}
+		}
+	}
+}
+
+// Navbar Highlight
+
+.navbar-highlight {
+	.navbar-toggler-link {
+		&:after {
+			background-color: $navbar-active-highlight;
+			bottom: -$navbar-padding-y;
+
+			@if not ($navbar-active-highlight == transparent) {
+				content: '';
+			}
+
+			display: block;
+			height: 0.1875rem;
+			left: 0.25rem;
+			position: absolute;
+			right: 0.25rem;
+			width: auto;
+		}
+	}
+}
+
+.navbar-highlight.navbar-expand {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		&#{$infix} { // .navbar-expand, sm, md, lg, xl
+			@include media-breakpoint-up($next) {
+				.navbar-nav .nav-link {
+					&.active:after {
+						background-color: $navbar-active-highlight;
+						bottom: -$navbar-padding-y;
+
+						@if not ($navbar-active-highlight == transparent) {
+							content: '';
+						}
+
+						display: block;
+						height: 0.1875rem;
+						left: 0.25rem;
+						position: absolute;
+						right: 0.25rem;
+						width: auto;
+					}
+				}
+
+				&.navbar-dark-bg .navbar-nav .nav-link.active:after {
+					background-color: $navbar-dark-active-highlight;
+
+					@if not ($navbar-dark-active-highlight == transparent) {
+						content: '';
+					}
+				}
+
+				&.navbar-light-bg .navbar-nav .nav-link.active:after {
+					background-color: $navbar-light-active-highlight;
+
+					@if not ($navbar-light-active-highlight == transparent) {
+						content: '';
+					}
+				}
+			}
+		}
+	}
+}
+
+.navbar-highlight.navbar-light-bg {
+	.navbar-toggler-link:after {
+		background-color: $navbar-light-active-highlight;
+
+		@if not ($navbar-light-active-highlight == transparent) {
+			content: '';
+		}
+	}
+}
+
+.navbar-highlight.navbar-dark-bg {
+	.navbar-toggler-link:after {
+		background-color: $navbar-dark-active-highlight;
+
+		@if not ($navbar-dark-active-highlight == transparent) {
+			content: '';
+		}
+	}
+}
+
+// Navbar Light
+
+.navbar-light {
+	@include navbar-variant($navbar-light);
+}
+
+// Navbar Dark
+
+.navbar-dark {
+	@include navbar-variant($navbar-dark);
+}
+
+// Navbar Primary
+
+.navbar-primary {
+	@include navbar-variant($navbar-primary);
+}

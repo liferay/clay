@@ -1,0 +1,21 @@
+/**
+* Clay 2.0.0-alpha.9
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+// INSERT CUSTOM BASE VARS
+
+@import "functions/_global-functions";
+
+@import "atlas/_variables";
+
+@import "bootstrap/_functions";
+@import "bootstrap/_variables";
+@import "bootstrap/_mixins";
+
+@import "_variables";
+@import "_mixins";
+
+// INSERT CUSTOM VARS

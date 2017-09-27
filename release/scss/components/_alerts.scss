@@ -1,0 +1,93 @@
+/**
+* Clay 2.0.0-alpha.9
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.alert {
+	border-style: $alert-border-style;
+
+	@if ($alert-border-width != 1px) {
+		border-width: $alert-border-width;
+	}
+
+	font-size: $alert-font-size;
+
+	.close {
+		font-size: $alert-close-font-size;
+		line-height: $alert-close-line-height;
+		opacity: $alert-close-opacity;
+		margin-left: $alert-close-margin-left;
+		padding-bottom: $alert-close-padding-bottom;
+		padding-left: $alert-close-padding-left;
+		padding-right: $alert-close-padding-right;
+		padding-top: $alert-close-padding-top;
+		right: $alert-close-position-right;
+		top: $alert-close-position-top;
+	}
+
+	.lead {
+		font-size: $alert-lead-font-size;
+		font-weight: $alert-lead-font-weight;
+		margin-right: $alert-lead-spacer-x;
+	}
+
+	.lexicon-icon + .lead {
+		margin-left: $alert-lead-spacer-x;
+	}
+}
+
+.alert-link {
+	text-decoration: $alert-link-decoration;
+
+	@include hover-focus {
+		text-decoration: $alert-link-hover-decoration;
+	}
+}
+
+.alert-fluid {
+	@include border-radius(0);
+
+	border-width: $alert-fluid-border-width;
+}
+
+// Alert Notifications
+
+.alert-notification {
+	width: 100%;
+
+	@include media-breakpoint-up(md) {
+		max-width: $alert-notification-max-width;
+	}
+}
+
+// Alert Variants
+
+@each $color, $value in $alert-palette {
+	.alert-#{$color} {
+		background-color: map-get($value, bg);
+		border-color: map-get($value, border-color);
+		color: map-get($value, color);
+
+		.close {
+			color: map-get($value, close-color);
+
+			@include hover-focus {
+				color: map-get($value, close-hover-color);
+			}
+		}
+
+		.alert-link {
+			color: map-get($value, link-color);
+
+			@include hover-focus {
+				color: map-get($value, link-hover-color);
+			}
+		}
+
+		.lead {
+			color: map-get($value, lead-color);
+		}
+	}
+}

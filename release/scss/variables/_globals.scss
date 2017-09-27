@@ -1,0 +1,39 @@
+/**
+* Clay 2.0.0-alpha.9
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$enable-scaling-components: false !default;
+$scaling-breakpoint-down: sm !default;
+
+$container-fluid-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+) !default;
+
+$rounded-border-radius: $border-radius !default;
+$rounded-circle-border-radius: 5000px !default;
+$rounded-0-border-radius: 0 !default;
+
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+
+$font-size-base-mobile: $font-size-base !default;
+$font-size-lg-mobile: $font-size-lg !default;
+
+$h1-font-size-mobile: null !default;
+$h2-font-size-mobile: null !default;
+$h3-font-size-mobile: null !default;
+$h4-font-size-mobile: null !default;
+$h5-font-size-mobile: null !default;
+$h6-font-size-mobile: null !default;
+
+// z-index variables
+
+$zindex-input-group-hover: 3 !default;
+$zindex-input-group-focus: $zindex-input-group-hover + 1 !default; // 4
+$zindex-navbar-overlay: $zindex-dropdown - 1 !default; // 999
+$zindex-sidenav: $zindex-fixed + 5 !default;

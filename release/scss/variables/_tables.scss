@@ -1,0 +1,41 @@
+/**
+* Clay 2.0.0-alpha.9
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$table-cell-gutters: $grid-gutter-width / 2 !default; // 15px
+
+$table-head-font-size: null !default;
+$table-head-font-weight: null !default;
+$table-head-height: 36px !default;
+
+$table-divider-bg: #FFF !default;
+$table-divider-color: null !default;
+$table-divider-font-weight: null !default;
+$table-divider-font-size: null !default;
+$table-divider-padding: $table-cell-padding !default;
+$table-divider-text-transform: null !default;
+
+// Table List
+
+$table-list-bg: #FFF !default;
+$table-list-color: null !default;
+$table-list-accent-bg: #F2F2F2 !default;
+$table-list-hover-bg: #ECECEC !default;
+$table-list-active-bg: #DADADA !default;
+
+$table-list-border-color: $table-border-color !default;
+$table-list-border-width: 0.0625rem !default; // 1px
+$table-list-border-radius: 6px !default;
+$table-list-font-size: null !default;
+
+$table-list-link-color: null !default;
+$table-list-link-color-hover: null !default;
+
+$table-list-head-bg: null !default;
+$table-list-head-font-size: null !default;
+$table-list-head-font-weight: null !default;
+$table-list-head-height: null !default;
+$table-list-head-vertical-alignment: null !default;

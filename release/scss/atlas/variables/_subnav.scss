@@ -1,0 +1,16 @@
+/**
+* Clay 2.0.0-alpha.9
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+$subnav-light-item-link-hover-color: !default;
+
+$subnav-dark-item-link-hover-color: !default;
+
+$subnav-primary-color: $body-color !default;
+$subnav-primary-bg: lighten(map-get($theme-colors, primary), 31%) !default;
+$subnav-primary-link-color: $link-color !default
+$subnav-primary-link-hover-color: $link-hover-color !default;
+$subnav-primary-item-link-hover-color: !default;

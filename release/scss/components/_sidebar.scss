@@ -1,0 +1,143 @@
+/**
+* Clay 2.0.0-alpha.9
+*
+* Copyright 2017, Liferay, Inc.
+* All rights reserved.
+* MIT license
+*/
+.sidebar {
+	height: 100%;
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+}
+
+// Sidebar Header / Footer
+
+.sidebar-header,
+.sidebar-footer {
+	padding-bottom: $sidebar-padding-bottom;
+	padding-left: $sidebar-padding-left;
+	padding-right: $sidebar-padding-right;
+	padding-top: $sidebar-padding-top;
+}
+
+// Sidebar Body
+
+.sidebar-body {
+	overflow: auto;
+
+	-webkit-overflow-scrolling: touch;
+
+	padding-bottom: $sidebar-padding-bottom;
+	padding-left: $sidebar-padding-left;
+	padding-right: $sidebar-padding-right;
+	padding-top: $sidebar-padding-top;
+
+	> .sidebar-section {
+		margin-bottom: 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Sidebar Section
+
+.sidebar-section {
+	position: relative;
+	word-wrap: break-word;
+}
+
+.sidebar-section-flex {
+	display: flex;
+
+	.flex-col {
+		justify-content: center;
+		min-height: 40px;
+	}
+}
+
+// Sidebar List
+
+.sidebar-list {
+	font-size: $sidebar-list-font-size;
+
+	@include list-unstyled;
+}
+
+.sidebar-list-item {
+	border-color: transparent;
+	border-style: solid;
+	border-width: $sidebar-list-item-border-top-width $sidebar-list-item-border-right-width $sidebar-list-item-border-bottom-width $sidebar-list-item-border-left-width;
+	display: flex;
+	margin-bottom: -$sidebar-list-item-border-bottom-width;
+
+	.flex-col {
+		justify-content: center;
+		padding-bottom: $sidebar-list-item-flex-col-padding-y;
+		padding-left: $sidebar-list-item-flex-col-padding-x;
+		padding-right: $sidebar-list-item-flex-col-padding-x;
+		padding-top: $sidebar-list-item-flex-col-padding-y;
+	}
+}
+
+// Sidebar Panel
+
+.sidebar-panel {
+	margin-bottom: $sidebar-panel-margin-bottom;
+	position: relative;
+}
+
+// Sidebar Actions
+
+.sidebar-actions {
+	flex-wrap: nowrap;
+	margin-right: -0.5rem;
+}
+
+// Sidebar Title, Subtitle, Caption
+
+.sidebar-title {
+	display: block;
+	font-size: $sidebar-title-font-size;
+	font-weight: $sidebar-title-font-weight;
+	line-height: normal;
+	margin-bottom: 0;
+}
+
+.sidebar-subtitle {
+	font-size: $sidebar-subtitle-font-size;
+	font-weight: $sidebar-subtitle-font-weight;
+	line-height: normal;
+	text-transform: $sidebar-subtitle-text-transform;
+}
+
+.sidebar-caption {
+	font-size: $sidebar-caption-font-size;
+	font-weight: $sidebar-caption-font-weight;
+	text-transform: $sidebar-caption-text-transform;
+}
+
+// Sidebar Definition List (dl dt dd)
+
+.sidebar-dt {
+	font-size: $sidebar-dt-font-size;
+	font-weight: $sidebar-dt-font-weight;
+	margin-bottom: $sidebar-dt-margin-bottom;
+	text-transform: $sidebar-dt-text-transform;
+}
+
+.sidebar-dd {
+	font-size: $sidebar-dd-font-size;
+	font-weight: $sidebar-dd-font-weight;
+	margin-bottom: $sidebar-dd-margin-bottom;
+	text-transform: $sidebar-dd-text-transform;
+}
+
+// Sidebar Variants
+
+.sidebar-light {
+	@include sidebar-variant($sidebar-light);
+}
