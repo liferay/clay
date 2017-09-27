@@ -343,6 +343,7 @@
 // @param $map - Sass map that contain Navbar Variant properties to modify
 
 @mixin navbar-variant($map) {
+	$enabled: setter(map-get($map, enabled), true);
 	$bg: map-get($map, bg);
 	$border-color: setter(map-get($map, border-color), transparent);
 	$border-style: setter(map-get($map, border-style), solid);
@@ -359,51 +360,53 @@
 	$brand-bg: map-get($map, brand-bg);
 	$brand-hover-bg: map-get($map, brand-hover-bg);
 
-	background-color: $bg;
-	border-color: $border-color;
-	border-style: $border-style;
-
-	.nav-link,
-	.navbar-nav .btn-unstyled {
-		background-color: $link-bg;
-		color: $link-color;
-
-		@include hover-focus {
-			background-color: $link-hover-bg;
-			color: $link-hover-color;
-		}
-
-		&.active,
-		&[aria-expanded="true"] {
-			background-color: $link-active-bg;
-			color: $link-active-color;
-		}
-
-		&.disabled {
-			background-color: $link-disabled-bg;
-			color: $link-disabled-color;
-		}
-	}
-
-	.navbar-brand {
-		background-color: $brand-bg;
-		color: $brand-color;
-
-		@include hover-focus {
-			background-color: $brand-bg;
-			color: $brand-hover-color;
-		}
-	}
-
-	.navbar-toggler-link {
-		&[aria-expanded="true"] {
-			color: $link-active-color;
-		}
-	}
-
-	.navbar-overlay {
+	@if ($enabled) {
 		background-color: $bg;
-	}
+		border-color: $border-color;
+		border-style: $border-style;
 
-	@content;
+		.nav-link,
+		.navbar-nav .btn-unstyled {
+			background-color: $link-bg;
+			color: $link-color;
+
+			@include hover-focus {
+				background-color: $link-hover-bg;
+				color: $link-hover-color;
+			}
+
+			&.active,
+			&[aria-expanded="true"] {
+				background-color: $link-active-bg;
+				color: $link-active-color;
+			}
+
+			&.disabled {
+				background-color: $link-disabled-bg;
+				color: $link-disabled-color;
+			}
+		}
+
+		.navbar-brand {
+			background-color: $brand-bg;
+			color: $brand-color;
+
+			@include hover-focus {
+				background-color: $brand-bg;
+				color: $brand-hover-color;
+			}
+		}
+
+		.navbar-toggler-link {
+			&[aria-expanded="true"] {
+				color: $link-active-color;
+			}
+		}
+
+		.navbar-overlay {
+			background-color: $bg;
+		}
+
+		@content;
+	}
 }
