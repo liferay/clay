@@ -109,7 +109,7 @@
 		symbol: string
 	]}
 	{@param? id: string}
-	{@param? label: string}
+	{@param? label: html|string}
 	{@param? name: string}
 	{@param? size: string}
 	{@param? style: string}
@@ -139,9 +139,9 @@
 	{if $ariaLabel}
 		aria-label="{$ariaLabel}"
 	{elseif $label}
-		{$label}
+		aria-label="{$label}"
 	{elseif $icon}
-		{$icon.symbol}
+		aria-label="{$icon.symbol}"
 	{/if}
 
 	{if $disabled}
