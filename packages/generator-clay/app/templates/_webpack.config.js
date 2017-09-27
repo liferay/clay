@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/ClaySelect.js',
+  entry: './src/<%= componentName %>.js',
   module: {
     rules: [
       {
@@ -22,7 +22,7 @@ module.exports = {
   output: {
     library: 'metal',
     libraryTarget: 'this',
-    filename: './build/globals/clay-select.js',
+    filename: './build/globals/<%= repoName %>.js',
   },
   plugins: [new webpack.optimize.ModuleConcatenationPlugin()],
   resolve: {
