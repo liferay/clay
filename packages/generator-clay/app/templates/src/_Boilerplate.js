@@ -15,11 +15,11 @@ class <%= componentName %> extends Component {
  * @static
  * @type {!Object}
  */
-ClayLabel.STATE = {
+<%= componentName %>.STATE = {
   /**
 	 * Id to be applied to the element.
 	 * @instance
-	 * @memberof ClayLabel
+	 * @memberof <%= componentName %>
 	 * @type {?string|undefined}
 	 * default undefined
 	 */
