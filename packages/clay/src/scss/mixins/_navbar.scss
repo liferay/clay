@@ -2,6 +2,7 @@
 // @param $map - Sass map that contain Navbar properties to modify
 
 @mixin navbar-size($map) {
+	$enabled: setter(map-get($map, enabled), true);
 	$scaling-navbar: setter(map-get($map, scaling-navbar), false);
 	$container-padding-x: map-get($map, container-padding-x);
 	$container-padding-x-mobile: setter(map-get($map, container-padding-x-mobile), $container-padding-x);
@@ -62,275 +63,277 @@
 	$toggler-link-padding-x: setter(map-get($map, toggler-link-padding-x), $link-padding-x-mobile);
 	$toggler-link-padding-y: ($height-mobile - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($toggler-link-font-size * $toggler-link-line-height)) / 2;
 
-	@include border-radius($navbar-border-radius);
+	@if ($enabled) {
+		@include border-radius($navbar-border-radius);
 
-	border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
-	font-size: $font-size;
-	padding: $padding-y $padding-x;
+		border-width: $border-top-width $border-right-width $border-bottom-width $border-left-width;
+		font-size: $font-size;
+		padding: $padding-y $padding-x;
 
-	.container,
-	.container-fluid {
-		padding-left: $container-padding-x-mobile;
-		padding-right: $container-padding-x-mobile;
-	}
-
-	.navbar-toggler {
-		font-size: $toggler-font-size;
-		height: $toggler-height;
-		margin-bottom: $toggler-margin-y;
-		margin-left: $toggler-margin-x;
-		margin-right: $toggler-margin-x;
-		margin-top: $toggler-margin-y;
-		padding-bottom: $toggler-padding-y;
-		padding-left: $toggler-padding-x;
-		padding-right: $toggler-padding-x;
-		padding-top: $toggler-padding-y;
-	}
-
-	.navbar-toggler-link {
-		height: $toggler-link-height;
-		font-size: $toggler-link-font-size;
-		line-height: $toggler-link-line-height;
-		margin-bottom: $toggler-link-margin-y;
-		margin-left: $toggler-link-margin-x;
-		margin-right: $toggler-link-margin-x;
-		margin-top: $toggler-link-margin-y;
-		padding-bottom: $toggler-link-padding-y;
-		padding-left: $toggler-link-padding-x;
-		padding-right: $toggler-link-padding-x;
-		padding-top: $toggler-link-padding-y;
-	}
-
-	.navbar-brand {
-		font-size: $brand-font-size-mobile;
-		margin-right: $brand-margin-right-mobile;
-		max-width: $brand-max-width;
-		padding-bottom: $brand-padding-y-mobile;
-		padding-left: $brand-padding-x-mobile;
-		padding-right: $brand-padding-x-mobile;
-		padding-top: $brand-padding-y-mobile;
-	}
-
-	.navbar-nav {
-		.nav-btn {
-			margin-bottom: $btn-margin-y-mobile;
-			margin-left: $btn-margin-x-mobile;
-			margin-right: $btn-margin-x-mobile;
-			margin-top: $btn-margin-y-mobile;
-			min-height: $btn-min-height-mobile;
-			min-width: $btn-min-width-mobile;
+		.container,
+		.container-fluid {
+			padding-left: $container-padding-x-mobile;
+			padding-right: $container-padding-x-mobile;
 		}
 
-		.nav-item {
-			> .custom-control,
-			> .form-check {
+		.navbar-toggler {
+			font-size: $toggler-font-size;
+			height: $toggler-height;
+			margin-bottom: $toggler-margin-y;
+			margin-left: $toggler-margin-x;
+			margin-right: $toggler-margin-x;
+			margin-top: $toggler-margin-y;
+			padding-bottom: $toggler-padding-y;
+			padding-left: $toggler-padding-x;
+			padding-right: $toggler-padding-x;
+			padding-top: $toggler-padding-y;
+		}
+
+		.navbar-toggler-link {
+			height: $toggler-link-height;
+			font-size: $toggler-link-font-size;
+			line-height: $toggler-link-line-height;
+			margin-bottom: $toggler-link-margin-y;
+			margin-left: $toggler-link-margin-x;
+			margin-right: $toggler-link-margin-x;
+			margin-top: $toggler-link-margin-y;
+			padding-bottom: $toggler-link-padding-y;
+			padding-left: $toggler-link-padding-x;
+			padding-right: $toggler-link-padding-x;
+			padding-top: $toggler-link-padding-y;
+		}
+
+		.navbar-brand {
+			font-size: $brand-font-size-mobile;
+			margin-right: $brand-margin-right-mobile;
+			max-width: $brand-max-width;
+			padding-bottom: $brand-padding-y-mobile;
+			padding-left: $brand-padding-x-mobile;
+			padding-right: $brand-padding-x-mobile;
+			padding-top: $brand-padding-y-mobile;
+		}
+
+		.navbar-nav {
+			.nav-btn {
+				margin-bottom: $btn-margin-y-mobile;
 				margin-left: $btn-margin-x-mobile;
 				margin-right: $btn-margin-x-mobile;
+				margin-top: $btn-margin-y-mobile;
+				min-height: $btn-min-height-mobile;
+				min-width: $btn-min-width-mobile;
+			}
+
+			.nav-item {
+				> .custom-control,
+				> .form-check {
+					margin-left: $btn-margin-x-mobile;
+					margin-right: $btn-margin-x-mobile;
+				}
+			}
+
+			.nav-link,
+			.navbar-text {
+				padding-bottom: $link-padding-y-mobile;
+				padding-left: $link-padding-x-mobile;
+				padding-right: $link-padding-x-mobile;
+				padding-top: $link-padding-y-mobile;
+			}
+
+			.nav-link-monospaced {
+				margin-bottom: $btn-margin-y-mobile;
+				margin-left: $btn-margin-x-mobile;
+				margin-right: $btn-margin-x-mobile;
+				margin-top: $btn-margin-y-mobile;
+				padding: 0;
 			}
 		}
 
-		.nav-link,
-		.navbar-text {
-			padding-bottom: $link-padding-y-mobile;
-			padding-left: $link-padding-x-mobile;
-			padding-right: $link-padding-x-mobile;
-			padding-top: $link-padding-y-mobile;
+		.dropdown-menu {
+			margin-top: $nav-item-dropdown-margin-top;
 		}
 
-		.nav-link-monospaced {
-			margin-bottom: $btn-margin-y-mobile;
-			margin-left: $btn-margin-x-mobile;
-			margin-right: $btn-margin-x-mobile;
-			margin-top: $btn-margin-y-mobile;
-			padding: 0;
-		}
-	}
+		// Navbar Expand
 
-	.dropdown-menu {
-		margin-top: $nav-item-dropdown-margin-top;
-	}
+		&.navbar-expand {
+			@each $breakpoint in map-keys($grid-breakpoints) {
+				$next: breakpoint-next($breakpoint, $grid-breakpoints);
+				$infix: breakpoint-infix($next, $grid-breakpoints);
 
-	// Navbar Expand
+				&#{$infix} { // .navbar-expand, sm, md, lg, xl
+					@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
+						@include media-breakpoint-down($breakpoint) {
+							&.navbar-collapse-absolute {
+								.navbar-collapse {
+									border-color: transparent;
+									border-style: solid;
+									border-width: 0 $border-right-width $border-bottom-width $border-left-width;
+									left: -$border-left-width;
+									margin-top: $border-bottom-width;
+									padding-bottom: $padding-y;
+									padding-left: $padding-x;
+									padding-right: $padding-x;
+									padding-top: $padding-y;
+									right: -$border-right-width;
+								}
+							}
 
-	&.navbar-expand {
-		@each $breakpoint in map-keys($grid-breakpoints) {
-			$next: breakpoint-next($breakpoint, $grid-breakpoints);
-			$infix: breakpoint-infix($next, $grid-breakpoints);
-
-			&#{$infix} { // .navbar-expand, sm, md, lg, xl
-				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
-					@include media-breakpoint-down($breakpoint) {
-						&.navbar-collapse-absolute {
 							.navbar-collapse {
-								border-color: transparent;
-								border-style: solid;
-								border-width: 0 $border-right-width $border-bottom-width $border-left-width;
-								left: -$border-left-width;
-								margin-top: $border-bottom-width;
-								padding-bottom: $padding-y;
-								padding-left: $padding-x;
-								padding-right: $padding-x;
-								padding-top: $padding-y;
-								right: -$border-right-width;
+								.navbar-nav {
+									.dropdown-divider {
+										margin-left: -$padding-x;
+										margin-right: -$padding-x;
+									}
+
+									.dropdown-item {
+										padding-bottom: $collapse-dropdown-item-padding-y-mobile;
+										padding-left: $collapse-dropdown-item-padding-x-mobile;
+										padding-right: $collapse-dropdown-item-padding-x-mobile;
+										padding-top: $collapse-dropdown-item-padding-y-mobile;
+									}
+								}
+							}
+
+							.navbar-form {
+								padding-bottom: $link-padding-y-mobile;
+								padding-left: $link-padding-x-mobile;
+								padding-right: $link-padding-x-mobile;
+								padding-top: $link-padding-y-mobile;
+
+								.form-control {
+									height: $form-control-height-mobile;
+									padding-bottom: 0;
+									padding-top: 0;
+								}
+							}
+						}
+					}
+
+					@include media-breakpoint-up($next) {
+						.container,
+						.container-fluid {
+							@if ($scaling-navbar) {
+								padding-left: $container-padding-x;
+								padding-right: $container-padding-x;
 							}
 						}
 
-						.navbar-collapse {
-							.navbar-nav {
-								.dropdown-divider {
-									margin-left: -$padding-x;
-									margin-right: -$padding-x;
-								}
-
-								.dropdown-item {
-									padding-bottom: $collapse-dropdown-item-padding-y-mobile;
-									padding-left: $collapse-dropdown-item-padding-x-mobile;
-									padding-right: $collapse-dropdown-item-padding-x-mobile;
-									padding-top: $collapse-dropdown-item-padding-y-mobile;
-								}
+						.navbar-brand {
+							@if ($scaling-navbar) {
+								font-size: $brand-font-size;
+								margin-right: $brand-margin-right;
+								padding-bottom: $brand-padding-y;
+								padding-left: $brand-padding-x;
+								padding-right: $brand-padding-x;
+								padding-top: $brand-padding-y;
 							}
 						}
 
 						.navbar-form {
-							padding-bottom: $link-padding-y-mobile;
-							padding-left: $link-padding-x-mobile;
-							padding-right: $link-padding-x-mobile;
-							padding-top: $link-padding-y-mobile;
-
-							.form-control {
-								height: $form-control-height-mobile;
-								padding-bottom: 0;
-								padding-top: 0;
-							}
-						}
-					}
-				}
-
-				@include media-breakpoint-up($next) {
-					.container,
-					.container-fluid {
-						@if ($scaling-navbar) {
-							padding-left: $container-padding-x;
-							padding-right: $container-padding-x;
-						}
-					}
-
-					.navbar-brand {
-						@if ($scaling-navbar) {
-							font-size: $brand-font-size;
-							margin-right: $brand-margin-right;
-							padding-bottom: $brand-padding-y;
-							padding-left: $brand-padding-x;
-							padding-right: $brand-padding-x;
-							padding-top: $brand-padding-y;
-						}
-					}
-
-					.navbar-form {
-						@if ($scaling-navbar) {
-							padding-left: $link-padding-x;
-							padding-right: $link-padding-x;
-
-							.form-control {
-								height: $form-control-height;
-							}
-						}
-					}
-
-					.nav-btn {
-						@if ($scaling-navbar) {
-							margin-bottom: $btn-margin-y;
-							margin-left: $btn-margin-x;
-							margin-right: $btn-margin-x;
-							margin-top: $btn-margin-y;
-							min-height: $btn-min-height;
-							min-width: $btn-min-width;
-						}
-					}
-
-					.nav-item {
-						> .custom-control,
-						> .form-check {
 							@if ($scaling-navbar) {
+								padding-left: $link-padding-x;
+								padding-right: $link-padding-x;
+
+								.form-control {
+									height: $form-control-height;
+								}
+							}
+						}
+
+						.nav-btn {
+							@if ($scaling-navbar) {
+								margin-bottom: $btn-margin-y;
 								margin-left: $btn-margin-x;
 								margin-right: $btn-margin-x;
+								margin-top: $btn-margin-y;
+								min-height: $btn-min-height;
+								min-width: $btn-min-width;
 							}
 						}
-					}
 
-					.nav-link,
-					.navbar-text {
-						@if ($scaling-navbar) {
-							padding-bottom: $link-padding-y;
-							padding-left: $link-padding-x;
-							padding-right: $link-padding-x;
-							padding-top: $link-padding-y;
+						.nav-item {
+							> .custom-control,
+							> .form-check {
+								@if ($scaling-navbar) {
+									margin-left: $btn-margin-x;
+									margin-right: $btn-margin-x;
+								}
+							}
 						}
-					}
 
-					.nav-link-monospaced {
-						@if ($scaling-navbar) {
-							margin-bottom: $btn-margin-y;
-							margin-left: $btn-margin-x;
-							margin-right: $btn-margin-x;
-							margin-top: $btn-margin-y;
-							padding: 0;
+						.nav-link,
+						.navbar-text {
+							@if ($scaling-navbar) {
+								padding-bottom: $link-padding-y;
+								padding-left: $link-padding-x;
+								padding-right: $link-padding-x;
+								padding-top: $link-padding-y;
+							}
+						}
+
+						.nav-link-monospaced {
+							@if ($scaling-navbar) {
+								margin-bottom: $btn-margin-y;
+								margin-left: $btn-margin-x;
+								margin-right: $btn-margin-x;
+								margin-top: $btn-margin-y;
+								padding: 0;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
 
-	// Navbar Overlay Styles for `.navbar-overlay-xs-down`,
-	// `.navbar-overlay-sm-down`, `.navbar-overlay-md-down`,
-	// `.navbar-overlay-lg-down`, `.navbar-overlay-up`
+		// Navbar Overlay Styles for `.navbar-overlay-xs-down`,
+		// `.navbar-overlay-sm-down`, `.navbar-overlay-md-down`,
+		// `.navbar-overlay-lg-down`, `.navbar-overlay-up`
 
-	@each $breakpoint in map-keys($grid-breakpoints) {
-		$index: index(map-keys($grid-breakpoints), $breakpoint);
-		$length: length(map-keys($grid-breakpoints));
-		$infix: '.navbar-overlay-#{$breakpoint}-down';
-
-		@if ($index == $length) {
-			$infix: '.navbar-overlay-up';
-		}
-
-		#{$infix} {
-			@include media-breakpoint-down($breakpoint) {
-				@include border-radius($navbar-border-radius);
-
-				padding-bottom: $padding-y;
-				padding-left: $padding-x;
-				padding-right: $padding-x;
-				padding-top: $padding-y;
-			}
-		}
-	}
-
-	&.navbar-highlight {
-		.navbar-toggler-link {
-			&:after {
-				bottom: -$border-bottom-width - $padding-y;
-				height: $active-border-bottom-width;
-				left: $active-border-offset-x;
-				right: $active-border-offset-x;
-			}
-		}
-	}
-
-	&.navbar-highlight.navbar-expand {
 		@each $breakpoint in map-keys($grid-breakpoints) {
-			$next: breakpoint-next($breakpoint, $grid-breakpoints);
-			$infix: breakpoint-infix($next, $grid-breakpoints);
+			$index: index(map-keys($grid-breakpoints), $breakpoint);
+			$length: length(map-keys($grid-breakpoints));
+			$infix: '.navbar-overlay-#{$breakpoint}-down';
 
-			&#{$infix} { // .navbar-expand, sm, md, lg, xl
-				@include media-breakpoint-up($next) {
-					.navbar-nav .nav-link {
-						&.active:after {
-							bottom: -$border-bottom-width - $padding-y;
-							height: $active-border-bottom-width;
-							left: $active-border-offset-x;
-							right: $active-border-offset-x;
+			@if ($index == $length) {
+				$infix: '.navbar-overlay-up';
+			}
+
+			#{$infix} {
+				@include media-breakpoint-down($breakpoint) {
+					@include border-radius($navbar-border-radius);
+
+					padding-bottom: $padding-y;
+					padding-left: $padding-x;
+					padding-right: $padding-x;
+					padding-top: $padding-y;
+				}
+			}
+		}
+
+		&.navbar-highlight {
+			.navbar-toggler-link {
+				&:after {
+					bottom: -$border-bottom-width - $padding-y;
+					height: $active-border-bottom-width;
+					left: $active-border-offset-x;
+					right: $active-border-offset-x;
+				}
+			}
+		}
+
+		&.navbar-highlight.navbar-expand {
+			@each $breakpoint in map-keys($grid-breakpoints) {
+				$next: breakpoint-next($breakpoint, $grid-breakpoints);
+				$infix: breakpoint-infix($next, $grid-breakpoints);
+
+				&#{$infix} { // .navbar-expand, sm, md, lg, xl
+					@include media-breakpoint-up($next) {
+						.navbar-nav .nav-link {
+							&.active:after {
+								bottom: -$border-bottom-width - $padding-y;
+								height: $active-border-bottom-width;
+								left: $active-border-offset-x;
+								right: $active-border-offset-x;
+							}
 						}
 					}
 				}
