@@ -3,9 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Demo: Clay Label</title>
+	<title>Demo: <%= componentName %></title>
 
 	<link rel="stylesheet" href="../../../node_modules/clay/build/css/atlas.css">
+
+	<style>
+		body {
+			background-color: #FFF;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+	</style>
 
 	<script src="../build/globals/<%= kebabCaseName %>.js"></script>
 </head>

@@ -1,6 +1,6 @@
 # <%= kebabCaseName %>
 
-Metal <%= componentName %> component
+<%= repoDescription %>
 
 ## Setup
 
