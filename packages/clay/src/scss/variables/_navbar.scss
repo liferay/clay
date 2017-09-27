@@ -32,6 +32,20 @@ $navbar-light-brand-hover-bg: null !default;
 $navbar-light-brand-color: null !default;
 $navbar-light-brand-hover-color: null !default;
 
+$navbar-light: () !default;
+$navbar-light: map-merge((
+	bg: $navbar-light-bg,
+	border-color: $navbar-light-border-color,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color,
+	brand-color: $navbar-light-brand-color,
+	brand-hover-color: $navbar-light-brand-hover-color,
+	brand-bg: $navbar-light-brand-bg,
+	brand-hover-bg: $navbar-light-brand-hover-bg
+), $navbar-light);
+
 // Navbar Dark
 
 $navbar-dark-bg: map-get($theme-colors, dark) !default;
@@ -47,6 +61,20 @@ $navbar-dark-brand-bg: null !default;
 $navbar-dark-brand-hover-bg: null !default;
 $navbar-dark-brand-color: null !default;
 $navbar-dark-brand-hover-color: null !default;
+
+$navbar-dark: () !default;
+$navbar-dark: map-merge((
+	bg: $navbar-dark-bg,
+	border-color: $navbar-dark-border-color,
+	link-color: $navbar-dark-color,
+	link-hover-color: $navbar-dark-hover-color,
+	link-active-color: $navbar-dark-active-color,
+	link-disabled-color: $navbar-dark-disabled-color,
+	brand-color: $navbar-dark-brand-color,
+	brand-hover-color: $navbar-dark-brand-hover-color,
+	brand-bg: $navbar-dark-brand-bg,
+	brand-hover-bg: $navbar-dark-brand-hover-bg
+), $navbar-dark);
 
 // Navbar Primary
 
@@ -64,3 +92,17 @@ $navbar-primary-brand-bg: null !default;
 $navbar-primary-brand-hover-bg: null !default;
 $navbar-primary-brand-color: null !default;
 $navbar-primary-brand-hover-color: null !default;
+
+$navbar-primary: () !default;
+$navbar-primary: map-merge((
+	bg: $navbar-primary-bg,
+	border-color: $navbar-primary-border-color,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color,
+	brand-color: $navbar-primary-brand-color,
+	brand-hover-color: $navbar-primary-brand-hover-color,
+	brand-bg: $navbar-primary-brand-bg,
+	brand-hover-bg: $navbar-primary-brand-hover-bg
+), $navbar-primary);
