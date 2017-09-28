@@ -1,8 +1,9 @@
 // Form Feedback
 
+.form-feedback-item,
+.form-feedback-indicator,
 .invalid-feedback,
-.valid-feedback,
-.form-feedback {
+.valid-feedback {
 	font-size: $form-feedback-font-size;
 	font-weight: $form-feedback-font-weight;
 }
@@ -71,13 +72,10 @@
 		}
 	}
 
-	&.form-text,
-	&.form-feedback-item,
-	.form-feedback {
+	.form-feedback-item {
 		color: $form-feedback-invalid-color;
 	}
 
-	&.form-feedback-indicator,
 	.form-feedback-indicator {
 		background-image: lx-icon(exclamation-full, $form-feedback-invalid-color);
 		background-position: left 2px center;
@@ -112,13 +110,10 @@
 		}
 	}
 
-	&.form-text,
-	&.form-feedback-item,
-	.form-feedback {
+	.form-feedback-item {
 		color: $form-feedback-warning-color;
 	}
 
-	&.form-feedback-indicator,
 	.form-feedback-indicator {
 		background-image: lx-icon(info-circle, $form-feedback-warning-color);
 		background-position: left 2px center;
@@ -153,13 +148,10 @@
 		}
 	}
 
-	&.form-text,
-	&.form-feedback-item,
-	.form-feedback {
+	.form-feedback-item {
 		color: $form-feedback-valid-color;
 	}
 
-	&.form-feedback-indicator,
 	.form-feedback-indicator {
 		background-image: lx-icon(check-circle, $form-feedback-valid-color);
 		background-position: left 2px center;
