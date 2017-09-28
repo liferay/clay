@@ -89,6 +89,10 @@
 		color: $form-feedback-invalid-color;
 		padding-left: 1.5em;
 	}
+
+	select.form-control:not([multiple]):not([size]) {
+		background-image: $input-danger-select-icon;
+	}
 }
 
 .has-warning {
@@ -126,6 +130,10 @@
 		background-size: 1em;
 		color: $form-feedback-warning-color;
 		padding-left: 1.5em;
+	}
+
+	select.form-control:not([multiple]):not([size]) {
+		background-image: $input-warning-select-icon;
 	}
 }
 
@@ -165,23 +173,8 @@
 		color: $form-feedback-valid-color;
 		padding-left: 1.5em;
 	}
-}
 
-.has-success {
 	select.form-control:not([multiple]):not([size]) {
 		background-image: $input-success-select-icon;
-	}
-}
-
-.has-warning {
-	select.form-control:not([multiple]):not([size]) {
-		background-image: $input-warning-select-icon;
-	}
-}
-
-// .has-danger {
-.has-error {
-	select.form-control:not([multiple]):not([size]) {
-		background-image: $input-danger-select-icon;
 	}
 }
