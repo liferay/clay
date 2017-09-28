@@ -316,7 +316,9 @@
 			}
 		}
 
-		&.navbar-highlight {
+		// Navbar Underline
+
+		&.navbar-underline {
 			.navbar-toggler-link {
 				&:after {
 					bottom: -$border-bottom-width - $padding-y;
@@ -327,7 +329,7 @@
 			}
 		}
 
-		&.navbar-highlight.navbar-expand {
+		&.navbar-underline.navbar-expand {
 			@each $breakpoint in map-keys($grid-breakpoints) {
 				$next: breakpoint-next($breakpoint, $grid-breakpoints);
 				$infix: breakpoint-infix($next, $grid-breakpoints);
@@ -369,6 +371,7 @@
 	$brand-hover-color: map-get($map, brand-hover-color);
 	$brand-bg: map-get($map, brand-bg);
 	$brand-hover-bg: map-get($map, brand-hover-bg);
+	$underline-active-bg: map-get($map, underline-active-bg);
 
 	@if ($enabled) {
 		background-color: $bg;
@@ -417,41 +420,49 @@
 			background-color: $bg;
 		}
 
-		@each $breakpoint in map-keys($grid-breakpoints) {
-			$next: breakpoint-next($breakpoint, $grid-breakpoints);
-			$infix: breakpoint-infix($next, $grid-breakpoints);
+		&.navbar-expand {
+			@each $breakpoint in map-keys($grid-breakpoints) {
+				$next: breakpoint-next($breakpoint, $grid-breakpoints);
+				$infix: breakpoint-infix($next, $grid-breakpoints);
 
-			@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
-				&.navbar-expand#{$infix} {
-					@include media-breakpoint-down($breakpoint) {
-						&.navbar-collapse-absolute .navbar-collapse {
-							background-color: $bg;
-							border-color: $border-color;
+				&#{$infix} { // .navbar-expand, sm, md, lg, xl
+					@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
+						@include media-breakpoint-down($breakpoint) {
+							&.navbar-collapse-absolute .navbar-collapse {
+								background-color: $bg;
+								border-color: $border-color;
+							}
+
+							.navbar-collapse .navbar-nav {
+								.dropdown-header,
+								.dropdown-item {
+									color: $link-color;
+								}
+
+								.dropdown-divider {
+									border-color: $link-color;
+								}
+
+								.dropdown-item {
+									@include hover-focus {
+										color: $link-hover-color;
+									}
+
+									&.active {
+										color: $link-active-color;
+									}
+
+									&.disabled {
+										color: $link-disabled-color;
+									}
+								}
+							}
 						}
+					}
 
-						.navbar-collapse .navbar-nav {
-							.dropdown-header,
-							.dropdown-item {
-								color: $link-color;
-							}
-
-							.dropdown-divider {
-								border-color: $link-color;
-							}
-
-							.dropdown-item {
-								@include hover-focus {
-									color: $link-hover-color;
-								}
-
-								&.active {
-									color: $link-active-color;
-								}
-
-								&.disabled {
-									color: $link-disabled-color;
-								}
-							}
+					@include media-breakpoint-up($next) {
+						&.navbar-underline .navbar-nav .nav-link.active:after {
+							background-color: $underline-active-bg;
 						}
 					}
 				}
