@@ -8,6 +8,11 @@
 	font-weight: $form-feedback-font-weight;
 }
 
+.form-feedback-indicator {
+	font-size: $form-feedback-font-size;
+	font-weight: $form-feedback-font-weight;
+}
+
 .form-text {
 	color: $form-text-color;
 	font-size: $form-text-font-size;
@@ -77,7 +82,7 @@
 	}
 
 	.form-feedback-indicator {
-		background-image: lx-icon(exclamation-full, $form-feedback-invalid-color);
+		background-image: $form-feedback-danger-indicator-icon;
 		background-position: left 2px center;
 		background-repeat: no-repeat;
 		background-size: 1em;
@@ -115,7 +120,7 @@
 	}
 
 	.form-feedback-indicator {
-		background-image: lx-icon(info-circle, $form-feedback-warning-color);
+		background-image: $form-feedback-warning-indicator-icon;
 		background-position: left 2px center;
 		background-repeat: no-repeat;
 		background-size: 1em;
@@ -153,7 +158,7 @@
 	}
 
 	.form-feedback-indicator {
-		background-image: lx-icon(check-circle, $form-feedback-valid-color);
+		background-image: $form-feedback-success-indicator-icon;
 		background-position: left 2px center;
 		background-repeat: no-repeat;
 		background-size: 1em;
