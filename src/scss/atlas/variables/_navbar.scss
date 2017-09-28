@@ -1,3 +1,5 @@
+$navbar-underline-active-bg: lighten(map-get($theme-colors, primary), 22%) !default;
+
 // Navbar Light
 
 $navbar-light-color: map-get($theme-colors, secondary) !default;
