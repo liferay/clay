@@ -8,13 +8,13 @@ let itemShape = {
   inputName: Config.string(),
   inputValue: Config.string(),
   label: Config.string(),
+  separator: Config.bool().value(false),
   type: Config.oneOf([
     'checkbox',
     'group',
     'header',
     'item',
     'radiogroup',
-    'separator',
   ]).value('item'),
   url: Config.string().required(),
 };

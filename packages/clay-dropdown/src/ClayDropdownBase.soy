@@ -54,7 +54,6 @@
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
-
 		{delcall ClayDropdown.item variant="$item.type"}
 			{param active: $item.active /}
 			{param checked: $item.checked /}
@@ -64,9 +63,9 @@
 			{param inputName: $item.inputName /}
 			{param inputValue: $item.inputValue /}
 			{param isInList: $isInList /}
-			{param isLast: isLast($item) /}
 			{param items: $item.items /}
 			{param label: $item.label ?: '' /}
+			{param separator: $item.separator /}
 			{param spritemap: $spritemap /}
 			{param url: $item.url /}
 		{/delcall}
@@ -230,9 +229,9 @@
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
-	{@param? isLast: bool}
 	{@param? isInList: bool}
 	{@param? items: list<?>}
+	{@param? separator: bool}
 	{@param? spritemap: string}
 	{@param? url: string}
 
@@ -302,9 +301,9 @@
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
-	{@param? isLast: bool}
 	{@param? isInList: bool}
 	{@param? items: list<?>}
+	{@param? separator: bool}
 	{@param? spritemap: string}
 	{@param? url: string}
 
@@ -319,14 +318,29 @@
 		{/call}
 	{/let}
 
+	{let $classes kind="text"}
+		dropdown-item
+		{if $active or $checked}
+			{sp}active
+		{/if}
+	{/let}
+
 	{if $isInList}
-		<li class="dropdown-item">
+		<li class="{$classes}">
 			{$checkbox}
 		</li>
+
+		{if $separator}
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+		{/if}
 	{else}
-		<div class="dropdown-item">
+		<div class="{$classes}">
 			{$checkbox}
 		</div>
+
+		{if $separator}
+			<div class="dropdown-divider"></div>
+		{/if}
 	{/if}
 {/deltemplate}
 
@@ -342,9 +356,9 @@
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
-	{@param? isLast: bool}
 	{@param? isInList: bool}
 	{@param? items: list<?>}
+	{@param? separator: bool}
 	{@param? spritemap: string}
 	{@param? url: string}
 
@@ -367,9 +381,9 @@
 		{/call}
 	{/if}
 
-	{if not $isLast}
+	{if $separator}
 		{if $isInList}
-			<li class="dropdown-divider"></li>
+			<li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
 		{else}
 			<div class="dropdown-divider"></div>
 		{/if}
@@ -388,9 +402,9 @@
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
-	{@param? isLast: bool}
 	{@param? isInList: bool}
 	{@param? items: list<?>}
+	{@param? separator: bool}
 	{@param? spritemap: string}
 	{@param? url: string}
 
@@ -401,7 +415,14 @@
 	<div aria-label="{$label}" role="radiogroup">
 		{if $items}
 			{foreach $item in $items}
-				<div class="dropdown-item">
+				{let $classes kind="text"}
+					dropdown-item
+					{if $item.active or $item.checked}
+						{sp}active
+					{/if}
+				{/let}
+
+				<div class="{$classes}">
 					{call ClayRadio.render}
 						{param checked: $item.checked /}
 						{param disabled: $item.disabled /}
@@ -415,7 +436,7 @@
 		{/if}
 	</div>
 
-	{if not $isLast}
+	{if $separator}
 			<div class="dropdown-divider"></div>
 	{/if}
 {/deltemplate}
