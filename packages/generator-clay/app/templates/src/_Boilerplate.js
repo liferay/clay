@@ -21,9 +21,9 @@ class <%= componentName %> extends Component {
 	 * @instance
 	 * @memberof <%= componentName %>
 	 * @type {?string|undefined}
-	 * default undefined
+	 * @default undefined
 	 */
-  id: Config.string()
+  id: Config.string(),
 
 };
 
