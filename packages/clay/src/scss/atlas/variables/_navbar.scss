@@ -5,7 +5,7 @@ $navbar-underline-active-bg: lighten(map-get($theme-colors, primary), 22%) !defa
 $navbar-light-color: map-get($theme-colors, secondary) !default;
 $navbar-light-hover-color: map-get($theme-colors, secondary) !default;
 $navbar-light-active-color: map-get($theme-colors, secondary) !default;
-$navbar-light-disabled-color: lighten(map-get($theme-colors, secondary), 24%) !default;
+$navbar-light-disabled-color: $nav-link-disabled-color !default;
 
 $navbar-light: (
 	bg: #FFF
@@ -16,7 +16,7 @@ $navbar-light: (
 $navbar-dark-color: #FFF !default;
 $navbar-dark-hover-color: $navbar-dark-color !default;
 $navbar-dark-active-color: $navbar-dark-color !default;
-$navbar-dark-disabled-color: lighten(map-get($theme-colors, secondary), 24%) !default;
+$navbar-dark-disabled-color: $nav-link-disabled-color !default;
 
 $navbar-dark: (
 	bg: map-get($theme-colors, secondary)
