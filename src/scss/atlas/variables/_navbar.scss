@@ -11,16 +11,11 @@ $navbar-light: (
 
 // Navbar Dark
 
-$navbar-dark-bg: map-get($theme-colors, secondary) !default;
-
 $navbar-dark-color: #FFF !default;
 $navbar-dark-hover-color: $navbar-dark-color !default;
 $navbar-dark-active-color: $navbar-dark-color !default;
-$navbar-dark-disabled-color: #CACDD2 !default;
+$navbar-dark-disabled-color: lighten(map-get($theme-colors, secondary), 24%) !default;
 
-$navbar-dark-brand-color: $navbar-dark-color !default;
-$navbar-dark-brand-hover-color: $navbar-dark-brand-color !default;
-
-$navbar-dark-active-highlight: lighten(map-get($theme-colors, primary), 22%) !default;
-
-$navbar-dark-toggler-border-color: #FFF !default;
+$navbar-dark: (
+	bg: map-get($theme-colors, secondary)
+) !default;

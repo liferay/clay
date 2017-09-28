@@ -20,32 +20,13 @@ $navbar-light: map-merge((
 
 // Navbar Dark
 
-$navbar-dark-bg: map-get($theme-colors, dark) !default;
-$navbar-dark-border-color: transparent !default;
-
-$navbar-dark-active-bg: null !default;
-$navbar-dark-hover-bg: null !default;
-$navbar-dark-disabled-bg: null !default;
-
-$navbar-dark-active-highlight: $component-active-bg !default;
-
-$navbar-dark-brand-bg: null !default;
-$navbar-dark-brand-hover-bg: null !default;
-$navbar-dark-brand-color: null !default;
-$navbar-dark-brand-hover-color: null !default;
-
 $navbar-dark: () !default;
 $navbar-dark: map-merge((
-	bg: $navbar-dark-bg,
-	border-color: $navbar-dark-border-color,
+	bg: map-get($theme-colors, dark),
 	link-color: $navbar-dark-color,
 	link-hover-color: $navbar-dark-hover-color,
 	link-active-color: $navbar-dark-active-color,
-	link-disabled-color: $navbar-dark-disabled-color,
-	brand-color: $navbar-dark-brand-color,
-	brand-hover-color: $navbar-dark-brand-hover-color,
-	brand-bg: $navbar-dark-brand-bg,
-	brand-hover-bg: $navbar-dark-brand-hover-bg
+	link-disabled-color: $navbar-dark-disabled-color
 ), $navbar-dark);
 
 // Navbar Primary
