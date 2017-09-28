@@ -37,7 +37,7 @@
 				basicSearch.trigger('closed.lexicon.collapsible.search');
 			};
 
-			var supportsTransition = $.support.transition;
+			var supportsTransition = bootstrap.Util.supportsTransitionEnd();
 
 			if (supportsTransition) {
 				basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
@@ -86,7 +86,7 @@
 				if (!basicSearch.hasClass('open')) {
 					event.preventDefault();
 
-					var supportsTransition = $.support.transition;
+					var supportsTransition = bootstrap.Util.supportsTransitionEnd();
 
 					if (supportsTransition) {
 						basicSearchSlider.one('bsTransitionEnd', $.proxy(complete, instance))
