@@ -66,6 +66,8 @@ $input-danger-focus-color: null !default;
 
 $input-danger-checkbox-label-color: $form-feedback-invalid-color !default;
 $input-danger-label-color: null !default;
+$input-danger-select-icon-color: $input-danger-border-color !default;
+$input-danger-select-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-danger-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 $input-success-bg: null !default;
 $input-success-focus-bg: null !default;
@@ -78,6 +80,8 @@ $input-success-focus-color: null !default;
 
 $input-success-checkbox-label-color: $form-feedback-valid-color !default;
 $input-success-label-color: null !default;
+$input-success-select-icon-color: $input-success-border-color !default;
+$input-success-select-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-success-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 $input-warning-bg: null !default;
 $input-warning-focus-bg: null !default;
@@ -90,6 +94,8 @@ $input-warning-focus-color: null !default;
 
 $input-warning-checkbox-label-color: $form-feedback-warning-color !default;
 $input-warning-label-color: null !default;
+$input-warning-select-icon-color: $input-warning-border-color !default;
+$input-warning-select-icon: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$input-warning-select-icon-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 // Select Element
 
