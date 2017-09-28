@@ -428,6 +428,31 @@
 							background-color: $bg;
 							border-color: $border-color;
 						}
+
+						.navbar-collapse .navbar-nav {
+							.dropdown-header,
+							.dropdown-item {
+								color: $link-color;
+							}
+
+							.dropdown-divider {
+								border-color: $link-color;
+							}
+
+							.dropdown-item {
+								@include hover-focus {
+									color: $link-hover-color;
+								}
+
+								&.active {
+									color: $link-active-color;
+								}
+
+								&.disabled {
+									color: $link-disabled-color;
+								}
+							}
+						}
 					}
 				}
 			}

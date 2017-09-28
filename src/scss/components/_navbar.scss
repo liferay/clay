@@ -256,60 +256,6 @@
 					.navbar-breakpoint-down-d-none {
 						display: none !important;
 					}
-
-					&.navbar-light {
-						.navbar-collapse .navbar-nav {
-							.dropdown-header,
-							.dropdown-item {
-								color: $navbar-light-color;
-							}
-
-							.dropdown-divider {
-								border-color: $navbar-light-color;
-							}
-
-							.dropdown-item {
-								@include hover-focus {
-									color: $navbar-light-hover-color;
-								}
-
-								&.active {
-									color: $navbar-light-active-color;
-								}
-
-								&.disabled {
-									color: $navbar-light-disabled-color;
-								}
-							}
-						}
-					}
-
-					&.navbar-dark {
-						.navbar-collapse .navbar-nav {
-							.dropdown-header,
-							.dropdown-item {
-								color: $navbar-dark-color;
-							}
-
-							.dropdown-divider {
-								border-color: $navbar-dark-color;
-							}
-
-							.dropdown-item {
-								@include hover-focus {
-									color: $navbar-dark-hover-color;
-								}
-
-								&.active {
-									color: $navbar-dark-active-color;
-								}
-
-								&.disabled {
-									color: $navbar-dark-disabled-color;
-								}
-							}
-						}
-					}
 				}
 			}
 
