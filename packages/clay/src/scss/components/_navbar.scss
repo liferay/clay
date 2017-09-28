@@ -340,18 +340,14 @@
 	}
 }
 
-// Navbar Highlight
+// Navbar Underline
 
-.navbar-highlight {
+.navbar-underline {
 	.navbar-toggler-link {
 		&:after {
-			background-color: $navbar-active-highlight;
+			background-color: $navbar-underline-active-bg;
 			bottom: -$navbar-padding-y;
-
-			@if not ($navbar-active-highlight == transparent) {
-				content: '';
-			}
-
+			content: '';
 			display: block;
 			height: 0.1875rem;
 			left: 0.25rem;
@@ -362,7 +358,7 @@
 	}
 }
 
-.navbar-highlight.navbar-expand {
+.navbar-underline.navbar-expand {
 	@each $breakpoint in map-keys($grid-breakpoints) {
 		$next: breakpoint-next($breakpoint, $grid-breakpoints);
 		$infix: breakpoint-infix($next, $grid-breakpoints);
@@ -371,13 +367,9 @@
 			@include media-breakpoint-up($next) {
 				.navbar-nav .nav-link {
 					&.active:after {
-						background-color: $navbar-active-highlight;
+						background-color: $navbar-underline-active-bg;
 						bottom: -$navbar-padding-y;
-
-						@if not ($navbar-active-highlight == transparent) {
-							content: '';
-						}
-
+						content: '';
 						display: block;
 						height: 0.1875rem;
 						left: 0.25rem;
@@ -386,43 +378,7 @@
 						width: auto;
 					}
 				}
-
-				&.navbar-dark-bg .navbar-nav .nav-link.active:after {
-					background-color: $navbar-dark-active-highlight;
-
-					@if not ($navbar-dark-active-highlight == transparent) {
-						content: '';
-					}
-				}
-
-				&.navbar-light-bg .navbar-nav .nav-link.active:after {
-					background-color: $navbar-light-active-highlight;
-
-					@if not ($navbar-light-active-highlight == transparent) {
-						content: '';
-					}
-				}
 			}
-		}
-	}
-}
-
-.navbar-highlight.navbar-light-bg {
-	.navbar-toggler-link:after {
-		background-color: $navbar-light-active-highlight;
-
-		@if not ($navbar-light-active-highlight == transparent) {
-			content: '';
-		}
-	}
-}
-
-.navbar-highlight.navbar-dark-bg {
-	.navbar-toggler-link:after {
-		background-color: $navbar-dark-active-highlight;
-
-		@if not ($navbar-dark-active-highlight == transparent) {
-			content: '';
 		}
 	}
 }

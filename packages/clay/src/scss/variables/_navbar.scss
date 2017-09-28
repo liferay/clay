@@ -2,7 +2,7 @@ $enable-scaling-navbar: $enable-scaling-components !default;
 
 $navbar-border-radius: null !default;
 
-$navbar-active-highlight: transparent !default;
+$navbar-underline-active-bg: $component-active-bg !default;
 
 $navbar-text-truncate-spacer-right: 25px !default;
 $navbar-text-truncate-max-width: 140px !default;
