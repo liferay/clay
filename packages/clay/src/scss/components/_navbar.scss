@@ -383,6 +383,12 @@
 	}
 }
 
+// Navbar Transparent
+
+.navbar-transparent {
+	@include navbar-variant($navbar-transparent);
+}
+
 // Navbar Light
 
 .navbar-light {
