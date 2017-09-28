@@ -19,6 +19,28 @@ class ClayActionsDropdown extends Component {}
  */
 ClayActionsDropdown.STATE = {
   /**
+   * Button configuration to place a button at dropdown footer.
+   * @instance
+   * @memberof ClayDropdown
+   * @type {?string}
+   * @default .dropdown-toggle
+   */
+  button: Config.shapeOf({
+    label: Config.string().required(),
+    style: Config.oneOf(['primary', 'secondary']).value('primary'),
+    type: Config.oneOf(['button', 'reset', 'submit']),
+  }),
+
+  /**
+   * Caption text of the dropdown.
+   * @instance
+   * @memberof ClayDropdownBase
+   * @type {?string}
+   * @default undefined
+   */
+  caption: Config.string(),
+
+  /**
    * Flag to indicate if menu is expanded.
    * @instance
    * @memberof ClayActionsDropdown
@@ -26,6 +48,15 @@ ClayActionsDropdown.STATE = {
    * @default false
    */
   expanded: Config.bool().value(false),
+
+  /**
+   * Help text to be shown on top of the open dropdown.
+   * @instance
+   * @memberof ClayDropdown
+   * @type {?string}
+   * @default undefined
+   */
+  helpText: Config.string(),
 
   /**
    * List of menu items.

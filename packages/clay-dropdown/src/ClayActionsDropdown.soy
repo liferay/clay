@@ -6,7 +6,10 @@
 {template .render}
 	{@param items: list<?>}
 	{@param spritemap: string}
+	{@param? button: ?}
+	{@param? caption: string}
 	{@param? expanded: bool}
+	{@param? helpText: string}
 
   {let $trigger kind="html"}
     {call ClayIcon.render}
@@ -16,8 +19,11 @@
   {/let}
 
 	{call ClayDropdownBase.render}
+    {param button: $button /}
+    {param caption: $caption /}
     {param elementClasses: 'dropdown-action' /}
     {param expanded: $expanded /}
+    {param helpText: $helpText /}
     {param items: $items /}
     {param spritemap: $spritemap /}
     {param triggerLabel: $trigger /}
