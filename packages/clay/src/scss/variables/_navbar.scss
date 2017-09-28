@@ -31,31 +31,12 @@ $navbar-dark: map-merge((
 
 // Navbar Primary
 
-$navbar-primary-bg: lighten(map-get($theme-colors, primary), 44%) !default;
-$navbar-primary-border-color: map-get($theme-colors, primary) !default;
-
-$navbar-primary-active-bg: null !default;
-$navbar-primary-hover-bg: null !default;
-
-$navbar-primary-disabled-bg: null !default;
-
-$navbar-primary-active-highlight: $component-active-bg !default;
-
-$navbar-primary-brand-bg: null !default;
-$navbar-primary-brand-hover-bg: null !default;
-$navbar-primary-brand-color: null !default;
-$navbar-primary-brand-hover-color: null !default;
-
 $navbar-primary: () !default;
 $navbar-primary: map-merge((
-	bg: $navbar-primary-bg,
-	border-color: $navbar-primary-border-color,
+	bg: lighten(map-get($theme-colors, primary), 44%),
+	border-color: map-get($theme-colors, primary),
 	link-color: $navbar-light-color,
 	link-hover-color: $navbar-light-hover-color,
 	link-active-color: $navbar-light-active-color,
-	link-disabled-color: $navbar-light-disabled-color,
-	brand-color: $navbar-primary-brand-color,
-	brand-hover-color: $navbar-primary-brand-hover-color,
-	brand-bg: $navbar-primary-brand-bg,
-	brand-hover-bg: $navbar-primary-brand-hover-bg
+	link-disabled-color: $navbar-light-disabled-color
 ), $navbar-primary);
