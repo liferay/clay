@@ -7,64 +7,58 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
   </button>
-  <ul class="dropdown-menu">
-    <li>
-      <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-    <li>
-      <a class="dropdown-item" href="item2url">Item 2</a>
-    </li>
-    <li>
-      <a class="dropdown-item active" href="item1ur3">Item 3</a>
-    </li>
-    <li>
-      <a class="dropdown-item disabled" href="javascript:;">Item 4</a>
-    </li>
-    <li class="dropdown-item">
-      <label class="custom-control custom-checkbox">
-        <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
-        <span class="custom-control-indicator"></span>
-        <span class="custom-control-description">Item 5</span>
-      </label>
-    </li>
-    <li class="dropdown-item">
-      <label class="custom-control custom-checkbox">
-        <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
-        <span class="custom-control-indicator"></span>
-        <span class="custom-control-description">Item 7</span>
-      </label>
-    </li>
-    <li class="dropdown-item">
-      <label class="custom-control custom-checkbox">
-        <input disabled="" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
-        <span class="custom-control-indicator"></span>
-        <span class="custom-control-description">Item 7</span>
-      </label>
-    </li>
-    <li class="dropdown-item">
-      <label class="custom-control custom-radio">
-        <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
-        <span class="custom-control-indicator"></span>
-        <span class="custom-control-description">Item 8</span>
-      </label>
-    </li>
-    <li class="dropdown-item">
-      <label class="custom-control custom-radio">
-        <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
-        <span class="custom-control-indicator"></span>
-        <span class="custom-control-description">Item 9</span>
-      </label>
-    </li>
-    <li class="dropdown-item">
-      <label class="custom-control custom-radio">
-        <input disabled="" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
-        <span class="custom-control-indicator"></span>
-        <span class="custom-control-description">Item 10</span>
-      </label>
-    </li>
-    <div class="dropdown-subheader">Group 11</div>
-    <div class="dropdown-divider"></div>
-  </ul>
+  <div class="dropdown-menu">
+    <ul class="list-unstyled">
+      <li>
+        <a class="dropdown-item" href="item1url">Item 1</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="item2url">Item 2</a>
+      </li>
+      <li>
+        <a class="dropdown-item active" href="item1ur3">Item 3</a>
+      </li>
+      <li>
+        <a class="dropdown-item disabled" href="javascript:;">Item 4</a>
+      </li>
+      <li class="dropdown-item">
+        <label class="custom-control custom-checkbox">
+          <input class="custom-control-input" name="checkbox5name" value="checkbox5value" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Item 5</span>
+        </label>
+      </li>
+      <li class="dropdown-item active">
+        <label class="custom-control custom-checkbox">
+          <input checked="" class="custom-control-input" name="checkbox6name" value="checkbox7value" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Item 7</span>
+        </label>
+      </li>
+      <li class="dropdown-item">
+        <label class="custom-control custom-checkbox">
+          <input disabled="" class="custom-control-input" name="checkbox7name" value="checkbox7value" ref="input" type="checkbox">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Item 7</span>
+        </label>
+      </li>
+      <li>
+        <a class="dropdown-item">Item 8</a>
+      </li>
+      <li>
+        <a class="dropdown-item">Item 9</a>
+      </li>
+      <li>
+        <a class="dropdown-item disabled" href="javascript:;">Item 10</a>
+      </li>
+      <li>
+        <a class="dropdown-item">Group 11</a>
+      </li>
+      <li>
+        <a class="dropdown-item"></a>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
@@ -75,7 +69,7 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
   </button>
-  <ul class="dropdown-menu">
+  <div class="dropdown-menu">
     <div class="dropdown-section">
       <div class="input-group input-group-inset">
         <div class="input-group-input">
@@ -90,10 +84,12 @@ exports[`ClayDropdown should render a searchable dropdown 1`] = `
         </span>
       </div>
     </div>
-    <li>
-      <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-  </ul>
+    <ul class="list-unstyled">
+      <li>
+        <a class="dropdown-item" href="item1url">Item 1</a>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
@@ -104,10 +100,12 @@ exports[`ClayDropdown should render an expanded dropdown 1`] = `
       <use xlink:href="icons.svg#caret-bottom"></use>
     </svg>
   </button>
-  <ul class="dropdown-menu show" style="top: 0px; left: 0px;">
-    <li>
-      <a class="dropdown-item" href="item1url">Item 1</a>
-    </li>
-  </ul>
+  <div class="dropdown-menu show" style="top: 0px; left: 0px;">
+    <ul class="list-unstyled">
+      <li>
+        <a class="dropdown-item" href="item1url">Item 1</a>
+      </li>
+    </ul>
+  </div>
 </div>
 `;
