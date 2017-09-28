@@ -10,7 +10,7 @@
     "mcritic": "mcritic packages/ --ignore '**/{clay-dropdown,node_modules}/**'",
     "precommit": "lint-staged",
     "start": "http-server . -p 4000",
-    "test": "lerna run soy && jest"
+    "test": "lerna run soy && jest && npm run a11y"
   },
   "devDependencies": {
     "babel-preset-metal": "^4.1.0",
