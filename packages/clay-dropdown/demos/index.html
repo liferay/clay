@@ -26,28 +26,553 @@
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Dropdown Base (all options)</h4>
-			<div id="base-block"></div>
+			<h4>Default Dropdown</h4>
+			<div id="default-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
-			<h4>Dropdown</h4>
-			<div id="dropdown-block"></div>
+			<h4>Dropdown with groups</h4>
+			<div id="groups-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dropdown with checkboxes</h4>
+			<div id="checkboxes-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dropdown with radios</h4>
+			<div id="radios-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dropdown with search</h4>
+			<div id="search-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dropdown with left icons</h4>
+			<div id="left-icons-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dropdown with right icons</h4>
+			<div id="right-icons-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Dropdown with form button</h4>
+			<div id="button-block"></div>
 		</div>
 	</div>
 
 	<div class="row row-spacing">
 		<div class="col">
 			<h4>Actions Dropdown</h4>
-			<div id="action-dropdown-block"></div>
+			<div id="actions-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Actions Dropdown with help text</h4>
+			<div id="actions-help-text-block"></div>
+		</div>
+	</div>
+
+	<div class="row row-spacing">
+		<div class="col">
+			<h4>Actions Dropdown with caption and button</h4>
+			<div id="actions-caption-button-block"></div>
 		</div>
 	</div>
 
 
 	<script>
-		// @TODO initialise ClayDropdown instances
+		let spritemap = '../../../node_modules/clay/build/images/icons/icons.svg';
+
+		/**
+		 * Default Dropdown
+		 **/
+		new metal.ClayDropdown(
+			{
+				items: [
+					{
+						label: 'Item 1',
+						url: '#1',
+					},
+					{
+						active: true,
+						label: 'Item 2',
+						url: '#2',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						url: '#3',
+					},
+					{
+						label: 'Item 4',
+						url: '#4',
+					},
+				],
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+			},
+			'#default-block'
+		);
+
+		/**
+		 * Dropdown with groups
+		 **/
+		new metal.ClayDropdown(
+			{
+				items: [
+					{
+						label: 'Group 1',
+						items: [
+							{
+								active: true,
+								label: 'Item 1',
+								url: '#1',
+							},
+							{
+								label: 'Item 2',
+								url: '#2',
+							},
+						],
+						separator: true,
+						type: 'group',
+					},
+					{
+						label: 'Group 2',
+						items: [
+							{
+								label: 'Item 3',
+								url: '#3',
+							},
+							{
+								disabled: true,
+								label: 'Item 3',
+								url: '#4',
+							},
+						],
+						type: 'group',
+					},
+				],
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+			},
+			'#groups-block'
+		);
+
+		/**
+		 * Dropdown with checkboxes
+		 **/
+		new metal.ClayDropdown(
+			{
+				items: [
+					{
+						label: 'Item 1',
+						inputName: 'item1checkbox',
+						inputValue: '1',
+						type: 'checkbox',
+					},
+					{
+						checked: true,
+						label: 'Item 2',
+						inputName: 'item2checkbox',
+						inputValue: '2',
+						type: 'checkbox',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						inputName: 'item3checkbox',
+						inputValue: '3',
+						type: 'checkbox',
+					}
+				],
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+				type: 'form',
+			},
+			'#checkboxes-block'
+		);
+
+		/**
+		 * Dropdown with radios
+		 **/
+		new metal.ClayDropdown(
+			{
+				items: [
+					{
+						items: [
+							{
+								label: 'Item 1',
+								inputValue: '1',
+							},
+							{
+								checked: true,
+								label: 'Item 2',
+								inputValue: '2',
+							},
+							{
+								disabled: true,
+								label: 'Item 3',
+								inputValue: '3',
+							},
+						],
+						inputName: 'item1radio',
+						label: 'Group 1',
+						separator: true,
+						type: 'radiogroup',
+					},
+					{
+						items: [
+							{
+								label: 'Item 4',
+								inputValue: '4',
+							},
+							{
+								checked: true,
+								label: 'Item 5',
+								inputValue: '5',
+							},
+							{
+								disabled: true,
+								label: 'Item 6',
+								inputValue: '6',
+							},
+						],
+						inputName: 'item2radio',
+						label: 'Group 2',
+						type: 'radiogroup',
+					},
+				],
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+				type: 'form',
+			},
+			'#radios-block'
+		);
+
+		/**
+		 * Dropdown with search
+		 **/
+		 new metal.ClayDropdown(
+			{
+				items: [
+					{
+						label: 'Item 1',
+						url: '#1',
+					},
+					{
+						active: true,
+						label: 'Item 2',
+						url: '#2',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						url: '#3',
+					},
+					{
+						label: 'Item 4',
+						url: '#4',
+					},
+				],
+				searchable: true,
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+			},
+			'#search-block'
+		);
+
+		/**
+		 * Dropdown with left icons
+		 **/
+		 new metal.ClayDropdown(
+			{
+				indicatorsPosition: 'left',
+				items: [
+					{
+						label: 'Item 1',
+						indicatorSymbol: 'check',
+						url: '#1',
+					},
+					{
+						active: true,
+						label: 'Item 2',
+						indicatorSymbol: 'check',
+						url: '#2',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						indicatorSymbol: 'check',
+						url: '#3',
+					},
+					{
+						label: 'Item 4',
+						indicatorSymbol: 'check',
+						url: '#4',
+					},
+				],
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+			},
+			'#left-icons-block'
+		);
+
+		/**
+		 * Dropdown with right icons
+		 **/
+		 new metal.ClayDropdown(
+			{
+				indicatorsPosition: 'right',
+				items: [
+					{
+						label: 'Item 1',
+						indicatorSymbol: 'check',
+						url: '#1',
+					},
+					{
+						active: true,
+						label: 'Item 2',
+						indicatorSymbol: 'check',
+						url: '#2',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						indicatorSymbol: 'check',
+						url: '#3',
+					},
+					{
+						label: 'Item 4',
+						indicatorSymbol: 'check',
+						url: '#4',
+					},
+				],
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+			},
+			'#right-icons-block'
+		);
+
+		/**
+		 * Dropdown with form button
+		 **/
+		 new metal.ClayDropdown(
+			{
+				button: {
+					label: 'Done',
+					 style: 'primary',
+				},
+				items: [
+					{
+						label: 'Item 1',
+						inputName: 'item11checkbox',
+						inputValue: '1',
+						type: 'checkbox',
+					},
+					{
+						checked: true,
+						label: 'Item 2',
+						inputName: 'item12checkbox',
+						inputValue: '2',
+						type: 'checkbox',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						inputName: 'item13checkbox',
+						inputValue: '3',
+						separator: true,
+						type: 'checkbox',
+					},
+					{
+						items: [
+							{
+								label: 'Item 1',
+								inputValue: '1',
+							},
+							{
+								checked: true,
+								label: 'Item 2',
+								inputValue: '2',
+							},
+							{
+								disabled: true,
+								label: 'Item 3',
+								inputValue: '3',
+							},
+						],
+						inputName: 'item1radio',
+						label: 'Group 1',
+						type: 'radiogroup',
+					}
+				],
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+				type: 'form',
+			},
+			'#button-block'
+		);
+
+		new metal.ClayActionsDropdown(
+			{
+				items: [
+					{
+						items: [
+							{
+								label: 'Edit',
+								url: '#1'
+							},
+							{
+								label: 'Preview',
+								url: '#1'
+							},
+						],
+						separator: true,
+						type: 'group'
+					},
+					{
+						items: [
+							{
+								label: 'Expire',
+								url: '#1'
+							},
+							{
+								label: 'View History',
+								url: '#1'
+							},
+						],
+						separator: true,
+						type: 'group'
+					},
+					{
+						items: [
+							{
+								label: 'Permissions',
+								url: '#1'
+							}
+						],
+						separator: true,
+						type: 'group'
+					},
+					{
+						items: [
+							{
+								label: 'Copy',
+								url: '#1'
+							},
+							{
+								label: 'Move',
+								url: '#1'
+							},
+						],
+						separator: true,
+						type: 'group'
+					},
+					{
+						items: [
+							{
+								label: 'Move to the Recycle Bin',
+								url: '#1'
+							}
+						],
+						type: 'group'
+					},
+				],
+				spritemap: '../../../node_modules/clay/build/images/icons/icons.svg',
+				triggerLabel: 'Trigger'
+			},
+			'#actions-block'
+		);
+
+		/**
+		 * Dropdown with help text
+		 **/
+		 new metal.ClayActionsDropdown(
+			{
+				helpText: 'You can customize this menu or see all you have by pressing "more".',
+				items: [
+					{
+						label: 'Item 1',
+						url: '#1',
+					},
+					{
+						active: true,
+						label: 'Item 2',
+						url: '#2',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						url: '#3',
+					},
+					{
+						label: 'Item 4',
+						url: '#4',
+					},
+				],
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+			},
+			'#actions-help-text-block'
+		);
+		 
+		/**
+		 * Dropdown with caption an button
+		 **/
+		 new metal.ClayActionsDropdown(
+			{
+				button: {
+					label: 'More',
+					style: 'secondary',
+				},
+				caption: 'Showing 7 of 231 Structures',
+				items: [
+					{
+						label: 'Item 1',
+						url: '#1',
+					},
+					{
+						active: true,
+						label: 'Item 2',
+						url: '#2',
+					},
+					{
+						disabled: true,
+						label: 'Item 3',
+						url: '#3',
+					},
+					{
+						label: 'Item 4',
+						url: '#4',
+					},
+				],
+				spritemap: spritemap,
+				triggerLabel: 'Trigger Label',
+			},
+			'#actions-caption-button-block'
+		);
 	</script>
 </body>
 </html>
