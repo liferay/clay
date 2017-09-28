@@ -7,6 +7,17 @@ $navbar-underline-active-bg: $component-active-bg !default;
 $navbar-text-truncate-spacer-right: 25px !default;
 $navbar-text-truncate-max-width: 140px !default;
 
+// Navbar Transparent
+
+$navbar-transparent: () !default;
+$navbar-transparent: map-merge((
+	bg: $body-bg,
+	link-color: $navbar-light-color,
+	link-hover-color: $navbar-light-hover-color,
+	link-active-color: $navbar-light-active-color,
+	link-disabled-color: $navbar-light-disabled-color
+), $navbar-transparent);
+
 // Navbar Light
 
 $navbar-light: () !default;
@@ -15,7 +26,7 @@ $navbar-light: map-merge((
 	link-color: $navbar-light-color,
 	link-hover-color: $navbar-light-hover-color,
 	link-active-color: $navbar-light-active-color,
-	link-disabled-color: $navbar-light-disabled-color,
+	link-disabled-color: $navbar-light-disabled-color
 ), $navbar-light);
 
 // Navbar Dark
