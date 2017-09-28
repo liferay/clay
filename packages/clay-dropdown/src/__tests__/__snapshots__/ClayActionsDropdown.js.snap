@@ -7,14 +7,14 @@ exports[`ClayActionsDropdown should render an expanded action dropdown 1`] = `
       <use xlink:href="icons.svg#ellipsis-v"></use>
     </svg>
   </button>
-  <div class="dropdown-menu show" style="top: 0px; left: 0px;">
-    <div>
+  <ul class="dropdown-menu show" style="top: 0px; left: 0px;">
+    <li>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </div>
-    <div>
+    </li>
+    <li>
       <a class="dropdown-item" href="item2url">Item 2</a>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>
 `;
 
@@ -25,13 +25,13 @@ exports[`ClayActionsDropdown should render default markdown 1`] = `
       <use xlink:href="icons.svg#ellipsis-v"></use>
     </svg>
   </button>
-  <div class="dropdown-menu">
-    <div>
+  <ul class="dropdown-menu">
+    <li>
       <a class="dropdown-item" href="item1url">Item 1</a>
-    </div>
-    <div>
+    </li>
+    <li>
       <a class="dropdown-item" href="item2url">Item 2</a>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>
 `;

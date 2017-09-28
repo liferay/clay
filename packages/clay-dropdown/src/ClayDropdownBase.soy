@@ -134,7 +134,7 @@
 		"
 	{/let}
 
-	<div {$listAttributes}>
+	<ul {$listAttributes}>
 		{if $helpText}
 			<div class="alert alert-fluid alert-info" role="alert">
 				{$helpText}
@@ -166,7 +166,7 @@
 				{/call}
 			</div>
 		{/if}
-	</div>
+	</ul>
 {/template}
 
 /**
@@ -217,7 +217,7 @@
 	{@param? spritemap: string}
 	{@param? url: string}
 
-	<div>
+	<li>
 		{let $iconContent kind="html"}
 			{if $indicatorSymbol and $spritemap}
 				<div class="dropdown-item-indicator">
@@ -258,7 +258,7 @@
 				{$iconContent}
 			{/if}
 		</a>
-	</div>
+	</li>
 {/deltemplate}
 
 /**
@@ -276,7 +276,7 @@
 	{@param? spritemap: string}
 	{@param? url: string}
 
-	<div class="dropdown-item">
+	<li class="dropdown-item">
 		{call ClayCheckbox.render}
 			{param checked: $checked /}
 			{param disabled: $disabled /}
@@ -285,7 +285,7 @@
 			{param name: $inputName /}
 			{param value: $inputValue /}
 		{/call}
-	</div>
+	</li>
 {/deltemplate}
 
 /**
@@ -323,7 +323,7 @@
 	{@param? spritemap: string}
 	{@param? url: string}
 
-	<div class="dropdown-item">
+	<li class="dropdown-item">
 		{call ClayRadio.render}
 			{param checked: $checked /}
 			{param disabled: $disabled /}
@@ -332,7 +332,7 @@
 			{param name: $inputName /}
 			{param value: $inputValue /}
 		{/call}
-	</div>
+	</li>
 {/deltemplate}
 
 /**
