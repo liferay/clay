@@ -148,6 +148,6 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function() {
-    this.spawnCommand('yarn', ['install']);
+    this.spawnCommand('npm', ['run', 'lerna']);
   },
 });
