@@ -63,7 +63,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: function() {
-    this.destinationRoot(this.repoName);
+    this.destinationRoot('packages/' + this.repoName);
     this.fs.copyTpl(
       this.templatePath('demos/_index.html'),
       this.destinationPath('demos/index.html'),
