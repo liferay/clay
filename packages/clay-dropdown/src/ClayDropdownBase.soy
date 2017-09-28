@@ -362,14 +362,16 @@
 	{@param? spritemap: string}
 	{@param? url: string}
 
-	{if $isInList}
-		<li class="dropdown-subheader">
-			{$label}
-		</li>
-	{else}
-		<div class="dropdown-subheader">
-			{$label}
-		</div>
+	{if $label != ''}
+		{if $isInList}
+			<li class="dropdown-subheader">
+				{$label}
+			</li>
+		{else}
+			<div class="dropdown-subheader">
+				{$label}
+			</div>
+		{/if}
 	{/if}
 
 	{if $items}
@@ -408,9 +410,11 @@
 	{@param? spritemap: string}
 	{@param? url: string}
 
-	<div class="dropdown-subheader">
-		{$label}
-	</div>
+	{if $label != ''}
+		<div class="dropdown-subheader">
+			{$label}
+		</div>
+	{/if}
 
 	<div aria-label="{$label}" role="radiogroup">
 		{if $items}
