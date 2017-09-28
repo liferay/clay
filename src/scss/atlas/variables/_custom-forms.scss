@@ -30,6 +30,7 @@ $custom-checkbox-indicator-icon-checked-bg-size: 0.6em !default; // 12px
 $custom-checkbox-indicator-icon-indeterminate-bg-size: 0.5em !default; // 10px
 
 $custom-checkbox-indicator-indeterminate-bg: map-get($theme-colors, primary) !default;
+$custom-checkbox-indicator-border-radius: 0.125rem !default; // 2px
 
 // Custom Radio
 
