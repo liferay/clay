@@ -72,6 +72,7 @@ ClayDropdownBase.STATE = {
   button: Config.shapeOf({
     label: Config.string().required(),
     style: Config.oneOf(['primary', 'secondary']).value('primary'),
+    type: Config.oneOf(['button', 'reset', 'submit']),
   }),
 
   /**
@@ -162,6 +163,15 @@ ClayDropdownBase.STATE = {
     'secondary',
     'unstyled',
   ]).value('unstyled'),
+
+  /**
+   * Type of the dropdown menu.
+   * @instance
+   * @memberof ClayDropdownBase
+   * @type {!string}
+   * @default list
+   */
+  type: Config.oneOf(['form', 'list']),
 };
 
 Soy.register(ClayDropdownBase, templates);

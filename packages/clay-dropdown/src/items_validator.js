@@ -13,7 +13,7 @@ let itemShape = {
     'group',
     'header',
     'item',
-    'radio',
+    'radiogroup',
     'separator',
   ]).value('item'),
   url: Config.string().required(),

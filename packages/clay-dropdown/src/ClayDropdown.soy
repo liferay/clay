@@ -12,6 +12,7 @@
 	{@param? indicatorsPosition: string}
 	{@param? searchable: bool}
 	{@param? triggerStyle: string}
+	{@param? type: string}
 
   {let $trigger kind="html"}
     {$triggerLabel}
@@ -30,5 +31,6 @@
     {param spritemap: $spritemap /}
     {param triggerLabel: $trigger /}
     {param triggerStyle: $triggerStyle /}
+    {param type: $type /}
   {/call}
 {/template}

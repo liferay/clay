@@ -14,6 +14,7 @@
 	{@param? searchable: bool}
 	{@param? spritemap: string}
 	{@param? triggerStyle: string}
+	{@param? type: string}
 
 	{let $wrapperClasses kind="text"}
 		dropdown
@@ -38,6 +39,7 @@
 			{param items: $items /}
 			{param searchable: $searchable /}
 			{param spritemap: $spritemap /}
+			{param type: $type /}
 		{/call}
 	</div>
 {/template}
@@ -72,6 +74,7 @@
 				{param indicatorsPosition: $indicatorsPosition /}
 				{param inputName: $item.inputName /}
 				{param inputValue: $item.inputValue /}
+				{param items: $item.items /}
 				{param label: $item.label ?: '' /}
 				{param spritemap: $spritemap /}
 				{param url: $item.url /}
@@ -119,6 +122,7 @@
 	{@param? indicatorsPosition: string}
 	{@param? searchable: bool}
 	{@param? spritemap: string}
+	{@param? type: string}
 
 	{let $listAttributes kind="attributes"}
 		class="dropdown-menu
@@ -134,39 +138,60 @@
 		"
 	{/let}
 
-	<ul {$listAttributes}>
-		{if $helpText}
-			<div class="alert alert-fluid alert-info" role="alert">
-				{$helpText}
-			</div>
-		{/if}
+	{let $dropdownMenu kind="html"}
+		<div {$listAttributes}>
+			{if $helpText}
+				<div class="alert alert-fluid alert-info" role="alert">
+					{$helpText}
+				</div>
+			{/if}
 
-		{if $searchable and $spritemap}
-			{call .search}
-				{param spritemap: $spritemap /}
-			{/call}
-		{/if}
-
-		{call .items}
-			{param indicatorsPosition: $indicatorsPosition /}
-			{param items: $items /}
-			{param spritemap: $spritemap /}
-		{/call}
-
-		{if $caption}
-			<div class="dropdown-caption">{$caption}</div>
-		{/if}
-
-		{if $button}
-			<div class="dropdown-section">
-				{call ClayButton.render}
-					{param block: true /}
-					{param label: $button.label /}
-					{param style: $button.style /}
+			{if $searchable and $spritemap}
+				{call .search}
+					{param spritemap: $spritemap /}
 				{/call}
-			</div>
-		{/if}
-	</ul>
+			{/if}
+
+			{let $itemList kind="html"}
+				{call .items}
+					{param indicatorsPosition: $indicatorsPosition /}
+					{param items: $items /}
+					{param spritemap: $spritemap /}
+				{/call}
+			{/let}
+
+			{if not $type or $type == 'list'}
+				<ul class="list-unstyled">
+					{$itemList}
+				</ul>
+			{else}
+					{$itemList}
+			{/if}
+
+			{if $caption}
+				<div class="dropdown-caption">{$caption}</div>
+			{/if}
+
+			{if $button}
+				<div class="dropdown-section">
+					{call ClayButton.render}
+						{param block: true /}
+						{param label: $button.label /}
+						{param style: $button.style /}
+						{param type: $button.type /}
+					{/call}
+				</div>
+			{/if}
+		</div>
+	{/let}
+
+	{if $type == 'form'}
+		<form>
+			{$dropdownMenu}
+		</form>
+	{else}
+		{$dropdownMenu}
+	{/if}
 {/template}
 
 /**
@@ -214,6 +239,7 @@
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? items: list<?>}
 	{@param? spritemap: string}
 	{@param? url: string}
 
@@ -273,6 +299,7 @@
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? items: list<?>}
 	{@param? spritemap: string}
 	{@param? url: string}
 
@@ -300,6 +327,7 @@
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? items: list<?>}
 	{@param? spritemap: string}
 	{@param? url: string}
 
@@ -309,9 +337,9 @@
 {/deltemplate}
 
 /**
- * Renders list item with radio button
+ * Renders list item with radio group
  **/
-{deltemplate ClayDropdown.item variant="'radio'"}
+{deltemplate ClayDropdown.item variant="'radiogroup'"}
 	{@param label: string}
 	{@param? active: bool}
 	{@param? checked: bool}
@@ -320,19 +348,26 @@
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? items: list<?>}
 	{@param? spritemap: string}
 	{@param? url: string}
 
-	<li class="dropdown-item">
-		{call ClayRadio.render}
-			{param checked: $checked /}
-			{param disabled: $disabled /}
-			{param inline: true /}
-			{param label: $label /}
-			{param name: $inputName /}
-			{param value: $inputValue /}
-		{/call}
-	</li>
+	<div role="radiogroup">
+		{if $items}
+			{foreach $item in $items}
+				<div class="dropdown-item">
+					{call ClayRadio.render}
+						{param checked: $item.checked /}
+						{param disabled: $item.disabled /}
+						{param inline: true /}
+						{param label: $item.label /}
+						{param name: $inputName /}
+						{param value: $item.inputValue /}
+					{/call}
+				</div>
+			{/foreach}
+		{/if}
+	</div>
 {/deltemplate}
 
 /**
@@ -347,6 +382,7 @@
 	{@param? indicatorSymbol: string}
 	{@param? inputName: string}
 	{@param? inputValue: string}
+	{@param? items: list<?>}
 	{@param? spritemap: string}
 	{@param? url: string}
 

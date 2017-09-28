@@ -21,13 +21,14 @@ ClayDropdown.STATE = {
   /**
    * Button configuration to place a button at dropdown footer.
    * @instance
-   * @memberof ClayDropdownBase
+   * @memberof ClayDropdown
    * @type {?string}
    * @default .dropdown-toggle
    */
   button: Config.shapeOf({
     label: Config.string().required(),
     style: Config.oneOf(['primary', 'secondary']).value('primary'),
+    type: Config.oneOf(['button', 'reset', 'submit']),
   }),
 
   /**
@@ -89,11 +90,20 @@ ClayDropdown.STATE = {
   /**
    * Style of the trigger button.
    * @instance
-   * @memberof ClayDropdownBase
+   * @memberof ClayDropdown
    * @type {!string}
    * @default unstyled
    */
   triggerStyle: Config.oneOf(['secondary', 'unstyled']).value('unstyled'),
+
+  /**
+   * Type of the dropdown menu.
+   * @instance
+   * @memberof ClayDropdown
+   * @type {!string}
+   * @default list
+   */
+  type: Config.oneOf(['form', 'list']),
 };
 
 Soy.register(ClayDropdown, templates);
