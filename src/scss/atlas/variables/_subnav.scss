@@ -1,5 +1,7 @@
+$subnav-light-bg: #FFF !default;
 $subnav-light-item-link-hover-color: !default;
 
+$subnav-dark-bg: map-get($theme-colors, secondary) !default;
 $subnav-dark-item-link-hover-color: !default;
 
 $subnav-primary-color: $body-color !default;
