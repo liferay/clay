@@ -9,32 +9,13 @@ $navbar-text-truncate-max-width: 140px !default;
 
 // Navbar Light
 
-$navbar-light-bg: map-get($theme-colors, light) !default;
-$navbar-light-border-color: transparent !default;
-
-$navbar-light-active-bg: null !default;
-$navbar-light-hover-bg: null !default;
-$navbar-light-disabled-bg: null !default;
-
-$navbar-light-active-highlight: $component-active-bg !default;
-
-$navbar-light-brand-bg: null !default;
-$navbar-light-brand-hover-bg: null !default;
-$navbar-light-brand-color: null !default;
-$navbar-light-brand-hover-color: null !default;
-
 $navbar-light: () !default;
 $navbar-light: map-merge((
-	bg: $navbar-light-bg,
-	border-color: $navbar-light-border-color,
+	bg: map-get($theme-colors, light),
 	link-color: $navbar-light-color,
 	link-hover-color: $navbar-light-hover-color,
 	link-active-color: $navbar-light-active-color,
 	link-disabled-color: $navbar-light-disabled-color,
-	brand-color: $navbar-light-brand-color,
-	brand-hover-color: $navbar-light-brand-hover-color,
-	brand-bg: $navbar-light-brand-bg,
-	brand-hover-bg: $navbar-light-brand-hover-bg
 ), $navbar-light);
 
 // Navbar Dark

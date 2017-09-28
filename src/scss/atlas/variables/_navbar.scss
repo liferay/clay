@@ -1,25 +1,13 @@
 // Navbar Light
 
-$navbar-light-bg: #FCFEFF !default;
-$navbar-light-hover-bg: transparent !default;
-$navbar-light-active-bg: transparent !default;
-$navbar-light-disabled-bg: transparent !default;
-
-$navbar-light-border-color: #E3E6E8 !default;
-
 $navbar-light-color: map-get($theme-colors, secondary) !default;
 $navbar-light-hover-color: map-get($theme-colors, secondary) !default;
 $navbar-light-active-color: map-get($theme-colors, secondary) !default;
-$navbar-light-disabled-color: #CACDD2 !default;
+$navbar-light-disabled-color: lighten(map-get($theme-colors, secondary), 24%) !default;
 
-$navbar-light-brand-bg: transparent !default;
-$navbar-light-brand-hover-bg: transparent !default;
-$navbar-light-brand-color: $navbar-light-color !default;
-$navbar-light-brand-hover-color: $navbar-light-hover-color !default;
-
-$navbar-light-active-highlight: lighten(map-get($theme-colors, primary), 22%) !default;
-
-$navbar-light-toggler-border-color: $navbar-light-border-color !default;
+$navbar-light: (
+	bg: #FFF
+) !default;
 
 // Navbar Dark
 
