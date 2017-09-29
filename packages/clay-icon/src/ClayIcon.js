@@ -16,39 +16,39 @@ class ClayIcon extends Component {}
  */
 ClayIcon.STATE = {
   /**
-	 * Id to be applied to the element.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
+   * Id to be applied to the element.
+   * @instance
+   * @memberof ClayButton
+   * @type {?string|undefined}
+   * @default undefined
+   */
   id: Config.string(),
 
   /**
-	 * Flag to indicate if the icon should be monospaced.
-	 * @instance
-	 * @memberof ClayIcon
-	 * @type {?bool}
-	 * @default false
-	 */
+   * Flag to indicate if the icon should be monospaced.
+   * @instance
+   * @memberof ClayIcon
+   * @type {?bool}
+   * @default false
+   */
   monospaced: Config.bool().value(false),
 
   /**
-	 * The path to the SVG spritemap file containing the icons.
-	 * @instance
-	 * @memberof ClayIcon
-	 * @type {!string}
-	 * @default undefined
-	 */
+   * The path to the SVG spritemap file containing the icons.
+   * @instance
+   * @memberof ClayIcon
+   * @type {!string}
+   * @default undefined
+   */
   spritemap: Config.string().required(),
 
   /**
-	 * The name of the Clay SVG Icon e.g. `plus`.
-	 * @instance
-	 * @memberof ClayIcon
-	 * @type {!string}
-	 * @default undefined
-	 */
+   * The name of the Clay SVG Icon e.g. `plus`.
+   * @instance
+   * @memberof ClayIcon
+   * @type {!string}
+   * @default undefined
+   */
   symbol: Config.string().required(),
 };
 

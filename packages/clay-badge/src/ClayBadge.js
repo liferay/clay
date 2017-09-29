@@ -16,30 +16,30 @@ class ClayBadge extends Component {}
  */
 ClayBadge.STATE = {
   /**
-	 * Id to be applied to the element.
-	 * @instance
-	 * @memberof ClayBadge
-	 * @type {?string|undefined}
-	 * default undefined
-	 */
+   * Id to be applied to the element.
+   * @instance
+   * @memberof ClayBadge
+   * @type {?string|undefined}
+   * default undefined
+   */
   id: Config.string(),
 
   /**
-	 * The label of the badge element.
-	 * @instance
-	 * @memberof ClayBadge
-	 * @type {!string}
-	 * default undefined
-	 */
+   * The label of the badge element.
+   * @instance
+   * @memberof ClayBadge
+   * @type {!string}
+   * default undefined
+   */
   label: Config.string().required(),
 
   /**
-	 * Badge style color.
-	 * @instance
-	 * @memberof ClayBadge
-	 * @type {?string}
-	 * default primary
-	 */
+   * Badge style color.
+   * @instance
+   * @memberof ClayBadge
+   * @type {?string}
+   * default primary
+   */
   style: Config.oneOf([
     'danger',
     'dark',

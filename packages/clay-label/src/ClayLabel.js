@@ -11,9 +11,9 @@ import templates from './ClayLabel.soy.js';
  */
 class ClayLabel extends Component {
   /**
-	 * Handle `click` button and emit event `close`.
-	 * @protected
-	 */
+   * Handle `click` button and emit event `close`.
+   * @protected
+   */
   _handleCloseButtonClick() {
     this.emit('close');
   }
@@ -26,66 +26,66 @@ class ClayLabel extends Component {
  */
 ClayLabel.STATE = {
   /**
- 	 * True or false to activate the close button.
- 	 * @instance
- 	 * @memberof ClayLabel
- 	 * @type {?bool}
- 	 * @default false
- 	 */
+    * True or false to activate the close button.
+    * @instance
+    * @memberof ClayLabel
+    * @type {?bool}
+    * @default false
+    */
   closeable: Config.bool().value(false),
 
   /**
- 	 * HREF in label.
- 	 * @instance
- 	 * @memberof ClayLabel
- 	 * @type {?string|undefined}
- 	 * default undefined
- 	 */
+    * HREF in label.
+    * @instance
+    * @memberof ClayLabel
+    * @type {?string|undefined}
+    * default undefined
+    */
   href: Config.string(),
 
   /**
-	 * Id to be applied to the element.
-	 * @instance
-	 * @memberof ClayLabel
-	 * @type {?string|undefined}
-	 * default undefined
-	 */
+   * Id to be applied to the element.
+   * @instance
+   * @memberof ClayLabel
+   * @type {?string|undefined}
+   * default undefined
+   */
   id: Config.string(),
 
   /**
-	 * The label of the badge element.
-	 * @instance
-	 * @memberof ClayLabel
-	 * @type {?string|undefined}
-	 * default undefined
-	 */
+   * The label of the badge element.
+   * @instance
+   * @memberof ClayLabel
+   * @type {?string|undefined}
+   * default undefined
+   */
   label: Config.string(),
 
   /**
- 	 * The size of the label element.
- 	 * @instance
- 	 * @memberof ClayLabel
- 	 * @type {?string|undefined}
- 	 * @default undefined
- 	 */
+    * The size of the label element.
+    * @instance
+    * @memberof ClayLabel
+    * @type {?string|undefined}
+    * @default undefined
+    */
   size: Config.oneOf(['sm']),
 
   /**
- 	 * The path to the SVG spritemap file containing the icons.
- 	 * @instance
- 	 * @memberof ClayLabel
- 	 * @type {?string|undefined}
- 	 * @default undefined
- 	 */
+    * The path to the SVG spritemap file containing the icons.
+    * @instance
+    * @memberof ClayLabel
+    * @type {?string|undefined}
+    * @default undefined
+    */
   spritemap: Config.string(),
 
   /**
-	 * Label style color.
-	 * @instance
-	 * @memberof ClayLabel
-	 * @type {?string}
-	 * default secondary
-	 */
+   * Label style color.
+   * @instance
+   * @memberof ClayLabel
+   * @type {?string}
+   * default secondary
+   */
   style: Config.oneOf([
     'danger',
     'info',

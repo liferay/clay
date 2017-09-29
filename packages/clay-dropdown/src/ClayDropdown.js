@@ -31,68 +31,68 @@ ClayDropdown.STATE = {
   }),
 
   /**
-	 * Flag to indicate if menu is expanded.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {?bool}
-	 * @default false
-	 */
+   * Flag to indicate if menu is expanded.
+   * @instance
+   * @memberof ClayDropdown
+   * @type {?bool}
+   * @default false
+   */
   expanded: Config.bool().value(false),
 
   /**
    * Position in which item indicator symbols will be placed. Needed if any
    * item has indicators.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {?string}
-	 * @default undefined
+   * @instance
+   * @memberof ClayDropdown
+   * @type {?string}
+   * @default undefined
    */
   indicatorsPosition: Config.oneOf(['left', 'right']),
 
   /**
-	 * List of menu items.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {!Array}
-	 * @default undefined
-	 */
+   * List of menu items.
+   * @instance
+   * @memberof ClayDropdown
+   * @type {!Array}
+   * @default undefined
+   */
   items: itemsValidator.required(),
 
   /**
-	 * Flag to indicate if menu has a search field and search through elements
-	 * is possible.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {?bool}
-	 * @default false
-	 */
+   * Flag to indicate if menu has a search field and search through elements
+   * is possible.
+   * @instance
+   * @memberof ClayDropdown
+   * @type {?bool}
+   * @default false
+   */
   searchable: Config.bool().value(false),
 
   /**
-	 * The path to the SVG spritemap file containing the icons.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {!string}
-	 * @default undefined
-	 */
+   * The path to the SVG spritemap file containing the icons.
+   * @instance
+   * @memberof ClayDropdown
+   * @type {!string}
+   * @default undefined
+   */
   spritemap: Config.string().required(),
 
   /**
-	 * Label of the trigger button.
-	 * @instance
-	 * @memberof ClayDropdown
-	 * @type {!string}
-	 * @default undefined
-	 */
+   * Label of the trigger button.
+   * @instance
+   * @memberof ClayDropdown
+   * @type {!string}
+   * @default undefined
+   */
   triggerLabel: Config.string().required(),
 
   /**
-	 * Style of the trigger button.
-	 * @instance
-	 * @memberof ClayDropdownBase
-	 * @type {!string}
-	 * @default unstyled
-	 */
+   * Style of the trigger button.
+   * @instance
+   * @memberof ClayDropdownBase
+   * @type {!string}
+   * @default unstyled
+   */
   triggerStyle: Config.oneOf(['secondary', 'unstyled']).value('unstyled'),
 };
 

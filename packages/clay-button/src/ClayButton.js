@@ -17,39 +17,39 @@ class ClayButton extends Component {}
  */
 ClayButton.STATE = {
   /**
-	 * Aria label attribute for the button element.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
+   * Aria label attribute for the button element.
+   * @instance
+   * @memberof ClayButton
+   * @type {?string|undefined}
+   * @default undefined
+   */
   ariaLabel: Config.string(),
 
   /**
-	 * Renders the button as a block element.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?boolean}
-	 * @default false
-	 */
+   * Renders the button as a block element.
+   * @instance
+   * @memberof ClayButton
+   * @type {?boolean}
+   * @default false
+   */
   block: Config.bool().value(false),
 
   /**
-	 * The button disabled attribute.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?boolean}
-	 * @default false
-	 */
+   * The button disabled attribute.
+   * @instance
+   * @memberof ClayButton
+   * @type {?boolean}
+   * @default false
+   */
   disabled: Config.bool().value(false),
 
   /**
-	 * Render ClayIcon in the ClayButton element.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?Object|undefined}
-	 * @default undefined
-	 */
+   * Render ClayIcon in the ClayButton element.
+   * @instance
+   * @memberof ClayButton
+   * @type {?Object|undefined}
+   * @default undefined
+   */
   icon: Config.shapeOf({
     alignment: Config.oneOf(['left', 'right']),
     monospaced: Config.bool(),
@@ -58,49 +58,49 @@ ClayButton.STATE = {
   }),
 
   /**
-	 * Id to be applied to the element.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * default undefined
-	 */
+   * Id to be applied to the element.
+   * @instance
+   * @memberof ClayButton
+   * @type {?string|undefined}
+   * default undefined
+   */
   id: Config.string(),
 
   /**
-	 * The label of the button content.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?html|string|undefined}
-	 * @default undefined
-	 */
+   * The label of the button content.
+   * @instance
+   * @memberof ClayButton
+   * @type {?html|string|undefined}
+   * @default undefined
+   */
   label: Config.any(),
 
   /**
-	 * The name attribute value of the element.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
+   * The name attribute value of the element.
+   * @instance
+   * @memberof ClayButton
+   * @type {?string|undefined}
+   * @default undefined
+   */
   name: Config.string(),
 
   /**
-	 * The name that will make the CSS class name that will represent the
-	 * button size.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
+   * The name that will make the CSS class name that will represent the
+   * button size.
+   * @instance
+   * @memberof ClayButton
+   * @type {?string|undefined}
+   * @default undefined
+   */
   size: Config.oneOf(['sm']),
 
   /**
-	 * The css class that colors the button.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * @default primary
-	 */
+   * The css class that colors the button.
+   * @instance
+   * @memberof ClayButton
+   * @type {?string|undefined}
+   * @default primary
+   */
   style: Config.oneOf([
     'borderless',
     'link',
@@ -110,21 +110,21 @@ ClayButton.STATE = {
   ]).value('primary'),
 
   /**
-	 * The type attribute value of the element.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
+   * The type attribute value of the element.
+   * @instance
+   * @memberof ClayButton
+   * @type {?string|undefined}
+   * @default undefined
+   */
   type: Config.oneOf(['button', 'reset', 'submit']),
 
   /**
-	 * The value attribute value of the element.
-	 * @instance
-	 * @memberof ClayButton
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
+   * The value attribute value of the element.
+   * @instance
+   * @memberof ClayButton
+   * @type {?string|undefined}
+   * @default undefined
+   */
   value: Config.string(),
 };
 

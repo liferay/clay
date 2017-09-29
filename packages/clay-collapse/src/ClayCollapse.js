@@ -12,8 +12,8 @@ const KEY_CODE_SPACE = 32;
  */
 class ClayCollapse extends State {
   /**
-	 * @inheritDoc
-	 */
+   * @inheritDoc
+   */
   constructor(config) {
     super(config);
 
@@ -35,17 +35,17 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * @inheritDoc
-	 */
+   * @inheritDoc
+   */
   disposeInternal() {
     super.disposeInternal();
     this.eventHandler_.removeAllListeners();
   }
 
   /**
-	 * Animates close when `collapsed` is true
-	 * @protected
-	 */
+   * Animates close when `collapsed` is true
+   * @protected
+   */
   animateClose_() {
     const {content, openClasses, transitionClasses} = this;
 
@@ -63,9 +63,9 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Animates open when `collapsed` is false
-	 * @protected
-	 */
+   * Animates open when `collapsed` is false
+   * @protected
+   */
   animateOpen_() {
     const {closedClasses, content, transitionClasses} = this;
 
@@ -80,10 +80,10 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Attaches click and keydown listeners to header.
-	 * @param {!Element|!string} header
-	 * @protected
-	 */
+   * Attaches click and keydown listeners to header.
+   * @param {!Element|!string} header
+   * @protected
+   */
   attachHeaderListeners_(header) {
     this.eventHandler_.add(
       dom.on(header, 'click', this.handleClick_.bind(this)),
@@ -92,10 +92,10 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Adds CSS classes and properties to the `content` element when `collapsed`
-	 * is true
-	 * @protected
-	 */
+   * Adds CSS classes and properties to the `content` element when `collapsed`
+   * is true
+   * @protected
+   */
   close_() {
     const {closedClasses, content, openClasses, transitionClasses} = this;
 
@@ -106,12 +106,12 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Checks to see if browser supports CSS3 Transitions and returns the name
-	 * of the transitionend event; returns false if it's not supported
-	 * @protected
-	 * @return {string|boolean} The name of the transitionend event or false 
-	 * if not supported
-	 */
+   * Checks to see if browser supports CSS3 Transitions and returns the name
+   * of the transitionend event; returns false if it's not supported
+   * @protected
+   * @return {string|boolean} The name of the transitionend event or false 
+   * if not supported
+   */
   getTransitionEndEvent_() {
     let el = document.createElement('metalClayTransitionEnd');
 
@@ -132,35 +132,35 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Handles a `click` event on the headers.
-	 * @param {!Event} event
-	 * @protected
-	 */
+   * Handles a `click` event on the headers.
+   * @param {!Event} event
+   * @protected
+   */
   handleClick_(event) {
     this.toggle();
   }
 
   /**
-	 * Syncs the `content` element according to the value of the `collapsed`
-	 * state, attaching and removing css properties and classes needed to open
-	 * and close the element.
-	 */
+   * Syncs the `content` element according to the value of the `collapsed`
+   * state, attaching and removing css properties and classes needed to open
+   * and close the element.
+   */
   handleCollapsedChanged_() {
     this.collapsed ? this.animateClose_() : this.animateOpen_();
   }
 
   /**
-	 * Handles `changed` event of `headers` and attaches listeners.
-	 */
+   * Handles `changed` event of `headers` and attaches listeners.
+   */
   handleHeadersChanged_() {
     this.syncHeaderListeners_();
   }
 
   /**
-	 * Handles a `keydown` event on the headers.
-	 * @param {!Event} event
-	 * @protected
-	 */
+   * Handles a `keydown` event on the headers.
+   * @param {!Event} event
+   * @protected
+   */
   handleKeydown_(event) {
     if (event.keyCode === KEY_CODE_ENTER || event.keyCode === KEY_CODE_SPACE) {
       this.toggle();
@@ -169,19 +169,19 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Handles the `transitionend` event on the content.
-	 * @param {!Event} event
-	 * @protected
-	 */
+   * Handles the `transitionend` event on the content.
+   * @param {!Event} event
+   * @protected
+   */
   handleTransitionEnd_(event) {
     this.content.transitionType ? this.open_() : this.close_();
   }
 
   /**
-	 * Adds CSS classes and properties to the `content` element when `collapsed`
-	 * is false
-	 * @protected
-	 */
+   * Adds CSS classes and properties to the `content` element when `collapsed`
+   * is false
+   * @protected
+   */
   open_() {
     const {content, openClasses, transitionClasses} = this;
 
@@ -192,11 +192,11 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Fires a synthetic `transitionend` event for browsers that don't support
-	 * CSS3 transitions
-	 * @param {!Element} element
-	 * @protected
-	 */
+   * Fires a synthetic `transitionend` event for browsers that don't support
+   * CSS3 transitions
+   * @param {!Element} element
+   * @protected
+   */
   shimUnsupportedTransition_(element) {
     if (!this.supportsTransitionEnd) {
       anim.emulateTransitionEnd(element);
@@ -204,10 +204,10 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Syncs the component according to the value of the `headers` state,
-	 * attaching events to the new element and detaching from any previous one.
-	 * @protected
-	 */
+   * Syncs the component according to the value of the `headers` state,
+   * attaching events to the new element and detaching from any previous one.
+   * @protected
+   */
   syncHeaderListeners_() {
     const {headers} = this;
 
@@ -223,9 +223,9 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Toggles the content's visibility.
-	 * @public
-	 */
+   * Toggles the content's visibility.
+   * @public
+   */
   toggle() {
     const {collapsed, content, transitionEnd} = this;
 
@@ -235,9 +235,9 @@ class ClayCollapse extends State {
   }
 
   /**
-	 * Calculates what the content height should be and sets it.
-	 * @protected
-	 */
+   * Calculates what the content height should be and sets it.
+   * @protected
+   */
   updateContentHeight_() {
     const {content} = this;
 
@@ -255,40 +255,40 @@ class ClayCollapse extends State {
  */
 ClayCollapse.STATE = {
   /**
-	 * The CSS class added to `content` when it's collapsed.
-	 * @type {!string}
-	 */
+   * The CSS class added to `content` when it's collapsed.
+   * @type {!string}
+   */
   closedClasses: {
     validator: validators.string,
     value: 'collapse',
   },
 
   /**
-	 * The open or closed state of the `content` element, false and true
-	 * respectively.
-	 * @type {boolean}
-	 */
+   * The open or closed state of the `content` element, false and true
+   * respectively.
+   * @type {boolean}
+   */
   collapsed: {
     validator: validators.bool,
     value: true,
   },
 
   /**
-	 * The element or selector that should collapse.
-	 * @type {!(string|Element)}
-	 */
+   * The element or selector that should collapse.
+   * @type {!(string|Element)}
+   */
   content: {
     setter: dom.toElement,
     validator: validators.oneOfType([validators.string, validators.object]),
   },
 
   /**
-	 * The element that should trigger the toggling. If you pass in a
-	 * core.isElement value you will lose reference to the element once it is
-	 * removed from the dom. If you pass in a selector it will delegate it on
-	 * the document across all headers matching that selector.
-	 * @type {!(string|Array<string>|Element)}
-	 */
+   * The element that should trigger the toggling. If you pass in a
+   * core.isElement value you will lose reference to the element once it is
+   * removed from the dom. If you pass in a selector it will delegate it on
+   * the document across all headers matching that selector.
+   * @type {!(string|Array<string>|Element)}
+   */
   headers: {
     validator: validators.oneOfType([
       validators.string,
@@ -298,18 +298,18 @@ ClayCollapse.STATE = {
   },
 
   /**
-	 * The CSS class added to `content` when it's open.
-	 * @type {!string}
-	 */
+   * The CSS class added to `content` when it's open.
+   * @type {!string}
+   */
   openClasses: {
     validator: validators.string,
     value: 'collapse in',
   },
 
   /**
-	 * The CSS class added to `content` when it's transitioning.
-	 * @type {!string}
-	 */
+   * The CSS class added to `content` when it's transitioning.
+   * @type {!string}
+   */
   transitionClasses: {
     validator: validators.string,
     value: 'collapsing',

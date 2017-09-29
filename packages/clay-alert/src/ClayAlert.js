@@ -11,8 +11,8 @@ import templates from './ClayAlert.soy.js';
  */
 class ClayAlert extends Component {
   /**
-	 * @inheritDoc
-	 */
+   * @inheritDoc
+   */
   rendered() {
     if (
       this.autoClose &&
@@ -27,8 +27,8 @@ class ClayAlert extends Component {
   }
 
   /**
-	 * @inheritDoc
-	 */
+   * @inheritDoc
+   */
   disposed() {
     if (this._timer) {
       clearTimeout(this._timer);
@@ -39,36 +39,36 @@ class ClayAlert extends Component {
   }
 
   /**
-	 * Handles onclick event for the close button in case of closeable alert.
-	 * @param {!Event} event
-	 * @private
-	 */
+   * Handles onclick event for the close button in case of closeable alert.
+   * @param {!Event} event
+   * @private
+   */
   _handleCloseClick(event) {
     this.close();
   }
 
   /**
-	 * Handles mouseot event for the alert.
-	 * @param {!Event} event
-	 * @private
-	 */
+   * Handles mouseot event for the alert.
+   * @param {!Event} event
+   * @private
+   */
   _handleMouseOut(event) {
     this._resumeTimeout();
   }
 
   /**
-	 * Handles mouseover event for the alert.
-	 * @param {!Event} event
-	 * @private
-	 */
+   * Handles mouseover event for the alert.
+   * @param {!Event} event
+   * @private
+   */
   _handleMouseOver(event) {
     this._pauseTimeout();
   }
 
   /**
-	 * Pauses the closing delay time.
-	 * @private
-	 */
+   * Pauses the closing delay time.
+   * @private
+   */
   _pauseTimeout() {
     if (this._timer) {
       clearTimeout(this._timer);
@@ -124,12 +124,12 @@ ClayAlert.STATE = {
   autoClose: Config.bool().value(false),
 
   /**
-	 * Flag to indicate if the alert is closeable.
-	 * @instance
-	 * @memberof ClayAlert
-	 * @type {?bool}
-	 * @default false
-	 */
+   * Flag to indicate if the alert is closeable.
+   * @instance
+   * @memberof ClayAlert
+   * @type {?bool}
+   * @default false
+   */
   closeable: Config.bool().value(false),
 
   /**
@@ -142,47 +142,47 @@ ClayAlert.STATE = {
   destroyOnHide: Config.bool().value(false),
 
   /**
-	 * The message of alert
-	 * @instance
-	 * @memberof ClayAlert
-	 * @type {!string}
-	 */
+   * The message of alert
+   * @instance
+   * @memberof ClayAlert
+   * @type {!string}
+   */
   message: Config.string().required(),
 
   /**
-	 * The path to the SVG spritemap file containing the icons.
-	 * @instance
-	 * @memberof ClayIcon
-	 * @type {!string}
-	 * @default undefined
-	 */
+   * The path to the SVG spritemap file containing the icons.
+   * @instance
+   * @memberof ClayIcon
+   * @type {!string}
+   * @default undefined
+   */
   spritemap: Config.string().required(),
 
   /**
-	 * The style of alert
-	 * @instance
-	 * @memberof ClayAlert
-	 * @type {?string}
-	 * @default info
-	 */
+   * The style of alert
+   * @instance
+   * @memberof ClayAlert
+   * @type {?string}
+   * @default info
+   */
   style: Config.oneOf(['danger', 'info', 'success', 'warning']).value('info'),
 
   /**
-	 * The type of alert
-	 * @instance
-	 * @memberof ClayAlert
-	 * @type {?string}
-	 * @default undefined
-	 */
+   * The type of alert
+   * @instance
+   * @memberof ClayAlert
+   * @type {?string}
+   * @default undefined
+   */
   type: Config.oneOf(['fluid', 'notification']),
 
   /**
-	 * The title of alert
-	 * @instance
-	 * @memberof ClayAlert
-	 * @type {!string}
-	 * @default undefined
-	 */
+   * The title of alert
+   * @instance
+   * @memberof ClayAlert
+   * @type {!string}
+   * @default undefined
+   */
   title: Config.string().required(),
 
   /**
