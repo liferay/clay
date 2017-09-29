@@ -74,6 +74,7 @@ describe('ClayDropdownBase', function() {
         },
       ],
       triggerLabel: 'Trigger',
+      type: 'form',
     });
 
     expect(clayDropdownBase).toMatchSnapshot();
@@ -91,6 +92,7 @@ describe('ClayDropdownBase', function() {
         },
       ],
       triggerLabel: 'Trigger',
+      type: 'form',
     });
 
     expect(clayDropdownBase).toMatchSnapshot();
@@ -109,6 +111,7 @@ describe('ClayDropdownBase', function() {
         },
       ],
       triggerLabel: 'Trigger',
+      type: 'form',
     });
 
     expect(clayDropdownBase).toMatchSnapshot();
@@ -118,19 +121,40 @@ describe('ClayDropdownBase', function() {
     clayDropdownBase = new ClayDropdownBase({
       items: [
         {
-          inputName: 'radioname',
-          inputValue: 'radio1value',
-          label: 'Item 1',
-          type: 'radio',
+          items: [
+            {
+              label: 'Item 1',
+              inputValue: '1',
+            },
+            {
+              label: 'Item 2',
+              inputValue: '2',
+            },
+          ],
+          inputName: 'item1radio',
+          label: 'Group 1',
+          separator: true,
+          type: 'radiogroup',
         },
         {
-          inputName: 'radioname',
-          inputValue: 'radio2value',
-          label: 'Item 2',
-          type: 'radio',
+          items: [
+            {
+              label: 'Item 4',
+              inputValue: '4',
+            },
+            {
+              label: 'Item 5',
+              inputValue: '5',
+            },
+          ],
+          inputName: 'item2radio',
+          label: 'Group 2',
+          type: 'radiogroup',
         },
       ],
-      triggerLabel: 'Trigger',
+      spritemap: 'icons.svg',
+      triggerLabel: 'Trigger Label',
+      type: 'form',
     });
 
     expect(clayDropdownBase).toMatchSnapshot();
@@ -140,14 +164,42 @@ describe('ClayDropdownBase', function() {
     clayDropdownBase = new ClayDropdownBase({
       items: [
         {
-          checked: true,
-          inputName: 'radio1name',
-          inputValue: 'radio1value',
-          label: 'Item 1',
-          type: 'radio',
+          items: [
+            {
+              label: 'Item 1',
+              inputValue: '1',
+            },
+            {
+              checked: true,
+              label: 'Item 2',
+              inputValue: '2',
+            },
+          ],
+          inputName: 'item1radio',
+          label: 'Group 1',
+          separator: true,
+          type: 'radiogroup',
+        },
+        {
+          items: [
+            {
+              label: 'Item 4',
+              inputValue: '4',
+            },
+            {
+              checked: true,
+              label: 'Item 5',
+              inputValue: '5',
+            },
+          ],
+          inputName: 'item2radio',
+          label: 'Group 2',
+          type: 'radiogroup',
         },
       ],
-      triggerLabel: 'Trigger',
+      spritemap: 'icons.svg',
+      triggerLabel: 'Trigger Label',
+      type: 'form',
     });
 
     expect(clayDropdownBase).toMatchSnapshot();
@@ -157,102 +209,117 @@ describe('ClayDropdownBase', function() {
     clayDropdownBase = new ClayDropdownBase({
       items: [
         {
-          disabled: true,
-          inputName: 'radio1name',
-          inputValue: 'radio1value',
-          label: 'Item 1',
-          type: 'radio',
+          items: [
+            {
+              label: 'Item 1',
+              inputValue: '1',
+            },
+            {
+              disabled: true,
+              label: 'Item 3',
+              inputValue: '3',
+            },
+          ],
+          inputName: 'item1radio',
+          label: 'Group 1',
+          separator: true,
+          type: 'radiogroup',
+        },
+        {
+          items: [
+            {
+              label: 'Item 4',
+              inputValue: '4',
+            },
+            {
+              disabled: true,
+              label: 'Item 6',
+              inputValue: '6',
+            },
+          ],
+          inputName: 'item2radio',
+          label: 'Group 2',
+          type: 'radiogroup',
         },
       ],
-      triggerLabel: 'Trigger',
+      spritemap: 'icons.svg',
+      triggerLabel: 'Trigger Label',
+      type: 'form',
     });
-
     expect(clayDropdownBase).toMatchSnapshot();
   });
 
-  it('should render a dropdown with items of type radio', () => {
-    clayDropdownBase = new ClayDropdownBase({
-      items: [
-        {
-          label: 'Item 1',
-          type: 'radio',
-        },
-        {
-          label: 'Item 2',
-          type: 'radio',
-        },
-      ],
-      triggerLabel: 'Trigger',
-    });
-
-    expect(clayDropdownBase).toMatchSnapshot();
-  });
-
-  it('should render a dropdown with items of type header', () => {
+  it('should render a dropdown with groups', () => {
     clayDropdownBase = new ClayDropdownBase({
       items: [
         {
           label: 'Group 1',
-          type: 'header',
+          items: [
+            {
+              active: true,
+              label: 'Item 1',
+              url: '#1',
+            },
+            {
+              label: 'Item 2',
+              url: '#2',
+            },
+          ],
+          type: 'group',
         },
         {
           label: 'Group 2',
-          type: 'header',
-        },
-      ],
-      triggerLabel: 'Trigger',
-    });
-
-    expect(clayDropdownBase).toMatchSnapshot();
-  });
-
-  it('should render a dropdown with items of type separator', () => {
-    clayDropdownBase = new ClayDropdownBase({
-      items: [
-        {
-          type: 'separator',
-        },
-        {
-          type: 'separator',
-        },
-      ],
-      triggerLabel: 'Trigger',
-    });
-
-    expect(clayDropdownBase).toMatchSnapshot();
-  });
-
-  it('should render a dropdown with items of type group', () => {
-    clayDropdownBase = new ClayDropdownBase({
-      items: [
-        {
           items: [
             {
-              label: 'Item 1',
-              url: 'item1url',
+              label: 'Item 3',
+              url: '#3',
             },
             {
-              label: 'Item 2',
-              url: 'item2url',
-            },
-          ],
-          type: 'group',
-        },
-        {
-          items: [
-            {
-              label: 'Item 1',
-              url: 'item1url',
-            },
-            {
-              label: 'Item 2',
-              url: 'item2url',
+              disabled: true,
+              label: 'Item 3',
+              url: '#4',
             },
           ],
           type: 'group',
         },
       ],
-      triggerLabel: 'Trigger',
+      spritemap: 'icons.svg',
+      triggerLabel: 'Trigger Label',
+    });
+
+    expect(clayDropdownBase).toMatchSnapshot();
+  });
+
+  it('should render a dropdown with items with separators', () => {
+    clayDropdownBase = new ClayDropdownBase({
+      items: [
+        {
+          label: 'Element 1',
+          separator: true,
+          url: '#1',
+        },
+        {
+          label: 'Group 1',
+          items: [
+            {
+              label: 'Item 2',
+              url: '#2',
+            },
+            {
+              label: 'Item 3',
+              url: '#3',
+            },
+          ],
+          separator: true,
+          type: 'group',
+        },
+        {
+          label: 'Element 4',
+          url: '#4',
+        },
+      ],
+      spritemap: 'icons.svg',
+      triggerLabel: 'Trigger Label',
     });
 
     expect(clayDropdownBase).toMatchSnapshot();

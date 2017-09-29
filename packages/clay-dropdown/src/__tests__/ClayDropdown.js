@@ -51,31 +51,26 @@ describe('ClayDropdown', function() {
           type: 'checkbox',
         },
         {
+          items: [
+            {
+              label: 'Item 8',
+              inputValue: 'radio8value',
+            },
+            {
+              checked: true,
+              label: 'Item 9',
+              inputValue: 'radio9value',
+            },
+            {
+              disabled: true,
+              label: 'Item 10',
+              inputValue: 'radio10value',
+            },
+          ],
           inputName: 'radioname',
-          inputValue: 'radio8value',
-          label: 'Item 8',
-          type: 'radio',
-        },
-        {
-          checked: true,
-          inputName: 'radioname',
-          inputValue: 'radio9value',
-          label: 'Item 9',
-          type: 'radio',
-        },
-        {
-          disabled: true,
-          inputName: 'radioname',
-          inputValue: 'radio10value',
-          label: 'Item 10',
-          type: 'radio',
-        },
-        {
-          label: 'Group 11',
-          type: 'header',
-        },
-        {
-          type: 'separator',
+          label: 'Radio Group',
+          separator: true,
+          type: 'radiogroup',
         },
       ],
       spritemap: 'icons.svg',

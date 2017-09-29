@@ -42,21 +42,31 @@ exports[`ClayDropdown should render a dropdown with items 1`] = `
           <span class="custom-control-description">Item 7</span>
         </label>
       </li>
-      <li>
-        <a class="dropdown-item">Item 8</a>
-      </li>
-      <li>
-        <a class="dropdown-item">Item 9</a>
-      </li>
-      <li>
-        <a class="dropdown-item disabled" href="javascript:;">Item 10</a>
-      </li>
-      <li>
-        <a class="dropdown-item">Group 11</a>
-      </li>
-      <li>
-        <a class="dropdown-item"></a>
-      </li>
+      <div class="dropdown-subheader">Radio Group</div>
+      <div aria-label="Radio Group" role="radiogroup">
+        <div class="dropdown-item">
+          <label class="custom-control custom-radio">
+            <input class="custom-control-input" name="radioname" value="radio8value" ref="input" type="radio" role="radio">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 8</span>
+          </label>
+        </div>
+        <div class="dropdown-item active">
+          <label class="custom-control custom-radio">
+            <input checked="" class="custom-control-input" name="radioname" value="radio9value" ref="input" type="radio" role="radio">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 9</span>
+          </label>
+        </div>
+        <div class="dropdown-item">
+          <label class="custom-control custom-radio">
+            <input disabled="" class="custom-control-input" name="radioname" value="radio10value" ref="input" type="radio" role="radio">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Item 10</span>
+          </label>
+        </div>
+      </div>
+      <div class="dropdown-divider"></div>
     </ul>
   </div>
 </div>

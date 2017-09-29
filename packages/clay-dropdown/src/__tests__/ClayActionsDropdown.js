@@ -13,15 +13,69 @@ describe('ClayActionsDropdown', function() {
     clayActionsDropdown = new ClayActionsDropdown({
       items: [
         {
-          label: 'Item 1',
-          url: 'item1url',
+          items: [
+            {
+              label: 'Edit',
+              url: '#1',
+            },
+            {
+              label: 'Preview',
+              url: '#1',
+            },
+          ],
+          separator: true,
+          type: 'group',
         },
         {
-          label: 'Item 2',
-          url: 'item2url',
+          items: [
+            {
+              label: 'Expire',
+              url: '#1',
+            },
+            {
+              label: 'View History',
+              url: '#1',
+            },
+          ],
+          separator: true,
+          type: 'group',
+        },
+        {
+          items: [
+            {
+              label: 'Permissions',
+              url: '#1',
+            },
+          ],
+          separator: true,
+          type: 'group',
+        },
+        {
+          items: [
+            {
+              label: 'Copy',
+              url: '#1',
+            },
+            {
+              label: 'Move',
+              url: '#1',
+            },
+          ],
+          separator: true,
+          type: 'group',
+        },
+        {
+          items: [
+            {
+              label: 'Move to the Recycle Bin',
+              url: '#1',
+            },
+          ],
+          type: 'group',
         },
       ],
       spritemap: 'icons.svg',
+      triggerLabel: 'Trigger',
     });
 
     expect(clayActionsDropdown).toMatchSnapshot();
@@ -32,15 +86,69 @@ describe('ClayActionsDropdown', function() {
       expanded: true,
       items: [
         {
-          label: 'Item 1',
-          url: 'item1url',
+          items: [
+            {
+              label: 'Edit',
+              url: '#1',
+            },
+            {
+              label: 'Preview',
+              url: '#1',
+            },
+          ],
+          separator: true,
+          type: 'group',
         },
         {
-          label: 'Item 2',
-          url: 'item2url',
+          items: [
+            {
+              label: 'Expire',
+              url: '#1',
+            },
+            {
+              label: 'View History',
+              url: '#1',
+            },
+          ],
+          separator: true,
+          type: 'group',
+        },
+        {
+          items: [
+            {
+              label: 'Permissions',
+              url: '#1',
+            },
+          ],
+          separator: true,
+          type: 'group',
+        },
+        {
+          items: [
+            {
+              label: 'Copy',
+              url: '#1',
+            },
+            {
+              label: 'Move',
+              url: '#1',
+            },
+          ],
+          separator: true,
+          type: 'group',
+        },
+        {
+          items: [
+            {
+              label: 'Move to the Recycle Bin',
+              url: '#1',
+            },
+          ],
+          type: 'group',
         },
       ],
       spritemap: 'icons.svg',
+      triggerLabel: 'Trigger',
     });
 
     expect(clayActionsDropdown).toMatchSnapshot();

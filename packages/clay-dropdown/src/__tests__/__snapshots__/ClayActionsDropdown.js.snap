@@ -10,10 +10,32 @@ exports[`ClayActionsDropdown should render an expanded action dropdown 1`] = `
   <div class="dropdown-menu show" style="top: 0px; left: 0px;">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class="dropdown-item" href="#1">Edit</a>
       </li>
       <li>
-        <a class="dropdown-item" href="item2url">Item 2</a>
+        <a class="dropdown-item" href="#1">Preview</a>
+      </li>
+      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+      <li>
+        <a class="dropdown-item" href="#1">Expire</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#1">View History</a>
+      </li>
+      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+      <li>
+        <a class="dropdown-item" href="#1">Permissions</a>
+      </li>
+      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+      <li>
+        <a class="dropdown-item" href="#1">Copy</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#1">Move</a>
+      </li>
+      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+      <li>
+        <a class="dropdown-item" href="#1">Move to the Recycle Bin</a>
       </li>
     </ul>
   </div>
@@ -30,10 +52,32 @@ exports[`ClayActionsDropdown should render default markdown 1`] = `
   <div class="dropdown-menu">
     <ul class="list-unstyled">
       <li>
-        <a class="dropdown-item" href="item1url">Item 1</a>
+        <a class="dropdown-item" href="#1">Edit</a>
       </li>
       <li>
-        <a class="dropdown-item" href="item2url">Item 2</a>
+        <a class="dropdown-item" href="#1">Preview</a>
+      </li>
+      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+      <li>
+        <a class="dropdown-item" href="#1">Expire</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#1">View History</a>
+      </li>
+      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+      <li>
+        <a class="dropdown-item" href="#1">Permissions</a>
+      </li>
+      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+      <li>
+        <a class="dropdown-item" href="#1">Copy</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#1">Move</a>
+      </li>
+      <li aria-hidden="true" class="dropdown-divider" role="presentation"></li>
+      <li>
+        <a class="dropdown-item" href="#1">Move to the Recycle Bin</a>
       </li>
     </ul>
   </div>
