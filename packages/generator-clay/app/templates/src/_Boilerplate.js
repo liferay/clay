@@ -17,12 +17,12 @@ class <%= componentName %> extends Component {
  */
 <%= componentName %>.STATE = {
   /**
-	 * Id to be applied to the element.
-	 * @instance
-	 * @memberof <%= componentName %>
-	 * @type {?string|undefined}
-	 * @default undefined
-	 */
+   * Id to be applied to the element.
+   * @instance
+   * @memberof <%= componentName %>
+   * @type {?string|undefined}
+   * @default undefined
+   */
   id: Config.string(),
 
 };
