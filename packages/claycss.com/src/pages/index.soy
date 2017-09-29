@@ -13,7 +13,7 @@ description: "This is Clay. A web implementation of the Lexicon Experience Langu
 		{param content kind="html"}
 			{call .header data="all" /}
 		{/param}
-		{param elementClasses: 'landing' /}
+		{param elementClasses: 'home' /}
 	{/call}
 {/template}
 
@@ -21,63 +21,48 @@ description: "This is Clay. A web implementation of the Lexicon Experience Langu
  *
  */
 {template .header}
-	<header class="header home">
+	<header class="header">
+		<nav class="navbar fixed-top navbar-clay-site navbar-expand-lg navbar-dark">
+			<div class="container-fluid container-fluid-max-lg">
+				<div class="navbar-brand">
+					<img class="logo mr-3" src="/images/home/clay_logo_w.svg" alt="">
+					<span class="title align-middle">Clay</span>
+				</div>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#teasers">Get Started</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link ml-3" href="/docs/components/typography.html">Components</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-10 col-lg-6 ml-auto mr-auto">
-					{call .logo data="all" /}
-
-					<div class="lead">
-						A web implementation of the:
-					</div>
-					<div>
-						<a class="btn btn-landing" href="http://lexicondesign.io/">
-							<img class="logo" src="/images/lexicon_logo.png" /> Lexicon Experience Language
+				<div class="intro text-center col">
+					<div class="container-fluid container-fluid-max-lg">
+						<h1 class="h1">This is Clay</h1>
+						<h2 class="h3">A Web Implementation of Lexicon Experience Language</h2>
+						<a class="btn btn-lg btn-light mx-3 mb-2" href="#teasers">
+							Get Started
+						</a>
+						<a class="btn btn-lg btn-outline-light mx-3 mb-2" href="https://github.com/liferay/clay/archive/master.zip" rel="nofollow">
+							<img class="mr-2" src="/images/home/file-download.svg" alt="">
+							Download v 2.0
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-10 col-lg-6 ml-auto mr-auto">
-					<p>This site will serve as the future destination for all things Clay. From tutorials, to docs, to release updates. Stay tuned as we finalize the content, so you can get up and running with Clay in your web application.</p>
-				</div>
-			</div>
-		</div>
 	</header>
 
-	<section class="section-lighten">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-10 col-lg-6 ml-auto mr-auto">
-					<h1>So Clay is the new Lexicon?</h1>
+	{call .teasers data="all" /}
 
-					<div class="row">
-						<p class="col-lg-6">Not exactly. There's always been a distinction between the experience language <em>Lexicon Experience Language</em>, and the web implementation <em>Lexicon</em>.</p>
+	{call .contactus data="all" /}
 
-						<p class="col-lg-6">As you can see, naming them like this didn't help with the distinction. So Lexicon, the web implementation, has been renamed to Clay.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-10 col-lg-6 ml-auto mr-auto">
-					<h1>Contributing</h1>
-
-					<p>If you would like to contribute to the project, view the source or file an issue, please visit the</p>
-					<a class="btn btn-landing" href="https://github.com/liferay/clay">
-						<img class="logo" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" /> GitHub repo
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+	{call .linkblocks data="all" /}
 
 	{call .footer data="all" /}
 {/template}
@@ -85,16 +70,140 @@ description: "This is Clay. A web implementation of the Lexicon Experience Langu
 /**
  *
  */
-{template .logo}
-	<div class="clay-logo">
-		<img src="/images/clay_logo.png" />
+{template .teasers}
+	<section class="teasers" id="teasers">
+		<div class="container-fluid container-fluid-max-lg">
+			<div class="row">
+				<div class="col-1 d-none d-md-block">
+					<div class="vertical-title text-uppercase">ExploreClay</div>
+				</div>
 
-		<div class="logo-title">
-			<h1>Clay</h1>
+				<div class="col-md-5 text-center">
+					<div class="card text-center wow fadeInUp">
+						<div class="card-body text-center">
+							<img class="mx-auto" src="/images/home/what.svg" alt="">
+							<h2 class="font-weight-bold">What is Clay?</h2>
+							<p>Clay is Liferay's web implementation of Lexicon Experience Language. Built with Bootstrap as a foundation, it's comprised of HTML, CSS, and JS.</p>
+							<p class="btn btn-sm text-uppercase"><img class="mr-2" src="/images/home/chevron-right.svg" alt="">Learn More</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 text-center">
+					<div class="card wow fadeInUp" data-wow-delay="0.1s">
+						<div class="card-body">
+							<img class="mx-auto" src="/images/home/why.svg" alt="">
+							<h2 class="font-weight-bold">Why Clay?</h2>
+							<p>Because Clay is modeled after Lexicon's pattern library, you can rest assured, that your web application's UI will have a consistent style and user experience.</p>
+							<p class="btn btn-sm text-uppercase"><img class="mr-2" src="/images/home/chevron-right.svg" alt="">Learn More</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
-			<span class="logo-subtitle">by Liferay</span>
+			<div class="row">
+				<div class="col-md-10 mx-auto">
+					<div class="card wow fadeInLeft" data-wow-offset="100">
+						<div class="row">
+							<div class="col-md-6 text-center">
+								<div class="card-body">
+									<img class="pt-5" src="/images/home/library03.svg" alt="">
+								</div>
+							</div>
+							<div class="col-md-6 text-center text-md-left">
+								<div class="card-body pl-md-0 pt-5">
+									<h2 class="font-weight-bold">Component Library</h2>
+									<p>Browse Clay's extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.</p>
+									<p class="btn btn-sm text-uppercase"><img class="mr-2" src="/images/home/chevron-right.svg" alt="">Learn More</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 ml-auto">
+					<div class="card card-2 wow fadeInUp">
+						<div class="card-body text-center">
+							<img class="mx-auto" src="/images/home/tools.svg" alt="">
+							<h2 class="font-weight-bold">Resources</h2>
+							<p>Browse Clay's extensive Component Library, where you'll find useful components—with extensive code examples—for your web application.</p>
+							<p class="btn btn-sm text-uppercase"><img class="mr-2" src="/images/home/chevron-right.svg" alt="">Learn More</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 mr-auto">
+					<div class="card card-2 wow fadeInUp" data-wow-delay="0.1s">
+						<div class="card-body text-center">
+							<img class="mx-auto" src="/images/home/news.svg" alt="">
+							<h2 class="font-weight-bold">Release Notes</h2>
+							<p>Stay up-to-date on Clay's progress, fixed issues, and new features by visiting our Release Notes. Maybe some more words here to fill the blank space.</p>
+							<p class="btn btn-sm text-uppercase"><img class="mr-2" src="/images/home/chevron-right.svg" alt="">Learn More</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
+{/template}
+
+/**
+ *
+ */
+{template .contactus}
+	<section class="contact-us">
+		<div class="container-fluid container-fluid-max-lg">
+			<div class="row">
+				<div class="col-md-4 ml-auto wow zoomIn" data-wow-duration="1.2s">
+					<div class="text-center text-md-right">
+						<img src="/images/home/participate02.svg" alt="">
+					</div>
+				</div>
+				<div class="col-md-6 mr-auto wow zoomIn" data-wow-duration="0.8s">
+					<div class="media-body mt-4">
+						<p class="h1 font-weight-bold">Found an issue? Want to contribute? Head on over to the <a href="https://github.com/liferay/clay/issues" target="_blank">GitHub repo.</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{/template}
+
+/**
+ *
+ */
+{template .linkblocks}
+	<section class="link-blocks text-center">
+		<div class="container-fluid container-fluid-max-lg">
+			<div class="row">
+				<div class="body ml-auto col-md-9 mr-auto">
+				<h2 class="font-weight-bold">A web implementation of Lexicon</h2>
+				<p class="py-5">There's always been a distinction between the experience language Lexicon Experience Language, and the web implementation Lexicon. As you can see, naming them like this didn't help with the distinction. So Lexicon, the web implementation, has been renamed to Clay.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 ml-auto mb-4">
+					<div class="card h-100 wow fadeInUp">
+						<div class="card-body">
+							<img class="mx-auto" src="/images/home/lexicon_symbol.svg" alt="">
+							<p>Visit the current Lexicon</br>
+							Experience Language site</p>
+							<a class="mb-3" target="_blank" href="https://lexicondesign.io/">Lexicon v 1.2</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 mr-auto mb-4">
+					<div class="card h-100 wow fadeInUp" data-wow-delay="0.1s">
+						<div class="card-body">
+							<img class="mx-auto" src="/images/home/clay_logo_w.svg" alt="">
+							<p>Visit the previous version of</br>
+							Clay at Lexicon CSS project site</p>
+							<a class="mb-3" target="_blank" href="http://liferay.github.io/clay/">Clay v 1.0</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 {/template}
 
 /**
@@ -102,7 +211,7 @@ description: "This is Clay. A web implementation of the Lexicon Experience Langu
  */
 {template .footer}
 	<div class="footer">
-		<div class="container-fluid">
+		<div class="container-fluid container-fluid-max-lg">
 			<div class="row">
 				<div class="col-lg-7">
 					<img class="logo" src="/images/liferayLogo.png">
