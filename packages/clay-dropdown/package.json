@@ -1,6 +1,6 @@
 {
   "name": "clay-dropdown",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "Clay Dropdown Component",
   "license": "BSD",
   "repository": "metal/metal-clay-components",
@@ -25,10 +25,10 @@
     "metal"
   ],
   "dependencies": {
-    "clay-button": "0.0.0",
-    "clay-checkbox": "0.0.0",
-    "clay-icon": "0.0.0",
-    "clay-radio": "0.0.0",
+    "clay-button": "^1.0.0-alpha.1",
+    "clay-checkbox": "^1.0.0-alpha.1",
+    "clay-icon": "^1.0.0-alpha.1",
+    "clay-radio": "^1.0.0-alpha.1",
     "metal": "^2.13.2",
     "metal-debounce": "^2.0.0",
     "metal-dropdown": "^3.0.0",

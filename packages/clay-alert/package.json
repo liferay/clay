@@ -1,6 +1,6 @@
 {
   "name": "clay-alert",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "Metal Clay Alert component.",
   "license": "BSD",
   "repository": "metal/metal-clay-components",
@@ -25,8 +25,8 @@
     "metal"
   ],
   "dependencies": {
-    "clay-button": "^0.0.0",
-    "clay-icon": "^0.0.0",
+    "clay-button": "^1.0.0-alpha.1",
+    "clay-icon": "^1.0.0-alpha.1",
     "metal": "^2.13.2",
     "metal-component": "^2.13.2",
     "metal-soy": "^2.13.2",
