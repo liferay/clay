@@ -83,7 +83,7 @@ h6,
 	display: inline-block;
 	font-size: $reference-mark-font-size;
 	position: relative;
-	vertical-align: top;
+	vertical-align: $reference-mark-vertical-align;
 }
 
 // Marked Text
