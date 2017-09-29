@@ -6,10 +6,6 @@ $collapse-icon-position-left: null !default;
 $collapse-icon-position-right: 0.9375rem !default; // 15px
 $collapse-icon-position-top: 0.75rem !default; // 12px
 
-$help-icon-secondary-bg: $input-group-addon-bg !default;
-$help-icon-secondary-color: lx-color-by-lightness($body-color, $help-icon-secondary-bg) !default;
-$help-icon-secondary-color-hover: lx-color-by-lightness($body-color, $help-icon-secondary-bg, "secondary") !default;
-
 $icon-monospaced-size: 2rem !default; // 32px
 
 $lexicon-icon-size: 1em !default; // 16px
