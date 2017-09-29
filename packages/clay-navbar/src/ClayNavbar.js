@@ -36,7 +36,7 @@ ClayNavbar.STATE = {
 	 */
   items: Config.arrayOf(
     Config.shapeOf({
-      active: Config.bool(),
+      active: Config.bool().value(false),
       title: Config.string().required(),
       url: Config.string().required(),
     })

@@ -20,18 +20,18 @@ ClayRadio.STATE = {
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
-	 * @default undefined
+	 * @default false
 	 */
-  checked: Config.bool(),
+  checked: Config.bool().value(false),
 
   /**
 	 * Flag to indicate if checkbox is disabled.
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
-	 * @default undefined
+	 * @default false
 	 */
-  disabled: Config.bool(),
+  disabled: Config.bool().value(false),
 
   /**
 	 * CSS classes to be applied to the element.
@@ -47,9 +47,9 @@ ClayRadio.STATE = {
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
-	 * @default undefined
+	 * @default false
 	 */
-  hideLabel: Config.bool(),
+  hideLabel: Config.bool().value(false),
 
   /**
 	 * Id to be applied to the element.
@@ -65,9 +65,9 @@ ClayRadio.STATE = {
 	 * @instance
 	 * @memberof ClayRadio
 	 * @type {?bool}
-	 * @default undefined
+	 * @default false
 	 */
-  inline: Config.bool(),
+  inline: Config.bool().value(false),
 
   /**
 	 * Label of the input. Required for accesibility.

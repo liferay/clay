@@ -46,10 +46,10 @@ ClaySelect.STATE = {
 	 * Flag to indicate if the select element should be placed inline.
 	 * @instance
 	 * @memberof ClaySelect
-	 * @type {?bool|undefined}
-	 * @default undefined
+	 * @type {?bool}
+	 * @default false
 	 */
-  multiple: Config.bool(),
+  multiple: Config.bool().value(false),
 
   /**
 	 * Name of the select element.
@@ -70,7 +70,7 @@ ClaySelect.STATE = {
   options: Config.arrayOf(
     Config.shapeOf({
       label: Config.string().required(),
-      selected: Config.bool(),
+      selected: Config.bool().value(false),
       value: Config.string().required(),
     })
   ).required(),

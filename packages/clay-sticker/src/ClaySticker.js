@@ -24,7 +24,7 @@ ClaySticker.STATE = {
 	 * @default undefined
 	 */
   icon: Config.shapeOf({
-    monospaced: Config.bool(),
+    monospaced: Config.bool().value(false),
     spritemap: Config.string().required(),
     symbol: Config.string().required(),
   }),
@@ -52,10 +52,10 @@ ClaySticker.STATE = {
 	 * corners when position is defined.
 	 * @instance
 	 * @memberof ClaySticker
-	 * @type {?bool|undefined}
-	 * @default undefined
+	 * @type {?bool}
+	 * @default false
 	 */
-  outside: Config.bool(),
+  outside: Config.bool().value(false),
 
   /**
 	 * Sticker position if not static. Available positions are `bottom-left`,

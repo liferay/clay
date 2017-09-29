@@ -27,18 +27,18 @@ ClayCheckbox.STATE = {
 	 * @instance
 	 * @memberof ClayCheckbox
 	 * @type {?bool}
-	 * @default undefined
+	 * @default false
 	 */
-  checked: Config.bool(),
+  checked: Config.bool().value(false),
 
   /**
 	 * Flag to indicate if checkbox is disabled.
 	 * @instance
 	 * @memberof ClayCheckbox
 	 * @type {?bool}
-	 * @default undefined
+	 * @default false
 	 */
-  disabled: Config.bool(),
+  disabled: Config.bool().value(false),
 
   /**
 	 * CSS classes to be applied to the element.
@@ -54,9 +54,9 @@ ClayCheckbox.STATE = {
 	 * @instance
 	 * @memberof ClayCheckbox
 	 * @type {?bool}
-	 * @default undefined
+	 * @default false
 	 */
-  hideLabel: Config.bool(),
+  hideLabel: Config.bool().value(false),
 
   /**
 	 * Id to be applied to the element.
@@ -72,18 +72,18 @@ ClayCheckbox.STATE = {
 	 * @instance
 	 * @memberof ClayCheckbox
 	 * @type {?bool}
-	 * @default undefined
+	 * @default false
 	 */
-  indeterminate: Config.bool(),
+  indeterminate: Config.bool().value(false),
 
   /**
 	 * Flag to indicate if input should be wrapped to be inline or not.
 	 * @instance
 	 * @memberof ClayCheckbox
 	 * @type {?bool}
-	 * @default undefined
+	 * @default false
 	 */
-  inline: Config.bool(),
+  inline: Config.bool().value(false),
 
   /**
 	 * Label of the input. Required for accesibility.
