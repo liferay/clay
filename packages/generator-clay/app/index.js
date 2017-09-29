@@ -148,6 +148,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function() {
-    this.spawnCommand('npm', ['run', 'lerna']);
+    const ps = this.spawnCommand('yarn', ['install', '--no-lockfile'], {stdio: 'ignore'});
+    ps.on('close', code => console.log(`yarn install exited with ${code}`));
   },
 });
