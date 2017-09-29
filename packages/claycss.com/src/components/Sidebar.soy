@@ -7,25 +7,25 @@
  */
 {template .render}
 	<div>
-		<nav class="navbar navbar-clay-site navbar-fixed navbar-inverse navbar-expand-md">
-			<div class="navbar-header navbar-header-left-xs">
-				<a class="navbar-brand" href="/">
-					<img class="logo" src="/images/clay_logo_w.png" alt="{$site.title}" />
-					<span class="title">{$site.title} </span>
-					<small>by Liferay</small>
-				</a>
-			</div>
-
-			<button aria-expanded="false" aria-label="Toggle navigation" class="ml-auto mr-3 sidebar-toggler" type="button">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
-					<use xlink:href="/vendor/lexicon/icons.svg#bars" />
-				</svg>
-			</button>
-		</nav>
-
 		<nav class="sidebar-toggler-content sidenav-fixed sidenav-menu-slider" id="clay-sidebar">
-			<div class="sidebar sidebar-clay-site sidebar-inverse sidenav-menu">
+			<div class="sidebar sidebar-clay-site sidenav-menu">
 				<div class="sidebar-header">
+					<div class="navbar navbar-expand-lg navbar-header">
+						<a class="navbar-brand" href="/">
+							<img class="logo" src="/images/clay_logo_w.png" alt="{$site.title}" />
+							<span class="title">{$site.title} </span>
+							<small>by Liferay</small>
+						</a>
+
+						<button class="navbar-toggler sidebar-toggler p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+								<use xlink:href="/vendor/lexicon/icons.svg#bars" />
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<div class="sidebar-body">
 					<div class="sidebar-search">
 						{call ElectricSearchAutocomplete.render}
 							{param maxResults: 5 /}
@@ -33,9 +33,7 @@
 							{param placeholder: 'Search' /}
 						{/call}
 					</div>
-				</div>
 
-				<div class="sidebar-body">
 					<div class="style-toggler">
 						<div class="form-check">
 							<label class="form-check-label">
