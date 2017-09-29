@@ -84,19 +84,6 @@ h6,
 	font-size: $reference-mark-font-size;
 	position: relative;
 	vertical-align: top;
-
-	&.lexicon-icon {
-		font-size: 1em;
-		height: $reference-mark-font-size;
-		width: $reference-mark-font-size;
-	}
-
-	.lexicon-icon {
-		display: block;
-		height: 1em;
-		position: relative;
-		width: 1em;
-	}
 }
 
 // Marked Text
