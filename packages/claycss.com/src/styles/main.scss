@@ -2,7 +2,7 @@
 
 @import "clay-site/variables";
 
-@import "button";
+@import "animations";
 @import "autocomplete";
 @import "code";
 @import "footer";
@@ -11,8 +11,8 @@
 @import "sidebar";
 @import "landing";
 
+@import "clay-site/clay-site";
 @import "clay-site/content-clay-site";
-@import "clay-site/navbar-clay-site";
 @import "clay-site/sidebar-clay-site";
 
 // Font

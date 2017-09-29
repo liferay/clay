@@ -1,7 +1,6 @@
 .footer {
-	background-color: $brand-darker;
-	color: $brand-dark-text;
-	margin-top: $base-size * 3;
+	background-color: $footer-bg-color;
+	color: $brand-light-text;
 	min-height: $base-size * 4;
 	padding: $base-size / 2 0;
 
@@ -20,15 +19,15 @@
 	}
 
 	a {
-		color: #FFF;
+		color: $brand-light-text;
 	}
 
 	span {
 		line-height: $base-size;
-	}
 
-	span a {
-		font-weight: 600;
+		a {
+			font-weight: 600;
+		}
 	}
 
 	.sticker {
@@ -41,7 +40,7 @@
 	}
 
 	.sticker:hover {
-		color: $brand-dark-text;
+		color: $brand-light-text;
 	}
 
 	.row img.logo {

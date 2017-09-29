@@ -1,11 +1,11 @@
 .sidebar-offset {
-	@media (min-width: $screen-sm) {
-		margin-left: $sidebar-width;
-	}
-
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+
+	@media (min-width: $screen-sm) {
+		margin-left: $sidebar-width;
+	}
 
 	.clay-site-container {
 		flex: 1;
@@ -60,9 +60,13 @@
 .sidenav-fixed.sidenav-menu-slider .sidenav-menu {
 	bottom: 0;
 	height: initial;
-	top: $base-size * 2.666667;
+	top: $base-size * 2.9;
 
 	@media (min-width: $grid-float-breakpoint) {
-		top: $base-size * 5.333333;
+		top: 0;
 	}
+}
+
+.sidebar-search {
+	margin-bottom: $base-size * 1.8;
 }

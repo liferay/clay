@@ -1,34 +1,219 @@
-.landing {
-	font-size: 1.25rem;
-	min-height: 100vh;
+.vertical-title {
+    color: #CDCED9;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-top: 250px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+}
 
-	h1 {
-		font-size: 3rem;
-	}
+.home {
+    .card {
+        border-bottom: 14px solid $brand-light;
+        border-radius: 0;
+        box-shadow: 4px 6px 36px rgba(48, 49, 63, 0.15);
+        margin-bottom: 32px;
+        transition: all 0.4s;
 
-	header, section {
-		padding: 80px 0;
+        &:hover {
+            background-color: #FFF6F5;
+            border-color: $brand-dark;
+            box-shadow: 6px 9px 36px rgba(48, 49, 63, 0.2);
+            transform: translateY(-3px);
+        }
 
-		p {
-			margin: 40px 0;
-		}
+        h2 {
+            color: #393A4A;
+            font-size: 21px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
 
-		em {
-			font-weight: bold;
-		}
-	}
+        .btn {
+            color: #393A4A;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+        }
 
-	.section-inverted {
-		background-color: $brand-dark;
-		color: #FFF;
-	}
+        p {
+            color: #A1A3B6;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 16px;
 
-	.section-lighten {
-		background-color: $brand-lighten;
-	}
+            @include media-breakpoint-up(sm) {
+                margin-bottom: 32px;
+            }
+        }
 
-	.footer {
-		margin-top: 0;
-		padding: 47px 20px;
-	}
+        img.mx-auto {
+            margin: 32px 0 40px;
+            width: 98px;
+        }
+    }
+}
+
+.intro {
+    background-color: $brand-dark;
+    background-image: url(/images/home/patternbg.svg);
+    background-size: contain;
+    color: $brand-light;
+    margin-bottom: 32px;
+    padding: 88px 0;
+
+    @media (max-width: $grid-float-breakpoint - 1) {
+        margin-top: - $margin-top-body;
+    }
+
+    @include media-breakpoint-up(sm) {
+        background-attachment: fixed;
+        background-position: center -144px;
+        background-size: auto;
+        padding: 184px 0 264px;
+    }
+
+    .btn-lg {
+        border-radius: 0;
+        border-width: 2px;
+        font-size: 1rem;
+        font-weight: 700;
+        height: 64px;
+        padding: 20px 64px;
+    }
+
+    .btn-light {
+        color: $brand-dark;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    .btn-outline-light {
+        font-size: 16px;
+
+        &:hover, &:focus {
+            background-color: transparent;
+            color: inherit;
+        }
+    }
+
+    .h1 {
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 1;
+        margin: 52px 0 24px;
+        word-break: normal;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 64px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 96px;
+            margin-bottom: 48px;
+        }
+    }
+
+    .h3 {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        line-height: 1.7;
+        margin-bottom: 56px;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 18px;
+            letter-spacing: 4px;
+            margin-bottom: 72px;
+        }
+    }
+}
+
+.teasers {
+    background-color: $brand-light;
+
+    @include media-breakpoint-up(sm) {
+        margin-top: -100px;
+   }
+}
+
+.contact-us {
+    background-attachment: fixed;
+    background-color: $brand-light;
+    background-image: url(/images/home/bg_white.svg);
+    background-position: center;
+    padding: 96px 0;
+
+    @include media-breakpoint-up(sm) {
+        background-size: 140%;
+        margin-top: -120px;
+        padding: 244px 0 212px;
+    }
+
+    .media-body {
+        p {
+            line-height: 1.5;
+        }
+
+        a {
+            border-bottom: 5px solid $brand-dark;
+            color: #393A4A;
+            font-weight: 700;
+            padding-bottom: 4px;
+            transition: all 0.4s;
+
+            &:hover {
+                border-color: #DA816C;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.link-blocks {
+    background-color: #393A4A;
+    color: $brand-light;
+    padding: 80px 0;
+
+    @include media-breakpoint-up(sm) {
+        padding: 128px 0;
+    }
+
+    p {
+        color: #8D8FA8;
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+    .card {
+        background-color: #2B2D39;
+        border-width: 0;
+        box-shadow: 4px 6px 24px rgba(30, 31, 39, 0.3);
+
+        &:hover {
+            background-color: #272833;
+        }
+
+        img.mx-auto {
+            height: 60px;
+            margin: 32px 0 40px;
+        }
+
+        a {
+            border-bottom: 3px solid #B3472D;
+            color: $brand-light;
+            display: inline-block;
+            font-weight: 700;
+            margin: 8px 0;
+            padding-bottom: 4px;
+
+            &:hover {
+                border-color: #DA816C;
+                text-decoration: none;
+            }
+        }
+    }
 }

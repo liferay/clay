@@ -1,0 +1,26 @@
+body {
+	background-color: $bg-color;
+
+	@media (max-width: $grid-float-breakpoint - 1) {
+		margin-top: $margin-top-body;
+	}
+}
+
+// Source Sans Pro applied only on:
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+blockquote p,
+.sidebar-clay-site,
+.home {
+	font-family: $font-family-sans-serif;
+}
+
+// temporal hide
+
+.style-toggler {
+	display: none;
+}

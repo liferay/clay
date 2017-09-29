@@ -1,5 +1,4 @@
 .docs header {
-	background-color: $content-header-bg;
 	padding: $base-size / 2 0;
 
 	@media (min-width: $grid-float-breakpoint) {
@@ -8,8 +7,8 @@
 }
 
 .about {
-	padding: $base-size 0;
 	font-size: 18px;
+	padding: $base-size 0;
 }
 
 .about.about-inverted {
