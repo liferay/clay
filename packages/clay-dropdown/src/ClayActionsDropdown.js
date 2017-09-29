@@ -21,9 +21,9 @@ ClayActionsDropdown.STATE = {
   /**
    * Button configuration to place a button at dropdown footer.
    * @instance
-   * @memberof ClayDropdown
+   * @memberof ClayActionsDropdown
    * @type {?string}
-   * @default .dropdown-toggle
+   * @default undefined
    */
   button: Config.shapeOf({
     label: Config.string().required(),
@@ -34,7 +34,7 @@ ClayActionsDropdown.STATE = {
   /**
    * Caption text of the dropdown.
    * @instance
-   * @memberof ClayDropdownBase
+   * @memberof ClayActionsDropdown
    * @type {?string}
    * @default undefined
    */
@@ -52,7 +52,7 @@ ClayActionsDropdown.STATE = {
   /**
    * Help text to be shown on top of the open dropdown.
    * @instance
-   * @memberof ClayDropdown
+   * @memberof ClayActionsDropdown
    * @type {?string}
    * @default undefined
    */

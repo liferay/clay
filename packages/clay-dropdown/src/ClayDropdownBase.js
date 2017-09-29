@@ -67,12 +67,12 @@ ClayDropdownBase.STATE = {
    * @instance
    * @memberof ClayDropdownBase
    * @type {?string}
-   * @default .dropdown-toggle
+   * @default undefined
    */
   button: Config.shapeOf({
     label: Config.string().required(),
     style: Config.oneOf(['primary', 'secondary']).value('primary'),
-    type: Config.oneOf(['button', 'reset', 'submit']),
+    type: Config.oneOf(['button', 'reset', 'submit']).value('button'),
   }),
 
   /**
@@ -153,7 +153,7 @@ ClayDropdownBase.STATE = {
    * Style of the trigger button.
    * @instance
    * @memberof ClayDropdownBase
-   * @type {!string}
+   * @type {?string}
    * @default unstyled
    */
   triggerStyle: Config.oneOf([
@@ -168,10 +168,10 @@ ClayDropdownBase.STATE = {
    * Type of the dropdown menu.
    * @instance
    * @memberof ClayDropdownBase
-   * @type {!string}
+   * @type {?string}
    * @default list
    */
-  type: Config.oneOf(['form', 'list']),
+  type: Config.oneOf(['form', 'list']).value('list'),
 };
 
 Soy.register(ClayDropdownBase, templates);
