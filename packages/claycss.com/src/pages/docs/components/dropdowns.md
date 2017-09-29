@@ -95,16 +95,17 @@ weight: 100
 		<a class="dropdown-item" href="#">Status</a>
 	</div>
 </div>
+
 <div class="clay-site-dropdown-menu-container">
 	<div aria-labelledby="" class="dropdown-menu">
 		<form>
 			<div class="dropdown-section">
-				<div class="input-group input-group-inset">
+				<div class="input-group input-group-inset input-group-sm">
 					<div class="input-group-input">
 						<input class="form-control" placeholder="Search for..." type="text">
 					</div>
 					<span class="input-group-inset-item">
-						<button class="btn btn-link" type="button">
+						<button class="btn btn-unstyled" type="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 								<use xlink:href="/vendor/lexicon/icons.svg#search" />
 							</svg>
@@ -114,25 +115,31 @@ weight: 100
 			</div>
 			<div class="dropdown-subheader">Filter by</div>
 			<div class="active dropdown-item">
-				<label class="custom-control custom-checkbox">
-					<input checked class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Selected Option</span>
-				</label>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Selected Option</span>
+					</label>
+				</div>
 			</div>
 			<div class="dropdown-item">
-				<label class="custom-control custom-checkbox">
-					<input class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Normal Option</span>
-				</label>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Normal Option</span>
+					</label>
+				</div>
 			</div>
 			<div class="disabled dropdown-item">
-				<label class="custom-control custom-checkbox">
-					<input disabled class="custom-control-input" type="checkbox">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Disabled Option</span>
-				</label>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input disabled class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Disabled Option</span>
+					</label>
+				</div>
 			</div>
 		</form>
 	</div>
@@ -143,25 +150,31 @@ weight: 100
 		<form>
 			<div class="dropdown-subheader">Order by</div>
 			<div class="active dropdown-item">
-				<label class="custom-control custom-radio">
-					<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Selected Option</span>
-				</label>
+				<div class="custom-control custom-radio">
+					<label>
+						<input checked class="custom-control-input" id="dropdownRadio1" name="dropdownRadio" type="radio">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Selected Option</span>
+					</label>
+				</div>
 			</div>
 			<div class="dropdown-item">
-				<label class="custom-control custom-radio">
-					<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Normal Option</span>
-				</label>
+				<div class="custom-control custom-radio">
+					<label>
+						<input class="custom-control-input" id="dropdownRadio2" name="dropdownRadio" type="radio">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Normal Option</span>
+					</label>
+				</div>
 			</div>
 			<div class="disabled dropdown-item">
-				<label class="custom-control custom-radio">
-					<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
-					<span class="custom-control-indicator"></span>
-					<span class="custom-control-description">Disabled Option</span>
-				</label>
+				<div class="custom-control custom-radio">
+					<label>
+						<input disabled class="custom-control-input" id="dropdownRadio3" name="dropdownRadio" type="radio">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Disabled Option</span>
+					</label>
+				</div>
 			</div>
 			<div class="dropdown-section">
 				<button class="btn btn-block btn-primary" type="submit">Done</button>
@@ -792,7 +805,7 @@ weight: 100
 
 ### Dropdowns in Navbar
 
-<nav class="navbar navbar-expand navbar-light navbar-light-bg" style="margin-bottom:566px;">
+<nav class="navbar navbar-expand navbar-light" style="margin-bottom:566px;">
 	<div class="container-fluid">
 		<ul class="navbar-nav">
 			<li class="dropdown nav-item">

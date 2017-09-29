@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="sidebar">
 
 <div class="alert alert-warning">
 	Documentation for the Sidebar CSS component, for the Sidenav javascript component see <a href="../sidenav">Sidenav</a>.
@@ -45,30 +45,25 @@ weight: 100
 
 </article>
 
-<article id="2">
+<article id="sidebar-light">
 
 ### Sidebar Light
 
-> Add classes <code>sidebar-light sidebar-light-bg</code> to <code>sidebar</code> to apply a light theme.
+> Add classes `sidebar-light sidebar-light-bg` to `sidebar` to apply a light theme.
 
 <div class="col-md-6">
-	<div class="sidebar sidebar-light sidebar-light-bg">
+	<div class="sidebar sidebar-light">
 		<div class="sidebar-header">
-			<div class="sidebar-section-d-flex">
+			<div class="sidebar-section-flex">
 				<div class="flex-col flex-col-expand">
-					<h4 class="sidebar-title"><a class="sidebar-link" href="#1">Image1.jpg</a></h4>
+					<h4 class="sidebar-title">
+						<a class="sidebar-link text-truncate" href="#1">Image1.jpg</a>
+					</h4>
 				</div>
 				<div class="flex-col">
-					<ul class="nav sidebar-actions">
-						<li class="nav-item">
-							<a class="nav-link-monospaced sidebar-link" href="#1">
-								<svg class="lexicon-icon lexicon-icon-star-o">
-									<use xlink:href="/vendor/lexicon/icons.svg#star-o" />
-								</svg>
-							</a>
-						</li>
+					<ul class="nav nav-unstyled sidebar-actions">
 						<li class="dropdown nav-item">
-							<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
+							<a class="dropdown-toggle nav-link nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 								</svg>
@@ -83,8 +78,8 @@ weight: 100
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link-monospaced sidebar-link" href="#1">
-								<svg class="lexicon-icon lexicon-icon-times">
+							<a class="nav-link nav-link-monospaced sidebar-link" href="#1">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 									<use xlink:href="/vendor/lexicon/icons.svg#times" />
 								</svg>
 							</a>
@@ -93,346 +88,49 @@ weight: 100
 				</div>
 			</div>
 			<div class="sidebar-section">
-				<h5>Approved</h5>
-				<h6 class="sidebar-caption">Users are allowed to <a href="#1">request</a> membership. The request is accepted automatically.</h6>
+				<h5 class="sidebar-subtitle">Basic Document</h5>
 			</div>
 		</div>
-		<nav class="navbar navbar-expand navbar-light navbar-light-bg">
-			<ul class="navbar-nav">
-				<li class="dropdown nav-item">
-					<a aria-expanded="true" class="active dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
-						Details
+		<div class="sidebar-body">
+			<nav class="navbar navigation-bar navbar-collapse-absolute navbar-transparent navbar-expand-md navbar-underline">
+				<div class="container-fluid container-fluid-max-xl">
+					<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#sidebarLightCollapse00" data-toggle="collapse" type="button">
+						<span class="navbar-text-truncate">Versions</span>
 						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 						</svg>
-					</a>
-					<div class="dropdown-menu" role="menu">
-						<a class="dropdown-item" href="#1">Details</a>
-						<a class="dropdown-item" href="#1">Versions</a>
-						<a class="dropdown-item" href="#1">Comments (17)</a>
-					</div>
-				</li>
-			</ul>
-		</nav>
-		<div class="sidebar-body">
-			<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
-				<img alt="thumbnail" class="img-fluid" src="/images/DeathtoStock_Desk4.jpg">
-				<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
-			</div>
-			<ul class="list-group list-group-unstyled sidebar-section">
-				<li class="list-group-item">
-					<div class="sidebar-section-d-flex">
-						<div class="flex-col flex-col-expand">
-							<div class="h4 sidebar-title">Version 1.1</div>
-						</div>
-						<div class="flex-col">
-							<ul class="nav sidebar-actions">
-								<li class="dropdown nav-item">
-									<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-										</svg>
-									</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#1">Download</a>
-										<a class="dropdown-item" href="#1">Edit</a>
-										<a class="dropdown-item" href="#1">Move</a>
-										<a class="dropdown-item" href="#1">Checkout</a>
-										<a class="dropdown-item" href="#1">Permissions</a>
-										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="sidebar-section">
-						<div class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
-					</div>
-				</li>
-				<li class="list-group-item">
-					<div class="sidebar-section-d-flex">
-						<div class="flex-col flex-col-expand">
-							<h4 class="sidebar-title">Version 1.0</h4>
-						</div>
-						<div class="flex-col">
-							<ul class="nav sidebar-actions">
-								<li class="dropdown nav-item">
-									<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-										</svg>
-									</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#1">Download</a>
-										<a class="dropdown-item" href="#1">Edit</a>
-										<a class="dropdown-item" href="#1">Move</a>
-										<a class="dropdown-item" href="#1">Checkout</a>
-										<a class="dropdown-item" href="#1">Permissions</a>
-										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="sidebar-section">
-						<h6 class="sidebar-caption">By <a class="sidebar-link" href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
-					</div>
-				</li>
-			</ul>
-			<dl class="sidebar-section">
-				<dt class="h5">Size</dt>
-				<dd class="h6 sidebar-caption">136 KB</dd>
-				<dt class="h5">Dimensions</dt>
-				<dd class="h6 sidebar-caption">1024 x 768</dd>
-				<dt class="h5">Created</dt>
-				<dd class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
-				<dt class="h5">Last Modification</dt>
-				<dd class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
-			</dl>
-			<div class="sidebar-section">
-				<span>Tags: </span>
-				<span class="badge badge-default badge-sm">
-					History
-					<a href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</a>
-				</span>
-				<span class="badge badge-default badge-sm">
-					Flat
-					<a href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</a>
-				</span>
-				<span class="badge badge-default badge-sm">
-					Default
-					<a href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</a>
-				</span>
-				<div style="margin-bottom: 20px;margin-top:20px;">
-					<a class="btn btn-secondary btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-```xml
-<div class="sidebar sidebar-light sidebar-light-bg">
-	<div class="sidebar-header">
-		<div class="sidebar-section-d-flex">
-			<div class="flex-col flex-col-expand">
-				<h4 class="sidebar-title"><a class="sidebar-link" href="#1">Image1.jpg</a></h4>
-			</div>
-			<div class="flex-col">
-				<ul class="nav sidebar-actions">
-					<li class="nav-item">
-						<a class="nav-link-monospaced sidebar-link" href="#1">
-							<svg class="lexicon-icon lexicon-icon-star-o">
-								<use xlink:href="/vendor/lexicon/icons.svg#star-o" />
-							</svg>
-						</a>
-					</li>
-					<li class="dropdown nav-item">
-						<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-							</svg>
-						</a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#1">Download</a>
-							<a class="dropdown-item" href="#1">Edit</a>
-							<a class="dropdown-item" href="#1">Move</a>
-							<a class="dropdown-item" href="#1">Checkout</a>
-							<a class="dropdown-item" href="#1">Permissions</a>
-							<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link-monospaced sidebar-link" href="#1">
-							<svg class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/vendor/lexicon/icons.svg#times" />
-							</svg>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="sidebar-section">
-			<h5>Approved</h5>
-
-			<h6 class="sidebar-caption">Users are allowed to <a href="#1">request</a> membership. The request is accepted automatically.</h6>
-		</div>
-	</div>
-
-	<nav class="navbar navbar-expand navbar-light navbar-light-bg">
-		<ul class="navbar-nav">
-			<li class="dropdown nav-item">
-				<a aria-expanded="true" class="active dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
-					Details
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-					</svg>
-				</a>
-				<div class="dropdown-menu" role="menu">
-					<a class="dropdown-item" href="#1">Details</a>
-					<a class="dropdown-item" href="#1">Versions</a>
-					<a class="dropdown-item" href="#1">Comments (17)</a>
-				</div>
-			</li>
-		</ul>
-	</nav>
-
-	<div class="sidebar-body">
-		<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
-			<img alt="thumbnail" class="img-fluid" src="/images/DeathtoStock_Desk4.jpg">
-			<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
-		</div>
-
-		<ul class="list-group list-group-unstyled sidebar-section">
-			<li class="list-group-item">
-				<div class="sidebar-section-d-flex">
-					<div class="flex-col flex-col-expand">
-						<div class="h4 sidebar-title">Version 1.1</div>
-					</div>
-					<div class="flex-col">
-						<ul class="nav sidebar-actions">
-							<li class="dropdown nav-item">
-								<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
+					</button>
+					<div aria-expanded="false" class="collapse navbar-collapse" id="sidebarLightCollapse00">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#1">
+									<span class="navbar-text-truncate">Details</span>
 								</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-								</div>
+							</li>
+							<li class="nav-item">
+								<a class="active nav-link" href="#1">
+									<span class="navbar-text-truncate">Versions</span>
+								</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="sidebar-section">
-					<div class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="sidebar-section-d-flex">
+			</nav>
+			<ul class="sidebar-list">
+				<li class="sidebar-list-item">
 					<div class="flex-col flex-col-expand">
-						<h4 class="sidebar-title">Version 1.0</h4>
+						<div class="h5 sidebar-title">Version 1.2</div>
+						<div class="sidebar-caption">By Helen, on 8/31/17 9:15am</div>
+						<div class="sidebar-caption">No Change Log</div>
 					</div>
 					<div class="flex-col">
-						<ul class="nav sidebar-actions">
-							<li class="dropdown nav-item">
-								<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="sidebar-section">
-					<h6 class="sidebar-caption">By <a class="sidebar-link" href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
-				</div>
-			</li>
-		</ul>
-
-		<dl class="sidebar-section">
-			<dt class="h5">Size</dt>
-			<dd class="h6 sidebar-caption">136 KB</dd>
-			<dt class="h5">Dimensions</dt>
-			<dd class="h6 sidebar-caption">1024 x 768</dd>
-			<dt class="h5">Created</dt>
-			<dd class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
-			<dt class="h5">Last Modification</dt>
-			<dd class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
-		</dl>
-
-		<div class="sidebar-section">
-			<span>Tags: </span>
-			<span class="badge badge-default badge-sm">
-				History
-				<a href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
-					</svg>
-				</a>
-			</span>
-			<span class="badge badge-default badge-sm">
-				Flat
-				<a href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
-					</svg>
-				</a>
-			</span>
-			<span class="badge badge-default badge-sm">
-				Default
-				<a href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
-					</svg>
-				</a>
-			</span>
-
-			<div style="margin-bottom: 20px;margin-top:20px;">
-				<a class="btn btn-secondary btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
-			</div>
-		</div>
-	</div>
-</div>
-```
-
-</article>
-
-<article id="3">
-
-### Sidebar Inverse
-
-> Add class <code>sidebar-inverse sidebar-inverse-bg</code> to <code>sidebar</code> to apply a darker theme.
-
-<div class="col-md-6">
-	<div class="sidebar sidebar-inverse sidebar-inverse-bg">
-		<div class="sidebar-header">
-			<div class="sidebar-section-d-flex">
-				<div class="flex-col flex-col-expand">
-					<h4 class="sidebar-title"><a class="sidebar-link" href="#1">Image1.jpg</a></h4>
-				</div>
-				<div class="flex-col">
-					<ul class="nav sidebar-actions">
-						<li class="nav-item">
-							<a class="nav-link-monospaced sidebar-link" href="#1">
-								<svg class="lexicon-icon lexicon-icon-star-o">
-									<use xlink:href="/vendor/lexicon/icons.svg#star-o" />
-								</svg>
-							</a>
-						</li>
-						<li class="dropdown nav-item">
-							<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01">
 								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-							<div class="dropdown-menu">
+							<div aria-labelledBy="sidebarLightListDropdownId01" class="dropdown-menu">
 								<a class="dropdown-item" href="#1">Download</a>
 								<a class="dropdown-item" href="#1">Edit</a>
 								<a class="dropdown-item" href="#1">Move</a>
@@ -440,166 +138,141 @@ weight: 100
 								<a class="dropdown-item" href="#1">Permissions</a>
 								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
 							</div>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link-monospaced sidebar-link" href="#1">
-								<svg class="lexicon-icon lexicon-icon-times">
-									<use xlink:href="/vendor/lexicon/icons.svg#times" />
+						</div>
+					</div>
+				</li>
+				<li class="sidebar-list-item">
+					<div class="flex-col flex-col-expand">
+						<div class="h5 sidebar-title">Version 1.1</div>
+						<div class="sidebar-caption">By Helen, on 8/31/17 8:00am</div>
+						<div class="sidebar-caption">No Change Log</div>
+					</div>
+					<div class="flex-col">
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 								</svg>
 							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="sidebar-section">
-				<h5>Approved</h5>
-				<h6 class="sidebar-caption">Users are allowed to <a class="sidebar-link" href="#1">request</a> membership. The request is accepted automatically.</h6>
-			</div>
-		</div>
-		<nav class="navbar navbar-expand navbar-inverse navbar-inverse-bg">
-			<ul class="navbar-nav">
-				<li class="dropdown nav-item">
-					<a aria-expanded="true" class="active dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
-						Details
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-						</svg>
-					</a>
-					<div class="dropdown-menu" role="menu">
-						<a class="dropdown-item" href="#1">Details</a>
-						<a class="dropdown-item" href="#1">Versions</a>
-						<a class="dropdown-item" href="#1">Comments (17)</a>
+							<div aria-labelledBy="sidebarLightListDropdownId02" class="dropdown-menu">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="sidebar-list-item">
+					<div class="flex-col flex-col-expand">
+						<div class="h5 sidebar-title">Version 1.0</div>
+						<div class="sidebar-caption">By Helen, on 8/31/17 7:47am</div>
+						<div class="sidebar-caption">No Change Log</div>
+					</div>
+					<div class="flex-col">
+						<div class="dropdown dropdown-action">
+							<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId03">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+									<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+								</svg>
+							</a>
+							<div aria-labelledBy="sidebarLightListDropdownId03" class="dropdown-menu">
+								<a class="dropdown-item" href="#1">Download</a>
+								<a class="dropdown-item" href="#1">Edit</a>
+								<a class="dropdown-item" href="#1">Move</a>
+								<a class="dropdown-item" href="#1">Checkout</a>
+								<a class="dropdown-item" href="#1">Permissions</a>
+								<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+							</div>
+						</div>
 					</div>
 				</li>
 			</ul>
-		</nav>
-		<div class="sidebar-body">
-			<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
-				<img alt="thumbnail" class="img-fluid" src="/images/DeathtoStock_Spring10.jpg">
+			<div class="aspect-ratio aspect-ratio-16-to-9 sidebar-panel">
+				<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/DeathtoStock_Desk4.jpg">
 				<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 			</div>
-			<ul class="list-group list-group-unstyled sidebar-section">
-				<li class="list-group-item">
-					<div class="sidebar-section-d-flex">
-						<div class="flex-col flex-col-expand">
-							<div class="h4 sidebar-title">Version 1.1</div>
-						</div>
-						<div class="flex-col">
-							<ul class="nav sidebar-actions">
-								<li class="dropdown nav-item">
-									<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-										</svg>
-									</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#1">Download</a>
-										<a class="dropdown-item" href="#1">Edit</a>
-										<a class="dropdown-item" href="#1">Move</a>
-										<a class="dropdown-item" href="#1">Checkout</a>
-										<a class="dropdown-item" href="#1">Permissions</a>
-										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="sidebar-section">
-						<div class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
-					</div>
-				</li>
-				<li class="list-group-item">
-					<div class="sidebar-section-d-flex">
-						<div class="flex-col flex-col-expand">
-							<h4 class="sidebar-title">Version 1.0</h4>
-						</div>
-						<div class="flex-col">
-							<ul class="nav sidebar-actions">
-								<li class="dropdown nav-item">
-									<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
-										<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-											<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-										</svg>
-									</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#1">Download</a>
-										<a class="dropdown-item" href="#1">Edit</a>
-										<a class="dropdown-item" href="#1">Move</a>
-										<a class="dropdown-item" href="#1">Checkout</a>
-										<a class="dropdown-item" href="#1">Permissions</a>
-										<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="sidebar-section">
-						<h6 class="sidebar-caption">By <a class="sidebar-link" href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
-					</div>
-				</li>
-			</ul>
-			<dl class="sidebar-section">
-				<dt class="h5">Size</dt>
-				<dd class="h6 sidebar-caption">136 KB</dd>
-				<dt class="h5">Dimensions</dt>
-				<dd class="h6 sidebar-caption">1024 x 768</dd>
-				<dt class="h5">Created</dt>
-				<dd class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
-				<dt class="h5">Last Modification</dt>
-				<dd class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
+			<dl class="sidebar-dl sidebar-section">
+				<dt class="sidebar-dt">Url</dt>
+				<dd class="sidebar-dd">
+					<a class="sidebar-link" href="#1">http://localhost:8080/documents/20140/</a>
+				</dd>
+				<dt class="sidebar-dt">Webdav Url</dt>
+				<dd class="sidebar-dd">
+					<a class="sidebar-link" href="#1">http://localhost:8080/webdav/guest/</a>
+				</dd>
+				<dt class="sidebar-dt">Created</dt>
+				<dd class="sidebar-dd">
+					<a class="sidebar-link" href="#1">Helen Smith</a>
+				</dd>
+				<dt class="sidebar-dt">Description</dt>
+				<dd class="sidebar-dd">A picture of a person using a ruler and exacto knife to cut construction paper.</dd>
+				<dt class="sidebar-dt">Size</dt>
+				<dd class="sidebar-dd">745KB</dd>
+				<dt class="sidebar-dt">Extension</dt>
+				<dd class="sidebar-dd">PNG</dd>
+				<dt class="sidebar-dt">Version</dt>
+				<dd class="sidebar-dd">2.0</dd>
+				<dt class="sidebar-dt">Tags</dt>
+				<dd class="sidebar-dd">
+					<span class="label label-lg label-secondary">Tag One</span>
+					<span class="label label-lg label-secondary">Tag Two</span>
+					<span class="label label-lg label-secondary">Tag Three</span>
+					<span class="label label-lg label-secondary">Tag Four</span>
+					<span class="label label-lg label-secondary">Tag Five</span>
+					<span class="label label-lg label-secondary">Tag Six</span>
+					<span class="label label-lg label-secondary">Tag Seven</span>
+					<span class="label label-lg label-secondary">Tag Eight</span>
+				</dd>
+				<dt class="sidebar-dt">Related Assets</dt>
+				<dd class="sidebar-dd">
+					<ul class="sidebar-list">
+						<li class="sidebar-list-item">
+							<div class="flex-col">
+								<span class="sticker sticker-secondary sticker-sm">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+										<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+									</svg>
+								</span>
+							</div>
+							<div class="flex-col flex-col-expand">
+								<a class="sidebar-link text-truncate" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+							</div>
+						</li>
+						<li class="sidebar-list-item">
+							<div class="flex-col">
+								<span class="sticker sticker-secondary sticker-sm">
+									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+										<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+									</svg>
+								</span>
+							</div>
+							<div class="flex-col flex-col-expand">
+								<a class="sidebar-link text-truncate" href="#1">Surf Blog Entry Two</a>
+							</div>
+						</li>
+					</ul>
+				</dd>
 			</dl>
-			<div class="sidebar-section">
-				<span>Tags: </span>
-				<span class="badge badge-default badge-sm">
-					History
-					<a href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</a>
-				</span>
-				<span class="badge badge-default badge-sm">
-					Flat
-					<a href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</a>
-				</span>
-				<span class="badge badge-default badge-sm">
-					Default
-					<a href="#1">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</a>
-				</span>
-				<div style="margin-bottom: 20px;margin-top:20px;">
-					<a class="btn btn-secondary btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
 
 ```xml
-<div class="sidebar sidebar-inverse sidebar-inverse-bg">
+<div class="sidebar sidebar-light">
 	<div class="sidebar-header">
-		<div class="sidebar-section-d-flex">
+		<div class="sidebar-section-flex">
 			<div class="flex-col flex-col-expand">
-				<h4 class="sidebar-title"><a class="sidebar-link" href="#1">Image1.jpg</a></h4>
+				<h4 class="sidebar-title">
+					<a class="sidebar-link text-truncate" href="#1">Image1.jpg</a>
+				</h4>
 			</div>
 			<div class="flex-col">
-				<ul class="nav sidebar-actions">
-					<li class="nav-item">
-						<a class="nav-link-monospaced sidebar-link" href="#1">
-							<svg class="lexicon-icon lexicon-icon-star-o">
-								<use xlink:href="/vendor/lexicon/icons.svg#star-o" />
-							</svg>
-						</a>
-					</li>
+				<ul class="nav nav-unstyled sidebar-actions">
 					<li class="dropdown nav-item">
-						<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
+						<a class="dropdown-toggle nav-link nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
@@ -614,8 +287,8 @@ weight: 100
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link-monospaced sidebar-link" href="#1">
-							<svg class="lexicon-icon lexicon-icon-times">
+						<a class="nav-link nav-link-monospaced sidebar-link" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 								<use xlink:href="/vendor/lexicon/icons.svg#times" />
 							</svg>
 						</a>
@@ -624,142 +297,176 @@ weight: 100
 			</div>
 		</div>
 		<div class="sidebar-section">
-			<h5>Approved</h5>
-
-			<h6 class="sidebar-caption">Users are allowed to <a class="sidebar-link" href="#1">request</a> membership. The request is accepted automatically.</h6>
+			<h5 class="sidebar-subtitle">Basic Document</h5>
 		</div>
 	</div>
-
-	<nav class="navbar navbar-expand navbar-inverse navbar-inverse-bg">
-		<ul class="navbar-nav">
-			<li class="dropdown nav-item">
-				<a aria-expanded="true" class="active dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button">
-					Details
+	<div class="sidebar-body">
+		<nav class="navbar navigation-bar navbar-collapse-absolute navbar-transparent navbar-expand-md navbar-underline">
+			<div class="container-fluid container-fluid-max-xl">
+				<button aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler navbar-toggler-link" data-target="#sidebarLightCollapse00" data-toggle="collapse" type="button">
+					<span class="navbar-text-truncate">Versions</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
-				</a>
-				<div class="dropdown-menu" role="menu">
-					<a class="dropdown-item" href="#1">Details</a>
-					<a class="dropdown-item" href="#1">Versions</a>
-					<a class="dropdown-item" href="#1">Comments (17)</a>
+				</button>
+				<div aria-expanded="false" class="collapse navbar-collapse" id="sidebarLightCollapse00">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#1">
+								<span class="navbar-text-truncate">Details</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="active nav-link" href="#1">
+								<span class="navbar-text-truncate">Versions</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<ul class="sidebar-list">
+			<li class="sidebar-list-item">
+				<div class="flex-col flex-col-expand">
+					<div class="h5 sidebar-title">Version 1.2</div>
+					<div class="sidebar-caption">By Helen, on 8/31/17 9:15am</div>
+					<div class="sidebar-caption">No Change Log</div>
+				</div>
+				<div class="flex-col">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId01">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+							</svg>
+						</a>
+						<div aria-labelledBy="sidebarLightListDropdownId01" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Download</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">Move</a>
+							<a class="dropdown-item" href="#1">Checkout</a>
+							<a class="dropdown-item" href="#1">Permissions</a>
+							<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="sidebar-list-item">
+				<div class="flex-col flex-col-expand">
+					<div class="h5 sidebar-title">Version 1.1</div>
+					<div class="sidebar-caption">By Helen, on 8/31/17 8:00am</div>
+					<div class="sidebar-caption">No Change Log</div>
+				</div>
+				<div class="flex-col">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId02">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+							</svg>
+						</a>
+						<div aria-labelledBy="sidebarLightListDropdownId02" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Download</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">Move</a>
+							<a class="dropdown-item" href="#1">Checkout</a>
+							<a class="dropdown-item" href="#1">Permissions</a>
+							<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="sidebar-list-item">
+				<div class="flex-col flex-col-expand">
+					<div class="h5 sidebar-title">Version 1.0</div>
+					<div class="sidebar-caption">By Helen, on 8/31/17 7:47am</div>
+					<div class="sidebar-caption">No Change Log</div>
+				</div>
+				<div class="flex-col">
+					<div class="dropdown dropdown-action">
+						<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="sidebarLightListDropdownId03">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+							</svg>
+						</a>
+						<div aria-labelledBy="sidebarLightListDropdownId03" class="dropdown-menu">
+							<a class="dropdown-item" href="#1">Download</a>
+							<a class="dropdown-item" href="#1">Edit</a>
+							<a class="dropdown-item" href="#1">Move</a>
+							<a class="dropdown-item" href="#1">Checkout</a>
+							<a class="dropdown-item" href="#1">Permissions</a>
+							<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
+						</div>
+					</div>
 				</div>
 			</li>
 		</ul>
-	</nav>
-
-	<div class="sidebar-body">
-		<div class="crop-img crop-img-center crop-img-middle sidebar-panel">
-			<img alt="thumbnail" class="img-fluid" src="/images/DeathtoStock_Spring10.jpg">
+		<div class="aspect-ratio aspect-ratio-16-to-9 sidebar-panel">
+			<img alt="thumbnail" class="aspect-ratio-item-center-middle aspect-ratio-item-fluid" src="/images/DeathtoStock_Desk4.jpg">
 			<div class="sticker sticker-bottom-left sticker-danger">JPG</div>
 		</div>
-
-		<ul class="list-group list-group-unstyled sidebar-section">
-			<li class="list-group-item">
-				<div class="sidebar-section-d-flex">
-					<div class="flex-col flex-col-expand">
-						<div class="h4 sidebar-title">Version 1.1</div>
-					</div>
-					<div class="flex-col">
-						<ul class="nav sidebar-actions">
-							<li class="dropdown nav-item">
-								<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="sidebar-section">
-					<div class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a>, on 10/27/16 12:26 AM</div>
-				</div>
-			</li>
-			<li class="list-group-item">
-				<div class="sidebar-section-d-flex">
-					<div class="flex-col flex-col-expand">
-						<h4 class="sidebar-title">Version 1.0</h4>
-					</div>
-					<div class="flex-col">
-						<ul class="nav sidebar-actions">
-							<li class="dropdown nav-item">
-								<a class="dropdown-toggle nav-link-monospaced sidebar-link" data-toggle="dropdown" href="#1">
-									<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
-										<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
-									</svg>
-								</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#1">Download</a>
-									<a class="dropdown-item" href="#1">Edit</a>
-									<a class="dropdown-item" href="#1">Move</a>
-									<a class="dropdown-item" href="#1">Checkout</a>
-									<a class="dropdown-item" href="#1">Permissions</a>
-									<a class="dropdown-item" href="#1">Move to Recycle Bin</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="sidebar-section">
-					<h6 class="sidebar-caption">By <a class="sidebar-link" href="#1">Joe Bloggs</a>, on 05/11/16 01:26 PM</h6>
-				</div>
-			</li>
-		</ul>
-
-		<dl class="sidebar-section">
-			<dt class="h5">Size</dt>
-			<dd class="h6 sidebar-caption">136 KB</dd>
-			<dt class="h5">Dimensions</dt>
-			<dd class="h6 sidebar-caption">1024 x 768</dd>
-			<dt class="h5">Created</dt>
-			<dd class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
-			<dt class="h5">Last Modification</dt>
-			<dd class="h6 sidebar-caption">By <a class="sidebar-link" href="#1">Helen Smith</a> on Feb 15 2015, 10:15am</dd>
+		<dl class="sidebar-dl sidebar-section">
+			<dt class="sidebar-dt">Url</dt>
+			<dd class="sidebar-dd">
+				<a class="sidebar-link" href="#1">http://localhost:8080/documents/20140/</a>
+			</dd>
+			<dt class="sidebar-dt">Webdav Url</dt>
+			<dd class="sidebar-dd">
+				<a class="sidebar-link" href="#1">http://localhost:8080/webdav/guest/</a>
+			</dd>
+			<dt class="sidebar-dt">Created</dt>
+			<dd class="sidebar-dd">
+				<a class="sidebar-link" href="#1">Helen Smith</a>
+			</dd>
+			<dt class="sidebar-dt">Description</dt>
+			<dd class="sidebar-dd">A picture of a person using a ruler and exacto knife to cut construction paper.</dd>
+			<dt class="sidebar-dt">Size</dt>
+			<dd class="sidebar-dd">745KB</dd>
+			<dt class="sidebar-dt">Extension</dt>
+			<dd class="sidebar-dd">PNG</dd>
+			<dt class="sidebar-dt">Version</dt>
+			<dd class="sidebar-dd">2.0</dd>
+			<dt class="sidebar-dt">Tags</dt>
+			<dd class="sidebar-dd">
+				<span class="label label-lg label-secondary">Tag One</span>
+				<span class="label label-lg label-secondary">Tag Two</span>
+				<span class="label label-lg label-secondary">Tag Three</span>
+				<span class="label label-lg label-secondary">Tag Four</span>
+				<span class="label label-lg label-secondary">Tag Five</span>
+				<span class="label label-lg label-secondary">Tag Six</span>
+				<span class="label label-lg label-secondary">Tag Seven</span>
+				<span class="label label-lg label-secondary">Tag Eight</span>
+			</dd>
+			<dt class="sidebar-dt">Related Assets</dt>
+			<dd class="sidebar-dd">
+				<ul class="sidebar-list">
+					<li class="sidebar-list-item">
+						<div class="flex-col">
+							<span class="sticker sticker-secondary sticker-sm">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+								</svg>
+							</span>
+						</div>
+						<div class="flex-col flex-col-expand">
+							<a class="sidebar-link text-truncate" href="#1">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</a>
+						</div>
+					</li>
+					<li class="sidebar-list-item">
+						<div class="flex-col">
+							<span class="sticker sticker-secondary sticker-sm">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-folder">
+									<use xlink:href="/vendor/lexicon/icons.svg#folder" />
+								</svg>
+							</span>
+						</div>
+						<div class="flex-col flex-col-expand">
+							<a class="sidebar-link text-truncate" href="#1">Surf Blog Entry Two</a>
+						</div>
+					</li>
+				</ul>
+			</dd>
 		</dl>
-
-		<div class="sidebar-section">
-			<span>Tags: </span>
-			<span class="badge badge-default badge-sm">
-				History
-				<a href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
-					</svg>
-				</a>
-			</span>
-			<span class="badge badge-default badge-sm">
-				Flat
-				<a href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
-					</svg>
-				</a>
-			</span>
-			<span class="badge badge-default badge-sm">
-				Default
-				<a href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="/vendor/lexicon/icons.svg#times" />
-					</svg>
-				</a>
-			</span>
-
-			<div style="margin-bottom: 20px;margin-top:20px;">
-				<a class="btn btn-secondary btn-sm" href="#1" id="addNewTagButton">Add new tag</a>
-			</div>
-		</div>
 	</div>
 </div>
 ```
 
 </article>
-

@@ -10,8 +10,7 @@ weight: 100
 ### Base Nav
 
 <ul class="nav">
-	<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
-	<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
 	<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
@@ -19,8 +18,7 @@ weight: 100
 
 ```xml
 <ul class="nav">
-	<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
-	<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
+	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
 	<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
@@ -55,31 +53,6 @@ weight: 100
 	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Configuration</a></li>
 	<li class="nav-item"><a class="nav-link" href="#1">Identification</a></li>
-</ul>
-```
-
-</article>
-
-
-<article id="nav-underline">
-
-### Nav Underline
-
-<ul class="nav nav-underline">
-	<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
-	<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
-	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
-	<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
-	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
-</ul>
-
-```xml
-<ul class="nav nav-underline">
-	<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
-	<li class="nav-item"><a class="nav-link" href="#1">Details</a></li>
-	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
-	<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
-	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
 </ul>
 ```
 
@@ -482,5 +455,99 @@ weight: 100
 	</li>
 </ul>
 ```
+
+</article>
+
+
+<article id="nav-unstyled">
+
+### Nav Unstyled
+
+> Add `nav-unstyled` to your nav to remove spacing around `nav-link` and `nav-btn`.
+
+<ul class="nav nav-unstyled">
+	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
+	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+	<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
+	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+</ul>
+
+```xml
+<ul class="nav nav-unstyled">
+	<li class="nav-item"><a class="active nav-link" href="#1">Details</a></li>
+	<li class="nav-item"><a class="nav-link" href="#1">Catagorization</a></li>
+	<li class="nav-item"><a class="disabled nav-link" href="#1">Documents and Media</a></li>
+	<li class="nav-item"><a class="nav-link" href="#1">Site Template</a></li>
+</ul>
+```
+
+</article>
+
+
+<article id="how-to-use-nav-helper-classes">
+
+### How to use Nav Helper Classes
+
+> Dropdown toggle with anchor: `dropdown-toggle nav-link`
+> Dropdown toggle with button: `btn btn-unstyled dropdown-toggle nav-link`
+> An anchor in Nav Item styled like btn: `btn btn-primary nav-btn nav-btn-monospaced`
+> A button in Nav Item styled like nav-link: `btn btn-unstyled nav-link`
+> A button in Nav Item: `btn btn-primary nav-btn`
+> A monospaced anchor in Nav Item: `nav-link nav-link-monospaced`
+> A monospaced button in Nav Item: `btn btn-primary nav-btn nav-btn-monospaced`
+
+<ul class="nav">
+	<li class="nav-item"><a class="active nav-link" href="#1">Basic Information</a></li>
+	<li class="nav-item">
+		<button class="btn btn-unstyled nav-link" type="button">Details</button>
+	</li>
+	<li class="nav-item">
+		<button class="btn btn-primary nav-btn" type="button">Details</button>
+	</li>
+	<li class="nav-item">
+		<button class="btn btn-link nav-btn" type="button">
+			Details
+		</button>
+	</li>
+	<li class="nav-item">
+		<button class="btn btn-primary nav-btn nav-btn-monospaced" type="button">De</button>
+	</li>
+	<li class="nav-item"><a class="disabled nav-link" href="#1">Catagorization</a></li>
+	<li class="dropdown nav-item">
+		<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle nav-link" data-toggle="dropdown" type="button">
+			More
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+				<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+			</svg>
+		</button>
+		<div aria-labelledby="" class="dropdown-menu">
+			<a class="dropdown-item" href="#1">App Section 4</a>
+			<a class="dropdown-item" href="#1">App Section 5</a>
+			<a class="dropdown-item" href="#1">App Section 6</a>
+			<a class="dropdown-item" href="#1">App Section 7</a>
+		</div>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link nav-link-monospaced" href="#1">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+				<use xlink:href="/vendor/lexicon/icons.svg#cog" />
+			</svg>
+		</a>
+	</li>
+	<li class="nav-item">
+		<a class="btn btn-primary nav-btn nav-btn-monospaced" href="#1">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+				<use xlink:href="/vendor/lexicon/icons.svg#cog" />
+			</svg>
+		</a>
+	</li>
+	<li class="nav-item">
+		<button class="btn btn-unstyled nav-btn nav-btn-monospaced" type="button">
+			<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+				<use xlink:href="/vendor/lexicon/icons.svg#cog" />
+			</svg>
+		</button>
+	</li>
+</ul>
 
 </article>

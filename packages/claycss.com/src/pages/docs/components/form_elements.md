@@ -565,7 +565,7 @@ weight: 100
 			</select>
 		</div>
 	</div>
-	<div class="form-group form-inline form-inline-autofit">
+	<div class="align-items-end form-group form-inline form-inline-autofit">
 		<div class="form-inline-group">
 			<label for="formInlineAutofitTextInput2">First Name</label>
 			<input class="form-control" id="formInlineAutofitFirstName" placeholder="First Name" type="text">
@@ -580,7 +580,7 @@ weight: 100
 			<div class="input-group-addon">.00</div>
 		</div>
 	</div>
-	<div class="form-group form-inline form-inline-autofit">
+	<div class="align-items-end form-group form-inline form-inline-autofit">
 		<label for="formInlineAutofitCity">City</label>
 		<input class="form-control" id="formInlineAutofitCity" placeholder="City" type="text">
 		<select class="form-control">

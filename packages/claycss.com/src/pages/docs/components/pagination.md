@@ -5,11 +5,11 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="pagination">
 
 ### Pagination
 
-> Preset pagination styles helps divide up large blocks of content on your site or app. Use class <code>ellipsis</code> or <code>dropdown</code> on a pagination list item to separate pagination controls from page numbers.
+> Preset pagination styles helps divide up large blocks of content on your site or app. Use class `ellipsis` or `dropdown` on a pagination list item to separate pagination controls from page numbers.
 
 <ul class="pagination">
 	<li class="disabled page-item">
@@ -123,11 +123,12 @@ weight: 100
 
 </article>
 
-<article id="2">
+
+<article id="pagination-bar">
 
 ### Pagination Bar
 
-> Use <code>pagination-bar</code>'s preset styles to give your users more control over the content being displayed on the page.
+> Use `pagination-bar`'s preset styles to give your users more control over the content being displayed on the page.
 
 <div class="pagination-bar">
 	<div class="dropdown pagination-items-per-page">
@@ -206,9 +207,7 @@ weight: 100
 			<a class="dropdown-item" href="#1">50</a>
 		</div>
 	</div>
-
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
-
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
@@ -255,11 +254,12 @@ weight: 100
 
 </article>
 
-<article id="3">
+
+<article id="pagination-sizes">
 
 ### Pagination Sizes
 
-> More sizing options, add <code>pagination-sm</code> or <code>pagination-lg</code> to any pagination component to make it smaller or larger. It can be added to the parent container, such as <code>pagination-bar</code>, to size all the pagination components that reside within.
+> More sizing options, add `pagination-sm` or `pagination-lg` to any pagination component to make it smaller or larger. It can be added to the parent container, such as `pagination-bar`, to size all the pagination components that reside within.
 
 ##### Small
 
@@ -340,9 +340,7 @@ weight: 100
 			<a class="dropdown-item" href="#1">50</a>
 		</div>
 	</div>
-
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
-
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
@@ -466,9 +464,7 @@ weight: 100
 			<a class="dropdown-item" href="#1">50</a>
 		</div>
 	</div>
-
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
-
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">
@@ -592,9 +588,7 @@ weight: 100
 			<a class="dropdown-item" href="#1">50</a>
 		</div>
 	</div>
-
 	<div class="pagination-results">Showing 1 to 20 of 203 entries.</div>
-
 	<ul class="pagination">
 		<li class="disabled page-item">
 			<a class="page-link" href="#1">

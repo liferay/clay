@@ -24,6 +24,14 @@ weight: 100
 			<span class="input-group-addon" id="basicAddon2">@example.com</span>
 		</div>
 	</div>
+	<div class="form-group">
+		<label>Liferay</label>
+		<span class="form-text">http://www.liferay.com</span>
+		<div class="input-group">
+			<span class="input-group-addon">/</span>
+			<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text">
+		</div>
+	</div>
 	<div class="input-group">
 		<span class="input-group-addon">$</span>
 		<input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
@@ -32,14 +40,27 @@ weight: 100
 </div>
 
 ```xml
-<div class="input-group">
-	<span class="input-group-addon" id="basicAddon1">@</span>
-	<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+<div class="form-group">
+	<div class="input-group">
+		<span class="input-group-addon" id="basicAddon1">@</span>
+		<input aria-describedby="basicAddon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
+	</div>
 </div>
 
-<div class="input-group">
-	<input aria-describedby="basicAddon2" aria-label="Recipient's Username" class="form-control" placeholder="Recipient's username" type="text">
-	<span class="input-group-addon" id="basicAddon2">@example.com</span>
+<div class="form-group">
+	<div class="input-group">
+		<input aria-describedby="basicAddon2" aria-label="Recipient's Username" class="form-control" placeholder="Recipient's username" type="text">
+		<span class="input-group-addon" id="basicAddon2">@example.com</span>
+	</div>
+</div>
+
+<div class="form-group">
+	<label>Liferay</label>
+	<span class="form-text">http://www.liferay.com</span>
+	<div class="input-group">
+		<span class="input-group-addon">/</span>
+		<input aria-label="Amount (to the nearest dollar)" class="form-control" placeholder="design/lexicon" type="text">
+	</div>
 </div>
 
 <div class="input-group">
@@ -315,66 +336,91 @@ weight: 100
 
 <div class="clay-site-form-container">
 	<div class="form-group">
+		<label for="">Custom Checkbox</label>
 		<div class="input-group input-group-secondary">
 			<span class="input-group-addon">
-				<input aria-label="Checkbox for following text input" type="checkbox">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
 			</span>
 			<input aria-label="Text input with checkbox" class="form-control" type="text">
 		</div>
 	</div>
 	<div class="form-group">
+		<label for="">Custom Checkbox and Custom Control Description</label>
+		<div class="input-group input-group-secondary">
+			<span class="input-group-addon">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Custom Check Label</span>
+					</label>
+				</div>
+			</span>
+			<input aria-label="Text input with checkbox" class="form-control" type="text">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="">Form Check and Form Check Description</label>
 		<div class="input-group input-group-secondary">
 			<input aria-label="Text input with checkbox" class="form-control" type="text">
 			<span class="input-group-addon">
-				<input aria-label="Checkbox for previous text input" type="checkbox">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input aria-label="Checkbox for previous text input" class="form-check-input" type="checkbox" value="">
+						<span class="form-check-description">Form Check Label</span>
+					</label>
+				</div>
 			</span>
 		</div>
 	</div>
 	<div class="form-group">
+		<label for="">Custom Radio</label>
 		<div class="input-group input-group-secondary">
 			<span class="input-group-addon">
-				<input aria-label="Radio button for following text input" type="radio">
+				<div class="custom-control custom-radio">
+					<label>
+						<input aria-label="Radio button for following text input" class="custom-control-input" type="radio">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
 			</span>
 			<input aria-label="Text input with radio button" class="form-control" type="text">
 		</div>
 	</div>
 	<div class="form-group">
+		<label for="">Form Check with Radio Button</label>
 		<div class="input-group input-group-secondary">
 			<input aria-label="Text input with radio button" class="form-control" type="text">
 			<span class="input-group-addon">
-				<input aria-label="Radio button for previous text input" type="radio">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input aria-label="Radio button for previous text input" class="form-check-input" type="radio" value="">
+					</label>
+				</div>
 			</span>
 		</div>
 	</div>
 </div>
 
 ```xml
-<div class="input-group input-group-secondary">
-	<span class="input-group-addon">
-		<input aria-label="Checkbox for following text input" type="checkbox">
-	</span>
-	<input aria-label="Text input with checkbox" class="form-control" type="text">
-</div>
-
-<div class="input-group input-group-secondary">
-	<input aria-label="Text input with checkbox" class="form-control" type="text">
-	<span class="input-group-addon">
-		<input aria-label="Checkbox for previous text input" type="checkbox">
-	</span>
-</div>
-
-<div class="input-group input-group-secondary">
-	<span class="input-group-addon">
-		<input aria-label="Radio button for following text input" type="radio">
-	</span>
-	<input aria-label="Text input with radio button" class="form-control" type="text">
-</div>
-
-<div class="input-group input-group-secondary">
-	<input aria-label="Text input with radio button" class="form-control" type="text">
-	<span class="input-group-addon">
-		<input aria-label="Radio button for previous text input" type="radio">
-	</span>
+<div class="form-group">
+	<label for="">Custom Checkbox</label>
+	<div class="input-group input-group-secondary">
+		<span class="input-group-addon">
+			<div class="custom-control custom-checkbox">
+				<label>
+					<input aria-label="Checkbox for following text input" class="custom-control-input" type="checkbox">
+					<span class="custom-control-indicator"></span>
+				</label>
+			</div>
+		</span>
+		<input aria-label="Text input with checkbox" class="form-control" type="text">
+	</div>
 </div>
 ```
 
@@ -398,12 +444,12 @@ weight: 100
 		<div class="input-group input-group-transparent">
 			<span class="input-group-addon">$</span>
 			<input aria-label="Amount" class="form-control" id="inputGroupTransparent" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-addon">
-				<a class="help-icon help-icon-default" data-toggle="popover" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle">
-						<use xlink:href="/vendor/lexicon/icons.svg#question-circle" />
+			<span class="input-group-btn">
+				<button class="btn btn-unstyled" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 					</svg>
-				</a>
+				</button>
 			</span>
 		</div>
 	</div>
@@ -420,12 +466,12 @@ weight: 100
 	<div class="input-group input-group-transparent">
 		<span class="input-group-addon">$</span>
 		<input aria-label="Amount" class="form-control" id="inputGroupTransparent" placeholder="Some placeholder text..." type="text">
-		<span class="input-group-addon">
-			<a class="help-icon help-icon-default" data-toggle="popover" href="#1">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle">
-					<use xlink:href="/vendor/lexicon/icons.svg#question-circle" />
+		<span class="input-group-btn">
+			<button class="btn btn-unstyled" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+					<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 				</svg>
-			</a>
+			</button>
 		</span>
 	</div>
 </div>
@@ -470,12 +516,12 @@ weight: 100
 		<div class="input-group input-group-transparent input-group-lg">
 			<span class="input-group-addon">$</span>
 			<input aria-label="Amount (to the nearest Dollar)" class="form-control" id="inputGroupTransparentLg" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-addon">
-				<a class="help-icon help-icon-default" data-toggle="popover" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle">
-						<use xlink:href="/vendor/lexicon/icons.svg#question-circle" />
+			<span class="input-group-btn">
+				<button class="btn btn-unstyled" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 					</svg>
-				</a>
+				</button>
 			</span>
 		</div>
 	</div>
@@ -487,14 +533,30 @@ weight: 100
 			</svg>
 		</label>
 		<div class="input-group input-group-transparent">
-			<span class="input-group-addon">$</span>
-			<input aria-label="Amount" class="form-control" id="inputGroupTransparentNormal" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-addon">
-				<a class="help-icon help-icon-default" data-toggle="popover" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle">
-						<use xlink:href="/vendor/lexicon/icons.svg#question-circle" />
+			<span class="input-group-btn">
+				<button class="btn btn-primary" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 					</svg>
-				</a>
+				</button>
+				<button class="btn btn-primary" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					</svg>
+				</button>
+				<button class="btn btn-primary" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					</svg>
+				</button>
+			</span>
+			<input aria-label="Amount" class="form-control" id="inputGroupTransparentNormal" placeholder="Some placeholder text..." type="text">
+			<span class="input-group-btn">
+				<button class="btn btn-unstyled" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					</svg>
+				</button>
 			</span>
 		</div>
 	</div>
@@ -508,12 +570,12 @@ weight: 100
 		<div class="input-group input-group-transparent input-group-sm">
 			<span class="input-group-addon">$</span>
 			<input aria-label="Amount" class="form-control" id="inputGroupTransparentSm" placeholder="Some placeholder text..." type="text">
-			<span class="input-group-addon">
-				<a class="help-icon help-icon-default" data-toggle="popover" href="#1">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-question-circle">
-						<use xlink:href="/vendor/lexicon/icons.svg#question-circle" />
+			<span class="input-group-btn">
+				<button class="btn btn-unstyled" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
 					</svg>
-				</a>
+				</button>
 			</span>
 		</div>
 	</div>
@@ -595,7 +657,7 @@ weight: 100
 			<div class="form-group">
 				<div class="input-group input-group-inset">
 					<div class="input-group-input">
-						<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-right: 92px;" />
+						<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-right: 92px;">
 					</div>
 					<span class="input-group-inset-item">
 						<button class="btn btn-secondary" type="button">Submit</button>
@@ -605,7 +667,7 @@ weight: 100
 			<div class="form-group">
 				<div class="input-group input-group-inset input-group-inset-left">
 					<div class="input-group-input">
-						<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-left: 92px;" />
+						<input aria-label="Enter email" class="form-control" placeholder="Enter Email..." type="email" style="padding-left: 92px;">
 					</div>
 					<span class="input-group-inset-item">
 						<button class="btn btn-secondary" type="button">Submit</button>

@@ -98,25 +98,58 @@ weight: 100
 				<div class="multi-step-icon" data-multi-step-icon="1"></div>
 			</div>
 		</li>
-		<li class="active multi-step-item multi-step-item-expand">
+		<li class="multi-step-item multi-step-item-expand">
 			<div class="multi-step-divider"></div>
 			<div class="multi-step-indicator">
-				<div class="multi-step-indicator-label">Step 02</div>
-				<div class="multi-step-icon" data-multi-step-icon="2"></div>
+				<div class="dropdown multi-step-icon">
+					<button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-link" data-toggle="dropdown" type="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+						</svg>
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#1">Step 5</a>
+						<a class="dropdown-item" href="#1">Step 6</a>
+						<a class="dropdown-item" href="#1">Step 7</a>
+						<a class="dropdown-item" href="#1">Step 8</a>
+					</div>
+				</div>
 			</div>
 		</li>
 		<li class="multi-step-item multi-step-item-expand">
 			<div class="multi-step-divider"></div>
 			<div class="multi-step-indicator">
-				<div class="multi-step-indicator-label">Step 03</div>
-				<div class="multi-step-icon" data-multi-step-icon="3"></div>
+				<div class="dropdown multi-step-icon">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-link dropdown-toggle multi-step-link" data-toggle="dropdown" type="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+						</svg>
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#1">Step 5</a>
+						<a class="dropdown-item" href="#1">Step 6</a>
+						<a class="dropdown-item" href="#1">Step 7</a>
+						<a class="dropdown-item" href="#1">Step 8</a>
+					</div>
+				</div>
 			</div>
 		</li>
 		<li class="multi-step-item multi-step-item-expand">
 			<div class="multi-step-divider"></div>
 			<div class="multi-step-indicator">
-				<div class="multi-step-indicator-label">Step 04</div>
-				<div class="multi-step-icon" data-multi-step-icon="4"></div>
+				<div class="dropdown multi-step-icon">
+					<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle multi-step-link" data-toggle="dropdown" type="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+						</svg>
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#1">Step 5</a>
+						<a class="dropdown-item" href="#1">Step 6</a>
+						<a class="dropdown-item" href="#1">Step 7</a>
+						<a class="dropdown-item" href="#1">Step 8</a>
+					</div>
+				</div>
 			</div>
 		</li>
 		<li class="multi-step-item multi-step-item-expand">
@@ -163,25 +196,58 @@ weight: 100
 			<div class="multi-step-icon" data-multi-step-icon="1"></div>
 		</div>
 	</li>
-	<li class="active multi-step-item multi-step-item-expand">
+	<li class="multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
-			<div class="multi-step-indicator-label">Step 02</div>
-			<div class="multi-step-icon" data-multi-step-icon="2"></div>
+			<div class="dropdown multi-step-icon">
+				<button aria-expanded="false" aria-haspopup="true" class="dropdown-toggle multi-step-link" data-toggle="dropdown" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+					</svg>
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Step 5</a>
+					<a class="dropdown-item" href="#1">Step 6</a>
+					<a class="dropdown-item" href="#1">Step 7</a>
+					<a class="dropdown-item" href="#1">Step 8</a>
+				</div>
+			</div>
 		</div>
 	</li>
 	<li class="multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
-			<div class="multi-step-indicator-label">Step 03</div>
-			<div class="multi-step-icon" data-multi-step-icon="3"></div>
+			<div class="dropdown multi-step-icon">
+				<button aria-expanded="false" aria-haspopup="true" class="btn btn-link dropdown-toggle multi-step-link" data-toggle="dropdown" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+					</svg>
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Step 5</a>
+					<a class="dropdown-item" href="#1">Step 6</a>
+					<a class="dropdown-item" href="#1">Step 7</a>
+					<a class="dropdown-item" href="#1">Step 8</a>
+				</div>
+			</div>
 		</div>
 	</li>
 	<li class="multi-step-item multi-step-item-expand">
 		<div class="multi-step-divider"></div>
 		<div class="multi-step-indicator">
-			<div class="multi-step-indicator-label">Step 04</div>
-			<div class="multi-step-icon" data-multi-step-icon="4"></div>
+			<div class="dropdown multi-step-icon">
+				<button aria-expanded="false" aria-haspopup="true" class="btn btn-unstyled dropdown-toggle multi-step-link" data-toggle="dropdown" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-h"></use>
+					</svg>
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#1">Step 5</a>
+					<a class="dropdown-item" href="#1">Step 6</a>
+					<a class="dropdown-item" href="#1">Step 7</a>
+					<a class="dropdown-item" href="#1">Step 8</a>
+				</div>
+			</div>
 		</div>
 	</li>
 	<li class="multi-step-item multi-step-item-expand">
@@ -715,3 +781,11 @@ weight: 100
 
 </article>
 
+
+<article id="multi-step-nav-simplified">
+
+### Multi Step Nav Simplified
+
+> See [/subnav/#subnav](Subnav)
+
+</article>

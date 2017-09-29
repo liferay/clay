@@ -5,589 +5,538 @@ layout: "guide"
 weight: 100
 ---
 
-<style>
-{literal}
-#wrapper {
-	overflow-x: visible;
-}
-{/literal}
-</style>
-
-<article id="1">
+<article id="navbar-management-bar">
 
 ### Navbar Management Bar
 
-<nav class="navbar navbar-expand">
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<div class="form-check">
-				<label class="form-check-label">
-					<input class="form-check-input" type="checkbox" value="">
-				</label>
-			</div>
-		</li>
-		<li class="dropdown nav-item">
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-					<use xlink:href="/vendor/lexicon/icons.svg#magic" />
-				</svg>
-			</a>
-			<a aria-expanded="false" class="dropdown-toggle nav-link navbar-d-breakpoint-block" data-toggle="dropdown" href="javascript:;" role="button">
-				<span class="navbar-text-truncate">Filter and Order</span>
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-				</svg>
-			</a>
-			<div class="dropdown-menu" role="menu">
-				<a class="dropdown-item" href="javascript:;">Action</a>
-				<a class="dropdown-item" href="javascript:;">Another action</a>
-				<a class="dropdown-item" href="javascript:;">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">Separated link</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">One more separated link</a>
-			</div>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
-					<use xlink:href="/vendor/lexicon/icons.svg#import-export" />
-				</svg>
-			</a>
-		</li>
-	</ul>
-	<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-		<form role="search">
-			<div class="input-group input-group-inset">
-				<div class="input-group-input">
-					<input class="form-control" placeholder="Search for..." type="text">
+<nav class="management-bar navbar navbar-expand-md">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
 				</div>
-				<span class="input-group-inset-item">
-					<button class="btn btn-link clay-site-close-overlay-sm-down navbar-d-breakpoint-none" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</button>
-					<button class="btn btn-link navbar-d-breakpoint-block" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-							<use xlink:href="/vendor/lexicon/icons.svg#search" />
-						</svg>
-					</button>
-				</span>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
+					<span class="navbar-text-truncate">Filter and Order</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					</svg>
+				</a>
+				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+						<use xlink:href="/vendor/lexicon/icons.svg#magic" />
+					</svg>
+				</a>
+				<div class="dropdown-menu" role="menu">
+					<a class="dropdown-item" href="#1">Filter Action 1</a>
+					<a class="dropdown-item" href="#1">Filter Action 2</a>
+					<a class="dropdown-item" href="#1">Filter Action 3</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+						<use xlink:href="/vendor/lexicon/icons.svg#order-arrow" />
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+			<div class="container-fluid container-fluid-max-xl">
+				<form role="search">
+					<div class="input-group input-group-inset">
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Search for..." type="text">
+						</div>
+						<span class="input-group-inset-item">
+							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								</svg>
+							</button>
+						</span>
+					</div>
+				</form>
 			</div>
-		</form>
+		</div>
+		<ul class="navbar-nav">
+			<li class="nav-item navbar-breakpoint-d-none">
+				<a class="clay-site-open-overlay-sm-down nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+						<use xlink:href="/vendor/lexicon/icons.svg#search" />
+					</svg>
+				</a>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+						<use xlink:href="/vendor/lexicon/icons.svg#list" />
+					</svg>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
+					<a class="active dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+								<use xlink:href="/vendor/lexicon/icons.svg#list" />
+							</svg>
+						</span>
+						List View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+								<use xlink:href="/vendor/lexicon/icons.svg#table" />
+							</svg>
+						</span>
+						Table View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+								<use xlink:href="/vendor/lexicon/icons.svg#cards2" />
+							</svg>
+						</span>
+						Card View
+					</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+						<use xlink:href="/vendor/lexicon/icons.svg#plus" />
+					</svg>
+				</a>
+			</li>
+		</ul>
 	</div>
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a class="clay-site-open-overlay-sm-down nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use xlink:href="/vendor/lexicon/icons.svg#search" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-					<use xlink:href="/vendor/lexicon/icons.svg#view" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-					<use xlink:href="/vendor/lexicon/icons.svg#table" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="btn btn-secondary nav-btn navbar-d-breakpoint-block" href="javascript:;">Create Dynamic List</a>
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-					<use xlink:href="/vendor/lexicon/icons.svg#list" />
-				</svg>
-			</a>
-		</li>
-	</ul>
 </nav>
 
-<nav class="navbar navbar-expand navbar-light navbar-light-bg">
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<div class="form-check">
-				<label class="form-check-label">
-					<input class="form-check-input" type="checkbox" value="">
-				</label>
-			</div>
-		</li>
-		<li class="dropdown nav-item">
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-					<use xlink:href="/vendor/lexicon/icons.svg#magic" />
-				</svg>
-			</a>
-			<a aria-expanded="false" class="dropdown-toggle nav-link navbar-d-breakpoint-block" data-toggle="dropdown" href="javascript:;" role="button">
-				<span class="navbar-text-truncate">Filter and Order</span>
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-				</svg>
-			</a>
-			<div class="dropdown-menu" role="menu">
-				<a class="dropdown-item" href="javascript:;">Action</a>
-				<a class="dropdown-item" href="javascript:;">Another action</a>
-				<a class="dropdown-item" href="javascript:;">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">Separated link</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">One more separated link</a>
-			</div>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
-					<use xlink:href="/vendor/lexicon/icons.svg#import-export" />
-				</svg>
-			</a>
-		</li>
-	</ul>
-	<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-		<form role="search">
-			<div class="input-group input-group-inset">
-				<div class="input-group-input">
-					<input class="form-control" placeholder="Search for..." type="text">
+<nav class="management-bar navbar navbar-expand-md navbar-light">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
 				</div>
-				<span class="input-group-inset-item">
-					<button class="btn btn-link clay-site-close-overlay-sm-down navbar-d-breakpoint-none" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</button>
-					<button class="btn btn-link navbar-d-breakpoint-block" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-							<use xlink:href="/vendor/lexicon/icons.svg#search" />
-						</svg>
-					</button>
-				</span>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
+					<span class="navbar-text-truncate">Filter and Order</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					</svg>
+				</a>
+				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+						<use xlink:href="/vendor/lexicon/icons.svg#magic" />
+					</svg>
+				</a>
+				<div class="dropdown-menu" role="menu">
+					<a class="dropdown-item" href="#1">Filter Action 1</a>
+					<a class="dropdown-item" href="#1">Filter Action 2</a>
+					<a class="dropdown-item" href="#1">Filter Action 3</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+						<use xlink:href="/vendor/lexicon/icons.svg#order-arrow" />
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+			<div class="container-fluid container-fluid-max-xl">
+				<form role="search">
+					<div class="input-group input-group-inset">
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Search for..." type="text">
+						</div>
+						<span class="input-group-inset-item">
+							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								</svg>
+							</button>
+						</span>
+					</div>
+				</form>
 			</div>
-		</form>
+		</div>
+		<ul class="navbar-nav">
+			<li class="nav-item navbar-breakpoint-d-none">
+				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+						<use xlink:href="/vendor/lexicon/icons.svg#search" />
+					</svg>
+				</a>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+						<use xlink:href="/vendor/lexicon/icons.svg#list" />
+					</svg>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
+					<a class="active dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+								<use xlink:href="/vendor/lexicon/icons.svg#list" />
+							</svg>
+						</span>
+						List View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+								<use xlink:href="/vendor/lexicon/icons.svg#table" />
+							</svg>
+						</span>
+						Table View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+								<use xlink:href="/vendor/lexicon/icons.svg#cards2" />
+							</svg>
+						</span>
+						Card View
+					</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+						<use xlink:href="/vendor/lexicon/icons.svg#plus" />
+					</svg>
+				</a>
+			</li>
+		</ul>
 	</div>
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="clay-site-open-overlay-sm-down lexicon-icon lexicon-icon-search">
-					<use xlink:href="/vendor/lexicon/icons.svg#search" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-					<use xlink:href="/vendor/lexicon/icons.svg#view" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-					<use xlink:href="/vendor/lexicon/icons.svg#table" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="btn btn-secondary nav-btn navbar-d-breakpoint-block" href="javascript:;">
-				Create Dynamic List
-			</a>
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-					<use xlink:href="/vendor/lexicon/icons.svg#list" />
-				</svg>
-			</a>
-		</li>
-	</ul>
 </nav>
 
-<nav class="navbar navbar-dark navbar-dark-bg navbar-expand">
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<div class="form-check">
-				<label class="form-check-label">
-					<input class="form-check-input" type="checkbox" value="">
-				</label>
-			</div>
-		</li>
-		<li class="dropdown nav-item">
-			<a class="d-md-none nav-link" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-					<use xlink:href="/vendor/lexicon/icons.svg#magic" />
-				</svg>
-			</a>
-			<a aria-expanded="false" class="d-md-inline-block d-none dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;" role="button">
-				<span class="navbar-text-truncate">Filter and Order</span>
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-				</svg>
-			</a>
-			<div class="dropdown-menu" role="menu">
-				<a class="dropdown-item" href="javascript:;">Action</a>
-				<a class="dropdown-item" href="javascript:;">Another action</a>
-				<a class="dropdown-item" href="javascript:;">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">Separated link</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">One more separated link</a>
-			</div>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
-					<use xlink:href="/vendor/lexicon/icons.svg#import-export" />
-				</svg>
-			</a>
-		</li>
-	</ul>
-	<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-		<form role="search">
-			<div class="input-group input-group-inset">
-				<div class="input-group-input">
-					<input class="form-control" placeholder="Search for..." type="text">
+<nav class="management-bar navbar navbar-dark navbar-expand-md">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
 				</div>
-				<span class="input-group-inset-item">
-					<button class="btn btn-link clay-site-close-overlay-sm-down navbar-d-breakpoint-none" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</button>
-					<button class="btn btn-link navbar-d-breakpoint-block" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-							<use xlink:href="/vendor/lexicon/icons.svg#search" />
-						</svg>
-					</button>
-				</span>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
+					<span class="navbar-text-truncate">Filter and Order</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					</svg>
+				</a>
+				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+						<use xlink:href="/vendor/lexicon/icons.svg#magic" />
+					</svg>
+				</a>
+				<div class="dropdown-menu" role="menu">
+					<a class="dropdown-item" href="#1">Filter Action 1</a>
+					<a class="dropdown-item" href="#1">Filter Action 2</a>
+					<a class="dropdown-item" href="#1">Filter Action 3</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+						<use xlink:href="/vendor/lexicon/icons.svg#order-arrow" />
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+			<div class="container-fluid container-fluid-max-xl">
+				<form role="search">
+					<div class="input-group input-group-inset">
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Search for..." type="text">
+						</div>
+						<span class="input-group-inset-item">
+							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								</svg>
+							</button>
+						</span>
+					</div>
+				</form>
 			</div>
-		</form>
+		</div>
+		<ul class="navbar-nav">
+			<li class="nav-item navbar-breakpoint-d-none">
+				<a class="clay-site-open-overlay-sm-down nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+						<use xlink:href="/vendor/lexicon/icons.svg#search" />
+					</svg>
+				</a>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+						<use xlink:href="/vendor/lexicon/icons.svg#list" />
+					</svg>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
+					<a class="active dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+								<use xlink:href="/vendor/lexicon/icons.svg#list" />
+							</svg>
+						</span>
+						List View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+								<use xlink:href="/vendor/lexicon/icons.svg#table" />
+							</svg>
+						</span>
+						Table View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+								<use xlink:href="/vendor/lexicon/icons.svg#cards2" />
+							</svg>
+						</span>
+						Card View
+					</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+						<use xlink:href="/vendor/lexicon/icons.svg#plus" />
+					</svg>
+				</a>
+			</li>
+		</ul>
 	</div>
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a class="clay-site-open-overlay-sm-down nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use xlink:href="/vendor/lexicon/icons.svg#search" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-					<use xlink:href="/vendor/lexicon/icons.svg#view" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-					<use xlink:href="/vendor/lexicon/icons.svg#table" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="btn btn-secondary nav-btn navbar-d-breakpoint-block" href="javascript:;">
-				Create Dynamic List
-			</a>
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-					<use xlink:href="/vendor/lexicon/icons.svg#list" />
-				</svg>
-			</a>
-		</li>
-	</ul>
+</nav>
+
+<nav class="management-bar navbar navbar-expand-md navbar-primary">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</li>
+			<li class="nav-item">
+				<span class="navbar-text">
+					3 of 7
+					<span class="navbar-breakpoint-down-d-none">items selected</span>
+				</span>
+			</li>
+			<li class="nav-item">
+				<button class="btn btn-link nav-btn" type="button">
+					Select all
+				</button>
+			</li>
+		</ul>
+		<ul class="navbar-nav">
+			<li class="nav-item navbar-breakpoint-down-d-none">
+				<button class="btn btn-unstyled nav-btn nav-btn-monospaced" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+						<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+					</svg>
+				</button>
+			</li>
+			<li class="nav-item navbar-breakpoint-down-d-none">
+				<button class="btn btn-unstyled nav-btn nav-btn-monospaced" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-paste">
+						<use xlink:href="/vendor/lexicon/icons.svg#paste" />
+					</svg>
+				</button>
+			</li>
+			<li class="dropdown nav-item">
+				<button aria-expanded="false" class="btn btn-unstyled dropdown-toggle nav-btn nav-btn-monospaced" data-toggle="dropdown" type="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+					</svg>
+				</button>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
+					<a class="active dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+								<use xlink:href="/vendor/lexicon/icons.svg#list" />
+							</svg>
+						</span>
+						List View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+								<use xlink:href="/vendor/lexicon/icons.svg#table" />
+							</svg>
+						</span>
+						Table View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+								<use xlink:href="/vendor/lexicon/icons.svg#cards2" />
+							</svg>
+						</span>
+						Card View
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
 </nav>
 
 ```xml
-<nav class="navbar navbar-expand">
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<div class="form-check">
-				<label class="form-check-label">
-					<input class="form-check-input" type="checkbox" value="">
-				</label>
-			</div>
-		</li>
-		<li class="dropdown nav-item">
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-					<use xlink:href="/vendor/lexicon/icons.svg#magic" />
-				</svg>
-			</a>
-			<a aria-expanded="false" class="dropdown-toggle nav-link navbar-d-breakpoint-block" data-toggle="dropdown" href="javascript:;" role="button">
-				<span class="navbar-text-truncate">Filter and Order</span>
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-				</svg>
-			</a>
-			<div class="dropdown-menu" role="menu">
-				<a class="dropdown-item" href="javascript:;">Action</a>
-				<a class="dropdown-item" href="javascript:;">Another action</a>
-				<a class="dropdown-item" href="javascript:;">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">Separated link</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">One more separated link</a>
-			</div>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
-					<use xlink:href="/vendor/lexicon/icons.svg#import-export" />
-				</svg>
-			</a>
-		</li>
-	</ul>
-	<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-		<form role="search">
-			<div class="input-group input-group-inset">
-				<div class="input-group-input">
-					<input class="form-control" placeholder="Search for..." type="text">
+<nav class="management-bar navbar navbar-expand-md navbar-light">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
 				</div>
-				<span class="input-group-inset-item">
-					<button class="btn btn-link clay-site-close-overlay-sm-down navbar-d-breakpoint-none" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</button>
-					<button class="btn btn-link navbar-d-breakpoint-block" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-							<use xlink:href="/vendor/lexicon/icons.svg#search" />
-						</svg>
-					</button>
-				</span>
-			</div>
-		</form>
-	</div>
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a class="clay-site-open-overlay-sm-down nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use xlink:href="/vendor/lexicon/icons.svg#search" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-					<use xlink:href="/vendor/lexicon/icons.svg#view" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-					<use xlink:href="/vendor/lexicon/icons.svg#table" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="btn btn-secondary nav-btn navbar-d-breakpoint-block" href="javascript:;">Create Dynamic List</a>
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-					<use xlink:href="/vendor/lexicon/icons.svg#list" />
-				</svg>
-			</a>
-		</li>
-	</ul>
-</nav>
-
-<nav class="navbar navbar-expand navbar-light navbar-light-bg">
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<div class="form-check">
-				<label class="form-check-label">
-					<input class="form-check-input" type="checkbox" value="">
-				</label>
-			</div>
-		</li>
-		<li class="dropdown nav-item">
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-					<use xlink:href="/vendor/lexicon/icons.svg#magic" />
-				</svg>
-			</a>
-			<a aria-expanded="false" class="dropdown-toggle nav-link navbar-d-breakpoint-block" data-toggle="dropdown" href="javascript:;" role="button">
-				<span class="navbar-text-truncate">Filter and Order</span>
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-				</svg>
-			</a>
-			<div class="dropdown-menu" role="menu">
-				<a class="dropdown-item" href="javascript:;">Action</a>
-				<a class="dropdown-item" href="javascript:;">Another action</a>
-				<a class="dropdown-item" href="javascript:;">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">Separated link</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">One more separated link</a>
-			</div>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
-					<use xlink:href="/vendor/lexicon/icons.svg#import-export" />
-				</svg>
-			</a>
-		</li>
-	</ul>
-	<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-		<form role="search">
-			<div class="input-group input-group-inset">
-				<div class="input-group-input">
-					<input class="form-control" placeholder="Search for..." type="text">
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-down-d-none" data-toggle="dropdown" href="#1" role="button">
+					<span class="navbar-text-truncate">Filter and Order</span>
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
+					</svg>
+				</a>
+				<a aria-expanded="false" class="nav-link nav-link-monospaced dropdown-toggle navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
+						<use xlink:href="/vendor/lexicon/icons.svg#magic" />
+					</svg>
+				</a>
+				<div class="dropdown-menu" role="menu">
+					<a class="dropdown-item" href="#1">Filter Action 1</a>
+					<a class="dropdown-item" href="#1">Filter Action 2</a>
+					<a class="dropdown-item" href="#1">Filter Action 3</a>
 				</div>
-				<span class="input-group-inset-item">
-					<button class="btn btn-link clay-site-close-overlay-sm-down navbar-d-breakpoint-none" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</button>
-					<button class="btn btn-link navbar-d-breakpoint-block" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-							<use xlink:href="/vendor/lexicon/icons.svg#search" />
-						</svg>
-					</button>
-				</span>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-order-arrow">
+						<use xlink:href="/vendor/lexicon/icons.svg#order-arrow" />
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
+			<div class="container-fluid container-fluid-max-xl">
+				<form role="search">
+					<div class="input-group input-group-inset">
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Search for..." type="text">
+						</div>
+						<span class="input-group-inset-item">
+							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								</svg>
+							</button>
+						</span>
+					</div>
+				</form>
 			</div>
-		</form>
-	</div>
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="clay-site-open-overlay-sm-down lexicon-icon lexicon-icon-search">
-					<use xlink:href="/vendor/lexicon/icons.svg#search" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-					<use xlink:href="/vendor/lexicon/icons.svg#view" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-					<use xlink:href="/vendor/lexicon/icons.svg#table" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="btn btn-secondary nav-btn navbar-d-breakpoint-block" href="javascript:;">
-				Create Dynamic List
-			</a>
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-					<use xlink:href="/vendor/lexicon/icons.svg#list" />
-				</svg>
-			</a>
-		</li>
-	</ul>
-</nav>
-
-<nav class="navbar navbar-dark navbar-dark-bg navbar-expand">
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<div class="form-check">
-				<label class="form-check-label">
-					<input class="form-check-input" type="checkbox" value="">
-				</label>
-			</div>
-		</li>
-		<li class="dropdown nav-item">
-			<a class="d-md-none nav-link" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
-					<use xlink:href="/vendor/lexicon/icons.svg#magic" />
-				</svg>
-			</a>
-			<a aria-expanded="false" class="d-md-inline-block d-none dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;" role="button">
-				<span class="navbar-text-truncate">Filter and Order</span>
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-					<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
-				</svg>
-			</a>
-			<div class="dropdown-menu" role="menu">
-				<a class="dropdown-item" href="javascript:;">Action</a>
-				<a class="dropdown-item" href="javascript:;">Another action</a>
-				<a class="dropdown-item" href="javascript:;">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">Separated link</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="javascript:;">One more separated link</a>
-			</div>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
-					<use xlink:href="/vendor/lexicon/icons.svg#import-export" />
-				</svg>
-			</a>
-		</li>
-	</ul>
-	<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-		<form role="search">
-			<div class="input-group input-group-inset">
-				<div class="input-group-input">
-					<input class="form-control" placeholder="Search for..." type="text">
+		</div>
+		<ul class="navbar-nav">
+			<li class="nav-item navbar-breakpoint-d-none">
+				<a class="nav-link nav-link-monospaced clay-site-open-overlay-sm-down" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+						<use xlink:href="/vendor/lexicon/icons.svg#search" />
+					</svg>
+				</a>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+						<use xlink:href="/vendor/lexicon/icons.svg#list" />
+					</svg>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-indicator-start" role="menu">
+					<a class="active dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
+								<use xlink:href="/vendor/lexicon/icons.svg#list" />
+							</svg>
+						</span>
+						List View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
+								<use xlink:href="/vendor/lexicon/icons.svg#table" />
+							</svg>
+						</span>
+						Table View
+					</a>
+					<a class="dropdown-item" href="#1">
+						<span class="dropdown-item-indicator">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cards2">
+								<use xlink:href="/vendor/lexicon/icons.svg#cards2" />
+							</svg>
+						</span>
+						Card View
+					</a>
 				</div>
-				<span class="input-group-inset-item">
-					<button class="btn btn-link clay-site-close-overlay-sm-down navbar-d-breakpoint-none" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-							<use xlink:href="/vendor/lexicon/icons.svg#times" />
-						</svg>
-					</button>
-					<button class="btn btn-link navbar-d-breakpoint-block" type="button">
-						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-							<use xlink:href="/vendor/lexicon/icons.svg#search" />
-						</svg>
-					</button>
-				</span>
-			</div>
-		</form>
+			</li>
+			<li class="nav-item">
+				<a class="btn btn-primary nav-btn nav-btn-monospaced navbar-breakpoint-down-d-none" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+						<use xlink:href="/vendor/lexicon/icons.svg#plus" />
+					</svg>
+				</a>
+			</li>
+		</ul>
 	</div>
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a class="clay-site-open-overlay-sm-down nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-					<use xlink:href="/vendor/lexicon/icons.svg#search" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
-					<use xlink:href="/vendor/lexicon/icons.svg#view" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
-					<use xlink:href="/vendor/lexicon/icons.svg#table" />
-				</svg>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="btn btn-secondary nav-btn navbar-d-breakpoint-block" href="javascript:;">
-				Create Dynamic List
-			</a>
-			<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
-				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-list">
-					<use xlink:href="/vendor/lexicon/icons.svg#list" />
-				</svg>
-			</a>
-		</li>
-	</ul>
 </nav>
 ```
 
 </article>
 
-<article id="2">
+<article id="navbar-management-bar-example-2">
 
 ### Navbar Management Bar Example 2
 
@@ -603,40 +552,41 @@ weight: 100
 
 > `navbar-overlay-xs-down`: 575px and below
 
-<nav class="navbar navbar-expand navbar-light navbar-light-bg">
-	<div class="container-fluid container-fluid-max-xxl">
+<nav class="management-bar navbar navbar-expand-md navbar-light">
+	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</li>
 			<li class="dropdown nav-item">
-				<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
+				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
 						<use xlink:href="/vendor/lexicon/icons.svg#magic" />
 					</svg>
 				</a>
-				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-d-breakpoint-block" data-toggle="dropdown" href="javascript:;" role="button">
+				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-d-block" data-toggle="dropdown" href="#1" role="button">
 					<span class="navbar-text-truncate">Filter and Order</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
-					<a class="dropdown-item" href="javascript:;">Action</a>
-					<a class="dropdown-item" href="javascript:;">Another action</a>
-					<a class="dropdown-item" href="javascript:;">Something else here</a>
+					<a class="dropdown-item" href="#1">Action</a>
+					<a class="dropdown-item" href="#1">Another action</a>
+					<a class="dropdown-item" href="#1">Something else here</a>
 					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="javascript:;">Separated link</a>
+					<a class="dropdown-item" href="#1">Separated link</a>
 					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="javascript:;">One more separated link</a>
+					<a class="dropdown-item" href="#1">One more separated link</a>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="javascript:;">
+				<a class="nav-link nav-link-monospaced" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
 						<use xlink:href="/vendor/lexicon/icons.svg#import-export" />
 					</svg>
@@ -644,61 +594,64 @@ weight: 100
 			</li>
 		</ul>
 		<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-			<form role="search">
-				<div class="input-group input-group-inset">
-					<div class="input-group-input">
-						<input class="form-control" placeholder="Search for..." type="text">
+			<div class="container-fluid container-fluid-max-xl">
+				<form role="search">
+					<div class="input-group input-group-inset">
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Search for..." type="text">
+						</div>
+						<span class="input-group-inset-item">
+							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								</svg>
+							</button>
+						</span>
 					</div>
-					<span class="input-group-inset-item">
-						<button class="btn btn-link clay-site-close-overlay-sm-down navbar-d-breakpoint-none" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/vendor/lexicon/icons.svg#times" />
-							</svg>
-						</button>
-						<button class="btn btn-link navbar-d-breakpoint-block" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/vendor/lexicon/icons.svg#search" />
-							</svg>
-						</button>
-					</span>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="clay-site-open-overlay-sm-down nav-link navbar-d-breakpoint-none" href="javascript:;">
+				<a class="clay-site-open-overlay-sm-down nav-link nav-link-monospaced navbar-breakpoint-d-none" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 						<use xlink:href="/vendor/lexicon/icons.svg#search" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
+				<a class="nav-link nav-link-monospaced navbar-breakpoint-down-d-none" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
 						<use xlink:href="/vendor/lexicon/icons.svg#view" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
+				<a class="nav-link nav-link-monospaced navbar-breakpoint-down-d-none" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
 						<use xlink:href="/vendor/lexicon/icons.svg#table" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="btn btn-secondary clay-site-open-overlay-up nav-btn" href="javascript:;">
+				<a class="btn btn-secondary clay-site-open-overlay-up nav-btn" href="#1">
 					Open Overlay
 				</a>
 			</li>
 		</ul>
 		<div class="navbar-overlay navbar-overlay-up">
-			<div class="container-fluid container-fluid-max-xxl">
+			<div class="container-fluid container-fluid-max-xl">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<div class="form-check">
-							<label class="form-check-label">
-								<input class="form-check-input" type="checkbox" value="">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-indicator"></span>
 							</label>
 						</div>
 					</li>
@@ -706,32 +659,32 @@ weight: 100
 						<span class="navbar-text">3 of 25</span>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:;">
+						<a class="btn btn-link nav-btn" href="#1">
 							Select All
 						</a>
 					</li>
 				</ul>
 				<ul class="navbar-nav">
 					<li class="dropdown nav-item">
-						<a aria-expanded="false" class="dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;" role="button">
+						<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu" role="menu">
-							<a class="dropdown-item" href="javascript:;">
+							<a class="dropdown-item" href="#1">
 								Delete
 							</a>
-							<a class="dropdown-item" href="javascript:;">
+							<a class="dropdown-item" href="#1">
 								Copy
 							</a>
-							<a class="dropdown-item" href="javascript:;">
+							<a class="dropdown-item" href="#1">
 								Info
 							</a>
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="btn btn-secondary clay-site-close-overlay-up nav-btn" href="javascript:;">
+						<a class="btn btn-secondary clay-site-close-overlay-up nav-btn" href="#1">
 							Close Overlay
 						</a>
 					</li>
@@ -742,40 +695,41 @@ weight: 100
 </nav>
 
 ```xml
-<nav class="navbar navbar-expand navbar-light navbar-light-bg">
-	<div class="container-fluid container-fluid-max-xxl">
+<nav class="management-bar navbar navbar-expand-md navbar-light">
+	<div class="container-fluid container-fluid-max-xl">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</li>
 			<li class="dropdown nav-item">
-				<a class="nav-link navbar-d-breakpoint-none" href="javascript:;">
+				<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced navbar-breakpoint-d-none" data-toggle="dropdown" href="#1" role="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-magic">
 						<use xlink:href="/vendor/lexicon/icons.svg#magic" />
 					</svg>
 				</a>
-				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-d-breakpoint-block" data-toggle="dropdown" href="javascript:;" role="button">
+				<a aria-expanded="false" class="dropdown-toggle nav-link navbar-breakpoint-d-block" data-toggle="dropdown" href="#1" role="button">
 					<span class="navbar-text-truncate">Filter and Order</span>
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
 						<use xlink:href="/vendor/lexicon/icons.svg#caret-bottom" />
 					</svg>
 				</a>
 				<div class="dropdown-menu" role="menu">
-					<a class="dropdown-item" href="javascript:;">Action</a>
-					<a class="dropdown-item" href="javascript:;">Another action</a>
-					<a class="dropdown-item" href="javascript:;">Something else here</a>
+					<a class="dropdown-item" href="#1">Action</a>
+					<a class="dropdown-item" href="#1">Another action</a>
+					<a class="dropdown-item" href="#1">Something else here</a>
 					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="javascript:;">Separated link</a>
+					<a class="dropdown-item" href="#1">Separated link</a>
 					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="javascript:;">One more separated link</a>
+					<a class="dropdown-item" href="#1">One more separated link</a>
 				</div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="javascript:;">
+				<a class="nav-link nav-link-monospaced" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-import-export">
 						<use xlink:href="/vendor/lexicon/icons.svg#import-export" />
 					</svg>
@@ -783,61 +737,64 @@ weight: 100
 			</li>
 		</ul>
 		<div class="navbar-form navbar-form-autofit navbar-overlay navbar-overlay-sm-down">
-			<form role="search">
-				<div class="input-group input-group-inset">
-					<div class="input-group-input">
-						<input class="form-control" placeholder="Search for..." type="text">
+			<div class="container-fluid container-fluid-max-xl">
+				<form role="search">
+					<div class="input-group input-group-inset">
+						<div class="input-group-input">
+							<input class="form-control" placeholder="Search for..." type="text">
+						</div>
+						<span class="input-group-inset-item">
+							<button class="btn btn-unstyled clay-site-close-overlay-sm-down navbar-breakpoint-d-none" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+									<use xlink:href="/vendor/lexicon/icons.svg#times" />
+								</svg>
+							</button>
+							<button class="btn btn-unstyled navbar-breakpoint-d-block" type="button">
+								<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
+									<use xlink:href="/vendor/lexicon/icons.svg#search" />
+								</svg>
+							</button>
+						</span>
 					</div>
-					<span class="input-group-inset-item">
-						<button class="btn btn-link clay-site-close-overlay-sm-down navbar-d-breakpoint-none" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-								<use xlink:href="/vendor/lexicon/icons.svg#times" />
-							</svg>
-						</button>
-						<button class="btn btn-link navbar-d-breakpoint-block" type="button">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
-								<use xlink:href="/vendor/lexicon/icons.svg#search" />
-							</svg>
-						</button>
-					</span>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="clay-site-open-overlay-sm-down nav-link navbar-d-breakpoint-none" href="javascript:;">
+				<a class="clay-site-open-overlay-sm-down nav-link nav-link-monospaced navbar-breakpoint-d-none" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-search">
 						<use xlink:href="/vendor/lexicon/icons.svg#search" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
+				<a class="nav-link nav-link-monospaced navbar-breakpoint-down-d-none" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-view">
 						<use xlink:href="/vendor/lexicon/icons.svg#view" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
+				<a class="nav-link nav-link-monospaced navbar-breakpoint-down-d-none" href="#1">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-table">
 						<use xlink:href="/vendor/lexicon/icons.svg#table" />
 					</svg>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="btn btn-secondary clay-site-open-overlay-up nav-btn" href="javascript:;">
+				<a class="btn btn-secondary clay-site-open-overlay-up nav-btn" href="#1">
 					Open Overlay
 				</a>
 			</li>
 		</ul>
 		<div class="navbar-overlay navbar-overlay-up">
-			<div class="container-fluid container-fluid-max-xxl">
+			<div class="container-fluid container-fluid-max-xl">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<div class="form-check">
-							<label class="form-check-label">
-								<input class="form-check-input" type="checkbox" value="">
+						<div class="custom-control custom-checkbox">
+							<label>
+								<input class="custom-control-input" type="checkbox">
+								<span class="custom-control-indicator"></span>
 							</label>
 						</div>
 					</li>
@@ -845,324 +802,38 @@ weight: 100
 						<span class="navbar-text">3 of 25</span>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:;">
+						<a class="btn btn-link nav-btn" href="#1">
 							Select All
 						</a>
 					</li>
 				</ul>
 				<ul class="navbar-nav">
 					<li class="dropdown nav-item">
-						<a aria-expanded="false" class="dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;" role="button">
+						<a aria-expanded="false" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1" role="button">
 							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
 								<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
 							</svg>
 						</a>
 						<div class="dropdown-menu" role="menu">
-							<a class="dropdown-item" href="javascript:;">
+							<a class="dropdown-item" href="#1">
 								Delete
 							</a>
-							<a class="dropdown-item" href="javascript:;">
+							<a class="dropdown-item" href="#1">
 								Copy
 							</a>
-							<a class="dropdown-item" href="javascript:;">
+							<a class="dropdown-item" href="#1">
 								Info
 							</a>
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="btn btn-secondary clay-site-close-overlay-up nav-btn" href="javascript:;">
+						<a class="btn btn-secondary clay-site-close-overlay-up nav-btn" href="#1">
 							Close Overlay
 						</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-	</div>
-</nav>
-```
-
-</article>
-
-<article id="3">
-
-### Management Bar
-
-<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-light navbar-light-bg">
-	<div class="container-fluid container-fluid-max-xxl">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
-					</label>
-				</div>
-			</li>
-			<li class="dropdown nav-item">
-				<button class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#mgmtBarCollapse00">
-					<span class="navbar-toggler-text">Label</span>
-					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
-					</svg>
-				</button>
-			</li>
-		</ul>
-		<div class="collapse navbar-collapse" id="mgmtBarCollapse00">
-			<ul class="navbar-nav">
-				<li class="dropdown nav-item">
-					<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;">
-						<span class="navbar-text-truncate">Status: Approved, Draft, Pending, Expired</span>
-						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
-						</svg>
-					</a>
-					<div class="dropdown-menu">
-						<form>
-							<div class="dropdown-item">
-								<select class="form-control">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-							<div class="dropdown-item">
-								<label for="exampleInputEmail3">Email address</label>
-								<input class="form-control" id="exampleInputEmail3" placeholder="Email" type="email">
-							</div>
-							<div class="active dropdown-item form-check">
-								<label class="form-check-label">
-									<input checked class="form-check-input" type="checkbox" value=""> Approved
-								</label>
-							</div>
-							<div class="active dropdown-item form-check">
-								<label class="form-check-label">
-									<input checked class="form-check-input" type="checkbox" value=""> Draft
-								</label>
-							</div>
-							<div class="active dropdown-item form-check">
-								<label class="form-check-label">
-									<input checked class="form-check-input" type="checkbox" value=""> Pending
-								</label>
-							</div>
-							<div class="active dropdown-item form-check">
-								<label class="form-check-label">
-									<input checked class="form-check-input" type="checkbox" value=""> Expired
-								</label>
-							</div>
-							<div class="dropdown-item form-check">
-								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" value=""> Scheduled
-								</label>
-							</div>
-							<div class="dropdown-item form-check">
-								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" value=""> Rejected
-								</label>
-							</div>
-						</form>
-						<a class="dropdown-item" href="javascript:;">Something Outside</a>
-					</div>
-				</li>
-				<li class="dropdown nav-item">
-					<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;">
-						<span class="navbar-text-truncate">Recent</span>
-						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
-						</svg>
-					</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="javascript:;">All</a>
-						<a class="active dropdown-item" href="javascript:;">Recent</a>
-						<a class="dropdown-item" href="javascript:;">Mine</a>
-					</div>
-				</li>
-				<li class="dropdown nav-item">
-					<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;">
-						<span class="navbar-text-truncate">Order By: Modified Date</span>
-						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
-						</svg>
-					</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="javascript:;">Name</a>
-						<a class="dropdown-item" href="javascript:;">Create Date</a>
-						<a class="active dropdown-item" href="javascript:;">Modified Date</a>
-						<a class="dropdown-item" href="javascript:;">Downloads</a>
-						<a class="dropdown-item" href="javascript:;">Size</a>
-					</div>
-				</li>
-				<li class="disabled nav-item">
-					<a class="nav-link" href="#">
-						<span class="navbar-text-truncate">Link</span>
-						<span class="sr-only">(current)</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:;">
-					<svg class="lexicon-icon lexicon-icon-cards2">
-						<use xlink:href="/vendor/lexicon/icons.svg#cards2" />
-					</svg>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:;">
-					<svg class="lexicon-icon lexicon-icon-list">
-						<use xlink:href="/vendor/lexicon/icons.svg#list" />
-					</svg>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-					<svg class="lexicon-icon lexicon-icon-table2">
-						<use xlink:href="/vendor/lexicon/icons.svg#table2" />
-					</svg>
-				</a>
-			</li>
-		</ul>
-	</div>
-</nav>
-
-```xml
-<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-light navbar-light-bg">
-	<div class="container-fluid container-fluid-max-xxl">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
-					</label>
-				</div>
-			</li>
-			<li class="dropdown nav-item">
-				<button class="collapsed navbar-toggler navbar-toggler-link" data-toggle="collapse" href="#mgmtBarCollapse00">
-					<span class="navbar-toggler-text">Label</span>
-					<svg class="lexicon-icon">
-						<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
-					</svg>
-				</button>
-			</li>
-		</ul>
-		<div class="collapse navbar-collapse" id="mgmtBarCollapse00">
-			<ul class="navbar-nav">
-				<li class="dropdown nav-item">
-					<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;">
-						<span class="navbar-text-truncate">Status: Approved, Draft, Pending, Expired</span>
-						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
-						</svg>
-					</a>
-					<div class="dropdown-menu">
-						<form>
-							<div class="dropdown-item">
-								<select class="form-control">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-							<div class="dropdown-item">
-								<label for="exampleInputEmail3">Email address</label>
-								<input class="form-control" id="exampleInputEmail3" placeholder="Email" type="email">
-							</div>
-							<div class="active dropdown-item form-check">
-								<label class="form-check-label">
-									<input checked class="form-check-input" type="checkbox" value=""> Approved
-								</label>
-							</div>
-							<div class="active dropdown-item form-check">
-								<label class="form-check-label">
-									<input checked class="form-check-input" type="checkbox" value=""> Draft
-								</label>
-							</div>
-							<div class="active dropdown-item form-check">
-								<label class="form-check-label">
-									<input checked class="form-check-input" type="checkbox" value=""> Pending
-								</label>
-							</div>
-							<div class="active dropdown-item form-check">
-								<label class="form-check-label">
-									<input checked class="form-check-input" type="checkbox" value=""> Expired
-								</label>
-							</div>
-							<div class="dropdown-item form-check">
-								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" value=""> Scheduled
-								</label>
-							</div>
-							<div class="dropdown-item form-check">
-								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" value=""> Rejected
-								</label>
-							</div>
-						</form>
-						<a class="dropdown-item" href="javascript:;">Something Outside</a>
-					</div>
-				</li>
-				<li class="dropdown nav-item">
-					<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;">
-						<span class="navbar-text-truncate">Recent</span>
-						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
-						</svg>
-					</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="javascript:;">All</a>
-						<a class="active dropdown-item" href="javascript:;">Recent</a>
-						<a class="dropdown-item" href="javascript:;">Mine</a>
-					</div>
-				</li>
-				<li class="dropdown nav-item">
-					<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="javascript:;">
-						<span class="navbar-text-truncate">Order By: Modified Date</span>
-						<svg class="lexicon-icon">
-							<use xlink:href="/vendor/lexicon/icons.svg#caret-double-l" />
-						</svg>
-					</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="javascript:;">Name</a>
-						<a class="dropdown-item" href="javascript:;">Create Date</a>
-						<a class="active dropdown-item" href="javascript:;">Modified Date</a>
-						<a class="dropdown-item" href="javascript:;">Downloads</a>
-						<a class="dropdown-item" href="javascript:;">Size</a>
-					</div>
-				</li>
-				<li class="disabled nav-item">
-					<a class="nav-link" href="#">
-						<span class="navbar-text-truncate">Link</span>
-						<span class="sr-only">(current)</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:;">
-					<svg class="lexicon-icon lexicon-icon-cards2">
-						<use xlink:href="/vendor/lexicon/icons.svg#cards2" />
-					</svg>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:;">
-					<svg class="lexicon-icon lexicon-icon-list">
-						<use xlink:href="/vendor/lexicon/icons.svg#list" />
-					</svg>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link navbar-d-breakpoint-block" href="javascript:;">
-					<svg class="lexicon-icon lexicon-icon-table2">
-						<use xlink:href="/vendor/lexicon/icons.svg#table2" />
-					</svg>
-				</a>
-			</li>
-		</ul>
 	</div>
 </nav>
 ```

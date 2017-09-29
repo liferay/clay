@@ -5,7 +5,7 @@ layout: "guide"
 weight: 100
 ---
 
-<article id="1">
+<article id="small-modal">
 
 ### Small Modal
 
@@ -75,7 +75,7 @@ weight: 100
 
 </article>
 
-<article id="2">
+<article id="default-modal">
 
 ### Default Modal
 
@@ -145,7 +145,7 @@ weight: 100
 
 </article>
 
-<article id="3">
+<article id="large-modal">
 
 ### Large Modal
 
@@ -219,7 +219,7 @@ weight: 100
 
 </article>
 
-<article id="4">
+<article id="inline-scroller">
 
 ### Inline Scroller
 
@@ -334,7 +334,7 @@ weight: 100
 
 </article>
 
-<article id="5">
+<article id="full-screen-modal">
 
 ### Full Screen Modal
 
@@ -585,7 +585,7 @@ weight: 100
 
 </article>
 
-<article id="6">
+<article id="modal-full-screen-sm-down">
 
 ### Modal Full Screen Sm Down
 
@@ -694,7 +694,7 @@ weight: 100
 
 </article>
 
-<article id="7">
+<article id="modal-body-iframe">
 
 ### Modal Body Iframe
 
@@ -768,7 +768,7 @@ weight: 100
 
 </article>
 
-<article id="8">
+<article id="modal-variants">
 
 ### Modal Variants
 

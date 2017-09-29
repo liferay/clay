@@ -2,6 +2,36 @@
 	margin-bottom: 1rem;
 }
 
+// Cards
+
+.clay-site-vertical-card {
+	.card-header, .card-footer {
+		background: #EEE;
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+
+	.card-section {
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+}
+
+.clay-site-horizontal-card {
+	.card-row {
+		height: 100px;
+
+		.flex-col {
+			text-align: center;
+
+			&:nth-child(odd) {
+				background-color: #f7f7f7;
+				color: #7c7c85;
+			}
+		}
+	}
+}
+
 // Dropdown
 
 .clay-site-dropdown-menu-container {

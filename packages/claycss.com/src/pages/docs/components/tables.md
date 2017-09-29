@@ -37,9 +37,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -81,9 +82,10 @@ weight: 100
 		</tr>
 		<tr class="table-active">
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input checked class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -127,9 +129,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -171,9 +174,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -217,6 +221,120 @@ weight: 100
 </table>
 
 ```xml
+<table class="show-dropdown-action-on-active table table-autofit table-list table-responsive-lg">
+	<thead>
+		<tr>
+			<th></th>
+			<th>ID</th>
+			<th class="table-cell-content">
+				<span class="text-truncate" title="Description">Title</span>
+			</th>
+			<th>Status</th>
+			<th>Modified Date</th>
+			<th>Display Date</th>
+			<th>Author</th>
+			<th>Type</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="table-divider">
+			<td colspan="9">Group 1</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td>21146</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+			</td>
+			<td>--</td>
+			<td>2 Hours Ago</td>
+			<td>--</td>
+			<td>Stanley Nelson</td>
+			<td>Folder</td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr class="table-active">
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td>
+				21148
+			</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Frappuccino medium americano">Frappuccino medium americano</span>
+			</td>
+			<td>--</td>
+			<td>2 Hours Ago</td>
+			<td>--</td>
+			<td>Stanley Nelson</td>
+			<td>Folder</td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
 ```
 
 </article>
@@ -242,9 +360,10 @@ weight: 100
 	<tbody>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -283,9 +402,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -324,9 +444,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -365,9 +486,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -408,6 +530,190 @@ weight: 100
 </table>
 
 ```xml
+<table class="show-dropdown-action-on-active table table-autofit table-list table-responsive-sm table-striped">
+	<thead>
+		<tr>
+			<th></th>
+			<th class="table-cell-content">
+				<span class="text-truncate" title="Description">Description</span>
+			</th>
+			<th>Format</th>
+			<th>Label</th>
+			<th>Label</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+			</td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+			</td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Frappuccino medium americano">Frappuccino medium americano</span>
+			</td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Cultivar extra">Cultivar extra</span>
+			</td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
 ```
 
 </article>
@@ -433,9 +739,10 @@ weight: 100
 	<tbody>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -474,9 +781,10 @@ weight: 100
 		</tr>
 		<tr class="table-active">
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input checked class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -515,9 +823,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -556,9 +865,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -599,6 +909,106 @@ weight: 100
 </table>
 
 ```xml
+<table class="show-dropdown-action-on-active table table-autofit table-hover table-list table-responsive-sm">
+	<thead>
+		<tr>
+			<th></th>
+			<th class="table-cell-content">
+				<span class="text-truncate" title="Description">Description</span>
+			</th>
+			<th>Format</th>
+			<th>Label</th>
+			<th>Label</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+			</td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr class="table-active">
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+			</td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
 ```
 
 </article>
@@ -624,9 +1034,10 @@ weight: 100
 	<tbody>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -665,9 +1076,10 @@ weight: 100
 		</tr>
 		<tr class="table-active">
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input checked class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -706,9 +1118,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -747,9 +1160,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -790,7 +1204,108 @@ weight: 100
 </table>
 
 ```xml
+<table class="show-dropdown-action-on-active table table-autofit table-bordered table-list table-responsive-sm">
+	<thead>
+		<tr>
+			<th></th>
+			<th class="table-cell-content">
+				<span class="text-truncate" title="Description">Description</span>
+			</th>
+			<th>Format</th>
+			<th>Label</th>
+			<th>Label</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.">Wings eu, pumpkin spice robusta, kopi-luwak mocha caffeine froth grounds.</span>
+			</td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr class="table-active">
+			<td>
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
+					</label>
+				</div>
+			</td>
+			<td class="table-cell-content">
+				<span class="text-truncate" title="Pumpkin spice and, java sit whipped grinder steamed.">Pumpkin spice and, java sit whipped grinder steamed.</span>
+			</td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td><a href="#1">jpg</a></td>
+			<td>
+				<div class="dropdown dropdown-action">
+					<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#1" id="dropdownAction1" role="button">
+						<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+							<use xlink:href="/vendor/lexicon/icons.svg#ellipsis-v" />
+						</svg>
+					</a>
+					<div aria-labelledby="" class="dropdown-menu dropdown-menu-horizontal dropdown-menu-left-side-middle dropdown-menu-unstyled">
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-trash">
+								<use xlink:href="/vendor/lexicon/icons.svg#trash" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-download">
+								<use xlink:href="/vendor/lexicon/icons.svg#download" />
+							</svg>
+						</a>
+						<a class="dropdown-item" href="#1">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-info-circle-open">
+								<use xlink:href="/vendor/lexicon/icons.svg#info-circle-open" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
 ```
+
 </article>
 
 
@@ -818,9 +1333,10 @@ weight: 100
 	<tbody>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -857,9 +1373,10 @@ weight: 100
 	<tbody>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -875,9 +1392,6 @@ weight: 100
 		</tr>
 	</tbody>
 </table>
-
-```xml
-```
 
 </article>
 
@@ -929,9 +1443,10 @@ weight: 100
 	<tbody>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -973,9 +1488,10 @@ weight: 100
 		</tr>
 		<tr class="table-active">
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input checked class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input checked class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -1019,9 +1535,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
@@ -1063,9 +1580,10 @@ weight: 100
 		</tr>
 		<tr>
 			<td>
-				<div class="form-check">
-					<label class="form-check-label">
-						<input class="form-check-input" type="checkbox" value="">
+				<div class="custom-control custom-checkbox">
+					<label>
+						<input class="custom-control-input" type="checkbox">
+						<span class="custom-control-indicator"></span>
 					</label>
 				</div>
 			</td>
