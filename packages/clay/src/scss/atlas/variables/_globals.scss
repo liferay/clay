@@ -39,7 +39,9 @@ $h6-font-size-mobile: 0.6875rem !default; // 11px
 
 $line-height-base: 1.5 !default;
 
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-import-url: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i' !default;
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 // Will be safe to remove once Atlas Help Icon is done
 $gray-200: #ECEEEF !default;

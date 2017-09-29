@@ -1,3 +1,7 @@
+@if ($font-import-url) {
+	@import url($font-import-url);
+}
+
 @import "components/_alerts";
 @import "components/_aspect-ratio";
 @import "components/_badges";
