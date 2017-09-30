@@ -359,6 +359,7 @@
 	$bg: map-get($map, bg);
 	$border-color: setter(map-get($map, border-color), transparent);
 	$border-style: setter(map-get($map, border-style), solid);
+	$color: map-get($map, color);
 	$link-color: map-get($map, link-color);
 	$link-hover-color: map-get($map, link-hover-color);
 	$link-active-color: map-get($map, link-active-color);
@@ -377,6 +378,7 @@
 		background-color: $bg;
 		border-color: $border-color;
 		border-style: $border-style;
+		color: $color;
 
 		.nav-link,
 		.navbar-nav .btn-unstyled {
