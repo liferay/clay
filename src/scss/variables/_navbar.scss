@@ -29,11 +29,26 @@ $navbar-light: map-merge((
 	link-disabled-color: $navbar-light-disabled-color
 ), $navbar-light);
 
+// Navbar Secondary
+
+$navbar-secondary: () !default;
+$navbar-secondary: map-merge((
+	bg: map-get($theme-colors, secondary),
+	color: #FFF,
+	link-color: rgba(255, 255, 255, 0.65),
+	link-hover-color: rgba(255, 255, 255, 0.9),
+	link-active-color: rgba(255, 255, 255, 0.9),
+	link-disabled-color: rgba(255, 255, 255, 0.25),
+	brand-color: rgba(255, 255, 255, 0.9),
+	brand-hover-color: rgba(255, 255, 255, 0.9)
+), $navbar-secondary);
+
 // Navbar Dark
 
 $navbar-dark: () !default;
 $navbar-dark: map-merge((
 	bg: map-get($theme-colors, dark),
+	color: $navbar-dark-color,
 	link-color: $navbar-dark-color,
 	link-hover-color: $navbar-dark-hover-color,
 	link-active-color: $navbar-dark-active-color,

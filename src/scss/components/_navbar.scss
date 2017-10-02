@@ -395,6 +395,12 @@
 	@include navbar-variant($navbar-light);
 }
 
+// Navbar Secondary
+
+.navbar-secondary {
+	@include navbar-variant($navbar-secondary);
+}
+
 // Navbar Dark
 
 .navbar-dark {
