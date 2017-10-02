@@ -54,7 +54,7 @@
 	{@param? spritemap: string}
 
 	{foreach $item in $items}
-		{delcall ClayDropdown.item variant="$item.type"}
+		{delcall ClayDropdown.item variant="$item.type ?: 'item'"}
 			{param active: $item.active /}
 			{param checked: $item.checked /}
 			{param disabled: $item.disabled /}
