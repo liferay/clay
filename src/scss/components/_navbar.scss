@@ -268,7 +268,7 @@
 
 			@include media-breakpoint-up($next) {
 				@if not ($infix == '') { // .navbar-expand-sm, md, lg, xl
-					.navbar-text-truncate {
+					.navbar-brand .navbar-text-truncate {
 						max-width: $navbar-text-truncate-max-width;
 					}
 
