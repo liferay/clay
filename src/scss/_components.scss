@@ -9,36 +9,40 @@
 @import "components/_button-groups";
 @import "components/_buttons";
 @import "components/_cards";
-@import "components/_grid";
+@import "components/_dropdowns";
 @import "components/_forms";
+@import "components/_grid";
+
 @import "components/_custom-forms";
 @import "components/_form-validation";
 @import "components/_icons";
 @import "components/_input-groups";
 @import "components/_labels";
 @import "components/_list-group";
-@import "components/_navs";
-@import "components/_navbar";
-@import "components/_application-bar"; // Shound win over Navs and Navbar
-@import "components/_navigation-bar"; // Shound win over Navs and Navbar
-@import "components/_management-bar"; // Should win over Navs and Navbar
+@import "components/_modals";
 @import "components/_multi-step-nav";
+
+@import "components/_navs";
+
+@import "components/_navbar";
+
+@import "components/_application-bar"; // Shound win over Navs and Navbar
+@import "components/_management-bar"; // Should win over Navs and Navbar
+@import "components/_navigation-bar"; // Shound win over Navs and Navbar
+
 @import "components/_pagination";
 @import "components/_panels";
 @import "components/_popovers";
 @import "components/_progress-bars";
-@import "components/_sidebar";
 @import "components/_side-navigation";
+@import "components/_sidebar";
 @import "components/_stickers";
 @import "components/_subnav";
 @import "components/_tables";
-@import "components/_tooltip";
-@import "components/_toggle-switch";
-@import "components/_type";
-
-@import "components/_dropdowns";
-@import "components/_modals";
 @import "components/_timelines";
+@import "components/_toggle-switch";
+@import "components/_tooltip";
+@import "components/_type";
 
 @import "components/_utilities";
 
