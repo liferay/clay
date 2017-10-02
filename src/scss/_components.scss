@@ -19,7 +19,8 @@
 @import "components/_list-group";
 @import "components/_navs";
 @import "components/_navbar";
-@import "components/_navigation-bar";
+@import "components/_application-bar"; // Shound win over Navs and Navbar
+@import "components/_navigation-bar"; // Shound win over Navs and Navbar
 @import "components/_management-bar"; // Should win over Navs and Navbar
 @import "components/_multi-step-nav";
 @import "components/_pagination";
