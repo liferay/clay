@@ -145,9 +145,9 @@ ClayAlert.STATE = {
    * The message of alert
    * @instance
    * @memberof ClayAlert
-   * @type {!string}
+   * @type {!html|string}
    */
-  message: Config.string().required(),
+  message: Config.any().required(),
 
   /**
    * The path to the SVG spritemap file containing the icons.
