@@ -29,6 +29,10 @@
 	$brand-margin-right: setter(map-get($map, brand-margin-right), $link-padding-x);
 	$brand-padding-x: setter(map-get($map, brand-padding-x), $link-padding-x);
 	$brand-padding-y: setter(map-get($map, brand-padding-y), (($height - $border-bottom-width - $border-top-width - ($padding-y * 2) - ($brand-font-size * $line-height-base)) / 2));
+	$title-font-size: map-get($map, title-font-size);
+	$title-font-weight: map-get($map, title-font-weight);
+	$title-margin-bottom: map-get($map, title-margin-bottom);
+	$title-text-transform: map-get($map, title-text-transform);
 	$active-border-bottom-width: setter(map-get($map, active-border-bottom-width), 0.125rem);
 	$active-border-offset-x: map-get($map, active-border-offset-x);
 	$nav-item-dropdown-margin-top: map-get($map, nav-item-dropdown-margin-top);
@@ -115,6 +119,13 @@
 			padding-left: $brand-padding-x-mobile;
 			padding-right: $brand-padding-x-mobile;
 			padding-top: $brand-padding-y-mobile;
+		}
+
+		.navbar-title {
+			font-size: $title-font-size;
+			font-weight: $title-font-weight;
+			margin-bottom: $title-margin-bottom;
+			text-transform: $title-text-transform;
 		}
 
 		.navbar-nav {

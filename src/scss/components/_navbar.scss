@@ -37,6 +37,13 @@
 	}
 }
 
+.navbar-title {
+	font-size: $navbar-title-font-size;
+	font-weight: $navbar-title-font-weight;
+	margin-bottom: $navbar-title-margin-bottom;
+	text-transform: $navbar-title-text-transform;
+}
+
 .navbar-text {
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
