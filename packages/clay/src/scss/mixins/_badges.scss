@@ -2,10 +2,6 @@
 	font-size: $badge-font-size;
 	padding: $badge-padding-y $badge-padding-x;
 
-	@include scale-component {
-		font-size: $badge-font-size-mobile;
-	}
-
 	.lexicon-icon {
 		height: $badge-lexicon-icon-height;
 		width: $badge-lexicon-icon-width;
@@ -16,10 +12,6 @@
 	font-size: $badge-font-size-sm;
 	padding: $badge-padding-y-sm $badge-padding-x-sm;
 
-	@include scale-component {
-		font-size: $badge-font-size-sm-mobile;
-	}
-
 	.lexicon-icon {
 		height: $badge-lexicon-icon-height-sm;
 		width: $badge-lexicon-icon-width-sm;
@@ -29,10 +21,6 @@
 @mixin badge-lg {
 	font-size: $badge-font-size-lg;
 	padding: $badge-padding-y-lg $badge-padding-x-lg;
-
-	@include scale-component {
-		font-size: $badge-font-size-lg-mobile;
-	}
 
 	.close {
 		margin-left: 0.25rem;
