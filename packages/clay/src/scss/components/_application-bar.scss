@@ -1,0 +1,12 @@
+.application-bar {
+	flex-wrap: nowrap;
+
+	.container,
+	.container-fluid {
+		flex-wrap: nowrap;
+	}
+
+	.navbar-nav {
+		flex-wrap: nowrap;
+	}
+}
