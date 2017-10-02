@@ -1,0 +1,9 @@
+$application-bar-size: () !default;
+$application-bar-size: map-merge((
+	scaling-navbar: true,
+	height: 3.5rem,
+	height-mobile: 3rem,
+	link-padding-x: 0.25rem,
+	padding-x: 0.75rem,
+	padding-y: 0
+), $application-bar-size);
