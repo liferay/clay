@@ -1,5 +1,6 @@
-$badge-border-style: null !default;
-$badge-border-width: null !default;
+$badge-border-color: transparent !default;
+$badge-border-style: solid !default;
+$badge-border-width: 1px !default;
 
 $badge-lexicon-icon-height: 9px !default; // 9px
 $badge-lexicon-icon-width: $badge-lexicon-icon-height !default; // 9px
@@ -8,18 +9,6 @@ $badge-link-color: #FFF !default;
 $badge-link-hover-color: null !default;
 $badge-link-text-decoration: underline !default;
 $badge-link-hover-text-decoration: none !default;
-
-$badge-font-size-lg: 16px !default;
-$badge-lexicon-icon-height-lg: 13px !default;
-$badge-lexicon-icon-width-lg: $badge-lexicon-icon-height-lg !default; // 13px
-$badge-padding-x-lg: 12px !default;
-$badge-padding-y-lg: 6px !default;
-
-$badge-font-size-sm: 9px !default;
-$badge-lexicon-icon-height-sm: 5px !default;
-$badge-lexicon-icon-width-sm: $badge-lexicon-icon-height-sm !default; // 5px
-$badge-padding-x-sm: 7px !default;
-$badge-padding-y-sm: 2px !default;
 
 // Badge Variants
 
