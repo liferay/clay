@@ -1,9 +1,7 @@
 .badge {
+	border-color: $badge-border-color;
 	border-style: $badge-border-style;
 	border-width: $badge-border-width;
-
-	@include badge-size;
-
 	margin-bottom: 2px;
 	margin-top: 2px;
 	max-width: 100%;
@@ -26,15 +24,13 @@
 		font-size: inherit;
 		margin-left: 2px;
 		opacity: 1;
+		vertical-align: middle;
 	}
-}
 
-.badge-lg {
-	@include badge-size(lg);
-}
-
-.badge-sm {
-	@include badge-size(sm);
+	.lexicon-icon {
+		height: $badge-lexicon-icon-height;
+		width: $badge-lexicon-icon-width;
+	}
 }
 
 // Badge Variants
