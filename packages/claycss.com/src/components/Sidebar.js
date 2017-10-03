@@ -50,7 +50,11 @@ class Sidebar extends Component {
 	}
 
 	setAtlasFromStorage_() {
-		this.atlas = this.storage.get('atlas');
+		const atlas = this.storage.get('atlas');
+
+		if (atlas !== undefined) {
+			this.atlas = atlas;
+		}
 	}
 };
 
