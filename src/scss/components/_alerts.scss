@@ -9,6 +9,7 @@
 
 	.close {
 		font-size: $alert-close-font-size;
+		height: $alert-close-height;
 		line-height: $alert-close-line-height;
 		opacity: $alert-close-opacity;
 		margin-left: $alert-close-margin-left;
@@ -18,6 +19,7 @@
 		padding-top: $alert-close-padding-top;
 		right: $alert-close-position-right;
 		top: $alert-close-position-top;
+		width: $alert-close-width;
 	}
 
 	.lead {
@@ -43,6 +45,15 @@
 	@include border-radius(0);
 
 	border-width: $alert-fluid-border-width;
+}
+
+// Alert Dismissable
+
+.alert-dismissible {
+	padding-bottom: $alert-dismissible-padding-bottom;
+	padding-left: $alert-dismissible-padding-left;
+	padding-right: $alert-dismissible-padding-right;
+	padding-top: $alert-dismissible-padding-top;
 }
 
 // Alert Notifications
