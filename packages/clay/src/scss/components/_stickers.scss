@@ -111,10 +111,7 @@
 // Sticker Sizes
 
 .sticker-sm {
-	@include sticker-size((
-		font-size: 0.625rem,
-		size: 1.5rem
-	));
+	@include sticker-size($sticker-sm);
 }
 
 // Sticker Variants
