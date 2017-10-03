@@ -7,10 +7,15 @@
 	position: relative;
 }
 
+.code-container.hide {
+	display: none;
+}
+
 .code-container .btn-copy {
 	@include transition(background 0.3s ease-in-out);
 
 	background: rgba(255, 255, 255, 0.6);
+	cursor: pointer;
 	height: 24px;
 	line-height: 24px;
 	padding: 0;
@@ -38,4 +43,42 @@
 .tooltip.bottom {
 	position: absolute;
 	top: 0;
+}
+
+.nav.nav-tabs.nav-code-tabs {
+	border-width: 0px;
+	padding: 0 24px;
+}
+
+.nav.nav-tabs.nav-code-tabs > li > button {
+	background: transparent;
+	border-width: 0px;
+	color: rgba($brand-secondary, 0.8);
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-right: 12px;
+	padding: 0;
+	text-transform: uppercase;
+
+	&:hover,
+	&:focus {
+		background: transparent;
+		color: rgba($brand-dark, 0.6);
+		outline: none;
+	}
+}
+
+.nav.nav-tabs.nav-code-tabs > li:last-child > button {
+	margin-right: 0;
+}
+
+.nav.nav-tabs.nav-code-tabs > li.active > button {
+	border-width: 0px;
+	color: $brand-dark;
+}
+
+.nav.nav-tabs.nav-code-tabs ~ .code-container {
+	margin: 0 0 calc(1rem * 1.5);
 }
