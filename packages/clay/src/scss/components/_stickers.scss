@@ -114,6 +114,10 @@
 	@include sticker-size($sticker-sm);
 }
 
+.sticker-xxl {
+	@include sticker-size($sticker-xxl);
+}
+
 // Sticker Variants
 
 @each $color, $value in $sticker-palette {
