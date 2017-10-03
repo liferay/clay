@@ -1,15 +1,17 @@
 $alert-border-style: solid !default;
 
 $alert-close-font-size: 1rem !default; // 16px
-$alert-close-line-height: $line-height-base !default; // 1.5
+$alert-close-height: 2.5rem !default;
+$alert-close-line-height: null !default;
 $alert-close-opacity: null !default;
-$alert-close-margin-left: $alert-padding-x !default; // 20px
+$alert-close-margin-left: null !default;
 $alert-close-padding-bottom: 0 !default;
 $alert-close-padding-left: 0 !default;
 $alert-close-padding-right: 0 !default;
 $alert-close-padding-top: 0 !default;
-$alert-close-position-right: 0 !default;
-$alert-close-position-top: 0.1875rem !default;
+$alert-close-position-right: 0.1875rem !default; // 3px
+$alert-close-position-top: 0.4375rem !default; // 7px
+$alert-close-width: $alert-close-height !default;
 
 $alert-font-size: null !default;
 
@@ -19,6 +21,13 @@ $alert-lead-spacer-x: 0.3125rem !default; // 5px
 
 $alert-link-decoration: null !default;
 $alert-link-hover-decoration: null !default;
+
+// Alert Dismissable
+
+$alert-dismissible-padding-bottom: null !default;
+$alert-dismissible-padding-left: null !default;
+$alert-dismissible-padding-right: 2.5rem !default; // 40px
+$alert-dismissible-padding-top: null !default;
 
 // Alert Fluid
 
