@@ -6,6 +6,14 @@ $sticker-font-size: 0.875rem !default; // 14px
 $sticker-font-weight: null !default;
 $sticker-size: 2rem !default; // 32px
 
+// Sticker Sizes
+
+$sticker-sm: () !default;
+$sticker-sm: map-merge((
+	font-size: 0.625rem,
+	size: 1.5rem
+), $sticker-sm);
+
 // Sticker Positions
 
 $sticker-inside-offset: $grid-gutter-width / 2 !default;
