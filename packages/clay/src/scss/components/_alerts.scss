@@ -59,10 +59,11 @@
 // Alert Notifications
 
 .alert-notification {
+	max-width: $alert-notification-max-width;
 	width: 100%;
 
-	@include media-breakpoint-up(md) {
-		max-width: $alert-notification-max-width;
+	@include scale-component {
+		max-width: none;
 	}
 }
 
