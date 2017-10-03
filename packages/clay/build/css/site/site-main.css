@@ -144,7 +144,7 @@ section.row {
   background-color: #000;
   display: inline-block;
   padding: 4px;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 .clay-site-form-container {
@@ -455,11 +455,11 @@ section.row {
 }
 
 .clay-site-sans-serif {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .clay-site-sans-serif:after {
-  content: "Helvetica Neue, Helvetica, Arial, sans-serif";
+  content: "Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol";
 }
 
 .clay-site-serif {
