@@ -82,7 +82,7 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Badge with Links</h3>
+		<h3>Badge with Links Inside</h3>
 
 		<div>
 			<span class="badge badge-success">
@@ -146,10 +146,9 @@ section: Components
 		<h3>Label Sizes</h3>
 
 		<blockquote class="blockquote">
-			<p>Use <code>label-sm</code> and <code>label-lg</code> to change the label size.</p>
+			<p>Use <code>label-lg</code> to make the label larger or use the mixin <code>label-size($sassMap)</code> to create a custom sized label.</p>
 		</blockquote>
 
-		<span class="label label-primary label-sm">Small Label</span>
 		<span class="label label-secondary">Normal Label</span>
 		<span class="label label-lg label-success">Large Label</span>
 	</div>
@@ -157,32 +156,37 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Label with Links</h3>
+		<h3>Label Dismissible</h3>
+
+		<span class="label label-dismissible label-secondary">
+			Normal Label
+			<button aria-label="Close" class="close" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+				</svg>
+			</button>
+		</span>
+		<span class="label label-dismissible label-lg label-success">
+			Large Label
+			<button aria-label="Close" class="close" type="button">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
+					<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
+				</svg>
+			</button>
+		</span>
+	</div>
+</div>
+
+<div class="clay-site-row-spacer row">
+	<div class="col-md-12">
+		<h3>Label with Links Inside</h3>
 
 		<div>
-			<span class="label label-primary label-sm">
-				<a href="#1">Small Label</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
-					</svg>
-				</button>
-			</span>
 			<span class="label label-secondary">
 				<a href="#1">Normal Label</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
-					</svg>
-				</button>
 			</span>
 			<span class="label label-lg label-success">
 				<a href="#1">Large Label</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
-					</svg>
-				</button>
 			</span>
 		</div>
 	</div>
