@@ -21,10 +21,6 @@
 		}
 	}
 
-	.label {
-		@include label-size(sm);
-	}
-
 	.sticker {
 		@include sticker-size(lg);
 	}
