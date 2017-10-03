@@ -35,23 +35,6 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Badges as Anchor Tag</h3>
-
-		<a class="badge badge-primary" href="#1">Primary</a>
-		<a class="badge badge-secondary" href="#1">Secondary</a>
-		<a class="badge badge-success" href="#1">Success</a>
-		<a class="badge badge-info" href="#1">Info</a>
-		<a class="badge badge-warning" href="#1">Warning</a>
-		<a class="badge badge-danger" href="#1">Danger</a>
-		<div class="clay-site-light-container">
-			<a class="badge badge-light" href="#1">Light</a>
-		</div>
-		<a class="badge badge-dark" href="#1">Dark</a>
-	</div>
-</div>
-
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
 		<h3>Badge Pill</h3>
 
 		<span class="badge badge-pill badge-primary">8</span>
@@ -82,17 +65,18 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Badge Sizes</h3>
+		<h3>Badges as Anchor Tag</h3>
 
-		<blockquote class="blockquote">
-			<p>Use <code>badge-sm</code> and <code>badge-lg</code> to change the badge size.</p>
-		</blockquote>
-
-		<div>
-			<span class="badge badge-primary badge-sm">Small Badge</span>
-			<span class="badge badge-secondary">Normal Badge</span>
-			<span class="badge badge-lg badge-success">Large Badge</span>
+		<a class="badge badge-primary" href="#1">Primary</a>
+		<a class="badge badge-secondary" href="#1">Secondary</a>
+		<a class="badge badge-success" href="#1">Success</a>
+		<a class="badge badge-info" href="#1">Info</a>
+		<a class="badge badge-warning" href="#1">Warning</a>
+		<a class="badge badge-danger" href="#1">Danger</a>
+		<div class="clay-site-light-container">
+			<a class="badge badge-light" href="#1">Light</a>
 		</div>
+		<a class="badge badge-dark" href="#1">Dark</a>
 	</div>
 </div>
 
@@ -101,24 +85,8 @@ section: Components
 		<h3>Badge with Links</h3>
 
 		<div>
-			<span class="badge badge-primary badge-sm">
-				<a href="#1">Small Badge</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
-					</svg>
-				</button>
-			</span>
-			<span class="badge badge-secondary">
-				<a href="#1">Normal Badge</a>
-				<button aria-label="Close" class="close" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
-						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
-					</svg>
-				</button>
-			</span>
-			<span class="badge badge-lg badge-success">
-				<a href="#1">Large Badge</a>
+			<span class="badge badge-success">
+				<a href="#1">Badge</a>
 				<button aria-label="Close" class="close" type="button">
 					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-times">
 						<use xlink:href="{{rootPath}}/images/icons/icons.svg#times"></use>
@@ -131,19 +99,11 @@ section: Components
 
 <div class="clay-site-row-spacer row">
 	<div class="col-md-12">
-		<h3>Badge Examples</h3>
-	</div>
-	<div class="col-md-4">
-		<ul class="flex-column nav nav-pills">
-			<li class="nav-item"><a class="nav-link" href="#1">Inbox <span class="badge badge-primary badge-sm">32</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Sent <span class="badge badge-secondary badge-sm">2</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Drafts <span class="badge badge-sm badge-success">53</span></a></li>
-			<li class="nav-item"><a class="active nav-link" href="#1">Spam <span class="badge badge-info badge-sm">12</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Starred <span class="badge badge-sm badge-warning">1</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Important <span class="badge badge-danger badge-sm">12</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">All Mail <span class="badge badge-light badge-sm">1</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#1">Trash <span class="badge badge-dark badge-sm">12</span></a></li>
-		</ul>
+		<h3>Badge Sizes</h3>
+
+		<div class="alert alert-warning">
+			Badge Sizes have been removed, use the <code>badge-size($sassMap)</code> mixin to create custom badges sizes for your app.
+		</div>
 	</div>
 </div>
 
