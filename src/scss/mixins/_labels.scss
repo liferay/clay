@@ -2,10 +2,6 @@
 	font-size: $label-font-size;
 	padding: $label-padding-y $label-padding-x;
 
-	@include scale-component {
-		font-size: $label-font-size-mobile;
-	}
-
 	.lexicon-icon {
 		height: $label-lexicon-icon-height;
 		width: $label-lexicon-icon-width;
@@ -16,10 +12,6 @@
 	font-size: $label-font-size-sm;
 	padding: $label-padding-y-sm $label-padding-x-sm;
 
-	@include scale-component {
-		font-size: $label-font-size-sm-mobile;
-	}
-
 	.lexicon-icon {
 		height: $label-lexicon-icon-height-sm;
 		width: $label-lexicon-icon-width-sm;
@@ -29,10 +21,6 @@
 @mixin label-lg {
 	font-size: $label-font-size-lg;
 	padding: $label-padding-y-lg $label-padding-x-lg;
-
-	@include scale-component {
-		font-size: $label-font-size-lg-mobile;
-	}
 
 	.close {
 		margin-left: 0.25rem;
