@@ -1,18 +1,22 @@
 .label {
 	border-color: $label-border-color;
-	border-radius: $label-border-radius;
+
+	@include border-radius($label-border-radius);
+
 	border-style: $label-border-style;
 	border-width: $label-border-width;
 	color: $label-color;
 	display: inline-block;
+	font-size: $label-font-size;
 	font-weight: $label-font-weight;
-
-	@include label-size;
-
-	line-height: 1;
+	line-height: $label-height - ($label-border-width * 2);
 	margin-bottom: 2px;
 	margin-top: 2px;
 	max-width: 100%;
+	padding-bottom: $label-padding-y;
+	padding-left: $label-padding-x;
+	padding-right: $label-padding-x;
+	padding-top: $label-padding-y;
 	text-transform: $label-text-transform;
 	white-space: normal;
 	word-wrap: break-word;
@@ -34,6 +38,11 @@
 		font-size: inherit;
 		margin-left: 2px;
 		opacity: 1;
+	}
+
+	.lexicon-icon {
+		height: $label-lexicon-icon-height;
+		width: $label-lexicon-icon-width;
 	}
 }
 
