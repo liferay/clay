@@ -20,10 +20,6 @@
 			@include box-shadow(none);
 		}
 	}
-
-	.sticker {
-		@include sticker-size(lg);
-	}
 }
 
 .list-group-bordered {
