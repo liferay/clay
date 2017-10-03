@@ -1,45 +1,35 @@
-@mixin badge {
-	font-size: $badge-font-size;
-	padding: $badge-padding-y $badge-padding-x;
+@mixin badge-size($map) {
+	$border-width: setter(map-get($map, border-width), $badge-border-width);
+	$font-size: map-get($map, font-size);
+	$height: map-get($map, height);
+	$padding-x: map-get($map, padding-x);
+	$padding-y: setter(map-get($map, padding-y), 0);
 
-	.lexicon-icon {
-		height: $badge-lexicon-icon-height;
-		width: $badge-lexicon-icon-width;
+	$close-margin-left: map-get($map, close-margin-left);
+	$close-vertical-align: map-get($map, close-vertical-align);
+
+	$lexicon-icon-height: setter(map-get($map, lexicon-icon-height), map-get($map, lexicon-icon-width));
+	$lexicon-icon-width: map-get($map, lexicon-icon-width);
+
+	border-width: $border-width;
+	font-size: $font-size;
+
+	@if ($height) {
+		line-height: $height - ($border-width * 2);
 	}
-}
 
-@mixin badge-sm {
-	font-size: $badge-font-size-sm;
-	padding: $badge-padding-y-sm $badge-padding-x-sm;
-
-	.lexicon-icon {
-		height: $badge-lexicon-icon-height-sm;
-		width: $badge-lexicon-icon-width-sm;
-	}
-}
-
-@mixin badge-lg {
-	font-size: $badge-font-size-lg;
-	padding: $badge-padding-y-lg $badge-padding-x-lg;
+	padding-bottom: $padding-y;
+	padding-left: $padding-x;
+	padding-right: $padding-x;
+	padding-top: $padding-y;
 
 	.close {
-		margin-left: 0.25rem;
+		margin-left: $close-margin-left;
+		vertical-align: $close-vertical-align;
 	}
 
 	.lexicon-icon {
-		height: $badge-lexicon-icon-height-lg;
-		width: $badge-lexicon-icon-width-lg;
-	}
-}
-
-@mixin badge-size($size: '') {
-	@if ($size == sm) {
-		@include badge-sm;
-	}
-	@else if ($size == lg) {
-		@include badge-lg;
-	}
-	@else {
-		@include badge;
+		height: $lexicon-icon-height;
+		width: $lexicon-icon-width;
 	}
 }
