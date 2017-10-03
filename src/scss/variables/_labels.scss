@@ -10,23 +10,13 @@ $label-padding-x: 0.4375rem !default; // 7px
 $label-padding-y: null !default; // 3px
 $label-text-transform: null !default;
 
+$label-dismissible-text-transform: null !default;
+
 $label-anchor-text-decoration: none !default;
 $label-anchor-hover-text-decoration: null !default;
 
 $label-link-text-decoration: underline !default;
 $label-link-hover-text-decoration: none !default;
-
-$label-font-size-lg: 16px !default;
-$label-lexicon-icon-height-lg: 13px !default;
-$label-lexicon-icon-width-lg: $label-lexicon-icon-height-lg !default;
-$label-padding-x-lg: 12px !default;
-$label-padding-y-lg: 6px !default;
-
-$label-font-size-sm: 9px !default;
-$label-lexicon-icon-height-sm: 7px !default;
-$label-lexicon-icon-width-sm: $label-lexicon-icon-height-sm !default;
-$label-padding-x-sm: 7px !default;
-$label-padding-y-sm: 2px !default;
 
 $label-border-color: $body-color !default;
 $label-border-radius: $border-radius !default;
