@@ -43,7 +43,7 @@
 	}
 
 	&, &.toggler-expanded {
-		@media (max-width: $grid-float-breakpoint - 1px) {
+		@media (max-width: $grid-float-breakpoint - 1) {
 			transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 		}
 

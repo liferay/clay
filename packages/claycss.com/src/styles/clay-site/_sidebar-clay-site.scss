@@ -50,20 +50,35 @@
 		background-color: $brand-light;
 		padding: 0;
 
-		@media (max-width: $grid-float-breakpoint) {
+		@media (min-width: $grid-float-breakpoint) {
+			padding-top: $base-size * 1.66;
+		}
+
+		@media (max-width: $grid-float-breakpoint - 1) {
 			left: 0;
 			position: fixed;
 			right: 0;
 			top: 0;
 		}
-
-		@media (min-width: $grid-float-breakpoint -1) {
-			padding: $base-size * 1.7 $base-size * 0.66 $base-size * 2.33;
-		}
 	}
 
 	.sidebar-body {
+		padding-bottom: $base-size * 2;
 		padding-top: $base-size;
+		overflow: visible;
+	}
+
+	.nav-icons {
+		padding: 0 $base-size $base-size * 4 $base-size * 1.66;
+
+		.sticker-secondary {
+			background-color: #CDCED9;
+		}
+
+		.lexicon-icon {
+			fill: $brand-light;
+			width: 1.3em;
+		}
 	}
 
 	.input-group {
@@ -176,7 +191,7 @@
 			}
 		}
 
-
+		& > li.active > a,
 		& > li > ul > li.active > a,
 		& > li > ul > li.active > a:hover,
 		& > li > ul > li.active > a:focus,

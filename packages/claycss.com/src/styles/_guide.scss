@@ -1,8 +1,29 @@
-.docs header {
-	padding: $base-size / 2 0;
+.docs {
+	header {
+		padding: $base-size / 2 0;
 
-	@media (min-width: $grid-float-breakpoint) {
-		padding: $base-size 0;
+		@media (min-width: $grid-float-breakpoint) {
+			padding: $base-size * 2 0 $base-size;
+		}
+
+		h1 {
+			font-size: $base-size * 1.5;
+			font-weight: 700;
+		}
+	}
+
+	article {
+		> h3 {
+			font-size: $base-size * 0.7;
+			font-weight: 700;
+			margin-bottom: $base-size * 2.66;
+			padding-top: $base-size * 2;
+			text-transform: uppercase;
+		}
+
+		> p {
+			margin-bottom: $base-size * 2;
+		}
 	}
 }
 

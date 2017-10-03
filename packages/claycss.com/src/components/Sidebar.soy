@@ -8,7 +8,7 @@
 {template .render}
 	<div>
 		<nav class="sidebar-toggler-content sidenav-fixed sidenav-menu-slider" id="clay-sidebar">
-			<div class="sidebar sidebar-clay-site sidenav-menu">
+			<div class="sidebar sidebar-clay-site sidenav-menu d-flex flex-column">
 				<div class="sidebar-header">
 					<div class="navbar navbar-expand-lg navbar-header">
 						<a class="navbar-brand" href="/">
@@ -25,7 +25,7 @@
 					</div>
 				</div>
 
-				<div class="sidebar-body">
+				<div class="sidebar-body mb-auto">
 					<div class="sidebar-search">
 						{call ElectricSearchAutocomplete.render}
 							{param maxResults: 5 /}
@@ -56,6 +56,20 @@
 						{param section: $section /}
 					{/call}
 				</div>
+				<ul class="nav-icons">
+					<li class="d-block mb-3">
+						<a class="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay/issues" target="_blank">
+							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+								<use xlink:href="/vendor/lexicon/icons.svg#comments" />
+							</svg>
+						</a>
+					</li>
+					<li class="d-block">
+						<a class="rounded-circle sticker sticker-secondary" href="https://github.com/liferay/clay" target="_blank">
+							<img class="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="">
+						</a>
+					</li>
+				</ul>
 			</div>
 		</nav>
 	</div>

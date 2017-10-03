@@ -1,5 +1,5 @@
 ---
-title: Icons (Lexicon)
+title: Icons
 description: Components
 layout: "guide"
 weight: 100

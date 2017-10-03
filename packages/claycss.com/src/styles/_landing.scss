@@ -15,6 +15,7 @@
         box-shadow: 4px 6px 36px rgba(48, 49, 63, 0.15);
         margin-bottom: 32px;
         transition: all 0.4s;
+        min-height: 100%;
 
         &:hover {
             background-color: #FFF6F5;
@@ -149,7 +150,7 @@
 
     @include media-breakpoint-up(sm) {
         background-size: 140%;
-        margin-top: -120px;
+        margin-top: -60px;
         padding: 244px 0 212px;
     }
 

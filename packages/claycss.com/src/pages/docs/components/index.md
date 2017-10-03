@@ -1,6 +1,7 @@
 ---
-title: "Docs"
+title: "Components Library"
 url: "/docs/components/alerts.html"
+weight: 2
 ---
 
 {namespace pageDocsIndex}

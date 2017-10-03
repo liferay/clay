@@ -2,20 +2,10 @@
 	background-color: $footer-bg-color;
 	color: $brand-light-text;
 	min-height: $base-size * 4;
-	padding: $base-size / 2 0;
-
-	@media (max-width: $screen-md) {
-		text-align: center;
-	}
+	padding: $base-size 0;
 
 	@media (min-width: $screen-md) {
-		padding: 47px 0;
-	}
-
-	.text-right-lg {
-		@media (min-width: $screen-md) {
-			text-align: right;
-		}
+		padding: 120px 0;
 	}
 
 	a {
@@ -28,19 +18,6 @@
 		a {
 			font-weight: 600;
 		}
-	}
-
-	.sticker {
-		background-color: $brand-dark;
-		margin: $base-size / 2 $base-size / 3;
-
-		@media (min-width: $screen-md) {
-			margin: 0 0 0 $base-size / 1.33;
-		}
-	}
-
-	.sticker:hover {
-		color: $brand-light-text;
 	}
 
 	.row img.logo {
