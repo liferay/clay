@@ -56,6 +56,10 @@ a.label {
 	}
 }
 
+.label-dismissible {
+	text-transform: $label-dismissible-text-transform;
+}
+
 .label-lg {
 	@include label-size($label-lg);
 }
