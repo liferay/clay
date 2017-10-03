@@ -22,10 +22,10 @@ html {
 
 .container {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -54,10 +54,10 @@ html {
 
 .container-fluid {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .row {
@@ -161,6 +161,10 @@ html {
 .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
+}
+
+.order-first {
+  order: -1;
 }
 
 .order-1 {
@@ -314,6 +318,9 @@ html {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .order-sm-first {
+    order: -1;
+  }
   .order-sm-1 {
     order: 1;
   }
@@ -446,6 +453,9 @@ html {
   .col-md-12 {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .order-md-first {
+    order: -1;
   }
   .order-md-1 {
     order: 1;
@@ -580,6 +590,9 @@ html {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .order-lg-first {
+    order: -1;
+  }
   .order-lg-1 {
     order: 1;
   }
@@ -712,6 +725,9 @@ html {
   .col-xl-12 {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .order-xl-first {
+    order: -1;
   }
   .order-xl-1 {
     order: 1;

@@ -786,7 +786,7 @@
 				}
 			};
 
-			if (!$.support.transition) {
+			if (!bootstrap.Util.supportsTransitionEnd()) {
 				complete.call(instance);
 			}
 			else {

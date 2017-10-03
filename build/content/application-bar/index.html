@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Lexicon - Breadcrumbs</title>
+	<title>Lexicon - Navbar (Application Bar)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../css/site/site-atlas-font-awesome.css" />
 	<link rel="stylesheet" href="../../css/site/site-main.css" />
@@ -78,7 +78,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/badges-and-labels">Badges, Labels and Stickers</a>
 </li>
-<li class="active"><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
+<li class=""><a class="nav-title" href="../../content/breadcrumbs">Breadcrumbs</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/button-group">Button Group</a>
 </li>
@@ -122,7 +122,7 @@
 </li>
 <li class=""><a class="nav-title" href="../../content/navbar">Navbar</a>
 </li>
-<li class=""><a class="nav-title" href="../../content/application-bar">Navbar (Application Bar)</a>
+<li class="active"><a class="nav-title" href="../../content/application-bar">Navbar (Application Bar)</a>
 </li>
 <li class=""><a class="nav-title" href="../../content/management-bar">Navbar (Management Bar)</a>
 </li>
@@ -194,143 +194,70 @@
 
 	<div class="" id="mainContent">
 		<h1 class="page-title mt-5" id="beginContent" tabindex="-1">
-			Breadcrumbs
+			Navbar (Application Bar)
 
 			
 		</h1>
 
 		
-<div class="clay-site-row-spacer row">
-	<div class="col-md-12">
-		<blockquote class="blockquote">
-			<p>A navigation aid for your site, provide a quick way to jump back to previously viewed pages or sections.</p>
-			<p>Use <code>&lt;span class=&quot;breadcrumb-text-truncate&quot;&gt;&lt;/span&gt;</code> inside breadcrumb links to truncate text based on a max-width.</p>
-		</blockquote>
-
-		<div class="alert alert-warning">
-			Breadcrumb will use <code>$breadcrumb-divider-svg-icon</code> by default, set <code>$breadcrumb-divider-svg-icon: none;</code> if you wish to use the UTF-8 charset or third-party icon font.
-		</div>
-
-		<ol class="breadcrumb">
-			<li class="breadcrumb-item">
-				<a class="breadcrumb-link" href="#1" title="Home">
-					<span class="breadcrumb-text-truncate">Home</span>
-				</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a class="breadcrumb-link" href="#1" title="Components">
-					<span class="breadcrumb-text-truncate">Components</span>
-				</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a class="breadcrumb-link" href="#1" title="Breadcrumbs and Paginations">
-					<span class="breadcrumb-text-truncate">Breadcrumbs and Paginations</span>
-				</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a class="breadcrumb-link" href="#1" title="Page">
-					<span class="breadcrumb-text-truncate">Page</span>
-				</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a class="breadcrumb-link" href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
-					<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-				</a>
-			</li>
-			<li class="active breadcrumb-item">
-				<span class="breadcrumb-text-truncate" title="Active">Active</span>
-			</li>
-		</ol>
-
-		<ol class="breadcrumb">
-			<li class="breadcrumb-item dropdown">
-				<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="" id="breadcrumb2Dropdown1" role="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-						<use xlink:href="../../images/icons/icons.svg#ellipsis-h">
-					</svg>
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
+<nav class="application-bar navbar navbar-dark navbar-expand-md">
+	<div class="container-fluid container-fluid-max-xl">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-product-menu-closed">
+						<use xlink:href="../../images/icons/icons.svg#product-menu-closed">
 					</svg>
 				</a>
-				<div aria-labelledby="breadcrumb2Dropdown1" class="dropdown-menu">
-					<a class="dropdown-item" href="#1">Home</a>
-					<a class="dropdown-item" href="#1">Components</a>
-					<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-angle-left">
+						<use xlink:href="../../images/icons/icons.svg#angle-left">
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<div class="navbar-title navbar-text-truncate">My Application Name</div>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-cog">
+						<use xlink:href="../../images/icons/icons.svg#cog">
+					</svg>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-plus">
+						<use xlink:href="../../images/icons/icons.svg#plus">
+					</svg>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link nav-link-monospaced" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-simulation-menu-closed">
+						<use xlink:href="../../images/icons/icons.svg#simulation-menu-closed">
+					</svg>
+				</a>
+			</li>
+			<li class="dropdown nav-item">
+				<a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-link-monospaced" data-toggle="dropdown" href="#1">
+					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-v">
+						<use xlink:href="../../images/icons/icons.svg#ellipsis-v">
+					</svg>
+				</a>
+				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="#1">Action</a>
+					<a class="dropdown-item" href="#1">Another action</a>
+					<a class="dropdown-item" href="#1">Something else here</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#1">Separated link</a>
 				</div>
 			</li>
-			<li class="breadcrumb-item dropdown">
-				<button aria-expanded="false" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb2Dropdown2" type="button">
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-ellipsis-h">
-						<use xlink:href="../../images/icons/icons.svg#ellipsis-h">
-					</svg>
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
-					</svg>
-				</button>
-				<div aria-labelledby="breadcrumb2Dropdown2" class="dropdown-menu">
-					<a class="dropdown-item" href="#1">Home</a>
-					<a class="dropdown-item" href="#1">Components</a>
-					<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
-				</div>
-			</li>
-			<li class="breadcrumb-item">
-				<a class="breadcrumb-link" href="#1" title="Page">
-					<span class="breadcrumb-text-truncate">Page</span>
-				</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a class="breadcrumb-link" href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
-					<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-				</a>
-			</li>
-			<li class="active breadcrumb-item">
-				<span class="breadcrumb-text-truncate" title="Active">Active</span>
-			</li>
-		</ol>
-
-		<ol class="breadcrumb">
-			<li class="breadcrumb-item dropdown">
-				<a aria-expanded="false" aria-haspopup="true" class="breadcrumb-link dropdown-toggle" data-toggle="dropdown" href="#1" id="breadcrumb3Dropdown1" role="button" title="Dropdown">
-					<span class="breadcrumb-text-truncate">Dropdown</span>
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
-					</svg>
-				</a>
-				<div aria-labelledby="breadcrumb3Dropdown1" class="dropdown-menu">
-					<a class="dropdown-item" href="#1">Home</a>
-					<a class="dropdown-item" href="#1">Components</a>
-					<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
-				</div>
-			</li>
-			<li class="breadcrumb-item dropdown">
-				<button aria-expanded="false" aria-haspopup="true" class="breadcrumb-link btn btn-unstyled dropdown-toggle" data-toggle="dropdown" id="breadcrumb3Dropdown2" title="Dropdown" type="button">
-					<span class="breadcrumb-text-truncate">Dropdown</span>
-					<svg aria-hidden="true" class="lexicon-icon lexicon-icon-caret-bottom">
-						<use xlink:href="../../images/icons/icons.svg#caret-bottom">
-					</svg>
-				</button>
-				<div aria-labelledby="breadcrumb3Dropdown2" class="dropdown-menu">
-					<a class="dropdown-item" href="#1">Home</a>
-					<a class="dropdown-item" href="#1">Components</a>
-					<a class="dropdown-item" href="#1">Breadcrumbs and Paginations</a>
-				</div>
-			</li>
-			<li class="breadcrumb-item">
-				<a class="breadcrumb-link" href="#1" title="Page">
-					<span class="breadcrumb-text-truncate">Page</span>
-				</a>
-			</li>
-			<li class="breadcrumb-item">
-				<a class="breadcrumb-link" href="#1" title="ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual">
-					<span class="breadcrumb-text-truncate">ReallySuperInsanelyJustIncrediblyLongAndTotallyNotPossibleWordButWeAreReallyTryingToCoverAllOurBasesHereJustInCaseSomeoneIsNutsAsPerUsual</span>
-				</a>
-			</li>
-			<li class="active breadcrumb-item">
-				<span class="breadcrumb-text-truncate" title="Active">Active</span>
-			</li>
-		</ol>
+		</ul>
 	</div>
-</div>
+</nav>
 	</div>
 
 		</section>
