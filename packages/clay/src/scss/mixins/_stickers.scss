@@ -1,47 +1,31 @@
-@mixin sticker {
-	font-size: $sticker-font-size;
+@mixin sticker-size($map) {
+	$font-size: map-get($map, font-size);
+	$outside-offset: setter(map-get($map, outside-offset), -(map-get($map, size) / 2));
+	$size: map-get($map, size);
 
-	@include monospace($sticker-size);
-}
+	font-size: $font-size;
 
-@mixin sticker-sm {
-	font-size: $sticker-font-size-sm;
+	@include monospace($size);
 
-	@include monospace($sticker-size-sm);
-}
+	&.sticker-outside {
+		left: $outside-offset;
+		top: $outside-offset;
 
-@mixin sticker-lg {
-	font-size: $sticker-font-size-lg;
+		&.sticker-bottom-left {
+			bottom: $outside-offset;
+			top: auto;
+		}
 
-	@include monospace($sticker-size-lg);
-}
+		&.sticker-bottom-right {
+			bottom: $outside-offset;
+			left: auto;
+			right: $outside-offset;
+			top: auto;
+		}
 
-@mixin sticker-xl {
-	font-size: $sticker-font-size-xl;
-
-	@include monospace($sticker-size-xl);
-}
-
-@mixin sticker-xxl {
-	font-size: $sticker-font-size-xxl;
-
-	@include monospace($sticker-size-xxl);
-}
-
-@mixin sticker-size($size: '') {
-	@if ($size == sm) {
-		@include sticker-sm;
-	}
-	@else if ($size == lg) {
-		@include sticker-lg;
-	}
-	@else if($size == xl) {
-		@include sticker-xl;
-	}
-	@else if($size == xxl) {
-		@include sticker-xxl;
-	}
-	@else {
-		@include sticker;
+		&.sticker-top-right {
+			left: auto;
+			right: $outside-offset;
+		}
 	}
 }
