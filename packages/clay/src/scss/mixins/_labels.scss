@@ -1,45 +1,35 @@
-@mixin label {
-	font-size: $label-font-size;
-	padding: $label-padding-y $label-padding-x;
+@mixin label-size($map) {
+	$border-width: setter(map-get($map, border-width), $label-border-width);
+	$font-size: map-get($map, font-size);
+	$height: map-get($map, height);
+	$padding-x: map-get($map, padding-x);
+	$padding-y: map-get($map, padding-y);
 
-	.lexicon-icon {
-		height: $label-lexicon-icon-height;
-		width: $label-lexicon-icon-width;
+	$close-margin-left: map-get($map, close-margin-left);
+	$close-vertical-align: map-get($map, close-vertical-align);
+
+	$lexicon-icon-height: setter(map-get($map, lexicon-icon-height), map-get($map, lexicon-icon-width));
+	$lexicon-icon-width: map-get($map, lexicon-icon-width);
+
+	border-width: $border-width;
+	font-size: $font-size;
+
+	@if ($height) {
+		line-height: $height - ($border-width * 2);
 	}
-}
 
-@mixin label-sm {
-	font-size: $label-font-size-sm;
-	padding: $label-padding-y-sm $label-padding-x-sm;
-
-	.lexicon-icon {
-		height: $label-lexicon-icon-height-sm;
-		width: $label-lexicon-icon-width-sm;
-	}
-}
-
-@mixin label-lg {
-	font-size: $label-font-size-lg;
-	padding: $label-padding-y-lg $label-padding-x-lg;
+	padding-bottom: $padding-y;
+	padding-left: $padding-x;
+	padding-right: $padding-x;
+	padding-top: $padding-y;
 
 	.close {
-		margin-left: 0.25rem;
-	}
+		margin-left: $close-margin-left;
+		vertical-align: $close-vertical-align;
 
-	.lexicon-icon {
-		height: $label-lexicon-icon-height-lg;
-		width: $label-lexicon-icon-width-lg;
-	}
-}
-
-@mixin label-size($size: '') {
-	@if ($size == sm) {
-		@include label-sm;
-	}
-	@else if ($size == lg) {
-		@include label-lg;
-	}
-	@else {
-		@include label;
+		.lexicon-icon {
+			height: $lexicon-icon-height;
+			width: $lexicon-icon-width;
+		}
 	}
 }

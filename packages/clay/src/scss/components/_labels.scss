@@ -38,11 +38,13 @@
 		font-size: inherit;
 		margin-left: 2px;
 		opacity: 1;
-	}
+		vertical-align: middle;
 
-	.lexicon-icon {
-		height: $label-lexicon-icon-height;
-		width: $label-lexicon-icon-width;
+		.lexicon-icon {
+			height: $label-lexicon-icon-height;
+			vertical-align: baseline;
+			width: $label-lexicon-icon-width;
+		}
 	}
 }
 
@@ -55,11 +57,7 @@ a.label {
 }
 
 .label-lg {
-	@include label-size(lg);
-}
-
-.label-sm {
-	@include label-size(sm);
+	@include label-size($label-lg);
 }
 
 // Label Variants

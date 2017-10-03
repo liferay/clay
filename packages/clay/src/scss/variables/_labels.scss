@@ -4,7 +4,7 @@ $label-link-hover-color: #FFF !default;
 $label-font-size: 75% !default;
 $label-font-weight: bold !default;
 $label-height: 1.25rem !default; // 20px
-$label-lexicon-icon-height: 9px !default;
+$label-lexicon-icon-height: 0.8em !default;
 $label-lexicon-icon-width: $label-lexicon-icon-height !default;
 $label-padding-x: 0.4375rem !default; // 7px
 $label-padding-y: null !default; // 3px
@@ -32,6 +32,13 @@ $label-border-color: $body-color !default;
 $label-border-radius: $border-radius !default;
 $label-border-style: solid !default;
 $label-border-width: 0.0625rem !default;
+
+$label-lg: () !default;
+$label-lg: map-merge((
+	font-size: 0.875rem, // 14px
+	height: 1.875rem, // 30px
+	padding-x: 1rem // 16px
+), $label-lg);
 
 // Label Variants
 
