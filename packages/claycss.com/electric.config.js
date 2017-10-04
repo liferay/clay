@@ -36,10 +36,6 @@ module.exports = {
 	},
 	vendorSrc: [
 		{
-			dest: 'dist/vendor/source-sans-pro',
-			src: 'node_modules/source-sans-pro/**'
-		},
-		{
 			dest: 'dist/vendor/lexicon',
 			src: path.join(clay.buildDir, 'images', 'icons', '*')
 		},
