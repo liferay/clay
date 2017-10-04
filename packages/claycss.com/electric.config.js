@@ -28,7 +28,7 @@ module.exports = {
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
 	deployOptions: {
 		branch: 'wedeploy',
-		origin: 'upstream'
+		remoteUrl: 'git@github.com:metal/metal.js.git'
 	},
 	metalComponents: ['electric-quartz-components'],
 	sassOptions: {
