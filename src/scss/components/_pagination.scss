@@ -39,11 +39,17 @@
 	background-color: $pagination-items-per-page-bg;
 	border-color: $pagination-items-per-page-border-color;
 
-	@include border-radius($pagination-link-border-radius);
+	@include border-radius($pagination-items-per-page-border-radius);
 
 	border-style: solid;
 	border-width: $pagination-border-width;
 	line-height: $pagination-line-height;
+
+	@include hover-focus {
+		background-color: $pagination-items-per-page-hover-bg;
+		border-color: $pagination-items-per-page-hover-border-color;
+		color: $pagination-items-per-page-hover-color;
+	}
 
 	> a {
 		color: $pagination-items-per-page-color;
