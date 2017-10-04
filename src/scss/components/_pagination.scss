@@ -17,14 +17,14 @@
 }
 
 .page-link {
-	border-radius: $pagination-link-border-radius;
+	@include border-radius($pagination-link-border-radius);
 }
 
 .page-item {
 	&:first-child,
 	&:last-child {
 		.page-link {
-			border-radius: $pagination-link-border-radius;
+			@include border-radius($pagination-link-border-radius);
 		}
 	}
 
@@ -36,7 +36,9 @@
 .pagination-items-per-page {
 	background-color: $pagination-items-per-page-bg;
 	border-color: $pagination-items-per-page-border;
-	border-radius: $pagination-link-border-radius;
+
+	@include border-radius($pagination-link-border-radius);
+
 	border-style: solid;
 	border-width: $pagination-border-width;
 	line-height: $pagination-line-height;
@@ -83,7 +85,7 @@
 
 .pagination-sm {
 	.pagination-items-per-page {
-		border-radius: $pagination-link-border-radius-sm;
+		@include border-radius($pagination-link-border-radius-sm);
 	}
 
 	.pagination-items-per-page a,
@@ -101,7 +103,7 @@
 
 .pagination-lg {
 	.pagination-items-per-page {
-		border-radius: $pagination-link-border-radius-lg;
+		@include border-radius($pagination-link-border-radius-lg);
 	}
 
 	.pagination-items-per-page a,
