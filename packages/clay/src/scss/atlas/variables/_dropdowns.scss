@@ -3,7 +3,6 @@ $dropdown-border-width: 0 !default;
 $dropdown-box-shadow: 0 1px 10px -3px transparentize(#000, 0.7) !default;
 
 $dropdown-font-size: $font-size-base !default; // 16px
-$dropdown-font-size-mobile: $font-size-base-mobile !default; // 14px
 $dropdown-padding-y: 0.375rem !default; // 6px
 $dropdown-min-height: 40px !default;
 $dropdown-min-width: 240px !default;
@@ -14,7 +13,6 @@ $dropdown-item-padding-y: 0.5rem !default; // 8px
 
 $dropdown-header-color: map-get($theme-colors, secondary) !default;
 $dropdown-header-font-size: $font-size-sm !default; // 14px
-$dropdown-header-font-size-mobile: $font-size-sm-mobile !default; // 12px
 
 $dropdown-link-color: map-get($theme-colors, secondary) !default;
 $dropdown-link-hover-color: $body-color !default;
