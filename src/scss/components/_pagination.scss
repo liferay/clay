@@ -3,6 +3,7 @@
 }
 
 .pagination-bar {
+	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 1rem;
@@ -10,7 +11,8 @@
 	.pagination {
 		margin-bottom: 0;
 
-		@include media-breakpoint-down(sm) {
+		@include scale-component {
+			margin-top: 0.5rem;
 			width: 100%;
 		}
 	}
@@ -51,16 +53,11 @@
 	}
 
 	+ .pagination-results {
-		margin-left: auto;
-		margin-right: 0;
-
-		@include media-breakpoint-up(md) {
-			margin-left: 0;
-			margin-right: auto;
-		}
-
-		@include media-breakpoint-down(xs) {
-			width: 100%;
+		@include scale-component {
+			margin-left: auto;
+			margin-right: 0;
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 }
