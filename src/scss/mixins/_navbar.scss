@@ -383,6 +383,7 @@
 	$brand-hover-color: map-get($map, brand-hover-color);
 	$brand-bg: map-get($map, brand-bg);
 	$brand-hover-bg: map-get($map, brand-hover-bg);
+	$toggler-color: setter(map-get($map, toggler-color), $link-color);
 	$underline-active-bg: map-get($map, underline-active-bg);
 
 	@if ($enabled) {
@@ -421,6 +422,10 @@
 				background-color: $brand-bg;
 				color: $brand-hover-color;
 			}
+		}
+
+		.navbar-toggler {
+			color: $toggler-color;
 		}
 
 		.navbar-toggler-link {
