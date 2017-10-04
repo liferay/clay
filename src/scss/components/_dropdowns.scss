@@ -200,6 +200,7 @@
 		.dropdown-action {
 			.dropdown-menu {
 				display: block;
+				z-index: $zindex-dropdown - 2;
 			}
 
 			.dropdown-menu-horizontal {
