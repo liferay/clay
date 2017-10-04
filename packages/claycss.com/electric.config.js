@@ -26,6 +26,10 @@ module.exports = {
 		return generateIconData(data);
 	},
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
+	deployOptions: {
+		branch: 'wedeploy',
+		origin: 'upstream'
+	},
 	metalComponents: ['electric-quartz-components'],
 	sassOptions: {
 		includePaths: ['node_modules', clayIncludePaths]
