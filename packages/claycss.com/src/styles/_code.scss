@@ -1,23 +1,84 @@
-.CodeMirror {
-	height: auto;
-}
-
 .code-container {
-	margin: 20px 0;
 	position: relative;
+	margin: calc(1rem * 1.5) 0;
 }
 
 .code-container.hide {
 	display: none;
 }
 
+.code-container .CodeMirror {
+	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
+	border-radius: 4px;
+	height: auto;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+.code-container .CodeMirror-sizer {
+	margin-left: 60px !important;
+}
+
+.code-container .CodeMirror-gutter-wrapper {
+	left: -60px !important;
+}
+
+.code-container .CodeMirror-gutter.CodeMirror-linenumbers {
+	width: 60px !important;
+}
+
+.code-container .CodeMirror-linenumber {
+	color: rgba($white, .40);
+	font-size: 13px;
+	line-height: 20px;
+	left: 24px !important;
+	padding: 0;
+	text-align: left;
+	width: 36px !important;
+}
+
+.code-container .CodeMirror-lines {
+	padding: 12px 0;
+}
+
+.code-container .CodeMirror-gutters {
+	left: 0 !important;
+}
+
+.code-container pre {
+	border: 0;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0;
+	opacity: 0;
+	padding: 12px 4px;
+	position: relative;
+}
+
+.code-container pre code {
+	white-space: pre;
+}
+
+.code-container .CodeMirror pre {
+	font-size: 13px;
+	line-height: 20px;
+	opacity: 1;
+	padding: 0;
+	margin: 0;
+	z-index: 6;
+}
+
 .code-container .btn-copy {
 	@include transition(background 0.3s ease-in-out);
 
+	animation: fadeIn 0.5s cubic-bezier(0.3, 0, 0.3, 1) 0s 1 forwards;
 	background: rgba(255, 255, 255, 0.6);
 	cursor: pointer;
 	height: 24px;
-	line-height: 24px;
+	line-height: 20px;
 	padding: 0;
 	position: absolute;
 	right: 5px;
@@ -34,10 +95,6 @@
 
 .code-container .btn-copy:hover {
 	background: rgba(255, 255, 255, 0.8);
-}
-
-.code-container > pre {
-	display: none;
 }
 
 .tooltip.bottom {
@@ -57,7 +114,7 @@
 	cursor: pointer;
 	font-size: 13px;
 	font-weight: 700;
-	line-height: 24px;
+	line-height: 20px;
 	margin-right: 12px;
 	padding: 0;
 	text-transform: uppercase;
