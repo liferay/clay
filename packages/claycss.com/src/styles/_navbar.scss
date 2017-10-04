@@ -26,3 +26,21 @@
 		max-height: 40px;
 	}
 }
+
+.navbar-mobile {
+	background-color: $brand-light;
+	left: 0;
+	min-height: $base-size * 2.92;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+
+	@media (min-width: $grid-float-breakpoint) {
+		display: none;
+	}
+
+	.logo {
+		max-height: 40px;
+	}
+}

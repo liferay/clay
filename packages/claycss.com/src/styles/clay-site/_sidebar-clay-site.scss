@@ -30,9 +30,7 @@
 	}
 
 	.logo {
-		display: inline-block;
 		height: 2.5rem;
-		margin-right: 0.5rem;
 		padding-bottom: 0.1875rem;
 	}
 
@@ -51,14 +49,11 @@
 		padding: 0;
 
 		@media (min-width: $grid-float-breakpoint) {
-			padding-top: $base-size * 1.66;
+			padding: $base-size * 2.25 $base-size $base-size * 0.66 $base-size * 0.33;
 		}
 
 		@media (max-width: $grid-float-breakpoint - 1) {
-			left: 0;
-			position: fixed;
-			right: 0;
-			top: 0;
+			display: none;
 		}
 	}
 

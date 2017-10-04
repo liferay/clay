@@ -7,21 +7,28 @@
  */
 {template .render}
 	<div>
+		<div class="navbar navbar-mobile navbar-expand-lg navbar-header">
+			<a class="navbar-brand d-flex" href="/">
+				<img class="logo mr-2" src="/images/clay_logo_w.png" alt="" />
+				<span class="title h1 font-weight-bold mb-0 p-1">{$site.title} </span>
+			</a>
+
+			<button class="navbar-toggler sidebar-toggler p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
+					<use xlink:href="/vendor/lexicon/icons.svg#bars" />
+				</svg>
+			</button>
+		</div>
+
 		<nav class="sidebar-toggler-content sidenav-fixed sidenav-menu-slider" id="clay-sidebar">
 			<div class="sidebar sidebar-clay-site sidenav-menu d-flex flex-column">
 				<div class="sidebar-header">
 					<div class="navbar navbar-expand-lg navbar-header">
 						<a class="navbar-brand" href="/">
-							<img class="logo" src="/images/clay_logo_w.png" alt="{$site.title}" />
+							<img class="logo mr-2" src="/images/clay_logo_w.png" alt="{$site.title}" />
 							<span class="title">{$site.title} </span>
 							<small>by Liferay</small>
 						</a>
-
-						<button class="navbar-toggler sidebar-toggler p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<svg aria-hidden="true" class="lexicon-icon lexicon-icon-bars">
-								<use xlink:href="/vendor/lexicon/icons.svg#bars" />
-							</svg>
-						</button>
 					</div>
 				</div>
 
