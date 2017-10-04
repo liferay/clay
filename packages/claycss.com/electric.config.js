@@ -26,10 +26,6 @@ module.exports = {
 		return generateIconData(data);
 	},
 	codeMirrorLanguages: ['xml', 'htmlmixed', 'soy'],
-	deployOptions: {
-		branch: 'wedeploy',
-		remoteUrl: 'git@github.com:metal/metal.js.git'
-	},
 	metalComponents: ['electric-quartz-components'],
 	sassOptions: {
 		includePaths: ['node_modules', clayIncludePaths]
