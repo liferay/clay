@@ -45,7 +45,7 @@
 	border-width: $pagination-border-width;
 	line-height: $pagination-line-height;
 
-	a {
+	> a {
 		color: $pagination-items-per-page-color;
 		display: block;
 		padding: $pagination-padding-y $pagination-padding-x;
@@ -85,7 +85,7 @@
 		@include border-radius($pagination-link-border-radius-sm);
 	}
 
-	.pagination-items-per-page a,
+	.pagination-items-per-page > a,
 	.pagination-results {
 		font-size: $pagination-font-size-sm;
 		line-height: $pagination-line-height-sm;
@@ -103,7 +103,7 @@
 		@include border-radius($pagination-link-border-radius-lg);
 	}
 
-	.pagination-items-per-page a,
+	.pagination-items-per-page > a,
 	.pagination-results {
 		font-size: $pagination-font-size-lg;
 		line-height: $pagination-line-height-lg;
