@@ -1,16 +1,14 @@
 .pagination {
 	flex-wrap: wrap;
+	margin-bottom: $pagination-margin-bottom;
 }
 
 .pagination-bar {
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 1rem;
 
 	.pagination {
-		margin-bottom: 0;
-
 		@include scale-component {
 			margin-top: 0.5rem;
 			width: 100%;
@@ -44,6 +42,7 @@
 	border-style: solid;
 	border-width: $pagination-border-width;
 	line-height: $pagination-line-height;
+	margin-bottom: $pagination-margin-bottom;
 
 	@include hover-focus {
 		background-color: $pagination-items-per-page-hover-bg;
@@ -80,6 +79,7 @@
 	border-width: $pagination-border-width;
 	color: $pagination-results-color;
 	line-height: $pagination-line-height;
+	margin-bottom: $pagination-margin-bottom;
 	margin-right: auto;
 	padding: $pagination-padding-y $pagination-padding-x;
 }
