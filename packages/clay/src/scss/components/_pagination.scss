@@ -37,7 +37,7 @@
 
 .pagination-items-per-page {
 	background-color: $pagination-items-per-page-bg;
-	border-color: $pagination-items-per-page-border;
+	border-color: $pagination-items-per-page-border-color;
 
 	@include border-radius($pagination-link-border-radius);
 
