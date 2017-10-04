@@ -10,7 +10,7 @@ $navbar-transparent: (
 
 $navbar-light-color: map-get($theme-colors, secondary) !default;
 $navbar-light-hover-color: map-get($theme-colors, secondary) !default;
-$navbar-light-active-color: map-get($theme-colors, secondary) !default;
+$navbar-light-active-color: $body-color !default;
 $navbar-light-disabled-color: $nav-link-disabled-color !default;
 
 $navbar-light: (
@@ -21,9 +21,9 @@ $navbar-light: (
 
 $navbar-secondary: () !default;
 $navbar-secondary: map-merge((
-	bg: map-get($theme-colors, secondary),
-	link-color: #FFF,
-	link-hover-color: #FFF,
+	bg: lighten(map-get($theme-colors, dark), 4%),
+	link-color: lighten(map-get($theme-colors, secondary), 37%),
+	link-hover-color: lighten(map-get($theme-colors, secondary), 37%),
 	link-active-color: #FFF,
 	link-disabled-color: $nav-link-disabled-color
 ), $navbar-secondary);
@@ -36,7 +36,5 @@ $navbar-dark-active-color: $navbar-dark-color !default;
 $navbar-dark-disabled-color: $nav-link-disabled-color !default;
 
 $navbar-dark: (
-	bg: darken(map-get($theme-colors, secondary), 23%),
-	color: #FFF,
-	link-color: #FFF
+	bg: map-get($theme-colors, dark)
 ) !default;
